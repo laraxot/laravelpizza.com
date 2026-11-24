@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "session summary refactoring"
 issues: []
 discussions: []
-status: draft
 ---
 
 # SESSION SUMMARY — Refactoring Module Inheritance
@@ -32,7 +31,7 @@ status: draft
 
 ## Output
 
-- `docs/RELATIONSHIP_METHODS_DUPLICATE_LIST.md`
+- `docs/relationship_methods_duplicate_list.md`
 
 ## PHPStan Status
 

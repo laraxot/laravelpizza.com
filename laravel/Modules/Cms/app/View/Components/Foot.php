@@ -21,13 +21,31 @@ use Modules\Xot\Datas\MetatagData;
  *
  * `@livewireScripts` non serve: `config('livewire.inject_assets')` è `true` e Livewire inietta i propri
  * asset automaticamente prima di `</body>`.
+<<<<<<< HEAD
  */
 final class Foot extends Component
 {
+    /**
+     * @param  bool  $panelAssets  false: niente notifiche ne' script Filament (~250 KB di JS e una richiesta
+     *                             Livewire a ogni pagina) per i siti pubblici che non usano componenti Filament.
+     */
+    public function __construct(public readonly bool $panelAssets = true) {}
+=======
+ *
+ * @see Modules/Cms/docs/bmad/filament-layout-styles-scripts.md
+ */
+final class Foot extends Component
+{
+    public function __construct(public readonly bool $panelAssets = true)
+    {
+    }
+>>>>>>> laraxot/dev
+
     public function render(): ViewContract
     {
         return view('cms::components.foot', [
             'pubTheme' => MetatagData::make()->getPubTheme(),
+            'panelAssets' => $this->panelAssets,
         ]);
     }
 }

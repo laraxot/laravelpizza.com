@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "database testing configuration"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Database Testing Configuration for GDPR Module
@@ -176,9 +175,9 @@ protected function setUp(): void
 
 ## Related Documentation
 
-- [Testing Guidelines](../testing-guidelines.md)
-- [Multi-Language Translation Guidelines](../multi-language-translation-guidelines.md)
-- [TenantServiceProvider Architecture](../../../Tenant/app/Providers/TenantServiceProvider.php)
+- [Testing Guidelines](./testing-guidelines.md)
+- [Multi-Language Translation Guidelines](./multi-language-translation-guidelines.md)
+- [TenantServiceProvider Architecture](../Tenant/app/Providers/TenantServiceProvider.php)
 
 ## Troubleshooting
 

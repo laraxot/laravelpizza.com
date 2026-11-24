@@ -1,11 +1,3 @@
----
-title: "Migration Safety Rules - NEVER Destroy Data"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user, database]
-qmd: "migration safety rules - never destroy data user"
----
 # Migration Safety Rules - NEVER Destroy Data
 
 ## Regola ASSOLUTA

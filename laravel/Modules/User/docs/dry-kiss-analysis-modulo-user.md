@@ -16,8 +16,6 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: superseded
-superseded_by: dry-kiss-analysis-conflict.md
 ---
 
 # 🐄✨ DRY & KISS Analysis - Modulo User

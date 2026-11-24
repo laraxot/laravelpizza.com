@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan fixes gennaio 2025"
 issues: []
 discussions: []
-status: superseded
-superseded_by: phpstan-fixes-cms-module.md
 ---
 
 # Correzioni PHPStan - Gennaio 2025
@@ -146,7 +144,7 @@ $rows = $this->getSushiRows();
 - Migliore gestione degli errori
 
 ## Collegamenti Correlati
-- [Architettura Modulo Cms](./frontoffice/architecture.md)
+- [Architettura Modulo Cms](./architecture.md)
 - [Middleware System](./middleware-system.md)
 - [Model Management](./model-management.md)
 

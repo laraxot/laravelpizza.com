@@ -3,11 +3,14 @@ title: "whatsapp sending standard"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "whatsapp sending standard"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Standard per Invio Messaggi WhatsApp nel Modulo Notify
@@ -16,6 +19,15 @@ status: draft
 Questa guida definisce lo standard per l'invio di messaggi WhatsApp all'interno del modulo Notify, seguendo la stessa architettura modulare, configurazione e best practice già adottate per email e SMS. L'obiettivo è garantire coerenza, riusabilità e facilità di manutenzione, indipendentemente dal provider utilizzato (Twilio, Vonage, WhatsApp Business API, ecc.).
 
 ---
+
+title: "whatsapp sending standard"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "whatsapp sending standard"
+issues: []
+discussions: []
 ## 1. Struttura delle Azioni WhatsApp
 
 - Ogni provider WhatsApp deve avere una propria action in `app/Actions/WhatsApp`.
@@ -229,4 +241,8 @@ $action->onQueue('whatsapp')->execute($data);
 
 ---
 
+<<<<<<< HEAD
 **Seguendo questo standard, l'invio di messaggi WhatsApp sarà sempre coerente, sicuro, testabile e facilmente estendibile.** 
+=======
+**Seguendo questo standard, l'invio di messaggi WhatsApp sarà sempre coerente, sicuro, testabile e facilmente estendibile.**
+>>>>>>> laraxot/dev

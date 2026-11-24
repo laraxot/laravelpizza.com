@@ -7,8 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # HTML Parity Analysis Rules
@@ -399,7 +402,7 @@ trans('<nome progetto>::segnalazione.heading.title.label')
 
 - [Translation Conventions](./translation-conventions.md)
 - [Blade Architecture](../laravel/CLAUDE.md#blade-components)
-- [Agnostic Scripts](./AGNOSTIC_DOCUMENTATION_RULE.md)
+- [Agnostic Scripts](./agnostic_documentation_rule.md)
 - [Multi-Agent Coordination](./MULTI_AGENT_COORDINATION_RULES.md)
 
 ---

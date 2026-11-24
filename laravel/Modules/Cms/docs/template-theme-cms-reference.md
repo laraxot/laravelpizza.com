@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "template theme cms reference"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Template, Theme, CMS - Runtime Reference
@@ -35,7 +34,7 @@ HTTP GET /it/...
 
 | Layer | File | Role |
 |------|------|------|
-| Folio | `app/Providers/FolioServiceProvider.php` | Registers pages path for active theme |
+| Folio | `Modules/Cms/app/Providers/FolioVoltServiceProvider.php` | Registers pages paths for the active theme and enabled modules |
 | Theme | `Themes/Meetup/resources/views/pages/*.blade.php` | Route-entry templates with Volt + x-page |
 | CMS | `Modules/Cms/app/View/Components/Page.php` | Core page renderer |
 | CMS | `Modules/Cms/app/Models/Page.php` | Page model with JSON-backed content |

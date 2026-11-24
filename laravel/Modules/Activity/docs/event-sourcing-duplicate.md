@@ -1,4 +1,11 @@
-<<<<<<< HEAD
+---
+title: "Event Sourcing in Laravel"
+type: note
+status: draft
+updated: 2026-10-08
+tags: [docs, activity]
+qmd: "event sourcing in laravel activity"
+---
 # Event Sourcing in Laravel
 
 Questo documento fornisce una guida completa sull'implementazione dell'**Event Sourcing** in Laravel, basata sul libro *Event Sourcing in Laravel* di Brent Roose, pubblicato da Spatie nel 2021. Include concetti fondamentali, pattern avanzati, sfide, casi d'uso pratici e consigli per migliorare il codice esistente nel contesto del modulo `Activity`.
@@ -159,7 +166,6 @@ class UserActivityReportProjector
 L'Event Sourcing offre un approccio potente per gestire la complessità nel modulo `Activity`, garantendo tracciabilità e flessibilità. Implementando radici aggregate, proiettori e strategie come snapshotting, è possibile migliorare la robustezza e la scalabilità del codice esistente. Seguendo i pattern e i consigli descritti, il modulo può evolversi per supportare requisiti futuri senza compromettere la coerenza dei dati.
 
 Se hai bisogno di ulteriori dettagli o di un'implementazione specifica, fammi sapere!
-=======
 ---
 title: "Event Sourcing in Laravel"
 type: note
@@ -170,19 +176,9 @@ qmd: "event sourcing in laravel activity"
 ---
 # Event Sourcing in Laravel
 
-<<<<<<< .merge_file_2er5fu
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 See canonical documentation: ../../../Themes/docs/shared-components/event-sourcing-duplicate.md
-=======
 See canonical documentation: ../../../Themes/docs/shared-components/event-sourcing-duplicate.md
->>>>>>> d4098eb (.)
-=======
 See canonical documentation: ../../../Themes/docs/shared-components/event-sourcing-duplicate.md
->>>>>>> 26b6dbd (.)
-=======
-=======
 Questo documento fornisce una guida completa sull'implementazione dell'**Event Sourcing** in Laravel, basata sul libro *Event Sourcing in Laravel* di Brent Roose, pubblicato da Spatie nel 2021. Include concetti fondamentali, pattern avanzati, sfide, casi d'uso pratici e consigli per migliorare il codice esistente nel contesto del modulo `Activity`.
 
 ## Introduzione all'Event Sourcing
@@ -342,7 +338,4 @@ L'Event Sourcing offre un approccio potente per gestire la complessità nel modu
 
 Se hai bisogno di ulteriori dettagli o di un'implementazione specifica, fammi sapere!=======
 See canonical documentation: ../../../Themes/docs/shared-components/event-sourcing-duplicate.md
->>>>>>> .merge_file_TVjDqK
 See canonical documentation: ../../../Themes/docs/shared-components/event-sourcing-duplicate.md
->>>>>>> 2d6a374 (.)
->>>>>>> laraxot/dev

@@ -1,10 +1,10 @@
 ---
-title: "multi agent coordination"
+title: "Multi Agent Coordination"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "multi agent coordination"
+qmd: "Multi Agent Coordination"
 issues: []
 discussions: []
 ---
@@ -17,12 +17,12 @@ discussions: []
 
 ---
 
-title: "multi agent coordination"
+title: "MULTI AGENT COORDINATION"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "multi agent coordination"
+qmd: "MULTI AGENT COORDINATION"
 issues: []
 discussions: []
 ## Project Structure

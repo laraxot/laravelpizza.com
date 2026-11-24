@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan fixes "
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHPStan Fixes for Cms Module (2025-12-30)

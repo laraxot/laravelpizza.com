@@ -8,10 +8,15 @@ priority: P1
 owner: module:Cms
 module: Cms
 created: 2026-10-13
+<<<<<<< HEAD
 updated: 2026-10-13
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 tags: [cms, json, slug, governance]
 qmd: "dcp-41 Da URL a JSON: strumento di verifica e regola contro i JSON inventati"
-related: [Modules/Fixcity/docs/stories/dcp-35-tickets-create-privacy-dati-coordinamento.story.md, Modules/Fixcity/docs/stories/dcp-44-audit-docs-tickets-create.story.md]
+related: [Modules/Fixcity/docs/stories/2026-10-13-dcp-35-tickets-create-privacy-dati-coordinamento.story.md, Modules/Fixcity/docs/stories/2026-10-13-dcp-44-audit-docs-tickets-create.story.md]
+date_originale_nome_file: 2026-10-13
 ---
 
 # DCP-41: da URL a JSON
@@ -28,7 +33,7 @@ related: [Modules/Fixcity/docs/stories/dcp-35-tickets-create-privacy-dati-coordi
 - `bashscripts/tools/cms/page-json-for-url.sh <url>`: legge `data-slug` dalla risposta reale e cerca `<slug>.json` in `laravel/config/*` e `laravel/Modules/*/config`. Exit 0 trovato, 1 nessun `data-slug`, 2 nessun JSON (non crearlo, chiedere). Doc: `bashscripts/docs/tools/page-json-for-url.md`.
 - Doc Cms: sezione "Da URL a JSON: come verificare" in `Modules/Cms/docs/wiki/concepts/cms-page-middleware-json-ssot.md`; regola del Volt in `folio-page-shell-pattern.md`.
 - Guardia eseguibile: `Modules/Fixcity/tests/Unit/TicketCreatePageJsonGuardTest.php` (nessun `tests.tickets*.json`; `tickets.create.json` presente in `config/local/fixcity`).
-- Second brain: memorie `page-json-comes-from-data-slug-never-invent` e `coordinate-agents-via-bmad-stories-parallel-random`; wiki `bashscripts/ai/wiki/memories/tickets-create-volt-root-and-page-json.md`.
+- Second brain: memorie `page-json-comes-from-data-slug-never-invent` e `coordinate-agents-via-bmad-stories-parallel-random`; wiki `bashscripts/ai/wiki/memories/2026-10-13-tickets-create-volt-root-and-page-json.md`.
 
 ## Verifica (output reali)
 - `/it/tickets/create` -> `slug: tickets.create`, 3 file; `/it/tests` -> `tests.index`; `/it/tests/segnalazione-01-privacy` -> `tests.segnalazione-01-privacy`; `/it/tickets/inesistente-xyz` -> exit 2.

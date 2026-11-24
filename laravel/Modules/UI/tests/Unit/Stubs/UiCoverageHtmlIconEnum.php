@@ -26,8 +26,7 @@ enum UiCoverageHtmlIconEnum: string implements HasColor, HasIcon
     {
         return match ($this) {
             self::HtmlStringIcon => new HtmlString('<i>x</i>'),
-            self::HtmlableOnly => new class implements Htmlable
-            {
+            self::HtmlableOnly => new class implements Htmlable {
                 public function toHtml(): string
                 {
                     return 'x';

@@ -1,3 +1,14 @@
+---
+title: "PHILOSOPHY"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "PHILOSOPHY"
+issues: []
+discussions: []
+---
+
 # Geo Module Philosophy
 
 **Platform**: FixCity  
@@ -7,6 +18,14 @@
 
 ---
 
+title: "PHILOSOPHY"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "PHILOSOPHY"
+issues: []
+discussions: []
 ## RELIGIONE
 
 The Geo module is built on three unshakeable dogmas:

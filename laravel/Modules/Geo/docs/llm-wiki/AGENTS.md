@@ -7,10 +7,9 @@ updated: 2026-09-26
 qmd: "AGENTS"
 issues: []
 discussions: []
-status: draft
 ---
 
-# Geo Module LLM Wiki Agent Instructions
+# Geo {{TYPE^}} LLM Wiki Agent Instructions
 
 > **Module/Theme:** Geo
 > **Scope:** Geo-specific knowledge only

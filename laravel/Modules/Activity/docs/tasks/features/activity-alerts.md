@@ -1,3 +1,10 @@
+---
+title: "Activity Alerts - Activity"
+qmd: "activity tasks features activity alerts md"
+type: note
+tags: [documentation]
+---
+
 # Activity Alerts - Activity
 
 **Task ID**: ACTIVITY-FEATURE-006

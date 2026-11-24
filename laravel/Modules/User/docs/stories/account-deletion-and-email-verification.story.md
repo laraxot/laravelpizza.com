@@ -28,6 +28,8 @@ Guard reali (`config/local/fixcity/auth.php`): `web` (sessione) e `api` (Passpor
 
 | File | Modifica |
 |---|---|
+| `Modules/User/app/Actions/Auth/BuildActiveUserProviderAction.php` (nuovo) | `EloquentUserProvider` con `withQuery`: per i modelli `BaseUser` aggiunge `whereNull(deleted_at)`. Copre `retrieveByCredentials` (tutti i login, reset password), `retrieveById` (sessioni e token Passport) e `retrieveByToken` ("ricordami"). |
+
 | `Modules/User/app/Actions/Auth/BuildActiveUserProviderAction.php` (nuovo) | `EloquentUserProvider` con `withQuery`: per i modelli `BaseUser` aggiunge `whereNull(deleted_at)` quando la colonna è presente. Copre `retrieveByCredentials` (tutti i login, reset password), `retrieveById` (sessioni e token Passport) e `retrieveByToken` ("ricordami"). Il controllo di schema evita un 500 su installazioni legacy mentre la migrazione canonica completa `users`. |
 | `Modules/User/app/Providers/UserServiceProvider.php` | `registerActiveUserProvider()`: `Auth::provider('eloquent', ...)` sostituisce il driver del framework, per ogni tenant e anche per la guard `api`, senza toccare i `config/<tenant>/auth.php`. |
 | `Modules/User/app/Actions/Auth/RevokeUserAccessAction.php` (nuovo) | Revoca i token Passport dell'utente e i loro refresh token e azzera `remember_token`. Restituisce quanti token ha revocato. |

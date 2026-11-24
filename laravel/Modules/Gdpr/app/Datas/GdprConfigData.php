@@ -32,6 +32,14 @@ class GdprConfigData extends Data
      */
     public int $consent_lifetime = 180;
 
+    /**
+     * Barra informativa quando il sito usa solo cookie tecnici. Il Garante (provv. 10.6.2021 n. 231) chiede per questi la sola
+     * informativa, "anche inserita nell'informativa generale": la barra non e' obbligatoria. false = niente barra (meno ingombro
+     * e nessuno spostamento della pagina su telefono). Se un modulo dichiara un cookie non tecnico la barra del consenso compare
+     * comunque.
+     */
+    public bool $info_banner = true;
+
     /** Pagina della cookie policy linkata dal banner: path senza prefisso lingua (lo aggiunge LaravelLocalization::localizeURL). */
     public string $policy_path = '/cookie-policy';
 }

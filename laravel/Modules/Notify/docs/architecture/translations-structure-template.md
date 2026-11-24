@@ -4,7 +4,11 @@ type: concept
 tags: [notify, docs, architecture, translations, structure, template]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify documentazione architecture translations structure template template di struttura per le traduzioni frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -16,8 +20,6 @@ related:
   - ../conventions/README.md
   - ../rules/README.md
   - ../best-practices/naming-conventions.md
-status: superseded
-superseded_by: ../translations-structure-template.md
 ---
 # Template di Struttura per le Traduzioni
 

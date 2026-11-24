@@ -3,7 +3,11 @@ title: "📚 MODULAR DOCUMENTATION REFACTORING REPORT"
 type: concept
 tags: [modular, documentation, refactoring]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "modular-documentation-refactoring 📚 modular documentation refactoring report"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -39,7 +43,7 @@ Organizzare la documentazione AI agents in file modulari più piccoli e gestibil
 ```
 AGENTS.md      - 104 righe  ❌ Troppo grande
 qwen.md        - 890 righe  ❌ Enorme
-claude.md      - 592 righe  ❌ Difficile da navigare
+CLAUDE.md      - 592 righe  ❌ Difficile da navigare
 gemini.md      - 369 righe  ❌ Contenuti mischiati
 IFLOW.md       - 312 righe  ❌ Duplicazioni
 ────────────────────────────────────────────
@@ -115,13 +119,13 @@ TOTALE: ~2,500 righe  ✅ Organizzate, navigabili, mantenibili
 ### Da File Originali a Moduli
 ```markdown
 # AGENTS.md (compatto)
-# agents.md (compatto)
+# AGENTS.md (compatto)
 ## Contenuto Diviso
 | Sezione | File |
 |---------|------|
 | Panoramica | [.agents/docs/overview/agents-overview.md](./.agents/docs/overview/agents-overview.md) |
 | Workflow | [.agents/docs/workflow/agents-gsd-bmad.md](./.agents/docs/workflow/agents-gsd-bmad.md) |
-| Architecture | [.agents/docs/architecture/agents-module-architecture.md](./.agents/docs/architecture/agents-module-architecture.md) |
+| Architecture | [.agents/docs/architecture/agents-module-architecture.md](agents-module-architecture.md) |
 ```
 
 ### Da Moduli a File Originali
@@ -129,7 +133,7 @@ TOTALE: ~2,500 righe  ✅ Organizzate, navigabili, mantenibili
 # .agents/docs/overview/agents-overview.md
 ## Riferimenti
 - [AGENTS.md](../../AGENTS.md) - File originale compatto
-- [agents.md](../../agents.md) - File originale compatto
+- [AGENTS.md](../../AGENTS.md) - File originale compatto
 - [qwen.md](../../qwen.md) - Contesto Qwen Code
 ```
 
@@ -137,7 +141,7 @@ TOTALE: ~2,500 righe  ✅ Organizzate, navigabili, mantenibili
 ```markdown
 # .agents/docs/architecture/agents-filament-widgets.md
 ## Riferimenti
-- [Coding Standards](../standards/agents-coding-standards.md)
+- [Coding Standards](agents-coding-standards.md)
 - [Module Architecture](./agents-module-architecture.md)
 - [Quality Gate](../workflow/agents-quality-gate.md)
 ```
@@ -214,7 +218,7 @@ TOTALE: ~2,500 righe  ✅ Organizzate, navigabili, mantenibili
 ### File Originali (Compatti)
 - `AGENTS.md` - Link a tutti i moduli
 - `qwen.md` - Contesto Qwen Code
-- `claude.md` - Claude-specific patterns
+- `CLAUDE.md` - Claude-specific patterns
 - `gemini.md` - Gemini-specific patterns
 - `IFLOW.md` - iFlow-specific patterns
 

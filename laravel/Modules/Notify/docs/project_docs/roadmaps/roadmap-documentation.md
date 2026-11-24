@@ -3,11 +3,14 @@ title: "roadmap documentation"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "roadmap documentation"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 📚 ROADMAP DOCUMENTAZIONE - FIXCITY PLATFORM
@@ -628,6 +631,15 @@ paths:
 - [ ] Budget e risorse
 
 ---
+
+title: "roadmap documentation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "roadmap documentation"
+issues: []
+discussions: []
 **📞 Contatti Documentazione**
 - **Tech Writer**: Documentation Team
 - **Email**: docs@laraxot.com

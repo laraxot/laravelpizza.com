@@ -19,10 +19,11 @@ class GetTaskCommandsAction
      */
     public function execute(): Collection
     {
+        /** @var Collection<string, Command> $allCommands */
         $allCommands = collect(Artisan::all());
 
-        /** @var Collection<int, Command> $sorted */
-        $sorted = $allCommands->sortBy(static function (Command $command) {
+        $sorted = $allCommands->sortBy(static function (mixed $command): string {
+            Assert::isInstanceOf($command, Command::class, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
             $name = $command->getName();
             Assert::string($name, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
             if (mb_strpos($name, ':') === false) {
@@ -32,6 +33,9 @@ class GetTaskCommandsAction
             return $name;
         });
 
-        return $sorted->values();
+        /** @var Collection<int, Command> $values */
+        $values = $sorted->values();
+
+        return $values;
     }
 }

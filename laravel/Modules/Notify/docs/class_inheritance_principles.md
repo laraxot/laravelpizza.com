@@ -3,7 +3,11 @@ title: "class inheritance principles"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "class inheritance principles"
 issues: []
 discussions: []
@@ -89,7 +93,7 @@ Per identificare dichiarazioni duplicate, usare:
 # Trova classi che estendono XotBasePage e implementano HasForms
 grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/<nome progetto>/laravel/Modules/
 grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/saluteora/laravel/Modules/
-grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/
+grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/
 ```
 
 ## Riferimenti

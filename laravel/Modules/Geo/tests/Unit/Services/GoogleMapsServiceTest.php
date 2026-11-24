@@ -4,15 +4,23 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit\Services;
 
-use ReflectionClass;
 use Modules\Geo\Services\GoogleMapsService;
 use Modules\Geo\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+use ReflectionClass;
 
 uses(TestCase::class);
 
 it('can be instantiated', function (): void {
-    Assert::assertInstanceOf(GoogleMapsService::class, new GoogleMapsService());
+<<<<<<< HEAD
+<<<<<<< .merge_file_l6t0nm
+    Assert::assertInstanceOf(GoogleMapsService::class, new GoogleMapsService);
+=======
+    expect(fn (): GoogleMapsService => new GoogleMapsService)->not->toThrow(\Throwable::class);
+>>>>>>> .merge_file_diWQCA
+=======
+    expect(fn (): GoogleMapsService => new GoogleMapsService)->not->toThrow(\Throwable::class);
+>>>>>>> laraxot/dev
 });
 
 it('has correct constants defined', function (): void {
@@ -28,7 +36,7 @@ it('has correct constants defined', function (): void {
 });
 
 it('has required methods', function (): void {
-    $methods = get_class_methods(new GoogleMapsService());
+    $methods = get_class_methods(new GoogleMapsService);
     Assert::assertContains('reverseGeocode', $methods);
     Assert::assertContains('getDistanceMatrix', $methods);
     Assert::assertContains('getElevation', $methods);

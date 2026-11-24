@@ -1,15 +1,15 @@
 ---
-title: "[DEV] PHPStan cleanup: Job"
+title: "[DEV] PHPStan cleanup — Job"
 type: dev
 module: Job
-story: "./phpstan-cleanup-job.story.md"
+story: "./2026-10-06-phpstan-cleanup-job.story.md"
 status: done
 created: 2026-10-06
 updated: 2026-10-06
 tags: [phpstan, cleanup, bmad, job]
 ---
 
-# [DEV] PHPStan cleanup: Job
+# [DEV] PHPStan cleanup — Job
 
 ## Technical Plan
 

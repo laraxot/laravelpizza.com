@@ -118,7 +118,6 @@ Thumbs.db
 # DOCUMENTATION CACHE
 # ==============================================
 docs/phpstan/
-docs/cache/
 docs/archive/
 docs/archive/**
 
@@ -166,7 +165,6 @@ test_media_files/
 laravel
 public_html
 lang/lang/
-_docs/
 _docs/
 agentdb.rvf
 tests/AuditCoverage/
@@ -225,3 +223,8 @@ docs/chat
 # Laraxot — app/Application forbidden (belongs to laravel/app/, not module app/)
 app/Application
 /.docs-archive/
+<<<<<<< HEAD
+=======
+tests/coverage-*.*
+docs/screenshots/
+>>>>>>> laraxot/dev

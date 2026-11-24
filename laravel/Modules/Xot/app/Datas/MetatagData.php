@@ -48,6 +48,10 @@ use function Safe\file_get_contents;
  * @property string $facebook_href
  * @property string $twitter_href
  * @property string $youtube_href
+ * @property list<string> $same_as
+ * @property string $google_site_verification
+ * @property string $bing_site_verification
+ * @property string $yandex_verification
  * @property string $fastlink
  * @property string $color_primary
  * @property string $color_title
@@ -109,6 +113,25 @@ class MetatagData extends Data implements Wireable
     public string $twitter_href = '';
 
     public string $youtube_href = '';
+
+    /**
+     * Altri profili ufficiali del sito (LinkedIn, GitHub, Wikidata…): URL assoluti in https. Con i link social sopra
+     * diventano lo `sameAs` dell'Organization nel JSON-LD della home; un valore che non e' un URL https si scarta.
+     *
+     * @see Modules/Seo/docs/adr/search-engine-presence.md
+     *
+     * @var list<string>
+     */
+    public array $same_as = [];
+
+    /** Token del meta `google-site-verification` (Search Console, verifica con tag HTML); vuoto = nessun meta. */
+    public string $google_site_verification = '';
+
+    /** Token del meta `msvalidate.01` (Bing Webmaster Tools); vuoto = nessun meta. */
+    public string $bing_site_verification = '';
+
+    /** Token del meta `yandex-verification` (Yandex Webmaster); vuoto = nessun meta. */
+    public string $yandex_verification = '';
 
     public string $fastlink = '';
 
@@ -366,6 +389,44 @@ class MetatagData extends Data implements Wireable
     }
 
     /**
+     * Profili ufficiali per lo `sameAs` di schema.org: link social e `same_as`, solo URL https validi, senza doppioni.
+     * Un valore segnaposto (es. `aa`) non diventa un'identita' dichiarata.
+     *
+     * @see Modules/Seo/docs/adr/search-engine-presence.md
+     *
+     * @return list<string>
+     */
+    public function getSameAs(): array
+    {
+        $candidates = [...array_values($this->getBrandSocialLinks()), ...$this->same_as];
+        $urls = [];
+        foreach ($candidates as $candidate) {
+            $url = trim($candidate);
+            if (str_starts_with($url, 'https://') && filter_var($url, FILTER_VALIDATE_URL) !== false) {
+                $urls[$url] = true;
+            }
+        }
+
+        return array_keys($urls);
+    }
+
+    /**
+     * Meta di verifica dei motori di ricerca da stampare in home: nome del meta => token, solo quelli valorizzati.
+     *
+     * @see Modules/Seo/docs/adr/search-engine-presence.md
+     *
+     * @return array<string, string>
+     */
+    public function getSiteVerifications(): array
+    {
+        return array_filter([
+            'google-site-verification' => trim($this->google_site_verification),
+            'msvalidate.01' => trim($this->bing_site_verification),
+            'yandex-verification' => trim($this->yandex_verification),
+        ], static fn (string $token): bool => $token !== '');
+    }
+
+    /**
      * Get the brand dimensions.
      * This method reflects the semantic purpose of getting brand-related dimensions.
      *
@@ -433,7 +494,28 @@ class MetatagData extends Data implements Wireable
      */
     public function getFilamentColors(): array
     {
+<<<<<<< HEAD
+        $palette = app(PaDesignColorsAction::class)->filamentPalette();
+
+        // Un progetto con un proprio marchio può cambiare il colore primario dei pannelli senza toccare la palette PA:
+        // config/local/<tenant>/metatag.php => 'filament_primary' => 'red' (palette Tailwind, consigliata: tonalità
+        // calibrate per il contrasto dei pulsanti) oppure un esadecimale '#dc2626'.
+        $primary = config('metatag.filament_primary');
+        if (\is_string($primary) && $primary !== '') {
+            $constant = Color::class.'::'.ucfirst(strtolower($primary));
+            if (\defined($constant)) {
+                /** @var array<int, string> $shades */
+                $shades = \constant($constant);
+                $palette['primary'] = $shades;
+            } elseif (\Safe\preg_match('/^#[0-9a-fA-F]{6}$/', $primary) === 1) {
+                $palette['primary'] = Color::hex($primary);
+            }
+        }
+
+        return $palette;
+=======
         return app(PaDesignColorsAction::class)->filamentPalette();
+>>>>>>> laraxot/dev
     }
 
     /**

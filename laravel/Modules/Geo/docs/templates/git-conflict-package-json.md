@@ -7,5 +7,4 @@ updated: 2026-09-26
 qmd: "git conflict package json"
 issues: []
 discussions: []
-status: draft
 ---

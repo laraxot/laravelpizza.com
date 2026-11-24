@@ -3,7 +3,11 @@ title: "project completion status"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "project completion status"
 issues: []
 discussions: []
@@ -12,9 +16,9 @@ status: draft
 
 # 🎯 FIXCITY - STATO COMPLETAMENTO PROGETTO
 
-**Data**: 2025-10-01  
-**Status**: 🚧 IN CORSO - Documentazione 75% completata  
-**Fase Corrente**: Q4 2025 - Feature Expansion  
+**Data**: 2025-10-01
+**Status**: 🚧 IN CORSO - Documentazione 75% completata
+**Fase Corrente**: Q4 2025 - Feature Expansion
 
 ---
 ## ✅ LAVORO COMPLETATO OGGI
@@ -33,7 +37,7 @@ status: draft
 - ✅ **ADMIN_GUIDE.md** - Guida amministratori completa (NEW)
 
 ### 👥 Modulo User (90% → 92%)
-- ✅ **ROADMAP.md** - Aggiornato Q4 2025-Q1 2026
+- ✅ **roadmap.md** - Aggiornato Q4 2025-Q1 2026
 
 ### 🎨 Tema Sixteen (75% → 78%)
 - ✅ **ROADMAP_2025.md** - Aggiornato Q4 2025-Q2 2026
@@ -175,7 +179,7 @@ status: draft
 ### Roadmap Aggiornate (3 documenti)
 1. **ROADMAP_STATUS_SUMMARY.md** - Master roadmap
 2. **Fixcity/ROADMAP_2025.md** - Roadmap modulo
-3. **User/ROADMAP.md** - Roadmap modulo
+3. **User/roadmap.md** - Roadmap modulo
 4. **Sixteen/ROADMAP_2025.md** - Roadmap tema
 
 **Totale**: 11 documenti creati/aggiornati
@@ -185,8 +189,8 @@ status: draft
 ## 🔗 STRUTTURA DOCUMENTAZIONE
 
 ```
-base_fixcity_fila5_mono/
-base_ptv_fila5_mono/
+base_fixcity_fila5/
+base_ptv_fila5/
 ├── DOCUMENTATION_INDEX.md          # ✅ Indice generale
 ├── QUICK_START.md                  # ✅ Guida rapida
 ├── ROADMAP_STATUS_SUMMARY.md       # ✅ Status master
@@ -207,7 +211,7 @@ base_ptv_fila5_mono/
     │   │
     │   ├── User/docs/
     │   │   ├── README.md           # ✅ Completo
-    │   │   ├── ROADMAP.md          # ✅ Aggiornato
+    │   │   ├── roadmap.md          # ✅ Aggiornato
     │   │   ├── 2FA_GUIDE.md        # 📋 TODO
     │   │   ├── SSO_GUIDE.md        # 📋 TODO
     │   │   └── API.md              # 📋 TODO
@@ -311,8 +315,8 @@ Prima di considerare un modulo "completo":
 
 ---
 
-**Status Finale**: 🚧 Progetto al 75% di completamento documentazione  
-**Confidence Level**: 90%  
+**Status Finale**: 🚧 Progetto al 75% di completamento documentazione
+**Confidence Level**: 90%
 
 ---
 

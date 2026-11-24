@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\Geo\Services;
 
 use Illuminate\Support\Facades\Http;
-use Modules\Tenant\Services\TenantService;
+use Modules\Tenant\Actions\Config\ResolveTenantConfigValueAction;
 
 class HereService
 {
@@ -18,7 +18,7 @@ class HereService
      */
     public static function getDurationAndLength(float $lat1, float $lon1, float $lat2, float $lon2): ?array
     {
-        $api_key = TenantService::config('services.here.api_key');
+        $api_key = app(ResolveTenantConfigValueAction::class)->execute('services.here.api_key');
 
         $data = [
             'transportMode' => 'car',
@@ -28,7 +28,7 @@ class HereService
             'apiKey' => $api_key,
         ];
 
-        // dddx(TenantService::config('services.here'));
+        // dddx(app(ResolveTenantConfigValueAction::class)->execute('services.here'));
 
         $base_url = 'https://router.hereapi.com/v8/routes';
         $response = Http::get($base_url, $data);

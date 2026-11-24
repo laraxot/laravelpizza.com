@@ -3,20 +3,23 @@ title: "PHASE 2 - EPIC 2.1 - TASK 1: Create /my-tickets Folio Page"
 type: concept
 tags: [plan]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "2-1-1-plan phase 2 - epic 2.1 - task 1: create /my-tickets folio page"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./2-1-context.md"
-  - "./agents.md"
+  - "./AGENTS.md"
   - "./ai-agent-lessons-learned.md"
   - "./ai-skills-and-plugins-complete.md"
   - "./commit-message.md"
   - "./configuration.md"
   - "./design-comuni-bmad-master-plan.md"
   - "./docs-governance.md"
-status: draft
 ---
 
 # PHASE 2 - EPIC 2.1 - TASK 1: Create /my-tickets Folio Page

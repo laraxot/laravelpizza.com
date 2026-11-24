@@ -9,8 +9,7 @@ created: 2026-07-14
 updated: 2026-07-14
 qmd: "links01"
 related:
-  - "../italian-text-refined-audit-report.md"
-status: draft
+  - "./italian-text-refined-audit-report.md"
 ---
 # Convenzioni per i Link nella Documentazione
 
@@ -99,7 +98,7 @@ Prima di fare commit dei documenti:
 ### Da Modules/Lang/docs/ a docs/ nella root
 ```markdown
 [Documentazione Principale](../../../docs/README.md)
-[Documentazione Principale](../../../../docs/readme.md)
+[Documentazione Principale](../../../../docs/README.md)
 ```
 
 ### Da Modules/Lang/docs/ a un altro file nella stessa cartella

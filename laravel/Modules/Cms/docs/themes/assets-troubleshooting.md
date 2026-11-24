@@ -7,7 +7,10 @@ updated: 2026-09-26
 qmd: "assets troubleshooting"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
 status: draft
+>>>>>>> laraxot/dev
 ---
 
 # Risoluzione Problemi con Assets dei Temi
@@ -39,8 +42,18 @@ Questo errore è uno dei più comuni nella gestione dei temi. Per la risoluzione
 
 ## Collegamenti Rilevanti
 
+<<<<<<< HEAD
+- [Processo di Build dei Temi](theme-build-process.md)
+- [Compilazione dei Temi](theme_compilation.md)
+=======
+<<<<<<< .merge_file_5gOiOu
 - [Processo di Build dei Temi](../theme-build-process.md)
 - [Compilazione dei Temi](../theme-compilation.md)
+=======
+- [Processo di Build dei Temi](theme-build-process.md)
+- [Compilazione dei Temi](theme_compilation.md)
+>>>>>>> .merge_file_g28oZb
+>>>>>>> laraxot/dev
 - [Documentazione Principale Vite](/docs/vite_assets_troubleshooting.md)
 
 ## Comandi Utili
@@ -69,10 +82,19 @@ Per maggiori dettagli sul funzionamento interno, consultare:
 
 3. **Ambiente di Sviluppo**
    - In sviluppo: utilizzare `npm run dev`
-<<<<<<< .merge_file_vleQnk
+<<<<<<< HEAD
    - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-=======
    - In produzione: utilizzare `npm run copy` (dismesso: `public_html/themes/<Tema>` e' un symlink a `laravel/Themes/<Tema>/public`)
->>>>>>> .merge_file_5Zq2H6
+
+   - In produzione: utilizzare `npm run copy` (dismesso: `public_html/themes/<Tema>` e' un symlink a `laravel/Themes/<Tema>/public`)
+=======
+<<<<<<< HEAD
+   - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+
+   - In produzione: utilizzare `npm run copy` (dismesso: `public_html/themes/<Tema>` e' un symlink a `laravel/Themes/<Tema>/public`)
+=======
+   - In produzione: `npm run build`; `public_html/themes/<Tema>` è un symlink, niente copia
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 Per una guida completa sulla risoluzione dei problemi, consultare la [documentazione principale](/docs/vite_assets_troubleshooting.md).

@@ -1,16 +1,14 @@
 ---
-title: "User: confine Table, i18n e riuso Filament"
+title: "User — confine Table, i18n e riuso Filament"
 type: story
 status: review
 epic: "USER-MODULE-EXCELLENCE"
 module: User
 created: 2026-09-29
 updated: 2026-09-29
-tags: [docs, user, bmad]
-qmd: "story   user: table boundary, traduzioni e riuso user"
 ---
 
-# Story: User: Table boundary, traduzioni e riuso
+# Story — User: Table boundary, traduzioni e riuso
 
 ## Obiettivo
 
@@ -70,7 +68,7 @@ anche nel modulo e deve essere riallineata alla collection PTVX. `graphify` non 
 installato nel PATH di questo ambiente: l'aggiornamento del grafo resta da eseguire
 quando il binario sarà disponibile.
 
-## Audit successivo: 2026-09-29
+## Audit successivo — 2026-09-29
 
 È stata rieseguita la verifica sull'intero albero `laravel/Modules/*/app/Filament/Resources/**/Pages/List*.php`:
 

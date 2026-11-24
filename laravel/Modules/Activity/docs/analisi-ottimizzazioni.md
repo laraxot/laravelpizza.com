@@ -1,11 +1,10 @@
 ---
-title: "analisi e ottimizzazioni - modulo activity"
+title: "📊 analisi e ottimizzazioni - modulo activity"
+qmd: "activity analisi ottimizzazioni md"
 type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, activity]
-qmd: "analisi e ottimizzazioni - modulo activity activity"
+tags: [documentation]
 ---
+
 # 📊 analisi e ottimizzazioni - modulo activity
 
 ## 🎯 panoramica analisi
@@ -254,19 +253,10 @@ php artisan test
 
 ---
 
-<<<<<<< .merge_file_szomJ6
-<<<<<<< HEAD
-<<<<<<< HEAD
 **
-=======
+
 **ultimo aggiornamento**: 20 agosto 2025
->>>>>>> 0a02158a (.)
-=======
-**ultimo aggiornamento**: 20 agosto 2025
->>>>>>> 35d8cf69 (Initial commit)
-=======
+
 **=======
-**ultimo aggiornamento**: 20 agosto 2025
->>>>>>> .merge_file_765fhQ
 **analista**: claude code
 **stato**: pronto per implementazione

@@ -1,13 +1,5 @@
----
-title: "import status"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "import status user"
----
 
-## Fix base 2026-08-30: proprietà `$pivot` che oscurava la relation pivot
+## Fix base 2026-08-30 — proprietà `$pivot` che oscurava la relation pivot
 
 `BaseUser` dichiarava `public ?Pivot $pivot = null;`: una proprietà PHP reale
 oscura il magic `__get` di Eloquent, quindi **ogni** `belongsToMany` verso User
@@ -16,7 +8,7 @@ restituiva modelli con `->pivot === null` (e l'eager loading esplodeva in
 La proprietà è stata rimossa (resta il PHPDoc `@property Pivot|null $pivot`).
 
 Regola generale: mai dichiarare proprietà PHP reali con lo stesso nome di
-attributi/relazioni Eloquent: vale per `pivot` come per le colonne.
+attributi/relazioni Eloquent — vale per `pivot` come per le colonne.
 
 ## Fix suite test User in locale (2026-08-30)
 

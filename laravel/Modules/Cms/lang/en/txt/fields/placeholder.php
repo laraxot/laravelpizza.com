@@ -8,8 +8,8 @@ declare(strict_types=1);
 // Cms txt.fields.placeholder — LangServiceProvider SSoT.
 return [
     'label' => 'Placeholder',
-    'placeholder' => 'Testo segnaposto per campi input',
-    'helper_text' => 'Testo mostrato nei campi vuoti come suggerimento',
+    'placeholder' => 'Placeholder text for input fields',
+    'helper_text' => 'Text shown in empty fields as a hint',
     'tooltip' => '',
     'description' => '',
 ];

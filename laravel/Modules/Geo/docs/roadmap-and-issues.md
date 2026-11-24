@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "roadmap and issues"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Geo Module - Roadmap, Issues & Optimization
@@ -17,6 +16,15 @@ status: draft
 **Status PHPStan**: ✅ 0 errori (Level 9)
 
 ---
+
+title: "roadmap and issues"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "roadmap and issues"
+issues: []
+discussions: []
 ## 📊 STATO ATTUALE
 
 ### Completezza Funzionale: 80%

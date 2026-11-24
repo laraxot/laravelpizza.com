@@ -18,6 +18,7 @@ projects: ["Design Comuni Replication"]
 
 **Riferimenti:**
 - Source: https://italia.github.io/design-comuni-pagine-statiche/
+- Target: http://fixcity.local/it/tests/*
 - Target: http://ptv.local/it/tests/*
 - Master Plan: `.planning/DESIGN_COMUNI_MASTER_PLAN.md`
 
@@ -81,6 +82,7 @@ projects: ["Design Comuni Replication"]
 
 ## ✅ Definition of Done (Per Pagina)
 
+- [ ] JSON content block creato in `laravel/config/local/fixcity/database/content/pages/`
 - [ ] JSON content block creato in `laravel/config/local/ptv/database/content/pages/`
 - [ ] HTML dentro `<body>` (esclusi scripts) IDENTICO al source
 - [ ] Screenshot comparison salvato in docs
@@ -119,7 +121,7 @@ projects: ["Design Comuni Replication"]
 - [ ] `laravel/Themes/Sixteen/docs/design-comuni/HTML_REPLICATION_GUIDE.md`
 - [ ] `laravel/Themes/Sixteen/docs/design-comuni/BLOCKS_CATALOG.md`
 - [ ] `laravel/Themes/Sixteen/docs/design-comuni/SCREENSHOTS/` (analisi)
-- [ ] `laravel/Modules/Cms/docs/PAGE_COMPONENT_ARCHITECTURE.md`
+- [ ] `laravel/Modules/Cms/docs/page_component_architecture.md`
 - [ ] `laravel/Modules/Cms/docs/JSON_CONTENT_BLOCKS.md`
 - [ ] `docs/project/DESIGN_COMUNI_REPLICATION_STATUS.md`
 

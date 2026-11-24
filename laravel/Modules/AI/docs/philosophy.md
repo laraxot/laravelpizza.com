@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "philosophy"
 issues: []
 discussions: []
-status: draft
 ---
 
 # AI Module: Philosophy, Purpose, and Design Principles

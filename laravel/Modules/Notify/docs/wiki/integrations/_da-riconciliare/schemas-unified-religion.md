@@ -2,16 +2,19 @@
 qmd: "schemas unified religion"
 issues: []
 discussions: []
-title: "Filament Schemas Unificati: Regola Canonica"
+title: "Filament Schemas Unificati — Regola Canonica"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
-# Filament Schemas Unificati: Regola Canonica
+# Filament Schemas Unificati — Regola Canonica
 
 **Status**: Active  
 **Created**: 2026-04-14  

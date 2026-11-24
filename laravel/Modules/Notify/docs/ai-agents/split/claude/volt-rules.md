@@ -3,11 +3,14 @@ title: "volt rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "volt rules"
 issues: []
 discussions: []
-status: draft
 ---
 
 === volt/core rules ===
@@ -21,11 +24,17 @@ status: draft
 )]))
 </code-snippet>
 
+<<<<<<< HEAD
 
 ### Volt Class Based Component Example
 To get started, define an anonymous class that extends Livewire\Volt\Component. Within the class, you may utilize all of the features of Livewire using traditional Livewire syntax:
 
 
+=======
+### Volt Class Based Component Example
+To get started, define an anonymous class that extends Livewire\Volt\Component. Within the class, you may utilize all of the features of Livewire using traditional Livewire syntax:
+
+>>>>>>> laraxot/dev
 <code-snippet name="Volt Class-based Volt Component Example" lang="php">
 use Livewire\Volt\Component;
 
@@ -44,7 +53,10 @@ new class extends Component {
 </div>
 </code-snippet>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ### Testing Volt & Volt Components
 - Use the existing directory for tests if it already exists. Otherwise, fallback to `tests/Feature/Volt`.
 
@@ -59,7 +71,10 @@ test('counter increments', function () {
 });
 </code-snippet>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 <code-snippet name="Volt Component Test Using Pest" lang="php">
 declare(strict_types=1);
 
@@ -81,10 +96,15 @@ test('product form creates product', function () {
 });
 </code-snippet>
 
+<<<<<<< HEAD
 
 ### Common Patterns
 
 
+=======
+### Common Patterns
+
+>>>>>>> laraxot/dev
 <code-snippet name="CRUD With Volt" lang="php">
 <?php
 
@@ -105,8 +125,11 @@ $delete = fn(Product $product) => $product->delete();
 <!-- HTML / UI Here -->
 </code-snippet>
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> laraxot/dev
 <code-snippet name="Real-Time Search With Volt" lang="php">
     <flux:input
         wire:model.live.debounce.300ms="search"
@@ -114,8 +137,11 @@ $delete = fn(Product $product) => $product->delete();
     />
 </code-snippet>
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> laraxot/dev
 <code-snippet name="Loading States With Volt" lang="php">
     <flux:button wire:click="save" wire:loading.attr="disabled">
         <span wire:loading.remove>Save</span>
@@ -126,11 +152,20 @@ $delete = fn(Product $product) => $product->delete();
 
 
 ---
+
+title: "volt rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "volt rules"
+issues: []
+discussions: []
 ## Cross-References
 
-- ← [CLAUDE Index](INDEX.md): All Laravel Boost guidelines
-- ← [Main AI Docs Index](../INDEX.md): Master index
-- ← [CLAUDE Index](index.md): All Laravel Boost guidelines
-- ← [Main AI Docs Index](../index.md): Master index
-- ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md): Original source
+- ← [CLAUDE Index](index.md) — All Laravel Boost guidelines
+- ← [Main AI Docs Index](../index.md) — Master index
+- ← [CLAUDE Index](index.md) — All Laravel Boost guidelines
+- ← [Main AI Docs Index](../index.md) — Master index
+- ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md) — Original source
 

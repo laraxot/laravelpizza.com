@@ -3,11 +3,14 @@ title: "agents overview"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "agents overview"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Agents overview
@@ -37,8 +40,18 @@ Panoramica delle preferenze utente e del canone operativo del repository.
 
 ## Riferimenti
 
+<<<<<<< HEAD
 - [Main docs index](./00-index.md)
 - [Architecture index](./architecture/00-index.md)
+=======
+<<<<<<< HEAD
+- [Main docs index](./00-INDEX.md)
+- [Architecture index](./architecture/00-INDEX.md)
+=======
+- [Main docs index](./00-index.md)
+- [Architecture index](./architecture/00-index.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Main docs index](./00-index.md)
 - [Architecture index](./architecture/00-index.md)
 - [Filament table vs blade component](./architecture/filament-table-vs-blade-component.md)

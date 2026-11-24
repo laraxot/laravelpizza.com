@@ -125,7 +125,7 @@ class SendPushNotificationPage extends XotBasePage
         if ($deviceToken === '') {
             Notification::make()
                 ->danger()
-                ->title('Errore')
+                ->title('Error')
                 ->body('Token del dispositivo non valido')
                 ->send();
 

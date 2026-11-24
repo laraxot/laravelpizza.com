@@ -16,6 +16,17 @@ return [
     'success_attached' => 'User successfully attached',
     'success_detached' => 'User successfully detached',
     'success_deleted' => 'Users successfully deleted',
-    'delete' => 'Cancella',
-    'replicate' => 'Duplica',
+    'delete' => 'Delete',
+    'replicate' => 'Duplicate',
+    'oauth' => [
+        'revoke_client' => [
+            'label' => 'Revoke client',
+            'modal' => [
+                'heading' => 'Revoke client',
+                'description' => 'This revokes all tokens issued to this client. This cannot be undone.',
+                'confirm' => 'Yes, revoke',
+            ],
+            'success' => 'Client revoked successfully',
+        ],
+    ],
 ];

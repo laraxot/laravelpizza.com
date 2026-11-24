@@ -15,6 +15,8 @@ use Spatie\QueueableAction\QueueableAction;
  * Log Activity Action.
  *
  * Logs a single activity using Queueable Actions
+ *
+ * @contract docs/contracts/log-activity-action.md
  */
 class LogActivityAction
 {
@@ -47,7 +49,9 @@ class LogActivityAction
             $causerId = is_int($userId) || is_string($userId) ? $userId : null;
         }
         if ($causerId === null) {
-            $causerId = Auth::id();
+            $authId = Auth::id();
+            // Auth::id() e' int|string|null; un mock o un driver buggato puo' restituire altro.
+            $causerId = is_int($authId) || is_string($authId) ? $authId : null;
         }
 
         return Activity::typedQuery()->create([

@@ -25,16 +25,19 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'Password',
         ],
         'email' => [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'E-mail',
         ],
         'name' => [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'label' => 'Nome',
         ],
     ],
     'navigation' => [

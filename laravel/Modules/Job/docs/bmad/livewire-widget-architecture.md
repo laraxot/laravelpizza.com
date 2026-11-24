@@ -1,14 +1,10 @@
 ---
-title: "Architecture: Job"
+title: "Architecture — Job"
 type: architecture
 module: Job
 related:
   - ./livewire-widget-prd.md
   - ./livewire-inventory.md
-status: draft
-updated: 2026-10-07
-tags: [docs, job, bmad]
-qmd: "architecture job job"
 ---
 
 # Architecture Job

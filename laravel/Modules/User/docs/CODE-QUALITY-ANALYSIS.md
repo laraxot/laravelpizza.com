@@ -1,12 +1,3 @@
----
-title: "Code Quality Analysis - User Module"
-type: note
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "code quality analysis - user module user"
-status: superseded
-superseded_by: code-quality-analysis.md
----
 # Code Quality Analysis - User Module
 
 ## 🚨 Critical Issues Identified
@@ -313,7 +304,11 @@ public function getTableColumns(): array
 
 ## 📚 Related Documentation
 
+<<<<<<< HEAD
 - [AUTHENTICATION_PERFORMANCE_OPTIMIZATION.md](./performance/AUTHENTICATION_PERFORMANCE_OPTIMIZATION.md)
+=======
+- [AUTHENTICATION_PERFORMANCE_OPTIMIZATION.md](./performance/authentication-performance-optimization.md)
+>>>>>>> laraxot/dev
 - [optimization-analysis.md](./optimization-analysis.md)
 - [phpstan-compliance.md](./phpstan-compliance.md)
 

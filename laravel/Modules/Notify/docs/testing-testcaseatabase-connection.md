@@ -3,11 +3,14 @@ title: "testing testcaseatabase connection"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "testing testcaseatabase connection"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Fix: Notify TestCase - Database Connection Configuration
@@ -94,13 +97,34 @@ protected function setUp(): void
 ## 🔗 Collegamenti
 
 - [Testing Rules](testing-rules.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 - [Activity TestCase Fix](../../activity/docs/testing-testcase-database-connection-fix.md)
 - [Geo TestCase Fix](../../geo/docs/testing-testcase-database-connection-fix.md)
 - [Media TestCase Fix](../../media/docs/testing-testcase-database-connection-fix.md)
 - [Activity TestCase Fix](../../Activity/docs/testing-testcase-database-connection-fix.md)
 - [Geo TestCase Fix](../../Geo/docs/testing-testcase-database-connection-fix.md)
 - [Media TestCase Fix](../../Media/docs/testing-testcase-database-connection-fix.md)
+=======
+>>>>>>> laraxot/dev
+- [Activity TestCase Fix](../../Activity/docs/testing-testcase-database-connection-fix.md)
+- [Geo TestCase Fix](../../Geo/docs/testing-testcase-database-connection-fix.md)
+- [Media TestCase Fix](../../Media/docs/testing-testcase-database-connection-fix.md)
 
 ---
+
+title: "testing testcaseatabase connection"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "testing testcaseatabase connection"
+issues: []
+discussions: []
 **Status**: Completed
 **Risultato**: Test Notify ora configurano correttamente le connessioni database
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

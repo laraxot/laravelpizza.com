@@ -3,7 +3,11 @@ title: "GitHub Issues - CORRECT WORKFLOW"
 type: concept
 tags: [github, issues, workflow]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "github-issues-workflow github issues - correct workflow"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -16,7 +20,6 @@ related:
   - "./05-front-office-audit.md"
   - "./06-cinematic-effects.md"
   - "./07-mcp-tailwind-ui.md"
-status: draft
 ---
 
 # GitHub Issues - CORRECT WORKFLOW

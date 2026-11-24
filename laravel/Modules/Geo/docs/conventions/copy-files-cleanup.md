@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "copy files cleanup"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Copy Files Cleanup Convention
@@ -19,6 +18,15 @@ status: draft
 > **Owner:** Development Team
 
 ---
+
+title: "copy files cleanup"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "copy files cleanup"
+issues: []
+discussions: []
 ## Problema
 
 I file con suffisso ` copy` o `.copy` sono duplicati temporanei creati da editor o operazioni di copia-incolla. Questi file:
@@ -223,8 +231,8 @@ rm ".gitattributes copy"
 
 ### Documenti Correlati
 
-- [Workspace Naming Convention](workspace-naming.md)
-- [Module Folder Structure](module-folder-structure.md)
+- [Workspace Naming Convention](conventions/workspace-naming.md)
+- [Module Folder Structure](conventions/module-folder-structure.md)
 - [AGENTS.md](../../AGENTS.md)
 
 ### Git Documentation

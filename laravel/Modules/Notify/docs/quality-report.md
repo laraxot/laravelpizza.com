@@ -1,17 +1,20 @@
 ---
 issues: []
 discussions: []
-title: "Quality Report: Notify"
+title: "Quality Report — Notify"
 type: report
 tags: [quality, phpstan, pest, coverage]
 module: Notify
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "Notify quality report phpstan pest coverage test ratio"
-status: draft
 ---
 
-# Quality Report: Notify
+# Quality Report — Notify
 
 Aggiornato: 2026-08-24. Rigenera con: `bashscripts/tools/quality-report.sh Notify`
 

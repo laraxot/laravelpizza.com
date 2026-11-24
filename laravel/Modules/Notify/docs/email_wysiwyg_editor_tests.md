@@ -3,12 +3,14 @@ title: "email wysiwyg editor tests"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "email wysiwyg editor tests"
 issues: []
 discussions: []
-status: superseded
-superseded_by: bmad/architecture/email-wysiwyg-editor-tests.md
 ---
 
 # Test Editor WYSIWYG Email - il progetto

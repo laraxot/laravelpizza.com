@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "testing guidelines"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../testing-guidelines.md
 ---
 
 # Geo Module - Testing Guidelines

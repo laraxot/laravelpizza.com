@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament v4 infolists migration"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Filament v4 Infolists Migration Guide

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament rules"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Regole Fondamentali PTVX - Estensioni Filament

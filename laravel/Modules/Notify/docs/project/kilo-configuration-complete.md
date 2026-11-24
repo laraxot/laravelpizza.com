@@ -3,20 +3,23 @@ title: "✅ Kilo (OpenCode) Configuration - COMPLETE"
 type: concept
 tags: [kilo, configuration, complete]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "kilo-configuration-complete ✅ kilo (opencode) configuration - complete"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./2-1-1-plan.md"
   - "./2-1-context.md"
-  - "./agents.md"
+  - "./AGENTS.md"
   - "./ai-agent-lessons-learned.md"
   - "./ai-skills-and-plugins-complete.md"
   - "./commit-message.md"
   - "./configuration.md"
   - "./design-comuni-bmad-master-plan.md"
-status: draft
 ---
 
 # ✅ Kilo (OpenCode) Configuration - COMPLETE
@@ -71,8 +74,8 @@ status: draft
   
   // Documentazione per contesto AI
   "instructions": [
-    "agents.md",
-    "laravel/agents.md"
+    "AGENTS.md",
+    "laravel/AGENTS.md"
   ],
   
   // Tool abilitati
@@ -114,7 +117,7 @@ status: draft
 | `autoupdate` | boolean | Auto-update | `true` |
 | `snapshot` | boolean | Snapshot | `true` |
 | `mcp` | object | MCP servers | `{}` |
-| `instructions` | array | Docs contesto | `["agents.md", ...]` |
+| `instructions` | array | Docs contesto | `["AGENTS.md", ...]` |
 | `tools` | object | Tool abilitati | `{write, edit, bash...}` |
 | `permission` | object | Permessi | `{bash: "ask", ...}` |
 | `experimental` | object | Feature sperimentali | `{}` |
@@ -198,7 +201,7 @@ Ctrl+Q         - Esci
 Kilo legge automaticamente:
 
 1. **AGENTS.md** - Contesto principale
-2. **laravel/agents.md** - Contesto Laravel
+2. **laravel/AGENTS.md** - Contesto Laravel
 
 ### Per Aggiungere Altra Docs
 
@@ -207,8 +210,8 @@ Modifica `.kilo/kilo.jsonc`:
 ```jsonc
 {
   "instructions": [
-    "agents.md",
-    "laravel/agents.md",
+    "AGENTS.md",
+    "laravel/AGENTS.md",
     "docs/**/*.md",                    // Tutta la docs
     "laravel/Modules/docs/README.md",  // Index moduli
     "laravel/Themes/docs/README.md",   // Index temi

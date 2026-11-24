@@ -14,7 +14,7 @@ module: User
 > «sistema tutte le segnalazioni di phpstan [...] concentrati sullo scopo/funzionalita', non sull'errore;
 > aumenta la qualita' del codice; usa enum al posto delle costanti».
 
-Gruppo: `User`: 108 errori in 43 file (`laravel/Modules/User/**`), livello `max`.
+Gruppo: `User` — 108 errori in 43 file (`laravel/Modules/User/**`), livello `max`.
 
 ## Analysis
 

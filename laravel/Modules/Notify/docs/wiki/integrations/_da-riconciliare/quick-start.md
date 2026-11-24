@@ -3,7 +3,11 @@ title: "🚀 <nome progetto> - GUIDA RAPIDA SVILUPPATORI"
 type: concept
 tags: [quick, start]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "quick-start 🚀 <nome progetto> - guida rapida sviluppatori"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -502,10 +506,21 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 
 ### Documentazione
 - **[Indice Documentazione](./documentation-index.md)**
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_ihyH3q
 - **[Roadmap Status](./roadmap-status-summary.md)**
 - **[Documentation Status](./project_docs/documentation-status.md)**
+=======
+>>>>>>> laraxot/dev
 - **[Roadmap Status](../../../roadmap-status-summary.md)**
 - **[Documentation Status](../../../project_docs/documentation-status.md)**
+- **[Roadmap Status](../../../roadmap-status-summary.md)**
+- **[Documentation Status](../../../project_docs/documentation-status.md)**
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_2Wtrhu
+>>>>>>> laraxot/dev
 
 ### Framework
 - **[Laravel Docs](https://laravel.com/docs/11.x)**
@@ -514,8 +529,17 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 
 ### Regole Progetto
 - **[Laraxot Rules](./.windsurf/rules/user_15338591596331277449.md)**
-- **[Code Quality](./.windsurf/rules/code-quality.md)**
+<<<<<<< HEAD
 - **[Code Quality](../../../ai-agents/code-quality.md)**
+- **[Code Quality](../../../ai-agents/code-quality.md)**
+=======
+<<<<<<< .merge_file_ihyH3q
+- **[Code Quality](./.windsurf/rules/code-quality.md)**
+=======
+- **[Code Quality](../../../ai-agents/code-quality.md)**
+- **[Code Quality](../../../ai-agents/code-quality.md)**
+>>>>>>> .merge_file_2Wtrhu
+>>>>>>> laraxot/dev
 - **[Project Rules](./.windsurf/rules/project-rules.md)**
 
 ---
@@ -552,7 +576,10 @@ php artisan optimize:clear
 
 ---
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ---
 
 *Per contribuire al progetto, leggi attentamente questa guida e le regole Laraxot. In caso di dubbi, consulta la
@@ -560,7 +587,7 @@ documentazione del modulo specifico o chiedi supporto al team.*
 
 ---
 
-<!-- Merged from QUICK-START.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from quick-start.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
 title: "Notify Module Quick Start"

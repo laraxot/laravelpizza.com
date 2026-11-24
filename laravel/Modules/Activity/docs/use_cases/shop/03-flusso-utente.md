@@ -1,12 +1,10 @@
 ---
 title: "Flusso Utente Shop Event Sourced"
+qmd: "activity use cases shop 03 flusso utente md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "flusso utente shop event sourced activity"
-status: superseded
-superseded_by: flusso-utente.md
+tags: [documentation]
 ---
+
 # Flusso Utente Shop Event Sourced
 
 ## 1. Navigazione e Scoperta Prodotti

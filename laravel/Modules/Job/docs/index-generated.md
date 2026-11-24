@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "index generated"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Job Module Documentation Index (Generated)
@@ -19,6 +18,15 @@ status: draft
 **Status:** Generated with intelligent categorization and deduplication analysis
 
 ---
+
+title: "index generated"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "index generated"
+issues: []
+discussions: []
 ## Table of Contents
 
 1. [Statistics](#statistics)
@@ -64,16 +72,16 @@ status: draft
 
 ### Core Architecture & Planning
 - [project-structure.md](project-structure.md) - Module structure overview
-- [ON-DEMAND-PATTERN.md](on-demand-pattern.md) - On-demand knowledge pattern
-- [QMD-SETUP.md](qmd-setup.md) - QMD search configuration
-- [PROJECT-STRUCTURE.md](project-structure.md) - Full project structure
+- [on-demand-pattern.md](on-demand-pattern.md) - On-demand knowledge pattern
+- [qmd-setup.md](qmd-setup.md) - QMD search configuration
+- [project-structure.md](project-structure.md) - Full project structure
 - [architecture-rules.md](architecture-rules.md) - Architecture discipline rules
 - [contracts-naming.md](contracts-naming.md) - Contract naming conventions
 
 ### Product & Strategy
-- [PRODUCT_STRATEGY.md](PRODUCT_STRATEGY.md) - Product strategy document
-- [PRODUCT_ROADMAP.md](PRODUCT_ROADMAP.md) - Development roadmap
-- [PRODUCT_LAUNCH_PLAN.md](PRODUCT_LAUNCH_PLAN.md) - Launch planning
+- [product_strategy.md](product_strategy.md) - Product strategy document
+- [product_roadmap.md](product_roadmap.md) - Development roadmap
+- [product_launch_plan.md](product_launch_plan.md) - Launch planning
 - [product-roadmap.md](product-roadmap.md) - Roadmap details
 - [product-strategy.md](product-strategy.md) - Strategy overview
 - [product-launch-plan.md](product-launch-plan.md) - Launch checklist
@@ -100,7 +108,7 @@ status: draft
 - [phpstan-errors-roadmap.md](phpstan-errors-roadmap.md) - Error roadmap (4.3KB)
 - [phpstan-syntax-fixes.md](phpstan-syntax-fixes.md) - Syntax fixes (5.7KB)
 - [code-quality-report.md](code-quality-report.md) - Quality report (6.4KB)
-- [code-quality-improvement-report.md](code-quality-improvement-report.md) - Improvements (4.9KB)
+- [code-quality-improvement-report.md](wiki/code-quality-improvement-report.md) - Improvements (4.9KB)
 - [cyclomatic-complexity-report.md](cyclomatic-complexity-report.md) - Complexity analysis (2.3KB)
 
 ### Filament Framework
@@ -111,10 +119,10 @@ status: draft
 - [filament-5x-compatibility.md](filament-5x-compatibility.md) - v5 compatibility (1.8KB)
 - [filament-version.md](filament-version.md) - Version tracking (862 bytes)
 - [migration-filament.md](migration-filament.md) - Filament migration
-- [migration-filament-4.md](migration-filament.md) - v4 migration
+- [migration-filament-4.md](migration-filament-4.md) - v4 migration
 
 ### Migration & Database
-- [MIGRATIONS.md](migrations.md) - Migration tracking (10.9KB)
+- [MIGRATIONS.md](MIGRATIONS.md) - Migration tracking (10.9KB)
 - [schema.md](schema.md) - Database schema (2KB)
 - [nestedset-migration-best-practices.md](nestedset-migration-best-practices.md) - NestedSet guide (13.6KB)
 - [schedule-test-wrong-schema.md](schedule-test-wrong-schema.md) - Schema testing (4.2KB)
@@ -146,12 +154,12 @@ status: draft
 ### Audits & Analysis
 - [code-redundancy-audit.md](code-redundancy-audit.md) - Redundancy audit (2.9KB)
 - [copilot-redundancy-audit.md](copilot-redundancy-audit.md) - Copilot audit (581 bytes)
-- [copilot-redundancy-audit-2026-05-25.md](copilot-redundancy-audit.md) - 2026 audit (420 bytes)
+- [copilot-redundancy-audit.md](copilot-redundancy-audit.md) - 2026 audit (420 bytes)
 - [redundancy-audit.md](redundancy-audit.md) - General redundancy (1.2KB)
 - [redundancy-report.md](redundancy-report.md) - Redundancy report (1.6KB)
 - [duplicate-methods-analysis.md](duplicate-methods-analysis.md) - Method duplication (37KB - comprehensive)
 - [metodi-duplicati-analisi.md](metodi-duplicati-analisi.md) - Methods analysis (Italian, 249 bytes)
-- [METODI_DUPLICATI_ANALISI.md](METODI_DUPLICATI_ANALISI.md) - Duplicate methods (13.6KB)
+- [metodi_duplicati_analisi.md](metodi_duplicati_analisi.md) - Duplicate methods (13.6KB)
 - [duplicate_methods.md](duplicate_methods.md) - Methods report (2KB)
 - [duplicate_methods_report.md](duplicate_methods_report.md) - Methods detail (3.9KB)
 - [docs-health.md](docs-health.md) - Documentation health (1.2KB)
@@ -165,7 +173,7 @@ status: draft
 - [job-reports.md](job-reports.md) - Job reports (30.3KB - large reference)
 
 ### Performance & Optimization
-- [PERFORMANCE-OPTIMIZATION.md](performance-optimization.md) - Performance guide (2.8KB)
+- [performance-optimization.md](performance-optimization.md) - Performance guide (2.8KB)
 - [performance-optimization.md](performance-optimization.md) - Optimization details (2.8KB)
 - [optimization.md](optimization.md) - Optimization overview (250 bytes)
 - [optimization-analysis-and-improvements.md](optimization-analysis-and-improvements.md) - Analysis (205 bytes)
@@ -200,7 +208,7 @@ status: draft
 - [README.md](README.md) - Module readme (5.7KB, updated 11:24)
 - [docs-health.md](docs-health.md) - Docs health check (1.2KB)
 - [task-consolidare-documentazione.md](task-consolidare-documentazione.md) - Consolidation task
-- [CHANGELOG.md](changelog.md) - Changelog (184 bytes)
+- [CHANGELOG.md](CHANGELOG.md) - Changelog (184 bytes)
 - [task-aumentare-copertura-test.md](task-aumentare-copertura-test.md) - Test coverage task (608 bytes)
 - [task-dashboard-monitoring.md](task-dashboard-monitoring.md) - Dashboard task
 
@@ -212,7 +220,7 @@ status: draft
 
 **Owner files:**
 - `project-structure.md` (3.7KB)
-- `PROJECT-STRUCTURE.md` (3.7KB)
+- `project-structure.md` (3.7KB)
 - `architecture-rules.md` (227 bytes - stub, see wiki/)
 
 **Implementation files:**
@@ -221,7 +229,7 @@ status: draft
 - `dependency-intelligence.md` (1.6KB)
 
 **Assessment:**
-- [ ] Consolidate duplicates: `project-structure.md` vs `PROJECT-STRUCTURE.md` (identical)
+- [ ] Consolidate duplicates: `project-structure.md` vs `project-structure.md` (identical)
 - [ ] Expand `architecture-rules.md` (currently stub)
 - [x] Implementation documentation adequate
 
@@ -256,18 +264,18 @@ status: draft
 ### 3. Product & Business
 
 **Strategy tier:**
-- `PRODUCT_STRATEGY.md` (1.9KB)
+- `product_strategy.md` (1.9KB)
 - `product-strategy.md` (1.7KB)
-- `PRODUCT_ROADMAP.md` (2.4KB)
+- `product_roadmap.md` (2.4KB)
 - `product-roadmap.md` (1.5KB)
 - `enterprise-job-system-roadmap.md` (15.9KB - comprehensive)
 
 **Planning tier:**
-- `PRODUCT_LAUNCH_PLAN.md` (1.7KB)
+- `product_launch_plan.md` (1.7KB)
 - `product-launch-plan.md` (2.2KB)
-- `SPRINT_PLANNING.md` (1.3KB)
+- `sprint_planning.md` (1.3KB)
 - `sprint-planning-meeting.md` (1.4KB)
-- `USER_RESEARCH.md` (1.9KB)
+- `user_research.md` (1.9KB)
 - `user-research.md` (294 bytes)
 
 **Assessment:**
@@ -291,9 +299,9 @@ status: draft
 
 **Migration:**
 - `migration-filament.md` (185 bytes)
-- `migration-filament.md` (185 bytes)
+- `migration-filament-4.md` (185 bytes)
 - `migrazione-filament.md` (186 bytes - IT)
-- `migrazione-filament.md` (186 bytes - IT)
+- `migrazione-filament-4.md` (186 bytes - IT)
 
 **Assessment:**
 - [ ] Remove underscore duplicates (`filament_4x_compatibility.md` vs `filament-4x-compatibility.md`)
@@ -351,7 +359,7 @@ status: draft
 **Redundancy audits (6 variants):**
 - `code-redundancy-audit.md` (2.9KB)
 - `redundancy-audit.md` (1.2KB)
-- `redundancy-audit-job.md` (372 bytes)
+- `redundancy-audit.md` (372 bytes)
 - `copilot-redundancy-audit.md` (581 bytes)
 - `copilot-redundancy-audit.md` (420 bytes)
 - `redundancy-report.md` (1.6KB)
@@ -361,7 +369,7 @@ status: draft
 - `duplicate_methods.md` (2KB)
 - `duplicate_methods_report.md` (3.9KB)
 - `metodi-duplicati-analisi.md` (249 bytes - IT stub)
-- `METODI_DUPLICATI_ANALISI.md` (13.6KB - IT detailed)
+- `metodi_duplicati_analisi.md` (13.6KB - IT detailed)
 
 **Assessment:**
 - [ ] ARCHIVE: dated redundancy audits (`2026-05-*`, `2026-05-21`)
@@ -387,8 +395,8 @@ status: draft
 | 7 | code-quality-report.md | Jul 28 08:34 | 6.4KB | Quality metrics |
 | 8 | MIGRATIONS.md | Jul 28 08:34 | 10.9KB | Migration tracking |
 | 9 | enterprise-job-system-roadmap.md | Jul 28 08:34 | 15.9KB | Enterprise plan |
-| 10 | PRODUCT_STRATEGY.md | Jul 28 08:34 | 1.9KB | Strategy |
-| 11 | PRODUCT_ROADMAP.md | Jul 28 08:34 | 2.4KB | Roadmap |
+| 10 | product_strategy.md | Jul 28 08:34 | 1.9KB | Strategy |
+| 11 | product_roadmap.md | Jul 28 08:34 | 2.4KB | Roadmap |
 | 12 | coverage.md | Jul 28 08:34 | 3.9KB | Test coverage |
 | 13 | solutions.md | Jul 28 08:34 | 10KB | Solution guide |
 | 14 | job-reports.md | Jul 28 08:34 | 30.3KB | Large reference |
@@ -398,7 +406,7 @@ status: draft
 
 **Jul 28, 2026 (08:34):** ~200+ files (batch update)  
 **Jul 28, 2026 (11:24):** README.md only  
-**Jul 21, 2026:** ACTIONS.md, on-demand-pattern.md, performance-optimization.md, project-structure.md, qmd-setup.md  
+**Jul 21, 2026:** actions.md, on-demand-pattern.md, performance-optimization.md, project-structure.md, qmd-setup.md  
 **Jul 15, 2026:** contracts-naming.md, queueable-actions.md, root-file-policy.md, root-files-hygiene.md, test.md  
 **Jul 8, 2026:** 50+ original files (initial import)  
 
@@ -521,16 +529,16 @@ status: draft
 
 **Consolidation targets:**
 - UPPERCASE vs lowercase variants (both versions exist):
-  - `PRODUCT_STRATEGY.md` (1.9KB) → DELETE (merge into `product-strategy.md` 1.7KB)
-  - `PRODUCT_ROADMAP.md` (2.4KB) → DELETE (consolidate into single roadmap file)
-  - `PRODUCT_LAUNCH_PLAN.md` (1.7KB) → DELETE (merge into `product-launch-plan.md` 2.2KB)
+  - `product_strategy.md` (1.9KB) → DELETE (merge into `product-strategy.md` 1.7KB)
+  - `product_roadmap.md` (2.4KB) → DELETE (consolidate into single roadmap file)
+  - `product_launch_plan.md` (1.7KB) → DELETE (merge into `product-launch-plan.md` 2.2KB)
 
 **Canonical set (keep):**
 1. `enterprise-job-system-roadmap.md` (15.9KB - comprehensive, canonical)
 2. `product-strategy.md` (1.7KB - merged with PRODUCT_STRATEGY)
 3. `product-launch-plan.md` (2.2KB - merged with PRODUCT_LAUNCH_PLAN)
-4. `SPRINT_PLANNING.md` (1.3KB - sprint tracking)
-5. `USER_RESEARCH.md` (1.9KB - research findings)
+4. `sprint_planning.md` (1.3KB - sprint tracking)
+5. `user_research.md` (1.9KB - research findings)
 
 **Benefit:** Single source of truth; improved navigation
 
@@ -558,7 +566,7 @@ status: draft
 
 **Archive:**
 - `redundancy-audit.md` (old)
-- `redundancy-audit-job.md` (dated)
+- `redundancy-audit.md` (dated)
 - `copilot-redundancy-audit.md` (outdated)
 - `copilot-redundancy-audit.md` (dated)
 
@@ -579,7 +587,7 @@ status: draft
 - **Option B:** Bilingual with standard naming → `file.md` (EN) + `file-it.md` (IT)
 
 **Current Italian files to consolidate:**
-- `metodi-duplicati-analisi.md` → `METODI_DUPLICATI_ANALISI.md`
+- `metodi-duplicati-analisi.md` → `metodi_duplicati_analisi.md`
 - `migrazione-filament*.md` (2 variants)
 - `modelli-factory-seeder-analisi.md`
 - `phpstan-correzioni*.md` (4 variants)
@@ -610,7 +618,7 @@ status: draft
 **Current split:**
 - `configuration.md` (generic)
 - `mcp-configuration.md` (MCP specific)
-- `QMD-SETUP.md` vs `qmd-setup.md` (case variants)
+- `qmd-setup.md` vs `qmd-setup.md` (case variants)
 - `artisan.md` + `artisan.txt`
 
 **Proposed consolidation:**
@@ -665,10 +673,10 @@ archive/
 
 #### 4.1 Create Index Stubs for Subdirectories
 
-Add `INDEX.md` to each subdirectory:
-- `wiki/INDEX.md` - Links to 54 reference files
-- `roadmap/INDEX.md` - Roadmap structure
-- `_integration/INDEX.md` - Integration guides
+Add `index.md` to each subdirectory:
+- `wiki/index.md` - Links to 54 reference files
+- `roadmap/index.md` - Roadmap structure
+- `_integration/index.md` - Integration guides
 
 **Benefit:** Improved navigation
 
@@ -718,7 +726,7 @@ updated: "2026-07-28"
 
 #### 5.2 Link Map to Wiki Pattern
 
-Ensure `QMD-SETUP.md` or updated `qmd-setup.md` points to:
+Ensure `qmd-setup.md` or updated `qmd-setup.md` points to:
 - `wiki/` (54 files of reference material)
 - `roadmap/` (planning documents)
 
@@ -727,7 +735,7 @@ Ensure `QMD-SETUP.md` or updated `qmd-setup.md` points to:
 #### 5.3 Create Navigation Breadcrumbs
 
 Add "Back to Index" links in all major docs pointing to:
-- `INDEX.md` (official index)
+- `index.md` (official index)
 - `README.md` (entry point)
 - `INDEX_GENERATED.md` (this file)
 
@@ -747,7 +755,7 @@ Add "Back to Index" links in all major docs pointing to:
 | **P2** | Configuration | 8 | 4 | Merge related docs | 1h |
 | **P3** | Root files | 51 | 0 | Delete duplicate dirs | 15min |
 | **P3** | Archive org | 19 | Organized | Subdirectory structure | 30min |
-| **P4** | Index stubs | None | 5+ | Create INDEX.md files | 1h |
+| **P4** | Index stubs | None | 5+ | Create index.md files | 1h |
 | **P4** | Stub expansion | 20+ stubs | Full docs | Expand content | 3h+ |
 | **P5** | Front matter | None | All | Add YAML metadata | 2h |
 

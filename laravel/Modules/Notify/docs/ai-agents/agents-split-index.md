@@ -3,18 +3,21 @@ title: "agents split index"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "agents split index"
 issues: []
 discussions: []
-status: draft
 ---
 
-# agents.md Split Index
+# AGENTS.md Split Index
 
-> Documentazione agents.md originale spezzata in file più piccoli e organizzati.
+> Documentazione AGENTS.md originale spezzata in file più piccoli e organizzati.
 
-## 📚 File Creati da agents.md
+## 📚 File Creati da AGENTS.md
 
 | File | Contenuto | Righe Originali |
 |------|-----------|----------------|
@@ -31,10 +34,18 @@ status: draft
 
 ## 🔗 Collegamento all'Originale
 
+<<<<<<< HEAD
 - [AGENTS.md originale](../../AGENTS.md) - File completo (deprecato)
+- [AGENTS.md originale](../../AGENTS.md) - File completo (deprecato)
+=======
+<<<<<<< HEAD
+- [AGENTS.md originale](../../agents.md) - File completo (deprecato)
 - [agents.md originale](../../agents.md) - File completo (deprecato)
-- [AGENTS.md originale](../AGENTS.md) - File completo (deprecato)
-- [agents.md originale](../agents.md) - File completo (deprecato)
+=======
+- [AGENTS.md originale](../../AGENTS.md) - File completo (deprecato)
+- [AGENTS.md originale](../../AGENTS.md) - File completo (deprecato)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Index principale](./index.md) - Torna all'indice
 
 ## 📝 Note

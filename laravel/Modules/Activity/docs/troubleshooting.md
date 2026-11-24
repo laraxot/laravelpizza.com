@@ -1,9 +1,8 @@
 ---
 title: "Troubleshooting"
+qmd: "activity troubleshooting md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "troubleshooting activity"
+tags: [documentation]
 ---
+
 # Troubleshooting

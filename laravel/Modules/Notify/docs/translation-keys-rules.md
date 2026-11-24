@@ -4,7 +4,11 @@ title: "translation keys rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "translation keys rules"
 issues: []
 discussions: []
@@ -56,5 +60,5 @@ return [
 ```
 
 ### Riferimenti
-- [TRANSLATION_KEYS_RULES.md](../../Lang/docs/translation-keys-rules.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../Lang/docs/translation-keys-best-practices.md)
+- [TRANSLATION_KEYS_RULES.md](../../Lang/docs/translation_keys_rules.md)
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../Lang/docs/translation_keys_best_practices.md) 

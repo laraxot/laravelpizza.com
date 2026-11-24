@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "errors"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 📋 Quick Reference - Errori Critici e Soluzioni
@@ -153,6 +152,15 @@ PTVX/
 - **[Best Practices](../best-practices/)** - Guide approfondite
 
 ---
+
+title: "errors"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "errors"
+issues: []
+discussions: []
 **💡 Ricorda**: La maggior parte dei problemi ha già una soluzione documentata!
 
 *Ultimo aggiornamento: Dicembre 2025*

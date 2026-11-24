@@ -4,7 +4,11 @@ type: index
 tags: [notify, docs, project_docs, architecture]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify documentazione project_docs architecture readme architettura del sistema index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -13,14 +17,9 @@ discussions:
 related:
   - ../../README.md
   - ../../wiki/index.md
-  - ../../notifications/readme.md
-  - ../../integrations/readme.md
-  - ../../templates/readme.md
-  - ../../index.md
-  - ../../../notifications/readme.md
-  - ../../../integrations/readme.md
-  - ../../../templates/readme.md
-status: draft
+  - ../../notifications/README.md
+  - ../../integrations/README.md
+  - ../../templates/README.md
 ---
 # Architettura del Sistema
 
@@ -64,8 +63,6 @@ Standard e convenzioni architetturali.
 - [Standard e Convenzioni](./standards/)
 - [Guida Sviluppo](../development/)
 - [Troubleshooting](../troubleshooting/)
-- [Guida Sviluppo](../../../development)
-- [Troubleshooting](../../troubleshooting)
 
 ---
 

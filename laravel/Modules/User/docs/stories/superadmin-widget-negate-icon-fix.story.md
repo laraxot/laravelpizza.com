@@ -15,7 +15,7 @@ Modulo owner: User
 "accesso vietato" a colpo d'occhio, non un'astrazione ambigua.
 
 **M (model)**: icone risolte via `blade-ui-kit/blade-icons`, set `user` (prefix `user`, path
-`Modules/User/resources/svg/`): vedi `config/blade-icons.php` (sets vuoto in config, il set
+`Modules/User/resources/svg/`) — vedi `config/blade-icons.php` (sets vuoto in config, il set
 `user` e' registrato altrove nel bootstrap Filament del modulo, confermato via
 `app(\BladeUI\Icons\Factory::class)` in tinker). `icon="user-superadmin"` ->
 `Modules/User/resources/svg/superadmin.svg`; `icon="user-negate-superadmin"` ->
@@ -25,18 +25,18 @@ Modulo owner: User
 modifica non committata. `git diff` confermava che una sessione concorrente aveva appena
 sostituito il markup di divieto:
 - **HEAD** (prima): corona + due arc path duplicati (stesso raggio 9, sweep-flag opposti, tecnica
-  per disegnare un cerchio completo con due semicerchi) + una terza path diagonale ridondante: 3
+  per disegnare un cerchio completo con due semicerchi) + una terza path diagonale ridondante — 3
   path per un solo "cerchio-slash", violazione DRY/KISS ma semanticamente un simbolo di divieto
   riconoscibile.
 - **working tree** (trovato, non mio): le 3 path del cerchio ridotte a **una sola diagonale**,
-  cerchio rimosso del tutto: corona con un graffio in diagonale, non piu' leggibile come "vietato"
+  cerchio rimosso del tutto — corona con un graffio in diagonale, non piu' leggibile come "vietato"
   (nessun cerchio = nessun "no-entry sign").
 
 Confermato **non solo estetico ma un regresso reale**: renderizzato a PNG (`convert`, ImageMagick)
 per verifica visiva diretta, non solo lettura del path SVG.
 
 **D (fix)**: sostituita la diagonale isolata con `<circle cx="12" cy="12" r="9">` (un solo
-elemento, non due arc path duplicati) + una sola `<path>` diagonale: il simbolo "no-entry"
+elemento, non due arc path duplicati) + una sola `<path>` diagonale — il simbolo "no-entry"
 standard (stesso linguaggio di Heroicons `no-symbol` / Lucide `ban`), sovrapposto alla corona
 esistente. Stile stroke invariato (`stroke-width="1.75"`, `currentColor`), coerente con
 `superadmin.svg` (corona attiva, non toccata: gia' pulita, stile Lucide `crown`, nessuna modifica

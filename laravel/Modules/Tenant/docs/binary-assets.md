@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "binary assets"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Asset binari

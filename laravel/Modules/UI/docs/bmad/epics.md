@@ -1,56 +1,51 @@
 ---
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_mOW5yd
 bmad_status: active
 scope: ui-docs
-updated: 2026-10-06
-title: "Epics e User Stories - Modulo UI"
-type: note
-status: draft
-tags: [docs, ui, bmad]
-qmd: "epics e user stories - modulo ui ui"
+=======
+>>>>>>> .merge_file_4A5Cdk
+>>>>>>> laraxot/dev
+title: "Epic e story — UI"
+type: epics
+status: review
+bmad_status: active
+scope: ui-docs
+updated: 2026-11-16
+module: UI
+qmd: "epic story BMAD UI audit P0 P1 policy"
 ---
 
-# Epics e User Stories - Modulo UI
+# Epic e story — UI
 
-## Epics
+<<<<<<< HEAD
+Scopo del modulo: vocabolario visivo condiviso (componenti, widget, colonne, layout tabella) consumato da tutti i moduli ([purpose.md](./purpose.md)).
+=======
+<<<<<<< HEAD
+Scopo del modulo: vocabolario visivo condiviso (componenti, widget, colonne, layout tabella) consumato da tutti i moduli ([purpose.md](./purpose.md)).
+=======
+Scopo del modulo: vocabolario visivo condiviso (componenti, widget, colonne, layout tabella) consumato da tutti i moduli ([purpose.md](../wiki/purpose.md)).
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
-### Epic 1: [Nome Epic]
-**Descrizione:** [Descrizione epic]
-**Storia utente associate:**
-- US-1: [Descrizione storia]
-- US-2: [Descrizione storia]
+## Epic da audit 2026-11-16
 
-### Epic 2: [Nome Epic]
-**Descrizione:** [Descrizione epic]
-**Storia utente associate:**
-- US-3: [Descrizione storia]
-- US-4: [Descrizione storia]
+Ogni story nasce da un finding di [audits/ui-audit.md](./audits/ui-audit.md); prima del fix:
+lock (`bashscripts/lock/lock.sh`), Pest rosso, PHPStan max, poi `unlock.sh`. Nessun `migrate:fresh`, solo migrate additivo.
 
-## User Stories dettagliate
+### Epic UI-A — Rimuovere demo e dati finti (P1)
 
-### US-1: [Titolo storia]
-**Come** [tipo di utente]
-**Voglio** [azione da eseguire]
-**Per** [beneficio ottenuto]
+| Story (da creare) | Cosa | Criterio di accettazione |
+|---|---|---|
+| `ui-dashboard-real-widgets` | Dashboard con soli widget reali o vuota | nessun valore letterale in `Dashboard.php`; `TestWidget` solo in tests |
+| `ui-remove-phantom-model-tests` | Eliminare Asset/Component/ThemeModelTest | 0 `@phpstan-ignore` in `tests/Unit/Models`; PHPStan 0 |
 
-**Criteri di accettazione:**
-- [ ] Criterio 1
-- [ ] Criterio 2
-- [ ] Criterio 3
+### Epic UI-B — Igiene (P2)
 
-**Task:**
-- [ ] Task 1
-- [ ] Task 2
+| Story (da creare) | Cosa | Criterio di accettazione |
+|---|---|---|
+| `ui-personform-lang-or-delete` | PersonForm tradotto via Lang o eliminato | 0 `->label('testo')` in `app/` |
+| `ui-policy-base-xot` | UiBasePolicy → XotBasePolicy + test `before` | test Pest `ui::admin`/utente estraneo |
+| `ui-cleanup-stray-files` | Rimuovere `.disabled/.disabled2/.fila3`, `ComponentService` vuoto | file assenti, PHPStan 0 |
 
-### US-2: [Titolo storia]
-**Come** [tipo di utente]
-**Voglio** [azione da eseguire]
-**Per** [beneficio ottenuto]
-
-**Criteri di accettazione:**
-- [ ] Criterio 1
-- [ ] Criterio 2
-- [ ] Criterio 3
-
-**Task:**
-- [ ] Task 1
-- [ ] Task 2

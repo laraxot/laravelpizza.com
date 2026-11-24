@@ -10,13 +10,12 @@ tags: [redundancy, casing, frontend-assets, docs]
 created: 2026-05-21
 related:
   - https://github.com/laraxot/base_fixcity_fila5/issues/89
-status: draft
 ---
 
 # Geo redundancy audit 2026-05-21
 
 High-risk findings:
-- Large case-only duplicate set across docs: `PRODUCT_STRATEGY.md` vs `product_strategy.md`, `PRD.md` vs `prd.md`, `INDEX.md` vs `index.md`, and similar files.
+- Large case-only duplicate set across docs: `product_strategy.md` vs `product_strategy.md`, `PRD.md` vs `prd.md`, `index.md` vs `index.md`, and similar files.
 - Case-only Vue/component/resource duplicates: `MapPane.vue` vs `mappane.vue`, `MapComponent.vue` vs `mapcomponent.vue`, `MyMap.vue` vs `mymap.vue`.
 - Leaflet asset duplicates with case-only names: `MarkerCluster.css` vs `markercluster.css`, `L.Control.Locate.min.js` vs `l.control.locate.min.js`.
 - Some map assets are duplicated under both `resources/js` and `resources/views/maps/...`.

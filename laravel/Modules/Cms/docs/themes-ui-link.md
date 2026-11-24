@@ -3,11 +3,14 @@ title: "themes ui link"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "themes ui link"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Collegamenti ai Temi e UI
@@ -23,13 +26,21 @@ Secondo le regole di organizzazione della documentazione:
 
 ## Collegamenti ai Temi nel Modulo UI
 
-- [Componenti UI](../../UI/docs/README.md) - Panoramica dei componenti UI disponibili
-- [Layout e Temi](../../UI/docs/layouts-and-themes.md) - Documentazione sui layout e temi
-- [Componenti Blade](../../UI/docs/blade-components.md) - Componenti Blade riutilizzabili
+<<<<<<< HEAD
+- [Componenti UI](../../ui/project_docs/README.md) - Panoramica dei componenti UI disponibili
+=======
+<<<<<<< HEAD
+- [Componenti UI](../../ui/project_docs/readme.md) - Panoramica dei componenti UI disponibili
+=======
+- [Componenti UI](../../ui/project_docs/README.md) - Panoramica dei componenti UI disponibili
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+- [Layout e Temi](../../ui/project_docs/layouts-and-themes.md) - Documentazione sui layout e temi
+- [Componenti Blade](../../ui/project_docs/blade-components.md) - Componenti Blade riutilizzabili
 
 ## Collegamenti ai Temi nel Modulo Cms
 
-- [Compilazione dei Temi](./theme-compilation.md) - Processo di compilazione e pubblicazione dei temi
+- [Compilazione dei Temi](./theme_compilation.md) - Processo di compilazione e pubblicazione dei temi
 - [Processo di Build del Tema](./theme-build-process.md) - Dettagli sul processo di build
 - [Struttura dei Temi](./themes/structure.md) - Organizzazione dei file nei temi
 
@@ -40,6 +51,6 @@ Secondo le regole di organizzazione della documentazione:
 
 ## Collegamento Bidirezionale
 
-Questo documento è collegato bidirezionalmente con [cms-themes-link.md](../../UI/docs/cms-themes-link.md) nel modulo UI.
+Questo documento è collegato bidirezionalmente con [cms-themes-link.md](../../ui/project_docs/cms-themes-link.md) nel modulo UI.
 
 > Aggiorna entrambi i riferimenti se modifichi la documentazione dei temi o aggiungi nuove sezioni.

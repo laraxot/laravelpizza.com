@@ -10,12 +10,11 @@ issues: []
 discussions: []
 related:
   - "./tabella-appartiene-alla-resource-non-alla-pagina.md"
-status: draft
 ---
 
 # Doppi header actions in ogni List page Xot
 
-> **SUMMARY**: `getHeaderActions()` (page header) e `getTableHeaderActions()` (table header)
+> **SUMMARY** — `getHeaderActions()` (page header) e `getTableHeaderActions()` (table header)
 > sono **due barre distinte** ed entrambe renderizzate. In Xot entrambe mettono un
 > `CreateAction`, quindi ogni schermata di lista mostra **due pulsanti "Crea"**. Difetto
 > **preesistente**, trovato il 2026-09-29 durante la story 5.254, **non ancora risolto**.
@@ -25,7 +24,7 @@ status: draft
 | | Page header | Table header |
 |---|---|---|
 | Metodo | `getHeaderActions()` (protected) | `getTableHeaderActions()` (**public**) |
-| Trait | `InteractsWithHeaderActions`: `vendor/filament/filament/src/Pages/Concerns/InteractsWithHeaderActions.php` | `HasXotTable`: `Modules/Xot/app/Filament/Traits/HasXotTable.php:87` |
+| Trait | `InteractsWithHeaderActions` — `vendor/filament/filament/src/Pages/Concerns/InteractsWithHeaderActions.php` | `HasXotTable` — `Modules/Xot/app/Filament/Traits/HasXotTable.php:87` |
 | Chi lo chiama | `cacheInteractsWithHeaderActions()` → `getCachedHeaderActions()` | `HasXotTable::table()` riga 253: `->headerActions($this->getTableHeaderActions())` |
 | Dove si vede | barra in alto della pagina | `vendor/filament/tables/resources/views/index.blade.php:315-319` |
 

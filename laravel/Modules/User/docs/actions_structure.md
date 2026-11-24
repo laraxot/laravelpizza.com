@@ -1,11 +1,3 @@
----
-title: "Actions Structure"
-type: note
-status: draft
-updated: 2026-10-13
-tags: [docs, user]
-qmd: "actions structure user"
----
 # Actions Structure 
 
 ## Directory Structure
@@ -79,9 +71,6 @@ class DeleteUserAction
 
 ## Documentazione Correlata
 
-- [Path Conventions](./path_conventions.md)
-- [Directory Structure Checklist](./directory_structure_checklist.md)
-- [Module Structure](./module_structure.md)
 - [Path Conventions](./path_conventions.md)
 - [Directory Structure Checklist](./directory_structure_checklist.md)
 - [Module Structure](./module_structure.md)

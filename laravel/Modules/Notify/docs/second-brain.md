@@ -3,11 +3,14 @@ tags: [documentation]
 created: 2026-09-26
 issues: []
 discussions: []
-title: second brain: puntatore modulo
+title: second brain — puntatore modulo
 type: reference
 qmd: second brain modulo wiki locale laravel
+<<<<<<< HEAD
 updated: 2026-05-19
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Second brain (modulo)

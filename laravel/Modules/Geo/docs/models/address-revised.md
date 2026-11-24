@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "address revised"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Modello Address Riveduto

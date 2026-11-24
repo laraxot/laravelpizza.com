@@ -11,6 +11,15 @@ use Illuminate\Support\Facades\File;
 use Modules\Xot\Actions\Arr\SaveArrayAction;
 use Spatie\QueueableAction\QueueableAction;
 
+<<<<<<< HEAD
+=======
+/**
+ * Scrive una chiave nel file di lingua del modulo: `execute()` per le chiavi mancanti (solo dove l'interruttore lo
+ * permette), `persist()` per il salvataggio voluto dal pannello di traduzione.
+ *
+ * @contract docs/contracts/save-trans-action.md
+ */
+>>>>>>> laraxot/dev
 class SaveTransAction
 {
     use QueueableAction;

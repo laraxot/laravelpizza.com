@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: complete-models-factory-seeder
 canonical: ../../../Themes/docs/shared-components/analisi-completa-modelli-factory-seeder.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/analisi-completa-modelli-factory-seeder.md

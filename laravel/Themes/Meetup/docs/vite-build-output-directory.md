@@ -1,5 +1,10 @@
 # Vite Build Output Directory - Tema Meetup
 
+> **Aggiornato il 2026-11-12 — `npm run copy` non esiste più.** `public_html/themes/<Tema>` è un symlink a
+> `laravel/Themes/<Tema>/public` e `public_html/assets/<modulo>` a `laravel/Modules/<Modulo>/public`: dopo
+> `npm run build` il sito vede già la build. Le istruzioni di copia qui sotto sono storiche. Regola e motivi:
+> [public-html-symlink-assets.md](/laravel/Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md).
+
 ## Data
 [DATE]
 
@@ -56,7 +61,7 @@ Themes/Meetup/
 
 public_html/
 └── themes/
-    niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+    └── Meetup/              # ✅ Output copy (npm run copy)
         ├── assets/
         │   ├── app-[hash].css
         │   └── app-[hash].js
@@ -77,10 +82,10 @@ npm run build
 - `assets/app-[hash].js` - JavaScript compilato e minificato
 - `manifest.json` - Manifest Vite con mapping asset
 
-niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+### 2. Copy (`npm run copy`)
 
 ```bash
-# niente copy: public_html/themes/Meetup è un symlink a public/
+npm run copy
 ```
 
 **Comando**: `cp -r ./public/* ../../../public_html/themes/Meetup`
@@ -167,14 +172,14 @@ curl http://127.0.0.1:8000/themes/Meetup/assets/app-[hash].css
 
 ## Troubleshooting
 
-niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+### Problema: `npm run copy` fallisce con "No such file or directory"
 
 **Causa**: Directory `public_html/themes/Meetup/` non esiste
 
 **Soluzione**:
 ```bash
 mkdir -p /var/www/_bases/base_laravelpizza/public_html/themes/Meetup
-# niente copy: public_html/themes/Meetup è un symlink a public/
+npm run copy
 ```
 
 ### Problema: Asset non trovati dopo copy
@@ -205,7 +210,7 @@ ls -la public/manifest.json
 ## Best Practices
 
 1. ✅ **Sempre eseguire dalla directory del tema**: `cd Themes/Meetup`
-2. ✅ **Build prima di copy**: `npm run build`
+2. ✅ **Build prima di copy**: `npm run build && npm run copy`
 3. ✅ **Verificare output**: Controllare che `public/` contenga gli asset dopo build
 4. ✅ **Verificare copy**: Controllare che `public_html/themes/Meetup/` contenga gli asset dopo copy
 5. ✅ **Non modificare manualmente**: Non modificare manualmente gli asset in `public/`, sempre ricompilare

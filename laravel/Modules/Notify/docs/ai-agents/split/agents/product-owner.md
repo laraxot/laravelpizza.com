@@ -3,11 +3,14 @@ title: "product owner"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "product owner"
 issues: []
 discussions: []
-status: draft
 ---
 
 ### Product Owner (id: po)
@@ -88,13 +91,19 @@ dependencies:
 
 
 ---
+
+title: "product owner"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "product owner"
+issues: []
+discussions: []
 ## Cross-References
 
-- ← [Agents Index](index.md): All 10 BMad agents
-- ← [Tasks Index](../../tasks/index.md): 22 reusable tasks
-- ← [Main AI Docs Index](../index.md): Master index
-- ← [../../../../agents.md](../../../../../../../../agents.md): Original source
-- ← [Tasks Index](../tasks/index.md): 22 reusable tasks
-- ← [Main AI Docs Index](../index.md): Master index
-- ← [../../../../agents.md](../../../../../../../AGENTS.md): Original source
+- ← [Agents Index](index.md) — All 10 BMad agents
+- ← [Tasks Index](../../tasks/index.md) — 22 reusable tasks
+- ← [Main AI Docs Index](../index.md) — Master index
+- ← [../../../../AGENTS.md](../../../../../../../../AGENTS.md) — Original source
 

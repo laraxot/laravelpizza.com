@@ -1,3 +1,25 @@
+---
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_6LCBgu
+created: 2026-10-07
+=======
+>>>>>>> laraxot/dev
+title: "Marker Popup and Location UX .story"
+type: note
+tags: [documentation]
+created: 2026-10-07
+updated: 2026-11-19
+qmd: "Marker Popup and Location UX .story"
+date_originale_nome_file: 2026-10-07
+issues: [122]
+discussions: []
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_XD49sI
+>>>>>>> laraxot/dev
+---
+
 # Popup marker e posizione: leggibilita e layout
 
 - Stato: done (2026-10-07), con un caso non riprodotto (vedi Aperto)

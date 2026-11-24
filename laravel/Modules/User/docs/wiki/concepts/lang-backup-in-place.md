@@ -1,5 +1,5 @@
 ---
-title: "Backup traduzioni User: in-place .bak"
+title: "Backup traduzioni User — in-place .bak"
 type: concept
 module: User
 tags: [user, lang, ponytail, bak]
@@ -15,14 +15,13 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-status: draft
 ---
 
-# Backup traduzioni User: in-place
+# Backup traduzioni User — in-place
 
 ## Problema
 
-~281 file `*.backup_*` sparsi sotto `lang/{locale}/`: rumore ponytail. Tentativo errato wave 4: cartella `lang/archive.bak/` (**anti-pattern**: vedi regola generale).
+~281 file `*.backup_*` sparsi sotto `lang/{locale}/` — rumore ponytail. Tentativo errato wave 4: cartella `lang/archive.bak/` (**anti-pattern** — vedi regola generale).
 
 ## Regola canonica
 

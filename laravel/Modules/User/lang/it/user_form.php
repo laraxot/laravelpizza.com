@@ -4,6 +4,16 @@ declare(strict_types=1);
 
 return [
     'fields' => [
+<<<<<<< HEAD
+        'name' => [
+            'label' => 'Nome visualizzato',
+            'helper_text' => 'Il nome mostrato nel sito e nei pannelli.',
+        ],
+        'created_at' => [
+            'label' => 'Creato il',
+        ],
+=======
+>>>>>>> laraxot/dev
         'first_name' => [
             'label' => 'Nome',
             'placeholder' => 'Mario',
@@ -38,10 +48,47 @@ return [
             'label' => 'Ricordami',
             'description' => 'Mantieni la sessione attiva su questo dispositivo',
             'helper_text' => 'Sessione prolungata su dispositivo attendibile',
+            'placeholder' => 'remember',
         ],
+<<<<<<< HEAD
         'token' => [
             'label' => 'token',
+            'description' => 'token',
+            'helper_text' => 'token',
+            'placeholder' => 'token',
         ],
+=======
+>>>>>>> laraxot/dev
+        'state' => [
+            'description' => 'state',
+            'label' => 'Stato',
+            'placeholder' => 'state',
+            'helper_text' => 'state',
+        ],
+        'type' => [
+            'label' => 'Tipo',
+            'placeholder' => 'type',
+            'helper_text' => 'type',
+            'description' => 'type',
+        ],
+        'created_at' => [
+            'label' => 'Creato il',
+        ],
+        'name' => [
+            'label' => 'Nome',
+            'placeholder' => 'name',
+            'helper_text' => 'name',
+            'description' => 'name',
+        ],
+<<<<<<< HEAD
+=======
+        'token' => [
+            'description' => 'token',
+            'helper_text' => 'token',
+            'label' => 'Token',
+            'placeholder' => 'token',
+        ],
+>>>>>>> laraxot/dev
     ],
     'actions' => [
         'showPassword' => [
@@ -55,7 +102,7 @@ return [
             'tooltip' => 'Nascondi password',
         ],
     ],
-<<<<<<< .merge_file_T3WJVU
+<<<<<<< HEAD
     'sections' => [
         'empty' => [
             'heading' => '',
@@ -67,5 +114,5 @@ return [
         ],
     ],
 =======
->>>>>>> .merge_file_iPwtsu
+>>>>>>> laraxot/dev
 ];

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "migration guide"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Migration Guide: Moving from <main module> to Geo Module
@@ -236,7 +235,7 @@ declare(strict_types=1);
 namespace Modules\Geo\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Modules\Tenant\Models\Traits\SushiToJsons;
+use Modules\Geo\Models\Traits\SushiToJsons;
 
 class Comune extends Model
 {
@@ -548,4 +547,12 @@ git checkout -- app/Models/Comune.php
 - [Sushi Documentation](https://github.com/calebporzio/sushi)
 - [Comune Model](comune-model.md)
 - [Sushi Configuration](sushi-configuration.md)
+<<<<<<< HEAD
 - [Sushi Command](sushi-command.md)
+=======
+<<<<<<< HEAD
+- [Sushi Command](sushi-command.md)
+=======
+- Sushi Command
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -7,5 +7,4 @@ updated: 2026-09-26
 qmd: "relation manager guidelines"
 issues: []
 discussions: []
-status: draft
 ---

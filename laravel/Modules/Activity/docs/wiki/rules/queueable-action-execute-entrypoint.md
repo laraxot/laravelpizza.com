@@ -1,4 +1,5 @@
 ---
+qmd: "activity wiki rules queueable action execute entrypoint md"
 title: "QueueableAction execute entrypoint"
 type: rule
 module: Activity
@@ -7,9 +8,7 @@ created: 2026-07-12
 updated: 2026-07-12
 tags: [activity, actions, queueable-action, execute]
 related:
-  - ../../../../../../docs/wiki/rules/queueable-action-execute-entrypoint.md
-status: stub
-qmd: "queueableaction execute entrypoint activity"
+  - ../../../../../docs/wiki/rules/queueable-action-execute-entrypoint.md
 ---
 
 # QueueableAction execute entrypoint

@@ -75,7 +75,7 @@ updated: 2026-09-26
 qmd: "CONTRIBUTING"
 issues: []
 discussions: []
-<!-- Merged from contributing.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from CONTRIBUTING.md, which collided with this file on case-insensitive filesystems. -->
 
 # Contributing
 

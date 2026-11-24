@@ -3,11 +3,14 @@ title: "claude split index"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "claude split index"
 issues: []
 discussions: []
-status: draft
 ---
 
 # CLAUDE.md Split Index
@@ -27,7 +30,6 @@ status: draft
 ## 🔗 Collegamento all'Originale
 
 - [CLAUDE.md originale](../../CLAUDE.md) - File completo (deprecated)
-- [CLAUDE.md originale](../CLAUDE.md) - File completo (deprecated)
 - [Index principale](./index.md)
 
 ## Modifiche Migliorative

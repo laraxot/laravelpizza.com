@@ -13,7 +13,6 @@ related:
   - ../../../../../../docs/wiki/rules/multi-repo-modules-themes-map.md
   - ../../../../../../docs/wiki/how-to/module-theme-github-issues.md
   - ../../code-quality-improvement-report.md
-status: draft
 ---
 
 # Collisione Git: entrambe le parti sbagliate (Tenant)

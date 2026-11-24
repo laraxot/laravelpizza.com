@@ -1,14 +1,17 @@
 ---
-qmd: "tailwind conversion complete"
+qmd: "Tailwind Conversion Complete"
 issues: []
 discussions: []
-title: "TAILWIND CONVERSION COMPLETE - Design Comuni"
+title: "Tailwind Conversion Complete"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # 🎨 TAILWIND CONVERSION COMPLETE - Design Comuni

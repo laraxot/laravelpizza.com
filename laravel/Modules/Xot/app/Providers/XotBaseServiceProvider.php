@@ -64,9 +64,12 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         // Skip registration if the prefix would collide with the default set.
         $this->callAfterResolving(BladeIconsFactory::class, function (BladeIconsFactory $factory): void {
             try {
-                $assetsPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'assets');
-                $svgPath = $assetsPath.'/../svg';
-                if (! File::exists($svgPath)) {
+                // Direttamente `resources/svg`, come registerViews() fa con `resources/views`.
+                // Prima si passava da `resources/assets/../svg`: su Linux `a/../b` si risolve solo
+                // se `a` esiste, e togliere lo scaffold vuoto `resources/assets` (Tenant, 2026-11-17)
+                // faceva sparire in silenzio le icone del modulo.
+                $svgPath = module_path($this->name, 'resources/svg');
+                if (! File::isDirectory($svgPath)) {
                     return;
                 }
                 // Check if prefix already registered to avoid collision with default set.
@@ -210,6 +213,17 @@ abstract class XotBaseServiceProvider extends ServiceProvider
             'assets/'.$this->nameLower
         );
 
+<<<<<<< HEAD
+=======
+        // public_html/assets/<modulo> è un symlink alla cartella public del modulo: pubblicare vorrebbe dire
+        // copiare ogni file su se stesso (il file verrebbe troncato). Gli asset sono già visibili.
+        // public_path() restituisce il percorso già risolto (app/Application.php), quindi is_link() sarebbe
+        // sempre falso: si confrontano i percorsi reali.
+        if (File::isDirectory($destinationPath) && \Safe\realpath($destinationPath) === \Safe\realpath($sourcePath)) {
+            return;
+        }
+
+>>>>>>> laraxot/dev
         $this->publishes(
             [
                 $sourcePath => $destinationPath,

@@ -3,7 +3,11 @@ title: "analisi completa progetto fixcity"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "analisi completa progetto fixcity"
 issues: []
 discussions: []
@@ -441,7 +445,7 @@ Manutenzione Stradale • Illuminazione • Rifiuti • Verde Pubblico • Fogna
 
 ### 📖 Main Docs
 - [Index Principale](./index.md)
-- [PHPStan Analysis](./phpstan/phpstan.md)
+- [PHPStan Analysis](phpstan.md)
 
 ---
 

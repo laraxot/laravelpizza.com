@@ -7,15 +7,9 @@ updated: 2026-09-26
 qmd: "log"
 issues: []
 discussions: []
-status: draft
 ---
 
 - 2026-06-10: folio-filesystem-routing-no-web-php + troubleshooting folio-route-not-found
-## [2026-10-14] docs | Studio del codice e correzione degli ingressi
-
-- Verificato: le pagine sono file JSON per tenant (`Page` + `SushiToJsons`, 99 in `config/local/fixcity`), servite da rotte Folio del tema; `PageService`, `BlockService`, modello `Block`, `PublishPageAction` non esistono. README sostituito, `00-INDEX.md` con mappa delle directory (righe dell'altra sessione intatte), `wiki/content-architecture.md` marcato `stale`.
-- Story: [2026-10-14-docs-cms-studio](../stories/docs-cms-studio.story.md). Memoria: [nota di memoria](../../../../../bashscripts/ai/wiki/memories/docs-cms-lang-tenant-seo-studio.md)
-
 ## [2026-06-05] docs | Folio routing — mount() tipizzato + @volt statico
 
 - `folio_routing_system.md`: `mount(string $container0, string $slug0 = '')`; anti-pattern senza `request()->route()`
@@ -23,7 +17,7 @@ status: draft
 
 ## [2026-06-05] docs | HackerNoon harness — tips 001-022 in wiki locale
 
-- Stub/checklist: second-brain → canon Xot, ai-harness, [hackernoon map](../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md), [llm-wiki.txt](../../../../../bashscripts/tools/prompts/llm-wiki.txt) _(target mancante, verificato 2026-10-14)_
+- Stub/checklist: second-brain → canon Xot, ai-harness, [hackernoon map](../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md), [llm-wiki.txt](../../../../../bashscripts/tools/prompts/llm-wiki.txt)
 - GitHub: [#272](https://github.com/laraxot/base_fixcity_fila5/issues/272) / [D#273](https://github.com/laraxot/base_fixcity_fila5/discussions/273)
 
 # Cms Wiki Log
@@ -35,10 +29,10 @@ status: draft
 
 ## [2026-05-26] docs | ridondanza ThemeComposer — copia fuori da PSR-4
 
-- **Codice**: `app/View/Composers/ThemeComposer.php` (autoload) vs `resources/views/Composers/ThemeComposer.php` (fantasma quasi gemello) — vedere **[`docs/redundancy-report.md`](../redundancy-report.md)** §5 e hub Xot [`audit-profondo-ridondanze-holistic.md`](../../../Xot/docs/wiki/redundancy/audit-profondo-ridondanze-holistic.md) _(target mancante, verificato 2026-10-14)_ § analisi nominale.
+- **Codice**: `app/View/Composers/ThemeComposer.php` (autoload) vs `resources/views/Composers/ThemeComposer.php` (fantasma quasi gemello) — vedere **[`docs/redundancy-report.md`](../redundancy-report.md)** §5 e hub Xot [`audit-profondo-ridondanze-holistic.md`](../../../Xot/docs/wiki/redundancy/audit-profondo-ridondanze-holistic.md) § analisi nominale.
 
 ## [2026-04-21] fix | merge conflict code-quality-analysis.md
-- Rimossa copia integrale duplicata introdotta dal merge (blocco `--- Merged from code-quality-analysis-november-cms.md ---`).
+- Rimossa copia integrale duplicata introdotta dal merge (blocco `--- Merged from code-quality-analysis-2025-11-24.md ---`).
 - Preservata unica riga aggiuntiva utile: `**Status:** ❌ CRITICAL - Requires Immediate Fixes`.
 - File: `laravel/Modules/Cms/docs/code-quality-analysis.md`.
 
@@ -46,7 +40,7 @@ status: draft
 - Struttura wiki/log.md inizializzata.
 - Layer raw: tutti i file in `docs/` (eccetto `wiki/`).
 - Layer wiki: `docs/wiki/` — LLM-maintained, sintesi ad alto riuso.
-- Schema: `docs/.schema/WIKI_SCHEMA.md`
+- Schema: `docs/.schema/wiki_schema.md`
 - Adozione moduli: `docs/project/llm-wiki-module-adoption.md`
 
 ## [2026-04-21] conflict-resolution-batch-1 | cms
@@ -101,7 +95,3 @@ status: draft
 
 - `folio-list-vs-route-list.md`, patch filesystem routing + troubleshooting
 - INDEX concepts ripulito; cross-link User/Sixteen
-## [2026-10-14] docs | confine CMS, routing e tema
-
-- Aggiunta `concepts/cms-content-routing-theme-boundary.md`.
-- Esplicitato il percorso JSON tenant → Folio → tema Sixteen senza duplicare ownership.

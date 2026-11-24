@@ -52,38 +52,12 @@ use Override;
  * @mixin \Eloquent
  */
 /**
- * @property string $id
- * @property string $job_id
- * @property string|null $name
- * @property string|null $queue
- * @property Carbon|null $started_at
- * @property Carbon|null $finished_at
- * @property bool $failed
- * @property int $attempt
- * @property int|null $progress
- * @property string|null $exception_message
  * @property-read ProfileContract|null $creator
  * @property-read string $status
  * @property-read ProfileContract|null $updater
  *
- * @method static JobManagerFactory factory($count = null, $state = [])
- * @method static Builder<static> newModelQuery()
- * @method static Builder<static> newQuery()
- * @method static Builder<static> query()
- * @method static Builder<static>|JobManager whereAttempt($value)
- * @method static Builder<static>|JobManager whereExceptionMessage($value)
- * @method static Builder<static>|JobManager whereFailed($value)
- * @method static Builder<static>|JobManager whereFinishedAt($value)
- * @method static Builder<static>|JobManager whereId($value)
- * @method static Builder<static>|JobManager whereJobId($value)
- * @method static Builder<static>|JobManager whereName($value)
- * @method static Builder<static>|JobManager whereProgress($value)
- * @method static Builder<static>|JobManager whereQueue($value)
- * @method static Builder<static>|JobManager whereStartedAt($value)
- *
  * @property-read ProfileContract|null $deleter
  *
- * @mixin \Eloquent
  */
 class JobManager extends BaseModel
 {

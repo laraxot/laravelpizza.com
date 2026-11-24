@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan errors roadmap "
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../phpstan-errors-roadmap-.md
 ---
 
 # PHPStan Level Max Errors Roadmap - Geo Module
@@ -19,6 +17,15 @@ superseded_by: ../phpstan-errors-roadmap-.md
 **Status**: 🚧 **REGRESSION DETECTED** (was 0 errors, now 8)
 
 ---
+
+title: "phpstan errors roadmap "
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan errors roadmap "
+issues: []
+discussions: []
 ## 📊 Errori Identificati
 
 ### Totale Errori: 8

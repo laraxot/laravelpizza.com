@@ -1,11 +1,35 @@
+---
+title: "COMMANDS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "COMMANDS"
+issues: []
+discussions: []
+---
+
 # GSD (Get Shit Done) - Command Reference
 
+<<<<<<< HEAD
 **Version**: 1.0.0  
 **For**: PTVX Fila5 Mono  
+=======
+**Version**: 1.0.0
+**For**: PTVX fila5
+>>>>>>> laraxot/dev
 **Frameworks**: GSD v1.25.1 + BMAD-METHOD v6.2.0
 
 ---
 
+title: "COMMANDS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "COMMANDS"
+issues: []
+discussions: []
 ## 🚀 Essential Commands
 
 ### Project Initialization

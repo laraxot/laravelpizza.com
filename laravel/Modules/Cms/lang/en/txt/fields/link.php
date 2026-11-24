@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/link.php
 // Cms txt.fields.link — LangServiceProvider SSoT.
 return [
-    'label' => 'Collegamento',
-    'placeholder' => 'https://link-destinazione.it',
-    'helper_text' => 'URL generico di collegamento',
+    'label' => 'Link',
+    'placeholder' => 'https://link.example.com',
+    'helper_text' => 'Generic link URL',
     'tooltip' => '',
     'description' => '',
 ];

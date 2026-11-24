@@ -111,7 +111,7 @@ If `files` field has entries, read and briefly summarize each.
 <step name="check_roadmap">
 Check for roadmap (can use init progress or directly check file existence):
 
-If `.planning/ROADMAP.md` exists:
+If `.planning/roadmap.md` exists:
 1. Check if todo's area matches an upcoming phase
 2. Check if todo's files overlap with a phase's scope
 3. Note any match for action options

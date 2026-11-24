@@ -1,18 +1,16 @@
 ---
+qmd: "ui wiki overview md"
 title: "Wiki Overview"
 module: "UI"
 type: overview
 created: "2026-04-15T08:28:51Z"
 updated: "2026-04-15T08:28:51Z"
 related:
-  - "./agents.md"
+  - "./AGENTS.md"
   - "./bmad-method.md"
   - "./context-compression.md"
   - "./index.md"
   - "./log.md"
-status: draft
-tags: [docs, ui, wiki]
-qmd: "ui wiki overview ui"
 ---
 
 # UI Wiki Overview

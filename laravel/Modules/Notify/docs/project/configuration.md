@@ -3,11 +3,14 @@ title: "configuration"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "configuration"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Notify Project Configuration
@@ -207,4 +210,13 @@ QUEUE_CONNECTION=sync
 - [Find Duplicates Script](bashscripts/docs/find-doc-duplicates.sh)
 
 ---
+
+title: "configuration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "configuration"
+issues: []
+discussions: []
 **Maintenance**: Update this file when APP_URL or theme configuration changes

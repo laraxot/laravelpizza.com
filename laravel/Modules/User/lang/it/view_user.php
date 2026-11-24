@@ -15,6 +15,7 @@ return [
         ],
         'filter' => [
             'icon' => 'filter',
+            'label' => 'Filtro',
         ],
     ],
     'fields' => [
@@ -28,7 +29,7 @@ return [
             'tooltip' => '',
         ],
     ],
-<<<<<<< .merge_file_szAFJk
+<<<<<<< HEAD
     'sections' => [
         'empty' => [
             'heading' => '',
@@ -36,7 +37,7 @@ return [
         ],
     ],
 =======
->>>>>>> .merge_file_xPLZFs
+>>>>>>> laraxot/dev
     'navigation' => [
         'name' => 'View User',
         'plural' => 'View User',

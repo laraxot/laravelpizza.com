@@ -3,11 +3,14 @@ title: "master plan"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "master plan"
 issues: []
 discussions: []
-status: draft
 ---
 
 # FixCity Platform - Master Plan 🚀
@@ -17,6 +20,15 @@ status: draft
 **Analista**: AI Development Assistant  
 
 ---
+
+title: "master plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "master plan"
+issues: []
+discussions: []
 ## 🎯 EXECUTIVE SUMMARY
 
 **FixCity** è una **piattaforma SaaS di civic engagement** che rivoluziona il modo in cui cittadini e amministrazioni locali collaborano per migliorare la qualità della vita urbana. Il sistema trasforma i cittadini in "sensori urbani attivi", permettendo segnalazioni georeferenziate, gestione intelligente dei workflow e analytics avanzate.
@@ -434,7 +446,7 @@ docs/
 ├── README.md (✅ Project Overview)
 ├── MASTER_PLAN.md (✅ This document)
 ├── PROJECT_STATUS.md (✅ Status Report)
-├── ARCHITECTURE.md (📋 Technical Architecture)
+├── architecture.md (📋 Technical Architecture)
 ├── API_REFERENCE.md (📋 API Documentation)
 ├── DEPLOYMENT.md (📋 Deployment Guide)
 └── modules/
@@ -495,4 +507,7 @@ FixCity è posizionata per diventare la **piattaforma leader europea** per il ci
 
 **Per domande o approfondimenti**: development@fixcity.io
 **Per domande o approfondimenti**: development@ptv.io
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev

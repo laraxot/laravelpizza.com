@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "data objects"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Data Objects in Laraxot

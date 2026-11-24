@@ -4,7 +4,7 @@ type: concept
 module: Activity
 tags: [testcase, architecture, hierarchy, inheritance, testing, pest, phpstan]
 created: 2026-06-10
-updated: 2026-10-20
+updated: 2026-06-10
 qmd: "activity testcase xotbasetestcase laravel modules pest phpstan hierarchy"
 status: "active"
 issues:
@@ -12,7 +12,7 @@ issues:
 discussions:
   - https://github.com/laraxot/base_fixcity_fila5/discussions/316
 related:
-  - ../../../../Xot/docs/BRAINSTORM-TestCase-Hierarchy-XotBase.md
+  - ../../../../Xot/docs/wiki/rules/module-testcase-xotbase-hierarchy.md
   - ../../../tests/TestCase.php
   - ../../../tests/Pest.php
 sources:
@@ -39,15 +39,15 @@ Modules\Activity\Tests\TestCase
 Activity needs Laraxot bootstrap from Xot, but must keep Activity-specific concerns local:
 
 - `DatabaseTransactions` remains in Activity `TestCase`.
-- `connectionsToTransact` explicitly includes `sqlite` (the shared connection prepared by `prepareSharedSqliteForTesting()`), `activity`, and `user`.
-- Providers are composed with `parent::getPackageProviders($app)`, then `UserServiceProvider`, `ActivityServiceProvider` and `EventServiceProvider`.
+- `connectionsToTransact` explicitly includes `mysql`, `activity`, and `user`.
+- Providers are composed with `parent::getPackageProviders($app)`, then `UserServiceProvider` and `ActivityServiceProvider`.
 
 This keeps DRY/KISS without hiding module database boundaries.
 
 ## Verified Facts
 
 - Official Laravel Modules v13 test docs show Pest usage through `uses(Tests\TestCase::class)` and `vendor/bin/pest`.
-- Upstream `tests/BaseTestCase.php` (GitHub v13.0.0) extends Orchestra Testbench: dev-only, not in consumer autoload.
+- Upstream `tests/BaseTestCase.php` (GitHub v13.0.0) extends Orchestra Testbench — dev-only, not in consumer autoload.
 - Local vendor package has no autoloaded `Nwidart\Modules\Tests\BaseTestCase` class.
 - The upstream test stubs use the application `Tests\TestCase`, not a package-provided test base.
 
@@ -57,7 +57,6 @@ This keeps DRY/KISS without hiding module database boundaries.
 - Extending a non-existent `Nwidart\Modules\Tests\BaseTestCase` creates `class.notFound` and runtime fatal errors.
 - Moving Activity providers or Activity connections into `XotBaseTestCase` pollutes the platform layer.
 - Replacing Pest files with PHPUnit classes violates the current test rule.
-- Binding Activity tests to the root `Tests\TestCase` skips `XotBaseTestCase` and `DatabaseTransactions`. On 2026-10-20 a submodule pull brought this back (605 PHPStan errors in 19 files); see [the Activity story](../../stories/phpstan-test-wave-activity.story.md).
 
 ## Activity Pattern
 
@@ -67,18 +66,17 @@ abstract class TestCase extends XotBaseTestCase
     use DatabaseTransactions;
 
     protected $connectionsToTransact = [
-        'sqlite',
+        'mysql',
         'activity',
         'user',
     ];
 
-    protected function getPackageProviders(Application $app): array
+    protected function getPackageProviders(mixed $app): array
     {
         return [
             ...parent::getPackageProviders($app),
             UserServiceProvider::class,
             ActivityServiceProvider::class,
-            EventServiceProvider::class,
         ];
     }
 }

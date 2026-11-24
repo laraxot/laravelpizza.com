@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "conflict resolution"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../conflict-resolution.md
 ---
 
 # Conflict Resolution — Module Gdpr

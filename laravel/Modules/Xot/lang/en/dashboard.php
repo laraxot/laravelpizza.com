@@ -15,7 +15,7 @@ return [
     ],
     'fields' => [
         'name' => [
-            'label' => 'Nome',
+            'label' => 'Name',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -33,13 +33,13 @@ return [
             'description' => '',
         ],
         'updated_at' => [
-            'label' => 'Aggiornato il',
+            'label' => 'Updated at',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'first_name' => [
-            'label' => 'Nome',
+            'label' => 'Name',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -51,7 +51,7 @@ return [
             'description' => '',
         ],
         'select_all' => [
-            'name' => 'Seleziona Tutti',
+            'name' => 'Select All',
             'message' => '',
             'label' => '',
             'tooltip' => '',
@@ -62,14 +62,14 @@ return [
     'actions' => [
         'import' => [
             'fields' => [
-                'import_file' => 'Seleziona un file XLS o CSV da caricare',
+                'import_file' => 'Select an XLS or CSV file to upload',
             ],
         ],
         'export' => [
             'filename_prefix' => 'Aree al',
             'columns' => [
-                'name' => 'Nome area',
-                'parent_name' => 'Nome area livello superiore',
+                'name' => 'Area name',
+                'parent_name' => 'Parent area name',
             ],
         ],
     ],

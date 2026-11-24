@@ -3,11 +3,14 @@ title: "sessione completa"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "sessione completa"
 issues: []
 discussions: []
-status: draft
 ---
 
 # ✅ Sessione Completata - Allineamento Bootstrap Italia
@@ -158,6 +161,15 @@ GET /it/tests/amministrazione → tests.view (slug=amministrazione)
 - `docs/VERIFICA_HOMEPAGE.md`
 
 ---
+
+title: "sessione completa"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sessione completa"
+issues: []
+discussions: []
 **Status**: ✅ COMPLETATO  
 **Data**: 2026-03-31  
 **URL Test**: http://fixcity.local/it/tests/homepage

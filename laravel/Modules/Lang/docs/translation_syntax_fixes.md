@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "links"
 related:
   - "./italian-text-refined-audit-report.md"
-status: draft
 ---
 # Correzione Errori di Sintassi nei File di Traduzione
 
@@ -171,10 +170,6 @@ return [
 - [Lang Module Documentation](../../laravel/Modules/Lang/docs/)
 - [Notify Module Documentation](../../laravel/Modules/Notify/docs/)
 - [UI Module Documentation](../../laravel/Modules/UI/docs/)
-- [Job Module Documentation](../../Job/docs)
-- [Lang Module Documentation](.)
-- [Notify Module Documentation](../../Notify/docs)
-- [UI Module Documentation](../../UI/docs)
 
 ## Ultimo Aggiornamento
 2025-01-06 - Correzione completa errori sintassi file traduzione ✅ COMPLETATO

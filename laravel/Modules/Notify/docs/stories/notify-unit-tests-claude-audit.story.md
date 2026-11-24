@@ -1,5 +1,5 @@
 ---
-title: "Notify: Unit Tests for claude-audit 100/100"
+title: "Notify — Unit Tests for claude-audit 100/100"
 type: story
 module: Notify
 epic: "claude-audit-perfection"
@@ -7,18 +7,22 @@ slug: notify-unit-tests-claude-audit-100
 status: ready-for-dev
 priority: high
 created: 2026-09-27
+<<<<<<< HEAD
 updated: 2026-09-27
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 issues:
   - "https://github.com/laraxot/base_fixcity_fila5/issues/XXXX"
 discussions:
   - "https://github.com/laraxot/base_fixcity_fila5/discussions/XXXX"
 related:
-  - "docs/stories/geo-unit-tests-claude-audit.story.md"
-  - "docs/stories/tenant-unit-tests-claude-audit.story.md"
+  - "docs/stories/geo-unit-tests-claude-audit-100.story.md"
+  - "docs/stories/tenant-unit-tests-claude-audit-100.story.md"
   - "../../../docs/wiki/guidelines/claude-audit-static-free-tier.md"
 ---
 
-# Notify: Unit Tests for claude-audit 100/100
+# Notify — Unit Tests for claude-audit 100/100
 
 ## Fase BMAD
 

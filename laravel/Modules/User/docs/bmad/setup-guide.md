@@ -1,18 +1,13 @@
 ---
-title: "User: BMAD Setup Guide"
+title: "User — BMAD Setup Guide"
 description: "Setup e configurazione BMAD per il modulo User"
 module: "User"
 alias: "user"
 documentation_date: "2026-05-27"
 bmad_version: "6.2.0"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user, bmad]
-qmd: "user   bmad setup guide user"
 ---
 
-# User: BMAD Setup Guide
+# User — BMAD Setup Guide
 
 ## Scopo
 
@@ -63,7 +58,15 @@ Dopo un update, ricontrollare che non si sia "spaccata" la coerenza tra moduli:
 ## Vedi Anche
 
 - [quick-reference](quick-reference.md)
+<<<<<<< HEAD
 - [Project Context](../../_bmad-output/project-context.md)
+=======
+<<<<<<< HEAD
+- [Project Context](../../_bmad-output/project-context.md)
+=======
+- [Project Context](project-context.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 

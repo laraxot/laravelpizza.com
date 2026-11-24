@@ -3,12 +3,14 @@ title: "translations structure template"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "translations structure template"
 issues: []
 discussions: []
-status: superseded
-superseded_by: translations-structure-template.md
 ---
 
 # Template di Struttura per le Traduzioni

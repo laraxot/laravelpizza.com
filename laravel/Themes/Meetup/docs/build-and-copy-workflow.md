@@ -1,36 +1,241 @@
-# Build del tema Meetup
+# Build e Copy Workflow - Tema Meetup
 
-Gli asset del tema (CSS Tailwind, JS Alpine, font Inter) si compilano con Vite in `laravel/Themes/Meetup/public/`.
+> **Aggiornato il 2026-11-12 — `npm run copy` non esiste più.** `public_html/themes/<Tema>` è un symlink a
+> `laravel/Themes/<Tema>/public` e `public_html/assets/<modulo>` a `laravel/Modules/<Modulo>/public`: dopo
+> `npm run build` il sito vede già la build. Le istruzioni di copia qui sotto sono storiche. Regola e motivi:
+> [public-html-symlink-assets.md](/laravel/Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md).
 
-`public_html/themes/Meetup` **è un symlink** a `../../laravel/Themes/Meetup/public`, tracciato da git: il web server serve
-niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-promemoria che stampa un messaggio).
+## Data
+[DATE]
 
-## Comandi
+## Panoramica
 
-```bash
-cd laravel/Themes/Meetup
-npm ci          # dipendenze esatte del package-lock.json
-npm run dev     # sviluppo con hot reload
-npm run build   # produzione: public/manifest.json e public/assets/*
+Il workflow di build e copy per il tema Meetup consiste in due passaggi:
+1. **`npm run build`**: Compila gli asset CSS/JS con Vite
+2. **`npm run copy`**: Copia gli asset compilati nella directory pubblica dove Laravel può servirli
+
+## Perché Eseguire Questi Comandi?
+
+### 1. `npm run build`
+
+**Scopo**: Compila gli asset frontend (CSS, JS) per la produzione.
+
+**Cosa fa**:
+- Esegue TypeScript compiler (`tsc`) per verificare errori TypeScript
+- Esegue Vite build che:
+  - Compila Tailwind CSS in CSS ottimizzato
+  - Bundle JavaScript con tree-shaking
+  - Minifica e ottimizza gli asset
+  - Output in `./public/` (come configurato in `vite.config.js` con `outDir: './public'`)
+
+**Output**: `Themes/Meetup/public/`
+- `assets/app-[hash].css` - CSS compilato e minificato
+- `assets/app-[hash].js` - JavaScript compilato e minificato
+- `manifest.json` - Manifest Vite con mapping asset
+
+### 2. `npm run copy`
+
+**Scopo**: Copia gli asset compilati nella directory pubblica accessibile da Laravel.
+
+**Cosa fa**:
+- Copia tutti i file da `Themes/Meetup/public/*` a `public_html/themes/Meetup/`
+- Include `assets/` directory e `manifest.json`
+- Rende gli asset accessibili via web (es. `/themes/Meetup/assets/app-[hash].css`)
+
+**Output**: `public_html/themes/Meetup/`
+
+## Configurazione
+
+### vite.config.js
+
+```javascript
+import { defineConfig } from 'vite';
+import laravel, { refreshPaths } from 'laravel-vite-plugin'
+
+export default defineConfig({
+    plugins: [
+        laravel({
+            input: [
+                'resources/css/app.css',
+                'resources/js/app.js',
+            ],
+            refresh: [...refreshPaths, 'app/Livewire/**'],
+        }),
+    ],
+    build: {
+        outDir: './public',  // ✅ Output nella directory public del tema
+        emptyOutDir: false,
+        manifest: 'manifest.json',
+    },
+});
 ```
 
-Dopo la build lo script `postbuild` (`scripts/clean-stale-assets.mjs`) toglie da `public/assets/` i file che il manifest non cita più (Vite scrive con `emptyOutDir: false` perché `public/` contiene anche favicon, `sw.js` e `site.webmanifest`). Poi commit di `public/manifest.json` e di `public/assets/` (`git add -A` registra anche le cancellazioni).
+### package.json Scripts
 
-Ogni classe Tailwind nuova in una vista (anche dei moduli: `@source` in `resources/css/app.css`) arriva nel CSS solo dopo `npm run build`: senza build la pagina si vede senza quegli stili.
-
-## Dettagli
-
-- `vite.config.js` ha `base: '/themes/Meetup/'`: gli URL dentro il CSS (font, immagini) puntano a `/themes/Meetup/assets/…`.
-- Il CSS importa gli stili di Filament da `laravel/vendor/filament/...`: prima della build serve `composer install` in `laravel/`.
-- Il font Inter arriva da `@fontsource-variable/inter` ed è servito dal sito: nessuna richiesta a Google Fonts.
-
-## Se il symlink non c'è (nuovo server o clone su Windows)
-
-```bash
-cd public_html/themes
-rm -rf Meetup
-ln -s ../../laravel/Themes/Meetup/public Meetup
+```json
+{
+  "scripts": {
+    "dev": "vite",                    // Sviluppo con hot reload
+    "build": "tsc && vite build",     // Build produzione
+    "copy": "cp -r ./public/* ../../../public_html/themes/Meetup"  // Copia asset
+  }
+}
 ```
 
-Su Windows serve `git config core.symlinks true` prima del clone (o `mklink /D`).
+## Workflow Completo
+
+### Sviluppo
+
+```bash
+cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
+npm run dev  # Hot reload, nessun copy necessario
+```
+
+### Produzione
+
+```bash
+cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
+npm run build  # Compila asset
+npm run copy   # Copia nella directory pubblica
+```
+
+### Workflow Combinato
+
+```bash
+cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
+npm run build && npm run copy  # Esegue entrambi in sequenza
+```
+
+## Struttura Directory
+
+```
+Themes/Meetup/
+├── resources/
+│   ├── css/
+│   │   └── app.css          # Source CSS
+│   └── js/
+│       └── app.js           # Source JS
+├── public/                  # ✅ Output build (npm run build)
+│   ├── assets/
+│   │   ├── app-[hash].css   # CSS compilato
+│   │   └── app-[hash].js    # JS compilato
+│   └── manifest.json        # Manifest Vite
+└── vite.config.js           # Configurazione Vite
+
+public_html/
+└── themes/
+    └── Meetup/              # ✅ Output copy (npm run copy)
+        ├── assets/
+        │   ├── app-[hash].css
+        │   └── app-[hash].js
+        └── manifest.json
+```
+
+## Perché Due Passaggi?
+
+### Separazione Responsabilità
+
+1. **Build**: Compilazione e ottimizzazione (Vite)
+2. **Copy**: Distribuzione nella directory pubblica (Laravel)
+
+### Vantaggi
+
+- ✅ **Isolamento**: Build separata dalla distribuzione
+- ✅ **Flessibilità**: Puoi modificare il copy senza rifare il build
+- ✅ **Versioning**: Puoi mantenere versioni diverse degli asset
+- ✅ **Testing**: Puoi testare il build prima di copiarlo
+
+## Verifica
+
+### Dopo `npm run build`
+
+```bash
+# Verifica che gli asset siano stati compilati
+ls -la Themes/Meetup/public/
+# Dovresti vedere: assets/ directory e manifest.json
+```
+
+### Dopo `npm run copy`
+
+```bash
+# Verifica che gli asset siano stati copiati
+ls -la public_html/themes/Meetup/
+# Dovresti vedere gli asset copiati
+```
+
+### Test Accesso Web
+
+```bash
+# Verifica che gli asset siano accessibili via web
+# (sostituisci [hash] con l'hash reale dal manifest.json)
+curl http://127.0.0.1:8000/themes/Meetup/assets/app-[hash].css
+# Dovresti ricevere il CSS compilato
+```
+
+## Troubleshooting
+
+### Problema: `npm run copy` fallisce
+
+**Causa**: Directory `public_html/themes/Meetup/` non esiste
+
+**Soluzione**:
+```bash
+mkdir -p public_html/themes/Meetup
+npm run copy
+```
+
+### Problema: Asset non aggiornati
+
+**Causa**: Cache browser o asset non copiati
+
+**Soluzione**:
+```bash
+# Ricompila e ricopia
+npm run build && npm run copy
+# Pulisci cache browser (Ctrl+Shift+R)
+```
+
+### Problema: Path errati nello script copy
+
+**Causa**: Path relativi non corretti
+
+**Verifica**:
+```bash
+# Dalla directory Themes/Meetup/
+pwd  # Dovrebbe essere: .../laravel/Themes/Meetup
+ls -la public/  # Verifica che esista
+ls -la ../../../public_html/themes/Meetup  # Verifica destinazione
+```
+
+## Best Practices
+
+1. ✅ **Sempre eseguire dalla directory del tema**: `cd Themes/Meetup`
+2. ✅ **Build prima di copy**: `npm run build && npm run copy`
+3. ✅ **Verificare output**: Controllare che gli asset siano stati compilati e copiati
+4. ✅ **Versioning**: Considerare versioning degli asset per cache busting
+5. ✅ **Automazione**: Usare script helper per automatizzare il processo
+
+## Script Helper (Opzionale)
+
+```bash
+#!/bin/bash
+# build-and-copy.sh
+cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
+npm run build && npm run copy
+echo "✅ Build e copy completati!"
+```
+
+## Riferimenti
+
+- `Themes/Meetup/vite.config.js` - Configurazione Vite
+- `Themes/Meetup/package.json` - Scripts NPM
+- `Themes/Meetup/docs/npm-commands-execution-rule.md` - Regola esecuzione comandi
+- `Themes/Meetup/docs/frontend-asset-management.md` - Gestione asset frontend
+
+## Checklist
+
+- [x] Documentato workflow build e copy
+- [x] Spiegato perché (separazione responsabilità, flessibilità)
+- [x] Documentata struttura directory
+- [x] Aggiunto troubleshooting
+- [x] Aggiunte best practices

@@ -45,14 +45,22 @@ return new class extends XotBaseMigration
         });
         // -- UPDATE --
         $this->tableUpdate(function (Blueprint $table): void {
+            // after('name') solo se la colonna name esiste: schemi parziali (migrazioni
+            // precedenti alla create canonica) non devono far fallire l'alter.
             if (! $this->hasColumn('first_name')) {
-                $table->string('first_name')->after('name')->nullable();
+                $col = $table->string('first_name')->nullable();
+                if ($this->hasColumn('name')) {
+                    $col->after('name');
+                }
             } else {
                 $table->string('first_name')->nullable()->change();
             }
 
             if (! $this->hasColumn('last_name')) {
-                $table->string('last_name')->after('name')->nullable();
+                $col = $table->string('last_name')->nullable();
+                if ($this->hasColumn('name')) {
+                    $col->after('name');
+                }
             } else {
                 $table->string('last_name')->nullable()->change();
             }

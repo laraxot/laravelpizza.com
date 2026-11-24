@@ -1,17 +1,3 @@
-
----
-title: "README"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "README"
-issues: []
-discussions: []
-status: active
----
-
-
 # LLM Wiki: compiled knowledge
 
 Questo folder contiene la conoscenza 'compilata' dall'AI partendo dai documenti raw in ../docs.

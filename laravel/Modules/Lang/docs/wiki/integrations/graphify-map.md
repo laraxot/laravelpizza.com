@@ -2,16 +2,15 @@
 qmd: "graphify map"
 issues: []
 discussions: []
-title: "Lang Module: Mappa Graphify"
+title: "Lang Module — Mappa Graphify"
 module: lang
 type: integration
 tags: [integrations, modules, lang]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
-# Lang Module: Mappa Graphify
+# Lang Module — Mappa Graphify
 
 **Versione:** 1.0.0 | **Modulo:** Lang | **Data:** 2026-08-02
 
@@ -20,12 +19,12 @@ status: draft
 ## 📌 Cosa fa il modulo Lang
 
 Il modulo **Lang** gestisce:
-- **Gestione traduzioni**: CRUD traduzioni per molteplici lingue (IT, EN, DE)
-- **Sincronizzazione file translation**: lettura/scrittura file `.php` per lingue supportate
-- **Fallback chain e locale switching**: cambio lingua dinamico con fallback chain
-- **Integrazione Filament**: UI admin per gestire traduzioni e file di traduzione
-- **Database-backed translations**: persistenza traduzioni su DB con `translations` e `language_lines`
-- **Multi-module translation aggregation**: raccolta traduzioni da tutti i moduli
+- **Gestione traduzioni** — CRUD traduzioni per molteplici lingue (IT, EN, DE)
+- **Sincronizzazione file translation** — lettura/scrittura file `.php` per lingue supportate
+- **Fallback chain e locale switching** — cambio lingua dinamico con fallback chain
+- **Integrazione Filament** — UI admin per gestire traduzioni e file di traduzione
+- **Database-backed translations** — persistenza traduzioni su DB con `translations` e `language_lines`
+- **Multi-module translation aggregation** — raccolta traduzioni da tutti i moduli
 
 ---
 
@@ -107,22 +106,22 @@ graphify path --from "GetAllTranslationAction" --to "TranslationFile"
 ```
 translations (DB-backed)
   ├── id (PK)
-  ├── lang (nullable, indexed): codice lingua: 'it', 'en', 'de'
-  ├── namespace (nullable, indexed): es. 'modules.performance'
-  ├── group (nullable, indexed): es. 'widgets', 'messages'
-  ├── item (nullable): specifica chiave dentro il gruppo
-  ├── key (nullable, indexed): chiave completa: 'lang.group.item'
-  ├── value (text, nullable): testo tradotto
-  ├── locale (nullable, indexed): locale IETF: 'it-IT', 'en-US'
+  ├── lang (nullable, indexed) — codice lingua: 'it', 'en', 'de'
+  ├── namespace (nullable, indexed) — es. 'modules.performance'
+  ├── group (nullable, indexed) — es. 'widgets', 'messages'
+  ├── item (nullable) — specifica chiave dentro il gruppo
+  ├── key (nullable, indexed) — chiave completa: 'lang.group.item'
+  ├── value (text, nullable) — testo tradotto
+  ├── locale (nullable, indexed) — locale IETF: 'it-IT', 'en-US'
   ├── user_id (nullable, indexed, FK → users)
   └── timestamps (created_at, updated_at)
 
 language_lines (Spatie multi-language)
   ├── id (PK)
-  ├── group (indexed): es. 'messages', 'auth'
-  ├── key (indexed): es. 'welcome', 'login'
-  ├── text (JSON): { "it": "...", "en": "...", "de": "..." }
-  ├── locale (indexed): locale corrente
+  ├── group (indexed) — es. 'messages', 'auth'
+  ├── key (indexed) — es. 'welcome', 'login'
+  ├── text (JSON) — { "it": "...", "en": "...", "de": "..." }
+  ├── locale (indexed) — locale corrente
   └── unique(group, key, locale)
 
 posts (test model, può estendersi)

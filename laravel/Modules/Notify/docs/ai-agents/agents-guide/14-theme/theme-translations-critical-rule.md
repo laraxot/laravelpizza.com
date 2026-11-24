@@ -3,11 +3,14 @@ title: "theme translations critical rule"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "theme translations critical rule"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 14. Theme Translations - CRITICAL RULE

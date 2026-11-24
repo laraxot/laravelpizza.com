@@ -3,11 +3,14 @@ title: "tailwind forms"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "tailwind forms"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Form con Filament Components
@@ -278,4 +281,4 @@ class NotificationForm extends Component implements HasForms
 - [Documentazione Filament Forms](https://filamentphp.com/docs/3.x/forms/installation)
 - [Documentazione Layout](tailwind_layouts.md)
 - [Documentazione Componenti](tailwind_components.md)
-- [Architettura](ARCHITECTURE.md)
+- [Architettura](architecture.md)

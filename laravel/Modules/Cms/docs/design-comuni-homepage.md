@@ -3,11 +3,14 @@ title: "design comuni homepage"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "design comuni homepage"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Design Comuni Homepage Parity
@@ -41,9 +44,9 @@ La homepage di test ` /it/tests/homepage ` e' orchestrata da due livelli distint
 ## Active references in theme docs
 
 - [../../../Themes/Sixteen/docs/design-comuni/00-index.md](../../../Themes/Sixteen/docs/design-comuni/00-index.md)
-- [../../../Themes/Sixteen/docs/design-comuni/homepage-structure-diff.md](../../../Themes/Sixteen/docs/design-comuni/homepage-structure-diff.md)
+- [../../../Themes/Sixteen/docs/design-comuni/homepage-structure-diff-2026-04-02.md](../../../Themes/Sixteen/docs/design-comuni/homepage-structure-diff-2026-04-02.md)
 - [../../../Themes/Sixteen/docs/design-comuni/work-plan.md](../../../Themes/Sixteen/docs/design-comuni/work-plan.md)
-- [../../../Themes/Sixteen/docs/design-comuni/bmad-gsd-status.md](../../../Themes/Sixteen/docs/design-comuni/bmad-gsd-status.md)
+- [../../../Themes/Sixteen/docs/design-comuni/bmad-gsd-status-2026-04-03.md](../../../Themes/Sixteen/docs/design-comuni/bmad-gsd-status-2026-04-03.md)
 - [../../../Themes/Sixteen/docs/design-comuni/screenshots/homepage-visual-pass-2026-04-02.md](../../../Themes/Sixteen/docs/design-comuni/screenshots/homepage-visual-pass-2026-04-02.md)
 
 ## Cms-side guidance
@@ -56,4 +59,12 @@ La homepage di test ` /it/tests/homepage ` e' orchestrata da due livelli distint
 
 - [00-index.md](./00-index.md) - Indice del modulo Cms
 - [architecture/homepage-structure.md](./architecture/homepage-structure.md) - Architettura runtime aggiornata
-- [PAGE_COMPONENT_ARCHITECTURE.md](./page-component-architecture.md) - Architettura generale dei componenti pagina
+<<<<<<< HEAD
+- [page_component_architecture.md](./page_component_architecture.md) - Architettura generale dei componenti pagina
+=======
+<<<<<<< HEAD
+- [PAGE_COMPONENT_ARCHITECTURE.md](./PAGE_COMPONENT_ARCHITECTURE.md) - Architettura generale dei componenti pagina
+=======
+- [page_component_architecture.md](./page_component_architecture.md) - Architettura generale dei componenti pagina
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

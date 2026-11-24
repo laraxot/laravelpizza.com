@@ -7,7 +7,6 @@ title: "Git push bloccato da oggetto Git LFS mancante"
 type: incident
 created: 2026-07-28
 updated: 2026-07-28
-status: draft
 ---
 
 # Git push bloccato da oggetto Git LFS mancante
@@ -40,14 +39,14 @@ committati come *pointer file* (testo tipo `version https://git-lfs...\noid
 sha256:...\nsize ...`), ma il contenuto binario reale non fu mai caricato con
 `git lfs push` in quel momento. Il repository locale non aveva quindi in
 `.git/lfs/objects/` il blob referenziato da quei pointer storici, e nemmeno il
-remote lo aveva mai ricevuto: da qui il rifiuto.
+remote lo aveva mai ricevuto — da qui il rifiuto.
 
 ## Diagnosi per singolo oggetto
 
 Per 15/16 oggetti, il contenuto reale esiste tuttora in `HEAD` con lo **stesso
 percorso** (i file furono in seguito ri-committati come blob binari normali,
 non più come pointer LFS). Verifica: `git show HEAD:<path> | sha256sum` produce
-esattamente l'OID richiesto da GitHub per ciascuno di questi 15 file: quindi
+esattamente l'OID richiesto da GitHub per ciascuno di questi 15 file — quindi
 il contenuto non era perso, solo mai "registrato" nella cache locale di
 Git LFS (`.git/lfs/objects/`) né caricato sul remote.
 
@@ -55,7 +54,7 @@ Il 16° oggetto (`docs/screenshots/event-detail-page.png.backup-copilot`,
 oid `5e077f4fd10aa1bb7b4eeaa5d4673f7148ecc63ac66c4d1e14001088ee7753e1`,
 size 121507) è diverso: l'unico blob mai esistito in tutta la storia per quel
 path (`1e9e4c479f9e9778eb0dd5b3fe4e6ac0c7ffde6a`) è **esso stesso** il pointer
-LFS di 131 byte: il contenuto binario reale non fu **mai** committato in
+LFS di 131 byte — il contenuto binario reale non fu **mai** committato in
 nessuna forma in questo repository. Verificato anche che non è presente né
 nello store LFS di `provtv` né in quello di `laraxot` (query dirette alla
 Git LFS Batch API, HTTP 404 "Object does not exist on the server" su
@@ -80,7 +79,7 @@ costruire un file diverso che produca lo stesso hash.
    modulo) ha **già** l'intera cronologia in questione, commit incluso quello
    con il pointer rotto (`git fetch laraxot dev` → `laraxot/dev` combacia
    esattamente con `HEAD` locale). Questo conferma che i commit in sé sono
-   validi e già stati accettati con successo altrove: il blocco è specifico
+   validi e già stati accettati con successo altrove — il blocco è specifico
    del pre-receive hook di `provtv` in questo momento (probabilmente perché è
    il primo push che gli richiede di validare l'intera ancestry a partire dal
    punto in cui fu introdotto il pointer rotto).
@@ -96,8 +95,8 @@ costruire un file diverso che produca lo stesso hash.
   - riscrivere quella specifica cronologia (proibito: "si va solo in avanti");
   - recuperare il contenuto binario reale da una fonte esterna al repository
     (nessuna trovata: né store LFS di `provtv` né di `laraxot`).
-- Il file perso è un backup ridondante (`event-detail-page.png`: la versione
-  "non backup": esiste tuttora regolarmente in `docs/screenshots/`), quindi
+- Il file perso è un backup ridondante (`event-detail-page.png` — la versione
+  "non backup" — esiste tuttora regolarmente in `docs/screenshots/`), quindi
   la perdita non ha impatto funzionale sul modulo.
 
 **Raccomandazione**: valutare con l'owner del repo se pushare "solo" verso

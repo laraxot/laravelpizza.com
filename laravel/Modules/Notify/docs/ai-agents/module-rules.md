@@ -3,7 +3,11 @@ title: "module rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "module rules"
 issues: []
 discussions: []
@@ -87,19 +91,19 @@ When encountering "Cannot call constructor" in Filament widgets:
 ### Debugging Workflow
 ```bash
 # 1. Check widget structure
-grep -n "getOptions\|__construct" Modules/Quaeris/app/Filament/Widgets/Simple05ChartWidget.php
+grep -n "getOptions\|__construct" Modules/<nome progetto>/app/Filament/Widgets/Simple05ChartWidget.php
 
 # 2. Verify PHPStan compliance
-cd laravel && vendor/bin/phpstan analyse Modules/Quaeris/app/Filament/Widgets/Simple05ChartWidget.php
+cd laravel && vendor/bin/phpstan analyse Modules/<nome progetto>/app/Filament/Widgets/Simple05ChartWidget.php
 
 # 3. Check for syntax errors in related services
-cd laravel && php -l Modules/Quaeris/app/Services/ChartService.php
+cd laravel && php -l Modules/<nome progetto>/app/Services/ChartService.php
 
 # 2. Verify PHPStan compliance
-cd laravel && vendor/bin/phpstan analyse Modules/Quaeris/app/Filament/Widgets/Simple05ChartWidget.php
+cd laravel && vendor/bin/phpstan analyse Modules/<nome progetto>/app/Filament/Widgets/Simple05ChartWidget.php
 
 # 3. Check for syntax errors in related services
-cd laravel && php -l Modules/Quaeris/app/Services/ChartService.php
+cd laravel && php -l Modules/<nome progetto>/app/Services/ChartService.php
 ```
 
 ## Chart Widget Pattern (CRITICAL)
@@ -162,18 +166,18 @@ JS);
 final class JpGraphService
 {
     private readonly string $cachePath;
-    
+
     public function createLineChart(array $data, array $labels): string
     {
         try {
             $graph = new Graph(600, 400);
             $graph->SetScale('textlin');
-            
+
             $linePlot = new LinePlot($data);
             $linePlot->SetColor('#1f77b4');
-            
+
             $graph->Add($linePlot);
-            
+
             return $this->renderAndCache($graph, 'line_chart');
         } catch (JpGraphException $e) {
             throw new ChartGenerationException('Chart failed: ' . $e->getMessage(), 0, $e);
@@ -198,17 +202,17 @@ class BadJpGraphService
 final class HybridChartWidget extends Widget
 {
     private ?JpGraphService $chartService = null;
-    
+
     public function getChartData(): array
     {
         $this->chartService ??= new JpGraphService();
-        
+
         return [
             'static_url' => $this->generateStaticChart(),
             'interactive_data' => $this->getInteractiveData()
         ];
     }
-    
+
     private function generateStaticChart(): string
     {
         // Generate JpGraph for PDF/export
@@ -257,25 +261,25 @@ final class JpGraphServiceTest extends TestCase
     {
         $data = [10, 20, 30];
         $labels = ['Jan', 'Feb', 'Mar'];
-        
+
         $chartPath = $this->chartService->createLineChart($data, $labels);
-        
+
         $this->assertIsString($chartPath);
         $this->assertFileExists(public_path($chartPath));
     }
-    
+
     public function test_invalid_data_handling(): void
     {
         $this->expectException(ChartGenerationException::class);
-        
+
         $this->chartService->createLineChart([], []);
     }
 }
 ```
 
-## Quaeris ChartService + SimpleXXChartWidget (Memoria Critica)
+## <nome progetto> ChartService + SimpleXXChartWidget (Memoria Critica)
 
-- **ChartService unico e centrale** (`Modules/Quaeris/app/Services/ChartService.php`):
+- **ChartService unico e centrale** (`Modules/<nome progetto>/app/Services/ChartService.php`):
 ## App ChartService + SimpleXXChartWidget (Memoria Critica)
 
 - **ChartService unico e centrale** (`Modules/App/app/Services/ChartService.php`):
@@ -291,11 +295,11 @@ final class JpGraphServiceTest extends TestCase
     - Dentro `getData()` o metodi simili: `$this->chartService ??= new ChartService();`
   - Non definire costruttori complessi nei widget che chiamano `parent::__construct()`: Livewire/Filament gestiscono il ciclo di vita, i costruttori manuali creano facilmente problemi e violano PHPStan.
   - Quando si lavora con `$this->period` o simili, usare sempre default robusti (`$period = $this->period ?? 'monthly';`) per evitare stati nulli durante l'inizializzazione.
-- **Regola per tutti gli agenti AI quando c'è un errore sui grafici Quaeris**:
+- **Regola per tutti gli agenti AI quando c'è un errore sui grafici <nome progetto>**:
   1. Controllare che `ChartService.php` sia sintatticamente corretto (nessun `];` fuori posto, nessun blocco duplicato in coda).
   2. Verificare che i widget `SimpleXXChartWidget` chiamino solo metodi esistenti del `ChartService`.
   3. Eseguire PHPStan livello 10 su servizio + widget coinvolti, per esempio:
-     - `cd laravel && ./vendor/bin/phpstan analyse Modules/Quaeris/app/Services/ChartService.php Modules/Quaeris/app/Filament/Widgets/Simple01ChartWidget.php Modules/Quaeris/app/Filament/Widgets/Simple02ChartWidget.php --level=10 --no-progress`
+     - `cd laravel && ./vendor/bin/phpstan analyse Modules/<nome progetto>/app/Services/ChartService.php Modules/<nome progetto>/app/Filament/Widgets/Simple01ChartWidget.php Modules/<nome progetto>/app/Filament/Widgets/Simple02ChartWidget.php --level=10 --no-progress`
   4. Solo quando PHPStan è pulito e la pagina Filament si carica senza `ParseError` il bug è considerato chiuso.
 
 ## Riferimenti

@@ -82,12 +82,12 @@ assignees: ''
 
 ### Lock File Status
 
-- [ ] Lock file created: `bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md.lock`
+- [ ] Lock file created: `bashscripts/docs/git/sync_remote_repo_coordination.md.lock`
 - [ ] Lock file removed after completion
 
 ### Coordination Log Updated
 
-- [ ] Entry added to `bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md`
+- [ ] Entry added to `bashscripts/docs/git/sync_remote_repo_coordination.md`
 - [ ] Status updated from "In Progress" to "Completed"
 
 ## 📊 Impact Assessment
@@ -127,7 +127,7 @@ assignees: ''
 
 **Documentation**:
 - [ ] `bashscripts/docs/git/sync-remote-repo-guide.md`
-- [ ] `bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md`
+- [ ] `bashscripts/docs/git/sync_remote_repo_coordination.md`
 - [ ] `AGENTS.md`
 
 **Related Issues/PRs**:

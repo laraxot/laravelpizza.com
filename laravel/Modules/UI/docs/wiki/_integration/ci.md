@@ -5,6 +5,8 @@ tags: [docs]
 created: 2026-07-14
 updated: 2026-07-14
 qmd: "ci ci"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
@@ -16,7 +18,6 @@ related:
   - "./custom-firm-fields-1.md"
   - "./custom-firm-fields.md"
   - "./custom-theme-1.md"
-status: draft
 ---
 
 # ci

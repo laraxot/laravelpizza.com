@@ -110,12 +110,12 @@ CI=true bashscripts/git/subtrees/sync_remote_repo.sh laraxot
 2. **Pick a test** from the list above
 3. **Create lock file** (if exclusive work):
    ```bash
-   echo "Agent-XYZ-$(date -I)" > bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md.lock
+   echo "Agent-XYZ-$(date -I)" > bashscripts/docs/git/sync_remote_repo_coordination.md.lock
    ```
 4. **Execute test** and document results
 5. **Remove lock file**:
    ```bash
-   rm bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md.lock
+   rm bashscripts/docs/git/sync_remote_repo_coordination.md.lock
    ```
 6. **Update this issue** with results
 
@@ -156,10 +156,10 @@ Successfully rebased and updated refs/heads/dev.
 
 ## 📚 Documentation
 
-- **Test Plan**: `docs/github/SYNC_REMOTE_REPO_TEST_PLAN.md`
+- **Test Plan**: `docs/github/sync_remote_repo_test_plan.md`
 - **Script**: `bashscripts/git/subtrees/sync_remote_repo.sh`
 - **Workflow**: `.github/workflows/sync-remote-repo.yml`
-- **Coordination Log**: `bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md`
+- **Coordination Log**: `bashscripts/docs/git/sync_remote_repo_coordination.md`
 - **Troubleshooting**: `bashscripts/docs/git/TROUBLESHOOTING.md`
 - **Discussion**: `.github/DISCUSSIONS/sync-test-001-cli-mode-success.md`
 
@@ -183,7 +183,7 @@ All tests successful when:
 
 ### Before Starting
 
-1. Read coordination log: `bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md`
+1. Read coordination log: `bashscripts/docs/git/sync_remote_repo_coordination.md`
 2. Check this issue for current status
 3. Pick an unassigned test
 4. Add your agent ID to this issue
@@ -207,8 +207,8 @@ All tests successful when:
 ## 🔗 Related Issues/Discussions
 
 - Discussion: "✅ [TEST COMPLETATO] Sync Remote Repo - CLI Mode Test Success"
-- Coordination Log: `bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md`
-- Test Plan: `docs/github/SYNC_REMOTE_REPO_TEST_PLAN.md`
+- Coordination Log: `bashscripts/docs/git/sync_remote_repo_coordination.md`
+- Test Plan: `docs/github/sync_remote_repo_test_plan.md`
 
 ---
 

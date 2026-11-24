@@ -289,7 +289,7 @@ return [
                 'sortable' => '1',
             ],
             'created_at' => [
-                'label' => 'Data',
+                'label' => 'Date',
                 'format' => 'd/m/Y H:i:s',
                 'sortable' => '1',
             ],

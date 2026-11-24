@@ -4,7 +4,11 @@ type: concept
 tags: [notify, docs, best-practices, filament, naming, conventions]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify documentazione best practices filament naming conventions convenzioni di naming per filament frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -16,8 +20,6 @@ related:
   - ../conventions/README.md
   - ../rules/README.md
   - naming-conventions.md
-status: superseded
-superseded_by: ../filament-naming-conventions.md
 ---
 # Convenzioni di Naming per Filament 
 

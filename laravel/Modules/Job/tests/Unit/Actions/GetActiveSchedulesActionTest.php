@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Modules\Job\Tests\Unit\Actions;
+namespace Tests\Modules\Job\Unit\Actions;
 
 use Modules\Job\Actions\GetActiveSchedulesAction;
 use Modules\Job\Tests\TestCase;

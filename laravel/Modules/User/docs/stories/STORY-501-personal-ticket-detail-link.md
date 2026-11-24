@@ -1,6 +1,6 @@
 ---
 qmd: "STORY 501 personal ticket detail link"
-title: "STORY-501: Aprire il dettaglio delle proprie segnalazioni"
+title: "STORY-501 — Aprire il dettaglio delle proprie segnalazioni"
 type: story
 status: in_progress
 tags: [user, area-personale, fixcity, ticket, folio, bmad]
@@ -15,7 +15,7 @@ related:
   - ../../Fixcity/docs/stories/STORY-500-ticket-status-audit-timeline.md
 ---
 
-# STORY-501: Dettaglio dalla lista “Le mie pratiche”
+# STORY-501 — Dettaglio dalla lista “Le mie pratiche”
 
 ## User story
 

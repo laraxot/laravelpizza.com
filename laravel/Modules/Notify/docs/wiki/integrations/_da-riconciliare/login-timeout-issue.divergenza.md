@@ -1,14 +1,17 @@
 ---
-qmd: "login timeout issue.divergenza"
+qmd: "Login Timeout Issue.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: LOGIN_TIMEOUT_ISSUE.md"
+title: "Login Timeout Issue.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Divergenza: `LOGIN_TIMEOUT_ISSUE.md`

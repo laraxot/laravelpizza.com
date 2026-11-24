@@ -130,9 +130,9 @@ set -o pipefail # Catch pipe errors
 
 **Rule:** NO `@phpstan-ignore-line` allowed!
 
-### 7. INDEX.md - Skills Index
+### 7. index.md - Skills Index
 
-**File:** `.qwen/skills/INDEX.md`
+**File:** `.qwen/skills/index.md`
 
 **Purpose:**
 - Central index
@@ -148,7 +148,7 @@ set -o pipefail # Catch pipe errors
 ```
 .qwen/skills/
 ├── README.md              # Overview & quick start
-├── INDEX.md               # Navigation index
+├── index.md               # Navigation index
 ├── laravel-expert.md      # Laravel 12 & PHP 8.3+
 ├── documentation-master.md # Product & code docs
 ├── ai-agent-coordination.md # Multi-agent collaboration
@@ -295,7 +295,7 @@ Skills should be updated when:
 
 **Day 1:**
 - Read README.md
-- Read INDEX.md
+- Read index.md
 - Understand project structure
 
 **Day 2:**

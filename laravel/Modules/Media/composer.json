@@ -23,7 +23,7 @@
   "require": {
     "php": "^8.2",
     "pbmedia/laravel-ffmpeg": "^8.5",
-    "intervention/image": "*"
+    "intervention/image": "^4.4"
   },
   "require-dev": {},
   "repositories": [

@@ -3,11 +3,14 @@ title: "documentation governance"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "documentation governance"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Documentation Governance Framework
@@ -17,6 +20,15 @@ status: draft
 **Applies to**: All modules and themes
 
 ---
+
+title: "documentation governance"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "documentation governance"
+issues: []
+discussions: []
 ## 🎯 Purpose
 
 This document establishes the governance framework for all documentation in the FixCity platform, ensuring consistency, quality, and maintainability across all modules and themes.
@@ -33,7 +45,7 @@ Modules/ModuleName/
 │   ├── README.md                    # Module overview and quick reference
 │   ├── 00-index.md                  # Alternative index (if needed)
 │   ├── CHANGELOG.md                 # Module changelog
-│   ├── changelog.md                 # Module changelog
+│   ├── CHANGELOG.md                 # Module changelog
 │   ├── architecture/                # Architecture decisions and patterns
 │   │   ├── overview.md
 │   │   └── decisions/               # ADRs (Architectural Decision Records)
@@ -436,12 +448,9 @@ jobs:
 ## 📚 Related Documents
 
 - [AGENTS.md](../../../AGENTS.md) - Agent guidelines
-- [agents.md](../../../agents.md) - Agent guidelines
+- [AGENTS.md](../../../AGENTS.md) - Agent guidelines
 - [.windsurfrules](../../../.windsurfrules) - IDE rules
 - [DOCUMENTATION_INDEX.md](../../../docs/DOCUMENTATION_INDEX.md) - Master index
-- [agents.md](../../../AGENTS.md) - Agent guidelines
-- [.windsurfrules](../../../.windsurfrules) - IDE rules
-- [DOCUMENTATION_INDEX.md](../../../../docs/DOCUMENTATION_INDEX.md) - Master index
 
 ---
 

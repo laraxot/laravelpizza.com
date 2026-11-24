@@ -11,12 +11,19 @@ related:
   - "./architecture-rules.md"
   - "./architecture.md"
   - "./component-registration.md"
+<<<<<<< HEAD
   - "./README.md"
+=======
+<<<<<<< HEAD
+  - "./readme.md"
+=======
+  - "./README.md"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./structure.md"
   - "./testing-structure.md"
   - "./user-gdpr-decoupling.md"
   - "./user-gdpr-oupling.md"
-status: draft
 ---
 
 # Struttura delle Blade di Autenticazione con Volt
@@ -199,10 +206,8 @@ Ogni azione di autenticazione deve:
 
 ## Collegamenti
 
-- [Documentazione Volt](./volt-logout.md)
+- [Documentazione Volt](./volt-logout-2.md)
 - [Best Practices Routing](./routing-best-practices.md)
-- [Documentazione Volt](../volt-logout.md)
-- [Best Practices Routing](../routing-best-practices-architettura-volt-folio-filament.md)
 - [Struttura Directory](./directory-structure-checklist.md)
 - [Gestione Errori](./error-handling.md) 
 - [Documentazione Volt](./volt-logout.md)
@@ -212,4 +217,4 @@ Ogni azione di autenticazione deve:
 - [Documentazione Volt](./volt_logout.md)
 - [Best Practices Routing](./routing_best_practices.md)
 - [Struttura Directory](./directory_structure_checklist.md)
-- [Gestione Errori](./error_handling.md)
+- [Gestione Errori](./error_handling.md) 

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "overview"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Overview e Technology Stack
@@ -27,7 +26,7 @@ This documentation is organized in separate files to:
 1. Read [Architecture Rules](architecture-rules.md) - **CRITICAL**
 2. Study [Module Structure](module-structure.md) - Understand the modular architecture
 3. Consult [Development Tasks](development-tasks.md) for common tasks
-4. Follow [Conventions](../development/conventions.md) for code consistency
+4. Follow [Conventions](conventions.md) for code consistency
 
 ## 🏗️ Technology Stack
 
@@ -56,5 +55,14 @@ Modules/{ModuleName}/
 - **For Quality**: Consult [Code Quality](code-quality.md) for testing and PHPStan
 
 ---
+
+title: "overview"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "overview"
+issues: []
+discussions: []
 **Version**: 2.0 (Refactor DRY + KISS)  
 **File**: overview.md - Overview and quick start

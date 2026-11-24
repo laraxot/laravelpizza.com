@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+use PHPUnit\Framework\Assert;
+
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\File;
 use Modules\Lang\Actions\GetTransPathAction;
@@ -39,7 +41,7 @@ beforeEach(function (): void {
     $lang = (array) Config::get('lang', []);
     unset($lang['save_missing_translations']);
     Config::set('lang', $lang);
-    expect(Config::has('lang.save_missing_translations'))->toBeFalse();
+    Assert::assertFalse(Config::has('lang.save_missing_translations'));
 });
 
 afterEach(function (): void {
@@ -57,33 +59,49 @@ it('does not write in production when nothing is configured', function (): void 
 
     trySavingMissingKey();
 
-    expect(file_exists($this->target))->toBeFalse();
+    Assert::assertFalse(file_exists($this->target));
+<<<<<<< HEAD
 });
+=======
+})->group('LANG-SAVETRANS-INV-1');
+>>>>>>> laraxot/dev
 
 it('does not write in staging either', function (): void {
     $this->app['env'] = 'staging';
 
     trySavingMissingKey();
 
-    expect(file_exists($this->target))->toBeFalse();
+    Assert::assertFalse(file_exists($this->target));
+<<<<<<< HEAD
 });
+=======
+})->group('LANG-SAVETRANS-INV-1');
+>>>>>>> laraxot/dev
 
 it('writes in the local environment when nothing is configured', function (): void {
     $this->app['env'] = 'local';
 
     trySavingMissingKey();
 
-    expect(file_exists($this->target))->toBeTrue();
-    expect(File::getRequire($this->target))->toBe(['chiave_di_prova' => ['label' => 'valore']]);
+    Assert::assertTrue(file_exists($this->target));
+    Assert::assertSame(['chiave_di_prova' => ['label' => 'valore']], File::getRequire($this->target));
+<<<<<<< HEAD
 });
+=======
+})->group('LANG-SAVETRANS-INV-2');
+>>>>>>> laraxot/dev
 
 it('does not write under the test environment by default', function (): void {
-    expect($this->app['env'])->toBe('testing');
+    Assert::assertSame('testing', $this->app['env']);
 
     trySavingMissingKey();
 
-    expect(file_exists($this->target))->toBeFalse();
+    Assert::assertFalse(file_exists($this->target));
+<<<<<<< HEAD
 });
+=======
+})->group('LANG-SAVETRANS-INV-1');
+>>>>>>> laraxot/dev
 
 it('lets the configuration switch it on in production', function (): void {
     $this->app['env'] = 'production';
@@ -91,8 +109,12 @@ it('lets the configuration switch it on in production', function (): void {
 
     trySavingMissingKey();
 
-    expect(file_exists($this->target))->toBeTrue();
+    Assert::assertTrue(file_exists($this->target));
+<<<<<<< HEAD
 });
+=======
+})->group('LANG-SAVETRANS-INV-3');
+>>>>>>> laraxot/dev
 
 it('lets the configuration switch it off in the local environment', function (): void {
     $this->app['env'] = 'local';
@@ -100,5 +122,27 @@ it('lets the configuration switch it off in the local environment', function ():
 
     trySavingMissingKey();
 
-    expect(file_exists($this->target))->toBeFalse();
+    Assert::assertFalse(file_exists($this->target));
+<<<<<<< HEAD
 });
+=======
+})->group('LANG-SAVETRANS-INV-3');
+
+it('writes from the translation panel through persist() even when the switch is off', function (): void {
+    // Il pannello Lang (EditTranslationFile) salva con persist(): il traduttore ha premuto "Salva", anche in produzione.
+    $this->app['env'] = 'production';
+    Config::set('lang.save_missing_translations', false);
+
+    app(SaveTransAction::class)->persist('lang::lang.chiave_di_prova.label', 'Etichetta');
+
+    Assert::assertSame(['chiave_di_prova' => ['label' => 'Etichetta']], File::getRequire($this->target));
+})->group('LANG-SAVETRANS-INV-4');
+
+it('keeps the keys already in the file when it adds a new one', function (): void {
+    File::put($this->target, "<?php\n\nreturn ['esistente' => ['label' => 'Gia qui']];\n");
+
+    app(SaveTransAction::class)->persist('lang::lang.nuova.label', 'Nuova');
+
+    Assert::assertSame(['esistente' => ['label' => 'Gia qui'], 'nuova' => ['label' => 'Nuova']], File::getRequire($this->target));
+})->group('LANG-SAVETRANS-INV-5');
+>>>>>>> laraxot/dev

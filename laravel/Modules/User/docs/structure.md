@@ -8,19 +8,14 @@ qmd: "structure modulo user"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Modulo User
@@ -622,21 +617,11 @@ tests_old
 * [structure.md](bashscripts/docs/structure.md)
 * [structure.md](../../Gdpr/docs/structure.md)
 * [structure.md](../../Notify/docs/structure.md)
-* [structure.md](../../Gdpr/docs/structure.md)
-* [structure.md](../../Notify/docs/structure.md)
-* [structure.md](../../Xot/docs/structure.md)
+* [structure.md](../../../xot/docs/structure.md)
 * [structure.md](../../../xot/docs/base/structure.md)
-* [structure.md](../../Xot/docs/config/structure.md)
+* [structure.md](../../../xot/docs/config/structure.md)
 * [structure.md](../../../user/docs/structure.md)
-* [structure.md](../../UI/docs/structure.md)
-* [structure.md](../../Lang/docs/structure.md)
-* [structure.md](../../Job/docs/structure.md)
-* [structure.md](../../Media/docs/structure.md)
-* [structure.md](../../Tenant/docs/structure.md)
-* [structure.md](../../Activity/docs/structure.md)
-* [structure.md](../../../cms/docs/structure.md)
-* [structure.md](../../Cms/docs/themes/structure.md)
-* [structure.md](../../Cms/docs/components/structure.md)
+* [structure.md](../../../ui/docs/structure.md)
 * [structure.md](../../Lang/docs/structure.md)
 * [structure.md](../../Job/docs/structure.md)
 * [structure.md](../../Media/docs/structure.md)

@@ -5,9 +5,6 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-qmd: "user module - business logic analysis user"
-status: superseded
-superseded_by: business_logic_analysis.md
 ---
 
 # User Module - Business Logic Analysis

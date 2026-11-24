@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/size.php
 // Cms txt.fields.size — LangServiceProvider SSoT.
 return [
-    'label' => 'Dimensione',
-    'placeholder' => 'Piccolo, Medio, Grande',
-    'helper_text' => 'Dimensione relativa dell\'elemento',
+    'label' => 'Size',
+    'placeholder' => 'Small, Medium, Large',
+    'helper_text' => 'Relative size of the element',
     'tooltip' => '',
     'description' => '',
 ];

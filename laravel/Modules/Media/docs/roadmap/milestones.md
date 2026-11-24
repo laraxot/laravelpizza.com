@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "04 milestones"
 related:
   - "./webm.md"
-status: draft
 ---
 # Milestones - Media
 

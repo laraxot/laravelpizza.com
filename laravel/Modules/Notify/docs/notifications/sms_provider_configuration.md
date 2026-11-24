@@ -3,7 +3,11 @@ title: "sms provider configuration"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "sms provider configuration"
 issues: []
 discussions: []
@@ -479,9 +483,21 @@ Log::info('SMS sent', [
 
 ## Collegamenti alla Documentazione Correlata
 
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_OLHqkb
 - [MULTI_CHANNEL_NOTIFICATIONS.md](./MULTI_CHANNEL_NOTIFICATIONS.md)
 - [NOTIFICATIONS_IMPLEMENTATION_GUIDE.md](./NOTIFICATIONS_IMPLEMENTATION_GUIDE.md)
 - [TELEGRAM_NOTIFICATIONS_GUIDE.md](./TELEGRAM_NOTIFICATIONS_GUIDE.md)
+=======
+>>>>>>> laraxot/dev
+- [MULTI_CHANNEL_NOTIFICATIONS.md](multi_channel_notifications.md)
+- [NOTIFICATIONS_IMPLEMENTATION_GUIDE.md](notifications_implementation_guide.md)
+- [TELEGRAM_NOTIFICATIONS_GUIDE.md](telegram_notifications_guide.md)
 - [MULTI_CHANNEL_NOTIFICATIONS.md](./multi_channel_notifications.md)
 - [NOTIFICATIONS_IMPLEMENTATION_GUIDE.md](./notifications_implementation_guide.md)
 - [TELEGRAM_NOTIFICATIONS_GUIDE.md](./telegram_notifications_guide.md)
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_KLtGJY
+>>>>>>> laraxot/dev

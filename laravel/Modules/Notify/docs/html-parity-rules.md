@@ -3,28 +3,23 @@ title: "HTML Parity Analysis Rules"
 type: rule
 tags: [html, parity, rules]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "html-parity-rules html parity analysis rules"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
-  - "./action-plan-immediate.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-status: draft
 ---
 
 # HTML Parity Analysis Rules
@@ -403,7 +398,7 @@ trans('ptv::segnalazione.heading.title.label')
 ## 🔗 Related Documentation
 
 - [Translation Conventions](./translation-conventions.md)
-- [Blade Architecture](../laravel/claude.md#blade-components)
+- [Blade Architecture](../laravel/CLAUDE.md#blade-components)
 - [Agnostic Scripts](./agnostic-documentation-rule.md)
 - [Multi-Agent Coordination](./multi-agent-coordination-rules.md)
 

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "componenti blocchi contenuto"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Componenti e Blocchi di Contenuto in il progetto

@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -58,8 +62,17 @@ Supporta template dinamici, allegati binari, multi-canale e integrazione complet
 - **[Spatie Mail Templates Deep Dive](./spatie-database-mail-templates-deep-dive.md)**  
   Sistema template email database
 
-- **[Email Layouts Best Practices](./mail-templates/EMAIL_LAYOUTS_BEST_PRACTICES.md)**  
+<<<<<<< HEAD
+- **[Email Layouts Best Practices](mail-templates/email_layouts_best_practices.md)**  
 - **[Email Layouts Best Practices](./mail-templates/email_layouts_best_practices.md)**  
+=======
+<<<<<<< .merge_file_S1yKcA
+- **[Email Layouts Best Practices](./mail-templates/EMAIL_LAYOUTS_BEST_PRACTICES.md)**  
+=======
+- **[Email Layouts Best Practices](mail-templates/email_layouts_best_practices.md)**  
+- **[Email Layouts Best Practices](./mail-templates/email_layouts_best_practices.md)**  
+>>>>>>> .merge_file_3naZmG
+>>>>>>> laraxot/dev
   Best practices layout email
 
 #### Notifications
@@ -250,8 +263,8 @@ Notification::route('mail', 'to@example.com')->notify($notify);
 **Versione**: 1.1  
 **Stato**: PSR-4 compliant, test business logic completati (95% copertura)  
 **Prossimi passi**: Completamento test modelli base  
-**Changelog**: [CHANGELOG.md](./CHANGELOG.md)
-**Changelog**: [changelog.md](./CHANGELOG.md)
+**Changelog**: [CHANGELOG.md](./CHANGELOG.MD)
+**Changelog**: [CHANGELOG.md](./CHANGELOG.MD)
 
 ## 🔗 Collegamenti
 
@@ -274,12 +287,24 @@ Notification::route('mail', 'to@example.com')->notify($notify);
 ### Documentazione Interna
 
 #### Email System
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_S1yKcA
 - [Email Layouts Best Practices](./mail-templates/EMAIL_LAYOUTS_BEST_PRACTICES.md)
 - [Spatie Mail Templates Structure](./mail-templates/SPATIE_MAIL_TEMPLATES_STRUCTURE.md)
 - [Email Troubleshooting](./email-sending/EMAIL_TROUBLESHOOTING.md)
+=======
+>>>>>>> laraxot/dev
+- [Email Layouts Best Practices](mail-templates/email_layouts_best_practices.md)
+- [Spatie Mail Templates Structure](mail-templates/spatie_mail_templates_structure.md)
+- [Email Troubleshooting](email-sending/email_troubleshooting.md)
 - [Email Layouts Best Practices](./mail-templates/email_layouts_best_practices.md)
 - [Spatie Mail Templates Structure](./mail-templates/spatie_mail_templates_structure.md)
 - [Email Troubleshooting](./email-sending/email_troubleshooting.md)
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_3naZmG
+>>>>>>> laraxot/dev
 
 #### Notifications
 - [Notifications Implementation Guide](./notifications/notifications_implementation_guide.md)

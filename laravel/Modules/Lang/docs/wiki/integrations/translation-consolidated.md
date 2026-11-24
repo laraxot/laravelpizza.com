@@ -2,16 +2,15 @@
 qmd: "translation consolidated"
 issues: []
 discussions: []
-title: "translation: Consolidated Documentation"
+title: "translation — Consolidated Documentation"
 module: lang
 type: integration
 tags: [integrations, modules, lang]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
-# translation: Consolidated Documentation
+# translation — Consolidated Documentation
 
 Consolidated from **65** individual files.
 
@@ -235,7 +234,6 @@ Durante l'audit delle traduzioni del progetto <nome progetto>, sono state identi
 
 ### Collegamenti Bidirezionali Creati
 - [Root Docs: Translation Standards](translation_standards.md)
-- [Root Docs: Translation Standards](../../translation_standards.md)
 - [Lang Module: Translation Best Practices](../laravel/modules/lang/docs/translation_best_practices.md)
 - [<nome progetto> Module: Translation Guidelines](../laravel/modules/<nome progetto>/docs/translation_guidelines.md)
 
@@ -1014,7 +1012,6 @@ Durante l'audit delle traduzioni, sono state identificate numerose traduzioni ch
 
 ### Collegamenti Bidirezionali
 - [Root Docs: Translation Standards](../../docs/translation_standards.md)
-- [Root Docs: Translation Standards](../../translation_standards.md)
 - [Lang Module: Translation Best Practices](translation_best_practices.md)
 - [<main module> Module: Translation Guidelines](../<main module>/docs/translation_guidelines.md)
 - [<nome progetto> Module: Translation Guidelines](../<nome progetto>/docs/translation_guidelines.md)
@@ -1419,7 +1416,6 @@ return [
 - [<nome progetto> Translation Audit](../modules/<nome progetto>/docs/translation_audit_city_fields.md)
 - [User Module Translation Rules](../modules/user/docs/widget-translation-rules.md)
 - [Translation Syntax Fixes](translation_syntax_fixes.md)
-- [Translation Syntax Fixes](../../translation_syntax_fixes.md)
 - [Windsurf Translation Rules](../.windsurf/rules/translation-complete-structure.mdc)
 
 ## Implementazione
@@ -1771,7 +1767,6 @@ return [
 - [<nome progetto> Translation Audit](../modules/<nome progetto>/docs/translation_audit_city_fields.md)
 - [User Module Translation Rules](../modules/user/docs/widget-translation-rules.md)
 - [Translation Syntax Fixes](translation_syntax_fixes.md)
-- [Translation Syntax Fixes](../../translation_syntax_fixes.md)
 - [Windsurf Translation Rules](../.windsurf/rules/translation-complete-structure.mdc)
 
 ## Implementazione
@@ -1920,13 +1915,6 @@ return [
 - [Job Module Error Documentation](../../Job/docs/translation-fields-critical-error-[DATE].md)
 - [Job Module Error Documentation](../../Job/docs/translation-fields-critical-error-2026-01-09.md)
 - [Translation Standards](../../Xot/docs/translation-standards.md)
-- [Translation Standards](../../translation-standards.md)
-- [Job Module Error Documentation](../../Job/docs/translation-fields-critical-error-2026-01-09.md)
-- [Translation Standards](../../translation-standards.md)
-- [Job Module Error Documentation](../../Job/docs/translation-fields-critical-error-2026-01-09.md)
-- [Job Module Error Documentation](../../Job/docs/translation-fields-critical-error-[DATE].md)
-- [Job Module Error Documentation](../../Job/docs/translation-fields-critical-error-2026-01-09.md)
-- [Translation Standards](../../translation-standards.md)
 - [Job Module Error Documentation](../../Job/docs/translation-fields-critical-error-2026-01-09.md)
 
 ---
@@ -2125,10 +2113,6 @@ php artisan lang:sync
 - [Translation System](./translation-system.md)
 - [Best Practices](./translation-keys-best-practices.md)
 - [File Management](./translation-file-management.md)
-- [Translation Standards](../../translation-standards.md)
-- [Translation System](../../translation-system.md)
-- [Best Practices](../../translation-keys-best-practices.md)
-- [File Management](../../translation-file-management.md)
 
 ## Note per lo Sviluppo
 
@@ -2307,10 +2291,6 @@ php artisan lang:sync
 - [Translation System](./translation-system.md)
 - [Best Practices](./translation-keys-best-practices.md)
 - [File Management](./translation-file-management.md)
-- [Translation Standards](../../translation-standards.md)
-- [Translation System](../../translation-system.md)
-- [Best Practices](../../translation-keys-best-practices.md)
-- [File Management](../../translation-file-management.md)
 
 ## Note per lo Sviluppo
 
@@ -2580,9 +2560,6 @@ php artisan lang:export
 - [Translation Standards](./translation-standards.md)
 - [Translation System](./translation-system.md)
 - [Best Practices](./translation-keys-best-practices.md)
-- [Translation Standards](../../translation-standards.md)
-- [Translation System](../../translation-system.md)
-- [Best Practices](../../translation-keys-best-practices.md)
 - [Laravel Localization](https://laravel.com/project_docs/localization)
 
 ## Note per lo Sviluppo
@@ -2834,9 +2811,6 @@ php artisan lang:export
 - [Translation Standards](./translation-standards.md)
 - [Translation System](./translation-system.md)
 - [Best Practices](./translation-keys-best-practices.md)
-- [Translation Standards](../../translation-standards.md)
-- [Translation System](../../translation-system.md)
-- [Best Practices](../../translation-keys-best-practices.md)
 - [Laravel Localization](https://laravel.com/docs/localization)
 
 ## Note per lo Sviluppo
@@ -3150,7 +3124,6 @@ return [
 
 - [Translation Rules](../Xot/docs/translation_rules.md)
 - [Translation Standards](./translation-standards.md)
-- [Translation Standards](../../translation-standards.md)
 - [Best Practices](../Xot/docs/translations-best-practices.md)
 
 ## Prossimi Passi
@@ -3281,7 +3254,6 @@ return [
 
 - [Translation Rules](../Xot/docs/translation_rules.md)
 - [Translation Standards](./translation-standards.md)
-- [Translation Standards](../../translation-standards.md)
 - [Best Practices](../Xot/docs/translations-best-practices.md)
 
 ## Prossimi Passi
@@ -3429,7 +3401,6 @@ return [
 
 - [Translation Rules](../xot/docs/translation_rules.md)
 - [Translation Standards](./translation-standards.md)
-- [Translation Standards](../../translation-standards.md)
 - [Best Practices](../xot/docs/translations-best-practices.md)
 
 ## Prossimi Passi
@@ -3584,13 +3555,6 @@ return [
 - [Best Practices](../Xot/docs/translations-best-practices.md)
 - [Translation Rules](../xot/docs/translation_rules.md)
 - [Translation Standards](./translation-standards.md)
-- [Translation Standards](../../translation-standards.md)
-- [Best Practices](../Xot/docs/translations-best-practices.md)
-- [Translation Rules](../xot/docs/translation_rules.md)
-- [Translation Standards](../../translation-standards.md)
-- [Best Practices](../Xot/docs/translations-best-practices.md)
-- [Translation Rules](../xot/docs/translation_rules.md)
-- [Translation Standards](../../translation-standards.md)
 - [Best Practices](../xot/docs/translations-best-practices.md)
 
 ## Prossimi Passi
@@ -3750,13 +3714,6 @@ return [
 - [Best Practices](../Xot/docs/translations-best-practices.md)
 - [Translation Rules](../Xot/docs/translation_rules.md)
 - [Translation Standards](./translation-standards.md)
-- [Translation Standards](../../translation-standards.md)
-- [Best Practices](../Xot/docs/translations-best-practices.md)
-- [Translation Rules](../Xot/docs/translation_rules.md)
-- [Translation Standards](../../translation-standards.md)
-- [Best Practices](../Xot/docs/translations-best-practices.md)
-- [Translation Rules](../Xot/docs/translation_rules.md)
-- [Translation Standards](../../translation-standards.md)
 - [Best Practices](../Xot/docs/translations-best-practices.md)
 
 ## Prossimi Passi
@@ -3907,7 +3864,6 @@ php artisan tinker
 
 ### Documentazione Modulo Lang:
 - [Errori Comuni Traduzione](errori_comuni_traduzione.md)
-- [Errori Comuni Traduzione](../../errori_comuni_traduzione.md)
 - [Correzioni Errori Sintassi 2025](correzioni_errori_sintassi_2025.md)
 - [Traduzioni Navigation 2025](traduzioni_navigation_2025.md)
 
@@ -4058,7 +4014,6 @@ php artisan tinker
 
 ### Documentazione Modulo Lang:
 - [Errori Comuni Traduzione](errori_comuni_traduzione.md)
-- [Errori Comuni Traduzione](../../errori_comuni_traduzione.md)
 - [Correzioni Errori Sintassi 2025](correzioni_errori_sintassi_2025.md)
 - [Traduzioni Navigation 2025](traduzioni_navigation_2025.md)
 
@@ -4254,7 +4209,6 @@ Il file `Modules/<nome progetto>/lang/it/profile_widget.php` conteneva:
 ## Collegamenti
 
 - [Regole Generali Traduzioni](translation_standards_links.md)
-- [Regole Generali Traduzioni](../../translation_standards_links.md)
 - [Documentazione Modulo Lang](../../laravel/Modules/Lang/docs/)
 - [Best Practices Filament](../../laravel/Modules/Xot/docs/filament/)
 - [Standard di Qualità <nome progetto>](../../laravel/Modules/<nome progetto>/docs/translation_quality_standards.md)
@@ -4286,11 +4240,11 @@ related:
 - [README modulo Lang](README.md)
 - [Convenzioni Path](./path_conventions.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
-- [Implementazione Header](/laravel/modules/user/docs/header_language_avatar_implementation.md)
+- [Implementazione Header](/laravel/Modules/User/docs/header_language_avatar_implementation.md)
 - [README modulo Lang](./README.md)
 - [Convenzioni Path](./PATH_CONVENTIONS.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
-- [Implementazione Header](/laravel/Modules/User/docs/HEADER_LANGUAGE_AVATAR_IMPLEMENTATION.md)
+- [Implementazione Header](/laravel/Modules/User/docs/header_language_avatar_implementation.md)
 
 ## Panoramica
 
@@ -4570,7 +4524,6 @@ Per blocchi di testo lunghi, valuta se usare chiavi dedicate in PHP (es. `onboar
 La traduzione appointment.php del modulo  è stata riscritta secondo le regole di centralizzazione, DRY, KISS, nessun lock-in, e struttura gerarchica inglese. Tutte le chiavi sono ora coerenti con enums, actions, messages, filters, calendar, notifications. La motivazione è filosofica (un solo punto di verità), logica (manutenzione semplice), religiosa (nessuna duplicazione), politica (nessun lock-in tra moduli), zen (serenità del codice).
 
 Vedi esempio e motivazione in [<nome modulo>/docs/appointment-management.md](../../<nome modulo>/docs/appointment-management.md) e [translation-standards.md](./translation-standards.md).
-Vedi esempio e motivazione in [<nome modulo>/docs/appointment-management.md](../../<nome modulo>/docs/appointment-management.md) e [translation-standards.md](../../translation-standards.md).
 
 ### Checklist aggiornata
 - Usare solo chiavi inglesi e struttura gerarchica
@@ -4600,7 +4553,7 @@ Seguire queste best practices per le chiavi di traduzione garantirà un'applicaz
 - [README modulo Lang](./README.md)
 - [Convenzioni Path](./PATH_CONVENTIONS.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
-- [Implementazione Header](/laravel/Modules/User/docs/HEADER_LANGUAGE_AVATAR_IMPLEMENTATION.md)
+- [Implementazione Header](/laravel/Modules/User/docs/header_language_avatar_implementation.md)
 
 ## Panoramica
 
@@ -4880,7 +4833,6 @@ Per blocchi di testo lunghi, valuta se usare chiavi dedicate in PHP (es. `onboar
 La traduzione appointment.php del modulo  è stata riscritta secondo le regole di centralizzazione, DRY, KISS, nessun lock-in, e struttura gerarchica inglese. Tutte le chiavi sono ora coerenti con enums, actions, messages, filters, calendar, notifications. La motivazione è filosofica (un solo punto di verità), logica (manutenzione semplice), religiosa (nessuna duplicazione), politica (nessun lock-in tra moduli), zen (serenità del codice).
 
 Vedi esempio e motivazione in [<nome modulo>/docs/appointment-management.md](../../<nome modulo>/docs/appointment-management.md) e [translation-standards.md](./translation-standards.md).
-Vedi esempio e motivazione in [<nome modulo>/docs/appointment-management.md](../../<nome modulo>/docs/appointment-management.md) e [translation-standards.md](../../translation-standards.md).
 
 ### Checklist aggiornata
 - Usare solo chiavi inglesi e struttura gerarchica
@@ -4910,7 +4862,7 @@ Seguire queste best practices per le chiavi di traduzione garantirà un'applicaz
 - [README modulo Lang](./README.md)
 - [Convenzioni Path](./PATH_CONVENTIONS.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
-- [Implementazione Header](/laravel/Modules/User/docs/HEADER_LANGUAGE_AVATAR_IMPLEMENTATION.md)
+- [Implementazione Header](/laravel/Modules/User/docs/header_language_avatar_implementation.md)
 
 ## Panoramica
 
@@ -5190,7 +5142,6 @@ Per blocchi di testo lunghi, valuta se usare chiavi dedicate in PHP (es. `onboar
 La traduzione appointment.php del modulo <nome progetto> è stata riscritta secondo le regole di centralizzazione, DRY, KISS, nessun lock-in, e struttura gerarchica inglese. Tutte le chiavi sono ora coerenti con enums, actions, messages, filters, calendar, notifications. La motivazione è filosofica (un solo punto di verità), logica (manutenzione semplice), religiosa (nessuna duplicazione), politica (nessun lock-in tra moduli), zen (serenità del codice).
 
 Vedi esempio e motivazione in [<nome progetto>/docs/appointment-management.md](../../<nome progetto>/docs/appointment-management.md) e [translation-standards.md](./translation-standards.md).
-Vedi esempio e motivazione in [<nome progetto>/docs/appointment-management.md](../../<nome progetto>/docs/appointment-management.md) e [translation-standards.md](../../translation-standards.md).
 
 ### Checklist aggiornata
 - Usare solo chiavi inglesi e struttura gerarchica
@@ -5243,19 +5194,11 @@ related:
 - [Collegamenti documentazione](./collegamenti-documentazione.md)
 - [Implementazione Auth Pages](../../user/docs/auth_pages_implementation.md)
 - [Regole Traduzioni User](../../user/docs/translation_keys_rules.md)
-- [Implementazione Auth Pages](../../../../User/docs/auth_pages_implementation.md)
-- [Regole Traduzioni User](../../../../User/docs/translation_keys_rules.md)
-- [Documentazione Lang](README.md)
-- [Documentazione centrale](./README.md)
-- [Collegamenti documentazione](./collegamenti-documentazione.md)
-- [Implementazione Auth Pages](../../../../User/docs/auth_pages_implementation.md)
-- [Regole Traduzioni User](../../../../User/docs/translation_keys_rules.md)
 - [Documentazione Lang](README.md)
 - [Documentazione centrale](./README.md)
 - [Collegamenti documentazione](./collegamenti-documentazione.md)
 - [Implementazione Auth Pages](auth_pages_implementation.md)
 - [Regole Traduzioni User](translation_keys_rules.md)
-- [Regole Traduzioni User](../../translation_keys_rules.md)
 - [Documentazione Lang](./README.md)
 
 ## Regole Fondamentali per le Traduzioni
@@ -5474,16 +5417,6 @@ Seguire queste regole per le chiavi di traduzione è fondamentale per garantire 
 
 - Sono state applicate correzioni strutturali alle traduzioni del modulo Notify per allineamento a queste regole.
 - Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../Notify/docs/TRANSLATION_KEYS_RULES.md) per dettagli, esempi e best practice specifiche.
-- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
-## [2024-07-07] Nota storica: correzione massiva Notify
-
-- Sono state applicate correzioni strutturali alle traduzioni del modulo Notify per allineamento a queste regole.
-- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
-- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
-## [2024-07-07] Nota storica: correzione massiva Notify
-
-- Sono state applicate correzioni strutturali alle traduzioni del modulo Notify per allineamento a queste regole.
-- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
 - Ogni nuova regola o convenzione va riportata sia qui che nella documentazione del modulo coinvolto.
 # Regole per le Chiavi di Traduzione
 
@@ -5492,14 +5425,11 @@ Seguire queste regole per le chiavi di traduzione è fondamentale per garantire 
 - [Collegamenti documentazione](./collegamenti-documentazione.md)
 - [Implementazione Auth Pages](../../user/docs/auth_pages_implementation.md)
 - [Regole Traduzioni User](../../user/docs/translation_keys_rules.md)
-- [Implementazione Auth Pages](../../../../User/docs/auth_pages_implementation.md)
-- [Regole Traduzioni User](../../../../User/docs/translation_keys_rules.md)
 - [Documentazione Lang](README.md)
 - [Documentazione centrale](./README.md)
 - [Collegamenti documentazione](./collegamenti-documentazione.md)
 - [Implementazione Auth Pages](auth_pages_implementation.md)
 - [Regole Traduzioni User](translation_keys_rules.md)
-- [Regole Traduzioni User](../../translation_keys_rules.md)
 - [Documentazione Lang](./README.md)
 
 ## Regole Fondamentali per le Traduzioni
@@ -5709,7 +5639,6 @@ Seguire queste regole per le chiavi di traduzione è fondamentale per garantire 
 
 - Sono state applicate correzioni strutturali alle traduzioni del modulo Notify per allineamento a queste regole.
 - Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
-- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
 - Ogni nuova regola o convenzione va riportata sia qui che nella documentazione del modulo coinvolto.
 # Regole per le Chiavi di Traduzione
 
@@ -5718,14 +5647,11 @@ Seguire queste regole per le chiavi di traduzione è fondamentale per garantire 
 - [Collegamenti documentazione](./collegamenti-documentazione.md)
 - [Implementazione Auth Pages](../../user/docs/auth_pages_implementation.md)
 - [Regole Traduzioni User](../../user/docs/translation_keys_rules.md)
-- [Implementazione Auth Pages](../../../../User/docs/auth_pages_implementation.md)
-- [Regole Traduzioni User](../../../../User/docs/translation_keys_rules.md)
 - [Documentazione Lang](README.md)
 - [Documentazione centrale](./README.md)
 - [Collegamenti documentazione](./collegamenti-documentazione.md)
 - [Implementazione Auth Pages](auth_pages_implementation.md)
 - [Regole Traduzioni User](translation_keys_rules.md)
-- [Regole Traduzioni User](../../translation_keys_rules.md)
 - [Documentazione Lang](./README.md)
 
 ## Regole Fondamentali per le Traduzioni
@@ -5935,7 +5861,6 @@ Seguire queste regole per le chiavi di traduzione è fondamentale per garantire 
 
 - Sono state applicate correzioni strutturali alle traduzioni del modulo Notify per allineamento a queste regole.
 - Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
-- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
 - Ogni nuova regola o convenzione va riportata sia qui che nella documentazione del modulo coinvolto.
 # Regole per le Chiavi di Traduzione
 
@@ -5944,7 +5869,6 @@ Seguire queste regole per le chiavi di traduzione è fondamentale per garantire 
 - [Collegamenti documentazione](./collegamenti-documentazione.md)
 - [Implementazione Auth Pages](auth_pages_implementation.md)
 - [Regole Traduzioni User](translation_keys_rules.md)
-- [Regole Traduzioni User](../../translation_keys_rules.md)
 - [Documentazione Lang](./README.md)
 
 ## Regole Fondamentali per le Traduzioni
@@ -6154,7 +6078,6 @@ Seguire queste regole per le chiavi di traduzione è fondamentale per garantire 
 
 - Sono state applicate correzioni strutturali alle traduzioni del modulo Notify per allineamento a queste regole.
 - Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../Notify/docs/TRANSLATION_KEYS_RULES.md) per dettagli, esempi e best practice specifiche.
-- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
 - Ogni nuova regola o convenzione va riportata sia qui che nella documentazione del modulo coinvolto.
 ## [[DATE]] Nota storica: correzione massiva Notify
 
@@ -6164,11 +6087,6 @@ Seguire queste regole per le chiavi di traduzione è fondamentale per garantire 
 - Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../Notify/docs/TRANSLATION_KEYS_RULES.md) per dettagli, esempi e best practice specifiche.
 - Ogni nuova regola o convenzione va riportata sia qui che nella documentazione del modulo coinvolto.
 - Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../Notify/docs/TRANSLATION_KEYS_RULES.md) per dettagli, esempi e best practice specifiche.
-- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
-- Ogni nuova regola o convenzione va riportata sia qui che nella documentazione del modulo coinvolto.
-- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
-- Ogni nuova regola o convenzione va riportata sia qui che nella documentazione del modulo coinvolto.
-- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
 - Ogni nuova regola o convenzione va riportata sia qui che nella documentazione del modulo coinvolto.
 
 ---
@@ -6194,8 +6112,6 @@ related:
 - [Collegamenti documentazione](./collegamenti-documentazione.md)
 - [Implementazione Auth Pages](../../user/docs/auth_pages_implementation.md)
 - [Regole Traduzioni User](../../user/docs/translation_keys_rules.md)
-- [Implementazione Auth Pages](../../../../User/docs/auth_pages_implementation.md)
-- [Regole Traduzioni User](../../../../User/docs/translation_keys_rules.md)
 - [Documentazione Lang](README.md)
 
 ## Regole Fondamentali per le Traduzioni
@@ -6405,7 +6321,6 @@ Seguire queste regole per le chiavi di traduzione è fondamentale per garantire 
 
 - Sono state applicate correzioni strutturali alle traduzioni del modulo Notify per allineamento a queste regole.
 - Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
-- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
 - Ogni nuova regola o convenzione va riportata sia qui che nella documentazione del modulo coinvolto.
 # Regole per le Chiavi di Traduzione
 
@@ -6414,8 +6329,6 @@ Seguire queste regole per le chiavi di traduzione è fondamentale per garantire 
 - [Collegamenti documentazione](./collegamenti-documentazione.md)
 - [Implementazione Auth Pages](../../user/docs/auth_pages_implementation.md)
 - [Regole Traduzioni User](../../user/docs/translation_keys_rules.md)
-- [Implementazione Auth Pages](../../../../User/docs/auth_pages_implementation.md)
-- [Regole Traduzioni User](../../../../User/docs/translation_keys_rules.md)
 - [Documentazione Lang](README.md)
 
 ## Regole Fondamentali per le Traduzioni
@@ -6625,7 +6538,6 @@ Seguire queste regole per le chiavi di traduzione è fondamentale per garantire 
 
 - Sono state applicate correzioni strutturali alle traduzioni del modulo Notify per allineamento a queste regole.
 - Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
-- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
 - Ogni nuova regola o convenzione va riportata sia qui che nella documentazione del modulo coinvolto.
 
 ---
@@ -6924,8 +6836,6 @@ Prima di ogni commit, verificare:
 
 - [Regole Traduzioni](../../laravel/Modules/Xot/docs/translation-standards.md)
 - [Regole Traduzioni](../../laravel/modules/xot/docs/translation-standards.md)
-- [Regole Traduzioni](../../translation-standards.md)
-- [Regole Traduzioni](../../translation-standards.md)
 - [Best Practices Filament](filament-widget-best-practices.md)
 - [Enum Standards](enum_standards.md)
 
@@ -7063,8 +6973,6 @@ Questa regola si applica a:
 
 - [Regole Traduzioni <nome progetto>](translation-helper-text-standards.md)
 - [Standard Helper Text](translation-helper-text-standards.md)
-- [Regole Traduzioni <nome progetto>](../../translation-helper-text-standards.md)
-- [Standard Helper Text](../../translation-helper-text-standards.md)
 - [Convenzioni Filament](filament-best-practices.md)
 
 *Ultimo aggiornamento: 2025-01-06*
@@ -7203,14 +7111,6 @@ La corretta implementazione degli standard di traduzione garantisce:
 - [Convenzioni di Traduzione nel Modulo Notify](translation_conventions.md)
 - [Regole Generali per le Traduzioni](translation_keys_rules.md)
 - [Best Practices per le Traduzioni](translation-keys-best-practices.md)
-- [Regole Generali per le Traduzioni](../../translation_keys_rules.md)
-- [Best Practices per le Traduzioni](../../translation-keys-best-practices.md)
-- [Convenzioni di Traduzione nel Modulo Notify](translation_conventions.md)
-- [Regole Generali per le Traduzioni](../../translation_keys_rules.md)
-- [Best Practices per le Traduzioni](../../translation-keys-best-practices.md)
-- [Convenzioni di Traduzione nel Modulo Notify](translation_conventions.md)
-- [Regole Generali per le Traduzioni](../../translation_keys_rules.md)
-- [Best Practices per le Traduzioni](../../translation-keys-best-practices.md)
 - [Convenzioni di Traduzione nel Modulo Notify](translation_conventions.md)
 # Standardizzazione Traduzioni Modulo Notify
 
@@ -7328,14 +7228,6 @@ La corretta implementazione degli standard di traduzione garantisce:
 - [Convenzioni di Traduzione nel Modulo Notify](translation_conventions.md)
 - [Regole Generali per le Traduzioni](translation_keys_rules.md)
 - [Best Practices per le Traduzioni](translation-keys-best-practices.md)
-- [Regole Generali per le Traduzioni](../../translation_keys_rules.md)
-- [Best Practices per le Traduzioni](../../translation-keys-best-practices.md)
-- [Convenzioni di Traduzione nel Modulo Notify](translation_conventions.md)
-- [Regole Generali per le Traduzioni](../../translation_keys_rules.md)
-- [Best Practices per le Traduzioni](../../translation-keys-best-practices.md)
-- [Convenzioni di Traduzione nel Modulo Notify](translation_conventions.md)
-- [Regole Generali per le Traduzioni](../../translation_keys_rules.md)
-- [Best Practices per le Traduzioni](../../translation-keys-best-practices.md)
 - [Convenzioni di Traduzione nel Modulo Notify](translation_conventions.md)
 
 ---
@@ -7763,14 +7655,10 @@ Tutti i campi di traduzione ora includono la struttura completa a 7 elementi:
 
 ### Documentazione Centrale
 - `/docs/translation-field-structure-complete.md` - Standard completi per tutti i campi
-- `/docs/translation-refactor-complete-summary-completo-file-traduzione-riepilogo.md` - Questo documento
+- `/docs/translation-refactor-complete-summary-2025-08-08.md` - Questo documento
 
 ### Documentazione Moduli
 - `/Modules/User/docs/translation-city-field-refactor-2025-08-08.md` - Dettagli refactor modulo User
-- `/docs/translation-refactor-complete-summary.md` - Questo documento
-
-### Documentazione Moduli
-- `/Modules/User/docs/translation-city-field-refactor-modulo-user.md` - Dettagli refactor modulo User
 - `/Modules/<nome progetto>/docs/translation-refactor-summary-2025-08-08.md` - Status modulo <nome progetto>
 
 ## Principi DRY + KISS Applicati
@@ -7846,7 +7734,6 @@ Tutti i campi di traduzione ora includono la struttura completa a 7 elementi:
 
 - [Struttura Campi Traduzione Completa](translation-field-structure-complete.md)
 - [Refactor Modulo User](../Modules/User/docs/translation-city-field-refactor-2025-08-08.md)
-- [Refactor Modulo User](../Modules/User/docs/translation-city-field-refactor-completo-campi-citta-modulo.md)
 - [Status Modulo <nome progetto>](../Modules/<nome progetto>/docs/translation-refactor-summary-2025-08-08.md)
 
 ---
@@ -7939,14 +7826,10 @@ Tutti i campi di traduzione ora includono la struttura completa a 7 elementi:
 
 ### Documentazione Centrale
 - `/docs/translation-field-structure-complete.md` - Standard completi per tutti i campi
-- `/docs/translation-refactor-complete-summary-completo-file-traduzione-riepilogo.md` - Questo documento
+- `/docs/translation-refactor-complete-summary-2025-08-08.md` - Questo documento
 
 ### Documentazione Moduli
 - `/Modules/User/docs/translation-city-field-refactor-2025-08-08.md` - Dettagli refactor modulo User
-- `/docs/translation-refactor-complete-summary.md` - Questo documento
-
-### Documentazione Moduli
-- `/Modules/User/docs/translation-city-field-refactor-modulo-user.md` - Dettagli refactor modulo User
 - `/Modules/<main module>/docs/translation-refactor-summary-2025-08-08.md` - Status modulo <main module>
 
 ## Principi DRY + KISS Applicati
@@ -8022,7 +7905,6 @@ Tutti i campi di traduzione ora includono la struttura completa a 7 elementi:
 
 - [Struttura Campi Traduzione Completa](translation-field-structure-complete.md)
 - [Refactor Modulo User](../Modules/User/docs/translation-city-field-refactor-2025-08-08.md)
-- [Refactor Modulo User](../Modules/User/docs/translation-city-field-refactor-completo-campi-citta-modulo.md)
 - [Status Modulo <main module>](../Modules/<main module>/docs/translation-refactor-summary-2025-08-08.md)
 
 ---
@@ -8394,7 +8276,6 @@ related:
 
 ## Documentazione Principale
 - [Regole Generali Traduzioni](translation_standards.md)
-- [Regole Generali Traduzioni](../../translation_standards.md)
 - [Best Practices Filament](filament_translation_best_practices.md)
 - [Struttura File Traduzione](translation_file_structure.md)
 
@@ -8454,9 +8335,6 @@ Stiamo standardizzando i file di traduzione nel modulo Notify che presentano pro
 - [Regole Generali per le Traduzioni](translation_keys_rules.md)
 - [Best Practices per le Traduzioni](translation-keys-best-practices.md)
 - [Standardizzazione Traduzioni Modulo Notify](translation_notify_conversion.md)
-- [Regole Generali per le Traduzioni](../../translation_keys_rules.md)
-- [Best Practices per le Traduzioni](../../translation-keys-best-practices.md)
-- [Standardizzazione Traduzioni Modulo Notify](../../translation_notify_conversion.md)
 
 ## Riepilogo dei Problemi
 
@@ -8670,7 +8548,6 @@ return [
 ### Collegamenti
 - [<nome modulo>/docs/appointment-management.md](../../<nome modulo>/docs/appointment-management.md)
 - [Lang/translation-keys-best-practices.md](./translation-keys-best-practices.md)
-- [Lang/translation-keys-best-practices.md](../../translation-keys-best-practices.md)
 
 ### Checklist aggiornata
 - Usare solo chiavi inglesi e struttura gerarchica
@@ -8846,7 +8723,6 @@ return [
 ### Collegamenti
 - [<nome progetto>/docs/appointment-management.md](../../<nome progetto>/docs/appointment-management.md)
 - [Lang/translation-keys-best-practices.md](./translation-keys-best-practices.md)
-- [Lang/translation-keys-best-practices.md](../../translation-keys-best-practices.md)
 
 ### Checklist aggiornata
 - Usare solo chiavi inglesi e struttura gerarchica
@@ -10740,7 +10616,6 @@ php docs/obbligatorio-audit-script.php
 
 ### Documentazione Moduli
 - [User Module - City Field Refactor](../Modules/User/docs/translation-city-field-refactor-2025-08-08.md)
-- [User Module - City Field Refactor](../Modules/User/docs/translation-city-field-refactor-completo-campi-citta-modulo.md)
 - [<nome progetto> Module - Refactor Summary](../Modules/<nome progetto>/docs/translation-refactor-summary-2025-08-08.md)
 - [Geo Module - Helper Text Fix](../Modules/Geo/docs/helper-text-normalization-fix.md)
 - [User Module - City Field Refactor](../modules/user/docs/translation-city-field-refactor-[date].md)
@@ -10759,7 +10634,6 @@ php docs/obbligatorio-audit-script.php
 - [<nome progetto> Module - Refactor Summary](../Modules/<nome progetto>/docs/translation-refactor-summary-[DATE].md)
 - [Geo Module - Helper Text Fix](../Modules/Geo/docs/helper-text-normalization-fix.md)
 - [User Module - City Field Refactor](../Modules/User/docs/translation-city-field-refactor-2025-08-08.md)
-- [User Module - City Field Refactor](../Modules/User/docs/translation-city-field-refactor-completo-campi-citta-modulo.md)
 - [<nome progetto> Module - Refactor Summary](../Modules/<nome progetto>/docs/translation-refactor-summary-2025-08-08.md)
 - [Geo Module - Helper Text Fix](../Modules/Geo/docs/helper-text-normalization-fix.md)
 - [User Module - City Field Refactor](../modules/user/docs/translation-city-field-refactor-[date].md)
@@ -11246,7 +11120,6 @@ Durante l'audit delle traduzioni, sono state identificate numerose traduzioni ch
 
 ### Collegamenti Bidirezionali
 - [Root Docs: Translation Standards](../../docs/translation_standards.md)
-- [Root Docs: Translation Standards](../../translation_standards.md)
 - [Lang Module: Translation Best Practices](translation_best_practices.md)
 - [<main module> Module: Translation Guidelines](../<main module>/docs/translation_guidelines.md)
 
@@ -11501,10 +11374,6 @@ php artisan lang:sync
 - [Translation System](./translation-system.md)
 - [Best Practices](./translation-keys-best-practices.md)
 - [File Management](./translation-file-management.md)
-- [Translation Standards](../../translation-standards.md)
-- [Translation System](../../translation-system.md)
-- [Best Practices](../../translation-keys-best-practices.md)
-- [File Management](../../translation-file-management.md)
 
 ## Note per lo Sviluppo
 
@@ -11773,9 +11642,6 @@ php artisan lang:export
 - [Translation Standards](./translation-standards.md)
 - [Translation System](./translation-system.md)
 - [Best Practices](./translation-keys-best-practices.md)
-- [Translation Standards](../../translation-standards.md)
-- [Translation System](../../translation-system.md)
-- [Best Practices](../../translation-keys-best-practices.md)
 - [Laravel Localization](https://laravel.com/docs/localization)
 
 ## Note per lo Sviluppo
@@ -12020,7 +11886,6 @@ return [
 
 - [Translation Rules](../Xot/docs/translation_rules.md)
 - [Translation Standards](./translation-standards.md)
-- [Translation Standards](../../translation-standards.md)
 - [Best Practices](../Xot/docs/translations-best-practices.md)
 
 ## Prossimi Passi
@@ -12051,7 +11916,7 @@ related:
 - [README modulo Lang](./README.md)
 - [Convenzioni Path](./PATH_CONVENTIONS.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
-- [Implementazione Header](/laravel/Modules/User/docs/HEADER_LANGUAGE_AVATAR_IMPLEMENTATION.md)
+- [Implementazione Header](/laravel/Modules/User/docs/header_language_avatar_implementation.md)
 
 ## Panoramica
 
@@ -12331,7 +12196,6 @@ Per blocchi di testo lunghi, valuta se usare chiavi dedicate in PHP (es. `onboar
 La traduzione appointment.php del modulo <main module> è stata riscritta secondo le regole di centralizzazione, DRY, KISS, nessun lock-in, e struttura gerarchica inglese. Tutte le chiavi sono ora coerenti con enums, actions, messages, filters, calendar, notifications. La motivazione è filosofica (un solo punto di verità), logica (manutenzione semplice), religiosa (nessuna duplicazione), politica (nessun lock-in tra moduli), zen (serenità del codice).
 
 Vedi esempio e motivazione in [<main module>/docs/appointment-management.md](../../<main module>/docs/appointment-management.md) e [translation-standards.md](./translation-standards.md).
-Vedi esempio e motivazione in [<main module>/docs/appointment-management.md](../../<main module>/docs/appointment-management.md) e [translation-standards.md](../../translation-standards.md).
 
 ### Checklist aggiornata
 - Usare solo chiavi inglesi e struttura gerarchica
@@ -12379,7 +12243,6 @@ related:
 - [Collegamenti documentazione](./collegamenti-documentazione.md)
 - [Implementazione Auth Pages](auth_pages_implementation.md)
 - [Regole Traduzioni User](translation_keys_rules.md)
-- [Regole Traduzioni User](../../translation_keys_rules.md)
 - [Documentazione Lang](./README.md)
 
 ## Regole Fondamentali per le Traduzioni
@@ -12589,7 +12452,6 @@ Seguire queste regole per le chiavi di traduzione è fondamentale per garantire 
 
 - Sono state applicate correzioni strutturali alle traduzioni del modulo Notify per allineamento a queste regole.
 - Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../Notify/docs/TRANSLATION_KEYS_RULES.md) per dettagli, esempi e best practice specifiche.
-- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../../Notify/docs/translation_keys_rules.md) per dettagli, esempi e best practice specifiche.
 - Ogni nuova regola o convenzione va riportata sia qui che nella documentazione del modulo coinvolto.
 
 ---
@@ -12815,8 +12677,6 @@ La corretta implementazione degli standard di traduzione garantisce:
 
 - [Regole Generali per le Traduzioni](translation_keys_rules.md)
 - [Best Practices per le Traduzioni](translation-keys-best-practices.md)
-- [Regole Generali per le Traduzioni](../../translation_keys_rules.md)
-- [Best Practices per le Traduzioni](../../translation-keys-best-practices.md)
 - [Convenzioni di Traduzione nel Modulo Notify](translation_conventions.md)
 
 ---
@@ -13004,7 +12864,6 @@ return [
 - [SaluteOra/docs/appointment-management.md](../../SaluteOra/docs/appointment-management.md)
 - [<nome progetto>corrente/docs/appointment-management.md<nome progetto>rogetto corrente/docs/appointment-management.md)
 - [Lang/translation-keys-best-practices.md](./translation-keys-best-practices.md)
-- [Lang/translation-keys-best-practices.md](../../translation-keys-best-practices.md)
 
 ### Checklist aggiornata
 - Usare solo chiavi inglesi e struttura gerarchica
@@ -13048,9 +12907,6 @@ Stiamo standardizzando i file di traduzione nel modulo Notify che presentano pro
 - [Regole Generali per le Traduzioni](translation_keys_rules.md)
 - [Best Practices per le Traduzioni](translation-keys-best-practices.md)
 - [Standardizzazione Traduzioni Modulo Notify](translation_notify_conversion.md)
-- [Regole Generali per le Traduzioni](../../translation_keys_rules.md)
-- [Best Practices per le Traduzioni](../../translation-keys-best-practices.md)
-- [Standardizzazione Traduzioni Modulo Notify](../../translation_notify_conversion.md)
 
 ## Riepilogo dei Problemi
 
@@ -13762,7 +13618,6 @@ php artisan tinker
 
 ### Documentazione Modulo Lang:
 - [Errori Comuni Traduzione](errori_comuni_traduzione.md)
-- [Errori Comuni Traduzione](../../errori_comuni_traduzione.md)
 - [Correzioni Errori Sintassi 2025](correzioni_errori_sintassi_2025.md)
 - [Traduzioni Navigation 2025](traduzioni_navigation_2025.md)
 
@@ -14780,7 +14635,6 @@ php artisan tinker
 
 ### Documentazione Modulo Lang:
 - [Errori Comuni Traduzione](errori_comuni_traduzione.md)
-- [Errori Comuni Traduzione](../../errori_comuni_traduzione.md)
 - [Correzioni Errori Sintassi 2025](correzioni_errori_sintassi_2025.md)
 - [Traduzioni Navigation 2025](traduzioni_navigation_2025.md)
 
@@ -14931,7 +14785,6 @@ php artisan tinker
 
 ### Documentazione Modulo Lang:
 - [Errori Comuni Traduzione](errori_comuni_traduzione.md)
-- [Errori Comuni Traduzione](../../errori_comuni_traduzione.md)
 - [Correzioni Errori Sintassi 2025](correzioni_errori_sintassi_2025.md)
 - [Traduzioni Navigation 2025](traduzioni_navigation_2025.md)
 
@@ -15081,7 +14934,6 @@ php artisan tinker
 
 ### Documentazione Modulo Lang:
 - [Errori Comuni Traduzione](errori_comuni_traduzione.md)
-- [Errori Comuni Traduzione](../../errori_comuni_traduzione.md)
 - [Correzioni Errori Sintassi 2025](correzioni_errori_sintassi_2025.md)
 - [Traduzioni Navigation 2025](traduzioni_navigation_2025.md)
 
@@ -15158,7 +15010,6 @@ Aggiorna sempre la documentazione in `/Modules/Lang/docs` e spiega la strategia 
 ### Devo registrare manualmente i comandi console?
 
 **No!** Tutti i comandi console sono autoregistrati tramite XotBaseServiceProvider. Non aggiungere mai `$this->commands([...])` nei provider. Perché? Vedi [lang-service-provider.md](./lang-service-provider.md) e [PHILOSOPHY.md](philosophy.md)
-**No!** Tutti i comandi console sono autoregistrati tramite XotBaseServiceProvider. Non aggiungere mai `$this->commands([...])` nei provider. Perché? Vedi [lang-service-provider.md](../../lang-service-provider.md) e [PHILOSOPHY.md](philosophy.md)
 # FAQ e Problemi Comuni sulle Traduzioni
 
 ## 1. Perché il POST non funziona su rotte localizzate?
@@ -15211,7 +15062,6 @@ Aggiorna sempre la documentazione in `/Modules/Lang/docs` e spiega la strategia 
 ### Devo registrare manualmente i comandi console?
 
 **No!** Tutti i comandi console sono autoregistrati tramite XotBaseServiceProvider. Non aggiungere mai `$this->commands([...])` nei provider. Perché? Vedi [lang-service-provider.md](./lang-service-provider.md) e [PHILOSOPHY.md](philosophy.md)
-**No!** Tutti i comandi console sono autoregistrati tramite XotBaseServiceProvider. Non aggiungere mai `$this->commands([...])` nei provider. Perché? Vedi [lang-service-provider.md](../../lang-service-provider.md) e [PHILOSOPHY.md](philosophy.md)
 
 ---
 
@@ -15510,7 +15360,6 @@ related:
 - [Modulo <nome progetto> - Regole Consolidate Traduzioni](../../<nome progetto>/docs/translation-rules-consolidated.md)
 - [Modulo <nome progetto> - Implementazione Appointment Report](../../<nome progetto>/docs/appointment_report_translations_implementation.md)
 - [Modulo User - Translation Best Practices](../../User/docs/translation_best_practices.md)
-- [Modulo User - Translation Best Practices](../../../../User/docs/translation_best_practices.md)
 
 ## Panoramica
 Il sistema di traduzioni utilizza `LangServiceProvider` per gestire le traduzioni in modo centralizzato e efficiente.
@@ -16748,7 +16597,6 @@ Aggiorna sempre la documentazione in `/Modules/Lang/docs` e spiega la strategia 
 ### Devo registrare manualmente i comandi console?
 
 **No!** Tutti i comandi console sono autoregistrati tramite XotBaseServiceProvider. Non aggiungere mai `$this->commands([...])` nei provider. Perché? Vedi [lang-service-provider.md](./lang-service-provider.md) e [PHILOSOPHY.md](philosophy.md) 
-**No!** Tutti i comandi console sono autoregistrati tramite XotBaseServiceProvider. Non aggiungere mai `$this->commands([...])` nei provider. Perché? Vedi [lang-service-provider.md](../../lang-service-provider.md) e [PHILOSOPHY.md](philosophy.md) 
 
 ---
 

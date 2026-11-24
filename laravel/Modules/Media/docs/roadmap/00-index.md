@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "00 index"
 related:
   - "./webm.md"
-status: draft
 ---
 # Media Module - Roadmap
 
@@ -26,7 +25,7 @@ status: draft
 - [Workstreams](03-workstreams.md)
 - [Milestones](04-milestones.md)
 - [Risks](05-risks.md)
-- [Chaos Readiness 2026-03-02](chaos-readiness.md)
+- [Chaos Readiness 2026-03-02](chaos-readiness-2026-03-02.md)
 
 ## Metriche rapide
 
@@ -41,9 +40,10 @@ status: draft
 
 ---
 
-<!-- Merged from 00-INDEX.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from 00-index.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
+title: "Media Module - Roadmap"
 module: "Media"
 type: concept
 tags: [00, INDEX]

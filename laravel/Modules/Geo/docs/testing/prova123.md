@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "prova123"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Prova123

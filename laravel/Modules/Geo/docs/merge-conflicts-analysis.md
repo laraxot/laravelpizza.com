@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "merge conflicts analysis"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi Conflitti di Merge - Modulo Geo
@@ -116,9 +115,26 @@ Questo documento elenca tutti i file che contengono conflitti di merge  nel modu
 
 ## Collegamenti
 
+<<<<<<< HEAD
 - [Documentazione Modulo Geo](module_geo.md)
+=======
+<<<<<<< HEAD
+- [Documentazione Modulo Geo](module_geo.md)
+=======
+- [Documentazione Modulo Geo](module-geo.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Convenzioni Laraxot](../../../../docs/project/laraxot_conventions.md)
 - [Regole PHPStan](phpstan_fixes.md)
 
 ---
+
+title: "merge conflicts analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "merge conflicts analysis"
+issues: []
+discussions: []
 **Stato**: In corso di analisi 

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "modules optimization index"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Indice Completo - Analisi e Ottimizzazioni Moduli
@@ -27,7 +26,7 @@ status: draft
 
 ### 🔴 PRIORITÀ CRITICA
 
-#### [Modulo Xot](../../Xot/docs/optimization_recommendations.md)
+#### [Modulo Xot](../laravel/modules/xot/docs/optimization_recommendations.md)
 **Problema**: PathHelper hardcoded compromette framework base
 **Azione**: Refactoring PathHelper con configurazioni dinamiche
 **Tempo**: 2 ore | **Impatto**: Sblocca riusabilità framework
@@ -51,7 +50,7 @@ status: draft
 
 ### 🟢 PRIORITÀ NORMALE
 
-#### [Modulo UI](../../UI/docs/optimization_recommendations.md)
+#### [Modulo UI](../laravel/modules/ui/docs/optimization_recommendations.md)
 **Stato**: Già eccellente (PHPStan Level 9, 50+ componenti)
 **Azione**: Solo path generalization + README optimization
 **Tempo**: 1 ora | **Impatto**: Mantenimento eccellenza
@@ -62,7 +61,15 @@ status: draft
 **Azione**: Documentation update + performance optimization
 **Tempo**: 4 ore | **Impatto**: Migliora manutenibilità
 
+<<<<<<< HEAD
 #### [Modulo Geo](optimization_recommendations.md)
+=======
+<<<<<<< HEAD
+#### [Modulo Geo](optimization_recommendations.md)
+=======
+#### [Modulo Geo](optimization-recommendations.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 **Stato**: Funzionalità complete con Google API
 **Azione**: Generalizzazione docs + Google API caching
 **Tempo**: 3 ore | **Impatto**: Modulo geo riutilizzabile

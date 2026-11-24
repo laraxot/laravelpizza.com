@@ -3,11 +3,14 @@ title: "email plugins"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "email plugins"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi Plugin Email per Filament - il progetto

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan multiple corrections complete"
 issues: []
 discussions: []
-status: draft
 ---
 
 # ✅ CORREZIONI PHPStan MULTIPLE COMPLETATE
@@ -154,6 +153,15 @@ array_merge(
 4. **Code review**: Controlli automatici obbligatori
 
 ---
+
+title: "phpstan multiple corrections complete"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan multiple corrections complete"
+issues: []
+discussions: []
 ## ✅ SESSIONE BUG FIXING COMPLETATA
 
 **17 errori PHPStan risolti** attraverso 3 moduli con implementazione di:

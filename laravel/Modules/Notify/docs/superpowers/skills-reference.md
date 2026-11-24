@@ -3,11 +3,14 @@ title: "skills reference"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "skills reference"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🦸 Superpowers Skills Reference
@@ -17,6 +20,15 @@ status: draft
 > **Version**: v5.0.6
 
 ---
+
+title: "skills reference"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "skills reference"
+issues: []
+discussions: []
 ## 📋 Overview
 
 This document lists all available Superpowers skills with descriptions, triggers, and examples.

@@ -1,11 +1,3 @@
----
-title: "Best Practices per le Traduzioni"
-type: note
-status: draft
-updated: 2026-10-13
-tags: [docs, user]
-qmd: "best practices per le traduzioni user"
----
 # Best Practices per le Traduzioni
 
 ## Principi Generali
@@ -150,5 +142,4 @@ Seguire queste best practices aiuta a mantenere un sistema di traduzioni efficie
 ## Collegamenti Correlati
 - [Documentazione Laravel Localization](https://laravel.com/docs/localization)
 - [Best Practices di Codice](./CODE_BEST_PRACTICES.md)
-- [Struttura Moduli](./module_structure.md) 
 - [Struttura Moduli](./module_structure.md) 

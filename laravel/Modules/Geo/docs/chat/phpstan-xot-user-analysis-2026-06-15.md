@@ -1,3 +1,14 @@
+---
+title: "phpstan xot user analysis 2026 06 15"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan xot user analysis 2026 06 15"
+issues: []
+discussions: []
+---
+
 # PHPStan Analysis: Xot + User — 2026-06-15
 
 ## Esecuzione
@@ -25,4 +36,12 @@ Entrambi i moduli sono **CLEAN** a PHPStan `level=max`. Nessun lavoro richiesto.
 
 ---
 
+title: "phpstan xot user analysis 2026 06 15"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan xot user analysis 2026 06 15"
+issues: []
+discussions: []
 *Analisi: 2026-06-15 · Memory: 2GB · Tempo: ~2min per modulo*

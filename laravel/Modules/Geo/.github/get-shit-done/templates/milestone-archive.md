@@ -84,7 +84,7 @@ Plans:
 {{DECISIONS_FROM_PROJECT_STATE}}
 [Example:]
 
-- Decision: Use ROADMAP.md split (Rationale: Constant context cost)
+- Decision: Use roadmap.md split (Rationale: Constant context cost)
 - Decision: Decimal phase numbering (Rationale: Clear insertion semantics)
 
 **Issues Resolved:**
@@ -123,7 +123,7 @@ _For current project status, see .planning/ROADMAP.md_
 **How to fill template:**
 
 - Replace {{PLACEHOLDERS}} with actual values
-- Extract phase details from ROADMAP.md
+- Extract phase details from roadmap.md
 - Document decimal phases with (INSERTED) marker
 - Include key decisions from PROJECT-STATE.md or SUMMARY files
 - List issues resolved vs deferred
@@ -136,7 +136,7 @@ _For current project status, see .planning/ROADMAP.md_
 
 **After archiving:**
 
-- Update ROADMAP.md to collapse completed milestone in `<details>` tag
+- Update roadmap.md to collapse completed milestone in `<details>` tag
 - Update PROJECT.md to brownfield format with Current State section
 - Continue phase numbering in next milestone (never restart at 01)
   </guidelines>

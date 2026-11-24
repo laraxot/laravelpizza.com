@@ -1,11 +1,10 @@
 ---
 title: "Console Commands per Use Case Bancario"
+qmd: "activity use cases bank console commands md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "console commands per use case bancario activity"
+tags: [documentation]
 ---
+
 # Console Commands per Use Case Bancario
 
 ## Introduzione

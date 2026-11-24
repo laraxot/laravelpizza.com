@@ -1,11 +1,10 @@
 ---
 title: "Laravel Folio + Volt - Best Practices and Patterns Analysis"
+qmd: "activity folio volt best practices md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "laravel folio + volt - best practices and patterns analysis activity"
+tags: [documentation]
 ---
+
 # Laravel Folio + Volt - Best Practices and Patterns Analysis
 
 ## Overview

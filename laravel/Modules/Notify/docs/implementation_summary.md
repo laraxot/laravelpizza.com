@@ -3,12 +3,14 @@ title: "implementation summary"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "implementation summary"
 issues: []
 discussions: []
-status: superseded
-superseded_by: implementation-summary.md
 ---
 
 # Riepilogo Implementazione Design Comuni

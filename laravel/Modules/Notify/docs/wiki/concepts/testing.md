@@ -3,7 +3,11 @@ title: "Testing in Notify"
 type: concept
 tags: [notify, testing, pest, phpstan]
 created: 2026-06-05
+<<<<<<< HEAD
 updated: 2026-06-13
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "Notify testing Pest notificationManager test doubles PHPStan"
 issues:
   - "https://github.com/laraxot/module_fixcity_fila5/issues/52"
@@ -13,7 +17,6 @@ related:
   - ./phpstan-pest-test-doubles.md
   - ../../phpstan-compliance-status.md
   - ../../../Xot/docs/wiki/concepts/phpstan-pest-bridge-discipline.md
-status: draft
 ---
 
 # Testing in Notify
@@ -31,7 +34,7 @@ Pest only. `uses(\Modules\Notify\Tests\TestCase::class)` dopo gli `import use`.
 ## PHPStan (2026-06-13)
 
 - Trait coverage: classi in `NotifyTraitTestDoubles.php`
-- Mock action: `createStub` / `createUnitMock` + `expectsOnce()`: vedi [phpstan-pest-test-doubles.md](./phpstan-pest-test-doubles.md)
+- Mock action: `createStub` / `createUnitMock` + `expectsOnce()` — vedi [phpstan-pest-test-doubles.md](./phpstan-pest-test-doubles.md)
 
 ## Quality gate
 

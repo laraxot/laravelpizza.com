@@ -3,11 +3,14 @@ title: "spatie database mail templates deep dive"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "spatie database mail templates deep dive"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Spatie Laravel Database Mail Templates - Analisi Approfondita
@@ -940,6 +943,15 @@ test('welcome email is sent', function () {
 - [Spatie Translatable Integration](./spatie-translatable-integration.md)
 
 ---
+
+title: "spatie database mail templates deep dive"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "spatie database mail templates deep dive"
+issues: []
+discussions: []
 **Ultimo aggiornamento**: 27 Ottobre 2025  
 **Versione Pacchetto**: spatie/laravel-database-mail-templates 3.7.1  
 **Compatibilità**: Laravel 12.x, PHP 8.3+

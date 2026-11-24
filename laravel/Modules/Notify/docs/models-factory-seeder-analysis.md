@@ -3,11 +3,14 @@ title: "models factory seeder analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "models factory seeder analysis"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi Modelli, Factory e Seeder - Modulo Notify
@@ -66,5 +69,13 @@ status: draft
 ## Stato Generale: ✅ COMPLETO
 
 ---
+title: "models factory seeder analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "models factory seeder analysis"
+issues: []
+discussions: []
 *Ultimo aggiornamento: 2025-01-06*
 

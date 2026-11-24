@@ -3,6 +3,13 @@
 declare(strict_types=1);
 
 return [
+    'navigation' => [
+        'label' => 'Social login',
+        'plural_label' => 'Social login',
+        'group' => 'Authentication',
+        'icon' => 'heroicon-o-share',
+        'sort' => 90,
+    ],
     'actions' => [
         'save' => 'Save',
     ],
@@ -20,5 +27,8 @@ return [
     'security' => [
         'title' => 'Security notice',
         'description' => 'Credentials are stored securely. Never share them or commit them to public repositories.',
+    ],
+    'messages' => [
+        'config_saved' => 'Settings saved',
     ],
 ];

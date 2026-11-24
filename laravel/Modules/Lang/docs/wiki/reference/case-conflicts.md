@@ -1,13 +1,24 @@
 ---
 title: "Case-Insensitive File Conflicts"
-type: alias
-status: superseded
-canonical: "wiki/reference/cases.md"
-qmd: "case-conflicts alias superseded"
+module: "Lang"
+type: concept
+tags: [phpstan, level10, fixes, 1]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "phpstan level10 fixes 1"
+related:
+  - "./italian-text-refined-audit-report.md"
 ---
-
 # Case-Insensitive File Conflicts
 
-Documento identico al canonico: [cases.md](cases.md).
+Nel modulo `Lang` sono presenti i seguenti duplicati con differenze solo di maiuscole/minuscole:
 
-Canonico: `laravel/Modules/Lang/docs/wiki/reference/cases.md`. Qui non ci sono istruzioni: seguire il file collegato.
+- `Modules/Lang/docs`: `LOCALE_MANAGEMENT.md`, `locale_management.md`
+- `Modules/Lang/docs`: `QUICK_REFERENCE.md`, `quick_reference.md`
+- `Modules/Lang/docs`: `TRANSLATION_STRATEGIES.md`, `translation_strategies.md`
+- `Modules/Lang/docs`: `TRANSLATION_PROCESS.md`, `translation_process.md`
+- `Modules/Lang/docs`: `MCAMARA_IMPLEMENTATION_GUIDE.md`, `mcamara_implementation_guide.md`
+- `Modules/Lang/docs/translations`: `README.it.md`, `readme.it.md`
+- `Modules/Lang/docs/translations`: `README.es.md`, `readme.es.md`
+
+È necessario mantenere una sola variante per ogni file (ad esempio quella con il prefisso maiuscolo già utilizzato per altri documenti globali) e rimuovere la duplicazione.

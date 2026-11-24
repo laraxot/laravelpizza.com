@@ -18,11 +18,11 @@ class PermissionsSeeder extends Seeder
         // Crea i permessi
         $permissions = [
             // Doctor permissions
-            'moderate_doctors' => 'Può moderare le registrazioni dei medici',
-            'view_doctors' => 'Può visualizzare i medici',
-            'create_doctors' => 'Può creare medici',
-            'edit_doctors' => 'Può modificare i medici',
-            'delete_doctors' => 'Può eliminare i medici',
+            'moderate_doctors' => 'Can moderate doctor registrations',
+            'view_doctors' => 'Can view doctors',
+            'create_doctors' => 'Can create doctors',
+            'edit_doctors' => 'Can edit doctors',
+            'delete_doctors' => 'Can delete doctors',
         ];
 
         foreach ($permissions as $name => $description) {

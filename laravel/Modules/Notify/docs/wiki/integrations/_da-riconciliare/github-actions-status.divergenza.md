@@ -1,14 +1,17 @@
 ---
-qmd: "github actions status.divergenza"
+qmd: "Github Actions Status.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: GITHUB_ACTIONS_STATUS.md"
+title: "Github Actions Status.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Divergenza: `GITHUB_ACTIONS_STATUS.md`

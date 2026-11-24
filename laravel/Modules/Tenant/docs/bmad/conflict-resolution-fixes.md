@@ -7,9 +7,7 @@ created: 2026-07-14
 updated: 2026-07-14
 qmd: "conflict resolution fixes"
 related:
-  - "../phpstan-corrections-january.md"
-status: superseded
-superseded_by: ../conflict-resolution-fixes.md
+  - "./phpstan-corrections-january.md"
 ---
 # Risoluzione Conflitti Git - Modulo Tenant
 

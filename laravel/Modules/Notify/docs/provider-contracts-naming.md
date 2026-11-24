@@ -3,11 +3,14 @@ title: "provider contracts naming"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "provider contracts naming"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Convenzioni di Naming per i Contracts 

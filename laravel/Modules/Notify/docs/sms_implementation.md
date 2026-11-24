@@ -3,12 +3,14 @@ title: "sms implementation"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "sms implementation"
 issues: []
 discussions: []
-status: superseded
-superseded_by: bmad/architecture/sms-implementation.md
 ---
 
 # Implementazione SMS in Laravel

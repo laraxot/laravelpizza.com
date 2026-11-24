@@ -3,12 +3,26 @@
 declare(strict_types=1);
 
 use Modules\Cms\Actions\ValidatePageMiddlewareAction;
+<<<<<<< HEAD
+=======
+use Modules\Cms\Tests\TestCase;
+>>>>>>> laraxot/dev
 use PHPUnit\Framework\Assert;
 use Symfony\Component\Finder\Finder;
 
 use function Safe\file_get_contents;
 use function Safe\json_decode;
 
+<<<<<<< HEAD
+=======
+// Senza questo binding le closure di `test()`/`it()` restano legate a
+// PHPUnit\Framework\TestCase, cioe' a un caso di test SENZA applicazione
+// Laravel: `app()`, `config()` e le facade non si risolvono. Era la causa di
+// 94 fallimenti «Target class [config] does not exist» nel modulo
+// (base_quaeris_fila5#228).
+uses(TestCase::class);
+
+>>>>>>> laraxot/dev
 /*
  * DCP-283 (C-03): nessuna pagina esistente deve cambiare comportamento. Si percorrono TUTTI i JSON di pagina del
  * repository (tenant in `config/*` e `config/*\/*`, configurazioni dei moduli e dei temi) e ogni `middleware`
@@ -35,7 +49,11 @@ function dcp283PageJsonFiles(): array
     return $files;
 }
 
+<<<<<<< HEAD
 test('ogni middleware dichiarato in un JSON di pagina e in allowlist', function (): void {
+=======
+test('ogni middleware dichiarato in un JSON di pagina è un alias CMS o un middleware owner', function (): void {
+>>>>>>> laraxot/dev
     $declaredByFile = [];
     foreach (dcp283PageJsonFiles() as $file) {
         $decoded = json_decode(file_get_contents($file), true);
@@ -64,11 +82,33 @@ test('ogni middleware dichiarato in un JSON di pagina e in allowlist', function 
     Assert::assertArrayHasKey('throttle', $names, 'nessun JSON dichiara throttle');
 
     foreach ($stringsByFile as $file => $entries) {
+<<<<<<< HEAD
         try {
             app(ValidatePageMiddlewareAction::class)->execute($entries);
         } catch (InvalidArgumentException $exception) {
             Assert::fail($file.': '.$exception->getMessage());
         }
+=======
+        $cmsEntries = array_values(array_filter(
+            $entries,
+            static fn (string $entry): bool => ! str_contains(explode(':', $entry, 2)[0], '\\'),
+        ));
+
+        try {
+            app(ValidatePageMiddlewareAction::class)->execute($cmsEntries);
+        } catch (InvalidArgumentException $exception) {
+            Assert::fail($file.': '.$exception->getMessage());
+        }
+
+        foreach ($entries as $entry) {
+            $name = explode(':', $entry, 2)[0];
+            if (! str_contains($name, '\\')) {
+                continue;
+            }
+
+            Assert::assertTrue(class_exists($name), $file.': middleware owner inesistente '.$name);
+        }
+>>>>>>> laraxot/dev
     }
 });
 

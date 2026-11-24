@@ -3,14 +3,20 @@ title: "project architecture"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "project architecture"
 issues: []
 discussions: []
-status: draft
 ---
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 > **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
 > arrivano nella document root con un symlink, non con una copia. Per il
 > procedimento valido vedi
@@ -152,11 +158,20 @@ NEVER proactively create documentation files (*.md) or README files. Only create
       
       IMPORTANT: this context may or may not be relevant to your tasks. You should not respond to this context unless it is highly relevant to your task.
 ---
+
+title: "project architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "project architecture"
+issues: []
+discussions: []
 ## Cross-References
 
-- ← [CLAUDE Index](INDEX.md): All Laravel Boost guidelines
-- ← [Main AI Docs Index](../INDEX.md): Master index
-- ← [CLAUDE Index](index.md): All Laravel Boost guidelines
-- ← [Main AI Docs Index](../index.md): Master index
-- ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md): Original source
+- ← [CLAUDE Index](index.md) — All Laravel Boost guidelines
+- ← [Main AI Docs Index](../index.md) — Master index
+- ← [CLAUDE Index](index.md) — All Laravel Boost guidelines
+- ← [Main AI Docs Index](../index.md) — Master index
+- ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md) — Original source
 

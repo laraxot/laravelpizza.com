@@ -3,7 +3,11 @@ title: "packages filament livewire"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "packages filament livewire"
 issues: []
 discussions: []
@@ -458,7 +462,7 @@ new class extends Component {
 
 ```php
 use Livewire\Livewire;
-use Modules\Quaeris\Filament\Widgets\SalesChartWidget;
+use Modules\<nome progetto>\Filament\Widgets\SalesChartWidget;
 use Modules\App\Filament\Widgets\SalesChartWidget;
 
 it('renders chart widget', function (): void {

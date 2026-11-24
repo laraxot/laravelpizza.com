@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "module"
 related:
   - "./webm.md"
-status: draft
 ---
 # Modulo Media - Gestione File Multimediali
 

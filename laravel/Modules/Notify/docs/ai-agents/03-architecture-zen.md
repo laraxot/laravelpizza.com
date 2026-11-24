@@ -1,21 +1,44 @@
 ---
-title: "03 architecture zen"
+title: "03 Architecture Zen"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
-qmd: "03 architecture zen"
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+qmd: "03 Architecture Zen"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🏛️ Architecture Zen Philosophy
 
-**Part of**: [00-INDEX.md](00-INDEX.md): AI Agents Coordination  
-**Related**: [04-FILAMENT-PHILOSOPHY.md](04-FILAMENT-PHILOSOPHY.md): Filament Widgets
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+**Part of**: [00-INDEX.md](00-index.md) — AI Agents Coordination  
+**Related**: [04-FILAMENT-PHILOSOPHY.md](04-filament-philosophy.md) — Filament Widgets
+
+## 🔴 Fundamental Rules
+### 1. **NO Themes/*/Http/Livewire/**
+
+=======
+>>>>>>> laraxot/dev
+**Part of**: [00-index.md](00-index.md) — AI Agents Coordination  
+**Related**: [04-filament-philosophy.md](04-filament-philosophy.md) — Filament Widgets
 
 ---
+
+title: "03 ARCHITECTURE ZEN"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "03 ARCHITECTURE ZEN"
+issues: []
+discussions: []
 ## 🔴 Fundamental Rules
 
 ### 1. **NO Themes/*/Http/Livewire/**
@@ -40,6 +63,10 @@ Modules/UI/app/Filament/Widgets/
 
 ---
 
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ### 2. **NO laravel/docs/**
 
 **Philosophy**: Documentation distributed, close to code.
@@ -53,7 +80,7 @@ laravel/docs/
 ✅ CORRECT
 docs/                          # Only CROSS-MODULE documents
   ├── ARCHITECTURE_ZEN.md
-  └── MULTI_AGENT_COORDINATION.md
+  └── multi_agent_coordination.md
 
 Modules/Predict/docs/          # Predict-specific docs
   ├── PHILOSOPHY.md
@@ -309,8 +336,8 @@ Before committing:
 
 ## 🔗 Related Documentation
 
-- **Filament Philosophy**: [04-FILAMENT-PHILOSOPHY.md](04-FILAMENT-PHILOSOPHY.md)
-- **Front Office Audit**: [05-FRONT-OFFICE-AUDIT.md](05-FRONT-OFFICE-AUDIT.md)
+- **Filament Philosophy**: [04-filament-philosophy.md](04-filament-philosophy.md)
+- **Front Office Audit**: [05-front-office-audit.md](05-front-office-audit.md)
 - **External**: https://github.com/nWidart/laravel-modules
 
 ---

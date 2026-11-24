@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Tenant\Providers;
 
-<<<<<<< .merge_file_R09Zio
-=======
 use Illuminate\Database\Connection;
->>>>>>> .merge_file_ENee1N
 use Illuminate\Database\ConnectionInterface;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
@@ -38,10 +35,7 @@ class TenantServiceProvider extends XotBaseServiceProvider
     {
         parent::boot();
 
-        // Skip complex configuration during testing
-        // if (! $this->app->environment('testing')) {
         $this->mergeConfigs();
-        // }
 
         $this->registerDB();
         $this->registerMorphMap();
@@ -106,14 +100,10 @@ class TenantServiceProvider extends XotBaseServiceProvider
             }
 
             DB::purge($name);
-<<<<<<< .merge_file_R09Zio
-            DB::extend($name, static fn (): ConnectionInterface => DB::connection($defaultConnection));
-=======
             DB::extend(
                 $name,
                 static fn (array $config, string $connectionName): ConnectionInterface => self::resolveModuleConnection($config, $connectionName, $defaultConnection),
             );
->>>>>>> .merge_file_ENee1N
         }
     }
 
@@ -155,7 +145,6 @@ class TenantServiceProvider extends XotBaseServiceProvider
     public function register(): void
     {
         parent::register();
-        // $this->app->register(AdminPanelProvider::class);
     }
 
     public function mergeConfigs(): void

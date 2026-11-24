@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: roadmap-q1-alternative
 canonical: ../../../Themes/docs/shared-components/roadmap-Modules.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/roadmap-Modules.md

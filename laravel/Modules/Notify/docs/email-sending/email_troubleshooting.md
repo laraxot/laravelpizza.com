@@ -3,7 +3,11 @@ title: "email troubleshooting"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "email troubleshooting"
 issues: []
 discussions: []
@@ -57,8 +61,17 @@ L'implementazione attuale include:
 3. **Gestione opzionale di nome e MIME type**: Personalizzazione flessibile degli allegati
 4. **Documentazione PHPDoc completa**: Miglior supporto IDE e type hints
 
-Per maggiori dettagli, consultare [ATTACHMENTS_USAGE.md](./ATTACHMENTS_USAGE.md).
+<<<<<<< HEAD
+Per maggiori dettagli, consultare [ATTACHMENTS_USAGE.md](attachments_usage.md).
 Per maggiori dettagli, consultare [ATTACHMENTS_USAGE.md](./attachments_usage.md).
+=======
+<<<<<<< .merge_file_xhPfvm
+Per maggiori dettagli, consultare [ATTACHMENTS_USAGE.md](./ATTACHMENTS_USAGE.md).
+=======
+Per maggiori dettagli, consultare [ATTACHMENTS_USAGE.md](attachments_usage.md).
+Per maggiori dettagli, consultare [ATTACHMENTS_USAGE.md](./attachments_usage.md).
+>>>>>>> .merge_file_btTFfA
+>>>>>>> laraxot/dev
 
 ### 2. Errore: "View [notify::emails.template-name] not found"
 
@@ -217,9 +230,21 @@ public function test_can_send_email_with_attachments()
 
 ## Collegamenti alla Documentazione Correlata
 
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_xhPfvm
 - [ATTACHMENTS_USAGE.md](./ATTACHMENTS_USAGE.md)
 - [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/EMAIL_LAYOUTS_BEST_PRACTICES.md)
 - [SPATIE_MAIL_TEMPLATES_STRUCTURE.md](../mail-templates/SPATIE_MAIL_TEMPLATES_STRUCTURE.md)
+=======
+>>>>>>> laraxot/dev
+- [ATTACHMENTS_USAGE.md](attachments_usage.md)
+- [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/email_layouts_best_practices.md)
+- [SPATIE_MAIL_TEMPLATES_STRUCTURE.md](../mail-templates/spatie_mail_templates_structure.md)
 - [ATTACHMENTS_USAGE.md](./attachments_usage.md)
 - [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/email_layouts_best_practices.md)
 - [SPATIE_MAIL_TEMPLATES_STRUCTURE.md](../mail-templates/spatie_mail_templates_structure.md)
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_btTFfA
+>>>>>>> laraxot/dev

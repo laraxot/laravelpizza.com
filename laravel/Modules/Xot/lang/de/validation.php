@@ -74,6 +74,7 @@ return [
     'timezone' => ':attribute muss eine gültige Zeitzone sein.',
     'unique' => ':attribute ist schon vergeben.',
     'url' => ':attribute Format ist ungültig.',
+    'uploaded' => 'Hochladen nicht gelungen: Die Datei ist vielleicht zu groß. Bitte eine kleinere Datei wählen.',
     'custom' => [
         'attribute-name' => [
             'rule-name' => 'Individuelle-Nachricht',

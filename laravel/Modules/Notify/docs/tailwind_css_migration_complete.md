@@ -1,5 +1,5 @@
 ---
-qmd: "tailwind css migration complete"
+qmd: "TAILWIND CSS MIGRATION COMPLETE"
 issues: []
 discussions: []
 title: "Design Comuni con Tailwind CSS Puro - Completato"
@@ -7,8 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # ✅ Design Comuni con Tailwind CSS Puro - Completato

@@ -3,11 +3,14 @@ title: "fluxui rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "fluxui rules"
 issues: []
 discussions: []
-status: draft
 ---
 
 === fluxui-free/core rules ===
@@ -25,7 +28,10 @@ status: draft
     <flux:button variant="primary"/>
 </code-snippet>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ### Available Components
 This is correct as of Boost installation, but there may be additional components within the codebase.
 
@@ -36,11 +42,20 @@ avatar, badge, brand, breadcrumbs, button, callout, checkbox, dropdown, field, h
 
 
 ---
+
+title: "fluxui rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "fluxui rules"
+issues: []
+discussions: []
 ## Cross-References
 
-- ← [CLAUDE Index](INDEX.md): All Laravel Boost guidelines
-- ← [Main AI Docs Index](../INDEX.md): Master index
-- ← [CLAUDE Index](index.md): All Laravel Boost guidelines
-- ← [Main AI Docs Index](../index.md): Master index
-- ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md): Original source
+- ← [CLAUDE Index](index.md) — All Laravel Boost guidelines
+- ← [Main AI Docs Index](../index.md) — Master index
+- ← [CLAUDE Index](index.md) — All Laravel Boost guidelines
+- ← [Main AI Docs Index](../index.md) — Master index
+- ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md) — Original source
 

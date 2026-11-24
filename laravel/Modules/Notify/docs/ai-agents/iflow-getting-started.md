@@ -3,11 +3,14 @@ title: "iflow getting started"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "iflow getting started"
 issues: []
 discussions: []
-status: draft
 ---
 
 # IFLOW Getting Started
@@ -21,6 +24,15 @@ status: draft
 Come iniziare a lavorare sul progetto.
 
 ---
+
+title: "iflow getting started"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "iflow getting started"
+issues: []
+discussions: []
 ## 🚀 In 3 Passi
 
 > Non serve essere "guru": serve voglia di imparare e rispetto per le regole del progetto.
@@ -70,7 +82,7 @@ Confronta con `https://laravelpizza.com` e trova le differenze da colmare.
 
 - **MAI** creare file .md in posizioni sbagliate
 - **MAI** usare maiuscole nei nomi .md (eccetto README.md e CHANGELOG.md)
-- **MAI** usare maiuscole nei nomi .md (eccetto README.md e changelog.md)
+- **MAI** usare maiuscole nei nomi .md (eccetto README.md e CHANGELOG.md)
 - **SEMPRE** usare PHPStan Level 10 dopo aver modificato un file
 - **SEMPRE** eseguire PHPMD e PHPInsights
 - **MAI** usare `property_exists()` su modelli Eloquent

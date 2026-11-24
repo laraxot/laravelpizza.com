@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "lessons learned map picker visibility"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Lessons Learned – Map Picker Visibility

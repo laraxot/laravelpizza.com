@@ -7,7 +7,7 @@ declare(strict_types=1);
 // File: lang/en/section/fields/resetFilters.php
 // Cms section.fields.resetFilters — LangServiceProvider SSoT.
 return [
-    'label' => 'Reimposta Filtri',
+    'label' => 'Reset Filters',
     'tooltip' => '',
     'helper_text' => '',
     'description' => '',

@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "migration filament 4"
 related:
   - "./italian-text-refined-audit-report.md"
-  - "../italian-text-refined-audit-report.md"
-status: draft
 ---
 # Traduzioni
 
@@ -110,6 +108,8 @@ echo $post->getTranslation('title', 'it'); // Ciao Mondo
 ## Collegamenti tra versioni di translations.md
 * [translations.md](../../../chart/docs/translations.md)
 * [translations.md](../../../reporting/docs/translations.md)
+<<<<<<< HEAD
+=======
 * [translations.md](../../../gdpr/docs/translations.md)
 * [translations.md](../../../notify/docs/translations.md)
 * [translations.md](../../../xot/docs/roadmap/lang/translations.md)
@@ -123,14 +123,16 @@ echo $post->getTranslation('title', 'it'); // Ciao Mondo
 * [translations.md](../../../media/docs/translations.md)
 * [translations.md](../../../tenant/docs/translations.md)
 * [translations.md](../../../activity/docs/translations.md)
+
+>>>>>>> laraxot/dev
 * [translations.md](../../../Gdpr/docs/translations.md)
 * [translations.md](../../../Notify/docs/translations.md)
 * [translations.md](../../../xot/docs/roadmap/lang/translations.md)
 * [translations.md](../../../xot/docs/translations.md)
 * [translations.md](../../../dental/docs/translations.md)
 * [translations.md](../../../User/docs/translations.md)
-* [translations.md](../../../ui/docs/translations.md)
-* [translations.md](../../../lang/docs/packages/translations.md)
+* [translations.md](../../../UI/docs/translations.md)
+* [translations.md](translations.md)
 * [translations.md](../translations.md)
 * [translations.md](../../../Job/docs/translations.md)
 * [translations.md](../../../Media/docs/translations.md)

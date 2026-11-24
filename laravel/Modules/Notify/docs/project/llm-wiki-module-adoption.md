@@ -3,14 +3,17 @@ title: "llm wiki module adoption"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "llm wiki module adoption"
 issues: []
 discussions: []
-status: draft
 ---
 
-# LLM Wiki: Adozione per Moduli e Temi
+# LLM Wiki — Adozione per Moduli e Temi
 
 > Stato: adottato
 > Aggiornato: 2026-04-15
@@ -25,7 +28,7 @@ Il pattern originale di Karpathy usa tre cartelle distinte alla root del progett
 project/
 ├── raw/     # fonti immutabili
 ├── wiki/    # conoscenza compilata dall'LLM
-└── schema/  # CLAUDE.md / agents.md
+└── schema/  # CLAUDE.md / AGENTS.md
 ```
 
 Nel nostro caso, ogni modulo e tema ha già una cartella `docs/`. Il mapping naturale è:
@@ -62,7 +65,7 @@ Se serve una sintesi, va in `docs/wiki/`, non nella fonte.
 
 ## Workflow per gli agenti
 
-### Ingest: quando arriva una nuova fonte nel modulo
+### Ingest — quando arriva una nuova fonte nel modulo
 
 1. La fonte arriva in `docs/` (o `docs/raw/` se è un dump/asset)
 2. L'agente legge la fonte
@@ -75,9 +78,9 @@ Se serve una sintesi, va in `docs/wiki/`, non nella fonte.
    - Pagine wiki create/aggiornate
    ```
 
-### Query: quando si fa una domanda sul dominio del modulo
+### Query — quando si fa una domanda sul dominio del modulo
 
-1. Apri `docs/wiki/index.md`: catalogo dei nodi disponibili
+1. Apri `docs/wiki/index.md` — catalogo dei nodi disponibili
 2. Apri le pagine wiki rilevanti
 3. Scendi ai file raw solo per verifica puntuale
 4. Se la risposta produce una sintesi riusabile → salva in `docs/wiki/`
@@ -88,7 +91,7 @@ Se serve una sintesi, va in `docs/wiki/`, non nella fonte.
    - Nuove pagine create se applicabile
    ```
 
-### Lint: pulizia periodica
+### Lint — pulizia periodica
 
 Controlla:
 - Pagine `wiki/` senza backlink da `index.md`
@@ -114,7 +117,7 @@ docs/
 │   └── log.md      # log append-only (obbligatorio)
 ├── raw/
 │   └── index.md    # lista fonti raw esplicite
-└── README.md       # o index.md: entrypoint umano
+└── README.md       # o index.md — entrypoint umano
 ```
 
 ## Priorità wiki per modulo
@@ -140,4 +143,4 @@ Sono l'input per il wiki, non il wiki stesso.
 Il wiki (`docs/wiki/`) è più piccolo, più stabile, più navigabile.
 Deve contenere **sintesi ad alto riuso**, non archivi di report usa-e-getta.
 
-Vedi anche: [karpathy-llm-wiki-adoption.md](./karpathy-llm-wiki-adoption.md): adozione a livello root progetto.
+Vedi anche: [karpathy-llm-wiki-adoption.md](./karpathy-llm-wiki-adoption.md) — adozione a livello root progetto.

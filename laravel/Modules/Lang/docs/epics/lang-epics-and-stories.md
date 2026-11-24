@@ -7,7 +7,6 @@ type: user_stories
 tags: [user stories, epics, lang]
 created: 2026-08-04
 updated: 2026-08-04
-status: draft
 ---
 # Lang Epics and User Stories
 

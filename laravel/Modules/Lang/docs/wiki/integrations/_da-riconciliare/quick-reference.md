@@ -1,13 +1,12 @@
 ---
-title: "quick reference"
+title: "Quick Reference"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "quick reference"
+qmd: "Quick Reference"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Guida Rapida alle Traduzioni
@@ -141,4 +140,3 @@ Poi modificare i file in `lang/vendor/{package}/{locale}/`.
 
 ## Console Commands
 - **Console Commands**: Non registrarli mai manualmente, sono autoregistrati da XotBaseServiceProvider ([vedi](./lang-service-provider.md), [filosofia](./PHILOSOPHY.md))
-- **Console Commands**: Non registrarli mai manualmente, sono autoregistrati da XotBaseServiceProvider ([vedi](../../../lang-service-provider.md), [filosofia](./PHILOSOPHY.md))

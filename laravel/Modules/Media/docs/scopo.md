@@ -1,7 +1,7 @@
 ---
 issues: []
 discussions: []
-title: "Media: scopo, confini e come servirlo meglio"
+title: "Media — scopo, confini e come servirlo meglio"
 type: concept
 module: Media
 status: active
@@ -11,7 +11,7 @@ tags: [scopo, confini, servizio-trasversale, storage, conversioni, s3, public-ht
 qmd: "scopo media storage conversioni ffmpeg s3 cloudfront public_html confini dipendenze diagnostica aws duplicati"
 ---
 
-# Media: scopo, confini e come servirlo meglio
+# Media — scopo, confini e come servirlo meglio
 
 ## Lo scopo, dedotto dal codice
 
@@ -24,18 +24,18 @@ tre modelli, tre migrazioni, uno per uno.
 | `MediaConvert` | `2022_01_01_000000_create_media_converts_table.php` | la richiesta di conversione di un video |
 | `TemporaryUpload` | `2026_01_18_152545_create_temporary_uploads_table.php` | il file caricato ma non ancora agganciato a un modello |
 
-Uno a uno, senza modelli orfani e senza migrazioni senza modello: è la regola
+Uno a uno, senza modelli orfani e senza migrazioni senza modello — è la regola
 `migration-filename-from-model-name` rispettata alla lettera, e in questo repo non è
 scontato. `app/Models/BaseModel.php:15` dichiara `protected $connection = 'media'`, e
 `Media` la ridichiara a riga 129 perché eredita da Spatie e non da `BaseModel`: la
 connection è coerente su tutti e tre.
 
 Ma il dominio di Media non sono quelle tre tabelle: è il **percorso di un byte**. Le 49
-Action di `app/Actions/` sono organizzate per tratto di quel percorso: ingresso
+Action di `app/Actions/` sono organizzate per tratto di quel percorso — ingresso
 (`TemporaryUpload/`, 3), trasformazione (`Video/`, 6 e `Image/`, 2), destinazione
-(`S3/`, 5 e `CloudFront/`, 1), uscita (`Stream/`, 2 e `Subtitle/`, 4). Il resto -
+(`S3/`, 5 e `CloudFront/`, 1), uscita (`Stream/`, 2 e `Subtitle/`, 4). Il resto —
 `app/Conversions/` con `VideoGenerators/Webm` e `ImageGenerators/PowerPoint`,
-`app/Datas/` con `ConvertData`, `CloudFrontData`, `SaveAttachmentsData`: è il vocabolario
+`app/Datas/` con `ConvertData`, `CloudFrontData`, `SaveAttachmentsData` — è il vocabolario
 tipizzato che passa fra un tratto e l'altro. Non c'è quasi niente da esporre: 3 Filament
 Resource, 6 righe di rotte in tutto (`routes/web.php` + `routes/api.php`).
 
@@ -72,7 +72,7 @@ pagina di Media è una decorazione che crea una dipendenza vera.
 
 Contro il 46 : 1 di Notify e il 32 : 1 di Lang, Media documenta in proporzione a quello
 che fa. Restano 220 file `.md` piatti nella root di `docs/` e 11 gruppi di file
-byte-identici: da ripulire, ma è manutenzione, non ipertrofia.
+byte-identici — da ripulire, ma è manutenzione, non ipertrofia.
 
 ### Un file da zero byte con il nome corrotto, tracciato da git
 
@@ -87,12 +87,12 @@ Accanto, la versione buona: `app/Filament/Clusters/Test/Pages/AwsTest.php`, 538 
 
 In tutto il repository esistono **due soli** path tracciati con caratteri non-ASCII
 sfuggiti (`git ls-files | grep -cP '\\\d{3}'` restituisce 2), e uno dei due è questo.
-Non rompe l'autoload: PSR-4 non trova niente in una cartella che non corrisponde a un
-namespace: ma sopravvive a ogni clone, compare in ogni `grep`, e la sua sola esistenza
+Non rompe l'autoload — PSR-4 non trova niente in una cartella che non corrisponde a un
+namespace — ma sopravvive a ogni clone, compare in ogni `grep`, e la sua sola esistenza
 dice che nessuno ha mai riletto l'albero dei file di questo modulo.
 
 Nella stessa famiglia: `app/View/View/Components/_components.json`, anch'esso tracciato,
-con il segmento `View` duplicato: un `mv` finito nella cartella sbagliata e mai
+con il segmento `View` duplicato — un `mv` finito nella cartella sbagliata e mai
 disfatto.
 
 ### Il fallback di un errore punta a un disco che non esiste
@@ -114,7 +114,7 @@ davvero è sostituire l'eccezione originale con un
 Il gestore dell'errore è l'errore.
 
 Il nome tradisce la confusione da cui nasce: `public_html` è la cartella pubblica del
-progetto: `public_path()` è ridefinito in `laravel/app/Application.php:18` come
+progetto — `public_path()` è ridefinito in `laravel/app/Application.php:18` come
 `$this->basePath.'/../public_html'`, e Media lo usa correttamente in 10 punti
 (`app/Actions/Subtitle/ConvertSrtToVttAction.php`, `app/Actions/Image/Merge.php`). Ma
 una *cartella* non è un *disco*: la prima si raggiunge con `public_path()`, il secondo va
@@ -130,7 +130,7 @@ diff app/Services/SubtitleService.php app/Actions/Stream/SubtitleService.php
 L'unica differenza è la riga 5, il `namespace`. 217 righe duplicate alla lettera. È
 evidentemente il residuo di una conversione `Services -> Actions` iniziata e mai
 completata: la copia nuova è stata creata, la vecchia non è stata cancellata, e la copia
-nuova non è nemmeno stata rinominata secondo la convenzione: si chiama ancora
+nuova non è nemmeno stata rinominata secondo la convenzione — si chiama ancora
 `SubtitleService`, dentro `app/Actions/`, senza `execute()` e senza `QueueableAction`.
 
 `app/Services/` contiene anche `VideoStream.php` (167 righe). Entrambe le classi in
@@ -141,7 +141,7 @@ della copertura ha dato dei test a del codice morto invece di cancellarlo.
 Nella stessa categoria, `app/Actions/Image/Merge.php`: un'Action che non si chiama
 `*Action`. Sono le uniche due eccezioni su 49
 (`find app/Actions -name '*.php' ! -name '*Action.php'`), e 41 Action su 49 usano
-`QueueableAction`: le 8 che non lo usano sono da guardare a mano.
+`QueueableAction` — le 8 che non lo usano sono da guardare a mano.
 
 ### Due interfacce identiche, zero implementatori
 
@@ -159,7 +159,7 @@ né l'altra: l'unico posto in cui compaiono fuori da sé stesse è
 
 `TemporaryUploadPathGenerator` implementa i tre metodi ma non dichiara nessun contratto.
 Il risultato è il peggiore dei tre esiti possibili: c'è un contratto (due, anzi), c'è
-un'implementazione, e non sono collegati: quindi il compilatore non verifica nulla e chi
+un'implementazione, e non sono collegati — quindi il compilatore non verifica nulla e chi
 legge crede che ci sia un'astrazione dove non c'è.
 
 ### Quasi metà delle Action sono diagnostica AWS
@@ -174,8 +174,8 @@ permessi S3. Aggiungendo `app/Filament/Clusters/Test/Pages/` (`AwsTest.php` 538 
 `S3Test.php`) il quadro è chiaro: una configurazione AWS difficile da far funzionare ha
 generato un intero sottomodulo di strumenti per capire *perché* non funziona, e quegli
 strumenti sono rimasti nel codice di produzione. Ci vive anche tutto l'hardcoding del
-nome del disco: le 17 occorrenze di `disk('s3')` del modulo: su 35 chiamate `disk()`
-totali: stanno **tutte** in `Diagnostic/S3/` e in `Clusters/Test/Pages/S3Test.php`,
+nome del disco: le 17 occorrenze di `disk('s3')` del modulo — su 35 chiamate `disk()`
+totali — stanno **tutte** in `Diagnostic/S3/` e in `Clusters/Test/Pages/S3Test.php`,
 nessuna nel percorso di produzione.
 
 Non è debito da cancellare a cuor leggero: quando l'infrastruttura è opaca, la
@@ -204,7 +204,7 @@ find laravel/Modules/Media/app -type f ! -name '*.php' ! -name '.gitkeep' | wc -
 File: `app/Actions/Video/GetVideoFrameContentAction.php:47`.
 
 Due modi corretti, uno solo va scelto: leggere il segnaposto dal filesystem con
-`public_path('img/video_not_exists.jpg')`: coerente con gli altri 10 usi del modulo: o
+`public_path('img/video_not_exists.jpg')` — coerente con gli altri 10 usi del modulo — o
 dichiarare il disco `public_html` in `config/filesystems.php` con root
 `public_path()`. Il primo è più piccolo e non aggiunge configurazione. In entrambi i casi
 va aggiunto un test che esercita il ramo `catch`, perché è esattamente il ramo che oggi
@@ -239,7 +239,7 @@ File: `app/Contracts/PathGeneratorContract.php` (da tenere),
 `app/Support/TemporaryUploadPathGenerator.php` (da far `implements PathGeneratorContract`,
 scommentando ciò che è già scritto alle righe 11-13).
 
-Se invece l'astrazione non serve: Spatie ha già la sua `PathGenerator`: si cancellano
+Se invece l'astrazione non serve — Spatie ha già la sua `PathGenerator` — si cancellano
 entrambe le interfacce. Quello che non ha senso è tenerne due e non usarne nessuna.
 
 ```bash
@@ -275,7 +275,7 @@ find Modules/Media/app/Actions/Diagnostic -name '*.php' | wc -l       # 21 -> 0
   proprietario del `model_type`; le `app/Models/Policies/` di Media coprono
   l'amministrazione dei record `Media`, non l'accesso al contenuto.
 - **Non** scrive in `laravel/public/`. La cartella pubblica del progetto è `public_html/`,
-  e si raggiunge con `public_path()`: mai con un path costruito a mano. Cfr.
+  e si raggiunge con `public_path()` — mai con un path costruito a mano. Cfr.
   `laravel/app/Application.php:18` e la memoria `public-path-is-public-html`.
 - **Non** è il posto dove si diagnostica AWS. La configurazione dell'infrastruttura è di
   chi gestisce l'ambiente; Media la consuma, non la certifica.
@@ -322,8 +322,8 @@ find Modules/Media/docs -name '*.md'  -print0 | xargs -0 cat | wc -l  # 34337
 
 ## Collegamenti
 
-- [README.md](../README.md): badge e stato misurato del modulo
-- [public-path-is-public-html](../../../../docs/wiki/memories/public-path-is-public-html.md): perché `public_path()` è `public_html/`
-- [no-services-rule](../../../../bashscripts/ai/wiki/rules/no-services-rule.md): perché `app/Services` non deve esistere
-- [migration-filename-from-model-name](../../../../docs/wiki/rules/migration-filename-from-model-name.md): la regola che qui è rispettata
-- [Sigma/docs/scopo.md](../../Sigma/docs/scopo.md): il modello di questo documento
+- [README.md](../README.md) — badge e stato misurato del modulo
+- [public-path-is-public-html](../../../../docs/wiki/memories/public-path-is-public-html.md) — perché `public_path()` è `public_html/`
+- [no-services-rule](../../../../bashscripts/ai/wiki/rules/no-services-rule.md) — perché `app/Services` non deve esistere
+- [migration-filename-from-model-name](../../../../docs/wiki/rules/migration-filename-from-model-name.md) — la regola che qui è rispettata
+- [Sigma/docs/scopo.md](../../Sigma/docs/scopo.md) — il modello di questo documento

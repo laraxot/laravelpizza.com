@@ -1,5 +1,5 @@
 ---
-title: "User: scopo del modulo e come raggiungerlo meglio"
+title: "User — scopo del modulo e come raggiungerlo meglio"
 type: concept
 status: active
 created: 2026-09-02
@@ -7,15 +7,15 @@ tags: [user, purpose, identita, autorizzazione, profilo, oauth, team]
 qmd: "user scopo modulo identita autorizzazione profilo oauth passport team ruoli permessi contract"
 updated: 2026-09-02
 issues:
-  # DA CREARE: `gh` non autenticato: mai numeri inventati.
+  # DA CREARE — `gh` non autenticato: mai numeri inventati.
   # gh issue create --repo provtv/module_user_fila5 --title "<argomento del file>"
   - "https://github.com/provtv/module_user_fila5/issues/"
 discussions:
-  # DA CREARE: vedi sopra.
+  # DA CREARE — vedi sopra.
   - "https://github.com/provtv/module_user_fila5/discussions/"
 ---
 
-# User: perche' esiste
+# User — perche' esiste
 
 ## Lo scopo in una frase
 
@@ -25,7 +25,7 @@ chi. Tutto il resto che si sa di una persona appartiene al dominio, non a User.*
 ## L'evidenza
 
 - 666 file PHP, 57 Action, **20 Widget**: il numero di widget dice che qui l'interfaccia
-  conta: login, profilo, gestione team sono superfici che l'utente tocca davvero.
+  conta — login, profilo, gestione team sono superfici che l'utente tocca davvero.
 - OAuth completo (`OauthClient`, `OauthAccessToken`, `OauthRefreshToken`,
   `OauthAuthCode`, `OauthPersonalAccessClient`): non solo login web, anche accesso
   programmatico.
@@ -84,7 +84,7 @@ sicurezza, e' un bug.
 ### 4. Team e multi-tenancy non devono sovrapporsi
 
 `Team` (qui) e `Tenant` (modulo Tenant) sono due meccanismi di separazione. Se
-entrambi decidono "cosa vedo", la regola effettiva diventa la loro intersezione: e
+entrambi decidono "cosa vedo", la regola effettiva diventa la loro intersezione — e
 nessuno dei due documenti la descrive.
 
 **Azione:** dichiarare qui quale dei due e' il confine dei dati e quale
@@ -98,7 +98,7 @@ interroga.
 **Azione:** una vista "accessi anomali" (nuovo dispositivo, orario inusuale). Il dato
 c'e' gia': manca la domanda.
 
-## Confini: cosa **non** appartiene a User
+## Confini — cosa **non** appartiene a User
 
 - I **dati di servizio** del dipendente (matricola, categoria, struttura): Sigma.
 - Le **valutazioni**: moduli di dominio.
@@ -107,5 +107,10 @@ c'e' gia': manca la domanda.
 
 ## Collegamenti
 
-- `laravel/Modules/Tenant/docs/purpose.md`: l'altro asse di separazione
-- `laravel/Modules/Xot/docs/purpose.md`: `ProfileContract` e le classi base
+- `laravel/Modules/Tenant/docs/purpose.md` — l'altro asse di separazione
+- `laravel/Modules/Xot/docs/purpose.md` — `ProfileContract` e le classi base
+
+## Documentazione correlata
+
+- [Audit BMAD](./bmad/audit.md)
+- [ECC](./ecc/user-ecc-audit.md)

@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -41,9 +45,21 @@ Consolidated from **35** individual files.
 - [Guida Completa ai Provider di Notifiche ](#notification-providers)
 - [Notification System](#notification-system)
 - [Notification System Behavior](#notification_behavior)
+<<<<<<< HEAD
 - [<<<<<<< HEAD](#notification_channels_implementation)
 - [Errori Comuni nelle Notifiche](#notification_errors)
 - [<<<<<<< HEAD](#notification_providers_guide)
+=======
+<<<<<<< HEAD
+- [notification channels implementation](#notification_channels_implementation)
+- [Errori Comuni nelle Notifiche](#notification_errors)
+- [notification providers guide](#notification_providers_guide)
+=======
+- [<<<<<<< HEAD](#notification_channels_implementation)
+- [Errori Comuni nelle Notifiche](#notification_errors)
+- [<<<<<<< HEAD](#notification_providers_guide)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Sistema di Notifiche](#notifications-system)
 - [https://medium.com/@peterhrobar/push-notifications-with-laravel-61049ab9aec6](#notifications)
 - [Sistemazione e Miglioramenti File Traduzione send_email.php - Modulo Notify](#notify-send-email-translations-improvements)
@@ -77,11 +93,14 @@ Rimosse in questo modulo: `_docs/`, `scripts/`, `bashscripts/`, `docs/archive|ar
 
 *Consolidated from: `no-hardcoded-language-religion.md`*
 
+<<<<<<< HEAD
 
-**Status**: Active  
-**Created**: 2026-04-14  
-**Last Updated**: 2026-04-14  
-**Category**: Architecture / Religion / i18n  
+=======
+>>>>>>> laraxot/dev
+**Status**: Active
+**Created**: 2026-04-14
+**Last Updated**: 2026-04-14
+**Category**: Architecture / Religion / i18n
 **Audience**: All developers + AI agents
 
 ---
@@ -90,12 +109,12 @@ Rimosse in questo modulo: `_docs/`, `scripts/`, `bashscripts/`, `docs/archive|ar
 
 **NON scriverai MAI parole in italiano (o qualsiasi lingua) nel codice PHP.**
 
-**MAI.**  
-**Senza eccezioni.**  
-**Senza scuse.**  
+**MAI.**
+**Senza eccezioni.**
+**Senza scuse.**
 **SENZA DISCUSSIONE.**
 
-**Il sito e' multilingua.**  
+**Il sito e' multilingua.**
 **Ogni stringa hardcoded in italiano e un insulto agli utenti non italiani.**
 
 ---
@@ -557,8 +576,8 @@ bash bashscripts/check-hardcoded-language.sh
 
 ### Il Credo
 
-> "Codice in inglese, UI nella lingua dell'utente.  
-> Mai hardcoded, sempre translation keys.  
+> "Codice in inglese, UI nella lingua dell'utente.
+> Mai hardcoded, sempre translation keys.
 > i18n non e optional, e rispetto."
 
 ### La Preghiera
@@ -593,7 +612,10 @@ Amen.
 
 *Consolidated from: `no-http-controllers.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Rule
 
 No module may contain HTTP controllers. The architecture is Folio + Volt (front office) and Filament (admin) exclusively.
@@ -678,7 +700,10 @@ This keeps the HTTP surface in Folio (the correct location) while the business l
 
 *Consolidated from: `no-notification-tracking-controller-rule.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Nel modulo Notify non deve esistere `app/Http/Controllers/NotificationTrackingController.php`.
 
 Motivazione:
@@ -697,7 +722,10 @@ Conseguenza operativa:
 
 *Consolidated from: `no-notification-tracking-controller.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Regola
 
 `Modules/Notify/app/Http/Controllers/NotificationTrackingController.php` non deve stare nel modulo.
@@ -725,7 +753,10 @@ La sua ricomparsa va trattata come regressione architetturale, non come semplice
 
 *Consolidated from: `no-orphan-http-controllers.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Regola
 
 Nel modulo `Notify` non devono esistere controller HTTP orfani, cioe' file sotto `app/Http/Controllers` senza route effettive o senza un ruolo architetturale chiaro nel boundary web.
@@ -776,8 +807,8 @@ related:
 
 # NotebookLM Skill - Installation & Integration Summary
 
-**Date**: 2026-03-30  
-**Status**: ✅ Installed & Integrated  
+**Date**: 2026-03-30
+**Status**: ✅ Installed & Integrated
 **Workflow**: BMAD + GSD + Ralph + OpenViking + NotebookLM
 
 ## Installation Summary
@@ -802,7 +833,7 @@ ls -la ~/.claude/skills/notebooklm/
 # - scripts/ (automation scripts)
 # - data/ (authentication + library)
 # - requirements.txt
-# - README.md, changelog.md, LICENSE
+# - README.md, CHANGELOG.md, LICENSE
 ```
 
 ## What is NotebookLM Skill?
@@ -1000,7 +1031,7 @@ Every NotebookLM answer ends with: **"Is that ALL you need to know?"**
 Create these NotebookLM notebooks:
 
 ### 1. Laraxot Framework Docs
-- **Upload**: Laraxot documentation, agents.md, .windsurfrules
+- **Upload**: Laraxot documentation, AGENTS.md, .windsurfrules
 - **Topics**: laravel, architecture, modules, filament, xot
 - **Use**: Technical research, implementation verification
 
@@ -1134,8 +1165,8 @@ DEFAULT_NOTEBOOK_ID=<nome progetto>-project-docs
 
 ---
 
-**Status**: ✅ Ready for authentication and notebook creation  
-**Last Updated**: 2026-03-30  
+**Status**: ✅ Ready for authentication and notebook creation
+**Last Updated**: 2026-03-30
 **Integrated By**: AI Agent (BMAD + GSD + Ralph Workflow)
 
 ---
@@ -1251,7 +1282,7 @@ Once authenticated, you can ask Claude Code to:
 
 Recommended notebooks to create:
 
-1. **Notify Architecture** - agents.md, docs/architecture/*
+1. **Notify Architecture** - AGENTS.md, docs/architecture/*
 2. **Notify Modules** - laravel/Modules/*/docs/README.md
 3. **Notify API** - API documentation, Swagger specs
 "NotebookLM: What's in my <nome progetto> Research notebook?"
@@ -1262,7 +1293,7 @@ Recommended notebooks to create:
 
 Recommended notebooks to create:
 
-1. **<nome progetto> Architecture** - agents.md, docs/architecture/*
+1. **<nome progetto> Architecture** - AGENTS.md, docs/architecture/*
 2. **<nome progetto> Modules** - laravel/Modules/*/docs/README.md
 3. **<nome progetto> API** - API documentation, Swagger specs
 
@@ -1327,7 +1358,10 @@ pipx run notebooklm-py playwright install chromium
 
 *Consolidated from: `notes.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Architettura
 
 ### Queueable Actions
@@ -1468,7 +1502,7 @@ L'utilizzo di Queueable Actions e componenti Blade di Filament garantisce:
 - Operazioni asincrone efficienti
 - UI/UX moderna e responsive
 - Integrazione nativa con Filament
-- Facilità di manutenzione 
+- Facilità di manutenzione
 
 ---
 
@@ -1539,7 +1573,7 @@ public function toSms($notifiable)
     if (empty($notifiable->routeNotificationFor('sms'))) {
         return null;
     }
-    
+
     return SmsData::from([
         'from' => config('app.name'),
         'to' => $notifiable->routeNotificationFor('sms'),
@@ -1556,15 +1590,15 @@ Modify the `via()` method to only return channels that are properly routed:
 public function via($notifiable)
 {
     $channels = [];
-    
+
     if ($notifiable->routeNotificationFor('mail')) {
         $channels[] = 'mail';
     }
-    
+
     if ($notifiable->routeNotificationFor('sms')) {
         $channels[] = SmsChannel::class;
     }
-    
+
     return $channels;
 }
 ```
@@ -1590,7 +1624,10 @@ public function via($notifiable)
 
 *Consolidated from: `notification-behavior.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Notification Channels Behavior
 
 ### Issue: Unexpected SMS Channel Execution
@@ -1628,7 +1665,7 @@ public function toSms($notifiable)
     if (empty($notifiable->routeNotificationFor('sms'))) {
         return null;
     }
-    
+
     return SmsData::from([
         'from' => config('app.name'),
         'to' => $notifiable->routeNotificationFor('sms'),
@@ -1645,15 +1682,15 @@ Modify the `via()` method to only return channels that are properly routed:
 public function via($notifiable)
 {
     $channels = [];
-    
+
     if ($notifiable->routeNotificationFor('mail')) {
         $channels[] = 'mail';
     }
-    
+
     if ($notifiable->routeNotificationFor('sms')) {
         $channels[] = SmsChannel::class;
     }
-    
+
     return $channels;
 }
 ```
@@ -1679,11 +1716,14 @@ public function via($notifiable)
 
 *Consolidated from: `notification-bulk-action-implementation.md`*
 
+<<<<<<< HEAD
 
-**Date**: 18 Dicembre 2025  
-**Status**: ✅ Completed  
-**Module**: App → Notify  
-**Module**: TechPlanner → Notify  
+=======
+>>>>>>> laraxot/dev
+**Date**: 18 Dicembre 2025
+**Status**: ✅ Completed
+**Module**: App → Notify
+**Module**: TechPlanner → Notify
 **Implementation Type**: Feature Addition
 
 ## Overview
@@ -1702,7 +1742,7 @@ The implementation leverages existing architecture components:
    - Provides comprehensive error handling and logging
    - Uses proper phone number normalization
 
-2. **FilamentAction**: `Modules\Notify\Filament\Actions\SendNotificationBulkAction`  
+2. **FilamentAction**: `Modules\Notify\Filament\Actions\SendNotificationBulkAction`
    - Provides the UI modal with template selection
    - Offers channel selection via checkboxes
    - Handles form validation and user notifications
@@ -1763,10 +1803,10 @@ This implementation aligns with:
 
 ## Code Quality Verification
 
-✅ **PHPStan Level 10**: All files pass static analysis  
-✅ **Type Safety**: Proper return types and parameter validation  
-✅ **Architecture Compliance**: Follows XotBase extension rules  
-✅ **Documentation**: Updated with new implementation details  
+✅ **PHPStan Level 10**: All files pass static analysis
+✅ **Type Safety**: Proper return types and parameter validation
+✅ **Architecture Compliance**: Follows XotBase extension rules
+✅ **Documentation**: Updated with new implementation details
 
 ## Usage Pattern
 
@@ -1825,7 +1865,10 @@ After implementation, users can:
 
 *Consolidated from: `notification-channels-implementation.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questo documento descrive l'architettura e l'implementazione dei canali di notifica nel progetto <nome progetto>, con particolare attenzione al pattern Factory utilizzato.
 
 ## Architettura Generale
@@ -1974,7 +2017,7 @@ L'implementazione dei canali di notifica  segue un'architettura coerente e ben s
 
 ## Collegamenti a Documentazione Correlata
 - [Modulo di Notifica](./index.md)
-- [Panoramica dell'Architettura](./ARCHITECTURE.md)
+- [Panoramica dell'Architettura](./architecture.md)
 - [Modelli di Email](./EMAIL_TEMPLATES.md)
 - [Implementazione SMS](./SMS_IMPLEMENTATION.md)
 - [Modelli di Email](../../email_templates.md)
@@ -2011,7 +2054,7 @@ related:
   - "./action-plan-immediate.md"
 ---
 
-# Implementazione dei Canali di Notifica 
+# Implementazione dei Canali di Notifica
 
 Questo documento descrive l'architettura e l'implementazione dei canali di notifica nel progetto App, con particolare attenzione al pattern Factory utilizzato.
 
@@ -2060,7 +2103,7 @@ Il pattern Factory è stato implementato per centralizzare la logica di selezion
 public function create(?string $driver = null): SmsActionInterface
 {
     $driver = $driver ?? Config::get('sms.default', 'smsfactor');
-    
+
     return match ($driver) {
         'smsfactor' => app(SendSmsFactorSMSAction::class),
         'twilio' => app(SendTwilioSMSAction::class),
@@ -2091,7 +2134,7 @@ class AppointmentReminder extends Notification
     {
         return [SmsChannel::class];
     }
-    
+
     public function toSms($notifiable)
     {
         return new SmsData(
@@ -2159,7 +2202,10 @@ L'architettura implementata facilita la manutenibilità:
 
 L'implementazione dei canali di notifica  segue un'architettura coerente e ben strutturata, basata sul pattern Factory. Questo approccio garantisce separazione delle responsabilità, riutilizzabilità, testabilità e manutenibilità, facilitando l'estensione del sistema con nuovi provider e tipi di comunicazione.
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Collegamenti a Documentazione Correlata
 - [Modulo di Notifica](./index.md)
 - [Panoramica dell'Architettura](./architecture.md)
@@ -2180,7 +2226,10 @@ L'implementazione dei canali di notifica  segue un'architettura coerente e ben s
 
 *Consolidated from: `notification-channels-implementation.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questo documento descrive l'architettura e l'implementazione dei canali di notifica nel progetto , con particolare attenzione al pattern Factory utilizzato.
 Questo documento descrive l'architettura e l'implementazione dei canali di notifica nel progetto <nome progetto>, con particolare attenzione al pattern Factory utilizzato.
 
@@ -2229,7 +2278,7 @@ Il pattern Factory è stato implementato per centralizzare la logica di selezion
 public function create(?string $driver = null): SmsActionInterface
 {
     $driver = $driver ?? Config::get('sms.default', 'smsfactor');
-    
+
     return match ($driver) {
         'smsfactor' => app(SendSmsFactorSMSAction::class),
         'twilio' => app(SendTwilioSMSAction::class),
@@ -2260,7 +2309,7 @@ class AppointmentReminder extends Notification
     {
         return [SmsChannel::class];
     }
-    
+
     public function toSms($notifiable)
     {
         return new SmsData(
@@ -2328,7 +2377,10 @@ L'architettura implementata facilita la manutenibilità:
 
 L'implementazione dei canali di notifica  segue un'architettura coerente e ben strutturata, basata sul pattern Factory. Questo approccio garantisce separazione delle responsabilità, riutilizzabilità, testabilità e manutenibilità, facilitando l'estensione del sistema con nuovi provider e tipi di comunicazione.
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Collegamenti a Documentazione Correlata
 - [Modulo di Notifica](./index.md)
 - [Panoramica dell'Architettura](./architecture.md)
@@ -2338,7 +2390,10 @@ L'implementazione dei canali di notifica  segue un'architettura coerente e ben s
 - [Implementazione SMS](../../sms_implementation.md)
 - [Risoluzione dei Problemi](./troubleshooting.md)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ---
 
 ## notification-errors-1
@@ -2462,7 +2517,7 @@ class SendNotificationAction
     public function execute()
     {
         $this->validate();
-        
+
         Notification::route('mail', $this->to)
             ->notify(new YourNotification($this->data));
     }
@@ -2532,14 +2587,17 @@ class YourNotification extends Notification
 - [Documentazione Laravel Notifications](https://laravel.com/docs/notifications)
 - [Documentazione Laravel Mail](https://laravel.com/docs/mail)
 - [Documentazione Spatie Queueable Action](https://github.com/spatie/laravel-queueable-action)
-- [Best Practices Email](https://www.campaignmonitor.com/dev-resources/guides/coding-html-emails/) 
+- [Best Practices Email](https://www.campaignmonitor.com/dev-resources/guides/coding-html-emails/)
 ---
 
 ## notification-errors
 
 *Consolidated from: `notification-errors.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## 1. Errore Destinatario Mancante
 
 ### Errore
@@ -2631,7 +2689,7 @@ class SendNotificationAction
     public function execute()
     {
         $this->validate();
-        
+
         Notification::route('mail', $this->to)
             ->notify(new YourNotification($this->data));
     }
@@ -2701,14 +2759,17 @@ class YourNotification extends Notification
 - [Documentazione Laravel Notifications](https://laravel.com/docs/notifications)
 - [Documentazione Laravel Mail](https://laravel.com/docs/mail)
 - [Documentazione Spatie Queueable Action](https://github.com/spatie/laravel-queueable-action)
-- [Best Practices Email](https://www.campaignmonitor.com/dev-resources/guides/coding-html-emails/) 
+- [Best Practices Email](https://www.campaignmonitor.com/dev-resources/guides/coding-html-emails/)
 ---
 
 ## notification-implementation
 
 *Consolidated from: `notification-implementation.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Overview
 We are adding a bulk action to trigger notifications using `RecordNotification`.
 
@@ -2770,14 +2831,20 @@ Vedi: [Contact Extraction Pattern](../../contact-extraction-pattern.md)
 Vedi: [Actions Calling Actions Pattern](./actions-calling-actions-pattern.md)
 Vedi: [Actions Calling Actions Pattern](../../actions-calling-actions-pattern.md)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ---
 
 ## notification-providers-guide-1
 
 *Consolidated from: `notification-providers-guide.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di <nome progetto>.
 
 ## Principi Architetturali per Tutti i Provider
@@ -3098,7 +3165,10 @@ Per implementazioni specifiche, vedere i documenti:
 
 *Consolidated from: `notification-providers-guide.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di .
 Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di <nome progetto>.
 
@@ -3158,9 +3228,9 @@ use Spatie\QueueableAction\QueueableAction;
 final class Send{Provider}{Type}Action implements {Type}ProviderActionInterface
 {
     use QueueableAction;
-    
+
     // Costruttore con configurazione
-    
+
     // Metodo execute standardizzato
     public function execute({Type}Data $data): array
     {
@@ -3175,7 +3245,7 @@ final class Send{Provider}{Type}Action implements {Type}ProviderActionInterface
 // config/{type}.php
 return [
     'default' => env('{TYPE}_PROVIDER', 'default_provider'),
-    
+
     'providers' => [
         'provider1' => [
             // Configurazione specifica
@@ -3184,7 +3254,7 @@ return [
             // Configurazione specifica
         ],
     ],
-    
+
     // Parametri globali
     'from' => env('{TYPE}_FROM'),
     'debug' => (bool) env('{TYPE}_DEBUG', false),
@@ -3244,9 +3314,12 @@ Per implementazioni specifiche, vedere i documenti:
 
 *Consolidated from: `notification-providers.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di App.
-Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di Quaeris.
+Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di <nome progetto>.
 
 ## Principi Architetturali per Tutti i Provider
 
@@ -3304,9 +3377,9 @@ use Spatie\QueueableAction\QueueableAction;
 final class Send{Provider}{Type}Action implements {Type}ProviderActionInterface
 {
     use QueueableAction;
-    
+
     // Costruttore con configurazione
-    
+
     // Metodo execute standardizzato
     public function execute({Type}Data $data): array
     {
@@ -3321,7 +3394,7 @@ final class Send{Provider}{Type}Action implements {Type}ProviderActionInterface
 // config/{type}.php
 return [
     'default' => env('{TYPE}_PROVIDER', 'default_provider'),
-    
+
     'providers' => [
         'provider1' => [
             // Configurazione specifica
@@ -3330,7 +3403,7 @@ return [
             // Configurazione specifica
         ],
     ],
-    
+
     // Parametri globali
     'from' => env('{TYPE}_FROM'),
     'debug' => (bool) env('{TYPE}_DEBUG', false),
@@ -3390,14 +3463,20 @@ Per implementazioni specifiche, vedere i documenti:
 
 *Consolidated from: `notification-system.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ---
 
 ## notification_behavior
 
 *Consolidated from: `notification_behavior.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Notification Channels Behavior
 
 ### Issue: Unexpected SMS Channel Execution
@@ -3435,7 +3514,7 @@ public function toSms($notifiable)
     if (empty($notifiable->routeNotificationFor('sms'))) {
         return null;
     }
-    
+
     return SmsData::from([
         'from' => config('app.name'),
         'to' => $notifiable->routeNotificationFor('sms'),
@@ -3452,15 +3531,15 @@ Modify the `via()` method to only return channels that are properly routed:
 public function via($notifiable)
 {
     $channels = [];
-    
+
     if ($notifiable->routeNotificationFor('mail')) {
         $channels[] = 'mail';
     }
-    
+
     if ($notifiable->routeNotificationFor('sms')) {
         $channels[] = SmsChannel::class;
     }
-    
+
     return $channels;
 }
 ```
@@ -3489,7 +3568,7 @@ public function via($notifiable)
 # Implementazione dei Canali di Notifica
 
 Questo documento descrive l'architettura e l'implementazione dei canali di notifica nel progetto <nome progetto>, con particolare attenzione al pattern Factory utilizzato.
-# Implementazione dei Canali di Notifica 
+# Implementazione dei Canali di Notifica
 
 Questo documento descrive l'architettura e l'implementazione dei canali di notifica nel progetto SaluteOra, con particolare attenzione al pattern Factory utilizzato.
 
@@ -3539,7 +3618,10 @@ public function create(?string $driver = null): SmsActionInterface
 {
     $driver = $driver ?? Config::get('sms.default', 'smsfactor');
 
-    
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
     return match ($driver) {
         'smsfactor' => app(SendSmsFactorSMSAction::class),
         'twilio' => app(SendTwilioSMSAction::class),
@@ -3571,7 +3653,10 @@ class AppointmentReminder extends Notification
         return [SmsChannel::class];
     }
 
-    
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
     public function toSms($notifiable)
     {
         return new SmsData(
@@ -3639,24 +3724,33 @@ L'architettura implementata facilita la manutenibilità:
 
 L'implementazione dei canali di notifica  segue un'architettura coerente e ben strutturata, basata sul pattern Factory. Questo approccio garantisce separazione delle responsabilità, riutilizzabilità, testabilità e manutenibilità, facilitando l'estensione del sistema con nuovi provider e tipi di comunicazione.
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Collegamenti a Documentazione Correlata
 - [Modulo di Notifica](./index.md)
-- [Panoramica dell'Architettura](./ARCHITECTURE.md)
+- [Panoramica dell'Architettura](./architecture.md)
 - [Modelli di Email](./EMAIL_TEMPLATES.md)
 - [Implementazione SMS](./SMS_IMPLEMENTATION.md)
 - [Modelli di Email](../../email_templates.md)
 - [Implementazione SMS](../../sms_implementation.md)
 - [Risoluzione dei Problemi](./TROUBLESHOOTING.md)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ---
 
 ## notification_errors
 
 *Consolidated from: `notification_errors.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## 1. Errore Destinatario Mancante
 
 ### Errore
@@ -3748,7 +3842,7 @@ class SendNotificationAction
     public function execute()
     {
         $this->validate();
-        
+
         Notification::route('mail', $this->to)
             ->notify(new YourNotification($this->data));
     }
@@ -3818,7 +3912,7 @@ class YourNotification extends Notification
 - [Documentazione Laravel Notifications](https://laravel.com/docs/notifications)
 - [Documentazione Laravel Mail](https://laravel.com/docs/mail)
 - [Documentazione Spatie Queueable Action](https://github.com/spatie/laravel-queueable-action)
-- [Best Practices Email](https://www.campaignmonitor.com/dev-resources/guides/coding-html-emails/) 
+- [Best Practices Email](https://www.campaignmonitor.com/dev-resources/guides/coding-html-emails/)
 ---
 
 ## notification_providers_guide
@@ -3828,7 +3922,7 @@ class YourNotification extends Notification
 # Guida Completa ai Provider di Notifiche
 
 Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di <nome progetto>.
-# Guida Completa ai Provider di Notifiche 
+# Guida Completa ai Provider di Notifiche
 
 Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di SaluteOra.
 
@@ -3891,9 +3985,12 @@ final class Send{Provider}{Type}Action implements {Type}ProviderActionInterface
 
     // Costruttore con configurazione
 
-    
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
     // Costruttore con configurazione
-    
+
     // Metodo execute standardizzato
     public function execute({Type}Data $data): array
     {
@@ -3909,7 +4006,10 @@ final class Send{Provider}{Type}Action implements {Type}ProviderActionInterface
 return [
     'default' => env('{TYPE}_PROVIDER', 'default_provider'),
 
-    
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
     'providers' => [
         'provider1' => [
             // Configurazione specifica
@@ -3919,7 +4019,10 @@ return [
         ],
     ],
 
-    
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
     // Parametri globali
     'from' => env('{TYPE}_FROM'),
     'debug' => (bool) env('{TYPE}_DEBUG', false),
@@ -3979,7 +4082,10 @@ Per implementazioni specifiche, vedere i documenti:
 
 *Consolidated from: `notifications-system.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 Il sistema di notifiche utilizza `RecordNotification` come classe base per gestire tutte le notifiche dell'applicazione.
 
@@ -4116,13 +4222,13 @@ return [
 - [Documentazione API](./api.md)
 - [Template Email](./templates.md)
 - [Template Email](../../templates.md)
-- [Guida Contribuzione](./contributing.md)
+- [Guida Contribuzione](./CONTRIBUTING.md)
 
 ## Note
 - Testare le notifiche in ambiente di sviluppo
 - Monitorare i tassi di consegna
 - Aggiornare i template regolarmente
-- Mantenere le traduzioni aggiornate 
+- Mantenere le traduzioni aggiornate
 
 ---
 
@@ -4130,14 +4236,20 @@ return [
 
 *Consolidated from: `notifications.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ---
 
 ## notify-send-email-translations-improvements
 
 *Consolidated from: `notify-send-email-translations-improvements.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Introduzione
 
 Documento che descrive la sistemazione completa dei file di traduzione per la funzionalità `send_email.php` del modulo Notify, con risoluzione di problemi critici e implementazione di best practices.
@@ -4276,7 +4388,7 @@ return array (            // ✅ Legacy syntax mantenuta (IT)
 // ✅ Convenzioni coerenti
 'navigation' => [          // Navigazione principale
 'fields' => [             // Campi form
-'actions' => [            // Azioni utente  
+'actions' => [            // Azioni utente
 'messages' => [           // Messaggi sistema
 'validation' => [         // Regole validazione
 ```
@@ -4324,7 +4436,7 @@ return array (            // ✅ Legacy syntax mantenuta (IT)
 ```php
 'tracking' => [
     'opened' => 'Email opened',
-    'clicked' => 'Link clicked', 
+    'clicked' => 'Link clicked',
     'device' => 'Device',
     'location' => 'Location',
     'open_count' => 'Times opened',
@@ -4371,7 +4483,7 @@ return array (            // ✅ Legacy syntax mantenuta (IT)
 // ✅ Sempre aggiungere in tutte e 3 le lingue
 'new_feature' => [
     'label' => 'EN: New Feature',      // en/send_email.php
-    'label' => 'IT: Nuova Funzione',   // it/send_email.php  
+    'label' => 'IT: Nuova Funzione',   // it/send_email.php
     'label' => 'DE: Neue Funktion',    // de/send_email.php
 ],
 ```
@@ -4390,14 +4502,17 @@ return array (            // ✅ Legacy syntax mantenuta (IT)
 
 La sistemazione del file `send_email.php` ha risolto problemi critici e implementato un sistema di traduzioni robusto e completo. L'applicazione di best practices e la standardizzazione della struttura garantiscono un'esperienza utente coerente e facilita la manutenzione futura del sistema.
 
-**Risultato**: Sistema di invio email completamente localizzato e funzionale in italiano, inglese e tedesco con oltre 100 chiavi di traduzione per ogni lingua e funzionalità avanzate per tracking, programmazione e gestione allegati. 
+**Risultato**: Sistema di invio email completamente localizzato e funzionale in italiano, inglese e tedesco con oltre 100 chiavi di traduzione per ogni lingua e funzionalità avanzate per tracking, programmazione e gestione allegati.
 ---
 
 ## notify-translation-guide-1
 
 *Consolidated from: `notify-translation-guide.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento fornisce una guida completa e dettagliata per la gestione delle traduzioni nel modulo Notify di <nome progetto>. Il modulo Notify segue convenzioni specifiche che rappresentano un'eccezione documentata alle convenzioni generali di <nome progetto>.
@@ -4798,7 +4913,10 @@ Questo comando verificherà che tutte le chiavi di traduzione necessarie siano p
 
 *Consolidated from: `notify-translation-guide.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento fornisce una guida completa e dettagliata per la gestione delle traduzioni nel modulo Notify di . Il modulo Notify segue convenzioni specifiche che rappresentano un'eccezione documentata alle convenzioni generali di .
@@ -4987,7 +5105,10 @@ Questo comando verificherà che tutte le chiavi di traduzione necessarie siano p
 
 *Consolidated from: `notify-translation.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento fornisce una guida completa e dettagliata per la gestione delle traduzioni nel modulo Notify di . Il modulo Notify segue convenzioni specifiche che rappresentano un'eccezione documentata alle convenzioni generali di .
@@ -5176,7 +5297,10 @@ Questo comando verificherà che tutte le chiavi di traduzione necessarie siano p
 
 *Consolidated from: `notify_translation_guide.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento fornisce una guida completa e dettagliata per la gestione delle traduzioni nel modulo Notify di <nome progetto>. Il modulo Notify segue convenzioni specifiche che rappresentano un'eccezione documentata alle convenzioni generali di <nome progetto>.

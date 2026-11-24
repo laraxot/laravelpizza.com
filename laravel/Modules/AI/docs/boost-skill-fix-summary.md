@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "boost skill fix summary"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Boost Skill Fix Summary - AI Module

@@ -12,7 +12,6 @@ related:
   - "./tenantfactory-fix.md"
   - "./tenantfactory.md"
   - "./tenanttest-fixes.md"
-status: draft
 ---
 
 # TenantTest Fixes - Reasoning

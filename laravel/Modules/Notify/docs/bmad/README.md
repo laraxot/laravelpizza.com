@@ -3,7 +3,11 @@ title: "Notify Module Documentation"
 type: documentation
 tags: [module, documentation]
 created: 2026-06-05
+<<<<<<< HEAD
 updated: 2026-08-02
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 status: draft
 qmd: "documentation notify"
 ---
@@ -12,7 +16,7 @@ qmd: "documentation notify"
 
 ## Kit BMAD owner (canonico)
 
-- [BMAD Planning](../bmad-planning.md)
+- [BMAD Planning](bmad-planning.md)
 - [BMAD Brainstorming](../bmad-brainstorming.md)
 - [Filament blueprint](./filament-blueprint.md)
 - [Project context](./project-context.md)

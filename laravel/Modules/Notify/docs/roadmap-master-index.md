@@ -3,7 +3,11 @@ title: "roadmap master index"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "roadmap master index"
 issues: []
 discussions: []
@@ -242,7 +246,7 @@ status: draft
 ### Project Overview
 - [🎯 Project Analysis & Roadmap](./project-analysis-and-roadmap.md)
 - [🏗️ Architecture](./index.md)
-- [📖 PHPStan Index](./phpstan/phpstan.md)
+- [📖 PHPStan Index](phpstan.md)
 
 ### Module Roadmaps (Dettagliate)
 - [🎯 Fixcity Roadmap](../Modules/Fixcity/docs/roadmap-and-issues.md) ⭐ CORE

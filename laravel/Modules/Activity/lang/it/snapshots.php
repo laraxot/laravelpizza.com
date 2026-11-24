@@ -58,7 +58,6 @@ return [
         'delete' => [
             'label' => 'Elimina',
             'tooltip' => 'Elimina lo snapshot',
-            'icon' => 'delete',
         ],
         'view' => [
             'label' => 'Visualizza',

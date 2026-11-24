@@ -1,22 +1,31 @@
 ---
+title: "📊 Quality Dashboard - FixCity Project"
+<<<<<<< HEAD
 title: "📊 Quality Dashboard - Notify Project"
 type: concept
 tags: [quality, dashboard]
 created: 2026-07-14
 updated: 2026-07-14
+qmd: "quality-dashboard 📊 quality dashboard - fixcity project"
 qmd: "quality-dashboard 📊 quality dashboard - laraxot project"
+=======
+type: concept
+tags: [quality, dashboard]
+created: 2026-07-14
+updated: 2026-11-23
+qmd: "quality-dashboard 📊 quality dashboard - fixcity project"
+>>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./2025-excellence-achievement.md"
+  - "./excellence-achievement.md"
   - "./agid-implementation-guide.md"
-  - "./ARCHITECTURE.md"
+  - "./architecture.md"
   - "./complete-refactoring-analysis.md"
   - "./documentation-status.md"
   - "./final-implementation-report-.md"
   - "./final-implementation-report-1.md"
   - "./final-implementation-report.md"
-status: draft
 ---
 
 # 📊 Quality Dashboard - FixCity Project
@@ -299,7 +308,7 @@ Overall Progress: ████████████████████�
 
 ## 🔗 Related Resources
 
-- [Architecture Documentation](./ARCHITECTURE.md)
+- [Architecture Documentation](./architecture.md)
 - [Contributing Guidelines](../contributing.md)
 - [Testing Strategy](../Modules/Xot/docs/testing/testing-strategy.md)
 - [Refactoring Reports](./final-refactoring-report.md)

@@ -1,14 +1,9 @@
 ---
+qmd: "lang bmad status md"
 bmad: true
 module: Lang
-title: "BMAD Status: Lang (2026-10-06)"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, lang, bmad]
-qmd: "bmad status   lang (2026-10-06) lang"
 ---
-# BMAD Status: Lang (2026-10-06)
+# BMAD Status — Lang (2026-10-06)
 
 ## Inventario docs
 - `docs/`: architecture.md, bmad/, concepts/, core/, critical-rules/, epics/, fixes/, frontend/, github/, gitignore, development/, env.example, filament/, helper-text-audit-script.php.

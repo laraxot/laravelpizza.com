@@ -3,11 +3,14 @@ title: "vite errors"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "vite errors"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Gestione Errori Vite nei Temi
@@ -62,10 +65,15 @@ cd /var/www/html/_bases/base_predict_fila5_mono/laravel/Themes/[NomeTema]
 npm install
 
 # Compilazione tema
-<<<<<<< .merge_file_584KxC
+<<<<<<< HEAD
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 =======
->>>>>>> .merge_file_uEOFPK
+<<<<<<< HEAD
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+# public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ```
 
 ### 3. Verifica Post-Compilazione
@@ -90,8 +98,18 @@ ls -la dist/
 - Verifica dell'integrità dei file compilati
 
 ## Collegamenti Correlati
+<<<<<<< HEAD
+- [Documentazione Generale Errori](/project_docs/errors/README.md)
+- [Gestione Temi CMS](../themes/README.md)
+=======
+<<<<<<< .merge_file_7vScen
 - [Documentazione Generale Errori](/project_docs/errors/readme.md)
 - [Gestione Temi CMS](../../../../Themes/README.md)
+=======
+- [Documentazione Generale Errori](/project_docs/errors/README.md)
+- [Gestione Temi CMS](../themes/README.md)
+>>>>>>> .merge_file_QXiiK6
+>>>>>>> laraxot/dev
 - [Processo di Deploy](../../project_docs/deployment/themes.md)
 
 ## Note Tecniche
@@ -129,11 +147,12 @@ npm cache clean --force
 
 # Ricompilazione forzata
 rm -rf dist/ node_modules/
-<<<<<<< .merge_file_584KxC
 npm install
+<<<<<<< HEAD
 =======
+
+>>>>>>> laraxot/dev
 npm install && npm run build
->>>>>>> .merge_file_uEOFPK
 ```
 
 ## Manutenzione

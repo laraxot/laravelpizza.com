@@ -3,11 +3,14 @@ title: "roadmap master"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "roadmap master"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🎯 MASTER ROADMAP - FIXCITY PLATFORM
@@ -386,6 +389,15 @@ Completare il progetto Notify in ogni aspetto seguendo le roadmap specifiche di 
 - **AI**: Artificial intelligence
 
 ---
+
+title: "roadmap master"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "roadmap master"
+issues: []
+discussions: []
 **🔄 Ultimo Aggiornamento**: Gennaio 2025  
 **📊 Progresso Globale**: 60% → 100% (Target Dicembre 2025)  
 **🎯 Prossimo Milestone**: Core Stable (Marzo 2025)  

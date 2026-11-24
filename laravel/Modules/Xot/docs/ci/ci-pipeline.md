@@ -1,4 +1,5 @@
 ---
+qmd: "xot ci ci pipeline md"
 title: "Pipeline CI (GitHub Actions)"
 type: reference
 created: 2026-11-10

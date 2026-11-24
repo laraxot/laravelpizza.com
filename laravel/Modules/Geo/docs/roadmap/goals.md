@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: goals
 canonical: ../../../../Themes/docs/shared-components/02-goals-Modules.md
-status: stub
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/02-goals-Modules.md

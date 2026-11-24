@@ -2,16 +2,19 @@
 qmd: "telegram consolidated"
 issues: []
 discussions: []
-title: "telegram: Consolidated Documentation"
+title: "telegram — Consolidated Documentation"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
-# telegram: Consolidated Documentation
+# telegram — Consolidated Documentation
 
 Consolidated from **13** individual files.
 
@@ -28,7 +31,15 @@ Consolidated from **13** individual files.
 - [Telegram/WhatsApp provider action interface compliance fix](#telegram-whatsapp-provider-interface-compliance-fix)
 - [https://dev.to/millykhamroev/laravel-package-to-integrate-telegram-bot-api-3l6e](#telegram)
 - [Implementazione Canale Telegram](#telegram_channel)
+<<<<<<< HEAD
 - [<<<<<<< HEAD](#telegram_integration)
+=======
+<<<<<<< HEAD
+- [telegram integration](#telegram_integration)
+=======
+- [<<<<<<< HEAD](#telegram_integration)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Standard per Invio Messaggi Telegram nel Modulo Notify](#telegram_sending_standard)
 
 ---
@@ -37,7 +48,10 @@ Consolidated from **13** individual files.
 
 *Consolidated from: `telegram-channel.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## 1. Struttura Base
 
 ### 1.1 Data Transfer Objects
@@ -566,7 +580,7 @@ class TelegramTest extends TestCase
 
 ## telegram-channel-2
 
-*Consolidated from: `telegram-channel.md`*
+*Consolidated from: `telegram-channel-2.md`*
 
 title: "Implementazione Canale Telegram"
 type: concept
@@ -577,17 +591,12 @@ qmd: "telegram-channel-2 implementazione canale telegram"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -1039,7 +1048,10 @@ class TelegramTest extends TestCase
 
 *Consolidated from: `telegram-channel.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## 1. Struttura Base
 
 ### 1.1 Data Transfer Objects
@@ -1485,7 +1497,10 @@ class TelegramTest extends TestCase
 
 *Consolidated from: `telegram-integration.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questo documento descrive l'architettura e l'implementazione dell'integrazione Telegram nel progetto <nome progetto>, seguendo gli stessi pattern di design utilizzati per SMS, Email e WhatsApp.
 
 ## Architettura
@@ -1666,7 +1681,7 @@ TELEGRAM_PARSE_MODE=HTML
 
 ## telegram-integration-2
 
-*Consolidated from: `telegram-integration.md`*
+*Consolidated from: `telegram-integration-2.md`*
 
 title: "Integrazione Telegram"
 type: concept
@@ -1677,17 +1692,12 @@ qmd: "telegram-integration-2 integrazione telegram"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -1875,7 +1885,10 @@ TELEGRAM_PARSE_MODE=HTML
 
 *Consolidated from: `telegram-integration.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questo documento descrive l'architettura e l'implementazione dell'integrazione Telegram nel progetto , seguendo gli stessi pattern di design utilizzati per SMS, Email e WhatsApp.
 Questo documento descrive l'architettura e l'implementazione dell'integrazione Telegram nel progetto <nome progetto>, seguendo gli stessi pattern di design utilizzati per SMS, Email e WhatsApp.
 
@@ -2057,7 +2070,7 @@ TELEGRAM_PARSE_MODE=HTML
 
 ## telegram-sending-standard-1
 
-*Consolidated from: `telegram-sending-standard.md`*
+*Consolidated from: `telegram-sending-standard-1.md`*
 
 title: "Standard per Invio Messaggi Telegram nel Modulo Notify"
 type: rule
@@ -2068,17 +2081,12 @@ qmd: "telegram-sending-standard-1 standard per invio messaggi telegram nel modul
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -2300,7 +2308,10 @@ $action->onQueue('telegram')->execute($data);
 
 *Consolidated from: `telegram-sending-standard.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Introduzione
 Questa guida definisce lo standard per l'invio di messaggi Telegram all'interno del modulo Notify, seguendo la stessa architettura modulare, configurazione e best practice già adottate per email, SMS e WhatsApp. L'obiettivo è garantire coerenza, riusabilità e facilità di manutenzione, indipendentemente dal provider utilizzato (Bot API ufficiale, pacchetti community, ecc.).
 
@@ -2516,7 +2527,10 @@ $action->onQueue('telegram')->execute($data);
 
 *Consolidated from: `telegram-whatsapp-provider-interface-compliance-fix.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Summary
 
 A codebase audit (ponytail-audit) found two related problems in the Telegram
@@ -2568,7 +2582,7 @@ same `array<string, mixed>` return type).
 
 Added the missing `implements` declaration (plus the corresponding `use`
 import) to the six action classes below. No other code in these classes was
-changed: the method bodies were already interface-compliant:
+changed — the method bodies were already interface-compliant:
 
 - `Modules/Notify/app/Actions/Telegram/SendOfficialTelegramAction.php`
 - `Modules/Notify/app/Actions/Telegram/SendNutgramTelegramAction.php`
@@ -2582,9 +2596,9 @@ and was left untouched.
 
 All six classes now implement their respective interface:
 
-- `Modules\Notify\Contracts\TelegramProviderActionInterface`: requires
+- `Modules\Notify\Contracts\TelegramProviderActionInterface` — requires
   `execute(TelegramData $telegramData): array`.
-- `Modules\Notify\Contracts\WhatsAppProviderActionInterface`: requires
+- `Modules\Notify\Contracts\WhatsAppProviderActionInterface` — requires
   `execute(WhatsAppData $whatsappData): array`. The concrete classes use the
   parameter name `$whatsAppData` (capital A); PHP does not require parameter
   names to match between an interface and its implementation, so this is not
@@ -2595,7 +2609,7 @@ All six classes now implement their respective interface:
 `Modules/Notify/tests/Unit/Factories/ActionFactoriesTest.php` had a test named
 `'telegram action factory throws when selected class does not implement
 interface'` that asserted `TelegramActionFactory->create('official')` threw
-an exception: i.e. it encoded the bug as expected behavior. That test was
+an exception — i.e. it encoded the bug as expected behavior. That test was
 rewritten to `'telegram action factory creates official driver instance'`,
 asserting the factory now returns a valid
 `TelegramProviderActionInterface` instance, mirroring the existing WhatsApp
@@ -2618,7 +2632,7 @@ Twilio test.
 - `./vendor/bin/pest` against the Notify Telegram/WhatsApp/Factories/Channels
   test files: 116 passing, 1 pre-existing unrelated failure in
   `NotificationsChannelsTest` (`TelegramChannel` calls `Log::debug()` but the
-  test mocks `Log::shouldReceive('info')`): untouched by this fix, confirmed
+  test mocks `Log::shouldReceive('info')`) — untouched by this fix, confirmed
   via `git log` to predate this change.
 - No browser/Playwright/Puppeteer testing was performed: these are outbound
   HTTP actions calling external Telegram/WhatsApp APIs with no UI surface to
@@ -2642,10 +2656,15 @@ Twilio test.
 
 *Consolidated from: `telegram.md`*
 
+<<<<<<< HEAD
 
 https://medium.com/modulr/send-telegram-notifications-with-laravel-9-342cc87b406
 
 
+=======
+https://medium.com/modulr/send-telegram-notifications-with-laravel-9-342cc87b406
+
+>>>>>>> laraxot/dev
 Add telegram service into config/service.php file.
 
 # config/services.php
@@ -2654,7 +2673,10 @@ Add telegram service into config/service.php file.
     'token' => env('TELEGRAM_BOT_TOKEN', 'YOUR BOT TOKEN HERE')
 ],
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 --- TUTORIAL ---
 https://abstractentropy.com/laravel-notifications-telegram-bot/
 
@@ -2664,7 +2686,10 @@ https://abstractentropy.com/laravel-notifications-telegram-bot/
 
 *Consolidated from: `telegram_channel.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## 1. Struttura Base
 
 ### 1.1 Data Transfer Objects
@@ -3292,7 +3317,10 @@ TELEGRAM_PARSE_MODE=HTML
 
 *Consolidated from: `telegram_sending_standard.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Introduzione
 Questa guida definisce lo standard per l'invio di messaggi Telegram all'interno del modulo Notify, seguendo la stessa architettura modulare, configurazione e best practice già adottate per email, SMS e WhatsApp. L'obiettivo è garantire coerenza, riusabilità e facilità di manutenzione, indipendentemente dal provider utilizzato (Bot API ufficiale, pacchetti community, ecc.).
 

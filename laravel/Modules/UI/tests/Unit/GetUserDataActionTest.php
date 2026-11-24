@@ -6,7 +6,7 @@ namespace Modules\UI\Tests\Unit;
 
 use Illuminate\Auth\GenericUser;
 use Illuminate\Contracts\Auth\Authenticatable;
-use Illuminate\Foundation\Auth\User;
+use Modules\User\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Modules\UI\Actions\GetUserDataAction;
 use Modules\UI\Tests\TestCase;
@@ -24,14 +24,13 @@ uses(TestCase::class);
  * connessione. Non è una scorciatoia — è il modo di provare la logica dell'azione invece
  * della disponibilità del database.
  *
- * @param  array<int, string>  $roles
- * @param  array<int, string>  $permissions
- * @param  array<string, mixed>  $attributes
+ * @param array<int, string>   $roles
+ * @param array<int, string>   $permissions
+ * @param array<string, mixed> $attributes
  */
 function uiAuthUser(array $roles = [], array $permissions = [], array $attributes = []): Authenticatable
 {
-    $user = new class extends User
-    {
+    $user = new class extends User {
         public ?object $profile = null;
 
         public function relationLoaded(mixed $key): bool
@@ -40,7 +39,7 @@ function uiAuthUser(array $roles = [], array $permissions = [], array $attribute
                 return false;
             }
 
-            return $key === 'profile' && $this->profile !== null;
+            return 'profile' === $key && null !== $this->profile;
         }
     };
     $user->forceFill(array_merge([
@@ -50,12 +49,12 @@ function uiAuthUser(array $roles = [], array $permissions = [], array $attribute
     ], $attributes));
 
     $user->setRelation('roles', collect(array_map(
-        static fn (string $name): Role => tap(new Role)->forceFill(['name' => $name]),
+        static fn (string $name): Role => tap(new Role())->forceFill(['name' => $name]),
         $roles,
     )));
 
     $user->setRelation('permissions', collect(array_map(
-        static fn (string $name): Permission => tap(new Permission)->forceFill(['name' => $name]),
+        static fn (string $name): Permission => tap(new Permission())->forceFill(['name' => $name]),
         $permissions,
     )));
 
@@ -68,14 +67,22 @@ afterEach(function (): void {
 
 it('restituisce null quando nessuno è autenticato', function (): void {
     Assert::assertNull(app(GetUserDataAction::class)->execute());
+<<<<<<< HEAD
 });
+=======
+})->group('UI-USERDATA-INV-1');
+>>>>>>> laraxot/dev
 
 it('restituisce null quando l autenticato non è un User del modulo', function (): void {
     // Un Authenticatable qualsiasi non basta: l'azione richiede il modello del dominio.
     Auth::setUser(new GenericUser(['id' => 1, 'name' => 'Estraneo']));
 
     Assert::assertNull(app(GetUserDataAction::class)->execute());
+<<<<<<< HEAD
 });
+=======
+})->group('UI-USERDATA-INV-1');
+>>>>>>> laraxot/dev
 
 it('mappa identità, nome e email dell utente autenticato', function (): void {
     Auth::setUser(uiAuthUser());
@@ -86,7 +93,11 @@ it('mappa identità, nome e email dell utente autenticato', function (): void {
     Assert::assertSame(42, $data->id);
     Assert::assertSame('Mario Rossi', $data->name);
     Assert::assertSame('mario.rossi@example.test', $data->email);
+<<<<<<< HEAD
 });
+=======
+})->group('UI-USERDATA-INV-2');
+>>>>>>> laraxot/dev
 
 it('usa profile_photo_path come avatar quando è presente', function (): void {
     Auth::setUser(uiAuthUser(attributes: ['profile_photo_path' => 'avatars/mario.jpg']));
@@ -141,4 +152,8 @@ it('restituisce impostazioni vuote quando il profilo non è caricato', function 
 
     Assert::assertNotNull($data);
     Assert::assertSame([], $data->settings);
+<<<<<<< HEAD
 });
+=======
+})->group('UI-USERDATA-INV-3');
+>>>>>>> laraxot/dev

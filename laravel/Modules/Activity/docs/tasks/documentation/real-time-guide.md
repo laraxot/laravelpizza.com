@@ -1,3 +1,10 @@
+---
+title: "Real-Time Guide - Activity"
+qmd: "activity tasks documentation real time guide md"
+type: note
+tags: [documentation]
+---
+
 # Real-Time Guide - Activity
 
 **Task ID**: ACTIVITY-DOC-001

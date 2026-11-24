@@ -15,6 +15,7 @@ return [
         ],
         'register' => [
             'icon' => 'register',
+            'label' => 'Registrati',
         ],
         'logout' => [
             'icon' => 'logout',

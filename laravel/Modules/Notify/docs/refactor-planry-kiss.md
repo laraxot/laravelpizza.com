@@ -7,8 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Piano di Refactor DRY/KISS - Documentazione Modulo Notify
@@ -89,7 +92,7 @@ Applicare convenzioni consistenti:
 - **Gerarchici**: Struttura cartelle logica
 
 #### Esempi Trasformazioni
-- `analisi-dettagliata-architettura-struttura.md` → `architecture/detailed-analysis.md`
+- `analisi-dettagliata-1.md` → `architecture/detailed-analysis.md`
 - `email-templates-spatie.md` → `integrations/spatie-email.md`
 - `sms_netfun_channel.md` → `sms/netfun-provider.md`
 

@@ -4,9 +4,11 @@ module: Notify
 type: decision
 tags: [notify, enum, notification-log, status]
 created: 2026-10-06
+<<<<<<< HEAD
 updated: 2026-10-06
-status: draft
-qmd: "notification status notify"
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Notification status
@@ -26,5 +28,4 @@ Le vecchie costanti `NotificationLog::STATUS_*` sono state rimosse (nessun consu
 Con il cast, `$log->status` e' l'enum: confrontare con `NotificationLogStatusEnum::SENT`, non con `'sent'`.
 
 Aperto: i due enum hanno gli stessi valori; unificarli e' una decisione dell'utente.
-Dettagli: [story/dev 2026-10-06](../stories/phpstan-cleanup-notify.dev.md).
-Dettagli: [story/dev 2026-10-06](../stories/phpstan-cleanup-notify.dev.md).
+Dettagli: [story/dev 2026-10-06](../stories/2026-10-06-phpstan-cleanup-notify.dev.md).

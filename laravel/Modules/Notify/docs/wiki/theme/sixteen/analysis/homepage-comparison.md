@@ -1,13 +1,16 @@
 ---
-title: "Notify Module: Document"
+title: "Notify Module — Document"
 type: docs/bmad
 status: active
 module: Notify
 scope: documentation
 bmad_version: 1.0
+<<<<<<< HEAD
 updated: 2026-10-06
-tags: [docs, notify, wiki]
-qmd: "homepage comparison analysis notify"
+=======
+updated: 2026-11-23
+created: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Homepage Comparison Analysis
@@ -187,10 +190,7 @@ This document analyzes the HTML structure differences between:
 ```bash
 cd laravel/Themes/Sixteen
 npm run build    # Build CSS/JS
-<<<<<<< .merge_file_13DB7M
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_sr90Tq
 ```
 
 ---

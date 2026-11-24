@@ -1,5 +1,3 @@
-<<<<<<< .merge_file_pSWY8M
-=======
 ---
 title: "CRITICAL: MAI FARE migrate:refresh/fresh/rollback O --force"
 type: note
@@ -9,7 +7,6 @@ qmd: "critical: mai fare migrate:refresh/fresh/rollback o --force activity"
 status: superseded
 superseded_by: critical-migration-constraints.md
 ---
->>>>>>> .merge_file_rKK9FT
 # ⚠️ CRITICAL: MAI FARE migrate:refresh/fresh/rollback O --force 🔴🔴
 
 ## I Dati Sono SACRI
@@ -71,7 +68,7 @@ Se esegui `migrate --force` in produzione:
 ## Regole Correlate
 
 - [Forward-Only Philosophy](docs/claude/project-rules-summary.md)
-- [QWEN.md](QWEN.md) - Sezione 7: Database SACRO
+- [qwen.md](qwen.md) - Sezione 7: Database SACRO
 - [AGENTS.md](AGENTS.md) - Regola Critica
 
 ---

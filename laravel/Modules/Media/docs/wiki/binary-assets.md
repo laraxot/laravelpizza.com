@@ -1,12 +1,10 @@
 ---
 title: "Asset binari"
+qmd: "media wiki binary assets md"
 type: note
-updated: 2026-10-08
-tags: [docs, media, wiki]
-qmd: "asset binari media"
-status: superseded
-superseded_by: ../binary-assets.md
+tags: [documentation]
 ---
+
 # Asset binari
 
 Gli asset binari sono file normali del repository.

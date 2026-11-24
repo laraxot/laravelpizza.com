@@ -1,12 +1,10 @@
 ---
 title: "Confronto Approfondito: laravel-shop-main vs laravel-shop-command-bus"
+qmd: "activity use cases shop 07 confronto approcci md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "confronto approfondito: laravel-shop-main vs laravel-shop-command-bus activity"
-status: superseded
-superseded_by: confronto-approcci.md
+tags: [documentation]
 ---
+
 # Confronto Approfondito: laravel-shop-main vs laravel-shop-command-bus
 
 ## 1. Architettura

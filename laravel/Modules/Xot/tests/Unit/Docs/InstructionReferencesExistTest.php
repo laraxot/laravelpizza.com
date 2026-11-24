@@ -7,6 +7,7 @@ namespace Modules\Xot\Tests\Unit\Docs;
 use Modules\Xot\Tests\TestCase;
 
 use function Safe\file_get_contents;
+use function Safe\preg_match;
 use function Safe\preg_match_all;
 
 uses(TestCase::class);
@@ -45,6 +46,11 @@ test('ogni file citato nei CLAUDE.md esiste nel repo', function (): void {
 
         foreach ($matches[1] as $reference) {
             // `-1.md`, `appunti-continuous-integration-tools.md`, `-3.md` nelle istruzioni sono l'ESEMPIO di cosa e' vietato nei nomi dei file (regola dell'utente 2026-10-15), non file.
+            // docs/wiki/{rules,memories,skills,commands} puntano a bashscripts/, fuori da git (Insidie in CLAUDE.md): esistono
+            // solo dove bashscripts/ c'e'. Gli altri riferimenti devono esistere ovunque.
+            if (preg_match('#(^|/)docs/wiki/(rules|memories|skills|commands)/#', $reference) === 1 && ! is_dir(base_path('../bashscripts'))) {
+                continue;
+            }
             if (str_starts_with($reference, '-') || referenceExistsInRepo($reference)) {
                 continue;
             }

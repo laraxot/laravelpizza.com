@@ -1,14 +1,17 @@
 ---
-qmd: "modelli factory seeder analisi.divergenza"
+qmd: "Modelli Factory Seeder Analisi.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: modelli_factory_seeder_analisi.md"
+title: "Modelli Factory Seeder Analisi.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Divergenza: `modelli_factory_seeder_analisi.md`

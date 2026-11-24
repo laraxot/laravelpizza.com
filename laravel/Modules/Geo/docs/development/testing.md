@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "testing"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Testing
@@ -205,4 +204,13 @@ public function test_external_service_integration(): void
 ```
 
 ---
+
+title: "testing"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "testing"
+issues: []
+discussions: []
 **Related**: [Conventions](conventions.md) | [Architecture](../architecture.md)

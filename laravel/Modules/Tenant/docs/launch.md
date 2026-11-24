@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "launch"
 related:
   - "./phpstan-corrections-january.md"
-status: draft
 ---
 # Product Launch Plan - Tenant Module
 

@@ -1,3 +1,10 @@
+---
+title: "Export Features - Activity"
+qmd: "activity tasks features export features md"
+type: note
+tags: [documentation]
+---
+
 # Export Features - Activity
 
 **Task ID**: ACTIVITY-FEATURE-015

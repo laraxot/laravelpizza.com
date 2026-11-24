@@ -4,7 +4,11 @@ type: index
 tags: [notify, docs, outputs]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify documentazione outputs readme llm wiki outputs index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -16,7 +20,6 @@ related:
   - ../notifications/README.md
   - ../integrations/README.md
   - ../templates/README.md
-status: draft
 ---
 # LLM Wiki Outputs
 

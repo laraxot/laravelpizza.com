@@ -1,13 +1,16 @@
 ---
-title: "07 mcp tailwind ui"
+title: "07 MCP Tailwind UI"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
-qmd: "07 mcp tailwind ui"
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+qmd: "07 MCP Tailwind UI"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🎨 MCP Servers per Tailwind CSS & UI Frameworks
@@ -17,6 +20,15 @@ status: draft
 **Priorità**: CRITICAL
 
 ---
+
+title: "07 MCP TAILWIND UI"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "07 MCP TAILWIND UI"
+issues: []
+discussions: []
 ## 📋 Panoramica
 
 Questo progetto utilizza **MCP (Model Context Protocol)** per integrare AI assistants con:
@@ -219,17 +231,17 @@ Create cinematic animations following Berger+Team principles.
 - Loading states
 
 ## Principles (Berger+Team)
-1. **Utility**: Animations have function
-2. **Performance**: GPU accelerated, 60 FPS
-3. **Consistency**: Uniform timing
-4. **Usability**: Short, clear animations
+1. **Utility** — Animations have function
+2. **Performance** — GPU accelerated, 60 FPS
+3. **Consistency** — Uniform timing
+4. **Usability** — Short, clear animations
 
 ## Animation Types
-- **Fade-in**: Staggered delays (100ms, 200ms, 400ms)
-- **Scale**: Hover effects (scale-105, scale-110)
-- **Float**: Background elements (20s, 25s duration)
-- **Pulse**: Attention indicators
-- **Gradient**: Text and background animations
+- **Fade-in** — Staggered delays (100ms, 200ms, 400ms)
+- **Scale** — Hover effects (scale-105, scale-110)
+- **Float** — Background elements (20s, 25s duration)
+- **Pulse** — Attention indicators
+- **Gradient** — Text and background animations
 
 ## Output Format
 ```blade
@@ -361,10 +373,10 @@ Create particles effects for cinematic backgrounds.
 ```markdown
 # GSD MCP Commands
 
-/gsd:help: Show all GSD commands
-/gsd:new-project: Initialize new project
-/gsd:plan-phase [N]: Create plan for phase N
-/gsd:execute-phase <N>: Execute phase N
+/gsd:help — Show all GSD commands
+/gsd:new-project — Initialize new project
+/gsd:plan-phase [N] — Create plan for phase N
+/gsd:execute-phase <N> — Execute phase N
 ```
 
 ---

@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "create theme"
 issues: []
 discussions: []
-status: superseded
-superseded_by: create-theme.md
 ---
 
 {

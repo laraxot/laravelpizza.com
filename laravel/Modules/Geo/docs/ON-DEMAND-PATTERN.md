@@ -1,17 +1,38 @@
 ---
+qmd: "ON DEMAND PATTERN"
+issues: []
+discussions: []
 title: "On-Demand Pattern — Module Geo"
 type: documentation
 created: 2026-05-11
 updated: 2026-05-11
 tags: [on-demand, pattern, wiki, qmd]
 related:
+<<<<<<< HEAD
+  - ../../../../docs/wiki/rules/on-demand-pattern.md
+  - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
+=======
+<<<<<<< .merge_file_CWoMgg
   - ../../docs/wiki/rules/on-demand-pattern.md
   - ../../docs/wiki/concepts/llm-wiki-operational-discipline.md
+=======
+  - ../../../../docs/wiki/rules/on-demand-pattern.md
+  - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
+>>>>>>> .merge_file_RBkhdS
+>>>>>>> laraxot/dev
 ---
 
 # On-Demand Pattern — Module **Geo**
 
+<<<<<<< HEAD
+**Fonte canonica**: [docs/wiki/rules/on-demand-pattern.md](../../../../docs/wiki/rules/on-demand-pattern.md)
+=======
+<<<<<<< .merge_file_CWoMgg
 **Fonte canonica**: [../../docs/wiki/rules/on-demand-pattern.md](../../docs/wiki/rules/on-demand-pattern.md)
+=======
+**Fonte canonica**: [docs/wiki/rules/on-demand-pattern.md](../../../../docs/wiki/rules/on-demand-pattern.md)
+>>>>>>> .merge_file_RBkhdS
+>>>>>>> laraxot/dev
 
 ## Principio
 
@@ -56,11 +77,11 @@ qmd search "<topic>"
 ```
 ./laravel/Modules/Geo/docs/
 ├── wiki/                    # Knowledge base locale
-│   ├── rules/INDEX.md      # Indice rules modulo-specifiche
-│   ├── skills/INDEX.md     # Indice skills modulo-specifiche
-│   ├── commands/INDEX.md   # Indici commands
-│   └── memories/INDEX.md   # Indice memories
-└── ON-DEMAND-PATTERN.md     # Questo file
+│   ├── rules/index.md      # Indice rules modulo-specifiche
+│   ├── skills/index.md     # Indice skills modulo-specifiche
+│   ├── commands/index.md   # Indici commands
+│   └── memories/index.md   # Indice memories
+└── on-demand-pattern.md     # Questo file
 ```
 
 ## Quick Reference
@@ -86,9 +107,21 @@ qmd search "<topic>"
 
 ## Riferimenti
 
+<<<<<<< HEAD
+- [Global On-Demand Pattern](../../../../docs/wiki/rules/on-demand-pattern.md)
+- [LLM Wiki Operational Discipline](../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
+- [Trigger Map](../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
+=======
+<<<<<<< .merge_file_CWoMgg
 - [Global On-Demand Pattern](../../docs/wiki/rules/on-demand-pattern.md)
 - [LLM Wiki Operational Discipline](../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
 - [Trigger Map](../../docs/wiki/rules/00-TRIGGER_MAP.md)
+=======
+- [Global On-Demand Pattern](../../../../docs/wiki/rules/on-demand-pattern.md)
+- [LLM Wiki Operational Discipline](../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
+- [Trigger Map](../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
+>>>>>>> .merge_file_RBkhdS
+>>>>>>> laraxot/dev
 - [Module Wiki Index](./wiki/index.md)
 
 ---

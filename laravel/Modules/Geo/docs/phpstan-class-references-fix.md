@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan class references fix"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHPStan Class References Fix - Geo Module

@@ -62,10 +62,15 @@ cd /var/www/html/_bases/base_predict_fila3_mono/laravel/Themes/[NomeTema]
 npm install
 
 # Compilazione tema
-<<<<<<< .merge_file_IHnoeW
+<<<<<<< HEAD
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 =======
->>>>>>> .merge_file_AkQxkG
+<<<<<<< HEAD
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+# public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ```
 
 ### 3. Verifica Post-Compilazione
@@ -129,11 +134,12 @@ npm cache clean --force
 
 # Ricompilazione forzata
 rm -rf dist/ node_modules/
-<<<<<<< .merge_file_IHnoeW
 npm install
+<<<<<<< HEAD
 =======
+
+>>>>>>> laraxot/dev
 npm install && npm run build
->>>>>>> .merge_file_AkQxkG
 ```
 
 ## Manutenzione

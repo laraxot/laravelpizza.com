@@ -16,8 +16,6 @@ related:
   - "./component-verification.md"
   - "./dependency-rules.md"
   - "./dependency.md"
-status: superseded
-superseded_by: component-verification.md
 ---
 
 # Regole per la Verifica dei Componenti Blade
@@ -164,5 +162,8 @@ Prima di usare qualsiasi componente:
 - [Documentazione Filament Ufficiale](https://filamentphp.com/docs)
 - [Laravel Blade Components](https://laravel.com/docs/blade#components)
 - [Componenti UI del Progetto](../../../../Themes/Sixteen/resources/views/components/ui)
+<<<<<<< HEAD
+=======
 - [Componenti UI del Progetto](../../../../Themes/Sixteen/resources/views/components/ui)
 - [Componenti UI del Progetto](../../../../Themes/Sixteen/resources/views/components/ui)
+>>>>>>> laraxot/dev

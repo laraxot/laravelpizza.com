@@ -3,11 +3,11 @@ title: "Seo module: indice documentazione"
 type: index
 status: active
 canonical: true
-updated: 2026-10-08
+updated: 2026-11-19
 tags: [seo, docs, index, canonical]
 qmd: "seo module docs index master catalogo canonico superseded duplicati stub stale pilot docs-organization"
 related:
-  - ./stories/2026-10-08-docs-organization-pilot.story.md
+  - ./stories/docs-organization-pilot.story.md
   - ./stories/docs-index-audit.story.md
   - ../../../../bmad-output/docs-organization-audit-2026-10-08.md
 issues: []
@@ -18,11 +18,13 @@ discussions: []
 
 Master index of `docs/` for the Seo module, organized by topic. Every `.md` file under `docs/` is linked from here, either directly or inside the "Storico / da consolidare" section. No file was renamed, moved, or deleted while building this index.
 
-**Indice canonico: questo file.** Gli altri indici di radice (`00-INDEX.md`, `00-index.md`, `INDEX.md`) sono `status: superseded` con `superseded_by: index.md` dal 2026-10-08. `README.md` resta la presentazione del modulo (regola `theme-module-docs-readme-mandatory`), non un secondo indice.
+**Indice canonico: questo file.** Gli altri indici di radice (`00-INDEX.md`, `00-index.md`, `INDEX.md`) sono stati rimossi il 2026-11-19 (issue #64). `README.md` resta la presentazione del modulo (regola `theme-module-docs-readme-mandatory`), non un secondo indice.
 
 Legenda `status` nel frontmatter: `active` (valido), `stub` (rimanda a un canonico), `superseded` (copia di un altro file, `superseded_by` dice quale), `stale` (obsoleto, con nota datata sotto il frontmatter), `draft` (segnaposto da compilare). Nessun file e' stato cancellato, spostato o rinominato.
 
 Related entry points: [README.md](./README.md) (module overview), [docs/wiki/index.md](./wiki/index.md) (second-brain wiki), [docs/roadmap/README.md](./roadmap/README.md) (roadmap hub).
+
+- [stories/audit-qualita.story.md](./stories/audit-qualita.story.md) — audit qualita' (issue #64)
 
 ## Overview and getting started
 
@@ -91,7 +93,7 @@ Related entry points: [README.md](./README.md) (module overview), [docs/wiki/ind
 - [launch.md](./launch.md)
 - [product_launch_plan.md](./product_launch_plan.md) — canonical (see duplicate `PRODUCT_LAUNCH_PLAN.md` below)
 - [product_roadmap.md](./product_roadmap.md) — canonical (see duplicate `PRODUCT_ROADMAP.md` below)
-- [roadmap.md](./roadmap.md) — canonical top-level roadmap (see 4 duplicates below: `ROADMAP.md`, `roadmap-2025.md`, `ROADMAP-2025.md`, `ROADMAP_2025.md`)
+- [roadmap.md](./roadmap.md) — canonical top-level roadmap (vedi il duplicato `ROADMAP.md` sotto; le copie `roadmap-2025.md`, `ROADMAP-2025.md`, `ROADMAP_2025.md` sono state fuse qui il 2026-11-19)
 
 ### Roadmap directory (`docs/roadmap/`)
 
@@ -101,15 +103,15 @@ Related entry points: [README.md](./README.md) (module overview), [docs/wiki/ind
 - [roadmap/quality.md](./roadmap/quality.md)
 - [roadmap/vision.md](./roadmap/vision.md)
 - [roadmap/00-index.md](./roadmap/00-index.md) — canonical (see duplicate `roadmap/00-INDEX.md` below)
-- [roadmap/00-overview.md](./roadmap/00-overview.md)
+- roadmap/00-overview.md
 - [roadmap/01-current-state.md](./roadmap/01-current-state.md)
-- [roadmap/01-now.md](./roadmap/01-now.md)
+- roadmap/01-now.md
 - [roadmap/02-goals.md](./roadmap/02-goals.md)
-- [roadmap/02-next.md](./roadmap/02-next.md)
-- [roadmap/03-later.md](./roadmap/03-later.md)
+- roadmap/02-next.md
+- roadmap/03-later.md
 - [roadmap/03-workstreams.md](./roadmap/03-workstreams.md)
 - [roadmap/04-milestones.md](./roadmap/04-milestones.md)
-- [roadmap/04-risks.md](./roadmap/04-risks.md) — "Risks and dependencies"
+- roadmap/04-risks.md — "Risks and dependencies"
 - [roadmap/05-risks.md](./roadmap/05-risks.md) — "Risks - Seo" (distinct content from `04-risks.md`, not a byte-for-byte duplicate; both kept)
 
 ## Tooling, MCP and setup
@@ -121,13 +123,17 @@ Related entry points: [README.md](./README.md) (module overview), [docs/wiki/ind
 - `root-file-policy.md` - file assente al 2026-10-08 (link rimosso; esiste solo nel tema Meetup)
 - `root-files-hygiene.md` - file assente al 2026-10-08 (link rimosso)
 - [links.md](./links.md) — raw link dump (SEO packages/tutorials)
-- [action-sentinel-main-to-module-20260313T132007Z.md](./action-sentinel-main-to-module-20260313T132007Z.md) — canonical (see lowercase-timestamp duplicate below)
+<<<<<<< .merge_file_SWXaKn
+- [action-sentinel-main-to-module.md](action-sentinel-main-to-module.md) — canonical (see lowercase-timestamp duplicate below)
+=======
+- [action-sentinel-main-to-module.md](./action-sentinel-main-to-module.md) — sentinel del 2026-03-13T13:20:07Z (le due copie con timestamp nel nome sono state fuse qui)
+>>>>>>> .merge_file_HDtJIC
 
 ## Fixes, conflicts and incident reports
 
 - [conflict-resolution.md](./conflict-resolution.md)
 - [boost-skill-fix-summary.md](./boost-skill-fix-summary.md)
-- [redundancy-audit.md](./redundancy-audit.md) - audit del 2026-05-21 (ex `redundancy-audit-2026-05-21.md`), distinct from the `redundancy_analysis.md`/`REDUNDANCY_ANALYSIS.md` stub pair (see Storico)
+- [redundancy-audit.md](./redundancy-audit.md) - audit del 2026-05-21 (ex `redundancy-audit.md`), distinct from the `redundancy_analysis.md`/`REDUNDANCY_ANALYSIS.md` stub pair (see Storico)
 - [wiki/troubleshooting/git-merge-conflict-inventory.md](./wiki/troubleshooting/git-merge-conflict-inventory.md) (ex `...-2026-04-28.md`)
 
 ## Wiki / second brain (`docs/wiki/`)
@@ -184,10 +190,17 @@ La directory `root-md-files/` non esiste piu' al 2026-10-08. Il changelog archiv
 ## BMAD, stories and decision records
 
 - [stories/docs-index-audit.story.md](./stories/docs-index-audit.story.md) - first documentation-index audit (2026-09-26)
-- [stories/2026-10-06-phpstan-cleanup-seo.story.md](./stories/2026-10-06-phpstan-cleanup-seo.story.md) and [.dev.md](./stories/2026-10-06-phpstan-cleanup-seo.dev.md) - PHPStan cleanup
+<<<<<<< .merge_file_SWXaKn
+- [stories/phpstan-cleanup-seo.story.md](stories/phpstan-cleanup-seo.story.md) and [.dev.md](stories/phpstan-cleanup-seo.dev.md) - PHPStan cleanup
 - [stories/phpstan-Seo-fix.md](./stories/phpstan-Seo-fix.md) - earlier PHPStan fix note
-- [stories/2026-10-08-docs-organization-pilot.story.md](./stories/2026-10-08-docs-organization-pilot.story.md) - this reorganization pilot (frontmatter, links, superseded markers)
-- [stories/2026-10-08-services-to-actions-seo.story.md](./stories/2026-10-08-services-to-actions-seo.story.md) - Services to Actions (removal of `MetatagService`); the docs that cite `app/Services/MetatagService.php` become stale after it
+- [stories/docs-organization-pilot.story.md](stories/docs-organization-pilot.story.md) - this reorganization pilot (frontmatter, links, superseded markers)
+- [stories/services-to-actions-seo.story.md](stories/services-to-actions-seo.story.md) - Services to Actions (removal of `MetatagService`); the docs that cite `app/Services/MetatagService.php` become stale after it
+=======
+- [stories/2026-10-06-phpstan-cleanup-seo.story.md](./stories/phpstan-cleanup-seo.story.md) and [.dev.md](./stories/phpstan-cleanup-seo.dev.md) - PHPStan cleanup
+- [stories/phpstan-Seo-fix.md](./stories/phpstan-Seo-fix.md) - earlier PHPStan fix note
+- [stories/2026-10-08-docs-organization-pilot.story.md](./stories/docs-organization-pilot.story.md) - this reorganization pilot (frontmatter, links, superseded markers)
+- [stories/2026-10-08-services-to-actions-seo.story.md](./stories/services-to-actions-seo.story.md) - Services to Actions (removal of `MetatagService`); the docs that cite `app/Services/MetatagService.php` become stale after it
+>>>>>>> .merge_file_HDtJIC
 - [bmad/README.md](./bmad/README.md), [bmad/bmad-dossier.md](./bmad/bmad-dossier.md), [bmad/status.md](./bmad/status.md) - BMAD dossier
 - [decision-log.md](./decision-log.md) - decision log (empty template, `draft`)
 - [investigation/investigation.md](./investigation/investigation.md) - Schema.org auto-generation investigation (placeholder, `draft`)
@@ -196,7 +209,6 @@ La directory `root-md-files/` non esiste piu' al 2026-10-08. Il changelog archiv
 
 - [Xot docs](../../Xot/docs/README.md) - core framework and base classes
 - [Geo docs](../../Geo/docs/README.md) - Schema.org Place integration
-- [Meetup theme docs](../../../Themes/Meetup/docs/00-INDEX.md) - Schema.org Event integration (Meetup is a theme, not a module)
 
 ---
 
@@ -219,9 +231,14 @@ Nothing below was deleted, renamed, or moved. From 2026-10-08 every copy listed 
 | Product strategy | [`PRODUCT_STRATEGY.md`](./PRODUCT_STRATEGY.md) | Byte-identical to `product_strategy.md` |
 | Sprint planning | [`SPRINT_PLANNING.md`](./SPRINT_PLANNING.md) | Byte-identical to `sprint_planning.md` |
 | User research | [`USER_RESEARCH.md`](./USER_RESEARCH.md) | Byte-identical to `user_research.md` |
-| Roadmap 2025 (top-level) | [`ROADMAP.md`](./ROADMAP.md), [`roadmap-2025.md`](./roadmap-2025.md), [`ROADMAP-2025.md`](./ROADMAP-2025.md), [`ROADMAP_2025.md`](./ROADMAP_2025.md) | All near-identical to `roadmap.md` (only a trailing "Last Updated" line differs). Dal 2026-10-08 `ROADMAP-2025.md` e `ROADMAP_2025.md` sono `superseded_by: roadmap-2025.md` (identici nel corpo); `ROADMAP.md` non e' un duplicato esatto e resta `active` |
+<<<<<<< .merge_file_SWXaKn
+| Roadmap 2025 (top-level) | [`ROADMAP.md`](./ROADMAP.md), [`roadmap-2025.md`](./roadmap-2025.md), [`ROADMAP-2025.md`](ROADMAP_2025.md), [`ROADMAP_2025.md`](./ROADMAP_2025.md) | All near-identical to `roadmap.md` (only a trailing "Last Updated" line differs). Dal 2026-10-08 `ROADMAP-2025.md` e `ROADMAP_2025.md` sono `superseded_by: roadmap-2025.md` (identici nel corpo); `ROADMAP.md` non e' un duplicato esatto e resta `active` |
 | Roadmap sub-index | [`roadmap/00-INDEX.md`](./roadmap/00-INDEX.md) | Byte-identical to `roadmap/00-index.md` |
-| Action sentinel log | [`action-sentinel-main-to-module-20260313t132007z.md`](./action-sentinel-main-to-module-20260313t132007z.md) | Byte-identical to the uppercase-`T` filename, only timestamp casing differs |
+| Action sentinel log | [`action-sentinel-main-to-module-20260313t132007z.md`](action-sentinel-main-to-module.md) | Byte-identical to the uppercase-`T` filename, only timestamp casing differs |
+=======
+| Roadmap (top-level) | [`ROADMAP.md`](./ROADMAP.md) | Quasi identico a `roadmap.md` (differisce solo la riga finale "Last Updated"), resta `active`. Le copie con l'anno nel nome (`roadmap-2025.md`, `ROADMAP-2025.md`, `ROADMAP_2025.md`) sono state fuse in `roadmap.md` il 2026-11-19 |
+| Roadmap sub-index | [`roadmap/00-INDEX.md`](./roadmap/00-INDEX.md) | Byte-identical to `roadmap/00-index.md` |
+>>>>>>> .merge_file_HDtJIC
 | MCP server consigliati (IT) | [`MCP_SERVER_CONSIGLIATI.md`](./MCP_SERVER_CONSIGLIATI.md) | Byte-identical to `mcp_server_consigliati.md` |
 | MCP server recommended (EN) | [`MCP_SERVER_RECOMMENDED.md`](./MCP_SERVER_RECOMMENDED.md) | Byte-identical to `mcp_server_recommended.md` |
 | Wiki agents | [`wiki/AGENTS.md`](./wiki/AGENTS.md) | Byte-identical to `wiki/agents.md` (both contain an unrendered `{{TYPE^}}` template placeholder) |
@@ -258,7 +275,6 @@ These files only contain a `canonical: ../../../Themes/docs/shared-components/..
 - [roadmap/goals.md](./roadmap/goals.md)
 - [roadmap/index.md](./roadmap/index.md)
 - [roadmap/later.md](./roadmap/later.md)
-- [roadmap/legacy/legacy-roadmap-x.md](./roadmap/legacy/legacy-roadmap-x.md)
 - [roadmap/milestones.md](./roadmap/milestones.md)
 - [roadmap/next.md](./roadmap/next.md)
 - [roadmap/now.md](./roadmap/now.md)
@@ -280,17 +296,29 @@ Residue from doc-sync tooling tests. No informational content.
 - [sync-test-file.md](./sync-test-file.md)
 - [sync_test_file.md](./sync_test_file.md)
 - [SYNC_TEST_FILE.md](./SYNC_TEST_FILE.md)
-- [test_2025_03_24.md](./test_2025_03_24.md)
-- [test_2025_03_24_bb.md](./test_2025_03_24_bb.md)
-- [test-bb.md](./test-bb.md)
+<<<<<<< .merge_file_SWXaKn
+- test_2025_03_24.md
+- test_2025_03_24_bb.md
+- test-bb.md
+- test.md
+=======
 - [test.md](./test.md)
+- [test-bb.md](./test-bb.md)
+>>>>>>> .merge_file_HDtJIC
 - [raw/root-import/sync-test-file.md](./raw/root-import/sync-test-file.md)
 - [raw/root-import/sync-test-file-1.md](./raw/root-import/sync-test-file-1.md)
 - [raw/root-import/sync-test-file-2.md](./raw/root-import/sync-test-file-2.md)
 - [raw/root-import/sync-test-file-3.md](./raw/root-import/sync-test-file-3.md)
+<<<<<<< .merge_file_SWXaKn
+- raw/root-import/test.md
+- raw/root-import/test-1.md
+- raw/root-import/test-bb.md
+- raw/root-import/test-bb-1.md
+- raw/root-import/test-2025-03-24.md
+- raw/root-import/test-2025-03-24-bb.md
+=======
 - [raw/root-import/test.md](./raw/root-import/test.md)
 - [raw/root-import/test-1.md](./raw/root-import/test-1.md)
 - [raw/root-import/test-bb.md](./raw/root-import/test-bb.md)
 - [raw/root-import/test-bb-1.md](./raw/root-import/test-bb-1.md)
-- [raw/root-import/test-2025-03-24.md](./raw/root-import/test-2025-03-24.md)
-- [raw/root-import/test-2025-03-24-bb.md](./raw/root-import/test-2025-03-24-bb.md)
+>>>>>>> .merge_file_HDtJIC

@@ -4,7 +4,11 @@ type: index
 tags: [notify, docs, project_docs, development, filament]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify documentazione project_docs development filament readme filament development guide index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -13,10 +17,9 @@ discussions:
 related:
   - ../../../README.md
   - ../../../wiki/index.md
-  - ../../../notifications/readme.md
-  - ../../../integrations/readme.md
-  - ../../../templates/readme.md
-status: draft
+  - ../../../notifications/README.md
+  - ../../../integrations/README.md
+  - ../../../templates/README.md
 ---
 # Filament Development Guide
 
@@ -114,10 +117,6 @@ Widget personalizzati in Filament.
 - [Form Components](./form-components.md)
 - [Form Validation](./form-validation.md)
 - [Translations](./translations.md)
-- [Best Practices](../../../best-practices.md)
-- [Form Components](./form-components.md)
-- [Form Validation](./form-validation.md)
-- [Translations](../../../translations.md)
 - [Actions](./actions.md)
 - [Widgets](./widgets.md)
 - [PHPStan](../phpstan/)

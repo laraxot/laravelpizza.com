@@ -1,3 +1,14 @@
+---
+title: "COMPREHENSIVE GUIDE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "COMPREHENSIVE GUIDE"
+issues: []
+discussions: []
+---
+
 # Comprehensive Guide for Geo Module
 
 ## Table of Contents

@@ -1,17 +1,3 @@
-
----
-title: "AGENTS"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "AGENTS"
-issues: []
-discussions: []
-status: active
----
-
-
 # Meetup Theme LLM Wiki Agent Instructions
 
 > **Module/Theme:** Meetup
@@ -36,9 +22,6 @@ You are the **Meetup Wiki Maintainer**. Your job is to:
 
 ```yaml
 ---
-qmd: "AGENTS"
-issues: []
-discussions: []
 title: "Page Title"
 type: concept|entity|source|comparison|decision|troubleshooting
 sources: ["raw/articles/filename.md"]

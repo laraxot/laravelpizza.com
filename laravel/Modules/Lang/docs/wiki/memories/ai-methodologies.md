@@ -7,8 +7,7 @@ created: 2026-07-14
 updated: 2026-07-14
 qmd: "ottimizzazioni correzioni"
 related:
-  - "../../italian-text-refined-audit-report.md"
-status: draft
+  - "./italian-text-refined-audit-report.md"
 ---
 # AI Methodologies Handbook
 
@@ -16,9 +15,9 @@ This file is a DRY local index for AI workflows in this module or theme.
 
 ## Canonical Sources
 
-- [OpenViking Integration Guide](../../../../../../docs/openviking-integration.md)
+- [OpenViking Integration Guide](../../../../docs/openviking-integration.md)
 - [AI Methodologies Integration](../../../../docs/project/ai-methodologies-integration.md)
-- [Root Docs Index](../../index.md)
+- [Root Docs Index](../../../../docs/index.md)
 
 ## Local Workflow
 

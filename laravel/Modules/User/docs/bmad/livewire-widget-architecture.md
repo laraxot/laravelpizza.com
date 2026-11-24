@@ -1,4 +1,6 @@
 ---
+title: "Architecture — solo Filament widget"
+
 title: "Architecture: solo Filament widget"
 type: architecture
 module: User
@@ -43,29 +45,49 @@ DeleteUserAction         → invariata, chiamata dal widget profilo
 
 ## 3. ADR campagna
 
-### ADR-C001: Widget è il contenitore, non “in più”
+### ADR-C001 — Widget è il contenitore, non “in più”
 
 Non si affianca un widget al Livewire HTTP. Si sostituisce, poi si cancella. Due UI = bug di sicurezza (login) o 500 (chrome).
 
-### ADR-C002: Gemello esistente batte classe nuova
+### ADR-C002 — Gemello esistente batte classe nuova
 
 `SocialLoginWidget` esiste: 10.2 è switch hook + parametro route panel vs FO, non `ButtonsWidget`. Stesso per Cluster B.
 
-### ADR-C003: Chrome: `$isDiscovered = false`
+### ADR-C003 — Chrome: `$isDiscovered = false`
 
 User menu e login-after non sono KPI. `discoverWidgets` li metterebbe in dashboard.
 
-### ADR-C004: Provider: un hook per story
+### ADR-C004 — Provider: un hook per story
 
 `AdminPanelProvider` è un file. 9.2 SuperAdmin, 10.1 team, 10.2 social. Mai tre hook nella stessa story.
 
-### ADR-C005: ViewCopyAction è un anti-pattern
+### ADR-C005 — ViewCopyAction è un anti-pattern
 
 Copiare viste a runtime non è theming: è mutazione disco. Il tema vince a **compile/deploy**, non a `render()`.
 
-### ADR-C006: Gdpr possiede legal text
+### ADR-C006 — Gdpr possiede legal text
 
 User non serve Privacy/Terms. L’hook commentato è già la decisione.
+
+### ADR-C007 — Categoria: chrome vs pagina vs ritiro
+
+### ADR-C001: Widget è il contenitore, non “in più”
+
+
+### ADR-C002: Gemello esistente batte classe nuova
+
+
+### ADR-C003: Chrome: `$isDiscovered = false`
+
+
+### ADR-C004: Provider: un hook per story
+
+
+### ADR-C005: ViewCopyAction è un anti-pattern
+
+
+### ADR-C006: Gdpr possiede legal text
+
 
 ### ADR-C007: Categoria: chrome vs pagina vs ritiro
 

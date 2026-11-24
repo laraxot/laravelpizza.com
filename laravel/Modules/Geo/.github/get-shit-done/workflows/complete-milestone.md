@@ -11,7 +11,7 @@ discussions: []
 
 <purpose>
 
-Mark a shipped version (v1.0, v1.1, v2.0) as complete. Creates historical record in MILESTONES.md, performs full PROJECT.md evolution review, reorganizes ROADMAP.md with milestone groupings, and tags the release in git.
+Mark a shipped version (v1.0, v1.1, v2.0) as complete. Creates historical record in MILESTONES.md, performs full PROJECT.md evolution review, reorganizes roadmap.md with milestone groupings, and tags the release in git.
 
 </purpose>
 
@@ -19,7 +19,7 @@ Mark a shipped version (v1.0, v1.1, v2.0) as complete. Creates historical record
 
 1. templates/milestone.md
 2. templates/milestone-archive.md
-3. `.planning/ROADMAP.md`
+3. `.planning/roadmap.md`
 4. `.planning/REQUIREMENTS.md`
 5. `.planning/PROJECT.md`
 
@@ -31,12 +31,12 @@ When a milestone completes:
 
 1. Extract full milestone details to `.planning/milestones/v[X.Y]-ROADMAP.md`
 2. Archive requirements to `.planning/milestones/v[X.Y]-REQUIREMENTS.md`
-3. Update ROADMAP.md — replace milestone details with one-line summary
+3. Update roadmap.md — replace milestone details with one-line summary
 4. Delete REQUIREMENTS.md (fresh one for next milestone)
 5. Perform full PROJECT.md evolution review
 6. Offer to create next milestone inline
 
-**Context Efficiency:** Archives keep ROADMAP.md constant-size and REQUIREMENTS.md milestone-scoped.
+**Context Efficiency:** Archives keep roadmap.md constant-size and REQUIREMENTS.md milestone-scoped.
 
 **ROADMAP archive** uses `templates/milestone-archive.md` — includes milestone header (status, phases, date), full phase details, milestone summary (decisions, issues, tech debt).
 
@@ -160,7 +160,7 @@ Milestone Stats:
 
 <step name="extract_accomplishments">
 
-Extract one-liners from SUMMARY.md files using summary-extract:
+Extract one-liners from summary.md files using summary-extract:
 
 ```bash
 # For each phase in milestone, extract one-liner
@@ -184,7 +184,7 @@ Key accomplishments for this milestone:
 
 <step name="create_milestone_entry">
 
-**Note:** MILESTONES.md entry is now created automatically by `gsd-tools milestone complete` in the archive_milestone step. The entry includes version, date, phase/plan/task counts, and accomplishments extracted from SUMMARY.md files.
+**Note:** MILESTONES.md entry is now created automatically by `gsd-tools milestone complete` in the archive_milestone step. The entry includes version, date, phase/plan/task counts, and accomplishments extracted from summary.md files.
 
 If additional details are needed (e.g., user-provided "Delivered" summary, git range, LOC stats), add them manually after the CLI creates the base entry.
 
@@ -339,7 +339,7 @@ Initial user testing showed demand for shape tools.
 
 <step name="reorganize_roadmap">
 
-Update `.planning/ROADMAP.md` — group completed milestone phases:
+Update `.planning/roadmap.md` — group completed milestone phases:
 
 ```markdown
 # Roadmap: [Project Name]
@@ -391,10 +391,10 @@ ARCHIVE=$(node .github/get-shit-done/bin/gsd-tools.cjs milestone complete "v[X.Y
 
 The CLI handles:
 - Creating `.planning/milestones/` directory
-- Archiving ROADMAP.md to `milestones/v[X.Y]-ROADMAP.md`
+- Archiving roadmap.md to `milestones/v[X.Y]-ROADMAP.md`
 - Archiving REQUIREMENTS.md to `milestones/v[X.Y]-REQUIREMENTS.md` with archive header
 - Moving audit file to milestones if it exists
-- Creating/appending MILESTONES.md entry with accomplishments from SUMMARY.md files
+- Creating/appending MILESTONES.md entry with accomplishments from summary.md files
 - Updating STATE.md (status, last activity)
 
 Extract from result: `version`, `date`, `phases`, `plans`, `tasks`, `accomplishments`, `archived`.
@@ -416,18 +416,18 @@ Verify: `✅ Phase directories archived to .planning/milestones/v[X.Y]-phases/`
 If "Skip": Phase directories remain in `.planning/phases/` as raw execution history. Use `/gsd-cleanup` later to archive retroactively.
 
 After archival, the AI still handles:
-- Reorganizing ROADMAP.md with milestone grouping (requires judgment)
+- Reorganizing roadmap.md with milestone grouping (requires judgment)
 - Full PROJECT.md evolution review (requires understanding)
-- Deleting original ROADMAP.md and REQUIREMENTS.md
+- Deleting original roadmap.md and REQUIREMENTS.md
 - These are NOT fully delegated because they require AI interpretation of content
 
 </step>
 
 <step name="reorganize_roadmap_and_delete_originals">
 
-After `milestone complete` has archived, reorganize ROADMAP.md with milestone groupings, then delete originals:
+After `milestone complete` has archived, reorganize roadmap.md with milestone groupings, then delete originals:
 
-**Reorganize ROADMAP.md** — group completed milestone phases:
+**Reorganize roadmap.md** — group completed milestone phases:
 
 ```markdown
 # Roadmap: [Project Name]
@@ -451,7 +451,7 @@ After `milestone complete` has archived, reorganize ROADMAP.md with milestone gr
 **Then delete originals:**
 
 ```bash
-rm .planning/ROADMAP.md
+rm .planning/roadmap.md
 rm .planning/REQUIREMENTS.md
 ```
 
@@ -472,7 +472,7 @@ ls .planning/RETROSPECTIVE.md 2>/dev/null
 
 **Gather retrospective data:**
 
-1. From SUMMARY.md files: Extract key deliverables, one-liners, tech decisions
+1. From summary.md files: Extract key deliverables, one-liners, tech decisions
 2. From VERIFICATION.md files: Extract verification scores, gaps found
 3. From UAT.md files: Extract test results, issues found
 4. From git log: Count commits, calculate timeline
@@ -487,7 +487,7 @@ ls .planning/RETROSPECTIVE.md 2>/dev/null
 **Phases:** {phase_count} | **Plans:** {plan_count}
 
 ### What Was Built
-{Extract from SUMMARY.md one-liners}
+{Extract from summary.md one-liners}
 
 ### What Worked
 {Patterns that led to smooth execution}
@@ -765,7 +765,7 @@ Milestone completion is successful when:
 - [ ] PROJECT.md full evolution review completed
 - [ ] All shipped requirements moved to Validated in PROJECT.md
 - [ ] Key Decisions updated with outcomes
-- [ ] ROADMAP.md reorganized with milestone grouping
+- [ ] roadmap.md reorganized with milestone grouping
 - [ ] Roadmap archive created (milestones/v[X.Y]-ROADMAP.md)
 - [ ] Requirements archive created (milestones/v[X.Y]-REQUIREMENTS.md)
 - [ ] REQUIREMENTS.md deleted (fresh for next milestone)

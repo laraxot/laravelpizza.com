@@ -3,11 +3,14 @@ title: "scripts conflict resolution"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "scripts conflict resolution"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Script di Risoluzione dei Conflitti
@@ -183,7 +186,7 @@ Dopo la risoluzione dei conflitti, verranno eseguite le seguenti verifiche:
 
 - [Documentazione Generale sulla Risoluzione dei Conflitti](../../docs/bashscripts_conflict_resolution.md)
 - [Linee Guida per la Scrittura di Script Bash](./git_scripts.md)
-- [Principio DRY negli Script Bash](../raw/history/no_duplicate_functions_in_sourced_scripts.md)
+- [Principio DRY negli Script Bash](./NO_DUPLICATE_FUNCTIONS_IN_SOURCED_SCRIPTS.md)
 - [Risoluzione dei Conflitti Bash](./conflict_resolution_bash.md)
 
 ## Risoluzioni recenti (Aprile 2025)
@@ -256,7 +259,7 @@ Dopo la risoluzione dei conflitti, verranno eseguite le seguenti verifiche:
 
 - [Documentazione Generale sulla Risoluzione dei Conflitti](../../docs/bashscripts_conflict_resolution.md)
 - [Linee Guida per la Scrittura di Script Bash](./git_scripts.md)
-- [Principio DRY negli Script Bash](../raw/history/no_duplicate_functions_in_sourced_scripts.md)
+- [Principio DRY negli Script Bash](./NO_DUPLICATE_FUNCTIONS_IN_SOURCED_SCRIPTS.md)
 - [Risoluzione dei Conflitti Bash](./conflict_resolution_bash.md)
 
 ## Risoluzioni recenti (Aprile 2025)
@@ -347,12 +350,28 @@ Gli script possono essere migliorati e personalizzati. Per contribuire:
 ```bash
 #!/bin/bash
 
+<<<<<<< HEAD
 # =======================
+=======
+<<<<<<< HEAD
+# -----------------------
+=======
+# =======================
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 
 # Nome dello script
 
+<<<<<<< HEAD
 # =======================
+=======
+<<<<<<< HEAD
+# -----------------------
+=======
+# =======================
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 # Descrizione: Breve descrizione dello script
 
@@ -362,13 +381,29 @@ Gli script possono essere migliorati e personalizzati. Per contribuire:
 
 
 # Nome dello script
+<<<<<<< HEAD
 # =======================
+=======
+<<<<<<< HEAD
+# -----------------------
+=======
+# =======================
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 # Descrizione: Breve descrizione dello script
 # Utilizzo: ./path/to/script.sh [argomenti]
 # Autore: Nome dell'autore
 
 
+<<<<<<< HEAD
 # =======================
+=======
+<<<<<<< HEAD
+# -----------------------
+=======
+# =======================
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 # Dichiarazione delle costanti e variabili
 

@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\URL;
 use Modules\User\Database\Factories\UserFactory;
+<<<<<<< HEAD
+use Modules\User\Http\Middleware\EnsureVerifiedIdentity;
+=======
+>>>>>>> laraxot/dev
 use Modules\User\Tests\TestCase;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use PHPUnit\Framework\Assert;
@@ -110,7 +114,11 @@ test('the verified middleware sends an unverified user to the notice page', func
 
 test('EnsureVerifiedIdentity sends an unverified user to the notice page and lets verified users through', function (): void {
     /** @var TestCase $this */
+<<<<<<< HEAD
+    Route::middleware(['web', 'auth', EnsureVerifiedIdentity::class])
+=======
     Route::middleware(['web', 'auth', \Modules\User\Http\Middleware\EnsureVerifiedIdentity::class])
+>>>>>>> laraxot/dev
         ->get('/_test/verified-identity-only', static fn (): string => 'ok');
 
     $unverified = UserFactory::new()->unverified()->createOne();

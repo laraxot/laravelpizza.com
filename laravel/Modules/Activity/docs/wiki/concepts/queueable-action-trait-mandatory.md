@@ -14,10 +14,9 @@ related:
   - ./queueable-action-execute-entrypoint.md
   - ../../../../../../docs/wiki/rules/queueable-action-trait-mandatory.md
   - ../../../Xot/docs/wiki/concepts/queueable-action-trait-mandatory.md
-status: draft
 ---
 
-# QueueableAction trait: Activity
+# QueueableAction trait — Activity
 
 ## Audit modulo
 
@@ -25,7 +24,7 @@ status: draft
 bash bashscripts/tools/audit-queueable-action-trait.sh
 ```
 
-Stato 2026-07-12: **OK**: ogni file in `app/Actions/` ha il trait.
+Stato 2026-07-12: **OK** — ogni file in `app/Actions/` ha il trait.
 
 ## Fuori da `app/Actions/` (corretto)
 

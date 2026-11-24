@@ -1,11 +1,10 @@
 ---
 title: "Activity Module Wiki Index"
-type: index
-status: draft
-updated: 2026-10-23
-tags: [docs, activity, llm-wiki]
-qmd: "activity module wiki index activity"
+qmd: "activity llm wiki index md"
+type: note
+tags: [documentation]
 ---
+
 # Activity Module Wiki Index
 
 > **Module**: Activity
@@ -51,7 +50,7 @@ _No troubleshooting pages created yet_
 ### Related Project Concepts
 
 - [Laraxot Architecture](../../docs/wiki/concepts/laraxot-architecture.md)
-- [Actions Over Services](../../../../../docs/wiki/concepts/actions-over-services.md)
+- [Actions Over Services](../../docs/wiki/concepts/actions-over-services.md)
 - [PHPStan Level 10](../../docs/wiki/concepts/phpstan-level10.md)
 
 ## Module's Role in Project

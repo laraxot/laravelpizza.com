@@ -7,5 +7,4 @@ updated: 2026-09-26
 qmd: "examples"
 issues: []
 discussions: []
-status: draft
 ---

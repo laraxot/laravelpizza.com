@@ -16,7 +16,6 @@ related:
   - "./component-verification-rules.md"
   - "./component-verification.md"
   - "./dependency-rules.md"
-status: draft
 ---
 
 # Convenzioni di Namespace nel Modulo User
@@ -210,7 +209,7 @@ Se l'override del tema non funziona:
 
 - [Documentazione Laravel View](https://laravel.com/project_docs/views)
 - [Regole Struttura Directory Auth](../../../.windsurf/rules/translations.md#regola-critica-struttura-directory-auth-laravel)
-- [Documentazione Tema One](../../../themes/one/project_docs/readme.md)
+- [Documentazione Tema One](../../../themes/one/project_docs/README.md)
 
 ---
 

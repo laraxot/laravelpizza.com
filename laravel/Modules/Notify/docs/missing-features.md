@@ -3,7 +3,11 @@ title: "missing features"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "missing features"
 issues: []
 discussions: []
@@ -12,8 +16,8 @@ status: draft
 
 # Analisi Funzionalità Mancanti - Modulo Notify
 
-**Data Analisi**: [DATE]  
-**Versione LimeSurvey Upstream**: 5.4.x+  
+**Data Analisi**: [DATE]
+**Versione LimeSurvey Upstream**: 5.4.x+
 **Repository Upstream**: https://github.com/LimeSurvey/LimeSurvey
 
 ## Scopo del Modulo
@@ -27,7 +31,7 @@ Il modulo **Notify** è il motore di comunicazione dell'applicazione, fornendo:
 - Code asincrone per invio massivo
 - Sistema template modulare e riutilizzabile
 
-**Architettura**: Modulo infrastrutturale per comunicazioni; utilizzato da Quaeris per distribuzione survey.
+**Architettura**: Modulo infrastrutturale per comunicazioni; utilizzato da <nome progetto> per distribuzione survey.
 
 ## Stato Attuale Implementazione
 
@@ -240,9 +244,9 @@ Nessuna funzionalità critica mancante - il modulo Notify è ben implementato
 
 ## Collegamenti
 
-- [Modulo Quaeris](../Quaeris/docs/readme.md)
-- [Modulo Limesurvey](../limesurvey/docs/readme.md)
-- [Notify README](./readme.md)
+- [Modulo <nome progetto>](../<nome progetto>/docs/README.md)
+- [Modulo Limesurvey](../limesurvey/docs/README.md)
+- [Notify README](./README.md)
 
 ---
 **Prossima Revisione**: [DATE]

@@ -36,10 +36,10 @@ return [
     ],
     'resources' => [
         'section' => [
-            'label' => 'Sezione',
-            'plural' => 'Sezioni',
+            'label' => 'Section',
+            'plural' => 'Sections',
             'navigation' => [
-                'label' => 'Sezioni',
+                'label' => 'Sections',
                 'icon' => 'heroicon-o-rectangle-stack',
             ],
         ],
@@ -48,64 +48,64 @@ return [
         'footer' => [
             'label' => 'Footer',
             'info' => [
-                'label' => 'Info Footer',
+                'label' => 'Footer Info',
                 'fields' => [
-                    'logo' => 'Logo Footer',
-                    'company_name' => 'Nome Azienda',
-                    'description' => 'Descrizione',
+                    'logo' => 'Footer Logo',
+                    'company_name' => 'Company Name',
+                    'description' => 'Description',
                     'email' => 'Email',
-                    'phone' => 'Telefono',
-                    'address' => 'Indirizzo',
+                    'phone' => 'Phone',
+                    'address' => 'Address',
                 ],
             ],
             'links' => [
                 'label' => 'Link Footer',
                 'fields' => [
-                    'title' => 'Titolo Sezione',
+                    'title' => 'Section Title',
                     'links' => [
                         'label' => 'Link',
                         'fields' => [
                             'label' => 'Etichetta Link',
                             'url' => 'URL',
-                            'icon' => 'Icona (opzionale)',
+                            'icon' => 'Icon (optional)',
                         ],
                     ],
                 ],
             ],
             'social' => [
-                'label' => 'Social Footer',
+                'label' => 'Footer Social',
                 'fields' => [
-                    'title' => 'Titolo Sezione',
+                    'title' => 'Section Title',
                     'social_links' => 'Link Social',
-                    'platform' => 'Piattaforma Social',
+                    'platform' => 'Social Platform',
                     'url' => 'URL Profilo',
                 ],
             ],
             'contact' => [
-                'label' => 'Contatti Footer',
+                'label' => 'Footer Contacts',
                 'fields' => [
-                    'title' => 'Titolo Sezione',
-                    'address' => 'Indirizzo',
-                    'phone' => 'Telefono',
+                    'title' => 'Section Title',
+                    'address' => 'Address',
+                    'phone' => 'Phone',
                     'email' => 'Email',
                 ],
             ],
             'newsletter' => [
-                'label' => 'Newsletter Footer',
+                'label' => 'Footer Newsletter',
                 'fields' => [
-                    'title' => 'Titolo Sezione',
-                    'description' => 'Descrizione',
-                    'button_text' => 'Testo Pulsante',
+                    'title' => 'Section Title',
+                    'description' => 'Description',
+                    'button_text' => 'Button Text',
                 ],
             ],
             'quick_links' => [
                 'label' => 'Link Rapidi Footer',
                 'fields' => [
-                    'title' => 'Titolo',
+                    'title' => 'Title',
                     'links' => [
                         'label' => 'Link Rapidi',
                         'fields' => [
-                            'label' => 'Etichetta',
+                            'label' => 'Label',
                             'url' => 'URL',
                             'target' => 'Target',
                         ],

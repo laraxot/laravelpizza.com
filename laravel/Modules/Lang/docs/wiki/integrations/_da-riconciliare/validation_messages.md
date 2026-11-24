@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "redundancy analysis"
 related:
   - "./italian-text-refined-audit-report.md"
-  - "../../../italian-text-refined-audit-report.md"
-status: draft
 ---
 # Gestione delle Traduzioni dei Messaggi di Validazione
 
@@ -167,8 +165,5 @@ class StoreOrderRequest extends FormRequest
 - [translations-faq.md](./translations-faq.md)
 - [TRANSLATION_KEYS_BEST_PRACTICES.md](translation-keys-best-practices.md)
 - [translations-storage.md](./translations-storage.md)
-- [translations-faq.md](../../../translations-faq.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../../translation-keys-best-practices.md)
-- [translations-storage.md](../../../translations-storage.md)
 - [translation-process.md](./translation-process.md)
 - [README.md](./README.md) 

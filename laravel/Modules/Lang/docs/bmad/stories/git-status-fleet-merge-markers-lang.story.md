@@ -5,7 +5,7 @@ updated: 2026-09-26
 qmd: "git status fleet merge markers lang.story"
 issues: []
 discussions: []
-title: "Bonifica marker merge committati: Lang"
+title: "Bonifica marker merge committati — Lang"
 type: story
 module: Lang
 epic: quality
@@ -13,7 +13,7 @@ story_id: "git-status-fleet-merge-markers-lang"
 status: done
 track: quality/fleet
 related:
-  - ../../../../Xot/docs/bmad/stories/merge-marker-fleet-residue.story.md
+  - ../../../Xot/docs/bmad/stories/merge-marker-fleet-residue.story.md
 ---
 
 # git-status-fleet-merge-markers-lang
@@ -48,7 +48,7 @@ Dettaglio restore:
 
 Campione >5 commits (`docs-naming-convention-fix-duplicate.md`, 34 revertiti):
 verificato che il blob HEAD ripulito dai soli marker è **identico** al blob
-ripristinato: i 34 commit intermedi non avevano contenuto reale oltre i marker.
+ripristinato — i 34 commit intermedi non avevano contenuto reale oltre i marker.
 Nessuna perdita.
 
 ## MANUAL irrisolti
@@ -64,12 +64,12 @@ Nessuno.
 
 Seconda passata manuale sui 5 blocchi divergenti risolti provvisoriamente
 "ours" (pack `/tmp/review-Lang.md`). Nota: i marker provengono da
-`laraxot/dev:docs/archive/historical/`: il lato THEIRS è la copia archiviata
+`laraxot/dev:docs/archive/historical/` — il lato THEIRS è la copia archiviata
 storica; entrambi i parent del merge contenevano gli stessi marker committati.
 
 | File | Blocco | Decisione | Motivo |
 |---|---|---|---|
-| `docs/wiki/integrations/_da-riconciliare/file-naming.md` | 1 (frontmatter) | union | `type: rule` da theirs (il doc è normativo: "Regola Fondamentale", convenzioni, checklist: e `rule` è un tipo già usato in `docs/wiki/rules/`); `tags`/`qmd` ours (italiano = lingua del doc, già superset semantico di `[migration, filament]`; dedup migrazione/migration) |
+| `docs/wiki/integrations/_da-riconciliare/file-naming.md` | 1 (frontmatter) | union | `type: rule` da theirs (il doc è normativo — "Regola Fondamentale", convenzioni, checklist — e `rule` è un tipo già usato in `docs/wiki/rules/`); `tags`/`qmd` ours (italiano = lingua del doc, già superset semantico di `[migration, filament]`; dedup migrazione/migration) |
 | `docs/wiki/integrations/_da-riconciliare/pluralization-and-localization.md` | 1 | ours | path kebab-case `translation-keys-best-practices.md` vs `./TRANSLATION_KEYS_BEST_PRACTICES.md`: vince kebab (convenzione repo, ~150 vs ~51 occorrenze) |
 | `docs/wiki/integrations/_da-riconciliare/pluralization-and-localization.md` | 2 | union | link kebab da ours + lista theirs deduplicata: ours aveva 5 righe `README.md` duplicate (garbage); risultato = 4 link unici |
 | `docs/wiki/integrations/_da-riconciliare/validation-messages.md` | 1 | ours | come pluralization blocco 1: vince path kebab-case |
@@ -77,7 +77,7 @@ storica; entrambi i parent del merge contenevano gli stessi marker committati.
 
 Note residue (fuori scope del pack, da girare al parent):
 - In entrambi i file `.md` del pack il **corpo del documento è duplicato
-  integralmente 2 volte**: pre-esistente e identico nei due parent, non
+  integralmente 2 volte** — pre-esistente e identico nei due parent, non
   introdotto da questo merge: lasciato com'è.
 - Marker reali ancora presenti in `_da-riconciliare/documentation-link-conventions.md`
   e `_da-riconciliare/coverage.md` (altri pack); le occorrenze in

@@ -1,0 +1,20 @@
+---
+title: 'Chunk — risorse esterne'
+module: UI
+type: reference
+slug: chunk
+description: 'Elenco di 1 riferimenti esterni raccolti per chunk, deduplicati e convertiti da un dump di link.'
+tags: [migrato-da-txt, ui]
+converted_from: chunk.txt
+created: 2026-08-24
+updated: 2026-08-24
+---
+
+# Chunk — risorse esterne
+
+> Fonti raccolte durante lo studio dell'argomento. Una fonte vale quando la si
+> collega a un punto del codice: leggila, poi trova dove è già applicata.
+
+## Riferimenti
+
+- <https://github.com/owainjones74/filament-chunked-file-uploads/tree/main>

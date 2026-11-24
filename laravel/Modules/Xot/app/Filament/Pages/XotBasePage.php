@@ -38,7 +38,13 @@ use Modules\Xot\Filament\Traits\TransTrait;
  */
 abstract class XotBasePage extends Page implements HasForms
 {
+<<<<<<< HEAD
+    use InteractsWithForms {
+        form as protected interactsWithFormsForm;
+    }
+=======
     use InteractsWithForms;
+>>>>>>> laraxot/dev
     use TransTrait;
 
     /**
@@ -63,6 +69,12 @@ abstract class XotBasePage extends Page implements HasForms
      */
     protected string $view = '';
 
+<<<<<<< HEAD
+    /** Vista usata quando la pagina non ne ha una (vedi getView). */
+    public const string GENERIC_VIEW = 'xot::filament.pages.generic';
+
+=======
+>>>>>>> laraxot/dev
     /**
      * Cache timeout per operazioni di cache (in secondi).
      */
@@ -170,12 +182,47 @@ abstract class XotBasePage extends Page implements HasForms
     }
 
     /**
+<<<<<<< HEAD
+     * Il form "form" della pagina. Filament lo costruisce con `form()`; le pagine Xot lo descrivono in `schema()`.
+     * Senza questo ponte `schema()` non veniva mai chiamato: il form restava senza campi e senza `statePath('data')`,
+     * e `$this->form->fill([...])` scriveva le chiavi direttamente sulle proprietà della pagina ("Cannot access
+     * protected property ...::$view" su Cms Headernav/Footer, "::$title" su Xot MetatagPage).
+     * Le pagine che non ridefiniscono `schema()` tengono il comportamento di Filament (getFormSchema/getFormStatePath).
+     */
+    public function form(Schema $schema): Schema
+    {
+        $declaringClass = (new \ReflectionMethod($this, 'schema'))->getDeclaringClass()->getName();
+        if ($declaringClass !== self::class) {
+            return $this->schema($schema);
+        }
+
+        return $this->interactsWithFormsForm($schema);
+    }
+
+    /**
+=======
+>>>>>>> laraxot/dev
      * Ottiene la vista associata alla pagina.
      *
      * @return string Il percorso della vista
      */
     public function getView(): string
     {
+<<<<<<< HEAD
+        if ($this->view === '' || ! view()->exists($this->view)) {
+            try {
+                $view = app(GetViewByClassAction::class)->execute(static::class);
+            } catch (\Throwable) {
+                $view = '';
+            }
+            if ($view !== '' && view()->exists($view)) {
+                return (string) $view;
+            }
+
+            // Nessuna vista dedicata (o una vista dichiarata che non esiste): la pagina mostra widget e form con la
+            // vista generica invece di un errore 500.
+            return self::GENERIC_VIEW;
+=======
         if ($this->view === '') {
             $view = app(GetViewByClassAction::class)->execute(static::class);
             if (view()->exists($view)) {
@@ -184,12 +231,38 @@ abstract class XotBasePage extends Page implements HasForms
 
             // Se non troviamo una vista, lanciamo un'eccezione
             throw new \RuntimeException('Nessuna vista trovata per la classe: '.static::class);
+>>>>>>> laraxot/dev
         }
 
         return $this->view;
     }
 
     /**
+<<<<<<< HEAD
+     * Form della pagina da mostrare nella vista generica, nell'ordine in cui la pagina li registra.
+     *
+     * Usa gli schemi già registrati da Filament (form(), getForms() e i metodi con il nome del form), senza
+     * chiamare direttamente getForms(), deprecato in Filament 5.
+     *
+     * @return list<Schema>
+     */
+    public function getGenericViewSchemas(): array
+    {
+        $schemas = [];
+        foreach ($this->getCachedSchemas() as $name => $schema) {
+            // "content" è lo schema del corpo pagina di Filament: lo disegna la vista, non va ripetuto qui.
+            if ($name === 'content' || ! $schema instanceof Schema) {
+                continue;
+            }
+            $schemas[] = $schema;
+        }
+
+        return $schemas;
+    }
+
+    /**
+=======
+>>>>>>> laraxot/dev
      * Resolve concrete page schema without invoking deprecated Filament hook directly.
      *
      * @return array<int|string, Component>

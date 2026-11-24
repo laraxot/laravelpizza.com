@@ -5,9 +5,6 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-qmd: "code quality analysis - user module user"
-status: superseded
-superseded_by: ../../code-quality-analysis.md
 ---
 
 # Code Quality Analysis - User Module
@@ -318,6 +315,6 @@ public function getTableColumns(): array
 
 - [AUTHENTICATION_PERFORMANCE_OPTIMIZATION.md](./performance/AUTHENTICATION_PERFORMANCE_OPTIMIZATION.md)
 - [optimization-analysis.md](./optimization-analysis.md)
-- [phpstan-compliance.md](../../phpstan-compliance.md)
+- [phpstan-compliance.md](./phpstan-compliance.md)
 
 This analysis provides a comprehensive roadmap for improving code quality in the User module while maintaining security and functionality.

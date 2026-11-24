@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "repository"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🏗️ Repository Pattern - Implementazione PTVX
@@ -293,6 +292,15 @@ class CachedUserRepository implements UserRepositoryInterface
 - Query ottimizzate
 
 ---
+
+title: "repository"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "repository"
+issues: []
+discussions: []
 **📖 Vedi anche**: [Service Layer Pattern](./service-layer.md), [SOLID Principles](../claude/solid-principles.md)
 
 *Ultimo aggiornamento: Dicembre 2025*

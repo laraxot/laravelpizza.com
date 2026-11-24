@@ -3,11 +3,14 @@ title: "readme analisi duplicati"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "readme analisi duplicati"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🐄 Analisi Metodi Duplicati - Guida Rapida
@@ -25,26 +28,26 @@ Questo è il documento PRINCIPALE con:
 - ✅ Piano di implementazione dettagliato
 
 ### Copie nei Moduli
-Ogni modulo ha una copia in `Modules/{ModuleName}/docs/METODI_DUPLICATI_ANALISI.md`:
+Ogni modulo ha una copia in `Modules/{ModuleName}/docs/metodi_duplicati_analisi.md`:
 
-- `Modules/AI/docs/METODI_DUPLICATI_ANALISI.md`
-- `Modules/Activity/docs/METODI_DUPLICATI_ANALISI.md`
-- `Modules/Blog/docs/METODI_DUPLICATI_ANALISI.md`
-- `Modules/Cms/docs/METODI_DUPLICATI_ANALISI.md`
-- `Modules/Comment/docs/METODI_DUPLICATI_ANALISI.md`
-- `Modules/Fixcity/docs/METODI_DUPLICATI_ANALISI.md`
-- `Modules/Gdpr/docs/METODI_DUPLICATI_ANALISI.md`
-- `Modules/Geo/docs/METODI_DUPLICATI_ANALISI.md`
-- `Modules/Job/docs/METODI_DUPLICATI_ANALISI.md`
-- `Modules/Lang/docs/METODI_DUPLICATI_ANALISI.md`
-- `Modules/Media/docs/METODI_DUPLICATI_ANALISI.md`
-- `Modules/Notify/docs/METODI_DUPLICATI_ANALISI.md`
-- `Modules/Rating/docs/METODI_DUPLICATI_ANALISI.md`
-- `Modules/Seo/docs/METODI_DUPLICATI_ANALISI.md`
-- `Modules/Tenant/docs/METODI_DUPLICATI_ANALISI.md`
-- `Modules/UI/docs/METODI_DUPLICATI_ANALISI.md`
-- `Modules/User/docs/METODI_DUPLICATI_ANALISI.md`
-- `Modules/Xot/docs/METODI_DUPLICATI_ANALISI.md`
+- `Modules/AI/docs/metodi_duplicati_analisi.md`
+- `Modules/Activity/docs/metodi_duplicati_analisi.md`
+- `Modules/Blog/docs/metodi_duplicati_analisi.md`
+- `Modules/Cms/docs/metodi_duplicati_analisi.md`
+- `Modules/Comment/docs/metodi_duplicati_analisi.md`
+- `Modules/Fixcity/docs/metodi_duplicati_analisi.md`
+- `Modules/Gdpr/docs/metodi_duplicati_analisi.md`
+- `Modules/Geo/docs/metodi_duplicati_analisi.md`
+- `Modules/Job/docs/metodi_duplicati_analisi.md`
+- `Modules/Lang/docs/metodi_duplicati_analisi.md`
+- `Modules/Media/docs/metodi_duplicati_analisi.md`
+- `Modules/Notify/docs/metodi_duplicati_analisi.md`
+- `Modules/Rating/docs/metodi_duplicati_analisi.md`
+- `Modules/Seo/docs/metodi_duplicati_analisi.md`
+- `Modules/Tenant/docs/metodi_duplicati_analisi.md`
+- `Modules/UI/docs/metodi_duplicati_analisi.md`
+- `Modules/User/docs/metodi_duplicati_analisi.md`
+- `Modules/Xot/docs/metodi_duplicati_analisi.md`
 
 ### Copie nei Temi
 - `Themes/Sixteen/docs/analisi-metodi-duplicati.md`
@@ -233,6 +236,15 @@ A: 5 settimane totali, ma benefici visibili già dopo Fase 1.
 - **Team Lead**: [Da definire]
 
 ---
+
+title: "readme analisi duplicati"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "readme analisi duplicati"
+issues: []
+discussions: []
 **🐄 Super Mucca Approved**: Documento basato su analisi REALE del codice con confidenza 99.9%.
 
 **Ultima Revisione**: 15 Ottobre 2025

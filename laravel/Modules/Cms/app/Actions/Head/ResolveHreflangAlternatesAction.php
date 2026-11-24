@@ -26,12 +26,6 @@ final class ResolveHreflangAlternatesAction
     public function execute(?array $onlyLocales = null): array
     {
         $urls = [];
-<<<<<<< .merge_file_tqUmG8
-        foreach (array_keys(LaravelLocalization::getSupportedLocales()) as $code) {
-            $url = LaravelLocalization::getLocalizedURL($code, null, [], true);
-            if (is_string($url) && ($onlyLocales === null || in_array((string) $code, $onlyLocales, true))) {
-                $urls[(string) $code] = $url;
-=======
         $locales = array_map(strval(...), array_keys(LaravelLocalization::getSupportedLocales()));
         // Dal percorso della richiesta corrente e non da getLocalizedURL(): quella usa la richiesta memorizzata nel singleton
         // e in un processo che serve piu' richieste (test, Octane) restituiva la home di ogni lingua (`/de`) o il percorso
@@ -40,7 +34,6 @@ final class ResolveHreflangAlternatesAction
         foreach ($locales as $code) {
             if ($onlyLocales !== null && ! in_array($code, $onlyLocales, true)) {
                 continue;
->>>>>>> .merge_file_sehthj
             }
             $urls[$code] = in_array($first, $locales, true)
                 ? url('/'.$code.($rest !== '' ? '/'.$rest : ''))
@@ -55,10 +48,7 @@ final class ResolveHreflangAlternatesAction
 
     /**
      * @param  array<string, string>  $localizedUrls  codice lingua => URL della stessa pagina in quella lingua
-<<<<<<< .merge_file_tqUmG8
-=======
      * @param  string  $query  query da conservare negli URL (es. `?page=2`), senza `?` iniziale
->>>>>>> .merge_file_sehthj
      * @return array<string, string>
      */
     public function build(array $localizedUrls, string $defaultLocale, string $query = ''): array

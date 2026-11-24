@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "guida implementation ux"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Guida all'Implementazione UX in il progetto

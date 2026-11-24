@@ -6,8 +6,11 @@ namespace Modules\Tenant\Tests\Feature;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
+use Modules\Tenant\Tests\TestCase;
 use Nwidart\Modules\Facades\Module;
 use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 
 /** Nome della connessione di un modulo attivo, alias registrato da TenantServiceProvider al boot. */
 function aliasedModuleConnection(): string

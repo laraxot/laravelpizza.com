@@ -4,7 +4,11 @@ type: concept
 tags: [notify, docs, architecture, dto, structure, conventions]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify documentazione architecture dto structure conventions convenzioni per la struttura dei dto nel modulo notify frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -16,11 +20,6 @@ related:
   - ../conventions/README.md
   - ../rules/README.md
   - ../best-practices/naming-conventions.md
-  - ../../conventions/README.md
-  - ../../rules/README.md
-  - ../../best-practices/naming-conventions.md
-status: superseded
-superseded_by: ../../architecture/dto-structure-conventions.md
 ---
 # Convenzioni per la Struttura dei DTO nel Modulo Notify
 

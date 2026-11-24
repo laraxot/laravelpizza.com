@@ -4,11 +4,8 @@ type: guideline
 module: Activity
 updated: 2026-09-01
 qmd: "git lfs vietato gitattributes prototipo binari blob normali activity puntatori immagini"
-<<<<<<< .merge_file_TQsxLl
-=======
 status: draft
 tags: [docs, activity]
->>>>>>> .merge_file_Eu5HWW
 ---
 
 # Git LFS non si usa in questo progetto
@@ -18,11 +15,7 @@ eccezione.
 
 ## La regola
 
-<<<<<<< .merge_file_TQsxLl
-I binari — immagini, font, PDF, archivi — si versionano come **blob git normali**.
-=======
 I binari: immagini, font, PDF, archivi: si versionano come **blob git normali**.
->>>>>>> .merge_file_Eu5HWW
 
 Vietato:
 
@@ -54,48 +47,8 @@ bash bashscripts/templates/sync-gitattributes-modules.sh
 ```
 
 ```gitattributes
-# Prototipo .gitattributes per laravel/Modules/* e laravel/Themes/*
-# Canon: bashscripts/ai/wiki/rules/no-git-lfs.md
-# Sync:  bash bashscripts/templates/sync-gitattributes-modules.sh
-#
-# Git LFS VIETATO. I binari sono blob git normali.
-# Mai: filter=lfs / diff=lfs / merge=lfs
-
-* text=auto
-
-*.css linguist-vendored
-*.scss linguist-vendored
-*.js linguist-vendored
-CHANGELOG.md export-ignore
-
-<<<<<<< .merge_file_TQsxLl
-# Binari come blob git normali — NIENTE git-lfs.
-=======
-# Binari come blob git normali: NIENTE git-lfs.
->>>>>>> .merge_file_Eu5HWW
-# `binary` disattiva diff e normalizzazione di fine riga.
-# `!filter` annulla un eventuale filter.lfs ereditato dalla configurazione di sistema:
-# e' questa la protezione vera, perche' filter.lfs.* puo' restare installato sulla
-# macchina per altri progetti e senza `!filter` verrebbe applicato anche qui.
-*.png binary !filter
-*.jpg binary !filter
-*.jpeg binary !filter
-*.gif binary !filter
-*.webp binary !filter
-*.ico binary !filter
-*.svg binary !filter
-*.pdf binary !filter
-*.zip binary !filter
-*.woff binary !filter
-*.woff2 binary !filter
-*.ttf binary !filter
-*.eot binary !filter
-*.otf binary !filter
-*.mp4 binary !filter
-*.psd binary !filter
-*.phar binary !filter
-*.db binary !filter
-*.sqlite binary !filter
+# Copia live: bashscripts/templates/gitattributes.module
+# (non duplicare qui: sync sovrascrive Modules/* e Themes/*)
 ```
 
 ### Perche' `binary !filter` e non solo `binary`
@@ -104,11 +57,7 @@ CHANGELOG.md export-ignore
 LFS di intervenire. `!filter` annulla per path qualunque `filter.lfs` ereditato.
 
 Serve davvero: su questa macchina `filter.lfs.*` e' installato a livello **system**
-<<<<<<< .merge_file_TQsxLl
-(`git config --system`) e serve ad altri progetti — `base_predict_fila5` ha 38 file
-=======
 (`git config --system`) e serve ad altri progetti: `base_predict_fila5` ha 38 file
->>>>>>> .merge_file_Eu5HWW
 legittimamente in LFS. Non si disinstalla il pacchetto. Cio' che tiene questo monorepo
 fuori da LFS non e' l'assenza del filtro, e' il `!filter` del prototipo.
 
@@ -190,9 +139,5 @@ problema.
 
 ## Canone
 
-<<<<<<< .merge_file_TQsxLl
-`bashscripts/ai/wiki/rules/no-git-lfs.md` — regola completa, storico degli incidenti e
-=======
 `bashscripts/ai/wiki/rules/no-git-lfs.md`: regola completa, storico degli incidenti e
->>>>>>> .merge_file_Eu5HWW
 procedura per gli oggetti mancanti in push.

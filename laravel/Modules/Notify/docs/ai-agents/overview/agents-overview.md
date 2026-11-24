@@ -3,7 +3,11 @@ title: "agents overview"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "agents overview"
 issues: []
 discussions: []
@@ -234,10 +238,21 @@ vendor/bin/pest --coverage
 ## 📖 Quick Links
 
 ### Getting Started
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_qXG9tu
 - [Coding Standards](../standards/agents-coding-standards.md)
 - [Module Architecture](../architecture/agents-module-architecture.md)
+=======
+>>>>>>> laraxot/dev
 - [Coding Standards](../agents-coding-standards.md)
 - [Module Architecture](../agents-module-architecture.md)
+- [Coding Standards](../agents-coding-standards.md)
+- [Module Architecture](../agents-module-architecture.md)
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_rWzNve
+>>>>>>> laraxot/dev
 - [Quality Gate](../workflow/agents-quality-gate.md)
 
 ### Critical Rules

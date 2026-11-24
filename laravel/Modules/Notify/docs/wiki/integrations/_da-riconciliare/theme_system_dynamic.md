@@ -7,9 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: superseded
-superseded_by: theme-system-dynamic.md
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # 🎨 Theme System - Dynamic Theme Registration

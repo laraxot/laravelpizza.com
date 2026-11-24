@@ -1,13 +1,16 @@
 ---
-title: "AGENTS"
+title: "Agents"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
-qmd: "AGENTS"
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+qmd: "Agents"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Notify {{TYPE^}} LLM Wiki Agent Instructions

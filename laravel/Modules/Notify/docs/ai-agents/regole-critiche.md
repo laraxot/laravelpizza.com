@@ -3,7 +3,11 @@ title: "regole critiche"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "regole critiche"
 issues: []
 discussions: []
@@ -44,7 +48,7 @@ Quando un errore arriva da una pagina Filament/Livewire:
 - lintare anche i file della catena immediatamente caricata dalla pagina;
 - solo dopo passare a test applicativi, query, container o permessi.
 
-Per i chart Quaeris la catena minima da controllare e`:
+Per i chart <nome progetto> la catena minima da controllare e`:
 Per i chart App la catena minima da controllare e`:
 - `QuestionChartChartData`
 - `BuildQuestionChartDatasetAction`
@@ -102,7 +106,7 @@ Per le pagine Folio (`pages/[container0]/[slug0]/index.blade.php`), usare Volt:
 new class extends Component {
     public string $container0 = '';
     public string $slug0 = '';
-    
+
     public function mount(): void { ... }
 };
 ```
@@ -122,7 +126,7 @@ new class extends Component {
     public string $time = '';             // NO!
     public string $location = '';         // NO!
     // ... 20+ proprietà ridondanti!
-    
+
     public function mount(): void {
         $this->title = $event->title;
         $this->description = $event->description;
@@ -157,7 +161,7 @@ new class extends Component {
             $this->event = Event::where('slug', $this->slug0)->first();
         }
     }
-    
+
     #[Computed]
     public function eventsUrl(): string
     {
@@ -238,7 +242,7 @@ new class extends Component {
         // ✅ CORRETTO: lo slug per il JSON è container0.view (es. events.view)
         // Questo permette di caricare il JSON template per il dettaglio del container
         $this->pageSlug = $this->container0 . '.view';
-        
+
         // $data per passare variabili ai componenti inclusi
         $this->data = [
             'container0' => $this->container0,
@@ -280,10 +284,10 @@ Quando c'è un errore/issue da correggere, CREARE SEMPRE:
 
 ```bash
 # Creare issue
-gh issue create --repo provtv/base_ptv_fila5_mono --title "..." --body "..."
+gh issue create --repo provtv/base_ptv_fila5 --title "..." --body "..."
 
 # Creare discussion
-gh api repos/provtv/base_ptv_fila5_mono/discussions --method POST -f category_id=... --field body="..."
+gh api repos/provtv/base_ptv_fila5/discussions --method POST -f category_id=... --field body="..."
 ```
 
 ## 9. Chaos Monkey Incident Response

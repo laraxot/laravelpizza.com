@@ -3,11 +3,14 @@ title: "full stack developer"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "full stack developer"
 issues: []
 discussions: []
-status: draft
 ---
 
 ### Full Stack Developer (id: dev)
@@ -90,13 +93,19 @@ dependencies:
 
 
 ---
+
+title: "full stack developer"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "full stack developer"
+issues: []
+discussions: []
 ## Cross-References
 
-- ← [Agents Index](index.md): All 10 BMad agents
-- ← [Tasks Index](../../tasks/index.md): 22 reusable tasks
-- ← [Main AI Docs Index](../index.md): Master index
-- ← [../../../../agents.md](../../../../../../../../agents.md): Original source
-- ← [Tasks Index](../tasks/index.md): 22 reusable tasks
-- ← [Main AI Docs Index](../index.md): Master index
-- ← [../../../../agents.md](../../../../../../../AGENTS.md): Original source
+- ← [Agents Index](index.md) — All 10 BMad agents
+- ← [Tasks Index](../../tasks/index.md) — 22 reusable tasks
+- ← [Main AI Docs Index](../index.md) — Master index
+- ← [../../../../AGENTS.md](../../../../../../../../AGENTS.md) — Original source
 

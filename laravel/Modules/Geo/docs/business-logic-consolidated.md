@@ -3,11 +3,14 @@ title: "business logic consolidated"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "business logic consolidated"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🏥 Business Logic Consolidata - Progetto <nome progetto>
@@ -250,11 +253,23 @@ User (base)
 ## 🔗 Collegamenti Documentazione
 
 ### Documentazione Moduli
-- [<nome progetto>](../modules/<nome progetto>/docs/readme.md)
-- [<nome progetto>](../modules/<nome progetto>/docs/readme.md)
+- [<nome progetto>](../modules/<nome progetto>/docs/README.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+- [User](../../User/docs/README.md)
+- [Geo](README.md)
+- [Media](../../Media/docs/readme.md)
+=======
+>>>>>>> laraxot/dev
+- [<nome progetto>](../modules/<nome progetto>/docs/README.md)
 - [User](../../User/docs/README.md)
 - [Geo](README.md)
 - [Media](../../Media/docs/README.md)
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [UI](../../UI/docs/README.md)
 - [Xot](../../Xot/docs/README.md)
 
@@ -265,6 +280,15 @@ User (base)
 - [Factory e Seeder](../factory-best-practices.md)
 
 ---
+
+title: "business logic consolidated"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "business logic consolidated"
+issues: []
+discussions: []
 **Versione**: 2.0
 **Autore**: AI Assistant
 **Stato**: Consolidata e Rifattorizzata

@@ -1,4 +1,5 @@
 ---
+qmd: "xot stories services to actions xot artisan story md"
 title: "[STORY] Xot: ArtisanService e Services/Artisan verso Actions (cluster Xot-artisan)"
 type: story
 status: done
@@ -9,7 +10,7 @@ module: Xot
 tags: [services-to-actions, queueable-action, artisan, enum, consolidamento, xot]
 related:
   - ./18.1.xot-services-to-actions.story.md
-  - ./phpstan-cleanup-xot-app.story.md
+  - ./2026-10-06-phpstan-cleanup-xot-app.story.md
   - ../refactoring/artisan-service-refactoring-report.md
   - ../../../../bmad-output/epic-code-standards-services-mixed-const.md
 ---

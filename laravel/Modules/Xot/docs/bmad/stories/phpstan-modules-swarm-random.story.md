@@ -10,10 +10,7 @@ acceptance_criteria:
 references:
   - bashscripts/ai/wiki/memories/agent-standing-order.md
   - docs/sprint-status.yaml
-type: story
-updated: 2026-10-27
-tags: [docs, xot, bmad, phpstan, swarm]
-qmd: "phpstan modules swarm random + docs moduli/temi xot"
+
 ---
 
 # PHPStan Modules swarm random + docs moduli/temi
@@ -262,7 +259,7 @@ swarm parallelo per singolo modulo in ordine random, come da pilastro 8.
 - Causa comune del gruppo piu' grande: i 31 file di `Modules/Fixcity/config/` sono stati riscritti dal commit `.` delle 14:34
   (radice `7430d1efe6`, vicino al pull del pomeriggio citato da `d8b0f413b6`). `config('env.DB_DATABASE') ?? 'database'`
   (convenzione del progetto, vedi DCP-179) e' diventato `env('DB_DATABASE', ...)`, che con `config:cache` restituisce `null`.
-  Dentro ci sono anche chiavi che non sono di FixCity (`limesurvey`, `quaeris`, `totem`, `orbit`, `survey_pdf`). Se le abbia
+  Dentro ci sono anche chiavi che non sono di FixCity (`limesurvey`, `<nome progetto>`, `totem`, `orbit`, `survey_pdf`). Se le abbia
   scritte l'altra macchina non e' provato: il repo annidato del modulo ha ancora HEAD `4ec9fd1` (08:30) con la forma vecchia.
 
 | Gruppo | N | Dove | Primo passo | Claim |
@@ -438,3 +435,80 @@ Fuori scope: `tools/visual/scratch-auth-fixture.sh` (nessun marker in `HEAD`), l
 5. Strumenti citati e assenti dopo `1af871d0c` (`tools/cms/`, `tools/heavy-slot.sh`, `tools/visual/parity-wizard-steps.sh`, `tools/migrations/`, `tools/pest-scratch-db.sh`): vedi «Incidente» sopra; non ripristinati.
 6. La tabella di `root-script-policy.md` (2026-10-13) elenca 4 script in radice; oggi ci sono anche `deploy.sh` e `phpstan-fix-script.sh` e in `laravel/` `compare-html.py`, `fix-vartag-xot.sh`: non aggiornata.
 7. Una riga della policy modulare cita `github.com/provt/` (progetto di un'altra macchina): lasciata, non verificabile qui.
+
+## Diario sessione 2026-11-16 — bootstrap unblock
+
+- PHPStan falliva al boot Larastan: marker in Tenant (`GetTenantFilePathAction`/`GetTenantNameAction`), User, Activity.
+- Fix funzionali: isolation Sushi test + seed; reverse-domain + realpath symlink; Resource Filament senza `getFormSchemaOld` (form in Schemas).
+- Bootstrap OK. Swarm parallelo su moduli. Gate full-tree ancora da chiudere a zero errori tipizzati.
+- Related: `phpstan-conflict-markers-bootstrap` Tenant; standing order BMAD + second brain.
+
+## Diario 2026-11-16 — BaseFilter `schema()` → `form()` (method.deprecated)
+
+- **Scopo:** azzerare `method.deprecated` su `BaseFilter::schema()` (Filament 5: usare `form()`).
+- **Verifica codice:** call-site filtro elencati già su `->form(` (`FilterBuilder`, Ptv Filters, IndividualePesisTable, Asz00fs/Progressionis/Ratings, CondizioniLavoroAdms). Nessun `->schema(` attivo su Filter.
+- **Edit:** rimosso solo blocco commentato `$this->schema(` + import morti in `XotBaseTernaryFilter`.
+- **Docs:** `../filament-filter-schema-to-form.md`.
+- **PHPStan** (`method.deprecated` count): Xot 0, Ptv 0, Performance 0, Progressioni 0, IndennitaCondizioniLavoro 0, IndennitaResponsabilita 0.
+- Ptv ha 1 errore non-deprecato (`instanceof.alwaysTrue` in `BaseSigmaHistoryScheda`) — fuori scope.
+
+## Diario 2026-11-16 — Modules/UI → 0 errori PHPStan
+
+- **Decisione Geo/LocationSelector:** `Modules/Geo` assente; nessun `Comune` reale.
+  Canone `UI/docs/geo-boundary.md` + story 7.14: cancellare, non patchare.
+  `git rm` `LocationSelector.php` (+ `.to_geo`, `.old`, lang `*/location_selector.php`).
+- **AuditCoverage:** 74 stub `self::assertTrue` senza TestCase → rimossi (pattern vietato; già in `.gitignore`).
+- **ThemeMetadataData:** `@throws \InvalidArgumentException`.
+- **variable.unused:** `GroupColumnTest` `$fields` rimosso.
+- Story modulo: `UI/docs/bmad/stories/phpstan-ui-geo-auditcoverage-zero.story.md`.
+- Gate: `phpstan analyse Modules/UI --error-format=raw` → 0.
+
+## Diario sessione 2026-11-16 — ripresa swarm (zorin)
+
+- Full-tree `analyse Modules` con format table crasha in Symfony String `wcswidth` (PHP 8.4): usare `--error-format=raw`; batch max 3 moduli.
+- Scan per-modulo: 8 moduli a 0; residui Activity(~151 tests), UI(~112 Geo+AuditCoverage), Ptv(1 instanceof), Media(2→0).
+- Schema→form Filament: già nel tree; re-verify Xot/Progressioni/Performance/Indennita* = 0 `method.deprecated`.
+- Swarm subagents: Filament/Activity/UI/Media-Job + docs-guardian prompts.
+- Lock: `phpstan-modules-swarm`. Hindsight initiative aggiornata.
+
+## Esito 2026-11-16 — Media + Job (php-backend-agent)
+
+- **Media (2→0):** `AttachMediaActionTest` / `GetAttachmentsSchemaActionTest` — `uses(TestCase::class)` dopo `use Modules\Media\Tests\TestCase` (prima del `use` PHPStan risolveva `Modules\Media\Tests\Unit\Actions\TestCase`).
+- **Job (1→0):** `JobProvidersCoverageTest` — `$provider` usato nelle asserzioni coverage AdminPanelProvider; nessun `variable.unused` residuo (anche copia `tests/unit/providers/`).
+- Verifica: `phpstan analyse Modules/Media` exit 0; `Modules/Job` exit 0 (`--error-format=raw`).
+- Lock acquisiti/rilasciati: `Media`, `Job`.
+
+## Esito 2026-11-16 — PHPStan Modules [OK] No errors
+
+Verificato dal coordinatore (non solo report subagent):
+
+1. **Bootstrap**: marker `<<<<<<< .merge_file_*` in Tenant/User/Activity bloccavano Larastan (`unexpected token "<<"` via `config/modules.php` → `GetTenantFilePathAction`).
+2. **Fix funzionali**: `GetTenantNameAction` realpath symlink; `GetTenantFilePathAction` seed test Sushi; Resource Activity senza `getFormSchemaOld` (form in Schemas).
+3. **Inventario per-modulo (random)**: Activity 151→0, UI 112→0, Ptv 9→0, Progressioni/Performance/Notify/Media/Job/IndennitaResponsabilita →0; già a 0: Xot User Tenant Sigma Rating Pdnd Lang Incentivi IndennitaCondizioniLavoro.
+4. **Gate full-tree**: `php -d memory_limit=2G ./vendor/bin/phpstan analyse Modules` → `TOTAL_ERRORS=0` e banner `[OK] No errors` (stesso run).
+
+Regole rispettate: mixed ultima spiaggia, no ignore/baseline, BMAD + second brain + swarm parallelo.
+
+## Gate 2026-11-16 PHPStan per-modulo SUM=0
+
+- Recount shuffled batch-3 `--error-format=raw` su tutti i 18 moduli: **SUM=0**.
+- Full-tree table format completato con successo: `10669/10669 [============================] 100% [OK] No errors`.
+- Bonifica Docs & Prompts:
+  - Eliminati 11 file `.txt` e `.bak` non convenzionali e 14 alias ridondanti con underscore in `bashscripts/docs/prompts`.
+  - Normalizzati tutti i 167 file prompt in kebab-case con frontmatter YAML e chiave `qmd:`.
+  - Eliminati oltre 350 file duplicati per case-collision e suffissi temporali obsoleti in `Notify`, `User`, `UI`, `Activity`, `Job`, `Media`, `Rating`, `Tenant`, `Lang` e tema `Zero`.
+  - Memoria creata: `bashscripts/ai/wiki/memories/docs-and-prompts-zen-governance.md`.
+
+### Pest gate (sessione)
+
+`GetTenantNameActionTest` fallito per `SQLSTATE[HY000] [2002] Connection timed out` verso DB testing non raggiungibile da questo host (non e' 10.100.200.15, ma il DSN punta a un host irraggiungibile). Skip documentato: PHPStan Modules = 0 verificato; Pest mirato da ripetere quando DB testing e' raggiungibile.
+
+## Esito 2026-11-16 — Activity tests PHPStan 0 (laravel-testing-expert)
+
+Diario swarm (supersede del residuo Activity ~151 nei scan precedenti). Link: story modulo
+`Activity/docs/bmad/stories/phpstan-activity-tests-zero.story.md`. Istruzione utente:
+portare PHPStan Activity a 0; Pest se possibile; aggiornare docs bmad + questo diario.
+
+- **PHPStan** `analyse Modules/Activity --error-format=raw`: **0 errori**.
+- Cause tipiche fixate: FQCN TestCase doppio; `use` dopo `test()`; LogModel* `$activity`; harness paginate; `Helpers.php` in Pest; colonne event-sourcing.
+- **Pest:** hang TCP `10.100.200.53:3306` su connessione `user` (strace `EINPROGRESS`). `test_data.sqlite` creato; suite non verde finché `user` → sqlite condiviso.

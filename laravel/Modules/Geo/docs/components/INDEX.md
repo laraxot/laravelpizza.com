@@ -1,3 +1,14 @@
+---
+title: "INDEX"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "INDEX"
+issues: []
+discussions: []
+---
+
 # Geo Module — Components
 
 ## Filament Form Components
@@ -7,6 +18,7 @@
 | **AddressInput** | `app/Filament/Forms/Components/AddressInput.php` | Address input field with geolocation button (Filament Field component) |
 | **AddressField** | `app/Filament/Forms/Components/AddressField.php` | Full address section with cascading region/province/locality selects |
 | **AddressSection** | `app/Filament/Forms/Components/AddressSection.php` | Legacy section-based address form |
+| **LocationSelector** | `app/Filament/Forms/Components/LocationSelector.php` | Cascading region / province / postal code selector backed by the `Comune` model (moved here from UI, which must not import Geo) |
 
 ### Usage: AddressInput (Recommended for simple address + geolocation)
 
@@ -42,6 +54,20 @@ AddressField::make('address')
     ->relationship('address')
     ->disableLiveUpdates(); // Use in wizards to prevent infinite loops
 ```
+
+### Usage: LocationSelector (Region, province, postal code)
+
+```php
+use Modules\Geo\Filament\Forms\Components\LocationSelector;
+
+LocationSelector::make()
+    ->regionField('region')   // default field names: region, province, cap
+    ->provinceField('province')
+    ->capField('cap')
+    ->required();
+```
+
+Province and postal code options depend on the selected region and province. Validation messages: `geo::location_selector.validation.*`.
 
 ## Blade Components (Legacy)
 

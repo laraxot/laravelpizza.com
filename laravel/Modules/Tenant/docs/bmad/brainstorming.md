@@ -1,5 +1,5 @@
 ---
-title: "Tenant: Brainstorming BMAD (indice e decisioni)"
+title: "Tenant — Brainstorming BMAD (indice e decisioni)"
 type: note
 module: Tenant
 tags:
@@ -8,8 +8,8 @@ tags:
   - brainstorming
   - decisioni
 created: 2026-09-28
-updated: 2026-10-07
-qmd: "tenant brainstorming decisioni aperte scartate"
+updated: 2026-11-16
+qmd: "tenant brainstorming decisioni aperte scartate tenants migration trusthosts"
 related:
   - architecture.md
   - architecture/tenant-config-resolution.md
@@ -19,10 +19,20 @@ bmad: true
 status: active
 ---
 
-# Tenant: Brainstorming
+# Tenant — Brainstorming
 
-> **SUMMARY**: Decisioni prese, questioni aperte e opzioni scartate del modulo `Tenant`,
+> **SUMMARY** — Decisioni prese, questioni aperte e opzioni scartate del modulo `Tenant`,
+<<<<<<< .merge_file_OHCtfh
 > ancorate a file e simboli reali. Il brainstorming di dettaglio per area è negli shard.
+> ancorate a file e simboli reali (riverificate il 2026-11-16: le voci su
+> `ConfigResolverRegistry`, `StandardConfigResolver` e `TenantService` erano obsolete e
+> sono state rimosse — `app/Services` non esiste, la logica è in Action).
+=======
+> ancorate a file e simboli reali (riverificate il 2026-11-16: le voci su
+> `ConfigResolverRegistry`, `StandardConfigResolver` e `TenantService` erano obsolete e
+> sono state rimosse — `app/Services` non esiste, la logica è in Action).
+> Il brainstorming di dettaglio per area è negli shard.
+>>>>>>> .merge_file_n0zUrL
 
 ## Shard
 
@@ -34,26 +44,29 @@ status: active
 
 | Decisione | Dove e verificata |
 |----------|-------------------|
-| La risoluzione della config passa da un registry, non da `config()` sparse | `app/Services/Config/ConfigResolverRegistry.php` con `register()` / `findResolver()` |
 | Solo chiavi stringa entrano in config/morph map | `app/Actions/Config/FilterConfigStringKeysAction.php`, usato in `TenantServiceProvider::loadTenantDatabaseConfig()` e `registerMorphMap()` |
-| L'alias morph `user` non è negoziabile: punta sempre alla classe utente canonica | commento in `app/Providers/TenantServiceProvider.php` (blocco `buildMorphMap`) |
+| La config per-tenant si legge via Action | `app/Actions/Config/ResolveTenantConfigValueAction.php`, `GetTenantConfigArrayAction.php` |
 | Alias morph che punta a classe inesistente vengono scartati, non fanno crash del boot | `TenantServiceProvider::buildMorphMap()` con `@class_exists` |
 | La connessione DB non viene riconnessa in ambiente di test | `TenantServiceProvider::reconnectDatabaseUnlessTesting()` |
-| Un resolver senza match cade sul resolver standard | presenza di `StandardConfigResolver` in `app/Services/Config/Resolvers/` |
+| Le connessioni di modulo sono alias della default (una transazione) | `TenantServiceProvider::aliasModuleConnectionsToDefault()` |
+
+Registro completo: [decision-log.md](./decision-log.md).
 
 ## Questioni aperte
 
 | Questione | Evidenza |
 |-----------|----------|
-| Chi crea la tabella `tenants`? | `app/Models/Tenant.php` + `database/factories/TenantFactory.php` esistono, ma `database/migrations/` contiene solo `tenant_settings`, `tenant_subscriptions`, `database_configs` |
-| `TenantService` ha ancora `public function execute(): void {}` vuoto | `app/Services/TenantService.php` riga 163 |
-| `Tenant::users()` risolve la classe utente a runtime invece di un import fisico | `app/Models/Tenant.php` riga 80 con `class-string<Model&UserContract>` |
-| Relazioni `patients()` / `appointments()` commentate nel modello Tenant | `app/Models/Tenant.php` righe 95-105, con moduli non disponibili |
+| Chi crea la tabella `tenants`? | `app/Models/Tenant.php:68` (`extends BaseModel`) + `database/factories/TenantFactory.php`; `database/migrations/` ha solo `tenant_settings`, `tenant_subscriptions`, `database_configs`; nessuna `create('tenants')` nel repo (TEN-P2-08) |
+| Host sconosciuto: fallire o ripiegare sul default? | `app/Actions/GetTenantNameAction.php:114-148`; `TrustHosts` non attivo (TEN-P1-01) |
+| Cosa deve poter fare `tenant::admin` (delete/forceDelete inclusi)? | `app/Models/Policies/TenantBasePolicy.php:14-22` (TEN-P1-02) |
+| `DatabaseConfig.password` va cifrata ora o quando nascerà la UI? | `app/Models/DatabaseConfig.php` (TEN-P1-03) |
+| `Tenant::users()` risolve la classe utente a runtime | `app/Models/Tenant.php:100`; `patients()`/`appointments()` commentate (`:112`, `:120`) |
+| `SushiToJson` e `SushiToJsons`: fondere? | TEN-P2-01 |
 
 ## Opzioni scartate
 
 | Opzione | Motivo dello scarto (dal codice) |
 |---------|----------------------------------|
-| Config per tenant hardcoded in `config/*.php` del modulo | il provider già la risolve a runtime via `ResolveTenantConfigValueAction` su chiavi `database` e `morph_map` |
 | Riconnessione DB sempre attiva al boot | spegnerebbe l'isolamento nei test; il provider la salta sotto testing |
 | Morph map dichiarata a mano in un array statico | il provider la compone dalla config e la valida classe per classe |
+| `base_path()` per i file per-tenant | ignora il tenant: errore muto; si usa `GetTenantFilePathAction` |

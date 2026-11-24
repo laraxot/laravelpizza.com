@@ -1,5 +1,5 @@
 ---
-qmd: "design comuni tailwind"
+qmd: "DESIGN COMUNI TAILWIND"
 issues: []
 discussions: []
 title: "Design Comuni con Tailwind CSS Puro"
@@ -7,9 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: superseded
-superseded_by: design-comuni-tailwind.md
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # 🎨 Design Comuni con Tailwind CSS Puro

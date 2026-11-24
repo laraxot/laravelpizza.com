@@ -1,57 +1,51 @@
 ---
-title: "PHPStan Modules a zero — ordine permanente"
+title: "PHPStan Modules Zero Standing Order"
 type: memory
 module: Xot
-status: active
-created: 2026-10-20
-updated: 2026-10-27
-qmd: "phpstan analyse Modules zero ordine permanente senza conferma catena source fix swarm bmad docs prompts boy scout turn non banale"
+tags: [phpstan, standing-order, flock, conflict-markers, bmad, second-brain]
+created: 2026-11-23
+updated: 2026-11-23
+qmd: "phpstan modules zero standing order flock cache parse prima dei tipi mixed ultima spiaggia"
 related:
-  - ./phpstan-single-neon-config.md
-  - ./index.md
-  - ../../bmad/decision-log.md
-  - ../../../../../../bashscripts/docs/prompts/00-start.md
+  - ../../../../../../bashscripts/docs/prompts/00-master-prompt.md
   - ../../../../../../bashscripts/docs/prompts/11-phpstan.md
-tags: [docs, xot, wiki]
+  - ../../../../../../bashscripts/docs/prompts/INDEX.md
+  - ../../stories/phpstan-merge-bootstrap.story.md
+  - ../../stories/module-sync-stale-snapshot-and-phpstan-zero.story.md
+  - ./merge-marker-spazzatura-worktree.md
 ---
 
-# PHPStan `Modules` a zero — ordine permanente
+# PHPStan Modules: ordine permanente
 
-## Scopo e perche'
+## Scopo
 
-Il monorepo ha **un** gate statico condiviso da umano, CI e swarm. L'ordine
-permanente evita di trattare PHPStan come task opzionale: ogni sessione che
-tocca qualita' misura o ripara verso zero **senza chiedere conferma**, perche'
-altre sessioni modificano lo stesso tree in parallelo e un "0" letto in chat o
-in Hindsight non e' prova del presente.
-
-## Catena (sempre, stesso ordine)
-
-1. **PHPStan** — `cd laravel && ./vendor/bin/phpstan analyse Modules` (lane: perimetro assegnato; coordinatore: `Modules` intero a swarm fermo).
-2. **Sorgente** — scopo, chiamanti, causa radice; mai ignore, baseline o neon alternativo.
-3. **Swarm** — scope disgiunti se il perimetro e' ampio; ordine random solo tra task indipendenti.
-4. **BMAD + second brain** — story owner, Hindsight/QMD (Hindsight down non blocca).
-5. **Docs** — `laravel/Modules/<M>/docs/`, `laravel/Themes/<T>/docs/`.
-6. **Prompt** — correggi il canonico in `bashscripts/docs/prompts/` se un fatto verificato lo smentisce.
-7. **A zero → boy scout** — Services→Actions, miglioramenti locali; lo zero statico non chiude il lavoro.
+Tenere `cd laravel && ./vendor/bin/phpstan analyse Modules` a **zero** errori reali, senza scorciatoie, e continuare dopo lo zero (boy scout + Services→Actions).
 
 ## Vittoria verificata
 
-Contano **entrambe**: json `totals.file_errors` e `totals.errors` a `0`, piu'
-banner `[OK] No errors` nello stesso run del coordinatore.
+Tutti nello stesso run:
 
-Ultima rimisura coordinatore: **2026-10-22** — `file_errors=0`, `errors=0`,
-`[OK] No errors` (story [phpstan-modules-zero-gate](../../stories/phpstan-modules-zero-gate.story.md)).
-A zero → boy scout docs (184 file ridondanti rimossi nella stessa sessione).
+1. `totals.errors = 0` e `totals.file_errors = 0` (JSON)
+2. Banner `[OK] No errors`
+3. Exit code `0`
+4. Nessun messaggio «Result is incomplete because of severe errors»
 
-Rimisura corrente: **2026-10-27** — `./vendor/bin/phpstan analyse Modules` sotto il gate
-condiviso, `totals.file_errors=0`, `totals.errors=0`, exit `0`. I finding Fixcity/User,
-la causa d'intento e le verifiche mirate sono registrati nella story
-[phpstan-modules-swarm-random](../../bmad/stories/phpstan-modules-swarm-random.story.md#run-2026-10-27--remediation-corrente).
+Artifact: `laravel/storage/phpstan-runs/` (mai `/tmp`). Cache: `laravel/storage/phpstan` (`tmpDir` in neon).
 
-## Collegamenti
+## Ordine fisso prima di credere a un numero
 
-- Prompt router: [00-start.md](../../../../../bashscripts/docs/prompts/00-start.md#ordine-permanente-dellutente)
-- Metodo PHPStan: [11-phpstan.md](../../../../../bashscripts/docs/prompts/11-phpstan.md)
-- Neon unico: [phpstan-single-neon-config](./phpstan-single-neon-config.md)
-- Decisione Xot: [decision-log](../../bmad/decision-log.md) (2026-10-20)
+1. **Parse** — `php -l`; zero marker `<<<<<<<` / `=======` / `>>>>>>>` in `*.php` (e idealmente anche in `*.md` / Blade: i md avvelenano il second brain).
+2. **Bootstrap** — `GeneratedConfig.php` con estensioni > 0; vendor coerente con lock.
+3. **Esclusione** — `flock` su `laravel/storage/phpstan-runs/gate.lock`; `clear-result-cache` prima della chiusura wave. Concorrenza sulla cache condivisa produce falsi `class.notFound`.
+4. **Tipi** — solo dopo 1–3. `mixed` ultima spiaggia; mai `@phpstan-ignore*`; mai editare `laravel/phpstan.neon`.
+
+## Decisioni gia' prese (non ri-litigare)
+
+- Debito `tests/Arch/debt.php` `services => []` quando i Service sono migrati ad Actions (#247).
+- Test AI con skip se `TestCase::moduleTablesMissing()` (#243).
+- `Job/lang/it/status.php` con sezione `values` italiana per EnumTrait (#245).
+- Cms FO: `@filamentStyles` / `@filamentScripts` sempre emessi (niente guard `panelAssets`).
+
+## Dopo lo zero
+
+Non fermarsi: boy scout, Services→Actions, docs moduli/temi, prompt canonici aggiornati se un fatto li smentisce.

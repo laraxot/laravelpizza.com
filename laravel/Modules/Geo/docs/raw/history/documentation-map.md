@@ -41,7 +41,7 @@ discussions: []
 🏗️ MODULES/
    ├── IndennitaResponsabilita/docs/ ⭐ ANALYZED
    │   ├── README.md (Updated with analysis links)
-   │   ├── QUICK-START.md ⭐ Fast onboarding
+   │   ├── quick-start.md ⭐ Fast onboarding
    │   ├── analysis-summary-2025.md ⭐ Executive summary
    │   ├── code-quality-analysis.md (~800 lines)
    │   ├── refactoring-action-plan.md (~1000 lines, 18 tasks)

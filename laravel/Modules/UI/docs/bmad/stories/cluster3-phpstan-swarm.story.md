@@ -1,5 +1,6 @@
 ---
-title: "UI: swarm cluster3 PHPStan 2026-10-06"
+qmd: "ui bmad stories cluster3 phpstan swarm story md"
+title: "UI — swarm cluster3 PHPStan 2026-10-06"
 type: story
 module: UI
 status: done
@@ -13,12 +14,9 @@ swarm:
     - Lang
     - UI
   story: laravel/Modules/Xot/docs/bmad/stories/phpstan-modules-swarm-random-20261006.story.md
-updated: 2026-10-07
-tags: [docs, ui, bmad]
-qmd: "ui   swarm cluster3 phpstan 2026-10-06 ui"
 ---
 
-# UI: swarm cluster3 PHPStan 2026-10-06
+# UI — swarm cluster3 PHPStan 2026-10-06
 
 ## Scopo modulo
 
@@ -44,7 +42,7 @@ condivisi dei pannelli Filament. Nessuna logica di dominio: solo presentazione.
 - `app/View/Components/Render/Blocks.php` modificato da peer (unstaged):
   fallback `view()->exists()` prima di `GetViewAction`. Scopo-coerente.
   Punto aperto per il proprietario: `$this->view` e `string`, il
-  `@phpstan-var view-string` sul ramo true e un narrowing non dimostrato -
+  `@phpstan-var view-string` sul ramo true e un narrowing non dimostrato —
   da confermare con PHPStan a load rientrato. Non toccato per lock implicito.
 - `docs/bmad/` con duplicati case-differenti (`00-INDEX.md`/`00-index.md`,
   `advanced-form-components.md`/`advanced_form_components.md`,

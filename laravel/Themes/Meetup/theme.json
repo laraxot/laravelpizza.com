@@ -1,0 +1,11 @@
+{
+    "name": "Meetup",
+    "type": "pub",
+    "description": "Tema pubblico Meetup per Laravel Pizza (Tailwind CSS e Vite)",
+    "keywords": [],
+    "active": true,
+    "order": 0,
+    "aliases": ["meetup"],
+    "files": [],
+    "requires": []
+}

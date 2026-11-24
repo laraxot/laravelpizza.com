@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "multi step forms"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Form Multi-Step con Laravel Volt e Folio
@@ -415,5 +414,5 @@ class PersonalInfoTest extends TestCase
 
 ## Collegamenti tra versioni di multi-step-forms.md
 * [multi-step-forms.md](laravel/modules/cms/project_docs/multi-step-forms.md)
-* [multi-step-forms.md](components/multi-step-forms.md)
+* [multi-step-forms.md](laravel/modules/cms/project_docs/components/multi-step-forms.md)
 

@@ -1,13 +1,21 @@
 ---
-title: "todo"
-type: alias
-status: superseded
-canonical: "-integration/-todo.md"
-qmd: "_todo alias superseded"
+title: " todo"
+type: note
+tags: [documentation]
+created: 2026-09-26
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+qmd: " todo"
+issues: []
+discussions: []
 ---
 
-# todo
+# _todo
 
-Documento identico al canonico: [-todo.md](../-integration/-todo.md).
+<!-- Contenuto migrato da _docs/_todo.txt -->
 
-Canonico: `laravel/Modules/Notify/docs/-integration/-todo.md`. Qui non ci sono istruzioni: seguire il file collegato.
+http://laradevsbd.com/story/laravel-notifications-with-database
+

@@ -4,7 +4,6 @@ declare(strict_types=1);
 use Livewire\Volt\Component;
 use Modules\Cms\Actions\ResolvePageAction;
 use Modules\Cms\Http\Middleware\PageSlugMiddleware;
-use Modules\Cms\Models\Page;
 use Modules\Meetup\Models\Event;
 
 use function Laravel\Folio\middleware;
@@ -33,30 +32,19 @@ new class extends Component
         $this->slug0 = $slug0;
         $this->pageSlug = $this->container0.'.view';
 
-        // Eventi: solo quelli visibili all'utente corrente (pubblicati, o bozze/pending del proprietario).
-        // Un evento inesistente o non visibile restituisce 404 (PRD FR-7), senza passare dal resolver generico
-        // che ignora scope e soft delete.
+        // Caricamento robusto specifico per eventi se il container corrisponde
         if ($this->container0 === 'events') {
-            $user = auth()->user();
-            $this->item = Event::query()
-                ->visibleTo($user instanceof \Modules\User\Models\User ? $user : null)
-                ->where('slug', $this->slug0)
-                ->first();
-
-            if ($this->item === null) {
-                // Sotto-pagina CMS del contenitore: pages/events/my.json -> slug "events.my" -> /events/my
-                // (SushiToJsons prefissa id e slug con la cartella). Docs: Modules/Cms/docs/cms-subpages-folders.md
-                $cmsSlug = $this->container0.'.'.$this->slug0;
-                abort_unless(Page::query()->where('slug', $cmsSlug)->exists(), 404);
-                $this->pageSlug = $cmsSlug;
-            }
+            $this->item = Event::where('slug', $this->slug0)->first();
         }
 
-        // Se non ancora risolto, usa l'azione generica (contenitori diversi da "events")
-        if ($this->item === null && $this->container0 !== 'events') {
+        // Se non ancora risolto, usa l'azione generica
+        if ($this->item === null) {
             $resolved = $resolvePageAction->execute($this->container0, $this->slug0);
             $this->pageSlug = $resolved->pageSlug;
             $this->item = $resolved->item;
+
+            // Né un modello né una pagina CMS: 404, non una pagina vuota con 200 (es. /it/genesis/about).
+            abort_if($this->item === null && ! Page::query()->where('slug', $this->pageSlug)->exists(), 404);
         }
 
         if ($this->item instanceof Event) {

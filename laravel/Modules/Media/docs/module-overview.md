@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "module overview"
 related:
   - "./webm.md"
-status: draft
 ---
 # Media module overview
 
@@ -47,7 +46,7 @@ Nel codebase corrente il “cuore” non è un’implementazione custom, ma un�
 
 - Estende `SpatieMedia` (Spatie MediaLibrary)
 - È la fonte di verità per i record media (metadati, disk, path, conversions, responsive images)
-- In questo progetto il modello include anche logiche di auditing (`created_by`, `updated_by`, `deleted_by`) e integrazione con profili/utenti tramite contratti (`ProfileContract`, `UserContract`): da verificare dove viene popolato il contesto.
+- In questo progetto il modello include anche logiche di auditing (`created_by`, `updated_by`, `deleted_by`) e integrazione con profili/utenti tramite contratti (`ProfileContract`, `UserContract`) — da verificare dove viene popolato il contesto.
 
 ### `Modules\Media\Models\MediaConvert`
 

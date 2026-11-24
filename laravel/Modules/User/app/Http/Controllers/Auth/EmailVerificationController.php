@@ -4,12 +4,19 @@ declare(strict_types=1);
 
 namespace Modules\User\Http\Controllers\Auth;
 
+<<<<<<< HEAD
+=======
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+>>>>>>> laraxot/dev
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+<<<<<<< HEAD
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+=======
+>>>>>>> laraxot/dev
 use Modules\User\Http\Controllers\Controller;
 
 /**

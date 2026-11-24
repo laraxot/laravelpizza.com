@@ -7,8 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Wiki Log
@@ -35,7 +38,7 @@ Quando esegui un'operazione:
 
 ## [2026-04-15] bootstrap | Initial Wiki Setup
 
-- Creato schema [[.schema/WIKI_SCHEMA.md]]
+- Creato schema [[.schema/wiki_schema.md]]
 - Creato schema [[.schema/wiki-schema.md]]
 - Creato [[wiki/index.md]] con struttura
 - Create cartelle `wiki/` e `raw/` per:

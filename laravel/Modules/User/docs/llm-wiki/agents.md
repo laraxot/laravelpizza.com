@@ -10,8 +10,6 @@ discussions: []
 related:
   - "./index.md"
   - "./log.md"
-status: superseded
-superseded_by: AGENTS.md
 ---
 
 # User {{TYPE^}} LLM Wiki Agent Instructions
@@ -151,8 +149,13 @@ Related:
 
 ## Related Documentation
 
+<<<<<<< HEAD
 - [Project Wiki Integration](../../docs/wiki/README.md)
 - [Project Wiki Agent Instructions](../../docs/wiki/AGENTS.md)
+=======
+- [Project Wiki Integration](../wiki/readme.md)
+- [Project Wiki Agent Instructions](../wiki/agents.md)
+>>>>>>> laraxot/dev
 - [Module Documentation](../README.md)
 
 
@@ -297,6 +300,10 @@ Related:
 
 ## Related Documentation
 
+<<<<<<< HEAD
 - [Project Wiki Integration](../../docs/wiki/README.md)
+=======
+- [Project Wiki Integration](../wiki/readme.md)
+>>>>>>> laraxot/dev
 - [Project Wiki Agent Instructions](../../docs/wiki/agents.md)
 - [Module Documentation](../README.md)

@@ -1,11 +1,7 @@
 ---
+qmd: "activity wiki testing testing coverage policy md"
 title: Testing coverage policy
 module: Activity
-type: note
-status: draft
-updated: 2026-10-21
-tags: [docs, activity, wiki]
-qmd: "activity module - testing coverage policy activity"
 ---
 
 # Activity Module - Testing Coverage Policy
@@ -130,11 +126,11 @@ tests/
 - [Laravel Modules Testing](https://laravelmodules.com/docs/12/advanced/tests)
 - [Pest Coverage](https://pestphp.com/docs/test-coverage)
 - [Laravel Testing](https://laravel.com/docs/12.x/testing)
-- [testing-errors-fixes](../../testing-errors-fixes.md) - Errori risolti e correzioni
-- [testing-rules](../../testing-rules.md)
-- [testing-strategy-implementation](../../testing-strategy-implementation.md)
-- [testing-testcase-database-connection-fix](../../testing-testcase-database-connection-fix.md)
-- [testing-testcase-database-connection-fix](../../testing-testcase-database-connection-fix.md)
-- [testing-testcase-database-connection-fix](../../testing-testcase-database-connection-fix.md)
-- [testing-testcase-database-connection-fix](../../testing-testcase-database-connection-fix.md)
-- [testing-testcase-database-connection-fix](../../testing-testcase-database-connection-fix.md)
+- [testing-errors-fixes](testing-errors-fixes.md) - Errori risolti e correzioni
+- [testing-rules](testing-rules.md)
+- [testing-strategy-implementation](testing-strategy-implementation.md)
+- [testing-testcase-database-connection-fix](testing-testcase-database-connection-fix.md)
+- [testing-testcase-database-connection-fix](testing-testcase-database-connection-fix.md)
+- [testing-testcase-database-connection-fix](testing-testcase-database-connection-fix.md)
+- [testing-testcase-database-connection-fix](testing-testcase-database-connection-fix.md)
+- [testing-testcase-database-connection-fix](testing-testcase-database-connection-fix.md)

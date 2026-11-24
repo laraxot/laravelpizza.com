@@ -10,8 +10,6 @@ discussions: []
 module: theme
 topic: user_research
 canonical: ../../../Themes/docs/shared-components/USER_RESEARCH-Modules.md
-status: superseded
-superseded_by: user-research.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/USER_RESEARCH-Modules.md

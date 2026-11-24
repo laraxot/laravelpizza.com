@@ -1,11 +1,10 @@
 ---
 title: "Modulo Activity"
+qmd: "activity architecture structure md"
 type: note
-status: draft
-updated: 2026-10-20
-tags: [docs, activity, architecture]
-qmd: "modulo activity activity"
+tags: [documentation]
 ---
+
 # Modulo Activity
 
 Data: 2025-04-23 19:09:55
@@ -290,9 +289,9 @@ workbench/routes
 ## Collegamenti
 
 - [Torna a README](./README.md)
-- [Torna a README](./readme.md)
+- [Torna a README](./README.md)
 - [Vai a Roadmap](./roadmap.md)
-- [Vai a Bottlenecks](../bottlenecks.md)
+- [Vai a Bottlenecks](./bottlenecks.md)
 
 ```json
     "autoload": {

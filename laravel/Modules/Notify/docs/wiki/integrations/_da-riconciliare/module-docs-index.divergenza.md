@@ -1,14 +1,17 @@
 ---
-qmd: "module docs index.divergenza"
+qmd: "Module Docs Index.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: MODULE_DOCS_INDEX.md"
+title: "Module Docs Index.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Divergenza: `MODULE_DOCS_INDEX.md`

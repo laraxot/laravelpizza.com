@@ -1,5 +1,12 @@
 ---
-title: "Theme Three: indice docs completo e navigazione coerente"
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_6XOrHS
+qmd: "xot bmad stories theme three docs index refresh story md"
+=======
+>>>>>>> .merge_file_PhtRok
+>>>>>>> laraxot/dev
+title: "Theme Three — indice docs completo e navigazione coerente"
 status: done
 epic: documentation-quality
 acceptance_criteria:
@@ -12,13 +19,9 @@ references:
   - ../../../../../Themes/Three/docs/index.md
   - ../../../../../Themes/Three/docs/README.md
   - ./phpstan-modules-swarm-random.story.md
-type: story
-updated: 2026-10-07
-tags: [docs, xot, bmad]
-qmd: "theme three   indice docs completo e navigazione coerente xot"
 ---
 
-# Theme Three: indice docs completo e navigazione coerente
+# Theme Three — indice docs completo e navigazione coerente
 
 ## Scopo
 

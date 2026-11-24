@@ -56,15 +56,11 @@ npm install
 npm run build
 ```
 
-<<<<<<< .merge_file_3bAlGS
 6. Copia gli asset compilati:
 
 ```bash
-# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
-=======
 6. Nessuna copia: gli asset sono serviti tramite symlink da `public_html/` (`php artisan xot:theme-link`): `npm run copy` non serve più.
->>>>>>> .merge_file_MGmMtG
 
 ## Configurazione
 

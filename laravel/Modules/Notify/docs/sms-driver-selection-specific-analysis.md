@@ -3,11 +3,14 @@ title: "sms driver selection specific analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "sms driver selection specific analysis"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi Specifica: Validazione e Selezione Driver in SmsData

@@ -1,14 +1,17 @@
 ---
-qmd: "super mucca final summary.divergenza"
+qmd: "Super Mucca Final Summary.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: SUPER_MUCCA_FINAL_SUMMARY.md"
+title: "Super Mucca Final Summary.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Divergenza: `SUPER_MUCCA_FINAL_SUMMARY.md`

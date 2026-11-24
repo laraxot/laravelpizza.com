@@ -3,7 +3,11 @@ title: "project patterns"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "project patterns"
 issues: []
 discussions: []
@@ -29,9 +33,21 @@ app(MyAction::class)->createPersonalAccessClient();
 
 - **Short array syntax (CRITICAL)**: **ALWAYS** `[]`: **NEVER** `array()` in any PHP file.
 - **Packages**: Add to `Modules/{Module}/composer.json`, then run `composer go` from `laravel/`.
-- **Git Rules**: 
+<<<<<<< HEAD
+- **Git Rules**:
   - NEVER `git remote set-url`: only project owner does this.
   - Git goes forward only: never restore old versions.
+=======
+<<<<<<< .merge_file_rO33t1
+- **Git Rules**: 
+  - NEVER `git remote set-url` — only project owner does this.
+  - Git goes forward only — never restore old versions.
+=======
+- **Git Rules**:
+  - NEVER `git remote set-url`: only project owner does this.
+  - Git goes forward only: never restore old versions.
+>>>>>>> .merge_file_ZKezpx
+>>>>>>> laraxot/dev
   - Every error fix: git commit + GitHub issue + GitHub discussion.
 
 ## Session Best Practices
@@ -39,7 +55,7 @@ app(MyAction::class)->createPersonalAccessClient();
 - GitHub Projects CLI needs `read:project` scope: `gh project list --owner provtv` may fail.
 - For PHPMD use PHAR only: `bash laravel/tools/phpmd.sh ...` (never composer package).
 - Never use `RefreshDatabase`, `migrate:fresh`, or `migrate --force` in tests.
-- Central discussion for shared agent learning: `https://github.com/provtv/base_ptv_fila5_mono/discussions/18`
+- Central discussion for shared agent learning: `https://github.com/provtv/base_ptv_fila5/discussions/18`
 
 ---
 [Back to index](../index.md)

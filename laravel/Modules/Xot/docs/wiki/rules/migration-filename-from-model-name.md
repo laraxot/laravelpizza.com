@@ -8,7 +8,15 @@ updated: 2026-11-05
 tags: [migration, naming, model, database]
 qmd: "migration filename timestamp model plural snake case table XotBaseMigration model_class additive"
 related:
+<<<<<<< HEAD
   - ../../migration-standards.md
+=======
+<<<<<<< HEAD
+  - ../../migration-standards.md
+=======
+  - ../../migrations-consolidated.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - ../../../../Lang/docs/migrations.md
   - ../../bmad/decision-log.md
 ---
@@ -26,6 +34,7 @@ YYYY_MM_DD_HHMMSS_<azione>_<modello_plurale>_table.php
 Esempi:
 
 - `2026_08_06_190100_create_translations_table.php`
+- `2026_11_05_100001_update_translations_table.php`
 - `2026_11_05_100001_create_translations_table.php`
 
 `create_<modello_plurale>_table` consente a `XotBaseMigration` di derivare il

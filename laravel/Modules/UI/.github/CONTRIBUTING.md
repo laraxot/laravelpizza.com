@@ -57,7 +57,7 @@ If the project maintainer has any additional requirements, you will find them li
 
 ---
 
-## Contenuto assorbito da `contributing.md`
+## Contenuto assorbito da `CONTRIBUTING.md`
 
 # Contributing
 

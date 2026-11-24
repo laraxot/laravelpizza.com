@@ -1,12 +1,10 @@
 ---
 title: "Architettura Bank (Event Sourcing)"
+qmd: "activity use cases bank 02 architettura md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "architettura bank (event sourcing) activity"
-status: superseded
-superseded_by: architettura.md
+tags: [documentation]
 ---
+
 # Architettura Bank (Event Sourcing)
 
 ## Pattern Principali

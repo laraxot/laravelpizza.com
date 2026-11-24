@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "sushi implementation analysis"
 issues: []
 discussions: []
-status: superseded
-superseded_by: sushi-implementation-analysis.md
 ---
 
 # Analisi Implementazione Comune con Laravel Sushi
@@ -299,5 +297,5 @@ Basandoci sull'analisi, raccomandiamo l'adozione di Laravel Sushi per il modello
 ## Link Correlati
 - [Documentazione Ufficiale Sushi](https://github.com/calebporzio/sushi)
 - [Guida alla Migrazione](migration-guide.md)
-- [Benchmark Dettagliati](benchmarks/readme.md)
+- [Benchmark Dettagliati](benchmarks/README.md)
 - [Documentazione GeoJsonModel](geo-json-model.md)

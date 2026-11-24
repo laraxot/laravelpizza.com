@@ -3,11 +3,14 @@ title: "README"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "README"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Git Conflict Resolution Scripts
@@ -18,7 +21,15 @@ Questa cartella contiene script specializzati per la risoluzione automatica dei 
 
 ### 🆕 resolve_conflicts_current_change.sh (V5.0) - **CONSIGLIATO**
 
+<<<<<<< HEAD
 Script principale ottimizzato per risolvere automaticamente tutti i conflitti Git scegliendo sempre la "current change" (il contenuto tra `=======` e `>>>>>>>`).
+=======
+<<<<<<< HEAD
+Script principale ottimizzato per risolvere automaticamente tutti i conflitti Git scegliendo sempre la "current change" (il contenuto tra `-------` e `CONFLICT_END`).
+=======
+Script principale ottimizzato per risolvere automaticamente tutti i conflitti Git scegliendo sempre la "current change" (il contenuto tra `=======` e `>>>>>>>`).
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 **Caratteristiche:**
 - ✅ Risoluzione automatica intelligente
@@ -105,7 +116,15 @@ Per progetti critici, considera un backup completo del repository prima dell'ese
 ### Script non trova conflitti
 ```bash
 # Verifica manualmente
+<<<<<<< HEAD
 find . -name "*.php" -o -name "*.md" | xargs grep -l "<<<<<<< "
+=======
+<<<<<<< HEAD
+find . -name "*.php" -o -name "*.md" | xargs grep -l "CONFLICT_START "
+=======
+find . -name "*.php" -o -name "*.md" | xargs grep -l "<<<<<<< "
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 # Oppure usa git
 git status --porcelain | grep "^UU"

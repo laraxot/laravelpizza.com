@@ -64,6 +64,17 @@ class SocialiteProviderSettingsPage extends XotBasePage
     public function mount(): void
     {
         $this->loadProviderConfigs();
+<<<<<<< HEAD
+
+        // Il form legge e salva in $this->data (statePath 'data'): senza questa riga i campi restavano vuoti e
+        // Livewire segnalava "property data.google.enabled cannot be found".
+        $this->data = [
+            'google' => $this->google,
+            'github' => $this->github,
+            'microsoft' => $this->microsoft,
+        ];
+=======
+>>>>>>> laraxot/dev
     }
 
     /**
@@ -74,7 +85,7 @@ class SocialiteProviderSettingsPage extends XotBasePage
         return $schema
             ->schema([
                 Section::make('Google OAuth')
-                    ->description('Configura il login con Google. Crea credenziali su Google Cloud Console.')
+                    ->description('Set up Google login. Create credentials in Google Cloud Console.')
                     ->icon('ui-google')
                     ->collapsible()
                     ->schema([
@@ -105,7 +116,7 @@ class SocialiteProviderSettingsPage extends XotBasePage
                     ]),
 
                 Section::make('GitHub OAuth')
-                    ->description('Configura il login con GitHub. Crea OAuth App su GitHub Settings.')
+                    ->description('Set up GitHub login. Create an OAuth App in GitHub Settings.')
                     ->icon('fab-github')
                     ->collapsible()
                     ->schema([
@@ -135,7 +146,7 @@ class SocialiteProviderSettingsPage extends XotBasePage
                     ]),
 
                 Section::make('Microsoft OAuth')
-                    ->description('Configura il login con Microsoft/Azure AD.')
+                    ->description('Set up Microsoft/Azure AD login.')
                     ->icon('ui-brands.microsoft')
                     ->collapsible()
                     ->schema([

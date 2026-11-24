@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/target.php
 // Cms txt.fields.target — LangServiceProvider SSoT.
 return [
-    'label' => 'Destinazione',
+    'label' => 'Destination',
     'placeholder' => '_blank, _self, _parent, _top',
-    'helper_text' => 'Come aprire il collegamento (stessa finestra o nuova)',
+    'helper_text' => 'How to open the link (same or new window)',
     'tooltip' => '',
     'description' => '',
 ];

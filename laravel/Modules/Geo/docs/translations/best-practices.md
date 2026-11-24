@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "best practices"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Translation Best Practices for Geo Module

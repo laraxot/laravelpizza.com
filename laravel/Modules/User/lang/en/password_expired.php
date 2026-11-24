@@ -3,9 +3,9 @@
 declare(strict_types=1);
 
 return [
-    'title' => 'Password Scaduta, Reimposta Password',
-    'heading' => 'Crea una Nuova Password',
-    'sub_heading' => 'La tua password è scaduta, per favore crea una nuova password',
+    'title' => 'Password Expired, Reset Password',
+    'heading' => 'Create a New Password',
+    'sub_heading' => 'Your password has expired, please create a new one',
     'fields' => [
         'current_password' => [
             'label' => 'Current Password',

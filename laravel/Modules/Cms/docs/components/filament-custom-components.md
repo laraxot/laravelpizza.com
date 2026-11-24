@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament custom components"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Componenti Custom in Filament V3

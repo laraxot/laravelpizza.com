@@ -12,23 +12,18 @@ updated: 2026-10-13
 tags: [cms, json, slug, asset, manifest, guardia, tdd]
 qmd: "dcp-101 guardie json slug duplicato asset 0 byte manifest design-comuni-pages blade view pub_theme tests tenant modulo identici"
 related:
-  - Themes/Sixteen/docs/bmad/stories/dcp-09-json-content-integrity-guard.story.md
-  - Themes/Sixteen/docs/bmad/stories/dcp-08-asset-integrity-and-fonts.story.md
-  - Themes/Sixteen/docs/bmad/decisions/parity-root-cause-and-guardrails.md
+  - Themes/Sixteen/docs/bmad/stories/2026-10-13-dcp-09-json-content-integrity-guard.story.md
+  - Themes/Sixteen/docs/bmad/stories/2026-10-13-dcp-08-asset-integrity-and-fonts.story.md
+  - Themes/Sixteen/docs/bmad/decisions/2026-10-13-parity-root-cause-and-guardrails.md
   - Modules/Cms/docs/json-content-slug-uniqueness.md
   - Modules/Fixcity/tests/Unit/TicketCreatePageMiddlewareGuardTest.php
+date_originale_nome_file: 2026-10-13
 ---
 
 # DCP-101: guardie su JSON, asset e manifest
 
-> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
-> arrivano nella document root con un symlink, non con una copia. Per il
-> procedimento valido vedi
-> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
-> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
-
 ## Richiesta (2026-10-13)
-niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+Gli incidenti del giorno (500 "CMS content collision", PNG a 0 byte dopo `npm run copy`, manifest e JSON non allineati) si trovavano solo guardando la pagina.
 Servono test che li facciano emergere nel codice, senza database ne' HTTP. Realizza in parte DCP-09 (guardia JSON) e DCP-08 (asset senza 0 byte).
 
 ## Test
@@ -39,7 +34,7 @@ File: `laravel/Modules/Cms/tests/Unit/Content/ContentIntegrityGuardTest.php` (Pe
 | (a) nessuno slug duplicato nella stessa cartella `content/pages` (tutti i `config/*/*` e `Modules/*/config`) | `homepage.json` + `tests.homepage.json` (poi `risultati-ricerca`) con lo stesso `slug`: 500 per tutti | due file con lo stesso `slug`; il messaggio nomina entrambi |
 | (b1) `tests.*.json` identici tra tenant e modulo che hanno entrambe le copie | il tenant vince sul modulo: una copia divergente cambia la pagina senza che nessuno se ne accorga | differenza di contenuto; il messaggio elenca le chiavi di primo livello diverse |
 | (b2) ogni `tests.<x>.json` e' JSON valido con `id` e `slug` uguali a `tests.<x>` | nome canonico delle pagine di prova | JSON non valido, `id` o `slug` diversi dal nome file |
-niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+| (c) nessun file da 0 byte sotto `Themes/Sixteen/public/design-comuni/assets` | `npm run copy` ha azzerato due PNG (sorgente vuota); sfondo e immagini mancanti | un file di qualunque tipo (immagini, font, svg) a 0 byte; la cartella vuota fa fallire |
 | (d1) ogni riga di `design-comuni-pages.txt` ha `tests.<slug>.json` in tenant `local/fixcity` e modulo Fixcity | manifest e JSON non allineati | JSON mancante in una delle due cartelle |
 | (d2) ogni `tests.*.json` del tenant e' nel manifest, tranne le eccezioni documentate | JSON orfano, o riga cancellata dal manifest | JSON senza riga e senza eccezione; eccezione "stantia" (ora nel manifest o JSON sparito) |
 | (e) ogni `view` che inizia con `pub_theme::components.` in `content_blocks`, `sidebar_blocks` e `footer_blocks` ha il suo `.blade.php` in `Themes/Sixteen/resources/views/components/` | un blocco cancellato o rinominato rompe la pagina in produzione | file Blade mancante; il messaggio dice JSON, percorso della chiave e file atteso |
@@ -92,4 +87,4 @@ Osservazioni fuori dalle guardie, da decidere con i proprietari:
 - La guardia non sostituisce il gate di parity (HTML/visual): protegge solo l'integrita' dei dati.
 
 ## Second brain
-niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+Nessuna scrittura in `MEMORY.md` ne' negli indici globali (fuori proprieta'). Da annotare dal proprietario: "guardie DCP-101: `Modules/Cms/tests/Unit/Content/ContentIntegrityGuardTest.php`, lanciare dopo ogni modifica a `content/pages`, manifest o `npm run copy`".

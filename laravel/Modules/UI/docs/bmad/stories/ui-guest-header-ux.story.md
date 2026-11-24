@@ -1,12 +1,10 @@
 ---
+qmd: "ui bmad stories ui guest header ux story md"
 title: "UI guest header e layout pubblico"
 type: story
 module: UI
 status: done
 track: ux/guest-auth
-updated: 2026-10-07
-tags: [docs, ui, bmad]
-qmd: "ui guest header ux 2026 10 06.story ui"
 ---
 
 ## Obiettivo funzionale

@@ -22,13 +22,11 @@ use Stringable;
  * @property Collection<int, Consent> $consents
  * @property Collection<int, Consent> $activeConsents
  *
-<<<<<<< .merge_file_F1ZziF
+<<<<<<< .merge_file_W4LPSh
  * @see HasGdprTraitTest
- *
- * @phpstan-ignore trait.unused
 =======
- * @see \Modules\Gdpr\Tests\Unit\Traits\HasGdprTraitTest
->>>>>>> .merge_file_Zo0Ch6
+ * Test: tests/Unit/Traits/HasGdprTraitTest.php
+>>>>>>> .merge_file_mOEKGV
  */
 trait HasGdpr
 {

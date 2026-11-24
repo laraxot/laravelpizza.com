@@ -1,4 +1,5 @@
 ---
+qmd: "xot stories placeholder translations cleanup story md"
 type: story
 slug: placeholder-translations-cleanup
 title: "Via le traduzioni segnaposto dai file di lingua"

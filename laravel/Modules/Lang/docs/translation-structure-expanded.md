@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "lang service helper text"
 related:
   - "./italian-text-refined-audit-report.md"
-status: draft
 ---
 # Struttura Espansa per File di Traduzione - Progetto <nome progetto>
 

@@ -1,5 +1,5 @@
 ---
-title: "Lang: brainstorming"
+title: "Lang — brainstorming"
 type: brainstorming
 tags: [lang, brainstorming, risks, open-questions, decisions, translations]
 created: 2026-09-28
@@ -16,7 +16,7 @@ module: Lang
 status: active
 ---
 
-# Lang: brainstorming
+# Lang — brainstorming
 
 > **SUMMARY**: indice dei contenuti di brainstorming per `Modules\Lang`.
 > Le domande ad alto valore, ipotesi, rischi e output attesi sono nei **shard**
@@ -61,8 +61,21 @@ status: active
 | Drift docs / codice / stories | `docs/bmad/stories/` multipli |
 | WIP concorrente e marker merge | `stories/git-status-fleet-merge-markers-lang.story.md` |
 | Migrazioni duplicate | `database/migrations/` vs `database/Migrations/` |
-| Lingue sparse | `lang/de/`, `lang/en/`, `resources/lang/it/`: 3 source distinti |
+| Lingue sparse | `lang/de/`, `lang/en/`, `resources/lang/it/` — 3 source distinti |
 | Adapter estende Laravel core | `app/Adapters/TranslatorAdapter.php:22` può rompersi al upgrade |
+
+## Opzioni sui finding dell'audit 2026-11-16
+
+Evidenze in [audits/lang-audit.md](./audits/lang-audit.md); decisioni in [decision-log.md](./decision-log.md).
+
+| Opzione | Idea | Pro | Contro |
+|---|---|---|---|
+| O1 | Ritirare il tracker DB (D-2, B) | un solo meccanismo (file), meno codice | si perde la traccia fuori da `local` |
+| O2 | Cablare il tracker con scrittura in coda (D-2, A) | chiavi mancanti visibili in produzione | serve coda e limite di scrittura |
+| O3 | `Post` in un modulo di contenuti (D-3) | confini chiari | migrazione dati e 5 migration da rimappare |
+| O4 | Test di comportamento al posto dei «coverage» (D-4) | proteggono lo scopo | lavoro iniziale |
+
+Domande aperte per il committente: la traccia delle chiavi mancanti serve in produzione? Chi usa `Post` oltre Lang (nessun consumatore trovato nel codice)?
 
 ## Elementi non approvati (scartati o fuori scope)
 

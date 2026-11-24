@@ -3,12 +3,14 @@ title: "filament ui enhancements"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "filament ui enhancements"
 issues: []
 discussions: []
-status: superseded
-superseded_by: filament-ui-enhancements.md
 ---
 
 # Miglioramenti UI/UX per MailTemplateResource

@@ -26,7 +26,7 @@ return [
             ],
         ],
         'export' => [
-            'filename_prefix' => 'Areas al',
+            'filename_prefix' => 'Areas to',
             'columns' => [
                 'name' => 'Area name',
                 'parent_name' => 'Top level area name',

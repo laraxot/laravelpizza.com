@@ -1,3 +1,14 @@
+---
+title: "FALSE FRIENDS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "FALSE FRIENDS"
+issues: []
+discussions: []
+---
+
 # False Friends – Geo Module
 
 | Concetto | Interpretazione errata | Corretto |

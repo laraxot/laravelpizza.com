@@ -3,11 +3,14 @@ title: "notification channels implementation"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notification channels implementation"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Implementazione dei Canali di Notifica 
@@ -162,7 +165,7 @@ L'implementazione dei canali di notifica  segue un'architettura coerente e ben s
 
 ## Collegamenti a Documentazione Correlata
 - [Modulo di Notifica](./index.md)
-- [Panoramica dell'Architettura](./ARCHITECTURE.md)
+- [Panoramica dell'Architettura](./architecture.md)
 - [Modelli di Email](./email_templates.md)
 - [Implementazione SMS](./sms_implementation.md)
 - [Risoluzione dei Problemi](./troubleshooting.md)

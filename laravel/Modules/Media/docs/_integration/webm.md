@@ -9,8 +9,7 @@ created: 2026-07-14
 updated: 2026-07-14
 qmd: "webm"
 related:
-  - "../migrazione-filament.md"
-status: draft
+  - "./migrazione-filament.md"
 ---
 # webm
 

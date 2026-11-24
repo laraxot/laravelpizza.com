@@ -3,25 +3,23 @@ title: "Token Optimization Strategy (2026)"
 type: concept
 tags: [token, optimization, strategy]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "token-optimization-strategy token optimization strategy (2026)"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "../../../00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "../../../acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-status: draft
 ---
 
 # Token Optimization Strategy (2026)
@@ -37,7 +35,7 @@ This document outlines the mandatory rules for token efficiency in this workspac
 ## 2. Prompt & Communication Rules
 - **High-Signal Output**: Use tables, bullet points, and code diffs. Avoid conversational filler and repetitive summaries.
 - **Result Compaction**: If a tool output is too large, summarize the key information instead of passing it all back to the model context.
-- **Static Prefixing**: Keep system instructions and core project context (like `claude.md` and `gemini.md`) at the top of the context to leverage prompt caching.
+- **Static Prefixing**: Keep system instructions and core project context (like `CLAUDE.md` and `gemini.md`) at the top of the context to leverage prompt caching.
 
 ## 3. Tool Optimization
 - **Parallel Execution**: Batch independent tool calls in a single turn.

@@ -1,14 +1,17 @@
 ---
-qmd: "metodi duplicati analisi.divergenza"
+qmd: "Metodi Duplicati Analisi.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: metodi_duplicati_analisi.md"
+title: "Metodi Duplicati Analisi.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Divergenza: `metodi_duplicati_analisi.md`

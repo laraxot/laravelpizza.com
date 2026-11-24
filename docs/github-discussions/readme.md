@@ -8,6 +8,8 @@ Dopo averla pubblicata, aggiungere il link in fondo al file e segnare `pubblicat
 
 | File | Argomento | Pubblicata |
 |---|---|---|
-| [2026-11-12-audit-front-office.md](2026-11-12-audit-front-office.md) | Audit del front office e correzioni | no |
-| [2026-11-12-sottopagine-cms-analisi-errore.md](2026-11-12-sottopagine-cms-analisi-errore.md) | Sotto-pagine CMS nelle cartelle: analisi di un errore | no |
-| [2026-11-12-profilo-e-cancellazione-account.md](2026-11-12-profilo-e-cancellazione-account.md) | Modifica del profilo, cancellazione dell'account, bug trovati | no |
+| [audit-front-office.md](audit-front-office.md) | Audit del front office e correzioni | no |
+| [sottopagine-cms-analisi-errore.md](sottopagine-cms-analisi-errore.md) | Sotto-pagine CMS nelle cartelle: analisi di un errore | no |
+| [profilo-e-cancellazione-account.md](profilo-e-cancellazione-account.md) | Modifica del profilo, cancellazione dell'account, bug trovati | no |
+| [sync-moduli-e-back-office.md](sync-moduli-e-back-office.md) | Dopo un sync dei moduli: cosa si è rotto e come accorgersene | no |
+| [agenti-ai-mcp-e-iscrizione-in-un-passo.md](agenti-ai-mcp-e-iscrizione-in-un-passo.md) | Server MCP, iscrizione in un passo, chat AI nel sito? | no |

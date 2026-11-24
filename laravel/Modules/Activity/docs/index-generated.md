@@ -2,7 +2,7 @@
 title: "Activity Module Documentation Index"
 type: note
 status: draft
-updated: 2026-10-20
+updated: 2026-10-23
 tags: [docs, activity]
 qmd: "activity module documentation index activity"
 ---
@@ -22,18 +22,18 @@ qmd: "activity module documentation index activity"
 Strategic, foundational, and consolidated documentation at module level:
 
 **Core Documentation** (Key files)
-  - [ARCHITECTURE.md](architecture.md) — System architecture and design patterns
-  - [API.md](api.md) — API reference and endpoints
-  - [DATABASE-SCHEMA.md](database-schema.md) — Database schema definitions
-  - [QUICK-START.md](quick-start.md) — Quick start guide
-  - [PATTERNS.md](patterns.md) — Design patterns and implementation guides
-  - [TESTING.md](testing.md) — Testing strategy and guidelines
+  - [architecture.md](architecture.md): System architecture and design patterns
+  - [API.md](api.md): API reference and endpoints
+  - [database-schema.md](database-schema.md): Database schema definitions
+  - [quick-start.md](quick-start.md): Quick start guide
+  - [PATTERNS.md](patterns.md): Design patterns and implementation guides
+  - [testing.md](testing.md): Testing strategy and guidelines
 
 **Planning & Strategy** (Key documents)
   - [README.md](README.md)
-  - [PRODUCT_STRATEGY.md](product-strategy.md)
-  - [ROADMAP.md](roadmap.md)
-  - [SPRINT_PLANNING.md](sprint-planning.md)
+  - [product_strategy.md](product_strategy.md)
+  - [roadmap.md](roadmap.md)
+  - [sprint_planning.md](sprint_planning.md)
 
 **Additional Root Files**
   - and 278+ more documentation files (configuration, guides, analysis, audits, quality reports)
@@ -42,11 +42,11 @@ Strategic, foundational, and consolidated documentation at module level:
 
 Real-world implementation scenarios and workflow documentation:
 
-- **Activity Tracking** — User activity logging and monitoring
-- **Event Management** — Event lifecycle and state management
-- **Analytics** — Tracking, reporting, and data analysis
-- **Integrations** — Third-party system integrations
-- **Performance** — Optimization and bottleneck analysis
+- **Activity Tracking**: User activity logging and monitoring
+- **Event Management**: Event lifecycle and state management
+- **Analytics**: Tracking, reporting, and data analysis
+- **Integrations**: Third-party system integrations
+- **Performance**: Optimization and bottleneck analysis
 - and 112+ more use case specifications
 
 ### Wiki (56 files)
@@ -210,21 +210,21 @@ Testing strategies and guidelines:
 
 ### Other Categories
 
-**Architecture** (3 files) — System design documentation
-**Tecnico** (2 files) — Technical specifications
-**Guides** (2 files) — User and developer guides
-**Use-Cases** (1 file) — Use case documentation
-**UI/UX** (1 file) — Interface design documentation
-**Troubleshooting** (1 file) — General troubleshooting
-**Tests** (1 file) — Test documentation
-**Quality Analysis** (1 file) — Code quality metrics
-**Outputs** (1 file) — Generated reports
-**Development** (1 file) — Development workflow
-**Database** (1 file) — Database documentation
-**Concepts** (1 file) — Conceptual guides
-**Charts** (1 file) — Data visualization
-**Actions** (1 file) — Action implementation
-**Integration** (1 file) — Integration patterns
+**Architecture** (3 files): System design documentation  
+**Tecnico** (2 files): Technical specifications  
+**Guides** (2 files): User and developer guides  
+**Use-Cases** (1 file): Use case documentation  
+**UI/UX** (1 file): Interface design documentation  
+**Troubleshooting** (1 file): General troubleshooting  
+**Tests** (1 file): Test documentation  
+**Quality Analysis** (1 file): Code quality metrics  
+**Outputs** (1 file): Generated reports  
+**Development** (1 file): Development workflow  
+**Database** (1 file): Database documentation  
+**Concepts** (1 file): Conceptual guides  
+**Charts** (1 file): Data visualization  
+**Actions** (1 file): Action implementation  
+**Integration** (1 file): Integration patterns  
 
 ---
 
@@ -235,24 +235,24 @@ Testing strategies and guidelines:
 | Date | File | Category |
 |------|------|----------|
 | 2026-07-28 | [PATTERNS.md](patterns.md) | root |
-| 2026-07-28 | [TESTING.md](testing.md) | root |
-| 2026-07-28 | [DATABASE-SCHEMA.md](database-schema.md) | root |
+| 2026-07-28 | [testing.md](testing.md) | root |
+| 2026-07-28 | [database-schema.md](database-schema.md) | root |
 | 2026-07-28 | [API.md](api.md) | root |
-| 2026-07-28 | [QUICK-START.md](quick-start.md) | root |
-| 2026-07-28 | [ARCHITECTURE.md](architecture.md) | root |
-| 2026-07-28 | [archive/INDEX.md](archive/INDEX.md) | archive |
+| 2026-07-28 | [quick-start.md](quick-start.md) | root |
+| 2026-07-28 | [architecture.md](architecture.md) | root |
+| 2026-07-28 | [archive/index.md](archive/index.md) | archive |
 | 2026-07-28 | [wiki/troubleshooting/git-push-dual-remote.md](wiki/troubleshooting/git-push-dual-remote.md) | wiki |
 | 2026-07-28 | [wiki/concepts/xotbase-resource-zen-pattern.md](wiki/concepts/xotbase-resource-zen-pattern.md) | wiki |
 | 2026-07-28 | [wiki/concepts/phpstan-pest-discipline.md](wiki/concepts/phpstan-pest-discipline.md) | wiki |
 | 2026-07-28 | [testing-guidelines.md](testing-guidelines.md) | root |
 | 2026-07-28 | [test444.md](test444.md) | root |
 | 2026-07-28 | [test2222.md](test2222.md) | root |
-| 2026-07-28 | [test2024-12-04.md](raw/root-import/test2024-12-04.md) | root |
+| 2026-07-28 | [test.md](raw/root-import/test.md) | root |
 | 2026-07-28 | [test04.md](test04.md) | root |
 | 2026-07-28 | [test03.md](test03.md) | root |
 | 2026-07-28 | [test02.md](test02.md) | root |
 | 2026-07-28 | [test.md](test.md) | root |
-| 2026-07-28 | [test-14-02-2024.md](raw/root-import/test-14-02-2024.md) | root |
+| 2026-07-28 | [test.md](raw/root-import/test.md) | root |
 | 2026-07-28 | [raw/root-import/changelog-1.md](raw/root-import/changelog-1.md) | raw |
 
 ---
@@ -275,7 +275,7 @@ Testing strategies and guidelines:
 2. **Test Files**: Multiple test*.md files in root suggest work-in-progress documentation (consider archiving)
 3. **Deduplication**: Similar files in root-md-files/, archived/, and main locations should be consolidated
 4. **Wiki Structure**: Well-organized wiki with concepts and troubleshooting but could expand how-to guides
-5. **Use Cases**: 117 use case files are a valuable asset — ensure they remain indexed and discoverable
+5. **Use Cases**: 117 use case files are a valuable asset: ensure they remain indexed and discoverable
 
 ## Recommendations
 
@@ -288,11 +288,6 @@ Testing strategies and guidelines:
 
 ---
 
-*Generated: 2026-07-28 10:45:00*
-*Total Files Analyzed: 698 files across 20 categories*
+*Generated: 2026-07-28 10:45:00*  
+*Total Files Analyzed: 698 files across 20 categories*  
 *Ready for discovery, navigation, and improvement planning*
-
---- BMAD + Second Brain ---
-- Scopo: documentazione tecnica del modulo.
-- Utilità: riferimento sviluppatori/audit.
-- Funzionalità: struttura, dipendenze, convenzioni (no date .md, git avanti).

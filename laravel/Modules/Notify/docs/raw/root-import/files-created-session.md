@@ -3,7 +3,11 @@ title: "files created session"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "files created session"
 issues: []
 discussions: []
@@ -53,7 +57,7 @@ bashscripts/
 ### Documentation (Theme Level)
 ```
 laravel/Themes/Sixteen/docs/
-├── INDEX.md                                     ✨ NEW (theme index)
+├── index.md                                     ✨ NEW (theme index)
 ├── index.md                                     ✨ NEW (theme index)
 ├── COMPLETE-VISUAL-PARITY-REPORT.md            ✨ NEW (54-page ranking)
 ├── PRIORITY-MATRIX.json                        ✨ NEW (work planning)
@@ -71,7 +75,7 @@ laravel/Themes/Sixteen/docs/
 ### Bash Scripts Documentation
 ```
 bashscripts/docs/
-├── INDEX.md                                     ✨ NEW (tools reference)
+├── index.md                                     ✨ NEW (tools reference)
 ├── index.md                                     ✨ NEW (tools reference)
 ├── github-issues-batch.md                       ✨ NEW (CLI guide)
 └── [future README for other areas]
@@ -168,7 +172,7 @@ Project Root/
    - Phase breakdown (1-3) with timelines
    - Start here if new to the project
 
-2. **laravel/Themes/Sixteen/docs/INDEX.md**
+2. **laravel/Themes/Sixteen/docs/index.md**
 2. **laravel/Themes/Sixteen/docs/index.md**
    - Theme documentation hub
    - Cross-linked to all other docs
@@ -195,8 +199,8 @@ Project Root/
 - Reference: PRIORITY-MATRIX.json (for timeline/effort)
 
 **For Developers**:
-- Read: laravel/Themes/Sixteen/docs/INDEX.md
-- Reference: bashscripts/docs/INDEX.md (for tools)
+- Read: laravel/Themes/Sixteen/docs/index.md
+- Reference: bashscripts/docs/index.md (for tools)
 - Read: laravel/Themes/Sixteen/docs/index.md
 - Reference: bashscripts/docs/index.md (for tools)
 - Analyze: pages/<page-name>/DETAILED-ANALYSIS.md (per page)

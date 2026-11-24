@@ -123,7 +123,7 @@ it('rejects commands outside the allowlist even for a super-admin', function (st
     'listed command with json option' => 'route:list --json',
     'case change' => 'QUEUE:CLEAR',
     'leading space' => ' queue:clear',
-]);
+])->group('JOB-ARTISAN-INV-1');
 
 it('runs a listed command by exact match for a super-admin', function (): void {
     jobStatusPageActAs($this->jobContainer, jobStatusPageUser(true));
@@ -153,10 +153,10 @@ it('AssertAllowedArtisanCommandAction throws for commands that are not listed', 
 })->with([
     'migrate fresh' => 'migrate:fresh --force',
     'db wipe' => 'db:wipe',
-]);
+])->group('JOB-ARTISAN-INV-1', 'JOB-ARTISAN-INV-2');
 
 it('AssertAllowedArtisanCommandAction accepts a listed command', function (): void {
     $action = new AssertAllowedArtisanCommandAction;
 
     expect(fn () => $action->execute('queue:restart', ['queue:restart']))->not->toThrow(InvalidArgumentException::class);
-});
+})->group('JOB-ARTISAN-INV-1');

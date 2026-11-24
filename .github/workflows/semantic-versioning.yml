@@ -17,18 +17,20 @@ jobs:
   tag:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - name: Build root artifact
-        run: tar -czf project-artifact.tgz .
+        # L'archivio va fuori dalla cartella archiviata: dentro, tar legge il file mentre lo scrive
+        # ("file changed as we read it") e il job fallisce a ogni push.
+        run: tar --exclude=.git -czf "$RUNNER_TEMP/project-artifact.tgz" .
       - name: Attest build provenance
         uses: actions/attest-build-provenance@v3
         with:
-          subject-path: project-artifact.tgz
+          subject-path: ${{ runner.temp }}/project-artifact.tgz
       - name: Bump version and push tag
         id: tag_version
-        uses: mathieudutour/github-tag-action@v6.2
+        uses: mathieudutour/github-tag-action@v7
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           fetch_all_tags: true

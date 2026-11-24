@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpmd baseline 2026 09 07"
 issues: []
 discussions: []
-status: draft
 ---
 
 /var/www/_bases/base_techplanner_fila5/laravel/Modules/Activity/app/Filament/Pages/ListLogActivities.php:70   ShortVariable  Avoid variables with short names like $v. Configured minimum length is 2.

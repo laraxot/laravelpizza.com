@@ -115,6 +115,15 @@ class Role extends SpatieRole
         return $actor instanceof UserContract && $actor->hasRole(self::SUPER_ADMIN);
     }
 
+    /** Human label of a role code; falls back to the code itself. */
+    public static function displayName(string $name): string
+    {
+        $key = 'user::role.labels.'.str_replace('::', '__', $name);
+        $label = trans($key);
+
+        return $label === $key ? $name : $label;
+    }
+
     /**
      * Toglie dalla query i ruoli che `$actor` non puo' assegnare. Si applica alle opzioni e alla lettura del valore
      * ricevuto: il form e' controllato dal client, l'elenco filtrato da solo non basta.

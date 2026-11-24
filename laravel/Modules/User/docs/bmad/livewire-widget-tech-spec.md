@@ -1,4 +1,6 @@
 ---
+title: "Tech spec — campagna Livewire → widget"
+
 title: "Tech spec: campagna Livewire → widget"
 type: tech-spec
 module: User
@@ -73,6 +75,8 @@ Eliminare le 8 classi auth HTTP e viste `livewire/auth/**` dopo grep:
 
 Scegliere SSoT logout: un file tra `Filament/Widgets/LogoutWidget.php` e `Filament/Widgets/Auth/LogoutWidget.php` (due classi oggi). La story **sceglie e documenta**, non ne crea una terza. Idem reset (`PasswordResetWidget` vs `ResetPasswordWidget`).
 
+Verify HTTP: cancellare. Se FO serve verify, è pagina tema/Volt — fuori da questa story oltre il ritiro.
+
 Verify HTTP: cancellare. Se FO serve verify, è pagina tema/Volt: fuori da questa story oltre il ritiro.
 
 ### Cluster C (10.4)
@@ -82,6 +86,9 @@ Verify HTTP: cancellare. Se FO serve verify, è pagina tema/Volt: fuori da quest
 - Rimuovere `dddx('wip')` con la classe, non “fixare” il WIP in User.
 
 ## Errori noti da non ripetere
+
+- Namespace `filament-jet::` — [filament_errors.md](../filament_errors.md).
+- `canView(): false` globale che spegne anche l’hook — usare `$isDiscovered`.
 
 - Namespace `filament-jet::`: [filament_errors.md](../filament_errors.md).
 - `canView(): false` globale che spegne anche l’hook: usare `$isDiscovered`.

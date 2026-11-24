@@ -7,5 +7,4 @@ updated: 2026-09-26
 qmd: "git conflict composer json"
 issues: []
 discussions: []
-status: draft
 ---

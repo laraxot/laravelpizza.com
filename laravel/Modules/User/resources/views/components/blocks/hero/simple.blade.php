@@ -4,7 +4,7 @@ declare(strict_types=1);
 ?>
 @props([
     'title' => 'Titolo Hero',
-    'subtitle' => 'Sottotitolo della hero section',
+    'subtitle' => 'Hero section subtitle',
     'image' => null,
     'cta_text' => 'Call to Action',
     'cta_link' => '#',

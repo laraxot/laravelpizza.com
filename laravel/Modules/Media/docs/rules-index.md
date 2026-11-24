@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "rules index"
 related:
   - "./webm.md"
-status: draft
 ---
 # Rules Index
 

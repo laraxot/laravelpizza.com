@@ -1,12 +1,7 @@
 ---
+qmd: "activity wiki testing coverage plan md"
 title: Coverage plan
 module: Activity
-type: note
-updated: 2026-10-08
-tags: [docs, activity, wiki]
-qmd: "activity coverage plan activity"
-status: superseded
-superseded_by: ../../coverage-plan.md
 ---
 
 # Activity Coverage Plan

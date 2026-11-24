@@ -4,14 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\UI\Tests\Unit;
 
-use Mockery;
 use Modules\UI\Tests\TestCase;
 use Modules\Xot\Tests\ModuleBusinessCoverage;
 
 uses(TestCase::class);
 
 afterEach(function (): void {
-    Mockery::close();
+    \Mockery::close();
 });
 
 /** @return list{string, string} */

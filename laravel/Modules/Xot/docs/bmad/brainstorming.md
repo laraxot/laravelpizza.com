@@ -1,11 +1,5 @@
 ---
-title: "Xot - brainstorming.md"
-module: Xot
-bmad: true
-status: active
----
----
-title: "Xot: brainstorming BMAD"
+title: "Xot — brainstorming BMAD"
 type: brainstorming
 tags: [brainstorming, xot, architettura, refactoring, phpstan]
 created: 2026-09-28
@@ -17,10 +11,9 @@ related:
   - discussions/01-traits-composition.md
   - architecture.md
   - README.md
-status: draft
 ---
 
-# Xot: brainstorming
+# Xot — brainstorming
 
 > **SUMMARY**: Indice e raccolta di domande aperte, rischi e ipotesi per il refactoring architetturale di Xot. Gli shard specialistici sono in `brainstorming/` e `discussions/`.
 
@@ -53,7 +46,7 @@ Le risposte devono diventare story BMAD con acceptance criteria misurabili, rife
 ## Vedi anche
 
 - [Architecture](architecture.md)
-- [Stories](stories/): indice completo in [README.md](readme.md)
+- [Stories](stories/) — indice completo in [README.md](readme.md)
 - [Epics](epics/module-roadmap.md)
 # Brainstorming - Modulo Xot
 
@@ -77,3 +70,47 @@ Le risposte devono diventare story BMAD con acceptance criteria misurabili, rife
 
 - [DOMANDA 1]
 - [DOMANDA 2]
+
+## Opzioni sui finding (2026-11-16)
+
+### Rompere i cicli Xot↔feature
+
+- spostare i contratti in Xot e iniettare
+- dichiarare le dipendenze in `module.json`/`composer.json` e accettarle
+- fondere UI/Lang/Tenant in Xot
+
+**Scelta lazy (KISS):** contratti + container: l'unica che non cambia i confini dei team.
+
+### Bypass `{modulo}::admin`
+
+- lasciare (ADR) e testare ogni policy sensibile
+- opt-in per modulo
+
+**Scelta lazy (KISS):** lasciare: il costo è un test per policy sensibile (vedi User).
+
+### Domande aperte
+
+- Chi consuma `RouteService` fuori da Xot (1 chiamante)?
+- I 9 trait senza consumer sono API per progetti fuori da questo repo?
+
+## Opzioni sui finding (2026-11-16)
+
+### Rompere i cicli Xot↔feature
+
+- spostare i contratti in Xot e iniettare
+- dichiarare le dipendenze in `module.json`/`composer.json` e accettarle
+- fondere UI/Lang/Tenant in Xot
+
+**Scelta lazy (KISS):** contratti + container: l'unica che non cambia i confini dei team.
+
+### Bypass `{modulo}::admin`
+
+- lasciare (ADR) e testare ogni policy sensibile
+- opt-in per modulo
+
+**Scelta lazy (KISS):** lasciare: il costo è un test per policy sensibile (vedi User).
+
+### Domande aperte
+
+- Chi consuma `RouteService` fuori da Xot (1 chiamante)?
+- I 9 trait senza consumer sono API per progetti fuori da questo repo?

@@ -21,13 +21,13 @@ blocked_by: []
 related:
   - "lang-translation-loading-fix.story.md"
   - "../conflict_resolution_autolabelaction.md"
-  - "../docs/PERFORMANCE-OPTIMIZATION.md"
+  - "../docs/performance-optimization.md"
 owned_scope:
   - laravel/Modules/Lang/app/Actions/Filament/AutoLabelAction.php
   - laravel/Modules/Lang/tests/Unit/Actions/Filament/AutoLabelActionTest.php
 ---
 
-# Lang: AutoLabelAction hardening and type safety
+# Lang — AutoLabelAction hardening and type safety
 
 ## Story
 

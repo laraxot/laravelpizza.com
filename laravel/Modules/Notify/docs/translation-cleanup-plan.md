@@ -3,7 +3,11 @@ title: "translation cleanup plan"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-10-23
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "translation cleanup plan"
 issues: []
 discussions: []
@@ -12,7 +16,7 @@ status: draft
 
 # Piano di Pulizia e Standardizzazione delle Traduzioni
 
-Questo documento descrive il piano di pulizia e standardizzazione delle traduzioni italiane nel modulo Notify di Quaeris.
+Questo documento descrive il piano di pulizia e standardizzazione delle traduzioni italiane nel modulo Notify di <nome progetto>.
 
 ## Analisi della Situazione Attuale
 

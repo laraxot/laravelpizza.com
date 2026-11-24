@@ -10,7 +10,6 @@ tags: [redundancy, duplicate-code, docs, views]
 created: 2026-05-21
 related:
   - https://github.com/laraxot/base_fixcity_fila5/issues/89
-status: draft
 ---
 
 # Cms redundancy audit 2026-05-21
@@ -19,7 +18,7 @@ High-risk findings:
 - Duplicate FQCN `Modules\Cms\View\Composers\ThemeComposer` in `app/View/Composers/ThemeComposer.php` and `resources/views/Composers/ThemeComposer.php`.
 - Docs/source Blade files are mirrored under `app/docs/source/...` and `docs/source/...`.
 - Footer and header components are duplicated between `components/...` and `components/blocks/...`.
-- Docs contain case-only duplicates: `INDEX.md`/`index.md`, `PRD.md`/`prd.md`, `METODI_DUPLICATI_ANALISI.md` variants, and more.
+- Docs contain case-only duplicates: `index.md`/`index.md`, `PRD.md`/`prd.md`, `metodi_duplicati_analisi.md` variants, and more.
 
 Risk:
 - A PHP class under `resources/views` is structurally suspicious and can be included by mistake.

@@ -5,13 +5,9 @@ created: 2026-05-11
 updated: 2026-05-11
 tags: [performance, optimization, tokens, context]
 related:
-<<<<<<< .merge_file_tl6tGG
-  - ../../docs/wiki/concepts/llm-wiki-operational-discipline.md
-=======
   - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
 status: draft
 qmd: "performance optimization   module **activity** activity"
->>>>>>> .merge_file_EV5MLb
 ---
 
 # Performance Optimization — Module **Activity**
@@ -24,16 +20,12 @@ qmd: "performance optimization   module **activity** activity"
 **Dopo**: Carico solo what's needed (~2K startup)
 
 ```diff
-<<<<<<< .merge_file_tl6tGG
-<<<<<<< HEAD
-- 150+ rules embeddate in agents.md
-=======
 - 150+ rules embeddate in AGENTS.md
->>>>>>> laraxot/dev
+
+- 150+ rules embeddate in AGENTS.md
 + 0 rules embeddate — tutte on-demand
-=======
-- 150+ rules embeddate in agents.md+ 0 rules embeddate — tutte on-demand
->>>>>>> .merge_file_EV5MLb
+
+- 150+ rules embeddate in AGENTS.md+ 0 rules embeddate — tutte on-demand
 ```
 
 ### 2. Cache Esterna al Repo
@@ -128,8 +120,8 @@ context-mode ctx-stats
 ## Riferimenti
 
 - [Global Performance Guide](../../docs/wiki/concepts/performance-optimization.md)
-- [On-Demand Pattern](./ON-DEMAND-PATTERN.md)
-- [QMD Setup](./QMD-SETUP.md)
+- [On-Demand Pattern](./on-demand-pattern.md)
+- [QMD Setup](./qmd-setup.md)
 
 ---
 *Status: Ottimizzato | Token risparmiati: ~48K per session*

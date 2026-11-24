@@ -1,5 +1,5 @@
 ---
-title: "User: vietata dipendenza dal modulo Comment"
+title: "User — vietata dipendenza dal modulo Comment"
 type: concept
 module: User
 tags: [user, comment, boundary, architecture, dependency]
@@ -17,7 +17,6 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-status: draft
 ---
 
 # User non dipende da Comment
@@ -26,8 +25,8 @@ status: draft
 
 | Tipo | Link |
 |------|------|
-| Issue | [#13: User must never depend on Comment](https://github.com/laraxot/base_techplanner_fila5/issues/13) |
-| Discussion | [#14: Architecture User ↔ Comment](https://github.com/laraxot/base_techplanner_fila5/discussions/14) |
+| Issue | [#13 — User must never depend on Comment](https://github.com/laraxot/base_techplanner_fila5/issues/13) |
+| Discussion | [#14 — Architecture User ↔ Comment](https://github.com/laraxot/base_techplanner_fila5/discussions/14) |
 
 ## Regola (legge operativa)
 
@@ -43,12 +42,12 @@ Il modulo **User** è infrastruttura identity/auth: **non deve** importare class
 ## Perché
 
 - User è dipendenza di quasi tutti i moduli: coupling con Comment rompe bootstrap e test
-- Comment (se serve) dipende da User, mai il contrario: inversione DIP
+- Comment (se serve) dipende da User, mai il contrario — inversione DIP
 - Progetti senza Comment (es. `base_techplanner_fila5`) devono avviarsi senza fatal error
 
 ## Se servono commenti su User
 
-Il modulo **Comment** (o dominio business: Blog, Job, …) estende o compone il modello User lato consumer: non il contrario.
+Il modulo **Comment** (o dominio business: Blog, Job, …) estende o compone il modello User lato consumer — non il contrario.
 
 ## Fix applicato
 

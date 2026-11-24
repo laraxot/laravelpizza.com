@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "static access fixes"
 issues: []
 discussions: []
-status: draft
 ---
 
 # XotBaseRelationManager Static Access Fixes

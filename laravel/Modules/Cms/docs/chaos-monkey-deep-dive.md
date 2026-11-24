@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "chaos monkey deep dive"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Chaos Monkey - Deep Dive Tecnico
@@ -27,7 +26,7 @@ Analisi approfondita della catena di rendering per debugging sistematico.
 
 - **Path**: `base_path('config/'.$tenantName.'/'.$filename)`
 - **Esempio**: `database/content/pages` → `config/local/laravelpizza/database/content/pages`
-- **SushiToJsons**: `filePath('database/content/pages')` = directory, poi `File::allFiles` (anche le sottocartelle). La cartella viene prefissata a `id` e `slug`.
+- **SushiToJsons**: `filePath('database/content/pages')` = directory, poi `File::glob($path.'/*.json')`
 
 ### Config xra.php
 
@@ -41,10 +40,10 @@ Analisi approfondita della catena di rendering per debugging sistematico.
 
 1. `Page::getRows()` → `getSushiRows()`
 2. `$path = TenantService::filePath('database/content/pages')`
-3. `$files = File::allFiles($path)` (non solo i json in cima alla cartella)
+3. `$files = File::glob($path.'/*.json')`
 4. Per ogni file: estrae campi dallo `schema` del model
-5. **Slug**: campo `slug` del file, poi il prefisso della cartella (`blog/view.json` + `view` = `blog.view`)
-6. **Naming**: il nome file non è lo slug; lo è il campo, più la cartella se c'è
+5. **Slug**: letto da `$json['slug']` nel file, NON dal nome file
+6. **Naming**: `events_view.json` → slug nel JSON = `events.view`
 
 ### Schema Page
 

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament v4 upgrade guide"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Guida Upgrade Filament v4 - Laraxot PTVX
@@ -23,6 +22,15 @@ Questa guida documenta l'upgrade a **Filament v4** nel progetto Laraxot PTVX, in
 - **Approccio**: Migrazione graduale con testing continuo
 
 ---
+
+title: "filament v4 upgrade guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament v4 upgrade guide"
+issues: []
+discussions: []
 ## 🚀 Nuove Funzionalità Filament v4
 
 ### Performance Migliorate

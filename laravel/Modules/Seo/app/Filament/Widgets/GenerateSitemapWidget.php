@@ -36,7 +36,7 @@ class GenerateSitemapWidget extends XotBaseWidget
                 ->icon('heroicon-m-document-text')
                 ->color('primary')
                 ->action(static function (): void {
-                    $action = new BuildSitemapAction;
+                    $action = new BuildSitemapAction();
                     $xml = $action->execute();
                     $path = public_path('sitemap.xml');
                     file_put_contents($path, $xml);

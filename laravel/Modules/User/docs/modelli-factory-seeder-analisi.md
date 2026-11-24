@@ -1,11 +1,3 @@
----
-title: "Analisi Modelli, Factory e Seeder - Modulo User"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "analisi modelli, factory e seeder - modulo user user"
----
 # Analisi Modelli, Factory e Seeder - Modulo User
 
 ## Panoramica
@@ -201,14 +193,11 @@ module: theme
 topic: modelli-factory-seeder-analisi
 canonical: ../../../Themes/docs/shared-components/modelli-factory-seeder-analisi-Modules.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"

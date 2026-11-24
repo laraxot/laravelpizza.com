@@ -90,6 +90,6 @@ Track: [phpstan-modules-zero-standing-order](../../../Xot/docs/wiki/memories/php
 
 ## Related
 
-- Planning: [bmad-planning.md](../bmad-planning.md)
+- Planning: [bmad-planning.md](bmad-planning.md)
 - Brainstorming: [bmad-brainstorming.md](../bmad-brainstorming.md)
 - Decision log: [decision-log.md](./decision-log.md)

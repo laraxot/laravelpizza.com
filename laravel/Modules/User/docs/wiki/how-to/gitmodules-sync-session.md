@@ -1,5 +1,5 @@
 ---
-title: "Gitmodules sync session: note modulo/tema"
+title: "Gitmodules sync session — note modulo/tema"
 type: how-to
 tags: [git, gitmodules, sync, quality-gates, merge-conflict]
 created: 2026-07-21
@@ -11,7 +11,6 @@ discussions: []
 related:
   - "../../../../../../docs/stories/STORY-003-gitmodules-sync-conflict-sweep.md"
   - "../../../../../../docs/chat/gitmodules-sync.md"
-status: draft
 ---
 
 # Gitmodules sync session
@@ -25,7 +24,7 @@ dalla root e mai tramite Shell `working_directory`. Verificare
 
 ## Cosa fare su questo owner
 
-1. `git -C . remote -v`: remote reale del modulo (`laraxot/module_user_fila5`), non la root.
+1. `git -C . remote -v` — remote reale del modulo (`laraxot/module_user_fila5`), non la root.
 2. Quality gates da `laravel/`: phpstan → phpmd → phpinsights (`--composer=composer.lock`).
 3. Marker Git: risoluzione manuale forward-only (no `git restore`).
 

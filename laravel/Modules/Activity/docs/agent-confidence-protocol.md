@@ -1,4 +1,5 @@
 ---
+qmd: "activity agent confidence protocol md"
 title: "Massima confidenza agente"
 type: reference
 status: approved
@@ -7,7 +8,6 @@ created: "2026-05-26"
 updated: "2026-05-26"
 related:
   - "../../../../docs/wiki/rules/agent-confidence-protocol.md"
-qmd: "massima confidenza agente activity"
 ---
 
 # Massima confidenza agente

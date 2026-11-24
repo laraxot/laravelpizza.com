@@ -58,8 +58,18 @@ Se esegui `migrate --force` in produzione:
 
 ## Regole Correlate
 
+<<<<<<< HEAD
 - [Forward-Only Philosophy](docs/claude/project-rules-summary.md)
-- [QWEN.md](QWEN.md) - Sezione 7: Database SACRO
+- [qwen.md](qwen.md) - Sezione 7: Database SACRO
+=======
+<<<<<<< .merge_file_0fOKfh
+- [Forward-Only Philosophy](../claude/project-rules-summary.md)
+- [QWEN.md](qwen.md) - Sezione 7: Database SACRO
+=======
+- [Forward-Only Philosophy](docs/claude/project-rules-summary.md)
+- [qwen.md](qwen.md) - Sezione 7: Database SACRO
+>>>>>>> .merge_file_UZiUHv
+>>>>>>> laraxot/dev
 - [AGENTS.md](AGENTS.md) - Regola Critica
 
 ---

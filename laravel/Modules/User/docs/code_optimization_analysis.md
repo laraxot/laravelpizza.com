@@ -1,11 +1,3 @@
----
-title: "user module code and documentation optimization analysis"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "user module code and documentation optimization analysis user"
----
 # user module code and documentation optimization analysis
 
 ## comprehensive analysis
@@ -32,7 +24,7 @@ docs/
 ├── authentication/
 │   ├── overview.md
 │   ├── implementation.md
-│   ├── security.md
+│   ├── SECURITY.md
 │   └── troubleshooting.md
 ├── user_management/
 │   ├── crud_operations.md
@@ -59,7 +51,7 @@ docs/
 │   ├── commands.md
 │   └── events.md
 └── best_practices/
-    ├── security.md
+    ├── SECURITY.md
     ├── performance.md
     ├── testing.md
     └── deployment.md

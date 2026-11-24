@@ -3,7 +3,11 @@ title: "architecture analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "architecture analysis"
 issues: []
 discussions: []
@@ -616,10 +620,7 @@ Themes/Sixteen/
 # ALWAYS run after ANY frontend change:
 cd Themes/Sixteen/
 npm run build          # Compile assets
-<<<<<<< .merge_file_hUaCDd
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_lKXEe4
 
 # These commands are MANDATORY for any:
 # - CSS changes
@@ -1642,7 +1643,7 @@ Tasks:
 
 ### Recommended New Documentation
 ```
-1. ARCHITECTURE.md
+1. architecture.md
 1. architecture.md
    - System architecture diagrams
    - Module dependency graph
@@ -1808,11 +1809,17 @@ Monitoring:
 
 Frontend:
 [ ] Theme built (npm run build)
-<<<<<<< .merge_file_hUaCDd
+<<<<<<< HEAD
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-=======
 [ ] Asset buildati (`npm run build`) e serviti via symlink in `public_html/themes` (`npm run copy` obsoleto)
->>>>>>> .merge_file_lKXEe4
+=======
+<<<<<<< .merge_file_GfMJI8
+[ ] Assets deployed (symlink public_html/themes (npm run copy obsoleto))
+[ ] Asset buildati (`npm run build`) e serviti via symlink in `public_html/themes` (`npm run copy` obsoleto)
+=======
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+>>>>>>> .merge_file_HLa6bH
+>>>>>>> laraxot/dev
 [ ] Dark mode tested
 [ ] Responsive design tested
 [ ] Accessibility tested

@@ -22,6 +22,7 @@ Questo file ora funge da indice rapido. La guida completa e modulare e' stata su
 - [Theme translations critical rule](./.agents/docs/agents-guide/14-theme/theme-translations-critical-rule.md)
 - [Chaos Monkey readiness](./.agents/docs/agents-guide/15-chaos-monkey/chaos-monkey-readiness.md)
 - [Bug Injection Recovery Playbook](./laravel/docs/bug-injection-recovery-playbook.md) - Quando bug/file infetti sono introdotti deliberatamente
+- [Claude for Open Source eligibility](./docs/claude-for-open-source-eligibility.md) - Playbook per 6 mesi Claude Ultra gratis (soglie, gap, draft candidatura)
 
 ## Nota operativa
 

@@ -1,14 +1,17 @@
 ---
-qmd: "appointment field namings.divergenza"
+qmd: "Appointment Field Namings.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: appointment-field-namings.md"
+title: "Appointment Field Namings.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Divergenza: `appointment-field-namings.md`

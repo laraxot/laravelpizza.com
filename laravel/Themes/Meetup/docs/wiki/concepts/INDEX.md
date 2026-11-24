@@ -1,13 +1,9 @@
 ---
-qmd: "INDEX"
-issues: []
-discussions: []
 title: "concepts index — Meetup"
 type: index
 tags: [concepts, Meetup]
 created: 2026-05-11
 updated: 2026-05-23
-status: active
 ---
 
 # concepts Index — Meetup

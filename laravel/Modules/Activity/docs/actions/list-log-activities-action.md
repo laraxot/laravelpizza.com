@@ -1,11 +1,10 @@
 ---
 title: "ListLogActivitiesAction - Documentazione Completa"
+qmd: "activity actions list log activities action md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, actions]
-qmd: "listlogactivitiesaction - documentazione completa activity"
+tags: [documentation]
 ---
+
 # ListLogActivitiesAction - Documentazione Completa
 
 ## Panoramica

@@ -47,8 +47,8 @@ filament-resources.md        # Descrittivo e chiaro
 
 ### ❌ Errato
 ```
-ARCHITECTURE.md              # Maiuscole
-Architecture.md              # CamelCase
+architecture.md              # Maiuscole
+architecture.md              # CamelCase
 business_logic.md            # Underscore (preferire trattini)
 filament-resources.md   # Date nel nome
 phpstan-fixes.md  # Date specifiche
@@ -160,7 +160,15 @@ Riferimento a [configuration.md](configuration.md)
 
 ## Testing
 
+<<<<<<< HEAD
 Riferimento a [testing.md](testing.md)
+=======
+<<<<<<< HEAD
+Riferimento a [testing.md](testing.md)
+=======
+Riferimento a testing.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Collegamenti
 
@@ -231,7 +239,7 @@ Riferimento a [testing.md](testing.md)
 - `phpstan-fixes.md`
 - `phpstan-fixes-archive-1.md`
 - `phpstan-fixes.md`
-- `PHPSTAN_FIXES.md`
+- `phpstan_fixes.md`
 
 **Dopo:**
 - `phpstan-compliance.md` (consolidato, focus su regole e pattern)

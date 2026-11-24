@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "project backup"
 issues: []
 discussions: []
-status: draft
 ---
 
 ## Modifiche Recenti

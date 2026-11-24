@@ -1,17 +1,21 @@
 ---
 issues: []
 discussions: []
-title: "Notify: scopo, confini e come servirlo meglio"
+title: "Notify — scopo, confini e come servirlo meglio"
 type: concept
 module: Notify
 status: active
 created: 2026-09-02
-updated: 2026-10-20
+<<<<<<< HEAD
+updated: 2026-09-02
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 tags: [scopo, confini, servizio-trasversale, canali, notifiche, dipendenze]
 qmd: "scopo notify servizio trasversale canali notifiche email sms whatsapp telegram push confini dipendenze ipertrofia documentale"
 ---
 
-# Notify: scopo, confini e come servirlo meglio
+# Notify — scopo, confini e come servirlo meglio
 
 ## Lo scopo, dedotto dal codice
 
@@ -19,7 +23,7 @@ Notify non ha un dominio applicativo. Non esiste una "pratica di notifica" da is
 approvare o archiviare: esiste solo il momento in cui un altro modulo ha già deciso che
 qualcosa va comunicato, e serve qualcuno che sappia come farlo arrivare. Il codice lo
 dice con precisione: `app/Actions/` contiene 46 file e **tutti e 46 usano
-`Spatie\QueueableAction\QueueableAction`**: non c'è una sola classe che rappresenti un
+`Spatie\QueueableAction\QueueableAction`** — non c'è una sola classe che rappresenti un
 oggetto di business, ci sono solo verbi accodabili.
 
 Quei verbi sono organizzati per corriere, non per contenuto:
@@ -32,8 +36,8 @@ Quei verbi sono organizzati per corriere, non per contenuto:
 | `app/Actions/Mail/` | 4 (+ `Engines/`) | SMTP, Mailtrap, layout, invio con template |
 | `app/Actions/Telegram/` | 3 | Botman, Nutgram, API ufficiale |
 
-Sette provider SMS diversi per lo stesso identico atto: mandare un messaggio a un
-numero: sono la prova che il criterio organizzativo del modulo è la
+Sette provider SMS diversi per lo stesso identico atto — mandare un messaggio a un
+numero — sono la prova che il criterio organizzativo del modulo è la
 **sostituibilità del corriere**, non la ricchezza del messaggio. Lo confermano i
 quattro `app/Channels/` (`NetfunChannel`, `SmsChannel`, `TelegramChannel`,
 `WhatsAppChannel`), che agganciano quei verbi al sistema di notifiche di Laravel, e i
@@ -46,7 +50,7 @@ Da qui la formulazione in una riga:
 > consegna un messaggio su cinque canali e con quale provider, e non sa nulla del
 > perché quel messaggio esista.**
 
-Il "perché" resta fuori: delle 23 classi `Notification` del repo, 19 stanno in Notify -
+Il "perché" resta fuori: delle 23 classi `Notification` del repo, 19 stanno in Notify —
 ma le 4 che contano davvero per il dominio (`Ptv`, `Progressioni`, `User`, `Job`) stanno
 nei moduli che generano l'evento, e Notify le riceve. `RecordNotification` è il punto di
 giunzione: è il simbolo di Notify più importato dagli altri (4 file).
@@ -67,7 +71,7 @@ I consumatori, misurati il 2026-09-02 con
 Sei moduli su diciassette. Non è una piattaforma consumata ovunque come Xot: è un
 servizio usato dai moduli che hanno un flusso con destinatari umani. Il punto di
 aggancio più profondo è `Modules/Xot/app/States/Transitions/XotBaseTransition.php:113`
-- ogni transizione di stato della piattaforma può notificare, e passa di qui.
+— ogni transizione di stato della piattaforma può notificare, e passa di qui.
 
 ## I confini, e dove oggi sono rotti
 
@@ -83,7 +87,15 @@ sospetto che sia ipertrofia e non ricchezza è confermato da tre misure indipend
 
 - **899 nomi di file collidono**: 3.031 file `.md`, solo 2.132 basename distinti.
 - **83 gruppi di file byte-identici**: `find docs -name '*.md' -exec md5sum {} + | awk '{print $1}' | sort | uniq -d | wc -l`.
-- **25 directory contengono sia `00-index.md` sia `00-INDEX.md`**: due indici per la
+<<<<<<< HEAD
+- **25 directory contengono sia `00-index.md` sia `00-index.md`** — due indici per la
+=======
+<<<<<<< HEAD
+- **25 directory contengono sia `00-index.md` sia `00-INDEX.md`** — due indici per la
+=======
+- **25 directory contengono sia `00-index.md` sia `00-index.md`** — due indici per la
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   stessa cartella, distinti solo dal case, quindi due verità che nessuno riconcilia.
   Su un filesystem case-insensitive uno dei due sparisce e nessuno se ne accorge.
 - **1.059 file `.md` stanno piatti nella root di `docs/`**, oltre un terzo del totale,
@@ -97,7 +109,7 @@ Anche il README del modulo ne risente: dichiara "File PHP / righe di codice: 720
 54.927" attribuendolo al comando `find app -name '*.php' | xargs wc -l`. Il comando
 citato, eseguito il 2026-09-02, restituisce **232 file e 17.341 righe**; 701 file e
 54.098 righe sono la misura dell'**intero modulo** (`app/` + `tests/` + seeders +
-factories). Il numero non è inventato, è etichettato male: ma un numero con il comando
+factories). Il numero non è inventato, è etichettato male — ma un numero con il comando
 sbagliato accanto è esattamente il difetto che quel README dichiara di voler evitare.
 
 ### Tre modelli sono fuori dalla connection del modulo
@@ -111,8 +123,6 @@ concreti su quattordici non lo ereditano perché estendono direttamente
 | `NotificationType` | `2026_03_03_000001_create_notification_types_table.php` | `XotBaseMigration` risolve la connection dal modello: `notification_types` finisce sulla connection **di default**, non su `notify` |
 | `Theme` | nessuna | tabella inesistente; `tests/Feature/ThemeManagementBusinessLogicTest.php:15` lo dichiara: *"The tests reference Modules\Notify\Models\Theme which is not implemented"* |
 | `EmailTemplate` | nessuna | idem, e coesiste con `MailTemplate` che invece è reale, versionato e loggato |
-| `Theme` | nessuna | tabella inesistente; `tests/Feature/ThemeManagementBusinessLogicTest.php` e' ridotto a un `skip('themes table and Theme design token columns not implemented')` che spiega l'assenza (il corpo da 20 test e' in git, commit `13f2cb04f`) |
-| `EmailTemplate` | nessuna | idem (`tests/Feature/TemplateManagementBusinessLogicTest.php`, ridotto a `skip`), e coesiste con `MailTemplate` che invece è reale, versionato e loggato |
 
 `Theme` e `NotifyTheme` sono due modelli per lo stesso concetto: solo il secondo ha
 migrazione (`create_notify_themes_table`), factory, seeder e Filament Resource.
@@ -120,11 +130,10 @@ migrazione (`create_notify_themes_table`), factory, seeder e Filament Resource.
 casi il modello vivo è quello con la migrazione; l'altro è un abbozzo che PHPStan
 analizza, l'IDE completa e un agente può usare in buona fede.
 
-### `app/Services/` non esiste: conversione completata
+### `app/Services/` esiste ancora, e duplica `app/Actions/`
 
 La policy del progetto (`bashscripts/ai/wiki/rules/no-services-rule.md`) vieta
-`app/Services` e le classi `*Service` come confine applicativo. L'elenco seguente è
-solo il mapping storico della conversione:
+`app/Services` e le classi `*Service`. In Notify ci sono 4 file `.php` più un residuo:
 
 ```
 app/Services/NotificationManager.php        <- duplicato di app/Actions/NotificationManager.php
@@ -196,9 +205,6 @@ migrazione, non hanno consumatori fuori dai test, e hanno ciascuno un gemello re
 (`NotifyTheme`, `MailTemplate`): vanno cancellati, non "completati". Il test
 `tests/Feature/ThemeManagementBusinessLogicTest.php` che documenta l'assenza di `Theme`
 va rimosso con lui.
-(`NotifyTheme`, `MailTemplate`): vanno cancellati, non "completati". I test
-`tests/Feature/ThemeManagementBusinessLogicTest.php` e `tests/Feature/TemplateManagementBusinessLogicTest.php`,
-ridotti a `skip` che documentano l'assenza di `Theme` ed `EmailTemplate`, vanno rimossi con loro.
 
 ```bash
 cd laravel
@@ -249,9 +255,17 @@ find Modules/Notify/app/Filament/Clusters/Test/Pages -name '*.php' | wc -l   # 1
 ### 5. Deduplicare `docs/` prima di aggiungere una sola riga nuova
 
 Target misurabili, nell'ordine: gli 83 gruppi di file identici, le 25 collisioni
+<<<<<<< HEAD
+`00-index.md` / `00-index.md`, i 1.059 file piatti nella root. Le regole di progetto sui
+=======
+<<<<<<< HEAD
 `00-index.md` / `00-INDEX.md`, i 1.059 file piatti nella root. Le regole di progetto sui
-nomi dei file markdown esistono già: anzi ne esistono troppe, `ls docs/wiki/rules/ |
-grep -ci markdown` ne conta 9: e qui vanno applicate, non riscritte una decima volta.
+=======
+`00-index.md` / `00-index.md`, i 1.059 file piatti nella root. Le regole di progetto sui
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+nomi dei file markdown esistono già — anzi ne esistono troppe, `ls docs/wiki/rules/ |
+grep -ci markdown` ne conta 9 — e qui vanno applicate, non riscritte una decima volta.
 
 ```bash
 cd laravel/Modules/Notify
@@ -312,8 +326,8 @@ find Modules/Notify/docs -name '*.md' -type f -exec md5sum {} + \
 
 ## Collegamenti
 
-- [README.md](../README.md): badge e stato misurato del modulo
-- [no-services-rule](../../../../bashscripts/ai/wiki/rules/no-services-rule.md): perché `app/Services` non deve esistere
-- [migration-filename-from-model-name](../../../../docs/wiki/rules/migration-filename-from-model-name.md): N modelli = N migrazioni, nome dal modello
-- [markdown-filename-conventions](../../../../docs/wiki/rules/markdown-filename-conventions.md): una delle 9 regole sui nomi dei file `.md`
-- [Sigma/docs/scopo.md](../../Sigma/docs/scopo.md): il modello di questo documento
+- [README.md](../README.md) — badge e stato misurato del modulo
+- [no-services-rule](../../../../bashscripts/ai/wiki/rules/no-services-rule.md) — perché `app/Services` non deve esistere
+- [migration-filename-from-model-name](../../../../docs/wiki/rules/migration-filename-from-model-name.md) — N modelli = N migrazioni, nome dal modello
+- [markdown-filename-conventions](../../../../docs/wiki/rules/markdown-filename-conventions.md) — una delle 9 regole sui nomi dei file `.md`
+- [Sigma/docs/scopo.md](../../Sigma/docs/scopo.md) — il modello di questo documento

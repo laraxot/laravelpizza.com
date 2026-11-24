@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Tenant\Actions\Domains;
 
-// use Illuminate\Support\Facades\File;
-// use Illuminate\Support\Facades\Storage;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Str;
 use Spatie\QueueableAction\QueueableAction;
@@ -20,7 +18,6 @@ class GetDomainsArrayAction
     public function execute(): array
     {
         $res = $this->recurse(config_path());
-        /** @var array<string, mixed> $res */
         $res1 = $this->collapse($res);
 
         $mapped = [];

@@ -3,11 +3,14 @@ title: "openviking integration"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "openviking integration"
 issues: []
 discussions: []
-status: draft
 ---
 
 # OpenViking Integration Guide
@@ -117,7 +120,7 @@ openviking add --type=project \
 # 4. Store phase decisions
 openviking add --type=phase \
   --title="Phase 1: Foundation" \
-  --file=".planning/phases/001/PLAN.md"
+  --file=".planning/phases/001/plan.md"
 
 # 5. Execute and verify
 /gsd-execute-phase 1
@@ -203,7 +206,7 @@ openviking add --type=adr --file="_bmad/bmm/3-solutioning/architecture.md"
 /gsd-plan-phase 1
 
 # Store in OpenViking
-openviking add --type=phase-plan --file=".planning/phases/001/PLAN.md"
+openviking add --type=phase-plan --file=".planning/phases/001/plan.md"
 
 # PHASE 3: Implementation (Ralph Loop for autonomous work)
 # Convert BMAD PRD to Ralph format
@@ -434,6 +437,15 @@ openviking status
 6. ⏳ Establish context maintenance routine
 
 ---
+
+title: "openviking integration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "openviking integration"
+issues: []
+discussions: []
 **Last Updated**: 2026-03-30  
 **Version**: 1.0.0  
 **Status**: Initial Implementation

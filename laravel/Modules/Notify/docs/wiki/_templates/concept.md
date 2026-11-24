@@ -7,11 +7,13 @@ type: concept
 sources: ["raw/articles/source-filename.md"]
 confidence: medium
 created: {{date}}
+<<<<<<< HEAD
 updated: {{date}}
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 tags: [tag1, tag2]
 related: []
-status: superseded
-superseded_by: ../../llm-wiki/_templates/concept.md
 ---
 
 # {{title}}

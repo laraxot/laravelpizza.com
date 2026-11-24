@@ -1,13 +1,16 @@
 ---
-title: "commands"
+title: "Commands"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
-qmd: "commands"
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+qmd: "Commands"
 issues: []
 discussions: []
-status: draft
 ---
 
 # GSD (Get Shit Done) - Command Reference
@@ -17,6 +20,15 @@ status: draft
 **Frameworks**: GSD v1.25.1 + BMAD-METHOD v6.2.0
 
 ---
+
+title: "COMMANDS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "COMMANDS"
+issues: []
+discussions: []
 ## 🚀 Essential Commands
 
 ### Project Initialization
@@ -188,7 +200,7 @@ status: draft
 ```bash
 # 1. Initialize
 /gsd:new-project
-# → Answer questions, get PROJECT.md, REQUIREMENTS.md, ROADMAP.md
+# → Answer questions, get PROJECT.md, REQUIREMENTS.md, roadmap.md
 
 # 2. Discuss Phase 1
 /gsd:discuss-phase 1
@@ -196,7 +208,7 @@ status: draft
 
 # 3. Plan Phase 1
 /gsd:plan-phase 1
-# → Research + create PLAN.md with atomic tasks
+# → Research + create plan.md with atomic tasks
 
 # 4. Execute Phase 1
 /gsd:execute-phase 1
@@ -297,7 +309,7 @@ project/
 │   ├── config.json
 │   ├── PROJECT.md
 │   ├── REQUIREMENTS.md
-│   ├── ROADMAP.md
+│   ├── roadmap.md
 │   ├── STATE.md
 │   └── research/
 │       └── 01-RESEARCH.md

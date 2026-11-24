@@ -14,7 +14,6 @@ related:
   - ./folio-volt-static-mount-contract.md
   - ./folio-page-shell-pattern.md
   - ../../../Modules/Xot/docs/composer-module-dependency-management.md
-status: draft
 ---
 
 # laravel/folio — owner Cms

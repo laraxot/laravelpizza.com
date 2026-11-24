@@ -4,7 +4,11 @@ type: concept
 tags: [notify, docs, architecture, xotbasepivot, strategy]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify documentazione architecture xotbasepivot strategy xotbasepivot - strategia di implementazione progetto frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -290,7 +294,7 @@ done
 2. ✅ `docs/architecture/xotbasepivot-strategy.md` (questo file)
 3. `Modules/Xot/README.md` → aggiungere sezione XotBasePivot
 4. `docs/CHANGELOG.md` → entry per breaking change
-4. `docs/changelog.md` → entry per breaking change
+4. `docs/CHANGELOG.md` → entry per breaking change
 5. Per ogni modulo: `Modules/{Module}/docs/models/pivot-migration.md`
 
 #### Esempio doc modulo:
@@ -563,8 +567,17 @@ git push origin hotfix/xotbasepivot-fix
 
 - [XotBasePivot Analysis](../Modules/Xot/docs/architecture/xotbasepivot-analysis.md)
 - [XotBaseModel Implementation](../Modules/Xot/docs/architecture/xotbasemodel.md)
-- [Project Architecture](./project-architecture.md)
+<<<<<<< HEAD
 - [Project Architecture](../ai-agents/split/claude/project-architecture.md)
+- [Project Architecture](../ai-agents/split/claude/project-architecture.md)
+=======
+<<<<<<< .merge_file_AOo02c
+- [Project Architecture](./project-architecture.md)
+=======
+- [Project Architecture](../ai-agents/split/claude/project-architecture.md)
+- [Project Architecture](../ai-agents/split/claude/project-architecture.md)
+>>>>>>> .merge_file_gI4EY1
+>>>>>>> laraxot/dev
 - [Laravel Pivot Documentation](https://laravel.com/docs/11.x/eloquent-relationships#defining-custom-intermediate-table-models)
 
 ### Tools

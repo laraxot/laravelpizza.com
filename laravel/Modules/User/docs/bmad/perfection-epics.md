@@ -1,4 +1,6 @@
 ---
+title: "Epics — Perfezione assoluta del modulo User"
+
 title: "Epics: Perfezione assoluta del modulo User"
 type: epics
 module: User
@@ -18,20 +20,28 @@ qmd: "epics: perfezione assoluta del modulo user user"
 
 # Epics: Perfezione assoluta del modulo User
 
-**Track:** Perfection campaign: continua la numerazione dopo Epic 9
+**Track:** Perfection campaign — continua la numerazione dopo Epic 9
 (SuperAdmin widget), Epic 10 (ritiro Livewire) ed Epic 12-14
+(`module-excellence`, campagna gemella scoperta in corso d'opera — vedi
+
+**Track:** Perfection campaign: continua la numerazione dopo Epic 9
 (`module-excellence`, campagna gemella scoperta in corso d'opera: vedi
 [perfection-decision-log.md](./perfection-decision-log.md), entry
 2026-09-22 "Riconciliazione numerazione con campagna module-excellence").
 **Numerazione:** Epic 11 (questa campagna) + Epic 15-19 (questa campagna).
 Epic 12-14 sono di **module-excellence** ([epics.md](./epics.md)), non di
+questa campagna — referenziate qui solo per cross-link.
+
 questa campagna: referenziate qui solo per cross-link.
 **Sources:** [perfection-brainstorming.md](./perfection-brainstorming.md),
 [perfection-prd.md](./perfection-prd.md),
 [perfection-architecture.md](./perfection-architecture.md)
 
-Tutte le story sotto sono `backlog` (non ancora implementate: audit prodotto in
+Tutte le story sotto sono `backlog` (non ancora implementate — audit prodotto in
 sessione di sola documentazione). Story files individuali con AC completi esistono
+solo per Epic 11 (priorita' massima, sicurezza) — le altre epic hanno la
+
+Tutte le story sotto sono `backlog` (non ancora implementate: audit prodotto in
 solo per Epic 11 (priorita' massima, sicurezza): le altre epic hanno la
 descrizione/scope qui; un story file dedicato va creato al momento del claim,
 seguendo il template gia' in uso nel modulo.
@@ -42,6 +52,8 @@ seguendo il template gia' in uso nel modulo.
 
 **Goal:** l'identity module non ha piu' bypass di autorizzazione ne' assenza di
 rate limiting sul login; la cancellazione account e' strutturalmente completa.
+
+**Severita' del problema:** CRITICA — 2 finding critici attivi (account takeover,
 
 **Severita' del problema:** CRITICA: 2 finding critici attivi (account takeover,
 brute-force senza limite), 2 alti (PII orfane post-delete, token in chiaro).
@@ -55,6 +67,8 @@ com'e'), nuovo modulo Gdpr dedicato (fuori scope, si lavora dentro User).
 **Cross-reference module-excellence:** Epic 14 (`module-excellence`) copre la
 matrice permessi come gap *documentale* (~30 Policy scoperte, nessun seeder
 aggiornato); questa Epic 11 copre bug *comportamentali* attivi (bypass reale
+in produzione). Angoli distinti sullo stesso sottosistema — non duplicati,
+
 in produzione). Angoli distinti sullo stesso sottosistema: non duplicati,
 14.1 e 11.1 vanno eseguiti in sequenza (11.1 prima: non si documenta la
 matrice sopra una policy che sta per cambiare).
@@ -91,9 +105,12 @@ CreateUserAction resta il modello da copiare, non da riscrivere).
 
 **Cross-reference module-excellence:** sovrapposizione tematica con Epic 13
 (`module-excellence`, "Code quality, architettura Filament, test coverage")
-ma finding puntuali distinti: nessuna storia qui ripete un ID o uno slug di
+ma finding puntuali distinti — nessuna storia qui ripete un ID o uno slug di
 13.1-13.9. Eccezione da verificare in esecuzione: 15.10
 (`remove-debug-code-termsofservice`, dddx() in TermsOfService.php:32) vs
+12.3 module-excellence (`remove-dddx-debug`) — controllare se e' lo stesso
+
+ma finding puntuali distinti: nessuna storia qui ripete un ID o uno slug di
 12.3 module-excellence (`remove-dddx-debug`): controllare se e' lo stesso
 `dddx()` prima di lavorarci entrambe, per non duplicare il fix.
 
@@ -114,9 +131,12 @@ ma finding puntuali distinti: nessuna storia qui ripete un ID o uno slug di
 | 15.11 | fix-phpmd-phpinsights-toolchain | Riparare phar/composer.lock per PHPMD e PHPInsights (repo-wide, referenziata da qui) | ALTA | backlog |
 | 15.12 | correct-livewire-inventory-stale-claims | Correggere i 2 claim di bug non riproducibili in livewire-inventory.md, prerequisito di 10.4 | MEDIA | backlog |
 
-**Cross-epic:** 15.11 e' repo-wide, non solo User: la story va aperta qui ma
+**Cross-epic:** 15.11 e' repo-wide, non solo User — la story va aperta qui ma
 l'esecuzione tocca l'ambiente condiviso. 15.12 sblocca la story esistente
 `User/10.4-retire-gdpr-profile-livewire` (oggi `blocked`), stesso obiettivo di
+13.3 module-excellence — coordinare per non duplicare lo sblocco.
+
+**Cross-epic:** 15.11 e' repo-wide, non solo User: la story va aperta qui ma
 13.3 module-excellence: coordinare per non duplicare lo sblocco.
 
 ---
@@ -131,6 +151,8 @@ ADR-P005 [Source: perfection-architecture.md]
 
 **Out of scope:** introduzione di un layer di cache condiviso/custom (si usa la
 facade `Cache` diretta, niente astrazioni nuove).
+
+**Cross-reference module-excellence:** nessuna sovrapposizione — dimensione
 
 **Cross-reference module-excellence:** nessuna sovrapposizione: dimensione
 performance non coperta da nessuna delle 24 story di `module-excellence`.
@@ -148,6 +170,8 @@ performance non coperta da nessuna delle 24 story di `module-excellence`.
 | 16.7 | remove-dead-table-hooks-oauthaccesstoken | Rimuovere le 144 righe di getTableColumns/Filters/Actions/BulkActions mai invocate | MEDIA | backlog |
 | 16.8 | remove-redundant-save-after-sync | Rimuovere save() ridondante in ListPermissions bulk action | BASSA | backlog |
 
+**Cross-epic:** nessuna dipendenza da altre epic — puo' partire in parallelo a
+
 **Cross-epic:** nessuna dipendenza da altre epic: puo' partire in parallelo a
 tutte.
 
@@ -162,12 +186,16 @@ delle regole di progetto gia' note.
 **In scope (cited):** RQ-TEST-001..007 [Source: perfection-prd.md#rq-test],
 ADR-P006 [Source: perfection-architecture.md]
 
+**Out of scope:** raggiungere una soglia di coverage percentuale generica — il
+
 **Out of scope:** raggiungere una soglia di coverage percentuale generica: il
 focus e' sui gap identificati, non un target astratto.
 
 **Cross-reference module-excellence:** 13.5 (`pest-coverage-resources-widgets-gap`)
 e 13.6 (`playwright-e2e-plan`) coprono la stessa carenza di coverage da un
 angolo Resource/Widget generico; questa Epic 17 e' specifica su
+autorizzazione/Shield/LoginWidget — nessun ID/slug duplicato, ma 17.1 e 13.5
+
 autorizzazione/Shield/LoginWidget: nessun ID/slug duplicato, ma 17.1 e 13.5
 condividono la superficie `tests/`: coordinare l'esecuzione per non
 sovrascrivere lo stesso file di test.
@@ -197,8 +225,12 @@ lo richiede, zero file relitto in `database/migrations/`.
 **In scope (cited):** RQ-SCHEMA-001..006 [Source: perfection-prd.md#rq-schema],
 ADR-P004 step 2 [Source: perfection-architecture.md]
 
-**Out of scope:** ogni migrazione distruttiva o `migrate:fresh`/wipe: solo
+**Out of scope:** ogni migrazione distruttiva o `migrate:fresh`/wipe — solo
 migration additive, dati sacri.
+
+**Cross-reference module-excellence:** nessuna sovrapposizione diretta — la
+
+**Out of scope:** ogni migrazione distruttiva o `migrate:fresh`/wipe: solo
 
 **Cross-reference module-excellence:** nessuna sovrapposizione diretta: la
 dimensione schema/migrazioni non e' fra le 24 story di `module-excellence`
@@ -228,6 +260,8 @@ perdita di contenuto.
 **In scope (cited):** RQ-DOCS-001..006 [Source: perfection-prd.md#rq-docs],
 ADR-P007 [Source: perfection-architecture.md]
 
+**Out of scope:** cancellazione di qualunque file — solo merge/link/superseded,
+
 **Out of scope:** cancellazione di qualunque file: solo merge/link/superseded,
 mai delete (standing order BMAD).
 
@@ -237,14 +271,18 @@ duplicato genuino, da riconciliare **in fase di esecuzione, non ora** (nessuna
 cancellazione/merge eseguita in questa sessione, solo audit):
 - 19.3 (`regenerate-docs-index`) e 12.4 module-excellence
   (`docs-index-curated-map`) sembrano lo stesso obiettivo (sostituire
-  `index.md` piatto): verificare se sono la stessa proposta prima di
+  `index.md` piatto) — verificare se sono la stessa proposta prima di
   eseguirne una sola.
 - 19.5 (`consolidate-overlapping-doc-clusters`) e 12.3 module-excellence
   (`archive-folders-consolidation`) coprono lo stesso cluster
-  archive/fixes/bug-*: idem.
+  archive/fixes/bug-* — idem.
 - 19.1 (self-nesting, 612 file) e 19.2 (nomi patologici) non hanno
   equivalente in module-excellence (che si concentra su cluster
   phpstan/archive/permissions/purpose specifici, non sul bug di
+  self-nesting ricorsivo) — nessun duplicato su questi due.
+
+  `index.md` piatto): verificare se sono la stessa proposta prima di
+  archive/fixes/bug-*: idem.
   self-nesting ricorsivo): nessun duplicato su questi due.
 
 **Stories (ordered):**
@@ -258,6 +296,8 @@ cancellazione/merge eseguita in questa sessione, solo audit):
 | 19.5 | consolidate-overlapping-doc-clusters | Designare cartelle canoniche per bugfix/bugs/bug-fixes/bug-tracking/fixes/fixed, marcare le altre superseded | BASSA | backlog (verificare duplicato con 12.3 module-excellence prima di eseguire) |
 | 19.6 | investigate-doc-tooling-root-cause | Documentare/segnalare lo strumento che ha causato il self-nesting ricorsivo (fix fuori modulo se condiviso) | BASSA | backlog |
 
+**Cross-epic:** nessuna dipendenza dalle altre epic — completamente indipendente.
+
 **Cross-epic:** nessuna dipendenza dalle altre epic: completamente indipendente.
 19.4 non crea una nuova story, referenzia `docs/sprint-status.yaml` riga
 52125-52130.
@@ -268,8 +308,11 @@ cancellazione/merge eseguita in questa sessione, solo audit):
 
 - Total epics questa campagna: 6 (Epic 11, 15-19)
 - Total stories questa campagna: 44 (Epic 11: 5, Epic 15: 12, Epic 16: 8, Epic 17: 7, Epic 18: 6, Epic 19: 6)
-- Epic 12-14 (24 story) sono di `module-excellence`, non di questa campagna: vedi [epics.md](./epics.md)
+- Epic 12-14 (24 story) sono di `module-excellence`, non di questa campagna — vedi [epics.md](./epics.md)
 - Done: 0
+- Ready-for-dev: 0 (tutte `backlog` — audit di sola documentazione)
+
+- Epic 12-14 (24 story) sono di `module-excellence`, non di questa campagna: vedi [epics.md](./epics.md)
 - Ready-for-dev: 0 (tutte `backlog`: audit di sola documentazione)
 - Story con file dedicato completo (AC): Epic 11 (5 story)
 
@@ -278,13 +321,18 @@ cancellazione/merge eseguita in questa sessione, solo audit):
 Implementazione **non** in questa sessione (vincolo esplicito utente: solo
 documentazione). Handoff: le story di Epic 11 sono gia' `backlog` con story file
 completo pronto per essere promosso a `ready-for-dev` alla prima sessione di
-esecuzione: priorita' massima per severita' (account takeover attivo).
+esecuzione — priorita' massima per severita' (account takeover attivo).
 
 **Numerazione riconciliata 2026-09-22** dopo scoperta della campagna gemella
-`module-excellence` (Epic 12-14, 24 story, scritta in parallelo: verosimilmente
+`module-excellence` (Epic 12-14, 24 story, scritta in parallelo — verosimilmente
 un fork Agent di questa stessa sessione perso nella compattazione del contesto,
 vedi [perfection-decision-log.md](./perfection-decision-log.md)). Epic
 12-13-14-15-16 originarie di questo documento sono state rinumerate 15-16-17-18-19
+per evitare collisione — nessuna story esistente di terzi e' stata cancellata o
+
+esecuzione: priorita' massima per severita' (account takeover attivo).
+
+`module-excellence` (Epic 12-14, 24 story, scritta in parallelo: verosimilmente
 per evitare collisione: nessuna story esistente di terzi e' stata cancellata o
 rinumerata, solo il draft di questa campagna (mai promosso a file story
 individuali prima della riconciliazione).

@@ -1,11 +1,10 @@
 ---
 title: "Activity Module - Status Attuale"
+qmd: "activity current status md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "activity module - status attuale activity"
+tags: [documentation]
 ---
+
 # Activity Module - Status Attuale
 
 ## ⚠️ STATO: Parzialmente Disabilitato

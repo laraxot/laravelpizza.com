@@ -1,10 +1,10 @@
 ---
-title: "sync remote repo test plan"
+title: "Sync Remote Repo Test Plan"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "sync remote repo test plan"
+qmd: "Sync Remote Repo Test Plan"
 issues: []
 discussions: []
 ---
@@ -18,12 +18,12 @@ discussions: []
 
 ---
 
-title: "sync remote repo test plan"
+title: "SYNC REMOTE REPO TEST PLAN"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "sync remote repo test plan"
+qmd: "SYNC REMOTE REPO TEST PLAN"
 issues: []
 discussions: []
 ## Test Objectives

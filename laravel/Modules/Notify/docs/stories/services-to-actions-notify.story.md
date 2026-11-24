@@ -5,12 +5,16 @@ status: done
 priority: high
 module: Notify
 created: 2026-10-08
+<<<<<<< HEAD
 updated: 2026-10-08
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 tags: [notify, services-to-actions, queueable-action, enum, push, dedup, swarm]
 related:
   - ./4.29.notify-services-to-actions.story.md
   - ./2026-10-08-phpstan-notify-push-delivery.story.md
-  - ./phpstan-cleanup-notify.dev.md
+  - ./2026-10-06-phpstan-cleanup-notify.dev.md
   - ../wiki/concepts/services-to-actions-migration.md
   - ../../../../../bmad-output/epic-code-standards-services-mixed-const.md
 ---

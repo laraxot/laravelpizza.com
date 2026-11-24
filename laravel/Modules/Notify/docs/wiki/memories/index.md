@@ -5,12 +5,15 @@ discussions: []
 title: "Memories Index"
 type: index
 created: 2026-05-11
+<<<<<<< HEAD
 updated: 2026-05-11
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 tags: [memories, index, on-demand]
 related:
   - ../rules/00-TRIGGER_MAP.md
   - ../rules/on-demand-pattern.md
-status: draft
 ---
 
 # Memories Index
@@ -38,7 +41,7 @@ Le Memories progettuali vivono qui, nel wiki del Module **Notify**, e vengono ca
 
 - La sorgente di verita' per le Memories e' sempre il wiki locale
 - Non embeddare Memories nei prompt di avvio
-- Per Memories globali, consulta il [wiki root](../../docs/wiki/memories/INDEX.md)
+- Per Memories globali, consulta il [wiki root](../../docs/wiki/memories/index.md)
 - Per Memories globali, consulta il [wiki root](../../docs/wiki/memories/index.md)
 
 ## Aggiungere una Nuova MEMORIES

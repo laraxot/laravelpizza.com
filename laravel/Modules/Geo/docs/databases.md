@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "databases"
 issues: []
 discussions: []
-status: draft
 ---
 
 https://github.com/khsing/laravel-world

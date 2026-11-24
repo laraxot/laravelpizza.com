@@ -4,7 +4,7 @@ tags: [livewire, filament]
 issues: []
 discussions: []
 id: Xot/lw2fw-01
-title: "Eliminare Modules/*/app/Http/Livewire: canon Framework: Filament widget"
+title: "Eliminare Modules/*/app/Http/Livewire — canon Framework: Filament widget"
 epic: "livewire-to-filament"
 story: "lw2fw-01"
 slug: lw2fw-01
@@ -81,12 +81,12 @@ Residui vivi (fuori lotto, non toccati): `<livewire:toast />` in UI e User `comp
 Anomalie osservate: (1) un processo di merge concorrente ha piu' volte ripristinato nel working tree Lang/Change.php, Lang/Switcher.php, Job/Broad.php (indice: deleted) e ha lasciato marker `<<<<<<< .merge_file_*` vuoti nei test (risolti a mano in JobExecuteCoverage50Test); (2) `Xot/app/Providers/XotBaseServiceProvider.php:43` contiene un marker di conflitto (ParseError) e blocca ogni test UI. Pest eseguito (host 172.30.162.189, non .15): ScheduleStatusWidgetTest verde; i fallimenti residui in Job/Lang non riguardano Livewire (getFormSchemaOld non statico, Mockery Expectation, contenuti traduzioni).
 
 
-## Correzione 2026-09-29 (sessione Ptv, claude-ptv-agent): "routes vuoto -> irraggiungibile" era falso
+## Correzione 2026-09-29 (sessione Ptv, claude-ptv-agent) — "routes vuoto -> irraggiungibile" era falso
 
 La nota "`Modules/Performance/routes/web.php` è vuoto: le viste legacy che montano
 `@livewire('edit-firma')` sono irraggiungibili -> ritiro `Ptv/EditFirma` sicuro" (sopra,
 sezione Notes) usava una premessa sbagliata: `routes/web.php` vuoto non implica che le
-view che montano il componente non vengano mai renderizzate: queste `inner_page.blade.php`
+view che montano il componente non vengano mai renderizzate — queste `inner_page.blade.php`
 sono partial incluse da altre view (non bindate 1:1 a una entry di `routes/web.php` di
 quel modulo), quindi **reali e raggiungibili**. Verifica: grep fleet-wide ha trovato
 **15 chiamanti reali** a `edit-firma`/`nav.stabi-repar-anno` in 4 moduli (Ptv,

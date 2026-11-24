@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "bmad method integration"
 issues: []
 discussions: []
-status: draft
 ---
 
 # BMAD Method Integration — V6.2.0
@@ -27,6 +26,15 @@ Questo progetto usa **BMAD Method V6** (Build More Architect Dreams) — un fram
 - **YouTube**: [youtube.com/@BMadCode](https://www.youtube.com/@BMadCode)
 
 ---
+
+title: "bmad method integration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "bmad method integration"
+issues: []
+discussions: []
 ## Installazione Attuale
 
 Due layer complementari:

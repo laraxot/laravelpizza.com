@@ -4,7 +4,11 @@ type: index
 tags: [notify, docs]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify documentazione index notify module documentation index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -13,14 +17,10 @@ discussions:
 related:
   - README.md
   - wiki/index.md
-  - notifications/readme.md
-  - integrations/readme.md
-  - templates/readme.md
-status: stale
+  - notifications/README.md
+  - integrations/README.md
+  - templates/README.md
 ---
-
-> Nota 2026-10-14 (docs-audit): Copia identica di INDEX.md (16011 byte): stesse sezioni ripetute e link inesistenti; l'indice operativo e' 00-INDEX.md. Contenuto non riscritto, verificare prima di usarlo.
-
 # Notify Module Documentation
 
 ## Overview
@@ -69,11 +69,7 @@ This document serves as the central index for the Notify module, providing guida
 - Update this index if new features or significant changes are introduced to the Notify module.
 
 ## Links to Related Documentation
-- [Architecture Overview](./ARCHITECTURE.md)
-- [Notification Channels Implementation](./notification_channels_implementation.md)
-- [Email Templates](./email_templates.md)
-- [SMS Implementation](./sms_implementation.md)
-- [Troubleshooting](./troubleshooting.md)
+- [Architecture Overview](./architecture.md)
 - [Notification Channels Implementation](./notification_channels_implementation.md)
 - [Email Templates](./email_templates.md)
 - [SMS Implementation](./sms_implementation.md)
@@ -97,23 +93,37 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - [Documentazione Generale SaluteOra](../../../../docs/README.md)
 - [Documentazione Generale PTV](../../../../docs/README.md)
 - [Documentazione Generale SaluteOra](../../../../docs/README.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+- [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
+- [Standard di Documentazione](../../../../docs/documentation_standards.md)
+=======
+>>>>>>> laraxot/dev
 - [Documentazione Generale SaluteOra](../../../../docs/README.md)
 - [Documentazione Generale SaluteOra](../../../../docs/README.md)
 - [Documentazione Generale SaluteOra](../../../../docs/README.md)
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../docs/DOCUMENTATION_STANDARDS.md)
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Modulo Xot](../../Xot/docs/README.md)
 - [Modulo Lang](../../Lang/docs/README.md)
 - [Modulo UI](../../UI/docs/README.md)
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> laraxot/dev
 ## Categorie Principali
 
 ### Architettura e Struttura
 - [README](./README.md) - Panoramica generale del modulo
-- [Architettura](./ARCHITECTURE.md) - Architettura generale del modulo
+- [Architettura](./architecture.md) - Architettura generale del modulo
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
 - [Modelli](./models.md) - Documentazione dei modelli Eloquent
 - [Eventi](./events.md) - Eventi e listeners
@@ -121,15 +131,6 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 ### Sistema Email
 - [Sistema Email Database](./database-mail-system.md) - Sistema di gestione delle email basato su database
 - [Code Email](./database_mail_queue.md) - Sistema di code per l'invio di email
-- [Template Email](./email_templates.md) - Struttura e utilizzo dei template email
-- [Best Practices Email](./email_best_practices.md) - Linee guida per le email
-- [Template Responsivi](./responsive_email_templates.md) - Implementazione di template email responsivi
-
-### Canali di Notifica
-- [Implementazione Canali](./notification_channels_implementation.md) - Implementazione dei canali di notifica
-- [SMS](./sms_implementation.md) - Implementazione del canale SMS
-- [WhatsApp](./whatsapp_channel.md) - Implementazione del canale WhatsApp
-- [Telegram](./telegram_channel.md) - Implementazione del canale Telegram
 - [Template Email](./email_templates.md) - Struttura e utilizzo dei template email
 - [Best Practices Email](./email_best_practices.md) - Linee guida per le email
 - [Template Responsivi](./responsive_email_templates.md) - Implementazione di template email responsivi
@@ -161,27 +162,16 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - [Standard Traduzioni](./translation_standards.md) - Standard per le chiavi di traduzione
 
 ### Testing e Qualità
+<<<<<<< HEAD
+- [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md) - Correzioni per PHPStan Level 10
+=======
+<<<<<<< HEAD
 - [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
-- [Convenzioni Filament](./filament_extension_pattern.md) - Pattern di estensione per Filament
-
-### Configurazione
-- [Struttura Config](./config_structure.md) - Struttura dei file di configurazione
-- [Configurazione SMS](./sms_config_structure.md) - Struttura della configurazione SMS
-- [Principi di Configurazione](./configurations_usage_principles.md) - Principi per l'utilizzo delle configurazioni
-
-### Pattern e Architettura
-- [Pattern Factory](./factory_pattern_analysis.md) - Analisi del pattern Factory
-- [Risoluzione Dinamica delle Classi](./dynamic_class_resolution.md) - Pattern di risoluzione dinamica delle classi
-- [Queueable Actions](./queueable-action.md) - Utilizzo di Spatie Queueable Actions
-
-### Standard e Traduzioni
-- [Convenzioni di Naming](./naming_conventions.md) - Standard per i nomi di file e classi
-- [Traduzioni](./translations.md) - Sistema di traduzioni
-- [Standard Traduzioni](./translation_standards.md) - Standard per le chiavi di traduzione
-
-### Testing e Qualità
-- [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
-- [Testing](./TESTING.md) - Strategie e approcci per il testing
+=======
+- [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md) - Correzioni per PHPStan Level 10
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+- [Testing](./testing.md) - Strategie e approcci per il testing
 
 ## Linee Guida per l'Implementazione
 
@@ -231,25 +221,21 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 
 ### Mail Templates
 - [Index](./mail-templates/index.md) - Indice della documentazione sui template email
+<<<<<<< HEAD
 - [Implementazione Slug](./mail-templates/MAIL_TEMPLATE_SLUG_IMPLEMENTATION.md) - Implementazione del campo slug
+=======
+<<<<<<< HEAD
+- [Implementazione Slug](./mail-templates/mail_template_slug_implementation.md) - Implementazione del campo slug
+=======
+- [Implementazione Slug](./mail-templates/MAIL_TEMPLATE_SLUG_IMPLEMENTATION.md) - Implementazione del campo slug
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### Notifications
 - [Index](./notifications/index.md) - Indice della documentazione sulle notifiche
 
 ## Collegamenti alla Documentazione Correlata
-- [Panoramica Architettura](./ARCHITECTURE.md)
-- [Implementazione Canali Notifica](./notification_channels_implementation.md)
-- [Template Email](./email_templates.md)
-- [Implementazione SMS](./sms_implementation.md)
-- [Troubleshooting](./troubleshooting.md)
-- [Index](./mail-templates/index.md) - Indice della documentazione sui template email
-- [Implementazione Slug](./mail_template_slug_implementation.md) - Implementazione del campo slug
-
-### Notifications
-- [Index](./notifications/index.md) - Indice della documentazione sulle notifiche
-
-## Collegamenti alla Documentazione Correlata
-- [Panoramica Architettura](./ARCHITECTURE.md)
+- [Panoramica Architettura](./architecture.md)
 - [Implementazione Canali Notifica](./notification_channels_implementation.md)
 - [Template Email](./email_templates.md)
 - [Implementazione SMS](./sms_implementation.md)
@@ -306,15 +292,13 @@ Ultimo aggiornamento: 14 Maggio 2025
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni"
 
 *Ultimo aggiornamento: Gennaio 2025*
-- Vedi anche: [../../../../../docs/project/README.md](../../../../docs/project/README.md)
-- Vedi anche: [../../../../../docs/project/README.md](../../../../docs/project/README.md)
+- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 *Ultimo aggiornamento: Gennaio 2025*
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-- Vedi anche: [../../../../../docs/project/README.md](../../../../docs/project/README.md)
-- Vedi anche: [../../../../../docs/project/README.md](../../../../docs/project/README.md)
+- Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 *Ultimo aggiornamento: Gennaio 2025*

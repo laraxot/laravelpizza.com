@@ -3,17 +3,20 @@ title: "psr4 namespace fix"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "psr4 namespace fix"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Fix Namespace PSR-4 - Modulo Notify
 
 > **Versione**: 1.0  
-> **Ultima modifica**: Vedi [changelog.md](./CHANGELOG.md)
+> **Ultima modifica**: Vedi [CHANGELOG.md](./CHANGELOG.MD)
 
 **Problema**: Namespace con `\App\` viola convenzione Laraxot  
 **Severità**: 🟡 Media (warning autoload, non blocca app)

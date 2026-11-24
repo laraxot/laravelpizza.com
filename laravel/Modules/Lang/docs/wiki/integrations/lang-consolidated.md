@@ -2,16 +2,15 @@
 qmd: "lang consolidated"
 issues: []
 discussions: []
-title: "lang: Consolidated Documentation"
+title: "lang — Consolidated Documentation"
 module: lang
 type: integration
 tags: [integrations, modules, lang]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
-# lang: Consolidated Documentation
+# lang — Consolidated Documentation
 
 Consolidated from **13** individual files.
 
@@ -60,23 +59,11 @@ Consulta la documentazione delle traduzioni:
 - [Gestione dei File di Lingua](../../Lang/docs/module_lang.md)
 - [Introduzione alle Traduzioni](../../Lang/docs/introduction.md)
 - [Struttura delle Traduzioni](../../Lang/docs/structure.md)
-Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../..).
-
-Consulta la documentazione delle traduzioni:
-- [Introduzione alle Traduzioni](../../introduction.md)
-- [Struttura delle Traduzioni](../../structure.md)
-- [Gestione dei File di Lingua](../../Lang/docs/module_lang.md)
-- [Introduzione alle Traduzioni](../../introduction.md)
-- [Struttura delle Traduzioni](../../structure.md)
-- [Gestione dei File di Lingua](../../Lang/docs/module_lang.md)
-- [Introduzione alle Traduzioni](../../introduction.md)
-- [Struttura delle Traduzioni](../../structure.md)
 - [Gestione dei File di Lingua](../../Lang/docs/module_lang.md)
 
 ## Collegamento Bidirezionale
 
 Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in questo modulo e la relativa sezione in [Lang](../../Lang/docs/).
-Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in questo modulo e la relativa sezione in [Lang](../..).
 
 > Aggiorna entrambi i riferimenti se aggiungi nuove chiavi di traduzione o modifichi la struttura.
 
@@ -108,39 +95,11 @@ Consulta la documentazione delle traduzioni:
 - [Gestione dei File di Lingua](../../Lang/docs/module_lang.md)
 - [Introduzione alle Traduzioni](../../Lang/docs/introduction.md)
 - [Struttura delle Traduzioni](../../Lang/docs/structure.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-# Collegamento alle Traduzioni del Modulo Chart
-
-Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../..).
-
-Consulta la documentazione delle traduzioni:
-- [Introduzione alle Traduzioni](../../introduction.md)
-- [Struttura delle Traduzioni](../../structure.md)
-- [Gestione dei File di Lingua](../../Lang/docs/module_lang.md)
-- [Introduzione alle Traduzioni](../../introduction.md)
-- [Struttura delle Traduzioni](../../structure.md)
-- [Gestione dei File di Lingua](../../Lang/docs/module_lang.md)
-- [Introduzione alle Traduzioni](../../introduction.md)
-- [Struttura delle Traduzioni](../../structure.md)
 - [Gestione dei File di Lingua](../../Lang/docs/module_lang.md)
 
 ## Collegamento Bidirezionale
 
 Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in questo modulo e la relativa sezione in [Lang](../../Lang/docs/).
-Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in questo modulo e la relativa sezione in [Lang](../..).
 
 > Aggiorna entrambi i riferimenti se aggiungi nuove chiavi di traduzione o modifichi la struttura.
 
@@ -163,24 +122,6 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 * [lang-link.md](laravel/Modules/Cms/docs/lang-link.md)
 * [lang-link.md](laravel/Modules/Cms/docs/lang-link.md)
 * [lang-link.md](laravel/Modules/Cms/docs/lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
 
 ---
 
@@ -247,9 +188,6 @@ La documentazione completa del LangServiceProvider è disponibile nel modulo Lan
 - [Analisi e Proposte di Miglioramento](../laravel/Modules/Lang/docs/lang-service-provider.md)
 - [Analisi e Proposte di Miglioramento](../laravel/modules/lang/docs/lang-service-provider.md)
 - [Analisi e Proposte di Miglioramento](../laravel/modules/lang/docs/lang-service-provider.md)
-- [Analisi e Proposte di Miglioramento](../../lang-service-provider.md)
-- [Analisi e Proposte di Miglioramento](../../lang-service-provider.md)
-- [Analisi e Proposte di Miglioramento](../../lang-service-provider.md)
 
 ## Caratteristiche Principali
 
@@ -1362,13 +1300,6 @@ Nel campo `value`, il valore di `helper_text` era uguale alla chiave del padre (
 ### Regole Applicate
 - [Regola Helper Text Critica](../../../docs/translation-helper-text-critical-rule.md)
 - [Struttura Espansa Traduzioni](struttura-traduzioni.md)
-- [Translation Standards](../../translation-standards.md)
-- [Helper Text Rules](../../translation-helper-text-standards.md)
-- [Lang Service Provider](../../lang-service-provider.md)
-
-### Regole Applicate
-- [Regola Helper Text Critica](../../../docs/translation-helper-text-critical-rule.md)
-- [Struttura Espansa Traduzioni](../../struttura-traduzioni.md)
 - [Convenzioni Multi-Lingua](../../../../docs/multi-language-conventions.md)
 
 ## Note Implementative
@@ -1546,13 +1477,6 @@ Nel campo `value`, il valore di `helper_text` era uguale alla chiave del padre (
 ### Regole Applicate
 - [Regola Helper Text Critica](../../docs/translation-helper-text-critical-rule.md)
 - [Struttura Espansa Traduzioni](struttura-traduzioni.md)
-- [Translation Standards](../../translation-standards.md)
-- [Helper Text Rules](../../translation-helper-text-standards.md)
-- [Lang Service Provider](../../lang-service-provider.md)
-
-### Regole Applicate
-- [Regola Helper Text Critica](../../docs/translation-helper-text-critical-rule.md)
-- [Struttura Espansa Traduzioni](../../struttura-traduzioni.md)
 - [Convenzioni Multi-Lingua](../../../docs/multi-language-conventions.md)
 
 ## Note Implementative
@@ -1614,17 +1538,11 @@ Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../../L
 Consulta la documentazione delle traduzioni:
 - [Introduzione alle Traduzioni](../../Lang/docs/introduction.md)
 - [Struttura delle Traduzioni](../../Lang/docs/structure.md)
-Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../..).
-
-Consulta la documentazione delle traduzioni:
-- [Introduzione alle Traduzioni](../../introduction.md)
-- [Struttura delle Traduzioni](../../structure.md)
 - [Gestione dei File di Lingua](../../Lang/docs/module_lang.md)
 
 ## Collegamento Bidirezionale
 
 Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in questo modulo e la relativa sezione in [Lang](../../Lang/docs/).
-Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in questo modulo e la relativa sezione in [Lang](../..).
 
 > Aggiorna entrambi i riferimenti se aggiungi nuove chiavi di traduzione o modifichi la struttura.
 
@@ -1643,20 +1561,6 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 * [lang-link.md](laravel/Modules/Activity/docs/lang-link.md)
 * [lang-link.md](laravel/Modules/Patient/docs/lang-link.md)
 * [lang-link.md](laravel/Modules/Cms/docs/lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
-* [lang-link.md](../../lang-link.md)
 
 
 ---
@@ -2349,9 +2253,6 @@ LogicException: Plugin [spatie-translatable] is not registered for panel [xxx::a
 **Documentazione**: [Notify - Plugin Not Registered](../../Notify/docs/errori/plugin-spatie-translatable-not-registered.md)
 **Documentazione**: [Notify - Plugin Not Registered](../../notify/docs/errori/plugin-spatie-translatable-not-registered.md)
 **Documentazione**: [Notify - Plugin Not Registered](../../notify/docs/errori/plugin-spatie-translatable-not-registered.md)
-**Documentazione**: [Notify - Plugin Not Registered](../../../../Notify/docs/errori/plugin-spatie-translatable-not-registered.md)
-**Documentazione**: [Notify - Plugin Not Registered](../../../../Notify/docs/errori/plugin-spatie-translatable-not-registered.md)
-**Documentazione**: [Notify - Plugin Not Registered](../../../../Notify/docs/errori/plugin-spatie-translatable-not-registered.md)
 
 ### Errore: Undefined Method getTranslation()
 
@@ -2490,11 +2391,6 @@ $value = $model->field;  // Ritorna traduzione 'en' se esiste, altrimenti fallba
 - [Notify Integration](../../notify/docs/spatie-translatable-integration.md)
 - [Xot Filament Best Practices](../../xot/docs/filament-best-practices.md)
 - [Notify Integration](../../notify/docs/spatie-translatable-integration.md)
-- [Notify Integration](../../../../Notify/docs/spatie-translatable-integration.md)
-- [Xot Filament Best Practices](../../Xot/docs/filament-best-practices.md)
-- [Notify Integration](../../../../Notify/docs/spatie-translatable-integration.md)
-- [Xot Filament Best Practices](../../xot/docs/filament-best-practices.md)
-- [Notify Integration](../../../../Notify/docs/spatie-translatable-integration.md)
 - [Xot Filament Best Practices](../../xot/docs/filament-best-practices.md)
 
 ---

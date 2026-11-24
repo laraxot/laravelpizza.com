@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "test completo"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Event Sourcing in Laravel
@@ -32,6 +31,15 @@ status: draft
 - [Parte 3: Sfide con l'Event Sourcing](#parte-3-sfide-con-levento-sourcing)
 
 ---
+
+title: "test completo"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "test completo"
+issues: []
+discussions: []
 ## Contenuto Completo
 
 EVENT SOURCING

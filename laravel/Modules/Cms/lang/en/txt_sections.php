@@ -8,40 +8,40 @@ declare(strict_types=1);
 return [
     'sections' => [
         'content' => [
-            'label' => 'Contenuto',
-            'description' => 'Gestione del contenuto principale',
+            'label' => 'Content',
+            'description' => 'Main content management',
         ],
         'media' => [
             'label' => 'Media',
-            'description' => 'Immagini, video e contenuti multimediali',
+            'description' => 'Images, videos and media content',
         ],
         'design' => [
             'label' => 'Design',
-            'description' => 'Aspetto visivo e layout',
+            'description' => 'Visual appearance and layout',
         ],
         'navigation' => [
-            'label' => 'Navigazione',
-            'description' => 'Menu, link e struttura di navigazione',
+            'label' => 'Navigation',
+            'description' => 'Menus, links and navigation structure',
         ],
         'company' => [
-            'label' => 'Azienda',
-            'description' => 'Informazioni aziendali e contatti',
+            'label' => 'Company',
+            'description' => 'Company information and contacts',
         ],
         'social' => [
             'label' => 'Social Media',
-            'description' => 'Profili e collegamenti social',
+            'description' => 'Social profiles and links',
         ],
         'cta' => [
             'label' => 'Call-to-Action',
-            'description' => 'Pulsanti e inviti all\'azione',
+            'description' => 'Buttons and calls to action',
         ],
         'structure' => [
-            'label' => 'Struttura',
-            'description' => 'Layout e organizzazione della pagina',
+            'label' => 'Structure',
+            'description' => 'Page layout and organization',
         ],
         'advanced' => [
-            'label' => 'Avanzato',
-            'description' => 'Impostazioni tecniche e personalizzazioni',
+            'label' => 'Advanced',
+            'description' => 'Technical settings and customizations',
         ],
     ],
 ];

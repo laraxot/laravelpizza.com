@@ -1,14 +1,17 @@
 ---
-qmd: "theme architecture.divergenza"
+qmd: "Theme Architecture.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: THEME_ARCHITECTURE.md"
+title: "Theme Architecture.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Divergenza: `THEME_ARCHITECTURE.md`

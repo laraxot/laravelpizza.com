@@ -3,67 +3,25 @@ title: "05 FRONT OFFICE AUDIT"
 type: note
 tags: [documentation]
 created: 2026-09-26
-updated: 2026-09-26
+updated: 2026-11-23
 qmd: "05 FRONT OFFICE AUDIT"
 issues: []
 discussions: []
-status: superseded
-superseded_by: 05-front-office-audit.md
 ---
 
 # 📋 Front Office Pages Audit Checklist
 
-**Part of**: [00-INDEX.md](00-INDEX.md): AI Agents Coordination  
-**Related**: [03-ARCHITECTURE-ZEN.md](03-ARCHITECTURE-ZEN.md): Architecture
+**Part of**: [00-INDEX.md](00-INDEX.md) — AI Agents Coordination  
+**Related**: [03-ARCHITECTURE-ZEN.md](03-ARCHITECTURE-ZEN.md) — Architecture
 
----
-
-title: "05 FRONT OFFICE AUDIT"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "05 FRONT OFFICE AUDIT"
-issues: []
-discussions: []
 ## 🔍 Mandatory Checklist (Before Commit)
-
 ### 1. Routing Multilingual
-- [ ] ✅ URLs with language prefix (`/it/`, `/en/`)
-- [ ] ✅ Links use `url(app()->getLocale().'/path')`
-- [ ] ✅ NO hardcoded links (`/predicts`, `/register`)
-
 ### 2. Filament Forms & Tables
-- [ ] ✅ Forms use Filament Form Widget (NOT custom blade)
-- [ ] ✅ Tables use Filament Table Widget (NOT custom grid)
-- [ ] ✅ Search, filters, sorting with Filament
-
 ### 3. NO /tmp Folder
-- [ ] ✅ NO usage of `/tmp` or `sys_get_temp_dir()`
-- [ ] ✅ Temp files use `storage_path('app/temp/')`
-
 ### 4. NO Emoji Front Office
-- [ ] ✅ NO emoji in blade (use SVG or `@svg()`)
-- [ ] ✅ Icons with `<x-filament::icon>` or Heroicons
-
 ### 5. Real Data (NO Mock)
-- [ ] ✅ Data from database
-- [ ] ✅ NO hardcoded values
-
 ### 6. Web Design Checklist (31 sources)
-- [ ] ✅ Mobile First (touch targets ≥ 44x44px)
-- [ ] ✅ Accessibility (ARIA labels, focus indicators)
-- [ ] ✅ Kinetic animations (hover, transitions)
-- [ ] ✅ Micro-interactions (6 types)
-- [ ] ✅ Core Web Vitals (LCP < 2.5s, INP < 200ms)
-
 ### 7. Quality Gate
-- [ ] ✅ PHPStan: NO errors
-- [ ] ✅ PHPMD: NO warnings
-- [ ] ✅ PHPInsight: Quality > 90%
-- [ ] ✅ Pest: Test passing
-
----
 
 ## 📁 Pages to Audit
 

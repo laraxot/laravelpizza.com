@@ -3,11 +3,14 @@ title: "improved email templates"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "improved email templates"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Versione Migliorata: Filament Email Templates In-House
@@ -24,6 +27,15 @@ In questo documento proponiamo un’implementazione open source per la gestione 
 - esempi di Blade render, logo customization
 
 ---
+
+title: "improved email templates"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "improved email templates"
+issues: []
+discussions: []
 ## 1. Gap dei Plugin Esistenti
 
 1. Plugin commerciali a pagamento o non mantenuti

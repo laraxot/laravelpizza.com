@@ -3,7 +3,11 @@ title: "00 index"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "00 index"
 issues: []
 discussions: []
@@ -28,13 +32,17 @@ status: draft
 
 ## ⚙️ **Configurazione Avanzata**
 - 📦 **[Composer Dependencies](./composer-dependencies.md)** - Firebase, FCM, Telegram: package nel modulo Notify, mai nel root.
+<<<<<<< HEAD
+=======
+- 📬 **[Mail provider dependencies](./mail-provider-dependencies.md)** - Mailjet/Mailtrap/MIME inbound: perché esistono e contratti Action (link richiesto dalla remediation PHPStan mail deps; non supersede composer-dependencies).
+>>>>>>> laraxot/dev
 - 📦 **[Riferimento pacchetti](../../../../docs/composer-packages-reference.md)** | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md) - AWS, Telegram, Postmark, Spatie mail templates
 - 🛠️ **[Channel Provider](./provider-actions-architecture.md)** - Come estendere il modulo con nuovi driver.
 - 🏷️ **[Acronym Naming](./acronym-naming-conventions.md)** - Standard per la denominazione dei driver e canali.
 - 🔄 **[Queue Management](./monitoring.md)** - Monitoraggio delle code e dei fallback.
 
 ## 🧪 **Qualità e Sviluppo**
-- ✅ **[PHPStan Analysis](./phpstan-fixes.md)** - Report di conformità Level 10.
+- ✅ **[PHPStan Analysis](./PHPSTAN-FIXES.md)** - Report di conformità Level 10.
 - 🚨 **[PHPStan Cluster 2026-03-10](./phpstan-cluster.md)** - Modelli canonici mancanti per log/canali e impatto su factory/controller.
 - 🧭 **[No Orphan Http Controllers](./no-orphan-http-controllers.md)** - I controller web senza route o boundary chiaro non devono restare nel modulo.
 - 🚫 **[No NotificationTrackingController](./no-notification-tracking-controller.md)** - Il tracking notifiche non deve vivere in un controller HTTP legacy.
@@ -48,6 +56,7 @@ status: draft
 - 🧾 **[SMS Actions consolidation decision](./wiki/decisions/sms-actions-consolidation.md)** - Cosa è stato consolidato in `.bak`, cosa resta attivo (netfun/smsfactor raggiungibili da Filament `SendSmsPage`) e perché.
 
 ## 🧹 **Manutenzione**
+- 🔄 **[Services → Actions debt](./wiki/concepts/notify-services-support-to-actions.md)** · [services.md](./services.md) · [merge bootstrap story](./stories/phpstan-merge-bootstrap.story.md)
 - 🗑️ **[Cleanup Plan](./translation-cleanup-plan.md)** - Rimozione dei 500+ file obsoleti accumulati.
 - 🛡️ **[Security Analysis](./security-analysis.md)** - Protezione dei webhook dei provider (es. WhatsApp).
 

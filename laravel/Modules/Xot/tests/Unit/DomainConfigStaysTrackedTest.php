@@ -37,6 +37,10 @@ it('i file di config per dominio restano tracciati in git', function (string $fi
     if (! is_dir($root.'/.git') && ! is_file($root.'/.git')) {
         $this->markTestSkipped('repo git non disponibile');
     }
+    // I file sono di un dominio preciso: in un progetto che non ha quel dominio non c'e' niente da tracciare.
+    if (! is_file($root.'/'.$file)) {
+        $this->markTestSkipped($file.' non esiste in questo progetto');
+    }
 
     $output = shell_exec('git -C '.escapeshellarg($root).' ls-files --error-unmatch '.escapeshellarg($file).' 2>&1');
 

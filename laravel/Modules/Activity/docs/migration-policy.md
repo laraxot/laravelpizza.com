@@ -1,15 +1,14 @@
 ---
 title: "Migration Policy"
+qmd: "activity migration policy md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "migration policy activity"
+tags: [documentation]
 ---
+
 # Migration Policy
 
 Regola canonica di progetto: [`docs/wiki/concepts/no-legacy-folders-code.md`](../../../../docs/wiki/concepts/no-legacy-folders-code.md)
-- vietate cartelle `Legacy/`, `Old/`, `Deprecated/`, `Archive/`, e in generale
+— vietate cartelle `Legacy/`, `Old/`, `Deprecated/`, `Archive/`, e in generale
 qualunque albero parallelo per "codice vecchio" (anche `_bak/`, anche se il
 guard automatico controlla solo i nomi espliciti `legacy|deprecated|archive|old`).
 La logica: un albero parallelo raddoppia la superficie da mantenere e rende
@@ -17,10 +16,10 @@ ambiguo cosa sia la SSoT. La cronologia vive in Git, non in cartelle.
 
 ## Principi
 
-1. **Una sola migration owner per modello**: tutte le modifiche consolidate nel file `create_*` più recente
-2. **Niente prefissi `add_*`, `fix_*`, `update_*`**: usare sempre il pattern `create_*` con `XotBaseMigration`
-3. **Mai cancellare**: i file obsoleti si marcano `.php.old`, stesso path, nessuna sottocartella
-4. **Nessuna cartella `_bak/` / `archive/`**: è stata rimossa il 2026-07-12: i 7 file al suo interno
+1. **Una sola migration owner per modello** — tutte le modifiche consolidate nel file `create_*` più recente
+2. **Niente prefissi `add_*`, `fix_*`, `update_*`** — usare sempre il pattern `create_*` con `XotBaseMigration`
+3. **Mai cancellare** — i file obsoleti si marcano `.php.old`, stesso path, nessuna sottocartella
+4. **Nessuna cartella `_bak/` / `archive/`** — è stata rimossa il 2026-07-12: i 7 file al suo interno
    duplicavano 4 migration ancora attive alla radice (il consolidamento non era mai avvenuto realmente).
    Tutti i file dismessi ora vivono in `database/migrations/`, stesso path, suffisso `.php.old`.
 

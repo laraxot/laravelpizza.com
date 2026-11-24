@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "farmshops integration"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🗺️ FARMSHOPS.EU - INTEGRATION GUIDE
@@ -16,6 +15,15 @@ status: draft
 **Purpose**: Integrare tecnologie e pattern da farmshops.eu in FixCity
 
 ---
+
+title: "farmshops integration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "farmshops integration"
+issues: []
+discussions: []
 ## 📊 ANALISI PROGETTO FARMSHOPS.EU
 
 ### Scopo
@@ -448,3 +456,11 @@ class TicketMap extends Component
 **Impact**: MAJOR UX improvement
 
 *"Integrando le migliori pratiche da farmshops.eu, FixCity avrà una mappa interattiva di livello mondiale!"*
+
+## Viewport: lo zoom resta libero
+
+`resources/views/maps/farmshops/index.blade.php` usa
+`<meta name="viewport" content="width=device-width, initial-scale=1.0">`. Il mirror del root del
+2026-11-17 aveva aggiunto `maximum-scale=1.0, user-scalable=no`, che impedisce di ingrandire la
+pagina su mobile (WCAG 1.4.4, Ridimensionamento del testo): tolto. Per evitare lo zoom involontario
+sulla mappa si usano le opzioni di Leaflet, non il viewport.

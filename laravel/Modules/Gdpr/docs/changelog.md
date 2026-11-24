@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: CHANGELOG
 canonical: ../../../Themes/docs/shared-components/CHANGELOG.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/CHANGELOG.md

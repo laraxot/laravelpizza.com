@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "update coordinates bulk action"
 issues: []
 discussions: []
-status: draft
 ---
 
 # UpdateCoordinatesBulkAction - Azione Riutilizzabile per Aggiornamento Coordinate
@@ -170,3 +169,12 @@ public function getTableBulkActions(): array
 - [GetAddressDataFromFullAddressAction](./../app/Actions/GetAddressDataFromFullAddressAction.php)
 
 ---
+
+title: "update coordinates bulk action"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "update coordinates bulk action"
+issues: []
+discussions: []

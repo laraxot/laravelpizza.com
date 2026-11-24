@@ -1,15 +1,13 @@
 ---
-title: "git: Consolidated Documentation"
+title: "git — Consolidated Documentation"
 module: user
 type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
-qmd: "git   consolidated documentation user"
 ---
 
-# git: Consolidated Documentation
+# git — Consolidated Documentation
 
 Consolidated from **21** individual files.
 
@@ -52,14 +50,11 @@ qmd: "git-conflict-resolution gestione avanzata dei conflitti git"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -294,14 +289,11 @@ qmd: "git-conflicts-models-phpdoc risoluzione conflitti git: phpdoc modelli user
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -333,8 +325,7 @@ Conflitti Git nei blocchi PHPDoc di 25+ modelli del modulo User, causati da merg
 ## Riferimenti
 
 - [conflict_resolution_report](conflict-resolution-report.md)
-- [rules-index](../../rules-index.md)
-- [rules-index](../../rules-index.md)
+- [rules-index](rules-index.md)
 
 ---
 
@@ -351,14 +342,11 @@ qmd: "git-conflicts-resolution-2025-01-27.deprecated risoluzione conflitti git -
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -376,9 +364,8 @@ Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i fi
 - [Indice documentazione User](/laravel/Modules/User/docs/index.md)
 - [README User](/laravel/Modules/User/docs/README.md)
 - [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices.md)
-- [Filament Widgets Structure](/laravel/Modules/User/docs/widgets-structure.md)
-- [Filament Widgets Structure](/laravel/Modules/User/docs/widgets-structure-user.md)
-- [BaseUser Documentation](/laravel/Modules/User/docs/BaseUser.md)
+- [Filament Widgets Structure](/laravel/Modules/User/docs/widgets-structure-2.md)
+- [BaseUser Documentation](/laravel/Modules/User/docs/baseuser.md)
 
 ## File Risolti
 
@@ -662,14 +649,10 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 - **Tipizzazione**: PHPDoc rigorosi per conformità PHPStan
 
 ### **Documentazione Aggiornata:**
-- [widgets-structure-2.md](./widgets-structure.md) - Regole per widget structure
+- [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
 - [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](./path-conventions.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](./volt-blade-implementation.md) - View patterns
-- [widgets-structure-2.md](../../widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](../../path-conventions-user.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](../../volt-blade-implementation-introduzione.md) - View patterns
+- [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
+- [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
 ### **Post-Risoluzione TODO:**
 - [ ] Verificare funzionamento widget in contesto Filament panel
@@ -695,14 +678,11 @@ qmd: "git-conflicts-resolution- risoluzione conflitti git - modulo user (2025-01
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -717,12 +697,19 @@ related:
 Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i file modificati e le decisioni prese per migliorare la stabilità del sistema.
 
 ## Collegamenti correlati
+<<<<<<< HEAD
+=======
 - [Indice documentazione User](/laravel/modules/user/docs/index.md)
 - [README User](/laravel/modules/user/docs/readme.md)
 - [Auth Components Best Practices](/laravel/modules/user/docs/auth-components-best-practices.md)
-- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure.md)
-- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-user.md)
+- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/modules/user/docs/baseuser.md)
+>>>>>>> laraxot/dev
+- [Indice documentazione User](/laravel/Modules/User/docs/index.md)
+- [README User](/laravel/Modules/User/docs/readme.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices.md)
+- [Filament Widgets Structure](/laravel/Modules/User/docs/widgets-structure-2.md)
+- [BaseUser Documentation](/laravel/Modules/User/docs/baseuser.md)
 
 ## File Risolti
 
@@ -1006,14 +993,10 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 - **Tipizzazione**: PHPDoc rigorosi per conformità PHPStan
 
 ### **Documentazione Aggiornata:**
-- [widgets-structure-2.md](./widgets-structure.md) - Regole per widget structure
+- [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
 - [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](./path-conventions.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](./volt-blade-implementation.md) - View patterns
-- [widgets-structure-2.md](../../widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](../../path-conventions-user.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](../../volt-blade-implementation-introduzione.md) - View patterns
+- [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
+- [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
 ### **Post-Risoluzione TODO:**
 - [ ] Verificare funzionamento widget in contesto Filament panel
@@ -1032,12 +1015,19 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i file modificati e le decisioni prese per migliorare la stabilità del sistema.
 
 ## Collegamenti correlati
+<<<<<<< HEAD
+=======
 - [Indice documentazione User](/laravel/modules/user/docs/index.md)
 - [README User](/laravel/modules/user/docs/readme.md)
 - [Auth Components Best Practices](/laravel/modules/user/docs/auth-components-best-practices.md)
-- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure.md)
-- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-user.md)
+- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/modules/user/docs/baseuser.md)
+>>>>>>> laraxot/dev
+- [Indice documentazione User](/laravel/Modules/User/docs/index.md)
+- [README User](/laravel/Modules/User/docs/readme.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices.md)
+- [Filament Widgets Structure](/laravel/Modules/User/docs/widgets-structure-2.md)
+- [BaseUser Documentation](/laravel/Modules/User/docs/baseuser.md)
 
 ## File Risolti
 
@@ -1321,14 +1311,10 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 - **Tipizzazione**: PHPDoc rigorosi per conformità PHPStan
 
 ### **Documentazione Aggiornata:**
-- [widgets-structure-2.md](./widgets-structure.md) - Regole per widget structure
+- [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
 - [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](./path-conventions.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](./volt-blade-implementation.md) - View patterns
-- [widgets-structure-2.md](../../widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](../../path-conventions-user.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](../../volt-blade-implementation-introduzione.md) - View patterns
+- [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
+- [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
 ### **Post-Risoluzione TODO:**
 - [ ] Verificare funzionamento widget in contesto Filament panel
@@ -1343,7 +1329,6 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 
 ## git-conflicts-resolution-3
 
-*Consolidated from: `git-conflicts-resolution-3.md`*
 *Consolidated from: `git-conflicts-resolution.md`*
 
 title: "Risoluzione Conflitti Git - Modulo User (2025-01-27)"
@@ -1355,14 +1340,11 @@ qmd: "git-conflicts-resolution-3 risoluzione conflitti git - modulo user (2025-0
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -1377,12 +1359,19 @@ related:
 Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i file modificati e le decisioni prese per migliorare la stabilità del sistema.
 
 ## Collegamenti correlati
+<<<<<<< HEAD
+=======
 - [Indice documentazione User](/laravel/modules/user/docs/index.md)
 - [README User](/laravel/modules/user/docs/readme.md)
 - [Auth Components Best Practices](/laravel/modules/user/docs/auth-components-best-practices.md)
-- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure.md)
-- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-user.md)
+- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/modules/user/docs/baseuser.md)
+>>>>>>> laraxot/dev
+- [Indice documentazione User](/laravel/Modules/User/docs/index.md)
+- [README User](/laravel/Modules/User/docs/readme.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices.md)
+- [Filament Widgets Structure](/laravel/Modules/User/docs/widgets-structure-2.md)
+- [BaseUser Documentation](/laravel/Modules/User/docs/baseuser.md)
 
 ## File Risolti
 
@@ -1666,14 +1655,10 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 - **Tipizzazione**: PHPDoc rigorosi per conformità PHPStan
 
 ### **Documentazione Aggiornata:**
-- [widgets-structure-2.md](./widgets-structure.md) - Regole per widget structure
+- [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
 - [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](./path-conventions.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](./volt-blade-implementation.md) - View patterns
-- [widgets-structure-2.md](../../widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](../../path-conventions-user.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](../../volt-blade-implementation-introduzione.md) - View patterns
+- [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
+- [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
 ### **Post-Risoluzione TODO:**
 - [ ] Verificare funzionamento widget in contesto Filament panel
@@ -1688,8 +1673,7 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 
 ## git-conflicts-resolution-4
 
-*Consolidated from: `git-conflicts-resolution.md`*
-*Consolidated from: `git-conflicts-resolution-stato-rinominato.md`*
+*Consolidated from: `git-conflicts-resolution-4.md`*
 
 title: "git-conflicts-resolution-2025-01-27"
 type: concept
@@ -1699,24 +1683,17 @@ updated: 2026-07-14
 qmd: "git-conflicts-resolution-2025-01-27 deprecated"
 status: deprecated
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
----
-
-> Questo file è stato rinominato in [git-conflicts-resolution-4.md](git-conflicts-resolution.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
 ---
 
-> Questo file è stato rinominato in [git-conflicts-resolution-4.md](../../git-conflicts-resolution-stato-rinominato.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+> Questo file è stato rinominato in [git-conflicts-resolution-4.md](git-conflicts-resolution-4.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 
 ---
 
@@ -1733,14 +1710,11 @@ qmd: "git-conflicts-resolution-5 risoluzione conflitti git - modulo user (2025-0
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -1755,12 +1729,19 @@ related:
 Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i file modificati e le decisioni prese per migliorare la stabilità del sistema.
 
 ## Collegamenti correlati
+<<<<<<< HEAD
+=======
 - [Indice documentazione User](/laravel/modules/user/docs/index.md)
 - [README User](/laravel/modules/user/docs/readme.md)
 - [Auth Components Best Practices](/laravel/modules/user/docs/auth-components-best-practices.md)
-- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure.md)
-- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-user.md)
+- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/modules/user/docs/baseuser.md)
+>>>>>>> laraxot/dev
+- [Indice documentazione User](/laravel/Modules/User/docs/index.md)
+- [README User](/laravel/Modules/User/docs/readme.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices.md)
+- [Filament Widgets Structure](/laravel/Modules/User/docs/widgets-structure-2.md)
+- [BaseUser Documentation](/laravel/Modules/User/docs/baseuser.md)
 
 ## File Risolti
 
@@ -2044,14 +2025,10 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 - **Tipizzazione**: PHPDoc rigorosi per conformità PHPStan
 
 ### **Documentazione Aggiornata:**
-- [widgets-structure-2.md](./widgets-structure.md) - Regole per widget structure
+- [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
 - [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](./path-conventions.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](./volt-blade-implementation.md) - View patterns
-- [widgets-structure-2.md](../../widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](../../path-conventions-user.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](../../volt-blade-implementation-introduzione.md) - View patterns
+- [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
+- [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
 ### **Post-Risoluzione TODO:**
 - [ ] Verificare funzionamento widget in contesto Filament panel
@@ -2077,14 +2054,11 @@ qmd: "git-conflicts-resolution-6 risoluzione conflitti git - modulo user (2025-0
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -2099,12 +2073,19 @@ related:
 Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i file modificati e le decisioni prese per migliorare la stabilità del sistema.
 
 ## Collegamenti correlati
+<<<<<<< HEAD
+=======
 - [Indice documentazione User](/laravel/modules/user/docs/index.md)
 - [README User](/laravel/modules/user/docs/readme.md)
 - [Auth Components Best Practices](/laravel/modules/user/docs/auth-components-best-practices.md)
-- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure.md)
-- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-user.md)
+- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/modules/user/docs/baseuser.md)
+>>>>>>> laraxot/dev
+- [Indice documentazione User](/laravel/Modules/User/docs/index.md)
+- [README User](/laravel/Modules/User/docs/readme.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices.md)
+- [Filament Widgets Structure](/laravel/Modules/User/docs/widgets-structure-2.md)
+- [BaseUser Documentation](/laravel/Modules/User/docs/baseuser.md)
 
 ## File Risolti
 
@@ -2388,14 +2369,10 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 - **Tipizzazione**: PHPDoc rigorosi per conformità PHPStan
 
 ### **Documentazione Aggiornata:**
-- [widgets-structure-2.md](./widgets-structure.md) - Regole per widget structure
+- [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
 - [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](./path-conventions.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](./volt-blade-implementation.md) - View patterns
-- [widgets-structure-2.md](../../widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](../../path-conventions-user.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](../../volt-blade-implementation-introduzione.md) - View patterns
+- [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
+- [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
 ### **Post-Risoluzione TODO:**
 - [ ] Verificare funzionamento widget in contesto Filament panel
@@ -2420,14 +2397,11 @@ qmd: "git-conflicts-resolution-conflict-06cb77 risoluzione conflitti git - modul
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -2442,12 +2416,19 @@ related:
 Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i file modificati e le decisioni prese per migliorare la stabilità del sistema.
 
 ## Collegamenti correlati
+<<<<<<< HEAD
+=======
 - [Indice documentazione User](/laravel/modules/user/docs/index.md)
 - [README User](/laravel/modules/user/docs/readme.md)
 - [Auth Components Best Practices](/laravel/modules/user/docs/auth-components-best-practices.md)
-- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure.md)
-- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-user.md)
+- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/modules/user/docs/baseuser.md)
+>>>>>>> laraxot/dev
+- [Indice documentazione User](/laravel/Modules/User/docs/index.md)
+- [README User](/laravel/Modules/User/docs/readme.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices.md)
+- [Filament Widgets Structure](/laravel/Modules/User/docs/widgets-structure-2.md)
+- [BaseUser Documentation](/laravel/Modules/User/docs/baseuser.md)
 
 ## File Risolti
 
@@ -2731,14 +2712,10 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 - **Tipizzazione**: PHPDoc rigorosi per conformità PHPStan
 
 ### **Documentazione Aggiornata:**
-- [widgets-structure-2.md](./widgets-structure.md) - Regole per widget structure
+- [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
 - [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](./path-conventions.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](./volt-blade-implementation.md) - View patterns
-- [widgets-structure-2.md](../../widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](../../path-conventions-user.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](../../volt-blade-implementation-introduzione.md) - View patterns
+- [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
+- [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
 ### **Post-Risoluzione TODO:**
 - [ ] Verificare funzionamento widget in contesto Filament panel
@@ -2764,14 +2741,11 @@ qmd: "git-conflicts-resolution-conflict risoluzione conflitti git - modulo user 
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -2786,18 +2760,24 @@ related:
 Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i file modificati e le decisioni prese per migliorare la stabilità del sistema.
 
 ## Collegamenti correlati
+<<<<<<< HEAD
+=======
 - [Indice documentazione User](/laravel/modules/user/docs/index.md)
 - [README User](/laravel/modules/user/docs/readme.md)
 - [Auth Components Best Practices](/laravel/modules/user/docs/auth-components-best-practices.md)
-- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure.md)
-- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-user.md)
+- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/modules/user/docs/baseuser.md)
+>>>>>>> laraxot/dev
+- [Indice documentazione User](/laravel/Modules/User/docs/index.md)
+- [README User](/laravel/Modules/User/docs/readme.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices.md)
+- [Filament Widgets Structure](/laravel/Modules/User/docs/widgets-structure-2.md)
+- [BaseUser Documentation](/laravel/Modules/User/docs/baseuser.md)
 - [Indice documentazione User](/laravel/Modules/User/docs/index.md)
 - [README User](/laravel/Modules/User/docs/README.md)
 - [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices.md)
-- [Filament Widgets Structure](/laravel/Modules/User/docs/widgets-structure.md)
-- [Filament Widgets Structure](/laravel/Modules/User/docs/widgets-structure-user.md)
-- [BaseUser Documentation](/laravel/Modules/User/docs/BaseUser.md)
+- [Filament Widgets Structure](/laravel/Modules/User/docs/widgets-structure-2.md)
+- [BaseUser Documentation](/laravel/Modules/User/docs/baseuser.md)
 
 ## File Risolti
 
@@ -3081,14 +3061,10 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 - **Tipizzazione**: PHPDoc rigorosi per conformità PHPStan
 
 ### **Documentazione Aggiornata:**
-- [widgets-structure-2.md](./widgets-structure.md) - Regole per widget structure
+- [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
 - [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](./path-conventions.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](./volt-blade-implementation.md) - View patterns
-- [widgets-structure-2.md](../../widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](../../path-conventions-user.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](../../volt-blade-implementation-introduzione.md) - View patterns
+- [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
+- [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
 ### **Post-Risoluzione TODO:**
 - [ ] Verificare funzionamento widget in contesto Filament panel
@@ -3113,14 +3089,11 @@ qmd: "git-conflicts-resolution-1 risoluzione conflitti git - modulo user (2025-0
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -3135,12 +3108,19 @@ related:
 Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i file modificati e le decisioni prese per migliorare la stabilità del sistema.
 
 ## Collegamenti correlati
+<<<<<<< HEAD
+=======
 - [Indice documentazione User](/laravel/modules/user/docs/index.md)
 - [README User](/laravel/modules/user/docs/readme.md)
 - [Auth Components Best Practices](/laravel/modules/user/docs/auth-components-best-practices.md)
-- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure.md)
-- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-user.md)
+- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/modules/user/docs/baseuser.md)
+>>>>>>> laraxot/dev
+- [Indice documentazione User](/laravel/Modules/User/docs/index.md)
+- [README User](/laravel/Modules/User/docs/readme.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices.md)
+- [Filament Widgets Structure](/laravel/Modules/User/docs/widgets-structure-2.md)
+- [BaseUser Documentation](/laravel/Modules/User/docs/baseuser.md)
 
 ## File Risolti
 
@@ -3424,14 +3404,10 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 - **Tipizzazione**: PHPDoc rigorosi per conformità PHPStan
 
 ### **Documentazione Aggiornata:**
-- [widgets-structure-2.md](./widgets-structure.md) - Regole per widget structure
+- [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
 - [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](./path-conventions.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](./volt-blade-implementation.md) - View patterns
-- [widgets-structure-2.md](../../widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](../../path-conventions-user.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](../../volt-blade-implementation-introduzione.md) - View patterns
+- [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
+- [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
 ### **Post-Risoluzione TODO:**
 - [ ] Verificare funzionamento widget in contesto Filament panel
@@ -3457,14 +3433,11 @@ qmd: "git-conflicts-resolution-summary risoluzione conflitti git - modulo user"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -3507,7 +3480,6 @@ related:
 - `docs/README.md` - Documentazione principale
 - `docs/baseuser.md` - Documentazione BaseUser
 - `docs/registration-widget.md` - Widget registrazione
-- `docs/phpstan-fixes-8.md` - Fix PHPStan
 - `docs/phpstan-fixes.md` - Fix PHPStan
 - `docs/filament/widgets/registration-widget.md` - Widget Filament
 
@@ -3577,8 +3549,7 @@ Funzionalità team includono:
 - [Documentazione Root User](../../../../docs/project/modules/user.md)
 - [BaseUser Documentation](./baseuser.md)
 - [Registration Widget](./registration-widget.md)
-- [PHPStan Fixes](./phpstan-fixes-8.md)
-- [PHPStan Fixes](../../phpstan-fixes.md)
+- [PHPStan Fixes](./phpstan-fixes.md)
 
 ---
 *Aggiornato automaticamente dopo risoluzione conflitti Git*
@@ -3597,24 +3568,17 @@ updated: 2026-07-14
 qmd: "git-conflicts-resolution-2025-01-27.deprecated deprecated"
 status: deprecated
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
----
-
-> Questo file è stato rinominato in [git-conflicts-resolution-.deprecated.md](../../git-conflicts-resolution-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
 ---
 
-> Questo file è stato rinominato in [git-conflicts-resolution-.deprecated.md](../../git-conflicts-resolution-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+> Questo file è stato rinominato in [git-conflicts-resolution-.deprecated.md](git-conflicts-resolution-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 
 ---
 
@@ -3631,14 +3595,11 @@ qmd: "git-conflicts-resolution risoluzione conflitti git - modulo user (2025-01-
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -3654,10 +3615,9 @@ Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i fi
 
 ## Collegamenti correlati
 - [Indice documentazione User](/laravel/modules/user/project_docs/index.md)
-- [README User](/laravel/modules/user/project_docs/readme.md)
+- [README User](/laravel/modules/user/project_docs/README.md)
 - [Auth Components Best Practices](/laravel/modules/user/project_docs/auth-components-best-practices.md)
-- [Filament Widgets Structure](/laravel/modules/user/project_docs/widgets-structure.md)
-- [Filament Widgets Structure](/laravel/modules/user/project_docs/widgets-structure-user.md)
+- [Filament Widgets Structure](/laravel/modules/user/project_docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/modules/user/project_docs/baseuser.md)
 
 ## File Risolti
@@ -3942,14 +3902,10 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 - **Tipizzazione**: PHPDoc rigorosi per conformità PHPStan
 
 ### **Documentazione Aggiornata:**
-- [widgets-structure-2.md](./widgets-structure.md) - Regole per widget structure
+- [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
 - [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](./path-conventions.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](./volt-blade-implementation.md) - View patterns
-- [widgets-structure-2.md](../../widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](../../path-conventions-user.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](../../volt-blade-implementation-introduzione.md) - View patterns
+- [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
+- [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
 ### **Post-Risoluzione TODO:**
 - [ ] Verificare funzionamento widget in contesto Filament panel
@@ -3972,17 +3928,23 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i file modificati e le decisioni prese per migliorare la stabilità del sistema.
 
 ## Collegamenti correlati
+<<<<<<< HEAD
+=======
 - [Indice documentazione User](/laravel/modules/user/docs/index.md)
 - [README User](/laravel/modules/user/docs/readme.md)
 - [Auth Components Best Practices](/laravel/modules/user/docs/auth-components-best-practices.md)
-- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure.md)
-- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-user.md)
+- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/modules/user/docs/baseuser.md)
+>>>>>>> laraxot/dev
+- [Indice documentazione User](/laravel/Modules/User/docs/index.md)
+- [README User](/laravel/Modules/User/docs/readme.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices.md)
+- [Filament Widgets Structure](/laravel/Modules/User/docs/widgets-structure-2.md)
+- [BaseUser Documentation](/laravel/Modules/User/docs/baseuser.md)
 - [Indice documentazione User](/laravel/Modules/User/project_docs/index.md)
 - [README User](/laravel/Modules/User/project_docs/README.md)
 - [Auth Components Best Practices](/laravel/Modules/User/project_docs/auth-components-best-practices.md)
-- [Filament Widgets Structure](/laravel/Modules/User/project_docs/widgets-structure.md)
-- [Filament Widgets Structure](/laravel/Modules/User/project_docs/widgets-structure-user.md)
+- [Filament Widgets Structure](/laravel/Modules/User/project_docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/Modules/User/project_docs/BaseUser.md)
 
 ## File Risolti
@@ -4267,14 +4229,10 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 - **Tipizzazione**: PHPDoc rigorosi per conformità PHPStan
 
 ### **Documentazione Aggiornata:**
-- [widgets-structure-2.md](./widgets-structure.md) - Regole per widget structure
+- [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
 - [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](./path-conventions.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](./volt-blade-implementation.md) - View patterns
-- [widgets-structure-2.md](../../widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](../../path-conventions-user.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](../../volt-blade-implementation-introduzione.md) - View patterns
+- [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
+- [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
 ### **Post-Risoluzione TODO:**
 - [ ] Verificare funzionamento widget in contesto Filament panel
@@ -4299,14 +4257,11 @@ qmd: "git-path-does-not-have-our-version-fix fix: path does not have our version
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -4393,9 +4348,16 @@ git -c core.editor="echo" rebase --continue
 
 ## Riferimenti
 
+<<<<<<< HEAD
+- [passport-pages-fix](../../../docs/FIX_REPORTS/passport-pages-fix.md)
+=======
+<<<<<<< HEAD
 - [passport-pages-fix](../../../docs/FIX_REPORTS/passport-pages-fix-2026-03-17.md)
-- [oauth-access-token-removal](../../oauth-access-token-removal.md)
-- [oauth-access-token-removal](../../oauth-access-token-removal.md)
+=======
+- [passport-pages-fix](../../../docs/FIX_REPORTS/passport-pages-fix.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+- [oauth-access-token-removal](oauth-access-token-removal.md)
 
 ---
 
@@ -4412,14 +4374,11 @@ qmd: "git-reset git reset"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -4455,14 +4414,11 @@ qmd: "git-resolution gestione avanzata dei conflitti git"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -4699,7 +4655,15 @@ Documentazione per git_conflict_resolution nel modulo User.
 
 ## Collegamenti
 
+<<<<<<< HEAD
 - [Modulo Principale](../README.md)
+=======
+<<<<<<< HEAD
+- [Modulo Principale](../README.md)
+=======
+- [Modulo Principale](../readme.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 
 ---
@@ -4720,7 +4684,7 @@ Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i fi
 - [README User](/laravel/Modules/User/docs/README.md)
 - [Auth Components Best Practices](/laravel/Modules/User/docs/auth_components_best_practices.md)
 - [Filament Widgets Structure](/laravel/Modules/User/docs/widgets_structure.md)
-- [BaseUser Documentation](/laravel/Modules/User/docs/BaseUser.md)
+- [BaseUser Documentation](/laravel/Modules/User/docs/baseuser.md)
 
 ## File Risolti
 
@@ -5033,14 +4997,11 @@ qmd: "gits-resolution-06cb77 risoluzione conflitti git - modulo user ([date])"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -5055,12 +5016,19 @@ related:
 Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i file modificati e le decisioni prese per migliorare la stabilità del sistema.
 
 ## Collegamenti correlati
+<<<<<<< HEAD
+=======
 - [Indice documentazione User](/laravel/modules/user/docs/index.md)
 - [README User](/laravel/modules/user/docs/readme.md)
 - [Auth Components Best Practices](/laravel/modules/user/docs/auth-components-best-practices.md)
-- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure.md)
-- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-user.md)
+- [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/modules/user/docs/baseuser.md)
+>>>>>>> laraxot/dev
+- [Indice documentazione User](/laravel/Modules/User/docs/index.md)
+- [README User](/laravel/Modules/User/docs/readme.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices.md)
+- [Filament Widgets Structure](/laravel/Modules/User/docs/widgets-structure-2.md)
+- [BaseUser Documentation](/laravel/Modules/User/docs/baseuser.md)
 
 ## File Risolti
 
@@ -5344,14 +5312,10 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 - **Tipizzazione**: PHPDoc rigorosi per conformità PHPStan
 
 ### **Documentazione Aggiornata:**
-- [widgets-structure-2.md](./widgets-structure.md) - Regole per widget structure
+- [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
 - [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](./path-conventions.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](./volt-blade-implementation.md) - View patterns
-- [widgets-structure-2.md](../../widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path-conventions-2.md](../../path-conventions-user.md) - Convenzioni percorsi
-- [volt-blade-implementation-3.md](../../volt-blade-implementation-introduzione.md) - View patterns
+- [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
+- [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
 ### **Post-Risoluzione TODO:**
 - [ ] Verificare funzionamento widget in contesto Filament panel
@@ -5372,14 +5336,11 @@ module: theme
 topic: gits-resolution
 canonical: ../../../Themes/docs/shared-components/gits-resolution-06cb77.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"

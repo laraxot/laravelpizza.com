@@ -112,6 +112,24 @@ return [
             'icon' => 'heroicon-o-envelope',
             'color' => 'primary',
         ],
+        'attendance_mode' => [
+            'label' => 'Modalidad del evento',
+        ],
+        'event_details' => [
+            'label' => 'Detalles del evento',
+        ],
+        'organizer' => [
+            'label' => 'Organizado por',
+        ],
+        'registration_opens_at' => [
+            'label' => 'Inscripciones abiertas desde',
+        ],
+        'audience' => [
+            'label' => 'Público',
+        ],
+        'typical_age_range' => [
+            'label' => 'Franja de edad',
+        ],
     ],
     'actions' => [
         'share_event' => [
@@ -208,6 +226,21 @@ return [
         'location_tba' => [
             'label' => 'Ubicación por confirmar',
             'description' => 'Se muestra cuando la ubicación del evento no ha sido anunciada',
+        ],
+        'no_one_joined_yet' => [
+            'label' => 'Por ahora no hay asistentes confirmados',
+        ],
+        'be_the_first_to_join' => [
+            'label' => 'Puedes ser la primera o el primero en reservar tu plaza.',
+        ],
+        'registration_open_soon' => [
+            'label' => 'Inscripción en línea próximamente',
+        ],
+        'sold_out' => [
+            'label' => 'Las plazas para este evento están agotadas.',
+        ],
+        'spots_available_regular' => [
+            'label' => 'Todavía quedan muchas plazas disponibles',
         ],
     ],
 ];

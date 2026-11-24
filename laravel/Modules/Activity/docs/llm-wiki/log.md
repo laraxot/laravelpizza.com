@@ -1,11 +1,10 @@
 ---
 title: "Activity Activity Log"
+qmd: "activity llm wiki log md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, llm-wiki]
-qmd: "activity activity log activity"
+tags: [documentation]
 ---
+
 # Activity Activity Log
 
 > **Module**: Activity

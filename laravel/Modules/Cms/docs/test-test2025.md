@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "test2025 08 28"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Test2025 08 28

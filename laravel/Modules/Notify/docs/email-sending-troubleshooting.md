@@ -3,11 +3,14 @@ title: "email sending troubleshooting"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "email sending troubleshooting"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Troubleshooting: Sistema di Invio Email in Notify

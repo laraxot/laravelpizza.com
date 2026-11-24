@@ -7,8 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Product Launch Plan - Notify Platform
@@ -30,7 +33,7 @@ Ogni rilascio di modulo o feature core deve seguire questa checklist non negozia
 
 ### Documentation
 - [ ] `prd.md` aggiornato con le nuove funzionalità.
-- [ ] `changelog.md` aggiornato.
+- [ ] `CHANGELOG.md` aggiornato.
 - [ ] Roadmap aggiornata con lo stato 'Completed'.
 
 ## 2. Release Phases

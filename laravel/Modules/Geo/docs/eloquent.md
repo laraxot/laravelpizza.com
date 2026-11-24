@@ -10,8 +10,6 @@ discussions: []
 module: theme
 topic: eloquent
 canonical: ../../../Themes/docs/shared-components/--eloquent.md
-status: superseded
-superseded_by: .md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/--eloquent.md

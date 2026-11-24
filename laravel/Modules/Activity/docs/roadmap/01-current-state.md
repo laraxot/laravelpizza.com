@@ -1,12 +1,10 @@
 ---
 title: "Current State - Activity"
+qmd: "activity roadmap 01 current state md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity, roadmap]
-qmd: "current state - activity activity"
-status: superseded
-superseded_by: current-state.md
+tags: [documentation]
 ---
+
 # Current State - Activity
 
 ## Baseline

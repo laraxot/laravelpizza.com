@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: homepage_contenuti
 canonical: ../../../Themes/docs/shared-components/homepage-contenuti.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/homepage-contenuti.md

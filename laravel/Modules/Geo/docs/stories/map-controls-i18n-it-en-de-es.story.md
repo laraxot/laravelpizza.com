@@ -1,10 +1,32 @@
+---
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_pK6kYa
+created: 2026-10-07
+=======
+>>>>>>> laraxot/dev
+title: "Map Controls I18n It En De Es .story"
+type: note
+tags: [documentation]
+created: 2026-10-07
+updated: 2026-11-19
+qmd: "Map Controls I18n It En De Es .story"
+date_originale_nome_file: 2026-10-07
+issues: [122]
+discussions: []
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_oaUIXM
+>>>>>>> laraxot/dev
+---
+
 # Controlli e popup della mappa tradotti in it, en, de, es
 
 - Stato: done (2026-10-07)
 - Fase BMAD: Quick Flow (sweep delle pagine, causa, fix, verifica in browser)
 - Owner: Modules/Geo (`resources/js/components/map/`)
-- Collegata a: [auth-pages-i18n-en-de-es-2026-10-07.story.md](../../../User/docs/stories/auth-pages-i18n-en-de-es.story.md),
-  [tickets-ux-theme-symlink-geolocation-2026-10-07.story.md](../../../../Themes/Sixteen/docs/stories/tickets-ux-theme-symlink-geolocation.story.md)
+- Collegata a: [auth-pages-i18n-en-de-es-2026-10-07.story.md](../../../User/docs/stories/auth-pages-i18n-en-de-es-2026-10-07.story.md),
+  [tickets-ux-theme-symlink-geolocation-2026-10-07.story.md](../../../../Themes/Sixteen/docs/stories/tickets-ux-theme-symlink-geolocation-2026-10-07.story.md)
 
 ## Problema
 

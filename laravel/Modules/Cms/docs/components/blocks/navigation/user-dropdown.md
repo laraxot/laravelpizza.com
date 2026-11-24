@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "user dropdown"
 issues: []
 discussions: []
-status: draft
 ---
 
 # User Dropdown Block

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "module structure"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Module Structure
@@ -96,5 +95,14 @@ Modules/NomeModulo/
 - [ ] Documentation updated in `docs/README.md`
 
 ---
+
+title: "module structure"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "module structure"
+issues: []
+discussions: []
 **Version**: 2.0 (Refactor DRY + KISS)  
 **File**: module-structure.md - Module structure and conventions

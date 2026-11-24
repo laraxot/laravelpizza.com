@@ -3,12 +3,14 @@ title: "email backup"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "email backup"
 issues: []
 discussions: []
-status: superseded
-superseded_by: bmad/architecture/email-backup.md
 ---
 
 # Sistema Backup Email 

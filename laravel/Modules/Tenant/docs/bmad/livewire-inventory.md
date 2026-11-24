@@ -5,7 +5,7 @@ updated: 2026-09-26
 qmd: "livewire inventory"
 issues: []
 discussions: []
-title: "Inventario Http/Livewire → Filament widget: Tenant"
+title: "Inventario Http/Livewire → Filament widget — Tenant"
 type: inventory
 module: Tenant
 status: approved
@@ -15,15 +15,15 @@ related:
   - ./livewire-widget-project-context.md
   - ./livewire-widget-decision-log.md
   - ./livewire-widget-epics.md
-  - ../../../User/docs/bmad/livewire-inventory.md
+  - ../../User/docs/bmad/livewire-inventory.md
   - ../../Xot/docs/bmad/livewire-widget-project-context.md
 ---
 
-# Inventario: Livewire HTTP → Filament: modulo Tenant
+# Inventario: Livewire HTTP → Filament — modulo Tenant
 
 **Solo documentazione. Nessun PHP toccato in questo audit.**
 
-Questo file è la SSoT del modulo Tenant per la campagna di conversione Livewire → Filament widget. Formato e metodo ripresi da [Modules/Cms/docs/bmad/livewire-inventory.md](../../../Cms/docs/bmad/livewire-inventory.md).
+Questo file è la SSoT del modulo Tenant per la campagna di conversione Livewire → Filament widget. Formato e metodo ripresi da [Modules/Cms/docs/bmad/livewire-inventory.md](livewire-inventory.md).
 
 ## Metodo (codice, non assunzione)
 
@@ -63,7 +63,7 @@ Il widget di cambio team nel chrome è `Modules\User\Filament\Widgets\Team\TeamC
 
 | Classe | Alias/hook | Gemello widget | Cluster | Nota |
 |---|---|---|---|---|
-|: |: |: |: | Nessuna classe `Http\Livewire` nel modulo: niente da classificare |
+| — | — | — | — | Nessuna classe `Http\Livewire` nel modulo: niente da classificare |
 
 **Cluster A: zero candidati.** **Cluster B: zero candidati.** **Cluster C: zero componenti.**
 

@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "modelli factory seeder analisi"
 related:
   - "./webm.md"
-status: draft
 ---
 # Analisi Modelli, Factory e Seeder - Modulo Media
 
@@ -46,7 +45,7 @@ Questo documento analizza tutti i modelli del modulo Media verificando la presen
 - **Versioning**: Gestione versioni multiple file
 
 **Relazioni Business Logic**:
-- **SaluteOra**: Documenti pazienti, referti medici, immagini profilo
+- **Dominio sanitario**: Documenti pazienti, referti medici, immagini profilo
 - **User**: Avatar utenti, documenti identità
 - **Cms**: Immagini contenuti, allegati pagine
 - **Notify**: Allegati notifiche email
@@ -149,7 +148,7 @@ Tutti i modelli attivi hanno le factory corrispondenti.
 - **Streaming**: Streaming file grandi
 
 ### File Processing
-- **Image Processing**: 
+- **Image Processing**:
   - Resize, crop, rotate
   - Filters e effetti
   - Format conversion
@@ -209,7 +208,7 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 - [Performance Optimization](./performance_optimization.md)
 
 ### Moduli Collegati
-- [SaluteOra Module](../../SaluteOra/docs/modelli_factory_seeder_analisi.md) - Documenti medici
+- Modulo sanitario legacy - Documenti medici
 - [User Module](../../User/docs/modelli_factory_seeder_analisi.md) - Avatar e documenti utente
 - [Cms Module](../../Cms/docs/modelli_factory_seeder_analisi.md) - Contenuti multimediali
 - [Notify Module](../../Notify/docs/modelli_factory_seeder_analisi.md) - Allegati notifiche

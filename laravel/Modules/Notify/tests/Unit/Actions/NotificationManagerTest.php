@@ -10,10 +10,16 @@ use Mockery;
 use Modules\Notify\Actions\NotificationManager;
 use Modules\Notify\Actions\SendNotificationAction;
 use Modules\Notify\Database\Factories\NotificationTemplateFactory;
+use Modules\Notify\Exceptions\NotificationTemplateNotFoundException;
 use Modules\Notify\Models\Notification;
 use Modules\Notify\Models\NotificationTemplate;
 use Modules\Notify\Tests\TestCase;
 
+<<<<<<< HEAD
+=======
+use function Safe\class_parents;
+
+>>>>>>> laraxot/dev
 uses(TestCase::class);
 function actionsNotificationManagerActiveTemplate(string $code): NotificationTemplate
 {
@@ -104,13 +110,33 @@ it('can get templates by category', function (): void {
     expect($result)->toHaveCount(0);
 });
 
+// L'eccezione ora e' di dominio e arriva dall'unico punto che risolve il
+// template, cioe' SendNotificationAction: il manager non lo cerca piu' per
+// conto suo (base_quaeris_fila5#103, #112).
 it('throws exception when template not found', function (): void {
     $notificationManager = new NotificationManager;
     $recipient = actionsNotificationManagerRecipient();
     $templateCode = 'invalid_template';
 
     expect(fn () => $notificationManager->send($recipient, $templateCode))
-        ->toThrow(Exception::class, 'Template not found: invalid_template');
+        ->toThrow(NotificationTemplateNotFoundException::class, 'Template invalid_template non trovato o non attivo');
+});
+
+// Il tipo e' nuovo, ma resta sotto Exception: chi aveva scritto
+// `catch (Exception $e)` attorno all'invio continua a prenderla, e ora riceve
+// il tipo di dominio. Se la classe uscisse dalla gerarchia di Exception, il
+// catch qui sotto non la prenderebbe e il test fallirebbe.
+it('lets an existing catch (Exception) receive the template exception', function (): void {
+    $notificationManager = new NotificationManager;
+    $caught = null;
+
+    try {
+        $notificationManager->send(actionsNotificationManagerRecipient(), 'invalid_template');
+    } catch (Exception $e) {
+        $caught = $e;
+    }
+
+    expect($caught)->toBeInstanceOf(NotificationTemplateNotFoundException::class);
 });
 
 it('returns array from send method', function (): void {

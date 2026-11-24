@@ -22,7 +22,7 @@ status: draft
 - [User Module Widget Structure](widgets-structure-user.md)
 - [EditUserWidget Documentation](widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](widgets/translation-guidelines.md)
-- [Filament Widget Conventions](../Modules/Xot/docs/filament-widgets.md)
+- [Filament Widget Conventions](best-practices/filament-widgets.md)
 
 ## Memory Integration
 

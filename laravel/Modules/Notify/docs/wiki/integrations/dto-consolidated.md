@@ -2,16 +2,19 @@
 qmd: "dto consolidated"
 issues: []
 discussions: []
-title: "dto: Consolidated Documentation"
+title: "dto — Consolidated Documentation"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
-# dto: Consolidated Documentation
+# dto — Consolidated Documentation
 
 Consolidated from **11** individual files.
 
@@ -33,7 +36,7 @@ Consolidated from **11** individual files.
 
 ## dto-structure-conventions-1
 
-*Consolidated from: `dto-structure-conventions.md`*
+*Consolidated from: `dto-structure-conventions-1.md`*
 
 title: "Convenzioni per la Struttura dei DTO nel Modulo Notify"
 type: concept
@@ -44,17 +47,12 @@ qmd: "dto-structure-conventions-1 convenzioni per la struttura dei dto nel modul
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -229,7 +227,10 @@ Prima di creare un nuovo DTO, verificare che:
 
 *Consolidated from: `dto-structure-conventions.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento definisce le convenzioni per la struttura e l'organizzazione dei Data Transfer Objects (DTO) nel modulo Notify. Seguire queste convenzioni è essenziale per mantenere coerenza e prevenire errori.
@@ -396,7 +397,7 @@ Prima di creare un nuovo DTO, verificare che:
 
 ## dto-structure-rules-1
 
-*Consolidated from: `dto-structure-rules.md`*
+*Consolidated from: `dto-structure-rules-1.md`*
 
 title: "Regole per la Struttura dei DTO"
 type: rule
@@ -407,17 +408,12 @@ qmd: "dto-structure-rules-1 regole per la struttura dei dto"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -545,7 +541,10 @@ related:
 
 *Consolidated from: `dto-structure-rules.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Directory e Namespace
 
 1. **Directory**
@@ -667,7 +666,10 @@ related:
 
 *Consolidated from: `dto-structure.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Directory e Namespace
 
 1. **Directory**
@@ -787,7 +789,7 @@ related:
 
 ## dto-vs-factory-analysis-1
 
-*Consolidated from: `dto-vs-factory-analysis.md`*
+*Consolidated from: `dto-vs-factory-analysis-1.md`*
 
 title: "Analisi: Logica di Selezione del Driver nel DTO vs Factory vs Canale"
 type: concept
@@ -798,17 +800,12 @@ qmd: "dto-vs-factory-analysis-1 analisi: logica di selezione del driver nel dto 
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -1003,7 +1000,10 @@ Basandoci sull'analisi percentuale:
 
 *Consolidated from: `dto-vs-factory-analysis.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questo documento analizza in dettaglio i vantaggi e gli svantaggi di posizionare la logica di selezione del driver SMS all'interno del DTO `SmsData`, confrontando questo approccio con il pattern Factory implementato e con l'approccio originale (nel canale).
 
 ## Opzione 1: Logica nel DTO (SmsData)
@@ -1192,7 +1192,10 @@ Basandoci sull'analisi percentuale:
 
 *Consolidated from: `dto-vs-factory.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questo documento analizza in dettaglio i vantaggi e gli svantaggi di posizionare la logica di selezione del driver SMS all'interno del DTO `SmsData`, confrontando questo approccio con il pattern Factory implementato e con l'approccio originale (nel canale).
 
 ## Opzione 1: Logica nel DTO (SmsData)
@@ -1381,7 +1384,10 @@ Basandoci sull'analisi percentuale:
 
 *Consolidated from: `dto_structure_conventions.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento definisce le convenzioni per la struttura e l'organizzazione dei Data Transfer Objects (DTO) nel modulo Notify. Seguire queste convenzioni è essenziale per mantenere coerenza e prevenire errori.
@@ -1550,7 +1556,10 @@ Prima di creare un nuovo DTO, verificare che:
 
 *Consolidated from: `dto_structure_rules.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Directory e Namespace
 
 1. **Directory**
@@ -1672,7 +1681,10 @@ Prima di creare un nuovo DTO, verificare che:
 
 *Consolidated from: `dto_vs_factory_analysis.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questo documento analizza in dettaglio i vantaggi e gli svantaggi di posizionare la logica di selezione del driver SMS all'interno del DTO `SmsData`, confrontando questo approccio con il pattern Factory implementato e con l'approccio originale (nel canale).
 
 ## Opzione 1: Logica nel DTO (SmsData)

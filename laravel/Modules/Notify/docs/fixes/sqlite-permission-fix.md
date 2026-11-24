@@ -3,7 +3,11 @@ title: "✅ SQLite Database Permission Fix - COMPLETE"
 type: concept
 tags: [sqlite, permission, fix]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "sqlite-permission-fix ✅ sqlite database permission fix - complete"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -12,7 +16,6 @@ related:
   - "./database-directory-naming-fix.md"
   - "./database-naming-fix-summary.md"
   - "./database-naming-verification-report.md"
-status: draft
 ---
 
 # ✅ SQLite Database Permission Fix - COMPLETE
@@ -237,7 +240,7 @@ bash bashscripts/fix-permissions.sh
 - [ ] Create bash script for permissions
 - [ ] Add to pre-deployment checklist
 - [ ] Document in AGENTS.md
-- [ ] Document in agents.md
+- [ ] Document in AGENTS.md
 
 ---
 

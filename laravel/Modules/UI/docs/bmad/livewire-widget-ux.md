@@ -1,4 +1,6 @@
 ---
+title: "UX — dark mode"
+
 title: "UX: dark mode"
 type: ux-design
 module: UI

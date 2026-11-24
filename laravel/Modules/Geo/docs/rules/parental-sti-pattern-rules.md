@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "parental sti pattern rules"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Parental STI Pattern Rules for Laraxot
@@ -391,6 +390,15 @@ it('can list only regionale records in Filament', function () {
 ```
 
 ---
+
+title: "parental sti pattern rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "parental sti pattern rules"
+issues: []
+discussions: []
 **Last Updated**: 2026-04-01  
 **Verified**: ✅ Parental v2.x  
 **Status**: Active Pattern in Laraxot

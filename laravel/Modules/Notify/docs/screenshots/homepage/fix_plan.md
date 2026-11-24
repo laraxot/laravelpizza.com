@@ -3,11 +3,14 @@ title: "fix plan"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "fix plan"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🚀 Fix Homepage Bootstrap Italia - Piano Esecutivo
@@ -18,7 +21,17 @@ Allineare la homepage FixCity (`/it/tests/homepage`) al design Bootstrap Italia 
 **Reference**: https://italia.github.io/design-comuni-pagine-statiche/sito/homepage.html  
 **Target**: http://fixcity.local/it/tests/homepage
 
+<<<<<<< HEAD
 ---
+
+title: "fix plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "fix plan"
+issues: []
+discussions: []
 ## Fase 1: Header & Hero (Settimana 1)
 
 ### Task 1.1: Header Slim Component
@@ -52,6 +65,11 @@ Allineare la homepage FixCity (`/it/tests/homepage`) al design Bootstrap Italia 
 **Priorità**: 🔴 Alta
 
 ---
+=======
+## Fase 1: Header & Hero (Settimana 1)
+### Task 1.1: Header Slim Component
+### Task 1.2: Hero Bootstrap Italia
+>>>>>>> laraxot/dev
 
 ## Fase 2: Governance & Events (Settimana 2)
 
@@ -154,10 +172,8 @@ Allineare la homepage FixCity (`/it/tests/homepage`) al design Bootstrap Italia 
 
 ### Documentazione
 - [Bootstrap Italia Docs](https://italia.github.io/design-web-toolkit/)
-- [Analisi Visiva](docs/screenshots/homepage/ANALISI_VISIVA.md)
-- [Screenshot Analysis](docs/screenshots/homepage/SCREENSHOT_ANALYSIS.md)
-- [Analisi Visiva](ANALISI_VISIVA.md)
-- [Screenshot Analysis](SCREENSHOT_ANALYSIS.md)
+- [Analisi Visiva](docs/screenshots/homepage/analisi_visiva.md)
+- [Screenshot Analysis](docs/screenshots/homepage/screenshot_analysis.md)
 
 ### File Correlati
 - `Themes/Sixteen/resources/css/bootstrap-italia.css`

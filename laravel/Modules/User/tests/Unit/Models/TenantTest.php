@@ -10,16 +10,14 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Str;
 use Mockery\MockInterface;
-<<<<<<< .merge_file_TfCeRB
 use Modules\User\Models\Tenant;
-use Tests\TestCase;
-
-use function Safe\json_encode;
-=======
 use Modules\User\Tests\TestCase;
->>>>>>> .merge_file_3XWeQG
 
+<<<<<<< HEAD
+uses(TestCase::class);
+=======
 uses(\Modules\User\Tests\TestCase::class);
+>>>>>>> laraxot/dev
 
 class TenantTest extends TestCase
 {

@@ -3,7 +3,11 @@ title: "email best practices"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "email best practices"
 issues: []
 discussions: []
@@ -126,10 +130,10 @@ $mailTemplate->send($user->email, [
 
 ## Riferimenti
 
-- [Guida Layout Email](../MAIL_LAYOUTS_GUIDE.md)
-- [Integrazione MailPace](./MAILPACE_TEMPLATES_INTEGRATION.md)
-- [HTML Email Compatibility](./HTML_EMAIL_COMPATIBILITY.md)
-- [Spatie Email Usage Guide](../SPATIE_EMAIL_USAGE_GUIDE.md)
+- [Guida Layout Email](../mail_layouts_guide.md)
+- [Integrazione MailPace](mailpace_templates_integration.md)
+- [HTML Email Compatibility](html_email_compatibility.md)
+- [Spatie Email Usage Guide](../spatie_email_usage_guide.md)
 - [Guida Layout Email](../mail_layouts_guide.md)
 - [Integrazione MailPace](./mailpace_templates_integration.md)
 - [HTML Email Compatibility](./html_email_compatibility.md)

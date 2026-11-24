@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "redundancy audit"
 issues: []
 discussions: []
@@ -11,7 +15,6 @@ created: 2026-05-21
 related:
   - https://github.com/laraxot/base_fixcity_fila5/issues/89
   - https://github.com/laraxot/base_ptv_fila5/issues/89
-status: draft
 ---
 
 # Notify redundancy audit 2026-05-21

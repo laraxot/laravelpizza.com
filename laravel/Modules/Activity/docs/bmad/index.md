@@ -1,22 +1,21 @@
 ---
-title: Activity: indice BMAD
+title: Activity — indice BMAD
 type: index
 tags: [docs, bmad, activity]
 qmd: "Activity indice BMAD documentazione"
-status: draft
-updated: 2026-10-21
 ---
 
-# Activity: indice BMAD
+# Activity — indice BMAD
 
 ## Canonico
 
+- [Indice del pack audit (00-index)](./00-index.md)
+- [Audit profondo](./audits/activity-audit.md)
 - [README BMAD](./README.md)
 - [Architettura](./architecture/)
 - [Brainstorming](./brainstorming/)
 - [Epiche](./epics/)
 - [Stories](./stories/)
-  - [PHPStan cluster A 2026-10-21](./stories/phpstan-clusterA.story.md)
 - [Wiki del modulo](../wiki/)
 
 ## Legacy da consultare, non da estendere

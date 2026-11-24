@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament"
 issues: []
 discussions: []
-status: draft
 ---
 
 # filament

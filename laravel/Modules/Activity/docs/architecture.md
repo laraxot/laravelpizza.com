@@ -1,4 +1,103 @@
-<<<<<<< HEAD
+---
+title: "Activity: architettura (diagramma non allineato al codice)"
+type: reference
+status: stale
+module: Activity
+updated: 2026-10-14
+tags: [activity, architecture, stale]
+qmd: "activity architettura diagramma repositories services projections stale"
+---
+
+> Nota 2026-10-14 (docs-audit): il diagramma elenca Repositories, Services, Commands e Projections che non esistono in `app/` (cartelle reali: Actions, Adapters, Console, Contracts, Datas, Enums, Events, Exceptions, Filament, Http, Listeners, Models, Providers, Traits, View; `Support` assente, riverificato 2026-10-23). Il modulo non ha un layer Services (regola no-services). Fonte corretta: [README.md](./README.md) e [wiki/concepts/queueable-action-execute-entrypoint.md](./wiki/concepts/queueable-action-execute-entrypoint.md). Contenuto non riscritto, verificare prima di usarlo.
+
+# Architecture Documentation
+## Activity Module Architecture
+
+### System Overview
+
+The Activity module provides a comprehensive activity logging and event sourcing system for the Laraxot ecosystem. This document describes the module's architecture, components, and design patterns.
+
+### Core Components
+
+Vedi [wiki/concepts/queueable-action-execute-entrypoint.md](wiki/concepts/queueable-action-execute-entrypoint.md) per la mappa Actions attuale (no Services layer).
+
+```
+Activity Module Architecture
+┌─────────────────────────────────────────────────────────────┐
+│                     Activity Module                          │
+├─────────────────────────────────────────────────────────────┤
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
+│  │   Models     │  │ Repositories │  │  Services    │       │
+│  │              │  │              │  │              │       │
+│  │ ActivityLog  │  │ ActivityRepo │  │ ActivitySvc  │       │
+│  │ StoredEvent  │  │ EventRepo    │  │ EventSvc     │       │
+│  │ Snapshot     │  │ SnapRepo     │  │ SnapSvc      │       │
+│  └──────────────┘  └──────────────┘  └──────────────┘       │
+├─────────────────────────────────────────────────────────────┤
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
+│  │   Events     │  │   Commands   │  │  Projections │       │
+│  │              │  │              │  │              │       │
+│  │ DomainEvent  │  │ CreateAct    │  │ ActivityView │       │
+│  │ StoredEvt    │  │ UpdateAct    │  │ EventView    │       │
+│  └──────────────┘  └──────────────┘  └──────────────┘       │
+├─────────────────────────────────────────────────────────────┤
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
+│  │   Policies   │  │   Actions    │  │   Pages      │       │
+│  │              │  │              │  │              │       │
+│  │ ActPolicy    │  │ LogAct       │  │ ActListPage  │       │
+│  │ EvtPolicy    │  │ RevAct       │  │ EvtListPage  │       │
+│  └──────────────┘  └──────────────┘  └──────────────┘       │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Data Flow
+
+## Quality Gates
+✅ PHPStan L10: Executed (2026-07-28)# Architecture Documentation
+
+## Activity Module Architecture
+
+### System Overview
+
+The Activity module provides a comprehensive activity logging and event sourcing system for the Laraxot ecosystem. This document describes the module's architecture, components, and design patterns.
+
+### Core Components
+
+Vedi [wiki/concepts/queueable-action-execute-entrypoint.md](wiki/concepts/queueable-action-execute-entrypoint.md) per la mappa Actions attuale (no Services layer).
+
+```
+Activity Module Architecture
+┌─────────────────────────────────────────────────────────────┐
+│                     Activity Module                          │
+├─────────────────────────────────────────────────────────────┤
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
+│  │   Models     │  │ Repositories │  │  Services    │       │
+│  │              │  │              │  │              │       │
+│  │ ActivityLog  │  │ ActivityRepo │  │ ActivitySvc  │       │
+│  │ StoredEvent  │  │ EventRepo    │  │ EventSvc     │       │
+│  │ Snapshot     │  │ SnapRepo     │  │ SnapSvc      │       │
+│  └──────────────┘  └──────────────┘  └──────────────┘       │
+├─────────────────────────────────────────────────────────────┤
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
+│  │   Events     │  │   Commands   │  │  Projections │       │
+│  │              │  │              │  │              │       │
+│  │ DomainEvent  │  │ CreateAct    │  │ ActivityView │       │
+│  │ StoredEvt    │  │ UpdateAct    │  │ EventView    │       │
+│  └──────────────┘  └──────────────┘  └──────────────┘       │
+├─────────────────────────────────────────────────────────────┤
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
+│  │   Policies   │  │   Actions    │  │   Pages      │       │
+│  │              │  │              │  │              │       │
+│  │ ActPolicy    │  │ LogAct       │  │ ActListPage  │       │
+│  │ EvtPolicy    │  │ RevAct       │  │ EvtListPage  │       │
+│  └──────────────┘  └──────────────┘  └──────────────┘       │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Data Flow
+
+## Quality Gates
+✅ PHPStan L10: Executed (2026-07-28)
 # Architecture Documentation
 
 ## Activity Module Architecture
@@ -155,38 +254,7 @@ class ActivityPolicy
 
 ### Related Documentation
 
-- [Security](SECURITY.md)
-- [Quality](QUALITY.md)
-- [Performance](PERFORMANCE.md)
-- [Testing](TESTING.md)
-=======
----
-title: "Activity Module Architecture"
-type: architecture
-tags: [module, architecture, audit]
-created: 2026-07-28
-updated: 2026-07-28
----
-
-# Activity Module — Architecture
-
-## Purpose
-Provides audit trail and activity logging via Spatie Laravel Activity Log. Tracks user actions, subject changes, and event sourcing.
-
-## Core Components
-
-**Models:**
-- `Activity` — Base activity log model (spatie/laravel-activitylog)
-
-**Actions:**
-- `LogActivityAction` — Primary entrypoint for logging events
-
-**Filament Resources:**
-- `ActivityResource` — Browse/analyze activity logs
-
-## Database Schema
-- `activities` table: id, log_name, description, subject_id, subject_type, causer_id, causer_type, properties, created_at
-
-## Quality Gates
-✅ PHPStan L10: Executed (2026-07-28)
->>>>>>> laraxot/dev
+- [Security](security.md)
+- [Quality](roadmap/quality.md)
+- [Performance](PERFORMANCE.md) _(target mancante, verificato 2026-10-14)_
+- [Testing](testing.md)

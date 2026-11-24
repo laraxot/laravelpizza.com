@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan analysis business logic"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHPStan Analysis - Business Logic & Factory Issues
@@ -308,7 +307,15 @@ use function Safe\json_encode;
 ## 📚 **Documentazione Correlata**
 
 - [Business Logic Factory & Seeder Audit](../business-logic-factory-seeder-audit.md)
+<<<<<<< HEAD
 - [PHPStan Critical Rules](./phpstan-critical-rule.md)
+=======
+<<<<<<< HEAD
+- [PHPStan Critical Rules](./phpstan-critical-rule.md)
+=======
+- [PHPStan Critical Rules](../phpstan-critical-rule.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Factory Best Practices](../factory-best-practices.md)
 - [Testing Business Behavior Supreme Rule](../testing/testing-business-behavior-supreme-rule.md)
 
@@ -323,6 +330,15 @@ Al completamento di questo audit e delle correzioni:
 5. **Documentazione** aggiornata e sincronizzata
 
 ---
+
+title: "phpstan analysis business logic"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan analysis business logic"
+issues: []
+discussions: []
 **Stato**: Analisi completata, implementazione in corso
 **Priorità**: <nome progetto> Factory (CRITICO)
 **Priorità**: <nome progetto> Factory (CRITICO)

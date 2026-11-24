@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-<<<<<<< .merge_file_BuEqcB
+<<<<<<< HEAD
 =======
-use Modules\User\Tests\TestCase;
->>>>>>> .merge_file_UcomDz
+use Illuminate\Contracts\Support\Htmlable;
+>>>>>>> laraxot/dev
 use Modules\User\Enums\UserType;
 use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Filament\Resources\UserResource\Pages\CreateUser;
 use Modules\User\Models\User;
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
 /**
  * @property CreateUser $page
@@ -18,11 +18,12 @@ use Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function (): void {
-<<<<<<< .merge_file_BuEqcB
-    $this->createUserPage = new CreateUser;
+<<<<<<< HEAD
+    $this->page = new CreateUser;
 =======
+    TestCase::$createUserPage = new CreateUser;
     $this->page = new CreateUser();
->>>>>>> .merge_file_UcomDz
+>>>>>>> laraxot/dev
 });
 
 test('create user page has correct resource', function (): void {

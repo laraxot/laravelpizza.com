@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "notify continuation"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Notify Continuation

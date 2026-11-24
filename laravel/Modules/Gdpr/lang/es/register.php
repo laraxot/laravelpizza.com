@@ -3,18 +3,17 @@
 declare(strict_types=1);
 
 return [
-    'title' => 'Comienza tu viaje Pizza 🍕',
-    'subtitle' => 'Únete a nuestra comunidad creciente de amantes de la pizza y desarrolladores. Acceso exclusivo a meetups y tutoriales.',
-    'submit' => 'Unirse a la comunidad',
-    'submitting' => 'Estamos preparando tu horno...',
-    'stats' => [
-        'active_developers' => 'Comunidad en Crecimiento',
-        'monthly_meetups' => 'Próximos Eventos',
-        'community_support' => 'Soporte 24/7',
+    'title' => 'Crea tu cuenta',
+    'subtitle' => 'Completa el formulario para crear tu cuenta personal.',
+    'submit' => 'Crear cuenta',
+    'submitting' => 'Creando tu cuenta...',
+    'register' => [
+        'submit' => 'Crear cuenta',
+        'submitting' => 'Creando tu cuenta...',
     ],
     'form' => [
-        'cta_title' => 'Crea Tu Cuenta GRATUITA',
-        'cta_subtitle' => 'No se requiere tarjeta - ¡100% gratuito para siempre!',
+        'cta_title' => 'Crea tu cuenta',
+        'cta_subtitle' => 'Introduce tus datos y acepta los consentimientos obligatorios.',
         'terms_notice' => 'Al registrarte aceptas nuestros Términos y Política de Privacidad',
         'first_name' => 'Nombre',
         'last_name' => 'Apellidos',
@@ -25,24 +24,6 @@ return [
         'password_confirmation' => 'Confirmar contraseña',
         'submit' => 'Crear cuenta',
     ],
-    'benefits' => [
-        'community' => [
-            'title' => 'Únete a la Comunidad',
-            'description' => 'Conecta con profesionales y entusiastas de Laravel',
-            'cta' => 'Acceso gratuito inmediato después del registro',
-        ],
-        'tutorials' => [
-            'title' => 'Tutoriales y Talleres Exclusivos',
-            'description' => 'Acceso prioritario a contenidos premium y formación',
-            'cta' => 'Acceso exclusivo',
-        ],
-        'networking' => [
-            'title' => 'Networking y Carrera',
-            'description' => 'Oportunidades de colaboración y crecimiento profesional',
-            'cta' => 'Contratado por las mejores empresas Laravel',
-        ],
-    ],
-    'social_proof' => 'Únete a la comunidad <nome progetto>',
     'fields' => [
         'first_name' => [
             'label' => 'Nombre',
@@ -87,9 +68,7 @@ return [
         'required_consents_description' => 'Para proceder con el registro, debes aceptar las siguientes condiciones para el tratamiento de tus datos personales',
         'optional_consents' => 'Consentimiento Opcional',
         'optional_consents_description' => 'Estos consentimientos son opcionales y no afectan tu registro. Puedes modificarlos en cualquier momento desde tu perfil.',
-        'trust_badges' => 'Sellos de confianza',
         'registration_form' => 'Formulario de registro',
-        'benefits' => 'Beneficios',
     ],
     'consents' => [
         'title' => 'Consentimientos de Privacidad',
@@ -121,33 +100,11 @@ return [
     'already_registered' => '¿Ya tienes una cuenta?',
     'login' => 'Iniciar sesión',
     'required_consent_missing' => 'Debes aceptar todos los consentimientos obligatorios para continuar.',
-    'success' => '¡Registro completado con éxito! Tu cuenta ha sido creada cumpliendo con el GDPR.',
+    'success' => 'Registro completado con éxito.',
     'throttle' => 'Demasiados intentos de registro. Vuelve a intentarlo en :seconds segundos.',
-    'success_message' => 'Tu cuenta está lista. Te hemos enviado un correo: abre el enlace para confirmar tu dirección antes de enviar un aviso.',
+    'success_message' => 'Tu cuenta está lista. Te hemos enviado un correo: abre el enlace para confirmar tu dirección.',
     'error' => 'Error de registro',
     'error_message' => 'Ocurrió un error durante el registro. Por favor inténtalo de nuevo más tarde. Si el problema persiste, contacta nuestro soporte.',
-    'clickbait' => [
-        'active_developers' => 'Desarrolladores Activos',
-        'monthly_meetups' => 'Meetups Mensuales',
-        'community_support' => 'Soporte de Comunidad',
-        'free_access' => 'Acceso GRATUITO inmediato después del registro',
-        'worth_free' => 'Acceso exclusivo',
-        'get_hired' => 'Sé contratado por las mejores empresas de Laravel',
-        'join_now' => '¡Únete AHORA antes de que cierre el registro!',
-        'create_account' => 'Crea Tu Cuenta GRATUITA',
-        'no_card_required' => 'No se requiere tarjeta de crédito - ¡100% GRATUITO para siempre!',
-        'by_registering' => 'Al registrarte, aceptas nuestros Términos y Política de Privacidad',
-    ],
-    'seo' => [
-        'description' => 'Únete a la comunidad <nome progetto> para meetups exclusivos, tutoriales premium y networking. Acceso gratuito a talleres y eventos comunitarios.',
-        'laravel_meetup' => 'meetup Laravel',
-        'laravel_community' => 'comunidad Laravel',
-        'php_developer_community' => 'comunidad desarrolladores PHP',
-        'laravel_tutorials' => 'tutoriales Laravel',
-        'laravel_workshops' => 'talleres Laravel',
-        'laravel_networking' => 'networking Laravel',
-        '<nome progetto>' => '<nome progetto>',
-    ],
     'navigation' => [
         'label' => 'Missing Navigation Label',
         'plural_label' => 'Missing Navigation Plural Label',

@@ -5,8 +5,13 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Unit;
 
 use Illuminate\Support\Facades\Validator;
+<<<<<<< HEAD
+use Modules\Xot\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+=======
 use PHPUnit\Framework\Assert;
 use Modules\Xot\Tests\TestCase;
+>>>>>>> laraxot/dev
 
 use function Safe\preg_match;
 

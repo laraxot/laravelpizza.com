@@ -1,3 +1,10 @@
+---
+title: "Task: Allineamento Filament v5 (Clusters) - Activity"
+qmd: "activity tasks activity filament v5 md"
+type: note
+tags: [documentation]
+---
+
 # Task: Allineamento Filament v5 (Clusters) - Activity
 
 **Modulo**: Activity  

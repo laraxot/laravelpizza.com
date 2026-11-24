@@ -1,10 +1,10 @@
 ---
-title: "quick start product docs"
+title: "Quick Start Product Docs"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "quick start product docs"
+qmd: "Quick Start Product Docs"
 issues: []
 discussions: []
 ---
@@ -20,12 +20,12 @@ discussions: []
 
 ---
 
-title: "quick start product docs"
+title: "QUICK START PRODUCT DOCS"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "quick start product docs"
+qmd: "QUICK START PRODUCT DOCS"
 issues: []
 discussions: []
 ## Prerequisiti

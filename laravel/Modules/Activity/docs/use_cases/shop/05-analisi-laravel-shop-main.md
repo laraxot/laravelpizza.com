@@ -1,12 +1,10 @@
 ---
 title: "Analisi Approfondita: laravel-shop-main"
+qmd: "activity use cases shop 05 analisi laravel shop main md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "analisi approfondita: laravel-shop-main activity"
-status: superseded
-superseded_by: analisi-laravel-shop-main.md
+tags: [documentation]
 ---
+
 # Analisi Approfondita: laravel-shop-main
 
 ## 1. Struttura delle Cartelle e Naming

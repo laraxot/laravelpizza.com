@@ -1,11 +1,10 @@
 ---
 title: "Activity Module - Path Assets Resolution"
+qmd: "activity module path assets resolution md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "activity module - path assets resolution activity"
+tags: [documentation]
 ---
+
 # Activity Module - Path Assets Resolution
 
 **Data Creazione**: 2026-01-02

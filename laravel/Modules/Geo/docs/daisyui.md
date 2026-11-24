@@ -1,13 +1,16 @@
 ---
-title: "daisyui"
+title: "Daisyui"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
-qmd: "daisyui"
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+qmd: "Daisyui"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Geo Module — daisyUI Documentation
@@ -23,9 +26,18 @@ Nel contesto del modulo **Geo**, daisyUI **non è attualmente installato**.
 | Installato in Geo? | ❌ No (e non serve — vedi sotto) |
 | Tailwind CSS in Geo | ✅ `tailwindcss@^3.4.1` (autonomo, solo utility) |
 | Build pipeline | `vite build` + `copy` → `public_html/assets/geo` |
-| Stack canonico | Tailwind v4 + DaisyUI v5 + Filament v5 + Alpine + Lit (definito nel tema, vedi `laravel/Themes/Sixteen/docs/DAISYUI.md`) |
+| Stack canonico | Tailwind v4 + DaisyUI v5 + Filament v5 + Alpine + Lit (definito nel tema, vedi `laravel/Themes/Sixteen/docs/daisyui.md`) |
 
 ---
+
+title: "DAISYUI"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "DAISYUI"
+issues: []
+discussions: []
 ## Perché Geo non usa daisyUI (e perché non serve)
 
 Il modulo **Geo** gestisce asset pubblici autonomi: `coordinate-picker-lit`, `map-lit`, widget mappa Leaflet.
@@ -124,4 +136,4 @@ Per il modulo Geo l'implicazione è:
   `resources/css/components/` legano i nomi design-comuni a un cluster di utility
   Tailwind (eventualmente componenti DaisyUI come `btn`, `card`).
 
-Doc canonico (con pro/contro/percentuali completi): `laravel/Themes/Sixteen/docs/DAISYUI.md`.
+Doc canonico (con pro/contro/percentuali completi): `laravel/Themes/Sixteen/docs/daisyui.md`.

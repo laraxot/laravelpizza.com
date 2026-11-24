@@ -2,16 +2,19 @@
 qmd: "baseuser consolidated"
 issues: []
 discussions: []
-title: "baseuser: Consolidated Documentation"
+title: "baseuser — Consolidated Documentation"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
-# baseuser: Consolidated Documentation
+# baseuser — Consolidated Documentation
 
 Consolidated from **6** individual files.
 
@@ -38,17 +41,12 @@ updated: 2026-07-14
 qmd: "baseuser-dry-violation-2025-10-15.deprecated deprecated"
 status: deprecated
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -59,7 +57,7 @@ related:
 
 ## baseuser-dry-violation-1
 
-*Consolidated from: `baseuser-dry-violation.md`*
+*Consolidated from: `baseuser-dry-violation-1.md`*
 
 title: "BaseUser DRY Violation - Analisi e Refactoring"
 type: concept
@@ -70,17 +68,12 @@ qmd: "baseuser-dry-violation-2025-10-15.deprecated baseuser dry violation - anal
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -414,7 +407,6 @@ test('hasRole con pipe syntax', function () {
 - [DRY Violations Analysis](./dry-violations-analysis.md)
 - [Code Quality](./code-quality-analysis.md)
 - [Super Admin Setup](./super-admin-setup-fix.md)
-- [Super Admin Setup](../../super-admin-setup-fix.md)
 
 ### Spatie Documentation
 - [Laravel Permission - Basic Usage](https://spatie.be/docs/laravel-permission/v6/basic-usage/role-permissions)
@@ -427,9 +419,6 @@ Questa è la **quarta analisi** del 15 Ottobre 2025:
 1. ✅ [View Cache Components](./view-cache-components-fix.md)
 2. ✅ [Transaction Model Removal](./transaction-removal-fix.md)
 3. ✅ [Super Admin Setup](./super-admin-setup-fix.md)
-1. ✅ [View Cache Components](../../view-cache-components-fix.md)
-2. ✅ [Transaction Model Removal](../../transaction-removal-fix.md)
-3. ✅ [Super Admin Setup](../../super-admin-setup-fix.md)
 4. 📋 **BaseUser DRY Violation** (questa analisi)
 
 **Pattern Consistente**: Analisi approfondita → Documentazione completa → Piano implementazione chiaro
@@ -472,7 +461,10 @@ Il refactoring di `BaseUser` per rimuovere i metodi duplicati è:
 
 **Procedere con implementazione!** 🚀
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ---
 
 ## baseuser-dry-violation
@@ -487,23 +479,17 @@ updated: 2026-07-14
 qmd: "baseuser-dry-violation-2025-10-15 deprecated"
 status: deprecated
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
 
 > Questo file è stato rinominato in [baseuser-dry-violation.md](baseuser-dry-violation.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-> Questo file è stato rinominato in [baseuser-dry-violation.md](../../baseuser-dry-violation.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 
 ---
 
@@ -519,17 +505,12 @@ updated: 2026-07-14
 qmd: "baseuser-refactoring-completed-2025-10-15.deprecated deprecated"
 status: deprecated
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -541,7 +522,6 @@ related:
 ## baseuser-refactoring-completed-1
 
 *Consolidated from: `baseuser-refactoring-completed-1.md`*
-*Consolidated from: `baseuser-refactoring-completed.md`*
 
 title: "BaseUser Refactoring COMPLETATO ✅"
 type: concept
@@ -552,17 +532,12 @@ qmd: "baseuser-refactoring-completed-2025-10-15.deprecated baseuser refactoring 
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -822,7 +797,6 @@ Questa è stata la **quinta implementazione** della giornata!
 ### Analisi e Piano
 - [DRY Violation Analysis](../Modules/User/docs/baseuser-dry-violation-analysis.md) - Analisi completa
 - [Refactoring Plan](./baseuser-dry-violation.md) - Piano esecutivo
-- [Refactoring Plan](../../baseuser-dry-violation.md) - Piano esecutivo
 
 ### Completamento
 - [Refactoring Completed](../Modules/User/docs/baseuser-refactoring-completed-.md.md) - Dettagli implementazione
@@ -837,9 +811,6 @@ Questa è stata la **quinta implementazione** della giornata!
 1. [View Cache Components](./view-cache-components-fix.md)
 2. [Transaction Removal](./transaction-removal-fix.md)
 3. [Super Admin Setup](./super-admin-setup-fix.md)
-1. [View Cache Components](../../view-cache-components-fix.md)
-2. [Transaction Removal](../../transaction-removal-fix.md)
-3. [Super Admin Setup](../../super-admin-setup-fix.md)
 
 ### Spatie Documentation
 - [Laravel Permission Docs](https://spatie.be/docs/laravel-permission)
@@ -956,7 +927,10 @@ Il refactoring di `BaseUser.php` rappresenta un **caso di studio perfetto** di c
 *"Prima lo fai funzionare, poi lo fai giusto, poi lo fai veloce."*  
 *Oggi abbiamo fatto tutti e tre!* ✨
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ---
 
 ## baseuser-refactoring-completed
@@ -971,23 +945,17 @@ updated: 2026-07-14
 qmd: "baseuser-refactoring-completed-2025-10-15 deprecated"
 status: deprecated
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
 
 > Questo file è stato rinominato in [baseuser-refactoring-completed.md](baseuser-refactoring-completed.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-> Questo file è stato rinominato in [baseuser-refactoring-completed.md](../../baseuser-refactoring-completed.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 
 ---
 

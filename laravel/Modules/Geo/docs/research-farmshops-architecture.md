@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "research farmshops architecture"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Research: farmshops.eu Architecture Study

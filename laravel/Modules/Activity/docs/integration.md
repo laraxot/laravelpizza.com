@@ -1,9 +1,8 @@
 ---
 title: "Integration"
+qmd: "activity integration md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "integration activity"
+tags: [documentation]
 ---
+
 # Integration

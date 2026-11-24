@@ -1,11 +1,10 @@
 ---
 title: "DRY & KISS Analysis - Modulo Activity"
+qmd: "activity dry kiss md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "dry & kiss analysis - modulo activity activity"
+tags: [documentation]
 ---
+
 # DRY & KISS Analysis - Modulo Activity
 
 **Data:** 15 Ottobre 2025  

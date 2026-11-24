@@ -3,7 +3,11 @@ title: "🎯 FIXCITY - STATO COMPLETAMENTO PROGETTO"
 type: concept
 tags: [project, completion, status]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "project-completion-status 🎯 ptv - stato completamento progetto"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -29,9 +33,9 @@ status: draft
 
 # 🎯 FIXCITY - STATO COMPLETAMENTO PROGETTO
 
-**Data**: 2025-10-01  
-**Status**: 🚧 IN CORSO - Documentazione 75% completata  
-**Fase Corrente**: Q4 2025 - Feature Expansion  
+**Data**: 2025-10-01
+**Status**: 🚧 IN CORSO - Documentazione 75% completata
+**Fase Corrente**: Q4 2025 - Feature Expansion
 
 ---
 
@@ -203,8 +207,8 @@ status: draft
 ## 🔗 STRUTTURA DOCUMENTAZIONE
 
 ```
-base_fixcity_fila5_mono/
-base_ptv_fila5_mono/
+base_fixcity_fila5/
+base_ptv_fila5/
 ├── documentation-index.md          # ✅ Indice generale
 ├── quick-start.md                  # ✅ Guida rapida
 ├── roadmap-status-summary.md       # ✅ Status master
@@ -329,8 +333,8 @@ Prima di considerare un modulo "completo":
 
 ---
 
-**Status Finale**: 🚧 Progetto al 75% di completamento documentazione  
-**Confidence Level**: 90%  
+**Status Finale**: 🚧 Progetto al 75% di completamento documentazione
+**Confidence Level**: 90%
 
 ---
 

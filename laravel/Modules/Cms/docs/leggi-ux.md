@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "leggi ux"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Leggi di User Experience (UX)

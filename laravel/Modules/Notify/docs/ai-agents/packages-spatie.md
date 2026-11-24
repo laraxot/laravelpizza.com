@@ -3,7 +3,11 @@ title: "packages spatie"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "packages spatie"
 issues: []
 discussions: []
@@ -12,8 +16,8 @@ status: draft
 
 # Spatie Packages Reference
 
-Pacchetti Spatie installati in Quaeris Fila5 Mono.
-Pacchetti Spatie installati in App Fila5 Mono.
+Pacchetti Spatie installati in <nome progetto> fila5.
+Pacchetti Spatie installati in App fila5.
 
 ## Versioni installate
 

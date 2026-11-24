@@ -3,20 +3,23 @@ title: "✅ FixCity Improvement Plan - START HERE"
 type: concept
 tags: [fixcity, improvement, start, here]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "fixcity-improvement-start-here ✅ fixcity improvement plan - start here"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./2-1-1-plan.md"
   - "./2-1-context.md"
-  - "./agents.md"
+  - "./AGENTS.md"
   - "./ai-agent-lessons-learned.md"
   - "./ai-skills-and-plugins-complete.md"
   - "./commit-message.md"
   - "./configuration.md"
   - "./design-comuni-bmad-master-plan.md"
-status: draft
 ---
 
 # ✅ FixCity Improvement Plan - START HERE

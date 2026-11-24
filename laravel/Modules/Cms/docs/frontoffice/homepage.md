@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "homepage"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Homepage Architecture & Management

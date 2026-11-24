@@ -3,11 +3,14 @@ title: "git merge"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "git merge"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Git Conflict Inventory
@@ -19,10 +22,10 @@ status: draft
 ## Files
 
 - docs/phpstan-scripts-roadmap.md
-- docs/quality-status.md
-- docs/quality-status-activity-module-november.md
+- docs/quality-status-11.md
+- docs/quality-status-2025-11.md
 - docs/roadmap.md
-- docs/roadmap/legacy/legacy-roadmap-content-management.md
+- docs/roadmap/legacy/legacy-roadmap-3.md
 - docs/roadmap/legacy/legacy-roadmap-x.md
 - docs/wiki/README.md
 - docs/wiki/_archive/filament-4x-compatibility.md
@@ -30,5 +33,13 @@ status: draft
 
 ## Notes
 
+<<<<<<< HEAD
 - Inventory generated from `rg -l "^(<<<<<<<|=======|>>>>>>>)"`.
+=======
+<<<<<<< HEAD
+- Inventory generated from `rg -l "^(CONFLICT_START|-------|CONFLICT_END)"`.
+=======
+- Inventory generated from `rg -l "^(<<<<<<<|=======|>>>>>>>)"`.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - Use this list as a volatile coordination map; re-open each file before editing because other agents may resolve items in parallel.

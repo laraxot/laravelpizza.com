@@ -1,11 +1,10 @@
 ---
 title: "Analisi di Larabank Projectors"
+qmd: "activity use cases bank analysis projectors md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "analisi di larabank projectors activity"
+tags: [documentation]
 ---
+
 # Analisi di Larabank Projectors
 
 ## Panoramica

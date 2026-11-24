@@ -3,11 +3,14 @@ title: "notebooklm installation summary"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notebooklm installation summary"
 issues: []
 discussions: []
-status: draft
 ---
 
 # NotebookLM Skill - Installation & Integration Summary
@@ -39,7 +42,7 @@ ls -la ~/.claude/skills/notebooklm/
 # - data/ (authentication + library)
 # - requirements.txt
 # - README.md, CHANGELOG.md, LICENSE
-# - README.md, changelog.md, LICENSE
+# - README.md, CHANGELOG.md, LICENSE
 ```
 
 ## What is NotebookLM Skill?
@@ -235,7 +238,7 @@ Create these NotebookLM notebooks:
 
 ### 1. Laraxot Framework Docs
 - **Upload**: Laraxot documentation, AGENTS.md, .windsurfrules
-- **Upload**: Laraxot documentation, agents.md, .windsurfrules
+- **Upload**: Laraxot documentation, AGENTS.md, .windsurfrules
 - **Topics**: laravel, architecture, modules, filament, xot
 - **Use**: Technical research, implementation verification
 
@@ -365,6 +368,15 @@ DEFAULT_NOTEBOOK_ID=ptv-project-docs
 - **GitHub**: https://github.com/PleasePrompto/notebooklm-skill
 
 ---
+
+title: "notebooklm installation summary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "notebooklm installation summary"
+issues: []
+discussions: []
 **Status**: ✅ Ready for authentication and notebook creation  
 **Last Updated**: 2026-03-30  
 **Integrated By**: AI Agent (BMAD + GSD + Ralph Workflow)

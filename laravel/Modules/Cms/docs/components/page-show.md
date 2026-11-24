@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "page show"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Componente Livewire Page/Show

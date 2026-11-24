@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "links01"
 related:
   - "./italian-text-refined-audit-report.md"
-status: draft
 ---
 # Best Practices per le Chiavi di Traduzione
 
@@ -18,7 +17,7 @@ status: draft
 - [README modulo Lang](./README.md)
 - [Convenzioni Path](./PATH_CONVENTIONS.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
-- [Implementazione Header](/laravel/Modules/User/docs/HEADER_LANGUAGE_AVATAR_IMPLEMENTATION.md)
+- [Implementazione Header](/laravel/Modules/User/docs/header_language_avatar_implementation.md)
 
 ## Panoramica
 

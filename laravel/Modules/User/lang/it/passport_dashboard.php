@@ -32,6 +32,15 @@ return [
         'client_name' => [
             'label' => 'Nome cliente',
         ],
+        'force' => [
+            'description' => 'force',
+        ],
+        'name' => [
+            'label' => 'Nome',
+            'placeholder' => 'name',
+            'helper_text' => 'name',
+            'description' => 'name',
+        ],
     ],
     'actions' => [
         'new_credentials' => [

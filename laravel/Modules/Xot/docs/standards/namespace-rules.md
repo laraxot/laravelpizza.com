@@ -139,9 +139,9 @@ Se si verificano errori "Class not found" o problemi di autoloading:
 
 ## Collegamenti Correlati
 
-- [Convenzioni](../conventions.md)
+- [Convenzioni](../archive/conventions.md)
 - [Naming Conventions](../naming-conventions.md)
-- [Documentazione Xot](../code-standards.md)
+- [Documentazione Xot](../archive/code-standards.md)
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 
 Ultima modifica: 31/03/2025

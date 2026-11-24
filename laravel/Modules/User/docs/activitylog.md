@@ -3,24 +3,14 @@ description:
 globs:
 alwaysApply: false
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-title: "Linee guida per l'uso di Spatie Activitylog"
-type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, user]
-qmd: "linee guida per l'uso di spatie activitylog user"
 ---
 # Linee guida per l'uso di Spatie Activitylog
 
@@ -66,7 +56,7 @@ $logs = $user->activities()->where('log_name', 'user_moderation')->get();
 ```
 
 ## Collegamenti correlati
-- [README User](mdc:readme.md)
+- [README User](mdc:README.md)
 - [Best Practices](mdc:best-practices.md)
 - [Filament Best Practices](mdc:filament-best-practices.md)
 - [Testing](mdc:testing.md)

@@ -3,11 +3,14 @@ title: "working with claude"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "working with claude"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Working with Claude

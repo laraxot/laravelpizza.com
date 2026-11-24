@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: now
 canonical: ../../../../Themes/docs/shared-components/01-now-Modules.md
-status: stub
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/01-now-Modules.md

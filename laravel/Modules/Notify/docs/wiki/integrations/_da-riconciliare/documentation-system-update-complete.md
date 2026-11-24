@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -230,21 +234,33 @@ export default defineConfig({
 **Why This is Correct:**
 
 1. **Build Target:** `./public` (local theme public folder)
-<<<<<<< .merge_file_9PaNNa
+<<<<<<< HEAD
 2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-=======
 2. **Nessuna copia:** `public_html/themes/Sixteen` e' un symlink a `laravel/Themes/Sixteen/public` (`npm run copy` obsoleto)
->>>>>>> .merge_file_ifzzNd
+=======
+<<<<<<< .merge_file_AV087S
+2. **Copy Step:** `symlink public_html/themes (npm run copy obsoleto)` copies to `../../public_html/themes/Sixteen/`
+2. **Nessuna copia:** `public_html/themes/Sixteen` e' un symlink a `laravel/Themes/Sixteen/public` (`npm run copy` obsoleto)
+=======
+2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+>>>>>>> .merge_file_2yp5g8
+>>>>>>> laraxot/dev
 3. **Manifest Location:** Both locations have manifest.json after build
 4. **Laravel Vite:** Reads from `public_html/themes/Sixteen/manifest.json`
 
 **Build Flow:**
 ```
-<<<<<<< .merge_file_9PaNNa
+<<<<<<< HEAD
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-=======
 resources/ → Vite Build → public/ ← symlink ← public_html/themes/Sixteen
->>>>>>> .merge_file_ifzzNd
+=======
+<<<<<<< .merge_file_AV087S
+resources/ → Vite Build → public/ → symlink public_html/themes (npm run copy obsoleto) → public_html/themes/Sixteen/
+resources/ → Vite Build → public/ ← symlink ← public_html/themes/Sixteen
+=======
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+>>>>>>> .merge_file_2yp5g8
+>>>>>>> laraxot/dev
 ```
 
 ---
@@ -411,7 +427,7 @@ Start at theme index:
 ### Finding Documentation
 
 1. **Start Here:** [docs/MODULE_DOCS_INDEX.md](docs/MODULE_DOCS_INDEX.md)
-1. **Start Here:** [docs/MODULE_DOCS_INDEX.md](../../../MODULE_DOCS_INDEX.md)
+1. **Start Here:** [docs/MODULE_DOCS_INDEX.md](../../../module_docs_index.md)
 2. **Navigate to:** Module or theme category
 3. **Use Search:** Ctrl+F for keywords
 4. **Follow Links:** Cross-references guide you
@@ -436,7 +452,7 @@ Start at theme index:
 ## 📋 Related Documents
 
 - [Master Index](docs/MODULE_DOCS_INDEX.md) - Central navigation
-- [Master Index](../../../MODULE_DOCS_INDEX.md) - Central navigation
+- [Master Index](../../../module_docs_index.md) - Central navigation
 - [BMad Workflow](_bmad-output/BMAD-WORKFLOW-COMPLETE.md) - BMad summary
 - [Layout Architecture](Themes/Sixteen/docs/layout-architecture.md) - Theme layouts
 - [Vite Manifest Fix](Themes/Sixteen/docs/VITE_MANIFEST_FIX_COMPLETE.md) - Build fix

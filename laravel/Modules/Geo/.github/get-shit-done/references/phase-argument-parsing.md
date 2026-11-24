@@ -33,8 +33,8 @@ Returns JSON with:
 - `directory`: Full path to phase directory
 - `phase_number`: Normalized number (e.g., "06", "06.1")
 - `phase_name`: Name portion (e.g., "foundation")
-- `plans`: Array of PLAN.md files
-- `summaries`: Array of SUMMARY.md files
+- `plans`: Array of plan.md files
+- `summaries`: Array of summary.md files
 
 ## Manual Normalization (Legacy)
 

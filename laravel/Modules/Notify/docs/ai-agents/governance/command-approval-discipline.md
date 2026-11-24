@@ -3,16 +3,19 @@ title: "command approval discipline"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "command approval discipline"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Command Approval Discipline
 
-> Indice: [./00-INDEX.md](./00-INDEX.md)
+> Indice: [./00-index.md](./00-index.md)
 > Indice: [./00-index.md](./00-index.md)
 > Governance correlata: [./reusable-components-and-indexes.md](./reusable-components-and-indexes.md)
 

@@ -10,7 +10,6 @@ title: Filter
 description: 
 extends: _layouts.documentation
 section: content
-status: draft
 ---
 
 # links filter

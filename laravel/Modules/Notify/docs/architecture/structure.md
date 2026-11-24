@@ -4,7 +4,11 @@ type: concept
 tags: [notify, docs, architecture, structure]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify documentazione architecture structure modulo notify frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -16,7 +20,6 @@ related:
   - ../conventions/README.md
   - ../rules/README.md
   - ../best-practices/naming-conventions.md
-status: draft
 ---
 # Modulo Notify
 
@@ -59,8 +62,6 @@ Il file `routes/web.php` del modulo Notify **deve essere vuoto**:
 **Collegamenti:**
 - [database-mail.md](database-mail.md#regola-sulle-rotte)
 - [grapesjs-filament.md](grapesjs-filament.md#regola-sulle-rotte)
-- [database-mail.md](../database-mail.md#regola-sulle-rotte)
-- [grapesjs-filament.md](../grapesjs-filament.md#regola-sulle-rotte)
 
 ## Struttura delle directory
 
@@ -451,8 +452,6 @@ tests/Unit
 ## Collegamenti correlati
 - [Regola sulle rotte vuote in database-mail.md](database-mail.md#regola-sulle-rotte)
 - [Regola sulle rotte vuote in grapesjs-filament.md](grapesjs-filament.md#regola-sulle-rotte)
-- [Regola sulle rotte vuote in database-mail.md](../database-mail.md#regola-sulle-rotte)
-- [Regola sulle rotte vuote in grapesjs-filament.md](../grapesjs-filament.md#regola-sulle-rotte)
 ### Versione HEAD
 
 
@@ -461,6 +460,8 @@ tests/Unit
 
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/docs/structure.md)
+<<<<<<< HEAD
+=======
 * [structure.md](../../../gdpr/docs/structure.md)
 * [structure.md](../../../notify/docs/structure.md)
 * [structure.md](../../../xot/docs/structure.md)
@@ -476,6 +477,7 @@ tests/Unit
 * [structure.md](../../../cms/docs/structure.md)
 * [structure.md](../../../cms/docs/themes/structure.md)
 * [structure.md](../../../cms/docs/components/structure.md)
+>>>>>>> laraxot/dev
 * [structure.md](../../../Gdpr/docs/structure.md)
 * [structure.md](../structure.md)
 * [structure.md](../../../xot/docs/structure.md)

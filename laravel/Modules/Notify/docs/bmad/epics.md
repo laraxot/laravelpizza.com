@@ -1,13 +1,20 @@
 ---
-title: "Notify Module: Document"
+title: "Notify Module — Document"
 type: docs/bmad
 status: active
 module: Notify
 scope: documentation
 bmad_version: 1.0
+<<<<<<< HEAD
 updated: 2026-10-06
 tags: [docs, notify, bmad]
-qmd: "epics e user stories - modulo notify notify"
+qmd: "Notify epics user stories canali template hardening"
+=======
+updated: 2026-11-23
+tags: [docs, notify, bmad]
+qmd: "Notify epics user stories canali template hardening"
+created: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Epics e User Stories - Modulo Notify
@@ -148,7 +155,7 @@ qmd: "epics e user stories - modulo notify notify"
 **Criteri di accettazione:**
 - [ ] `NotificationManager::getTemplateStats()` restituisce total, sent, delivered, failed, opened, clicked
 - [ ] I dati provengono da `NotificationLog` (o `NotificationTemplateVersion` se implementato)
-- [ ] [DA COMPLETARE] attualmente il metodo è commentato: implementare il collegamento al log
+- [ ] [DA COMPLETARE] attualmente il metodo è commentato — implementare il collegamento al log
 
 **Task:**
 - [ ] [DA COMPLETARE] Implementare query reale su `NotificationLog`
@@ -182,3 +189,16 @@ qmd: "epics e user stories - modulo notify notify"
 **Task:**
 - [ ] Verificare configurazione in `AdminPanelProvider::panel()`
 - [ ] Testare con `NotifyManager::send()` canale `database`
+
+## Epic hardening da audit 2026-11-16
+
+**Descrizione:** chiudere i 3 P1 dell'[audit](./audits/notify-audit.md) senza toccare i canali funzionanti.
+- US-N1: come DPO, voglio che il log delle notifiche sia leggibile solo da ruoli autorizzati.
+- US-N2: come operatore infrastruttura, voglio che il webhook inbound sia autenticato dal provider e limitato.
+- US-N3: come responsabile, voglio sapere quali canali sono reali e quali stub.
+
+**Task:**
+- [ ] `NotificationLogPolicy` + Pest `assertForbidden`
+- [ ] webhook: firma, `throttle`, whitelist provider, limite dimensione
+- [ ] matrice capability canali in [architecture](./architecture.md)
+- [ ] rimozione 10 file `.up` orfani (nuovo commit)

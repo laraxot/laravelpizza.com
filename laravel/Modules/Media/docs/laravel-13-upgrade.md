@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "laravel 13 upgrade"
 related:
   - "./webm.md"
-status: draft
 ---
 # Upgrade Laravel 13 - Media 🐄✨
 

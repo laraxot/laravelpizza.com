@@ -40,5 +40,10 @@
     "peerDependencies": {
         "leaflet": "^1.9.4",
         "lit": "^3.3.2"
+    },
+    "overrides": {
+        "@tailwindcss/typography": {
+            "postcss-selector-parser": "^6.1.6"
+        }
     }
 }

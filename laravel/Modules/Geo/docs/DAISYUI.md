@@ -1,3 +1,14 @@
+---
+title: "DAISYUI"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "DAISYUI"
+issues: []
+discussions: []
+---
+
 # Geo Module — daisyUI Documentation
 
 ## Panoramica
@@ -15,6 +26,14 @@ Nel contesto del modulo **Geo**, daisyUI **non è attualmente installato**.
 
 ---
 
+title: "DAISYUI"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "DAISYUI"
+issues: []
+discussions: []
 ## Perché Geo non usa daisyUI (e perché non serve)
 
 Il modulo **Geo** gestisce asset pubblici autonomi: `coordinate-picker-lit`, `map-lit`, widget mappa Leaflet.

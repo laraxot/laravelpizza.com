@@ -8,19 +8,14 @@ qmd: "service-provider-architecture service provider architecture - module patte
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Service Provider Architecture - Module Pattern
@@ -393,7 +388,15 @@ test('user service provider only configures, not registers dependencies', functi
 ### Documentazione Correlata
 - [PASSPORT_INTEGRATION.md](./passport-integration.md) - Passport integration completa
 - [FILOSOFIA_MODULO_USER.md](./filosofia-modulo-user.md) - Filosofia generale modulo
+<<<<<<< HEAD
 - [README.md](./README.md) - Overview modulo
+=======
+<<<<<<< HEAD
+- [README.md](./readme.md) - Overview modulo
+=======
+- [README.md](./README.md) - Overview modulo
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### Documentazione Esterna
 - [Laravel Modules Documentation](https://nwidart.com/laravel-modules)

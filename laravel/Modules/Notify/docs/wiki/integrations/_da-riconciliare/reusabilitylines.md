@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -28,9 +32,9 @@ $this->app['config']->set('database.connections.<nome progetto>_test', [
 $user = \Modules\App\Models\User::factory()->create();
 'database' => 'app_test',
 $this->app['config']->set('database.connections.app_test', [
-$user = \Modules\Quaeris\Models\User::factory()->create();
-'database' => 'Quaeris_test',
-$this->app['config']->set('database.connections.Quaeris_test', [
+$user = \Modules\<nome progetto>\Models\User::factory()->create();
+'database' => '<nome progetto>_test',
+$this->app['config']->set('database.connections.<nome progetto>_test', [
 ```
 
 ✅ **SEMPRE utilizzare pattern riutilizzabili:**
@@ -49,7 +53,7 @@ use Modules\Xot\Datas\XotData;
 
 // Invece di: \Modules\<nome progetto>\Models\User::class
 // Invece di: \Modules\App\Models\User::class
-// Invece di: \Modules\Quaeris\Models\User::class
+// Invece di: \Modules\<nome progetto>\Models\User::class
 $userClass = XotData::make()->getUserClass();
 $user = $userClass::factory()->create();
 ```
@@ -60,7 +64,7 @@ Per i test che richiedono configurazioni database specifiche:
 ```php
 // Invece di: '<nome progetto>_test'
 // Invece di: 'app_test'
-// Invece di: 'Quaeris_test'
+// Invece di: '<nome progetto>_test'
 $testDatabase = config('database.default') . '_test';
 $this->app['config']->set("database.connections.{$testDatabase}", [
     // configurazione
@@ -89,10 +93,10 @@ use Modules\App\Models\User;
 use Modules\App\Models\Patient;
 'database' => 'app_test'
 $this->artisan('migrate', ['--database' => 'app_test']);
-use Modules\Quaeris\Models\User;
-use Modules\Quaeris\Models\Patient;
-'database' => 'Quaeris_test'
-$this->artisan('migrate', ['--database' => 'Quaeris_test']);
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\Patient;
+'database' => '<nome progetto>_test'
+$this->artisan('migrate', ['--database' => '<nome progetto>_test']);
 ```
 
 ### ❌ Configurazioni Project-Specific
@@ -102,8 +106,8 @@ $this->artisan('migrate', ['--database' => 'Quaeris_test']);
 'tenant_model' => \Modules\<nome progetto>\Models\Studio::class,
 'app_name' => 'App',
 'tenant_model' => \Modules\App\Models\Studio::class,
-'app_name' => 'Quaeris',
-'tenant_model' => \Modules\Quaeris\Models\Studio::class,
+'app_name' => '<nome progetto>',
+'tenant_model' => \Modules\<nome progetto>\Models\Studio::class,
 ```
 
 ## Pattern Corretti per Riusabilità
@@ -122,10 +126,10 @@ $userClass = XotData::make()->getUserClass();
 public function setUp(): void
 {
     parent::setUp();
-    
+
     $this->userClass = XotData::make()->getUserClass();
     $this->testDatabase = config('database.default') . '_test';
-    
+
     // Configurazione dynamic
     $this->app['config']->set("database.connections.{$this->testDatabase}", [
         'driver' => 'sqlite',
@@ -153,7 +157,7 @@ Prima di committare modifiche al modulo Notify:
 
 - [ ] Nessun riferimento hardcoded a "<nome progetto>" o altri nomi di progetti
 - [ ] Nessun riferimento hardcoded a "App" o altri nomi di progetti
-- [ ] Nessun riferimento hardcoded a "Quaeris" o altri nomi di progetti
+- [ ] Nessun riferimento hardcoded a "<nome progetto>" o altri nomi di progetti
 - [ ] Utilizzo di `XotData::make()->getUserClass()` per la classe User
 - [ ] Configurazioni database dinamiche nei test
 - [ ] Nessun import diretto di modelli da altri progetti
@@ -169,7 +173,7 @@ Per verificare che il modulo sia veramente riutilizzabile:
 # Cerca hardcoding di nomi progetti
 grep -r -i "<nome progetto>\|salutemo\|dentalpro" Modules/Notify/ --exclude-dir=vendor
 grep -r -i "App\|salutemo\|dentalpro" Modules/Notify/ --exclude-dir=vendor
-grep -r -i "Quaeris\|salutemo\|dentalpro" Modules/Notify/ --exclude-dir=vendor
+grep -r -i "<nome progetto>\|salutemo\|dentalpro" Modules/Notify/ --exclude-dir=vendor
 
 # Cerca import diretti da altri moduli
 grep -r "use Modules\\\\[^N][^o][^t][^i][^f][^y]" Modules/Notify/
@@ -177,7 +181,7 @@ grep -r "use Modules\\\\[^N][^o][^t][^i][^f][^y]" Modules/Notify/
 # Cerca configurazioni hardcoded
 grep -r "database.*<nome progetto>\|app.*<nome progetto>" Modules/Notify/
 grep -r "database.*App\|app.*App" Modules/Notify/
-grep -r "database.*Quaeris\|app.*Quaeris" Modules/Notify/
+grep -r "database.*<nome progetto>\|app.*<nome progetto>" Modules/Notify/
 ```
 
 ## Benefici della Riusabilità

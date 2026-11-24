@@ -45,7 +45,7 @@ INIT=$(node .github/get-shit-done/bin/gsd-tools.cjs init phase-op "0")
 
 Check `roadmap_exists` from init JSON. If false:
 ```
-ERROR: No roadmap found (.planning/ROADMAP.md)
+ERROR: No roadmap found (.planning/roadmap.md)
 Run /gsd-new-project to initialize.
 ```
 Exit.
@@ -63,7 +63,7 @@ The CLI handles:
 - Calculating next phase number (max + 1)
 - Generating slug from description
 - Creating the phase directory (`.planning/phases/{NN}-{slug}/`)
-- Inserting the phase entry into ROADMAP.md with Goal, Depends on, and Plans sections
+- Inserting the phase entry into roadmap.md with Goal, Depends on, and Plans sections
 
 Extract from result: `phase_number`, `padded`, `name`, `slug`, `directory`.
 </step>
@@ -89,7 +89,7 @@ Phase {N} added to current milestone:
 - Directory: .planning/phases/{phase-num}-{slug}/
 - Status: Not planned yet
 
-Roadmap updated: .planning/ROADMAP.md
+Roadmap updated: .planning/roadmap.md
 
 ---
 

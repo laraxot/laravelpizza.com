@@ -10,10 +10,13 @@ use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Log;
 use Modules\Cms\Http\Middleware\PageSlugMiddleware;
 use Modules\Cms\Models\Page;
-use Modules\Cms\Tests\TestCase;
 use Modules\Cms\Tests\Unit\Http\Middleware\Dcp283NoHandleMiddleware;
 use Modules\Cms\Tests\Unit\Http\Middleware\Dcp283ProbeMiddleware;
 use Modules\Cms\Tests\Unit\Http\Middleware\Dcp283ReturnsNothingMiddleware;
+<<<<<<< HEAD
+=======
+use Modules\Cms\Tests\TestCase;
+>>>>>>> laraxot/dev
 use Monolog\Handler\TestHandler;
 use Monolog\Level;
 use Monolog\Logger as Monolog;
@@ -21,8 +24,16 @@ use PHPUnit\Framework\Assert;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
+<<<<<<< HEAD
+=======
+// Senza questo binding le closure di `test()`/`it()` restano legate a
+// PHPUnit\Framework\TestCase, cioe' a un caso di test SENZA applicazione
+// Laravel: `app()`, `config()` e le facade non si risolvono. Era la causa di
+// 94 fallimenti «Target class [config] does not exist» nel modulo
+// (base_quaeris_fila5#228).
 uses(TestCase::class);
-
+/** @see Modules/Cms/docs/wiki/rules/frontend-stack-canonical.md */
+>>>>>>> laraxot/dev
 /*
  * DCP-283 (C-03): PageSlugMiddleware deve essere fail-closed. Una pagina la cui protezione non si riesce a determinare
  * non va servita (503), e dal campo `middleware` del JSON si eseguono solo i middleware in allowlist.

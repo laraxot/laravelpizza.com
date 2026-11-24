@@ -6,6 +6,9 @@ namespace Modules\Gdpr\Tests\Unit\Actions;
 
 use Illuminate\Validation\ValidationException;
 use Modules\Gdpr\Actions\Validation\ValidateGdprConsentAction;
+use Modules\Gdpr\Tests\TestCase;
+
+uses(TestCase::class);
 
 test('ValidateGdprConsentAction passes with valid consents', function () {
     $action = new ValidateGdprConsentAction;

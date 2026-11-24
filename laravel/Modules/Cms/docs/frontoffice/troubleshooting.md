@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "troubleshooting"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Troubleshooting
@@ -151,5 +150,5 @@ export default defineConfig({
 - [ ] Verificare la sicurezza
 
 ## Collegamenti tra versioni di troubleshooting.md
-* [troubleshooting.md](../../../Xot/docs/troubleshooting.md)
+* [troubleshooting.md](laravel/modules/xot/docs/troubleshooting.md)
 * [troubleshooting.md](laravel/modules/cms/docs/frontoffice/troubleshooting.md)

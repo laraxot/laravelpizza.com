@@ -50,7 +50,7 @@ i file toccati da meno di 10 minuti). Campione di 200 eventi (seed 20261014), co
 | Bersaglio esistente in 2 o piu' copie (45 in 2 copie, 76 in 3-5, 18 in 6-20): il tool non puo' scegliere | 139 (69,5%) | 10022 (70,6%) |
 | Mai esistito, nessuna traccia in git ne' per nome (es. `hasteams-consolidated.md` -> `./refactor-checklist.md`) | 14 (7%) | 1011 (7,1%) |
 | File non `.md` assente (`Modules/User/app/Models/BaseTeam.php`, json, immagini) | 11 (5,5%) | 761 (5,4%) |
-| Verso altri moduli, temi o `docs/` della radice: profondita' sbagliata, minuscole (`../../../xot/docs/...`), moduli assenti (SaluteOra 85, Patient 65, Chart 64, Dental 19, Quaeris 19, WorkOrder 5; Predict 0), `Themes/docs/shared-components/` (369, cartella inesistente), `docs/` radice (144) | 33 (16,5%) | 2217 (15,6%) |
+| Verso altri moduli, temi o `docs/` della radice: profondita' sbagliata, minuscole (`../../../xot/docs/...`), moduli assenti (SaluteOra 85, Patient 65, Chart 64, Dental 19, <nome progetto> 19, WorkOrder 5; Predict 0), `Themes/docs/shared-components/` (369, cartella inesistente), `docs/` radice (144) | 33 (16,5%) | 2217 (15,6%) |
 | Esisteva in git e poi e' stato spostato, rinominato o cancellato | 3 (1,5%) | 164 (1,2%) |
 | Cartella inesistente | 0 | 19 (0,1%) |
 

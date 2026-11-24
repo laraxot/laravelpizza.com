@@ -3,11 +3,14 @@ title: "email templates deep dive"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "email templates deep dive"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Deep Dive: Soluzioni di Template Email in Laravel
@@ -15,6 +18,14 @@ status: draft
 Un'analisi dettagliata delle risorse, pacchetti, editor e tecniche per gestire i template email in Laravel.
 
 ---
+title: "email templates deep dive"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "email templates deep dive"
+issues: []
+discussions: []
 ## 1. Core Laravel Mail System
 
 ### 1.1 Blade Templates
@@ -125,4 +136,8 @@ Vedi [Queueable Actions con Spatie](queueable-actions.md) per definizione delle 
 
 ---
 *Documento generato il 2025-05-05T21:45:20+02:00*
+<<<<<<< HEAD
 *Documento generato il 2025-05-05T21:45:20+02:00*
+=======
+*Documento generato il 2025-05-05T21:45:20+02:00*
+>>>>>>> laraxot/dev

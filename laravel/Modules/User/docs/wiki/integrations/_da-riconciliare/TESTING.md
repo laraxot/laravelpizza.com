@@ -4,12 +4,9 @@ type: guide
 tags: [user, testing, pest]
 created: 2026-07-28
 updated: 2026-07-28
-qmd: "user module   testing user"
-status: superseded
-superseded_by: testing.md
 ---
 
-# User Module: Testing
+# User Module — Testing
 
 ## Unit Tests
 

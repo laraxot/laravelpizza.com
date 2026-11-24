@@ -8,19 +8,14 @@ qmd: "cms-link collegamento al modulo cms"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Collegamento al Modulo Cms
@@ -34,7 +29,6 @@ Per dettagli specifici, consulta:
 - [Convenzioni di Namespace](./namespace-conventions.md) in questo modulo
 - [Convenzioni Namespace Filament](../../cms/project_docs/convenzioni-namespace-filament.md) nel modulo Cms
 - [Convenzioni Namespace Filament](../../Cms/docs/convenzioni-namespace-filament.md) nel modulo Cms
-- [Convenzioni Namespace Filament](../../Cms/docs/convenzioni-namespace-filament.md) nel modulo Cms
 ## Punti di Integrazione
 - **Autenticazione e UI**: I componenti di autenticazione del modulo User sono integrati con l'interfaccia utente del modulo Cms
 - **Widgets condivisi**: Alcuni widget del modulo User sono utilizzati nelle dashboard del modulo Cms
@@ -42,8 +36,6 @@ Per dettagli specifici, consulta:
 ## Collegamenti Bidirezionali
 - [Convenzioni Namespace Filament nel modulo Cms](../../cms/project_docs/convenzioni-namespace-filament.md)
 - [Collegamento User-Cms nel modulo Cms](../../cms/project_docs/user-link.md)
-- [Convenzioni Namespace Filament nel modulo Cms](../../Cms/docs/convenzioni-namespace-filament.md)
-- [Collegamento User-Cms nel modulo Cms](../../Cms/docs/user-link.md)
 - [Convenzioni Namespace Filament nel modulo Cms](../../Cms/docs/convenzioni-namespace-filament.md)
 - [Collegamento User-Cms nel modulo Cms](../../Cms/docs/user-link.md)
 ---
@@ -59,8 +51,7 @@ Quando aggiungi nuovi componenti Filament nel modulo User, assicurati di:
 * [cms-link.md](../../../lang/project_docs/cms-link.md)
 * [cms-link.md](../../../xot/docs/cms-link.md)
 * [cms-link.md](../../../user/docs/cms-link.md)
-* [cms-link.md](../../UI/docs/cms-link.md)
-* [cms-link.md](../../Lang/docs/cms-link.md)
+* [cms-link.md](../../../ui/docs/cms-link.md)
 * [cms-link.md](../../Lang/docs/cms-link.md)
 # Collegamento al Modulo Cms
 
@@ -76,7 +67,6 @@ Sia il modulo User che il modulo Cms seguono le stesse convenzioni di namespace 
 Per dettagli specifici, consulta:
 - [Convenzioni di Namespace](./namespace-conventions.md) in questo modulo
 - [Convenzioni Namespace Filament](../../Cms/docs/convenzioni-namespace-filament.md) nel modulo Cms
-- [Convenzioni Namespace Filament](../../Cms/docs/convenzioni-namespace-filament.md) nel modulo Cms
 
 ## Punti di Integrazione
 
@@ -86,8 +76,6 @@ Per dettagli specifici, consulta:
 
 ## Collegamenti Bidirezionali
 
-- [Convenzioni Namespace Filament nel modulo Cms](../../Cms/docs/convenzioni-namespace-filament.md)
-- [Collegamento User-Cms nel modulo Cms](../../Cms/docs/user-link.md)
 - [Convenzioni Namespace Filament nel modulo Cms](../../Cms/docs/convenzioni-namespace-filament.md)
 - [Collegamento User-Cms nel modulo Cms](../../Cms/docs/user-link.md)
 
@@ -102,6 +90,5 @@ Quando aggiungi nuovi componenti Filament nel modulo User, assicurati di:
 ## Collegamenti tra versioni di cms-link.md
 * [cms-link.md](../../../xot/docs/cms-link.md)
 * [cms-link.md](../../../user/docs/cms-link.md)
-* [cms-link.md](../../UI/docs/cms-link.md)
-* [cms-link.md](../../Lang/docs/cms-link.md)
+* [cms-link.md](../../../ui/docs/cms-link.md)
 * [cms-link.md](../../Lang/docs/cms-link.md)

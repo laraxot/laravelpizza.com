@@ -1,5 +1,5 @@
 ---
-title: "Lang: PHPStan Level 10 fixes (2026-10-06)"
+title: "Lang — PHPStan Level 10 fixes (2026-10-06)"
 type: story
 module: Lang
 status: in_progress
@@ -9,11 +9,9 @@ phase: quality-gates
 priority: P1
 related:
   - cluster3-phpstan-swarm.story.md
-tags: [docs, lang, bmad]
-qmd: "lang   phpstan level 10 fixes (2026-10-06) lang"
 ---
 
-# Lang: PHPStan Level 10 fixes (2026-10-06)
+# Lang — PHPStan Level 10 fixes (2026-10-06)
 
 ## Scopo funzionale
 
@@ -22,23 +20,23 @@ Lang modulo: gestire traduzioni (`Translation`, `LanguageLine`), sincronizzarle 
 ## Errori PHPStan trovati (131 totali)
 
 ### Categoria 1: Model @mixin e fasade DB (7 errori, 4 fixati)
-- **LanguageLine.php:43**: `@mixin \Eloquent`: FIX: cambiato in `\Illuminate\Database\Eloquent\Model`
-- **Post.php:108**: `@mixin \Eloquent`: FIX: cambiato in `\Illuminate\Database\Eloquent\Model`
-- **Translation.php:59**: `@mixin \Eloquent`: FIX: cambiato in `\Illuminate\Database\Eloquent\Model`
-- **Translation.php:108, 113**: `DB::getDriverName()`, `DB::raw()`: FIX: aggiunto `use Illuminate\Support\Facades\DB;`
-- **TranslationFile.php:44**: `@mixin \Eloquent`: FIX: cambiato in `\Illuminate\Database\Eloquent\Model`
+- **LanguageLine.php:43** — `@mixin \Eloquent` — FIX: cambiato in `\Illuminate\Database\Eloquent\Model`
+- **Post.php:108** — `@mixin \Eloquent` — FIX: cambiato in `\Illuminate\Database\Eloquent\Model`
+- **Translation.php:59** — `@mixin \Eloquent` — FIX: cambiato in `\Illuminate\Database\Eloquent\Model`
+- **Translation.php:108, 113** — `DB::getDriverName()`, `DB::raw()` — FIX: aggiunto `use Illuminate\Support\Facades\DB;`
+- **TranslationFile.php:44** — `@mixin \Eloquent` — FIX: cambiato in `\Illuminate\Database\Eloquent\Model`
 
 ### Categoria 2: View components render() type (4 fixati)
-- **Flag.php:22, 32**: `$view` unresolvable type, render() return: FIX: `@var string`, cast result
-- **LanguageSwitcher.php:37, 40, 50, 53**: `@var view-string`: FIX: `@var string` per tutte
+- **Flag.php:22, 32** — `$view` unresolvable type, render() return — FIX: `@var string`, cast result
+- **LanguageSwitcher.php:37, 40, 50, 53** — `@var view-string` — FIX: `@var string` per tutte
 
 ### Categoria 3: Actions firstOrCreate (3 segnalati)
-- **RecordMissingTranslationAction.php:25**: `Translation::firstOrCreate()` undefined: FIX: aggiunto `@method firstOrCreate()` su model
-- **TranslatorAction.php:63**: `Translation::firstOrCreate()` undefined
-- **TranslatorService.php:74**: `Translation::firstOrCreate()` undefined
+- **RecordMissingTranslationAction.php:25** — `Translation::firstOrCreate()` undefined — FIX: aggiunto `@method firstOrCreate()` su model
+- **TranslatorAction.php:63** — `Translation::firstOrCreate()` undefined
+- **TranslatorService.php:74** — `Translation::firstOrCreate()` undefined
 
 ### Categoria 4: WriteTranslationFileAction (3 fixati)
-- **Lines 115, 121, 122**: Cannot call method flush() on mixed: FIX: type guard `@var object`
+- **Lines 115, 121, 122** — Cannot call method flush() on mixed — FIX: type guard `@var object`
 
 ### Categoria 5: Remaining (110+ errori, skip per now)
 - Filament methods (placeholder type, offset access)

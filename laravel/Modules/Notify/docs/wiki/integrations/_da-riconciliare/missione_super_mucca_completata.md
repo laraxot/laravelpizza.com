@@ -7,8 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # 🐄✨ MISSIONE SUPER MUCCA - COMPLETAMENTO TOTALE ✨🐄
@@ -128,7 +131,7 @@ status: draft
 
 **Documento Master Riepilogo (1):**
 ```
-✅ docs/DRY-KISS-ANALYSIS-MASTER.md
+✅ docs/dry-kiss-analysis-master.md
 ```
 
 ---
@@ -201,7 +204,7 @@ Durante l'analisi ho anche **IMPLEMENTATO** tutto quello che era stato documenta
 - Elimina ~200 LOC future
 
 ✅ **Documentazione Aggiornata:**
-- 18 METODI_DUPLICATI_ANALISI.md aggiornati
+- 18 metodi_duplicati_analisi.md aggiornati
 - 10+ documenti master creati
 - 35+ files totali
 
@@ -248,7 +251,7 @@ Durante l'analisi ho anche **IMPLEMENTATO** tutto quello che era stato documenta
 1. docs/analisi-metodi-duplicati.md
 2. docs/analisi-metodi-duplicati-MASTER.md (100+ pagine)
 3. docs/analisi-metodi-duplicati-INDEX.md
-4. 18× METODI_DUPLICATI_ANALISI.md aggiornati
+4. 18× metodi_duplicati_analisi.md aggiornati
 5. 4× analisi-metodi-duplicati.md per moduli chiave
 6. 2× analisi-metodi-duplicati.md per temi
 
@@ -262,7 +265,7 @@ Durante l'analisi ho anche **IMPLEMENTATO** tutto quello che era stato documenta
 13. docs/README_REFACTORING.md
 
 **FASE 3: Analisi DRY/KISS**
-14. docs/DRY-KISS-ANALYSIS-MASTER.md (questo documento madre)
+14. docs/dry-kiss-analysis-master.md (questo documento madre)
 15-34. 20× dry-kiss-analysis.md (ogni modulo/tema)
 35. docs/MISSIONE_SUPER_MUCCA_COMPLETATA.md (questo file)
 
@@ -305,7 +308,7 @@ Durante l'analisi ho anche **IMPLEMENTATO** tutto quello che era stato documenta
 cat Modules/User/docs/dry-kiss-analysis.md
 
 # Analisi metodi duplicati
-cat Modules/User/docs/METODI_DUPLICATI_ANALISI.md
+cat Modules/User/docs/metodi_duplicati_analisi.md
 
 # Overview completa
 cat Modules/User/docs/analisi-metodi-duplicati.md
@@ -315,7 +318,7 @@ cat Modules/User/docs/analisi-metodi-duplicati.md
 
 ```bash
 # Master analysis DRY/KISS
-cat docs/DRY-KISS-ANALYSIS-MASTER.md
+cat docs/dry-kiss-analysis-master.md
 
 # Master analysis duplicati
 cat docs/analisi-metodi-duplicati-MASTER.md

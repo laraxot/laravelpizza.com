@@ -12,7 +12,6 @@ related:
   - "../memories/phpstan-neon-immutable-agents.md"
   - "../troubleshooting/phpstan-stale-ignore-pattern.md"
   - "../rules/00-TRIGGER_MAP.md"
-status: draft
 ---
 
 # PHPStan Config Immutability

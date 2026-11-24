@@ -4,7 +4,11 @@ type: concept
 tags: [notify, docs, architecture, standardized, sms, config]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify documentazione architecture standardized sms config structure struttura standardizzata della configurazione sms frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -16,10 +20,6 @@ related:
   - ../conventions/README.md
   - ../rules/README.md
   - ../best-practices/naming-conventions.md
-  - ../../conventions/README.md
-  - ../../rules/README.md
-  - ../../best-practices/naming-conventions.md
-status: draft
 ---
 # Struttura Standardizzata della Configurazione SMS
 
@@ -180,7 +180,6 @@ $debug = $config['drivers'][$driver]['debug'] ?? $config['debug'];
 ## Collegamenti
 
 - [Configurazione Netfun](./netfun_config_requirements.md)
-- [Configurazione Netfun](../../netfun_config_requirements.md)
 - [Provider SMS Supportati](./notifications/sms_provider_configuration.md)
 
 ---

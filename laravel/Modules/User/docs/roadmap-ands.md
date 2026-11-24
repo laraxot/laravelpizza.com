@@ -8,19 +8,14 @@ qmd: "roadmap-ands user module - roadmap, issues & optimization"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # User Module - Roadmap, Issues & Optimization
@@ -394,10 +389,16 @@ php artisan queue:prune-failed --hours=48
 
 ## 🔗 Collegamenti
 
+<<<<<<< HEAD
 - [← User Module README](./README.md)
+=======
+<<<<<<< HEAD
+- [← User Module README](./readme.md)
+=======
+- [← User Module README](./README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [← PHPStan Fixes [DATE]](./phpstan-fixes-[DATE].md)
-- [← Project Roadmap](../../../docs/project-analysis-and-roadmap.md)
-- [← Root Documentation](../../../../docs/index.md)
 - [← Project Roadmap](../../../../docs/project-analysis-and-roadmap.md)
 - [← Root Documentation](../../../../docs/index.md)
 

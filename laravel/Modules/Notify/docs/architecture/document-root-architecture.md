@@ -3,7 +3,11 @@ title: "Document Root Architecture"
 type: concept
 tags: [document, root, architecture]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "document-root-architecture document root architecture"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -16,7 +20,6 @@ related:
   - "./queueable-action-pattern.md"
   - "./sms-config-structure.md"
   - "./standardized-sms-config-structure.md"
-status: draft
 ---
 
 # Document Root Architecture

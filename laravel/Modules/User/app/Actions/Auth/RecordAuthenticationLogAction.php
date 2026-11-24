@@ -10,7 +10,10 @@ use Modules\User\Actions\Database\IsUserDatabaseConfiguredAction;
 use Modules\User\Contracts\HasAuthentications;
 use Modules\User\Contracts\UserContract;
 use Modules\User\Models\AuthenticationLog;
+<<<<<<< HEAD
 use Modules\User\Models\BaseUser;
+=======
+>>>>>>> laraxot/dev
 
 /**
  * Persist an authentication_logs row on the User connection (`user` / fixcity_user).
@@ -19,12 +22,13 @@ use Modules\User\Models\BaseUser;
  * a failed/successful login into a 500 (BMAD: audit must not break auth UX).
  *
  * Identity = {@see UserContract}; capability = {@see HasAuthentications}.
-<<<<<<< .merge_file_QRariS
- * Never type-hint {@see BaseUser}: that is an internal
-=======
  * Never type-hint the concrete BaseUser: that is an internal
->>>>>>> .merge_file_yVylAm
  * abstract implementation, not the consumer boundary.
+<<<<<<< HEAD
+=======
+ *
+ * @contract docs/contracts/record-authentication-log-action.md
+>>>>>>> laraxot/dev
  */
 final class RecordAuthenticationLogAction
 {

@@ -1,4 +1,5 @@
 ---
+qmd: "xot stories legacy readme new md"
 title: "Xot - legacy-readme-new.md"
 module: Xot
 bmad: true
@@ -622,20 +623,20 @@ Located in `bashscripts/`:
 - [XotBase Classes](./architecture/xotbase-classes.md) - Complete XotBase* class reference
 - [Data Objects](./architecture/data-objects.md) - XotData, MetatagData, etc.
 - [Traits](./architecture/traits.md) - Available traits and usage
-- [Services](./architecture/services.md) - Core services documentation
+- [Services](../archive/services.md) - Core services documentation
 
 ### Development
 - [Getting Started](./development/getting-started.md) - Setup and first steps
 - [Creating Modules](./development/creating-modules.md) - Module creation guide
 - [Extending Base Classes](./development/extending-base-classes.md) - How to extend XotBase*
 - [Code Examples](./development/examples.md) - Practical code examples
-- [Contributing Guidelines](./development/contributing.md) - How to contribute
+- [Contributing Guidelines](./development/CONTRIBUTING.md) - How to contribute
 
 ### Best Practices
 - [PHPStan Level 10 Compliance](./phpstan-workflow.md) - Achieving PHPStan compliance
 - [Type Safety Guidelines](./development/type-safety.md) - Type hint best practices
-- [Naming Conventions](./naming_conventions_docs.md) - File and class naming
-- [Testing Guidelines](./testing-strategy.md) - How to write tests
+- [Naming Conventions](../naming_conventions_docs.md) - File and class naming
+- [Testing Guidelines](../archive/testing-strategy.md) - How to write tests
 
 ### Quality & Tools
 - [Code Quality Tools](./code-quality-tools.md) - PHPStan, Pint, PHPInsights
@@ -643,14 +644,14 @@ Located in `bashscripts/`:
 - [PHPStan Patterns](./phpstan-pattern-soluzioni.md) - Common PHPStan solutions
 
 ### Migration & Upgrade
-- [Filament 4 Migration](./filament-4-migration-guide.md) - Upgrading to Filament 4
-- [Migration Rules](./migration-update-rules.md) - Migration best practices
+- [Filament 4 Migration](../archive/filament-4-migration-guide.md) - Upgrading to Filament 4
+- [Migration Rules](../archive/migration-update-rules.md) - Migration best practices
 - [Breaking Changes](./breaking-changes.md) - Version upgrade notes
 
 ### Troubleshooting
 - [Common Issues](./troubleshooting/common-issues.md) - Frequently encountered problems
-- [Conflict Resolution](./risoluzione-conflitti-merge.md) - Git merge conflict handling
-- [Configuration Issues](./environment-configuration-issues.md) - Environment setup problems
+- [Conflict Resolution](../archive/risoluzione-conflitti-merge.md) - Git merge conflict handling
+- [Configuration Issues](../archive/environment-configuration-issues.md) - Environment setup problems
 - [FAQ](./troubleshooting/faq.md) - Frequently asked questions
 
 ---
@@ -688,7 +689,7 @@ See [CHANGELOG.md](./CHANGELOG.md) for full history.
 - Real-time update support for widgets
 - Advanced caching strategies
 
-See [ROADMAP.md](roadmap.md) for details.
+See [roadmap.md](roadmap.md) for details.
 
 ---
 

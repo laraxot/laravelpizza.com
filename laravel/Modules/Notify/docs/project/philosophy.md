@@ -3,11 +3,14 @@ title: "philosophy"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "philosophy"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Notify - Filosofia, Logica, Visione e Zen del Progetto
@@ -134,9 +137,17 @@ Notify è più di un progetto software. È un esperimento sociale tecnologico ch
 > *"La città perfetta non esiste, ma il viaggio verso di essa sì."*
 
 ---
+
+title: "philosophy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "philosophy"
+issues: []
+discussions: []
 ## Riferimenti
 
 - [PROJECT.md](./project.md) - Visione e obiettivi
-- [agents.md](./AGENTS.md) - Regole per agenti AI
+- [AGENTS.md](./AGENTS.md) - Regole per agenti AI
 - [docs/](../docs/) - Documentazione completa
-- [docs/](..) - Documentazione completa

@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: struttura_moduli_laravel
 canonical: ../../../Themes/docs/shared-components/struttura-moduli-laravel.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/struttura-moduli-laravel.md

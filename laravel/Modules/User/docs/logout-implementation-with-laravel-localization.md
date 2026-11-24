@@ -1,28 +1,38 @@
+<<<<<<< HEAD
+=======
 ---
-title: "Implementazione del Logout con LaravelLocalization"
+title: "Logout Implementation With Laravel Localization"
+module: User
 type: note
-status: draft
-updated: 2026-10-13
-tags: [docs, user]
-qmd: "implementazione del logout con laravellocalization user"
+status: active
+updated: '2026-11-23'
 ---
+
+>>>>>>> laraxot/dev
 # Implementazione del Logout con LaravelLocalization 
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
 - [Best Practices Componenti di Autenticazione](./auth_components_best_practices.md)
-- [Best Practices Componenti di Autenticazione](./auth_components_best_practices.md)
-- [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/LARAVEL_LOCALIZATION_USAGE.md)
+- [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/laravel_localization_usage.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
-- [Regole Traduzioni](/laravel/Modules/Lang/docs/TRANSLATION_KEYS_RULES.md)
+- [Regole Traduzioni](/laravel/Modules/Lang/docs/translation_keys_rules.md)
 # Implementazione del Logout con LaravelLocalization
 
 ## Collegamenti correlati
+<<<<<<< HEAD
 - [README modulo User](./README.md)
+=======
+<<<<<<< HEAD
+- [README modulo User](./readme.md)
+=======
+- [README modulo User](./README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Best Practices Componenti di Autenticazione](./auth_components_best_practices.md)
-- [Utilizzo di Laravel Localization](/laravel/modules/lang/docs/laravel_localization_usage.md)
+- [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/laravel_localization_usage.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
-- [Regole Traduzioni](/laravel/modules/lang/docs/translation_keys_rules.md)
+- [Regole Traduzioni](/laravel/Modules/Lang/docs/translation_keys_rules.md)
 - [Componenti Filament](/docs/rules/filament-components.md)
 
 ## Panoramica
@@ -178,14 +188,11 @@ module: theme
 topic: logout-implementation-with-laravel-localization
 canonical: ../../../Themes/docs/shared-components/logout-implementation-with-laravel-localization.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"

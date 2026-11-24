@@ -1,3 +1,14 @@
+---
+title: "LARAXOT RULES"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "LARAXOT RULES"
+issues: []
+discussions: []
+---
+
 # LARAXOT FRAMEWORK RULES
 
 ## CLASS EXTENSION

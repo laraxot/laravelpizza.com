@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "duplicate files to remove"
 related:
   - "./webm.md"
-status: draft
 ---
 # File Duplicati da Eliminare - Modulo Media
 

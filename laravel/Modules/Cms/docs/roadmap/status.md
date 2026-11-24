@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "status"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Stato attuale - Cms Module

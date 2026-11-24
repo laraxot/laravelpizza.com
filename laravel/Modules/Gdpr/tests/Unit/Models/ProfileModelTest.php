@@ -5,10 +5,13 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Tests\Unit\Models;
 
 use Modules\Gdpr\Models\Profile;
+use Modules\Gdpr\Tests\TestCase;
 use Modules\User\Models\BaseProfile;
 use PHPUnit\Framework\Assert;
 
 use function Safe\class_parents;
+
+uses(TestCase::class);
 
 test('profile_extends_base_profile', function (): void {
     $parents = class_parents(Profile::class);

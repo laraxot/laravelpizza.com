@@ -1,22 +1,25 @@
 ---
-qmd: "dry kiss analysis master.divergenza"
+qmd: "Dry Kiss Analysis Master.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: DRY-KISS-ANALYSIS-MASTER.md"
+title: "Dry Kiss Analysis Master.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
-# Divergenza: `DRY-KISS-ANALYSIS-MASTER.md`
+# Divergenza: `dry-kiss-analysis-master.md`
 
-Questo file veniva da `docs/wiki/integrations/modules/notify/DRY-KISS-ANALYSIS-MASTER.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+Questo file veniva da `docs/wiki/integrations/modules/notify/dry-kiss-analysis-master.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
 
-- versione del modulo: `laravel/Modules/Notify/docs/DRY-KISS-ANALYSIS-MASTER.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/DRY-KISS-ANALYSIS-MASTER.md`
+- versione del modulo: `laravel/Modules/Notify/docs/dry-kiss-analysis-master.md`
+- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/dry-kiss-analysis-master.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 

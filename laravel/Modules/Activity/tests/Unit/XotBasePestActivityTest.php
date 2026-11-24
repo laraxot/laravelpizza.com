@@ -1,18 +1,12 @@
 <?php
 
 declare(strict_types=1);
-<<<<<<< .merge_file_6YUnaI
 
-use Modules\Activity\Tests\TestCase;
-use Modules\Xot\Tests\XotBasePest;
-
-=======
 use Modules\Activity\Tests\TestCase;
 use Modules\Xot\Tests\XotBasePest;
 
 uses(TestCase::class);
 
->>>>>>> .merge_file_sAmAWt
 it('tests that TestCase class structure is correct', function () {
     /** @var TestCase $this */
     $this->assertInstanceOf(TestCase::class, $this);
@@ -36,7 +30,9 @@ it('XotBasePest::assertFreshModel signature validation', function () {
     $this->assertCount(2, $parameters);
     $modelParam = $parameters[0];
     $type = $modelParam->getType();
-    $this->assertInstanceOf(ReflectionNamedType::class, $type);
+    if (! $type instanceof ReflectionNamedType) {
+        $this->fail('Expected ReflectionNamedType for assertFreshModel $model');
+    }
     $this->assertSame('Illuminate\Database\Eloquent\Model', $type->getName());
 });
 

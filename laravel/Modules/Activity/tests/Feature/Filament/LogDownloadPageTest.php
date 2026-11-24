@@ -1,24 +1,15 @@
 <?php
 
 declare(strict_types=1);
-<<<<<<< .merge_file_6MPvsD
 
-use Illuminate\Support\Facades\File;
-use Mockery\MockInterface;
-use Illuminate\Contracts\Auth\Authenticatable;
-use Modules\Xot\Contracts\UserContract;
-use Symfony\Component\HttpFoundation\BinaryFileResponse;
-use Symfony\Component\HttpKernel\Exception\HttpException;
-use Tests\TestCase;
-=======
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Facades\File;
+use Mockery;
 use Mockery\MockInterface;
-use Modules\Xot\Contracts\UserContract;
-use Symfony\Component\HttpFoundation\BinaryFileResponse;
-use Symfony\Component\HttpKernel\Exception\HttpException;
 use Modules\Activity\Tests\TestCase;
->>>>>>> .merge_file_YQXLRK
+use Modules\Xot\Contracts\UserContract;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
 uses(TestCase::class);
 
@@ -34,6 +25,16 @@ uses(TestCase::class);
  * nel database, cosa che questi test non devono fare.
  */
 beforeEach(function (): void {
+    $uris = [];
+    foreach (app('router')->getRoutes()->getRoutes() as $route) {
+        $uris[] = $route->uri();
+    }
+    $joined = implode(' ', $uris);
+    if (! str_contains($joined, 'log-download')) {
+        test()->markTestSkipped('Folio /api/log-download non montato (Cms/FolioVolt assente in PTVX)');
+    }
+
+    /** @var TestCase $this */
     $this->originalStorage = storage_path();
     $this->tempStorage = $this->originalStorage.'/framework/testing/log-download-page-'.uniqid('', true);
     File::makeDirectory($this->tempStorage.'/logs/reports/252', 0777, true);
@@ -44,8 +45,11 @@ beforeEach(function (): void {
     File::put($this->originalStorage.'/framework/testing/segreto-pagina.log', 'segreto');
 
     $this->statusOf = function (string $url): int {
+        /** @var TestCase $this */
         try {
-            return $this->withoutExceptionHandling()->get($url)->getStatusCode();
+            $response = $this->withoutExceptionHandling()->get($url);
+
+            return $response->getStatusCode();
         } catch (HttpException $exception) {
             return $exception->getStatusCode();
         }
@@ -73,12 +77,14 @@ it('answers 403 to a guest and never serves the file', function (): void {
 });
 
 it('answers 403 to a logged in user without role and without permission', function (): void {
+    /** @var TestCase $this */
     $this->actingAs(($this->user)(false, false));
 
     expect(($this->statusOf)('/api/log-download?file=laravel.log'))->toBe(403);
 });
 
 it('streams the requested file to a super-admin', function (): void {
+    /** @var TestCase $this */
     $response = $this->actingAs(($this->user)(true))->get('/api/log-download?file=reports/252/daily.log');
 
     $response->assertOk();
@@ -94,12 +100,14 @@ it('streams the requested file to a super-admin', function (): void {
 });
 
 it('streams the requested file to a user with the log.viewAny permission', function (): void {
+    /** @var TestCase $this */
     $this->actingAs(($this->user)(false, true))
         ->get('/api/log-download?file=laravel.log')
         ->assertOk();
 });
 
 it('answers 404 to a file outside the log directory, missing, or a request without a file', function (): void {
+    /** @var TestCase $this */
     $this->actingAs(($this->user)(true));
 
     foreach ([

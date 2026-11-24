@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: __stream
 canonical: ../../../../Themes/docs/shared-components/.gitkeep-Modules
-status: stub
 ---
 # __stream
 

@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "modelli factory seeder analisi"
 related:
   - "./webm.md"
-status: draft
 ---
 
 
@@ -153,12 +152,12 @@ Tutti i modelli attivi hanno le factory corrispondenti.
 - **Streaming**: Streaming file grandi
 
 ### File Processing
-- **Image Processing**:
+- **Image Processing**: 
   - Resize, crop, rotate
   - Filters e effetti
   - Format conversion
   - Quality optimization
-
+  
 - **Document Processing**:
   - PDF generation
   - Text extraction
@@ -226,5 +225,6 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 - [FFmpeg](https://ffmpeg.org/) - Video/Audio processing
 - [ImageMagick](https://imagemagick.org/) - Advanced image processing
 
+*Ultimo aggiornamento: Gennaio 2025*
 *Analisi completa di 4 modelli attivi, sistema media completo*
 *Supporto upload, conversioni, storage locale/cloud*

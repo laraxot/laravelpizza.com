@@ -1,20 +1,12 @@
 <?php
 
 declare(strict_types=1);
-<<<<<<< .merge_file_WSXnr8
-
-=======
->>>>>>> .merge_file_UBeNib
 use Illuminate\Support\Facades\File;
 use Modules\Activity\Actions\Log\ResolveLogDirectoryAction;
 use Modules\Activity\Actions\Log\ResolveLogFilePathAction;
 use Modules\Activity\Exceptions\InvalidLogFileException;
 use Safe\Exceptions\FilesystemException;
-<<<<<<< .merge_file_WSXnr8
-use Tests\TestCase;
-=======
 use Modules\Activity\Tests\TestCase;
->>>>>>> .merge_file_UBeNib
 
 use function Safe\realpath;
 use function Safe\symlink;
@@ -45,11 +37,7 @@ afterEach(function (): void {
 });
 
 it('resolves a log file at the top level and in a nested folder', function (): void {
-<<<<<<< .merge_file_WSXnr8
-    $action = new ResolveLogFilePathAction();
-=======
     $action = new ResolveLogFilePathAction;
->>>>>>> .merge_file_UBeNib
     $base = realpath($this->base);
 
     $top = $action->execute('laravel.log', $this->base);
@@ -59,42 +47,30 @@ it('resolves a log file at the top level and in a nested folder', function (): v
     $nested = $action->execute('reports/rejected/daily_2026-09-20.log', $this->base);
     expect($nested->absolutePath)->toBe($base.'/reports/rejected/daily_2026-09-20.log');
     expect($nested->relativePath)->toBe('reports/rejected/daily_2026-09-20.log');
-});
+})->group('ACTIVITY-LOGFILE-INV-4');
 
 it('rejects path traversal that would reach a file outside the log directory', function (): void {
-<<<<<<< .merge_file_WSXnr8
-    $action = new ResolveLogFilePathAction();
-=======
     $action = new ResolveLogFilePathAction;
->>>>>>> .merge_file_UBeNib
 
     expect(fn () => $action->execute('../secret.log', $this->base))->toThrow(InvalidLogFileException::class);
     expect(fn () => $action->execute('reports/../../secret.log', $this->base))->toThrow(InvalidLogFileException::class);
-});
+})->group('ACTIVITY-LOGFILE-INV-1');
 
 it('rejects an absolute path even if it points to a real log file', function (): void {
-<<<<<<< .merge_file_WSXnr8
-    $action = new ResolveLogFilePathAction();
-=======
     $action = new ResolveLogFilePathAction;
->>>>>>> .merge_file_UBeNib
 
     expect(fn () => $action->execute($this->root.'/secret.log', $this->base))->toThrow(InvalidLogFileException::class);
-});
+})->group('ACTIVITY-LOGFILE-INV-1');
 
 it('rejects files that are not .log, missing files, empty paths and null bytes', function (): void {
-<<<<<<< .merge_file_WSXnr8
-    $action = new ResolveLogFilePathAction();
-=======
     $action = new ResolveLogFilePathAction;
->>>>>>> .merge_file_UBeNib
 
     expect(fn () => $action->execute('note.txt', $this->base))->toThrow(InvalidLogFileException::class);
     expect(fn () => $action->execute('non-esiste.log', $this->base))->toThrow(InvalidLogFileException::class);
     expect(fn () => $action->execute('reports', $this->base))->toThrow(InvalidLogFileException::class);
     expect(fn () => $action->execute('', $this->base))->toThrow(InvalidLogFileException::class);
     expect(fn () => $action->execute("laravel.log\0.txt", $this->base))->toThrow(InvalidLogFileException::class);
-});
+})->group('ACTIVITY-LOGFILE-INV-2');
 
 it('rejects a symlink inside the log directory that points outside of it', function (): void {
     try {
@@ -103,14 +79,10 @@ it('rejects a symlink inside the log directory that points outside of it', funct
         $this->markTestSkipped('Impossibile creare link simbolici in questo ambiente.');
     }
 
-<<<<<<< .merge_file_WSXnr8
-    $action = new ResolveLogFilePathAction();
-=======
     $action = new ResolveLogFilePathAction;
->>>>>>> .merge_file_UBeNib
 
     expect(fn () => $action->execute('link.log', $this->base))->toThrow(InvalidLogFileException::class);
-});
+})->group('ACTIVITY-LOGFILE-INV-3');
 
 it('rejects a symlink named .log whose target is not a .log file', function (): void {
     try {
@@ -119,31 +91,19 @@ it('rejects a symlink named .log whose target is not a .log file', function (): 
         $this->markTestSkipped('Impossibile creare link simbolici in questo ambiente.');
     }
 
-<<<<<<< .merge_file_WSXnr8
-    $action = new ResolveLogFilePathAction();
-=======
     $action = new ResolveLogFilePathAction;
->>>>>>> .merge_file_UBeNib
 
     expect(fn () => $action->execute('finto.log', $this->base))->toThrow(InvalidLogFileException::class);
-});
+})->group('ACTIVITY-LOGFILE-INV-2');
 
 it('fails clearly when the base directory does not exist', function (): void {
-<<<<<<< .merge_file_WSXnr8
-    $action = new ResolveLogFilePathAction();
-=======
     $action = new ResolveLogFilePathAction;
->>>>>>> .merge_file_UBeNib
 
     expect(fn () => $action->execute('laravel.log', $this->root.'/non-esiste'))->toThrow(InvalidLogFileException::class);
-});
+})->group('ACTIVITY-LOGFILE-INV-5');
 
 it('resolves the log directory to its real path and fails when it is missing', function (): void {
-<<<<<<< .merge_file_WSXnr8
-    $action = new ResolveLogDirectoryAction();
-=======
     $action = new ResolveLogDirectoryAction;
->>>>>>> .merge_file_UBeNib
 
     expect($action->execute($this->base))->toBe(realpath($this->base));
     expect(fn () => $action->execute($this->root.'/non-esiste'))->toThrow(InvalidLogFileException::class);

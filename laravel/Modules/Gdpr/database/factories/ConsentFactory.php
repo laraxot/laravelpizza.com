@@ -20,21 +20,20 @@ class ConsentFactory extends Factory
     protected $model = Consent::class;
 
     /**
-<<<<<<< .merge_file_G0DSG3
-     * @return array<string, string>
-=======
      * Define the model's default state.
      *
->>>>>>> .merge_file_zn8tMh
      * @return array<string, mixed>
      */
     public function definition(): array
     {
+        // Colonne reali di `consents`, come le scrive SaveGdprConsentsAction (user_id + user_type, `type` = trattamento,
+        // `accepted_at`): le chiavi subject_type / consent_type / accepted non esistono e facevano fallire ogni insert.
         return [
             'subject_id' => fake()->uuid(),
-            'subject_type' => 'Modules\User\Models\User',
-            'consent_type' => 'privacy_policy',
-            'accepted' => true,
+            'user_id' => fake()->uuid(),
+            'user_type' => 'Modules\User\Models\User',
+            'type' => 'privacy_policy',
+            'accepted_at' => now(),
             'ip_address' => '127.0.0.1',
             'user_agent' => fake()->userAgent(),
         ];

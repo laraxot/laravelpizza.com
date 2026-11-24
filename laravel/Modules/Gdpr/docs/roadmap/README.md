@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "README"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Gdpr Module Roadmap
@@ -69,3 +68,12 @@ Provide a **complete GDPR compliance** toolkit that includes:
 - Export analytics
 
 ---
+
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []

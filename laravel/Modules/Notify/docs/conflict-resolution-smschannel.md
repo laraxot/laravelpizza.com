@@ -3,11 +3,14 @@ title: "conflict resolution smschannel"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "conflict resolution smschannel"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Risoluzione Conflitti SmsChannel.php
@@ -62,7 +65,15 @@ return $action->execute($smsData);
 - Solo miglioramento della leggibilità del codice
 
 ## Collegamenti
+<<<<<<< HEAD
 - [Notify Module Documentation](README.md)
+=======
+<<<<<<< HEAD
+- [Notify Module Documentation](readme.md)
+=======
+- [Notify Module Documentation](README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [SMS Channel Architecture](sms_channel_action_resolution.md)
 - [Root Conflict Resolution Guidelines](../../../../docs/project/conflict-resolution-guidelines.md)
 

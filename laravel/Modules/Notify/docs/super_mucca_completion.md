@@ -1,5 +1,5 @@
 ---
-qmd: "super mucca completion"
+qmd: "SUPER MUCCA COMPLETION"
 issues: []
 discussions: []
 title: "SUPER MUCCA MODE - COMPLETAMENTO TOTALE"
@@ -7,8 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # 🐄⚡ SUPER MUCCA MODE - COMPLETAMENTO TOTALE

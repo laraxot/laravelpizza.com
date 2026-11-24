@@ -3,11 +3,14 @@ title: "mail template slug implementation"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "mail template slug implementation"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Implementazione del Campo Slug in MailTemplate
@@ -15,8 +18,6 @@ status: draft
 ## Collegamenti correlati
 
 - [README del modulo Notify](./README.md)
-- [Guida all'utilizzo di SpatieEmail](./SPATIE_EMAIL_USAGE_GUIDE.md)
-- [Documentazione Template Email](./EMAIL_TEMPLATES.md)
 - [Guida all'utilizzo di SpatieEmail](./spatie_email_usage_guide.md)
 - [Documentazione Template Email](./email_templates.md)
 - [Documentazione Root](../../../../docs/collegamenti-documentazione.md)

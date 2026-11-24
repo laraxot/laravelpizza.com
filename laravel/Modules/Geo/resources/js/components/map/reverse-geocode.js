@@ -2,7 +2,7 @@
  * Reverse geocoding (Nominatim) — same policy as forward search in controls/search.js (browser fetch).
  */
 
-const NOMINATIM_REVERSE_URL = 'https://nominatim.openstreetmap.org/reverse';
+import { nominatimUrl } from './endpoints.js';
 
 /**
  * @param {number} lat
@@ -10,7 +10,7 @@ const NOMINATIM_REVERSE_URL = 'https://nominatim.openstreetmap.org/reverse';
  * @returns {Promise<{ display_name: string, raw: object } | null>}
  */
 export async function fetchNominatimReverse(lat, lng) {
-    const url = new URL(NOMINATIM_REVERSE_URL);
+    const url = nominatimUrl('reverse');
     url.searchParams.set('format', 'json');
     url.searchParams.set('lat', String(lat));
     url.searchParams.set('lon', String(lng));

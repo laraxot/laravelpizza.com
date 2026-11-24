@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "styling"
 related:
   - "./webm.md"
-status: draft
 ---
 # Guida agli Stili, Tabelle e Immagini
 

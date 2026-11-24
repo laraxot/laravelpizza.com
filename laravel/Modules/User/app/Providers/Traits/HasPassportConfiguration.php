@@ -12,6 +12,12 @@ use Modules\User\Models\OauthClient;
 use Modules\User\Models\OauthRefreshToken;
 use Webmozart\Assert\Assert;
 
+<<<<<<< HEAD
+/**
+ * @phpstan-ignore trait.unused (API del modulo condiviso: in laravelpizza nessuna classe lo usa, altri progetti sì. Si toglie solo se il trait viene ritirato.)
+ */
+=======
+>>>>>>> laraxot/dev
 trait HasPassportConfiguration
 {
     /**

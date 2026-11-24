@@ -5,7 +5,11 @@ title: "sms-actions-consolidation-2026-06-30"
 type: concept
 tags: [deprecated]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "sms-actions-consolidation-2026-06-30 deprecated"
 status: deprecated
 related:

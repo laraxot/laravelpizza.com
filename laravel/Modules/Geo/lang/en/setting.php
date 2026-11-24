@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'name' => 'Impostazioni Geo',
-        'plural' => 'Impostazioni Geo',
+        'name' => 'Geo Settings',
+        'plural' => 'Geo Settings',
         'group' => [
             'name' => 'Geo',
-            'description' => 'Configurazione del modulo geografico',
+            'description' => 'Geographic module configuration',
         ],
-        'label' => 'Impostazioni',
+        'label' => 'Settings',
         'sort' => '34',
         'icon' => 'ui-settings',
     ],
@@ -40,8 +40,8 @@ return [
             'description' => '',
         ],
         'display_options' => [
-            'units' => 'Unità di Misura',
-            'language' => 'Lingua Mappe',
+            'units' => 'Measurement Units',
+            'language' => 'Map Language',
             'theme' => 'Tema Mappe',
             'label' => '',
             'tooltip' => '',

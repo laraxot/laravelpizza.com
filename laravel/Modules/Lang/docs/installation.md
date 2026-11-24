@@ -10,7 +10,6 @@ title: Installazione Automatizzata
 description: Installazione Automatizzata
 extends: _layouts.documentation
 section: content
-status: draft
 ---
 
 # Installazione {#installazione}
@@ -27,9 +26,9 @@ php artisan module_lang:install
 
 ```
 ## Collegamenti tra versioni di installation.md
-* [installation.md](../../Xot/docs/filament/installation.md)
-* [installation.md](../../Xot/docs/installation.md)
-* [installation.md](../../Xot/docs/base/installation.md)
+* [installation.md](../../../Xot/docs/filament/installation.md)
+* [installation.md](../../../Xot/docs/installation.md)
+* [installation.md](../../../Xot/docs/base/installation.md)
 * [installation.md](../../../User/docs/installation.md)
 * [installation.md](../../../Lang/docs/installation.md)
 * [installation.md](../../../Cms/docs/installation.md)

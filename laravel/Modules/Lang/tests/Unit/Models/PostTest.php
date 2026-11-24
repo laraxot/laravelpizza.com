@@ -31,7 +31,15 @@ describe('Post Model', function () {
     test('uses HasXotFactory trait', function () {
         $model = new Post;
 
+<<<<<<< HEAD
         Assert::assertArrayHasKey('Modules\Xot\Models\Traits\HasXotFactory', class_uses($model));
+=======
+        // `class_uses()` elenca solo i trait usati **direttamente**: HasXotFactory
+        // arriva da Modules\Lang\Models\BaseModel, quindi li' non compariva e il
+        // test accusava il modello di non averlo. `Post::factory()` restituisce
+        // PostFactory, cioe' il trait c'era e funzionava (base_quaeris_fila5#234).
+        Assert::assertArrayHasKey('Modules\Xot\Models\Traits\HasXotFactory', class_uses_recursive($model));
+>>>>>>> laraxot/dev
     });
 
     test('uses Updater trait', function () {
@@ -116,15 +124,33 @@ describe('Post Model', function () {
 
         Assert::assertSame('datetime', $casts['created_at']);
         Assert::assertSame('datetime', $casts['updated_at']);
+<<<<<<< HEAD
         Assert::assertSame('datetime', $casts['deleted_at']);
         Assert::assertSame('datetime', $casts['published_at']);
+=======
+        Assert::assertSame('datetime', $casts['published_at']);
+
+        // `deleted_at` non e' asserita: la tabella `posts` non ha quella colonna
+        // e il modello non usa SoftDeletes. Il test la pretendeva, quindi
+        // chiedeva un cast per un campo inesistente (base_quaeris_fila5#234).
+        Assert::assertArrayNotHasKey('deleted_at', $casts);
+>>>>>>> laraxot/dev
     });
 
     test('casts array fields', function () {
         $model = new Post;
         $casts = $model->getCasts();
 
+<<<<<<< HEAD
         Assert::assertSame('array', $casts['image_resize_src']);
         Assert::assertSame('array', $casts['url_lang']);
+=======
+        Assert::assertSame('array', $casts['url_lang']);
+
+        // `image_resize_src` e' una colonna `string` nella migration e una
+        // `@property string|null` nel modello: il cast `array` che questo test
+        // pretendeva contraddiceva entrambe (base_quaeris_fila5#234).
+        Assert::assertArrayNotHasKey('image_resize_src', $casts);
+>>>>>>> laraxot/dev
     });
 });

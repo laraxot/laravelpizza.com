@@ -4,14 +4,17 @@ created: 2026-09-26
 qmd: "frontend stack canonical"
 issues: []
 discussions: []
-title: frontend stack canonico: notify module stub
+title: frontend stack canonico — notify module stub
 type: rule
 module: Notify
+<<<<<<< HEAD
 updated: 2026-06-03
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
-# Stack frontend: modulo Notify
+# Stack frontend — modulo Notify
 
 ## Mantra progetto
 
@@ -29,8 +32,3 @@ Notifiche e UI Filament Notify: stack admin **Filament v5**. FO email/template s
 ## Story
 
 [STORY-133](../../../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md)
-- [docs/wiki/rules/frontend-stack-canonical.md](../../../../../../docs/wiki/rules/frontend-stack-canonical.md)
-
-## Story
-
-[STORY-133](../../../../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md)

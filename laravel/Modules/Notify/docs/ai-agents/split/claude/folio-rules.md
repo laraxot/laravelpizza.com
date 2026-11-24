@@ -3,11 +3,14 @@ title: "folio rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "folio rules"
 issues: []
 discussions: []
-status: draft
 ---
 
 === folio/core rules ===
@@ -23,7 +26,10 @@ status: draft
 ### New Pages & Routes
 - Always create new `folio` pages and routes using `artisan folio:page [name]` following existing naming conventions.
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 <code-snippet name="Example folio:page Commands for Automatic Routing" lang="shell">
     // Creates: resources/views/pages/products.blade.php → /products
     php artisan folio:page 'products'
@@ -32,22 +38,33 @@ status: draft
     php artisan folio:page 'products/[id]'
 </code-snippet>
 
+<<<<<<< HEAD
 
 - Add a 'name' to each new Folio page at the very top of the file so it has a named route available for other parts of the codebase to use.
 
 
+=======
+- Add a 'name' to each new Folio page at the very top of the file so it has a named route available for other parts of the codebase to use.
+
+>>>>>>> laraxot/dev
 <code-snippet name="Adding named route to Folio page" lang="php">
 use function Laravel\Folio\name;
 
 name('products.index');
 </code-snippet>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ### Support & Documentation
 - Folio supports: middleware, serving pages from multiple paths, subdomain routing, named routes, nested routes, index routes, route parameters, and route model binding.
 - If available, use Boost's `search-docs` tool to use Folio to its full potential and help the user effectively.
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 <code-snippet name="Folio Middleware Example" lang="php">
 use function Laravel\Folio\{name, middleware};
 
@@ -59,11 +76,20 @@ middleware(['auth', 'verified', 'can:manage-products']);
 
 
 ---
+
+title: "folio rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "folio rules"
+issues: []
+discussions: []
 ## Cross-References
 
-- ← [CLAUDE Index](INDEX.md): All Laravel Boost guidelines
-- ← [Main AI Docs Index](../INDEX.md): Master index
-- ← [CLAUDE Index](index.md): All Laravel Boost guidelines
-- ← [Main AI Docs Index](../index.md): Master index
-- ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md): Original source
+- ← [CLAUDE Index](index.md) — All Laravel Boost guidelines
+- ← [Main AI Docs Index](../index.md) — Master index
+- ← [CLAUDE Index](index.md) — All Laravel Boost guidelines
+- ← [Main AI Docs Index](../index.md) — Master index
+- ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md) — Original source
 

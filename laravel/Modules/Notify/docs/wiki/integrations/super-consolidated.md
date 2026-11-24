@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -471,10 +475,20 @@ Questa è la **terza implementazione** della giornata:
 ### Root Progetto
 - [View Cache Fix](./view-cache-components-fix.md)
 - [Transaction Fix](./transaction-removal-fix.md)
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_Cydbn8
 - [Setup Guide](./setup-guide.md)
+=======
+>>>>>>> laraxot/dev
+- [Setup Guide](../../bmad/setup-guide.md)
 - [View Cache Fix](../../view-cache-components-fix.md)
 - [Transaction Fix](../../transaction-removal-fix.md)
 - [Setup Guide](../../bmad/setup-guide.md)
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_FBPZgT
+>>>>>>> laraxot/dev
 
 ### Package Documentation
 - [Spatie Laravel Permission](https://spatie.be/docs/laravel-permission)
@@ -561,7 +575,10 @@ Il setup del super-admin è un passaggio critico per iniziare a utilizzare l'app
 > **"Automatizza ciò che ripeti"**  
 > Script di setup per velocizzare il processo
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ---
 
 ## super-admin-setup-fix
@@ -775,7 +792,7 @@ related:
 
 #### 4. **Naming Inconsistente**
 - **README.md**: 56 file (corretto)
-- **readme.md**: 13 file (minuscolo - errato)
+- **README.md**: 13 file (minuscolo - errato)
 - **Convenzione**: Solo README.md in maiuscolo
 - **Priorità**: **MEDIA** - Inconsistenza nelle convenzioni
 
@@ -856,7 +873,7 @@ touch laravel/Modules/Seo/docs/README.md
 
 #### 3.1 Correggere File Minuscoli
 ```bash
-# 13 file "readme.md" da rinominare in "README.md"
+# 13 file "README.md" da rinominare in "README.md"
 # Mantenere consistenza con convezioni
 ```
 
@@ -948,7 +965,10 @@ touch laravel/Modules/Seo/docs/README.md
 
 *"Non avrai altro path all'infuori del relativo"* - Commandamento Laraxot
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ---
 
 ## super-mucca-final-summary
@@ -1271,7 +1291,7 @@ wire:submit="method" → Azione submit
 ### Aree di Miglioramento
 
 1. **Link Assoluti**: 335 file da correggere (automatizzabile)
-2. **Naming Consistency**: 13 file "readme.md" minuscolo da rinominare
+2. **Naming Consistency**: 13 file "README.md" minuscolo da rinominare
 3. **Documentation Coverage**: Alcuni moduli con doc minimale
 4. **Cross-References**: Migliorare collegamenti bidirezionali
 
@@ -1348,7 +1368,10 @@ Con questi miglioramenti, la documentazione raggiungerà **livello ECCELLENTE**.
 
 **#SuperMucca #DocumentationMatters #MissionCompleted #MUUUU** 🐄✨
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ---
 
 ## super-mucca-login-completed
@@ -1937,7 +1960,10 @@ Password: password
 
 **#SuperMucca #MissionAccomplished #MUUUU #FilamentMaster #AGIDCompliant**
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ---
 
 ## supermemory-quickstart
@@ -2067,13 +2093,22 @@ supermemory add --tag <nome progetto> --content "<nome progetto> module: Ticket 
 ### 3. Theme Conventions
 Store theme development patterns:
 ```bash
-<<<<<<< .merge_file_1cUPlx
+<<<<<<< HEAD
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-=======
 supermemory add --tag laraxot --content "Sixteen theme: Bootstrap Italia classes replicated with Tailwind @apply. Vite outDir: './public', served via symlink public_html/themes/Sixteen (no copy)."
 supermemory add --tag <nome progetto> --content "Sixteen theme: Bootstrap Italia classes replicated with Tailwind @apply. Vite outDir: './public', served via symlink public_html/themes/Sixteen (no copy)."
->>>>>>> .merge_file_evqk44
+=======
+<<<<<<< .merge_file_Cydbn8
+supermemory add --tag laraxot --content "Sixteen theme: Bootstrap Italia classes replicated with Tailwind @apply. Vite outDir: './public', then symlink public_html/themes (npm run copy obsoleto) to public_html/themes/Sixteen/."
+supermemory add --tag <nome progetto> --content "Sixteen theme: Bootstrap Italia classes replicated with Tailwind @apply. Vite outDir: './public', then symlink public_html/themes (npm run copy obsoleto) to public_html/themes/Sixteen/."
+supermemory add --tag laraxot --content "Sixteen theme: Bootstrap Italia classes replicated with Tailwind @apply. Vite outDir: './public', served via symlink public_html/themes/Sixteen (no copy)."
+supermemory add --tag <nome progetto> --content "Sixteen theme: Bootstrap Italia classes replicated with Tailwind @apply. Vite outDir: './public', served via symlink public_html/themes/Sixteen (no copy)."
+=======
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+>>>>>>> .merge_file_FBPZgT
+>>>>>>> laraxot/dev
 ```
 
 ### 4. Development Workflows
@@ -2227,7 +2262,10 @@ supermemory init --api-key YOUR_KEY --container-tag <nome progetto> --scope proj
 
 *Consolidated from: `superpowers.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 **Source**: https://github.com/obra/superpowers  
 **Stars**: 126K  
 **Version**: v5.0.6  

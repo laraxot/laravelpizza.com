@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Feature;
 
+use Closure;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Str;
 use Modules\Activity\Database\Factories\ActivityFactory;
@@ -19,11 +20,7 @@ use PHPUnit\Framework\Assert;
 
 use function Safe\json_encode;
 
-<<<<<<< .merge_file_0rCMxo
-uses(\Modules\Activity\Tests\TestCase::class);
-=======
 uses(TestCase::class);
->>>>>>> .merge_file_ltztkO
 
 test('activity module models work together in integrated scenarios', function () {
     $user = UserFactory::new()->createOne();
@@ -170,10 +167,11 @@ test('activity module handles concurrent operations correctly', function () {
     $concurrentActivities = [];
     $concurrentSnapshots = [];
 
+    /** @var list<Closure(): bool> $promises */
     $promises = [];
 
     for ($i = 0; $i < 10; $i++) {
-        $promises[] = function () use ($user, &$concurrentActivities, &$concurrentSnapshots, $i) {
+        $promises[] = function () use ($user, &$concurrentActivities, &$concurrentSnapshots, $i): bool {
             $activity = ActivityFactory::new()->createOne([
                 'causer_type' => User::class,
                 'causer_id' => $user->id,
@@ -200,7 +198,7 @@ test('activity module handles concurrent operations correctly', function () {
         };
     }
 
-    $results = array_map(fn ($promise) => $promise(), $promises);
+    $results = array_map(static fn (Closure $promise): bool => $promise(), $promises);
     Assert::assertCount(10, $results);
 
     $userActivities = Activity::query()
@@ -305,14 +303,19 @@ test('activity module handles data consistency across models', function () {
 
     $activityPropertiesValue = $activity->properties;
     Assert::assertNotNull($activityPropertiesValue);
+    // SchemalessAttributes is Arrayable (toArray), not Collection (all).
     $activityProperties = is_array($activityPropertiesValue)
         ? $activityPropertiesValue
-        : $activityPropertiesValue->all();
+        : ($activityPropertiesValue instanceof \Illuminate\Contracts\Support\Arrayable
+            ? $activityPropertiesValue->toArray()
+            : []);
     $snapshotStateValue = $snapshot->state;
     Assert::assertNotNull($snapshotStateValue);
     $snapshotState = is_array($snapshotStateValue)
         ? $snapshotStateValue
-        : $snapshotStateValue->all();
+        : ($snapshotStateValue instanceof \Illuminate\Contracts\Support\Arrayable
+            ? $snapshotStateValue->toArray()
+            : (array) $snapshotStateValue);
     $storedEventPropertiesValue = $storedEvent->event_properties;
     Assert::assertIsArray($storedEventPropertiesValue);
     $storedEventProperties = $storedEventPropertiesValue;
@@ -333,7 +336,9 @@ test('activity module handles data consistency across models', function () {
     Assert::assertNotNull($freshActivityPropertiesValue);
     $freshActivityProperties = is_array($freshActivityPropertiesValue)
         ? $freshActivityPropertiesValue
-        : $freshActivityPropertiesValue->all();
+        : ($freshActivityPropertiesValue instanceof \Illuminate\Contracts\Support\Arrayable
+            ? $freshActivityPropertiesValue->toArray()
+            : []);
     $freshSnapshotState = $freshSnapshot->state;
     $freshEventProperties = $freshEvent->event_properties;
 
@@ -384,12 +389,16 @@ test('activity module supports bulk operations efficiently', function () {
     Assert::assertNotNull($firstActivityPropertiesValue);
     $firstActivityProperties = is_array($firstActivityPropertiesValue)
         ? $firstActivityPropertiesValue
-        : $firstActivityPropertiesValue->all();
+        : ($firstActivityPropertiesValue instanceof \Illuminate\Contracts\Support\Arrayable
+            ? $firstActivityPropertiesValue->toArray()
+            : []);
     $lastActivityPropertiesValue = $lastActivity->properties;
     Assert::assertNotNull($lastActivityPropertiesValue);
     $lastActivityProperties = is_array($lastActivityPropertiesValue)
         ? $lastActivityPropertiesValue
-        : $lastActivityPropertiesValue->all();
+        : ($lastActivityPropertiesValue instanceof \Illuminate\Contracts\Support\Arrayable
+            ? $lastActivityPropertiesValue->toArray()
+            : []);
 
     Assert::assertSame($user->id, $firstActivity->causer_id);
     Assert::assertSame($user->id, $lastActivity->causer_id);

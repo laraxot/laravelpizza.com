@@ -1,5 +1,5 @@
 ---
-title: "Tenant: Quick Reference"
+title: "Tenant — Quick Reference"
 type: note
 module: Tenant
 tags:
@@ -13,12 +13,11 @@ related:
   - README.md
   - architecture.md
   - setup-guide.md
-status: draft
 ---
 
-# Tenant: Quick Reference
+# Tenant — Quick Reference
 
-> **SUMMARY**: Riferimento rapido del modulo `Tenant`: dove sta cosa, quali classi usare,
+> **SUMMARY** — Riferimento rapido del modulo `Tenant`: dove sta cosa, quali classi usare,
 > quali test guardare. Paths relativi a `laravel/Modules/Tenant`.
 
 ## Punti di ingresso

@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "models migrations status"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../models-migrations-status.md
 ---
 
 # Geo — Stato Modelli / Migration / Seeder / Factory

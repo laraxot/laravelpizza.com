@@ -1,13 +1,16 @@
 ---
-title: "08 verified commit governance"
+title: "08 Verified Commit Governance"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
-qmd: "08 verified commit governance"
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+qmd: "08 Verified Commit Governance"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Verified Commit Governance

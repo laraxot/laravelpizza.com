@@ -8,19 +8,14 @@ qmd: "passport-integration laravel passport integration - architettura completa"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Laravel Passport Integration - Architettura Completa
@@ -525,7 +520,15 @@ $ ./vendor/bin/phpstan analyse Modules --memory-limit=-1
 
 ### Documentazione Correlata
 - [FILOSOFIA_MODULO_USER.md](./filosofia-modulo-user.md) - Filosofia generale
+<<<<<<< HEAD
 - [README.md](./README.md) - Overview modulo
+=======
+<<<<<<< HEAD
+- [README.md](./readme.md) - Overview modulo
+=======
+- [README.md](./README.md) - Overview modulo
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [business-logic-deep-dive-4.md](./business-logic-deep-dive.md) - Business logic completa
 
 ### Documentazione Esterna

@@ -10,7 +10,6 @@ type: architecture
 module: Cms
 related:
   - ./livewire-widget-prd.md
-status: draft
 ---
 
 # Architecture Cms

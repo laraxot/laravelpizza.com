@@ -3,30 +3,52 @@ title: "case conflicts"
 type: note
 tags: [documentation]
 created: 2026-09-26
-updated: 2026-10-25
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "case conflicts"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Case-Insensitive File Conflicts
 
 Elenco dei file nel modulo `Geo` che presentano duplicati differenziati solo dalla capitalizzazione. Va mantenuta una singola variante conforme agli standard Laraxot, aggiornando successivamente i riferimenti.
 
-- `Modules/Geo`: risolto — resta `CHANGELOG.md`, variante `changelog.md` archiviata come `.old`
-- `Modules/Geo`: risolto — resta `LICENSE.md`, variante `license.md` archiviata come `.old`
-- `Modules/Geo/.github`: `CONTRIBUTING.md`, `contributing.md`
+- `Modules/Geo`: `CHANGELOG.md`, `CHANGELOG.md`
+- `Modules/Geo`: `LICENSE.md`, `LICENSE.md`
+- `Modules/Geo/.github`: `CONTRIBUTING.md`, `CONTRIBUTING.md`
 - `Modules/Geo/.github`: `FUNDING.yml`, `funding.yml`
-- `Modules/Geo/.github`: `SECURITY.md`, `security.md`
+- `Modules/Geo/.github`: `SECURITY.md`, `SECURITY.md`
 - `Modules/Geo/app/Actions`: `ClusterLocationsAction.wip`, `clusterlocationsaction.wip`
 - `Modules/Geo/app/Filament/Resources`: `UserResource.maybe_profile`, `userresource.maybe_profile`
 - `Modules/Geo/app/Filament/Widgets`: `ImprovedLocationMapWidget.wip`, `improvedlocationmapwidget.wip`
 - `Modules/Geo/app/Http/Livewire`: `Test.test`, `test.test`
 - `Modules/Geo/app/View/Components/Card`: `Place.json`, `place.json`
-- `Modules/Geo/docs` (radice): **0 gruppi** al 2026-10-25 — nessuna coppia case-twin residua: resta il canonico minuscolo, il gemello e archiviato come `*.old` (eccezione ammessa: `LICENSE` senza estensione)
-- `Modules/Geo/docs/raw` (archivio storico, non indicizzato): **16 gruppi** invariati — `raw/history` 15, `raw/errors` 1
-- `Modules/Geo/docs/wiki`, `Modules/Geo/docs/schema`, `Modules/Geo/docs/llm-wiki`: `AGENTS.md`/`agents.md` (3 gruppi, aperti)
+<<<<<<< HEAD
+=======
+- `Modules/Geo/docs`: `PHPSTAN_FIXES.md`, `phpstan_fixes.md`
+- `Modules/Geo/docs`: `PROJECT.md`, `project.md`
+- `Modules/Geo/docs`: `ADVANCED_FEATURES.md`, `advanced_features.md`
+- `Modules/Geo/docs`: `MCP_SERVER_RECOMMENDED.md`, `mcp_server_recommended.md`
+- `Modules/Geo/docs`: `COMPREHENSIVE_GUIDE.md`, `comprehensive_guide.md`
+>>>>>>> laraxot/dev
+- `Modules/Geo/docs`: `phpstan_fixes.md`, `phpstan_fixes.md`
+- `Modules/Geo/docs`: `PROJECT.md`, `project.md`
+- `Modules/Geo/docs`: `advanced_features.md`, `advanced_features.md`
+- `Modules/Geo/docs`: `mcp_server_recommended.md`, `mcp_server_recommended.md`
+- `Modules/Geo/docs`: `comprehensive_guide.md`, `comprehensive_guide.md`
+<<<<<<< HEAD
+=======
+- `Modules/Geo/docs`: `PHPSTAN_FIXES.md`, `phpstan_fixes.md`
+- `Modules/Geo/docs`: `PROJECT.md`, `project.md`
+- `Modules/Geo/docs`: `ADVANCED_FEATURES.md`, `advanced_features.md`
+- `Modules/Geo/docs`: `MCP_SERVER_RECOMMENDED.md`, `mcp_server_recommended.md`
+- `Modules/Geo/docs`: `COMPREHENSIVE_GUIDE.md`, `comprehensive_guide.md`
+>>>>>>> laraxot/dev
+- `Modules/Geo/docs`: `TECHNICAL.md`, `technical.md`
 - `Modules/Geo/resources/css`: `MarkerCluster.Default.css`, `markercluster.default.css`
 - `Modules/Geo/resources/css`: `MarkerCluster.css`, `markercluster.css`
 - `Modules/Geo/resources/css`: `L.Control.Locate.mapbox.min.css`, `l.control.locate.mapbox.min.css`

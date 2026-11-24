@@ -1,12 +1,9 @@
 ---
+qmd: "xot wiki integration mcp integration md"
 title: "Xot - mcp-integration.md"
 module: Xot
 bmad: true
 status: active
-type: note
-updated: 2026-10-09
-tags: [docs, xot, wiki]
-qmd: "mcp (model context protocol) integration xot"
 ---
 # MCP (Model Context Protocol) Integration
 
@@ -70,7 +67,7 @@ Edita i file di configurazione e inserisci le tue keys.
 ### Debugging con Context
 
 ```text
-Analizza errori PHPStan in Modules/Quaeris seguendo pattern in .windsurf/rules/
+Analizza errori PHPStan in Modules/<nome progetto> seguendo pattern in .windsurf/rules/
 ```
 
 ### Refactoring Guidato

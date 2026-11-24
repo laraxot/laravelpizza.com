@@ -10,6 +10,5 @@ updated: 2026-07-14
 qmd: "core functionality"
 related:
   - "./webm.md"
-status: draft
 ---
 # Core Functionality

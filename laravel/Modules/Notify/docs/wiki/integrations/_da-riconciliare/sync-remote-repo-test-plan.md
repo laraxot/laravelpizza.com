@@ -1,14 +1,17 @@
 ---
-qmd: "sync remote repo test plan"
+qmd: "Sync Remote Repo Test Plan"
 issues: []
 discussions: []
-title: "Sync Remote Repo - Test Plan"
+title: "Sync Remote Repo Test Plan"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Sync Remote Repo - Test Plan

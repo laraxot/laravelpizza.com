@@ -1,11 +1,7 @@
 ---
 type: investigation
 title: "Investigation Isolation Strategy"
-links: {github_issue: "#XXX"}
-status: draft
-updated: 2026-10-08
-tags: [docs, tenant, investigation]
-qmd: "investigation: isolation strategy tenant"
+links: {github_issue: #XXX}
 ---
 # Investigation: Isolation Strategy
 

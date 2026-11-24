@@ -1,12 +1,10 @@
 ---
 title: "Goals - Activity"
+qmd: "activity roadmap 02 goals md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity, roadmap]
-qmd: "goals - activity activity"
-status: superseded
-superseded_by: goals.md
+tags: [documentation]
 ---
+
 # Goals - Activity
 
 ## Short Term

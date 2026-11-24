@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -22,14 +26,23 @@ status: draft
 ## 🎯 Quick Navigation
 
 ### Per Nuovi Arrivati
-1. [Zen of Documentation](./ZEN_OF_DOCUMENTATION.md) - Filosofia e principi
-2. [Documentation Governance](./DOCUMENTATION_GOVERNANCE.md) - Regole e standard
+1. [Zen of Documentation](./zen_of_documentation.md) - Filosofia e principi
+2. [Documentation Governance](./documentation_governance.md) - Regole e standard
 3. [Multi-Agent Collaboration](./MULTI_AGENT_COLLABORATION.md) - Come lavorare con AI agents
 
 ### Per Sviluppatori
 - [Architecture Overview](./architecture/README.md)
-- [Getting Started](./GETTING_STARTED.md)
+<<<<<<< HEAD
 - [Getting Started](../../../GETTING_STARTED.md)
+- [Getting Started](../../../GETTING_STARTED.md)
+=======
+<<<<<<< .merge_file_KLp0Mn
+- [Getting Started](./GETTING_STARTED.md)
+=======
+- [Getting Started](../../../GETTING_STARTED.md)
+- [Getting Started](../../../GETTING_STARTED.md)
+>>>>>>> .merge_file_QE5d84
+>>>>>>> laraxot/dev
 - [Coding Standards](./conventions/README.md)
 
 ### Per AI Agents
@@ -55,7 +68,7 @@ status: draft
 
 ### 📋 Standards
 - [Coding Conventions](./conventions/README.md)
-- [Documentation Standards](./DOCUMENTATION_GOVERNANCE.md)
+- [Documentation Standards](./documentation_governance.md)
 - [Git Workflow](./conventions/git-workflow.md)
 - [Naming Conventions](./conventions/naming.md)
 
@@ -68,8 +81,17 @@ status: draft
 
 ### 📊 Reports
 - [Status Reports](./reports/README.md)
-- [Quality Reports](./reports/quality.md)
+<<<<<<< HEAD
 - [Quality Reports](../../../roadmap/quality.md)
+- [Quality Reports](../../../roadmap/quality.md)
+=======
+<<<<<<< .merge_file_KLp0Mn
+- [Quality Reports](./reports/quality.md)
+=======
+- [Quality Reports](../../../roadmap/quality.md)
+- [Quality Reports](../../../roadmap/quality.md)
+>>>>>>> .merge_file_QE5d84
+>>>>>>> laraxot/dev
 - [Performance Reports](./reports/performance.md)
 
 ---
@@ -143,7 +165,7 @@ find docs -name "*.md" | xargs grep -l "keyword"
 ### 1. Zen of Documentation
 - **Goal**: Ridurre duplicazione e migliorare qualità
 - **Status**: 🟡 In Progress
-- **Docs**: [ZEN_OF_DOCUMENTATION.md](./ZEN_OF_DOCUMENTATION.md)
+- **Docs**: [ZEN_OF_DOCUMENTATION.md](./zen_of_documentation.md)
 - **Owner**: Multi-Agent Team
 
 ### 2. Multi-Block JSON Conversion
@@ -195,8 +217,8 @@ openviking get-context --query="documentation"
 4. Coordina tramite BMAD threads
 
 ### Per Contribuire
-1. Leggi [Documentation Governance](./DOCUMENTATION_GOVERNANCE.md)
-2. Segui [Zen of Documentation](./ZEN_OF_DOCUMENTATION.md)
+1. Leggi [Documentation Governance](./documentation_governance.md)
+2. Segui [Zen of Documentation](./zen_of_documentation.md)
 3. Aggiorna questo indice
 4. Esegui quality checks
 

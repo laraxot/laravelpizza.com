@@ -13,11 +13,13 @@ uses(TestCase::class);
 
 describe('Component', function (): void {
     test('ui components can be rendered', function (): void {
-        $component = new class extends Component
-        {
+        $component = new class extends Component {
             public function render(): View
             {
-                return view('ui::components.ui.button');
+                /** @var view-string $buttonView */
+                $buttonView = 'ui::components.ui.button';
+
+                return view($buttonView);
             }
         };
 
@@ -25,11 +27,15 @@ describe('Component', function (): void {
     });
 
     test('ui button component has correct attributes', function (): void {
-        Assert::assertInstanceOf(View::class, view('ui::components.ui.button'));
+        /** @var view-string $buttonView */
+        $buttonView = 'ui::components.ui.button';
+        Assert::assertInstanceOf(View::class, view($buttonView));
     });
 
     test('ui card component renders content', function (): void {
-        $view = view('ui::components.ui.card', [
+        /** @var view-string $cardView */
+        $cardView = 'ui::components.ui.card';
+        $view = view($cardView, [
             'title' => 'Test Card',
             'content' => 'Test Content',
         ]);

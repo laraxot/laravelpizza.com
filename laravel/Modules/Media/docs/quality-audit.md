@@ -8,10 +8,9 @@ type: report
 module: Media
 updated: 2026-09-01
 qmd: "audit qualita media phpstan phpmd phpinsights pest coverage soppressioni collisioni case"
-status: draft
 ---
 
-# Audit di qualita: modulo Media
+# Audit di qualita — modulo Media
 
 Misurato il 1 settembre 2026 a tree fermo. Ogni numero viene da un comando
 eseguito, non da una stima; i comandi sono in fondo, cosi la misura si puo
@@ -28,10 +27,10 @@ rifare e contestare.
 | Casi di test per file PHP | 1.27 |
 | `@phpstan-ignore` nel codice | 0 |
 | Rilievi PHPMD su `app/` | 171 |
-| PHPInsights: Code | 91.8 % |
-| PHPInsights: Complexity | 100.0 % |
-| PHPInsights: Architecture | 100.0 % |
-| PHPInsights: Style | 90.1 % |
+| PHPInsights — Code | 91.8 % |
+| PHPInsights — Complexity | 100.0 % |
+| PHPInsights — Architecture | 100.0 % |
+| PHPInsights — Style | 90.1 % |
 | File `.md` sotto `docs/` | 450 |
 | `TODO`/`FIXME`/`HACK` | 0 |
 | Test con casi che non girano (senza suffisso `Test.php`) | 0 |

@@ -4,7 +4,11 @@ type: index
 tags: [notify, docs, conventions]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify documentazione conventions readme 📏 coding conventions index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -330,7 +334,7 @@ Modules/ModuleName/
 
 **Links**: Use relative paths for internal
 ```markdown
-✅ [See Guide](./guides/setup.md)
+✅ [See Guide](../ai-agents/setup.md)
 ✅ [Architecture](../architecture/overview.md)
 ❌ [Guide](/var/www/.../guide.md)
 ```

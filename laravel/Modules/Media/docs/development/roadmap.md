@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "roadmap"
 related:
   - "./webm.md"
-status: draft
 ---
 # Media Module Roadmap
 
@@ -93,13 +92,13 @@ Overall Module Completion: 60%
 
 ## Collegamenti tra versioni di roadmap.md
 * [roadmap.md](bashscripts/docs/roadmap.md)
-* [roadmap.md](../roadmap.md)
+* [roadmap.md](docs/roadmap.md)
 * [roadmap.md](../../../Gdpr/docs/roadmap.md)
 * [roadmap.md](../../../Notify/docs/roadmap.md)
 * [roadmap.md](../../../xot/docs/roadmap.md)
 * [roadmap.md](../../../dental/docs/roadmap.md)
 * [roadmap.md](../../../User/docs/roadmap.md)
-* [roadmap.md](../../../ui/docs/roadmap.md)
+* [roadmap.md](../../../UI/docs/roadmap.md)
 * [roadmap.md](../../../Lang/docs/roadmap.md)
 * [roadmap.md](../../../Job/docs/roadmap.md)
 * [roadmap.md](../roadmap.md)

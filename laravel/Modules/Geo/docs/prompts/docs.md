@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "docs"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Docs
@@ -520,7 +519,7 @@ Ogni documento deve includere:
 - [Architecture Overview](../../docs/architecture-overview.md)
 - [Coding Standards](../../docs/coding-standards.md)
 - [Testing Guidelines](../../docs/testing-guidelines.md)
-- [Filament Best Practices](../raw/history/filament-best-practices.md)
+- [Filament Best Practices](../../docs/filament-best-practices.md)
 - [Translation Rules](../../docs/translation-rules.md)
 - [Frontend Guidelines](../../docs/frontend-guidelines.md)
 ```
@@ -594,7 +593,15 @@ find docs/ -name "*" | grep '[A-Z]' | grep -v "README.md"
 - [Filament Best Practices](../../docs/filament-best-practices.md)
 - [Translation Rules](../../docs/translation-rules.md)
 - [Frontend Guidelines](../../docs/frontend-guidelines.md)
+<<<<<<< HEAD
 - [Database Migrations](../../docs/database-migrations.md)
+=======
+<<<<<<< .merge_file_XBJwew
+- Database Migrations
+=======
+- [Database Migrations](../../docs/database-migrations.md)
+>>>>>>> .merge_file_ucuw8k
+>>>>>>> laraxot/dev
 - [Enum Management](../../docs/enum-management.md)
 - [HTML2PDF Guidelines](../../docs/html2pdf-guidelines.md)
 
@@ -623,5 +630,5 @@ find docs/ -name "*" | grep '[A-Z]' | grep -v "README.md"
 
 
 facciamo un recfactor radicale di tutte le cartelle docs, in ottica dry + kiss, ti ricordo che dentro le cartelle docs, ne i nomi dei files ne i nomi delle cartelle devono contenere caratteri maiuscoli ad eccezzione di README.md
-dentro le cartelle "docs" ne i nomi dei files ne i nomi delle sottocartelle di "docs" devono contenere caratteri maiuscoli , ad eccezzione di README.md , e non deve esistere readme.md scritto in minuscolo ! questa e' una regola che devi sempre ricordare, adesso va a controllare tutte le cartelle docs e sistemale
+dentro le cartelle "docs" ne i nomi dei files ne i nomi delle sottocartelle di "docs" devono contenere caratteri maiuscoli , ad eccezzione di README.md , e non deve esistere README.md scritto in minuscolo ! questa e' una regola che devi sempre ricordare, adesso va a controllare tutte le cartelle docs e sistemale
 ```

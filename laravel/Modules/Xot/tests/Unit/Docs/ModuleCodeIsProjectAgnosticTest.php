@@ -82,7 +82,7 @@ function forbiddenProjectNames(): array
 {
     // Progetti che condividono questi moduli. Aggiungerne uno qui e' il modo per
     // scoprire in un colpo solo dove il suo nome e' finito nel codice comune.
-    return ['fixcity', 'quaeris'];
+    return ['fixcity', '<nome progetto>'];
 }
 
 /**

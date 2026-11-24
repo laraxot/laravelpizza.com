@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "components"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Componenti del CMS
@@ -66,7 +65,7 @@ Il componente Page è uno dei componenti fondamentali del CMS. Per una documenta
 ## Vedi Anche
 - [Modulo UI](../../UI/docs/README.md) - Componenti UI riutilizzabili
 - [Namespace Componenti](namespace-componenti-blocchi.md) - Convenzioni di namespace
-- [Standard UI](standard-ui-components.md) - Standard per i componenti UI
+- [Standard UI](standard_ui_components.md) - Standard per i componenti UI
 
 ## Riferimenti ai File di Implementazione
 
@@ -75,10 +74,18 @@ Il componente Page è uno dei componenti fondamentali del CMS. Per una documenta
 - `laravel/Themes/*/resources/views/components/`
 
 ---
+title: "components"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "components"
+issues: []
+discussions: []
 @see laravel/Modules/Cms/docs/best-practices/page-rendering.md
 
 ## Collegamenti tra versioni di components.md
-* [components.md](../../UI/docs/components.md)
-* [components.md](../../UI/docs/themes/components.md)
+* [components.md](laravel/modules/ui/docs/components.md)
+* [components.md](laravel/modules/ui/docs/themes/components.md)
 * [components.md](laravel/modules/cms/docs/components.md)
 * [components.md](laravel/themes/one/docs/components.md)

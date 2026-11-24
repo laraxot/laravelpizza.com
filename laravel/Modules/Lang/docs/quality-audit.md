@@ -8,10 +8,9 @@ type: report
 module: Lang
 updated: 2026-09-01
 qmd: "audit qualita lang phpstan phpmd phpinsights pest coverage soppressioni collisioni case"
-status: draft
 ---
 
-# Audit di qualita: modulo Lang
+# Audit di qualita — modulo Lang
 
 Misurato il 1 settembre 2026 a tree fermo. Ogni numero viene da un comando
 eseguito, non da una stima; i comandi sono in fondo, cosi la misura si puo
@@ -28,10 +27,10 @@ rifare e contestare.
 | Casi di test per file PHP | 1.18 |
 | `@phpstan-ignore` nel codice | 0 |
 | Rilievi PHPMD su `app/` | 60 |
-| PHPInsights: Code | 94.1 % |
-| PHPInsights: Complexity | 100.0 % |
-| PHPInsights: Architecture | 92.9 % |
-| PHPInsights: Style | 85.2 % |
+| PHPInsights — Code | 94.1 % |
+| PHPInsights — Complexity | 100.0 % |
+| PHPInsights — Architecture | 92.9 % |
+| PHPInsights — Style | 85.2 % |
 | File `.md` sotto `docs/` | 1144 |
 | `TODO`/`FIXME`/`HACK` | 1 |
 | Test con casi che non girano (senza suffisso `Test.php`) | 0 |
@@ -50,7 +49,7 @@ da `ignoreErrors` e non vengono contate da nessun gate.
 
 ### La suite riscrive file tracciati
 
-Verificato il 31 agosto: una run di Pest su Lang riscrive `lang/en/*.php`: 7 file,
+Verificato il 31 agosto: una run di Pest su Lang riscrive `lang/en/*.php` — 7 file,
 3679 righe, con `declare(strict_types=1)` rimosso. La guardia in
 `app/Actions/SaveTransAction.php` copre una sola via di scrittura, e per giunta si
 disattiva da sola quando `bootstrap/cache/config.php` esiste (vedi `coverage.md`).
@@ -70,11 +69,11 @@ nemmeno raccolto: due file con lo stesso basename generano la stessa classe.
 Percorsi coinvolti:
 
 - `.github/SECURITY.md`
-- `.github/contributing.md`
+- `.github/CONTRIBUTING.md`
 
 ### 25 collisioni di case nei docs
 
-Coppie tipo `INDEX.md` e `index.md`. Sono documenti che divergono in silenzio:
+Coppie tipo `index.md` e `index.md`. Sono documenti che divergono in silenzio:
 nessun linter le segnala e chi legge non sa quale delle due e la buona.
 
 ## Coverage

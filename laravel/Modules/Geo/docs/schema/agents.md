@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "agents"
 issues: []
 discussions: []
-status: superseded
-superseded_by: AGENTS.md
 ---
 
 # AI Agent Instructions for LLM Wiki Management

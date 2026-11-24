@@ -1,7 +1,7 @@
 ---
 module: theme
 topic: security
-canonical: ../../../../../../Themes/docs/shared-components/security.md
+canonical: ../../../../../../Themes/docs/shared-components/SECURITY.md
 ---
 
-See canonical documentation: ../../../../../../Themes/docs/shared-components/security.md
+See canonical documentation: ../../../../../../Themes/docs/shared-components/SECURITY.md

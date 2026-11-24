@@ -4,7 +4,11 @@ type: concept
 module: Notify
 tags: [second-brain, stub, hackernoon, harness]
 created: 2026-06-05
+<<<<<<< HEAD
 updated: 2026-06-05
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify second brain stub canonical xot harness hackernoon llm-wiki"
 issues:
   - "https://github.com/laraxot/base_fixcity_fila5/issues/272"
@@ -14,11 +18,16 @@ related:
   - ../../../../Xot/docs/wiki/concepts/second-brain-local-discipline.md
   - ../../../../docs/wiki/concepts/ai-harness-module-discipline.md
   - ../../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
+discussions:
+  - "https://github.com/laraxot/base_fixcity_fila5/discussions/273"
+related:
+  - ../../../../Xot/docs/wiki/concepts/second-brain-local-discipline.md
+  - ../../../../docs/wiki/concepts/ai-harness-module-discipline.md
+  - ../../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
   - ../../../../../../bashscripts/tools/prompts/llm-wiki.txt
-status: draft
 ---
 
-# Contratto wiki locale: stub Notify
+# Contratto wiki locale — stub Notify
 
 | Risorsa | Link |
 |---------|------|

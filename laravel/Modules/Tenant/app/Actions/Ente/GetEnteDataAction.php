@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Tenant\Actions\Ente;
 
-use Illuminate\Support\Str;
 use Modules\Tenant\Datas\EnteData;
 use Spatie\QueueableAction\QueueableAction;
 
@@ -83,12 +82,12 @@ class GetEnteDataAction
         }
 
         // tolti i caratteri di controllo tranne a capo e tabulazione (l'indirizzo e gli orari possono andare su piu' righe)
-        return Str::of($value)->replaceMatches('/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/', '')->trim()->toString();
+        return trim(preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/', '', $value));
     }
 
     private function phone(string $value): string
     {
-        $digits = Str::of($value)->replaceMatches('/[\s.\-()\/]/', '')->toString();
+        $digits = preg_replace('/[\s.\-()\/]/', '', $value);
 
         return preg_match('/^\+?\d{3,15}$/', $digits) === 1 ? $value : '';
     }

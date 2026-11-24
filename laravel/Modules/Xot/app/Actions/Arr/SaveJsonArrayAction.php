@@ -10,6 +10,14 @@ use Spatie\QueueableAction\QueueableAction;
 use function Safe\file_put_contents;
 use function Safe\json_encode;
 
+<<<<<<< HEAD
+=======
+/**
+ * Scrive un array come JSON, creando la cartella se manca.
+ *
+ * @contract docs/contracts/save-json-array-action.md
+ */
+>>>>>>> laraxot/dev
 class SaveJsonArrayAction
 {
     use QueueableAction;

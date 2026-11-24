@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/phone.php
 // Cms txt.fields.phone — LangServiceProvider SSoT.
 return [
-    'label' => 'Telefono',
+    'label' => 'Phone',
     'placeholder' => '+39 000 000 0000',
-    'helper_text' => 'Numero di telefono principale',
+    'helper_text' => 'Main phone number',
     'tooltip' => '',
     'description' => '',
 ];

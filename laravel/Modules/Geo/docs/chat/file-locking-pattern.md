@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "file locking pattern"
 issues: []
 discussions: []
-status: draft
 ---
 
 # File Locking Pattern for Concurrent File Modifications
@@ -53,7 +52,7 @@ Creating `bashscripts/tools/file-lock-manager.sh` with:
 
 ## Use Cases in Monorepo
 
-1. **Module documentation updates:** When agents update `laravel/Modules/User/docs/INDEX.md`
+1. **Module documentation updates:** When agents update `laravel/Modules/User/docs/index.md`
 2. **Theme configuration:** Writing to `laravel/Themes/Zero/config.json`
 3. **Shared config files:** `.gitignore` blocks, composer.json, package.json
 4. **Wiki consolidation:** docs/wiki/ updates from multiple agent queries

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "polygon mysql"
 issues: []
 discussions: []
-status: draft
 ---
 
 SET @g = ST_GEOMFROMTEXT('POLYGON((11.0000000 46.0000000,11.0000000 45.0000000,13.0000000 45.0000000,13.0000000 46.0000000, 11.0000000 46.0000000))');

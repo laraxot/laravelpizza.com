@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "copilot redundancy audit"
 issues: []
 discussions: []
-status: draft
 ---
 
 Copilot Redundancy Audit — 2026-05-25

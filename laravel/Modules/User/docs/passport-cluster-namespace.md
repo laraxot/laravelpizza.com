@@ -8,19 +8,14 @@ qmd: "passport-cluster-namespace passport cluster - namespace fix"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Passport Cluster - Namespace Fix
@@ -253,7 +248,7 @@ find Modules/User/app/Filament/Clusters/Passport/Resources -name "*.php" -type f
 
 - [PSR-4 Autoloading Standard](https://www.php-fig.org/psr/psr-4/)
 - [Composer Autoload Documentation](https://getcomposer.org/doc/04-schema.md#psr-4)
-- [Laraxot Module Structure](../../Xot/docs/module-structure.md)
+- [Laraxot Module Structure](../../xot/docs/module-structure.md)
 - [Previous Implementation Doc](./passport-cluster-implementation-status.md)
 
 ---

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "testing testcase database connection fix"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Fix: Geo TestCase - Database Connection Configuration
@@ -92,10 +91,27 @@ protected function setUp(): void
 
 ## 🔗 Collegamenti
 
+<<<<<<< HEAD
 - [Testing Rules](testing-rules.md)
+=======
+<<<<<<< HEAD
+- [Testing Rules](testing-rules.md)
+=======
+- [Testing Rules](../testing-rules.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Activity TestCase Fix](../../../Activity/docs/testing-testcase-database-connection-fix.md)
 - [User TestCase](../../../User/tests/TestCase.php)
 
 ---
+
+title: "testing testcase database connection fix"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "testing testcase database connection fix"
+issues: []
+discussions: []
 **Status**: Completed
 **Risultato**: Test Geo ora configurano correttamente le connessioni database

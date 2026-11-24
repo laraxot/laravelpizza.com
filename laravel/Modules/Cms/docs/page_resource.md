@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: page_resource
 canonical: ../../../Themes/docs/shared-components/page-resource.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/page-resource.md

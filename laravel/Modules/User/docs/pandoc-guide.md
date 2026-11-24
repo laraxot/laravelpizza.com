@@ -1,11 +1,6 @@
 ---
 title: Pandoc Documentation Generation Guide
 description: How to convert module documentation to multiple formats using Pandoc
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "pandoc documentation generation user"
 ---
 
 # Pandoc Documentation Generation

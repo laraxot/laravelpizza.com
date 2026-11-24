@@ -3,7 +3,11 @@ title: "overview"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "overview"
 issues: []
 discussions: []
@@ -36,6 +40,6 @@ PTVX is a modular HR & Performance evaluation system built on Laravel + Filament
 - [General docs index](../../docs/README.md)
 - [Claude docs index](./context.md)
 - [Workflow](./workflow.md)
-- [PHPStan](./phpstan.md)
+- [PHPStan](../phpstan.md)
 - [Filament](./filament.md)
 - [MCP](./mcp.md)

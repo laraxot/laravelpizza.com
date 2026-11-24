@@ -3,11 +3,14 @@ title: "roadmap "
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "roadmap "
 issues: []
 discussions: []
-status: draft
 ---
 
 # Notify Module Roadmap 2026
@@ -25,6 +28,15 @@ Transform communication from a technical challenge into a **business superpower*
 - **Delivery Assurance**: No message lost, all deliveries tracked and verified
 
 ---
+
+title: "roadmap "
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "roadmap "
+issues: []
+discussions: []
 ## 📊 Current Architecture Assessment
 
 ### ✅ Architectural Strengths

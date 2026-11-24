@@ -1,15 +1,13 @@
 ---
-title: "navigation: Consolidated Documentation"
+title: "navigation — Consolidated Documentation"
 module: user
 type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
-qmd: "navigation   consolidated documentation user"
 ---
 
-# navigation: Consolidated Documentation
+# navigation — Consolidated Documentation
 
 Consolidated from **6** individual files.
 
@@ -32,14 +30,11 @@ module: theme
 topic: navigation-structure
 canonical: ../../../Themes/docs/shared-components/navigation-structure.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -62,14 +57,11 @@ qmd: "navigation-translations-completion navigation translations completion road
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -242,8 +234,7 @@ I file usano chiavi di traduzione nidificate che rimandano a chiavi principali:
 
 ## 📚 Documentazione Correlata
 
-- [Translation Standards](../../../../Xot/docs/translation-standards.md)
-- [Navigation Translations Fixes](../../../../Lang/docs/navigation-translations-fixes.md)
+- [Translation Standards](../../xot/docs/translation-standards.md)
 - [Navigation Translations Fixes](../../../../Lang/docs/navigation-translations-fixes.md)
 
 ---
@@ -267,14 +258,11 @@ qmd: "navigation-translations-fixes-january correzioni traduzioni navigation - g
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -466,11 +454,10 @@ Tutte le traduzioni seguono ora la struttura espansa completa:
 ## Collegamenti
 
 - [Filosofia Traduzioni Laraxot](../../Xot/docs/translation-philosophy.md)
-- [Standard Traduzioni](../../../../Xot/docs/translation-standards.md)
-- [Documentazione Modulo User](./readme.md)
+- [Standard Traduzioni](../../Xot/docs/translation-standards.md)
 - [Documentazione Modulo User](./readme.md)
 - [Filosofia Traduzioni Laraxot](../../xot/docs/translation-philosophy.md)
-- [Standard Traduzioni](../../../../Xot/docs/translation-standards.md)
+- [Standard Traduzioni](../../xot/docs/translation-standards.md)
 - [Documentazione Modulo User](./readme.md)
 
 ## Note Tecniche
@@ -498,14 +485,11 @@ qmd: "navigation-translations-fixes correzioni traduzioni navigation - gennaio 2
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -677,9 +661,8 @@ Tutte le traduzioni seguono ora la struttura espansa completa:
 ## Regole Applicate
 
 ### DRY (Don't Repeat Yourself)
-- [Regole Traduzioni Laraxot](../../../../Xot/docs/translation-rules.md)
+- [Regole Traduzioni Laraxot](../Xot/docs/translation-rules.md)
 - [Standard Qualità Traduzioni](../<nome progetto>/docs/translation-quality-standards.md)
-- [Documentazione Modulo User](readme.md)
 - [Documentazione Modulo User](readme.md)
 - Eliminata duplicazione di chiavi placeholder
 - Raggruppamento logico coerente
@@ -701,7 +684,7 @@ Tutte le traduzioni seguono ora la struttura espansa completa:
 ## Collegamenti
 
 - [Filosofia Traduzioni Laraxot](../../xot/docs/translation-philosophy.md)
-- [Standard Traduzioni](../../../../Xot/docs/translation-standards.md)
+- [Standard Traduzioni](../../xot/docs/translation-standards.md)
 - [Documentazione Modulo User](./readme.md)
 
 ## Note Tecniche
@@ -729,14 +712,11 @@ qmd: "navigation-translationses correzioni traduzioni navigation - modulo user"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -820,7 +800,7 @@ related:
 ## Collegamenti
 
 - [Audit Generale Traduzioni Navigation](../../../docs/navigation-translations-audit.md)
-- [Regole Traduzioni Laraxot](../../../../Xot/docs/translation-rules.md)
+- [Regole Traduzioni Laraxot](../xot/docs/translation-rules.md)
 - [Standard Qualità Traduzioni](../<nome progetto>/docs/translation-quality-standards.md)
 - [Documentazione Modulo User](readme.md)
 

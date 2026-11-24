@@ -216,7 +216,7 @@ trait IsProfileTrait
         // Si puo' invertire solo un ruolo che si ha gia' (criterio della vista del pulsante). Senza questo controllo l'azione Livewire pubblica
         // `SuperAdminWidget::toggleSuperAdmin()`, resa nel menu utente di ogni pannello, dava `super-admin` a qualsiasi utente (audit DCP-181, A-3).
         if (! $this->isSuperAdmin() && ! $this->isNegateSuperAdmin()) {
-            throw new AuthorizationException('Solo chi ha gia\' il ruolo super-admin o negate-super-admin puo\' cambiarlo.');
+            throw new AuthorizationException('Only users who already have the super-admin or negate-super-admin role can change it.');
         }
         $to_assign = 'super-admin';
         $to_remove = 'negate-super-admin';

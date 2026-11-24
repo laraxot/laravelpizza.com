@@ -20,7 +20,7 @@ github:
 related:
   - ./13.4.login-logout-widget-duplication.story.md
   - ./10.3.retire-auth-livewire-twins.story.md
-  - ../auth-widgets-view-namespaces-namespace-widget.md
+  - ../auth-widgets-view-namespaces-widget-autenticazione-namespace.md
   - ../wiki/log.md
   - ../../../../../bashscripts/ai/wiki/rules/filament-template-as-dress.md
   - ../../../../../bashscripts/ai/wiki/rules/filament-auth-widgets-rule.md
@@ -44,7 +44,15 @@ Fase BMAD: implementazione chiusa, in attesa di revisione. Story scritta prima d
 
 ## Richiesta
 
+<<<<<<< HEAD
 L'utente ha rilanciato PHPStan dopo il fix dei fatal in Quaeris e ha chiesto di risolvere i 2 errori rimasti seguendo prima linee guida, documentazione, story, issue e discussion. Davanti a due strade ha risposto: seguire sempre cio' che dice la convenzione.
+=======
+<<<<<<< HEAD
+L'utente ha rilanciato PHPStan dopo il fix dei fatal in Quaeris e ha chiesto di risolvere i 2 errori rimasti seguendo prima linee guida, documentazione, story, issue e discussion. Davanti a due strade ha risposto: seguire sempre cio' che dice la convenzione.
+=======
+L'utente ha rilanciato PHPStan dopo il fix dei fatal in <nome progetto> e ha chiesto di risolvere i 2 errori rimasti seguendo prima linee guida, documentazione, story, issue e discussion. Davanti a due strade ha risposto: seguire sempre cio' che dice la convenzione.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ```text
 User/app/Filament/Widgets/Auth/ForgotPasswordWidget.php:21
@@ -60,7 +68,7 @@ User/app/Filament/Widgets/Auth/ResetPasswordWidget.php:27
 | `bashscripts/ai/wiki/rules/filament-template-as-dress.md` (trigger map, riga "Filament Widget + template Blade") | Un widget che estende `XotBaseWidget` non dichiara `protected string $view` se segue la convenzione. La vista la risolve `XotBaseWidget::resolveView()` con `GetViewByClassAction`: prima `pub_theme::...`, poi `modulo::...`. Il blade mostra il form con `{{ $this->form }}`. |
 | `bashscripts/ai/wiki/memories/feedback_no_protected_view_xot_basewizard.md` | Un `$view` scritto a mano non e' innocuo: scavalca la risoluzione automatica e puo' bloccare l'override del tema. |
 | Trigger map, riga "XotBaseWidget: no `$view` sul dominio (`GetViewByClassAction`)" | Stessa regola. La pagina di concetto che cita non esiste in questo repository. |
-| `laravel/Modules/User/docs/auth-widgets-view-namespaces-namespace-widget.md` | Le viste dei widget di autenticazione devono poter essere personalizzate dal tema (`pub_theme::`). |
+| `laravel/Modules/User/docs/auth-widgets-view-namespaces-widget-autenticazione-namespace.md` | Le viste dei widget di autenticazione devono poter essere personalizzate dal tema (`pub_theme::`). |
 | `bashscripts/ai/wiki/rules/filament-auth-widgets-rule.md` | I form di autenticazione sono widget Filament del modulo User, non Blade o Volt scritti a mano. |
 | Issue [module_user_fila5#18](https://github.com/laraxot/module_user_fila5/issues/18), chiusa | Stesso errore su `LoginWidget`. Avverte: se il file blade non esiste, il valore e' sbagliato a prescindere da PHPStan. |
 | Issue [module_user_fila5#25](https://github.com/laraxot/module_user_fila5/issues/25) e discussion [#26](https://github.com/laraxot/module_user_fila5/discussions/26), aperte | Migrazione dei 6 widget auth a `formClass()` e `schemaMethod()`. Non trattano le viste. |
@@ -189,7 +197,15 @@ L'ultimo test monta il widget con Livewire e controlla che nell'HTML ci sia `wir
 
 PHPStan su tutto `Modules`, lo stesso comando dell'utente, finito alle 12:34 CEST: `exit=0`, nessun errore.
 
+<<<<<<< HEAD
 PHPMD: il modulo User non ha un ruleset. Con quello di Quaeris escono due note, entrambe in metodi non toccati e gia' presenti in `HEAD`:
+=======
+<<<<<<< HEAD
+PHPMD: il modulo User non ha un ruleset. Con quello di Quaeris escono due note, entrambe in metodi non toccati e gia' presenti in `HEAD`:
+=======
+PHPMD: il modulo User non ha un ruleset. Con quello di <nome progetto> escono due note, entrambe in metodi non toccati e gia' presenti in `HEAD`:
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ```text
 ForgotPasswordWidget.php  ElseExpression         The method sendResetLink uses an else expression.

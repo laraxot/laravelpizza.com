@@ -1,4 +1,5 @@
 ---
+qmd: "activity redundancy audit md"
 title: "Activity redundancy audit 2026-05-21"
 type: audit
 module: Activity
@@ -6,9 +7,6 @@ tags: [redundancy, duplicate-code, docs]
 created: 2026-05-21
 related:
   - https://github.com/laraxot/base_fixcity_fila5/issues/89
-status: draft
-updated: 2026-10-07
-qmd: "activity redundancy audit 2026-05-21 activity"
 ---
 
 # Activity redundancy audit 2026-05-21

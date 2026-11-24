@@ -88,14 +88,14 @@ Rischio: i test che asseriscono le stringhe inglesi vanno aggiornati (lo dice gi
 
 ## Verifica
 
-1. `cd /mnt/nas07/var/www/_bases/base_quaeris_fila5/laravel/Modules/User && rg -c -P -e "$PA" app/Filament --glob '*.php' | awk -F: '{s+=$2;n++} END{print n" file, "s" righe"}'` dopo ogni tranche.
+1. `cd /mnt/nas07/var/www/_bases/base_<nome progetto>_fila5/laravel/Modules/User && rg -c -P -e "$PA" app/Filament --glob '*.php' | awk -F: '{s+=$2;n++} END{print n" file, "s" righe"}'` dopo ogni tranche.
 2. Lo script lang sui file della tranche, nelle tre lingue.
 3. Test del pannello solo dopo guardia e verdetto utente; fino ad allora nessuno (Pest fermo).
 
 ## Vincoli
 
-- PHPStan: unica config `laravel/phpstan.neon`, la modifica solo l'utente; mai altri `.neon`, mai `-c`/`--level`, nessun baseline/ignore. Ogni invocazione passa dal gate condiviso: `cd laravel && flock -w 1500 /tmp/claude-1000/-mnt-nas07-var-www--bases-base-quaeris-fila5/aeabb365-8395-48f4-b7d4-9fbb17ad85d3/scratchpad/phpstan-gate.lock nice -n 10 ./vendor/bin/phpstan analyse <path...> --memory-limit=2G --no-progress --error-format=raw` (max ~8 file o un modulo; `analyse Modules` intero solo dopo il "run completo finito" dell'altra sessione).
-- Pest e PHPUnit FERMI: il 2026-10-20 `RefreshDatabase` ha fatto `migrate:fresh` su `quaeris_data_test`. Si riprende solo quando la guardia DB e' dentro (story `laravel/Modules/Xot/docs/stories/test-database-guard.story.md`) e l'utente ha confermato che i DB `*_test` sono usa-e-getta. Fino ad allora la verifica e' PHPStan + `php -l` + lettura.
+- PHPStan: unica config `laravel/phpstan.neon`, la modifica solo l'utente; mai altri `.neon`, mai `-c`/`--level`, nessun baseline/ignore. Ogni invocazione passa dal gate condiviso: `cd laravel && flock -w 1500 /tmp/claude-1000/-mnt-nas07-var-www--bases-base-<nome progetto>-fila5/aeabb365-8395-48f4-b7d4-9fbb17ad85d3/scratchpad/phpstan-gate.lock nice -n 10 ./vendor/bin/phpstan analyse <path...> --memory-limit=2G --no-progress --error-format=raw` (max ~8 file o un modulo; `analyse Modules` intero solo dopo il "run completo finito" dell'altra sessione).
+- Pest e PHPUnit FERMI: il 2026-10-20 `RefreshDatabase` ha fatto `migrate:fresh` su `<nome progetto>_data_test`. Si riprende solo quando la guardia DB e' dentro (story `laravel/Modules/Xot/docs/stories/test-database-guard.story.md`) e l'utente ha confermato che i DB `*_test` sono usa-e-getta. Fino ad allora la verifica e' PHPStan + `php -l` + lettura.
 - Concorrenza: altre sessioni scrivono nello stesso repo. Prima di scrivere un file esistente: `bashscripts/lock/check.sh <f> && [ $(( $(date +%s) - $(stat -c %Y <f>) )) -gt 120 ] && bashscripts/lock/lock.sh <f>`; un solo agente PHP per modulo; niente commit, reset, checkout, stash.
 - zsh non divide `$VAR` in argomenti: usa array (`A=(x y); cmd $A`) o `xargs -a`. Un pattern `rg` che inizia con `-` richiede `-e`. Un `0` va sempre controprovato (rg -P piu' un secondo metodo).
 - Docs: artefatti BMAD solo in `laravel/Modules/<M>/docs/`; nomi senza date; nessun Service (`app/Services` vietata, logica in Spatie QueueableAction con `execute()`); Filament: solo basi `XotBase*`, logica nelle Actions, nessuna stringa UI hardcoded (chiavi in `lang/`).
@@ -109,6 +109,6 @@ Rischio: i test che asseriscono le stringhe inglesi vanno aggiornati (lo dice gi
 
 ## Come ripartire
 
-1. `cd /mnt/nas07/var/www/_bases/base_quaeris_fila5/laravel/Modules/User && rg -c -P -e "$PA" app/Filament --glob '*.php'` (definire `$PA` come sopra): confermare 83 righe e 19 file.
+1. `cd /mnt/nas07/var/www/_bases/base_<nome progetto>_fila5/laravel/Modules/User && rg -c -P -e "$PA" app/Filament --glob '*.php'` (definire `$PA` come sopra): confermare 83 righe e 19 file.
 2. `sed -n 15,80p app/Filament/Resources/TenantResource/Schemas/TenantForm.php` e `sed -n 1,60p lang/it/tenant_form.php`: partire dalla tranche T1 (decisione 2 prima).
 3. Scrivere le chiavi in `lang/{it,en,de}/tenant_form.php`, sostituire le 14 stringhe con `__('user::tenant_form.fields.<campo>.<tipo>')`, poi `php -l`, lo script lang e PHPStan.

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use Modules\Notify\Models\InboundEmail;
 use Modules\Notify\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
@@ -18,7 +19,11 @@ test('inbound webhook rejects requests without valid token', function (): void {
         'To' => 'noreply@fixcity.eu',
         'Subject' => 'Test',
     ])->assertUnauthorized();
+<<<<<<< HEAD
 });
+=======
+})->group('NOTIFY-INBOUND-INV-1');
+>>>>>>> laraxot/dev
 
 test('inbound webhook rejects requests when token is not configured', function (): void {
     config(['notify.notify.inbound_token' => null]);
@@ -27,7 +32,11 @@ test('inbound webhook rejects requests when token is not configured', function (
         'MessageID' => 'abc@postmarkapp.com',
         'From' => 'sender@example.com',
     ])->assertUnauthorized();
+<<<<<<< HEAD
 });
+=======
+})->group('NOTIFY-INBOUND-INV-1');
+>>>>>>> laraxot/dev
 
 test('inbound webhook stores postmark payload', function (): void {
     $response = $this->postJson('/api/inbound/postmark/test-secret-token', [
@@ -49,8 +58,8 @@ test('inbound webhook stores postmark payload', function (): void {
         ->where('message_id', 'msg-123@postmarkapp.com')
         ->first();
 
-    expect($email)->not->toBeNull()
-        ->and($email->from_email)->toBe('mario@example.com')
+    Assert::assertInstanceOf(InboundEmail::class, $email);
+    expect($email->from_email)->toBe('mario@example.com')
         ->and($email->from_name)->toBe('Mario Rossi')
         ->and($email->to_email)->toBe('noreply@fixcity.eu')
         ->and($email->subject)->toBe('Segnalazione guasto')

@@ -16,8 +16,6 @@ related:
   - "./passport.md"
   - "./payment.md"
   - "./phpstan.md"
-status: superseded
-superseded_by: ../repos.md
 ---
 
 # repos

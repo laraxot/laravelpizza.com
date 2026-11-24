@@ -1,12 +1,10 @@
 ---
 title: "Architettura di un <nome progetto>ion Market"
+qmd: "activity use cases prediction market 02 architettura md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "architettura di un <nome progetto>ion market activity"
-status: superseded
-superseded_by: architettura.md
+tags: [documentation]
 ---
+
 # Architettura di un <nome progetto>ion Market
 
 ## Pattern Principali

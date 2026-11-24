@@ -1,22 +1,25 @@
 ---
-qmd: "qwen.divergenza"
+qmd: "Qwen.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: QWEN.md"
+title: "Qwen.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
-# Divergenza: `QWEN.md`
+# Divergenza: `qwen.md`
 
-Questo file veniva da `docs/wiki/integrations/modules/notify/QWEN.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+Questo file veniva da `docs/wiki/integrations/modules/notify/qwen.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
 
-- versione del modulo: `laravel/Modules/Notify/docs/QWEN.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/QWEN.md`
+- versione del modulo: `laravel/Modules/Notify/docs/qwen.md`
+- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/qwen.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 

@@ -78,7 +78,10 @@ trait HasExtraTrait
     /**
      * Persist a schemaless attribute on the related Extra model.
      *
-     * @param  array<string, mixed>|bool|float|int|string|null  $value
+     * Accetta liste e mappe, come `getExtra()` le restituisce: il round-trip non
+     * deve perdere elementi (vedi `HasExtraTraitTest`, che salva e rilegge una lista).
+     *
+     * @param  array<array-key, mixed>|bool|float|int|string|null  $value
      */
     public function setExtra(string $name, array|bool|float|int|string|null $value): void
     {

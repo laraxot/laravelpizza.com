@@ -86,5 +86,17 @@ return [
         'revoke' => [
             'label' => 'Revoke',
         ],
+<<<<<<< HEAD
+        'create_personal' => [
+            'label' => 'New personal access client',
+        ],
+        'create_password' => [
+            'label' => 'New password grant client',
+        ],
+        'create_client_credentials' => [
+            'label' => 'New client credentials client',
+        ],
+=======
+>>>>>>> laraxot/dev
     ],
 ];

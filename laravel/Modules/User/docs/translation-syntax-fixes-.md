@@ -1,11 +1,3 @@
----
-title: "Correzioni Errori di Sintassi nei File di Traduzione - 2025"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "correzioni errori di sintassi nei file di traduzione - 2025 user"
----
 # Correzioni Errori di Sintassi nei File di Traduzione - 2025
 
 ## Data
@@ -139,14 +131,11 @@ module: theme
 topic: translation-syntax-fixes-
 canonical: ../../../Themes/docs/shared-components/translation-syntax-fixes.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"

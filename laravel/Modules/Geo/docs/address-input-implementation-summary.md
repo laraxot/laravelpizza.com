@@ -3,11 +3,14 @@ title: "address input implementation summary"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "address input implementation summary"
 issues: []
 discussions: []
-status: draft
 ---
 
 # AddressInput Component Implementation Summary
@@ -57,7 +60,7 @@ Created a **proper Filament Form Component** `AddressInput` that extends `Field`
 | `Modules/Fixcity/app/Filament/Widgets/CreateTicketWizardWidget.php` | Added `->label()` and `->required()` to AddressInput usage |
 | `Modules/Geo/docs/address-field-component.md` | Updated to document both AddressInput and AddressField |
 | `Modules/Geo/docs/address-input-component.md` | Created detailed component documentation |
-| `Modules/Geo/docs/components/INDEX.md` | Updated component index with new architecture |
+| `Modules/Geo/docs/components/index.md` | Updated component index with new architecture |
 | `Modules/Geo/docs/README.md` | Updated README with component usage |
 
 ### Usage (Correct Pattern)
@@ -120,4 +123,4 @@ All documentation has been updated to reflect:
 - [AddressInput Component Docs](../../../Modules/Geo/docs/address-input-component.md)
 - [Address Components Overview](../../../Modules/Geo/docs/address-field-component.md)
 - [Module Boundary Philosophy](../../../Modules/Fixcity/docs/MODULE-BOUNDARY-PHILOSOPHY.md)
-- [Geo Components Index](components/index.md)
+- [Geo Components Index](../../../Modules/Geo/docs/components/index.md)

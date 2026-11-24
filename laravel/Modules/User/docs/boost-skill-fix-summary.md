@@ -8,19 +8,14 @@ qmd: "boost-skill-fix-summary boost skill fix summary - user module"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Boost Skill Fix Summary - User Module
@@ -70,7 +65,7 @@ Critical dependencies for User module:
 
 - `/docs/BOOST_SKILL_INSTALLATION_ERROR.md` - Issue analysis
 - `/docs/BOOST_SKILL_SOLUTION_PLAN.md` - Solution plan
-- `Modules/Xot/docs/BOOST_SKILL_FIX_SUMMARY.md` - Core module fix
+- `Modules/Xot/docs/boost_skill_fix_summary.md` - Core module fix
 
 ## Lessons Learned
 

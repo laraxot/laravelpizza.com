@@ -333,10 +333,10 @@ Questo crea un senso di depth e separazione dal contenuto della pagina.
 ```bash
 cd laravel/Themes/Meetup/
 npm run build
-# niente copy: public_html/themes/Meetup è un symlink a public/
+npm run copy
 ```
 
-**Importante:** Le modifiche CSS/JS non sono visibili nel browser senza eseguire `npm run build`!
+**Importante:** Le modifiche CSS/JS non sono visibili nel browser senza eseguire `npm run build` e `npm run copy`!
 
 ### Riferimenti
 
@@ -376,11 +376,11 @@ in http://127.0.0.1:8000/it/auth/register hai fatto un form in mezzo allo scherm
 
 
 
-niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+se devi fare operazioni css/js ti ricordo che devi andare sulla cartella laravel/Themes/Meetup  fare composer update -W , npm install, npm run build , poi per vedere pubblicare le modifiche npm run copy ,
 
 **NOTA CORRETTIVA (13 Febbraio 2026)**: Questo workflow completo è ridondante per semplici modifiche CSS/JS:
-- **Per modifiche CSS/JS standard**: `npm run build` (solo questo!)
-- **Per setup iniziale o modifiche PHP**: `composer update -W`, `npm install`, `npm run build`
+- **Per modifiche CSS/JS standard**: `npm run build && npm run copy` (solo questo!)
+- **Per setup iniziale o modifiche PHP**: `composer update -W`, `npm install`, `npm run build`, `npm run copy`
 - `composer update -W` aggiorna solo dipendenze PHP, non serve per CSS/JS
 - `npm install` serve solo se package.json è stato modificato
 

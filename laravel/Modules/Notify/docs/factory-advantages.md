@@ -3,7 +3,11 @@ title: "factory advantages"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "factory advantages"
 issues: []
 discussions: []
@@ -16,14 +20,14 @@ Questo documento analizza il pattern Factory attualmente implementato  per la se
 
 ## Soluzione Attuale: Pattern Factory
 
-Quaeris implementa un pattern Factory ottimale attraverso `SmsActionFactory`:
+<nome progetto> implementa un pattern Factory ottimale attraverso `SmsActionFactory`:
 
 ```php
 // SmsActionFactory.php
 public function create(?string $driver = null): SmsActionInterface
 {
     $driver = $driver ?? Config::get('sms.default', 'smsfactor');
-    
+
     return match ($driver) {
         'smsfactor' => app(SendSmsFactorSMSAction::class),
         'twilio' => app(SendTwilioSMSAction::class),
@@ -53,7 +57,7 @@ L'alternativa sarebbe integrare questa logica nel DTO:
 public function getProviderAction(): SmsActionInterface
 {
     $driver = $this->provider ?? Config::get('sms.default', 'smsfactor');
-    
+
     return match ($driver) {
         'smsfactor' => app(SendSmsFactorSMSAction::class),
         // Altri provider...
@@ -87,11 +91,11 @@ public function getProviderAction(): SmsActionInterface
 
 ## Perché il Pattern Factory è Superiore
 
-Il pattern Factory offre numerosi vantaggi che superano di gran lunga i suoi svantaggi, soprattutto in progetti complessi come Quaeris:
+Il pattern Factory offre numerosi vantaggi che superano di gran lunga i suoi svantaggi, soprattutto in progetti complessi come <nome progetto>:
 
 1. **Open/Closed Principle**: Permette di estendere il sistema (aggiungendo nuovi provider) senza modificare il codice esistente, soddisfacendo il principio Open/Closed di SOLID.
 
-2. **Coerenza nell'Architettura**: Si allinea con l'architettura modulare di Quaeris, dove ogni componente ha una responsabilità chiara e specifica.
+2. **Coerenza nell'Architettura**: Si allinea con l'architettura modulare di <nome progetto>, dove ogni componente ha una responsabilità chiara e specifica.
 
 3. **Flessibilità nella Selezione**: Permette di implementare logiche complesse di selezione del provider (es. fallback, round-robin, basato su regole) senza cambiare il DTO o il Channel.
 
@@ -119,6 +123,6 @@ Il pattern Factory attualmente implementato  per la selezione dei provider SMS �
 - **Manutenibilità**: Centralizza le modifiche relative alla selezione dei provider
 - **Estendibilità**: Facilita l'aggiunta di nuovi provider SMS
 
-Questa scelta architetturale è coerente con i principi SOLID e con l'architettura modulare di Quaeris, garantendo un sistema flessibile, manutenibile e facilmente estendibile nel tempo.
+Questa scelta architetturale è coerente con i principi SOLID e con l'architettura modulare di <nome progetto>, garantendo un sistema flessibile, manutenibile e facilmente estendibile nel tempo.
 
 Rispetto all'alternativa di spostare la logica nel DTO, il pattern Factory offre vantaggi che superano del 30-40% i suoi svantaggi, mentre spostare la logica nel DTO comporterebbe svantaggi che superano del 60-70% i potenziali vantaggi.

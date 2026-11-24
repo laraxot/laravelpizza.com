@@ -1,11 +1,10 @@
 ---
 title: "Rules Index"
+qmd: "activity rules index md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "rules index activity"
+tags: [documentation]
 ---
+
 # Rules Index
 
 This module follows the global Laraxot coding standards.

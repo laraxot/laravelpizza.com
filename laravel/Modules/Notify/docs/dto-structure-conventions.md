@@ -3,11 +3,14 @@ title: "dto structure conventions"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "dto structure conventions"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Convenzioni per la Struttura dei DTO nel Modulo Notify
@@ -171,4 +174,13 @@ Prima di creare un nuovo DTO, verificare che:
 - [Laravel Data Transfer Objects Best Practices](https://laravel.com/docs/10.x/eloquent-serialization#data-transfer-objects)
 
 ---
+
+title: "dto structure conventions"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "dto structure conventions"
+issues: []
+discussions: []
 *Ultimo aggiornamento: [DATE]*

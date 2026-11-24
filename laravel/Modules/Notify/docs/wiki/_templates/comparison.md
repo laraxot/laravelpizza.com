@@ -7,10 +7,13 @@ type: comparison
 sources: ["raw/articles/source-1.md", "raw/articles/source-2.md"]
 confidence: medium
 created: {{date}}
+<<<<<<< HEAD
 updated: {{date}}
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 tags: [comparison, analysis]
 related: []
-status: draft
 ---
 
 # {{title}}

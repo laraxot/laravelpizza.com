@@ -224,7 +224,7 @@ Based on user selection, route to appropriate workflow:
 
   ## ▶ Next Up
 
-  **{phase}-{plan}: [Plan Name]** — [objective from PLAN.md]
+  **{phase}-{plan}: [Plan Name]** — [objective from plan.md]
 
   `/gsd-execute-phase {phase}`
 
@@ -238,7 +238,7 @@ Based on user selection, route to appropriate workflow:
 
   ## ▶ Next Up
 
-  **Phase [N]: [Name]** — [Goal from ROADMAP.md]
+  **Phase [N]: [Name]** — [Goal from roadmap.md]
 
   `/gsd-plan-phase [phase-number]`
 
@@ -282,7 +282,7 @@ If STATE.md is missing but other artifacts exist:
 "STATE.md missing. Reconstructing from artifacts..."
 
 1. Read PROJECT.md → Extract "What This Is" and Core Value
-2. Read ROADMAP.md → Determine phases, find current position
+2. Read roadmap.md → Determine phases, find current position
 3. Scan \*-SUMMARY.md files → Extract decisions, concerns
 4. Count pending todos in .planning/todos/pending/
 5. Check for .continue-here files → Session continuity

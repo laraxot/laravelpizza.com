@@ -1,11 +1,3 @@
----
-title: "Risoluzione Conflitti PasswordResetWidget.php"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "risoluzione conflitti passwordresetwidget.php user"
----
 # Risoluzione Conflitti PasswordResetWidget.php
 
 ## Contesto del Conflitto
@@ -97,7 +89,19 @@ Verificare che:
 - Altri widget di autenticazione abbiano componenti simili per coerenza
 
 ## Collegamenti
+<<<<<<< HEAD
 - [User Module Documentation](README.md)
+=======
+<<<<<<< HEAD
+- [User Module Documentation](readme.md)
+=======
+<<<<<<< .merge_file_3n6iMX
+- [User Module Documentation](./README.md)
+=======
+- [User Module Documentation](README.md)
+>>>>>>> .merge_file_uwV21y
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Authentication Widgets Guide](auth_widgets.md)
 - [Filament Form Components](filament_form_components.md)
 - [Root Conflict Resolution Guidelines](../../../docs/conflict-resolution-guidelines.md)

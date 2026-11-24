@@ -24,8 +24,17 @@ class TemporaryUploadsTable extends XotBaseResourceTable
     {
         return [
             'id' => IDColumn::make('id')->searchable()->sortable(),
+<<<<<<< HEAD
+            'file_name' => TextColumn::make('file_name')->searchable()->placeholder('—'),
+            'mime_type' => TextColumn::make('mime_type')->placeholder('—')->toggleable(),
+            'file_size' => TextColumn::make('file_size')->numeric()->placeholder('—')->toggleable(),
+            'status' => TextColumn::make('status')->badge(),
+            'created_at' => TextColumn::make('created_at')->dateTime()->sortable(),
+            'updated_at' => TextColumn::make('updated_at')->dateTime()->toggleable(isToggledHiddenByDefault: true),
+=======
             'created_at' => TextColumn::make('created_at')->dateTime(),
             'updated_at' => TextColumn::make('updated_at')->dateTime(),
+>>>>>>> laraxot/dev
         ];
     }
 
@@ -35,8 +44,15 @@ class TemporaryUploadsTable extends XotBaseResourceTable
     public function getTableFilters(): array
     {
         return [
+<<<<<<< HEAD
+            // La tabella temporary_uploads non ha una colonna "folder" (il filtro precedente dava errore 500):
+            // si filtra per stato dell'upload.
+            'status' => SelectFilter::make('status')->options(
+                static fn (): array => TemporaryUpload::query()->distinct()->whereNotNull('status')->pluck('status', 'status')->toArray(),
+=======
             'folder' => SelectFilter::make('folder')->options(
                 static fn (): array => TemporaryUpload::query()->distinct()->pluck('folder', 'folder')->toArray(),
+>>>>>>> laraxot/dev
             ),
         ];
     }

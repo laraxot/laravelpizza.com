@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "auth form standards"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Standard Form di Autenticazione

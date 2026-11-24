@@ -274,7 +274,7 @@ get-shit-done/
 - Special/generated directories
 
 **What does NOT belong here:**
-- Conceptual architecture (that's ARCHITECTURE.md)
+- Conceptual architecture (that's architecture.md)
 - Technology stack (that's STACK.md)
 - Code implementation details (defer to code reading)
 - Every single file (focus on directories and key files)

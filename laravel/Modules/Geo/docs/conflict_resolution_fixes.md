@@ -3,12 +3,14 @@ title: "conflict resolution fixes"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "conflict resolution fixes"
 issues: []
 discussions: []
-status: superseded
-superseded_by: conflict-resolutiones.md
 ---
 
 # Risoluzione Conflitti Git - Modulo Geo
@@ -47,7 +49,11 @@ use Filament\Tables\Table;
 
 ## Metodologia di Risoluzione
 1. **Identificazione**: Script automatico per trovare tutti i marker 
+<<<<<<< HEAD
 2. **Selezione**: Sempre "current change" (contenuto tra `=======` e `>>>>>>>`)
+=======
+2. **Selezione**: Sempre "current change" (contenuto tra `-------` e `CONFLICT_END`)
+>>>>>>> laraxot/dev
 3. **Backup**: Backup automatico prima delle modifiche
 4. **Verifica**: Controllo che non rimangano marker di conflitto
 

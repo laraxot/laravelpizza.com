@@ -70,8 +70,8 @@ Se esegui `migrate --force` in produzione:
 ## Regole Correlate
 
 - [Forward-Only Philosophy](docs/claude/project-rules-summary.md)
-- [QWEN.md](QWEN.md) - Sezione 7: Database SACRO
-- [AGENTS.md](AGENTS.md) - Regola Critica
+- [qwen.md](qwen.md) - Sezione 7: Database SACRO
+- [AGENTS.md](agents.md) - Regola Critica
 
 ---
 

@@ -203,7 +203,7 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 - [Jetstream Integration](./jetstream_integration.md)
 
 ### Moduli Collegati
-- [Quaeris Module](../../Quaeris/docs/modelli-factory-seeder-analisi-saluteora-module.md)
+- [<nome progetto> Module](../../<nome progetto>/docs/modelli-factory-seeder-analisi-saluteora-module.md)
 - [Tenant Module](../../tenant/docs/modelli-factory-seeder-analisi-saluteora-module.md)
 - [Notify Module](../../notify/docs/modelli-factory-seeder-analisi-saluteora-module.md)
 

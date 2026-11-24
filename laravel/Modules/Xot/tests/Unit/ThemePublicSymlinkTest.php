@@ -5,6 +5,10 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Unit;
 
 use Modules\Xot\Tests\TestCase;
+<<<<<<< HEAD
+=======
+use Symfony\Component\Process\Process;
+>>>>>>> laraxot/dev
 
 use function Safe\file_get_contents;
 use function Safe\glob;
@@ -109,3 +113,27 @@ it('nessun tema conserva lo script npm copy', function (?string $link, ?string $
 
     expect(file_get_contents($packageJson))->not->toContain('"copy"');
 })->with(publicAssetLinks('themes', 'Themes/*/public', false));
+<<<<<<< HEAD
+=======
+
+it('il repo base non versiona copie ne link in public_html/assets e public_html/themes', function (): void {
+    $repoRoot = themePublicSymlinkRepoRoot();
+    if (! is_dir($repoRoot.'/.git') && ! is_file($repoRoot.'/.git')) {
+        $this->markTestSkipped('Repository git non disponibile in questo ambiente.');
+    }
+
+    $process = new Process(['git', 'ls-files', '--', 'public_html/assets', 'public_html/themes'], $repoRoot);
+    $process->run();
+    if (! $process->isSuccessful()) {
+        $this->markTestSkipped('git ls-files non eseguibile: '.$process->getErrorOutput());
+    }
+
+    $tracked = array_values(array_filter(explode("\n", trim($process->getOutput()))));
+
+    // Issue #264: gli asset si versionano nel repo del modulo/tema; nel base solo i .gitignore che elencano i link.
+    expect($tracked)->toBe([
+        'public_html/assets/.gitignore',
+        'public_html/themes/.gitignore',
+    ]);
+});
+>>>>>>> laraxot/dev

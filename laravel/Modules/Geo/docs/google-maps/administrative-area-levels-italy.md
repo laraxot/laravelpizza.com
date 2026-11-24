@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "administrative area levels italy"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Google Maps Administrative Area Levels - Italy Mapping

@@ -8,22 +8,17 @@ qmd: "copilot-redundancy-audit copilot redundancy audit"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
-Copilot Redundancy Audit: 2026-05-25
+Copilot Redundancy Audit — 2026-05-25
 
 Sintesi
 - Scansione preliminare mostra ridondanze documentali e duplicatione di traduzioni e config (es.: README.md, index.md, validation.php).
@@ -37,3 +32,16 @@ Note per il team
 - Questo file è un punto di partenza; si consiglia una review manuale per decidere le consolidazioni.
 
 Autore: Copilot CLI
+<<<<<<< HEAD
+=======
+
+
+---
+
+<!-- Contenuto unito da copilot-redundancy-audit-.md (rimozione date dai nomi file, issue #64) -->
+
+<!-- recovery from broken basename `copilot-redundancy-audit-.md` after docs-guardian mass rename -->
+
+Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file evita nomi `*-.md`.
+
+>>>>>>> laraxot/dev

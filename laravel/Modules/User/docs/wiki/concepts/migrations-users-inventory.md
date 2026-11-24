@@ -16,7 +16,6 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-status: draft
 ---
 
 # Inventario migration User
@@ -33,7 +32,7 @@ Pattern dominante: `XotBaseMigration` con blocco **create** (`tableCreate`) + **
 | create | Solo creazione tabella |
 | update | Solo alter (es. colonna `lang` su `users`) |
 | altro | Schema builder diretto o file non standard |
-| non attivo | Suffisso `.fortify`, `.wip`, `.old`: Laravel non li carica |
+| non attivo | Suffisso `.fortify`, `.wip`, `.old` — Laravel non li carica |
 
 ## Duplicati noti (non archiviati)
 

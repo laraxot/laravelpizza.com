@@ -3,7 +3,11 @@ title: "replikate phase 1 complete"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "replikate phase 1 complete"
 issues: []
 discussions: []
@@ -70,7 +74,7 @@ discussions: []
 |----------|---------|--------|
 | `replikate.txt` | Execution protocol | ✅ Complete |
 | `homepage-structure-diff.md` | Detailed analysis + fixes | ✅ Complete |
-| `00-INDEX.md` | Navigation hub | ✅ Complete |
+| `00-index.md` | Navigation hub | ✅ Complete |
 
 #### Automation
 | Script | Purpose | Status |
@@ -158,7 +162,7 @@ laravel/Themes/Sixteen/
 │   ├── prompts/
 │   │   └── replikate.txt              ← PROTOCOL
 │   └── design-comuni/
-│       ├── 00-INDEX.md                ← HUB
+│       ├── 00-index.md                ← HUB
 │       ├── 00-index.md                ← HUB
 │       ├── pages/
 │       │   └── homepage-structure-diff.md
@@ -272,7 +276,7 @@ Next AI agent can immediately:
 
 - **Protocol**: `laravel/Themes/Sixteen/docs/prompts/replikate.txt`
 - **Analysis**: `laravel/Themes/Sixteen/docs/design-comuni/pages/homepage-structure-diff.md`
-- **Navigation**: `laravel/Themes/Sixteen/docs/design-comuni/00-INDEX.md`
+- **Navigation**: `laravel/Themes/Sixteen/docs/design-comuni/00-index.md`
 - **Navigation**: `laravel/Themes/Sixteen/docs/design-comuni/00-index.md`
 - **Automation**: `bashscripts/design-analysis/replikate-workflow.sh`
 

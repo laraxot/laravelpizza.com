@@ -5,9 +5,6 @@ type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-qmd: "divergenza: `testing.md` user"
-status: superseded
-superseded_by: testing.divergenza.md
 ---
 
 # Divergenza: `TESTING.md`

@@ -30,7 +30,7 @@ describe('Xot abstract Filament stubs', function (): void {
     test('make e setUp su stub concreti', function (): void {
         Http::fake();
         Process::fake();
-        $n = 0;
+        $built = 0;
         foreach ([
             XotAbsSelect3::class,
             XotAbsRadio3::class,
@@ -46,7 +46,7 @@ describe('Xot abstract Filament stubs', function (): void {
                     ? $class::make('field')
                     : (new ReflectionClass($class))->newInstanceWithoutConstructor();
                 Assert::assertIsObject($inst);
-                $n++;
+                $built++;
                 $parent = (new ReflectionClass($class))->getParentClass();
                 if ($parent) {
                     foreach ($parent->getMethods(ReflectionMethod::IS_PROTECTED | ReflectionMethod::IS_PUBLIC) as $method) {
@@ -70,17 +70,16 @@ describe('Xot abstract Filament stubs', function (): void {
                             } else {
                                 $method->invoke($inst, ...$args);
                             }
-                            $n++;
                         } catch (\Throwable) {
-                            $n++;
+                            // Lo sweep esercita i metodi dello stub: un metodo che fallisce senza contesto non e' un errore del test.
                         }
                     }
                 }
             } catch (\Throwable $e) {
                 Assert::assertNotEmpty($e->getMessage());
-                $n++;
             }
         }
-        Assert::assertGreaterThan(5, $n);
+        // Conta solo gli stub istanziati davvero, non i rami catch.
+        Assert::assertGreaterThan(5, $built, 'Meno di 6 stub astratti Filament su 8 si istanziano.');
     });
 });

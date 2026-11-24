@@ -2,12 +2,11 @@
 type: note
 tags: [documentation]
 created: 2026-09-26
-updated: 2026-10-23
+updated: 2026-09-26
 qmd: "no services no support queueable actions"
 issues: []
 discussions: []
-title: No Services/No Support: QueueableAction
-status: draft
+title: No Services/No Support — QueueableAction
 ---
 
 # Regola
@@ -16,20 +15,20 @@ status: draft
 
 ## Conversione 2026-07-20
 
-- `app/Services/ScheduleService.php` (2 responsabilità) → due Action in `app/Actions/` (radice, nessuna sotto-cartella):
+- `app/Services/ScheduleService.php` (2 responsabilità) → due Action distinte in `app/Actions/Schedule/`:
   - `GetActiveSchedulesAction` (era `getActives()` + `getFromCache()` privato)
   - `ClearScheduleCacheAction` (era `clearCache()`)
-- Caller: `ScheduleObserver::clearCache()`, `ScheduleClearCacheCommand::handle()` → `app(Modules\Job\Actions\ClearScheduleCacheAction::class)->execute()`.
-- Il test reflection-only del vecchio Service e quello di `GetActiveSchedulesAction` sono stati rimossi; resta
-  `tests/Unit/Actions/ClearScheduleCacheActionTest.php` (reflection: trait `QueueableAction` + metodo `execute()`).
+- Caller aggiornati: `ScheduleObserver::clearCache()`, `ScheduleClearCacheCommand::handle()` → `app(Modules\Job\Actions\Schedule\ClearScheduleCacheAction::class)->execute()`.
+- Test `tests/Unit/Services/ScheduleServiceTest.php` (reflection sul vecchio Service) archiviato in `.bak`; sostituito da `tests/Unit/Actions/Schedule/ScheduleActionsTest.php` che verifica trait `QueueableAction` + metodo `execute()` su entrambe le Action in `app/Actions/Schedule/`.
 
-## Stato dei duplicati (verificato il 2026-10-23)
+## ⚠️ Duplicati orfani non risolti
 
-Non esiste una cartella `app/Actions/Schedule/` nel working tree: i doppioni `Schedule/` descritti in una
-versione precedente di questa nota non ci sono piu'. `ClearScheduleCacheAction` e' l'action live usata da
-`ScheduleObserver` e `ScheduleClearCacheCommand`. `GetActiveSchedulesAction`
-(`app/Actions/GetActiveSchedulesAction.php`) esiste ancora ma non ha caller applicativi ne' test: candidata
-alla rimozione, da fare solo dopo un nuovo `grep -rn GetActiveSchedulesAction` su tutto `laravel/`.
+Oltre alle due Action in `app/Actions/Schedule/` (quelle realmente usate dai caller), esistono **due classi omonime a livello root** di `app/Actions/`, non referenziate da nessun caller applicativo:
+
+- `Modules\Job\Actions\GetActiveSchedulesAction` (app/Actions/GetActiveSchedulesAction.php) — variante con `$model` risolto nel costruttore invece che in `getModel()` privato.
+- `Modules\Job\Actions\ClearScheduleCacheAction` (app/Actions/ClearScheduleCacheAction.php) — identica a quella in `Schedule/`.
+
+Entrambe hanno anche test propri (`tests/Unit/Actions/GetActiveSchedulesActionTest.php`, `tests/Unit/Actions/ClearScheduleCacheActionTest.php`) che le tengono "verdi" e nascondono la duplicazione. La migrazione a QueueableAction è completa nel senso che non esistono più `app/Services/` o `app/Support/`, ma la cancellazione dei doppioni root non è mai stata fatta. Non toccare senza verificare prima con `grep -rn` tutti i caller reali (vedi sopra): solo le classi in `Actions/Schedule/` sono agganciate a Observer e Command.
 
 ## Perché
 

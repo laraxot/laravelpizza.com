@@ -1,11 +1,10 @@
 ---
 title: "Errore: Duplicate Entry Durante Activity Log"
+qmd: "activity errori duplicate entry accessor save md"
 type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, activity, errori]
-qmd: "errore: duplicate entry durante activity log activity"
+tags: [documentation]
 ---
+
 # Errore: Duplicate Entry Durante Activity Log
 
 ## Problema
@@ -470,20 +469,11 @@ class SchedaObserver
 
 ---
 
-<<<<<<< .merge_file_jGqVfh
-<<<<<<< HEAD
-<<<<<<< HEAD
 **
-=======
+
 **Ultimo aggiornamento**: 27 Ottobre 2025
->>>>>>> 0a02158a (.)
-=======
-**Ultimo aggiornamento**: 27 Ottobre 2025
->>>>>>> 35d8cf69 (Initial commit)
-=======
+
 **=======
-**Ultimo aggiornamento**: 27 Ottobre 2025
->>>>>>> .merge_file_E4Lk8v
 **Severità**: CRITICA (blocca edit in produzione)
 **Workaround**: Disabilitare temporaneamente LogsActivity trait
 **Fix Definitivo**: Refactoring accessor in SchedaTrait

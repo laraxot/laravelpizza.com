@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "correzioni effettuate"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../correzioni-effettuate.md
 ---
 
 # Correzioni Effettuate per Errori PHPStan

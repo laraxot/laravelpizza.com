@@ -18,11 +18,12 @@ class UiCoverageStateContract implements StateContract
 
     /** @param array<array-key, mixed>|Model|string|null $record */
     /**
-     * @param  Model|array<string, mixed>|string|null  $record
+     * @param Model|array<string, mixed>|string|null $record
      */
     public function __construct(
         public Model|array|string|null $record = null,
-    ) {}
+    ) {
+    }
 
     public function label(): string
     {
@@ -71,7 +72,7 @@ class UiCoverageStateContract implements StateContract
     }
 
     /**
-     * @param  array<string, mixed>  $data
+     * @param array<string, mixed> $data
      */
     public function modalActionByRecord(Model $record, array $data): void
     {
@@ -88,7 +89,7 @@ class UiCoverageStateContract implements StateContract
 
     public function canTransitionTo(string $stateClass): bool
     {
-        return $stateClass === UiCoverageDoneState::class;
+        return UiCoverageDoneState::class === $stateClass;
     }
 
     public function transitionTo(string $state, ?string $message = null): void

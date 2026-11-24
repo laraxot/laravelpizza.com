@@ -1,11 +1,10 @@
 ---
 title: "Creazione di un Carrello della Spesa da Zero con Event Sourcing"
+qmd: "activity use cases shop build from scratch md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "creazione di un carrello della spesa da zero con event sourcing activity"
+tags: [documentation]
 ---
+
 # Creazione di un Carrello della Spesa da Zero con Event Sourcing
 
 ## Introduzione

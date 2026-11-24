@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "inheritance analysis rule"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Inheritance Analysis Rule - Critical Requirement

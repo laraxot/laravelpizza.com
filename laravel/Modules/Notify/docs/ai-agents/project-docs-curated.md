@@ -3,7 +3,11 @@ title: "project docs curated"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "project docs curated"
 issues: []
 discussions: []
@@ -19,26 +23,26 @@ Questa mappa e una vista operativa "figlia" della documentazione ufficiale del p
 - `.agents/docs/index.md`
 - `.agents/docs/filament-patterns.md`
 - `.agents/docs/critical-rules.md`
-- `laravel/Modules/Quaeris/docs/index.md`
+- `laravel/Modules/<nome progetto>/docs/index.md`
 - `laravel/Modules/Xot/docs/README.md`
 
-## Area chart/question chart (Quaeris)
+## Area chart/question chart (<nome progetto>)
 
-- `laravel/Modules/Quaeris/docs/question-chart-answers-chart-widget.md`
-- `laravel/Modules/Quaeris/docs/question-chart-answers-triple-chart-widget.md`
-- `laravel/Modules/Quaeris/docs/question-chart-aggregations-guide.md`
-- `laravel/Modules/Quaeris/docs/viewquestionchart-filter-implementation.md`
+- `laravel/Modules/<nome progetto>/docs/question-chart-answers-chart-widget.md`
+- `laravel/Modules/<nome progetto>/docs/question-chart-answers-triple-chart-widget.md`
+- `laravel/Modules/<nome progetto>/docs/question-chart-aggregations-guide.md`
+- `laravel/Modules/<nome progetto>/docs/viewquestionchart-filter-implementation.md`
 
 ## Area filtri/dashboard
 
-- `laravel/Modules/Quaeris/docs/livewire-filament-widget-parameters.md`
-- `laravel/Modules/Quaeris/docs/widget-property-initialization-pattern.md`
-- `laravel/Modules/Quaeris/docs/filament-4-implementation-guide.md`
+- `laravel/Modules/<nome progetto>/docs/livewire-filament-widget-parameters.md`
+- `laravel/Modules/<nome progetto>/docs/widget-property-initialization-pattern.md`
+- `laravel/Modules/<nome progetto>/docs/filament-4-implementation-guide.md`
 
 ## Area chart plugin/frontend
 
 - `laravel/Modules/Chart/docs/chartjs-datalabels-multiple-labels-complete-guide.md`
-- `laravel/Modules/Quaeris/docs/chartjs-datalabels-dual-label-fix.md`
+- `laravel/Modules/<nome progetto>/docs/chartjs-datalabels-dual-label-fix.md`
 
 ## Note operative Codex
 

@@ -10,7 +10,6 @@ title: Comandi per il singolo modulo
 description: Comandi per il singolo modulo
 extends: _layouts.documentation
 section: content
-status: draft
 ---
 
 # Comandi per il singolo modulo {#comandi-per-il-singolo-modulo}

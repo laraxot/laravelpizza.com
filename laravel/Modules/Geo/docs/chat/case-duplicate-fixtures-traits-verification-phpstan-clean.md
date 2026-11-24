@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "case duplicate fixtures traits verification phpstan clean"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Verifica case-duplicate tests/Fixtures|fixtures/Traits + PHPStan Geo pulito

@@ -10,6 +10,10 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
+<<<<<<< HEAD
+use Illuminate\Support\Facades\Schema;
+=======
+>>>>>>> laraxot/dev
 use Illuminate\Support\Str;
 use Modules\Media\Models\Media;
 use Modules\User\Models\Traits\IsProfileTrait;
@@ -210,12 +214,63 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         });
     }
 
+<<<<<<< HEAD
+    /** @var array<string, bool> chiave "connessione.tabella" → l'id è una stringa (UUID/ULID) */
+    private static array $stringKeyByTable = [];
+
+    /**
+     * Tipo della chiave preso dalla colonna vera: i progetti creano `profiles` con id intero o UUID (es. una migrazione
+     * di progetto con HasUuids). Con 'int' fisso un UUID "01a1c9ab-…" diventava 1 e i link "modifica" portavano a 404.
+     */
+    /**
+     * Senza tipo di ritorno, come in Eloquent: i figli che usano HasUuids/HasUlids ridefiniscono questo metodo con la
+     * firma del trait, e una firma più stretta qui li farebbe fallire (errore fatale al caricamento della classe).
+     *
+     * @return string
+     */
+    #[\Override]
+    public function getKeyType()
+    {
+        return $this->hasStringKey() ? 'string' : 'int';
+    }
+
+    /** @return bool */
+    #[\Override]
+    public function getIncrementing()
+    {
+        return ! $this->hasStringKey();
+    }
+
+    private function hasStringKey(): bool
+    {
+        $default = config('database.default');
+        $connection = $this->getConnectionName() ?? (\is_string($default) ? $default : '');
+        $cacheKey = $connection.'.'.$this->getTable();
+
+        if (! \array_key_exists($cacheKey, self::$stringKeyByTable)) {
+            try {
+                $type = Schema::connection($connection)->getColumnType($this->getTable(), $this->getKeyName());
+                self::$stringKeyByTable[$cacheKey] = \in_array($type, ['varchar', 'char', 'string', 'uuid', 'guid', 'text'], true);
+            } catch (\Throwable) {
+                // Tabella non ancora migrata o database irraggiungibile: comportamento storico (intero).
+                self::$stringKeyByTable[$cacheKey] = false;
+            }
+        }
+
+        return self::$stringKeyByTable[$cacheKey];
+    }
+
+=======
+>>>>>>> laraxot/dev
     /** @return array<string, string> */
     #[\Override]
     protected function casts(): array
     {
         return [
+<<<<<<< HEAD
+=======
             'id' => 'integer',
+>>>>>>> laraxot/dev
             'uuid' => 'string',
             'created_at' => 'datetime',
             'updated_at' => 'datetime',

@@ -3,11 +3,14 @@ title: "github action setup required"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "github action setup required"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🚨 IMPORTANT: GitHub Action Setup Required
@@ -17,6 +20,15 @@ status: draft
 > **Priority**: HIGH
 
 ---
+
+title: "github action setup required"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "github action setup required"
+issues: []
+discussions: []
 ## ❗ Action Status
 
 **Workflow**: 🔄 Sync Subtrees  

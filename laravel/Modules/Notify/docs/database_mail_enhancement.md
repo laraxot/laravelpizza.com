@@ -3,12 +3,14 @@ title: "database mail enhancement"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "database mail enhancement"
 issues: []
 discussions: []
-status: superseded
-superseded_by: database-mail-enhancement.md
 ---
 
 # Database Mail Enhancement (Open Source)

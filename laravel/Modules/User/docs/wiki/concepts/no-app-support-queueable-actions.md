@@ -1,9 +1,9 @@
 ---
-title: "no app/Support: business logic in QueueableAction"
+title: "no app/Support — business logic in QueueableAction"
 type: concept
 tags: [user, actions, queueable-action, support, refactor]
 created: 2026-07-12
-updated: 2026-10-22
+updated: 2026-07-12
 qmd: "User module no app Support business logic QueueableAction Otp Socialite Notification"
 issues:
 discussions:
@@ -16,10 +16,9 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-status: draft
 ---
 
-# no `app/Support/`: business logic in QueueableAction
+# no `app/Support/` — business logic in QueueableAction
 
 ## Scopo
 
@@ -44,16 +43,9 @@ Nel modulo User **non** esiste più `app/Support/`. Ogni helper con comportament
 
 ## Eccezioni ammesse altrove
 
-`app/Adapters/`, `app/Enums/`, facade puri: vedi [queueable-action-trait-mandatory](../../../../../../docs/wiki/rules/queueable-action-trait-mandatory.md). **Non** usare `Support/` per OTP, Socialite, notifiche o query autenticazione.
-`app/Adapters/`, `app/Enums/`, facade puri: vedi [queueable-action-trait-mandatory](../../../../../../docs/wiki/rules/queueable-action-trait-mandatory.md). **Non** usare `Support/` per OTP, Socialite, notifiche o query autenticazione.
+`app/Adapters/`, `app/Enums/`, facade puri — vedi [queueable-action-trait-mandatory](../../../../../../docs/wiki/rules/queueable-action-trait-mandatory.md). **Non** usare `Support/` per OTP, Socialite, notifiche o query autenticazione.
 
 ## Collegamenti
 
 - [notifications-runtime-model.md](notifications-runtime-model.md)
 - [queueable-action-trait-mandatory](../../../../../../docs/wiki/rules/queueable-action-trait-mandatory.md)
-- [queueable-action-trait-mandatory](../../../../../../docs/wiki/rules/queueable-action-trait-mandatory.md)
-
-## Debito aperto (deep audit 2026-10-22)
-
-`Actions/Shield/ShieldUtilsAction` e' il wrapper monolitico ex `Support\Utils` (metodi statici).
-Non vive in Support, ma va spezzato in Action granulari (Filament Shield). Track BMAD User.

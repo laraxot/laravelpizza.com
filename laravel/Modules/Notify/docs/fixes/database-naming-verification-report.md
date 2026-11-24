@@ -3,7 +3,11 @@ title: "database naming verification report"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "database naming verification report"
 issues: []
 discussions: []
@@ -25,7 +29,7 @@ La verifica ha confermato che:
 - ✅ 18/18 moduli hanno directory corrette
 - ✅ Documentazione del modulo Blog corretta
 - ✅ AGENTS.md aggiornato con la rule
-- ✅ agents.md aggiornato con la rule
+- ✅ AGENTS.md aggiornato con la rule
 - ✅ GitHub Issue #5 creata per tracking
 - ✅ Documentazione di convenzione creata
 
@@ -164,7 +168,7 @@ Questi sono **accettabili** perché:
 ### 3. ✅ Created Preventive Documentation
 - Guida completa alla convenzione
 - Rule in AGENTS.md
-- Rule in agents.md
+- Rule in AGENTS.md
 - Esempi e best practices
 
 ### 4. ✅ Established GitHub Workflow
@@ -184,7 +188,7 @@ Questi sono **accettabili** perché:
 ### Immediate (Done ✅)
 - ✅ Fix Blog module documentation
 - ✅ Update AGENTS.md
-- ✅ Update agents.md
+- ✅ Update AGENTS.md
 - ✅ Create convention documentation
 - ✅ Create GitHub Issue #5
 
@@ -216,7 +220,7 @@ grep -r "database/Factories\|database/Migrations\|database/Seeders" \
   docs/ laravel/Modules/*/docs/ | \
   grep -v "database-naming.md" | \
   grep -v "AGENTS.md" | \
-  grep -v "agents.md" | \
+  grep -v "AGENTS.md" | \
   grep -v "models/README.md"
 ```
 
@@ -234,12 +238,22 @@ find docs/ laravel/Modules/*/docs/ -type f -name "*.md" -exec sed -i \
 
 ## 📚 Related Documents
 
-- [Database Naming Convention](conventions/database-naming.md)
-- [AGENTS.md](../../AGENTS.md)
-- [Fix Summary](fixes/database-naming-fix-summary.md)
 - [Database Naming Convention](../conventions/database-naming.md)
-- [AGENTS.md](../AGENTS.md)
+- [AGENTS.md](../../AGENTS.md)
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_aLoQoh
+- [Fix Summary](fixes/database-naming-fix-summary.md)
+=======
+>>>>>>> laraxot/dev
 - [Fix Summary](database-naming-fix-summary.md)
+- [Database Naming Convention](../conventions/database-naming.md)
+- [AGENTS.md](../agents.md)
+- [Fix Summary](database-naming-fix-summary.md)
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_0CgbOB
+>>>>>>> laraxot/dev
 - [GitHub Issue #5](https://github.com/laraxot/base_fixcity_fila5/issues/5)
 - [Laravel Directory Structure](https://laravel.com/docs/structure)
 

@@ -10,6 +10,12 @@ use Modules\User\Models\Role;
 use Spatie\Permission\Traits\HasRoles as SpatieHasRoles;
 use Webmozart\Assert\Assert;
 
+<<<<<<< HEAD
+/**
+ * @phpstan-ignore trait.unused (API del modulo condiviso: in laravelpizza nessuna classe lo usa, altri progetti sì. Si toglie solo se il trait viene ritirato.)
+ */
+=======
+>>>>>>> laraxot/dev
 trait HasRoles
 {
     use SpatieHasRoles;

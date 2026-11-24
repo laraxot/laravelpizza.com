@@ -3,11 +3,14 @@ title: "translations implementation"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "translations implementation"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Stato dell'Implementazione delle Traduzioni nel Modulo Notify
@@ -136,9 +139,12 @@ Per garantire la coerenza futura, si raccomanda di:
 
 - [Convenzioni di Traduzione nel Modulo Notify](./translation_conventions.md)
 - [Chiarimento sulle Convenzioni di Traduzione](./translation_conventions_clarification.md)
+<<<<<<< HEAD
+=======
 - [Regole Generali per le Chiavi di Traduzione](../../lang/docs/translation_keys_rules.md)
 - [Best Practices per le Chiavi di Traduzione](../../lang/docs/translation_keys_best_practices.md)
 - [Best Practices per le Chiavi di Traduzione](../../lang/docs/translation-keys-best-practices.md)
+>>>>>>> laraxot/dev
 - [Regole Generali per le Chiavi di Traduzione](../../Lang/docs/translation_keys_rules.md)
 - [Best Practices per le Chiavi di Traduzione](../../Lang/docs/translation_keys_best_practices.md)
 - [Best Practices per le Chiavi di Traduzione](../../Lang/docs/translation-keys-best-practices.md)

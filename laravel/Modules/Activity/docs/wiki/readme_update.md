@@ -1,11 +1,7 @@
 ---
+qmd: "activity wiki readme update md"
 title: Readme_update
 module: Activity
-type: note
-status: draft
-updated: 2026-10-23
-tags: [docs, activity, wiki]
-qmd: "aggiornamento readme activity - sezione testing activity"
 ---
 
 # Aggiornamento README Activity - Sezione Testing
@@ -43,8 +39,8 @@ test('snapshot test', function () {
 ```
 
 **Documentazione**:
-- [No RefreshDatabase Policy](../testing/no-refresh-database-policy.md)
-- [Snapshot Testing Patterns](../testing/snapshot-testing-patterns.md)
+- [No RefreshDatabase Policy](./testing/no-refresh-database-policy.md)
+- [Snapshot Testing Patterns](./testing/snapshot-testing-patterns.md)
 - [Xot Testing Strategy](../../Xot/docs/testing-strategy.md)
 
 #### Test Coverage

@@ -1,6 +1,6 @@
 ---
 id: Activity/quality-gates-phpstan-fix-20260928
-title: "PHPStan Modules: remediation BMAD 2026-09-28"
+title: "PHPStan Modules — remediation BMAD 2026-09-28"
 status: review
 epic: quality-gates
 module: Activity
@@ -9,13 +9,9 @@ references:
   - ../../../Xot/docs/bmad/stories/5.227-phpstan-modules-verify-coordinated.story.md
   - ../../../../../../docs/sprint-status.yaml
   - ../../../../../../bashscripts/ai/wiki/memories/feedback-scan-committed-conflict-markers-first-on-bootstrap-crash.md
-type: story
-updated: 2026-10-07
-tags: [docs, activity, bmad]
-qmd: "story   phpstan fleet remediation activity"
 ---
 
-# Story: PHPStan fleet remediation
+# Story — PHPStan fleet remediation
 
 ## Acceptance criteria
 
@@ -58,7 +54,7 @@ versione precedente (`Activity/phpinsights.php`, `Activity/rector.php`, `UI/Loca
 e il risultato non è una baseline affidabile. STOP operativo: nessun altro edit finché
 non restano un solo processo di gate e un working tree stabile.
 
-## Riesecuzione 2026-09-28: STOP concorrenti
+## Riesecuzione 2026-09-28 — STOP concorrenti
 
 La riesecuzione richiesta dall'utente ha fallito al bootstrap su
 `Modules/Xot/helpers/Helper.php:16` (`unexpected token "<<"`). Una nuova scansione
@@ -109,3 +105,11 @@ senza ignore, baseline, cast o `@var`.
 `DeleteTableIndexByModelClassIndexNameAction` non esegue SQL ne' prima ne' ora: modifica solo il `Table`
 introspezionato in memoria, zero chiamanti in `Modules/`. Farle davvero droppare l'indice
 (`AbstractSchemaManager::dropIndex($index, $table)`) e' un cambio di schema: non fatto qui.
+
+---
+
+## Contenuto unito da `quality-gates-phpstan-fix.story.md`
+
+# quality gates phpstan fix
+
+Stub alias post-strip data/timestamp. Canonico: [./quality-gates-phpstan-fix.story.md](./quality-gates-phpstan-fix.story.md).

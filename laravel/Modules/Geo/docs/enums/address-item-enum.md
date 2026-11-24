@@ -3,11 +3,14 @@ title: "address item enum"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "address item enum"
 issues: []
 discussions: []
-status: draft
 ---
 
 # AddressItemEnum - The Universal Address Field Schema
@@ -288,9 +291,21 @@ Il metodo `columns()` è **intelligente** e si adatta al contesto:
 ```php
 use Modules\Geo\Enums\AddressItemEnum;
 
+<<<<<<< HEAD
 // ============================================
 // BLOCCO CREATE - Nessun check necessario
 // ============================================
+=======
+<<<<<<< HEAD
+// --------------------------------------------
+// BLOCCO CREATE - Nessun check necessario
+// --------------------------------------------
+=======
+// ============================================
+// BLOCCO CREATE - Nessun check necessario
+// ============================================
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 $this->tableCreate(function (Blueprint $table): void {
     $table->id();
 
@@ -302,9 +317,21 @@ $this->tableCreate(function (Blueprint $table): void {
     AddressItemEnum::columns($table, null, true);
 });
 
+<<<<<<< HEAD
 // ============================================
 // BLOCCO UPDATE - Con hasColumn() checks
 // ============================================
+=======
+<<<<<<< HEAD
+// --------------------------------------------
+// BLOCCO UPDATE - Con hasColumn() checks
+// --------------------------------------------
+=======
+// ============================================
+// BLOCCO UPDATE - Con hasColumn() checks
+// ============================================
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 $this->tableUpdate(function (Blueprint $table): void {
     // $this = UPDATE context (fa hasColumn() check prima di aggiungere)
     // true = include anche legacy fields
@@ -478,5 +505,14 @@ return [
 - **2025-01**: Implementazione `getFormSchema()` per auto-generazione form
 
 ---
+
+title: "address item enum"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "address item enum"
+issues: []
+discussions: []
 > **Nota**: Questo documento segue la filosofia del progetto: Scopo, Logica, Filosofia, Politica, Religione, Zen.
 > Ogni modifica all'enum DEVE essere documentata e tradotta.

@@ -5,10 +5,8 @@ declare(strict_types=1);
 namespace Modules\UI\Tests\Feature;
 
 use Modules\UI\Filament\Tables\Columns\SortableIdColumn;
-use Modules\UI\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
 describe('SortableIdColumn — colonna id standard del progetto', function (): void {
     it('can be instantiated with make() using the default name', function (): void {
         $column = SortableIdColumn::make();

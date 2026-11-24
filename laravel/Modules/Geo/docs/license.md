@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "license"
 issues: []
 discussions: []
-status: draft
 ---
 
 The MIT License (MIT)

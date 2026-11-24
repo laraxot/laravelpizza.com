@@ -1,34 +1,27 @@
 ---
-title: "Story: permissions tables on fixcity_user"
+title: "Story: Create permissions tables in trade_user database"
 type: story
 module: User
-status: done
+status: in-progress
 created: 2026-10-05
-updated: 2026-10-18
-tags: [docs, user, bmad, permissions, connection]
-qmd: "story permissions tables fixcity_user connection user"
-related:
-  - ../permissions-connection-ownership.md
-  - ../authentication-logs-connection-ownership.md
+updated: 2026-10-05
 ---
 
-# Story: permissions tables on `fixcity_user`
+# Story: Create permissions tables in trade_user database
 
 ## Context
 
-Spatie tables (`permissions`, `roles`, pivots) belong on connection `user`
-(`DB_DATABASE_USER` / `fixcity_user`). Production symptom:
-`Table 'fixcity_data.permissions' doesn't exist` on `GET /it/tickets/1`
-via `BuildTicketTimelineAction` → `$viewer->can(...)`.
+Spatie Laravel Permission tables (roles, permissions, etc.) are missing from the `trade_user` (connection `user`) database, causing `Table 'trade_data.permissions' doesn't exist` (it tries to access them in default `trade_data`).
+
+## Scope
+
+Create a migration to add Spatie permission tables to `trade_user` database.
 
 ## Acceptance Criteria
 
-- [x] Models `Permission` / `Role` use `$connection = 'user'`.
-- [x] Canonical `create_*` migrations create the tables on the user DB.
-- [x] Ownership documented in [permissions-connection-ownership](../permissions-connection-ownership.md).
-- [x] Public ticket timeline soft-guards missing `permissions` table.
-- [x] Filament: `PermissionResource` stays in User panel.
+- [ ] Permissions tables exist in `trade_user` DB.
+- [ ] Admin dashboard (Filament) loads without permission errors.
 
-## Implementation
+## Implementation Details
 
-See ownership doc. Deploy: fix `.env`, `config:clear`, run User migrations.
+Create a migration in `Modules/User/database/migrations` to create the standard Spatie tables: `roles`, `permissions`, `model_has_permissions`, `model_has_roles`, `role_has_permissions`. Ensure they are created on `user` connection.

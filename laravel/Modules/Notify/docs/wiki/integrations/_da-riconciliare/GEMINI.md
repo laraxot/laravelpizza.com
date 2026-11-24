@@ -7,9 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-updated: 2026-08-24
-status: superseded
-superseded_by: gemini.md
+updated: 2026-11-23
 ---
 
 # Gemini Rules (Modular)
@@ -37,31 +35,6 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 ---
 
 <!-- Merged from gemini.md, which collided with this file on case-insensitive filesystems. -->
-
----
-title: "Gemini Rules (Modular)"
-type: concept
-tags: [gemini]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "gemini gemini rules (modular)"
-issues: ["https://github.com/provtv/<nome repository>/issues/124"]
-discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
-related:
-  - "./00-index.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-notify-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
-  - "./action-plan-immediate.md"
----
 
 # Gemini Rules (Modular)
 

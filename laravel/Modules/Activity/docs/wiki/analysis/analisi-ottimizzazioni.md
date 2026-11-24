@@ -1,12 +1,7 @@
 ---
+qmd: "activity wiki analysis analisi ottimizzazioni md"
 title: Analisi ottimizzazioni
 module: Activity
-type: note
-updated: 2026-10-08
-tags: [docs, activity, wiki]
-qmd: "analisi e ottimizzazioni - modulo activity activity"
-status: superseded
-superseded_by: ../../bmad/analisi-ottimizzazioni.md
 ---
 
 # 📊 analisi e ottimizzazioni - modulo activity

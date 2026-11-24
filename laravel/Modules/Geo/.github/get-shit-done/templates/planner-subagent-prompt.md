@@ -35,7 +35,7 @@ discussions: []
 @.planning/STATE.md
 
 **Roadmap:**
-@.planning/ROADMAP.md
+@.planning/roadmap.md
 
 **Requirements (if exists):**
 @.planning/REQUIREMENTS.md
@@ -63,7 +63,7 @@ Plans must be executable prompts with:
 
 <quality_gate>
 Before returning PLANNING COMPLETE:
-- [ ] PLAN.md files created in phase directory
+- [ ] plan.md files created in phase directory
 - [ ] Each plan has valid frontmatter
 - [ ] Tasks are specific and actionable
 - [ ] Dependencies correctly identified

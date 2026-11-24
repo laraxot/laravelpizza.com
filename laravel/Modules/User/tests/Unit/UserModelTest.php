@@ -2,19 +2,18 @@
 
 declare(strict_types=1);
 
-<<<<<<< .merge_file_CjLNX8
-=======
-use Modules\User\Tests\TestCase;
-
->>>>>>> .merge_file_CwODSN
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 use Modules\User\Models\AuthenticationLog;
 use Modules\User\Models\Profile;
 use Modules\User\Models\Team;
 use Modules\User\Models\User;
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
+// Era `use Tests\TestCase;`, cioe' la classe della cartella `tests/` della
+// radice: quella cartella e' stata sciolta l'11 novembre e i suoi test spostati
+// nei moduli, quindi la classe non esiste piu' e Pest moriva in fase di
+// raccolta portandosi via tutta la suite (base_quaeris_fila5#213).
 uses(TestCase::class);
 
 // In-memory helper: build a User without touching DB

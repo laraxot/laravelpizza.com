@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "user research template"
 issues: []
 discussions: []
-status: draft
 ---
 
 # User Research Template
@@ -22,6 +21,15 @@ status: draft
 > **Stato:** {Planning\|In Progress\|Analysis\|Complete}
 
 ---
+
+title: "user research template"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "user research template"
+issues: []
+discussions: []
 ## Panoramica Research
 
 ### Obiettivo della Ricerca

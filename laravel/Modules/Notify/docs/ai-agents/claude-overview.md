@@ -3,11 +3,14 @@ title: "claude overview"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "claude overview"
 issues: []
 discussions: []
-status: draft
 ---
 
 # CLAUDE Overview
@@ -26,6 +29,15 @@ Panoramica del progetto LaravelPizza/Base Forecast Fila5.
 **NON** è un progetto e-commerce pizza - è una piattaforma per Laravel developer meetups e tech communities.
 
 ---
+
+title: "claude overview"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "claude overview"
+issues: []
+discussions: []
 ## Stack Tecnologico
 
 | Tecnologia | Descrizione |
@@ -90,5 +102,4 @@ Modules/{ModuleName}/
 
 - [Indice CLAUDE](./claude-split-index.md)
 - [CLAUDE.md originale](../../CLAUDE.md)
-- [CLAUDE.md originale](../CLAUDE.md)
 - [Index principale](./index.md)

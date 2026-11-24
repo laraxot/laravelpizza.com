@@ -9,9 +9,7 @@ issues: []
 discussions: []
 module: theme
 topic: q4-roadmap
-canonical: ../../../../Themes/docs/shared-components/roadmap-Modules-q4.md
-status: superseded
-superseded_by: roadmap.md
+canonical: ../../../../Themes/docs/shared-components/2025-q4-roadmap-Modules.md
 ---
 
-See canonical documentation: ../../../../Themes/docs/shared-components/roadmap-Modules-q4.md
+See canonical documentation: ../../../../Themes/docs/shared-components/2025-q4-roadmap-Modules.md

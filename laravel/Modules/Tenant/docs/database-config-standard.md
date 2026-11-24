@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "database config standard"
 related:
   - "./phpstan-corrections-january.md"
-status: draft
 ---
 # Database config standard (Laravel 13.x)
 

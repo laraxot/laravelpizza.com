@@ -15,9 +15,13 @@ Benvenuto nel sistema di tracking delle issue per il progetto **Design Comuni Re
 
 ## 📋 Quick Links
 
+<<<<<<< HEAD
+=======
 - **🗺️ Roadmap**: [View 12-week plan](../.planning/ROADMAP.md)
-- **📊 Project Summary**: [View status](../laravel/Themes/Sixteen/docs/design-comuni-project-summary.md)
-- **📚 Team Guide**: [Read guide](../laravel/Themes/Sixteen/docs/design-comuni-team-guide.md)
+>>>>>>> laraxot/dev
+- **🗺️ Roadmap**: [View 12-week plan](../.planning/roadmap.md)
+- **📊 Project Summary**: [View status](../laravel/Themes/Sixteen/docs/DESIGN_COMUNI_PROJECT_SUMMARY.md)
+- **📚 Team Guide**: [Read guide](../laravel/Themes/Sixteen/docs/DESIGN_COMUNI_TEAM_GUIDE.md)
 - **🏗️ Architecture**: [View decisions](../_bmad-output/design-comuni-architecture.md)
 - **🔍 Research**: [View analysis](../.planning/research/design-comuni-pages.md)
 
@@ -252,7 +256,7 @@ We use GitHub Projects to track progress:
 ## ❓ FAQ
 
 ### Q: How do I know which issue to work on?
-**A**: Look for issues labeled `priority-high` and `status-proposed`. Check the [Roadmap](../.planning/ROADMAP.md) for current phase.
+**A**: Look for issues labeled `priority-high` and `status-proposed`. Check the [Roadmap](../.planning/roadmap.md) for current phase.
 
 ### Q: Can I work on multiple issues?
 **A**: Yes, but focus on one at a time. Complete and close issues before starting new ones.
@@ -264,10 +268,10 @@ We use GitHub Projects to track progress:
 **A**: Create a Discussion in the "Component Design" category. Propose the component, explain use cases, and get feedback.
 
 ### Q: Where do I document my work?
-**A**: Update the component catalog (`Themes/Sixteen/docs/COMPONENT_CATALOG.md`) and add bidirectional links to the [Master Index](../docs/MODULE_DOCS_INDEX.md).
+**A**: Update the component catalog (`Themes/Sixteen/docs/COMPONENT_CATALOG.md`) and add bidirectional links to the [Master Index](../docs/module_docs_index.md).
 
 ### Q: How do I run tests?
-**A**: See the [Team Guide](../laravel/Themes/Sixteen/docs/design-comuni-team-guide.md#testing) for test commands and examples.
+**A**: See the [Team Guide](../laravel/Themes/Sixteen/docs/DESIGN_COMUNI_TEAM_GUIDE.md#testing) for test commands and examples.
 
 ---
 
@@ -349,7 +353,12 @@ Maintain professional communication at all times.
 
 ## 🔗 Quick Navigation
 
-- [Back to Project Summary](../laravel/Themes/Sixteen/docs/design-comuni-project-summary.md)
-- [Back to Team Guide](../laravel/Themes/Sixteen/docs/design-comuni-team-guide.md)
+- [Back to Project Summary](../laravel/Themes/Sixteen/docs/DESIGN_COMUNI_PROJECT_SUMMARY.md)
+- [Back to Team Guide](../laravel/Themes/Sixteen/docs/DESIGN_COMUNI_TEAM_GUIDE.md)
+<<<<<<< HEAD
+=======
 - [Back to Master Index](../docs/MODULE_DOCS_INDEX.md)
 - [View Roadmap](../.planning/ROADMAP.md)
+>>>>>>> laraxot/dev
+- [Back to Master Index](../docs/module_docs_index.md)
+- [View Roadmap](../.planning/roadmap.md)

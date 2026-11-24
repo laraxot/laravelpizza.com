@@ -1,13 +1,16 @@
 ---
-title: "Notify Module: Document"
+title: "Notify Module — Document"
 type: docs/bmad
 status: active
 module: Notify
 scope: documentation
 bmad_version: 1.0
+<<<<<<< HEAD
 updated: 2026-10-06
-tags: [docs, notify, wiki]
-qmd: "homepage visual comparison - results notify"
+=======
+updated: 2026-11-23
+created: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Homepage Visual Comparison - RESULTS
@@ -44,10 +47,7 @@ qmd: "homepage visual comparison - results notify"
 ```bash
 cd laravel/Themes/Sixteen
 npm run build    # ✓
-<<<<<<< .merge_file_odVQ0g
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_Nm1TDu
 ```
 
 ### Remaining Differences (Acceptable):

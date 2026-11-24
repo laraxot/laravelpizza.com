@@ -3,7 +3,11 @@ title: "🏆 PROGETTO <nome progetto> - 100% COMPLETATO!"
 type: concept
 tags: [progetto, completato, 100, percento]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "progetto-completato-100-percento 🏆 progetto <nome progetto> - 100% completato!"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -354,8 +358,17 @@ Result: {"totals":{"errors":0,"file_errors":0}}
 **[→ ANALISI COMPLETA](./analisi-completa.md)** - Executive Summary del progetto
 
 ### 🗺️ ROADMAP
-**[→ Master Roadmap Index](./roadmap-master-index.md)** - Indice completo roadmap moduli
+<<<<<<< HEAD
 **[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
+**[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
+=======
+<<<<<<< .merge_file_RXS4lp
+**[→ Master Roadmap Index](./roadmap-master-index.md)** - Indice completo roadmap moduli
+=======
+**[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
+**[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
+>>>>>>> .merge_file_Rid000
+>>>>>>> laraxot/dev
 
 ### 📊 TECHNICAL
 **[→ Session Summary](./phpstan/session-summary-.md.md)** - Dettagli tecnici sessione
@@ -574,8 +587,17 @@ php artisan queue:work --queue=high,notifications,default
 ## 🔗 LINK FINALI
 
 - [← Torna all'Indice](./index.md)
-- [← Master Roadmap](./roadmap-master-index.md)
+<<<<<<< HEAD
 - [← Master Roadmap](../../../roadmap-master-index.md)
+- [← Master Roadmap](../../../roadmap-master-index.md)
+=======
+<<<<<<< .merge_file_RXS4lp
+- [← Master Roadmap](./roadmap-master-index.md)
+=======
+- [← Master Roadmap](../../../roadmap-master-index.md)
+- [← Master Roadmap](../../../roadmap-master-index.md)
+>>>>>>> .merge_file_Rid000
+>>>>>>> laraxot/dev
 - [← Analisi Completa](./analisi-completa.md)
 
 ---
@@ -938,11 +960,21 @@ Result: {"totals":{"errors":0,"file_errors":0}}
 **[→ ANALISI COMPLETA](./ANALISI-COMPLETA.md)** - Executive Summary del progetto
 
 ### 🗺️ ROADMAP
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_RXS4lp
 **[→ Master Roadmap Index](./roadmap-master-index.md)** - Indice completo roadmap moduli
+=======
+>>>>>>> laraxot/dev
+**[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
 **[→ ANALISI COMPLETA](../../../analisi-completa-ottobre-data.md)** - Executive Summary del progetto
 
 ### 🗺️ ROADMAP
 **[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_Rid000
+>>>>>>> laraxot/dev
 
 ### 📊 TECHNICAL
 **[→ Session Summary](./phpstan/session-summary.md)** - Dettagli tecnici sessione
@@ -1165,10 +1197,21 @@ php artisan queue:work --queue=high,notifications,default
 ## 🔗 LINK FINALI
 
 - [← Torna all'Indice](./index.md)
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_RXS4lp
 - [← Master Roadmap](./roadmap-master-index.md)
+- [← Analisi Completa](./ANALISI-COMPLETA-2025-10-01.md)
+=======
+>>>>>>> laraxot/dev
+- [← Master Roadmap](../../../roadmap-master-index.md)
 - [← Analisi Completa](./ANALISI-COMPLETA.md)
 - [← Master Roadmap](../../../roadmap-master-index.md)
 - [← Analisi Completa](../../../analisi-completa-ottobre-data.md)
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_Rid000
+>>>>>>> laraxot/dev
 
 ---
 

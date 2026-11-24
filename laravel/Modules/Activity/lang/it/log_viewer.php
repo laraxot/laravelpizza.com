@@ -27,33 +27,6 @@ return [
     'actions' => [
         'refresh' => [
             'label' => 'Aggiorna',
-<<<<<<< .merge_file_OAdpS1
-            'icon' => 'refresh',
-            'tooltip' => 'refresh',
-        ],
-        'download' => [
-            'label' => 'Scarica il file',
-            'icon' => 'download',
-            'tooltip' => 'download',
-        ],
-        'logout' => [
-            'tooltip' => 'logout',
-            'icon' => 'logout',
-            'label' => 'logout',
-        ],
-        'profile' => [
-            'label' => 'profile',
-            'icon' => 'profile',
-            'tooltip' => 'profile',
-=======
-        ],
-        'download' => [
-            'label' => 'Scarica il file',
-        ],
-        'logout' => [
-            'tooltip' => '',
-            'icon' => 'logout',
->>>>>>> .merge_file_3yt8Hs
         ],
     ],
     'messages' => [

@@ -42,10 +42,10 @@ use Modules\UI\Traits\TableLayoutTrait;
 use Modules\UI\View\Components\Render\Block;
 use Modules\UI\View\Composers\ThemeComposer;
 use PHPUnit\Framework\Assert;
-use ReflectionClass;
-use Symfony\Component\HttpFoundation\Response;
 
 use function Safe\glob;
+
+use Symfony\Component\HttpFoundation\Response;
 
 uses(TestCase::class);
 
@@ -78,7 +78,7 @@ describe('UI highest-miss coverage', function (): void {
                 continue;
             }
             Assert::assertInstanceOf(BuilderBlock::class, $class::make());
-            $count++;
+            ++$count;
         }
         Assert::assertGreaterThan(10, $count);
         Assert::assertArrayHasKey('4-3', ImagesGallery::getRatios());
@@ -128,28 +128,28 @@ describe('UI highest-miss coverage', function (): void {
     });
 
     test('dashboard widgets calendar and icons action', function (): void {
-        $dashboard = (new ReflectionClass(Dashboard::class))->newInstanceWithoutConstructor();
-        $widgets = (new ReflectionClass($dashboard))->getMethod('getHeaderWidgets');
+        $dashboard = (new \ReflectionClass(Dashboard::class))->newInstanceWithoutConstructor();
+        $widgets = (new \ReflectionClass($dashboard))->getMethod('getHeaderWidgets');
         $widgets->setAccessible(true);
         Assert::assertNotEmpty($widgets->invoke($dashboard));
 
-        $calendar = new UserCalendarWidget;
+        $calendar = new UserCalendarWidget();
         $calendar->type = 'master_admin';
         Assert::assertSame([], $calendar->fetchEvents(['start' => now()->toIso8601String()]));
         Assert::assertNotEmpty($calendar->getFormSchema());
 
-        $chart = new TestChartWidget;
+        $chart = new TestChartWidget();
         Assert::assertNotSame('', $chart->getDescription());
-        $icons = (new GetAllIconsAction)->execute();
-        Assert::assertSame($icons, (new GetAllIconsAction)->execute());
+        $icons = (new GetAllIconsAction())->execute();
+        Assert::assertSame($icons, (new GetAllIconsAction())->execute());
     });
 
     test('models middleware language controller and view helpers', function (): void {
-        Assert::assertNotSame('', (new Category)->getTable());
-        Assert::assertNotSame('', (new Collection)->getTable());
-        Assert::assertNotSame('', (new FieldOption)->getTable());
+        Assert::assertNotSame('', (new Category())->getTable());
+        Assert::assertNotSame('', (new Collection())->getTable());
+        Assert::assertNotSame('', (new FieldOption())->getTable());
 
-        $response = (new SetLocale)->handle(Request::create('/'), static fn (): Response => new Response('ok'));
+        $response = (new SetLocale())->handle(Request::create('/'), static fn (): Response => new Response('ok'));
         Assert::assertSame('ok', $response->getContent());
 
         config(['app.locale' => 'it']);
@@ -162,17 +162,18 @@ describe('UI highest-miss coverage', function (): void {
         $block = new Block(['data' => ['view' => 'ui::empty']]);
         Assert::assertSame('ui::empty', $block->view);
 
-        $composer = new ThemeComposer;
+        $composer = new ThemeComposer();
         Assert::assertSame('', $composer->showScripts());
         Assert::assertNull($composer->metatag('missing-key'));
     });
 
     test('TableLayoutTrait reads and writes session layout', function (): void {
-        $subject = new class
-        {
+        $subject = new class {
             use TableLayoutTrait;
 
-            public function dispatch(mixed ...$params): void {}
+            public function dispatch(mixed ...$params): void
+            {
+            }
         };
         $subject->setTableLayout(TableLayoutEnum::LIST);
         Assert::assertSame(TableLayoutEnum::LIST, $subject->getTableLayout());
@@ -216,11 +217,12 @@ describe('UI highest-miss coverage', function (): void {
     });
 
     test('TableLayoutToggleTableAction resolves layout from session', function (): void {
-        $subject = new class
-        {
+        $subject = new class {
             use \Modules\UI\Filament\Actions\Table\TableLayoutTrait;
 
-            public function resetTable(): void {}
+            public function resetTable(): void
+            {
+            }
         };
         $subject->saveLayout(TableLayoutEnum::LIST, 'table');
         Assert::assertSame(TableLayoutEnum::LIST, $subject->getCurrentLayout('table'));

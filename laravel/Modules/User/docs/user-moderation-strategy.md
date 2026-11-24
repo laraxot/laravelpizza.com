@@ -3,24 +3,19 @@ title: "User Moderation Strategy"
 type: concept
 tags: [user, moderation, strategy]
 created: 2026-07-14
-updated: 2026-10-23
+updated: 2026-07-14
 qmd: "user-moderation-strategy user moderation strategy"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # User Moderation Strategy
@@ -187,4 +182,4 @@ As noted, moderation for certain user types might be more labor-intensive. To ha
 ## Conclusion
 Integrating a unified moderation strategy within the `User` module aligns with the principle of a centralized user management system applicable across various projects. By leveraging configurable workflows, Filament for admin interfaces, an event-driven approach, and proper state management with `spatie/laravel-model-states`, we can manage the moderation of all user types efficiently while accommodating varying levels of complexity. This approach ensures consistency with the unified registration wizard, maintains project-agnostic code, and supports scalability with an estimated effort distribution as outlined above.
 
-**Documented on**: 2025-05-16
+**Documented on**: [DATE]

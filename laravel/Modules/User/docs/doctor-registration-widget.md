@@ -8,20 +8,14 @@ qmd: "doctor-registration-widget widget di registrazione del dottore"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: superseded
-superseded_by: dor-registration-widget.md
 ---
 
 # Widget di Registrazione del Dottore
@@ -266,7 +260,6 @@ The <nome progetto> Team'
 
 ## Collegamenti Bidirezionali
 
-- [Email Doctor Registration](email-doctor-registration.md)
 - [Email Doctor Registration](email-doctor-registration.md)
 - [Registrazione Odontoiatra](docs/roadmap_frontoffice/13-registrazione-odontoiatra.md)
 - [DoctorResource](Modules/Patient/app/Filament/Resources/DoctorResource.php)

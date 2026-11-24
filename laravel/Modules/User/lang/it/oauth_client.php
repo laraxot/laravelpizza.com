@@ -74,6 +74,18 @@ return [
             'description' => 'Azione di logout',
             'icon' => 'heroicon-o-arrow-right-on-rectangle',
         ],
+<<<<<<< HEAD
+        'create_personal' => [
+            'label' => 'Nuovo client di accesso personale',
+        ],
+        'create_password' => [
+            'label' => 'Nuovo client password grant',
+        ],
+        'create_client_credentials' => [
+            'label' => 'Nuovo client credenziali',
+        ],
+=======
+>>>>>>> laraxot/dev
     ],
     'messages' => [
         'created' => 'Client creato con successo',

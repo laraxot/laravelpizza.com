@@ -10,7 +10,6 @@ title: Algolia DocSearch
 description: Configure Algolia DocSearch with the Jigsaw docs starter template
 extends: _layouts.documentation
 section: content
-status: draft
 ---
 
 # Algolia DocSearch {#algolia-docsearch}
@@ -79,9 +78,9 @@ If you'd like to customize the styling of the search results, Algolia exposes cu
 For more details, visit the [official Algolia DocSearch documentation.](https://community.algolia.com/docsearch/what-is-docsearch.html)
 
 ## Collegamenti tra versioni di algolia-docsearch.md
-* [algolia-docsearch.md](algolia-docsearch.md)
-* [algolia-docsearch.md](algolia-docsearch.md)
-* [algolia-docsearch.md](algolia-docsearch.md)
-* [algolia-docsearch.md](algolia-docsearch.md)
-* [algolia-docsearch.md](algolia-docsearch.md)
+* [algolia-docsearch.md](laravel/modules/chart/project_docs/algolia-docsearch.md)
+* [algolia-docsearch.md](laravel/modules/gdpr/project_docs/algolia-docsearch.md)
+* [algolia-docsearch.md](laravel/modules/xot/project_docs/algolia-docsearch.md)
+* [algolia-docsearch.md](laravel/modules/ui/project_docs/algolia-docsearch.md)
+* [algolia-docsearch.md](laravel/modules/cms/project_docs/algolia-docsearch.md)
 

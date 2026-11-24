@@ -8,9 +8,6 @@ tags: [migrato-da-txt, user]
 converted_from: coverage_clean.txt
 created: 2026-08-24
 updated: 2026-08-24
-qmd: "coverage clean user"
-status: superseded
-superseded_by: coverage-clean.md
 ---
 
 at Modules/User/tests/Feature/AuthComponentsTest.php:16

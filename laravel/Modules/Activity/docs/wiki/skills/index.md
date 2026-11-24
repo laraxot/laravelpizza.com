@@ -1,4 +1,5 @@
 ---
+qmd: "activity wiki skills index md"
 title: "Skills Index"
 type: "index"
 tags: [skills, activity, filament, xotbase, phpstan, pest]

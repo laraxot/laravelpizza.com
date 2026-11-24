@@ -3,7 +3,11 @@ title: "chart widgets"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "chart widgets"
 issues: []
 discussions: []
@@ -20,8 +24,8 @@ status: draft
 
 ## File chiave
 
-- `laravel/Modules/Quaeris/app/Filament/Widgets/QuestionChartAnswersChartWidget.php`
-- `laravel/Modules/Quaeris/app/Filament/Widgets/QuestionChartAnswersTripleChartWidget.php`
+- `laravel/Modules/<nome progetto>/app/Filament/Widgets/QuestionChartAnswersChartWidget.php`
+- `laravel/Modules/<nome progetto>/app/Filament/Widgets/QuestionChartAnswersTripleChartWidget.php`
 - `laravel/Modules/Chart/resources/js/filament-chart-js-plugins.js`
 
 ## Check dataset rapido

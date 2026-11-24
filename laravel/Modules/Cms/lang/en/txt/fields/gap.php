@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/gap.php
 // Cms txt.fields.gap — LangServiceProvider SSoT.
 return [
-    'label' => 'Spaziatura',
+    'label' => 'Spacing',
     'placeholder' => '10px, 1rem, small',
-    'helper_text' => 'Spazio tra gli elementi',
+    'helper_text' => 'Spacing between elements',
     'tooltip' => '',
     'description' => '',
 ];

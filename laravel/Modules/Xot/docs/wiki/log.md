@@ -18,10 +18,10 @@ status: draft
 
 ## [2026-10-14] docs | studio del codice, ingressi e link
 
-- Confronto di README, indice e wiki di primo livello con il codice: `README.md` e `00-INDEX.md` riscritti con conteggi e percorsi verificati; story [2026-10-14-docs-xot-studio-e-ingressi](../stories/docs-xot-studio-e-ingressi.story.md).
+- Confronto di README, indice e wiki di primo livello con il codice: `README.md` e `00-index.md` riscritti con conteggi e percorsi verificati; story [2026-10-14-docs-xot-studio-e-ingressi](../stories/docs-xot-studio-e-ingressi.story.md).
 - `phpstan analyse Modules/Xot`: exit 0, nessun errore (2026-10-14). Pest su `tests/Unit/Docs` non parte: 10 falliti, 0 asserzioni, `SQLiteDatabaseDoesNotExistException` (dettagli nel README, sezione Limiti).
-- Marcati `stale` con motivo: `wiki/architecture.md`, `wiki/Architecture.md`, `standards/README.md`, `standards/readme.md`, `governance/docs-structure.md`.
-- Annotati come `target mancante` i link non risolti di `wiki/index.md` (50), di questo log (45, in 32 righe), `wiki/concepts/index.md` (20), `wiki/concepts/INDEX.md` (8), `bmad/index.md` (1), `bmad/readme.md` (11). Questa voce e' la prima prova che la voce del 2026-07-24 qui sotto (Actions di dominio spostate) non coincide piu' con `app/Actions`: restano `AI/Ollama`, `ContextCompressorAction.php`, `Geo/GetDistanceExpressionAction.php`.
+- Marcati `stale` con motivo: `wiki/architecture.md`, `wiki/architecture.md`, `standards/README.md`, `standards/README.md`, `governance/docs-structure.md`.
+- Annotati come `target mancante` i link non risolti di `wiki/index.md` (50), di questo log (45, in 32 righe), `wiki/concepts/index.md` (20), `wiki/concepts/index.md` (8), `bmad/index.md` (1), `bmad/README.md` (11). Questa voce e' la prima prova che la voce del 2026-07-24 qui sotto (Actions di dominio spostate) non coincide piu' con `app/Actions`: restano `AI/Ollama`, `ContextCompressorAction.php`, `Geo/GetDistanceExpressionAction.php`.
 
 ## [2026-09-21] phpstan | zero certificato + wiki hygiene
 
@@ -158,7 +158,7 @@ discussions:
   - Files marked `.bak` (not deleted, per Ponytail methodology)
   - PHPStan Level 10: ✅ PASS
   - PHPMD: style warnings only (exception naming `$e` is standard)
-  
+
 - **Phase 3 PENDING REVIEW** ⏳:
   - 161 Data classes consolidation strategy (HIGH)
   - `BaseGeoService` polymorphism intent (MEDIUM)
@@ -457,7 +457,7 @@ Create [issue #112](https://github.com/laraxot/module_xot_fila5/issues/112) e [d
 
 ## [2026-09-17] EnvWidget: aggiunti campi `sms_driver` e `netfun_token` (blocco go-live Notify: nessun accesso SSH/FTP in produzione)
 
-- Richiesta utente: cambiare `SMS_DRIVER=netfun` nel `.env` di produzione, ma nessun accesso SSH/FTP disponibile per modificarlo a mano (vedi [module_quaeris_fila5#38](https://github.com/laraxot/module_quaeris_fila5/issues/38)).
+- Richiesta utente: cambiare `SMS_DRIVER=netfun` nel `.env` di produzione, ma nessun accesso SSH/FTP disponibile per modificarlo a mano (vedi [module_<nome progetto>_fila5#38](https://github.com/laraxot/module_<nome progetto>_fila5/issues/38)).
 - `EnvWidget` esisteva già e scrive `.env` dal pannello admin, ma non esponeva `SMS_DRIVER`. Aggiunta proprietà `sms_driver` a [`EnvData`](../../app/Datas/EnvData.php) e campo `Select` (opzioni chiuse sui driver mappati in `SmsActionFactory`, non testo libero) a [`EnvWidget::getFormSchema()`](../../app/Filament/Widgets/EnvWidget.php). Attivato in `Notify\SettingPage` (`only`).
 - Richiesta successiva dell'utente, stesso giorno: poter anche vedere/modificare `NETFUN_TOKEN` dalla stessa pagina (verifica di cosa c'è già in produzione, senza SSH). Aggiunta proprietà `netfun_token` a `EnvData` e `TextInput` (non `Select`: valore libero fornito dal provider) a `EnvWidget`, anch'esso attivato in `Notify\SettingPage`. Compare già valorizzato al caricamento della pagina: `mount()` carica sempre `$_ENV` corrente nel form, nessun lavoro aggiuntivo richiesto per la visualizzazione.
 - Documentato il meccanismo generale (mai descritto prima): [concepts/env-widget-no-ssh-env-editor.md](concepts/env-widget-no-ssh-env-editor.md) _(target mancante, verificato 2026-10-14)_: come aggiungere una variabile editabile, e il passo successivo obbligato (`config:cache` via `ArtisanCommandsManager`, già disponibile) se la config è cache-ata in produzione.

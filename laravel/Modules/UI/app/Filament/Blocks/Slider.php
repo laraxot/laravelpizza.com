@@ -23,7 +23,7 @@ final class Slider
         // dddx($options);
         return Block::make($name)
             ->schema([
-                TextInput::make('method')->hint('Inserisci il nome del metodo da richiamare nel tema')->required(),
+                TextInput::make('method')->hint('Enter the name of the method to call in the theme')->required(),
                 // Select::make('_tpl')
                 //     ->label('layout')
                 //     ->options($options),

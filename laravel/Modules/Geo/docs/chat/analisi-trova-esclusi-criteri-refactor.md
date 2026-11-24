@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "analisi trova esclusi criteri refactor"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi: estrarre caricamento criteri da `TrovaEsclusiByModelClassYearAction`
@@ -17,6 +16,15 @@ status: draft
 **Repo issue owner:** `provtv/module_ptv_fila5` (action + `BaseScheda` + modelli `Criteri*`)
 
 ---
+
+title: "analisi trova esclusi criteri refactor"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "analisi trova esclusi criteri refactor"
+issues: []
+discussions: []
 ## Cosa stai cercando di fare (interpretazione)
 
 Vuoi **togliere dall'action** il blocco che:

@@ -14,7 +14,7 @@ use UnexpectedValueException;
 use Webmozart\Assert\Assert;
 
 /**
- * .
+ * Blade component that renders a CMS block.
  */
 class Block extends Component
 {
@@ -44,7 +44,9 @@ class Block extends Component
 
         $view = $this->view;
         if (! view()->exists(is_string($view) ? $view : ((string) $view))) {
-            $message = 'view not exists ['.$view.'] ! <pre>'.print_r($this->block, true).'</pre>';
+            // Solo vista e tipo: il contenuto del blocco non va mostrato a chi visita il sito.
+            $type = $this->block['type'];
+            $message = 'view not exists ['.$view.'] (block type: '.(is_scalar($type) ? (string) $type : get_debug_type($type)).')';
             $viewParams = [
                 'title' => 'deprecated',
                 'message' => $message,

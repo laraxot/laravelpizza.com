@@ -111,7 +111,8 @@ test('service provider configuration', function (): void {
 });
 
 test('documentation is up to date', function (): void {
-    $readmePath = base_path('Modules/Activity/docs/README.md');
+    // docs/readme.md e' stato consolidato in docs/bmad/readme.md (dedup 2026-11).
+    $readmePath = base_path('Modules/Activity/docs/bmad/readme.md');
     Assert::assertTrue(file_exists($readmePath));
 
     $readmeContent = file_get_contents($readmePath);

@@ -1,3 +1,10 @@
+---
+title: "Event Projection - Activity"
+qmd: "activity tasks features event projection md"
+type: note
+tags: [documentation]
+---
+
 # Event Projection - Activity
 
 **Task ID**: ACTIVITY-FEATURE-003

@@ -10,7 +10,6 @@ confidence: high
 tags: [queueable-action, spatie, architecture, laraxot, geo]
 related:
   - Modules/Xot/docs/queueable-actions.md
-status: draft
 ---
 
 # Queueable Actions — Geo Module Doctrine

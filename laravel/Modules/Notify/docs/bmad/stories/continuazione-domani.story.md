@@ -1,10 +1,12 @@
 ---
+<<<<<<< HEAD
 status: backlog
-title: "Continuazione domani"
-type: story
-updated: 2026-10-07
-tags: [docs, notify, bmad]
-qmd: "continuazione domani notify"
+=======
+title: "continuazione domani.story"
+status: backlog
+created: 2026-11-23
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Continuazione domani

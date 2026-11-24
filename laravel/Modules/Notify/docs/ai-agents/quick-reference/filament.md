@@ -3,7 +3,11 @@ title: "filament"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "filament"
 issues: []
 discussions: []
@@ -36,5 +40,5 @@ status: draft
 ```bash
 cd laravel
 php artisan optimize:clear
-vendor/bin/phpstan analyse Modules/Xot Modules/Quaeris
+vendor/bin/phpstan analyse Modules/Xot Modules/<nome progetto>
 ```

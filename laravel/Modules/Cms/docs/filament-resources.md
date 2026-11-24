@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament resources"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Filament Resources nel CMS
@@ -116,16 +115,16 @@ return [
 - [Namespace](convenzioni-namespace-filament.md) - Convenzioni namespace
 
 ## Vedi Anche
-- [Modulo UI](../ui/project_docs/readme.md) - Componenti di interfaccia
-- [Modulo Xot](../xot/project_docs/readme.md) - Classi base e utilities
-- [Modulo Theme](../theme/project_docs/readme.md) - Gestione temi
+- [Modulo UI](../ui/project_docs/README.md) - Componenti di interfaccia
+- [Modulo Xot](../xot/project_docs/README.md) - Classi base e utilities
+- [Modulo Theme](../theme/project_docs/README.md) - Gestione temi
 - [Documentazione Filament](https://filamentphp.com/docs) - Documentazione ufficiale
 - [Resources](https://filamentphp.com/project_docs/3.x/resources) - Gestione risorse
 - [Best Practices](https://filamentphp.com/project_docs/3.x/resources/best-practices) - Best practices
 ## Collegamenti tra versioni di filament-resources.md
 * [filament-resources.md](docs/tecnico/filament/filament-resources.md)
 * [filament-resources.md](docs/regole/filament-resources.md)
-* [filament-resources.md](../../Gdpr/docs/filament-resources.md)
+* [filament-resources.md](laravel/modules/gdpr/project_docs/filament-resources.md)
 * [filament-resources.md](laravel/modules/xot/project_docs/filament-resources.md)
 * [filament-resources.md](laravel/modules/cms/project_docs/filament-resources.md)
 

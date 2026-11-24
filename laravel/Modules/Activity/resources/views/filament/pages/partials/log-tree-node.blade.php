@@ -1,10 +1,6 @@
 <?php
 
 declare(strict_types=1);
-<<<<<<< .merge_file_btA8t7
-
-=======
->>>>>>> .merge_file_nfrbDz
 /*
  * Un livello dell'albero dei file di log: prima le sottocartelle (ricorsivo), poi i file.
  *

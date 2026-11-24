@@ -16,17 +16,52 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 # Implementazione del Logout con LaravelLocalization 
 
 ## Collegamenti correlati
+<<<<<<< HEAD
+- [README modulo User](./README.md)
+=======
+- [README modulo User](./readme.md)
+>>>>>>> laraxot/dev
+- [Best Practices Componenti di Autenticazione](./auth-components-best-practices.md)
+- [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/laravel_localization_usage.md)
+- [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
+- [Regole Traduzioni](/laravel/modules/lang/docs/translation-keys-rules-2.md)
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< .merge_file_Am48uY
+status: draft
+---
+
+# Implementazione del Logout con LaravelLocalization
+=======
+---
+
+# Implementazione del Logout con LaravelLocalization 
+>>>>>>> .merge_file_dRPiXt
+
+## Collegamenti correlati
 - [README modulo User](./README.md)
 - [Best Practices Componenti di Autenticazione](./auth-components-best-practices.md)
+<<<<<<< .merge_file_Am48uY
 - [Utilizzo di Laravel Localization](/laravel/modules/lang/docs/laravel_localization_usage.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 - [Regole Traduzioni](/laravel/modules/lang/docs/translation-keys-rules.md)
+=======
+- [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/laravel_localization_usage.md)
+- [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
+- [Regole Traduzioni](/laravel/modules/lang/docs/translation-keys-rules-2.md)
+>>>>>>> .merge_file_dRPiXt
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Componenti Filament](/docs/rules/filament-components.md)
 
 ## Panoramica
@@ -63,16 +98,38 @@ mount(function() {
     if (Auth::check()) {
         // Dispatch dell'evento prima del logout
         Event::dispatch('auth.logout.attempting', [Auth::user()]);
+<<<<<<< HEAD
         
+=======
+<<<<<<< .merge_file_Am48uY
+
+=======
+        
+>>>>>>> .merge_file_dRPiXt
+>>>>>>> laraxot/dev
         // Esegui il logout
         Auth::logout();
         session()->invalidate();
         session()->regenerateToken();
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_Am48uY
+
+        // Dispatch dell'evento dopo il logout
+        Event::dispatch('auth.logout.successful');
+    }
+
+=======
+>>>>>>> laraxot/dev
         
         // Dispatch dell'evento dopo il logout
         Event::dispatch('auth.logout.successful');
     }
     
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_dRPiXt
+>>>>>>> laraxot/dev
     // Reindirizza l'utente alla home page localizzata
     $this->redirect(LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route('home')));
 });
@@ -80,7 +137,15 @@ mount(function() {
 
 ## Utilizzo Corretto di LaravelLocalization
 
+<<<<<<< HEAD
 Per garantire la compatibilità con il sistema di localizzazione di Quaeris, è importante utilizzare le funzioni del pacchetto `mcamara/laravel-localization` invece di `app()->getLocale()`:
+=======
+<<<<<<< .merge_file_Am48uY
+Per garantire la compatibilità con il sistema di localizzazione di <nome progetto>, è importante utilizzare le funzioni del pacchetto `mcamara/laravel-localization` invece di `app()->getLocale()`:
+=======
+Per garantire la compatibilità con il sistema di localizzazione di Quaeris, è importante utilizzare le funzioni del pacchetto `mcamara/laravel-localization` invece di `app()->getLocale()`:
+>>>>>>> .merge_file_dRPiXt
+>>>>>>> laraxot/dev
 
 ```php
 // ERRATO
@@ -92,7 +157,15 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 $this->redirect(LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route('home')));
 ```
 
+<<<<<<< HEAD
 Questo garantisce che l'utente venga reindirizzato alla versione localizzata della home page dopo il logout, rispettando le convenzioni di Quaeris per la gestione della localizzazione.
+=======
+<<<<<<< .merge_file_Am48uY
+Questo garantisce che l'utente venga reindirizzato alla versione localizzata della home page dopo il logout, rispettando le convenzioni di <nome progetto> per la gestione della localizzazione.
+=======
+Questo garantisce che l'utente venga reindirizzato alla versione localizzata della home page dopo il logout, rispettando le convenzioni di Quaeris per la gestione della localizzazione.
+>>>>>>> .merge_file_dRPiXt
+>>>>>>> laraxot/dev
 
 ## Template Blade con Componenti Filament
 
@@ -124,7 +197,15 @@ Il template Blade per il logout dovrebbe utilizzare i componenti Filament e most
 2. **Feedback Visivo**: L'utente riceve un feedback chiaro durante il processo di logout
 3. **Gestione Errori Robusta**: Gli errori vengono catturati e gestiti appropriatamente
 4. **Esperienza Utente Migliorata**: L'interfaccia è più intuitiva e reattiva
+<<<<<<< HEAD
 5. **Localizzazione Corretta**: Gli URL generati rispettano le convenzioni di Quaeris per la localizzazione
+=======
+<<<<<<< .merge_file_Am48uY
+5. **Localizzazione Corretta**: Gli URL generati rispettano le convenzioni di <nome progetto> per la localizzazione
+=======
+5. **Localizzazione Corretta**: Gli URL generati rispettano le convenzioni di Quaeris per la localizzazione
+>>>>>>> .merge_file_dRPiXt
+>>>>>>> laraxot/dev
 
 ## Chiavi di Traduzione per il Logout
 

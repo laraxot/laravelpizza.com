@@ -3,7 +3,7 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "patterns"
+qmd: "PATTERNS"
 issues: []
 discussions: []
 title: Tenant Module Design Patterns
@@ -81,7 +81,7 @@ Select and maintain the appropriate multi-tenancy database architecture.
 - [ ] Configure connection factory
 - [ ] Create base models with correct table references
 - [ ] Test isolation with multi-tenant data
-- [ ] Document strategy in bmad/architecture-tenant.md
+- [ ] Document strategy in architecture.md
 - [ ] Implement backup/restore per strategy
 
 ---
@@ -328,11 +328,17 @@ public function test_users_isolated_by_tenant()
 
 ## References
 
-- [Architecture](bmad/architecture-tenant.md): Detailed system design
-- [Troubleshooting](troubleshooting.md): Common issues
-- [API Reference](api.md): Model and service signatures
-- [Contributing Guide](../../docs/wiki/how-to/contributing.md): Development guidelines
+- [Architecture](architecture.md) — Detailed system design
+- [Troubleshooting](troubleshooting.md) — Common issues
+- [API Reference](api.md) — Model and service signatures
+- [Contributing Guide](../../docs/wiki/how-to/CONTRIBUTING.md) — Development guidelines
 
 ---
 
+Navigation: [Documentation Index](./README.md) | [README](README.md) | [Troubleshooting](troubleshooting.md)
+---
+<<<<<<< .merge_file_OYNaOj
+Navigation: [Documentation Index](./README.md) | [README](README.md) | [Troubleshooting](troubleshooting.md)
+=======
 Navigation: [Documentation Index](index.md) | [README](README.md) | [Troubleshooting](troubleshooting.md)
+>>>>>>> .merge_file_WE1mYr

@@ -10,11 +10,14 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Support\Carbon;
 use Modules\Media\Models\Media;
+use Modules\Notify\Database\Factories\MailTemplateLogFactory;
 use Modules\Notify\Models\Traits\MailTemplateLogRelations;
 use Modules\Xot\Contracts\ProfileContract;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 
 /**
+ * @method static MailTemplateLogFactory factory($count = null, $state = [])
+ *
  * @property int|null $template_id
  * @property string|null $mailable_type
  * @property int|string|null $mailable_id
@@ -43,6 +46,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 class MailTemplateLog extends BaseModel
 {
     use MailTemplateLogRelations;
+
 
     protected $fillable = [
         'template_id',

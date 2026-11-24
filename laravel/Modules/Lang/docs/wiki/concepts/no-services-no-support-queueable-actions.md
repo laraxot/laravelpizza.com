@@ -1,7 +1,7 @@
 ---
 issues: []
 discussions: []
-title: "No Services / No Support: QueueableAction only"
+title: "No Services / No Support — QueueableAction only"
 type: concept
 module: Lang
 tags: [lang, services, support, actions, queueable-action, migration]
@@ -13,10 +13,9 @@ related:
   - lang-services-to-actions.md
   - translator-adapter-migration.md
   - ../../../Xot/docs/wiki/concepts/queueable-action-trait-mandatory.md
-status: draft
 ---
 
-# Lang: Services/Support vietati: solo Actions
+# Lang — Services/Support vietati: solo Actions
 
 ## Regola
 

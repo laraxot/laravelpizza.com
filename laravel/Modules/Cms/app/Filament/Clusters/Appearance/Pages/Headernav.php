@@ -9,8 +9,11 @@ use Filament\Forms\Components\ColorPicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
+<<<<<<< HEAD
+=======
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
+>>>>>>> laraxot/dev
 use Filament\Notifications\Notification;
 use Filament\Schemas\Schema;
 use Illuminate\Support\Arr;
@@ -27,10 +30,15 @@ use Webmozart\Assert\Assert;
  *
  * @property Schema $form
  */
+<<<<<<< HEAD
+class Headernav extends XotBasePage
+{
+=======
 class Headernav extends XotBasePage implements HasForms
 {
     use InteractsWithForms;
 
+>>>>>>> laraxot/dev
     /**
      * @var HeadernavData the form data
      */

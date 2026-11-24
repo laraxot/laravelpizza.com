@@ -3,18 +3,21 @@ title: "qwen split index"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "qwen split index"
 issues: []
 discussions: []
-status: draft
 ---
 
-# QWEN.md Split Index
+# qwen.md Split Index
 
-> Documentazione QWEN.md spezzata in file più piccoli.
+> Documentazione qwen.md spezzata in file più piccoli.
 
-## 📚 File da QWEN.md
+## 📚 File da qwen.md
 
 | File | Contenuto | Righe |
 |------|-----------|-------|
@@ -26,12 +29,19 @@ status: draft
 
 ## 🔗 Collegamento
 
-- [QWEN.md originale](../../QWEN.md)
-- [QWEN.md originale](../QWEN.md)
+<<<<<<< HEAD
+- [qwen.md originale](../../qwen.md)
+=======
+<<<<<<< HEAD
+- [QWEN.md originale](../../qwen.md)
+=======
+- [qwen.md originale](../../qwen.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Index principale](./index.md)
 
 ## Note
 
-- QWEN.md è il file più grande (890 righe)
+- qwen.md è il file più grande (890 righe)
 - È stato diviso per argomento
 - Contiene molte memorie importanti

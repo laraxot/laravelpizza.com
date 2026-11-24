@@ -3,25 +3,23 @@ title: "MCP Servers - Master Index"
 type: concept
 tags: [mcp, servers]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "mcp-servers mcp servers - master index"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-status: draft
 ---
 
 # MCP Servers - Master Index
@@ -158,7 +156,6 @@ Main config: `laravel/.mcp.json`
 ### Editor Configuration
 - **Cursor**: Uses `.mcp.json` automatically
 - **Windsurf**: Import from [Xot Windsurf Config](../Modules/Xot/docs/windsurf-mcp-config.json)
-- **Windsurf**: Import from [Xot Windsurf Config](../../Xot/docs/windsurf-mcp-config.json)
 - **Claude Desktop**: Copy config to `claude_desktop_config.json`
 
 ### Environment Variables

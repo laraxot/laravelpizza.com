@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "README"
 issues: []
 discussions: []
-status: draft
 ---
 
 # GSD (Get Shit Done) Integration Guide
@@ -18,6 +17,15 @@ status: draft
 **GSD Version**: v1.25.1
 
 ---
+
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
 ## 🎯 Overview
 
 **GSD (Get Shit Done)** è un framework di **meta-prompting, context engineering, e spec-driven development** per AI coding assistants.
@@ -123,10 +131,10 @@ $gsd-help
 │  │    → Cattura decisioni implementative → CONTEXT.md      │ │
 │  │                                                         │ │
 │  │  /gsd:plan-phase [N]                                    │ │
-│  │    → Research + Plan + Verify → PLAN.md                 │ │
+│  │    → Research + Plan + Verify → plan.md                 │ │
 │  │                                                         │ │
 │  │  /gsd:execute-phase [N]                                 │ │
-│  │    → Esecuzione a wave → Commit atomici → SUMMARY.md    │ │
+│  │    → Esecuzione a wave → Commit atomici → summary.md    │ │
 │  │                                                         │ │
 │  │  /gsd:verify-work [N]                                   │ │
 │  │    → User acceptance testing → UAT.md                   │ │
@@ -156,7 +164,7 @@ $gsd-help
 **File creati**:
 - `PROJECT.md` — Vision del progetto
 - `REQUIREMENTS.md` — Requirements scoped con traceability
-- `ROADMAP.md` — Fasi mappate ai requirements
+- `roadmap.md` — Fasi mappate ai requirements
 - `STATE.md` — Documento living per decisioni e blockers
 - `.planning/research/` — Research findings
 
@@ -337,12 +345,12 @@ GSD usa structured files per context engineering:
 |------|---------|---------------|
 | **PROJECT.md** | Project vision | ✅ |
 | **REQUIREMENTS.md** | Scoped v1/v2 requirements | ✅ |
-| **ROADMAP.md** | Where you're going, what's done | ✅ |
+| **roadmap.md** | Where you're going, what's done | ✅ |
 | **STATE.md** | Decisions, blockers, memory | ✅ |
 | **research/** | Ecosystem knowledge | Per-phase |
 | **CONTEXT.md** | Implementation decisions | Per-phase |
-| **PLAN.md** | Atomic task with XML structure | Per-task |
-| **SUMMARY.md** | What happened, committed to history | Per-task |
+| **plan.md** | Atomic task with XML structure | Per-task |
+| **summary.md** | What happened, committed to history | Per-task |
 | **VERIFICATION.md** | Verification results | Per-phase |
 | **UAT.md** | User acceptance testing | Per-phase |
 | **todos/** | Captured ideas for later | ✅ |
@@ -354,7 +362,7 @@ GSD usa structured files per context engineering:
 ├── config.json              # Project configuration
 ├── PROJECT.md               # Project vision
 ├── REQUIREMENTS.md          # Scoped requirements (v1/v2)
-├── ROADMAP.md               # Phase roadmap with completion status
+├── roadmap.md               # Phase roadmap with completion status
 ├── STATE.md                 # Decisions, blockers, memory
 ├── research/                # Domain research per phase
 │   └── {phase_num}-RESEARCH.md
@@ -367,8 +375,8 @@ GSD usa structured files per context engineering:
 │   └── pending.md
 └── quick/                   # Quick mode tasks
     └── 001-task-name/
-        ├── PLAN.md
-        └── SUMMARY.md
+        ├── plan.md
+        └── summary.md
 ```
 
 ---
@@ -425,8 +433,8 @@ Per task ad-hoc che non need full planning:
 ```
 
 **Output**:
-- `.planning/quick/001-add-dark-mode-toggle/PLAN.md`
-- `.planning/quick/001-add-dark-mode-toggle/SUMMARY.md`
+- `.planning/quick/001-add-dark-mode-toggle/plan.md`
+- `.planning/quick/001-add-dark-mode-toggle/summary.md`
 
 ---
 
@@ -547,7 +555,7 @@ bmad-laravel-module-dev --module=Scheda
 │     ↓                                               │
 │  2. Discuss Phase                                   │
 │     ↓                                               │
-│  3. Plan Phase (PLAN.md)                            │
+│  3. Plan Phase (plan.md)                            │
 │     ↓                                               │
 │  4. Execute (Wave Execution)                        │
 │     ↓                                               │
@@ -559,10 +567,10 @@ bmad-laravel-module-dev --module=Scheda
 KEY FILES:
 - PROJECT.md    → Vision
 - REQUIREMENTS.md → Scope
-- ROADMAP.md    → Direction
+- roadmap.md    → Direction
 - STATE.md      → Memory
-- PLAN.md       → Tasks
-- SUMMARY.md    → History
+- plan.md       → Tasks
+- summary.md    → History
 
 QUICK MODE:
 /gsd:quick [--discuss] [--research] [--full]

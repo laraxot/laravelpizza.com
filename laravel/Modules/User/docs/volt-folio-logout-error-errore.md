@@ -16,7 +16,6 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Errore nel Logout con Volt e Folio
@@ -135,6 +134,6 @@ final class LogoutAction
    - Evitare JavaScript per operazioni critiche
 
 ## Collegamenti
-- [Best Practices Folio](./routing-best-practices-architettura-volt-folio-filament.md)
+- [Best Practices Folio](./routing-best-practices.md)
 - [Best Practices Volt](./volt_best_practices.md)
-- [Gestione Sessione](./session-management-gestione-sessioni.md) 
+- [Gestione Sessione](./session-management.md) 

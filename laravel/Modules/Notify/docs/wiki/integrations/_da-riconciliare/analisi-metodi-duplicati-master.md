@@ -1,15 +1,17 @@
 ---
-qmd: "analisi metodi duplicati master"
+qmd: "Analisi Metodi Duplicati Master"
 issues: []
 discussions: []
-title: "ANALISI METODI DUPLICATI - SUPER MUCCA EDITION"
+title: "Analisi Metodi Duplicati Master"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: superseded
-superseded_by: metodi-duplicati-analisi.md
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # 🐄⚡ ANALISI METODI DUPLICATI - SUPER MUCCA EDITION

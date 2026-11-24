@@ -99,10 +99,10 @@ discussions: []
 ## 📂 Documentation
 
 ### Main Resources
-- [🗂️ Master Index](./laravel/Themes/Sixteen/docs/design-comuni-replication-index.md)
-- [📋 Strategy & Phases](./laravel/Themes/Sixteen/docs/implementation/strategy.md)
-- [👥 Team Coordination](./laravel/Themes/Sixteen/docs/implementation/team-coordination.md)
-- [📊 Reference Analysis](./laravel/Themes/Sixteen/docs/analysis/reference-design-analysis.md)
+- [🗂️ Master Index](./laravel/Themes/Sixteen/docs/DESIGN_COMUNI_REPLICATION_INDEX.md)
+- [📋 Strategy & Phases](./laravel/Themes/Sixteen/docs/implementation/STRATEGY.md)
+- [👥 Team Coordination](./laravel/Themes/Sixteen/docs/implementation/TEAM_COORDINATION.md)
+- [📊 Reference Analysis](./laravel/Themes/Sixteen/docs/analysis/REFERENCE_DESIGN_ANALYSIS.md)
 
 ### Per-Page Issues
 Each page has a dedicated GitHub issue:
@@ -114,7 +114,7 @@ Each page has a dedicated GitHub issue:
 - 🎨 [Component Catalog](./laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md)
 - 🔧 [Development Guide](./laravel/Themes/Sixteen/docs/DEVELOPMENT.md)
 - 📸 [Screenshots Folder](./laravel/Themes/Sixteen/docs/screenshots/)
-- 🧪 [Testing Guide](./laravel/Themes/Sixteen/docs/TESTING.md)
+- 🧪 [Testing Guide](./laravel/Themes/Sixteen/docs/testing.md)
 
 ---
 
@@ -145,10 +145,7 @@ npm install
 npm run build
 
 # Copy assets to public_html
-<<<<<<< .merge_file_ztGBCe
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_2vWxrx
 
 # Test in browser
 open http://127.0.0.1:8000/it/tests/
@@ -195,7 +192,7 @@ npm run test
 ### Communication
 - **GitHub Issues**: Per-page coordination
 - **GitHub Discussions**: Real-time team coordination
-- **Docs**: [TEAM_COORDINATION.md](./laravel/Themes/Sixteen/docs/implementation/team-coordination.md)
+- **Docs**: [TEAM_COORDINATION.md](./laravel/Themes/Sixteen/docs/implementation/TEAM_COORDINATION.md)
 
 ### Daily Standup
 Teams post status in issue comments:

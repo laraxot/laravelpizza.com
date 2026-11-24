@@ -3,7 +3,11 @@ title: "quick reference"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "quick reference"
 issues: []
 discussions: []
@@ -68,7 +72,7 @@ class ListPosts extends XotBaseListRecords
 - [LimeSurvey Deep Dive](../../laravel/Modules/Limesurvey/docs/limesurvey-deep-dive-architecture.md)
 - [Professional Charts Guide](../../laravel/Modules/Chart/docs/filament-charts-professional-guide.md)
 - [JpGraph Reference](../../laravel/Modules/Chart/docs/jpgraph-4-4-3-reference.md)
-- [PDF Generation](../../laravel/Modules/Quaeris/docs/pdf-generation-with-charts.md)
+- [PDF Generation](../../laravel/Modules/<nome progetto>/docs/pdf-generation-with-charts.md)
 - [PDF Generation](../../laravel/Modules/App/docs/pdf-generation-with-charts.md)
 
 ## Collegamenti

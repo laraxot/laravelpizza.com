@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "translation navigation structure"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Translation Navigation Structure - Job Module
@@ -123,10 +122,19 @@ Verificare che User abbia le stesse 6 lingue per i file `.navigation` (passport.
 
 ## Backlink
 
-- [Modules/Job/docs/README.md](./readme.md)
+- [Modules/Job/docs/README.md](./README.md)
 - [Modules/User/lang/it/passport.php](../../User/lang/it/passport.php)
 - [bashscripts/docs/translation-management.md](../../../bashscripts/docs/translation-management.md)
 
 ---
+
+title: "translation navigation structure"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "translation navigation structure"
+issues: []
+discussions: []
 **Autore**: Cascade AI  
 **Status**: 🟡 In Progress

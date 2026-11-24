@@ -11,12 +11,6 @@ related:
   - "./payment.md"
   - "./phpstan.md"
   - "./profile.md"
-title: "passport"
-type: note
-status: stub
-updated: 2026-10-07
-tags: [docs, user, _integration]
-qmd: "passport user"
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/passport.md

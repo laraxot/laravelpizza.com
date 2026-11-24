@@ -25,7 +25,17 @@ class CheckMailDnsAction
 {
     use QueueableAction;
 
-    private const DMARC_PREFIX = 'v=dmarc1';
+    private const string DMARC_PREFIX = 'v=dmarc1';
+
+    private const string HINT_MISSING = 'missing';
+
+    private const string HINT_MISSING_TRAILING_DOT = 'missing-trailing-dot';
+
+    private const string HINT_WRONG_TARGET = 'wrong-target';
+
+    private const string RECORD_CNAME = 'CNAME';
+
+    private const string RECORD_TXT = 'TXT';
 
     /**
      * @param  array<string, string>  $expectedCnames  label (relative to the domain) => expected target
@@ -52,15 +62,15 @@ class CheckMailDnsAction
      */
     private function checkCname(string $name, string $target, string $zone, Closure $resolver): array
     {
-        $raw = $resolver($name, 'CNAME');
+        $raw = $resolver($name, self::RECORD_CNAME);
         $found = array_map(self::normalize(...), $raw);
         $want = self::normalize($target);
 
         $hint = match (true) {
-            $found === [] => 'missing',
+            $found === [] => self::HINT_MISSING,
             in_array($want, $found, true) => null,
-            in_array($want.'.'.$zone, $found, true) => 'missing-trailing-dot',
-            default => 'wrong-target',
+            in_array($want.'.'.$zone, $found, true) => self::HINT_MISSING_TRAILING_DOT,
+            default => self::HINT_WRONG_TARGET,
         };
 
         return ['record' => $name, 'expected' => $target, 'found' => $raw[0] ?? null, 'ok' => $hint === null, 'hint' => $hint];
@@ -72,7 +82,7 @@ class CheckMailDnsAction
      */
     private function checkDmarc(string $name, Closure $resolver): array
     {
-        $raw = $resolver($name, 'TXT');
+        $raw = $resolver($name, self::RECORD_TXT);
         $found = array_values(array_filter($raw, static fn (string $txt): bool => str_starts_with(strtolower(trim($txt)), self::DMARC_PREFIX)));
 
         return [
@@ -80,7 +90,7 @@ class CheckMailDnsAction
             'expected' => 'v=DMARC1',
             'found' => $found[0] ?? null,
             'ok' => $found !== [],
-            'hint' => $found === [] ? 'missing' : null,
+            'hint' => $found === [] ? self::HINT_MISSING : null,
         ];
     }
 
@@ -94,7 +104,7 @@ class CheckMailDnsAction
      */
     private static function systemResolver(string $name, string $type): array
     {
-        $isCname = $type === 'CNAME';
+        $isCname = $type === self::RECORD_CNAME;
 
         try {
             $records = dns_get_record($name, $isCname ? DNS_CNAME : DNS_TXT);

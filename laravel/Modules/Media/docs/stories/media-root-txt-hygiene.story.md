@@ -23,9 +23,9 @@ root (0 ammessi, violazione).
 
 ## File coinvolti
 
-- `Media_phpmd.txt`: output effimero di un run PHPMD (report path riferiscono
+- `Media_phpmd.txt` — output effimero di un run PHPMD (report path riferiscono
   `base_techplanner_fila5`, run storico non riproducibile in questo albero).
-- `pest_results.txt`: output effimero (con codici ANSI) di un run Pest storico.
+- `pest_results.txt` — output effimero (con codici ANSI) di un run Pest storico.
 
 Entrambi sono log/output di tool, non documentazione viva.
 

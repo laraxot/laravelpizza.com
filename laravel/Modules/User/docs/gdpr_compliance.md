@@ -5,9 +5,6 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-qmd: "gdpr compliance guide for registration user"
-status: superseded
-superseded_by: gdpr-compliance-guide-registration.md
 ---
 
 # GDPR Compliance Guide for Registration

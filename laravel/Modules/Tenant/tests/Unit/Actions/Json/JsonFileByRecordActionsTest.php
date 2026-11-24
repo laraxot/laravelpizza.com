@@ -6,9 +6,12 @@ use Illuminate\Support\Facades\File;
 use Modules\Tenant\Actions\Json\CreateJsonFileByRecordAction;
 use Modules\Tenant\Actions\Json\UpdateJsonFileByRecordAction;
 use Modules\Tenant\Tests\Fixtures\TestSushiModelForPath;
+use Modules\Tenant\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 use function Safe\json_decode;
+
+uses(TestCase::class);
 
 /*
  * Le action scrivono il file JSON del tenant quando un modello Sushi viene creato o aggiornato.
@@ -57,7 +60,7 @@ test('create assegna max(id) + 1 anche quando il JSON ha gli id come stringhe nu
     } finally {
         File::deleteDirectory(dirname($path));
     }
-});
+})->group('TENANT-JSON-CREATE-INV-1');
 
 test('create assegna id 1 quando il file JSON non ha righe', function (): void {
     $path = tenantJsonActionTempFile('[]');
@@ -72,13 +75,13 @@ test('create assegna id 1 quando il file JSON non ha righe', function (): void {
     } finally {
         File::deleteDirectory(dirname($path));
     }
-});
+})->group('TENANT-JSON-CREATE-INV-2');
 
 test('update sostituisce solo la riga con la stessa chiave primaria', function (): void {
     $path = tenantJsonActionTempFile('[{"id":1,"name":"Alpha"},{"id":2,"name":"Beta"}]');
 
     try {
-        $record = (new TestSushiModelForPath)->setJsonPath($path);
+        $record = (new TestSushiModelForPath())->setJsonPath($path);
         $record->forceFill([
             'id' => 2,
             'name' => 'Beta aggiornato',

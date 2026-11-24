@@ -21,7 +21,11 @@ uses(TestCase::class);
  */
 function userOverviewStats(): array
 {
+<<<<<<< HEAD
+    $stats = (new ReflectionMethod(UserOverview::class, 'getStats'))->invoke(new UserOverview);
+=======
     $stats = (new ReflectionMethod(UserOverview::class, 'getStats'))->invoke(new UserOverview());
+>>>>>>> laraxot/dev
     Assert::assertIsArray($stats);
 
     $result = [];

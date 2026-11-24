@@ -9,9 +9,7 @@ created: 2026-07-14
 updated: 2026-07-14
 qmd: "laravel 13 upgrade"
 related:
-  - "./phpstan-fixes-archive-2.md"
-status: superseded
-superseded_by: ../../laravel-13-upgrade.md
+  - "./phpstan-fixes-archive-gennaio.md"
 ---
 # Upgrade Laravel 13 - Job 🐄✨
 

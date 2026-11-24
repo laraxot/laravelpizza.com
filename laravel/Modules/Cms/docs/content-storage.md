@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "content storage"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Sistema di Archiviazione dei Contenuti JSON

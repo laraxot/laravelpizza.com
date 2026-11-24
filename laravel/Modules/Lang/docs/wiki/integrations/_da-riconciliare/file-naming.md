@@ -8,7 +8,6 @@ tags: [migrazione, filament, 4]
 created: 2026-07-14
 updated: 2026-07-14
 qmd: "migrazione filament 4"
-status: draft
 ---
 type: rule
 tags: [migration, filament]
@@ -28,9 +27,9 @@ Su filesystem case-insensitive (Windows, macOS default), file con nomi che diffe
 
 ```
 ❌ ERRATO - Duplicati case-insensitive:
-- readme.md e README.md
+- README.md e README.md
 - Activity.php e activity.php
-- ListRecords.md e listrecords.md
+- listrecords.md e listrecords.md
 ```
 
 ### Soluzione
@@ -55,8 +54,8 @@ Su filesystem case-insensitive (Windows, macOS default), file con nomi che diffe
 ```
 ✅ CORRETTO:
 - README.md (maiuscolo - convenzione universale)
-- ROADMAP.md (maiuscolo - convenzione universale)
-- changelog.md (maiuscolo - convenzione universale)
+- roadmap.md (maiuscolo - convenzione universale)
+- CHANGELOG.md (maiuscolo - convenzione universale)
 - LICENSE.md (maiuscolo - convenzione universale)
 - CONTRIBUTING.md (maiuscolo - convenzione universale)
 - SECURITY.md (maiuscolo - convenzione universale)
@@ -104,10 +103,10 @@ find Modules -type f \( -name "*.php" -o -name "*.md" \) -exec bash -c '
 
 **Elimina il file che NON rispetta le convenzioni:**
 
-1. **README.md vs readme.md** → Elimina `readme.md`
+1. **README.md vs README.md** → Elimina `README.md`
 2. **Activity.php vs activity.php** → Elimina `activity.php`
-3. **ListRecords.md vs listrecords.md** → Elimina `listrecords.md`
-4. **ROADMAP.md vs roadmap.md** → Elimina `roadmap.md` (tranne se contiene info diverse)
+3. **listrecords.md vs listrecords.md** → Elimina `listrecords.md`
+4. **roadmap.md vs roadmap.md** → Elimina `roadmap.md` (tranne se contiene info diverse)
 
 ### Eccezioni
 

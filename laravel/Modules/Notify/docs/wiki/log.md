@@ -3,7 +3,11 @@ title: "log"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "log"
 issues: []
 discussions: []
@@ -13,8 +17,8 @@ status: draft
 ## [2026-10-14] docs | Ingressi rivisti sul codice (DOC-010, DOC-002)
 
 - `README.md` della cartella: aggiunte mappa del codice e limiti verificati con `ls`/`grep`; elenco modelli portato da 9 a 14; blocco frontmatter duplicato a meta' file reso commento; riferimenti a `Ptv` (modulo assente dal repo) e a file inesistenti ridotti a testo.
-- `00-INDEX.md`: tolta la "Module Version 2.1.0" senza fonte; dichiarate directory canoniche/evidence/legacy con conteggi (3.465 file, 1.552 nella radice); famiglie dei 1.551 `.md` della radice per nome file; corrette le descrizioni errate (roadmap.md e' del FixCity Design System, `SendNotificationBulkAction` e `TrackNotificationEventAction` non esistono, consolidamento SMS non corrisponde al codice).
-- `INDEX.md`, `index.md`, `wiki/00-INDEX.md`, `wiki/00-index.md`, `wiki/INDEX.md`, `wiki/index.md` marcati `stale` con la ragione; nessun file spostato o cancellato.
+- `00-index.md`: tolta la "Module Version 2.1.0" senza fonte; dichiarate directory canoniche/evidence/legacy con conteggi (3.465 file, 1.552 nella radice); famiglie dei 1.551 `.md` della radice per nome file; corrette le descrizioni errate (roadmap.md e' del FixCity Design System, `SendNotificationBulkAction` e `TrackNotificationEventAction` non esistono, consolidamento SMS non corrisponde al codice).
+- `index.md`, `index.md`, `wiki/00-index.md`, `wiki/00-index.md`, `wiki/index.md`, `wiki/index.md` marcati `stale` con la ragione; nessun file spostato o cancellato.
 - Verifica oggi su voci di questo log: la voce 2026-09-11 (compliance) dice rimosso il duplicato `app/Contracts/SmsActionContract.php`; il 2026-10-14 `SmsActionContract.php` esiste in tre posizioni (`app/Contracts/`, `app/Contracts/SMS/`, `app/Models/Contracts/`).
 - Story: [2026-10-14-docs-ingressi-notify](../stories/docs-ingressi-notify.story.md). Nota durevole: `bashscripts/ai/wiki/memories/docs-notify-activity-media-job-studio.md`.
 
@@ -22,19 +26,19 @@ status: draft
 
 - **Difetto 11 (bloccante SMS)**: `SendRecordNotificationAction` instradava l'SMS con `Notification::route(SmsChannel::class, …)` (FQCN come chiave), ma `RecordNotification::via()`/`toSms()` cercano il recapito sotto `'sms'` → `via()` tornava `[]` → l'SMS dell'invito automatico non partiva, in silenzio. Fix: `Notification::route($channelEnum->value, …)`. Commit `f150a9a54`.
 - **Difetto 12 (pagina di test)**: `SendNetfunSmsPage::sendSms` ≠ blade `sendSMS` (Livewire `MethodNotFoundException`); `SmsNotification::via()` → `['sms']` alias non registrato → `Driver [sms] not supported`. Fix: `sendSMS`, `SmsNotification::via()` → `[SmsChannel::class]`. Commit `bb340eec0`. SMS reale via Netfun ricevuto dalla pagina sistemata.
-- `SendInviteAction` (Quaeris) ora sceglie **un solo canale** (priorità mail), come il legacy `Contact::getNotificationData()`. Commit `a492c917c`.
-- Verifica end-to-end (tinker): mail lancia `TypeError getHtmlTemplate(): null` per 22/40 template `survey-pdf-*` (senza `html_template`/`subject`); SMS instrada ok ma `config('sms.default')` = `smsfactor` non configurato (manca `SMS_DRIVER=netfun` in `.env`, anche prod). Dettaglio: story `../../../Quaeris/docs/stories/quaeris-send-invite-migrate-to-record-notification.md` §"Stato dell'invio automatico"; log progetto `docs/wiki/log.md` voce `2026-09-11 (2)`.
+- `SendInviteAction` (<nome progetto>) ora sceglie **un solo canale** (priorità mail), come il legacy `Contact::getNotificationData()`. Commit `a492c917c`.
+- Verifica end-to-end (tinker): mail lancia `TypeError getHtmlTemplate(): null` per 22/40 template `survey-pdf-*` (senza `html_template`/`subject`); SMS instrada ok ma `config('sms.default')` = `smsfactor` non configurato (manca `SMS_DRIVER=netfun` in `.env`, anche prod). Dettaglio: story `../../../<nome progetto>/docs/stories/<nome progetto>-send-invite-migrate-to-record-notification.md` §"Stato dell'invio automatico"; log progetto `docs/wiki/log.md` voce `2026-09-11 (2)`.
 
 ## [2026-09-11] compliance | `SmsActionContract` → `Models/Contracts/`, `SmsData` → Spatie Data
 
 - Violazioni `start.md §3` corrette: `SmsActionContract` spostato da `app/Contracts/SMS/` a `app/Models/Contracts/` (namespace `Modules\Notify\Models\Contracts`), duplicato morto `app/Contracts/SmsActionContract.php` rimosso; `SmsData` ora `extends Spatie\LaravelData\Data`. 9 `Send*SMSAction` + `SmsActionFactory` + ~12 test aggiornati. PHPStan 0 errori, phpmd pulito.
 - Concept: [concepts/sms-channel-driver-selection.md](concepts/sms-channel-driver-selection.md) §"Posizione contratto e forma di SmsData". Log di progetto: `docs/wiki/log.md` voce `2026-09-11`.
 
-## [2026-09-10] feature | `SmsChannel` config-driven + `sms_from` (Difetto 9/10 story invito Quaeris)
+## [2026-09-10] feature | `SmsChannel` config-driven + `sms_from` (Difetto 9/10 story invito <nome progetto>)
 
 - `SmsChannel` non più cablato su SMSFactor (regressione `b8321c567`): sceglie il driver da `config('sms.default')` via `SmsActionFactory` (mappa esplicita). `SMS_DRIVER=netfun` → inviti SMS via Netfun.
 - `MailTemplate.sms_from` (mittente SMS per template) + `SpatieEmail::buildSmsFrom()` + wiring in `RecordNotification::toSms()`. `MailTemplate::getSlugOptions()->preventOverwrite()` (Difetto 10: `SpatieEmail::__construct()` corrompeva lo slug).
-- Concept: [concepts/sms-channel-driver-selection.md](concepts/sms-channel-driver-selection.md), [concepts/mail-template-slug-prevent-overwrite.md](concepts/mail-template-slug-prevent-overwrite.md). Story: `../../../Quaeris/docs/stories/quaeris-send-invite-migrate-to-record-notification.md`.
+- Concept: [concepts/sms-channel-driver-selection.md](concepts/sms-channel-driver-selection.md), [concepts/mail-template-slug-prevent-overwrite.md](concepts/mail-template-slug-prevent-overwrite.md). Story: `../../../<nome progetto>/docs/stories/<nome progetto>-send-invite-migrate-to-record-notification.md`.
 
 ## [2026-08-27] quality | PHPStan `Modules/Notify/app`: XOT-5.43
 
@@ -70,7 +74,7 @@ module: "Notify"
 ## [2026-05-11] Wiki Structure Created
 
 - Created wiki structure: rules/, skills/, commands/, memories/, concepts/
-- Created INDEX.md for each section
+- Created index.md for each section
 - Created index.md for each section
 - Created module index.md
 - Ready for on-demand loading via QMD

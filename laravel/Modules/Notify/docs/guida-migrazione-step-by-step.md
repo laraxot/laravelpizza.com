@@ -3,11 +3,14 @@ title: "guida migrazione step by step"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "guida migrazione step by step"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Guida Migrazione Step-by-Step: Modulo Notify - Filament 4

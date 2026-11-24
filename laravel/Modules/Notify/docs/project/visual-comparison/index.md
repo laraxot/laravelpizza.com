@@ -3,24 +3,41 @@ title: "index"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "index"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Project Visual Comparison - Homepage Parity
 
 **Date**: 2026-04-02
 
+<<<<<<< HEAD
 ---
+
+title: "index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "index"
+issues: []
+discussions: []
 ## Objective
 
 Make local homepage (http://127.0.0.1:8000/it/tests/homepage) visually identical to reference (https://italia.github.io/design-comuni-pagine-statiche/sito/homepage.html)
 
 ---
 
+=======
+## Objective
+
+>>>>>>> laraxot/dev
 ## Screenshots Summary
 
 ### Header - Sixteen Theme
@@ -63,4 +80,8 @@ Make local homepage (http://127.0.0.1:8000/it/tests/homepage) visually identical
 ## Back to Project Docs
 
 - [Project Documentation](./README.md)
+<<<<<<< HEAD
 - [Modules Index](./modules.md)
+=======
+- [Modules Index](./modules.md)
+>>>>>>> laraxot/dev

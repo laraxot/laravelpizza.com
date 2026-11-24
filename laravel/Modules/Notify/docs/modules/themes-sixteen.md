@@ -3,7 +3,11 @@ title: "Gestione asset Vite per il tema Sixteen"
 type: concept
 tags: [themes, sixteen]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "themes-sixteen gestione asset vite per il tema sixteen"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -34,15 +38,12 @@ Segui questi passaggi per risolvere:
 
 1. Vai nella cartella del tema:
    ```bash
-   cd /var/www/html/_bases/base_fixcity_fila5_mono/laravel/Themes/Sixteen
-   cd /var/www/html/_bases/base_ptvx_fila5_mono/laravel/Themes/Sixteen
+   cd /var/www/html/_bases/base_fixcity_fila5/laravel/Themes/Sixteen
+   cd /var/www/html/_bases/base_ptvx_fila5/laravel/Themes/Sixteen
    ```
 2. Esegui il comando:
    ```bash
-<<<<<<< .merge_file_9gzeQo
    # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_9la9rn
    ```
 
 Questo comando pubblica gli asset necessari e risolve l'errore.

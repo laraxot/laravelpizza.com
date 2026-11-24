@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "redundancy report"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Redundancy Report – Geo Module

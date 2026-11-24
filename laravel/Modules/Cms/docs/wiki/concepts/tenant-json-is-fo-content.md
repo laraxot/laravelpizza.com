@@ -13,7 +13,6 @@ discussions:
 related:
   - cms-page-middleware-json-ssot.md
   - x-page-data-bag-only.md
-status: draft
 ---
 
 # Tenant JSON come contenuto del front office

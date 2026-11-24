@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "migration filament"
 related:
   - "./italian-text-refined-audit-report.md"
-  - "../italian-text-refined-audit-report.md"
-status: draft
 ---
 # Lang {{TYPE^}} LLM Wiki Agent Instructions
 
@@ -156,7 +154,7 @@ Related:
 
 ---
 
-<!-- Merged from agents.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from AGENTS.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
 title: "Agent instructions"

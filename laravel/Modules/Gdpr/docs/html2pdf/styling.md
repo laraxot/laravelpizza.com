@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "styling"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Guida agli Stili, Tabelle e Immagini
@@ -22,6 +21,15 @@ Questa guida illustra come applicare stili CSS, creare layout con tabelle e gest
 *   [Configurazione della Sicurezza](./security.md)
 
 ---
+
+title: "styling"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "styling"
+issues: []
+discussions: []
 ## 🎨 Stili e CSS
 
 Html2Pdf ha un supporto limitato per i CSS. La regola fondamentale è utilizzare **esclusivamente CSS inline** tramite l'attributo `style`. Tag `<style>` e fogli di stile esterni (`<link>`) non sono supportati.

@@ -3,7 +3,11 @@ title: "context"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "context"
 issues: []
 discussions: []
@@ -20,7 +24,7 @@ LaravelPizza is a modular meetup/community platform built on Laravel + Filament 
 
 - [Overview](./overview.md)
 - [Workflow](./workflow.md)
-- [PHPStan](./phpstan.md)
+- [PHPStan](../phpstan.md)
 - [Filament](./filament.md)
 - [MCP](./mcp.md)
 - [Chaos Monkey Readiness](./chaos-monkey-readiness.md)

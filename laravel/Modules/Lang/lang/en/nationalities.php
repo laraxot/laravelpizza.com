@@ -171,7 +171,7 @@ return [
     'lr' => 'Liberian',
     'tg' => 'Togolese',
     'bj' => 'Beninese',
-    'bf' => 'Burkinabé',
+    'bf' => 'Burkinabe',
     'ml' => 'Malian',
     'ne' => 'Nigerien',
     'td' => 'Chadian',
@@ -205,7 +205,7 @@ return [
     'xk' => 'Kosovar',
     'va' => 'Vatican',
     'sm' => 'Sammarinese',
-    'mc' => 'Monégasque',
+    'mc' => 'Monegasque',
     'li' => 'Liechtensteiner',
     'ad' => 'Andorran',
     'gi' => 'Gibraltarian',
@@ -270,19 +270,19 @@ return [
     'plural_label' => 'Missing Plural label',
     'fields' => [
         'id' => [
-            'label' => 'Identificativo',
-            'tooltip' => 'Identificativo univoco del record',
+            'label' => 'Identifier',
+            'tooltip' => 'Unique record identifier',
             'helper_text' => '',
             'description' => '',
         ],
         'created_at' => [
-            'label' => 'Data Creazione',
+            'label' => 'Created at',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'updated_at' => [
-            'label' => 'Ultima Modifica',
+            'label' => 'Last modified',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -290,13 +290,13 @@ return [
     ],
     'actions' => [
         'create' => [
-            'label' => 'Crea Nationalities',
+            'label' => 'Create Nationalities',
         ],
         'edit' => [
-            'label' => 'Modifica Nationalities',
+            'label' => 'Edit Nationalities',
         ],
         'delete' => [
-            'label' => 'Elimina Nationalities',
+            'label' => 'Delete Nationalities',
         ],
     ],
 ];

@@ -47,7 +47,7 @@ function archKnownModuleCycles(): array
     return [
         'Activity<->User',
         'Lang<->Xot',
-        'Limesurvey<->Quaeris',
+        'Limesurvey<-><nome progetto>',
         'Media<->User',
         'Media<->Xot',
         'Notify<->User',

@@ -9,7 +9,7 @@ declare(strict_types=1);
 return [
     'label' => 'Link Mappa',
     'placeholder' => 'https://maps.google.com/...',
-    'helper_text' => 'Link a Google Maps o altro servizio di mappe',
+    'helper_text' => 'Link to Google Maps or another map service',
     'tooltip' => '',
     'description' => '',
 ];

@@ -5,7 +5,7 @@ declare(strict_types=1);
 return [
     'navigation' => [
         'label' => 'Coordinate GPS',
-        'group' => 'Gestione Territorio',
+        'group' => 'Territory Management',
         'icon' => 'heroicon-o-map-pin',
         'sort' => '30',
     ],
@@ -24,12 +24,12 @@ return [
         ],
     ],
     'actions' => [
-        'select_position' => 'Seleziona Posizione',
+        'select_position' => 'Select Position',
         'update_coordinates' => 'Aggiorna Coordinate',
     ],
     'messages' => [
-        'coordinates_updated' => 'Coordinate aggiornate con successo',
-        'invalid_coordinates' => 'Coordinate non valide',
+        'coordinates_updated' => 'Coordinates updated successfully',
+        'invalid_coordinates' => 'Invalid coordinates',
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',

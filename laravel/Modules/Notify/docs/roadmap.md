@@ -3,14 +3,15 @@ title: "roadmap"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "roadmap"
 issues: []
 discussions: []
-status: stale
 ---
-
-> Nota 2026-10-14 (docs-audit): E' la roadmap del 'FixCity Design System' (3 aprile 2026), non del modulo Notify. Contenuto non riscritto, verificare prima di usarlo.
 
 # 🗺️ FixCity Design System - Product Roadmap
 
@@ -19,6 +20,15 @@ status: stale
 > Status: 🟢 ACTIVE DEVELOPMENT
 
 ---
+
+title: "roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "roadmap"
+issues: []
+discussions: []
 ## 📊 Roadmap Overview
 
 FixCity is a civic technology platform connecting citizens and municipalities to improve urban services. The project follows a **modular, phased approach** using Laravel + Filament 4.x + Tailwind CSS + Alpine.js.
@@ -221,8 +231,8 @@ Level 3: Themes
 **Output**: Analysis in `/docs/archive/roadmaps/ANALYSIS.md`
 
 #### Wave 2: Core Structure 🟡 IN PROGRESS
-- 🟡 Create central ROADMAP.md (THIS FILE)
-- [ ] Create unified INDEX.md
+- 🟡 Create central roadmap.md (THIS FILE)
+- [ ] Create unified index.md
 - [ ] Create MODULE_ROADMAPS.md
 - [ ] Create TIMELINE.md
 - [ ] Archive old roadmap variants
@@ -246,7 +256,7 @@ Level 3: Themes
 **Target Completion**: Week following Wave 3
 
 **Success Criteria**:
-- ✅ Central ROADMAP.md created with all phases
+- ✅ Central roadmap.md created with all phases
 - ✅ Old roadmap files archived (not deleted)
 - ✅ Migration guide documents old locations
 - [ ] All internal links verified (no 404s)
@@ -336,31 +346,12 @@ Each of the 18 modules has its own documentation:
 - **[CMS Module](../laravel/Modules/Cms/docs/)** - Page management
 - **[GDPR Module](../laravel/Modules/Gdpr/docs/)** - Compliance
 - **[Tenant Module](../laravel/Modules/Tenant/docs/)** - Multi-tenancy
-- **[Xot Module](../../Xot/docs)** - Framework base & utilities
-- **[User Module](../../User/docs/product-roadmap.md)** - Auth, profiles, roles
-- **[UI Module](../../UI/docs)** - Components, themes
-- **[Geo Module](../../Geo/docs/PROJECT.md)** - Geolocation, maps
-- **[Lang Module](../../Lang/docs)** - Internationalization
-- **[Media Module](../../Media/docs)** - File management
-- **[Notify Module](.)** - Notifications
-
-### Business Modules
-- **[FixCity Module](../../Fixcity/docs)** - Core ticketing system ⭐
-- **[Comment Module](../../Comment/docs)** - Discussion threads
-- **[Rating Module](../../Rating/docs)** - User feedback
-- **[Activity Module](../../Activity/docs/product-roadmap.md)** - Audit trail
-- **[Blog Module](../../Blog/docs)** - Blog content
-- **[CMS Module](../../Cms/docs)** - Page management
-- **[GDPR Module](../../Gdpr/docs)** - Compliance
-- **[Tenant Module](../../Tenant/docs)** - Multi-tenancy
 - **[Payment Module](../laravel/Modules/Payment/docs/)** - Billing (if applicable)
 - **[Reporting Module](../laravel/Modules/Reporting/docs/)** - Analytics
 
 ### Themes
 - **[Sixteen Theme](../laravel/Themes/Sixteen/docs/)** - Main AGID-compliant theme
 - **[TwentyOne Theme](../laravel/Themes/TwentyOne/docs/)** - Alternative theme
-- **[Sixteen Theme](../../../Themes/Sixteen/docs)** - Main AGID-compliant theme
-- **[TwentyOne Theme](../../../Themes/TwentyOne/docs)** - Alternative theme
 
 ---
 
@@ -369,11 +360,11 @@ Each of the 18 modules has its own documentation:
 ### Central Hub (This Location)
 ```
 docs/
-├── ROADMAP.md (THIS FILE) - Central hub, all phases
-├── INDEX.md - Master navigation, updated with links
+├── roadmap.md (THIS FILE) - Central hub, all phases
+├── index.md - Master navigation, updated with links
 ├── PROJECT/ - Project metadata
 │   ├── README.md
-│   ├── ARCHITECTURE.md
+│   ├── architecture.md
 │   └── CHANGELOG.md
 └── archive/
     └── roadmaps/
@@ -449,8 +440,8 @@ Sep 2024          Q4 2025          Q1 2026          Q2 2026          2027+
 **Week of April 3, 2026**:
 
 1. **Phase 11 Wave 2**: Complete core documentation structure
-   - ✅ Create central ROADMAP.md (THIS FILE)
-   - 🟡 Update INDEX.md with navigation
+   - ✅ Create central roadmap.md (THIS FILE)
+   - 🟡 Update index.md with navigation
    - 🟡 Create MODULE_ROADMAPS.md
    - 🟡 Create TIMELINE.md
 
@@ -470,13 +461,13 @@ Sep 2024          Q4 2025          Q1 2026          Q2 2026          2027+
 
 ✅ = Complete | 🟡 = In Progress | 📅 = Pending
 
-- ✅ Central ROADMAP.md created with all phases (1-15+)
+- ✅ Central roadmap.md created with all phases (1-15+)
 - ✅ Phase 10 (Homepage) fully documented with deliverables
 - ✅ Phase 11 (Documentation) broken into 4 waves with clear tasks
 - 🟡 Phase 12+ outlined with objectives and timelines
 - 📅 Old roadmap files archived (not deleted)
 - 📅 Migration guide created for old locations
-- 📅 INDEX.md updated with roadmap link
+- 📅 index.md updated with roadmap link
 - 📅 All internal links verified (no 404s)
 - 📅 Module-specific roadmaps linked from central hub
 
@@ -484,7 +475,7 @@ Sep 2024          Q4 2025          Q1 2026          Q2 2026          2027+
 
 ## 📞 Getting Help
 
-- **Questions about phases?** → Check [ROADMAP.md](./ROADMAP.md)
+- **Questions about phases?** → Check [roadmap.md](./roadmap.md)
 - **Can't find a document?** → See [MIGRATION_GUIDE.md](./archive/roadmaps/MIGRATION_GUIDE.md)
 - **Module specific?** → See [Module-Specific Roadmaps](#-module-specific-roadmaps)
 - **Need history?** → Check [Archive Manifest](./archive/roadmaps/MANIFEST.md)

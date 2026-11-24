@@ -1,11 +1,10 @@
 ---
 title: "Configurazione .env.development - Ambiente di Sviluppo"
+qmd: "activity env development configuration md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "configurazione .env.development - ambiente di sviluppo activity"
+tags: [documentation]
 ---
+
 # Configurazione .env.development - Ambiente di Sviluppo
 
 ## Panoramica
@@ -103,8 +102,8 @@ MAIL_FROM_NAME="${APP_NAME}"
 - **Log Mailer**: Output mail in log per debugging
 - **Array Cache**: Performance ottimizzata per sviluppo rapido
 
-### 3. Compatibilità con Laravel 13.x
-- Configurazione conforme alle best practices Laravel 13.x
+### 3. Compatibilità con Laravel 12.x
+- Configurazione conforme alle best practices Laravel 12.x
 - Variabili d'ambiente ottimizzate per ambiente di sviluppo
 - Supporto completo per tutte le funzionalità di Laravel
 
@@ -213,16 +212,16 @@ DEBUGBAR_ENABLED=true
 LOG_LEVEL=debug
 ```
 
-## Compatibilità con Laravel 13.x
+## Compatibilità con Laravel 12.x
 
 ### ✅ Compatibile
-- Tutte le funzionalità Laravel 13.x
+- Tutte le funzionalità Laravel 12.x
 - Configurazione database SQLite standard
 - Supporto completo per Redis
 - Compatibilità con Filament 5.x
 
 ### 🔄 Configurazioni Automatiche
-- Laravel 13.x riconosce automaticamente SQLite
+- Laravel 12.x riconosce automaticamente SQLite
 - Configurazione Redis ottimizzata
 - Supporto per tutte le funzionalità di sviluppo
 
@@ -241,7 +240,7 @@ DB_PORT=3306
 DB_DATABASE=Quaeris_data
 DB_DATABASE=healthcare_app_data
 DB_USERNAME=marco
-DB_PASSWORD=[segreto locale, non nel repo]
+DB_PASSWORD=marco
 ```
 
 ### 2. Cache e Queue

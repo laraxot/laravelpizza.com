@@ -3,8 +3,7 @@ import { html } from 'lit';
 import { geoIcon } from '../heroicons.js';
 
 const MIN_QUERY_LENGTH = 3;
-const SEARCH_DEBOUNCE_MS = 350;
-const NOMINATIM_SEARCH_URL = 'https://nominatim.openstreetmap.org/search';
+import { nominatimUrl } from '../endpoints.js';
 
 function focusSearchInput(ctx) {
     const root = ctx.renderRoot ?? ctx;
@@ -72,7 +71,7 @@ export function handleSearchKeydown(ctx, event) {
 }
 
 /**
- * Update the search query with debounce.
+ * Store the search query; the search itself runs on Enter or on the search button.
  */
 export function updateSearchQuery(ctx, query) {
     ctx.searchQuery = query || '';
@@ -82,11 +81,9 @@ export function updateSearchQuery(ctx, query) {
         clearTimeout(ctx._searchDebounce);
     }
 
-    if (ctx.searchQuery.trim().length >= MIN_QUERY_LENGTH) {
-        ctx._searchDebounce = setTimeout(() => {
-            void executeAddressSearch(ctx, { selectFirst: false });
-        }, SEARCH_DEBOUNCE_MS);
-    } else {
+    // Nessuna ricerca mentre si digita: la Nominatim Usage Policy vieta l'autocompletamento. Si cerca con Invio
+    // o con il pulsante (handleSearchKeydown / executeAddressSearch).
+    if (ctx.searchQuery.trim().length < MIN_QUERY_LENGTH) {
         ctx.searchResults = [];
     }
 
@@ -216,7 +213,7 @@ async function resolveAddressResults(ctx, query) {
         return ctx.searchAddress(query);
     }
 
-    const url = new URL(NOMINATIM_SEARCH_URL);
+    const url = nominatimUrl('search');
     url.searchParams.set('format', 'json');
     url.searchParams.set('addressdetails', '1');
     url.searchParams.set('limit', '5');

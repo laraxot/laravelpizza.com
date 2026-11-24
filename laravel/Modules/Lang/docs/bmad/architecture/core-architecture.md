@@ -7,8 +7,7 @@ created: 2026-07-14
 updated: 2026-07-14
 qmd: "redundancy analysis"
 related:
-  - "../../italian-text-refined-audit-report.md"
-status: draft
+  - "./italian-text-refined-audit-report.md"
 ---
 # Architectural Rules & Guidelines
 
@@ -33,12 +32,12 @@ For strict coding standards, Filament extension rules, and PHPStan guidelines, p
 
 **Models:** `BaseModelLang`, `LanguageLine`, `Translation`.
 **Actions:** `SyncTranslationsAction`, `ValidateTranslationsAction`.
-**Filament Resources:** `LangResource`: main admin resource.
+**Filament Resources:** `LangResource` — main admin resource.
 
-**Database Schema:** `lang_table`: tabella primaria con colonne standard Laravel (id, timestamps).
+**Database Schema:** `lang_table` — tabella primaria con colonne standard Laravel (id, timestamps).
 
 **Design Decisions:** XotBaseModel (base coerente), Filament v5 (admin standard), Laravel Queues (background per operazioni pesanti).
 
 **Integration Points:** dipende da Xot; usato da Activity, Notify (logging).
 
-**Quality Gates:** PHPStan L10 / PHPMD / Pest: vedi report qualità nel modulo.
+**Quality Gates:** PHPStan L10 / PHPMD / Pest — vedi report qualità nel modulo.

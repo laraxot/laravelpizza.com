@@ -2,16 +2,19 @@
 qmd: "logging consolidated"
 issues: []
 discussions: []
-title: "logging: Consolidated Documentation"
+title: "logging — Consolidated Documentation"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
-# logging: Consolidated Documentation
+# logging — Consolidated Documentation
 
 Consolidated from **6** individual files.
 
@@ -28,7 +31,7 @@ Consolidated from **6** individual files.
 
 ## logging-best-practices-1
 
-*Consolidated from: `logging-best-practices.md`*
+*Consolidated from: `logging-best-practices-1.md`*
 
 title: "Logging Best Practices - Performance & Quality"
 type: concept
@@ -39,17 +42,12 @@ qmd: "logging-best-practices-1 logging best practices - performance & quality"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -286,7 +284,10 @@ Log::info('Batch completed', ['count' => $count]); // ✅ ONE LOG
 
 *Consolidated from: `logging-best-practices.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Executive Summary
 
 **CRITICAL ISSUE:** Excessive `Log::info()` calls cause **30-50% performance degradation**.
@@ -511,7 +512,10 @@ time curl http://localhost:8000/api/endpoint
 
 *Consolidated from: `logging-optimization-plan.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Current Issues
 
 ### Excessive Log::info() Calls Found
@@ -778,17 +782,12 @@ updated: 2026-07-14
 qmd: "logging_optimization_summary_2026-03-02.deprecated deprecated"
 status: deprecated
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -799,7 +798,7 @@ related:
 
 ## logging-optimization-summary-1
 
-*Consolidated from: `logging-optimization-summary.md`*
+*Consolidated from: `logging-optimization-summary-1.md`*
 
 title: "Logging Optimization Summary - 2026-03-02"
 type: concept
@@ -810,17 +809,12 @@ qmd: "logging-optimization-summary-2026-03-02.deprecated logging optimization su
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -951,7 +945,7 @@ After optimization:
    - `.env`: LOG_LEVEL=warning (production), LOG_LEVEL=debug (development)
    - Reduces log writes by 90%, overhead from 20-30% to 5-10%
 
-### 3. agents.md Updated
+### 3. AGENTS.md Updated
 
 **New Section Added**: "🚨 LOGGING PERFORMANCE RULES (CRITICAL)"
 
@@ -1229,7 +1223,7 @@ LOG_LEVEL=debug
 
 1. ✅ Create documentation
 2. ✅ Update knowledge base
-3. ✅ Update agents.md
+3. ✅ Update AGENTS.md
 4. ⏭️ Update `config/logging.php`
 5. ⏭️ Update `.env.example`
 
@@ -1301,7 +1295,7 @@ This session successfully:
 2. ✅ Identified 58 excessive `Log::info()` calls
 3. ✅ Documented logging best practices
 4. ✅ Updated knowledge base with 3 key lessons
-5. ✅ Updated agents.md with performance rules
+5. ✅ Updated AGENTS.md with performance rules
 6. ✅ Created optimization plan (4 phases)
 7. ✅ Defined success metrics
 
@@ -1335,23 +1329,17 @@ updated: 2026-07-14
 qmd: "logging_optimization_summary_2026-03-02 deprecated"
 status: deprecated
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
 
 > Questo file è stato rinominato in [logging-optimization-summary.md](logging-optimization-summary.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-> Questo file è stato rinominato in [logging-optimization-summary.md](../../logging-optimization-summary.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 
 ---
 

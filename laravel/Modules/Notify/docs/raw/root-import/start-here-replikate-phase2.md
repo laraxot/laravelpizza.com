@@ -3,7 +3,11 @@ title: "start here replikate phase2"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "start here replikate phase2"
 issues: []
 discussions: []
@@ -149,10 +153,7 @@ cd laravel/Themes/Sixteen
 npm run build
 
 # Copy assets
-<<<<<<< .merge_file_2v9CDu
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_FPJDHD
 
 # Clear cache
 php artisan optimize:clear

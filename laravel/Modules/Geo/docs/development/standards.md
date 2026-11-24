@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "standards"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Standard di Sviluppo

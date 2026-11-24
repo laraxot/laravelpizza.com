@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "return type fixes"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../return-type-fixes.md
 ---
 
 # XotBaseResource Return Type Fixes

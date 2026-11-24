@@ -54,7 +54,7 @@ traduzioni Laravel smette di ricevere `int(1)` da uno di essi.
 ### Perche' `php -l` non basta
 
 Stesso motivo di Activity: senza `<?php` contiguo, PHP tratta il file come testo
-inline, non come codice: `php -l` dice "No syntax errors" a vuoto, non perche' il file
+inline, non come codice — `php -l` dice "No syntax errors" a vuoto, non perche' il file
 sia un array valido.
 
 ### File e conteggio chiavi verificato
@@ -83,8 +83,8 @@ sorgente, non un comportamento di dominio esprimibile in Pest.
 
 ### References
 
-- [Source: laravel/Modules/Activity/docs/stories/lang-files-pipe-corruption.story.md]: pattern gemello, stesso meccanismo di corruzione
-- [Source: laravel/Modules/User/docs/stories/lang-files-empty-stub-corruption.story.md]: trovato nella stessa sessione, meccanismo diverso, stesso crash live
+- [Source: laravel/Modules/Activity/docs/stories/lang-files-pipe-corruption.story.md] — pattern gemello, stesso meccanismo di corruzione
+- [Source: laravel/Modules/User/docs/stories/lang-files-empty-stub-corruption.story.md] — trovato nella stessa sessione, meccanismo diverso, stesso crash live
 
 ## Dev Agent Record
 
@@ -96,11 +96,11 @@ sorgente, non un comportamento di dominio esprimibile in Pest.
 
 ### File List
 
-- `laravel/Modules/Job/lang/lang/it/jobs_waiting.php`: riparato
-- `laravel/Modules/Job/lang/lang/it/job_manager.php`: riparato
-- `laravel/Modules/Job/lang/lang/it/edit_failed_import_row.php`: riparato
-- `laravel/Modules/Job/lang/lang/it/import.php`: riparato
-- `laravel/Modules/Job/lang/lang/it/failed_job.php`: riparato
-- `laravel/Modules/Job/lang/lang/it/job_batch.php`: riparato
-- `laravel/Modules/Job/lang/lang/it/job.php`: riparato
-- `laravel/Modules/Job/lang/lang/it/failed_import_row.php`: riparato
+- `laravel/Modules/Job/lang/lang/it/jobs_waiting.php` — riparato
+- `laravel/Modules/Job/lang/lang/it/job_manager.php` — riparato
+- `laravel/Modules/Job/lang/lang/it/edit_failed_import_row.php` — riparato
+- `laravel/Modules/Job/lang/lang/it/import.php` — riparato
+- `laravel/Modules/Job/lang/lang/it/failed_job.php` — riparato
+- `laravel/Modules/Job/lang/lang/it/job_batch.php` — riparato
+- `laravel/Modules/Job/lang/lang/it/job.php` — riparato
+- `laravel/Modules/Job/lang/lang/it/failed_import_row.php` — riparato

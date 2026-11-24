@@ -2,16 +2,19 @@
 qmd: "email consolidated"
 issues: []
 discussions: []
-title: "email: Consolidated Documentation"
+title: "email — Consolidated Documentation"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
-# email: Consolidated Documentation
+# email — Consolidated Documentation
 
 Consolidated from **42** individual files.
 
@@ -64,7 +67,7 @@ Consolidated from **42** individual files.
 
 ## email-analytics-1
 
-*Consolidated from: `email-analytics.md`*
+*Consolidated from: `email-analytics-1.md`*
 
 title: "Analytics Email - il progetto"
 type: concept
@@ -75,17 +78,12 @@ qmd: "email-analytics-1 analytics email - il progetto"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -533,9 +531,6 @@ class MailTrackingService
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Analytics](https://github.com/spatie/laravel-analytics)
@@ -547,7 +542,10 @@ class MailTrackingService
 
 *Consolidated from: `email-analytics.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di tracciamento e analisi per le email in il progetto.
@@ -989,9 +987,6 @@ class MailTrackingService
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Analytics](https://github.com/spatie/laravel-analytics)
@@ -1001,9 +996,12 @@ class MailTrackingService
 
 ## email-backup-1
 
-*Consolidated from: `email-backup.md`*
+*Consolidated from: `email-backup-1.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di backup per preservare e ripristinare i template email.
@@ -1634,14 +1632,17 @@ class MailBackupDebugger
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
+<<<<<<< HEAD
+=======
+- [Laravel Storage](https://laravel.com/project_docs/storage)
+- [Laravel Encryption](https://laravel.com/project_docs/encryption)
+- [Laravel Commands](https://laravel.com/project_docs/artisan)
+>>>>>>> laraxot/dev
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
@@ -1651,9 +1652,21 @@ class MailBackupDebugger
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
+<<<<<<< HEAD
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
+=======
+<<<<<<< HEAD
+- [Laravel Storage](https://laravel.com/project_docs/storage)
+- [Laravel Encryption](https://laravel.com/project_docs/encryption)
+- [Laravel Commands](https://laravel.com/project_docs/artisan)
+=======
+- [Laravel Storage](https://laravel.com/docs/storage)
+- [Laravel Encryption](https://laravel.com/docs/encryption)
+- [Laravel Commands](https://laravel.com/docs/artisan)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
@@ -2004,7 +2017,7 @@ class MailBackupDebugger
 
 ## email-backup-2
 
-*Consolidated from: `email-backup.md`*
+*Consolidated from: `email-backup-2.md`*
 
 title: "Sistema Backup Email"
 type: concept
@@ -2015,17 +2028,12 @@ qmd: "email-backup-2 sistema backup email"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -2662,9 +2670,6 @@ class MailBackupDebugger
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Storage](https://laravel.com/project_docs/storage)
@@ -2676,7 +2681,10 @@ class MailBackupDebugger
 
 *Consolidated from: `email-backup.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di backup per preservare e ripristinare i template email.
@@ -3307,9 +3315,6 @@ class MailBackupDebugger
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Storage](https://laravel.com/docs/storage)
@@ -3319,7 +3324,7 @@ class MailBackupDebugger
 
 ## email-best-practices-1
 
-*Consolidated from: `email-best-practices.md`*
+*Consolidated from: `email-best-practices-1.md`*
 
 title: "Best Practices per il Sistema Email"
 type: concept
@@ -3330,17 +3335,12 @@ qmd: "email-best-practices-1 best practices per il sistema email"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -3370,7 +3370,10 @@ related:
 
 *Consolidated from: `email-best-practices.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Migrazioni Database
 
 ### Struttura Standard
@@ -3392,7 +3395,7 @@ related:
 
 ## email-cache-1
 
-*Consolidated from: `email-cache.md`*
+*Consolidated from: `email-cache-1.md`*
 
 title: "Sistema Cache Email"
 type: concept
@@ -3403,17 +3406,12 @@ qmd: "email-cache-1 sistema cache email"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -3892,9 +3890,6 @@ class MailCacheDebugger
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Cache](https://laravel.com/project_docs/cache)
@@ -3906,7 +3901,10 @@ class MailCacheDebugger
 
 *Consolidated from: `email-cache.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di cache per ottimizzare le performance delle email.
@@ -4379,9 +4377,6 @@ class MailCacheDebugger
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Cache](https://laravel.com/project_docs/cache)
@@ -4395,7 +4390,7 @@ class MailCacheDebugger
 
 ## email-html-best-practices-1
 
-*Consolidated from: `email-html-best-practices.md`*
+*Consolidated from: `email-html-best-practices-1.md`*
 
 title: "Best Practices HTML per Email"
 type: concept
@@ -4406,17 +4401,12 @@ qmd: "email-html-best-practices-1 best practices html per email"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -4642,11 +4632,8 @@ Questo documento definisce le best practices per la creazione di template HTML p
 - [Documentazione MailPace](https://github.com/mailpace/templates)
 - [Struttura Template](./mail-templates-structure.md)
 - [Template Base](./base-templates.md)
-- [Struttura Template](./mail-templates-structure.md)
+- [Struttura Template](./mail-templates-structure-1.md)
 - [Template Base](./base-templates.md)
-- [Template Base](../../base-templates.md)
-- [Struttura Template](./mail-templates-structure.md)
-- [Template Base](../../base-templates.md)
 
 ## Supporto
 
@@ -4660,7 +4647,10 @@ Per supporto tecnico:
 
 *Consolidated from: `email-html-best-practices.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento definisce le best practices per la creazione di template HTML per email, basate sulle esperienze di [MailPace](https://github.com/mailpace/templates) e altre fonti autorevoli.
@@ -4880,8 +4870,6 @@ Questo documento definisce le best practices per la creazione di template HTML p
 - [Documentazione MailPace](https://github.com/mailpace/templates)
 - [Struttura Template](./MAIL_TEMPLATES_STRUCTURE.md)
 - [Template Base](./BASE_TEMPLATES.md)
-- [Struttura Template](../../mail_templates_structure.md)
-- [Template Base](../../base_templates.md)
 
 ## Supporto
 
@@ -4896,12 +4884,15 @@ Per supporto tecnico:
 
 *Consolidated from: `email-integration.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ---
 
 ## email-logs-1
 
-*Consolidated from: `email-logs.md`*
+*Consolidated from: `email-logs-1.md`*
 
 title: "Sistema Log Email"
 type: concept
@@ -4912,17 +4903,12 @@ qmd: "email-logs-1 sistema log email"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -5435,9 +5421,6 @@ class MailLogDebugger
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Logging](https://laravel.com/project_docs/logging)
@@ -5449,7 +5432,10 @@ class MailLogDebugger
 
 *Consolidated from: `email-logs.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di log per tracciare e monitorare le attività del sistema email.
@@ -5956,9 +5942,6 @@ class MailLogDebugger
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Logging](https://laravel.com/project_docs/logging)
@@ -5972,7 +5955,7 @@ class MailLogDebugger
 
 ## email-monitoring-1
 
-*Consolidated from: `email-monitoring.md`*
+*Consolidated from: `email-monitoring-1.md`*
 
 title: "Sistema Monitoraggio Email"
 type: concept
@@ -5983,17 +5966,12 @@ qmd: "email-monitoring-1 sistema monitoraggio email"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -6813,9 +6791,6 @@ class MailMonitoringDebugger
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Cache](https://laravel.com/project_docs/cache)
@@ -6828,7 +6803,10 @@ class MailMonitoringDebugger
 
 *Consolidated from: `email-monitoring.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di monitoraggio per analizzare e ottimizzare le performance delle email.
@@ -7642,9 +7620,6 @@ class MailMonitoringDebugger
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Cache](https://laravel.com/project_docs/cache)
@@ -7660,7 +7635,7 @@ class MailMonitoringDebugger
 
 ## email-notifications-1
 
-*Consolidated from: `email-notifications.md`*
+*Consolidated from: `email-notifications-1.md`*
 
 title: "Sistema Notifiche Email - il progetto"
 type: concept
@@ -7671,17 +7646,12 @@ qmd: "email-notifications-1 sistema notifiche email - il progetto"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -8049,9 +8019,6 @@ class NotificationDebugger
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Notifications](https://laravel.com/project_docs/notifications)
@@ -8063,7 +8030,10 @@ class NotificationDebugger
 
 *Consolidated from: `email-notifications.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di notifiche per eventi e azioni in il progetto.
@@ -8425,9 +8395,6 @@ class NotificationDebugger
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Notifications](https://laravel.com/project_docs/notifications)
@@ -8441,7 +8408,7 @@ class NotificationDebugger
 
 ## email-plugins-analysis-1
 
-*Consolidated from: `email-plugins-analysis.md`*
+*Consolidated from: `email-plugins-analysis-1.md`*
 
 title: "Analisi Plugin Email per Filament - il progetto"
 type: concept
@@ -8452,17 +8419,12 @@ qmd: "email-plugins-analysis-1 analisi plugin email per filament - il progetto"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -8735,9 +8697,6 @@ class MailAnalytics
 - [Database Mail System](database-mail-system.md)
 - [Mail Queue](database-mail-queue.md)
 - [Testing](database-mail-system-tests.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Mail Queue](../../database-mail-queue.md)
-- [Testing](../../database-mail-system-tests.md)
 
 ## Vedi Anche
 - [Filament Documentation](https://filamentphp.com/docs)
@@ -8749,7 +8708,10 @@ class MailAnalytics
 
 *Consolidated from: `email-plugins-analysis.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Analisi comparativa dei principali plugin per la gestione email in Filament, con focus sulle funzionalità che possiamo integrare nel nostro sistema.
@@ -9016,9 +8978,6 @@ class MailAnalytics
 - [Database Mail System](database-mail-system.md)
 - [Mail Queue](database-mail-queue.md)
 - [Testing](database-mail-system-tests.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Mail Queue](../../database-mail-queue.md)
-- [Testing](../../database-mail-system-tests.md)
 
 ## Vedi Anche
 - [Filament Documentation](https://filamentphp.com/docs)
@@ -9031,7 +8990,10 @@ class MailAnalytics
 
 *Consolidated from: `email-plugins.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Analisi comparativa dei principali plugin per la gestione email in Filament, con focus sulle funzionalità che possiamo integrare nel nostro sistema.
@@ -9298,9 +9260,6 @@ class MailAnalytics
 - [Database Mail System](database-mail-system.md)
 - [Mail Queue](database-mail-queue.md)
 - [Testing](database-mail-system-tests.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Mail Queue](../../database-mail-queue.md)
-- [Testing](../../database-mail-system-tests.md)
 
 ## Vedi Anche
 - [Filament Documentation](https://filamentphp.com/docs)
@@ -9311,7 +9270,7 @@ class MailAnalytics
 
 ## email-queue-1
 
-*Consolidated from: `email-queue.md`*
+*Consolidated from: `email-queue-1.md`*
 
 title: "Sistema Code Email - il progetto"
 type: concept
@@ -9322,17 +9281,12 @@ qmd: "email-queue-1 sistema code email - il progetto"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -9737,9 +9691,6 @@ class MailQueueManager
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Queue](https://laravel.com/project_docs/queues)
@@ -9751,7 +9702,10 @@ class MailQueueManager
 
 *Consolidated from: `email-queue.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di gestione code per l'invio di email in il progetto.
@@ -10150,9 +10104,6 @@ class MailQueueManager
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Queue](https://laravel.com/project_docs/queues)
@@ -10561,9 +10512,6 @@ class MailQueueManager
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Queue](https://laravel.com/project_docs/queues)
@@ -10574,7 +10522,7 @@ class MailQueueManager
 
 ## email-sending-troubleshooting-1
 
-*Consolidated from: `email-sending-troubleshooting.md`*
+*Consolidated from: `email-sending-troubleshooting-1.md`*
 
 title: "Troubleshooting: Sistema di Invio Email in Notify"
 type: concept
@@ -10585,17 +10533,12 @@ qmd: "email-sending-troubleshooting-1 troubleshooting: sistema di invio email in
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -10799,7 +10742,10 @@ Un esempio completo di implementazione è disponibile in `TestSmtpPage.php`. Si 
 
 *Consolidated from: `email-sending-troubleshooting.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Problema: `SendEmail.php` vs `TestSmtpPage.php`
 
 È stato rilevato che nel modulo Notify:
@@ -10994,7 +10940,7 @@ Un esempio completo di implementazione è disponibile in `TestSmtpPage.php`. Si 
 
 ## email-translations-1
 
-*Consolidated from: `email-translations.md`*
+*Consolidated from: `email-translations-1.md`*
 
 title: "Integrazione Traduzioni Email - il progetto"
 type: concept
@@ -11005,17 +10951,12 @@ qmd: "email-translations-1 integrazione traduzioni email - il progetto"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -11399,9 +11340,6 @@ class TranslationValidator
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Localization](https://laravel.com/project_docs/localization)
@@ -11413,7 +11351,10 @@ class TranslationValidator
 
 *Consolidated from: `email-translations.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di traduzione multilingua per i template email in il progetto.
@@ -11791,9 +11732,6 @@ class TranslationValidator
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Localization](https://laravel.com/project_docs/localization)
@@ -11804,7 +11742,7 @@ class TranslationValidator
 
 ## email-wysiwyg-editor-1
 
-*Consolidated from: `email-wysiwyg-editor.md`*
+*Consolidated from: `email-wysiwyg-editor-1.md`*
 
 title: "Editor WYSIWYG per Email - il progetto"
 type: concept
@@ -11815,17 +11753,12 @@ qmd: "email-wysiwyg-editor-1 editor wysiwyg per email - il progetto"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -12260,9 +12193,6 @@ class TemplateValidator
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
 - [Mail Queue](database-mail-queue.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
-- [Mail Queue](../../database-mail-queue.md)
 
 ## Vedi Anche
 - [TinyMCE Documentation](https://www.tiny.cloud/docs)
@@ -12274,7 +12204,10 @@ class TemplateValidator
 
 *Consolidated from: `email-wysiwyg-editor.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Implementazione di un editor WYSIWYG avanzato per la creazione e modifica dei template email in il progetto.
@@ -12703,9 +12636,6 @@ class TemplateValidator
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
 - [Mail Queue](database-mail-queue.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
-- [Mail Queue](../../database-mail-queue.md)
 
 ## Vedi Anche
 - [TinyMCE Documentation](https://www.tiny.cloud/docs)
@@ -12717,7 +12647,10 @@ class TemplateValidator
 
 *Consolidated from: `email_analytics.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di tracciamento e analisi per le email in il progetto.
@@ -13159,9 +13092,6 @@ class MailTrackingService
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Analytics](https://github.com/spatie/laravel-analytics)
@@ -13173,7 +13103,10 @@ class MailTrackingService
 
 *Consolidated from: `email_backup.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di backup per preservare e ripristinare i template email.
@@ -13804,9 +13737,6 @@ class MailBackupDebugger
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Storage](https://laravel.com/project_docs/storage)
@@ -13818,7 +13748,10 @@ class MailBackupDebugger
 
 *Consolidated from: `email_best_practices.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Migrazioni Database
 
 ### Struttura Standard
@@ -13842,7 +13775,10 @@ class MailBackupDebugger
 
 *Consolidated from: `email_cache.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di cache per ottimizzare le performance delle email.
@@ -14315,9 +14251,6 @@ class MailCacheDebugger
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Cache](https://laravel.com/project_docs/cache)
@@ -14329,7 +14262,10 @@ class MailCacheDebugger
 
 *Consolidated from: `email_html_best_practices.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento definisce le best practices per la creazione di template HTML per email, basate sulle esperienze di [MailPace](https://github.com/mailpace/templates) e altre fonti autorevoli.
@@ -14549,8 +14485,6 @@ Questo documento definisce le best practices per la creazione di template HTML p
 - [Documentazione MailPace](https://github.com/mailpace/templates)
 - [Struttura Template](./MAIL_TEMPLATES_STRUCTURE.md)
 - [Template Base](./BASE_TEMPLATES.md)
-- [Struttura Template](../../mail_templates_structure.md)
-- [Template Base](../../base_templates.md)
 
 ## Supporto
 
@@ -14565,7 +14499,10 @@ Per supporto tecnico:
 
 *Consolidated from: `email_logs.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di log per tracciare e monitorare le attività del sistema email.
@@ -15072,9 +15009,6 @@ class MailLogDebugger
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Logging](https://laravel.com/project_docs/logging)
@@ -15086,7 +15020,10 @@ class MailLogDebugger
 
 *Consolidated from: `email_monitoring.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di monitoraggio per analizzare e ottimizzare le performance delle email.
@@ -15900,9 +15837,6 @@ class MailMonitoringDebugger
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Cache](https://laravel.com/project_docs/cache)
@@ -15915,7 +15849,10 @@ class MailMonitoringDebugger
 
 *Consolidated from: `email_notifications.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di notifiche per eventi e azioni in il progetto.
@@ -16277,9 +16214,6 @@ class NotificationDebugger
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Notifications](https://laravel.com/project_docs/notifications)
@@ -16291,7 +16225,10 @@ class NotificationDebugger
 
 *Consolidated from: `email_plugins_analysis.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Analisi comparativa dei principali plugin per la gestione email in Filament, con focus sulle funzionalità che possiamo integrare nel nostro sistema.
@@ -16558,9 +16495,6 @@ class MailAnalytics
 - [Database Mail System](database-mail-system.md)
 - [Mail Queue](database-mail-queue.md)
 - [Testing](database-mail-system-tests.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Mail Queue](../../database-mail-queue.md)
-- [Testing](../../database-mail-system-tests.md)
 
 ## Vedi Anche
 - [Filament Documentation](https://filamentphp.com/docs)
@@ -16572,7 +16506,10 @@ class MailAnalytics
 
 *Consolidated from: `email_queue.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di gestione code per l'invio di email in il progetto.
@@ -16971,9 +16908,6 @@ class MailQueueManager
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Queue](https://laravel.com/project_docs/queues)
@@ -16985,7 +16919,10 @@ class MailQueueManager
 
 *Consolidated from: `email_sending_troubleshooting.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Problema: `SendEmail.php` vs `TestSmtpPage.php`
 
 È stato rilevato che nel modulo Notify:
@@ -17183,7 +17120,10 @@ Un esempio completo di implementazione è disponibile in `TestSmtpPage.php`. Si 
 
 *Consolidated from: `email_translations.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di traduzione multilingua per i template email in il progetto.
@@ -17561,9 +17501,6 @@ class TranslationValidator
 - [Editor WYSIWYG](email-wysiwyg-editor.md)
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
-- [Editor WYSIWYG](../../email-wysiwyg-editor.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
 
 ## Vedi Anche
 - [Laravel Localization](https://laravel.com/project_docs/localization)
@@ -17575,7 +17512,10 @@ class TranslationValidator
 
 *Consolidated from: `email_wysiwyg_editor.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Implementazione di un editor WYSIWYG avanzato per la creazione e modifica dei template email in il progetto.
@@ -18004,9 +17944,6 @@ class TemplateValidator
 - [Database Mail System](database-mail-system.md)
 - [Email Plugins Analysis](email-plugins-analysis.md)
 - [Mail Queue](database-mail-queue.md)
-- [Database Mail System](../../database-mail-system.md)
-- [Email Plugins Analysis](../../email-plugins-analysis.md)
-- [Mail Queue](../../database-mail-queue.md)
 
 ## Vedi Anche
 - [TinyMCE Documentation](https://www.tiny.cloud/docs)

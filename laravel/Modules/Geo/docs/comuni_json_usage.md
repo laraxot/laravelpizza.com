@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "comuni json usage"
 issues: []
 discussions: []
-status: superseded
-superseded_by: comuni-json-usage.md
 ---
 
 # Using comuni.json for Location Data

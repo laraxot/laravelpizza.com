@@ -1,19 +1,116 @@
 ---
-title: "Lang: alias indice"
-type: alias
-module: Lang
-status: superseded
-superseded_by: 00-INDEX.md
-canonical: ./00-INDEX.md
-updated: 2026-10-20
-qmd: "alias 00-index lang verso 00-INDEX"
-tags: [docs, lang]
+issues: []
+discussions: []
+title: "📚 **Indice Documentazione Modulo Lang**"
+module: "Lang"
+type: concept
+tags: [lang, service, helper, text]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "lang service helper text"
+related:
+  - "./italian-text-refined-audit-report.md"
 ---
+# 📚 **Indice Documentazione Modulo Lang**
 
-# Alias: indice Lang
+**Status**: ✅ PHPStan Level 10 Compliant
+**Module Version**: 1.5.0
 
-Canonico: [00-INDEX.md](./00-INDEX.md). Scopo: [scopo.md](./scopo.md). Gate PHPStan: [stories/phpstan-lang-zero.story.md](./stories/phpstan-lang-zero.story.md). Modules: [Xot phpstan-modules-zero-wave3](../../Xot/docs/stories/phpstan-modules-zero-wave3.story.md). Single neon: [phpstan-single-neon-config](../../Xot/docs/wiki/memories/phpstan-single-neon-config.md). Harness: `Modules\Lang\Tests\TestCase::makeLangServiceProvider()` (FQCN); Pest solo wrapper.
+## 🎯 **Lettura Essenziale**
+1. [README.md](./README.md) - Panoramica del sistema di internazionalizzazione.
+2. [roadmap.md](./roadmap.md) - Evoluzione 2026: Traduzioni AI e centralizzazione.
+3. [philosophy.md](./philosophy.md) - La lingua come infrastruttura: filosofia Laraxot.
 
-## Cosa manca per completare
+## 🏗️ **Configurazione e Setup**
+- 🌍 **[Locale Management](./locale-management.md)** - Gestione delle lingue attive e default.
+- 🛣️ **[Route Localization](./laravel-localization-folio-integration.md)** - Integrazione con Folio e Volt per URL localizzati.
+- ⚙️ **[Service Provider](./lang-service-provider-improvements.md)** - Architettura del caricamento dinamico delle traduzioni.
 
-[completion-status.md](./completion-status.md): indicatori misurati, problemi noti e story aperte (2026-10-28).
+## 🏷️ **Naming & Standards**
+- 🚫 **[No Hardcoded Labels](./filament-label.md)** - Perché non usiamo mai `->label()` o `->placeholder()`.
+- 🗂️ **[Translation Keys](./translation-keys-best-practices.md)** - Convenzioni per la struttura delle chiavi (module::file.key).
+- 📜 **[Enum Translation](./enum-translation-pattern-implementation.md)** - Pattern per la traduzione automatica degli Enum.
+
+## 🚀 **Funzionalità Avanzate**
+- ⚡ **[Auto-Registration](./autoregistration-commands.md)** - Comandi Artisan per scoprire e registrare nuove chiavi.
+- 🤖 **[Automatic Translations](./automatic-translations.md)** - (DAB) Integrazione con motori di traduzione esterna.
+- 📝 **[Translation File Editor](./translation-file-editor.md)** - UI per la modifica dei file `.php` di lingua.
+
+## 🧪 **Qualità e Testing**
+- ✅ **[PHPStan Analysis](./phpstan-analysis-lang.md)** - Report di conformità Level 10.
+- 🔬 **[Testing Guidelines](./testing.md)** - Verifica della presenza delle chiavi di traduzione.
+- 🐒 **[Chaos Monkey Translation Fallbacks](./chaos-monkey-translation-fallbacks.md)** - Protocollo di recovery su regressioni i18n.
+
+## 🧹 **Manutenzione**
+- 🗑️ **[Cleanup Plan](./docs-naming-convention-fix.md)** - Rimozione dei 260+ file obsoleti.
+
+## 🔗 **Moduli Correlati**
+<<<<<<< HEAD
+=======
+- [Xot](../../xot/docs/readme.md) - Base framework e classi `XotBaseChartWidget`.
+- [UI](../../ui/docs/readme.md) - Componenti Blade e Filament che consumano le traduzioni.
+
+>>>>>>> laraxot/dev
+- [Xot](../../Xot/docs/README.md) - Base framework e classi `XotBaseChartWidget`.
+- [UI](../../UI/docs/README.md) - Componenti Blade e Filament che consumano le traduzioni.
+
+---
+*Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
+# Documentation Index
+## 📋 **Documenti Prodotto & Sviluppo**
+
+### Product
+| File | Scopo |
+|------|-------|
+| PRD.md | Product Requirements |
+<<<<<<< HEAD
+=======
+| PRODUCT_ROADMAP.md | Roadmap |
+| PRODUCT_STRATEGY.md | Strategy |
+| PRODUCT_LAUNCH_PLAN.md | Launch Plan |
+
+>>>>>>> laraxot/dev
+| product_roadmap.md | Roadmap |
+| product_strategy.md | Strategy |
+| product_launch_plan.md | Launch Plan |
+
+### Development
+| File | Scopo |
+|------|-------|
+<<<<<<< HEAD
+=======
+| GSD_WORKFLOW.md | GSD Workflow |
+| SPRINT_PLANNING.md | Sprint Planning |
+| USER_RESEARCH.md | User Research |
+
+>>>>>>> laraxot/dev
+| gsd_workflow.md | GSD Workflow |
+| sprint_planning.md | Sprint Planning |
+| user_research.md | User Research |
+
+## 📦 **Pacchetti Composer**
+- [Riferimento composer packages](../../../../bashscripts/ai/wiki/memories/composer-packages-reference.md)
+- [Package Dependency Chaos Map](./package-dependency-chaos-map.md)
+- `mcamara/laravel-localization` - URL localizzati
+- `lara-zeus/spatie-translatable` - Campi Filament tradotti
+- `rinvex/countries` - Dati paesi
+- `spatie/laravel-sluggable` - Slug multilingua
+
+## 🔗 **Moduli Correlati**
+- [Xot](../../Xot/docs/README.md) - Base framework e classi `XotBaseChartWidget`.
+- [UI](../../UI/docs/README.md) - Componenti Blade e Filament che consumano le traduzioni.
+<<<<<<< HEAD
+=======
+- [agents.md](../../../../agents.md) - Project guidelines
+
+>>>>>>> laraxot/dev
+- [AGENTS.md](../../../../AGENTS.md) - Project guidelines
+---
+- [AGENTS.md](../../../../AGENTS.md) - Project guidelines
+
+---
+*Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
+
+## Dependency Intelligence
+
+- [Dependency intelligence](dependency-intelligence.md)

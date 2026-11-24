@@ -1,0 +1,59 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Cms\Filament\Blocks;
+
+use Filament\Forms\Components\Builder\Block as FilamentBlock;
+use Illuminate\Support\Str;
+
+abstract class Block extends FilamentBlock
+{
+    protected static ?string $view = null;
+
+    public static function make(?string $name = null): static
+    {
+        $name = $name ?? static::getDefaultName();
+
+        return parent::make($name)
+            ->schema(static::getSchema())
+            ->view(static::getView());
+    }
+
+    abstract protected function getSchema(): array;
+
+    protected static function getDefaultName(): string
+    {
+        return Str::snake(class_basename(static::class));
+    }
+
+    protected static function getView(): string
+    {
+        if (static::$view !== null) {
+            return static::$view;
+        }
+
+        $name = Str::snake(class_basename(static::class));
+        $name = str_replace('_block', '', $name);
+
+        return "cms::components.blocks.{$name}";
+    }
+
+    protected static function getTranslationKeyPrefix(): string
+    {
+        $name = Str::snake(class_basename(static::class));
+        $name = str_replace('_block', '', $name);
+
+        return "cms::blocks.{$name}";
+    }
+
+    protected static function getLabel(): string
+    {
+        return __(static::getTranslationKeyPrefix() . '.label');
+    }
+
+    protected static function getFieldLabel(string $field): string
+    {
+        return __(static::getTranslationKeyPrefix() . '.fields.' . $field);
+    }
+}

@@ -1,5 +1,5 @@
 ---
-title: "Media: BMAD dossier"
+title: "Media — BMAD dossier"
 type: bmad-dossier
 module: Media
 updated: 2026-10-07
@@ -7,9 +7,8 @@ tags: [bmad, media, uploads, privacy]
 qmd: "Media module product brief PRD architecture UX security epics gaps release"
 issues: ["https://github.com/laraxot/base_fixcity_fila5/issues/383"]
 discussions: ["https://github.com/laraxot/base_fixcity_fila5/discussions/392"]
-status: draft
 ---
-# Media: BMAD dossier
+# Media — BMAD dossier
 ## Product brief / PRD
 Store validated evidence and conversions without turning personal media into uncontrolled data.
 ## Architecture / UX / security

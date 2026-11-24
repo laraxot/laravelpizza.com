@@ -3,17 +3,19 @@ title: "project setup"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "project setup"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Project setup and running
 
 > Source: [IFLOW.md](../../bashscripts/ai/IFLOW.md)
-> Source: [IFLOW.md](../../../../../bashscripts/ai/IFLOW.md)
 > Back: [index](index.md)
 
 ## Prerequisites

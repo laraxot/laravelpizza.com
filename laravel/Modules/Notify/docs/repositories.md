@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -21,7 +25,7 @@ https://www.mailcoach.app/resources/blog/using-the-mailcoach-markdown-editor-in-
 
 
 ## Collegamenti tra versioni di repositories.md
-* [repositories.md](docs/repositories.md)
+* [repositories.md](repositories.md)
 * [repositories.md](../../../notify/docs/repositories.md)
 * [repositories.md](../../../user/docs/repositories.md)
 * [repositories.md](../../User/docs/repositories.md)

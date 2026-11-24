@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/success_message.php
 // Cms txt.fields.success_message — LangServiceProvider SSoT.
 return [
-    'label' => 'Messaggio Successo',
-    'placeholder' => 'Operazione completata con successo',
-    'helper_text' => 'Messaggio mostrato quando un\'operazione ha successo',
+    'label' => 'Success Message',
+    'placeholder' => 'Operation completed successfully',
+    'helper_text' => 'Message shown when an operation succeeds',
     'tooltip' => '',
     'description' => '',
 ];

@@ -1,11 +1,8 @@
 ---
+qmd: "activity investigation investigation md"
 type: investigation
 title: "Investigation Audit Log Completamento Workflow"
-links: {github_issue: "#XXX"}
-status: draft
-updated: 2026-10-08
-tags: [docs, activity, investigation]
-qmd: "investigation: audit log completamento workflow activity"
+links: {github_issue: #XXX}
 ---
 # Investigation: Audit Log Completamento Workflow
 

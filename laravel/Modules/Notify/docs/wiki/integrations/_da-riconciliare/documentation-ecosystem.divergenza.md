@@ -1,14 +1,17 @@
 ---
-qmd: "documentation ecosystem.divergenza"
+qmd: "Documentation Ecosystem.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: DOCUMENTATION_ECOSYSTEM.md"
+title: "Documentation Ecosystem.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Divergenza: `DOCUMENTATION_ECOSYSTEM.md`

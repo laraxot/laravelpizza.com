@@ -3,7 +3,11 @@ title: "OpenViking + BMAD + GSD + Ralph Loop - Setup Complete Report"
 type: concept
 tags: [openviking, bmad, gsd, ralph]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "openviking-bmad-gsd-ralph-complete openviking + bmad + gsd + ralph loop - setup complete report"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -373,8 +377,8 @@ cat .ralph/iteration-log.md
 ls -la _bmad/
 ls -la .planning/
 
-# Review agents.md
-cat agents.md
+# Review AGENTS.md
+cat AGENTS.md
 ```
 
 ## Resources
@@ -382,12 +386,12 @@ cat agents.md
 ### Documentation
 - [OpenViking Integration](./openviking-integration.md)
 - [BMAD-GSD-Ralph Integration](./bmad-gsd-ralph-integration.md)
-- [Unified Workflow](./unified-ai-workflow.md)
-- [BMAD Workflow](laravel/Modules/Xot/docs/bmad-workflow-guide.md)
-- [agents.md](../agents.md)
 - [Unified Workflow](../../../unified-ai-workflow.md)
 - [BMAD Workflow](laravel/Modules/Xot/docs/bmad-workflow-guide.md)
-- [agents.md](../../agents.md)
+- [AGENTS.md](../AGENTS.md)
+- [Unified Workflow](../../../unified-ai-workflow.md)
+- [BMAD Workflow](laravel/Modules/Xot/docs/bmad-workflow-guide.md)
+- [AGENTS.md](../../AGENTS.md)
 
 ### Scripts
 - OpenViking Init: `bashscripts/ai/openviking-init.sh`

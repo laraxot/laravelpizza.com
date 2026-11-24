@@ -1,3 +1,12 @@
+---
+title: "Modulo Activity"
+type: note
+updated: 2026-10-07
+tags: [docs, activity, tecnico]
+qmd: "modulo activity activity"
+status: superseded
+superseded_by: module-activity.md
+---
 # Modulo Activity
 
 ## Overview

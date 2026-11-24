@@ -1,4 +1,9 @@
 stories:
+  "Xot/gitattributes-gitignore-composer-no-lfs-20261116":
+    status: review
+    epic: "Git meta — no LFS, no collision markers"
+    story: "bmad/stories/gitattributes-gitignore-composer-no-lfs.story.md"
+    notes: "Prototipo deduplicato + sync 22 target; wiki no-git-lfs aggiornata; check-no-git-lfs.sh verde; gitignore/composer senza marker."
   "Xot/docs-100-fleet-merge-20261005":
     status: wip
     epic: "Docs-100 fleet merge: limite ricorsivo, merge+sintesi, niente solo-spostamenti"

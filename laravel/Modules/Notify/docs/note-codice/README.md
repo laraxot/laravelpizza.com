@@ -5,12 +5,17 @@ category: documentation
 module: Notify
 status: active
 updated_at: '2026-11-12'
+<<<<<<< HEAD
+=======
+created: 2026-11-23
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Note di codice
 
 Appunti che stavano dentro `app/`, spostati qui il 2026-11-12
-([module_quaeris_fila5#64](https://github.com/laraxot/module_quaeris_fila5/issues/64)).
+([module_<nome progetto>_fila5#64](https://github.com/laraxot/module_<nome progetto>_fila5/issues/64)).
 
 ## Perche' si sono spostati
 

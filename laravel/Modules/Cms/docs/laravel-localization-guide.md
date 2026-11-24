@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "laravel localization guide"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Laravel Localization — Project Integration Guide
@@ -15,6 +14,15 @@ status: draft
 > Based on deep study of [mcamara/laravel-localization](https://github.com/mcamara/laravel-localization)
 
 ---
+
+title: "laravel localization guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "laravel localization guide"
+issues: []
+discussions: []
 ## Package Overview
 
 `mcamara/laravel-localization` provides URL-based localization for Laravel. It sets `App::getLocale()` from the URL prefix (e.g., `/de`, `/it`, `/en`) and provides helpers for generating localized URLs.
@@ -64,7 +72,7 @@ Since this project uses **Folio** (not traditional `web.php` routes), a custom m
 2. If URL first segment is a supported locale → use that
 3. Otherwise → use default locale (`it`)
 
-**Applied via**: `app/Providers/FolioServiceProvider.php` → `Folio::path($pagesPath)->middleware(['*' => [SetFolioLocale::class]])`
+**Applied via**: `Modules/Cms/app/Providers/FolioVoltServiceProvider.php` → registrazione dei path Folio del tema attivo e dei moduli con `SetFolioLocale`.
 
 ### URL Structure
 ```

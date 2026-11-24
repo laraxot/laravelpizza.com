@@ -1,12 +1,14 @@
 ---
+qmd: "xot architecture readme md"
+<<<<<<< HEAD
+=======
 title: "Xot - readme.md"
+
+>>>>>>> laraxot/dev
+title: "Xot - README.md"
 module: Xot
 bmad: true
 status: active
-type: index
-updated: 2026-10-09
-tags: [docs, xot, architecture]
-qmd: "architettura xot xot"
 ---
 # Architettura Xot
 

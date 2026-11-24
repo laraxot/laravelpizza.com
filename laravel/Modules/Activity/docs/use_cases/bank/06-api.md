@@ -1,12 +1,10 @@
 ---
 title: "Linee Guida API Bank (Event Sourcing)"
+qmd: "activity use cases bank 06 api md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "linee guida api bank (event sourcing) activity"
-status: superseded
-superseded_by: api.md
+tags: [documentation]
 ---
+
 # Linee Guida API Bank (Event Sourcing)
 
 ## Endpoints Principali

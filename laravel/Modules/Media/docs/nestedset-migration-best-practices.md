@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "nestedset migration best practices"
 related:
   - "./webm.md"
-status: draft
 ---
 # NestedSet Migration Best Practices - Media Module
 

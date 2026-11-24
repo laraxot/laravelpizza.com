@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 ?>
-@props(['title' => 'Profilo Utente'])
+@props(['title' => 'User Profile'])
 
 <div class="bg-white p-6 rounded-lg shadow-md">
     <h2 class="text-xl font-semibold mb-4">{{ $title }}</h2>
@@ -88,12 +88,12 @@ declare(strict_types=1);
 
             <div>
                 <label class="block text-sm font-medium text-gray-700">{{ __('ui::blocks_user_profile.fields.allergies.label') }}</label>
-                <p class="mt-1 text-sm text-gray-900">{{ $user->medical_info->allergies ?? 'Nessuna' }}</p>
+                <p class="mt-1 text-sm text-gray-900">{{ $user->medical_info->allergies ?? 'None' }}</p>
             </div>
 
             <div>
                 <label class="block text-sm font-medium text-gray-700">{{ __('ui::blocks_user_profile.fields.chronic_conditions.label') }}</label>
-                <p class="mt-1 text-sm text-gray-900">{{ $user->medical_info->chronic_conditions ?? 'Nessuna' }}</p>
+                <p class="mt-1 text-sm text-gray-900">{{ $user->medical_info->chronic_conditions ?? 'None' }}</p>
             </div>
         </div>
     </div>

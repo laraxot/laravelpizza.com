@@ -217,7 +217,7 @@ npm install
 
 # Dopo modifiche CSS/JS (OBBLIGATORIO)
 npm run build      # Compila CSS/JS (Vite + Tailwind)
-# niente copy: public_html/themes/Meetup è un symlink a public/
+npm run copy       # Copia asset in public_html/themes/Meetup/
 ```
 
 **Perché**:

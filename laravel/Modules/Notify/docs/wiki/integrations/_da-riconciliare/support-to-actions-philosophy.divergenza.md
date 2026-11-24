@@ -1,14 +1,17 @@
 ---
-qmd: "support to actions philosophy.divergenza"
+qmd: "Support to Actions Philosophy.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: support-to-actions-philosophy.md"
+title: "Support to Actions Philosophy.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Divergenza: `support-to-actions-philosophy.md`

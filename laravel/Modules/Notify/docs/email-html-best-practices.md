@@ -3,11 +3,14 @@ title: "email html best practices"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "email html best practices"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Best Practices HTML per Email
@@ -229,8 +232,6 @@ Questo documento definisce le best practices per la creazione di template HTML p
 ## Collegamenti Correlati
 
 - [Documentazione MailPace](https://github.com/mailpace/templates)
-- [Struttura Template](./MAIL_TEMPLATES_STRUCTURE.md)
-- [Template Base](./BASE_TEMPLATES.md)
 - [Struttura Template](./mail_templates_structure.md)
 - [Template Base](./base_templates.md)
 

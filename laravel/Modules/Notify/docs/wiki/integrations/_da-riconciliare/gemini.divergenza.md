@@ -1,22 +1,25 @@
 ---
-qmd: "gemini.divergenza"
+qmd: "Gemini.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: GEMINI.md"
+title: "Gemini.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
-# Divergenza: `GEMINI.md`
+# Divergenza: `gemini.md`
 
-Questo file veniva da `docs/wiki/integrations/modules/notify/GEMINI.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+Questo file veniva da `docs/wiki/integrations/modules/notify/gemini.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
 
-- versione del modulo: `laravel/Modules/Notify/docs/GEMINI.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/GEMINI.md`
+- versione del modulo: `laravel/Modules/Notify/docs/gemini.md`
+- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 

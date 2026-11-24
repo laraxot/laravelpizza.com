@@ -16,7 +16,11 @@ function interactsWithTenantModel(): InteractsWithTenantFixtureModel
     return new InteractsWithTenantFixtureModel;
 }
 
+<<<<<<< HEAD
+function interactsWithTenantTenant(string $id): Model
+=======
 function interactsWithTenantTenant(string $id): \Illuminate\Database\Eloquent\Model
+>>>>>>> laraxot/dev
 {
     $tenantClass = XotData::make()->getTenantClass();
     $tenant = new $tenantClass;

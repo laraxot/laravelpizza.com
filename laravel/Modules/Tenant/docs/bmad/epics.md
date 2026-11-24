@@ -1,56 +1,55 @@
 ---
-title: "epics.md"
-type: concept
+title: "Epics BMAD — Tenant"
+type: epics
 status: active
-module: "Tenant"
+<<<<<<< .merge_file_vaUkjP
 tags: [docs, tenant, bmad]
 created: 2026-10-06
-updated: 2026-10-06
-qmd: "epics e user stories - modulo tenant tenant"
+=======
+>>>>>>> .merge_file_dhnI5P
+updated: 2026-11-16
+module: Tenant
+tags: [docs, tenant, bmad]
+created: 2026-10-06
+qmd: "epics Tenant TrustHosts tenant admin perimetro DatabaseConfig encrypted pulizia sushi docs collisioni maiuscole"
 ---
 
-# Epics e User Stories - Modulo Tenant
+# Epics — Tenant
 
-## Epics
+Origine: [audits/tenant-audit.md](./audits/tenant-audit.md). Epic storici: [epics/tenant-config-resolution.md](./epics/tenant-config-resolution.md), [epics/module-roadmap.md](./epics/module-roadmap.md). Story di coordinamento: [module-bmad-audit.story.md](./stories/module-bmad-audit.story.md).
 
-### Epic 1: [Nome Epic]
-**Descrizione:** [Descrizione epic]
-**Storia utente associate:**
-- US-1: [Descrizione storia]
-- US-2: [Descrizione storia]
+Ordine di valore: prima l'isolamento fra enti (A), poi chi amministra (B), poi i segreti (C).
 
-### Epic 2: [Nome Epic]
-**Descrizione:** [Descrizione epic]
-**Storia utente associate:**
-- US-3: [Descrizione storia]
-- US-4: [Descrizione storia]
+## Epic A — Host fidato (TEN-P1-01)
 
-## User Stories dettagliate
+**Perché:** il tenant deriva dall'host; un `Host:` forgiato su un vhost catch-all seleziona la config di un altro ente.
 
-### US-1: [Titolo storia]
-**Come** [tipo di utente]
-**Voglio** [azione da eseguire]
-**Per** [beneficio ottenuto]
+- Task: attivare `TrustHosts` (pattern dai domini in `config/<tenant>/`) oppure documentare e verificare il vhost/`server_name` esplicito.
+- AC: un host non elencato non seleziona un tenant diverso dal default; test su `GetTenantNameAction` con `Host` forgiato.
+- File: [GetTenantNameAction.php](../../app/Actions/GetTenantNameAction.php), `laravel/app/Http/Kernel.php`, `laravel/bootstrap/app.php`.
+- Decisione aperta: fallire (HTTP 400) o ripiegare sul default — vedi [purpose.md](./purpose.md) §3.
 
-**Criteri di accettazione:**
-- [ ] Criterio 1
-- [ ] Criterio 2
-- [ ] Criterio 3
+## Epic B — Perimetro `tenant::admin` (TEN-P1-02)
 
-**Task:**
-- [ ] Task 1
-- [ ] Task 2
+- Task: test Pest che fissa cosa può fare `tenant::admin` (incluso `delete`/`forceDelete` su `Domain`); se non voluto, limitare `before()` alle ability non distruttive.
+- AC: test verde; decisione registrata in [decision-log.md](./decision-log.md).
+- File: [TenantBasePolicy.php](../../app/Models/Policies/TenantBasePolicy.php), [DomainPolicy.php](../../app/Models/Policies/DomainPolicy.php).
 
-### US-2: [Titolo storia]
-**Come** [tipo di utente]
-**Voglio** [azione da eseguire]
-**Per** [beneficio ottenuto]
+## Epic C — Credenziali `DatabaseConfig` (TEN-P1-03)
 
-**Criteri di accettazione:**
-- [ ] Criterio 1
-- [ ] Criterio 2
-- [ ] Criterio 3
+- Task: cast `encrypted` e `$hidden` su `password`; migrazione **additiva** (nuova colonna o cifratura dei valori esistenti con comando idempotente) — mai wipe, mai `--force`.
+- AC: `toArray()` non contiene la password; round-trip cifrato testato su sqlite.
+- File: [DatabaseConfig.php](../../app/Models/DatabaseConfig.php), [migration](../../database/migrations/2026_07_24_000002_create_database_configs_table.php).
 
-**Task:**
-- [ ] Task 1
-- [ ] Task 2
+## Epic D — Pulizia (TEN-P2-01…04, 07, 08)
+
+- Fondere `SushiToJsons` in `SushiToJson` (o rimuovere `BaseModelJsons` se non usato); `file_exists` prima di `unlink`.
+- Spostare `TestSushiModel`/`TestCommand` sotto `tests/`; togliere i 3 `@phpstan-ignore trait.unused`.
+- Decidere dove nasce la tabella `tenants` (`Tenant` e factory esistono, nessuna migration nel repo).
+- Accorpare i 10 test "coverage" nei test di regola.
+
+## Epic E — Docs (TEN-P2-05, 06)
+
+- Risolvere le 18 collisioni di maiuscole (tenere il nome minuscolo, `README.md` escluso) e `module-bmad-audit-20260928.story.md`.
+- Sostituire le citazioni a `TenantService::` con `GetTenantFilePathAction` e riallineare [brainstorming.md](./brainstorming.md).
+- `qmd update` a fine epic.

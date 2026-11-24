@@ -1,12 +1,10 @@
 ---
 title: "Massimizzare il livello di confidenza"
+qmd: "activity confidence guidelines md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "massimizzare il livello di confidenza activity"
-status: superseded
-superseded_by: confidence-guidelines.md
+tags: [documentation]
 ---
+
 # Massimizzare il livello di confidenza
 
 1. **Test automatizzati**: copertura >90%, includi test unitari, integrazione, e fine‑to‑end.

@@ -10,8 +10,8 @@ use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
-test('snapshot uses activity module connection', function (): void {
+test('snapshot uses the default connection in testing', function (): void {
     $model = new Snapshot;
 
-    Assert::assertSame('activity', $model->getConnectionName());
+    Assert::assertSame(config('database.default'), $model->getConnectionName());
 });

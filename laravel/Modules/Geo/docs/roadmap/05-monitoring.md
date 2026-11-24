@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "05 monitoring"
 issues: []
 discussions: []
-status: superseded
-superseded_by: monitoring.md
 ---
 
 

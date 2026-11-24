@@ -83,4 +83,6 @@ return [
             'tooltip' => '',
         ],
     ],
+    'create_title' => 'New sponsor',
+    'edit_title' => 'Edit sponsor',
 ];

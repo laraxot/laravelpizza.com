@@ -11,7 +11,6 @@ description: Graph
 extends: _layouts.documentation
 section: content
 path: it/docs/components
-status: draft
 ---
 
 # Graph {#graph}

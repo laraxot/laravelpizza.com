@@ -3,7 +3,11 @@ title: "AI Skills Master Index"
 type: concept
 tags: [skills, master, index]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "ai-skills-master-index ai skills master index"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -141,8 +145,17 @@ Questa documentazione elenca tutte le skill AI installate e configurate per il p
 
 **Usage**: Skills auto-attivano quando l'agente rileva task rilevanti
 
-**File**: [superpowers/installazione.md](./superpowers/installazione.md)
+<<<<<<< HEAD
 **File**: [superpowers/installazione.md](../../../superpowers/installazione.md)
+**File**: [superpowers/installazione.md](../../../superpowers/installazione.md)
+=======
+<<<<<<< .merge_file_5nWcT6
+**File**: [superpowers/installazione.md](./superpowers/installazione.md)
+=======
+**File**: [superpowers/installazione.md](../../../superpowers/installazione.md)
+**File**: [superpowers/installazione.md](../../../superpowers/installazione.md)
+>>>>>>> .merge_file_hB3BZH
+>>>>>>> laraxot/dev
 
 ---
 

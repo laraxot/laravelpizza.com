@@ -3,15 +3,19 @@ title: "git conflicts resolution"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "git conflicts resolution"
 issues: []
 discussions: []
 status: draft
 ---
 
-# Risoluzione Conflitti Git - Progetto Base FixCity Fila3 Mono
-# Risoluzione Conflitti Git - Progetto Base Notify Fila3 Mono
+# Risoluzione Conflitti Git - Progetto Base FixCity fila5
+# Risoluzione Conflitti Git - Progetto Base Notify fila5
 
 ## Panoramica
 

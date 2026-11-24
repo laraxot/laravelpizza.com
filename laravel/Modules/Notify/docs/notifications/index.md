@@ -4,7 +4,11 @@ type: index
 tags: [notify, docs, notifications]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify documentazione notifications index indice documentazione notifiche index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -13,18 +17,29 @@ discussions:
 related:
   - ../README.md
   - ../wiki/index.md
-  - readme.md
-  - ../integrations/readme.md
-  - ../templates/readme.md
+  - README.md
+  - ../integrations/README.md
+  - ../templates/README.md
 status: draft
 ---
 # Indice Documentazione Notifiche
 
 ## Collegamenti Correlati
 - [Indice Documentazione Notify](../index.md)
+<<<<<<< HEAD
+- [README Modulo Notify](../README.md)
+- [Documentazione Generale <nome progetto>](../../../../../../docs/README.md)
+- [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
+=======
+<<<<<<< .merge_file_OQ5uaP
 - [README Modulo Notify](../readme.md)
 - [Documentazione Generale Quaeris](../../../../../../docs/readme.md)
-- [Documentazione Generale Quaeris](../../../../../docs/README.md)
+=======
+- [README Modulo Notify](../README.md)
+- [Documentazione Generale <nome progetto>](../../../../../../docs/README.md)
+- [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
+>>>>>>> .merge_file_sLnj1e
+>>>>>>> laraxot/dev
 - [Collegamenti Documentazione](../../../../../../docs/collegamenti-documentazione.md)
 
 ## Guida Implementazione
@@ -55,7 +70,7 @@ status: draft
 - [Canale Telegram](../telegram_channel.md) - Documentazione del canale Telegram
 
 ## Note Importanti
-- Quaeris utilizza il pattern Factory per la creazione delle azioni di invio messaggi
+- <nome progetto> utilizza il pattern Factory per la creazione delle azioni di invio messaggi
 - Il sistema si basa su Queueable Actions (spatie/laravel-queueable-action) e non su Service Pattern
 - Le azioni specifiche per provider devono implementare l'interfaccia comune corrispondente
 - I DTO standardizzati vengono utilizzati come ponte tra il sistema e i provider specifici

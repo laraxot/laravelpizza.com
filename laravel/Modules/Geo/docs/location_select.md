@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "location select"
 issues: []
 discussions: []
-status: superseded
-superseded_by: location-select.md
 ---
 
 # Location Select Component

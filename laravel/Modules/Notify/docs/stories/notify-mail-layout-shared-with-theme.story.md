@@ -2,7 +2,11 @@
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify mail layout shared with theme.story"
 issues: []
 discussions: []
@@ -22,7 +26,7 @@ Plan (proposta di design, non ancora implementata: nessun file `.php` toccato).
 ## Contesto
 
 Il campo `html_layout_path` sul tab "Inviti" (`ManageMailTemplates`, es.
-`quaeris/admin/ats/survey-pdfs/48/mail-templates`) è una select
+`<nome progetto>/admin/ats/survey-pdfs/48/mail-templates`) è una select
 (`HtmlLayoutPathSelect`) che elenca i file `.html` trovati in una sola cartella:
 
 ```

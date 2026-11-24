@@ -6,8 +6,6 @@ qmd:
   index: true
 created_at: 2026-06-10
 updated_at: 2026-06-10
-status: draft
-updated: 2026-10-07
 ---
 
 # activity_log — attribute_changes
@@ -26,7 +24,7 @@ cd laravel && php artisan migrate
 
 ## Runtime
 
-`app(IsActivityLogSchemaWritableAction::class)->execute()` (`Actions/Schema/`) — connection da `config('activitylog.database_connection')`.
+`Modules\Activity\Support\ActivityLogSchema::isWritable()` — connection da `config('activitylog.database_connection')`.
 
 ## Collegamenti
 

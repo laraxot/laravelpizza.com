@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: ui_link
 canonical: ../../../Themes/docs/shared-components/ui-link.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/ui-link.md

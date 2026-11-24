@@ -1,9 +1,13 @@
 ---
-title: "Composer root minimale: modulo Notify"
+title: "Composer root minimale — modulo Notify"
 type: concept
 tags: [composer, notify, nwidart, merge-plugin]
 created: 2026-06-29
+<<<<<<< HEAD
 updated: 2026-06-29
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "Notify composer dependencies root minimal nwidart merge-plugin"
 issues:
   - "https://github.com/laraxot/base_predict_fila5/issues/214"
@@ -13,8 +17,6 @@ related:
   - ../../../Xot/docs/wiki/concepts/composer-root-skeleton-modular.md
   - ../../../../../../docs/wiki/concepts/composer-root-minimal-nwidart.md
   - ../../composer.json
-  - ../../../composer.json
-status: draft
 ---
 
 # Notify e composer root minimale
@@ -27,7 +29,7 @@ Dipendenze del dominio **Notify** in `Modules/Notify/composer.json`. Il root `la
 
 
 
-## Merge root: solo moduli
+## Merge root — solo moduli
 
 `laravel/composer.json` → merge **solo** `Modules/*/composer.json`. **Vietato** `Themes/*/composer.json` (nwidart owner = modulo; tema = vestito Blade/assets).
 

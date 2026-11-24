@@ -8,19 +8,14 @@ qmd: "phpstanes-276dc0 user module - phpstan fixes session [date]"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # User Module - PHPStan Fixes Session [DATE]
@@ -228,7 +223,15 @@ public function canAccessTenant(\Illuminate\Database\Eloquent\Model $tenant): bo
 
 ## 🔗 Collegamenti
 
+<<<<<<< HEAD
 - [← User Module README](./README.md)
+=======
+<<<<<<< HEAD
+- [← User Module README](./readme.md)
+=======
+- [← User Module README](./README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [← PHPStan Session Report](../../../../docs/phpstan/filament-v4-fixes-session.md)
 - [← Final Report](../../../../docs/phpstan/final-report-session-[date].md)
 - [← Root Documentation](../../../../docs/index.md)

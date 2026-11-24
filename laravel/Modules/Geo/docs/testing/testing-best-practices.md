@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "testing best practices"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Best Practices Testing Globali - <nome progetto>
@@ -606,12 +605,29 @@ describe('Edge Cases', function () {
 
 ## Collegamenti
 
+<<<<<<< HEAD
 - [Architettura Testing Principale](./testing-architecture-overview.md)
+=======
+<<<<<<< HEAD
+- [Architettura Testing Principale](./testing-architecture-overview.md)
+=======
+- [Architettura Testing Principale](../testing-architecture-overview.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Guida Risoluzione Conflitti](../git/git-conflicts-resolution-guide.md)
 - [Best Practices Modulo <nome modulo>](../../laravel/modules/<nome modulo>/docs/testing-best-practices.md)
 - [Best Practices Modulo <nome progetto>](../../laravel/modules/<nome progetto>/docs/testing-best-practices.md)
 - [Testing Modulo Geo](../testing.md)
 
 ---
+
+title: "testing best practices"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "testing best practices"
+issues: []
+discussions: []
 **Versione**: 1.0
 **Compatibilità**: Pest 2.x+, Laravel 12.x, PHP 8.3+

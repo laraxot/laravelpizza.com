@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "reusable components philosophy"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Filosofia dei Componenti Riutilizzabili

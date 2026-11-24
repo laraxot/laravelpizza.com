@@ -1,11 +1,3 @@
----
-title: "Implementazione del Logout"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "implementazione del logout user"
----
 # Implementazione del Logout 
 
 ## Indice

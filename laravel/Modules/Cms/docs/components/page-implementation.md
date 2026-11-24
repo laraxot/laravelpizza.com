@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "page implementation"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Implementazione del Componente Page

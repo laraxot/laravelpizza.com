@@ -1,4 +1,5 @@
 ---
+qmd: "activity wiki sources activity core sources md"
 title: "Activity Core Sources"
 module: "Activity"
 type: source
@@ -6,9 +7,6 @@ created: "2026-04-29T00:00:00Z"
 updated: "2026-04-29T00:00:00Z"
 related:
   - "[[Activity Domain Focus]]"
-status: draft
-tags: [docs, activity, wiki]
-qmd: "activity core sources activity"
 ---
 
 # Activity Core Sources

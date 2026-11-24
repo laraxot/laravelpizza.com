@@ -15,7 +15,6 @@ related:
   - ./setup-guide.md
   - ./architecture/module-boundary.md
   - ./epics/module-roadmap.md
-status: draft
 ---
 
 # Media - quick reference

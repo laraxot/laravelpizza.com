@@ -48,7 +48,7 @@ The following documentation has been updated:
 | Module Rule Doc | `laravel/Modules/Xot/docs/workspace-file-rule.md` | ✅ Created |
 | Agent Memory | `AGENT_MEMORY.md` | ✅ Updated |
 | Critical Rules | `.agents/docs/agents-guide/04-architecture/critical-rules-summary.md` | ✅ Updated |
-| GEMINI.md | `GEMINI.md` | ✅ Updated |
+| gemini.md | `gemini.md` | ✅ Updated |
 
 ## Cleanup Progress
 

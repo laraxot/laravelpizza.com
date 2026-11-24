@@ -3,52 +3,19 @@ title: "03 ARCHITECTURE ZEN"
 type: note
 tags: [documentation]
 created: 2026-09-26
-updated: 2026-09-26
+updated: 2026-11-23
 qmd: "03 ARCHITECTURE ZEN"
 issues: []
 discussions: []
-status: superseded
-superseded_by: 03-architecture-zen.md
 ---
 
 # 🏛️ Architecture Zen Philosophy
 
-**Part of**: [00-INDEX.md](00-INDEX.md): AI Agents Coordination  
-**Related**: [04-FILAMENT-PHILOSOPHY.md](04-FILAMENT-PHILOSOPHY.md): Filament Widgets
+**Part of**: [00-INDEX.md](00-INDEX.md) — AI Agents Coordination  
+**Related**: [04-FILAMENT-PHILOSOPHY.md](04-FILAMENT-PHILOSOPHY.md) — Filament Widgets
 
----
-
-title: "03 ARCHITECTURE ZEN"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "03 ARCHITECTURE ZEN"
-issues: []
-discussions: []
 ## 🔴 Fundamental Rules
-
 ### 1. **NO Themes/*/Http/Livewire/**
-
-**Philosophy**: Theme is the DRESS, not the LOGIC.
-
-```
-❌ WRONG
-Themes/TwentyOne/Http/Livewire/
-Themes/Sixteen/Http/Livewire/
-
-✅ CORRECT
-Modules/Predict/app/Filament/Widgets/
-Modules/UI/app/Filament/Widgets/
-```
-
-**Why**:
-- **Modules** = Business logic (agnostic, reusable)
-- **Themes** = Dress (aesthetics, layout, CSS)
-- **Filament Widgets** = UI components (back office + front office)
-- **NO Livewire in theme** = Separation of concerns
-
----
 
 ### 2. **NO laravel/docs/**
 

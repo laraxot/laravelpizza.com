@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "comune sushi implementazione"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Implementazione di Comune.php con Laravel Sushi
@@ -61,6 +60,15 @@ class Comune extends Model
 - Si può usare in Filament, query builder, relazioni, morph, ecc.
 
 ---
+
+title: "comune sushi implementazione"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "comune sushi implementazione"
+issues: []
+discussions: []
 ## 3. Vantaggi
 - ✅ API Eloquent completa (join, relazioni, morph, query avanzate, scope, ecc.)
 - ✅ Compatibilità totale con Filament/Eloquent
@@ -104,7 +112,15 @@ class Comune extends Model
 - [geo-json-model.md](geo-json-model.md)
 - [geo-sushi-comparison.md](geo-sushi-comparison.md)
 - [comune-unificazione-analisi.md](comune-unificazione-analisi.md)
+<<<<<<< HEAD
 - [module_geo.md](module_geo.md)
+=======
+<<<<<<< HEAD
+- [module_geo.md](module_geo.md)
+=======
+- [module_geo.md](module-geo.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 

@@ -19,7 +19,15 @@ tags: [bmad, story, user, spatie-permission, teams, multi-tenant, security]
 related:
   - ../../../../config/permission.php
   - ../../app/Models/Traits/HasRoles.php
+<<<<<<< HEAD
   - ../../../Quaeris/docs/stories/19-15-retire-legacy-top-level-question-chart-resource.md
+=======
+<<<<<<< HEAD
+  - ../../../Quaeris/docs/stories/19-15-retire-legacy-top-level-question-chart-resource.md
+=======
+  - ../../../<nome progetto>/docs/stories/19-15-retire-legacy-top-level-question-chart-resource.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 github:
   repository: https://github.com/laraxot/module_user_fila5
   issues: https://github.com/laraxot/module_user_fila5/issues
@@ -96,8 +104,8 @@ Due conseguenze, opposte fra loro:
 
 1. **Sicurezza, adesso**: un ruolo assegnato per il team 1 vale in *tutti* i tenant.
    Chi assegna un ruolo dentro un cliente lo sta assegnando ovunque.
-2. **Fragilita', domani**: il giorno in cui qualcuno allinea il team id al tenant -
-   che e' la cosa corretta con `teams => true`: tutti i controlli di ruolo
+2. **Fragilita', domani**: il giorno in cui qualcuno allinea il team id al tenant —
+   che e' la cosa corretta con `teams => true` — tutti i controlli di ruolo
    iniziano a rispondere `false` senza sollevare errori. Le funzioni protette da
    `hasRole()` spariscono dalla UI in silenzio. Il primo sintomo osservato sara'
    un pulsante che non c'e' piu', non un messaggio di errore.
@@ -118,7 +126,7 @@ Due conseguenze, opposte fra loro:
    Non e' una scelta tecnica, e oggi non e' dichiarata da nessuna parte.
 2. Se sono **per team**: rimuovere l'override di `roles()` (o riscriverlo
    includendo il vincolo sul team, se `belongsToManyX` serve per altro), e
-   impostare `setPermissionsTeamId()` nel punto in cui il tenant viene risolto -
+   impostare `setPermissionsTeamId()` nel punto in cui il tenant viene risolto —
    middleware del panel o listener sull'evento di cambio tenant.
 3. Prevedere il **ruolo trasversale**: `super-admin` deve valere ovunque. Con Spatie
    si ottiene con `team_id = null` sulla riga del pivot, che il vincolo
@@ -139,7 +147,15 @@ Due conseguenze, opposte fra loro:
 - `self::class` dentro un trait risolve alla classe che lo usa, quindi il filtro
   `model_type` e' corretto: non e' quello il difetto.
 - Il difetto e' emerso durante la verifica di un guard `hasRole('super-admin')` su
+<<<<<<< HEAD
   un widget Filament del modulo Quaeris (vedi story correlata): il guard funziona
+=======
+<<<<<<< HEAD
+  un widget Filament del modulo Quaeris (vedi story correlata): il guard funziona
+=======
+  un widget Filament del modulo <nome progetto> (vedi story correlata): il guard funziona
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   oggi e smetterebbe di funzionare al primo allineamento del team id.
 - Migrazione dati: `roles.team_id` e la colonna team sul pivot `model_has_roles`
   vanno guardate insieme. Il DB non e' in sola lettura qui, a differenza di
@@ -177,7 +193,15 @@ Due conseguenze, opposte fra loro:
 ## Note
 
 - Trovato il 2026-08-07 durante la verifica adversarial di un fix su
+<<<<<<< HEAD
   `Modules/Quaeris`. Non e' un difetto di Quaeris: e' del layer di autorizzazione,
+=======
+<<<<<<< HEAD
+  `Modules/Quaeris`. Non e' un difetto di Quaeris: e' del layer di autorizzazione,
+=======
+  `Modules/<nome progetto>`. Non e' un difetto di <nome progetto>: e' del layer di autorizzazione,
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   e per questo la story vive in `module:User`.
 - Il difetto e' del tipo peggiore: oggi non produce sintomi. Si manifesta solo
   quando qualcuno fa la cosa giusta.

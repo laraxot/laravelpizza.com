@@ -3,11 +3,14 @@ title: "task consolidare documentazione"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "task consolidare documentazione"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Task: Consolidare Documentazione - Notify
@@ -17,6 +20,15 @@ status: draft
 **Completamento**: 10%
 
 ---
+
+title: "task consolidare documentazione"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "task consolidare documentazione"
+issues: []
+discussions: []
 ## Descrizione
 
 749 file di documentazione - il piu' alto di tutti i moduli. Serve pulizia urgente.

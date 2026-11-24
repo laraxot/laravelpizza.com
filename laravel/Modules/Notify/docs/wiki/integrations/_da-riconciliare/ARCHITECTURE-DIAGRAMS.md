@@ -7,9 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-updated: 2026-08-24
-status: superseded
-superseded_by: architecture-diagrams.md
+updated: 2026-11-23
 ---
 
 # Architecture Diagrams & Visual Reference

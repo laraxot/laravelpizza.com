@@ -36,7 +36,7 @@ If the prompt contains a `<files_to_read>` block, you MUST use the `Read` tool t
 </role>
 
 <downstream_consumer>
-Your ROADMAP.md is consumed by `/gsd-plan-phase` which uses it to:
+Your roadmap.md is consumed by `/gsd-plan-phase` which uses it to:
 
 | Output | How Plan-Phase Uses It |
 |--------|------------------------|
@@ -296,9 +296,9 @@ After roadmap creation, REQUIREMENTS.md gets updated with phase mappings:
 
 <output_formats>
 
-## ROADMAP.md Structure
+## roadmap.md Structure
 
-**CRITICAL: ROADMAP.md requires TWO phase representations. Both are mandatory.**
+**CRITICAL: roadmap.md requires TWO phase representations. Both are mandatory.**
 
 ### 1. Summary Checklist (under `## Phases`)
 
@@ -401,7 +401,7 @@ Approve roadmap or provide feedback for revision.
 Orchestrator provides:
 - PROJECT.md content (core value, constraints)
 - REQUIREMENTS.md content (v1 requirements with REQ-IDs)
-- research/SUMMARY.md content (if exists - phase suggestions)
+- research/summary.md content (if exists - phase suggestions)
 - config.json (depth setting)
 
 Parse and confirm understanding before proceeding.
@@ -425,7 +425,7 @@ Total v1: 11 requirements
 
 ## Step 3: Load Research Context (if exists)
 
-If research/SUMMARY.md provided:
+If research/summary.md provided:
 - Extract suggested phase structure from "Implications for Roadmap"
 - Note research flags (which phases need deeper research)
 - Use as input, not mandate
@@ -460,7 +460,7 @@ If gaps found, include in draft for user decision.
 
 **Write files first, then return.** This ensures artifacts persist even if context is lost.
 
-1. **Write ROADMAP.md** using output format
+1. **Write roadmap.md** using output format
 
 2. **Write STATE.md** using output format
 
@@ -492,7 +492,7 @@ When files are written and returning to orchestrator:
 ## ROADMAP CREATED
 
 **Files written:**
-- .planning/ROADMAP.md
+- .planning/roadmap.md
 - .planning/STATE.md
 
 **Updated:**
@@ -522,7 +522,7 @@ When files are written and returning to orchestrator:
 ### Files Ready for Review
 
 User can review actual files:
-- `cat .planning/ROADMAP.md`
+- `cat .planning/roadmap.md`
 - `cat .planning/STATE.md`
 
 {If gaps found during creation:}
@@ -546,7 +546,7 @@ After incorporating user feedback and updating files:
 - {change 2}
 
 **Files updated:**
-- .planning/ROADMAP.md
+- .planning/roadmap.md
 - .planning/STATE.md (if needed)
 - .planning/REQUIREMENTS.md (if traceability changed)
 
@@ -632,7 +632,7 @@ Roadmap is complete when:
 - [ ] Success criteria derived for each phase (2-5 observable behaviors)
 - [ ] Success criteria cross-checked against requirements (gaps resolved)
 - [ ] 100% requirement coverage validated (no orphans)
-- [ ] ROADMAP.md structure complete
+- [ ] roadmap.md structure complete
 - [ ] STATE.md structure complete
 - [ ] REQUIREMENTS.md traceability update prepared
 - [ ] Draft presented for user approval

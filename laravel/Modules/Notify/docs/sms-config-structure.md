@@ -3,11 +3,14 @@ title: "sms config structure"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "sms config structure"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Struttura della Configurazione SMS 
@@ -167,4 +170,13 @@ $retryDelay = $config['drivers'][$driver]['retry_delay'] ?? $config['retry']['de
 - [Provider SMS Supportati](./notifications/sms_provider_configuration.md)
 
 ---
+
+title: "sms config structure"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "sms config structure"
+issues: []
+discussions: []
 *Ultimo aggiornamento: [DATE]*

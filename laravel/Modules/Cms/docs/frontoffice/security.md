@@ -3,11 +3,14 @@ title: "security"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "security"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Sicurezza Frontend
@@ -145,7 +148,7 @@ export function validateForm(data) {
    - Controllare i messaggi
    - Testare gli input
 
-## Collegamenti tra versioni di security.md
-* [security.md](../../../Gdpr/docs/packages/security.md)
-* [security.md](laravel/modules/cms/docs/frontoffice/security.md)
-* [security.md](laravel/themes/one/docs/security.md)
+## Collegamenti tra versioni di SECURITY.md
+* [SECURITY.md](laravel/modules/gdpr/docs/packages/SECURITY.md)
+* [SECURITY.md](laravel/modules/cms/docs/frontoffice/SECURITY.md)
+* [SECURITY.md](laravel/themes/one/docs/SECURITY.md)

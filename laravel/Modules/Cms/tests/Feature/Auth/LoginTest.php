@@ -8,12 +8,15 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Volt\Volt as LivewireVolt;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use Modules\Cms\Tests\TestCase;
 use Modules\Xot\Datas\XotData;
 
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\assertAuthenticated;
 use function Pest\Laravel\assertGuest;
 use function Pest\Laravel\get;
+
+uses(TestCase::class);
 
 // Helper (createTestUser, generateUniqueEmail, getUserClass) su Modules\Cms\Tests\TestCase, legato da tests/Pest.php.
 // Use $this->generateUniqueEmail(), $this->getUserClass(), $this->createTestUser()

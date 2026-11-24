@@ -1,12 +1,10 @@
 ---
 title: "Report: Metodi con nome duplicato nei moduli e nei temi"
+qmd: "activity duplicate methods report md"
 type: note
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "report: metodi con nome duplicato nei moduli e nei temi activity"
-status: superseded
-superseded_by: duplicate-methods-report.md
+tags: [documentation]
 ---
+
 # Report: Metodi con nome duplicato nei moduli e nei temi
 
 ## Introduzione

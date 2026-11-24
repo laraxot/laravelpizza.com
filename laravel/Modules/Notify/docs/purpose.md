@@ -1,21 +1,39 @@
 ---
-title: "Notify: scopo del modulo e come raggiungerlo meglio"
+title: "Notify — scopo del modulo e come raggiungerlo meglio"
 type: concept
 status: active
 created: 2026-09-02
 tags: [notify, purpose, notifiche, template, canali, comunicazione]
 qmd: "notify scopo modulo notifiche template canali email sms comunicazione tracciabilita"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+updated: 2026-11-23
+issues:
+  - "https://github.com/provtv/module_notify_fila5/issues/"
+discussions:
+  - "https://github.com/provtv/module_notify_fila5/discussions/"
+---
+  # DA CREARE — `gh` non autenticato: mai numeri inventati.
+  # gh issue create --repo provtv/module_notify_fila5 --title "<argomento del file>"
+  # DA CREARE — vedi sopra.
+=======
+>>>>>>> laraxot/dev
 updated: 2026-09-02
 issues:
-  # DA CREARE: `gh` non autenticato: mai numeri inventati.
+  # DA CREARE — `gh` non autenticato: mai numeri inventati.
   # gh issue create --repo provtv/module_notify_fila5 --title "<argomento del file>"
   - "https://github.com/provtv/module_notify_fila5/issues/"
 discussions:
-  # DA CREARE: vedi sopra.
+  # DA CREARE — vedi sopra.
   - "https://github.com/provtv/module_notify_fila5/discussions/"
 ---
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
-# Notify: perche' esiste
+# Notify — perche' esiste
 
 ## Lo scopo in una frase
 
@@ -55,7 +73,7 @@ contenzioso.
 ### 2. Un invio fallito deve essere visibile a chi ha deciso
 
 Le code assorbono i fallimenti: il messaggio va in `failed_jobs` e la persona che ha
-firmato non lo sa. Il caso peggiore e' silenzioso: nessuno si accorge che la
+firmato non lo sa. Il caso peggiore e' silenzioso — nessuno si accorge che la
 comunicazione non e' partita.
 
 **Azione:** stato dell'invio (in coda / inviato / fallito / rimbalzato) leggibile
@@ -69,7 +87,7 @@ vale qui: un `index.md` a una schermata, un solo canonico per argomento, il rest
 collegato o marcato superseded.
 
 Questo modulo ospitava anche coppie di file che differivano **solo per maiuscole**
-(`AGENTS.md`/`agents.md`, `QUICK-REFERENCE.md`/`quick-reference.md`,
+(`AGENTS.md`/`AGENTS.md`, `quick-reference.md`/`quick-reference.md`,
 `SESSION-SUMMARY.md`/`session-summary.md`), risolte il 2026-09-02: rompevano il
 checkout su macOS e Windows.
 
@@ -90,7 +108,7 @@ si cambiano venti punti.
 **Azione:** il dominio dichiara l'**evento** ("scheda approvata"), Notify decide i
 canali in base alla configurazione e alle preferenze del destinatario.
 
-## Confini: cosa **non** appartiene a Notify
+## Confini — cosa **non** appartiene a Notify
 
 - La **decisione** che genera la comunicazione: modulo di dominio.
 - **Chi** e' il destinatario come identita': User.
@@ -98,5 +116,10 @@ canali in base alla configurazione e alle preferenze del destinatario.
 
 ## Collegamenti
 
-- `laravel/Modules/Job/docs/purpose.md`: code e fallimenti
-- `laravel/Modules/User/docs/purpose.md`: destinatari e preferenze
+- `laravel/Modules/Job/docs/purpose.md` — code e fallimenti
+- `laravel/Modules/User/docs/purpose.md` — destinatari e preferenze
+
+## Documentazione correlata
+
+- [Audit BMAD](./bmad/audit.md)
+- [ECC](./ecc/notify-ecc-audit.md)

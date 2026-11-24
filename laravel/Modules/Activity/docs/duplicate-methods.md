@@ -1,6 +1,3 @@
-<<<<<<< .merge_file_ExttAJ
-# Metodi duplicati — Activity
-=======
 ---
 title: "Metodi duplicati: Activity"
 type: note
@@ -10,7 +7,6 @@ tags: [docs, activity]
 qmd: "metodi duplicati   activity activity"
 ---
 # Metodi duplicati: Activity
->>>>>>> .merge_file_Sv4AVY
 
 Analisi sintetica dei metodi PHP con lo stesso nome all’interno di questo ambito.
 

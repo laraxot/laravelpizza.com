@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: core-functionality
 canonical: ../../../Themes/docs/shared-components/.gitkeep
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/.gitkeep

@@ -11,7 +11,7 @@ return [
         'title' => 'Settings saved',
     ],
     'table_missing' => [
-        'title' => 'Tabella Mancante',
-        'body' => 'Tabella Mancante',
+        'title' => 'Missing Table',
+        'body' => 'Missing Table',
     ],
 ];

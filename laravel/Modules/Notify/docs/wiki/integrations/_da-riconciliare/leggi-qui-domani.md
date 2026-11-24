@@ -3,7 +3,11 @@ title: "📖 LEGGI QUI DOMANI MATTINA - 2 Ottobre 2025"
 type: concept
 tags: [leggi, qui, domani]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "leggi-qui-domani 📖 leggi qui domani mattina - 2 ottobre 2025"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -162,12 +166,22 @@ cd /var/www/_bases/<nome repitory>_mono/laravel
 3. **[User Roadmap](../Modules/User/docs/roadmap-and-issues.md)** - Errori dettagliati User
 
 ### Fine Giornata (update)
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_sEDPAF
 4. **[Master Roadmap](./roadmap-master-index.md)** - Aggiornare status
+=======
+>>>>>>> laraxot/dev
+4. **[Master Roadmap](../../../roadmap-master-index.md)** - Aggiornare status
 2. **[Xot Roadmap](../../../roadmap-and-issues.md)** - Errori dettagliati Xot
 3. **[User Roadmap](../../../roadmap-and-issues.md)** - Errori dettagliati User
 
 ### Fine Giornata (update)
 4. **[Master Roadmap](../../../roadmap-master-index.md)** - Aggiornare status
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_mCCltw
+>>>>>>> laraxot/dev
 5. **[Analisi Completa](./analisi-completa.md)** - Executive summary
 
 ---
@@ -426,7 +440,14 @@ cd /var/www/_bases/<nome repitory>_mono/laravel
 3. **[User Roadmap](../Modules/User/docs/roadmap-and-issues.md)** - Errori dettagliati User
 
 ### Fine Giornata (update)
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_sEDPAF
 4. **[Master Roadmap](./roadmap-master-index.md)** - Aggiornare status
+5. **[Analisi Completa](./ANALISI-COMPLETA-2025-10-01.md)** - Executive summary
+=======
+>>>>>>> laraxot/dev
+4. **[Master Roadmap](../../../roadmap-master-index.md)** - Aggiornare status
 5. **[Analisi Completa](./ANALISI-COMPLETA.md)** - Executive summary
 2. **[Xot Roadmap](../../../roadmap-and-issues.md)** - Errori dettagliati Xot
 3. **[User Roadmap](../../../roadmap-and-issues.md)** - Errori dettagliati User
@@ -434,6 +455,10 @@ cd /var/www/_bases/<nome repitory>_mono/laravel
 ### Fine Giornata (update)
 4. **[Master Roadmap](../../../roadmap-master-index.md)** - Aggiornare status
 5. **[Analisi Completa](../../../analisi-completa-ottobre-data.md)** - Executive summary
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_mCCltw
+>>>>>>> laraxot/dev
 
 ---
 

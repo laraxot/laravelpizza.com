@@ -6,9 +6,6 @@ namespace Modules\Tenant\Tests\Unit\Actions\Ente;
 
 use Modules\Tenant\Actions\Ente\GetEnteDataAction;
 use Modules\Tenant\Datas\EnteData;
-use Modules\Xot\Tests\TestCase;
-
-uses(TestCase::class);
 
 /*
  * DCP-289: i dati dell'ente (nome, regione, recapiti, DPO, social, orari) hanno UNA sorgente, `config('ente')` del tenant, e UNA Action che li

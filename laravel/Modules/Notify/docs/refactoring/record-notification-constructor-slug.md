@@ -3,7 +3,11 @@ title: "record notification constructor slug"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "record notification constructor slug"
 issues: []
 discussions: []
@@ -252,8 +256,17 @@ $notification = new RecordNotification($record, 'welcome');
 - [RECORD_NOTIFICATION_ZEN_CONSTRUCTOR.md](./record_notification_zen_constructor.md) - Filosofia Zen per costruttore
 - [RecordNotification Zen Delegation](./record-notification-zen-delegation.md) - **✅ Pattern attuale**: Delega completa a SpatieEmail
 - [record-notification.md](../notifications/record-notification.md) - Documentazione completa RecordNotification
-- [send-record-notification-action.md](../actions/send-record-notification-action.md) - Documentazione SendRecordNotificationAction
+<<<<<<< HEAD
 - [send-record-notification-action.md](send-record-notification-action.md) - Documentazione SendRecordNotificationAction
+- [send-record-notification-action.md](send-record-notification-action.md) - Documentazione SendRecordNotificationAction
+=======
+<<<<<<< .merge_file_OI2iME
+- [send-record-notification-action.md](../actions/send-record-notification-action.md) - Documentazione SendRecordNotificationAction
+=======
+- [send-record-notification-action.md](send-record-notification-action.md) - Documentazione SendRecordNotificationAction
+- [send-record-notification-action.md](send-record-notification-action.md) - Documentazione SendRecordNotificationAction
+>>>>>>> .merge_file_MCjIyO
+>>>>>>> laraxot/dev
 
 ## ⚠️ Nota Importante
 

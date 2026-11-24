@@ -3,28 +3,25 @@ title: "Master Documentation Index - FixCity Fila5"
 type: concept
 tags: [module, docs, index]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+qmd: "module-docs-index master documentation index - fixcity fila5"
 qmd: "module-docs-index master documentation index - ptv fila5"
+=======
+updated: 2026-11-23
+qmd: "module-docs-index master documentation index - fixcity fila5"
+>>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
-  - "./action-plan-immediate.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-status: draft
 ---
 
 # Master Documentation Index - FixCity Fila5
@@ -64,7 +61,7 @@ FixCity Fila5 Documentation
 │   │   └── BMAD-WORKFLOW-COMPLETE.md
 │   │
 │   └── Design Comuni Italia Project:
-│       ├── DESIGN_COMUNI_INDEX.md - Index for all Design Comuni docs
+│       ├── design_comuni_index.md - Index for all Design Comuni docs
 │       ├── design-comuni-prd.md - Product Requirements Document
 │       ├── design-comuni-architecture.md - Architecture Design
 │       ├── design-comuni-ui-spec.md - UI Specification
@@ -94,7 +91,7 @@ FixCity Fila5 Documentation
 │
 ├── 📁 Themes (laravel/Themes/*/docs/)
 │   ├── Sixteen - 325+ files
-│   │   ├── design-comuni-team-guide.md - Complete team guide for replication
+│   │   ├── DESIGN_COMUNI_TEAM_GUIDE.md - Complete team guide for replication
 │   │   ├── DESIGN_COMUNI_PROJECT_summary.md - Project summary and status
 │   │   ├── COMPONENT_CATALOG.md - All 47 components (TO BE CREATED)
 │   │   ├── BLOCK_TYPES.md - All block types (TO BE CREATED)
@@ -212,10 +209,10 @@ FixCity Fila5 Documentation
 
 **Key Documents:**
 - [Layout Architecture](Themes/Sixteen/docs/layout-architecture.md)
-- [LAYOUT_ARCHITECTURE_MAP.md](Themes/Sixteen/docs/layout-architecture-map.md)
-- [LAYOUT_FIX_COMPLETE_BMAD.md](Themes/Sixteen/docs/layout-fix-complete-bmad.md)
+- [LAYOUT_ARCHITECTURE_MAP.md](Themes/Sixteen/docs/LAYOUT_ARCHITECTURE_MAP.md)
+- [LAYOUT_FIX_COMPLETE_BMAD.md](Themes/Sixteen/docs/LAYOUT_FIX_COMPLETE_BMAD.md)
 - [VITE_MANIFEST_FIX_COMPLETE.md](Themes/Sixteen/docs/VITE_MANIFEST_FIX_COMPLETE.md)
-- [PHPSTAN_LAYOUT_FIX_COMPLETE.md](Themes/Sixteen/docs/phpstan-layout-fix-complete.md)
+- [PHPSTAN_LAYOUT_FIX_COMPLETE.md](Themes/Sixteen/docs/PHPSTAN_LAYOUT_FIX_COMPLETE.md)
 
 **Categories:**
 - Architecture (10 files)
@@ -267,7 +264,7 @@ FixCity Fila5 Documentation
 
 | Document | File | Lines | Purpose |
 |----------|------|-------|---------|
-| **Index** | `_bmad-output/DESIGN_COMUNI_INDEX.md` | 300+ | Central navigation for Design Comuni docs |
+| **Index** | `_bmad-output/design_comuni_index.md` | 300+ | Central navigation for Design Comuni docs |
 | **PRD** | `_bmad-output/design-comuni-prd.md` | 800+ | Product requirements (38 pages, WCAG 2.1 AA) |
 | **Architecture** | `_bmad-output/design-comuni-architecture.md` | 900+ | System architecture, data flow, security |
 | **UI Spec** | `_bmad-output/design-comuni-ui-spec.md` | 700+ | Component specs, design tokens, accessibility |
@@ -295,7 +292,7 @@ FixCity Fila5 Documentation
 | **Sprint 6** | Week 11-12 | QA & Documentation | 9 |
 
 **Cross-References:**
-- → [Design Comuni Index](_bmad-output/DESIGN_COMUNI_INDEX.md) - Central navigation
+- → [Design Comuni Index](_bmad-output/design_comuni_index.md) - Central navigation
 - → [PRD](_bmad-output/design-comuni-prd.md) - Requirements
 - → [Architecture](_bmad-output/design-comuni-architecture.md) - System design
 - → [UI Spec](_bmad-output/design-comuni-ui-spec.md) - Component specs
@@ -343,7 +340,7 @@ Modules/
 Themes/Sixteen/docs/
 ├── README.md (START HERE)
 ├── layout-architecture.md
-├── layout-architecture-map.md
+├── LAYOUT_ARCHITECTURE_MAP.md
 ├── components/
 ├── guides/
 └── ...

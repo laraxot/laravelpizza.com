@@ -1,14 +1,17 @@
 ---
-qmd: "openviking integration.divergenza"
+qmd: "Openviking Integration.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: openviking-integration.md"
+title: "Openviking Integration.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Divergenza: `openviking-integration.md`

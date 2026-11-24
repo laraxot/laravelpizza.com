@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan analysis cms"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHPStan Analysis - Cms Module
@@ -173,6 +172,15 @@ if (!is_string($first)) {
 - [ ] Share successful patterns with other module teams
 
 ---
+
+title: "phpstan analysis cms"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan analysis cms"
+issues: []
+discussions: []
 **Analysis Date**: [DATE]
 **PHPStan Version**: 2.1.2
 **Laravel Version**: 12.31.1

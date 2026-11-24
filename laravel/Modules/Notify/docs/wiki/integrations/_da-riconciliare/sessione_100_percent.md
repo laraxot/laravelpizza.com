@@ -7,9 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: superseded
-superseded_by: sessione-100-percent.md
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # 🎉 Sessione 100% Completata - Homepage Bootstrap Italia
@@ -159,9 +161,9 @@ superseded_by: sessione-100-percent.md
 - `docs/CONFERMA_CLASSI_BOOTSTRAP.md`
 
 ### Screenshots Analysis
-- `docs/screenshots/homepage/ANALISI_VISIVA.md`
-- `docs/screenshots/homepage/SCREENSHOT_ANALYSIS.md`
-- `docs/screenshots/homepage/FIX_PLAN.md`
+- `docs/screenshots/homepage/analisi_visiva.md`
+- `docs/screenshots/homepage/screenshot_analysis.md`
+- `docs/screenshots/homepage/fix_plan.md`
 
 ### Moduli & Temi
 - `laravel/Themes/Sixteen/docs/screenshots/homepage/` (3 file)

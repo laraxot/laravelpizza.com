@@ -3,11 +3,14 @@ title: "agents"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "agents"
 issues: []
 discussions: []
-status: draft
 ---
 
 # LLM Wiki Agent Instructions
@@ -603,5 +606,5 @@ Logarithmic Market Scoring Rule (LMSR) is the core pricing mechanism...
 
 - [Token Efficiency Religion](../token-efficiency-religion.md)
 - [Documentation Standards](../rules/docs-standards.md)
-- [Multi-Agent Collaboration](../MULTI_AGENT_COLLABORATION.md)
+- [Multi-Agent Collaboration](../multi_agent_collaboration.md)
 - [Karpathy's Original Gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)

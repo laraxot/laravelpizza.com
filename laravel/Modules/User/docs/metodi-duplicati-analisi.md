@@ -2,15 +2,14 @@
 module: User
 topic: METODI_DUPLICATI_ANALISI
 tags: [metodi-duplicati, refactoring]
+<<<<<<< HEAD
+canonical: ../../../Themes/One/docs/shared-components/metodi_duplicati_analisi.md
+=======
 canonical: ../../../Themes/One/docs/shared-components/METODI_DUPLICATI_ANALISI.md
-title: "Metodi Duplicati: Analisi User"
-type: note
-status: stub
-updated: 2026-10-07
-qmd: "metodi duplicati   analisi user user"
+>>>>>>> laraxot/dev
 ---
 
-# Metodi Duplicati: Analisi User
+# Metodi Duplicati — Analisi User
 
 Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modulo **User**, estratti dal report globale generato da `/tmp/metodi_duplicati_domain_report.md`.
 
@@ -22,7 +21,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Notifications/Auth/Otp.php`
 
-[Riflessione: Presente in 5 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 5 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -34,7 +33,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Filament/Pages/MyProfilePage.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -50,7 +49,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Widgets/LogoutWidget.php`
 - `./laravel/Modules/User/app/Filament/Widgets/PasswordExpiredWidget.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -62,7 +61,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Models/Policies/UserPermissionBasePolicy.php`
 
-[Riflessione: Presente in 13 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 13 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -84,7 +83,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Http/Controllers/UpgradeController.php`
 - `./laravel/Modules/User/app/Http/Volt/LogoutAction.php`
 
-[Riflessione: Presente in 3 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 3 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -98,7 +97,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Resources/BaseUserResource.php`
 - `./laravel/Modules/User/app/Filament/Resources/UserResource.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -114,7 +113,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Resources/TenantResource.php`
 - `./laravel/Modules/User/app/Filament/Resources/UserResource.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -127,7 +126,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Resources/UserResource/Pages/BaseListUsers.php`
 - `./laravel/Modules/User/app/Filament/Resources/UserResource/Pages/ListUsers.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -141,7 +140,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Http/Livewire/Auth/Login.php`
 - `./laravel/Modules/User/app/Http/Livewire/Auth/Register.php`
 
-[Riflessione: Presente in 5 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 5 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -155,7 +154,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/database/factories/OauthClientFactory.php`
 - `./laravel/Modules/User/database/factories/UserFactory.php`
 
-[Riflessione: Presente in 6 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 6 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -167,7 +166,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Models/SocialProvider.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -181,7 +180,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Clusters/Passport/Resources/OauthAccessTokenResource/Pages/EditOauthAccessToken.php`
 - `./laravel/Modules/User/app/Filament/Resources/OauthAccessTokenResource.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -197,7 +196,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Models/TeamPermission.php`
 - `./laravel/Modules/User/app/Models/Traits/IsProfileTrait.php`
 
-[Riflessione: Presente in 5 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 5 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -209,7 +208,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Notifications/Auth/Otp.php`
 
-[Riflessione: Presente in 5 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 5 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -222,7 +221,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Widgets/UserTypeRegistrationsChartWidget.php`
 - `./laravel/Modules/User/app/Filament/Widgets/UsersChartWidget.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -234,7 +233,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Rules/CheckOtpExpiredRule.php`
 
-[Riflessione: Presente in 6 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 6 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -246,7 +245,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/database/factories/UserFactory.php`
 
-[Riflessione: Presente in 6 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 6 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -265,7 +264,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Pages/MyProfilePage.php`
 - `./laravel/Modules/User/app/Filament/Pages/Password.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -279,7 +278,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Widgets/UserTypeRegistrationsChartWidget.php`
 - `./laravel/Modules/User/app/Filament/Widgets/UsersChartWidget.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -292,7 +291,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Widgets/UserTypeRegistrationsChartWidget.php`
 - `./laravel/Modules/User/app/Filament/Widgets/UsersChartWidget.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -305,7 +304,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Http/Livewire/Auth/Login.php`
 - `./laravel/Modules/User/resources/views/pages/auth/login.blade.php`
 
-[Riflessione: Presente in 7 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 7 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -322,7 +321,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Models/SsoProvider.php`
 - `./laravel/Modules/User/app/Models/Traits/IsTenant.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -334,7 +333,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/database/seeders/UserMassSeeder.php`
 
-[Riflessione: Presente in 4 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 4 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -346,7 +345,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Filament/Widgets/Auth/RegisterWidget.php`
 
-[Riflessione: Presente in 5 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 5 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -363,7 +362,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Clusters/Appearance/Pages/Favicon.php`
 - `./laravel/Modules/User/app/Filament/Pages/Password.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -377,7 +376,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Models/Policies/TeamPolicy.php`
 - `./laravel/Modules/User/app/Models/Traits/HasTeams.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -394,7 +393,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Clusters/Appearance/Pages/Favicon.php`
 - `./laravel/Modules/User/app/Filament/Pages/Password.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -406,7 +405,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Filament/Resources/PermissionResource/RelationManager/RoleRelationManager.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -420,7 +419,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Widgets/LoginWidget.php`
 - `./laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -432,7 +431,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Http/Livewire/Profile/DeleteAccount.php`
 
-[Riflessione: Presente in 5 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 5 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -444,7 +443,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Events/NewPasswordSet.php`
 
-[Riflessione: Presente in 4 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 4 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -456,7 +455,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Models/BaseProfile.php`
 
-[Riflessione: Presente in 4 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 4 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -468,7 +467,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Filament/Resources/RoleResource/Pages/EditRole.php`
 
-[Riflessione: Presente in 5 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 5 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -482,7 +481,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Models/Policies/TeamPolicy.php`
 - `./laravel/Modules/User/app/Models/Traits/HasTeams.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -495,7 +494,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Models/Policies/RolePolicy.php`
 - `./laravel/Modules/User/app/Models/Policies/TeamPolicy.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -510,7 +509,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Models/Profile.php`
 - `./laravel/Modules/User/app/Models/Traits/HasTeams.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -525,7 +524,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Http/Livewire/Team/Change.php`
 - `./laravel/Modules/User/app/Models/Traits/HasTeams.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -537,7 +536,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Filament/Widgets/Auth/RegisterWidget.php`
 
-[Riflessione: Presente in 4 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 4 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -553,7 +552,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/database/factories/OauthRefreshTokenFactory.php`
 - `./laravel/Modules/User/database/factories/OauthTokenFactory.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -569,7 +568,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Http/Livewire/Auth/Passwords/Reset.php`
 - `./laravel/Modules/User/resources/views/pages/auth/password/[token].blade.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -582,7 +581,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Models/BaseUser.php`
 - `./laravel/Modules/User/app/Models/DeviceUser.php`
 
-[Riflessione: Presente in 3 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 3 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -596,7 +595,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Resources/UserResource/Pages/BaseEditUser.php`
 - `./laravel/Modules/User/app/Filament/Resources/UserResource/Pages/EditUser.php`
 
-[Riflessione: Presente in 3 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 3 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -611,7 +610,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Widgets/UserDropdown.php`
 - `./laravel/Modules/User/app/Livewire/Logout.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -623,7 +622,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Datas/DeviceData.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -636,7 +635,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Models/BaseUser.php`
 - `./laravel/Modules/User/app/Models/Traits/IsProfileTrait.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -648,7 +647,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Filament/Clusters/Passport/Widgets/PassportStatsWidget.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -660,7 +659,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Http/Livewire/Auth/Login.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -673,7 +672,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Resources/OauthAccessTokenResource.php`
 - `./laravel/Modules/User/app/Filament/Resources/PermissionResource/RelationManager/RoleRelationManager.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -687,7 +686,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Widgets/LoginWidget.php`
 - `./laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -699,7 +698,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Models/Extra.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -714,7 +713,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/database/factories/OauthClientFactory.php`
 - `./laravel/Modules/User/database/factories/OauthTokenFactory.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -729,7 +728,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Models/Traits/HasSocialite.php`
 - `./laravel/Modules/User/app/Models/User.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -742,7 +741,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/PassportHasApiTokensContract.php`
 - `./laravel/Modules/User/app/Contracts/UserContract.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -757,7 +756,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Models/TeamInvitation.php`
 - `./laravel/Modules/User/app/Models/TeamPermission.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -771,7 +770,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Models/Traits/HasRoles.php`
 - `./laravel/Modules/User/app/Models/Traits/HasSpatiePermission.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -785,7 +784,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/UserContract.php`
 - `./laravel/Modules/User/app/Models/Traits/HasTeams.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -799,7 +798,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Resources/RoleResource/Pages/CreateRole.php`
 - `./laravel/Modules/User/app/Filament/Resources/TeamResource/Pages/CreateTeam.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -811,7 +810,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Rules/CheckOtpExpiredRule.php`
 
-[Riflessione: Presente in 4 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 4 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -825,7 +824,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/UserContract.php`
 - `./laravel/Modules/User/app/Models/Traits/HasTeams.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -837,7 +836,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Contracts/UserContract.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -850,7 +849,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Models/PermissionRole.php`
 - `./laravel/Modules/User/app/Models/Role.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -862,7 +861,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Filament/Pages/MyProfilePage.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -874,7 +873,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Models/BaseTenant.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -887,7 +886,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Clusters/Passport/Resources/OauthAccessTokenResource/Pages/CreateOauthAccessToken.php`
 - `./laravel/Modules/User/app/Filament/Clusters/Passport/Resources/OauthAccessTokenResource/Pages/EditOauthAccessToken.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -899,7 +898,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Models/Traits/HasModules.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -912,7 +911,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Models/BaseUser.php`
 - `./laravel/Modules/User/app/Models/Traits/IsProfileTrait.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -925,7 +924,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/PassportHasApiTokensContract.php`
 - `./laravel/Modules/User/app/Contracts/UserContract.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -937,7 +936,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Actions/Otp/Hasher.php`
 
-[Riflessione: Presente in 3 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 3 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -951,7 +950,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/UserContract.php`
 - `./laravel/Modules/User/app/Models/Traits/HasTeams.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -965,7 +964,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/database/factories/OauthClientFactory.php`
 - `./laravel/Modules/User/database/factories/OauthTokenFactory.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -978,7 +977,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Http/Livewire/Profile/SuperAdmin.php`
 - `./laravel/Modules/User/app/Models/Traits/IsProfileTrait.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -990,7 +989,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Models/Traits/InteractsWithTenant.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -1003,7 +1002,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/UserContract.php`
 - `./laravel/Modules/User/app/Models/Traits/HasTenants.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -1017,7 +1016,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/HasTeamsContract.php`
 - `./laravel/Modules/User/app/Models/Traits/HasTeams.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1031,7 +1030,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/UserContract.php`
 - `./laravel/Modules/User/app/Models/Traits/HasTeams.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1045,7 +1044,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Models/BaseUser.php`
 - `./laravel/Modules/User/app/Models/Traits/HasSocialite.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1059,7 +1058,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Http/Livewire/Auth/Passwords/Email.php`
 - `./laravel/Modules/User/resources/views/pages/auth/password/reset.blade.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1071,7 +1070,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Models/Profile.php`
 
-[Riflessione: Presente in 3 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 3 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -1085,7 +1084,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/UserContract.php`
 - `./laravel/Modules/User/app/Models/Traits/HasTeams.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1099,7 +1098,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Models/Team.php`
 - `./laravel/Modules/User/app/Models/Traits/HasSpatiePermission.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1112,7 +1111,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/TeamContract.php`
 - `./laravel/Modules/User/app/Models/BaseTeam.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -1126,7 +1125,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/UserContract.php`
 - `./laravel/Modules/User/app/Models/Traits/HasTeams.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1139,7 +1138,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Widgets/EditUserWidget.php`
 - `./laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -1153,7 +1152,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Models/BaseTeam.php`
 - `./laravel/Modules/User/app/Models/BaseTenant.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1165,7 +1164,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Filament/Widgets/Auth/LoginWidget.php`
 
-[Riflessione: Presente in 3 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 3 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -1179,7 +1178,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Resources/ClientResource.php`
 - `./laravel/Modules/User/app/Filament/Resources/ClientResource/Schemas/ClientForm.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1191,7 +1190,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/database/seeders/UserMassSeeder.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -1204,7 +1203,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Resources/BaseUserResource.php`
 - `./laravel/Modules/User/app/Filament/Resources/UserResource.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1218,7 +1217,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Resources/ClientResource.php`
 - `./laravel/Modules/User/app/Filament/Resources/ClientResource/Schemas/ClientForm.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1230,7 +1229,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Facades/FilamentShield.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1243,7 +1242,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Resources/OauthAuthCodeResource.php`
 - `./laravel/Modules/User/app/Filament/Resources/OauthRefreshTokenResource.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -1257,7 +1256,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/database/factories/OauthRefreshTokenFactory.php`
 - `./laravel/Modules/User/database/factories/OauthTokenFactory.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1271,7 +1270,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Models/Traits/HasDevices.php`
 - `./laravel/Modules/User/app/Models/Traits/IsProfileTrait.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1285,7 +1284,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/UserContract.php`
 - `./laravel/Modules/User/app/Models/Traits/HasTeams.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1297,7 +1296,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Observers/UserObserver.php`
 
-[Riflessione: Presente in 3 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 3 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -1310,7 +1309,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/PassportHasApiTokensContract.php`
 - `./laravel/Modules/User/app/Models/BaseUser.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -1324,7 +1323,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/UserContract.php`
 - `./laravel/Modules/User/app/Models/Traits/HasAuthenticationLogTrait.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1338,7 +1337,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/UserContract.php`
 - `./laravel/Modules/User/app/Models/Traits/HasTeams.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1350,7 +1349,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Contracts/PassportHasApiTokensContract.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1362,7 +1361,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Models/BaseUser.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -1375,7 +1374,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/TeamContract.php`
 - `./laravel/Modules/User/app/Models/BaseTeam.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1387,7 +1386,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Filament/Widgets/EditUserWidget.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -1400,7 +1399,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Pages/MyProfilePage.php`
 - `./laravel/Modules/User/resources/views/pages/profile/edit.blade.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1413,7 +1412,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Pages/MyProfilePage.php`
 - `./laravel/Modules/User/resources/views/pages/profile/edit.blade.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1425,7 +1424,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/database/factories/UserFactory.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -1437,7 +1436,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Contracts/PassportHasApiTokensContract.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -1449,7 +1448,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Contracts/PassportHasApiTokensContract.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -1462,7 +1461,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Models/BaseTeam.php`
 - `./laravel/Modules/User/app/Models/Traits/HasTeams.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1475,7 +1474,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/TeamContract.php`
 - `./laravel/Modules/User/app/Models/BaseTeam.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1488,7 +1487,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Widgets/Auth/PasswordResetConfirmWidget.php`
 - `./laravel/Modules/User/app/Filament/Widgets/Auth/PasswordResetWidget.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1501,7 +1500,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Http/Livewire/Auth/Verify.php`
 - `./laravel/Modules/User/resources/views/pages/auth/verify.blade.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1514,7 +1513,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/TwoFactorAuthenticatableContract.php`
 - `./laravel/Modules/User/app/Contracts/UserContract.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1527,7 +1526,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/TeamContract.php`
 - `./laravel/Modules/User/app/Models/BaseTeam.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1539,7 +1538,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Contracts/UserContract.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -1552,7 +1551,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Providers/PassportServiceProvider.php`
 - `./laravel/Modules/User/app/Providers/UserServiceProvider.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1565,7 +1564,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Widgets/Auth/LogoutWidget.php`
 - `./laravel/Modules/User/app/Filament/Widgets/LogoutWidget.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1578,7 +1577,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/TwoFactorAuthenticatableContract.php`
 - `./laravel/Modules/User/app/Contracts/UserContract.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1591,7 +1590,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/TeamContract.php`
 - `./laravel/Modules/User/app/Models/BaseTeam.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1604,7 +1603,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Widgets/Auth/LogoutWidget.php`
 - `./laravel/Modules/User/app/Filament/Widgets/LogoutWidget.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1616,7 +1615,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Models/BaseUser.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -1629,7 +1628,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Widgets/Auth/LogoutWidget.php`
 - `./laravel/Modules/User/app/Filament/Widgets/LogoutWidget.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1642,7 +1641,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Models/BaseUser.php`
 - `./laravel/Modules/User/app/Models/Traits/HasAuthenticationLogTrait.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1655,7 +1654,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/HasTeamsContract.php`
 - `./laravel/Modules/User/app/Models/Traits/HasTeams.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1668,7 +1667,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/TeamContract.php`
 - `./laravel/Modules/User/app/Models/BaseTeam.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1681,7 +1680,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/TeamContract.php`
 - `./laravel/Modules/User/app/Models/BaseTeam.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1694,7 +1693,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/HasTeamsContract.php`
 - `./laravel/Modules/User/app/Models/Traits/HasTeams.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1707,7 +1706,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Pages/Auth/PasswordExpired.php`
 - `./laravel/Modules/User/app/Filament/Widgets/PasswordExpiredWidget.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1720,7 +1719,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Pages/Tenancy/RegisterTeam.php`
 - `./laravel/Modules/User/app/Filament/Pages/Tenancy/RegisterTenant.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1732,7 +1731,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Filament/Clusters/Passport/Pages/PassportDashboard.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -1744,7 +1743,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Filament/Clusters/Passport/Pages/PassportDashboard.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -1756,7 +1755,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Filament/Clusters/Passport/Pages/PassportDashboard.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -1768,7 +1767,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Filament/Clusters/Passport/Pages/PassportDashboard.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -1780,7 +1779,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Support/Utils.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1793,7 +1792,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Pages/Auth/PasswordExpired.php`
 - `./laravel/Modules/User/app/Filament/Widgets/PasswordExpiredWidget.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1806,7 +1805,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Models/BaseUser.php`
 - `./laravel/Modules/User/app/Models/Traits/HasSocialite.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1818,7 +1817,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Filament/Resources/OauthAccessTokenResource.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1830,7 +1829,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Models/Traits/IsProfileTrait.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1843,7 +1842,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Widgets/Auth/LogoutWidget.php`
 - `./laravel/Modules/User/app/Filament/Widgets/LogoutWidget.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1856,7 +1855,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Widgets/Auth/LogoutWidget.php`
 - `./laravel/Modules/User/app/Filament/Widgets/LogoutWidget.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1868,7 +1867,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Contracts/UserContract.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1880,7 +1879,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Datas/PasswordData.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1893,7 +1892,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/HasProfilePhotoContract.php`
 - `./laravel/Modules/User/app/Models/BaseTenant.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1906,7 +1905,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Pages/Auth/PasswordExpired.php`
 - `./laravel/Modules/User/app/Filament/Widgets/PasswordExpiredWidget.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1919,7 +1918,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/database/seeders/RolesSeeder.php`
 - `./laravel/Modules/User/database/seeders/UserMassSeeder.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1932,7 +1931,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Widgets/Auth/LogoutWidget.php`
 - `./laravel/Modules/User/app/Filament/Widgets/LogoutWidget.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1944,7 +1943,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Models/BaseProfile.php`
 
-[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -1957,7 +1956,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/database/factories/PermissionRoleFactory.php`
 - `./laravel/Modules/User/database/factories/RoleHasPermissionFactory.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1970,7 +1969,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/database/factories/PermissionRoleFactory.php`
 - `./laravel/Modules/User/database/factories/RoleHasPermissionFactory.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1983,7 +1982,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/database/factories/OauthAccessTokenFactory.php`
 - `./laravel/Modules/User/database/factories/OauthTokenFactory.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -1995,7 +1994,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Models/BaseUser.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -2007,7 +2006,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Filament/Clusters/Passport/Pages/PassportDashboard.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -2019,7 +2018,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/database/seeders/UserMassSeeder.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -2032,7 +2031,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Widgets/Auth/LogoutWidget.php`
 - `./laravel/Modules/User/app/Filament/Widgets/LogoutWidget.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -2045,7 +2044,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Filament/Widgets/Auth/LogoutWidget.php`
 - `./laravel/Modules/User/app/Filament/Widgets/LogoutWidget.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -2058,7 +2057,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Http/Livewire/Auth/Passwords/Confirm.php`
 - `./laravel/Modules/User/resources/views/pages/auth/password/confirm.blade.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -2071,7 +2070,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Providers/PassportServiceProvider.php`
 - `./laravel/Modules/User/app/Providers/Traits/HasPassportConfiguration.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -2084,7 +2083,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Providers/PassportServiceProvider.php`
 - `./laravel/Modules/User/app/Providers/Traits/HasPassportConfiguration.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -2097,7 +2096,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Providers/PassportServiceProvider.php`
 - `./laravel/Modules/User/app/Providers/Traits/HasPassportConfiguration.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -2110,7 +2109,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/HasTeamsAndUserContract.php`
 - `./laravel/Modules/User/app/Models/Traits/HasTeams.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -2123,7 +2122,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/HasTeamsAndUserContract.php`
 - `./laravel/Modules/User/app/Models/Traits/HasTeams.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -2136,7 +2135,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Http/Livewire/Auth/Passwords/Email.php`
 - `./laravel/Modules/User/app/Http/Livewire/Auth/Passwords/Reset.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -2148,7 +2147,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Models/Traits/IsProfileTrait.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -2161,7 +2160,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Models/Authentication.php`
 - `./laravel/Modules/User/app/Models/AuthenticationLog.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -2174,7 +2173,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/User/app/Contracts/TeamContract.php`
 - `./laravel/Modules/User/app/Models/BaseTeam.php`
 
-[Riflessione: Duplicato interno al modulo User: valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo User — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -2186,7 +2185,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/User/app/Contracts/AddsTeamMembers.php`
 
-[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -2215,7 +2214,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - **IndennitaResponsabilita:** 8 metodi in comune
 
 ---
-_Report generato automaticamente: fonte: `/tmp/metodi_duplicati_domain_report.md`_
+_Report generato automaticamente — fonte: `/tmp/metodi_duplicati_domain_report.md`_
 # 🐄⚡ ANALISI METODI DUPLICATI - SUPER MUCCA EDITION
 
 **Powered by**: Super Mucca AI 🐄✨  

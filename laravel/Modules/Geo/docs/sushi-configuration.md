@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "sushi configuration"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Configurazione Sushi
@@ -145,4 +144,12 @@ Gli attributi fillable definiscono quali campi possono essere assegnati in massa
 ## Documentazione Correlata
 - [Sushi Documentation](https://github.com/calebporzio/sushi)
 - [Comune Model](comune-model.md)
+<<<<<<< HEAD
 - [Sushi Command](sushi-command.md) 
+=======
+<<<<<<< HEAD
+- [Sushi Command](sushi-command.md) 
+=======
+- Sushi Command 
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

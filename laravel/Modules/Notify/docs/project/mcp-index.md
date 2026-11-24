@@ -3,11 +3,14 @@ title: "mcp index"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "mcp index"
 issues: []
 discussions: []
-status: draft
 ---
 
 # MCP Index
@@ -27,7 +30,6 @@ status: draft
 ## Configuration
 
 - [Qwen MCP Config](../../.qwen/mcp.json) - MCP server definitions
-- [Qwen MCP Config](../../../../../.qwen/mcp.json) - MCP server definitions
 - [Memory Bank](../../memory-bank/) - Project memory bank (structured docs)
 
 ## Rules

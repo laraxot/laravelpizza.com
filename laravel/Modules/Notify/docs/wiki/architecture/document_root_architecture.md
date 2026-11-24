@@ -1,14 +1,16 @@
 ---
-title: "Notify Module: Document"
+title: "Notify Module — Document"
 type: docs/bmad
+status: active
 module: Notify
 scope: documentation
 bmad_version: 1.0
+<<<<<<< HEAD
 updated: 2026-10-06
-tags: [docs, notify, wiki]
-qmd: "document root architecture notify"
-status: superseded
-superseded_by: ../../architecture/document-root-architecture.md
+=======
+updated: 2026-11-23
+created: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Document Root Architecture

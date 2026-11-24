@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\UI\Tests\Feature;
 
+use Carbon\Carbon;
 use Modules\UI\Filament\Tables\Columns\OpeningHoursColumn;
-use Modules\UI\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
 describe('OpeningHoursColumn — controparte di OpeningHoursField', function (): void {
     it('can be instantiated with make() using the default name', function (): void {
         $column = OpeningHoursColumn::make();
@@ -21,11 +20,20 @@ describe('OpeningHoursColumn — controparte di OpeningHoursField', function ():
     });
 
     it('marks a day with no slots as closed', function (): void {
-        $summary = OpeningHoursColumn::summarizeOpeningHours([
-            'monday' => ['morning_from' => '', 'morning_to' => '', 'afternoon_from' => null, 'afternoon_to' => null],
-        ]);
+        // I nomi dei giorni vengono dalla lingua globale di Carbon: la si fissa e poi si ripristina,
+        // cosi' il risultato non dipende dai test eseguiti prima.
+        $previousLocale = Carbon::getLocale();
+        Carbon::setLocale('it');
 
-        Assert::assertStringContainsString('Mon chiuso', $summary);
+        try {
+            $summary = OpeningHoursColumn::summarizeOpeningHours([
+                'monday' => ['morning_from' => '', 'morning_to' => '', 'afternoon_from' => null, 'afternoon_to' => null],
+            ]);
+        } finally {
+            Carbon::setLocale($previousLocale);
+        }
+
+        Assert::assertStringContainsString('Lun chiuso', $summary);
     });
 
     it('formats a day with both morning and afternoon slots', function (): void {

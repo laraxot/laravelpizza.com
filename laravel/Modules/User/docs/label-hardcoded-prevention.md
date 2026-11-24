@@ -8,19 +8,14 @@ qmd: "label-hardcoded-prevention prevenzione ->label() hardcoded - modulo user"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Prevenzione ->label() Hardcoded - Modulo User
@@ -211,9 +206,6 @@ return [
 
 ## 🔗 **Collegamenti**
 
-- [Translation Standards](../../../../docs/translation-standards.md)
-- [PHPStan Fixes](../../../../docs/phpstan_level10_fixes.md)
-- [Best Practices](../../../../docs/best-practices.md)
 - [Translation Standards](../../../../docs/translation-standards.md)
 - [PHPStan Fixes](../../../../docs/phpstan_level10_fixes.md)
 - [Best Practices](../../../../docs/best-practices.md)

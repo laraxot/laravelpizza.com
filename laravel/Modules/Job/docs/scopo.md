@@ -1,7 +1,7 @@
 ---
 issues: []
 discussions: []
-title: "Job: scopo, confini e come servirlo meglio"
+title: "Job — scopo, confini e come servirlo meglio"
 type: concept
 module: Job
 status: active
@@ -11,7 +11,7 @@ tags: [scopo, confini, code, queue, schedule, filament, services, dipendenze]
 qmd: "scopo job code queue schedule pannello filament no services config namespace confini dipendenze"
 ---
 
-# Job: scopo, confini e come servirlo meglio
+# Job — scopo, confini e come servirlo meglio
 
 ## Lo scopo, dedotto dal codice
 
@@ -29,7 +29,7 @@ dice meglio di qualunque descrizione.
 | 112 file toccano `Modules\Xot`, 4 toccano `Modules\User`, **0 qualunque altro modulo** | `grep -rl 'Modules\\<X>\\' Modules/Job/app` | Job non conosce nessun dominio |
 | **1 solo file** in tutto il monorepo importa da `Modules\Job` | `Modules/Media/app/Filament/Resources/MediaConvertResource/Pages/ListMediaConverts.php:9` (importa `ClockWidget`) | Job non è una dipendenza di nessuno: è un pannello, si usa dal browser |
 
-La connessione `job` non è dichiarata in nessun file di config tenant: né in
+La connessione `job` non è dichiarata in nessun file di config tenant — né in
 `config/local/ptvx/database.php` (che costruisce 21 connessioni da una mappa esplicita,
 righe 25-46), né in `config/localhost/database.php` (che ne dichiara 19, fra cui
 `rating` e `activity` ma non `job`). Funziona lo stesso perché
@@ -44,9 +44,9 @@ una scelta: oggi le tabelle di Job stanno nel database applicativo.
 
 ## I confini, e dove oggi sono rotti
 
-### Una conversione storica, non un'API corrente
+### Un Service e le sue tre incarnazioni
 
-Il precedente `app/Services/ScheduleService.php` violava la policy no-services del progetto ed è stato rimosso.
+`app/Services/ScheduleService.php` (59 righe) viola la policy no-services del progetto.
 Il punto non è stilistico: le sue due funzioni esistono già come Action, **in doppia
 copia**.
 
@@ -68,7 +68,7 @@ esista.
 
 `ScheduleService` e le quattro Action leggono `config('job::model')`,
 `config('job::cache.enabled')`, `config('job::cache.store')`, `config('job::cache.key')`,
-`config('job::history_collapsed')`: venti occorrenze in `app/`. Il namespace `job::`
+`config('job::history_collapsed')` — venti occorrenze in `app/`. Il namespace `job::`
 non è registrato da `JobServiceProvider` (nessuna riga vi fa riferimento), e i due file
 che potrebbero definirlo non lo definiscono: `Modules/Job/config/config.php` contiene
 `name` e `icon`, `laravel/config/job.php` contiene solo `name`. Ogni chiave restituisce
@@ -80,7 +80,7 @@ girare non è un'ottimizzazione: è una via morta con tre implementazioni.
 | File | Cos'è |
 |---|---|
 | `Modules/Job/Untitled` | 1 byte, dal 1 settembre 2026 |
-| `Modules/Job/config.php` | una riga: `require __DIR__."/../config.php";`: risolve a `Modules/config.php`, che non esiste |
+| `Modules/Job/config.php` | una riga: `require __DIR__."/../config.php";` — risolve a `Modules/config.php`, che non esiste |
 | `Modules/Job/app/Console/Commands/queue.pid` | 5 byte, artefatto di runtime committato |
 | `Modules/Job/app/Models/MonitoredScheduledTask.aaa` e `MonitoredScheduledTaskLogItem.aaa` | due modelli disattivati rinominando l'estensione |
 
@@ -104,8 +104,8 @@ file è il nome dell'interfaccia. La convenzione del progetto è `*Contract`.
 `{Resource}\Tables\{Plurale del modello}Table`. Su 11 classi `Tables/`, due non sono
 raggiungibili da nessuna Resource e non hanno un solo riferimento nel repo:
 
-- `JobBatchResource/Tables/JobBatchsTable.php`: la Resource risolve `JobBatchesTable`
-- `JobsWaitingResource/Tables/JobsWaitingsTable.php`: `JobsWaitingResource` dichiara
+- `JobBatchResource/Tables/JobBatchsTable.php` — la Resource risolve `JobBatchesTable`
+- `JobsWaitingResource/Tables/JobsWaitingsTable.php` — `JobsWaitingResource` dichiara
   `protected static ?string $model = Job::class` (riga 22), quindi risolve
   `JobsWaitingResource\Tables\JobsTable`
 
@@ -123,7 +123,7 @@ entrambe con `protected static string $resource = JobsWaitingResource::class`.
 Cancellare `app/Services/ScheduleService.php`, `app/Actions/GetActiveSchedulesAction.php`
 e `app/Actions/ClearScheduleCacheAction.php`; tenere le due sotto `app/Actions/Schedule/`,
 che risolvono il modello per chiamata e non lo congelano nel costruttore. Riscrivere
-`tests/Unit/Services/ScheduleServiceTest.php` sulle Action superstiti: o cancellarlo,
+`tests/Unit/Services/ScheduleServiceTest.php` sulle Action superstiti — o cancellarlo,
 visto che oggi verifica solo che una classe esista.
 
 ```bash
@@ -189,7 +189,7 @@ cd laravel && grep -rl 'public function getTableColumns' Modules/Job/app/Filamen
   `Frequency` sono la rappresentazione persistente di ciò che il kernel esegue, non un
   motore parallelo.
 - **Non** ospita Service. La policy del progetto è chiara e questo modulo è l'unico dei
-  tre a violarla: con una classe che nessun codice applicativo chiama.
+  tre a violarla — con una classe che nessun codice applicativo chiama.
 - **Non** estende direttamente le classi Filament: oggi le 82 classi Filament passano
   tutte da `XotBase*`, ed è una proprietà da non perdere.
 
@@ -233,8 +233,8 @@ grep -rn 'extends \(Resource\|Page\|ListRecords\|CreateRecord\|EditRecord\|Widge
 
 ## Collegamenti
 
-- [no-services-rule](../../../../bashscripts/ai/wiki/rules/no-services-rule.md): perché `ScheduleService` non deve esistere
-- [migration-filename-from-model-name](../../../../docs/wiki/rules/migration-filename-from-model-name.md): 1 modello = 1 migrazione
-- [Sigma: scopo](../../Sigma/docs/scopo.md): lo stesso esercizio sul modulo adattatore
-- [coverage.md](coverage.md): il contratto di qualità dei test di questo modulo
-- [ARCHITECTURE.md](ARCHITECTURE.md): l'architettura già documentata
+- [no-services-rule](../../../../bashscripts/ai/wiki/rules/no-services-rule.md) — perché `ScheduleService` non deve esistere
+- [migration-filename-from-model-name](../../../../docs/wiki/rules/migration-filename-from-model-name.md) — 1 modello = 1 migrazione
+- [Sigma — scopo](../../Sigma/docs/scopo.md) — lo stesso esercizio sul modulo adattatore
+- [coverage.md](coverage.md) — il contratto di qualità dei test di questo modulo
+- [architecture.md](architecture.md) — l'architettura già documentata

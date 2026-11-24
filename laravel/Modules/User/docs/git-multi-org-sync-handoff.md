@@ -9,11 +9,9 @@ issues:
   - "https://github.com/provtv/module_user_fila5/issues/16"
 discussions:
   - "https://github.com/provtv/base_ptv_fila5/discussions/204"
-status: draft
-qmd: "handoff   multi-org sync (story-003) user"
 ---
 
-# Handoff: multi-org sync (STORY-003)
+# Handoff — multi-org sync (STORY-003)
 
 ## Scopo
 
@@ -37,7 +35,7 @@ Un tree dirty o un remote dietro/avanti **non** è sincronizzato, anche se l’a
 
 1. `cd` owner → `git remote -v` → fetch tutti → merge senza force → push tutti
 2. Dopo edit PHP: phpstan/phpmd/phpinsights scoped (prompt `02-gitmodules-sync.md`)
-3. Mai `git restore`: forward-only
+3. Mai `git restore` — forward-only
 4. UI: non reintrodurre `InteractiveMap` (dominio Geo)
 5. Se `merge-base` vuoto vs un org → STOP (unrelated); sync solo l’org allineabile
 
@@ -48,7 +46,7 @@ Seguire sync multi-org e mantenere docs allineate alla story.
 ### Sessione push 2026-07-23
 
 - `laraxot/dev` = `3ea7273a` (**0 0**, push OK)
-- `provtv/dev` = unrelated: [wiki/troubleshooting/git-push-dual-remote-unrelated.md](./wiki/troubleshooting/git-push-dual-remote-unrelated.md)
+- `provtv/dev` = unrelated — [wiki/troubleshooting/git-push-dual-remote-unrelated.md](./wiki/troubleshooting/git-push-dual-remote-unrelated.md)
 
 ### Sync 2026-07-23 (batch 5-item, seguito)
 

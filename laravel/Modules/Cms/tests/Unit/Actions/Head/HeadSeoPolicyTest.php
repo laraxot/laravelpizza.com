@@ -4,16 +4,20 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Unit\Actions\Head;
 
+use Laravel\Head\Schema\SchemaObject;
+use Modules\Cms\Actions\BuildPageSchemaAction;
 use Modules\Cms\Actions\Head\BuildHeadSchemaAction;
 use Modules\Cms\Actions\Head\ResolveHreflangAlternatesAction;
 use Modules\Cms\Actions\Head\ResolveRobotsPolicyAction;
-use Modules\Cms\Actions\BuildPageSchemaAction;
+use Modules\Cms\Tests\TestCase;
 use Modules\Xot\Datas\MetatagData;
-use Laravel\Head\Schema\SchemaObject;
 use PHPUnit\Framework\Assert;
 
+// TestCase legato per file (laravel/tests/Pest.php): MetatagData::make() legge la config.
+uses(TestCase::class);
+
 /**
- * @param SchemaObject|array<string, mixed> $schema
+ * @param  SchemaObject|array<string, mixed>  $schema
  */
 function schemaType(SchemaObject|array $schema): ?string
 {

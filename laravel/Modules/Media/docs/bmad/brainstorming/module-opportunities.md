@@ -1,14 +1,13 @@
 ---
-title: "Media: brainstorming BMAD"
+title: "Media — brainstorming BMAD"
 type: brainstorming
 status: active
 module: Media
 created: 2026-09-28
 updated: 2026-09-28
 qmd: "Media brainstorming rischi opportunità domande aperte"
-tags: [docs, media, bmad]
 ---
-# Media: brainstorming
+# Media — brainstorming
 
 ## Punto di partenza
 

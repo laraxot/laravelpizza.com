@@ -25,6 +25,15 @@ uses(TestCase::class);
  * 200 vuoto e un abort() li' rompe route('login'): il redirect sta in mount() (OauthCallbackFolioPageTest).
  */
 
+/** Il modulo User e' condiviso: una lingua che il progetto non offre (es. de su Trade) si salta, non fallisce. */
+function oauthSkipUnsupportedLocale(string $lang): void
+{
+    $supported = config('laravellocalization.supportedLocales');
+    if (! is_array($supported) || ! array_key_exists($lang, $supported)) {
+        test()->markTestSkipped('Lingua '.$lang.' non offerta da questo progetto');
+    }
+}
+
 dataset('oauth_locales', [
     'it' => ['it', 'Login fallito, riprova.'],
     'en' => ['en', 'Sign-in failed, please try again.'],
@@ -33,6 +42,7 @@ dataset('oauth_locales', [
 ]);
 
 test('the login page links Google with the active language prefix', function (string $lang): void {
+    oauthSkipUnsupportedLocale($lang);
     // DCP-290: il pulsante compare solo con le tre chiavi GOOGLE_* (senza, la pagina non lo mostra: AuthGoogleButtonTest).
     config(['services.google' => ['client_id' => 'test-client', 'client_secret' => 'test-secret', 'redirect' => 'http://localhost/'.$lang.'/auth/login/google/callback']]);
     $html = get('/'.$lang.'/auth/login')->assertOk()->getContent();
@@ -43,6 +53,7 @@ test('the login page links Google with the active language prefix', function (st
 })->with('oauth_locales');
 
 test('the localized OAuth entry point sends the citizen to Google', function (string $lang): void {
+    oauthSkipUnsupportedLocale($lang);
     $callback = 'http://localhost/'.$lang.'/auth/login/google/callback';
     config(['services.google' => ['client_id' => 'test-client', 'client_secret' => 'test-secret', 'redirect' => $callback]]);
 

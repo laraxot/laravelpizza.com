@@ -3,32 +3,32 @@
 return [
     'filters' => [
         'apply' => [
-            'label' => 'Applica filtri',
-            'tooltip' => 'Applica i filtri selezionati',
+            'label' => 'Apply filters',
+            'tooltip' => 'Apply the selected filters',
             'icon' => 'heroicon-o-funnel',
         ],
         'reset' => [
-            'label' => 'Reset filtri',
-            'tooltip' => 'Ripristina i filtri predefiniti',
+            'label' => 'Reset filters',
+            'tooltip' => 'Restore default filters',
             'icon' => 'heroicon-o-x-mark',
         ],
         'open' => [
-            'label' => 'Apri filtri',
-            'tooltip' => 'Mostra i pannelli di filtro',
+            'label' => 'Open filters',
+            'tooltip' => 'Show the filter panels',
             'icon' => 'heroicon-o-adjustments-horizontal',
         ],
     ],
     'columns' => [
         'toggle' => [
-            'label' => 'Mostra/Nascondi colonne',
-            'tooltip' => 'Gestisci la visibilità delle colonne',
+            'label' => 'Show/Hide columns',
+            'tooltip' => 'Manage column visibility',
             'icon' => 'heroicon-o-view-columns',
         ],
     ],
     'records' => [
         'reorder' => [
             'label' => 'Riordina record',
-            'tooltip' => 'Modifica l\'ordine dei record',
+            'tooltip' => 'Change the order of records',
             'icon' => 'heroicon-o-arrows-up-down',
         ],
     ],
@@ -47,19 +47,19 @@ return [
     ],
     'fields' => [
         'id' => [
-            'label' => 'Identificativo',
-            'tooltip' => 'Identificativo univoco del record',
+            'label' => 'Identifier',
+            'tooltip' => 'Unique record identifier',
             'helper_text' => '',
             'description' => '',
         ],
         'created_at' => [
-            'label' => 'Data Creazione',
+            'label' => 'Created at',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'updated_at' => [
-            'label' => 'Ultima Modifica',
+            'label' => 'Last modified',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -67,13 +67,13 @@ return [
     ],
     'actions' => [
         'create' => [
-            'label' => 'Crea Filament',
+            'label' => 'Create Filament',
         ],
         'edit' => [
-            'label' => 'Modifica Filament',
+            'label' => 'Edit Filament',
         ],
         'delete' => [
-            'label' => 'Elimina Filament',
+            'label' => 'Delete Filament',
         ],
     ],
 ];

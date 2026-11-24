@@ -118,4 +118,4 @@ def fine_tune():
         return jsonify({"status": "error", "message": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=os.environ.get('FLASK_DEBUG', '0') == '1')

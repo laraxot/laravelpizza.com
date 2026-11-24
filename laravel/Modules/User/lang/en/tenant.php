@@ -7,8 +7,8 @@ return [
         'name' => 'Tenant',
         'plural' => 'Tenants',
         'group' => [
-            'name' => 'Gestione Utenti',
-            'description' => 'Gestione dei tenant e delle loro configurazioni',
+            'name' => 'User management',
+            'description' => 'Manage tenants and their settings',
         ],
         'label' => 'Tenant',
         'sort' => '30',
@@ -19,13 +19,13 @@ return [
     ],
     'fields' => [
         'first_name' => [
-            'label' => 'Nome',
+            'label' => 'Name',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'last_name' => [
-            'label' => 'Cognome',
+            'label' => 'Last name',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -69,17 +69,17 @@ return [
     'actions' => [
         'import' => [
             'fields' => [
-                'import_file' => 'Seleziona un file XLS o CSV da caricare',
+                'import_file' => 'Select an XLS or CSV file to upload',
             ],
         ],
         'export' => [
-            'filename_prefix' => 'Aree al',
+            'filename_prefix' => 'Areas as of',
             'columns' => [
-                'name' => 'Nome area',
-                'parent_name' => 'Nome area livello superiore',
+                'name' => 'Area name',
+                'parent_name' => 'Parent area name',
             ],
         ],
-        'change_password' => 'Cambio password',
+        'change_password' => 'Change password',
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',

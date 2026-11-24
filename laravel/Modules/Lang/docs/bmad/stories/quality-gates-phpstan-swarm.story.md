@@ -5,14 +5,14 @@ qmd: "quality gates phpstan swarm 2026 09 23.story"
 issues: []
 discussions: []
 id: quality-gates-phpstan-swarm-2026-09-23
-title: PHPStan quality gate swarm: modulo Lang
+title: PHPStan quality gate swarm — modulo Lang
 status: done
 scope: module:Lang
 created: 2026-09-23
 updated: 2026-09-23
 ---
 
-# PHPStan quality gate swarm: modulo Lang
+# PHPStan quality gate swarm — modulo Lang
 
 ## Contesto
 
@@ -82,7 +82,7 @@ Nessun `@phpstan-ignore` aggiunto, nessuna modifica al working tree.
 
 Comando e output riportati sopra (sezione "Comando PHPStan eseguito" /
 "Esito"), rieseguito una sola volta essendo il risultato già "No errors"
-al primo lancio: nessun fix da riverificare.
+al primo lancio — nessun fix da riverificare.
 
 ## Nota per il second brain
 

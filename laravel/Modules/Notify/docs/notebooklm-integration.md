@@ -3,28 +3,23 @@ title: "NotebookLM Integration"
 type: concept
 tags: [notebooklm, integration]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notebooklm-integration notebooklm integration"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
-  - "./action-plan-immediate.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-status: draft
 ---
 
 # NotebookLM Integration
@@ -110,7 +105,7 @@ Once authenticated, you can ask Claude Code to:
 Recommended notebooks to create:
 
 1. **FixCity Architecture** - AGENTS.md, docs/architecture/*
-1. **FixCity Architecture** - agents.md, docs/architecture/*
+1. **FixCity Architecture** - AGENTS.md, docs/architecture/*
 2. **FixCity Modules** - laravel/Modules/*/docs/README.md
 3. **FixCity API** - API documentation, Swagger specs
 

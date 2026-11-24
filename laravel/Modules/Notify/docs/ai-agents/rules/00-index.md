@@ -3,21 +3,33 @@ title: "00 index"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "00 index"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🔴 CRITICAL RULES - AI Agents
 
-**Path**: `./.agents/docs/rules/00-INDEX.md`  
+**Path**: `./.agents/docs/rules/00-index.md`  
 **Last Updated**: 2026-03-26  
 **Status**: ✅ ALWAYS ACTIVE  
 **Priority**: BLOCKER (violation = STOP immediately)
 
 ---
+
+title: "00 index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "00 index"
+issues: []
+discussions: []
 ## 🎯 Rule #1: Filament Tables for Lists
 
 > **MAI** creare blade personalizzati per liste di outcomes, predict, o dati tabellari.
@@ -187,13 +199,13 @@ composer phpstan
 ## 🔗 Related Documentation
 
 ### Project Rules
-- **[00-INDEX.md](00-INDEX.md)** - Master rules index
+- **[00-index.md](00-index.md)** - Master rules index
 - **[multi-outcome-universal.md](multi-outcome-universal.md)** - Multi-outcome principle
 - **[container-agnostic.md](container-agnostic.md)** - Container agnostic rule
 - **[actions-over-services.md](actions-over-services.md)** - Actions over services
 
 ### Guidelines
-- **[../guidelines/00-INDEX.md](../guidelines/00-INDEX.md)** - Guidelines index
+- **[../guidelines/00-index.md](../guidelines/00-index.md)** - Guidelines index
 - **[../guidelines/filament-tables.md](../guidelines/filament-tables.md)** - Filament tables guide
 
 ### Skills

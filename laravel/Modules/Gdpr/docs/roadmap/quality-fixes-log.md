@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "quality fixes log"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Quality Fixes Log - Gdpr Module

@@ -1,4 +1,5 @@
 ---
+qmd: "xot stories legacy readme en md"
 title: "Xot - legacy-readme-en.md"
 module: Xot
 bmad: true

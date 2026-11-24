@@ -1,3 +1,14 @@
+---
+title: "bmad workflow catalog"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "bmad workflow catalog"
+issues: []
+discussions: []
+---
+
 # BMAD Workflow Catalog — PTVX Edition
 
 > **Versione**: 6.2.0 | **Progetto**: Laraxot PTVX  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "bmad workflow catalog"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "bmad workflow catalog"
+issues: []
+discussions: []
 ## 📑 Indice
 
 - [Phase 1: Analysis](#phase-1-analysis)

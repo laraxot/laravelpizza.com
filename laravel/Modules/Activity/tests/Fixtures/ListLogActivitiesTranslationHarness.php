@@ -10,8 +10,8 @@ use ReflectionMethod;
 use Webmozart\Assert\Assert;
 
 /**
- * Pagina ListLogActivities con risorsa ActivityResource che espone il metodo privato toTranslationString
- * (classe con nome, non anonima).
+ * Pagina ListLogActivities con risorsa ActivityResource che espone il metodo privato
+ * stringifyTranslationValue (classe con nome, non anonima).
  */
 final class ListLogActivitiesTranslationHarness extends ListLogActivities
 {
@@ -23,12 +23,12 @@ final class ListLogActivitiesTranslationHarness extends ListLogActivities
     /**
      * @param  list<string>|string|int  $value
      */
-    public function exposeToTranslationString(string|array|int $value): string
+    public function exposeStringifyTranslationValue(string|array|int $value): string
     {
-        $method = new ReflectionMethod(ListLogActivities::class, 'toTranslationString');
+        $method = new ReflectionMethod(ListLogActivities::class, 'stringifyTranslationValue');
         $method->setAccessible(true);
 
-        $result = $method->invoke($this, $value);
+        $result = $method->invoke(null, $value);
         Assert::string($result);
 
         return $result;

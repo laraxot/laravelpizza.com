@@ -8,14 +8,18 @@ title: "Notify: marker in SendNetfunSMSAction + lang"
 status: review
 scope: module:Notify
 created: 2026-09-22
+<<<<<<< HEAD
 updated: 2026-09-22
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify netfun conflict markers json_decode redact token isSuccessfulResponse"
 related:
   - ../livewire-inventory.md
   - ../../../../Xot/docs/bmad/stories/cleanup-all-modules.story.md
 ---
 
-# Notify: marker committati in PHP (git status pulito)
+# Notify — marker committati in PHP (git status pulito)
 
 **Perché.** HEAD compilava a metà: `SendNetfunSMSAction.php` aveva marker tra import HEAD (solo QueueableAction) e laraxot/dev (Safe `json_decode` + check `error` nel JSON). Netfun risponde HTTP 200 anche in errore; loggare sempre il body con `api_token` in chiaro è un leak.
 

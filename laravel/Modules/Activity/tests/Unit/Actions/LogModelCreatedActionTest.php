@@ -1,71 +1,43 @@
 <?php
 
 declare(strict_types=1);
-use Illuminate\Database\Eloquent\Model;
+
 use Modules\Activity\Actions\LogModelCreatedAction;
+use Modules\Activity\Tests\Fixtures\LogModelCreatedActionTestModel;
 use Modules\Activity\Tests\TestCase;
-use Modules\User\Database\Factories\UserFactory;
+use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
-test('LogModelCreatedAction can be instantiated', function () {
-    $model = new class() extends Model
-    {
-        protected $table = 'test_models';
+test('LogModelCreatedAction execute persiste created con subject e causer', function (): void {
+    $model = new LogModelCreatedActionTestModel;
+    $model->forceFill(['id' => 'created-1', 'name' => 'Created']);
+    $model->exists = true;
 
-        protected $fillable = ['name'];
-    };
-    $user = UserFactory::new()->createOne();
-    Assert::assertInstanceOf(Model::class, $user);
+    $user = new User;
+    $user->forceFill([
+        'id' => 'causer-created-1',
+        'name' => 'Causer',
+        'email' => 'causer-created-1@example.test',
+    ]);
+    $user->exists = true;
 
-    $action = new LogModelCreatedAction($model, $user);
+    $activity = (new LogModelCreatedAction($model, $user))->execute();
 
-<<<<<<< .merge_file_Y8fYWw
-    Assert::assertSame($user, $action->user);
-=======
     Assert::assertSame('created', $activity->event);
-    Assert::assertSame($model->getKey(), $activity->subject_id);
->>>>>>> .merge_file_XvmB2L
-});
-
-test('LogModelCreatedAction can execute', function () {
-    $modelClass = get_class(new class() extends Model
-    {
-        protected $table = 'test_models';
-
-        protected $fillable = ['name'];
-    });
-    $model = new $modelClass(['name' => 'Test']);
-    $user = UserFactory::new()->createOne();
-    Assert::assertInstanceOf(Model::class, $user);
-
-    $action = new LogModelCreatedAction($model, $user);
-
-<<<<<<< .merge_file_Y8fYWw
-    Assert::assertInstanceOf(LogModelCreatedAction::class, $action);
-=======
     Assert::assertSame($model::class, $activity->subject_type);
-
-    $user = UserFactory::new()->createOne();
-    $action = new LogModelCreatedAction($model, $user);
-
-    Assert::assertSame($user, $action->user);
+    Assert::assertSame($model->getKey(), $activity->subject_id);
+    Assert::assertSame($user->id, $activity->causer_id);
 });
 
-test('LogModelCreatedAction can execute', function () {
-    $modelClass = get_class(new class extends Model
-    {
-        protected $table = 'test_models';
+test('LogModelCreatedAction execute accetta model passato a execute', function (): void {
+    $model = new LogModelCreatedActionTestModel;
+    $model->forceFill(['id' => 'created-2', 'name' => 'ViaExecute']);
+    $model->exists = true;
 
-        protected $fillable = ['name'];
-    });
-    $model = new $modelClass(['name' => 'Test']);
-    $user = UserFactory::new()->createOne();
-    Assert::assertInstanceOf(Model::class, $user);
+    $activity = (new LogModelCreatedAction)->execute($model);
 
-    $action = new LogModelCreatedAction($model, $user);
-
-    Assert::assertSame($model, $action->model);
->>>>>>> .merge_file_XvmB2L
+    Assert::assertSame('created', $activity->event);
+    Assert::assertSame($model::class, $activity->subject_type);
 });

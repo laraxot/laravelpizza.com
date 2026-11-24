@@ -1,13 +1,12 @@
 ---
-title: "mcp server recommended"
+title: "MCP Server Recommended"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "mcp server recommended"
+qmd: "MCP Server Recommended"
 issues: []
 discussions: []
-status: draft
 ---
 
 # MCP Server Consigliati per il Modulo Geo

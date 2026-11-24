@@ -3,11 +3,14 @@ title: "00 index"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "00 index"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 📋 12 checklist Index
@@ -17,6 +20,15 @@ status: draft
 **Status**: ✅ Auto-generated
 
 ---
+
+title: "00 index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "00 index"
+issues: []
+discussions: []
 ## 📊 Statistics
 
 | Metric | Count |
@@ -37,17 +49,25 @@ status: draft
 
 ## 🔗 Cross-References
 
-- [📋 Parent Directory](bashscripts/ai/.agents/docs/agents-guide/00-INDEX.md)
+- [📋 Parent Directory](bashscripts/ai/.agents/docs/agents-guide/00-index.md)
+<<<<<<< HEAD
 - [📋 Master Index](bashscripts/ai/.agents/00-MASTER-INDEX.md)
-- [📋 Rules Index](../rules/00-INDEX.md)
+- [📋 Rules Index](../rules/00-index.md)
 - [📋 Skills Index](../skills/00-MASTER-INDEX.md)
-- [📋 Workflows Index](../workflows/00-INDEX.md)
-- [📋 Guidelines Index](../guidelines/00-INDEX.md)
-- [📋 Rules Index](../../rules/00-INDEX.md)
+=======
+<<<<<<< HEAD
+- [📋 Master Index](bashscripts/ai/.agents/00-master-index.md)
+- [📋 Rules Index](../rules/00-index.md)
+- [📋 Skills Index](../skills/00-master-index.md)
+=======
+- [📋 Master Index](bashscripts/ai/.agents/00-MASTER-INDEX.md)
+- [📋 Rules Index](../rules/00-index.md)
 - [📋 Skills Index](../skills/00-MASTER-INDEX.md)
-- [📋 Workflows Index](../workflows/00-INDEX.md)
-- [📋 Guidelines Index](../../guidelines/00-INDEX.md)
-- [📋 Memories Index](../memories/00-INDEX.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+- [📋 Workflows Index](../workflows/00-index.md)
+- [📋 Guidelines Index](../guidelines/00-index.md)
+- [📋 Memories Index](../memories/00-index.md)
 
 ---
 

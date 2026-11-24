@@ -1,13 +1,16 @@
 ---
-title: "Notify Module: Document"
+title: "Notify Module — Document"
 type: docs/bmad
 status: active
 module: Notify
 scope: documentation
 bmad_version: 1.0
+<<<<<<< HEAD
 updated: 2026-10-06
-tags: [docs, notify, bmad]
-qmd: "bmad story: consolidate orphan .md files in notify docs notify"
+=======
+updated: 2026-11-23
+created: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # BMAD Story: Consolidate Orphan .md Files in Notify Docs

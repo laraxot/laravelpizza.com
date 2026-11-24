@@ -1,12 +1,11 @@
 ---
-title: "Merge conflict markers: file list"
+title: "Merge conflict markers — file list"
+qmd: "activity merge conflicts list md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "merge conflict markers   file list activity"
+tags: [documentation]
 ---
-# Merge conflict markers: file list
+
+# Merge conflict markers — file list
 
 Elenco dei file trovati contenenti marker di merge (<<<<<<<, >>>>>>>, .merge_file). Seguire la lista per assegnare task agli agenti.
 
@@ -52,8 +51,8 @@ Elenco dei file trovati contenenti marker di merge (<<<<<<<, >>>>>>>, .merge_fil
 
 ## Stato
 
-- [x] laravel/Modules/Fixcity/resources/views/filament/widgets/ticket-create-wizard.blade.php: risolto (merge markers rimossi e unione logica applicata)
-- [x] laravel/Modules/Activity/docs/wiki/README.md: risolto (merge markers rimossi)
+- [x] laravel/Modules/Fixcity/resources/views/filament/widgets/ticket-create-wizard.blade.php — risolto (merge markers rimossi e unione logica applicata)
+- [x] laravel/Modules/Activity/docs/wiki/README.md — risolto (merge markers rimossi)
 - [ ] gli altri file: da verificare e risolvere
 
 ## Note

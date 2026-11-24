@@ -1,6 +1,18 @@
+---
+issues: []
+discussions: []
+title: "ResolveTenantConfigValueAction - Console Check Debate"
+module: "Tenant"
+type: concept
+tags: [resolve, tenant, config, console]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "resolve tenant config console debate"
+related:
+  - "./phpstan-corrections-january.md"
+---
 # ResolveTenantConfigValueAction - Console Check Debate
 
-**Data**: 2026-01-08
 **Status**: 🔥 FURIOUS INTERNAL DEBATE
 **Issue**: `runningInConsole()` check breaks tenant functionality
 **Filosofia**: DRY + KISS + SOLID + Multi-Tenant Zen

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "sprint planning meeting"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Gdpr - Sprint Planning Meeting

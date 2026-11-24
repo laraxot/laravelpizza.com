@@ -11,12 +11,19 @@ related:
   - "./architecture.md"
   - "./auth-blade-structure.md"
   - "./component-registration.md"
+<<<<<<< HEAD
   - "./README.md"
+=======
+<<<<<<< HEAD
+  - "./readme.md"
+=======
+  - "./README.md"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./structure.md"
   - "./testing-structure.md"
   - "./user-gdpr-decoupling.md"
   - "./user-gdpr-oupling.md"
-status: draft
 ---
 
 # Architectural Rules & Guidelines

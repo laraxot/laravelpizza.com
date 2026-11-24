@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "package dependency chaos map"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Package Dependency Chaos Map (Cms)

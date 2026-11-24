@@ -1,0 +1,599 @@
+/* Regole del sito, comuni a site.css (pagine pubbliche, senza Filament) e app.css (con Filament). */
+/* Viste Blade/Livewire del modulo Meetup usate nelle pagine pubbliche (es. CTA di iscrizione): Tailwind 4 rileva da solo solo i file del tema */
+@source '../../../../Modules/Meetup/resources/views';
+
+@variant dark (&:where(.dark, .dark *));
+
+[x-cloak] { display: none !important; }
+
+/* WCAG: focus visibility */
+:where(a, button, input, select, textarea, summary, [tabindex]:not([tabindex="-1"])):focus-visible {
+    outline: 3px solid var(--color-blue-600);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* Form registration improvements */
+.form-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.form-section-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-gray-900);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-section-title::before {
+    content: '';
+    width: 4px;
+    height: 1.125rem;
+    background: linear-gradient(to bottom, var(--color-blue-500), var(--color-indigo-500));
+    border-radius: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .form-section-title {
+        color: var(--color-gray-100);
+    }
+}
+
+/* Improved input styling */
+.fi-ti-input {
+    min-height: 48px !important;
+    font-size: 1rem;
+    padding: 0.75rem 1rem !important;
+    transition: all 0.2s ease;
+}
+
+.fi-ti-input:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.fi-ta-textarea {
+    min-height: 120px !important;
+    padding: 1rem !important;
+}
+
+/* Improved checkbox styling */
+.fi-fo-checkbox {
+    min-height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0.5rem 0 !important;
+    gap: 0.75rem !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease;
+}
+
+.fi-fo-checkbox:hover {
+    background-color: rgba(59, 130, 246, 0.05);
+}
+
+.fi-fo-checkbox:focus-within {
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+.fi-fo-checkbox input[type="checkbox"] {
+    width: 24px !important;
+    height: 24px !important;
+    flex-shrink: 0;
+}
+
+/* Section headers in Filament */
+.fi-sa-section .fi-sa-section-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    margin: -0.75rem -1rem 1.5rem -1rem;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(99, 102, 241, 0.05));
+    border-radius: 0.5rem;
+    border-left: 4px solid var(--color-blue-600);
+}
+
+@media (prefers-color-scheme: dark) {
+    .fi-sa-section .fi-sa-section-heading {
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(99, 102, 241, 0.1));
+        color: var(--color-gray-100);
+    }
+}
+
+/* Required section indicators */
+.required-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--color-red-500);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.required-indicator::before {
+    content: '*';
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* Form spacing improvements */
+.fi-sa-section > div > div {
+    gap: 1.25rem !important;
+}
+
+/* Button improvements */
+.fi-btn-action {
+    min-height: 48px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease;
+}
+
+.fi-btn-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.fi-btn-action:active {
+    transform: translateY(0);
+}
+
+/* Error message improvements */
+.fi-ti-error-message {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--color-red-600);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border-left: 3px solid var(--color-red-600);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    .fi-ti-error-message {
+        background-color: rgba(239, 68, 68, 0.2);
+        color: var(--color-red-400);
+    }
+}
+
+/* Success message improvements */
+.fi-fo-notification .fi-fo-notification-content {
+    border-radius: 0.75rem;
+    padding: 1rem 1.5rem;
+}
+
+/* WCAG: reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+@theme {
+    --font-sans: 'Inter Variable', 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+    /* Spacing Scale */
+    --spacing-0: 0;
+    --spacing-px: 1px;
+    --spacing-0\.5: 0.125rem;
+    --spacing-1: 0.25rem;
+    --spacing-1\.5: 0.375rem;
+    --spacing-2: 0.5rem;
+    --spacing-2\.5: 0.625rem;
+    --spacing-3: 0.75rem;
+    --spacing-3\.5: 0.875rem;
+    --spacing-4: 1rem;
+    --spacing-5: 1.25rem;
+    --spacing-6: 1.5rem;
+    --spacing-7: 1.75rem;
+    --spacing-8: 2rem;
+    --spacing-9: 2.25rem;
+    --spacing-10: 2.5rem;
+    --spacing-11: 2.75rem;
+    --spacing-12: 3rem;
+    --spacing-14: 3.5rem;
+    --spacing-16: 4rem;
+    --spacing-20: 5rem;
+    --spacing-24: 6rem;
+    --spacing-28: 7rem;
+    --spacing-32: 8rem;
+    --spacing-36: 9rem;
+    --spacing-40: 10rem;
+    --spacing-44: 11rem;
+    --spacing-48: 12rem;
+    --spacing-52: 13rem;
+    --spacing-56: 14rem;
+    --spacing-60: 15rem;
+    --spacing-64: 16rem;
+    --spacing-72: 18rem;
+    --spacing-80: 20rem;
+    --spacing-96: 24rem;
+
+    /* Primary Colors - Red (Meetup Brand) */
+    --color-red-50: #fef2f2;
+    --color-red-100: #fee2e2;
+    --color-red-200: #fecaca;
+    --color-red-300: #fca5a5;
+    --color-red-400: #f87171;
+    --color-red-500: #ef4444;
+    --color-red-600: #dc2626;
+    --color-red-700: #b91c1c;
+    --color-red-800: #991b1b;
+    --color-red-900: #7f1d1d;
+
+    /* Primary alias - same as red for Meetup theme */
+    --color-primary-50: #fef2f2;
+    --color-primary-100: #fee2e2;
+    --color-primary-200: #fecaca;
+    --color-primary-300: #fca5a5;
+    --color-primary-400: #f87171;
+    --color-primary-500: #ef4444;
+    --color-primary-600: #dc2626;
+    --color-primary-700: #b91c1c;
+    --color-primary-800: #991b1b;
+    --color-primary-900: #7f1d1d;
+
+    /* Slate Colors - Dark Theme Base */
+    --color-slate-50: #f8fafc;
+    --color-slate-100: #f1f5f9;
+    --color-slate-200: #e2e8f0;
+    --color-slate-300: #cbd5e1;
+    --color-slate-400: #94a3b8;
+    --color-slate-500: #64748b;
+    --color-slate-600: #475569;
+    --color-slate-700: #334155;
+    --color-slate-800: #1e293b;
+    --color-slate-900: #0f172a;
+    --color-slate-950: #020617;
+
+    /* Gray Colors */
+    --color-gray-50: #f9fafb;
+    --color-gray-100: #f3f4f6;
+    --color-gray-200: #e5e7eb;
+    --color-gray-300: #d1d5db;
+    --color-gray-400: #9ca3af;
+    --color-gray-500: #6b7280;
+    --color-gray-600: #4b5563;
+    --color-gray-700: #374151;
+    --color-gray-800: #1f2937;
+    --color-gray-900: #111827;
+}
+
+@layer components {
+
+    /* Button Primary - Red for Meetup Theme */
+    .btn-primary {
+        @apply bg-red-600 text-white px-6 py-3 rounded-lg font-semibold;
+        @apply hover:bg-red-700 focus:outline-none;
+        @apply focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900;
+        @apply transition-colors duration-200 inline-flex items-center justify-center;
+    }
+
+    /* Button Secondary - White/Gray for Dark Theme */
+    .btn-secondary {
+        @apply bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold;
+        @apply hover:bg-slate-600 focus:outline-none;
+        @apply focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900;
+        @apply transition-colors duration-200 inline-flex items-center justify-center;
+    }
+
+    /* Button Outline - Border style for Dark Theme */
+    .btn-outline {
+        @apply border-2 border-gray-600 text-white px-6 py-3 rounded-lg font-semibold;
+        @apply hover:border-gray-500 hover:bg-slate-800 focus:outline-none;
+        @apply focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-slate-900;
+        @apply transition-colors duration-200 inline-flex items-center justify-center;
+    }
+
+    /* Event Card - Dark Theme Style */
+    .event-card {
+        @apply bg-slate-800 border border-slate-700 rounded-xl overflow-hidden;
+        @apply hover:border-red-500/50 transition-all duration-300;
+    }
+
+    /* Feature Card - Glass morphism style */
+    .feature-card {
+        @apply bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8;
+        @apply hover:border-red-500/50 transition-colors duration-200;
+    }
+
+    /* Container */
+    .container-custom {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+
+    /* Section */
+    .section {
+        @apply py-12 md:py-16 lg:py-20;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        @apply py-20 md:py-32 relative overflow-hidden;
+    }
+
+    .hero-gradient {
+        @apply absolute inset-0 bg-gradient-to-b from-slate-800/50 to-slate-900;
+    }
+
+    .pizza-icon {
+        @apply h-24 w-24 text-red-500;
+    }
+
+    /* Feature Card from HTML */
+    .feature-card-html {
+        @apply bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-red-500/50 transition-colors;
+    }
+
+    /* Event Card from HTML */
+    .event-card-html {
+        @apply bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-red-500/50 transition-colors;
+    }
+
+    .event-card-gradient {
+        @apply bg-gradient-to-r from-red-600 to-red-700 p-6;
+    }
+
+    .event-card-content {
+        @apply p-6;
+    }
+
+    /* CTA Section */
+    .cta-section {
+        @apply py-20 bg-gradient-to-r from-red-600 to-red-700;
+    }
+
+    /* Navigation styling - WCAG 2.1 AA compliant */
+    .nav-container {
+        @apply sticky top-0 z-50 bg-slate-900 border-b border-slate-800;
+    }
+
+    .nav-item {
+        /* WCAG 2.1 AA: text-slate-100 on slate-800 = 9:1 contrast (4.5:1 required) */
+        @apply text-slate-100 hover:text-white transition-colors;
+    }
+
+    /* Focus indicators for WCAG 2.1 AA */
+    .nav-item:focus {
+        @apply outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+
+    .focus\:not-sr-only:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+        white-space: normal;
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .animate-fade-out {
+        animation: fadeOut 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        to {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+    }
+
+    /* Focus styles for accessibility - WCAG 2.1 AA compliant */
+    .focus\:ring-focus {
+        @apply focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900;
+    }
+
+    /* WCAG 2.1 AA compliant text colors on dark backgrounds */
+    .text-wcag-dark {
+        @apply text-slate-100; /* 9:1 contrast on slate-800 */
+    }
+
+    .text-wcag-secondary-dark {
+        @apply text-slate-200; /* 3.5:1 contrast on slate-800 */
+    }
+
+    /* Loading states */
+    .loading {
+        opacity: 0.7;
+        pointer-events: none;
+    }
+
+    /* Responsive typography */
+    .text-display {
+        @apply text-4xl md:text-5xl lg:text-6xl font-bold;
+    }
+
+    .text-heading {
+        @apply text-2xl md:text-3xl lg:text-4xl font-bold;
+    }
+
+    /* Shadow utilities */
+    .shadow-lg-hover {
+        @apply shadow-md hover:shadow-xl transition-shadow duration-300;
+    }
+
+    /* Gradient backgrounds */
+    .bg-gradient-pizza {
+        @apply bg-gradient-to-r from-primary-600 to-primary-700;
+    }
+
+    .bg-gradient-pizza-alt {
+        @apply bg-gradient-to-br from-primary-500 to-primary-600;
+    }
+
+    /* Enhanced Header Styles */
+    .header-logo {
+        filter: drop-shadow(0 2px 4px rgba(220, 38, 38, 0.1));
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .header-logo:hover {
+        filter: drop-shadow(0 4px 8px rgba(220, 38, 38, 0.2));
+        transform: translateY(-1px);
+    }
+
+    /* Language switcher animations */
+    .lang-dropdown {
+        transform-origin: top right;
+        animation: dropdownSlide 0.2s ease-out;
+    }
+
+    @keyframes dropdownSlide {
+        from {
+            opacity: 0;
+            transform: translateY(-10px) scale(0.95);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    /* Mobile menu slide animation */
+    .mobile-menu {
+        transform-origin: top;
+        animation: mobileMenuSlide 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes mobileMenuSlide {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Enhanced button hover effects */
+    .btn-hover-lift {
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn-hover-lift:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(220, 38, 38, 0.2);
+    }
+
+    .btn-hover-lift:active {
+        transform: translateY(0);
+    }
+
+    /* Pizza icon specific styling */
+    .pizza-slice {
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .pizza-slice:hover {
+        filter: drop-shadow(0 4px 8px rgba(220, 38, 38, 0.15));
+    }
+
+    /* Theme toggle animations */
+    .theme-toggle {
+        transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+        transform: rotate(180deg);
+    }
+
+    /* Navigation link hover effects */
+    .nav-link {
+        position: relative;
+        transition: color 0.2s ease;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #DC2626, #B91C1C);
+        transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+
+    /* Particle Canvas Background */
+    .particle-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.6;
+    }
+
+    /* Particles should be on pages but not interfere with interactions */
+    .has-particles {
+        position: relative;
+    }
+
+    .has-particles .particle-canvas {
+        pointer-events: auto;
+    }
+}

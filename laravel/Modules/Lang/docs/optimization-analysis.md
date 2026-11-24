@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "lang service helper text fix"
 related:
   - "./italian-text-refined-audit-report.md"
-status: superseded
-superseded_by: optimization.md
 ---
 # Analisi di Ottimizzazione - Modulo Lang
 

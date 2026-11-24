@@ -16,7 +16,6 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # UserFactory Integration - Modulo User e SaluteOra
@@ -367,7 +366,7 @@ public function test_bulk_sti_creation()
 
 ### User Module
 - [BaseUser Documentation](../User/docs/baseuser_conflicts.md)
-- [Traits Complete Guide](traits-complete-guide-aggiornato-post.md)
+- [Traits Complete Guide](traits-complete-guide-2.md)
 - [Authentication Framework](authentication.md)
 
 ---

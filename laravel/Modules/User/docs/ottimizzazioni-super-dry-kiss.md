@@ -8,19 +8,14 @@ qmd: "ottimizzazioni-super-dry-kiss ottimizzazioni super dry + kiss - modulo use
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Ottimizzazioni Super DRY + KISS - Modulo User
@@ -375,7 +370,6 @@ class User extends Model
 
 ## 🔗 Collegamenti
 
-- [Documentazione Core](../../../../docs/core/)
 - [Documentazione Core](core)
 - [Best Practices Filament](../../../../docs/core/filament-best-practices.md)
 - [Convenzioni Sistema](../../../../docs/core/conventions.md)

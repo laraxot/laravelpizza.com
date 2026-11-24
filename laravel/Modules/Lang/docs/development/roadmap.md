@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "lang service helper text fix"
 related:
   - "./italian-text-refined-audit-report.md"
-  - "../italian-text-refined-audit-report.md"
-status: draft
 ---
 # Roadmap Modulo Lang
 
@@ -40,8 +38,6 @@ status: draft
 - [x] Cache system
 - [x] Compliance con la filosofia Xot: **nessuna registrazione manuale dei comandi console** nei provider (vedi [lang-service-provider.md](./lang-service-provider.md), [PHILOSOPHY.md](./PHILOSOPHY.md))
 - [x] Compliance con la filosofia Xot: **nessuna registrazione manuale dei comandi console** nei provider (vedi [lang-service-provider.md](./lang-service-provider.md), [PHILOSOPHY.md](./philosophy.md))
-- [x] Compliance con la filosofia Xot: **nessuna registrazione manuale dei comandi console** nei provider (vedi [lang-service-provider.md](../lang-service-provider.md), [PHILOSOPHY.md](./PHILOSOPHY.md))
-- [x] Compliance con la filosofia Xot: **nessuna registrazione manuale dei comandi console** nei provider (vedi [lang-service-provider.md](../lang-service-provider.md), [PHILOSOPHY.md](./philosophy.md))
 
 ### In Progress (50%)
 - [ ] Performance optimization
@@ -61,7 +57,6 @@ status: draft
 
 ### Performance
 - [Analisi Performance](roadmap/performance.md)
-- [Analisi Performance](../packages/performance.md)
   - Translation speed
   - Cache efficiency
   - API response
@@ -134,7 +129,6 @@ status: draft
 - [Admin Guide](roadmap/admin_guide.md)
 - [Best Practices](roadmap/best_practices.md)
 - [Troubleshooting](roadmap/troubleshooting.md)
-- [Troubleshooting](../troubleshooting.md)
 
 ## Next Steps
 
@@ -359,6 +353,8 @@ Secondo le "Regole Windsurf per base_<nome progetto>_fila5_mono", gli obiettivi 
 ## Collegamenti tra versioni di roadmap.md
 * [roadmap.md](bashscripts/docs/roadmap.md)
 * [roadmap.md](docs/roadmap.md)
+<<<<<<< HEAD
+=======
 * [roadmap.md](../../../gdpr/docs/roadmap.md)
 * [roadmap.md](../../../notify/docs/roadmap.md)
 * [roadmap.md](../../../xot/docs/roadmap.md)
@@ -372,13 +368,14 @@ Secondo le "Regole Windsurf per base_<nome progetto>_fila5_mono", gli obiettivi 
 * [roadmap.md](../../../activity/docs/roadmap.md)
 * [roadmap.md](../../../patient/docs/roadmap.md)
 * [roadmap.md](../../../cms/docs/roadmap.md)
-* [roadmap.md](../roadmap.md)
+
+>>>>>>> laraxot/dev
 * [roadmap.md](../../../Gdpr/docs/roadmap.md)
 * [roadmap.md](../../../Notify/docs/roadmap.md)
 * [roadmap.md](../../../xot/docs/roadmap.md)
 * [roadmap.md](../../../dental/docs/roadmap.md)
 * [roadmap.md](../../../User/docs/roadmap.md)
-* [roadmap.md](../../../ui/docs/roadmap.md)
+* [roadmap.md](../../../UI/docs/roadmap.md)
 * [roadmap.md](../roadmap.md)
 * [roadmap.md](../../../Job/docs/roadmap.md)
 * [roadmap.md](../../../Media/docs/roadmap.md)

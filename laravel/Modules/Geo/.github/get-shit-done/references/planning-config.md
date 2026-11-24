@@ -39,7 +39,7 @@ Configuration options for `.planning/` directory behavior.
 
 **When `commit_docs: true` (default):**
 - Planning files committed normally
-- SUMMARY.md, STATE.md, ROADMAP.md tracked in git
+- summary.md, STATE.md, roadmap.md tracked in git
 - Full history of planning decisions preserved
 
 **When `commit_docs: false`:**

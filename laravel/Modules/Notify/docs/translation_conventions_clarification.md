@@ -3,11 +3,14 @@ title: "translation conventions clarification"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "translation conventions clarification"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Chiarimento sulle Convenzioni di Traduzione nel Modulo Notify
@@ -97,9 +100,6 @@ Il file `send_whats_app.php` e altri file simili nel modulo Notify seguono corre
 
 ## Riferimenti
 
-- [Convenzioni Generali di Traduzione](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
-- [Convenzioni Specifiche del Modulo Notify](./TRANSLATION_CONVENTIONS.md)
-- [Regole per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [Convenzioni Generali di Traduzione](../../Lang/docs/translation_keys_rules.md)
 - [Convenzioni Specifiche del Modulo Notify](./translation_conventions.md)
 - [Regole per le Chiavi di Traduzione](../../Lang/docs/translation_keys_best_practices.md)

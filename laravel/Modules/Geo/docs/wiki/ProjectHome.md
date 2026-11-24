@@ -1,4 +1,11 @@
 ---
+title: "ProjectHome"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+issues: []
+discussions: []
 concept: Project Home
 last_updated: 2026-05-20
 qmd: "project home, ptvx-project, getting started, overview, module structure"
@@ -10,16 +17,27 @@ Welcome to the central knowledge base for the **PTVX** project. This wiki is aut
 
 ## Core Modules
 
+- [Xot](../../../Xot/docs/wiki): Core framework wrappers and shared utilities.
+- [User](../../../User/docs/wiki): Identity, authentication, and profiles.
+- [Tenant](../../../Tenant/docs/wiki): Multi-tenancy and data isolation.
+- [UI](../../../UI/docs/wiki): Shared Blade and Filament components.
+- [Lang](../../../Lang/docs/wiki): Internationalization and translation logic.
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_SWZIxS
 - [Xot](../../laravel/Modules/Xot/docs/wiki/): Core framework wrappers and shared utilities.
 - [User](../../laravel/Modules/User/docs/wiki/): Identity, authentication, and profiles.
 - [Tenant](../../laravel/Modules/Tenant/docs/wiki/): Multi-tenancy and data isolation.
 - [UI](../../laravel/Modules/UI/docs/wiki/): Shared Blade and Filament components.
 - [Lang](../../laravel/Modules/Lang/docs/wiki/): Internationalization and translation logic.
+=======
+>>>>>>> .merge_file_095sru
+>>>>>>> laraxot/dev
 
 ## Architectural Principles
 
 - [BaseModel Pattern](../../laravel/Modules/Xot/docs/wiki/BaseModel.md): The sacred inheritance chain.
-- [Actions Over Services](concepts/actions-over-services.md): Preferred business logic pattern.
+- [Actions Over Services](../architecture/actions-over-services.md): Preferred business logic pattern.
 - [Database guidelines](rules/database-guidelines.md): Managing connections across modules.
 - [Translation standards](rules/translation-standards.md): Automatic localization rules.
 
@@ -31,7 +49,7 @@ Welcome to the central knowledge base for the **PTVX** project. This wiki is aut
 
 ## Developer Guide
 
-- [Agents index](agents/INDEX.md): Agent roles and coordination.
+- [Agents index](agents/index.md): Agent roles and coordination.
 - [On-demand pattern](rules/on-demand-pattern.md): How to maintain this wiki.
 - [QMD search guide](how-to/qmd-search-guide.md): Searching and indexing documentation.
 - [Validation post-edit](rules/validation-post-edit-rule.md): PHPStan, PHPMD, PHPInsights, UI checks.

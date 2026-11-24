@@ -89,9 +89,9 @@
 
             <aside class="space-y-6">
                 <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-                    <h2 class="text-lg font-bold text-slate-950">Contatti</h2>
+                    <h2 class="text-lg font-bold text-slate-950">{{ __('pub_theme::navigation.contact') }}</h2>
                     <p class="mt-3 text-sm leading-6 text-slate-600">
-                        Per richieste legali, privacy o contenuti del sito puoi scrivere ai riferimenti qui sotto.
+                        {{ __('pub_theme::legal.article.contact_intro.message') }}
                     </p>
 
                     <dl class="mt-5 space-y-4">
@@ -123,9 +123,9 @@
                 </div>
 
                 <div class="rounded-3xl border border-red-100 bg-red-50 p-6">
-                    <h2 class="text-lg font-bold text-red-950">Nota</h2>
+                    <h2 class="text-lg font-bold text-red-950">{{ __('pub_theme::legal.article.note.title') }}</h2>
                     <p class="mt-3 text-sm leading-6 text-red-900">
-                        Queste pagine descrivono le regole e le informazioni principali del servizio Laravel Pizza. Se hai bisogno di chiarimenti specifici, contattaci prima di partecipare a un evento o di condividere dati personali.
+                        {{ __('pub_theme::legal.article.note.message') }}
                     </p>
                 </div>
             </aside>

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "update coordinates refactoring completed"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Refactoring Update Coordinates Bulk Action
@@ -38,10 +37,10 @@ Applied the proper Laraxot architecture pattern using:
    - Handles collections of Client models efficiently
    - Manages database transactions and error handling
 
-2. **FilamentAction**: `Modules\Geo\Filament\Actions\UpdateCoordinatesBulkAction`
+2. **FilamentAction**: `Modules\Geo\Filament\Actions\UpdateClientCoordinatesBulkAction`
    - Provides the UI integration for Filament bulk actions
-   - Follows XotBase extension pattern (extends `XotBaseBulkAction`)
-   - Delegates per-record logic to `Modules\Geo\Actions\UpdateCoordinatesAction` (nothing in the repo calls `UpdateClientCoordinatesBulkAction` today)
+   - Follows XotBase extension pattern
+   - Calls the QueueableAction for business logic
    - Handles user notifications and feedback
 
 3. **Refactored Resource**: `Modules\TechPlanner\app\Filament\Resources\ClientResource\Pages\ListClients.php`
@@ -88,12 +87,12 @@ Applied the proper Laraxot architecture pattern using:
 After refactoring, the action can be used in any resource:
 
 ```php
-use Modules\Geo\Filament\Actions\UpdateCoordinatesBulkAction;
+use Modules\Geo\Filament\Actions\UpdateClientCoordinatesBulkAction;
 
 public function getTableBulkActions(): array
 {
     return [
-        'updateCoordinates' => UpdateCoordinatesBulkAction::make('updateCoordinates'),
+        UpdateClientCoordinatesBulkAction::make(),
     ];
 }
 ```
@@ -101,8 +100,8 @@ public function getTableBulkActions(): array
 ## Files Modified/Added
 
 ### Added:
-- `Modules/Geo/app/Actions/UpdateClientCoordinatesBulkAction.php` - QueueableAction
-- `Modules/Geo/app/Filament/Actions/UpdateCoordinatesBulkAction.php` - Filament Action
+- `Modules/Geo/Actions/UpdateClientCoordinatesBulkAction.php` - QueueableAction
+- `Modules/Geo/Filament/Actions/UpdateClientCoordinatesBulkAction.php` - Filament Action
 - `Modules/Geo/docs/bulk-coordinate-updates.md` - Architecture documentation
 
 ### Modified:
@@ -126,4 +125,13 @@ This refactoring aligns with:
 - Action can be configured with additional options for different use cases
 
 ---
+
+title: "update coordinates refactoring completed"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "update coordinates refactoring completed"
+issues: []
+discussions: []
 *Documento conforme agli standard Laraxot - DRY + KISS + SOLID*

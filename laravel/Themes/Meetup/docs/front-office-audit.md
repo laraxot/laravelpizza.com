@@ -51,3 +51,14 @@ Esce con codice 1 se una pagina ha problemi.
 | Email senza layout (il tema non aveva `resources/mail-layouts/base.html`) | layout del tema, solo HTML inline, nessuna immagine remota |
 
 Test: `Modules/Meetup/tests/Feature/FrontOfficePrivacyAndSeoTest.php`.
+
+## Aggiornamento 18/11/2026 (dopo il sync dei moduli)
+
+- `/it/auth/password/confirm` in errore 500: il modulo User ora porta pagine Folio con gli stessi nomi Volt del tema
+  (`auth.password.confirm`, `auth.verify`). Volt registra i frammenti per nome, quindi la pagina del tema mostrava il
+  frammento del modulo, che include un partial che qui non esiste. **Regola: i nomi `@volt()` del tema che i moduli usano
+  già hanno il prefisso `meetup.`**. Test: `Modules/Meetup/tests/Unit/Architecture/UniqueVoltFragmentNamesTest.php`.
+- Le pagine Folio del modulo User (`area-personale/*`, `genesis/*`, `pages/[slug]`, …) non vengono mai servite: il tema è
+  montato per primo e il suo `[container0]/[slug0]` le intercetta. Prima però quegli URL rispondevano **200 con una
+  pagina vuota**; ora un contenitore senza modello e senza pagina CMS dà 404 (test in `PagesTest`).
+- L'audit del back office ha il suo script: `npm run audit:bo` (vedi `docs/deploy/runbook.md` §9).

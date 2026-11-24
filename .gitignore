@@ -48,6 +48,12 @@ bashscripts/
 .cursor
 .gemini
 #.github
+
+# Claude Code: share settings + skills symlink, keep the rest local
+!.claude/
+.claude/*
+!.claude/settings.json
+!.claude/skills
 .github.backup-20260130_174027/
 .iflow
 .junie
@@ -135,3 +141,8 @@ laravel/Modules/*/agentdb.rvf
 laravel/Modules/*/.codeclimate.yml
 laravel/Modules/*/phpi*.*
 laravel/phpunit.coverage*.*
+
+# PID del queue worker locale (file di runtime)
+/cache/
+${CLAUDE_PROJECT_DIR:-.}/
+bashscripts/

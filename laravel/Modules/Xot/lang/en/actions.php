@@ -3,6 +3,9 @@
 declare(strict_types=1);
 
 return [
+    'back' => [
+        'label' => 'Back to list',
+    ],
     'export_xls' => 'Esporta Dati',
     'navigation' => [
         'label' => 'Missing Navigation Label',

@@ -3,7 +3,11 @@ title: "packages advanced"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "packages advanced"
 issues: []
 discussions: []
@@ -513,7 +517,7 @@ Code quality analysis: complexity, style, architecture.
 | aws/aws-sdk-php | 3.371.0 | Media | S3, STS, CloudFront |
 | google/cloud-storage | 1.49.2 | (infra) | GCS client |
 | spatie/laravel-google-cloud-storage | 2.3.4 | (infra) | GCS filesystem driver |
-| spipu/html2pdf | 5.3.3 | Xot, Quaeris | HTML to PDF |
+| spipu/html2pdf | 5.3.3 | Xot, <nome progetto> | HTML to PDF |
 | spipu/html2pdf | 5.3.3 | Xot, App | HTML to PDF |
 | tecnickcom/tcpdf | 6.10.1 | Chart | PDF engine (used by html2pdf) |
 | statikbe/laravel-cookie-consent | 1.11.4 | Gdpr | Cookie banner |

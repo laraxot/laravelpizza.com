@@ -1,18 +1,20 @@
 ---
-qmd: "module structure"
+qmd: "MODULE STRUCTURE"
 issues: []
 discussions: []
-title: "Notify Module: Structure & Discipline"
+title: "Notify Module — Structure & Discipline"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: superseded
-superseded_by: module-structure.md
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
-# Notify Module: Structure & Discipline
+# Notify Module — Structure & Discipline
 
 ## Module Root (PascalCase)
 
@@ -30,10 +32,10 @@ Modules/Notify/
 
 ## ✅ What Belongs Here
 
-- **Notification Classes**: Laravel Notifications
-- **Channels**: Custom notification channels (email, SMS, Slack, etc.)
-- **Jobs**: Async notification dispatching
-- **Listeners**: Event-based notification triggers
+- **Notification Classes** — Laravel Notifications
+- **Channels** — Custom notification channels (email, SMS, Slack, etc.)
+- **Jobs** — Async notification dispatching
+- **Listeners** — Event-based notification triggers
 
 ## What Does NOT Belong Here
 
@@ -72,5 +74,5 @@ docs/
 ## See Also
 
 - [Project Module Discipline](../../../docs/rules/module-root-configuration-discipline.md)
-- `laravel/rector.php`: Global refactoring rules
-- `laravel/phpstan.neon`: Global type-checking configuration
+- `laravel/rector.php` — Global refactoring rules
+- `laravel/phpstan.neon` — Global type-checking configuration

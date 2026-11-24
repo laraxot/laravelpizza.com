@@ -10,7 +10,7 @@ discussions: []
 ---
 
 <purpose>
-Create executable phase prompts (PLAN.md files) for a roadmap phase with integrated research and verification. Default flow: Research (if needed) -> Plan -> Verify -> Done. Orchestrates gsd-phase-researcher, gsd-planner, and gsd-plan-checker agents with a revision loop (max 3 iterations).
+Create executable phase prompts (plan.md files) for a roadmap phase with integrated research and verification. Default flow: Research (if needed) -> Plan -> Verify -> Done. Orchestrates gsd-phase-researcher, gsd-planner, and gsd-plan-checker agents with a revision loop (max 3 iterations).
 </purpose>
 
 <required_reading>
@@ -43,7 +43,7 @@ Extract `--prd <filepath>` from $ARGUMENTS. If present, set PRD_FILE to the file
 
 **If no phase number:** Detect next unplanned phase from roadmap.
 
-**If `phase_found` is false:** Validate phase exists in ROADMAP.md. If valid, create the directory using `phase_slug` and `padded_phase` from init:
+**If `phase_found` is false:** Validate phase exists in roadmap.md. If valid, create the directory using `phase_slug` and `padded_phase` from init:
 ```bash
 mkdir -p ".planning/phases/${padded_phase}-${phase_slug}"
 ```
@@ -180,7 +180,7 @@ If "Run discuss-phase first": Display `/gsd-discuss-phase {X}` and exit workflow
 
 **If `has_research` is true (from init) AND no `--research` flag:** Use existing, skip to step 6.
 
-**If RESEARCH.md missing OR `--research` flag:**
+**If research.md missing OR `--research` flag:**
 
 Display banner:
 ```
@@ -242,7 +242,7 @@ Task(
 
 **Skip if:** `nyquist_validation_enabled` is false from INIT JSON.
 
-After researcher completes, check if RESEARCH.md contains a Validation Architecture section:
+After researcher completes, check if research.md contains a Validation Architecture section:
 
 ```bash
 grep -l "## Validation Architecture" "${PHASE_DIR}"/*-RESEARCH.md 2>/dev/null
@@ -328,7 +328,7 @@ Output consumed by /gsd-execute-phase. Plans need:
 </downstream_consumer>
 
 <quality_gate>
-- [ ] PLAN.md files created in phase directory
+- [ ] plan.md files created in phase directory
 - [ ] Each plan has valid frontmatter
 - [ ] Tasks are specific and actionable
 - [ ] Dependencies correctly identified
@@ -579,7 +579,7 @@ Verification: {Passed | Passed with override | Skipped}
 - [ ] Research completed (unless --skip-research or --gaps or exists)
 - [ ] gsd-phase-researcher spawned with CONTEXT.md
 - [ ] Existing plans checked
-- [ ] gsd-planner spawned with CONTEXT.md + RESEARCH.md
+- [ ] gsd-planner spawned with CONTEXT.md + research.md
 - [ ] Plans created (PLANNING COMPLETE or CHECKPOINT handled)
 - [ ] gsd-plan-checker spawned with CONTEXT.md
 - [ ] Verification passed OR user override OR max iterations with user decision

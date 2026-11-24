@@ -3,7 +3,11 @@ title: "🤖 Multi-Agent AI Coordination - Critical Rules"
 type: rule
 tags: [multi, agent, coordination, rules]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "multi-agent-coordination-rules 🤖 multi-agent ai coordination - critical rules"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -270,7 +274,7 @@ git push origin dev
 
 ## 🔗 Resources
 
-- [Multi-Agent Guide](docs/multi-agent-collaboration-guide.md)
+- [Multi-Agent Guide](multi-agent-collaboration-guide.md)
 - [GitHub Sync Rule](docs/github-sync-rule.md)
 - [AI Rules](../.qwen/ai-rules-critical.md)
 - [AI Memory](../.qwen/AI_MEMORY.md)

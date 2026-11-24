@@ -1,5 +1,5 @@
 ---
-title: "User: provision MySQL locale marco + database fixcity_user"
+title: "User — provision MySQL locale marco + database fixcity_user"
 type: concept
 tags: [user, mysql, local, env, database]
 created: 2026-06-12
@@ -16,7 +16,6 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-status: draft
 ---
 
 # Connessione `user` e login FO
@@ -39,7 +38,7 @@ cd laravel && php artisan migrate --database=user
 
 `provision-local-mysql.sh` non esiste piu'. `Unknown database 'fixcity_user'` (1049) = DB mai creato.
 Stato migrate su DB fresco (2026-10-07): si ferma su `align_ticket_relation_foreign_keys`
-(cast bigint->uuid, MariaDB 4078), vedi `docs/stories/login-unknown-database-fixcity-user.story.md`.
+(cast bigint->uuid, MariaDB 4078), vedi `docs/stories/login-unknown-database-fixcity-user-2026-10-07.story.md`.
 
 ## Variabili `.env`
 
@@ -53,7 +52,7 @@ La connessione Laravel `user` è mappata da `config/local/fixcity/database.php` 
 
 ## Utente applicativo
 
-Dopo migrate, creare l'utente FO (email da `FIXCITY_ADMIN_EMAIL`) con password nota per dev: es. via factory/`XotData::getUserClass()`.
+Dopo migrate, creare l'utente FO (email da `FIXCITY_ADMIN_EMAIL`) con password nota per dev — es. via factory/`XotData::getUserClass()`.
 
 ## Canon
 

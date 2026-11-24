@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "blockdata implementation"
 issues: []
 discussions: []
-status: draft
 ---
 
 # BlockData: Auto-Detection and Rendering

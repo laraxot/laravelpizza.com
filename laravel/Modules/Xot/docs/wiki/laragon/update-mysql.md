@@ -10,8 +10,6 @@ title: Aggiornare Mysql a 8.0
 description: Aggiornare Mysql a 8.0
 extends: _layouts.documentation
 section: content
-status: superseded
-superseded_by: ../../laragon/update-mysql.md
 ---
 
 # Aggiornare Mysql a 8.0 {#update-mysql-to-8-0}

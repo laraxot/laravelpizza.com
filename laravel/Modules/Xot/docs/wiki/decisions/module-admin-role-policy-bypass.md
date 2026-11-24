@@ -4,12 +4,11 @@ type: decision
 module: Xot
 tags: [policy, permessi, ruoli, filament, pannelli]
 created: 2026-11-09
-updated: 2026-11-11
+updated: 2026-11-09
 status: accepted
 qmd: "XotBasePolicy before module admin role cms::admin lang::admin PermissionDoesNotExist pannello vuoto"
 related:
   - ../../../app/Models/Policies/XotBasePolicy.php
-  - ../../../app/Models/Policies/Concerns/RequiresOperationalPermissions.php
   - ./security-middleware-csrf-order.md
 ---
 
@@ -47,11 +46,7 @@ policy che lanciano eccezioni.
 - I moduli condivisi vengono sincronizzati dai repository upstream (`laraxot/module_*_fila5`):
   la modifica va portata anche lì, altrimenti la prossima sincronizzazione la cancella.
 
-## Eccezioni (2026-11-10)
-
-Il bypass non vale dove `{modulo}::admin` serve solo ad aprire il pannello e i permessi veri dipendono da ruoli di dominio.
-
-### Moduli con permessi operativi
+## Eccezione: moduli con permessi operativi (2026-11-10)
 
 Nei moduli in cui il ruolo del pannello serve solo a entrare e i permessi dicono chi fa cosa, il bypass e' un
 problema. Roosko, Waste, Warehouse, Processing, Weighing, Labeling e Rentri distinguono operatore di piazzale,
@@ -61,15 +56,3 @@ scansione) poteva rettificare pesi ed eliminare conferimenti.
 Quelle policy usano il trait `Concerns\RequiresOperationalPermissions`: `moduleAdminRole()` restituisce null,
 quindi passa solo il super-admin. Test: Roosko `AuthorizationTest` ("il ruolo del pannello ... non concede
 abilita' operative").
-
-### Casi dove l'override e' scritto per esteso
-
-- **Fixcity** (`Modules/Fixcity/app/Policies/BasePolicy.php`): tutti gli operatori hanno `fixcity::admin`; con il bypass
-  un operatore poteva cancellare segnalazioni. Decidono i ruoli `operator`, `supervisor`, `admin`; passa a priori solo
-  `super-admin`. Test: `TicketDeletionAuthorizationTest` ("operator who also has the panel role").
-- **User** (`Modules/User/app/Models/Policies/BaseUserPolicy.php`): `user::admin` non deve poter modificare un super-admin.
-
-Un modulo nuovo che assegna `{modulo}::admin` a chi non deve gestire tutto il modulo usa il trait
-`RequiresOperationalPermissions` se i permessi sono operativi, oppure fa lo stesso override di `before()`.
-Tolta anche `Modules/Fixcity/app/Models/Policies/TicketPolicy.php`: non registrata, concedeva tutto e Laravel l'avrebbe
-trovata da sola se mancasse `Gate::policy()`.

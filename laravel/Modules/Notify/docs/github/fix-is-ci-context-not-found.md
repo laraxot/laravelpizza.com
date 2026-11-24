@@ -3,7 +3,11 @@ title: "Fix Risolto: Errore `is_ci_context: command not found`"
 type: concept
 tags: [fix, context, not, found]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "fix-is-ci-context-not-found fix risolto: errore `is_ci_context: command not found`"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -15,7 +19,6 @@ related:
   - "./issue-subtree-sync-test.md"
   - "./sync-remote-repo-docs-summary.md"
   - "./sync-remote-repo-test-plan.md"
-status: draft
 ---
 
 # Fix Risolto: Errore `is_ci_context: command not found`
@@ -199,7 +202,7 @@ bashscripts/git/subtrees/sync_remote_repo.sh laraxot
 | [DIRECTORY_STRUCTURE.md](bashscripts/docs/git/DIRECTORY_STRUCTURE.md) | Path corretti |
 | [TROUBLESHOOTING.md](bashscripts/docs/git/TROUBLESHOOTING.md) | Risoluzione errori |
 | [README.md](bashscripts/docs/git/README.md) | Index documentazione |
-| [SYNC_REMOTE_REPO_COORDINATION.md](bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md) | Coordineamento agenti |
+| [sync_remote_repo_coordination.md](bashscripts/docs/git/sync_remote_repo_coordination.md) | Coordineamento agenti |
 
 ### Se gli Errori Persistono
 
@@ -245,7 +248,7 @@ Creare documenti per:
 
 ### Prima di Lavorare su Questo Script
 
-1. ✅ Leggi `SYNC_REMOTE_REPO_COORDINATION.md`
+1. ✅ Leggi `sync_remote_repo_coordination.md`
 2. ✅ Verifica path corretto: `bashscripts/git/subtrees/`
 3. ✅ Controlla che `bashscripts/subtrees/` sia eliminato
 4. ✅ Testa con `bash -n script.sh`

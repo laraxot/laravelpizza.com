@@ -5,10 +5,18 @@ module: Geo
 status: done-with-open-decision
 priority: medium
 created: 2026-10-06
-updated: 2026-10-28
-tags: [phpstan, geo, constants, typeCoverage, paramTypeCoverage, cache, tests, bmad]
+updated: 2026-10-06
+tags: [phpstan, geo, constants, typeCoverage, cache, tests, bmad]
 related:
   - ./phpstan-cleanup-geo.dev.md
+<<<<<<< HEAD
+date_originale_nome_file: 2026-10-06
+=======
+<<<<<<< .merge_file_Ie00h7
+=======
+date_originale_nome_file: 2026-10-06
+>>>>>>> .merge_file_CXfXxw
+>>>>>>> laraxot/dev
 ---
 
 # [STORY] PHPStan cleanup modulo Geo
@@ -51,30 +59,6 @@ Scopo del codice toccato, non solo l'errore:
   per risposta non valida, ma un body non-JSON faceva uscire `Safe\Exceptions\JsonException`: ora e' avvolta in
   `RuntimeException` (i chiamanti `UpdateCoordinatesAction`/`TechPlanner` gestiscono `RuntimeException`).
 
-## Aggiornamento 2026-10-28 — `typeCoverage.paramTypeCoverage` (13 -> 0)
-
-Richiesta: swarm PHPStan, zero errori nel modulo risolvendo la causa. Elenco: 13 segnalazioni in 7 file, tutte
-`paramTypeCoverage` (soglia 99 % calcolata full-tree), tutte closure con parametro senza tipo nativo.
-
-Scopo e fix per file (nessun cambio di comportamento voluto):
-
-- `GetAddressFromGoogleMapsAction::getComponent`: la closure di `->first()` faceva `instanceof` perche' non tipizzata.
-  `DataCollection<int, GoogleMapAddressComponentData>` garantisce gia' il tipo: ora `static fn (GoogleMapAddressComponentData $component): bool`,
-  `instanceof` morto rimosso.
-- `BuildGeoMapWidgetPayloadAction::resolveCenter`: la stessa closure "numero" era scritta due volte; estratta in `$isNumber`
-  con `mixed $value` (il valore arriva da `pluck()`, davvero `mixed`).
-- `OSMMapWidget::getMapCenter`: `fn (mixed $lat): bool` (stessa origine `pluck()`).
-- `ComuneJson::clearCache`: `each(fn ($_nome, $code))` usava solo la chiave; ora `->keys()->each(fn (string $code))`, niente parametro inutilizzato.
-- `Locality::getPostalCodeOptions`: `when()` riceve `Builder $query`.
-- `AddressesField` (2 closure Filament): `mixed $state`, contratto Filament.
-- `FilterCoordinatesInRadius::passes`: `mixed $coordinate` (input utente non fidato, la closure restringe con `is_array`).
-
-Risultato verificato: run full-tree `phpstan analyse Modules` del 2026-10-28, 0 righe su `Modules/Geo/`.
-Non eseguito: Pest (`.env.testing` punta a MySQL). Nessun commit.
-
-Nota docs: `docs/` contiene ~40 `phpstan-*.md` in root ridondanti con questa storia e con
-`wiki/concepts/phpstan-compliance.md`; il riordino e' in corso da parte dell'utente, non toccato.
-
 ## Acceptance Criteria
 
 - [x] Tutte le costanti di classe dei file segnalati hanno tipo nativo
@@ -83,7 +67,6 @@ Nota docs: `docs/` contiene ~40 `phpstan-*.md` in root ridondanti con questa sto
 - [x] `Cache::remember`: tipi dichiarati coerenti con i dati reali, nessun `@phpstan-ignore`/cast
 - [x] Variabili/offset mai letti risolti verificando l'intento; test stub resi test veri
 - [x] `php -l` su tutti i file toccati; `phpstan analyse Modules/Geo`: 0 errori di codice
-- [x] `paramTypeCoverage`: 13 -> 0 nel modulo (full-tree 2026-10-28)
 - [ ] Decisione su `composer.json` `php: ^8.2` (61 `classConstant.nativeTypeNotSupported` residui, vedi dev)
 
 ## GitHub (tracciamento)

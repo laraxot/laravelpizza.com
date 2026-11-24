@@ -7,6 +7,7 @@ namespace Modules\Meetup\Tests\Feature\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\RateLimiter;
 use Livewire\Livewire;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget;
 use Modules\Meetup\Tests\TestCase;
 use Modules\User\Filament\Widgets\Auth\LoginWidget;
@@ -60,9 +61,11 @@ test('a user can log in with the right password and lands on their events', func
         ->set('data.password', 'Password!2026')
         ->call('login')
         ->assertHasNoErrors()
-        ->assertRedirect();
+        // Non basta "un redirect": dopo il sync del 13/11 portava a /it/area-personale, che qui è un 404.
+        ->assertRedirect(LaravelLocalization::localizeUrl('/events/my', 'it'));
 
     $this->assertAuthenticatedAs($user);
+    $this->get('/it/events/my')->assertOk();
 });
 
 test('a wrong password does not log the user in', function (): void {

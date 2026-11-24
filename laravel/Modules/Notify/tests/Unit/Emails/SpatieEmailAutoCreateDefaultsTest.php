@@ -12,7 +12,7 @@ use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 /**
- * Story quaeris-send-invite-migrate-to-record-notification.md, Difetto 16
+ * Story <nome progetto>-send-invite-migrate-to-record-notification.md, Difetto 16
  * (2026-09-15): `SpatieEmail::__construct()` crea un `MailTemplate` al volo
  * (`firstOrCreate()`) per uno slug non ancora esistente, ma i default di
  * creazione non valorizzavano `html_layout_path` — `getHtmlLayout()` lo

@@ -3,7 +3,11 @@ title: "git error path does not have our version"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "git error path does not have our version"
 issues: []
 discussions: []
@@ -12,9 +16,9 @@ status: draft
 
 # Git Error: "path does not have our version"
 
-**Severity**: HIGH ⚠️  
-**Category**: Git Merge/Rebase Issues  
-**Last Updated**: 2026-03-17  
+**Severity**: HIGH ⚠️
+**Category**: Git Merge/Rebase Issues
+**Last Updated**: 2026-03-17
 **Status**: ✅ Resolved
 
 ---
@@ -333,7 +337,7 @@ git merge --abort   # No merge in progress
 # 2. Check current status
 git status --short
 # M docs/custom-charts-session-summary.md
-# M laravel/Modules/Quaeris/app/Actions/QuestionChart/Custom/SmsResponseRate.php
+# M laravel/Modules/<nome progetto>/app/Actions/QuestionChart/Custom/SmsResponseRate.php
 # M laravel/Modules/App/app/Actions/QuestionChart/Custom/SmsResponseRate.php
 # ...
 
@@ -509,7 +513,19 @@ git rebase --continue
 
 ---
 
+<<<<<<< HEAD
+**Last Review**: 2026-03-17
+**Next Review**: As needed
+**Maintainer**: Development Team
+=======
+<<<<<<< .merge_file_GSAw5d
 **Last Review**: 2026-03-17  
 **Next Review**: As needed  
 **Maintainer**: Development Team  
+=======
+**Last Review**: 2026-03-17
+**Next Review**: As needed
+**Maintainer**: Development Team
+>>>>>>> .merge_file_uM7rUJ
+>>>>>>> laraxot/dev
 **Status**: ✅ Complete Reference

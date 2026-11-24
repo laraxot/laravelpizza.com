@@ -1,11 +1,11 @@
 ---
-title: "User Module Architecture (BMAD)"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user, bmad]
-qmd: "user module architecture (bmad) user"
+title: "Architettura BMAD — User"
+type: architecture
+status: active
+updated: 2026-11-16
+qmd: "architettura BMAD User modulo auth ruoli panel"
 ---
+
 # User Module Architecture (BMAD)
 
 **Status**: ✅ Finalized
@@ -274,3 +274,15 @@ TokenRevoker, SessionCleaner
 
 *Architecture documentation based on BMAD methodology*  
 *Last verified: 2026-09-21*
+
+## Autorizzazione verificata (2026-11-16)
+
+Catena `before()`: `XotBasePolicy` (super-admin **e** `{modulo}::admin`) → `UserBasePolicy` (nessun override) → `RolePolicy`, `PermissionPolicy`, `TeamPolicy` (bypass attivo); `BaseUserPolicy` sovrascrive e lo toglie.
+
+| Accesso al pannello (`BaseUser::canAccessPanel`) | Ruoli |
+|---|---|
+| `access` | tutti (login pubblico) |
+| `admin` | `super-admin`, `admin`, `restaurant::admin` |
+| `<modulo>::admin` | `super-admin`, `<modulo>::admin`, `<modulo>::operator` |
+
+Conseguenza: il livello `{modulo}::operator` entra nel pannello e dipende solo dalle policy. Finding P0-U1/U2 in [audit](./audits/user-audit.md). `PanelRoleSeeder` semina solo il ruolo omonimo del pannello (non `operator`).

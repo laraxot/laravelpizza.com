@@ -1,11 +1,10 @@
 ---
 title: "Console Commands per Bank (Event Sourcing)"
+qmd: "activity use cases bank 09 console commands md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity, use_cases]
-qmd: "console commands per bank (event sourcing) activity"
+tags: [documentation]
 ---
+
 # Console Commands per Bank (Event Sourcing)
 
 ## Introduzione

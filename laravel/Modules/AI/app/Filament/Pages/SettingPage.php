@@ -4,9 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\AI\Filament\Pages;
 
+use Filament\Forms\Components\Field;
+use Filament\Forms\Components\KeyValue;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
 use Modules\AI\Datas\AIConfigData;
+use Modules\AI\Enums\AiProviderEnum;
 use Modules\Xot\Filament\Pages\BaseSettingPage;
 
 /**
@@ -20,7 +25,7 @@ use Modules\Xot\Filament\Pages\BaseSettingPage;
 class SettingPage extends BaseSettingPage
 {
     /**
-     * @return array<string, Select|TextInput>
+     * @return array<string, Field>
      */
     protected function getFormSchema(): array
     {
@@ -88,6 +93,37 @@ class SettingPage extends BaseSettingPage
 
             'openai_base_url' => TextInput::make('openai_base_url')
                 ->url()
+                ->required(),
+
+            // Immagini e assistente: OpenRouter e Groq, solo modelli gratuiti se free_models_only.
+            'free_models_only' => Toggle::make('free_models_only'),
+
+            'vision_providers' => TagsInput::make('vision_providers')
+                ->suggestions(array_map(static fn (AiProviderEnum $case): string => $case->value, AiProviderEnum::cases()))
+                ->reorderable(),
+
+            'vision_models' => KeyValue::make('vision_models'),
+
+            'vision_timeout' => TextInput::make('vision_timeout')
+                ->numeric()
+                ->integer()
+                ->minValue(10)
+                ->maxValue(600)
+                ->required(),
+
+            'image_model' => TextInput::make('image_model'),
+
+            'assistant_providers' => TagsInput::make('assistant_providers')
+                ->suggestions(array_map(static fn (AiProviderEnum $case): string => $case->value, AiProviderEnum::cases()))
+                ->reorderable(),
+
+            'assistant_models' => KeyValue::make('assistant_models'),
+
+            'assistant_timeout' => TextInput::make('assistant_timeout')
+                ->numeric()
+                ->integer()
+                ->minValue(5)
+                ->maxValue(120)
                 ->required(),
         ];
     }

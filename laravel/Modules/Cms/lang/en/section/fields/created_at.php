@@ -7,7 +7,7 @@ declare(strict_types=1);
 // File: lang/en/section/fields/created_at.php
 // Cms section.fields.created_at — LangServiceProvider SSoT.
 return [
-    'label' => 'Data di Creazione',
+    'label' => 'Creation Date',
     'tooltip' => '',
     'helper_text' => '',
     'description' => '',

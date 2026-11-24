@@ -3,11 +3,14 @@ title: "header fix analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "header fix analysis"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 📸 Header FixCity vs Bootstrap Italia - Analisi e Fix
@@ -16,6 +19,15 @@ status: draft
 ## Problema: Header non conforme al reference
 
 ---
+
+title: "header fix analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "header fix analysis"
+issues: []
+discussions: []
 ## 🔴 Problemi Identificati
 
 ### 1. Logo non visibile ❌

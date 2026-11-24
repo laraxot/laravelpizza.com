@@ -2,16 +2,19 @@
 qmd: "tailwind consolidated"
 issues: []
 discussions: []
-title: "tailwind: Consolidated Documentation"
+title: "tailwind — Consolidated Documentation"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
-# tailwind: Consolidated Documentation
+# tailwind — Consolidated Documentation
 
 Consolidated from **28** individual files.
 
@@ -61,17 +64,12 @@ qmd: "tailwind-apply-bootstrap-italia ✅ tailwind @apply per bootstrap italia -
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -287,9 +285,12 @@ Ora i blade file usano le classi Tailwind:
 
 ## tailwind-best-practices-1
 
-*Consolidated from: `tailwind-best-practices.md`*
+*Consolidated from: `tailwind-best-practices-implementazione-css-modulo-notify.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## 1. Organizzazione del Codice
 
 ### 1.1 Struttura dei File
@@ -609,7 +610,7 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 ## tailwind-best-practices-2
 
-*Consolidated from: `tailwind-best-practices.md`*
+*Consolidated from: `tailwind-best-practices-2.md`*
 
 title: "Best Practices Implementazione Tailwind CSS nel Modulo Notify"
 type: concept
@@ -620,17 +621,12 @@ qmd: "tailwind-best-practices-2 best practices implementazione tailwind css nel 
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -959,7 +955,10 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 *Consolidated from: `tailwind-best-practices.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## 1. Organizzazione del Codice
 
 ### 1.1 Struttura dei File
@@ -1274,7 +1273,7 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 ## tailwind-blade-components-1
 
-*Consolidated from: `tailwind-blade-components.md`*
+*Consolidated from: `tailwind-blade-components-1.md`*
 
 title: "Esempi Pratici: Blade Components Tailwind per <nome progetto>"
 type: concept
@@ -1285,17 +1284,12 @@ qmd: "tailwind-blade-components-1 esempi pratici: blade components tailwind per 
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -1469,7 +1463,10 @@ document.querySelectorAll('.group').forEach(card => {
 
 *Consolidated from: `tailwind-blade-components.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questa guida mostra come creare Blade component riutilizzabili, accessibili e responsive usando pattern Tailwind CSS, secondo le best practice Webcrunch e le regole <nome progetto>.
 
 ---
@@ -1638,7 +1635,10 @@ document.querySelectorAll('.group').forEach(card => {
 
 *Consolidated from: `tailwind-components.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento descrive i componenti UI utilizzati nel modulo Notify, basati sui componenti Filament. La migrazione a Filament garantisce:
@@ -1957,17 +1957,12 @@ qmd: "tailwind-conversion-complete 🎨 tailwind conversion complete - design co
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -2213,7 +2208,7 @@ Main Content
 
 ## tailwind-css-webcrunch-1
 
-*Consolidated from: `tailwind-css-webcrunch.md`*
+*Consolidated from: `tailwind-css-webcrunch-1.md`*
 
 title: "Tailwind CSS: Approfondimento Collezione Webcrunch"
 type: concept
@@ -2224,17 +2219,12 @@ qmd: "tailwind-css-webcrunch-1 tailwind css: approfondimento collezione webcrunc
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -2311,7 +2301,7 @@ La collezione "Tailwind CSS" di Webcrunch raccoglie tutorial, guide pratiche e a
 
 ## tailwind-css-webcrunch-approfondimento-1
 
-*Consolidated from: `tailwind-css-webcrunch-approfondimento.md`*
+*Consolidated from: `tailwind-css-webcrunch-approfondimento-1.md`*
 
 title: "Approfondimento Completo: Tailwind CSS su Webcrunch"
 type: concept
@@ -2322,17 +2312,12 @@ qmd: "tailwind-css-webcrunch-approfondimento-1 approfondimento completo: tailwin
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -2447,7 +2432,10 @@ Tailwind CSS è un framework CSS utility-first che permette di costruire interfa
 
 *Consolidated from: `tailwind-css-webcrunch-approfondimento.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Fonte: [Webcrunch Tailwind CSS Collection](https://webcrunch.com/collections/tailwind-css)
 
 ---
@@ -2557,7 +2545,10 @@ Tailwind CSS è un framework CSS utility-first che permette di costruire interfa
 
 *Consolidated from: `tailwind-css-webcrunch.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Fonte: https://webcrunch.com/collections/tailwind-css
 
 ## Panoramica
@@ -2630,7 +2621,10 @@ La collezione "Tailwind CSS" di Webcrunch raccoglie tutorial, guide pratiche e a
 
 *Consolidated from: `tailwind-email-system.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## 1. Configurazione Base
 
 ### 1.1 Setup Iniziale
@@ -3006,7 +3000,10 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 *Consolidated from: `tailwind-forms.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento descrive l'implementazione dei form nel modulo Notify utilizzando i componenti Filament. I form sono stati migrati da componenti custom a componenti Filament per garantire:
@@ -3279,9 +3276,12 @@ class NotificationForm extends Component implements HasForms
 
 ## tailwind-implementation-1
 
-*Consolidated from: `tailwind-implementation.md`*
+*Consolidated from: `tailwind-implementation-implementazione-css-modulo-notify.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## 1. Configurazione Base
 
 ### 1.1 Installazione
@@ -3620,7 +3620,7 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 ## tailwind-implementation-2
 
-*Consolidated from: `tailwind-implementation.md`*
+*Consolidated from: `tailwind-implementation-2.md`*
 
 title: "Implementazione Tailwind CSS nel Modulo Notify"
 type: concept
@@ -3631,17 +3631,12 @@ qmd: "tailwind-implementation-2 implementazione tailwind css nel modulo notify"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -3989,7 +3984,10 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 *Consolidated from: `tailwind-implementation.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## 1. Configurazione Base
 
 ### 1.1 Installazione
@@ -4325,7 +4323,10 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 *Consolidated from: `tailwind-layouts.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento descrive l'implementazione dei layout nel modulo Notify utilizzando i componenti Filament. I layout sono stati migrati da implementazioni custom a componenti Filament per garantire:
@@ -4617,7 +4618,10 @@ return [
 
 *Consolidated from: `tailwind-notifications.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Introduzione
 
 Il sistema di notifiche del modulo Notify è stato reimplementato utilizzando i componenti Filament per garantire:
@@ -4901,7 +4905,7 @@ class NotificationListTest extends TestCase
 
 ## tailwind-plugin-guide-1
 
-*Consolidated from: `tailwind-plugin-guide.md`*
+*Consolidated from: `tailwind-plugin-guide-1.md`*
 
 title: "Guida: Creazione di Plugin Tailwind Custom per <nome progetto>"
 type: guide
@@ -4912,17 +4916,12 @@ qmd: "tailwind-plugin-guide-1 guida: creazione di plugin tailwind custom per <no
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -5025,7 +5024,10 @@ module.exports = {
 
 *Consolidated from: `tailwind-plugin-guide.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questa guida mostra come creare, documentare e integrare plugin custom Tailwind CSS per pattern condivisi (bottoni, alert, badge, ecc.) secondo le best practice Webcrunch e le regole <nome progetto>.
 
 ---
@@ -5124,7 +5126,10 @@ module.exports = {
 
 *Consolidated from: `tailwind-plugin.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questa guida mostra come creare, documentare e integrare plugin custom Tailwind CSS per pattern condivisi (bottoni, alert, badge, ecc.) secondo le best practice Webcrunch e le regole <nome progetto>.
 
 ---
@@ -5221,7 +5226,10 @@ module.exports = {
 
 *Consolidated from: `tailwind_best_practices.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## 1. Organizzazione del Codice
 
 ### 1.1 Struttura dei File
@@ -5539,7 +5547,10 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 *Consolidated from: `tailwind_blade_components.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questa guida mostra come creare Blade component riutilizzabili, accessibili e responsive usando pattern Tailwind CSS, secondo le best practice Webcrunch e le regole <nome progetto>.
 
 ---
@@ -5707,7 +5718,10 @@ document.querySelectorAll('.group').forEach(card => {
 
 *Consolidated from: `tailwind_css_webcrunch.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Fonte: https://webcrunch.com/collections/tailwind-css
 
 ## Panoramica
@@ -5780,7 +5794,10 @@ La collezione "Tailwind CSS" di Webcrunch raccoglie tutorial, guide pratiche e a
 
 *Consolidated from: `tailwind_css_webcrunch_approfondimento.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Fonte: [Webcrunch Tailwind CSS Collection](https://webcrunch.com/collections/tailwind-css)
 
 ---
@@ -5889,7 +5906,10 @@ Tailwind CSS è un framework CSS utility-first che permette di costruire interfa
 
 *Consolidated from: `tailwind_implementation.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## 1. Configurazione Base
 
 ### 1.1 Installazione
@@ -6226,7 +6246,10 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 *Consolidated from: `tailwind_plugin_guide.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questa guida mostra come creare, documentare e integrare plugin custom Tailwind CSS per pattern condivisi (bottoni, alert, badge, ecc.) secondo le best practice Webcrunch e le regole <nome progetto>.
 
 ---

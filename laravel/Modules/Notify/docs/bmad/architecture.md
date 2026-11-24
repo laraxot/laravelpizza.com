@@ -3,7 +3,11 @@ title: "Notify: architecture"
 type: architecture
 tags: [notify, architecture, module-boundary, models, resources, channels]
 created: 2026-09-28
+<<<<<<< HEAD
 updated: 2026-09-28
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "Notify architettura componenti modelli risorse canali provider"
 related:
   - ./README.md
@@ -222,4 +226,34 @@ status: draft
 - [Epic channels](./epics/notification-channels.epic.md)
 - [Quick reference](./quick-reference.md)
 - [Setup guide](./setup-guide.md)
+<<<<<<< HEAD
+- [BMAD method (Xot)](../wiki/bmad-method.md)
+=======
+<<<<<<< .merge_file_NhZGhy
 - [BMAD method (Xot)](../../Xot/docs/bmad-method.md)
+
+## Evidenza audit 2026-11-16
+
+Misure da [audit approfondito](./audits/notify-audit.md): 254 PHP, 53 Action, 0 Service,
+11 Policy (tutte `NotifyBasePolicy → UserBasePolicy`), 6 Resource, 39 pagine (15 nel
+cluster `Test`, tutte `SuperAdminOnlyTrait`).
+
+| Confine | Regola verificata | Eccezione |
+|---|---|---|
+| Autorizzazione | policy per ogni Resource | `NotificationLogResource` senza policy (P1-1) |
+| Ingresso esterno | un solo webhook `POST /api/inbound/{provider}/{token}` | token nel path, no firma provider (P1-2) |
+| Canali | `Channels/` (4) + `Notifications/` (13) | Telegram/WhatsApp/Twilio/Firebase con TODO (P1-3) |
+
+### Matrice capability canali (da completare con story P1-3)
+
+| Canale | Stato nel sorgente |
+|---|---|
+| mail (SMTP/AWS/Spatie) | implementato (`SmtpMailSendAction`, `BuildMailMessageAction`) |
+| SMS (Netfun/Esendex) | implementato (`NetfunSendAction`, `EsendexSendAction`) |
+| Telegram | parziale: `TelegramChannel.php:26,34` TODO |
+| WhatsApp | parziale: `WhatsAppNotification.php:66` TODO |
+| Push Firebase | parziale: pagina test `SendFirebasePushNotificationPage.php:112` TODO |
+=======
+- [BMAD method (Xot)](../wiki/bmad-method.md)
+>>>>>>> .merge_file_YUlKHn
+>>>>>>> laraxot/dev

@@ -1,11 +1,20 @@
+# Prototipo: laravel/Modules/* e laravel/Themes/*
+# Canon: bashscripts/ai/wiki/rules/no-git-lfs.md
+# Sync: bash bashscripts/templates/sync-gitattributes-modules.sh
+#
+# Git LFS VIETATO. Binari = blob git normali.
+# Mai: filter=lfs / diff=lfs / merge=lfs
+#
+# Sui binari solo `binary !filter`. Non aggiungere !merge, !diff o !text:
+# !merge riattiva il merge testuale e Git scrive i marker di conflitto negli SVG.
+
 * text=auto
 *.css linguist-vendored
 *.scss linguist-vendored
 *.js linguist-vendored
 CHANGELOG.md export-ignore
 
-# Binary files (regular git blobs — NO git-lfs)
-# `binary` + `!filter` azzera eventuali filtri LFS ereditati
+# Binary files: regular Git blobs; !filter cancels inherited LFS filters.
 *.png binary !filter
 *.jpg binary !filter
 *.jpeg binary !filter
@@ -21,12 +30,7 @@ CHANGELOG.md export-ignore
 *.ttf binary !filter
 *.eot binary !filter
 *.otf binary !filter
+*.mp4 binary !filter
 *.phar binary !filter
 *.db binary !filter
 *.sqlite binary !filter
-*.png !text !filter !merge !diff
-*.svg !text !filter !merge !diff
-*.jpg !text !filter !merge !diff
-*.jpeg !text !filter !merge !diff
-*.gif !text !filter !merge !diff
-*.webp !text !filter !merge !diff

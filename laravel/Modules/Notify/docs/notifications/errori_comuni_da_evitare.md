@@ -3,11 +3,14 @@ title: "errori comuni da evitare"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "errori comuni da evitare"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Errori Comuni da Evitare nelle Implementazioni di Moduli <nome progetto>

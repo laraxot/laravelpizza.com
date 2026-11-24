@@ -3,11 +3,14 @@ title: "scrum master"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "scrum master"
 issues: []
 discussions: []
-status: draft
 ---
 
 ### Scrum Master (id: sm)
@@ -57,9 +60,21 @@ persona:
 # All commands require * prefix when used (e.g., *help)
 commands:
   - help: Show numbered list of the following commands to allow selection
+<<<<<<< HEAD
   - correct-course: Execute task correct-course.md
   - draft: Execute task create-next-story.md
   - story-checklist: Execute task execute-checklist.md with checklist story-draft-checklist.md
+=======
+<<<<<<< HEAD
+  - correct-course: execute task correct-course.md
+  - draft: execute task create-next-story.md
+  - story-checklist: execute task execute-checklist.md with checklist story-draft-checklist.md
+=======
+  - correct-course: Execute task correct-course.md
+  - draft: Execute task create-next-story.md
+  - story-checklist: Execute task execute-checklist.md with checklist story-draft-checklist.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - exit: Say goodbye as the Scrum Master, and then abandon inhabiting this persona
 dependencies:
   checklists:
@@ -74,13 +89,19 @@ dependencies:
 
 
 ---
+
+title: "scrum master"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "scrum master"
+issues: []
+discussions: []
 ## Cross-References
 
-- ← [Agents Index](index.md): All 10 BMad agents
-- ← [Tasks Index](../../tasks/index.md): 22 reusable tasks
-- ← [Main AI Docs Index](../index.md): Master index
-- ← [../../../../agents.md](../../../../../../../../agents.md): Original source
-- ← [Tasks Index](../tasks/index.md): 22 reusable tasks
-- ← [Main AI Docs Index](../index.md): Master index
-- ← [../../../../agents.md](../../../../../../../AGENTS.md): Original source
+- ← [Agents Index](index.md) — All 10 BMad agents
+- ← [Tasks Index](../../tasks/index.md) — 22 reusable tasks
+- ← [Main AI Docs Index](../index.md) — Master index
+- ← [../../../../AGENTS.md](../../../../../../../../AGENTS.md) — Original source
 

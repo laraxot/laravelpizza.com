@@ -1,14 +1,4 @@
----
-title: "BMAD + Second Brain: Session Summary (2026-09-04)"
-type: note
-updated: 2026-10-21
-tags: [docs, user]
-qmd: "bmad + second brain   session summary (2026-09-04) user"
-status: superseded
-superseded_by: bmad-session.md
----
-
-# BMAD + Second Brain: Session Summary (2026-09-04)
+# BMAD + Second Brain — Session Summary (2026-09-04)
 
 ## Bootstrap
 - Repo: `/var/www/_bases/base_restaurant_fila5/laravel`
@@ -17,21 +7,37 @@ superseded_by: bmad-session.md
 - SSoT contratti: `Modules\Xot\Contracts\UserContract`, `ProfileContract`
 
 ## Diagnose
+<<<<<<< HEAD
 - PHPStan 485 errori: 309 `class.notFound` (test `User`, `Profile`, `Quaeris`), duplicati import
+=======
+<<<<<<< HEAD
+- PHPStan 485 errori: 309 `class.notFound` (test `User`, `Profile`, `Quaeris`), duplicati import
+=======
+- PHPStan 485 errori: 309 `class.notFound` (test `User`, `Profile`, `<nome progetto>`), duplicati import
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - `XotData::getProfileClass()`: `main_module=''` → `InvalidArgumentException`
 - `Profile.php`: `@property-read User|null $user` (non esistente)
 - `IsProfileTrait.php`: `use UserContract` duplicato
 - `BaseProfile.php`: `id` `char(36)` senza UUID in `booted()` → `PDOException` 1364
 - DB `restaurant_user`: `profiles.id` UUID, senza default
 
-## Fix (SSoT: mai concrete in public type-hints)
+## Fix (SSoT — mai concrete in public type-hints)
 - `XotData.php:31`: `main_module = 'User'`
 - `IsProfileTrait.php`: rimosso duplicato
 - `Profile.php:50`: `UserContract|null`
 - Gdpr actions: `UserContract $user`
 - `BaseProfile.php`: `$incrementing=false`, `$keyType='string'`, UUID `id` in `booted()`
 - Test batch: `use Modules\User\Models\User;` in 8 file `tests/`
+<<<<<<< HEAD
 - `Quaeris` → `User` sostituito nel codice
+=======
+<<<<<<< HEAD
+- `Quaeris` → `User` sostituito nel codice
+=======
+- `<nome progetto>` → `User` sostituito nel codice
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Verify
 - `Profile::firstOrCreate()` → `id` UUID generato (len=36) ✅

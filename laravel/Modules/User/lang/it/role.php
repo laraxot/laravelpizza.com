@@ -112,7 +112,7 @@ return [
         ],
         'team' => [
             'name' => [
-                'label' => 'team.name',
+                'label' => 'Team',
             ],
             'label' => '',
             'tooltip' => '',
@@ -372,6 +372,23 @@ return [
         'manager' => 'Manager',
         'editor' => 'Editor',
         'user' => 'Utente',
+    ],
+    // Display names of the role codes (spatie role `name`). Il codice resta il valore salvato.
+    'labels' => [
+        'super-admin' => 'Super amministratore',
+        'restaurant__admin' => 'Titolare',
+        'restaurant__restaurateur' => 'Ristoratore',
+        'admin' => 'Amministratore',
+        'moderator' => 'Moderatore',
+        'editor' => 'Editor',
+        'manager' => 'Manager',
+        'user' => 'Utente',
+        'guest' => 'Ospite',
+        'bar' => 'Bancone',
+        'kitchen' => 'Cucina',
+        'cashier' => 'Cassiere',
+        'waiter' => 'Cameriere',
+        'respHACCP' => 'Responsabile HACCP',
     ],
     'label' => 'Ruolo',
     'plural_label' => 'Role (Plurale)',

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "bottlenecks"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Job Module Performance Bottlenecks
@@ -208,13 +207,22 @@ Implementare:
 * [bottlenecks.md](../../../User/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../../ui/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../../Lang/docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../../job/docs/performance/bottlenecks.md)
+* [bottlenecks.md](bottlenecks.md)
 * [bottlenecks.md](../../../Media/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../patient/docs/roadmap/bottlenecks.md)
 
 ### Versione Incoming
 
 ---
+
+title: "bottlenecks"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "bottlenecks"
+issues: []
+discussions: []
 ### Versione Incoming
 
 ---

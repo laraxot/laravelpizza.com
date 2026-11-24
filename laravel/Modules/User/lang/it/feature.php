@@ -110,6 +110,15 @@ return [
             'helper_text' => 'Apre il pannello dei filtri',
             'description' => 'Apre il pannello dei filtri',
         ],
+        'type' => [
+            'label' => 'Tipo',
+        ],
+        'active' => [
+            'label' => 'Attivo',
+        ],
+        'created_at' => [
+            'label' => 'Creato il',
+        ],
     ],
     'actions' => [
         'import' => [

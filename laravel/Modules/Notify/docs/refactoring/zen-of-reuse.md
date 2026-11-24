@@ -3,11 +3,14 @@ title: "zen of reuse"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "zen of reuse"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🧘 The Zen of Reuse (Filament Components)

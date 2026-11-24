@@ -8,8 +8,6 @@ updated: 2026-07-14
 qmd: "ffmpeg"
 related:
   - "./webm.md"
-status: superseded
-superseded_by: ../../_integration/ffmpeg.md
 ---
 # ffmpeg
 

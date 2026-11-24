@@ -3,7 +3,11 @@ title: "ui ux enhancements"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "ui ux enhancements"
 issues: []
 discussions: []
@@ -14,7 +18,7 @@ status: draft
 
 ## Introduzione
 
-Questo documento esplora i componenti Filament che possono migliorare l'esperienza utente per i campi `name` e `slug` nel form di gestione dei template email. I miglioramenti proposti seguono le convenzioni del progetto Quaeris, mantenendo la coerenza visiva e migliorando l'usabilità.
+Questo documento esplora i componenti Filament che possono migliorare l'esperienza utente per i campi `name` e `slug` nel form di gestione dei template email. I miglioramenti proposti seguono le convenzioni del progetto <nome progetto>, mantenendo la coerenza visiva e migliorando l'usabilità.
 Questo documento esplora i componenti Filament che possono migliorare l'esperienza utente per i campi `name` e `slug` nel form di gestione dei template email. I miglioramenti proposti seguono le convenzioni del progetto App, mantenendo la coerenza visiva e migliorando l'usabilità.
 
 ## Componenti per il Campo `name`
@@ -81,7 +85,7 @@ Questo documento esplora i componenti Filament che possono migliorare l'esperien
     ->required()
     ->unique(ignoreRecord: true)
     ->maxLength(255)
-    ->afterStateUpdated(fn (string $context, $state, callable $set) => 
+    ->afterStateUpdated(fn (string $context, $state, callable $set) =>
         $context === 'create' ? $set('slug', Str::slug($state)) : null)
     ->helperText('Identificatore unico utilizzato nel codice')
     ->prefixIcon('heroicon-o-link')
@@ -119,7 +123,7 @@ Questo documento esplora i componenti Filament che possono migliorare l'esperien
         Forms\Components\Actions\Action::make('regenerateSlug')
             ->icon('heroicon-o-arrow-path')
             ->tooltip('Rigenera dallo slug dal nome')
-            ->action(fn (Forms\Get $get, Forms\Set $set) => 
+            ->action(fn (Forms\Get $get, Forms\Set $set) =>
                 $set('slug', Str::slug($get('name'))))
     ),
 ```
@@ -143,7 +147,7 @@ Forms\Components\Group::make([
                 $set('slug', Str::slug($state));
             }
         }),
-        
+
     Forms\Components\Grid::make(2)
         ->schema([
             'generateSlug' => Forms\Components\Toggle::make('generateSlug')
@@ -155,7 +159,7 @@ Forms\Components\Group::make([
                         $set('slug', Str::slug($get('name')));
                     }
                 }),
-                
+
             'slug' => Forms\Components\TextInput::make('slug')
                 ->required()
                 ->unique(ignoreRecord: true)
@@ -226,7 +230,7 @@ return [
 ];
 ```
 
-## Conformità con gli Standard Quaeris
+## Conformità con gli Standard <nome progetto>
 ## Conformità con gli Standard App
 
 Tutti i componenti proposti:
@@ -243,7 +247,7 @@ I miglioramenti UI/UX proposti per i campi `name` e `slug` si concentrano su:
 3. **Azioni contestuali** che facilitano operazioni comuni
 4. **Relazioni intuitive** tra campi correlati
 
-L'implementazione di questi miglioramenti rispetta le convenzioni del progetto Quaeris mentre offre un'esperienza utente significativamente migliorata nella gestione dei template email.
+L'implementazione di questi miglioramenti rispetta le convenzioni del progetto <nome progetto> mentre offre un'esperienza utente significativamente migliorata nella gestione dei template email.
 L'implementazione di questi miglioramenti rispetta le convenzioni del progetto App mentre offre un'esperienza utente significativamente migliorata nella gestione dei template email.
 
 ## Riferimenti

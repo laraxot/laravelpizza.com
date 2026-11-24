@@ -159,7 +159,7 @@ None - no external service configuration required.
 
 **Tags:** Searchable technical keywords (libraries, frameworks, tools) for tech stack awareness.
 
-**Key-files:** Important files for @context references in PLAN.md.
+**Key-files:** Important files for @context references in plan.md.
 
 **Patterns:** Established conventions future phases should maintain.
 

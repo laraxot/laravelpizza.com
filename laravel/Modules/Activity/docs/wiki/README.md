@@ -1,25 +1,18 @@
 ---
-title: Readme
-module: Activity
-type: index
-status: draft
-updated: 2026-10-22
-tags: [docs, activity, wiki]
-qmd: "llm wiki (module) activity"
+title: "LLM Wiki (module)"
+qmd: "activity wiki readme md"
+type: note
+tags: [documentation]
 ---
 
 # LLM Wiki (module)
 
-[![Module](https://img.shields.io/badge/Module-LLM Wiki (module)-8B0000.svg)]()
-[![Laravel](https://img.shields.io/badge/Laravel-13-red?style=for-the-badge)](https://laravel.com/)](https://laravel.com/)
-[![Filament](https://img.shields.io/badge/Filament-5-ffab00?style=for-the-badge)](https://filamentphp.com/)](https://filamentphp.com/)
-[![PHP](https://img.shields.io/badge/PHP-8.4+-777BB4?style=for-the-badge)](https://php.net/)](https://php.net/)
-[![PHP](https://img.shields.io/badge/PHP-8.4+-777BB4?style=for-the-badge)](https://php.net/)](https://phpstan.org/)
-[![PSR-12](https://img.shields.io/badge/Code-PSR--12-blue?style=for-the-badge)](https://www.php-fig.org/psr/psr-12/)](https://www.php-fig.org/psr/psr-12/)
-[![Architecture](https://img.shields.io/badge/Architecture-Modular-purple?style=for-the-badge)](https://martinfowler.com/articles/paradigm-shifts.html)]()
-]()
+This folder is the module's LLM wiki (docs/wiki). Use it to store synthesized, curated docs optimized for LLM ingestion.
 
-> **Core module for the FixCity Platform.**
+Structure:
+- raw/: original source docs
+- wiki/: distilled summaries and canonical pages for LLM
+- archived/: historical/obsolete docs
 
 ## Perché esiste
 
@@ -42,8 +35,6 @@ Core module for the FixCity Platform.
 ---
 
 **Modulo** `Activity` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5
-<<<<<<< .merge_file_w7vaS1
-=======
 
 ---
 
@@ -55,20 +46,32 @@ Pagine brevi e riusabili (concetti, regole, memorie) che completano le story. Mi
 
 ## Da dove partire
 
-- [INDEX.md](./INDEX.md): indice della wiki (catalogo fermo al 2026-06-10, vedi il suo piede di pagina).
+- [index.md](./index.md): indice della wiki (catalogo fermo al 2026-06-10, vedi il suo piede di pagina).
 - [log.md](./log.md): registro datato di cio' che e' cambiato nel modulo e nei suoi docs.
-- Identita' e contenuto reale del modulo: [../README.md](../README.md). Indice operativo di tutta la cartella docs: [../00-INDEX.md](../00-INDEX.md).
-- `00-INDEX.md`, `00-index.md`, `00-index-documentation.md`, `index.md` di questa cartella sono copie marcate `stale`: non vanno aggiornate.
+- Identita' e contenuto reale del modulo: [../README.md](../README.md). Indice operativo di tutta la cartella docs: [../00-index.md](../00-index.md).
+- `00-index.md`, `00-index.md`, `00-index-documentation.md`, `index.md` di questa cartella sono copie marcate `stale`: non vanno aggiornate.
 
 ## Sottocartelle con pagine
 
 | Cartella | File | Indice |
 |---|---|---|
-| `concepts/` | 37 | [concepts/INDEX.md](./concepts/INDEX.md) |
+| `concepts/` | 37 | [concepts/index.md](./concepts/index.md) |
 | `testing/` | 11 | nessuno |
+<<<<<<< HEAD
+| `rules/` | 4 | [rules/index.md](./rules/index.md) |
+| `memories/` | 4 | [memories/index.md](./memories/index.md) |
+| `skills/` | 2 | [skills/index.md](./skills/index.md) |
+=======
+<<<<<<< .merge_file_7d0skJ
 | `rules/` | 4 | [rules/INDEX.md](./rules/INDEX.md) |
 | `memories/` | 4 | [memories/INDEX.md](./memories/INDEX.md) |
-| `skills/` | 2 | [skills/INDEX.md](./skills/INDEX.md) |
+| `skills/` | 2 | [skills/INDEX.md](skills/index.md) |
+=======
+| `rules/` | 4 | [rules/index.md](./rules/index.md) |
+| `memories/` | 4 | [memories/index.md](./memories/index.md) |
+| `skills/` | 2 | [skills/index.md](./skills/index.md) |
+>>>>>>> .merge_file_dyXPoM
+>>>>>>> laraxot/dev
 | `howto/`, `_templates/` | 3 ciascuna | nessuno |
 | `troubleshooting/`, `integrations/`, `features/`, `commands/`, `analysis/` | 2 ciascuna | nessuno |
 | `sources/`, `product/`, `patterns/`, `overviews/`, `how-to/` | 1 ciascuna | nessuno |
@@ -81,5 +84,12 @@ Cartelle previste dal modello ma senza alcun `.md`: `decisions/`, `entities/`, `
 qmd search "Activity <argomento>" --limit 5
 ```
 
+<<<<<<< HEAD
+<<<<<<< .merge_file_qXvYB0
 I documenti sorgente grezzi stanno in `../raw/` (immutabile). Prima di creare una pagina nuova controllare [INDEX.md](./INDEX.md) e le pagine di `concepts/` per non duplicarla.
->>>>>>> .merge_file_2ycT6I
+=======
+I documenti sorgente grezzi stanno in `../raw/` (immutabile). Prima di creare una pagina nuova controllare [index.md](./index.md) e le pagine di `concepts/` per non duplicarla.
+>>>>>>> .merge_file_21hkMH
+=======
+I documenti sorgente grezzi stanno in `../raw/` (immutabile). Prima di creare una pagina nuova controllare [index.md](./index.md) e le pagine di `concepts/` per non duplicarla.
+>>>>>>> laraxot/dev

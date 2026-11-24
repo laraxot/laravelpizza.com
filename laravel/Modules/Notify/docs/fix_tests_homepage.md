@@ -3,12 +3,14 @@ title: "fix tests homepage"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "fix tests homepage"
 issues: []
 discussions: []
-status: superseded
-superseded_by: fix-tests-homepage.md
 ---
 
 # ✅ Fix Applicati - Tests Homepage

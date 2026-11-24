@@ -1,4 +1,4 @@
-# User Module: Analyst Report
+# User Module — Analyst Report
 
 **Date**: 2026-07-09  
 **Analyst**: BMAD Workflow - Analyst Role  
@@ -24,7 +24,7 @@
 
 ## Top Findings (by Severity)
 
-### 1. [CRITICAL] Migration Architecture Violations: 3 Core Files
+### 1. [CRITICAL] Migration Architecture Violations — 3 Core Files
 
 **Severity**: CRITICAL | **Category**: Architecture Compliance  
 **Files Affected**: 3 migrations  
@@ -54,7 +54,7 @@ Migrazioni core usano `extends Migration` + `Schema::create()` invece del patter
 
 ---
 
-### 2. [HIGH] DRY Violations: 100+ hasColumn() Repetitions in Migrations
+### 2. [HIGH] DRY Violations — 100+ hasColumn() Repetitions in Migrations
 
 **Severity**: HIGH | **Category**: Code Quality, Maintainability  
 **Scope**: All migration files with column checking  
@@ -91,7 +91,7 @@ trait UserMigrationHelpers {
 
 ---
 
-### 3. [HIGH] Missing Permission Caching: N+1 Authorization Queries
+### 3. [HIGH] Missing Permission Caching — N+1 Authorization Queries
 
 **Severity**: HIGH | **Category**: Performance  
 **Scope**: OauthAuthCodePolicy, RolePolicy, TeamPolicy, other authorization checks  
@@ -131,7 +131,7 @@ Plus: Invalidate cache on role/permission changes.
 
 ---
 
-### 4. [MEDIUM] Duplicate Interface Implementations: 20+ HasForms Classes
+### 4. [MEDIUM] Duplicate Interface Implementations — 20+ HasForms Classes
 
 **Severity**: MEDIUM | **Category**: Code Quality (DRY)  
 **Scope**: Filament Pages extending XotBasePage  
@@ -158,7 +158,7 @@ Remove redundant interface declarations. Parent class provides full contract.
 
 ---
 
-### 5. [MEDIUM] Duplicate getTableColumns() Methods: 25+ Implementations
+### 5. [MEDIUM] Duplicate getTableColumns() Methods — 25+ Implementations
 
 **Severity**: MEDIUM | **Category**: Code Quality (DRY)  
 **Scope**: Filament Resources and Tables  
@@ -195,7 +195,7 @@ trait HasUserTableColumns {
 
 ---
 
-### 6. [MEDIUM] SOLID Principle Violations: SRP Issues
+### 6. [MEDIUM] SOLID Principle Violations — SRP Issues
 
 **Severity**: MEDIUM | **Category**: Architecture  
 **Problem Types**:
@@ -210,15 +210,15 @@ trait HasUserTableColumns {
 
 **Fix Approach**:
 Extract services:
-- `UserAuthenticationService`: authentication logic
-- `UserPermissionService`: authorization logic  
-- `UserProfileService`: profile management
+- `UserAuthenticationService` — authentication logic
+- `UserPermissionService` — authorization logic  
+- `UserProfileService` — profile management
 
 **Estimate**: 6h (refactoring) + 2h (tests)
 
 ---
 
-### 7. [LOW] KISS Violations: Complex Authentication Logic
+### 7. [LOW] KISS Violations — Complex Authentication Logic
 
 **Severity**: LOW | **Category**: Code Quality  
 **Problem**: Nested conditions in authentication flows  
@@ -228,7 +228,7 @@ Extract services:
 
 ---
 
-### 8. [LOW] Inconsistent Type Hints: Filament 4 Compliance
+### 8. [LOW] Inconsistent Type Hints — Filament 4 Compliance
 
 **Severity**: LOW | **Category**: Type Safety  
 **Problem**: Missing return type hints and parameter types  
@@ -255,27 +255,27 @@ Extract services:
 
 ## Recommended Prioritization
 
-### Phase 1: Critical Path (Days 1-2)
+### Phase 1 — Critical Path (Days 1-2)
 **Effort: 2.5h dev + 0.5h QA**
 
 Fix the 3 critical migration violations to restore architectural compliance.
 
-### Phase 2: High-Impact Performance (Week 1)
+### Phase 2 — High-Impact Performance (Week 1)
 **Effort: 5.5h dev + 1.5h QA**
 
 Implement permission caching to resolve authorization query N+1.
 
-### Phase 3: DRY/Maintainability (Week 1-2)
+### Phase 3 — DRY/Maintainability (Week 1-2)
 **Effort: 10h dev + 2h QA**
 
 Consolidate migration patterns with UserMigrationHelpers trait (handles 100+ duplications).
 
-### Phase 4: Architecture Cleanup (Week 2-3)
+### Phase 4 — Architecture Cleanup (Week 2-3)
 **Effort: 8h dev + 2h QA**
 
 Extract services for SOLID compliance and improve separation of concerns.
 
-### Phase 5: Quality Polish (Week 3)
+### Phase 5 — Quality Polish (Week 3)
 **Effort: 6.5h dev + 1.5h QA**
 
 Remove duplicate interfaces, consolidate table columns, add type hints.

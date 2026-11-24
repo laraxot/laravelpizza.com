@@ -3,11 +3,14 @@ title: "ui link"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "ui link"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Collegamenti al Modulo UI
@@ -22,9 +25,17 @@ Secondo le regole di organizzazione della documentazione:
 
 ## Collegamenti Principali
 
-- [Componenti UI](../../UI/docs/README.md) - Panoramica dei componenti UI disponibili
-- [Componenti Filament](../../UI/docs/filament-components.md) - Componenti personalizzati per Filament
-- [Componenti Blade](../../UI/docs/blade-components.md) - Componenti Blade riutilizzabili
+<<<<<<< HEAD
+- [Componenti UI](../../ui/project_docs/README.md) - Panoramica dei componenti UI disponibili
+=======
+<<<<<<< HEAD
+- [Componenti UI](../../ui/project_docs/readme.md) - Panoramica dei componenti UI disponibili
+=======
+- [Componenti UI](../../ui/project_docs/README.md) - Panoramica dei componenti UI disponibili
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+- [Componenti Filament](../../ui/project_docs/filament-components.md) - Componenti personalizzati per Filament
+- [Componenti Blade](../../ui/project_docs/blade-components.md) - Componenti Blade riutilizzabili
 
 ## Utilizzo dei Componenti UI nel Frontend
 
@@ -36,6 +47,6 @@ Il modulo Cms utilizza i componenti UI definiti nel modulo UI per:
 
 ## Collegamento Bidirezionale
 
-Questo documento è collegato bidirezionalmente con [cms-link.md](../../UI/docs/cms-link.md) nel modulo UI.
+Questo documento è collegato bidirezionalmente con [cms-link.md](../../ui/project_docs/cms-link.md) nel modulo UI.
 
 > Aggiorna entrambi i riferimenti se modifichi l'utilizzo dei componenti UI nel frontend o aggiungi nuove integrazioni.

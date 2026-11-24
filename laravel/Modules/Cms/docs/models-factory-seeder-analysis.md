@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "models factory seeder analysis"
 issues: []
 discussions: []
-status: superseded
-superseded_by: models-factory-seeder.md
 ---
 
 # Analisi Modelli, Factory e Seeder - Modulo CMS
@@ -117,4 +115,12 @@ superseded_by: models-factory-seeder.md
 Il modulo CMS è ben strutturato con tutte le factory necessarie. Un modello (Module) potrebbe necessitare di revisione per verificarne l'effettivo utilizzo.
 
 ---
+title: "models factory seeder analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "models factory seeder analysis"
+issues: []
+discussions: []
 *Analizzato da: Sistema di analisi automatica moduli*

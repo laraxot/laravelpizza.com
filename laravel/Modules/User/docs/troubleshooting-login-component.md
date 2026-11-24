@@ -8,19 +8,14 @@ qmd: "troubleshooting-login-component troubleshooting: login component not found
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Troubleshooting: Login Component Not Found
@@ -38,7 +33,7 @@ Unable to find component: [user::filament.widgets.auth.login-widget] su GET /it/
 **Soluzione:** Usare `Livewire::addComponent($class)` invece di `Livewire::component($alias, $class)`. Il metodo `addComponent` usa hash deterministico (`lw<crc32>`) come nome, compatibile con `@livewire(ClassName::class)`.
 
 ```php
-// ❌ SBAGLIATO: alias :: non funziona in Livewire v4
+// ❌ SBAGLIATO — alias :: non funziona in Livewire v4
 Livewire::component(‘user::filament.widgets.auth.login-widget’, LoginWidget::class);
 
 // ✅ CORRETTO
@@ -167,7 +162,7 @@ Nel modulo User esistono diversi componenti per la gestione del login:
 ```blade
 @livewire(\Modules\User\Filament\Widgets\Auth\LoginWidget::class)
 ```
-NON usare `<livewire:user::filament.widgets.auth.login-widget />` né `@livewire(‘user::...’)`: in Livewire v4 la risoluzione via namespace `::` non funziona con `addComponent`/`component` standard.
+NON usare `<livewire:user::filament.widgets.auth.login-widget />` né `@livewire(‘user::...’)` — in Livewire v4 la risoluzione via namespace `::` non funziona con `addComponent`/`component` standard.
 
 La registrazione in `UserServiceProvider::registerLivewireAuthWidgets()` usa `Livewire::addComponent($class)` (hash-based) che è compatibile con `::class`.
 - **Uso:** Widget riutilizzabile per embedding
@@ -269,7 +264,6 @@ php artisan config:cache  # Solo in produzione
 
 ## Collegamenti
 
-- [Modulo User README](../README.md)
 - [Modulo User README](../README.md)
 - [Modulo Xot Service Provider Architecture](../xot/docs/service-provider-architecture.md)
 - [Filament Filters and Widgets](./filament-filters-and-widgets.md)

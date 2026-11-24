@@ -6,8 +6,11 @@ discussions: []
 title: handoff sessione PHPStan 2026-07-08
 type: chat
 tags: [phpstan, session, lang, job, marker-git, blade-component]
+<<<<<<< HEAD
 updated: 2026-07-08
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Handoff — Sessione PHPStan 2026-07-08
@@ -39,7 +42,15 @@ status: draft
 
 **Metodo**:
 ```bash
+<<<<<<< HEAD
 sed -i '/<<<<<<<\|=======\|>>>>>>>/d' <file>
+=======
+<<<<<<< HEAD
+sed -i '/CONFLICT_START\|-------\|CONFLICT_END/d' <file>
+=======
+sed -i '/<<<<<<<\|=======\|>>>>>>>/d' <file>
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ```
 
 **File toccati**:
@@ -48,7 +59,15 @@ sed -i '/<<<<<<<\|=======\|>>>>>>>/d' <file>
 - `laravel/Modules/Activity/docs/testing-guidelines.md`
 - Tutti i `.md` in Modules (batch cleanup)
 
+<<<<<<< HEAD
 **Esito**: `git grep '^<<<<<<< ' | wc -l` → 0 marker residui
+=======
+<<<<<<< HEAD
+**Esito**: `git grep '^CONFLICT_START ' | wc -l` → 0 marker residui
+=======
+**Esito**: `git grep '^<<<<<<< ' | wc -l` → 0 marker residui
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Aperto / Prossima Sessione
 

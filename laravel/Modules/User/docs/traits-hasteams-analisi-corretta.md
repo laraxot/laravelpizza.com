@@ -1,11 +1,3 @@
----
-title: "Analisi Corretta del Trait HasTeams - Filosofia Laraxot"
-type: note
-status: draft
-updated: 2026-10-13
-tags: [docs, user]
-qmd: "analisi corretta del trait hasteams - filosofia laraxot user"
----
 # Analisi Corretta del Trait HasTeams - Filosofia Laraxot
 
 ## Comprensione della Filosofia `belongsToManyX`
@@ -536,7 +528,6 @@ trait HasTeams
 - [docs/USER_MODULE.md](../../../docs/USER_MODULE.md)
 - [Modules/User/docs/traits.md](traits.md)  
 - [docs/phpstan_fixes.md](../../../../docs/phpstan_fixes.md)
-- [docs/phpstan_fixes.md](../../../../docs/phpstan_fixes.md)
 - [Modules/Xot/docs/RELATION_X.md](../../Xot/docs/RELATION_X.md)
 
 *Ultimo aggiornamento: gennaio 2025* 
@@ -545,14 +536,11 @@ module: theme
 topic: traits-hasteams-analisi-corretta
 canonical: ../../../Themes/docs/shared-components/traits-hasteams-analisi-corretta.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"

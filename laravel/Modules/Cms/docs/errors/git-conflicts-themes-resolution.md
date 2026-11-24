@@ -3,18 +3,29 @@ title: "git conflicts themes resolution"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "git conflicts themes resolution"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Risoluzione Conflitti Git nei Temi
 
 ## Descrizione del Problema
 
+<<<<<<< HEAD
 Durante il processo di sviluppo e merge dei branch, si sono verificati conflitti Git in diversi file del tema Sixteen. Questi conflitti si manifestavano con marcatori `=======`, `<<<<<<<`, e `>>>>>>>` che impedivano il corretto funzionamento del tema.
+=======
+<<<<<<< HEAD
+Durante il processo di sviluppo e merge dei branch, si sono verificati conflitti Git in diversi file del tema Sixteen. Questi conflitti si manifestavano con marcatori `-------`, `CONFLICT_START`, e `CONFLICT_END` che impedivano il corretto funzionamento del tema.
+=======
+Durante il processo di sviluppo e merge dei branch, si sono verificati conflitti Git in diversi file del tema Sixteen. Questi conflitti si manifestavano con marcatori `=======`, `<<<<<<<`, e `>>>>>>>` che impedivano il corretto funzionamento del tema.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## File Interessati
 
@@ -140,7 +151,15 @@ Per ogni file con conflitti:
 
 ```bash
 # Verifica file con conflitti residui
+<<<<<<< HEAD
 find . -name "*.php" -o -name "*.blade.php" | xargs grep -l "======="
+=======
+<<<<<<< HEAD
+find . -name "*.php" -o -name "*.blade.php" | xargs grep -l "-------"
+=======
+find . -name "*.php" -o -name "*.blade.php" | xargs grep -l "======="
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 # Verifica sintassi PHP
 php -l file.php
@@ -195,4 +214,13 @@ php artisan view:clear
 - **2025-01-06**: Standardizzazione sui componenti Bootstrap Italia
 
 ---
+
+title: "git conflicts themes resolution"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "git conflicts themes resolution"
+issues: []
+discussions: []
 *Autore: Sistema di Risoluzione Conflitti Git*

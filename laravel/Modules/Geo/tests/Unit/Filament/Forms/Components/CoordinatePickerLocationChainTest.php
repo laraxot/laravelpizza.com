@@ -58,7 +58,15 @@ test('il codice del picker non contiene coordinate fisse, servizi IP esterni, co
         'app/Filament/Forms/Components/Traits/HasCoordinatePicker.php',
         'config/config.php',
         'resources/views/filament/forms/components/coordinate-picker.blade.php',
+<<<<<<< HEAD
         '../Fixcity/resources/views/filament/forms/components/dc-place-autocomplete.blade.php',
+=======
+<<<<<<< HEAD
+        '../Fixcity/resources/views/filament/forms/components/dc-place-autocomplete.blade.php',
+=======
+        // Il modulo Geo e' condiviso: non verifica file di moduli di altri progetti (es. Fixcity, assente qui).
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
     ];
 
     foreach ($sources as $source) {

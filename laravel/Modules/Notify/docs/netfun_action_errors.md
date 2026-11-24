@@ -3,11 +3,14 @@ title: "netfun action errors"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "netfun action errors"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Errori in SendNetfunSMSAction e Correzioni
@@ -202,4 +205,13 @@ Le correzioni apportate allineano la classe `SendNetfunSMSAction` con:
 Queste correzioni garantiscono che l'azione funzioni correttamente con la configurazione standardizzata e sia più robusta, manutenibile ed estensibile.
 
 ---
+
+title: "netfun action errors"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "netfun action errors"
+issues: []
+discussions: []
 *Ultimo aggiornamento: 2025-05-12*

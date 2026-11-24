@@ -3,38 +3,18 @@ title: "04 FILAMENT PHILOSOPHY"
 type: note
 tags: [documentation]
 created: 2026-09-26
-updated: 2026-09-26
+updated: 2026-11-23
 qmd: "04 FILAMENT PHILOSOPHY"
 issues: []
 discussions: []
-status: superseded
-superseded_by: 04-filament-philosophy.md
 ---
 
 # 🎨 Filament Forms & Tables Philosophy
 
-**Part of**: [00-INDEX.md](00-INDEX.md): AI Agents Coordination  
-**Related**: [03-ARCHITECTURE-ZEN.md](03-ARCHITECTURE-ZEN.md): Architecture
+**Part of**: [00-INDEX.md](00-INDEX.md) — AI Agents Coordination  
+**Related**: [03-ARCHITECTURE-ZEN.md](03-ARCHITECTURE-ZEN.md) — Architecture
 
----
-
-title: "04 FILAMENT PHILOSOPHY"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "04 FILAMENT PHILOSOPHY"
-issues: []
-discussions: []
 ## 🔴 Fundamental Rule
-
-**NEVER create custom forms or tables in blade.**
-
-**ALWAYS use Filament Widgets:**
-- ✅ Form → Filament Form Widget
-- ✅ Table/Grid → Filament Table Widget
-
----
 
 ## 🧠 Philosophy (The WHY)
 

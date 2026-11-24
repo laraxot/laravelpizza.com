@@ -3,12 +3,14 @@ title: "sms channel action resolution"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "sms channel action resolution"
 issues: []
 discussions: []
-status: superseded
-superseded_by: sms-channel-action-resolution.md
 ---
 
 # Dove posizionare la logica di risoluzione dell'action SMS?
@@ -100,4 +102,8 @@ discussions: []
 - Logica nel canale/factory: **85% pro, 15% contro**
 - Logica nel DTO: **20% pro, 80% contro**
 
+<<<<<<< HEAD
 **Motivazione:** Separation of Concerns, testabilità, estendibilità, aderenza alle best practice Laravel e DDD. 
+=======
+**Motivazione:** Separation of Concerns, testabilità, estendibilità, aderenza alle best practice Laravel e DDD.
+>>>>>>> laraxot/dev

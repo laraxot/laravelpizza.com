@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "code quality analysis"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../../../analysis/legacy/code-quality-analysis.md
 ---
 
 # ⚙️ Job Module - Code Quality Analysis Report
@@ -92,5 +90,14 @@ If statement assignments (variable assignment in condition)
 The current analysis is incomplete and only shows partial results from PHPMD before it encountered parsing errors.
 
 ---
+
+title: "code quality analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "code quality analysis"
+issues: []
+discussions: []
 **Report Generated**: 2025-11-11
 **Target Completion**: 2025-11-15

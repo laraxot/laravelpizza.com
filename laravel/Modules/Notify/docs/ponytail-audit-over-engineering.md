@@ -3,7 +3,11 @@ title: "ponytail audit over engineering"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "ponytail audit over engineering"
 issues: []
 discussions: []
@@ -14,7 +18,7 @@ status: stale
 
 # Ponytail audit: Notify (over-engineering)
 
-**Ultimo run:** 2026-07-02  
+**Ultimo run:** 2026-07-02
 **Remediation run #5:** rimozione file inattivi e PHPStan pulito
 
 | # | Azione | Stato |
@@ -25,7 +29,7 @@ status: stale
 |: | PHPStan `Modules/Notify` | ✅ 0 errori |
 |: | Pest `Modules/Notify` | ❌ bloccato da DB MySQL (credenziali `.env.testing` non valide) |
 
-**Ultimo run:** 2026-07-01  
+**Ultimo run:** 2026-07-01
 **Remediation run #4:** consolidamento SMS su driver canonico `smsfactor`
 
 | # | Azione | Stato |
@@ -38,10 +42,10 @@ status: stale
 | N7 | `_bmad/`, `.planning/` sotto Notify | ✅ assenti |
 | N8 | `scheduleNotification`: `SendScheduledPushNotification::dispatch()->delay()` | ✅ (no regressione) |
 
-**Modulo:** notifiche multi-canale.  
-**Hub:** [../../../../docs/audit/ponytail-audit.md](../../../../docs/audit/ponytail-audit.md)  
-**Remediation:** [../../../../docs/project/ponytail-audit-remediation.md](../../../../docs/project/ponytail-audit-remediation.md)  
-**GitHub monorepo:** [Issue #221](https://github.com/laraxot/base_quaeris_fila5/issues) · [Discussion #222](https://github.com/laraxot/base_quaeris_fila5/discussions) · [Discussion #228](https://github.com/laraxot/base_quaeris_fila5/discussions)
+**Modulo:** notifiche multi-canale.
+**Hub:** [../../../../docs/audit/ponytail-audit.md](../../../../docs/audit/ponytail-audit.md)
+**Remediation:** [../../../../docs/project/ponytail-audit-remediation.md](../../../../docs/project/ponytail-audit-remediation.md)
+**GitHub monorepo:** [Issue #221](https://github.com/laraxot/base_<nome progetto>_fila5/issues) · [Discussion #222](https://github.com/laraxot/base_<nome progetto>_fila5/discussions) · [Discussion #228](https://github.com/laraxot/base_<nome progetto>_fila5/discussions)
 
 ## Scopo business
 

@@ -1,5 +1,11 @@
 ---
+<<<<<<< HEAD
+title: "User: marker di conflitto git residui in docs/ (866 file) — pulizia + aggiornamento indice"
+
 title: "User: marker di conflitto git residui in docs/ (866 file): pulizia + aggiornamento indice"
+=======
+title: "User: marker di conflitto git residui in docs/ — pulizia + aggiornamento indice"
+>>>>>>> laraxot/dev
 type: story
 module: User
 epic: null
@@ -8,7 +14,11 @@ slug: docs-merge-conflict-markers-cleanup
 status: done
 cold_gate: null
 created: '2026-09-22'
+<<<<<<< HEAD
 updated: '2026-09-22'
+=======
+updated: '2026-11-23'
+>>>>>>> laraxot/dev
 repository: "git@github.com:provtv/module_user_fila5.git"
 github_issue: "https://github.com/provtv/module_user_fila5/issues/36"
 github_discussion: "https://github.com/provtv/module_user_fila5/discussions/37"
@@ -20,13 +30,38 @@ owned_scope:
   - "laravel/Modules/User/docs/"
 ---
 
+# User: marker di conflitto git residui in docs/ — pulizia + aggiornamento indice
+
+<<<<<<< HEAD
 # User: marker di conflitto git residui in docs/: pulizia + aggiornamento indice
+=======
+<<<<<<< HEAD
+## Coordinamento
+
+- Scope: solo `laravel/Modules/User/docs/**/*.md` (auth, RBAC Spatie, Filament
+  widgets login/register, pattern XotBase — business logic User, non codice PHP).
+- Storia correlata: [user-nested-conflict-marker-cleanup.story.md](./user-nested-conflict-marker-cleanup.story.md)
+  (marker annidati daemon `87273113`/`f548be94`); questa story resta il canone per
+  le ondate di pulizia marker in `docs/`.
+- Sessione 2026-11-23 (docs-guardian): recidiva con **154 file** / ~1409 aperture
+  `<<<<<<<` (quasi tutte annidate `.merge_file_*`). Risoluzione ricorsiva lato
+  più coerente (link lowercase salvo `README.md`, lato non vuoto / più completo).
+  Verifica finale: `/bin/grep -rIln --include='*.md' '^<<<<<<< \|^>>>>>>> \|^=======$'
+  laravel/Modules/User/docs` → **0**. Nessun commit in questa sessione.
+- Fuori scope: consolidamento duplicati case-only (`index.md`/`INDEX.md`,
+  `models/readme.md`/`models/README.md`), codice `app/`, lock intero modulo.
+=======
+# User: marker di conflitto git residui in docs/: pulizia + aggiornamento indice
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Contesto
 
 Story figlia del follow-up second-brain segnalato (ma non eseguito) in
 `uppercase-root-dirs-database-application.story.md`: "`Modules/User/docs/` ha
 rumore evidente da ripulire in una story dedicata". Task delegato con lock
+`laravel/Modules/User:docs` (non l'intero modulo — un'altra sessione lavorava
+
 `laravel/Modules/User:docs` (non l'intero modulo: un'altra sessione lavorava
 in parallelo su `Application/`/`Database/` a root modulo, esplicitamente
 esclusi da questa story).
@@ -40,6 +75,8 @@ stile setext (`Titolo\n=======`). Raffinato in
 `grep -rlE '^<<<<<<< |^>>>>>>> ' docs/` per i candidati, poi verificato con
 un classificatore ad adiacenza in Python: ogni riga `=======` rimasta in
 `docs/` (22 occorrenze totali) è risultata adiacente (riga precedente o
+successiva) a un marker `<<<<<<<`/`>>>>>>> ` — 0 anomalie, nessuna
+
 successiva) a un marker `<<<<<<<`/`>>>>>>> `: 0 anomalie, nessuna
 intestazione genuina scambiata per corruzione.
 
@@ -47,11 +84,15 @@ intestazione genuina scambiata per corruzione.
 nell'inventario storico 2026-04-28 in
 `docs/wiki/troubleshooting/git-merge-conflict-inventory.md`. Causa
 identificata: quell'inventario (stato 2026-07-08, "0 marker") rigenerava la
+lista con `git grep -l '^<<<<<<<'` — cieco ai marker `>>>>>>> ` orfani senza
+
 lista con `git grep -l '^<<<<<<<'`: cieco ai marker `>>>>>>> ` orfani senza
 apertura corrispondente, la classe di corruzione reale qui.
 
 Pattern di corruzione: marker `>>>>>>> <ref> (.)` (varianti `87273113`,
 `2024e2e7`, `60a2c9a9`, `f548be94`, `laraxot/dev`) senza `<<<<<<<` di
+apertura — probabile artefatto di un processo di commit "." precedente che
+
 apertura: probabile artefatto di un processo di commit "." precedente che
 aveva già rimosso l'apertura lasciando `=======`/`>>>>>>> ` orfani a livello
 di riga grezza (confermato presente anche dentro fence di codice, quindi
@@ -65,7 +106,7 @@ branch remoto.
 risolti a mano fondendo senza perdita di informazione:
 
 - 7 casi banali HEAD/dev entrambi vuoti → sola rimozione marker.
-- `docs/wiki/skills/INDEX.md` e `docs/wiki/skills/index.md`: entrambi i lati
+- `docs/wiki/skills/index.md` e `docs/wiki/skills/index.md`: entrambi i lati
   non identici (link a varianti case-diverse dello stesso file) → tenuti
   entrambi i bullet, rimossi solo i marker.
 - `docs/stories/user-passport-create-client-credentials-button.md`: lato
@@ -74,6 +115,8 @@ risolti a mano fondendo senza perdita di informazione:
   frammento HEAD superato.
 
 **856 file di rumore orfano puro**, risolti con script Python deterministico
+(non manuale — scala incompatibile con revisione per-file):
+
 (non manuale: scala incompatibile con revisione per-file):
 
 1. Rimuove ogni riga che combacia con `^<<<<<<< .*$` o `^>>>>>>> .*$`.
@@ -82,12 +125,16 @@ risolti a mano fondendo senza perdita di informazione:
 3. Dopo la rimozione, collassa una riga duplicata immediatamente adiacente
    **solo se** una riga è stata rimossa fra le due occorrenze identiche
    (pattern "riga di chiusura duplicata attorno al divisore a fine
+   documento" — es. `docs/xotbasemigration-laraxot.md`: la stessa riga
+
    documento": es. `docs/xotbasemigration-laraxot.md`: la stessa riga
    `**Ricorda: XotBaseMigration è Dio. Non deviare.**` appariva prima e dopo
    il blocco di marker).
 
 Risultato: 1384 righe marker rimosse, 68 righe duplicate collassate (48
 righe vuote coincidentali, 20 cluster di contenuto reale duplicato attorno
+al divisore — verificati a campione, nessun caso di contenuto legittimamente
+
 al divisore: verificati a campione, nessun caso di contenuto legittimamente
 ripetuto per enfasi scambiato per corruzione).
 
@@ -102,15 +149,19 @@ marker residui in tutti, script non li ha ritoccati.
 
 ## Root-md-files e index
 
-`docs/root-md-files/*.md` (7 file: changelog.md + 2 varianti numerate,
+`docs/root-md-files/*.md` (7 file: CHANGELOG.md + 2 varianti numerate,
 git-reset.md + 1 variante, pest-test-report.md, philosophy.md) verificato
+pulito — nessun artefatto tipo `(.)` a fine riga, nessuna intestazione H1
+
 pulito: nessun artefatto tipo `(.)` a fine riga, nessuna intestazione H1
 duplicata.
 
 `docs/index.md` (indice auto-generato, 3419 righe) aveva la sezione
 `## root-md-files` disallineata: elencava solo 2 dei 7 file `.md` presenti
-(`git-reset.md`, `pest-test-report.md`), mancavano `changelog.md`,
+(`git-reset.md`, `pest-test-report.md`), mancavano `CHANGELOG.md`,
 `changelog-1.md`, `changelog-2.md`, `git-reset-1.md`, `philosophy.md`.
+Corretta chirurgicamente (solo quella sezione, non rigenerazione completa —
+
 Corretta chirurgicamente (solo quella sezione, non rigenerazione completa -
 fuori scope per questa story).
 
@@ -120,8 +171,10 @@ riferimento stale a path root-modulo rimossi (`PHILOSOPHY.md`,
 
 ## Esclusioni deliberate
 
-- Duplicati case-only (`INDEX.md`/`index.md`, `00-INDEX.md`/`00-index.md`,
+- Duplicati case-only (`index.md`/`index.md`, `00-index.md`/`00-index.md`,
   ecc.): problema noto e già tracciato in `docs/case-conflicts.md`
+  (issue #124, discussion #1). Non consolidato qui — richiede aggiornamento
+
   (issue #124, discussion #1). Non consolidato qui: richiede aggiornamento
   riferimenti a livello di progetto, story separata.
 - `Application/`/`Database/` a root modulo: riservato all'altra sessione
@@ -129,6 +182,8 @@ riferimento stale a path root-modulo rimossi (`PHILOSOPHY.md`,
 - Un file (`docs/stories/uppercase-root-dirs-database-application.story.md`)
   è stato trovato modificato in working tree da quella sessione parallela
   durante l'esecuzione di questa story (status `blocked` → `done` + nota
+  finale) — **escluso esplicitamente** dallo staging di questo commit
+
   finale): **escluso esplicitamente** dallo staging di questo commit
   (verificato via parsing del diff: unica modifica fra 867 file con
   inserimenti non riconducibili allo script di pulizia marker).
@@ -144,5 +199,20 @@ di rilevazione (`grep -rlE '^<<<<<<< |^=======$|^>>>>>>> '` al posto di
 
 Lock `laravel/Modules/User:docs` acquisito e rilasciato correttamente
 (scope limitato a `docs/`, non l'intero modulo). Commit unico, 867 file
+(`git add` con lista esplicita di path, mai `-A` — repo con ~5000
+modifiche non correlate di altre sessioni in corso).
+
+<<<<<<< HEAD
+(`git add` con lista esplicita di path, mai `-A`: repo con ~5000
+=======
+<<<<<<< HEAD
+## Follow-up 2026-11-23
+
+Ondata marker annidati ripulita in-place su 154 file `docs/` (vedi
+[Coordinamento](#coordinamento)). Residual markers: 0. Duplicati case-only e
+indice monolitico `INDEX.md` non consolidati (scope separato).
+=======
 (`git add` con lista esplicita di path, mai `-A`: repo con ~5000
 modifiche non correlate di altre sessioni in corso).
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

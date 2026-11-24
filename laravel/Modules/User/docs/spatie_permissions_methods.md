@@ -1,11 +1,3 @@
----
-title: "User Module - Spatie Permission Methods Reference"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "user module - spatie permission methods reference user"
----
 # User Module - Spatie Permission Methods Reference
 
 ## Overview
@@ -482,7 +474,7 @@ $user->assignRole(Role::findByName('admin', 'web'));
 
 - **Official Docs**: https://spatie.be/docs/laravel-permission/
 - **GitHub**: https://github.com/spatie/laravel-permission
-- **Changelog**: https://github.com/spatie/laravel-permission/blob/main/changelog.md
+- **Changelog**: https://github.com/spatie/laravel-permission/blob/main/CHANGELOG.md
 
 - **Changelog**: https://github.com/spatie/laravel-permission/blob/main/CHANGELOG.md
 

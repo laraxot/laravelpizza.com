@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "original"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Frontend e Sistema di Componenti
@@ -74,5 +73,5 @@ La homepage del sito è costruita utilizzando un sistema di componenti modulare 
 3. Verificare la struttura JSON
 
 ## Collegamenti
-- [Componenti UI](../components.md)
+- [Componenti UI](../ui/docs/components.md)
 - [Documentazione Core](../xot/docs/documentation.md)

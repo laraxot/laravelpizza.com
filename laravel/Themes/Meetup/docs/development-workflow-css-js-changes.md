@@ -1,11 +1,16 @@
 # Workflow Sviluppo - Modifiche CSS/JS
 
+> **Aggiornato il 2026-11-12 — `npm run copy` non esiste più.** `public_html/themes/<Tema>` è un symlink a
+> `laravel/Themes/<Tema>/public` e `public_html/assets/<modulo>` a `laravel/Modules/<Modulo>/public`: dopo
+> `npm run build` il sito vede già la build. Le istruzioni di copia qui sotto sono storiche. Regola e motivi:
+> [public-html-symlink-assets.md](/laravel/Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md).
+
 ## Data
 [DATE]
 
 ## ⚠️ REGOLA CRITICA
 
-**OGNI VOLTA che modifichi file CSS (`resources/css/app.css`) o JavaScript (`resources/js/app.js`), DEVI eseguire `npm run build` per vedere le modifiche nel browser.**
+**OGNI VOLTA che modifichi file CSS (`resources/css/app.css`) o JavaScript (`resources/js/app.js`), DEVI eseguire `npm run build && npm run copy` per vedere le modifiche nel browser.**
 
 ## Perché?
 
@@ -41,7 +46,7 @@ Dopo la compilazione, gli asset devono essere copiati nella directory pubblica:
 2. **Build e Copy** (OBBLIGATORIO):
    ```bash
    cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
-   npm run build
+   npm run build && npm run copy
    ```
 
 3. **Verifica nel browser**:
@@ -54,7 +59,7 @@ Dopo la compilazione, gli asset devono essere copiati nella directory pubblica:
 
 ```bash
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
-npm run build
+npm run build && npm run copy
 ```
 
 **Cosa fa**:
@@ -65,7 +70,7 @@ npm run build
    - Genera `public/assets/app-[hash].js`
    - Genera `public/manifest.json`
 
-2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+2. `npm run copy`:
    - Copia `public/*` → `public_html/themes/Meetup/`
    - Rende gli asset accessibili via web
 
@@ -79,7 +84,7 @@ npm run dev
 **Cosa fa**:
 - Avvia Vite dev server con hot reload
 - Le modifiche CSS/JS sono visibili automaticamente
-- niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+- **NON serve** `npm run copy` in dev mode
 
 **Nota**: In dev mode, Vite serve gli asset direttamente, non dalla directory pubblica.
 
@@ -149,7 +154,7 @@ ls public/assets/app-*.css
 **Soluzione**:
 ```bash
 # 1. Esegui build e copy
-npm run build
+npm run build && npm run copy
 
 # 2. Pulisci cache browser (Ctrl+Shift+R)
 
@@ -170,7 +175,7 @@ ls -la public_html/themes/Meetup/
 mkdir -p public_html/themes/Meetup
 
 # 3. Esegui copy
-# niente copy: public_html/themes/Meetup è un symlink a public/
+npm run copy
 
 # 4. Verifica
 ls -la public_html/themes/Meetup/assets/
@@ -183,7 +188,7 @@ ls -la public_html/themes/Meetup/assets/
 **Soluzione**:
 ```bash
 # 1. Ricompila
-npm run build
+npm run build && npm run copy
 
 # 2. Pulisci cache Laravel
 cd /var/www/_bases/base_laravelpizza/laravel
@@ -200,7 +205,7 @@ php artisan optimize:clear
 3. ✅ **Usare hard refresh per pulire cache**
 4. ✅ **Verificare che gli asset siano stati copiati**
 5. ✅ **Usare `npm run dev` durante sviluppo attivo** (hot reload)
-6. ✅ **Usare `npm run build` prima di testare in produzione**
+6. ✅ **Usare `npm run build && npm run copy` prima di testare in produzione**
 
 ## Script Helper (Opzionale)
 
@@ -210,7 +215,7 @@ Puoi creare uno script helper per automatizzare:
 #!/bin/bash
 # build-and-test.sh
 cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
-npm run build
+npm run build && npm run copy
 echo "✅ Build e copy completati! Apri http://127.0.0.1:8000/it"
 ```
 

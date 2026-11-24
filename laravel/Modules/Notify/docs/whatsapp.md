@@ -3,11 +3,14 @@ title: "whatsapp"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "whatsapp"
 issues: []
 discussions: []
-status: draft
 ---
 
 https://levelup.gitconnected.com/how-to-send-whatsapp-messages-with-laravel-ed6426b4be96

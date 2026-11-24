@@ -1,7 +1,4 @@
 ---
-qmd: "phpstan fixes"
-issues: []
-discussions: []
 title: "PHPStan Fixes 2026-05-06"
 type: troubleshooting
 sources: ["phpstan_modules_initial.json"]
@@ -9,7 +6,6 @@ confidence: verified
 created: 2026-05-06
 updated: 2026-05-06
 tags: [phpstan, tenant, trait, sushi]
-status: draft
 ---
 
 # PHPStan Fixes - 2026-05-06

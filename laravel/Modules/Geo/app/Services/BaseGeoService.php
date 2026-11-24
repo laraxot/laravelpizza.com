@@ -40,6 +40,15 @@ abstract class BaseGeoService
     /**
      * Esegue una richiesta HTTP con rate limiting, cache e retry.
      *
+<<<<<<< HEAD
+     * @param  string  $method  Metodo HTTP (GET, POST, etc.)
+     * @param  string  $url  URL della richiesta
+     * @param  array<string, mixed>  $params  Parametri della richiesta
+     * @param  bool  $useCache  Se utilizzare la cache
+     * @return array<string, mixed>
+     *
+     * @throws \RuntimeException Se la richiesta fallisce
+=======
      * @param string               $method   Metodo HTTP (GET, POST, etc.)
      * @param string               $url      URL della richiesta
      * @param array<string, mixed> $params   Parametri della richiesta
@@ -48,6 +57,7 @@ abstract class BaseGeoService
      * @throws \RuntimeException Se la richiesta fallisce
      *
      * @return array<string, mixed>
+>>>>>>> laraxot/dev
      */
     protected function makeRequest(string $method, string $url, array $params = [], bool $useCache = true): array
     {
@@ -56,7 +66,11 @@ abstract class BaseGeoService
         if ($useCache && config('geo.cache.enabled')) {
             /** @var array<string, mixed>|null $cached */
             $cached = Cache::get($cacheKey);
+<<<<<<< HEAD
+            if ($cached !== null) {
+=======
             if (null !== $cached) {
+>>>>>>> laraxot/dev
                 return $cached;
             }
         }
@@ -128,9 +142,15 @@ abstract class BaseGeoService
     /**
      * Genera una chiave di cache per la richiesta.
      *
+<<<<<<< HEAD
+     * @param  string  $method  Metodo HTTP
+     * @param  string  $url  URL della richiesta
+     * @param  array<string, mixed>  $params  Parametri della richiesta
+=======
      * @param string               $method Metodo HTTP
      * @param string               $url    URL della richiesta
      * @param array<string, mixed> $params Parametri della richiesta
+>>>>>>> laraxot/dev
      */
     protected function getCacheKey(string $method, string $url, array $params): string
     {

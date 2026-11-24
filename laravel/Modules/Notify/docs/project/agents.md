@@ -3,13 +3,16 @@ title: "Agent instructions"
 type: reference
 tags: [agents, coding-agent, llm-wiki]
 created: 2026-07-01
+<<<<<<< HEAD
 updated: 2026-07-01
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "istruzioni agenti LLM wiki modulo"
 issues: []
 discussions: []
 related:
   - ./coding-agent-manifests.md
-status: draft
 ---
 
 # FixCity Platform - AGENTS.md
@@ -28,12 +31,12 @@ This file contains comprehensive guidelines and commands for AI agents working o
 - **NEVER** create Controllers
 - **ALWAYS** use: Volt, Folio, Filament, Laraxot
 
-### VIEW PATTERN: view-string + viewParams
+### VIEW PATTERN — view-string + viewParams
 - Per view(): variabile con @phpstan-var view-string, $viewParams = [] esplicito
 - return view($viewName, $viewParams)
 - Logica: type safety, estensibilità, consistenza. Vedi docs/view-pattern.md
 
-### PHPMD e PHPInsights: SOLO .phar
+### PHPMD e PHPInsights — SOLO .phar
 - **NON** installare con Composer
 - Usare .phar: `php phpmd.phar`, `php phpinsights.phar`
 - Logica: indipendenza, portabilità, leggerezza. Vedi docs/quality-tools-setup.md
@@ -125,7 +128,7 @@ This file contains comprehensive guidelines and commands for AI agents working o
   - `GITHUB_TOKEN`: Automatico (opzionale, fallback)
 - **Subtrees Synced**: 18+ (bashscripts, modules, etc.)
 - **Docs**: `bashscripts/docs/git/sync-remote-repo-guide.md`
-- **Coordination**: `bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md`
+- **Coordination**: `bashscripts/docs/git/sync_remote_repo_coordination.md`
 
 #### Sync Subtrees Workflow
 
@@ -171,7 +174,7 @@ bashscripts/git/subtrees/sync_remote_repo.sh laraxot
 **CRITICAL**: Multiple AI agents may work on this script simultaneously.
 
 **BEFORE Making Changes**:
-1. Read coordination log: `bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md`
+1. Read coordination log: `bashscripts/docs/git/sync_remote_repo_coordination.md`
 2. Check GitHub Issues: `gh issue list --repo laraxot/bashscripts_fila5`
 3. Add your entry to coordination log
 4. Create feature branch (never work on `dev` directly)
@@ -190,10 +193,10 @@ bashscripts/git/subtrees/sync_remote_repo.sh laraxot
 **Lock File Protocol**:
 ```bash
 # Create lock (exclusive work)
-echo "Agent-XYZ-$(date -I)" > bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md.lock
+echo "Agent-XYZ-$(date -I)" > bashscripts/docs/git/sync_remote_repo_coordination.md.lock
 
 # Remove lock
-rm bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md.lock
+rm bashscripts/docs/git/sync_remote_repo_coordination.md.lock
 ```
 
 **Agent Teams**:
@@ -202,7 +205,7 @@ rm bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md.lock
 - **Documentation**: Guides, examples
 - **Testing**: Validation, edge cases
 
-**See**: `bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md` for complete coordination guidelines
+**See**: `bashscripts/docs/git/sync_remote_repo_coordination.md` for complete coordination guidelines
 
 ## 🚀 BUILD/LINT/TEST COMMANDS
 
@@ -1696,9 +1699,6 @@ gh run list --limit 10
 - **[docs/MULTI_AGENT_COLLABORATION.md](docs/MULTI_AGENT_COLLABORATION.md)** - Complete guide
 - **[Issue #12](https://github.com/laraxot/base_fixcity_fila5/issues/12)** - AI Agent Collaboration
 - **[docs/AI_AGENT_TEAMS.md](docs/AI_AGENT_TEAMS.md)** - Team organization
-- **[docs/MULTI_AGENT_COLLABORATION.md](../MULTI_AGENT_COLLABORATION.md)** - Complete guide
-- **[Issue #12](https://github.com/laraxot/base_fixcity_fila5/issues/12)** - AI Agent Collaboration
-- **[docs/AI_AGENT_TEAMS.md](../AI_AGENT_TEAMS.md)** - Team organization
 
 ### Success Story: 2026-03-13 Sync Fix
 
@@ -1795,13 +1795,6 @@ git push origin dev
 - [Master Documentation Index](docs/MASTER_DOCUMENTATION_INDEX.md)
 - [Documentation Governance](docs/DOCUMENTATION_GOVERNANCE.md)
 - [Documentation Improvement Plan](docs/DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md)
-**REFERENCE**: [Git Commit & Push Rule](../GIT_COMMIT_PUSH_RULE.md)
-
-### Documentation Resources
-
-- [Master Documentation Index](../MASTER_DOCUMENTATION_INDEX.md)
-- [Documentation Governance](../DOCUMENTATION_GOVERNANCE.md)
-- [Documentation Improvement Plan](../DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md)
 
 ---
 

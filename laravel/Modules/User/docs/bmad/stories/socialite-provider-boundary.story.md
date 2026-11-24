@@ -9,8 +9,6 @@ related:
   - ../socialite-provider-boundary-product-brief.md
   - ../socialite-provider-boundary-prd.md
   - ../socialite-provider-boundary-architecture.md
-tags: [docs, user, bmad]
-qmd: "story: move socialite config to socialiteserviceprovider user"
 ---
 
 # Story: move Socialite config to SocialiteServiceProvider

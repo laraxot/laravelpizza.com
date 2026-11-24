@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "summary"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Riepilogo Analisi PHPStan - Modulo Activity

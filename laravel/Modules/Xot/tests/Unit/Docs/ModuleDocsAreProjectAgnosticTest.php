@@ -33,7 +33,7 @@ uses(TestCase::class);
  */
 function hostProjectNames(): array
 {
-    return ['fixcity', 'quaeris'];
+    return ['fixcity', '<nome progetto>'];
 }
 
 /**

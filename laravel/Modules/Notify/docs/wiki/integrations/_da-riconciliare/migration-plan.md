@@ -1,14 +1,17 @@
 ---
-qmd: "migration plan"
+qmd: "Migration Plan"
 issues: []
 discussions: []
-title: "Documentation Agnostic Migration Plan"
+title: "Migration Plan"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Documentation Agnostic Migration Plan

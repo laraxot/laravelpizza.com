@@ -8,7 +8,7 @@ return [
         'plural' => 'Mappe',
         'group' => [
             'name' => 'Geo',
-            'description' => 'Gestione e visualizzazione delle mappe',
+            'description' => 'Manage and view maps',
         ],
         'label' => 'Mappe',
         'sort' => '33',
@@ -16,13 +16,13 @@ return [
     ],
     'fields' => [
         'title' => [
-            'label' => 'Titolo',
+            'label' => 'Title',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'type' => [
-            'label' => 'Tipo Mappa',
+            'label' => 'Map Type',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -78,10 +78,10 @@ return [
         'layers' => 'Livelli',
     ],
     'actions' => [
-        'add_marker' => 'Aggiungi Marcatore',
+        'add_marker' => 'Add Marker',
         'draw_polygon' => 'Disegna Poligono',
         'measure_distance' => 'Misura Distanza',
-        'export' => 'Esporta',
+        'export' => 'Export',
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',

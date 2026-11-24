@@ -1,16 +1,16 @@
----
-title: "Collisioni di nome per sola differenza di maiuscole"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "collisioni di nome per sola differenza di maiuscole user"
----
 # Collisioni di nome per sola differenza di maiuscole
 
 **Misurato**: 2026-08-31
 **Regola violata**: `no-case-variations`, `case_sensitive_naming_critical`
+<<<<<<< HEAD
 **Quadro generale**: [Modules/Xot/docs/stato-qualita-progetto-2026-08-31.md](../../Xot/docs/stato-qualita-progetto-2026-08-31.md)
+=======
+<<<<<<< HEAD
+**Quadro generale**: [Modules/Xot/docs/stato-qualita-progetto-2026-08-31.md](../../Xot/docs/stato-qualita-progetto-2026-08-31.md)
+=======
+**Quadro generale**: [Modules/Xot/docs/stato-qualita-progetto-2026-08-31.md](../../Xot/docs/stato-qualita-progetto.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Il problema
 

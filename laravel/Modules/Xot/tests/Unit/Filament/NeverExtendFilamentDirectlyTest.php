@@ -138,10 +138,32 @@ test('nessuna classe nuova estende Filament al posto della sua XotBase', functio
     );
 });
 
-test('il tetto resta allineato al debito, cosi la guardia continua a misurare', function (): void {
+/*
+ * Con il tetto a zero il debito non puo' piu' scendere: il rischio residuo e' una
+ * guardia cieca. Se la scansione non trovasse piu' i file Filament dei moduli
+ * (percorso cambiato, filtro sbagliato), il test sopra passerebbe a vuoto.
+ */
+test('la guardia vede davvero le classi Filament dei moduli', function (): void {
+    $scanned = 0;
+    $iterator = new \RecursiveIteratorIterator(
+        new \RecursiveDirectoryIterator(base_path('Modules'), \FilesystemIterator::SKIP_DOTS)
+    );
+
+    foreach ($iterator as $fileInfo) {
+        if (! $fileInfo instanceof \SplFileInfo || $fileInfo->getExtension() !== 'php') {
+            continue;
+        }
+
+        $path = $fileInfo->getPathname();
+
+        if (str_contains($path, '/Filament/') && ! str_contains($path, '/vendor/')) {
+            $scanned++;
+        }
+    }
+
     Assert::assertGreaterThan(
-        FILAMENT_DIRECT_EXTENDS_BASELINE - 10,
-        count(classesExtendingFilamentDirectly()),
-        'Sono stati bonificati piu\' di 10 file: abbassa FILAMENT_DIRECT_EXTENDS_BASELINE al numero attuale.'
+        0,
+        $scanned,
+        'Nessun file in Modules/*/Filament: la guardia sulle XotBase non sta misurando niente.'
     );
 });

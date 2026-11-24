@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "bashscripts script location"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Bashscripts Script Location

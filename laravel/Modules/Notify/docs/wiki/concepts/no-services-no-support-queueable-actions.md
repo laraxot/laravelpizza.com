@@ -1,12 +1,16 @@
 ---
 issues: []
 discussions: []
-title: "No Services / No Support: QueueableAction only"
+title: "No Services / No Support — QueueableAction only"
 type: concept
 module: Notify
 tags: [notify, services, support, actions, queueable-action, migration]
 created: 2026-07-13
+<<<<<<< HEAD
 updated: 2026-07-13
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "Notify module Services and Support banned use app Actions QueueableAction policy"
 related:
   - "./claude-audit-static.md"
@@ -17,10 +21,9 @@ related:
   - "./llm-wiki-governance.md"
   - "./method-name-homonyms.md"
   - "./module-root-uppercase-folders-archive.md"
-status: draft
 ---
 
-# Notify: Services/Support vietati: solo Actions
+# Notify — Services/Support vietati: solo Actions
 
 ## Regola
 

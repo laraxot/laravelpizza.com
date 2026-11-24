@@ -3,11 +3,14 @@ title: "quality dashboard"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "quality dashboard"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 📊 Quality Dashboard - FixCity Project
@@ -17,6 +20,15 @@ status: draft
 **Status:** 🟢 Excellent
 
 ---
+
+title: "quality dashboard"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "quality dashboard"
+issues: []
+discussions: []
 ## 🎯 Overall Quality Score: **94.5%** (A+)
 
 ```
@@ -289,11 +301,11 @@ Overall Progress: ████████████████████�
 
 ## 🔗 Related Resources
 
-- [Architecture Documentation](./ARCHITECTURE.md)
 - [Architecture Documentation](./architecture.md)
-- [Contributing Guidelines](../CONTRIBUTING.md)
+- [Architecture Documentation](./architecture.md)
+- [Contributing Guidelines](../contributing.md)
 - [Testing Strategy](../Modules/Xot/docs/testing/testing-strategy.md)
-- [Refactoring Reports](./FINAL_REFACTORING_REPORT.md)
+- [Refactoring Reports](./final_refactoring_report.md)
 
 ---
 

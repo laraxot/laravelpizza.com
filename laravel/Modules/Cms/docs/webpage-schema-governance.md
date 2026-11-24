@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "webpage schema governance"
 issues: []
 discussions: []
-status: draft
 ---
 
 # WebPage Schema Governance

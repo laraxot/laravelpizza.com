@@ -3,11 +3,14 @@ title: "kilo configuration"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "kilo configuration"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Kilo Configuration Guide
@@ -370,10 +373,17 @@ kilo chat --model "google/gemini-2.5-pro"
 - [BMAD Integration](docs/project/bmad-gsd-ralph-integration.md)
 - [NotebookLM Integration](docs/project/notebooklm-integration.md)
 - [OpenViking Integration](docs/openviking-integration.md)
-- [NotebookLM Integration](notebooklm-integration.md)
-- [OpenViking Integration](../openviking-integration.md)
 
 ---
+
+title: "kilo configuration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "kilo configuration"
+issues: []
+discussions: []
 **Last Updated**: 2026-03-30  
 **Configuration Version**: 1.0.0  
 **Status**: ✅ Active

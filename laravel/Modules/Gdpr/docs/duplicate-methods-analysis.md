@@ -1,6 +1,16 @@
+---
+title: "duplicate methods analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "duplicate methods analysis"
+issues: []
+discussions: []
+---
+
 # Analisi Metodi Duplicati - Modulo Gdpr
 
-**Data Generazione**: 2025-10-15 06:41:17
 **Totale Gruppi di Duplicati**:
 
 ## Sommario Esecutivo
@@ -157,6 +167,14 @@ protected function casts(): array
 
 ---
 
+title: "duplicate methods analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "duplicate methods analysis"
+issues: []
+discussions: []
 ---
 
 ## Legenda

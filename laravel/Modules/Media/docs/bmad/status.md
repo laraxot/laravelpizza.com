@@ -1,4 +1,5 @@
 ---
+qmd: "media bmad status md"
 bmad_id: MEDIA-status
 domain: media-module
 version: 1.0.0
@@ -6,12 +7,9 @@ status: active
 tags: [media, docs]
 created: 2026-10-06
 updated: 2026-10-06
-title: "BMAD Status: Media (2026-10-06)"
-type: note
-qmd: "bmad status   media (2026-10-06) media"
 ---
 
-# BMAD Status: Media (2026-10-06)
+# BMAD Status — Media (2026-10-06)
 
 ## Inventario docs
 - `docs/`: architecture.md, bmad/, concepts/, contracts/, development/, epics/, filament/, html2pdf/, llm-wiki/, outputs/, performance/, prompts/, raw/, readme.md, roadmap/, stories/, relation_managers/, resources/, competitors.md.

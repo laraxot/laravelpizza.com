@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "footer ui ux correction sumy"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Footer UI/UX Correction Summary - [DATE]

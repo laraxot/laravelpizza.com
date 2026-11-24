@@ -3,6 +3,23 @@
 declare(strict_types=1);
 
 return [
+<<<<<<< HEAD
+=======
+    'fields' => [
+        'id' => [
+            'label' => 'ID',
+        ],
+        'email' => [
+            'label' => 'E-mail',
+        ],
+        'token' => [
+            'label' => 'Token',
+        ],
+        'created_at' => [
+            'label' => 'Creato il',
+        ],
+    ],
+>>>>>>> laraxot/dev
     'actions' => [
         'create' => [
             'icon' => 'create',
@@ -20,4 +37,21 @@ return [
             'icon' => 'edit',
         ],
     ],
+<<<<<<< HEAD
+    'fields' => [
+        'id' => [
+            'label' => 'ID',
+        ],
+        'email' => [
+            'label' => 'E-mail',
+        ],
+        'token' => [
+            'label' => 'Token',
+        ],
+        'created_at' => [
+            'label' => 'Creato il',
+        ],
+    ],
+=======
+>>>>>>> laraxot/dev
 ];

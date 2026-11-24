@@ -3,7 +3,11 @@ title: "xotbaseresourcetable model audit notify batch.story"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "xotbaseresourcetable model audit notify batch.story"
 issues: []
 discussions: []
@@ -66,7 +70,7 @@ protected static string $model = NotificationLog::class;
 Verifica con `php artisan tinker` (sola lettura:
 `Schema::connection($model->getConnectionName())->getColumnListing($model->getTable())`). Connessioni
 usate dai model Notify: `notify` per Contact/MailTemplate/NotificationLog/NotificationTemplate/NotifyTheme
-(database fisico `quaeris_data`), `xot` per `Notification`.
+(database fisico `<nome progetto>_data`), `xot` per `Notification`.
 
 ### Contact: tabella `contacts`, connessione `notify`
 
@@ -84,13 +88,13 @@ deleted_at, deleted_by`.
   `2026_06_11_180000_create_notify_contacts_table.php` **definiscono esplicitamente** queste 4 colonne
   dentro `tableCreate()` (`$table->string('contact_type')`, `$table->string('value')`,
   `$table->integer('user_id')`, `$table->timestamp('verified_at')`), pattern `XotBaseMigration` in cui
-  `tableCreate()` e' no-op se la tabella esiste gia'. Il DB locale `quaeris_data` ha evidentemente una
+  `tableCreate()` e' no-op se la tabella esiste gia'. Il DB locale `<nome progetto>_data` ha evidentemente una
   tabella `contacts` pre-esistente (schema stile "survey participants": `email`, `mobile_phone`,
   `survey_pdf_id`, `language`, `survey_id`, nessuna colonna `model_type`/`model_id` polimorfica) mai
   passata dalla `tableCreate()` di queste migration, quindi le 4 colonne non sono mai state aggiunte in
   questo ambiente. E' un disallineamento migration/ambiente locale, non un errore nel codice della Table
   o un campo mai esistito: **nessuna azione sul codice**, segnalazione per chi gestisce l'ambiente/i seed
-  di `quaeris_data`. Nessun comando di migrazione eseguito.
+  di `<nome progetto>_data`. Nessun comando di migrazione eseguito.
 
 ### MailTemplate: tabella `mail_templates`, connessione `notify`
 
@@ -316,7 +320,7 @@ repos/laraxot/module_notify_fila5/issues/67/comments -f body=...` (REST, stesso 
 ## Perche' niente `github_issue`/`epic`/`story_id` (parte originale del batch)
 
 Batch di audit meccanico trasversale a piu' moduli, assegnato direttamente (non tramite epic/PRD di
-prodotto in `docs/planning-artifacts/epics.md`, che copre solo Epic 1-3 Quaeris). Coerente con la stessa
+prodotto in `docs/planning-artifacts/epics.md`, che copre solo Epic 1-3 <nome progetto>). Coerente con la stessa
 convenzione gia' adottata dal batch gemello `Gdpr`
 (`Modules/Gdpr/docs/stories/xotbaseresourcetable-model-audit-gdpr-batch.story.md`). Accesso GitHub MCP
 non disponibile in questa sessione (`gh`/MCP github: errore di autenticazione), quindi nessuna

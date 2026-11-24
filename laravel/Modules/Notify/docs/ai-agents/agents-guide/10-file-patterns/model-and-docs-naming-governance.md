@@ -3,11 +3,14 @@ title: "model and docs naming governance"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "model and docs naming governance"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Model And Docs Naming Governance

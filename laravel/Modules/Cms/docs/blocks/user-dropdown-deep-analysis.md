@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "user dropdown deep analysis"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi Approfondita del Componente User Dropdown

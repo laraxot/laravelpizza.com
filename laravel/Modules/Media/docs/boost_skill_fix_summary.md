@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "boost skill fix summary"
 related:
   - "./webm.md"
-status: superseded
-superseded_by: boost-skill-fix-summary.md
 ---
 # Boost Skill Fix Summary - Media Module
 

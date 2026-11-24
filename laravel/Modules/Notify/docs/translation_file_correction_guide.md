@@ -3,7 +3,11 @@ title: "translation file correction guide"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "translation file correction guide"
 issues: []
 discussions: []
@@ -33,7 +37,7 @@ Se il file ha un nome non conforme:
 # 1. Creare un nuovo file con il nome corretto
 touch /var/www/html/<nome progetto>/laravel/Modules/Notify/lang/it/nome_corretto.php
 touch /var/www/html/saluteora/laravel/Modules/Notify/lang/it/nome_corretto.php
-touch /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/nome_corretto.php
+touch /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Notify/lang/it/nome_corretto.php
 
 # 2. Copiare e correggere il contenuto
 
@@ -48,10 +52,10 @@ grep -r "nome_errato" /var/www/html/saluteora/laravel/Modules/Notify
 
 # 4. Rimuovere il file con naming errato
 rm /var/www/html/saluteora/laravel/Modules/Notify/lang/it/nome_errato.php
-grep -r "nome_errato" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify
+grep -r "nome_errato" /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Notify
 
 # 4. Rimuovere il file con naming errato
-rm /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/nome_errato.php
+rm /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Notify/lang/it/nome_errato.php
 ```
 
 ## Passo 3: Correzione della Struttura del File
@@ -100,7 +104,7 @@ Dopo aver corretto un file in italiano, verificare e aggiornare la versione ingl
 # 1. Controllare se esiste il file inglese
 ls /var/www/html/<nome progetto>/laravel/Modules/Notify/lang/en/nome_file.php
 ls /var/www/html/saluteora/laravel/Modules/Notify/lang/en/nome_file.php
-ls /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/en/nome_file.php
+ls /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Notify/lang/en/nome_file.php
 
 # 2. Se esiste, aggiornarlo con la stessa struttura
 
@@ -171,9 +175,9 @@ return [
 
 ## Riferimenti
 
-- [Regole di Naming per i File di Traduzione](./TRANSLATION_FILE_NAMING_RULES.md)
-- [Guida alla Struttura dei File di Traduzione](./TRANSLATION_FILE_STRUCTURE_GUIDE.md)
-- [Progresso della Standardizzazione](./TRANSLATION_STANDARDS_PROGRESS.md)
+- [Regole di Naming per i File di Traduzione](./translation_file_naming_rules.md)
+- [Guida alla Struttura dei File di Traduzione](./translation_file_structure_guide.md)
+- [Progresso della Standardizzazione](./translation_standards_progress.md)
 - [Regole di Naming per i File di Traduzione](./translation_file_naming_rules.md)
 - [Guida alla Struttura dei File di Traduzione](./translation_file_structure_guide.md)
 - [Progresso della Standardizzazione](./translation_standards_progress.md)

@@ -1,14 +1,13 @@
 ---
-qmd: "git multi org sync handoff.divergenza"
+qmd: "Git Multi Org Sync Handoff.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: git-multi-org-sync-handoff.md"
+title: "Git Multi Org Sync Handoff.divergenza"
 module: Lang
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Divergenza: `git-multi-org-sync-handoff.md`

@@ -11,7 +11,6 @@ related:
   - ../wiki/memories/phpstan-modules-inventory.md
   - ../wiki/how-to/phpstan-modules-swarm.md
   - handoff-phpstan-modules-zero.md
-status: draft
 ---
 
 # Sessione PHPStan — Analisi Random Moduli
@@ -62,7 +61,7 @@ _(aggiornare durante la sessione)_
 - **DateRangeFieldsContract**: spostato sotto `app/Models/Contracts/` perché valido solo per model
 
 ## Chat multi-agente
-Coordinamento via `docs/chat/phpstan-results-collector-raccoglitore-risultati.md`
+Coordinamento via `docs/chat/phpstan-results-collector.md`
 
 ---
 

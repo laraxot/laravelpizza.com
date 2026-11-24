@@ -1,9 +1,14 @@
 ---
-title: "Xot - claude-code-laraxot-rules-path-scoping.md"
-module: Xot
-bmad: true
-status: active
+title: "claude code laraxot rules path scoping"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "claude code laraxot rules path scoping"
+issues: []
+discussions: []
 ---
+
 # Claude Code Laraxot Rules Path Scoping
 
 ## Decisione

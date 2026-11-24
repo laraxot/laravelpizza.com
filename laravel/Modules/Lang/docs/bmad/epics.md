@@ -1,55 +1,51 @@
 ---
+title: "Epics — Lang"
+type: epics
+status: active
+updated: 2026-11-16
 bmad: true
 module: Lang
-title: "Epics e User Stories - Modulo Lang"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, lang, bmad]
-qmd: "epics e user stories - modulo lang lang"
+qmd: "epics Lang tracker chiavi mancanti test comportamento config morta Post docs LocaleSwitcherRefresh hardcoded story acceptance"
+related:
+  - ./audits/lang-audit.md
+  - ./decision-log.md
+  - ./piano-miglioramento.md
 ---
-# Epics e User Stories - Modulo Lang
 
-## Epics
+# Epics — Lang
 
-### Epic 1: [Nome Epic]
-**Descrizione:** [Descrizione epic]
-**Storia utente associate:**
-- US-1: [Descrizione storia]
-- US-2: [Descrizione storia]
+Sostituisce il template con segnaposto. Ogni epic nasce da un finding dell'[audit](./audits/lang-audit.md); formato: obiettivo, Acceptance (AC), task.
 
-### Epic 2: [Nome Epic]
-**Descrizione:** [Descrizione epic]
-**Storia utente associate:**
-- US-3: [Descrizione storia]
-- US-4: [Descrizione storia]
+## E1 — Tracker «chiavi mancanti» (P1-1, D-2)
 
-## User Stories dettagliate
+**Obiettivo:** una chiave mancante lascia una traccia affidabile, oppure il meccanismo morto sparisce.
 
-### US-1: [Titolo storia]
-**Come** [tipo di utente]
-**Voglio** [azione da eseguire]
-**Per** [beneficio ottenuto]
+- AC1: D-2 decisa dal committente (cablare o ritirare).
+- AC2 (cablare): `registerTranslator()` chiamato da `boot()` con `TranslatorTrait` come unica versione; Pest: `trans('x::y.z')` assente → una riga in `translations`.
+- AC2 (ritirare): via `TranslatorAdapter`, `RecordMissingTranslationAction`, `TranslatorTraitPhpstanProbe`, `Translation`/`LanguageLine` e relative migration additive di chiusura (mai `drop` senza approvazione dati).
+- Task: lock, decisione, implementazione, PHPStan, Pest.
 
-**Criteri di accettazione:**
-- [ ] Criterio 1
-- [ ] Criterio 2
-- [ ] Criterio 3
+## E2 — Suite verde su scratch DB (P1-3)
 
-**Task:**
-- [ ] Task 1
-- [ ] Task 2
+**Obiettivo:** `Modules/Lang/tests/Feature` verde.
 
-### US-2: [Titolo storia]
-**Come** [tipo di utente]
-**Voglio** [azione da eseguire]
-**Per** [beneficio ottenuto]
+- AC1: migration `2026_11_05_100000_update_user_id_uuid_on_{posts,translations}_table` applicate al DB sorgente (additive, a cura di chi gestisce quel DB).
+- AC2: `pest-scratch-db.sh Modules/Lang/tests/Feature` → 0 fail.
 
-**Criteri di accettazione:**
-- [ ] Criterio 1
-- [ ] Criterio 2
-- [ ] Criterio 3
+## E3 — Test di comportamento al posto di quelli «coverage» (D-4)
 
-**Task:**
-- [ ] Task 1
-- [ ] Task 2
+- AC1: Pest per `AutoLabelAction` (chiave presente / assente / `FIX:`), `SaveTransAction` (`execute` filtrato, `persist` diretto, file illeggibile non riscritto), policy (`lang::admin` bypass; utente senza permesso → false).
+- AC2: i 4 file `Lang*CoverageTest`/`FinalGaps` rimossi o ridotti; un solo albero `tests/Unit`.
+
+## E4 — Il modulo rispetta la propria regola (P2)
+
+- AC1: `LocaleSwitcherRefresh.php:34,45` senza stringhe letterali (chiavi in `lang/it`).
+- AC2: `rg "->label\('[A-Za-z]" app` = 0 (esclusi `AutoLabelAction` e `TranslationEditor` con `''`).
+
+## E5 — Docs e debito (P1-2, P2)
+
+- AC1: `docs/business-logic-overview.md` allineato (rimossi `ValidateTranslationsAction`, `LangResource`).
+- AC2: D-1 attuata (`config/lang.php` tolto o caricato come `lang.*`).
+- AC3: D-3 decisa (`Post` resta o esce con story dedicata).
+- AC4: `WriteTranslationFileAction`/`ReadTranslationFileAction` cancellate (0 caller) o cablate; `tableCreate` triplicate documentate/ridotte.
+- AC5: `GetTransPathAction` valida namespace e locale su allowlist.

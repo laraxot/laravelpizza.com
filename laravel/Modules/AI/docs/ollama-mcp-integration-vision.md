@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "ollama mcp integration vision"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🧘 Ollama MCP Integration - Visione e Filosofia
@@ -18,6 +17,15 @@ status: draft
 **Versione**: 1.0.0
 
 ---
+
+title: "ollama mcp integration vision"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ollama mcp integration vision"
+issues: []
+discussions: []
 ## 📖 Il Perché - The Why
 
 ### Perché Ollama tramite MCP?

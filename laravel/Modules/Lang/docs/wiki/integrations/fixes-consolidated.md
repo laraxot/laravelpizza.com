@@ -2,16 +2,15 @@
 qmd: "fixes consolidated"
 issues: []
 discussions: []
-title: "fixes: Consolidated Documentation"
+title: "fixes — Consolidated Documentation"
 module: lang
 type: integration
 tags: [integrations, modules, lang]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
-# fixes: Consolidated Documentation
+# fixes — Consolidated Documentation
 
 Consolidated from **6** individual files.
 
@@ -205,7 +204,6 @@ grep -r "'label' => '[a-z_]\+'" Modules/*/lang/it/ --include="*.php"
 ## Collegamenti Documentazione
 
 - [Errori comuni traduzione](./errori_comuni_traduzione.md)
-- [Errori comuni traduzione](../../errori_comuni_traduzione.md)
 - [Regole sintassi array breve](/.cursor/rules/translation_files_array_syntax.mdc)
 - [Best practices traduzioni](./translation_rules.md)
 
@@ -292,7 +290,6 @@ public function execute(
 ## Collegamenti
 
 - [TransArrayAction.php](../../app/Actions/TransArrayAction.php)
-- [TransArrayAction.php](../../../app/Actions/TransArrayAction.php)
 - [PHPStan Fixes](./phpstan-fixes.md)
 - [Translation Actions](./translation-actions.md)
 
@@ -487,7 +484,6 @@ grep -r "'label' => '[a-z_]\+'" Modules/*/lang/it/ --include="*.php"
 ## Collegamenti Documentazione
 
 - [Errori comuni traduzione](./errori_comuni_traduzione.md)
-- [Errori comuni traduzione](../../errori_comuni_traduzione.md)
 - [Regole sintassi array breve](/.cursor/rules/translation_files_array_syntax.mdc)
 - [Best practices traduzioni](./translation_rules.md)
 
@@ -572,7 +568,6 @@ public function execute(
 ## Collegamenti
 
 - [TransArrayAction.php](../../app/Actions/TransArrayAction.php)
-- [TransArrayAction.php](../../../app/Actions/TransArrayAction.php)
 - [PHPStan Fixes](./phpstan-fixes.md)
 - [Translation Actions](./translation-actions.md)
 
@@ -763,7 +758,6 @@ grep -r "'label' => '[a-z_]\+'" Modules/*/lang/it/ --include="*.php"
 ## Collegamenti Documentazione
 
 - [Errori comuni traduzione](./errori_comuni_traduzione.md)
-- [Errori comuni traduzione](../../errori_comuni_traduzione.md)
 - [Regole sintassi array breve](/.cursor/rules/translation_files_array_syntax.mdc)
 - [Best practices traduzioni](./translation_rules.md)
 
@@ -949,7 +943,6 @@ grep -r "'label' => '[a-z_]\+'" Modules/*/lang/it/ --include="*.php"
 ## Collegamenti Documentazione
 
 - [Errori comuni traduzione](./errori_comuni_traduzione.md)
-- [Errori comuni traduzione](../../errori_comuni_traduzione.md)
 - [Regole sintassi array breve](/.cursor/rules/translation_files_array_syntax.mdc)
 - [Best practices traduzioni](./translation_rules.md)
 

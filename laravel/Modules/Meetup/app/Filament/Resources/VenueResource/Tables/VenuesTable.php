@@ -19,11 +19,11 @@ class VenuesTable extends XotBaseResourceTable
     public function getTableColumns(): array
     {
         return [
-            'name' => TextColumn::make('name')->searchable()->sortable(),
-            'city' => TextColumn::make('city')->searchable()->sortable(),
-            'address' => TextColumn::make('address')->searchable()->toggleable(),
-            'capacity' => TextColumn::make('capacity')->numeric()->sortable(),
-            'events_count' => TextColumn::make('events_count')->counts('events')->sortable(),
+            'name' => TextColumn::make('name')->placeholder('—')->searchable()->sortable(),
+            'city' => TextColumn::make('city')->placeholder('—')->searchable()->sortable(),
+            'address' => TextColumn::make('address')->placeholder('—')->searchable()->toggleable(),
+            'capacity' => TextColumn::make('capacity')->placeholder('—')->numeric()->sortable(),
+            'events_count' => TextColumn::make('events_count')->placeholder('—')->counts('events')->sortable(),
         ];
     }
 

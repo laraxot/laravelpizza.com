@@ -1,4 +1,5 @@
 ---
+qmd: "xot stories phpstan safe preg stringable story md"
 type: story
 slug: phpstan-safe-preg-stringable
 title: "PHPStan: Safe\\preg_replace sostituito da Str::of()->replaceMatches() dove il risultato deve essere una stringa"

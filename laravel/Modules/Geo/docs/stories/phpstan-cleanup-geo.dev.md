@@ -4,10 +4,18 @@ type: dev
 module: Geo
 status: done-with-open-decision
 created: 2026-10-06
-updated: 2026-10-28
+updated: 2026-10-06
 tags: [phpstan, geo, constants, bmad]
 related:
   - ./phpstan-cleanup-geo.story.md
+<<<<<<< HEAD
+date_originale_nome_file: 2026-10-06
+=======
+<<<<<<< .merge_file_dgufWN
+=======
+date_originale_nome_file: 2026-10-06
+>>>>>>> .merge_file_f3Ln2R
+>>>>>>> laraxot/dev
 ---
 
 # [DEV] PHPStan cleanup modulo Geo
@@ -15,9 +23,9 @@ related:
 ## Technical Plan
 
 1. Tipizzare tutte le costanti (`const string|int|array`), centralizzando i duplicati:
-   - `Modules\Geo\Infrastructure\Config\GeoApiEndpoints`: `GOOGLE_{GEOCODING,DISTANCE_MATRIX,ELEVATION,DIRECTIONS,TIMEZONE}`,
+   - `Modules\Geo\Support\GeoApiEndpoints` (nuovo): `GOOGLE_{GEOCODING,DISTANCE_MATRIX,ELEVATION,DIRECTIONS,TIMEZONE}`,
      `NOMINATIM_{BASE,SEARCH,REVERSE,LOOKUP}`, `MAPBOX_PLACES`, `BING_LOCATIONS`.
-   - `Modules\Geo\Infrastructure\Config\GeoDataConfig`: `JSON_PATH`, `CACHE_TTL`, `CACHE_KEY_{REGIONS,PROVINCES,CITIES,CAP}`.
+   - `Modules\Geo\Support\GeoDataConfig` (nuovo): `JSON_PATH`, `CACHE_TTL`, `CACHE_KEY_{REGIONS,PROVINCES,CITIES,CAP}`.
    - Regole di validazione: `GeoDataValidationRules::RULES|MESSAGES` come unica fonte.
    - Le classi con costanti locali lette dai test via reflection (`GoogleMapsService`, `GoogleMapsAction`) le
      mantengono come alias tipizzato (`private const string GEOCODING_URL = GeoApiEndpoints::GOOGLE_GEOCODING;`).
@@ -33,7 +41,7 @@ Here,LocationIQ,OpenCage,Photon,IPGeolocation,Elevation,TimeZone,Weather}/*` (16
 `Adapters/GoogleMapsClient`, `Services/{GoogleMapsService,GeoDataService,GeoDataValidator,GeoService}`,
 `Models/{Locality,ComuneJson,Policies/GeoBasePolicy}`, `Filament/Widgets/LocationMapWidget`,
 `database/seeders/{GeoJsonDownloader,RegionSeeder}`.
-Canonicali: `app/Infrastructure/Config/GeoApiEndpoints.php`, `app/Infrastructure/Config/GeoDataConfig.php`.
+Nuovi: `app/Support/GeoApiEndpoints.php`, `app/Support/GeoDataConfig.php`.
 Test (10): `Unit/{GeocodingBusinessLogicTest,Models/AddressBusinessLogicTest,Actions/{GetCoordinatesActionTest,
 GetBoundingBoxActionTest,GetAddressDataFromFullAddressActionTest,GoogleMapsActionTest,FormatCoordinatesActionTest,
 Maps/BuildGeoMapWidgetPayloadActionTest},Filament/Forms/LatitudeLongitudeInputTest}`, `Feature/AddressIntegrationTest`.
@@ -76,7 +84,7 @@ tipizzate (8.3+) sono segnalate `classConstant.nativeTypeNotSupported` (61 in Ge
 scendere `constantTypeCoverage` (rule attiva solo con analisi dei path completi `Modules/`, i `@var` non contano).
 Le due regole sono inconciliabili con `^8.2`: serve `"php": "^8.3"` (o `config.platform.php`) nel `composer.json`
 radice, fuori dallo scope Geo. Lo stesso problema e' stato rilevato dal gruppo Lang e in
-`docs/bmad/incidenti/const-to-enum-initiative.md`.
+`docs/bmad/incidenti/2026-10-06-const-to-enum-initiative.md`.
 
 ## Suspicious / non toccato
 
@@ -104,11 +112,3 @@ radice, fuori dallo scope Geo. Lo stesso problema e' stato rilevato dal gruppo L
   un file con altro nome ha 0 errori. Il test e' stato comunque riscritto con proprieta' esplicita (neutro).
 - **Un test che istanzia e non asserta e' un test mancante**: la variabile "mai letta" indicava l'assert dimenticato
   (`$patient['type']` mai usato -> `model_type` hardcoded), non codice da cancellare.
-
-## Round 2026-10-28 — paramTypeCoverage
-
-File: `Actions/GoogleMaps/GetAddressFromGoogleMapsAction`, `Actions/Maps/BuildGeoMapWidgetPayloadAction`,
-`Filament/Forms/Components/AddressesField`, `Filament/Widgets/OSMMapWidget`, `Models/{ComuneJson,Locality}`,
-`Rules/FilterCoordinatesInRadius`. Dettaglio per file nella Analysis della story. Verifica:
-`cd laravel && ./vendor/bin/phpstan analyse Modules --memory-limit=-1 --no-progress --error-format=raw | grep Modules/Geo/` (vuoto).
-

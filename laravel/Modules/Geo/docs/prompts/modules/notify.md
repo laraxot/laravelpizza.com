@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "notify"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Notify
@@ -139,4 +138,12 @@ Grapesjs::make('grapesjs_data')
 ## Collegamenti
 - [Documentazione GrapesJS](docs/grapesjs.md)
 - [Template Management](docs/templates.md)
-- [Notification System](../../raw/history/notifications.md) 
+<<<<<<< HEAD
+- [Notification System](docs/notifications.md) 
+=======
+<<<<<<< .merge_file_L6PXmF
+- Notification System 
+=======
+- [Notification System](docs/notifications.md) 
+>>>>>>> .merge_file_uWWgp8
+>>>>>>> laraxot/dev

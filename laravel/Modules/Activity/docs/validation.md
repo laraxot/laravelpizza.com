@@ -1,9 +1,8 @@
 ---
 title: "Validation"
+qmd: "activity validation md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "validation activity"
+tags: [documentation]
 ---
+
 # Validation

@@ -1,11 +1,10 @@
 ---
 title: "Product Requirements Document (PRD)"
+qmd: "activity product requirements md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "product requirements document (prd) activity"
+tags: [documentation]
 ---
+
 # Product Requirements Document (PRD)
 
 ## Metadata

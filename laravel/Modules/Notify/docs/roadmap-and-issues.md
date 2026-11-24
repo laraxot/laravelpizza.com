@@ -3,11 +3,14 @@ title: "roadmap and issues"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "roadmap and issues"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Notify Module - Roadmap, Issues & Optimization
@@ -17,6 +20,15 @@ status: draft
 **Status PHPStan**: ✅ 0 errori (Level 9)
 
 ---
+
+title: "roadmap and issues"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "roadmap and issues"
+issues: []
+discussions: []
 ## 📊 STATO ATTUALE
 
 ### Completezza Funzionale: 70%
@@ -255,11 +267,13 @@ class TicketDigest extends Notification implements ShouldQueue
 - [← Notify Module README](../README.md)
 - [← Fixcity Integration](../../Fixcity/docs/roadmap-and-issues.md)
 - [← Root Documentation](../../../docs/index.md)
-- [← Root Documentation](../../../../docs/index.md)
 
 ---
 
 **Status**: ✅ BUONO  
 **PHPStan**: ✅ 0 errori  
 **Focus**: Real-Time + Push + Preferences
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev

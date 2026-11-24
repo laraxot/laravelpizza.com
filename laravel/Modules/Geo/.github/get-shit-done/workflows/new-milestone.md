@@ -162,36 +162,36 @@ Use template: .github/get-shit-done/templates/research-project/{FILE}
 | QUESTION | What stack additions/changes are needed for [new features]? | How do [target features] typically work? Expected behavior? | How do [target features] integrate with existing architecture? | Common mistakes when adding [target features] to [domain]? |
 | CONSUMER | Specific libraries with versions for NEW capabilities, integration points, what NOT to add | Table stakes vs differentiators vs anti-features, complexity noted, dependencies on existing | Integration points, new components, data flow changes, suggested build order | Warning signs, prevention strategy, which phase should address it |
 | GATES | Versions current (verify with Context7), rationale explains WHY, integration considered | Categories clear, complexity noted, dependencies identified | Integration points identified, new vs modified explicit, build order considers deps | Pitfalls specific to adding these features, integration pitfalls covered, prevention actionable |
-| FILE | STACK.md | FEATURES.md | ARCHITECTURE.md | PITFALLS.md |
+| FILE | STACK.md | FEATURES.md | architecture.md | PITFALLS.md |
 
 After all 4 complete, spawn synthesizer:
 
 ```
 Task(prompt="
-Synthesize research outputs into SUMMARY.md.
+Synthesize research outputs into summary.md.
 
 <files_to_read>
 - .planning/research/STACK.md
 - .planning/research/FEATURES.md
-- .planning/research/ARCHITECTURE.md
+- .planning/research/architecture.md
 - .planning/research/PITFALLS.md
 </files_to_read>
 
-Write to: .planning/research/SUMMARY.md
-Use template: .github/get-shit-done/templates/research-project/SUMMARY.md
+Write to: .planning/research/summary.md
+Use template: .github/get-shit-done/templates/research-project/summary.md
 Commit after writing.
 ", subagent_type="gsd-research-synthesizer", model="{synthesizer_model}", description="Synthesize research")
 ```
 
-Display key findings from SUMMARY.md:
+Display key findings from summary.md:
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
  GSD ► RESEARCH COMPLETE ✓
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-**Stack additions:** [from SUMMARY.md]
-**Feature table stakes:** [from SUMMARY.md]
-**Watch Out For:** [from SUMMARY.md]
+**Stack additions:** [from summary.md]
+**Feature table stakes:** [from summary.md]
+**Watch Out For:** [from summary.md]
 ```
 
 **If "Skip research":** Continue to Step 9.
@@ -285,7 +285,7 @@ Task(prompt="
 <files_to_read>
 - .planning/PROJECT.md
 - .planning/REQUIREMENTS.md
-- .planning/research/SUMMARY.md (if exists)
+- .planning/research/summary.md (if exists)
 - .planning/config.json
 - .planning/MILESTONES.md
 </files_to_read>
@@ -298,7 +298,7 @@ Create roadmap for milestone v[X.Y]:
 3. Map every requirement to exactly one phase
 4. Derive 2-5 success criteria per phase (observable user behaviors)
 5. Validate 100% coverage
-6. Write files immediately (ROADMAP.md, STATE.md, update REQUIREMENTS.md traceability)
+6. Write files immediately (roadmap.md, STATE.md, update REQUIREMENTS.md traceability)
 7. Return ROADMAP CREATED with summary
 
 Write files first, then return.
@@ -310,7 +310,7 @@ Write files first, then return.
 
 **If `## ROADMAP BLOCKED`:** Present blocker, work with user, re-spawn.
 
-**If `## ROADMAP CREATED`:** Read ROADMAP.md, present inline:
+**If `## ROADMAP CREATED`:** Read roadmap.md, present inline:
 
 ```
 ## Proposed Roadmap
@@ -334,14 +334,14 @@ Success criteria:
 **Ask for approval** via AskUserQuestion:
 - "Approve" — Commit and continue
 - "Adjust phases" — Tell me what to change
-- "Review full file" — Show raw ROADMAP.md
+- "Review full file" — Show raw roadmap.md
 
 **If "Adjust":** Get notes, re-spawn roadmapper with revision context, loop until approved.
-**If "Review":** Display raw ROADMAP.md, re-ask.
+**If "Review":** Display raw roadmap.md, re-ask.
 
 **Commit roadmap** (after approval):
 ```bash
-node .github/get-shit-done/bin/gsd-tools.cjs commit "docs: create milestone v[X.Y] roadmap ([N] phases)" --files .planning/ROADMAP.md .planning/STATE.md .planning/REQUIREMENTS.md
+node .github/get-shit-done/bin/gsd-tools.cjs commit "docs: create milestone v[X.Y] roadmap ([N] phases)" --files .planning/roadmap.md .planning/STATE.md .planning/REQUIREMENTS.md
 ```
 
 ## 11. Done
@@ -358,7 +358,7 @@ node .github/get-shit-done/bin/gsd-tools.cjs commit "docs: create milestone v[X.
 | Project        | `.planning/PROJECT.md`      |
 | Research       | `.planning/research/`       |
 | Requirements   | `.planning/REQUIREMENTS.md` |
-| Roadmap        | `.planning/ROADMAP.md`      |
+| Roadmap        | `.planning/roadmap.md`      |
 
 **[N] phases** | **[X] requirements** | Ready to build ✓
 
@@ -385,7 +385,7 @@ Also: `/gsd-plan-phase [N]` — skip discussion, plan directly
 - [ ] gsd-roadmapper spawned with phase numbering context
 - [ ] Roadmap files written immediately (not draft)
 - [ ] User feedback incorporated (if any)
-- [ ] ROADMAP.md phases continue from previous milestone
+- [ ] roadmap.md phases continue from previous milestone
 - [ ] All commits made (if planning docs committed)
 - [ ] User knows next step: `/gsd-discuss-phase [N]`
 

@@ -6,13 +6,10 @@ tags:
   - conventions
   - llm-instructions
 created: 2026-04-15
-<<<<<<< .merge_file_LQUJEJ
-=======
 type: note
 status: draft
 updated: 2026-10-07
 qmd: "wiki schema - activity activity"
->>>>>>> .merge_file_YAjKRL
 ---
 
 # Wiki Schema - Activity
@@ -26,7 +23,7 @@ docs/
 ├── wiki/
 │   ├── index.md           # Catalogo
 │   ├── log.md             # Registro
-│   ├── SCHEMA.md          # Questo file
+│   ├── schema.md          # Questo file
 │   ├── concepts/          # Pattern, architettura
 │   ├── entities/          # Modelli, azioni
 │   ├── sources/           # Doc esterna

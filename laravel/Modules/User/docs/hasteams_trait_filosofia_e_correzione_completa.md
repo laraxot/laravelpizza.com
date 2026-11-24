@@ -1,11 +1,3 @@
----
-title: "HasTeams Trait - Filosofia Laraxot e Strategia di Correzione Completa"
-type: note
-status: draft
-updated: 2026-10-13
-tags: [docs, user]
-qmd: "hasteams trait - filosofia laraxot e strategia di correzione completa user"
----
 # HasTeams Trait - Filosofia Laraxot e Strategia di Correzione Completa
 
 ## 🧠 LA FILOSOFIA LARAXOT: Perché `belongsToManyX` invece di `belongsToMany`
@@ -285,13 +277,20 @@ Il trait `HasTeams` ora è:
 - [docs/laraxot_conventions.md](../../../docs/laraxot_conventions.md) - Convenzioni Laraxot generali
 - [docs/USER_MODULE.md](../../../docs/USER_MODULE.md) - Documentazione generale modulo User
 - [docs/phpstan_fixes.md](../../../../docs/phpstan_fixes.md) - Guide PHPStan
-- [docs/phpstan_fixes.md](../../../../docs/phpstan_fixes.md) - Guide PHPStan
 - [docs/TRAIT_BEST_PRACTICES.md](../../../docs/TRAIT_BEST_PRACTICES.md) - Best practices per trait
 
 ### **📁 Documentazione Modulo User**
 - [traits.md](traits.md) - Documentazione completa trait modulo User
 - [authentication.md](authentication.md) - Sistema autenticazione User
+<<<<<<< HEAD
 - [index.md](index.md) - Indice generale modulo User
+=======
+<<<<<<< HEAD
+- [index.md](index.md) - Indice generale modulo User
+=======
+- [index.md](./README.md) - Indice generale modulo User
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### **⚙️ File .mdc (Cursor/Windsurf)**
 - [/.cursor/rules/hasteams-trait-laraxot.mdc](../../../.cursor/rules/hasteams-trait-laraxot.mdc)

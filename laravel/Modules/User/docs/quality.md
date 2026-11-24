@@ -8,19 +8,14 @@ qmd: "quality user module - quality status (november 2025)"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # User Module - Quality Status (November 2025)
@@ -185,3 +180,13 @@ After fixes:
 *PHPStan: IMPROVED (13 → ~5 errors)*
 *Status: IN PROGRESS*
 *Priority: CRITICAL*
+<<<<<<< HEAD
+=======
+
+
+---
+
+<!-- Contenuto unito da quality-11.md (rimozione date dai nomi file, issue #64) -->
+
+See canonical documentation: ../../../Themes/docs/shared-components/quality-1.md
+>>>>>>> laraxot/dev

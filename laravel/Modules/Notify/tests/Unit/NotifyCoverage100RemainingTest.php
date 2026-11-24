@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Process;
 use Mockery;
 use Modules\Notify\Actions\NotificationManager;
+use Modules\Notify\Exceptions\NotificationTemplateNotFoundException;
 use Modules\Notify\Filament\Clusters\Test\Pages\SendEmail;
 use Modules\Notify\Filament\Clusters\Test\Pages\SendPushNotification;
 use Modules\Notify\Filament\Clusters\Test\Pages\SendPushNotificationPage;
@@ -108,7 +109,9 @@ describe('Notify coverage 100 — final sweep', function (): void {
             protected $guarded = [];
         };
 
+        // Messaggio e tipo vengono ora dall'unico punto che risolve il template,
+        // cioe' SendNotificationAction (base_quaeris_fila5#103, #112).
         expect(fn () => $manager->send($recipient, 'missing-template-code'))
-            ->toThrow(\Exception::class, 'Template not found: missing-template-code');
+            ->toThrow(NotificationTemplateNotFoundException::class, 'Template missing-template-code non trovato o non attivo');
     });
 });

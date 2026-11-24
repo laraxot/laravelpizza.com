@@ -3,11 +3,14 @@ title: "wiki schema"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "wiki schema"
 issues: []
 discussions: []
-status: draft
 ---
 
 # LLM Wiki Schema
@@ -36,7 +39,7 @@ Il sistema wiki si articola in tre layer:
 - **Regola**: L'LLM SCrive e mantiene; l'umano legge e naviga
 
 ### Layer 3: Schema (questo file)
-- **Posizione**: `docs/.schema/WIKI_SCHEMA.md`
+- **Posizione**: `docs/.schema/wiki_schema.md`
 - **Posizione**: `docs/.schema/wiki-schema.md`
 - **Scopo**: Istruisce l'LLM su convenzioni, workflow e struttura
 
@@ -50,13 +53,13 @@ Quando aggiungi un nuovo sorgente:
    - Sommario del documento
    - Entity pages rilevanti
    - Concept pages se necessario
-4. Aggiorna l'INDEX.md
+4. Aggiorna l'index.md
 4. Aggiorna l'index.md
 5. Appendi a LOG.md
 
 ### Query
 Quando rispondi a domande:
-1. Consulta INDEX.md per trovare pagine rilevanti
+1. Consulta index.md per trovare pagine rilevanti
 1. Consulta index.md per trovare pagine rilevanti
 2. Leggi le pagine identificate
 3. Sintetizza una risposta con citazioni
@@ -111,7 +114,7 @@ docs/
 ├── index.md              # Indice principale della wiki
 ├── log.md                # Log cronologico
 ├── .schema/
-│   └── WIKI_SCHEMA.md   # Questo file
+│   └── wiki_schema.md   # Questo file
 │   └── wiki-schema.md   # Questo file
 ├── raw/                  # Sorgenti globali
 │   ├── articles/
@@ -126,7 +129,7 @@ docs/
     └── overviews/
 ```
 
-## Formato INDEX.md
+## Formato index.md
 ## Formato index.md
 
 ```markdown
@@ -174,13 +177,13 @@ docs/
 Ogni modulo in `laravel/Modules/<Nome>/docs/` avrà:
 - `wiki/` - Wiki specifica del modulo
 - `raw/` - Sorgenti specifici del modulo
-- `INDEX.md` - Indice locale
+- `index.md` - Indice locale
 
 ### Temi
 Ogni tema in `laravel/Themes/<Nome>/docs/` avrà:
 - `wiki/` - Wiki specifica del tema
 - `raw/` - Sorgenti specifici del tema
-- `INDEX.md` - Indice locale
+- `index.md` - Indice locale
 
 ### Reference Bidirezionale
 - Ogni INDEX locale punta all'INDEX globale

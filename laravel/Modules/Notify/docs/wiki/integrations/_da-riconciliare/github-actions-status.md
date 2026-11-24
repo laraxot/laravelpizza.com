@@ -1,14 +1,17 @@
 ---
-qmd: "github actions status"
+qmd: "Github Actions Status"
 issues: []
 discussions: []
-title: "GitHub Actions Status & Fixes"
+title: "Github Actions Status"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # GitHub Actions Status & Fixes

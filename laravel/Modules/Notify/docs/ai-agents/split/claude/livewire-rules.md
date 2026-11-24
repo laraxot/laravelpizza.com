@@ -3,11 +3,14 @@ title: "livewire rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "livewire rules"
 issues: []
 discussions: []
-status: draft
 ---
 
 === livewire/core rules ===
@@ -38,7 +41,10 @@ status: draft
     public function updatedSearch() { $this->resetPage(); }
 </code-snippet>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Testing Livewire
 
 <code-snippet name="Example Livewire component test" lang="php">
@@ -50,7 +56,10 @@ status: draft
         ->assertStatus(200);
 </code-snippet>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
     <code-snippet name="Testing a Livewire component exists within a page" lang="php">
         $this->get('/posts/create')
         ->assertSeeLivewire(CreatePost::class);
@@ -61,11 +70,20 @@ status: draft
 
 
 ---
+
+title: "livewire rules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "livewire rules"
+issues: []
+discussions: []
 ## Cross-References
 
-- ← [CLAUDE Index](INDEX.md): All Laravel Boost guidelines
-- ← [Main AI Docs Index](../INDEX.md): Master index
-- ← [CLAUDE Index](index.md): All Laravel Boost guidelines
-- ← [Main AI Docs Index](../index.md): Master index
-- ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md): Original source
+- ← [CLAUDE Index](index.md) — All Laravel Boost guidelines
+- ← [Main AI Docs Index](../index.md) — Master index
+- ← [CLAUDE Index](index.md) — All Laravel Boost guidelines
+- ← [Main AI Docs Index](../index.md) — Master index
+- ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md) — Original source
 

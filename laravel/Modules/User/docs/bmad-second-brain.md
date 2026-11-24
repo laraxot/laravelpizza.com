@@ -12,7 +12,7 @@ qmd: "bmad + second brain   fix log user"
 - `main_module=''` → `XotData::getProfileClass()` falliva (`InvalidArgumentException`)
 - `IsProfileTrait.php`: duplicato `use UserContract`
 - `BaseProfile.php`: `id` UUID mancante (`PDOException` 1364)
-- PHPStan: 309 `class.notFound` (mancanti `User`/`Profile` nei test, Riferimenti `Quaeris`)
+- PHPStan: 309 `class.notFound` (mancanti `User`/`Profile` nei test, Riferimenti `<nome progetto>`)
 
 ## Fix applicati (SSoT)
 - `Modules\Xot\Contracts\UserContract` / `ProfileContract`

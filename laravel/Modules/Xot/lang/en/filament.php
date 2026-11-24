@@ -5,10 +5,10 @@ declare(strict_types=1);
 return [
     'pages' => [
         'artisan-commands-manager' => [
-            'navigation_label' => 'Gestione Artisan',
+            'navigation_label' => 'Artisan Management',
             'navigation_group' => 'Sistema',
             'navigation_icon' => 'xot::terminal',
-            'title' => 'Gestione Comandi Artisan',
+            'title' => 'Artisan Commands Manager',
             'commands' => [
                 'migrate' => [
                     'label' => 'Migrate Database',
@@ -44,14 +44,14 @@ return [
                 ],
             ],
             'status' => [
-                'completed' => 'Completato',
-                'failed' => 'Fallito',
+                'completed' => 'Completed',
+                'failed' => 'Failed',
                 'waiting' => 'In attesa dell\'output...',
             ],
             'messages' => [
-                'command_started' => 'Comando avviato',
-                'command_completed' => 'Il comando :command è stato eseguito con successo',
-                'command_failed' => 'Il comando :command è fallito',
+                'command_started' => 'Command started',
+                'command_completed' => 'The :command command ran successfully',
+                'command_failed' => 'The :command command failed',
             ],
         ],
     ],

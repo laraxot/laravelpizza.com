@@ -10,6 +10,10 @@ discussions: []
 related:
   - ../mail-deliverability.md
   - mailtrap-sdk-bridge-study.story.md
+<<<<<<< HEAD
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Story: pipeline inbound email

@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+
 ?>
 @extends('ui::layouts.master')
 

@@ -3,14 +3,17 @@ title: "comprehensive"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "comprehensive"
 issues: []
 discussions: []
 module: theme
 topic: comprehensive
-canonical: ../../../Themes/docs/shared-components/COMPREHENSIVE_GUIDE.md
-status: stub
+canonical: ../../../Themes/docs/shared-components/comprehensive_guide.md
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/COMPREHENSIVE_GUIDE.md
+See canonical documentation: ../../../Themes/docs/shared-components/comprehensive_guide.md

@@ -17,9 +17,9 @@ use Webmozart\Assert\Assert;
 /**
  * Trait HasCustomRelations.
  *
- * @phpstan-ignore trait.unused
+ * API di piattaforma per relazioni custom Eloquent (consumer nei moduli dominio).
  */
-trait HasCustomRelations // @phpstan-ignore trait.unused
+trait HasCustomRelations
 {
     public function customRelation(
         string $related,

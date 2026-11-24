@@ -99,7 +99,7 @@ volte, stato finale stabile e confermato per iscritto qui.
 
 1. `.env.testing` usa `CACHE_DRIVER=array` (chiave Laravel <11, ignorata da `config/cache.php` che legge
    `CACHE_STORE`, default `database`). Causa fallimento silenzioso di QUALSIASI test che tocchi permission-cache
-   Spatie (tabella `cache` assente su `quaeris_data_test`), non solo questo. File dichiarato generato da
+   Spatie (tabella `cache` assente su `<nome progetto>_data_test`), non solo questo. File dichiarato generato da
    `bashscripts/tools/sync-env-testing.sh` -> non editato a mano in questo task, utente non ha ancora risposto
    se vuole che venga sistemato.
 

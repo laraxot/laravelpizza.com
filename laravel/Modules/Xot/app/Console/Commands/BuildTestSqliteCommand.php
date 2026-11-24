@@ -4,15 +4,25 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Console\Commands;
 
+<<<<<<< HEAD
+use Illuminate\Console\Command;
+use Illuminate\Contracts\Config\Repository;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+=======
 use Illuminate\Support\Str;
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Config\Repository;
 use Illuminate\Support\Facades\DB;
+>>>>>>> laraxot/dev
 use Modules\Xot\Actions\Testing\ResolveSharedSqlitePathAction;
 use Throwable;
 
 use function Safe\glob;
+<<<<<<< HEAD
+=======
 use function Safe\preg_replace;
+>>>>>>> laraxot/dev
 use function Safe\touch;
 use function Safe\unlink;
 

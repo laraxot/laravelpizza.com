@@ -3,11 +3,14 @@ title: "dry kiss analysis conflict"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "dry kiss analysis conflict"
 issues: []
 discussions: []
-status: draft
 ---
 
 # DRY & KISS Analysis - Modulo Notify
@@ -43,5 +46,23 @@ abstract class BaseModel extends XotBaseModel implements HasMedia
 - ⏸️ verified_at: Valutare se domain-specific
 - 🔄 ServiceProvider: Auto-detect nome
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+[DRY/KISS Global](../../../docs/dry_kiss_analysis.md)
+=======
+>>>>>>> laraxot/dev
 ---
-[DRY/KISS Global](../../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
+title: "dry kiss analysis conflict"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "dry kiss analysis conflict"
+issues: []
+discussions: []
+[DRY/KISS Global](../../../docs/DRY_KISS_ANALYSIS.md)
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

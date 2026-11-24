@@ -8,8 +8,11 @@ use Illuminate\Support\Str;
 use Modules\Tenant\Actions\Config\GetTenantConfigArrayAction;
 use Spatie\QueueableAction\QueueableAction;
 
+<<<<<<< HEAD
+=======
 use function Safe\preg_replace;
 
+>>>>>>> laraxot/dev
 /**
  * Titolo del documento: «Pagina — Brand», con un solo separatore e il brand una sola volta.
  *

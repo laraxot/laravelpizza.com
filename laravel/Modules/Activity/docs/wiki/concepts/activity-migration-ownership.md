@@ -1,4 +1,5 @@
 ---
+qmd: "activity wiki concepts activity migration ownership md"
 title: "Activity Migration Ownership"
 type: concept
 sources: []
@@ -8,8 +9,6 @@ updated: 2026-06-10
 tags: [migration, activity, module-owner, one-per-model]
 related:
   - ../../../../wiki/rules/one-migration-per-model.md
-status: draft
-qmd: "activity migration ownership activity"
 ---
 
 # Activity Migration Ownership

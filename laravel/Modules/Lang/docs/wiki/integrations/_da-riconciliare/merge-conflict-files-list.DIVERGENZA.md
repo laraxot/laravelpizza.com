@@ -8,8 +8,6 @@ type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: superseded
-superseded_by: merge-conflict-files-list.divergenza.md
 ---
 
 # Divergenza: `merge-conflict-files-list.md`

@@ -1,14 +1,17 @@
 ---
-qmd: "agent edit discipline.divergenza"
+qmd: "Agent Edit Discipline.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: agent-edit-discipline.md"
+title: "Agent Edit Discipline.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Divergenza: `agent-edit-discipline.md`

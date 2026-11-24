@@ -14,7 +14,6 @@ sources:
   - ../../structure.md
 confidence: high
 updated: 2026-04-15
-status: draft
 ---
 
 # Geo Module — Overview
@@ -37,10 +36,9 @@ Il modulo Geo è il **sistema centralizzato di gestione geografica**:
 |---------|-------|------|
 | `Address` | Indirizzo completo conforme schema.org | Polymorphic `nullableUuidMorphs('model')` |
 | `Region` | 20 regioni italiane | HasMany Province |
-| `Province` | 110 province | BelongsTo Region, HasMany Locality |
-| `Comune` | 8000+ comuni | nessuna relazione dichiarata (non esiste un modello `City`) |
-| `Locality` | localita' di una provincia | BelongsTo Province (verificare in `app/Models/Locality.php`) |
-| `GeoNamesCap` | CAP / codici postali GeoNames | nessuna relazione dichiarata (non esiste un modello `Cap`) |
+| `Province` | 110 province | BelongsTo Region, HasMany City |
+| `City` / `Comune` | 8000+ comuni | BelongsTo Province, HasMany Cap |
+| `Cap` | CAP / codici postali | BelongsTo City |
 | `Location` | Coordinate generiche | lat/lng per punto generico |
 | `Place` | Punti di interesse | Dati geografici + metadati |
 
@@ -49,7 +47,7 @@ Il modulo Geo è il **sistema centralizzato di gestione geografica**:
 Tutti i modelli Geo **devono** estendere `BaseModel` (NON `Model` o `XotBaseModel` generico):
 
 ```php
-class Place extends BaseModel implements HasGeolocation {  // Address estende BaseModel senza HasGeolocation
+class Address extends BaseModel implements HasGeolocation {
     // Connessione 'geo' automatica
     // Audit trail via Updater trait
     // nullableUuidMorphs per polimorfismo UUID-safe
@@ -64,10 +62,10 @@ class Place extends BaseModel implements HasGeolocation {  // Address estende Ba
 // Campi standard Address
 $table->string('route')->nullable();                       // Via/Piazza
 $table->string('street_number')->nullable();               // Numero civico
-$table->string('locality')->nullable();                    // Località/Frazione
-$table->string('administrative_area_level_3')->nullable(); // Comune/Città
-$table->string('administrative_area_level_2')->nullable(); // Provincia
-$table->string('administrative_area_level_1')->nullable(); // Regione
+$table->string('locality')->nullable();                    // Comune/Città
+$table->string('administrative_area_level_3')->nullable(); // Provincia (sigla: MI)
+$table->string('administrative_area_level_2')->nullable(); // Regione (es. Lombardia)
+$table->string('administrative_area_level_1')->nullable(); // Stato/Paese
 $table->string('country', 2)->nullable();                  // IT
 $table->string('postal_code', 20)->nullable();             // CAP
 $table->decimal('latitude', 15, 10)->nullable();
@@ -84,7 +82,7 @@ $table->json('extra_data')->nullable();
 Il componente principale esposto per altri moduli:
 
 ```php
-use Modules\Geo\Filament\Forms\Components\LeafletMarkerMapInput;
+use Modules\Geo\Filament\Components\LeafletMarkerMapInput;
 
 // Usato in Fixcity CreateTicketWizardWidget (Step 2 — Luogo)
 LeafletMarkerMapInput::make('geo_location')
@@ -107,9 +105,8 @@ Address::create([
     'street_number' => '123',
     'locality'    => 'Milano',
     'postal_code' => '20121',
-    'administrative_area_level_3' => 'Milano',  // comune
-    'administrative_area_level_2' => 'MI',      // provincia
-    'administrative_area_level_1' => 'Lombardia', // regione
+    'province_id' => $province->id,
+    'comune_id'   => $comune->id,
     'country'     => 'IT',
     'latitude'    => 45.4642,
     'longitude'   => 9.1900,
@@ -118,7 +115,10 @@ Address::create([
 
 **Calcolo distanza**: formula di Haversine per precisione geografica.
 
-**Implementazione**: nessun pacchetto geocoder esterno (`geocoder-php`, `league/geotools`, `spatie/laravel-geocoder` non sono in `composer.json` ne' usati). Il geocoding e' fatto da Actions HTTP per provider in `app/Actions/<Provider>/` (Google, Bing, Nominatim, Photon, Here, Mapbox, OpenCage, LocationIQ), con dispatcher `GetAddressDataFromFullAddressAction` e `config('geo.driver')`; la distanza SQL usa `Actions/Distance/BuildHaversineSqlAction`.
+**Pacchetti esterni**:
+- `geocoder-php/geocoder` — integrazione geocoding
+- `league/geotools` — calcoli geografici
+- `spatie/laravel-geocoder` — Laravel wrapper
 
 ## Gerarchia e Regole
 

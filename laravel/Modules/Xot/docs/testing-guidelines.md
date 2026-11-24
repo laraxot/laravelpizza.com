@@ -1,3 +1,10 @@
+---
+title: "FixCity Testing Guidelines — Phase 3 BMAD Optimization"
+qmd: "xot testing guidelines md"
+type: note
+tags: [documentation]
+---
+
 # FixCity Testing Guidelines — Phase 3 BMAD Optimization
 
 ## Overview

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "event detail no event found data merge gap"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Event Detail mostra "Nessun evento trovato" - data merge gap

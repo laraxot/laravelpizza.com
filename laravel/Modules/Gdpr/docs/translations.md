@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "translations"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Traduzioni del Modulo Gdpr
@@ -15,7 +14,7 @@ status: draft
 ## Collegamenti
 
 - [Modulo Lang](../../lang/docs/module_lang.md) - Documentazione principale sulle traduzioni
-- [Regole Generali Traduzioni](../../Xot/docs/translations.md)
+- [Regole Generali Traduzioni](../../xot/docs/translations.md)
 
 ## Struttura
 

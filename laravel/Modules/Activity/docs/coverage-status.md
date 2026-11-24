@@ -1,11 +1,10 @@
 ---
 title: "Activity Module - Errori e Coverage"
+qmd: "activity coverage status md"
 type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, activity]
-qmd: "activity module - errori e coverage activity"
+tags: [documentation]
 ---
+
 # Activity Module - Errori e Coverage
 
 ## Stato Test

@@ -1,15 +1,14 @@
 ---
-qmd: "performance optimization"
+qmd: "Performance Optimization"
 issues: []
 discussions: []
-title: "Performance Optimization — Module Geo"
+title: "Performance Optimization"
 type: documentation
 created: 2026-05-11
 updated: 2026-05-11
 tags: [performance, optimization, tokens, context]
 related:
   - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
-status: draft
 ---
 
 # Performance Optimization — Module **Geo**
@@ -47,7 +46,7 @@ status: draft
 
 ### 4. Wiki Indici Locali
 
-Ogni modulo ha i propri `rules/skills/commands/memories/INDEX.md`:
+Ogni modulo ha i propri `rules/skills/commands/memories/index.md`:
 - Ricerca più rapida (scope limitato)
 - Context rilevante per il modulo
 - Non mischia contenuti eterogenei
@@ -118,8 +117,18 @@ context-mode ctx-stats
 ## Riferimenti
 
 - [Global Performance Guide](../../docs/wiki/concepts/performance-optimization.md)
+<<<<<<< HEAD
 - [On-Demand Pattern](./on-demand-pattern.md)
 - [QMD Setup](./qmd-setup.md)
+=======
+<<<<<<< HEAD
+- [On-Demand Pattern](./ON-DEMAND-PATTERN.md)
+- [QMD Setup](./QMD-SETUP.md)
+=======
+- [On-Demand Pattern](./on-demand-pattern.md)
+- [QMD Setup](./qmd-setup.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 *Status: Ottimizzato | Token risparmiati: ~48K per session*

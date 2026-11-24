@@ -11,19 +11,21 @@ updated: 2026-10-13
 tags: [geo, coordinate-picker, geolocalizzazione, http, gdpr, wizard, guardia-clic]
 related:
   - Modules/Geo/docs/stories/dcp-93-geo-namespace-blade-e-mappa-sola-lettura-follow-up.story.md
-  - Modules/Fixcity/docs/stories/dcp-146-wizard-passo-dati-mappa-sempre-funzionante.story.md
+  - Modules/Fixcity/docs/stories/2026-10-13-dcp-146-wizard-passo-dati-mappa-sempre-funzionante.story.md
   - Themes/Sixteen/docs/bmad/geo-dynamic-user-location.md
   - Themes/Sixteen/docs/bmad/decisions/decision-user-location.md
 qmd: "dcp-127 geo coordinate picker centratura posizione utente gps http https fuso orario default_view guardia clic zoom sonda playwright"
+<<<<<<< HEAD
+date_originale_nome_file: 2026-10-13
+=======
+<<<<<<< .merge_file_rxy6nW
+=======
+date_originale_nome_file: 2026-10-13
+>>>>>>> .merge_file_2UDtcC
+>>>>>>> laraxot/dev
 ---
 
 # DCP-127: centratura della mappa senza HTTPS
-
-> **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
-> arrivano nella document root con un symlink, non con una copia. Per il
-> procedimento valido vedi
-> [Xot/docs/theme-assets-workflow.md](/laravel/Modules/Xot/docs/theme-assets-workflow.md).
-> Le istruzioni di copia qui sotto sono lasciate come documentazione storica.
 
 ## Richiesta (utente, 2026-10-13)
 Nel wizard `/it/tickets/create?step=form.dati-di-segnalazione::data::wizard-step` le coordinate fisse (`CoordinatePicker::make('location')->center(43.7696, 11.2558)`) vanno contro lo scopo: se il record ha le coordinate si leggono, se sono null la mappa si centra sulla posizione dell'utente (browser). Chi segnala puo' essere ovunque nel mondo. Niente testo «Apri questa pagina in HTTPS per usare la posizione.»; «la mappa deve funzionare sempre», anche senza HTTPS.
@@ -83,8 +85,8 @@ Altre prove:
 2. **`timezone-centers.js` contiene ~550 coordinate di riferimento, tra cui Roma** (chiave `Europe/Rome`): e' dato guidato dal fuso del browser, non un default, ma un `grep` letterale per Roma lo trova; i miei test controllano i file del picker, non quella tabella.
 3. L'invito neutro «Clicca sulla mappa per indicare la posizione» compare anche a zoom 6, dove il primo clic avvicina soltanto: non e' un errore, ma il testo promette piu' di quello che fa. Non l'ho cambiato (testo di W2-GEO).
 4. **Config cache**: `bootstrap/cache/config.php` (12:42) nascondeva le chiavi nuove; ho lanciato `php artisan config:cache`. Il file `config/config.php` di un modulo si carica come `geo.config.*`, NON `geo.*`: il codice esistente `config('geo.driver')`, `config('geo.cache.enabled')`, `config('geo.markers...')` legge chiavi che non esistono (non corretto qui).
-5. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+5. Back office: il bundle Geo era di ore prima (20:00) e non rifletteva il codice; e' stato ricostruito con `../../node_modules/.bin/vite build` nel modulo (con il lock di build). Chi ricostruisce il Geo dopo di me ottiene lo stesso risultato; nessuna `npm run copy`.
 6. Non ho verificato: GPS reale su dispositivo, HTTPS vero (127.0.0.1 e' sicuro per specifica; la posizione e' simulata da Playwright), tile e Nominatim reali (finti nella sonda), il comportamento su telefono (touch/pan), `de`/`es` della nota di posizione sul DOM (le chiavi `location_unavailable`/`no_position` sono di W2-GEO; ho misurato solo `it`).
 
 ## Coordinamento
-Claim e proposte nel log di DCP-146 (`Modules/Fixcity/docs/stories/dcp-146-wizard-passo-dati-mappa-sempre-funzionante.story.md`); decisione di DCP-129 recepita. Documenti collegati: `Themes/Sixteen/docs/bmad/geo-dynamic-user-location.md` e `.../decisions/decision-user-location.md` (corretti dove la misura li smentiva), `Modules/Geo/docs/map-vista-di-default-e-posizione-non-disponibile.md` (W2-GEO).
+Claim e proposte nel log di DCP-146 (`Modules/Fixcity/docs/stories/2026-10-13-dcp-146-wizard-passo-dati-mappa-sempre-funzionante.story.md`); decisione di DCP-129 recepita. Documenti collegati: `Themes/Sixteen/docs/bmad/geo-dynamic-user-location.md` e `.../decisions/decision-user-location.md` (corretti dove la misura li smentiva), `Modules/Geo/docs/map-vista-di-default-e-posizione-non-disponibile.md` (W2-GEO).

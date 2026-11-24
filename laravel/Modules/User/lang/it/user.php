@@ -318,8 +318,45 @@ return [
         'user' => [
             'label' => 'Utente',
         ],
+        'matr' => [
+            'description' => 'matr',
+            'label' => 'matr',
+            'placeholder' => 'matr',
+            'helper_text' => 'matr',
+        ],
+        'ente' => [
+            'label' => 'ente',
+            'placeholder' => 'ente',
+            'helper_text' => 'ente',
+            'description' => 'ente',
+        ],
+        'state' => [
+            'label' => 'Stato',
+        ],
+        'device' => [
+            'label' => 'Dispositivo',
+            'placeholder' => 'device',
+            'helper_text' => 'device',
+            'description' => 'device',
+        ],
+        'created_from' => [
+            'label' => 'Creato dal',
+            'placeholder' => 'created_from',
+            'helper_text' => 'created_from',
+            'description' => 'created_from',
+        ],
+        'created_until' => [
+            'label' => 'Creato fino al',
+            'placeholder' => 'created_until',
+            'helper_text' => 'created_until',
+            'description' => 'created_until',
+        ],
     ],
     'actions' => [
+<<<<<<< HEAD
+        'change_password' => 'Cambia password',
+=======
+>>>>>>> laraxot/dev
         'create' => [
             'label' => 'Crea Utente',
             'icon' => 'heroicon-o-plus',
@@ -421,9 +458,16 @@ return [
         ],
         'export' => [
             'icon' => 'export',
+            'label' => 'Esporta',
+            'tooltip' => 'export',
         ],
         'changePassword' => [
             'icon' => 'changePassword',
+<<<<<<< HEAD
+            'label' => 'Cambia password',
+            'tooltip' => 'Cambia password',
+=======
+>>>>>>> laraxot/dev
         ],
         'layout' => [
             'icon' => 'layout',
@@ -730,7 +774,7 @@ return [
         ],
     ],
     'label' => 'Utente',
-<<<<<<< .merge_file_N23cbn
+<<<<<<< HEAD
     'sections' => [
         'empty' => [
             'heading' => '',
@@ -742,6 +786,6 @@ return [
         ],
     ],
 =======
->>>>>>> .merge_file_uX26zG
+>>>>>>> laraxot/dev
     'plural_label' => 'User (Plurale)',
 ];

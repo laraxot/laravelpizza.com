@@ -1,18 +1,22 @@
----
-title: "Cross Database Relations Issue - belongsToManyX SQLite Problem"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "cross database relations issue - belongstomanyx sqlite problem user"
----
 # Cross Database Relations Issue - belongsToManyX SQLite Problem
 
 ## Problema Identificato
 
+<<<<<<< HEAD
 **Errore**: `SQLSTATE[HY000]: General error: 1 no such table: quaeris_data.customer_user`
 
 **Contesto**: Il trait `HasTenants` utilizza `belongsToManyX` per creare relazioni cross-database tra User (quaeris_user) e Customer (quaeris_data).
+=======
+<<<<<<< HEAD
+**Errore**: `SQLSTATE[HY000]: General error: 1 no such table: quaeris_data.customer_user`
+
+**Contesto**: Il trait `HasTenants` utilizza `belongsToManyX` per creare relazioni cross-database tra User (quaeris_user) e Customer (quaeris_data).
+=======
+**Errore**: `SQLSTATE[HY000]: General error: 1 no such table: <nome progetto>_data.customer_user`
+
+**Contesto**: Il trait `HasTenants` utilizza `belongsToManyX` per creare relazioni cross-database tra User (<nome progetto>_user) e Customer (<nome progetto>_data).
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Analisi del Trait HasTenants
 
@@ -24,16 +28,38 @@ return $this->belongsToManyX($tenant_class);
 
 ### Flusso di Esecuzione
 1. `User::tenants()` chiama `belongsToManyX(Customer::class)`
+<<<<<<< HEAD
 2. `belongsToManyX` rileva che User è in `quaeris_user` e Customer è in `quaeris_data`
 3. Cerca la tabella pivot `CustomerUser` nel database `quaeris_data`
 4. Aggiunge il prefisso database: `quaeris_data.customer_user`
+=======
+<<<<<<< HEAD
+2. `belongsToManyX` rileva che User è in `quaeris_user` e Customer è in `quaeris_data`
+3. Cerca la tabella pivot `CustomerUser` nel database `quaeris_data`
+4. Aggiunge il prefisso database: `quaeris_data.customer_user`
+=======
+2. `belongsToManyX` rileva che User è in `<nome progetto>_user` e Customer è in `<nome progetto>_data`
+3. Cerca la tabella pivot `CustomerUser` nel database `<nome progetto>_data`
+4. Aggiunge il prefisso database: `<nome progetto>_data.customer_user`
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 5. SQLite non riconosce questa sintassi e fallisce
 
 ## Architettura Multi-Tenant
 
 ### Separazione Database
+<<<<<<< HEAD
 - **User Database**: `quaeris_user` - Gestione utenti e autenticazione
 - **Tenant Databases**: `quaeris_data` - Dati specifici per customer/tenant
+=======
+<<<<<<< HEAD
+- **User Database**: `quaeris_user` - Gestione utenti e autenticazione
+- **Tenant Databases**: `quaeris_data` - Dati specifici per customer/tenant
+=======
+- **User Database**: `<nome progetto>_user` - Gestione utenti e autenticazione
+- **Tenant Databases**: `<nome progetto>_data` - Dati specifici per customer/tenant
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **Pivot Tables**: Nel database del tenant per isolamento dati
 
 ### Filosofia Laraxot
@@ -64,7 +90,15 @@ Sostituire `belongsToManyX` con relazioni `belongsToMany` esplicite per cross-da
 
 ### Moduli Affetti
 - **User Module**: Trait HasTenants
+<<<<<<< HEAD
 - **Quaeris Module**: Customer-User relationships
+=======
+<<<<<<< HEAD
+- **Quaeris Module**: Customer-User relationships
+=======
+- **<nome progetto> Module**: Customer-User relationships
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **Altri Moduli**: Qualsiasi relazione cross-database
 
 ### Funzionalità Compromesse
@@ -84,14 +118,30 @@ $tenants = $user->tenants; // Dovrebbe funzionare senza errori
 ### Test 2: Verifica Cross-Database Query
 ```php
 use Modules\Xot\Contracts\UserContract;
+<<<<<<< HEAD
 use Modules\Quaeris\Models\Customer;
+=======
+<<<<<<< HEAD
+use Modules\Quaeris\Models\Customer;
+=======
+use Modules\<nome progetto>\Models\Customer;
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 $user = User::with('tenants')->find('0199690d-481a-7101-ac17-7518b3959314');
 // Verifica che la query sia corretta
 ```
 
 ## Riferimenti Correlati
 
+<<<<<<< HEAD
 - [Quaeris Customer User Table Issue](../../Quaeris/docs/customer_user_table_issue.md)
+=======
+<<<<<<< HEAD
+- [Quaeris Customer User Table Issue](../../Quaeris/docs/customer_user_table_issue.md)
+=======
+- [<nome progetto> Customer User Table Issue](../../<nome progetto>/docs/customer_user_table_issue.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Traits Complete Guide](./traits-complete-guide.md)
 - [Jetstream vs Laraxot Philosophy](./jetstream-vs-laraxot-philosophy.md)
 - [Database Errors](./database-errors.md)
@@ -126,7 +176,15 @@ echo 'HasTenants works! Count: ' . \$tenants->count();
 php artisan tinker --execute="
 use Modules\Xot\Contracts\UserContract;
 \$user = User::find('0199690d-481a-7101-ac17-7518b3959314');
+<<<<<<< HEAD
 \$tenants = \$user->getTenants(app('filament')->getPanel('quaeris::admin'));
+=======
+<<<<<<< HEAD
+\$tenants = \$user->getTenants(app('filament')->getPanel('quaeris::admin'));
+=======
+\$tenants = \$user->getTenants(app('filament')->getPanel('<nome progetto>::admin'));
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 echo 'getTenants works! Count: ' . count(\$tenants); // ✅ Funziona
 "
 ```

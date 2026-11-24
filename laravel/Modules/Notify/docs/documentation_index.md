@@ -3,7 +3,11 @@ title: "documentation index"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "documentation index"
 issues: []
 discussions: []
@@ -28,13 +32,13 @@ status: draft
 
 ### Documentazione Principale
 - [README Principale](./README.md) - Panoramica progetto completa
-- [Analisi Super Mucca](./SUPER_MUCCA_DOCS_ANALYSIS.md) - Report qualità documentazione
-- [Architecture](./ARCHITECTURE_ANALYSIS.md) - Analisi architetturale
+- [Analisi Super Mucca](./super_mucca_docs_analysis.md) - Report qualità documentazione
+- [Architecture](./architecture_analysis.md) - Analisi architetturale
 - [Roadmap](./MASTER_ROADMAP_2025.md) - Piano sviluppo 2025
 
 ### Guide Rapide
-- [Quick Start](./QUICK_START.md) - Guida avvio rapido
-- [Contributing](./CONTRIBUTING.md) - Come contribuire
+- [Quick Start](./quick_start.md) - Guida avvio rapido
+- [Contributing](./contributing.md) - Come contribuire
 - [Troubleshooting](./troubleshooting/README.md) - Risoluzione problemi
 
 ---
@@ -43,8 +47,17 @@ status: draft
 
 ### Documentazione Architetturale
 - [Design Patterns](./architecture.md) - Pattern architetturali
-- [Database Schema](./database/schema.md) - Schema database
+<<<<<<< HEAD
+- [Database Schema](wiki/schema.md) - Schema database
 - [Database Schema](./wiki/schema.md) - Schema database
+=======
+<<<<<<< .merge_file_vbQUet
+- [Database Schema](./database/schema.md) - Schema database
+=======
+- [Database Schema](wiki/schema.md) - Schema database
+- [Database Schema](./wiki/schema.md) - Schema database
+>>>>>>> .merge_file_NUr3D1
+>>>>>>> laraxot/dev
 - [API Documentation](./api/README.md) - Documentazione API
 - [Security](./security/README.md) - Sicurezza e conformità
 
@@ -219,13 +232,19 @@ status: draft
 ## 🛠️ Guide Sviluppo
 
 ### Development Setup
-- [Environment Setup](./development/setup.md) - Configurazione ambiente
+- [Environment Setup](ai-agents/setup.md) - Configurazione ambiente
 - [Docker Setup](./development/docker.md) - Configurazione Docker
-- [Database Setup](./database/setup.md) - Setup database
+- [Database Setup](ai-agents/setup.md) - Setup database
 
 ### Coding Guidelines
 - [PHP Standards](./standards/php.md) - Standard PHP (PSR-12)
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_vbQUet
 - [Laravel Best Practices](./standards/laravel.md) - Best practices Laravel
+=======
+>>>>>>> laraxot/dev
+- [Laravel Best Practices](html2pdf/laravel.md) - Best practices Laravel
 - [Environment Setup](./ai-agents/setup.md) - Configurazione ambiente
 - [Docker Setup](./development/docker.md) - Configurazione Docker
 - [Database Setup](./ai-agents/setup.md) - Setup database
@@ -233,13 +252,26 @@ status: draft
 ### Coding Guidelines
 - [PHP Standards](./standards/php.md) - Standard PHP (PSR-12)
 - [Laravel Best Practices](./html2pdf/laravel.md) - Best practices Laravel
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_NUr3D1
+>>>>>>> laraxot/dev
 - [Filament Guidelines](./standards/filament.md) - Linee guida Filament
 - [Blade Components](./standards/blade.md) - Componenti Blade
 
 ### Quality Assurance
 - [PHPStan Configuration](./phpstan/README.md) - Analisi statica
-- [Testing Strategy](./testing/strategy.md) - Strategia testing
+<<<<<<< HEAD
+- [Testing Strategy](strategy.md) - Strategia testing
 - [Testing Strategy](./strategy.md) - Strategia testing
+=======
+<<<<<<< .merge_file_vbQUet
+- [Testing Strategy](./testing/strategy.md) - Strategia testing
+=======
+- [Testing Strategy](strategy.md) - Strategia testing
+- [Testing Strategy](./strategy.md) - Strategia testing
+>>>>>>> .merge_file_NUr3D1
+>>>>>>> laraxot/dev
 - [CI/CD Pipeline](./ci-cd/README.md) - Continuous integration
 
 ---
@@ -280,8 +312,17 @@ status: draft
 - [Error Tracking](./monitoring/errors.md) - Tracking errori
 
 ### Analytics
-- [Usage Analytics](./analytics/usage.md) - Analisi utilizzo
+<<<<<<< HEAD
+- [Usage Analytics](html2pdf/usage.md) - Analisi utilizzo
 - [Usage Analytics](./html2pdf/usage.md) - Analisi utilizzo
+=======
+<<<<<<< .merge_file_vbQUet
+- [Usage Analytics](./analytics/usage.md) - Analisi utilizzo
+=======
+- [Usage Analytics](html2pdf/usage.md) - Analisi utilizzo
+- [Usage Analytics](./html2pdf/usage.md) - Analisi utilizzo
+>>>>>>> .merge_file_NUr3D1
+>>>>>>> laraxot/dev
 - [Business Metrics](./analytics/business.md) - Metriche business
 
 ---
@@ -289,8 +330,17 @@ status: draft
 ## 🔒 Security
 
 ### Security Documentation
-- [Security Guidelines](./security/guidelines.md) - Linee guida sicurezza
+<<<<<<< HEAD
+- [Security Guidelines](ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
 - [Security Guidelines](./ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
+=======
+<<<<<<< .merge_file_vbQUet
+- [Security Guidelines](./security/guidelines.md) - Linee guida sicurezza
+=======
+- [Security Guidelines](ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
+- [Security Guidelines](./ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
+>>>>>>> .merge_file_NUr3D1
+>>>>>>> laraxot/dev
 - [GDPR Compliance](./security/gdpr.md) - Conformità GDPR
 - [Authentication](./security/authentication.md) - Sistema autenticazione
 - [Authorization](./security/authorization.md) - Sistema autorizzazioni
@@ -300,7 +350,7 @@ status: draft
 ## 📝 Changelog & Versioning
 
 ### Version History
-- [Changelog](./CHANGELOG.md) - Storico modifiche
+- [Changelog](./CHANGELOG.MD) - Storico modifiche
 - [Versioning Strategy](./versioning.md) - Strategia versioning
 - [Migration Guides](./migrations/README.md) - Guide migrazione
 
@@ -309,7 +359,7 @@ status: draft
 ## 🤝 Contributing
 
 ### Contribution Guidelines
-- [How to Contribute](./CONTRIBUTING.md) - Come contribuire
+- [How to Contribute](./contributing.md) - Come contribuire
 - [Code of Conduct](./CODE_OF_CONDUCT.md) - Codice condotta
 - [Pull Request Template](./.github/pull_request_template.md) - Template PR
 

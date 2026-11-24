@@ -1,12 +1,3 @@
----
-title: "Soluzione Errori di Routing nel Frontoffice"
-type: note
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "soluzione errori di routing nel frontoffice user"
-status: superseded
-superseded_by: routing-solution.md
----
 # Soluzione Errori di Routing nel Frontoffice
 
 In un modulo User che usa Volt + Folio + Filament, **non** definire mai rotte in `routes/web.php`. Se incappi in un errore di tipo “Route not found” o conflitti di middleware dovuti a rotte imperative, ecco come risolvere:
@@ -38,7 +29,7 @@ Route::get('/profile', [ProfilePageController::class, 'show']);
   ```
   resources/views/pages/profile.blade.php
   ```
-- Il FolioServiceProvider del modulo la registra automaticamente.
+- `Cms\FolioVoltServiceProvider` monta già `resources/views/pages` di ogni modulo abilitato (mai `App\Providers\FolioServiceProvider`).
 - Rimuovi la rotta da `web.php`.
 
 ## 3. Volt (Componenti Livewire/Vue)

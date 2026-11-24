@@ -3,7 +3,11 @@ title: "multi channel notifications"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "multi channel notifications"
 issues: []
 discussions: []
@@ -804,9 +808,20 @@ TELEGRAM_BOT_TOKEN=12345:ABC...
 
 ## Collegamenti alla Documentazione Correlata
 
-- [NOTIFICATIONS_IMPLEMENTATION_GUIDE.md](./NOTIFICATIONS_IMPLEMENTATION_GUIDE.md)
+- [NOTIFICATIONS_IMPLEMENTATION_GUIDE.md](notifications_implementation_guide.md)
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_3nIIS2
 - [SMS_PROVIDER_CONFIGURATION.md](./SMS_PROVIDER_CONFIGURATION.md)
 - [TELEGRAM_NOTIFICATIONS_GUIDE.md](./TELEGRAM_NOTIFICATIONS_GUIDE.md)
+=======
+>>>>>>> laraxot/dev
+- [SMS_PROVIDER_CONFIGURATION.md](./sms_provider_configuration.md)
+- [TELEGRAM_NOTIFICATIONS_GUIDE.md](telegram_notifications_guide.md)
 - [NOTIFICATIONS_IMPLEMENTATION_GUIDE.md](./notifications_implementation_guide.md)
 - [SMS_PROVIDER_CONFIGURATION.md](./sms_provider_configuration.md)
 - [TELEGRAM_NOTIFICATIONS_GUIDE.md](./telegram_notifications_guide.md)
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_xav4fk
+>>>>>>> laraxot/dev

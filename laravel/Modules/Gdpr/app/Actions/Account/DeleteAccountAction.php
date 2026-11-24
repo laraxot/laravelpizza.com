@@ -26,6 +26,8 @@ use Spatie\QueueableAction\QueueableAction;
  * per conservare l'audit trail richiesto dall'art. 5.1(c) (minimizzazione) e
  * dall'art. 30 (registro dei trattamenti). I consensi Gdpr vengono revocati e
  * registrati come tali; i log di activity vengono soft-deleted insieme all'utente.
+ *
+ * @contract docs/contracts/delete-account-action.md
  */
 class DeleteAccountAction
 {

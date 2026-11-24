@@ -1,16 +1,22 @@
 ---
-title: "metodi duplicati analisi"
+title: "METODI DUPLICATI ANALISI"
 type: note
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "metodi duplicati analisi"
+qmd: "METODI DUPLICATI ANALISI"
 issues: []
 discussions: []
 module: Lang
 topic: METODI_DUPLICATI_ANALISI
 tags: [metodi-duplicati, refactoring]
+<<<<<<< HEAD
+=======
 canonical: ../../../Themes/One/docs/shared-components/METODI_DUPLICATI_ANALISI.md
-status: stub
+
+>>>>>>> laraxot/dev
+canonical: ../../../Themes/One/docs/shared-components/metodi_duplicati_analisi.md
+status: superseded
+superseded_by: metodi_duplicati_analisi.md
 ---
 
 # Metodi Duplicati: Analisi Lang

@@ -6,12 +6,12 @@ updated: 2026-09-26
 qmd: "quality gates 2026 07 28"
 issues: []
 discussions: []
-title: Quality Gates Analysis: User Module
+title: Quality Gates Analysis — User Module
 date: 2026-07-28
 status: completed-with-constraints
 ---
 
-# Quality Gates Analysis: laravel/Modules/User
+# Quality Gates Analysis — laravel/Modules/User
 
 ## Execution Summary
 
@@ -229,3 +229,16 @@ dealerdirect/phpcodesniffer-composer-installer is blocked by allow-plugins confi
 **Document Status:** Complete  
 **Last Updated:** 2026-07-28 ~10:45 UTC  
 **Next Review:** After fixing Top 5 error sources (est. 2-3 hours work)
+<<<<<<< HEAD
+=======
+
+
+---
+
+<!-- Contenuto unito da quality-gates-.md (rimozione date dai nomi file, issue #64) -->
+
+<!-- recovery from broken basename `quality-gates-.md` after docs-guardian mass rename -->
+
+Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file evita nomi `*-.md`.
+
+>>>>>>> laraxot/dev

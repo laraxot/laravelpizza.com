@@ -1,7 +1,7 @@
 ---
 issues: []
 discussions: []
-title: "Raw Sources: Lang"
+title: "Raw Sources — Lang"
 module: "Lang"
 type: concept
 tags: [guida, migrazione, step, by]
@@ -11,7 +11,7 @@ qmd: "guida migrazione step by step"
 related:
   - "./italian-text-refined-audit-report.md"
 ---
-# Raw Sources: Lang
+# Raw Sources — Lang
 
 Questo layer contiene le fonti grezze: documenti immutabili che l'LLM legge ma non modifica.
 
@@ -34,9 +34,9 @@ Il layer raw per questo modulo/tema è **l'intera cartella `docs/`** (esclusa `d
 
 ## Dove va la sintesi
 
-→ `docs/wiki/index.md`: catalogo dei nodi di conoscenza
-→ `docs/wiki/log.md`: log append-only degli ingest
-→ `docs/wiki/concepts/`, `entities/`, `summaries/`: pagine wiki tematiche
+→ `docs/wiki/index.md` — catalogo dei nodi di conoscenza
+→ `docs/wiki/log.md` — log append-only degli ingest
+→ `docs/wiki/concepts/`, `entities/`, `summaries/` — pagine wiki tematiche
 
 ## Schema di riferimento
 

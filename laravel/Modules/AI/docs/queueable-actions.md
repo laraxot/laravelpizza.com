@@ -10,7 +10,6 @@ confidence: high
 tags: [queueable-action, spatie, architecture, laraxot, ai]
 related:
   - Modules/Xot/docs/queueable-actions.md
-status: draft
 ---
 
 # Queueable Actions — AI Module Doctrine
@@ -77,8 +76,9 @@ vendor/bin/pint Modules/AI/app/Actions
 | Path | Ruolo |
 |------|-------|
 | `Actions/Prompt/BuildAIPromptAction` | Dispatcher prompt per tipo (`classification`, `solutions`, …) |
-| `Actions/Prompt/AIPromptTemplates` | Template prompt per (`classification`, `solutions`) |
-| `Actions/Support/MakeAIRequestAction` | HTTP chat/completions OpenAI + retry |
+| `Actions/Prompt/AIPromptTemplates` | Costanti JSON schema (routing, pattern, improvements) |
+| `Actions/MakeAIRequestAction` | HTTP chat/completions OpenAI + retry, prompt di sistema opzionale (`Actions/Support/MakeAIRequestAction` e' la variante interna) |
+| `Actions/Vision/*` | Immagini via OpenRouter o Groq: estrazione JSON strutturata, modifica (vedi [vision-openrouter.md](vision-openrouter.md)) |
 | `Actions/AiJsonResponseDecoderAction` | Decode JSON risposta AI (sostituisce `AIServiceJsonDecoder`) |
 | `Actions/ClassifyTicketAction` | Classificazione ticket (cache + prompt + request + decode) |
 | `Actions/SuggestSolutionsAction` | Suggerimenti soluzioni ticket |
@@ -100,13 +100,3 @@ $raw = app(MakeAIRequestAction::class, [
 
 $data = AiJsonResponseDecoderAction::decodeObject($raw);
 ```
-
-### Stato implementazione (2026-10-20)
-
-- **ClassifyTicketAction**: convertito da `AIService::classifyTicket()` → preserva logica di cache, prompt, richiesta, decodifica.
-- **SuggestSolutionsAction**: convertito da `AIService::suggestSolutions()` → preserva logica di cache, prompt, richiesta, decodifica.
-- **AIService**: delega a `ClassifyTicketAction` e `SuggestSolutionsAction` mantenendo tutti gli altri metodi (`analyzeSentiment`, `predictPriority`, `optimizeRouting`, `generateAutoResponse`, `analyzePatterns`, `suggestImprovements`) intatti.
-- **MakeAIRequestAction**: nuovo action riusabile per HTTP AI + retry.
-- **BuildAIPromptAction** + **AIPromptTemplates**: nuovi dispatcher/template per costruire prompt riusabili.
-
-**Avanti**: migrare `AnalyzeSentimentAction`, `PredictPriorityAction`, ecc., in modo che tutti i metodi AI usino azioni queueable.

@@ -60,7 +60,16 @@ final class RedirectWidget extends XotBaseSchemaWidget
      *
      * @var view-string
      */
-    protected string $view = 'ui::filament.widgets.redirect-widget';
+    protected string $view;
+
+    public function __construct()
+    {
+        /** @var view-string $view */
+        $view = 'ui::filament.widgets.redirect-widget';
+        $this->view = $view;
+
+        parent::__construct();
+    }
 
     /**
      * Implementazione richiesta da XotBaseWidget.

@@ -3,11 +3,14 @@ title: "markdown linking conventions"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "markdown linking conventions"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Convenzioni per i Collegamenti nei File Markdown
@@ -29,16 +32,16 @@ status: draft
 ### ✅ CORRETTO: Percorsi Relativi
 
 ```markdown
-[Convenzioni di Naming per le Interfacce](./INTERFACE_NAMING_CONVENTION.md)
-[Chiarimento sulla Struttura delle Interfacce](./INTERFACE_STRUCTURE_CLARIFICATION.md)
-[Architettura dei Contratti](./CONTRACTS_ARCHITECTURE.md)
+[Convenzioni di Naming per le Interfacce](./interface_naming_convention.md)
+[Chiarimento sulla Struttura delle Interfacce](./interface_structure_clarification.md)
+[Architettura dei Contratti](./contracts_architecture.md)
 ```
 
 Per collegamenti a documenti in altre directory:
 
 ```markdown
-[Regole Generali per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
-[Best Practices per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+[Regole Generali per le Chiavi di Traduzione](../../Lang/docs/translation_keys_rules.md)
+[Best Practices per le Chiavi di Traduzione](../../Lang/docs/translation_keys_best_practices.md)
 ```
 
 ## Motivazione

@@ -1,5 +1,5 @@
 ---
-title: "Meetup — mai Filament\*, sempre XotBase*"
+title: "Meetup — mai Filament*, sempre XotBase*"
 type: concept
 theme: Meetup
 tags: [meetup, filament, xotbase, architecture]

@@ -3,7 +3,11 @@ title: "testing"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "testing"
 issues: []
 discussions: []
@@ -203,7 +207,7 @@ Configure Notify-specific settings:
 protected function setUp(): void
 {
     parent::setUp();
-    
+
     // Configure Notify module
     config(['notify.default_channel' => 'email']);
     config(['notify.queue_enabled' => false);
@@ -222,7 +226,7 @@ test('notification can be created', function () {
         'type' => 'info',
         'channel' => 'email',
     ]);
-    
+
     expect($notification)->toBeInstanceOf(\Modules\Notify\Models\Notification::class);
     expect($notification->title)->toBe('Test Notification');
 });
@@ -233,7 +237,7 @@ test('notification can be created', function () {
 ```php
 test('notify configuration is loaded', function () {
     $notifyConfig = config('notify');
-    
+
     expect($notifyConfig['default_channel'])->toBe('email');
     expect($notifyConfig['queue_enabled'])->toBe(false);
 });
@@ -244,7 +248,7 @@ test('notify configuration is loaded', function () {
 ```php
 test('notify service provider is registered', function () {
     $app = app();
-    
+
     expect($app->bound(\Modules\Notify\Providers\NotifyServiceProvider::class))->toBeTrue();
 });
 ```
@@ -289,7 +293,7 @@ test('notify service provider is registered', function () {
 protected function setUp(): void
 {
     parent::setUp();
-    
+
     config(['notify.default_channel' => 'email']);
     config(['notify.queue_enabled' => false);
 }
@@ -305,11 +309,11 @@ protected function setUp(): void
 protected function createApplication()
 {
     $app = parent::createApplication();
-    
+
     $app['config']->set([
-        'database.connections.notify.database' => 'quaeris_data_test',
+        'database.connections.notify.database' => '<nome progetto>_data_test',
     ]);
-    
+
     return $app;
 }
 ```
@@ -412,7 +416,7 @@ test('notification can be created', function () {
         'recipient' => 'test@example.com',
         'status' => 'pending',
     ]);
-    
+
     expect($notification)->toBeInstanceOf(\Modules\Notify\Models\Notification::class);
     expect($notification->title)->toBe('Test Notification');
     expect($notification->message)->toBe('Test message');
@@ -428,7 +432,7 @@ test('notification can be created', function () {
 ```php
 test('notify service can send notification', function () {
     $service = new \Modules\Notify\Services\NotifyService();
-    
+
     $notification = $service->sendNotification([
         'title' => 'Test Notification',
         'message' => 'Test message',
@@ -436,7 +440,7 @@ test('notify service can send notification', function () {
         'channel' => 'email',
         'recipient' => 'test@example.com',
     ]);
-    
+
     expect($notification)->toBeInstanceOf(\Modules\Notify\Models\Notification::class);
     expect($notification->status)->toBe('sent');
 });
@@ -453,7 +457,7 @@ test('notify api can create notification', function () {
         'channel' => 'email',
         'recipient' => 'test@example.com',
     ];
-    
+
     $response = $this->post('/api/notify/notifications', $notificationData);
     $response->assertStatus(201);
     $response->assertJson([
@@ -511,7 +515,7 @@ Remember: Good tests are the foundation of reliable software development.
 
 ---
 
-<!-- Merged from TESTING.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from testing.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
 title: "Notify Module Testing"

@@ -1,4 +1,5 @@
 ---
+qmd: "xot stories relative public symlinks story md"
 type: story
 slug: relative-public-symlinks
 title: "Xot: symlink relativi per gli asset di moduli e temi, mai cancellare cartelle in public_html"

@@ -4,25 +4,25 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'name' => 'Trattamenti',
-        'plural' => 'Trattamenti',
+        'name' => 'Processing Activities',
+        'plural' => 'Processing Activities',
         'group' => [
             'name' => 'GDPR',
-            'description' => 'Registro dei trattamenti dati',
+            'description' => 'Data processing register',
         ],
-        'label' => 'Registro Trattamenti',
+        'label' => 'Processing Register',
         'sort' => '76',
         'icon' => 'gdpr-treatment',
     ],
     'fields' => [
         'name' => [
-            'label' => 'Nome Trattamento',
+            'label' => 'Processing Name',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'purpose' => [
-            'label' => 'Finalità',
+            'label' => 'Purpose',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -34,25 +34,25 @@ return [
             'description' => '',
         ],
         'data_categories' => [
-            'label' => 'Categorie di Dati',
+            'label' => 'Data Categories',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'retention_period' => [
-            'label' => 'Periodo di Conservazione',
+            'label' => 'Retention Period',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'security_measures' => [
-            'label' => 'Misure di Sicurezza',
+            'label' => 'Security Measures',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'data_transfers' => [
-            'label' => 'Trasferimenti Dati',
+            'label' => 'Data Transfers',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -69,7 +69,7 @@ return [
         ],
     ],
     'legal_bases' => [
-        'consent' => 'Consenso',
+        'consent' => 'Consent',
         'contract' => 'Contratto',
         'legal_obligation' => 'Obbligo Legale',
         'vital_interests' => 'Interessi Vitali',

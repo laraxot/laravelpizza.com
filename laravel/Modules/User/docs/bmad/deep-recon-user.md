@@ -1,3 +1,5 @@
+# User Module — Deep Recon (BMAD Deep Dive)
+
 ---
 title: "User Module: Deep Recon (BMAD Deep Dive)"
 type: note
@@ -70,6 +72,8 @@ Modules/User/
 | Documentation Quality | Poor | Good | ❌ NEEDS WORK |
 
 ### Tooling Issues
+1. **PHPMD**: Fails due to PDepend/Symfony conflict — impacts codebase hygiene
+
 1. **PHPMD**: Fails due to PDepend/Symfony conflict: impacts codebase hygiene
 2. **PHPInsights**: Non-functional due to plugin allowlist restrictions
 3. **Test Suite**: PHPStan complexity prevents full execution, limiting coverage validation

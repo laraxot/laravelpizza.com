@@ -2,16 +2,19 @@
 qmd: "git consolidated"
 issues: []
 discussions: []
-title: "git: Consolidated Documentation"
+title: "git — Consolidated Documentation"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
-# git: Consolidated Documentation
+# git — Consolidated Documentation
 
 Consolidated from **10** individual files.
 
@@ -43,17 +46,12 @@ qmd: "git-commit-push-rule git commit & push workflow - ai agent rules"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -407,7 +405,10 @@ git push
 
 *Consolidated from: `git-conflicts-inventory.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## File con conflitti di merge non risolti
 
 ### File PHP
@@ -433,7 +434,10 @@ git push
 
 *Consolidated from: `git-conflicts-resolution-summary.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Data Risoluzione
 4 Agosto 2025 - 11:23:35
 
@@ -501,8 +505,6 @@ Tutti i file risolti rispettano:
 - [Architecture Documentation](./architecture.md)
 - [Email Templates](./email_templates.md)
 - [Notification Channels](./notification_channels_implementation.md)
-- [Email Templates](../../email_templates.md)
-- [Notification Channels](../../notification_channels_implementation.md)
 
 ---
 *Aggiornato automaticamente dopo risoluzione conflitti Git*
@@ -522,17 +524,12 @@ qmd: "git-conflicts-resolution-sumy risoluzione conflitti git - modulo notify"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -558,7 +555,7 @@ related:
 ### Documentazione
 - `docs/README.md` - Documentazione principale
 - `docs/architecture.md` - Architettura del sistema notifiche
-- `docs/notification-channels-implementation.md` - Implementazione canali
+- `docs/notification-channels-implementation-2.md` - Implementazione canali
 - `docs/email-templates.md` - Template email
 
 ## Modifiche Applicate
@@ -605,8 +602,7 @@ Tutti i file risolti rispettano:
 - [Documentazione Root Notify](../../../docs/modules/notify.md)
 - [Architecture Documentation](./architecture.md)
 - [Email Templates](./email-templates.md)
-- [Email Templates](../../email-templates.md)
-- [Notification Channels](./notification-channels-implementation.md)
+- [Notification Channels](./notification-channels-implementation-2.md)
 
 ---
 *Aggiornato automaticamente dopo risoluzione conflitti Git*
@@ -629,7 +625,7 @@ discussions:
   - "https://github.com/provtv/<nome repository>/discussions/204"
 ---
 
-# Handoff: multi-org sync (STORY-003)
+# Handoff — multi-org sync (STORY-003)
 
 ## Scopo
 
@@ -653,7 +649,7 @@ Un tree dirty o un remote dietro/avanti **non** è sincronizzato, anche se l’a
 
 1. `cd` owner → `git remote -v` → fetch tutti → merge senza force → push tutti
 2. Dopo edit PHP: phpstan/phpmd/phpinsights scoped (prompt `02-gitmodules-sync.md`)
-3. Mai `git restore`: forward-only
+3. Mai `git restore` — forward-only
 4. UI: non reintrodurre `InteractiveMap` (dominio Geo)
 
 ## Note owner
@@ -684,11 +680,11 @@ Seguire sync multi-org e mantenere docs allineate alla story.
 
 *Consolidated from: `git-push-resolution.md`*
 
-title: Notify Push Execution and Resolution: 2026-07-29 Continuation
+title: Notify Push Execution and Resolution — 2026-07-29 Continuation
 date: 2026-07-29
 ---
 
-# Notify Module Push Execution: Session Continuation
+# Notify Module Push Execution — Session Continuation
 
 ## Procedura Eseguita
 
@@ -734,7 +730,10 @@ git push provtv dev
 ```bash
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ---
 
 **Segnale di errore:**
@@ -794,7 +793,7 @@ git push laraxot dev
 
 ---
 
-## Quality Gates: Notify Module
+## Quality Gates — Notify Module
 
 ### PHPStan (Scope: Modules/Notify/app)
 ```bash
@@ -805,7 +804,7 @@ php ./vendor/bin/phpstan analyse Modules/Notify/app
 ### PHPStan (Scope: Global Modules bootstrap)
 ```bash
 php ./vendor/bin/phpstan analyse Modules
-# ⏸️ TIMEOUT @ 120s (Larastan bootstrap timeout: architectural issue, non-Notify-specific)
+# ⏸️ TIMEOUT @ 120s (Larastan bootstrap timeout — architectural issue, non-Notify-specific)
 ```
 
 ### Conclusion
@@ -829,7 +828,10 @@ php ./vendor/bin/phpstan analyse Modules
 - Verificare se il problema è diffuso (colpisce altri moduli?)
 - Soluzione temporanea: escludere laraxot da push automatici finché non risanato
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ### 3. Larastan Bootstrap Optimization
 - Timeout globale non è colpa di Notify
 - Problema architetturale (cross-module dependencies + Livewire registration in XotBaseServiceProvider)
@@ -878,7 +880,10 @@ Remote sync: ✅ provtv, ❌ laraxot (corrupted)
 
 *Consolidated from: `gitattributes-cleanup.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 > **Date**: 2026-03-13  
 > **Status**: ✅ Complete  
 > **Action**: Removed all `.gitattributes` files
@@ -1060,7 +1065,7 @@ cp /path/to/backup/.gitattributes laravel/Modules/Blog/
 - [x] Remove all `.gitattributes` files
 - [x] Update root `.gitignore`
 - [x] Create module `.gitignore` files
-- [x] Update agents.md
+- [x] Update AGENTS.md
 - [x] Document cleanup
 - [x] Verify with git check-ignore
 
@@ -1100,17 +1105,12 @@ qmd: "github-actions-status github actions status & fixes"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -1255,17 +1255,12 @@ qmd: "github-sync-rule 🔄 sync .github with bashscripts/ai/.github"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -1335,10 +1330,10 @@ echo "Synced .github with bashscripts/ai/.github on $(date)" >> bashscripts/ai/.
 | Source | Destination | Purpose |
 |--------|-------------|---------|
 | `.github/workflows/*.yml` | `bashscripts/ai/.github/workflows/` | All workflows |
-| `.github/contributing.md` | `bashscripts/ai/.github/` | Contribution guide |
+| `.github/CONTRIBUTING.md` | `bashscripts/ai/.github/` | Contribution guide |
 | `.github/pull_request_template.md` | `bashscripts/ai/.github/` | PR template |
 | `.github/dependabot.yml` | `bashscripts/ai/.github/` | Dependabot config |
-| `.github/security.md` | `bashscripts/ai/.github/` | Security policy |
+| `.github/SECURITY.md` | `bashscripts/ai/.github/` | Security policy |
 
 ---
 
@@ -1447,7 +1442,10 @@ ls -la bashscripts/ai/.github/workflows/
 
 *Consolidated from: `gits-resolution.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Data Risoluzione
 4 Agosto 2025 - 11:23:35
 
@@ -1515,8 +1513,6 @@ Tutti i file risolti rispettano:
 - [Architecture Documentation](./architecture.md)
 - [Email Templates](./email_templates.md)
 - [Notification Channels](./notification_channels_implementation.md)
-- [Email Templates](../../email_templates.md)
-- [Notification Channels](../../notification_channels_implementation.md)
 
 ---
 *Aggiornato automaticamente dopo risoluzione conflitti Git*

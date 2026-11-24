@@ -1,3 +1,10 @@
+---
+title: "Custom Events - Activity"
+qmd: "activity tasks features custom events md"
+type: note
+tags: [documentation]
+---
+
 # Custom Events - Activity
 
 **Task ID**: ACTIVITY-FEATURE-001

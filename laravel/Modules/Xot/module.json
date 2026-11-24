@@ -1,8 +1,13 @@
 {
     "name": "Xot",
     "alias": "xot",
-    "description": "Modulo base che fornisce funzionalità core e strutture fondamentali per gli altri moduli",
-    "keywords": ["core", "base", "foundation", "structure"],
+    "description": "Modulo base che fornisce funzionalita core e strutture fondamentali per gli altri moduli",
+    "keywords": [
+        "core",
+        "base",
+        "foundation",
+        "structure"
+    ],
     "priority": 2,
     "active": 1,
     "order": 2,
@@ -10,7 +15,9 @@
         "Modules\\Xot\\Providers\\XotServiceProvider",
         "Modules\\Xot\\Providers\\Filament\\AdminPanelProvider"
     ],
-    "aliases": [],
+    "aliases": {},
     "files": [],
-    "requires": []
+    "requires": [],
+    "minimumCoreVersion": "10.0",
+    "phpVersion": "^8.3"
 }

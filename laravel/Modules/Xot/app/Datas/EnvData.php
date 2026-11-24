@@ -4,14 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Datas;
 
-use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
 use Livewire\Wireable;
 use Spatie\LaravelData\Concerns\WireableData;
 use Spatie\LaravelData\Data;
 
 use function Safe\preg_match;
-use function Safe\preg_replace_callback;
 
 /**
  * Undocumented class.
@@ -73,6 +72,31 @@ class EnvData extends Data implements Wireable
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Il file di ambiente che {@see update()} modifica.
+     *
+     * In produzione e' `base_path('.env')`, e non cambia. La chiave di
+     * configurazione esiste perche' questo metodo **scrive su un file vero**, e
+     * il solo modo di provarlo senza toccare il file della macchina e' poterlo
+     * mandare altrove.
+     *
+     * I test di `EnvWidget` scrivevano sul `.env` reale e lo ripristinavano in
+     * `afterEach` — lo dichiarava il loro stesso docblock. Un'asserzione che
+     * interrompe la corsa prima del ripristino, e la configurazione di chi
+     * sviluppa resta alterata; e in un container senza `.env` quegli undici
+     * test morivano nel `beforeEach`, prima di provare qualunque cosa
+     * (base_quaeris_fila5#244).
+     */
+    public static function envFilePath(): string
+    {
+        $configured = config('xot.env_file');
+
+        return is_string($configured) && $configured !== '' ? $configured : base_path('.env');
+    }
+
+    /**
+>>>>>>> laraxot/dev
      * Scrive su `.env` solo le variabili dichiarate da EnvData: `$data` arriva dallo stato
      * Livewire, modificabile dal client, e le sue chiavi non sono mai nomi di variabile fidati.
      *
@@ -80,7 +104,24 @@ class EnvData extends Data implements Wireable
      */
     public function update(array $data): void
     {
+<<<<<<< HEAD
         $env_path = base_path('.env');
+=======
+        $env_path = self::envFilePath();
+
+        if (! File::exists($env_path)) {
+            // Un messaggio che dice cosa manca, invece della
+            // `FileNotFoundException` grezza del Filesystem: questo metodo lo
+            // chiama `EnvWidget` dal pannello, e chi premeva «salva» su un
+            // ambiente senza `.env` — una macchina dove le variabili arrivano
+            // dall'ambiente del container e non da un file — vedeva una traccia
+            // di stack. Non si crea il file: farlo nascere da un pannello
+            // significa che al riavvio successivo inizierebbe a **sovrascrivere**
+            // le variabili vere (base_quaeris_fila5#244).
+            throw new \RuntimeException(sprintf('Nessun file di ambiente da modificare in %s.', $env_path));
+        }
+
+>>>>>>> laraxot/dev
         $env_content = File::get($env_path);
 
         foreach (array_intersect_key($data, get_object_vars($this)) as $k => $v) {

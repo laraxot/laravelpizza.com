@@ -32,7 +32,11 @@ describe('Comune Business Logic', function () {
     });
 
     test('comune has expected fillable fields for italian municipalities', function () {
+<<<<<<< HEAD
+        $comune = new Comune;
+=======
         $comune = new Comune();
+>>>>>>> laraxot/dev
         $expectedFillable = [
             'id',
             'codice',
@@ -54,7 +58,11 @@ describe('Comune Business Logic', function () {
     });
 
     test('comune has schema definition for structured geographic data', function () {
+<<<<<<< HEAD
+        $schema = (new Comune)->getSchema();
+=======
         $schema = (new Comune())->getSchema();
+>>>>>>> laraxot/dev
 
         Assert::assertSame('json', $schema['zona'] ?? null);
         Assert::assertSame('json', $schema['provincia'] ?? null);
@@ -63,6 +71,17 @@ describe('Comune Business Logic', function () {
     });
 
     test('comune has json directory property for data source', function () {
+<<<<<<< HEAD
+        Assert::assertSame('', (new Comune)->jsonDirectory);
+    });
+
+    test('comune has translatable array configured', function () {
+        Assert::assertSame([], (new Comune)->translatable);
+    });
+
+    test('comune model can be instantiated without errors', function () {
+        new Comune;
+=======
         Assert::assertSame('', (new Comune())->jsonDirectory);
     });
 
@@ -72,5 +91,6 @@ describe('Comune Business Logic', function () {
 
     test('comune model can be instantiated without errors', function () {
         new Comune();
+>>>>>>> laraxot/dev
     });
 });

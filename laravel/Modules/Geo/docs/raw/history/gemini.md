@@ -9,7 +9,7 @@ issues: []
 discussions: []
 ---
 
-# GEMINI.md - Project Overview
+# gemini.md - Project Overview
 
 ## Project Overview
 
@@ -110,7 +110,7 @@ The project follows a set of strict conventions to maintain code quality, consis
 
 **Core Directives:**
 -   **Prioritization**: The Agent **ALWAYS** chooses the priority. Do not wait for user input to decide the next best step.
--   **Memory Updates**: Continuously update `GEMINI.md` and `docs/` to reflect new learnings, rules, and patterns.
+-   **Memory Updates**: Continuously update `gemini.md` and `docs/` to reflect new learnings, rules, and patterns.
 -   **Super Cow Methodology**: Adhere strictly to the "Super Cow" philosophy:
     -   **Deep Analysis**: Understand the "why" and "business logic" before acting.
     -   **Documentation**: Docs are the memory. Update them *before* and *after* implementation.

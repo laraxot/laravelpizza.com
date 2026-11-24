@@ -10,11 +10,9 @@ related:
   - "../../passport-oauth-cluster.md"
   - "../../wiki/redundancy/oauth-dual-resource-trees.md"
   - "../../stories/12.4.oauth-dup-resources-ssot.story.md"
-tags: [docs, user, bmad]
-qmd: "story   dedup documentazione 'passport/oauth cluster' user"
 ---
 
-# Story: Dedup documentazione "passport/oauth cluster"
+# Story — Dedup documentazione "passport/oauth cluster"
 
 ## Obiettivo
 
@@ -33,7 +31,7 @@ toccare il codice applicativo (fuori scope).
    stesse frasi "Metodologia Super Mucca", stesso elenco "20 file PHP").
 2. **Corruzione da un dedup precedente mal eseguito**: 13 di questi file erano
    gia' stati ridotti a stub rotti che puntano a
-   `../../../Themes/docs/shared-components/<nome>.md`: percorso che **non
+   `../../../Themes/docs/shared-components/<nome>.md` — percorso che **non
    esiste in nessun punto del monorepo**. Il commit che ha introdotto questo
    danno (`7b9cba67`, 2026-09-22, "risolve marker di conflitto residui")
    ha risolto i marker di merge conflict scegliendo il lato sbagliato,
@@ -53,7 +51,7 @@ toccare il codice applicativo (fuori scope).
    `unique('clients', ...)` vs `unique('oauth_clients', ...)`). Questo
    problema era gia' tracciato con precisione in
    `docs/wiki/redundancy/oauth-dual-resource-trees.md` e nella story
-   `12.4.oauth-dup-resources-ssot` (status: backlog): non duplicato, solo
+   `12.4.oauth-dup-resources-ssot` (status: backlog) — non duplicato, solo
    confermato e collegato dal nuovo documento canonico.
 5. **`BMAD-SESSION.md` e `BMAD-SECOND-BRAIN.md`**: letti, **non toccati**.
    Sono log di sessione su un tema completamente diverso (fix PHPStan per
@@ -76,7 +74,7 @@ toccare il codice applicativo (fuori scope).
 
 - Remediation del dual-resource-tree (cancellare `app/Filament/Resources/Oauth*`
   e unificare `OauthClientForm`): pianificata nella story `12.4`, non eseguita
-  qui: e' lavoro sul codice applicativo, esplicitamente fuori scope per questo
+  qui — e' lavoro sul codice applicativo, esplicitamente fuori scope per questo
   task di consolidamento documentale.
 - Nessun PHPStan/Pest eseguito (compito di un altro agente, per direttiva
   esplicita del task).
@@ -92,5 +90,5 @@ toccare il codice applicativo (fuori scope).
 - [x] `BMAD-SESSION.md`/`BMAD-SECOND-BRAIN.md` valutati e lasciati intatti
   (tema distinto).
 - [x] Story BMAD di consolidamento documentata.
-- [ ] Remediation codice (dual-resource-tree): intenzionalmente non eseguita,
+- [ ] Remediation codice (dual-resource-tree) — intenzionalmente non eseguita,
   tracciata su story `12.4` esistente.

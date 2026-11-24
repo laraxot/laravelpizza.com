@@ -1,3 +1,10 @@
+---
+title: "Task: GDPR Compliance Enhancement"
+qmd: "activity roadmap tasks gdpr compliance enhancement md"
+type: note
+tags: [documentation]
+---
+
 # Task: GDPR Compliance Enhancement
 
 ## 🎯 Objective

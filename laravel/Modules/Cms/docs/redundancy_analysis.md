@@ -1,0 +1,24 @@
+---
+<<<<<<< HEAD
+title: "Redundancy Analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "Redundancy Analysis"
+=======
+title: "redundancy analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-11-23
+qmd: "redundancy analysis"
+>>>>>>> laraxot/dev
+issues: []
+discussions: []
+module: theme
+topic: REDUNDANCY_ANALYSIS
+canonical: ../../../Themes/docs/shared-components/redundancy_analysis.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/redundancy_analysis.md

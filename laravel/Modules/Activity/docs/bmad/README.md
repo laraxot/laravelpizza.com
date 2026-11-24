@@ -1,9 +1,5 @@
 ---
-<<<<<<< .merge_file_KI2oBU
-title: "Activity — BMAD Method Integration"
-=======
 title: "Activity: BMAD Method Integration"
->>>>>>> .merge_file_16TIab
 description: "BMAD workflow documentation per il modulo Activity"
 module: "Activity"
 alias: "activity"
@@ -21,11 +17,6 @@ extended_by: 40
 documentation_date: "2026-05-27"
 bmad_version: "6.2.0"
 bmad_track: "core-foundation"
-<<<<<<< .merge_file_KI2oBU
----
-
-# Activity — BMAD Method Integration
-=======
 type: index
 updated: 2026-10-07
 tags: [docs, activity, bmad]
@@ -41,7 +32,6 @@ qmd: "activity   bmad method integration activity"
 - [Filament blueprint](./filament-blueprint.md)
 - [Project context](./project-context.md)
 - [Decision log](./decision-log.md)
->>>>>>> .merge_file_16TIab
 
 ## Scopo BMAD per Activity
 
@@ -108,13 +98,8 @@ bmad-quick-spec "Specifica per retention log Y giorni"
 ## Configurazione
 
 ```bash
-<<<<<<< .merge_file_KI2oBU
-# Verifica che Activity sia abilitato
-php artisan module:status Activity
-=======
 # Verifica che Activity sia abilitato (module:status non esiste: usare module:list)
 php artisan module:list | grep Activity
->>>>>>> .merge_file_16TIab
 
 # Esegui migration
 php artisan migrate --path=modules/Activity/database/migrations
@@ -150,8 +135,4 @@ _bmad-output/
 
 ---
 
-<<<<<<< .merge_file_KI2oBU
 *Activity · BMAD Method · data 2026-05-27*
-=======
-*Activity · BMAD Method · data 2026-05-27*
->>>>>>> .merge_file_16TIab

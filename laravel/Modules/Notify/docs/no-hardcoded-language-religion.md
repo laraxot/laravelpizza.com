@@ -3,14 +3,17 @@ title: "no hardcoded language religion"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "no hardcoded language religion"
 issues: []
 discussions: []
-status: draft
 ---
 
-# NO Hardcoded Language: La Religione i18n
+# NO Hardcoded Language — La Religione i18n
 
 **Status**: Active  
 **Created**: 2026-04-14  
@@ -19,6 +22,15 @@ status: draft
 **Audience**: All developers + AI agents
 
 ---
+
+title: "no hardcoded language religion"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "no hardcoded language religion"
+issues: []
+discussions: []
 ## LA REGOLA AUREA
 
 **NON scriverai MAI parole in italiano (o qualsiasi lingua) nel codice PHP.**

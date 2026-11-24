@@ -51,19 +51,20 @@ function comuneModelFixtures(): array
     ];
 }
 
-<<<<<<< .merge_file_gWA8f5
-=======
-<<<<<<< .merge_file_RPJx5y
-uses(TestCase::class);
-=======
->>>>>>> .merge_file_tfa93k
 function comuneModelFixturePath(): string
 {
     return storage_path('framework/testing/geo/comuni-model-test.json');
 }
 
+<<<<<<< HEAD
+<<<<<<< .merge_file_6ptxtS
+uses(TestCase::class);
+=======
 uses(\Modules\Geo\Tests\TestCase::class);
->>>>>>> .merge_file_qCJ9yn
+>>>>>>> .merge_file_rYBRTC
+=======
+uses(\Modules\Geo\Tests\TestCase::class);
+>>>>>>> laraxot/dev
 
 beforeEach(function (): void {
     File::ensureDirectoryExists(\dirname(comuneModelFixturePath()));

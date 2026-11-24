@@ -3,11 +3,14 @@ title: "package risk matrix"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "package risk matrix"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Package Risk Matrix (2026-03-02)

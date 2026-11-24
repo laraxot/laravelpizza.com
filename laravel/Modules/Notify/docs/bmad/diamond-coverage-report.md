@@ -3,26 +3,25 @@ title: "💎 FIXCITY - DIAMOND COVERAGE REPORT"
 type: concept
 tags: [diamond, coverage, report]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+qmd: "diamond-coverage-report 💎 fixcity - diamond coverage report"
 qmd: "diamond-coverage-report 💎 ptv - diamond coverage report"
+=======
+updated: 2026-11-23
+qmd: "diamond-coverage-report 💎 fixcity - diamond coverage report"
+>>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "../00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "../acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-status: superseded
-superseded_by: ../diamond-coverage-report.md
 ---
 
 # 💎 FIXCITY - DIAMOND COVERAGE REPORT

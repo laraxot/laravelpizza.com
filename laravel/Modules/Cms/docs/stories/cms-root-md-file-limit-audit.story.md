@@ -32,7 +32,7 @@ Regola canonica: `bashscripts/ai/wiki/rules/module-theme-root-md-files-limit.md`
 I 16 file .md in root erano quasi tutti relitti di una precedente sincronizzazione automatica
 (commit `a77095a7 cms: sync docs + fix after agent AI work`, 2026-09-06) che aveva importato file
 di skeleton del package pubblico `laraxot/module_cms_fila5` (`.github/workflows`, `CHANGELOG.md`,
-`license.md`, ecc.) insieme a report/appunti generati da agenti AI, senza poi ripulire la root.
+`LICENSE.md`, ecc.) insieme a report/appunti generati da agenti AI, senza poi ripulire la root.
 
 **Scoperta chiave**: per 15 dei 16 file, esisteva gia' una copia byte-identica archiviata sotto
 `docs/root-md-files/<stesso-nome>.md` (creata dalla stessa sincronizzazione), verificata con
@@ -45,8 +45,8 @@ in `docs/root-md-files/` prima ancora di iniziare questo audit.
 
 `Modules/Notify` e `Modules/Gdpr` (gia' standardizzati, vedi memoria
 `project_module_doc_consolidation_audit.md`) mantengono in root esattamente:
-`ARCHITECTURE.md`, `CHANGELOG.md`, `CONTRIBUTING.md`, `GETTING_STARTED.md`/`TESTING.md`,
-`README.md` = 6 file. Cms non ha (ancora) `ARCHITECTURE.md`/`CONTRIBUTING.md`/`TESTING.md`
+`architecture.md`, `CHANGELOG.md`, `CONTRIBUTING.md`, `GETTING_STARTED.md`/`testing.md`,
+`README.md` = 6 file. Cms non ha (ancora) `architecture.md`/`CONTRIBUTING.md`/`testing.md`
 in root: non li ho inventati (fuori scope, nessun contenuto nuovo va creato in un task di
 riorganizzazione). Ho mantenuto solo i due file realmente canonici e con contenuto sostanziale
 gia' presenti.
@@ -68,12 +68,12 @@ sotto `docs/root-md-files/`).
 |---|---|
 | `business-logic-report.md` | `docs/root-md-files/business-logic-report.md` |
 | `business_logic_report.md` | `docs/root-md-files/business_logic_report.md` |
-| `changelog.md` (duplicato case di `CHANGELOG.md`, vietato dalla regola) | `docs/root-md-files/changelog.md` (+ `docs/_archive/root-md-files/CHANGELOG.md`) |
+| `CHANGELOG.md` (duplicato case di `CHANGELOG.md`, vietato dalla regola) | `docs/root-md-files/CHANGELOG.md` (+ `docs/_archive/root-md-files/CHANGELOG.md`) |
 | `.docs-directory-violation-reminder.md` (contenuto estraneo, progetto `base_saluteora`) | `docs/root-md-files/.docs-directory-violation-reminder.md` |
 | `.docs_directory_violation_reminder.md` | `docs/root-md-files/.docs_directory_violation_reminder.md` |
 | `docs-directory-violation-reminder.md` | `docs/root-md-files/docs-directory-violation-reminder.md` |
-| `license.md` (MIT boilerplate non configurato, placeholder `:vendor_name`) | `docs/root-md-files/license.md` |
-| `license-renamed.md` (duplicato esatto di `license.md`) | `docs/root-md-files/license-renamed.md` |
+| `LICENSE.md` (MIT boilerplate non configurato, placeholder `:vendor_name`) | `docs/root-md-files/LICENSE.md` |
+| `license-renamed.md` (duplicato esatto di `LICENSE.md`) | `docs/root-md-files/license-renamed.md` |
 | `modular-architecture-update-summary.md` | `docs/root-md-files/modular-architecture-update-summary.md` |
 | `modular_architecture_update_summary.md` | `docs/root-md-files/modular_architecture_update_summary.md` |
 | `modular-architecture-update-sumy.md` (refuso di battitura nel nome) | `docs/root-md-files/modular-architecture-update-sumy.md` |

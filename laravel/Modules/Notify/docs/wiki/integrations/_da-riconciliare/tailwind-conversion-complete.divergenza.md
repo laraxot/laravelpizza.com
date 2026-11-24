@@ -1,14 +1,17 @@
 ---
-qmd: "tailwind conversion complete.divergenza"
+qmd: "Tailwind Conversion Complete.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: TAILWIND_CONVERSION_COMPLETE.md"
+title: "Tailwind Conversion Complete.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Divergenza: `TAILWIND_CONVERSION_COMPLETE.md`

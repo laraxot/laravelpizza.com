@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament forms"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Utilizzo dei Widget Filament per i Form

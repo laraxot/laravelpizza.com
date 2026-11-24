@@ -8,8 +8,8 @@ declare(strict_types=1);
 // Cms txt.fields.social_links — LangServiceProvider SSoT.
 return [
     'label' => 'Link Social',
-    'placeholder' => 'Aggiungi profili social media',
-    'helper_text' => 'Collegamenti ai profili social dell\'azienda',
+    'placeholder' => 'Add social media profiles',
+    'helper_text' => 'Links to the company\'s social profiles',
     'tooltip' => '',
     'description' => '',
 ];

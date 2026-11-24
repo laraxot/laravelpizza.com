@@ -3,12 +3,14 @@ title: "sms action factory resolution"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "sms action factory resolution"
 issues: []
 discussions: []
-status: superseded
-superseded_by: sms-action-factory-resolution.md
 ---
 
 # Risoluzione dinamica vs match esplicito in SmsActionFactory
@@ -99,4 +101,8 @@ return app($class);
 
 ## 7. Conclusione
 
+<<<<<<< HEAD
 La risoluzione dinamica tramite formula è **più scalabile e manutenibile** rispetto al match esplicito, ma richiede disciplina nella naming convention e test automatici di coerenza. In progetti modulari e in crescita è la scelta preferibile, purché ben documentata e sorvegliata. 
+=======
+La risoluzione dinamica tramite formula è **più scalabile e manutenibile** rispetto al match esplicito, ma richiede disciplina nella naming convention e test automatici di coerenza. In progetti modulari e in crescita è la scelta preferibile, purché ben documentata e sorvegliata.
+>>>>>>> laraxot/dev

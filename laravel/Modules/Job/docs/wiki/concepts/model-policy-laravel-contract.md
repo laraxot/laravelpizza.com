@@ -3,7 +3,7 @@ created: 2026-09-26
 qmd: "model policy laravel contract"
 issues: []
 discussions: []
-title: Policy modello: contratto Laravel (Job)
+title: Policy modello — contratto Laravel (Job)
 type: concept
 module: Job
 confidence: high
@@ -14,10 +14,9 @@ related:
   - ../../../Xot/docs/wiki/concepts/policy-inheritance-strategy.md
   - ../../ponytail-audit-over-engineering.md
   - ./policy-restoration-incident.md
-status: draft
 ---
 
-# Policy modello: contratto Laravel (Job)
+# Policy modello — contratto Laravel (Job)
 
 Delta modulo. Hub progetto: [docs/wiki/concepts/model-policy-laravel-contract.md](../../../../../../docs/wiki/concepts/model-policy-laravel-contract.md).
 
@@ -47,7 +46,7 @@ abstract class JobBasePolicy
     public function before(UserContract $user, string $_ability): ?bool { /* … */ }
 }
 
-// OBBLIGATORIO per Laravel: forma minima valida
+// OBBLIGATORIO per Laravel — forma minima valida
 class ExportPolicy extends JobBasePolicy {}
 ```
 

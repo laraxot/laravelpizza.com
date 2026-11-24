@@ -36,7 +36,7 @@ return [
     ],
     'verify' => [
         'sign_out' => [
-            'label' => 'esci',
+            'label' => 'Esci',
         ],
         'resent' => [
             'message' => 'Un nuovo link di verifica è stato inviato al tuo indirizzo email.',

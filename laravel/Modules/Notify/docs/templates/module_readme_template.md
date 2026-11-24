@@ -2,7 +2,11 @@
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "module readme template"
 issues: []
 discussions: []
@@ -85,7 +89,7 @@ Key settings:
 │   └── [module-slug].php
 ├── docs/
 │   ├── README.md (this file)
-│   ├── ARCHITECTURE.md
+│   ├── architecture.md
 │   ├── architecture.md
 │   ├── guides/
 │   └── api/
@@ -172,16 +176,15 @@ composer test -- Modules/[ModuleName]
 ## Related Documentation
 
 ### Within Module
-- [ARCHITECTURE.md](./ARCHITECTURE.md) - Design details
+- [architecture.md](./architecture.md) - Design details
 - [architecture.md](./architecture.md) - Design details
 - [Guides](./guides/) - How-to guides
 
 ### Related Modules
-- [Xot Module](../../../Xot/README.md) - Base classes
-- [Xot Module](../../../Xot/README.md) - Base classes
+- [Xot Module](../xot/README.md) - Base classes
 
 ---
 
-Navigation: [Project Home](../index.md) | [Modules](../../docs/modules/README.md)
+Navigation: [Project Home](../../docs/index.md) | [Modules](../../docs/modules/README.md)
 Navigation: [Project Home](../../docs/index.md) | [Modules](../../docs/modules/README.md)
 

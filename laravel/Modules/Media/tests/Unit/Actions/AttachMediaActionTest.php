@@ -4,11 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
 
-uses(TestCase::class);
-
 use Modules\Media\Actions\AttachMediaAction;
 use Modules\Media\Tests\TestCase;
 use Spatie\QueueableAction\QueueableAction;
+
+// `uses()` deve stare DOPO gli `use`: gli import valgono dalla loro riga in
+// avanti, quindi scritto sopra `TestCase::class` si risolveva come
+// Modules\Media\Tests\Unit\Actions\TestCase e Pest moriva in fase di
+// raccolta, portandosi via tutta la suite (base_quaeris_fila5#213).
+uses(TestCase::class);
 
 describe('AttachMediaAction', function () {
     it('uses QueueableAction trait', function (): void {

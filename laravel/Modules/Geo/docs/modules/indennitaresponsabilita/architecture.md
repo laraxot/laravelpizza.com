@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "architecture"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Architettura del modulo `IndennitaResponsabilita`
@@ -73,4 +72,13 @@ laravel/
 - **Documentare ogni nuovo scope/trait** in `docs/wiki/relationship-patterns.md`.  
 
 ---  
+
+title: "architecture"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "architecture"
+issues: []
+discussions: []
 *Document updated on 2025‑11‑03.*  

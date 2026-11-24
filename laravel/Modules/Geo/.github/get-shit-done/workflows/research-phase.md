@@ -37,7 +37,7 @@ If `found` is false: Error and exit.
 ## Step 2: Check Existing Research
 
 ```bash
-ls .planning/phases/${PHASE}-*/RESEARCH.md 2>/dev/null
+ls .planning/phases/${PHASE}-*/research.md 2>/dev/null
 ```
 
 If exists: Offer update/view/skip options.

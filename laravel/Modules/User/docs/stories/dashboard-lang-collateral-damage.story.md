@@ -1,7 +1,7 @@
 ---
 id: story-dashboard-lang-collateral-damage-2026-09-21
 slug: dashboard-lang-collateral-damage-2026-09-21
-title: "STORY: 500 reale su /user/admin da file lang troncato, audit blast radius commit 0701a777a"
+title: "STORY — 500 reale su /user/admin da file lang troncato, audit blast radius commit 0701a777a"
 description: "Modules/User/lang/it/.php (gruppo traduzione vuoto) senza return, troncato dal commit 0701a777a. require() ritorna int(1), array_replace_recursive() fatale in FileLoader::loadNamespaceOverrides(). Stesso commit ha troncato 323 file in 12+ moduli, 158 ancora rotti oggi."
 document_type: story
 category: bmad
@@ -30,7 +30,7 @@ github:
   issues: https://github.com/laraxot/module_user_fila5/issues
 ---
 
-# STORY: 500 reale su /user/admin da file lang troncato, audit blast radius commit 0701a777a
+# STORY — 500 reale su /user/admin da file lang troncato, audit blast radius commit 0701a777a
 
 ## Contesto
 
@@ -46,14 +46,14 @@ array_replace_recursive(): Argument #2 must be of type array, int given
 `loadNamespaceOverrides()`, chiamato da
 `Modules/Lang/app/Actions/Filament/AutoLabelAction.php:113` (`trans($label_key)`),
 agganciato via `Action::configureUsing()` in `LangServiceProvider` a OGNI
-Filament Action: incluse le action del menu utente sulla Dashboard, da cui il 500.
+Filament Action — incluse le action del menu utente sulla Dashboard, da cui il 500.
 
 ## Root cause
 
 `require`-are un file PHP senza `return` produce `int(1)`, non `null` ne'
 array vuoto. `Modules\Translation\FileLoader::loadNamespaceOverrides()` fa
 `array_replace_recursive($output, $this->files->getRequire($file))` senza
-validare il tipo: un file di lang troncato e' fatale, non silenzioso.
+validare il tipo — un file di lang troncato e' fatale, non silenzioso.
 
 Il file colpevole, `Modules/User/lang/it/.php` (nome letterale, gruppo di
 traduzione **vuoto**), esiste per via di un bug architetturale distinto e
@@ -63,11 +63,11 @@ classe chiamante e' del tipo `Dashboard` e il prefisso `dashboard` (o
 resto, `$class_snake` diventa stringa vuota → chiave `user::.actions.profile.label`
 → `SaveTransAction` scrive/legge da `lang/it/.php`. Bug NON corretto in
 questa story (fuori scope, architetturale, richiederebbe decidere il fallback
-quando `$class_snake` e' vuoto: probabile causa di chiavi malformate simili
+quando `$class_snake` e' vuoto — probabile causa di chiavi malformate simili
 in altri moduli, da verificare separatamente).
 
 Il file era vuoto (senza `return`) perche' il commit `0701a777a`
-("feat(gitmodules): add new submodule for Setting module": messaggio non
+("feat(gitmodules): add new submodule for Setting module" — messaggio non
 correlato) lo ha troncato, insieme a **323 altri file** in 12+ moduli
 (misurato con `git diff --numstat 0701a777a^ 0701a777a`, escluso lo
 scaffolding legittimo di `Modules/Setting/`).
@@ -99,7 +99,7 @@ locale/non tracciato ripetuto in altri moduli (`Modules/Setting/`, root).
 
 I due bug su `login.php`/`login.blade.php` erano gia' **documentati** in
 `10.3.retire-auth-livewire-twins.story.md` (sessione 2026-09-03/04) come
-"fuori scope, da correggere": MAI stati effettivamente corretti fino a
+"fuori scope, da correggere" — MAI stati effettivamente corretti fino a
 oggi, 15+ giorni dopo. Prova diretta che "documentato" non implica
 "risolto": serve verifica live (`git status`, `curl`) prima di assumere
 chiuso, vedi [[verify-after-swarm-before-reporting-done]].
@@ -114,7 +114,7 @@ troncato**, mai riparati da nessun commit successivo:
   `PermissionTest.php`, `ProfileTest.php`, `RoleTest.php`, `UserTest.php`)
 - ~142 altri file, perlopiu' `docs/*.md`/`docs/coverage*.md`, in Notify (40),
   Cms (24), Gdpr (23), Activity (11), Xot, Geo, Job, UI, Tenant, Lang,
-  Media, AI: non auditati singolarmente
+  Media, AI — non auditati singolarmente
 
 Decisione rimandata: scope troppo ampio (12+ moduli) per fix autonomo senza
 conferma esplicita. Candidato per una story/epic BMAD dedicata all'audit

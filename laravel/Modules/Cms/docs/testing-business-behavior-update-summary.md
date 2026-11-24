@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "testing business behavior update summary"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🎯 RIEPILOGO AGGIORNAMENTO: Testing Business Behavior Rule
@@ -125,6 +124,15 @@ Ora posso procedere a:
 4. **Focus sulla logica business** in ogni test
 
 ---
+
+title: "testing business behavior update summary"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "testing business behavior update summary"
+issues: []
+discussions: []
 **Questa regola è ora SUPREMA e ha precedenza su qualsiasi altra considerazione di testing.**
 
 **Data implementazione**: Gennaio 2025

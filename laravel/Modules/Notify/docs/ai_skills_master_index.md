@@ -3,11 +3,14 @@ title: "ai skills master index"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "ai skills master index"
 issues: []
 discussions: []
-status: draft
 ---
 
 # AI Skills Master Index
@@ -19,6 +22,15 @@ status: draft
 Questa documentazione elenca tutte le skill AI installate e configurate per il progetto FixCity Fila5. Le skill potenziano gli agenti AI con conoscenze specializzate per UI/UX design, sviluppo, e task specifici.
 
 ---
+
+title: "ai skills master index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ai skills master index"
+issues: []
+discussions: []
 ## 📦 Skill Installate
 
 ### 1. **UI/UX Pro Max Skill** ✨

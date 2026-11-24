@@ -16,8 +16,12 @@ class MapService
     /**
      * Ottiene i marker in base ai filtri.
      *
+<<<<<<< HEAD
+     * @param  array<string, mixed>  $filters
+=======
      * @param array<string, mixed> $filters
      *
+>>>>>>> laraxot/dev
      * @return array<int, array<string, mixed>>
      */
     public function getMarkers(array $filters = []): array
@@ -28,8 +32,12 @@ class MapService
     /**
      * Ottiene le statistiche della mappa.
      *
+<<<<<<< HEAD
+     * @param  array<string, mixed>  $filters
+=======
      * @param array<string, mixed> $filters
      *
+>>>>>>> laraxot/dev
      * @return array<string, mixed>
      */
     public function getMapStats(array $filters = []): array
@@ -40,8 +48,12 @@ class MapService
     /**
      * Esporta i dati della mappa nel formato specificato.
      *
+<<<<<<< HEAD
+     * @param  array<string, mixed>  $filters
+=======
      * @param array<string, mixed> $filters
      *
+>>>>>>> laraxot/dev
      * @return array<string, mixed>|string
      */
     public function exportData(array $filters = [], string $format = 'json'): array|string
@@ -49,7 +61,11 @@ class MapService
         return [];
     }
 
+<<<<<<< HEAD
+    public function execute(): void {}
+=======
     public function execute(): void
     {
     }
+>>>>>>> laraxot/dev
 }

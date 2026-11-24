@@ -8,19 +8,14 @@ qmd: "console-commands filosofia dei console commands in laraxot (standard supre
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Filosofia dei Console Commands in Laraxot (Standard Supremo)
@@ -223,7 +218,19 @@ foreach ($types as $key => $type) {
 
 ## Collegamenti
 - [ChangeTypeCommand.php](../app/Console/Commands/ChangeTypeCommand.php) - Il comando supremo di riferimento
+<<<<<<< HEAD
 - [README.md](README.md)
+=======
+<<<<<<< HEAD
+- [README.md](readme.md)
+=======
+<<<<<<< .merge_file_VBAUhX
+- [README.md](./README.md)
+=======
+- [README.md](README.md)
+>>>>>>> .merge_file_xeFc4d
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [.cursor/rules/console-commands-philosophy.mdc](../../../.cursor/rules/console-commands-philosophy.mdc)
 - [.windsurf/rules/console-commands-philosophy.mdc](../../../.windsurf/rules/console-commands-philosophy.mdc)
 

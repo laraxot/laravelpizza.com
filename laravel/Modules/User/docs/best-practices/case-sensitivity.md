@@ -16,7 +16,6 @@ related:
   - "./component-verification.md"
   - "./dependency-rules.md"
   - "./dependency.md"
-status: draft
 ---
 
 # Case Sensitivity Rules - User Module

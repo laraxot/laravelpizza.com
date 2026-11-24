@@ -1,3 +1,10 @@
+---
+title: "Security Violation Detection - Activity"
+qmd: "activity tasks features security violation detection md"
+type: note
+tags: [documentation]
+---
+
 # Security Violation Detection - Activity
 
 **Task ID**: ACTIVITY-FEATURE-011

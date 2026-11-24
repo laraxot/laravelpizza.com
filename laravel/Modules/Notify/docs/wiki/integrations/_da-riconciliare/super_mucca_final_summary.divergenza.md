@@ -7,9 +7,11 @@ module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: superseded
-superseded_by: super-mucca-final-summary.divergenza.md
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Divergenza: `SUPER_MUCCA_FINAL_SUMMARY.md`

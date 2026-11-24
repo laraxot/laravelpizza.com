@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpmd"
 issues: []
 discussions: []
-status: draft
 ---
 
 [phpmd](https://phpmd.org/)

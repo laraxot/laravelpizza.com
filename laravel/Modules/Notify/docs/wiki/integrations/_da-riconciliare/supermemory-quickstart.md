@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -34,7 +38,7 @@ status: draft
 SuperMemory is the long-term and short-term memory and context infrastructure for AI agents. It provides persistent memory across conversations, semantic search, and knowledge graph capabilities.
 
 **Master MCP Docs**: [Project MCP Servers](../../../docs/MCP_SERVERS.md)
-**Master MCP Docs**: [Project MCP Servers](../../../MCP_SERVERS.md)
+**Master MCP Docs**: [Project MCP Servers](../../../mcp_servers.md)
 
 ## Quick Start
 
@@ -117,13 +121,22 @@ supermemory add --tag <nome progetto> --content "<nome progetto> module: Ticket 
 ### 3. Theme Conventions
 Store theme development patterns:
 ```bash
-<<<<<<< .merge_file_JAnBIc
+<<<<<<< HEAD
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-=======
 supermemory add --tag laraxot --content "Sixteen theme: Bootstrap Italia classes replicated with Tailwind @apply. Vite outDir: './public', served via symlink public_html/themes/Sixteen (no copy)."
 supermemory add --tag <nome progetto> --content "Sixteen theme: Bootstrap Italia classes replicated with Tailwind @apply. Vite outDir: './public', served via symlink public_html/themes/Sixteen (no copy)."
->>>>>>> .merge_file_n0okEX
+=======
+<<<<<<< .merge_file_L1yDV8
+supermemory add --tag laraxot --content "Sixteen theme: Bootstrap Italia classes replicated with Tailwind @apply. Vite outDir: './public', then symlink public_html/themes (npm run copy obsoleto) to public_html/themes/Sixteen/."
+supermemory add --tag <nome progetto> --content "Sixteen theme: Bootstrap Italia classes replicated with Tailwind @apply. Vite outDir: './public', then symlink public_html/themes (npm run copy obsoleto) to public_html/themes/Sixteen/."
+supermemory add --tag laraxot --content "Sixteen theme: Bootstrap Italia classes replicated with Tailwind @apply. Vite outDir: './public', served via symlink public_html/themes/Sixteen (no copy)."
+supermemory add --tag <nome progetto> --content "Sixteen theme: Bootstrap Italia classes replicated with Tailwind @apply. Vite outDir: './public', served via symlink public_html/themes/Sixteen (no copy)."
+=======
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+>>>>>>> .merge_file_tPeRGq
+>>>>>>> laraxot/dev
 ```
 
 ### 4. Development Workflows
@@ -262,7 +275,7 @@ supermemory init --api-key YOUR_KEY --container-tag <nome progetto> --scope proj
 ## Related Documentation
 
 - **Master MCP Docs**: [Project MCP Servers](../../../docs/MCP_SERVERS.md)
-- **Master MCP Docs**: [Project MCP Servers](../../../MCP_SERVERS.md)
+- **Master MCP Docs**: [Project MCP Servers](../../../mcp_servers.md)
 - **Xot Module MCP**: [Xot MCP Guide](../../Modules/Xot/docs/MCP_SERVERS.md)
 - **Theme MCP**: [Sixteen Theme MCP](../../Themes/Sixteen/docs/mcp-servers.md)
 - **SuperMemory Skill**: [.qwen/skills/supermemory/](.qwen/skills/supermemory/)

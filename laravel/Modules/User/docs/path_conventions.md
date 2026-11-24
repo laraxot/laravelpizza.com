@@ -5,9 +5,6 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-qmd: "path_conventions - user user"
-status: superseded
-superseded_by: path-conventions-user.md
 ---
 
 # path_conventions - User

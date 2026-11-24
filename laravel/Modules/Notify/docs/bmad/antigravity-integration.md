@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "antigravity integration"
 issues: []
 discussions: []
-status: draft
 ---
 
 # antigravity e bmad method: integrazione e contesto fixcity
@@ -35,7 +34,7 @@ Evita confusione: **non sono due installazioni obbligatorie**; sono **due ambien
 | Aspetto | Notify |
 |--------|---------|
 | installazione BMAD | `npx bmad-method install` (vedi [guida](../guides/bmad-method-setup.md)) |
-| cartella core | **`_bmad/`** (non `.bmad-core/` nel root): convenzione BMAD-METHOD nel progetto |
+| cartella core | **`_bmad/`** (non `.bmad-core/` nel root) — convenzione BMAD-METHOD nel progetto |
 | artefatti | **`_bmad-output/`** |
 | skill in Cursor | `.agents/skills/` (pattern `bmad-*`) |
 | workflow Antigravity | **non presente** (nessuna `.agent/workflows/` in questo repo) |
@@ -51,7 +50,7 @@ Quindi: **Antigravity non è “installato” nel repo** perché è un **prodott
 
 ## risorse esterne (studio)
 
-- [BMAD-METHOD: repository](https://github.com/bmad-code-org/BMAD-METHOD/)
+- [BMAD-METHOD — repository](https://github.com/bmad-code-org/BMAD-METHOD/)
 - [Comandi di riferimento](https://docs.bmad-method.org/reference/commands/)
 - Discussioni e articoli (blog, forum Cursor, Medium) sono utili per **contesto** e varianti; la **fonte operativa** resta docs ufficiali + `_bmad/` locale.
 
@@ -63,4 +62,4 @@ Quindi: **Antigravity non è “installato” nel repo** perché è un **prodott
 
 ## tema sixteen (prompt)
 
-- `laravel/Themes/Sixteen/docs/prompts/bmad.txt`: elenco link e promemoria; **non duplicare** qui la guida: puntare a questa cartella `docs/bmad/`.
+- `laravel/Themes/Sixteen/docs/prompts/bmad.txt` — elenco link e promemoria; **non duplicare** qui la guida: puntare a questa cartella `docs/bmad/`.

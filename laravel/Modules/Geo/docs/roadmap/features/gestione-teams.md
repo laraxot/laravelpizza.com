@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "gestione teams"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Gestione Teams
@@ -254,7 +253,15 @@ class TeamRoleManagerTest extends TestCase
 ## Link Correlati
 - [Performance Optimization](./performance-optimization.md)
 - [Multi-tenancy](./multi-tenancy.md)
-- [Error Handling](../../raw/history/error-handling.md)
+<<<<<<< HEAD
+- [Error Handling](./error-handling.md)
+=======
+<<<<<<< .merge_file_vPftgW
+- Error Handling
+=======
+- [Error Handling](./error-handling.md)
+>>>>>>> .merge_file_Z0X8nu
+>>>>>>> laraxot/dev
 
 ## Note e Considerazioni
 - Validare input utente
@@ -267,4 +274,12 @@ class TeamRoleManagerTest extends TestCase
 - Implementare best practices
 
 ---
+title: "gestione teams"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "gestione teams"
+issues: []
+discussions: []
 ⬅️ [Torna alla Roadmap](../../roadmap.md)

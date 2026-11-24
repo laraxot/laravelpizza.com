@@ -7,6 +7,10 @@ namespace Modules\User\Console\Commands;
 use Carbon\CarbonImmutable;
 use Illuminate\Console\Command;
 use Illuminate\Database\ConnectionInterface;
+<<<<<<< HEAD
+use Illuminate\Support\Collection;
+=======
+>>>>>>> laraxot/dev
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Laravel\Pulse\Contracts\Storage;
@@ -24,9 +28,19 @@ final class BackfillLoginPulseCommand extends Command
     protected $description = 'Ricostruisce la metrica user_login di Pulse da authentication_logs';
 
     private const string TYPE = 'user_login';
+<<<<<<< HEAD
+
+    private const string METRIC_KEY = 'all';
+
+    private const string SOURCE_CONNECTION = 'user';
+
+    private const string SOURCE_TABLE = 'authentication_logs';
+
+=======
     private const string METRIC_KEY = 'all';
     private const string SOURCE_CONNECTION = 'user';
     private const string SOURCE_TABLE = 'authentication_logs';
+>>>>>>> laraxot/dev
     private const array PERIODS = [60 => '1 ora', 360 => '6 ore', 1440 => '24 ore', 10080 => '7 giorni'];
 
     public function handle(Storage $storage): int
@@ -36,11 +50,19 @@ final class BackfillLoginPulseCommand extends Command
 
         if ($days === false || $days < 1 || $chunk === false || $chunk < 1 || $chunk > 1000) {
             $this->error('Parametri non validi: --days >= 1 e --chunk tra 1 e 1000.');
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
             return self::FAILURE;
         }
 
         if (config('pulse.storage.driver') !== 'database') {
             $this->error('Richiesto PULSE_STORAGE_DRIVER=database.');
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
             return self::FAILURE;
         }
 
@@ -100,17 +122,29 @@ final class BackfillLoginPulseCommand extends Command
 
             if ($this->option('dry-run')) {
                 $this->info('Dry-run completato: nessuna modifica.');
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
                 return self::SUCCESS;
             }
 
             if (! $this->option('force') && ! $this->confirm('Ricostruire la metrica user_login?', false)) {
                 $this->warn('Operazione annullata.');
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
                 return self::SUCCESS;
             }
 
             $lock = Cache::lock('user:pulse-backfill-logins', 3600);
             if (! $lock->get()) {
                 $this->error('Un altro backfill è già in esecuzione.');
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
                 return self::FAILURE;
             }
 
@@ -122,7 +156,11 @@ final class BackfillLoginPulseCommand extends Command
                     $storage->purge([self::TYPE]);
 
                     $query()->chunkById($chunk, function ($logs) use ($storage, &$processed): void {
+<<<<<<< HEAD
+                        $entries = new Collection;
+=======
                         $entries = new \Illuminate\Support\Collection();
+>>>>>>> laraxot/dev
 
                         foreach ($logs as $log) {
                             $loginAt = $log->login_at ?? null;
@@ -163,6 +201,10 @@ final class BackfillLoginPulseCommand extends Command
             if ($this->output->isVerbose()) {
                 $this->line($e->getTraceAsString());
             }
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
             return self::FAILURE;
         }
     }

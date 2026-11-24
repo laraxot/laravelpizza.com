@@ -1,3 +1,14 @@
+---
+title: "dry kiss analysis "
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "dry kiss analysis "
+issues: []
+discussions: []
+---
+
 # DRY & KISS Analysis - Modulo Gdpr
 
 **Data:** 15 Ottobre 2025
@@ -30,5 +41,12 @@ abstract class BaseModel extends \Modules\Xot\Models\XotBaseModel
 - 🔄 ServiceProvider: Auto-detect nome
 
 ---
-[DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
+title: "dry kiss analysis "
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "dry kiss analysis "
+issues: []
+discussions: []
 [DRY/KISS Global](../../../docs/dry_kiss_analysis_2025-10-15.md)

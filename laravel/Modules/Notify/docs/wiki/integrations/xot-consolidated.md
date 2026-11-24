@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -222,7 +226,10 @@ Questa convenzione dovrebbe essere seguita rigorosamente in tutto il progetto pe
 
 *Consolidated from: `xot-base-classes-analysis.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Contesto
 Nel nostro progetto, abbiamo deciso di non estendere direttamente le classi Filament, ma di utilizzare classi base personalizzate nel modulo Xot. Questo approccio ha diverse implicazioni e vantaggi.
 
@@ -494,7 +501,10 @@ Per correggere automaticamente i file che non seguono queste convenzioni:
 
 *Consolidated from: `xot-base-classes-checklist.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## 1. Import
 - [ ] Non importare mai direttamente le classi Filament
 - [ ] Usare sempre l'import da `Modules\Xot\Filament\Pages\XotBasePage`
@@ -703,7 +713,10 @@ class SendSMSPage extends XotBasePage implements HasForms  // Estensione corrett
 
 *Consolidated from: `xot-base-classes-convention.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Regola di Estensione
 Tutte le classi che normalmente estenderebbero direttamente una classe Filament devono invece estendere la corrispondente classe base Xot. Questo è un requisito per mantenere la coerenza e la manutenibilità del codice.
 
@@ -804,7 +817,10 @@ class SendSMSPage extends XotBasePage implements HasForms  // Estensione corrett
 
 *Consolidated from: `xot-base-classes.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Contesto
 Nel nostro progetto, abbiamo deciso di non estendere direttamente le classi Filament, ma di utilizzare classi base personalizzate nel modulo Xot. Questo approccio ha diverse implicazioni e vantaggi.
 
@@ -968,7 +984,10 @@ Questa convenzione dovrebbe essere seguita rigorosamente in tutto il progetto pe
 
 *Consolidated from: `xot_base_classes_analysis.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Contesto
 Nel nostro progetto, abbiamo deciso di non estendere direttamente le classi Filament, ma di utilizzare classi base personalizzate nel modulo Xot. Questo approccio ha diverse implicazioni e vantaggi.
 
@@ -1130,7 +1149,10 @@ Questa convenzione dovrebbe essere seguita rigorosamente in tutto il progetto pe
 
 *Consolidated from: `xot_base_classes_checklist.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## 1. Import
 - [ ] Non importare mai direttamente le classi Filament
 - [ ] Usare sempre l'import da `Modules\Xot\Filament\Pages\XotBasePage`
@@ -1215,7 +1237,10 @@ Per correggere automaticamente i file che non seguono queste convenzioni:
 
 *Consolidated from: `xot_base_classes_convention.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Regola di Estensione
 Tutte le classi che normalmente estenderebbero direttamente una classe Filament devono invece estendere la corrispondente classe base Xot. Questo è un requisito per mantenere la coerenza e la manutenibilità del codice.
 
@@ -1485,7 +1510,7 @@ related:
    - Vantaggi/svantaggi dettagliati
    - Alternative considerate
    
-4. **[Strategia Implementazione](./architecture/xotbasepivot-strategy.md)** (3.500+ parole)
+4. **[Strategia Implementazione](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
    - Step-by-step guide
    - Script automatici
    - Testing strategy
@@ -1527,7 +1552,7 @@ related:
 ### Implementation (3-4 ore)
 
 4. **[ ] Execute Migration**
-   - Seguire [strategia implementazione](./architecture/xotbasepivot-strategy.md)
+   - Seguire [strategia implementazione](../../architecture/xotbasepivot-strategy.md)
    - Testing continuo
    - Progress updates
 
@@ -1634,7 +1659,7 @@ Se hai domande prima dell'approvazione:
 
 ### During Implementation
 
-Seguire [Strategia Implementazione](./architecture/xotbasepivot-strategy.md) step-by-step.
+Seguire [Strategia Implementazione](../../architecture/xotbasepivot-strategy.md) step-by-step.
 
 ### After Implementation
 
@@ -1696,7 +1721,10 @@ Post-mortem meeting per lessons learned.
 
 **TL;DR:** Implementare XotBasePivot elimina 2.340+ righe duplicate, migliora manutenibilità 26x, richiede solo 3-4 ore, ROI 58.500% in 1 anno. Pattern già validato (XotBaseModel). Risk basso. **APPROVATO ⭐⭐⭐⭐⭐**
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ---
 
 **Consolidated by:** Phase 2f intelligent merging

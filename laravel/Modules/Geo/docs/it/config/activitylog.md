@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "activitylog"
 issues: []
 discussions: []
-status: draft
 ---
 
 <?php

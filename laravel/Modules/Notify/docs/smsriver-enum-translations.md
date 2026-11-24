@@ -3,11 +3,14 @@ title: "smsriver enum translations"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "smsriver enum translations"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Traduzioni SmsDriverEnum - Modulo Notify
@@ -198,3 +201,12 @@ php -l laravel/Modules/Notify/lang/de/sms_driver_enum.php
 - [Documentazione Traduzioni](../../Lang/docs/)
 
 ---
+
+title: "smsriver enum translations"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "smsriver enum translations"
+issues: []
+discussions: []

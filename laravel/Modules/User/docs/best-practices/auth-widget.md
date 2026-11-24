@@ -16,7 +16,6 @@ related:
   - "./component-verification.md"
   - "./dependency-rules.md"
   - "./dependency.md"
-status: draft
 ---
 
 # Regole per Widget di Autenticazione
@@ -163,10 +162,7 @@ tests/Feature/Filament/Widgets/
 
 ## Collegamenti
 
-- [Widget Structure](widgets-structure.md)
+- [Widget Structure](widgets-structure-user.md)
 - [Filament Best Practices](filament_best_practices.md)
-- [Authentication Architecture](../authentication.md)
-- [Widget Structure](../widgets-structure-user.md)
-- [Filament Best Practices](filament_best_practices.md)
-- [Authentication Architecture](../authentication.md)
+- [Authentication Architecture](authentication.md)
 - [Security Guidelines](security_guidelines.md)

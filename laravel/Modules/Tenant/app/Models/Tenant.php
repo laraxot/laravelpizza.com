@@ -10,6 +10,7 @@ use Closure;
 use Illuminate\Contracts\Database\Query\Expression;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
@@ -36,8 +37,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Tenant newModelQuery()
  * @method static Builder<static>|Tenant newQuery()
  * @method static Builder<static>|Tenant query()
-<<<<<<< .merge_file_H04Wti
-=======
  * @method static Tenant|null first()
  * @method static Collection<int, Tenant> get()
  * @method static Tenant create(array<string, mixed> $attributes = [])
@@ -66,10 +65,19 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Tenant whereSettings($value)
  *
  * @mixin \Eloquent
->>>>>>> .merge_file_Eh2jmz
  */
 class Tenant extends BaseModel
 {
+    /*
+     * La tabella `tenants` e' del modulo User (Modules\User\Models\Tenant) e ha id UUID: senza HasUuids ogni
+     * insert da questo modello falliva con "NOT NULL constraint failed: tenants.id".
+     */
+    use HasUuids;
+
+    public $incrementing = false;
+
+    protected $keyType = 'string';
+
     /**
      * Gli attributi che sono mass assignable.
      *

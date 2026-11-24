@@ -196,10 +196,10 @@ All tests are successful if:
 
 ## 📞 Related Resources
 
-- **Test Plan**: `docs/github/SYNC_REMOTE_REPO_TEST_PLAN.md`
+- **Test Plan**: `docs/github/sync_remote_repo_test_plan.md`
 - **Script**: `bashscripts/git/subtrees/sync_remote_repo.sh`
 - **Workflow**: `.github/workflows/sync-remote-repo.yml`
-- **Coordination Log**: `bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md`
+- **Coordination Log**: `bashscripts/docs/git/sync_remote_repo_coordination.md`
 - **Troubleshooting**: `bashscripts/docs/git/TROUBLESHOOTING.md`
 
 ---

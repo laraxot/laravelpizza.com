@@ -1,5 +1,5 @@
 ---
-title: "Spatie pivot: migrazione senza nome tabella"
+title: "Spatie pivot — migrazione senza nome tabella"
 type: concept
 module: User
 tags: [spatie, migration, xot-base-migration, model-has-role, config]
@@ -10,15 +10,13 @@ related:
   - ./spatie-permission-table-names.md
   - ./migration-naming-religion-user.md
   - ../../../../Xot/docs/wiki/concepts/xotbase-migration-religion.md
-status: draft
-qmd: "migrazione pivot spatie   mai il nome tabella nel file user"
 ---
 
-# Migrazione pivot Spatie: mai il nome tabella nel file
+# Migrazione pivot Spatie — mai il nome tabella nel file
 
 ## Perché
 
-`permission.table_names.*` in `laravel/config/permission.php` è **fisso** (scelta maintainer). Migrazioni e modelli leggono il valore via `Model*::getTable()`: **non** si modifica la config per far combaciare il DB.
+`permission.table_names.*` in `laravel/config/permission.php` è **fisso** (scelta maintainer). Migrazioni e modelli leggono il valore via `Model*::getTable()` — **non** si modifica la config per far combaciare il DB.
 
 ## Pattern corretto
 
@@ -39,7 +37,7 @@ return new class extends XotBaseMigration {
 
 - File: `create_{model_snake}_table` → `ModelHasRole` (singolare `role`, non `roles`)
 - Tabella: `$this->getTable()` → `ModelHasRole::getTable()` → config
-- Connessione: `$this->model->getConnectionName()`: mai `$connection` nella migrazione
+- Connessione: `$this->model->getConnectionName()` — mai `$connection` nella migrazione
 
 ## Vietato
 
@@ -53,7 +51,7 @@ protected ?string $model_class = User::class; // modello sbagliato per pivot
 
 ## Fix errore “tabella non esiste”
 
-1. `php artisan config:show permission.table_names`: **non modificare**
+1. `php artisan config:show permission.table_names` — **non modificare**
 2. `SHOW TABLES` sul DB User
 3. Se mismatch: correggere **migrazione/schema** (modello pivot + `XotBaseMigration`)
 4. `php artisan config:clear`
@@ -63,4 +61,4 @@ protected ?string $model_class = User::class; // modello sbagliato per pivot
 ## Collegamenti
 
 - [spatie-permission-table-names.md](./spatie-permission-table-names.md)
-- [Filosofia Spatie Permission](../../spatie-permission-philosophy.md)
+- [Themes — filosofia Spatie](../../../Themes/docs/shared-components/spatie-permission-philosophy.md)

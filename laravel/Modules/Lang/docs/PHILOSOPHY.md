@@ -27,7 +27,7 @@ The Lang module enshrines five immutable principles:
 Translations live in **native PHP arrays**, not databases, not JSON. Why?
 
 - **Immutability by revision control**: Changes to translations are Git-tracked, audited, versioned.
-- **Structure scales**: Nested keys allow context: `patient.profile.name.label` is unambiguous across modules.
+- **Structure scales**: Nested keys allow context — `patient.profile.name.label` is unambiguous across modules.
 - **Performance**: No database round-trips. Artisan can validate file syntax before deploy.
 - **Simplicity**: A translator receives `/lang/en/patient.php`, edits values, returns it. No UI needed.
 
@@ -77,7 +77,7 @@ When a key is requested but not found, the **TranslatorAdapter** catches it, log
 
 In a 20-module Laravel platform:
 
-- **FixCity**: admin, geo, survey, communication, analytics, reports, settings: each with their own UI.
+- **FixCity**: admin, geo, survey, communication, analytics, reports, settings — each with their own UI.
 - **Without Lang**: Each module hardcodes labels in Blade/Filament. Translators receive Blade files. Nightmarish.
 - **With Lang**: Each module contributes `/lang/it/module.php`. Translators work with PHP arrays. Sync ensures consistency.
 
@@ -837,9 +837,9 @@ php artisan migrate
 
 Creates tables:
 
-- `translations`: Record of all translation keys/values
-- `translation_files`: File sync metadata
-- `language_lines`: Missing key audit trail (optional)
+- `translations` — Record of all translation keys/values
+- `translation_files` — File sync metadata
+- `language_lines` — Missing key audit trail (optional)
 
 ### Step 3: Publish Config (Optional)
 

@@ -3,12 +3,10 @@ title: "08 VERIFIED COMMIT GOVERNANCE"
 type: note
 tags: [documentation]
 created: 2026-09-26
-updated: 2026-09-26
+updated: 2026-11-23
 qmd: "08 VERIFIED COMMIT GOVERNANCE"
 issues: []
 discussions: []
-status: superseded
-superseded_by: 08-verified-commit-governance.md
 ---
 
 # Verified Commit Governance

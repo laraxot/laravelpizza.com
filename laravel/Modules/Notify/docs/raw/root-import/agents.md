@@ -3,7 +3,11 @@ title: "agents"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "agents"
 issues: []
 discussions: []
@@ -49,7 +53,7 @@ docs/
 │   ├── papers/    # Paper tecnici
 │   └── notes/     # Note e appunti
 ├── .schema/       # Schema per l'LLM
-│   └── WIKI_SCHEMA.md
+│   └── wiki_schema.md
 │   └── wiki-schema.md
 ├── wiki/index.md  # Indice principale
 └── log.md         # Log cronologico
@@ -63,7 +67,7 @@ docs/
 
 ### Riferimenti
 
-- [Schema Wiki](./docs/.schema/WIKI_SCHEMA.md) - Istruzioni per l'LLM
+- [Schema Wiki](./docs/.schema/wiki_schema.md) - Istruzioni per l'LLM
 - [Schema Wiki](./docs/.schema/wiki-schema.md) - Istruzioni per l'LLM
 - [Index Globale](./docs/wiki/index.md) - Catalogo di tutte le wiki
 - [Log](./docs/log.md) - Cronologia delle operazioni
@@ -97,13 +101,16 @@ discussions: []
 
 ---
 **See also:**
-- [CLAUDE.md](./CLAUDE.md)
-- [QWEN.md](./QWEN.md)
-- [GEMINI.md](./GEMINI.md)
+- [CLAUDE.md](./claude.md)
+- [qwen.md](./qwen.md)
+- [gemini.md](./gemini.md)
 
 *Ultimo aggiornamento: Aprile 2026*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 <claude-mem-context>
 # Memory Context
 
@@ -111,4 +118,8 @@ discussions: []
 # [base_ptvx_fila5] recent context, 2026-04-15 10:19pm GMT+2
 
 No previous sessions found.
+<<<<<<< HEAD
 </claude-mem-context>
+=======
+</claude-mem-context>
+>>>>>>> laraxot/dev

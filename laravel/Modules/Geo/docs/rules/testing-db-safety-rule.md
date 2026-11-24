@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "testing db safety rule"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Testing DB Safety Rule

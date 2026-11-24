@@ -45,7 +45,7 @@ The Seo module deliberately avoids Eloquent models in favor of **stateful adapte
 1. **SEO state is request-scoped, not persistent.** Meta tags for a page are computed per-request (page context, locale, user), not stored in the database. A model would suggest persistence where none exists. Using a model here is like storing the HTTP request body—technically possible, philosophically wrong.
 
 2. **Actions are stateless, adapters hold state.** The module separates concerns:
-   - `MetatagManager` (Adapter): Mutable, per-request façade coordinator that accumulates meta tags
+   - `MetatagFacadeAdapter` (Adapter): per-request façade coordinator; state lives in `MetatagState`, writes go through `app/Actions/Metatag/*` (`MetatagManager` removed 2026-11-19, issue #64)
    - `GetMetatagDataAction`, `MergeMetatagDataAction`, `ReplaceMetatagDataAction` (Actions): Pure, queueable operations on state
    - `MetatagState` (Scoped container): Per-request container for the accumulated metadata
    
@@ -723,7 +723,7 @@ In `bootstrap/providers.php`:
 ],
 ```
 
-The SeoServiceProvider registers `MetatagManager` as a singleton.
+The SeoServiceProvider registers `MetatagState` and `MetatagFacadeAdapter` as singletons.
 
 ### Step 3: Publish Views (Optional)
 
@@ -830,7 +830,7 @@ Expected output:
 
 ### What's Covered
 
-- **MetatagManager:** Full façade coordination (get, set, update meta tags)
+- **MetatagFacadeAdapter:** Full façade coordination (get, set, update meta tags)
 - **MetatagData / MetatagState:** Immutable data object and request-scoped container
 - **Actions:** Atomic get/merge/replace operations
 - **Social Share Generation:** Facebook, Twitter, LinkedIn, WhatsApp, Telegram links
@@ -851,7 +851,7 @@ Expected output:
 
 ### Test Coverage Goals
 
-- Unit tests for MetatagManager setters/getters (100%)
+- Unit tests for MetatagFacadeAdapter setters/getters (100%)
 - Unit tests for MetatagData property coercion (100%)
 - Feature tests for full page metadata rendering (80%)
 - Integration tests with Livewire components (80%)

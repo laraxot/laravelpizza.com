@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "gestione rotte localizzate"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Gestione delle Rotte Localizzate in Laravel Folio

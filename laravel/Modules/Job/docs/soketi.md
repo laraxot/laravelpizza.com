@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "soketi"
 issues: []
 discussions: []
-status: draft
 ---
 
 https://github.com/Safemood/REAL-TIME-LARAVEL-9-SOKETI/

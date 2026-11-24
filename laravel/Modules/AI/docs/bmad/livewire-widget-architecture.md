@@ -12,7 +12,6 @@ related:
   - ./livewire-inventory.md
   - ./livewire-widget-prd.md
   - ../../Xot/docs/bmad/livewire-widget-project-context.md
-status: draft
 ---
 
 # Architecture AI

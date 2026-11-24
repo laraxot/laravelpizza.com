@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "legacy roadmap"
 related:
   - "./phpstan-corrections-january.md"
-  - "../phpstan-corrections-january.md"
-status: draft
 ---
 # Roadmap Modulo Tenant - Completamento e Miglioramenti
 
@@ -300,7 +298,7 @@ Completare il modulo Tenant con tutti i modelli mancanti, migliorare qualità e 
 
 ## 🔗 Collegamenti
 
-- [Filosofia Tenant](./philosophy.md)
+- [Filosofia Tenant](../philosophy.md)
 - [Business Logic Deep Dive](./business-logic-deep-dive.md)
 - [Configuration Guide](./configuration.md)
 

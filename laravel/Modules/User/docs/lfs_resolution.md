@@ -3,7 +3,7 @@ title: "LFS Corruption Resolution"
 type: alias
 status: superseded
 canonical: "lfs-resolution-corruption.md"
-qmd: "lfs_resolution alias superseded"
+qmd: "LFS_RESOLUTION alias superseded"
 ---
 
 # LFS Corruption Resolution

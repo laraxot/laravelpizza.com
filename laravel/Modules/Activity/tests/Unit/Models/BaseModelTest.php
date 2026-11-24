@@ -23,16 +23,5 @@ test('BaseModel has correct connection', function () {
 });
 
 test('BaseModel extends XotBaseModel', function () {
-<<<<<<< .merge_file_DR8IeS
-    $model = new class() extends BaseModel
-    {
-        protected $table = 'test_models';
-
-        protected $fillable = ['name'];
-    };
-
-    Assert::assertInstanceOf(XotBaseModel::class, $model);
-=======
     Assert::assertTrue((new ReflectionClass(BaseModel::class))->isSubclassOf(XotBaseModel::class));
->>>>>>> .merge_file_1SaS26
 });

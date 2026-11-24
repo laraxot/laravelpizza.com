@@ -3,7 +3,11 @@ title: "Sync Remote Repo - Test Plan"
 type: concept
 tags: [sync, remote, repo, test]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "sync-remote-repo-test-plan sync remote repo - test plan"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -15,7 +19,6 @@ related:
   - "./issue-multi-agent-collaboration.md"
   - "./issue-subtree-sync-test.md"
   - "./sync-remote-repo-docs-summary.md"
-status: draft
 ---
 
 # Sync Remote Repo - Test Plan

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "webdesign"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Web Design: Un Approccio Olistico

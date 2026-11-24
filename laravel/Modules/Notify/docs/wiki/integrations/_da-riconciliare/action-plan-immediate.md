@@ -1,30 +1,31 @@
 ---
+title: "🎯 PIANO D'AZIONE IMMEDIATO - Notify Platform"
+<<<<<<< HEAD
 title: "🎯 PIANO D'AZIONE IMMEDIATO - <nome progetto> Platform"
 type: concept
 tags: [action, plan, immediate]
 created: 2026-07-14
 updated: 2026-07-14
+qmd: "action-plan-immediate 🎯 piano d'azione immediato - laraxot platform"
 qmd: "action-plan-immediate 🎯 piano d'azione immediato - <nome progetto> platform"
+=======
+type: concept
+tags: [action, plan, immediate]
+created: 2026-07-14
+updated: 2026-11-23
+qmd: "action-plan-immediate 🎯 piano d'azione immediato - laraxot platform"
+>>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
-  - "./actions-calling-actions-pattern.md"
-  - "../../../00-index-documentation.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
-  - "../../../acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
-  - "../../../actions-calling-actions-pattern.md"
-status: draft
+  - "./actions-calling-actions-pattern.md"
 ---
 
 # 🎯 PIANO D'AZIONE IMMEDIATO - Notify Platform

@@ -3,11 +3,14 @@ title: "notebooklm integration"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notebooklm integration"
 issues: []
 discussions: []
-status: draft
 ---
 
 # NotebookLM Skill Integration Guide
@@ -263,7 +266,7 @@ Create these NotebookLM notebooks for Notify:
    - Use: Admin panel development
 
 4. **Project Documentation**
-   - Upload: Notify docs, agents.md, .windsurfrules
+   - Upload: Notify docs, AGENTS.md, .windsurfrules
    - Topics: laraxot, project, conventions
    - Use: Project-specific queries
 
@@ -406,5 +409,14 @@ python scripts/run.py ask_question.py \
 6. ⏳ Store insights in OpenViking
 
 ---
+
+title: "notebooklm integration"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "notebooklm integration"
+issues: []
+discussions: []
 **Last Updated**: 2026-03-30  
 **Status**: Ready for authentication and notebook creation

@@ -26,10 +26,10 @@ Your files feed the roadmap:
 
 | File | How Roadmap Uses It |
 |------|---------------------|
-| `SUMMARY.md` | Phase structure recommendations, ordering rationale |
+| `summary.md` | Phase structure recommendations, ordering rationale |
 | `STACK.md` | Technology decisions for the project |
 | `FEATURES.md` | What to build in each phase |
-| `ARCHITECTURE.md` | System structure, component boundaries |
+| `architecture.md` | System structure, component boundaries |
 | `PITFALLS.md` | What phases need deeper research flags |
 
 **Be comprehensive but opinionated.** "Use X because Y" not "Options are X, Y, Z."
@@ -181,7 +181,7 @@ Never present LOW confidence findings as authoritative.
 
 All files → `.planning/research/`
 
-## SUMMARY.md
+## summary.md
 
 ```markdown
 # Research Summary: [Project Name]
@@ -197,7 +197,7 @@ All files → `.planning/research/`
 ## Key Findings
 
 **Stack:** [one-liner from STACK.md]
-**Architecture:** [one-liner from ARCHITECTURE.md]
+**Architecture:** [one-liner from architecture.md]
 **Critical pitfall:** [most important from PITFALLS.md]
 
 ## Implications for Roadmap
@@ -336,7 +336,7 @@ Defer: [Feature]: [reason]
 - [Competitor analysis, market research sources]
 ```
 
-## ARCHITECTURE.md
+## architecture.md
 
 ```markdown
 # Architecture Patterns
@@ -528,10 +528,10 @@ Run pre-submission checklist (see verification_protocol).
 ## Step 5: Write Output Files
 
 In `.planning/research/`:
-1. **SUMMARY.md** — Always
+1. **summary.md** — Always
 2. **STACK.md** — Always
 3. **FEATURES.md** — Always
-4. **ARCHITECTURE.md** — If patterns discovered
+4. **architecture.md** — If patterns discovered
 5. **PITFALLS.md** — Always
 6. **COMPARISON.md** — If comparison mode
 7. **FEASIBILITY.md** — If feasibility mode
@@ -561,10 +561,10 @@ In `.planning/research/`:
 
 | File | Purpose |
 |------|---------|
-| .planning/research/SUMMARY.md | Executive summary with roadmap implications |
+| .planning/research/summary.md | Executive summary with roadmap implications |
 | .planning/research/STACK.md | Technology recommendations |
 | .planning/research/FEATURES.md | Feature landscape |
-| .planning/research/ARCHITECTURE.md | Architecture patterns |
+| .planning/research/architecture.md | Architecture patterns |
 | .planning/research/PITFALLS.md | Domain pitfalls |
 
 ### Confidence Assessment
@@ -621,7 +621,7 @@ Research is complete when:
 - [ ] Source hierarchy followed (Context7 → Official → WebSearch)
 - [ ] All findings have confidence levels
 - [ ] Output files created in `.planning/research/`
-- [ ] SUMMARY.md includes roadmap implications
+- [ ] summary.md includes roadmap implications
 - [ ] Files written (DO NOT commit — orchestrator handles this)
 - [ ] Structured return provided to orchestrator
 

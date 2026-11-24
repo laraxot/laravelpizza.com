@@ -1,13 +1,18 @@
 ---
+qmd: "media wiki agent confidence discipline md"
 title: "Disciplina agenti per massimizzare la confidenza"
-type: alias
-status: superseded
-canonical: "bmad/agent-confidence-discipline.md"
-qmd: "agent-confidence-discipline alias superseded"
+type: rule
+status: approved
+tags: [agent, confidence, verification]
+created: "2026-05-26"
+updated: "2026-05-26"
+related:
+  - "../../Xot/docs/wiki/concepts/agent-confidence-discipline.md"
+issue: "https://github.com/provtv/base_ptv_fila5_mono/issues/152"
 ---
 
 # Disciplina agenti per massimizzare la confidenza
 
-Documento identico al canonico: [agent-confidence-discipline.md](../bmad/agent-confidence-discipline.md).
+Regola canonica: [../../Xot/docs/wiki/concepts/agent-confidence-discipline.md](../../Xot/docs/wiki/concepts/agent-confidence-discipline.md).
 
-Canonico: `laravel/Modules/Media/docs/bmad/agent-confidence-discipline.md`. Qui non ci sono istruzioni: seguire il file collegato.
+Sintesi: verificare prima di affermare; riprodurre prima di correggere; documentare prove, dubbi e rischio residuo; rispondere in italiano sintetico.

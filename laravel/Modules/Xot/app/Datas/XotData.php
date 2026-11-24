@@ -125,7 +125,7 @@ class XotData extends Data implements Wireable
     public function getUserByEmail(string $email): UserContract
     {
         $user_class = $this->getUserClass();
-        $userInstance = new $user_class;
+        $userInstance = new $user_class();
         if (! in_array('email', $userInstance->getFillable(), true)) {
             throw new \Exception("Attribute 'email' not found in model ".$userInstance::class);
         }
@@ -367,17 +367,32 @@ class XotData extends Data implements Wireable
     }
 
     /**
-     * Layout HTML delle email: prima quello del tema pubblico, se il tema non lo ha quello del modulo Notify.
-     * Un tema senza `resources/mail-layouts` non deve far fallire l'invio (es. il reset della password).
+     * Layout HTML delle e-mail: prima quelli del tema pubblico, poi quelli del modulo Notify.
+     * Un tema senza `resources/mail-layouts` (es. Two) non deve far fallire l'invio
+     * (reset password, modelli e-mail, pagina «Nuovo modello e-mail»).
      */
     public function getMailHtmlLayoutPath(string $key = ''): string
     {
         $themePath = base_path('Themes/'.$this->pub_theme.'/resources/mail-layouts/'.$key);
+<<<<<<< HEAD
         if ($key === '' || is_file($themePath)) {
             return $themePath;
         }
 
         $notifyPath = base_path('Modules/Notify/resources/mail-layouts/'.$key);
+=======
+        $notifyPath = base_path('Modules/Notify/resources/mail-layouts/'.$key);
+
+        // Senza chiave serve la cartella (HtmlLayoutPathSelect ne elenca i file): un tema senza mail-layouts
+        // usa quella di Notify, altrimenti «Nuovo modello e-mail» va in errore leggendo una cartella inesistente.
+        if ($key === '') {
+            return is_dir($themePath) || ! is_dir($notifyPath) ? $themePath : $notifyPath;
+        }
+
+        if (is_file($themePath)) {
+            return $themePath;
+        }
+>>>>>>> laraxot/dev
 
         return is_file($notifyPath) ? $notifyPath : $themePath;
     }

@@ -389,7 +389,7 @@ BadgeColumn::make('status')
 - [XotBasePage Implementation](./xotbasepage_implementation.md)
 - [XotBaseWidget Implementation](./xotbasewidget_implementation.md)
 - [XotBaseResource Implementation](./xotbaseresource_implementation.md)
-- [Translation System](./translation_system.md)
+- [Translation System](../translation_system.md)
 - [Spatie Queueable Actions](https://github.com/spatie/laravel-queueable-action)
 
 Queste regole garantiscono coerenza con l'architettura Laraxot e compatibilità con Filament 4.

@@ -3,11 +3,14 @@ title: "svg structure"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "svg structure"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Struttura SVG nei Moduli
@@ -189,9 +192,21 @@ Lo script `bashscripts/create_svg_structure.sh` è stato utilizzato per creare a
 - [Struttura Moduli](../architecture/modules/)
 - [Componenti UI](./ui-components.md)
 - [Best Practices Filament](../filament/best-practices.md)
-- [Best Practices Filament](../../../best-practices.md)
 - [Script di Automazione](../../bashscripts/create_svg_structure.sh)
 
 ---
+
+title: "svg structure"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "svg structure"
+issues: []
+discussions: []
 *Struttura SVG creata: Agosto 2025*
+<<<<<<< HEAD
 *Responsabile: DRY + KISS SVG Structure* 
+=======
+*Responsabile: DRY + KISS SVG Structure* 
+>>>>>>> laraxot/dev

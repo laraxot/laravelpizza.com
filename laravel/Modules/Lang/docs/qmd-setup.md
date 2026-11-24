@@ -1,5 +1,5 @@
 ---
-qmd: "qmd setup"
+qmd: "QMD SETUP"
 issues: []
 discussions: []
 title: "QMD Setup: Module Lang"
@@ -8,9 +8,10 @@ created: 2026-05-11
 updated: 2026-05-11
 tags: [qmd, search, docs, performance]
 related:
-  - ../../docs/wiki/concepts/llm-wiki-operational-discipline.md
   - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
-status: draft
+  - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
+status: superseded
+superseded_by: qmd-setup.md
 ---
 
 # QMD Setup per Module **Lang**
@@ -68,9 +69,13 @@ qmd search "form" -c lang  # Solo questo modulo
 ## Riferimenti
 
 - [Global QMD Config](../qmd.md) (root docs)
-- [Operational Discipline](../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
 - [Operational Discipline](../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
-- [On-Demand Pattern](./ON-DEMAND-PATTERN.md)
+- [Operational Discipline](../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
+<<<<<<< HEAD
+=======
+- [Operational Discipline](../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
+>>>>>>> laraxot/dev
+- [On-Demand Pattern](./on-demand-pattern.md)
 
 ---
 *Cache: ~/.cache/qmd-cache/ | Index: ~/.cache/qmd-cache/index*

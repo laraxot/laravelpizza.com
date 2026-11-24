@@ -1,3 +1,18 @@
+---
+title: "workflow init"
+type: note
+tags: [documentation]
+created: 2026-09-26
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+qmd: "workflow init"
+issues: []
+discussions: []
+---
+
 # BMAD Workflow Init — Guida alla Configurazione
 
 > **Versione**: 6.2.0 | **Progetto**: Laraxot PTVX  
@@ -5,6 +20,14 @@
 
 ---
 
+title: "workflow init"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "workflow init"
+issues: []
+discussions: []
 ## 🎯 Obiettivo
 
 Questa guida configura **workflow-init** per integrare BMAD Method con il tuo IDE (Claude Code, Cursor, Windsurf).
@@ -157,11 +180,25 @@ Crea lo script di inizializzazione `bashscripts/bmad/workflow-init.sh`:
 ```bash
 #!/bin/bash
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# -----------------------------------------------------------------------------
+# BMAD Workflow Init
+# -----------------------------------------------------------------------------
+# Configura BMAD Method per il progetto PTVX
+# -----------------------------------------------------------------------------
+=======
+>>>>>>> laraxot/dev
 # =============================================================================
 # BMAD Workflow Init
 # =============================================================================
 # Configura BMAD Method per il progetto PTVX
 # =============================================================================
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 set -e
 

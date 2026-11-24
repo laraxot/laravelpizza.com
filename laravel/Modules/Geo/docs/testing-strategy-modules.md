@@ -3,11 +3,14 @@ title: "testing strategy modules"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "testing strategy modules"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Strategia di Testing per i Moduli <nome progetto>
@@ -374,10 +377,19 @@ class DatabaseHelper
 ## Collegamenti
 
 - [Test Autenticazione Esistenti](../../../tests/Feature/Auth) - Pattern di riferimento
-- [Documentazione Modulo <nome progetto>](../modules/<nome progetto>/docs/readme.md)
+- [Documentazione Modulo <nome progetto>](../modules/<nome progetto>/docs/README.md)
 - [Documentazione Modulo User](../../User/docs/README.md)
 - [Configurazione Pest](../tests/Pest.php)
 
 ---
+
+title: "testing strategy modules"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "testing strategy modules"
+issues: []
+discussions: []
 **Stato**: 🚧 In implementazione
 **Responsabile**: Team Development

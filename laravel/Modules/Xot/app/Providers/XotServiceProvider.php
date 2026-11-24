@@ -20,6 +20,7 @@ use Filament\Tables\Filters\BaseFilter;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Events\MigrationsEnded;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\URL;
@@ -57,6 +58,7 @@ class XotServiceProvider extends XotBaseServiceProvider
     public function boot(): void
     {
         parent::boot();
+        $this->prohibitDestructiveDatabaseCommands();
         $this->redirectSSL();
         $this->registerViewComposers();
         $this->registerEvents();
@@ -105,7 +107,11 @@ class XotServiceProvider extends XotBaseServiceProvider
     {
         Factory::guessFactoryNamesUsing(static function (string $modelName): string {
             if (str_starts_with($modelName, 'Modules\\')) {
+<<<<<<< HEAD
+                $factoryClass = (new GetFactoryAction)->getFactoryClass($modelName);
+=======
                 $factoryClass = (new GetFactoryAction())->getFactoryClass($modelName);
+>>>>>>> laraxot/dev
             } else {
                 $modelsNamespace = app()->getNamespace().'Models\\';
                 $relativeName = Str::startsWith($modelName, $modelsNamespace)
@@ -139,7 +145,21 @@ class XotServiceProvider extends XotBaseServiceProvider
             return;
         }
 
+<<<<<<< HEAD
+        (new RegisterRuntimePsr4NamespacesAction)->execute($loader);
+=======
         (new RegisterRuntimePsr4NamespacesAction())->execute($loader);
+>>>>>>> laraxot/dev
+    }
+
+    /**
+     * In produzione db:wipe, migrate:fresh, migrate:refresh, migrate:reset e migrate:rollback si rifiutano
+     * (difese a strati, Modules/Xot/docs/testing/difese-database-nei-test.md). Un errore in produzione si
+     * corregge con una nuova migrazione, non cancellando tabelle. `migrate --force` resta permesso.
+     */
+    private function prohibitDestructiveDatabaseCommands(): void
+    {
+        DB::prohibitDestructiveCommands($this->app->isProduction());
     }
 
     public function registerTimezone(): void

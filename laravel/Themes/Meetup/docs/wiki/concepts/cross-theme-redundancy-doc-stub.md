@@ -1,7 +1,4 @@
 ---
-qmd: "cross theme redundancy doc stub"
-issues: []
-discussions: []
 title: "stub redondancy analysis cross-theme"
 type: concept
 module: Meetup
@@ -11,12 +8,6 @@ updated: 2026-05-23
 related:
   - ../../../../../../docs/wiki/concepts/code-redundancy-audit.md
 sources: []
-
-status: stale
----
-
-> Nota 2026-10-08 (docs-audit): cita laravel/Modules/Sixteen/docs/REDUNDANCY_ANALYSIS.md (Sixteen e' un tema, non un modulo) e docs/analysis/redundancies/summary.md, che non esiste. Contenuto non riscritto, verificare prima di usarlo.
-
 ---
 
 # Stub `REDUNDANCY_ANALYSIS.md` (Meetup e altri temi)
@@ -36,7 +27,7 @@ File osservati (stesso testo sostanzialmente):
 
 ## Direzione tecnica canonica
 
-- Inventario tecnico **cross-modulo** (codice PHP + Filament): [`Modules/docs/redundancy-report`](../../../../../Modules/docs/redundancy-report.md) _(target mancante, verificato 2026-10-08)_ (cwd `laravel/`).
+- Inventario tecnico **cross-modulo** (codice PHP + Filament): [`Modules/docs/redundancy-report`](../../../../../Modules/docs/redundancy-report.md) (cwd `laravel/`).
 - Indice navigazione **Xot** + overlap doc wizard: [`redundancy-catalog`](../../../../../Modules/Xot/docs/wiki/concepts/redundancy-catalog.md).
 
 ## Tracker

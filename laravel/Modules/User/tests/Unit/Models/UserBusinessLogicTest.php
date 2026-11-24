@@ -3,6 +3,10 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Carbon;
+<<<<<<< HEAD
+use Illuminate\Support\Facades\Hash;
+=======
+>>>>>>> laraxot/dev
 use Modules\User\Models\BaseUser;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
@@ -23,7 +27,11 @@ describe('User Business Logic', function () {
         Assert::assertSame('test@example.com', $user->email);
         // Il mutator di BaseUser hasha la password: mai in chiaro sul modello.
         Assert::assertNotSame('plain-password', $user->password);
+<<<<<<< HEAD
+        Assert::assertTrue(Hash::check('plain-password', (string) $user->password));
+=======
         Assert::assertTrue(\Illuminate\Support\Facades\Hash::check('plain-password', (string) $user->password));
+>>>>>>> laraxot/dev
     });
 
     test('user can have name components', function () {

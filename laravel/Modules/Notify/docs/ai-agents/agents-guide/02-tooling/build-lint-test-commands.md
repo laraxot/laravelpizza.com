@@ -3,11 +3,14 @@ title: "build lint test commands"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "build lint test commands"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 2. Build / Lint / Test Commands
@@ -101,10 +104,7 @@ cd laravel/Themes/Meetup
 npm install
 npm run dev      # Development
 npm run build    # Production
-<<<<<<< .merge_file_nR5qXz
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_S9tWIz
 ```
 
 ### Cache Clearing
@@ -118,3 +118,12 @@ php artisan filament:optimize-clear
 ```
 
 ---
+
+title: "build lint test commands"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "build lint test commands"
+issues: []
+discussions: []

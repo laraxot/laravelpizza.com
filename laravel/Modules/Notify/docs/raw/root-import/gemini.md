@@ -3,7 +3,11 @@ title: "gemini"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "gemini"
 issues: []
 discussions: []
@@ -33,9 +37,9 @@ qmd: "gemini"
 issues: []
 discussions: []
 **See also:**
-- [CLAUDE.md](./CLAUDE.md)
-- [AGENTS.md](./AGENTS.md)
-- [agents.md](./agents.md)
-- [QWEN.md](./QWEN.md)
+- [CLAUDE.md](./claude.md)
+- [AGENTS.md](./agents.md)
+- [AGENTS.md](./agents.md)
+- [qwen.md](./qwen.md)
 
 *Ultimo aggiornamento: Aprile 2026*

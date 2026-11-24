@@ -3,11 +3,14 @@ title: "email testing rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "email testing rules"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Regole per il Testing delle Email
@@ -165,7 +168,7 @@ public function sendEmail(): void
 - [Best Practices Laravel](https://laravel.com/project_docs/best-practices)
 - [Convenzioni Laraxot](../Xot/project_docs/laraxot-conventions.md)
 - [Best Practices Laravel](https://laravel.com/docs/best-practices)
-- [Convenzioni Laraxot](../../Xot/docs/laraxot-conventions.md)
+- [Convenzioni Laraxot](../Xot/docs/laraxot-conventions.md)
 
 ## 📝 Note
 

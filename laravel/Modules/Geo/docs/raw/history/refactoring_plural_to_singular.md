@@ -1,10 +1,10 @@
 ---
-title: "refactoring plural to singular"
+title: "Refactoring Plural to Singular"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "refactoring plural to singular"
+qmd: "Refactoring Plural to Singular"
 issues: []
 discussions: []
 ---
@@ -81,7 +81,7 @@ $opzione = Opzione::find(1);
 
 ## Documentazione Correlata
 
-- [Model Naming Convention](../../docs/MODEL_NAMING_CONVENTION.md)
+- [Model Naming Convention](../../docs/model_naming_convention.md)
 - [.windsurf/rules/model-naming-singular.md](../../.windsurf/rules/model-naming-singular.md)
 - [.cursor/rules/model-naming-singular.md](../../.cursor/rules/model-naming-singular.md)
 - [Progressioni: Schede → Scheda](./rename-schede-to-scheda.md)
@@ -95,12 +95,12 @@ $opzione = Opzione::find(1);
 - ✅ Factories e Policies rinominati
 
 ---
-title: "refactoring plural to singular"
+title: "REFACTORING PLURAL TO SINGULAR"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "refactoring plural to singular"
+qmd: "REFACTORING PLURAL TO SINGULAR"
 issues: []
 discussions: []
 **Data**: 2026-03-10  

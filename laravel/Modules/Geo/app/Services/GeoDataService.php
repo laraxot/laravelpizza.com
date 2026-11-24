@@ -51,7 +51,11 @@ class GeoDataService
      */
     public function __construct()
     {
+<<<<<<< HEAD
+        $this->validator = new GeoDataValidator;
+=======
         $this->validator = new GeoDataValidator();
+>>>>>>> laraxot/dev
     }
 
     /**
@@ -74,8 +78,12 @@ class GeoDataService
     /**
      * Ottiene le province di una regione.
      *
+<<<<<<< HEAD
+     * @param  string  $regionCode  Codice della regione
+=======
      * @param string $regionCode Codice della regione
      *
+>>>>>>> laraxot/dev
      * @return Collection<int, array{name: string, code: string}>
      */
     public function getProvinces(string $regionCode): Collection
@@ -89,7 +97,11 @@ class GeoDataService
 
             if (! $region || ! \is_array($region) || ! isset($region['provinces']) || ! \is_array($region['provinces'])) {
                 /** @var Collection<int, array{name: string, code: string}> $empty */
+<<<<<<< HEAD
+                $empty = new Collection;
+=======
                 $empty = new Collection();
+>>>>>>> laraxot/dev
 
                 return $empty;
             }
@@ -120,38 +132,29 @@ class GeoDataService
     }
 
     /**
-     * Ottiene le città di una provincia.
+     * Ottiene le città di una provincia come mappa codice => nome.
+<<<<<<< HEAD
+<<<<<<< .merge_file_hhUMwW
+     *
+     * @param  string  $provinceCode  Codice della provincia
+=======
      *
      * @param string $provinceCode Codice della provincia
      *
-     * @return Collection<int, array{name: string, code: string}>
+>>>>>>> .merge_file_nv1zYh
+=======
+     *
+     * @param string $provinceCode Codice della provincia
+     *
+>>>>>>> laraxot/dev
+     * @return Collection<string, string>
      */
     public function getCities(string $provinceCode): Collection
     {
         $cacheKey = \sprintf(self::CACHE_KEY_CITIES, $provinceCode);
 
-        /** @var Collection<int, array{name: string, code: string}> $result */
-        $result = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($provinceCode): Collection {
-            /** @var array<string, mixed>|null $province */
-            $province = $this->loadData()->flatMap(static fn (array $region): array => \is_array($region['provinces'] ?? null)
-                ? $region['provinces']
-                : [])->firstWhere('code', $provinceCode);
-
-            if (! $province || ! \is_array($province) || ! isset($province['cities']) || ! \is_array($province['cities'])) {
-                return new Collection();
-            }
-
-            /** @var array<int, array<string, mixed>> $cities */
-            $cities = $province['cities'];
-
-            /** @var Collection<int, array<string, mixed>> $citiesCollection */
-            $citiesCollection = new Collection($cities);
-
-            /** @var Collection<string, string> $cityResult */
-            $cityResult = $citiesCollection->pluck('name', 'code');
-
-            return $cityResult;
-        });
+        /** @var Collection<string, string> $result */
+        $result = Cache::remember($cacheKey, self::CACHE_TTL, fn (): Collection => $this->loadCities($provinceCode));
 
         return $result;
     }
@@ -159,8 +162,13 @@ class GeoDataService
     /**
      * Ottiene il CAP di una città.
      *
+<<<<<<< HEAD
+     * @param  string  $provinceCode  Codice della provincia
+     * @param  string  $cityCode  Codice della città
+=======
      * @param string $provinceCode Codice della provincia
      * @param string $cityCode     Codice della città
+>>>>>>> laraxot/dev
      */
     public function getCap(string $provinceCode, string $cityCode): ?string
     {
@@ -204,11 +212,51 @@ class GeoDataService
     }
 
     /**
+     * Carica le città di una provincia come mappa codice => nome.
+     *
+     * @return Collection<string, string>
+     */
+    private function loadCities(string $provinceCode): Collection
+    {
+        /** @var array<string, mixed>|null $province */
+        $province = $this->loadData()->flatMap(static fn (array $region): array => \is_array($region['provinces'] ?? null)
+            ? $region['provinces']
+            : [])->firstWhere('code', $provinceCode);
+
+        if (! $province || ! \is_array($province) || ! isset($province['cities']) || ! \is_array($province['cities'])) {
+<<<<<<< HEAD
+<<<<<<< .merge_file_hhUMwW
+            return new Collection;
+=======
+            return new Collection();
+>>>>>>> .merge_file_nv1zYh
+=======
+            return new Collection();
+>>>>>>> laraxot/dev
+        }
+
+        /** @var array<int, array<string, mixed>> $cities */
+        $cities = $province['cities'];
+
+        /** @var Collection<string, string> $cityResult */
+        $cityResult = (new Collection($cities))->pluck('name', 'code');
+
+        return $cityResult;
+    }
+
+    /**
      * Carica i dati dal file JSON.
      *
+<<<<<<< HEAD
+     *
+     * @return Collection<int, array<string, mixed>>
+     *
+     * @throws \RuntimeException Se il file non esiste o non è valido
+=======
      * @throws \RuntimeException Se il file non esiste o non è valido
      *
      * @return Collection<int, array<string, mixed>>
+>>>>>>> laraxot/dev
      */
     private function loadData(): Collection
     {

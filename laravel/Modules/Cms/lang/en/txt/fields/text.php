@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/text.php
 // Cms txt.fields.text — LangServiceProvider SSoT.
 return [
-    'label' => 'Testo',
-    'placeholder' => 'Inserisci il testo',
-    'helper_text' => 'Contenuto testuale semplice senza formattazione',
+    'label' => 'Text',
+    'placeholder' => 'Enter the text',
+    'helper_text' => 'Plain text content without formatting',
     'tooltip' => '',
     'description' => '',
 ];

@@ -1,14 +1,16 @@
 ---
-title: "gsd integration summary"
+title: "GSD Integration Summary"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
-qmd: "gsd integration summary"
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+qmd: "GSD Integration Summary"
 issues: []
 discussions: []
-status: superseded
-superseded_by: gsd-integration-summary.md
 ---
 
 # GSD (Get Shit Done) Integration Summary
@@ -19,6 +21,15 @@ superseded_by: gsd-integration-summary.md
 **Integration**: GSD + BMAD-METHOD
 
 ---
+
+title: "GSD INTEGRATION SUMMARY"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "GSD INTEGRATION SUMMARY"
+issues: []
+discussions: []
 ## 🎯 What is GSD?
 
 **GSD (Get Shit Done)** è un framework di **meta-prompting, context engineering, e spec-driven development** per AI coding assistants.
@@ -82,8 +93,8 @@ GSD è installato e configurato per **TUTTI gli AI agents**:
 
 **Files Created**:
 - `docs/gsd/README.md` — GSD integration guide
-- `docs/gsd/COMMANDS.md` — Command reference
-- `docs/gsd/GSD_INTEGRATION_SUMMARY.md` — This file
+- `docs/gsd/commands.md` — Command reference
+- `docs/gsd/gsd_integration_summary.md` — This file
 
 **Contents**:
 - Cos'è GSD e perché usarlo
@@ -170,10 +181,10 @@ bmad-laravel-module-dev --module=Scheda
 │  │    → Cattura decisioni → CONTEXT.md                     │ │
 │  │                                                         │ │
 │  │  /gsd:plan-phase [N]                                    │ │
-│  │    → Research + Plan + Verify → PLAN.md                 │ │
+│  │    → Research + Plan + Verify → plan.md                 │ │
 │  │                                                         │ │
 │  │  /gsd:execute-phase [N]                                 │ │
-│  │    → Wave execution → Commit atomici → SUMMARY.md       │ │
+│  │    → Wave execution → Commit atomici → summary.md       │ │
 │  │                                                         │ │
 │  │  /gsd:verify-work [N]                                   │ │
 │  │    → UAT → UAT.md                                       │ │
@@ -201,7 +212,7 @@ bmad-laravel-module-dev --module=Scheda
 **File creati**:
 - `PROJECT.md` — Vision del progetto
 - `REQUIREMENTS.md` — Requirements scoped
-- `ROADMAP.md` — Fasi mappate
+- `roadmap.md` — Fasi mappate
 - `STATE.md` — Decisioni e blockers
 - `.planning/research/` — Research findings
 
@@ -225,7 +236,7 @@ bmad-laravel-module-dev --module=Scheda
 2. **Plan** — Crea 2-3 atomic task plans (XML)
 3. **Verify** — Check against requirements, loops until pass
 
-**Esempio PLAN.md**:
+**Esempio plan.md**:
 
 ```xml
 <task type="auto">
@@ -288,8 +299,8 @@ WAVE 1 (parallel)          WAVE 2 (parallel)          WAVE 3
 ```
 docs/gsd/
 ├── README.md                      (Integration guide)
-├── COMMANDS.md                    (Command reference)
-└── GSD_INTEGRATION_SUMMARY.md    (This file)
+├── commands.md                    (Command reference)
+└── gsd_integration_summary.md    (This file)
 
 .planning/
 ├── config.json                    (GSD settings)
@@ -478,7 +489,7 @@ npx get-shit-done-cc@latest
 ### Internal Documentation
 
 - **GSD Guide**: `docs/gsd/README.md`
-- **Command Reference**: `docs/gsd/COMMANDS.md`
+- **Command Reference**: `docs/gsd/commands.md`
 - **BMAD Guide**: `docs/bmad/README.md`
 - **AI Coordination**: `docs/ai-agent-coordination.md`
 - **Project Context**: `_bmad/bmm/workflows/bmad-generate-project-context/project-context-ptvx.md`
@@ -508,8 +519,8 @@ gsd: Install GSD (Get Shit Done) v1.25.1 for all AI agents
 
 Documentation:
 - GSD Guide: docs/gsd/README.md
-- Command Reference: docs/gsd/COMMANDS.md
-- Integration Summary: docs/gsd/GSD_INTEGRATION_SUMMARY.md
+- Command Reference: docs/gsd/commands.md
+- Integration Summary: docs/gsd/gsd_integration_summary.md
 
 Related: #125, #126
 ```

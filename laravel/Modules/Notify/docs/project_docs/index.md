@@ -1,11 +1,18 @@
 ---
+title: "📚 Documentation Index - FixCity Project"
 title: "📚 Documentation Index - Notify Project"
 type: index
 tags: [notify, docs, project_docs]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-07-20
+qmd: "notify documentazione project_docs index 📚 documentation index - fixcity project index readme frontmatter qmd search"
 qmd: "notify documentazione project_docs index 📚 documentation index - laraxot project index readme frontmatter qmd search"
+=======
+updated: 2026-11-23
+qmd: "notify documentazione project_docs index 📚 documentation index - fixcity project index readme frontmatter qmd search"
+>>>>>>> laraxot/dev
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
 discussions:
@@ -13,10 +20,9 @@ discussions:
 related:
   - ../README.md
   - ../wiki/index.md
-  - ../notifications/readme.md
-  - ../integrations/readme.md
-  - ../templates/readme.md
-status: draft
+  - ../notifications/README.md
+  - ../integrations/README.md
+  - ../templates/README.md
 ---
 # 📚 Documentation Index - FixCity Project
 # 📚 Documentation Index - Notify Project
@@ -31,18 +37,18 @@ status: draft
 ### 🏆 Main Documents
 
 1. [**README.md**](../README.md) - Project overview and quick start
-2. [**CONTRIBUTING.md**](../CONTRIBUTING.md) - How to contribute
-3. [**ARCHITECTURE.md**](./ARCHITECTURE.md) - System architecture
-3. [**ARCHITECTURE.md**](./architecture.md) - System architecture
-4. [**QUALITY_DASHBOARD.md**](./QUALITY_DASHBOARD.md) - Real-time metrics
+2. [**CONTRIBUTING.md**](../contributing.md) - How to contribute
+3. [**architecture.md**](./architecture.md) - System architecture
+3. [**architecture.md**](./architecture.md) - System architecture
+4. [**QUALITY_DASHBOARD.md**](./quality_dashboard.md) - Real-time metrics
 
 ### 📊 Reports & Analysis
 
-5. [**MISSION_ACCOMPLISHED.md**](./MISSION_ACCOMPLISHED.md) - ⭐ Mission completion
-6. [**PROJECT_COMPLETION_CERTIFICATE.md**](./PROJECT_COMPLETION_CERTIFICATE.md) - Official certificate
-7. [**2025_EXCELLENCE_ACHIEVEMENT.md**](./2025_EXCELLENCE_ACHIEVEMENT.md) - Achievement report
-8. [**FINAL_REFACTORING_REPORT.md**](./FINAL_REFACTORING_REPORT.md) - Refactoring summary
-9. [**COMPLETE_REFACTORING_ANALYSIS.md**](./COMPLETE_REFACTORING_ANALYSIS.md) - Detailed analysis
+5. [**MISSION_ACCOMPLISHED.md**](./mission_accomplished.md) - ⭐ Mission completion
+6. [**PROJECT_COMPLETION_CERTIFICATE.md**](./project_completion_certificate.md) - Official certificate
+7. [**excellence-achievement-caps.md**](./excellence-achievement-caps.md) - Achievement report
+8. [**FINAL_REFACTORING_REPORT.md**](./final_refactoring_report.md) - Refactoring summary
+9. [**COMPLETE_REFACTORING_ANALYSIS.md**](./complete_refactoring_analysis.md) - Detailed analysis
 
 ---
 
@@ -70,7 +76,7 @@ status: draft
 - Commit guidelines
 - PR process
 
-### 3. ARCHITECTURE.md
+### 3. architecture.md
 ### 3. architecture.md
 **Purpose:** System architecture documentation  
 **Audience:** Developers, architects  
@@ -115,7 +121,7 @@ status: draft
 - Skills demonstrated
 - Recognition
 
-### 7. 2025_EXCELLENCE_ACHIEVEMENT.md
+### 7. excellence-achievement-caps.md
 **Purpose:** Excellence achievement report  
 **Audience:** Team, management  
 **Content:**
@@ -158,7 +164,6 @@ Each module has a `docs/` directory containing:
 
 #### Xot Module
 - [Cyclomatic Complexity Report](../Modules/Xot/docs/cyclomatic-complexity-report.md)
-- [Cyclomatic Complexity Report](../cyclomatic-complexity-report.md)
 - [Refactoring Plan](../Modules/Xot/docs/refactoring/cyclomatic-complexity-refactoring-plan.md)
 - [Refactoring Report](../Modules/Xot/docs/refactoring/artisan-service-refactoring-report.md)
 
@@ -168,11 +173,6 @@ Each module has a `docs/` directory containing:
 #### User Module
 - [Cyclomatic Complexity Report](../Modules/User/docs/cyclomatic-complexity-report.md)
 - [Extensive documentation](../Modules/User/docs/)
-- [Cyclomatic Complexity Report](../../../Tenant/docs/cyclomatic-complexity-report.md)
-
-#### User Module
-- [Cyclomatic Complexity Report](../../../User/docs/cyclomatic-complexity-report.md)
-- [Extensive documentation](../../../User/docs)
 
 #### Other Modules
 - AI, Activity, Blog, Cms, Comment, Fixcity, Gdpr, Geo, Job, Lang, Media, Notify, Rating, Seo, UI
@@ -184,18 +184,27 @@ Each module has a `docs/` directory containing:
 ## 🎨 Theme Documentation
 
 ### Sixteen Theme
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+- [Code Quality Analysis](../Themes/Sixteen/docs/code_quality_analysis.md)
+- [README](../Themes/Sixteen/docs/README.md)
+- [Roadmap 2025](../Themes/Sixteen/docs/roadmap_2025.md)
+
+### TwentyOne Theme
+- [Code Quality Analysis](../Themes/TwentyOne/docs/code_quality_analysis.md)
+=======
+>>>>>>> laraxot/dev
 - [Code Quality Analysis](../Themes/Sixteen/docs/CODE_QUALITY_ANALYSIS.md)
 - [README](../Themes/Sixteen/docs/README.md)
 - [Roadmap 2025](../Themes/Sixteen/docs/ROADMAP_2025.md)
 
 ### TwentyOne Theme
-- [Code Quality Analysis](../Themes/TwentyOne/docs/code-quality-analysis.md)
-- [Code Quality Analysis](../../../../Themes/Sixteen/docs/CODE_QUALITY_ANALYSIS.md)
-- [README](../../../../Themes/Sixteen/docs/README.md)
-- [Roadmap 2025](../../../../Themes/Sixteen/docs/ROADMAP_2025.md)
-
-### TwentyOne Theme
-- [Code Quality Analysis](../../../../Themes/TwentyOne/docs/code-quality-analysis.md)
+- [Code Quality Analysis](../Themes/TwentyOne/docs/CODE_QUALITY_ANALYSIS.md)
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 
@@ -210,9 +219,6 @@ Each module has a `docs/` directory containing:
 - [Package.json](../package.json) - NPM scripts
 - [PHPStan Config](../phpstan.neon) - Static analysis
 - [Composer](../composer.json) - PHP dependencies
-- [Package.json](../../package.json) - NPM scripts
-- [PHPStan Config](../../../../phpstan.neon) - Static analysis
-- [Composer](../../composer.json) - PHP dependencies
 
 ### Analysis Tools
 - [Complexity Analyzer](../analyze_complexity.php)
@@ -244,16 +250,42 @@ Each module has a `docs/` directory containing:
 
 ### For Developers
 - README.md
+<<<<<<< HEAD
 - CONTRIBUTING.md
-- ARCHITECTURE.md
+- architecture.md
+=======
+<<<<<<< HEAD
+- contributing.md
+=======
+- CONTRIBUTING.md
+- architecture.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - architecture.md
 - Module documentation
 - Refactoring reports
 
 ### For Management
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+- mission_accomplished.md
+- project_completion_certificate.md
+- excellence-achievement-caps.md
+- quality_dashboard.md
+### For Quality Team
+- quality_dashboard.md
+- Cyclomatic Complexity Reports
+- final_refactoring_report.md
+- complete_refactoring_analysis.md
+### For New Contributors
+- README.md
+- contributing.md
+=======
+>>>>>>> laraxot/dev
 - MISSION_ACCOMPLISHED.md
 - PROJECT_COMPLETION_CERTIFICATE.md
-- 2025_EXCELLENCE_ACHIEVEMENT.md
+- excellence-achievement-caps.md
 - QUALITY_DASHBOARD.md
 
 ### For Quality Team
@@ -265,6 +297,10 @@ Each module has a `docs/` directory containing:
 ### For New Contributors
 - README.md
 - CONTRIBUTING.md
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - Module documentation
 - Code examples
 
@@ -294,24 +330,50 @@ Each module has a `docs/` directory containing:
 ### By Topic
 
 **Architecture & Design:**
-- ARCHITECTURE.md
+- architecture.md
 - architecture.md
 - Design patterns section
 - Module structure
 
 **Quality & Metrics:**
+<<<<<<< HEAD
 - QUALITY_DASHBOARD.md
+=======
+<<<<<<< HEAD
+- quality_dashboard.md
+=======
+- QUALITY_DASHBOARD.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - Cyclomatic complexity reports
 - Test coverage reports
 
 **Refactoring:**
+<<<<<<< HEAD
 - FINAL_REFACTORING_REPORT.md
 - COMPLETE_REFACTORING_ANALYSIS.md
+=======
+<<<<<<< HEAD
+- final_refactoring_report.md
+- complete_refactoring_analysis.md
+=======
+- FINAL_REFACTORING_REPORT.md
+- COMPLETE_REFACTORING_ANALYSIS.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - Module-specific refactoring docs
 
 **Getting Started:**
 - README.md
+<<<<<<< HEAD
 - CONTRIBUTING.md
+=======
+<<<<<<< HEAD
+- contributing.md
+=======
+- CONTRIBUTING.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - Quick start guides
 
 **Testing:**
@@ -402,7 +464,15 @@ All documents include:
 - Outdated content
 
 ### Contributing to Docs
+<<<<<<< HEAD
 - Follow CONTRIBUTING.md
+=======
+<<<<<<< HEAD
+- follow contributing.md
+=======
+- Follow CONTRIBUTING.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - Use proper format
 - Include examples
 - Update index
@@ -428,7 +498,21 @@ All documents include:
 ## 📅 Recent Updates
 
 ### 2025-10-01
-- ✅ Created INDEX.md
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+- ✅ created index.md
+- ✅ completed mission_accomplished.md
+- ✅ finalized project_completion_certificate.md
+- ✅ Updated all module reports
+- ✅ enhanced readme.md
+### 2025-09-30
+- ✅ created architecture.md
+- ✅ created quality_dashboard.md
+- ✅ created excellence-achievement-caps.md
+=======
+>>>>>>> laraxot/dev
+- ✅ Created index.md
 - ✅ Created index.md
 - ✅ Completed MISSION_ACCOMPLISHED.md
 - ✅ Finalized PROJECT_COMPLETION_CERTIFICATE.md
@@ -436,11 +520,15 @@ All documents include:
 - ✅ Enhanced README.md
 
 ### 2025-09-30
-- ✅ Created ARCHITECTURE.md
+- ✅ Created architecture.md
 - ✅ Created architecture.md
 - ✅ Created QUALITY_DASHBOARD.md
-- ✅ Created 2025_EXCELLENCE_ACHIEVEMENT.md
+- ✅ Created excellence-achievement-caps.md
 
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## 🔮 Future Documentation

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "github actions"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Sync Remote Repo GitHub Action

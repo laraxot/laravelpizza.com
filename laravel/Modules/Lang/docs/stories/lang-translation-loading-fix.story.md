@@ -31,7 +31,7 @@ owned_scope:
   - laravel/Modules/Lang/tests/
 ---
 
-# Lang: Fix array_replace_recursive TypeError in FileLoader
+# Lang — Fix array_replace_recursive TypeError in FileLoader
 
 ## Story
 

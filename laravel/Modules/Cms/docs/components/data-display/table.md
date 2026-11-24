@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "table"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Table

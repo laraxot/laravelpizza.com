@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "logo"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Logo Block
@@ -158,7 +157,7 @@ Le Blade dei blocchi devono includere un wrapper con le classi del tema per sfon
 ## Collegamenti
 
 - [Documentazione Filament Forms](../filament-forms.md)
-- [UI Components](../components.md)
+- [UI Components](../ui/components.md)
 - [Best Practices Immagini](../ui/image-guidelines.md)
 - [Accessibilità](../ui/accessibility.md)
 - [Filament Icons](https://filamentphp.com/docs/3.x/support/icons)

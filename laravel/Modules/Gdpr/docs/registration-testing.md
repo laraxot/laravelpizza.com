@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "registration testing"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Feature Testing: User Registration

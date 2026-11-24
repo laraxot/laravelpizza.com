@@ -2,16 +2,19 @@
 qmd: "conflict consolidated"
 issues: []
 discussions: []
-title: "conflict: Consolidated Documentation"
+title: "conflict — Consolidated Documentation"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
-# conflict: Consolidated Documentation
+# conflict — Consolidated Documentation
 
 Consolidated from **15** individual files.
 
@@ -25,7 +28,7 @@ Consolidated from **15** individual files.
 - [Risoluzione Conflitti SmsChannel.php](#conflict-resolution-smschannel)
 - [---](#conflict-resolution-smsdriverenum-1)
 - [Risoluzione Conflitto SmsDriverEnum](#conflict-resolution-smsdriverenum)
-- [Conflict Resolution: Module Notify](#conflict-resolution)
+- [Conflict Resolution — Module Notify](#conflict-resolution)
 - [Risoluzione Conflitti RecordNotification.php](#conflict_resolution_recordnotification)
 - [Risoluzione Conflitti SendSmsPage.php](#conflict_resolution_sendsmspage)
 - [Risoluzione Conflitti SmsChannel.php](#conflict_resolution_smschannel)
@@ -37,7 +40,7 @@ Consolidated from **15** individual files.
 
 ## conflict-resolution-recordnotification-1
 
-*Consolidated from: `conflict-resolution-recordnotification.md`*
+*Consolidated from: `conflict-resolution-recordnotification-1.md`*
 
 title: "Risoluzione Conflitti RecordNotification.php"
 type: concept
@@ -48,17 +51,12 @@ qmd: "conflict-resolution-recordnotification-1 risoluzione conflitti recordnotif
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -89,7 +87,10 @@ dddx([
    // 'text' => $email->text(),
    'getHtmlLayout' => $email->getHtmlLayout(),
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ]);
 */
 ```
@@ -142,13 +143,13 @@ Verificare che:
 ## Collegamenti
 - [Notify Module Documentation](README.md)
 - [RecordNotification Implementation](notifications/record_notification.md)
-- [SpatieEmail Integration](spatie-email-usage-guide.md)
+- [SpatieEmail Integration](spatie-email-usage-guide-1.md)
 - [Root Conflict Resolution Guidelines](../../../project_docs/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
-- [Notify Module Documentation](readme.md)
+- [Notify Module Documentation](README.md)
 - [RecordNotification Implementation](notifications/record_notification.md)
-- [SpatieEmail Integration](spatie-email-usage-guide.md)
+- [SpatieEmail Integration](spatie-email-usage-guide-1.md)
 - [Root Conflict Resolution Guidelines](../../../../docs/project/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
@@ -158,7 +159,10 @@ Verificare che:
 
 *Consolidated from: `conflict-resolution-recordnotification.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Contesto del Conflitto
 **File**: `Modules/Notify/app/Notifications/RecordNotification.php`
 **Linee**: 77-91
@@ -236,7 +240,6 @@ Verificare che:
 - [Notify Module Documentation](README.md)
 - [RecordNotification Implementation](notifications/record_notification.md)
 - [SpatieEmail Integration](spatie-email-usage-guide.md)
-- [SpatieEmail Integration](../../spatie-email-usage-guide.md)
 - [Root Conflict Resolution Guidelines](../../../../docs/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
@@ -319,7 +322,6 @@ Verificare che:
 - [Notify Module Documentation](README.md)
 - [RecordNotification Implementation](notifications/record_notification.md)
 - [SpatieEmail Integration](spatie-email-usage-guide.md)
-- [SpatieEmail Integration](../../spatie-email-usage-guide.md)
 - [Root Conflict Resolution Guidelines](../../../../docs/project/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
@@ -328,7 +330,7 @@ Verificare che:
 
 ## conflict-resolution-sendsmspage-1
 
-*Consolidated from: `conflict-resolution-sendsmspage.md`*
+*Consolidated from: `conflict-resolution-sendsmspage-1.md`*
 
 title: "Risoluzione Conflitti SendSmsPage.php"
 type: concept
@@ -339,17 +341,12 @@ qmd: "conflict-resolution-sendsmspage-1 risoluzione conflitti sendsmspage.php"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -420,13 +417,13 @@ Verificare che:
 ## Collegamenti
 - [Notify Module Documentation](README.md)
 - [SMS Testing Guide](sms/testing.md)
-- [MailTemplate Integration](mail-templates-structure.md)
+- [MailTemplate Integration](mail-templates-structure-1.md)
 - [Root Conflict Resolution Guidelines](../../../project_docs/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
-- [Notify Module Documentation](readme.md)
+- [Notify Module Documentation](README.md)
 - [SMS Testing Guide](sms/testing.md)
-- [MailTemplate Integration](mail-templates-structure.md)
+- [MailTemplate Integration](mail-templates-structure-1.md)
 - [Root Conflict Resolution Guidelines](../../../../docs/project/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
@@ -436,7 +433,10 @@ Verificare che:
 
 *Consolidated from: `conflict-resolution-sendsmspage.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Contesto del Conflitto
 **File**: `Modules/Notify/app/Filament/Clusters/Test/Pages/SendSmsPage.php`
 **Linee**: 10-13, 20-23
@@ -502,7 +502,6 @@ Verificare che:
 - [Notify Module Documentation](README.md)
 - [SMS Testing Guide](sms/testing.md)
 - [MailTemplate Integration](mail_templates_structure.md)
-- [MailTemplate Integration](../../mail_templates_structure.md)
 - [Root Conflict Resolution Guidelines](../../../../docs/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
@@ -573,7 +572,6 @@ Verificare che:
 - [Notify Module Documentation](README.md)
 - [SMS Testing Guide](sms/testing.md)
 - [MailTemplate Integration](mail_templates_structure.md)
-- [MailTemplate Integration](../../mail_templates_structure.md)
 - [Root Conflict Resolution Guidelines](../../../../docs/project/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
@@ -582,7 +580,7 @@ Verificare che:
 
 ## conflict-resolution-smschannel-1
 
-*Consolidated from: `conflict-resolution-smschannel.md`*
+*Consolidated from: `conflict-resolution-smschannel-1.md`*
 
 title: "Risoluzione Conflitti SmsChannel.php"
 type: concept
@@ -593,17 +591,12 @@ qmd: "conflict-resolution-smschannel-1 risoluzione conflitti smschannel.php"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -661,12 +654,12 @@ return $action->execute($smsData);
 
 ## Collegamenti
 - [Notify Module Documentation](README.md)
-- [SMS Channel Architecture](sms-channel-action-resolution.md)
+- [SMS Channel Architecture](sms-channel-action-resolution-1.md)
 - [Root Conflict Resolution Guidelines](../../../project_docs/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
-- [Notify Module Documentation](readme.md)
-- [SMS Channel Architecture](sms-channel-action-resolution.md)
+- [Notify Module Documentation](README.md)
+- [SMS Channel Architecture](sms-channel-action-resolution-1.md)
 - [Root Conflict Resolution Guidelines](../../../../docs/project/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
@@ -676,7 +669,10 @@ return $action->execute($smsData);
 
 *Consolidated from: `conflict-resolution-smschannel.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Contesto del Conflitto
 **File**: `Modules/Notify/app/Channels/SmsChannel.php`
 **Linee**: 55-58
@@ -727,9 +723,8 @@ return $action->execute($smsData);
 - Solo miglioramento della leggibilità del codice
 
 ## Collegamenti
-- [Notify Module Documentation](readme.md)
+- [Notify Module Documentation](README.md)
 - [SMS Channel Architecture](sms-channel-action-resolution.md)
-- [SMS Channel Architecture](../../sms-channel-action-resolution.md)
 - [Root Conflict Resolution Guidelines](../../../../docs/project/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
@@ -787,7 +782,6 @@ return $action->execute($smsData);
 ## Collegamenti
 - [Notify Module Documentation](README.md)
 - [SMS Channel Architecture](sms-channel-action-resolution.md)
-- [SMS Channel Architecture](../../sms-channel-action-resolution.md)
 - [Root Conflict Resolution Guidelines](../../../../docs/project/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
@@ -796,7 +790,7 @@ return $action->execute($smsData);
 
 ## conflict-resolution-smsdriverenum-1
 
-*Consolidated from: `conflict-resolution-smsdriverenum.md`*
+*Consolidated from: `conflict-resolution-smsdriverenum-1.md`*
 
 title: "Risoluzione Conflitto SmsDriverEnum"
 type: concept
@@ -807,17 +801,12 @@ qmd: "conflict-resolution-smsdriverenum-1 risoluzione conflitto smsdriverenum"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
@@ -947,7 +936,10 @@ use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasLabel;
 use Modules\Xot\Filament\Traits\TransTrait;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 // DOPO (risolto)
 use Filament\Support\Contracts\HasIcon;
 use Filament\Support\Contracts\HasColor;
@@ -1042,7 +1034,6 @@ enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
 - [Notify Module](../README.md)
 - [SMS Configuration](../sms-configuration.md)
 - [Translation Standards](../../Lang/project_docs/translation-standards.md)
-- [Translation Standards](../../translation-standards.md)
 - [Filament Integration](../../Xot/project_docs/filament-translations.md)
 
 ## Note per Sviluppatori Futuri
@@ -1065,7 +1056,10 @@ enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
 
 *Consolidated from: `conflict-resolution-smsdriverenum.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Problema Identificato
 
 Il file `Modules/Notify/app/Enums/SmsDriverEnum.php` presenta conflitti Git complessi relativi a:
@@ -1189,7 +1183,10 @@ use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasLabel;
 use Modules\Xot\Filament\Traits\TransTrait;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 // DOPO (risolto)
 use Filament\Support\Contracts\HasIcon;
 use Filament\Support\Contracts\HasColor;
@@ -1281,10 +1278,9 @@ enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
 
 ## Collegamenti Correlati
 
-- [Notify Module](../readme.md)
+- [Notify Module](../README.md)
 - [SMS Configuration](../sms-configuration.md)
 - [Translation Standards](../../lang/docs/translation-standards.md)
-- [Translation Standards](../../../../Lang/docs/translation-standards.md)
 - [Filament Integration](../../xot/docs/filament-translations.md)
 
 ## Note per Sviluppatori Futuri
@@ -1307,7 +1303,10 @@ enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
 
 *Consolidated from: `conflict-resolution.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Summary
 - **Files resolved**: 44
 - **Strategy**: Keep HEAD/local (ours) side
@@ -1350,16 +1349,19 @@ enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
 - docs/notifications/sms-implementation-details.md
 - docs/notifications/sms-provider-configuration.md
 - docs/notifications/telegram-notifications-guide.md
-- docs/phpstan-fixes-gennaio.md
+- docs/phpstan-fixes-early-cycle.md
 - docs/provider-actions-architecture.md
-- docs/readme.md
+- docs/README.md
 - docs/reusabilitylines.md
 - docs/roadmap.md
 - docs/sms-provider-configuration-best-practices.md
 - docs/translation-cleanup-plan.md
 - docs/translation-standards.md
 - docs/whatsapp-integration.md
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Config Files
 - composer.json
 
@@ -1372,7 +1374,10 @@ enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
 
 *Consolidated from: `conflict_resolution_recordnotification.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Contesto del Conflitto
 **File**: `/var/www/html/ptvx/laravel/Modules/Notify/app/Notifications/RecordNotification.php`
 **Linee**: 77-91
@@ -1397,7 +1402,10 @@ dddx([
    // 'text' => $email->text(),
    'getHtmlLayout' => $email->getHtmlLayout(),
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ]);
 */
 ```
@@ -1451,7 +1459,6 @@ Verificare che:
 - [Notify Module Documentation](README.md)
 - [RecordNotification Implementation](notifications/record_notification.md)
 - [SpatieEmail Integration](spatie-email-usage-guide.md)
-- [SpatieEmail Integration](../../spatie-email-usage-guide.md)
 - [Root Conflict Resolution Guidelines](../../../project_docs/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
@@ -1462,7 +1469,10 @@ Verificare che:
 
 *Consolidated from: `conflict_resolution_sendsmspage.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Contesto del Conflitto
 **File**: `/var/www/html/ptvx/laravel/Modules/Notify/app/Filament/Clusters/Test/Pages/SendSmsPage.php`
 **Linee**: 10-13, 20-23
@@ -1528,7 +1538,6 @@ Verificare che:
 - [Notify Module Documentation](README.md)
 - [SMS Testing Guide](sms/testing.md)
 - [MailTemplate Integration](mail_templates_structure.md)
-- [MailTemplate Integration](../../mail_templates_structure.md)
 - [Root Conflict Resolution Guidelines](../../../project_docs/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
@@ -1539,7 +1548,10 @@ Verificare che:
 
 *Consolidated from: `conflict_resolution_smschannel.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Contesto del Conflitto
 **File**: `/var/www/html/ptvx/laravel/Modules/Notify/app/Channels/SmsChannel.php`
 **Linee**: 55-58
@@ -1592,7 +1604,6 @@ return $action->execute($smsData);
 ## Collegamenti
 - [Notify Module Documentation](README.md)
 - [SMS Channel Architecture](sms-channel-action-resolution.md)
-- [SMS Channel Architecture](../../sms-channel-action-resolution.md)
 - [Root Conflict Resolution Guidelines](../../../project_docs/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
@@ -1603,7 +1614,10 @@ return $action->execute($smsData);
 
 *Consolidated from: `conflict_resolution_smsdriverenum.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Problema Identificato
 
 Il file `Modules/Notify/app/Enums/SmsDriverEnum.php` presenta conflitti Git complessi relativi a:
@@ -1727,7 +1741,10 @@ use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasLabel;
 use Modules\Xot\Filament\Traits\TransTrait;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 // DOPO (risolto)
 use Filament\Support\Contracts\HasIcon;
 use Filament\Support\Contracts\HasColor;
@@ -1822,7 +1839,6 @@ enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
 - [Notify Module](../README.md)
 - [SMS Configuration](../sms-configuration.md)
 - [Translation Standards](../../Lang/project_docs/translation-standards.md)
-- [Translation Standards](../../translation-standards.md)
 - [Filament Integration](../../Xot/project_docs/filament-translations.md)
 
 ## Note per Sviluppatori Futuri
@@ -1845,15 +1861,21 @@ enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
 
 *Consolidated from: `conflicts-analysis.md`*
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> laraxot/dev
 ## Obiettivi Funzionali
 
 ## Decisioni Architetturali
 
 ## Impatto
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Collegamenti correlati
 - [[conflicts_overview]]
 
@@ -1863,13 +1885,19 @@ enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
 
 *Consolidated from: `conflicts.md`*
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> laraxot/dev
 ## File modificati
 
 ## Decisioni adottate
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ---
 
 **Consolidated by:** Phase 2f intelligent merging

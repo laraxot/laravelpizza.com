@@ -3,11 +3,14 @@ title: "filament blade components"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "filament blade components"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Standard <nome progetto>: Componenti Blade Filament
@@ -37,5 +40,13 @@ In <nome progetto>, la **prima scelta per i componenti Blade** sono SEMPRE i [co
 ## Collegamenti
 - [Documentazione Filament Blade Components](https://filamentphp.com/project_docs/3.x/support/blade-components/overview)
 - [Documentazione Filament Blade Components](https://filamentphp.com/docs/3.x/support/blade-components/overview)
+<<<<<<< HEAD
 - [README Notify](README.md)
+=======
+<<<<<<< HEAD
+- [README Notify](readme.md)
+=======
+- [README Notify](README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [queueable-action.md](queueable-action.md)

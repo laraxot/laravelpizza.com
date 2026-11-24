@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "architecture testing env"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Testing Environment

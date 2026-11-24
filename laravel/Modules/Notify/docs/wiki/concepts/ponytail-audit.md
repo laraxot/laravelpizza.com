@@ -3,14 +3,17 @@ title: "ponytail audit"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "ponytail audit"
 issues: []
 discussions: []
-status: draft
 ---
 
-# Ponytail audit: Notify
+# Ponytail audit — Notify
 
 **Delta modulo only here.** Ranked list, gate e remediation globale negli hub progetto.
 

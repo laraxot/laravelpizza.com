@@ -5,13 +5,12 @@ import tailwindcss from '@tailwindcss/vite'
 import path from 'path';
 
 export default defineConfig({
-    // URL pubblico dei file compilati (npm run copy li mette in public_html/themes/Meetup):
-    // senza, font e immagini importati dal CSS puntavano a /build/assets/ (404).
-    base: '/themes/Meetup/',
     plugins: [
         laravel({
             input: [
                 'resources/css/app.css',
+                // Pagine pubbliche senza Filament (issue #584): il layout sceglie quale dei due caricare.
+                'resources/css/site.css',
                 'resources/js/app.js',
             ],
             refresh: true,

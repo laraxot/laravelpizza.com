@@ -1,3 +1,14 @@
+---
+title: "swarm phpstan random 2026 06 16"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "swarm phpstan random 2026 06 16"
+issues: []
+discussions: []
+---
+
 # Swarm PHPStan Random Analysis — 2026-06-16
 
 **Scopo:** Validare PHPStan level-max su 34 moduli in ordine casuale con coordinamento multi-agente.  
@@ -6,6 +17,14 @@
 
 ---
 
+title: "swarm phpstan random 2026 06 16"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "swarm phpstan random 2026 06 16"
+issues: []
+discussions: []
 ## Ordine Random dei Moduli (34 totali)
 
 ```

@@ -3,11 +3,14 @@ title: "commands"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "commands"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🔧 Console Commands FixCity
@@ -45,8 +48,11 @@ php artisan view:cache
 
 ### Moduli (Nwidart)
 ```bash
-# Lista moduli e stato (Enabled/Disabled)
+# Lista moduli
 php artisan module:list
+
+# Stato moduli
+php artisan module:status
 
 # Attiva/disattiva modulo
 php artisan module:enable {nome}
@@ -298,21 +304,41 @@ dev:seed-test-data
 dev:reset-demo
 ```
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+## 🚨 REGOLA CRITICA - Frontend
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+
+*Comando più importante: `php artisan` - Il cuore dell'ecosistema Laravel*
+=======
+>>>>>>> laraxot/dev
 ---
+
+title: "commands"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "commands"
+issues: []
+discussions: []
 ## 🚨 REGOLA CRITICA - Frontend
 
 **MAI dimenticare dopo modifiche CSS/JS**:
 ```bash
 cd Themes/Sixteen/
 npm run build
-<<<<<<< .merge_file_mymQHb
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_fJ5F4i
 ```
 
 Senza questi comandi, le modifiche frontend NON saranno visibili agli utenti!
 
 ---
 
+<<<<<<< HEAD
 *Comando più importante: `php artisan` - Il cuore dell'ecosistema Laravel* 
+=======
+*Comando più importante: `php artisan` - Il cuore dell'ecosistema Laravel* 
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

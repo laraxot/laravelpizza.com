@@ -3,7 +3,11 @@ title: "phase 1 execution dashboard"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "phase 1 execution dashboard"
 issues: []
 discussions: []
@@ -321,7 +325,7 @@ Phase 2 planning can begin
 - [ ] PHASE-1-COMPLETION-REPORT.md created
 - [ ] Metrics documented
 - [ ] Lessons learned captured
-- [ ] 00-INDEX.md updated
+- [ ] 00-index.md updated
 - [ ] 00-index.md updated
 - [ ] Phase 2 strategy outlined
 
@@ -362,7 +366,7 @@ Phase 2 planning can begin
 - EXECUTOR-2-SUBTASKS-3-4.md (for Executor #2)
 
 **Tools** (5-10 min read):
-- bashscripts/docs/html/INDEX.md (comparison tools)
+- bashscripts/docs/html/index.md (comparison tools)
 - bashscripts/docs/html/index.md (comparison tools)
 
 ---

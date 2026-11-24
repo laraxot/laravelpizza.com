@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "product launch plan"
 issues: []
 discussions: []
-status: draft
 ---
 
 # AI Module - Product Launch Plan
@@ -17,6 +16,15 @@ status: draft
 **Owner:** Product Team
 
 ---
+
+title: "product launch plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "product launch plan"
+issues: []
+discussions: []
 ## Launch Objectives
 
 1. **Product:** Deploy AI content generation for markets

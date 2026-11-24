@@ -4,7 +4,11 @@ type: rule
 tags: [notify, docs, rules, no, bootstrap, italia]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify documentazione rules no bootstrap italia no bootstrap italia rule frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -16,7 +20,6 @@ related:
   - ../conventions/README.md
   - README.md
   - ../best-practices/naming-conventions.md
-status: draft
 ---
 # No Bootstrap Italia Rule
 
@@ -43,11 +46,11 @@ This project replicates the Design Comuni design system using **Tailwind CSS + A
 The project's core purpose is to **replicate Bootstrap Italia's visual design using Tailwind CSS**, not to use Bootstrap itself. This keeps the bundle size small, avoids CSS conflicts, and maintains full control over the design system.
 
 ## Exceptions
-- SVG sprite paths containing `bootstrap-italia/dist/svg/sprites.svg`: these are icon files only
-- CSS class names that match Bootstrap Italia conventions (e.g., `btn-primary`, `container`, `row`): these are replicated via Tailwind `@apply`
+- SVG sprite paths containing `bootstrap-italia/dist/svg/sprites.svg` — these are icon files only
+- CSS class names that match Bootstrap Italia conventions (e.g., `btn-primary`, `container`, `row`) — these are replicated via Tailwind `@apply`
 
 ## Related
 - See: `docs/html-structure-comparison.md` for project bridge docs
 - See: `bashscripts/docs/html/html-structure-compare.md` for comparison tool docs
 - See: `laravel/Themes/Sixteen/docs/architecture/README.md` for theme architecture
-- See: `QWEN.md` for project memories and conventions
+- See: `qwen.md` for project memories and conventions

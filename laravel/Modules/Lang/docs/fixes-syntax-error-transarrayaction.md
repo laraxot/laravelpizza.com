@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "redundancy analysis"
 related:
   - "./italian-text-refined-audit-report.md"
-status: draft
 ---
 # Fix Errore Sintassi TransArrayAction
 
@@ -75,8 +74,12 @@ public function execute(
 ## Collegamenti
 
 - [TransArrayAction.php](../../app/Actions/TransArrayAction.php)
-- [TransArrayAction.php](../app/Actions/TransArrayAction.php)
+<<<<<<< HEAD
+=======
 - [PHPStan Fixes](./phpstan-fixes.md)
+
+>>>>>>> laraxot/dev
+- [PHPStan Fixes](./PHPSTAN-FIXES.md)
 - [Translation Actions](./translation-actions.md)
 
 ## Note per il Futuro

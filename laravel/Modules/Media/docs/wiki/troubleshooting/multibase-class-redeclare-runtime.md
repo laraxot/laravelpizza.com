@@ -12,7 +12,6 @@ related:
   - ../concepts/second-brain-local-discipline.md
   - ../concepts/context-overflow-prevention.md
   - ../../README.md
-status: draft
 ---
 
 # FatalError: Cannot redeclare class (path mix `base_*_fila5`)

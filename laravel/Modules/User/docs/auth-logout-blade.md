@@ -8,25 +8,19 @@ qmd: "auth-logout-blade implementazione corretta di logout.blade.php"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
 ---
 
 # Implementazione Corretta di logout.blade.php
 
 ## Collegamenti correlati
-- [Documentazione centrale](../../../../docs/README.md)
 - [Documentazione centrale](../../../../docs/README.md)
 - [Collegamenti documentazione](../../../docs/collegamenti-documentazione.md)
 - [README modulo User](./README.md)
@@ -36,16 +30,15 @@ status: draft
 - [Documentazione centrale](../../../../docs/README.md)
 - [Collegamenti documentazione](../../../../docs/collegamenti-documentazione.md)
 - [README modulo User](./README.md)
-- [Convenzioni Path](./path-conventions.md)
-- [Struttura moduli](../../../../docs/architecture/modules-structure.md)
-- [Logout Page Fix](./logout-page-fix.md)
-- [Convenzioni Path](./path_conventions.md)
-- [Struttura moduli](../../../docs/architecture/modules-structure.md)
-- [Logout Page Fix](./logout_page_fix.md)
-- [Documentazione centrale](../../../../docs/README.md)
-- [Collegamenti documentazione](../../../../docs/collegamenti-documentazione.md)
-- [README modulo User](./README.md)
+<<<<<<< HEAD
 - [Convenzioni Path](./path-conventions-user.md)
+=======
+<<<<<<< .merge_file_AKEsTW
+- [Convenzioni Path](./path-conventions-2.md)
+=======
+- [Convenzioni Path](./path-conventions-user.md)
+>>>>>>> .merge_file_WwdfML
+>>>>>>> laraxot/dev
 - [Struttura moduli](../../../../docs/architecture/modules-structure.md)
 - [Logout Page Fix](./logout-page-fix.md)
 - [Convenzioni Path](./path_conventions.md)

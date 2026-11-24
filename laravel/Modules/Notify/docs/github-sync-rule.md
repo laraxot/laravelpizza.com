@@ -3,28 +3,23 @@ title: "🔄 Sync .github with bashscripts/ai/.github"
 type: rule
 tags: [github, sync, rule]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "github-sync-rule 🔄 sync .github with bashscripts/ai/.github"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./00-index.md"
+  - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion.md"
+  - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
-  - "./action-plan-immediate.md"
-  - "./00-index-documentation.md"
-  - "./00-index-2.md"
-  - "./00-index.md"
-  - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-status: draft
 ---
 
 # 🔄 Sync .github with bashscripts/ai/.github
@@ -92,10 +87,10 @@ echo "Synced .github with bashscripts/ai/.github on $(date)" >> bashscripts/ai/.
 | Source | Destination | Purpose |
 |--------|-------------|---------|
 | `.github/workflows/*.yml` | `bashscripts/ai/.github/workflows/` | All workflows |
-| `.github/contributing.md` | `bashscripts/ai/.github/` | Contribution guide |
+| `.github/CONTRIBUTING.md` | `bashscripts/ai/.github/` | Contribution guide |
 | `.github/pull_request_template.md` | `bashscripts/ai/.github/` | PR template |
 | `.github/dependabot.yml` | `bashscripts/ai/.github/` | Dependabot config |
-| `.github/security.md` | `bashscripts/ai/.github/` | Security policy |
+| `.github/SECURITY.md` | `bashscripts/ai/.github/` | Security policy |
 
 ---
 

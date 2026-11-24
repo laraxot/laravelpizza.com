@@ -1,11 +1,3 @@
----
-title: "Widget Translation Rules - SaluteOra Project"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "widget translation rules - saluteora project user"
----
 # Widget Translation Rules - SaluteOra Project
 # Widget Translation Rules - FixCity Project
 
@@ -145,11 +137,25 @@ protected static string $view = 'user::widgets.edit-user';
 - [User Module Widget Structure](../modules/user/project_docs/widgets_structure.md)
 - [EditUserWidget Documentation](../modules/user/project_docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../modules/user/project_docs/widgets/translation-guidelines.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 - [Filament Widget Conventions](../modules/xot/project_docs/filament-widgets.md)
 - [User Module Widget Structure](../modules/user/docs/widgets_structure.md)
 - [EditUserWidget Documentation](../modules/user/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../modules/user/docs/widgets/translation-guidelines.md)
 - [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
+<<<<<<< HEAD
+=======
+=======
+- [Filament Widget Conventions](best-practices/filament-widgets.md)
+- [User Module Widget Structure](../modules/user/docs/widgets_structure.md)
+- [EditUserWidget Documentation](../modules/user/docs/widgets/edit-user-widget.md)
+- [Widget Translation Guidelines](../modules/user/docs/widgets/translation-guidelines.md)
+- [Filament Widget Conventions](best-practices/filament-widgets.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Memory Integration
 This document serves as a reference for:
 - Widget development standards
@@ -345,7 +351,15 @@ protected static string $view = 'user::widgets.edit-user';
 - [User Module Widget Structure](../Modules/User/docs/widgets_structure.md)
 - [EditUserWidget Documentation](../Modules/User/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../Modules/User/docs/widgets/translation-guidelines.md)
+<<<<<<< HEAD
 - [Filament Widget Conventions](../Modules/Xot/docs/filament-widgets.md)
+=======
+<<<<<<< HEAD
+- [Filament Widget Conventions](../Modules/Xot/docs/filament-widgets.md)
+=======
+- [Filament Widget Conventions](best-practices/filament-widgets.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Memory Integration
 
@@ -361,14 +375,11 @@ module: theme
 topic: widget-translation-rules
 canonical: ../../../Themes/docs/shared-components/widget-translation-rules-Modules.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"

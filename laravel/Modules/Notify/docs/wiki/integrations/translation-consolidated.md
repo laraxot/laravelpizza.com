@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -60,7 +64,15 @@ Consolidated from **51** individual files.
 - [Piano di Implementazione per la Standardizzazione delle Traduzioni](#translation_implementation_plan)
 - [Best Practices per le Chiavi di Traduzione](#translation_keys_best_practices)
 - [---](#translation_keys_rules)
+<<<<<<< HEAD
 - [<<<<<<< HEAD](#translation_standards)
+=======
+<<<<<<< HEAD
+- [translation standards](#translation_standards)
+=======
+- [<<<<<<< HEAD](#translation_standards)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Progresso Standardizzazione Traduzioni](#translation_standards_progress)
 - [Stato dell'Implementazione delle Traduzioni nel Modulo Notify](#translations-implementation-status-1)
 - [---](#translations-implementation-status-2)
@@ -75,7 +87,10 @@ Consolidated from **51** individual files.
 
 *Consolidated from: `translation-cleanup-plan.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questo documento descrive il piano di pulizia e standardizzazione delle traduzioni italiane nel modulo Notify di <nome progetto>.
 
 ## Analisi della Situazione Attuale
@@ -212,17 +227,20 @@ Plan for cleaning up and standardizing translations across the module.
 
 *Consolidated from: `translation-cleanup-plan.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questo documento descrive il piano di pulizia e standardizzazione delle traduzioni italiane nel modulo Notify di App.
 
 ## Analisi della Situazione Attuale
 
 Dall'analisi dei file di traduzione nella cartella `/var/www/_bases/<nome repository>/laravel/Modules/Notify/lang/it`, sono stati identificati i seguenti problemi:
-Questo documento descrive il piano di pulizia e standardizzazione delle traduzioni italiane nel modulo Notify di Quaeris.
+Questo documento descrive il piano di pulizia e standardizzazione delle traduzioni italiane nel modulo Notify di <nome progetto>.
 
 ## Analisi della Situazione Attuale
 
-Dall'analisi dei file di traduzione nella cartella `/var/www/html/Quaeris/laravel/Modules/Notify/lang/it`, sono stati identificati i seguenti problemi:
+Dall'analisi dei file di traduzione nella cartella `/var/www/html/<nome progetto>/laravel/Modules/Notify/lang/it`, sono stati identificati i seguenti problemi:
 
 ### 1. File con Nomi Errati
 - `send_s_m_s.php` invece di `send_sms.php`
@@ -321,7 +339,10 @@ L'implementazione di questo piano garantirà che le traduzioni nel modulo Notify
 
 *Consolidated from: `translation-conventions.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Regole Fondamentali
 - Le chiavi di traduzione devono essere in inglese, strutturate e gerarchiche (es. `notify.send_whatsapp.label`).
 - I valori devono essere localizzati in italiano naturale e descrittivo.
@@ -595,7 +616,10 @@ Conventions for naming and structure of translation keys.
 
 *Consolidated from: `translation-conventions-clarification.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Identificazione di Convenzioni Contrastanti
 
  sono state identificate convenzioni contrastanti per le traduzioni:
@@ -820,7 +844,10 @@ Il file `send_whats_app.php` e altri file simili nel modulo Notify seguono corre
 
 *Consolidated from: `translation-conventions-clarification.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Identificazione di Convenzioni Contrastanti
 
  sono state identificate convenzioni contrastanti per le traduzioni:
@@ -1014,7 +1041,10 @@ Il file `send_whats_app.php` e altri file simili nel modulo Notify seguono corre
 
 *Consolidated from: `translation-conventions.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Regole Fondamentali
 - Le chiavi di traduzione devono essere in inglese, strutturate e gerarchiche (es. `notify.send_whatsapp.label`).
 - I valori devono essere localizzati in italiano naturale e descrittivo.
@@ -1257,7 +1287,10 @@ La traduzione perfetta è quella che non si nota: è naturale, fluida, non distr
 *Consolidated from: `translation-file-correction-guide.md`*
 *Consolidated from: `translation-file-correction-guide-deprecated.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 This file is deprecated.
 
 Use:
@@ -1474,7 +1507,10 @@ return [
 
 *Consolidated from: `translation-file-correction-guide.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Procedura Sistematica per la Standardizzazione
 
 Questo documento fornisce una procedura dettagliata per correggere sistematicamente i file di traduzione nel modulo Notify che non rispettano gli standard di .
@@ -1789,7 +1825,10 @@ declare(strict_types=1);
 
 *Consolidated from: `translation-file-correction.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Procedura Sistematica per la Standardizzazione
 
 Questo documento fornisce una procedura dettagliata per correggere sistematicamente i file di traduzione nel modulo Notify che non rispettano gli standard di .
@@ -2181,7 +2220,10 @@ Se si identifica un file con naming non conforme:
 
 *Consolidated from: `translation-file-naming-rules.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Principi Fondamentali per il Naming dei File
 
 Le seguenti regole si applicano a tutti i file di traduzione nel modulo Notify:
@@ -2229,7 +2271,10 @@ Se si identifica un file con naming non conforme:
 
 *Consolidated from: `translation-file-naming.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Principi Fondamentali per il Naming dei File
 
 Le seguenti regole si applicano a tutti i file di traduzione nel modulo Notify:
@@ -2465,7 +2510,10 @@ return [
 
 *Consolidated from: `translation-file-structure-guide.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Struttura Standard Obbligatoria
 
 Ogni file di traduzione nel modulo Notify deve seguire questa struttura gerarchica standardizzata:
@@ -2625,7 +2673,10 @@ return [
 
 *Consolidated from: `translation-file-structure.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Struttura Standard Obbligatoria
 
 Ogni file di traduzione nel modulo Notify deve seguire questa struttura gerarchica standardizzata:
@@ -2786,7 +2837,10 @@ return [
 *Consolidated from: `translation-implementation-plan.md`*
 *Consolidated from: `translation-implementation-plan-deprecated.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 This file is deprecated.
 
 Use:
@@ -2969,7 +3023,10 @@ L'implementazione di questo piano garantirà che le traduzioni nel modulo Notify
 
 *Consolidated from: `translation-implementation-plan.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questo documento descrive il piano di implementazione per standardizzare le traduzioni nel modulo Notify di .
 Questo documento descrive il piano di implementazione per standardizzare le traduzioni nel modulo Notify di <nome progetto>.
 
@@ -3284,7 +3341,7 @@ Il sistema di traduzioni è laico e neutrale rispetto a ogni credo. Non sono amm
 Le chiavi di traduzione devono essere oneste, non ingannevoli, non manipolatorie e non offensive. L'etica del progetto impone di evitare ogni forma di linguaggio discriminatorio, sessista, razzista o che possa ledere la dignità della persona.
 
 ## Zen
-La chiave di traduzione perfetta è quella che non si nota: è naturale, fluida, non distrae e non crea attrito. Ogni parola superflua va eliminata, ogni concetto va reso con la massima semplicità e armonia. 
+La chiave di traduzione perfetta è quella che non si nota: è naturale, fluida, non distrae e non crea attrito. Ogni parola superflua va eliminata, ogni concetto va reso con la massima semplicità e armonia.
 
 ---
 
@@ -3292,7 +3349,10 @@ La chiave di traduzione perfetta è quella che non si nota: è naturale, fluida,
 
 *Consolidated from: `translation-keys-best-practices.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Politica
 La politica del progetto è garantire inclusività, accessibilità e rispetto per tutte le culture e le diversità linguistiche. Ogni chiave di traduzione deve essere pensata per essere neutra, rispettosa e non discriminatoria.
 
@@ -3306,7 +3366,7 @@ Il sistema di traduzioni è laico e neutrale rispetto a ogni credo. Non sono amm
 Le chiavi di traduzione devono essere oneste, non ingannevoli, non manipolatorie e non offensive. L'etica del progetto impone di evitare ogni forma di linguaggio discriminatorio, sessista, razzista o che possa ledere la dignità della persona.
 
 ## Zen
-La chiave di traduzione perfetta è quella che non si nota: è naturale, fluida, non distrae e non crea attrito. Ogni parola superflua va eliminata, ogni concetto va reso con la massima semplicità e armonia. 
+La chiave di traduzione perfetta è quella che non si nota: è naturale, fluida, non distrae e non crea attrito. Ogni parola superflua va eliminata, ogni concetto va reso con la massima semplicità e armonia.
 
 ---
 
@@ -3387,19 +3447,34 @@ return [
 
 ### Riferimenti
 - [TRANSLATION_KEYS_RULES.md](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_txTLIp
 - [TRANSLATION_KEYS_BEST_PRACTICES.md](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md) 
+- [TRANSLATION_KEYS_RULES.md](../../lang/docs/translation-keys-rules-1.md)
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../lang/docs/translation-keys-best-practices-1.md) 
+=======
+>>>>>>> laraxot/dev
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [TRANSLATION_KEYS_RULES.md](../../lang/docs/translation-keys-rules.md)
 - [TRANSLATION_KEYS_RULES.md](../../../../Lang/docs/translation_keys_rules.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../../../Lang/docs/translation_keys_best_practices.md) 
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../../../Lang/docs/translation_keys_best_practices.md)
 - [TRANSLATION_KEYS_RULES.md](../../lang/docs/translation-keys-rules.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../lang/docs/translation-keys-best-practices.md) 
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../lang/docs/translation-keys-best-practices.md)
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_P3FLVm
+>>>>>>> laraxot/dev
 ---
 
 ## translation-keys-rules
 
 *Consolidated from: `translation-keys-rules.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## [2024-07-07] Aggiornamento regole e best practice traduzioni modulo Notify
 
 ### Errori riscontrati
@@ -3447,16 +3522,19 @@ return [
 
 ### Riferimenti
 - [TRANSLATION_KEYS_RULES.md](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md) 
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [TRANSLATION_KEYS_RULES.md](../../../../Lang/docs/translation_keys_rules.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../../../Lang/docs/translation_keys_best_practices.md) 
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../../../Lang/docs/translation_keys_best_practices.md)
 ---
 
 ## translation-keys
 
 *Consolidated from: `translation-keys.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## [[DATE]] Aggiornamento regole e best practice traduzioni modulo Notify
 
 ### Errori riscontrati
@@ -3504,20 +3582,23 @@ return [
 
 ### Riferimenti
 - [TRANSLATION_KEYS_RULES.md](../../lang/docs/translation_keys_rules.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../lang/docs/translation-keys-best-practices.md) 
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../lang/docs/translation-keys-best-practices.md)
 - [TRANSLATION_KEYS_RULES.md](../../../../Lang/docs/translation_keys_rules.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../../../Lang/docs/translation-keys-best-practices.md) 
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../../../Lang/docs/translation-keys-best-practices.md)
 ---
 
 ## translation-namespace-religion
 
 *Consolidated from: `translation-namespace-religion.md`*
 
+<<<<<<< HEAD
 
-**Status**: Active  
-**Created**: 2026-04-14  
-**Last Updated**: 2026-04-14  
-**Category**: Architecture / Religion / i18n  
+=======
+>>>>>>> laraxot/dev
+**Status**: Active
+**Created**: 2026-04-14
+**Last Updated**: 2026-04-14
+**Category**: Architecture / Religion / i18n
 **Audience**: All developers + AI agents
 
 ---
@@ -3526,7 +3607,7 @@ return [
 
 **Le traduzioni sono organizzate per DOMINIO, non per componente UI.**
 
-**DOMINIO** = `ticket`, `user`, `order` (cosa fa il business)  
+**DOMINIO** = `ticket`, `user`, `order` (cosa fa il business)
 **NON COMPONENTE** = `create_ticket_wizard`, `edit_form`, `list_view` (come lo mostri)
 
 ---
@@ -3773,7 +3854,7 @@ Section::make(__('<nome progetto>::ticket.sections.images.label'))
 
 #### 1. Dominio, Non UI
 
-**Dominio** = cosa fa il business (ticket, user, order)  
+**Dominio** = cosa fa il business (ticket, user, order)
 **UI** = come lo mostri (wizard, form, page)
 
 **Regola**: Namespace segue dominio, NON UI.
@@ -3782,7 +3863,7 @@ Section::make(__('<nome progetto>::ticket.sections.images.label'))
 
 #### 2. Unica Fonte di Verita
 
-Ogni concetto ha UNA traduzione nel file dominio.  
+Ogni concetto ha UNA traduzione nel file dominio.
 Niente duplicati, niente incoerenze.
 
 ---
@@ -3801,14 +3882,14 @@ Sotto il dominio, usa categorie che hanno senso:
 
 #### 4. Scalabilita
 
-Aggiungere nuovo widget?  
+Aggiungere nuovo widget?
 → Usa chiavi dominio esistenti, NON crearne di nuove.
 
 ---
 
 #### 5. Manutenzione
 
-Cambio traduzione?  
+Cambio traduzione?
 → 1 file, 1 modifica, tutti i widget aggiornano.
 
 ---
@@ -3817,8 +3898,8 @@ Cambio traduzione?
 
 ### Il Credo
 
-> "Dominio e il namespace, UI e solo il consumatore.  
-> Una traduzione per concetto, mai duplicati.  
+> "Dominio e il namespace, UI e solo il consumatore.
+> Una traduzione per concetto, mai duplicati.
 > Regole nel dominio, non nel widget."
 
 ### La Preghiera
@@ -3838,8 +3919,17 @@ Amen.
 - [ticket.php (dominio corretto)](../../Modules/App/lang/it/ticket.php)
 - [ticket.php (dominio corretto)](../../Modules/<nome progetto>/lang/it/ticket.php)
 - [Laravel Localization](https://laravel.com/docs/localization)
-- [No Hardcoded Language Religion](../../docs/no-hardcoded-language-religion.md)
+<<<<<<< HEAD
 - [No Hardcoded Language Religion](../../no-hardcoded-language-religion.md)
+- [No Hardcoded Language Religion](../../no-hardcoded-language-religion.md)
+=======
+<<<<<<< .merge_file_txTLIp
+- [No Hardcoded Language Religion](../../docs/no-hardcoded-language-religion.md)
+=======
+- [No Hardcoded Language Religion](../../no-hardcoded-language-religion.md)
+- [No Hardcoded Language Religion](../../no-hardcoded-language-religion.md)
+>>>>>>> .merge_file_P3FLVm
+>>>>>>> laraxot/dev
 
 ---
 
@@ -3853,7 +3943,10 @@ Amen.
 
 *Consolidated from: `translation-standards.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questo documento definisce gli standard e le best practices per la gestione delle traduzioni all'interno dei moduli di <nome progetto>, con particolare attenzione al modulo Notify.
 
 ## Struttura delle Cartelle
@@ -4150,7 +4243,10 @@ protected static ?string $navigationLabel = 'Invio SMS'; // Hardcoded
 
 *Consolidated from: `translation-standards-progress.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Stato Attuale - 12/05/2025
 
 ### Problemi Identificati
@@ -4366,7 +4462,10 @@ related:
 
 *Consolidated from: `translation-standards-progress.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Stato Attuale - 12/05/2025
 
 ### Problemi Identificati
@@ -4583,9 +4682,12 @@ Modules/Notify/lang/it/create_mail_template.php
 
 *Consolidated from: `translation-standards.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questo documento definisce gli standard e le best practices per la gestione delle traduzioni all'interno dei moduli di App, con particolare attenzione al modulo Notify.
-Questo documento definisce gli standard e le best practices per la gestione delle traduzioni all'interno dei moduli di Quaeris, con particolare attenzione al modulo Notify.
+Questo documento definisce gli standard e le best practices per la gestione delle traduzioni all'interno dei moduli di <nome progetto>, con particolare attenzione al modulo Notify.
 
 ## Struttura delle Cartelle
 
@@ -4610,9 +4712,9 @@ Le traduzioni devono essere organizzate nelle seguenti cartelle:
 
 ### Esempi Corretti
 
-✅ `send_sms.php` (non `send_s_m_s.php`)  
-✅ `send_aws_email.php` (non `send_a_w_s_email.php`)  
-✅ `send_whatsapp.php` (non `send_whats_app.php`)  
+✅ `send_sms.php` (non `send_s_m_s.php`)
+✅ `send_aws_email.php` (non `send_a_w_s_email.php`)
+✅ `send_whatsapp.php` (non `send_whats_app.php`)
 
 ## Struttura dei File di Traduzione
 
@@ -4720,7 +4822,10 @@ protected static ?string $navigationLabel = 'Invio SMS'; // Hardcoded
 
 *Consolidated from: `translation_cleanup_plan.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questo documento descrive il piano di pulizia e standardizzazione delle traduzioni italiane nel modulo Notify di <nome progetto>.
 
 ## Analisi della Situazione Attuale
@@ -4829,7 +4934,10 @@ L'implementazione di questo piano garantirà che le traduzioni nel modulo Notify
 
 *Consolidated from: `translation_conventions.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Regole Fondamentali
 - Le chiavi di traduzione devono essere in inglese, strutturate e gerarchiche (es. `notify.send_whatsapp.label`).
 - I valori devono essere localizzati in italiano naturale e descrittivo.
@@ -5071,7 +5179,10 @@ La traduzione perfetta è quella che non si nota: è naturale, fluida, non distr
 
 *Consolidated from: `translation_conventions_clarification.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Identificazione di Convenzioni Contrastanti
 
  sono state identificate convenzioni contrastanti per le traduzioni:
@@ -5172,7 +5283,10 @@ Il file `send_whats_app.php` e altri file simili nel modulo Notify seguono corre
 
 *Consolidated from: `translation_file_correction_guide.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Procedura Sistematica per la Standardizzazione
 
 Questo documento fornisce una procedura dettagliata per correggere sistematicamente i file di traduzione nel modulo Notify che non rispettano gli standard di <nome progetto>.
@@ -5196,7 +5310,7 @@ touch /var/www/html/<nome progetto>/laravel/Modules/Notify/lang/it/nome_corretto
 touch [project-root]/laravel/Modules/Notify/lang/it/nome_corretto.php
 touch /var/www/_bases/<nome repository>/laravel/Modules/Notify/lang/it/nome_corretto.php
 touch /var/www/html/saluteora/laravel/Modules/Notify/lang/it/nome_corretto.php
-touch /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/nome_corretto.php
+touch /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Notify/lang/it/nome_corretto.php
 
 # 2. Copiare e correggere il contenuto
 
@@ -5219,10 +5333,10 @@ grep -r "nome_errato" /var/www/html/saluteora/laravel/Modules/Notify
 
 # 4. Rimuovere il file con naming errato
 rm /var/www/html/saluteora/laravel/Modules/Notify/lang/it/nome_errato.php
-grep -r "nome_errato" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify
+grep -r "nome_errato" /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Notify
 
 # 4. Rimuovere il file con naming errato
-rm /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/nome_errato.php
+rm /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Notify/lang/it/nome_errato.php
 ```
 
 ## Passo 3: Correzione della Struttura del File
@@ -5273,7 +5387,7 @@ ls /var/www/html/<nome progetto>/laravel/Modules/Notify/lang/en/nome_file.php
 ls [project-root]/laravel/Modules/Notify/lang/en/nome_file.php
 ls /var/www/_bases/<nome repository>/laravel/Modules/Notify/lang/en/nome_file.php
 ls /var/www/html/saluteora/laravel/Modules/Notify/lang/en/nome_file.php
-ls /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/en/nome_file.php
+ls /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Notify/lang/en/nome_file.php
 
 # 2. Se esiste, aggiornarlo con la stessa struttura
 
@@ -5357,7 +5471,10 @@ return [
 
 *Consolidated from: `translation_file_naming_rules.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Principi Fondamentali per il Naming dei File
 
 Le seguenti regole si applicano a tutti i file di traduzione nel modulo Notify:
@@ -5405,7 +5522,10 @@ Se si identifica un file con naming non conforme:
 
 *Consolidated from: `translation_file_structure_guide.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Struttura Standard Obbligatoria
 
 Ogni file di traduzione nel modulo Notify deve seguire questa struttura gerarchica standardizzata:
@@ -5565,7 +5685,10 @@ return [
 
 *Consolidated from: `translation_implementation_plan.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questo documento descrive il piano di implementazione per standardizzare le traduzioni nel modulo Notify di <nome progetto>.
 Questo documento descrive il piano di implementazione per standardizzare le traduzioni nel modulo Notify di SaluteOra.
 
@@ -5665,13 +5788,13 @@ rm -f /var/www/html/saluteora/laravel/Modules/Notify/lang/it/send_s_m_s.php
 rm -f /var/www/html/saluteora/laravel/Modules/Notify/lang/it/send_a_w_s_email.php
 rm -f /var/www/html/saluteora/laravel/Modules/Notify/lang/it/send_whats_app.php
 rm -f /var/www/html/saluteora/laravel/Modules/Notify/lang/it/send_netfun_s_m_s.php
-rm -f /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/.php
+rm -f /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Notify/lang/it/.php
 
 # Rimozione dei file con nomi errati dopo aver verificato che esistano le versioni corrette
-rm -f /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_s_m_s.php
-rm -f /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_a_w_s_email.php
-rm -f /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_whats_app.php
-rm -f /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_netfun_s_m_s.php
+rm -f /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Notify/lang/it/send_s_m_s.php
+rm -f /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Notify/lang/it/send_a_w_s_email.php
+rm -f /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Notify/lang/it/send_whats_app.php
+rm -f /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/Notify/lang/it/send_netfun_s_m_s.php
 ```
 
 ### Template Standard per i File di Traduzione
@@ -5724,7 +5847,10 @@ L'implementazione di questo piano garantirà che le traduzioni nel modulo Notify
 
 *Consolidated from: `translation_keys_best_practices.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Politica
 La politica del progetto è garantire inclusività, accessibilità e rispetto per tutte le culture e le diversità linguistiche. Ogni chiave di traduzione deve essere pensata per essere neutra, rispettosa e non discriminatoria.
 
@@ -5738,7 +5864,7 @@ Il sistema di traduzioni è laico e neutrale rispetto a ogni credo. Non sono amm
 Le chiavi di traduzione devono essere oneste, non ingannevoli, non manipolatorie e non offensive. L'etica del progetto impone di evitare ogni forma di linguaggio discriminatorio, sessista, razzista o che possa ledere la dignità della persona.
 
 ## Zen
-La chiave di traduzione perfetta è quella che non si nota: è naturale, fluida, non distrae e non crea attrito. Ogni parola superflua va eliminata, ogni concetto va reso con la massima semplicità e armonia. 
+La chiave di traduzione perfetta è quella che non si nota: è naturale, fluida, non distrae e non crea attrito. Ogni parola superflua va eliminata, ogni concetto va reso con la massima semplicità e armonia.
 
 ---
 
@@ -5746,7 +5872,10 @@ La chiave di traduzione perfetta è quella che non si nota: è naturale, fluida,
 
 *Consolidated from: `translation_keys_rules.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## [2024-07-07] Aggiornamento regole e best practice traduzioni modulo Notify
 
 ### Errori riscontrati
@@ -5794,9 +5923,9 @@ return [
 
 ### Riferimenti
 - [TRANSLATION_KEYS_RULES.md](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md) 
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [TRANSLATION_KEYS_RULES.md](../../../../Lang/docs/translation_keys_rules.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../../../Lang/docs/translation_keys_best_practices.md) 
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../../../Lang/docs/translation_keys_best_practices.md)
 
 ---
 
@@ -5807,7 +5936,7 @@ return [
 # Standard per le Traduzioni
 
 Questo documento definisce gli standard e le best practices per la gestione delle traduzioni all'interno dei moduli di <nome progetto>, con particolare attenzione al modulo Notify.
-# Standard per le Traduzioni 
+# Standard per le Traduzioni
 
 Questo documento definisce gli standard e le best practices per la gestione delle traduzioni all'interno dei moduli di SaluteOra, con particolare attenzione al modulo Notify.
 
@@ -5837,9 +5966,9 @@ Le traduzioni devono essere organizzate nelle seguenti cartelle:
 ✅ `send_sms.php` (non `send_s_m_s.php`)
 ✅ `send_aws_email.php` (non `send_a_w_s_email.php`)
 ✅ `send_whatsapp.php` (non `send_whats_app.php`)
-✅ `send_sms.php` (non `send_s_m_s.php`)  
-✅ `send_aws_email.php` (non `send_a_w_s_email.php`)  
-✅ `send_whatsapp.php` (non `send_whats_app.php`)  
+✅ `send_sms.php` (non `send_s_m_s.php`)
+✅ `send_aws_email.php` (non `send_a_w_s_email.php`)
+✅ `send_whatsapp.php` (non `send_whats_app.php`)
 
 ## Struttura dei File di Traduzione
 
@@ -5947,7 +6076,10 @@ protected static ?string $navigationLabel = 'Invio SMS'; // Hardcoded
 
 *Consolidated from: `translation_standards_progress.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Stato Attuale - 12/05/2025
 
 ### Problemi Identificati
@@ -6077,7 +6209,10 @@ protected static ?string $navigationLabel = 'Invio SMS'; // Hardcoded
 
 *Consolidated from: `translations-implementation-status.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Questo documento fornisce una panoramica completa dello stato attuale dell'implementazione delle traduzioni nel modulo Notify, identificando le convenzioni in uso, le discrepanze con le convenzioni generali di <nome progetto> e le azioni necessarie per garantire la coerenza.
@@ -6252,7 +6387,10 @@ Current status of translation implementation across the module.
 
 *Consolidated from: `translations-implementation-status.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Questo documento fornisce una panoramica completa dello stato attuale dell'implementazione delle traduzioni nel modulo Notify, identificando le convenzioni in uso, le discrepanze con le convenzioni generali di  e le azioni necessarie per garantire la coerenza.
@@ -6390,7 +6528,10 @@ Per garantire la coerenza futura, si raccomanda di:
 
 *Consolidated from: `translations-implementation.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Questo documento fornisce una panoramica completa dello stato attuale dell'implementazione delle traduzioni nel modulo Notify, identificando le convenzioni in uso, le discrepanze con le convenzioni generali di  e le azioni necessarie per garantire la coerenza.
@@ -6528,7 +6669,10 @@ Per garantire la coerenza futura, si raccomanda di:
 
 *Consolidated from: `translations.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Il modulo Notify utilizza file di traduzione per gestire tutti i testi dell'interfaccia utente. Questo approccio garantisce la coerenza e la manutenibilità delle traduzioni.
@@ -6672,7 +6816,10 @@ Notification::make()
 
 *Consolidated from: `translations_implementation_status.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Questo documento fornisce una panoramica completa dello stato attuale dell'implementazione delle traduzioni nel modulo Notify, identificando le convenzioni in uso, le discrepanze con le convenzioni generali di <nome progetto> e le azioni necessarie per garantire la coerenza.

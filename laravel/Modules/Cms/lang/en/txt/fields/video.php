@@ -9,7 +9,7 @@ declare(strict_types=1);
 return [
     'label' => 'Video',
     'placeholder' => 'URL video YouTube/Vimeo o carica file',
-    'helper_text' => 'Video da incorporare o collegare',
+    'helper_text' => 'Video to embed or link',
     'tooltip' => '',
     'description' => '',
 ];

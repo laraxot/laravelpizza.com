@@ -1,5 +1,5 @@
 ---
-updated: 2026-10-23
+updated: 2026-09-26
 qmd: "redundancy audit"
 issues: []
 discussions: []
@@ -10,7 +10,6 @@ tags: [redundancy, duplicate-code, docs]
 created: 2026-05-21
 related:
   - https://github.com/laraxot/platform/issues/89
-status: draft
 ---
 
 # Lang redundancy audit 2026-05-21
@@ -20,9 +19,14 @@ Static metrics: 1816 files scanned, 25 case-only groups, 294 duplicate hash grou
 Findings:
 - Heavy docs duplication: locale management, quick reference, translation strategies/process, implementation guide, and archive/historical copies.
 - `docs/archive` and `docs/translations/archive` duplicate active translation docs.
-- Migration directory case-only duplicate: `database/Migrations` vs `database/migrations`: segnato risolto il 2026-07-01, ma al 2026-10-23 `database/Migrations/` è di nuovo tracciata in git (`.gitkeep`, `2024_03_20_000001_create_language_lines_table.php` in versione `Schema::create` diversa da quella in `database/migrations/`, `2025_03_20_000001_create_language_lines_table.php.old3`): il duplicato è aperto; vedi [wiki/concepts/migration-path-canonical.md](wiki/concepts/migration-path-canonical.md).
-- Anti-pattern annidato `database/migrations/Migrations/`: reintrodotto per errore in `f840e0cc0`, rimosso; guard in `audit-database-folder-lowercase.sh`.
+- Migration directory case-only duplicate: `database/Migrations` vs `database/migrations` — **risolto 2026-07-01**; vedi [wiki/concepts/migration-path-canonical.md](wiki/concepts/migration-path-canonical.md).
+- Anti-pattern annidato `database/migrations/Migrations/` — reintrodotto per errore in `f840e0cc0`, rimosso; guard in `audit-database-folder-lowercase.sh`.
+<<<<<<< HEAD
+=======
 - Docs index variants include `INDEX.md`/`index.md` and `00-INDEX.md`/`00-index.md`.
+
+>>>>>>> laraxot/dev
+- Docs index variants include `index.md`/`index.md` and `00-index.md`/`00-index.md`.
 
 Risk:
 - Lang is foundational; stale translation rules can propagate wrong patterns across modules.

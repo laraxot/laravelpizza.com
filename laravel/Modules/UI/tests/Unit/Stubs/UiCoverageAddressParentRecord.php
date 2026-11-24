@@ -19,7 +19,7 @@ final class UiCoverageAddressParentRecord extends Model
     public UiCoverageAddressChildRecord $addressModel;
 
     /**
-     * @param  array<string, mixed>  $attributes
+     * @param array<string, mixed> $attributes
      */
     public function __construct(array $attributes = [])
     {
@@ -28,7 +28,7 @@ final class UiCoverageAddressParentRecord extends Model
     }
 
     /**
-     * @param  string|array<int, string>|null  $attribute
+     * @param string|array<int, string>|null $attribute
      */
     public function touch($attribute = null): bool
     {

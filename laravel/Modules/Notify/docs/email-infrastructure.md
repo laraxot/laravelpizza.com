@@ -4,6 +4,11 @@ type: runbook
 module: Notify
 status: active
 tags: [email, smtp, imap, postfix, dovecot, dns, production]
+<<<<<<< HEAD
+=======
+created: 2026-11-23
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Infrastruttura email del server FixCity
@@ -124,5 +129,5 @@ può interrompere l’invio applicativo o creare un relay aperto.
 
 L'audit sopra riguarda la workstation di sviluppo. Sull'host pubblico (record A di `fixcity.eu`) le 5 decisioni
 sono state prese: server completo Postfix + Dovecot + OpenDKIM, hostname `fixcity.eu`, caselle virtuali, invio
-diretto firmato DKIM. Story: [mail-server-send-receive](../stories/mail-server-send-receive.story.md);
+diretto firmato DKIM. Story: [mail-server-send-receive](stories/mail-server-send-receive.story.md);
 script e record DNS: `bashscripts/docs/mail/mail-server.md`.

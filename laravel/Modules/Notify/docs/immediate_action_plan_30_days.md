@@ -3,11 +3,14 @@ title: "immediate action plan 30 days"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "immediate action plan 30 days"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🚀 IMMEDIATE ACTION PLAN - 30 DAYS
@@ -18,6 +21,15 @@ status: draft
 **Priority**: CRITICAL  
 
 ---
+
+title: "immediate action plan 30 days"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "immediate action plan 30 days"
+issues: []
+discussions: []
 ## 🎯 EXECUTIVE SUMMARY
 
 Piano di azione immediato per completare le funzionalità core della piattaforma FixCity nei prossimi 30 giorni, focalizzandosi su API development, mobile optimization, e AGID compliance.

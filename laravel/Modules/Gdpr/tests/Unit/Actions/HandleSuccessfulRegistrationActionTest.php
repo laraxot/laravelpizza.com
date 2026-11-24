@@ -5,8 +5,11 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Tests\Unit\Actions;
 
 use Modules\Gdpr\Actions\Registration\HandleSuccessfulRegistrationAction;
+use Modules\Gdpr\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use ReflectionMethod;
+
+uses(TestCase::class);
 
 test('HandleSuccessfulRegistrationAction exposes execute for post-registration login redirect', function (): void {
     $action = new HandleSuccessfulRegistrationAction;

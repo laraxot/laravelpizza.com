@@ -251,3 +251,12 @@ tests/seo_coverage.xml
 /.github/skills/
 docs/graphify
 resources/lang
+# Laraxot — agenti e tool di qualita locali (module-theme-root-hygiene)
+.agents/
+.codex/
+.opencode/
+.qwen/
+.php-cs-fixer.php
+.php-cs-fixer.dist.php
+tests/coverage-*.*
+docs/screenshots/

@@ -2,18 +2,16 @@
 qmd: "PERFORMANCE OPTIMIZATION"
 issues: []
 discussions: []
-title: "Performance Optimization: Module Lang"
+title: "Performance Optimization — Module Lang"
 type: documentation
 created: 2026-05-11
 updated: 2026-05-11
 tags: [performance, optimization, tokens, context]
 related:
   - ../../docs/wiki/concepts/llm-wiki-operational-discipline.md
-status: superseded
-superseded_by: ../../../performance-optimization.md
 ---
 
-# Performance Optimization: Module **Lang**
+# Performance Optimization — Module **Lang**
 
 ## Ottimizzazioni Applicate
 
@@ -24,7 +22,7 @@ superseded_by: ../../../performance-optimization.md
 
 \`\`\`diff
 - 150+ rules embeddate in agents.md
-+ 0 rules embeddate: tutte on-demand
++ 0 rules embeddate — tutte on-demand
 \`\`\`
 
 ### 2. Cache Esterna al Repo
@@ -80,10 +78,10 @@ if trigger in trigger_map:
 ### Query QMD Efficienti
 
 \`\`\`bash
-# ❌ Troppo generico: risultati enormi
+# ❌ Troppo generico — risultati enormi
 qmd search "form"
 
-# ✅ Specifico: risultati precisi
+# ✅ Specifico — risultati precisi
 qmd search "filament form schema conventions"
 \`\`\`
 
@@ -99,10 +97,10 @@ qmd search "global validation rules"
 
 ## Prossimi Miglioramenti (TODO)
 
-1. **Auto-index rebuild**: Dopo 500 file changes, `qmd index rebuild`
-2. **Hooks pre-task**: Auto-memory sync
-3. **Context-mode batch**: Convertire script in batch exec
-4. **Permissions allowlist**: .claude/settings.json
+1. **Auto-index rebuild** — Dopo 500 file changes, `qmd index rebuild`
+2. **Hooks pre-task** — Auto-memory sync
+3. **Context-mode batch** — Convertire script in batch exec
+4. **Permissions allowlist** — .claude/settings.json
 
 ## Monitoring
 

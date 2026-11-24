@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan corrections "
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHPStan Corrections - Cms Module - Gennaio 2025
@@ -16,6 +15,15 @@ status: draft
 **Errori Risolti**: 8
 
 ---
+
+title: "phpstan corrections "
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan corrections "
+issues: []
+discussions: []
 ## 🔧 Correzioni Implementate
 
 ### 1. HasBlocks Trait - DataCollection::make() Non Esiste

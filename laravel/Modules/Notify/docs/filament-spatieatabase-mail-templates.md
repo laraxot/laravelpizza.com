@@ -3,11 +3,14 @@ title: "filament spatieatabase mail templates"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "filament spatieatabase mail templates"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Analisi Repository: filament-spatie-laravel-database-mail-templates
@@ -17,6 +20,15 @@ status: draft
 **Status**: 📝 **ANALISI COMPLETATA**
 
 ---
+
+title: "filament spatieatabase mail templates"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament spatieatabase mail templates"
+issues: []
+discussions: []
 ## 📊 Executive Summary
 
 Analisi del repository `filament-spatie-laravel-database-mail-templates` per identificare pattern architetturali e funzionalità che potrebbero migliorare il nostro modulo Notify.

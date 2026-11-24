@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "schema"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Geo Module — Wiki Schema

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "mcp ui ux"
 issues: []
 discussions: []
-status: draft
 ---
 
 # MCP Servers per UI/UX - Modulo Cms

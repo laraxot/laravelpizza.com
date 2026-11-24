@@ -130,7 +130,7 @@
                 type="button" 
                 class="btn-close" 
                 data-bs-dismiss="alert" 
-                aria-label="Chiudi notifica"
+                aria-label="{{ __('pub_theme::common.actions.close_notification.label') }}"
                 onclick="dismissNotification('{{ $notificationId }}')"
             >
                 <svg class="icon icon-sm">
@@ -319,7 +319,7 @@ function showDynamicNotification(type, title, message, timeout = 5000) {
                 ${title ? '<h5 class="alert-heading mb-2">' + title + '</h5>' : ''}
                 ${message ? '<p class="mb-0">' + message + '</p>' : ''}
             </div>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Chiudi notifica">
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="{{ __('pub_theme::common.actions.close_notification.label') }}">
                 <svg class="icon icon-sm"><use href="#it-close"></use></svg>
             </button>
         </div>

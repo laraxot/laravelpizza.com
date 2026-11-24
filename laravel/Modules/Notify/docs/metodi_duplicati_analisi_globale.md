@@ -1,13 +1,16 @@
 ---
-title: "metodi duplicati analisi globale"
+title: "METODI DUPLICATI ANALISI GLOBALE"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
-qmd: "metodi duplicati analisi globale"
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+qmd: "METODI DUPLICATI ANALISI GLOBALE"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🐮 ANALISI GLOBALE METODI DUPLICATI
@@ -18,6 +21,15 @@ status: draft
 **Opportunità Totali**: 76
 
 ---
+
+title: "METODI DUPLICATI ANALISI GLOBALE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "METODI DUPLICATI ANALISI GLOBALE"
+issues: []
+discussions: []
 ## 🎯 Executive Summary
 
 ### 💰 Impatto Economico
@@ -53,24 +65,24 @@ status: draft
 
 | Modulo | Opportunità | ROI Medio | Linee | Effort | Report |
 |--------|-------------|-----------|-------|--------|--------|
-| Comment | 3 | 517275.0% | 126 | 0h | [📄 Vedi](Modules/Comment/docs/METODI_DUPLICATI_ANALISI.md) |
-| Gdpr | 3 | 517275.0% | 126 | 0h | [📄 Vedi](Modules/Gdpr/docs/METODI_DUPLICATI_ANALISI.md) |
-| Job | 30 | 244452.3% | 708 | 31h | [📄 Vedi](Modules/Job/docs/METODI_DUPLICATI_ANALISI.md) |
-| Notify | 32 | 206375.1% | 914 | 38h | [📄 Vedi](Modules/Notify/docs/METODI_DUPLICATI_ANALISI.md) |
-| Cms | 27 | 200851.8% | 914 | 25h | [📄 Vedi](Modules/Cms/docs/METODI_DUPLICATI_ANALISI.md) |
-| Rating | 8 | 194434.5% | 151 | 12h | [📄 Vedi](Modules/Rating/docs/METODI_DUPLICATI_ANALISI.md) |
-| Lang | 20 | 180360.0% | 636 | 16h | [📄 Vedi](Modules/Lang/docs/METODI_DUPLICATI_ANALISI.md) |
-| Tenant | 10 | 175068.1% | 299 | 14h | [📄 Vedi](Modules/Tenant/docs/METODI_DUPLICATI_ANALISI.md) |
-| Blog | 28 | 171872.2% | 633 | 49h | [📄 Vedi](Modules/Blog/docs/METODI_DUPLICATI_ANALISI.md) |
-| User | 54 | 166896.5% | 1173 | 69h | [📄 Vedi](Modules/User/docs/METODI_DUPLICATI_ANALISI.md) |
-| Xot | 28 | 143763.5% | 899 | 33h | [📄 Vedi](Modules/Xot/docs/METODI_DUPLICATI_ANALISI.md) |
-| Activity | 10 | 142835.9% | 261 | 9h | [📄 Vedi](Modules/Activity/docs/METODI_DUPLICATI_ANALISI.md) |
-| Media | 11 | 121938.0% | 278 | 20h | [📄 Vedi](Modules/Media/docs/METODI_DUPLICATI_ANALISI.md) |
-| Geo | 38 | 95132.2% | 873 | 55h | [📄 Vedi](Modules/Geo/docs/METODI_DUPLICATI_ANALISI.md) |
-| UI | 2 | 75641.9% | 31 | 4h | [📄 Vedi](Modules/UI/docs/METODI_DUPLICATI_ANALISI.md) |
-| AI | 4 | 75640.0% | 62 | 4h | [📄 Vedi](Modules/AI/docs/METODI_DUPLICATI_ANALISI.md) |
-| Fixcity | 72 | 69279.0% | 773 | 148h | [📄 Vedi](Modules/Fixcity/docs/METODI_DUPLICATI_ANALISI.md) |
-| Seo | 1 | 55.0% | 3 | 3h | [📄 Vedi](Modules/Seo/docs/METODI_DUPLICATI_ANALISI.md) |
+| Comment | 3 | 517275.0% | 126 | 0h | [📄 Vedi](Modules/Comment/docs/metodi_duplicati_analisi.md) |
+| Gdpr | 3 | 517275.0% | 126 | 0h | [📄 Vedi](Modules/Gdpr/docs/metodi_duplicati_analisi.md) |
+| Job | 30 | 244452.3% | 708 | 31h | [📄 Vedi](Modules/Job/docs/metodi_duplicati_analisi.md) |
+| Notify | 32 | 206375.1% | 914 | 38h | [📄 Vedi](Modules/Notify/docs/metodi_duplicati_analisi.md) |
+| Cms | 27 | 200851.8% | 914 | 25h | [📄 Vedi](Modules/Cms/docs/metodi_duplicati_analisi.md) |
+| Rating | 8 | 194434.5% | 151 | 12h | [📄 Vedi](Modules/Rating/docs/metodi_duplicati_analisi.md) |
+| Lang | 20 | 180360.0% | 636 | 16h | [📄 Vedi](Modules/Lang/docs/metodi_duplicati_analisi.md) |
+| Tenant | 10 | 175068.1% | 299 | 14h | [📄 Vedi](Modules/Tenant/docs/metodi_duplicati_analisi.md) |
+| Blog | 28 | 171872.2% | 633 | 49h | [📄 Vedi](Modules/Blog/docs/metodi_duplicati_analisi.md) |
+| User | 54 | 166896.5% | 1173 | 69h | [📄 Vedi](Modules/User/docs/metodi_duplicati_analisi.md) |
+| Xot | 28 | 143763.5% | 899 | 33h | [📄 Vedi](Modules/Xot/docs/metodi_duplicati_analisi.md) |
+| Activity | 10 | 142835.9% | 261 | 9h | [📄 Vedi](Modules/Activity/docs/metodi_duplicati_analisi.md) |
+| Media | 11 | 121938.0% | 278 | 20h | [📄 Vedi](Modules/Media/docs/metodi_duplicati_analisi.md) |
+| Geo | 38 | 95132.2% | 873 | 55h | [📄 Vedi](Modules/Geo/docs/metodi_duplicati_analisi.md) |
+| UI | 2 | 75641.9% | 31 | 4h | [📄 Vedi](Modules/UI/docs/metodi_duplicati_analisi.md) |
+| AI | 4 | 75640.0% | 62 | 4h | [📄 Vedi](Modules/AI/docs/metodi_duplicati_analisi.md) |
+| Fixcity | 72 | 69279.0% | 773 | 148h | [📄 Vedi](Modules/Fixcity/docs/metodi_duplicati_analisi.md) |
+| Seo | 1 | 55.0% | 3 | 3h | [📄 Vedi](Modules/Seo/docs/metodi_duplicati_analisi.md) |
 
 ## 🎨 Distribuzione Strategie
 

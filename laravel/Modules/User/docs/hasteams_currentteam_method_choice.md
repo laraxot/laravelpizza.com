@@ -1,11 +1,3 @@
----
-title: "Choice of currentTeam() Method in HasTeams Trait"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "choice of currentteam() method in hasteams trait user"
----
 # Choice of currentTeam() Method in HasTeams Trait
 
 ## Analysis and Decision

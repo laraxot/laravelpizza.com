@@ -1,3 +1,14 @@
+---
+title: "RESEARCH"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "RESEARCH"
+issues: []
+discussions: []
+---
+
 # Research: Laravel 13 Upgrade for Modular Project
 
 ## Overview

@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "translations"
 related:
   - "./webm.md"
-status: draft
 ---
 # Traduzioni del Modulo Media
 

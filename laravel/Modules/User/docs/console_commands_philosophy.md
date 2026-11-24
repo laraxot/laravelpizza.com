@@ -1,11 +1,3 @@
----
-title: "Filosofia dei Console Commands in Laraxot (Standard Supremo)"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "filosofia dei console commands in laraxot (standard supremo) user"
----
 # Filosofia dei Console Commands in Laraxot (Standard Supremo)
 
 ## Filosofia Fondamentale

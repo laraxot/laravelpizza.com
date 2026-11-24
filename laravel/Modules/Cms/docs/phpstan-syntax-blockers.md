@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan syntax blockers"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHPStan Syntax Blockers - 2026-03-10

@@ -3,11 +3,14 @@ title: "resource table columns"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "resource table columns"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Resource table columns

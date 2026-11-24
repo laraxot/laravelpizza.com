@@ -3,14 +3,13 @@ tags: [documentation]
 qmd: "quality gates"
 issues: []
 discussions: []
-title: "Quality gates: Modules/Tenant"
+title: "Quality gates — Modules/Tenant"
 type: report
 created: 2026-07-28
 updated: 2026-07-28
-status: draft
 ---
 
-# Quality gates: Modules/Tenant
+# Quality gates — Modules/Tenant
 
 Verifica completa richiesta dopo il fix dell'incidente Git LFS (vedi
 `git-push-lfs-incident.md`), su **tutta** la cartella
@@ -47,18 +46,18 @@ cd laravel && bash tools/phpinsights.sh analyse Modules/Tenant --no-interaction 
 | Architecture | 85.7% |
 | Style | 92.6% |
 
-Nessun errore bloccante: solo suggerimenti di stile minori (ordine import,
+Nessun errore bloccante — solo suggerimenti di stile minori (ordine import,
 graffe). Non richiesto intervento per rientrare nella soglia qualità.
 
-## Sintassi PHP: intera cartella (non solo `app/`)
+## Sintassi PHP — intera cartella (non solo `app/`)
 
 `find Modules/Tenant -name "*.php" | xargs php -l` ha rilevato 3 errori di
 sintassi reali in file **fuori** dal path scansionato da PHPStan/PHPMD
 (dotfile di configurazione alla radice del modulo, non sotto `app/`):
 
-- `.php-cs-fixer.dist.php`: mancava `;` dopo `->setFinder($finder)`
-- `.php-cs-fixer.php`: stesso bug (file duplicato)
-- `.php_cs.dist.php`: virgola orfana che creava un elemento vuoto in un array
+- `.php-cs-fixer.dist.php` — mancava `;` dopo `->setFinder($finder)`
+- `.php-cs-fixer.php` — stesso bug (file duplicato)
+- `.php_cs.dist.php` — virgola orfana che creava un elemento vuoto in un array
 
 Corretti (commit `3e9c4c5`). Dopo il fix: **0 errori di sintassi in tutta la
 cartella `Modules/Tenant`**.
@@ -69,5 +68,5 @@ Tutti i gate richiesti (PHPStan, PHPMD, PHP Insights) passano puliti su tutta
 la cartella `laravel/Modules/Tenant`. Il push verso `laraxot` funziona
 (già sincronizzato); il push verso `provtv` resta bloccato solo dall'oggetto
 Git LFS storico irrecuperabile documentato in
-`git-push-lfs-incident.md`: non un problema di qualità del
+`git-push-lfs-incident.md` — non un problema di qualità del
 codice.

@@ -11,6 +11,11 @@ use Modules\User\Models\User;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * Prova dei consensi dati alla registrazione (GDPR art. 7 par. 1: il titolare deve poter dimostrare il consenso).
+ *
+ * @contract docs/contracts/save-gdpr-consents-action.md
+ */
 class SaveGdprConsentsAction
 {
     use QueueableAction;
@@ -54,6 +59,13 @@ class SaveGdprConsentsAction
                 continue;
             }
             $treatment = Treatment::query()->firstOrCreate(['name' => $treatmentName], $defaults);
+            // Un trattamento gia' in tabella ma senza versione (creato a mano o da un vecchio seeder) lascerebbe la prova
+            // senza `document_version`: vale quella di partenza, salvata anche sul trattamento.
+            $version = app(SafeStringCastAction::class)->execute($treatment->getAttribute('documentVersion'));
+            if ($version === '') {
+                $version = (string) $defaults['documentVersion'];
+                $treatment->forceFill(['documentVersion' => $version])->save();
+            }
 
             Consent::query()->create([
                 'user_id' => $user->id,
@@ -69,7 +81,7 @@ class SaveGdprConsentsAction
                 'user_agent' => $userAgent,
                 // quale testo ha accettato: senza versione non si dimostra cosa e' stato accettato
                 'metadata' => [
-                    'document_version' => app(SafeStringCastAction::class)->execute($treatment->getAttribute('documentVersion')),
+                    'document_version' => $version,
                     'document_url' => $treatment->getAttribute('documentUrl'),
                     'locale' => app()->getLocale(),
                 ],

@@ -45,6 +45,15 @@ class GoogleMapsService
     /**
      * Esegue una richiesta HTTP con rate limiting, cache e retry.
      *
+<<<<<<< HEAD
+     * @param  string  $method  Metodo HTTP (GET, POST, etc.)
+     * @param  string  $url  URL della richiesta
+     * @param  array<string, mixed>  $params  Parametri della richiesta
+     * @param  bool  $useCache  Se utilizzare la cache
+     * @return array<string, mixed>
+     *
+     * @throws \RuntimeException Se la richiesta fallisce
+=======
      * @param string               $method   Metodo HTTP (GET, POST, etc.)
      * @param string               $url      URL della richiesta
      * @param array<string, mixed> $params   Parametri della richiesta
@@ -53,6 +62,7 @@ class GoogleMapsService
      * @throws \RuntimeException Se la richiesta fallisce
      *
      * @return array<string, mixed>
+>>>>>>> laraxot/dev
      */
     private function makeRequest(string $method, string $url, array $params = [], bool $useCache = true): array
     {
@@ -61,7 +71,11 @@ class GoogleMapsService
         if ($useCache && config('geo.cache.enabled')) {
             /** @var array<string, mixed>|null $cached */
             $cached = Cache::get($cacheKey);
+<<<<<<< HEAD
+            if ($cached !== null) {
+=======
             if (null !== $cached) {
+>>>>>>> laraxot/dev
                 return $cached;
             }
         }
@@ -133,9 +147,15 @@ class GoogleMapsService
     /**
      * Genera una chiave di cache per la richiesta.
      *
+<<<<<<< HEAD
+     * @param  string  $method  Metodo HTTP
+     * @param  string  $url  URL della richiesta
+     * @param  array<string, mixed>  $params  Parametri della richiesta
+=======
      * @param string               $method Metodo HTTP
      * @param string               $url    URL della richiesta
      * @param array<string, mixed> $params Parametri della richiesta
+>>>>>>> laraxot/dev
      */
     private function getCacheKey(string $method, string $url, array $params): string
     {
@@ -149,9 +169,16 @@ class GoogleMapsService
     /**
      * Esegue una richiesta di geocodifica inversa.
      *
+<<<<<<< HEAD
+     *
+     * @return array<string, mixed>
+     *
+     * @throws GoogleMapsApiException Se la richiesta fallisce
+=======
      * @throws GoogleMapsApiException Se la richiesta fallisce
      *
      * @return array<string, mixed>
+>>>>>>> laraxot/dev
      */
     public function reverseGeocode(float $latitude, float $longitude): array
     {
@@ -169,12 +196,20 @@ class GoogleMapsService
     /**
      * Calcola la matrice delle distanze.
      *
+<<<<<<< HEAD
+     * @param  array<string>  $origins  Punti di origine (formato: "lat,lng|lat,lng|...")
+     * @param  array<string>  $destinations  Punti di destinazione (formato: "lat,lng|lat,lng|...")
+     * @return array<string, mixed>
+     *
+     * @throws GoogleMapsApiException Se la richiesta fallisce
+=======
      * @param array<string> $origins      Punti di origine (formato: "lat,lng|lat,lng|...")
      * @param array<string> $destinations Punti di destinazione (formato: "lat,lng|lat,lng|...")
      *
      * @throws GoogleMapsApiException Se la richiesta fallisce
      *
      * @return array<string, mixed>
+>>>>>>> laraxot/dev
      */
     public function getDistanceMatrix(array $origins, array $destinations): array
     {
@@ -194,9 +229,16 @@ class GoogleMapsService
     /**
      * Ottiene l'elevazione per un punto.
      *
+<<<<<<< HEAD
+     *
+     * @return array<string, mixed>
+     *
+     * @throws GoogleMapsApiException Se la richiesta fallisce
+=======
      * @throws GoogleMapsApiException Se la richiesta fallisce
      *
      * @return array<string, mixed>
+>>>>>>> laraxot/dev
      */
     public function getElevation(float $latitude, float $longitude): array
     {
@@ -215,7 +257,11 @@ class GoogleMapsService
         return 'google_maps';
     }
 
+<<<<<<< HEAD
+    public function execute(): void {}
+=======
     public function execute(): void
     {
     }
+>>>>>>> laraxot/dev
 }

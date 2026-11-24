@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "migration"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Migrazione Struttura Modulo Cms

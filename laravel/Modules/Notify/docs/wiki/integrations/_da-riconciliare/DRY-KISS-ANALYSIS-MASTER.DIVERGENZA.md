@@ -7,9 +7,7 @@ module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
-updated: 2026-08-24
-status: superseded
-superseded_by: dry-kiss-analysis-master.divergenza.md
+updated: 2026-11-23
 ---
 
 # Divergenza: `DRY-KISS-ANALYSIS-MASTER.md`

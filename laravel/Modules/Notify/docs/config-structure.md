@@ -3,11 +3,14 @@ title: "config structure"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "config structure"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Struttura di Configurazione nei Moduli
@@ -55,6 +58,11 @@ status: draft
    ```
 
 ## Errori Comuni da Evitare
+
+- **Cartelle annidate `config/Config/`, `config/config/`**: il loader (`XotBaseServiceProvider`) legge
+  solo `config/*.php`, non ricorsivo. Le copie annidate di `config.php` e `beautymail.php` erano
+  morte e più vecchie; tolte il 2026-11-19
+  ([story Xot](../../Xot/docs/stories/case-only-duplicate-directories.story.md)).
 
 1. **MAI duplicare configurazioni generiche nelle sezioni dei provider specifici**
    - ❌ ERRATO: Aggiungere `retry`, `rate_limit`, ecc. nella sezione del provider

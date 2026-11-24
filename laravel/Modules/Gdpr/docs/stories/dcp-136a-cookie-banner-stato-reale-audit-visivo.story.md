@@ -17,6 +17,7 @@ issues: []
 discussions: []
 related:
   - ./dcp-136-cookie-inventario-informazione-e-guardia-sui-cookie-impostati.story.md
+date_originale_nome_file: 2026-10-14
 ---
 
 # DCP-136a: stato reale del banner cookie e audit visivo

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "filament integration"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Integrazione con Filament V3
@@ -144,7 +143,7 @@ public function test_filament_components_rendering()
 
 ## Collegamenti Bidirezionali
 - [README](README.md) - Documentazione principale del modulo
-- [Architettura](frontoffice/architecture.md) - Architettura del sistema CMS
+- [Architettura](architecture.md) - Architettura del sistema CMS
 - [Componenti](filament-components.md) - Componenti Filament
 - [Form](filament-forms.md) - Sistema di form
 - [Resources](filament-resources.md) - Gestione risorse
@@ -152,16 +151,16 @@ public function test_filament_components_rendering()
 - [Personalizzazioni](filament-personalizzazioni-avanzate.md) - Personalizzazioni avanzate
 
 ## Vedi Anche
-- [Modulo UI](../ui/project_docs/readme.md) - Componenti di interfaccia
-- [Modulo Xot](../xot/project_docs/readme.md) - Classi base e utilities
-- [Modulo Theme](../theme/project_docs/readme.md) - Gestione temi
+- [Modulo UI](../ui/project_docs/README.md) - Componenti di interfaccia
+- [Modulo Xot](../xot/project_docs/README.md) - Classi base e utilities
+- [Modulo Theme](../theme/project_docs/README.md) - Gestione temi
 - [Documentazione Filament](https://filamentphp.com/docs) - Documentazione ufficiale
 - [Best Practices](https://filamentphp.com/project_docs/3.x/best-practices) - Best practices Filament
 - [Componenti Blade](https://filamentphp.com/project_docs/3.x/support/blade-components) - Componenti Blade
 - [Testing](../testing.md) 
 
 ## Collegamenti tra versioni di filament-integration.md
-* [filament-integration.md](../../Xot/docs/laraxot/filament-integration.md)
+* [filament-integration.md](laravel/modules/xot/project_docs/laraxot/filament-integration.md)
 * [filament-integration.md](laravel/modules/cms/project_docs/roadmap/features/filament-integration.md)
 * [filament-integration.md](laravel/modules/cms/project_docs/filament-integration.md)
 

@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "00 index"
 related:
   - "./phpstan-corrections-january.md"
-  - "../phpstan-corrections-january.md"
-status: draft
 ---
 # Roadmap Index - Tenant
 
@@ -21,10 +19,10 @@ Questo piano copre il module **Tenant** e le sue integrazioni principali.
 
 ## Files
 
-- [Current State](01-current-state.md)
-- [Goals](02-goals.md)
-- [Workstreams](03-workstreams.md)
-- [Milestones](04-milestones.md)
+- [Current State](./current-state.md)
+- [Goals](./goals.md)
+- [Workstreams](./workstreams.md)
+- [Milestones](./milestones.md)
 - [Risks](05-risks.md)
 
 ## Note operative
@@ -34,9 +32,10 @@ Questo piano copre il module **Tenant** e le sue integrazioni principali.
 
 ---
 
-<!-- Merged from 00-INDEX.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from 00-index.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
+title: "Roadmap Index - Tenant"
 module: "Tenant"
 type: concept
 tags: [00, INDEX]
@@ -54,10 +53,10 @@ Questo piano copre il module **Tenant** e le sue integrazioni principali.
 
 ## Files
 
-- [Current State](01-current-state.md)
-- [Goals](02-goals.md)
-- [Workstreams](03-workstreams.md)
-- [Milestones](04-milestones.md)
+- [Current State](./current-state.md)
+- [Goals](./goals.md)
+- [Workstreams](./workstreams.md)
+- [Milestones](./milestones.md)
 - [Risks](05-risks.md)
 
 ## Note operative

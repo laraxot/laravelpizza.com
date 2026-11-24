@@ -1,5 +1,5 @@
 ---
-title: "Registrazione mobile: larghezza form"
+title: "Registrazione mobile — larghezza form"
 type: bugfix
 status: implemented-pending-browser
 created: 2026-09-27
@@ -16,7 +16,7 @@ related:
   - ../../../../Themes/Sixteen/resources/views/filament/widgets/auth/register.blade.php
 ---
 
-# Registrazione mobile: larghezza del form
+# Registrazione mobile — larghezza del form
 
 ## Comportamento osservato
 

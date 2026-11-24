@@ -12,11 +12,11 @@ status: active
 
 # 🎯 SEO MODULE - ROADMAP 2025
 
-**Modulo**: Seo ([Description])  
-**Status**: 0% COMPLETATO  
-**Priority**: LOW  
-**PHPStan**: 🚧 Level 0 (N/A errori)  
-**Filament**: 🚧 4.x Compatibile  
+**Modulo**: Seo ([Description])
+**Status**: 0% COMPLETATO
+**Priority**: LOW
+**PHPStan**: 🚧 Level 0 (N/A errori)
+**Filament**: 🚧 4.x Compatibile
 
 ---
 ## 🎯 MODULE OVERVIEW
@@ -68,7 +68,7 @@ Seo Module
 ## 🚧 IN PROGRESS FEATURES
 
 ### 🚀 [Feature Name] (Priority: HIGH)
-**Status**: 0% COMPLETATO  
+**Status**: 0% COMPLETATO
 **Timeline**: Q1 2025
 
 #### 📋 Tasks
@@ -218,8 +218,8 @@ Seo Module
 ---
 
 **Next Review**: 2025-11-01
-**Status**: 🚧 PLANNING  
-**Confidence Level**: 70%  
+**Status**: 🚧 PLANNING
+**Confidence Level**: 70%
 
 ---
 
@@ -229,25 +229,25 @@ Seo Module
 
 ## Current roadmap
 
-- [Overview](roadmap/00-overview.md)
-- [Now](roadmap/01-now.md)
-- [Next](roadmap/02-next.md)
-- [Later](roadmap/03-later.md)
-- [Risks and dependencies](roadmap/04-risks.md)
+- Overview
+- Now
+- Next
+- Later
+- Risks and dependencies
 
 ## Legacy / existing roadmap docs
 
 - [phpstan-roadmap.md](phpstan-roadmap.md)
 - [roadmap/00-index.md](roadmap/00-index.md)
-- [roadmap/00-overview.md](roadmap/00-overview.md)
+- roadmap/00-overview.md
 - [roadmap/01-current-state.md](roadmap/01-current-state.md)
-- [roadmap/01-now.md](roadmap/01-now.md)
+- roadmap/01-now.md
 - [roadmap/02-goals.md](roadmap/02-goals.md)
-- [roadmap/02-next.md](roadmap/02-next.md)
-- [roadmap/03-later.md](roadmap/03-later.md)
+- roadmap/02-next.md
+- roadmap/03-later.md
 - [roadmap/03-workstreams.md](roadmap/03-workstreams.md)
 - [roadmap/04-milestones.md](roadmap/04-milestones.md)
-- [roadmap/04-risks.md](roadmap/04-risks.md)
+- roadmap/04-risks.md
 - [roadmap/05-risks.md](roadmap/05-risks.md)
 - [roadmap/legacy-roadmap.md](roadmap/legacy-roadmap.md)
 - [roadmap/legacy/legacy-roadmap-x.md](roadmap/legacy/legacy-roadmap-x.md)
@@ -438,7 +438,7 @@ I risultati completi sono disponibili nella cartella [docs/phpstan](phpstan/) _(
 
 ### Obiettivi di Qualità
 
-Secondo le "Regole Windsurf per base_predict_fila3_mono", gli obiettivi per l'analisi PHPStan sono:
+Secondo le "Regole Windsurf per base_predict_fila5_mono", gli obiettivi per l'analisi PHPStan sono:
 
 - Iniziare dal livello 1 per i nuovi moduli
 - Assicurarsi che tutto il codice passi almeno il livello 5

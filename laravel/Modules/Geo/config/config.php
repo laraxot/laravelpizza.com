@@ -53,16 +53,6 @@ return [
     'comuni_json_path' => null,
     /*
      * |--------------------------------------------------------------------------
-     * | Comuni JSON
-     * |--------------------------------------------------------------------------
-     * |
-     * | Percorso del file JSON letto dal modello Sushi Comune. Null = il file
-     * | versionato del modulo (resources/json/comuni.json).
-     * |
-     */
-    'comuni_json_path' => null,
-    /*
-     * |--------------------------------------------------------------------------
      * | Rate Limiting
      * |--------------------------------------------------------------------------
      * |
@@ -114,6 +104,36 @@ return [
             'lat' => Env::get('GEO_MAP_DEFAULT_LAT', 42.5),
             'lng' => Env::get('GEO_MAP_DEFAULT_LNG', 12.5),
             'zoom' => Env::get('GEO_MAP_DEFAULT_ZOOM', 6),
+        ],
+    ],
+    /*
+     * |--------------------------------------------------------------------------
+     * | Proxy OpenStreetMap (tile e Nominatim)
+     * |--------------------------------------------------------------------------
+     * |
+     * | Rotte API senza sessione: /api/geo/tiles/osm/{z}/{x}/{y}.png e /api/geo/nominatim/{search|reverse}.
+     * | Il browser non contatta terzi (privacy: niente IP del visitatore a OSMF prima del consenso) e le
+     * | regole di OSMF sono rispettate dal server: User-Agent con contatto, Referer inoltrato, cache di
+     * | almeno 7 giorni con richieste condizionali (tile), 1 richiesta al secondo e cache (Nominatim, che
+     * | raccomanda proprio un proxy con cache). Le mappe usano il proxy solo se il layout lo dichiara
+     * | (`<html data-geo-tile-url data-geo-nominatim-url>`): senza, restano sugli indirizzi pubblici.
+     * | `nominatim.enabled` = false spegne il geocoding senza toccare il codice (richiesto dalla policy).
+     * | Chiave completa: `geo.config.osm_proxy`.
+     * |
+     */
+    'osm_proxy' => [
+        'contact' => Env::get('GEO_OSM_CONTACT'),
+        'timeout' => 10,
+        'tiles' => [
+            'upstream' => 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+            'max_zoom' => 19,
+            'min_cache_days' => 7,
+            'browser_max_age' => 86400,
+        ],
+        'nominatim' => [
+            'enabled' => (bool) Env::get('GEO_NOMINATIM_ENABLED', true),
+            'upstream' => 'https://nominatim.openstreetmap.org',
+            'cache_days' => 30,
         ],
     ],
     /*

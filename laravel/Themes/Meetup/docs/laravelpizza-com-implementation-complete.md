@@ -25,7 +25,7 @@ Implementazione completa del sistema per rendere http://127.0.0.1:8002/it uguale
 
 ### 4. Asset Compilati
 - File CSS/JS sono stati compilati con `npm run build`
-- niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+- Asset sono stati copiati nella directory pubblica con `npm run copy`
 - Lo stile del tema Meetup è ora attivo e funzionante
 
 ## File Interessati

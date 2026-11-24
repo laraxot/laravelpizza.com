@@ -3,11 +3,14 @@ title: "no notification tracking controller"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "no notification tracking controller"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Notify: no NotificationTrackingController

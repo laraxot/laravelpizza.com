@@ -3,7 +3,11 @@ title: "00 index"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "00 index"
 issues: []
 discussions: []
@@ -21,14 +25,14 @@ status: draft
 | File | Scopo |
 |---|---|
 | [agents-overview.md](./agents-overview.md) | Preferenze utente stabili e orientamento generale |
-| [architecture/00-INDEX.md](./architecture/00-INDEX.md) | Decisioni architetturali canoniche |
+| [architecture/00-index.md](./architecture/00-index.md) | Decisioni architetturali canoniche |
 | [architecture/filament-table-vs-blade-component.md](./architecture/filament-table-vs-blade-component.md) | Regola su Blade bridge-only e `XotBaseTableWidget` |
-| [../ralph/00-INDEX.md](../ralph/00-INDEX.md) | Albero canonico Ralph locale: template, prompt e governance del loop |
+| [../ralph/00-index.md](../ralph/00-index.md) | Albero canonico Ralph locale: template, prompt e governance del loop |
 | [../../../../docs/project/gsd-and-bmad-workflow.md](../../../../docs/project/gsd-and-bmad-workflow.md) | Workflow canonico BMAD + GSD + Ralph a livello progetto |
 | [frontend/semantic-css.md](./frontend/semantic-css.md) | Semantic CSS principles da MaintainableCSS |
 | [../../../../docs/project/migration-philosophy-rule.md](../../../../docs/project/migration-philosophy-rule.md) | Regola canonica migrazioni: 1 modello = 1 migrazione |
 | [openviking-setup.md](./openviking-setup.md) | OpenViking context database: runtime globale, workspace progetto, comandi, MCP |
-| [09-NOTEBOOKLM-SKILL.md](./09-NOTEBOOKLM-SKILL.md) | NotebookLM skill: query notebook Google con browser automation, zero allucinazioni |
+| [09-notebooklm-skill.md](./09-notebooklm-skill.md) | NotebookLM skill: query notebook Google con browser automation, zero allucinazioni |
 
 ## Regole vive di questa fase
 
@@ -45,26 +49,37 @@ status: draft
 |------|-------|
 | [accessor-auto-persistence.md](./accessor-auto-persistence.md) | Pattern SACRO Accessor con Auto-Persistenza |
 | [ai-agents/index.md](./ai-agents/index.md) | Master index regole condivise Claude/Gemini/Qwen |
+<<<<<<< HEAD
 | [ai-agents/shared/accessor-mutator.md](./ai-agents/shared/accessor-mutator.md) | Pattern Accessor/Mutator: Livelli 1–4, auto-persistenza |
-| [ai-agents/shared/critical-rules.md](./ai-agents/shared/critical-rules.md) | PHPStan L10, array syntax, DI, MCP |
+| [ai-agents/shared/critical-rules.md](critical-rules.md) | PHPStan L10, array syntax, DI, MCP |
 | [ai-agents/shared/critical-rules.md](./critical-rules.md) | PHPStan L10, array syntax, DI, MCP |
+=======
+<<<<<<< .merge_file_PlqCNK
+| [ai-agents/shared/accessor-mutator.md](./ai-agents/shared/accessor-mutator.md) | Pattern Accessor/Mutator — Livelli 1–4, auto-persistenza |
+| [ai-agents/shared/critical-rules.md](./ai-agents/shared/critical-rules.md) | PHPStan L10, array syntax, DI, MCP |
+=======
+| [ai-agents/shared/accessor-mutator.md](./ai-agents/shared/accessor-mutator.md) | Pattern Accessor/Mutator: Livelli 1–4, auto-persistenza |
+| [ai-agents/shared/critical-rules.md](critical-rules.md) | PHPStan L10, array syntax, DI, MCP |
+| [ai-agents/shared/critical-rules.md](./critical-rules.md) | PHPStan L10, array syntax, DI, MCP |
+>>>>>>> .merge_file_Mf0OiL
+>>>>>>> laraxot/dev
 | [ai-agents/shared/translation-rules.md](./ai-agents/shared/translation-rules.md) | Struttura obbligatoria 5 chiavi per campo |
 
 ## Riferimenti bidirezionali
 
-- [Architecture index](./architecture/00-INDEX.md)
+- [Architecture index](./architecture/00-index.md)
 - [Agents overview](./agents-overview.md)
 - [AGENTS.md](../../../AGENTS.md)
 - [CLAUDE.md](../../../CLAUDE.md)
-- [GEMINI.md](../../../GEMINI.md)
-- [QWEN.md](../../../QWEN.md)
-- [Predict docs index](../../../laravel/Modules/Predict/docs/00-INDEX.md)
-- [TwentyOne docs index](../../../laravel/Themes/TwentyOne/docs/00-INDEX.md)
+- [gemini.md](../../../gemini.md)
+- [qwen.md](../../../qwen.md)
+- [Predict docs index](../../../laravel/Modules/Predict/docs/00-index.md)
+- [TwentyOne docs index](../../../laravel/Themes/TwentyOne/docs/00-index.md)
 - [AGENTS.md](../../../../AGENTS.md)
-- [CLAUDE.md](../../../../CLAUDE.md)
-- [GEMINI.md](../../../../GEMINI.md)
-- [QWEN.md](../../../QWEN.md)
-- [Predict docs index](../../../laravel/Modules/Predict/docs/00-INDEX.md)
-- [TwentyOne docs index](../../../../Themes/TwentyOne/docs/00-INDEX.md)
-- [Frontend rules index](../rules/frontend/00-INDEX.md)
+- [CLAUDE.md](../../../../claude.md)
+- [gemini.md](../../../../gemini.md)
+- [qwen.md](../../../qwen.md)
+- [Predict docs index](../../../laravel/Modules/Predict/docs/00-index.md)
+- [TwentyOne docs index](../../../../Themes/TwentyOne/docs/00-index.md)
+- [Frontend rules index](../rules/frontend/00-index.md)
 - [Semantic CSS Rule](../rules/frontend/semantic-css-rule.md)

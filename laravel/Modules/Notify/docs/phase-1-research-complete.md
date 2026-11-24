@@ -3,11 +3,14 @@ title: "phase 1 research complete"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "phase 1 research complete"
 issues: []
 discussions: []
-status: draft
 ---
 
 # ✅ PHASE 1 - RICERCA COMPLETATA
@@ -17,11 +20,20 @@ status: draft
 **Status**: 🟢 **RICERCA E PIANIFICAZIONE COMPLETE** → Pronto per ESECUZIONE
 
 ---
+
+title: "phase 1 research complete"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phase 1 research complete"
+issues: []
+discussions: []
 ## 📊 CONSUNTIVO LAVORO SVOLTO
 
 ### Documenti Creati (5 principali)
 
-1. **phase-1-strategy.md** (22.938 caratteri)
+1. **PHASE-1-STRATEGY.md** (22.938 caratteri)
    - Analisi architettura Design Comuni
    - Breakdown pagina segnalazioni-elenco
    - Assessment stato FixCity attuale
@@ -30,7 +42,7 @@ status: draft
    - Pattern traduzioni (corretto: `fixcity::segnalazione.fields.title.label`)
    - Criteri successo e checklist
 
-2. **gsd-phase-1-execution.md** (19.499 caratteri)
+2. **GSD-PHASE-1-EXECUTION.md** (19.499 caratteri)
    - 6 subtask con assegnazione owner
    - Istruzioni step-by-step per ogni subtask
    - Expected inputs/outputs
@@ -38,7 +50,7 @@ status: draft
    - Timeline (15-60 min per subtask)
    - Success criteria
 
-3. **bashscripts/docs/html/INDEX.md** (8.531 caratteri)
+3. **bashscripts/docs/html/index.md** (8.531 caratteri)
    - Documentazione strumenti HTML
    - Parity scoring (90%+ PASS, <90% WORK)
    - Troubleshooting guide
@@ -49,7 +61,7 @@ status: draft
    - Rimuove scripts, styles, noscript
    - Preserva hierarchy, classes, attributes
 
-5. **laravel/Themes/Sixteen/docs/00-INDEX.md** (12.926 caratteri)
+5. **laravel/Themes/Sixteen/docs/00-index.md** (12.926 caratteri)
    - Master index documentazione
    - Navigazione per topic
    - Fase progression timeline
@@ -159,9 +171,20 @@ Significa:
 - **Subtask 4**: Verify JSON → ensure all data present
 
 ### Researcher (Te stesso per documentation)
+<<<<<<< HEAD
 - **Subtask 2**: Analyze report → create PHASE-1-FINDINGS.md
 - **Subtask 6**: Document completion → create PHASE-1-COMPLETION-REPORT.md
 
+=======
+<<<<<<< HEAD
+- **subtask 2**: analyze report → create phase-1-findings.md
+- **subtask 6**: document completion → create phase-1-completion-report.md
+=======
+- **Subtask 2**: Analyze report → create PHASE-1-FINDINGS.md
+- **Subtask 6**: Document completion → create PHASE-1-COMPLETION-REPORT.md
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## 🚀 PROSSIMI PASSI - ORDINE ESECUZIONE
@@ -192,7 +215,7 @@ Verifica: parity ≥ 90%
 
 ### PASSO 5: Researcher documenta (Subtask 6)
 Crea: `PHASE-1-COMPLETION-REPORT.md`
-Aggiorna: `00-INDEX.md`
+Aggiorna: `00-index.md`
 ⏱️ ~20-25 min
 
 **TOTAL TIME**: 90-150 minuti (120-150 sequenziale, ~90 parallelizzato)
@@ -238,17 +261,33 @@ return [
 
 **Leggi in questo ordine**:
 
-1. **[00-INDEX.md](laravel/Themes/Sixteen/docs/00-INDEX.md)** - Master index (sei qui, ma online)
+<<<<<<< HEAD
+1. **[00-index.md](laravel/Themes/Sixteen/docs/00-index.md)** - Master index (sei qui, ma online)
+2. **[PHASE-1-STRATEGY.md](laravel/Themes/Sixteen/docs/PHASE-1-STRATEGY.md)** - Strategia completa (22k chars)
+3. **[GSD-PHASE-1-EXECUTION.md](laravel/Themes/Sixteen/docs/GSD-PHASE-1-EXECUTION.md)** - Piano esecuzione (19k chars)
+=======
+<<<<<<< HEAD
+1. **[00-INDEX.md](laravel/Themes/Sixteen/docs/00-index.md)** - Master index (sei qui, ma online)
 2. **[PHASE-1-STRATEGY.md](laravel/Themes/Sixteen/docs/phase-1-strategy.md)** - Strategia completa (22k chars)
 3. **[GSD-PHASE-1-EXECUTION.md](laravel/Themes/Sixteen/docs/gsd-phase-1-execution.md)** - Piano esecuzione (19k chars)
-4. **[bashscripts/docs/html/INDEX.md](bashscripts/docs/html/INDEX.md)** - Documentazione strumenti
+4. **[bashscripts/docs/html/INDEX.md](bashscripts/docs/html/index.md)** - Documentazione strumenti
+1. **[00-index.md](laravel/Themes/Sixteen/docs/00-index.md)** - Master index (sei qui, ma online)
+2. **[PHASE-1-STRATEGY.md](laravel/Themes/Sixteen/docs/phase-1-strategy.md)** - Strategia completa (22k chars)
+3. **[GSD-PHASE-1-EXECUTION.md](laravel/Themes/Sixteen/docs/gsd-phase-1-execution.md)** - Piano esecuzione (19k chars)
+=======
+1. **[00-index.md](laravel/Themes/Sixteen/docs/00-index.md)** - Master index (sei qui, ma online)
+2. **[PHASE-1-STRATEGY.md](laravel/Themes/Sixteen/docs/PHASE-1-STRATEGY.md)** - Strategia completa (22k chars)
+3. **[GSD-PHASE-1-EXECUTION.md](laravel/Themes/Sixteen/docs/GSD-PHASE-1-EXECUTION.md)** - Piano esecuzione (19k chars)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+4. **[bashscripts/docs/html/index.md](bashscripts/docs/html/index.md)** - Documentazione strumenti
 
 ---
 
 ## ✅ CHECKLIST: PRIMA DI INIZIARE ESECUZIONE
 
-- [ ] Hai letto phase-1-strategy.md (almeno Executive Summary)
-- [ ] Hai letto gsd-phase-1-execution.md (overview + subtask 1)
+- [ ] Hai letto PHASE-1-STRATEGY.md (almeno Executive Summary)
+- [ ] Hai letto GSD-PHASE-1-EXECUTION.md (overview + subtask 1)
 - [ ] Sai come avviare Laravel dev server
 - [ ] Sai dove trovano i file (blade, JSON)
 - [ ] Capisci il pattern traduzioni

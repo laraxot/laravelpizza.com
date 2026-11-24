@@ -8,8 +8,6 @@ related:
   - "../../../bashscripts/tools/prompts/02-gitmodules-sync.md"
   - "./wiki/troubleshooting/git-push-dual-remote-unrelated.md"
   - "./wiki/troubleshooting/git-push-lfs-missing-objects.md"
-status: draft
-qmd: "sincronizzazione multi-organizzazione (laraxot + provtv) user"
 ---
 
 # Sincronizzazione multi-organizzazione (laraxot + provtv)
@@ -27,7 +25,7 @@ fetch di tutti i remote, quality gates (PHPStan L10, PHPMD), risincronizzazione 
   respinti (`did not receive expected object`). Fix: `git fetch --unshallow` su tutti i remote.
 - **Storie scollegate ("unrelated histories")**: root commit diversi tra org.
   **2026-07-23:** `laraxot` = tip `3ea7273a` (`0 0`); `provtv` = unrelated (ahead 3 / behind 57).
-  **Non** si fa merge/force automatico: decisione umana su storia autoritativa.
+  **Non** si fa merge/force automatico — decisione umana su storia autoritativa.
   Canon: [wiki/troubleshooting/git-push-dual-remote-unrelated.md](./wiki/troubleshooting/git-push-dual-remote-unrelated.md).
 
 ## Regola per il futuro
@@ -42,7 +40,15 @@ merge forward-only manuale. LFS: sibling o playbook UI.
 Se `unpack failed` / `did not receive expected object` → `git push --no-thin`.
 Se `GH008` / LFS missing su un org e l’altro ha già accettato il tip →
 `git lfs fetch <sibling> --all` poi `git lfs push <target> --all`, poi push.
+<<<<<<< HEAD
 Dettaglio (SSoT): [../UI/docs/wiki/troubleshooting/git-push-lfs-missing-objects.md](../UI/docs/wiki/troubleshooting/git-push-lfs-missing-objects.md).
+=======
+<<<<<<< HEAD
+Dettaglio (SSoT): [../UI/docs/wiki/troubleshooting/git-push-lfs-missing-objects.md](../UI/docs/wiki/troubleshooting/git-push-lfs-missing-objects.md).
+=======
+Dettaglio (SSoT): [../UI/docs/wiki/troubleshooting/git-push-lfs-missing-objects.md](wiki/troubleshooting/git-push-lfs-missing-objects.md).
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 Niente reset/squash/force per aggirare LFS.
 
 ### Push User 2026-07-23
@@ -50,5 +56,5 @@ Niente reset/squash/force per aggirare LFS.
 | Remote | Esito |
 |--------|-------|
 | `laraxot` | OK `3ea7273a` |
-| `provtv` | bloccato unrelated: [git-push-dual-remote-unrelated.md](./wiki/troubleshooting/git-push-dual-remote-unrelated.md) |
+| `provtv` | bloccato unrelated — [git-push-dual-remote-unrelated.md](./wiki/troubleshooting/git-push-dual-remote-unrelated.md) |
 

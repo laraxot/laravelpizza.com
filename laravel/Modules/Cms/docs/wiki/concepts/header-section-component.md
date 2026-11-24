@@ -13,7 +13,6 @@ related:
   - ../../../../../../docs/wiki/concepts/blade-component-extraction-governance.md
   - ../../../laravel/Themes/Sixteen/docs/wiki/concepts/sixteen-header-composition-rule.md
   - ../../../../../../docs/wiki/concepts/design-comuni-header-auth-state.md
-status: draft
 ---
 
 # Header Section Component Architecture

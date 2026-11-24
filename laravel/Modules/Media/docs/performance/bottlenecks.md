@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "bottlenecks"
 related:
   - "./webm.md"
-status: draft
 ---
 # Media Module Performance Bottlenecks
 
@@ -249,7 +248,7 @@ Implementare:
 * [bottlenecks.md](../../../ui/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../../Lang/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Job/docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../../media/docs/performance/bottlenecks.md)
+* [bottlenecks.md](bottlenecks.md)
 * [bottlenecks.md](../../../patient/docs/roadmap/bottlenecks.md)
 
 ### Versione Incoming

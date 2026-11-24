@@ -13,7 +13,7 @@ class StatsBlock extends XotBaseBlock
     public static function getBlockSchema(): array
     {
         return [
-            TextInput::make('title')->label('Titolo')->required(),
+            TextInput::make('title')->label('Title')->required(),
             Repeater::make('stats')
                 ->label('Statistiche')
                 ->schema([

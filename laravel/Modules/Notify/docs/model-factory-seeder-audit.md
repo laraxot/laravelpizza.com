@@ -3,11 +3,14 @@ title: "model factory seeder audit"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "model factory seeder audit"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Model/Factory/Seeder Audit

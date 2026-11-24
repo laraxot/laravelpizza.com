@@ -3,7 +3,11 @@ title: "xotbasemigration best practices"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "xotbasemigration best practices"
 issues: []
 discussions: []
@@ -69,7 +73,7 @@ if ($this->hasColumn('subject') && !$this->isColumnType('subject', 'json')) {
     if (!$this->hasColumn('subject_json')) {
         $table->json('subject_json')->nullable()->after('subject');
     }
-    
+
     // 2. Migra i dati solo se la colonna temporanea esiste
     if ($this->hasColumn('subject_json')) {
         DB::table('mail_templates')->chunkById(100, function ($records) {
@@ -84,7 +88,7 @@ if ($this->hasColumn('subject') && !$this->isColumnType('subject', 'json')) {
             }
         });
     }
-    
+
     // 3. Rimuovi e rinomina
     $table->dropColumn('subject');
     $table->renameColumn('subject_json', 'subject');
@@ -108,24 +112,24 @@ Quando si utilizza `Schema::hasColumn()` direttamente, si bypassa tutta questa l
 
 ## Come evitare errori
 
-1. **Verifica esistenza colonna**: 
+1. **Verifica esistenza colonna**:
    ```php
    $this->hasColumn('column_name')
    ```
 
-2. **Verifica tipo colonna**: 
+2. **Verifica tipo colonna**:
    ```php
    $this->isColumnType('column_name', 'expected_type')
    ```
 
-3. **Ottieni tipo colonna**: 
+3. **Ottieni tipo colonna**:
    ```php
    $this->getColumnType('column_name')
    ```
 
 ## Riferimenti
 
-- [Xot Module Documentation](/var/www/html/Quaeris/laravel/modules/xot/docs/migrations.md)
-- [JSON Migration Best Practices](/var/www/html/Quaeris/laravel/modules/notify/docs/mail-templates/json_migration_fixes.md)
+- [Xot Module Documentation](/var/www/html/<nome progetto>/laravel/modules/xot/docs/migrations.md)
+- [JSON Migration Best Practices](/var/www/html/<nome progetto>/laravel/modules/notify/docs/mail-templates/json_migration_fixes.md)
 - [Xot Module Documentation](/var/www/_bases/base_ptvx_fila5/laravel/modules/xot/docs/migrations.md)
 - [JSON Migration Best Practices](/var/www/_bases/base_ptvx_fila5/laravel/modules/notify/docs/mail-templates/json_migration_fixes.md)

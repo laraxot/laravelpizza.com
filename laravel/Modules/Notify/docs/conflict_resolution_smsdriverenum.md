@@ -3,12 +3,14 @@ title: "conflict resolution smsdriverenum"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "conflict resolution smsdriverenum"
 issues: []
 discussions: []
-status: superseded
-superseded_by: bmad/architecture/conflict-resolution-smsdriverenum.md
 ---
 
 # Risoluzione Conflitto SmsDriverEnum

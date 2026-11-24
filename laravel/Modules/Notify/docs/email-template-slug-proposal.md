@@ -3,11 +3,14 @@ title: "email template slug proposal"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "email template slug proposal"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Proposta: Aggiunta del Parametro Slug per Email Template
@@ -247,8 +250,14 @@ MailTemplate::all()->each(function ($template) {
 
 ## Collegamenti Correlati
 
-- [Documentazione Email Template](./EMAIL_TEMPLATES.md)
-- [Gestione Traduzioni](../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [Documentazione Email Template](./email_templates.md)
-- [Gestione Traduzioni](../../Lang/docs/translation_keys_best_practices.md)
+<<<<<<< HEAD
+- [Gestione Traduzioni](../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+=======
+<<<<<<< HEAD
+- [Gestione Traduzioni](../Lang/docs/translation_keys_best_practices.md)
+=======
+- [Gestione Traduzioni](../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Configurazione Email](../../../docs/email-configuration.md) 

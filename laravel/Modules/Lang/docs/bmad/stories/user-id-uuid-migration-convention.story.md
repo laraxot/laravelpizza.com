@@ -32,8 +32,8 @@ Il filename mantiene timestamp, azione, owner tabella al plurale in
 YYYY_MM_DD_HHMMSS_<azione>_<modello_plurale>_table.php
 ```
 
-Le migrazioni interessate sono `2026_11_05_100000_create_posts_table.php` e
-`2026_11_05_100001_create_translations_table.php`. Dichiarano `$model_class`,
+Le migrazioni interessate sono `2026_11_05_100000_update_posts_table.php` e
+`2026_11_05_100001_update_translations_table.php`. Dichiarano `$model_class`,
 perché `XotBaseMigration` deriva il modello automaticamente solo dal formato
 `create_*_table`. Timestamp e ordine sono preservati; l'helper idempotente fa
 sì che i vecchi filename registrati nel ledger non causino una seconda
@@ -42,9 +42,9 @@ conversione distruttiva.
 ## Decisioni di sicurezza dati
 
 - `XotBaseMigration::convertUserIdToUuidIfLegacyBigint()` non modifica una
-  colonna già UUID. Con valori legacy non null, le migrazioni owner usano la
-  modalità esplicita di compatibilità: convertono la colonna a `char(36)` e
-  conservano i numeri, lasciando il mapping verificabile da completare.
+  colonna già UUID e si arresta con eccezione se trova valori `user_id` bigint
+  non null. Il mapping di tali valori deve essere verificabile prima di
+  convertire.
 - Ogni migrazione controlla `tableExists()` prima di `tableUpdate()`. In questo
   modo l'API `tableUpdate()` non crea una tabella vuota quando manca il target.
 - Non sono state rinominate le sette migrazioni storiche di altri moduli:
@@ -55,7 +55,7 @@ conversione distruttiva.
 
 ## Acceptance criteria
 
-- [x] AC1: le migrazioni Lang usano `create_<modello_plurale>_table.php` (una owner per tabella).
+- [x] AC1: le migrazioni Lang usano `update_<modello_plurale>_table.php`.
 - [x] AC2: documentazione owner Lang, standard Xot, Blueprint Filament e second
   brain descrivono la stessa convenzione.
 - [x] AC3: audit di `Modules/*/database/migrations/` e
@@ -64,13 +64,13 @@ conversione distruttiva.
 - [x] AC4: lint, Pint, PHPStan Lang, Pest Translation e `migrate --pretend`
   superati.
 - [ ] AC5: definire un mapping verificabile per eventuali `user_id` bigint
-  non null negli ambienti esistenti (i valori sono ora preservati).
+  non null negli ambienti esistenti.
 - [ ] AC6: confrontare i ledger degli ambienti per le due coppie di migrazioni
   di creazione duplicate, poi definire una correzione forward-only.
 
 ## Incidente 2026-11-10: errore 4078 su MariaDB 11.8
 
-`php artisan migrate` falliva su `2026_11_05_100000_create_posts_table` con
+`php artisan migrate` falliva su `2026_11_05_100000_update_posts_table` con
 `SQLSTATE[HY000] 4078 Cannot cast 'bigint unsigned' as 'uuid'` (SQL:
 `alter table posts modify user_id uuid null`). Causa radice: da MariaDB 10.7
 `uuid` è un tipo nativo e il server rifiuta `bigint -> uuid` a prescindere dai
@@ -92,14 +92,12 @@ Pint e PHPStan (config di progetto) su `XotBaseMigration.php`: puliti.
 La migrazione reale non è stata rieseguita dall'agente: va rilanciata
 dall'utente con `php artisan migrate`.
 
-La correzione ha consolidato la conversione nelle migrazioni owner
-`create_posts_table` e `create_translations_table`, che verificano
-`tableExists()` e passano `preserveLegacyValues: true` a
-`XotBaseMigration::convertUserIdToUuidIfLegacyBigint()`: i valori numerici
-legacy restano in `char(36)` senza inventare mapping o perdere dati. Le gemelle
-`update_user_id_uuid_on_*` (conversione diretta non custodita) sono state
-rimosse; `update_translations_table` e' stata rinominata
-`create_translations_table` con lo stesso timestamp.
+Nota di allineamento: la migrazione `update_posts_table` non chiama
+`tableExists()` come descritto sopra, e il file gemello
+`2026_11_05_100000_update_user_id_uuid_on_posts_table.php` ripete la stessa
+conversione con un `change()` diretto. Il gemello è un no-op finché
+`update_posts_table` gira per primo (ordine alfabetico), perché la colonna è
+già `uuid`. Da riconciliare con AC6.
 
 ## Esito dell'audit filename
 
@@ -134,7 +132,7 @@ l'eventuale uso da consumer esterni prima di spostare o rimuovere la variante.
 - PHPStan `analyse Modules/Lang`: `[OK] No errors`.
 - Pest `Modules/Lang/tests/Unit/Models/TranslationTest.php`: 6 passed,
   14 assertions.
-- `php artisan migrate --pretend --path=...create_translations_table.php`:
+- `php artisan migrate --pretend --path=...update_translations_table.php`:
   solo query di introspezione e nessun `CREATE TABLE`.
 - Blueprint Filament Lang: registra che il naming schema appartiene alle
   migrazioni Xot/Lang; nessun componente UI era richiesto.

@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "address field"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Address Field Component — Geolocalizzazione con Reverse Geocoding

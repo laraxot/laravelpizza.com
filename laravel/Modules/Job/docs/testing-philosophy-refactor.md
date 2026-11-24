@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "testing philosophy refactor"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Job Module Testing Refactor - The Journey to Zen
@@ -118,7 +117,7 @@ JOB_DB_HOST=127.0.0.1
 JOB_DB_PORT=3306
 JOB_DB_DATABASE=<nome progetto>_job_test
 JOB_DB_USERNAME=marco
-JOB_DB_PASSWORD=[segreto locale, non nel repo]
+JOB_DB_PASSWORD=marco
 ```
 
 ### Step 2: Update config/database.php
@@ -262,6 +261,15 @@ This is the way.
 - `.env.testing` - Single source of truth for test configuration
 
 ---
+
+title: "testing philosophy refactor"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "testing philosophy refactor"
+issues: []
+discussions: []
 **Date**: [DATE]
 **Author**: Claude Sonnet 4.5
 **Status**: Implementation Ready

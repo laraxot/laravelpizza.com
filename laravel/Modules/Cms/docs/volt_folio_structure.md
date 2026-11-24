@@ -9,8 +9,7 @@ issues: []
 discussions: []
 module: theme
 topic: volt_folio_structure
-canonical: ../../../Themes/docs/shared-components/volt-folio-structure-struttura-corretta.md
-status: stub
+canonical: ../../../Themes/docs/shared-components/volt-folio-structure_1.md
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/volt-folio-structure-struttura-corretta.md
+See canonical documentation: ../../../Themes/docs/shared-components/volt-folio-structure_1.md

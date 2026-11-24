@@ -3,7 +3,11 @@ title: "migration patterns"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "migration patterns"
 issues: []
 discussions: []
@@ -124,7 +128,7 @@ Modules/{ModuleName}/database/
 - Files in `database/Migrations/` (uppercase) are **silently ignored**
 - Always verify with `ls -la database/` before placing migration files
 
-Issue: https://github.com/provtv/base_ptv_fila5_mono/issues/71
+Issue: https://github.com/provtv/base_ptv_fila5/issues/71
 
 ## Cross-module impact
 

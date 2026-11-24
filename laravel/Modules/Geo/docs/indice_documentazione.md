@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "indice documentazione"
 issues: []
 discussions: []
-status: superseded
-superseded_by: documentation-index.md
 ---
 
 # Indice della Documentazione del Modulo Geo
@@ -84,9 +82,9 @@ Documenti che confrontano le diverse strategie implementative e approcci.
 
 Guide tecniche e tutorial per l'utilizzo e l'implementazione delle funzionalità del modulo Geo.
 
-- [COMPREHENSIVE_GUIDE.md](comprehensive_guide.md) - Guida completa al modulo
+- [comprehensive_guide.md](comprehensive_guide.md) - Guida completa al modulo
 - [TECHNICAL.md](technical.md) - Documentazione tecnica
-- [ADVANCED_FEATURES.md](advanced_features.md) - Funzionalità avanzate
+- [advanced_features.md](advanced_features.md) - Funzionalità avanzate
 - [tutorial.md](tutorial.md) - Tutorial passo-passo
 - [migration-guide.md](migration-guide.md) - Guida alla migrazione
 
@@ -159,5 +157,14 @@ Alcuni documenti potrebbero avere nomi simili ma contenuti diversi, in particola
 - Documenti con prefisso lingua (es. `en-` o `it-`) contengono versioni in lingue specifiche
 
 ---
+
+title: "indice documentazione"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "indice documentazione"
+issues: []
+discussions: []
 *Documento creato il: 28/05/2025*  
 *Autore: Team <main module>*

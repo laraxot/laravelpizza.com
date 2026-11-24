@@ -2,22 +2,24 @@
 qmd: "sync remote repo test plan.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: SYNC_REMOTE_REPO_TEST_PLAN.md"
+title: "Divergenza da riconciliare: sync_remote_repo_test_plan.md"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: superseded
-superseded_by: sync-remote-repo-test-plan.divergenza.md
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
-# Divergenza: `SYNC_REMOTE_REPO_TEST_PLAN.md`
+# Divergenza: `sync_remote_repo_test_plan.md`
 
-Questo file veniva da `docs/wiki/integrations/modules/notify/SYNC_REMOTE_REPO_TEST_PLAN.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+Questo file veniva da `docs/wiki/integrations/modules/notify/sync_remote_repo_test_plan.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
 
-- versione del modulo: `laravel/Modules/Notify/docs/SYNC_REMOTE_REPO_TEST_PLAN.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/SYNC_REMOTE_REPO_TEST_PLAN.md`
+- versione del modulo: `laravel/Modules/Notify/docs/sync_remote_repo_test_plan.md`
+- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/sync_remote_repo_test_plan.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 

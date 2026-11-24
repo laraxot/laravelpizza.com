@@ -67,9 +67,9 @@ INIT=$(node .github/get-shit-done/bin/gsd-tools.cjs init quick "$DESCRIPTION")
 
 Parse JSON for: `planner_model`, `executor_model`, `checker_model`, `verifier_model`, `commit_docs`, `next_num`, `slug`, `date`, `timestamp`, `quick_dir`, `task_dir`, `roadmap_exists`, `planning_exists`.
 
-**If `roadmap_exists` is false:** Error — Quick mode requires an active project with ROADMAP.md. Run `/gsd-new-project` first.
+**If `roadmap_exists` is false:** Error — Quick mode requires an active project with roadmap.md. Run `/gsd-new-project` first.
 
-Quick tasks can run mid-phase - validation only checks ROADMAP.md exists, not phase status.
+Quick tasks can run mid-phase - validation only checks roadmap.md exists, not phase status.
 
 ---
 
@@ -278,7 +278,7 @@ Execute quick task ${next_num}.
 - Execute all tasks in the plan
 - Commit each task atomically
 - Create summary at: ${QUICK_DIR}/${next_num}-SUMMARY.md
-- Do NOT update ROADMAP.md (quick tasks are separate from planned phases)
+- Do NOT update roadmap.md (quick tasks are separate from planned phases)
 </constraints>
 ",
   subagent_type="gsd-executor",
@@ -457,7 +457,7 @@ Ready for next task: /gsd-quick
 </process>
 
 <success_criteria>
-- [ ] ROADMAP.md validation passes
+- [ ] roadmap.md validation passes
 - [ ] User provides task description
 - [ ] `--full` flag parsed from arguments when present
 - [ ] Slug generated (lowercase, hyphens, max 40 chars)

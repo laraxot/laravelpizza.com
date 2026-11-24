@@ -1,6 +1,6 @@
 ---
 qmd: "STORY 512 test environment and tracker"
-title: "STORY-512: Ambiente test e tracker verificabili"
+title: "STORY-512 — Ambiente test e tracker verificabili"
 type: story
 status: in_progress
 module: Xot
@@ -17,7 +17,7 @@ related:
   - ../../../../../../docs/sprint-status.yaml
 ---
 
-# STORY-512: Ambiente test e tracker verificabili
+# STORY-512 — Ambiente test e tracker verificabili
 
 ## User story
 

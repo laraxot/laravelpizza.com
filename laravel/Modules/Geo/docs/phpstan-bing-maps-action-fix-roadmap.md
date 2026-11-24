@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan bing maps action fix roadmap"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHPStan Fix Roadmap - GetAddressFromBingMapsAction - Gennaio 2026
@@ -188,5 +187,13 @@ L'errore PHPStan è stato risolto con successo! Ecco le modifiche implementate:
 
 - [GetAddressFromBingMapsAction.php](../app/Actions/Bing/GetAddressFromBingMapsAction.php)
 - [PHPStan Code Quality Guide](../../../xot/docs/phpstan-code-quality-guide.md)
+<<<<<<< HEAD
 - [Geo Module PHPStan Fixes](./phpstan-fixes-gennaio-2025.md)
+=======
+<<<<<<< HEAD
+- [Geo Module PHPStan Fixes](./phpstan-fixes-gennaio.md)
+=======
+- [Geo Module PHPStan Fixes](./phpstan-fixes-gennaio-2025.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Pattern Type Safety](../../../xot/docs/phpstan-patterns.md)

@@ -5,7 +5,7 @@ declare(strict_types=1);
 return [
     'fields' => [
         'name' => [
-            'label' => 'Nome',
+            'label' => 'Name',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -17,7 +17,7 @@ return [
             'description' => '',
         ],
         'class' => [
-            'label' => 'Classi CSS',
+            'label' => 'CSS Classes',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -29,13 +29,13 @@ return [
             'description' => '',
         ],
         'background_color' => [
-            'label' => 'Colore Sfondo',
+            'label' => 'Background Color',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'text_color' => [
-            'label' => 'Colore Testo',
+            'label' => 'Text Color',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -45,41 +45,41 @@ return [
         'logo' => [
             'title' => 'Logo',
             'fields' => [
-                'image' => 'Immagine',
-                'alt' => 'Testo Alternativo',
-                'height' => 'Altezza',
+                'image' => 'Image',
+                'alt' => 'Alternative Text',
+                'height' => 'Height',
             ],
         ],
         'navigation' => [
-            'title' => 'Navigazione',
+            'title' => 'Navigation',
             'fields' => [
                 'items' => 'Voci Menu',
-                'label' => 'Etichetta',
+                'label' => 'Label',
                 'url' => 'URL',
                 'target' => 'Target',
-                'is_active' => 'Attivo',
+                'is_active' => 'Active',
             ],
         ],
         'actions' => [
-            'title' => 'Azioni',
+            'title' => 'Actions',
             'fields' => [
-                'items' => 'Bottoni',
-                'label' => 'Etichetta',
+                'items' => 'Buttons',
+                'label' => 'Label',
                 'url' => 'URL',
-                'type' => 'Tipo',
+                'type' => 'Type',
             ],
             'types' => [
-                'primary' => 'Primario',
-                'secondary' => 'Secondario',
+                'primary' => 'Primary',
+                'secondary' => 'Secondary',
                 'outline' => 'Outline',
                 'link' => 'Link',
             ],
         ],
     ],
     'sections' => [
-        'info' => 'Informazioni',
-        'style' => 'Stile',
-        'content' => 'Contenuti',
+        'info' => 'Information',
+        'style' => 'Style',
+        'content' => 'Contents',
     ],
     'navigation' => [
         'label' => 'Missing Navigation Label',

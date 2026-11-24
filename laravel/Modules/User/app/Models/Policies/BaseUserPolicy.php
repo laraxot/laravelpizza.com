@@ -24,7 +24,7 @@ class BaseUserPolicy extends XotBasePolicy
      *
      * @var list<string>
      */
-    public const array ADMIN_ROLES = ['admin', 'user::admin'];
+    public const array ADMIN_ROLES = ['admin', 'user::admin', 'restaurant::admin'];
 
     /**
      * Abilita' che non si esercitano mai sul proprio utente.

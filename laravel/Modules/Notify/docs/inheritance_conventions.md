@@ -3,12 +3,14 @@ title: "inheritance conventions"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "inheritance conventions"
 issues: []
 discussions: []
-status: superseded
-superseded_by: inheritance-conventions.md
 ---
 
 # Convenzioni di Ereditarietà

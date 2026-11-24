@@ -300,4 +300,4 @@ module.exports = {
 - [WCAG 2.1 Color Contrast](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum)
 - [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - [Tailwind Color Palette](https://tailwindcss.com/docs/customizing-colors)
-- [LaravelPizza Brand Guidelines](../color-palette.md)
+- [LaravelPizza Brand Guidelines](color-palette.md)

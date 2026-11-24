@@ -6,7 +6,6 @@ module: "Tenant"
 tags: [docs, tenant, bmad]
 created: 2026-10-06
 updated: 2026-10-06
-qmd: "changelog tenant"
 ---
 
 # Changelog

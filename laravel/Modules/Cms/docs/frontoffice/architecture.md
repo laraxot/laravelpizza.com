@@ -3,11 +3,14 @@ title: "architecture"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "architecture"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Architettura Frontend
@@ -118,15 +121,23 @@ I blocchi sono l'unità base di contenuto. Ogni blocco:
 
 ## Documentazione Correlata
 
-- [Gestione dei Temi](../../../../Themes/README.md)
+<<<<<<< HEAD
+- [Gestione dei Temi](../themes/README.md)
+=======
+<<<<<<< HEAD
+- [Gestione dei Temi](../themes/readme.md)
+=======
+- [Gestione dei Temi](../themes/README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Componenti UI](../components/README.md)
 - [Configurazione Blocchi](../blocks/README.md)
-- [Ottimizzazione Performance](../performance/readme.md)
+- [Ottimizzazione Performance](../performance/README.md)
 
 ## Collegamenti tra versioni di architecture.md
 * [architecture.md](docs/tecnico/filament/architecture.md)
 * [architecture.md](docs/rules/architecture.md)
-* [architecture.md](../../../Gdpr/docs/architecture.md)
+* [architecture.md](laravel/modules/gdpr/docs/architecture.md)
 * [architecture.md](laravel/modules/cms/docs/frontoffice/architecture.md)
 * [architecture.md](laravel/modules/cms/docs/architecture.md)
 * [architecture.md](laravel/themes/one/docs/roadmap/inspiration/architecture.md)

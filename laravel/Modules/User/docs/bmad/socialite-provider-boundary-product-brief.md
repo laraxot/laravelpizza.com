@@ -1,5 +1,5 @@
 ---
-title: "Socialite provider boundary: product brief"
+title: "Socialite provider boundary — product brief"
 type: product-brief
 module: User
 status: done
@@ -9,11 +9,9 @@ related:
   - ./socialite-provider-boundary-prd.md
   - ./socialite-provider-boundary-architecture.md
   - ./stories/socialite-provider-boundary.story.md
-tags: [docs, user, bmad]
-qmd: "socialite provider boundary   product brief user"
 ---
 
-# Socialite provider boundary: product brief
+# Socialite provider boundary — product brief
 
 ## Problema
 

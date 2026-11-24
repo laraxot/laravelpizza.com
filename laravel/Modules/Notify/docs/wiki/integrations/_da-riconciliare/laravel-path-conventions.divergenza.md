@@ -1,14 +1,17 @@
 ---
-qmd: "laravel path conventions.divergenza"
+qmd: "Laravel Path Conventions.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: laravel_path_conventions.md"
+title: "Laravel Path Conventions.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Divergenza: `laravel_path_conventions.md`

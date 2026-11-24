@@ -3,11 +3,14 @@ title: "metodi duplicati analisi"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "metodi duplicati analisi"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🐄⚡ ANALISI METODI DUPLICATI - SUPER MUCCA EDITION
@@ -19,6 +22,15 @@ status: draft
 **Confidenza**: 99.9% (Dati Reali dal Codice)
 
 ---
+
+title: "metodi duplicati analisi"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "metodi duplicati analisi"
+issues: []
+discussions: []
 ## 🎯 Executive Summary
 
 Analisi **REALE e APPROFONDITA** di **18 moduli** + **2 temi** del framework Laraxot/Filament.
@@ -547,4 +559,8 @@ public function getTableFilters(): array
 3. Kick-off Fase 1
 4. Implementazione ColumnBuilder
 
+<<<<<<< HEAD
 **Domande?** Chiedi alla Super Mucca! 🐄⚡
+=======
+**Domande?** Chiedi alla Super Mucca! 🐄⚡
+>>>>>>> laraxot/dev

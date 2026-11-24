@@ -1,7 +1,7 @@
 ---
 issues: []
 discussions: []
-title: "Geo — mai Filament*, sempre XotBase*"
+title: "Geo — mai Filament\*, sempre XotBase*"
 type: concept
 module: Geo
 tags: [geo, filament, xotbase, architecture]
@@ -12,7 +12,6 @@ related:
   - ../../../../../docs/wiki/rules/xotbase-critical-rules.md
   - ../../../../../docs/wiki/rules/xot-base-filament-widgets.md
   - ../../../../../docs/wiki/memories/xotbase-never-extend-filament.md
-status: draft
 ---
 
 # Mai `Filament\*` — sempre `Modules\Xot\Filament\...\XotBase*`

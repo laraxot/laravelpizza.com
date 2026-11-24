@@ -17,6 +17,11 @@ use Spatie\QueueableAction\QueueableAction;
  *
  * Intervention Image (already installed, GD driver) applies the EXIF orientation first, so the photo keeps its rotation, then
  * writes a new file that carries pixels only. Any other mime type (PDF, ...) is left untouched. Updates `size` on the media row.
+<<<<<<< HEAD
+=======
+ *
+ * @contract docs/contracts/strip-image-metadata-action.md
+>>>>>>> laraxot/dev
  */
 final class StripImageMetadataAction
 {
@@ -28,11 +33,7 @@ final class StripImageMetadataAction
     {
         $encoder = match ($media->mime_type) {
             'image/jpeg' => new JpegEncoder(quality: self::JPEG_QUALITY, strip: true),
-<<<<<<< .merge_file_VwOazC
-            'image/png' => new PngEncoder,
-=======
             'image/png' => new PngEncoder(strip: true),
->>>>>>> .merge_file_84CzkG
             default => null,
         };
         if ($encoder === null) {
@@ -46,7 +47,10 @@ final class StripImageMetadataAction
             return;
         }
 
-        $clean = (string) (new ImageManager(new GdDriver))->decodeBinary($original)->encode($encoder);
+        $clean = (new ImageManager(new GdDriver))
+            ->decodeBinary($original)
+            ->encode($encoder)
+            ->toString();
         $disk->put($path, $clean);
         $media->size = strlen($clean);
         $media->save();

@@ -6,9 +6,14 @@ namespace Modules\Geo\Filament\Forms\Components\Traits;
 
 use Filament\Support\Components\Attributes\Exposed;
 use Illuminate\Database\Eloquent\Model;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Http;
 use Livewire\Attributes\Renderless;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
+=======
+use Livewire\Attributes\Renderless;
+use Modules\Geo\Filament\Forms\Components\CoordinatePickerHelpers;
+>>>>>>> laraxot/dev
 
 /**
  * Trait HasCoordinatePicker - Shared logic for geographic components.
@@ -54,8 +59,13 @@ trait HasCoordinatePicker
             $record = $component->getRecord();
             if ($record instanceof Model) {
                 $component->state([
+<<<<<<< HEAD
                     'latitude' => self::normalizeCoordinate($record->getAttribute($component->getLatitudeColumn())),
                     'longitude' => self::normalizeCoordinate($record->getAttribute($component->getLongitudeColumn())),
+=======
+                    'latitude' => CoordinatePickerHelpers::normalizeCoordinate($record->getAttribute($component->getLatitudeColumn())),
+                    'longitude' => CoordinatePickerHelpers::normalizeCoordinate($record->getAttribute($component->getLongitudeColumn())),
+>>>>>>> laraxot/dev
                 ]);
 
                 return;
@@ -178,8 +188,13 @@ trait HasCoordinatePicker
     public function getMapDefaultView(): array
     {
         $view = config('geo.config.map.default_view');
+<<<<<<< HEAD
         $lat = \is_array($view) ? self::normalizeCoordinate($view['lat'] ?? null) : null;
         $lng = \is_array($view) ? self::normalizeCoordinate($view['lng'] ?? null) : null;
+=======
+        $lat = \is_array($view) ? CoordinatePickerHelpers::normalizeCoordinate($view['lat'] ?? null) : null;
+        $lng = \is_array($view) ? CoordinatePickerHelpers::normalizeCoordinate($view['lng'] ?? null) : null;
+>>>>>>> laraxot/dev
         $rawZoom = \is_array($view) ? ($view['zoom'] ?? null) : null;
         $zoom = is_numeric($rawZoom) ? (float) $rawZoom : null;
 
@@ -213,7 +228,11 @@ trait HasCoordinatePicker
             return null;
         }
 
+<<<<<<< HEAD
         return self::normalizeCoordinate($state['latitude'] ?? null);
+=======
+        return CoordinatePickerHelpers::normalizeCoordinate($state['latitude'] ?? null);
+>>>>>>> laraxot/dev
     }
 
     public function getLongitude(): ?float
@@ -223,12 +242,21 @@ trait HasCoordinatePicker
             return null;
         }
 
+<<<<<<< HEAD
         return self::normalizeCoordinate($state['longitude'] ?? null);
     }
 
     /**
      * Searches for addresses matching the query string via Nominatim.
      * Server-side to respect rate-limiting and User-Agent policies.
+=======
+        return CoordinatePickerHelpers::normalizeCoordinate($state['longitude'] ?? null);
+    }
+
+    /**
+     * Cerca indirizzi tramite Nominatim lato server (rate limit e User-Agent rispettati).
+     * Logica unica in {@see CoordinatePickerHelpers::searchAddress()}, condivisa con XotBaseCoordinateField.
+>>>>>>> laraxot/dev
      *
      * @return list<array<string, mixed>>
      */
@@ -236,6 +264,7 @@ trait HasCoordinatePicker
     #[Renderless]
     public function searchAddress(string $query): array
     {
+<<<<<<< HEAD
         if (\strlen(trim($query)) < 3) {
             return [];
         }
@@ -287,6 +316,13 @@ trait HasCoordinatePicker
     /**
      * Reverse geocodes coordinates to a structured address.
      * Returns a rich array for better form integration.
+=======
+        return CoordinatePickerHelpers::searchAddress($query);
+    }
+
+    /**
+     * Geocodifica inversa delle coordinate in un indirizzo strutturato.
+>>>>>>> laraxot/dev
      *
      * @return array<string, mixed>|null
      */
@@ -294,6 +330,7 @@ trait HasCoordinatePicker
     #[Renderless]
     public function reverseGeocode(float $latitude, float $longitude): ?array
     {
+<<<<<<< HEAD
         try {
             $response = Http::withHeaders([
                 'User-Agent' => 'Laraxot/1.0',
@@ -374,6 +411,9 @@ trait HasCoordinatePicker
         }
 
         return '';
+=======
+        return CoordinatePickerHelpers::reverseGeocode($latitude, $longitude);
+>>>>>>> laraxot/dev
     }
 
     /**
@@ -382,6 +422,7 @@ trait HasCoordinatePicker
      */
     public static function extractCoordinates(array $data, string $field = 'coordinates', string $latColumn = 'latitude', string $lngColumn = 'longitude'): array
     {
+<<<<<<< HEAD
         $coordinates = $data[$field] ?? null;
         if (\is_array($coordinates)) {
             $data[$latColumn] = self::normalizeCoordinate($coordinates['latitude'] ?? null);
@@ -398,5 +439,8 @@ trait HasCoordinatePicker
         }
 
         return is_numeric($value) ? (float) $value : null;
+=======
+        return CoordinatePickerHelpers::extractCoordinates($data, $field, $latColumn, $lngColumn);
+>>>>>>> laraxot/dev
     }
 }

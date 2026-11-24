@@ -7,9 +7,9 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/footer_blocks.php
 // Cms txt.fields.footer_blocks — LangServiceProvider SSoT.
 return [
-    'label' => 'Blocchi Footer',
-    'placeholder' => 'Contenuti del piè di pagina',
-    'helper_text' => 'Elementi da includere nel footer del sito',
+    'label' => 'Footer Blocks',
+    'placeholder' => 'Footer contents',
+    'helper_text' => 'Items to include in the site footer',
     'tooltip' => '',
     'description' => '',
 ];

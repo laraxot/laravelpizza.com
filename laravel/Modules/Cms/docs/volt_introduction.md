@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: volt_introduction
 canonical: ../../../Themes/docs/shared-components/volt-introduction.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/volt-introduction.md

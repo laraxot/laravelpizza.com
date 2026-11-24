@@ -16,8 +16,6 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: superseded
-superseded_by: phpmd-phpinsights-corrections.md
 ---
 
 # PHPMD e PHP Insights Corrections - 2025-01-22

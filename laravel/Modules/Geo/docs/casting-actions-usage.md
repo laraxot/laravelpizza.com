@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "casting actions usage"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Uso delle Azioni di Cast Xot
@@ -156,3 +155,11 @@ $percentage = SafeFloatCastAction::castAsPercentage($mixedValue);
 - [Azioni Cast Xot](../../Xot/app/Actions/Cast)
 
 ---
+title: "casting actions usage"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "casting actions usage"
+issues: []
+discussions: []

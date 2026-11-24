@@ -183,7 +183,7 @@ CAST(JSON_UNQUOTE(JSON_EXTRACT(extra_attributes, '$.anno')) AS SIGNED) = ?
 
 **IndennitaResponsabilita**:
 - [README](laravel/Modules/IndennitaResponsabilita/docs/README.md)
-- [Quick Start](laravel/Modules/IndennitaResponsabilita/docs/QUICK-START.md)
+- [Quick Start](laravel/Modules/IndennitaResponsabilita/docs/quick-start.md)
 - [Analysis Summary](laravel/Modules/IndennitaResponsabilita/docs/analysis-summary.md)
 - [Refactoring Plan](laravel/Modules/IndennitaResponsabilita/docs/refactoring-action-plan.md) - 18 tasks
 - [Best Practices](laravel/Modules/IndennitaResponsabilita/docs/best-practices.md)

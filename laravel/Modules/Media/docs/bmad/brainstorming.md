@@ -12,7 +12,6 @@ related:
   - ./brainstorming/module-opportunities.md
   - ./epics/module-roadmap.md
   - ./coverage.md
-status: draft
 ---
 
 # Media - brainstorming
@@ -63,6 +62,19 @@ status: draft
 |---|---|
 | Clone annidato `Activity/Activity/` | fuori scope (vedi story 5.249) |
 | Refactor proposto in architettura | da marcare esplicitamente come proposta non applicata |
+
+## Opzioni sui finding dell'audit 2026-11-16
+
+Evidenze in [audits/media-audit.md](./audits/media-audit.md); decisioni in [decision-log.md](./decision-log.md).
+
+| Opzione | Idea | Pro | Contro |
+|---|---|---|---|
+| O1 | Collection «documentale» protetta (D-3, B) | protegge solo ciò che è prova | serve classificare le collection esistenti |
+| O2 | `SoftDeletes` su `Media` (D-3, A) | cancellazione reversibile ovunque | il file su disco resta |
+| O3 | Cancellare il codice senza caller (D-5) | meno superficie d'attacco | se serve in futuro va riscritto con policy |
+| O4 | Spostare la diagnostica AWS/S3 in un modulo ops con guard (D-4) | confini più chiari | migrazione di 2 pagine e delle relative Action |
+
+Domande aperte per il committente: quali collection contengono allegati-prova? Lo streaming video e la conversione FFmpeg servono ancora?
 
 ## Vedi anche
 

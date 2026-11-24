@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -32,7 +36,10 @@ Consolidated from **8** individual files.
 
 *Consolidated from: `class-inheritance-best-practices.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questo documento definisce le best practices per l'ereditarietà delle classi nel sistema <nome progetto>, con particolare attenzione alle classi che estendono `XotBasePage`.
 
 ## Analisi dell'Ereditarietà di XotBasePage
@@ -155,7 +162,7 @@ abstract class XotBasePage extends Page implements HasForms
 {
     use TransTrait;
     use InteractsWithForms;
-    
+
     // ...
 }
 ```
@@ -187,7 +194,7 @@ class SendSmsPage extends XotBasePage
 class SendSmsPage extends XotBasePage implements HasForms
 {
     use InteractsWithForms;
-    
+
     // Implementazione...
 }
 ```
@@ -228,7 +235,10 @@ Seguire queste best practices garantisce un codice più pulito, manutenibile e m
 
 *Consolidated from: `class-inheritance-best-practices.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questo documento definisce le best practices per l'ereditarietà delle classi nel sistema , con particolare attenzione alle classi che estendono `XotBasePage`.
 Questo documento definisce le best practices per l'ereditarietà delle classi nel sistema <nome progetto>, con particolare attenzione alle classi che estendono `XotBasePage`.
 
@@ -241,7 +251,7 @@ abstract class XotBasePage extends Page implements HasForms
 {
     use TransTrait;
     use InteractsWithForms;
-    
+
     // ...
 }
 ```
@@ -273,7 +283,7 @@ class SendSmsPage extends XotBasePage
 class SendSmsPage extends XotBasePage implements HasForms
 {
     use InteractsWithForms;
-    
+
     // Implementazione...
 }
 ```
@@ -694,7 +704,10 @@ grep -r --include="*.php" "extends XotBasePage implements HasForms" Modules/
 
 *Consolidated from: `class_inheritance_best_practices.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questo documento definisce le best practices per l'ereditarietà delle classi nel sistema <nome progetto>, con particolare attenzione alle classi che estendono `XotBasePage`.
 
 ## Analisi dell'Ereditarietà di XotBasePage
@@ -858,7 +871,7 @@ grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/htm
 grep -r --include="*.php" "extends XotBasePage implements HasForms" [project-root]/laravel/Modules/
 grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/_bases/<nome repository>/laravel/Modules/
 grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/saluteora/laravel/Modules/
-grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/
+grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/_bases/base_techplanner_fila5/laravel/Modules/
 ```
 
 ## Riferimenti

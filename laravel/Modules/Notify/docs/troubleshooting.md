@@ -7,8 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Troubleshooting Notification Issues in Laravel Modules
@@ -56,7 +59,7 @@ This document provides guidance on diagnosing and resolving common issues encoun
 
 ## Links to Related Documentation
 - [Notify Module Index](./index.md)
-- [Architecture Overview](./ARCHITECTURE.md)
+- [Architecture Overview](./architecture.md)
 - [Notification Channels Implementation](./notification_channels_implementation.md)
 - [Email Templates](./email_templates.md)
 - [SMS Implementation](./sms_implementation.md)

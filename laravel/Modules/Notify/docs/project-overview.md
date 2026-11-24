@@ -3,8 +3,14 @@ title: "🏛️ FIXCITY - Civic Engagement Platform"
 type: concept
 tags: [project, overview]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+qmd: "project-overview 🏛️ fixcity - civic engagement platform"
 qmd: "project-overview 🏛️ ptv - civic engagement platform"
+=======
+updated: 2026-11-23
+qmd: "project-overview 🏛️ fixcity - civic engagement platform"
+>>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
@@ -24,7 +30,6 @@ related:
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-status: draft
 ---
 
 # 🏛️ FIXCITY - Civic Engagement Platform
@@ -557,7 +562,7 @@ php artisan serve
 - GitHub Discussions (features)
 
 ### Contributing
-See `contributing.md`
+See `CONTRIBUTING.md`
 
 ### License
 MIT (to be confirmed)

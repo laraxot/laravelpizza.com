@@ -1,3 +1,14 @@
+---
+title: "json usage 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "json usage 1"
+issues: []
+discussions: []
+---
+
 # Utilizzo del file JSON dei comuni
 
 ## Contesto

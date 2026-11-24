@@ -54,7 +54,7 @@ Creates all `.planning/` artifacts:
 - `config.json` — workflow mode (interactive/yolo)
 - `research/` — domain research (if selected)
 - `REQUIREMENTS.md` — scoped requirements with REQ-IDs
-- `ROADMAP.md` — phases mapped to requirements
+- `roadmap.md` — phases mapped to requirements
 - `STATE.md` — project memory
 
 Usage: `/gsd-new-project`
@@ -84,7 +84,7 @@ Usage: `/gsd-discuss-phase 2`
 Comprehensive ecosystem research for niche/complex domains.
 
 - Discovers standard stack, architecture patterns, pitfalls
-- Creates RESEARCH.md with "how experts build this" knowledge
+- Creates research.md with "how experts build this" knowledge
 - Use for 3D, games, audio, shaders, ML, and other specialized domains
 - Goes beyond "which library" to ecosystem knowledge
 
@@ -120,7 +120,7 @@ Execute all plans in a phase.
 - Groups plans by wave (from frontmatter), executes waves sequentially
 - Plans within each wave run in parallel via Task tool
 - Verifies phase goal after all plans complete
-- Updates REQUIREMENTS.md, ROADMAP.md, STATE.md
+- Updates REQUIREMENTS.md, roadmap.md, STATE.md
 
 Usage: `/gsd-execute-phase 5`
 
@@ -132,19 +132,19 @@ Execute small, ad-hoc tasks with GSD guarantees but skip optional agents.
 Quick mode uses the same system with a shorter path:
 - Spawns planner + executor (skips researcher, checker, verifier)
 - Quick tasks live in `.planning/quick/` separate from planned phases
-- Updates STATE.md tracking (not ROADMAP.md)
+- Updates STATE.md tracking (not roadmap.md)
 
 Use when you know exactly what to do and the task is small enough to not need research or verification.
 
 Usage: `/gsd-quick`
-Result: Creates `.planning/quick/NNN-slug/PLAN.md`, `.planning/quick/NNN-slug/SUMMARY.md`
+Result: Creates `.planning/quick/NNN-slug/plan.md`, `.planning/quick/NNN-slug/summary.md`
 
 ### Roadmap Management
 
 **`/gsd-add-phase <description>`**
 Add new phase to end of current milestone.
 
-- Appends to ROADMAP.md
+- Appends to roadmap.md
 - Uses next sequential number
 - Updates phase directory structure
 
@@ -274,7 +274,7 @@ Usage: `/gsd-check-todos api`
 **`/gsd-verify-work [phase]`**
 Validate built features through conversational UAT.
 
-- Extracts testable deliverables from SUMMARY.md files
+- Extracts testable deliverables from summary.md files
 - Presents tests one at a time (yes/no responses)
 - Automatically diagnoses failures and creates fix plans
 - Ready for re-execution if issues found
@@ -298,7 +298,7 @@ Create phases to close gaps identified by audit.
 
 - Reads MILESTONE-AUDIT.md and groups gaps into phases
 - Prioritizes by requirement priority (must/should/nice)
-- Adds gap closure phases to ROADMAP.md
+- Adds gap closure phases to roadmap.md
 - Ready for `/gsd-plan-phase` on new phases
 
 Usage: `/gsd-plan-milestone-gaps`
@@ -362,7 +362,7 @@ Usage: `/gsd-join-discord`
 ```
 .planning/
 ├── PROJECT.md            # Project vision
-├── ROADMAP.md            # Current phase breakdown
+├── roadmap.md            # Current phase breakdown
 ├── STATE.md              # Project memory & context
 ├── RETROSPECTIVE.md      # Living retrospective (updated per milestone)
 ├── config.json           # Workflow mode & gates
@@ -379,10 +379,10 @@ Usage: `/gsd-join-discord`
 │       └── 02-core-features/
 ├── codebase/             # Codebase map (brownfield projects)
 │   ├── STACK.md          # Languages, frameworks, dependencies
-│   ├── ARCHITECTURE.md   # Patterns, layers, data flow
+│   ├── architecture.md   # Patterns, layers, data flow
 │   ├── STRUCTURE.md      # Directory layout, key files
 │   ├── CONVENTIONS.md    # Coding standards, naming
-│   ├── TESTING.md        # Test setup, patterns
+│   ├── testing.md        # Test setup, patterns
 │   ├── INTEGRATIONS.md   # External services, APIs
 │   └── CONCERNS.md       # Tech debt, known issues
 └── phases/
@@ -495,6 +495,6 @@ Example config:
 
 - Read `.planning/PROJECT.md` for project vision
 - Read `.planning/STATE.md` for current context
-- Check `.planning/ROADMAP.md` for phase status
+- Check `.planning/roadmap.md` for phase status
 - Run `/gsd-progress` to check where you're up to
 </reference>

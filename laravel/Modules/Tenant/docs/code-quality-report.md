@@ -7,17 +7,16 @@ updated: 2026-09-26
 qmd: "code quality report"
 issues: []
 discussions: []
-status: draft
 ---
 
-# Code quality: modulo Tenant
+# Code quality — modulo Tenant
 
 Report locale (2026-07-17). Metodo: `phpstan analyse` livello max, `phpmd` (ruleset codesize+unusedcode), grep mirati (TODO/FIXME/@deprecated, dd()/dump(), facade in app/Actions, extends Filament diretto), rapporto file test/app.
 
 ## Numeri
 
 - File in `app/`: 45
-- File di test: 34: rapporto test/app: 75%
+- File di test: 34 — rapporto test/app: 75%
 - File con TODO/FIXME/@deprecated: 0
 - PHPStan: 0 errori (livello max, sweep repo-wide 2026-07-16/17)
 - Violazioni PHPMD (codesize+unusedcode): 19
@@ -66,11 +65,11 @@ Report locale (2026-07-17). Metodo: `phpstan analyse` livello max, `phpmd` (rule
 
 
 
-## Come migliorare: modifiche effettive da fare
+## Come migliorare — modifiche effettive da fare
 
 ### 1. Rimuovere le Facade da `app/Actions/`
 
-Regola del progetto (skill `queueable-action-trait`): nelle Action **niente Facade**, le dipendenze si iniettano nel costruttore: il container le risolve automaticamente quando l'Action viene chiamata con `app(XxxAction::class)->execute(...)`.
+Regola del progetto (skill `queueable-action-trait`): nelle Action **niente Facade**, le dipendenze si iniettano nel costruttore — il container le risolve automaticamente quando l'Action viene chiamata con `app(XxxAction::class)->execute(...)`.
 
 Facade usate in questo modulo e relativa dipendenza da iniettare al loro posto:
 
@@ -79,7 +78,7 @@ Facade usate in questo modulo e relativa dipendenza da iniettare al loro posto:
 | `Config::` | `Illuminate\Contracts\Config\Repository` |
 | `File::` | `Illuminate\Filesystem\Filesystem` |
 
-**Esempio concreto**: `Modules/Tenant/app/Actions/Translations/TranslateTenantKeyAction.php`:
+**Esempio concreto** — `Modules/Tenant/app/Actions/Translations/TranslateTenantKeyAction.php`:
 
 ```php
 // PRIMA
@@ -115,7 +114,7 @@ class XxxAction
 }
 ```
 
-Vantaggio pratico: l'Action diventa testabile senza `Http::fake()` globale: nei test Pest si passa un mock/fake del client via `app()->instance(HttpFactory::class, $fakeClient)` o via binding nel service provider di test.
+Vantaggio pratico: l'Action diventa testabile senza `Http::fake()` globale — nei test Pest si passa un mock/fake del client via `app()->instance(HttpFactory::class, $fakeClient)` o via binding nel service provider di test.
 
 File da convertire in questo modulo (elenco sopra in "Numeri"), uno alla volta, con `php -l` + PHPStan L max sul singolo file dopo ogni modifica.
 

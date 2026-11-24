@@ -3,7 +3,11 @@ title: "packages laravel core"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "packages laravel core"
 issues: []
 discussions: []
@@ -151,7 +155,7 @@ XDEBUG_MODE=off ./vendor/bin/pest --coverage         # con coverage
 XDEBUG_MODE=off ./vendor/bin/pest --coverage --min=80
 
 # Modulo specifico
-XDEBUG_MODE=off ./vendor/bin/pest Modules/Quaeris/tests
+XDEBUG_MODE=off ./vendor/bin/pest Modules/<nome progetto>/tests
 XDEBUG_MODE=off ./vendor/bin/pest Modules/App/tests
 
 # Via composer
@@ -299,7 +303,7 @@ Espone l'applicazione all'AI (Claude, ecc.) tramite MCP protocol.
 ```php
 use Laravel\Mcp\Server;
 
-$server = new Server('quaeris-surveys');
+$server = new Server('<nome progetto>-surveys');
 $server = new Server('this-project-surveys');
 
 // Resources (dati che l'AI puo leggere)

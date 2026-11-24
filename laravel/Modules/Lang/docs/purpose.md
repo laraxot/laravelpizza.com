@@ -1,5 +1,5 @@
 ---
-title: "Lang: scopo del modulo e come raggiungerlo meglio"
+title: "Lang — scopo del modulo e come raggiungerlo meglio"
 type: concept
 status: active
 created: 2026-09-02
@@ -7,18 +7,15 @@ tags: [lang, purpose, traduzioni, label, filament, chiavi]
 qmd: "lang scopo modulo traduzioni label placeholder helper text filament chiavi mancanti fallback"
 updated: 2026-09-02
 issues:
-  # DA CREARE: `gh` non autenticato: mai numeri inventati.
+  # DA CREARE — `gh` non autenticato: mai numeri inventati.
   # gh issue create --repo provtv/module_lang_fila5 --title "<argomento del file>"
   - "https://github.com/provtv/module_lang_fila5/issues/"
 discussions:
-  # DA CREARE: vedi sopra.
+  # DA CREARE — vedi sopra.
   - "https://github.com/provtv/module_lang_fila5/discussions/"
 ---
 
-# Lang: perche' esiste
-
-Documento breve. Analisi completa (confini, switcher, scrittura chiavi): [scopo.md](./scopo.md).
-Indice: [00-INDEX.md](./00-index.md).
+# Lang — perche' esiste
 
 ## Lo scopo in una frase
 
@@ -29,7 +26,7 @@ scrive dentro una classe, si dichiara in un file di lingua.**
 
 - `LangBase`, `TranslationFile`: i file di traduzione sono **gestibili**, non solo
   presenti su disco.
-- 14 Action, 1 Widget, 62 file PHP: e **704 documenti** in `docs/`.
+- 14 Action, 1 Widget, 62 file PHP — e **704 documenti** in `docs/`.
 
 Quel rapporto (62 file di codice, 704 di documentazione) e' il segnale piu' onesto del
 modulo: il problema che risolve e' fatto di regole e convenzioni molto piu' che di
@@ -45,7 +42,7 @@ Non e' pedanteria. Tre conseguenze concrete:
 
 1. Un'etichetta scritta inline e' invisibile a chi cura le traduzioni.
 2. La stessa cosa finisce chiamata in due modi in due schermate.
-3. Nessuno puo' rivedere i testi senza toccare il codice: e in una PA i testi li
+3. Nessuno puo' rivedere i testi senza toccare il codice — e in una PA i testi li
    rivede chi non programma.
 
 E' anche il motivo per cui gli array di `getFormSchema()` sono **associativi**: la
@@ -80,7 +77,7 @@ famiglia di guardie di `xot:check-accessor-twins`.
 
 ### 4. Italiano prima di tutto, ma le chiavi in inglese
 
-Le chiavi e i nomi di file restano in inglese: e' la regola di naming del progetto -
+Le chiavi e i nomi di file restano in inglese — e' la regola di naming del progetto —
 mentre i valori sono in italiano, che e' la lingua dell'amministrazione. Confondere i
 due piani produce chiavi come `scheda.campi.data_inizio`, che nessun modulo condiviso
 puo' riusare.
@@ -91,7 +88,7 @@ Come Xot, Notify, Activity e UI: `index.md` a una schermata, un canonico per arg
 Questo modulo, che esiste per rendere le parole gestibili, e' quello che ne ha di piu'
 fuori controllo.
 
-## Confini: cosa **non** appartiene a Lang
+## Confini — cosa **non** appartiene a Lang
 
 - I **testi delle comunicazioni** verso i cittadini: Notify (sono template con dati,
   non etichette di interfaccia).
@@ -100,5 +97,10 @@ fuori controllo.
 
 ## Collegamenti
 
-- `docs/wiki/rules/no-filament-labels.md`: il divieto e il perche'
-- `docs/wiki/rules/filament-table-columns-array-keys.md`: chiavi associative
+- `docs/wiki/rules/no-filament-labels.md` — il divieto e il perche'
+- `docs/wiki/rules/filament-table-columns-array-keys.md` — chiavi associative
+
+## Documentazione correlata
+
+- [Audit BMAD](./bmad/audit.md)
+- [ECC](./ecc/lang-ecc-audit.md)

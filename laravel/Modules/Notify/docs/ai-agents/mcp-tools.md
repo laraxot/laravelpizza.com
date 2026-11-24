@@ -3,11 +3,14 @@ title: "mcp tools"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "mcp tools"
 issues: []
 discussions: []
-status: draft
 ---
 
 # MCP Tools
@@ -32,6 +35,5 @@ La configurazione MCP si trova in:
 
 **Di ritorno:**
 - → [CLAUDE.md - MCP Tools Section](../../CLAUDE.md)
-- → [CLAUDE.md - MCP Tools Section](../CLAUDE.md)
 - → [mcp.md](mcp.md)
 - → [INDEX](index.md)

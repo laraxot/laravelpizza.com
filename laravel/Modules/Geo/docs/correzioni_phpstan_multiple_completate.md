@@ -1,13 +1,16 @@
 ---
-title: "correzioni phpstan multiple completate"
+title: "Correzioni Phpstan Multiple Completate"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
-qmd: "correzioni phpstan multiple completate"
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+qmd: "Correzioni Phpstan Multiple Completate"
 issues: []
 discussions: []
-status: draft
 ---
 
 # ✅ CORREZIONI PHPStan MULTIPLE COMPLETATE
@@ -154,6 +157,15 @@ array_merge(
 4. **Code review**: Controlli automatici obbligatori
 
 ---
+
+title: "CORREZIONI PHPSTAN MULTIPLE COMPLETATE"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "CORREZIONI PHPSTAN MULTIPLE COMPLETATE"
+issues: []
+discussions: []
 ## ✅ SESSIONE BUG FIXING COMPLETATA
 
 **17 errori PHPStan risolti** attraverso 3 moduli con implementazione di:

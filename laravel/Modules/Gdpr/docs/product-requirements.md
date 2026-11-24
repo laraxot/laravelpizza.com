@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "product requirements"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Product Requirements Document (PRD)
@@ -24,6 +23,15 @@ status: draft
 | **Repository** | laraxot/module_gdpr_fila5 |
 
 ---
+
+title: "product requirements"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "product requirements"
+issues: []
+discussions: []
 ## 1. Panoramica del Prodotto
 
 ### Descrizione Breve

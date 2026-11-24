@@ -4,8 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Feature\Auth;
 
+use Modules\Cms\Tests\TestCase;
+
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\get;
+
+uses(TestCase::class);
 
 // Helper (createTestUser, generateUniqueEmail, getUserClass) su Modules\Cms\Tests\TestCase, legato da tests/Pest.php.
 // Use $this->createTestUser()

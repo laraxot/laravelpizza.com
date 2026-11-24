@@ -3,11 +3,14 @@ title: "notification bulk action implementation"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notification bulk action implementation"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Implementation of Notification Bulk Action in Client Resource
@@ -146,4 +149,17 @@ After implementation, users can:
 - Enhanced reporting and analytics for sent notifications
 
 ---
+
+title: "notification bulk action implementation"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "notification bulk action implementation"
+issues: []
+discussions: []
+<<<<<<< HEAD
 *Documento conforme agli standard Laraxot - DRY + KISS + SOLID*
+=======
+*Documento conforme agli standard Laraxot - DRY + KISS + SOLID*
+>>>>>>> laraxot/dev

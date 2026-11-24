@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "bad practices"
 issues: []
 discussions: []
-status: superseded
-superseded_by: bad-practices.md
 ---
 
 # Bad Practices – AI

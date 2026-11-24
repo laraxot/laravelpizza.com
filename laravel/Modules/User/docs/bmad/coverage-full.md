@@ -8,16 +8,14 @@ qmd: "coverage-full coverage full"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "../00-index-indice-documentazione-modulo-user.md"
+  - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
-  - "../2fa-guide.md"
+  - "./2fa-guide.md"
   - "./2fa.md"
-  - "../accessor-delegation-pattern.md"
-  - "../actions-path-convention.md"
-  - "../actions-path-convention-convenzione-percorsi.md"
+  - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-status: superseded
-superseded_by: ../coverage-full.md
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
 ---
 
 
@@ -7830,3 +7828,4 @@ Database connection [ptvx] not configured.
 
   Tests:    321 failed, 2 risky, 4 skipped, 413 passed (1126 assertions)
   Duration: 170.56s
+

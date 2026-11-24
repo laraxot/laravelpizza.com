@@ -1,16 +1,9 @@
 ---
 title: "Struttura canonica della documentazione"
+qmd: "xot governance docs structure md"
 type: note
-updated: 2026-10-09
-tags: [docs, xot, governance]
-qmd: "struttura canonica della documentazione xot"
-status: superseded
-superseded_by: ../conventions/docs-organization.md
+tags: [documentation]
 ---
-
-> Documento storico. Usare [docs-organization.md](../conventions/docs-organization.md),
-> che risolve il conflitto tra gli indici multipli e definisce ownership e
-> integrazione Second Brain.
 
 # Struttura canonica della documentazione
 

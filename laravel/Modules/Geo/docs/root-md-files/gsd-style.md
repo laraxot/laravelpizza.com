@@ -6,7 +6,7 @@ This document defines the behavioral and documentation standards for AI agents w
 
 ### 1. Context Engineering
 - **Fresh Context**: Every task execution MUST start with a fresh context. Do not accumulate irrelevant history.
-- **Artifacts over Memory**: Rely on `.planning/PROJECT.md`, `ROADMAP.md`, and `STATE.md` as the source of truth, not previous chat history.
+- **Artifacts over Memory**: Rely on `.planning/PROJECT.md`, `roadmap.md`, and `STATE.md` as the source of truth, not previous chat history.
 - **Granularity**: Keep plans atomic. One plan = One logical unit of work.
 
 ### 2. XML Planning Convention

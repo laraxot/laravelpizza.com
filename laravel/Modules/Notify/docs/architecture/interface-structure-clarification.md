@@ -4,7 +4,11 @@ type: concept
 tags: [notify, docs, architecture, interface, structure, clarification]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify documentazione architecture interface structure clarification chiarimento sulla struttura delle interfacce frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -16,7 +20,6 @@ related:
   - ../conventions/README.md
   - ../rules/README.md
   - ../best-practices/naming-conventions.md
-status: draft
 ---
 # Chiarimento sulla Struttura delle Interfacce 
 

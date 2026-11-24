@@ -4,6 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Providers;
 
+<<<<<<< HEAD
+use Illuminate\Contracts\Http\Kernel;
+use Illuminate\Foundation\Http\Kernel as HttpKernel;
+=======
+>>>>>>> laraxot/dev
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\File;
@@ -15,6 +20,10 @@ use Livewire\Volt\Volt;
 use Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter;
 use Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRoutes;
 use Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect;
+<<<<<<< HEAD
+use Modules\Cms\Http\Middleware\RedirectUnlocalizedPath;
+=======
+>>>>>>> laraxot/dev
 use Modules\Cms\Http\Middleware\SetFolioLocale;
 use Modules\Tenant\Actions\Config\ResolveTenantConfigValueAction;
 use Modules\Xot\Datas\XotData;
@@ -47,6 +56,15 @@ class FolioVoltServiceProvider extends ServiceProvider
         $this->app->booted(function (): void {
             $this->registerFolioPaths();
         });
+<<<<<<< HEAD
+
+        // /events → /it/events (PRD FR-15): vedi RedirectUnlocalizedPath per il perché di un middleware globale.
+        $kernel = $this->app->make(Kernel::class);
+        if ($kernel instanceof HttpKernel) {
+            $kernel->pushMiddleware(RedirectUnlocalizedPath::class);
+        }
+=======
+>>>>>>> laraxot/dev
     }
 
     /**

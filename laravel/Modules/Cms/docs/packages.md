@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "packages"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Pacchetti del Modulo Cms
@@ -16,7 +15,7 @@ status: draft
 
 ### Core
 - [laraxot/module_xot_fila5](../xot/docs/packages.md) - Modulo base per funzionalità comuni
-- [laraxot/module_ui](../../UI/docs/packages.md) - Componenti UI e temi
+- [laraxot/module_ui](../ui/docs/packages.md) - Componenti UI e temi
 - [laraxot/module_tenant_fila5](../../Tenant/docs/packages.md) - Gestione multi-tenant
 - [laraxot/module_user_fila5](../../User/docs/packages.md) - Gestione utenti e permessi
 - [laraxot/module_lang_fila5](../../Lang/docs/packages.md) - Gestione lingue e traduzioni

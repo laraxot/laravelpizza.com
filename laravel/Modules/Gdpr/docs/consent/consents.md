@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "consents"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../consents.md
 ---
 
 https://packagist.org/packages/dialect/laravel-gdpr-compliance

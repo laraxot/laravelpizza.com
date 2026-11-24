@@ -21,16 +21,11 @@ class SocialShareWidget extends XotBaseSchemaWidget
      */
     public ?array $data = [];
 
-    /**
-     * The view for the widget.
-     *
-     * @var view-string
-     */
-    protected string $view;
-
     public function __construct()
     {
-        /** @var view-string $view */
+        /**
+         * @phpstan-var view-string
+         */
         $view = 'seo::filament.widgets.social-share';
         $this->view = $view;
 

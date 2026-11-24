@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "homepage architecture overview"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Architettura Homepage - Panoramica Sistema

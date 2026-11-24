@@ -7,10 +7,9 @@ type: concept
 tags: [second-brain, stub-canonical-xot]
 created: "2026-05-22"
 updated: "2026-05-22"
-status: draft
 ---
 
-# Contratto wiki locale: stub
+# Contratto wiki locale — stub
 
 Politica LLM‑wiki condivisa: **fonte canonica** con il corpo del contratto nella wiki modulo **Xot**:
 

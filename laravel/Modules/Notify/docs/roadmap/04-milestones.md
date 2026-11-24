@@ -3,12 +3,14 @@ title: "04 milestones"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "04 milestones"
 issues: []
 discussions: []
-status: superseded
-superseded_by: milestones.md
 ---
 
 # Milestones - Notify

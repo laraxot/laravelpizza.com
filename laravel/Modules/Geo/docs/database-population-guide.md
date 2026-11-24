@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "database population guide"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Guida al Popolamento Database - Laraxot <nome progetto>
@@ -341,5 +340,14 @@ php artisan tinker
 - [Testing Guidelines](../../User/docs/testing.md)
 
 ---
+
+title: "database population guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "database population guide"
+issues: []
+discussions: []
 **Versione**: 1.0
 **Autore**: Sistema Laraxot

@@ -3,12 +3,14 @@ title: "template examples"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "template examples"
 issues: []
 discussions: []
-status: superseded
-superseded_by: template-examples.md
 ---
 
 # Esempi di Template Email

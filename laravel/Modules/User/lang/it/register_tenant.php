@@ -187,6 +187,7 @@ return [
         ],
         'register' => [
             'icon' => 'register',
+            'label' => 'Registrati',
         ],
         'profile' => [
             'icon' => 'profile',

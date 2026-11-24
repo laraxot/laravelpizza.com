@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "chaos monkey tenant isolation checklist"
 related:
   - "./phpstan-corrections-january.md"
-status: draft
 ---
 # Chaos Monkey Tenant Isolation Checklist (Tenant)
 

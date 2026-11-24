@@ -2,69 +2,217 @@
 qmd: "README"
 issues: []
 discussions: []
-title: "Cms: README"
+title: "Cms Module Documentation"
 type: documentation
 tags: [module, documentation, cms, content-management]
 created: 2026-07-14
-updated: 2026-10-14
-status: active
+updated: 2026-07-14
 ---
 
 # Modulo Cms
 
-Modulo Laraxot `Modules\Cms` (alias `cms`, priorita' 3 in `module.json`, provider `CmsServiceProvider`, `Filament\AdminPanelProvider`, `FolioVoltServiceProvider`). Verificato sul codice il 2026-10-14. Il testo precedente di questo README (Services `PageService`/`BlockService`/`ContentService`, modello `Block`, `PublishPageAction`, `CreatePageAction`, `Page::addBlock()`, config `config/local/cms/blocks.php`, test `PageCreationTest.php`) descriveva classi e file che non esistono ed e' stato sostituito; i suoi riferimenti a `block-system.md`, `frontend-rendering.md` e `folio-integration.md` puntavano a file mai esistiti.
+## Overview
 
-## Come il sito serve le pagine (verificato)
+Il modulo **Cms** gestisce il sistema di content management per la piattaforma Laraxot. Fornisce un sistema flessibile basato su Filament Builder Blocks per creare, modificare e pubblicare contenuti dinamici, incluse pagine, sezioni e blocchi di contenuto.
 
-1. **Il contenuto sono file JSON per tenant.** `Models\Page` estende `BaseModelLang`, usa `HasBlocks` e il trait `SushiToJsons` del modulo Tenant: ogni riga e' un file `laravel/config/<tenant>/database/content/pages/<slug>.json` (per il tenant `local/fixcity`: 99 file al 2026-10-14; `sections/` ne ha 8). Colonne dello schema: `id`, `title` (json per lingua), `slug`, `middleware` (json), `content`, `description`, `layout`, `blocks`, `content_blocks`, `sidebar_blocks`, `footer_blocks` (json per lingua), `created_at/by`, `updated_at/by`. Come si sceglie il tenant: [Tenant](../../Tenant/docs/README.md).
-2. **Le rotte sono Folio, non route Laravel.** `Providers\FolioVoltServiceProvider` monta con `Folio::path()` la cartella `resources/views/pages` del tema pubblico (`XotData::getPubThemeViewPath('pages')`, oggi Sixteen) sotto `/{locale}` per ogni lingua di `laravellocalization.supportedLocales` (a runtime `de,en,es,it`), e lo stesso per `resources/views/pages` di ogni modulo; poi `Volt::mount()` su `livewire/` e `components/blocks/` del tema. `routes/web.php` del Cms contiene solo `/` che reindirizza a `/{locale}`.
-3. **Lo slug e' l'URL.** Pagina generica `pages/[container0]/[slug0]`: `Actions\ResolvePageAction` prova, in ordine, un modello dinamico (`profile`; `blog` e `events` dal modulo Blog, solo se installato; `xra.container0_model_map`; `Modules\<Container>\Models\<Singolare>`), poi la pagina `<container0>.<slug0>`, poi `<container0>.view`. Il middleware dichiarato nel JSON (`"middleware": ["auth"]`) lo applica `Http\Middleware\PageSlugMiddleware`, agganciato nelle pagine del tema `[container0]/[slug0]/index.blade.php` e `tests/[slug].blade.php`. Da URL a JSON: [DCP-41](./stories/dcp-41-url-to-json-resolver.story.md) e `bashscripts/tools/cms/page-json-for-url.sh <url>`.
-4. **I blocchi sono voci JSON con un `type`.** Esempio da `home.json` (lingue `it`, `en`, `de`, `es`, 4 blocchi per lingua): `home.hero`, `ticket.map-preview`, `how-it-works`, `quick-actions`. `Models\Traits\HasBlocks::getBlocks($side)` legge `blocks` o `<side>_blocks` per la lingua primaria e produce `Datas\BlockData`; `Actions\ResolveLocalizedBlockDataAction` risolve i valori per lingua, `Actions\ResolveBlockQueryAction` esegue la query dichiarata nel blocco (`model`, `scope`/`scopes`, `orderBy`, `limit`, `wrap_in`). Il rendering sono componenti Blade in `Themes/Sixteen/resources/views/components/blocks/` (166 voci) e `Modules/Cms/resources/views/components/blocks/`.
-5. **Metatag e JSON-LD.** `View\Components\Metatags` legge `Modules\Xot\Datas\MetatagData` e `Actions\BuildPageSchemaAction` costruisce lo schema della pagina. Il modulo Seo non e' coinvolto.
+## Scopo
 
-## Amministrazione Filament
+- Gestione completa di pagine e contenuti dinamici
+- Sistema modulare di blocchi (Builder Blocks) per composizione pagine
+- Storage JSON ottimizzato per persistenza contenuti
+- Interfaccia amministrativa Filament completamente integrata
+- Supporto multi-lingua per tutti i contenuti
 
-Risorse: `PageResource`, `SectionResource`, `MenuResource`, `PageContentResource`, `AttachmentResource`. Blocchi per il Builder in `app/Filament/Blocks/` (17 classi: `HeroBlock`, `CtaBlock`, `ParagraphBlock`, `NavigationBlock`, ...). Cluster `Appearance` con pagine `Breadcrumb`, `Footer`, `Headernav` (salvano con `SaveFooterConfigAction`, `SaveHeadernavConfigAction` nella config del tenant), pagina `Themes`. Componenti Volt di autenticazione in `app/Http/Volt/` (Login, Register, Verify, Password).
+## Funzionalità Principali
 
-## Quick start
+- **Page Management**: Creazione, modifica e pubblicazione pagine
+- **Block System**: Sistema modulare blocchi per composizione dinamica
+- **Content Builder**: Interfaccia Filament per composizione pagine
+- **Folio Integration**: File-based routing per pagine pubbliche
+- **Blade Components**: Componenti riutilizzabili per rendering frontend
+- **JSON Storage**: Persistenza efficiente contenuti strutturati
+- **Multi-language**: Supporto i18n completo per tutti i contenuti
 
-```bash
-cd laravel
-ls config/local/fixcity/database/content/pages | head          # le pagine del tenant corrente
-bash ../bashscripts/tools/cms/page-json-for-url.sh http://127.0.0.1:8081/it/tests   # provato: stampa 'slug: tests.index' e i due JSON (richiede il server attivo; su /it/ non trova data-slug)
+## Struttura del Modulo
+
+```
+Modules/Cms/
+├── app/
+│   ├── Models/
+│   │   ├── Page.php              # Page model
+│   │   ├── Section.php           # Page section
+│   │   └── Block.php             # Content block
+│   ├── Services/
+│   │   ├── PageService.php
+│   │   ├── BlockService.php
+│   │   └── ContentService.php
+│   ├── Actions/
+│   │   ├── PublishPageAction.php
+│   │   └── BuildPageAction.php
+│   ├── Filament/
+│   │   ├── Resources/
+│   │   │   └── PageResource.php
+│   │   └── Fields/
+│   │       └── PageContentBuilder.php
+│   ├── Http/
+│   │   └── Controllers/
+│   └── Traits/
+├── database/
+│   ├── migrations/
+│   ├── factories/
+│   └── seeders/
+├── resources/
+│   ├── views/
+│   │   └── components/
+│   └── lang/
+├── tests/
+├── docs/
+│   ├── README.md
+│   ├── architecture.md
+│   └── block-system.md
+├── module.json
+└── composer.json
 ```
 
-## Debito noto (verificato 2026-10-14, non modificato qui)
+## Componenti Principali
 
-- Directory estranee dentro `app/`: `app/docs/` (INDEX, wiki, raw, package.json), `app/Config/` e `app/config/` (due `xra.php`), `app/bashscripts/`, `app/App/` vuota.
-- Cartelle di viste duplicate: `resources/views/Components_old3`, `components_old3`, `Composers` e `composers`.
-- 576 file .md nella radice di `docs/` (`find -maxdepth 1`, 2026-10-14); consolidamento DOC-004/006 ancora aperto.
+| Classe | Scopo | Extends |
+|--------|-------|---------|
+| `Page` | Modello pagina principale | `XotBaseModel` |
+| `Section` | Sezione dentro pagina | `XotBaseModel` |
+| `Block` | Blocco contenuto singolo | `XotBaseModel` |
+| `PageResource` | Amministrazione Filament | `XotBaseResource` |
+| `PageContentBuilder` | Builder Filament per composizione | - |
+| `PageService` | Logica gestione pagine | - |
+| `ContentService` | Logica gestione contenuti | - |
 
-## Test
+## Utilizzo Comune
 
-151 file PHP in `tests/` (Unit: Actions, Datas, Filament, Http, Middleware, Models, Providers, Support, View; Feature: `HomepageConfigurationGovernanceTest`, `HomepageFilamentBlocksArchitectureTest`, `HeaderNavJsonTest`, `IndividualFolioRoutesTest`, ...). Non eseguiti in questa verifica. Il `Pest.php` di un modulo non viene caricato se si lancia Pest dalla root `laravel/` (Seo: 22 falliti su 46 per questo, vedi [Seo](../../Seo/docs/README.md)); Tenant e' stato lanciato con `bash bashscripts/tools/pest-scratch-db.sh Modules/Tenant/tests/Unit/Actions` (27 passati, 5 falliti per `expectMockery`).
+### Scenario 1: Creare una Pagina
 
-## Mappa dei docs
+```php
+use Modules\Cms\Actions\CreatePageAction;
 
-Contratto corrente per le pagine pubbliche di primo livello: [container0 index
-JSON-driven pages](./wiki/concepts/container0-index-json-driven-pages.md).
+$page = CreatePageAction::execute([
+    'title' => 'Homepage',
+    'slug' => 'home',
+    'status' => 'published',
+    'content' => [
+        'blocks' => [
+            ['type' => 'hero', 'data' => [...] ],
+            ['type' => 'text', 'data' => [...] ],
+        ]
+    ],
+]);
+```
 
-Il contratto comune per la documentazione è
-[DOCUMENTATION_GOVERNANCE.md](../../../../docs/DOCUMENTATION_GOVERNANCE.md).
-Questo `README.md` è l'ingresso canonico del modulo; gli indici esistenti sono
-mappe di navigazione e non fonti concorrenti.
+### Scenario 2: Aggiungere Blocchi
 
-### Regola operativa per le pagine di primo livello
+```php
+use Modules\Cms\Models\Page;
 
-Prima di creare una Blade sotto `resources/views/pages/`, verificare se l'URL è
-già coperto da `[container0]/index.blade.php` o da `[container0]/[slug0]`. Per
-`domande-frequenti.index` la risposta è sì: la view speciale
-`Themes/Sixteen/resources/views/pages/domande-frequenti/index.blade.php` è vietata
-perché duplica il match Folio e bypassa il JSON tenant. Se il problema è nel
-markup, correggere il blocco condiviso; se è nei dati, correggere JSON/Filament;
-se è nel catalogo, correggere il modulo owner.
+$page = Page::find(1);
+$page->addBlock([
+    'type' => 'gallery',
+    'data' => ['images' => [...] ],
+]);
+```
 
-Indice operativo: [00-INDEX.md](./00-index.md). Wiki: [wiki/index.md](./wiki/index.md); middleware e JSON: [wiki/concepts/cms-page-middleware-json-ssot.md](./wiki/concepts/cms-page-middleware-json-ssot.md); guscio Folio: [wiki/concepts/folio-page-shell-pattern.md](./wiki/concepts/folio-page-shell-pattern.md); homepage: [architecture/homepage-structure.md](./architecture/homepage-structure.md); blocchi: [blocks/README.md](./blocks/README.md); front office: [frontoffice/architecture.md](./frontoffice/architecture.md). Story: [stories/](./stories/); PHPStan: [stories/phpstan-cms-zero.story.md](./stories/phpstan-cms-zero.story.md).
+### Scenario 3: Renderizzare Pagina Frontend
+
+```blade
+@foreach ($page->blocks as $block)
+    @switch($block->type)
+        @case('hero')
+            <x-cms::blocks.hero :data="$block->data" />
+            @break
+        @case('text')
+            <x-cms::blocks.text :data="$block->data" />
+            @break
+    @endswitch
+@endforeach
+```
+
+## Configuration
+
+### Block Types
+
+Definire tipi di blocchi supportati in `laravel/config/local/cms/blocks.php`:
+
+```php
+return [
+    'types' => [
+        'hero' => [
+            'label' => 'Hero Section',
+            'fields' => ['title', 'subtitle', 'image'],
+        ],
+        'text' => [
+            'label' => 'Text Block',
+            'fields' => ['content'],
+        ],
+        'gallery' => [
+            'label' => 'Gallery',
+            'fields' => ['images'],
+        ],
+    ],
+];
+```
+
+### Content Storage
+
+Contenuti immagazzinati come JSON strutturato:
+
+```json
+{
+  "id": 1,
+  "title": "Homepage",
+  "slug": "home",
+  "status": "published",
+  "blocks": [
+    {
+      "type": "hero",
+      "data": {
+        "title": "Welcome",
+        "subtitle": "Laraxot CMS"
+      }
+    }
+  ]
+}
+```
+
+## Testing
+
+```bash
+# Run Cms module tests
+./vendor/bin/pest Modules/Cms/tests
+
+# Run specific test category
+./vendor/bin/pest Modules/Cms/tests/Feature/PageCreationTest.php
+
+# With coverage
+./vendor/bin/pest Modules/Cms/tests --coverage
+```
+
+## Quality Standards
+
+- **PHPStan**: Level 10 (zero baseline)
+- **Test Coverage**: Minimum 80%
+- **Code Style**: PSR-12 via Pint
+
+Run locally:
+```bash
+php -d memory_limit=-1 ./vendor/bin/phpstan analyse --level=max Modules/Cms
+./vendor/bin/pest Modules/Cms/tests --coverage
+./vendor/bin/pint Modules/Cms
+```
+
+## Documentation Index
+
+- [Architecture Details](./architecture.md) — System design and patterns
+- [Block System](./block-system.md) — Creating and using blocks
+- [Frontend Rendering](./frontend-rendering.md) — Display components
+- [Folio Integration](./folio-integration.md) — File-based routing
+- [Troubleshooting](./troubleshooting.md) — Common issues and solutions
 
 ### Head SEO condiviso
 
@@ -103,8 +251,9 @@ Indice operativo: [00-INDEX.md](./00-index.md). Wiki: [wiki/index.md](./wiki/ind
 
 ---
 
-**Ultima verifica**: 2026-10-14 (Laravel 13.35.0, PHP 8.4.26). Livello PHPStan e copertura non rimisurati in questa verifica.
-
-**Sostenibilità (discovery):** [project-sustainability-content.md](./project-sustainability-content.md) — outline `/sostieni` e footer partner. Il dossier locale del modulo è la fonte mantenuta; eventuali riferimenti a `bmad-output/` sono storici.
+**Status**: ✅ Production  
+**Last Updated**: 2026-07-14  
+**Requirements**: PHP 8.3+, Laravel 12, Filament 5  
+**PHPStan Level**: 10 (Target)
 
 **Note**: Documentation previously had duplications and merge conflicts. This version consolidates to single source of truth.

@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -631,10 +635,7 @@ Themes/Sixteen/
 # ALWAYS run after ANY frontend change:
 cd Themes/Sixteen/
 npm run build          # Compile assets
-<<<<<<< .merge_file_0A8pdU
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
->>>>>>> .merge_file_GcLaKS
 
 # These commands are MANDATORY for any:
 # - CSS changes
@@ -1666,7 +1667,7 @@ Tasks:
 
 ### Recommended New Documentation
 ```
-1. ARCHITECTURE.md
+1. architecture.md
    - System architecture diagrams
    - Module dependency graph
    - Database schema diagrams
@@ -1831,11 +1832,17 @@ Monitoring:
 
 Frontend:
 [ ] Theme built (npm run build)
-<<<<<<< .merge_file_0A8pdU
+<<<<<<< HEAD
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-=======
 [ ] Asset buildati (`npm run build`) e serviti via symlink in `public_html/themes` (`npm run copy` obsoleto)
->>>>>>> .merge_file_GcLaKS
+=======
+<<<<<<< .merge_file_yYgJnq
+[ ] Assets deployed (symlink public_html/themes (npm run copy obsoleto))
+[ ] Asset buildati (`npm run build`) e serviti via symlink in `public_html/themes` (`npm run copy` obsoleto)
+=======
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+>>>>>>> .merge_file_ZvkS6i
+>>>>>>> laraxot/dev
 [ ] Dark mode tested
 [ ] Responsive design tested
 [ ] Accessibility tested

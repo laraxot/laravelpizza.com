@@ -7,20 +7,16 @@ use Modules\Activity\Models\Activity;
 use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-<<<<<<< .merge_file_6WvNie
-uses(TestCase::class);
+uses(\Modules\Activity\Tests\TestCase::class);
 
 beforeEach(function () {
     // Skip if database not available
     try {
-        DB::connection()->getPdo();
-    } catch (Exception $e) {
+        \DB::connection()->getPdo();
+    } catch (\Exception $e) {
         $this->markTestSkipped('Database not available: '.$e->getMessage());
     }
 });
-=======
-uses(\Modules\Activity\Tests\TestCase::class);
->>>>>>> .merge_file_PnUuvZ
 
 test('activity model can be created', function () {
     $activity = ActivityFactory::new()->make();

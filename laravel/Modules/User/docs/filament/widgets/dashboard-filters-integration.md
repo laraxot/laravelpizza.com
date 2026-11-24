@@ -12,7 +12,6 @@ related:
   - "./registration-widget-fileupload-fix.md"
   - "./registration-widget-fileupload.md"
   - "./registration-widget.md"
-status: draft
 ---
 
 # Dashboard Filters Integration per Widget Filament
@@ -144,10 +143,6 @@ protected function getFooterWidgets(): array
 - [ ] Fallback appropriati attivati
 ## Riferimenti e Collegamenti
 ### Documentazione Correlata
-- [Modules/User/docs/best-practices/filament-widgets.md](../../best-practices/filament-widgets.md)
-- [Modules/Xot/docs/filament/widgets/base-chart-widget.md](../../../xot/docs/filament/widgets/base-chart-widget.md)
-- [Modules/<nome progetto>/docs/dashboard-implementation.md](../../../<nome progetto>/docs/dashboard-implementation.md)
-- [Modules/User/project_docs/best-practices/filament-widgets.md](../../best-practices/filament-widgets.md)
 - [Modules/User/docs/best-practices/filament-widgets.md](../../best-practices/filament-widgets.md)
 - [Modules/Xot/docs/filament/widgets/base-chart-widget.md](../../../xot/docs/filament/widgets/base-chart-widget.md)
 - [Modules/<nome progetto>/docs/dashboard-implementation.md](../../../<nome progetto>/docs/dashboard-implementation.md)

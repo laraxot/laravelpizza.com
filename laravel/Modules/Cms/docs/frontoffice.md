@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "frontoffice"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Documentazione Frontoffice
@@ -38,14 +37,10 @@ Questa architettura è stata scelta per garantire:
 Il routing del frontoffice è gestito principalmente attraverso Laravel Folio, un sistema di routing basato su file che permette di creare pagine senza definire esplicitamente le rotte.
 
 ```php
-// app/Providers/FolioServiceProvider.php
+// Modules/Cms/app/Providers/FolioVoltServiceProvider.php
 use Laravel\Folio\Folio;
 
-Folio::path(resource_path('views/pages'))->middleware([
-    'web',
-    'localization',
-    'track-visits',
-]);
+// Il provider CMS monta dinamicamente il tema attivo e le pagine dei moduli.
 ```
 
 Le caratteristiche principali implementate includono:
@@ -286,7 +281,7 @@ Per estendere il frontoffice con nuove funzionalità:
 
 ## Collegamenti Bidirezionali
 - [README](README.md) - Documentazione principale del modulo
-- [Architettura](frontoffice/architecture.md) - Architettura generale del frontoffice
+- [Architettura](architecture.md) - Architettura generale del frontoffice
 - [Gestione Route](gestione-route-folio.md) - Gestione delle route con Folio
 - [Volt](volt-web-application.md) - Sviluppo con Laravel Volt
 - [Layout](struttura-layout-componenti-blade-<nome progetto>.md) - Struttura dei layout
@@ -296,8 +291,18 @@ Per estendere il frontoffice con nuove funzionalità:
 
 ## Vedi Anche
 - [Modulo UI](../../UI/docs/README.md) - Componenti UI per il frontoffice
+<<<<<<< HEAD
 - [Modulo Lang](../../Lang/docs/README.md) - Gestione traduzioni
 - [Modulo User](../../User/docs/README.md) - Gestione utenti
+=======
+<<<<<<< HEAD
+- [Modulo Lang](../../Lang/docs/readme.md) - Gestione traduzioni
+- [Modulo User](../../User/docs/readme.md) - Gestione utenti
+=======
+- [Modulo Lang](../../Lang/docs/README.md) - Gestione traduzioni
+- [Modulo User](../../User/docs/README.md) - Gestione utenti
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Modulo Xot](../../Xot/docs/README.md) - Classi base e utilities
 - [Documentazione Volt](volt-introduction.md) - Introduzione a Laravel Volt
 - [Documentazione Folio](folio-pages.md) - Gestione delle pagine con Laravel Folio

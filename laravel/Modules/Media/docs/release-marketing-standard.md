@@ -2,7 +2,7 @@
 qmd: "release marketing standard"
 issues: []
 discussions: []
-title: "Release e README marketing: Media"
+title: "Release e README marketing — Media"
 type: reference
 status: approved
 tags: [release, semantic-versioning, changelog, readme, marketing]
@@ -11,7 +11,7 @@ updated: "2026-05-26"
 issue: "https://github.com/provtv/base_ptv_fila5_mono/issues/153"
 ---
 
-# Release e README marketing: Media
+# Release e README marketing — Media
 
 ## Scopo
 

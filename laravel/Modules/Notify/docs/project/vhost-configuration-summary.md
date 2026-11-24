@@ -3,14 +3,18 @@ title: "🌐 VHost Configuration Summary"
 type: concept
 tags: [vhost, configuration, summary]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "vhost-configuration-summary 🌐 vhost configuration summary"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./2-1-1-plan.md"
   - "./2-1-context.md"
-  - "./agents.md"
+  - "./AGENTS.md"
   - "./ai-agent-lessons-learned.md"
   - "./ai-skills-and-plugins-complete.md"
   - "./commit-message.md"
@@ -202,7 +206,7 @@ curl -I http://laraxot.local
 | **Project Docs** | `docs/project/vhost-configuration.md` | ✅ | [Link](docs/project/vhost-configuration.md) |
 | **Modules Docs** | `laravel/Modules/docs/vhost-configuration.md` | ✅ | [Link](laravel/Modules/docs/vhost-configuration.md) |
 | **Themes Docs** | `laravel/Themes/docs/vhost-configuration.md` | ✅ | [Link](laravel/Themes/docs/vhost-configuration.md) |
-| **Governance** | `docs/rules/vhost-governance.md` | ✅ | [Link](docs/rules/vhost-governance.md) |
+| **Governance** | `docs/rules/vhost-governance.md` | ✅ | [Link](../rules/vhost-governance.md) |
 | **Project Index** | `docs/project/README.md` | ✅ | [Link](docs/project/README.md) |
 | **Rules Index** | `docs/rules/README.md` | ✅ | [Link](docs/rules/README.md) |
 | **Main Index** | `docs/index.md` | ✅ Updated | [Link](docs/index.md) |
@@ -293,8 +297,17 @@ curl -I http://laraxot.local
 
 ### For DevOps
 
-- [Governance Rules](docs/rules/vhost-governance.md)
+<<<<<<< HEAD
 - [Governance Rules](../rules/vhost-governance.md)
+- [Governance Rules](../rules/vhost-governance.md)
+=======
+<<<<<<< .merge_file_9HTp4i
+- [Governance Rules](docs/rules/vhost-governance.md)
+=======
+- [Governance Rules](../rules/vhost-governance.md)
+- [Governance Rules](../rules/vhost-governance.md)
+>>>>>>> .merge_file_5Utlgr
+>>>>>>> laraxot/dev
 - [Management Skill](.github/skills/vhost-management/SKILL.md)
 - [Configuration File](laravel/config/vhost/laraxot.local.conf)
 

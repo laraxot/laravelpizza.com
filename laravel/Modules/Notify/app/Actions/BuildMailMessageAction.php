@@ -34,6 +34,7 @@ class BuildMailMessageAction
 
         /** @var NotifyThemeData $theme */
         $theme = app(Get::class)->execute($name, $type, $view_params);
+        /** @var view-string $view_html */
         $view_html = 'notify::email';
         // dddx([$theme, $view_params]);
         /** @var string $fromAddress */

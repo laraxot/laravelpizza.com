@@ -5,7 +5,6 @@ tags: [activity, migration, spatie, activitylog, xotbasemigration]
 created: 2026-06-10
 updated: 2026-06-10
 qmd: activity_log single migration xotbasemigration add fix update forbidden
-status: draft
 ---
 
 # activity_log — una migrazione per modello
@@ -61,5 +60,5 @@ File errati in `database/migrations/_bak/README.md`.
 ## Collegamenti
 
 - [activity-log-attribute-changes-column](./activity-log-attribute-changes-column.md)
-- [notifications-database-contract](../../../../Notify/docs/wiki/concepts/notifications-database-contract.md)
-- [one-migration-per-model](../../../../../../docs/wiki/memories/one-migration-per-model-bump-timestamp.md)
+- [notifications-database-contract](../../../Notify/docs/wiki/concepts/notifications-database-contract.md)
+- [one-migration-per-model](../../../../../docs/wiki/memories/one-migration-per-model-bump-timestamp.md)

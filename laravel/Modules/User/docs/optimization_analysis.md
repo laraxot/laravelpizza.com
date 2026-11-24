@@ -1,11 +1,3 @@
----
-title: "user module documentation optimization analysis"
-type: note
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "user module documentation optimization analysis user"
----
 # user module documentation optimization analysis
 
 ## current state analysis

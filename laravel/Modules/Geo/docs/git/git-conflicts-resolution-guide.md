@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "git conflicts resolution guide"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Guida alla Risoluzione Conflitti Git - <nome progetto>
@@ -366,5 +365,14 @@ git log --oneline --grep="conflict" | head -20
 - [Best Practices Testing](../../laravel/modules/<nome progetto>/docs/testing-best-practices.md)
 
 ---
+
+title: "git conflicts resolution guide"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "git conflicts resolution guide"
+issues: []
+discussions: []
 **Versione**: 1.0
 **Compatibilità**: Git 2.x+, Laravel 12.x, PHP 8.3+

@@ -3,12 +3,14 @@ title: "email template landscape"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "email template landscape"
 issues: []
 discussions: []
-status: superseded
-superseded_by: bmad/architecture/email-template-landscape.md
 ---
 
 # Panoramica e Analisi dei Template Email in Laravel

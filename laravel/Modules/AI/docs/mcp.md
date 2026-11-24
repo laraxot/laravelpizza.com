@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "mcp"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Configurazione MCP (Model Context Protocol)
@@ -133,7 +132,7 @@ Il sistema supporta tre ambienti:
 2. Monitorare regolarmente i log
 3. Configurare backup automatici
 4. Utilizzare ambienti separati per sviluppo e produzione
-5. Implementare test automatici per le funzionalità MCP 
+5. Implementare test automatici per le funzionalità MCP
 
 ## Server MCP consigliati
 
@@ -168,13 +167,22 @@ Ecco i server MCP consigliati per un ambiente di sviluppo AI/ML moderno e automa
 - **Motivo:** Integrazione con database MySQL, molto diffuso in ambito web e applicazioni legacy.
 
 ---
+
+title: "mcp"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "mcp"
+issues: []
+discussions: []
 **Perché questi server:**
 - Sono mantenuti ufficialmente dal progetto Model Context Protocol
 - Coprono le esigenze principali di un ambiente AI/ML moderno (ragionamento, memoria, accesso dati, automazione, storage)
 - Sono facilmente avviabili tramite `npx` e non richiedono configurazioni complesse
 
 **Nota:**
-Aggiungi solo i server che realmente ti servono per il tuo workflow. Puoi sempre estendere la configurazione in futuro. 
+Aggiungi solo i server che realmente ti servono per il tuo workflow. Puoi sempre estendere la configurazione in futuro.
 
 ## MCP MySQL locale e variabili da Laravel
 
@@ -185,13 +193,13 @@ Per utilizzare il server MCP MySQL con le stesse credenziali del tuo progetto La
      ```bash
      #!/bin/bash
      set -a
-     source /var/www/html/_bases/base_predict_fila5_mono/laravel/.env
+     source /var/www/html/_bases/base_predict_fila5/laravel/.env
      set +a
      npx -y @modelcontextprotocol/server-mysql
      ```
    - Rendi eseguibile lo script:
      ```bash
-     chmod +x /var/www/html/_bases/base_predict_fila5_mono/start-mcp-mysql.sh
+     chmod +x /var/www/html/_bases/base_predict_fila5/start-mcp-mysql.sh
      ```
 
 2. **Configura il server MCP MySQL solo a livello di progetto**
@@ -208,7 +216,7 @@ Per utilizzare il server MCP MySQL con le stesse credenziali del tuo progetto La
 
 **Nota:**
 - Assicurati che il pacchetto `@modelcontextprotocol/server-mysql` sia installato globalmente o sia disponibile tramite npx.
-- Puoi adattare lo script se il percorso del file `.env` è diverso. 
+- Puoi adattare lo script se il percorso del file `.env` è diverso.
 
 ## Filosofia e policy MCP (Zen)
 
@@ -216,7 +224,7 @@ Per utilizzare il server MCP MySQL con le stesse credenziali del tuo progetto La
 - Solo server MCP ufficiali e realmente utili al workflow.
 - Tutti i server MCP sono avviati tramite `npx` (nessun path locale, nessun host/port, nessun env globale).
 - Il server MySQL è sempre locale al progetto e avviato tramite lo script bash:
-  `/var/www/html/_bases/base_predict_fila5_mono/bashscripts/mcp/mcp-manager-v2.sh`
+  `/var/www/html/_bases/base_predict_fila5/bashscripts/mcp/mcp-manager-v2.sh`
 - Nessuna duplicazione di variabili o configurazioni tra ambienti.
 - Ogni modifica va applicata a tutti i file di configurazione coinvolti (VSCode, Cursor, Windsurf).
 - La documentazione deve sempre riflettere questa filosofia di coerenza e semplicità.
@@ -255,7 +263,7 @@ Esempio da usare in `.vscode/mcp.json`, `.cursor/mcp.json`, `mcp_config.json` di
       "args": ["-y", "@modelcontextprotocol/server-redis"]
     },
     "mysql": {
-      "command": "/var/www/html/_bases/base_predict_fila5_mono/bashscripts/mcp/mcp-manager-v2.sh"
+      "command": "/var/www/html/_bases/base_predict_fila5/bashscripts/mcp/mcp-manager-v2.sh"
     },
     "puppeteer": {
       "command": "npx",

@@ -81,14 +81,46 @@ abstract class XotBaseListRecords extends FilamentListRecords
             return [];
         }
 
+<<<<<<< HEAD
+        $create = CreateAction::make()
+            ->icon('heroicon-o-plus')
+            ->visible(fn (): bool => static::getResource()::canCreate())
+            ->url(fn (): string => RecordAnchor::appendReturnTo(
+                static::getResource()::getUrl('create'),
+                RecordAnchor::currentUrl(),
+            ));
+
+        // "Nuovo evento", "Nuova sede"…: l'etichetta del modulo (<modulo>::<risorsa>.actions.create.label) se tradotta;
+        // altrimenti quella di Filament. Prima restava sempre il generico "Nuovo".
+        $label = static::createActionLabel();
+        if ($label !== null) {
+            $create->label($label)->tooltip($label);
+        }
+
+        return ['create' => $create];
+    }
+
+    protected static function createActionLabel(): ?string
+    {
+        $resource = static::getResource();
+        if (! is_subclass_of($resource, XotBaseResource::class)) {
+            return null;
+        }
+        $label = $resource::trans('actions.create.label');
+
+        // Chiave mancante: trans() restituisce la chiave stessa (contiene "::") o un segnaposto "fix:".
+        return $label === '' || str_contains($label, '::') || str_starts_with($label, 'fix:') ? null : $label;
+=======
         return [
             'create' => CreateAction::make()
                 ->icon('heroicon-o-plus')
+                ->visible(fn (): bool => static::getResource()::canCreate())
                 ->url(fn (): string => RecordAnchor::appendReturnTo(
                     static::getResource()::getUrl('create'),
                     RecordAnchor::currentUrl(),
                 )),
         ];
+>>>>>>> laraxot/dev
     }
 
     /**

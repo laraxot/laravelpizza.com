@@ -1,11 +1,10 @@
 ---
 title: "Colli di Bottiglia e Soluzioni - Modulo Activity"
+qmd: "activity bottlenecks md"
 type: note
-status: draft
-updated: 2026-10-23
-tags: [docs, activity]
-qmd: "colli di bottiglia e soluzioni - modulo activity activity"
+tags: [documentation]
 ---
+
 # Colli di Bottiglia e Soluzioni - Modulo Activity
 
 ## Panoramica
@@ -327,20 +326,20 @@ class ListActivities extends XotBasePage
 ## Collegamenti Bidirezionali
 
 - [README Activity](./README.md)
-- [README Activity](./readme.md)
+- [README Activity](./README.md)
 - [Roadmap](./roadmap.md)
 - [Struttura del Modulo](./structure.md)
 ## Collegamenti
 
 - [Torna a README](./README.md)
-- [Torna a README](./readme.md)
+- [Torna a README](./README.md)
 - [Vai a Roadmap](./roadmap.md)
 - [Vai a Struttura](./structure.md)
 
 ## Collegamenti tra versioni di bottlenecks.md
 * [bottlenecks.md](../../../../bashscripts/docs/bottlenecks.md)
 * [bottlenecks.md](../../chart/docs/bottlenecks.md)
-* [bottlenecks.md](../../chart/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../Chart/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../Gdpr/docs/bottlenecks.md)
 * [bottlenecks.md](../../Gdpr/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../xot/docs/bottlenecks.md)
@@ -349,8 +348,8 @@ class ListActivities extends XotBasePage
 * [bottlenecks.md](../../dental/docs/bottlenecks.md)
 * [bottlenecks.md](../../User/docs/bottlenecks.md)
 * [bottlenecks.md](../../User/docs/roadmap/bottlenecks.md)
-* [bottlenecks.md](../../UI/docs/bottlenecks.md)
-* [bottlenecks.md](../../UI/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](../../ui/docs/bottlenecks.md)
+* [bottlenecks.md](../../ui/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../Lang/docs/bottlenecks.md)
 * [bottlenecks.md](../../Lang/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../Job/docs/performance/bottlenecks.md)

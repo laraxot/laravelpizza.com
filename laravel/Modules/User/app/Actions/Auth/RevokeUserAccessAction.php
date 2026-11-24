@@ -17,6 +17,11 @@ use Spatie\QueueableAction\QueueableAction;
  * con `deleted_at` valorizzato; qui si revocano anche i token, cosi' restano inutilizzabili anche se `deleted_at` venisse azzerato
  * (ripristino da back office) e il registro dei token dice il vero. Le sessioni web aperte su altri dispositivi cadono alla richiesta
  * successiva, perche' il provider non trova piu' l'utente.
+<<<<<<< HEAD
+=======
+ *
+ * @contract docs/contracts/revoke-user-access-action.md
+>>>>>>> laraxot/dev
  */
 final class RevokeUserAccessAction
 {

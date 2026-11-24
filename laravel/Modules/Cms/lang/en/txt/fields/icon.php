@@ -7,10 +7,10 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/icon.php
 // Cms txt.fields.icon — LangServiceProvider SSoT.
 return [
-    'label' => 'Icona',
-    'help' => 'Seleziona un\'icona da visualizzare',
-    'placeholder' => 'Seleziona icona rappresentativa',
-    'helper_text' => 'Icona da mostrare accanto al testo o come elemento standalone',
+    'label' => 'Icon',
+    'help' => 'Select an icon to display',
+    'placeholder' => 'Select representative icon',
+    'helper_text' => 'Icon to show next to the text or as a standalone element',
     'tooltip' => '',
     'description' => '',
 ];

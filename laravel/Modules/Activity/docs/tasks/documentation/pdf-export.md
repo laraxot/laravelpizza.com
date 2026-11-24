@@ -1,3 +1,10 @@
+---
+title: "PDF Export - Activity"
+qmd: "activity tasks documentation pdf export md"
+type: note
+tags: [documentation]
+---
+
 # PDF Export - Activity
 
 **Task ID**: ACTIVITY-FEATURE-018

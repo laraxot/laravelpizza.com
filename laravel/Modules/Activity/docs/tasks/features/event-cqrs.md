@@ -1,3 +1,10 @@
+---
+title: "Event CQRS - Activity"
+qmd: "activity tasks features event cqrs md"
+type: note
+tags: [documentation]
+---
+
 # Event CQRS - Activity
 
 **Task ID**: ACTIVITY-FEATURE-004

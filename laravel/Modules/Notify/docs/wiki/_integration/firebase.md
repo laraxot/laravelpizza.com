@@ -1,14 +1,16 @@
 ---
-title: "Notify Module: Document"
+title: "Notify Module — Document"
 type: docs/bmad
+status: active
 module: Notify
 scope: documentation
 bmad_version: 1.0
+<<<<<<< HEAD
 updated: 2026-10-06
-tags: [docs, notify, wiki]
-qmd: "firebase notify"
-status: superseded
-superseded_by: ../../-integration/firebase.md
+=======
+updated: 2026-11-23
+created: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # firebase

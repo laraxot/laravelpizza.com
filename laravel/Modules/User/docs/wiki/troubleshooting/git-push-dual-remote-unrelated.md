@@ -1,5 +1,5 @@
 ---
-title: "Git push User: history unrelated laraxot vs provtv"
+title: "Git push User — history unrelated laraxot vs provtv"
 type: rule
 module: User
 tags: [git, push, dual-remote, unrelated, multi-org, user, forward-only]
@@ -16,10 +16,9 @@ related:
   - "../../git-multi-org-sync-handoff.md"
   - "../../../../UI/docs/wiki/troubleshooting/git-push-lfs-missing-objects.md"
   - "../../../../Activity/docs/wiki/troubleshooting/git-push-dual-remote.md"
-status: draft
 ---
 
-# Git push User: history unrelated (laraxot ↔ provtv)
+# Git push User — history unrelated (laraxot ↔ provtv)
 
 ## Perché
 
@@ -28,14 +27,14 @@ status: draft
 - `laraxot` → `laraxot/module_user_fila5`
 - `provtv` → `provtv/module_user_fila5`
 
-Scopo: tip `dev` allineati senza force. Se i root commit divergono (`git merge-base` vuoto), un merge/rebase cieco produce centinaia di conflitti add/add: **vietato** in automatico.
+Scopo: tip `dev` allineati senza force. Se i root commit divergono (`git merge-base` vuoto), un merge/rebase cieco produce centinaia di conflitti add/add — **vietato** in automatico.
 
 ## Come è stato sistemato (2026-07-23)
 
 | Remote | Stato | Azione |
 |--------|-------|--------|
 | `laraxot/dev` | tip `3ea7273a` · **0 0** | `git push --no-thin` → **Everything up-to-date** |
-| `provtv/dev` | tip `d2b107e0` · ahead 3 / behind 57 | **STOP**: `merge-base` vuoto (unrelated); push non-FF rifiutato |
+| `provtv/dev` | tip `d2b107e0` · ahead 3 / behind 57 | **STOP** — `merge-base` vuoto (unrelated); push non-FF rifiutato |
 
 ### Diagnosi
 
@@ -49,7 +48,7 @@ git rev-list --max-parents=0 HEAD
 git rev-list --max-parents=0 provtv/dev                # root diversi
 ```
 
-Diff tip↔tip: **centinaia di file** (non un semplice gap di commit). Tip locale include squash LFS (`3ea7273a`: SVG non più puntatori LFS orfani).
+Diff tip↔tip: **centinaia di file** (non un semplice gap di commit). Tip locale include squash LFS (`3ea7273a` — SVG non più puntatori LFS orfani).
 
 ### Cosa fare / non fare
 

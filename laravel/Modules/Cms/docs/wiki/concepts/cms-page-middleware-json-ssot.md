@@ -3,7 +3,7 @@ title: "CMS page middleware — JSON SSoT + PageSlugMiddleware"
 type: concept
 tags: [cms, middleware, folio, auth, pages-json]
 created: 2026-06-12
-updated: 2026-10-26
+updated: 2026-06-12
 qmd: "cms page middleware json auth PageSlugMiddleware tickets.create folio route name container0 slug0"
 issues:
   - "https://github.com/laraxot/base_fixcity_fila5/issues/362"
@@ -11,8 +11,7 @@ discussions:
   - "https://github.com/laraxot/base_fixcity_fila5/discussions/363"
 related:
   - ../../../../../../docs/stories/STORY-357-tickets-create-auth-middleware.md
-  - ../../template-theme-cms-runtime-architecture.md
-status: draft
+  - ../architecture/template-theme-cms-runtime-architecture.md
 ---
 
 # Middleware per pagina CMS (JSON)
@@ -30,7 +29,15 @@ Definire **access control per pagina** nel JSON CMS (`config/local/.../content/p
 }
 ```
 
+<<<<<<< HEAD
 Alias supportati come su Laravel (`auth`, `verified`, classi FQCN, parametri `throttle:60,1`).
+=======
+<<<<<<< HEAD
+Alias supportati come su Laravel (`auth`, `guest`, `verified`, classi FQCN, parametri `throttle:60,1`).
+=======
+Alias supportati come su Laravel (`auth`, `verified`, classi FQCN, parametri `throttle:60,1`).
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Flusso
 
@@ -76,8 +83,8 @@ Comando: `bash bashscripts/tools/cms/page-json-for-url.sh <url>` stampa lo slug 
 
 
 ## Cosa si puo' scrivere nell'array `middleware` (2026-10-13, DCP-50)
-- Solo i nomi in allowlist: `cms.config.page_middleware_allowlist`, default `auth` e `throttle` (i soli usati dai JSON, DCP-283). Si confronta il nome prima dei due punti (`throttle:10,1` e' ammesso). Una classe scritta nel JSON NON viene piu' eseguita: per ammetterne una si aggiunge il nome alla configurazione, con un test. `PageSlugMiddleware` risolve poi la voce con l'alias del kernel e con `app()`.
+- Alias del kernel (`auth`, `throttle:10,1`) o classi esistenti. `PageSlugMiddleware` risolve ogni voce con l'alias del kernel e poi con `app()`.
 - `web` e' un gruppo gia' applicato dallo stack Folio: viene ignorato (no-op), ma non va scritto. Prima faceva 500 per tutti (`Target class [web] does not exist`, 2026-10-13).
 - Un nome non risolvibile (refuso come `auht`, o un gruppo come `api`) lancia `InvalidArgumentException` con un messaggio chiaro. NON viene mai ignorato in silenzio: ignorarlo renderebbe pubblica una pagina protetta.
-- Fail-closed (DCP-283, C-03): se la ricerca della pagina, la lettura del campo `middleware` o la sua validazione falliscono (slug duplicato, JSON illeggibile, `"middleware": "auth"` al posto di `["auth"]`, voce non stringa, nome fuori allowlist), la pagina risponde 503 e non viene servita; il log registra slug, nomi e tipo di errore, mai IP, utente o percorso. Un middleware che non restituisce una `Response` o non ha `handle` lancia `LogicException` invece di lasciar passare la richiesta. `null` o assente restano "pagina pubblica" (come `home`). Guardia: `Modules/Cms/tests/Unit/Content/PageJsonMiddlewareAllowlistTest.php` percorre tutti i JSON di pagina e verifica che ogni middleware dichiarato sia in allowlist.
-Test: `Modules/Cms/tests/Unit/Http/Middleware/PageSlugMiddlewareTest.php`, `PageSlugMiddlewareFailClosedTest.php` (DCP-283). Guardia dei template: `Themes/Sixteen/tests/Unit/BladeTemplatesCompileTest.php`.
+- Non e' coperto: se la lettura dei middleware della pagina fallisce, `handle()` usa `[]` e la pagina diventa pubblica (fail-open); e' un finding dell'audit DCP-49.
+Test: `Modules/Cms/tests/Unit/Http/Middleware/PageSlugMiddlewareTest.php`. Guardia dei template: `Themes/Sixteen/tests/Unit/BladeTemplatesCompileTest.php`.

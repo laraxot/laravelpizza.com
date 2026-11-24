@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "ponytail audit 2026 07 02"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Ponytail-audit: SentimentAction driver selection moved to config

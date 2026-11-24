@@ -3,11 +3,14 @@ title: "github sync rule"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "github sync rule"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🔄 Sync .github with bashscripts/ai/.github
@@ -17,6 +20,15 @@ status: draft
 > **Rule**: CRITICAL
 
 ---
+
+title: "github sync rule"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "github sync rule"
+issues: []
+discussions: []
 ## 🎯 Rule Statement
 
 **QUANDO aggiorni `.github/` → DEVI sincronizzare `bashscripts/ai/.github/`**
@@ -77,7 +89,7 @@ echo "Synced .github with bashscripts/ai/.github on $(date)" >> bashscripts/ai/.
 | `.github/CONTRIBUTING.md` | `bashscripts/ai/.github/` | Contribution guide |
 | `.github/pull_request_template.md` | `bashscripts/ai/.github/` | PR template |
 | `.github/dependabot.yml` | `bashscripts/ai/.github/` | Dependabot config |
-| `.github/security.md` | `bashscripts/ai/.github/` | Security policy |
+| `.github/SECURITY.md` | `bashscripts/ai/.github/` | Security policy |
 
 ---
 

@@ -22,7 +22,7 @@ Spawned by:
 - `/gsd-plan-phase --gaps` orchestrator (gap closure from verification failures)
 - `/gsd-plan-phase` in revision mode (updating plans based on checker feedback)
 
-Your job: Produce PLAN.md files that Claude executors can implement without interpretation. Plans are prompts, not documents that become prompts.
+Your job: Produce plan.md files that Claude executors can implement without interpretation. Plans are prompts, not documents that become prompts.
 
 **CRITICAL: Mandatory Initial Read**
 If the prompt contains a `<files_to_read>` block, you MUST use the `Read` tool to load every file listed there before performing any other actions. This is your primary context.
@@ -92,7 +92,7 @@ Planning for ONE person (the user) and ONE implementer (Claude).
 
 ## Plans Are Prompts
 
-PLAN.md IS the prompt (not a document that becomes one). Contains:
+plan.md IS the prompt (not a document that becomes one). Contains:
 - Objective (what and why)
 - Context (@file references)
 - Tasks (with verification criteria)
@@ -381,7 +381,7 @@ Derive plans from actual work. Depth determines compression tolerance, not a tar
 
 <plan_format>
 
-## PLAN.md Structure
+## plan.md Structure
 
 ```markdown
 ---
@@ -415,7 +415,7 @@ Output: [Artifacts created]
 
 <context>
 @.planning/PROJECT.md
-@.planning/ROADMAP.md
+@.planning/roadmap.md
 @.planning/STATE.md
 
 # Only reference prior plan SUMMARYs if genuinely needed
@@ -563,10 +563,10 @@ Only include what Claude literally cannot do.
 ## The Process
 
 **Step 0: Extract Requirement IDs**
-Read ROADMAP.md `**Requirements:**` line for this phase. Strip brackets if present (e.g., `[AUTH-01, AUTH-02]` → `AUTH-01, AUTH-02`). Distribute requirement IDs across plans — each plan's `requirements` frontmatter field MUST list the IDs its tasks address. **CRITICAL:** Every requirement ID MUST appear in at least one plan. Plans with an empty `requirements` field are invalid.
+Read roadmap.md `**Requirements:**` line for this phase. Strip brackets if present (e.g., `[AUTH-01, AUTH-02]` → `AUTH-01, AUTH-02`). Distribute requirement IDs across plans — each plan's `requirements` frontmatter field MUST list the IDs its tasks address. **CRITICAL:** Every requirement ID MUST appear in at least one plan. Plans with an empty `requirements` field are invalid.
 
 **Step 1: State the Goal**
-Take phase goal from ROADMAP.md. Must be outcome-shaped, not task-shaped.
+Take phase goal from roadmap.md. Must be outcome-shaped, not task-shaped.
 - Good: "Working chat interface" (outcome)
 - Bad: "Build chat components" (task)
 
@@ -833,7 +833,7 @@ grep -l "status: diagnosed" "$phase_dir"/*-UAT.md 2>/dev/null
 </task>
 ```
 
-**7. Write PLAN.md files:**
+**7. Write plan.md files:**
 
 ```yaml
 ---
@@ -973,24 +973,24 @@ If exists, load relevant documents by phase type:
 | Phase Keywords | Load These |
 |----------------|------------|
 | UI, frontend, components | CONVENTIONS.md, STRUCTURE.md |
-| API, backend, endpoints | ARCHITECTURE.md, CONVENTIONS.md |
-| database, schema, models | ARCHITECTURE.md, STACK.md |
-| testing, tests | TESTING.md, CONVENTIONS.md |
+| API, backend, endpoints | architecture.md, CONVENTIONS.md |
+| database, schema, models | architecture.md, STACK.md |
+| testing, tests | testing.md, CONVENTIONS.md |
 | integration, external API | INTEGRATIONS.md, STACK.md |
-| refactor, cleanup | CONCERNS.md, ARCHITECTURE.md |
+| refactor, cleanup | CONCERNS.md, architecture.md |
 | setup, config | STACK.md, STRUCTURE.md |
-| (default) | STACK.md, ARCHITECTURE.md |
+| (default) | STACK.md, architecture.md |
 </step>
 
 <step name="identify_phase">
 ```bash
-cat .planning/ROADMAP.md
+cat .planning/roadmap.md
 ls .planning/phases/
 ```
 
 If multiple phases available, ask which to plan. If obvious (first incomplete), proceed.
 
-Read existing PLAN.md or DISCOVERY.md in phase directory.
+Read existing plan.md or DISCOVERY.md in phase directory.
 
 **If `--gaps` flag:** Switch to gap_closure_mode.
 </step>
@@ -1059,7 +1059,7 @@ cat "$phase_dir"/*-DISCOVERY.md 2>/dev/null  # From mandatory discovery
 
 **If CONTEXT.md exists (has_context=true from init):** Honor user's vision, prioritize essential features, respect boundaries. Locked decisions — do not revisit.
 
-**If RESEARCH.md exists (has_research=true from init):** Use standard_stack, architecture_patterns, dont_hand_roll, common_pitfalls.
+**If research.md exists (has_research=true from init):** Use standard_stack, architecture_patterns, dont_hand_roll, common_pitfalls.
 </step>
 
 <step name="break_into_tasks">
@@ -1119,7 +1119,7 @@ Present breakdown with wave structure. Wait for confirmation in interactive mode
 </step>
 
 <step name="write_phase_prompt">
-Use template structure for each PLAN.md.
+Use template structure for each plan.md.
 
 **ALWAYS use the Write tool to create files** — never use `Bash(cat << 'EOF')` or heredoc commands for file creation.
 
@@ -1129,7 +1129,7 @@ Include all frontmatter fields.
 </step>
 
 <step name="validate_plan">
-Validate each created PLAN.md using gsd-tools:
+Validate each created plan.md using gsd-tools:
 
 ```bash
 VALID=$(node .github/get-shit-done/bin/gsd-tools.cjs frontmatter validate "$PLAN_PATH" --schema plan)
@@ -1157,14 +1157,14 @@ Returns JSON: `{ valid, errors, warnings, task_count, tasks }`
 </step>
 
 <step name="update_roadmap">
-Update ROADMAP.md to finalize phase placeholders:
+Update roadmap.md to finalize phase placeholders:
 
-1. Read `.planning/ROADMAP.md`
+1. Read `.planning/roadmap.md`
 2. Find phase entry (`### Phase {N}:`)
 3. Update placeholders:
 
 **Goal** (only if placeholder):
-- `[To be planned]` → derive from CONTEXT.md > RESEARCH.md > phase description
+- `[To be planned]` → derive from CONTEXT.md > research.md > phase description
 - If Goal already has real content → leave it
 
 **Plans** (always update):
@@ -1177,12 +1177,12 @@ Plans:
 - [ ] {phase}-02-PLAN.md — {brief objective}
 ```
 
-4. Write updated ROADMAP.md
+4. Write updated roadmap.md
 </step>
 
 <step name="git_commit">
 ```bash
-node .github/get-shit-done/bin/gsd-tools.cjs commit "docs($PHASE): create phase plan" --files .planning/phases/$PHASE-*/$PHASE-*-PLAN.md .planning/ROADMAP.md
+node .github/get-shit-done/bin/gsd-tools.cjs commit "docs($PHASE): create phase plan" --files .planning/phases/$PHASE-*/$PHASE-*-PLAN.md .planning/roadmap.md
 ```
 </step>
 

@@ -13,7 +13,7 @@ return [
             'name' => 'Gestione Utenti',
             'description' => 'Gestione dei profili',
         ],
-        'label' => 'profili',
+        'label' => 'Profili',
         'sort' => 31,
         'icon' => 'user-user-permission',
     ],

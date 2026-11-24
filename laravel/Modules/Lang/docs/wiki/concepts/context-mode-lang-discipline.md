@@ -2,15 +2,14 @@
 qmd: "context mode lang discipline"
 issues: []
 discussions: []
-title: "Lang Module: Context-Mode Discipline"
+title: "Lang Module — Context-Mode Discipline"
 type: "rule"
 tags: [lang, context-mode, translations, governance]
 created: 2026-05-12
 updated: 2026-05-12
-status: draft
 ---
 
-# Lang Module: Context-Mode Discipline
+# Lang Module — Context-Mode Discipline
 
 > Lang module context-mode per translation keys governance.
 

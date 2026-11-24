@@ -57,13 +57,21 @@ class GetCoordinatesFromGoogleMapsAction
     /**
      * Valida i dati di input.
      *
+<<<<<<< HEAD
+     * @throws \RuntimeException Se la chiave API non è configurata
+=======
      * @throws \RuntimeException         Se la chiave API non è configurata
+>>>>>>> laraxot/dev
      * @throws \InvalidArgumentException Se i dati non sono validi
      */
     private function validateInput(string $address): void
     {
         $apiKey = config('services.google.maps_api_key');
+<<<<<<< HEAD
+        if (! \is_string($apiKey) || $apiKey === '') {
+=======
         if (! \is_string($apiKey) || '' === $apiKey) {
+>>>>>>> laraxot/dev
             throw new \RuntimeException('Google Maps API key not configured');
         }
         Assert::notEmpty($address, 'Address cannot be empty');

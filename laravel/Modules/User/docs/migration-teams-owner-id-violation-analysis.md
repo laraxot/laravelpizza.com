@@ -1,11 +1,3 @@
----
-title: "Analisi Violazione Filosofia Laraxot - Migration Teams"
-type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, user]
-qmd: "analisi violazione filosofia laraxot - migration teams user"
----
 # Analisi Violazione Filosofia Laraxot - Migration Teams
 
 ## Data

@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "duplicate methods analysis"
 related:
   - "./webm.md"
-status: draft
 ---
 # Analisi Metodi Duplicati - Modulo Media
 
@@ -174,15 +173,15 @@ public static function getInstance(): self
 - `BaseModel::casts` - [Modules/Comment/app/Models/BaseModel.php:44](Modules/Comment/app/Models/BaseModel.php) (Modulo: Comment)
 - `BaseMorphPivot::casts` - [Modules/Comment/app/Models/BaseMorphPivot.php:54](Modules/Comment/app/Models/BaseMorphPivot.php) (Modulo: Comment)
 - `BasePivot::casts` - [Modules/Comment/app/Models/BasePivot.php:41](Modules/Comment/app/Models/BasePivot.php) (Modulo: Comment)
-- `Activity::casts` - [Modules/Fixcity/app/Models/Activity.php:50](Modules/Fixcity/app/Models/Activity.php) (Modulo: Fixcity)
-- `BaseModel::casts` - [Modules/Fixcity/app/Models/BaseModel.php:47](Modules/Fixcity/app/Models/BaseModel.php) (Modulo: Fixcity)
-- `BasePivot::casts` - [Modules/Fixcity/app/Models/BasePivot.php:49](Modules/Fixcity/app/Models/BasePivot.php) (Modulo: Fixcity)
-- `Category::casts` - [Modules/Fixcity/app/Models/Category.php:117](Modules/Fixcity/app/Models/Category.php) (Modulo: Fixcity)
-- `Faq::casts` - [Modules/Fixcity/app/Models/Faq.php:63](Modules/Fixcity/app/Models/Faq.php) (Modulo: Fixcity)
-- `FaqCategory::casts` - [Modules/Fixcity/app/Models/FaqCategory.php:67](Modules/Fixcity/app/Models/FaqCategory.php) (Modulo: Fixcity)
-- `PushSubscription::casts` - [Modules/Fixcity/app/Models/PushSubscription.php:58](Modules/Fixcity/app/Models/PushSubscription.php) (Modulo: Fixcity)
-- `Ticket::casts` - [Modules/Fixcity/app/Models/Ticket.php:188](Modules/Fixcity/app/Models/Ticket.php) (Modulo: Fixcity)
-- `TicketCategory::casts` - [Modules/Fixcity/app/Models/TicketCategory.php:51](Modules/Fixcity/app/Models/TicketCategory.php) (Modulo: Fixcity)
+- `Activity::casts` - [Modules/LegacyDomain/app/Models/Activity.php:50](Modules/LegacyDomain/app/Models/Activity.php) (Modulo: LegacyDomain)
+- `BaseModel::casts` - [Modules/LegacyDomain/app/Models/BaseModel.php:47](Modules/LegacyDomain/app/Models/BaseModel.php) (Modulo: LegacyDomain)
+- `BasePivot::casts` - [Modules/LegacyDomain/app/Models/BasePivot.php:49](Modules/LegacyDomain/app/Models/BasePivot.php) (Modulo: LegacyDomain)
+- `Category::casts` - [Modules/LegacyDomain/app/Models/Category.php:117](Modules/LegacyDomain/app/Models/Category.php) (Modulo: LegacyDomain)
+- `Faq::casts` - [Modules/LegacyDomain/app/Models/Faq.php:63](Modules/LegacyDomain/app/Models/Faq.php) (Modulo: LegacyDomain)
+- `FaqCategory::casts` - [Modules/LegacyDomain/app/Models/FaqCategory.php:67](Modules/LegacyDomain/app/Models/FaqCategory.php) (Modulo: LegacyDomain)
+- `PushSubscription::casts` - [Modules/LegacyDomain/app/Models/PushSubscription.php:58](Modules/LegacyDomain/app/Models/PushSubscription.php) (Modulo: LegacyDomain)
+- `Ticket::casts` - [Modules/LegacyDomain/app/Models/Ticket.php:188](Modules/LegacyDomain/app/Models/Ticket.php) (Modulo: LegacyDomain)
+- `TicketCategory::casts` - [Modules/LegacyDomain/app/Models/TicketCategory.php:51](Modules/LegacyDomain/app/Models/TicketCategory.php) (Modulo: LegacyDomain)
 - `BaseModel::casts` - [Modules/Gdpr/app/Models/BaseModel.php:58](Modules/Gdpr/app/Models/BaseModel.php) (Modulo: Gdpr)
 - `BaseMorphPivot::casts` - [Modules/Gdpr/app/Models/BaseMorphPivot.php:67](Modules/Gdpr/app/Models/BaseMorphPivot.php) (Modulo: Gdpr)
 - `BasePivot::casts` - [Modules/Gdpr/app/Models/BasePivot.php:47](Modules/Gdpr/app/Models/BasePivot.php) (Modulo: Gdpr)
@@ -326,7 +325,7 @@ public function registerMediaConversions(?Media $media = null): void
 
 **Trovato in  file3 file**:
 
-- `Faq::creator` - [Modules/Fixcity/app/Models/Faq.php:83](Modules/Fixcity/app/Models/Faq.php) (Modulo: Fixcity)
+- `Faq::creator` - [Modules/LegacyDomain/app/Models/Faq.php:83](Modules/LegacyDomain/app/Models/Faq.php) (Modulo: LegacyDomain)
 - `Media::creator` - [Modules/Media/app/Models/Media.php:282](Modules/Media/app/Models/Media.php)
 - `Unknown::creator` - [Modules/Xot/app/Traits/Updater.php:31](Modules/Xot/app/Traits/Updater.php) (Modulo: Xot)
 
@@ -412,8 +411,8 @@ public function get($key, array $replace = [], $locale = null, $fallback = true)
 - `GetViewThemeByViewAction::execute` - [Modules/Cms/app/Actions/GetViewThemeByViewAction.php:13](Modules/Cms/app/Actions/GetViewThemeByViewAction.php) (Modulo: Cms)
 - `SaveFooterConfigAction::execute` - [Modules/Cms/app/Actions/SaveFooterConfigAction.php:14](Modules/Cms/app/Actions/SaveFooterConfigAction.php) (Modulo: Cms)
 - `SaveHeadernavConfigAction::execute` - [Modules/Cms/app/Actions/SaveHeadernavConfigAction.php:12](Modules/Cms/app/Actions/SaveHeadernavConfigAction.php) (Modulo: Cms)
-- `ChangeStatus::execute` - [Modules/Fixcity/app/Actions/ChangeStatus.php:12](Modules/Fixcity/app/Actions/ChangeStatus.php) (Modulo: Fixcity)
-- `GenerateTicketsAction::execute` - [Modules/Fixcity/app/Actions/GenerateTicketsAction.php:24](Modules/Fixcity/app/Actions/GenerateTicketsAction.php) (Modulo: Fixcity)
+- `ChangeStatus::execute` - [Modules/LegacyDomain/app/Actions/ChangeStatus.php:12](Modules/LegacyDomain/app/Actions/ChangeStatus.php) (Modulo: LegacyDomain)
+- `GenerateTicketsAction::execute` - [Modules/LegacyDomain/app/Actions/GenerateTicketsAction.php:24](Modules/LegacyDomain/app/Actions/GenerateTicketsAction.php) (Modulo: LegacyDomain)
 - `CalculateDistanceAction::execute` - [Modules/Geo/app/Actions/CalculateDistanceAction.php:47](Modules/Geo/app/Actions/CalculateDistanceAction.php) (Modulo: Geo)
 - `ClusterLocationsAction::execute` - [Modules/Geo/app/Actions/ClusterLocationsAction.php:25](Modules/Geo/app/Actions/ClusterLocationsAction.php) (Modulo: Geo)
 - `FilterCoordinatesAction::execute` - [Modules/Geo/app/Actions/FilterCoordinatesAction.php:29](Modules/Geo/app/Actions/FilterCoordinatesAction.php) (Modulo: Geo)

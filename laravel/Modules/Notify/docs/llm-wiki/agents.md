@@ -3,11 +3,10 @@ title: "agents"
 type: note
 tags: [documentation]
 created: 2026-09-26
-updated: 2026-09-26
+updated: 2026-11-23
 qmd: "agents"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Notify {{TYPE^}} LLM Wiki Agent Instructions
@@ -33,20 +32,6 @@ You are the **Notify Wiki Maintainer**. Your job is to:
 ## Frontmatter Schema
 
 ```yaml
----
-qmd: "agents"
-issues: []
-discussions: []
-title: "Page Title"
-type: concept|entity|source|comparison|decision|troubleshooting
-sources: ["raw/articles/filename.md"]
-confidence: high|medium|low
-created: YYYY-MM-DD
-updated: YYYY-MM-DD
-tags: [tag1, tag2]
-related:
-  - concepts/related.md
----
 ```
 
 ## Naming Conventions

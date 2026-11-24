@@ -7,7 +7,6 @@ type: documentation
 created: 2026-05-11
 updated: 2026-05-11
 tags: [structure, architecture, module]
-status: draft
 ---
 
 # Project Structure — Module **AI**
@@ -99,10 +98,10 @@ graph TD
 ## Riferimenti Globali
 
 - [Project Wiki Root](../../docs/wiki/)
-- [Global Rules](wiki/rules)
-- [Global Skills](wiki/skills)
-- [Global Commands](wiki/commands)
-- [Global Memories](wiki/memories)
+- [Global Rules](../../docs/wiki/rules/)
+- [Global Skills](../../docs/wiki/skills/)
+- [Global Commands](../../docs/wiki/commands/)
+- [Global Memories](../../docs/wiki/memories/)
 
 ## Setup Initiale (per nuovi moduli)
 

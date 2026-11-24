@@ -3,11 +3,10 @@ title: "WIKI SCHEMA"
 type: note
 tags: [documentation]
 created: 2026-09-26
-updated: 2026-09-26
+updated: 2026-11-23
 qmd: "WIKI SCHEMA"
 issues: []
 discussions: []
-status: draft
 ---
 
 # LLM Wiki Schema
@@ -78,18 +77,6 @@ nome-panoramica.md
 
 ### Frontmatter
 ```yaml
----
-qmd: "WIKI SCHEMA"
-issues: []
-discussions: []
-title: Nome Visualizzato
-type: concept|entity|summary|comparison|overview
-tags: [tag1, tag2]
-sources: [relative/path/to/source.md]
-created: 2026-04-15
-updated: 2026-04-15
-related: [altra-pagina.md, ancora-un-altra.md]
----
 ```
 
 ### Link Interni

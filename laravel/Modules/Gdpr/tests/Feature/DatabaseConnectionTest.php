@@ -4,9 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Feature;
 
+use Modules\Gdpr\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 
 beforeEach(function (): void {
     /* @var \Modules\Gdpr\Tests\TestCase $this */

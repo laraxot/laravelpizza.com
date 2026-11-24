@@ -1,11 +1,12 @@
 ---
 type: investigation
 title: "Investigation Email Deliverability"
-links: {}
-status: draft
-updated: 2026-10-08
-tags: [docs, notify, investigation]
-qmd: "investigation: email deliverability notify"
+links: {github_issue: #XXX}
+<<<<<<< HEAD
+=======
+created: 2026-11-23
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 # Investigation: Email Deliverability
 

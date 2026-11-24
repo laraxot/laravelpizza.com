@@ -3,11 +3,14 @@ title: "documentation analysis and improvement plan"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "documentation analysis and improvement plan"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Documentation Analysis and Improvement Plan
@@ -17,6 +20,15 @@ status: draft
 **Owner**: Architecture Team
 
 ---
+
+title: "documentation analysis and improvement plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "documentation analysis and improvement plan"
+issues: []
+discussions: []
 ## 📊 Executive Summary
 
 ### Current State
@@ -57,7 +69,7 @@ The FixCity platform has extensive documentation across modules and themes, but 
 ❌ **Problems**:
 - 15 files with temporal strings ("Last Updated: March 12, 2026")
 - Duplicate files: `prd.md`, `PRD.md`, `prd.json`
-- Inconsistent naming: `product-strategy.md` vs `PRODUCT_STRATEGY.md`
+- Inconsistent naming: `product-strategy.md` vs `product_strategy.md`
 - Orphaned files: `to-study.md`, `blocks-react.md`
 
 #### Recommended Actions
@@ -165,8 +177,17 @@ The FixCity platform has extensive documentation across modules and themes, but 
 
 3. **Update Governance**
    - Finalize documentation governance
+<<<<<<< HEAD
    - Add to AGENTS.md
-   - Add to agents.md
+   - Add to AGENTS.md
+=======
+<<<<<<< HEAD
+   - add to agents.md
+=======
+   - Add to AGENTS.md
+   - Add to AGENTS.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
    - Add to .windsurfrules
 
 ### Priority 3: Medium (Week 4)
@@ -255,7 +276,7 @@ done
 #### Day 15-16: Update Rules
 
 1. Update AGENTS.md
-1. Update agents.md
+1. Update AGENTS.md
 2. Update .windsurfrules
 3. Create skills
 
@@ -404,10 +425,19 @@ echo "  snake_case: $(find laravel/Modules/*/docs/ -name '*_*.md' | wc -l)"
 
 ## 📚 Related Documents
 
-- [DOCUMENTATION_GOVERNANCE.md](DOCUMENTATION_GOVERNANCE.md) - Governance framework
+- [DOCUMENTATION_GOVERNANCE.md](documentation_governance.md) - Governance framework
+<<<<<<< HEAD
 - [AGENTS.md](../../../AGENTS.md) - Agent guidelines
+- [AGENTS.md](../../../AGENTS.md) - Agent guidelines
+=======
+<<<<<<< HEAD
+- [AGENTS.md](../../../agents.md) - Agent guidelines
 - [agents.md](../../../agents.md) - Agent guidelines
-- [agents.md](../../../AGENTS.md) - Agent guidelines
+=======
+- [AGENTS.md](../../../AGENTS.md) - Agent guidelines
+- [AGENTS.md](../../../AGENTS.md) - Agent guidelines
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [.windsurfrules](../../../.windsurfrules) - IDE rules
 
 ---

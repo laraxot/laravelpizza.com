@@ -3,7 +3,11 @@ title: "🚨 CRITICAL BUG: sync_remote_repo.sh Deleted"
 type: concept
 tags: [critical, bug, sync, script]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "critical-bug-sync-script-deleted 🚨 critical bug: sync_remote_repo.sh deleted"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -12,7 +16,6 @@ related:
   - "./database-naming-fix-summary.md"
   - "./database-naming-verification-report.md"
   - "./sqlite-permission-fix.md"
-status: draft
 ---
 
 # 🚨 CRITICAL BUG: sync_remote_repo.sh Deleted

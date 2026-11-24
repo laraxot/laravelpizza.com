@@ -3,11 +3,14 @@ title: "filament ui enhancements"
 type: note
 tags: [documentation]
 created: 2026-09-26
-updated: 2026-10-23
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "filament ui enhancements"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Miglioramenti UI/UX per MailTemplateResource
@@ -130,7 +133,7 @@ Card::make()
 
 ### 1. Form Completo
 ```php
-public static function form(\Filament\Schemas\Schema $form): \Filament\Schemas\Schema
+public static function form(Form $form): Form
 {
     return $form
         ->schema([

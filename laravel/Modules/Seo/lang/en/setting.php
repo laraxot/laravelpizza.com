@@ -11,6 +11,13 @@ return [
     ],
     'title' => 'Settings',
     'fields' => [
+        'indexnow_key' => [
+            'label' => 'IndexNow key',
+            'placeholder' => '',
+            'helper_text' => 'Public key (8-128 letters, digits or dashes) served at /{key}.txt: Bing, Yandex, Seznam and Naver receive the new sitemap pages right away (php artisan seo:indexnow, on every deploy). Empty = IndexNow off.',
+            'tooltip' => '',
+            'description' => '',
+        ],
         'path_aliases' => [
             'label' => 'Duplicate pages (aliases)',
             'placeholder' => '',

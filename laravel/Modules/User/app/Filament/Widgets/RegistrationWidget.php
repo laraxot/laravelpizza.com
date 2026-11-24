@@ -145,7 +145,10 @@ class RegistrationWidget extends XotBaseSchemaWidget
         // return redirect()->route('pages.view', ['slug' => $this->type . '_register_complete','lang'=>$lang]);
         return redirect($route);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
     /**
      * @param  array<int|string, mixed>  $schema
      * @return array<int|string, Component>

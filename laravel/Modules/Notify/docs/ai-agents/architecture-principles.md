@@ -3,7 +3,11 @@ title: "architecture principles"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "architecture principles"
 issues: []
 discussions: []
@@ -12,8 +16,8 @@ status: draft
 
 # Architecture Principles
 
-Key architectural rules for Quaeris Fila5 Mono (Laraxot / Laravel 12 / Filament 5).
-Key architectural rules for App Fila5 Mono (Laraxot / Laravel 12 / Filament 5).
+Key architectural rules for <nome progetto> fila5 (Laraxot / Laravel 12 / Filament 5).
+Key architectural rules for App fila5 (Laraxot / Laravel 12 / Filament 5).
 
 ## 0. Database Configuration (CRITICAL)
 
@@ -143,7 +147,7 @@ Ref: `.claude/docs/spatie-queueable-action.md`
 
 ```php
 // WRONG - Service class FORBIDDEN
-namespace Modules\Quaeris\Services;
+namespace Modules\<nome progetto>\Services;
 namespace Modules\App\Services;
 class ReportService
 {
@@ -151,7 +155,7 @@ class ReportService
 }
 
 // CORRECT - QueueableAction obbligatorio
-namespace Modules\Quaeris\Actions;
+namespace Modules\<nome progetto>\Actions;
 namespace Modules\App\Actions;
 use Spatie\QueueableAction\QueueableAction;
 

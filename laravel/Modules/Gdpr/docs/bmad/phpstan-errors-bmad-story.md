@@ -7,12 +7,11 @@ created: 2026-09-25
 tags: [phpstan, second-brain, bmad, fix, swarm-parallel]
 related:
   - ../rules/phpstan-rules.md
-  - ../wiki/log.md
-  - ../../../../../bashscripts/docs/second-brain-healthcheck.sh
+  - ../../../docs/wiki/log.md
+  - ../../../bashscripts/docs/second-brain-healthcheck.sh
 issues:
   - "https://github.com/laraxot/<nome repository>/issues/281"
 qmd: "phpstan fixes second brain bmad swarm parallel"
-status: draft
 ---
 # Story: Fix PHPStan errors with BMAD + Second Brain
 

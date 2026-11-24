@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan errors analysis"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHPStan Error Analysis - AI Module
@@ -125,5 +124,14 @@ The sentiment analysis functionality is critical for:
 - **Long-term**: Comprehensive testing and documentation
 
 ---
+
+title: "phpstan errors analysis"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan errors analysis"
+issues: []
+discussions: []
 *PHPStan Level: 9*
 *Error Count: 8+ critical errors*

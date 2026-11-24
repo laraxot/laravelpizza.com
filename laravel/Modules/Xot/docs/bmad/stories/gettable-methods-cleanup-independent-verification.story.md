@@ -1,5 +1,12 @@
 ---
-title: "Verifica indipendente: hook getTable* nelle List page (cross-check di 5.254)"
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_jbLdCz
+qmd: "xot bmad stories gettable methods cleanup independent verification story md"
+=======
+>>>>>>> .merge_file_yanm43
+>>>>>>> laraxot/dev
+title: "Verifica indipendente — hook getTable* nelle List page (cross-check di 5.254)"
 type: story
 module: Xot
 status: done
@@ -10,12 +17,19 @@ related:
   - "./5.254-list-page-table-hooks.story.md"
   - "./5.255-doppi-header-actions-list-page.story.md"
   - "../filament-list-page-table-ownership.md"
+<<<<<<< HEAD
   - "../../../../User/docs/bmad/stories/user-filament-boundary-i18n.story.md"
+=======
+<<<<<<< .merge_file_jbLdCz
+  - "../../../../User/docs/bmad/stories/user-filament-boundary-i18n-20260929.story.md"
+=======
+  - "../../../../User/docs/bmad/stories/user-filament-boundary-i18n.story.md"
+>>>>>>> .merge_file_yanm43
+>>>>>>> laraxot/dev
   - "../../../../../docs/wiki/audits/getTable-methods-audit-2026-09-29.md"
-qmd: "verifica indipendente   hook `gettable*` nelle list page xot"
 ---
 
-# Verifica indipendente: hook `getTable*` nelle List page
+# Verifica indipendente — hook `getTable*` nelle List page
 
 ## Obiettivo del task ricevuto
 
@@ -53,7 +67,7 @@ toccare" non ho applicato nessun fix: ho invece fatto da secondo paio d'occhi.
 - Rilancio dello scan grep-based su tutto `Modules`+`Themes` dopo il fix: **0
   violazioni**.
 
-## Perché la story `User/user-filament-boundary-i18n.story.md` diceva "0
+## Perché la story `User/user-filament-boundary-i18n-20260929.story.md` diceva "0
 ## violazioni su 154 pagine" quando le 6 di Ptv esistevano ancora
 
 Quella story userà quasi certamente un glob che richiede che il nome file **inizi**
@@ -69,20 +83,28 @@ Già esistente e sufficiente: `laravel/Modules/Xot/docs/filament-list-page-table
 (dal 2026-09-10), rafforzata dalla story 5.254 con la catena di chiamate Filament
 verificata riga per riga nel vendor e dalle memorie
 `Xot/docs/wiki/memories/tabella-appartiene-alla-resource-non-alla-pagina.md` e
+<<<<<<< HEAD
 `header-actions-doppi-filament.md`. Non duplicata.
+=======
+<<<<<<< .merge_file_jbLdCz
+`header-actions-doppi-filament-5.md`. Non duplicata.
+=======
+`header-actions-doppi-filament.md`. Non duplicata.
+>>>>>>> .merge_file_yanm43
+>>>>>>> laraxot/dev
 
 ## Verifica gate
 
 - Nessun codice modificato da questa sessione (il fix era già presente e corretto).
 - PHPStan/Pest sui 6 file: già eseguiti e verdi dalla sessione che ha applicato il fix
-  (vedi 5.254: Acceptance Criteria). Non rieseguiti qui per non introdurre lock su un
+  (vedi 5.254 — Acceptance Criteria). Non rieseguiti qui per non introdurre lock su un
   modulo (`Ptv`) con un working tree già sporco di modifiche non correlate a questo
   task (vedi nota sotto).
 - Host di lavoro: non `10.100.200.15` (verificato `hostname`), quindi Pest non era
-  comunque skippabile per policy: ma non è stato necessario rieseguirlo perché non è
+  comunque skippabile per policy — ma non è stato necessario rieseguirlo perché non è
   stato toccato nulla.
 
-## Nota operativa: working tree Ptv già sporco
+## Nota operativa — working tree Ptv già sporco
 
 `git status` in `laravel/Modules/Ptv` mostra, al momento di questa verifica, numerose
 modifiche non correlate a questo task (file cancellati/modificati che sembrano lavoro
@@ -91,7 +113,7 @@ eseguito alcun `git add -A`/commit su Ptv da questa sessione: un commit ampio av
 rischiato di cristallizzare lavoro altrui incompleto. Il commit dei 6 file rientra
 nella responsabilità della sessione che li ha scritti (story 5.254).
 
-## Blocco git: non risolto qui, documentato
+## Blocco git — non risolto qui, documentato
 
 Il repo locale di `laravel/Modules/Xot` è divergente da `laraxot/dev` (1 commit locale
 contro **257 commit** solo sul remoto, con file cancellati/spostati che non esistono

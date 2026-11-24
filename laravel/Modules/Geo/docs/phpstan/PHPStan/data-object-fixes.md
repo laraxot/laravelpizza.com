@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "data object fixes"
 issues: []
 discussions: []
-status: superseded
-superseded_by: ../data-object-fixes.md
 ---
 
 # Correzioni agli oggetti Data nel framework Laraxot

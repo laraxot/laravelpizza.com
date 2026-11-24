@@ -1,13 +1,12 @@
 ---
-title: "story"
+title: "Story"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "story"
+qmd: "Story"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Story: Laravel 13 Upgrade

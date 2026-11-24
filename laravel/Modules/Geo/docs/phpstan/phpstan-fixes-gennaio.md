@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "phpstan fixes gennaio"
 issues: []
 discussions: []
-status: draft
 ---
 
 # PHPStan Fixes Gennaio 2025 - Modulo Geo
@@ -390,11 +389,28 @@ cd /var/www/html/_bases/base_<nome progetto>/laravel
 - [Modulo Geo README](../README.md)
 - [JSON Database Documentation](../json-database.md)
 - [Services Architecture](../services/README.md)
+<<<<<<< HEAD
 - [Geographic Data Handling](../geo_entities.md)
+=======
+<<<<<<< HEAD
+- [Geographic Data Handling](../geo_entities.md)
+=======
+- [Geographic Data Handling](../geo-entities.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [PHPStan Level 9 Guide](../../../docs/phpstan-level9-guide.md)
-- [Filament Best Practices](../raw/history/filament-best-practices.md)
+- [Filament Best Practices](../filament/filament-best-practices.md)
 
 ---
+
+title: "phpstan fixes gennaio"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan fixes gennaio"
+issues: []
+discussions: []
 ✅ **Status Issue Target**: **COMPLETATO AL 100%** (4/4 errori risolti)  
 ✅ **Status Phase 3**: **COMPLETATO AL 100%** (Filament UI components)  
 ✅ **Status Phase 4**: **COMPLETATO AL 100%** (Console Commands)  

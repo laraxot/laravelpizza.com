@@ -1,15 +1,14 @@
 ---
-qmd: "qmd setup"
+qmd: "Qmd Setup"
 issues: []
 discussions: []
-title: "QMD Setup — Module Cms"
+title: "Qmd Setup"
 type: documentation
 created: 2026-05-11
 updated: 2026-05-11
 tags: [qmd, search, docs, performance]
 related:
   - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
-status: draft
 ---
 
 # QMD Setup per Module **Cms**
@@ -92,7 +91,15 @@ graph TD
 
 - [Global QMD Config](../qmd.md) (root docs)
 - [Operational Discipline](../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
+<<<<<<< HEAD
 - [On-Demand Pattern](./on-demand-pattern.md)
+=======
+<<<<<<< HEAD
+- [On-Demand Pattern](./ON-DEMAND-PATTERN.md)
+=======
+- [On-Demand Pattern](./on-demand-pattern.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 *Cache: ~/.cache/qmd-cache/ | Index: ~/.cache/qmd-cache/index*

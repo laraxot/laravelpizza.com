@@ -8,6 +8,8 @@ use Modules\Seo\Filament\Pages\SettingPage;
 use Modules\Xot\Datas\Concerns\MakesFromTenantConfig;
 use Spatie\LaravelData\Data;
 
+use function Safe\preg_match;
+
 /**
  * Impostazioni di Seo del tenant corrente: `config/{tenant}/seo.php`.
  *
@@ -57,6 +59,27 @@ class SeoConfigData extends Data
             'target' => '',
         ],
     ];
+
+    /**
+     * Chiave IndexNow del sito (8-128 caratteri: lettere, cifre, trattini). Non e' un segreto: il protocollo la pubblica
+     * in `/{chiave}.txt`, da cui Bing, Yandex, Seznam e Naver verificano che le URL inviate siano nostre.
+     * Vuota = IndexNow spento (nessun file servito, nessun invio).
+     *
+     * @see Modules/Seo/docs/adr/search-engine-presence.md
+     */
+    public ?string $indexnow_key = null;
+
+    /**
+     * La chiave IndexNow se e' nel formato del protocollo, altrimenti null.
+     *
+     * @see Modules/Seo/docs/contracts/submit-index-now-action.md
+     */
+    public function indexNowKey(): ?string
+    {
+        $key = trim((string) $this->indexnow_key);
+
+        return preg_match('/^[A-Za-z0-9-]{8,128}$/', $key) === 1 ? $key : null;
+    }
 
     /**
      * Un file scritto a mano o un form con righe incomplete non devono rompere ogni richiesta (il redirect e' un middleware

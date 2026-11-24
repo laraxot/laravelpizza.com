@@ -47,7 +47,15 @@ describe('Read Translation File Action', function (): void {
         $this->expectApplicationException(\Exception::class, 'File di traduzione non leggibile:');
 
         TestCase::makeReadTranslationFileAction()->execute($filePath);
+<<<<<<< HEAD
     });
+=======
+    })->skip(
+        // Non `static`: Pest lega la closure di skip all'istanza del test case.
+        fn (): bool => ! TestCase::permissionBitsEnforced(),
+        'Richiede un utente per cui il filesystem applica i bit di permesso: root li ignora.',
+    );
+>>>>>>> laraxot/dev
 
     test('throws exception for invalid file content', function (): void {
         $filePath = TestCase::readTranslationTestFilePath();

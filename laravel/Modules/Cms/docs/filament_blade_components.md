@@ -10,7 +10,6 @@ discussions: []
 module: theme
 topic: filament_blade_components
 canonical: ../../../Themes/docs/shared-components/filament-blade-components.md
-status: stub
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/filament-blade-components.md

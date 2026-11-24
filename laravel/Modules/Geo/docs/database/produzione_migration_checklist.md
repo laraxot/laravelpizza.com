@@ -1,14 +1,16 @@
 ---
-title: "produzione migration checklist"
+title: "Produzione Migration Checklist"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
-qmd: "produzione migration checklist"
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+qmd: "Produzione Migration Checklist"
 issues: []
 discussions: []
-status: superseded
-superseded_by: produzione-migration-checklist.md
 ---
 
 # 📋 Produzione Migration Checklist
@@ -28,6 +30,15 @@ superseded_by: produzione-migration-checklist.md
 ```
 
 ---
+
+title: "PRODUZIONE MIGRATION CHECKLIST"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "PRODUZIONE MIGRATION CHECKLIST"
+issues: []
+discussions: []
 ## Procedura Step-by-Step
 
 ### Step 1: Test in Locale

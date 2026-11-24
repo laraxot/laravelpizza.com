@@ -179,4 +179,21 @@ return [
             'label' => 'End date:',
         ],
     ],
+    'recent_logins' => [
+        'heading' => 'Recent logins',
+        'columns' => [
+            'user' => 'User',
+            'login_at' => 'Login time',
+            'ip_address' => 'IP address',
+            'user_agent' => 'Browser',
+        ],
+    ],
+    'users_chart' => [
+<<<<<<< HEAD
+        'heading' => 'New users',
+=======
+        'heading' => 'Users',
+>>>>>>> laraxot/dev
+        'label' => 'New users',
+    ],
 ];

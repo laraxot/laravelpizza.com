@@ -3,11 +3,14 @@ title: "filament version policy"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "filament version policy"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🎯 Filament Version Policy - ALWAYS LATEST
@@ -243,8 +246,8 @@ composer update "filament/*" -W
 - [GitHub Releases](https://github.com/filamentphp/filament/releases)
 
 ### Project Documentation
-- [COMPOSER_STRATEGY.md](COMPOSER_STRATEGY.md)
-- [COMPOSER_UPDATE_REPORT.md](COMPOSER_UPDATE_REPORT.md)
+- [COMPOSER_STRATEGY.md](composer_strategy.md)
+- [COMPOSER_UPDATE_REPORT.md](composer_update_report.md)
 
 ## ✅ Checklist
 
@@ -269,6 +272,15 @@ composer update "filament/*" -W
 - [ ] No old versions
 
 ---
+
+title: "filament version policy"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "filament version policy"
+issues: []
+discussions: []
 **Stato**: ✅ **POLITICA UFFICIALE - SEMPRE FILAMENT 5**  
 **Versione Attuale**: **Filament 5.x**  
 **Prossimo Aggiornamento**: **Quando esce Filament 6**  

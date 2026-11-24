@@ -10,7 +10,6 @@ type: product-brief
 module: Cms
 related:
   - ./livewire-inventory.md
-status: draft
 ---
 
 # Brief

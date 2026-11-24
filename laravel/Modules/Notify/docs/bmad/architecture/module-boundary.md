@@ -1,14 +1,17 @@
 ---
-title: "Notify: architettura BMAD"
+title: "Notify — architettura BMAD"
 type: architecture
 status: active
 module: Notify
 created: 2026-09-28
+<<<<<<< HEAD
 updated: 2026-09-28
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "Notify architettura confini componenti PHP Laravel Filament"
-tags: [docs, notify, bmad]
 ---
-# Notify: architettura
+# Notify — architettura
 
 ## Scopo osservato
 

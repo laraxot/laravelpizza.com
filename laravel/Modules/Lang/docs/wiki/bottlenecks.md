@@ -8,8 +8,6 @@ updated: 2026-07-14
 qmd: "phpstan level10 fixes 1"
 related:
   - "./italian-text-refined-audit-report.md"
-  - "../italian-text-refined-audit-report.md"
-status: draft
 ---
 # Analisi Bottlenecks Modulo Lang
 
@@ -151,8 +149,6 @@ status: draft
 * [bottlenecks.md](../../Chart/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../Gdpr/docs/bottlenecks.md)
 * [bottlenecks.md](../../Gdpr/docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../../Gdpr/docs/bottlenecks.md)
-* [bottlenecks.md](../../../Gdpr/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../Xot/docs/bottlenecks.md)
 * [bottlenecks.md](../../Xot/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../Xot/docs/roadmap/bottlenecks.md)
@@ -172,18 +168,3 @@ status: draft
 * [bottlenecks.md](../../Cms/docs/bottlenecks.md)
 * [bottlenecks.md](../../Cms/docs/bottlenecks.md)
 * [bottlenecks.md](../../Cms/docs/bottlenecks.md)
-* [bottlenecks.md](../../../User/docs/bottlenecks.md)
-* [bottlenecks.md](../../../User/docs/roadmap/bottlenecks.md)
-* [bottlenecks.md](../../UI/docs/bottlenecks.md)
-* [bottlenecks.md](../../UI/docs/roadmap/bottlenecks.md)
-* [bottlenecks.md](performance/bottlenecks.md)
-* [bottlenecks.md](../../../Job/docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../../Media/docs/bottlenecks.md)
-* [bottlenecks.md](../../../Media/docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../../Activity/docs/bottlenecks.md)
-* [bottlenecks.md](../../Patient/docs/roadmap/bottlenecks.md)
-* [bottlenecks.md](../../../Cms/docs/bottlenecks.md)
-* [bottlenecks.md](../../../Cms/docs/bottlenecks.md)
-* [bottlenecks.md](../../../Cms/docs/bottlenecks.md)
-* [bottlenecks.md](../../../Cms/docs/bottlenecks.md)
-* [bottlenecks.md](../../../Cms/docs/bottlenecks.md)

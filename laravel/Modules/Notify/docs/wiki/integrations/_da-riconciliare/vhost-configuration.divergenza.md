@@ -1,14 +1,17 @@
 ---
-qmd: "vhost configuration.divergenza"
+qmd: "Vhost Configuration.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: vhost-configuration.md"
+title: "Vhost Configuration.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Divergenza: `vhost-configuration.md`

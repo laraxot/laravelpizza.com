@@ -1,14 +1,17 @@
 ---
-qmd: "form schema conventions.divergenza"
+qmd: "Form Schema Conventions.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: form_schema_conventions.md"
+title: "Form Schema Conventions.divergenza"
 module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Divergenza: `form_schema_conventions.md`

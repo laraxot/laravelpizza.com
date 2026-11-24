@@ -10,8 +10,6 @@ discussions: []
 module: theme
 topic: merges
 canonical: ../../../Themes/docs/shared-components/merge-conflicts-analysis.md
-status: superseded
-superseded_by: ../merges.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/merge-conflicts-analysis.md

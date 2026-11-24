@@ -1,13 +1,9 @@
 ---
-title: "Decision log: Job"
+title: "Decision log — Job"
 type: decision-log
 module: Job
 related:
   - ./livewire-inventory.md
-status: draft
-updated: 2026-10-07
-tags: [docs, job, bmad]
-qmd: "decision log job"
 ---
 
 # Decision log

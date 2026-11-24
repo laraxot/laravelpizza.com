@@ -7,9 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: superseded
-superseded_by: documentation-governance.md
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Documentation Governance Framework
@@ -36,7 +38,7 @@ Modules/ModuleName/
 ├── docs/
 │   ├── README.md                    # Module overview and quick reference
 │   ├── 00-index.md                  # Alternative index (if needed)
-│   ├── changelog.md                 # Module changelog
+│   ├── CHANGELOG.md                 # Module changelog
 │   ├── architecture/                # Architecture decisions and patterns
 │   │   ├── overview.md
 │   │   └── decisions/               # ADRs (Architectural Decision Records)
@@ -438,10 +440,9 @@ jobs:
 
 ## 📚 Related Documents
 
-- [agents.md](../../../AGENTS.md) - Agent guidelines
+- [AGENTS.md](../../../agents.md) - Agent guidelines
 - [.windsurfrules](../../../.windsurfrules) - IDE rules
 - [DOCUMENTATION_INDEX.md](../../../docs/DOCUMENTATION_INDEX.md) - Master index
-- [DOCUMENTATION_INDEX.md](../../../DOCUMENTATION_INDEX.md) - Master index
 
 ---
 

@@ -13,10 +13,9 @@ metadata:
   type: procedure
   source: prompts/push.txt (migrated 2026-07-30)
   related_docs: [translation-study-guide]
-status: draft
 ---
 
-# Git Push Procedure: Lang Module
+# Git Push Procedure — Lang Module
 
 ## Summary
 Synchronize the Lang module on all configured GitHub remotes and document the resolution path.
@@ -85,9 +84,9 @@ git status --short --branch        # Should be clean
 
 ## Documentation Updates
 After completing the procedure, update:
-- `docs/git-multi-org-sync-handoff.md`: remotes, counts, result
-- `docs/second-brain.md`: reusable rules that emerged
-- This procedure: any new real-world cases encountered
+- `docs/git-multi-org-sync-handoff.md` — remotes, counts, result
+- `docs/second-brain.md` — reusable rules that emerged
+- This procedure — any new real-world cases encountered
 
 ## Output Requirements
 - ✅ Remotes synchronized with sync counts documented
@@ -109,7 +108,7 @@ Merge: laraxot/dev integrated (commit 0ba629c)
 - ✅ Fetch all remotes: laraxot/dev reachable (28 commits behind)
 - ✅ Merge forward-only: laraxot/dev integrated into HEAD
 - ✅ Push git: OK to provtv (commit 7eae7708, achieved 0 0 sync)
-- ❌ Push git: FAILED to laraxot (error: "did not receive expected object": laraxot repository corrupted)
+- ❌ Push git: FAILED to laraxot (error: "did not receive expected object" — laraxot repository corrupted)
 
 **Commit History (Recent):**
 - `0ba629c`: Merge remote-tracking branch 'laraxot/dev' into dev
@@ -130,7 +129,7 @@ Merge: laraxot/dev integrated (commit 0ba629c)
 3. **Remote Corruption**: laraxot/dev was 28 commits behind. Forward-only merge resolved sync locally, but laraxot repository is corrupted (server-side issue). **Action required**: Contact GitHub admins for recovery.
 
 4. **PHPStan Scope vs Global**: 
-   - **Corrected misconception**: Previous report claimed "1000+ Lang errors": actually FALSE
+   - **Corrected misconception**: Previous report claimed "1000+ Lang errors" — actually FALSE
    - **Reality**: Lang/app is CLEAN (PHPStan analyse Modules/Lang/app = [OK] 0 errors)
    - **Root issue**: Larastan global bootstrap (XotBaseServiceProvider Livewire) times out
    - **Impact**: ALL modules blocked on bootstrap, not Lang-specific
@@ -144,6 +143,6 @@ Merge: laraxot/dev integrated (commit 0ba629c)
 
 ## Next Steps
 - ✅ provtv sync completed and verified
-- ⚠️ laraxot corrupted: contact GitHub admins for recovery
+- ⚠️ laraxot corrupted — contact GitHub admins for recovery
 - ⏸️ Lang/app quality gate: ✅ PASS (PHPStan 0 errors)
 - ⏸️ Modules global bootstrap: BLOCKED (Larastan timeout, architectural issue)

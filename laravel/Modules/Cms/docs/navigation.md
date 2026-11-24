@@ -10,7 +10,6 @@ title: Navigation
 description: Building a navigation menu for your site
 extends: _layouts.documentation
 section: content
-status: draft
 ---
 
 # Navigation {#navigation}
@@ -42,9 +41,9 @@ $page->navigation
 ```
 
 ## Collegamenti tra versioni di navigation.md
-* [navigation.md](../../Gdpr/docs/navigation.md)
+* [navigation.md](laravel/modules/gdpr/docs/navigation.md)
 * [navigation.md](laravel/modules/xot/docs/navigation.md)
-* [navigation.md](../../UI/docs/navigation.md)
-* [navigation.md](blocks/navigation.md)
+* [navigation.md](laravel/modules/ui/docs/navigation.md)
+* [navigation.md](laravel/modules/cms/docs/blocks/navigation.md)
 * [navigation.md](laravel/modules/cms/docs/navigation.md)
-* [navigation.md](components/navigation.md)
+* [navigation.md](laravel/modules/cms/docs/components/navigation.md)

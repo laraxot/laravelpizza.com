@@ -79,10 +79,10 @@ php artisan tinker --execute="echo (new \Modules\Media\Models\Media)->getTable()
 | File | Model aggiunto | Fonte autorevole |
 |---|---|---|
 | `HasMediaResource/Tables/HasMediasTable.php` | `Modules\Media\Models\Media` | Nessuna `HasMediaResource` esiste (solo cartella con `Schemas/`, `Tables/`, `Actions/`). `MediaRelationManager` (stessa cartella, relationship `media`) dichiara esplicitamente `protected static string $resource = MediaResource::class;` con un commento che spiega perche' (namespace fuorviante). La relazione `media` restituisce sempre record `Media`, quindi ho usato lo stesso model di `MediaResource` per coerenza, documentando nel file perche' non c'e' una Resource propria. |
-| `MediaConvertResource/Tables/MediaConvertsTable.php` | `Modules\Media\Models\MediaConvert` | Gia' presente (sessione precedente). Verificato contro `MediaConvertResource::$model = MediaConvert::class`: corretto. |
-| `MediaResource/Tables/MediasTable.php` | `Modules\Media\Models\Media` | Gia' presente (sessione precedente). Verificato contro `MediaResource::$model = Media::class`: corretto. |
-| `MediaResource/Tables/MediaTable.php` | `Modules\Media\Models\Media` | Gia' presente (sessione precedente). Verificato contro `MediaResource::$model = Media::class`: corretto. |
-| `TemporaryUploadResource/Tables/TemporaryUploadsTable.php` | `Modules\Media\Models\TemporaryUpload` | Gia' presente (sessione precedente). Verificato contro `TemporaryUploadResource::$model = TemporaryUpload::class`: corretto. |
+| `MediaConvertResource/Tables/MediaConvertsTable.php` | `Modules\Media\Models\MediaConvert` | Gia' presente (sessione precedente). Verificato contro `MediaConvertResource::$model = MediaConvert::class` — corretto. |
+| `MediaResource/Tables/MediasTable.php` | `Modules\Media\Models\Media` | Gia' presente (sessione precedente). Verificato contro `MediaResource::$model = Media::class` — corretto. |
+| `MediaResource/Tables/MediaTable.php` | `Modules\Media\Models\Media` | Gia' presente (sessione precedente). Verificato contro `MediaResource::$model = Media::class` — corretto. |
+| `TemporaryUploadResource/Tables/TemporaryUploadsTable.php` | `Modules\Media\Models\TemporaryUpload` | Gia' presente (sessione precedente). Verificato contro `TemporaryUploadResource::$model = TemporaryUpload::class` — corretto. |
 
 ## Verifica colonne (Task 2)
 
@@ -94,16 +94,16 @@ Colonne reali (via `Schema::getColumnListing`, sola lettura):
 
 Esito per file:
 
-- `HasMediasTable.php`: chiavi `id`, `name`, `created_at`: tutte presenti in `media`. OK.
-- `MediaTable.php`: chiavi `id, name, file_name, mime_type, collection_name, disk, size, order_column, model_type, model_id, created_at, updated_at`: tutte presenti in `media`. OK.
-- `MediasTable.php`: chiavi `id, model_type, model_id, collection_name, name, file_name, mime_type, disk, size, created_at`: tutte presenti in `media`. OK.
+- `HasMediasTable.php`: chiavi `id`, `name`, `created_at` — tutte presenti in `media`. OK.
+- `MediaTable.php`: chiavi `id, name, file_name, mime_type, collection_name, disk, size, order_column, model_type, model_id, created_at, updated_at` — tutte presenti in `media`. OK.
+- `MediasTable.php`: chiavi `id, model_type, model_id, collection_name, name, file_name, mime_type, disk, size, created_at` — tutte presenti in `media`. OK.
 - `MediaConvertsTable.php`: chiavi dirette tutte presenti in `media_converts`. `media.file_name` e' una relazione (punto), saltata come da istruzioni.
-- `TemporaryUploadsTable.php`: chiavi `file_name, mime_type, file_size, status, created_at`: tutte presenti in `temporary_uploads`. OK.
+- `TemporaryUploadsTable.php`: chiavi `file_name, mime_type, file_size, status, created_at` — tutte presenti in `temporary_uploads`. OK.
 
 Nessuna colonna sospetta/rimossa trovata. Nessun `git log -S` necessario:
 tutte le chiavi dirette hanno riscontro diretto nello schema.
 
-## Dead code segnalato (non toccato, solo evidenza: Task/regola 7)
+## Dead code segnalato (non toccato, solo evidenza — Task/regola 7)
 
 - **`MediaResource/Tables/MediasTable.php` e' probabile dead code.**
   `XotBaseResource::getTableClass()` deriva la Table da
@@ -112,7 +112,7 @@ tutte le chiavi dirette hanno riscontro diretto nello schema.
   quindi per `MediaResource` (model `Media`) la classe risolta e'
   `MediaResource\Tables\MediaTable` (esiste, usata) e MAI
   `MediaResource\Tables\MediasTable`. `grep -rn "MediasTable\b" app`
-  restituisce solo la propria dichiarazione di classe: nessun'altra
+  restituisce solo la propria dichiarazione di classe — nessun'altra
   Resource/pagina la referenzia con `getTableClass()` o esplicitamente.
   Ho comunque applicato Task 1/2/3 come richiesto, senza cancellare il
   file.
@@ -129,7 +129,7 @@ tutte le chiavi dirette hanno riscontro diretto nello schema.
   colonna rimossa, solo capacita' di ordinamento aggiunta).
 - `MediaConvertsTable.php`: aggiunto `->sortable()` a `format`,
   `codec_video`, `codec_audio`, `preset`, `bitrate`, `width`, `height`,
-  `threads`, `speed`, `remaining`, `rate`, `execution_time`: tutte colonne
+  `threads`, `speed`, `remaining`, `rate`, `execution_time` — tutte colonne
   scalari dirette della tabella `media_converts`, gia' seguivano il
   pattern di `percentage` (unica gia' sortable prima di questo giro).
   Nessuna label/formattazione cambiata, nessuna colonna rimossa.
@@ -169,21 +169,21 @@ Claude Sonnet 5
 - `app/Filament/Resources/MediaResource/Tables/MediaTable.php` (nessuna modifica in questo giro, gia' a posto)
 - `app/Filament/Resources/TemporaryUploadResource/Tables/TemporaryUploadsTable.php` (nessuna modifica in questo giro, gia' a posto)
 
-## Follow-up (2026-09-11): cancellazione del dead code segnalato
+## Follow-up (2026-09-11) — cancellazione del dead code segnalato
 
 Riferimento: `docs/stories/xotbaseresourcetable-dead-code-duplicate-table-classes-followup.story.md`
-(root del monorepo, sincronizzato dall'orchestratore: non modificato da qui),
+(root del monorepo, sincronizzato dall'orchestratore — non modificato da qui),
 righe Media. Le due classi segnalate sopra come "dead code, non toccato" sono
 state riverificate in modo indipendente e cancellate:
 
-### 1. `HasMediaResource/Tables/HasMediasTable.php`: CANCELLATO
+### 1. `HasMediaResource/Tables/HasMediasTable.php` — CANCELLATO
 
 Verifiche eseguite (oltre a quelle gia' in questa story):
 
 - `grep -rn "HasMediaResource" laravel` (tutto il monorepo): nessuna classe
   `class HasMediaResource extends ...` esiste da nessuna parte. La cartella
   `HasMediaResource/` contiene solo sottocartelle (`Actions/`, `Pages/`
-  vuota, `RelationManagers/`, `Schemas/`, e la `Tables/` ora rimossa): mai
+  vuota, `RelationManagers/`, `Schemas/`, e la `Tables/` ora rimossa) — mai
   una Resource. Nessuna Resource puo' quindi mai chiamare
   `HasMediaResource::getTableClass()`.
 - `grep -rn "HasMediasTable\b" laravel`: prima della cancellazione, l'unico
@@ -198,14 +198,14 @@ Verifiche eseguite (oltre a quelle gia' in questa story):
   rimossa: contiene `Actions/AddAttachmentAction.php`,
   `RelationManagers/MediaRelationManager.php`,
   `Schemas/HasMediaForm.php` e `Schemas/HasMediaInfolist.php`, tutti vivi
-  (usati o referenziati da test reali): non nel perimetro di questo task.
+  (usati o referenziati da test reali) — non nel perimetro di questo task.
 
 Azione: cancellato `HasMediasTable.php`; aggiornato
 `tests/Unit/MediaFilamentAndActionsTest.php` rimuovendo l'istanziazione
 diretta e l'import (il test residuo copre solo `TemporaryUploadsTable`,
 rinominato di conseguenza).
 
-### 2. `MediaResource/Tables/MediasTable.php`: CANCELLATO
+### 2. `MediaResource/Tables/MediasTable.php` — CANCELLATO
 
 Verifiche eseguite:
 
@@ -216,7 +216,7 @@ Verifiche eseguite:
   `Media`) risolve sempre a `MediaResource\Tables\MediaTable` (esiste, la
   classe con `$name = 'Media'` + `'Table'`), mai a `MediasTable`.
 - `MediaResource.php` verificato: non fa `override` di `table()`, quindi
-  usa il default di `XotBaseResource`: nessuna scorciatoia che potrebbe
+  usa il default di `XotBaseResource` — nessuna scorciatoia che potrebbe
   far risolvere `MediasTable` per altra via.
 - `grep -rn "MediasTable\b" laravel`: solo la propria dichiarazione di
   classe + l'istanziazione diretta nel test (rimossa in questo giro).
@@ -231,13 +231,13 @@ Verifiche eseguite:
   a favore di `MediasTable` e' cosmetica: formatta `size` in KB
   (`number_format($state / 1024, 2).' KB'`) invece che in byte grezzi con
   suffisso `' B'`. Non e' logica di business mancante, solo una preferenza
-  di formattazione: **non migrata** per restare nel perimetro del task
+  di formattazione — **non migrata** per restare nel perimetro del task
   (cancellazione dead code) senza toccare la formattazione della classe
   viva senza un mandato esplicito. Annotato qui come possibile follow-up UX
   separato, se qualcuno lo vuole.
 - `MediaTable.php` ha gia' copertura test dedicata e superiore in
   `tests/Unit/Filament/MediaTableTest.php` (4 test su colonne, ordine,
-  searchable, toggle): la cancellazione di `MediasTable.php` non riduce la
+  searchable, toggle) — la cancellazione di `MediasTable.php` non riduce la
   copertura reale della classe viva.
 
 Azione: cancellato `MediasTable.php`; stesso aggiornamento del test di cui

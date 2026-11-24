@@ -1,24 +1,34 @@
+<<<<<<< HEAD
+=======
 ---
-title: "Best Practices per l'Implementazione del Logout"
+title: "Logout Implementation Best Practices"
+module: User
 type: note
-status: draft
-updated: 2026-10-13
-tags: [docs, user]
-qmd: "best practices per l'implementazione del logout user"
+status: active
+updated: '2026-11-23'
 ---
+
+>>>>>>> laraxot/dev
 # Best Practices per l'Implementazione del Logout 
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
 - [Best Practices Componenti di Autenticazione](./auth_components_best_practices.md)
-- [Best Practices Componenti di Autenticazione](./auth_components_best_practices.md)
-- [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/LARAVEL_LOCALIZATION_USAGE.md)
+- [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/laravel_localization_usage.md)
 # Best Practices per l'Implementazione del Logout
 
 ## Collegamenti correlati
+<<<<<<< HEAD
 - [README modulo User](./README.md)
+=======
+<<<<<<< HEAD
+- [README modulo User](./readme.md)
+=======
+- [README modulo User](./README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Best Practices Componenti di Autenticazione](./auth_components_best_practices.md)
-- [Utilizzo di Laravel Localization](/laravel/modules/lang/docs/laravel_localization_usage.md)
+- [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/laravel_localization_usage.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
 ## Panoramica
@@ -259,14 +269,11 @@ module: theme
 topic: logout-implementation-best-practices
 canonical: ../../../Themes/docs/shared-components/logout-implementation-best-practices.md
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"

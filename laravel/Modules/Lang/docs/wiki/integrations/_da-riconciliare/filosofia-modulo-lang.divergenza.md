@@ -1,14 +1,13 @@
 ---
-qmd: "filosofia modulo lang.divergenza"
+qmd: "Filosofia Modulo Lang.divergenza"
 issues: []
 discussions: []
-title: "Divergenza da riconciliare: filosofia-modulo-lang.md"
+title: "Filosofia Modulo Lang.divergenza"
 module: Lang
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
 ---
 
 # Divergenza: `filosofia-modulo-lang.md`

@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-<<<<<<< .merge_file_EpnZtd
+<<<<<<< HEAD
+return [];
+=======
 return [
     'sections' => [
         'empty' => [
             'label' => '',
-            'heading' => '',
+            'heading' => 'empty',
         ],
     ],
 ];
-=======
-return [];
->>>>>>> .merge_file_TmVVtY
+>>>>>>> laraxot/dev

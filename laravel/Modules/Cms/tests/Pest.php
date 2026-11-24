@@ -1,17 +1,18 @@
 <?php
 
 declare(strict_types=1);
-use Modules\Cms\Tests\TestCase;
 
 /*
  * Bootstrap Pest — modulo Cms.
  * Helper globali (cmsHomepageBlocks, cmsGet, …) in PestHelpers.php.
- * Binding TestCase solo qui: i file test non dichiarano uses(TestCase) ridondanti.
+ * Nessun binding del TestCase qui: Pest esegue solo laravel/tests/Pest.php, quindi ogni file test lega
+ * il proprio TestCase con uses(TestCase::class). Un uses()->in() in questo file non girerebbe mai e fa
+ * segnalare dal plugin PHPStan di Pest come ridondanti i binding per file che invece servono.
+ *
+ * @see Modules/Cms/docs/testing.md#binding-del-testcase
  * @see docs/stories/phpstan-cms-zero.story.md
  */
 require_once __DIR__.'/PestHelpers.php';
-
-uses(TestCase::class)->in(__DIR__.'/Feature', __DIR__.'/Unit');
 
 /*
  * |--------------------------------------------------------------------------

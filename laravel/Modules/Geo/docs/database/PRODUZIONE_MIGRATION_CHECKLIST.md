@@ -1,3 +1,14 @@
+---
+title: "PRODUZIONE MIGRATION CHECKLIST"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "PRODUZIONE MIGRATION CHECKLIST"
+issues: []
+discussions: []
+---
+
 # 📋 Produzione Migration Checklist
 
 ## Prima di Eseguire Migration in Produzione
@@ -16,6 +27,14 @@
 
 ---
 
+title: "PRODUZIONE MIGRATION CHECKLIST"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "PRODUZIONE MIGRATION CHECKLIST"
+issues: []
+discussions: []
 ## Procedura Step-by-Step
 
 ### Step 1: Test in Locale

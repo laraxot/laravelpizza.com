@@ -7,7 +7,6 @@ updated: 2026-09-26
 qmd: "module implementation roadmap"
 issues: []
 discussions: []
-status: draft
 ---
 
 # CMS Module - Content Management System

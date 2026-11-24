@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "guida migrazione step by step"
 related:
   - "./italian-text-refined-audit-report.md"
-status: draft
 ---
 # Merge Conflict Files List
 
@@ -60,7 +59,6 @@ This file contains a comprehensive list of files with merge conflict markers (`<
 - ./laravel/Modules/Notify/docs/wiki/index.md
 - ./laravel/Modules/Notify/docs/wiki/log.md
 - ./laravel/Modules/Notify/docs/project_docs/riepilogo-risoluzione-conflitti-2025-09-30.md
-- ./laravel/Modules/Notify/docs/project_docs/riepilogo-risoluzione-conflitti-obiettivo.md
 
 ### Other Files (62 files)
 - Various agent session files, todo files, and system files

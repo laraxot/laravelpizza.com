@@ -1,13 +1,16 @@
 ---
-title: Notify: indice BMAD
+title: Notify — indice BMAD
 type: index
 tags: [docs, bmad, notify]
 qmd: "Notify indice BMAD documentazione"
-status: draft
-updated: 2026-10-09
+<<<<<<< HEAD
+=======
+created: 2026-11-23
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
-# Notify: indice BMAD
+# Notify — indice BMAD
 
 ## Canonico
 
@@ -16,7 +19,6 @@ updated: 2026-10-09
 - [Brainstorming](./brainstorming/)
 - [Epiche](./epics/)
 - [Stories](./stories/)
-- [Migrazione SettingPage alla base comune](./stories/setting-page-base-migration.story.md)
 - [Wiki del modulo](../wiki/)
 
 ## Legacy da consultare, non da estendere
@@ -29,3 +31,7 @@ updated: 2026-10-09
 - [Wiki legacy](../wiki/)
 
 La documentazione nuova va in `docs/bmad/`; le raccolte storiche restano referenziate finché una story dedicata non ne decide la migrazione.
+
+## Audit
+
+- [Audit approfondito 2026-11-16](./audits/notify-audit.md) · [ECC](../ecc/00-index.md) · [Story audit](./stories/module-bmad-audit.story.md)

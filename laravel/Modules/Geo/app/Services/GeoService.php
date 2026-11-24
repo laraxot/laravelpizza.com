@@ -34,7 +34,11 @@ class GeoService
     public static function getInstance(): self
     {
         if (! self::$_instance instanceof GeoService) {
+<<<<<<< HEAD
+            self::$_instance = new self;
+=======
             self::$_instance = new self();
+>>>>>>> laraxot/dev
         }
 
         return self::$_instance;
@@ -102,6 +106,18 @@ class GeoService
         if ($lat1 === $lat2 && $lon1 === $lon2) {
             return 0;
         }
+<<<<<<< HEAD
+        if ($lat1 === null) {
+            return null;
+        }
+        if ($lon1 === null) {
+            return null;
+        }
+        if ($lat2 === null) {
+            return null;
+        }
+        if ($lon2 === null) {
+=======
         if (null === $lat1) {
             return null;
         }
@@ -112,6 +128,7 @@ class GeoService
             return null;
         }
         if (null === $lon2) {
+>>>>>>> laraxot/dev
             return null;
         }
         $theta = $lon1 - $lon2;
@@ -121,7 +138,11 @@ class GeoService
         $dist = acos($dist);
         $dist = rad2deg($dist);
         $miles = $dist * 60 * 1.1515;
+<<<<<<< HEAD
+        if ($unit === null) {
+=======
         if (null === $unit) {
+>>>>>>> laraxot/dev
             $unit = 'K'; // default
         }
         $unit = strtoupper($unit);
@@ -161,11 +182,15 @@ class GeoService
     /**
      * Undocumented function.
      *
+<<<<<<< HEAD
+     * @param  array<mixed>  $polygon
+=======
      * @param array<mixed> $polygon
+>>>>>>> laraxot/dev
      */
     public static function is_in_polygon(float $latitude, float $longitude, array $polygon): bool
     {
-        $i = $j = $c = 0;
+        $c = 0;
         $points_polygon = \count($polygon) - 1;
 
         // dddx([$latitude, $longitude, $polygon]);
@@ -203,7 +228,11 @@ class GeoService
 
     public static function pointInPolygon(float $lat, float $lng, ?string $polygon): bool
     {
+<<<<<<< HEAD
+        if ($polygon === null || $polygon === '') {
+=======
         if (null === $polygon || '' === $polygon) {
+>>>>>>> laraxot/dev
             return false;
         }
 
@@ -219,7 +248,11 @@ class GeoService
         return false;
     }
 
+<<<<<<< HEAD
+    public function execute(): void {}
+=======
     public function execute(): void
     {
     }
+>>>>>>> laraxot/dev
 }

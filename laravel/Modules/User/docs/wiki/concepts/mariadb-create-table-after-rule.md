@@ -13,9 +13,6 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-title: "MariaDB create table `after()` rule"
-status: draft
-qmd: "mariadb create table `after()` rule user"
 ---
 
 # MariaDB create table `after()` rule

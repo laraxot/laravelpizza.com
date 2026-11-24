@@ -74,7 +74,7 @@ Misura in sola lettura (`docs-organizer.py audit --out`), nessuna correzione: le
 | Lang | 1023 | 461 | 104 | 96 | 2 | 11 | 68 |
 | Media | 582 | 462 | 127 | 45 | 2 | 14 | 102 |
 | Notify | 3889 | 1055 | 426 | 602 | 14 | 41 | 129 |
-| Quaeris | 208 | 85 | 14 | 0 | 12 | 0 | 1 |
+| <nome progetto> | 208 | 85 | 14 | 0 | 12 | 0 | 1 |
 | UI | 443 | 132 | 98 | 0 | 0 | 0 | 290 |
 | User | 2641 | 6704 | 3297 | 97 | 13 | 29 | 174 |
 | Xot | 1618 | 637 | 346 | 13 | 1 | 10 | 1002 |
@@ -94,14 +94,14 @@ Misura in sola lettura (`docs-organizer.py audit --out`), nessuna correzione: le
 | Limesurvey | 71 | 39 | 3 | 0 | 2 | 0 | 13 |
 | Media | 556 | 204 | 26 | 32 | 0 | 2 | 112 |
 | Notify | 3633 | 672 | 241 | 536 | 0 | 0 | 144 |
-| Quaeris | 209 | 85 | 14 | 0 | 12 | 0 | 1 |
+| <nome progetto> | 209 | 85 | 14 | 0 | 12 | 0 | 1 |
 | Tenant | 529 | 185 | 70 | 0 | 0 | 0 | 134 |
 | UI | 454 | 359 | 304 | 3 | 0 | 1 | 56 |
 | User | 2136 | 301 | 134 | 82 | 0 | 2 | 144 |
 | Xot | 1568 | 606 | 380 | 2 | 0 | 0 | 340 |
 | **Totale** | 12585 | 3756 | 1965 | 674 | 27 | 61 | 1452 |
 
-Confronto con il 2026-10-22 sui moduli presenti in tutte e due le misure: i link rotti scendono in User (da 3297 a 134), Notify (da 426 a 241), Activity (da 187 a 87), Media (da 127 a 26) e Geo (da 128 a 121); salgono in UI (da 98 a 304) e Xot (da 346 a 380); restano 14 in Quaeris. Gli stub di Xot scendono da 1002 a 340. Le variazioni vengono dai commit di modulo registrati fra le due misure (dettaglio in `docs/worklog/2026/10/29/`), non da correzioni del Passo 7.
+Confronto con il 2026-10-22 sui moduli presenti in tutte e due le misure: i link rotti scendono in User (da 3297 a 134), Notify (da 426 a 241), Activity (da 187 a 87), Media (da 127 a 26) e Geo (da 128 a 121); salgono in UI (da 98 a 304) e Xot (da 346 a 380); restano 14 in <nome progetto>. Gli stub di Xot scendono da 1002 a 340. Le variazioni vengono dai commit di modulo registrati fra le due misure (dettaglio in `docs/worklog/2026/10/29/`), non da correzioni del Passo 7.
 
 
 ## Misura del 2026-11-03 (worklog del giorno, prompt 98, Passo 7)
@@ -113,42 +113,11 @@ Misura in sola lettura (`docs-organizer.py audit --out`), nessuna correzione: qu
 | Activity | 712 | 231 | 87 | 0 | 0 | 1 | 130 |
 | Geo | 2050 | 343 | 122 | 19 | 12 | 47 | 345 |
 | Notify | 3635 | 673 | 241 | 536 | 0 | 0 | 144 |
-| Quaeris | 211 | 85 | 14 | 0 | 12 | 0 | 1 |
+| <nome progetto> | 211 | 85 | 14 | 0 | 12 | 0 | 1 |
 | Tenant | 532 | 186 | 70 | 0 | 0 | 0 | 133 |
 | User | 2140 | 303 | 134 | 82 | 0 | 2 | 144 |
 | Xot | 1576 | 609 | 380 | 2 | 1 | 0 | 340 |
 | Zero (tema) | 234 | 281 | 34 | 4 | 0 | 0 | 6 |
 | **Totale** | 11090 | 2711 | 1082 | 643 | 25 | 50 | 1243 |
 
-Confronto con il 2026-10-29 sui sette moduli misurati in tutte e due le date: link rotti invariati in Activity (87), Notify (241), Quaeris (14), Tenant (70), User (134) e Xot (380), +1 in Geo (da 121 a 122). In Xot compare un nome con data, `bmad/stories/phpstan-analyse-modules.story.md`: aggiunto il 2026-09-24 da Marco Sottana e arrivato con il pull, non creato oggi. Zero non era nella misura del 2026-10-29. Le variazioni vengono dai commit di modulo fra le due misure (dettaglio in `docs/worklog/2026/11/03/`), non da correzioni del Passo 7.
-
-## Misura del 2026-11-12 (worklog del giorno, prompt 98, Passo 7)
-
-Fonte: `docs-organizer.py audit` (sola lettura) sui 14 moduli con commit propri il 2026-11-12 (colonna 4 di `#repo` del
-registro), raccolta alle 18:38 CET. Nessuna correzione: la story e' `in-progress`, quindi il Passo 7 si ferma alla
-misura. Worklog: `docs/worklog/2026/11/12/index.md`.
-
-| Perimetro | n_md | links | broken_n | case_collisions | dated_names | dup_extra | stubs |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| AI | 260 | 261 | 21 | 0 | 1 | 1 | 60 |
-| Chart | 671 | 733 | 585 | 0 | 1 | 8 | 33 |
-| Cms | 948 | 1382 | 349 | 0 | 1 | 2 | 190 |
-| Gdpr | 422 | 94 | 40 | 0 | 0 | 4 | 156 |
-| Geo | 1873 | 344 | 148 | 19 | 12 | 45 | 337 |
-| Job | 453 | 97 | 18 | 0 | 0 | 0 | 176 |
-| Media | 548 | 205 | 35 | 32 | 0 | 3 | 112 |
-| Notify | 3492 | 651 | 233 | 536 | 1 | 1 | 133 |
-| Quaeris | 227 | 108 | 14 | 0 | 15 | 0 | 1 |
-| Setting | 96 | 33 | 4 | 1 | 3 | 1 | 48 |
-| Tenant | 531 | 318 | 182 | 0 | 0 | 0 | 124 |
-| UI | 458 | 362 | 304 | 3 | 1 | 2 | 55 |
-| User | 2209 | 329 | 134 | 82 | 4 | 5 | 114 |
-| Xot | 1096 | 588 | 390 | 2 | 1 | 0 | 252 |
-| **Totale** | 13284 | 5505 | 2457 | 675 | 40 | 72 | 1791 |
-
-Confronto con il 2026-11-03 sui sei moduli misurati in tutte e due le date: link rotti invariati in Quaeris (14) e User
-(134), scesi in Notify (241 -> 233), saliti in Geo (122 -> 148), Tenant (70 -> 182) e Xot (380 -> 390); stub scesi in
-Xot (340 -> 252), User (144 -> 114), Notify (144 -> 133), Tenant (133 -> 124), Geo (345 -> 337). File Markdown di Xot
-da 1576 a 1096 e di Geo da 2050 a 1873: coerente con lo spostamento delle note da `app/` a `docs/` e con il
-riallineamento della radice dell'11-12 novembre, non verificato file per file. L'aumento dei link rotti in Tenant
-(+112) e' da indagare prima di qualsiasi `links --fix`.
+Confronto con il 2026-10-29 sui sette moduli misurati in tutte e due le date: link rotti invariati in Activity (87), Notify (241), <nome progetto> (14), Tenant (70), User (134) e Xot (380), +1 in Geo (da 121 a 122). In Xot compare un nome con data, `bmad/stories/phpstan-analyse-modules.story.md`: aggiunto il 2026-09-24 da Marco Sottana e arrivato con il pull, non creato oggi. Zero non era nella misura del 2026-10-29. Le variazioni vengono dai commit di modulo fra le due misure (dettaglio in `docs/worklog/2026/11/03/`), non da correzioni del Passo 7.

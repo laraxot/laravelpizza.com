@@ -24,9 +24,9 @@ Il 2026-10-20 un agente ha eseguito Pest su file User con `RefreshDatabase`. La 
 
 ## Scopo
 
-I test dei model User (Device, Permission, Profile, Team, Tenant, BaseUser), dell'action `GetCurrentDeviceAction` e della logica utente/ruoli/permessi devono verificare il comportamento senza toccare lo schema. `RefreshDatabase` fa `migrate:fresh` sulla connessione di default (`quaeris_data_test` secondo `.env.testing`) e poi migra anche le altre connessioni (`user` su `quaeris_user_test`, `limesurvey` su `quaeris_survey_test`, `activity` su `quaeris_data_test`).
+I test dei model User (Device, Permission, Profile, Team, Tenant, BaseUser), dell'action `GetCurrentDeviceAction` e della logica utente/ruoli/permessi devono verificare il comportamento senza toccare lo schema. `RefreshDatabase` fa `migrate:fresh` sulla connessione di default (`<nome progetto>_data_test` secondo `.env.testing`) e poi migra anche le altre connessioni (`user` su `<nome progetto>_user_test`, `limesurvey` su `<nome progetto>_survey_test`, `activity` su `<nome progetto>_data_test`).
 
-Errore osservato il 2026-10-20 tra le 12:26 e le 12:28 UTC in `Modules/User/tests/Unit/Models/BaseUserTest.php` (riga 12, `uses(TestCase::class, RefreshDatabase::class)`): `SQLSTATE[42000] 1061 Duplicate key name 'extras_model_id_index' (Connection: limesurvey, Database: quaeris_survey_test)`. Meccanismo probabile, non verificato (nessun accesso al database in questa story): `migrate:fresh` svuota solo il DB di default, dove sta anche il registro `migrations`, quindi le migration ripartono su `limesurvey` e `user` dove le tabelle esistono gia'.
+Errore osservato il 2026-10-20 tra le 12:26 e le 12:28 UTC in `Modules/User/tests/Unit/Models/BaseUserTest.php` (riga 12, `uses(TestCase::class, RefreshDatabase::class)`): `SQLSTATE[42000] 1061 Duplicate key name 'extras_model_id_index' (Connection: limesurvey, Database: <nome progetto>_survey_test)`. Meccanismo probabile, non verificato (nessun accesso al database in questa story): `migrate:fresh` svuota solo il DB di default, dove sta anche il registro `migrations`, quindi le migration ripartono su `limesurvey` e `user` dove le tabelle esistono gia'.
 
 ## Stato misurato
 
@@ -57,7 +57,7 @@ Controprova del pattern: `printf 'uses(TestCase::class, RefreshDatabase::class);
 
 ## Lavoro
 
-Premessa che cambia il piano: i 7 file su `Tests\TestCase` radice (`laravel/tests/TestCase.php`, che ora ha solo la guardia in `createApplication()`) NON hanno `DatabaseTransactions`. Togliere il trait e basta farebbe passare da "cancella lo schema" a "lascia righe vere in `quaeris_user_test`" (le factory fanno commit). Tutti vanno spostati su `Modules\User\Tests\TestCase` (`tests/TestCase.php:65-67`, `use DatabaseTransactions`, `$connectionsToTransact = ['mysql', 'user']` a riga 124).
+Premessa che cambia il piano: i 7 file su `Tests\TestCase` radice (`laravel/tests/TestCase.php`, che ora ha solo la guardia in `createApplication()`) NON hanno `DatabaseTransactions`. Togliere il trait e basta farebbe passare da "cancella lo schema" a "lascia righe vere in `<nome progetto>_user_test`" (le factory fanno commit). Tutti vanno spostati su `Modules\User\Tests\TestCase` (`tests/TestCase.php:65-67`, `use DatabaseTransactions`, `$connectionsToTransact = ['mysql', 'user']` a riga 124).
 
 Seconda premessa: `assertDatabaseHas('devices', ...)` con una stringa legge la connessione di DEFAULT, non `user` (`vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithDatabase.php:339-346` e `:396-399`: `newModelFor` restituisce null per una stringa). Sono 30 chiamate (UserManagement 9, Team 5, Device 4, Permission 4, Profile 4, Tenant 4). Si passa la classe: `assertDatabaseHas(Device::class, [...])`, che usa la connessione del model.
 
@@ -89,8 +89,8 @@ Fuori ordine, nessuna modifica obbligatoria: `Feature/MigrateDbTest.php` (16 rig
 
 ## Vincoli
 
-- PHPStan: unica config `laravel/phpstan.neon`, la modifica solo l'utente; mai altri `.neon`, mai `-c`/`--level`, nessun baseline/ignore. Ogni invocazione passa dal gate condiviso: `cd laravel && flock -w 1500 /tmp/claude-1000/-mnt-nas07-var-www--bases-base-quaeris-fila5/aeabb365-8395-48f4-b7d4-9fbb17ad85d3/scratchpad/phpstan-gate.lock nice -n 10 ./vendor/bin/phpstan analyse <path...> --memory-limit=2G --no-progress --error-format=raw` (max ~8 file o un modulo; `analyse Modules` intero solo dopo il "run completo finito" dell'altra sessione).
-- Pest e PHPUnit FERMI: il 2026-10-20 `RefreshDatabase` ha fatto `migrate:fresh` su `quaeris_data_test`. Si riprende solo quando la guardia DB e' dentro (story `laravel/Modules/Xot/docs/stories/test-database-guard.story.md`) e l'utente ha confermato che i DB `*_test` sono usa-e-getta. Fino ad allora la verifica e' PHPStan + `php -l` + lettura.
+- PHPStan: unica config `laravel/phpstan.neon`, la modifica solo l'utente; mai altri `.neon`, mai `-c`/`--level`, nessun baseline/ignore. Ogni invocazione passa dal gate condiviso: `cd laravel && flock -w 1500 /tmp/claude-1000/-mnt-nas07-var-www--bases-base-<nome progetto>-fila5/aeabb365-8395-48f4-b7d4-9fbb17ad85d3/scratchpad/phpstan-gate.lock nice -n 10 ./vendor/bin/phpstan analyse <path...> --memory-limit=2G --no-progress --error-format=raw` (max ~8 file o un modulo; `analyse Modules` intero solo dopo il "run completo finito" dell'altra sessione).
+- Pest e PHPUnit FERMI: il 2026-10-20 `RefreshDatabase` ha fatto `migrate:fresh` su `<nome progetto>_data_test`. Si riprende solo quando la guardia DB e' dentro (story `laravel/Modules/Xot/docs/stories/test-database-guard.story.md`) e l'utente ha confermato che i DB `*_test` sono usa-e-getta. Fino ad allora la verifica e' PHPStan + `php -l` + lettura.
 - Concorrenza: altre sessioni scrivono nello stesso repo. Prima di scrivere un file esistente: `bashscripts/lock/check.sh <f> && [ $(( $(date +%s) - $(stat -c %Y <f>) )) -gt 120 ] && bashscripts/lock/lock.sh <f>`; un solo agente PHP per modulo; niente commit, reset, checkout, stash.
 - zsh non divide `$VAR` in argomenti: usa array (`A=(x y); cmd $A`) o `xargs -a`. Un pattern `rg` che inizia con `-` richiede `-e`. Un `0` va sempre controprovato (rg -P piu' un secondo metodo).
 - Docs: artefatti BMAD solo in `laravel/Modules/<M>/docs/`; nomi senza date; nessun Service (`app/Services` vietata, logica in Spatie QueueableAction con `execute()`); Filament: solo basi `XotBase*`, logica nelle Actions, nessuna stringa UI hardcoded (chiavi in `lang/`).
@@ -98,13 +98,13 @@ Fuori ordine, nessuna modifica obbligatoria: `Feature/MigrateDbTest.php` (16 rig
 
 ## Decisioni aperte
 
-1. Via libera a lanciare Pest solo tramite `pest-scratch-db.sh` (DB creato e eliminato a ogni run, prefisso `claude_scratch_pest_` accettato dalla guardia). Raccomandato: si. Il 2026-10-08 la memoria diceva che i `*_test` non esistevano; l'errore 1061 del 2026-10-20 prova che almeno `quaeris_survey_test` esiste. Stato dei tre `*_test` dopo l'incidente: non verificato (nessun accesso al DB).
+1. Via libera a lanciare Pest solo tramite `pest-scratch-db.sh` (DB creato e eliminato a ogni run, prefisso `claude_scratch_pest_` accettato dalla guardia). Raccomandato: si. Il 2026-10-08 la memoria diceva che i `*_test` non esistevano; l'errore 1061 del 2026-10-20 prova che almeno `<nome progetto>_survey_test` esiste. Stato dei tre `*_test` dopo l'incidente: non verificato (nessun accesso al DB).
 2. Cancellare `Feature/MigrateDbTest.php` (solo skip, nome ingannevole). Raccomandato: si, dopo il primo run verde.
 3. Il ramo sqlite di `tests/TestCase.php` (righe 74-78, `prepareSharedSqliteForTesting`) contraddice la regola "solo MySQL": rimuoverlo in una story a parte. Raccomandato: si, non in questa.
 4. Le 12 classi restanti su `Tests\TestCase` radice (`Unit/{Permission,HasTeamsTrait,Tenant,AuthenticationBusinessLogic,User,UserModel}Test`, `Unit/Datas/PasswordDataTest`, `Feature/ChangeProfilePasswordTest`, `Feature/Filament/{Actions/ChangePasswordActionTest,Pages/CreateUserTest,Pages/ListUsersTest,Widgets/LoginWidgetTest}`) scrivono senza transazione se toccano il DB: spetta alla story di igiene test dell'altra sessione.
 
 ## Come ripartire
 
-1. `cd /mnt/nas07/var/www/_bases/base_quaeris_fila5/laravel && rg -n -P -e "$P" Modules/User/tests --glob '*.php'` (definire `$P` come sopra): confermare le 16 righe e partire da `BaseUserTest.php`.
+1. `cd /mnt/nas07/var/www/_bases/base_<nome progetto>_fila5/laravel && rg -n -P -e "$P" Modules/User/tests --glob '*.php'` (definire `$P` come sopra): confermare le 16 righe e partire da `BaseUserTest.php`.
 2. Applicare i passi 1-8 nell'ordine, con `php -l` dopo ogni file; saltare `TenantTest.php` finche' la story `user-tenant-fillable-cast-e-colonne.story.md` non e' chiusa.
 3. Chiudere con gli AC statici (nessun test lanciato); aggiornare questo file con le cifre finali e scrivere nel report "Pest non eseguito, in attesa della guardia e del verdetto utente".

@@ -1,7 +1,7 @@
 ---
 issues: []
 discussions: []
-title: "🖼️ Media: English presentation"
+title: "🖼️ Media — English presentation"
 module: "Media"
 type: concept
 tags: [readme, en]
@@ -10,9 +10,8 @@ updated: 2026-07-14
 qmd: "readme en"
 related:
   - "./webm.md"
-status: draft
 ---
-# 🖼️ Media: English presentation
+# 🖼️ Media — English presentation
 
 [![Domain-Media](https://img.shields.io/badge/Domain-Media%20Library-AD1457.svg)](#)
 [![Laravel 12](https://img.shields.io/badge/Laravel-12-red.svg)](https://laravel.com/)
@@ -22,9 +21,9 @@ status: draft
 [![PSR-12](https://img.shields.io/badge/Code-PSR--12-blue.svg)](https://www.php-fig.org/psr/psr-12/)
 [![Strict Types](https://img.shields.io/badge/PHP-strict__types-1-informational.svg)](#)
 [![Laraxot Modules](https://img.shields.io/badge/Architecture-Modular-purple.svg)](#)
-[![FixCity Platform](https://img.shields.io/badge/Platform-FixCity-008758.svg)](#)
+[![Media Module](https://img.shields.io/badge/Module-Media-008758.svg)](#)
 
-> **Attachments, report photos, PDFs.** Typed media library: uploads that don't break the wizard.
+> **Attachments, report photos, PDFs.** Typed media library — uploads that don't break the wizard.
 
 ---
 
@@ -51,9 +50,9 @@ Digital assets tied to tickets, profiles, and CMS content.
 
 ## Join the team
 
-Every pixel **tracked and secure**: media done right.
+Every pixel **tracked and secure** — media done right.
 
-Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5**: see [STORY-133](../../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
+Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5** — see [STORY-133](../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
 
 ---
 

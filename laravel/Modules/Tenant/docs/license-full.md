@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "license full"
 related:
   - "./phpstan-corrections-january.md"
-status: superseded
-superseded_by: license.md
 ---
 The MIT License (MIT)
 

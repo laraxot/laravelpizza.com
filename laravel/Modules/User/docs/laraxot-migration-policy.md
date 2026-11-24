@@ -6,23 +6,17 @@ tags: [migrations, database, xotbase, policy]
 created: 2026-07-15
 updated: 2026-07-15
 related:
-  - "./00-index.md"
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-status: draft
-qmd: "laraxot migration policy   user module user"
 ---
 
-# Laraxot Migration Policy: User Module
+# Laraxot Migration Policy — User Module
 
 ## Legge fondamentale
 
@@ -109,6 +103,6 @@ Storicamente esistevano anche `add_owner_id_to_teams_table.php` e duplicati `cre
 
 ## Collegamenti
 
-- [Migration Philosophy: progetto](../../../../docs/database/migrations-philosophy.md)
-- [Migration Conventions: Xot](../Xot/docs/migration-conventions.md)
+- [Migration Philosophy — progetto](../../../../docs/database/migrations-philosophy.md)
+- [Migration Conventions — Xot](../Xot/docs/migration-conventions.md)
 - [XotBaseMigration source](../../Xot/app/Database/Migrations/XotBaseMigration.php)

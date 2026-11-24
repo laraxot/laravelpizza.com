@@ -1,14 +1,17 @@
 ---
-qmd: "theme architecture"
+qmd: "Theme Architecture"
 issues: []
 discussions: []
-title: "Theme Architecture - 'Il Tema è un Vestito'"
+title: "Theme Architecture"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # 🎨 Theme Architecture - "Il Tema è un Vestito"
@@ -307,8 +310,8 @@ Tema configurabile
 ## 🔗 Riferimenti
 
 ### Project Documentation
-- [THEME_ARCHITECTURE.md](THEME_ARCHITECTURE.md) - Questo file
-- [COMPOSER_STRATEGY.md](COMPOSER_STRATEGY.md) - Strategia composer
+- [THEME_ARCHITECTURE.md](theme_architecture.md) - Questo file
+- [COMPOSER_STRATEGY.md](composer_strategy.md) - Strategia composer
 - [FILAMENT_5_OFFICIAL_POLICY.md](FILAMENT_5_OFFICIAL_POLICY.md) - Politica Filament
 
 ### Laravel Documentation

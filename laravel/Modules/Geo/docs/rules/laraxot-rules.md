@@ -1,13 +1,12 @@
 ---
-title: "laraxot rules"
+title: "Laraxot Rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "laraxot rules"
+qmd: "Laraxot Rules"
 issues: []
 discussions: []
-status: draft
 ---
 
 # LARAXOT FRAMEWORK RULES

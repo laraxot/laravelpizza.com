@@ -1,12 +1,7 @@
 ---
+qmd: "activity wiki testing factory coverage report md"
 title: Factory coverage report
 module: Activity
-type: note
-updated: 2026-10-08
-tags: [docs, activity, wiki]
-qmd: "factory coverage report - activity module activity"
-status: superseded
-superseded_by: ../../factory-coverage-report.md
 ---
 
 # Factory Coverage Report - Activity Module

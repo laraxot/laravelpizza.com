@@ -1,14 +1,17 @@
 ---
-qmd: "filament 5 upgrade complete"
+qmd: "Filament 5 Upgrade Complete"
 issues: []
 discussions: []
-title: "Filament 5 Upgrade - COMPLETO ✅"
+title: "Filament 5 Upgrade Complete"
 module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
-status: draft
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Filament 5 Upgrade - COMPLETO ✅

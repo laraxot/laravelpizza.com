@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "docs health"
 related:
   - "./webm.md"
-status: draft
 ---
 # Docs Health - Media
 

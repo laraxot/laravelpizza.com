@@ -1,3 +1,10 @@
+---
+title: "Security Tests - Activity"
+qmd: "activity tasks testing security tests md"
+type: note
+tags: [documentation]
+---
+
 # Security Tests - Activity
 
 **Task ID**: ACTIVITY-TEST-003

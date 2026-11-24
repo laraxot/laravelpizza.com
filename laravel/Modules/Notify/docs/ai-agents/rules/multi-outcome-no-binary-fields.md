@@ -3,11 +3,14 @@ title: "multi outcome no binary fields"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "multi outcome no binary fields"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🔴 MULTI-OUTCOME UNIVERSAL - NO BINARY FIELDS
@@ -18,6 +21,15 @@ status: draft
 **Priority**: BLOCKER
 
 ---
+
+title: "multi outcome no binary fields"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "multi outcome no binary fields"
+issues: []
+discussions: []
 ## 🎯 The Rule
 
 > **NON ESISTONO** predict di tipo SÌ/NO!
@@ -204,7 +216,7 @@ $pivot->percentage  // ✅ Unico campo valido
 ## 🔗 Related Documentation
 
 ### AI Agents Docs
-- **[Rules Index](00-INDEX.md)** - All rules
+- **[Rules Index](00-index.md)** - All rules
 - **[Rules Index](00-index.md)** - All rules
 - **[Multi-Outcome Universal](multi-outcome-universal.md)** - Core principle
 - **[Use Models Not DB::Table](use-models-not-db-table.md)** - Model usage

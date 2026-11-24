@@ -1,11 +1,5 @@
 ---
-title: "Xot - architecture.md"
-module: Xot
-bmad: true
-status: active
----
----
-title: "Xot: architettura BMAD"
+title: "Xot — architettura BMAD"
 type: architecture
 tags: [architecture, xot, base, filmato, filtro]
 created: 2026-09-26
@@ -24,10 +18,9 @@ related:
   - ../../app/Providers/XotBaseServiceProvider.php
   - ../../app/Filament/Resources/XotBaseResource.php
   - ../../app/Models/XotBaseModel.php
-status: draft
 ---
 
-# Xot: architettura
+# Xot — architettura
 
 > **SUMMARY**: Indice e mappa reale dell'architettura del modulo Xot (679 file PHP in `app/`, 286 test). Gli shard specialistici sono in `architecture/`; qui si trova la visione d'insieme e i riferimenti verificati.
 
@@ -43,7 +36,7 @@ Modulo base con funzionalità core e strutture fondamentali. Tutti i 46 moduli d
 - Persistenza: `database/migrations`, `database/factories`, `database/seeders` presenti.
 - Config: `config/config.php`, `config/xot.php`, `config/mcp.php`.
 
-## Classi base: gerarchia verificata
+## Classi base — gerarchia verificata
 
 | Simbolo | File | Responsabilità |
 |---|---|---|
@@ -58,7 +51,7 @@ Modulo base con funzionalità core e strutture fondamentali. Tutti i 46 moduli d
 | `BaseExtra` | `app/Models/BaseExtra.php` | Extra polimorfico |
 | `XotBaseResource` | `app/Filament/Resources/XotBaseResource.php` | Resource base Filament (NO `getFormSchema`) |
 
-### Provider: catena di boot
+### Provider — catena di boot
 
 | Provider | File | Ruolo |
 |---|---|---|
@@ -71,7 +64,7 @@ Modulo base con funzionalità core e strutture fondamentali. Tutti i 46 moduli d
 | `EventServiceProvider` | `app/Providers/EventServiceProvider.php` | Eventi locali |
 | `RouteServiceProvider` | `app/Providers/RouteServiceProvider.php` | Rotte locali |
 
-### Trait Form/Table/Infolist: composizione a istanza
+### Trait Form/Table/Infolist — composizione a istanza
 
 | Trait | File | Scopo |
 |---|---|---|
@@ -81,11 +74,11 @@ Modulo base con funzionalità core e strutture fondamentali. Tutti i 46 moduli d
 
 **Regola architetturale** (story 25, issue-03): `XotBaseResource` NON ha `getFormSchema()`; solo `XotBaseResourceForm` (HasXotForm) lo definisce astratto. Le forme di Filament vivono in `Schemas/Form`, le tabelle in `Tables`, gli infolist in `Infolists`.
 
-### Action: pattern Spatie queueable
+### Action — pattern Spatie queueable
 
 Logiche in `app/Actions/` organizzate per dominio: `Export/`, `Import/`, `Model/`, `Translation/`, `Array/`, `File/`, `Pdf/`, `Route/`, `Url/`, `String/`, `Config/`, `Class/`, `Collections/`, `Query/`, `View/`, `Trans/`, `Theme/`, `Design/`, `Debug/`, `Artisan/`, `Composer/`, `Blade/`, `Cast/`, `Tree/`, `Trend/`, `Geo/`, `Html/`, `Livewire/`, `Mail/`, `ModelClass/`, `Module/`, `Panel/`, `Parsers`, `Factories/`, `Generate/`, `Utilities/`, `Adapters/`. Ogni azione espone `execute()` come punto di ingresso.
 
-### Risorse Filament: modello XotBaseResource + Pages/Schemas/Tables
+### Risorse Filament — modello XotBaseResource + Pages/Schemas/Tables
 
 ```
 app/Filament/Resources/
@@ -102,10 +95,18 @@ app/Filament/Resources/
 
 Ogni risorsa concreta segue il pattern: `Resource.php` + `Pages/` + `Schemas/Form.php + Infolist.php` + `Tables/*.php`.
 
-## Risorse File: pubbliche vs private
+## Risorse File — pubbliche vs private
 
 - `public_path()` = `public_html/` (root repo), mai `laravel/public/`. Verificabile in `laravel/app/Application.php`.
+<<<<<<< HEAD
 - Asset statici in `app/Resources/` (img, svg, sass, js, views). Il comando `AssetAction` copia asset in `public_html` in fase di boot (`app/Actions/Filament/...`).
+=======
+<<<<<<< HEAD
+- Asset statici in `app/Resources/` (img, svg, sass, js, views). Il comando `AssetAction` copia asset in `public_html` in fase di boot (`app/Actions/Filament/...`).
+=======
+- Asset statici del modulo in `Modules/<Modulo>/public/` (ripiego storico: `resources/`). `Actions/File/AssetAction` **non copia nulla**: restituisce l'URL `assets/<modulo>/...`, servito dal symlink relativo `public_html/assets/<modulo>` → `../../laravel/Modules/<Modulo>/public` creato da `deploy.sh` / `php artisan xot:module-link` (temi: `xot:theme-link`). Vedi [public-html-symlink-assets](../wiki/concepts/public-html-symlink-assets.md).
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Shard architetturali
 
@@ -118,7 +119,7 @@ Ogni risorsa concreta segue il pattern: `Resource.php` + `Pages/` + `Schemas/For
 
 ## Test
 
-- Pest (`tests/Pest.php`, `tests/Unit/`, `tests/Feature/`): 286 file.
+- Pest (`tests/Pest.php`, `tests/Unit/`, `tests/Feature/`) — 286 file.
 - PHPStan a `laravel/phpstan.neon` level max, scope `Modules/`. Baseline 0 errori (24 ago 2026).
 - Code coverage: `typeCoverage.constantTypeCoverage` a 188/302 (62.2%).
 
@@ -166,3 +167,10 @@ Interfacce per l'iniezione di dipendenze.
 - Array PHP con una chiave per riga.
 - Form schema-driven tramite `XotBaseSchemaWidget` (`app/Filament/Widgets/XotBaseSchemaWidget.php`).
 - Contratti per l'iniezione di dipendenze in `app/Contracts/` (es. `DataContract`, `ExtraContract`).
+
+## Confini del core verificati (2026-11-16)
+
+- Xot non dichiara dipendenze (`module.json` `requires: []`) ma `Xot/app` ha 55 `use Modules\<feature>` (User 13, UI 11, Tenant 11, Lang 9, Cms 6, Notify 4, Media 1): P1-X1, vedi [audit](./audits/xot-audit.md).
+- Barriere meccaniche da preservare: `laravel/app/Application.php` `publicPath()` → `public_html`; `tests/Support/TestDatabaseGuard.php` (solo DB `*_test`); `tests/XotBaseTestCase.php` (no `migrate:fresh`/`RefreshDatabase`); `Console/Commands/BuildTestSqliteCommand.php` (riscrive ogni connessione su SQLite prima di `migrate --force`).
+- Policy: `XotBasePolicy::before()` → bypass `{modulo}::admin` (ADR); le policy di sicurezza lo sovrascrivono (User: `BaseUserPolicy`).
+- Services residui: 2 file; Actions: 257 (210 con `QueueableAction`).

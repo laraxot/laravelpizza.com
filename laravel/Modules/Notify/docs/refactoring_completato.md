@@ -3,11 +3,14 @@ title: "refactoring completato"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "refactoring completato"
 issues: []
 discussions: []
-status: draft
 ---
 
 # 🐄✨ REFACTORING BASEMODEL - COMPLETATO! ✨🐄
@@ -17,6 +20,15 @@ status: draft
 **Status:** ✅ **FASE 1 COMPLETATA CON SUCCESSO**
 
 ---
+
+title: "refactoring completato"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "refactoring completato"
+issues: []
+discussions: []
 ## 🎯 RISULTATI FINALI
 
 ### Statistiche Precise
@@ -369,4 +381,7 @@ Che il tuo codice sia:
 4. Fase 2: Filament Resources refactoring
 
 **Nota:** Tenant module richiede attenzione speciale (non estende XotBaseModel)
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev

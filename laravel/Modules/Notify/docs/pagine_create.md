@@ -1,14 +1,16 @@
 ---
-title: "pagine create"
+title: "PAGINE CREATE"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
-qmd: "pagine create"
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+qmd: "PAGINE CREATE"
 issues: []
 discussions: []
-status: superseded
-superseded_by: pagine-create.md
 ---
 
 # Pagine Create - FixCity Sixteen Theme

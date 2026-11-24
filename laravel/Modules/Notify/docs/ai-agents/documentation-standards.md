@@ -3,17 +3,19 @@ title: "documentation standards"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "documentation standards"
 issues: []
 discussions: []
-status: draft
 ---
 
 # Documentation standards
 
 > Source: [IFLOW.md](../../bashscripts/ai/IFLOW.md) | [CLAUDE.md](../../CLAUDE.md)
-> Source: [IFLOW.md](../../../../../bashscripts/ai/IFLOW.md) | [CLAUDE.md](../CLAUDE.md)
 > Back: [index](index.md)
 
 ## File naming conventions (CRITICAL)
@@ -34,8 +36,7 @@ WRONG:   ModelArchitecture.md
 Never include dates in filenames:
 ```
 CORRECT: dry-kiss-analysis.md
-WRONG:   dry-kiss-analysis-modulo-job.md
-WRONG:   dry-kiss-analysis.md
+WRONG:   dry-kiss-analysis-2025-10-15.md
 WRONG:   phpstan-fixes-january-2026.md
 ```
 
@@ -44,7 +45,7 @@ WRONG:   phpstan-fixes-january-2026.md
 `README.md` is the ONLY file allowed with uppercase:
 ```
 CORRECT: phpstan-fixes.md, README.md
-WRONG:   PHPSTAN_FIXES.md, PHPStan-Fixes.md
+WRONG:   phpstan_fixes.md, PHPStan-Fixes.md
 ```
 
 ### 4. No duplicates

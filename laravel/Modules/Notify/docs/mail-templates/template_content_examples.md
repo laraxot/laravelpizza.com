@@ -3,12 +3,14 @@ title: "template content examples"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "template content examples"
 issues: []
 discussions: []
-status: superseded
-superseded_by: template-content-examples.md
 ---
 
 # Esempi di Contenuto per Template Email

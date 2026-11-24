@@ -7,29 +7,14 @@ use Modules\Activity\Models\StoredEvent;
 use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
-test('Snapshot model can be instantiated', function () {
-<<<<<<< .merge_file_qJZkId
-    $snapshot = new Snapshot();
-
-    Assert::assertInstanceOf(Snapshot::class, $snapshot);
+test('Snapshot model can be instantiated', function (): void {
+    $snapshot = new Snapshot;
+    Assert::assertSame('snapshots', $snapshot->getTable());
 });
 
-test('StoredEvent model can be instantiated', function () {
-    $storedEvent = new StoredEvent();
-
-    Assert::assertInstanceOf(StoredEvent::class, $storedEvent);
-=======
-    Assert::assertTrue((new ReflectionClass(Snapshot::class))->isInstantiable());
-});
-
-test('StoredEvent model can be instantiated', function () {
-    Assert::assertTrue((new ReflectionClass(StoredEvent::class))->isInstantiable());
->>>>>>> .merge_file_vm1ZBF
-});
-
-test('BaseModel model can be instantiated', function () {
+test('BaseModel model can be instantiated', function (): void {
     $baseModel = new class() extends BaseModel
     {
         protected $table = 'activity_base_models';
@@ -38,19 +23,19 @@ test('BaseModel model can be instantiated', function () {
     Assert::assertSame('activity_base_models', $baseModel->getTable());
 });
 
-test('Snapshot model has correct connection', function () {
+test('Snapshot model has correct connection', function (): void {
     $snapshot = new Snapshot();
 
     Assert::assertIsString($snapshot->getConnectionName());
 });
 
-test('StoredEvent model has correct connection', function () {
+test('StoredEvent model has correct connection', function (): void {
     $storedEvent = new StoredEvent();
 
     Assert::assertIsString($storedEvent->getConnectionName());
 });
 
-test('BaseModel model has correct connection', function () {
+test('BaseModel model has correct connection', function (): void {
     $baseModel = new class() extends BaseModel
     {
         protected $table = 'activity_base_models';

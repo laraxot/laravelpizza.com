@@ -7,10 +7,10 @@ declare(strict_types=1);
 // File: lang/en/txt/fields/address.php
 // Cms txt.fields.address — LangServiceProvider SSoT.
 return [
-    'label' => 'Indirizzo',
-    'placeholder' => 'Via Roma 1, 00100 Roma RM',
-    'help' => 'Indirizzo completo',
-    'helper_text' => 'Indirizzo fisico completo dell\'azienda',
+    'label' => 'Address',
+    'placeholder' => '1 Main Street, 10001 New York NY',
+    'help' => 'Full address',
+    'helper_text' => 'Full physical address of the company',
     'tooltip' => '',
     'description' => '',
 ];

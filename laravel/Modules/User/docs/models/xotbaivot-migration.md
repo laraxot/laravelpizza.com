@@ -10,11 +10,18 @@ discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./base-classes-hierarchy.md"
   - "./baseuser.md"
+<<<<<<< HEAD
   - "./README.md"
+=======
+<<<<<<< HEAD
+  - "./readme.md"
+=======
+  - "./README.md"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./team.md"
   - "./teampermission.md"
   - "./xotbasepivot-migration.md"
-status: draft
 ---
 
 # User Module - XotBasePivot Migration

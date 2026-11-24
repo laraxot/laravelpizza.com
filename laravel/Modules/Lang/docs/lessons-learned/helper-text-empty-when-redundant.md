@@ -13,7 +13,6 @@ metadata:
   type: lesson-learned
   created: 2026-09-15
   github_issues: []
-status: draft
 ---
 
 # `helper_text` vuoto quando coincide con la chiave del campo
@@ -38,11 +37,11 @@ In 410 file `lang/it/*.php` di 18 moduli diversi, questo pattern:
 Root cause: un tool di generazione automatica delle traduzioni duplicava il nome del campo
 su tutti e 4 gli attributi come placeholder iniziale, mai sostituito con una traduzione
 reale per `helper_text`. Un `helper_text` che ripete solo il nome del campo non aggiunge
-nessuna informazione all'utente: è rumore, non aiuto.
+nessuna informazione all'utente — è rumore, non aiuto.
 
 **Solo `helper_text` va svuotato**, non gli altri tre attributi: `label`, `placeholder` e
 `description` restano visibili e utili come fallback UI anche se non ancora tradotti
-(mostrano almeno il nome del campo), mentre `helper_text` è testo di aiuto supplementare -
+(mostrano almeno il nome del campo), mentre `helper_text` è testo di aiuto supplementare —
 se non aggiunge nulla oltre al nome, va tolto.
 
 ## Come si fa correttamente
