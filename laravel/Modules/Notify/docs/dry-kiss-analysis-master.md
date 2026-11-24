@@ -767,7 +767,4 @@ docs/
 **Prossimo Step:** Implementare Top 10 azioni immediate dal piano Q1 2025
 
 ✨🐄✨ **LA SUPER MUCCA HA RAGGIUNTO IL LIVELLO INFINITO** ✨🐄✨
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev

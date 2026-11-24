@@ -287,10 +287,7 @@ Ora i blade file usano le classi Tailwind:
 
 *Consolidated from: `tailwind-best-practices-implementazione-css-modulo-notify.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## 1. Organizzazione del Codice
 
 ### 1.1 Struttura dei File
@@ -955,10 +952,7 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 *Consolidated from: `tailwind-best-practices.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## 1. Organizzazione del Codice
 
 ### 1.1 Struttura dei File
@@ -1463,10 +1457,7 @@ document.querySelectorAll('.group').forEach(card => {
 
 *Consolidated from: `tailwind-blade-components.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 Questa guida mostra come creare Blade component riutilizzabili, accessibili e responsive usando pattern Tailwind CSS, secondo le best practice Webcrunch e le regole <nome progetto>.
 
 ---
@@ -1635,10 +1626,7 @@ document.querySelectorAll('.group').forEach(card => {
 
 *Consolidated from: `tailwind-components.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento descrive i componenti UI utilizzati nel modulo Notify, basati sui componenti Filament. La migrazione a Filament garantisce:
@@ -2432,10 +2420,7 @@ Tailwind CSS è un framework CSS utility-first che permette di costruire interfa
 
 *Consolidated from: `tailwind-css-webcrunch-approfondimento.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 Fonte: [Webcrunch Tailwind CSS Collection](https://webcrunch.com/collections/tailwind-css)
 
 ---
@@ -2545,10 +2530,7 @@ Tailwind CSS è un framework CSS utility-first che permette di costruire interfa
 
 *Consolidated from: `tailwind-css-webcrunch.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 Fonte: https://webcrunch.com/collections/tailwind-css
 
 ## Panoramica
@@ -2621,10 +2603,7 @@ La collezione "Tailwind CSS" di Webcrunch raccoglie tutorial, guide pratiche e a
 
 *Consolidated from: `tailwind-email-system.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## 1. Configurazione Base
 
 ### 1.1 Setup Iniziale
@@ -3000,10 +2979,7 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 *Consolidated from: `tailwind-forms.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento descrive l'implementazione dei form nel modulo Notify utilizzando i componenti Filament. I form sono stati migrati da componenti custom a componenti Filament per garantire:
@@ -3278,10 +3254,7 @@ class NotificationForm extends Component implements HasForms
 
 *Consolidated from: `tailwind-implementation-implementazione-css-modulo-notify.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## 1. Configurazione Base
 
 ### 1.1 Installazione
@@ -3984,10 +3957,7 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 *Consolidated from: `tailwind-implementation.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## 1. Configurazione Base
 
 ### 1.1 Installazione
@@ -4323,10 +4293,7 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 *Consolidated from: `tailwind-layouts.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento descrive l'implementazione dei layout nel modulo Notify utilizzando i componenti Filament. I layout sono stati migrati da implementazioni custom a componenti Filament per garantire:
@@ -4618,10 +4585,7 @@ return [
 
 *Consolidated from: `tailwind-notifications.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Introduzione
 
 Il sistema di notifiche del modulo Notify è stato reimplementato utilizzando i componenti Filament per garantire:
@@ -5024,10 +4988,7 @@ module.exports = {
 
 *Consolidated from: `tailwind-plugin-guide.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 Questa guida mostra come creare, documentare e integrare plugin custom Tailwind CSS per pattern condivisi (bottoni, alert, badge, ecc.) secondo le best practice Webcrunch e le regole <nome progetto>.
 
 ---
@@ -5126,10 +5087,7 @@ module.exports = {
 
 *Consolidated from: `tailwind-plugin.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 Questa guida mostra come creare, documentare e integrare plugin custom Tailwind CSS per pattern condivisi (bottoni, alert, badge, ecc.) secondo le best practice Webcrunch e le regole <nome progetto>.
 
 ---
@@ -5226,10 +5184,7 @@ module.exports = {
 
 *Consolidated from: `tailwind_best_practices.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## 1. Organizzazione del Codice
 
 ### 1.1 Struttura dei File
@@ -5547,10 +5502,7 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 *Consolidated from: `tailwind_blade_components.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 Questa guida mostra come creare Blade component riutilizzabili, accessibili e responsive usando pattern Tailwind CSS, secondo le best practice Webcrunch e le regole <nome progetto>.
 
 ---
@@ -5718,10 +5670,7 @@ document.querySelectorAll('.group').forEach(card => {
 
 *Consolidated from: `tailwind_css_webcrunch.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 Fonte: https://webcrunch.com/collections/tailwind-css
 
 ## Panoramica
@@ -5794,10 +5743,7 @@ La collezione "Tailwind CSS" di Webcrunch raccoglie tutorial, guide pratiche e a
 
 *Consolidated from: `tailwind_css_webcrunch_approfondimento.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 Fonte: [Webcrunch Tailwind CSS Collection](https://webcrunch.com/collections/tailwind-css)
 
 ---
@@ -5906,10 +5852,7 @@ Tailwind CSS è un framework CSS utility-first che permette di costruire interfa
 
 *Consolidated from: `tailwind_implementation.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## 1. Configurazione Base
 
 ### 1.1 Installazione
@@ -6246,10 +6189,7 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 *Consolidated from: `tailwind_plugin_guide.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 Questa guida mostra come creare, documentare e integrare plugin custom Tailwind CSS per pattern condivisi (bottoni, alert, badge, ecc.) secondo le best practice Webcrunch e le regole <nome progetto>.
 
 ---

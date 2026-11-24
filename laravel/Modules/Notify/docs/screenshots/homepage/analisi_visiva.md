@@ -23,7 +23,6 @@ discussions: []
 - **FixCity**: http://fixcity.local/it/tests/homepage
 - **Notify**: http://laraxot.local/it/tests/homepage
 
-<<<<<<< HEAD
 ---
 
 title: "analisi visiva"
@@ -71,12 +70,6 @@ discussions: []
 3. Sostituire navigation con Bootstrap Italia navbar
 
 ---
-=======
-## 1. Header Structure
-### Bootstrap Italia
-### FixCity (Attuale)
-### Notify (Attuale)
->>>>>>> laraxot/dev
 
 ## 2. Hero Section
 

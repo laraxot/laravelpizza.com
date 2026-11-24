@@ -18,7 +18,6 @@ discussions: []
 
 ## Data: {{ date('Y-m-d H:i:s') }}
 
-<<<<<<< HEAD
 ---
 
 title: "ANALISI COLORI HEADER FOOTER"
@@ -45,10 +44,6 @@ discussions: []
 
 ---
 
-=======
-## 🎯 Problema Identificato
-
->>>>>>> laraxot/dev
 ## 1. HEADER - Bootstrap Italia Reference
 
 ### Struttura Ufficiale

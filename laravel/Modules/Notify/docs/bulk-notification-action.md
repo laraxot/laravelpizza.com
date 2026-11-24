@@ -153,8 +153,4 @@ updated: 2026-09-26
 qmd: "bulk notification action"
 issues: []
 discussions: []
-<<<<<<< HEAD
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
-=======
-*Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
->>>>>>> laraxot/dev

@@ -142,8 +142,4 @@ issues: []
 discussions: []
 **Implemented by**: iFlow CLI  
 **Pattern**: Enum-driven architecture  
-<<<<<<< HEAD
 **Compliance**: DRY + KISS + Type Safety
-=======
-**Compliance**: DRY + KISS + Type Safety
->>>>>>> laraxot/dev

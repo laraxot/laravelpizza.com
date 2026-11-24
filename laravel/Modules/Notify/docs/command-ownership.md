@@ -2,11 +2,8 @@
 title: "Notify console command ownership"
 type: decision
 tags: [notify, console, architecture, regression]
-<<<<<<< HEAD
-=======
 created: 2026-11-23
 updated: 2026-11-23
->>>>>>> laraxot/dev
 ---
 
 # Notify console command ownership

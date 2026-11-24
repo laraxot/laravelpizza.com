@@ -25,9 +25,6 @@ tags: [documentation]
 ## Collegamenti
 
 - [wiki/concepts/ponytail-audit.md](./wiki/concepts/ponytail-audit.md)
-<<<<<<< HEAD
-=======
 - [00-INDEX.md](./00-INDEX.md)
 
->>>>>>> laraxot/dev
 - [00-index.md](./00-index.md)

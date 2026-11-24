@@ -163,8 +163,4 @@ issues: []
 discussions: []
 **Verified by**: iFlow CLI  
 **Quality Status**: ✅ All gates passed  
-<<<<<<< HEAD
 **Architecture Compliance**: ✅ 100% compliant
-=======
-**Architecture Compliance**: ✅ 100% compliant
->>>>>>> laraxot/dev

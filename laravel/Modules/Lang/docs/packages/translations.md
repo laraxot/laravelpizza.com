@@ -108,8 +108,6 @@ echo $post->getTranslation('title', 'it'); // Ciao Mondo
 ## Collegamenti tra versioni di translations.md
 * [translations.md](../../../chart/docs/translations.md)
 * [translations.md](../../../reporting/docs/translations.md)
-<<<<<<< HEAD
-=======
 * [translations.md](../../../gdpr/docs/translations.md)
 * [translations.md](../../../notify/docs/translations.md)
 * [translations.md](../../../xot/docs/roadmap/lang/translations.md)
@@ -124,7 +122,6 @@ echo $post->getTranslation('title', 'it'); // Ciao Mondo
 * [translations.md](../../../tenant/docs/translations.md)
 * [translations.md](../../../activity/docs/translations.md)
 
->>>>>>> laraxot/dev
 * [translations.md](../../../Gdpr/docs/translations.md)
 * [translations.md](../../../Notify/docs/translations.md)
 * [translations.md](../../../xot/docs/roadmap/lang/translations.md)

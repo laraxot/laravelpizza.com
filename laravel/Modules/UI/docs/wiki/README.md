@@ -25,10 +25,7 @@ Usa `docs/` come sorgente raw e `docs/wiki/` come livello compilato/sintetico.
 - `docs/wiki/log.md` log append-only
 
 QMD: [https://github.com/tobi/qmd](https://github.com/tobi/qmd)
-<<<<<<< HEAD
-=======
 
->>>>>>> laraxot/dev
 [![Module](https://img.shields.io/badge/Module-LLM Wiki (module)-8B0000.svg)]()
 [![Laravel](https://img.shields.io/badge/Laravel-13-red?style=for-the-badge)](https://laravel.com/)](https://laravel.com/)
 [![Filament](https://img.shields.io/badge/Filament-5-ffab00?style=for-the-badge)](https://filamentphp.com/)](https://filamentphp.com/)

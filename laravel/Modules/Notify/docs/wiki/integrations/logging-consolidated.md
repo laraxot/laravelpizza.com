@@ -284,10 +284,7 @@ Log::info('Batch completed', ['count' => $count]); // ✅ ONE LOG
 
 *Consolidated from: `logging-best-practices.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Executive Summary
 
 **CRITICAL ISSUE:** Excessive `Log::info()` calls cause **30-50% performance degradation**.
@@ -512,10 +509,7 @@ time curl http://localhost:8000/api/endpoint
 
 *Consolidated from: `logging-optimization-plan.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Current Issues
 
 ### Excessive Log::info() Calls Found

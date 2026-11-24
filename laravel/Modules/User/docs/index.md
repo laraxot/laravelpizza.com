@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Index"
 module: User
@@ -8,7 +6,6 @@ status: active
 updated: '2026-11-23'
 ---
 
->>>>>>> laraxot/dev
 # Documentation Index
 
 ## -integration
@@ -811,10 +808,7 @@ updated: '2026-11-23'
 - [phpstan-compliance.md](./archive/old_tasks/phpstan-compliance.md)
 - [phpstan-corrections.md](./archive/old_tasks/phpstan-corrections.md)
 - [phpstan-dry-kiss-improvements.md](./archive/old_tasks/phpstan-dry-kiss-improvements.md)
-<<<<<<< HEAD
-=======
 - [phpstan-fixes-2025.md](./archive/old_tasks/phpstan-fixes-2025.md)
->>>>>>> laraxot/dev
 - [phpstan-fixes-gennaio-2025.md](./archive/old_tasks/phpstan-fixes-modulo-user-gennaio.md)
 - [phpstan-fixes-gennaio-complete.md](./archive/old_tasks/phpstan-fixes-gennaio-complete.md)
 - [phpstan-fixes-gennaio.md](./archive/old_tasks/phpstan-fixes-gennaio.md)
@@ -1968,10 +1962,7 @@ updated: '2026-11-23'
 
 ## raw/root-import
 
-<<<<<<< HEAD
-=======
 - [changelog.md](./raw/root-import/changelog.md)
->>>>>>> laraxot/dev
 - [changelog-1.md](./raw/root-import/changelog-1.md)
 - [changelog-2.md](./raw/root-import/changelog-2.md)
 - [changelog-3.md](./raw/root-import/changelog-3.md)
@@ -2842,8 +2833,6 @@ updated: '2026-11-23'
 - [phpstan-fixes-1.md](./phpstan-fixes-1.md)
 - [phpstan-fixes-2-1.md](./phpstan-fixes.md)
 - [phpstan-fixes-2.md](./phpstan-fixes-2.md)
-<<<<<<< HEAD
-=======
 - [phpstan-fixes-2025-1.md](./phpstan-fixes-historical-1.md)
 - [phpstan-fixes-2025-10-01.deprecated.md](./phpstan-fixes-2025-10-01.deprecated.md)
 - [phpstan-fixes-2025.md](./phpstan-fixes-historical.md)
@@ -2852,7 +2841,6 @@ updated: '2026-11-23'
 - [phpstan-fixes-3.md](./phpstan-fixes-3.md)
 - [phpstan-fixes-4.md](./phpstan-fixes-4.md)
 - [phpstan-fixes-5.md](./phpstan-fixes-5.md)
->>>>>>> laraxot/dev
 - [phpstan-fixes-2025-1.md](./phpstan-fixes-historical-alias.md)
 - [phpstan-fixes-2025-10-01.deprecated.md](./phpstan-fixes-2025-10-01.deprecated.md)
 - [phpstan-fixes-2025.md](./phpstan-fixes-historical.md)
@@ -2873,23 +2861,16 @@ updated: '2026-11-23'
 - [phpstan-fixes-gennaio-.md](./phpstan-fixes-gennaio-.md)
 - [phpstan-fixes-gennaio-1.md](./phpstan-fixes-gennaio-modulo-user.md)
 - [phpstan-fixes-gennaio-2.md](./phpstan-fixes-gennaio-2.md)
-<<<<<<< HEAD
-- [phpstan-fixes-gennaio-complete.md](./phpstan-fixes-gennaio-complete.md)
-=======
 - [phpstan-fixes-gennaio-2025-complete.md](./phpstan-fixes-gennaio-2025-complete.md)
 - [phpstan-fixes-gennaio-2025.md](./phpstan-fixes-gennaio-2025.md)
 - [phpstan-fixes-gennaio-complete.md](./phpstan-fixes-gennaio-complete.md)
 - [phpstan-fixes-gennaio.md](./phpstan-fixes-gennaio.md)
->>>>>>> laraxot/dev
 - [phpstan-fixes-gennaiocomplete.md](./phpstan-fixes-gennaiocomplete.md)
 - [phpstan-fixes-january-complete.md](./phpstan-fixes-january-complete.md)
 - [phpstan-fixes-january.md](./phpstan-fixes-january.md)
 - [phpstan-fixes-passport.md](./phpstan-fixes-passport.md)
 - [phpstan-fixes-roadmap.md](./phpstan-fixes-roadmap.md)
-<<<<<<< HEAD
-=======
 - [phpstan-fixes.md](./phpstan-fixes.md)
->>>>>>> laraxot/dev
 - [phpstan-furious-debate-.md](./phpstan-furious-debate-.md)
 - [phpstan-furious-debate-1.md](./phpstan-furious-debate-1.md)
 - [phpstan-furious-debate.md](./phpstan-furious-debate.md)
@@ -3036,10 +3017,7 @@ updated: '2026-11-23'
 - [roadmap-.md](./roadmap-.md)
 - [roadmap-1-1.md](./roadmap-1-1.md)
 - [roadmap-1.md](./roadmap.md)
-<<<<<<< HEAD
-=======
 - [roadmap-2025.md](./roadmap-2025.md)
->>>>>>> laraxot/dev
 - [roadmap-and-issues.md](./roadmap-and-issues.md)
 - [roadmap-ands.md](./roadmap-ands.md)
 - [roadmap-archive-1.md](./roadmap-archive.md)
@@ -3202,11 +3180,8 @@ updated: '2026-11-23'
 - [translation-resolution-prototype.md](./translation-resolution-prototype.md)
 - [translation-syntax-fixes-.md](./translation-syntax-fixes-.md)
 - [translation-syntax-fixes-1.md](./translation-syntax-fixes.md)
-<<<<<<< HEAD
-=======
 - [translation-syntax-fixes-2025.md](./translation-syntax-fixes-2025.md)
 - [translation-syntax-fixes.md](./translation-syntax-fixes.md)
->>>>>>> laraxot/dev
 - [translation-syntaxes.md](./translation-syntaxes.md)
 - [translationes.md](./translationes.md)
 - [translations.md](./translations.md)

@@ -684,10 +684,7 @@ public function execute(string $prompt): CompletionData
 
 ---
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ---
 
 ## Legenda
@@ -712,7 +709,4 @@ Indica quanto è probabile che il refactoring sia vantaggioso:
 - **70-89%**: Raccomandato
 - **50-69%**: Valutare caso per caso
 - **< 50%**: Richiede analisi dettagliata
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev

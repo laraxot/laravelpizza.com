@@ -45,12 +45,9 @@ related:
 - 🗑️ **[Cleanup Plan](./docs-naming-convention-fix.md)** - Rimozione dei 260+ file obsoleti.
 
 ## 🔗 **Moduli Correlati**
-<<<<<<< HEAD
-=======
 - [Xot](../../xot/docs/readme.md) - Base framework e classi `XotBaseChartWidget`.
 - [UI](../../ui/docs/readme.md) - Componenti Blade e Filament che consumano le traduzioni.
 
->>>>>>> laraxot/dev
 - [Xot](../../Xot/docs/README.md) - Base framework e classi `XotBaseChartWidget`.
 - [UI](../../UI/docs/README.md) - Componenti Blade e Filament che consumano le traduzioni.
 
@@ -63,13 +60,10 @@ related:
 | File | Scopo |
 |------|-------|
 | PRD.md | Product Requirements |
-<<<<<<< HEAD
-=======
 | PRODUCT_ROADMAP.md | Roadmap |
 | PRODUCT_STRATEGY.md | Strategy |
 | PRODUCT_LAUNCH_PLAN.md | Launch Plan |
 
->>>>>>> laraxot/dev
 | product_roadmap.md | Roadmap |
 | product_strategy.md | Strategy |
 | product_launch_plan.md | Launch Plan |
@@ -77,13 +71,10 @@ related:
 ### Development
 | File | Scopo |
 |------|-------|
-<<<<<<< HEAD
-=======
 | GSD_WORKFLOW.md | GSD Workflow |
 | SPRINT_PLANNING.md | Sprint Planning |
 | USER_RESEARCH.md | User Research |
 
->>>>>>> laraxot/dev
 | gsd_workflow.md | GSD Workflow |
 | sprint_planning.md | Sprint Planning |
 | user_research.md | User Research |
@@ -99,11 +90,8 @@ related:
 ## 🔗 **Moduli Correlati**
 - [Xot](../../Xot/docs/README.md) - Base framework e classi `XotBaseChartWidget`.
 - [UI](../../UI/docs/README.md) - Componenti Blade e Filament che consumano le traduzioni.
-<<<<<<< HEAD
-=======
 - [agents.md](../../../../agents.md) - Project guidelines
 
->>>>>>> laraxot/dev
 - [AGENTS.md](../../../../AGENTS.md) - Project guidelines
 ---
 - [AGENTS.md](../../../../AGENTS.md) - Project guidelines

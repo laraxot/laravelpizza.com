@@ -69,12 +69,8 @@ Link: https://github.com/simplepleb/laravel-email-templates
 Link: https://github.com/spatie/laravel-database-mail-templates
 - **Database**: tabella `mail_templates` con campi `key`, `subject`, `html`, `locale`
 - **ServiceProvider**: pubblica migrazioni e configura il renderer
-<<<<<<< HEAD
-- **Filament**: si integra con un `Filamentesources	emplateResource`
-=======
 - **Filament**: si integra con un `Filament
 esources	emplateResource`
->>>>>>> laraxot/dev
 
 ```php
 $template = Template::where('key', 'welcome')->first();

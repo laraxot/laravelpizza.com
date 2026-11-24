@@ -10,14 +10,11 @@ discussions: []
 status: draft
 ---
 
-<<<<<<< HEAD
-=======
 > **Aggiornato il 2026-11-12 — `npm run copy` non esiste più.** `public_html/themes/<Tema>` è un symlink a
 > `laravel/Themes/<Tema>/public` e `public_html/assets/<modulo>` a `laravel/Modules/<Modulo>/public`: dopo
 > `npm run build` il sito vede già la build. Le istruzioni di copia qui sotto sono storiche. Regola e motivi:
 > [public-html-symlink-assets.md](/laravel/Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md).
 
->>>>>>> laraxot/dev
 # 🚀 Notify Improvement + Vite Fix - EXECUTION PLAN
 
 > **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
@@ -87,10 +84,7 @@ ls -la public_html/themes/Sixteen/manifest.json
 - `npm install`: Installs correct Node packages from package.json
 - `npm run build`: Vite builds assets → generates manifest.json
 - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-<<<<<<< HEAD
 - `public_html/themes/<Tema>` e' un symlink a `laravel/Themes/<Tema>/public` (`npm run copy` dismesso): asset serviti via symlink, nessuna copia.
-=======
->>>>>>> laraxot/dev
 
 **AI Tool Assignment**:
 - **Ralph Loop**: Autonomous execution for both themes

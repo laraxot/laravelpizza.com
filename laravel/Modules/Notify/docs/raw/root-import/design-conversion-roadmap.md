@@ -373,7 +373,4 @@ node bashscripts/github/create-design-issues.mjs
 ```
 
 Then pick issue #1 and get coding! 🚀
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev

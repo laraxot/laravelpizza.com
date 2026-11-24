@@ -13,7 +13,6 @@ related:
 
 # Piano di miglioramento — Job
 
-<<<<<<< .merge_file_uTJfWD
 Derivato dall'[audit](./audits/job-audit.md).
 
 ## P0
@@ -48,8 +47,6 @@ Derivato dall'[audit](./audits/job-audit.md).
 - [ ] PHPStan `Modules/Job` = 0
 - [ ] Pest osservabile o skip motivato
 - [ ] ECC `00-index` aggiornato con esiti
-=======
->>>>>>> .merge_file_uM21LQ
 Derivato dall'[audit profondo](./audits/job-audit.md). Epic e AC: [epics.md](./epics.md).
 
 ## P0

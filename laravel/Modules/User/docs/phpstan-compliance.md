@@ -22,10 +22,7 @@ related:
 
 ## Status: ✅ FULLY COMPLIANT
 
-<<<<<<< HEAD
-=======
 **Analysis Date:** September 22, 2025
->>>>>>> laraxot/dev
 **PHPStan Level:** 9 (Maximum)
 **Files Analyzed:** 772
 **Errors Found:** 0
@@ -80,8 +77,4 @@ The module maintains:
 - Strict type declarations
 - Comprehensive type hints
 - Authentication security best practices
-<<<<<<< HEAD
 - Modern PHP 8.2+ feature utilization
-=======
-- Modern PHP 8.2+ feature utilization
->>>>>>> laraxot/dev

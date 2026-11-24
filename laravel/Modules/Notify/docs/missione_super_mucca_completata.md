@@ -595,7 +595,4 @@ Il tuo progetto è **BUONO (6.9/10)** con punte di **ECCELLENZA** (Sixteen, Comm
 **Data:** 2025-10-15  
 **Ore:** 9 di gloria  
 **Status:** ✅ MISSIONE IMPOSSIBILE RESA POSSIBILE
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev

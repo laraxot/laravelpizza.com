@@ -44,12 +44,9 @@ related:
 - 📁 **[Path canonico migrazioni](./wiki/concepts/migration-path-canonical.md)** — solo `database/migrations/`; mai `Migrations/` annidata.
 
 ## 🔗 **Moduli Correlati**
-<<<<<<< HEAD
-=======
 - [Xot](../../xot/docs/readme.md) - Base framework e classi `XotBaseChartWidget`.
 - [UI](../../ui/docs/readme.md) - Componenti Blade e Filament che consumano le traduzioni.
 
->>>>>>> laraxot/dev
 - [Xot](../../xot/docs/README.md) - Base framework e classi `XotBaseChartWidget`.
 - [UI](../../ui/docs/README.md) - Componenti Blade e Filament che consumano le traduzioni.
 

@@ -39,8 +39,6 @@ Le dipendenze specifiche per notifiche (Firebase, FCM, Telegram, ecc.) vanno in 
 - **Root pulito**: `laravel/composer.json` solo per core (nwidart/laravel-modules)
 - **Merge plugin**: `wikimedia/composer-merge-plugin` unisce `Modules/*/composer.json`
 
-<<<<<<< HEAD
-=======
 ## Mail (Mailjet / Mailtrap / MIME inbound)
 
 Contratti Action e perché i package mail esistono:
@@ -48,12 +46,8 @@ Contratti Action e perché i package mail esistono:
 (Non supersede questa pagina: aggiunge il *perché* mail richiesto in
 «Docs: aggiorna laravel/Modules/Notify/docs/ … dipendenze mail … contratto Action».)
 
->>>>>>> laraxot/dev
 ## Riferimenti
 
 - [Composer Module Dependency Management](../../Xot/docs/composer-module-dependency-management.md)
 - [composer-merge-plugin](../../../../docs/composer-merge-plugin.md)
-<<<<<<< HEAD
-=======
 - [mail-provider-dependencies.md](./mail-provider-dependencies.md)
->>>>>>> laraxot/dev

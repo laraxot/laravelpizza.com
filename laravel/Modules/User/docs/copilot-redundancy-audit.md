@@ -32,8 +32,6 @@ Note per il team
 - Questo file è un punto di partenza; si consiglia una review manuale per decidere le consolidazioni.
 
 Autore: Copilot CLI
-<<<<<<< HEAD
-=======
 
 
 ---
@@ -44,4 +42,3 @@ Autore: Copilot CLI
 
 Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file evita nomi `*-.md`.
 
->>>>>>> laraxot/dev

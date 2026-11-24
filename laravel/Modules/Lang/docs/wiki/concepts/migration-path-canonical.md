@@ -64,11 +64,8 @@ Migrazioni additive per `Post` e `Translation`:
 
 Anche gli aggiornamenti usano la tabella plurale nel filename; l'azione è
 esplicita e `$model_class` identifica il modello owner.
-<<<<<<< HEAD
 Le modifiche sono state consolidate nelle migrazioni owner (non esistono più
 migrazioni additive separate per questi modelli):
-=======
->>>>>>> laraxot/dev
 
 | Modello | File migrazione |
 |---------|-----------------|

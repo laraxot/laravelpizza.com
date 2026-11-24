@@ -388,10 +388,7 @@ Con questi miglioramenti, la documentazione raggiungerà **livello ECCELLENTE**.
 *"La documentazione è il superpotere che rende grande un progetto"* - Super Mucca
 
 **#SuperMucca #DocumentationMatters #MissionCompleted #MUUUU** 🐄✨
-<<<<<<< HEAD
 
 
 
 
-=======
->>>>>>> laraxot/dev

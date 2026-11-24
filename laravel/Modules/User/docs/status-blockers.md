@@ -226,8 +226,6 @@ This constraint is well-applied for git operations but creates a hard ceiling wh
 
 **Last updated:** 2026-07-28T14:50Z  
 **Next action:** Administrator decision on LFS sync + PHPStan strategy choice
-<<<<<<< HEAD
-=======
 
 
 ---
@@ -238,4 +236,3 @@ This constraint is well-applied for git operations but creates a hard ceiling wh
 
 Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file evita nomi `*-.md`.
 
->>>>>>> laraxot/dev

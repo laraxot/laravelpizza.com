@@ -20,13 +20,10 @@ Index for Xot module concepts.
 qmd search "Xot concepts" --limit 5
 ```
 
-<<<<<<< HEAD
-=======
 ## Asset pubblici (2026-11-12)
 
 - [public-html-symlink-assets.md](./public-html-symlink-assets.md): `public_html/assets/<modulo>` e `public_html/themes/<Tema>` sono symlink relativi; `.gitignore` con `<nome>/` tiene il link e ignora le copie
 
->>>>>>> laraxot/dev
 ## Moduli & skeleton (2026-07-27)
 
 - [module-theme-root-hygiene.md](./module-theme-root-hygiene.md) — root lowercase, workspace, IDE folders vietate

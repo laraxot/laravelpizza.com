@@ -57,12 +57,9 @@ issues: []
 ## Contesto
 Fatti e vincoli che hanno reso necessaria la scelta (misure, norme, policy, incidenti).
 
-<<<<<<< HEAD
-=======
 ## Driver
 Facoltativa: vincoli, rischi e obiettivi che pesano sulla scelta.
 
->>>>>>> laraxot/dev
 ## Decisione
 Cosa si fa, in concreto, e dove sta nel codice.
 
@@ -71,12 +68,6 @@ Ogni alternativa seria, con il motivo per cui non e' stata scelta.
 
 ## Conseguenze
 Pro, contro, debito che resta, cosa misurare. Chi cambia la decisione scrive un nuovo ADR e segna questo `superseded`.
-<<<<<<< HEAD
-```
-
-## Decisioni
-
-=======
 
 ## Conferma
 Facoltativa: controllo ripetibile (test, guard source-level, review). La presenza dell'ADR non prova l'implementazione.
@@ -94,4 +85,3 @@ Almeno un ADR per pacchetto e' "sostanziale": ha anche `## Driver` e `## Conferm
 - [Vista mancante: tipo sì, contenuto no](missing-block-view-shows-type-not-content.md) — un blocco rotto mostra un avviso con vista e tipo, mai i suoi dati.
 - [Blocchi UI localizzati dal CMS](ui-blocks-use-cms-localization.md) — la localizzazione passa dal CMS quando c'è, con fallback autonomo; il meccanismo è nell'ADR sulla delega opzionale.
 - [UI è il layer condiviso e non possiede né autorizza il dominio](ui-does-not-authorize-domain-data.md) — contratti mappa/geocoding con fallback Null; query e policy restano al modulo owner (status `proposed`).
->>>>>>> laraxot/dev

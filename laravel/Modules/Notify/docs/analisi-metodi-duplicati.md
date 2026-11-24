@@ -641,7 +641,4 @@ rules:
 **Data:** 2025-10-15  
 **Versione:** 1.0  
 **Status:** Draft per Review
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev

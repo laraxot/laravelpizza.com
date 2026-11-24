@@ -2,11 +2,8 @@
 qmd: "Performance Optimization"
 issues: []
 discussions: []
-<<<<<<< HEAD
-=======
 title: "Performance Optimization — Module Lang"
 
->>>>>>> laraxot/dev
 title: "Performance Optimization"
 type: documentation
 created: 2026-05-11
@@ -26,11 +23,8 @@ related:
 **Dopo**: Carico solo what's needed (~2K startup)
 
 \`\`\`diff
-<<<<<<< HEAD
-=======
 - 150+ rules embeddate in agents.md
 
->>>>>>> laraxot/dev
 - 150+ rules embeddate in AGENTS.md
 + 0 rules embeddate — tutte on-demand
 \`\`\`

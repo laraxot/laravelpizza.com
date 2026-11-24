@@ -204,8 +204,4 @@ qmd: "homepage comparison"
 issues: []
 discussions: []
 *Generated: 2026-04-07*
-<<<<<<< HEAD
 *Last Updated: 2026-04-07*
-=======
-*Last Updated: 2026-04-07*
->>>>>>> laraxot/dev

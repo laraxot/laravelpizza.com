@@ -88,8 +88,6 @@ ls docs/img/      # ✅ Images preserved locally, untracked
    - Force-pushed to `provtv/dev` (commit `1dcd346`)
    - Verified: `git lfs ls-files` returns empty
 5. **Result:** Push now succeeds; images preserved locally (untracked)
-<<<<<<< HEAD
-=======
 
 
 ---
@@ -100,4 +98,3 @@ ls docs/img/      # ✅ Images preserved locally, untracked
 
 Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file evita nomi `*-.md`.
 
->>>>>>> laraxot/dev

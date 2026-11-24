@@ -20,7 +20,6 @@ SSoT dettagliata: [audits/tenant-audit.md](./audits/tenant-audit.md). Questo fil
 | Metrica | Valore |
 |---|---:|
 | PHP `app/` | 56 |
-<<<<<<< .merge_file_5K2YOA
 | Test | 65 |
 | Resources | 1 |
 | Actions | 19 |
@@ -35,8 +34,6 @@ SSoT dettagliata: [audits/tenant-audit.md](./audits/tenant-audit.md). Questo fil
 - PHPStan modulo / `Modules`: 0 errori (verifica 2026-11-16).
 - Pest: da eseguire in ambiente testing non produttivo.
 - Security/runtime: story figlie su finding P0/P1 dell'audit dettagliato.
-=======
->>>>>>> .merge_file_eH8bSk
 | Test (file PHP / `*Test.php`) | 65 / 45 |
 | Models top-level | 10 |
 | Resource / Actions / Services / Policy | 1 / 19 / 0 / 2 |

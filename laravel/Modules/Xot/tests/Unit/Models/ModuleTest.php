@@ -15,13 +15,8 @@ namespace Modules\Xot\Tests\Unit\Models;
 use Illuminate\Foundation\Testing\WithFaker;
 use Modules\Xot\Database\Factories\ModuleFactory;
 use Modules\Xot\Models\Module;
-<<<<<<< HEAD
-use Modules\Xot\Tests\TestCase;
-use PHPUnit\Framework\Assert;
-=======
 use PHPUnit\Framework\Assert;
 use Modules\Xot\Tests\TestCase;
->>>>>>> laraxot/dev
 
 class ModuleTest extends TestCase
 {

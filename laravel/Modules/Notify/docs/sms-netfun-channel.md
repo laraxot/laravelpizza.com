@@ -552,8 +552,4 @@ class NetfunSMSTest extends TestCase
 }
 ```
 
-<<<<<<< HEAD
 --- 
-=======
----
->>>>>>> laraxot/dev

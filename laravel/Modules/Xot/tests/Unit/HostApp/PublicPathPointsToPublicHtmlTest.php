@@ -18,11 +18,7 @@ use function Safe\realpath;
  * asset di un tema) produce file che nessuna richiesta HTTP potra' mai raggiungere — un guasto
  * silenzioso, senza errori e senza log.
  *
-<<<<<<< HEAD
- * L'override vive in {@see Application::publicPath()} ed e' cablato in `bootstrap/app.php`.
-=======
  * L'override vive in {@see App\Application::publicPath()} ed e' cablato in `bootstrap/app.php`.
->>>>>>> laraxot/dev
  * Questi test coprono i due modi in cui la regola puo' rompersi: il ritorno del metodo, e il
  * cablaggio che lo rende effettivo.
  *

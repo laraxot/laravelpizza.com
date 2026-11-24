@@ -107,13 +107,10 @@ Route::middleware([
 * [performance.md](../../../xot/docs/packages/performance.md)
 * [performance.md](../../../xot/docs/roadmap/architecture/performance.md)
 * [performance.md](../../../ui/docs/standards/performance.md)
-<<<<<<< HEAD
-=======
 * [performance.md](../../../lang/docs/packages/performance.md)
 * [performance.md](../../../job/docs/packages/performance.md)
 * [performance.md](../../../cms/docs/frontoffice/performance.md)
 
->>>>>>> laraxot/dev
 * [performance.md](performance.md)
 * [performance.md](../../../Job/docs/packages/performance.md)
 * [performance.md](../../../Cms/docs/frontoffice/performance.md)

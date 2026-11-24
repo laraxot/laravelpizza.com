@@ -104,10 +104,7 @@ These methods should be considered for refactoring:
 
 ### Priority:
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ---
 
 ## 📚 References

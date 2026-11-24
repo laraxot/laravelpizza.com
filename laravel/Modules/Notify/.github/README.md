@@ -15,10 +15,7 @@ Benvenuto nel sistema di tracking delle issue per il progetto **Design Comuni Re
 
 ## 📋 Quick Links
 
-<<<<<<< HEAD
-=======
 - **🗺️ Roadmap**: [View 12-week plan](../.planning/ROADMAP.md)
->>>>>>> laraxot/dev
 - **🗺️ Roadmap**: [View 12-week plan](../.planning/roadmap.md)
 - **📊 Project Summary**: [View status](../laravel/Themes/Sixteen/docs/DESIGN_COMUNI_PROJECT_SUMMARY.md)
 - **📚 Team Guide**: [Read guide](../laravel/Themes/Sixteen/docs/DESIGN_COMUNI_TEAM_GUIDE.md)
@@ -355,10 +352,7 @@ Maintain professional communication at all times.
 
 - [Back to Project Summary](../laravel/Themes/Sixteen/docs/DESIGN_COMUNI_PROJECT_SUMMARY.md)
 - [Back to Team Guide](../laravel/Themes/Sixteen/docs/DESIGN_COMUNI_TEAM_GUIDE.md)
-<<<<<<< HEAD
-=======
 - [Back to Master Index](../docs/MODULE_DOCS_INDEX.md)
 - [View Roadmap](../.planning/ROADMAP.md)
->>>>>>> laraxot/dev
 - [Back to Master Index](../docs/module_docs_index.md)
 - [View Roadmap](../.planning/roadmap.md)

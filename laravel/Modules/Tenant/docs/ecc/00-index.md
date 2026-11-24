@@ -27,7 +27,6 @@ Collega le verifiche ECC al workflow PTVX (BMAD → lock → fix → PHPStan/Pes
 | Security review | pending | story figlie P0/P1 |
 | Docs pack | aggiornato | questo indice + audit ECC |
 
-<<<<<<< .merge_file_fKZkuc
 Dettaglio: [tenant-ecc-audit.md](./tenant-ecc-audit.md)
 title: "Indice ECC — Tenant"
 type: index
@@ -43,6 +42,4 @@ qmd: "indice ECC Tenant audit checklist"
 - [Audit BMAD profondo](../bmad/audits/tenant-audit.md) — SSoT dei finding.
 - [Indice BMAD](../bmad/00-index.md)
 
-=======
->>>>>>> .merge_file_UzZmVW
 Contratto globale: `laravel/Modules/Xot/docs/ecc/00-index.md`.

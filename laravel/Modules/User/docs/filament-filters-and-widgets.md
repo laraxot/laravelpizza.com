@@ -25,12 +25,9 @@ related:
 - Proprietà `$view` del Widget: NON statica in Filament 4 (il parent ha `$view` non static).
 - In Blade del widget leggere i valori con `data_get($this->pageFilters, 'startDate')` e `data_get($this->pageFilters, 'endDate')`.
 - Evitare `HasFiltersSchema` in questo caso (serve ai chart widget), e niente `->label()` / `->helperText()`.
-<<<<<<< HEAD
-=======
 - Table filter (`BaseFilter`): su Filament tables ≥ 5.11.2 usare `->form([...])`, non `->schema([...])`
   (vedi story `docs/bmad/stories/phpstan-filter-form-schema.story.md` e nota Xot
   `filament-filter-schema-to-form.md`).
->>>>>>> laraxot/dev
 
 Esempi minimi
 

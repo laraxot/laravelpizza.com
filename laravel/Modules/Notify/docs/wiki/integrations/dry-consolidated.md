@@ -39,10 +39,7 @@ Consolidated from **12** individual files.
 
 *Consolidated from: `dry-composition.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 **Modulo**: Notify  
 **Status**: ✅ Pattern consolidato
 
@@ -255,10 +252,7 @@ Prima di creare una bulk action:
 
 *Consolidated from: `dry-kiss-analysis-.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 **Data:** 15 Ottobre 2025
 **DRY Score:** ✅ 94%
 **KISS Score:** ✅ 91%
@@ -380,20 +374,14 @@ abstract class BaseModel extends XotBaseModel implements HasMedia
 ---
 [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ---
 
 ## dry-kiss-analysis-conflict
 
 *Consolidated from: `dry-kiss-analysis-conflict.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 **Data:** 15 Ottobre 2025
 **DRY Score:** ✅ 94%
 **KISS Score:** ✅ 91%
@@ -1200,20 +1188,14 @@ docs/
 
 ✨🐄✨ **LA SUPER MUCCA HA RAGGIUNTO IL LIVELLO INFINITO** ✨🐄✨
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ---
 
 ## dry-kiss-analysis
 
 *Consolidated from: `dry-kiss-analysis.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 **Data:** 15 Ottobre 2025  
 **DRY Score:** ✅ 94%  
 **KISS Score:** ✅ 91%
@@ -1248,20 +1230,14 @@ abstract class BaseModel extends XotBaseModel implements HasMedia
 ---
 [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ---
 
 ## dry-kiss-improvements
 
 *Consolidated from: `dry-kiss-improvements.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Current State Analysis
 
 ### ✅ Successfully Implemented
@@ -1553,10 +1529,7 @@ The Notify module has excellent enum-based patterns but needs critical migration
 
 *Consolidated from: `dry-kiss.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 **Data:** 15 Ottobre 2025
 **DRY Score:** ✅ 94%
 **KISS Score:** ✅ 91%
@@ -1597,10 +1570,7 @@ abstract class BaseModel extends XotBaseModel implements HasMedia
 
 *Consolidated from: `dry-violation-analysis.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 **Data**: 19 Dicembre 2025 16:30 CET
 **Status**: ✅ **RISOLTO** - Tutte le "cagate" sistemate
 **Approccio**: **DRY + KISS applicati correttamente**
@@ -1881,10 +1851,7 @@ Crea Action quando:
 
 *Consolidated from: `dry-violation.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 **Status**: ✅ **RISOLTO** - Tutte le "cagate" sistemate
 **Approccio**: **DRY + KISS applicati correttamente**
 

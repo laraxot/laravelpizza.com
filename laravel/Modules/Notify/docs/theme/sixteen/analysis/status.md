@@ -68,8 +68,4 @@ qmd: "status"
 issues: []
 discussions: []
 *Last Updated: 2026-04-07*
-<<<<<<< HEAD
 *Status: in_progress*
-=======
-*Status: in_progress*
->>>>>>> laraxot/dev

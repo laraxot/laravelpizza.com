@@ -69,10 +69,7 @@ discussions: []
 - [Integrazioni](packages/integrations.md) 
 ### Versione HEAD
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Collegamenti tra versioni di packages.md
 * [packages.md](../../../gdpr/docs/packages.md)
 * [packages.md](../../../notify/docs/packages.md)

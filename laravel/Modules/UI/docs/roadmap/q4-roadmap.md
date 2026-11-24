@@ -3,10 +3,7 @@ title: "UI Module Roadmap (2025 Q4)"
 qmd: "ui roadmap q4 roadmap md"
 type: note
 tags: [documentation]
-<<<<<<< HEAD
-=======
 created: 2025
->>>>>>> laraxot/dev
 ---
 
 # UI Module Roadmap (2025 Q4)

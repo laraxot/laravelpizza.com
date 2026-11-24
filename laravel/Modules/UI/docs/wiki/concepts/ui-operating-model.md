@@ -62,12 +62,9 @@ When a task concerns shared interface behavior:
 
 - [[UI Architecture Sources]]
 - `../../README.md`
-<<<<<<< HEAD
-=======
 - `../../ARCHITECTURE.md`
 - `../../PRODUCT_STRATEGY.md`
 
->>>>>>> laraxot/dev
 - `../../architecture.md`
 - `../../product_strategy.md`
 - `../../architecture/structure.md`

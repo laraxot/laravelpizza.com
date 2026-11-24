@@ -1192,7 +1192,4 @@ Dopo analisi approfondita con **dati REALI dal codebase**, la Super Mucca Divina
 *Versione: 2.0 ULTIMATE*  
 *Data: 2025-10-15*  
 *Status: READY FOR PRODUCTION*
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev

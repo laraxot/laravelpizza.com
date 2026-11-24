@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 - [Xot - PHPStan Missing Array Types](../Xot/docs/phpstan-missing-array-types-fixes.md)
 - [Xot - PHPStan Critical Rules](../Xot/docs/phpstan-critical-rules.md)
 - [docs_project - PHPStan Intouchable Rule](../../../docs_project/phpstan-intouchable-rule.md)
@@ -10,7 +8,6 @@
 **Errori Identificati**: ~45 errori nel modulo User  
 **phpstan.neon**: ✅ INTOCCATO  
 **Stato**: 📋 Analisi Completata - Pronto per Correzioni
->>>>>>> laraxot/dev
 ---
 module: theme
 topic: phpstan-array-types-fixes

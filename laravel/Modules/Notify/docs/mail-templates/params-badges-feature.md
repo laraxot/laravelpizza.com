@@ -194,8 +194,4 @@ issues: []
 discussions: []
 **Ultimo aggiornamento**: Gennaio 2025  
 **Versione**: 1.0  
-<<<<<<< HEAD
 **Compatibilità**: Filament 3.x, Laravel 10+ 
-=======
-**Compatibilità**: Filament 3.x, Laravel 10+ 
->>>>>>> laraxot/dev

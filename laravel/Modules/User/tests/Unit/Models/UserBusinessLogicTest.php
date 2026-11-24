@@ -3,10 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Carbon;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Hash;
-=======
->>>>>>> laraxot/dev
 use Modules\User\Models\BaseUser;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;

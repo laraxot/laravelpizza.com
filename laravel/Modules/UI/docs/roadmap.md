@@ -3,10 +3,7 @@ title: "UI Module - Complete Roadmap 2026"
 qmd: "ui roadmap md"
 type: note
 tags: [documentation]
-<<<<<<< HEAD
-=======
 created: 2025
->>>>>>> laraxot/dev
 ---
 
 # UI Module - Complete Roadmap 2026
@@ -1031,8 +1028,6 @@ UI Module
 ---
 
 *Questa roadmap è specifica per il modulo UI e viene aggiornata regolarmente in base ai progressi e alle nuove esigenze.*
-<<<<<<< HEAD
-=======
 
 ---
 
@@ -1337,4 +1332,3 @@ UI Module
 ---
 
 *Questa roadmap è specifica per il modulo UI e viene aggiornata regolarmente in base ai progressi e alle nuove esigenze.*
->>>>>>> laraxot/dev

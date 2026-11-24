@@ -250,8 +250,4 @@ discussions: []
 **Autore**: iFlow CLI  
 **Data**: 19 Dicembre 2025  
 **Versione**: 1.0  
-<<<<<<< HEAD
 **Approvazione**: Sistema Pronto per la Produzione
-=======
-**Approvazione**: Sistema Pronto per la Produzione
->>>>>>> laraxot/dev

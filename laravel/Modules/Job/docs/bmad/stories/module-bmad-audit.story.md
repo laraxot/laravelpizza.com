@@ -5,7 +5,6 @@ status: review
 updated: 2026-11-16
 module: Job
 bmad: true
-<<<<<<< .merge_file_uLldwZ
 qmd: "story BMAD audit modulo Job inventario gate"
 ---
 
@@ -28,8 +27,6 @@ qmd: "story BMAD audit modulo Job inventario gate"
 ## Esito
 
 Baseline audit aggiornata. PHPStan tree `Modules` a 0. Pest e chiusura P0/P1 aperti.
-=======
->>>>>>> .merge_file_uzXQGq
 qmd: "story BMAD audit modulo Job inventario gate pest phpstan finding P0 policy scheduler"
 related:
   - ../audits/job-audit.md

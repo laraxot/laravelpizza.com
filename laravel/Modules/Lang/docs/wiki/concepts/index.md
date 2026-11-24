@@ -25,21 +25,15 @@ qmd search "Lang concepts" --limit 5
 - [Root Wiki](../../../docs/wiki/)
 
 ---
-<<<<<<< HEAD
-=======
 title: "index"
 
->>>>>>> laraxot/dev
 title: "INDEX"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-<<<<<<< HEAD
-=======
 qmd: "index"
 
->>>>>>> laraxot/dev
 qmd: "INDEX"
 issues: []
 discussions: []

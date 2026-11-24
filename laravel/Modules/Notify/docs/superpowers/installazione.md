@@ -105,8 +105,4 @@ updated: 2026-09-26
 qmd: "installazione"
 issues: []
 discussions: []
-<<<<<<< HEAD
 *Documento creato: 2026-03-31*
-=======
-*Documento creato: 2026-03-31*
->>>>>>> laraxot/dev

@@ -9,14 +9,11 @@ tags: [documentation]
 
 File duplicati rilevati nel modulo `UI`:
 
-<<<<<<< HEAD
-=======
 - `Modules/UI/.github`: `CONTRIBUTING.md`, `contributing.md`
 - `Modules/UI/.github`: `SECURITY.md`, `security.md`
 - `Modules/UI/docs`: `README.md`, `readme.md`
 - `Modules/UI/docs/filament`: `ListRecords.md`, `listrecords.md`
 
->>>>>>> laraxot/dev
 - `Modules/UI/.github`: `CONTRIBUTING.md`, `CONTRIBUTING.md`
 - `Modules/UI/.github`: `SECURITY.md`, `SECURITY.md`
 - `Modules/UI/docs`: `README.md`, `README.md`

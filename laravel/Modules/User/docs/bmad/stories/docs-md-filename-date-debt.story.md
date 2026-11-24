@@ -37,13 +37,10 @@ I duplicati di un canonico restano come alias `superseded`.
 | `docs/login-widget-translation-audit-2025.md` | `docs/login-widget-translation-audit-historical.md` | superseded → `login-widget-translation-audit.md` |
 | `docs/navigation-translations-fixes-january-2026.md` | `docs/navigation-translations-fixes-january-historical.md` | superseded → `navigation-translations-fixes-january.md` |
 | `docs/password-translation-completion-2025.md` | `docs/password-translation-completion-historical.md` | superseded → `password-translation-completion.md` |
-<<<<<<< HEAD
-=======
 | `docs/password-translation-completion-2025-1.md` | `docs/password-translation-completion-historical-1.md` | superseded → `password-translation-completion.md` |
 | `docs/password_translation_completion_2025.md` | `docs/password-translation-completion-snake-historical.md` | superseded → `password-translation-completion.md` |
 | `docs/phpstan-fixes-2025.md` | `docs/phpstan-fixes-historical.md` | superseded → `phpstan-fixes.md` |
 | `docs/phpstan-fixes-2025-1.md` | `docs/phpstan-fixes-historical-1.md` | superseded → `phpstan-fixes.md` |
->>>>>>> laraxot/dev
 | `docs/password-translation-completion-2025-1.md` | `docs/password-translation-completion-historical.md` | superseded → `password-translation-completion.md` |
 | `docs/password_translation_completion_2025.md` | `docs/password-translation-completion-snake-historical.md` | superseded → `password-translation-completion.md` |
 | `docs/phpstan-fixes-2025.md` | `docs/phpstan-fixes-historical.md` | superseded → `phpstan-fixes.md` |

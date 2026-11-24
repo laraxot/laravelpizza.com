@@ -107,10 +107,7 @@ discussions: []
 
 *Ultimo aggiornamento: Aprile 2026*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 <claude-mem-context>
 # Memory Context
 
@@ -118,8 +115,4 @@ discussions: []
 # [base_ptvx_fila5] recent context, 2026-04-15 10:19pm GMT+2
 
 No previous sessions found.
-<<<<<<< HEAD
 </claude-mem-context>
-=======
-</claude-mem-context>
->>>>>>> laraxot/dev

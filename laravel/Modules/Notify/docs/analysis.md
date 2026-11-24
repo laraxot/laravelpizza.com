@@ -75,10 +75,7 @@ Modules/Notify/
 - Performance testing
 ### Versione HEAD
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Collegamenti tra versioni di analysis.md
 * [analysis.md](../../../notify/docs/analysis.md)
 * [analysis.md](../../../notify/docs/phpstan/analysis.md)

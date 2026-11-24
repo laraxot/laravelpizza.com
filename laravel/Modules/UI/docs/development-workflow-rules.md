@@ -155,12 +155,9 @@ tags: [documentation]
 
 - [Xot Philosophy](../xot/docs/philosophy-complete.md)
 - [PSR-4 Autoloading Error Analysis](./psr4-autoloading-error-analysis.md)
-<<<<<<< HEAD
-=======
 - [Development Guidelines](../../../../docs/development/readme.md)
 - [Git Workflow](../../../../docs/git-conflict-resolution/readme.md)
 
->>>>>>> laraxot/dev
 - [Development Guidelines](../../../../docs/development/README.md)
 - [Git Workflow](../../../../docs/git-conflict-resolution/README.md)
 

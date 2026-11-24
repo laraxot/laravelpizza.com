@@ -14,8 +14,6 @@ related:
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/redundancy-fixes-january.md
-<<<<<<< HEAD
-=======
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
@@ -143,4 +141,3 @@ Prima di committare, verifica:
 - [XotBaseRelationManager Documentation](../../Xot/docs/filament/relation-managers.md)
 
 *Ultimo aggiornamento: Gennaio 2026*
->>>>>>> laraxot/dev

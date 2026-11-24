@@ -21,7 +21,6 @@ Allineare la homepage FixCity (`/it/tests/homepage`) al design Bootstrap Italia 
 **Reference**: https://italia.github.io/design-comuni-pagine-statiche/sito/homepage.html  
 **Target**: http://fixcity.local/it/tests/homepage
 
-<<<<<<< HEAD
 ---
 
 title: "fix plan"
@@ -65,11 +64,6 @@ discussions: []
 **Priorità**: 🔴 Alta
 
 ---
-=======
-## Fase 1: Header & Hero (Settimana 1)
-### Task 1.1: Header Slim Component
-### Task 1.2: Hero Bootstrap Italia
->>>>>>> laraxot/dev
 
 ## Fase 2: Governance & Events (Settimana 2)
 

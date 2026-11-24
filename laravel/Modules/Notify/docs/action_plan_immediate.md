@@ -506,8 +506,5 @@ test('citizen can create ticket via UI', function () {
 **Data Creazione**: 2025-01-01  
 **Maintainer**: Project Lead  
 **Revisione**: Settimanale
-<<<<<<< HEAD
 
 
-=======
->>>>>>> laraxot/dev

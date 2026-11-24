@@ -262,8 +262,6 @@ rm -f \
   00-index.md \
   00-index.md \
   index.md
-<<<<<<< HEAD
-=======
 ---
   00-index.md \
   00-index.md \
@@ -272,7 +270,6 @@ rm -f \
   00-INDEX.md \
   00-index.md \
   INDEX.md
->>>>>>> laraxot/dev
 
 # 3. Delete conflict-resolution snake_case variants
 rm -f conflict_resolution_*.md

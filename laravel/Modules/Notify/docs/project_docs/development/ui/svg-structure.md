@@ -205,8 +205,4 @@ qmd: "svg structure"
 issues: []
 discussions: []
 *Struttura SVG creata: Agosto 2025*
-<<<<<<< HEAD
 *Responsabile: DRY + KISS SVG Structure* 
-=======
-*Responsabile: DRY + KISS SVG Structure* 
->>>>>>> laraxot/dev

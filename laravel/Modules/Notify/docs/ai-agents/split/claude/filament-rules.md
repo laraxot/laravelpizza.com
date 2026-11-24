@@ -46,10 +46,7 @@ Forms\Components\Select::make('user_id')
     ->required(),
 </code-snippet>
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Testing
 - It's important to test Filament functionality for user satisfaction.
 - Ensure that you are authenticated to access the application within the test.

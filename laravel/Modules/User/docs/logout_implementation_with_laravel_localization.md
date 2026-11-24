@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Logout Implementation With Laravel Localization"
 module: User
@@ -8,7 +6,6 @@ status: active
 updated: '2026-11-23'
 ---
 
->>>>>>> laraxot/dev
 # Implementazione del Logout con LaravelLocalization 
 
 ## Collegamenti correlati

@@ -13,7 +13,6 @@ qmd: "audit approfondito Tenant inventario risoluzione tenant Host header TrustH
 
 # Audit approfondito — Tenant
 
-<<<<<<< .merge_file_RDwQrY
 ## Metodo
 
 Source-first (2026-11-16): inventario filesystem, `rg` su policy/marker/label,
@@ -71,8 +70,6 @@ Vedi [piano-miglioramento.md](../piano-miglioramento.md).
 - [audit.md](../audit.md)
 - [ECC](../../ecc/tenant-ecc-audit.md)
 - [Story](../stories/module-bmad-audit.story.md)
-=======
->>>>>>> .merge_file_JaXCLH
 SSoT dei finding del modulo. Sintesi: [audit.md](../audit.md) · ECC: [tenant-ecc-audit.md](../../ecc/tenant-ecc-audit.md) · Story: [module-bmad-audit.story.md](../stories/module-bmad-audit.story.md) · Piano: [piano-miglioramento.md](../piano-miglioramento.md).
 
 ## Perché esiste (business)

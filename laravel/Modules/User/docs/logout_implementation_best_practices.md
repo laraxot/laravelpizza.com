@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Logout Implementation Best Practices"
 module: User
@@ -8,7 +6,6 @@ status: active
 updated: '2026-11-23'
 ---
 
->>>>>>> laraxot/dev
 # Best Practices per l'Implementazione del Logout 
 
 ## Collegamenti correlati
