@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Code quality — modulo User"
+type: report
+qmd: "code quality report user"
+---
+>>>>>>> laraxot/dev
 # Code quality — modulo User
 
 Report locale (2026-07-17). Metodo: `phpstan analyse` livello max, `phpmd` (ruleset codesize+unusedcode), grep mirati (TODO/FIXME/@deprecated, dd()/dump(), facade in app/Actions, extends Filament diretto), rapporto file test/app.

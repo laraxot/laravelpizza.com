@@ -7,6 +7,10 @@ namespace Modules\Media\Actions\Diagnostic\Aws;
 use Aws\Exception\AwsException;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/test-s3-file-operations-action.md
+ * @contract docs/contracts/test-s3-file-operations-action.md
+ */
 class TestS3FileOperationsAction
 {
     use QueueableAction;

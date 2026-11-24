@@ -6,6 +6,7 @@ created: 2026-11-23
 updated: 2026-11-24
 decision-makers: [team Laraxot]
 issues: []
+qmd: "owner local decisioni vivono nella dellowner"
 ---
 
 # Le decisioni vivono nella documentazione dell'owner

@@ -11,6 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< HEAD
+=======
+qmd: "moderation actions azioni moderazione action class"
+>>>>>>> laraxot/dev
 ---
 # Azioni di Moderazione (Action class)
 

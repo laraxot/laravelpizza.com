@@ -7,6 +7,10 @@ namespace Modules\Job\Actions;
 use BadMethodCallException;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/execute-task-action.md
+ * @contract docs/contracts/execute-task-action.md
+ */
 class ExecuteTaskAction
 {
     use QueueableAction;

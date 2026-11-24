@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Correzioni Ereditarietà Modelli - Modulo User"
+type: note
+qmd: "model inheritance fixes correzioni ereditarietà modelli"
+---
+>>>>>>> laraxot/dev
 # Correzioni Ereditarietà Modelli - Modulo User
 
 ## Data Implementazione

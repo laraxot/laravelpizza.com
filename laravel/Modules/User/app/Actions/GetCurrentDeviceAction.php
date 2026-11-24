@@ -11,6 +11,13 @@ use Jenssegers\Agent\Agent;
 use Modules\User\Models\Device;
 use Spatie\QueueableAction\QueueableAction;
 
+<<<<<<< HEAD
+=======
+/**
+ * @see docs/contracts/get-current-device-action.md
+ * @contract docs/contracts/get-current-device-action.md
+ */
+>>>>>>> laraxot/dev
 class GetCurrentDeviceAction
 {
     use QueueableAction;

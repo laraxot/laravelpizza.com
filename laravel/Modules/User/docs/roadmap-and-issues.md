@@ -392,11 +392,7 @@ php artisan queue:prune-failed --hours=48
 <<<<<<< HEAD
 - [← User Module README](./README.md)
 =======
-<<<<<<< HEAD
 - [← User Module README](./readme.md)
-=======
-- [← User Module README](./README.md)
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [← PHPStan Fixes 2025-10-01](./phpstan-fixes.md)
 - [← Project Roadmap](../../../../docs/project-analysis-and-roadmap.md)

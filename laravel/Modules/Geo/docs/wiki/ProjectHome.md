@@ -22,17 +22,11 @@ Welcome to the central knowledge base for the **PTVX** project. This wiki is aut
 - [Tenant](../../../Tenant/docs/wiki): Multi-tenancy and data isolation.
 - [UI](../../../UI/docs/wiki): Shared Blade and Filament components.
 - [Lang](../../../Lang/docs/wiki): Internationalization and translation logic.
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_SWZIxS
 - [Xot](../../laravel/Modules/Xot/docs/wiki/): Core framework wrappers and shared utilities.
 - [User](../../laravel/Modules/User/docs/wiki/): Identity, authentication, and profiles.
 - [Tenant](../../laravel/Modules/Tenant/docs/wiki/): Multi-tenancy and data isolation.
 - [UI](../../laravel/Modules/UI/docs/wiki/): Shared Blade and Filament components.
 - [Lang](../../laravel/Modules/Lang/docs/wiki/): Internationalization and translation logic.
-=======
->>>>>>> .merge_file_095sru
->>>>>>> laraxot/dev
 
 ## Architectural Principles
 

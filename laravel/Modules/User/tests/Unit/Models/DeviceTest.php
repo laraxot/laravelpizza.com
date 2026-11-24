@@ -7,11 +7,7 @@ namespace Modules\User\Tests\Unit\Models;
 use Modules\User\Models\Device;
 use Modules\User\Tests\TestCase;
 
-<<<<<<< HEAD
 uses(TestCase::class);
-=======
-uses(\Modules\User\Tests\TestCase::class);
->>>>>>> laraxot/dev
 
 class DeviceTest extends TestCase
 {

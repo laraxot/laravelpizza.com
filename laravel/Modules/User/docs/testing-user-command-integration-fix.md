@@ -11,6 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< HEAD
+=======
+qmd: "testing user command integration fix"
+>>>>>>> laraxot/dev
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/testing-user-command-integration-fix.md

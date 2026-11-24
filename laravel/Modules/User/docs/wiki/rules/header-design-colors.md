@@ -11,6 +11,10 @@ related:
   - "./navigation-properties.md"
   - "./no-filament-labels.md"
   - "./no-notifications-migration-in-user-module.md"
+<<<<<<< HEAD
+=======
+qmd: "header design colors"
+>>>>>>> laraxot/dev
 ---
 
 ## Rule Overview

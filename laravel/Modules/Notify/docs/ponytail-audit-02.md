@@ -3,11 +3,7 @@ title: "ponytail audit 2026 07 02"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "ponytail audit 2026 07 02"
 issues: []
 discussions: []
@@ -38,15 +34,7 @@ Discussion [#82](https://github.com/laraxot/base_quaeris_fila5/discussions/82) /
 - Discussion #82/#83: Actions over Services architecture decision (canonical rule).
 - Issue #103: NotificationManager wrapper removal (yagni).
 - Issue #112: firstOrFail + domain exception (stdlib).
-<<<<<<< HEAD
-- Known doc-sprawl debt in this module (discussion #22) is out of scope here; `Modules/Notify/docs/` still has duplicate `README.md`/`index.md`/`index.md`/`00-index.md` entrypoints pending consolidation.
-=======
-<<<<<<< HEAD
 - Known doc-sprawl debt in this module (discussion #22) is out of scope here; `Modules/Notify/docs/` still has duplicate `README.md`/`index.md`/`INDEX.md`/`00-index.md` entrypoints pending consolidation.
-=======
-- Known doc-sprawl debt in this module (discussion #22) is out of scope here; `Modules/Notify/docs/` still has duplicate `README.md`/`index.md`/`index.md`/`00-index.md` entrypoints pending consolidation.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## 2026-07-02 (second pass): collapsed single-driver Sms/Telegram/WhatsApp factories
 

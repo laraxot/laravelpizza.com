@@ -2,6 +2,7 @@
 title: "Behavioral contract template"
 type: template
 status: proposed
+qmd: "0000 template behavioral contract"
 ---
 
 # `<operation>`

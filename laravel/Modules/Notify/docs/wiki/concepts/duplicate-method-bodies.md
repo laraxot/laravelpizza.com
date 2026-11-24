@@ -6,11 +6,7 @@ type: analysis
 module: Notify
 tags: [dry, duplication, census, refactoring, notify]
 created: 2026-07-22
-<<<<<<< HEAD
-updated: 2026-07-22
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "duplicate method bodies Notify identical hash DRY"
 
 related:

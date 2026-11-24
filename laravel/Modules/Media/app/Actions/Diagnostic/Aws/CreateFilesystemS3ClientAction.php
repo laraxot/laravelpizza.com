@@ -7,6 +7,10 @@ namespace Modules\Media\Actions\Diagnostic\Aws;
 use Aws\S3\S3Client;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/create-filesystem-s3-client-action.md
+ * @contract docs/contracts/create-filesystem-s3-client-action.md
+ */
 class CreateFilesystemS3ClientAction
 {
     use QueueableAction;

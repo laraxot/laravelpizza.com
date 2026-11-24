@@ -25,9 +25,12 @@ Verificate sul codice il 2026-11-16. Finding: [audits/tenant-audit.md](./audits/
 | D-08 | Servizi = Action (`app/Services` non esiste) | Attiva | regola PTVX actions-over-services | `rg` 0 service; 19 Action |
 | D-09 | Proposta: `TrustHosts` attivo o vhost esplicito | PROPOSTA (Epic A) | chiude TEN-P1-01 | — |
 | D-10 | Proposta: `password` con cast `encrypted` + `$hidden`, migrazione additiva | PROPOSTA (Epic C) | chiude TEN-P1-03 | — |
+<<<<<<< .merge_file_IYZ8dA
 
 ## Formato delle nuove voci
 
 - **ID** progressivo `D-NN`, **Decisione** in una riga.
 - **Stato:** PROPOSTA, ATTIVA (approvata), RIFIUTATA, OBSOLETA.
 - **Perché:** motivo e alternative considerate; **Evidenza:** file o simbolo reale.
+=======
+>>>>>>> .merge_file_wCUEMR

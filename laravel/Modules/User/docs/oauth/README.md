@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "OAuth Documentation Index"
+type: note
+qmd: "oauth"
+---
+>>>>>>> laraxot/dev
 # OAuth Documentation Index
 
 > **Module**: User  

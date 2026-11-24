@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "User Module - Product Roadmap"
+type: note
+qmd: "product roadmap user"
+---
+>>>>>>> laraxot/dev
 # User Module - Product Roadmap
 
 **Module:** User  

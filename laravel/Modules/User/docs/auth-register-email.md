@@ -10,6 +10,10 @@ issues:
   - "https://github.com/laraxot/base_fixcity_fila5/issues/572"
 discussions:
   - "https://github.com/laraxot/base_fixcity_fila5/discussions/573"
+<<<<<<< HEAD
+=======
+qmd: "auth register email registrazione cittadino posta"
+>>>>>>> laraxot/dev
 ---
 
 # Registrazione cittadino e posta di verifica

@@ -13,6 +13,12 @@ use Spatie\QueueableAction\QueueableAction;
  * CreateClientAction: Crea un nuovo client OAuth2.
  *
  * Questa action crea un nuovo client OAuth2 con le configurazioni specificate.
+<<<<<<< HEAD
+=======
+ *
+ * @see docs/contracts/create-client-action.md
+ * @contract docs/contracts/create-client-action.md
+>>>>>>> laraxot/dev
  */
 class CreateClientAction
 {

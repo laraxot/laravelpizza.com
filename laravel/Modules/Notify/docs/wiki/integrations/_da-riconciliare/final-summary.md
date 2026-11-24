@@ -1,20 +1,10 @@
 ---
 title: "📊 NOTIFY - RIEPILOGO FINALE COMPLETAMENTO"
-<<<<<<< HEAD
-title: "📊 <nome progetto> - RIEPILOGO FINALE COMPLETAMENTO"
-type: concept
-tags: [final, summary]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "final-summary 📊 laraxot - riepilogo finale completamento"
-qmd: "final-summary 📊 <nome progetto> - riepilogo finale completamento"
-=======
 type: concept
 tags: [final, summary]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "final-summary 📊 laraxot - riepilogo finale completamento"
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:

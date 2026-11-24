@@ -5,6 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< HEAD
+=======
+qmd: "moderation consolidated"
+>>>>>>> laraxot/dev
 ---
 
 # moderation — Consolidated Documentation

@@ -144,15 +144,7 @@ Il modulo utilizza l'inversion of control tramite:
 <<<<<<< HEAD
 <!-- Merged from architecture.md, which collided with this file on case-insensitive filesystems. -->
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
 <!-- Merged from ARCHITECTURE.md, which collided with this file on case-insensitive filesystems. -->
-=======
-<!-- Merged from architecture.md, which collided with this file on case-insensitive filesystems. -->
->>>>>>> laraxot/dev
-=======
-<!-- Merged from architecture.md, which collided with this file on case-insensitive filesystems. -->
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 ---

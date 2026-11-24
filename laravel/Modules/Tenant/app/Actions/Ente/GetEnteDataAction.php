@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Tenant\Actions\Ente;
 
+use Illuminate\Support\Str;
 use Modules\Tenant\Datas\EnteData;
 use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\parse_url;
 use function Safe\preg_match;
-use function Safe\preg_replace;
 
 /**
  * Dati dell'ente (DCP-289) letti da `config('ente')`, il file `config/<tenant>/ente.php` che compila l'ente, e restituiti gia' normalizzati.
@@ -18,6 +18,9 @@ use function Safe\preg_replace;
  * aver tolto spazi, punti, trattini, parentesi e barre. Email e PEC: indirizzo ASCII semplice (niente `?`, `&`, `%` che in un `mailto:`
  * aggiungerebbero parametri). URL: solo `http` o `https` con host, senza spazi, virgolette o parentesi angolari. Social: solo le reti con
  * un'icona nello sprite Design Comuni. Ogni testo puo' essere una stringa o una mappa per lingua.
+ *
+ * @see docs/contracts/get-ente-data-action.md
+ * @contract docs/contracts/get-ente-data-action.md
  */
 class GetEnteDataAction
 {
@@ -65,6 +68,8 @@ class GetEnteDataAction
 
     /**
      * Stringa, o mappa lingua => stringa (lingua richiesta, poi `app.fallback_locale`, poi il primo valore testuale).
+     *
+     * @see Modules/Tenant/docs/ente-data.md
      */
     private function text(mixed $value, string $locale): string
     {
@@ -82,12 +87,15 @@ class GetEnteDataAction
         }
 
         // tolti i caratteri di controllo tranne a capo e tabulazione (l'indirizzo e gli orari possono andare su piu' righe)
-        return trim(preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/', '', $value));
+        return Str::of($value)->replaceMatches('/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/', '')->trim()->toString();
     }
 
+    /**
+     * @see Modules/Tenant/docs/ente-data.md
+     */
     private function phone(string $value): string
     {
-        $digits = preg_replace('/[\s.\-()\/]/', '', $value);
+        $digits = Str::of($value)->replaceMatches('/[\s.\-()\/]/', '')->toString();
 
         return preg_match('/^\+?\d{3,15}$/', $digits) === 1 ? $value : '';
     }

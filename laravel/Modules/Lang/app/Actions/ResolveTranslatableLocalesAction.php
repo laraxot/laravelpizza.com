@@ -10,6 +10,9 @@ use Spatie\QueueableAction\QueueableAction;
 /**
  * Lingue in cui l'editor delle traduzioni lavora. Una lista vuota (file del tenant rovinato a mano)
  * non arriva mai all'editor: torna il default della Data.
+ *
+ * @see docs/contracts/resolve-translatable-locales-action.md
+ * @contract docs/contracts/resolve-translatable-locales-action.md
  */
 class ResolveTranslatableLocalesAction
 {

@@ -8,6 +8,10 @@ issues: []
 discussions: []
 related:
   - "./auth-verify-confirm-design-comuni-shell.story.md"
+<<<<<<< HEAD
+=======
+qmd: "auth verify resend loading story page"
+>>>>>>> laraxot/dev
 ---
 
 # Verify page — spinner su "richiedine un altro"

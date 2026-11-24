@@ -8,6 +8,10 @@ use Illuminate\Support\Arr;
 use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/get-localized-markdown-path-action.md
+ * @contract docs/contracts/get-localized-markdown-path-action.md
+ */
 class GetLocalizedMarkdownPathAction
 {
     use QueueableAction;

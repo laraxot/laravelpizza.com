@@ -11,6 +11,10 @@ related:
   - "./module-commit-push-after-change.md"
   - "./no-filament-labels.md"
   - "./no-notifications-migration-in-user-module.md"
+<<<<<<< HEAD
+=======
+qmd: "navigation properties"
+>>>>>>> laraxot/dev
 ---
 
 ## Rule Overview

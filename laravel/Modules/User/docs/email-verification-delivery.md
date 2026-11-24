@@ -4,6 +4,10 @@ type: guide
 module: User
 status: active
 tags: [email, verification, notify, production]
+<<<<<<< HEAD
+=======
+qmd: "email verification delivery"
+>>>>>>> laraxot/dev
 ---
 
 # Email verification delivery

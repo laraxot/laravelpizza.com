@@ -12,6 +12,7 @@ related:
   - "../filament-list-page-table-ownership.md"
   - "../../../../User/docs/bmad/stories/user-filament-boundary-i18n-20260929.story.md"
   - "../../../../../docs/wiki/audits/getTable-methods-audit-2026-09-29.md"
+qmd: "gettable methods cleanup independent verification 29"
 ---
 
 # Verifica indipendente — hook `getTable*` nelle List page

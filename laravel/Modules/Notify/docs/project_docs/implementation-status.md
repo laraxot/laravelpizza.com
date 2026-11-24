@@ -5,11 +5,7 @@ title: "IMPLEMENTATION_STATUS_2025-10-02"
 type: concept
 tags: [deprecated]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "implementation_status_2025-10-02 deprecated"
 status: deprecated
 related:

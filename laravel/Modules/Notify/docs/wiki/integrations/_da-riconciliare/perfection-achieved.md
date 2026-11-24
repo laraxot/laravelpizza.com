@@ -1,20 +1,10 @@
 ---
 title: "🏆 NOTIFY - PERFEZIONE RAGGIUNTA"
-<<<<<<< HEAD
-title: "🏆 <nome progetto> - PERFEZIONE RAGGIUNTA"
-type: concept
-tags: [perfection, achieved]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "perfection-achieved 🏆 laraxot - perfezione raggiunta"
-qmd: "perfection-achieved 🏆 <nome progetto> - perfezione raggiunta"
-=======
 type: concept
 tags: [perfection, achieved]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "perfection-achieved 🏆 laraxot - perfezione raggiunta"
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:

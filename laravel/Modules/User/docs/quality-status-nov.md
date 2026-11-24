@@ -11,6 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< HEAD
+=======
+qmd: "quality status nov"
+>>>>>>> laraxot/dev
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/quality-status-11.md

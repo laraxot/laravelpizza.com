@@ -351,19 +351,7 @@ $record->update(['stabi' => 999]);
 - [Activity Module - README](../README.md)
 - [BaseScheda Configuration](../../Ptv/docs/models/base-scheda-activity-log.md)
 - [IndennitaResponsabilita Integration](../../IndennitaResponsabilita/docs/activity-log-integration.md)
-<<<<<<< HEAD
-- [Activity Module - README](../README.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Activity Module - README](../readme.md)
-=======
-- [Activity Module - README](../README.md)
->>>>>>> laraxot/dev
-=======
-- [Activity Module - README](../README.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [BaseScheda Configuration](../../ptv/docs/models/base-scheda-activity-log.md)
 - [IndennitaResponsabilita Integration](../../indennitaresponsabilita/docs/activity-log-integration.md)
 

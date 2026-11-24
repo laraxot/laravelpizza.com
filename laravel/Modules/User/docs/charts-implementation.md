@@ -573,11 +573,7 @@ class UsersChartWidgetTest extends TestCase
 <<<<<<< HEAD
 - [User Module README](./README.md)
 =======
-<<<<<<< HEAD
 - [User Module README](./readme.md)
-=======
-- [User Module README](./README.md)
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 ### Chart.js

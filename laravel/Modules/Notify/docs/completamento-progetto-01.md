@@ -3,11 +3,7 @@ title: "completamento progetto 2025 10 01"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "completamento progetto 2025 10 01"
 issues: []
 discussions: []
@@ -282,30 +278,14 @@ public function execute(string $prompt, int $cacheDurationMinutes = 60): string
 
 ### Root Docs
 1. ✅ [LEGGI-QUI-DOMANI.md](./leggi-qui-domani.md) - Piano giornaliero
-<<<<<<< HEAD
-2. ✅ [ANALISI-COMPLETA-2025-10-01.md](./ANALISI-COMPLETA-2025-10-01.md) - Executive summary
-=======
-<<<<<<< HEAD
 2. ✅ [ANALISI-COMPLETA-2025-10-01.md](./analisi-completa-2025-10-01.md) - Executive summary
-=======
-2. ✅ [ANALISI-COMPLETA-2025-10-01.md](./ANALISI-COMPLETA-2025-10-01.md) - Executive summary
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 3. ✅ [roadmap-master-index.md](./roadmap-master-index.md) - Master index
 4. ✅ [project-analysis-and-roadmap.md](./project-analysis-and-roadmap.md) - Business view
 5. ✅ [phpstan/session-summary-2025-10-01.md](./phpstan/session-summary-2025-10-01.md)
 6. ✅ [phpstan/final-report-session-2025-10-01.md](./phpstan/final-report-session-2025-10-01.md)
 7. ✅ [phpstan/filament-v4-fixes-session.md](./phpstan/filament-v4-fixes-session.md)
 8. ✅ [phpstan/phpstan.md](./phpstan/phpstan.md) - Aggiornato
-<<<<<<< HEAD
-9. ✅ [QUESTO DOCUMENTO](./COMPLETAMENTO-PROGETTO-2025-10-01.md)
-=======
-<<<<<<< HEAD
 9. ✅ [QUESTO DOCUMENTO](./completamento-progetto-2025-10-01.md)
-=======
-9. ✅ [QUESTO DOCUMENTO](./COMPLETAMENTO-PROGETTO-2025-10-01.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ### Module Roadmaps (9 dettagliate)
 10. ✅ [Xot/docs/roadmap-and-issues.md](../Modules/Xot/docs/roadmap-and-issues.md)
@@ -598,15 +578,7 @@ public function execute(string $prompt, int $cacheDurationMinutes = 60): string
 
 ### Start Here
 - [🌅 Piano Domani](./leggi-qui-domani.md) - Anche se già completato!
-<<<<<<< HEAD
-- [📊 Analisi Completa](./ANALISI-COMPLETA-2025-10-01.md) - Executive view
-=======
-<<<<<<< HEAD
 - [📊 Analisi Completa](./analisi-completa-2025-10-01.md) - Executive view
-=======
-- [📊 Analisi Completa](./ANALISI-COMPLETA-2025-10-01.md) - Executive view
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [🗺️ Master Roadmap](./roadmap-master-index.md) - Future planning
 
 ### Technical Docs
@@ -626,9 +598,6 @@ public function execute(string $prompt, int $cacheDurationMinutes = 60): string
 *"Qualità del codice = Qualità del servizio ai cittadini"* 🏙️
 
 **FixCity è ora pronto per cambiare le città italiane!** 🇮🇹🚀
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> laraxot/dev

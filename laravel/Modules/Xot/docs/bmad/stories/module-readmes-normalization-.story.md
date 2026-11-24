@@ -6,6 +6,7 @@ epic: "DOCUMENTATION-2026"
 module: Xot
 created: 2026-09-28
 updated: 2026-09-28
+qmd: "readmes normalization story normalizzazione root moduli"
 ---
 
 # Story — README root dei moduli

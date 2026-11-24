@@ -3,11 +3,7 @@ title: "FIX IS CI CONTEXT NOT FOUND"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "FIX IS CI CONTEXT NOT FOUND"
 issues: []
 discussions: []
@@ -198,37 +194,20 @@ bashscripts/git/subtrees/sync_remote_repo.sh laraxot
 
 | Documento | Scopo |
 |-----------|-------|
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 | [DIRECTORY_STRUCTURE.md](bashscripts/docs/git/directory_structure.md) | Path corretti |
 | [TROUBLESHOOTING.md](bashscripts/docs/git/troubleshooting.md) | Risoluzione errori |
 | [README.md](bashscripts/docs/git/README.md) | Index documentazione |
 | [SYNC_REMOTE_REPO_COORDINATION.md](bashscripts/docs/git/sync_remote_repo_coordination.md) | Coordineamento agenti |
-=======
->>>>>>> laraxot/dev
 | [DIRECTORY_STRUCTURE.md](bashscripts/docs/git/DIRECTORY_STRUCTURE.md) | Path corretti |
 | [TROUBLESHOOTING.md](bashscripts/docs/git/TROUBLESHOOTING.md) | Risoluzione errori |
 | [README.md](bashscripts/docs/git/README.md) | Index documentazione |
 | [sync_remote_repo_coordination.md](bashscripts/docs/git/sync_remote_repo_coordination.md) | Coordineamento agenti |
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ### Se gli Errori Persistono
 
 1. **Verifica path**: Usa solo `bashscripts/git/subtrees/`
 2. **Controlla librerie**: `ls bashscripts/lib/`
-<<<<<<< HEAD
-3. **Leggi troubleshooting**: [TROUBLESHOOTING.md](bashscripts/docs/git/TROUBLESHOOTING.md)
-=======
-<<<<<<< HEAD
 3. **Leggi troubleshooting**: [TROUBLESHOOTING.md](bashscripts/docs/git/troubleshooting.md)
-=======
-3. **Leggi troubleshooting**: [TROUBLESHOOTING.md](bashscripts/docs/git/TROUBLESHOOTING.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 4. **Apri issue**: [GitHub Issues](https://github.com/laraxot/bashscripts_fila5/issues)
 
 ---
@@ -268,15 +247,7 @@ Creare documenti per:
 
 ### Prima di Lavorare su Questo Script
 
-<<<<<<< HEAD
-1. ✅ Leggi `sync_remote_repo_coordination.md`
-=======
-<<<<<<< HEAD
 1. ✅ Leggi `SYNC_REMOTE_REPO_COORDINATION.md`
-=======
-1. ✅ Leggi `sync_remote_repo_coordination.md`
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 2. ✅ Verifica path corretto: `bashscripts/git/subtrees/`
 3. ✅ Controlla che `bashscripts/subtrees/` sia eliminato
 4. ✅ Testa con `bash -n script.sh`
@@ -337,18 +308,8 @@ bashscripts/git/subtrees/sync_remote_repo.sh  # ✅ USE THIS
 ```
 
 ### Documentation
-<<<<<<< HEAD
-- [DIRECTORY_STRUCTURE.md](bashscripts/docs/git/DIRECTORY_STRUCTURE.md) - Correct paths
-- [TROUBLESHOOTING.md](bashscripts/docs/git/TROUBLESHOOTING.md) - Error resolution
-=======
-<<<<<<< HEAD
 - [DIRECTORY_STRUCTURE.md](bashscripts/docs/git/directory_structure.md) - Correct paths
 - [TROUBLESHOOTING.md](bashscripts/docs/git/troubleshooting.md) - Error resolution
-=======
-- [DIRECTORY_STRUCTURE.md](bashscripts/docs/git/DIRECTORY_STRUCTURE.md) - Correct paths
-- [TROUBLESHOOTING.md](bashscripts/docs/git/TROUBLESHOOTING.md) - Error resolution
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 **Status**: ✅ RESOLVED  
 **Date**: 2026-03-13  

@@ -1,19 +1,10 @@
 ---
-<<<<<<< HEAD
-title: "Page Component Architecture"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "Page Component Architecture"
-=======
 title: "page component architecture"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "page component architecture"
->>>>>>> laraxot/dev
 issues: []
 discussions: []
 ---
@@ -27,30 +18,6 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-title: "PAGE COMPONENT ARCHITECTURE"
-=======
-<<<<<<< HEAD
-title: "page component architecture"
-=======
-title: "PAGE COMPONENT ARCHITECTURE"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-<<<<<<< HEAD
-qmd: "PAGE COMPONENT ARCHITECTURE"
-=======
-<<<<<<< HEAD
-qmd: "page component architecture"
-=======
-qmd: "PAGE COMPONENT ARCHITECTURE"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-issues: []
-discussions: []
 ## 🎯 Scopo
 
 Questo documento spiega l'architettura del componente `Page` nel modulo Cms e come i temi devono (o non devono) overridearlo.

@@ -7,6 +7,10 @@ tags: [memories, index, on-demand]
 related:
   - ../rules/00-TRIGGER_MAP.md
   - ../rules/on-demand-pattern.md
+<<<<<<< HEAD
+=======
+qmd: "memories"
+>>>>>>> laraxot/dev
 ---
 
 # Memories Index
@@ -44,4 +48,7 @@ Le Memories progettuali vivono qui, nel wiki del Module **User**, e vengono cari
 2. Aggiungi la voce in `../rules/00-TRIGGER_MAP.md`
 3. Aggiorna questo indice se la Memories e' ricorrente
 4. Committa: `docs: add memories <nome>`
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev

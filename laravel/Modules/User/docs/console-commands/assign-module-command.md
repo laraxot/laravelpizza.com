@@ -14,11 +14,7 @@ related:
 <<<<<<< HEAD
   - "./README.md"
 =======
-<<<<<<< HEAD
   - "./readme.md"
-=======
-  - "./README.md"
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 ---
 
@@ -184,11 +180,7 @@ Result: No changes made to user modules.
 <<<<<<< HEAD
 - [README.md](../README.md)
 =======
-<<<<<<< HEAD
 - [README.md](../readme.md)
-=======
-- [README.md](../README.md)
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 ## Aggiornamenti

@@ -832,27 +832,9 @@ Implementando queste soluzioni, il modulo Media potrà superare i principali col
 
 ## Collegamenti tra versioni di BOTTLENECKS.md
 * [BOTTLENECKS.md](../../../xot/docs/bottlenecks.md)
-<<<<<<< HEAD
 * [BOTTLENECKS.md](../../../User/docs/bottlenecks.md)
 * [BOTTLENECKS.md](../bottlenecks.md)
 * [BOTTLENECKS.md](../../../Cms/docs/bottlenecks.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-* [BOTTLENECKS.md](../../../user/docs/bottlenecks.md)
-* [BOTTLENECKS.md](../../../media/docs/bottlenecks.md)
-* [BOTTLENECKS.md](../../../cms/docs/bottlenecks.md)
-=======
-* [BOTTLENECKS.md](../../../User/docs/bottlenecks.md)
-* [BOTTLENECKS.md](../bottlenecks.md)
-* [BOTTLENECKS.md](../../../Cms/docs/bottlenecks.md)
->>>>>>> laraxot/dev
-=======
-* [BOTTLENECKS.md](../../../User/docs/bottlenecks.md)
-* [BOTTLENECKS.md](../bottlenecks.md)
-* [BOTTLENECKS.md](../../../Cms/docs/bottlenecks.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Collegamenti tra versioni di bottlenecks.md
 * [bottlenecks.md](../../../../bashscripts/docs/bottlenecks.md)

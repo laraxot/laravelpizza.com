@@ -8,11 +8,7 @@ use Modules\User\Models\Team;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
-<<<<<<< HEAD
 uses(TestCase::class);
-=======
-uses(\Modules\User\Tests\TestCase::class);
->>>>>>> laraxot/dev
 
 class TeamTest extends TestCase
 {

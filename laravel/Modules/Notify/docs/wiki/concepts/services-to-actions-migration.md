@@ -3,11 +3,7 @@ title: "Services → QueueableAction — modulo Notify"
 type: concept
 tags: [notify, push, actions, migration]
 created: 2026-07-13
-<<<<<<< HEAD
-updated: 2026-10-08
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "Notify PushNotificationService removed SendPushNotificationAction scheduled job"
 issues:
 discussions:

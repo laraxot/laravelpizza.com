@@ -17,11 +17,8 @@ related:
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
 <<<<<<< HEAD
-=======
-<<<<<<< .merge_file_RRt184
 status: draft
 =======
->>>>>>> .merge_file_0F3Tza
 >>>>>>> laraxot/dev
 ---
 
@@ -34,13 +31,9 @@ Il file `logout.blade.php` deve essere implementato come una pagina Folio static
 ### 1. Posizione del File
 ```
 <<<<<<< HEAD
-/var/www/html/Quaeris/laravel/Themes/One/resources/views/pages/auth/logout.blade.php
-=======
-<<<<<<< .merge_file_RRt184
 /var/www/html/<nome progetto>/laravel/Themes/One/resources/views/pages/auth/logout.blade.php
 =======
 /var/www/html/Quaeris/laravel/Themes/One/resources/views/pages/auth/logout.blade.php
->>>>>>> .merge_file_0F3Tza
 >>>>>>> laraxot/dev
 ```
 
@@ -49,8 +42,6 @@ Il file `logout.blade.php` deve essere implementato come una pagina Folio static
 @php
     use Illuminate\Support\Facades\Auth;
 <<<<<<< HEAD
-=======
-<<<<<<< .merge_file_RRt184
 
     // Esegui il logout
     Auth::logout();
@@ -61,10 +52,6 @@ Il file `logout.blade.php` deve essere implementato come una pagina Folio static
     // Esegui il logout
     Auth::logout();
     
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_0F3Tza
->>>>>>> laraxot/dev
     // Invalida e rigenera la sessione
     session()->invalidate();
     session()->regenerateToken();
@@ -87,15 +74,7 @@ Il file `logout.blade.php` deve essere implementato come una pagina Folio static
             </div>
 
             <div class="mt-8">
-<<<<<<< HEAD
                 <a href="{{ route('home') }}" 
-=======
-<<<<<<< .merge_file_RRt184
-                <a href="{{ route('home') }}"
-=======
-                <a href="{{ route('home') }}" 
->>>>>>> .merge_file_0F3Tza
->>>>>>> laraxot/dev
                    class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                     {{ __('Torna alla Home') }}
                 </a>
@@ -155,18 +134,6 @@ Il file `logout.blade.php` deve essere implementato come una pagina Folio static
 4. **Mantieni la logica** semplice e diretta
 
 ## Collegamenti Correlati
-<<<<<<< HEAD
 - [Best Practices Folio](./routing-best-practices.md)
 - [Gestione Sessione](./session-management.md)
 - [Tema One Documentation](../../themes/one/docs/README.md) 
-=======
-<<<<<<< .merge_file_RRt184
-- [Best Practices Folio](./routing-best-practices-architettura-volt-folio-filament.md)
-- [Gestione Sessione](./session-management-gestione-sessioni.md)
-- [Tema One Documentation](../../themes/one/docs/readme.md)
-=======
-- [Best Practices Folio](./routing-best-practices.md)
-- [Gestione Sessione](./session-management.md)
-- [Tema One Documentation](../../themes/one/docs/README.md) 
->>>>>>> .merge_file_0F3Tza
->>>>>>> laraxot/dev

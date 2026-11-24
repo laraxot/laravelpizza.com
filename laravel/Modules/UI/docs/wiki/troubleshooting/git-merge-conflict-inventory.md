@@ -7,6 +7,7 @@ tags: [documentation]
 
 # Git Conflict Inventory
 
+<<<<<<< HEAD
 - Owner: Modules/UI
 - Ultimo sweep app PHP: 2026-11-24
 
@@ -32,3 +33,18 @@ tags: [documentation]
 
 - [services-to-actions-ui](../../stories/services-to-actions-ui.story.md)
 - [conflict-resolution](../../conflict-resolution.md)
+=======
+- Date: 2026-04-28
+- Owner: Modules/UI
+- Files with conflict markers: 2
+
+## Files
+
+- docs/strategy.md
+- docs/studio_card_selector_implementation.md
+
+## Notes
+
+- Inventory generated from `rg -l "^(<<<<<<<|=======|>>>>>>>)"`.
+- Use this list as a volatile coordination map; re-open each file before editing because other agents may resolve items in parallel.
+>>>>>>> laraxot/dev

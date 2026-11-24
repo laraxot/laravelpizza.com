@@ -6,6 +6,7 @@ created: 2026-11-23
 updated: 2026-11-24
 decision-makers: [team Laraxot]
 issues: []
+qmd: "xot base extension points moduli estendono"
 ---
 
 # I moduli estendono i punti base Xot del framework

@@ -1,6 +1,10 @@
 ---
 title: Pandoc Documentation Generation Guide
 description: How to convert module documentation to multiple formats using Pandoc
+<<<<<<< HEAD
+=======
+qmd: "pandoc guide generation"
+>>>>>>> laraxot/dev
 ---
 
 # Pandoc Documentation Generation

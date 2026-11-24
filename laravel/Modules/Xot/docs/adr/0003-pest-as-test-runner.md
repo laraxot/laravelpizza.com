@@ -6,6 +6,7 @@ created: 2026-11-23
 updated: 2026-11-23
 decision-makers: [team Laraxot]
 issues: []
+qmd: "0003 pest as test runner formato"
 ---
 
 # Pest è il formato e il runner dei test applicativi

@@ -101,15 +101,7 @@ related:
 <<<<<<< HEAD
 - [Documentazione Modulo User](README.md)
 =======
-<<<<<<< HEAD
 - [Documentazione Modulo User](readme.md)
-=======
-<<<<<<< .merge_file_UdvDdy
-- [Documentazione Modulo User](./README.md)
-=======
-- [Documentazione Modulo User](README.md)
->>>>>>> .merge_file_X89x9d
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 ## Note Tecniche

@@ -3,11 +3,7 @@ title: "dry kiss analysis 2025 10 15"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "dry kiss analysis 2025 10 15"
 issues: []
 discussions: []
@@ -46,12 +42,7 @@ abstract class BaseModel extends XotBaseModel implements HasMedia
 - ⏸️ verified_at: Valutare se domain-specific
 - 🔄 ServiceProvider: Auto-detect nome
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 [DRY/KISS Global](../../docs/dry_kiss_analysis.md)
-=======
->>>>>>> laraxot/dev
 ---
 title: "dry kiss analysis 2025 10 15"
 type: note
@@ -63,7 +54,3 @@ issues: []
 discussions: []
 [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
 
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

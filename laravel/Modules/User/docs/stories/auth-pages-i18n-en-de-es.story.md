@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Login e registrazione in inglese, tedesco e spagnolo"
+type: story
+qmd: "auth pages i18n en de es"
+---
+>>>>>>> laraxot/dev
 # Login e registrazione in inglese, tedesco e spagnolo
 
 - Stato: done (2026-10-07), con aperti elencati sotto
@@ -49,15 +57,7 @@ grezze minuscole (`email*`, `password*`, `remember` due volte). `de` e `es` avev
 
 - Sweep delle pagine pubbliche (`/en`, `/de`, `/es`, `/{lang}/tickets`, `/en/auth/password/reset`): chiusi i residui
   "Contatta il comune"/"Richiedi assistenza" (blocco contatti), `breadcrumb` e `Cerca` (controlli mappa, vedi
-<<<<<<< HEAD
   [map-controls-i18n-it-en-de-es.story.md](../../../Geo/docs/stories/map-controls-i18n-it-en-de-es.story.md)).
-=======
-<<<<<<< .merge_file_hEKvNS
-  [map-controls-i18n-it-en-de-es-2026-10-07.story.md](../../../Geo/docs/stories/map-controls-i18n-it-en-de-es-2026-10-07.story.md)).
-=======
-  [map-controls-i18n-it-en-de-es.story.md](../../../Geo/docs/stories/map-controls-i18n-it-en-de-es.story.md)).
->>>>>>> .merge_file_AWCze3
->>>>>>> laraxot/dev
 - Pulsante di login in inglese: "Login", mentre il titolo dice "Sign in".
 - Docblock di `LoginWidget` da correggere: le etichette vengono da `user_form`.
 - Le chiavi morte `register_cta_*` vanno rimosse dalla view o create in tutte le lingue.

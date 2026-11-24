@@ -10,6 +10,12 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Verifica che la tabella notifications esista sulla connection User prima di query FO.
+<<<<<<< HEAD
+=======
+ *
+ * @see docs/contracts/is-notification-schema-readable-action.md
+ * @contract docs/contracts/is-notification-schema-readable-action.md
+>>>>>>> laraxot/dev
  */
 final class IsNotificationSchemaReadableAction
 {

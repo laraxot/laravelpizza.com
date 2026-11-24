@@ -5,11 +5,7 @@ title: "progress-summary-2025-01-27.deprecated"
 type: concept
 tags: [deprecated]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "progress-summary-2025-01-27.deprecated deprecated"
 status: deprecated
 related:

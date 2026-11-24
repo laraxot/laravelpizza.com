@@ -1,6 +1,10 @@
 ---
 title: status
 module: User
+<<<<<<< HEAD
+=======
+qmd: "status"
+>>>>>>> laraxot/dev
 ---
 
 BMAD STATUS — User

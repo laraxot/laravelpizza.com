@@ -13,49 +13,23 @@ discussions: []
 
 ## Current roadmap
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 - [Overview](roadmap/00-overview.md)
 - [Now](roadmap/01-now.md)
 - [Next](roadmap/02-next.md)
 - [Later](roadmap/03-later.md)
 - [Risks and dependencies](roadmap/04-risks.md)
-<<<<<<< HEAD
-=======
-=======
-- Overview
-- [Now](roadmap/01-now.md)
-- Next
-- Later
-- Risks and dependencies
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Legacy / existing roadmap docs
 
 - [phpstan-bing-maps-action-fix-roadmap.md](phpstan-bing-maps-action-fix-roadmap.md)
 - [phpstan-error-resolution-roadmap.md](phpstan-error-resolution-roadmap.md)
 - [phpstan-errors-resolution-roadmap.md](phpstan-errors-resolution-roadmap.md)
-<<<<<<< HEAD
 - [phpstan-errors-roadmap-2026-01-12.md](phpstan-errors-roadmap-2026-01-12.md)
-=======
-<<<<<<< HEAD
-- [phpstan-errors-roadmap-2026-01-12.md](phpstan-errors-roadmap-2026-01-12.md)
-=======
-- [phpstan-errors-roadmap-2026-01-12.md](phpstan-errors-roadmap.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [phpstan-errors-roadmap.md](phpstan-errors-roadmap.md)
 - [phpstan-fixes-roadmap.md](phpstan-fixes-roadmap.md)
 - [phpstan-roadmap-geo.md](phpstan-roadmap-geo.md)
 - [phpstan-roadmap.md](phpstan-roadmap.md)
 - [roadmap/00-index.md](roadmap/00-index.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 - [roadmap/00-overview.md](roadmap/00-overview.md)
 - [roadmap/01-current-state.md](roadmap/01-current-state.md)
 - [roadmap/01-now.md](roadmap/01-now.md)
@@ -65,20 +39,6 @@ discussions: []
 - [roadmap/03-workstreams.md](roadmap/03-workstreams.md)
 - [roadmap/04-milestones.md](roadmap/04-milestones.md)
 - [roadmap/04-risks.md](roadmap/04-risks.md)
-<<<<<<< HEAD
-=======
-=======
-- roadmap/00-overview.md
-- [roadmap/01-current-state.md](roadmap/01-current-state.md)
-- [roadmap/01-now.md](roadmap/01-now.md)
-- [roadmap/02-goals.md](roadmap/02-goals.md)
-- roadmap/02-next.md
-- roadmap/03-later.md
-- [roadmap/03-workstreams.md](roadmap/03-workstreams.md)
-- [roadmap/04-milestones.md](roadmap/04-milestones.md)
-- roadmap/04-risks.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [roadmap/05-risks.md](roadmap/05-risks.md)
 - [roadmap/legacy-roadmap.md](roadmap/legacy-roadmap.md)
 - [roadmap/legacy/legacy-roadmap-and-issues.md](roadmap/legacy/legacy-roadmap-and-issues.md)

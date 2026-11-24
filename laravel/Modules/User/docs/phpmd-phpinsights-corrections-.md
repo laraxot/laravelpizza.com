@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "PHPMD e PHP Insights Corrections - 2025-01-22"
+type: note
+qmd: "phpmd phpinsights corrections insights 20250122"
+---
+>>>>>>> laraxot/dev
 # PHPMD e PHP Insights Corrections - 2025-01-22
 
 ## Obiettivo

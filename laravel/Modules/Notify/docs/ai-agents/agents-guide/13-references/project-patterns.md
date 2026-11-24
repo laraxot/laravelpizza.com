@@ -3,11 +3,7 @@ title: "project patterns"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "project patterns"
 issues: []
 discussions: []
@@ -34,6 +30,7 @@ app(MyAction::class)->createPersonalAccessClient();
 - **Short array syntax (CRITICAL)**: **ALWAYS** `[]`: **NEVER** `array()` in any PHP file.
 - **Packages**: Add to `Modules/{Module}/composer.json`, then run `composer go` from `laravel/`.
 <<<<<<< HEAD
+<<<<<<< HEAD
 - **Git Rules**:
   - NEVER `git remote set-url`: only project owner does this.
   - Git goes forward only: never restore old versions.
@@ -47,6 +44,11 @@ app(MyAction::class)->createPersonalAccessClient();
   - NEVER `git remote set-url`: only project owner does this.
   - Git goes forward only: never restore old versions.
 >>>>>>> .merge_file_ZKezpx
+>>>>>>> laraxot/dev
+=======
+- **Git Rules**:
+  - NEVER `git remote set-url`: only project owner does this.
+  - Git goes forward only: never restore old versions.
 >>>>>>> laraxot/dev
   - Every error fix: git commit + GitHub issue + GitHub discussion.
 

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "FullCalendar Scheduler Documentation - README"
+type: note
+qmd: "fullcalendar scheduler"
+---
+>>>>>>> laraxot/dev
 # FullCalendar Scheduler Documentation - README
 
 ## 🎯 Obiettivo

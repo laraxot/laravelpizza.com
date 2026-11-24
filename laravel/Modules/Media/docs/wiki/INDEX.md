@@ -8,6 +8,7 @@ module: "Media"
 ## Indices
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Rules](rules/index.md)
 =======
 =======
@@ -33,6 +34,8 @@ module: "Media"
 - [Commands](commands/index.md)
 - [Memories](memories/index.md)
 - [Concepts](concepts/index.md)
+=======
+>>>>>>> laraxot/dev
 
 ## On-Demand Workflow
 

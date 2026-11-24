@@ -6,11 +6,7 @@ issues: []
 discussions: []
 title: agent edit discipline — puntatore
 type: reference
-<<<<<<< HEAD
-updated: 2026-05-19
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 ---
 
 # Disciplina edit e qualità (puntatore)

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "HasTeams Trait - Filosofia Laraxot e Strategia di Correzione Completa"
+type: note
+qmd: "hasteams trait filosofia correzione completa laraxot"
+---
+>>>>>>> laraxot/dev
 # HasTeams Trait - Filosofia Laraxot e Strategia di Correzione Completa
 
 ## 🧠 LA FILOSOFIA LARAXOT: Perché `belongsToManyX` invece di `belongsToMany`
@@ -282,15 +290,7 @@ Il trait `HasTeams` ora è:
 ### **📁 Documentazione Modulo User**
 - [traits.md](traits.md) - Documentazione completa trait modulo User
 - [authentication.md](authentication.md) - Sistema autenticazione User
-<<<<<<< HEAD
 - [index.md](index.md) - Indice generale modulo User
-=======
-<<<<<<< HEAD
-- [index.md](index.md) - Indice generale modulo User
-=======
-- [index.md](./README.md) - Indice generale modulo User
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ### **⚙️ File .mdc (Cursor/Windsurf)**
 - [/.cursor/rules/hasteams-trait-laraxot.mdc](../../../.cursor/rules/hasteams-trait-laraxot.mdc)

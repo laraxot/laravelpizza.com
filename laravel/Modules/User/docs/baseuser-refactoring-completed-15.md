@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "BaseUser Refactoring - Completato"
+type: note
+qmd: "baseuser refactoring completed 15 completato"
+---
+>>>>>>> laraxot/dev
 # BaseUser Refactoring - Completato
 
 **Data**: 15 Ottobre 2025  

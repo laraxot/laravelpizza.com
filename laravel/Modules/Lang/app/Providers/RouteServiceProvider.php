@@ -83,7 +83,6 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
         // (base_quaeris_fila5#234).
         $segment = request()->segment(1);
 
-
         if (\is_string($segment) && \in_array($segment, $langs, true)) {
             app()->setLocale($segment);
         }

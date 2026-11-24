@@ -261,11 +261,7 @@ $user->hasRole('admin', 'api'); // ✅ Ora funziona correttamente
 <<<<<<< HEAD
 - [User Module README](./README.md)
 =======
-<<<<<<< HEAD
 - [User Module README](./readme.md)
-=======
-- [User Module README](./README.md)
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 ### Root Progetto

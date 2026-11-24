@@ -7,6 +7,10 @@ created: 2026-11-10
 updated: 2026-11-10
 related:
   - "../../../Lang/docs/stories/placeholder-translations.story.md"
+<<<<<<< HEAD
+=======
+qmd: "placeholder translations cleanup story traduzioni segnaposto"
+>>>>>>> laraxot/dev
 ---
 
 # Via le traduzioni segnaposto dai file di lingua

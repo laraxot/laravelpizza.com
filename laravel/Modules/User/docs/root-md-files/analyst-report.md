@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "User Module — Analyst Report"
+type: report
+qmd: "analyst report user"
+---
+>>>>>>> laraxot/dev
 # User Module — Analyst Report
 
 **Date**: 2026-07-09  

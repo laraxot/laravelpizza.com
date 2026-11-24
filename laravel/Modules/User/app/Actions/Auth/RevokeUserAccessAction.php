@@ -18,6 +18,10 @@ use Spatie\QueueableAction\QueueableAction;
  * (ripristino da back office) e il registro dei token dice il vero. Le sessioni web aperte su altri dispositivi cadono alla richiesta
  * successiva, perche' il provider non trova piu' l'utente.
  *
+<<<<<<< HEAD
+=======
+ * @see docs/contracts/revoke-user-access-action.md
+>>>>>>> laraxot/dev
  * @contract docs/contracts/revoke-user-access-action.md
  */
 final class RevokeUserAccessAction

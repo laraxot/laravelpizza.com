@@ -7,10 +7,7 @@ updated: 2026-09-26
 qmd: "theme"
 issues: []
 discussions: []
-<<<<<<< HEAD
-=======
 status: draft
->>>>>>> laraxot/dev
 ---
 
 # Theme
@@ -25,21 +22,12 @@ per sapere quale tema utilizza questo progetto devi leggere laravel/.env  la var
 e qui trovi la variabile pub_theme  e qui c'e' scritto il nome del tema, che corrisponde al nome della cartella del tema in laravel/Themes/
 aggiorna le cartelle docs dentro i moduli e dentro i temi, le tue rules, le tue memories, le tue skills, utilizzando gli indici in ottica dry + kiss, utilizza openviking installato globalmente, bmad, gsd , ralph loop e notebooklm
 
-
 questo errore Vite manifest not found at: /var/www/_bases/base_fixcity_fila5/public_html/themes/<nome tema>/manifest.json 
 si risolve andando in 
 cd laravel/Themes/<nome tem>
 composer update -W 
 npm install
 npm run build
-<<<<<<< HEAD
-# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
-<<<<<<< HEAD
-# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 capisci te i perche' 
 utilizza openviking installato globalmente, bmad, gsd , ralph loop e notebooklm

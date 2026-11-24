@@ -3,14 +3,8 @@ title: "🏆 FIXCITY - COMPLETAMENTO ASSOLUTO 100%"
 type: concept
 tags: [absolute, completion, 100]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-qmd: "absolute-completion-100 🏆 fixcity - completamento assoluto 100%"
-qmd: "absolute-completion-100 🏆 ptv - completamento assoluto 100%"
-=======
 updated: 2026-11-23
 qmd: "absolute-completion-100 🏆 fixcity - completamento assoluto 100%"
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:

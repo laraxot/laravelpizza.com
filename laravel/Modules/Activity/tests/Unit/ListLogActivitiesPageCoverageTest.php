@@ -14,27 +14,6 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 beforeEach(function (): void {
-<<<<<<< HEAD
-    /** @var \Modules\Activity\Tests\TestCase $this */
-$this->page = new class extends ListLogActivities
-        {
-            public static function getResource(): string
-            {
-                return ActivityResource::class;
-            }
-
-            public function exposeRestoreSuccess(): Notification
-            {
-                return $this->sendRestoreSuccessNotification();
-            }
-
-            public function exposeRestoreFailure(?string $message = null): Notification
-            {
-                return $this->sendRestoreFailureNotification($message);
-            }
-        };
-=======
-    /** @var TestCase $this */
     $this->page = new class extends ListLogActivities
     {
         public static function getResource(): string
@@ -52,18 +31,11 @@ $this->page = new class extends ListLogActivities
             return $this->sendRestoreFailureNotification($message);
         }
     };
->>>>>>> laraxot/dev
 });
 
 describe('List Log Activities Page Coverage', function (): void {
     test('get breadcrumb returns string', function (): void {
-<<<<<<< HEAD
-        /** @var \Modules\Activity\Tests\TestCase $this */
-$result = $this->requirePage()->getBreadcrumb();
-=======
-        /** @var TestCase $this */
         $result = $this->requirePage()->getBreadcrumb();
->>>>>>> laraxot/dev
 
         Assert::assertNotEmpty($result);
     });
@@ -84,11 +56,7 @@ $result = $this->requirePage()->getBreadcrumb();
     });
 
     test('can restore activity returns false when resource class does not exist', function (): void {
-<<<<<<< HEAD
-Assert::assertFalse(class_exists('NonExistentClass\That\Does\Not\Exist'));
-=======
         Assert::assertFalse(class_exists('NonExistentClass\That\Does\Not\Exist'));
->>>>>>> laraxot/dev
     });
 
     test('can restore activity returns false when resource lacks can restore method', function (): void {
@@ -104,23 +72,13 @@ Assert::assertFalse(class_exists('NonExistentClass\That\Does\Not\Exist'));
     });
 
     test('get pagination mode returns default', function (): void {
-<<<<<<< HEAD
-$mode = $this->requirePage()->getPaginationMode();
-=======
-        /** @var TestCase $this */
         $mode = $this->requirePage()->getPaginationMode();
->>>>>>> laraxot/dev
 
         Assert::assertSame(PaginationMode::Default, $mode);
     });
 
     test('get field label returns name when not in map', function (): void {
-<<<<<<< HEAD
-try {
-=======
-        /** @var TestCase $this */
         try {
->>>>>>> laraxot/dev
             $label = $this->requirePage()->getFieldLabel('nonexistent_field');
             Assert::assertSame('nonexistent_field', $label);
         } catch (\Throwable $e) {
@@ -186,12 +144,7 @@ try {
     });
 
     test('can restore activity with record executes resource check', function (): void {
-<<<<<<< HEAD
-$result = $this->requirePage()->canRestoreActivity();
-=======
-        /** @var TestCase $this */
         $result = $this->requirePage()->canRestoreActivity();
->>>>>>> laraxot/dev
         Assert::assertFalse($result);
     });
 });

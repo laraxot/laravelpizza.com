@@ -1,13 +1,5 @@
 ---
-<<<<<<< HEAD
-title: "Tech spec: Activity"
-=======
-<<<<<<< HEAD
 title: "Tech spec — Activity"
-=======
-title: "Tech spec: Activity"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 type: tech-spec
 module: Activity
 related:

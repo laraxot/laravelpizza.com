@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Profile UUID Philosophy - Zen Approach"
+type: note
+qmd: "profile uuid philosophy approach"
+---
+>>>>>>> laraxot/dev
 # Profile UUID Philosophy - Zen Approach
 
 ## Il Problema (What)

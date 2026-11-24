@@ -458,15 +458,7 @@ private function getPasswordLegacy(): string
 ```
 
 ## Collegamenti
-<<<<<<< HEAD
 - [README Comandi Console](README.md)
-=======
-<<<<<<< HEAD
-- [README Comandi Console](README.md)
-=======
-- [README Comandi Console](./readme.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [ChangePasswordCommand](change-password-command.md)
 - [AssignModuleCommand](assign-module-command.md)
 - [Testing Strategy](../testing/console-commands-testing.md)
@@ -923,15 +915,7 @@ private function getPasswordLegacy(): string
 ```
 
 ## Collegamenti
-<<<<<<< HEAD
 - [README Comandi Console](README.md)
-=======
-<<<<<<< HEAD
-- [README Comandi Console](README.md)
-=======
-- [README Comandi Console](./readme.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [ChangePasswordCommand](change-password-command.md)
 - [AssignModuleCommand](assign-module-command.md)
 - [Testing Strategy](../testing/console-commands-testing.md)

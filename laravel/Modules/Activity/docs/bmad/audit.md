@@ -41,29 +41,7 @@ SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/activi
 ## Gate
 
 - PHPStan `Modules/Activity`: **0 errori** (2026-11-16).
-<<<<<<< HEAD
-<<<<<<< HEAD
 - Pest: **parziale** — 25 pass in 2 probe (`ActivityManagementTest`, `BaseModelBusinessLogicTest`); suite completa in timeout a 900 s (macchina con load ≈ 50; i 40 ⨯ visti non si riproducono in isolamento). Dopo i fix della [story](./stories/module-bmad-audit.story.md), `tests/Feature` da sola: **0 failed / 181 passed / 9 skipped** (~660 s). Dettaglio in [audit § Gate](./audits/activity-audit.md#gate).
-=======
-=======
-=======
-<<<<<<< HEAD
-- Pest: **parziale** — 25 pass in 2 probe (`ActivityManagementTest`, `BaseModelBusinessLogicTest`); suite completa in timeout a 900 s (macchina con load ≈ 50; i 40 ⨯ visti non si riproducono in isolamento). Dopo i fix della [story](./stories/module-bmad-audit.story.md), `tests/Feature` da sola: **0 failed / 181 passed / 9 skipped** (~660 s). Dettaglio in [audit § Gate](./audits/activity-audit.md#gate).
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Dh6NI4
-- Pest: **parziale** — 25 pass in 2 probe (`ActivityManagementTest`, `BaseModelBusinessLogicTest`); suite completa in timeout a 900 s (macchina con load ≈ 50; i 40 ⨯ visti non si riproducono in isolamento).
-=======
-- Pest: **parziale** — 25 pass in 2 probe (`ActivityManagementTest`, `BaseModelBusinessLogicTest`); suite completa in timeout a 900 s (macchina con load ≈ 50; i 40 ⨯ visti non si riproducono in isolamento). Dopo i fix della [story](./stories/module-bmad-audit.story.md), `tests/Feature` da sola: **0 failed / 181 passed / 9 skipped** (~660 s). Dettaglio in [audit § Gate](./audits/activity-audit.md#gate).
->>>>>>> .merge_file_CAhntc
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - Security/runtime: le story figlie dei P1 sono in [epics.md](./epics.md).
 
 ## Riferimenti

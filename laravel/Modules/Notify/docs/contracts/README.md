@@ -1,28 +1,21 @@
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
-title: "Contratti"
-type: index
-tags: [contracts, actions, interfaces]
-created: 2026-11-18
-updated: 2026-11-18
----
-
-# Contratti
-
-Cosa promette la superficie pubblica di questo pacchetto: le Action che scrivono dati, chiamano servizi esterni o hanno
-effetti collaterali, e le interfacce (`app/Contracts`). Regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`.
-=======
-=======
->>>>>>> laraxot/dev
 title: "Contratti del modulo Notify"
 type: index
+module: Notify
+status: active
 tags: [contracts, actions, interfaces, notify]
 created: 2026-11-18
 updated: 2026-11-24
+qmd: "notify contracts readme azioni invarianti pest group notifiche invio"
 ---
 
 # Contratti del modulo Notify
+
+Cosa promette la superficie pubblica di Notify: le Action che scrivono dati, chiamano servizi esterni o hanno effetti collaterali,
+e le interfacce (`app/Contracts`). Un contratto descrive il comportamento promesso da una Action che invia comunicazioni ai
+destinatari (dati personali: email, telefono) o scrive lo stato delle notifiche.
+Regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`; standard: `Modules/Xot/docs/contracts/contract-authoring-standard.md`;
+governance: `Modules/Xot/docs/adr/0012-behavioral-contract-governance.md`.
 
 ## Metodo Harness
 
@@ -38,11 +31,6 @@ posta in arrivo) e l'invio multicanale da template. Con un group Pest si lancia
 
 Quando leggerli: prima di chiamare, modificare o imitare una di queste Action, e prima di aggiungere un fornitore o un canale.
 Le interfacce di `app/Contracts` (SMS, Telegram, WhatsApp, push) non hanno ancora un documento qui.
-Formato e regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`.
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
 
 ## Contratto di comportamento di un'Action
 
@@ -58,16 +46,6 @@ Un file per Action, nome in kebab-case della classe (`create-ticket-action.md`),
 ## Non fa
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-Il docblock dell'Action rimanda al file con la riga `Contratto di comportamento: docs/contracts/<file>.md`.
-Chi cambia il comportamento aggiorna il contratto nello stesso commit.
-
-## Contratti
-
-=======
-=======
->>>>>>> laraxot/dev
 Il docblock dell'Action rimanda al file con il marker `@contract docs/contracts/<file>.md`, quello verificato dai test; la
 riga legacy `Contratto di comportamento: docs/contracts/<file>.md` può restare. Chi cambia il comportamento aggiorna il
 contratto nello stesso commit.
@@ -76,14 +54,10 @@ contratto nello stesso commit.
 
 - [HandleMailjetEventsAction](handle-mailjet-events-action.md) — webhook degli esiti Mailjet → evento `MailDeliveryEventReceived`; 4 invarianti, tutte con group.
 - [ProcessInboundMailAction](process-inbound-mail-action.md) — webhook della posta in arrivo → `inbound_emails` + `.eml` su disco; 4 invarianti, 1 con group.
-- [SendNotificationAction](send-notification-action.md) — invio da template su `mail`, `database`, `sms`; 4 invarianti, debito (test da correggere).
-- [ModelWithStatusContract](modelwithstatuscontract.md) — rinvio all'interfaccia di Xot `Modules\Xot\Contracts\ModelWithStatusContract` (gestione degli stati via Spatie Model Status); non è un contratto di comportamento di Notify.
+- [SendNotificationAction](send-notification-action.md) — invio da template su `mail`, `database`, `sms`; invarianti `NOTIFY-SEND-INV-<N>` nel contratto, debito dichiarato sui test.
+- [ModelWithStatusContract](modelwithstatuscontract.md) — rinvio all'interfaccia di Xot `Modules\Xot\Contracts\ModelWithStatusContract` (gestione degli stati via Spatie Model Status); nota legacy (`type: note`, `status: draft`), non è un contratto di comportamento di Notify e non segue il formato a sei sezioni.
 
 ## Indice e template
 
-- [INDEX](INDEX.md) — tabella operativa operazione, contratto, classe, invarianti; oggi censisce solo `modelwithstatuscontract.md`.
+- [INDEX](INDEX.md) — tabella operativa operazione, contratto, classe, invarianti; copertura e backlog.
 - [Template di contratto](_template.md) — scheletro con le sei sezioni e la tabella degli invarianti, da copiare per una nuova Action.
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev

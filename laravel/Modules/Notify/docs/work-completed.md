@@ -1,7 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 title: "work completed 2025 10"
 type: note
 tags: [documentation]
@@ -284,8 +281,6 @@ Per domande su questo aggiornamento:
 
 *Questo documento riassume tutto il lavoro svolto per l'aggiornamento delle roadmap e della documentazione.
 Per dettagli specifici, consultare i singoli file aggiornati.*
-=======
->>>>>>> laraxot/dev
 issues: []
 discussions: []
 title: "WORK_COMPLETED_2025-10-01"
@@ -307,7 +302,3 @@ related:
 ---
 
 > Questo file è stato rinominato in [work-completed.md](work-completed.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

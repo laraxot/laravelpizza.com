@@ -13,6 +13,10 @@ discussions:
 related:
   - ../../../Fixcity/docs/bmad/citizen-journey-audit-2026-10-07.md
   - ../../../../Themes/Sixteen/docs/bmad/citizen-journey-presentation-contract-2026-10-07.md
+<<<<<<< HEAD
+=======
+qmd: "citizen auth flow contract 07 user"
+>>>>>>> laraxot/dev
 ---
 
 # Contratto auth cittadino

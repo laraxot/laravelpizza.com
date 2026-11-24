@@ -10,6 +10,7 @@ tags: [phpstan, xot, regressione, swarm, urlact, update-actions]
 related:
   - ./2026-10-06-phpstan-cleanup-xot-app.story.md
   - ./2026-10-06-phpstan-cleanup-xot-app.dev.md
+qmd: "08 phpstan xot app regressions story"
 ---
 
 # [STORY] PHPStan Xot/app: regressioni del cleanup del 2026-10-06

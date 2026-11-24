@@ -21,6 +21,7 @@ use function Safe\unlink;
  * file `.php` senza nome. Riscrive solo i file di soli dati: un file che chiama funzioni o usa variabili
  * resterebbe "congelato" al valore calcolato qui, quindi non si tocca.
  *
+ * @see docs/contracts/clean-placeholder-translations-action.md
  * @contract docs/contracts/clean-placeholder-translations-action.md
  */
 class CleanPlaceholderTranslationsAction

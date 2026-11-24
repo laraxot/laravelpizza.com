@@ -12,6 +12,12 @@ use Spatie\QueueableAction\QueueableAction;
  *
  * Un indirizzo gia' verificato non riceve nulla. L'evento `Verified` non si lancia qui: dice che l'indirizzo E' STATO verificato,
  * e lo emettono solo i controller che controllano id e hash prima di `markEmailAsVerified()`.
+<<<<<<< HEAD
+=======
+ *
+ * @see docs/contracts/resend-email-verification-action.md
+ * @contract docs/contracts/resend-email-verification-action.md
+>>>>>>> laraxot/dev
  */
 class ResendEmailVerificationAction
 {

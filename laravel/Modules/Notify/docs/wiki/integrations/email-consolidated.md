@@ -7,11 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 ---
 
 # email — Consolidated Documentation
@@ -542,10 +538,7 @@ class MailTrackingService
 
 *Consolidated from: `email-analytics.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di tracciamento e analisi per le email in il progetto.
@@ -998,10 +991,7 @@ class MailTrackingService
 
 *Consolidated from: `email-backup-1.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di backup per preservare e ripristinare i template email.
@@ -1637,36 +1627,21 @@ class MailBackupDebugger
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
-<<<<<<< HEAD
-=======
-- [Laravel Storage](https://laravel.com/project_docs/storage)
-- [Laravel Encryption](https://laravel.com/project_docs/encryption)
-- [Laravel Commands](https://laravel.com/project_docs/artisan)
->>>>>>> laraxot/dev
-- [Laravel Storage](https://laravel.com/docs/storage)
-- [Laravel Encryption](https://laravel.com/docs/encryption)
-- [Laravel Commands](https://laravel.com/docs/artisan)
 - [Laravel Storage](https://laravel.com/project_docs/storage)
 - [Laravel Encryption](https://laravel.com/project_docs/encryption)
 - [Laravel Commands](https://laravel.com/project_docs/artisan)
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
-<<<<<<< HEAD
-- [Laravel Storage](https://laravel.com/docs/storage)
-- [Laravel Encryption](https://laravel.com/docs/encryption)
-- [Laravel Commands](https://laravel.com/docs/artisan)
-=======
-<<<<<<< HEAD
 - [Laravel Storage](https://laravel.com/project_docs/storage)
 - [Laravel Encryption](https://laravel.com/project_docs/encryption)
 - [Laravel Commands](https://laravel.com/project_docs/artisan)
-=======
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
+- [Laravel Storage](https://laravel.com/docs/storage)
+- [Laravel Encryption](https://laravel.com/docs/encryption)
+- [Laravel Commands](https://laravel.com/docs/artisan)
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
@@ -2681,10 +2656,7 @@ class MailBackupDebugger
 
 *Consolidated from: `email-backup.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di backup per preservare e ripristinare i template email.
@@ -3370,10 +3342,7 @@ related:
 
 *Consolidated from: `email-best-practices.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Migrazioni Database
 
 ### Struttura Standard
@@ -3901,10 +3870,7 @@ class MailCacheDebugger
 
 *Consolidated from: `email-cache.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di cache per ottimizzare le performance delle email.
@@ -4647,10 +4613,7 @@ Per supporto tecnico:
 
 *Consolidated from: `email-html-best-practices.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento definisce le best practices per la creazione di template HTML per email, basate sulle esperienze di [MailPace](https://github.com/mailpace/templates) e altre fonti autorevoli.
@@ -4884,10 +4847,7 @@ Per supporto tecnico:
 
 *Consolidated from: `email-integration.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ---
 
 ## email-logs-1
@@ -5432,10 +5392,7 @@ class MailLogDebugger
 
 *Consolidated from: `email-logs.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di log per tracciare e monitorare le attività del sistema email.
@@ -6803,10 +6760,7 @@ class MailMonitoringDebugger
 
 *Consolidated from: `email-monitoring.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di monitoraggio per analizzare e ottimizzare le performance delle email.
@@ -8030,10 +7984,7 @@ class NotificationDebugger
 
 *Consolidated from: `email-notifications.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di notifiche per eventi e azioni in il progetto.
@@ -8708,10 +8659,7 @@ class MailAnalytics
 
 *Consolidated from: `email-plugins-analysis.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Analisi comparativa dei principali plugin per la gestione email in Filament, con focus sulle funzionalità che possiamo integrare nel nostro sistema.
@@ -8990,10 +8938,7 @@ class MailAnalytics
 
 *Consolidated from: `email-plugins.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Analisi comparativa dei principali plugin per la gestione email in Filament, con focus sulle funzionalità che possiamo integrare nel nostro sistema.
@@ -9702,10 +9647,7 @@ class MailQueueManager
 
 *Consolidated from: `email-queue.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di gestione code per l'invio di email in il progetto.
@@ -10742,10 +10684,7 @@ Un esempio completo di implementazione è disponibile in `TestSmtpPage.php`. Si 
 
 *Consolidated from: `email-sending-troubleshooting.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Problema: `SendEmail.php` vs `TestSmtpPage.php`
 
 È stato rilevato che nel modulo Notify:
@@ -11351,10 +11290,7 @@ class TranslationValidator
 
 *Consolidated from: `email-translations.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di traduzione multilingua per i template email in il progetto.
@@ -12204,10 +12140,7 @@ class TemplateValidator
 
 *Consolidated from: `email-wysiwyg-editor.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Implementazione di un editor WYSIWYG avanzato per la creazione e modifica dei template email in il progetto.
@@ -12647,10 +12580,7 @@ class TemplateValidator
 
 *Consolidated from: `email_analytics.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di tracciamento e analisi per le email in il progetto.
@@ -13103,10 +13033,7 @@ class MailTrackingService
 
 *Consolidated from: `email_backup.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di backup per preservare e ripristinare i template email.
@@ -13748,10 +13675,7 @@ class MailBackupDebugger
 
 *Consolidated from: `email_best_practices.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Migrazioni Database
 
 ### Struttura Standard
@@ -13775,10 +13699,7 @@ class MailBackupDebugger
 
 *Consolidated from: `email_cache.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di cache per ottimizzare le performance delle email.
@@ -14262,10 +14183,7 @@ class MailCacheDebugger
 
 *Consolidated from: `email_html_best_practices.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento definisce le best practices per la creazione di template HTML per email, basate sulle esperienze di [MailPace](https://github.com/mailpace/templates) e altre fonti autorevoli.
@@ -14499,10 +14417,7 @@ Per supporto tecnico:
 
 *Consolidated from: `email_logs.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di log per tracciare e monitorare le attività del sistema email.
@@ -15020,10 +14935,7 @@ class MailLogDebugger
 
 *Consolidated from: `email_monitoring.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di monitoraggio per analizzare e ottimizzare le performance delle email.
@@ -15849,10 +15761,7 @@ class MailMonitoringDebugger
 
 *Consolidated from: `email_notifications.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di notifiche per eventi e azioni in il progetto.
@@ -16225,10 +16134,7 @@ class NotificationDebugger
 
 *Consolidated from: `email_plugins_analysis.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Analisi comparativa dei principali plugin per la gestione email in Filament, con focus sulle funzionalità che possiamo integrare nel nostro sistema.
@@ -16506,10 +16412,7 @@ class MailAnalytics
 
 *Consolidated from: `email_queue.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di gestione code per l'invio di email in il progetto.
@@ -16919,10 +16822,7 @@ class MailQueueManager
 
 *Consolidated from: `email_sending_troubleshooting.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Problema: `SendEmail.php` vs `TestSmtpPage.php`
 
 È stato rilevato che nel modulo Notify:
@@ -17120,10 +17020,7 @@ Un esempio completo di implementazione è disponibile in `TestSmtpPage.php`. Si 
 
 *Consolidated from: `email_translations.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Sistema di traduzione multilingua per i template email in il progetto.
@@ -17512,10 +17409,7 @@ class TranslationValidator
 
 *Consolidated from: `email_wysiwyg_editor.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Implementazione di un editor WYSIWYG avanzato per la creazione e modifica dei template email in il progetto.

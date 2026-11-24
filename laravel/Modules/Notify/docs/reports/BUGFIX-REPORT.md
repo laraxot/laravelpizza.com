@@ -3,11 +3,7 @@ title: "BUGFIX REPORT 2025 01 14"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "BUGFIX REPORT 2025 01 14"
 issues: []
 discussions: []
@@ -178,11 +174,7 @@ protected function registerObservers(): void
 | `Modules/User/tests/Unit/CurrentTeamInfiniteLoopFixTest.php` | Nuovo | Test Pest (11 test case) |
 | `Modules/User/tests/Unit/HasTeamsTraitCurrentTeamTest.php` | Nuovo | Test PHPUnit (7 test case) |
 | `docs/bugs/user-creation-infinite-loop-fix.md` | Nuovo | Riepilogo fix |
-<<<<<<< HEAD
-| `docs/bugs/summary.md` | Nuovo | Summary generale bug fixes |
-=======
 | `docs/bugs/SUMMARY.md` | Nuovo | Summary generale bug fixes |
->>>>>>> laraxot/dev
 
 ## Testing
 
@@ -282,11 +274,7 @@ $user->initializeCurrentTeam();
    - Configurazione
    - Testing
 
-<<<<<<< HEAD
-3. **Summary Generale**: `docs/bugs/summary.md`
-=======
 3. **Summary Generale**: `docs/bugs/SUMMARY.md`
->>>>>>> laraxot/dev
    - Lista di tutti i bug fixes
    - Stato di ogni fix
 

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Task: Spostamento Widget Violante"
+type: note
+qmd: "spostamento widget violante task"
+---
+>>>>>>> laraxot/dev
 # Task: Spostamento Widget Violante
 
 **Modulo**: User  

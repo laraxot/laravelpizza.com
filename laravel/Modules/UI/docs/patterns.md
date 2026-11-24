@@ -9,15 +9,17 @@ updated: "2026-07-28"
 related:
   - ./README.md
 <<<<<<< HEAD
+<<<<<<< HEAD
   - ./index.md
 =======
-<<<<<<< HEAD
   - ./INDEX.md
 
 - ./index.md
-=======
-  - ./index.md
 >>>>>>> laraxot/dev
+=======
+  - ./INDEX.md
+
+- ./index.md
 >>>>>>> laraxot/dev
   - ./TROUBLESHOOTING.md
 ---
@@ -367,11 +369,8 @@ Quando aggiungi feature nuova a UI:
 ## 📖 Riferimenti Correlati
 
 - [README](./README.md) — Overview modulo
-<<<<<<< HEAD
-=======
 - [INDEX](./INDEX.md) — Documentazione index completo
 
->>>>>>> laraxot/dev
 - [INDEX](./index.md) — Documentazione index completo
 
 - [INDEX](./index.md) — Documentazione index completo

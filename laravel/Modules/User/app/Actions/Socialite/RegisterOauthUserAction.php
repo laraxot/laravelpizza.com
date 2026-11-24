@@ -14,6 +14,13 @@ use Modules\User\Events\Registered;
 use Modules\User\Models\SocialiteUser;
 use Spatie\QueueableAction\QueueableAction;
 
+<<<<<<< HEAD
+=======
+/**
+ * @see docs/contracts/register-oauth-user-action.md
+ * @contract docs/contracts/register-oauth-user-action.md
+ */
+>>>>>>> laraxot/dev
 class RegisterOauthUserAction
 {
     use QueueableAction;

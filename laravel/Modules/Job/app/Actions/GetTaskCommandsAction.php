@@ -10,6 +10,10 @@ use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\Console\Command\Command;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/get-task-commands-action.md
+ * @contract docs/contracts/get-task-commands-action.md
+ */
 class GetTaskCommandsAction
 {
     use QueueableAction;

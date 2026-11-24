@@ -6,6 +6,10 @@ created: 2026-11-23
 updated: 2026-11-23
 issues: []
 module: UI
+<<<<<<< HEAD
+=======
+qmd: "ui blocks use cms localization blocchi"
+>>>>>>> laraxot/dev
 ---
 
 # ADR — Blocchi UI localizzati dal CMS
@@ -33,6 +37,7 @@ I blocchi restano data-driven e riusabili; il CMS non diventa una dipendenza imp
 ## Conferma
 
 Verificare Action di risoluzione, fallback e test dei blocchi.
+<<<<<<< HEAD
 
 ## Verifica
 
@@ -42,3 +47,5 @@ Verificare Action di risoluzione, fallback e test dei blocchi.
   valido, rifiuto delle chiavi non stringa.
 - Meccanismo e dipendenze: [delega opzionale a Cms per i dati dei blocchi](optional-cms-delegation-for-block-data.md).
 - Non esiste un test che provi che i testi dei componenti non siano scritti nel codice: resta revisione del codice.
+=======
+>>>>>>> laraxot/dev

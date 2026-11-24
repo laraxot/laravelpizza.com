@@ -1,5 +1,6 @@
 ---
 created: 2026-05-13
+qmd: "phpstan modules snapshot analysis legacy cleanup"
 ---
 
 # PHPStan Analysis and Legacy Cleanup (2026-05-13)

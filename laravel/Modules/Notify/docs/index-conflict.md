@@ -3,11 +3,7 @@ title: "index conflict"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "index conflict"
 issues: []
 discussions: []
@@ -86,22 +82,13 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 - [Documentazione Generale PTV](../../../../../docs/README.md)
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../../docs/documentation_standards.md)
-=======
->>>>>>> laraxot/dev
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../../docs/DOCUMENTATION_STANDARDS.md)
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Modulo Xot](../../Xot/docs/README.md)
 - [Modulo Lang](../../Lang/docs/README.md)
 - [Modulo UI](../../UI/docs/README.md)
@@ -149,15 +136,7 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - [Standard Traduzioni](./translation_standards.md) - Standard per le chiavi di traduzione
 
 ### Testing e Qualità
-<<<<<<< HEAD
-- [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md) - Correzioni per PHPStan Level 10
-=======
-<<<<<<< HEAD
 - [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
-=======
-- [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md) - Correzioni per PHPStan Level 10
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Testing](./testing.md) - Strategie e approcci per il testing
 
 ## Linee Guida per l'Implementazione
@@ -208,15 +187,7 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 
 ### Mail Templates
 - [Index](./mail-templates/index.md) - Indice della documentazione sui template email
-<<<<<<< HEAD
-- [Implementazione Slug](./mail-templates/MAIL_TEMPLATE_SLUG_IMPLEMENTATION.md) - Implementazione del campo slug
-=======
-<<<<<<< HEAD
 - [Implementazione Slug](./mail-templates/mail_template_slug_implementation.md) - Implementazione del campo slug
-=======
-- [Implementazione Slug](./mail-templates/MAIL_TEMPLATE_SLUG_IMPLEMENTATION.md) - Implementazione del campo slug
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ### Notifications
 - [Index](./notifications/index.md) - Indice della documentazione sulle notifiche

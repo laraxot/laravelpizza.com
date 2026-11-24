@@ -16,6 +16,10 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
+<<<<<<< HEAD
+=======
+qmd: "legacy duplication pattern duplicazione user"
+>>>>>>> laraxot/dev
 ---
 
 # Pattern ridondanza in `Modules/User/docs/legacy`

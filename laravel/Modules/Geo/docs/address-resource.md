@@ -3,9 +3,6 @@ title: "address resource"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 updated: 2026-11-23
 qmd: "address resource"
 issues: []
@@ -118,8 +115,6 @@ Quando un altro modulo (es. StudioResource) deve gestire indirizzi, è best prac
 - [../../Xot/app/Filament/Resources/XotBaseResource.php](../../Xot/app/Filament/Resources/XotBaseResource.php)
 - [filament.md](./filament.md)
 - [models/address.md](./models/address.md)
-=======
->>>>>>> laraxot/dev
 updated: 2026-09-26
 qmd: "address resource"
 issues: []
@@ -130,7 +125,3 @@ canonical: ../../../Themes/docs/shared-components/address-resource-1.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/address-resource-1.md
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

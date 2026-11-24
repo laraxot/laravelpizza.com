@@ -4,13 +4,27 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\AvatarProviders;
 
+<<<<<<< .merge_file_ZtD3Lh
+=======
+<<<<<<< .merge_file_B9bPaP
+=======
 use Illuminate\Support\Str;
+>>>>>>> .merge_file_alNVct
+>>>>>>> .merge_file_c756Lq
 use Filament\AvatarProviders\Contracts\AvatarProvider;
 use Filament\Facades\Filament;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
+<<<<<<< .merge_file_ZtD3Lh
+use Illuminate\Support\Str;
+=======
+<<<<<<< .merge_file_B9bPaP
+use Illuminate\Support\Str;
+=======
 
 use function Safe\preg_replace;
+>>>>>>> .merge_file_alNVct
+>>>>>>> .merge_file_c756Lq
 
 /**
  * Avatar predefinito dei pannelli Filament, generato in locale (DCP-139, DCP-137).

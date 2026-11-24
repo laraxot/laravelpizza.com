@@ -2,6 +2,10 @@
 title: Quality Gates Analysis — User Module
 date: 2026-07-28
 status: completed-with-constraints
+<<<<<<< HEAD
+=======
+qmd: "quality gates 28 analysis user"
+>>>>>>> laraxot/dev
 ---
 
 # Quality Gates Analysis — laravel/Modules/User

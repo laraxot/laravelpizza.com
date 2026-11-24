@@ -4,6 +4,7 @@ type: reference
 tags: [tenant, api, contracts, services]
 created: 2026-07-09
 updated: 2026-07-09
+qmd: "api reference tenant"
 ---
 
 # API Reference: Tenant Module

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Task 001: Implement User Management and Authentication System"
+type: note
+qmd: "001 user management system task implement"
+---
+>>>>>>> laraxot/dev
 # Task 001: Implement User Management and Authentication System
 
 ## Description

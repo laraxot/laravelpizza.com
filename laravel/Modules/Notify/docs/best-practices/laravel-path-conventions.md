@@ -4,11 +4,7 @@ type: concept
 tags: [notify, docs, best-practices, laravel, path, conventions]
 module: Notify
 created: 2026-07-20
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "notify documentazione best practices laravel path conventions convenzioni dei path in laravel e frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"

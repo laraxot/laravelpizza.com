@@ -30,8 +30,11 @@ Audit source-first del modulo che deve tenere fuori dal codice ogni parola che l
 ## Riferimenti
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< .merge_file_ZG2VAu
+=======
+>>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
 - [audit](../audit.md)
@@ -41,15 +44,21 @@ Audit source-first del modulo che deve tenere fuori dal codice ogni parola che l
 ## Task
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 1. Lock dei file di `docs/` del modulo (`bashscripts/lock/`), unlock a fine lavoro.
 2. Audit codice → docs; nessun PHP toccato.
 3. Pack ECC e indici aggiornati; `qmd update`.
 
+<<<<<<< HEAD
 =======
 >>>>>>> .merge_file_MdEVdA
 >>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 1. Lock dei file di `docs/` del modulo (`bashscripts/lock/`), unlock a fine lavoro.
 2. Audit codice → docs; nessun PHP toccato.
@@ -58,6 +67,7 @@ Audit source-first del modulo che deve tenere fuori dal codice ogni parola che l
 ## Esito
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Baseline consegnata: 0 P0, 3 P1, P2 elencati. PHPStan sul tree `Modules` a 0; Pest e chiusura dei P1 aperti. Nota: esiste anche `module-bmad-audit-lang-baseline-analisi-completa.story.md` (storica, nome datato: da migrare a una story senza data).
 =======
 <<<<<<< .merge_file_ZG2VAu
@@ -65,4 +75,7 @@ Baseline consegnata: 0 P0, 3 P1, P2 elencati. Nota: esiste anche `module-bmad-au
 =======
 Baseline consegnata: 0 P0, 3 P1, P2 elencati. PHPStan sul tree `Modules` a 0; Pest e chiusura dei P1 aperti. Nota: esiste anche `module-bmad-audit-lang-baseline-analisi-completa.story.md` (storica, nome datato: da migrare a una story senza data).
 >>>>>>> .merge_file_MdEVdA
+>>>>>>> laraxot/dev
+=======
+Baseline consegnata: 0 P0, 3 P1, P2 elencati. PHPStan sul tree `Modules` a 0; Pest e chiusura dei P1 aperti. Nota: esiste anche `module-bmad-audit-lang-baseline-analisi-completa.story.md` (storica, nome datato: da migrare a una story senza data).
 >>>>>>> laraxot/dev

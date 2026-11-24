@@ -1,6 +1,7 @@
 ---
 title: "Isolamento dei contenuti tenant nei test"
 status: active
+qmd: "testing content isolation story isolamento contenuti"
 ---
 
 # Isolamento dei contenuti tenant nei test

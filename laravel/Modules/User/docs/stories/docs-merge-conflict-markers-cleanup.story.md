@@ -1,7 +1,5 @@
 ---
 <<<<<<< HEAD
-title: "User: marker di conflitto git residui in docs/ (866 file) — pulizia + aggiornamento indice"
-
 title: "User: marker di conflitto git residui in docs/ (866 file): pulizia + aggiornamento indice"
 =======
 title: "User: marker di conflitto git residui in docs/ — pulizia + aggiornamento indice"
@@ -14,11 +12,7 @@ slug: docs-merge-conflict-markers-cleanup
 status: done
 cold_gate: null
 created: '2026-09-22'
-<<<<<<< HEAD
-updated: '2026-09-22'
-=======
 updated: '2026-11-23'
->>>>>>> laraxot/dev
 repository: "git@github.com:provtv/module_user_fila5.git"
 github_issue: "https://github.com/provtv/module_user_fila5/issues/36"
 github_discussion: "https://github.com/provtv/module_user_fila5/discussions/37"
@@ -28,14 +22,14 @@ blocks: []
 supersedes: []
 owned_scope:
   - "laravel/Modules/User/docs/"
+<<<<<<< HEAD
+=======
+qmd: "merge conflict markers cleanup story user"
+>>>>>>> laraxot/dev
 ---
 
 # User: marker di conflitto git residui in docs/ — pulizia + aggiornamento indice
 
-<<<<<<< HEAD
-# User: marker di conflitto git residui in docs/: pulizia + aggiornamento indice
-=======
-<<<<<<< HEAD
 ## Coordinamento
 
 - Scope: solo `laravel/Modules/User/docs/**/*.md` (auth, RBAC Spatie, Filament
@@ -50,18 +44,17 @@ owned_scope:
   laravel/Modules/User/docs` → **0**. Nessun commit in questa sessione.
 - Fuori scope: consolidamento duplicati case-only (`index.md`/`INDEX.md`,
   `models/readme.md`/`models/README.md`), codice `app/`, lock intero modulo.
-=======
-# User: marker di conflitto git residui in docs/: pulizia + aggiornamento indice
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Contesto
 
 Story figlia del follow-up second-brain segnalato (ma non eseguito) in
 `uppercase-root-dirs-database-application.story.md`: "`Modules/User/docs/` ha
 rumore evidente da ripulire in una story dedicata". Task delegato con lock
+<<<<<<< HEAD
+=======
 `laravel/Modules/User:docs` (non l'intero modulo — un'altra sessione lavorava
 
+>>>>>>> laraxot/dev
 `laravel/Modules/User:docs` (non l'intero modulo: un'altra sessione lavorava
 in parallelo su `Application/`/`Database/` a root modulo, esplicitamente
 esclusi da questa story).
@@ -199,20 +192,15 @@ di rilevazione (`grep -rlE '^<<<<<<< |^=======$|^>>>>>>> '` al posto di
 
 Lock `laravel/Modules/User:docs` acquisito e rilasciato correttamente
 (scope limitato a `docs/`, non l'intero modulo). Commit unico, 867 file
-(`git add` con lista esplicita di path, mai `-A` — repo con ~5000
-modifiche non correlate di altre sessioni in corso).
-
 <<<<<<< HEAD
 (`git add` con lista esplicita di path, mai `-A`: repo con ~5000
 =======
-<<<<<<< HEAD
+(`git add` con lista esplicita di path, mai `-A` — repo con ~5000
+>>>>>>> laraxot/dev
+modifiche non correlate di altre sessioni in corso).
+
 ## Follow-up 2026-11-23
 
 Ondata marker annidati ripulita in-place su 154 file `docs/` (vedi
 [Coordinamento](#coordinamento)). Residual markers: 0. Duplicati case-only e
 indice monolitico `INDEX.md` non consolidati (scope separato).
-=======
-(`git add` con lista esplicita di path, mai `-A`: repo con ~5000
-modifiche non correlate di altre sessioni in corso).
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

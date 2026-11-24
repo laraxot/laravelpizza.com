@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Correzioni PHPStan - Modulo User
 
 Questo documento traccia gli errori PHPStan identificati nel modulo User e le relative soluzioni implementate.
@@ -141,3 +142,19 @@ public string $currentState = 'default';
 1. **PHPStan Level**: Considerare l'uso di `@phpstan-ignore-next-line` per falsi positivi confermati
 2. **Type Declarations**: Continuare a migliorare le dichiarazioni di tipo
 3. **Widget Testing**: Testare tutti i widget di autenticazione dopo modifiche di tipo
+=======
+---
+title: "phpstan-fixes-2025.md (alias)"
+status: superseded
+superseded_by: "./phpstan-fixes.md"
+type: alias
+updated: 2026-11-24
+qmd: "phpstan-fixes-2025 alias superseded"
+---
+
+# Alias (superseded)
+
+Canonico: [`./phpstan-fixes.md`](./phpstan-fixes.md).
+
+Questo path resta solo per link storici; non aggiungere contenuto qui.
+>>>>>>> laraxot/dev

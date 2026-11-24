@@ -16,6 +16,12 @@ use Spatie\QueueableAction\QueueableAction;
  * nella sola lingua corrente. Qui si crea se manca e, per ogni lingua, si scrive il testo solo se la lingua e' vuota oppure ha
  * ancora quel default: un testo personalizzato dall'ente non si tocca. I testi sono in `user::reset_password_email`; il motore dei
  * segnaposto resta Mustache (`{{ reset_password_url }}`), nessun Blade::render su stringhe del database.
+<<<<<<< HEAD
+=======
+ *
+ * @see docs/contracts/ensure-reset-password-mail-template-action.md
+ * @contract docs/contracts/ensure-reset-password-mail-template-action.md
+>>>>>>> laraxot/dev
  */
 class EnsureResetPasswordMailTemplateAction
 {

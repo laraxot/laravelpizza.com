@@ -11,6 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< HEAD
+=======
+qmd: "product requirements productrequirements puntatore"
+>>>>>>> laraxot/dev
 ---
 
 # Policy globale (puntatore)

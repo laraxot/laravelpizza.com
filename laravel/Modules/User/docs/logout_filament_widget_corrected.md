@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Implementazione Corretta del Logout con Widget Filament"
+type: note
+qmd: "logout filament widget corrected implementazione corretta"
+---
+>>>>>>> laraxot/dev
 # Implementazione Corretta del Logout con Widget Filament
 
 ## Collegamenti correlati

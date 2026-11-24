@@ -6,6 +6,7 @@ updated: 2026-11-16
 module: Media
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 qmd: "piano miglioramento Media P0 P1 P2 BMAD guard diagnostica prunable cast id cancellazione logica codice morto sequenza criteri"
 =======
 =======
@@ -27,6 +28,9 @@ qmd: "piano miglioramento Media P0 P1 P2 BMAD guard diagnostica prunable cast id
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+qmd: "piano miglioramento Media P0 P1 P2 BMAD guard diagnostica prunable cast id cancellazione logica codice morto sequenza criteri"
+>>>>>>> laraxot/dev
 related:
   - ./audits/media-audit.md
   - ./epics.md
@@ -35,6 +39,7 @@ related:
 
 # Piano di miglioramento — Media
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -87,6 +92,8 @@ Derivato dall'[audit](./audits/media-audit.md).
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 Derivato dall'[audit profondo](./audits/media-audit.md). Epic e AC: [epics.md](./epics.md). Nessun P0 dimostrato.
 
 ## P1 (ordine consigliato)
@@ -125,6 +132,7 @@ Derivato dall'[audit profondo](./audits/media-audit.md). Epic e AC: [epics.md](.
 - [ ] PHPStan `Modules/Media` = 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [ ] Pest osservabile o skip motivato
 - [ ] ECC `00-index` aggiornato con gli esiti
 =======
@@ -147,4 +155,8 @@ Derivato dall'[audit profondo](./audits/media-audit.md). Epic e AC: [epics.md](.
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [ ] Pest osservabile o skip motivato
+- [ ] ECC `00-index` aggiornato con gli esiti
 >>>>>>> laraxot/dev

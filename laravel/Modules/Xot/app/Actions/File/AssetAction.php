@@ -84,7 +84,11 @@ class AssetAction
     }
 
     /**
+<<<<<<< .merge_file_2VnWIS
+     * Resolves the path for a module asset.
+=======
      * Risolve l'URL di un asset di modulo (`modulo::percorso`).
+>>>>>>> .merge_file_yyVgZ0
      */
     private function resolveModuleAsset(string $originalPath, string $ns, string $ns_after): string
     {

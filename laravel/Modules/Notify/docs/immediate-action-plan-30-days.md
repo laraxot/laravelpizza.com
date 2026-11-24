@@ -3,11 +3,7 @@ title: "🚀 IMMEDIATE ACTION PLAN - 30 DAYS"
 type: concept
 tags: [immediate, action, plan, days]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "immediate-action-plan-30-days 🚀 immediate action plan - 30 days"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

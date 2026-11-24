@@ -306,15 +306,7 @@ Il trait `HasTeams` ora è:
 ### **📁 Documentazione Modulo User**
 - [traits.md](traits.md) - Documentazione completa trait modulo User
 - [authentication.md](authentication.md) - Sistema autenticazione User
-<<<<<<< HEAD
 - [index.md](index.md) - Indice generale modulo User
-=======
-<<<<<<< HEAD
-- [index.md](index.md) - Indice generale modulo User
-=======
-- [index.md](./README.md) - Indice generale modulo User
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ### **⚙️ File .mdc (Cursor/Windsurf)**
 - [/.cursor/rules/hasteams-trait-laraxot.mdc](../../../.cursor/rules/hasteams-trait-laraxot.mdc)
@@ -334,6 +326,7 @@ Il trait `HasTeams` ora è:
 **Data correzione**: Gennaio 2025  
 **Status**: ✅ **COMPLETATO**  
 <<<<<<< HEAD
+**Conformità**: Laraxot PTVX Philosophy, PHPStan Level 9+, Windsurf Rules
 =======
 **Conformità**: Laraxot PTVX Philosophy, PHPStan Level 9+, Windsurf Rules
 >>>>>>> laraxot/dev

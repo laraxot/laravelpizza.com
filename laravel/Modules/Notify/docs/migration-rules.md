@@ -3,11 +3,7 @@ title: "migration rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "migration rules"
 issues: []
 discussions: []
@@ -199,15 +195,7 @@ return new class () extends XotBaseMigration {
 - [Documentazione XotBaseMigration](../../Xot/docs/rules/laraxot-rules.md)
 - [Standard Migrazioni](../../../docs/regole/standard_migrazioni.md)
 - [Best Practices Database](../../../docs/best-practices/database.md)
-<<<<<<< HEAD
-- [Gestione Errori](./ERROR_HANDLING.md)
-=======
-<<<<<<< HEAD
 - [Gestione Errori](./error_handling.md)
-=======
-- [Gestione Errori](./ERROR_HANDLING.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Supporto
 

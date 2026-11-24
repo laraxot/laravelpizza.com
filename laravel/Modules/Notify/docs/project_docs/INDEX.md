@@ -4,11 +4,7 @@ type: index
 tags: [notify, docs, project_docs]
 module: Notify
 created: 2026-07-20
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "notify documentazione project_docs index 📚 documentation index - laraxot project index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -34,8 +30,6 @@ related:
 
 1. [**README.md**](../README.md) - Project overview and quick start
 2. [**CONTRIBUTING.md**](../contributing.md) - How to contribute
-<<<<<<< HEAD
-=======
 3. [**ARCHITECTURE.md**](./architecture.md) - System architecture
 4. [**QUALITY_DASHBOARD.md**](./quality_dashboard.md) - Real-time metrics
 
@@ -47,7 +41,6 @@ related:
 8. [**FINAL_REFACTORING_REPORT.md**](./final_refactoring_report.md) - Refactoring summary
 9. [**COMPLETE_REFACTORING_ANALYSIS.md**](./complete_refactoring_analysis.md) - Detailed analysis
 2. [**CONTRIBUTING.md**](../contributing.md) - How to contribute
->>>>>>> laraxot/dev
 3. [**architecture.md**](./architecture.md) - System architecture
 4. [**QUALITY_DASHBOARD.md**](./quality_dashboard.md) - Real-time metrics
 
@@ -191,27 +184,18 @@ Each module has a `docs/` directory containing:
 ## 🎨 Theme Documentation
 
 ### Sixteen Theme
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 - [Code Quality Analysis](../Themes/Sixteen/docs/code_quality_analysis.md)
 - [README](../Themes/Sixteen/docs/README.md)
 - [Roadmap 2025](../Themes/Sixteen/docs/roadmap_2025.md)
 
 ### TwentyOne Theme
 - [Code Quality Analysis](../Themes/TwentyOne/docs/code_quality_analysis.md)
-=======
->>>>>>> laraxot/dev
 - [Code Quality Analysis](../Themes/Sixteen/docs/CODE_QUALITY_ANALYSIS.md)
 - [README](../Themes/Sixteen/docs/README.md)
 - [Roadmap 2025](../Themes/Sixteen/docs/ROADMAP_2025.md)
 
 ### TwentyOne Theme
 - [Code Quality Analysis](../Themes/TwentyOne/docs/CODE_QUALITY_ANALYSIS.md)
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ---
 
@@ -257,23 +241,12 @@ Each module has a `docs/` directory containing:
 
 ### For Developers
 - README.md
-<<<<<<< HEAD
 - CONTRIBUTING.md
-=======
-<<<<<<< HEAD
-- contributing.md
-=======
-- CONTRIBUTING.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - architecture.md
 - Module documentation
 - Refactoring reports
 
 ### For Management
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 - mission_accomplished.md
 - project_completion_certificate.md
 - excellence-achievement-caps.md
@@ -286,8 +259,6 @@ Each module has a `docs/` directory containing:
 ### For New Contributors
 - README.md
 - contributing.md
-=======
->>>>>>> laraxot/dev
 - MISSION_ACCOMPLISHED.md
 - PROJECT_COMPLETION_CERTIFICATE.md
 - excellence-achievement-caps.md
@@ -302,10 +273,6 @@ Each module has a `docs/` directory containing:
 ### For New Contributors
 - README.md
 - CONTRIBUTING.md
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - Module documentation
 - Code examples
 
@@ -340,44 +307,18 @@ Each module has a `docs/` directory containing:
 - Module structure
 
 **Quality & Metrics:**
-<<<<<<< HEAD
-- QUALITY_DASHBOARD.md
-=======
-<<<<<<< HEAD
 - quality_dashboard.md
-=======
-- QUALITY_DASHBOARD.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - Cyclomatic complexity reports
 - Test coverage reports
 
 **Refactoring:**
-<<<<<<< HEAD
-- FINAL_REFACTORING_REPORT.md
-- COMPLETE_REFACTORING_ANALYSIS.md
-=======
-<<<<<<< HEAD
 - final_refactoring_report.md
 - complete_refactoring_analysis.md
-=======
-- FINAL_REFACTORING_REPORT.md
-- COMPLETE_REFACTORING_ANALYSIS.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - Module-specific refactoring docs
 
 **Getting Started:**
 - README.md
-<<<<<<< HEAD
 - CONTRIBUTING.md
-=======
-<<<<<<< HEAD
-- contributing.md
-=======
-- CONTRIBUTING.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - Quick start guides
 
 **Testing:**
@@ -468,15 +409,7 @@ All documents include:
 - Outdated content
 
 ### Contributing to Docs
-<<<<<<< HEAD
 - Follow CONTRIBUTING.md
-=======
-<<<<<<< HEAD
-- follow contributing.md
-=======
-- Follow CONTRIBUTING.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - Use proper format
 - Include examples
 - Update index
@@ -502,9 +435,6 @@ All documents include:
 ## 📅 Recent Updates
 
 ### 2025-10-01
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 - ✅ created index.md
 - ✅ completed mission_accomplished.md
 - ✅ finalized project_completion_certificate.md
@@ -514,8 +444,6 @@ All documents include:
 - ✅ created architecture.md
 - ✅ created quality_dashboard.md
 - ✅ created excellence-achievement-caps.md
-=======
->>>>>>> laraxot/dev
 - ✅ Created index.md
 - ✅ Completed MISSION_ACCOMPLISHED.md
 - ✅ Finalized PROJECT_COMPLETION_CERTIFICATE.md
@@ -527,10 +455,6 @@ All documents include:
 - ✅ Created QUALITY_DASHBOARD.md
 - ✅ Created excellence-achievement-caps.md
 
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ---
 
 ## 🔮 Future Documentation

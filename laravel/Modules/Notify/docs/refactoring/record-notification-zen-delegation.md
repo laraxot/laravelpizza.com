@@ -3,11 +3,7 @@ title: "record notification zen delegation"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "record notification zen delegation"
 issues: []
 discussions: []
@@ -271,17 +267,8 @@ $client->notify($notification); // via() determina canali da routeNotificationFo
 - [RECORD_NOTIFICATION_ZEN_CONSTRUCTOR.md](./record_notification_zen_constructor.md) - Filosofia Zen Delegation
 - [record-notification.md](../notifications/record-notification.md) - Documentazione completa RecordNotification
 - [record-notification-constructor-slug.md](./record-notification-constructor-slug.md) - Refactoring precedente (Lazy Resolution, ora superato)
-<<<<<<< HEAD
 - [send-record-notification-action.md](send-record-notification-action.md) - Documentazione SendRecordNotificationAction
 - [send-record-notification-action.md](send-record-notification-action.md) - Documentazione SendRecordNotificationAction
-=======
-<<<<<<< .merge_file_4RurEE
-- [send-record-notification-action.md](../actions/send-record-notification-action.md) - Documentazione SendRecordNotificationAction
-=======
-- [send-record-notification-action.md](send-record-notification-action.md) - Documentazione SendRecordNotificationAction
-- [send-record-notification-action.md](send-record-notification-action.md) - Documentazione SendRecordNotificationAction
->>>>>>> .merge_file_EBI3Sq
->>>>>>> laraxot/dev
 
 ---
 **Ultimo aggiornamento**: 19 Dicembre 2025  

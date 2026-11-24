@@ -6,6 +6,7 @@ created: 2025-09-22
 updated: 2026-11-23
 decision-makers: [team back office]
 issues: []
+qmd: "0001 actions over services operazioni business"
 ---
 
 # Le operazioni di business nuove si scrivono come Actions, non come Services

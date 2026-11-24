@@ -11,13 +11,8 @@ discussions: []
 
 # GSD (Get Shit Done) - Command Reference
 
-<<<<<<< HEAD
-**Version**: 1.0.0  
-**For**: PTVX Fila5 Mono  
-=======
 **Version**: 1.0.0
 **For**: PTVX fila5
->>>>>>> laraxot/dev
 **Frameworks**: GSD v1.25.1 + BMAD-METHOD v6.2.0
 
 ---

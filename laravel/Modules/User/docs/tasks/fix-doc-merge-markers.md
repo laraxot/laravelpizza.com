@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Task: Fix Documentation Merge Markers (User Module)"
+type: note
+qmd: "fix merge markers task user"
+---
+>>>>>>> laraxot/dev
 # Task: Fix Documentation Merge Markers (User Module)
 
 ## 📋 Obiettivo

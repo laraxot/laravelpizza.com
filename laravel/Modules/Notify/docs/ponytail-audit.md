@@ -1,23 +1,12 @@
 ---
-<<<<<<< HEAD
 issues: []
 discussions: []
 title: "ponytail-audit-2026-07-02"
 type: concept
 tags: [deprecated]
 created: 2026-07-14
-updated: 2026-07-14
-qmd: "ponytail-audit-2026-07-02 deprecated"
-=======
-title: "ponytail audit 2026 07"
-type: note
-tags: [documentation]
-created: 2026-09-26
 updated: 2026-11-23
-qmd: "ponytail audit 2026 07"
-issues: []
-discussions: []
->>>>>>> laraxot/dev
+qmd: "ponytail-audit-2026-07-02 deprecated"
 status: deprecated
 related:
   - "./00-index-1.md"
@@ -26,9 +15,6 @@ related:
   - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   - "./action-plan-immediate.md"
 ---
 
@@ -97,14 +83,8 @@ Checked `app/Actions/{SMS,Telegram,WhatsApp}/` directly rather than trusting the
 ### Not collapsed (report only)
 
 Telegram and WhatsApp factories were left untouched because both genuinely have 2+ swappable runtime-selected drivers, which is exactly the case the Factory pattern exists for.
-=======
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
 
 > Questo file è stato rinominato in [ponytail-audit.md](ponytail-audit.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Task: Aumentare Copertura Test User"
+type: note
+qmd: "aumentare copertura test user task"
+---
+>>>>>>> laraxot/dev
 # Task: Aumentare Copertura Test User
 
 **Modulo**: User  

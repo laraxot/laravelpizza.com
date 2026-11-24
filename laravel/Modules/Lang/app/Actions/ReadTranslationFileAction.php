@@ -8,6 +8,10 @@ use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/read-translation-file-action.md
+ * @contract docs/contracts/read-translation-file-action.md
+ */
 class ReadTranslationFileAction
 {
     use QueueableAction;

@@ -1,7 +1,8 @@
 ---
 type: investigation
 title: "Investigation Isolation Strategy"
-links: {github_issue: #XXX}
+links: {github_issue: "#XXX"}
+qmd: "investigation isolation strategy"
 ---
 # Investigation: Isolation Strategy
 

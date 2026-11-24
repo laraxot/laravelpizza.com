@@ -6,6 +6,7 @@ updated: 2026-11-16
 module: Media
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 qmd: "audit BMAD Media source-first qualità sintesi gate AwsTest S3Test guard TemporaryUpload prunable Media id cast cancellazione fisica codice morto"
 =======
 =======
@@ -27,6 +28,9 @@ qmd: "audit BMAD Media source-first qualità sintesi gate AwsTest S3Test guard T
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+qmd: "audit BMAD Media source-first qualità sintesi gate AwsTest S3Test guard TemporaryUpload prunable Media id cast cancellazione fisica codice morto"
+>>>>>>> laraxot/dev
 related:
   - ./audits/media-audit.md
   - ./piano-miglioramento.md
@@ -37,6 +41,7 @@ related:
 
 SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/media-audit.md](./audits/media-audit.md).
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 **Scopo in una frase:** Media custodisce i file che fanno da prova a una decisione e li rende utilizzabili nei formati che servono, senza che il dominio sappia nulla di dischi e conversioni ([purpose.md](./purpose.md)).
@@ -60,11 +65,15 @@ SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/media-
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+**Scopo in una frase:** Media custodisce i file che fanno da prova a una decisione e li rende utilizzabili nei formati che servono, senza che il dominio sappia nulla di dischi e conversioni ([purpose.md](./purpose.md)).
+>>>>>>> laraxot/dev
 
 ## Sintesi (2026-11-16)
 
 | Metrica | Valore |
 |---|---:|
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -97,6 +106,8 @@ SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/media-
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 | PHP `app/` / test PHP / `*Test.php` | 127 / 47 / 41 |
 | Models / Policy / Resource / Widget | 4 / 4 / 3 / 1 |

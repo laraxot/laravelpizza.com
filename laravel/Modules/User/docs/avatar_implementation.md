@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Implementazione degli Avatar"
+type: note
+qmd: "avatar implementation implementazione"
+---
+>>>>>>> laraxot/dev
 # Implementazione degli Avatar 
 
 ## Collegamenti correlati

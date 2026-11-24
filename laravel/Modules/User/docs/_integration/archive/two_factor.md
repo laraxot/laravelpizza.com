@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "two_factor - User"
+type: note
+qmd: "two factor twofactor user"
+---
+>>>>>>> laraxot/dev
 # two_factor - User
 
 ## Overview

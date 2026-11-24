@@ -5,6 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< HEAD
+=======
+qmd: "dry consolidated"
+>>>>>>> laraxot/dev
 ---
 
 # dry — Consolidated Documentation
@@ -318,11 +322,7 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
 <<<<<<< HEAD
 - [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
 =======
-<<<<<<< HEAD
 - [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
-=======
-- [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 ---
@@ -474,11 +474,7 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
 <<<<<<< HEAD
 - [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
 =======
-<<<<<<< HEAD
 - [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
-=======
-- [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [DRY/KISS Global](../../../docs/dry_kiss_analysis_2025-10-15.md)
 
@@ -629,11 +625,7 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
 <<<<<<< HEAD
 - [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
 =======
-<<<<<<< HEAD
 - [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
-=======
-- [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 ---

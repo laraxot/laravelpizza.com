@@ -3,11 +3,7 @@ title: "qwen split index"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "qwen split index"
 issues: []
 discussions: []
@@ -29,15 +25,7 @@ discussions: []
 
 ## 🔗 Collegamento
 
-<<<<<<< HEAD
-- [qwen.md originale](../../qwen.md)
-=======
-<<<<<<< HEAD
 - [QWEN.md originale](../../qwen.md)
-=======
-- [qwen.md originale](../../qwen.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Index principale](./index.md)
 
 ## Note

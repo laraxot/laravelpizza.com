@@ -29,6 +29,7 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 ### **Per Amministratori**
 1. [best_practices.md](best_practices.md) - Best practices e linee guida
 <<<<<<< HEAD
+<<<<<<< HEAD
 2. [TROUBLESHOOTING.md](troubleshooting.md) - Guida troubleshooting
 =======
 <<<<<<< HEAD
@@ -37,12 +38,20 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 2. [TROUBLESHOOTING.md](troubleshooting.md) - Guida troubleshooting
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+2. [troubleshooting.md](troubleshooting.md) - Guida troubleshooting
+>>>>>>> laraxot/dev
 3. [config/lang.php](../config/lang.php) - Configurazione e ottimizzazioni
 
 ### **Per Integratori**
 1. [API_REFERENCE.md](api_reference.md) - Riferimento API completo
 2. [EXAMPLES.md](examples.md) - Esempi di integrazione
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+3. [BEST_PRACTICES.md](best_practices.md) - Pattern di implementazione
+
+>>>>>>> laraxot/dev
 =======
 3. [BEST_PRACTICES.md](best_practices.md) - Pattern di implementazione
 
@@ -54,6 +63,11 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 
 ### **Per Amministratori**
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+1. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Best practices e linee guida
+
+>>>>>>> laraxot/dev
 =======
 1. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Best practices e linee guida
 
@@ -66,6 +80,11 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 1. [API_REFERENCE.md](api_reference.md) - Riferimento API completo
 2. [EXAMPLES.md](examples.md) - Esempi di integrazione
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+3. [BEST_PRACTICES.md](best_practices.md) - Pattern di implementazione
+
+>>>>>>> laraxot/dev
 =======
 3. [BEST_PRACTICES.md](best_practices.md) - Pattern di implementazione
 
@@ -77,6 +96,11 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 
 ### **Per Amministratori**
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+1. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Best practices e linee guida
+
+>>>>>>> laraxot/dev
 =======
 1. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Best practices e linee guida
 
@@ -89,6 +113,11 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 1. [API_REFERENCE.md](API_REFERENCE.md) - Riferimento API completo
 2. [EXAMPLES.md](examples.md) - Esempi di integrazione
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+3. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Pattern di implementazione
+
+>>>>>>> laraxot/dev
 =======
 3. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Pattern di implementazione
 
@@ -126,6 +155,11 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 
 ### **🔒 Sicurezza e Validazione**
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+- **Validazione File**: [BEST_PRACTICES.md](BEST_PRACTICES.md#sicurezza-e-validazione)
+
+>>>>>>> laraxot/dev
 =======
 - **Validazione File**: [BEST_PRACTICES.md](BEST_PRACTICES.md#sicurezza-e-validazione)
 
@@ -136,11 +170,17 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 
 ### **🚀 Performance e Ottimizzazione**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> laraxot/dev
 - **Cache Strategy**: [BEST_PRACTICES.md](BEST_PRACTICES.md#performance-e-ottimizzazione)
 - **Lazy Loading**: [BEST_PRACTICES.md](BEST_PRACTICES.md#lazy-loading)
 - **Memory Management**: [BEST_PRACTICES.md](BEST_PRACTICES.md#memory-management)
 
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 - **Cache Strategy**: [best_practices.md](best_practices.md#performance-e-ottimizzazione)
 - **Lazy Loading**: [best_practices.md](best_practices.md#lazy-loading)
@@ -198,6 +238,11 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 2. [EXAMPLES.md](examples.md) - Integrazione Filament e Testing
 3. [TROUBLESHOOTING.md](troubleshooting.md) - Problemi comuni
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+1. [BEST_PRACTICES.md](best_practices.md) - Tutte le sezioni
+
+>>>>>>> laraxot/dev
 =======
 1. [BEST_PRACTICES.md](best_practices.md) - Tutte le sezioni
 
@@ -229,6 +274,11 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 3. [TROUBLESHOOTING.md](troubleshooting.md) - Problemi complessi
 1. [API_REFERENCE.md](api_reference.md) - Tutte le sezioni
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+2. [BEST_PRACTICES.md](best_practices.md) - Pattern avanzati
+
+>>>>>>> laraxot/dev
 =======
 2. [BEST_PRACTICES.md](best_practices.md) - Pattern avanzati
 
@@ -247,6 +297,11 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 
 ### **Localizzazione**
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+- **File PHP**: [BEST_PRACTICES.md](BEST_PRACTICES.md#sintassi-file-php)
+
+>>>>>>> laraxot/dev
 =======
 - **File PHP**: [BEST_PRACTICES.md](BEST_PRACTICES.md#sintassi-file-php)
 
@@ -261,7 +316,10 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 - **Actions**: [EXAMPLES.md](examples.md#actions-personalizzate)
 - **Resources**: [EXAMPLES.md](examples.md#resource-base)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> laraxot/dev
 - **Integrazione**: [BEST_PRACTICES.md](BEST_PRACTICES.md#integrazione-filament)
 
 ### **Performance**
@@ -274,6 +332,9 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 - **Sintassi**: [BEST_PRACTICES.md](BEST_PRACTICES.md#sintassi-valida)
 - **Struttura**: [BEST_PRACTICES.md](BEST_PRACTICES.md#struttura-gerarchica)
 
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 - **Integrazione**: [best_practices.md](best_practices.md#integrazione-filament)
 
@@ -293,6 +354,12 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 - **Unit Test**: [EXAMPLES.md](examples.md#test-unitari)
 - **Feature Test**: [EXAMPLES.md](examples.md#test-feature)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+- **PHPStan**: [BEST_PRACTICES.md](BEST_PRACTICES.md#phpstan-compliance)
+- **Validazione**: [BEST_PRACTICES.md](BEST_PRACTICES.md#validazione-automatica)
+
+>>>>>>> laraxot/dev
 =======
 - **PHPStan**: [BEST_PRACTICES.md](BEST_PRACTICES.md#phpstan-compliance)
 - **Validazione**: [BEST_PRACTICES.md](BEST_PRACTICES.md#validazione-automatica)

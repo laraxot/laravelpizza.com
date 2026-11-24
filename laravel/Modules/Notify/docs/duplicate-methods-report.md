@@ -3,11 +3,7 @@ title: "Report: Metodi con nome duplicato nei moduli e nei temi"
 type: concept
 tags: [duplicate, methods, report]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "duplicate-methods-report report: metodi con nome duplicato nei moduli e nei temi"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

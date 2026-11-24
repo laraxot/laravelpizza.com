@@ -1,20 +1,10 @@
 ---
 title: "🎯 PIANO D'AZIONE IMMEDIATO - Notify Platform"
-<<<<<<< HEAD
-title: "🎯 PIANO D'AZIONE IMMEDIATO - <nome progetto> Platform"
-type: concept
-tags: [action, plan, immediate]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "action-plan-immediate 🎯 piano d'azione immediato - laraxot platform"
-qmd: "action-plan-immediate 🎯 piano d'azione immediato - <nome progetto> platform"
-=======
 type: concept
 tags: [action, plan, immediate]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "action-plan-immediate 🎯 piano d'azione immediato - laraxot platform"
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:

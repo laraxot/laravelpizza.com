@@ -17,6 +17,12 @@ use Spatie\QueueableAction\QueueableAction;
  *
  * Each tenant can choose its own landing page with `xra.post_login_path` (e.g. LaravelPizza uses `/events/my`,
  * because it has no `area-personale` page); without it the default stays `/area-personale`.
+<<<<<<< HEAD
+=======
+ *
+ * @see docs/contracts/get-post-login-url-action.md
+ * @contract docs/contracts/get-post-login-url-action.md
+>>>>>>> laraxot/dev
  */
 final class GetPostLoginUrlAction
 {

@@ -4,6 +4,7 @@ type: contract-template
 owner: Xot
 status: active
 updated: 2026-11-23
+qmd: "behavioral contract template"
 ---
 
 # `<scope>` — `<operazione>`

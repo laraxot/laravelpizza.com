@@ -5,6 +5,10 @@ status: accepted
 created: 2026-11-21
 updated: 2026-11-21
 issues: []
+<<<<<<< HEAD
+=======
+qmd: "frontoffice login page ownership pagina front"
+>>>>>>> laraxot/dev
 ---
 
 # La pagina login del front office segue il tema
@@ -53,6 +57,7 @@ documentata in un ADR/storia del proprietario e verificata con il mount Folio ef
 
 - `Modules/User/tests/Feature/Socialite/OauthLocalizedLoginFlowTest.php` verifica il link Google localizzato.
 - La pagina non deve contenere una form Volt con `wire:submit="authenticate"`; il metodo pubblico appartiene al widget.
+<<<<<<< HEAD
 
 ## Verifica
 
@@ -63,3 +68,5 @@ documentata in un ADR/storia del proprietario e verificata con il mount Folio ef
   `wire:submit="authenticate"`): lo stato del codice contraddice la sezione «Stato delle viste Folio del modulo» e la
   seconda voce di Conferma. Decisione aperta, da riallineare nel codice o con un nuovo ADR.
 - Controllo manuale: `rg 'wire:submit="authenticate"' laravel/Modules/User/resources` non deve trovare nulla.
+=======
+>>>>>>> laraxot/dev

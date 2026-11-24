@@ -78,6 +78,7 @@ related:
 ## 📚 Documentazione
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Indice del Progetto](../index.md)
 =======
 <<<<<<< HEAD
@@ -85,6 +86,9 @@ related:
 =======
 - [Indice del Progetto](../index.md)
 >>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [Indice del Progetto](../INDEX.md)
 >>>>>>> laraxot/dev
 - [Workflow PHPStan](../PHPSTAN_WORKFLOW.md)
 - [Panoramica dei Moduli](../MODULES.md)

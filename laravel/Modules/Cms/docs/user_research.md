@@ -1,19 +1,10 @@
 ---
-<<<<<<< HEAD
-title: "User Research"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "User Research"
-=======
 title: "user research"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "user research"
->>>>>>> laraxot/dev
 issues: []
 discussions: []
 ---
@@ -26,30 +17,6 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-title: "USER RESEARCH"
-=======
-<<<<<<< HEAD
-title: "user research"
-=======
-title: "USER RESEARCH"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-<<<<<<< HEAD
-qmd: "USER RESEARCH"
-=======
-<<<<<<< HEAD
-qmd: "user research"
-=======
-qmd: "USER RESEARCH"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-issues: []
-discussions: []
 ## Research Goals
 
 1. Understand content creator workflows
@@ -127,4 +94,3 @@ Non-technical users need onboarding.
 - Add content analytics
 
 ---
-

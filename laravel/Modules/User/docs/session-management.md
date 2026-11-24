@@ -87,15 +87,7 @@ Questo documento fornisce linee guida per la gestione delle sessioni utente all'
 - Aggiornare questo documento se vengono identificate nuove strategie di gestione delle sessioni o problemi.
 
 ## Collegamenti a Documentazione Correlata
-<<<<<<< HEAD
 - [Indice del Modulo Utente](./index.md)
-=======
-<<<<<<< HEAD
-- [Indice del Modulo Utente](./index.md)
-=======
-- [Indice del Modulo Utente](./README.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Modello BaseUser](./baseuser.md)
 - [Implementazione delle Pagine di Autenticazione](./auth-pages-implementation.md)
 - [Gestione del Profilo](./profile-management.md)
@@ -103,24 +95,13 @@ Questo documento fornisce linee guida per la gestione delle sessioni utente all'
 - [Best Practices di Sicurezza](./security_best_practices.md)
 - [Documentazione Volt](./volt-blade-implementation-3.md)
 <<<<<<< HEAD
-- [Tema One Documentation](../../themes/one/docs/README.md) 
-- [Indice del Modulo Utente](./index.md)
+- [Indice del Modulo Utente](./README.md)
 =======
-<<<<<<< HEAD
 - [Tema One Documentation](../../themes/one/docs/readme.md) 
 - [Indice del Modulo Utente](./INDEX.md)
 - [Tema One Documentation](../../themes/one/docs/README.md) 
-- [Indice del Modulo Utente](./index.md)
-=======
-<<<<<<< .merge_file_rGgdrv
-- [Tema One Documentation](../../themes/one/docs/readme.md) 
-- [Indice del Modulo Utente](./README.md)
-=======
-- [Tema One Documentation](../../themes/one/docs/README.md) 
-- [Indice del Modulo Utente](./index.md)
->>>>>>> .merge_file_OPvJiW
 >>>>>>> laraxot/dev
->>>>>>> laraxot/dev
+- [Indice del Modulo Utente](./index.md)
 - [Modello BaseUser](./baseuser.md)
 - [Implementazione delle Pagine di Autenticazione](./auth-pages-implementation.md)
 - [Gestione del Profilo](./profile-management.md)
@@ -128,15 +109,7 @@ Questo documento fornisce linee guida per la gestione delle sessioni utente all'
 - [Best Practices di Sicurezza](./SECURITY_BEST_PRACTICES.md)
 - [Documentazione Volt](./volt-blade-implementation.md)
 - [Tema One Documentation](../../Themes/One/docs/README.md) 
-<<<<<<< HEAD
 - [Indice del Modulo Utente](./index.md)
-=======
-<<<<<<< .merge_file_rGgdrv
-- [Indice del Modulo Utente](./README.md)
-=======
-- [Indice del Modulo Utente](./index.md)
->>>>>>> .merge_file_OPvJiW
->>>>>>> laraxot/dev
 - [Modello BaseUser](./baseuser.md)
 - [Implementazione delle Pagine di Autenticazione](./auth_pages_implementation.md)
 - [Gestione del Profilo](./profile_management.md)

@@ -11,6 +11,7 @@ related:
   - concepts/redundancy-catalog.md
   - redundancy-report.md
   - redundancy-audit-2026-05-21.md
+qmd: "redundancy audit ridondanza monorepo 20260526"
 ---
 
 # Audit ridondanza — 2026-05-26 (PTVX)

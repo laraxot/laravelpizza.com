@@ -8,11 +8,7 @@ type: concept
 module: Notify
 status: active
 tags: [module-structure, archive, docs]
-<<<<<<< HEAD
-updated: "2026-06-30"
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 related:
   - ../../../../../../docs/project/module-root-structure-analysis.md
   - ../../../../../Xot/docs/wiki/concepts/module-root-uppercase-folders-archive.md

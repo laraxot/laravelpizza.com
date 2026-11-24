@@ -320,19 +320,7 @@ foreach (glob('Modules/*/app/Filament/Resources/*/Pages/*.php') as $file) {
 - [Activity Module - README](../README.md)
 - [XotBase Architecture](../../Xot/docs/xotbase-architecture-complete.md)
 - [Differenza Standalone vs Resource Pages](../../Xot/docs/filament/pages-types.md)
-<<<<<<< HEAD
-- [Activity Module - README](../README.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Activity Module - README](../readme.md)
-=======
-- [Activity Module - README](../README.md)
->>>>>>> laraxot/dev
-=======
-- [Activity Module - README](../README.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [XotBase Architecture](../../xot/docs/xotbase-architecture-complete.md)
 - [Differenza Standalone vs Resource Pages](../../xot/docs/filament/pages-types.md)
 

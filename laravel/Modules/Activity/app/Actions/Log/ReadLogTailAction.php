@@ -21,6 +21,9 @@ use function Safe\stream_get_contents;
  * Se il file e' piu' grande della finestra letta, la prima riga (probabilmente tagliata a meta') viene
  * scartata cosi' le voci mostrate sono complete. I byte non UTF-8 vengono ripuliti per non rompere
  * la pagina.
+ *
+ * @see docs/contracts/read-log-tail-action.md
+ * @contract docs/contracts/read-log-tail-action.md
  */
 class ReadLogTailAction
 {

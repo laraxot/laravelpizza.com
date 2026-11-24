@@ -12,6 +12,8 @@ use function Safe\simplexml_load_string;
 
 /**
  * Extracts the plain text content from a subtitle XML file.
+ * @see docs/contracts/extract-subtitle-plain-text-action.md
+ * @contract docs/contracts/extract-subtitle-plain-text-action.md
  */
 class ExtractSubtitlePlainTextAction
 {

@@ -6,6 +6,7 @@ created: 2026-11-23
 updated: 2026-11-23
 issues:
   - "https://github.com/laraxot/module_xot_fila5/issues/ADR-0009"
+qmd: "0009 laravel bootstrap provider registry minimale"
 ---
 
 # ADR 0009: Bootstrap Laravel 13 minimale e discovery dei moduli

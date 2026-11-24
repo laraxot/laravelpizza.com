@@ -3,11 +3,7 @@ title: "🎨 Design Comuni con Tailwind CSS Puro"
 type: concept
 tags: [design, comuni, tailwind]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "design-comuni-tailwind 🎨 design comuni con tailwind css puro"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

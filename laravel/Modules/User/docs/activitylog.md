@@ -11,6 +11,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< HEAD
+=======
+qmd: "activitylog linee guida luso spatie"
+>>>>>>> laraxot/dev
 ---
 # Linee guida per l'uso di Spatie Activitylog
 

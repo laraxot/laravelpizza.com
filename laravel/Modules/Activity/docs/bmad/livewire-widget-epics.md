@@ -1,13 +1,5 @@
 ---
-<<<<<<< HEAD
-title: "Epics: Activity"
-=======
-<<<<<<< HEAD
 title: "Epics — Activity"
-=======
-title: "Epics: Activity"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 type: epics
 module: Activity
 related:

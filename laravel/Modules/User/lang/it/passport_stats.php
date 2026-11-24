@@ -6,7 +6,11 @@ return [
     'sections' => [
         'empty' => [
             'label' => '',
+<<<<<<< HEAD
             'heading' => '',
+=======
+            'heading' => 'empty',
+>>>>>>> laraxot/dev
         ],
     ],
 ];

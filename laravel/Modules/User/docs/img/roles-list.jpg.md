@@ -5,6 +5,10 @@ canonical: ../../../../Themes/docs/shared-components/roles-list.jpg
 related:
   - "./create-user.jpg.md"
   - "./set-password.jpg.md"
+<<<<<<< HEAD
+=======
+qmd: "roles list jpg listjpg"
+>>>>>>> laraxot/dev
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/roles-list.jpg

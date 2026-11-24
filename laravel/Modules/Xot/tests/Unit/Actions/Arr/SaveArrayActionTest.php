@@ -32,7 +32,7 @@ test('save array action saves as php by default', function () use (&$tempDir): v
     Assert::assertTrue($result);
     Assert::assertStringStartsWith('<?php', File::get($filename));
     Assert::assertSame($data, include $filename);
-})->group('XOT-SAVE-ARRAY-INV-1');
+});
 
 test('save array action saves as json', function () use (&$tempDir): void {
     $data = ['foo' => 'bar'];
@@ -42,7 +42,7 @@ test('save array action saves as json', function () use (&$tempDir): void {
 
     Assert::assertTrue($result);
     Assert::assertSame($data, json_decode(File::get($filename), true));
-})->group('XOT-SAVE-ARRAY-INV-2');
+});
 
 test('save array action throws exception for unsupported format', function () use (&$tempDir): void {
     $filename = $tempDir.'/data.xml';
@@ -50,4 +50,4 @@ test('save array action throws exception for unsupported format', function () us
 
     expect(fn (): bool => $action->execute(['foo' => 'bar'], $filename, 'xml'))
         ->toThrow(InvalidArgumentException::class, 'Formato non supportato: xml');
-})->group('XOT-SAVE-ARRAY-INV-3');
+});

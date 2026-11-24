@@ -7,6 +7,7 @@ updated: 2026-11-24
 issues:
   - "https://github.com/laraxot/base_fixcity_fila5/issues/ADR-00011"
 superseded_by: 0011-contract-docblock-reference.md
+qmd: "00011 contract docblock reference actions"
 ---
 
 > Superseded da [0011-contract-docblock-reference.md](0011-contract-docblock-reference.md): numerazione malformata a cinque cifre della stessa decisione. Nessuna decisione nuova: il canonico prevale, questo file non va esteso.

@@ -10,6 +10,13 @@ namespace Modules\User\Actions\Socialite;
 use Illuminate\Support\Arr;
 use Spatie\QueueableAction\QueueableAction;
 
+<<<<<<< HEAD
+=======
+/**
+ * @see docs/contracts/get-provider-scopes-action.md
+ * @contract docs/contracts/get-provider-scopes-action.md
+ */
+>>>>>>> laraxot/dev
 class GetProviderScopesAction
 {
     use QueueableAction;

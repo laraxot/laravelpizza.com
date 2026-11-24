@@ -11,6 +11,10 @@ related:
   - ./livewire-inventory.md
   - ./livewire-widget-prd.md
   - ./decision-log.md
+<<<<<<< HEAD
+=======
+qmd: "livewire widget project context solo filament"
+>>>>>>> laraxot/dev
 ---
 
 # Project context — campagna Livewire HTTP → widget

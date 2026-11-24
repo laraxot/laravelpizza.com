@@ -29,15 +29,7 @@ Definire **access control per pagina** nel JSON CMS (`config/local/.../content/p
 }
 ```
 
-<<<<<<< HEAD
-Alias supportati come su Laravel (`auth`, `verified`, classi FQCN, parametri `throttle:60,1`).
-=======
-<<<<<<< HEAD
-Alias supportati come su Laravel (`auth`, `guest`, `verified`, classi FQCN, parametri `throttle:60,1`).
-=======
-Alias supportati come su Laravel (`auth`, `verified`, classi FQCN, parametri `throttle:60,1`).
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
+Alias supportati come su Laravel (`auth`, `guest`, parametri `throttle:60,1`), ma solo i nomi presenti in `cms.config.page_middleware_allowlist` (default `auth`, `guest`, `throttle`): `verified` o una classe FQCN vanno prima aggiunti all'allowlist, ogni altro nome lancia `InvalidArgumentException` (`ValidatePageMiddlewareAction`).
 
 ## Flusso
 

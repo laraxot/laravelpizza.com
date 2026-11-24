@@ -5,6 +5,7 @@ status: proposed
 created: 2026-11-23
 updated: 2026-11-24
 issues: []
+qmd: "laravel bootstrap provider registry minimale discovery"
 ---
 
 # ADR: Bootstrap Laravel 13 minimale e discovery dei moduli

@@ -11,6 +11,10 @@ use Modules\Notify\Models\Notification;
 use Modules\Notify\Models\NotificationTemplate;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/notification-manager.md
+ * @contract docs/contracts/notification-manager.md
+ */
 class NotificationManager
 {
     use QueueableAction;

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Widget di Autenticazione: Namespace delle View"
+type: note
+qmd: "auth widgets view namespaces widget autenticazione"
+---
+>>>>>>> laraxot/dev
 # Widget di Autenticazione: Namespace delle View
 
 ## ⚠️ **Regola Critica**

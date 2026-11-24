@@ -1,14 +1,10 @@
 ---
-title: "🎨 Theme Architecture - "Il Tema è un Vestito""
+title: '🎨 Theme Architecture - "Il Tema è un Vestito"'
 type: concept
 tags: [theme, architecture]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
-qmd: "theme-architecture 🎨 theme architecture - "il tema è un vestito""
+qmd: 'theme-architecture 🎨 theme architecture - "il tema è un vestito"'
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:

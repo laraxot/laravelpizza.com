@@ -13,6 +13,13 @@ use Modules\Xot\Datas\XotData;
 use Spatie\Permission\Guard;
 use Spatie\QueueableAction\QueueableAction;
 
+<<<<<<< HEAD
+=======
+/**
+ * @see docs/contracts/set-default-roles-by-socialite-user-action.md
+ * @contract docs/contracts/set-default-roles-by-socialite-user-action.md
+ */
+>>>>>>> laraxot/dev
 class SetDefaultRolesBySocialiteUserAction
 {
     use QueueableAction;

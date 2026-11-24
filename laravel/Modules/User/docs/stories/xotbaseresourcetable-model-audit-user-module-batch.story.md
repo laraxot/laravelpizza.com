@@ -31,6 +31,10 @@ owned_scope:
   - "laravel/Modules/User/app/Filament/Resources/TenantUserResource/Tables/TenantUsersTable.php"
   - "laravel/Modules/User/app/Filament/Resources/UserResource/Tables/UsersTable.php"
 related: []
+<<<<<<< HEAD
+=======
+qmd: "xotbaseresourcetable model audit user batch story"
+>>>>>>> laraxot/dev
 ---
 
 # XotBaseResourceTable: audit $model + verifica colonne (batch modulo User)
@@ -52,14 +56,10 @@ sessione precedente (working tree condivisa, modifiche non committate — vedi
 la Resource sorella (property `$model` o `getModel()`, mai il filename) e
 confermato che sono tutti corretti, incluso il caso non ovvio di
 `TenantResource` che risolve dinamicamente `XotData::getTenantClass()` →
-<<<<<<< HEAD
 `config('xot.tenant_class')` → in questo progetto `Modules\Quaeris\Models\Customer`
-=======
 <<<<<<< HEAD
-`config('xot.tenant_class')` → in questo progetto `Modules\Quaeris\Models\Customer`
-=======
 `config('xot.tenant_class')` → in questo progetto `Modules\<nome progetto>\Models\Customer`
->>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 (non `Modules\User\Models\Tenant`, che pure esiste con una propria migration
 "tenants" mai attivata da config).
@@ -72,17 +72,12 @@ confermato che sono tutti corretti, incluso il caso non ovvio di
    verificato contro la Resource sorella (mai dal nome del file).
 2. `getTableColumns()` di ognuno verificato contro lo schema reale — rispettando
    la connection DB del model (`Schema::connection('user')` per i model che
-<<<<<<< HEAD
    dichiarano `protected $connection = 'user'`, DB fisico `quaeris_user`
    diverso dal default `quaeris_data`).
-=======
 <<<<<<< HEAD
-   dichiarano `protected $connection = 'user'`, DB fisico `quaeris_user`
-   diverso dal default `quaeris_data`).
-=======
    dichiarano `protected $connection = 'user'`, DB fisico `<nome progetto>_user`
    diverso dal default `<nome progetto>_data`).
->>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 3. Colonne non verificabili (chiavi con relazione, es. `x.y`) saltate.
 4. Colonne sospette segnalate con file:riga, NON rimosse salvo typo certo al
@@ -124,14 +119,10 @@ confermato che sono tutti corretti, incluso il caso non ovvio di
 | CustomersTable.php | `Modules\Quaeris\Models\Customer` | `TenantResource::getModel()` → `getTenantClass()` → `config('xot.tenant_class')` (override attivo in tutti gli env `config/*/xra.php`) |
 | TenantsTable.php | `Modules\Quaeris\Models\Customer` | idem — stessa Resource di CustomersTable, valore confermato coerente |
 | TenantUsersTable.php | `Modules\User\Models\TenantUser` | `TenantUserResource::$model` |
-<<<<<<< HEAD
 | UsersTable.php | `Modules\Quaeris\Models\User` | `UserResource::getModel()` → `XotData::getUserClass()` → `config('auth.providers.users.model')` = `Modules\Quaeris\Models\User` |
-=======
 <<<<<<< HEAD
-| UsersTable.php | `Modules\Quaeris\Models\User` | `UserResource::getModel()` → `XotData::getUserClass()` → `config('auth.providers.users.model')` = `Modules\Quaeris\Models\User` |
-=======
 | UsersTable.php | `Modules\<nome progetto>\Models\User` | `UserResource::getModel()` → `XotData::getUserClass()` → `config('auth.providers.users.model')` = `Modules\<nome progetto>\Models\User` |
->>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 
 ### Colonne verificate — esito per file
@@ -149,10 +140,6 @@ TeamPermissionsTable, CustomersTable, UsersTable.
    colonne esistono solo su `Modules\User\Models\Tenant` / tabella `tenants`
    (vedi `database/migrations/2026_09_01_150110_create_tenants_table.php`),
    NON sul model realmente attivo per questa Resource
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
    (`Modules\Quaeris\Models\Customer` / tabella `customers`, migration
    `Modules/Quaeris/database/migrations/2023_01_01_000012_create_customers_table.php`:
    id, email, mobile_phone, timestamps, created_by/updated_by, name, team_id,
@@ -161,16 +148,11 @@ TeamPermissionsTable, CustomersTable, UsersTable.
    nativo del modulo, poi il config è cambiato verso `Customer` (Quaeris) senza
    aggiornare le colonne. Verificato via `Schema::connection('quaeris_data')`
 <<<<<<< HEAD
-=======
-=======
    (`Modules\<nome progetto>\Models\Customer` / tabella `customers`, migration
    `Modules/<nome progetto>/database/migrations/2023_01_01_000012_create_customers_table.php`:
-   id, email, mobile_phone, timestamps, created_by/updated_by, name, team_id,
-   user_id, slug — niente domain/is_active/trial_ends_at). Ipotesi: il file è
-   stato scritto quando `tenant_class` puntava ancora al model `Tenant`
    nativo del modulo, poi il config è cambiato verso `Customer` (<nome progetto>) senza
    aggiornare le colonne. Verificato via `Schema::connection('<nome progetto>_data')`
->>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
    diretto sulla tabella `customers` (esiste live, colonne confermate assenti).
 2. `TenantUsersTable.php:27` (`role`) e `:29` (`uuid`) — nessuna migration di
@@ -179,14 +161,10 @@ TeamPermissionsTable, CustomersTable, UsersTable.
    letteralmente commentata nel codice sorgente della migration
    (`// $table->string('role')->nullable();`). Confermato anche via
    `Schema::connection('user')->getColumnListing('tenant_user')` (DB fisico
-<<<<<<< HEAD
    `quaeris_user`, che è la connection dichiarata dal model `TenantUser`):
-=======
 <<<<<<< HEAD
-   `quaeris_user`, che è la connection dichiarata dal model `TenantUser`):
-=======
    `<nome progetto>_user`, che è la connection dichiarata dal model `TenantUser`):
->>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
    `id,tenant_id,user_id,created_at,updated_at,updated_by,created_by,deleted_at,deleted_by`
    — né `role` né `uuid` presenti.
@@ -212,14 +190,10 @@ TeamPermissionsTable, CustomersTable, UsersTable.
    `deleted_at` invece è presente — coerente con `updateTimestamps($table, true)`.
 
 **Nota ambientale**: il DB dev di questa sessione (connection default
-<<<<<<< HEAD
 `quaeris_data` + connection `user` = `quaeris_user`, entrambe su
-=======
 <<<<<<< HEAD
-`quaeris_data` + connection `user` = `quaeris_user`, entrambe su
-=======
 `<nome progetto>_data` + connection `user` = `<nome progetto>_user`, entrambe su
->>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 `127.0.0.1`) risulta significativamente indietro rispetto alle migration più
 recenti su più tabelle (`teams`, `team_invitations`, `roles`, `profiles`

@@ -22,15 +22,7 @@ related:
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
-<<<<<<< HEAD
 - [Convenzioni Path](./path-conventions-user.md)
-=======
-<<<<<<< .merge_file_rpR27F
-- [Convenzioni Path](./path-conventions-2.md)
-=======
-- [Convenzioni Path](./path-conventions-user.md)
->>>>>>> .merge_file_9WUCCX
->>>>>>> laraxot/dev
 - [Volt Folio Logout](./volt-folio-logout-2.md)
 - [Implementazione Logout](./logout-blade-implementation-2.md)
 
@@ -408,15 +400,7 @@ Ecco come dovrebbe apparire il file JSON completo dell'header dopo le modifiche:
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
-<<<<<<< HEAD
 - [Convenzioni Path](./path-conventions-user.md)
-=======
-<<<<<<< .merge_file_rpR27F
-- [Convenzioni Path](./path-conventions-2.md)
-=======
-- [Convenzioni Path](./path-conventions-user.md)
->>>>>>> .merge_file_9WUCCX
->>>>>>> laraxot/dev
 - [Volt Folio Logout](./volt-folio-logout-2.md)
 - [Implementazione Logout](./logout-blade-implementation-2.md)
 

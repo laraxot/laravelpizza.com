@@ -4,6 +4,10 @@ type: user-manual
 status: active
 module: UI
 updated: 2026-11-23
+<<<<<<< HEAD
+=======
+qmd: "user manual manuale utente"
+>>>>>>> laraxot/dev
 ---
 
 # Manuale utente UI

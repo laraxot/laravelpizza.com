@@ -27,9 +27,5 @@ test('app providers must not define FolioServiceProvider', function (): void {
 });
 
 test('Cms FolioVoltServiceProvider class exists and is the mount owner', function (): void {
-<<<<<<< HEAD
-    Assert::assertTrue(class_exists(\Modules\Cms\Providers\FolioVoltServiceProvider::class));
-=======
     Assert::assertTrue(class_exists(FolioVoltServiceProvider::class));
->>>>>>> laraxot/dev
 });

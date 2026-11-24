@@ -3,11 +3,7 @@ title: "agents project rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "agents project rules"
 issues: []
 discussions: []
@@ -131,16 +127,6 @@ done
 
 - [Indice AGENTS](./agents-split-index.md)
 - [regole-critiche.md](./regole-critiche.md) - Regole critiche
-<<<<<<< HEAD
 - [AGENTS.md originale](../../AGENTS.md)
 - [AGENTS.md originale](../../AGENTS.md)
-=======
-<<<<<<< HEAD
-- [AGENTS.md originale](../../agents.md)
-- [agents.md originale](../../agents.md)
-=======
-- [AGENTS.md originale](../../AGENTS.md)
-- [AGENTS.md originale](../../AGENTS.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Index principale](./index.md)

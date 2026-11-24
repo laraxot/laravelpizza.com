@@ -21,6 +21,12 @@ use function Safe\class_uses;
 /**
  * Wrapper che raccoglie i metodi utility legacy di Support\Utils in un'unica
  * QueueableAction, in attesa di essere suddivisi in action granulari.
+<<<<<<< HEAD
+=======
+ *
+ * @see docs/contracts/shield-utils-action.md
+ * @contract docs/contracts/shield-utils-action.md
+>>>>>>> laraxot/dev
  */
 class ShieldUtilsAction
 {

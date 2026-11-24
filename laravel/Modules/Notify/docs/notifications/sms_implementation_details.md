@@ -3,11 +3,7 @@ title: "sms implementation details"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "sms implementation details"
 issues: []
 discussions: []
@@ -807,22 +803,7 @@ class ConsentLog extends Model
 ## Collegamenti alla Documentazione Correlata
 
 - [MULTI_CHANNEL_NOTIFICATIONS.md](multi_channel_notifications.md)
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_tJ7H7w
-- [SMS_PROVIDER_CONFIGURATION.md](./SMS_PROVIDER_CONFIGURATION.md)
-- [NOTIFICATIONS_IMPLEMENTATION_GUIDE.md](./NOTIFICATIONS_IMPLEMENTATION_GUIDE.md)
-- [TELEGRAM_NOTIFICATIONS_GUIDE.md](./TELEGRAM_NOTIFICATIONS_GUIDE.md)
-=======
->>>>>>> laraxot/dev
-- [SMS_PROVIDER_CONFIGURATION.md](./sms_provider_configuration.md)
-- [NOTIFICATIONS_IMPLEMENTATION_GUIDE.md](notifications_implementation_guide.md)
-- [TELEGRAM_NOTIFICATIONS_GUIDE.md](telegram_notifications_guide.md)
-- [MULTI_CHANNEL_NOTIFICATIONS.md](./multi_channel_notifications.md)
 - [SMS_PROVIDER_CONFIGURATION.md](./sms_provider_configuration.md)
 - [NOTIFICATIONS_IMPLEMENTATION_GUIDE.md](./notifications_implementation_guide.md)
 - [TELEGRAM_NOTIFICATIONS_GUIDE.md](./telegram_notifications_guide.md)
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_qP7aSN
->>>>>>> laraxot/dev
+- [MULTI_CHANNEL_NOTIFICATIONS.md](./multi_channel_notifications.md)

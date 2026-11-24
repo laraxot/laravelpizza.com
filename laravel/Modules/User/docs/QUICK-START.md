@@ -4,6 +4,10 @@ type: guide
 tags: [user, authentication, quick-start]
 created: 2026-07-28
 updated: 2026-07-28
+<<<<<<< HEAD
+=======
+qmd: "quick start user"
+>>>>>>> laraxot/dev
 ---
 
 # User Module — Quick Start

@@ -3,11 +3,7 @@ title: "PRD"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "PRD"
 issues: []
 discussions: []
@@ -22,14 +18,6 @@ discussions: []
 
 ---
 
-title: "PRD"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "PRD"
-issues: []
-discussions: []
 ## Document Control
 
 | Version | Date | Author | Changes |
@@ -521,15 +509,7 @@ CREATE TABLE cms_navigation (
 
 ### 12.3 Related PRDs
 - [Blog Module PRD](../../Blog/docs/PRD.md)
-<<<<<<< HEAD
 - [Media Module PRD](../../Media/docs/prd.md)
-=======
-<<<<<<< HEAD
-- [Media Module PRD](../../Media/docs/PRD.md)
-=======
-- [Media Module PRD](../../Media/docs/prd.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Seo Module PRD](../../Seo/docs/PRD.md)
 - [Lang Module PRD](../../Lang/docs/PRD.md)
 

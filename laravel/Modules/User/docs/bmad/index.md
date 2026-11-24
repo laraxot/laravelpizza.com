@@ -1,6 +1,10 @@
 ---
 title: index
 module: User
+<<<<<<< HEAD
+=======
+qmd: "index"
+>>>>>>> laraxot/dev
 ---
 
 # User Module — Documentation Index

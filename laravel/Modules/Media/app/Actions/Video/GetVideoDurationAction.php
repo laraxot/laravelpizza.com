@@ -11,6 +11,10 @@ use Illuminate\Support\Facades\Storage;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/get-video-duration-action.md
+ * @contract docs/contracts/get-video-duration-action.md
+ */
 class GetVideoDurationAction
 {
     use QueueableAction;

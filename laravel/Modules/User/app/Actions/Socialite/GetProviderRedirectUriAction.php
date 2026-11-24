@@ -10,6 +10,12 @@ use Spatie\QueueableAction\QueueableAction;
 /**
  * L'unico URI di callback da registrare presso il provider (DCP-269): quello nella lingua predefinita, non nella
  * lingua della pagina. La guida «provider non configurato» e la pagina del back office leggono da qui.
+<<<<<<< HEAD
+=======
+ *
+ * @see docs/contracts/get-provider-redirect-uri-action.md
+ * @contract docs/contracts/get-provider-redirect-uri-action.md
+>>>>>>> laraxot/dev
  */
 class GetProviderRedirectUriAction
 {

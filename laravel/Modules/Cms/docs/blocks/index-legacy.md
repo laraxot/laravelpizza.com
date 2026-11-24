@@ -14,15 +14,7 @@ related:
   - ./index-legacy-2.md
   - ../sections/index.md
   - ../README.md
-<<<<<<< HEAD
   - ../index.md
-=======
-<<<<<<< HEAD
-  - ../INDEX.md
-=======
-  - ../index.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - ../roadmap/README.md
 ---
 <!-- ponytail: variante legacy con contenuto duplicato/divergente dal canonico index.md, conservata per non perdere link storici. Consolidare manualmente e poi rimuovere. -->
@@ -102,5 +94,3 @@ L'implementazione di un blocco richiede:
 - Ogni blocco deve essere autocontenuto e non dipendere da altri blocchi
 - I blocchi devono supportare la localizzazione tramite le chiavi del file JSON
 - L'implementazione deve seguire le convenzioni di naming del progetto
-
-

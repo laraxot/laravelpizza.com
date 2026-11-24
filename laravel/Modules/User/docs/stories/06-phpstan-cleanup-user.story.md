@@ -5,6 +5,10 @@ status: done-with-blocker
 priority: medium
 created: 2026-10-06
 module: User
+<<<<<<< HEAD
+=======
+qmd: "06 phpstan cleanup user story scopo"
+>>>>>>> laraxot/dev
 ---
 
 # [STORY] PHPStan cleanup modulo User
@@ -64,13 +68,6 @@ Il runtime e' 8.4: serve alzare a `^8.3`/`^8.4` (file fuori scope User, tocca tu
 ## GitHub (tracciamento)
 
 <<<<<<< HEAD
-- Issue: TODO (gh non installato su questa macchina)
-- Discussion: TODO
-=======
-<<<<<<< HEAD
-- Issue: TODO (gh non installato su questa macchina)
-- Discussion: TODO
-=======
 - Issue: https://github.com/laraxot/base_techplanner_fila5/issues/34 (tracking «PHPStan level max: percorso verso zero errori su Modules/»; ogni commit di questo lavoro cita il link)
 - Discussion: TODO
 
@@ -144,5 +141,7 @@ Issue: https://github.com/laraxot/base_techplanner_fila5/issues/34
 5. Le 5 `@phpstan-ignore trait.unused` residue (Geo `EnsuresGeoDatabaseSchema`, 7 trait Xot) e i 3 test UI sempre `skipped`.
 6. `Support/AuthenticatedTenantKey.php`: un altro attore ha tolto dal merge il blocco upstream (risolve la chiave con `Context::remember`, una query in meno per richiesta) e tenuto la versione locale, semplice. Se serve la memoizzazione va reintrodotta a mano.
 7. Test che non girano o sono rossi per l'ambiente, non per il codice: `Employee/tests/Unit/Models/EmployeeTest.php` non dichiara `uses(TestCase::class)` (mai dichiarato, nemmeno prima del merge: `Target class [config] does not exist`); `Notify/.../MailtrapBridgeConfigurationTest` pretende `mail.mailers.mailtrap-sdk`, definito da nessun file di config; `Notify/.../InboundMailWebhookTest` e `Rating` non trovano le tabelle nel DB scratch; `User/.../UserTest` cade su `CreatePostViewsTable`; i test strutturali di Xot (`EveryModuleHasSettingPageTest` ecc.) segnalano moduli senza `SettingPage` (DbForge, AI, Blog).
->>>>>>> laraxot/dev
+=======
+- Issue: TODO (gh non installato su questa macchina)
+- Discussion: TODO
 >>>>>>> laraxot/dev

@@ -2,11 +2,7 @@
 title: "Notify — BMAD dossier"
 type: bmad-dossier
 module: Notify
-<<<<<<< HEAD
-updated: 2026-10-07
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 tags: [bmad, notify, delivery]
 qmd: "Notify module product brief PRD architecture UX security epics gaps release"
 issues: ["https://github.com/laraxot/base_fixcity_fila5/issues/383"]

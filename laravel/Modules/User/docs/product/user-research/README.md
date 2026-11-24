@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "User Module - User Research"
+type: note
+qmd: "user research"
+---
+>>>>>>> laraxot/dev
 # User Module - User Research
 
 ## Research Overview

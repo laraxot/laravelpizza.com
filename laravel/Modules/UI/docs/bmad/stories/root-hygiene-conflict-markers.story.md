@@ -19,7 +19,10 @@ tags: [docs, ui, bmad]
 
 # UI: marker nidificati in README + igiene root
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
 
@@ -33,10 +36,13 @@ Innermost-first strip; tenere frontmatter HEAD; footer project-agnostic (niente 
 
 PHPStan `Modules/UI`: 0. Commit deferred.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 PHPStan `Modules/UI`: 0. Commit deferred.
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 
 ## Wave docs 2026-11-23
 
@@ -44,7 +50,10 @@ Risolti marker annidati in `Modules/UI/docs` (47 file, strategia innermost-first
 HEAD preferito, lato non vuoto, unione paragrafi unici). Verifica:
 `/bin/grep -rIln '^<<<<<<< \|^>>>>>>> \|^=\{7\}$' laravel/Modules/UI/docs` → vuoto.
 Status: done (docs).
+<<<<<<< HEAD
 =======
 PHPStan `Modules/UI`: 0. Commit deferred.
 >>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev

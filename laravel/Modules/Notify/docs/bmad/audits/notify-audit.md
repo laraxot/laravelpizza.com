@@ -2,16 +2,10 @@
 title: "Audit approfondito modulo Notify"
 type: audit
 status: review
-<<<<<<< HEAD
-updated: 2026-11-16
-module: Notify
-qmd: "audit approfondito Notify inventario PHPStan Pest policy NotificationLog webhook inbound canali Filament Actions"
-=======
 updated: 2026-11-23
 module: Notify
 qmd: "audit approfondito Notify inventario PHPStan Pest policy NotificationLog webhook inbound canali Filament Actions"
 created: 2026-11-23
->>>>>>> laraxot/dev
 ---
 
 # Audit approfondito — Notify
@@ -101,6 +95,7 @@ Nessuna UI inventata, nessun `migrate:fresh`.
   triage contro la regola "label auto-tradotte via Lang".
 - **P2-3** Docs: 3208 `.md`, 481 con nome non kebab-case, 9 senza frontmatter,
 <<<<<<< HEAD
+<<<<<<< HEAD
   36 `README`/`readme`, 1 link rotto in `architecture.md` (ricontato 2026-11-19: 0, già corretto): rumore per QMD. Non rinominare in massa senza story.
 =======
 <<<<<<< .merge_file_Ymt0ce
@@ -108,6 +103,9 @@ Nessuna UI inventata, nessun `migrate:fresh`.
 =======
   36 `README`/`readme`, 1 link rotto in `architecture.md` (ricontato 2026-11-19: 0, già corretto): rumore per QMD. Non rinominare in massa senza story.
 >>>>>>> .merge_file_yAxh8V
+>>>>>>> laraxot/dev
+=======
+  36 `README`/`readme`, 1 link rotto in `architecture.md` (ricontato 2026-11-19: 0, già corretto): rumore per QMD. Non rinominare in massa senza story.
 >>>>>>> laraxot/dev
 - **P2-4** Test: rapporto test/app 0.67 buono ma 18 file `*coverage*`/`*100*` e solo
   19 Feature; i test su `ProcessInboundMailAction` e `NotificationLog` vanno verificati.

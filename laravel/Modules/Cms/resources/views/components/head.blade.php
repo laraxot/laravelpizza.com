@@ -14,11 +14,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @head
     <style>[x-cloak] { display: none !important; }</style>
-    <script>
-        if (typeof Storage !== 'undefined' && localStorage.getItem('dark_mode') === 'true') {
-            document.documentElement.classList.add('dark');
-        }
-    </script>
     @if ($panelAssets)
         <script>
             if (typeof Storage !== 'undefined' && localStorage.getItem('dark_mode') === 'true') {
@@ -27,8 +22,6 @@
         </script>
         @filamentStyles
     @endif
-    @vite(['resources/css/app.css'], 'themes/'.$pubTheme)
-    @filamentStyles
     @vite(['resources/css/app.css'], 'themes/'.$pubTheme)
     {{-- Stili dei blocchi della pagina (@push('styles'), per esempio content.simple): senza lo stack non arrivavano mai. --}}
     @stack('styles')

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Implementazione del Logout"
+type: note
+qmd: "auth logout implementation implementazione"
+---
+>>>>>>> laraxot/dev
 # Implementazione del Logout 
 
 ## Indice

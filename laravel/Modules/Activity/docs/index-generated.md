@@ -234,53 +234,19 @@ Testing strategies and guidelines:
 
 | Date | File | Category |
 |------|------|----------|
-| 2026-07-28 | [PATTERNS.md](patterns.md) | root |
-| 2026-07-28 | [testing.md](testing.md) | root |
-| 2026-07-28 | [database-schema.md](database-schema.md) | root |
-| 2026-07-28 | [API.md](api.md) | root |
-| 2026-07-28 | [quick-start.md](quick-start.md) | root |
-| 2026-07-28 | [architecture.md](architecture.md) | root |
-| 2026-07-28 | [archive/index.md](archive/index.md) | archive |
 | 2026-07-28 | [wiki/troubleshooting/git-push-dual-remote.md](wiki/troubleshooting/git-push-dual-remote.md) | wiki |
 | 2026-07-28 | [wiki/concepts/xotbase-resource-zen-pattern.md](wiki/concepts/xotbase-resource-zen-pattern.md) | wiki |
 | 2026-07-28 | [wiki/concepts/phpstan-pest-discipline.md](wiki/concepts/phpstan-pest-discipline.md) | wiki |
 | 2026-07-28 | [testing-guidelines.md](testing-guidelines.md) | root |
 | 2026-07-28 | [test444.md](test444.md) | root |
 | 2026-07-28 | [test2222.md](test2222.md) | root |
-<<<<<<< HEAD
-| 2026-07-28 | [test.md](raw/root-import/test.md) | root |
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 | 2026-07-28 | [test2024-12-04.md](raw/root-import/test2024-12-04.md) | root |
-=======
-| 2026-07-28 | [test.md](raw/root-import/test.md) | root |
->>>>>>> laraxot/dev
-=======
-| 2026-07-28 | [test.md](raw/root-import/test.md) | root |
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 | 2026-07-28 | [test04.md](test04.md) | root |
 | 2026-07-28 | [test03.md](test03.md) | root |
 | 2026-07-28 | [test02.md](test02.md) | root |
 | 2026-07-28 | [test.md](test.md) | root |
-<<<<<<< HEAD
-| 2026-07-28 | [test.md](raw/root-import/test.md) | root |
-| 2026-07-28 | [raw/root-import/changelog-1.md](raw/root-import/changelog-1.md) | raw |
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 | 2026-07-28 | [test-14-02-2024.md](raw/root-import/test-14-02-2024.md) | root |
 | 2026-07-28 | [raw/root-import/changelog.md](raw/root-import/changelog.md) | raw |
-=======
-| 2026-07-28 | [test.md](raw/root-import/test.md) | root |
-| 2026-07-28 | [raw/root-import/changelog-1.md](raw/root-import/changelog-1.md) | raw |
->>>>>>> laraxot/dev
-=======
-| 2026-07-28 | [test.md](raw/root-import/test.md) | root |
-| 2026-07-28 | [raw/root-import/changelog-1.md](raw/root-import/changelog-1.md) | raw |
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ---
 

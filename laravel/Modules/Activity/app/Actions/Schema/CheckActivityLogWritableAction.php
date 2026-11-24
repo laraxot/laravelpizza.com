@@ -7,6 +7,12 @@ namespace Modules\Activity\Actions\Schema;
 use Illuminate\Support\Facades\Schema;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * CheckActivityLogWritableAction.
+ *
+ * @see docs/contracts/check-activity-log-writable-action.md
+ * @contract docs/contracts/check-activity-log-writable-action.md
+ */
 final class CheckActivityLogWritableAction
 {
     use QueueableAction;

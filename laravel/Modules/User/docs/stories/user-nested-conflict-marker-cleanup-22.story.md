@@ -19,6 +19,10 @@ related:
 github:
   repository: null
   issues: []
+<<<<<<< HEAD
+=======
+qmd: "user nested conflict marker cleanup 22"
+>>>>>>> laraxot/dev
 ---
 
 # User: marker di conflitto annidati residui + disposizione .wip/.corrected

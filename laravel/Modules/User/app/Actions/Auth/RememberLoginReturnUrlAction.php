@@ -18,6 +18,12 @@ use function Safe\preg_match;
  * `?redirect=` (explicit, it wins) or the `Referer` header (only when the `auth` middleware has not already saved
  * the protected page in `url.intended`). Only URLs on the same host are kept: no open redirect. Auth pages are
  * ignored, so login never sends the user back to login or registration.
+<<<<<<< HEAD
+=======
+ *
+ * @see docs/contracts/remember-login-return-url-action.md
+ * @contract docs/contracts/remember-login-return-url-action.md
+>>>>>>> laraxot/dev
  */
 final class RememberLoginReturnUrlAction
 {

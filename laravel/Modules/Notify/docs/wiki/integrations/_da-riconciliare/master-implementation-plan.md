@@ -1,20 +1,10 @@
 ---
 title: "🎯 NOTIFY - MASTER IMPLEMENTATION PLAN"
-<<<<<<< HEAD
-title: "🎯 <nome progetto> - MASTER IMPLEMENTATION PLAN"
-type: concept
-tags: [master, implementation, plan]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "master-implementation-plan 🎯 laraxot - master implementation plan"
-qmd: "master-implementation-plan 🎯 <nome progetto> - master implementation plan"
-=======
 type: concept
 tags: [master, implementation, plan]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "master-implementation-plan 🎯 laraxot - master implementation plan"
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:

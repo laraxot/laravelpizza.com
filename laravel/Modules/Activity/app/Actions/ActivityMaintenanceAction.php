@@ -14,6 +14,9 @@ use Spatie\QueueableAction\QueueableAction;
  * Maintenance operations (cleanup) for the activity log.
  *
  * Extracted from ActivityLogger to separate write and maintenance responsibilities.
+ *
+ * @see docs/contracts/activity-maintenance-action.md
+ * @contract docs/contracts/activity-maintenance-action.md
  */
 class ActivityMaintenanceAction
 {

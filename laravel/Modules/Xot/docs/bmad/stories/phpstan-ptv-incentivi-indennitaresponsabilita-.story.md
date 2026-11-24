@@ -15,7 +15,7 @@ references:
   - docs/sprint-status.yaml
 date_created: 2026-10-06
 phase: ricognizione
-
+qmd: "phpstan ptv incentivi indennitaresponsabilita story swarm"
 ---
 
 # PHPStan L10 — Ptv, Incentivi, IndennitaResponsabilita swarm

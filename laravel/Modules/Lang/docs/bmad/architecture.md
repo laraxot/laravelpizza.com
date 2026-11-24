@@ -11,12 +11,16 @@ related:
   - ./decision-log.md
   - ../purpose.md
 <<<<<<< HEAD
+<<<<<<< HEAD
   - ../italian-text-refined-audit-report.md
 =======
 <<<<<<< .merge_file_DANC9m
 =======
   - ../italian-text-refined-audit-report.md
 >>>>>>> .merge_file_cU7Cza
+>>>>>>> laraxot/dev
+=======
+  - ../italian-text-refined-audit-report.md
 >>>>>>> laraxot/dev
 ---
 
@@ -43,6 +47,7 @@ Verificata sul codice il 2026-11-16 (72 PHP in `app/`, 0 Services). Sostituisce 
 3. **Cambio lingua.** `LocaleSwitcherRefresh` → `applyLocale()`: `session('locale')` + `App::setLocale`.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< .merge_file_DANC9m
 **Models:** `BaseModelLang`, `LanguageLine`, `Translation`.
@@ -52,6 +57,8 @@ Verificata sul codice il 2026-11-16 (72 PHP in `app/`, 0 Services). Sostituisce 
 **Database Schema:** `lang_table` — tabella primaria con colonne standard Laravel (id, timestamps).
 =======
 >>>>>>> .merge_file_cU7Cza
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 ## Autorizzazione
 

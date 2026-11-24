@@ -14,11 +14,7 @@ related:
 <<<<<<< HEAD
   - "./README.md"
 =======
-<<<<<<< HEAD
   - "./readme.md"
-=======
-  - "./README.md"
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
   - "./structure.md"
   - "./testing-structure.md"
@@ -54,11 +50,7 @@ I componenti possono essere utilizzati nei template Blade con il prefisso del na
 - [Documentazione principale sulla registrazione dei componenti](../ui/docs/architecture/component-registration.md)
 - [Implementazione di UserServiceProvider](Modules/User/app/Providers/UserServiceProvider.php)
 <<<<<<< HEAD
-- [Documentazione principale sulla registrazione dei componenti](modules/ui/project_docs/architecture/component-registration.md)
-=======
-<<<<<<< HEAD
-- [Documentazione principale sulla registrazione dei componenti](modules/ui/project_docs/architecture/component-registration.md)
-=======
 - [Documentazione principale sulla registrazione dei componenti](component-registration.md)
->>>>>>> laraxot/dev
+=======
+- [Documentazione principale sulla registrazione dei componenti](modules/ui/project_docs/architecture/component-registration.md)
 >>>>>>> laraxot/dev

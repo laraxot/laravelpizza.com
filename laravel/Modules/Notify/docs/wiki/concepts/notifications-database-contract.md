@@ -5,11 +5,7 @@ title: "notifications — schema Notify, runtime User"
 type: concept
 tags: [notify, notifications, migration, database, user-connection, xotbasemigration]
 created: 2026-06-10
-<<<<<<< HEAD
-updated: 2026-06-10
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: notifications database notify owner xotbasemigration user forbidden
 ---
 

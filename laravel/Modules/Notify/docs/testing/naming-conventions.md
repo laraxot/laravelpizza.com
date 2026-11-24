@@ -3,11 +3,7 @@ title: "naming conventions"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "naming conventions"
 issues: []
 discussions: []
@@ -179,15 +175,7 @@ Modules/Xot/tests/Feature/fixstructuretest.pest.php
 
 ### Riferimenti Interni
 
-<<<<<<< HEAD
-- [../quality/phpstan-fixes.md](../PHPSTAN-FIXES.md)
-=======
-<<<<<<< HEAD
 - [../quality/phpstan-fixes.md](../phpstan-fixes.md)
-=======
-- [../quality/phpstan-fixes.md](../PHPSTAN-FIXES.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [../../Modules/Activity/docs/testing-guidelines.md](../../laravel/Modules/Activity/docs/testing-guidelines.md)
 - [../../Modules/Activity/docs/testing-guidelines.md](../../../Activity/docs/testing-guidelines.md)
 - [./test-structure.md](./test-structure.md)

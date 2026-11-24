@@ -7,6 +7,13 @@ namespace Modules\UI\Actions\Datetime;
 use Carbon\Carbon;
 use Spatie\QueueableAction\QueueableAction;
 
+<<<<<<< HEAD
+=======
+/**
+ * @see docs/contracts/get-days-mapping-action.md
+ * @contract docs/contracts/get-days-mapping-action.md
+ */
+>>>>>>> laraxot/dev
 final class GetDaysMappingAction
 {
     use QueueableAction;

@@ -6,11 +6,7 @@ issues: []
 discussions: []
 title: "html2pdf advanced: puntatore"
 type: reference
-<<<<<<< HEAD
-updated: 2026-05-21
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 related:
   - "../../../Media/docs/html2pdf/advanced.md"
 status: draft

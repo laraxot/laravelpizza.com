@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Analisi del File Logout.blade.php"
+type: analysis
+qmd: "logout analysis analisi logoutbladephp"
+---
+>>>>>>> laraxot/dev
 # Analisi del File Logout.blade.php
 
 ## Analisi Attuale

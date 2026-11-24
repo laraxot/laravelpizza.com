@@ -19,6 +19,10 @@ use Spatie\Translatable\HasTranslations;
 /**
  * Class NotificationTemplate.
  *
+ * Gli scope comuni (active/inactive/...) arrivano da HasCommonScopes: niente copia inline.
+ *
+ * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
+ *
  * @property string|null $name
  * @property string|null $code
  * @property string|null $description
@@ -184,6 +188,18 @@ class NotificationTemplate extends BaseModel implements HasMedia
         $mergedData = array_merge($previewData, $data);
 
         return $this->compile($mergedData);
+    }
+
+    /**
+     * Scope a query to only include active templates.
+     */
+    /**
+     * @param  Builder<static>  $query
+     * @return Builder<static>
+     */
+    public function scopeActive(Builder $query): Builder
+    {
+        return $query->where('is_active', true);
     }
 
     /**

@@ -175,7 +175,10 @@ lang.code-workspace
 /.github/skills/
 docs/graphify
 resources/lang
+<<<<<<< HEAD
 
 # Regole portate dal remoto laraxot/dev (sync del 24/11), unite alla base senza perdere nulla
 tests/coverage-*.*
 tests/graphify-out/
+=======
+>>>>>>> laraxot/dev

@@ -9,11 +9,7 @@ related:
 <<<<<<< HEAD
   - ../../00-index.md
 =======
-<<<<<<< HEAD
   - ../../00-INDEX.md
-=======
-  - ../../00-index.md
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 ---
 

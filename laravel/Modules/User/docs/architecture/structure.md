@@ -15,11 +15,7 @@ related:
 <<<<<<< HEAD
   - "./README.md"
 =======
-<<<<<<< HEAD
   - "./readme.md"
-=======
-  - "./README.md"
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
   - "./testing-structure.md"
   - "./user-gdpr-decoupling.md"

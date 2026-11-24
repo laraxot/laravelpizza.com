@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Gestione coerente di roles, permissions e guard_name"
+type: note
+qmd: "roles permissions gestione coerente guardname"
+---
+>>>>>>> laraxot/dev
 # Gestione coerente di roles, permissions e guard_name
 
 ## Regola fondamentale

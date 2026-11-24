@@ -15,11 +15,7 @@ related:
 <<<<<<< HEAD
   - "./README.md"
 =======
-<<<<<<< HEAD
   - "./readme.md"
-=======
-  - "./README.md"
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
   - "./structure.md"
   - "./user-gdpr-decoupling.md"
@@ -316,11 +312,7 @@ dump($variable);
 <<<<<<< HEAD
 - [README Modulo User](../README.md)
 =======
-<<<<<<< HEAD
 - [README Modulo User](../readme.md)
-=======
-- [README Modulo User](../README.md)
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [Best Practices Testing](../../../project_docs/testing-best-practices.md)
 - [Architettura Modulo User](../architecture/README.md)

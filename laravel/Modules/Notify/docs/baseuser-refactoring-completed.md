@@ -1,23 +1,12 @@
 ---
-<<<<<<< HEAD
 issues: []
 discussions: []
 title: "baseuser-refactoring-completed-2025-10-15"
 type: concept
 tags: [deprecated]
 created: 2026-07-14
-updated: 2026-07-14
-qmd: "baseuser-refactoring-completed-2025-10-15 deprecated"
-=======
-title: "baseuser refactoring completed 2025 10"
-type: note
-tags: [documentation]
-created: 2026-09-26
 updated: 2026-11-23
-qmd: "baseuser refactoring completed 2025 10"
-issues: []
-discussions: []
->>>>>>> laraxot/dev
+qmd: "baseuser-refactoring-completed-2025-10-15 deprecated"
 status: deprecated
 related:
   - "./00-index-1.md"
@@ -26,9 +15,6 @@ related:
   - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   - "./action-plan-immediate.md"
 ---
 
@@ -405,14 +391,8 @@ Il refactoring di `BaseUser.php` rappresenta un **caso di studio perfetto** di c
 
 *"Prima lo fai funzionare, poi lo fai giusto, poi lo fai veloce."*  
 *Oggi abbiamo fatto tutti e tre!* ✨
-=======
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
 
 > Questo file è stato rinominato in [baseuser-refactoring-completed.md](baseuser-refactoring-completed.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

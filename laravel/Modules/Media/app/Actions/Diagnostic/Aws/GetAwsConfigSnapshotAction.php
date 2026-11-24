@@ -6,6 +6,10 @@ namespace Modules\Media\Actions\Diagnostic\Aws;
 
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/get-aws-config-snapshot-action.md
+ * @contract docs/contracts/get-aws-config-snapshot-action.md
+ */
 class GetAwsConfigSnapshotAction
 {
     use QueueableAction;

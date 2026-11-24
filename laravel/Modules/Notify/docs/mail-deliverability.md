@@ -3,11 +3,7 @@ title: "Email Deliverability & Inbound Pipeline"
 type: documentation
 tags: [notify, mail, deliverability, inbound, dns, spam]
 created: 2026-11-12
-<<<<<<< HEAD
-updated: 2026-11-12
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 status: active
 ---
 

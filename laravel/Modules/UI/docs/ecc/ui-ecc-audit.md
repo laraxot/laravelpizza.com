@@ -5,13 +5,13 @@ status: review
 updated: 2026-11-16
 module: UI
 <<<<<<< HEAD
+<<<<<<< HEAD
 qmd: "ECC audit UI verification security testing laravel security-review clean-code laravel-verification verification-loop tdd-workflow"
 =======
-<<<<<<< .merge_file_y0J7no
 qmd: "ECC audit UI security-review clean-code laravel-verification verification-loop tdd-workflow"
+>>>>>>> laraxot/dev
 =======
 qmd: "ECC audit UI verification security testing laravel security-review clean-code laravel-verification verification-loop tdd-workflow"
->>>>>>> .merge_file_pkov2C
 >>>>>>> laraxot/dev
 ---
 
@@ -20,8 +20,6 @@ qmd: "ECC audit UI verification security testing laravel security-review clean-c
 ## Contratto PTVX
 
 <<<<<<< HEAD
-=======
-<<<<<<< .merge_file_y0J7no
 ECC non sostituisce AGENTS.md/BMAD. Ogni finding: story BMAD, lock, fix causa,
 PHPStan + Pest, aggiornamento docs/QMD.
 
@@ -35,7 +33,6 @@ PHPStan + Pest, aggiornamento docs/QMD.
 - [ ] `documentation-sync`: story + indici + qmd
 - [ ] `context-engineering`: QMD/graphify prima; registrare il perché dopo
 =======
->>>>>>> .merge_file_pkov2C
 >>>>>>> laraxot/dev
 ECC non sostituisce `AGENTS.md`/BMAD: ogni finding diventa story in [epics.md](../bmad/epics.md), con lock,
 fix alla causa, PHPStan + Pest, aggiornamento docs/QMD. Le abilità ECC sono scelte on-demand
@@ -52,13 +49,13 @@ fix alla causa, PHPStan + Pest, aggiornamento docs/QMD. Le abilità ECC sono sce
 | `tdd-workflow` (regressione sui P0) | aperto | regressione da scrivere su `UiBasePolicy::before` (utente estraneo → null) |
 | `documentation-sync` | fatto | pack aggiornato: [audit](../bmad/audits/ui-audit.md), [epics](../bmad/epics.md), [decision-log](../bmad/decision-log.md) |
 <<<<<<< HEAD
+<<<<<<< HEAD
 | `context-engineering` | fatto | source-first; il perché in [purpose](../bmad/purpose.md) |
 =======
-<<<<<<< .merge_file_y0J7no
 | `context-engineering` | fatto | source-first; il perché in [purpose](../wiki/purpose.md) |
+>>>>>>> laraxot/dev
 =======
 | `context-engineering` | fatto | source-first; il perché in [purpose](../bmad/purpose.md) |
->>>>>>> .merge_file_pkov2C
 >>>>>>> laraxot/dev
 
 ## Input misurato (2026-11-16)
@@ -66,8 +63,6 @@ fix alla causa, PHPStan + Pest, aggiornamento docs/QMD. Le abilità ECC sono sce
 | Voce | N |
 |---|---:|
 <<<<<<< HEAD
-=======
-<<<<<<< .merge_file_y0J7no
 | app PHP | 133 |
 | test | 87 |
 | resources | 0 |
@@ -93,7 +88,6 @@ fix alla causa, PHPStan + Pest, aggiornamento docs/QMD. Le abilità ECC sono sce
 - [00-index](./00-index.md)
 - [BMAD audit](../bmad/audit.md)
 =======
->>>>>>> .merge_file_pkov2C
 >>>>>>> laraxot/dev
 | PHP `app/` | 133 |
 | Test PHP | 87 |

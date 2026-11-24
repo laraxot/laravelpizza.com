@@ -1,20 +1,10 @@
 ---
 title: "🔒 FixCity Security Checklist"
-<<<<<<< HEAD
-title: "🔒 Notify Security Checklist"
-type: concept
-tags: [security, checklist]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "security-checklist 🔒 fixcity security checklist"
-qmd: "security-checklist 🔒 laraxot security checklist"
-=======
 type: concept
 tags: [security, checklist]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "security-checklist 🔒 fixcity security checklist"
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:

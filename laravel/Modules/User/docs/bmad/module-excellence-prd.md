@@ -14,6 +14,10 @@ related:
   - ../purpose.md
   - ../permissions.md
   - ../index.md
+<<<<<<< HEAD
+=======
+qmd: "excellence prd user percorso verso perfezione"
+>>>>>>> laraxot/dev
 ---
 
 # PRD: User module — percorso verso la perfezione assoluta

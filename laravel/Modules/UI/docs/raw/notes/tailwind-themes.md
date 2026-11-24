@@ -8,6 +8,10 @@ tags: [migrato-da-txt, ui]
 converted_from: tailwind-themes.txt
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< HEAD
+=======
+qmd: "tailwind themes risorse esterne"
+>>>>>>> laraxot/dev
 ---
 
 # Tailwind themes — risorse esterne

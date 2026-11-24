@@ -3,11 +3,7 @@ title: "github issues recommendations 2026 03 02"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "github issues recommendations 2026 03 02"
 issues: []
 discussions: []
@@ -350,15 +346,7 @@ While PHPStan Level 10 is achieved, there may be legacy code patterns that don't
 - [ ] Prioritize by impact and effort
 - [ ] Track refactoring progress
 - [ ] Update AGENTS.md with new patterns
-<<<<<<< HEAD
-- [ ] Update AGENTS.md with new patterns
-=======
-<<<<<<< HEAD
 - [ ] Update agents.md with new patterns
-=======
-- [ ] Update AGENTS.md with new patterns
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 **Expected Outcome**: Clean codebase following all Laraxot architectural rules.
 
@@ -722,15 +710,7 @@ Discuss CI/CD pipeline improvements. Topics include:
 - `/var/www/_bases/base_fixcity_fila5/AGENTS.md` - Current architectural rules
 - `/var/www/_bases/base_fixcity_fila5/PHPSTAN_FINAL_REPORT.md` - PHPStan achievement
 - `/var/www/_bases/base_fixcity_fila5/laravel/Modules/Xot/docs/LOGGING_BEST_PRACTICES_2026-03-02.md` - Logging patterns
-<<<<<<< HEAD
-- `/var/www/_bases/base_ptv_fila5/AGENTS.md` - Current architectural rules
-=======
-<<<<<<< HEAD
 - `/var/www/_bases/base_ptv_fila5/agents.md` - Current architectural rules
-=======
-- `/var/www/_bases/base_ptv_fila5/AGENTS.md` - Current architectural rules
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - `/var/www/_bases/base_ptv_fila5/PHPSTAN_FINAL_REPORT.md` - PHPStan achievement
 - `/var/www/_bases/base_ptv_fila5/laravel/Modules/Xot/docs/LOGGING_BEST_PRACTICES_2026-03-02.md` - Logging patterns
 
@@ -738,8 +718,4 @@ Discuss CI/CD pipeline improvements. Topics include:
 
 **Document Version**: 1.0
 **Last Updated**: 2026-03-02
-<<<<<<< HEAD
 **Status**: Ready for Implementation
-=======
-**Status**: Ready for Implementation
->>>>>>> laraxot/dev

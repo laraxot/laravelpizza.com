@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Git Conflict Inventory"
+type: guide
+qmd: "git merge conflict inventory 28"
+---
+>>>>>>> laraxot/dev
 # Git Conflict Inventory
 
 - Date: 2026-04-28

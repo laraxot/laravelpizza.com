@@ -10,6 +10,10 @@ use Modules\Xot\Actions\File\FixPathAction;
 use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\Finder\SplFileInfo;
 
+/**
+ * @see docs/contracts/get-tenant-config-names-action.md
+ * @contract docs/contracts/get-tenant-config-names-action.md
+ */
 class GetTenantConfigNamesAction
 {
     use QueueableAction;

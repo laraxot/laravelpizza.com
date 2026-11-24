@@ -98,9 +98,6 @@ graph TD
 ## Riferimenti Globali
 
 - [Project Wiki Root](../../docs/wiki/)
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_PzcY22
 - [Global Rules](wiki/rules)
 - [Global Skills](wiki/skills)
 - [Global Commands](wiki/commands)
@@ -109,17 +106,11 @@ graph TD
 - [Global Skills](../../docs/wiki/skills/)
 - [Global Commands](../../docs/wiki/commands/)
 - [Global Memories](../../docs/wiki/memories/)
-=======
->>>>>>> laraxot/dev
 - [Global Rules](../../../../docs/wiki/rules/)
 - [Global Skills](../../../../bashscripts/ai/wiki/skills/)
 - [Global Commands](../../../../bashscripts/ai/wiki/commands/)
 - [Global Memories](../../../../docs/wiki/memories/)
 - Indici locali del modulo: [rules](wiki/rules) · [skills](wiki/skills) · [commands](wiki/commands) · [memories](wiki/memories)
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_hfUKHm
->>>>>>> laraxot/dev
 
 ## Setup Iniziale (per nuovi moduli)
 

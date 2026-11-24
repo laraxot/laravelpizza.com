@@ -13,6 +13,8 @@ use function Safe\fopen;
 
 /**
  * Converts an SRT subtitle file (public path) to WebVTT format.
+ * @see docs/contracts/convert-srt-to-vtt-action.md
+ * @contract docs/contracts/convert-srt-to-vtt-action.md
  */
 class ConvertSrtToVttAction
 {

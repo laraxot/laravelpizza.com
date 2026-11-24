@@ -3,6 +3,10 @@ title: "Manuale utente — User"
 type: user-manual
 status: active
 screenshot: assets/auth-login.png
+<<<<<<< HEAD
+=======
+qmd: "manuale utente user"
+>>>>>>> laraxot/dev
 ---
 
 > Screenshot reale della pagina di login FixCity, verificato il 23 novembre 2026.

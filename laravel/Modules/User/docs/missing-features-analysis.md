@@ -20,18 +20,8 @@ related:
 
 # Analisi Funzionalità Mancanti - Modulo User
 
-<<<<<<< HEAD
 **Data Analisi**: 2026-01-22  
 **Versione LimeSurvey Upstream**: 5.4.x+  
-=======
-<<<<<<< HEAD
-**Data Analisi**: 2026-01-22  
-**Versione LimeSurvey Upstream**: 5.4.x+  
-=======
-**Data Analisi**: 2026-01-22
-**Versione LimeSurvey Upstream**: 5.4.x+
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 **Repository Upstream**: https://github.com/LimeSurvey/LimeSurvey
 
 ## Scopo del Modulo
@@ -138,13 +128,9 @@ Il modulo **User** fornisce:
 
 2. **LimeParticipant** - Partecipanti survey
 <<<<<<< HEAD
-   - Integrazione con Contact model Quaeris
-=======
-<<<<<<< HEAD
-   - Integrazione con Contact model Quaeris
-=======
    - Integrazione con Contact model <nome progetto>
->>>>>>> laraxot/dev
+=======
+   - Integrazione con Contact model Quaeris
 >>>>>>> laraxot/dev
    - Gestione partecipanti centralizzata
    - Attributi personalizzati
@@ -194,13 +180,9 @@ Nessuna funzionalità critica mancante - il modulo User è ben implementato
 ## Collegamenti
 
 <<<<<<< HEAD
-- [Modulo Quaeris](../Quaeris/docs/README.md)
-=======
-<<<<<<< HEAD
-- [Modulo Quaeris](../Quaeris/docs/README.md)
-=======
 - [Modulo <nome progetto>](../<nome progetto>/docs/README.md)
->>>>>>> laraxot/dev
+=======
+- [Modulo Quaeris](../Quaeris/docs/README.md)
 >>>>>>> laraxot/dev
 - [Modulo Limesurvey](../Limesurvey/docs/README.md)
 - [User README](./README.md)

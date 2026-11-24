@@ -10,6 +10,8 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Action per la traduzione di elementi di una collezione.
+ * @see docs/contracts/get-cloud-front-signed-url-action.md
+ * @contract docs/contracts/get-cloud-front-signed-url-action.md
  */
 class GetCloudFrontSignedUrlAction
 {

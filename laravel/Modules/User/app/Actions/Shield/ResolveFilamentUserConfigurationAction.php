@@ -11,6 +11,12 @@ use Spatie\QueueableAction\QueueableAction;
  * Action per risolvere la configurazione filament user.
  *
  * Raggruppa: isFilamentUserRoleEnabled, getFilamentUserRoleName
+<<<<<<< HEAD
+=======
+ *
+ * @see docs/contracts/resolve-filament-user-configuration-action.md
+ * @contract docs/contracts/resolve-filament-user-configuration-action.md
+>>>>>>> laraxot/dev
  */
 class ResolveFilamentUserConfigurationAction
 {

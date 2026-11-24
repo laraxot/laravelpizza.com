@@ -1,12 +1,12 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Direttive Filament nel layout UI (progetti senza Cms)"
 =======
-<<<<<<< .merge_file_qpHdt8
 title: "Direttive Filament nel layout UI (PTVX senza Cms)"
+>>>>>>> laraxot/dev
 =======
 title: "Direttive Filament nel layout UI (progetti senza Cms)"
->>>>>>> .merge_file_ClD86L
 >>>>>>> laraxot/dev
 type: story
 status: done
@@ -60,10 +60,10 @@ Nei layout Blade che ospitano componenti Filament/Livewire (stessi obblighi di
 ## Acceptance criteria
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [x] Nei progetti senza `Cms` non viene introdotto `Modules/Cms` né file Cms inesistenti.
 - [x] Layout UI/User: `@filamentStyles` nel `head`, `@filamentScripts` e notifications nudo nel `body`.
 =======
-<<<<<<< .merge_file_qpHdt8
 - [x] Il layout reale contiene `@filamentStyles` nel `head`.
 - [x] Il layout reale contiene `@filamentScripts` nel `body`.
 - [x] Nessun file Cms inesistente viene introdotto.
@@ -90,10 +90,10 @@ Obblighi (stessi di `cms::head` / `cms::foot` altrove):
 
 - [x] Nessun `Modules/Cms` nel checkout PTVX.
 - [x] Layout UI/User: Styles + Scripts + notifications nudo.
+>>>>>>> laraxot/dev
 =======
 - [x] Nei progetti senza `Cms` non viene introdotto `Modules/Cms` né file Cms inesistenti.
 - [x] Layout UI/User: `@filamentStyles` nel `head`, `@filamentScripts` e notifications nudo nel `body`.
->>>>>>> .merge_file_ClD86L
 >>>>>>> laraxot/dev
 - [x] Pest `FilamentLayoutDirectivesTest` verde (file-read, no DB).
 - [x] Memoria portfolio aggiornata col mapping Cms→UI.

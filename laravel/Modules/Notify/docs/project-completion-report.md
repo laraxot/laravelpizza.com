@@ -3,14 +3,8 @@ title: "Report di Completamento Progetto Fixcity"
 type: concept
 tags: [project, completion, report]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-qmd: "project-completion-report report di completamento progetto fixcity"
-qmd: "project-completion-report report di completamento progetto ptv"
-=======
 updated: 2026-11-23
 qmd: "project-completion-report report di completamento progetto fixcity"
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:

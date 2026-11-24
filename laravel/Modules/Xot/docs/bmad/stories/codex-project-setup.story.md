@@ -9,6 +9,7 @@ updated: 2026-10-05
 tags: [codex, skills, automation, second-brain]
 related:
   - ./project-quality-audit.story.md
+qmd: "codex project setup story installazione automazioni"
 ---
 
 # Installazione setup automazioni per Codex

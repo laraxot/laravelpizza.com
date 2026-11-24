@@ -17,11 +17,8 @@ related:
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
 <<<<<<< HEAD
-=======
-<<<<<<< .merge_file_hqg2HE
 status: draft
 =======
->>>>>>> .merge_file_3bhdOy
 >>>>>>> laraxot/dev
 ---
 
@@ -29,8 +26,6 @@ status: draft
 
 ## Collegamenti correlati
 <<<<<<< HEAD
-=======
-<<<<<<< .merge_file_hqg2HE
 - [Documentazione centrale](/docs/readme.md)
 - [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
 - [Implementazione Auth Pages](auth-pages-implementation.md)
@@ -45,22 +40,14 @@ status: draft
 - [Implementazione Logout](logout-blade-implementation-2.md)
 - [Analisi Logout](logout-blade-analysis-3.md)
 - [Conclusioni Logout](logout-blade-conclusions-2.md)
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_3bhdOy
->>>>>>> laraxot/dev
 - [Documentazione Auth Tema One](/laravel/themes/one/docs/auth.md)
 
 ## Errore Fondamentale Identificato
 
 <<<<<<< HEAD
-L'implementazione attuale del file `/var/www/html/Quaeris/laravel/Themes/One/resources/views/pages/auth/logout.blade.php` è corretta nella sua struttura di base, ma presenta alcune limitazioni:
-=======
-<<<<<<< .merge_file_hqg2HE
 L'implementazione attuale del file `/var/www/html/<nome progetto>/laravel/Themes/One/resources/views/pages/auth/logout.blade.php` è corretta nella sua struttura di base, ma presenta alcune limitazioni:
 =======
 L'implementazione attuale del file `/var/www/html/Quaeris/laravel/Themes/One/resources/views/pages/auth/logout.blade.php` è corretta nella sua struttura di base, ma presenta alcune limitazioni:
->>>>>>> .merge_file_3bhdOy
 >>>>>>> laraxot/dev
 
 ```php
@@ -93,13 +80,9 @@ return redirect()->route('home');
 2. **Mancanza di direttive Folio**: Non utilizza le direttive di Laravel Folio come `middleware()` e `name()` per definire correttamente la rotta.
 
 <<<<<<< HEAD
-3. **Mancanza di localizzazione URL**: Non utilizza `app()->getLocale()` per la localizzazione degli URL nel reindirizzamento, come richiesto dalle convenzioni di Quaeris.
-=======
-<<<<<<< .merge_file_hqg2HE
 3. **Mancanza di localizzazione URL**: Non utilizza `app()->getLocale()` per la localizzazione degli URL nel reindirizzamento, come richiesto dalle convenzioni di <nome progetto>.
 =======
 3. **Mancanza di localizzazione URL**: Non utilizza `app()->getLocale()` per la localizzazione degli URL nel reindirizzamento, come richiesto dalle convenzioni di Quaeris.
->>>>>>> .merge_file_3bhdOy
 >>>>>>> laraxot/dev
 
 4. **Mancanza di gestione errori e logging**: Non include gestione degli errori o logging delle operazioni di logout.
@@ -168,11 +151,7 @@ Questi errori evidenziano l'importanza di:
 - Analizzare attentamente il codice esistente prima di proporre modifiche
 - Comprendere a fondo le classi base e le loro restrizioni
 <<<<<<< HEAD
-- Rispettare le convenzioni e le strutture del progetto Quaeris
-=======
-<<<<<<< .merge_file_hqg2HE
 - Rispettare le convenzioni e le strutture del progetto <nome progetto>
 =======
 - Rispettare le convenzioni e le strutture del progetto Quaeris
->>>>>>> .merge_file_3bhdOy
 >>>>>>> laraxot/dev

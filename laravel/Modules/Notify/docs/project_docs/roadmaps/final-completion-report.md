@@ -1,7 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 title: "final completion report 2025 10"
 type: note
 tags: [documentation]
@@ -673,8 +670,6 @@ Con questa base solida, FixCity è pronta per:
 *"With Super Cow powers, even the impossible becomes possible!"*
 
 **END OF REPORT** ✅
-=======
->>>>>>> laraxot/dev
 issues: []
 discussions: []
 title: "FINAL_COMPLETION_REPORT_2025-10-01"
@@ -696,7 +691,3 @@ related:
 ---
 
 > Questo file è stato rinominato in [final-completion-report.md](final-completion-report.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

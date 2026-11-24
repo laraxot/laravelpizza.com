@@ -3,11 +3,7 @@ title: "netfun sms error log false positive.story"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "netfun sms error log false positive.story"
 issues: []
 discussions: []
@@ -63,6 +59,7 @@ incollato dall'utente (troncato lì solo per condividerlo in chat).
 Verificato che non fosse un comportamento già discusso/voluto: nessuna
 story, issue o discussion esistente (in `module_notify_fila5`,
 <<<<<<< HEAD
+<<<<<<< HEAD
 `module_<nome progetto>_fila5`, `base_<nome progetto>_fila5`) parla del livello di log
 sbagliato: solo di problemi di configurazione ormai risolti (token,
 =======
@@ -73,6 +70,10 @@ sbagliato — solo di problemi di configurazione ormai risolti (token,
 `module_<nome progetto>_fila5`, `base_<nome progetto>_fila5`) parla del livello di log
 sbagliato: solo di problemi di configurazione ormai risolti (token,
 >>>>>>> .merge_file_zwYtl8
+>>>>>>> laraxot/dev
+=======
+`module_<nome progetto>_fila5`, `base_<nome progetto>_fila5`) parla del livello di log
+sbagliato: solo di problemi di configurazione ormai risolti (token,
 >>>>>>> laraxot/dev
 driver, sender) o del refactor delle factory SMS/Telegram/WhatsApp
 (discussion [module_notify_fila5#50](https://github.com/laraxot/module_notify_fila5/discussions/50),

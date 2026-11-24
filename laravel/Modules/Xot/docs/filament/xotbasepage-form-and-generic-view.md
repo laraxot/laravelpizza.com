@@ -1,6 +1,7 @@
 ---
 title: XotBasePage, form() e vista generica
 updated: 2026-11-18
+qmd: "xotbasepage form and generic view vista"
 ---
 
 # XotBasePage: `form()` e vista generica

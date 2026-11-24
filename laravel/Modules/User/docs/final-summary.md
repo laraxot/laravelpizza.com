@@ -303,11 +303,7 @@ public function getHeaderActions(): array
 <<<<<<< HEAD
 - [README](./README.md)
 =======
-<<<<<<< HEAD
 - [README](./readme.md)
-=======
-- [README](./README.md)
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 ### External Documentation

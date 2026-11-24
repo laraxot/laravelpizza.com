@@ -4,13 +4,9 @@ created: 2026-09-26
 qmd: "agent edit discipline"
 issues: []
 discussions: []
-title: agent edit discipline: puntatore
+title: "agent edit discipline: puntatore"
 type: reference
-<<<<<<< HEAD
-updated: 2026-05-19
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 status: draft
 ---
 

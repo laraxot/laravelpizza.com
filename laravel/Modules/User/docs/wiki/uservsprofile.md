@@ -2,6 +2,10 @@
 module: User
 concept: User vs Profile
 last_updated: 2026-04-15
+<<<<<<< HEAD
+=======
+qmd: "uservsprofile user profile models"
+>>>>>>> laraxot/dev
 ---
 
 # User vs Profile Models

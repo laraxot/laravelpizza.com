@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "PHPStan Analysis - User Module (Jan 2026)"
+type: note
+qmd: "phpstan fix plan analysis user jan"
+---
+>>>>>>> laraxot/dev
 # PHPStan Analysis - User Module (Jan 2026)
 
 ## Current Status

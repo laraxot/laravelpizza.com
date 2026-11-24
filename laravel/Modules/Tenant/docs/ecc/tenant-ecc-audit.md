@@ -4,11 +4,7 @@ type: ecc-audit
 status: review
 updated: 2026-11-16
 module: Tenant
-<<<<<<< .merge_file_wPsvcd
 qmd: "ECC audit Tenant verification security testing laravel"
-=======
-qmd: "ECC audit Tenant verification security testing laravel php-reviewer security-reviewer database-reviewer architect tenant isolation Host TrustHosts policy password"
->>>>>>> .merge_file_PtUj7g
 ---
 
 # Audit ECC — Tenant

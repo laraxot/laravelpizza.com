@@ -13,6 +13,7 @@ related:
   - ./dcp-201-nomi-dei-file-md-senza-date-e-senza-suffissi.story.md
   - ./phpstan-modules-zero-errors.story.md
   - ../../../../../docs/wiki/how-to/git-merge-marker-sweep.md
+qmd: "collision rewrite complete files story collisioni"
 ---
 
 # Collisioni: riscrivere il file completo, non scegliere un lato

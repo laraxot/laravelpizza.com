@@ -10,8 +10,7 @@ use Modules\Tenant\Actions\GetTenantNameAction;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
- * Percorso di un file nella cartella di config del tenant corrente.
- *
+ * @see docs/contracts/get-tenant-file-path-action.md
  * @contract docs/contracts/get-tenant-file-path-action.md
  */
 class GetTenantFilePathAction

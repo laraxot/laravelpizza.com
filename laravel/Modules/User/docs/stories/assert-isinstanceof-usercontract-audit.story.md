@@ -1,18 +1,8 @@
 ---
 id: story-assert-isinstanceof-usercontract-audit-2026-09-21
 slug: assert-isinstanceof-usercontract-audit-2026-09-21
-<<<<<<< HEAD
 title: "STORY — Assert::isInstanceOf contro Model concreto invece di UserContract, audit repo-wide"
 description: "Modules\\User\\Models\\User e Modules\\Quaeris\\Models\\User sono sorelle (entrambe figlie di BaseUser), non genitore/figlio: instanceof/Assert contro il model concreto sbagliato e' sempre falso a runtime per l'auth model reale. Pattern ricorrente, gia' documentato in user-profile-volt-instanceof-wrong-user-class.md; oggi trovate altre occorrenze, una gia' corretta da sessione concorrente."
-=======
-<<<<<<< .merge_file_vT6quF
-title: "STORY: Assert::isInstanceOf contro Model concreto invece di UserContract, audit repo-wide"
-description: "Modules\\User\\Models\\User e Modules\\<nome progetto>\\Models\\User sono sorelle (entrambe figlie di BaseUser), non genitore/figlio: instanceof/Assert contro il model concreto sbagliato e' sempre falso a runtime per l'auth model reale. Pattern ricorrente, gia' documentato in user-profile-volt-instanceof-wrong-user-class.md; oggi trovate altre occorrenze, una gia' corretta da sessione concorrente."
-=======
-title: "STORY — Assert::isInstanceOf contro Model concreto invece di UserContract, audit repo-wide"
-description: "Modules\\User\\Models\\User e Modules\\Quaeris\\Models\\User sono sorelle (entrambe figlie di BaseUser), non genitore/figlio: instanceof/Assert contro il model concreto sbagliato e' sempre falso a runtime per l'auth model reale. Pattern ricorrente, gia' documentato in user-profile-volt-instanceof-wrong-user-class.md; oggi trovate altre occorrenze, una gia' corretta da sessione concorrente."
->>>>>>> .merge_file_Rqe8ye
->>>>>>> laraxot/dev
 document_type: story
 category: bmad
 scope: module:User
@@ -35,24 +25,18 @@ related:
 github:
   repository: https://github.com/laraxot/module_user_fila5
   issues: https://github.com/laraxot/module_user_fila5/issues
+<<<<<<< HEAD
+=======
+qmd: "assert isinstanceof usercontract audit story assertisinstanceof"
+>>>>>>> laraxot/dev
 ---
 
-<<<<<<< HEAD
 # STORY — Assert::isInstanceOf contro Model concreto invece di UserContract, audit repo-wide
-=======
-<<<<<<< .merge_file_vT6quF
-# STORY: Assert::isInstanceOf contro Model concreto invece di UserContract, audit repo-wide
-=======
-# STORY — Assert::isInstanceOf contro Model concreto invece di UserContract, audit repo-wide
->>>>>>> .merge_file_Rqe8ye
->>>>>>> laraxot/dev
 
 ## Contesto
 
 Utente, mid-turn su un altro task: "fare Assert::isInstanceOf($user,
 <<<<<<< HEAD
-=======
-<<<<<<< .merge_file_vT6quF
 User::class); e' sbagliato meglio confrontare con UserContract!": stesso
 principio architetturale gia' documentato in
 `user-profile-volt-instanceof-wrong-user-class.md` (2026-09-03/04):
@@ -63,10 +47,6 @@ User::class); e' sbagliato meglio confrontare con UserContract!" — stesso
 principio architetturale gia' documentato in
 `user-profile-volt-instanceof-wrong-user-class.md` (2026-09-03/04):
 `config/auth.php` usa `Modules\Quaeris\Models\User` come auth model reale,
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_Rqe8ye
->>>>>>> laraxot/dev
 `Modules\User\Models\User` e' una classe **sorella** (entrambe estendono
 `Modules\User\Models\BaseUser`), non genitore/figlio. `instanceof`/`Assert`
 contro il model concreto sbagliato fallisce sempre a runtime per l'utente
@@ -85,15 +65,7 @@ in `getFullNameAttribute`, `getFirstNameAttribute`, `getLastNameAttribute`,
 `UserContract::class` ovunque, import `use Modules\User\Models\User;`
 rimosso): una sessione concorrente sulla stessa working tree condivisa aveva
 appena applicato esattamente questo fix, in parallelo alla segnalazione
-<<<<<<< HEAD
 dell'utente. Nessuna mia azione necessaria su questo file — verificato solo
-=======
-<<<<<<< .merge_file_vT6quF
-dell'utente. Nessuna mia azione necessaria su questo file: verificato solo
-=======
-dell'utente. Nessuna mia azione necessaria su questo file — verificato solo
->>>>>>> .merge_file_Rqe8ye
->>>>>>> laraxot/dev
 lo stato finale (`git diff` completo salvato in memoria
 `profile-contract-over-model.md`).
 
@@ -110,15 +82,7 @@ Grep `isInstanceOf.*User::class` sul repo (esclude `vendor`) ha trovato altri
 | `Modules/Tenant/tests/Unit/TenantModelsTest.php` | 72 |
 
 `LoginController.php` e `AssignTeamCommand.php` usano gia' `BaseUser::class`
-<<<<<<< HEAD
 (il genitore comune concreto, non `UserContract`) — pattern diverso,
-=======
-<<<<<<< .merge_file_vT6quF
-(il genitore comune concreto, non `UserContract`): pattern diverso,
-=======
-(il genitore comune concreto, non `UserContract`) — pattern diverso,
->>>>>>> .merge_file_Rqe8ye
->>>>>>> laraxot/dev
 probabilmente accettabile (`BaseUser` e' comune a entrambe le sorelle), non
 toccato, non auditato a fondo in questa story.
 
@@ -127,15 +91,7 @@ toccato, non auditato a fondo in questa story.
 Fix da confermare con l'utente prima di procedere sui 4 file residui: stesso
 tipo di modifica (swap `User::class` → `UserContract::class`, rimuovere
 import inutilizzato se non serve altrove nel file), rischio basso ma tocca
-<<<<<<< HEAD
 4 file in 3 moduli diversi (User, Cms, Tenant) — fuori dall'Owned
-=======
-<<<<<<< .merge_file_vT6quF
-4 file in 3 moduli diversi (User, Cms, Tenant): fuori dall'Owned
-=======
-4 file in 3 moduli diversi (User, Cms, Tenant) — fuori dall'Owned
->>>>>>> .merge_file_Rqe8ye
->>>>>>> laraxot/dev
 File/Module Scope implicito di questa segnalazione puntuale.
 
 ## Second brain aggiornato
@@ -145,14 +101,6 @@ File/Module Scope implicito di questa segnalazione puntuale.
 
 ## Status
 
-<<<<<<< HEAD
 `review` — fix confermato per `IsProfileTrait.php` (gia' fatto da altri),
-=======
-<<<<<<< .merge_file_vT6quF
-`review`: fix confermato per `IsProfileTrait.php` (gia' fatto da altri),
-=======
-`review` — fix confermato per `IsProfileTrait.php` (gia' fatto da altri),
->>>>>>> .merge_file_Rqe8ye
->>>>>>> laraxot/dev
 audit completato per il resto del repo, correzione dei 4 file residui in
 attesa di conferma esplicita dell'utente.

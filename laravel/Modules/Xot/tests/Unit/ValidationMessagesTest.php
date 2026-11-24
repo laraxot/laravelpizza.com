@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Unit;
 
 use Illuminate\Support\Facades\Validator;
-use PHPUnit\Framework\Assert;
 use Modules\Xot\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
 use function Safe\preg_match;
 

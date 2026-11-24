@@ -1,7 +1,12 @@
 ---
 type: investigation
 title: "Investigation Teams & Roles"
+<<<<<<< HEAD
 links: {github_issue: #XXX}
+=======
+links: {github_issue: "#XXX"}
+qmd: "investigation teams roles"
+>>>>>>> laraxot/dev
 ---
 # Investigation: Teams & Roles
 

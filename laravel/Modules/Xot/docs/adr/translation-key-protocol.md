@@ -6,6 +6,7 @@ created: 2026-11-23
 updated: 2026-11-23
 decision-makers: [Xot, Lang]
 issues: []
+qmd: "translation key protocol protocollo chiavi traduzione"
 ---
 
 # ADR: protocollo delle chiavi di traduzione

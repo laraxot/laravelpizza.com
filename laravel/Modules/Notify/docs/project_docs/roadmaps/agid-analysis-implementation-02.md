@@ -3,11 +3,7 @@ title: "agid analysis implementation 2025 10 02"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "agid analysis implementation 2025 10 02"
 issues: []
 discussions: []

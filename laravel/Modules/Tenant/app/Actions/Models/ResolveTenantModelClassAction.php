@@ -13,6 +13,10 @@ use Nwidart\Modules\Facades\Module;
 use Nwidart\Modules\Laravel\Module as LaravelModule;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/resolve-tenant-model-class-action.md
+ * @contract docs/contracts/resolve-tenant-model-class-action.md
+ */
 class ResolveTenantModelClassAction
 {
     use QueueableAction;

@@ -391,11 +391,7 @@ test('user service provider only configures, not registers dependencies', functi
 <<<<<<< HEAD
 - [README.md](./README.md) - Overview modulo
 =======
-<<<<<<< HEAD
 - [README.md](./readme.md) - Overview modulo
-=======
-- [README.md](./README.md) - Overview modulo
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 ### Documentazione Esterna

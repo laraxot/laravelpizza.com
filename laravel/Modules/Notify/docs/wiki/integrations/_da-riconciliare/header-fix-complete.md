@@ -1,20 +1,10 @@
 ---
 title: "✅ Header Notify Fixato - 100% Conforme Bootstrap Italia"
-<<<<<<< HEAD
-title: "✅ Header <nome progetto> Fixato - 100% Conforme Bootstrap Italia"
-type: concept
-tags: [header, fix, complete]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "header-fix-complete ✅ header laraxot fixato - 100% conforme bootstrap italia"
-qmd: "header-fix-complete ✅ header <nome progetto> fixato - 100% conforme bootstrap italia"
-=======
 type: concept
 tags: [header, fix, complete]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "header-fix-complete ✅ header laraxot fixato - 100% conforme bootstrap italia"
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:

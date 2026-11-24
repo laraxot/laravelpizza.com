@@ -10,11 +10,7 @@ description: '<body> <div class="skiplink"> <a class="visually-hidden-focusable"
 tags: [migrato-da-txt, notify]
 converted_from: ref_struct.txt
 created: 2026-08-24
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 ---
 
 <body>

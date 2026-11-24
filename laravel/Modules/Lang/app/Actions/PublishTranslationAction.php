@@ -9,6 +9,10 @@ use Modules\Lang\Datas\TranslationData;
 use Modules\Xot\Actions\Arr\SaveArrayAction;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/publish-translation-action.md
+ * @contract docs/contracts/publish-translation-action.md
+ */
 class PublishTranslationAction
 {
     use QueueableAction;

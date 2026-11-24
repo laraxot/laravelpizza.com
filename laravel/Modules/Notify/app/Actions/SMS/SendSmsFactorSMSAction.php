@@ -13,6 +13,10 @@ use Modules\Notify\Datas\SmsData;
 use Modules\Notify\Models\Contracts\SmsActionContract;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/send-sms-factor-sms-action.md
+ * @contract docs/contracts/send-sms-factor-sms-action.md
+ */
 final class SendSmsFactorSMSAction implements SmsActionContract
 {
     use QueueableAction;

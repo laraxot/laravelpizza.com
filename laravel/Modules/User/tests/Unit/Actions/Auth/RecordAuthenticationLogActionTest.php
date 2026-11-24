@@ -36,9 +36,9 @@ test('record authentication log action guards missing table', function (): void 
         ->toContain('Log::warning')
         ->toContain('authentication_logs missing on user connection');
 <<<<<<< HEAD
-});
-=======
 })->group('USER-AUTHLOG-INV-1');
+=======
+});
 >>>>>>> laraxot/dev
 
 test('record authentication log action types UserContract and HasAuthentications not BaseUser', function (): void {
@@ -53,9 +53,9 @@ test('record authentication log action types UserContract and HasAuthentications
         ->not->toContain('use Modules\User\Models\BaseUser')
         ->not->toContain('BaseUser $user');
 <<<<<<< HEAD
-});
-=======
 })->group('USER-AUTHLOG-INV-3');
+=======
+});
 >>>>>>> laraxot/dev
 
 test('auth login listeners guard UserContract not BaseUser', function (): void {

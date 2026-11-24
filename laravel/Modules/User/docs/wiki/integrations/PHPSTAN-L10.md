@@ -4,6 +4,10 @@ module: User
 type: quality-gate
 status: complete
 created: 2026-08-02
+<<<<<<< HEAD
+=======
+qmd: "phpstan l10 level compliance user"
+>>>>>>> laraxot/dev
 ---
 
 # PHPStan Level 10 Compliance — User Module

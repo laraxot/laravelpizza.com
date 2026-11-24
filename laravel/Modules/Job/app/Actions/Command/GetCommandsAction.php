@@ -13,6 +13,10 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
+/**
+ * @see docs/contracts/get-commands-action.md
+ * @contract docs/contracts/get-commands-action.md
+ */
 class GetCommandsAction
 {
     use QueueableAction;

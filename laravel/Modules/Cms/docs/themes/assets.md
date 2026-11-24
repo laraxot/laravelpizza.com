@@ -7,10 +7,7 @@ updated: 2026-09-26
 qmd: "assets"
 issues: []
 discussions: []
-<<<<<<< HEAD
-=======
 status: draft
->>>>>>> laraxot/dev
 ---
 
 # Gestione degli Assets dei Temi
@@ -47,34 +44,12 @@ status: draft
 ## Best Practices
 
 1. **Sviluppo**
-<<<<<<< HEAD
-   - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-   - Utilizzare `npm run dev`
-=======
-<<<<<<< HEAD
-   - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-
-   - Utilizzare `npm run dev`
-=======
    - Utilizzare `npm run dev` (il symlink `public_html/themes/<Tema>` rende visibile la build, niente copia)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
    - Verificare il corretto caricamento degli assets
    - Mantenere la documentazione aggiornata
 
 2. **Produzione**
-<<<<<<< HEAD
-   - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-   - Eseguire `npm run build` (servito via symlink, niente copy)
-=======
-<<<<<<< HEAD
-   - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-
-   - Eseguire `npm run build` (servito via symlink, niente copy)
-=======
    - Eseguire `npm run build` (niente `npm run copy`: `public_html/themes/<Tema>` è un symlink)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
    - Verificare la presenza e l'accessibilità degli assets
    - Testare il funzionamento completo del tema
 

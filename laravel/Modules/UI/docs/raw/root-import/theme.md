@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Theme"
+type: note
+qmd: "theme"
+---
+>>>>>>> laraxot/dev
 https://dev.to/themesberg/how-to-build-a-blog-template-with-tailwind-css-and-flowbite-5e4n
 
 

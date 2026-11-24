@@ -53,3 +53,13 @@ Playbook: [wiki/troubleshooting/git-push-dual-remote.md](./wiki/troubleshooting/
 
 `merge-base` vuoto vs un org → STOP. User: laraxot `3ea7273a` OK; provtv unrelated.
 [../User/docs/wiki/troubleshooting/git-push-dual-remote-unrelated.md](../../User/docs/wiki/troubleshooting/git-push-dual-remote-unrelated.md).
+
+## Regressioni silenziose del sync del 21/11 (24/11/2026)
+
+`find_sync_regressions.py` (`SYNC_BASE=dd46996a4`) su `Modules/Activity`: 132 `regression`, 309 `deleted-unseen`, 637 `unknown`,
+quasi tutti in `docs/` e `tests/`. Nel codice (`app/`, `config/`, `database/`, `lang/`, `resources/views`) **nessuna
+regressione funzionale**: le differenze sono commenti, righe vuote, una variabile Blade inutilizzata, faker al posto di
+`Str::uuid()`, e `Snapshot`/`StoredEvent` con `getConnectionName()` per `testing` (aggiunto e tolto a ondate dai sync del
+03/03, 11/06, 11/13, 11/21: nessun chiamante lo richiede, il test DB e' mysql). Non toccati. I `deleted-unseen` di `app/`
+(`Support/ActivityLogSchema` sostituito da `IsActivityLogSchemaWritableAction`, `ActivitysTable`, `TestModelFactory`,
+`TestModelSeeder`, `Http/Livewire/_components.json`) non hanno chiamanti. Le migrazioni "regression" sono solo da segnalare.

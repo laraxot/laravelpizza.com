@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Debug: Perché logout.blade.php non funziona (Volt + Folio)"
+type: note
+qmd: "volt folio logout debug perché logoutbladephp"
+---
+>>>>>>> laraxot/dev
 # Debug: Perché logout.blade.php non funziona (Volt + Folio)
 
 ## Analisi del problema

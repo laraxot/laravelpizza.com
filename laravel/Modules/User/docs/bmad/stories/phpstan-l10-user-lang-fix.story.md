@@ -14,6 +14,10 @@ references:
   - laravel/Modules/User/docs/stories/8.1-phpstan-l10-user-config-offset-access.story.md
   - laravel/Modules/Lang/docs/stories/8.10.phpstan-cluster2-lang-pdnd-ui-2026-10-06.story.md
   - laravel/Modules/Lang/docs/stories/8.11-phpstan-l10-test-types-fix.story.md
+<<<<<<< HEAD
+=======
+qmd: "phpstan l10 user lang fix story"
+>>>>>>> laraxot/dev
 ---
 
 # PHPStan L10 User + Lang Modules Fix
@@ -100,15 +104,7 @@ Phase 2 (future session):
 ## Files
 
 ### Created/Modified
-<<<<<<< HEAD
 - BMAD Story (User): `laravel/Modules/User/docs/bmad/stories/phpstan-l10-user-lang-fix.story.md`
-=======
-<<<<<<< .merge_file_pRQfmp
-- BMAD Story (User): `laravel/Modules/User/docs/bmad/stories/phpstan-l10-user-lang-fix-20261006.story.md`
-=======
-- BMAD Story (User): `laravel/Modules/User/docs/bmad/stories/phpstan-l10-user-lang-fix.story.md`
->>>>>>> .merge_file_Ktoyng
->>>>>>> laraxot/dev
 - Story 8.11 (Lang): `laravel/Modules/Lang/docs/stories/8.11-phpstan-l10-test-types-fix.story.md`
 - Analysis (Lang): `laravel/Modules/Lang/docs/bmad/phpstan-l10-test-fixes-analysis.md`
 

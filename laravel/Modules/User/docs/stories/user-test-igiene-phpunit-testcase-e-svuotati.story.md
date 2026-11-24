@@ -10,6 +10,10 @@ epic: ../../../Xot/docs/bmad/epic-code-quality-ratchet.md
 depends_on: ["guardia DB dentro", "verdetto Pest P0 dell'utente", "./user-test-senza-refresh-database.story.md", "run completo PHPStan finito"]
 related: [./user-test-senza-refresh-database.story.md, ./7.3.test-mai-eseguiti-suffisso-mancante.story.md, ./7.2.phpstan-test-harness-contracts.story.md, ./phpstan-test-wave-user-b.story.md, ./8.2.phpstan-pest-void-chain-false-positives.story.md, ./user-livewire-auth-ritiro-con-widget-gemelli.story.md, ../../../Xot/docs/stories/test-database-guard.story.md]
 tags: [bmad, test, pest, phpunit, tautologie, igiene]
+<<<<<<< HEAD
+=======
+qmd: "user test igiene phpunit testcase svuotati"
+>>>>>>> laraxot/dev
 ---
 
 # Igiene dei test User: file non eseguiti, tautologie, stile PHPUnit

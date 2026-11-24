@@ -42,8 +42,6 @@ Rendere verificabile lo stato di User: chi è chi e cosa può fare: utenti, ruol
 
 Baseline aggiornata, nessun codice applicativo modificato. Fix e Pest restano aperti (gate DB test).
 <<<<<<< HEAD
-=======
-<<<<<<< .merge_file_1ketNX
 
 
 ---
@@ -70,5 +68,4 @@ Come manutentore del modulo User, voglio una baseline BMAD verificabile, così d
 - [ ] Quality gate e second-brain write-back.
 
 =======
->>>>>>> .merge_file_CCUMLH
 >>>>>>> laraxot/dev

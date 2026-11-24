@@ -3,6 +3,10 @@ title: "Git Push Issue — LFS Objects Missing on Remote"
 date: 2026-07-28
 author: claude-ai
 status: BLOCKED_ON_SERVER_STATE
+<<<<<<< HEAD
+=======
+qmd: "git push lfs issue objects missing"
+>>>>>>> laraxot/dev
 ---
 
 # User Module — Git Push & LFS Issue (2026-07-28)
@@ -195,6 +199,7 @@ Commits to push: 5 total
 **Status:** ⛔ BLOCKED_ON_INFRASTRUCTURE  
 **Last updated:** 2026-07-28T14:35Z  
 **Fallback:** Run PHPStan L10 locally while waiting for remote LFS fix
+<<<<<<< HEAD
 
 
 ---
@@ -205,3 +210,5 @@ Commits to push: 5 total
 
 Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file evita nomi `*-.md`.
 
+=======
+>>>>>>> laraxot/dev

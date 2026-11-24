@@ -301,7 +301,10 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 3. Aggiornare documentazione correlata
 4. Monitorare performance in produzione
 5. Implementare test automatizzati
+<<<<<<< HEAD
 5. Implementare test automatizzati
+=======
+>>>>>>> laraxot/dev
 
 ## 🔥 **NUOVI CONFLITTI IDENTIFICATI - [DATE] 15:30**
 

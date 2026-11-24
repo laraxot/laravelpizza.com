@@ -3,6 +3,7 @@ title: "Xot - phpstan-status.md"
 module: Xot
 bmad: true
 status: active
+qmd: "phpstan status phpstanstatusmd"
 ---
 # PHPStan Status — Xot
 

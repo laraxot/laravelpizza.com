@@ -8,15 +8,7 @@ qmd: "socialite-architecture socialite authentication architecture"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-<<<<<<< HEAD
-  - "./AGENTS.md"
-=======
-<<<<<<< HEAD
   - "./agents.md"
-=======
-  - "./AGENTS.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./architecture.md"
   - "./auth-patterns.md"
   - "./bmad-method.md"

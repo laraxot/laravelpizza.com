@@ -3,11 +3,7 @@ title: "Notify Module Documentation"
 type: documentation
 tags: [module, documentation]
 created: 2026-06-05
-<<<<<<< HEAD
-updated: 2026-08-02
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 status: draft
 qmd: "documentation notify"
 ---

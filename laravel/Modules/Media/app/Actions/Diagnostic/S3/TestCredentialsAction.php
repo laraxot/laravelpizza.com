@@ -8,6 +8,10 @@ use Aws\Exception\AwsException;
 use Modules\Media\Actions\Diagnostic\Aws\CreateFilesystemStsClientAction;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/test-credentials-action.md
+ * @contract docs/contracts/test-credentials-action.md
+ */
 class TestCredentialsAction
 {
     use QueueableAction;

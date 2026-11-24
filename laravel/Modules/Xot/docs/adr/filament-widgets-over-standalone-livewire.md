@@ -5,6 +5,7 @@ status: accepted
 module: Xot
 created: 2026-11-23
 updated: 2026-11-24
+qmd: "filament widgets over standalone livewire nessun"
 ---
 
 # Nessun Livewire standalone: usare Filament Widget

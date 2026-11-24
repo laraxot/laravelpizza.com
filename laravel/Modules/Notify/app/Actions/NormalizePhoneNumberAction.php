@@ -9,6 +9,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\preg_replace;
 
+/**
+ * @see docs/contracts/normalize-phone-number-action.md
+ * @contract docs/contracts/normalize-phone-number-action.md
+ */
 class NormalizePhoneNumberAction
 {
     use QueueableAction;

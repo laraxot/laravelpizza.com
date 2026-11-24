@@ -3,6 +3,7 @@ title: "Xot - namespace-rules.md"
 module: Xot
 bmad: true
 status: active
+qmd: "namespace rules namespacerulesmd"
 ---
 # Regole di Namespace
 

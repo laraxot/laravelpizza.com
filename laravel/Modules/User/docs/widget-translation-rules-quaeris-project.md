@@ -1,25 +1,17 @@
 ---
 <<<<<<< HEAD
-title: "Widget Translation Rules - Quaeris Project"
-=======
-<<<<<<< .merge_file_THJcMj
 title: "Widget Translation Rules - <nome progetto> Project"
 =======
 title: "Widget Translation Rules - Quaeris Project"
->>>>>>> .merge_file_ynVDOV
 >>>>>>> laraxot/dev
 type: rule
 tags: [widget, translation, rules]
 created: 2026-07-14
 updated: 2026-07-14
 <<<<<<< HEAD
-qmd: "widget-translation-rules-2 widget translation rules - quaeris project"
-=======
-<<<<<<< .merge_file_THJcMj
 qmd: "widget-translation-rules-2 widget translation rules - <nome progetto> project"
 =======
 qmd: "widget-translation-rules-2 widget translation rules - quaeris project"
->>>>>>> .merge_file_ynVDOV
 >>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -33,11 +25,6 @@ related:
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
 <<<<<<< HEAD
----
-
-# Widget Translation Rules - Quaeris Project
-=======
-<<<<<<< .merge_file_THJcMj
 status: draft
 ---
 
@@ -46,7 +33,6 @@ status: draft
 ---
 
 # Widget Translation Rules - Quaeris Project
->>>>>>> .merge_file_ynVDOV
 >>>>>>> laraxot/dev
 
 ## Core Principles
@@ -163,8 +149,6 @@ class EditUserWidget extends XotBaseWidget
         {{ __('user::widgets.edit_user.title') }}
     </h2>
 <<<<<<< HEAD
-=======
-<<<<<<< .merge_file_THJcMj
 
     <p class="text-gray-600 mb-6">
         {{ __('user::widgets.edit_user.description') }}
@@ -181,10 +165,6 @@ class EditUserWidget extends XotBaseWidget
     
     {{ $this->form }}
     
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_ynVDOV
->>>>>>> laraxot/dev
     <div class="mt-6 flex justify-end space-x-3">
         <button type="button" class="btn-secondary">
             {{ __('user::widgets.edit_user.actions.cancel.label') }}
@@ -252,13 +232,9 @@ protected static string $view = 'user::widgets.edit-user';
 - [EditUserWidget Documentation](widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](widgets/translation-guidelines.md)
 <<<<<<< HEAD
-- [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
-=======
-<<<<<<< .merge_file_THJcMj
 - [Filament Widget Conventions](best-practices/filament-widgets.md)
 =======
 - [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
->>>>>>> .merge_file_ynVDOV
 >>>>>>> laraxot/dev
 
 ## Memory Integration
@@ -270,11 +246,7 @@ This document serves as a reference for:
 - Documentation standards
 
 <<<<<<< HEAD
-All widget development should follow these rules to maintain consistency and quality across the Quaeris project.
-=======
-<<<<<<< .merge_file_THJcMj
 All widget development should follow these rules to maintain consistency and quality across the <nome progetto> project.
 =======
 All widget development should follow these rules to maintain consistency and quality across the Quaeris project.
->>>>>>> .merge_file_ynVDOV
 >>>>>>> laraxot/dev

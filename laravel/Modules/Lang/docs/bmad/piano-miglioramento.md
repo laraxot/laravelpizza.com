@@ -14,6 +14,7 @@ related:
 # Piano di miglioramento — Lang
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< .merge_file_oSXWcx
 Derivato dall'[audit](./audits/lang-audit.md).
@@ -52,6 +53,8 @@ Derivato dall'[audit](./audits/lang-audit.md).
 - [ ] ECC `00-index` aggiornato con esiti
 =======
 >>>>>>> .merge_file_36WNOd
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 Derivato dall'[audit profondo](./audits/lang-audit.md). Epic e AC: [epics.md](./epics.md). Nessun P0.
 

@@ -18,6 +18,9 @@ use Webmozart\Assert\Assert;
  * Chiavizza le righe sulla colonna primaria come `DeleteJsonFileByRecordAction`,
  * cosi' la stessa coppia `($keyName, $key)` identifica la riga da sostituire
  * in scrittura e da rimuovere in cancellazione.
+ *
+ * @see docs/contracts/update-json-file-by-record-action.md
+ * @contract docs/contracts/update-json-file-by-record-action.md
  */
 class UpdateJsonFileByRecordAction
 {

@@ -27,6 +27,10 @@ related:
   - ../../../../../bashscripts/ai/wiki/memories/feedback_no_protected_view_xot_basewizard.md
   - ../../../../../bashscripts/ai/wiki/rules/post-edit-quality-gate.md
   - ../../../../../docs/chat/user-auth-widgets-view-convention.md
+<<<<<<< HEAD
+=======
+qmd: "13 auth password widgets view not"
+>>>>>>> laraxot/dev
 ---
 
 # [STORY] ForgotPasswordWidget e ResetPasswordWidget dichiaravano una vista che non esiste

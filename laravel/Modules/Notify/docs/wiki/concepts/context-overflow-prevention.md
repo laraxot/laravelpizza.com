@@ -6,11 +6,7 @@ issues: []
 discussions: []
 title: "context-overflow-prevention — puntatore"
 type: reference
-<<<<<<< HEAD
-updated: 2026-05-21
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 related:
   - "../../../../Xot/docs/wiki/concepts/context-overflow-prevention.md"
 ---

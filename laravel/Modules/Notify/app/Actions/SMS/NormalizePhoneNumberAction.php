@@ -12,6 +12,9 @@ use function Safe\preg_replace;
 
 /**
  * Azione per l'invio di SMS tramite Agile Telecom.
+ *
+ * @see docs/contracts/sms-normalize-phone-number-action.md
+ * @contract docs/contracts/sms-normalize-phone-number-action.md
  */
 class NormalizePhoneNumberAction
 {

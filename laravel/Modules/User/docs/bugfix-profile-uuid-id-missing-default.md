@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Bugfix — Profile firstOrCreate() fatal: \"Field 'id' doesn't have a default value\""
+type: note
+qmd: "bugfix profile uuid id missing default"
+---
+>>>>>>> laraxot/dev
 # Bugfix — Profile `firstOrCreate()` fatal: "Field 'id' doesn't have a default value"
 
 ## Sintomo (produzione, 2026-07-27)

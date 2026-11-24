@@ -8,6 +8,10 @@ use Exception;
 use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/test-cloud-front-connection-action.md
+ * @contract docs/contracts/test-cloud-front-connection-action.md
+ */
 class TestCloudFrontConnectionAction
 {
     use QueueableAction;

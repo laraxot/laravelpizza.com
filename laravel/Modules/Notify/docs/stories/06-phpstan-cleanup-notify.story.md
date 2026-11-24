@@ -5,11 +5,7 @@ status: done
 priority: medium
 module: Notify
 created: 2026-10-06
-<<<<<<< HEAD
-updated: 2026-10-06
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 tags: [notify, phpstan, enum, push, notification-log]
 ---
 

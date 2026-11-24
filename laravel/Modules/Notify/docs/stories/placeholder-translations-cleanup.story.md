@@ -4,11 +4,7 @@ slug: placeholder-translations-cleanup
 title: "Via le traduzioni segnaposto dai file di lingua"
 status: done
 created: 2026-11-10
-<<<<<<< HEAD
-updated: 2026-11-10
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 related:
   - "../../../Lang/docs/stories/placeholder-translations.story.md"
 ---

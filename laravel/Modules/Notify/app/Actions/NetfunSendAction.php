@@ -11,6 +11,10 @@ use Illuminate\Support\Str;
 use Modules\Notify\Datas\SmsData;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/netfun-send-action.md
+ * @contract docs/contracts/netfun-send-action.md
+ */
 class NetfunSendAction
 {
     use QueueableAction;

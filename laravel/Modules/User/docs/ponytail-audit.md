@@ -18,6 +18,7 @@ related:
 ---
 
 > Questo file è stato rinominato in [ponytail-audit.md](ponytail-audit.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+<<<<<<< HEAD
 
 
 ---
@@ -100,3 +101,5 @@ real `UserContract.php` is untouched.
   an archive-as-`.bak` rename.
 - `Modules/Xot/docs/ponytail-audit-2026-07-02.md`, `Modules/Notify/docs/ponytail-audit-2026-07-02.md`:
   sibling module findings from the same repo-wide audit pass.
+=======
+>>>>>>> laraxot/dev

@@ -368,19 +368,7 @@ public function it_logs_activity_when_sending_email(): void
 - [Activity - README](../../README.md)
 - [Ptv - Analisi Filosofica](../../../ptv/docs/activity-log-email-tracking-philosophical-analysis.md)
 - [Ptv - Implementation Guide](../../../ptv/docs/activity-log-email-tracking-implementation.md)
-<<<<<<< HEAD
-- [Activity - README](../../README.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Activity - README](../../readme.md)
-=======
-- [Activity - README](../../README.md)
->>>>>>> laraxot/dev
-=======
-- [Activity - README](../../README.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Activity - LogActivityAction](../../app/Actions/LogActivityAction.php)
 
 ---

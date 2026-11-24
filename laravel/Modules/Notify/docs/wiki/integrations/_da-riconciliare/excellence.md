@@ -1,20 +1,10 @@
 ---
 title: "🏆 NOTIFY - ECCELLENZA 2025"
-<<<<<<< HEAD
-title: "🏆 <nome progetto> - ECCELLENZA 2025"
-type: concept
-tags: [excellence, 2025]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "excellence-2025 🏆 laraxot - eccellenza 2025"
-qmd: "excellence-2025 🏆 <nome progetto> - eccellenza 2025"
-=======
 type: concept
 tags: [excellence, 2025]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "excellence-2025 🏆 laraxot - eccellenza 2025"
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:

@@ -9,6 +9,10 @@ use ReflectionMethod;
 use Spatie\QueueableAction\QueueableAction;
 use UnexpectedValueException;
 
+/**
+ * @see docs/contracts/try-duocircle-mail-action.md
+ * @contract docs/contracts/try-duocircle-mail-action.md
+ */
 class TryDuocircleMailAction
 {
     use QueueableAction;

@@ -4,11 +4,7 @@ type: audit
 status: review
 updated: 2026-11-16
 module: Tenant
-<<<<<<< .merge_file_RDwQrY
 qmd: "audit approfondito Tenant risoluzione tenant Host header TrustHosts policy bypass tenant admin DatabaseConfig password sushi PHPStan Pest"
-=======
-qmd: "audit approfondito Tenant inventario risoluzione tenant Host header TrustHosts policy bypass tenant admin DatabaseConfig password sushi Filament Actions PHPStan Pest"
->>>>>>> .merge_file_JaXCLH
 ---
 
 # Audit approfondito — Tenant

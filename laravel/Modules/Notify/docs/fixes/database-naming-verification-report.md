@@ -3,11 +3,7 @@ title: "database naming verification report"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "database naming verification report"
 issues: []
 discussions: []
@@ -240,20 +236,9 @@ find docs/ laravel/Modules/*/docs/ -type f -name "*.md" -exec sed -i \
 
 - [Database Naming Convention](../conventions/database-naming.md)
 - [AGENTS.md](../../AGENTS.md)
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_aLoQoh
-- [Fix Summary](fixes/database-naming-fix-summary.md)
-=======
->>>>>>> laraxot/dev
 - [Fix Summary](database-naming-fix-summary.md)
 - [Database Naming Convention](../conventions/database-naming.md)
 - [AGENTS.md](../agents.md)
-- [Fix Summary](database-naming-fix-summary.md)
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_0CgbOB
->>>>>>> laraxot/dev
 - [GitHub Issue #5](https://github.com/laraxot/base_fixcity_fila5/issues/5)
 - [Laravel Directory Structure](https://laravel.com/docs/structure)
 

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "PHPStan widget property types"
+type: guide
+qmd: "phpstan widget property types 06"
+---
+>>>>>>> laraxot/dev
 # PHPStan widget property types
 
 ## Contesto

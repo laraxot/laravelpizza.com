@@ -17,12 +17,4 @@ related:
   - "./phpstanes.md"
 ---
 
-<<<<<<< HEAD
 > Questo file è stato rinominato in [base-classes-corrections-.deprecated.md](base-classes-corrections-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-=======
-<<<<<<< HEAD
-> Questo file è stato rinominato in [base-classes-corrections-.deprecated.md](base-classes-corrections-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-=======
-> Questo file è stato rinominato in [base-classes-corrections-.deprecated.md](./base-classes-corrections.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

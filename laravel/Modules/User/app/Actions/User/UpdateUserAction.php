@@ -12,6 +12,13 @@ use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Psr\Log\LoggerInterface;
 use Spatie\QueueableAction\QueueableAction;
 
+<<<<<<< HEAD
+=======
+/**
+ * @see docs/contracts/update-user-action.md
+ * @contract docs/contracts/update-user-action.md
+ */
+>>>>>>> laraxot/dev
 class UpdateUserAction
 {
     use QueueableAction;

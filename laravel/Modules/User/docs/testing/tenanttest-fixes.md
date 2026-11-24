@@ -7,6 +7,10 @@ related:
   - "./tenant-test-fixes.md"
   - "./tenantfactory-fix.md"
   - "./tenantfactory.md"
+<<<<<<< HEAD
+=======
+qmd: "tenanttest fixes"
+>>>>>>> laraxot/dev
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/tenant-test-fixes.md

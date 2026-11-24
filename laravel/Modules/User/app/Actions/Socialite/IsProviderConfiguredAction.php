@@ -9,6 +9,13 @@ namespace Modules\User\Actions\Socialite;
 
 use Spatie\QueueableAction\QueueableAction;
 
+<<<<<<< HEAD
+=======
+/**
+ * @see docs/contracts/is-provider-configured-action.md
+ * @contract docs/contracts/is-provider-configured-action.md
+ */
+>>>>>>> laraxot/dev
 class IsProviderConfiguredAction
 {
     use QueueableAction;

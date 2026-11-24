@@ -7,11 +7,7 @@ type: source
 status: draft
 tags: [code-audit, redundancy, dry, second-brain, module]
 created: "2026-05-26"
-<<<<<<< HEAD
-updated: "2026-05-26"
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 owner: "Notify"
 issue: "https://github.com/provtv/base_ptv_fila5/issues/150"
 ---

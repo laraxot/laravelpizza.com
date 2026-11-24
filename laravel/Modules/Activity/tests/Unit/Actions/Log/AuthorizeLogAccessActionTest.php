@@ -35,19 +35,19 @@ afterEach(function (): void {
 
 it('allows super-admins', function (): void {
     expect((new AuthorizeLogAccessAction)->execute(mockLogUser(true)))->toBeTrue();
-})->group('ACTIVITY-LOGACCESS-INV-1');
+});
 
 it('allows users with the log.viewAny permission', function (): void {
     expect((new AuthorizeLogAccessAction)->execute(mockLogUser(false, true)))->toBeTrue();
-})->group('ACTIVITY-LOGACCESS-INV-1');
+});
 
 it('denies users without the role and without the permission', function (): void {
     expect((new AuthorizeLogAccessAction)->execute(mockLogUser(false, false)))->toBeFalse();
-})->group('ACTIVITY-LOGACCESS-INV-2');
+});
 
 it('denies access, without crashing, when the permission does not exist yet', function (): void {
     expect((new AuthorizeLogAccessAction)->execute(mockLogUser(false, new PermissionDoesNotExist)))->toBeFalse();
-})->group('ACTIVITY-LOGACCESS-INV-3');
+});
 
 it('denies guests and users that do not implement the project user contract', function (): void {
     expect((new AuthorizeLogAccessAction)->execute(null))->toBeFalse();
@@ -55,4 +55,4 @@ it('denies guests and users that do not implement the project user contract', fu
     /** @var MockInterface&Authenticatable $genericUser */
     $genericUser = Mockery::mock(Authenticatable::class);
     expect((new AuthorizeLogAccessAction)->execute($genericUser))->toBeFalse();
-})->group('ACTIVITY-LOGACCESS-INV-2');
+});

@@ -4,11 +4,7 @@ type: analysis
 status: active
 module: Notify
 created: 2026-11-18
-<<<<<<< HEAD
-updated: 2026-11-18
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 related:
   - ./email-setup.md
   - ./DELIVERABILITY-INDEX.md

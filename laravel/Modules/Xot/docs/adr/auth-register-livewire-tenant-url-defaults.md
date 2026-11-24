@@ -1,6 +1,7 @@
 ---
 title: "Auth register Livewire tenant URL defaults"
 status: accepted
+qmd: "auth register livewire tenant url defaults"
 ---
 
 # Auth register Livewire tenant URL defaults

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "HasTeams Trait Analysis"
+type: analysis
+qmd: "hasteams trait analysis"
+---
+>>>>>>> laraxot/dev
 # HasTeams Trait Analysis
 
 ## Overview

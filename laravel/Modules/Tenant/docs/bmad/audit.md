@@ -4,11 +4,7 @@ type: audit
 status: review
 updated: 2026-11-16
 module: Tenant
-<<<<<<< .merge_file_5K2YOA
 qmd: "audit BMAD Tenant sintesi Host header TrustHosts tenant admin bypass DatabaseConfig password PHPStan Pest skip"
-=======
-qmd: "audit BMAD Tenant sintesi source-first qualità Host header TrustHosts tenant admin bypass DatabaseConfig password PHPStan Pest skip"
->>>>>>> .merge_file_eH8bSk
 ---
 
 # Audit BMAD — Tenant

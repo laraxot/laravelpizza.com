@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Ponytail-audit 2026-07-02: User module findings"
+type: audit
+qmd: "ponytail audit 02 ponytailaudit 20260702 user"
+---
+>>>>>>> laraxot/dev
 # Ponytail-audit 2026-07-02: User module findings
 
 Source: repo-wide ponytail-audit follow-up, published in module_user_fila5 discussion

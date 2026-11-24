@@ -253,15 +253,7 @@ class TeamRoleManagerTest extends TestCase
 ## Link Correlati
 - [Performance Optimization](./performance-optimization.md)
 - [Multi-tenancy](./multi-tenancy.md)
-<<<<<<< HEAD
-- [Error Handling](./error-handling.md)
-=======
-<<<<<<< .merge_file_vPftgW
 - Error Handling
-=======
-- [Error Handling](./error-handling.md)
->>>>>>> .merge_file_Z0X8nu
->>>>>>> laraxot/dev
 
 ## Note e Considerazioni
 - Validare input utente

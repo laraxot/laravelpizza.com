@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Indice task - Modulo User"
+type: note
+qmd: "tasks indice task user"
+---
+>>>>>>> laraxot/dev
 # Indice task - Modulo User
 
 Lista dei task del modulo con link ai file .md separati. Ogni task è un file nella cartella `tasks/`.

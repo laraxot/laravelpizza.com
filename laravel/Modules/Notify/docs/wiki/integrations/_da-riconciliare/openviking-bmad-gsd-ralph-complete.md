@@ -3,11 +3,7 @@ title: "OpenViking + BMAD + GSD + Ralph Loop - Setup Complete Report"
 type: concept
 tags: [openviking, bmad, gsd, ralph]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "openviking-bmad-gsd-ralph-complete openviking + bmad + gsd + ralph loop - setup complete report"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]

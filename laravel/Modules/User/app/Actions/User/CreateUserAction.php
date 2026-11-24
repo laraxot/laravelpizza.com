@@ -7,6 +7,13 @@ namespace Modules\User\Actions\User;
 use Modules\User\Models\User;
 use Spatie\QueueableAction\QueueableAction;
 
+<<<<<<< HEAD
+=======
+/**
+ * @see docs/contracts/user-create-user-action.md
+ * @contract docs/contracts/user-create-user-action.md
+ */
+>>>>>>> laraxot/dev
 class CreateUserAction
 {
     use QueueableAction;

@@ -7,6 +7,7 @@ updated: 2026-11-23
 decision-makers: [team back office]
 issues: []
 module: Xot
+qmd: "0012 behavioral contract governance invarianti verificabili"
 ---
 
 # Governance dei Behavioral Contract con invarianti verificabili

@@ -10,8 +10,7 @@ use Modules\Xot\Actions\Arr\SaveArrayAction;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
- * Fonde dati nel file di config PHP del tenant corrente e lo riscrive.
- *
+ * @see docs/contracts/save-tenant-config-action.md
  * @contract docs/contracts/save-tenant-config-action.md
  */
 class SaveTenantConfigAction

@@ -4,6 +4,10 @@ module: User
 type: note
 status: active
 updated: '2026-11-23'
+<<<<<<< HEAD
+=======
+qmd: "git conflicts resolution 27"
+>>>>>>> laraxot/dev
 ---
 
 # Risoluzione Conflitti Git - Modulo User (2025-01-27)

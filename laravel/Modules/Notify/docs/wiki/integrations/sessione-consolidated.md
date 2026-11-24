@@ -7,11 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -502,30 +498,9 @@ Themes/Sixteen/resources/views/
 ## 📚 Risorse
 
 ### Documentazione
-<<<<<<< HEAD
-- [Analisi Visiva](../../screenshots/homepage/ANALISI-VISIVA.md)
-- [Screenshot Analysis](docs/screenshots/homepage/SCREENSHOT_analysis.md)
-=======
-<<<<<<< HEAD
 - [Analisi Visiva](../../screenshots/homepage/analisi-visiva.md)
 - [Screenshot Analysis](docs/screenshots/homepage/screenshot_analysis.md)
 - [Fix Plan](../../screenshots/homepage/fix-plan.md)
-=======
-- [Analisi Visiva](../../screenshots/homepage/ANALISI-VISIVA.md)
-- [Screenshot Analysis](docs/screenshots/homepage/SCREENSHOT_analysis.md)
-<<<<<<< .merge_file_guls4i
-- [Fix Plan](docs/screenshots/homepage/fix-plan.md)
-=======
->>>>>>> laraxot/dev
-- [Fix Plan](../../screenshots/homepage/FIX-PLAN.md)
-- [Analisi Visiva](../../screenshots/homepage/ANALISI-VISIVA.md)
-- [Screenshot Analysis](docs/screenshots/homepage/SCREENSHOT_analysis.md)
-- [Fix Plan](../../screenshots/homepage/FIX-PLAN.md)
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_VI8aQQ
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [OpenViking Context](.openvikings/homepage_alignment_context.md)
 
 ### Link Esterni
@@ -1007,17 +982,8 @@ Analizzare e documentare la necessità di creare `XotBasePivot` seguendo princip
    - ✅ Filosofia Zen e principi SOLID
    - ✅ **Raccomandazione: IMPLEMENTARE ⭐⭐⭐⭐⭐**
 
-<<<<<<< HEAD
 2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
 2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
-=======
-<<<<<<< .merge_file_guls4i
-2. **[XotBasePivot Strategy](./architecture/xotbasepivot-strategy.md)** (3.500+ parole)
-=======
-2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
-2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
->>>>>>> .merge_file_VI8aQQ
->>>>>>> laraxot/dev
    - ✅ Piano step-by-step (3-4 ore totali)
    - ✅ 13 moduli impattati, 26 file da refactorare
    - ✅ Script di migration automatici
@@ -1326,17 +1292,8 @@ public function getConnectionName(): ?string
 
 **Passi:**
 1. Leggere [XotBasePivot Analysis](./architecture/xotbasepivot-analysis.md)
-<<<<<<< HEAD
 2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
 2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
-=======
-<<<<<<< .merge_file_guls4i
-2. Seguire [XotBasePivot Strategy](./architecture/xotbasepivot-strategy.md)
-=======
-2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
-2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
->>>>>>> .merge_file_VI8aQQ
->>>>>>> laraxot/dev
 3. Iniziare da User module (priorità alta)
 4. Testare continuamente con PHPStan Level 10
 
@@ -1430,10 +1387,7 @@ Per domande su questa sessione:
 
 **Ready for Team Review and Implementation! 🚀**
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ---
 
 ## sessione-super-mucca
@@ -1472,10 +1426,7 @@ related:
 
 *Consolidated from: `sessionesuper-mucca.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## 🎯 Obiettivo
 
 Analizzare e documentare la necessità di creare `XotBasePivot` seguendo principi **DRY** e **KISS**, poi **implementare** la soluzione con **PHPStan Level 10** compliance.
@@ -1499,17 +1450,8 @@ Analizzare e documentare la necessità di creare `XotBasePivot` seguendo princip
    - ✅ Filosofia Zen e principi SOLID
    - ✅ **Raccomandazione: IMPLEMENTARE ⭐⭐⭐⭐⭐**
 
-<<<<<<< HEAD
 2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
 2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
-=======
-<<<<<<< .merge_file_guls4i
-2. **[XotBasePivot Strategy](./architecture/xotbasepivot-strategy.md)** (3.500+ parole)
-=======
-2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
-2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
->>>>>>> .merge_file_VI8aQQ
->>>>>>> laraxot/dev
    - ✅ Piano step-by-step (3-4 ore totali)
    - ✅ 13 moduli impattati, 26 file da refactorare
    - ✅ Script di migration automatici
@@ -1535,15 +1477,7 @@ Analizzare e documentare la necessità di creare `XotBasePivot` seguendo princip
    - ✅ Next steps e pattern correlati
    - ✅ FAQ per nuovi developer
 
-<<<<<<< HEAD
-6. **[Executive Summary](./XotBasePivot-Executive-Summary.md)** (2.000+ parole)
-=======
-<<<<<<< HEAD
 6. **[Executive Summary](./xotbasepivot-executive-summary.md)** (2.000+ parole)
-=======
-6. **[Executive Summary](./XotBasePivot-Executive-Summary.md)** (2.000+ parole)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
    - ✅ TL;DR per management
    - ✅ Business case con ROI 58.500%
    - ✅ Risk assessment (basso)
@@ -1826,17 +1760,8 @@ public function getConnectionName(): ?string
 
 **Passi:**
 1. Leggere [XotBasePivot Analysis](./architecture/xotbasepivot-analysis.md)
-<<<<<<< HEAD
 2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
 2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
-=======
-<<<<<<< .merge_file_guls4i
-2. Seguire [XotBasePivot Strategy](./architecture/xotbasepivot-strategy.md)
-=======
-2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
-2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
->>>>>>> .merge_file_VI8aQQ
->>>>>>> laraxot/dev
 3. Iniziare da User module (priorità alta)
 4. Testare continuamente con PHPStan Level 10
 
@@ -1930,10 +1855,7 @@ Per domande su questa sessione:
 
 **Ready for Team Review and Implementation! 🚀**
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ---
 
 **Consolidated by:** Phase 2f intelligent merging

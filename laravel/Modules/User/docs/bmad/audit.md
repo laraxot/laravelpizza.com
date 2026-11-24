@@ -10,8 +10,6 @@ qmd: "audit BMAD User sintesi finding P0 P1 PHPStan Pest"
 # Audit BMAD — User
 
 <<<<<<< HEAD
-=======
-<<<<<<< .merge_file_SYrERi
 SSoT dettagliata: [audits/user-audit.md](./audits/user-audit.md)
 
 ## Sintesi (2026-11-16)
@@ -34,7 +32,6 @@ SSoT dettagliata: [audits/user-audit.md](./audits/user-audit.md)
 - Pest: da eseguire in ambiente testing non produttivo.
 - Security/runtime: story figlie su finding P0/P1 dell'audit dettagliato.
 =======
->>>>>>> .merge_file_To6cft
 >>>>>>> laraxot/dev
 SSoT dettagliata: [audits/user-audit.md](./audits/user-audit.md) · scopo: [purpose.md](./purpose.md)
 
@@ -76,12 +73,4 @@ SSoT dettagliata: [audits/user-audit.md](./audits/user-audit.md) · scopo: [purp
 
 ## Seguito
 
-<<<<<<< HEAD
 [epics.md](./epics.md) · [decision-log.md](./decision-log.md) · [story](./stories/module-bmad-audit.story.md) · [piano](./piano-miglioramento.md) · [ECC](../ecc/user-ecc-audit.md)
-=======
-<<<<<<< .merge_file_SYrERi
-[epics.md](./epics.md) · [decision-log.md](./decision-log.md) · [story](./stories/module-bmad-audit.story.md) · [ECC](../ecc/user-ecc-audit.md)
-=======
-[epics.md](./epics.md) · [decision-log.md](./decision-log.md) · [story](./stories/module-bmad-audit.story.md) · [piano](./piano-miglioramento.md) · [ECC](../ecc/user-ecc-audit.md)
->>>>>>> .merge_file_To6cft
->>>>>>> laraxot/dev

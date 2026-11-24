@@ -5,6 +5,10 @@ sources:
 confidence: high
 updated: 2026-04-15
 related:
+<<<<<<< HEAD
+=======
+qmd: "user overview"
+>>>>>>> laraxot/dev
 ---
 
 # User Module — Overview

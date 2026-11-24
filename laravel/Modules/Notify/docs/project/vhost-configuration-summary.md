@@ -3,11 +3,7 @@ title: "🌐 VHost Configuration Summary"
 type: concept
 tags: [vhost, configuration, summary]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "vhost-configuration-summary 🌐 vhost configuration summary"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -297,17 +293,8 @@ curl -I http://laraxot.local
 
 ### For DevOps
 
-<<<<<<< HEAD
 - [Governance Rules](../rules/vhost-governance.md)
 - [Governance Rules](../rules/vhost-governance.md)
-=======
-<<<<<<< .merge_file_9HTp4i
-- [Governance Rules](docs/rules/vhost-governance.md)
-=======
-- [Governance Rules](../rules/vhost-governance.md)
-- [Governance Rules](../rules/vhost-governance.md)
->>>>>>> .merge_file_5Utlgr
->>>>>>> laraxot/dev
 - [Management Skill](.github/skills/vhost-management/SKILL.md)
 - [Configuration File](laravel/config/vhost/laraxot.local.conf)
 

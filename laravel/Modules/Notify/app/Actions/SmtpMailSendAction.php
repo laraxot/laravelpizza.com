@@ -6,6 +6,10 @@ namespace Modules\Notify\Actions;
 
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/smtp-mail-send-action.md
+ * @contract docs/contracts/smtp-mail-send-action.md
+ */
 class SmtpMailSendAction
 {
     use QueueableAction;

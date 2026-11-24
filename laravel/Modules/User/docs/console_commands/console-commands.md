@@ -9,15 +9,14 @@ related:
   - "./console-commands-philosophy.md"
 <<<<<<< HEAD
   - "./console-commands-philosophy.md"
-=======
-<<<<<<< HEAD
-  - "./readme.md"
-=======
-  - "./console-commands-philosophy.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./console-commands-philosophy.md"
   - "./README.md"
+=======
+  - "./readme.md"
+  - "./console-commands-philosophy.md"
+  - "./README.md"
+qmd: "console commands"
+>>>>>>> laraxot/dev
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/console-commands-philosophy.md

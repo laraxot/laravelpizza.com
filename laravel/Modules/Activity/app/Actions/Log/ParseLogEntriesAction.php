@@ -19,6 +19,9 @@ use function Safe\preg_match;
  * successive (stack trace, contesto JSON) restano attaccate alla voce a cui appartengono.
  * Eventuali righe iniziali non riconosciute (per esempio una voce tagliata) formano una voce
  * "grezza" senza data ne' livello.
+ *
+ * @see docs/contracts/parse-log-entries-action.md
+ * @contract docs/contracts/parse-log-entries-action.md
  */
 class ParseLogEntriesAction
 {

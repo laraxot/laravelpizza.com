@@ -25,11 +25,7 @@ allineandomi alla regola piattaforma gia' applicata in Ptv.
 
 - [form-column-parity.md](../form-column-parity.md)
 <<<<<<< HEAD
-- [Ptv form-column-parity.md](../../Ptv/docs/form-column-parity.md)
-=======
-<<<<<<< HEAD
-- [Ptv form-column-parity.md](../../Ptv/docs/form-column-parity.md)
-=======
 - [Ptv form-column-parity.md](../form-column-parity.md)
->>>>>>> laraxot/dev
+=======
+- [Ptv form-column-parity.md](../../Ptv/docs/form-column-parity.md)
 >>>>>>> laraxot/dev

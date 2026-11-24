@@ -19,13 +19,13 @@ rm -f advanced_form_components.md
 rm -f blade_data_handling.md
 rm -f naming_conventions.md
 <<<<<<< HEAD
-rm -f phpstan_fixes_2025.md
-=======
 <<<<<<< HEAD
 rm -f phpstan_fixes_2025.md
 =======
 rm -f phpstan_fixes.md
 >>>>>>> laraxot/dev
+=======
+rm -f phpstan_fixes_2025.md
 >>>>>>> laraxot/dev
 ```
 
@@ -72,13 +72,13 @@ rm -f naming_rules.md
 
 # PHPStan
 <<<<<<< HEAD
-rm -f phpstan_fixes_2025.md
-=======
 <<<<<<< HEAD
 rm -f phpstan_fixes_2025.md
 =======
 rm -f phpstan_fixes.md
 >>>>>>> laraxot/dev
+=======
+rm -f phpstan_fixes_2025.md
 >>>>>>> laraxot/dev
 rm -f phpstan_corrections_summary.md
 rm -f phpstan_radio_badge_fix.md
@@ -111,21 +111,19 @@ mv phpstan-level-10-cleanup-[DATE].md archive/phpstan-level-10-cleanup.md 2>/dev
 
 # Consolidare file PHPStan con date
 <<<<<<< HEAD
+<<<<<<< HEAD
 # phpstan-fixes-correzioni-gennaio.md → consolidare in phpstan-compliance.md
 =======
-<<<<<<< .merge_file_9lnIqJ
 # phpstan-fixes.md → consolidare in phpstan-compliance.md
+>>>>>>> laraxot/dev
 =======
 # phpstan-fixes-correzioni-gennaio.md → consolidare in phpstan-compliance.md
->>>>>>> .merge_file_qU9FsV
 >>>>>>> laraxot/dev
 ```
 
 ## File con Maiuscole da Rinominare
 
 ```bash
-<<<<<<< HEAD
-=======
 # Verificare se METODI_DUPLICATI_ANALISI.md è diverso da metodi-duplicati-analisi.md
 # Se sono identici, eliminare quello con maiuscole
 if [ -f "METODI_DUPLICATI_ANALISI.md" ]; then
@@ -135,7 +133,6 @@ if [ -f "METODI_DUPLICATI_ANALISI.md" ]; then
         # Se diversi, rinominare quello con maiuscole
         mv METODI_DUPLICATI_ANALISI.md metodi-duplicati-analisi-uppercase.md
 
->>>>>>> laraxot/dev
 # Verificare se metodi_duplicati_analisi.md è diverso da metodi-duplicati-analisi.md
 # Se sono identici, eliminare quello con maiuscole
 if [ -f "metodi_duplicati_analisi.md" ]; then

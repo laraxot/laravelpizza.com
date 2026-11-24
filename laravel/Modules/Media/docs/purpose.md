@@ -79,15 +79,7 @@ la sceglie chi carica.
 <<<<<<< HEAD
 percorso di caricamento. Va scritto in `docs/SECURITY.md`: e' il tipo di requisito che
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
 percorso di caricamento. Va scritto in `docs/security.md`: e' il tipo di requisito che
-=======
-percorso di caricamento. Va scritto in `docs/SECURITY.md`: e' il tipo di requisito che
->>>>>>> laraxot/dev
-=======
-percorso di caricamento. Va scritto in `docs/SECURITY.md`: e' il tipo di requisito che
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 si da' per scontato finche' non viene disatteso.
 

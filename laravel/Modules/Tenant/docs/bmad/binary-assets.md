@@ -6,6 +6,7 @@ module: "Tenant"
 tags: [docs, tenant, bmad]
 created: 2026-10-06
 updated: 2026-10-06
+qmd: "binary assets binaryassetsmd"
 ---
 
 # Asset binari

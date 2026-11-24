@@ -9,7 +9,10 @@ issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./00-index.md"
+<<<<<<< HEAD
   - "./00-index.md"
+=======
+>>>>>>> laraxot/dev
   - "./00-overview.md"
   - "./01-current-state.md"
   - "./01-now.md"
@@ -168,11 +171,7 @@ related:
 <<<<<<< HEAD
 * [bottlenecks.md](bottlenecks.md)
 =======
-<<<<<<< HEAD
 * [bottlenecks.md](../../../user/docs/roadmap/bottlenecks.md)
-=======
-* [bottlenecks.md](bottlenecks.md)
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 * [bottlenecks.md](../../../ui/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../../Lang/docs/performance/bottlenecks.md)

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Jetstream vs Laraxot: Filosofia, Religione e Politica dei Team"
+type: note
+qmd: "jetstream vs laraxot philosophy filosofia religione"
+---
+>>>>>>> laraxot/dev
 # Jetstream vs Laraxot: Filosofia, Religione e Politica dei Team
 
 ## 🌟 **LA RELIGIONE JETSTREAM**

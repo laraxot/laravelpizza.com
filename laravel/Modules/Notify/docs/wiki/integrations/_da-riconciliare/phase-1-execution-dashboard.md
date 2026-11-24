@@ -3,11 +3,7 @@ title: "🎯 PHASE 1 EXECUTION DASHBOARD"
 type: concept
 tags: [phase, execution, dashboard]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "phase-1-execution-dashboard 🎯 phase 1 execution dashboard"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]

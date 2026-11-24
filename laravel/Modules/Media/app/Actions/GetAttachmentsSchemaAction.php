@@ -11,6 +11,10 @@ use Modules\Media\Datas\MediaConfigData;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/get-attachments-schema-action.md
+ * @contract docs/contracts/get-attachments-schema-action.md
+ */
 class GetAttachmentsSchemaAction
 {
     use QueueableAction;

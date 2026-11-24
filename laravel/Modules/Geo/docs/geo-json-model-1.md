@@ -231,15 +231,7 @@ class Comune extends GeoJsonModel
 ```
 
 - Tutti i filtri e le select dinamiche ora usano solo il modello Comune.
-<<<<<<< HEAD
-- Vedi anche [geo_entities.md](./geo_entities.md) per motivazione e percentuali di adozione.
-=======
-<<<<<<< HEAD
-- Vedi anche [geo_entities.md](./geo_entities.md) per motivazione e percentuali di adozione.
-=======
 - Vedi anche [geo_entities.md](geo-entities.md) per motivazione e percentuali di adozione.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Analisi: Comune come modello Sushi
 
@@ -318,15 +310,7 @@ updated: 2026-09-26
 qmd: "geo json model 1"
 issues: []
 discussions: []
-<<<<<<< HEAD
-- Vedi anche [geo_entities.md](./geo_entities.md) per motivazione e percentuali di adozione.
-=======
-<<<<<<< HEAD
-- Vedi anche [geo_entities.md](./geo_entities.md) per motivazione e percentuali di adozione.
-=======
 - Vedi anche [geo_entities.md](geo-entities.md) per motivazione e percentuali di adozione.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Approfondimento: Sushi (calebporzio/sushi) per modelli geografici
 
@@ -403,15 +387,7 @@ class ComuneSushi extends Model
 - [Sito ufficiale Sushi](https://usesushi.dev/)
 - [GitHub Sushi](https://github.com/calebporzio/sushi)
 - [Esempi avanzati](https://jasonlbeggs.com/blog/laravel-sushi)
-<<<<<<< HEAD
-- [geo_entities.md](./geo_entities.md)
-=======
-<<<<<<< HEAD
-- [geo_entities.md](./geo_entities.md)
-=======
 - [geo_entities.md](geo-entities.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ---
 
@@ -450,15 +426,7 @@ class ComuneSushi extends Model
 
 ---
 
-<<<<<<< HEAD
-- Vedi anche [geo_entities.md](./geo_entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
-=======
-<<<<<<< HEAD
-- Vedi anche [geo_entities.md](./geo_entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
-=======
 - Vedi anche [geo_entities.md](geo-entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Approccio avanzato: SushiToJsons (CRUD, multi-tenant, Eloquent + JSON)
 
@@ -542,12 +510,4 @@ trait SushiToJsons
 
 ---
 
-<<<<<<< HEAD
-- Vedi anche [geo_entities.md](./geo_entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
-=======
-<<<<<<< HEAD
-- Vedi anche [geo_entities.md](./geo_entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
-=======
 - Vedi anche [geo_entities.md](geo-entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

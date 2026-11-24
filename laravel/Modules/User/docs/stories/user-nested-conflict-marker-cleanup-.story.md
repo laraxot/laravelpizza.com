@@ -19,6 +19,10 @@ related:
 github:
   repository: null
   issues: []
+<<<<<<< HEAD
+=======
+qmd: "user nested conflict marker cleanup story"
+>>>>>>> laraxot/dev
 ---
 
 # User: marker di conflitto annidati residui + disposizione .wip/.corrected
@@ -35,11 +39,7 @@ uno script della famiglia `merge_remote_repo_2.sh`/`dummy_push()` ha eseguito me
 automatici che hanno committato marker letterali non risolti — **gia' presenti anche
 sul remote `laraxot/dev`** (verificato con `git show laraxot/dev:<path>`, non solo
 locale). Commit-hash ricorrenti nei marker: `87273113 (.)` (quasi tutti i file),
-<<<<<<< HEAD
-piu' `f548be94 (.)` e `2024e2e7 (.)` annidati in `.github/CONTRIBUTING.md`.
-=======
 piu' `f548be94 (.)` e `2024e2e7 (.)` annidati in `.github/contributing.md`.
->>>>>>> laraxot/dev
 
 Un agente precedente (`9fceb9ac fix(user): rimuovi marker di conflitto Git committati
 in app, test e docs`, 2026-09-21) aveva gia' ripulito gran parte dell'albero ma
@@ -163,11 +163,7 @@ aggiuntiva vista la storia di reset distruttivi concorrenti su questo repo.
 
 Tutti i 23 file con marker risolti (grep finale: 0 marker in tutto l'albero, esclusi
 vendor/node_modules/graphify-out). `.wip` lasciato `.wip` (motivazione sopra, riga
-<<<<<<< HEAD
-marker interna rimossa). `.corrected` rimosso (`git rm`). `.github/CONTRIBUTING.md`
-=======
 marker interna rimossa). `.corrected` rimosso (`git rm`). `.github/contributing.md`
->>>>>>> laraxot/dev
 ripristinato dal contenuto pre-corruzione (URL PSR-2 minuscolo).
 
 Deletion staged pre-esistente in `Application/UseCases/Owners/
@@ -232,11 +228,7 @@ stata riconciliata in un secondo intervento nella stessa sessione:
     `laraxot/dev` (residuo daemon non ancora ripulito sul remoto) e 0 marker lato
     `dev` (gia' pulito dal cleanup sopra) — risolti sistematicamente con
     `git checkout --ours` dopo verifica puntuale del pattern su un campione
-<<<<<<< HEAD
-    rappresentativo (`.github/CONTRIBUTING.md`, `docs/bmad/README.md`,
-=======
     rappresentativo (`.github/contributing.md`, `docs/bmad/README.md`,
->>>>>>> laraxot/dev
     `docs/purpose.md`, `tests/Unit/Datas/UserDatasAndEnumsCoverageTest.php`,
     `ModulesRelationManager.wip`).
   - `git grep` post-merge: 0 marker reali residui in tutto l'albero (15 falsi

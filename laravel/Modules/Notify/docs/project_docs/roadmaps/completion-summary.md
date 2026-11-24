@@ -1,7 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 title: "completion summary 2025 10"
 type: note
 tags: [documentation]
@@ -296,8 +293,6 @@ Le prossime 12 settimane sono critiche per completare API, test coverage, mobile
 ---
 
 *"Excellence is not a destination; it is a continuous journey that never ends." - Brian Tracy*
-=======
->>>>>>> laraxot/dev
 issues: []
 discussions: []
 title: "COMPLETION_SUMMARY_2025-10-01"
@@ -319,7 +314,3 @@ related:
 ---
 
 > Questo file è stato rinominato in [completion-summary.md](completion-summary.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-=======
 ---
 title: "index notify module documentation"
 created: 2026-11-23
 updated: 2026-11-23
 ---
 
->>>>>>> laraxot/dev
 # Notify Module Documentation
 
 ## Overview
@@ -78,15 +75,7 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 ## Collegamenti Correlati
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
-<<<<<<< HEAD
-- [Standard di Documentazione](../../../../../docs/DOCUMENTATION_STANDARDS.md)
-=======
-<<<<<<< HEAD
 - [Standard di Documentazione](../../../../../docs/documentation_standards.md)
-=======
-- [Standard di Documentazione](../../../../../docs/DOCUMENTATION_STANDARDS.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Modulo Xot](../../Xot/docs/README.md)
 - [Modulo Lang](../../Lang/docs/README.md)
 - [Modulo UI](../../UI/docs/README.md)
@@ -174,15 +163,7 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 
 ### Mail Templates
 - [Index](./mail-templates/index.md) - Indice della documentazione sui template email
-<<<<<<< HEAD
-- [Implementazione Slug](./mail-templates/MAIL_TEMPLATE_SLUG_IMPLEMENTATION.md) - Implementazione del campo slug
-=======
-<<<<<<< HEAD
 - [Implementazione Slug](./mail-templates/mail_template_slug_implementation.md) - Implementazione del campo slug
-=======
-- [Implementazione Slug](./mail-templates/MAIL_TEMPLATE_SLUG_IMPLEMENTATION.md) - Implementazione del campo slug
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ### Notifications
 - [Index](./notifications/index.md) - Indice della documentazione sulle notifiche

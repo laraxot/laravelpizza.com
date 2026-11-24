@@ -3,11 +3,7 @@ title: "structure"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "structure"
 issues: []
 discussions: []
@@ -103,15 +99,7 @@ Modules/Cms/
 6. Aggiornare i riferimenti nelle routes
 
 ## Collegamenti Bidirezionali
-<<<<<<< HEAD
 - [README](README.md) - Documentazione principale del modulo
-=======
-<<<<<<< HEAD
-- [README](readme.md) - Documentazione principale del modulo
-=======
-- [README](README.md) - Documentazione principale del modulo
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Architettura](architecture.md) - Architettura del sistema CMS
 - [Struttura Moduli Laravel](struttura-moduli-laravel.md) - Struttura standard dei moduli Laravel
 - [Namespace Moduli](namespace-moduli-laravel-<nome progetto>.md) - Convenzioni di namespace

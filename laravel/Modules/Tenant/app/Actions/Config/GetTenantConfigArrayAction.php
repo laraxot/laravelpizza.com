@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\File;
 use Spatie\QueueableAction\QueueableAction;
 use Throwable;
 
+/**
+ * @see docs/contracts/get-tenant-config-array-action.md
+ * @contract docs/contracts/get-tenant-config-array-action.md
+ */
 class GetTenantConfigArrayAction
 {
     use QueueableAction;

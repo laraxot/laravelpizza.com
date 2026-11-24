@@ -3,6 +3,7 @@ title: "Xot - development-rules.md"
 module: Xot
 bmad: true
 status: active
+qmd: "development rules developmentrulesmd"
 ---
 # Regole Generali di Sviluppo del Progetto
 

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Laravel Passport Implementation Summary - User Module"
+type: note
+qmd: "passport implementation summary laravel user"
+---
+>>>>>>> laraxot/dev
 # Laravel Passport Implementation Summary - User Module
 
 ## Overview

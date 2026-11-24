@@ -5,6 +5,7 @@ status: accepted
 created: 2026-11-23
 updated: 2026-11-24
 issues: []
+qmd: "contract docblock reference action"
 ---
 
 # ADR: @contract nel docblock delle Action

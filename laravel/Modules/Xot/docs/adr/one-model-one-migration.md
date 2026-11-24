@@ -7,6 +7,7 @@ updated: 2026-11-24
 decision-makers: [team]
 issues: []
 superseded_by: 0004-one-model-one-migration.md
+qmd: "one model migration modello persistente migrazione"
 ---
 
 > Superseded da [0004-one-model-one-migration.md](0004-one-model-one-migration.md): alias senza numero della stessa decisione. Nessuna decisione nuova: il canonico prevale, questo file non va esteso.

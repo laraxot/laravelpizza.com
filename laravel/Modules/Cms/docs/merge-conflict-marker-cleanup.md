@@ -3,11 +3,7 @@ title: "merge conflict marker cleanup"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "merge conflict marker cleanup"
 issues: []
 discussions: []
@@ -30,9 +26,6 @@ Risolti ~300 file Cms (PHP + docs). Pattern tipici:
 
 Verifica: `php -l` su tutti i `.php` non-blade; `analyse Modules` a zero.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 ## Sessione docs Cms+Geo 2026-11-23
 
 - **Cms/docs**: 58 file `.md` ripuliti; preferenza lowercase nei link; FO = sempre Filament styles/scripts.
@@ -46,19 +39,12 @@ Verifica: `php -l` su tutti i `.php` non-blade; `analyse Modules` a zero.
 /bin/grep -rE '^<{7}|^={7}|^>{7}' laravel/Modules/Cms/docs --include='*.md'
 /bin/grep -rE '^<{7}|^={7}|^>{7}' laravel/Modules/Geo/docs --include='*.md'
 # atteso: 0 righe per entrambi
-=======
->>>>>>> laraxot/dev
 ## Verification
 
 ```bash
 /bin/grep -rIln --exclude-dir=vendor '^<<<<<<< ' Modules/Cms
 find Modules/Cms -name '*.php' ! -name '*.blade.php' -print0 | xargs -0 -n1 php -l
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ```
 
 Vedi anche: [no-conflict-markers-anywhere](../../../../docs/rules/no-conflict-markers-anywhere.md),
 story [ROOT-17.14](../../../../docs/stories/17-14-phpstan-modules-merge-markers-prerequisito.md).
-

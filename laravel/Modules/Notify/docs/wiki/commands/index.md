@@ -5,11 +5,7 @@ discussions: []
 title: "Commands Index"
 type: index
 created: 2026-05-11
-<<<<<<< HEAD
-updated: 2026-05-11
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 tags: [commands, index, on-demand]
 related:
   - ../rules/00-TRIGGER_MAP.md

@@ -7,6 +7,7 @@ created: 2026-11-24
 updated: 2026-11-24
 module: Xot
 tags: [routes, provider, adr, xot-base]
+qmd: "route files exist all modules story"
 ---
 
 # [STORY] routes/web.php e routes/api.php esistono in tutti i moduli, niente require di empty.php

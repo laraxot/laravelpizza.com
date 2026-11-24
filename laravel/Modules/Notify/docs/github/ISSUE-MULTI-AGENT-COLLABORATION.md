@@ -3,11 +3,7 @@ title: "ISSUE MULTI AGENT COLLABORATION"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "ISSUE MULTI AGENT COLLABORATION"
 issues: []
 discussions: []
@@ -47,15 +43,7 @@ Create comprehensive documentation for `bashscripts/git/subtrees/sync_remote_rep
 | File | Purpose | Lines |
 |------|---------|-------|
 | `bashscripts/docs/git/sync-remote-repo-guide.md` | Comprehensive CLI+CI guide | ~450 |
-<<<<<<< HEAD
-| `bashscripts/docs/git/sync_remote_repo_coordination.md` | Agent coordination log | ~300 |
-=======
-<<<<<<< HEAD
 | `bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md` | Agent coordination log | ~300 |
-=======
-| `bashscripts/docs/git/sync_remote_repo_coordination.md` | Agent coordination log | ~300 |
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 | `bashscripts/docs/git/GITHUB_WIKI_SYNC.md` | Wiki sync guide | ~200 |
 | `bashscripts/docs/git/README.md` | Git docs index | ~350 |
 
@@ -117,28 +105,12 @@ git add docs/git/
 git commit -m "docs: Add sync remote repo comprehensive documentation
 
 - sync-remote-repo-guide.md: Complete CLI+CI guide
-<<<<<<< HEAD
-- sync_remote_repo_coordination.md: Multi-agent coordination log
-=======
-<<<<<<< HEAD
 - SYNC_REMOTE_REPO_COORDINATION.md: Multi-agent coordination log
-=======
-- sync_remote_repo_coordination.md: Multi-agent coordination log
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - GITHUB_WIKI_SYNC.md: Wiki synchronization guide
 - README.md: Git docs index
 
 Created by: Qwen-Code-001
-<<<<<<< HEAD
-Coordination: See sync_remote_repo_coordination.md
-=======
-<<<<<<< HEAD
 Coordination: See SYNC_REMOTE_REPO_COORDINATION.md
-=======
-Coordination: See sync_remote_repo_coordination.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 Guide: See sync-remote-repo-guide.md
 "
 
@@ -174,28 +146,12 @@ However, since bashscripts docs are gitignored, they need to be committed to bas
 
 #### BEFORE You Start
 
-<<<<<<< HEAD
-1. **Read Coordination Log**: `bashscripts/docs/git/sync_remote_repo_coordination.md`
-=======
-<<<<<<< HEAD
 1. **Read Coordination Log**: `bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md`
-=======
-1. **Read Coordination Log**: `bashscripts/docs/git/sync_remote_repo_coordination.md`
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 2. **Check This File**: Review current status
 3. **Add Your Entry**: Update coordination log with your agent ID and planned work
 4. **Create Lock File** (if needed): 
    ```bash
-<<<<<<< HEAD
-   echo "Agent-XYZ-$(date -I)" > bashscripts/docs/git/sync_remote_repo_coordination.md.lock
-=======
-<<<<<<< HEAD
    echo "Agent-XYZ-$(date -I)" > bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md.lock
-=======
-   echo "Agent-XYZ-$(date -I)" > bashscripts/docs/git/sync_remote_repo_coordination.md.lock
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
    ```
 
 #### DURING Work
@@ -222,29 +178,13 @@ However, since bashscripts docs are gitignored, they need to be committed to bas
 | Component | Status | Location |
 |-----------|--------|----------|
 | Main Guide | ✅ Created | `bashscripts/docs/git/sync-remote-repo-guide.md` |
-<<<<<<< HEAD
-| Coordination Log | ✅ Created | `bashscripts/docs/git/sync_remote_repo_coordination.md` |
-=======
-<<<<<<< HEAD
 | Coordination Log | ✅ Created | `bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md` |
-=======
-| Coordination Log | ✅ Created | `bashscripts/docs/git/sync_remote_repo_coordination.md` |
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 | Wiki Sync Guide | ✅ Created | `bashscripts/docs/git/GITHUB_WIKI_SYNC.md` |
 | Docs Index | ✅ Created | `bashscripts/docs/git/README.md` |
 | Issue Template | ✅ Committed | `.github/ISSUE_TEMPLATE/sync-remote-repo.md` |
 | Discussion Template | ✅ Committed | `.github/DISCUSSION_TEMPLATE/sync-script-coordination.md` |
 | Summary Doc | ✅ Committed | `docs/github/SYNC_REMOTE_REPO_DOCS_SUMMARY.md` |
-<<<<<<< HEAD
 | AGENTS.md Update | ✅ Committed | Multi-agent coordination section |
-=======
-<<<<<<< HEAD
-| agents.md Update | ✅ Committed | Multi-agent coordination section |
-=======
-| AGENTS.md Update | ✅ Committed | Multi-agent coordination section |
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ### Sync Status
 
@@ -302,15 +242,7 @@ However, since bashscripts docs are gitignored, they need to be committed to bas
 ### Coordination Channels
 
 1. **GitHub Discussions**: Use `[COORDINATION]` tag
-<<<<<<< HEAD
-2. **Coordination Log**: `bashscripts/docs/git/sync_remote_repo_coordination.md`
-=======
-<<<<<<< HEAD
 2. **Coordination Log**: `bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md`
-=======
-2. **Coordination Log**: `bashscripts/docs/git/sync_remote_repo_coordination.md`
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 3. **Issue Tracker**: Use sync-remote-repo template
 
 ### Agent Teams
@@ -366,15 +298,7 @@ This collaboration is successful when:
 bashscripts/docs/git/
 ├── README.md                          # Git docs index
 ├── sync-remote-repo-guide.md          # Complete guide
-<<<<<<< HEAD
-├── sync_remote_repo_coordination.md   # Coordination log
-=======
-<<<<<<< HEAD
 ├── SYNC_REMOTE_REPO_COORDINATION.md   # Coordination log
-=======
-├── sync_remote_repo_coordination.md   # Coordination log
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 └── GITHUB_WIKI_SYNC.md                # Wiki sync guide
 
 .github/
@@ -393,8 +317,6 @@ docs/github/
 bashscripts/git/subtrees/sync_remote_repo.sh laraxot
 
 # Check coordination log
-<<<<<<< HEAD
-=======
 cat bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md
 
 # Create lock file
@@ -402,7 +324,6 @@ echo "Agent-XYZ-$(date -I)" > bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION
 
 # Remove lock file
 rm bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md.lock
->>>>>>> laraxot/dev
 cat bashscripts/docs/git/sync_remote_repo_coordination.md
 
 # Create lock file
@@ -443,12 +364,4 @@ rm bashscripts/docs/git/sync_remote_repo_coordination.md.lock
 **Initiated By**: Qwen-Code-001  
 **Date**: 2026-03-13  
 **Next Agent**: Your turn! Add your entry to coordination log  
-<<<<<<< HEAD
-**Coordination**: See `bashscripts/docs/git/sync_remote_repo_coordination.md`
-=======
-<<<<<<< HEAD
 **Coordination**: See `bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md`
-=======
-**Coordination**: See `bashscripts/docs/git/sync_remote_repo_coordination.md`
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

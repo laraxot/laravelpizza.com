@@ -407,9 +407,12 @@ tests_old/Unit
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/docs/structure.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 * [structure.md](../../../gdpr/docs/structure.md)
 * [structure.md](../../../notify/docs/structure.md)
 * [structure.md](../../../xot/docs/structure.md)
@@ -424,6 +427,7 @@ tests_old/Unit
 * [structure.md](../../../activity/docs/structure.md)
 * [structure.md](../../../cms/docs/structure.md)
 * [structure.md](../../../cms/docs/themes/structure.md)
+<<<<<<< HEAD
 * [structure.md](../../../cms/docs/components/structure.md)
 =======
 =======
@@ -452,4 +456,7 @@ tests_old/Unit
 =======
 * [structure.md](../../../Cms/docs/components/structure.md)
 >>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+* [structure.md](../../../cms/docs/components/structure.md)
 >>>>>>> laraxot/dev

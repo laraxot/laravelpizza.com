@@ -7,11 +7,7 @@ discussions: []
 title: lezioni merge collision Notify
 type: memory
 module: Notify
-<<<<<<< HEAD
-updated: 2026-05-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 related:
   - ../../merge-conflicts-list.md
   - ../../../../../../docs/wiki/how-to/git-merge-marker-sweep.md

@@ -1,7 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 title: "perfect completion report 2025 10"
 type: note
 tags: [documentation]
@@ -546,8 +543,6 @@ PWA Score:               92/100 ✅
 *Status: ✅ **PERFECT - READY TO DEPLOY***
 
 **END OF PERFECT COMPLETION REPORT** 🏆
-=======
->>>>>>> laraxot/dev
 issues: []
 discussions: []
 title: "PERFECT_COMPLETION_REPORT_2025-10-02"
@@ -569,7 +564,3 @@ related:
 ---
 
 > Questo file è stato rinominato in [perfect-completion-report.md](perfect-completion-report.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

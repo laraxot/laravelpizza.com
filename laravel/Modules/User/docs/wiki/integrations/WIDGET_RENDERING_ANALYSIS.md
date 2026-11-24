@@ -5,6 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< HEAD
+=======
+qmd: "widget rendering analysis analisi loginwidget docsitaliait"
+>>>>>>> laraxot/dev
 ---
 
 # 🔍 Analisi Rendering LoginWidget - Docs.Italia.it Style

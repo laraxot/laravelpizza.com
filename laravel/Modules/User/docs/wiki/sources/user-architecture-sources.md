@@ -5,6 +5,10 @@ type: source
 created: "2026-04-29T00:00:00Z"
 updated: "2026-04-29T00:00:00Z"
 related:
+<<<<<<< HEAD
+=======
+qmd: "user architecture sources"
+>>>>>>> laraxot/dev
 ---
 
 # User Architecture Sources

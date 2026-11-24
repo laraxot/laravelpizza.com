@@ -9,6 +9,7 @@ type: reference
 updated: 2026-05-21
 related:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - "../../../Media/docs/html2pdf/SECURITY.md"
 =======
 <<<<<<< HEAD
@@ -18,6 +19,11 @@ related:
 =======
   - "../../../Media/docs/html2pdf/SECURITY.md"
 >>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+  - "../../../Media/docs/html2pdf/security.md"
+
+- "../../../Media/docs/html2pdf/SECURITY.md"
 >>>>>>> laraxot/dev
 ---
 

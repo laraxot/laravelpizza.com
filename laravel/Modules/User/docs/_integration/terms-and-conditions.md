@@ -11,6 +11,10 @@ related:
   - "./passport.md"
   - "./payment.md"
   - "./phpstan.md"
+<<<<<<< HEAD
+=======
+qmd: "terms and conditions termsandconditions"
+>>>>>>> laraxot/dev
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/terms-and-conditions-2.md

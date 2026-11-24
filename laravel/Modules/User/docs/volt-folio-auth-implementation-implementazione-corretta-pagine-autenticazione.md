@@ -17,11 +17,8 @@ related:
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
 <<<<<<< HEAD
-=======
-<<<<<<< .merge_file_zK151y
 status: draft
 =======
->>>>>>> .merge_file_VoiMkm
 >>>>>>> laraxot/dev
 ---
 
@@ -30,26 +27,12 @@ status: draft
 ## Collegamenti correlati
 <<<<<<< HEAD
 - [README modulo User](./README.md)
-- [Convenzioni Path](./path-conventions-user.md)
-- [Volt Errors](./volt-errors.md)
-- [Volt Folio Logout](./volt-folio-logout-2.md)
 =======
-<<<<<<< HEAD
 - [README modulo User](./readme.md)
+>>>>>>> laraxot/dev
 - [Convenzioni Path](./path-conventions-user.md)
 - [Volt Errors](./volt-errors.md)
 - [Volt Folio Logout](./volt-folio-logout-2.md)
-=======
-- [README modulo User](./README.md)
-- [Convenzioni Path](./path-conventions-user.md)
-- [Volt Errors](./volt-errors.md)
-<<<<<<< .merge_file_zK151y
-- [Volt Folio Logout](./volt-folio-logout-panoramica.md)
-=======
-- [Volt Folio Logout](./volt-folio-logout-2.md)
->>>>>>> .merge_file_VoiMkm
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Introduzione
 
@@ -103,15 +86,7 @@ $logout = function () {
         request()->session()->invalidate();
         request()->session()->regenerateToken();
     }
-<<<<<<< HEAD
     
-=======
-<<<<<<< .merge_file_zK151y
-
-=======
-    
->>>>>>> .merge_file_VoiMkm
->>>>>>> laraxot/dev
     // Reindirizzamento localizzato
     $locale = app()->getLocale();
     return redirect()->to('/' . $locale);
@@ -147,15 +122,7 @@ $logout = function () {
     <script>
         // Esegui il logout immediatamente
         window.livewire.dispatch('logout');
-<<<<<<< HEAD
         
-=======
-<<<<<<< .merge_file_zK151y
-
-=======
-        
->>>>>>> .merge_file_VoiMkm
->>>>>>> laraxot/dev
         // Reindirizza dopo 3 secondi
         setTimeout(() => {
             window.location.href = "{{ url('/' . app()->getLocale()) }}";
@@ -189,29 +156,13 @@ new class extends Component {
             request()->session()->regenerateToken();
         }
     }
-<<<<<<< HEAD
     
-=======
-<<<<<<< .merge_file_zK151y
-
-=======
-    
->>>>>>> .merge_file_VoiMkm
->>>>>>> laraxot/dev
     public function logout()
     {
         $locale = app()->getLocale();
         return redirect()->to('/' . $locale);
     }
-<<<<<<< HEAD
     
-=======
-<<<<<<< .merge_file_zK151y
-
-=======
-    
->>>>>>> .merge_file_VoiMkm
->>>>>>> laraxot/dev
     public function render()
     {
         return <<<'BLADE'
@@ -562,13 +513,9 @@ new class extends Component {
    - Separa la logica PHP dal template Blade
    - Usa l'approccio funzionale o la classe anonima in base alla complessità
 <<<<<<< HEAD
-- Segui le convenzioni di naming e struttura di Quaeris
-=======
-<<<<<<< .merge_file_zK151y
 - Segui le convenzioni di naming e struttura di <nome progetto>
 =======
 - Segui le convenzioni di naming e struttura di Quaeris
->>>>>>> .merge_file_VoiMkm
 >>>>>>> laraxot/dev
 
 4. **Sicurezza**
@@ -614,13 +561,9 @@ new class extends Component {
 ## Conclusione
 
 <<<<<<< HEAD
-Seguendo queste linee guida per l'implementazione delle pagine di autenticazione con Volt e Folio, garantirai che il tuo codice sia conforme alle convenzioni di Quaeris, sia facile da mantenere e sfrutti al meglio le capacità di Laravel, Livewire, Volt e Folio.
-=======
-<<<<<<< .merge_file_zK151y
 Seguendo queste linee guida per l'implementazione delle pagine di autenticazione con Volt e Folio, garantirai che il tuo codice sia conforme alle convenzioni di <nome progetto>, sia facile da mantenere e sfrutti al meglio le capacità di Laravel, Livewire, Volt e Folio.
 =======
 Seguendo queste linee guida per l'implementazione delle pagine di autenticazione con Volt e Folio, garantirai che il tuo codice sia conforme alle convenzioni di Quaeris, sia facile da mantenere e sfrutti al meglio le capacità di Laravel, Livewire, Volt e Folio.
->>>>>>> .merge_file_VoiMkm
 >>>>>>> laraxot/dev
 
 ## Riferimenti

@@ -5,6 +5,10 @@ declare(strict_types=1);
 namespace Modules\Xot\Models\Traits;
 
 use Illuminate\Database\Eloquent\Builder;
+<<<<<<< .merge_file_56By7R
+use Illuminate\Database\Eloquent\Model;
+=======
+>>>>>>> .merge_file_nTiesy
 use Illuminate\Support\Carbon;
 
 /**
@@ -30,6 +34,11 @@ use Illuminate\Support\Carbon;
  * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md - Proposta 4: Model Traits
  *
  * Trait di piattaforma riusabile: consumer nei modelli dominio.
+<<<<<<< .merge_file_56By7R
+ *
+ * @template TModel of Model
+=======
+>>>>>>> .merge_file_nTiesy
  */
 trait HasCommonScopes
 {
@@ -38,8 +47,14 @@ trait HasCommonScopes
      *
      * Trovato identico in piu' moduli che condividono questo scope.
      *
+<<<<<<< .merge_file_56By7R
+     * @param  Builder<TModel>  $query
+     * @return Builder<TModel>
+     * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
+=======
      * @param  Builder<static>  $query
      * @return Builder<static>
+>>>>>>> .merge_file_nTiesy
      */
     public function scopeActive(Builder $query): Builder
     {
@@ -49,8 +64,14 @@ trait HasCommonScopes
     /**
      * Scope query to only inactive records.
      *
+<<<<<<< .merge_file_56By7R
+     * @param  Builder<TModel>  $query
+     * @return Builder<TModel>
+     * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
+=======
      * @param  Builder<static>  $query
      * @return Builder<static>
+>>>>>>> .merge_file_nTiesy
      */
     public function scopeInactive(Builder $query): Builder
     {
@@ -62,8 +83,14 @@ trait HasCommonScopes
      *
      * Records with published_at <= now().
      *
+<<<<<<< .merge_file_56By7R
+     * @param  Builder<TModel>  $query
+     * @return Builder<TModel>
+     * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
+=======
      * @param  Builder<static>  $query
      * @return Builder<static>
+>>>>>>> .merge_file_nTiesy
      */
     public function scopePublished(Builder $query): Builder
     {
@@ -76,8 +103,14 @@ trait HasCommonScopes
      *
      * Records with published_at = null or > now().
      *
+<<<<<<< .merge_file_56By7R
+     * @param  Builder<TModel>  $query
+     * @return Builder<TModel>
+     * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
+=======
      * @param  Builder<static>  $query
      * @return Builder<static>
+>>>>>>> .merge_file_nTiesy
      */
     public function scopeDraft(Builder $query): Builder
     {
@@ -90,8 +123,14 @@ trait HasCommonScopes
     /**
      * Scope query to records created after a date.
      *
+<<<<<<< .merge_file_56By7R
+     * @param  Builder<TModel>  $query
+     * @return Builder<TModel>
+     * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
+=======
      * @param  Builder<static>  $query
      * @return Builder<static>
+>>>>>>> .merge_file_nTiesy
      */
     public function scopeCreatedAfter(Builder $query, \DateTimeInterface|string|int $date): Builder
     {
@@ -101,8 +140,14 @@ trait HasCommonScopes
     /**
      * Scope query to records created before a date.
      *
+<<<<<<< .merge_file_56By7R
+     * @param  Builder<TModel>  $query
+     * @return Builder<TModel>
+     * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
+=======
      * @param  Builder<static>  $query
      * @return Builder<static>
+>>>>>>> .merge_file_nTiesy
      */
     public function scopeCreatedBefore(Builder $query, \DateTimeInterface|string|int $date): Builder
     {
@@ -112,8 +157,14 @@ trait HasCommonScopes
     /**
      * Scope query to records updated after a date.
      *
+<<<<<<< .merge_file_56By7R
+     * @param  Builder<TModel>  $query
+     * @return Builder<TModel>
+     * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
+=======
      * @param  Builder<static>  $query
      * @return Builder<static>
+>>>>>>> .merge_file_nTiesy
      */
     public function scopeUpdatedAfter(Builder $query, \DateTimeInterface|string|int $date): Builder
     {
@@ -123,8 +174,14 @@ trait HasCommonScopes
     /**
      * Scope query to records created by a specific user.
      *
+<<<<<<< .merge_file_56By7R
+     * @param  Builder<TModel>  $query
+     * @return Builder<TModel>
+     * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
+=======
      * @param  Builder<static>  $query
      * @return Builder<static>
+>>>>>>> .merge_file_nTiesy
      */
     public function scopeCreatedBy(Builder $query, string|int $userId): Builder
     {

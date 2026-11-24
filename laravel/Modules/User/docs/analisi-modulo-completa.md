@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Analisi Completa del Modulo User"
+type: analysis
+qmd: "analisi completa user"
+---
+>>>>>>> laraxot/dev
 # Analisi Completa del Modulo User
 
 ## Filosofia e Religione del Modulo

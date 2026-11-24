@@ -12,6 +12,10 @@ use Illuminate\Support\Facades\Log;
 // use Modules\<nome progetto>\Models\Patient;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/send-appointment-notification-action.md
+ * @contract docs/contracts/send-appointment-notification-action.md
+ */
 class SendAppointmentNotificationAction
 {
     use QueueableAction;

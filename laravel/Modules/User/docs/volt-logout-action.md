@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Logout via Volt Action"
+type: note
+qmd: "volt logout action"
+---
+>>>>>>> laraxot/dev
 # Logout via Volt Action
 
 ## Contesto

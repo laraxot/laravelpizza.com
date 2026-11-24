@@ -320,19 +320,7 @@ Se `module:enable Activity` non funziona:
 
 ### Documentazione Correlata
 - [No Hint Path Defined - Guida Completa](./no-hint-path-defined.md)
-<<<<<<< HEAD
-- [Activity Module - README](../README.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Activity Module - README](../readme.md)
-=======
-- [Activity Module - README](../README.md)
->>>>>>> laraxot/dev
-=======
-- [Activity Module - README](../README.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Service Provider Architecture](../../xot/docs/service-provider-architecture.md)
 
 ### Issue Simili

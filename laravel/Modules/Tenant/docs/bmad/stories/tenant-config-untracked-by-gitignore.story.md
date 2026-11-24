@@ -10,6 +10,7 @@ related:
   - ../../../../Xot/docs/bmad/stories/domain-config-detracked-by-gitignore-cleanup.story.md
   - ../../../../Xot/docs/bmad/stories/module-root-hygiene.story.md
   - ../../../../Rating/docs/stories/18.35.rating-morph-type-doppia-forma.story.md
+qmd: "tenant config untracked by gitignore story"
 ---
 tags: [docs, tenant, bmad]
 

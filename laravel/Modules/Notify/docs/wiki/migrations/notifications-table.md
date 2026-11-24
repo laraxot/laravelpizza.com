@@ -3,11 +3,7 @@ title: "notifications table — migrazione owner Notify"
 type: reference
 tags: [notify, migration, notifications, user-connection]
 created: 2026-06-10
-<<<<<<< HEAD
-updated: 2026-06-10
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "create_notifications_table Notify XotBaseMigration user connection"
 issues: []
 discussions: []

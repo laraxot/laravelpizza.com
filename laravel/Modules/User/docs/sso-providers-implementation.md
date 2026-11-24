@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "User Module - SSO Providers Implementation"
+type: note
+qmd: "sso providers implementation user"
+---
+>>>>>>> laraxot/dev
 # User Module - SSO Providers Implementation
 
 ## Overview

@@ -11,6 +11,10 @@ related:
   - "./phpstan-zero-errors-user.dev.md"
   - "../../../../../docs/stories/all-modules-phpstan-zero-errors.story.md"
   - "../phpstan-fixes.md"
+<<<<<<< HEAD
+=======
+qmd: "phpstan zero errors user story errori"
+>>>>>>> laraxot/dev
 ---
 
 # Story: PHPStan zero errori: modulo User

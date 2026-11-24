@@ -2,7 +2,11 @@
 qmd: "ui investigation ui investigation md"
 type: investigation
 title: "Investigation UI Component System"
+<<<<<<< HEAD
 links: {github_issue: #XXX}
+=======
+links: {github_issue: "#XXX"}
+>>>>>>> laraxot/dev
 ---
 # Investigation: UI Component System
 

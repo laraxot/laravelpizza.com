@@ -1,5 +1,6 @@
 ---
 created: 2026-01-30
+qmd: "phpstan roadmap level tenant"
 ---
 
 # PHPStan Level 10 Roadmap - Tenant Module

@@ -7,11 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 ---
 
 # Theme Documentation Master Index
@@ -34,15 +30,7 @@ Connects all theme docs with bidirectional links and visual architecture.
 **Core Documentation:**
 - [00-index.md](../laravel/Themes/Sixteen/docs/00-index.md) - Start here
 - [Design Comuni Integration](../laravel/Themes/Sixteen/docs/design-comuni-integration.md)
-<<<<<<< HEAD
-- [Component Catalog](../laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md)
-=======
-<<<<<<< HEAD
 - [Component Catalog](../laravel/Themes/Sixteen/docs/component_catalog.md)
-=======
-- [Component Catalog](../laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Layout Architecture](../laravel/Themes/Sixteen/docs/layout-hierarchy.md)
 
 **Directory Structure:**
@@ -340,15 +328,7 @@ Typography:
 
 | File | Purpose | View |
 |------|---------|------|
-<<<<<<< HEAD
-| `COMPONENT_CATALOG.md` | All 47 components listed | [View](../laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md) |
-=======
-<<<<<<< HEAD
 | `COMPONENT_CATALOG.md` | All 47 components listed | [View](../laravel/Themes/Sixteen/docs/component_catalog.md) |
-=======
-| `COMPONENT_CATALOG.md` | All 47 components listed | [View](../laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md) |
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 | `components/navigation.md` | Navigation components | [View](../laravel/Themes/Sixteen/docs/components/navigation.md) |
 | `components/forms.md` | Form components | [View](../laravel/Themes/Sixteen/docs/components/forms.md) |
 | `components/blocks.md` | Content blocks | [View](../laravel/Themes/Sixteen/docs/components/blocks.md) |
@@ -478,9 +458,6 @@ public_html/assets/
 
 ## See Also
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 - **Architecture Diagrams:** [ARCHITECTURE-DIAGRAMS.md](architecture-diagrams.md)
 - **Module Docs Index:** [MODULE_DOCS_INDEX.md](module_docs_index.md)
 - **Architecture Diagrams:** [architecture-diagrams.md](architecture-diagrams.md)
@@ -488,17 +465,11 @@ public_html/assets/
 - **Master Index:** [00-index.md](../laravel/Themes/Sixteen/docs/00-index.md)
 - **Code Quality:** [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
 - **Framework Rules:** [../laravel/CLAUDE.md](../laravel/claude.md)
-=======
->>>>>>> laraxot/dev
 - **Architecture Diagrams:** [architecture-diagrams.md](architecture-diagrams.md)
 - **Module Docs Index:** [MODULE_DOCS_INDEX.md](module_docs_index.md)
 - **Master Index:** [00-index.md](../laravel/Themes/Sixteen/docs/00-index.md)
 - **Code Quality:** [CODE_QUALITY_STANDARDS.md](CODE_QUALITY_STANDARDS.md)
 - **Framework Rules:** [../laravel/CLAUDE.md](../laravel/CLAUDE.md)
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ---
 

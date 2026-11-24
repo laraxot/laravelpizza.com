@@ -1,23 +1,12 @@
 ---
-<<<<<<< HEAD
 issues: []
 discussions: []
 title: "transaction-removal-fix-2025-10-15"
 type: concept
 tags: [deprecated]
 created: 2026-07-14
-updated: 2026-07-14
-qmd: "transaction-removal-fix-2025-10-15 deprecated"
-=======
-title: "transaction removal fix 2025 10"
-type: note
-tags: [documentation]
-created: 2026-09-26
 updated: 2026-11-23
-qmd: "transaction removal fix 2025 10"
-issues: []
-discussions: []
->>>>>>> laraxot/dev
+qmd: "transaction-removal-fix-2025-10-15 deprecated"
 status: deprecated
 related:
   - "./00-index-1.md"
@@ -26,9 +15,6 @@ related:
   - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   - "./action-plan-immediate.md"
 ---
 
@@ -314,14 +300,8 @@ Il progetto è ora pronto per migrazioni pulite e deploy production-ready! 🚀
 2. 💡 Archiviazione file `.old` dopo 6 mesi
 3. 💡 Documentazione pattern architetturali emersi
 
-=======
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
 
 > Questo file è stato rinominato in [transaction-removal-fix.md](transaction-removal-fix.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

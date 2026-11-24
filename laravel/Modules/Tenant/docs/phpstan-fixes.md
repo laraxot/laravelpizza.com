@@ -1,5 +1,6 @@
 ---
 created: 2025-10-13
+qmd: "phpstan fixes tenant 20251013"
 ---
 
 # PHPStan Fixes - Tenant Module - 2025-10-13

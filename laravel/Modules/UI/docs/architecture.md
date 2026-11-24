@@ -3,7 +3,10 @@ title: "UI Module - Architecture Guide (2025)"
 qmd: "ui architecture md"
 type: note
 tags: [documentation]
+<<<<<<< HEAD
 created: 2025
+=======
+>>>>>>> laraxot/dev
 ---
 
 # UI Module - Architecture Guide (2025)
@@ -680,6 +683,7 @@ The UI module is a **well-architected, feature-rich Filament customization layer
 
 **Document Version:** 1.0
 **Author:** Claude Code Analysis
+<<<<<<< HEAD
 
 ---
 
@@ -1999,3 +2003,5 @@ The UI module is a **well-architected, feature-rich Filament customization layer
 ## Contenuto unito da `architecture.md`
 
 See canonical documentation: ../../../Themes/docs/shared-components/ARCHITECTURE.md
+=======
+>>>>>>> laraxot/dev

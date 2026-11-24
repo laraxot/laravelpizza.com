@@ -62,11 +62,7 @@ Risorse presenti sia in `Filament/Resources/` sia in `Filament/Clusters/Passport
 
 - [Filosofia](../../../../Xot/docs/wiki/concepts/code-redundancy-philosophy.md)
 <<<<<<< HEAD
-- [Audit 2026-05-26](../../../../Xot/docs/wiki/redundancy-audit-2026-05-26.md)
-=======
-<<<<<<< HEAD
-- [Audit 2026-05-26](../../../../Xot/docs/wiki/redundancy-audit-2026-05-26.md)
-=======
 - [Audit 2026-05-26](../../../../Xot/docs/wiki/redundancy-audit.md)
->>>>>>> laraxot/dev
+=======
+- [Audit 2026-05-26](../../../../Xot/docs/wiki/redundancy-audit-2026-05-26.md)
 >>>>>>> laraxot/dev

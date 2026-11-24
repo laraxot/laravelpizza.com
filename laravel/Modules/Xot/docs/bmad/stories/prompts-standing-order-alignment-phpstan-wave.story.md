@@ -4,12 +4,13 @@ type: story
 module: Xot
 status: review
 created: 2026-11-16
-updated: 2026-11-23
+updated: 2026-11-24
 tags: [bmad, prompts, standing-order, phpstan, pest, public_html, second-brain]
 qmd: "prompts standing order alignment phpstan wave BMAD second brain swarm pest public_html mixed anti-thrashing"
 related:
   - ./docs-prompts-reorganization.story.md
   - ./docs-md-filename-date-debt.story.md
+  - ./prompts-boy-scout-standing-order.story.md
 ---
 
 # prompts-standing-order-alignment-phpstan-wave
@@ -62,6 +63,10 @@ Vedi [docs-md-filename-date-debt.story.md](./docs-md-filename-date-debt.story.md
 | 2026-11-23 | docs-guardian | prompts 00/04/05/36/37 + story debt | allineamento standing order; AI assente; Notify/Xot debito documentato |
 
 ## Diario
+
+### 2026-11-24
+
+- Lane docs-guardian boy-scout: vedi [prompts-boy-scout-standing-order.story.md](./prompts-boy-scout-standing-order.story.md). Flock path unificato; Filament 5 Schema; `wiki-hygiene.py` rimosso dai prompt.
 
 ### 2026-11-23
 

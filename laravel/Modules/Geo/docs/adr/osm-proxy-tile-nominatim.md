@@ -5,11 +5,7 @@ type: decision
 module: Geo
 tags: [adr, geo, openstreetmap, nominatim, privacy, gdpr, consenso]
 created: 2026-11-17
-<<<<<<< HEAD
-updated: 2026-11-18
-=======
 updated: 2026-11-24
->>>>>>> laraxot/dev
 status: accepted
 issues:
   - "https://github.com/laraxot/theme_sixteen_fila5/issues/106"

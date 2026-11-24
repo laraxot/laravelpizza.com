@@ -140,11 +140,7 @@ use Filament\Widgets\Concerns\CanPoll;
 <<<<<<< HEAD
 - [README del modulo User](../README.md) - Indice principale del modulo User
 =======
-<<<<<<< HEAD
 - [README del modulo User](../readme.md) - Indice principale del modulo User
-=======
-- [README del modulo User](../README.md) - Indice principale del modulo User
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [Filament Best Practices](../filament_best_practices.md) - Best practices generali per Filament
 ## Risorse Utili

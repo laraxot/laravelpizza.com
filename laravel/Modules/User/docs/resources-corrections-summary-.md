@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Resources Corrections Summary - 2025-01-22"
+type: note
+qmd: "resources corrections summary 20250122"
+---
+>>>>>>> laraxot/dev
 # Resources Corrections Summary - 2025-01-22
 
 ## Obiettivo

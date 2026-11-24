@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Ubuntu"
+type: note
+qmd: "ubuntu"
+---
+>>>>>>> laraxot/dev
 sudo apt-get install jpegoptim
 sudo apt-get install optipng
 sudo apt-get install pngquant // For PNG Image

@@ -4,6 +4,10 @@ module: User
 type: note
 status: active
 updated: '2026-11-23'
+<<<<<<< HEAD
+=======
+qmd: "auth pages i18n en de es"
+>>>>>>> laraxot/dev
 ---
 
 # Login e registrazione in inglese, tedesco e spagnolo

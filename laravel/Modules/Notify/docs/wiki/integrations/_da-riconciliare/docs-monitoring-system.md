@@ -3,11 +3,7 @@ title: "📚 DOCS MONITORING SYSTEM - Sistema di Monitoraggio Documentazione"
 type: concept
 tags: [docs, monitoring, system]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "docs-monitoring-system 📚 docs monitoring system - sistema di monitoraggio documentazione"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]

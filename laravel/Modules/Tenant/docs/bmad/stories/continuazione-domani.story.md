@@ -1,6 +1,7 @@
 ---
 type: concept
 status: backlog
+qmd: "continuazione domani story"
 ---
 type: concept
 tags: [docs, tenant, bmad]

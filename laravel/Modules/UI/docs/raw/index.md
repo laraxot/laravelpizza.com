@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Raw Sources — UI"
+type: note
+qmd: "sources"
+---
+>>>>>>> laraxot/dev
 # Raw Sources — UI
 
 Questo layer contiene le fonti grezze: documenti immutabili che l'LLM legge ma non modifica.

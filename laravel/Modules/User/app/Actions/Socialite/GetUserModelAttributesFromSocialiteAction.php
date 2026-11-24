@@ -9,6 +9,13 @@ use Modules\User\Actions\Socialite\Utils\UserNameFieldsResolver;
 use Modules\User\Datas\SocialiteUserAttributesData;
 use Spatie\QueueableAction\QueueableAction;
 
+<<<<<<< HEAD
+=======
+/**
+ * @see docs/contracts/get-user-model-attributes-from-socialite-action.md
+ * @contract docs/contracts/get-user-model-attributes-from-socialite-action.md
+ */
+>>>>>>> laraxot/dev
 class GetUserModelAttributesFromSocialiteAction
 {
     use QueueableAction;

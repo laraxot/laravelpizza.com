@@ -8,6 +8,10 @@ tags: [migrato-da-txt, ui]
 converted_from: ubuntu.txt
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< HEAD
+=======
+qmd: "ubuntu"
+>>>>>>> laraxot/dev
 ---
 
 sudo apt-get install jpegoptim

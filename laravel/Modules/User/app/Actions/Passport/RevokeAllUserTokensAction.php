@@ -13,6 +13,12 @@ use Spatie\QueueableAction\QueueableAction;
  *
  * Questa action revoca tutti i token OAuth2 di un utente specifico,
  * utile per logout forzato o revoca di accesso.
+<<<<<<< HEAD
+=======
+ *
+ * @see docs/contracts/revoke-all-user-tokens-action.md
+ * @contract docs/contracts/revoke-all-user-tokens-action.md
+>>>>>>> laraxot/dev
  */
 class RevokeAllUserTokensAction
 {

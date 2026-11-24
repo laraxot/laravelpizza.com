@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Actions Structure"
+type: note
+qmd: "actions structure"
+---
+>>>>>>> laraxot/dev
 # Actions Structure 
 
 ## Directory Structure

@@ -14,6 +14,10 @@ references:
   - laravel/Modules/User/docs/stories/8.1-phpstan-l10-user-config-offset-access.story.md
   - laravel/Modules/Lang/docs/stories/8.10.phpstan-cluster2-lang-pdnd-ui-2026-10-06.story.md
   - laravel/Modules/Lang/docs/stories/8.11-phpstan-l10-test-types-fix.story.md
+<<<<<<< HEAD
+=======
+qmd: "phpstan l10 user lang fix story"
+>>>>>>> laraxot/dev
 ---
 
 # PHPStan L10 User + Lang Modules Fix

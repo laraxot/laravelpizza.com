@@ -9,6 +9,13 @@ use Illuminate\Contracts\Hashing\Hasher;
 use Modules\User\Contracts\UserContract;
 use Spatie\QueueableAction\QueueableAction;
 
+<<<<<<< HEAD
+=======
+/**
+ * @see docs/contracts/delete-user-action.md
+ * @contract docs/contracts/delete-user-action.md
+ */
+>>>>>>> laraxot/dev
 class DeleteUserAction
 {
     use QueueableAction;

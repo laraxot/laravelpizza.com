@@ -2,19 +2,6 @@
 title: "Contratto — QueryNominatimAction"
 type: contract
 action: "Modules\Geo\Actions\Osm\QueryNominatimAction"
-<<<<<<< .merge_file_fro5d2
-<<<<<<< HEAD
-tags: [contract, action]
-created: 2026-11-18
-updated: 2026-11-18
-=======
-<<<<<<< HEAD
-tags: [contract, action]
-created: 2026-11-18
-updated: 2026-11-18
-=======
-=======
->>>>>>> .merge_file_M8PqlH
 tags: [contract, action, openstreetmap, nominatim, geocoding, rate-limit, privacy]
 created: 2026-11-18
 updated: 2026-11-24
@@ -23,59 +10,10 @@ related:
   - ../../app/Actions/Osm/QueryNominatimAction.php
   - ../../app/Http/Controllers/NominatimController.php
   - ../../tests/Feature/OsmProxyTest.php
-<<<<<<< .merge_file_fro5d2
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_M8PqlH
 ---
 
 # QueryNominatimAction
 
-<<<<<<< .merge_file_fro5d2
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-Contratto di comportamento (regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`).
-Sorgente: `app/Actions/Osm/QueryNominatimAction.php`.
-
-## Input
-
-- Endpoint (`search` o `reverse`), parametri della richiesta, lingua della pagina.
-
-## Output
-
-- `{status, data}`: 200 con i risultati di Nominatim, oppure 422, 429, 502 o 503 con un messaggio.
-
-## Invarianti
-
-- Al massimo 1 richiesta al secondo a Nominatim per tutto il sito.
-- Solo i parametri ammessi.
-- `limit` <= 10.
-
-## Effetti collaterali
-
-- Risultati in cache per `cache_days`.
-- Una richiesta HTTP a Nominatim se non in cache.
-
-## Errori
-
-- Nessuna eccezione verso il chiamante: query corta o coordinate fuori range = 422.
-- Servizio spento = 503.
-- Posto occupato dopo un secondo di attesa = 429.
-- Nominatim irraggiungibile o in errore = 502.
-
-## Non fa
-
-- Non completa mentre si digita (vietato dalla policy).
-- Non geocodifica in blocco.
-- Non salva l'IP del richiedente.
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> .merge_file_M8PqlH
 Ricerca indirizzi e geocodifica inversa su Nominatim passando dal nostro server, nel rispetto della Nominatim Usage
 Policy. Perché esiste: [ADR proxy tile e Nominatim](../adr/osm-proxy-tile-nominatim.md). Sorgente:
 `app/Actions/Osm/QueryNominatimAction.php`; unico chiamante: `app/Http/Controllers/NominatimController.php`
@@ -140,8 +78,3 @@ Configurazione (`geo.config.osm_proxy`): `nominatim.enabled` (interruttore senza
 - Non salva né inoltra l'IP del richiedente; il limite per IP è della rotta (`throttle:30,1`), non dell'Action.
 - Non sceglie la lingua dalla sessione: la passa il controller (`accept-language` in query, poi `Accept-Language`).
 - Non espone `lookup`, `details` o altri endpoint di Nominatim.
-<<<<<<< .merge_file_fro5d2
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_M8PqlH

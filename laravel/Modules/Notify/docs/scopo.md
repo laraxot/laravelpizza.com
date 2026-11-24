@@ -6,11 +6,7 @@ type: concept
 module: Notify
 status: active
 created: 2026-09-02
-<<<<<<< HEAD
-updated: 2026-09-02
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 tags: [scopo, confini, servizio-trasversale, canali, notifiche, dipendenze]
 qmd: "scopo notify servizio trasversale canali notifiche email sms whatsapp telegram push confini dipendenze ipertrofia documentale"
 ---
@@ -87,15 +83,7 @@ sospetto che sia ipertrofia e non ricchezza è confermato da tre misure indipend
 
 - **899 nomi di file collidono**: 3.031 file `.md`, solo 2.132 basename distinti.
 - **83 gruppi di file byte-identici**: `find docs -name '*.md' -exec md5sum {} + | awk '{print $1}' | sort | uniq -d | wc -l`.
-<<<<<<< HEAD
 - **25 directory contengono sia `00-index.md` sia `00-index.md`** — due indici per la
-=======
-<<<<<<< HEAD
-- **25 directory contengono sia `00-index.md` sia `00-INDEX.md`** — due indici per la
-=======
-- **25 directory contengono sia `00-index.md` sia `00-index.md`** — due indici per la
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   stessa cartella, distinti solo dal case, quindi due verità che nessuno riconcilia.
   Su un filesystem case-insensitive uno dei due sparisce e nessuno se ne accorge.
 - **1.059 file `.md` stanno piatti nella root di `docs/`**, oltre un terzo del totale,
@@ -255,15 +243,7 @@ find Modules/Notify/app/Filament/Clusters/Test/Pages -name '*.php' | wc -l   # 1
 ### 5. Deduplicare `docs/` prima di aggiungere una sola riga nuova
 
 Target misurabili, nell'ordine: gli 83 gruppi di file identici, le 25 collisioni
-<<<<<<< HEAD
 `00-index.md` / `00-index.md`, i 1.059 file piatti nella root. Le regole di progetto sui
-=======
-<<<<<<< HEAD
-`00-index.md` / `00-INDEX.md`, i 1.059 file piatti nella root. Le regole di progetto sui
-=======
-`00-index.md` / `00-index.md`, i 1.059 file piatti nella root. Le regole di progetto sui
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 nomi dei file markdown esistono già — anzi ne esistono troppe, `ls docs/wiki/rules/ |
 grep -ci markdown` ne conta 9 — e qui vanno applicate, non riscritte una decima volta.
 

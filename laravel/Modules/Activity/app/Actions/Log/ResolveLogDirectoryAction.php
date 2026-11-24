@@ -12,6 +12,9 @@ use function Safe\realpath;
 
 /**
  * Percorso reale (link simbolici risolti) della cartella dei log, `storage/logs` salvo diversa indicazione.
+ *
+ * @see docs/contracts/resolve-log-directory-action.md
+ * @contract docs/contracts/resolve-log-directory-action.md
  */
 class ResolveLogDirectoryAction
 {

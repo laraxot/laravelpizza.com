@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Sicurezza nel Processo di Logout"
+type: note
+qmd: "logout security sicurezza processo"
+---
+>>>>>>> laraxot/dev
 # Sicurezza nel Processo di Logout
 
 ## Analisi della Sicurezza

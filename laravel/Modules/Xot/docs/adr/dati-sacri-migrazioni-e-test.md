@@ -6,6 +6,7 @@ created: 2026-11-23
 updated: 2026-11-24
 decision-makers: [team back office]
 issues: [251]
+qmd: "dati sacri migrazioni test sono migratefreshresetrollbackforce"
 ---
 
 # I dati sono sacri: migrazioni e test girano solo in avanti

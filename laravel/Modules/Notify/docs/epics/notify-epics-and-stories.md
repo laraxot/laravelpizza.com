@@ -6,11 +6,7 @@ title: "Notify Epics and User Stories"
 type: user_stories
 tags: [user stories, epics, notify]
 created: 2026-08-04
-<<<<<<< HEAD
-updated: 2026-08-04
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 ---
 # Notify Epics and User Stories
 

@@ -6,9 +6,15 @@ return [
     'fields' => [
         'name' => [
             'label' => 'Nome visualizzato',
+<<<<<<< HEAD
             'placeholder' => 'Inserisci il nome visualizzato',
             'helper_text' => 'Il nome mostrato nel sito e nei pannelli.',
             'description' => 'Nome visualizzato',
+=======
+            'helper_text' => 'Il nome mostrato nel sito e nei pannelli.',
+            'placeholder' => 'name',
+            'description' => 'name',
+>>>>>>> laraxot/dev
         ],
         'created_at' => [
             'label' => 'Creato il',
@@ -47,6 +53,7 @@ return [
             'label' => 'Ricordami',
             'description' => 'Mantieni la sessione attiva su questo dispositivo',
             'helper_text' => 'Sessione prolungata su dispositivo attendibile',
+<<<<<<< HEAD
             'placeholder' => '',
         ],
         'token' => [
@@ -66,6 +73,36 @@ return [
             'placeholder' => 'Seleziona il tipo',
             'helper_text' => 'Tipo di utente o record',
             'description' => 'Tipo',
+=======
+            'placeholder' => 'remember',
+        ],
+        'token' => [
+            'label' => 'Token',
+            'description' => 'token',
+            'helper_text' => 'token',
+            'placeholder' => 'token',
+        ],
+        'state' => [
+            'description' => 'state',
+            'label' => 'Stato',
+            'placeholder' => 'state',
+            'helper_text' => 'state',
+        ],
+        'type' => [
+            'label' => 'Tipo',
+            'placeholder' => 'type',
+            'helper_text' => 'type',
+            'description' => 'type',
+        ],
+        'roles' => [
+            'label' => 'roles',
+        ],
+        'is_active' => [
+            'label' => 'is_active',
+        ],
+        'updated_at' => [
+            'label' => 'updated_at',
+>>>>>>> laraxot/dev
         ],
     ],
     'actions' => [
@@ -86,8 +123,13 @@ return [
             'label' => '',
         ],
         'worker' => [
+<<<<<<< HEAD
             'label' => 'Lavoratore',
             'heading' => 'Lavoratore',
+=======
+            'label' => 'worker',
+            'heading' => 'worker',
+>>>>>>> laraxot/dev
         ],
     ],
 ];

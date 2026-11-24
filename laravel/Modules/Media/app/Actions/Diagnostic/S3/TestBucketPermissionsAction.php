@@ -10,6 +10,10 @@ use Exception;
 use Modules\Media\Actions\Diagnostic\Aws\CreateFilesystemS3ClientAction;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/test-bucket-permissions-action.md
+ * @contract docs/contracts/test-bucket-permissions-action.md
+ */
 class TestBucketPermissionsAction
 {
     use QueueableAction;

@@ -92,7 +92,10 @@ dependency-intelligence.md
 docs-health.md
 coverage.md
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> laraxot/dev
 REDUNDANCY_ANALYSIS.md
 
 # Index duplicates (consolidate into README.md)
@@ -100,6 +103,9 @@ REDUNDANCY_ANALYSIS.md
 00-index.md
 INDEX.md
 
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 redundancy_analysis.md
 
@@ -152,7 +158,10 @@ mkdir -p wiki/strategies wiki/how-to wiki/overviews wiki/rules
 
 # Move strategy/research
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> laraxot/dev
 mv PRODUCT_LAUNCH_PLAN.md wiki/strategies/
 mv TRANSLATION_STRATEGIES.md wiki/strategies/
 mv USER_RESEARCH.md wiki/strategies/
@@ -162,6 +171,9 @@ mv SPRINT_PLANNING.md wiki/strategies/
 # Move how-to guides
 mv QMD-SETUP.md wiki/how-to/
 
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 mv product_launch_plan.md wiki/strategies/
 mv TRANSLATION_STRATEGIES.md wiki/strategies/
@@ -188,6 +200,11 @@ mv schema.md wiki/overviews/
 
 # Move rules/patterns
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+mv ON-DEMAND-PATTERN.md wiki/rules/
+
+>>>>>>> laraxot/dev
 =======
 mv ON-DEMAND-PATTERN.md wiki/rules/
 
@@ -206,6 +223,11 @@ laravel/Modules/Lang/docs/
 ├── PHPSTAN_L10.md                   # Technical status & fixes
 ├── MIGRATIONS.md                    # Schema/migrations
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+├── PRODUCT_STRATEGY.md              # Product vision (optional: move to wiki/)
+
+>>>>>>> laraxot/dev
 =======
 ├── PRODUCT_STRATEGY.md              # Product vision (optional: move to wiki/)
 
@@ -291,6 +313,7 @@ rm -f \
   docs-health.md \
   coverage.md \
 <<<<<<< HEAD
+<<<<<<< HEAD
   redundancy_analysis.md \
 =======
 <<<<<<< HEAD
@@ -301,6 +324,11 @@ redundancy_analysis.md \
   redundancy_analysis.md \
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+  REDUNDANCY_ANALYSIS.md \
+
+redundancy_analysis.md \
+>>>>>>> laraxot/dev
   00-index.md \
   index.md
 ---
@@ -309,13 +337,19 @@ redundancy_analysis.md \
   index.md
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
   00-index.md \
 =======
+=======
+>>>>>>> laraxot/dev
   00-INDEX.md \
   00-index.md \
   INDEX.md
 
 00-index.md \
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
   00-index.md \
   index.md
@@ -331,7 +365,10 @@ mkdir -p wiki/strategies wiki/how-to wiki/overviews wiki/rules
 
 # 6. Move strategy/research files
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> laraxot/dev
 mv PRODUCT_LAUNCH_PLAN.md wiki/strategies/ 2>/dev/null || true
 mv TRANSLATION_STRATEGIES.md wiki/strategies/ 2>/dev/null || true
 mv USER_RESEARCH.md wiki/strategies/ 2>/dev/null || true
@@ -341,6 +378,9 @@ mv SPRINT_PLANNING.md wiki/strategies/ 2>/dev/null || true
 # 7. Move how-to guides
 mv QMD-SETUP.md wiki/how-to/ 2>/dev/null || true
 
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 mv product_launch_plan.md wiki/strategies/ 2>/dev/null || true
 mv TRANSLATION_STRATEGIES.md wiki/strategies/ 2>/dev/null || true
@@ -368,6 +408,11 @@ mv MCAMARA_IMPLEMENTATION_GUIDE.md wiki/overviews/ 2>/dev/null || true
 
 # 9. Move rules
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+mv ON-DEMAND-PATTERN.md wiki/rules/ 2>/dev/null || true
+
+>>>>>>> laraxot/dev
 =======
 mv ON-DEMAND-PATTERN.md wiki/rules/ 2>/dev/null || true
 

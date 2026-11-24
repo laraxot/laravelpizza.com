@@ -4,11 +4,7 @@ type: rule
 tags: [notify, docs, rules, vhost, governance]
 module: Notify
 created: 2026-07-20
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "notify documentazione rules vhost governance 🌐 vhost governance rules frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"

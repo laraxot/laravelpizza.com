@@ -12,6 +12,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< HEAD
+=======
+qmd: "datas not dtos convention"
+>>>>>>> laraxot/dev
 ---
 
 # Datas, non DTOs

@@ -7,11 +7,7 @@ discussions: []
 title: frontend stack canonico — notify module stub
 type: rule
 module: Notify
-<<<<<<< HEAD
-updated: 2026-06-03
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 ---
 
 # Stack frontend — modulo Notify

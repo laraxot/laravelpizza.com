@@ -35,6 +35,7 @@ Resources refactoring (2 giorni)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 **Status:** 🟢 BUONO
 =======
 =======
@@ -82,4 +83,7 @@ abstract class BaseModel extends XotBaseModel
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+**Status:** 🟢 BUONO
 >>>>>>> laraxot/dev

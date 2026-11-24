@@ -8,6 +8,10 @@ tags: [migrato-da-txt, ui]
 converted_from: page-builder.txt
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< HEAD
+=======
+qmd: "page builder risorse esterne"
+>>>>>>> laraxot/dev
 ---
 
 # Page builder — risorse esterne

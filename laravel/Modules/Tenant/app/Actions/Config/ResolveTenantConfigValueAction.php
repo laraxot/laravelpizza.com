@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Config;
 use Modules\Tenant\Actions\GetTenantNameAction;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/resolve-tenant-config-value-action.md
+ * @contract docs/contracts/resolve-tenant-config-value-action.md
+ */
 class ResolveTenantConfigValueAction
 {
     use QueueableAction;

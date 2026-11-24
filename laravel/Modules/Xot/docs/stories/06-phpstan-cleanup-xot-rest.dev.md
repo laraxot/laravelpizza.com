@@ -10,6 +10,7 @@ related:
   - ./2026-10-06-phpstan-cleanup-xot-rest.story.md
   - ./2026-10-06-phpstan-cleanup-xot-app.dev.md
   - ../bmad/phpstan-status.md
+qmd: "06 phpstan cleanup xot rest dev"
 ---
 
 # [DEV] PHPStan cleanup Xot (tests, helpers, stub)

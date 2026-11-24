@@ -1,33 +1,13 @@
 ---
-<<<<<<< HEAD
-title: "Activity: BMAD Quick Reference"
-=======
-<<<<<<< HEAD
 title: "Activity — BMAD Quick Reference"
-=======
-title: "Activity: BMAD Quick Reference"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 description: "Comandi rapidi BMAD per il modulo Activity"
 module: "Activity"
 alias: "activity"
 documentation_date: "2026-05-27"
 bmad_version: "6.2.0"
-<<<<<<< HEAD
-type: note
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 ---
 
 # Activity — BMAD Quick Reference
-=======
-type: note
->>>>>>> laraxot/dev
-=======
-type: note
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 status: draft
 updated: 2026-10-07
 tags: [docs, activity, bmad]
@@ -84,12 +64,4 @@ bmad-quick-spec "Specifica retention log"
 
 ---
 
-<<<<<<< HEAD
 *Activity · BMAD Quick Reference · data 2026-05-27*
-=======
-<<<<<<< HEAD
-*Activity · BMAD Quick Reference · data 2026-05-27*
-=======
-*Activity · BMAD Quick Reference · data 2026-05-27*
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

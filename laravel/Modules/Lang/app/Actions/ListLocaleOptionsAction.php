@@ -12,6 +12,9 @@ use function Safe\mb_chr;
 /**
  * Etichette delle lingue (`🇮🇹 Italiano`) per i selettori: bandiera dal codice regionale e nome nativo
  * presi da `laravellocalization.supportedLocales`, l'elenco delle lingue note al progetto.
+ *
+ * @see docs/contracts/list-locale-options-action.md
+ * @contract docs/contracts/list-locale-options-action.md
  */
 class ListLocaleOptionsAction
 {

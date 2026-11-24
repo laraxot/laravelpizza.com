@@ -1,19 +1,10 @@
 ---
-<<<<<<< HEAD
-title: "Design Comuni Index"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "Design Comuni Index"
-=======
 title: "design comuni index"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "design comuni index"
->>>>>>> laraxot/dev
 issues: []
 discussions: []
 ---
@@ -111,30 +102,6 @@ Documentazione del modulo Cms per il progetto Design Comuni Italia.
 
 ---
 
-<<<<<<< HEAD
-title: "DESIGN COMUNI INDEX"
-=======
-<<<<<<< HEAD
-title: "design comuni index"
-=======
-title: "DESIGN COMUNI INDEX"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-<<<<<<< HEAD
-qmd: "DESIGN COMUNI INDEX"
-=======
-<<<<<<< HEAD
-qmd: "design comuni index"
-=======
-qmd: "DESIGN COMUNI INDEX"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-issues: []
-discussions: []
 **Data**: 2026-04-03  
 **Stato**: ✅ 63.0% OK  
 **Modulo**: Cms - Content Management System

@@ -5,6 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< HEAD
+=======
+qmd: "model inheritance analysis analisi ereditarietà modelli"
+>>>>>>> laraxot/dev
 ---
 
 # Analisi Ereditarietà Modelli - Modulo User

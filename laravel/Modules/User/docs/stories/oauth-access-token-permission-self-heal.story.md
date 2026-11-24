@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Permission self-heal: PermissionDoesNotExist non deve piu' produrre 500"
+type: story
+qmd: "oauth access token permission self heal"
+---
+>>>>>>> laraxot/dev
 # Permission self-heal: PermissionDoesNotExist non deve piu' produrre 500
 
 Status: done
@@ -19,15 +27,7 @@ l'accesso (comportamento sicuro di default) e potersi auto-riparare dove esplici
 letterale (convenzione kebab-case + dot, es. `oauth-access-token.view.any`). Ogni User model passa da
 `Modules\User\Models\BaseUser` -> trait `HasSpatiePermission`.
 
-<<<<<<< HEAD
 **A (alternative valutate, in ordine cronologico reale — l'implementazione e' cambiata piu' volte nel corso del
-=======
-<<<<<<< .merge_file_cwJSKg
-**A (alternative valutate, in ordine cronologico reale: l'implementazione e' cambiata piu' volte nel corso del
-=======
-**A (alternative valutate, in ordine cronologico reale — l'implementazione e' cambiata piu' volte nel corso del
->>>>>>> .merge_file_foAfPV
->>>>>>> laraxot/dev
 task, sessioni concorrenti sullo stesso repo)**:
 
 1. Solo seeding (`PermissionSeeder::run()`): risolve solo il permesso mancante oggi, non previene la prossima
@@ -84,15 +84,7 @@ task, sessioni concorrenti sullo stesso repo)**:
 Test: `Modules/User/tests/Feature/HasSpatiePermissionAutoCreateTest.php` (5 casi):
 1. Permesso esistente: comportamento identico a Spatie standard.
 2. Permesso mancante via `hasPermissionToOrCreate()`: non esplode, viene creato, accesso negato.
-<<<<<<< HEAD
 3. `hasPermissionTo()` standard (senza opt-in): continua a esplodere su permesso mancante — conferma che il
-=======
-<<<<<<< .merge_file_cwJSKg
-3. `hasPermissionTo()` standard (senza opt-in): continua a esplodere su permesso mancante: conferma che il
-=======
-3. `hasPermissionTo()` standard (senza opt-in): continua a esplodere su permesso mancante — conferma che il
->>>>>>> .merge_file_foAfPV
->>>>>>> laraxot/dev
    blast radius resta contenuto al solo `hasPermissionToOrCreate()`.
 4. Permesso auto-creato: assegnabile via ruolo dopo, funziona normalmente.
 5. `OauthAccessTokenPolicy::viewAny()` end-to-end: non esplode piu' su permesso mancante.
@@ -116,39 +108,23 @@ volte, stato finale stabile e confermato per iscritto qui.
 1. `.env.testing` usa `CACHE_DRIVER=array` (chiave Laravel <11, ignorata da `config/cache.php` che legge
    `CACHE_STORE`, default `database`). Causa fallimento silenzioso di QUALSIASI test che tocchi permission-cache
 <<<<<<< HEAD
-   Spatie (tabella `cache` assente su `quaeris_data_test`), non solo questo. File dichiarato generato da
-=======
-<<<<<<< .merge_file_cwJSKg
    Spatie (tabella `cache` assente su `<nome progetto>_data_test`), non solo questo. File dichiarato generato da
 =======
    Spatie (tabella `cache` assente su `quaeris_data_test`), non solo questo. File dichiarato generato da
->>>>>>> .merge_file_foAfPV
 >>>>>>> laraxot/dev
    `bashscripts/tools/sync-env-testing.sh` -> non editato a mano in questo task, utente non ha ancora risposto
    se vuole che venga sistemato.
 
    **RISOLTO 2026-09-21** (stessa giornata, follow-up separato): fix applicato in `phpunit.xml`
-<<<<<<< HEAD
    (`<env name="CACHE_STORE" value="array" />` aggiunta, `.env.testing` NON toccato — evita il
-=======
-<<<<<<< .merge_file_cwJSKg
-   (`<env name="CACHE_STORE" value="array" />` aggiunta, `.env.testing` NON toccato: evita il
-=======
-   (`<env name="CACHE_STORE" value="array" />` aggiunta, `.env.testing` NON toccato — evita il
->>>>>>> .merge_file_foAfPV
->>>>>>> laraxot/dev
    problema del file generato). `<env>` di phpunit.xml vince su `.env.testing` a boot time. Verificato
    `.env.sqlite` (cercato per primo da `app/Application.php::environmentFile()`) non esiste su disco
    in questo repo, quindi si cade sempre su `.env.testing`. Test rieseguiti senza override CLI:
    5 passed (9 assertions). Dettagli:
 <<<<<<< HEAD
-   `Modules/User/docs/stories/cache-store-env-var-test-infra-2026-09-21.story.md`.
-=======
-<<<<<<< .merge_file_cwJSKg
    `Modules/User/docs/stories/cache-store-env-var-test-infra.story.md`.
 =======
    `Modules/User/docs/stories/cache-store-env-var-test-infra-2026-09-21.story.md`.
->>>>>>> .merge_file_foAfPV
 >>>>>>> laraxot/dev
 2. `Modules/Lang/tests/Unit/Models/BaseModelTest.php` vs `Modules/Lang/tests/unit/models/BaseModelTest.php`
    (case-variant duplicate): rompe qualunque `--filter` che carichi l'intera suite configurata. Pre-esistente,
@@ -156,15 +132,7 @@ volte, stato finale stabile e confermato per iscritto qui.
 3. Permessi `oauth-access-token.*` non assegnati a nessun ruolo sull'ambiente 192.168.1.35:8000 (solo creati
    vuoti dal self-heal al primo accesso): accesso resta negato finche' un admin non li assegna esplicitamente
    a un ruolo. Decisione di business, non presa qui.
-<<<<<<< HEAD
 4. Le altre ~230 Policy del repo NON sono state convertite a `hasPermissionToOrCreate()` — solo
-=======
-<<<<<<< .merge_file_cwJSKg
-4. Le altre ~230 Policy del repo NON sono state convertite a `hasPermissionToOrCreate()`: solo
-=======
-4. Le altre ~230 Policy del repo NON sono state convertite a `hasPermissionToOrCreate()` — solo
->>>>>>> .merge_file_foAfPV
->>>>>>> laraxot/dev
    `OauthAccessTokenPolicy` (quella del bug report). Ogni altra Policy che incontri lo stesso 500 va convertita
    caso per caso, di proposito (e' il compromesso scelto: blast radius contenuto invece di copertura totale
    automatica).

@@ -94,6 +94,7 @@ Overall Module Completion: 60%
 * [roadmap.md](bashscripts/docs/roadmap.md)
 * [roadmap.md](docs/roadmap.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -122,6 +123,10 @@ Overall Module Completion: 60%
 >>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+* [roadmap.md](../../../patient/docs/roadmap.md)
+* [roadmap.md](../../../cms/docs/roadmap.md)
 >>>>>>> laraxot/dev
 * [roadmap.md](../../../../themes/one/docs/roadmap.md)
 

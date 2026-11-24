@@ -9,6 +9,10 @@ related:
   - ./socialite-provider-boundary-product-brief.md
   - ./socialite-provider-boundary-prd.md
   - ./stories/socialite-provider-boundary.story.md
+<<<<<<< HEAD
+=======
+qmd: "socialite provider boundary architecture"
+>>>>>>> laraxot/dev
 ---
 
 # Socialite provider boundary — architecture

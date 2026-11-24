@@ -1,17 +1,5 @@
 ---
 <<<<<<< HEAD
-title: "Architecture Decision Records"
-type: index
-tags: [adr, decisioni]
-created: 2026-11-18
-updated: 2026-11-18
----
-
-# Architecture Decision Records
-
-Il **perche'** delle scelte di questo pacchetto: una decisione per file, con le alternative scartate.
-Il nome del file e' l'argomento, senza date ne' numeri (la data sta nella frontmatter).
-=======
 title: "ADR — modulo User"
 type: index
 tags: [adr, decisioni, user, autenticazione]
@@ -34,7 +22,6 @@ Le decisioni vanno verificate contro codice e test correnti. Una modifica sostan
 Il nome del file e' l'argomento in kebab-case, senza date ne' numeri (la data sta nella frontmatter). Questo README e' l'unico indice della cartella: ogni ADR compare qui come `[titolo](file.md)`.
 
 Regola canonica del formato: [action-behavioral-contract](../../../Xot/docs/rules/action-behavioral-contract.md); standard condivisi: [Xot ADR](../../../Xot/docs/adr/README.md).
->>>>>>> laraxot/dev
 
 ## Formato
 
@@ -42,11 +29,7 @@ Regola canonica del formato: [action-behavioral-contract](../../../Xot/docs/rule
 ---
 title: "ADR — <decisione in una riga>"
 type: decision
-<<<<<<< HEAD
-status: accepted | superseded | deprecated
-=======
 status: proposed | accepted | superseded | deprecated
->>>>>>> laraxot/dev
 created: AAAA-MM-GG
 updated: AAAA-MM-GG
 issues: []
@@ -68,21 +51,6 @@ Ogni alternativa seria, con il motivo per cui non e' stata scelta.
 
 ## Conseguenze
 Pro, contro, debito che resta, cosa misurare. Chi cambia la decisione scrive un nuovo ADR e segna questo `superseded`.
-<<<<<<< HEAD
-```
-
-## Decisioni
-
-
-## Decisioni precedenti (formato libero, non ancora ADR)
-
-- [contracts-and-lang-backup-archival-.deprecated](../wiki/decisions/contracts-and-lang-backup-archival-.deprecated.md)
-- [contracts-and-lang-backup-archival-](../wiki/decisions/contracts-and-lang-backup-archival-.md)
-- [contracts-and-lang-backup-archival-30.deprecated](../wiki/decisions/contracts-and-lang-backup-archival-30.deprecated.md)
-- [contracts-and-lang-backup-archival-30](../wiki/decisions/contracts-and-lang-backup-archival-archiviazione-orfani-ponytail-audit.md)
-- [contracts-and-lang-backup-archival.deprecated](../wiki/decisions/contracts-and-lang-backup-archival.deprecated.md)
-- [contracts-and-lang-backup-archival](../wiki/decisions/contracts-and-lang-backup-archival.md)
-=======
 
 ## Conferma
 Facoltativa: controllo ripetibile (test, guard source-level, review). La presenza dell'ADR non prova l'implementazione.
@@ -111,4 +79,25 @@ Almeno un ADR per pacchetto e' "sostanziale": ha anche `## Driver` e `## Conferm
 - [contracts-and-lang-backup-archival-30](../wiki/decisions/contracts-and-lang-backup-archival-30.md)
 - [contracts-and-lang-backup-archival-30.deprecated](../wiki/decisions/contracts-and-lang-backup-archival-30.deprecated.md)
 - [archiviazione orfani (ponytail audit)](../wiki/decisions/contracts-and-lang-backup-archival-archiviazione-orfani-ponytail-audit.md)
+=======
+title: "ADR — User"
+type: index
+owner: User
+updated: 2026-11-24
+qmd: "User ADR architecture decision record MADR formato decisioni identità ruoli"
+---
+
+# ADR — User
+
+Un ADR del modulo User registra una scelta difficile da invertire, sorprendente o frutto di un trade-off reale su identità, autenticazione, ruoli, permessi e team. Non è un diario né una spiegazione retroattiva: ogni affermazione ha un file di prova. Template condiviso: [0000-template](../../../Xot/docs/adr/0000-template.md); standard: [Xot ADR](../../../Xot/docs/adr/README.md).
+
+## Formato MADR
+
+Frontmatter (`title`, `type: decision`, `status`, `created`, `updated`, `decision-makers`, `module`, `qmd`) e sezioni nell'ordine: `## Contesto`, `## Driver della decisione`, `## Alternative scartate`, `## Decisione`, `## Conseguenze`, `## Conferma`. Nome file in kebab-case senza data né numero. Una decisione nuova supersede la vecchia e la marca `superseded`.
+
+## ADR presenti
+
+Elenco con stato: [INDEX.md](INDEX.md). Presenti: [user-owns-identity-and-roles](user-owns-identity-and-roles.md), [frontoffice-login-page-ownership](frontoffice-login-page-ownership.md), [deleted-accounts-are-filtered-by-auth-provider](deleted-accounts-are-filtered-by-auth-provider.md).
+
+Policy trasversale su dati sacri e test isolati: [0013-dati-sacri-migrazioni-e-test](../../../Xot/docs/adr/0013-dati-sacri-migrazioni-e-test.md).
 >>>>>>> laraxot/dev

@@ -8,18 +8,14 @@ use Symfony\Component\Finder\Finder;
 use function Safe\file_get_contents;
 
 /**
- * Behaviour: PTVX senza Cms — User non importa Modules\Cms nelle Folio pages.
- * Existing: NoCommentModuleDependencyTest.php (pattern Comment); nessuno per Cms.
- * User: «Aggiungi/aggiorna Pest unit che asserisce assenza Cms e assenza route/page phantom».
+ * Behaviour: le Folio pages di User non importano Modules\Cms e non esiste un archivio `pages/pages`.
+ * Il modulo e' condiviso: in questo progetto Modules/Cms esiste, quindi NON si asserisce l'assenza
+ * della cartella Cms ne' quella di `resources/views/pages` (tracciata e popolata).
  *
  * @see App\Providers\FolioServiceProvider stub no-op
+ * @see Modules/User/docs/architecture/auth-blade-structure.md
+ * @see Modules/User/docs/adr/frontoffice-login-page-ownership.md
  */
-test('cms module directory is absent in this portfolio', function (): void {
-    $cmsPath = dirname(__DIR__, 2).'/../Cms';
-
-    expect(is_dir($cmsPath))->toBeFalse();
-});
-
 test('user folio pages do not import modules cms', function (): void {
     $pagesPath = dirname(__DIR__, 2).'/resources/views/pages';
 

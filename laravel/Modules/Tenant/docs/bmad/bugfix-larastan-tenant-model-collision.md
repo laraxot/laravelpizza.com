@@ -6,6 +6,7 @@ module: "Tenant"
 tags: [docs, tenant, bmad]
 created: 2026-10-06
 updated: 2026-10-06
+qmd: "bugfix larastan tenant model collision bugfixlarastantenantmodelcollisionmd"
 ---
 
 # Bugfix: PHPStan `assign.propertyType` — TenantFactory duplicata confonde il tipo Tenant

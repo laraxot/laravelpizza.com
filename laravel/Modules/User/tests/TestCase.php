@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests;
 
+<<<<<<< HEAD
+=======
 use Illuminate\Database\DatabaseManager;
+>>>>>>> laraxot/dev
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Facades\Filament;
@@ -14,8 +17,11 @@ use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema as FilamentSchema;
 use Filament\Widgets\Widget;
 use Illuminate\Console\Command;
+<<<<<<< HEAD
 use Illuminate\Contracts\Console\Kernel;
 use Illuminate\Database\DatabaseManager;
+=======
+>>>>>>> laraxot/dev
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -186,14 +192,6 @@ abstract class TestCase extends XotBaseTestCase
     public static ?Collection $users = null;
 
     /**
-<<<<<<< HEAD
-     * Come `Tests\TestCase`: anche `mariadb` (default in CI) e `fixcity` (Profile del progetto)
-     * vanno in transazione, altrimenti le righe scritte dai test restano nel DB `_test`.
-     *
-     * @var list<string>
-     */
-    protected $connectionsToTransact = ['mysql', 'mariadb', 'user', 'fixcity'];
-=======
      * Come `Tests\TestCase`: anche `mariadb` (default in CI) va in transazione, altrimenti le
      * righe scritte dai test restano nel DB `_test`.
      *
@@ -208,7 +206,6 @@ abstract class TestCase extends XotBaseTestCase
      * @var list<string>
      */
     protected $connectionsToTransact = ['mysql', 'mariadb', 'user'];
->>>>>>> laraxot/dev
 
     public function setupFilamentAdminPanel(): void
     {
@@ -682,9 +679,12 @@ abstract class TestCase extends XotBaseTestCase
      * Effetto in CI su MariaDB: nessuna notifica di approvazione, scarto o chiusura (TicketLifecycleNotificationTest, area personale).
      * Lo skip del manager conta i nomi restituiti qui, quindi ogni nome deve corrispondere a una sola transazione aperta.
      *
+<<<<<<< HEAD
      * I nomi senza configurazione si saltano: la lista e' condivisa tra i progetti del monorepo e `fixcity` esiste solo
      * dove il modulo Fixcity e' attivo; altrove `connection('fixcity')` lanciava «not configured» e nessun test partiva.
      *
+=======
+>>>>>>> laraxot/dev
      * @return list<string>
      */
     protected function connectionsToTransact()

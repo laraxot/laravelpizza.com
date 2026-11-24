@@ -8,6 +8,10 @@ tags: [migrato-da-txt, ui]
 converted_from: flip-cards.txt
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< HEAD
+=======
+qmd: "flip cards risorse esterne"
+>>>>>>> laraxot/dev
 ---
 
 # Flip cards — risorse esterne

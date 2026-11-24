@@ -7,6 +7,10 @@ namespace Modules\Media\Actions\S3;
 use Aws\S3\Exception\S3Exception;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/get-file-info-action.md
+ * @contract docs/contracts/get-file-info-action.md
+ */
 class GetFileInfoAction extends BaseS3Action
 {
     use QueueableAction;

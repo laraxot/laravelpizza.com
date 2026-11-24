@@ -10,15 +10,17 @@ related:
   - ./README.md
   - ./PATTERNS.md
 <<<<<<< HEAD
+<<<<<<< HEAD
   - ./index.md
 =======
-<<<<<<< HEAD
   - ./INDEX.md
 
 - ./index.md
-=======
-  - ./index.md
 >>>>>>> laraxot/dev
+=======
+  - ./INDEX.md
+
+- ./index.md
 >>>>>>> laraxot/dev
 ---
 
@@ -739,15 +741,17 @@ Se il troubleshooting non risolve:
 
 5. **Consulta documentation**:
 <<<<<<< HEAD
+<<<<<<< HEAD
    - [INDEX](./index.md) — Complete file listing
 =======
-<<<<<<< HEAD
    - [INDEX](./INDEX.md) — Complete file listing
 
 - [INDEX](./index.md) — Complete file listing
-=======
-   - [INDEX](./index.md) — Complete file listing
 >>>>>>> laraxot/dev
+=======
+   - [INDEX](./INDEX.md) — Complete file listing
+
+- [INDEX](./index.md) — Complete file listing
 >>>>>>> laraxot/dev
    - [PATTERNS](patterns.md) — Architectural decisions
    - [architecture/component-registration](./architecture/component-registration.md) — Component setup
@@ -758,10 +762,7 @@ Se il troubleshooting non risolve:
 
 - [README](./README.md) — Overview modulo
 - [PATTERNS](patterns.md) — Decisioni architetturali
-<<<<<<< HEAD
-=======
 - [INDEX](./INDEX.md) — Indice documentazione completo
 
->>>>>>> laraxot/dev
 - [INDEX](./index.md) — Indice documentazione completo
 - [standards/ui-standards](./standards/ui-standards.md) — Component standards

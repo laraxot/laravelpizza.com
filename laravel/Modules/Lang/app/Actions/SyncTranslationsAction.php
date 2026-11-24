@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\File;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/sync-translations-action.md
+ * @contract docs/contracts/sync-translations-action.md
+ */
 class SyncTranslationsAction
 {
     use QueueableAction;

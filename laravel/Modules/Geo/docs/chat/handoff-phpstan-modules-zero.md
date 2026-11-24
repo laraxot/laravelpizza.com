@@ -6,11 +6,7 @@ discussions: []
 title: handoff PHPStan zero moduli
 type: chat
 tags: [handoff, phpstan, bootstrap, quality-gate]
-<<<<<<< HEAD
-updated: 2026-06-15
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 related:
   - ../wiki/memories/phpstan-modules-inventory.md
   - ../wiki/reflective.md
@@ -38,15 +34,7 @@ cd laravel && ./vendor/bin/phpstan analyse Modules
 ## Aperto (handoff precedente)
 
 - **Lang:** 8 errori chiavi duplicate (`locale_switcher_refresh`, `translation_editor`) — vedi [handoff-job-lang-merge-phpstan-confidence.md](handoff-job-lang-merge-phpstan-confidence.md)
-<<<<<<< HEAD
 - **Merge marker sweep:** `git grep '^<<<<<<< '`
-=======
-<<<<<<< HEAD
-- **Merge marker sweep:** `git grep '^CONFLICT_START '`
-=======
-- **Merge marker sweep:** `git grep '^<<<<<<< '`
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Regole sessione
 
@@ -55,8 +43,6 @@ cd laravel && ./vendor/bin/phpstan analyse Modules
 - Test: solo Pest
 
 **Agente:** Auto (Cursor) · **Data:** 2026-06-15
-<<<<<<< HEAD
-=======
 
 ## Versione unita da `handoff-phpstan-modules-zero-2026-07-07.md` (2026-07-07)
 
@@ -118,4 +104,3 @@ php -d memory_limit=2048M ./vendor/bin/phpstan analyse Modules --no-progress
 ## Regola nuova da rispettare
 
 **No probe**: non creare file che finiscono per `PhpstanProbeModel.php`, `PhpstanTraitProbe.php` o directory `app/Phpstan`.
->>>>>>> laraxot/dev

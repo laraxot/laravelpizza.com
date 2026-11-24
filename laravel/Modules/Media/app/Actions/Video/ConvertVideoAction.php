@@ -14,6 +14,10 @@ use Modules\Media\Actions\Storage\GetFilesystemAdapterAction;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/convert-video-action.md
+ * @contract docs/contracts/convert-video-action.md
+ */
 class ConvertVideoAction
 {
     use QueueableAction;

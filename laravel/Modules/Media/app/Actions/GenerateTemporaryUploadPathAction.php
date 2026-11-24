@@ -8,6 +8,10 @@ use Modules\Media\Models\Media;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/generate-temporary-upload-path-action.md
+ * @contract docs/contracts/generate-temporary-upload-path-action.md
+ */
 final class GenerateTemporaryUploadPathAction
 {
     use QueueableAction;

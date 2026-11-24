@@ -35,6 +35,7 @@ risoluzione automatica; contenuto divergente → giudizio manuale):
   con informazione reale quando l'altro era stub/generico; unite le sezioni
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   quando entrambe portavano contenuto nuovo (es. `00-index.md`: sia "Ultimo
 =======
 =======
@@ -55,6 +56,9 @@ risoluzione automatica; contenuto divergente → giudizio manuale):
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+  quando entrambe portavano contenuto nuovo (es. `00-index.md`: sia "Ultimo
 >>>>>>> laraxot/dev
   Aggiornamento" sia "Dependency Intelligence"); preferita la denominazione
   generica "laraxot" ai nomi di progetti ospiti (FixCity, SaluteOra)

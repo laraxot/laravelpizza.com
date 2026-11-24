@@ -3,11 +3,7 @@ title: "quick start"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "quick start"
 issues: []
 discussions: []
@@ -506,6 +502,7 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 ### Regole Progetto
 - **[Laraxot Rules](./.windsurf/rules/user_15338591596331277449.md)**
 <<<<<<< HEAD
+<<<<<<< HEAD
 - **[Code Quality](ai-agents/code-quality.md)**
 - **[Code Quality](./ai-agents/code-quality.md)**
 =======
@@ -515,6 +512,10 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 - **[Code Quality](ai-agents/code-quality.md)**
 - **[Code Quality](./ai-agents/code-quality.md)**
 >>>>>>> .merge_file_be5yxr
+>>>>>>> laraxot/dev
+=======
+- **[Code Quality](ai-agents/code-quality.md)**
+- **[Code Quality](./ai-agents/code-quality.md)**
 >>>>>>> laraxot/dev
 - **[Project Rules](./.windsurf/rules/project-rules.md)**
 

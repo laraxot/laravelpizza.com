@@ -4,6 +4,10 @@ type: documentation
 created: 2026-05-11
 updated: 2026-05-11
 tags: [structure, architecture, module]
+<<<<<<< HEAD
+=======
+qmd: "project structure user"
+>>>>>>> laraxot/dev
 ---
 
 # Project Structure — Module **User**
@@ -41,13 +45,10 @@ At module root level, these folders MUST NOT exist:
 │   │   └── *.md
 │   ├── decisions/                # Architecture decision records
 │   └── troubleshooting/          # Bug fixes, error resolutions
-<<<<<<< HEAD
-=======
 ├── ON-DEMAND-PATTERN.md          # 🌟 QUESTO FILE — Pattern on-demand
 ├── QMD-SETUP.md                  # Configurazione QMD
 ├── PERFORMANCE-OPTIMIZATION.md    # Metriche e best practice
 ├── ARCHITECTURE.md               # (opzionale) Architettura modulo
->>>>>>> laraxot/dev
 ├── on-demand-pattern.md          # 🌟 QUESTO FILE — Pattern on-demand
 ├── qmd-setup.md                  # Configurazione QMD
 ├── performance-optimization.md    # Metriche e best practice
@@ -66,11 +67,7 @@ At module root level, these folders MUST NOT exist:
 <<<<<<< HEAD
 | `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
 =======
-<<<<<<< HEAD
 | `ON-DEMAND-PATTERN.md` | **Leggi prima** — pattern da seguire |
-=======
-| `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 ## Convenzioni

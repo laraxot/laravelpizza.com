@@ -3,14 +3,11 @@ title: "architecture aration rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "architecture aration rules"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Architecture Separation Rules - Test Strategy
@@ -141,21 +138,9 @@ use function Pest\Laravel\{get, actingAs};
 
 uses(\Modules\Xot\Tests\TestCase::class);
 
-<<<<<<< HEAD
 // =============================================================================
 // {PAGE_NAME} PAGE TESTS - Laravel Folio Page
 // =============================================================================
-=======
-<<<<<<< HEAD
-// -----------------------------------------------------------------------------
-// {PAGE_NAME} PAGE TESTS - Laravel Folio Page
-// -----------------------------------------------------------------------------
-=======
-// =============================================================================
-// {PAGE_NAME} PAGE TESTS - Laravel Folio Page
-// =============================================================================
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 test('page can be rendered', function () {
     get('/route')
@@ -183,21 +168,9 @@ beforeEach(function (): void {
     mockXotData();
 });
 
-<<<<<<< HEAD
 // =============================================================================
 // {WIDGET_NAME} WIDGET TESTS - Filament Component
 // =============================================================================
-=======
-<<<<<<< HEAD
-// -----------------------------------------------------------------------------
-// {WIDGET_NAME} WIDGET TESTS - Filament Component
-// -----------------------------------------------------------------------------
-=======
-// =============================================================================
-// {WIDGET_NAME} WIDGET TESTS - Filament Component
-// =============================================================================
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 test('widget can be rendered', function () {
     Livewire::test({Widget}::class)
@@ -239,14 +212,6 @@ function mockXotData(): void {
 
 ---
 
-title: "architecture aration rules"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "architecture aration rules"
-issues: []
-discussions: []
 **Status**: ✅ Regole Stabilite e Validate
 **Enforcement**: Obbligatorio per tutti i nuovi test
 **Review**: Required in code review process

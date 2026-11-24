@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "BMAD + Second Brain — Fix Log"
+type: story
+qmd: "bmad second brain"
+---
+>>>>>>> laraxot/dev
 # BMAD + Second Brain — Fix Log
 
 ## Diagnosi
@@ -5,13 +13,9 @@
 - `IsProfileTrait.php`: duplicato `use UserContract`
 - `BaseProfile.php`: `id` UUID mancante (`PDOException` 1364)
 <<<<<<< HEAD
-- PHPStan: 309 `class.notFound` (mancanti `User`/`Profile` nei test, Riferimenti `Quaeris`)
-=======
-<<<<<<< HEAD
-- PHPStan: 309 `class.notFound` (mancanti `User`/`Profile` nei test, Riferimenti `Quaeris`)
-=======
 - PHPStan: 309 `class.notFound` (mancanti `User`/`Profile` nei test, Riferimenti `<nome progetto>`)
->>>>>>> laraxot/dev
+=======
+- PHPStan: 309 `class.notFound` (mancanti `User`/`Profile` nei test, Riferimenti `Quaeris`)
 >>>>>>> laraxot/dev
 
 ## Fix applicati (SSoT)

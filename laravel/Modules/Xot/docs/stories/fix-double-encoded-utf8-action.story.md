@@ -7,6 +7,7 @@ updated: '2026-11-19'
 status: review
 related:
   - ../../../Quaeris/docs/stories/configurazione-automatica-question-chart.story.md
+qmd: "fix double encoded utf8 action story"
 ---
 
 # FixDoubleEncodedUtf8Action: riparare il testo UTF-8 codificato due volte

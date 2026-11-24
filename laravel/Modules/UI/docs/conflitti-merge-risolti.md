@@ -69,3 +69,17 @@ Questa documentazione integra le informazioni sui conflitti risolti, fornendo de
 - [Vedi anche: Blog/docs/README.md](../../Blog/docs/README.md)
 - [Vedi anche: Cms/docs/README.md](../../Cms/docs/README.md)
 - [Vedi anche: Comment/docs/README.md](../../Comment/docs/README.md)
+<<<<<<< HEAD
+
+## Regressioni silenziose del sync del 21/11 (24/11/2026)
+
+`find_sync_regressions.py` (`SYNC_BASE=dd46996a4`) su `Modules/UI`: 49 `regression`, 324 `resurrected`. Nel codice 13
+`regression` (righe vuote, `lang/it/i_d.php` con segnaposto, `size` delle icone nei widget `overlook` e `stat-with-icon`
+gia' aggiornato dopo): nessun danno. Tra i 16 `resurrected` di `app/`: `Contracts/GeocodingServiceContract` serve a
+`Adapters/Map/NullGeocodingServiceAdapter`; i cinque `Services/*` sono nel debito `tests/Arch/debt.php`; `LanguageController`
+e' letto da `BladeXssMitigationsTest`; `Http/Livewire/Toast` risponde a `<livewire:toast />` del layout User. **Senza
+chiamanti** (da parcheggiare quando si potra' toccare `docs/parcheggio`): `app/Data/UserData.php` (doppione di
+`Datas/UserData`), `app/Forms/Components/RadioCardSelector.php` (doppione di `Filament/Forms/Components`),
+`app/Http/Kernel.php.no`, `lang/it/.php`, `Http/Livewire/DarkModeSwitcher` con la sua vista (sostituiti dal widget).
+=======
+>>>>>>> laraxot/dev

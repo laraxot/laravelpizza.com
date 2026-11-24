@@ -13,6 +13,10 @@ use function Safe\filesize;
 use function Safe\fopen;
 use function Safe\mime_content_type;
 
+/**
+ * @see docs/contracts/upload-file-action.md
+ * @contract docs/contracts/upload-file-action.md
+ */
 class UploadFileAction extends BaseS3Action
 {
     use QueueableAction;

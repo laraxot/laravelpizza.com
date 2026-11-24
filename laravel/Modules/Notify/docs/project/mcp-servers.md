@@ -3,11 +3,7 @@ title: "mcp servers"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "mcp servers"
 issues: []
 discussions: []
@@ -28,6 +24,7 @@ status: draft
 |----------|----------|
 | **⭐ MCP Servers Index** | [Modules/Xot/docs/mcp/MCP-SERVERS-INDEX.md](../../laravel/Modules/Xot/docs/mcp/MCP-SERVERS-INDEX.md) |
 <<<<<<< HEAD
+<<<<<<< HEAD
 | **Theme MCP Setup** | [Themes/Sixteen/docs/mcp/MCP-THEME-SETUP.md](../../laravel/Themes/Sixteen/docs/mcp/mcp-theme-setup.md) |
 | **Theme MCP Setup** | [Themes/Sixteen/docs/mcp/MCP-THEME-SETUP.md](../../../../Themes/Sixteen/docs/mcp/mcp-theme-setup.md) |
 | **Bash Scripts MCP Index** | [bashscripts/docs/mcp/MCP-INDEX.md](mcp-index.md) |
@@ -40,6 +37,11 @@ status: draft
 | **Theme MCP Setup** | [Themes/Sixteen/docs/mcp/MCP-THEME-SETUP.md](../../../../Themes/Sixteen/docs/mcp/mcp-theme-setup.md) |
 | **Bash Scripts MCP Index** | [bashscripts/docs/mcp/MCP-INDEX.md](mcp-index.md) |
 >>>>>>> .merge_file_Ct3179
+>>>>>>> laraxot/dev
+=======
+| **Theme MCP Setup** | [Themes/Sixteen/docs/mcp/MCP-THEME-SETUP.md](../../laravel/Themes/Sixteen/docs/mcp/mcp-theme-setup.md) |
+| **Theme MCP Setup** | [Themes/Sixteen/docs/mcp/MCP-THEME-SETUP.md](../../../../Themes/Sixteen/docs/mcp/mcp-theme-setup.md) |
+| **Bash Scripts MCP Index** | [bashscripts/docs/mcp/MCP-INDEX.md](mcp-index.md) |
 >>>>>>> laraxot/dev
 | **Memory Bank** | [.memory-bank/](../.memory-bank/) |
 
@@ -102,6 +104,7 @@ Per dettagli completi su configurazione, usage, e best practices:
 - [AI Workflow](project/ai-workflow/)
 - Module MCP: [MCP-SERVERS-INDEX.md](../../laravel/Modules/Xot/docs/mcp/MCP-SERVERS-INDEX.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Theme MCP: [MCP-THEME-SETUP.md](../../laravel/Themes/Sixteen/docs/mcp/mcp-theme-setup.md)
 - Theme MCP: [MCP-THEME-SETUP.md](../../../../Themes/Sixteen/docs/mcp/mcp-theme-setup.md)
 - Bash Scripts MCP: [MCP-INDEX.md](mcp-index.md)
@@ -114,4 +117,9 @@ Per dettagli completi su configurazione, usage, e best practices:
 - Theme MCP: [MCP-THEME-SETUP.md](../../../../Themes/Sixteen/docs/mcp/mcp-theme-setup.md)
 - Bash Scripts MCP: [MCP-INDEX.md](mcp-index.md)
 >>>>>>> .merge_file_Ct3179
+>>>>>>> laraxot/dev
+=======
+- Theme MCP: [MCP-THEME-SETUP.md](../../laravel/Themes/Sixteen/docs/mcp/mcp-theme-setup.md)
+- Theme MCP: [MCP-THEME-SETUP.md](../../../../Themes/Sixteen/docs/mcp/mcp-theme-setup.md)
+- Bash Scripts MCP: [MCP-INDEX.md](mcp-index.md)
 >>>>>>> laraxot/dev

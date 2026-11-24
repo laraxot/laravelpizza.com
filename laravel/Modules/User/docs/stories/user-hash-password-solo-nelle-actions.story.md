@@ -10,6 +10,10 @@ epic: ../../../Xot/docs/bmad/epic-code-quality-ratchet.md
 depends_on: ["decisione dell'utente sul mutator di BaseUser (punto 1 delle decisioni, candidato P0)"]
 related: ["10.3.retire-auth-livewire-twins.story.md", "11.5-guard-privileged-fields-createuserdata.story.md", "11.1-fix-userpolicy-authorization-bypass.story.md", "user-test-senza-refresh-database.story.md"]
 tags: [bmad, sicurezza, password, actions, filament]
+<<<<<<< HEAD
+=======
+qmd: "user hash password solo nelle actions"
+>>>>>>> laraxot/dev
 ---
 
 # Password hashate solo in un'Action

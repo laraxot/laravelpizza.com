@@ -1,6 +1,7 @@
 ---
 title: Lingua dei pannelli Filament
 updated: 2026-11-19
+qmd: "panel locale lingua pannelli filament"
 ---
 
 # Lingua dei pannelli Filament

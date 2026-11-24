@@ -7,11 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 ---
 
 # 🎯 Filament Version Policy - ALWAYS LATEST
@@ -248,15 +244,7 @@ composer update "filament/*" -W
 
 ### Project Documentation
 - [COMPOSER_STRATEGY.md](composer_strategy.md)
-<<<<<<< HEAD
-- [COMPOSER_UPDATE_REPORT.md](COMPOSER_UPDATE_REPORT.md)
-=======
-<<<<<<< HEAD
 - [COMPOSER_UPDATE_REPORT.md](composer_update_report.md)
-=======
-- [COMPOSER_UPDATE_REPORT.md](COMPOSER_UPDATE_REPORT.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## ✅ Checklist
 

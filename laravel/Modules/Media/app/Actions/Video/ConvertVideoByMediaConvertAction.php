@@ -16,6 +16,8 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Classe per convertire video utilizzando MediaConvert e tenere traccia del progresso.
+ * @see docs/contracts/convert-video-by-media-convert-action.md
+ * @contract docs/contracts/convert-video-by-media-convert-action.md
  */
 class ConvertVideoByMediaConvertAction
 {

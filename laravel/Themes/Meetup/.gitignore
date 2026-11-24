@@ -112,3 +112,7 @@ phpinsights.php
 *.lock
 .windsurf/
 docs/screenshots/
+
+# local clone/backup artifacts
+repo.bundle
+*.bundle

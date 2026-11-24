@@ -2,16 +2,10 @@
 title: "Riepilogo Risoluzione Conflitti – 2025-09-30"
 type: note
 status: draft
-<<<<<<< HEAD
-updated: 2026-10-08
-tags: [docs, notify, project_docs]
-qmd: "riepilogo risoluzione conflitti   2025-09-30 notify"
-=======
 updated: 2026-11-23
 tags: [docs, notify, project_docs]
 qmd: "riepilogo risoluzione conflitti   2025-09-30 notify"
 created: 2026-11-23
->>>>>>> laraxot/dev
 ---
 # Riepilogo Risoluzione Conflitti – 2025-09-30
 

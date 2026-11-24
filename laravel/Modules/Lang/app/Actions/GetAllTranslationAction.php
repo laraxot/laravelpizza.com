@@ -9,6 +9,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\glob;
 
+/**
+ * @see docs/contracts/get-all-translation-action.md
+ * @contract docs/contracts/get-all-translation-action.md
+ */
 class GetAllTranslationAction
 {
     use QueueableAction;

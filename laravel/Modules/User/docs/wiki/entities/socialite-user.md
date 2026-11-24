@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 title: SocialiteUser: Entità OAuth utente
+=======
+title: "SocialiteUser: Entità OAuth utente"
+>>>>>>> laraxot/dev
 type: entity
 module: User
 updated: 2026-04-20

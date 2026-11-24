@@ -6,11 +6,7 @@ type: concept
 status: canonical
 module: Notify
 created: 2026-09-10
-<<<<<<< HEAD
-updated: 2026-09-10
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 tags: [mail-template, slug, sluggable, spatie-email, gotcha]
 qmd: "mail template slug preventOverwrite hasSlug regenerate subject spatieemail counter update missingmailtemplate"
 related:

@@ -8,6 +8,10 @@ tags: [migrato-da-txt, ui]
 converted_from: effetcts.txt
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< HEAD
+=======
+qmd: "effetcts risorse esterne"
+>>>>>>> laraxot/dev
 ---
 
 # Effetcts — risorse esterne

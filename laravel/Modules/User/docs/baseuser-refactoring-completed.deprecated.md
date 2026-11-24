@@ -17,12 +17,4 @@ related:
   - "./actions-path-convention.md"
 ---
 
-<<<<<<< HEAD
 > Questo file è stato rinominato in [baseuser-refactoring-completed-.deprecated.md](baseuser-refactoring-completed-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-=======
-<<<<<<< HEAD
-> Questo file è stato rinominato in [baseuser-refactoring-completed-.deprecated.md](baseuser-refactoring-completed-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-=======
-> Questo file è stato rinominato in [baseuser-refactoring-completed-.deprecated.md](./baseuser-refactoring-completed.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

@@ -7,11 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 ---
 
 # 📊 Status Pagina Login - Verifica Tecnica
@@ -302,15 +298,7 @@ Password: password
 
 ## 📚 Documentazione Correlata
 
-<<<<<<< HEAD
-1. **[Widget Rendering Analysis](../laravel/Modules/User/docs/WIDGET_RENDERING_ANALYSIS.md)**
-=======
-<<<<<<< HEAD
 1. **[Widget Rendering Analysis](../laravel/Modules/User/docs/widget_rendering_analysis.md)**
-=======
-1. **[Widget Rendering Analysis](../laravel/Modules/User/docs/WIDGET_RENDERING_ANALYSIS.md)**
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
    - Analisi completa architettura LoginWidget
    - Diagrammi flusso
    - Best practices
@@ -348,8 +336,5 @@ Password: password
 **Confidence**: 💯 MASSIMA
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> laraxot/dev

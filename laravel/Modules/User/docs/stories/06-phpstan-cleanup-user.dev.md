@@ -9,6 +9,10 @@ related:
   - "./2026-10-06-phpstan-cleanup-user.story.md"
   - "./8.1-phpstan-l10-user-config-offset-access.story.md"
   - "../../../../bashscripts/ai/wiki/rules/permission-config-table-names-immutable.md"
+<<<<<<< HEAD
+=======
+qmd: "06 phpstan cleanup user dev"
+>>>>>>> laraxot/dev
 ---
 
 # [DEV] PHPStan cleanup modulo User

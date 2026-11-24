@@ -1,20 +1,10 @@
 ---
 title: "Notify Platform - Project Status Report"
-<<<<<<< HEAD
-title: "<nome progetto> Platform - Project Status Report"
-type: concept
-tags: [project, status]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "project-status laraxot platform - project status report"
-qmd: "project-status <nome progetto> platform - project status report"
-=======
 type: concept
 tags: [project, status]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "project-status laraxot platform - project status report"
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:

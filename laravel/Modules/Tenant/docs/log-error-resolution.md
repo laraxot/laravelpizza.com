@@ -1,3 +1,8 @@
+---
+title: "Risoluzione errori di bootstrap e log"
+type: note
+qmd: "log error resolution risoluzione errori bootstrap"
+---
 # Risoluzione errori di bootstrap e log
 
 ## Causa

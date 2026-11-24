@@ -3,11 +3,7 @@ title: "packages other"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "packages other"
 issues: []
 discussions: []
@@ -27,8 +23,6 @@ Struttura moduli del progetto:
 ```
 Modules/
 <<<<<<< HEAD
-=======
-<<<<<<< .merge_file_YMysJM
   Activity/   — event sourcing, activity log
   Chart/      — chart rendering (Chart.js + JpGraph)
   Cms/        — content management
@@ -46,7 +40,6 @@ Modules/
   User/       — autenticazione, Passport, Socialite
   Xot/        — core module (XotBase, traits, utilities)
 =======
->>>>>>> laraxot/dev
   Activity/  : event sourcing, activity log
   Chart/     : chart rendering (Chart.js + JpGraph)
   Cms/       : content management
@@ -63,9 +56,6 @@ Modules/
   UI/        : componenti UI
   User/      : autenticazione, Passport, Socialite
   Xot/       : core module (XotBase, traits, utilities)
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_GnLBPv
 >>>>>>> laraxot/dev
 ```
 

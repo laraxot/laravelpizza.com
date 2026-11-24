@@ -21,6 +21,10 @@ supersedes: []
 owned_scope:
   - "laravel/Modules/User/Database/"
   - "laravel/Modules/User/Application/"
+<<<<<<< HEAD
+=======
+qmd: "uppercase root dirs database application story"
+>>>>>>> laraxot/dev
 ---
 
 ## Contesto

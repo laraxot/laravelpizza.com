@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "User Module - PHPStan Fixes Session 2025-10-01"
+type: note
+qmd: "phpstan fixes 01 user session 20251001"
+---
+>>>>>>> laraxot/dev
 # User Module - PHPStan Fixes Session 2025-10-01
 
 ## ⚠️ Stato: IN PROGRESS - 95 errori rimanenti

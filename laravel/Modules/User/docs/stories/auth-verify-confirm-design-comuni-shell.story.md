@@ -8,6 +8,10 @@ owner: module:User
 module: User
 related: [DCP-290, front-office-audit]
 tags: [auth, design-comuni, folio, volt, ui-ux]
+<<<<<<< HEAD
+=======
+qmd: "auth verify confirm design comuni shell"
+>>>>>>> laraxot/dev
 ---
 
 # Auth verify e password/confirm: allineamento al guscio Design Comuni

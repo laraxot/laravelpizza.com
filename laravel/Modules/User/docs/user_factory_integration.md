@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "UserFactory Integration - Modulo User e SaluteOra"
+type: note
+qmd: "user factory integration userfactory saluteora"
+---
+>>>>>>> laraxot/dev
 # UserFactory Integration - Modulo User e SaluteOra
 
 ## Overview

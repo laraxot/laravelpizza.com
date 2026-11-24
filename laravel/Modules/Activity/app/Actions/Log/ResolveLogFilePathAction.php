@@ -22,6 +22,7 @@ use function Safe\realpath;
  * - `realpath()` risolve `..` e link simbolici: se il risultato non e' dentro la cartella base
  *   (per esempio un link simbolico verso /etc) il file e' rifiutato.
  *
+ * @see docs/contracts/resolve-log-file-path-action.md
  * @contract docs/contracts/resolve-log-file-path-action.md
  */
 class ResolveLogFilePathAction

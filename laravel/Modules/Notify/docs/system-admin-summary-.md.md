@@ -3,11 +3,7 @@ title: "system admin summary 2026 03 13"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "system admin summary 2026 03 13"
 issues: []
 discussions: []

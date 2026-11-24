@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: "👥 USER MODULE - ROADMAP 2025"
 type: concept
 tags: [roadmap, 2025]
@@ -498,3 +499,18 @@ User Module
 ---
 
 *Questa roadmap è specifica per il modulo User e viene aggiornata regolarmente in base ai progressi e alle nuove esigenze.*
+=======
+title: "roadmap-2025.md (alias)"
+status: superseded
+superseded_by: "./roadmap.md"
+type: alias
+updated: 2026-11-24
+qmd: "roadmap-2025 alias superseded"
+---
+
+# Alias (superseded)
+
+Canonico: [`./roadmap.md`](./roadmap.md).
+
+Questo path resta solo per link storici; non aggiungere contenuto qui.
+>>>>>>> laraxot/dev

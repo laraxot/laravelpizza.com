@@ -18,6 +18,9 @@ use Webmozart\Assert\Assert;
  * `getRows()` restituisce righe indicizzate per posizione, quindi la chiave va
  * recuperata da `Arr::keyBy()` sulla colonna primaria: e' la stessa coppia
  * `($keyName, $key)` che `UpdateJsonFileByRecordAction` usa per riscrivere la riga.
+ *
+ * @see docs/contracts/delete-json-file-by-record-action.md
+ * @contract docs/contracts/delete-json-file-by-record-action.md
  */
 class DeleteJsonFileByRecordAction
 {

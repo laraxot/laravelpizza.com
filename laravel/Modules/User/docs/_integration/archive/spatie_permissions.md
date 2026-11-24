@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "spatie_permissions - User"
+type: note
+qmd: "spatie permissions spatiepermissions user"
+---
+>>>>>>> laraxot/dev
 # spatie_permissions - User
 
 ## Overview

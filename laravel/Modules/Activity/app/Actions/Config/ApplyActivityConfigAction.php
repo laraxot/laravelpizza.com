@@ -16,6 +16,9 @@ use Spatie\QueueableAction\QueueableAction;
  * salvataggio non sarebbe visibile fino al prossimo `config:cache`. Si copiano solo le chiavi che il
  * file contiene davvero, cosi' finche' nessuno salva restano valide le variabili d'ambiente di oggi
  * (`ACTIVITY_LOGGER_ENABLED`).
+ *
+ * @see docs/contracts/apply-activity-config-action.md
+ * @contract docs/contracts/apply-activity-config-action.md
  */
 class ApplyActivityConfigAction
 {

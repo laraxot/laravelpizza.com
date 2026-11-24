@@ -1,13 +1,5 @@
 ---
-<<<<<<< HEAD
-title: "Architecture: Activity"
-=======
-<<<<<<< HEAD
 title: "Architecture — Activity"
-=======
-title: "Architecture: Activity"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 type: architecture
 module: Activity
 related:

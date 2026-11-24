@@ -7,11 +7,7 @@ module: Notify
 type: concept
 tags: [redundancy, notify, filament, templates]
 created: "2026-05-26"
-<<<<<<< HEAD
-updated: "2026-05-26"
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 related:
   - ../../../redundancy-audit-2026-05-21.md
   - ../../redundancy-audit-notify.md
@@ -57,17 +53,8 @@ Nove file `*.php.up`: backup pre-migrazione Filament 3/5, **duplicano** classi e
 
 ## Audit precedente
 
-<<<<<<< HEAD
 - [redundancy-audit-2026-05-21.md](../../redundancy-audit-2026-05-21.md): fragment email case, config annidate.
 - [redundancy-audit-2026-05-21.md](../../redundancy-audit-notify.md): fragment email case, config annidate.
-=======
-<<<<<<< .merge_file_TdywiV
-- [redundancy-audit-2026-05-21.md](../../../redundancy-audit-2026-05-21.md) — fragment email case, config annidate.
-=======
-- [redundancy-audit-2026-05-21.md](../../redundancy-audit-2026-05-21.md): fragment email case, config annidate.
-- [redundancy-audit-2026-05-21.md](../../redundancy-audit-notify.md): fragment email case, config annidate.
->>>>>>> .merge_file_OPOubQ
->>>>>>> laraxot/dev
 
 ## Collegamenti
 

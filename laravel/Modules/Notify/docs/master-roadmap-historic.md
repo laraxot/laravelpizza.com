@@ -1,19 +1,11 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 ---
 title: "master roadmap historic"
 created: 2026-11-23
 updated: 2026-11-23
-=======
->>>>>>> laraxot/dev
 ---title: "🗺️ FIXCITY PLATFORM - MASTER ROADMAP 2025"
 type: concept
 tags: [master, roadmap, 2025]
-created: 2026-07-14
-updated: 2026-07-14
 qmd: "master-roadmap-2025 🗺️ fixcity platform - master roadmap 2025"
-qmd: "master-roadmap-2025 🗺️ ptv platform - master roadmap 2025"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
@@ -26,10 +18,6 @@ related:
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 superseded_by: master-roadmap.md
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ---
 
 # 🗺️ FIXCITY PLATFORM - MASTER ROADMAP 2025

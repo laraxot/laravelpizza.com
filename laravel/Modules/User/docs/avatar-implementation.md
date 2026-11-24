@@ -21,24 +21,10 @@ related:
 # Implementazione degli Avatar
 
 ## Collegamenti correlati
-<<<<<<< HEAD
-- [README modulo User](./README.md)
-- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header-language-selector-with-flags.md)
-=======
-<<<<<<< HEAD
 - [README modulo User](./readme.md)
 - [Implementazione Header con Selettore Lingua](/laravel/modules/user/docs/header-language-selector-with-flags.md)
 - [README modulo User](./README.md)
 - [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header-language-selector-with-flags.md)
-=======
-- [README modulo User](./README.md)
-<<<<<<< .merge_file_RZ5e1M
-- [Implementazione Header con Selettore Lingua](/laravel/modules/user/docs/header-language-selector-with-flags.md)
-=======
-- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header-language-selector-with-flags.md)
->>>>>>> .merge_file_tt035s
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
 ## Panoramica
@@ -157,24 +143,10 @@ Il sistema di avatar può essere esteso in futuro per includere:
 # Implementazione degli Avatar
 
 ## Collegamenti correlati
-<<<<<<< HEAD
-- [README modulo User](./README.md)
-- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header-language-selector-with-flags.md)
-=======
-<<<<<<< HEAD
 - [README modulo User](./readme.md)
 - [Implementazione Header con Selettore Lingua](/laravel/modules/user/docs/header-language-selector-with-flags.md)
 - [README modulo User](./README.md)
 - [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header-language-selector-with-flags.md)
-=======
-- [README modulo User](./README.md)
-<<<<<<< .merge_file_RZ5e1M
-- [Implementazione Header con Selettore Lingua](/laravel/modules/user/docs/header-language-selector-with-flags.md)
-=======
-- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header-language-selector-with-flags.md)
->>>>>>> .merge_file_tt035s
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
 ## Panoramica

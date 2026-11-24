@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Completamento Traduzioni Password - 2025"
+type: note
+qmd: "password translation completion completamento traduzioni 2025"
+---
+>>>>>>> laraxot/dev
 # Completamento Traduzioni Password - 2025
 
 ## Problema Identificato

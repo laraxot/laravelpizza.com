@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Comandi Console - Modulo User"
+type: note
+qmd: "comandi console user"
+---
+>>>>>>> laraxot/dev
 # Comandi Console - Modulo User
 
 ## Panoramica
@@ -206,22 +214,16 @@ Modules/User/
 
 ## Collegamenti
 - [Console Commands Philosophy](console_commands_philosophy.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 - [User Models](../models/readme.md)
 - [Role Management](../models/role-management.md)
 - [Password Management](../password.md)
 - [README.md](../readme.md)
-=======
->>>>>>> laraxot/dev
+<<<<<<< HEAD
 - [User Models](../models/README.md)
 - [Role Management](../models/role-management.md)
 - [Password Management](../password.md)
 - [README.md](../README.md)
-<<<<<<< HEAD
 =======
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 ## Aggiornamenti Recenti

@@ -1,19 +1,10 @@
 ---
-<<<<<<< HEAD
-title: "Sprint Planning"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "Sprint Planning"
-=======
 title: "sprint planning"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "sprint planning"
->>>>>>> laraxot/dev
 issues: []
 discussions: []
 ---
@@ -26,30 +17,6 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-title: "SPRINT PLANNING"
-=======
-<<<<<<< HEAD
-title: "sprint planning"
-=======
-title: "SPRINT PLANNING"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-<<<<<<< HEAD
-qmd: "SPRINT PLANNING"
-=======
-<<<<<<< HEAD
-qmd: "sprint planning"
-=======
-qmd: "SPRINT PLANNING"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-issues: []
-discussions: []
 ## Sprint Goal
 
 Launch core CMS page builder with content creation and publishing capabilities.
@@ -107,4 +74,3 @@ Launch core CMS page builder with content creation and publishing capabilities.
 | Performance | Lazy loading, caching |
 
 ---
-

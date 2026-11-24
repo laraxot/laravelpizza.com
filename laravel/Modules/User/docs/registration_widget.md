@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Registration Widget Documentation"
+type: note
+qmd: "registration widget"
+---
+>>>>>>> laraxot/dev
 # Registration Widget Documentation
 
 ## Overview

@@ -11,20 +11,14 @@ related:
   - "./change-password-command.md"
   - "./console-commands-philosophy-1-1.md"
   - "./console-commands-philosophy.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   - "./console-commands.md"
   - "./readme.md"
-=======
->>>>>>> laraxot/dev
+<<<<<<< HEAD
   - "./console-commands-philosophy.md"
   - "./console-commands-philosophy.md"
   - "./console-commands.md"
   - "./README.md"
-<<<<<<< HEAD
 =======
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 ---
 
@@ -190,11 +184,7 @@ Result: No changes made to user modules.
 <<<<<<< HEAD
 - [README.md](../README.md)
 =======
-<<<<<<< HEAD
 - [README.md](../readme.md)
-=======
-- [README.md](../README.md)
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 ## Aggiornamenti

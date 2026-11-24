@@ -13,6 +13,12 @@ use Spatie\QueueableAction\QueueableAction;
  *
  * Questa action revoca un client OAuth2 e tutti i token associati,
  * rendendoli immediatamente non validi.
+<<<<<<< HEAD
+=======
+ *
+ * @see docs/contracts/revoke-client-action.md
+ * @contract docs/contracts/revoke-client-action.md
+>>>>>>> laraxot/dev
  */
 class RevokeClientAction
 {

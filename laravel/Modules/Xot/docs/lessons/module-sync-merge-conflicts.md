@@ -3,6 +3,7 @@ title: "Sync dei moduli con conflitti non risolti"
 type: lesson
 updated: 2026-11-18
 tags: [sync, git, moduli, ci]
+qmd: "sync merge conflicts moduli conflitti risolti"
 ---
 
 # Sync dei moduli condivisi con conflitti non risolti

@@ -9,13 +9,13 @@ updated: "2026-05-26"
 related:
   - ../../../../Xot/docs/wiki/concepts/code-redundancy-philosophy.md
 <<<<<<< HEAD
-  - ../../../redundancy-audit-2026-05-21.md
-=======
 <<<<<<< HEAD
   - ../../../redundancy-audit-2026-05-21.md
 =======
   - ../../../redundancy-audit.md
 >>>>>>> laraxot/dev
+=======
+  - ../../../redundancy-audit-2026-05-21.md
 >>>>>>> laraxot/dev
   - ../../../redundancy-report.md
 ---

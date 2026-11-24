@@ -4,6 +4,7 @@ type: standard
 owner: Xot
 status: accepted
 updated: 2026-11-23
+qmd: "contract authoring standard contratti"
 ---
 
 # Standard di authoring dei contratti

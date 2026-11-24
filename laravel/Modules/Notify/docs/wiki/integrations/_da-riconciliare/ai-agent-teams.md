@@ -3,11 +3,7 @@ title: "AI Agent Teams - Coordination Hub"
 type: concept
 tags: [agent, teams]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "ai-agent-teams ai agent teams - coordination hub"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]

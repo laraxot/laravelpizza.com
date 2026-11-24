@@ -8,6 +8,10 @@ github_issue: "https://github.com/provtv/base_ptv_fila5_mono/issues"
 github_discussion: "https://github.com/provtv/base_ptv_fila5_mono/discussions"
 related:
   - ../../Xot/docs/project-completion-status.md
+<<<<<<< HEAD
+=======
+qmd: "completion status user cosa manca completare"
+>>>>>>> laraxot/dev
 ---
 
 # User: cosa manca per completare

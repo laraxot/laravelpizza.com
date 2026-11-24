@@ -7,11 +7,7 @@ type: reference
 status: approved
 tags: [agents, confidence, verification]
 created: "2026-05-26"
-<<<<<<< HEAD
-updated: "2026-05-26"
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 related:
   - "../../../../docs/wiki/rules/agent-confidence-protocol.md"
 ---

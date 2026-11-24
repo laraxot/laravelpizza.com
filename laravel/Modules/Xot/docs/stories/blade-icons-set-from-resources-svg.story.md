@@ -5,6 +5,7 @@ module: Xot
 created: '2026-11-19'
 updated: '2026-11-19'
 status: review
+qmd: "blade icons set from resources svg"
 ---
 
 # Le icone dei moduli si registrano da `resources/svg`

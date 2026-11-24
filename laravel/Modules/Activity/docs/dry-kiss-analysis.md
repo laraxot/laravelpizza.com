@@ -61,11 +61,6 @@ canonical: ../../../Themes/docs/shared-components/dry-kiss-analysis--Modules.md
 - 🔄 ServiceProvider: Auto-detect nome
 
 ---
-<<<<<<< HEAD
-[DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
 ---
 module: theme
@@ -91,13 +86,6 @@ canonical: ../../../Themes/docs/shared-components/dry-kiss-analysis--Modules.md
 
 ---
 [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
-=======
-[DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
->>>>>>> laraxot/dev
-=======
-[DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ---
 module: theme
 topic: dry-kiss-analysis
@@ -105,11 +93,3 @@ canonical: ../../../Themes/docs/shared-components/dry-kiss-analysis--Modules.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/dry-kiss-analysis--Modules.md
-
----
-
-## Contenuto unito da `dry-kiss-analysis.md`
-
-# dry kiss analysis
-
-Stub alias post-strip data/timestamp. Canonico: [./dry-kiss-analysis.md](./dry-kiss-analysis.md).

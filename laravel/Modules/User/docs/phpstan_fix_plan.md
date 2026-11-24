@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "User Module - PHPStan Level 10 Fix Plan"
+type: note
+qmd: "phpstan fix plan user level"
+---
+>>>>>>> laraxot/dev
 # User Module - PHPStan Level 10 Fix Plan
 
 ## Analysis Date

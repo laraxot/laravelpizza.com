@@ -11,6 +11,10 @@ related:
   - "./02-goals.md"
   - "./02-next.md"
   - "./03-later.md"
+<<<<<<< HEAD
+=======
+qmd: "index"
+>>>>>>> laraxot/dev
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/00-index-Modules.md

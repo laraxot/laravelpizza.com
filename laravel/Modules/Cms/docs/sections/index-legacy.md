@@ -14,15 +14,7 @@ related:
   - ./index-legacy-2.md
   - ../blocks/index.md
   - ../README.md
-<<<<<<< HEAD
   - ../index.md
-=======
-<<<<<<< HEAD
-  - ../INDEX.md
-=======
-  - ../index.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - ../roadmap/README.md
 ---
 <!-- ponytail: variante legacy con contenuto duplicato/divergente dal canonico index.md, conservata per non perdere link storici. Consolidare manualmente e poi rimuovere. -->
@@ -117,5 +109,3 @@ La struttura JSON tipica di una sezione include:
 - Utilizzare sempre percorsi relativi per i collegamenti
 - I riferimenti ai blocchi devono sempre utilizzare la notazione `cms::blocks.nome-blocco`
 - I valori tradotti devono essere organizzati per lingua come nell'esempio sopra
-
-

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "FullCalendar Scheduler - Riferimento Rapido"
+type: note
+qmd: "fullcalendar scheduler quick reference riferimento rapido"
+---
+>>>>>>> laraxot/dev
 # FullCalendar Scheduler - Riferimento Rapido
 
 ## 🚨 Problemi Comuni e Soluzioni Immediate

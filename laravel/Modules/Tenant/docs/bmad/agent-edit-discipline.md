@@ -2,6 +2,7 @@
 title: agent edit discipline — puntatore
 type: reference
 updated: 2026-05-19
+qmd: "agent edit discipline puntatore"
 ---
 tags: [docs, tenant, bmad]
 

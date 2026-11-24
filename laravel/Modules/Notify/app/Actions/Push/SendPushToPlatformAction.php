@@ -16,6 +16,9 @@ use Spatie\QueueableAction\QueueableAction;
 /**
  * Invia una notifica push a un singolo token su una specifica piattaforma
  * (fcm, apns, webpush).
+ *
+ * @see docs/contracts/send-push-to-platform-action.md
+ * @contract docs/contracts/send-push-to-platform-action.md
  */
 class SendPushToPlatformAction
 {

@@ -17,12 +17,18 @@ Il componente **Coordinate Picker** (mappa interattiva) nel wizard di creazione 
 
 ## Nominatim + normalize: fonte unica
 
-`CoordinatePickerHelpers` (stesso NS di `XotBaseCoordinateField`) e' l'unica sede di
+`CoordinatePickerHelpers` e' la classe concreta in
+`app/Filament/Forms/Components/CoordinatePickerHelpers.php` (stesso NS di
+`XotBaseCoordinateField`) ed e' l'unica sede di
 `searchAddress` / `reverseGeocode` / `normalizeCoordinate` / `extractCoordinates`.
-`HasCoordinatePicker` e `XotBaseCoordinateField` espongono solo wrapper `#[Exposed]`/`#[Renderless]`
-che delegano: evita corpi Nominatim duplicati nei trait (PHPStan L10 perde i tipi `array<…>` × ogni consumer).
+`HasCoordinatePicker` **deve** `use Modules\Geo\Filament\Forms\Components\CoordinatePickerHelpers`
+(senza import PHPStan risolve sotto `Traits\` → `class.notFound` × ogni consumer).
+Dopo churn moduli: `composer dump-autoload -o` prima di contare PHPStan.
+Trait morti `GeographicalScopes` / `HasPlaceTrait` / `SushiToJsons` rimossi/parcheggiati
+(zero consumatori; canon = `GeoTrait` / Tenant `SushiToJsons`).
 
-Vedi anche: [phpstan-ignore-removal.story.md](./stories/phpstan-ignore-removal.story.md), [phpstan-stabilization.md](./phpstan-stabilization.md).
+Vedi anche: [phpstan-ignore-removal.story.md](./stories/phpstan-ignore-removal.story.md), [phpstan-stabilization.md](./phpstan-stabilization.md),
+[Xot standing PHPStan story](../../Xot/docs/bmad/stories/phpstan-modules-zero-swarm-standing.story.md).
 
 ## 🧩 Component Extraction Rule (DRY Principle)
 

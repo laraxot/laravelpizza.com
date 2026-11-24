@@ -10,6 +10,9 @@ use function Safe\preg_split;
 
 /**
  * Azione per l'invio di SMS tramite Agile Telecom.
+ *
+ * @see docs/contracts/format-sms-message-action.md
+ * @contract docs/contracts/format-sms-message-action.md
  */
 class FormatSmsMessageAction
 {

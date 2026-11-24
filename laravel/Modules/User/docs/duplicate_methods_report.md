@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Report: Metodi con nome duplicato nei moduli e nei temi"
+type: report
+qmd: "duplicate methods report metodi nome duplicato"
+---
+>>>>>>> laraxot/dev
 # Report: Metodi con nome duplicato nei moduli e nei temi
 
 ## Introduzione

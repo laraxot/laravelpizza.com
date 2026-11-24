@@ -3,11 +3,7 @@ title: "00 index"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "00 index"
 issues: []
 discussions: []
@@ -50,21 +46,9 @@ discussions: []
 ## 🔗 Cross-References
 
 - [📋 Parent Directory](bashscripts/ai/.agents/docs/agents-guide/00-index.md)
-<<<<<<< HEAD
 - [📋 Master Index](bashscripts/ai/.agents/00-MASTER-INDEX.md)
 - [📋 Rules Index](../rules/00-index.md)
 - [📋 Skills Index](../skills/00-MASTER-INDEX.md)
-=======
-<<<<<<< HEAD
-- [📋 Master Index](bashscripts/ai/.agents/00-master-index.md)
-- [📋 Rules Index](../rules/00-index.md)
-- [📋 Skills Index](../skills/00-master-index.md)
-=======
-- [📋 Master Index](bashscripts/ai/.agents/00-MASTER-INDEX.md)
-- [📋 Rules Index](../rules/00-index.md)
-- [📋 Skills Index](../skills/00-MASTER-INDEX.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [📋 Workflows Index](../workflows/00-index.md)
 - [📋 Guidelines Index](../guidelines/00-index.md)
 - [📋 Memories Index](../memories/00-index.md)

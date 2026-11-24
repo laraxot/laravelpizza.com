@@ -9,6 +9,9 @@ use Spatie\QueueableAction\QueueableAction;
 /**
  * Action per fondere file di traduzione multipli in una singola struttura.
  * Utile per consolidare traduzioni da fonti diverse (es. override regionali).
+ *
+ * @see docs/contracts/merge-translations-action.md
+ * @contract docs/contracts/merge-translations-action.md
  */
 class MergeTranslationsAction
 {

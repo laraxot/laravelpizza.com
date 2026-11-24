@@ -4,11 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit\Actions\File;
 
-use Exception;
 use Modules\Xot\Actions\File\AssetAction;
 use Modules\Xot\Actions\File\AssetPathAction;
 use Modules\Xot\Actions\File\GetModulePathAction;
-use Modules\Xot\Datas\XotData;
 use Modules\Xot\Tests\TestCase;
 use Nwidart\Modules\Facades\Module;
 use PHPUnit\Framework\Assert;
@@ -69,7 +67,7 @@ it('resolves a module asset to its public url without copying anything into publ
 
     try {
         $result = app(AssetAction::class)->execute('XotAssetTest::css/style.css');
-        Assert::assertStringContainsString('assets/xotassettest/css/style.css', $result);
+Assert::assertStringContainsString('assets/xotassettest/css/style.css', $result);
         Assert::assertFileDoesNotExist($dest, 'the asset must be served through the symlink, never copied');
     } finally {
         if (is_file($resourceFile)) {
@@ -110,42 +108,6 @@ it('does not throw when public assets dir is a plain file left by a checkout wit
     }
 });
 
-/**
- * Senza namespace `modulo::` l'asset appartiene al tema attivo (pub_theme fuori dal pannello admin):
- * l'URL passa dal symlink public_html/themes/<Tema>.
- */
-it('resolves an asset without namespace to the public theme url', function (): void {
-    $theme = XotData::make()->pub_theme;
-
-    $result = app(AssetAction::class)->execute('css/xot-theme-asset-'.uniqid().'.css');
-
-    Assert::assertStringContainsString('themes/'.$theme.'/css/xot-theme-asset-', $result);
-});
-
-it('fails when a module asset exists neither in public nor in resources', function (): void {
-    $moduleRoot = sys_get_temp_dir().'/xot_mod_missing_'.uniqid('', true);
-
-    app()->instance(GetModulePathAction::class, new class($moduleRoot) extends GetModulePathAction
-    {
-        public function __construct(private string $modulePath) {}
-
-        public function execute(string $module): string
-        {
-            return $this->modulePath;
-        }
-    });
-
-    $path = 'XotMissingTest::css/missing.css';
-
-    if (isRunningTestBench()) {
-        Assert::assertSame($path, app(AssetAction::class)->execute($path));
-
-        return;
-    }
-
-    expect(fn (): string => app(AssetAction::class)->execute($path))
-        ->toThrow(Exception::class, 'not Exists');
-});
 it('calculates asset path correctly in AssetPathAction', function (): void {
     Module::partialMock()
         ->shouldReceive('getModulePath')

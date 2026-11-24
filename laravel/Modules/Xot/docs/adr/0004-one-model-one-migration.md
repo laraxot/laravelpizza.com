@@ -6,6 +6,7 @@ created: 2026-11-23
 updated: 2026-11-23
 decision-makers: [team Laraxot]
 issues: []
+qmd: "0004 one model migration ogni modello"
 ---
 
 # Ogni modello persistente ha una migrazione owner

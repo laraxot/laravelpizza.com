@@ -2,6 +2,7 @@
 status: proposed
 date: YYYY-MM-DD
 decision-makers:
+qmd: "0000 template titolo problema risolto soluzione"
 ---
 
 <!-- MADR breve adattato al modulo. Scrivi un ADR solo per una decisione difficile da invertire, sorprendente e frutto di un trade-off reale. -->

@@ -1,8 +1,11 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 issues: []
 discussions: []
 title: "Stream"
@@ -37,6 +40,7 @@ Http::sink($tmpPath)->throw()->get($videoUrl->toString());
 $tmpFile->delete();
 
 ----------------------------------------------------------------------------
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
@@ -53,4 +57,6 @@ See canonical documentation: ../../../Themes/docs/shared-components/.gitkeep-Mod
 >>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev

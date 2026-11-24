@@ -7,6 +7,10 @@ namespace Modules\Media\Actions\Diagnostic\Aws;
 use Aws\Exception\AwsException;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/test-iam-policies-action.md
+ * @contract docs/contracts/test-iam-policies-action.md
+ */
 class TestIamPoliciesAction
 {
     use QueueableAction;

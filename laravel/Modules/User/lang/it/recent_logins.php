@@ -13,9 +13,15 @@ return [
     'fields' => [
         'authenticatable' => [
             'name' => [
+<<<<<<< HEAD
                 'label' => 'Utente autenticato',
             ],
             'label' => 'Utente autenticato',
+=======
+                'label' => 'authenticatable.name',
+            ],
+            'label' => '',
+>>>>>>> laraxot/dev
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -24,6 +30,7 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+<<<<<<< HEAD
             'label' => 'Ora accesso',
         ],
         'ip_address' => [
@@ -31,6 +38,15 @@ return [
             'helper_text' => '',
             'description' => '',
             'label' => 'Indirizzo IP',
+=======
+            'label' => 'login_at',
+        ],
+        'ip_address' => [
+            'label' => 'Indirizzo IP',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+>>>>>>> laraxot/dev
         ],
         'user_agent' => [
             'label' => 'Browser (user agent)',
@@ -64,15 +80,23 @@ return [
             'description' => '',
         ],
         'user' => [
+<<<<<<< HEAD
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
             'label' => 'Utente',
+=======
+            'label' => 'Utente',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+>>>>>>> laraxot/dev
         ],
     ],
     'actions' => [
         'reorderRecords' => [
             'icon' => 'reorderRecords',
+<<<<<<< HEAD
             'label' => 'Riordina',
         ],
         'openColumnManager' => [
@@ -110,6 +134,45 @@ return [
         'create' => [
             'icon' => 'create',
             'label' => 'Crea',
+=======
+            'label' => 'reorderRecords',
+        ],
+        'openColumnManager' => [
+            'icon' => 'openColumnManager',
+            'label' => 'openColumnManager',
+        ],
+        'applyTableColumnManager' => [
+            'icon' => 'applyTableColumnManager',
+            'label' => 'applyTableColumnManager',
+        ],
+        'resetFilters' => [
+            'icon' => 'resetFilters',
+            'label' => 'resetFilters',
+        ],
+        'applyFilters' => [
+            'icon' => 'applyFilters',
+            'label' => 'applyFilters',
+        ],
+        'openFilters' => [
+            'icon' => 'openFilters',
+            'label' => 'openFilters',
+        ],
+        'resetColumnManager' => [
+            'icon' => 'resetColumnManager',
+            'label' => 'resetColumnManager',
+        ],
+        'delete' => [
+            'icon' => 'delete',
+            'label' => 'delete',
+        ],
+        'layout' => [
+            'icon' => 'layout',
+            'label' => 'layout',
+        ],
+        'create' => [
+            'icon' => 'create',
+            'label' => 'create',
+>>>>>>> laraxot/dev
         ],
     ],
     'navigation' => [

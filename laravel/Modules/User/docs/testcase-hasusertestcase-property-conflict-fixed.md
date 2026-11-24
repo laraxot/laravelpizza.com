@@ -14,6 +14,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< HEAD
+=======
+qmd: "testcase hasusertestcase property conflict fixed fatal"
+>>>>>>> laraxot/dev
 ---
 
 # Fatal error risolto: `TestCase` vs `HasUserTestCase` — conflitto proprietà `$user`

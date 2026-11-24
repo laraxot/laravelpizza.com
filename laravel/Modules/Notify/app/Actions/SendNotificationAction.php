@@ -18,6 +18,7 @@ use Spatie\QueueableAction\QueueableAction;
 /**
  * Action per l'invio di notifiche multi-canale.
  *
+ * @see docs/contracts/send-notification-action.md
  * @contract docs/contracts/send-notification-action.md
  */
 class SendNotificationAction

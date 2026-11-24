@@ -3,11 +3,7 @@ title: "MULTI AGENT FINAL REPORT"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "MULTI AGENT FINAL REPORT"
 issues: []
 discussions: []
@@ -221,11 +217,7 @@ fd4c8475 Add multi-agent collaboration issue template and docs
 ## 🔗 Resources Created
 
 ### GitHub Links
-<<<<<<< HEAD
-- [Issue Template](docs/github/ISSUE_MULTI_AGENT_COLLABORATION.md)
-=======
 - [Issue Template](docs/github/issue_multi_agent_collaboration.md)
->>>>>>> laraxot/dev
 - [Issue Template](../github/issue_multi_agent_collaboration.md)
 - [Discussion Template](.github/DISCUSSION_TEMPLATE/sync-script-coordination.md)
 - [Actions Tab](https://github.com/laraxot/base_fixcity_fila5/actions)
@@ -237,7 +229,6 @@ fd4c8475 Add multi-agent collaboration issue template and docs
 - [Multi-Agent Guide](../multi_agent_collaboration_guide.md)
 - [GitHub Sync Rule](../github_sync_rule.md)
 - [AI Rules](.qwen/AI_RULES_CRITICAL.md)
-=======
 - [Multi-Agent Guide](docs/multi_agent_collaboration_guide.md)
 - [GitHub Sync Rule](docs/github_sync_rule.md)
 - [Multi-Agent Guide](../multi_agent_collaboration_guide.md)

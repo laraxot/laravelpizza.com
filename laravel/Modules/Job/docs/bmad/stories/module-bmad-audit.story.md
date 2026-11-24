@@ -64,8 +64,4 @@ Audit source-first del modulo che deve rendere governabile il lavoro asincrono e
 
 ## Esito
 
-<<<<<<< .merge_file_uLldwZ
 E1 (P0-1) chiuso in follow-up: [e1-job-policy-create-deny](./e1-job-policy-create-deny.story.md). Baseline originale: 2 P0, 4 P1, P2 elencati. Chiusura demandata alle story figlie di [epics.md](../epics.md); i P0 sono da chiudere per primi (E1, E2).
-=======
-E1 (P0-1) chiuso in follow-up: [e1-job-policy-create-deny](./e1-job-policy-create-deny.story.md). Baseline originale: 2 P0, 4 P1, P2 elencati. Chiusura demandata alle story figlie di [epics.md](../epics.md); i P0 sono da chiudere per primi (E1, E2). PHPStan sul tree `Modules` a 0.
->>>>>>> .merge_file_uzXQGq

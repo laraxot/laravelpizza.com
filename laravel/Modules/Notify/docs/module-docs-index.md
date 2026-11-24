@@ -3,14 +3,8 @@ title: "Master Documentation Index - FixCity Fila5"
 type: concept
 tags: [module, docs, index]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-qmd: "module-docs-index master documentation index - fixcity fila5"
-qmd: "module-docs-index master documentation index - ptv fila5"
-=======
 updated: 2026-11-23
 qmd: "module-docs-index master documentation index - fixcity fila5"
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:

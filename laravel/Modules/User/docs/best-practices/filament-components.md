@@ -113,11 +113,7 @@ composer show filament/spatie-laravel-media-library-plugin
 <<<<<<< HEAD
 * [filament-components.md](filament-components.md)
 =======
-<<<<<<< HEAD
 * [filament-components.md](../../../user/docs/best-practices/filament-components.md)
-=======
-* [filament-components.md](filament-components.md)
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 * [filament-components.md](../../../Cms/docs/best-practices/filament-components.md)
 * [filament-components.md](../../../Cms/docs/filament-components.md)

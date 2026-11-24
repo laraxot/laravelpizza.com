@@ -13,6 +13,9 @@ use Spatie\QueueableAction\QueueableAction;
  * This is the domain business logic previously inlined in the translator adapter's
  * notifyMissingKey(). The translator adapter (Modules\Lang\Adapters\TranslatorAdapter)
  * delegates to it so the framework-bound singleton stays thin.
+ *
+ * @see docs/contracts/record-missing-translation-action.md
+ * @contract docs/contracts/record-missing-translation-action.md
  */
 class RecordMissingTranslationAction
 {

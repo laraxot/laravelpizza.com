@@ -93,11 +93,14 @@ find laravel/Modules/UI -maxdepth 1 -iname '*.md' | wc -l
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Root risultante: `architecture.md`, `CHANGELOG.md`, `GETTING_STARTED.md`, `PHILOSOPHY.md`, `README.md`, `testing.md`.
 
 ## Nota fuori scope
 
 =======
+=======
+>>>>>>> laraxot/dev
 Root risultante: `ARCHITECTURE.md`, `CHANGELOG.md`, `GETTING_STARTED.md`, `PHILOSOPHY.md`, `README.md`, `TESTING.md`.
 
 ## Nota fuori scope
@@ -106,6 +109,9 @@ Trovati due file untracked pre-esistenti (non creati da questo task, timestamp 2
 
 Root risultante: `architecture.md`, `CHANGELOG.md`, `GETTING_STARTED.md`, `PHILOSOPHY.md`, `README.md`, `testing.md`.
 
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 Trovati due file untracked pre-esistenti (non creati da questo task, timestamp 2026-09-06 12:37, precedenti a questa sessione): `docs/GETTING_STARTED.md` e `docs/testing.md`, contenuto identico ai keeper di root. Probabile residuo di un'altra sessione/tool di scaffolding. Non toccati: fuori dallo scope di questo task (igiene della ROOT del modulo, non di `docs/`) e non lockati da nessuno al momento della verifica.
 

@@ -7,6 +7,13 @@ namespace Modules\User\Actions\Activity;
 use Modules\User\Models\User;
 use Spatie\QueueableAction\QueueableAction;
 
+<<<<<<< HEAD
+=======
+/**
+ * @see docs/contracts/log-registration-action.md
+ * @contract docs/contracts/log-registration-action.md
+ */
+>>>>>>> laraxot/dev
 class LogRegistrationAction
 {
     use QueueableAction;

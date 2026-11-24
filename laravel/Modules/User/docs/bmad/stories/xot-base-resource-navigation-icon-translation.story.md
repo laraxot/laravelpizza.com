@@ -6,6 +6,10 @@ related:
   - ../../../../Xot/docs/bmad/stories/xot-base-resource-navigation-icon-translation.story.md
   - ../../../../Ptv/docs/bmad/stories/xot-base-resource-navigation-icon-translation.story.md
   - ../../../../IndennitaResponsabilita/docs/bmad/stories/xot-base-resource-navigation-icon-translation.story.md
+<<<<<<< HEAD
+=======
+qmd: "xot base resource navigation icon translation"
+>>>>>>> laraxot/dev
 ---
 
 # Story

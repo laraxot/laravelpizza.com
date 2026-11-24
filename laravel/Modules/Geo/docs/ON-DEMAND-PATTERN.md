@@ -8,31 +8,13 @@ created: 2026-05-11
 updated: 2026-05-11
 tags: [on-demand, pattern, wiki, qmd]
 related:
-<<<<<<< HEAD
   - ../../../../docs/wiki/rules/on-demand-pattern.md
   - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
-=======
-<<<<<<< .merge_file_CWoMgg
-  - ../../docs/wiki/rules/on-demand-pattern.md
-  - ../../docs/wiki/concepts/llm-wiki-operational-discipline.md
-=======
-  - ../../../../docs/wiki/rules/on-demand-pattern.md
-  - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
->>>>>>> .merge_file_RBkhdS
->>>>>>> laraxot/dev
 ---
 
 # On-Demand Pattern — Module **Geo**
 
-<<<<<<< HEAD
 **Fonte canonica**: [docs/wiki/rules/on-demand-pattern.md](../../../../docs/wiki/rules/on-demand-pattern.md)
-=======
-<<<<<<< .merge_file_CWoMgg
-**Fonte canonica**: [../../docs/wiki/rules/on-demand-pattern.md](../../docs/wiki/rules/on-demand-pattern.md)
-=======
-**Fonte canonica**: [docs/wiki/rules/on-demand-pattern.md](../../../../docs/wiki/rules/on-demand-pattern.md)
->>>>>>> .merge_file_RBkhdS
->>>>>>> laraxot/dev
 
 ## Principio
 
@@ -107,21 +89,9 @@ qmd search "<topic>"
 
 ## Riferimenti
 
-<<<<<<< HEAD
 - [Global On-Demand Pattern](../../../../docs/wiki/rules/on-demand-pattern.md)
 - [LLM Wiki Operational Discipline](../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
 - [Trigger Map](../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
-=======
-<<<<<<< .merge_file_CWoMgg
-- [Global On-Demand Pattern](../../docs/wiki/rules/on-demand-pattern.md)
-- [LLM Wiki Operational Discipline](../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
-- [Trigger Map](../../docs/wiki/rules/00-TRIGGER_MAP.md)
-=======
-- [Global On-Demand Pattern](../../../../docs/wiki/rules/on-demand-pattern.md)
-- [LLM Wiki Operational Discipline](../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
-- [Trigger Map](../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
->>>>>>> .merge_file_RBkhdS
->>>>>>> laraxot/dev
 - [Module Wiki Index](./wiki/index.md)
 
 ---

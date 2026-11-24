@@ -226,11 +226,7 @@ public function canAccessTenant(\Illuminate\Database\Eloquent\Model $tenant): bo
 <<<<<<< HEAD
 - [← User Module README](./README.md)
 =======
-<<<<<<< HEAD
 - [← User Module README](./readme.md)
-=======
-- [← User Module README](./README.md)
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [← PHPStan Session Report](../../../../docs/phpstan/filament-v4-fixes-session.md)
 - [← Final Report](../../../../docs/phpstan/final-report-session-[date].md)

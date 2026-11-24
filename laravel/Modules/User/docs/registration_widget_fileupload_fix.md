@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "RegistrationWidget FileUpload Fix"
+type: note
+qmd: "registration widget fileupload fix registrationwidget"
+---
+>>>>>>> laraxot/dev
 # RegistrationWidget FileUpload Fix
 
 ## Problema Risolto

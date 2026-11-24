@@ -1,6 +1,7 @@
 ---
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Architecture Decision Records"
 type: index
 tags: [adr, decisioni]
@@ -18,10 +19,20 @@ type: index
 tags: [adr, decisioni, media]
 created: 2026-11-18
 updated: 2026-11-24
+=======
+title: "ADR del modulo Media"
+type: index
+module: Media
+status: active
+created: 2026-11-18
+updated: 2026-11-24
+qmd: "Media adr architecture decision records madr formato"
+>>>>>>> laraxot/dev
 ---
 
 # ADR del modulo Media
 
+<<<<<<< HEAD
 Il **perche'** delle scelte di Media sugli upload: quanto puo' pesare un file e chi lo decide, come passano le foto da telefono, dove stanno i temporanei, chi puo' vedere un allegato e cosa resta nel file salvato (privacy).
 
 Leggili prima di: cambiare un limite di upload, aggiungere un campo che riceve foto, toccare il percorso o le policy degli upload temporanei, cambiare la visibilita' degli allegati, toccare il trattamento delle immagini salvate o "semplificare" la ri-codifica con un'altra libreria.
@@ -116,4 +127,34 @@ Almeno un ADR per pacchetto e' "sostanziale": ha anche `## Driver` e `## Conferm
 =======
 - [Upload temporanei con percorso scopato e policy](upload-temporanei-con-percorso-scopato-e-policy.md) — percorsi `tmp/` per scopo (originale, conversione, responsive) e permessi espliciti su `media.*` e `temporary_upload.*`.
 - [La visibilita' dei media segue il record owner](media-visibility-follows-owner.md) — ownership e policy del dominio ospitante decidono, non Media.
+>>>>>>> laraxot/dev
+=======
+Un ADR registra una scelta difficile da invertire, sorprendente o frutto di un trade-off reale, e il suo perche'.
+Non e' un diario ne' una spiegazione retroattiva: se la decisione non e' dimostrabile dal codice o da una story/doc del repo, non si scrive.
+Il nome del file e' l'argomento in kebab-case, senza date (la data sta nella frontmatter).
+
+## Formato (MADR breve)
+
+Frontmatter: `title`, `type: decision`, `status` (`proposed` | `accepted` | `superseded` | `deprecated`), `created`, `updated`, `decision-makers`, `module`, `qmd`.
+
+Sezioni obbligatorie, in quest'ordine:
+
+```markdown
+## Contesto
+## Driver della decisione
+## Alternative scartate
+## Decisione
+## Conseguenze
+## Conferma
+```
+
+Template condiviso: `laravel/Modules/Xot/docs/adr/0000-template.md`. Guard: `Modules/Xot/tests/Unit/Docs/PackagesHaveContractsAndAdrTest.php`.
+Chi cambia una decisione scrive un nuovo ADR e segna il precedente `superseded by <file>`.
+
+## ADR presenti
+
+- [0001-upload-temporanei-con-percorso-scopato-e-policy](0001-upload-temporanei-con-percorso-scopato-e-policy.md)
+- [media-visibility-follows-owner](media-visibility-follows-owner.md)
+
+Elenco con stato: [INDEX.md](INDEX.md).
 >>>>>>> laraxot/dev

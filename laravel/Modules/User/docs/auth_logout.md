@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Componente di Logout"
+type: note
+qmd: "auth logout componente"
+---
+>>>>>>> laraxot/dev
 # Componente di Logout
 
 ## Problemi Identificati

@@ -285,11 +285,7 @@ describe('User Permission System', function () {
 describe('User Media Management', function () {
     it('can have media attached', function () {
         // Il modello media del progetto e' Modules\\Media\\Models\\Media (estende quello di Spatie).
-<<<<<<< HEAD
         expect((new User)->media()->getMorphType())->toBe('model_type');
-=======
-        expect((new User())->media()->getMorphType())->toBe('model_type');
->>>>>>> laraxot/dev
     });
 });
 

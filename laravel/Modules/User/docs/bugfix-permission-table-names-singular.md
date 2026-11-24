@@ -10,6 +10,10 @@ issues:
 related:
   - ../../../config/permission.php
   - ./config/local/workorder/permission.php
+<<<<<<< HEAD
+=======
+qmd: "bugfix permission table names singular spatielaravelpermission"
+>>>>>>> laraxot/dev
 ---
 
 # spatie/laravel-permission — `table_names` è la fonte di verità fissa, mai la schema

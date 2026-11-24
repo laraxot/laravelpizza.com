@@ -12,11 +12,7 @@ tags: [metodi-duplicati, refactoring]
 <<<<<<< HEAD
 canonical: ../../../Themes/One/docs/shared-components/metodi_duplicati_analisi.md
 =======
-<<<<<<< HEAD
 canonical: ../../../Themes/One/docs/shared-components/METODI_DUPLICATI_ANALISI.md
-=======
-canonical: ../../../Themes/One/docs/shared-components/metodi_duplicati_analisi.md
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 ---
 

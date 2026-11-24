@@ -7,6 +7,7 @@ created: 2026-11-10
 updated: 2026-11-10
 related:
   - "../../../Lang/docs/stories/placeholder-translations.story.md"
+qmd: "placeholder translations cleanup story traduzioni segnaposto"
 ---
 
 # Via le traduzioni segnaposto dai file di lingua

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Fix Binding Team Models nel Modulo User"
+type: note
+qmd: "team bindings fix binding models user"
+---
+>>>>>>> laraxot/dev
 # Fix Binding Team Models nel Modulo User
 
 ## Panoramica

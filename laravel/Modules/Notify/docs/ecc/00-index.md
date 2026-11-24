@@ -2,16 +2,10 @@
 title: "ECC — indice operativo Notify"
 type: index
 status: in-progress
-<<<<<<< HEAD
-updated: 2026-11-16
-module: Notify
-qmd: "ECC indice Notify verification gates PHPStan Pest security-review"
-=======
 updated: 2026-11-23
 module: Notify
 qmd: "ECC indice Notify verification gates PHPStan Pest security-review"
 created: 2026-11-23
->>>>>>> laraxot/dev
 ---
 
 # ECC — modulo Notify

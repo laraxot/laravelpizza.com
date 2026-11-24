@@ -3,11 +3,7 @@ title: "Notify: architecture"
 type: architecture
 tags: [notify, architecture, module-boundary, models, resources, channels]
 created: 2026-09-28
-<<<<<<< HEAD
-updated: 2026-09-28
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "Notify architettura componenti modelli risorse canali provider"
 related:
   - ./README.md
@@ -227,6 +223,7 @@ status: draft
 - [Quick reference](./quick-reference.md)
 - [Setup guide](./setup-guide.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [BMAD method (Xot)](../wiki/bmad-method.md)
 =======
 <<<<<<< .merge_file_NhZGhy
@@ -256,4 +253,7 @@ cluster `Test`, tutte `SuperAdminOnlyTrait`).
 =======
 - [BMAD method (Xot)](../wiki/bmad-method.md)
 >>>>>>> .merge_file_YUlKHn
+>>>>>>> laraxot/dev
+=======
+- [BMAD method (Xot)](../wiki/bmad-method.md)
 >>>>>>> laraxot/dev

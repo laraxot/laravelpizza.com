@@ -17,11 +17,8 @@ related:
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
 <<<<<<< HEAD
-=======
-<<<<<<< .merge_file_cogbMY
 status: draft
 =======
->>>>>>> .merge_file_lkEeKO
 >>>>>>> laraxot/dev
 ---
 
@@ -38,16 +35,11 @@ status: draft
 - **Struttura**: Informazioni sparse senza organizzazione logica
 
 <<<<<<< HEAD
-#### 2. Riusabilità Compromessa  
-- **141+ occorrenze hardcoded** di "Quaeris"
-=======
-<<<<<<< .merge_file_cogbMY
 #### 2. Riusabilità Compromessa
 - **141+ occorrenze hardcoded** di "<nome progetto>"
 =======
 #### 2. Riusabilità Compromessa  
 - **141+ occorrenze hardcoded** di "Quaeris"
->>>>>>> .merge_file_lkEeKO
 >>>>>>> laraxot/dev
 - **210+ occorrenze** di `User::` senza XotData
 - **Import diretti** da moduli project-specific
@@ -84,15 +76,7 @@ Modulo riutilizzabile per gestione utenti, autenticazione e autorizzazione in pr
 
 ## Funzionalità Core
 - Single Table Inheritance (STI) con tighten/parental
-<<<<<<< HEAD
 - OAuth2 con Laravel Passport  
-=======
-<<<<<<< .merge_file_cogbMY
-- OAuth2 con Laravel Passport
-=======
-- OAuth2 con Laravel Passport  
->>>>>>> .merge_file_lkEeKO
->>>>>>> laraxot/dev
 - Social login con Socialite
 - Spatie Permission per ruoli/permessi
 - Filament widgets per admin panel
@@ -171,13 +155,9 @@ User/docs/
 ```php
 // ❌ PROBLEMI ATTUALI
 <<<<<<< HEAD
-use Modules\Quaeris\Models\User;
-=======
-<<<<<<< .merge_file_cogbMY
 use Modules\<nome progetto>\Models\User;
 =======
 use Modules\Quaeris\Models\User;
->>>>>>> .merge_file_lkEeKO
 >>>>>>> laraxot/dev
 $user = User::factory()->create();
 
@@ -198,13 +178,9 @@ protected function createTestUser(): mixed
 1. **Widget Auth**: Tutti i widget in `app/Filament/Widgets/Auth/`
 2. **Test Files**: Tutti i test che usano User diretto
 <<<<<<< HEAD
-3. **Documentation**: Rimuovere path hardcoded tipo `/var/www/html/Quaeris/`
-=======
-<<<<<<< .merge_file_cogbMY
 3. **Documentation**: Rimuovere path hardcoded tipo `/var/www/html/<nome progetto>/`
 =======
 3. **Documentation**: Rimuovere path hardcoded tipo `/var/www/html/Quaeris/`
->>>>>>> .merge_file_lkEeKO
 >>>>>>> laraxot/dev
 
 ### 3. Trait e STI Optimization (IMPORTANTE - 1 giorno)
@@ -214,28 +190,12 @@ protected function createTestUser(): mixed
 // Documentazione trait migliorata
 /**
  * Trait HasTeams - Gestione team per utenti
-<<<<<<< HEAD
  * 
-=======
-<<<<<<< .merge_file_cogbMY
- *
-=======
- * 
->>>>>>> .merge_file_lkEeKO
->>>>>>> laraxot/dev
  * REQUISITI:
  * - Modello deve estendere Authenticatable
  * - Tabella teams con colonna owner_id (uuid, nullable)
  * - Tabella pivot team_user
-<<<<<<< HEAD
  * 
-=======
-<<<<<<< .merge_file_cogbMY
- *
-=======
- * 
->>>>>>> .merge_file_lkEeKO
->>>>>>> laraxot/dev
  * @property-read Collection<int, Team> $teams
  * @property-read Collection<int, Team> $ownedTeams
  */
@@ -264,15 +224,7 @@ class UserServiceProvider extends XotBaseServiceProvider
     public function boot(): void
     {
         parent::boot();
-<<<<<<< HEAD
         
-=======
-<<<<<<< .merge_file_cogbMY
-
-=======
-        
->>>>>>> .merge_file_lkEeKO
->>>>>>> laraxot/dev
         // Solo configurazioni specifiche del modulo
         $this->configurePassport();
         $this->configureSocialite();
@@ -281,15 +233,7 @@ class UserServiceProvider extends XotBaseServiceProvider
     public function register(): void
     {
         parent::register();
-<<<<<<< HEAD
         
-=======
-<<<<<<< .merge_file_cogbMY
-
-=======
-        
->>>>>>> .merge_file_lkEeKO
->>>>>>> laraxot/dev
         // Solo binding specifici non gestiti da XotBase
         $this->registerUserContracts();
     }
@@ -306,13 +250,9 @@ class UserServiceProvider extends XotBaseServiceProvider
 
 ### Riusabilità
 <<<<<<< HEAD
-- [ ] **0 occorrenze** hardcoded "Quaeris"
-=======
-<<<<<<< .merge_file_cogbMY
 - [ ] **0 occorrenze** hardcoded "<nome progetto>"
 =======
 - [ ] **0 occorrenze** hardcoded "Quaeris"
->>>>>>> .merge_file_lkEeKO
 >>>>>>> laraxot/dev
 - [ ] **0 utilizzi** User:: senza XotData
 - [ ] **100% pattern** dinamici nei test
@@ -330,15 +270,7 @@ class UserServiceProvider extends XotBaseServiceProvider
 - **Pomeriggio**: Organizzare file per categorie
 - **Sera**: Eliminare duplicazioni
 
-<<<<<<< HEAD
 ### Giorno 2: Riusabilità  
-=======
-<<<<<<< .merge_file_cogbMY
-### Giorno 2: Riusabilità
-=======
-### Giorno 2: Riusabilità  
->>>>>>> .merge_file_lkEeKO
->>>>>>> laraxot/dev
 - **Mattina**: Correggere widget auth
 - **Pomeriggio**: Aggiornare test files
 - **Sera**: Verificare script check
@@ -357,13 +289,9 @@ find Modules/User/docs -name "*.md" | wc -l
 
 # Verifica riusabilità
 <<<<<<< HEAD
-grep -r -i "Quaeris" Modules/User/ --include="*.php" | wc -l
-=======
-<<<<<<< .merge_file_cogbMY
 grep -r -i "<nome progetto>" Modules/User/ --include="*.php" | wc -l
 =======
 grep -r -i "Quaeris" Modules/User/ --include="*.php" | wc -l
->>>>>>> .merge_file_lkEeKO
 >>>>>>> laraxot/dev
 ```
 
@@ -382,15 +310,7 @@ php artisan user:benchmark  # Target: < 100ms
 ## 🎯 PRIORITÀ
 
 1. **CRITICO**: Ristrutturazione documentazione (blocca manutenibilità)
-<<<<<<< HEAD
 2. **CRITICO**: Correzione riusabilità (blocca altri progetti)  
-=======
-<<<<<<< .merge_file_cogbMY
-2. **CRITICO**: Correzione riusabilità (blocca altri progetti)
-=======
-2. **CRITICO**: Correzione riusabilità (blocca altri progetti)  
->>>>>>> .merge_file_lkEeKO
->>>>>>> laraxot/dev
 3. **IMPORTANTE**: Ottimizzazione trait (migliora DX)
 4. **NORMALE**: Performance optimization (migliora UX)
 

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "📚 Indice Documentazione Modulo User"
+type: note
+qmd: "00 indice user"
+---
+>>>>>>> laraxot/dev
 # 📚 **Indice Documentazione Modulo User**
 
 **Status**: ✅ PHPStan Level 10 Compliant

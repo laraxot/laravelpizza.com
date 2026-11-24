@@ -523,11 +523,7 @@ $ ./vendor/bin/phpstan analyse Modules --memory-limit=-1
 <<<<<<< HEAD
 - [README.md](./README.md) - Overview modulo
 =======
-<<<<<<< HEAD
 - [README.md](./readme.md) - Overview modulo
-=======
-- [README.md](./README.md) - Overview modulo
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [business-logic-deep-dive-4.md](./business-logic-deep-dive.md) - Business logic completa
 

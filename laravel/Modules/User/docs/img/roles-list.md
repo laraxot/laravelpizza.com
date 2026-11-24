@@ -6,6 +6,10 @@ topic: roles_list
 canonical: ../../../../Themes/docs/shared-components/roles-list.jpg
 created: 2026-07-22
 updated: 2026-07-22
+<<<<<<< HEAD
+=======
+qmd: "roles list roleslist"
+>>>>>>> laraxot/dev
 ---
 
 # roles_list

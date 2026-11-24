@@ -15,6 +15,9 @@ use Spatie\QueueableAction\QueueableAction;
  * - le cartelle sono in ordine naturale e senza distinguere maiuscole/minuscole (252, 253, ..., 1000);
  * - i file di ogni cartella sono dal piu' recente al piu' vecchio (nei log conta l'ultimo);
  * - ogni cartella riporta quanti file contiene, sottocartelle comprese.
+ *
+ * @see docs/contracts/build-log-file-tree-action.md
+ * @contract docs/contracts/build-log-file-tree-action.md
  */
 class BuildLogFileTreeAction
 {

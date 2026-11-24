@@ -1,19 +1,10 @@
 ---
-<<<<<<< HEAD
-title: "Screenshot Analysis"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "Screenshot Analysis"
-=======
 title: "screenshot analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "screenshot analysis"
->>>>>>> laraxot/dev
 issues: []
 discussions: []
 ---
@@ -45,22 +36,6 @@ URL: https://italia.github.io/design-comuni-pagine-statiche/sito/homepage.html
 
 ---
 
-<<<<<<< HEAD
-title: "SCREENSHOT ANALYSIS"
-=======
-title: "screenshot analysis"
->>>>>>> laraxot/dev
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-<<<<<<< HEAD
-qmd: "SCREENSHOT ANALYSIS"
-=======
-qmd: "screenshot analysis"
->>>>>>> laraxot/dev
-issues: []
-discussions: []
 ### 2. Hero Section
 ```
 Screenshot: hero_bootstrap_italia.png

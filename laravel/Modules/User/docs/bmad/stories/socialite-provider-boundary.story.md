@@ -9,6 +9,10 @@ related:
   - ../socialite-provider-boundary-product-brief.md
   - ../socialite-provider-boundary-prd.md
   - ../socialite-provider-boundary-architecture.md
+<<<<<<< HEAD
+=======
+qmd: "socialite provider boundary story move config"
+>>>>>>> laraxot/dev
 ---
 
 # Story: move Socialite config to SocialiteServiceProvider

@@ -3,6 +3,10 @@ title: "Git Push Issue — LFS Objects Missing on Remote"
 date: 2026-07-28
 author: claude-ai
 status: BLOCKED_ON_SERVER_STATE
+<<<<<<< HEAD
+=======
+qmd: "git push lfs issue 28 objects"
+>>>>>>> laraxot/dev
 ---
 
 # User Module — Git Push & LFS Issue (2026-07-28)

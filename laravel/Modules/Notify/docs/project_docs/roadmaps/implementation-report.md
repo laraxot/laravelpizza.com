@@ -1,7 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 title: "implementation report 2025 10"
 type: note
 tags: [documentation]
@@ -237,8 +234,6 @@ With sustained focus and execution, the project is on track to achieve all 2025 
 ---
 
 *"Quality is not an act, it is a habit." - Aristotle*
-=======
->>>>>>> laraxot/dev
 issues: []
 discussions: []
 title: "IMPLEMENTATION_REPORT_2025-10-01"
@@ -260,7 +255,3 @@ related:
 ---
 
 > Questo file è stato rinominato in [implementation-report.md](implementation-report.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

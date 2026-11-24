@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Correzioni Ereditarietà Modelli - Modulo User"
+type: note
+qmd: "model inheritance fixes correzioni ereditarietà modelli"
+---
+>>>>>>> laraxot/dev
 # Correzioni Ereditarietà Modelli - Modulo User
 
 ## Data Implementazione
@@ -166,13 +174,9 @@ Per verificare che non ci siano più modelli che estendono direttamente `Model`:
 
 ```bash
 <<<<<<< HEAD
-cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
-=======
-<<<<<<< HEAD
-cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
-=======
 cd /var/www/_bases/base_<nome progetto>_fila4_mono/laravel/Modules/User
->>>>>>> laraxot/dev
+=======
+cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
 >>>>>>> laraxot/dev
 grep -r "extends Model" app/Models/ --include="*.php" | grep -v "BaseModel\|BasePivot\|BaseMorphPivot"
 ```
@@ -183,13 +187,9 @@ Dopo le modifiche, eseguire:
 
 ```bash
 <<<<<<< HEAD
-cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
-=======
-<<<<<<< HEAD
-cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
-=======
 cd /var/www/_bases/base_<nome progetto>_fila4_mono/laravel/Modules/User
->>>>>>> laraxot/dev
+=======
+cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
 >>>>>>> laraxot/dev
 ./vendor/bin/phpstan analyse --memory-limit=2G
 ```

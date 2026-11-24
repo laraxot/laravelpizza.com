@@ -17,11 +17,8 @@ related:
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
 <<<<<<< HEAD
-=======
-<<<<<<< .merge_file_lmd1Nv
 status: draft
 =======
->>>>>>> .merge_file_6InAFX
 >>>>>>> laraxot/dev
 ---
 
@@ -29,8 +26,6 @@ status: draft
 
 ## Collegamenti correlati
 <<<<<<< HEAD
-=======
-<<<<<<< .merge_file_lmd1Nv
 - [Documentazione centrale](/docs/readme.md)
 - [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
 - [Implementazione Auth Pages](auth-pages-implementation.md)
@@ -43,23 +38,15 @@ status: draft
 - [Implementazione Auth Pages](auth-pages-implementation.md)
 - [Implementazione Logout](logout-blade-implementation-2.md)
 - [Analisi Errore Logout](logout-blade-error-analysis-3.md)
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_6InAFX
->>>>>>> laraxot/dev
 - [Struttura Widget](widgets-structure-user.md)
 - [Documentazione Auth Tema One](/laravel/themes/one/docs/auth.md)
 
 ## Introduzione
 
 <<<<<<< HEAD
-Questo documento descrive l'implementazione corretta del logout utilizzando un widget Filament, rispettando le convenzioni di Quaeris e la struttura di `XotBaseWidget`. L'approccio con widget Filament è particolarmente utile quando si desidera mantenere una pagina di conferma per il logout.
-=======
-<<<<<<< .merge_file_lmd1Nv
 Questo documento descrive l'implementazione corretta del logout utilizzando un widget Filament, rispettando le convenzioni di <nome progetto> e la struttura di `XotBaseWidget`. L'approccio con widget Filament è particolarmente utile quando si desidera mantenere una pagina di conferma per il logout.
 =======
 Questo documento descrive l'implementazione corretta del logout utilizzando un widget Filament, rispettando le convenzioni di Quaeris e la struttura di `XotBaseWidget`. L'approccio con widget Filament è particolarmente utile quando si desidera mantenere una pagina di conferma per il logout.
->>>>>>> .merge_file_6InAFX
 >>>>>>> laraxot/dev
 
 ## Errore Comune da Evitare
@@ -136,15 +123,7 @@ class LogoutWidget extends XotBaseWidget
 
             // Ottieni l'utente prima del logout per il logging
             $user = Auth::user();
-<<<<<<< HEAD
             
-=======
-<<<<<<< .merge_file_lmd1Nv
-
-=======
-            
->>>>>>> .merge_file_6InAFX
->>>>>>> laraxot/dev
             // Evento pre-logout
             Event::dispatch('auth.logout.attempting', [$user]);
 
@@ -217,15 +196,7 @@ class LogoutWidget extends XotBaseWidget
                 {{ $this->form }}
 
                 <div class="mt-6 flex flex-col gap-3">
-<<<<<<< HEAD
                     <x-filament::button 
-=======
-<<<<<<< .merge_file_lmd1Nv
-                    <x-filament::button
-=======
-                    <x-filament::button 
->>>>>>> .merge_file_6InAFX
->>>>>>> laraxot/dev
                         type="submit"
                         color="danger"
                         size="lg"
@@ -234,18 +205,8 @@ class LogoutWidget extends XotBaseWidget
                         {{ __('Conferma Logout') }}
                     </x-filament::button>
 
-<<<<<<< HEAD
                     <x-filament::button 
                         tag="a" 
-=======
-<<<<<<< .merge_file_lmd1Nv
-                    <x-filament::button
-                        tag="a"
-=======
-                    <x-filament::button 
-                        tag="a" 
->>>>>>> .merge_file_6InAFX
->>>>>>> laraxot/dev
                         :href="'/' . app()->getLocale()"
                         color="gray"
                         size="lg"
@@ -306,13 +267,9 @@ name('logout');
    - Utilizzare correttamente i componenti Filament
 
 <<<<<<< HEAD
-2. **Convenzioni di Quaeris per i Widget**:
-=======
-<<<<<<< .merge_file_lmd1Nv
 2. **Convenzioni di <nome progetto> per i Widget**:
 =======
 2. **Convenzioni di Quaeris per i Widget**:
->>>>>>> .merge_file_6InAFX
 >>>>>>> laraxot/dev
    - Namespace corretto: `Modules\User\Filament\Widgets`
    - Path della vista: `filament.widgets.auth.logout` (senza namespace del modulo per l'utilizzo diretto nelle Blade)
@@ -333,8 +290,6 @@ name('logout');
 3. **Manutenibilità**: Separa chiaramente la logica dalla presentazione.
 4. **Estensibilità**: Facilmente estensibile per aggiungere funzionalità aggiuntive.
 <<<<<<< HEAD
-=======
-<<<<<<< .merge_file_lmd1Nv
 5. **Conformità alle convenzioni**: Segue le convenzioni di <nome progetto> per i widget Filament.
 
 ## Alternativa: Logout Immediato
@@ -347,7 +302,3 @@ Se non è necessaria una conferma per il logout, è preferibile utilizzare l'app
 ## Alternativa: Logout Immediato
 
 Se non è necessaria una conferma per il logout, è preferibile utilizzare l'approccio "Folio con PHP puro" come descritto in [LOGOUT_BLADE_IMPLEMENTATION.md](logout-blade-implementation-2.md), che esegue il logout immediatamente senza richiedere conferma.
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_6InAFX
->>>>>>> laraxot/dev

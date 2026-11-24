@@ -3,11 +3,7 @@ title: "workflow init"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "workflow init"
 issues: []
 discussions: []
@@ -180,25 +176,16 @@ Crea lo script di inizializzazione `bashscripts/bmad/workflow-init.sh`:
 ```bash
 #!/bin/bash
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 # -----------------------------------------------------------------------------
 # BMAD Workflow Init
 # -----------------------------------------------------------------------------
 # Configura BMAD Method per il progetto PTVX
 # -----------------------------------------------------------------------------
-=======
->>>>>>> laraxot/dev
 # =============================================================================
 # BMAD Workflow Init
 # =============================================================================
 # Configura BMAD Method per il progetto PTVX
 # =============================================================================
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 set -e
 

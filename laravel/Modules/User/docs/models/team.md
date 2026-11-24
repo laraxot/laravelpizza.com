@@ -7,16 +7,16 @@ related:
   - "./baseuser.md"
 <<<<<<< HEAD
   - "./README.md"
-=======
-<<<<<<< HEAD
-  - "./readme.md"
-=======
-  - "./README.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./teampermission.md"
   - "./xotbaivot-migration.md"
   - "./xotbasepivot-migration.md"
+=======
+  - "./readme.md"
+  - "./teampermission.md"
+  - "./xotbaivot-migration.md"
+  - "./xotbasepivot-migration.md"
+qmd: "team"
+>>>>>>> laraxot/dev
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/team-Modules.md

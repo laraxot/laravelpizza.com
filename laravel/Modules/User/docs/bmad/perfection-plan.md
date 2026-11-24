@@ -13,6 +13,10 @@ related:
   - ./epics.md
   - ./livewire-inventory.md
   - ./decision-log.md
+<<<<<<< HEAD
+=======
+qmd: "perfection plan user absolute"
+>>>>>>> laraxot/dev
 ---
 
 # Perfection Plan — Module User Absolute Perfection

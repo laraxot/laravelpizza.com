@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Regole per le Chiavi di Traduzione"
+type: rule
+qmd: "translation keys rules regole chiavi traduzione"
+---
+>>>>>>> laraxot/dev
 # Regole per le Chiavi di Traduzione
 
 ## Principi Fondamentali

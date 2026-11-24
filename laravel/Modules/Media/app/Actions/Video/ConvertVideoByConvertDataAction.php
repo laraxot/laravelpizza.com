@@ -15,6 +15,8 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Classe per convertire video utilizzando i dati di conversione specificati.
+ * @see docs/contracts/convert-video-by-convert-data-action.md
+ * @contract docs/contracts/convert-video-by-convert-data-action.md
  */
 class ConvertVideoByConvertDataAction
 {

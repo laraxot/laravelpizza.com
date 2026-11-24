@@ -226,19 +226,7 @@ Usare sempre file esistenti del progetto come riferimento per i namespace.
 
 - [ListLogActivitiesAction.php](../app/Filament/Actions/ListLogActivitiesAction.php) - File fixato
 - [XotBasePage.php](../../Xot/app/Filament/Pages/XotBasePage.php) - Reference corretta
-<<<<<<< HEAD
-- [Activity Module README](./README.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Activity Module README](./readme.md)
-=======
-- [Activity Module README](./README.md)
->>>>>>> laraxot/dev
-=======
-- [Activity Module README](./README.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ### Regole e Best Practices
 

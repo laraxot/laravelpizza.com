@@ -1,17 +1,5 @@
 ---
 <<<<<<< HEAD
-title: "Contratti"
-type: index
-tags: [contracts, actions, interfaces]
-created: 2026-11-18
-updated: 2026-11-18
----
-
-# Contratti
-
-Cosa promette la superficie pubblica di questo pacchetto: le Action che scrivono dati, chiamano servizi esterni o hanno
-effetti collaterali, e le interfacce (`app/Contracts`). Regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`.
-=======
 title: "Contratti — modulo User"
 type: index
 tags: [contracts, actions, interfaces, user]
@@ -35,7 +23,6 @@ documentate qui. Il group Pest, se c'è, prova l'invariante
 
 Leggili prima di chiamare, modificare o imitare un'Action di autenticazione. Formato e regola:
 `Modules/Xot/docs/rules/action-behavioral-contract.md`.
->>>>>>> laraxot/dev
 
 ## Contratto di comportamento di un'Action
 
@@ -51,13 +38,6 @@ Un file per Action, nome in kebab-case della classe (`create-ticket-action.md`),
 ## Non fa
 ```
 
-<<<<<<< HEAD
-Il docblock dell'Action rimanda al file con la riga `Contratto di comportamento: docs/contracts/<file>.md`.
-Chi cambia il comportamento aggiorna il contratto nello stesso commit.
-
-## Contratti
-
-=======
 Il docblock dell'Action rimanda al file con il marker `@contract docs/contracts/<file>.md`, quello verificato dai test; la
 riga legacy `Contratto di comportamento: docs/contracts/<file>.md` può restare. Chi cambia il comportamento aggiorna il
 contratto nello stesso commit.
@@ -80,4 +60,31 @@ contratto nello stesso commit.
 
 - [INDEX](INDEX.md) — tabella operativa operazione, contratto, classe, invarianti; è un elenco precedente a questo README e alcuni suoi nomi di file e classi non coincidono con i contratti qui sopra.
 - [Template di contratto](_template.md) — scheletro con le sei sezioni e la tabella degli invarianti, da copiare per una nuova Action.
+=======
+title: "Contratti — User"
+type: index
+owner: User
+updated: 2026-11-24
+qmd: "User contract comportamentali autenticazione ruoli permessi SPID CIE invarianti USER-INV"
+---
+
+# Contratti — User
+
+Un contract descrive una singola operazione del modulo User che muove dati personali, permessi o accessi: input, output, invarianti, effetti collaterali, errori e confini. Documenta il comportamento **implementato**, non quello desiderato. Standard: [contract-authoring-standard](../../../Xot/docs/contracts/contract-authoring-standard.md); governance: [ADR 0012](../../../Xot/docs/adr/0012-behavioral-contract-governance.md).
+
+## Formato
+
+Frontmatter `type: contract` e `action: "Modules\\User\\Actions\\..."`; sezioni nell'ordine `## Input`, `## Output`, `## Invarianti`, `## Effetti collaterali`, `## Errori`, `## Non fa`. Ogni invariante ha ID `USER-<AREA>-INV-<N>` e un test Pest con `->group('<ID>')`. Il registro operativo con copertura e comandi è [INDEX.md](INDEX.md).
+
+## File presenti
+
+Contract nel formato a sei sezioni:
+
+- [has-verified-identity-action](has-verified-identity-action.md) (invariante in prosa, senza ID: da portare a `USER-IDV-INV-N`)
+- [build-active-user-provider-action](build-active-user-provider-action.md)
+- [revoke-user-access-action](revoke-user-access-action.md)
+- [upsert-user-from-digital-identity-action](upsert-user-from-digital-identity-action.md)
+- [set-default-roles-by-socialite-user-action](set-default-roles-by-socialite-user-action.md)
+
+Documenti `type: concept` sulle interfacce (non sono contract formali, nessun ID): [hasteamsandusercontract](hasteamsandusercontract.md), [teamcontract](teamcontract.md). Template: [_template](_template.md). I file `*.md.bak` sono copie di lavoro, non contratti.
 >>>>>>> laraxot/dev

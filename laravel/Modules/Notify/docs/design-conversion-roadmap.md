@@ -3,11 +3,7 @@ title: "DESIGN CONVERSION ROADMAP"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "DESIGN CONVERSION ROADMAP"
 issues: []
 discussions: []
@@ -154,15 +150,7 @@ laravel/Themes/Sixteen/docs/pages/<page-name>/
 ### Theme-Level
 ```
 laravel/Themes/Sixteen/docs/
-<<<<<<< HEAD
-├── index.md                                    # Main index
-=======
-<<<<<<< HEAD
 ├── INDEX.md                                    # Main index
-=======
-├── index.md                                    # Main index
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ├── COMPLETE-VISUAL-PARITY-REPORT.md          # All 54 pages
 ├── PRIORITY-MATRIX.json                       # Workload planning
 ├── visual-parity-data.json                    # Machine-readable data
@@ -375,7 +363,4 @@ node bashscripts/github/create-design-issues.mjs
 ```
 
 Then pick issue #1 and get coding! 🚀
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev

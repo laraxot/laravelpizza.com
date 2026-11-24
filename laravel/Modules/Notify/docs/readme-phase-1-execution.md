@@ -3,11 +3,7 @@ title: "readme phase 1 execution"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "readme phase 1 execution"
 issues: []
 discussions: []
@@ -61,15 +57,7 @@ discussions: []
 |----------|---------|-----------|
 | **PHASE-1-STRATEGY.md** | Complete research & strategy | 20 min |
 | **GSD-PHASE-1-EXECUTION.md** | Execution plan with all 6 subtasks | 15 min |
-<<<<<<< HEAD
 | **00-index.md** | Master documentation index | 10 min |
-=======
-<<<<<<< HEAD
-| **00-INDEX.md** | Master documentation index | 10 min |
-=======
-| **00-index.md** | Master documentation index | 10 min |
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ### 🔧 TOOLS & SCRIPTS
 | Document | Purpose | Read Time |
@@ -88,15 +76,7 @@ discussions: []
 laravel/Themes/Sixteen/docs/
 ├─ PHASE-1-STRATEGY.md                    (strategy)
 ├─ GSD-PHASE-1-EXECUTION.md               (execution plan)
-<<<<<<< HEAD
 ├─ 00-index.md                            (master index)
-=======
-<<<<<<< HEAD
-├─ 00-INDEX.md                            (master index)
-=======
-├─ 00-index.md                            (master index)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ├─ PHASE-1-EXECUTION-STATUS.md            (progress tracking)
 ├─ body-structure-comparison/
 │  └─ segnalazioni-elenco/
@@ -148,15 +128,7 @@ laravel/Themes/Sixteen/docs/
 
 **Subtask 6** (LATER):
 - ⏳ Input: Final comparison results from Subtask 5
-<<<<<<< HEAD
-- 📝 Create: PHASE-1-COMPLETION-REPORT.md
-=======
-<<<<<<< HEAD
 - 📝 create: phase-1-completion-report.md
-=======
-- 📝 Create: PHASE-1-COMPLETION-REPORT.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - 🔄 Update: 00-index.md with Phase 1 status
 
 **Read First**:
@@ -272,17 +244,7 @@ PHASE 1 WORKFLOW (as of 07:50 UTC)
 ### Status Updates (Every Agent)
 - Report progress: ✅ Complete / 🟠 In Progress / ⏳ Blocked
 - Share blockers/questions immediately
-<<<<<<< HEAD
-- Update PHASE-1-EXECUTION-STATUS.md
-
-=======
-<<<<<<< HEAD
 - update phase-1-execution-status.md
-=======
-- Update PHASE-1-EXECUTION-STATUS.md
-
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ### Handoffs (Between Subtasks)
 - Previous agent: Notify next agent + share deliverables
 - Next agent: Confirm receipt and ready status
@@ -300,15 +262,7 @@ PHASE 1 WORKFLOW (as of 07:50 UTC)
 Before starting your subtask:
 
 **All Agents**:
-<<<<<<< HEAD
-- [ ] Read PHASE-1-EXECUTION-STATUS.md
-=======
-<<<<<<< HEAD
 - [ ] read phase-1-execution-status.md
-=======
-- [ ] Read PHASE-1-EXECUTION-STATUS.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [ ] Understand the 6 subtasks and dependencies
 - [ ] Know the translation pattern
 - [ ] Have reference URLs bookmarked
@@ -319,27 +273,18 @@ Before starting your subtask:
 - [ ] Know where to save output
 
 **Researcher**:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 - [ ] read subtask-2-analysis-workflow.md
 - [ ] have template ready: phase-1-findings-template.md
 - [ ] Understand gap categorization (HIGH/MEDIUM/LOW)
 
 **Executor #2**:
 - [ ] read executor-2-subtasks-3-4.md
-=======
->>>>>>> laraxot/dev
 - [ ] Read SUBTASK-2-ANALYSIS-WORKFLOW.md
 - [ ] Have template ready: PHASE-1-FINDINGS-TEMPLATE.md
 - [ ] Understand gap categorization (HIGH/MEDIUM/LOW)
 
 **Executor #2**:
 - [ ] Read EXECUTOR-2-SUBTASKS-3-4.md
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [ ] Understand blade template structure
 - [ ] Know JSON requirements
 - [ ] Have translation keys checklist ready
@@ -349,17 +294,12 @@ Before starting your subtask:
 ## 📞 HELP & SUPPORT
 
 **For questions about**:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 - **strategy**: phase-1-strategy.md
 - **execution**: gsd-phase-1-execution.md
 - **Tools**: bashscripts/docs/html/index.md
 - **blade fixes**: executor-2-subtasks-3-4.md
 - **analysis**: subtask-2-analysis-workflow.md
 - **status**: phase-1-execution-status.md
-=======
->>>>>>> laraxot/dev
 - **Strategy**: PHASE-1-STRATEGY.md
 - **Execution**: GSD-PHASE-1-EXECUTION.md
 - **Tools**: bashscripts/docs/html/index.md
@@ -367,25 +307,11 @@ Before starting your subtask:
 - **Analysis**: SUBTASK-2-ANALYSIS-WORKFLOW.md
 - **Status**: PHASE-1-EXECUTION-STATUS.md
 
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 **Common Questions**:
 - "Why this approach?" → PHASE-1-STRATEGY.md § Executive Summary
 - "What's my task?" → Your role guide above
 - "Where's the output?" → Output Locations section
-<<<<<<< HEAD
-- "What's the parity score?" → Wait for Subtask 1, then check PHASE-1-EXECUTION-STATUS.md
-
-=======
-<<<<<<< HEAD
 - "what's the parity score?" → wait for subtask 1, then check phase-1-execution-status.md
-=======
-- "What's the parity score?" → Wait for Subtask 1, then check PHASE-1-EXECUTION-STATUS.md
-
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ---
 
 ## 🎓 LEARNING RESOURCES
@@ -450,11 +376,8 @@ Before starting your subtask:
 |------|------|----------|--------|
 | Strategy | PHASE-1-STRATEGY.md | laravel/Themes/Sixteen/docs/ | ✅ DONE |
 | Execution Plan | GSD-PHASE-1-EXECUTION.md | laravel/Themes/Sixteen/docs/ | ✅ DONE |
-<<<<<<< HEAD
-=======
 | Master Index | 00-INDEX.md | laravel/Themes/Sixteen/docs/ | ✅ DONE |
 | Tool Docs | bashscripts/docs/html/INDEX.md | bashscripts/docs/html/ | ✅ DONE |
->>>>>>> laraxot/dev
 | Master Index | 00-index.md | laravel/Themes/Sixteen/docs/ | ✅ DONE |
 | Tool Docs | bashscripts/docs/html/index.md | bashscripts/docs/html/ | ✅ DONE |
 | Comparison Script | html-structure-compare.sh | bashscripts/body/ | ✅ READY |

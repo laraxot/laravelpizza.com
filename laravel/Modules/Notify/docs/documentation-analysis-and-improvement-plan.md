@@ -3,11 +3,7 @@ title: "Documentation Analysis and Improvement Plan"
 type: concept
 tags: [documentation, analysis, improvement, plan]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "documentation-analysis-and-improvement-plan documentation analysis and improvement plan"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -178,17 +174,7 @@ The FixCity platform has extensive documentation across modules and themes, but 
 
 3. **Update Governance**
    - Finalize documentation governance
-<<<<<<< HEAD
-   - Add to AGENTS.md
-   - Add to AGENTS.md
-=======
-<<<<<<< HEAD
    - add to agents.md
-=======
-   - Add to AGENTS.md
-   - Add to AGENTS.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
    - Add to .windsurfrules
 
 ### Priority 3: Medium (Week 4)
@@ -427,18 +413,8 @@ echo "  snake_case: $(find laravel/Modules/*/docs/ -name '*_*.md' | wc -l)"
 ## 📚 Related Documents
 
 - [documentation-governance.md](documentation-governance.md) - Governance framework
-<<<<<<< HEAD
 - [AGENTS.md](../../../AGENTS.md) - Agent guidelines
 - [AGENTS.md](../../../AGENTS.md) - Agent guidelines
-=======
-<<<<<<< HEAD
-- [AGENTS.md](../../../agents.md) - Agent guidelines
-- [agents.md](../../../agents.md) - Agent guidelines
-=======
-- [AGENTS.md](../../../AGENTS.md) - Agent guidelines
-- [AGENTS.md](../../../AGENTS.md) - Agent guidelines
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [.windsurfrules](../../../.windsurfrules) - IDE rules
 
 ---

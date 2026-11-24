@@ -7,6 +7,7 @@ created: "2026-05-26"
 updated: "2026-05-26"
 related:
   - "../../../../docs/wiki/rules/agent-confidence-protocol.md"
+qmd: "agent confidence protocol massima confidenza agente"
 ---
 
 # Massima confidenza agente

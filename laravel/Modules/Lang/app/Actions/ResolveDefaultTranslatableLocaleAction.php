@@ -10,6 +10,9 @@ use Spatie\QueueableAction\QueueableAction;
 /**
  * Lingua con cui si apre l'editor: quella salvata se e' fra le lingue scelte, altrimenti
  * `$fallback` (ogni chiamante aveva il suo: `app.locale` per le Resource, `it` per il selettore).
+ *
+ * @see docs/contracts/resolve-default-translatable-locale-action.md
+ * @contract docs/contracts/resolve-default-translatable-locale-action.md
  */
 class ResolveDefaultTranslatableLocaleAction
 {

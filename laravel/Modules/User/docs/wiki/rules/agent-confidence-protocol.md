@@ -14,6 +14,10 @@ related:
   - "./navigation-properties.md"
   - "./no-filament-labels.md"
   - "./no-notifications-migration-in-user-module.md"
+<<<<<<< HEAD
+=======
+qmd: "agent confidence protocol user"
+>>>>>>> laraxot/dev
 ---
 
 # Agent Confidence Protocol — User Module

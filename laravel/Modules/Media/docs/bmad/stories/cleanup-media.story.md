@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_oeMUsm
 ---
 title: "Story: Cleanup Media Module"
 qmd: "media bmad stories cleanup media story md"
@@ -14,15 +5,6 @@ type: note
 tags: [documentation]
 ---
 
-=======
->>>>>>> .merge_file_4xGazI
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 # Story: Cleanup Media Module
 
 ## BMAD Method Applied

@@ -12,11 +12,7 @@ related:
 <<<<<<< HEAD
   - "./README.md"
 =======
-<<<<<<< HEAD
   - "./readme.md"
-=======
-  - "./README.md"
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
   - "./team.md"
   - "./teampermission.md"

@@ -1,19 +1,10 @@
 ---
-<<<<<<< HEAD
-title: "Final Completion Report"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "Final Completion Report"
-=======
 title: "final completion report 2025 10 01"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "final completion report 2025 10 01"
->>>>>>> laraxot/dev
 issues: []
 discussions: []
 ---

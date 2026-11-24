@@ -67,15 +67,7 @@ This document outlines the structure and usage of the `BaseUser` model within a 
 - Update this document if significant changes are made to the `BaseUser` structure or functionality.
 
 ## Links to Related Documentation
-<<<<<<< HEAD
 - [User Module Index](./index.md)
-=======
-<<<<<<< HEAD
-- [User Module Index](./index.md)
-=======
-- [User Module Index](./README.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Authentication Pages Implementation](./auth-pages-implementation.md)
 - [Profile Management](./profile-management.md)
 - [Routing Best Practices](./routing-best-practices.md)

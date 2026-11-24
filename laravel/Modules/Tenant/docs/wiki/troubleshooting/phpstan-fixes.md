@@ -6,6 +6,7 @@ confidence: verified
 created: 2026-05-06
 updated: 2026-05-06
 tags: [phpstan, tenant, trait, sushi]
+qmd: "phpstan fixes 20260506"
 ---
 
 # PHPStan Fixes - 2026-05-06

@@ -1,19 +1,10 @@
 ---
-<<<<<<< HEAD
-title: "Architecture"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "Architecture"
-=======
 title: "architecture"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "architecture"
->>>>>>> laraxot/dev
 issues: []
 discussions: []
 ---

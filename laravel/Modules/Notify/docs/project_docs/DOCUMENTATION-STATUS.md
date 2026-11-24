@@ -3,11 +3,7 @@ title: "DOCUMENTATION STATUS"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "DOCUMENTATION STATUS"
 issues: []
 discussions: []
@@ -60,18 +56,8 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 - [x] README.md completo
 - [x] roadmap.md
 - [x] ROADMAP_2025.md aggiornato
-<<<<<<< HEAD
-- [x] BUSINESS_LOGIC_OVERVIEW.md
-- [x] CODE_QUALITY_TOOLS.md
-=======
-<<<<<<< HEAD
 - [x] business_logic_overview.md
 - [x] code_quality_tools.md
-=======
-- [x] BUSINESS_LOGIC_OVERVIEW.md
-- [x] CODE_QUALITY_TOOLS.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [x] Performance issues documentation
 - [x] PHPStan fixes report
 - [x] Filament 4.x upgrade report
@@ -87,15 +73,7 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 #### ✅ User (Authentication & Authorization) - 90% COMPLETATO
 **Documentazione Presente**:
 - [x] README.md completo
-<<<<<<< HEAD
-- [x] roadmap.md aggiornato
-=======
-<<<<<<< HEAD
 - [x] ROADMAP.md aggiornato
-=======
-- [x] roadmap.md aggiornato
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [x] Security guidelines
 - [x] Authentication flow
 - [x] Authorization system
@@ -113,15 +91,7 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 #### 🚧 UI (Component Library) - 70% COMPLETATO
 **Documentazione Presente**:
 - [x] README.md completo
-<<<<<<< HEAD
-- [x] ROADMAP_2025.md
-=======
-<<<<<<< HEAD
 - [x] roadmap_2025.md
-=======
-- [x] ROADMAP_2025.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [x] Architecture rules
 - [x] Components guide
 - [x] Filament integration
@@ -140,15 +110,7 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 **Documentazione Presente**:
 - [x] README.md completo
 - [x] roadmap.md
-<<<<<<< HEAD
-- [x] ROADMAP_2025.md
-=======
-<<<<<<< HEAD
 - [x] roadmap_2025.md
-=======
-- [x] ROADMAP_2025.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [x] Architecture documentation
 - [x] Models documentation
 - [x] Filament integration
@@ -166,17 +128,7 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 #### 🚧 Media (File Management) - 60% COMPLETATO
 **Documentazione Presente**:
 - [x] README.md base
-<<<<<<< HEAD
-- [x] ROADMAP_2025.md
-
-=======
-<<<<<<< HEAD
 - [x] roadmap_2025.md
-=======
-- [x] ROADMAP_2025.md
-
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 **Da Completare**:
 - [ ] Upload guide
 - [ ] CDN integration
@@ -189,17 +141,7 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 #### 🚧 Notify (Notifications) - 70% COMPLETATO
 **Documentazione Presente**:
 - [x] README.md base
-<<<<<<< HEAD
-- [x] ROADMAP_2025.md
-
-=======
-<<<<<<< HEAD
 - [x] roadmap_2025.md
-=======
-- [x] ROADMAP_2025.md
-
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 **Da Completare**:
 - [ ] Channel configuration
 - [ ] Template system
@@ -214,17 +156,7 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 #### 🚧 Comment (Comments System) - 50% COMPLETATO
 **Documentazione Presente**:
 - [x] README.md base
-<<<<<<< HEAD
-- [x] ROADMAP_2025.md
-
-=======
-<<<<<<< HEAD
 - [x] roadmap_2025.md
-=======
-- [x] ROADMAP_2025.md
-
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 **Da Completare**:
 - [ ] API documentation
 - [ ] Moderation guide
@@ -236,17 +168,7 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 #### 🚧 Rating (Rating System) - 40% COMPLETATO
 **Documentazione Presente**:
 - [x] README.md base
-<<<<<<< HEAD
-- [x] ROADMAP_2025.md
-
-=======
-<<<<<<< HEAD
 - [x] roadmap_2025.md
-=======
-- [x] ROADMAP_2025.md
-
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 **Da Completare**:
 - [ ] API documentation
 - [ ] Rating types
@@ -258,17 +180,7 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 #### 🚧 Activity (Audit Trail) - 60% COMPLETATO
 **Documentazione Presente**:
 - [x] README.md base
-<<<<<<< HEAD
-- [x] ROADMAP_2025.md
-
-=======
-<<<<<<< HEAD
 - [x] roadmap_2025.md
-=======
-- [x] ROADMAP_2025.md
-
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 **Da Completare**:
 - [ ] Event tracking guide
 - [ ] Logging configuration
@@ -280,17 +192,7 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 #### 🚧 Blog (Content Management) - 45% COMPLETATO
 **Documentazione Presente**:
 - [x] README.md base
-<<<<<<< HEAD
-- [x] ROADMAP_2025.md
-
-=======
-<<<<<<< HEAD
 - [x] roadmap_2025.md
-=======
-- [x] ROADMAP_2025.md
-
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 **Da Completare**:
 - [ ] Editor guide
 - [ ] SEO optimization
@@ -304,17 +206,7 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 #### 📋 Cms (Advanced CMS) - 35% COMPLETATO
 **Documentazione Presente**:
 - [x] README.md base
-<<<<<<< HEAD
-- [x] ROADMAP_2025.md
-
-=======
-<<<<<<< HEAD
 - [x] roadmap_2025.md
-=======
-- [x] ROADMAP_2025.md
-
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 **Da Completare**:
 - [ ] Page builder guide
 - [ ] Blocks system
@@ -326,17 +218,7 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 #### 📋 Gdpr (Privacy Compliance) - 50% COMPLETATO
 **Documentazione Presente**:
 - [x] README.md base
-<<<<<<< HEAD
-- [x] ROADMAP_2025.md
-
-=======
-<<<<<<< HEAD
 - [x] roadmap_2025.md
-=======
-- [x] ROADMAP_2025.md
-
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 **Da Completare**:
 - [ ] Consent management
 - [ ] Data export guide
@@ -348,17 +230,7 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 #### 📋 Tenant (Multi-tenancy) - 30% COMPLETATO
 **Documentazione Presente**:
 - [x] README.md base
-<<<<<<< HEAD
-- [x] ROADMAP_2025.md
-
-=======
-<<<<<<< HEAD
 - [x] roadmap_2025.md
-=======
-- [x] ROADMAP_2025.md
-
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 **Da Completare**:
 - [ ] Tenant isolation guide
 - [ ] Configuration per tenant
@@ -370,17 +242,7 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 #### 📋 Seo (SEO Optimization) - 45% COMPLETATO
 **Documentazione Presente**:
 - [x] README.md base
-<<<<<<< HEAD
-- [x] ROADMAP_2025.md
-
-=======
-<<<<<<< HEAD
 - [x] roadmap_2025.md
-=======
-- [x] ROADMAP_2025.md
-
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 **Da Completare**:
 - [ ] Meta tags guide
 - [ ] Sitemap generation
@@ -392,17 +254,7 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 #### 📋 Job (Job Management) - 40% COMPLETATO
 **Documentazione Presente**:
 - [x] README.md base
-<<<<<<< HEAD
-- [x] ROADMAP_2025.md
-
-=======
-<<<<<<< HEAD
 - [x] roadmap_2025.md
-=======
-- [x] ROADMAP_2025.md
-
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 **Da Completare**:
 - [ ] Queue configuration
 - [ ] Job scheduling
@@ -415,15 +267,7 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 **Documentazione Presente**:
 - [x] README.md base
 - [x] roadmap.md
-<<<<<<< HEAD
-- [x] ROADMAP_2025.md
-=======
-<<<<<<< HEAD
 - [x] roadmap_2025.md
-=======
-- [x] ROADMAP_2025.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [x] MCP integration
 - [x] Fine-tuning guide
 
@@ -464,17 +308,7 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 
 **Documentazione Presente**:
 - [x] README.md base
-<<<<<<< HEAD
-- [x] ROADMAP_2025.md
-
-=======
-<<<<<<< HEAD
 - [x] roadmap_2025.md
-=======
-- [x] ROADMAP_2025.md
-
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 **Da Completare**:
 - [ ] Filament customization guide
 - [ ] Component documentation
@@ -495,15 +329,7 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 
 ### Tipologie Documentazione
 - **README.md**: 100% (tutti i moduli)
-<<<<<<< HEAD
-- **roadmap.md**: 95% (18/19 moduli)
-=======
-<<<<<<< HEAD
 - **ROADMAP.md**: 95% (18/19 moduli)
-=======
-- **roadmap.md**: 95% (18/19 moduli)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - **API Documentation**: 30% (6/18 moduli)
 - **User Guides**: 25% (4/18 moduli)
 - **Developer Guides**: 40% (7/18 moduli)
@@ -559,15 +385,7 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 - **OpenAPI**: API documentation (in corso)
 
 ### Standard Documentazione
-<<<<<<< HEAD
-- **Struttura**: README.md + roadmap.md + docs/
-=======
-<<<<<<< HEAD
 - **Struttura**: README.md + ROADMAP.md + docs/
-=======
-- **Struttura**: README.md + roadmap.md + docs/
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - **Formato**: Markdown con emoji
 - **Lingua**: Italiano (primario), Inglese (pianificato)
 - **Versioning**: Git-based
@@ -577,15 +395,7 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 ## 🔗 COLLEGAMENTI UTILI
 
 ### Roadmap Principali
-<<<<<<< HEAD
-- [Master Roadmap](../laravel/MASTER_ROADMAP.md)
-=======
-<<<<<<< HEAD
 - [Master Roadmap](../laravel/master_roadmap.md)
-=======
-- [Master Roadmap](../laravel/MASTER_ROADMAP.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Roadmap Status Summary](../roadmap_status_summary.md)
 - [Roadmap Technical](./roadmaps/roadmap-technical.md)
 - [Roadmap Quality](./roadmaps/roadmap-quality.md)

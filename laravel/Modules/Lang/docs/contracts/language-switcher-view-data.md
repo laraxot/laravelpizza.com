@@ -1,6 +1,11 @@
 ---
 title: "Lang — dati della vista language switcher"
+<<<<<<< HEAD
 type: contract
+=======
+type: presentation-contract
+contract: Modules\Lang\Filament\Widgets\LanguageSwitcherWidget
+>>>>>>> laraxot/dev
 status: active
 updated: 2026-11-23
 ---

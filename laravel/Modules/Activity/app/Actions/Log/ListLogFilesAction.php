@@ -15,6 +15,9 @@ use Symfony\Component\Finder\Finder;
  *
  * I file il cui percorso reale (link simbolici risolti) esce dalla cartella base non vengono
  * elencati. Il numero di file restituiti e' limitato per non appesantire la pagina.
+ *
+ * @see docs/contracts/list-log-files-action.md
+ * @contract docs/contracts/list-log-files-action.md
  */
 class ListLogFilesAction
 {

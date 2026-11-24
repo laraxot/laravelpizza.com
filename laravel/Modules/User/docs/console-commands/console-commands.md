@@ -14,11 +14,7 @@ related:
 <<<<<<< HEAD
   - "./README.md"
 =======
-<<<<<<< HEAD
   - "./readme.md"
-=======
-  - "./README.md"
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 ---
 
@@ -466,11 +462,7 @@ private function getPasswordLegacy(): string
 <<<<<<< HEAD
 - [README Comandi Console](README.md)
 =======
-<<<<<<< HEAD
 - [README Comandi Console](readme.md)
-=======
-- [README Comandi Console](README.md)
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [ChangePasswordCommand](change-password-command.md)
 - [AssignModuleCommand](assign-module-command.md)

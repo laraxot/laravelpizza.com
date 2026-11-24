@@ -9,6 +9,10 @@ related:
   - "./duplicated-ratings-relation-manager.md"
   - "./duplicated-users-relation-manager.md"
   - "./oauth-dual-resource-trees.md"
+<<<<<<< HEAD
+=======
+qmd: "duplicated profile form profileform oauth forms"
+>>>>>>> laraxot/dev
 ---
 
 # Duplicated ProfileForm and OAuth Forms (User Module)

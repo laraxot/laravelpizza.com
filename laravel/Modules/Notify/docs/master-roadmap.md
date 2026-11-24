@@ -3,14 +3,8 @@ title: "🗺️ FIXCITY - MASTER ROADMAP 2025-2026"
 type: concept
 tags: [master, roadmap]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-qmd: "master-roadmap 🗺️ fixcity - master roadmap 2025-2026"
-qmd: "master-roadmap 🗺️ ptv - master roadmap 2025-2026"
-=======
 updated: 2026-11-23
 qmd: "master-roadmap 🗺️ fixcity - master roadmap 2025-2026"
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:

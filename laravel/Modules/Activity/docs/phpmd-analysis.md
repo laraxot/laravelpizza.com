@@ -491,9 +491,6 @@ return $alternative;
 
 1. `docs/CODE_QUALITY_ANALYSIS.md` - Add PHPMD fixes section
 2. `docs/README.md` - Update quality metrics
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 3. `docs/ARCHITECTURE.md` - Document coupling reduction strategies
 
 ### Quality Gates:
@@ -665,9 +662,6 @@ return $alternative;
 
 1. `docs/CODE_QUALITY_ANALYSIS.md` - Add PHPMD fixes section
 2. `docs/README.md` - Update quality metrics
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 3. `docs/architecture.md` - Document coupling reduction strategies
 
 ### Quality Gates:

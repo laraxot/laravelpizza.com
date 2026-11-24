@@ -3,16 +3,10 @@ type: decision-log
 title: "Decision Log: Notify"
 links: {github_issue: "#XXX", discussion: "#XXX"}
 status: draft
-<<<<<<< HEAD
-updated: 2026-10-08
-tags: [docs, notify]
-qmd: "decision log   notify notify"
-=======
 updated: 2026-11-23
 tags: [docs, notify]
 qmd: "decision log   notify notify"
 created: 2026-11-23
->>>>>>> laraxot/dev
 ---
 # Decision Log: Notify
 

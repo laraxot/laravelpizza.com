@@ -5,6 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< HEAD
+=======
+qmd: "navigation consolidated"
+>>>>>>> laraxot/dev
 ---
 
 # navigation — Consolidated Documentation

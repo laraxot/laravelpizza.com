@@ -11,6 +11,9 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Get activities for a given subject model.
+ *
+ * @see docs/contracts/get-model-activities-action.md
+ * @contract docs/contracts/get-model-activities-action.md
  */
 class GetModelActivitiesAction
 {

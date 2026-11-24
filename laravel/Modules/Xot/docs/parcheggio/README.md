@@ -87,3 +87,21 @@ database — e questa copia va cancellata, non tenuta come riserva.
 sopra: sono stati spostati, non giudicati. Prima di copiarne uno nel codice
 vivo, confrontalo con quello che c'e' adesso.
 
+
+---
+
+## Tornati col sync del 21/11 e ritirati di nuovo (24/11/2026)
+
+Il sync dei moduli (nessun marcatore) ha rimesso file che il progetto aveva cancellato (root `66789173c` del 06/11;
+`public/header-actions-wrap.css` il 13/11, `95a546b25`). **Esaminati**: nessun chiamante. Percorsi relativi alla radice
+del modulo, copiati qui con suffisso `.zero_used`.
+
+| File | Byte | Perche' |
+|---|---|---|
+| `app/DTOs/links.md` | 432 | nota dentro `app/`, non e' codice |
+| `app/Jobs/links.md` | 2114 | idem |
+| `app/Jobs/PanelCrud/store.md` | 15831 | idem; versione diversa da `panelcrud-store-job-storico.md` |
+| `app/Services/cacheservice.md` | 133 | idem |
+| `public/header-actions-wrap.css` | 32 | copia identica di `public/css/header-actions-wrap.css`, quella che carica `AdminPanelProvider` (`xot::css/header-actions-wrap.css`) |
+
+Il prossimo sync li riporta finche' il repository del modulo non li toglie.

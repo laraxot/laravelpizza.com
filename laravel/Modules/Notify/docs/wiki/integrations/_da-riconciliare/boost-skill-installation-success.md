@@ -3,11 +3,7 @@ title: "Boost Skill Installation - Success Report"
 type: concept
 tags: [boost, skill, installation, success]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "boost-skill-installation-success boost skill installation - success report"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]

@@ -3,14 +3,11 @@ title: "Product Strategy"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "Product Strategy"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Cms Module - Product Strategy
@@ -21,30 +18,6 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-title: "PRODUCT STRATEGY"
-=======
-<<<<<<< HEAD
-title: "product strategy"
-=======
-title: "PRODUCT STRATEGY"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-<<<<<<< HEAD
-qmd: "PRODUCT STRATEGY"
-=======
-<<<<<<< HEAD
-qmd: "product strategy"
-=======
-qmd: "PRODUCT STRATEGY"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-issues: []
-discussions: []
 ## Executive Summary
 
 The CMS module enables business users to manage content independently, reducing developer burden and accelerating content operations.
@@ -121,4 +94,3 @@ Fast content delivery.
 | **User Satisfaction** | 4.5/5.0 |
 
 ---
-

@@ -2,6 +2,7 @@
 title: "Inventario documentazione dei moduli"
 module: Xot
 type: audit
+qmd: "inventory inventario moduli"
 ---
 
 # Inventario documentazione dei moduli

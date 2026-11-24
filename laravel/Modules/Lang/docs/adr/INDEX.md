@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Lang ADR index
 
 This is the machine-readable inventory of architecture decisions owned by the **Lang** module.
@@ -12,3 +13,23 @@ An ADR records a difficult-to-reverse or surprising choice with a real trade-off
 ## Authoring
 
 Use the shared template and rules in [Xot ADR standards](../../Xot/docs/adr/README.md). Do not create an ADR for a local implementation detail or an unverified hypothesis.
+=======
+---
+title: "INDEX ADR — Lang"
+type: index
+owner: Lang
+updated: 2026-11-24
+qmd: "Lang ADR INDEX stato decisioni"
+---
+
+# INDEX ADR — Lang
+
+| ADR | Stato | Sintesi |
+|---|---|---|
+| [0001-cambio-lingua-con-url-localizzato](0001-cambio-lingua-con-url-localizzato.md) | accepted | Cambio lingua con URL localizzato |
+| [lang-owns-localization-data](lang-owns-localization-data.md) | accepted | Lang possiede i dati di localizzazione |
+| [language-switcher-standalone-view](language-switcher-standalone-view.md) | accepted | Vista language switcher standalone |
+| [filament-labels-are-autoconfigured-by-lang-provider](filament-labels-are-autoconfigured-by-lang-provider.md) | accepted | Le etichette Filament si configurano da LangServiceProvider |
+
+Formato e regole: [README](README.md).
+>>>>>>> laraxot/dev

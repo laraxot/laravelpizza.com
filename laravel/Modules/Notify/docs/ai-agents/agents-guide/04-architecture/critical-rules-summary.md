@@ -3,11 +3,7 @@ title: "critical rules summary"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "critical rules summary"
 issues: []
 discussions: []
@@ -32,6 +28,7 @@ status: draft
 
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 [Back to index](../index.md) | [Full Rules](../../critical-rules.md)
 [Back to index](../../../index.md) | [Full Rules](../../critical-rules.md)
 =======
@@ -49,4 +46,8 @@ discussions: []
 [Back to index](../index.md) | [Full Rules](../../critical-rules.md)
 [Back to index](../../../index.md) | [Full Rules](../../critical-rules.md)
 >>>>>>> .merge_file_rjJJOa
+>>>>>>> laraxot/dev
+=======
+[Back to index](../index.md) | [Full Rules](../../critical-rules.md)
+[Back to index](../../../index.md) | [Full Rules](../../critical-rules.md)
 >>>>>>> laraxot/dev

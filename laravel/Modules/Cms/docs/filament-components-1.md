@@ -3,11 +3,7 @@ title: "filament components 1"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "filament components 1"
 issues: []
 discussions: []
@@ -156,15 +152,7 @@ Filament offre una vasta gamma di componenti Blade riutilizzabili. Di seguito i 
 ## Vedi Anche
 - [Modulo UI](../../UI/docs/README.md) - Componenti UI riutilizzabili
 - [Modulo Xot](../../Xot/docs/README.md) - Classi base Filament personalizzate
-<<<<<<< HEAD
 - [Modulo Theme](../theme/docs/README.md) - Personalizzazione temi Filament
-=======
-<<<<<<< HEAD
-- [Modulo Theme](../theme/docs/readme.md) - Personalizzazione temi Filament
-=======
-- [Modulo Theme](../theme/docs/README.md) - Personalizzazione temi Filament
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Convenzioni Namespace](convenzioni-namespace-filament.md) - Convenzioni di namespace
 - [Documentazione Filament](https://filamentphp.com/docs) - Documentazione ufficiale
 ## Collegamenti tra versioni di filament-components.md

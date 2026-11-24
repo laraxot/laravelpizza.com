@@ -10,6 +10,13 @@ use Illuminate\Support\Facades\File;
 use ReflectionClass;
 use Spatie\QueueableAction\QueueableAction;
 
+<<<<<<< HEAD
+=======
+/**
+ * @see docs/contracts/get-all-icons-action.md
+ * @contract docs/contracts/get-all-icons-action.md
+ */
+>>>>>>> laraxot/dev
 class GetAllIconsAction
 {
     use QueueableAction;

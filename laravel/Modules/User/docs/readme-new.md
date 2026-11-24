@@ -1017,13 +1017,8 @@ See [roadmap.md](./roadmap.md) for details.
 - [Activity Module](../../Activity/docs/README.md) - Activity tracking
 - [Lang Module](../../Lang/docs/README.md) - Translations
 =======
-<<<<<<< HEAD
 - [Activity Module](../../Activity/docs/readme.md) - Activity tracking
 - [Lang Module](../../Lang/docs/readme.md) - Translations
-=======
-- [Activity Module](../../Activity/docs/README.md) - Activity tracking
-- [Lang Module](../../Lang/docs/README.md) - Translations
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [Tenant Module](../../Tenant/docs/README.md) - Enhanced tenancy
 

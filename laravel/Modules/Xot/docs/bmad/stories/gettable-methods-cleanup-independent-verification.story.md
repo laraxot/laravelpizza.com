@@ -1,11 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_jbLdCz
-qmd: "xot bmad stories gettable methods cleanup independent verification story md"
-=======
->>>>>>> .merge_file_yanm43
->>>>>>> laraxot/dev
 title: "Verifica indipendente — hook getTable* nelle List page (cross-check di 5.254)"
 type: story
 module: Xot
@@ -17,16 +10,9 @@ related:
   - "./5.254-list-page-table-hooks.story.md"
   - "./5.255-doppi-header-actions-list-page.story.md"
   - "../filament-list-page-table-ownership.md"
-<<<<<<< HEAD
   - "../../../../User/docs/bmad/stories/user-filament-boundary-i18n.story.md"
-=======
-<<<<<<< .merge_file_jbLdCz
-  - "../../../../User/docs/bmad/stories/user-filament-boundary-i18n-20260929.story.md"
-=======
-  - "../../../../User/docs/bmad/stories/user-filament-boundary-i18n.story.md"
->>>>>>> .merge_file_yanm43
->>>>>>> laraxot/dev
   - "../../../../../docs/wiki/audits/getTable-methods-audit-2026-09-29.md"
+qmd: "gettable methods cleanup independent verification story"
 ---
 
 # Verifica indipendente — hook `getTable*` nelle List page
@@ -83,15 +69,7 @@ Già esistente e sufficiente: `laravel/Modules/Xot/docs/filament-list-page-table
 (dal 2026-09-10), rafforzata dalla story 5.254 con la catena di chiamate Filament
 verificata riga per riga nel vendor e dalle memorie
 `Xot/docs/wiki/memories/tabella-appartiene-alla-resource-non-alla-pagina.md` e
-<<<<<<< HEAD
 `header-actions-doppi-filament.md`. Non duplicata.
-=======
-<<<<<<< .merge_file_jbLdCz
-`header-actions-doppi-filament-5.md`. Non duplicata.
-=======
-`header-actions-doppi-filament.md`. Non duplicata.
->>>>>>> .merge_file_yanm43
->>>>>>> laraxot/dev
 
 ## Verifica gate
 

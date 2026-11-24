@@ -11,6 +11,7 @@ discussions: []
 related:
   - docs/wiki/rules/module-providers-manifest.md
   - docs/wiki/memories/module-providers-manifest-not-manual-register.md
+qmd: "adr 0009 bootstrap provider registry story"
 ---
 
 # Story: Bootstrap provider registry — composer.json driven

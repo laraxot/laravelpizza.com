@@ -1,7 +1,7 @@
 ---
 title: "notify owns delivery contract"
+status: proposed
 type: decision
-status: accepted
 date: 2026-11-23
 decision-makers: Notify module owner
 created: 2026-11-23

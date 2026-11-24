@@ -3,11 +3,7 @@ title: "✅ PHASE 1 - RICERCA COMPLETATA"
 type: concept
 tags: [phase, research, complete]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "phase-1-research-complete ✅ phase 1 - ricerca completata"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]

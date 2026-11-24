@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Two-Factor Authentication (2FA) - User"
+type: note
+qmd: "two factor authentication twofactor 2fa user"
+---
+>>>>>>> laraxot/dev
 # Two-Factor Authentication (2FA) - User
 
 **Task ID**: USER-FEATURE-001

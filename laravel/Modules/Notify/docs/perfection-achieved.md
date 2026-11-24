@@ -3,14 +3,8 @@ title: "🏆 FIXCITY - PERFEZIONE RAGGIUNTA"
 type: concept
 tags: [perfection, achieved]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-qmd: "perfection-achieved 🏆 fixcity - perfezione raggiunta"
-qmd: "perfection-achieved 🏆 ptv - perfezione raggiunta"
-=======
 updated: 2026-11-23
 qmd: "perfection-achieved 🏆 fixcity - perfezione raggiunta"
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:

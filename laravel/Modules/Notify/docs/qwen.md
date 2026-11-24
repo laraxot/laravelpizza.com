@@ -3,11 +3,7 @@ title: "qwen"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "qwen"
 issues: []
 discussions: []
@@ -25,30 +21,11 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 - [Progetto Design Comuni](./.agents/docs/main-rules/qwen-design-comuni.md)
 - [Tema & Vite](./.agents/docs/main-rules/qwen-theme-vite.md)
 - [Architettura](./.agents/docs/main-rules/qwen-architecture.md)
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_IOul2C
-- [Regole Critiche](./.agents/docs/main-rules/qwen-critical-rules.md) — body plain, header parity, stepper responsive, multilingual
-- [Filament Wizard Rule](./laravel/Modules/Fixcity/docs/filament-wizard-rule.md) — NO Blade step management, use Filament Wizard Schema
-- [Module Boundary Philosophy](./laravel/Modules/Fixcity/docs/MODULE-BOUNDARY-PHILOSOPHY.md) — Geo OWNS geolocation, NO Blade::render hacks, use AddressInput
-- [Token Efficiency](./docs/token-efficiency-religion.md) — Reduce tokens 50-90% via grep-first, diffs, scoping, tables, batch
-- [LLM Wiki Pattern](./docs/wiki/README.md) — Karpathy-style persistent knowledge base with raw/wiki/AGENTS architecture
-=======
->>>>>>> laraxot/dev
-- [Regole Critiche](ai-agents/qwen-critical-rules.md): body plain, header parity, stepper responsive, multilingual
-- [Filament Wizard Rule](./laravel/Modules/Fixcity/docs/filament-wizard-rule.md): NO Blade step management, use Filament Wizard Schema
-- [Module Boundary Philosophy](./laravel/Modules/Fixcity/docs/MODULE-BOUNDARY-PHILOSOPHY.md): Geo OWNS geolocation, NO Blade::render hacks, use AddressInput
-- [Token Efficiency](./docs/token-efficiency-religion.md): Reduce tokens 50-90% via grep-first, diffs, scoping, tables, batch
-- [LLM Wiki Pattern](./docs/wiki/README.md): Karpathy-style persistent knowledge base with raw/wiki/AGENTS architecture
 - [Regole Critiche](./ai-agents/qwen-critical-rules.md): body plain, header parity, stepper responsive, multilingual
 - [Filament Wizard Rule](./laravel/Modules/Fixcity/docs/filament-wizard-rule.md): NO Blade step management, use Filament Wizard Schema
 - [Module Boundary Philosophy](./laravel/Modules/Fixcity/docs/MODULE-BOUNDARY-PHILOSOPHY.md): Geo OWNS geolocation, NO Blade::render hacks, use AddressInput
 - [Token Efficiency](./token-efficiency-religion.md): Reduce tokens 50-90% via grep-first, diffs, scoping, tables, batch
 - [LLM Wiki Pattern](./wiki/README.md): Karpathy-style persistent knowledge base with raw/wiki/AGENTS architecture
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_FfSDct
->>>>>>> laraxot/dev
 
 ---
 **See also:**
@@ -118,30 +95,11 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 - [Progetto Design Comuni](./.agents/docs/main-rules/qwen-design-comuni.md)
 - [Tema & Vite](./.agents/docs/main-rules/qwen-theme-vite.md)
 - [Architettura](./.agents/docs/main-rules/qwen-architecture.md)
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_IOul2C
-- [Regole Critiche](./.agents/docs/main-rules/qwen-critical-rules.md) — body plain, header parity, stepper responsive, multilingual
-- [Filament Wizard Rule](./laravel/Modules/Fixcity/docs/filament-wizard-rule.md) — NO Blade step management, use Filament Wizard Schema
-- [Module Boundary Philosophy](./laravel/Modules/Fixcity/docs/MODULE-BOUNDARY-PHILOSOPHY.md) — Geo OWNS geolocation, NO Blade::render hacks, use AddressInput
-- [Token Efficiency](./docs/token-efficiency-religion.md) — Reduce tokens 50-90% via grep-first, diffs, scoping, tables, batch
-- [LLM Wiki Pattern](./docs/wiki/README.md) — Karpathy-style persistent knowledge base with raw/wiki/AGENTS architecture
-=======
->>>>>>> laraxot/dev
-- [Regole Critiche](ai-agents/qwen-critical-rules.md): body plain, header parity, stepper responsive, multilingual
-- [Filament Wizard Rule](./laravel/Modules/Fixcity/docs/filament-wizard-rule.md): NO Blade step management, use Filament Wizard Schema
-- [Module Boundary Philosophy](./laravel/Modules/Fixcity/docs/MODULE-BOUNDARY-PHILOSOPHY.md): Geo OWNS geolocation, NO Blade::render hacks, use AddressInput
-- [Token Efficiency](./docs/token-efficiency-religion.md): Reduce tokens 50-90% via grep-first, diffs, scoping, tables, batch
-- [LLM Wiki Pattern](./docs/wiki/README.md): Karpathy-style persistent knowledge base with raw/wiki/AGENTS architecture
 - [Regole Critiche](./ai-agents/qwen-critical-rules.md): body plain, header parity, stepper responsive, multilingual
 - [Filament Wizard Rule](./laravel/Modules/Fixcity/docs/filament-wizard-rule.md): NO Blade step management, use Filament Wizard Schema
 - [Module Boundary Philosophy](./laravel/Modules/Fixcity/docs/MODULE-BOUNDARY-PHILOSOPHY.md): Geo OWNS geolocation, NO Blade::render hacks, use AddressInput
 - [Token Efficiency](./token-efficiency-religion.md): Reduce tokens 50-90% via grep-first, diffs, scoping, tables, batch
 - [LLM Wiki Pattern](./wiki/README.md): Karpathy-style persistent knowledge base with raw/wiki/AGENTS architecture
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_FfSDct
->>>>>>> laraxot/dev
 
 ---
 **See also:**

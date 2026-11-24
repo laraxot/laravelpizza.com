@@ -11,20 +11,14 @@ related:
   - "./assign-module-command.md"
   - "./console-commands-philosophy-1-1.md"
   - "./console-commands-philosophy.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   - "./console-commands.md"
   - "./readme.md"
-=======
->>>>>>> laraxot/dev
+<<<<<<< HEAD
   - "./console-commands-philosophy.md"
   - "./console-commands-philosophy.md"
   - "./console-commands.md"
   - "./README.md"
-<<<<<<< HEAD
 =======
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 ---
 
@@ -374,11 +368,7 @@ php artisan test --filter=ChangePasswordCommandIntegrationTest
 <<<<<<< HEAD
 - [README Comandi Console](README.md)
 =======
-<<<<<<< HEAD
 - [README Comandi Console](readme.md)
-=======
-- [README Comandi Console](README.md)
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [PasswordData](../datas/passworddata.md)
 - [NewPasswordSet Event](../events/newpasswordset.md)

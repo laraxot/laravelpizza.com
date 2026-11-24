@@ -5,6 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< HEAD
+=======
+qmd: "business consolidated"
+>>>>>>> laraxot/dev
 ---
 
 # business — Consolidated Documentation
@@ -6545,13 +6549,9 @@ Il modulo User rappresenta la spina dorsale dell'applicazione e richiede particu
 
 ## Overview
 <<<<<<< HEAD
-The User module provides comprehensive user management, authentication, authorization, and team-based access control for the Quaeris platform. It serves as the foundation for all user-related operations across the entire application.
-=======
-<<<<<<< HEAD
-The User module provides comprehensive user management, authentication, authorization, and team-based access control for the Quaeris platform. It serves as the foundation for all user-related operations across the entire application.
-=======
 The User module provides comprehensive user management, authentication, authorization, and team-based access control for the <nome progetto> platform. It serves as the foundation for all user-related operations across the entire application.
->>>>>>> laraxot/dev
+=======
+The User module provides comprehensive user management, authentication, authorization, and team-based access control for the Quaeris platform. It serves as the foundation for all user-related operations across the entire application.
 >>>>>>> laraxot/dev
 
 ## Business Purpose

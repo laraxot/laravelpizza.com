@@ -11,6 +11,9 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Get the most recent activities.
+ *
+ * @see docs/contracts/get-recent-activities-action.md
+ * @contract docs/contracts/get-recent-activities-action.md
  */
 class GetRecentActivitiesAction
 {

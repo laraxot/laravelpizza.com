@@ -3,11 +3,7 @@ title: "Gitmodules sync session — note modulo/tema"
 type: how-to
 tags: [git, gitmodules, sync, quality-gates, merge-conflict]
 created: 2026-07-21
-<<<<<<< HEAD
-updated: 2026-09-21
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "gitmodules sync session module theme git-C nested repo not submodule"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/115"

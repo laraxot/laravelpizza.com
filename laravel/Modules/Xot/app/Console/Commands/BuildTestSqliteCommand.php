@@ -12,7 +12,10 @@ use Modules\Xot\Actions\Testing\ResolveSharedSqlitePathAction;
 use Throwable;
 
 use function Safe\glob;
+<<<<<<< .merge_file_8oq5pj
+=======
 use function Safe\preg_replace;
+>>>>>>> .merge_file_r3oyAl
 use function Safe\touch;
 use function Safe\unlink;
 

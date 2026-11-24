@@ -1,7 +1,8 @@
 ---
 type: decision-log
 title: "Decision Log — Tenant"
-links: {github_issue: #XXX, discussion: #XXX}
+links: {github_issue: "#XXX", discussion: "#XXX"}
+qmd: "decision log tenant"
 ---
 # Decision Log — Tenant
 

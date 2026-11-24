@@ -6,6 +6,7 @@ created: 2026-11-23
 updated: 2026-11-23
 decision-makers: [team Laraxot]
 issues: []
+qmd: "0007 local pest testcase binding lega"
 ---
 
 # Il TestCase Pest si lega nel file di test che lo usa

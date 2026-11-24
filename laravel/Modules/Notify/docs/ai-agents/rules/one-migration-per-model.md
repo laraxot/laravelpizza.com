@@ -3,11 +3,7 @@ title: "one migration per model"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "one migration per model"
 issues: []
 discussions: []
@@ -205,6 +201,7 @@ Tutto il resto è **RUMORE**.
 ### AI Agents Docs
 - **[Rules Index](00-index.md)** - All rules
 <<<<<<< HEAD
+<<<<<<< HEAD
 - **[Rules Index](00-index.md)** - All rules
 - **[DRY Principle](../../dry-kiss.md)** - DRY + KISS
 - **[DRY Principle](../../dry-kiss.md)** - DRY + KISS
@@ -216,6 +213,9 @@ Tutto il resto è **RUMORE**.
 - **[DRY Principle](../../dry-kiss.md)** - DRY + KISS
 - **[DRY Principle](../../dry-kiss.md)** - DRY + KISS
 >>>>>>> .merge_file_no9qeo
+>>>>>>> laraxot/dev
+=======
+- **[DRY Principle](../../dry-kiss.md)** - DRY + KISS
 >>>>>>> laraxot/dev
 - **[Translation Structure](translation-structure-5-levels.md)** - 5 levels rule
 

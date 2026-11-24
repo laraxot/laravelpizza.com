@@ -13,6 +13,10 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
+<<<<<<< HEAD
+=======
+qmd: "ridondanze legacy cluster duplicata user"
+>>>>>>> laraxot/dev
 ---
 
 # Ridondanza documentazione `Modules/User/docs`
@@ -42,11 +46,7 @@ Esempio `testing.md` (contenuti diversi, nome ambiguo):
 <<<<<<< HEAD
 - `docs/bugs/legacy/testing.md`, `docs/bugs/archive/testing.md`, `docs/bugs/testing.md`
 =======
-<<<<<<< HEAD
 - `docs/bugs/legacy/testing.md`, `docs/bugs/archive/testing.md`, `docs/bugs/TESTING.md`
-=======
-- `docs/bugs/legacy/testing.md`, `docs/bugs/archive/testing.md`, `docs/bugs/testing.md`
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 Rinominare il bug in `bugs/make-filament-user-testing.md` ed eliminare stub `testing.md` in `bugs/*`.

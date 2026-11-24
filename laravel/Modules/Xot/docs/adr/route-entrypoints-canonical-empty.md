@@ -6,6 +6,7 @@ module: Xot
 created: 2026-11-23
 updated: 2026-11-24
 issue: "#92"
+qmd: "route entrypoints canonical empty entrypoint noop"
 ---
 
 # ADR: entrypoint route no-op canonico

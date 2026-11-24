@@ -11,16 +11,32 @@ return [
             'tooltip' => '',
         ],
         'team_id' => [
+<<<<<<< HEAD
             'label' => 'Team',
             'helper_text' => 'Facoltativo: lascia vuoto se il ruolo vale per tutto il sito.',
             'tooltip' => '',
+=======
+            'tooltip' => '',
+            'label' => 'Team',
+            'helper_text' => 'Facoltativo: lascia vuoto se il ruolo vale per tutto il sito.',
             'placeholder' => 'team_id',
             'description' => 'team_id',
+>>>>>>> laraxot/dev
         ],
     ],
     'actions' => [
         'submit' => [
             'label' => 'Collega',
+<<<<<<< HEAD
+        ],
+        'attachAnother' => [
+            'label' => 'Collega e aggiungine un altro',
+        ],
+        'cancel' => [
+            'label' => 'Annulla',
+        ],
+    ],
+=======
             'icon' => 'submit',
         ],
         'attachAnother' => [
@@ -43,6 +59,7 @@ return [
         'sort' => 1,
         'icon' => 'heroicon-o-collection',
     ],
+>>>>>>> laraxot/dev
     'label' => 'Assegna un ruolo',
     'plural_label' => 'Assegna un ruolo',
 ];

@@ -15,8 +15,11 @@ use Modules\User\Http\Controllers\Controller;
 /**
  * Rotta `verification.verify` (PRD-02): segna l'indirizzo come verificato dopo i controlli su utente, id e hash.
  *
+<<<<<<< HEAD
  * @see Modules/User/docs/email-verification-delivery.md
  *
+=======
+>>>>>>> laraxot/dev
  * `id` e `hash` si leggono per nome dalla rotta: il dispatcher passa i parametri scalari per posizione, e un prefisso
  * `{lang}` li sposterebbe (`$id` riceverebbe la lingua).
  */

@@ -13,11 +13,7 @@ use Modules\User\Models\Role;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
-<<<<<<< HEAD
 uses(TestCase::class);
-=======
-uses(\Modules\User\Tests\TestCase::class);
->>>>>>> laraxot/dev
 
 class UserManagementBusinessLogicTest extends TestCase
 {

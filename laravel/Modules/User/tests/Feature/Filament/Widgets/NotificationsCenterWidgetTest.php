@@ -17,11 +17,7 @@ it('redirects guests from notifiche page', function (): void {
 });
 
 it('uses notifications center widget view', function (): void {
-<<<<<<< HEAD
     $widget = new NotificationsCenterWidget;
-=======
-    $widget = new NotificationsCenterWidget();
->>>>>>> laraxot/dev
     $reflection = new ReflectionClass($widget);
     $property = $reflection->getProperty('view');
     $property->setAccessible(true);

@@ -1,23 +1,12 @@
 ---
-<<<<<<< HEAD
 issues: []
 discussions: []
 title: "super-admin-setup-fix-2025-10-15"
 type: concept
 tags: [deprecated]
 created: 2026-07-14
-updated: 2026-07-14
-qmd: "super-admin-setup-fix-2025-10-15 deprecated"
-=======
-title: "super admin setup fix 2025 10"
-type: note
-tags: [documentation]
-created: 2026-09-26
 updated: 2026-11-23
-qmd: "super admin setup fix 2025 10"
-issues: []
-discussions: []
->>>>>>> laraxot/dev
+qmd: "super-admin-setup-fix-2025-10-15 deprecated"
 status: deprecated
 related:
   - "./00-index-1.md"
@@ -26,9 +15,6 @@ related:
   - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   - "./action-plan-immediate.md"
 ---
 
@@ -492,14 +478,8 @@ Il setup del super-admin è un passaggio critico per iniziare a utilizzare l'app
 > **"Automatizza ciò che ripeti"**  
 > Script di setup per velocizzare il processo
 
-=======
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
 
 > Questo file è stato rinominato in [super-admin-setup-fix.md](super-admin-setup-fix.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

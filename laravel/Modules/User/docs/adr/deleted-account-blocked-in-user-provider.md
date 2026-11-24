@@ -8,6 +8,10 @@ related:
   - ../../app/Actions/Auth/BuildActiveUserProviderAction.php
   - ../../app/Actions/Auth/RevokeUserAccessAction.php
   - ../stories/account-deletion-and-email-verification.story.md
+<<<<<<< HEAD
+=======
+qmd: "deleted account blocked user provider laccount"
+>>>>>>> laraxot/dev
 ---
 
 # ADR: l'account cancellato si blocca nel provider utenti, non con SoftDeletes

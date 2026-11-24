@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Struttura delle Blade di Autenticazione con Volt"
+type: note
+qmd: "auth blade structure struttura autenticazione volt"
+---
+>>>>>>> laraxot/dev
 # Struttura delle Blade di Autenticazione con Volt
 
 ## Introduzione

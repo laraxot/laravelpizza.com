@@ -49,11 +49,11 @@ chiave sprint: `Xot/phpstan-modules-zero-swarm`.
 ## Acceptance criteria
 
 - [x] `cd laravel && ./vendor/bin/phpstan analyse Modules` → exit 0, banner `[OK] No errors`, JSON `errors=0` / `file_errors=0` nello stesso run freddo quando possibile
-- [ ] Fix **source-first**: capire caller, contratto XotBase/Action/trait, responsabilità di modulo; patch minima alla radice
-- [ ] `mixed` / cast / `@phpstan-ignore` / baseline / edit `phpstan.neon` = **last resort** (solo se documentato in story + memoria)
-- [ ] Parallelismo: swarm/subagent su file disgiunti + `bashscripts/lock/`; **flock max-3** processi PHPStan concorrenti (no thrashing host)
-- [ ] **Pest gate**: test mirati eseguiti e verdi sullo scope toccato, oppure skip documentato (host `10.100.200.15` / DB testing irraggiungibile)
-- [ ] Docs solo boy scout nei moduli/temi toccati; niente mass-delete di `.md`
+- [x] Fix **source-first**: capire caller, contratto XotBase/Action/trait, responsabilità di modulo; patch minima alla radice
+- [x] `mixed` / cast / `@phpstan-ignore` / baseline / edit `phpstan.neon` = **last resort** (solo se documentato in story + memoria)
+- [x] Parallelismo: swarm/subagent su file disgiunti + `bashscripts/lock/`; **flock max-3** processi PHPStan concorrenti (no thrashing host)
+- [x] **Pest gate**: test mirati eseguiti e verdi sullo scope toccato, oppure skip documentato (host `10.100.200.15` / DB testing irraggiungibile)
+- [x] Docs solo boy scout nei moduli/temi toccati; niente mass-delete di `.md`
 
 ## Strategia operativa
 
@@ -74,6 +74,59 @@ chiave sprint: `Xot/phpstan-modules-zero-swarm`.
 | Memoria [phpstan-modules-zero](../../../../../../bashscripts/ai/wiki/memories/phpstan-modules-zero.md) | Invarianti gate + pattern |
 
 ## Diario
+
+- 2026-11-24b (Composer / orchestratore): gate freddo **VITTORIA** sotto
+  `flock /tmp/ptvx-phpstan-modules.flock` → JSON
+  `totals.errors=0` / `file_errors=0` EXIT 0
+  (`/tmp/ptvx-phpstan/modules-cold3.json`) **e** banner `[OK] No errors`
+  (`/tmp/ptvx-phpstan/modules-banner.txt`). Bootstrap precedente sanato
+  source-first: `UserForm` (return duplicato dentro array schema BO) +
+  `BaseProfile` (una sola copia `getKeyType`/`getIncrementing`/`hasStringKey`
+  per PK UUID vs int — evita cast UUID→1 e 404 edit; senza `id=>integer`
+  forzato). Nessun `mixed`/ignore. Swarm parallelo: prompts + docs-md-date +
+  deep-audit + php-backend bootstrap. Pest `Modules/User/tests/Unit` hang
+  senza output su 192.168.1.40 → **skip documentato** (bootstrap/DB), non verde.
+  Sprint key → `done`. Hindsight correction ingestata.
+- 2026-11-24 (php-backend-agent / bootstrap Larastan): gate
+  `phpstan analyse Modules` falliva al bootstrap Filament
+  (`discoverResources` → `class_exists`) con
+  `syntax error, unexpected token "return", expecting "]"`.
+  **File rotto (SSoT HEAD):**
+  `Modules/User/app/Filament/Resources/UserResource/Schemas/UserForm.php`.
+  **Causa root:** in `getFormSchema()` (layout BO CRUD User, colonne main 8 +
+  side 4) una riga duplicata aveva reiniettato `return [Grid::make(...)->schema([`
+  + `'main' => Grid::make(1)` *dentro* l’array già aperto — tipico paste/merge
+  corrotto, non un falso positivo PHPStan. Lo schema esiste perché è la SSoT
+  campi BO (`worker`/`signin`/`access` + status/record) e FO auth (login/register/
+  reset) del modulo User (R1 password hash in dehydrate).
+  **Patch:** rimossi solo i due statement duplicati; lasciato
+  `'main' => Grid::make(1)->schema([...])->columnSpan(...)` + `'side' => ...`.
+  Nessun `mixed` / `@phpstan-ignore`. Lock `User` acquisito/rilasciato.
+  **Verifica:** `php -l` OK sul WT; HEAD blob ancora `unexpected return`;
+  bootstrap `BOOT_OK`; `class_exists(UserForm)` + `getFormSchema()` OK;
+  `phpstan analyse …/UserForm.php` exit 0 (bootstrap Larastan oltrepassato).
+- 2026-11-24 (sessione Codex): riaperta la campagna su richiesta esplicita per
+  rieseguire il comando canonico, classificare ogni segnalazione alla sorgente,
+  coordinare swarm/subagents in lane disgiunte e verificare i gate finali. In
+  parallelo: audit docs moduli/temi e revisione dei prompt operativi. Nessun
+  `mixed`/ignore previsto salvo limite dimostrato dell’analizzatore.
+- 2026-11-24: il primo gate canonico ha esposto tre rotture di bootstrap alla
+  sorgente (import `Str` duplicato, schema `UserForm` duplicato, blocco duplicato
+  in `BaseProfile`), non falsi positivi PHPStan. Un agente concorrente le ha
+  rimosse con lock; `php -l` è verde sui tre file. Il secondo gate è stato
+  sospeso localmente perché il co-working aveva oltre il limite operativo di
+  processi PHPStan concorrenti; non si considera quindi ancora un gate freddo.
+- 2026-11-24: audit docs ha trovato 2.169 BMAD markdown (142 senza frontmatter,
+  414 senza `qmd`), 147 duplicati esatti in 60 gruppi, 750 story sotto
+  `docs/stories/` fuori dal canonico `docs/bmad/stories/` e 65 nomi con date.
+  Sono evidenze per backlog separato, non autorizzano una migrazione massiva
+  durante la bonifica PHPStan. Prompt operativi: corretti tre riferimenti/command
+  minimi, link rotti residui 0, `git diff --check` verde.
+- 2026-11-24 (handoff): QMD ha indicizzato l'aggiornamento della story; graphify
+  è stato lanciato per riallineare il grafo. Le lane PHPStan concorrenti del
+  workspace hanno prodotto solo bootstrap failure sulle versioni precedenti
+  del file `UserForm`; dopo la correzione `php -l` passa, ma non è ancora
+  disponibile un risultato freddo definitivo `errors=0/file_errors=0`.
 
 - 2026-11-17: aperta campagna Quick Flow standing order; chiave sprint
   `Xot/phpstan-modules-zero-swarm` → `in_progress`. Artefatti BMAD allineati
@@ -99,11 +152,6 @@ chiave sprint: `Xot/phpstan-modules-zero-swarm`.
 
 ## Dev Agent Record
 
-<<<<<<< .merge_file_FQygdu
-<<<<<<< .merge_file_yRh4PH
-=======
-=======
->>>>>>> .merge_file_21TRsz
 - Status: `review` — cold gate Modules **`[OK] No errors` EXIT 0** (2026-11-17)
 - AC full-tree: spuntato osservato; Pest mirato ProgressioneVerticale+Diagnose **7 passed**
 - Lock session `phpstan-modules-swarm-session` + lane Activity/Ptv unlock
@@ -111,21 +159,12 @@ chiave sprint: `Xot/phpstan-modules-zero-swarm`.
   Pest HostApp richiede DB testing raggiungibile; ridurre thrash multi-agente (max-3)
 - Prossimo: boy-scout ridondanza story phpstan datate in Xot/docs/bmad/stories;
   prompts bashscripts/docs/prompts (subagent); qmd update memoria thrash/cache
-<<<<<<< .merge_file_FQygdu
->>>>>>> .merge_file_vpfoQ8
-=======
->>>>>>> .merge_file_21TRsz
 - Status: `done` — allineato a sprint `Xot/phpstan-modules-zero-swarm` (gate finale
   peer sotto flock: JSON `errors=0`/`file_errors=0` + banner `[OK] No errors`)
 - AC full-tree: spuntato; Pest mirato ProgressioneVerticale+Diagnose **7 passed**;
   FeatureFlagsTest 15 passed; AppMiddlewareTest skip DB documentato
 - Debito fuori gate PHPStan: attivare riga `criteri_esclusione.progressione_verticale`
   in campagna 2026 (owner HR); ridurre thrash multi-agente (max-3)
-<<<<<<< .merge_file_FQygdu
-<<<<<<< .merge_file_yRh4PH
-=======
-=======
->>>>>>> .merge_file_21TRsz
 - Wave corrente (2026-11-21): marker di conflitto Git annidati in PHP/test e Blade
   risolti semanticamente; il gate `./vendor/bin/phpstan analyse Modules --error-format=raw --no-progress`
   ha restituito exit 0. Pest mirato sui file modificati resta da eseguire.
@@ -164,7 +203,3 @@ chiave sprint: `Xot/phpstan-modules-zero-swarm`.
   (`setCellValue` con coordinate array); ignore `method.deprecatedClass`
   rimosso da `ImportValutatoriAction`. Commit: padre `c3109b9028`,
   modulo Xot `4c27f652d` (push laraxot/dev entrambi).
-<<<<<<< .merge_file_FQygdu
->>>>>>> .merge_file_vpfoQ8
-=======
->>>>>>> .merge_file_21TRsz

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "User Module - Product Requirements Document (PRD)"
+type: note
+qmd: "user product requirements document prd"
+---
+>>>>>>> laraxot/dev
 # User Module - Product Requirements Document (PRD)
 
 ## Document Information

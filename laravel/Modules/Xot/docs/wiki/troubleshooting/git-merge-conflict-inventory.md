@@ -1,5 +1,6 @@
 ---
 created: 2026-04-28
+qmd: "git merge conflict inventory"
 ---
 
 # Git Conflict Inventory

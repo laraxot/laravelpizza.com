@@ -3,11 +3,7 @@ title: "email templates"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "email templates"
 issues: []
 discussions: []
@@ -326,15 +322,7 @@ php artisan tinker
 
 ### **Documentazione Tecnica**
 - [Documentazione Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
-<<<<<<< HEAD
-- [Gestione Traduzioni](../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
-=======
-<<<<<<< HEAD
 - [Gestione Traduzioni](../Lang/docs/translation_keys_best_practices.md)
-=======
-- [Gestione Traduzioni](../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Configurazione Email](../../../docs/email-configuration.md)
 - [SaluteOra: Missing Mail Template Error](../../SaluteOra/project_docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
 - [Configurazione Email](../../../docs/email-configuration.md)- [SaluteOra: Missing Mail Template Error](../../SaluteOra/project_docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
@@ -343,15 +331,7 @@ php artisan tinker
 
 ### **Documentazione Tecnica**
 - [Documentazione Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
-<<<<<<< HEAD
-- [Gestione Traduzioni](../Lang/project_docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
-=======
-<<<<<<< HEAD
 - [Gestione Traduzioni](../Lang/project_docs/translation_keys_best_practices.md)
-=======
-- [Gestione Traduzioni](../Lang/project_docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Configurazione Email](../../../project_docs/email-configuration.md)
 - [Documentazione Traduzioni](./translations.md)
 - [Proposta Slug Template](./email_template_slug_proposal.md)

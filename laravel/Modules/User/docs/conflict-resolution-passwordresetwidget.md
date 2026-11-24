@@ -80,15 +80,7 @@ Verificare che:
 <<<<<<< HEAD
 - [User Module Documentation](README.md)
 =======
-<<<<<<< HEAD
 - [User Module Documentation](readme.md)
-=======
-<<<<<<< .merge_file_7W9VbG
-- [User Module Documentation](./README.md)
-=======
-- [User Module Documentation](README.md)
->>>>>>> .merge_file_rcayw9
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [Authentication Widgets Guide](auth_widgets.md)
 - [Filament Form Components](filament_form_components.md)
@@ -188,15 +180,7 @@ Verificare che:
 <<<<<<< HEAD
 - [User Module Documentation](README.md)
 =======
-<<<<<<< HEAD
 - [User Module Documentation](readme.md)
-=======
-<<<<<<< .merge_file_7W9VbG
-- [User Module Documentation](./README.md)
-=======
-- [User Module Documentation](README.md)
->>>>>>> .merge_file_rcayw9
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [Authentication Widgets Guide](auth_widgets.md)
 - [Filament Form Components](filament_form_components.md)

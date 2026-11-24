@@ -14,6 +14,9 @@ use Spatie\QueueableAction\QueueableAction;
  * Azione per l'invio di SMS tramite Agile Telecom.
  *
  * @see https://account.agiletelecom.com/public/resources/HTTP_POST_IT.pdf
+ *
+ * @see docs/contracts/send-agiletelecom-sms-v1-action.md
+ * @contract docs/contracts/send-agiletelecom-sms-v1-action.md
  */
 class SendAgiletelecomSMSv1Action implements SmsActionContract
 {

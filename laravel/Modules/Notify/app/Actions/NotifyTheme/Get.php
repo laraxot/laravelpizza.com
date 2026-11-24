@@ -12,6 +12,9 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * -- buildmailmessage ha troppi pezzi simili ..
+ *
+ * @see docs/contracts/notify-theme-get.md
+ * @contract docs/contracts/notify-theme-get.md
  */
 class Get
 {

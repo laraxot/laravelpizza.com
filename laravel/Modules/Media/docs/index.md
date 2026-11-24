@@ -32,16 +32,20 @@ discussions: []
 Vedi anche: [.agents/docs/critical-rules.md](../../../.agents/docs/critical-rules.md)
 
 ## Collegamenti Correlati
+<<<<<<< HEAD
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../../docs/documentation_standards.md)
 - [Modulo Xot](../../Xot/docs/README.md)
 - [Modulo Lang](../../Lang/docs/readme.md)
 - [Modulo UI](../../UI/docs/README.md)
+=======
+>>>>>>> laraxot/dev
 
 ## Categorie Principali
 
 ### Architettura e Struttura
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 - [README](./README.md) - Panoramica generale del modulo
@@ -68,6 +72,8 @@ Vedi anche: [.agents/docs/critical-rules.md](../../../.agents/docs/critical-rule
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
 - [Modelli](./data-models.md) - Documentazione dei modelli Eloquent
@@ -190,6 +196,7 @@ Questa documentazione viene aggiornata regolarmente. Prima di apportare modifich
 - Il file `lang/it/media_theme.php` è stato risolto manualmente mantenendo PSR-12, strict_types, array short syntax e solo chiavi effettive, come richiesto dagli standard PHPStan livello 10
 - **Filosofia di risoluzione**: Approccio olistico con analisi manuale approfondita, mantenimento integrità architetturale, documentazione bidirezionale aggiornata
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
 =======
 <<<<<<< HEAD
@@ -201,6 +208,9 @@ Questa documentazione viene aggiornata regolarmente. Prima di apportare modifich
 =======
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
 >>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- Vedi anche: [../../../../../docs/README.md](../../../../../docs/readme.md)
 >>>>>>> laraxot/dev
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
@@ -234,17 +244,21 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 - **Watermark Automatico**: Applicazione automatica di watermark sui media
 
 ## Collegamenti Correlati
+<<<<<<< HEAD
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../../docs/documentation_standards.md)
 - [Modulo Xot](../../Xot/docs/README.md)
 - [Modulo Lang](../../Lang/docs/readme.md)
 - [Modulo UI](../../UI/docs/README.md)
+=======
+>>>>>>> laraxot/dev
 
 ## Categorie Principali
 
 ### Architettura e Struttura
 - [README](README.md) - Panoramica generale del modulo
+<<<<<<< HEAD
 <<<<<<< HEAD
 - [Architettura](./architecture/README.md) - Architettura generale del modulo
 =======
@@ -257,6 +271,9 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 =======
 - [Architettura](./architecture/README.md) - Architettura generale del modulo
 >>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [Architettura](./architecture/readme.md) - Architettura generale del modulo
 >>>>>>> laraxot/dev
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
 - [Modelli](./data-models.md) - Documentazione dei modelli Eloquent
@@ -325,6 +342,7 @@ Doc verificati e presenti in `docs/` utili per approfondimenti puntuali (non un 
 - [troubleshooting.md](./troubleshooting.md)
 - [wiki/index.md](./wiki/index.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -365,4 +383,6 @@ Le cartelle di import grezzo (`raw/`, `root-*-files/`), immagini e log sono escl
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev

@@ -8,22 +8,6 @@ use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 
-<<<<<<< HEAD
-beforeEach(function (): void {
-    $this->permission = Permission::factory()->create([
-        'name' => 'test-permission',
-        'guard_name' => 'web',
-    ]);
-});
-
-test('permission can be created', function (): void {
-    expect($this->permission->name)->toBe('test-permission');
-    expect($this->permission->guard_name)->toBe('web');
-});
-
-test('permission has correct fillable attributes', function (): void {
-    $fillable = $this->permission->getFillable();
-=======
 /**
  * Fixture del permesso su cui girano i test di questo file.
  *
@@ -59,7 +43,6 @@ test('permission can be created', function (): void {
 
 test('permission has correct fillable attributes', function (): void {
     $fillable = userTestPermission()->getFillable();
->>>>>>> laraxot/dev
 
     expect($fillable)->toContain('name');
     expect($fillable)->toContain('guard_name');
@@ -70,21 +53,13 @@ test('permission has correct fillable attributes', function (): void {
 });
 
 test('permission has correct table configuration', function (): void {
-<<<<<<< HEAD
-    $table = $this->permission->getTable();
-=======
     $table = userTestPermission()->getTable();
->>>>>>> laraxot/dev
 
     expect($table)->not->toBeEmpty();
 });
 
 test('permission has correct casts', function (): void {
-<<<<<<< HEAD
-    $casts = $this->permission->getCasts();
-=======
     $casts = userTestPermission()->getCasts();
->>>>>>> laraxot/dev
 
     // permissions.id e' bigIncrements: il model dichiara solo il cast della chiave intera.
     expect($casts)->toHaveKey('id');
@@ -92,29 +67,13 @@ test('permission has correct casts', function (): void {
 });
 
 test('permission can be updated', function (): void {
-<<<<<<< HEAD
-    $this->permission->update([
-=======
     $permission = userTestPermission();
 
     $permission->update([
->>>>>>> laraxot/dev
         'name' => 'updated-permission',
         'guard_name' => 'api',
     ]);
 
-<<<<<<< HEAD
-    $this->permission->refresh();
-
-    expect($this->permission->name)->toBe('updated-permission');
-    expect($this->permission->guard_name)->toBe('api');
-});
-
-test('permission can be deleted', function (): void {
-    $permissionId = $this->permission->id;
-
-    $this->permission->delete();
-=======
     $permission->refresh();
 
     expect($permission->name)->toBe('updated-permission');
@@ -126,62 +85,18 @@ test('permission can be deleted', function (): void {
     $permissionId = $permission->id;
 
     $permission->delete();
->>>>>>> laraxot/dev
 
     expect(Permission::find($permissionId))->toBeNull();
 });
 
 test('permission can be assigned to roles', function (): void {
-<<<<<<< HEAD
-    $role = Role::factory()->create([
-=======
     $permission = userTestPermission();
 
     $role = Role::factory()->createOne([
->>>>>>> laraxot/dev
         'name' => 'test-role',
         'guard_name' => 'web',
     ]);
 
-<<<<<<< HEAD
-    $role->givePermissionTo($this->permission);
-
-    expect($role->hasPermissionTo($this->permission))->toBeTrue();
-    expect($this->permission->roles)->toHaveCount(1);
-});
-
-test('permission can be assigned to multiple roles', function (): void {
-    $role1 = Role::factory()->create(['name' => 'role-1']);
-    $role2 = Role::factory()->create(['name' => 'role-2']);
-
-    $this->permission->assignRole($role1);
-    $this->permission->assignRole($role2);
-
-    expect($this->permission->roles)->toHaveCount(2);
-    expect($this->permission->hasRole($role1))->toBeTrue();
-    expect($this->permission->hasRole($role2))->toBeTrue();
-});
-
-test('permission can be found by name', function (): void {
-    $foundPermission = Permission::where('name', 'test-permission')->firstOrFail();
-    expect($foundPermission->id)->toBe($this->permission->id);
-});
-
-test('permission can be found by guard', function (): void {
-    $webPermissions = Permission::where('guard_name', 'web')->get();
-
-    expect($webPermissions)->toHaveCount(1);
-    expect($webPermissions->firstOrFail()->id)->toBe($this->permission->id);
-});
-
-test('permission has timestamps', function (): void {
-    expect($this->permission->created_at)->not->toBeNull();
-    expect($this->permission->updated_at)->not->toBeNull();
-});
-
-test('permission can be created with factory', function (): void {
-    $permission = Permission::factory()->create();
-=======
     $role->givePermissionTo($permission);
 
     expect($role->hasPermissionTo($permission))->toBeTrue();
@@ -227,18 +142,13 @@ test('permission has timestamps', function (): void {
 
 test('permission can be created with factory', function (): void {
     $permission = Permission::factory()->createOne();
->>>>>>> laraxot/dev
 
     expect($permission->name)->not->toBeEmpty();
     expect($permission->guard_name)->not->toBeEmpty();
 });
 
 test('permission can be created with specific attributes', function (): void {
-<<<<<<< HEAD
-    $permission = Permission::factory()->create([
-=======
     $permission = Permission::factory()->createOne([
->>>>>>> laraxot/dev
         'name' => 'custom-permission',
         'guard_name' => 'custom-guard',
     ]);
@@ -248,62 +158,6 @@ test('permission can be created with specific attributes', function (): void {
 });
 
 test('permission can check if it has role', function (): void {
-<<<<<<< HEAD
-    $role = Role::factory()->create(['name' => 'test-role']);
-
-    expect($this->permission->hasRole($role))->toBeFalse();
-
-    $this->permission->assignRole($role);
-
-    expect($this->permission->hasRole($role))->toBeTrue();
-});
-
-test('permission can check if it has any roles', function (): void {
-    expect($this->permission->hasAnyRole([]))->toBeFalse();
-
-    $role = Role::factory()->create(['name' => 'test-role']);
-    $this->permission->assignRole($role);
-
-    expect($this->permission->hasAnyRole([$role]))->toBeTrue();
-});
-
-test('permission can check if it has all roles', function (): void {
-    $role1 = Role::factory()->create(['name' => 'role-1']);
-    $role2 = Role::factory()->create(['name' => 'role-2']);
-
-    $this->permission->syncRoles([$role1, $role2]);
-
-    expect($this->permission->hasAllRoles([$role1, $role2]))->toBeTrue();
-    expect($this->permission->hasAllRoles([$role1]))->toBeTrue();
-    expect($this->permission->hasAllRoles([$role1, $role2, 'non-existent']))->toBeFalse();
-});
-
-test('permission can be revoked from role', function (): void {
-    $role = Role::factory()->create(['name' => 'test-role']);
-
-    $this->permission->assignRole($role);
-    expect($this->permission->hasRole($role))->toBeTrue();
-
-    $this->permission->removeRole($role);
-    expect($this->permission->hasRole($role))->toBeFalse();
-});
-
-test('permission can be synced with roles', function (): void {
-    $role1 = Role::factory()->create(['name' => 'role-1']);
-    $role2 = Role::factory()->create(['name' => 'role-2']);
-    $role3 = Role::factory()->create(['name' => 'role-3']);
-
-    // Initially assign role1 and role2
-    $this->permission->syncRoles([$role1, $role2]);
-    expect($this->permission->roles)->toHaveCount(2);
-
-    // Sync to only role2 and role3
-    $this->permission->syncRoles([$role2, $role3]);
-    expect($this->permission->roles)->toHaveCount(2);
-    expect($this->permission->hasRole($role1))->toBeFalse();
-    expect($this->permission->hasRole($role2))->toBeTrue();
-    expect($this->permission->hasRole($role3))->toBeTrue();
-=======
     $permission = userTestPermission();
 
     $role = Role::factory()->createOne(['name' => 'test-role']);
@@ -368,5 +222,4 @@ test('permission can be synced with roles', function (): void {
     expect($permission->hasRole($role1))->toBeFalse();
     expect($permission->hasRole($role2))->toBeTrue();
     expect($permission->hasRole($role3))->toBeTrue();
->>>>>>> laraxot/dev
 });

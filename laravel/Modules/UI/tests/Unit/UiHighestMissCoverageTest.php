@@ -38,7 +38,11 @@ use Modules\UI\Models\Category;
 use Modules\UI\Models\Collection;
 use Modules\UI\Models\FieldOption;
 use Modules\UI\Tests\TestCase;
+<<<<<<< HEAD
 use Modules\UI\Filament\Actions\Table\TableLayoutTrait;
+=======
+use Modules\UI\Traits\TableLayoutTrait;
+>>>>>>> laraxot/dev
 use Modules\UI\View\Components\Render\Block;
 use Modules\UI\View\Composers\ThemeComposer;
 use PHPUnit\Framework\Assert;
@@ -170,13 +174,24 @@ describe('UI highest-miss coverage', function (): void {
     test('TableLayoutTrait reads and writes session layout', function (): void {
         $subject = new class {
             use TableLayoutTrait;
+<<<<<<< HEAD
+=======
+
+            public function dispatch(mixed ...$params): void
+            {
+            }
+>>>>>>> laraxot/dev
         };
         $subject->setTableLayout(TableLayoutEnum::LIST);
         Assert::assertSame(TableLayoutEnum::LIST, $subject->getTableLayout());
         $subject->setTableLayout(TableLayoutEnum::GRID);
         Assert::assertSame(TableLayoutEnum::GRID, $subject->getTableLayout());
+<<<<<<< HEAD
         $subject->resetLayout();
         Assert::assertSame(TableLayoutEnum::LIST, $subject->getTableLayout());
+=======
+        $subject->refreshTable();
+>>>>>>> laraxot/dev
     });
 
     test('XotBase blocks and document upload factories expose schema', function (): void {

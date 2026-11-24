@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Tenant\Datas;
 
+use Illuminate\Support\Str;
 use Modules\Tenant\Actions\Ente\GetEnteDataAction;
 use Spatie\LaravelData\Data;
-
-use function Safe\preg_replace;
 
 /**
  * Dati dell'ente titolare del tenant (DCP-289). Si ottiene SEMPRE da {@see GetEnteDataAction},
@@ -63,6 +62,8 @@ class EnteData extends Data
     /**
      * Testo e href di un campo-link (`phone`, `toll_free`, `email`, `pec`, `dpo_email`), o null se manca o non e' un campo-link.
      *
+     * @see Modules/Tenant/docs/ente-data.md
+     *
      * @return array{label: string, href: string}|null
      */
     public function link(string $field): ?array
@@ -84,7 +85,7 @@ class EnteData extends Data
             return null;
         }
 
-        $target = $scheme === 'tel:' ? preg_replace('/[^\d+]/', '', $value) : $value;
+        $target = $scheme === 'tel:' ? Str::of($value)->replaceMatches('/[^\d+]/', '')->toString() : $value;
 
         return ['label' => $value, 'href' => $scheme.$target];
     }

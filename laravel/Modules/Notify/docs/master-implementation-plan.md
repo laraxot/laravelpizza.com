@@ -3,14 +3,8 @@ title: "🎯 FIXCITY - MASTER IMPLEMENTATION PLAN"
 type: concept
 tags: [master, implementation, plan]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-qmd: "master-implementation-plan 🎯 fixcity - master implementation plan"
-qmd: "master-implementation-plan 🎯 ptv - master implementation plan"
-=======
 updated: 2026-11-23
 qmd: "master-implementation-plan 🎯 fixcity - master implementation plan"
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:

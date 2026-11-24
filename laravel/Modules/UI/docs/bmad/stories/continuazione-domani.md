@@ -16,6 +16,10 @@ related:
   - ../../stories/7.1.phpstan-filament-state-components.story.md
   - ../../stories/7.2.phpstan-test-bootstrap-security.story.md
   - ../../stories/7.4.phpstan-business-deep-coverage-contracts.story.md
+<<<<<<< HEAD
+=======
+qmd: "continuazione domani bmad regressione marker docsarchitecturemd"
+>>>>>>> laraxot/dev
 ---
 
 # UI — Continuazione Domani

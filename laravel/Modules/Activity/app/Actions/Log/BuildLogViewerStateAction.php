@@ -19,6 +19,9 @@ use function Safe\filemtime;
  *
  * Un file non valido o non leggibile non solleva eccezioni: lo stato ha `error` valorizzato con un messaggio
  * generico (quello dell'eccezione contiene il percorso richiesto e non va mostrato).
+ *
+ * @see docs/contracts/build-log-viewer-state-action.md
+ * @contract docs/contracts/build-log-viewer-state-action.md
  */
 class BuildLogViewerStateAction
 {

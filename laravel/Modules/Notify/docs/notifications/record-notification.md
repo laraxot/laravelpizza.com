@@ -3,11 +3,7 @@ title: "record notification"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "record notification"
 issues: []
 discussions: []
@@ -206,17 +202,8 @@ SpatieEmail (Specialized Agent)
 
 *   [`ChannelEnum` Documentation](../enums/channel-enum.md)
 *   [`SpatieEmail` Documentation](../emails/spatie-email.md)
-<<<<<<< HEAD
 *   [`SendRecordNotificationAction` Documentation](../refactoring/send-record-notification-action.md)
 *   [`SendRecordNotificationAction` Documentation](../refactoring/send-record-notification-action.md)
-=======
-<<<<<<< .merge_file_7sDwWs
-*   [`SendRecordNotificationAction` Documentation](../actions/send-record-notification-action.md)
-=======
-*   [`SendRecordNotificationAction` Documentation](../refactoring/send-record-notification-action.md)
-*   [`SendRecordNotificationAction` Documentation](../refactoring/send-record-notification-action.md)
->>>>>>> .merge_file_b5bmNA
->>>>>>> laraxot/dev
 *   [`SmsChannel` Documentation](./channels/sms-channel.md) - Note: Uses `Modules\Notify\Channels\SmsChannel` (expects `SmsData`)
 *   [`SmsData` Documentation](../datas/sms-data.md)
 *   [Zen Delegation Strategy](../refactoring/record-notification-zen-delegation.md)

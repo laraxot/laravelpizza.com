@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "User Module - PHPStan Level 10 Fix Plan"
+type: note
+qmd: "phpstan fix plan user level"
+---
+>>>>>>> laraxot/dev
 # User Module - PHPStan Level 10 Fix Plan
 
 ## Analysis Date
@@ -630,6 +638,7 @@ This confirms that the project is using a version of Filament where Forms seem t
 ## Implementation
 - Search for `Grid.php`.
 - Update `OauthClientResource` imports.
+<<<<<<< HEAD
 
 
 ---
@@ -686,3 +695,5 @@ related:
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-fix-plan-.md
+=======
+>>>>>>> laraxot/dev

@@ -6,6 +6,7 @@ created: 2026-11-23
 updated: 2026-11-23
 issues:
   - "https://github.com/laraxot/module_xot_fila5/issues/ADR-0008"
+qmd: "0008 filament widgets over standalone livewire"
 ---
 
 # ADR 0008: No standalone Livewire, usa Filament widget

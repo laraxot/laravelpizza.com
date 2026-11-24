@@ -143,7 +143,5 @@ test-results/
 cms.code-workspace
 ruvector.db
 .windsurfrules
-
-# Regole portate dal remoto laraxot/dev (sync del 24/11), unite alla base senza perdere nulla
 tests/coverage-*.*
-tests/graphify-out/
+docs/screenshots/

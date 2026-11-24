@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Laraxot Architecture Rules"
+type: rule
+qmd: "architecture rules laraxot"
+---
+>>>>>>> laraxot/dev
 # Laraxot Architecture Rules
 
 ## Core Principles

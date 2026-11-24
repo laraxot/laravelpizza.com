@@ -3,11 +3,7 @@ title: "gemini action patterns"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "gemini action patterns"
 issues: []
 discussions: []
@@ -147,13 +143,5 @@ Alcune eccezioni sono pragmaticamente accettabili:
 
 - [Indice GEMINI](./gemini-split-index.md)
 - [queueable-actions.md](./queueable-actions.md)
-<<<<<<< HEAD
-- [gemini.md originale](../../gemini.md)
-=======
-<<<<<<< HEAD
 - [GEMINI.md originale](../../gemini.md)
-=======
-- [gemini.md originale](../../gemini.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Index principale](./index.md)

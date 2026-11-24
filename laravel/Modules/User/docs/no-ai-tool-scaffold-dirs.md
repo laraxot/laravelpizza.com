@@ -7,6 +7,10 @@ created: 2026-07-16
 updated: 2026-07-16
 related:
   - "../../../../docs/wiki/rules/module-theme-root-cleanup.md"
+<<<<<<< HEAD
+=======
+qmd: "no ai tool scaffold dirs aitool"
+>>>>>>> laraxot/dev
 ---
 
 # Perché queste cartelle non devono esistere qui

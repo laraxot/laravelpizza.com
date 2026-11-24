@@ -8,6 +8,10 @@ related:
   - "./SECURITY.md"
   - "./styling.md"
   - "./usage.md"
+<<<<<<< HEAD
+=======
+qmd: "laravel"
+>>>>>>> laraxot/dev
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/laravel-Modules.md

@@ -3,11 +3,7 @@ title: "mail template ui improvements"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "mail template ui improvements"
 issues: []
 discussions: []
@@ -174,15 +170,7 @@ Section::make('Informazioni Template')
 
 - [Documentazione Filament](https://filamentphp.com/docs)
 - [Best Practices UI/UX](./best-practices.md)
-<<<<<<< HEAD
-- [Componenti Filament](./FILAMENT_COMPONENTS.md)
-=======
-<<<<<<< HEAD
 - [Componenti Filament](./filament_components.md)
-=======
-- [Componenti Filament](./FILAMENT_COMPONENTS.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Note Importanti
 

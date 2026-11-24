@@ -7,6 +7,13 @@ namespace Modules\User\Actions\Login;
 use Carbon\CarbonImmutable;
 use Modules\User\Actions\Login\Concerns\ResolvesLoginLogQuery;
 
+<<<<<<< HEAD
+=======
+/**
+ * @see docs/contracts/get-login-stats-action.md
+ * @contract docs/contracts/get-login-stats-action.md
+ */
+>>>>>>> laraxot/dev
 final class GetLoginStatsAction
 {
     use ResolvesLoginLogQuery;

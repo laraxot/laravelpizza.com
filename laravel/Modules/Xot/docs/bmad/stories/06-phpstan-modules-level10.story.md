@@ -12,6 +12,8 @@ related:
   - ../../../../User/docs/bmad/stories/phpstan-l10-user-lang-fix.story.md
 
 - ../../../../User/docs/bmad/stories/phpstan-l10-user-lang-fix-20261006.story.md
+qmd: "xot 06 phpstan modules level10 story level"
+---
 
 # PHPStan Level 10 — correzione fleet moduli
 

@@ -22,6 +22,7 @@ related:
   - ../contracts/xotbase-classes.md
   - ../../../Quaeris/docs/stories/phpstan-quaeris-azzeramento-e-verifica.story.md
   - ../../../../../docs/audits/phpstan-configurazione.md
+qmd: "phpstan xot azzeramento la causa era"
 ---
 
 # PHPStan su Xot: da 193 a 0

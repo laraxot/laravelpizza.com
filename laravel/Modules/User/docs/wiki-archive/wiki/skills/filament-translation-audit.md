@@ -6,6 +6,10 @@ module: "User"
 created: 2026-05-12
 updated: 2026-05-12
 related:
+<<<<<<< HEAD
+=======
+qmd: "filament translation audit skill traduzioni user"
+>>>>>>> laraxot/dev
 ---
 
 # Skill — Audit traduzioni Filament User

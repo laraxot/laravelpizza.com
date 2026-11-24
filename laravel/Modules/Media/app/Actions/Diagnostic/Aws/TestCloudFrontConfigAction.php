@@ -7,6 +7,10 @@ namespace Modules\Media\Actions\Diagnostic\Aws;
 use Exception;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/test-cloud-front-config-action.md
+ * @contract docs/contracts/test-cloud-front-config-action.md
+ */
 class TestCloudFrontConfigAction
 {
     use QueueableAction;

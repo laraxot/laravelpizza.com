@@ -3,11 +3,7 @@ title: "mail template migration guide"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "mail template migration guide"
 issues: []
 discussions: []

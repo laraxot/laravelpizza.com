@@ -8,14 +8,12 @@ module: User
 related:
 <<<<<<< HEAD
   - "../../../Quaeris/docs/stories/token-failure-silently-breaks-invite-chain.story.md"
-=======
-<<<<<<< HEAD
-  - "../../../Quaeris/docs/stories/2026-11-05-token-failure-silently-breaks-invite-chain.story.md"
-=======
-  - "../../../Quaeris/docs/stories/token-failure-silently-breaks-invite-chain.story.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 tags: [bmad, eloquent, performance, moduli-condivisi]
+=======
+  - "../../../Quaeris/docs/stories/2026-11-05-token-failure-silently-breaks-invite-chain.story.md"
+tags: [bmad, eloquent, performance, moduli-condivisi]
+qmd: "scritture dentro accessor nei moduli condivisi"
+>>>>>>> laraxot/dev
 ---
 
 # Sei accessor nei moduli condivisi scrivono a database quando vengono letti

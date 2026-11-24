@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "📧 Email Deliverability Best Practices – User Module"
+type: note
+qmd: "best practices email deliverability user"
+---
+>>>>>>> laraxot/dev
 # 📧 Email Deliverability Best Practices – User Module
 
 **Module**: User (owner)  

@@ -8,6 +8,7 @@ status: done
 track: quality/refactor
 related:
   - 2026-10-06-phpstan-modules-level10.story.md
+qmd: "06 remove typedhasrecursiverelationships story wrapper vendor"
 ---
 
 # Remove TypedHasRecursiveRelationships wrapper

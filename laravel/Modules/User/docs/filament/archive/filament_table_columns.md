@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Convenzione Metodo getTableColumns per Filament Table"
+type: note
+qmd: "filament table columns convenzione metodo gettablecolumns"
+---
+>>>>>>> laraxot/dev
 # Convenzione Metodo getTableColumns per Filament Table
 
 ## Motivazione della Modifica

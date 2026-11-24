@@ -16,6 +16,7 @@ related:
 SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/lang-audit.md](./audits/lang-audit.md).
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 **Scopo in una frase:** Lang tiene fuori dal codice ogni parola che un utente legge: nessuna etichetta si scrive dentro una classe, si dichiara in un file di lingua ([purpose.md](./purpose.md)).
 =======
 <<<<<<< .merge_file_RTGPLE
@@ -24,11 +25,15 @@ SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/lang-a
 **Scopo in una frase:** Lang tiene fuori dal codice ogni parola che un utente legge: nessuna etichetta si scrive dentro una classe, si dichiara in un file di lingua ([purpose.md](./purpose.md)).
 >>>>>>> .merge_file_mrLFNn
 >>>>>>> laraxot/dev
+=======
+**Scopo in una frase:** Lang tiene fuori dal codice ogni parola che un utente legge: nessuna etichetta si scrive dentro una classe, si dichiara in un file di lingua ([purpose.md](./purpose.md)).
+>>>>>>> laraxot/dev
 
 ## Sintesi (2026-11-16)
 
 | Metrica | Valore |
 |---|---:|
+<<<<<<< HEAD
 <<<<<<< HEAD
 | PHP `app/` / test PHP / `*Test.php` | 72 / 51 / 29 (ricontato 2026-11-19: 72 / 53 / 29) |
 =======
@@ -52,6 +57,9 @@ SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/lang-a
 =======
 | PHP `app/` / test PHP / `*Test.php` | 72 / 51 / 29 (ricontato 2026-11-19: 72 / 53 / 29) |
 >>>>>>> .merge_file_mrLFNn
+>>>>>>> laraxot/dev
+=======
+| PHP `app/` / test PHP / `*Test.php` | 72 / 51 / 29 (ricontato 2026-11-19: 72 / 53 / 29) |
 >>>>>>> laraxot/dev
 | Models / Policy / Resource / Widget | 7 / 4 / 2 / 1 |
 | Actions / Services / Migration / Lang IT | 17 / 0 / 11 / 33 |

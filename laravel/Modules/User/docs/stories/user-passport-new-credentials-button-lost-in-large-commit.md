@@ -23,6 +23,10 @@ github:
   repository: https://github.com/laraxot/module_user_fila5
   issue: https://github.com/laraxot/module_user_fila5/issues/98
   discussion: https://github.com/laraxot/module_user_fila5/discussions/99
+<<<<<<< HEAD
+=======
+qmd: "user passport new credentials button lost"
+>>>>>>> laraxot/dev
 ---
 
 # STORY — Il bottone "Nuove credenziali" è scomparso dalla Passport Dashboard

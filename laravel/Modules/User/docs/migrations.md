@@ -12,6 +12,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< HEAD
+=======
+qmd: "migrations user schema"
+>>>>>>> laraxot/dev
 ---
 
 # User Module — Migrations & Schema Parity
@@ -257,6 +261,37 @@ return new class extends XotBaseMigration {
 
 ---
 
+<<<<<<< HEAD
+## Verdetto: migrazioni `create_users_table` duplicate (solo analisi, nessun file toccato)
+
+Canonica: `2026_11_17_114812_create_users_table.php` (unica `users` nella root dello snapshot pulito `dd46996a4`, più
+due copie in `_legacy/`, non caricate: `loadMigrationsFrom` non è ricorsivo). Il sync del 24/11 (`c0dfb9cec`) ha
+riportato nella root 7 file `create_users_table`, `2026_11_11_000001_add_digital_identity_columns_to_users_table` e
+due copie in `database/Database/Migrations/` (cartella case-variant, non caricata). Il DB locale `laravelpizza_data`
+non esiste in questo ambiente: le righe della tabella `migrations` non sono verificabili qui. Prima di cancellare
+qualsiasi file, in ogni DB reale: `select migration from migrations where migration like '%create_users_table%'`.
+
+| File | Cosa fa | Delta rispetto alla canonica | Riferimenti trovati | Verdetto |
+|---|---|---|---|---|
+| `2024_01_01_000001` | create + update parziale, `name` NOT NULL, `softDeletes()` nel create | sottoinsieme (niente 2FA, type, state, fiscal_code); unico delta `name` NOT NULL | inventory wiki | duplicato ridondante, **pericoloso per ordine** (vedi sotto) |
+| `2024_01_01_000002` | create completo, `name` nullable, 2FA/type/state/lang | sottoinsieme (manca fiscal_code, auth_method, identity_provider, last_login_at) | inventory wiki ("Duplicato") | duplicato ridondante |
+| `2024_01_01_000006` | create, `name` nullable, senza 2FA/type/state | sottoinsieme | inventory wiki | duplicato ridondante |
+| `2024_01_01_000007` | stesso corpo del `000001`, `name` NOT NULL | sottoinsieme | inventory wiki ("riferimento per `lang`") | duplicato ridondante, stesso pericolo del `000001` |
+| `2026_02_13_172135` | solo update: `lang` string(5) default `it` | `lang(5)` con default contro `lang(3)` nullable; no-op perché le `2024_*` creano già `lang` | inventory wiki; il docblock stesso dice «ridondante, eliminabile dopo verifica» | duplicato ridondante |
+| `2026_02_13_172136` | create + update | **porta colonne uniche**: `users.uuid` (nullable, unique, dopo `id`), default `customer_user` su `type`, `active` su `state`, `lang(5)` default `it` | nessuno; nel codice `uuid` compare solo come `@property` su `User.php` (nessun fillable, cast o query) | **ha colonne uniche**: decide l'utente se `users.uuid` serve; nei DB che l'hanno eseguita la colonna esiste |
+| `2026_11_12_120000` | vecchia owner migration | sottoinsieme stretto della canonica (la canonica aggiunge solo il blocco idempotente per schemi parziali e le guardie `after()`) | **`UserMigrationSyntaxTest` la fissa per nome come canonica**, docs (questa pagina, inventory wiki), commento in `HasVerifiedIdentityAction`, docblock di `DigitalIdentityUserUpsertTest` | duplicato ridondante, **da tenere finché test e docs non sono ripuntati** |
+| `2026_11_11_000001_add_digital_identity_columns…` (non `create_`) | `fiscal_code`, `auth_method`, `identity_provider`, `last_login_at` | già assorbita dalla canonica (`tableUpdate`) | lo stesso test asserisce che questo file **non esista**: oggi esiste, quindi il test fallisce | duplicato ridondante |
+
+Pericolo d'ordine: su DB vuoto le migrazioni girano per timestamp, quindi `2024_01_01_000001` crea per prima `users` con
+`name` NOT NULL. `XotBaseMigration::tableCreate()` salta la create canonica perché la tabella esiste, e il
+`tableUpdate()` canonico aggiunge colonne ma non rende mai `name` nullable. Risultato: `users.name` NOT NULL anche se
+la canonica lo vuole nullable (non verificato su un DB vuoto: manca un database di test in questo ambiente). Lo stesso test pinna
+`2026_11_12_120000` già nello snapshot pulito (dove quel file non c'era), quindi era rosso già prima del sync.
+
+---
+
+=======
+>>>>>>> laraxot/dev
 ## Verification Checklist
 
 Before committing migration changes:

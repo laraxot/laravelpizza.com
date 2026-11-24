@@ -134,13 +134,5 @@ POST /api/cms/pages
 
 ## Collegamenti
 
-<<<<<<< HEAD
 - [Project Roadmap](../../../Activity/docs/wiki/project-roadmap.md)
-=======
-<<<<<<< HEAD
-- [Project Roadmap](../../../Activity/docs/wiki/PROJECT-ROADMAP.md)
-=======
-- [Project Roadmap](../../../Activity/docs/wiki/project-roadmap.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Fixcity Module Status](../../../Fixcity/docs/wiki/MODULE-STATUS.md)

@@ -1,13 +1,5 @@
 ---
-<<<<<<< HEAD
-title: "UX: Activity"
-=======
-<<<<<<< HEAD
 title: "UX — Activity"
-=======
-title: "UX: Activity"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 type: ux-design
 module: Activity
 related:

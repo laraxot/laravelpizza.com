@@ -9,6 +9,7 @@ tags: [phpstan, cleanup, xot, swarm, lessons-learned]
 related:
   - ./2026-10-06-phpstan-cleanup-xot-app.story.md
   - ../bmad/phpstan-status.md
+qmd: "06 phpstan cleanup xot app dev"
 ---
 
 # [DEV] PHPStan cleanup Xot/app

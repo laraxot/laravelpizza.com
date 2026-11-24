@@ -4,6 +4,10 @@ module: User
 type: note
 status: active
 updated: '2026-11-23'
+<<<<<<< HEAD
+=======
+qmd: "header language selector with flags"
+>>>>>>> laraxot/dev
 ---
 
 # Implementazione del Selettore di Lingua con Bandiere SVG

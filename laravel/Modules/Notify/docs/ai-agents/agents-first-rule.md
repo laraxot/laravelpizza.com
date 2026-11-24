@@ -3,11 +3,7 @@ title: "agents first rule"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "agents first rule"
 issues: []
 discussions: []
@@ -15,18 +11,8 @@ discussions: []
 
 # Agents first rule: Read → Reason → Study → Update → Improve
 
-<<<<<<< HEAD
 > Source: [AGENTS.md](../../AGENTS.md)
 > Source: [AGENTS.md](../../AGENTS.md)
-=======
-<<<<<<< HEAD
-> Source: [AGENTS.md](../../agents.md)
-> Source: [agents.md](../../agents.md)
-=======
-> Source: [AGENTS.md](../../AGENTS.md)
-> Source: [AGENTS.md](../../AGENTS.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 > Back: [index](index.md) | [workflow.md](workflow.md)
 
 ## The fundamental rule

@@ -6,6 +6,10 @@ namespace Modules\Job\Actions\Console;
 
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/get-schedule-status-commands-action.md
+ * @contract docs/contracts/get-schedule-status-commands-action.md
+ */
 final class GetScheduleStatusCommandsAction
 {
     use QueueableAction;

@@ -3,6 +3,7 @@ title: "Architettura — Media"
 type: architecture
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 tags: [architecture, structure, module, media, storage]
 =======
 =======
@@ -23,6 +24,9 @@ tags: [architecture, structure, module, media, storage]
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+tags: [architecture, structure, module, media, storage]
 >>>>>>> laraxot/dev
 created: 2026-07-14
 status: review
@@ -79,6 +83,7 @@ Logica in Spatie Queueable Action, nessun Service, estensione di `XotBaseResourc
 [decision-log.md](./decision-log.md): D-1 (prune), D-2 (cast `id`), D-3 (allegati-prova), D-4 (guard diagnostica), D-5 (codice morto).
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< .merge_file_fG7tBd
 =======
@@ -92,6 +97,8 @@ Logica in Spatie Queueable Action, nessun Service, estensione di `XotBaseResourc
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 
 ## Convenzioni (dalla versione precedente, ancora valide)
@@ -110,6 +117,7 @@ non automatica; 0 `use Modules\Tenant` e 0 `use Modules\User` in `app/`; i consu
 «Confini e dipendenze»; i file PHP in `app/` sono 127. Non vanno ripristinate senza una verifica sul codice.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> .merge_file_YVd6a5
 >>>>>>> laraxot/dev
@@ -121,4 +129,6 @@ non automatica; 0 `use Modules\Tenant` e 0 `use Modules\User` in `app/`; i consu
 >>>>>>> .merge_file_YVd6a5
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev

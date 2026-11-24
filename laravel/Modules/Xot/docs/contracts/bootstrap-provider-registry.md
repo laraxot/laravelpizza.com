@@ -1,3 +1,8 @@
+---
+title: "Bootstrap provider registry contract"
+type: contract
+qmd: "bootstrap provider registry contract"
+---
 # Bootstrap provider registry contract
 
 ```yaml

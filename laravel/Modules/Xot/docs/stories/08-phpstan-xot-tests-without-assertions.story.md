@@ -10,6 +10,7 @@ tags: [phpstan, xot, tests, pest, swarm, coverage-sweep, variable-unused]
 related:
   - ./2026-10-06-phpstan-cleanup-xot-app.story.md
   - ./2026-10-08-phpstan-xot-app-regressions.story.md
+qmd: "08 phpstan xot tests without assertions"
 ---
 
 # [STORY] PHPStan Xot/tests: test senza asserzioni

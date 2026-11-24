@@ -11,6 +11,10 @@ related:
   - ./module-excellence-prd.md
   - ./module-excellence-architecture.md
   - ./epics.md
+<<<<<<< HEAD
+=======
+qmd: "excellence brainstorming user findings grezzi fork"
+>>>>>>> laraxot/dev
 ---
 
 # Brainstorming: User module — findings grezzi

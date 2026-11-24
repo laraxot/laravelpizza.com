@@ -1,23 +1,12 @@
 ---
-<<<<<<< HEAD
 issues: []
 discussions: []
 title: "view-cache-components-fix-2025-10-15"
 type: concept
 tags: [deprecated]
 created: 2026-07-14
-updated: 2026-07-14
-qmd: "view-cache-components-fix-2025-10-15 deprecated"
-=======
-title: "view cache components fix 2025 10"
-type: note
-tags: [documentation]
-created: 2026-09-26
 updated: 2026-11-23
-qmd: "view cache components fix 2025 10"
-issues: []
-discussions: []
->>>>>>> laraxot/dev
+qmd: "view-cache-components-fix-2025-10-15 deprecated"
 status: deprecated
 related:
   - "./00-index-1.md"
@@ -26,9 +15,6 @@ related:
   - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   - "./action-plan-immediate.md"
 ---
 
@@ -214,14 +200,8 @@ L'implementazione ha risolto con successo il problema della cache delle viste, c
 - [Sessione Super Mucca](./sessione-2025-10-15-super-mucca.md)
 - [Architecture](./architecture/)
 
-=======
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
 
 > Questo file è stato rinominato in [view-cache-components-fix.md](view-cache-components-fix.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

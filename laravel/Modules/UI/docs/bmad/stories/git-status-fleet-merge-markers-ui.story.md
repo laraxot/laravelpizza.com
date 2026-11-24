@@ -3,7 +3,10 @@ title: "Story — bonifica marker merge residui modulo UI"
 
 title: "Story: bonifica marker merge residui modulo UI"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
 type: story
@@ -18,7 +21,10 @@ updated: 2026-10-23
 tags: [docs, ui, bmad]
 qmd: "git-status-fleet-merge-markers-ui ui"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
 ---
@@ -192,7 +198,10 @@ concatenate o interleaved** (2-9 copie dello stesso doc): in quei casi tenuta un
 
 `blade-data-handling.md`, `_integration/{carousel_slider,custom_firm_fields,custom_theme,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
 flip_cards,page_builder,tailwind_themes}.md`, `standards/{form_standards,auth_form_standards}.md`,
@@ -209,6 +218,7 @@ righe stale `saluteora`/`fixcity`/`project_docs`). Refs rotte verso i file elimi
 in `architecture-patterns.md`, `svg-icons-automatic-registration.md`,
 `_archive/svg-icons-automatic-registration.md`, `filament-components-usage.md`,
 <<<<<<< HEAD
+<<<<<<< HEAD
 `legacy/filament-components-usage.md`, `roadmap/roadmap.md`, `conflitti_merge_risolti.md`,
 
 `legacy/filament-components-usage.md`, `roadmap/roadmap.md`, `conflitti_merge_risolti.md`,
@@ -219,6 +229,11 @@ in `architecture-patterns.md`, `svg-icons-automatic-registration.md`,
 =======
 `legacy/filament-components-usage.md`, `roadmap/roadmap.md`, `conflitti_merge_risolti.md`,
 >>>>>>> .merge_file_EIwYCL
+
+`legacy/filament-components-usage.md`, `roadmap/roadmap.md`, `conflitti_merge_risolti.md`,
+>>>>>>> laraxot/dev
+=======
+`legacy/filament-components-usage.md`, `roadmap/roadmap.md`, `conflitti_merge_risolti.md`,
 
 `legacy/filament-components-usage.md`, `roadmap/roadmap.md`, `conflitti_merge_risolti.md`,
 >>>>>>> laraxot/dev
@@ -243,7 +258,10 @@ in `architecture-patterns.md`, `svg-icons-automatic-registration.md`,
 - `docs/raw/root-import/` contiene varianti `-1` dei doc importati (es. `changelog-1.md`):
   non toccate, area `raw/` dichiarata immutable dal wiki schema.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
   `overview-extended.md`): non toccati, fuori scope del pack: da instradare a batch dedicato.

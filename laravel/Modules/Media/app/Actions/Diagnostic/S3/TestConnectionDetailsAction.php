@@ -9,6 +9,10 @@ use Modules\Media\Actions\Diagnostic\Aws\CreateFilesystemS3ClientAction;
 use Modules\Media\Actions\Diagnostic\Aws\ResolveAwsS3ErrorSolutionAction;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/test-connection-details-action.md
+ * @contract docs/contracts/test-connection-details-action.md
+ */
 class TestConnectionDetailsAction
 {
     use QueueableAction;

@@ -8,6 +8,10 @@ related:
   - "../../../bashscripts/tools/prompts/02-gitmodules-sync.md"
   - "./wiki/troubleshooting/git-push-dual-remote-unrelated.md"
   - "./wiki/troubleshooting/git-push-lfs-missing-objects.md"
+<<<<<<< HEAD
+=======
+qmd: "multi org sync laraxot provtv sincronizzazione"
+>>>>>>> laraxot/dev
 ---
 
 # Sincronizzazione multi-organizzazione (laraxot + provtv)
@@ -41,13 +45,9 @@ Se `unpack failed` / `did not receive expected object` → `git push --no-thin`.
 Se `GH008` / LFS missing su un org e l’altro ha già accettato il tip →
 `git lfs fetch <sibling> --all` poi `git lfs push <target> --all`, poi push.
 <<<<<<< HEAD
-Dettaglio (SSoT): [../UI/docs/wiki/troubleshooting/git-push-lfs-missing-objects.md](../UI/docs/wiki/troubleshooting/git-push-lfs-missing-objects.md).
-=======
-<<<<<<< HEAD
-Dettaglio (SSoT): [../UI/docs/wiki/troubleshooting/git-push-lfs-missing-objects.md](../UI/docs/wiki/troubleshooting/git-push-lfs-missing-objects.md).
-=======
 Dettaglio (SSoT): [../UI/docs/wiki/troubleshooting/git-push-lfs-missing-objects.md](wiki/troubleshooting/git-push-lfs-missing-objects.md).
->>>>>>> laraxot/dev
+=======
+Dettaglio (SSoT): [../UI/docs/wiki/troubleshooting/git-push-lfs-missing-objects.md](../UI/docs/wiki/troubleshooting/git-push-lfs-missing-objects.md).
 >>>>>>> laraxot/dev
 Niente reset/squash/force per aggirare LFS.
 

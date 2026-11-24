@@ -17,12 +17,4 @@ related:
   - "./spatie-permission-team-model-not-configured.md"
 ---
 
-<<<<<<< HEAD
 > Questo file è stato rinominato in [git-merge-conflict-inventory-.deprecated.md](git-merge-conflict-inventory-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-=======
-<<<<<<< HEAD
-> Questo file è stato rinominato in [git-merge-conflict-inventory-.deprecated.md](git-merge-conflict-inventory-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-=======
-> Questo file è stato rinominato in [git-merge-conflict-inventory-.deprecated.md](./git-merge-conflict-inventory.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

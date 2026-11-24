@@ -10,15 +10,17 @@ issues:
 discussions:
 related:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - "./AGENTS.md"
 =======
-<<<<<<< HEAD
   - "./agents.md"
 
 - "./AGENTS.md"
-=======
-  - "./AGENTS.md"
 >>>>>>> laraxot/dev
+=======
+  - "./agents.md"
+
+- "./AGENTS.md"
 >>>>>>> laraxot/dev
   - "./bmad-method.md"
   - "./context-compression.md"

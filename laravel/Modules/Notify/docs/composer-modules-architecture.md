@@ -3,11 +3,7 @@ title: "Composer & Laravel-Modules Architecture"
 type: concept
 tags: [composer, modules, architecture]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "composer-modules-architecture composer & laravel-modules architecture"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

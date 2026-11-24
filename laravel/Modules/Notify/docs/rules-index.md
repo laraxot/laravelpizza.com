@@ -7,11 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 ---
 
 # Notify Module Rules Index
@@ -52,14 +48,6 @@ as a Folio page + Action, not a controller.
 See: [no-http-controllers.md](./no-http-controllers.md)
 
 ## Related Documentation
-<<<<<<< HEAD
 - [README](./README.md)
-=======
-<<<<<<< HEAD
-- [README](./readme.md)
-=======
-- [README](./README.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [phpstan](./phpstan.md)
 - [No HTTP controllers](./no-http-controllers.md)

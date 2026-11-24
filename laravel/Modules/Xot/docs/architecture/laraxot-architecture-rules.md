@@ -3,6 +3,7 @@ title: "Xot - laraxot-architecture-rules.md"
 module: Xot
 bmad: true
 status: active
+qmd: "laraxot architecture rules laraxotarchitecturerulesmd"
 ---
 # Laraxot Architecture Rules - Xot Module
 

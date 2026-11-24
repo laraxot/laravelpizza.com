@@ -7,7 +7,7 @@ declare(strict_types=1);
 
 namespace Modules\Job\Observers;
 
-use Modules\Job\Actions\ClearScheduleCacheAction;
+use Modules\Job\Actions\Schedule\ClearScheduleCacheAction;
 use Modules\Job\Enums\Status;
 use Modules\Job\Models\Schedule;
 

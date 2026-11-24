@@ -24,11 +24,7 @@ describe('User Business Logic', function () {
         Assert::assertSame('test@example.com', $user->email);
         // Il mutator di BaseUser hasha la password: mai in chiaro sul modello.
         Assert::assertNotSame('plain-password', $user->password);
-<<<<<<< HEAD
         Assert::assertTrue(Hash::check('plain-password', (string) $user->password));
-=======
-        Assert::assertTrue(\Illuminate\Support\Facades\Hash::check('plain-password', (string) $user->password));
->>>>>>> laraxot/dev
     });
 
     test('user can have name components', function () {

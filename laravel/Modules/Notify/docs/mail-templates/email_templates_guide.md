@@ -3,11 +3,7 @@ title: "email templates guide"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "email templates guide"
 issues: []
 discussions: []
@@ -213,22 +209,7 @@ class SendAppointmentConfirmationAction
 ## File Correlati
 
 - [HTML_EMAIL_COMPATIBILITY.md](html_email_compatibility.md) - Guide sulla compatibilità cross-client
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_bSMibh
-- [EMAIL_BEST_PRACTICES.md](./EMAIL_BEST_PRACTICES.md) - Best practices per email transazionali
-- [RESPONSIVE_EMAIL_TEMPLATES.md](../RESPONSIVE_EMAIL_TEMPLATES.md) - Guide dettagliate sul design responsive
-- [MAILPACE_TEMPLATES_INTEGRATION.md](./MAILPACE_TEMPLATES_INTEGRATION.md) - Integrazione con template esterni
-=======
->>>>>>> laraxot/dev
-- [EMAIL_BEST_PRACTICES.md](./email_best_practices.md) - Best practices per email transazionali
-- [RESPONSIVE_EMAIL_TEMPLATES.md](../responsive_email_templates.md) - Guide dettagliate sul design responsive
-- [MAILPACE_TEMPLATES_INTEGRATION.md](mailpace_templates_integration.md) - Integrazione con template esterni
-- [HTML_EMAIL_COMPATIBILITY.md](./html_email_compatibility.md) - Guide sulla compatibilità cross-client
 - [EMAIL_BEST_PRACTICES.md](./email_best_practices.md) - Best practices per email transazionali
 - [RESPONSIVE_EMAIL_TEMPLATES.md](../responsive_email_templates.md) - Guide dettagliate sul design responsive
 - [MAILPACE_TEMPLATES_INTEGRATION.md](./mailpace_templates_integration.md) - Integrazione con template esterni
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_xdk7fg
->>>>>>> laraxot/dev
+- [HTML_EMAIL_COMPATIBILITY.md](./html_email_compatibility.md) - Guide sulla compatibilità cross-client

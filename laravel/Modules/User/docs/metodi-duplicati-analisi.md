@@ -6,6 +6,7 @@ tags: [metodi-duplicati, refactoring]
 canonical: ../../../Themes/One/docs/shared-components/metodi_duplicati_analisi.md
 =======
 canonical: ../../../Themes/One/docs/shared-components/METODI_DUPLICATI_ANALISI.md
+qmd: "metodi duplicati analisi user"
 >>>>>>> laraxot/dev
 ---
 

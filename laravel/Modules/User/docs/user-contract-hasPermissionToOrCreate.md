@@ -10,6 +10,10 @@ created: 2026-09-24
 related:
   - ../BMAD-SECOND-BRAIN.md
   - ../../Xot/app/Contracts/UserContract.php
+<<<<<<< HEAD
+=======
+qmd: "user contract haspermissiontoorcreate usercontract"
+>>>>>>> laraxot/dev
 ---
 
 # hasPermissionToOrCreate — implementazione

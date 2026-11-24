@@ -13,6 +13,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\mb_convert_encoding;
 
+/**
+ * @see docs/contracts/build-mail-message-action.md
+ * @contract docs/contracts/build-mail-message-action.md
+ */
 class BuildMailMessageAction
 {
     use QueueableAction;

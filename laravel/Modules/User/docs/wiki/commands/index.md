@@ -7,6 +7,10 @@ tags: [commands, index, on-demand]
 related:
   - ../rules/00-TRIGGER_MAP.md
   - ../rules/on-demand-pattern.md
+<<<<<<< HEAD
+=======
+qmd: "commands"
+>>>>>>> laraxot/dev
 ---
 
 # Commands Index

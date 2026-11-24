@@ -11,6 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< HEAD
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/redundancy-fixes-january.md
@@ -141,3 +142,9 @@ Prima di committare, verifica:
 - [XotBaseRelationManager Documentation](../../Xot/docs/filament/relation-managers.md)
 
 *Ultimo aggiornamento: Gennaio 2026*
+=======
+qmd: "redundancy fixes"
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/redundancy-fixes-january.md
+>>>>>>> laraxot/dev

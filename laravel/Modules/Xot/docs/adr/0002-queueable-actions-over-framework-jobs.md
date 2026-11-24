@@ -6,6 +6,7 @@ created: 2026-11-23
 updated: 2026-11-23
 decision-makers: [team Laraxot]
 issues: []
+qmd: "0002 queueable actions over framework jobs"
 ---
 
 # Le unità di business usano Spatie Queueable Actions

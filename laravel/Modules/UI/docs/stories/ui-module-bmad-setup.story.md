@@ -5,6 +5,10 @@ status: ready-for-dev
 links:
   github_issue: 0
   module: UI
+<<<<<<< HEAD
+=======
+qmd: "ui bmad setup story"
+>>>>>>> laraxot/dev
 ---
 
 # UI Module BMAD Setup

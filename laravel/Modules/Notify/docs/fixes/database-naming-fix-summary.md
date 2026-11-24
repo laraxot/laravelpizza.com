@@ -3,11 +3,7 @@ title: "database naming fix summary"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "database naming fix summary"
 issues: []
 discussions: []
@@ -177,17 +173,7 @@ grep -A 5 "autoload" laravel/Modules/*/composer.json | grep -i "database"
 
 ### Immediate (Done)
 - ✅ Fix Blog module docs
-<<<<<<< HEAD
 - ✅ Update AGENTS.md
-- ✅ Update AGENTS.md
-=======
-<<<<<<< HEAD
-- ✅ update agents.md
-=======
-- ✅ Update AGENTS.md
-- ✅ Update AGENTS.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - ✅ Create convention doc
 - ✅ Create GitHub Issue #5
 - ✅ Setup MCP for GitHub
@@ -209,23 +195,14 @@ grep -A 5 "autoload" laravel/Modules/*/composer.json | grep -i "database"
 ## 📚 Related Documentation
 
 - [Database Naming Convention](../conventions/database-naming.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 - [AGENTS.md](../../agents.md)
 - [Database Naming Convention](../conventions/database-naming.md)
 - [AGENTS.md](../agents.md)
-=======
->>>>>>> laraxot/dev
 - [AGENTS.md](../../AGENTS.md)
 - [AGENTS.md](../../AGENTS.md)
 - [Database Naming Convention](../conventions/database-naming.md)
 - [AGENTS.md](../agents.md)
 - [AGENTS.md](../agents.md)
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [GitHub Issues & Discussions](github/README.md)
 - [MCP Configuration](mcp/README.md)
 - [Laravel Directory Structure](https://laravel.com/docs/structure)

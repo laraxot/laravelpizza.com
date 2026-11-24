@@ -6,6 +6,10 @@ namespace Modules\Media\Actions\Diagnostic\Aws;
 
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/resolve-aws-s3-error-solution-action.md
+ * @contract docs/contracts/resolve-aws-s3-error-solution-action.md
+ */
 class ResolveAwsS3ErrorSolutionAction
 {
     use QueueableAction;

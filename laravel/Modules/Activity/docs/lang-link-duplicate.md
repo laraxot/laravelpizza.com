@@ -35,19 +35,7 @@ Consulta la documentazione delle traduzioni qui:
 
 - [Torna a README](./README.md)
 
-<<<<<<< HEAD
-- [Torna a README](./README.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Torna a README](./readme.md)
-=======
-- [Torna a README](./README.md)
->>>>>>> laraxot/dev
-=======
-- [Torna a README](./README.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Vai a Struttura](./structure.md)
 
 - [Torna a README](./README.md)- [Vai a Struttura](./structure.md)

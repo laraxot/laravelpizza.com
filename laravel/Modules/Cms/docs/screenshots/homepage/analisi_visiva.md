@@ -1,19 +1,10 @@
 ---
-<<<<<<< HEAD
-title: "Analisi Visiva"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "Analisi Visiva"
-=======
 title: "analisi visiva"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "analisi visiva"
->>>>>>> laraxot/dev
 issues: []
 discussions: []
 ---
@@ -28,22 +19,6 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-title: "ANALISI VISIVA"
-=======
-title: "analisi visiva"
->>>>>>> laraxot/dev
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-<<<<<<< HEAD
-qmd: "ANALISI VISIVA"
-=======
-qmd: "analisi visiva"
->>>>>>> laraxot/dev
-issues: []
-discussions: []
 ## 1. Header Structure
 
 ### Bootstrap Italia

@@ -6,6 +6,7 @@ created: 2026-11-24
 updated: 2026-11-24
 related:
   - ../../app/Providers/TenantServiceProvider.php
+qmd: "connections alias default ogni connessione punta"
 ---
 
 # ADR: ogni modulo ha la sua connessione, alias della default se punta allo stesso database

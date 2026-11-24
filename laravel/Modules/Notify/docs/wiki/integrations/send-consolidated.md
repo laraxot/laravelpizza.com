@@ -7,11 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -310,10 +306,7 @@ class SmtpData extends Data
 
 *Consolidated from: `send-email-fix.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## 🔍 Analisi del Problema
 
 Il file `SendEmail.php` non funziona correttamente per i seguenti motivi:
@@ -554,10 +547,7 @@ class SmtpData extends Data
 *Consolidated from: `send-email-translation-fix.md`*
 *Consolidated from: `send-email-translation-fix.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Problemi Identificati
 
 ### 1. Conflitti di Merge Non Risolti
@@ -1059,10 +1049,7 @@ Ogni campo ora ha la struttura espansa completa:
 
 *Consolidated from: `send-email-translation-fix.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Problemi Identificati
 
 ### 1. Conflitti di Merge Non Risolti
@@ -1227,10 +1214,7 @@ Ogni campo ora ha la struttura espansa completa:
 
 *Consolidated from: `send-email-translation-improvement.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## 🔍 Analisi del Problema
 
 Il file `laravel/Modules/Notify/lang/it/send_email.php` presenta diversi problemi critici:
@@ -1668,10 +1652,7 @@ php -l Modules/Notify/lang/it/send_email.php
 - `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
 - `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
 - `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-<<<<<<< HEAD
-=======
 - `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
->>>>>>> laraxot/dev
 - `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
 - `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
 - `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
@@ -2330,10 +2311,7 @@ php -l Modules/Notify/lang/it/send_email.php
 
 *Consolidated from: `send-email-translation-improvement.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## 🔍 Analisi del Problema
 
 Il file `laravel/Modules/Notify/lang/it/send_email.php` presenta diversi problemi critici:
@@ -2934,10 +2912,7 @@ php -l Modules/Notify/lang/it/send_email.php
 
 *Consolidated from: `send-email-translation.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Problemi Identificati
 
 ### 1. Conflitti di Merge Non Risolti
@@ -3091,20 +3066,14 @@ Ogni campo ora ha la struttura espansa completa:
 ],
 ```
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ---
 
 ## send-email
 
 *Consolidated from: `send-email.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## 🔍 Analisi del Problema
 
 Il file `SendEmail.php` non funziona correttamente per i seguenti motivi:
@@ -3344,10 +3313,7 @@ class SmtpData extends Data
 
 *Consolidated from: `send-notification-bulk-action.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 **Status**: ✅ Implementazione completata e PHPStan Level 10 compliant
 **Module**: Notify
 
@@ -3672,11 +3638,8 @@ Vedi: [Actions Calling Actions Pattern](./actions-calling-actions-pattern.md)
 - [App Client Management](../App/docs/README.md#client-management)
 - [TechPlanner Client Management](../TechPlanner/docs/README.md#client-management)
 <<<<<<< HEAD
-=======
-<<<<<<< .merge_file_VnxtBj
 - [Geo Module Reusable Components Philosophy](../geo/docs/reusable-components-philosophy.md)
 =======
->>>>>>> laraxot/dev
 - [Geo Module Reusable Components Philosophy](../../ai-agents/guidelines/reusable-components-philosophy.md)
 Vedi: [Actions Calling Actions Pattern](../../actions-calling-actions-pattern.md)
 
@@ -3689,9 +3652,6 @@ Vedi: [Actions Calling Actions Pattern](../../actions-calling-actions-pattern.md
 - [App Client Management](../App/docs/README.md#client-management)
 - [TechPlanner Client Management](../TechPlanner/docs/README.md#client-management)
 - [Geo Module Reusable Components Philosophy](../../../../Geo/docs/reusable-components-philosophy.md)
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_7TnOTx
 >>>>>>> laraxot/dev
 - [Xot Filament Class Extension Rules](../xot/docs/filament-class-extension-rules.md)
 
@@ -3707,10 +3667,7 @@ Vedi: [Actions Calling Actions Pattern](../../actions-calling-actions-pattern.md
 
 *Consolidated from: `send-push-notification-conflict-resolution.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Intent
 - Garantire robustezza e validazione rigorosa dei dati in ingresso, adottando un approccio fail‑fast per prevenire malfunzionamenti in caso di dati mancanti o malformati.
 
@@ -3728,10 +3685,7 @@ Vedi: [Actions Calling Actions Pattern](../../actions-calling-actions-pattern.md
 
 *Consolidated from: `send-push-notification-resolution.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Intent
 - Garantire robustezza e validazione rigorosa dei dati in ingresso, adottando un approccio fail‑fast per prevenire malfunzionamenti in caso di dati mancanti o malformati.
 
@@ -3749,10 +3703,7 @@ Vedi: [Actions Calling Actions Pattern](../../actions-calling-actions-pattern.md
 
 *Consolidated from: `send-record-notification-action-refactoring.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 **Date**: 18 Dicembre 2025
 **Status**: ✅ Refactoring Completed
 **Module**: Notify
@@ -3824,10 +3775,7 @@ The `sendWhatsApp()` method was slightly different but still shared the core not
 
 *Consolidated from: `send_email_fix.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## 🔍 Analisi del Problema
 
 Il file `SendEmail.php` non funziona correttamente per i seguenti motivi:
@@ -4064,10 +4012,7 @@ class SmtpData extends Data
 
 *Consolidated from: `send_email_translation_fix.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Problemi Identificati
 
 ### 1. Conflitti di Merge Non Risolti
@@ -4230,10 +4175,7 @@ Ogni campo ora ha la struttura espansa completa:
 
 *Consolidated from: `send_email_translation_improvement.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## 🔍 Analisi del Problema
 
 Il file `laravel/Modules/Notify/lang/it/send_email.php` presenta diversi problemi critici:
@@ -4782,10 +4724,7 @@ php artisan email:test
 
 *Consolidated from: `sendemail-troubleshooting.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Problema
 La pagina `SendEmail` non funziona correttamente, mentre `TestSmtpPage` funziona.
 
@@ -4985,10 +4924,7 @@ php artisan email:test
 
 *Consolidated from: `sendemail_troubleshooting.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Problema
 La pagina `SendEmail` non funziona correttamente, mentre `TestSmtpPage` funziona.
 

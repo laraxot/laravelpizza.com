@@ -6,11 +6,7 @@ title: "concepts index — Notify"
 type: index
 tags: [concepts, Notify]
 created: 2026-05-11
-<<<<<<< HEAD
-updated: 2026-09-10
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 ---
 
 # concepts Index — Notify

@@ -14,15 +14,12 @@ Collega le verifiche ECC al workflow PTVX (BMAD → lock → fix → PHPStan/Pes
 | Controllo | Stato | Evidenza |
 |---|---|---|
 <<<<<<< HEAD
-=======
-<<<<<<< .merge_file_7dKKH7
 | Inventario statico | verificato | ../bmad/audits/ui-audit.md |
 | PHPStan | 0 su tree Modules (2026-11-16) | comando in audit |
 | Pest | pending | ambiente testing |
 | Security review | pending | story figlie P0/P1 |
 | Docs pack | aggiornato | questo indice + audit ECC |
 =======
->>>>>>> .merge_file_eWDORp
 >>>>>>> laraxot/dev
 | Inventario statico | verificato (2026-11-16) | [audit](../bmad/audits/ui-audit.md) |
 | PHPStan `Modules/UI` | 0 errori | `phpstan analyse Modules/UI` (17:07) |

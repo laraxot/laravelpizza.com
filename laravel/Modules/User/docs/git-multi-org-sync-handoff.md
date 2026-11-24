@@ -9,6 +9,10 @@ issues:
   - "https://github.com/provtv/module_user_fila5/issues/16"
 discussions:
   - "https://github.com/provtv/base_ptv_fila5/discussions/204"
+<<<<<<< HEAD
+=======
+qmd: "git multi org sync handoff multiorg"
+>>>>>>> laraxot/dev
 ---
 
 # Handoff — multi-org sync (STORY-003)

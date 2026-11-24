@@ -3,14 +3,8 @@ title: "FixCity Platform - Project Status Report"
 type: concept
 tags: [project, status]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-qmd: "project-status fixcity platform - project status report"
-qmd: "project-status ptv platform - project status report"
-=======
 updated: 2026-11-23
 qmd: "project-status fixcity platform - project status report"
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:

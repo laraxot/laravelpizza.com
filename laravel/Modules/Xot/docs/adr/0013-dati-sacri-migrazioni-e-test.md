@@ -6,6 +6,7 @@ created: 2026-11-23
 updated: 2026-11-23
 decision-makers: [team back office]
 issues: [250]
+qmd: "0013 dati sacri migrazioni test sono"
 ---
 
 # I dati sono sacri: migrazioni e test girano solo in avanti

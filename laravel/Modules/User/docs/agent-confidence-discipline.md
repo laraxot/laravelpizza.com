@@ -15,6 +15,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< HEAD
+=======
+qmd: "agent confidence discipline disciplina agenti massimizzare"
+>>>>>>> laraxot/dev
 ---
 
 # Disciplina agenti per massimizzare la confidenza

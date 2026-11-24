@@ -64,13 +64,5 @@ protected function getSomeValue(): float
 <<<<<<< HEAD
 - [index.md](index.md)
 =======
-<<<<<<< HEAD
 - [INDEX.md](INDEX.md)
-=======
-<<<<<<< .merge_file_COAS1O
-- [INDEX.md](./README.md)
-=======
-- [index.md](index.md)
->>>>>>> .merge_file_gGGA0W
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

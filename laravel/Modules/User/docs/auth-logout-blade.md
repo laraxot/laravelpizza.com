@@ -30,15 +30,7 @@ related:
 - [Documentazione centrale](../../../../docs/README.md)
 - [Collegamenti documentazione](../../../../docs/collegamenti-documentazione.md)
 - [README modulo User](./README.md)
-<<<<<<< HEAD
 - [Convenzioni Path](./path-conventions-user.md)
-=======
-<<<<<<< .merge_file_AKEsTW
-- [Convenzioni Path](./path-conventions-2.md)
-=======
-- [Convenzioni Path](./path-conventions-user.md)
->>>>>>> .merge_file_WwdfML
->>>>>>> laraxot/dev
 - [Struttura moduli](../../../../docs/architecture/modules-structure.md)
 - [Logout Page Fix](./logout-page-fix.md)
 - [Convenzioni Path](./path_conventions.md)
@@ -138,4 +130,7 @@ laravel/Themes/One/resources/views/pages/auth/logout.blade.php
 - Il file `logout.blade.php` è una pagina Folio e non richiede configurazioni aggiuntive in `routes/web.php`.
 - La pagina è accessibile all'URL `/{locale}/auth/logout`.
 - Per maggiori informazioni sulla gestione dell'autenticazione, consultare la documentazione Laravel ufficiale.
+<<<<<<< HEAD
 - Per maggiori informazioni sulla gestione dell'autenticazione, consultare la documentazione Laravel ufficiale.
+=======
+>>>>>>> laraxot/dev

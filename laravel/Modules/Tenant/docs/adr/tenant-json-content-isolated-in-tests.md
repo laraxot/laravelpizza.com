@@ -7,6 +7,7 @@ updated: 2026-11-24
 related:
   - ../../app/Actions/Config/GetTenantFilePathAction.php
   - ../../app/Models/Traits/SushiToJson.php
+qmd: "tenant json content isolated tests test"
 ---
 
 # ADR: nei test i contenuti JSON del tenant si scrivono in una copia sotto storage

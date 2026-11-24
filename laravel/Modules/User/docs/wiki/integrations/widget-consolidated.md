@@ -5,6 +5,10 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< HEAD
+=======
+qmd: "widget consolidated"
+>>>>>>> laraxot/dev
 ---
 
 # widget — Consolidated Documentation
@@ -2432,13 +2436,9 @@ protected static string $view = 'user::widgets.edit-user';
 - [EditUserWidget Documentation](../modules/user/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../modules/user/docs/widgets/translation-guidelines.md)
 <<<<<<< HEAD
-- [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
-=======
-<<<<<<< HEAD
-- [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
-=======
 - [Filament Widget Conventions](../../best-practices/filament-widgets.md)
->>>>>>> laraxot/dev
+=======
+- [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
 >>>>>>> laraxot/dev
 ## Memory Integration
 This document serves as a reference for:
@@ -3307,15 +3307,7 @@ Documentazione per widgets_structure nel modulo User.
 
 ## Collegamenti
 
-<<<<<<< HEAD
 - [Modulo Principale](../README.md)
-=======
-<<<<<<< HEAD
-- [Modulo Principale](../README.md)
-=======
-- [Modulo Principale](../readme.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 
 ---

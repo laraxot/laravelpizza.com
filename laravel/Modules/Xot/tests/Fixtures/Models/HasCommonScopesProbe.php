@@ -14,6 +14,7 @@ use Modules\Xot\Models\Traits\HasCommonScopes;
  */
 class HasCommonScopesProbe extends Model
 {
+    /** @use HasCommonScopes<static> */
     use HasCommonScopes;
 
     protected $table = 'has_common_scopes_probes';

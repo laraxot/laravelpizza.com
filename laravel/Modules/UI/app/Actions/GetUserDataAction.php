@@ -14,8 +14,12 @@ use Spatie\Permission\Contracts\Permission;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
+<<<<<<< HEAD
  * Dati dell'utente autenticato (identità, ruolo, permessi, impostazioni del profilo).
  *
+=======
+ * @see docs/contracts/get-user-data-action.md
+>>>>>>> laraxot/dev
  * @contract docs/contracts/get-user-data-action.md
  */
 class GetUserDataAction

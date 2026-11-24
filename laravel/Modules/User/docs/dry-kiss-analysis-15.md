@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "DRY & KISS Analysis - Modulo User"
+type: analysis
+qmd: "dry kiss analysis 15 user"
+---
+>>>>>>> laraxot/dev
 # DRY & KISS Analysis - Modulo User
 
 **Data:** 15 Ottobre 2025  

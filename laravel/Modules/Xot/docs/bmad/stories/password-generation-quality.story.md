@@ -7,6 +7,7 @@ status: review
 created: 2026-10-05
 related:
   - ./project-quality-audit.story.md
+qmd: "password generation quality story generazione lunghezza"
 ---
 
 # Generazione password: lunghezza e casualità crittografica

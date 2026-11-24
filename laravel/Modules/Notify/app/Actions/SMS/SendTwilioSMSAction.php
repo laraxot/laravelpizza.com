@@ -13,6 +13,10 @@ use Modules\Notify\Datas\SmsData;
 use Modules\Notify\Models\Contracts\SmsActionContract;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/send-twilio-sms-action.md
+ * @contract docs/contracts/send-twilio-sms-action.md
+ */
 final class SendTwilioSMSAction implements SmsActionContract
 {
     use QueueableAction;

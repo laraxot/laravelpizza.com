@@ -19,7 +19,7 @@ related:
   - ../../../../../bashscripts/ai/wiki/rules/no-refresh-database-in-tests.md
   - ../../../../../bashscripts/docs/prompts/10-test.md
   - ../../../../../bashscripts/docs/prompts/11-phpstan.md
-  - ../../../../../bashscripts/docs/modular-bmad-story-policy.md
+  - ../../../../../bashscripts/docs/governance/modular-bmad-story-policy.md
   - ../../../../tests/Architecture/ModulesArchitectureTest.php
 ---
 
@@ -31,7 +31,7 @@ Fase BMAD: planning (epic). Questo file e' solo un piano: nessun PHP toccato, ne
 
 Ordine permanente dell'utente (2026-10-20): "migliora qualità codice , fa tutto con bmad + second brain + filament blueprint" (testo originale in [code-quality-wave.md](./code-quality-wave.md)). Lo leggo cosi':
 
-- **BMAD**: ogni wave ha una story nel modulo owner (`laravel/Modules/<M>/docs/stories/`, [policy](../../../../../bashscripts/docs/modular-bmad-story-policy.md)); questo epic e' trasversale e sta in Xot. Collegamenti: [docs-organization-xot](../stories/docs-organization-xot.story.md), [debug-leftovers-cleanup-xot](../stories/debug-leftovers-cleanup-xot.story.md), [epic dei Service](../../../../../bmad-output/epic-services-to-queueable-actions.md) e [test-database-guard](../stories/test-database-guard.story.md) (sezione 3). Le story di wave stanno nel modulo owner, `laravel/Modules/<M>/docs/stories/`.
+- **BMAD**: ogni wave ha una story nel modulo owner (`laravel/Modules/<M>/docs/stories/`, [policy](../../../../../bashscripts/docs/governance/modular-bmad-story-policy.md)); questo epic e' trasversale e sta in Xot. Collegamenti: [docs-organization-xot](../stories/docs-organization-xot.story.md), [debug-leftovers-cleanup-xot](../stories/debug-leftovers-cleanup-xot.story.md), [epic dei Service](../../../../../bmad-output/epic-services-to-queueable-actions.md) e [test-database-guard](../stories/test-database-guard.story.md) (sezione 3). Le story di wave stanno nel modulo owner, `laravel/Modules/<M>/docs/stories/`.
 - **Second brain**: a fine di ogni wave memoria (`memory/`) e wiki; l'indicizzazione QMD la lancia l'owner, non questo piano.
 - **Filament blueprint**: nel repo e' il contratto scritto a mano `laravel/Modules/<M>/docs/bmad/filament-blueprint.md` (13 moduli su 19 ce l'hanno, [esempio Xot](./filament-blueprint.md)). Il pacchetto `filament/blueprint` **non e' installato** (assente da `composer.json`, `composer.lock` e `vendor/filament`).
 
@@ -153,7 +153,7 @@ Due cricchetti esistono gia' e non vanno duplicati: `ModulesArchitectureTest.php
 3. **`APP_ENV=testing` e' mai impostato fuori dai test** (produzione, CI, IDE)? Decide quanto sono gravi i rami `environment('testing')` di W1 e se la guardia puo' fidarsi dell'ambiente.
 4. **sqlite o MySQL per i test.** La regola dice MySQL; nei moduli ci sono 11 file e 9 TestCase con wiring sqlite.
 5. **`phpstan.neon`**: esclude `Lime*.php` (50 file, 4897 righe di produzione non analizzate) e il 2026-10-20 e' stato aggiunto e tolto un `ignoreErrors` su `typeCoverage` (commit `3951a9ca5` alle 10:21 e `606a380b6` alle 10:28). Solo l'umano modifica il neon: serve sapere chi e perche'.
-6. **Dove stanno gli epic cross-modulo.** La [policy](../../../../../bashscripts/docs/modular-bmad-story-policy.md) dice `bmad-output/`, ma un hook rifiuta i nuovi file li'; questo epic e' in `Xot/docs/bmad/` per quel motivo. Va deciso uno solo dei due.
+6. **Dove stanno gli epic cross-modulo.** La [policy](../../../../../bashscripts/docs/governance/modular-bmad-story-policy.md) dice `bmad-output/`, ma un hook rifiuta i nuovi file li'; questo epic e' in `Xot/docs/bmad/` per quel motivo. Va deciso uno solo dei due.
 7. **`DB_DATABASE_LU`**: la connessione `liveuser_general` ha oggi un fallback fisso `forge13` e la guardia la esclude per nome (`IGNORED_CONNECTIONS`). Definire `DB_DATABASE_LU=<nome>_test` in `.env.testing` e togliere l'esclusione, oppure confermare che l'esclusione resta.
 8. **Db scratch di `pest-scratch-db.sh`**: la guardia lo ammette per prefisso (`claude_scratch_pest_`), perche' non finisce per `_test`. Rinominarlo con suffisso `_test` e togliere il prefisso dalla guardia riduce le eccezioni a una sola regola.
 9. **Fallback reali in `laravel/config/database.php`** (righe 126, 144, 161, 178: `<nome progetto>_data`, `<nome progetto>_user`, `<nome progetto>_survey`): con la guardia un `.env.testing` mancante fa abortire il test, ma il default resta un nome reale. Lasciarli o sostituirli con un valore che non esiste (file di config di produzione: decide l'utente).

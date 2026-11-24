@@ -3,11 +3,7 @@ title: "🚀 FIXCITY - GUIDA RAPIDA SVILUPPATORI"
 type: concept
 tags: [quick, start]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "quick-start 🚀 ptv - guida rapida sviluppatori"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -521,6 +517,7 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 ### Regole Progetto
 - **[Laraxot Rules](./.windsurf/rules/user_15338591596331277449.md)**
 <<<<<<< HEAD
+<<<<<<< HEAD
 - **[Code Quality](ai-agents/code-quality.md)**
 - **[Code Quality](./ai-agents/code-quality.md)**
 =======
@@ -530,6 +527,10 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 - **[Code Quality](ai-agents/code-quality.md)**
 - **[Code Quality](./ai-agents/code-quality.md)**
 >>>>>>> .merge_file_c5OsDJ
+>>>>>>> laraxot/dev
+=======
+- **[Code Quality](ai-agents/code-quality.md)**
+- **[Code Quality](./ai-agents/code-quality.md)**
 >>>>>>> laraxot/dev
 - **[Project Rules](./.windsurf/rules/project-rules.md)**
 
@@ -567,10 +568,7 @@ php artisan optimize:clear
 
 ---
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ---
 
 *Per contribuire al progetto, leggi attentamente questa guida e le regole Laraxot. In caso di dubbi, consulta la

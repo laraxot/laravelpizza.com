@@ -6,6 +6,10 @@ status: review
 created: 2026-11-19
 updated: 2026-11-19
 issues: ["https://github.com/laraxot/base_techplanner_fila5/issues/64"]
+<<<<<<< HEAD
+=======
+qmd: "audit qualita story user"
+>>>>>>> laraxot/dev
 ---
 
 # Story: audit qualita' del modulo User

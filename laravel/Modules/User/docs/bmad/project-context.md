@@ -11,6 +11,10 @@ related:
   - ./prd.md
   - ./architecture.md
   - ./tech-spec.md
+<<<<<<< HEAD
+=======
+qmd: "project context superadmin widget"
+>>>>>>> laraxot/dev
 ---
 
 # Project context — SuperAdmin nel user menu

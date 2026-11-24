@@ -18,6 +18,12 @@ it('has routes/web.php and routes/api.php in every module that uses XotBaseRoute
     $missing = [];
 
     foreach (glob($laravelPath.'/Modules/*/app/Providers/RouteServiceProvider.php') as $provider) {
+        if (! is_string($provider)) {
+            $missing[] = 'non-string glob entry';
+
+            continue;
+        }
+
         $module = dirname($provider, 3);
         $class = 'Modules\\'.basename($module).'\\Providers\\RouteServiceProvider';
 
@@ -32,7 +38,15 @@ it('has routes/web.php and routes/api.php in every module that uses XotBaseRoute
         }
 
         $checked++;
-        $loadedModule = dirname((string) (new ReflectionClass($class))->getDefaultProperties()['module_dir'], 2);
+        $moduleDir = (new ReflectionClass($class))->getDefaultProperties()['module_dir'] ?? null;
+
+        if (! is_string($moduleDir)) {
+            $missing[] = 'module_dir is not a string: '.$class;
+
+            continue;
+        }
+
+        $loadedModule = dirname($moduleDir, 2);
 
         foreach (['web', 'api'] as $file) {
             foreach (array_unique([$module, $loadedModule]) as $root) {

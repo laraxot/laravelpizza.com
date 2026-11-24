@@ -5,11 +5,7 @@ discussions: []
 title: "On-Demand Pattern — Module Notify"
 type: documentation
 created: 2026-05-11
-<<<<<<< HEAD
-updated: 2026-05-11
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 tags: [on-demand, pattern, wiki, qmd]
 related:
   - ../../docs/wiki/rules/on-demand-pattern.md

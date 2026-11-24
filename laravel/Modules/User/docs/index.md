@@ -4,6 +4,10 @@ module: User
 type: note
 status: active
 updated: '2026-11-23'
+<<<<<<< HEAD
+=======
+qmd: "index"
+>>>>>>> laraxot/dev
 ---
 
 # Documentation Index
@@ -1085,11 +1089,7 @@ updated: '2026-11-23'
 - [advanced.md](./html2pdf/advanced.md)
 - [index.md](./html2pdf/index.md)
 - [laravel.md](./html2pdf/laravel.md)
-<<<<<<< HEAD
-- [SECURITY.md](./html2pdf/security.md)
-=======
 - [security.md](./html2pdf/security.md)
->>>>>>> laraxot/dev
 - [styling.md](./html2pdf/styling.md)
 - [usage.md](./html2pdf/usage.md)
 
@@ -1844,11 +1844,7 @@ updated: '2026-11-23'
 
 ## llm-wiki
 
-<<<<<<< HEAD
-- [AGENTS.md](./llm-wiki/AGENTS.md)
-=======
 - [agents.md](./llm-wiki/agents.md)
->>>>>>> laraxot/dev
 - [index.md](./llm-wiki/index.md)
 - [log.md](./llm-wiki/log.md)
 
@@ -1968,13 +1964,9 @@ updated: '2026-11-23'
 - [changelog-3.md](./raw/root-import/changelog-3.md)
 - [changelog-4.md](./raw/root-import/changelog-4.md)
 - [changelog-5.md](./raw/root-import/changelog-5.md)
-<<<<<<< HEAD
-- [CHANGELOG.md](./raw/root-import/changelog.md)
-=======
 - [changelog.md](./raw/root-import/changelog.md)
 - [changelog-5.md](./raw/root-import/changelog-5.md)
 - [changelog.md](./raw/root-import/changelog.md)
->>>>>>> laraxot/dev
 - [git-reset-1.md](./raw/root-import/git-reset-1.md)
 - [git-reset.md](./raw/root-import/git-reset.md)
 - [pest-test-report-1.md](./raw/root-import/pest-test-report-1.md)
@@ -3361,11 +3353,7 @@ updated: '2026-11-23'
 
 ## wiki
 
-<<<<<<< HEAD
-- [AGENTS.md](./wiki/AGENTS.md)
-=======
 - [agents.md](./wiki/agents.md)
->>>>>>> laraxot/dev
 - [architecture.md](./wiki/architecture.md)
 - [auth-patterns.md](./wiki/auth-patterns.md)
 - [bmad-method.md](./wiki/bmad-method.md)

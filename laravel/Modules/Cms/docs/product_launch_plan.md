@@ -1,19 +1,10 @@
 ---
-<<<<<<< HEAD
-title: "Product Launch Plan"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "Product Launch Plan"
-=======
 title: "product launch plan"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "product launch plan"
->>>>>>> laraxot/dev
 issues: []
 discussions: []
 ---
@@ -26,30 +17,6 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-title: "PRODUCT LAUNCH PLAN"
-=======
-<<<<<<< HEAD
-title: "product launch plan"
-=======
-title: "PRODUCT LAUNCH PLAN"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-<<<<<<< HEAD
-qmd: "PRODUCT LAUNCH PLAN"
-=======
-<<<<<<< HEAD
-qmd: "product launch plan"
-=======
-qmd: "PRODUCT LAUNCH PLAN"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-issues: []
-discussions: []
 ## Launch Objectives
 
 1. **Product:** Launch page builder for marketing team
@@ -122,4 +89,3 @@ discussions: []
 | **User Satisfaction** | 4.0/5.0 |
 
 ---
-

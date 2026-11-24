@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+---
+title: "Guida Completa ai Trait del Modulo User - AGGIORNATO POST-IMPLEMENTAZIONE"
+type: guide
+qmd: "traits complete guide guida completa trait"
+---
+>>>>>>> laraxot/dev
 # Guida Completa ai Trait del Modulo User - AGGIORNATO POST-IMPLEMENTAZIONE
 
 ## Stato Implementazione ✅ COMPLETATO

@@ -102,3 +102,25 @@ Ambito: moduli con errori PHPStan attesi (AI / Notify / Xot). Solo inventario; m
 | **Themes/Zero** | Ancora `f1-world-champion-2026-theme-analysis.md` + story dated `quality-gates-phpstan-swarm-2026-09-23.story.md` (lane dedicata, non mass-rename). |
 
 Prossimo (quando hygiene stabile): wave Notify indici (un canonico + link) e Xot `consolidated/phpstan` fuse/alias; Themes Zero F1 `git mv` singolo. Refs: [prompts-standing-order-alignment-phpstan-wave.story.md](./prompts-standing-order-alignment-phpstan-wave.story.md).
+
+<!-- GateGuard facts: (1) no supersede — append only to existing docs-md-filename-date-debt.story.md; (2) linked-from: docs/sprint-status.yaml Xot/docs-md-filename-date-debt + User companion story; (3) edit existing not new file; (4) user: "Story debito: ... avanza un chunk REALISTICO" + "Aggiorna docs/sprint-status.yaml riga Xot/docs-md-filename-date-debt". -->
+
+### Wave 2026-11-24 — prio Xot/User/Performance/Ptv/Themes Zero (docs-guardian)
+
+Ambito: chunk realistico (~18 path), solo `git mv` + stub `superseded_by`, **D=0**.
+Niente phpstan. Indici README aggiornati (Performance/Progressioni/Ptv + Zero).
+
+| Owner | Azione | Note |
+|---|---|---|
+| **Performance** | story datata → `phpstan-l10-performance-swarm.story.md` + stub | file era untracked: contenuto ricostruito da purpose/README/contract |
+| **Themes/Zero** | 2 dated → `*-historical` + stub; `METODI_*` → kebab; `CONFLICT_*` stub | F1 già stub; date ISO/year attive Zero = **0** |
+| **Xot** | `STORY-XXX` → kebab; UPPER `Architecture`/`STORY-512`/`ST-XX` → stub; `consolidated/.../gennaio-1` → batch (gitignored, recovery scratchpad) | date ISO/year attive Xot = **0** |
+| **User** | root dated → historical/stub verso canon (`phpstan-fixes*`, `roadmap`, `translation-syntax`, `git-conflicts`) | residui attivi: **24** (quasi tutti `wiki/archive/**`) |
+| **Ptv** | `METODI-DUPLICATI-ANALISI` → stub verso kebab | date attive = **0** |
+| **Progressioni** | nessun rename (0 violazioni date) | solo README backlink |
+
+**Inventario post-wave (ISO/year/compact, non-stub):** Modules+Themes **~56** attivi (tutti i filename con data incl. stub: **66**). UPPERCASE attivi ~649 (Notify dominante). `cci-2026-*` in IR = dominio CCI, non debt data.
+
+**Lezione:** mai stub-overwriting se `git mv` fallisce su untracked/gitignore — verificare exit code; recover immediato.
+
+Prossimo chunk: User `wiki/archive/**` dated (batch 15–20 stub→canon dove esiste), poi Notify dated root; UPPERCASE solo dove esiste già kebab canonico.

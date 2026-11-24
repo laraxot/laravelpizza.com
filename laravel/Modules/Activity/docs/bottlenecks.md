@@ -339,41 +339,12 @@ class ListActivities extends XotBasePage
 ## Collegamenti tra versioni di bottlenecks.md
 * [bottlenecks.md](../../../../bashscripts/docs/bottlenecks.md)
 * [bottlenecks.md](../../chart/docs/bottlenecks.md)
-* [bottlenecks.md](../../Chart/docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../Gdpr/docs/bottlenecks.md)
-* [bottlenecks.md](../../Gdpr/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../xot/docs/bottlenecks.md)
 * [bottlenecks.md](../../xot/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../xot/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../dental/docs/bottlenecks.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 * [bottlenecks.md](../../patient/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../cms/docs/bottlenecks.md)
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-* [bottlenecks.md](../../User/docs/bottlenecks.md)
-* [bottlenecks.md](../../User/docs/roadmap/bottlenecks.md)
-* [bottlenecks.md](../../ui/docs/bottlenecks.md)
-* [bottlenecks.md](../../ui/docs/roadmap/bottlenecks.md)
-* [bottlenecks.md](../../Lang/docs/bottlenecks.md)
-* [bottlenecks.md](../../Lang/docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../Job/docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../Media/docs/bottlenecks.md)
-* [bottlenecks.md](../../Media/docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../patient/docs/roadmap/bottlenecks.md)
-* [bottlenecks.md](../../Cms/docs/bottlenecks.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 * [bottlenecks.md](../../Chart/docs/bottlenecks.md)
 * [bottlenecks.md](../../Chart/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../Gdpr/docs/bottlenecks.md)

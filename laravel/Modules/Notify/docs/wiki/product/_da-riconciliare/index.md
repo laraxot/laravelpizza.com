@@ -7,11 +7,7 @@ module: notify
 type: product
 tags: [product, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -26,21 +22,9 @@ Documentation for `notify` module categorized as **product**.
 - [`inbound-keting-strategy.md`](./inbound-keting-strategy.md)
 - [`inbound-marketing-strategy.md`](./inbound-marketing-strategy.md)
 - [`product-strategy.md`](./product-strategy.md)
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_zGHfkK
-- [`strategy.md`](./strategy.md)
-=======
->>>>>>> laraxot/dev
-- [`product-strategy.md`](./product-strategy.md)
 - [`strategy.md`](../../../strategy.md)
-- [`product-strategy-documentation-themes.md`](./product-strategy-documentation-themes.md)
 - [`product-strategy.md`](../../../product-strategy.md)
-- [`strategy.md`](../../../strategy.md)
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_ukuAjT
->>>>>>> laraxot/dev
+- [`product-strategy-documentation-themes.md`](./product-strategy-documentation-themes.md)
 - [`token-optimization-strategy.md`](./token-optimization-strategy.md)
 
 ---

@@ -11,6 +11,9 @@ use Webmozart\Assert\Assert;
 
 /**
  * Invia un'email delegando l'invio all'engine configurato.
+ *
+ * @see docs/contracts/send-mail-action.md
+ * @contract docs/contracts/send-mail-action.md
  */
 class SendMailAction
 {

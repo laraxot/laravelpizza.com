@@ -3,11 +3,7 @@ title: "HTML Parity Analysis Rules"
 type: rule
 tags: [html, parity, rules]
 created: 2026-07-14
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "html-parity-rules html parity analysis rules"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -417,17 +413,8 @@ trans('<nome progetto>::segnalazione.heading.title.label')
 - [Translation Conventions](./translation-conventions.md)
 - [Blade Architecture](../laravel/CLAUDE.md#blade-components)
 - [Agnostic Scripts](./agnostic-documentation-rule.md)
-<<<<<<< HEAD
 - [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
 - [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
-=======
-<<<<<<< .merge_file_f0djDb
-- [Multi-Agent Coordination](./multi-agent-coordination-rules.md)
-=======
-- [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
-- [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
->>>>>>> .merge_file_dVyEHD
->>>>>>> laraxot/dev
 
 ---
 

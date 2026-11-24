@@ -221,15 +221,7 @@ foreach ($types as $key => $type) {
 <<<<<<< HEAD
 - [README.md](README.md)
 =======
-<<<<<<< HEAD
 - [README.md](readme.md)
-=======
-<<<<<<< .merge_file_Z8W93j
-- [README.md](./README.md)
-=======
-- [README.md](README.md)
->>>>>>> .merge_file_Ev5LdG
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [.cursor/rules/console-commands-philosophy.mdc](../../../.cursor/rules/console-commands-philosophy.mdc)
 - [.windsurf/rules/console-commands-philosophy.mdc](../../../.windsurf/rules/console-commands-philosophy.mdc)

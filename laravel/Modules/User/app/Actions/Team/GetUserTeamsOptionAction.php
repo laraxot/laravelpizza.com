@@ -7,6 +7,13 @@ namespace Modules\User\Actions\Team;
 use Modules\User\Models\TeamUser;
 use Spatie\QueueableAction\QueueableAction;
 
+<<<<<<< HEAD
+=======
+/**
+ * @see docs/contracts/get-user-teams-option-action.md
+ * @contract docs/contracts/get-user-teams-option-action.md
+ */
+>>>>>>> laraxot/dev
 class GetUserTeamsOptionAction
 {
     use QueueableAction;

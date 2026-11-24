@@ -68,12 +68,8 @@ L'epic nasce dalle duplicazioni elencate in [../brainstorming.md](../brainstormi
 - Epiche di roadmap: [module-roadmap.md](module-roadmap.md) — "Epic A — Contratto e architettura", "Epic C — UX e integrazione".
 - Requisiti: [../prd.md](../prd.md), contesto: [../project-context.md](../project-context.md).
 <<<<<<< HEAD
-- Metodo: [bmad-method.md](../../../Xot/docs/bmad-method.md).
-=======
-<<<<<<< HEAD
-- Metodo: [bmad-method.md](../../../Xot/docs/bmad-method.md).
-=======
 - Metodo: [bmad-method.md](../../wiki/bmad-method.md).
->>>>>>> laraxot/dev
+=======
+- Metodo: [bmad-method.md](../../../Xot/docs/bmad-method.md).
 >>>>>>> laraxot/dev
 - Stato di avanzamento: story in `../stories/` (non create in questa campagna).
