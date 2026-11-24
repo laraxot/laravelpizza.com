@@ -146,3 +146,4 @@ laravel/phpunit.coverage*.*
 /cache/
 ${CLAUDE_PROJECT_DIR:-.}/
 bashscripts/
+.cursor-scratch/
