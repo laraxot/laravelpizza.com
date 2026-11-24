@@ -3,7 +3,11 @@ title: "results"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "results"
 issues: []
 discussions: []
@@ -64,4 +68,8 @@ qmd: "results"
 issues: []
 discussions: []
 *Last Updated: 2026-04-07*
+<<<<<<< HEAD
 *Status: COMPLETED*
+=======
+*Status: COMPLETED*
+>>>>>>> laraxot/dev

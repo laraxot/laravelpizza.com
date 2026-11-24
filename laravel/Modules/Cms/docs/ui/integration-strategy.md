@@ -3,7 +3,11 @@ title: "integration strategy"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "integration strategy"
 issues: []
 discussions: []
@@ -168,5 +172,13 @@ class TailkitAssetManager
 
 ## Collegamenti
 - [Tailkit Components](tailkit-components.md)
+<<<<<<< HEAD
 - [Theme System](../themes/README.md)
+=======
+<<<<<<< HEAD
+- [Theme System](../themes/readme.md)
+=======
+- [Theme System](../themes/README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Performance Guidelines](../performance.md)

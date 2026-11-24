@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # 🚀 NOTIFY - GUIDA RAPIDA SVILUPPATORI
@@ -508,8 +512,18 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 
 ### Documentazione
 - **[Indice Documentazione](./documentation_index.md)**
+<<<<<<< HEAD
 - **[Roadmap Status](./ROADMAP_STATUS_SUMMARY.md)**
 - **[Documentation Status](./project_docs/DOCUMENTATION_STATUS.md)**
+=======
+<<<<<<< HEAD
+- **[Roadmap Status](./roadmap_status_summary.md)**
+- **[Documentation Status](./project_docs/documentation_status.md)**
+=======
+- **[Roadmap Status](./ROADMAP_STATUS_SUMMARY.md)**
+- **[Documentation Status](./project_docs/DOCUMENTATION_STATUS.md)**
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### Framework
 - **[Laravel Docs](https://laravel.com/docs/11.x)**

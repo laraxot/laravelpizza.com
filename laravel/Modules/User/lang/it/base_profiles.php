@@ -4,11 +4,14 @@ declare(strict_types=1);
 
 return [
     'fields' => [
+<<<<<<< HEAD
         'user' => [
             'name' => [
                 'label' => 'user.name',
             ],
         ],
+=======
+>>>>>>> laraxot/dev
         'id' => [
             'label' => 'ID',
         ],
@@ -18,6 +21,14 @@ return [
         'created_at' => [
             'label' => 'Creato il',
         ],
+<<<<<<< HEAD
+=======
+        'user' => [
+            'name' => [
+                'label' => 'Utente',
+            ],
+        ],
+>>>>>>> laraxot/dev
         'first_name' => [
             'label' => 'Nome',
         ],

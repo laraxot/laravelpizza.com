@@ -3,7 +3,11 @@ title: "ACTION"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "ACTION"
 issues: []
 discussions: []
@@ -67,10 +71,10 @@ status: draft
 - `/laravel/Themes/Sixteen/resources/css/homepage-visual-fix.css`
 - Run `npm run build` after changes
 - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-<<<<<<< .merge_file_Xkqkl8
+<<<<<<< HEAD
 - Run `npm run copy` (dismesso: `public_html/themes/<Tema>` e' un symlink a `laravel/Themes/<Tema>/public`) after build
 =======
->>>>>>> .merge_file_r27Hza
+>>>>>>> laraxot/dev
 
 ## Last Screenshots
 

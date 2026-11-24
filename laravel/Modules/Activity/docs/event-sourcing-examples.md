@@ -1,13 +1,9 @@
-<<<<<<< .merge_file_HQ4hAe
-# Practical Event Sourcing Examples for Healthcare
-=======
 ---
 qmd: "activity event sourcing examples md"
 module: theme
 topic: event-sourcing-examples
 canonical: ../../../Themes/docs/shared-components/event-sourcing-examples-duplicate.md
 ---
->>>>>>> .merge_file_LhF94v
 
 ## Table of Contents
 - [Patient Management](#patient-management)
@@ -158,19 +154,6 @@ class PatientAggregateTest extends TestCase
     public function it_can_register_a_patient()
         $patientId = 'patient-123';
 
-<<<<<<< .merge_file_HQ4hAe
-```php
-class PatientProjectorTest extends TestCase
-{
-    use RefreshProjection;
-    
-    /** @test */
-    public function it_projects_patient_registration()
-    {
-        $patientId = 'patient-123';
-        $event = new PatientRegistered(
-            patientId: $patientId,
-=======
         $aggregate = PatientAggregate::retrieve($patientId);
 
         $aggregate->registerPatient(
@@ -191,32 +174,18 @@ class PatientProjectorTest extends TestCase
 
     public function it_projects_patient_registration()
         $event = new PatientRegistered(
->>>>>>> .merge_file_LhF94v
             firstName: 'Jane',
             lastName: 'Smith',
             email: 'jane@example.com',
             registeredAt: now()
         );
-<<<<<<< .merge_file_HQ4hAe
-        
-        event($event);
-        
-=======
 
         event($event);
 
->>>>>>> .merge_file_LhF94v
         $this->assertDatabaseHas('patients', [
             'id' => $patientId,
             'email' => 'jane@example.com',
             'full_name' => 'Jane Smith'
-<<<<<<< .merge_file_HQ4hAe
-        ]);
-    }
-}
-```
-=======
->>>>>>> .merge_file_LhF94v
 
 ## Conclusion
 

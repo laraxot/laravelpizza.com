@@ -2,7 +2,7 @@
 type: note
 tags: [documentation]
 created: 2026-09-26
-updated: 2026-09-26
+updated: 2026-11-19
 qmd: "README"
 issues: []
 discussions: []
@@ -28,7 +28,7 @@ documentation_date: "2026-05-27"
 
 ## Scopo
 
-Tenant è il modulo che gestisce il multi-tenancy dell'ecosistema. Ogni `BaseTenant` ha `slug`, `domain`, `database` e una relazione `users()` con pivot `tenant_user`. È il layer che permette a più organizzazioni di coesistere in un'unica installazione.
+Tenant è il modulo che gestisce il multi-tenancy dell'ecosistema. Il modello `Tenant` ha `slug`, `domain`, `database`, `settings` e una relazione `users()` (`HasMany`); la relazione molti-a-molti utente↔tenant passa dal pivot `TenantUser` del modulo User. È il layer che permette a più organizzazioni di coesistere in un'unica installazione.
 
 ## Religione
 
@@ -44,7 +44,7 @@ Tenant crede che **l'isolamento dei dati sia un diritto, non un optional**. Ogni
 
 ## Politica
 
-- **Pivot `tenant_user`**: `tenant_id`, `user_id`, `permissions`
+- **Pivot `TenantUser`** (modulo User): `tenant_id`, `user_id`
 - **`SaveTenantConfigAction`**: unico punto per salvare config tenant
 - **`HasTenants` trait**: relazione `tenants()` su `BaseUser`
 - **Slug + domain**: identificazione tenant tramite slug o dominio
@@ -73,20 +73,30 @@ Le applicazioni SaaS moderne hanno bisogno di multi-tenancy per servire più cli
 ---
 
 *Documento generato secondo le convenzioni del progetto — modulo `Tenant` — data 2026-05-27*
----
-# Documentation
 
-This directory contains documentation for the module.
+## Come funziona (verificato sul codice)
 
-## Structure
+- **Risoluzione del tenant**: `Actions/GetTenantNameAction` legge `SERVER_NAME` (o l'header Host, o `app.url`),
+  inverte il dominio (`foo.example.com` → `com/example/foo`) e cerca la cartella in `config/`;
+  i symlink sono risolti al path reale. Fallback: `localhost`.
+- **Config del tenant**: `Actions/Config/ResolveTenantConfigValueAction` unisce la config base con quella del tenant;
+  `Actions/Config/SaveTenantConfigAction` e' il punto unico di scrittura.
+- **Database**: `Providers/TenantServiceProvider::registerDB()` crea una connessione per ogni modulo copiando la default
+  e la **alias sulla stessa istanza** della default (una sola sessione/transazione); le connessioni dichiarate
+  esplicitamente nella config del tenant restano separate.
+- **Modelli**: il modello `Tenant` del modulo ha `users()` come `HasMany`; la relazione `tenants()` e la classe
+  astratta `BaseTenant` stanno nel modulo **User** (`Models/Traits/HasTenants`, `Models/BaseTenant`).
 
-- **architecture.md** - Module architecture and design patterns
-- **README.md** - This file
+## Indice della documentazione
 
-## Guidelines
+Questo README e' l'**unico indice** della cartella `docs/` (rimossi `index.md`, `INDEX.md`, `00-index.md`,
+`index-generated.md`: duplicati o generati).
 
-Documentation should be:
-- Clear and concise
-- Example-driven
-- Updated with code changes
-- Use Markdown format (.md)
+- [Scopo del modulo](./purpose.md)
+- [BMAD](./bmad/00-index.md) · [Audit](./bmad/audit.md) · [Piano di miglioramento](./bmad/piano-miglioramento.md)
+- [ECC](./ecc/00-index.md)
+- [Regole](./rules-index.md)
+- [Story](./stories/) · [Audit qualita' corrente](./stories/audit-qualita.story.md)
+- [Wiki](./wiki/)
+
+Regole sui nomi: kebab-case, **nessuna data nel nome** di file o cartelle (la data va nel frontmatter).

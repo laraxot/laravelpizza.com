@@ -44,6 +44,15 @@ Sostituisce il template. Ogni epic nasce da un finding dell'[audit](./audits/med
 - AC1: `StreamVideoAction`, `ConvertController`, Request S3 cancellati o cablati con policy.
 - AC2: se cablato, Pest: utente non autenticato → 401/403 sullo streaming.
 
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_JVgku7
+**Task:**
+- [ ] Task 1
+- [ ] Task 2
+=======
+>>>>>>> .merge_file_xsgdgO
+>>>>>>> laraxot/dev
 ## E6 — Docs e debito (P1-6, P2)
 
 - AC1: nessuna classe inesistente nelle docs (`rg 'UploadMediaAction|ProcessMediaAction|MediaCollections' docs/bmad` → solo nel decision-log/audit come «inesistenti»).

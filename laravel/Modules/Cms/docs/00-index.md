@@ -1,7 +1,11 @@
 ---
 type: note
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "00 index"
 title: "Cms — indice della documentazione"
 description: "Documentazione del modulo Cms: gestione contenuti e pagine."

@@ -8,7 +8,11 @@ use Filament\Facades\Filament;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Scope;
+<<<<<<< HEAD
 use Modules\User\Support\AuthenticatedTenantKey;
+=======
+use Modules\User\Infrastructure\Tenant\AuthenticatedTenantKey;
+>>>>>>> laraxot/dev
 
 /**
  * Limita le query ai record del tenant corrente.

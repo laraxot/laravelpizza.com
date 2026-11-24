@@ -98,7 +98,15 @@ Ogni risorsa concreta segue il pattern: `Resource.php` + `Pages/` + `Schemas/For
 ## Risorse File — pubbliche vs private
 
 - `public_path()` = `public_html/` (root repo), mai `laravel/public/`. Verificabile in `laravel/app/Application.php`.
+<<<<<<< HEAD
 - Asset statici in `app/Resources/` (img, svg, sass, js, views). Il comando `AssetAction` copia asset in `public_html` in fase di boot (`app/Actions/Filament/...`).
+=======
+<<<<<<< HEAD
+- Asset statici in `app/Resources/` (img, svg, sass, js, views). Il comando `AssetAction` copia asset in `public_html` in fase di boot (`app/Actions/Filament/...`).
+=======
+- Asset statici del modulo in `Modules/<Modulo>/public/` (ripiego storico: `resources/`). `Actions/File/AssetAction` **non copia nulla**: restituisce l'URL `assets/<modulo>/...`, servito dal symlink relativo `public_html/assets/<modulo>` → `../../laravel/Modules/<Modulo>/public` creato da `deploy.sh` / `php artisan xot:module-link` (temi: `xot:theme-link`). Vedi [public-html-symlink-assets](../wiki/concepts/public-html-symlink-assets.md).
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Shard architetturali
 

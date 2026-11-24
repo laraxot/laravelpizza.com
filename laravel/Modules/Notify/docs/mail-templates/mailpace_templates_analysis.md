@@ -3,7 +3,11 @@ title: "mailpace templates analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "mailpace templates analysis"
 issues: []
 discussions: []
@@ -220,7 +224,18 @@ return [
 
 ## Collegamenti
 - [Mailpace Templates](https://github.com/mailpace/templates)
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_gZNgki
+- [Email Best Practices](./EMAIL_BEST_PRACTICES.md)
+- [Template Management](./template-management.md) 
+=======
+>>>>>>> laraxot/dev
 - [Email Best Practices](./email_best_practices.md)
 - [Template Management](../template-management.md) 
 - [Email Best Practices](./email_best_practices.md)
 - [Template Management](../template-management.md) 
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_OgSbaj
+>>>>>>> laraxot/dev

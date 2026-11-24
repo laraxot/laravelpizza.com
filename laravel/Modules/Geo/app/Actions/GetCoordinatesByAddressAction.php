@@ -18,6 +18,14 @@ class GetCoordinatesByAddressAction
 
     public function execute(string $address): ?CoordinatesData
     {
+<<<<<<< HEAD
+=======
+        // Indirizzo vuoto: nessun provider può rispondere, inutile spendere richieste (e quota) per scoprirlo.
+        if (trim($address) === '') {
+            return null;
+        }
+
+>>>>>>> laraxot/dev
         // Prova con Google Maps
         $coordinates = $this->getFromGoogle($address)
             ?? $this->getFromBing($address)
@@ -42,11 +50,19 @@ class GetCoordinatesByAddressAction
      *
      * @return array{results: array<int, array{geometry: array{location: array{lat: float, lng: float}}}>}
      */
+<<<<<<< HEAD
     private function getGoogleResponse(string $address): array
     {
         $response = $this->makeHttpRequest(GeoApiEndpoints::GOOGLE_GEOCODING, [
             'address' => $address,
             'key' => config('services.google.maps_api_key'),
+=======
+    private function getGoogleResponse(string $address, string $apiKey): array
+    {
+        $response = $this->makeHttpRequest(GeoApiEndpoints::GOOGLE_GEOCODING, [
+            'address' => $address,
+            'key' => $apiKey,
+>>>>>>> laraxot/dev
         ]);
 
         if (! $response->successful()) {
@@ -65,7 +81,17 @@ class GetCoordinatesByAddressAction
 
     private function getFromGoogle(string $address): ?CoordinatesData
     {
+<<<<<<< HEAD
         $data = $this->getGoogleResponse($address);
+=======
+        // Come per Bing: senza chiave Google rifiuta la richiesta, quindi si passa subito al provider successivo.
+        $apiKey = config('services.google.maps_api_key');
+        if (! is_string($apiKey) || $apiKey === '') {
+            return null;
+        }
+
+        $data = $this->getGoogleResponse($address, $apiKey);
+>>>>>>> laraxot/dev
 
         if (empty($data['results'])) {
             return null;

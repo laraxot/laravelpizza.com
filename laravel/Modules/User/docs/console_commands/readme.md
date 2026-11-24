@@ -225,6 +225,13 @@ Modules/User/
 
 ## Collegamenti
 - [Console Commands Philosophy](console-commands-philosophy.md)
+<<<<<<< HEAD
+=======
+- [User Models](../models/readme.md)
+- [Role Management](../models/role-management.md)
+- [Password Management](../password.md)
+- [README.md](../readme.md)
+>>>>>>> laraxot/dev
 - [User Models](../models/README.md)
 - [Role Management](../models/role-management.md)
 - [Password Management](../password.md)

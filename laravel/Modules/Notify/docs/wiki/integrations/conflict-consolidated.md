@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # conflict — Consolidated Documentation
@@ -83,7 +87,10 @@ dddx([
    // 'text' => $email->text(),
    'getHtmlLayout' => $email->getHtmlLayout(),
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ]);
 */
 ```
@@ -152,7 +159,10 @@ Verificare che:
 
 *Consolidated from: `conflict-resolution-recordnotification.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Contesto del Conflitto
 **File**: `Modules/Notify/app/Notifications/RecordNotification.php`
 **Linee**: 77-91
@@ -423,7 +433,10 @@ Verificare che:
 
 *Consolidated from: `conflict-resolution-sendsmspage.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Contesto del Conflitto
 **File**: `Modules/Notify/app/Filament/Clusters/Test/Pages/SendSmsPage.php`
 **Linee**: 10-13, 20-23
@@ -656,7 +669,10 @@ return $action->execute($smsData);
 
 *Consolidated from: `conflict-resolution-smschannel.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Contesto del Conflitto
 **File**: `Modules/Notify/app/Channels/SmsChannel.php`
 **Linee**: 55-58
@@ -920,7 +936,10 @@ use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasLabel;
 use Modules\Xot\Filament\Traits\TransTrait;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 // DOPO (risolto)
 use Filament\Support\Contracts\HasIcon;
 use Filament\Support\Contracts\HasColor;
@@ -1037,7 +1056,10 @@ enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
 
 *Consolidated from: `conflict-resolution-smsdriverenum.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Problema Identificato
 
 Il file `Modules/Notify/app/Enums/SmsDriverEnum.php` presenta conflitti Git complessi relativi a:
@@ -1161,7 +1183,10 @@ use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasLabel;
 use Modules\Xot\Filament\Traits\TransTrait;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 // DOPO (risolto)
 use Filament\Support\Contracts\HasIcon;
 use Filament\Support\Contracts\HasColor;
@@ -1278,7 +1303,10 @@ enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
 
 *Consolidated from: `conflict-resolution.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Summary
 - **Files resolved**: 44
 - **Strategy**: Keep HEAD/local (ours) side
@@ -1330,7 +1358,10 @@ enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
 - docs/translation-cleanup-plan.md
 - docs/translation-standards.md
 - docs/whatsapp-integration.md
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Config Files
 - composer.json
 
@@ -1343,7 +1374,10 @@ enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
 
 *Consolidated from: `conflict_resolution_recordnotification.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Contesto del Conflitto
 **File**: `/var/www/html/ptvx/laravel/Modules/Notify/app/Notifications/RecordNotification.php`
 **Linee**: 77-91
@@ -1368,7 +1402,10 @@ dddx([
    // 'text' => $email->text(),
    'getHtmlLayout' => $email->getHtmlLayout(),
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ]);
 */
 ```
@@ -1432,7 +1469,10 @@ Verificare che:
 
 *Consolidated from: `conflict_resolution_sendsmspage.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Contesto del Conflitto
 **File**: `/var/www/html/ptvx/laravel/Modules/Notify/app/Filament/Clusters/Test/Pages/SendSmsPage.php`
 **Linee**: 10-13, 20-23
@@ -1508,7 +1548,10 @@ Verificare che:
 
 *Consolidated from: `conflict_resolution_smschannel.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Contesto del Conflitto
 **File**: `/var/www/html/ptvx/laravel/Modules/Notify/app/Channels/SmsChannel.php`
 **Linee**: 55-58
@@ -1571,7 +1614,10 @@ return $action->execute($smsData);
 
 *Consolidated from: `conflict_resolution_smsdriverenum.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Problema Identificato
 
 Il file `Modules/Notify/app/Enums/SmsDriverEnum.php` presenta conflitti Git complessi relativi a:
@@ -1695,7 +1741,10 @@ use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasLabel;
 use Modules\Xot\Filament\Traits\TransTrait;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 // DOPO (risolto)
 use Filament\Support\Contracts\HasIcon;
 use Filament\Support\Contracts\HasColor;
@@ -1812,15 +1861,21 @@ enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
 
 *Consolidated from: `conflicts-analysis.md`*
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> laraxot/dev
 ## Obiettivi Funzionali
 
 ## Decisioni Architetturali
 
 ## Impatto
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Collegamenti correlati
 - [[conflicts_overview]]
 
@@ -1830,13 +1885,19 @@ enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
 
 *Consolidated from: `conflicts.md`*
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> laraxot/dev
 ## File modificati
 
 ## Decisioni adottate
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ---
 
 **Consolidated by:** Phase 2f intelligent merging

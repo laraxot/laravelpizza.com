@@ -3,7 +3,11 @@ title: "DESIGN COMUNI BMAD MASTER PLAN"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "DESIGN COMUNI BMAD MASTER PLAN"
 issues: []
 discussions: []
@@ -296,7 +300,15 @@ Notify:       http://laraxot.local/it/tests/homepage
 ```
 laravel/Modules/Cms/docs/
 ├── README.md
+<<<<<<< HEAD
 ├── page_component_architecture.md    ← Page component logic
+=======
+<<<<<<< HEAD
+├── PAGE_COMPONENT_ARCHITECTURE.md    ← Page component logic
+=======
+├── page_component_architecture.md    ← Page component logic
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ├── BLOCK_DATA_STRUCTURE.md           ← BlockData structure
 └── JSON_CONTENT_GUIDE.md             ← JSON content guide
 ```
@@ -328,7 +340,15 @@ docs/project/
 
 ```
 _bmad-output/
+<<<<<<< HEAD
 ├── design_comuni_index.md            ← BMad index
+=======
+<<<<<<< HEAD
+├── DESIGN_COMUNI_INDEX.md            ← BMad index
+=======
+├── design_comuni_index.md            ← BMad index
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ├── design-comuni-prd.md              ← PRD
 ├── design-comuni-architecture.md     ← Architecture
 ├── design-comuni-ui-spec.md          ← UI Spec
@@ -347,8 +367,18 @@ _bmad-output/
 ```markdown
 ## Cross-References
 
+<<<<<<< HEAD
 - → [Master Index](../../../docs/project/MODULE_DOCS_INDEX.md)
 - → [Theme Detection](../../../docs/project/THEME_DETECTION_SYSTEM.md)
+=======
+<<<<<<< HEAD
+- → [Master Index](../../../docs/project/module_docs_index.md)
+- → [Theme Detection](../../../docs/project/theme_detection_system.md)
+=======
+- → [Master Index](../../../docs/project/MODULE_DOCS_INDEX.md)
+- → [Theme Detection](../../../docs/project/THEME_DETECTION_SYSTEM.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - → [Page Component Architecture](page_component_architecture.md)
 ```
 
@@ -358,9 +388,21 @@ _bmad-output/
 ```markdown
 ## Cross-References
 
+<<<<<<< HEAD
 - → [Master Index](../../../docs/project/MODULE_DOCS_INDEX.md)
 - → [Theme Detection](../../../docs/project/THEME_DETECTION_SYSTEM.md)
 - → [Layout Architecture](LAYOUT_ARCHITECTURE_AND_NAMESPACE.md)
+=======
+<<<<<<< HEAD
+- → [Master Index](../../../docs/project/module_docs_index.md)
+- → [Theme Detection](../../../docs/project/theme_detection_system.md)
+- → [Layout Architecture](layout_architecture_and_namespace.md)
+=======
+- → [Master Index](../../../docs/project/MODULE_DOCS_INDEX.md)
+- → [Theme Detection](../../../docs/project/THEME_DETECTION_SYSTEM.md)
+- → [Layout Architecture](LAYOUT_ARCHITECTURE_AND_NAMESPACE.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ```
 
 ### Link Pattern 3: Master Index → Module/Theme
@@ -374,9 +416,21 @@ _bmad-output/
 - **Files:** 221
 - **Index:** [Sixteen Docs Index](Themes/Sixteen/docs/00-index.md)
 - **Key Topics:**
+<<<<<<< HEAD
   - [Layout Architecture](Themes/Sixteen/docs/LAYOUT_ARCHITECTURE_AND_NAMESPACE.md)
   - [Theme Detection](docs/project/THEME_DETECTION_SYSTEM.md)
   - [Design Comuni Replication](Themes/Sixteen/docs/DESIGN_COMUNI_HTML_REPLICATION.md)
+=======
+<<<<<<< HEAD
+  - [Layout Architecture](Themes/Sixteen/docs/layout_architecture_and_namespace.md)
+  - [Theme Detection](docs/project/theme_detection_system.md)
+  - [Design Comuni Replication](Themes/Sixteen/docs/design_comuni_html_replication.md)
+=======
+  - [Layout Architecture](Themes/Sixteen/docs/LAYOUT_ARCHITECTURE_AND_NAMESPACE.md)
+  - [Theme Detection](docs/project/THEME_DETECTION_SYSTEM.md)
+  - [Design Comuni Replication](Themes/Sixteen/docs/DESIGN_COMUNI_HTML_REPLICATION.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ```
 
 ---
@@ -593,9 +647,21 @@ pages/tests/argomenti.blade.php     # NO
 
 ### Key Documents
 
+<<<<<<< HEAD
 - [Master Index](docs/project/MODULE_DOCS_INDEX.md)
 - [Theme Detection](docs/project/THEME_DETECTION_SYSTEM.md)
 - [Layout Architecture](Themes/Sixteen/docs/LAYOUT_ARCHITECTURE_AND_NAMESPACE.md)
+=======
+<<<<<<< HEAD
+- [Master Index](docs/project/module_docs_index.md)
+- [Theme Detection](docs/project/theme_detection_system.md)
+- [Layout Architecture](Themes/Sixteen/docs/layout_architecture_and_namespace.md)
+=======
+- [Master Index](docs/project/MODULE_DOCS_INDEX.md)
+- [Theme Detection](docs/project/THEME_DETECTION_SYSTEM.md)
+- [Layout Architecture](Themes/Sixteen/docs/LAYOUT_ARCHITECTURE_AND_NAMESPACE.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Page Component](Modules/Cms/docs/page_component_architecture.md)
 
 ### External Resources

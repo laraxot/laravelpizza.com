@@ -3,7 +3,11 @@ title: "ANALISI VISIVA"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "ANALISI VISIVA"
 issues: []
 discussions: []
@@ -19,6 +23,7 @@ discussions: []
 - **FixCity**: http://fixcity.local/it/tests/homepage
 - **Notify**: http://laraxot.local/it/tests/homepage
 
+<<<<<<< HEAD
 ---
 
 title: "ANALISI VISIVA"
@@ -66,6 +71,12 @@ discussions: []
 3. Sostituire navigation con Bootstrap Italia navbar
 
 ---
+=======
+## 1. Header Structure
+### Bootstrap Italia
+### FixCity (Attuale)
+### Notify (Attuale)
+>>>>>>> laraxot/dev
 
 ## 2. Hero Section
 

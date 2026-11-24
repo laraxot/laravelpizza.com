@@ -36,8 +36,29 @@ class ThemeComposer
             throw new \Exception(sprintf('Invalid config for supportedLocales on line %d in %s', __LINE__, class_basename($this)));
         }
 
+<<<<<<< HEAD
         /** @var array<string, array<array-key, mixed>> $langs */
         $languages = collect($langs)->map(function (array $item, string $locale): array {
+=======
+        $languages = collect($langs)->map(function (mixed $item, int|string $key): array {
+            $locale = (string) $key;
+
+            // `supportedLocales` e' configurazione scritta a mano, quindi il
+            // valore non e' necessariamente un array. Dichiararlo `array` nella
+            // firma della closure non lo rendeva tale: lo faceva diventare un
+            // «Argument #1 ($item) must be of type array, string given» lanciato
+            // da dentro Arr::map, che non dice **quale** locale e' sbagliato —
+            // l'unica cosa che serve sapere a chi deve correggere il file
+            // (base_quaeris_fila5#234).
+            if (! is_array($item)) {
+                throw new \InvalidArgumentException(sprintf(
+                    'Expected array at locale %s, got %s',
+                    $locale,
+                    get_debug_type($item),
+                ));
+            }
+
+>>>>>>> laraxot/dev
             // Ensure $item has the required keys
             if (! isset($item['regional'], $item['name'])) {
                 throw new \InvalidArgumentException(sprintf('Expected array with "regional" and "name" keys at locale %s', $locale));
@@ -123,7 +144,11 @@ class ThemeComposer
         }
 
         // Verifichiamo che il valore del campo sia una stringa o lo convertiamo in modo sicuro
+<<<<<<< HEAD
         $value = $lang->{$field};
+=======
+        $value = $this->langFieldValue($lang, $field);
+>>>>>>> laraxot/dev
         if (! is_string($value)) {
             return $field === 'id' ? $currentLocale : '';
         }
@@ -132,6 +157,36 @@ class ThemeComposer
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Legge dal LangData il campo richiesto.
+     *
+     * ## Perche' `mixed`, che di norma non si usa
+     *
+     * `$field` e' un parametro, quindi la proprieta' letta non e' nota mentre si
+     * scrive: `LangData` dichiara `id`, `name`, `flag` e `url` tutte `string`,
+     * ma un blade puo' chiedere un nome che non e' fra quelli. Dichiarare
+     * `string` sarebbe quindi una promessa che questo metodo non e' in grado di
+     * mantenere, e il controllo `is_string()` del chiamante — che e' corretto,
+     * perche' `currentLang()` deve restituire una stringa a chiunque — non
+     * avrebbe piu' senso di esistere.
+     *
+     * ## Perche' e' un metodo
+     *
+     * Per rendere raggiungibile quel controllo in un test senza inventare un
+     * `LangData` malformato. La fixture
+     * `Modules\Lang\Tests\Fixtures\ThemeComposerNonStringFieldStub` lo
+     * sovrascriveva **gia'** restituendo `42`, ma qui non esisteva: l'override
+     * era inerte e il test leggeva il campo vero, ottenendo «Italiano» dove
+     * attendeva la stringa vuota (base_quaeris_fila5#234).
+     */
+    protected function langFieldValue(LangData $lang, string $field): mixed
+    {
+        return $lang->{$field};
+    }
+
+    /**
+>>>>>>> laraxot/dev
      * Build the URL for the admin panel based on the current route and parameters.
      *
      * @param  string  $locale  The locale code to build URL for

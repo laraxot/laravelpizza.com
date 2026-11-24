@@ -3,7 +3,11 @@ title: "notifications implementation guide"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notifications implementation guide"
 issues: []
 discussions: []
@@ -170,9 +174,21 @@ public function toMail(object $notifiable): \Illuminate\Mail\Mailable
 
 ## Collegamenti alla Documentazione Correlata
 
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_8srs3s
+- [ATTACHMENTS_USAGE.md](../email-sending/ATTACHMENTS_USAGE.md)
+- [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/EMAIL_LAYOUTS_BEST_PRACTICES.md)
+- [EMAIL_TROUBLESHOOTING.md](../email-sending/EMAIL_TROUBLESHOOTING.md)
+=======
+>>>>>>> laraxot/dev
 - [ATTACHMENTS_USAGE.md](../email-sending/attachments_usage.md)
 - [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/email_layouts_best_practices.md)
 - [EMAIL_TROUBLESHOOTING.md](../email-sending/email_troubleshooting.md)
 - [ATTACHMENTS_USAGE.md](../email-sending/attachments_usage.md)
 - [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/email_layouts_best_practices.md)
 - [EMAIL_TROUBLESHOOTING.md](../email-sending/email_troubleshooting.md)
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_AaTkGF
+>>>>>>> laraxot/dev

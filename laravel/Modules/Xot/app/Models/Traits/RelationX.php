@@ -91,9 +91,17 @@ trait RelationX
      * Define a polymorphic many-to-many relationship.
      *
      * @template TRelatedModel of \Illuminate\Database\Eloquent\Model
+<<<<<<< HEAD
      *
      * @param  class-string<TRelatedModel>  $related
      * @return MorphToMany<TRelatedModel, $this>
+=======
+     * @template TPivot of \Illuminate\Database\Eloquent\Relations\MorphPivot
+     *
+     * @param  class-string<TRelatedModel>  $related
+     * @param  class-string<TPivot>|null  $pivotClass  Concrete pivot class; inferred from convention when null
+     * @return MorphToMany<TRelatedModel, $this, ($pivotClass is null ? MorphPivot : TPivot), 'pivot'>
+>>>>>>> laraxot/dev
      */
     public function morphToManyX(
         string $related,
@@ -105,11 +113,20 @@ trait RelationX
         ?string $relatedKey = null,
         ?string $relation = null,
         bool $inverse = false,
+<<<<<<< HEAD
+=======
+        ?string $pivotClass = null,
+>>>>>>> laraxot/dev
     ): MorphToMany {
         Assert::subclassOf($related, Model::class);
         Assert::isInstanceOf($related_model = app($related), Model::class);
 
+<<<<<<< HEAD
         $pivot = $this->guessMorphPivot($related);
+=======
+        $pivot = null !== $pivotClass ? app($pivotClass) : $this->guessMorphPivot($related);
+        Assert::isInstanceOf($pivot, MorphPivot::class);
+>>>>>>> laraxot/dev
         $table = $this->qualifyPivotTable($pivot, $related_model, $pivot->getTable());
         $pivotFields = $pivot->getFillable();
 

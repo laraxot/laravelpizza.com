@@ -29,7 +29,15 @@ Questo documento fornisce un indice completo e organizzato di tutta la documenta
 Documenti che forniscono una panoramica generale del modulo Geo, della sua architettura e dei suoi componenti principali.
 
 - [README.md](README.md) - Introduzione generale al modulo Geo
+<<<<<<< HEAD
 - [module_geo.md](module_geo.md) - Panoramica dettagliata del modulo
+=======
+<<<<<<< HEAD
+- [module_geo.md](module_geo.md) - Panoramica dettagliata del modulo
+=======
+- [module_geo.md](module-geo.md) - Panoramica dettagliata del modulo
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [architecture.md](architecture.md) - Architettura del modulo Geo
 - [structure.md](structure.md) - Struttura del modulo e organizzazione dei file
 - [gestione-dati-geografici-compendio.md](gestione-dati-geografici-compendio.md) - Compendio completo sulla gestione dei dati geografici
@@ -38,7 +46,15 @@ Documenti che forniscono una panoramica generale del modulo Geo, della sua archi
 
 Documenti relativi ai modelli dati, alle entità geografiche e alle strutture dati utilizzate nel modulo.
 
+<<<<<<< HEAD
 - [geo_entities.md](geo_entities.md) - Entità geografiche principali
+=======
+<<<<<<< HEAD
+- [geo_entities.md](geo_entities.md) - Entità geografiche principali
+=======
+- [geo_entities.md](geo-entities.md) - Entità geografiche principali
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [comune-model.md](comune-model.md) - Documentazione del modello Comune
 - [comune-unificazione-analisi.md](comune-unificazione-analisi.md) - Analisi dell'unificazione dei modelli
 - [consolidamento-modelli-geografici.md](consolidamento-modelli-geografici.md) - Documento sul consolidamento
@@ -95,7 +111,15 @@ Documenti che descrivono l'integrazione del modulo Geo con altri componenti del 
 - [filament-integration.md](filament-integration.md) - Integrazione con Filament
 - [filament.md](filament.md) - Utilizzo di Filament nel modulo Geo
 - [squire-integration.md](squire-integration.md) - Integrazione con Squire
+<<<<<<< HEAD
 - [address_autocomplete.md](address_autocomplete.md) - Autocompletamento indirizzi
+=======
+<<<<<<< HEAD
+- [address_autocomplete.md](address_autocomplete.md) - Autocompletamento indirizzi
+=======
+- [address_autocomplete.md](address-autocomplete.md) - Autocompletamento indirizzi
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [autocomplete.md](autocomplete.md) - Funzionalità di autocompletamento
 - [location-select.md](location-select.md) - Selezione della posizione
 
@@ -112,16 +136,36 @@ Documenti specifici per l'analisi e il miglioramento dell'AddressResource.
 Documenti relativi all'integrazione con servizi geografici esterni.
 
 - [here.md](here.md) - Integrazione con HERE
+<<<<<<< HEAD
 - [here_com.md](here_com.md) - Utilizzo dell'API HERE.com
+=======
+<<<<<<< HEAD
+- [here_com.md](here_com.md) - Utilizzo dell'API HERE.com
+=======
+- [here_com.md](here-com.md) - Utilizzo dell'API HERE.com
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [tomtom_com.md](tomtom_com.md) - Integrazione con TomTom
 
 ## Best Practices
 
 Guide alle best practices e pattern raccomandati per lo sviluppo nel modulo Geo.
 
+<<<<<<< HEAD
 - [__eloquent.md](__eloquent.md) - Best practices per Eloquent
 - [tips_and_links.md](tips_and_links.md) - Suggerimenti e link utili
 - [laravel_packages.md](laravel_packages.md) - Pacchetti Laravel consigliati
+=======
+<<<<<<< HEAD
+- [__eloquent.md](__eloquent.md) - Best practices per Eloquent
+- [tips_and_links.md](tips_and_links.md) - Suggerimenti e link utili
+- [laravel_packages.md](laravel_packages.md) - Pacchetti Laravel consigliati
+=======
+- [__eloquent.md](--eloquent.md) - Best practices per Eloquent
+- [tips_and_links.md](tips_and_links.md) - Suggerimenti e link utili
+- [laravel_packages.md](laravel-packages.md) - Pacchetti Laravel consigliati
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Riferimenti API
 

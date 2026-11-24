@@ -3,7 +3,11 @@ title: "Notify — brainstorming"
 type: brainstorming
 tags: [notify, brainstorming, risks, open-questions, decisions, channels]
 created: 2026-09-28
+<<<<<<< HEAD
 updated: 2026-10-07
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "Notify brainstorming decisioni aperte scartate rischi canali notifica"
 related:
   - ./README.md

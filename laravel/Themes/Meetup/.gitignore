@@ -99,3 +99,5 @@ phpinsights.php
 .php-cs-fixer.dist.php
 *.lock
 .windsurf/
+docs/archive/
+docs/screenshots/

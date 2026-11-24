@@ -372,14 +372,3 @@ public function it_logs_activity_when_sending_email(): void
 - [Activity - LogActivityAction](../../app/Actions/LogActivityAction.php)
 
 ---
-<<<<<<< .merge_file_o33ePE
-
-**
-**Ultimo Aggiornamento:** 2025-01-22
-**Ultimo Aggiornamento:** 2025-01-22
-**Ultimo Aggiornamento:** 2025-01-22
-**Versione:** 1.0
-**Autore:** System Integration Documentation
-**Stato:** ✅ Production Ready
-=======
->>>>>>> .merge_file_Kzy1l4

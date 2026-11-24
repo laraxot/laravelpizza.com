@@ -3,7 +3,11 @@ title: "design conversion roadmap"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "design conversion roadmap"
 issues: []
 discussions: []
@@ -369,4 +373,7 @@ node bashscripts/github/create-design-issues.mjs
 ```
 
 Then pick issue #1 and get coding! 🚀
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev

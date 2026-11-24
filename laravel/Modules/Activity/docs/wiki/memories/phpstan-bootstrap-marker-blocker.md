@@ -34,3 +34,11 @@ e nessun writer concorrente.
 
 Verifica finale 2026-09-28: tree stabile, PHPStan verde su 10.179 file. Il blocco di
 bootstrap è superato; il Pest mirato resta non verificato per timeout/blocco ambientale.
+
+---
+
+## Contenuto unito da `phpstan-bootstrap-marker-blocker.md`
+
+# phpstan bootstrap marker blocker
+
+Stub alias post-strip data/timestamp. Canonico: [./phpstan-bootstrap-marker-blocker.md](./phpstan-bootstrap-marker-blocker.md).

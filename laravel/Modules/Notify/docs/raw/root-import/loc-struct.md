@@ -10,7 +10,11 @@ description: '<body class=""> <div class="skiplink"> <a class="visually-hidden-f
 tags: [migrato-da-txt, notify]
 converted_from: loc-struct.txt
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 <body class="">

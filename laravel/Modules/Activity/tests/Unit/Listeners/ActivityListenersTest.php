@@ -10,14 +10,6 @@ use ReflectionClass;
 
 uses(TestCase::class);
 
-<<<<<<< .merge_file_LXf2hf
-test('LoginListener can be instantiated', function () {
-    Assert::assertFalse((new ReflectionClass(new LoginListener))->isAbstract());
-});
-
-test('LogoutListener can be instantiated', function () {
-    Assert::assertFalse((new ReflectionClass(new LogoutListener))->isAbstract());
-=======
 test('LoginListener can be instantiated', function (): void {
     $listener = new LoginListener;
     Assert::assertTrue((new ReflectionClass($listener))->hasMethod('handle'));
@@ -26,5 +18,4 @@ test('LoginListener can be instantiated', function (): void {
 test('LogoutListener can be instantiated', function (): void {
     $listener = new LogoutListener;
     Assert::assertTrue((new ReflectionClass($listener))->hasMethod('handle'));
->>>>>>> .merge_file_N3TtzG
 });

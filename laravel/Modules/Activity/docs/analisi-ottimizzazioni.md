@@ -254,16 +254,9 @@ php artisan test
 ---
 
 **
-<<<<<<< .merge_file_vODGwt
-**ultimo aggiornamento**: 20 agosto 2025
-**ultimo aggiornamento**: 20 agosto 2025
-**=======
-**ultimo aggiornamento**: 20 agosto 2025
-=======
 
 **ultimo aggiornamento**: 20 agosto 2025
 
 **=======
->>>>>>> .merge_file_X7Akly
 **analista**: claude code
 **stato**: pronto per implementazione

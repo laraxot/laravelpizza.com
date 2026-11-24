@@ -3,7 +3,11 @@ title: "seasonal email system recommendations"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "seasonal email system recommendations"
 issues: []
 discussions: []
@@ -246,4 +250,8 @@ discussions: []
 **Autore**: iFlow CLI  
 **Data**: 19 Dicembre 2025  
 **Versione**: 1.0  
+<<<<<<< HEAD
 **Approvazione**: Sistema Pronto per la Produzione
+=======
+**Approvazione**: Sistema Pronto per la Produzione
+>>>>>>> laraxot/dev

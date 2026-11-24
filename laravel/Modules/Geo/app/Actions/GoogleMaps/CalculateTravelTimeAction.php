@@ -65,7 +65,11 @@ class CalculateTravelTimeAction
     private function validateInput(LocationData $origin, LocationData $destination): void
     {
         $apiKey = config('services.google.maps_api_key');
+<<<<<<< HEAD
         if (! \is_string($apiKey) || $apiKey === '') {
+=======
+        if (! \is_string($apiKey) || '' === $apiKey) {
+>>>>>>> laraxot/dev
             throw new \RuntimeException('Google Maps API key not configured');
         }
         Assert::notSame(
@@ -111,7 +115,11 @@ class CalculateTravelTimeAction
 
         /** @var string $status */
         $status = $data['status'];
+<<<<<<< HEAD
         if ($status !== 'OK') {
+=======
+        if ('OK' !== $status) {
+>>>>>>> laraxot/dev
             return TravelTimeData::error($status);
         }
 
@@ -124,11 +132,15 @@ class CalculateTravelTimeAction
             return TravelTimeData::error('INVALID_RESPONSE');
         }
 
+<<<<<<< HEAD
 <<<<<<< .merge_file_7xK6wf
         if ($element['status'] !== 'OK') {
 =======
         if ('OK' !== $element['status']) {
 >>>>>>> .merge_file_sU20X4
+=======
+        if ('OK' !== $element['status']) {
+>>>>>>> laraxot/dev
             return TravelTimeData::error($element['status']);
         }
 

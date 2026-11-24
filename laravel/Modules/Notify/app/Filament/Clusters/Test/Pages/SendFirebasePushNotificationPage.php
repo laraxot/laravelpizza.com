@@ -35,7 +35,11 @@ class SendFirebasePushNotificationPage extends XotBasePage
 
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-bell-alert';
 
+<<<<<<< HEAD
     protected string $view = '';
+=======
+    protected string $view = 'notify::filament.pages.send-push';
+>>>>>>> laraxot/dev
 
     protected static ?string $cluster = Test::class;
 

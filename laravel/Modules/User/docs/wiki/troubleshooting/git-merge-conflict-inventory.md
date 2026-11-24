@@ -50,3 +50,40 @@ File con marker (da risolvere forward-only se riappaiono):
 - Rigenerare lista: `git grep -l '^<<<<<<<' -- '*.md' 'docs/'`
 - Non risolvere in parallelo senza lock; preferire wiki canonico `docs/wiki/` rispetto a duplicati root `docs/*.md`.
 - Task dedicato marker doc: `docs/tasks/fix-doc-merge-markers.md`
+<<<<<<< HEAD
+=======
+
+
+---
+
+<!-- Contenuto unito da git-merge-conflict-inventory-.md (rimozione date dai nomi file, issue #64) -->
+
+<!-- recovery from broken basename `git-merge-conflict-inventory-.md` after docs-guardian mass rename -->
+
+Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file evita nomi `*-.md`.
+
+
+
+---
+
+<!-- Contenuto unito da git-merge-conflict-inventory-28.md (rimozione date dai nomi file, issue #64) -->
+
+# Git Conflict Inventory
+
+- Date: 2026-04-28
+- Owner: Modules/User
+- Files with conflict markers: 5
+
+## Files
+
+- docs/archive/historical/volt-folio-logout-error.md
+- docs/archive/historical/volt-folio-logout.md
+- docs/phpstan-fixes-roadmap.md
+- docs/volt-folio-logout-error.md
+- docs/wiki/README.md
+
+## Notes
+
+- Inventory generated from `rg -l "^(<<<<<<<|=======|>>>>>>>)"`.
+- Use this list as a volatile coordination map; re-open each file before editing because other agents may resolve items in parallel.
+>>>>>>> laraxot/dev

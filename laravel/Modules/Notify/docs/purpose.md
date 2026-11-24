@@ -5,6 +5,20 @@ status: active
 created: 2026-09-02
 tags: [notify, purpose, notifiche, template, canali, comunicazione]
 qmd: "notify scopo modulo notifiche template canali email sms comunicazione tracciabilita"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+updated: 2026-11-23
+issues:
+  - "https://github.com/provtv/module_notify_fila5/issues/"
+discussions:
+  - "https://github.com/provtv/module_notify_fila5/discussions/"
+---
+  # DA CREARE — `gh` non autenticato: mai numeri inventati.
+  # gh issue create --repo provtv/module_notify_fila5 --title "<argomento del file>"
+  # DA CREARE — vedi sopra.
+=======
+>>>>>>> laraxot/dev
 updated: 2026-09-02
 issues:
   # DA CREARE — `gh` non autenticato: mai numeri inventati.
@@ -14,6 +28,10 @@ discussions:
   # DA CREARE — vedi sopra.
   - "https://github.com/provtv/module_notify_fila5/discussions/"
 ---
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 # Notify — perche' esiste
 

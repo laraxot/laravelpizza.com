@@ -32,11 +32,18 @@ use Spatie\Sluggable\SlugOptions;
  */
 abstract class BaseTenant extends BaseModel implements HasAvatar, HasMedia, TenantContract
 {
+<<<<<<< HEAD
     use BaseTenantRelationsTrait;
+=======
+>>>>>>> laraxot/dev
     use HasSlug;
     use HasUuids {
         HasUuids::resolveRouteBindingQuery as resolveRouteBindingQueryFromUuids;
     }
+<<<<<<< HEAD
+=======
+    use BaseTenantRelationsTrait;
+>>>>>>> laraxot/dev
     use InteractsWithMedia;
 
     public $incrementing = false;
@@ -74,7 +81,7 @@ abstract class BaseTenant extends BaseModel implements HasAvatar, HasMedia, Tena
     }
 
     /**
-<<<<<<< .merge_file_lyrqx2
+<<<<<<< HEAD
      * @param  Builder<Model>|Model  $query
      * @param  string|int  $value
      * @param  string|null  $field
@@ -82,7 +89,7 @@ abstract class BaseTenant extends BaseModel implements HasAvatar, HasMedia, Tena
      * @param Builder<Model>|Model $query
      * @param string|int $value
      * @param string|null $field
->>>>>>> .merge_file_TsnKCP
+>>>>>>> laraxot/dev
      * @return Builder<Model>
      */
     public function resolveRouteBindingQuery($query, $value, $field = null): Builder

@@ -146,3 +146,13 @@ find Modules/User/lang -name "*.php" -exec php -l {} \;
 **Data**: 2025-01-15
 **Versione**: 1.0
 **Stato**: Completato
+<<<<<<< HEAD
+=======
+
+
+---
+
+<!-- Contenuto unito da translation-syntax-fixes-2025.md (rimozione date dai nomi file, issue #64) -->
+
+See canonical documentation: ../../../Themes/docs/shared-components/translation-syntax-fixes-2025.md
+>>>>>>> laraxot/dev

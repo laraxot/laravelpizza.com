@@ -7,6 +7,11 @@ namespace Modules\Job\Actions\Console;
 use InvalidArgumentException;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * Rifiuta ogni comando Artisan che non sia identico a una voce dell'allowlist.
+ *
+ * @contract docs/contracts/assert-allowed-artisan-command-action.md
+ */
 final class AssertAllowedArtisanCommandAction
 {
     use QueueableAction;

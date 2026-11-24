@@ -57,11 +57,6 @@ tags: [documentation]
 ## 🔗 Collegamenti
 
 - [← Activity Module README](../README.md)
-<<<<<<< .merge_file_VEN3Kc
-- [← Activity Module README](../readme.md)
-- [← Root Documentation](../../../docs/index.md)
-=======
->>>>>>> .merge_file_uKldQK
 - [← Activity Module README](../README.md)
 - [← Root Documentation](../../../../docs/index.md)
 

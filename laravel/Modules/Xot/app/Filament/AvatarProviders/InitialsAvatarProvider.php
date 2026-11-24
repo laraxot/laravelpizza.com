@@ -4,11 +4,20 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\AvatarProviders;
 
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Str;
+>>>>>>> laraxot/dev
 use Filament\AvatarProviders\Contracts\AvatarProvider;
 use Filament\Facades\Filament;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
+<<<<<<< HEAD
 use Illuminate\Support\Str;
+=======
+
+use function Safe\preg_replace;
+>>>>>>> laraxot/dev
 
 /**
  * Avatar predefinito dei pannelli Filament, generato in locale (DCP-139, DCP-137).

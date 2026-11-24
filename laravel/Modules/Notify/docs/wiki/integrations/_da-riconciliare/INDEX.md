@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # notify — integrations
@@ -19,19 +23,124 @@ Documentation for `notify` module categorized as **integrations**.
 - [`-repos.md`](./-repos.md)
 - [`-todo.md`](./-todo.md)
 - [`.md`](./.md)
+<<<<<<< HEAD
 - [`00-index.md`](./00-index.md)
+=======
+<<<<<<< HEAD
+- [`00-INDEX.md`](./00-index.md)
+=======
+- [`00-index.md`](./00-index.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`00-index-1.md`](./00-index-1.md)
 - [`00-index-2.md`](./00-index-2.md)
 - [`00-index.md`](./00-index.md)
 - [`ABSOLUTE_COMPLETION_100.md`](./absolute_completion_100.md)
+<<<<<<< HEAD
 - [`AGENTS.md`](./AGENTS.md)
+=======
+<<<<<<< HEAD
+- [`AGENTS.md`](./agents.md)
+=======
+- [`AGENTS.md`](./AGENTS.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`AGNOSTIC_DOCUMENTATION_RULE.md`](./agnostic_documentation_rule.md)
 - [`AI_AGENT_TEAMS.md`](./ai_agent_teams.md)
 - [`AI_RULES_CRITICAL.md`](./ai_rules_critical.md)
 - [`AI_SKILLS_MASTER_INDEX.md`](./ai_skills_master_index.md)
 - [`ALLINEAMENTO_BOOTSTRAP_ITALIA.md`](./allineamento_bootstrap_italia.md)
 - [`ANALISI_METODI_DUPLICATI_MASTER.md`](./analisi_metodi_duplicati_master.md)
+<<<<<<< HEAD
 - [`API.md`](./API.md)
+=======
+<<<<<<< HEAD
+- [`API.md`](./api.md)
+- [`ARCHITECTURE-DIAGRAMS.md`](./architecture-diagrams.md)
+- [`ARCHITECTURE.md`](./architecture.md)
+- [`ARCHITECTURE_ANALYSIS.md`](./architecture_analysis.md)
+- [`BASHSCRIPTS_GITIGNORE_WORKAROUND.md`](./bashscripts_gitignore_workaround.md)
+- [`BOOST_SKILL_INSTALLATION_ERROR.md`](./boost_skill_installation_error.md)
+- [`BOOST_SKILL_INSTALLATION_SUCCESS.md`](./boost_skill_installation_success.md)
+- [`BOOST_SKILL_SOLUTION_PLAN.md`](./boost_skill_solution_plan.md)
+- [`CLAUDE.md`](./claude.md)
+- [`COMMUNICATION_SYSTEMS_ARCHITECTURE.md`](./communication-systems-architecture.md)
+- [`COMPLETE_SUCCESS.md`](./complete_success.md)
+- [`COMPOSER_MODULES_ARCHITECTURE.md`](./composer_modules_architecture.md)
+- [`COMPOSER_STRATEGY.md`](./composer_strategy.md)
+- [`CONFERMA_CLASSI_BOOTSTRAP.md`](./conferma_classi_bootstrap.md)
+- [`CONTRIBUTING.md`](./contributing.md)
+- [`CORREZIONI_PHPSTAN_COMPLETATE.md`](./correzioni-phpstan-completate.md)
+- [`CSS_ARCHITECTURE.md`](./css_architecture.md)
+- [`DATABASE-SCHEMA.md`](./database-schema.md)
+- [`DECISIONE_BASEMODEL_REFACTORING.md`](./decisione_basemodel_refactoring.md)
+- [`DESIGN_COMUNI_INTEGRATION_COMPLETE.md`](./design_comuni_integration_complete.md)
+- [`DESIGN_COMUNI_TAILWIND.md`](./design_comuni_tailwind.md)
+- [`DOCS_MONITORING_SYSTEM.md`](./docs_monitoring_system.md)
+- [`DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md`](./documentation_analysis_and_improvement_plan.md)
+- [`DOCUMENTATION_ECOSYSTEM.md`](./documentation_ecosystem.md)
+- [`DOCUMENTATION_GOVERNANCE.md`](./documentation_governance.md)
+- [`DOCUMENTATION_IMPROVEMENT_PLAN_MULTI_AGENT.md`](./documentation_improvement_plan_multi_agent.md)
+- [`DOCUMENTATION_INDEX.md`](./documentation_index.md)
+- [`DOCUMENTATION_SYSTEM_UPDATE_COMPLETE.md`](./documentation_system_update_complete.md)
+- [`DRY-KISS-ANALYSIS-MASTER.md`](./dry-kiss-analysis-master.md)
+- [`DryTraitMethods.md`](./drytraitmethods.md)
+- [`FARMSHOPS_INTEGRATION_COMPLETE.md`](./farmshops_integration_complete.md)
+- [`FILAMENT_4_LOGIN_WIDGET_IMPLEMENTATION_SUMMARY.md`](./filament_4_login_widget_implementation_summary.md)
+- [`FILAMENT_5_OFFICIAL_POLICY.md`](./filament_5_official_policy.md)
+- [`FILAMENT_5_UPGRADE_COMPLETE.md`](./filament_5_upgrade_complete.md)
+- [`FILAMENT_VERSION_POLICY.md`](./filament_version_policy.md)
+- [`FILES-CREATED-SESSION-007.md`](./files-created-session-007.md)
+- [`FILES-CREATED-SESSION-REPLIKATE.md`](./files-created-session-replikate.md)
+- [`FINAL_SUMMARY.md`](./final_summary.md)
+- [`FIX_COLORI_HEADER_FOOTER.md`](./fix_colori_header_footer.md)
+- [`FIX_TESTS_HOMEPAGE.md`](./fix_tests_homepage.md)
+- [`FOLIO_ROUTING_FIX.md`](./folio_routing_fix.md)
+- [`GAP_ANALYSIS_IMPLEMENTATION.md`](./gap_analysis_implementation.md)
+- [`GEMINI.md`](./gemini.md)
+- [`GITHUB_ACTIONS_STATUS.md`](./github_actions_status.md)
+- [`GITHUB_SYNC_RULE.md`](./github_sync_rule.md)
+- [`GIT_COMMIT_PUSH_RULE.md`](./git_commit_push_rule.md)
+- [`HEADER_FIX_ANALYSIS.md`](./header_fix_analysis.md)
+- [`HEADER_FIX_COMPLETE.md`](./header_fix_complete.md)
+- [`HTML_PARITY_RULES.md`](./html_parity_rules.md)
+- [`IMMEDIATE_ACTION_PLAN_30_DAYS.md`](./immediate_action_plan_30_days.md)
+- [`IMPLEMENTATIONS_COMPLETED.md`](./implementations_completed.md)
+- [`IMPLEMENTATION_SUMMARY.md`](./implementation_summary.md)
+- [`IMPLEMENTAZIONE_COMPLETA_FINALE.md`](./implementazione_completa_finale.md)
+- [`INDEX.md`](./index.md)
+- [`INSTALLAZIONE_STRUMENTI.md`](./installazione_strumenti.md)
+- [`LEGGI-QUI-DOMANI.md`](./leggi-qui-domani.md)
+- [`LOGGING_BEST_PRACTICES.md`](./logging_best_practices.md)
+- [`LOGIN_PAGE_STATUS.md`](./login_page_status.md)
+- [`LOGIN_PAGE_TRANSLATION_FIX.md`](./login_page_translation_fix.md)
+- [`LOGIN_TIMEOUT_ISSUE.md`](./login_timeout_issue.md)
+- [`MASTER_DOCUMENTATION_INDEX.md`](./master_documentation_index.md)
+- [`MASTER_IMPLEMENTATION_PLAN.md`](./master_implementation_plan.md)
+- [`MASTER_PLAN.md`](./master_plan.md)
+- [`MCP_SERVERS.md`](./mcp_servers.md)
+- [`METODI_DUPLICATI_ANALISI.md`](./metodi_duplicati_analisi.md)
+- [`METODI_DUPLICATI_ANALISI_GLOBALE.md`](./metodi_duplicati_analisi_globale.md)
+- [`MIGRATION_PLAN.md`](./migration_plan.md)
+- [`MISSIONE_SUPER_MUCCA_COMPLETATA.md`](./missione_super_mucca_completata.md)
+- [`MODULE_DOCS_INDEX.md`](./module_docs_index.md)
+- [`00-index.md`](./00-index.md)
+- [`00-index-1.md`](./00-index-1.md)
+- [`00-index-2.md`](./00-index-2.md)
+- [`00-index.md`](./00-index.md)
+- [`ABSOLUTE_COMPLETION_100.md`](./absolute_completion_100.md)
+- [`AGENTS.md`](./agents.md)
+- [`AGNOSTIC_DOCUMENTATION_RULE.md`](./agnostic_documentation_rule.md)
+- [`AI_AGENT_TEAMS.md`](./ai_agent_teams.md)
+- [`AI_RULES_CRITICAL.md`](./ai_rules_critical.md)
+- [`AI_SKILLS_MASTER_INDEX.md`](./ai_skills_master_index.md)
+- [`ALLINEAMENTO_BOOTSTRAP_ITALIA.md`](./allineamento_bootstrap_italia.md)
+- [`ANALISI_METODI_DUPLICATI_MASTER.md`](./analisi_metodi_duplicati_master.md)
+- [`API.md`](./api.md)
+=======
+- [`API.md`](./API.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`architecture-diagrams.md`](./architecture-diagrams.md)
 - [`architecture.md`](./architecture.md)
 - [`ARCHITECTURE_ANALYSIS.md`](./architecture_analysis.md)
@@ -39,6 +148,18 @@ Documentation for `notify` module categorized as **integrations**.
 - [`BOOST_SKILL_INSTALLATION_ERROR.md`](./boost_skill_installation_error.md)
 - [`BOOST_SKILL_INSTALLATION_SUCCESS.md`](./boost_skill_installation_success.md)
 - [`BOOST_SKILL_SOLUTION_PLAN.md`](./boost_skill_solution_plan.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+- [`CLAUDE.md`](./claude.md)
+- [`COMMUNICATION_SYSTEMS_ARCHITECTURE.md`](./communication-systems-architecture.md)
+- [`COMPLETE_SUCCESS.md`](./complete_success.md)
+- [`COMPOSER_MODULES_ARCHITECTURE.md`](./composer_modules_architecture.md)
+- [`COMPOSER_STRATEGY.md`](./composer_strategy.md)
+- [`CONFERMA_CLASSI_BOOTSTRAP.md`](./conferma_classi_bootstrap.md)
+- [`CONTRIBUTING.md`](./contributing.md)
+=======
+>>>>>>> laraxot/dev
 - [`CLAUDE.md`](./CLAUDE.md)
 - [`COMMUNICATION_SYSTEMS_ARCHITECTURE.md`](./communication-systems-architecture.md)
 - [`COMPLETE_SUCCESS.md`](./complete_success.md)
@@ -46,16 +167,49 @@ Documentation for `notify` module categorized as **integrations**.
 - [`COMPOSER_STRATEGY.md`](./composer_strategy.md)
 - [`CONFERMA_CLASSI_BOOTSTRAP.md`](./conferma_classi_bootstrap.md)
 - [`CONTRIBUTING.md`](./CONTRIBUTING.md)
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`CORREZIONI_PHPSTAN_COMPLETATE.md`](./correzioni-phpstan-completate.md)
 - [`CSS_ARCHITECTURE.md`](./css_architecture.md)
 - [`database-schema.md`](./database-schema.md)
 - [`DECISIONE_BASEMODEL_REFACTORING.md`](./decisione_basemodel_refactoring.md)
 - [`DESIGN_COMUNI_INTEGRATION_COMPLETE.md`](./design_comuni_integration_complete.md)
+<<<<<<< HEAD
 - [`DESIGN_COMUNI_TAILWIND.md`](./DESIGN_COMUNI_TAILWIND.md)
+=======
+<<<<<<< HEAD
+- [`DESIGN_COMUNI_TAILWIND.md`](./design_comuni_tailwind.md)
+=======
+- [`DESIGN_COMUNI_TAILWIND.md`](./DESIGN_COMUNI_TAILWIND.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`DOCS_MONITORING_SYSTEM.md`](./docs_monitoring_system.md)
 - [`DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md`](./documentation_analysis_and_improvement_plan.md)
 - [`DOCUMENTATION_ECOSYSTEM.md`](./documentation_ecosystem.md)
 - [`DOCUMENTATION_GOVERNANCE.md`](./documentation_governance.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+- [`DOCUMENTATION_IMPROVEMENT_PLAN_MULTI_AGENT.md`](./documentation_improvement_plan_multi_agent.md)
+- [`DOCUMENTATION_INDEX.md`](./documentation_index.md)
+- [`DOCUMENTATION_SYSTEM_UPDATE_COMPLETE.md`](./documentation_system_update_complete.md)
+- [`dry-kiss-analysis-master.md`](./dry-kiss-analysis-master.md)
+- [`DryTraitMethods.md`](./drytraitmethods.md)
+- [`FARMSHOPS_INTEGRATION_COMPLETE.md`](./farmshops_integration_complete.md)
+- [`FILAMENT_4_LOGIN_WIDGET_IMPLEMENTATION_SUMMARY.md`](./filament_4_login_widget_implementation_summary.md)
+- [`FILAMENT_5_OFFICIAL_POLICY.md`](./filament_5_official_policy.md)
+- [`FILAMENT_5_UPGRADE_COMPLETE.md`](./filament_5_upgrade_complete.md)
+- [`FILAMENT_VERSION_POLICY.md`](./filament_version_policy.md)
+- [`FILES-CREATED-SESSION-007.md`](./files-created-session-007.md)
+- [`FILES-CREATED-SESSION-REPLIKATE.md`](./files-created-session-replikate.md)
+- [`FINAL_SUMMARY.md`](./final_summary.md)
+- [`FIX_COLORI_HEADER_FOOTER.md`](./fix_colori_header_footer.md)
+- [`FIX_TESTS_HOMEPAGE.md`](./fix_tests_homepage.md)
+- [`FOLIO_ROUTING_FIX.md`](./folio_routing_fix.md)
+=======
+>>>>>>> laraxot/dev
 - [`DOCUMENTATION_IMPROVEMENT_PLAN_MULTI_AGENT.md`](./DOCUMENTATION_IMPROVEMENT_PLAN_MULTI_AGENT.md)
 - [`DOCUMENTATION_INDEX.md`](./documentation_index.md)
 - [`DOCUMENTATION_SYSTEM_UPDATE_COMPLETE.md`](./documentation_system_update_complete.md)
@@ -72,11 +226,23 @@ Documentation for `notify` module categorized as **integrations**.
 - [`FIX_COLORI_HEADER_FOOTER.md`](./fix_colori_header_footer.md)
 - [`FIX_TESTS_HOMEPAGE.md`](./fix_tests_homepage.md)
 - [`FOLIO_ROUTING_FIX.md`](./FOLIO_ROUTING_FIX.md)
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`GAP_ANALYSIS_IMPLEMENTATION.md`](./gap_analysis_implementation.md)
 - [`gemini.md`](./gemini.md)
 - [`GITHUB_ACTIONS_STATUS.md`](./github_actions_status.md)
 - [`GITHUB_SYNC_RULE.md`](./github_sync_rule.md)
+<<<<<<< HEAD
 - [`GIT_COMMIT_PUSH_RULE.md`](./GIT_COMMIT_PUSH_RULE.md)
+=======
+<<<<<<< HEAD
+- [`GIT_COMMIT_PUSH_RULE.md`](./git_commit_push_rule.md)
+=======
+- [`GIT_COMMIT_PUSH_RULE.md`](./GIT_COMMIT_PUSH_RULE.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`HEADER_FIX_ANALYSIS.md`](./header_fix_analysis.md)
 - [`HEADER_FIX_COMPLETE.md`](./header_fix_complete.md)
 - [`HTML_PARITY_RULES.md`](./html_parity_rules.md)
@@ -87,9 +253,21 @@ Documentation for `notify` module categorized as **integrations**.
 - [`index.md`](./index.md)
 - [`INSTALLAZIONE_STRUMENTI.md`](./installazione_strumenti.md)
 - [`LEGGI-QUI-DOMANI.md`](./leggi-qui-domani.md)
+<<<<<<< HEAD
 - [`LOGGING_BEST_PRACTICES.md`](./LOGGING_BEST_PRACTICES.md)
 - [`LOGIN_PAGE_STATUS.md`](./login_page_status.md)
 - [`LOGIN_PAGE_TRANSLATION_FIX.md`](./LOGIN_PAGE_TRANSLATION_FIX.md)
+=======
+<<<<<<< HEAD
+- [`LOGGING_BEST_PRACTICES.md`](./logging_best_practices.md)
+- [`LOGIN_PAGE_STATUS.md`](./login_page_status.md)
+- [`LOGIN_PAGE_TRANSLATION_FIX.md`](./login_page_translation_fix.md)
+=======
+- [`LOGGING_BEST_PRACTICES.md`](./LOGGING_BEST_PRACTICES.md)
+- [`LOGIN_PAGE_STATUS.md`](./login_page_status.md)
+- [`LOGIN_PAGE_TRANSLATION_FIX.md`](./LOGIN_PAGE_TRANSLATION_FIX.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`LOGIN_TIMEOUT_ISSUE.md`](./login_timeout_issue.md)
 - [`MASTER_DOCUMENTATION_INDEX.md`](./master_documentation_index.md)
 - [`MASTER_IMPLEMENTATION_PLAN.md`](./master_implementation_plan.md)
@@ -100,6 +278,84 @@ Documentation for `notify` module categorized as **integrations**.
 - [`MIGRATION_PLAN.md`](./migration_plan.md)
 - [`MISSIONE_SUPER_MUCCA_COMPLETATA.md`](./missione_super_mucca_completata.md)
 - [`MODULE_DOCS_INDEX.md`](./module_docs_index.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+- [`MODULE_STRUCTURE.md`](./module_structure.md)
+- [`MULTI_AGENT_COLLABORATION.md`](./multi_agent_collaboration.md)
+- [`MULTI_AGENT_COLLABORATION_GUIDE.md`](./multi_agent_collaboration_guide.md)
+- [`MULTI_AGENT_COORDINATION_RULES.md`](./multi_agent_coordination_rules.md)
+- [`NOTEBOOKLM_INSTALLATION_SUMMARY.md`](./notebooklm_installation_summary.md)
+- [`NOTEBOOKLM_INTEGRATION.md`](./notebooklm_integration.md)
+- [`OLLAMA_OPTIMIZATION_GUIDE.md`](./ollama_optimization_guide.md)
+- [`ON-DEMAND-PATTERN.md`](./on-demand-pattern.md)
+- [`OPENVIKING_BMAD_GSD_RALPH_COMPLETE.md`](./openviking_bmad_gsd_ralph_complete.md)
+- [`PAGINE_CREATE.md`](./pagine_create.md)
+- [`PATTERNS.md`](./patterns.md)
+- [`PERFECTION_ACHIEVED.md`](./perfection_achieved.md)
+- [`PERFECTION_PLAN.md`](./perfection_plan.md)
+- [`PERFORMANCE-OPTIMIZATION.md`](./performance-optimization.md)
+- [`PHASE-1-EXECUTION-DASHBOARD.md`](./phase-1-execution-dashboard.md)
+- [`PHASE-1-RESEARCH-COMPLETE.md`](./phase-1-research-complete.md)
+- [`PHPSTAN_FIXES.md`](./phpstan_fixes.md)
+- [`PHPSTAN_FIX_COORDINATION.md`](./phpstan_fix_coordination.md)
+- [`PHPSTAN_L10.md`](./phpstan_l10.md)
+- [`PRODUCT_LAUNCH_PLAN.md`](./product_launch_plan.md)
+- [`PRODUCT_STRATEGY.md`](./product_strategy.md)
+- [`PROGETTO-COMPLETATO-100-PERCENTO.md`](./progetto-completato-100-percento.md)
+- [`PROJECT-STRUCTURE.md`](./project-structure.md)
+- [`PROJECT.md`](./project.md)
+- [`PROJECT_COMPLETION_STATUS.md`](./project_completion_status.md)
+- [`PROJECT_OVERVIEW.md`](./project_overview.md)
+- [`PROJECT_STATUS.md`](./project_status.md)
+- [`QMD-SETUP.md`](./qmd-setup.md)
+- [`QUICK-START.md`](./quick-start.md)
+- [`QUICK_START.md`](./quick_start.md)
+- [`QWEN.md`](./qwen.md)
+- [`RALPH_LOOP_EXECUTION.md`](./ralph_loop_execution.md)
+- [`README-PHASE-1-EXECUTION.md`](./readme-phase-1-execution.md)
+- [`README_ANALISI_DUPLICATI.md`](./readme_analisi_duplicati.md)
+- [`REDUNDANCY_ANALYSIS.md`](./redundancy_analysis.md)
+- [`REFACTORING_BASEMODEL_ANALISI.md`](./refactoring_basemodel_analisi.md)
+- [`REFACTORING_COMPLETATO.md`](./refactoring_completato.md)
+- [`REPLIKATE-PHASE-1-COMPLETE.md`](./replikate-phase-1-complete.md)
+- [`SESSION-007-SUMMARY.md`](./session-007-summary.md)
+- [`SESSIONE_100_PERCENT.md`](./sessione_100_percent.md)
+- [`SESSIONE_ANALISI_HOMEPAGE.md`](./sessione_analisi_homepage.md)
+- [`SESSIONE_COMPLETA.md`](./sessione_completa.md)
+- [`SESSIONE_FIX_COMPLETATA.md`](./sessione_fix_completata.md)
+- [`SPRINT_PLANNING.md`](./sprint_planning.md)
+- [`START-HERE-REPLIKATE-PHASE2.md`](./start-here-replikate-phase2.md)
+- [`SUPERMEMORY_QUICKSTART.md`](./supermemory_quickstart.md)
+- [`SUPER_MUCCA_COMPLETION.md`](./super_mucca_completion.md)
+- [`SUPER_MUCCA_DOCS_ANALYSIS.md`](./super_mucca_docs_analysis.md)
+- [`SUPER_MUCCA_FINAL_SUMMARY.md`](./super_mucca_final_summary.md)
+- [`SUPER_MUCCA_LOGIN_COMPLETED.md`](./super_mucca_login_completed.md)
+- [`SYNC_REMOTE_REPO_TEST_PLAN.md`](./sync_remote_repo_test_plan.md)
+- [`SYNC_TEST_RESULTS.md`](./sync_test_results.md)
+- [`TAILWIND_APPLY_BOOTSTRAP_ITALIA.md`](./tailwind_apply_bootstrap_italia.md)
+- [`TAILWIND_CONVERSION_COMPLETE.md`](./tailwind_conversion_complete.md)
+- [`TAILWIND_CSS_MIGRATION_COMPLETE.md`](./tailwind_css_migration_complete.md)
+- [`TESTING.md`](./testing.md)
+- [`THEMES_DOCUMENTATION_INDEX.md`](./themes_documentation_index.md)
+- [`THEME_ARCHITECTURE.md`](./theme_architecture.md)
+- [`THEME_SYSTEM_DYNAMIC.md`](./theme_system_dynamic.md)
+- [`TOKEN-OPTIMIZATION-STRATEGY.md`](./token-optimization-strategy.md)
+- [`UI_UX_PRO_MAX_SKILLS_INTEGRATION.md`](./ui_ux_pro_max_skills_integration.md)
+- [`USER_RESEARCH.md`](./user_research.md)
+- [`VERIFICA_HOMEPAGE.md`](./verifica_homepage.md)
+- [`XotBasePivot-Executive-Summary.md`](./xotbasepivot-executive-summary.md)
+- [`ZEN_OF_APP.md`](./zen_of_app.md)
+- [`ZEN_OF_DOCUMENTATION.md`](./zen_of_documentation.md)
+- [`NOTEBOOKLM_INSTALLATION_SUMMARY.md`](./notebooklm_installation_summary.md)
+- [`NOTEBOOKLM_INTEGRATION.md`](./notebooklm_integration.md)
+- [`OLLAMA_OPTIMIZATION_GUIDE.md`](./ollama_optimization_guide.md)
+- [`on-demand-pattern.md`](./on-demand-pattern.md)
+- [`OPENVIKING_BMAD_GSD_RALPH_COMPLETE.md`](./openviking_bmad_gsd_ralph_complete.md)
+- [`PAGINE_CREATE.md`](./pagine_create.md)
+- [`PATTERNS.md`](./patterns.md)
+=======
+>>>>>>> laraxot/dev
 - [`MODULE_STRUCTURE.md`](./MODULE_STRUCTURE.md)
 - [`MULTI_AGENT_COLLABORATION.md`](./MULTI_AGENT_COLLABORATION.md)
 - [`MULTI_AGENT_COLLABORATION_GUIDE.md`](./MULTI_AGENT_COLLABORATION_GUIDE.md)
@@ -111,14 +367,28 @@ Documentation for `notify` module categorized as **integrations**.
 - [`OPENVIKING_BMAD_GSD_RALPH_COMPLETE.md`](./openviking_bmad_gsd_ralph_complete.md)
 - [`PAGINE_CREATE.md`](./pagine_create.md)
 - [`PATTERNS.md`](./PATTERNS.md)
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`PERFECTION_ACHIEVED.md`](./perfection_achieved.md)
 - [`PERFECTION_PLAN.md`](./perfection_plan.md)
 - [`performance-optimization.md`](./performance-optimization.md)
 - [`PHASE-1-EXECUTION-DASHBOARD.md`](./phase-1-execution-dashboard.md)
 - [`PHASE-1-RESEARCH-COMPLETE.md`](./phase-1-research-complete.md)
 - [`phpstan_fixes.md`](./phpstan_fixes.md)
+<<<<<<< HEAD
 - [`PHPSTAN_FIX_COORDINATION.md`](./PHPSTAN_FIX_COORDINATION.md)
 - [`PHPSTAN_L10.md`](./PHPSTAN_L10.md)
+=======
+<<<<<<< HEAD
+- [`PHPSTAN_FIX_COORDINATION.md`](./phpstan_fix_coordination.md)
+- [`PHPSTAN_L10.md`](./phpstan_l10.md)
+=======
+- [`PHPSTAN_FIX_COORDINATION.md`](./PHPSTAN_FIX_COORDINATION.md)
+- [`PHPSTAN_L10.md`](./PHPSTAN_L10.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`product_launch_plan.md`](./product_launch_plan.md)
 - [`product_strategy.md`](./product_strategy.md)
 - [`PROGETTO-COMPLETATO-100-PERCENTO.md`](./progetto-completato-100-percento.md)
@@ -142,6 +412,24 @@ Documentation for `notify` module categorized as **integrations**.
 - [`SESSIONE_100_PERCENT.md`](./sessione_100_percent.md)
 - [`SESSIONE_ANALISI_HOMEPAGE.md`](./sessione_analisi_homepage.md)
 - [`SESSIONE_COMPLETA.md`](./sessione_completa.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+- [`SESSIONE_FIX_COMPLETATA.md`](./sessione_fix_completata.md)
+- [`sprint_planning.md`](./sprint_planning.md)
+- [`START-HERE-REPLIKATE-PHASE2.md`](./start-here-replikate-phase2.md)
+- [`SUPERMEMORY_QUICKSTART.md`](./supermemory_quickstart.md)
+- [`SUPER_MUCCA_COMPLETION.md`](./super_mucca_completion.md)
+- [`SUPER_MUCCA_DOCS_ANALYSIS.md`](./super_mucca_docs_analysis.md)
+- [`SUPER_MUCCA_FINAL_SUMMARY.md`](./super_mucca_final_summary.md)
+- [`SUPER_MUCCA_LOGIN_COMPLETED.md`](./super_mucca_login_completed.md)
+- [`sync_remote_repo_test_plan.md`](./sync_remote_repo_test_plan.md)
+- [`SYNC_TEST_RESULTS.md`](./sync_test_results.md)
+- [`TAILWIND_APPLY_BOOTSTRAP_ITALIA.md`](./tailwind_apply_bootstrap_italia.md)
+- [`TAILWIND_CONVERSION_COMPLETE.md`](./tailwind_conversion_complete.md)
+- [`TAILWIND_CSS_MIGRATION_COMPLETE.md`](./tailwind_css_migration_complete.md)
+=======
+>>>>>>> laraxot/dev
 - [`SESSIONE_FIX_COMPLETATA.md`](./SESSIONE_FIX_COMPLETATA.md)
 - [`sprint_planning.md`](./sprint_planning.md)
 - [`START-HERE-REPLIKATE-PHASE2.md`](./start-here-replikate-phase2.md)
@@ -155,10 +443,27 @@ Documentation for `notify` module categorized as **integrations**.
 - [`TAILWIND_APPLY_BOOTSTRAP_ITALIA.md`](./TAILWIND_APPLY_BOOTSTRAP_ITALIA.md)
 - [`TAILWIND_CONVERSION_COMPLETE.md`](./tailwind_conversion_complete.md)
 - [`TAILWIND_CSS_MIGRATION_COMPLETE.md`](./TAILWIND_CSS_MIGRATION_COMPLETE.md)
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`testing.md`](./testing.md)
 - [`THEMES_DOCUMENTATION_INDEX.md`](./themes_documentation_index.md)
 - [`THEME_ARCHITECTURE.md`](./theme_architecture.md)
 - [`THEME_SYSTEM_DYNAMIC.md`](./theme_system_dynamic.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+- [`TOKEN-OPTIMIZATION-STRATEGY.md`](./token-optimization-strategy.md)
+- [`UI_UX_PRO_MAX_SKILLS_INTEGRATION.md`](./ui_ux_pro_max_skills_integration.md)
+- [`user_research.md`](./user_research.md)
+- [`VERIFICA_HOMEPAGE.md`](./verifica_homepage.md)
+- [`XotBasePivot-Executive-Summary.md`](./xotbasepivot-executive-summary.md)
+- [`ZEN_OF_APP.md`](./zen_of_app.md)
+- [`ZEN_OF_DOCUMENTATION.md`](./zen_of_documentation.md)
+- [`ZEN_OF_<nome progetto>.md`](./zen_of_<nome progetto>.md)
+=======
+>>>>>>> laraxot/dev
 - [`TOKEN-OPTIMIZATION-STRATEGY.md`](./TOKEN-OPTIMIZATION-STRATEGY.md)
 - [`UI_UX_PRO_MAX_SKILLS_INTEGRATION.md`](./ui_ux_pro_max_skills_integration.md)
 - [`user_research.md`](./user_research.md)
@@ -167,6 +472,10 @@ Documentation for `notify` module categorized as **integrations**.
 - [`ZEN_OF_APP.md`](./ZEN_OF_APP.md)
 - [`ZEN_OF_DOCUMENTATION.md`](./zen_of_documentation.md)
 - [`ZEN_OF_<nome progetto>.md`](./ZEN_OF_<nome progetto>.md)
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`_repos.md`](./-repos.md)
 - [`_todo.md`](./-todo.md)
 - [`absolute-completion.md`](./absolute-completion.md)
@@ -181,7 +490,15 @@ Documentation for `notify` module categorized as **integrations**.
 - [`agent-confidence-discipline.md`](./agent-confidence-discipline.md)
 - [`agent-confidence-protocol.md`](./agent-confidence-protocol.md)
 - [`agent-edit-discipline.md`](./agent-edit-discipline.md)
+<<<<<<< HEAD
 - [`AGENTS.md`](./AGENTS.md)
+=======
+<<<<<<< HEAD
+- [`agents.md`](./agents.md)
+=======
+- [`AGENTS.md`](./AGENTS.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`agnostic-documentation-rule.md`](./agnostic-documentation-rule.md)
 - [`ai-agent-teams.md`](./ai-agent-teams.md)
 - [`ai-methodologies.md`](./ai-methodologies.md)
@@ -212,7 +529,15 @@ Documentation for `notify` module categorized as **integrations**.
 - [`analisi-dettagliata-8.md`](./analisi-dettagliata-8.md)
 - [`analisi-dettagliata-9.md`](./analisi-dettagliata-9.md)
 - [`analisi-dettagliata.md`](./analisi-dettagliata.md)
+<<<<<<< HEAD
 - [`analisi-metodi-duplicati-INDEX.md`](./analisi-metodi-duplicati-INDEX.md)
+=======
+<<<<<<< HEAD
+- [`analisi-metodi-duplicati-INDEX.md`](./analisi-metodi-duplicati-index.md)
+=======
+- [`analisi-metodi-duplicati-INDEX.md`](./analisi-metodi-duplicati-INDEX.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`analisi-metodi-duplicati-MASTER.md`](./analisi-metodi-duplicati-master.md)
 - [`analisi-metodi-duplicati-index.md`](./analisi-metodi-duplicati-index.md)
 - [`analisi-metodi-duplicati-master-1.md`](./analisi-metodi-duplicati-master-1.md)
@@ -314,7 +639,15 @@ Documentation for `notify` module categorized as **integrations**.
 - [`class-inheritance-principles.md`](./class-inheritance-principles.md)
 - [`class_inheritance_best_practices.md`](./class_inheritance_best_practices.md)
 - [`class_inheritance_principles.md`](./class_inheritance_principles.md)
+<<<<<<< HEAD
 - [`CLAUDE.md`](./CLAUDE.md)
+=======
+<<<<<<< HEAD
+- [`claude.md`](./claude.md)
+=======
+- [`CLAUDE.md`](./CLAUDE.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`code-fixes-.md`](./code-fixes-.md)
 - [`code-fixes.md`](./code-fixes.md)
 - [`codebase-overview.md`](./codebase-overview.md)
@@ -365,7 +698,15 @@ Documentation for `notify` module categorized as **integrations**.
 - [`contactcolumn-antis-ands.md`](./contactcolumn-antis-ands.md)
 - [`contracts-naming.md`](./contracts-naming.md)
 - [`contracts.md`](./contracts.md)
+<<<<<<< HEAD
 - [`CONTRIBUTING.md`](./CONTRIBUTING.md)
+=======
+<<<<<<< HEAD
+- [`contributing.md`](./contributing.md)
+=======
+- [`CONTRIBUTING.md`](./CONTRIBUTING.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`coverage.md`](./coverage.md)
 - [`current-work-status.md`](./current-work-status.md)
 - [`current-work-status-2.md`](./current-work-status-2.md)
@@ -795,7 +1136,15 @@ Documentation for `notify` module categorized as **integrations**.
 - [`readme-analisi-duplicati.md`](./readme-analisi-duplicati.md)
 - [`readme-en.md`](./readme-en.md)
 - [`readme-phase-1-execution.md`](./readme-phase-1-execution.md)
+<<<<<<< HEAD
 - [`README.md`](./README.md)
+=======
+<<<<<<< HEAD
+- [`readme.md`](./README.md)
+=======
+- [`README.md`](./README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`real-time-messaging.md`](./real-time-messaging.md)
 - [`record-notification-constructor-refactoring.md`](./record-notification-constructor-refactoring.md)
 - [`redundancy-analysis.md`](./redundancy-analysis.md)
@@ -827,7 +1176,15 @@ Documentation for `notify` module categorized as **integrations**.
 - [`second-brain.md`](./second-brain.md)
 - [`security-analysis-1.md`](./security-analysis-1.md)
 - [`security-analysis.md`](./security-analysis.md)
+<<<<<<< HEAD
 - [`SECURITY.md`](./SECURITY.md)
+=======
+<<<<<<< HEAD
+- [`security.md`](./security.md)
+=======
+- [`SECURITY.md`](./SECURITY.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`security_analysis.md`](./security-analysis.md)
 - [`send-email-fix-1.md`](./send-email-fix-1.md)
 - [`send-email-fix.md`](./send-email-fix.md)

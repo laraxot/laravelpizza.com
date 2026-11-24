@@ -1,3 +1,33 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+---
+title: "INDEX"
+created: 2026-11-23
+updated: 2026-11-23
+---
+
+=======
+<<<<<<< .merge_file_DJbd2p
+---
+title: "Indice documentazione — Notify"
+type: index
+status: active
+updated: 2026-11-16
+module: Notify
+qmd: "indice docs modulo Notify BMAD ECC purpose"
+---
+
+# Indice — Notify
+
+- [Purpose](./purpose.md)
+- [BMAD](./bmad/00-index.md)
+- [ECC](./ecc/00-index.md)
+- [Audit](./bmad/audit.md)
+- [Piano di miglioramento](./bmad/piano-miglioramento.md)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 # Notify Module Documentation
 
 ## Overview
@@ -70,18 +100,32 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - [Documentazione Generale SaluteOra](../../../../docs/README.md)
 - [Documentazione Generale PTV](../../../../docs/README.md)
 - [Documentazione Generale SaluteOra](../../../../docs/README.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+- [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
+- [Standard di Documentazione](../../../../docs/documentation_standards.md)
+=======
+>>>>>>> laraxot/dev
 - [Documentazione Generale SaluteOra](../../../../docs/README.md)
 - [Documentazione Generale SaluteOra](../../../../docs/README.md)
 - [Documentazione Generale SaluteOra](../../../../docs/README.md)
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../docs/DOCUMENTATION_STANDARDS.md)
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Modulo Xot](../../Xot/docs/README.md)
 - [Modulo Lang](../../Lang/docs/README.md)
 - [Modulo UI](../../UI/docs/README.md)
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> laraxot/dev
 ## Categorie Principali
 
 ### Architettura e Struttura
@@ -127,7 +171,15 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - [Standard Traduzioni](./translation_standards.md) - Standard per le chiavi di traduzione
 
 ### Testing e Qualità
+<<<<<<< HEAD
 - [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md) - Correzioni per PHPStan Level 10
+=======
+<<<<<<< HEAD
+- [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
+=======
+- [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md) - Correzioni per PHPStan Level 10
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Testing](./testing.md) - Strategie e approcci per il testing
 
 ## Linee Guida per l'Implementazione
@@ -178,7 +230,15 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 
 ### Mail Templates
 - [Index](./mail-templates/index.md) - Indice della documentazione sui template email
+<<<<<<< HEAD
 - [Implementazione Slug](./mail-templates/MAIL_TEMPLATE_SLUG_IMPLEMENTATION.md) - Implementazione del campo slug
+=======
+<<<<<<< HEAD
+- [Implementazione Slug](./mail-templates/mail_template_slug_implementation.md) - Implementazione del campo slug
+=======
+- [Implementazione Slug](./mail-templates/MAIL_TEMPLATE_SLUG_IMPLEMENTATION.md) - Implementazione del campo slug
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### Notifications
 - [Index](./notifications/index.md) - Indice della documentazione sulle notifiche
@@ -261,3 +321,7 @@ Ultimo aggiornamento: 14 Maggio 2025
 *Ultimo aggiornamento: Gennaio 2025*
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 *Ultimo aggiornamento: Gennaio 2025*
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_LeHRke
+>>>>>>> laraxot/dev

@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # 🚨 CRITICAL: bashscripts/ in .gitignore
@@ -157,9 +161,21 @@ gh run list --repo laraxot/<nome repitory>
 
 ## 📚 Related Documentation
 
+<<<<<<< HEAD
 - [Multi-Agent Collaboration Guide](MULTI_AGENT_COLLABORATION_GUIDE.md)
 - [GitHub Sync Rule](github_sync_rule.md)
 - [AI Rules](../.qwen/AI_RULES_CRITICAL.md)
+=======
+<<<<<<< HEAD
+- [Multi-Agent Collaboration Guide](multi_agent_collaboration_guide.md)
+- [GitHub Sync Rule](github_sync_rule.md)
+- [AI Rules](../.qwen/ai_rules_critical.md)
+=======
+- [Multi-Agent Collaboration Guide](MULTI_AGENT_COLLABORATION_GUIDE.md)
+- [GitHub Sync Rule](github_sync_rule.md)
+- [AI Rules](../.qwen/AI_RULES_CRITICAL.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 

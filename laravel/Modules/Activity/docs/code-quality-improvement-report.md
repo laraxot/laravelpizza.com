@@ -1,8 +1,4 @@
 ---
-<<<<<<< .merge_file_R0XPKf
-title: "Code Quality Improvement Report — Activity"
-=======
->>>>>>> .merge_file_yA13gl
 title: "Code Quality Improvement Report: Activity"
 type: report
 tags: [code-quality, phpstan, pest, maintainability]
@@ -17,12 +13,6 @@ discussions:
   - "https://github.com/laraxot/base_techplanner_fila5/discussions/47"
 related:
   - "../../../../docs/stories/STORY-001-code-quality-moduli-temi.md"
-<<<<<<< .merge_file_R0XPKf
----
-
-# Code Quality Improvement Report — Activity
-=======
->>>>>>> .merge_file_yA13gl
 status: draft
 ---
 
@@ -56,40 +46,24 @@ Rilevazione del 17 luglio 2026 sul working tree locale; esclusi vendor e dipende
 
 ## Piano
 
-<<<<<<< .merge_file_R0XPKf
-### P0 — baseline affidabile
-=======
->>>>>>> .merge_file_yA13gl
 ### P0: baseline affidabile
 
 - Eseguire PHPStan L10 e Pest sul solo componente, senza modificare phpstan.neon per occultare errori.
 - Classificare gli esiti come errore reale, dipendenza, test fragile o falso positivo documentato.
 - Conservare comando ed esito ripetibile per ogni correzione.
 
-<<<<<<< .merge_file_R0XPKf
-### P1 — rischio di regressione
-=======
->>>>>>> .merge_file_yA13gl
 ### P1: rischio di regressione
 
 - Aggiungere il test minimo che fallisce per ogni flusso critico scoperto.
 - Correggere la causa nel punto condiviso dopo aver verificato tutti i caller.
 - Sostituire estensioni Filament dirette con la base Laraxot omologa.
 
-<<<<<<< .merge_file_R0XPKf
-### P2 — manutenibilità
-=======
->>>>>>> .merge_file_yA13gl
 ### P2: manutenibilità
 
 - Eliminare codice morto, duplicati e wrapper senza valore prima di nuove astrazioni.
 - Riportare business logic dispersa nelle Actions owner già esistenti.
 - Separare metodi solo lungo responsabilità osservabili.
 
-<<<<<<< .merge_file_R0XPKf
-### P3 — continuità
-=======
->>>>>>> .merge_file_yA13gl
 ### P3: continuità
 
 - Gate CI scoped: PHPStan L10, Pest, formattazione e audit architetturali già presenti.

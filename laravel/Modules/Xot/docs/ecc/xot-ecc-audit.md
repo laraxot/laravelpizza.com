@@ -4,13 +4,39 @@ type: ecc-audit
 status: review
 updated: 2026-11-16
 module: Xot
+<<<<<<< HEAD
 qmd: "ECC audit Xot verification security testing laravel security-review clean-code laravel-verification verification-loop tdd-workflow"
+=======
+<<<<<<< .merge_file_05zmnp
+qmd: "ECC audit Xot security-review clean-code laravel-verification verification-loop tdd-workflow"
+=======
+qmd: "ECC audit Xot verification security testing laravel security-review clean-code laravel-verification verification-loop tdd-workflow"
+>>>>>>> .merge_file_ZAWZVf
+>>>>>>> laraxot/dev
 ---
 
 # ECC audit operativo — Xot
 
 ## Contratto PTVX
 
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_05zmnp
+ECC non sostituisce AGENTS.md/BMAD. Ogni finding: story BMAD, lock, fix causa,
+PHPStan + Pest, aggiornamento docs/QMD.
+
+## Checklist
+
+- [ ] `clean-code`: DRY/KISS, Actions su Services, niente wrapper inutili
+- [ ] `security-review`: policy, mass assignment, export, log, privacy, tenant
+- [ ] `laravel-verification`: route, config, migration additive, container
+- [ ] `verification-loop`: PHPStan level max + Pest mirato
+- [ ] `tdd-workflow`: regressione sui finding P0
+- [ ] `documentation-sync`: story + indici + qmd
+- [ ] `context-engineering`: QMD/graphify prima; registrare il perché dopo
+=======
+>>>>>>> .merge_file_ZAWZVf
+>>>>>>> laraxot/dev
 ECC non sostituisce `AGENTS.md`/BMAD: ogni finding diventa story in [epics.md](../bmad/epics.md), con lock,
 fix alla causa, PHPStan + Pest, aggiornamento docs/QMD. Le abilità ECC sono scelte on-demand
 (`ecc-ptvx-workflow`); qui è registrato **l'esito**, non la checklist vuota.
@@ -31,6 +57,36 @@ fix alla causa, PHPStan + Pest, aggiornamento docs/QMD. Le abilità ECC sono sce
 
 | Voce | N |
 |---|---:|
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_05zmnp
+| app PHP | 602 |
+| test | 329 |
+| resources | 7 |
+| actions | 238 |
+| services | 2 |
+| policies (files approx) | 26 |
+
+## Gate osservati
+
+- PHPStan `Modules` (2026-11-16): 0 errori
+- Pest: pending (ambiente testing)
+
+## Anti-pattern vietati
+
+- baseline/`@phpstan-ignore` senza motivazione
+- test svuotati per silenziare errori
+- migrate:fresh / RefreshDatabase / --force
+- docs con date nel nome file
+- comportamento o screenshot inventati
+
+## Riferimenti
+
+- [00-index](./00-index.md)
+- [BMAD audit](../bmad/audit.md)
+=======
+>>>>>>> .merge_file_ZAWZVf
+>>>>>>> laraxot/dev
 | PHP `app/` | 602 |
 | Test PHP | 329 |
 | Models | 51 |

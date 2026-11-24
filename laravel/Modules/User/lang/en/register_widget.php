@@ -3,15 +3,15 @@
 declare(strict_types=1);
 
 return [
-<<<<<<< .merge_file_uiV5Mi
+<<<<<<< HEAD
+=======
     'sections' => [
         'empty' => [
             'label' => '',
             'heading' => '',
         ],
     ],
-=======
->>>>>>> .merge_file_vvjnSd
+>>>>>>> laraxot/dev
     'fields' => [
         'first_name' => [
             'label' => 'First Name',

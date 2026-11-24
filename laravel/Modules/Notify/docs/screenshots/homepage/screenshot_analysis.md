@@ -3,7 +3,11 @@ title: "screenshot analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "screenshot analysis"
 issues: []
 discussions: []
@@ -35,6 +39,7 @@ URL: https://italia.github.io/design-comuni-pagine-statiche/sito/homepage.html
 - Text: `#1A1A1A`
 - Hover: `#0052A3`
 
+<<<<<<< HEAD
 ---
 
 title: "screenshot analysis"
@@ -66,6 +71,9 @@ Screenshot: hero_bootstrap_italia.png
 - Image aspect ratio: `4:3`
 
 ---
+=======
+### 2. Hero Section
+>>>>>>> laraxot/dev
 
 ### 3. Governance Cards
 ```

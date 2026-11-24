@@ -54,10 +54,6 @@ L'obiettivo è fornire una panoramica neutra e riutilizzabile dei pattern, dei v
 - Audit trail completo, facile rollback
 - Più complesso, ma molto flessibile
 
-<<<<<<< .merge_file_WxqPhf
----
-=======
->>>>>>> .merge_file_buQxqt
 | Lingua | Link |
 |--------|------|
 | 🇮🇹 Presentazione | Questo file (`README.md`) |

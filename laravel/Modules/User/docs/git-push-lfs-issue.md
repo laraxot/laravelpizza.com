@@ -195,3 +195,16 @@ Commits to push: 5 total
 **Status:** ⛔ BLOCKED_ON_INFRASTRUCTURE  
 **Last updated:** 2026-07-28T14:35Z  
 **Fallback:** Run PHPStan L10 locally while waiting for remote LFS fix
+<<<<<<< HEAD
+=======
+
+
+---
+
+<!-- Contenuto unito da git-push-lfs-issue-.md (rimozione date dai nomi file, issue #64) -->
+
+<!-- recovery from broken basename `git-push-lfs-issue-.md` after docs-guardian mass rename -->
+
+Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file evita nomi `*-.md`.
+
+>>>>>>> laraxot/dev

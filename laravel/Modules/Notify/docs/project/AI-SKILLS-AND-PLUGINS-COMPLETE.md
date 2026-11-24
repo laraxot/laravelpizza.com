@@ -3,7 +3,11 @@ title: "AI SKILLS AND PLUGINS COMPLETE"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "AI SKILLS AND PLUGINS COMPLETE"
 issues: []
 discussions: []
@@ -61,7 +65,15 @@ ls -la ~/.claude/skills/notebooklm/
 "Set up NotebookLM authentication"
 
 # 2. Crea notebook su notebooklm.google.com
+<<<<<<< HEAD
 #    - Upload: AGENTS.md, docs/**/*.md, .planning/**/*.md
+=======
+<<<<<<< HEAD
+#    - Upload: agents.md, docs/**/*.md, .planning/**/*.md
+=======
+#    - Upload: AGENTS.md, docs/**/*.md, .planning/**/*.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 #    - Share → Copy link
 
 # 3. Aggiungi a library
@@ -357,7 +369,15 @@ claude
 
 # 3. Create notebook
 #    - Go to notebooklm.google.com
+<<<<<<< HEAD
 #    - Upload: AGENTS.md, docs/, .planning/
+=======
+<<<<<<< HEAD
+#    - Upload: agents.md, docs/, .planning/
+=======
+#    - Upload: AGENTS.md, docs/, .planning/
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 #    - Share → Copy link
 
 # 4. Add to library

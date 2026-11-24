@@ -46,16 +46,60 @@ function envWidgetLoginAs(bool $isSuperAdmin): void
 }
 
 beforeEach(function (): void {
+<<<<<<< HEAD
     $this->envPath = base_path('.env');
+=======
+    // Un file di ambiente **usa e getta**, non quello della macchina.
+    //
+    // Qui c'era `base_path('.env')`: questi test scrivevano sul file vero e lo
+    // ripristinavano in `afterEach`. Basta un'asserzione che interrompe la
+    // corsa prima del ripristino e la configurazione di chi sviluppa resta
+    // alterata — e in un container senza `.env`, come questo, tutti e undici
+    // morivano qui dentro, prima di provare qualunque cosa:
+    //
+    //     FileNotFoundException: File does not exist at path .../laravel/.env
+    //
+    // `EnvData::envFilePath()` legge `xot.env_file` e ripiega su
+    // `base_path('.env')`: in produzione non cambia niente, qui manda la
+    // scrittura in `storage/framework/testing/` (base_quaeris_fila5#244).
+    $dir = storage_path('framework/testing');
+    File::ensureDirectoryExists($dir);
+
+    $this->envPath = $dir.'/env-widget-'.uniqid('', true);
+
+    // Contenuto di partenza: `.env.example`, cioe' il file di riferimento del
+    // progetto, piu' le variabili che questi test modificano — una riga per
+    // ciascuna, perche' il percorso «la riga esiste e viene riscritta» e quello
+    // «la riga non esiste e viene aggiunta» sono due rami diversi di
+    // `EnvData::updateVar()`.
+    File::put($this->envPath, File::get(base_path('.env.example'))."\n".implode("\n", [
+        'TELEGRAM_BOT_TOKEN=',
+        'MAIL_HOST=mailpit',
+        'MAIL_FROM_ADDRESS="noreply@localhost"',
+        'MAIL_FROM_NAME="Quaeris"',
+    ])."\n");
+
+    config(['xot.env_file' => $this->envPath]);
+
+>>>>>>> laraxot/dev
     $this->originalEnvContent = File::get($this->envPath);
     envWidgetLoginAs(true);
 });
 
 afterEach(function (): void {
+<<<<<<< HEAD
     File::put($this->envPath, $this->originalEnvContent);
 });
 
 it('persists a changed field to the real .env file when the form is submitted', function (): void {
+=======
+    if (is_string($this->envPath) && File::exists($this->envPath)) {
+        File::delete($this->envPath);
+    }
+});
+
+it('persists a changed field to the env file when the form is submitted', function (): void {
+>>>>>>> laraxot/dev
     $marker = 'pest-test-'.uniqid('', true);
 
     $widget = new EnvWidget;
@@ -102,7 +146,11 @@ it('mounts with the mail and sms fields pre-filled from the current .env, not em
     expect($data)->toHaveKeys(['mail_mailer', 'mail_host', 'mail_port', 'mail_encryption', 'mail_username', 'mail_password', 'mail_from_address', 'mail_from_name', 'sms_driver', 'netfun_token']);
 });
 
+<<<<<<< HEAD
 it('persists mail_from_address and mail_from_name to the real .env file when changed', function (): void {
+=======
+it('persists mail_from_address and mail_from_name to the env file when changed', function (): void {
+>>>>>>> laraxot/dev
     $marker = uniqid('', true);
 
     $widget = new EnvWidget;
@@ -163,7 +211,11 @@ it('does not drop a field that is selected but missing from the GROUPS map', fun
     expect($schema[0])->toBeInstanceOf(Section::class);
 });
 
+<<<<<<< HEAD
 it('refuses to write .env for a user who is not super-admin', function (): void {
+=======
+it('refuses to write the env file for a user who is not super-admin', function (): void {
+>>>>>>> laraxot/dev
     envWidgetLoginAs(false);
 
     $widget = new EnvWidget;

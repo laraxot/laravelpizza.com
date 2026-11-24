@@ -3,7 +3,11 @@ title: "analisi metodi duplicati index"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "analisi metodi duplicati index"
 issues: []
 discussions: []
@@ -63,8 +67,17 @@ status: draft
 ### Moduli Business Logic
 
 #### User (Autenticazione & Autorizzazione)
+<<<<<<< HEAD
 📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](analisi-metodi-duplicati.md)  
 📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../User/docs/analisi-metodi-duplicati.md)  
+=======
+<<<<<<< .merge_file_07e63T
+📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../Modules/User/docs/analisi-metodi-duplicati.md)  
+=======
+📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../User/docs/analisi-metodi-duplicati.md)  
+>>>>>>> .merge_file_zKbbvY
+>>>>>>> laraxot/dev
 📊 **Dati:** 9 proprietà duplicate, 74 LOC, 87% riduzione  
 🎯 **Priorità:** ALTA - Modulo critico  
 ⚠️ **Note:** Testing intensivo necessario (auth)
@@ -142,15 +155,33 @@ status: draft
 ## 🎨 Documenti per Tema
 
 ### Theme Sixteen (AGID Compliant)
+<<<<<<< HEAD
 📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](analisi-metodi-duplicati.md)  
 📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../../Themes/Sixteen/docs/analisi-metodi-duplicati.md)  
+=======
+<<<<<<< .merge_file_07e63T
+📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../Themes/Sixteen/docs/analisi-metodi-duplicati.md)  
+=======
+📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](analisi-metodi-duplicati.md)  
+📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../../Themes/Sixteen/docs/analisi-metodi-duplicati.md)  
+>>>>>>> .merge_file_zKbbvY
+>>>>>>> laraxot/dev
 ⭐ **Valutazione:** ⭐⭐⭐⭐⭐ ECCELLENTE  
 🎯 **Priorità:** BASSA (già ottimizzato)  
 📝 **Focus:** Testing e documentazione, NO refactoring necessario
 
 ### Theme TwentyOne (Semplice)
+<<<<<<< HEAD
 📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](analisi-metodi-duplicati.md)  
 📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../../Themes/TwentyOne/docs/analisi-metodi-duplicati.md)  
+=======
+<<<<<<< .merge_file_07e63T
+📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../Themes/TwentyOne/docs/analisi-metodi-duplicati.md)  
+=======
+📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](analisi-metodi-duplicati.md)  
+📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../../Themes/TwentyOne/docs/analisi-metodi-duplicati.md)  
+>>>>>>> .merge_file_zKbbvY
+>>>>>>> laraxot/dev
 ⭐ **Valutazione:** ⭐⭐⭐ BUONO  
 🎯 **Priorità:** MEDIA (opzionale ServiceProvider)  
 📝 **Focus:** Valutare se aggiungere ServiceProvider leggero
@@ -173,6 +204,13 @@ status: draft
 4. 🎯 Decisione GO/NO-GO
 
 ### Per Tech Lead / Architect
+<<<<<<< HEAD
+=======
+1. 📖 [MASTER EDITION - Implementazioni Concrete](./analisi-metodi-duplicati-MASTER.md#implementazione-concreta-pronta-all-uso) (1 ora)
+2. 📖 [MASTER EDITION - Script Utili](./analisi-metodi-duplicati-MASTER.md#script-utili) (30 min)
+3. 📖 [Xot Module - Dettagli](analisi-metodi-duplicati.md) (30 min)
+4. 📖 [METODI_DUPLICATI_ANALISI - Filament Details](../Modules/Xot/docs/metodi_duplicati_analisi.md) (1 ora)
+>>>>>>> laraxot/dev
 1. 📖 [MASTER EDITION - Implementazioni Concrete](./analisi-metodi-duplicati-master.md#implementazione-concreta-pronta-all-uso) (1 ora)
 2. 📖 [MASTER EDITION - Script Utili](./analisi-metodi-duplicati-master.md#script-utili) (30 min)
 3. 📖 [Xot Module - Dettagli](analisi-metodi-duplicati.md) (30 min)

@@ -3,7 +3,11 @@ title: "🚀 Installazione Strumenti di Sviluppo"
 type: concept
 tags: [installazione, strumenti]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "installazione-strumenti 🚀 installazione strumenti di sviluppo"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]

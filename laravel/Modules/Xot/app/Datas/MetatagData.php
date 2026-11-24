@@ -494,6 +494,7 @@ class MetatagData extends Data implements Wireable
      */
     public function getFilamentColors(): array
     {
+<<<<<<< HEAD
         $palette = app(PaDesignColorsAction::class)->filamentPalette();
 
         // Un progetto con un proprio marchio può cambiare il colore primario dei pannelli senza toccare la palette PA:
@@ -512,6 +513,9 @@ class MetatagData extends Data implements Wireable
         }
 
         return $palette;
+=======
+        return app(PaDesignColorsAction::class)->filamentPalette();
+>>>>>>> laraxot/dev
     }
 
     /**

@@ -1,7 +1,3 @@
-<<<<<<< .merge_file_tj45Xl
-# Activity — Migrazioni
-=======
->>>>>>> .merge_file_qJISyq
 ---
 title: "Activity: Migrazioni"
 type: note

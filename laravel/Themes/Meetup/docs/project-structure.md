@@ -8,4 +8,4 @@ updated: 2026-05-21
 
 Copia scaffold rimossa. **Fonte canonica** (wiki temi condivisa):
 
-**[PROJECT-STRUCTURE.md](../../docs/PROJECT-STRUCTURE.md)**
+**[project-structure.md](../../docs/project-structure.md)**

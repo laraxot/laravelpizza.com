@@ -336,17 +336,10 @@ Se `module:enable Activity` non funziona:
 ---
 
 **
-<<<<<<< .merge_file_B5S9rK
-**Ultimo aggiornamento**: 27 Ottobre 2025
-**Ultimo aggiornamento**: 27 Ottobre 2025
-**=======
-**Ultimo aggiornamento**: 27 Ottobre 2025
-=======
 
 **Ultimo aggiornamento**: 27 Ottobre 2025
 
 **=======
->>>>>>> .merge_file_YiNV6m
 **Caso Reale**: personale2022.prov.tv.local
 **Soluzione Verificata**: ✅ Testata e funzionante
 **Severità**: Critica (blocca completamente feature Activity Log)

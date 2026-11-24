@@ -19,6 +19,8 @@ use Spatie\QueueableAction\QueueableAction;
  * Usa solo colonne che esistono in `consents` (DCP-285, D-02). L'utente si riconosce da `user_id` + `user_type`, la chiave comune a
  * tutti i percorsi di scrittura: `user_type` e' la classe (SaveGdprConsentsAction) o l'alias morph (HasGdpr::giveConsent).
  * Lo user agent della revoca non e' salvato: manca la colonna `revoked_user_agent` (richiesta di schema nella story DCP-285).
+ *
+ * @contract docs/contracts/revoke-gdpr-consents-action.md
  */
 class RevokeGdprConsentsAction
 {

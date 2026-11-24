@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\File;
 use Modules\Xot\Actions\Arr\SaveArrayAction;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * Fonde dati nel file di config PHP del tenant corrente e lo riscrive.
+ *
+ * @contract docs/contracts/save-tenant-config-action.md
+ */
 class SaveTenantConfigAction
 {
     use QueueableAction;

@@ -11,11 +11,11 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
  * 2026-11-17: absorbed add_lang_column, repair_users_type_state_columns and
  * add_digital_identity_columns_to_users_table (removed: one model = one migration).
  */
-<<<<<<< .merge_file_MtjSsL
+<<<<<<< HEAD
 return new class extends XotBaseMigration
 =======
 return new class() extends XotBaseMigration
->>>>>>> .merge_file_SYhCPe
+>>>>>>> laraxot/dev
 {
     /**
      * Run the migrations.

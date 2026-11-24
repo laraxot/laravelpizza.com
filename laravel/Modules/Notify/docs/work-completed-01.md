@@ -3,7 +3,11 @@ title: "work completed 2025 10 01"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "work completed 2025 10 01"
 issues: []
 discussions: []
@@ -126,7 +130,15 @@ portandole allo stato attuale (Q4 2025) e allineandole con i progressi effettivi
 
 ### 5. 👥 Aggiornamento Roadmap Modulo User
 
+<<<<<<< HEAD
 **File**: `/laravel/Modules/User/docs/roadmap.md`
+=======
+<<<<<<< HEAD
+**File**: `/laravel/Modules/User/docs/ROADMAP.md`
+=======
+**File**: `/laravel/Modules/User/docs/roadmap.md`
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 **Modifiche**:
 - ✅ Ristrutturato "Prossimi Passi" in Q4 2025 e Q1 2026
@@ -233,7 +245,15 @@ portandole allo stato attuale (Q4 2025) e allineandole con i progressi effettivi
 
 ### Roadmap
 - **[ROADMAP_STATUS_SUMMARY.md](./roadmap_status_summary.md)** - Status generale
+<<<<<<< HEAD
 - **[MASTER_ROADMAP.md](./laravel/MASTER_ROADMAP.md)** - Roadmap strategica 18 mesi
+=======
+<<<<<<< HEAD
+- **[MASTER_ROADMAP.md](./laravel/master_roadmap.md)** - Roadmap strategica 18 mesi
+=======
+- **[MASTER_ROADMAP.md](./laravel/MASTER_ROADMAP.md)** - Roadmap strategica 18 mesi
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **[roadmap-master.md](./project_docs/roadmaps/roadmap-master.md)** - Consolidamento moduli
 
 ### Documentazione
@@ -242,9 +262,28 @@ portandole allo stato attuale (Q4 2025) e allineandole con i progressi effettivi
 - **[QUICK_START.md](./quick_start.md)** - Guida rapida sviluppatori
 
 ### Moduli Principali
+<<<<<<< HEAD
 - **[Fixcity ROADMAP_2025.md](./laravel/Modules/Fixcity/docs/ROADMAP_2025.md)**
 - **[User roadmap.md](./laravel/Modules/User/docs/roadmap.md)**
 - **[Sixteen ROADMAP_2025.md](./laravel/Themes/Sixteen/docs/ROADMAP_2025.md)**
+=======
+<<<<<<< HEAD
+- **[Fixcity ROADMAP_2025.md](./laravel/Modules/Fixcity/docs/roadmap_2025.md)**
+- **[User ROADMAP.md](./laravel/Modules/User/docs/roadmap.md)**
+- **[DOCUMENTATION_INDEX.md](./documentation_index.md)** - Indice completo
+- **[DOCUMENTATION_STATUS.md](./project_docs/documentation_status.md)** - Stato documentazione
+- **[QUICK_START.md](./quick_start.md)** - Guida rapida sviluppatori
+
+### Moduli Principali
+- **[Fixcity ROADMAP_2025.md](./laravel/Modules/Fixcity/docs/roadmap_2025.md)**
+- **[User roadmap.md](./laravel/Modules/User/docs/roadmap.md)**
+- **[Sixteen ROADMAP_2025.md](./laravel/Themes/Sixteen/docs/roadmap_2025.md)**
+=======
+- **[Fixcity ROADMAP_2025.md](./laravel/Modules/Fixcity/docs/ROADMAP_2025.md)**
+- **[User roadmap.md](./laravel/Modules/User/docs/roadmap.md)**
+- **[Sixteen ROADMAP_2025.md](./laravel/Themes/Sixteen/docs/ROADMAP_2025.md)**
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 
@@ -258,7 +297,15 @@ portandole allo stato attuale (Q4 2025) e allineandole con i progressi effettivi
 ### Aggiornamenti
 - [x] ROADMAP_STATUS_SUMMARY.md aggiornato
 - [x] Fixcity ROADMAP_2025.md aggiornato
+<<<<<<< HEAD
 - [x] User roadmap.md aggiornato
+=======
+<<<<<<< HEAD
+- [x] User ROADMAP.md aggiornato
+=======
+- [x] User roadmap.md aggiornato
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [x] Sixteen ROADMAP_2025.md aggiornato
 
 ### Nuovi Documenti

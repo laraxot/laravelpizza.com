@@ -5,7 +5,11 @@ type: decision
 module: Geo
 tags: [adr, geo, openstreetmap, nominatim, privacy, gdpr, consenso]
 created: 2026-11-17
+<<<<<<< HEAD
 updated: 2026-11-18
+=======
+updated: 2026-11-24
+>>>>>>> laraxot/dev
 status: accepted
 issues:
   - "https://github.com/laraxot/theme_sixteen_fila5/issues/106"
@@ -13,6 +17,12 @@ related:
   - ../../../Gdpr/docs/stories/dcp-454-terze-parti-prima-del-consenso-gravatar-e-openstreetmap.story.md
   - ../../app/Actions/Osm/FetchOsmTileAction.php
   - ../../app/Actions/Osm/QueryNominatimAction.php
+<<<<<<< HEAD
+=======
+  - ../contracts/fetch-osm-tile-action.md
+  - ../contracts/query-nominatim-action.md
+  - ../../tests/Feature/OsmProxyTest.php
+>>>>>>> laraxot/dev
 ---
 
 # ADR: tile e geocoding OpenStreetMap passano dal nostro server
@@ -57,3 +67,17 @@ related:
 - Gli strati scelti esplicitamente dal cittadino (satellitare e topografico Esri, umanitario OSM France) restano diretti: partono
   solo per una sua scelta, e informativa e cookie policy lo dicono.
 - Da fare se il traffico cresce: pulizia periodica della cache dei tile piu' vecchi; valutare un tile server proprio.
+<<<<<<< HEAD
+=======
+
+## Verifica
+
+- `cd laravel && vendor/bin/pest Modules/Geo/tests/Feature/OsmProxyTest.php` (11 test): tile servito dal nostro dominio
+  senza cookie con User-Agent e Referer, cache di almeno 7 giorni con richiesta condizionale, copia scaduta se OSM è giù,
+  404 fuori griglia senza chiamare OSM, Nominatim in JSON con parametri filtrati e cache, 422 senza chiamata, spegnimento
+  da config (503), mai più di 1 richiesta al secondo. Le singole regole hanno un group: vedi le tabelle Invarianti di
+  [FetchOsmTileAction](../contracts/fetch-osm-tile-action.md) e [QueryNominatimAction](../contracts/query-nominatim-action.md).
+- Solo revisione: che i layout che vogliono zero terze parti dichiarino `data-geo-tile-url` / `data-geo-nominatim-url` su
+  `<html>` (lettura in `resources/js/components/map/endpoints.js`) e che nessun componente JS chiami Nominatim mentre si
+  digita. Nessun test controlla oggi le richieste del browser.
+>>>>>>> laraxot/dev

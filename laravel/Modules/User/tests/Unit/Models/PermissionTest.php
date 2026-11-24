@@ -7,7 +7,11 @@ namespace Modules\User\Tests\Unit\Models;
 use Modules\User\Models\Permission;
 use Modules\User\Tests\TestCase;
 
+<<<<<<< HEAD
 uses(TestCase::class);
+=======
+uses(\Modules\User\Tests\TestCase::class);
+>>>>>>> laraxot/dev
 
 class PermissionTest extends TestCase
 {

@@ -21,7 +21,26 @@ SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/job-au
 
 | Metrica | Valore |
 |---|---:|
+<<<<<<< .merge_file_7pzTBI
+| PHP `app/` | 176 |
+| Test | 84 |
+| Resources | 9 |
+| Actions | 16 |
+| Services | 1 |
+| Policy `return true` | 5 |
+| Marker | 0 |
+
+## Lo scopo in una frase **Job rende visibile e governabile tutto cio' che accade fuori dalla richiesta HTTP: code, importazioni, esportazioni, lavori pianificati — e soprattutto i loro
+
+## Gate
+
+- PHPStan modulo / `Modules`: 0 errori (verifica 2026-11-16).
+- Pest: da eseguire in ambiente testing non produttivo.
+- Security/runtime: story figlie su finding P0/P1 dell'audit dettagliato.
+| PHP `app/` / test PHP / `*Test.php` | 176 / 55 / 49 |
+=======
 | PHP `app/` / test PHP / `*Test.php` | 176 / 55 / 49 (ricontato 2026-11-19: 176 / 56 / 49; la sintesi precedente riportava «Test 84», smentita dal conteggio) |
+>>>>>>> .merge_file_1bLDNF
 | Resource / Widget / Actions / Services | 9 / 8 / 16 / 1 (morto) |
 | Policy (su `UserBasePolicy` / `JobBasePolicy`) | 3 / 13 (ricontato 2026-11-19, dopo E1: 0 / 15 + `JobBasePolicy`) |
 | Policy `return true` | 5 nella sintesi precedente; oggi 2, solo in `JobBasePolicy::before()` (bypass `super-admin` / `job::admin`) |

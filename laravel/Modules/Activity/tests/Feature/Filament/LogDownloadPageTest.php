@@ -1,10 +1,7 @@
 <?php
 
 declare(strict_types=1);
-<<<<<<< .merge_file_7RRs8z
-=======
 
->>>>>>> .merge_file_W9UV0U
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Facades\File;
 use Mockery;

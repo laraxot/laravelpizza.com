@@ -3,7 +3,11 @@ title: "da Support a Actions: Filosofia"
 type: concept
 tags: [support, actions, philosophy]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "support-to-actions-philosophy da support a actions: filosofia"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -26,8 +30,17 @@ status: draft
 
 # da Support a Actions: Filosofia
 
+<<<<<<< HEAD
 > **Aggiornato 2026-07-12:** `app/Support/` è **eliminato** nel modulo Notify. Canonico: [wiki/concepts/no-app-support-queueable-actions.md](../../concepts/no-app-support-queueable-actions.md).
 > **Aggiornato 2026-07-12:** `app/Support/` è **eliminato** nel modulo Notify. Canonico: [wiki/concepts/no-app-support-queueable-actions.md](../../concepts/no-app-support-queueable-actions.md).
+=======
+<<<<<<< .merge_file_h3mQzK
+> **Aggiornato 2026-07-12:** `app/Support/` è **eliminato** nel modulo Notify. Canonico: [wiki/concepts/no-app-support-queueable-actions.md](wiki/concepts/no-app-support-queueable-actions.md).
+=======
+> **Aggiornato 2026-07-12:** `app/Support/` è **eliminato** nel modulo Notify. Canonico: [wiki/concepts/no-app-support-queueable-actions.md](../../concepts/no-app-support-queueable-actions.md).
+> **Aggiornato 2026-07-12:** `app/Support/` è **eliminato** nel modulo Notify. Canonico: [wiki/concepts/no-app-support-queueable-actions.md](../../concepts/no-app-support-queueable-actions.md).
+>>>>>>> .merge_file_tde2M6
+>>>>>>> laraxot/dev
 
 ## Principio (post-migrazione)
 
@@ -66,9 +79,20 @@ Tutte le classi in `app/Actions/` DEVONO:
 
 ## Collegamenti
 
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_h3mQzK
+- [no-app-support-queueable-actions](wiki/concepts/no-app-support-queueable-actions.md)
+- [claude-audit-static](wiki/concepts/claude-audit-static.md)
+=======
+>>>>>>> laraxot/dev
 - [no-app-support-queueable-actions](../../concepts/no-app-support-queueable-actions.md)
 - [claude-audit-static](../../concepts/claude-audit-static.md)
 - [no-app-support-queueable-actions](../../concepts/no-app-support-queueable-actions.md)
 - [claude-audit-static](../../concepts/claude-audit-static.md)
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_tde2M6
+>>>>>>> laraxot/dev
 - Issue [#372](https://github.com/laraxot/platform/issues/372) · Discussion [#273](https://github.com/laraxot/platform/discussions/273)
 - Issue [#372](https://github.com/laraxot/<nome repitory>/issues/372) · Discussion [#273](https://github.com/laraxot/<nome repitory>/discussions/273)

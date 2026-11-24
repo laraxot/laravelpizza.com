@@ -3,7 +3,11 @@ title: "02 BMAD Workflow"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "02 BMAD Workflow"
 issues: []
 discussions: []
@@ -11,6 +15,16 @@ discussions: []
 
 # 🎨 BMAD Workflow (Breakthrough Method for Agile AI-Driven Development)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+**Part of**: [00-INDEX.md](00-index.md) — AI Agents Coordination  
+**Related**: [01-GSD-WORKFLOW.md](01-gsd-workflow.md) — GSD Method
+
+## 📋 Overview
+
+=======
+>>>>>>> laraxot/dev
 **Part of**: [00-index.md](00-index.md) — AI Agents Coordination  
 **Related**: [01-gsd-workflow.md](01-gsd-workflow.md) — GSD Method
 
@@ -35,6 +49,10 @@ BMAD is an AI-driven agile development framework with 12+ specialized agents.
 
 ---
 
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🔧 Installation
 
 ```bash
@@ -127,7 +145,15 @@ Agents discuss together and reach consensus.
 ### DO
 - ✅ Use specialized agents for their domain
 - ✅ Engage in structured discussions
+<<<<<<< HEAD
 - ✅ Document decisions in STATE.md
+=======
+<<<<<<< HEAD
+- ✅ document decisions in state.md
+=======
+- ✅ Document decisions in STATE.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - ✅ Update requirements as you learn
 
 ### DON'T

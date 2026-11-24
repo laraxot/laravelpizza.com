@@ -13,14 +13,9 @@ Consulta la documentazione delle traduzioni qui:
 - [Introduzione alle Traduzioni](../../Lang/docs/introduction.md)
 - [Struttura delle Traduzioni](../../Lang/docs/structure.md)
 - [Gestione dei File di Lingua](../../Lang/docs/module_lang.md)
-<<<<<<< .merge_file_3oXNDK
-- [Introduzione alle Traduzioni](../../lang/docs/introduction.md)
-- [Struttura delle Traduzioni](../../lang/docs/structure.md)
-=======
 
 - [Introduzione alle Traduzioni](../../Lang/docs/introduction.md)
 - [Struttura delle Traduzioni](../../Lang/docs/structure.md)
->>>>>>> .merge_file_IH9rYP
 - [Gestione dei File di Lingua](../../lang/docs/module_lang.md)
 
 Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../../Lang/docs/).
@@ -29,38 +24,20 @@ Consulta la documentazione delle traduzioni qui:
 - [Introduzione alle Traduzioni](../../Lang/docs/introduction.md)
 - [Struttura delle Traduzioni](../../Lang/docs/structure.md)
 - [Gestione dei File di Lingua](../../Lang/docs/module_lang.md)
-<<<<<<< .merge_file_3oXNDK
-- [Introduzione alle Traduzioni](../../lang/docs/introduction.md)
-- [Struttura delle Traduzioni](../../lang/docs/structure.md)
-- [Gestione dei File di Lingua](../../lang/docs/module_lang.md)
-=======
->>>>>>> .merge_file_IH9rYP
 
 - [Introduzione alle Traduzioni](../../Lang/docs/introduction.md)
 - [Struttura delle Traduzioni](../../Lang/docs/structure.md)
 - [Gestione dei File di Lingua](../../lang/docs/module_lang.md)
 
-<<<<<<< .merge_file_3oXNDK
-Consulta la documentazione delle traduzioni qui:
-- [Introduzione alle Traduzioni](../../Lang/docs/introduction.md)
-- [Struttura delle Traduzioni](../../Lang/docs/structure.md)
-- [Gestione dei File di Lingua](../../Lang/docs/module_lang.md)
-=======
->>>>>>> .merge_file_IH9rYP
 ## Collegamento Bidirezionale
 
 ## Collegamenti
 
 - [Torna a README](./README.md)
-<<<<<<< .merge_file_3oXNDK
-- [Torna a README](./readme.md)
-- [Vai a Struttura](./structure.md)
-=======
 
 - [Torna a README](./README.md)
 - [Vai a Struttura](./structure.md)
 
->>>>>>> .merge_file_IH9rYP
 - [Torna a README](./README.md)- [Vai a Struttura](./structure.md)
 - [Vai a Traduzioni](./translations.md)
 
@@ -102,10 +79,7 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 * [lang-link.md](laravel/Modules/Activity/docs/lang-link.md)
 * [lang-link.md](laravel/Modules/Patient/docs/lang-link.md)
 * [lang-link.md](laravel/Modules/Cms/docs/lang-link.md)
-<<<<<<< .merge_file_3oXNDK
-=======
 
->>>>>>> .merge_file_IH9rYP
 * [lang-link.md](laravel/modules/chart/docs/lang-link.md)
 * [lang-link.md](laravel/modules/reporting/docs/lang-link.md)
 * [lang-link.md](laravel/modules/gdpr/docs/lang-link.md)
@@ -135,7 +109,3 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 * [lang-link.md](laravel/modules/activity/docs/lang-link.md)
 * [lang-link.md](laravel/modules/patient/docs/lang-link.md)
 * [lang-link.md](laravel/modules/cms/docs/lang-link.md)
-<<<<<<< .merge_file_3oXNDK
-* [lang-link.md](laravel/Modules/Cms/docs/lang-link.md)
-=======
->>>>>>> .merge_file_IH9rYP

@@ -6,12 +6,6 @@ sources: []
 confidence: high
 created: 2026-05-06
 updated: 2026-07-16
-<<<<<<< .merge_file_rEqPga
-updated: 2026-05-06
-updated: 2026-05-06
-updated: 2026-07-16
-=======
->>>>>>> .merge_file_ZaGjmV
 tags: [filament, xotbase, zen-pattern, resource]
 related:
   - ../../Xot/docs/wiki/concepts/xotbase-resourceform-zen-pattern.md
@@ -24,11 +18,6 @@ related:
 
 **Core Rule**: `XotBaseResource` base class owns the `form()` and `table()` methods. Subclasses MUST NOT override them.
 
-<<<<<<< .merge_file_rEqPga
-La frontiera vale per tutto il codice del modulo, inclusi test e fixture: una classe di supporto non puo estendere `Filament\*` direttamente. Deve usare la base dello stesso percorso in `Modules\Xot\Filament\*`, cosi i test esercitano lo stesso contratto architetturale della produzione.
-
-=======
->>>>>>> .merge_file_ZaGjmV
 La frontiera vale per tutto il codice del modulo, inclusi test e fixture: una classe di supporto non puo estendere `Filament\*` direttamente. Deve usare la base dello stesso percorso in `Modules\Xot\Filament\*`, cosi i test esercitano lo stesso contratto architetturale della produzione.
 The base class performs auto-discovery:
 - `form()` → looks for `Schemas/<Model>Form::configure($schema)`
@@ -96,10 +85,7 @@ XotBaseResource::table()
 - [ ] No `->label()` calls (LangServiceProvider owns labels)
 - [ ] Test e fixture non estendono classi `Filament\*` direttamente
 - [ ] Safe functions preserved (`use function Safe\...`)
-<<<<<<< .merge_file_rEqPga
-=======
 
->>>>>>> .merge_file_ZaGjmV
 - [ ] Test e fixture non estendono classi `Filament\*` direttamente- [ ] Safe functions preserved (`use function Safe\...`)
 
 ## References

@@ -1,13 +1,4 @@
 ---
-<<<<<<< .merge_file_ebjnDl
-title: Root .md Consolidation Analysis — Activity Module
-date: 2026-08-18
-status: analysis
----
-
-# Consolidation Analysis — Activity Module
-=======
->>>>>>> .merge_file_LYQ9At
 title: Root .md Consolidation Analysis: Activity Module
 date: 2026-08-18
 status: analysis
@@ -41,10 +32,6 @@ qmd: "consolidation analysis   activity module activity"
 - **Isolation:** Activity owns its migration policy; policy should live in Activity module.
 
 **When to move:**
-<<<<<<< .merge_file_ebjnDl
-- **NOW** — No delays. This is a safety-critical document.
-=======
->>>>>>> .merge_file_LYQ9At
 - **NOW**: No delays. This is a safety-critical document.
 
 ## Post-Move Structure
@@ -58,10 +45,6 @@ laravel/Modules/Activity/
 ├── app/
 ├── config/
 ├── database/
-<<<<<<< .merge_file_ebjnDl
-│   ├── migrations/ (sacred — no refresh)
-=======
->>>>>>> .merge_file_LYQ9At
 │   ├── migrations/ (sacred: no refresh)
 │   ├── factories/
 │   └── seeders/
@@ -77,11 +60,6 @@ laravel/Modules/Activity/
 
 ## Related Modules
 
-<<<<<<< .merge_file_ebjnDl
-- **Progressioni** — depends on Activity; same constraint applies to Progressioni migrations.
-- **Tenant** — shared tenancy; migration policy affects all modules.
-=======
->>>>>>> .merge_file_LYQ9At
 - **Progressioni**: depends on Activity; same constraint applies to Progressioni migrations.
 - **Tenant**: shared tenancy; migration policy affects all modules.
 

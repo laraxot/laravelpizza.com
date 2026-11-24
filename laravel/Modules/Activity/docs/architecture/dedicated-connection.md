@@ -62,13 +62,6 @@ Il **doppio fallback** `env('DB_DATABASE_ACTIVITY', env('DB_DATABASE'))` è la c
 ## .env.testing — NESSUNA variabile ACTIVITY
 
 ```bash
-<<<<<<< .merge_file_zFA3ri
-# ✅ CORRETTO — .env.testing
-DB_DATABASE=<nome progetto>_data_test
-DB_DATABASE=techplanner_data_test
-DB_DATABASE=techplanner_data_test
-=======
->>>>>>> .merge_file_RR1IPE
 # ✅ CORRETTO: .env.testing
 DB_DATABASE=<nome progetto>_data_test=======
 DB_DATABASE=techplanner_data_test
@@ -79,17 +72,10 @@ DB_PASSWORD=marco
 
 Il fallback in `database.php` garantisce che la connessione `activity` usi automaticamente
 `<nome progetto>_data_test` senza configurazione aggiuntiva nei test.
-<<<<<<< .merge_file_zFA3ri
-`techplanner_data_test` senza configurazione aggiuntiva nei test.
-`techplanner_data_test` senza configurazione aggiuntiva nei test.
-`<nome progetto>_data_test` senza configurazione aggiuntiva nei test.=======
-`techplanner_data_test` senza configurazione aggiuntiva nei test.
-=======
 
 `techplanner_data_test` senza configurazione aggiuntiva nei test.
 
 `<nome progetto>_data_test` senza configurazione aggiuntiva nei test.=======
->>>>>>> .merge_file_RR1IPE
 
 ---
 

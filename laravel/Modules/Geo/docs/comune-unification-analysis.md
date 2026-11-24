@@ -75,7 +75,15 @@ discussions: []
 ## 7. Collegamenti
 - [geo-json-model.md](geo-json-model.md)
 - [geo-sushi-comparison.md](geo-sushi-comparison.md)
+<<<<<<< HEAD
 - [module_geo.md](module_geo.md)
+=======
+<<<<<<< HEAD
+- [module_geo.md](module_geo.md)
+=======
+- [module_geo.md](module-geo.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Xot/module-structure.md](../../xot/docs/module-structure.md)
 
 ---

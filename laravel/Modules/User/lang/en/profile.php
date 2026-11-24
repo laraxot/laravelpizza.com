@@ -4,19 +4,15 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-<<<<<<< .merge_file_HKsP5h
+<<<<<<< HEAD
         'label' => 'Profiles',
-        'plural' => 'Profili',
-        'group' => [
-            'label' => 'User management',
-            'description' => 'Gestione dei profili utente',
 =======
         'label' => 'Profile',
+>>>>>>> laraxot/dev
         'plural' => 'Profiles',
         'group' => [
             'label' => 'User management',
             'description' => 'Manage user profiles',
->>>>>>> .merge_file_mvKnit
         ],
         'icon' => 'user-profile-animated',
         'sort' => '73',
@@ -78,21 +74,6 @@ return [
     ],
     'actions' => [
         'edit' => [
-<<<<<<< .merge_file_HKsP5h
-            'label' => 'Modifica',
-            'success' => 'Profile updated.',
-            'error' => 'Errore durante l\'aggiornamento del profilo',
-        ],
-        'delete' => [
-            'label' => 'Elimina',
-            'success' => 'Profile deleted.',
-            'error' => 'Errore durante l\'eliminazione del profilo',
-        ],
-    ],
-    'messages' => [
-        'update_success' => 'Profile updated.',
-        'no_permission' => 'Non hai i permessi per modificare questo profilo.',
-=======
             'label' => 'Edit',
             'success' => 'Profile updated successfully!',
             'error' => 'Error updating the profile',
@@ -106,7 +87,6 @@ return [
     'messages' => [
         'update_success' => 'Profile updated successfully!',
         'no_permission' => 'You do not have permission to edit this profile.',
->>>>>>> .merge_file_mvKnit
     ],
     'privacy_policy' => [
         'title' => 'Privacy policy',
@@ -121,11 +101,10 @@ return [
         'button' => 'Delete Account',
         'delete' => 'Delete Account',
     ],
-<<<<<<< .merge_file_HKsP5h
-    'my_profile' => 'My profile',
+    'my_profile' => 'My Profile',
+<<<<<<< HEAD
     'subheading' => 'Your personal details and password',
 =======
-    'my_profile' => 'My Profile',
     'subheading' => 'Manage your personal details and security',
->>>>>>> .merge_file_mvKnit
+>>>>>>> laraxot/dev
 ];

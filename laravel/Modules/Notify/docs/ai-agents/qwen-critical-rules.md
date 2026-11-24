@@ -3,7 +3,11 @@ title: "qwen critical rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "qwen critical rules"
 issues: []
 discussions: []
@@ -175,5 +179,13 @@ namespace::context.collection.element.type
 
 - [Indice QWEN](./qwen-split-index.md)
 - [critical-rules.md](./critical-rules.md)
+<<<<<<< HEAD
 - [qwen.md originale](../../qwen.md)
+=======
+<<<<<<< HEAD
+- [QWEN.md originale](../../qwen.md)
+=======
+- [qwen.md originale](../../qwen.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Index principale](./index.md)

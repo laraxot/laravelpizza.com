@@ -1,8 +1,4 @@
 ---
-<<<<<<< .merge_file_iKTtd9
-title: "Activity — BMAD Method Integration"
-=======
->>>>>>> .merge_file_X4IxeH
 title: "Activity: BMAD Method Integration"
 description: "BMAD workflow documentation per il modulo Activity"
 module: "Activity"
@@ -21,12 +17,6 @@ extended_by: 40
 documentation_date: "2026-05-27"
 bmad_version: "6.2.0"
 bmad_track: "core-foundation"
-<<<<<<< .merge_file_iKTtd9
----
-
-# Activity — BMAD Method Integration
-=======
->>>>>>> .merge_file_X4IxeH
 type: index
 updated: 2026-10-07
 tags: [docs, activity, bmad]
@@ -108,11 +98,6 @@ bmad-quick-spec "Specifica per retention log Y giorni"
 ## Configurazione
 
 ```bash
-<<<<<<< .merge_file_iKTtd9
-# Verifica che Activity sia abilitato
-php artisan module:status Activity
-=======
->>>>>>> .merge_file_X4IxeH
 # Verifica che Activity sia abilitato (module:status non esiste: usare module:list)
 php artisan module:list | grep Activity
 

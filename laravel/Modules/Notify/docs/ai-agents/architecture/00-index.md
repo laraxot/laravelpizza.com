@@ -3,7 +3,11 @@ title: "00 index"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "00 index"
 issues: []
 discussions: []
@@ -24,7 +28,15 @@ discussions: []
 ## Metodologia esecutiva collegata
 
 - [../../../../docs/project/gsd-and-bmad-workflow.md](../../../../docs/project/gsd-and-bmad-workflow.md) — ordine canonico BMAD -> GSD -> Ralph
+<<<<<<< HEAD
 - [../../ralph/00-index.md](../../ralph/00-index.md) — albero Ralph locale, senza duplicare template nel root del repository
+=======
+<<<<<<< HEAD
+- [../../ralph/00-INDEX.md](../../ralph/00-index.md) — albero Ralph locale, senza duplicare template nel root del repository
+=======
+- [../../ralph/00-index.md](../../ralph/00-index.md) — albero Ralph locale, senza duplicare template nel root del repository
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Quick Decision Guide
 
@@ -39,4 +51,12 @@ discussions: []
 ## Navigation
 
 - [../00-index.md](../00-index.md)
+<<<<<<< HEAD
 - [../../../../AGENTS.md](../../../../AGENTS.md)
+=======
+<<<<<<< HEAD
+- [../../../../AGENTS.md](../../../../agents.md)
+=======
+- [../../../../AGENTS.md](../../../../AGENTS.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

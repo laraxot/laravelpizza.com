@@ -196,6 +196,19 @@ PHP);
             $empty->getBrandLogoBase64();
         } catch (\Throwable) {
         }
+<<<<<<< HEAD
+=======
+
+        // Il logo finto va rimosso.
+        //
+        // Dev'essere sotto `public_path()` perche' e' li' che
+        // `MetatagData::getBrandLogo()` lo cerca, e `public_html/` e' la
+        // document root: un file scritto qui resta **servito sul web**, e
+        // questo test ne lasciava uno da 8 byte a ogni corsa, dentro il
+        // repository. Non e' il posto di un residuo di prova
+        // (base_quaeris_fila5#244).
+        File::deleteDirectory(dirname($logoPath));
+>>>>>>> laraxot/dev
     });
 
     test('SecurityMiddleware rami privati rate limit input CSRF suspicious', function (): void {

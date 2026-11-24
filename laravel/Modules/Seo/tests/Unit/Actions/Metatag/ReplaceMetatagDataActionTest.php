@@ -6,7 +6,10 @@ namespace Modules\Seo\Tests\Unit\Actions\Metatag;
 
 use Modules\Seo\Actions\Metatag\GetMetatagDataAction;
 use Modules\Seo\Actions\Metatag\ReplaceMetatagDataAction;
+use Modules\Seo\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 
 it('replaces the whole metatag state', function (): void {
     app(ReplaceMetatagDataAction::class)->execute(['title' => 'Old Title']);

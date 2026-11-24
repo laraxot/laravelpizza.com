@@ -150,7 +150,15 @@ Dopo le modifiche, eseguire:
 
 ## Collegamenti
 
+<<<<<<< HEAD
 - [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+=======
+<<<<<<< HEAD
+- [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+=======
+- [Regole Qualità Codice](../../code-quality.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [BaseModel](../../../app/Models/BaseModel.php)
 - [BasePivot](../../../app/Models/BasePivot.php)
 - [BaseMorphPivot](../../../app/Models/BaseMorphPivot.php)

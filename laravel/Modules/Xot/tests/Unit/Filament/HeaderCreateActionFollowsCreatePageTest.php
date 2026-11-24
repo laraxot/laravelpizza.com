@@ -49,12 +49,20 @@ test('senza pagina create la tabella non mostra Nuovo', function (): void {
     {
         use HasXotTable;
 
+<<<<<<< HEAD
         /** @var class-string<resource> */
+=======
+        /** @var class-string<Resource> */
+>>>>>>> laraxot/dev
         public static string $resourceClass = Resource::class;
 
         public string $tableSearch = '';
 
+<<<<<<< HEAD
         /** @return class-string<resource> */
+=======
+        /** @return class-string<Resource> */
+>>>>>>> laraxot/dev
         public static function getResource(): string
         {
             return self::$resourceClass;
@@ -84,12 +92,20 @@ test('con la pagina create la tabella mostra Nuovo', function (): void {
     {
         use HasXotTable;
 
+<<<<<<< HEAD
         /** @var class-string<resource> */
+=======
+        /** @var class-string<Resource> */
+>>>>>>> laraxot/dev
         public static string $resourceClass = Resource::class;
 
         public string $tableSearch = '';
 
+<<<<<<< HEAD
         /** @return class-string<resource> */
+=======
+        /** @return class-string<Resource> */
+>>>>>>> laraxot/dev
         public static function getResource(): string
         {
             return self::$resourceClass;
@@ -119,12 +135,20 @@ test('un getResource d istanza, come nei RelationManager, non nasconde Nuovo', f
     {
         use HasXotTable;
 
+<<<<<<< HEAD
         /** @var class-string<resource> */
+=======
+        /** @var class-string<Resource> */
+>>>>>>> laraxot/dev
         public string $ownerResource = Resource::class;
 
         public string $tableSearch = '';
 
+<<<<<<< HEAD
         /** @return class-string<resource> */
+=======
+        /** @return class-string<Resource> */
+>>>>>>> laraxot/dev
         public function getResource(): string
         {
             return $this->ownerResource;

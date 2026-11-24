@@ -213,6 +213,17 @@ abstract class XotBaseServiceProvider extends ServiceProvider
             'assets/'.$this->nameLower
         );
 
+<<<<<<< HEAD
+=======
+        // public_html/assets/<modulo> è un symlink alla cartella public del modulo: pubblicare vorrebbe dire
+        // copiare ogni file su se stesso (il file verrebbe troncato). Gli asset sono già visibili.
+        // public_path() restituisce il percorso già risolto (app/Application.php), quindi is_link() sarebbe
+        // sempre falso: si confrontano i percorsi reali.
+        if (File::isDirectory($destinationPath) && \Safe\realpath($destinationPath) === \Safe\realpath($sourcePath)) {
+            return;
+        }
+
+>>>>>>> laraxot/dev
         $this->publishes(
             [
                 $sourcePath => $destinationPath,

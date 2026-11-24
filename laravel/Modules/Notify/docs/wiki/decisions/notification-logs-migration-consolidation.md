@@ -3,7 +3,11 @@ title: "Consolidamento migrazioni notification_logs (2 file duplicati → 1 XotB
 type: decision
 tags: [notify, migration, notification_logs, xotbasemigration, schema]
 created: 2026-07-22
+<<<<<<< HEAD
 updated: 2026-07-22
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "NotificationLog notification_logs migration consolidation XotBaseMigration duplicate"
 issues: []
 discussions: []

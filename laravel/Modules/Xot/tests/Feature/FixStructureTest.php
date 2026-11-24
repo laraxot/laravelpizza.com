@@ -65,6 +65,23 @@ afterEach(function () use (&$testDir, $rrmdir): void {
     }
 });
 
+<<<<<<< HEAD
+=======
+/**
+ * Lo script sta in un'altra repository.
+ *
+ * `bashscripts` e' `laraxot/bashscripts_fila5`, che negli ambienti di sviluppo
+ * sta accanto a `laravel/`. Dove non e' clonata, `file_get_contents()` su
+ * `../bashscripts/utils/fix_structure.sh` lanciava, e i tre test fallivano
+ * accusando lo script di non funzionare invece di dire che non c'era
+ * (base_quaeris_fila5#244).
+ */
+function fixStructureScriptMissing(): bool
+{
+    return ! is_file(base_path('../bashscripts/utils/fix_structure.sh'));
+}
+
+>>>>>>> laraxot/dev
 describe('Fix Structure', function () use (&$testDir): void {
     test('move to app functionality', function () use (&$testDir): void {
         // Creiamo una struttura di directory di test
@@ -84,7 +101,14 @@ describe('Fix Structure', function () use (&$testDir): void {
         Assert::assertDirectoryExists($testDir.'/app/Actions');
         Assert::assertFileExists($testDir.'/app/Actions/test.php');
         Assert::assertDirectoryDoesNotExist($testDir.'/Actions');
+<<<<<<< HEAD
     });
+=======
+    })->skip(
+        fn (): bool => fixStructureScriptMissing(),
+        'Richiede la repo laraxot/bashscripts_fila5 clonata accanto a laravel/ (base_quaeris_fila5#244).',
+    );
+>>>>>>> laraxot/dev
 
     test('rename to lower functionality', function () use (&$testDir): void {
         // Creiamo una struttura di directory di test
@@ -104,7 +128,14 @@ describe('Fix Structure', function () use (&$testDir): void {
         Assert::assertDirectoryExists($testDir.'/config');
         Assert::assertFileExists($testDir.'/config/test.php');
         Assert::assertDirectoryDoesNotExist($testDir.'/Config');
+<<<<<<< HEAD
     });
+=======
+    })->skip(
+        fn (): bool => fixStructureScriptMissing(),
+        'Richiede la repo laraxot/bashscripts_fila5 clonata accanto a laravel/ (base_quaeris_fila5#244).',
+    );
+>>>>>>> laraxot/dev
 
     test('move config functionality', function () use (&$testDir): void {
         // Creiamo una struttura di directory di test con entrambe le versioni
@@ -129,5 +160,12 @@ describe('Fix Structure', function () use (&$testDir): void {
         Assert::assertFileExists($testDir.'/config/secondary.php');
         Assert::assertDirectoryDoesNotExist($testDir.'/Config');
         Assert::assertDirectoryExists($testDir.'/config_old');
+<<<<<<< HEAD
     });
+=======
+    })->skip(
+        fn (): bool => fixStructureScriptMissing(),
+        'Richiede la repo laraxot/bashscripts_fila5 clonata accanto a laravel/ (base_quaeris_fila5#244).',
+    );
+>>>>>>> laraxot/dev
 });

@@ -182,10 +182,7 @@ public static function table(Table $table): Table { ... }
 
 #### ❌ StoredEventResource - NEEDS REFACTORING  
 #### ❌ StoredEventResource - NEEDS REFACTORING
-<<<<<<< .merge_file_KPEnv6
-=======
 #### ❌ StoredEventResource - NEEDS REFACTORING
->>>>>>> .merge_file_BykiIH
 - Extends XotBaseResource ✓
 - Implements unnecessary getPages() and getRelations() methods ✗
 - These methods return standard/default values and should be removed

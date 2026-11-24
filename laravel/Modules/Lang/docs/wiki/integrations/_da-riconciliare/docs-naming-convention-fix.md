@@ -35,6 +35,11 @@ Le cartelle `docs` contenevano file e sottocartelle con caratteri maiuscoli, vio
 - ✅ `filament/infinite-loop-getStepByName-fix.md` → `filament/infinite-loop-getstepbyname-fix.md`
 
 ### Modulo Geo
+<<<<<<< HEAD
+=======
+- ✅ `MCP_SERVER_RECOMMENDED.md` → `mcp_server_recommended.md`
+
+>>>>>>> laraxot/dev
 - ✅ `mcp_server_recommended.md` → `mcp_server_recommended.md`
 - ✅ `phpstan_fixes.md` → `phpstan-fixes-uppercase.md`
 

@@ -3,7 +3,11 @@ title: "🐄 SUPER MUCCA - Analisi Completa Documentazione"
 type: concept
 tags: [super, mucca, docs, analysis]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "super-mucca-docs-analysis 🐄 super mucca - analisi completa documentazione"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

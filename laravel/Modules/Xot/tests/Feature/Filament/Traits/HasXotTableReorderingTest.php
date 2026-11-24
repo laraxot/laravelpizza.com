@@ -7,8 +7,13 @@ namespace Modules\Xot\Tests\Feature\Filament\Traits;
 use Filament\Tables\Columns\Column;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
+<<<<<<< HEAD
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Attributes\Test;
+=======
+use PHPUnit\Framework\Attributes\Test;
+use Modules\Xot\Tests\TestCase;
+>>>>>>> laraxot/dev
 
 /**
  * Story 5.93 (Modules/Xot/docs/stories/5.93-filament-table-reordering-implementation.story.md)

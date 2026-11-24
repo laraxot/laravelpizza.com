@@ -3,7 +3,11 @@ title: "github issue 97 git error comment"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "github issue 97 git error comment"
 issues: []
 discussions: []

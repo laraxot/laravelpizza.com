@@ -8,11 +8,7 @@ return [
         'plural' => 'Tokens',
         'group' => [
             'name' => 'User management',
-<<<<<<< .merge_file_GCdzE2
-            'description' => 'Gestione dei token di accesso',
-=======
             'description' => 'Manage access tokens',
->>>>>>> .merge_file_nYu8tb
         ],
         'label' => 'Token',
         'sort' => '29',

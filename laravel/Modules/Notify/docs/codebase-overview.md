@@ -30,7 +30,11 @@ github:
 created_at: '2026-07-20'
 updated_at: '2026-07-20'
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Panoramica codebase Notify

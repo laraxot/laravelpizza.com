@@ -2,9 +2,16 @@
 title: "Audit BMAD — Notify"
 type: audit
 status: review
+<<<<<<< HEAD
 updated: 2026-11-16
 module: Notify
 qmd: "audit BMAD Notify sintesi finding P1 NotificationLog policy webhook inbound canali incompleti"
+=======
+updated: 2026-11-23
+module: Notify
+qmd: "audit BMAD Notify sintesi finding P1 NotificationLog policy webhook inbound canali incompleti"
+created: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Audit BMAD — Notify

@@ -9,10 +9,7 @@ use Modules\Cms\Actions\BuildPageSchemaAction;
 use Modules\Cms\Actions\Head\BuildHeadSchemaAction;
 use Modules\Cms\Actions\Head\ResolveHreflangAlternatesAction;
 use Modules\Cms\Actions\Head\ResolveRobotsPolicyAction;
-<<<<<<< .merge_file_jYNokk
-=======
 use Modules\Cms\Tests\TestCase;
->>>>>>> .merge_file_4faePW
 use Modules\Xot\Datas\MetatagData;
 use PHPUnit\Framework\Assert;
 

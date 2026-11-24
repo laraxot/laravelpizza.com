@@ -41,6 +41,13 @@ Documentation for `user` module categorized as **integrations**.
 - [`PHPSTAN_FIX_PLAN.md`](./PHPSTAN_FIX_PLAN.md)
 - [`PHPSTAN_L10.md`](./PHPSTAN_L10.md)
 - [`PHPSTAN_STATUS.md`](./PHPSTAN_STATUS.md)
+<<<<<<< HEAD
+=======
+- [`PRODUCT_LAUNCH_PLAN.md`](./PRODUCT_LAUNCH_PLAN.md)
+- [`PRODUCT_STRATEGY.md`](./PRODUCT_STRATEGY.md)
+- [`PROJECT-STRUCTURE.md`](./project-structure.md)
+- [`QMD-SETUP.md`](./QMD-SETUP.md)
+>>>>>>> laraxot/dev
 - [`product_launch_plan.md`](./product_launch_plan.md)
 - [`product_strategy.md`](./product_strategy.md)
 - [`project-structure.md`](./project-structure.md)
@@ -55,7 +62,15 @@ Documentation for `user` module categorized as **integrations**.
 - [`sprint_planning.md`](./sprint_planning.md)
 - [`SSO-PROVIDERS-IMPLEMENTATION.md`](./SSO-PROVIDERS-IMPLEMENTATION.md)
 - [`SSO_PROVIDERS_IMPLEMENTATION.md`](./SSO_PROVIDERS_IMPLEMENTATION.md)
+<<<<<<< HEAD
 - [`testing.md`](./testing.md)
+=======
+<<<<<<< .merge_file_vT0U4q
+- [`TESTING.md`](../../../TESTING.md)
+=======
+- [`testing.md`](./testing.md)
+>>>>>>> .merge_file_LfLxlK
+>>>>>>> laraxot/dev
 - [`TIMESTAMPS_RULE.md`](./TIMESTAMPS_RULE.md)
 - [`TRANSLATION_KEY_PROTOTYPE.md`](./TRANSLATION_KEY_PROTOTYPE.md)
 - [`user_research.md`](./user_research.md)
@@ -120,13 +135,29 @@ Documentation for `user` module categorized as **integrations**.
 - [`charts-implementation.md`](./charts-implementation.md)
 - [`cms-link.md`](./cms-link.md)
 - [`cms_link.md`](./cms_link.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 - [`code-conventions.md`](./code-conventions.md)
+- [`code-optimization-analysis.md`](./code-optimization-analysis.md)
+- [`code-optimization.md`](./code-optimization.md)
+- [`code-quality-analysis.md`](./code-quality-analysis.md)
+<<<<<<< HEAD
+- [`code-quality-analysis.md`](./code-quality-analysis.md)
+- [`code-quality-analysis.md`](./code-quality-analysis.md)
+- [`code-quality-analysis.md`](./code-quality-analysis.md)
+=======
+=======
+- [`code-conventions.md`](../../../code-conventions.md)
 - [`code-optimization-analysis.md`](./code-optimization-analysis.md)
 - [`code-optimization.md`](./code-optimization.md)
 - [`code-quality-analysis.md`](./code-quality-analysis.md)
 - [`code-quality-analysis.md`](./code-quality-analysis.md)
 - [`code-quality-analysis.md`](./code-quality-analysis.md)
 - [`code-quality-analysis.md`](./code-quality-analysis.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`code-quality-tools.md`](./code-quality-tools.md)
 - [`code-quality.md`](./code-quality.md)
 - [`code_conventions.md`](./code_conventions.md)
@@ -214,7 +245,15 @@ Documentation for `user` module categorized as **integrations**.
 - [`folio-volt-best-practices.md`](./folio-volt-best-practices.md)
 - [`fullcalendar-scheduler-documentation-summary-3.md`](./fullcalendar-scheduler-documentation-summary-3.md)
 - [`fullcalendar-scheduler-documentation-summary.md`](./fullcalendar-scheduler-documentation-summary.md)
+<<<<<<< HEAD
 - [`fullcalendar-scheduler-license-key-invalid.md`](./fullcalendar-scheduler-license-key-invalid.md)
+=======
+<<<<<<< HEAD
+- [`fullcalendar-scheduler-license-key-invalid.md`](./fullcalendar-scheduler-license-key-invalid.md)
+=======
+- [`fullcalendar-scheduler-license-key-invalid.md`](../../../fullcalendar-scheduler-license-key-invalid.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`fullcalendar-scheduler-license-troubleshooting.md`](./fullcalendar-scheduler-license-troubleshooting.md)
 - [`fullcalendar-scheduler-license.md`](./fullcalendar-scheduler-license.md)
 - [`fullcalendar-scheduler-quick-reference-3.md`](./fullcalendar-scheduler-quick-reference-3.md)
@@ -287,7 +326,15 @@ Documentation for `user` module categorized as **integrations**.
 - [`jss.md`](./jss.md)
 - [`label-hardcoded-prevention.md`](./label-hardcoded-prevention.md)
 - [`label_hardcoded_prevention.md`](./label_hardcoded_prevention.md)
+<<<<<<< HEAD
 - [`lang-link-3.md`](./lang-link-3.md)
+=======
+<<<<<<< HEAD
+- [`lang-link-3.md`](./lang-link-3.md)
+=======
+- [`lang-link-3.md`](../../../lang-link-3.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`lang-link.md`](./lang-link.md)
 - [`lang_link.md`](./lang-link.md)
 - [`laravel-13-upgrade.md`](./laravel-13-upgrade.md)

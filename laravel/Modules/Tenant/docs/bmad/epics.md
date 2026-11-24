@@ -2,6 +2,11 @@
 title: "Epics BMAD — Tenant"
 type: epics
 status: active
+<<<<<<< .merge_file_vaUkjP
+tags: [docs, tenant, bmad]
+created: 2026-10-06
+=======
+>>>>>>> .merge_file_dhnI5P
 updated: 2026-11-16
 module: Tenant
 tags: [docs, tenant, bmad]

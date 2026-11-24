@@ -47,6 +47,34 @@ flowchart LR
 | Artefatto | Ruolo | Consumer noti |
 |-----------|-------|---------------|
 | `InteractiveMap` (Livewire) | Marker, filtri, export, geocoding | `resources/views/livewire/components/map/interactive-map.blade.php`; integrazione documentata in `docs/map-integration-guide.md` |
+<<<<<<< HEAD
+=======
+| `MapServiceContract` | Contratto marker/stats/export | **nessuno**: non è legato al container |
+| `GeocodingServiceContract` | Contratto ricerca indirizzi | **nessuno**: non è legato al container |
+| `NullMapServiceAdapter` / `NullGeocodingServiceAdapter` | Implementazioni nulle dei due contratti | **nessuno**: nessun provider le registra |
+
+Le tre righe qui sopra dicevano il contrario — «Registrato in `UIServiceProvider` →
+`NullMapService` di default», «Container Laravel (singleton)» — e sono state
+corrette il 2026-11-20 perché il codice dice un'altra cosa, da sempre
+(base_quaeris_fila5#247). `UIServiceProvider` non contiene **nessun** binding, e
+lo dichiara nel proprio commento a riga 16: *«Nessun binding Geo/Map/Location:
+dominio geografico non appartiene a UI»*. Il provider e questo documento si
+contraddicevano, e il provider aveva ragione.
+
+Quindi oggi il pattern null object **non è attivo**: i due contratti hanno una
+sola implementazione ciascuno e niente le risolve. Chiedere
+`app(MapServiceContract::class)` solleva un errore di risoluzione, non restituisce
+un fallback. Chi vuole il fallback deve prima aggiungere il binding.
+
+C'erano anche, fino al 2026-11-20, due copie carattere per carattere dei due
+Adapter in `app/Services/Map/`, cancellate con tutte le altre classi di
+`app/Services/`: erano doppioni morti, non il fallback che questo documento
+descriveva.
+
+Quando il modulo **Geo** sarà installato, il binding da aggiungere (non da
+sostituire: non c'è) va in `UIServiceProvider`, e `InteractiveMap` non si tocca.
+
+>>>>>>> laraxot/dev
 | `MapServiceContract` | Contratto marker/stats/export | Registrato in `UIServiceProvider` → `NullMapService` di default |
 | `GeocodingServiceContract` | Contratto ricerca indirizzi | `NullGeocodingService` di default |
 | `NullMapService` / `NullGeocodingService` | Fallback quando Geo assente | Container Laravel (singleton) |

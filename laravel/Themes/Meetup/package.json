@@ -1,5 +1,5 @@
 {
-<<<<<<< .merge_file_GlOWOZ
+<<<<<<< .merge_file_bpeqaJ
     "name": "laraxot/theme-meetup-fila5",
     "private": true,
     "version": "1.1.0",
@@ -51,7 +51,6 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "copy": "cp -r ./public/* ../../../public_html/themes/Meetup",
     "screenshots": "node scripts/capture-screenshots.mjs",
     "screenshots:footer": "node scripts/capture-footer-screenshots.mjs"
   },
@@ -76,5 +75,5 @@
     "typescript": "~5.8.3",
     "vite": "^7.3.1"
   }
->>>>>>> .merge_file_z5Npj3
+>>>>>>> .merge_file_ljgpou
 }

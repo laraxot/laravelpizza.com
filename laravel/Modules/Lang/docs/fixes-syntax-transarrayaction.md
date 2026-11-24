@@ -72,6 +72,11 @@ public function execute(
 ## Collegamenti
 
 - [TransArrayAction.php](../../app/Actions/TransArrayAction.php)
+<<<<<<< HEAD
+=======
+- [PHPStan Fixes](./phpstan-fixes.md)
+
+>>>>>>> laraxot/dev
 - [PHPStan Fixes](./PHPSTAN-FIXES.md)
 - [Translation Actions](./translation-actions.md)
 

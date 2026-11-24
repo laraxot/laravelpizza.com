@@ -570,7 +570,15 @@ class UsersChartWidgetTest extends TestCase
 ### Documentazione Correlata
 - [Filament Charts Complete Guide](../../xot/docs/filament-charts-complete-guide.md)
 - [Chart Export Guide](../../xot/docs/chart-export-guide.md)
+<<<<<<< HEAD
 - [User Module README](./README.md)
+=======
+<<<<<<< HEAD
+- [User Module README](./readme.md)
+=======
+- [User Module README](./README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### Chart.js
 - [Chart.js Documentation](https://www.chartjs.org/docs/latest/)

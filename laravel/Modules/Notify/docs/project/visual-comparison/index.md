@@ -3,7 +3,11 @@ title: "index"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "index"
 issues: []
 discussions: []
@@ -13,6 +17,7 @@ discussions: []
 
 **Date**: 2026-04-02
 
+<<<<<<< HEAD
 ---
 
 title: "index"
@@ -29,6 +34,10 @@ Make local homepage (http://127.0.0.1:8000/it/tests/homepage) visually identical
 
 ---
 
+=======
+## Objective
+
+>>>>>>> laraxot/dev
 ## Screenshots Summary
 
 ### Header - Sixteen Theme
@@ -71,4 +80,8 @@ Make local homepage (http://127.0.0.1:8000/it/tests/homepage) visually identical
 ## Back to Project Docs
 
 - [Project Documentation](./README.md)
+<<<<<<< HEAD
 - [Modules Index](./modules.md)
+=======
+- [Modules Index](./modules.md)
+>>>>>>> laraxot/dev

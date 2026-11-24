@@ -3,7 +3,11 @@ title: "DOCS MONITORING SYSTEM"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "DOCS MONITORING SYSTEM"
 issues: []
 discussions: []
@@ -278,6 +282,7 @@ find . -name "*.md" -exec sed -i 's/Laravel 11/Laravel 12/g' {} \;
 ---
 
 *Questo sistema di monitoraggio garantisce che tutta la documentazione rimanga sempre aggiornata e coerente con lo stato attuale del progetto.*
+<<<<<<< HEAD
 
 
 
@@ -286,3 +291,5 @@ find . -name "*.md" -exec sed -i 's/Laravel 11/Laravel 12/g' {} \;
 
 
 
+=======
+>>>>>>> laraxot/dev

@@ -3,7 +3,11 @@ title: "phase 1 research complete"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "phase 1 research complete"
 issues: []
 discussions: []
@@ -167,9 +171,20 @@ Significa:
 - **Subtask 4**: Verify JSON → ensure all data present
 
 ### Researcher (Te stesso per documentation)
+<<<<<<< HEAD
 - **Subtask 2**: Analyze report → create PHASE-1-FINDINGS.md
 - **Subtask 6**: Document completion → create PHASE-1-COMPLETION-REPORT.md
 
+=======
+<<<<<<< HEAD
+- **subtask 2**: analyze report → create phase-1-findings.md
+- **subtask 6**: document completion → create phase-1-completion-report.md
+=======
+- **Subtask 2**: Analyze report → create PHASE-1-FINDINGS.md
+- **Subtask 6**: Document completion → create PHASE-1-COMPLETION-REPORT.md
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## 🚀 PROSSIMI PASSI - ORDINE ESECUZIONE
@@ -246,9 +261,25 @@ return [
 
 **Leggi in questo ordine**:
 
+<<<<<<< HEAD
 1. **[00-index.md](laravel/Themes/Sixteen/docs/00-index.md)** - Master index (sei qui, ma online)
 2. **[PHASE-1-STRATEGY.md](laravel/Themes/Sixteen/docs/PHASE-1-STRATEGY.md)** - Strategia completa (22k chars)
 3. **[GSD-PHASE-1-EXECUTION.md](laravel/Themes/Sixteen/docs/GSD-PHASE-1-EXECUTION.md)** - Piano esecuzione (19k chars)
+=======
+<<<<<<< HEAD
+1. **[00-INDEX.md](laravel/Themes/Sixteen/docs/00-index.md)** - Master index (sei qui, ma online)
+2. **[PHASE-1-STRATEGY.md](laravel/Themes/Sixteen/docs/phase-1-strategy.md)** - Strategia completa (22k chars)
+3. **[GSD-PHASE-1-EXECUTION.md](laravel/Themes/Sixteen/docs/gsd-phase-1-execution.md)** - Piano esecuzione (19k chars)
+4. **[bashscripts/docs/html/INDEX.md](bashscripts/docs/html/index.md)** - Documentazione strumenti
+1. **[00-index.md](laravel/Themes/Sixteen/docs/00-index.md)** - Master index (sei qui, ma online)
+2. **[PHASE-1-STRATEGY.md](laravel/Themes/Sixteen/docs/phase-1-strategy.md)** - Strategia completa (22k chars)
+3. **[GSD-PHASE-1-EXECUTION.md](laravel/Themes/Sixteen/docs/gsd-phase-1-execution.md)** - Piano esecuzione (19k chars)
+=======
+1. **[00-index.md](laravel/Themes/Sixteen/docs/00-index.md)** - Master index (sei qui, ma online)
+2. **[PHASE-1-STRATEGY.md](laravel/Themes/Sixteen/docs/PHASE-1-STRATEGY.md)** - Strategia completa (22k chars)
+3. **[GSD-PHASE-1-EXECUTION.md](laravel/Themes/Sixteen/docs/GSD-PHASE-1-EXECUTION.md)** - Piano esecuzione (19k chars)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 4. **[bashscripts/docs/html/index.md](bashscripts/docs/html/index.md)** - Documentazione strumenti
 
 ---

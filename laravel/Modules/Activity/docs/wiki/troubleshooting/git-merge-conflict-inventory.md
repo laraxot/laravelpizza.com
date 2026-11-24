@@ -3,6 +3,7 @@ title: "Git Conflict Inventory"
 qmd: "activity wiki troubleshooting git merge conflict inventory md"
 type: note
 tags: [documentation]
+created: 2026-04-28
 ---
 
 # Git Conflict Inventory
@@ -39,3 +40,11 @@ tags: [documentation]
 
 - Inventory generated from `rg -l "^(<<<<<<<|=======|>>>>>>>)"`.
 - Use this list as a volatile coordination map; re-open each file before editing because other agents may resolve items in parallel.
+
+---
+
+## Contenuto unito da `git-merge-conflict-inventory.md`
+
+# git merge conflict inventory
+
+Stub alias post-strip data/timestamp. Canonico: [./git-merge-conflict-inventory.md](./git-merge-conflict-inventory.md).

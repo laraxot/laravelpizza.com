@@ -6,7 +6,11 @@ title: "Architecture"
 type: architecture
 tags: [module, architecture, notifications]
 created: 2026-07-28
+<<<<<<< HEAD
 updated: 2026-07-28
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Notify Module — Architecture

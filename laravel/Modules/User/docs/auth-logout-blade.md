@@ -30,7 +30,15 @@ related:
 - [Documentazione centrale](../../../../docs/README.md)
 - [Collegamenti documentazione](../../../../docs/collegamenti-documentazione.md)
 - [README modulo User](./README.md)
+<<<<<<< HEAD
 - [Convenzioni Path](./path-conventions-user.md)
+=======
+<<<<<<< .merge_file_AKEsTW
+- [Convenzioni Path](./path-conventions-2.md)
+=======
+- [Convenzioni Path](./path-conventions-user.md)
+>>>>>>> .merge_file_WwdfML
+>>>>>>> laraxot/dev
 - [Struttura moduli](../../../../docs/architecture/modules-structure.md)
 - [Logout Page Fix](./logout-page-fix.md)
 - [Convenzioni Path](./path_conventions.md)

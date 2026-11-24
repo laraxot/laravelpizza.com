@@ -3,7 +3,11 @@ title: "🏆 2025 Excellence Achievement Report"
 type: concept
 tags: [2025, excellence, achievement]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "2025-excellence-achievement 🏆 2025 excellence achievement report"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

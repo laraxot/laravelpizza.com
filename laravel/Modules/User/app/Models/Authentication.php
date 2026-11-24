@@ -63,11 +63,6 @@ use Modules\Xot\Contracts\ProfileContract;
  */
 class Authentication extends BaseModel
 {
-<<<<<<< .merge_file_bf08g7
-    use AuthenticationRelationsTrait;
-
-=======
->>>>>>> .merge_file_01WiGd
     /**
      * The attributes that are mass assignable.
      *

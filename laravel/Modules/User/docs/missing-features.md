@@ -175,8 +175,26 @@ Nessuna funzionalità critica mancante - il modulo User è ben implementato
 
 ## Collegamenti
 
+<<<<<<< HEAD
 - [Modulo ExternalProject](../<nome progetto>/docs/README.md)
 - [Modulo Limesurvey](../limesurvey/docs/README.md)
+=======
+<<<<<<< HEAD
+- [Modulo ExternalProject](../<nome progetto>/docs/readme.md)
+- [Modulo Limesurvey](../limesurvey/docs/readme.md)
+- [User README](./readme.md)
+- [Modulo ExternalProject](../<nome progetto>/docs/README.md)
+- [Modulo Limesurvey](../limesurvey/docs/README.md)
+=======
+<<<<<<< .merge_file_Jz90yz
+- [Modulo ExternalProject](../<nome progetto>/docs/readme.md)
+- [Modulo Limesurvey](../limesurvey/docs/readme.md)
+=======
+- [Modulo ExternalProject](../<nome progetto>/docs/README.md)
+- [Modulo Limesurvey](../limesurvey/docs/README.md)
+>>>>>>> .merge_file_jRNQRB
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [User README](./README.md)
 
 ---

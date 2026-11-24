@@ -7,6 +7,10 @@ updated: 2026-09-26
 qmd: "design comuni faq"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
+status: draft
+>>>>>>> laraxot/dev
 ---
 
 # Design Comuni - Domande Frequenti (FAQ)
@@ -148,7 +152,15 @@ Universal Blocks Renderer
 ```bash
 cd laravel/Themes/Sixteen
 npm run build    # Compila CSS/JS
+<<<<<<< HEAD
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+<<<<<<< HEAD
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+=======
+# public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ```
 
 ## Testing
@@ -186,8 +198,18 @@ Output: `Themes/Sixteen/docs/design-comuni/screenshots/`
 - [Documentazione Script](../../../bashscripts/docs/DESIGN_COMUNI_SCREENSHOT_SCRIPT.md)
 
 ### Moduli Correlati
+<<<<<<< HEAD
 - [UI Module - Blocks System](../UI/docs/blocks-system.md)
 - [UI Module - Design System](../UI/docs/design-system.md)
+=======
+<<<<<<< HEAD
+- [UI Module - Blocks System](../UI/docs/blocks-system.md)
+- [UI Module - Design System](../UI/docs/design-system.md)
+=======
+- [UI Module - Blocks System](../../UI/docs/blocks-system.md)
+- [UI Module - Design System](../../UI/docs/design-system.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Prossimi Passi
 
@@ -240,7 +262,15 @@ discussions: []
 ## Verifica corrente 2026-04-03
 
 Verifica rilanciata sui render attuali:
+<<<<<<< HEAD
 - [Theme parity report](../../../Themes/Sixteen/docs/design-comuni/domande-frequenti-parity-2026-04-03.md)
+=======
+<<<<<<< HEAD
+- [Theme parity report](../../../Themes/Sixteen/docs/design-comuni/domande-frequenti-parity-2026-04-03.md)
+=======
+- [Theme parity report](../../../Themes/Sixteen/docs/design-comuni/domande-frequenti-parity.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Structure diff](../../../Themes/Sixteen/docs/pages/domande-frequenti/STRUCTURE-DIFF.md)
 
 Esito aggiornato:

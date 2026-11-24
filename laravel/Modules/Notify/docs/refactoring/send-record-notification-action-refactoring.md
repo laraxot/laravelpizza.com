@@ -3,7 +3,11 @@ title: "send record notification action refactoring"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "send record notification action refactoring"
 issues: []
 discussions: []
@@ -203,4 +207,8 @@ issues: []
 discussions: []
 **Refactored by**: iFlow CLI  
 **Compliance**: 100% DRY + KISS + Clean Code  
+<<<<<<< HEAD
 **Status**: Ready for production deployment
+=======
+**Status**: Ready for production deployment
+>>>>>>> laraxot/dev

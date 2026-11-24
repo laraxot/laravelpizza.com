@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+---
+title: "excellence year note snake"
+created: 2026-11-23
+updated: 2026-11-23
+=======
+>>>>>>> laraxot/dev
 ---title: "excellence 2025"
 type: note
 tags: [documentation]
@@ -7,6 +16,10 @@ qmd: "excellence 2025"
 issues: []
 discussions: []
 superseded_by: excellence.md
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 # 🏆 FIXCITY - ECCELLENZA 2025
@@ -55,7 +68,15 @@ FixCity è la piattaforma enterprise leader per la gestione delle segnalazioni u
 ### 👥 Modulo User - ECCELLENZA (92%)
 - ✅ **2FA_GUIDE.md** - Implementazione 2FA completa (NEW)
 - ✅ **SSO_GUIDE.md** - SAML 2.0 + OIDC completo (NEW)
+<<<<<<< HEAD
 - ✅ **roadmap.md** - Timeline Q4 2025-Q1 2026
+=======
+<<<<<<< HEAD
+- ✅ **ROADMAP.md** - Timeline Q4 2025-Q1 2026
+=======
+- ✅ **roadmap.md** - Timeline Q4 2025-Q1 2026
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - 📋 **API.md** - Authentication API (TODO)
 
 ### 🎨 Tema Sixteen - ECCELLENZA (78%)
@@ -427,9 +448,21 @@ FixCity è orgogliosamente open source:
 - **[Sixteen Docs](./laravel/Themes/Sixteen/docs/)** - Frontend theme
 
 ### API
+<<<<<<< HEAD
 - **[Fixcity API](./laravel/Modules/Fixcity/docs/API.md)** - REST API
 - **[User 2FA](./laravel/Modules/User/docs/2FA_GUIDE.md)** - 2FA Guide
 - **[User SSO](./laravel/Modules/User/docs/SSO_GUIDE.md)** - SSO Guide
+=======
+<<<<<<< HEAD
+- **[Fixcity API](./laravel/Modules/Fixcity/docs/api.md)** - REST API
+- **[User 2FA](./laravel/Modules/User/docs/2fa_guide.md)** - 2FA Guide
+- **[User SSO](./laravel/Modules/User/docs/sso_guide.md)** - SSO Guide
+=======
+- **[Fixcity API](./laravel/Modules/Fixcity/docs/API.md)** - REST API
+- **[User 2FA](./laravel/Modules/User/docs/2FA_GUIDE.md)** - 2FA Guide
+- **[User SSO](./laravel/Modules/User/docs/SSO_GUIDE.md)** - SSO Guide
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 

@@ -3,7 +3,11 @@ title: "🎯 Riepilogo Implementazione Login Widget Filament 4"
 type: concept
 tags: [filament, login, widget, implementation]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "filament-4-login-widget-implementation-summary 🎯 riepilogo implementazione login widget filament 4"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

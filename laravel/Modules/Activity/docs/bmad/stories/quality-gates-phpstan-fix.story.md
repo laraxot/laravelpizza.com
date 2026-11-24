@@ -105,3 +105,11 @@ senza ignore, baseline, cast o `@var`.
 `DeleteTableIndexByModelClassIndexNameAction` non esegue SQL ne' prima ne' ora: modifica solo il `Table`
 introspezionato in memoria, zero chiamanti in `Modules/`. Farle davvero droppare l'indice
 (`AbstractSchemaManager::dropIndex($index, $table)`) e' un cambio di schema: non fatto qui.
+
+---
+
+## Contenuto unito da `quality-gates-phpstan-fix.story.md`
+
+# quality gates phpstan fix
+
+Stub alias post-strip data/timestamp. Canonico: [./quality-gates-phpstan-fix.story.md](./quality-gates-phpstan-fix.story.md).

@@ -57,9 +57,21 @@ Pagine brevi e riusabili (concetti, regole, memorie) che completano le story. Mi
 |---|---|---|
 | `concepts/` | 37 | [concepts/index.md](./concepts/index.md) |
 | `testing/` | 11 | nessuno |
+<<<<<<< HEAD
 | `rules/` | 4 | [rules/index.md](./rules/index.md) |
 | `memories/` | 4 | [memories/index.md](./memories/index.md) |
 | `skills/` | 2 | [skills/index.md](./skills/index.md) |
+=======
+<<<<<<< .merge_file_7d0skJ
+| `rules/` | 4 | [rules/INDEX.md](./rules/INDEX.md) |
+| `memories/` | 4 | [memories/INDEX.md](./memories/INDEX.md) |
+| `skills/` | 2 | [skills/INDEX.md](skills/index.md) |
+=======
+| `rules/` | 4 | [rules/index.md](./rules/index.md) |
+| `memories/` | 4 | [memories/index.md](./memories/index.md) |
+| `skills/` | 2 | [skills/index.md](./skills/index.md) |
+>>>>>>> .merge_file_dyXPoM
+>>>>>>> laraxot/dev
 | `howto/`, `_templates/` | 3 ciascuna | nessuno |
 | `troubleshooting/`, `integrations/`, `features/`, `commands/`, `analysis/` | 2 ciascuna | nessuno |
 | `sources/`, `product/`, `patterns/`, `overviews/`, `how-to/` | 1 ciascuna | nessuno |
@@ -72,8 +84,12 @@ Cartelle previste dal modello ma senza alcun `.md`: `decisions/`, `entities/`, `
 qmd search "Activity <argomento>" --limit 5
 ```
 
+<<<<<<< HEAD
 <<<<<<< .merge_file_qXvYB0
 I documenti sorgente grezzi stanno in `../raw/` (immutabile). Prima di creare una pagina nuova controllare [INDEX.md](./INDEX.md) e le pagine di `concepts/` per non duplicarla.
 =======
 I documenti sorgente grezzi stanno in `../raw/` (immutabile). Prima di creare una pagina nuova controllare [index.md](./index.md) e le pagine di `concepts/` per non duplicarla.
 >>>>>>> .merge_file_21hkMH
+=======
+I documenti sorgente grezzi stanno in `../raw/` (immutabile). Prima di creare una pagina nuova controllare [index.md](./index.md) e le pagine di `concepts/` per non duplicarla.
+>>>>>>> laraxot/dev

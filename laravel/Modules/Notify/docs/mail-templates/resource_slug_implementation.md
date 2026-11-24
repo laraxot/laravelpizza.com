@@ -3,7 +3,11 @@ title: "resource slug implementation"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "resource slug implementation"
 issues: []
 discussions: []
@@ -181,5 +185,15 @@ return [
 - [Implementazione del Modello](./model_slug_implementation.md)
 - [Struttura della Migrazione](./migration_structure.md)
 - [Guida alla Migrazione](../mail_template_migration_guide.md)
+<<<<<<< HEAD
 - [Convenzioni Filament](../../../../docs/FILAMENT_CONVENTIONS.md)
 - [Regole per Filament](../../../../docs/FILAMENT_RULES.md)
+=======
+<<<<<<< HEAD
+- [Convenzioni Filament](../../../../docs/filament_conventions.md)
+- [Regole per Filament](../../../../docs/filament_rules.md)
+=======
+- [Convenzioni Filament](../../../../docs/FILAMENT_CONVENTIONS.md)
+- [Regole per Filament](../../../../docs/FILAMENT_RULES.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

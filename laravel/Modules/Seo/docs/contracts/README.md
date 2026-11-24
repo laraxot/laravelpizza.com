@@ -1,33 +1,24 @@
 ---
-title: "Contratti"
+title: "Contratti del modulo Seo"
 type: index
-tags: [contracts, actions, interfaces]
+tags: [contracts, actions, seo, indexnow]
 created: 2026-11-18
-updated: 2026-11-18
+updated: 2026-11-24
 ---
 
-# Contratti
+# Contratti del modulo Seo
 
-Cosa promette la superficie pubblica di questo pacchetto: le Action che scrivono dati, chiamano servizi esterni o hanno
-effetti collaterali, e le interfacce (`app/Contracts`). Regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`.
+Cosa promettono le Action di Seo che parlano con l'esterno: l'invio delle URL a IndexNow e il file pubblico della chiave
+che i motori scaricano per verificarlo. Le altre Action del modulo (metatag, sitemap, robots, URL) costruiscono testo o
+risposte senza effetti collaterali e sono coperte dagli ADR e dai loro test.
 
-## Contratto di comportamento di un'Action
+Leggili prima di chiamare o modificare l'invio a IndexNow o la rotta `/{chiave}.txt`. Le invarianti con group si
+verificano con `cd laravel && vendor/bin/pest Modules/Seo/tests --group=<ID>`; `—` è debito dichiarato.
 
-Un file per Action, nome in kebab-case della classe (`create-ticket-action.md`), frontmatter `type: contract` e
-`action: <FQCN>`, e queste sei sezioni nell'ordine:
+Formato (sei sezioni, tabella invarianti con ID, `@contract` nel docblock):
+[action-behavioral-contract](../../../Xot/docs/rules/action-behavioral-contract.md).
 
-```markdown
-## Input
-## Output
-## Invarianti
-## Effetti collaterali
-## Errori
-## Non fa
-```
+## Indice
 
-Il docblock dell'Action rimanda al file con la riga `Contratto di comportamento: docs/contracts/<file>.md`.
-Chi cambia il comportamento aggiorna il contratto nello stesso commit.
-
-## Contratti
-
-- [submit-index-now-action](submit-index-now-action.md) — invio delle URL nuove a IndexNow (Bing, Yandex, Seznam, Naver)
+- [SubmitIndexNowAction](submit-index-now-action.md) — invia a `api.indexnow.org` solo URL dell'host, una volta, a blocchi da 10.000; spenta senza chiave valida.
+- [ServeIndexNowKeyAction](serve-index-now-key-action.md) — `/{chiave}.txt` risponde solo per la chiave configurata, 404 per tutto il resto.

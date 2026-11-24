@@ -3,7 +3,11 @@ title: "claude boost snapshot"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "claude boost snapshot"
 issues: []
 discussions: []
@@ -712,10 +716,15 @@ npm run build
 - The Laravel application reads compiled assets from the theme's `resources/dist/` directory
 - Without `npm run build`, Tailwind won't compile new classes or changes
 - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-<<<<<<< .merge_file_FuRk0X
+<<<<<<< HEAD
 - Without `symlink public_html/themes (npm run copy obsoleto)`, the changes won't be available to the main Laravel application
 =======
->>>>>>> .merge_file_dJwy7Q
+<<<<<<< .merge_file_YkJVPr
+
+- Without `symlink public_html/themes (npm run copy obsoleto)`, the changes won't be available to the main Laravel application
+=======
+>>>>>>> .merge_file_rsSwKq
+>>>>>>> laraxot/dev
 - Users will NOT see any frontend changes without these steps
 
 ### Remember:

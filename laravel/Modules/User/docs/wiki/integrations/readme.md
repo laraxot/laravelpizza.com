@@ -16,6 +16,11 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< HEAD
+=======
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+>>>>>>> laraxot/dev
 ---
 
 # User Module - Authentication & Authorization
@@ -1088,6 +1093,11 @@ See [roadmap.md](./roadmap.md) for details.
 - [Tenant Module](../../../../Tenant/docs/README.md) - Enhanced tenancy
 
 ### Project Documentation
+<<<<<<< HEAD
+=======
+- [CLAUDE.md](../../../../../CLAUDE.md) - Project architecture
+- [Security Guidelines](../../../../../../docs/security.md)
+>>>>>>> laraxot/dev
 - [CLAUDE.md](../../../../../claude.md) - Project architecture
 - [Security Guidelines](../../../../../../docs/SECURITY.md)
 

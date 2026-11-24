@@ -27,7 +27,8 @@ it('redirects the duplicates with a 301 to the canonical path and keeps the quer
 });
 
 it('serves the canonical paths and everything that is not a localized page as they are', function (): void {
-    foreach (['/it', '/it/tickets', '/en/tickets', '/up'] as $path) {
+    // Pagine che esistono in ogni installazione (home, login): `tickets` esiste solo nei progetti che hanno quel modulo.
+    foreach (['/it', '/en', '/it/auth/login', '/up'] as $path) {
         get($path)->assertOk();
     }
 });

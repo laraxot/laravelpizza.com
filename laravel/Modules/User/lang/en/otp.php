@@ -90,11 +90,7 @@ return [
         'plural' => 'OTPs',
         'group' => [
             'name' => 'User management',
-<<<<<<< .merge_file_HxpRyp
-            'description' => 'Gestione delle password usa e getta',
-=======
             'description' => 'Manage one-time passwords',
->>>>>>> .merge_file_1xkqaC
         ],
         'label' => 'OTP',
         'sort' => '31',

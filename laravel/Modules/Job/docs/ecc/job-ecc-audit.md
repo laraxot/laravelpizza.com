@@ -15,6 +15,23 @@ related:
 
 ## Contratto PTVX
 
+<<<<<<< .merge_file_9hXCLd
+ECC non sostituisce AGENTS.md/BMAD. Ogni finding: story BMAD, lock, fix causa,
+PHPStan + Pest, aggiornamento docs/QMD.
+
+## Checklist
+
+- [ ] `clean-code`: DRY/KISS, Actions su Services, niente wrapper inutili
+- [ ] `security-review`: policy, mass assignment, export, log, privacy, tenant
+- [ ] `laravel-verification`: route, config, migration additive, container
+- [ ] `verification-loop`: PHPStan level max + Pest mirato
+- [ ] `tdd-workflow`: regressione sui finding P0
+- [ ] `documentation-sync`: story + indici + qmd
+- [ ] `context-engineering`: QMD/graphify prima; registrare il perché dopo
+
+## Input misurato (2026-11-16)
+=======
+>>>>>>> .merge_file_I3CCFd
 ECC non sostituisce `AGENTS.md`/BMAD. Ogni finding: story BMAD, lock, fix alla causa,
 PHPStan + Pest, aggiornamento docs/QMD. Dettaglio: [audit profondo](../bmad/audits/job-audit.md).
 
@@ -35,6 +52,27 @@ PHPStan + Pest, aggiornamento docs/QMD. Dettaglio: [audit profondo](../bmad/audi
 | Voce | N |
 |---|---:|
 | app PHP | 176 |
+<<<<<<< .merge_file_9hXCLd
+| test | 84 |
+| resources | 9 |
+| actions | 16 |
+| services | 1 |
+| policies (files approx) | 32 |
+
+## Gate osservati
+
+- PHPStan `Modules` (2026-11-16): 0 errori
+- Pest: pending (ambiente testing)
+
+## Anti-pattern vietati
+
+- baseline/`@phpstan-ignore` senza motivazione
+- test svuotati per silenziare errori
+- migrate:fresh / RefreshDatabase / --force
+- docs con date nel nome file
+- comportamento o screenshot inventati
+=======
+>>>>>>> .merge_file_I3CCFd
 | test PHP / `*Test.php` / casi Pest | 55 / 49 / 369 |
 | Models / Policy / Resource | 17 / 16 / 9 |
 | Pagine standalone / pagine Resource / Widget | 4 / 26 / 8 |

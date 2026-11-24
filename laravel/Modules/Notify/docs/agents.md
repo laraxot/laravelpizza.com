@@ -3,7 +3,11 @@ title: "agents"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "agents"
 issues: []
 discussions: []
@@ -101,7 +105,10 @@ discussions: []
 
 *Ultimo aggiornamento: Aprile 2026*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 <claude-mem-context>
 # Memory Context
 
@@ -199,11 +206,18 @@ docs/
 
 *Ultimo aggiornamento: Aprile 2026*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 <claude-mem-context>
 # Memory Context
 
 # [base_ptv_fila5] recent context, 2026-04-15 10:19pm GMT+2
 
 No previous sessions found.
+<<<<<<< HEAD
 </claude-mem-context>
+=======
+</claude-mem-context>
+>>>>>>> laraxot/dev

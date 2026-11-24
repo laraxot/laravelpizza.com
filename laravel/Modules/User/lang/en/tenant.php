@@ -8,11 +8,7 @@ return [
         'plural' => 'Tenants',
         'group' => [
             'name' => 'User management',
-<<<<<<< .merge_file_DtdTCx
-            'description' => 'Gestione dei tenant e delle loro configurazioni',
-=======
             'description' => 'Manage tenants and their settings',
->>>>>>> .merge_file_bLytcx
         ],
         'label' => 'Tenant',
         'sort' => '30',

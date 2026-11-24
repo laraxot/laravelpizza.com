@@ -3,7 +3,11 @@ title: "Database Directory Naming Convention Fix"
 type: concept
 tags: [database, directory, naming, fix]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "database-directory-naming-fix database directory naming convention fix"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

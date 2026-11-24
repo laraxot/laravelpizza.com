@@ -9,11 +9,26 @@ acceptance_criteria:
   - "Un canonico per argomento; duplicati → alias superseded_by"
   - "Nessuna data nel nuovo nome; data solo nel frontmatter"
 references:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  - bashscripts/docs/prompts/54-documentazione.md
+  - bashscripts/docs/prompts/00-master-prompt.md
+  - docs/wiki/rules/markdown-documentation-standard.md
+related:
+  - ./prompts-standing-order-alignment-phpstan-wave.story.md
+  - ./docs-prompts-reorganization.story.md
+=======
+>>>>>>> laraxot/dev
   - bashscripts/docs/prompts/30-documentation-standards.md
   - bashscripts/docs/prompts/00-master-prompt.md
   - docs/wiki/rules/markdown-documentation-standard.md
 related:
   - ./phpstan-modules-swarm-session.story.md
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 # Docs md filename date debt
@@ -88,3 +103,19 @@ Link interni Lang: nessuno da riscrivere.
   (User 570, IR 104, Activity 79, Rating 61, ICL 44, Xot 36, Media 28, Lang 27).
   Recovery HEAD → `D=0`. Moratoria rename docs; STOP aggiornato. I `git mv` validi
   (es. `*-historical.md`) restano; non rilanciare guardian finché pre-flight pulito.
+<<<<<<< HEAD
+=======
+
+### Spot-check 2026-11-23 (docs-guardian, no rename)
+
+Ambito: moduli con errori PHPStan attesi (AI / Notify / Xot). Solo inventario; moratoria rename confermata.
+
+| Owner | Esito |
+|---|---|
+| **AI** | Modulo **assente** in questo tree (`laravel/Modules/AI` non esiste). Debito: N/A. |
+| **Notify** | ~3144 `.md`. Indici multipli (`00-index.md` / `INDEX.md` / `index.md`). `00-index`: 7/31 link campionati broken (`phpstan-cluster.md`, story in `./stories/`, path root `docs/composer-*`). Naming: ~622 `*_*.md`, ~42 suffissi `-N`, UPPERCASE (`PHPSTAN-*`, `BEFORE-AFTER-*`, `CHANGELOG.MD`). Claim "PHPStan Level 10 Compliant" in index **non verificato** in questa wave. |
+| **Xot** | ~430 `.md`. `docs/consolidated/phpstan/*-[0-9]*` ~30 (suffissi `-1`/`-1-1`/`-2`). `00-index`: link a `bmad-output/...` e story dated `stories/2026-10-13-dcp-45-...`. UPPERCASE residui (`Architecture.md`, `STORY-XXX-*`). |
+| **Themes/Zero** | Ancora `f1-world-champion-2026-theme-analysis.md` + story dated `quality-gates-phpstan-swarm-2026-09-23.story.md` (lane dedicata, non mass-rename). |
+
+Prossimo (quando hygiene stabile): wave Notify indici (un canonico + link) e Xot `consolidated/phpstan` fuse/alias; Themes Zero F1 `git mv` singolo. Refs: [prompts-standing-order-alignment-phpstan-wave.story.md](./prompts-standing-order-alignment-phpstan-wave.story.md).
+>>>>>>> laraxot/dev

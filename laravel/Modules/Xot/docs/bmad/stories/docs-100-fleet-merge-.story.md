@@ -5,8 +5,14 @@ type: note
 tags: [documentation]
 ---
 
+<<<<<<< HEAD
 =======
 ---
+=======
+---
+title: "Xot - docs-100-fleet-merge-20261005.story.md"
+
+>>>>>>> laraxot/dev
 title: "Xot - docs-100-fleet-merge-xot-story-md.story.md"
 module: Xot
 bmad: true

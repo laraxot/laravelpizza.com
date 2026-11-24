@@ -3,7 +3,11 @@ title: "duplicate methods analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "duplicate methods analysis"
 issues: []
 discussions: []
@@ -681,7 +685,10 @@ public function execute(string $prompt): CompletionData
 
 ---
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ---
 
 ## Legenda
@@ -706,4 +713,7 @@ Indica quanto è probabile che il refactoring sia vantaggioso:
 - **70-89%**: Raccomandato
 - **50-69%**: Valutare caso per caso
 - **< 50%**: Richiede analisi dettagliata
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev

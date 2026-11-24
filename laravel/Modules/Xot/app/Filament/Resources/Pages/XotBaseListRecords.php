@@ -81,9 +81,10 @@ abstract class XotBaseListRecords extends FilamentListRecords
             return [];
         }
 
-<<<<<<< .merge_file_NcJnVF
+<<<<<<< HEAD
         $create = CreateAction::make()
             ->icon('heroicon-o-plus')
+            ->visible(fn (): bool => static::getResource()::canCreate())
             ->url(fn (): string => RecordAnchor::appendReturnTo(
                 static::getResource()::getUrl('create'),
                 RecordAnchor::currentUrl(),
@@ -119,7 +120,7 @@ abstract class XotBaseListRecords extends FilamentListRecords
                     RecordAnchor::currentUrl(),
                 )),
         ];
->>>>>>> .merge_file_Yo3WSk
+>>>>>>> laraxot/dev
     }
 
     /**

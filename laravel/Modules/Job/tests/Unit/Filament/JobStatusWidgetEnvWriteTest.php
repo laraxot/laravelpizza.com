@@ -15,10 +15,7 @@ use Illuminate\Support\Facades\Facade;
 use Livewire\Attributes\Locked;
 use Mockery\MockInterface;
 use Modules\Job\Filament\Widgets\JobStatusWidget;
-<<<<<<< .merge_file_kaOreA
-=======
 use Modules\Job\Tests\TestCase;
->>>>>>> .merge_file_VGKKK0
 use Modules\Job\Tests\Unit\Filament\JobStatusWidgetProbe;
 use Modules\Xot\Contracts\UserContract;
 

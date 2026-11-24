@@ -3,7 +3,11 @@ title: "sms driver enum translations 1"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "sms driver enum translations 1"
 issues: []
 discussions: []
@@ -384,7 +388,17 @@ discussions: []
 - [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../Lang/docs/)- [Documentazione Traduzioni](../../Lang/project_docs/)
 
+<<<<<<< HEAD
 ---
+=======
+<<<<<<< HEAD
+- [Documentazione Traduzioni](../../Lang/docs/)
+- [Documentazione Traduzioni](../../Lang/project_docs/)
+- [Documentazione Traduzioni](../../Lang/docs/)- [Documentazione Traduzioni](../../Lang/project_docs/)
+=======
+---
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 - [Documentazione Traduzioni](../../Lang/docs/)
 - [Documentazione Traduzioni](../../Lang/project_docs/)

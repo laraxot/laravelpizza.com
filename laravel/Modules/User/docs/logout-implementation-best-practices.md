@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+---
+title: "Logout Implementation Best Practices"
+module: User
+type: note
+status: active
+updated: '2026-11-23'
+---
+
+>>>>>>> laraxot/dev
 # Best Practices per l'Implementazione del Logout 
 
 ## Collegamenti correlati
@@ -7,7 +18,15 @@
 # Best Practices per l'Implementazione del Logout
 
 ## Collegamenti correlati
+<<<<<<< HEAD
 - [README modulo User](./README.md)
+=======
+<<<<<<< HEAD
+- [README modulo User](./readme.md)
+=======
+- [README modulo User](./README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Best Practices Componenti di Autenticazione](./auth_components_best_practices.md)
 - [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/laravel_localization_usage.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)

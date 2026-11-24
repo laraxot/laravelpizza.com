@@ -97,13 +97,6 @@ graph TD
 ## Riferimenti Globali
 
 - [Project Wiki Root](../../docs/wiki/)
-<<<<<<< .merge_file_WqAmk0
-- [Global Rules](../../docs/wiki/rules/)
-- [Global Skills](../../docs/wiki/skills/)
-- [Global Commands](../../docs/wiki/commands/)
-- [Global Memories](../../docs/wiki/memories/)
-=======
->>>>>>> .merge_file_PLr7r3
 - [Global Rules](wiki/rules)
 - [Global Skills](wiki/skills)
 - [Global Commands](wiki/commands)

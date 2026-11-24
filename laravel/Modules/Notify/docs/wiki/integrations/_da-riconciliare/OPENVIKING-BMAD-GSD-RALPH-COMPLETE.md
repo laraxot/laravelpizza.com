@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # OpenViking + BMAD + GSD + Ralph Loop - Setup Complete Report
@@ -359,6 +363,13 @@ cat .ralph/iteration-log.md
 ls -la _bmad/
 ls -la .planning/
 
+<<<<<<< HEAD
+=======
+# Review agents.md
+cat agents.md
+# Review agents.md
+cat agents.md
+>>>>>>> laraxot/dev
 # Review AGENTS.md
 cat AGENTS.md
 ```
@@ -370,7 +381,15 @@ cat AGENTS.md
 - [BMAD-GSD-Ralph Integration](./bmad-gsd-ralph-integration.md)
 - [Unified Workflow](./unified-ai-workflow.md)
 - [BMAD Workflow](laravel/Modules/Xot/docs/bmad-workflow-guide.md)
+<<<<<<< HEAD
 - [AGENTS.md](../AGENTS.md)
+=======
+<<<<<<< HEAD
+- [agents.md](../agents.md)
+=======
+- [AGENTS.md](../AGENTS.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### Scripts
 - OpenViking Init: `bashscripts/ai/openviking-init.sh`

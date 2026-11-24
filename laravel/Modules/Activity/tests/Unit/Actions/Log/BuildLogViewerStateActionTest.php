@@ -1,10 +1,7 @@
 <?php
 
 declare(strict_types=1);
-<<<<<<< .merge_file_Z0U7Y8
-=======
 
->>>>>>> .merge_file_zKjDtL
 use Illuminate\Support\Facades\File;
 use Modules\Activity\Actions\Log\BuildLogViewerStateAction;
 use Modules\Activity\Enums\LogLevelEnum;

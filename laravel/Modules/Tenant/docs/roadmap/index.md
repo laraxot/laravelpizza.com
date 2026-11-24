@@ -19,10 +19,10 @@ Questo piano copre il module **Tenant** e le sue integrazioni principali.
 
 ## Files
 
-- [Current State](01-current-state.md)
-- [Goals](02-goals.md)
-- [Workstreams](03-workstreams.md)
-- [Milestones](04-milestones.md)
+- [Current State](./current-state.md)
+- [Goals](./goals.md)
+- [Workstreams](./workstreams.md)
+- [Milestones](./milestones.md)
 - [Risks](05-risks.md)
 
 ## Note operative

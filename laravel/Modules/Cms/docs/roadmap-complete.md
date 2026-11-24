@@ -397,7 +397,15 @@ La cartella `docs/` è ben organizzata con:
 ### Documentazione Correlata
 - [Roadmap Progetto](../../../../docs/roadmap_project.md)
 - [Modulo User](../../user/docs/roadmap_complete.md)
+<<<<<<< HEAD
 - [Modulo Media](../../Media/docs/README.md)
+=======
+<<<<<<< HEAD
+- [Modulo Media](../../Media/docs/readme.md)
+=======
+- [Modulo Media](../../Media/docs/README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Theme Sixteen](../../../Themes/Sixteen/docs/README.md)
 
 ### Resources

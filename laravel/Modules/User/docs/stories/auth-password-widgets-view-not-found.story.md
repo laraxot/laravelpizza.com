@@ -44,7 +44,15 @@ Fase BMAD: implementazione chiusa, in attesa di revisione. Story scritta prima d
 
 ## Richiesta
 
+<<<<<<< HEAD
 L'utente ha rilanciato PHPStan dopo il fix dei fatal in Quaeris e ha chiesto di risolvere i 2 errori rimasti seguendo prima linee guida, documentazione, story, issue e discussion. Davanti a due strade ha risposto: seguire sempre cio' che dice la convenzione.
+=======
+<<<<<<< HEAD
+L'utente ha rilanciato PHPStan dopo il fix dei fatal in Quaeris e ha chiesto di risolvere i 2 errori rimasti seguendo prima linee guida, documentazione, story, issue e discussion. Davanti a due strade ha risposto: seguire sempre cio' che dice la convenzione.
+=======
+L'utente ha rilanciato PHPStan dopo il fix dei fatal in <nome progetto> e ha chiesto di risolvere i 2 errori rimasti seguendo prima linee guida, documentazione, story, issue e discussion. Davanti a due strade ha risposto: seguire sempre cio' che dice la convenzione.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ```text
 User/app/Filament/Widgets/Auth/ForgotPasswordWidget.php:21
@@ -189,7 +197,15 @@ L'ultimo test monta il widget con Livewire e controlla che nell'HTML ci sia `wir
 
 PHPStan su tutto `Modules`, lo stesso comando dell'utente, finito alle 12:34 CEST: `exit=0`, nessun errore.
 
+<<<<<<< HEAD
 PHPMD: il modulo User non ha un ruleset. Con quello di Quaeris escono due note, entrambe in metodi non toccati e gia' presenti in `HEAD`:
+=======
+<<<<<<< HEAD
+PHPMD: il modulo User non ha un ruleset. Con quello di Quaeris escono due note, entrambe in metodi non toccati e gia' presenti in `HEAD`:
+=======
+PHPMD: il modulo User non ha un ruleset. Con quello di <nome progetto> escono due note, entrambe in metodi non toccati e gia' presenti in `HEAD`:
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ```text
 ForgotPasswordWidget.php  ElseExpression         The method sendResetLink uses an else expression.

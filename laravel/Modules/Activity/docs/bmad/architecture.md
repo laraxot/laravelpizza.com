@@ -1,6 +1,7 @@
 ---
 title: "Activity — architettura BMAD"
 type: concept
+module: Activity
 tags: [architecture, activity, audit, log, event-sourcing, spatie]
 created: 2026-09-28
 updated: 2026-11-16
@@ -49,7 +50,7 @@ e il **contratto pubblico** del modulo.
 - `app/Contracts/ActivityRecorderInterface.php` — interfaccia gemella non vincolata al tipaggio stretto.
 - `app/Adapters/ActivityRecorder.php` e `app/Adapters/ActivityLogger.php` — implementazioni concrete.
 
-## Action — tre famiglie distinte
+## Action — famiglie
 
 **Query (`app/Actions/Query`, 6)** — letture per il pannello: `GetActivitiesByTypeAction`,
 `GetActivityStatisticsAction`, `GetModelActivitiesAction`, `GetRecentActivitiesAction`,
@@ -64,6 +65,12 @@ e il **contratto pubblico** del modulo.
 **Schema (`app/Actions/Schema`, 2)** — `CheckActivityLogWritableAction` e
 `IsActivityLogSchemaWritableAction`: verificano se la tabella di audit e la
 struttura del log sono scrivibili prima di tentare l'operazione.
+
+**Radice (`app/Actions`, 11) e Config (`app/Actions/Config`, 1)** — scrittura e manutenzione del log:
+`LogActivityAction`, `LogModelCreatedAction`, `LogModelUpdatedAction`, `LogModelDeletedAction`,
+`LogUserLoginAction`, `LogUserLogoutAction`, `RecordSubjectActivityAction`, `RedactModelAttributesAction`,
+`RestoreActivityAction`, `ActivityMaintenanceAction`, `ActivityLogger` (non ha il suffisso `Action`) e
+`Config/ApplyActivityConfigAction`.
 
 ## DTO (`app/Datas`, 8)
 

@@ -26,7 +26,15 @@ Questa documentazione descrive la relazione many-to-many tra utenti e team nel m
 
 ## Collegamenti
 - [Documentazione generale sulle migrazioni](mdc:../../../../docs/database-migrations.md)
+<<<<<<< HEAD
 - [Best practice XotBaseMigration](mdc:../../xot/docs/migrations.md)
+=======
+<<<<<<< HEAD
+- [Best practice XotBaseMigration](mdc:../../xot/docs/migrations.md)
+=======
+- [Best practice XotBaseMigration](migrations.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 

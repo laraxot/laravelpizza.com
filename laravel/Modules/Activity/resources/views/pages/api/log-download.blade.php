@@ -1,10 +1,6 @@
 <?php
 
 declare(strict_types=1);
-<<<<<<< .merge_file_rU8hwx
-
-=======
->>>>>>> .merge_file_kgzST7
 use Illuminate\Http\Request;
 use Modules\Activity\Actions\Log\AuthorizeLogAccessAction;
 use Modules\Activity\Actions\Log\DownloadLogFileAction;

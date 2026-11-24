@@ -3,7 +3,11 @@ title: "laravel skills installation report"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "laravel skills installation report"
 issues: []
 discussions: []
@@ -156,4 +160,8 @@ discussions: []
 **Installation Attempts**: 13 repositories  
 **Successful Installations**: 1 skill  
 **Built-in Skills Available**: 14 skills  
+<<<<<<< HEAD
 **Total Skills Available**: 15 skills
+=======
+**Total Skills Available**: 15 skills
+>>>>>>> laraxot/dev

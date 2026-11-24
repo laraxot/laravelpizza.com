@@ -10,6 +10,8 @@ use Modules\Tenant\Actions\GetTenantNameAction;
 use Modules\Tenant\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
+uses(TestCase::class);
+
 it('gets tenant file path', function (): void {
     /** @var TestCase $this */
     $this->mockService(GetTenantNameAction::class, static function (MockInterface $mock): void {
@@ -22,7 +24,7 @@ it('gets tenant file path', function (): void {
     $expected = str_replace(['/', '\\'], [\DIRECTORY_SEPARATOR, \DIRECTORY_SEPARATOR], $expected);
 
     Assert::assertSame($expected, $result);
-});
+})->group('TENANT-FILE-PATH-INV-1');
 
 it('keeps JSON content written by tests out of the versioned tenant config', function (): void {
     /** @var TestCase $this */
@@ -33,11 +35,11 @@ it('keeps JSON content written by tests out of the versioned tenant config', fun
     $result = app(GetTenantFilePathAction::class)->execute('database/content/pages/1.json');
 
     Assert::assertSame(storage_path('framework/testing/tenant-content/test-tenant/database/content/pages/1.json'), $result);
-});
+})->group('TENANT-FILE-PATH-INV-3');
 
 it('rejects traversal and absolute paths', function (): void {
     $action = app(GetTenantFilePathAction::class);
 
     expect(fn () => $action->execute('../secrets.php'))->toThrow(\InvalidArgumentException::class)
         ->and(fn () => $action->execute('/etc/passwd'))->toThrow(\InvalidArgumentException::class);
-});
+})->group('TENANT-FILE-PATH-INV-2');

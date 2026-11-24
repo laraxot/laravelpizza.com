@@ -11,7 +11,15 @@ updated: 2026-08-24
 
 ## Panoramica
 
+<<<<<<< HEAD
 Questo documento fornisce linee guida per l'integrazione dei server MCP (Model Context Protocol) con il modulo User, seguendo le regole di sviluppo e le convenzioni di codice stabilite per i progetti base_predict_fila3_mono.
+=======
+<<<<<<< HEAD
+Questo documento fornisce linee guida per l'integrazione dei server MCP (Model Context Protocol) con il modulo User, seguendo le regole di sviluppo e le convenzioni di codice stabilite per i progetti base_predict_fila3_mono.
+=======
+Questo documento fornisce linee guida per l'integrazione dei server MCP (Model Context Protocol) con il modulo User, seguendo le regole di sviluppo e le convenzioni di codice stabilite per i progetti base_predict_fila5.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Server MCP Consigliati
 
@@ -175,8 +183,18 @@ class UserStatisticsRepository
     public function getStatisticsByRole(): array
     {
         $results = $this->mcpService->mysql()->executeQuery(
+<<<<<<< HEAD
             'SELECT r.name as role, COUNT(u.id) as user_count, 
              AVG(DATEDIFF(NOW(), u.created_at)) as avg_account_age, 
+=======
+<<<<<<< HEAD
+            'SELECT r.name as role, COUNT(u.id) as user_count, 
+             AVG(DATEDIFF(NOW(), u.created_at)) as avg_account_age, 
+=======
+            'SELECT r.name as role, COUNT(u.id) as user_count,
+             AVG(DATEDIFF(NOW(), u.created_at)) as avg_account_age,
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
              SUM(u.is_active) as active_users
              FROM users u
              JOIN role_user ru ON u.id = ru.user_id
@@ -316,6 +334,10 @@ class EditUser extends EditRecord
                 ->icon('heroicon-o-envelope')
                 ->action(function () {
                     $user = $this->record;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
                     
                     /** @var MCPServiceContract $mcpService */
                     $mcpService = app(MCPServiceContract::class);
@@ -325,6 +347,20 @@ class EditUser extends EditRecord
                     
                     $isValid = $verifyEmailAction->execute($user);
                     
+<<<<<<< HEAD
+=======
+=======
+
+                    /** @var MCPServiceContract $mcpService */
+                    $mcpService = app(MCPServiceContract::class);
+
+                    /** @var \Modules\User\Actions\VerifyUserEmailAction $verifyEmailAction */
+                    $verifyEmailAction = app(\Modules\User\Actions\VerifyUserEmailAction::class);
+
+                    $isValid = $verifyEmailAction->execute($user);
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
                     if ($isValid) {
                         $user->update([
                             'email_verified_at' => now()
@@ -359,4 +395,12 @@ class EditUser extends EditRecord
 
 ## Conclusione
 
+<<<<<<< HEAD
 L'integrazione dei server MCP con il modulo User consente di migliorare significativamente le funzionalità del modulo, fornendo memorizzazione efficiente delle preferenze degli utenti, interazione con API esterne per la verifica dei dati, operazioni complesse sul database e gestione avanzata della cache. Seguendo le linee guida e gli esempi forniti in questo documento, è possibile implementare queste funzionalità in modo conforme alle regole di sviluppo stabilite per i progetti base_predict_fila3_mono.
+=======
+<<<<<<< HEAD
+L'integrazione dei server MCP con il modulo User consente di migliorare significativamente le funzionalità del modulo, fornendo memorizzazione efficiente delle preferenze degli utenti, interazione con API esterne per la verifica dei dati, operazioni complesse sul database e gestione avanzata della cache. Seguendo le linee guida e gli esempi forniti in questo documento, è possibile implementare queste funzionalità in modo conforme alle regole di sviluppo stabilite per i progetti base_predict_fila3_mono.
+=======
+L'integrazione dei server MCP con il modulo User consente di migliorare significativamente le funzionalità del modulo, fornendo memorizzazione efficiente delle preferenze degli utenti, interazione con API esterne per la verifica dei dati, operazioni complesse sul database e gestione avanzata della cache. Seguendo le linee guida e gli esempi forniti in questo documento, è possibile implementare queste funzionalità in modo conforme alle regole di sviluppo stabilite per i progetti base_predict_fila5.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -1,10 +1,19 @@
 ---
+<<<<<<< HEAD
 title: "Perfect Completion Report"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
 qmd: "Perfect Completion Report"
+=======
+title: "perfect completion report 2025 10 02"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-11-23
+qmd: "perfect completion report 2025 10 02"
+>>>>>>> laraxot/dev
 issues: []
 discussions: []
 ---

@@ -3,9 +3,14 @@ title: "📊 FIXCITY PROJECT - PROGRESS REPORT"
 type: concept
 tags: [progress, report]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
 qmd: "progress-report 📊 fixcity project - progress report"
 qmd: "progress-report 📊 ptv project - progress report"
+=======
+updated: 2026-11-23
+qmd: "progress-report 📊 fixcity project - progress report"
+>>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:

@@ -3,7 +3,11 @@ title: "commands"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "commands"
 issues: []
 discussions: []
@@ -300,6 +304,15 @@ dev:seed-test-data
 dev:reset-demo
 ```
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+## 🚨 REGOLA CRITICA - Frontend
+# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
+
+*Comando più importante: `php artisan` - Il cuore dell'ecosistema Laravel*
+=======
+>>>>>>> laraxot/dev
 ---
 
 title: "commands"
@@ -323,4 +336,9 @@ Senza questi comandi, le modifiche frontend NON saranno visibili agli utenti!
 
 ---
 
+<<<<<<< HEAD
 *Comando più importante: `php artisan` - Il cuore dell'ecosistema Laravel* 
+=======
+*Comando più importante: `php artisan` - Il cuore dell'ecosistema Laravel* 
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

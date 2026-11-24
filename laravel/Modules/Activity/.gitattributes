@@ -34,12 +34,3 @@ CHANGELOG.md export-ignore
 *.phar binary !filter
 *.db binary !filter
 *.sqlite binary !filter
-<<<<<<< .merge_file_H568ZL
-*.png -text !filter -merge -diff
-*.svg -text !filter -merge -diff
-*.jpg -text !filter -merge -diff
-*.jpeg -text !filter -merge -diff
-*.gif -text !filter -merge -diff
-*.webp -text !filter -merge -diff
-=======
->>>>>>> .merge_file_xsV2yD

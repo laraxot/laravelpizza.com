@@ -14,6 +14,8 @@ use Spatie\QueueableAction\QueueableAction;
  *
  * Se il permesso non esiste ancora nel database, l'accesso e' negato senza errore.
  * La usano sia la pagina Log sia il download, cosi' la regola e' una sola.
+ *
+ * @contract docs/contracts/authorize-log-access-action.md
  */
 class AuthorizeLogAccessAction
 {

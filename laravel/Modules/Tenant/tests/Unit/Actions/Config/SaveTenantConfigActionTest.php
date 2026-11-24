@@ -12,6 +12,8 @@ use Modules\Tenant\Tests\TestCase;
 use Modules\Xot\Actions\Arr\SaveArrayAction;
 use PHPUnit\Framework\Assert;
 
+uses(TestCase::class);
+
 it('saves tenant config by merging with existing data', function (): void {
     /** @var TestCase $this */
     $this->mockService(GetTenantFilePathAction::class, static function (MockInterface $mock): void {
@@ -47,7 +49,7 @@ it('saves tenant config by merging with existing data', function (): void {
     app(SaveTenantConfigAction::class)->execute('database', [
         'connections' => ['mysql' => ['database' => 'test_db']],
     ]);
-});
+})->group('TENANT-CONFIG-SAVE-INV-1');
 
 it('saves tenant config when file does not exist', function (): void {
     /** @var TestCase $this */
@@ -71,7 +73,7 @@ it('saves tenant config when file does not exist', function (): void {
     });
 
     app(SaveTenantConfigAction::class)->execute('app', ['name' => 'Test App']);
-});
+})->group('TENANT-CONFIG-SAVE-INV-3');
 
 it('replaces lists instead of merging them by index', function (): void {
     /** @var TestCase $this */
@@ -105,4 +107,4 @@ it('replaces lists instead of merging them by index', function (): void {
     });
 
     app(SaveTenantConfigAction::class)->execute('progressioni', ['anni' => [2026]]);
-});
+})->group('TENANT-CONFIG-SAVE-INV-2');

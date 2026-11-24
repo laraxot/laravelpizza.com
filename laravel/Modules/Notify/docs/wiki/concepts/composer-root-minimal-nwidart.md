@@ -3,7 +3,11 @@ title: "Composer root minimale — modulo Notify"
 type: concept
 tags: [composer, notify, nwidart, merge-plugin]
 created: 2026-06-29
+<<<<<<< HEAD
 updated: 2026-06-29
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "Notify composer dependencies root minimal nwidart merge-plugin"
 issues:
   - "https://github.com/laraxot/base_predict_fila5/issues/214"

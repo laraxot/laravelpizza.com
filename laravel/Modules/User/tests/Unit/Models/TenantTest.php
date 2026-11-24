@@ -10,13 +10,14 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Str;
 use Mockery\MockInterface;
-<<<<<<< .merge_file_je9nYU
-=======
 use Modules\User\Models\Tenant;
->>>>>>> .merge_file_NN19hl
 use Modules\User\Tests\TestCase;
 
+<<<<<<< HEAD
 uses(TestCase::class);
+=======
+uses(\Modules\User\Tests\TestCase::class);
+>>>>>>> laraxot/dev
 
 class TenantTest extends TestCase
 {

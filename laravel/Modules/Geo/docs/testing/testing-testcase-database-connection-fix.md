@@ -91,7 +91,15 @@ protected function setUp(): void
 
 ## 🔗 Collegamenti
 
+<<<<<<< HEAD
 - [Testing Rules](testing-rules.md)
+=======
+<<<<<<< HEAD
+- [Testing Rules](testing-rules.md)
+=======
+- [Testing Rules](../testing-rules.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Activity TestCase Fix](../../../Activity/docs/testing-testcase-database-connection-fix.md)
 - [User TestCase](../../../User/tests/TestCase.php)
 

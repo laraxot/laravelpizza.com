@@ -29,7 +29,7 @@ return [
             'tooltip' => '',
         ],
     ],
-<<<<<<< .merge_file_NKl1DJ
+<<<<<<< HEAD
     'sections' => [
         'empty' => [
             'heading' => '',
@@ -37,7 +37,7 @@ return [
         ],
     ],
 =======
->>>>>>> .merge_file_PqC6mI
+>>>>>>> laraxot/dev
     'navigation' => [
         'name' => 'View User',
         'plural' => 'View User',

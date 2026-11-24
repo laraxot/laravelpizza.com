@@ -3,6 +3,10 @@ title: "Git Conflict Inventory"
 qmd: "ui wiki troubleshooting git merge conflict inventory md"
 type: note
 tags: [documentation]
+<<<<<<< HEAD
+=======
+created: 2026-04-28
+>>>>>>> laraxot/dev
 ---
 
 # Git Conflict Inventory

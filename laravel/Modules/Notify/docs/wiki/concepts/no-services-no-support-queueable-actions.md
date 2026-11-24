@@ -6,7 +6,11 @@ type: concept
 module: Notify
 tags: [notify, services, support, actions, queueable-action, migration]
 created: 2026-07-13
+<<<<<<< HEAD
 updated: 2026-07-13
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "Notify module Services and Support banned use app Actions QueueableAction policy"
 related:
   - "./claude-audit-static.md"

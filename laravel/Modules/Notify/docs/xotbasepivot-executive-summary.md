@@ -3,7 +3,11 @@ title: "xotbasepivot executive summary"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "xotbasepivot executive summary"
 issues: []
 discussions: []
@@ -374,4 +378,7 @@ Post-mortem meeting per lessons learned.
 ---
 
 **TL;DR:** Implementare XotBasePivot elimina 2.340+ righe duplicate, migliora manutenibilità 26x, richiede solo 3-4 ore, ROI 58.500% in 1 anno. Pattern già validato (XotBaseModel). Risk basso. **APPROVATO ⭐⭐⭐⭐⭐**
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev

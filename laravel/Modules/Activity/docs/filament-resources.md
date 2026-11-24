@@ -353,7 +353,4 @@ class ListSnapshots extends XotBaseListRecords
 - [XotBaseListRecords](../xot/project_docs/filament-pages.md)
 - [Best Practices Filament](../xot/project_docs/filament-best-practices.md)
 - [Compatibilità dei Metodi in PHP](https://www.php.net/manual/en/language.oop5.inheritance.php)
-<<<<<<< .merge_file_OGY1F4
-=======
 - [Compatibilità dei Metodi in PHP](https://www.php.net/manual/en/language.oop5.inheritance.php)
->>>>>>> .merge_file_Uq68lB

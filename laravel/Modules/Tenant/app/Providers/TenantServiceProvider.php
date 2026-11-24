@@ -35,10 +35,7 @@ class TenantServiceProvider extends XotBaseServiceProvider
     {
         parent::boot();
 
-        // Skip complex configuration during testing
-        // if (! $this->app->environment('testing')) {
         $this->mergeConfigs();
-        // }
 
         $this->registerDB();
         $this->registerMorphMap();
@@ -148,7 +145,6 @@ class TenantServiceProvider extends XotBaseServiceProvider
     public function register(): void
     {
         parent::register();
-        // $this->app->register(AdminPanelProvider::class);
     }
 
     public function mergeConfigs(): void

@@ -247,12 +247,12 @@ Testing strategies and guidelines:
 | 2026-07-28 | [testing-guidelines.md](testing-guidelines.md) | root |
 | 2026-07-28 | [test444.md](test444.md) | root |
 | 2026-07-28 | [test2222.md](test2222.md) | root |
-| 2026-07-28 | [test2024-12-04.md](raw/root-import/test2024-12-04.md) | root |
+| 2026-07-28 | [test.md](raw/root-import/test.md) | root |
 | 2026-07-28 | [test04.md](test04.md) | root |
 | 2026-07-28 | [test03.md](test03.md) | root |
 | 2026-07-28 | [test02.md](test02.md) | root |
 | 2026-07-28 | [test.md](test.md) | root |
-| 2026-07-28 | [test-14-02-2024.md](raw/root-import/test-14-02-2024.md) | root |
+| 2026-07-28 | [test.md](raw/root-import/test.md) | root |
 | 2026-07-28 | [raw/root-import/changelog-1.md](raw/root-import/changelog-1.md) | raw |
 
 ---

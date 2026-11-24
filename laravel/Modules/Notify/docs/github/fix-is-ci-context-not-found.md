@@ -3,7 +3,11 @@ title: "Fix Risolto: Errore `is_ci_context: command not found`"
 type: concept
 tags: [fix, context, not, found]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "fix-is-ci-context-not-found fix risolto: errore `is_ci_context: command not found`"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

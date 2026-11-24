@@ -3,7 +3,11 @@ title: "code quality"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "code quality"
 issues: []
 discussions: []
@@ -49,7 +53,19 @@ bash laravel/tools/phpmd.sh laravel text phpmd.xml --exclude vendor,node_modules
 ## 🔗 Link
 
 **Di ritorno:**
+<<<<<<< HEAD
 - → [CLAUDE.md - Code Quality](../../CLAUDE.md)
 - → [AGENTS.md - Quality Checks](../../AGENTS.md#quality-checks-obbligatori-dopo-ogni-modifica)
 - → [AGENTS.md - Quality Checks](../../AGENTS.md#quality-checks-obbligatori-dopo-ogni-modifica)
+=======
+<<<<<<< HEAD
+- → [CLAUDE.md - Code Quality](../../claude.md)
+- → [AGENTS.md - Quality Checks](../../AGENTS.md#quality-checks-obbligatori-dopo-ogni-modifica)
+- → [agents.md - Quality Checks](../../agents.md#quality-checks-obbligatori-dopo-ogni-modifica)
+=======
+- → [CLAUDE.md - Code Quality](../../CLAUDE.md)
+- → [AGENTS.md - Quality Checks](../../AGENTS.md#quality-checks-obbligatori-dopo-ogni-modifica)
+- → [AGENTS.md - Quality Checks](../../AGENTS.md#quality-checks-obbligatori-dopo-ogni-modifica)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - → [INDEX](index.md)

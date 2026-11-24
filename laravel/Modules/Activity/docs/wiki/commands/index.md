@@ -18,10 +18,6 @@ qmd search "Activity commands" --limit 5
 ```
 
 ## See Also
-<<<<<<< .merge_file_H8EBu1
-- [Root Trigger Map](../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
-=======
->>>>>>> .merge_file_LgkVzW
 - [Root Trigger Map](../../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
 - [Root Wiki](../../../docs/wiki/)
 

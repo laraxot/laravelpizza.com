@@ -19,8 +19,7 @@ use function Safe\parse_url;
  * ChatGPT e Copilot, quindi una pagina nuova arriva li' senza aspettare il crawler. Google non aderisce: per Google
  * restano sitemap e Search Console.
  *
- * Contratto di comportamento: docs/contracts/submit-index-now-action.md (sei sezioni: input, output, invarianti, effetti
- * collaterali, errori, non fa).
+ * @contract docs/contracts/submit-index-now-action.md
  *
  * @see Modules/Seo/docs/adr/search-engine-presence.md
  */

@@ -3,7 +3,11 @@ title: "DESIGN COMUNI PROGRESS 1"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "DESIGN COMUNI PROGRESS 1"
 issues: []
 discussions: []
@@ -252,6 +256,11 @@ Docs       [██████████] 100% (3/3)
 
 ### To Create
 
+<<<<<<< HEAD
+=======
+1. **Component Index** (`components/00-INDEX.md`)
+2. **Page Index** (`pages/00-INDEX.md`)
+>>>>>>> laraxot/dev
 1. **Component Index** (`components/00-index.md`)
 2. **Page Index** (`pages/00-index.md`)
 3. **Usage Examples** (per component)

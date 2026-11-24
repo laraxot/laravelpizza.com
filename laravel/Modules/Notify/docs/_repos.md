@@ -7,7 +7,11 @@ title: "Repos"
 type: reference
 status: active
 created: 2026-08-27
+<<<<<<< HEAD
 updated: 2026-08-27
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 note: "Convertito da _repos.txt (documento) da convert-docs-txt-to-md.py."
 ---
 

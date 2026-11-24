@@ -1,10 +1,7 @@
 <?php
 
 declare(strict_types=1);
-<<<<<<< .merge_file_BakcQW
-=======
 
->>>>>>> .merge_file_EN99Xz
 use Filament\Facades\Filament;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Facades\File;
@@ -14,10 +11,7 @@ use Modules\Activity\Filament\Pages\LogViewer;
 use Modules\Activity\Tests\TestCase;
 use Modules\Xot\Contracts\UserContract;
 use Spatie\Permission\Exceptions\PermissionDoesNotExist;
-<<<<<<< .merge_file_BakcQW
-=======
 use Throwable;
->>>>>>> .merge_file_EN99Xz
 
 uses(TestCase::class);
 

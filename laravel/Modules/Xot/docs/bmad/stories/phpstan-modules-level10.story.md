@@ -11,6 +11,11 @@ related:
   - ../../../../IndennitaCondizioniLavoro/docs/bmad/2026-10-06-phpstan-l10-fix.story.md
   - ../../../../User/docs/bmad/stories/phpstan-l10-user-lang-fix.story.md
 
+<<<<<<< HEAD
+=======
+- ../../../../User/docs/bmad/stories/phpstan-l10-user-lang-fix-20261006.story.md
+
+>>>>>>> laraxot/dev
 ---
 
 # PHPStan Level 10 — correzione fleet moduli
@@ -127,7 +132,12 @@ sintattici, non il criterio funzionale del lavoro.
 - 2026-10-06: risolto cluster Tenant SushiToJson.php: aggiunto return type array<array<string,mixed>> a getRows() e risolta variabile $schema
 - 2026-10-06: organizzate docs moduli e temi secondo BMAD.
 - 2026-10-06: completati Progressioni, Rating e Sigma; PHPStan globale finale verde.
+<<<<<<< HEAD
 =======
+=======
+
+## Seguito in base_quaeris_fila5
+>>>>>>> laraxot/dev
 
 ## Seguito in base_<nome progetto>_fila5
 

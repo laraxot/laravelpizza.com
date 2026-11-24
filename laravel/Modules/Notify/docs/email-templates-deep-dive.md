@@ -3,7 +3,11 @@ title: "email templates deep dive"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "email templates deep dive"
 issues: []
 discussions: []
@@ -132,4 +136,8 @@ Vedi [Queueable Actions con Spatie](queueable-actions.md) per definizione delle 
 
 ---
 *Documento generato il 2025-05-05T21:45:20+02:00*
+<<<<<<< HEAD
 *Documento generato il 2025-05-05T21:45:20+02:00*
+=======
+*Documento generato il 2025-05-05T21:45:20+02:00*
+>>>>>>> laraxot/dev

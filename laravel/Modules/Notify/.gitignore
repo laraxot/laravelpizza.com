@@ -76,6 +76,15 @@ phpmd*
 phpmd.ruleset.xml
 phpmd.ruleset.xml.bak
 phpstan*
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# BMAD stories/docs named phpstan-* must remain trackable
+!docs/**/phpstan*.md
+!docs/**/phpstan*.story.md
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 .phpstorm.meta.php
 .phpunit.result.cache
 phpunit.xml
@@ -127,3 +136,8 @@ resources/lang
 .qwen/
 .php-cs-fixer.php
 .php-cs-fixer.dist.php
+<<<<<<< HEAD
+=======
+tests/coverage-*.*
+docs/screenshots/
+>>>>>>> laraxot/dev

@@ -22,11 +22,33 @@ related:
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+- [Best Practices Chiavi di Traduzione](/laravel/Modules/Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+- [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/LARAVEL_LOCALIZATION_USAGE.md)
+- [README modulo User](./readme.md)
+- [Best Practices Chiavi di Traduzione](/laravel/modules/lang/docs/translation_keys_best_practices.md)
+- [Utilizzo di Laravel Localization](/laravel/modules/lang/docs/laravel_localization_usage.md)
+=======
+<<<<<<< .merge_file_AWG2To
+- [Best Practices Chiavi di Traduzione](/laravel/Modules/Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+- [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/LARAVEL_LOCALIZATION_USAGE.md)
+- [README modulo User](./README.md)
+- [Best Practices Chiavi di Traduzione](/laravel/modules/lang/docs/translation_keys_best_practices.md)
+- [Utilizzo di Laravel Localization](/laravel/modules/lang/docs/laravel_localization_usage.md)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Best Practices Chiavi di Traduzione](/laravel/Modules/Lang/docs/translation_keys_best_practices.md)
 - [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/laravel_localization_usage.md)
 - [README modulo User](./README.md)
 - [Best Practices Chiavi di Traduzione](/laravel/Modules/Lang/docs/translation_keys_best_practices.md)
 - [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/laravel_localization_usage.md)
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_x7VzQ1
+>>>>>>> laraxot/dev
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
 ## Panoramica

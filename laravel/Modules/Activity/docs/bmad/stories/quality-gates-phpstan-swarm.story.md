@@ -174,3 +174,11 @@ story dedicata che applichi la migrazione ADR-014→Pest5 già fatta altrove).
 Non serve una nuova memoria: il pattern è già coperto da
 `Modules/Xot/docs/stories/5.19.pest-helpers-bootfiles-and-typecoverage.story.md`
 e da `pest4-bootstrap-composer.md`/`pest5-configuring-tests.md`.
+
+---
+
+## Contenuto unito da `quality-gates-phpstan-swarm.story.md`
+
+# quality gates phpstan swarm
+
+Stub alias post-strip data/timestamp. Canonico: [./quality-gates-phpstan-swarm.story.md](./quality-gates-phpstan-swarm.story.md).

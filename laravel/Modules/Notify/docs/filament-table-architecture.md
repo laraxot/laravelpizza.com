@@ -6,7 +6,11 @@ discussions: []
 title: "Dove si configura la tabella di una Resource Filament"
 type: guideline
 module: Notify
+<<<<<<< HEAD
 updated: 2026-09-01
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "tabella filament resource table class getTableFilters XotBaseResourceTable HasXotTable list page notify"
 ---
 

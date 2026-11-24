@@ -7,7 +7,11 @@ type: concept
 sources: []
 confidence: high
 created: 2026-05-07
+<<<<<<< HEAD
 updated: 2026-05-07
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 tags: [xotbase, filament, tables, enforcement]
 related:
   - ../../../../../../docs/wiki/concepts/xotbase-table-columns-enforcement.md

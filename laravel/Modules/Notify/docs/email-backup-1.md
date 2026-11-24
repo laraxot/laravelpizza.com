@@ -3,7 +3,11 @@ title: "email backup 1"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "email backup 1"
 issues: []
 discussions: []
@@ -646,6 +650,12 @@ class MailBackupDebugger
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
+<<<<<<< HEAD
+=======
+- [Laravel Storage](https://laravel.com/project_docs/storage)
+- [Laravel Encryption](https://laravel.com/project_docs/encryption)
+- [Laravel Commands](https://laravel.com/project_docs/artisan)
+>>>>>>> laraxot/dev
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
@@ -655,9 +665,21 @@ class MailBackupDebugger
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
+<<<<<<< HEAD
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
+=======
+<<<<<<< HEAD
+- [Laravel Storage](https://laravel.com/project_docs/storage)
+- [Laravel Encryption](https://laravel.com/project_docs/encryption)
+- [Laravel Commands](https://laravel.com/project_docs/artisan)
+=======
+- [Laravel Storage](https://laravel.com/docs/storage)
+- [Laravel Encryption](https://laravel.com/docs/encryption)
+- [Laravel Commands](https://laravel.com/docs/artisan)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)

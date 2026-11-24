@@ -3,7 +3,11 @@ title: "git merge"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "git merge"
 issues: []
 discussions: []
@@ -29,5 +33,13 @@ discussions: []
 
 ## Notes
 
+<<<<<<< HEAD
 - Inventory generated from `rg -l "^(<<<<<<<|=======|>>>>>>>)"`.
+=======
+<<<<<<< HEAD
+- Inventory generated from `rg -l "^(CONFLICT_START|-------|CONFLICT_END)"`.
+=======
+- Inventory generated from `rg -l "^(<<<<<<<|=======|>>>>>>>)"`.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - Use this list as a volatile coordination map; re-open each file before editing because other agents may resolve items in parallel.

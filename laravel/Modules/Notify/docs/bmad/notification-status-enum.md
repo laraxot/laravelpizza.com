@@ -4,7 +4,11 @@ module: Notify
 type: decision
 tags: [notify, enum, notification-log, status]
 created: 2026-10-06
+<<<<<<< HEAD
 updated: 2026-10-06
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # Notification status

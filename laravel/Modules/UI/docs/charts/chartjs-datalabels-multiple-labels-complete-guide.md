@@ -581,6 +581,11 @@ protected function getOptions(): array
 ### Documentazione Modulo UI
 
 - [Filament Chart.js Guide](./filament-chart-js-guide.md)
+<<<<<<< HEAD
+=======
+- [UI Components Documentation](../components/readme.md)
+
+>>>>>>> laraxot/dev
 - [UI Components Documentation](../components/README.md)
 
 ### Documentazione Generale

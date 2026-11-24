@@ -3,7 +3,11 @@ title: "✅ AI Skills & Plugins - COMPLETE"
 type: concept
 tags: [skills, plugins, complete]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "ai-skills-and-plugins-complete ✅ ai skills & plugins - complete"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

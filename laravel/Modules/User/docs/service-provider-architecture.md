@@ -388,7 +388,15 @@ test('user service provider only configures, not registers dependencies', functi
 ### Documentazione Correlata
 - [PASSPORT_INTEGRATION.md](./passport-integration.md) - Passport integration completa
 - [FILOSOFIA_MODULO_USER.md](./filosofia-modulo-user.md) - Filosofia generale modulo
+<<<<<<< HEAD
 - [README.md](./README.md) - Overview modulo
+=======
+<<<<<<< HEAD
+- [README.md](./readme.md) - Overview modulo
+=======
+- [README.md](./README.md) - Overview modulo
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### Documentazione Esterna
 - [Laravel Modules Documentation](https://nwidart.com/laravel-modules)

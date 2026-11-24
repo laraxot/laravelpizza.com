@@ -3,7 +3,11 @@ title: "no model extends eloquent directly.story"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "no model extends eloquent directly.story"
 issues: []
 discussions: []

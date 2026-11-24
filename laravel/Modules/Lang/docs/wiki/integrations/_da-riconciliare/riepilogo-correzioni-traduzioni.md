@@ -136,6 +136,12 @@ php artisan tinker
 ### Documentazione Modulo Lang:
 - [Errori Comuni Traduzione](errori_comuni_traduzione.md)
 - [Errori Comuni Traduzione](../../../errori_comuni_traduzione.md)
+<<<<<<< HEAD
+=======
+- [Correzioni Errori Sintassi 2025](correzioni_errori_sintassi_2025.md)
+- [Traduzioni Navigation 2025](traduzioni_navigation_2025.md)
+
+>>>>>>> laraxot/dev
 - [Correzioni Errori Sintassi 2025](../../../archive/correzioni_errori_sintassi_2025.md)
 - [Traduzioni Navigation 2025](../../../archive/traduzioni_navigation_2025.md)
 

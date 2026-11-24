@@ -175,3 +175,8 @@ lang.code-workspace
 /.github/skills/
 docs/graphify
 resources/lang
+<<<<<<< HEAD
+=======
+tests/coverage-*.*
+docs/screenshots/
+>>>>>>> laraxot/dev

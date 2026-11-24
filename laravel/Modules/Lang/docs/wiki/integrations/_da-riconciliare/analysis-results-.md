@@ -102,6 +102,11 @@ discussions: []
 
 - [Quality Improvements](./quality-improvements-2025-01-06.md)
 - [Index Documentation](./index.md)
+<<<<<<< HEAD
+=======
+- [Best Practices](./BEST_PRACTICES.md)
+
+>>>>>>> laraxot/dev
 - [Best Practices](./best_practices.md)
 
 *Ultimo aggiornamento: 2025-01-06*

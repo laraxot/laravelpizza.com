@@ -4,12 +4,6 @@ type: guide
 tags: [activity, patterns]
 created: 2026-07-28
 updated: 2026-07-28
-<<<<<<< .merge_file_hWWqPw
----
-
-# Activity Module — Patterns
-=======
->>>>>>> .merge_file_nd71pQ
 status: draft
 qmd: "activity module   patterns activity"
 ---

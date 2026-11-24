@@ -3,7 +3,11 @@ title: "send email translation improvement"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "send email translation improvement"
 issues: []
 discussions: []
@@ -321,5 +325,24 @@ php -l Modules/Notify/lang/it/send_email.php
 4. **Deployment**: Deploy in ambiente di sviluppo per testing
 
 ---
+<<<<<<< HEAD
 **Ultimo aggiornamento**: Gennaio 2025
 **Autore**: Sistema di miglioramento automatico
+=======
+<<<<<<< .merge_file_G1FBly
+
+title: "send email translation improvement"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "send email translation improvement"
+issues: []
+discussions: []
+**Ultimo aggiornamento**: Gennaio 2025  
+**Autore**: Sistema di miglioramento automatico  
+=======
+**Ultimo aggiornamento**: Gennaio 2025
+**Autore**: Sistema di miglioramento automatico
+>>>>>>> .merge_file_0SD7go
+>>>>>>> laraxot/dev

@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+---
+title: "Logout Implementation With Laravel Localization"
+module: User
+type: note
+status: active
+updated: '2026-11-23'
+---
+
+>>>>>>> laraxot/dev
 # Implementazione del Logout con LaravelLocalization 
 
 ## Collegamenti correlati
@@ -9,7 +20,15 @@
 # Implementazione del Logout con LaravelLocalization
 
 ## Collegamenti correlati
+<<<<<<< HEAD
 - [README modulo User](./README.md)
+=======
+<<<<<<< HEAD
+- [README modulo User](./readme.md)
+=======
+- [README modulo User](./README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Best Practices Componenti di Autenticazione](./auth_components_best_practices.md)
 - [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/laravel_localization_usage.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)

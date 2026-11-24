@@ -54,3 +54,11 @@ Tests stay Pest. Use Pest `uses(TestCase::class)` in test files. Do not convert 
 - Every model connection used by the module is listed in `$connectionsToTransact`.
 - Provider list composes the parent provider list.
 - PHPStan command runs from `laravel` and uses `phpstan.neon` unchanged.
+
+---
+
+## Contenuto unito da `testcase-hierarchy-decision.md`
+
+# testcase hierarchy decision
+
+Stub alias post-strip data/timestamp. Canonico: [./testcase-hierarchy-decision.md](./testcase-hierarchy-decision.md).

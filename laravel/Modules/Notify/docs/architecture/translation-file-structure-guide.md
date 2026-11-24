@@ -4,7 +4,11 @@ type: concept
 tags: [notify, docs, architecture, translation, file, structure]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify documentazione architecture translation file structure guide guida alla struttura dei file di traduzione frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"

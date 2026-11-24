@@ -4,7 +4,11 @@ type: concept
 module: Notify
 tags: [second-brain, stub, hackernoon, harness]
 created: 2026-06-05
+<<<<<<< HEAD
 updated: 2026-06-05
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify second brain stub canonical xot harness hackernoon llm-wiki"
 issues:
   - "https://github.com/laraxot/base_fixcity_fila5/issues/272"

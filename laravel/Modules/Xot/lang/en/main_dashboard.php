@@ -3,15 +3,6 @@
 declare(strict_types=1);
 
 return [
-<<<<<<< .merge_file_psmpOX
-    'sections' => [
-        'empty' => [
-            'label' => '',
-            'heading' => '',
-        ],
-    ],
-=======
->>>>>>> .merge_file_CT0IcT
     'navigation' => [
         'label' => 'Missing Navigation Label',
         'plural_label' => 'Missing Navigation Plural Label',

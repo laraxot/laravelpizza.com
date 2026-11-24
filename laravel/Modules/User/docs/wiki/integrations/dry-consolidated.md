@@ -315,7 +315,15 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
 - [Base Classes Hierarchy](./models/base-classes-hierarchy.md)
 - [Base Classes Corrections](./fixes/base-classes-corrections-.md.md)
 - [Architecture](./core/architecture.md)
+<<<<<<< HEAD
 - [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
+=======
+<<<<<<< HEAD
+- [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
+=======
+- [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 
@@ -463,7 +471,15 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
 - [Base Classes Hierarchy](./models/base-classes-hierarchy.md)
 - [Base Classes Corrections](./fixes/base-classes-corrections-.md.md)
 - [Architecture](./core/architecture.md)
+<<<<<<< HEAD
 - [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
+=======
+<<<<<<< HEAD
+- [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
+=======
+- [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [DRY/KISS Global](../../../docs/dry_kiss_analysis_2025-10-15.md)
 
 ---
@@ -610,7 +626,15 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
 - [Base Classes Hierarchy](./models/base-classes-hierarchy.md)
 - [Base Classes Corrections](./fixes/base-classes-corrections-.md.md)
 - [Architecture](./core/architecture.md)
+<<<<<<< HEAD
 - [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
+=======
+<<<<<<< HEAD
+- [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
+=======
+- [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 

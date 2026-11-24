@@ -3,12 +3,24 @@ title: "🐮 Super Mucca - Final Refactoring Report"
 type: concept
 tags: [final, refactoring, report]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "final-refactoring-report 🐮 super mucca - final refactoring report"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
+<<<<<<< HEAD
   - "./2025-excellence-achievement.md"
+=======
+<<<<<<< HEAD
+  - "./excellence-achievement.md"
+=======
+  - "./2025-excellence-achievement.md"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./agid-implementation-guide.md"
   - "./architecture.md"
   - "./complete-refactoring-analysis.md"

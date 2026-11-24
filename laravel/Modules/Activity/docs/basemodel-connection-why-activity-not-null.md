@@ -54,10 +54,7 @@ protected $connection = null;
 
 - [basemodel-connection-religion (canon Xot)](../../Xot/docs/wiki/concepts/basemodel-connection-religion.md)
 - [fix01](prompts/fix01.txt)
-<<<<<<< .merge_file_jX1wlk
-=======
 
->>>>>>> .merge_file_tPaIl8
 - [basemodel-connection-religion (canon Xot)](../../Xot/docs/wiki/concepts/basemodel-connection-religion.md)- [fix01](prompts/fix01.txt)
 - [database-connections](database-connections.md)
 - [testing-testcase-database-connection-fix](testing-testcase-database-connection-fix.md)

@@ -157,10 +157,23 @@ brainstorming): non e' un gap di documentazione, e' una scelta di dove investire
 ## [2026-09-22] Data debt morph map: riverificato, non presente su Ptv
 
 **Decision:** il data debt documentato in `decision-log.md` (40 righe stantie
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 `model_has_role.model_type='Modules\Quaeris\Models\User'`) e' stato riverificato
 con una query read-only reale su questa installazione (Ptv): 482/482 righe hanno
 `model_type='user'` corretto, zero righe stantie. Il debito riguardava il tenant
 Quaeris, non questo. Nessuna azione necessaria su Ptv per questo punto specifico.
+<<<<<<< HEAD
+=======
+=======
+`model_has_role.model_type='Modules\<nome progetto>\Models\User'`) e' stato riverificato
+con una query read-only reale su questa installazione (Ptv): 482/482 righe hanno
+`model_type='user'` corretto, zero righe stantie. Il debito riguardava il tenant
+<nome progetto>, non questo. Nessuna azione necessaria su Ptv per questo punto specifico.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 **Rationale:** modulo condiviso fra progetti (Sigma/Ptv/Fila5/Quaeris) — un data
 

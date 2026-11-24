@@ -3,7 +3,11 @@ title: "GitHub Actions Status & Fixes"
 type: concept
 tags: [github, actions, status]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "github-actions-status github actions status & fixes"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

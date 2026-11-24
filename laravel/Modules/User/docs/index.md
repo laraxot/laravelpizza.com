@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+---
+title: "Index"
+module: User
+type: note
+status: active
+updated: '2026-11-23'
+---
+
+>>>>>>> laraxot/dev
 # Documentation Index
 
 ## -integration
@@ -459,7 +470,11 @@
 - [login-widget-conversion.md](./archive/historical/login-widget-conversion.md)
 - [login-widget-filament-schema-errors-roadmap.md](./archive/historical/login-widget-filament-schema-errors-roadmap.md)
 - [login-widget-livewire-binding-fix.md](./archive/historical/login-widget-livewire-binding-fix.md)
+<<<<<<< HEAD
 - [login-widget-translation-audit-historical.md](./login-widget-translation-audit-historical.md)
+=======
+- [login-widget-translation-audit-2025.md](./archive/historical/login-widget-translation-audit-2025.md)
+>>>>>>> laraxot/dev
 - [login-widget-translation-audit-conflict.md](./archive/historical/login-widget-translation-audit-conflict.md)
 - [login-widget-translation-audit.md](./archive/historical/login-widget-translation-audit.md)
 - [loginwidget-error-analysis.md](./archive/historical/loginwidget-error-analysis.md)
@@ -580,7 +595,11 @@
 - [passport-implementation-summary.md](./archive/historical/passport-implementation-summary.md)
 - [passport-vs-socialite-clarification.md](./archive/historical/passport-vs-socialite-clarification.md)
 - [passport.md](./archive/historical/passport.md)
+<<<<<<< HEAD
 - [password-translation-completion-historical.md](./password-translation-completion-historical.md)
+=======
+- [password-translation-completion-2025.md](./archive/historical/password-translation-completion-2025.md)
+>>>>>>> laraxot/dev
 - [password-translation-completion.md](./archive/historical/password-translation-completion.md)
 - [password.md](./archive/historical/password.md)
 - [path-conventions.md](./archive/historical/path-conventions.md)
@@ -607,7 +626,11 @@
 - [phpstan-fixes-1.md](./archive/historical/phpstan-fixes-correzioni-livello-modulo-user.md)
 - [phpstan-fixes-2.md](./archive/historical/phpstan-fixes-2.md)
 - [phpstan-fixes-2025-10-01.deprecated.md](./archive/historical/phpstan-fixes-2025-10-01.deprecated.md)
+<<<<<<< HEAD
 - [phpstan-fixes.md](./phpstan-fixes.md)
+=======
+- [phpstan-fixes-2025.md](./archive/historical/phpstan-fixes-2025.md)
+>>>>>>> laraxot/dev
 - [phpstan-fixes-3.md](./archive/historical/phpstan-fixes-3.md)
 - [phpstan-fixes-4.md](./archive/historical/phpstan-fixes-4.md)
 - [phpstan-fixes-conflict-276dc0.md](./archive/historical/phpstan-fixes-conflict-276dc0.md)
@@ -615,7 +638,11 @@
 - [phpstan-fixes-conflict.md](./archive/historical/phpstan-fixes-conflict.md)
 - [phpstan-fixes-gennaio-1.md](./archive/historical/phpstan-fixes-gennaio-modulo-user.md)
 - [phpstan-fixes-gennaio-2025-complete.md](./archive/historical/phpstan-fixes-complete.md)
+<<<<<<< HEAD
 - [phpstan-fixes-gennaio.md](./phpstan-fixes-gennaio.md)
+=======
+- [phpstan-fixes-gennaio-2025.md](./archive/historical/phpstan-fixes-gennaio-2025.md)
+>>>>>>> laraxot/dev
 - [phpstan-fixes-gennaio-complete.md](./archive/historical/phpstan-fixes-gennaio-complete.md)
 - [phpstan-fixes-gennaio.md](./archive/historical/phpstan-fixes-gennaio.md)
 - [phpstan-fixes-gennaiocomplete.md](./archive/historical/phpstan-fixes-gennaiocomplete.md)
@@ -667,7 +694,11 @@
 - [resources-array-keys-philosophy.md](./archive/historical/resources-array-keys-philosophy.md)
 - [resources-corrections-summary-.md](./archive/historical/resources-corrections-summary-.md)
 - [roadmap-1.md](./archive/historical/roadmap.md)
+<<<<<<< HEAD
 - [roadmap-archive.md](./roadmap-archive.md)
+=======
+- [roadmap-2025.md](./archive/historical/roadmap-2025.md)
+>>>>>>> laraxot/dev
 - [roadmap-and-issues.md](./archive/historical/roadmap-and-issues.md)
 - [roadmap-complete.md](./archive/historical/roadmap-complete.md)
 - [roadmap-conflict.md](./archive/historical/roadmap-conflict.md)
@@ -721,7 +752,11 @@
 - [translation-fixes.md](./archive/historical/translation-fixes.md)
 - [translation-keys-rules.md](./archive/historical/translation-keys-rules.md)
 - [translation-maintenance-log.md](./archive/historical/translation-maintenance-log.md)
+<<<<<<< HEAD
 - [translation-syntax-fixes.md](./translation-syntax-fixes.md)
+=======
+- [translation-syntax-fixes-2025.md](./archive/historical/translation-syntax-fixes-2025.md)
+>>>>>>> laraxot/dev
 - [translation-syntax-fixes.md](./archive/historical/translation-syntax-fixes.md)
 - [translations.md](./archive/historical/translations.md)
 - [troubleshooting-login-component.md](./archive/historical/troubleshooting-login-component.md)
@@ -776,6 +811,10 @@
 - [phpstan-compliance.md](./archive/old_tasks/phpstan-compliance.md)
 - [phpstan-corrections.md](./archive/old_tasks/phpstan-corrections.md)
 - [phpstan-dry-kiss-improvements.md](./archive/old_tasks/phpstan-dry-kiss-improvements.md)
+<<<<<<< HEAD
+=======
+- [phpstan-fixes-2025.md](./archive/old_tasks/phpstan-fixes-2025.md)
+>>>>>>> laraxot/dev
 - [phpstan-fixes-gennaio-2025.md](./archive/old_tasks/phpstan-fixes-modulo-user-gennaio.md)
 - [phpstan-fixes-gennaio-complete.md](./archive/old_tasks/phpstan-fixes-gennaio-complete.md)
 - [phpstan-fixes-gennaio.md](./archive/old_tasks/phpstan-fixes-gennaio.md)
@@ -1052,7 +1091,11 @@
 - [advanced.md](./html2pdf/advanced.md)
 - [index.md](./html2pdf/index.md)
 - [laravel.md](./html2pdf/laravel.md)
+<<<<<<< HEAD
 - [SECURITY.md](./html2pdf/security.md)
+=======
+- [security.md](./html2pdf/security.md)
+>>>>>>> laraxot/dev
 - [styling.md](./html2pdf/styling.md)
 - [usage.md](./html2pdf/usage.md)
 
@@ -1807,7 +1850,11 @@
 
 ## llm-wiki
 
+<<<<<<< HEAD
 - [AGENTS.md](./llm-wiki/AGENTS.md)
+=======
+- [agents.md](./llm-wiki/agents.md)
+>>>>>>> laraxot/dev
 - [index.md](./llm-wiki/index.md)
 - [log.md](./llm-wiki/log.md)
 
@@ -1921,12 +1968,22 @@
 
 ## raw/root-import
 
+<<<<<<< HEAD
+=======
+- [changelog.md](./raw/root-import/changelog.md)
+>>>>>>> laraxot/dev
 - [changelog-1.md](./raw/root-import/changelog-1.md)
 - [changelog-2.md](./raw/root-import/changelog-2.md)
 - [changelog-3.md](./raw/root-import/changelog-3.md)
 - [changelog-4.md](./raw/root-import/changelog-4.md)
 - [changelog-5.md](./raw/root-import/changelog-5.md)
+<<<<<<< HEAD
 - [CHANGELOG.md](./raw/root-import/changelog.md)
+=======
+- [changelog.md](./raw/root-import/changelog.md)
+- [changelog-5.md](./raw/root-import/changelog-5.md)
+- [changelog.md](./raw/root-import/changelog.md)
+>>>>>>> laraxot/dev
 - [git-reset-1.md](./raw/root-import/git-reset-1.md)
 - [git-reset.md](./raw/root-import/git-reset.md)
 - [pest-test-report-1.md](./raw/root-import/pest-test-report-1.md)
@@ -2101,7 +2158,11 @@
 - [case-sensitivity-rules.md](./case-sensitivity-rules.md)
 - [case-sensitivity.md](./case-sensitivity.md)
 - [cases.md](./cases.md)
+<<<<<<< HEAD
 - [CHANGELOG.md](./CHANGELOG.md)
+=======
+- [changelog.md](./changelog.md)
+>>>>>>> laraxot/dev
 - [chartjs-datalabels-user-integration.md](./chartjs-datalabels-user-integration.md)
 - [chartjsatalabels-user-integration.md](./chartjsatalabels-user-integration.md)
 - [charts-implementation.md](./charts-implementation.md)
@@ -2428,7 +2489,12 @@
 - [login-widget-livewire-binding.md](./login-widget-livewire-binding.md)
 - [login-widget-translation-audit-.md](./login-widget-translation-audit-.md)
 - [login-widget-translation-audit-1.md](./login-widget-translation-audit-1.md)
+<<<<<<< HEAD
 - [login-widget-translation-audit-archive-1.md](./login-widget-translation-audit-archive.md)
+=======
+- [login-widget-translation-audit-2025.md](./login-widget-translation-audit-historical.md)
+- [login-widget-translation-audit-archive-1.md](./login-widget-translation-audit-archive-1.md)
+>>>>>>> laraxot/dev
 - [login-widget-translation-audit-conflict.md](./login-widget-translation-audit-conflict.md)
 - [login-widget-translation-audit.md](./login-widget-translation-audit.md)
 - [login-widget-translation.md](./login-widget-translation.md)
@@ -2708,8 +2774,14 @@
 - [passport.md](./passport.md)
 - [password-translation-completion-.md](./password-translation-completion-.md)
 - [password-translation-completion-1.md](./password-translation-completion-1.md)
+<<<<<<< HEAD
 - [password-translation-completion-2.md](./password-translation-completion.md)
 - [password-translation-completion-2025-1.md](./password-translation-completion-historical.md)
+=======
+- [password-translation-completion-2.md](./password-translation-completion-2.md)
+- [password-translation-completion-2025-1.md](./password-translation-completion-historical-1.md)
+- [password-translation-completion-2025.md](./password-translation-completion-historical.md)
+>>>>>>> laraxot/dev
 - [password-translation-completion.md](./password-translation-completion.md)
 - [password.md](./password.md)
 - [path-conventions-1.md](./path-conventions.md)
@@ -2770,6 +2842,17 @@
 - [phpstan-fixes-1.md](./phpstan-fixes-1.md)
 - [phpstan-fixes-2-1.md](./phpstan-fixes.md)
 - [phpstan-fixes-2.md](./phpstan-fixes-2.md)
+<<<<<<< HEAD
+=======
+- [phpstan-fixes-2025-1.md](./phpstan-fixes-historical-1.md)
+- [phpstan-fixes-2025-10-01.deprecated.md](./phpstan-fixes-2025-10-01.deprecated.md)
+- [phpstan-fixes-2025.md](./phpstan-fixes-historical.md)
+- [phpstan-fixes-3-1.md](./phpstan-fixes-3-1.md)
+- [phpstan-fixes-3-2.md](./phpstan-fixes-3-2.md)
+- [phpstan-fixes-3.md](./phpstan-fixes-3.md)
+- [phpstan-fixes-4.md](./phpstan-fixes-4.md)
+- [phpstan-fixes-5.md](./phpstan-fixes-5.md)
+>>>>>>> laraxot/dev
 - [phpstan-fixes-2025-1.md](./phpstan-fixes-historical-alias.md)
 - [phpstan-fixes-2025-10-01.deprecated.md](./phpstan-fixes-2025-10-01.deprecated.md)
 - [phpstan-fixes-2025.md](./phpstan-fixes-historical.md)
@@ -2790,12 +2873,23 @@
 - [phpstan-fixes-gennaio-.md](./phpstan-fixes-gennaio-.md)
 - [phpstan-fixes-gennaio-1.md](./phpstan-fixes-gennaio-modulo-user.md)
 - [phpstan-fixes-gennaio-2.md](./phpstan-fixes-gennaio-2.md)
+<<<<<<< HEAD
 - [phpstan-fixes-gennaio-complete.md](./phpstan-fixes-gennaio-complete.md)
+=======
+- [phpstan-fixes-gennaio-2025-complete.md](./phpstan-fixes-gennaio-2025-complete.md)
+- [phpstan-fixes-gennaio-2025.md](./phpstan-fixes-gennaio-2025.md)
+- [phpstan-fixes-gennaio-complete.md](./phpstan-fixes-gennaio-complete.md)
+- [phpstan-fixes-gennaio.md](./phpstan-fixes-gennaio.md)
+>>>>>>> laraxot/dev
 - [phpstan-fixes-gennaiocomplete.md](./phpstan-fixes-gennaiocomplete.md)
 - [phpstan-fixes-january-complete.md](./phpstan-fixes-january-complete.md)
 - [phpstan-fixes-january.md](./phpstan-fixes-january.md)
 - [phpstan-fixes-passport.md](./phpstan-fixes-passport.md)
 - [phpstan-fixes-roadmap.md](./phpstan-fixes-roadmap.md)
+<<<<<<< HEAD
+=======
+- [phpstan-fixes.md](./phpstan-fixes.md)
+>>>>>>> laraxot/dev
 - [phpstan-furious-debate-.md](./phpstan-furious-debate-.md)
 - [phpstan-furious-debate-1.md](./phpstan-furious-debate-1.md)
 - [phpstan-furious-debate.md](./phpstan-furious-debate.md)
@@ -2942,6 +3036,10 @@
 - [roadmap-.md](./roadmap-.md)
 - [roadmap-1-1.md](./roadmap-1-1.md)
 - [roadmap-1.md](./roadmap.md)
+<<<<<<< HEAD
+=======
+- [roadmap-2025.md](./roadmap-2025.md)
+>>>>>>> laraxot/dev
 - [roadmap-and-issues.md](./roadmap-and-issues.md)
 - [roadmap-ands.md](./roadmap-ands.md)
 - [roadmap-archive-1.md](./roadmap-archive.md)
@@ -3104,6 +3202,11 @@
 - [translation-resolution-prototype.md](./translation-resolution-prototype.md)
 - [translation-syntax-fixes-.md](./translation-syntax-fixes-.md)
 - [translation-syntax-fixes-1.md](./translation-syntax-fixes.md)
+<<<<<<< HEAD
+=======
+- [translation-syntax-fixes-2025.md](./translation-syntax-fixes-2025.md)
+- [translation-syntax-fixes.md](./translation-syntax-fixes.md)
+>>>>>>> laraxot/dev
 - [translation-syntaxes.md](./translation-syntaxes.md)
 - [translationes.md](./translationes.md)
 - [translations.md](./translations.md)
@@ -3113,8 +3216,13 @@
 - [two-factor-2.md](./two-factor-2.md)
 - [two-factor.md](./two-factor.md)
 - [type-safety-improvements.md](./type-safety-improvements.md)
+<<<<<<< HEAD
 - [updates-1.md](./updates.md)
 - [updates-12.md](./updates.md)
+=======
+- [updates-1.md](./updates-1.md)
+- [updates-12.md](./updates-12.md)
+>>>>>>> laraxot/dev
 - [updates-2025.md](./updates-historical.md)
 - [updates-dec.md](./updates-dec.md)
 - [updates.md](./updates.md)
@@ -3278,7 +3386,11 @@
 
 ## wiki
 
+<<<<<<< HEAD
 - [AGENTS.md](./wiki/AGENTS.md)
+=======
+- [agents.md](./wiki/agents.md)
+>>>>>>> laraxot/dev
 - [architecture.md](./wiki/architecture.md)
 - [auth-patterns.md](./wiki/auth-patterns.md)
 - [bmad-method.md](./wiki/bmad-method.md)

@@ -5,9 +5,16 @@ status: active
 module: Notify
 scope: documentation
 bmad_version: 1.0
+<<<<<<< HEAD
 updated: 2026-10-06
 tags: [docs, notify, bmad]
 qmd: "**indice documentazione modulo notify** notify"
+=======
+updated: 2026-11-23
+tags: [docs, notify, bmad]
+qmd: "**indice documentazione modulo notify** notify"
+created: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # 📚 **Indice Documentazione Modulo Notify**
@@ -31,6 +38,18 @@ qmd: "**indice documentazione modulo notify** notify"
 - 📦 **[Riferimento pacchetti](../../../../docs/composer-packages-reference.md)** | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md) - AWS, Telegram, Postmark, Spatie mail templates
 - 🛠️ **[Channel Provider](./provider-actions-architecture.md)** - Come estendere il modulo con nuovi driver.
 - 🏷️ **[Acronym Naming](./acronym-naming-conventions.md)** - Standard per la denominazione dei driver e canali.
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_xgceWH
+- 🔄 **[Queue Management](./monitoring.md)** - Monitoraggio delle code e dei fallback.
+
+## 🧪 **Qualità e Sviluppo**
+- ✅ **[PHPStan Analysis](./phpstan-fixes.md)** - Report di conformità Level 10.
+- 🚨 **[PHPStan Cluster 2026-03-10](./phpstan-cluster-2026-03-10.md)** - Modelli canonici mancanti per log/canali e impatto su factory/controller.
+- 🧭 **[No Orphan Http Controllers](./no-orphan-http-controllers.md)** - I controller web senza route o boundary chiaro non devono restare nel modulo.
+- 🚫 **[No NotificationTrackingController](./no-notification-tracking-controller.md)** - Il tracking notifiche non deve vivere in un controller HTTP legacy.
+=======
+>>>>>>> laraxot/dev
 - 🔄 **[Queue Management](../../monitoring.md)** - Monitoraggio delle code e dei fallback.
 - 📧 **[Email System](../../email-templates.md)** - Gestione template dinamici e stagionali (Spatie integration).
 - 💬 **[SMS & WhatsApp](./whatsapp-integration.md)** - Integrazione con NetFun e altri provider.
@@ -49,6 +68,10 @@ qmd: "**indice documentazione modulo notify** notify"
 - 🚨 **[PHPStan Cluster 2026-03-10](../../phpstan-cluster.md)** - Modelli canonici mancanti per log/canali e impatto su factory/controller.
 - 🧭 **[No Orphan Http Controllers](../../no-orphan-http-controllers.md)** - I controller web senza route o boundary chiaro non devono restare nel modulo.
 - 🚫 **[No NotificationTrackingController](../../no-notification-tracking-controller.md)** - Il tracking notifiche non deve vivere in un controller HTTP legacy.
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_5ZhVKt
+>>>>>>> laraxot/dev
 - 🔬 **[Testing Guidelines](./testing.md)** - Mocking dei canali e verifica invio.
 - 📘 **[Docs-First Workflow](../../docs-first-workflow.md)** - Sequenza obbligatoria docs -> codice -> tracking GitHub.
 - 🧪 **PSR-4 Test Helpers** - Nei file Pest usare helper anonimi o support file dedicati; evitare classi top-level extra che rompono `composer dump-autoload`.
@@ -87,5 +110,14 @@ qmd: "**indice documentazione modulo notify** notify"
 
 ## Dependency Intelligence
 
+<<<<<<< HEAD
 - [Dependency intelligence](../../dependency-intelligence.md)
 - [Dependency intelligence](../../dependency-intelligence.md)
+=======
+<<<<<<< .merge_file_xgceWH
+- [Dependency intelligence](dependency-intelligence.md)
+=======
+- [Dependency intelligence](../../dependency-intelligence.md)
+- [Dependency intelligence](../../dependency-intelligence.md)
+>>>>>>> .merge_file_5ZhVKt
+>>>>>>> laraxot/dev

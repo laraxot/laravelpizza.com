@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # database — Consolidated Documentation
@@ -38,7 +42,10 @@ Consolidated from **15** individual files.
 
 *Consolidated from: `database-mail-1.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 This file is deprecated.
 
 Use:
@@ -635,7 +642,10 @@ testable class SendEmailTemplateAction {
 
 *Consolidated from: `database-mail-enhancement.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questo documento descrive un approccio in-house per la gestione e l'invio di email da database, ispirato al plugin a pagamento `martin-petricko-database-mail` per Filament e alle soluzioni open source di Spatie.
 
 ## Analisi del plugin commerciale
@@ -736,7 +746,10 @@ testable class SendEmailTemplateAction {
 
 *Consolidated from: `database-mail-queue-1.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 This file is deprecated.
 
 Use:
@@ -1186,7 +1199,10 @@ php artisan queue:restart
 
 *Consolidated from: `database-mail-queue.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Implementazione del sistema di code per l'invio di email in il progetto, con integrazione completa con il nostro sistema di template basato su database.
@@ -1966,7 +1982,10 @@ php artisan queue:restart
 
 *Consolidated from: `database-mail-system-1.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Implementazione personalizzata di un sistema di gestione email basato su database per il progetto, ispirato a Spatie/laravel-database-mail-templates ma con funzionalità aggiuntive e integrazione completa con il nostro ecosistema.
@@ -3049,7 +3068,10 @@ php artisan notify:mail-template:test
 
 *Consolidated from: `database-mail-system.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Implementazione personalizzata di un sistema di gestione email basato su database per il progetto, ispirato a Spatie/laravel-database-mail-templates ma con funzionalità aggiuntive e integrazione completa con il nostro ecosistema.
@@ -3367,7 +3389,10 @@ php artisan notify:mail-template:test
 
 *Consolidated from: `database-mail.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Regola sulle rotte
 
 Il file `routes/web.php` del modulo Notify **deve rimanere vuoto**.
@@ -3811,7 +3836,10 @@ Cordiali saluti,<br>
 
 *Consolidated from: `database_mail.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Regola sulle rotte
 
 Il file `routes/web.php` del modulo Notify **deve rimanere vuoto**.
@@ -4254,7 +4282,10 @@ Cordiali saluti,<br>
 
 *Consolidated from: `database_mail_enhancement.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 Questo documento descrive un approccio in-house per la gestione e l'invio di email da database, ispirato al plugin a pagamento `martin-petricko-database-mail` per Filament e alle soluzioni open source di Spatie.
 
 ## Analisi del plugin commerciale
@@ -4355,7 +4386,10 @@ testable class SendEmailTemplateAction {
 
 *Consolidated from: `database_mail_queue.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Implementazione del sistema di code per l'invio di email in il progetto, con integrazione completa con il nostro sistema di template basato su database.
@@ -4773,7 +4807,10 @@ php artisan queue:restart
 
 *Consolidated from: `database_mail_system.md`*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Implementazione personalizzata di un sistema di gestione email basato su database per il progetto, ispirato a Spatie/laravel-database-mail-templates ma con funzionalità aggiuntive e integrazione completa con il nostro ecosistema.

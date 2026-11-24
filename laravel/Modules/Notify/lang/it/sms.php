@@ -5,42 +5,65 @@ declare(strict_types=1);
 return [
     'resource' => [
         'name' => 'SMS',
+<<<<<<< HEAD
         'plural' => 'SMS',
     ],
+=======
+        'plural' => 'SMS'],
+>>>>>>> laraxot/dev
     'navigation' => [
         'name' => 'Invio SMS',
         'plural' => 'Invio SMS',
         'group' => [
             'name' => 'Notifiche',
+<<<<<<< HEAD
             'description' => 'Gestione delle notifiche SMS',
         ],
         'label' => 'Invio SMS',
         'icon' => 'heroicon-o-device-phone-mobile',
         'sort' => 10,
     ],
+=======
+            'description' => 'Gestione delle notifiche SMS'],
+        'label' => 'Invio SMS',
+        'icon' => 'heroicon-o-device-phone-mobile',
+        'sort' => 10],
+>>>>>>> laraxot/dev
     'fields' => [
         'to' => [
             'label' => 'Numero di telefono',
             'placeholder' => 'Inserisci il numero di telefono',
             'helper_text' => 'Inserisci il numero di telefono con prefisso internazionale (es. +39]',
             'tooltip' => '',
+<<<<<<< HEAD
             'description' => '',
         ],
+=======
+            'description' => ''],
+>>>>>>> laraxot/dev
         'message' => [
             'label' => 'Messaggio',
             'placeholder' => 'Inserisci il messaggio',
             'helper_text' => 'Il messaggio non può superare i 160 caratteri',
             'tooltip' => '',
+<<<<<<< HEAD
             'description' => '',
         ],
+=======
+            'description' => ''],
+>>>>>>> laraxot/dev
         'driver' => [
             'label' => 'Provider SMS',
             'placeholder' => 'Seleziona il provider SMS',
             'helper_text' => 'Seleziona il provider SMS da utilizzare',
             'tooltip' => '',
+<<<<<<< HEAD
             'description' => '',
         ],
     ],
+=======
+            'description' => '']],
+>>>>>>> laraxot/dev
     'drivers' => [
         'smsfactor' => 'SMSFactor',
         'twilio' => 'Twilio',
@@ -48,6 +71,7 @@ return [
         'plivo' => 'Plivo',
         'gammu' => 'Gammu',
         'netfun' => 'Netfun',
+<<<<<<< HEAD
         'agiletelecom' => 'Agile Telecom',
     ],
     'actions' => [
@@ -78,3 +102,14 @@ return [
         ],
     ],
 ];
+=======
+        'agiletelecom' => 'Agile Telecom'],
+    'actions' => [
+        'send' => 'Invia SMS',
+        'cancel' => 'Annulla'],
+    'messages' => [
+        'success' => 'SMS inviato con successo',
+        'error' => 'Si è verificato un errore durante l\'invio dell\'SMS'],
+    'label' => 'Sms',
+    'plural_label' => 'Sms (Plurale)'];
+>>>>>>> laraxot/dev

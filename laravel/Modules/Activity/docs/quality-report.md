@@ -1,8 +1,4 @@
 ---
-<<<<<<< .merge_file_tBwOUI
-title: "Quality Report — Activity"
-=======
->>>>>>> .merge_file_YzGsj1
 title: "Quality Report: Activity"
 type: report
 tags: [quality, phpstan, pest, coverage]
@@ -10,12 +6,6 @@ module: Activity
 created: 2026-08-24
 updated: 2026-08-24
 qmd: "Activity quality report phpstan pest coverage test ratio"
-<<<<<<< .merge_file_tBwOUI
----
-
-# Quality Report — Activity
-=======
->>>>>>> .merge_file_YzGsj1
 status: draft
 ---
 

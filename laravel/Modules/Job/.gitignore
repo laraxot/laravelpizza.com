@@ -251,3 +251,5 @@ app/Application
 
 # module-root-hygiene (story module-root-hygiene)
 docs/graphify
+tests/coverage-*.*
+docs/screenshots/

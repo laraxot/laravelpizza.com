@@ -22,10 +22,7 @@ tests/.claude-audit
 # LARAXOT MODULE ACTIVITY - .GITIGNORE
 # Modulo Activity Laraxot - Template standardizzato
 # Ultimo aggiornamento: 2025-01-31
-<<<<<<< .merge_file_sGAGsC
-=======
 
->>>>>>> .merge_file_Zzg5o7
 # DEPENDENCIES & PACKAGES
 /vendor/
 /vendor
@@ -37,10 +34,7 @@ yarn.lock
 composer.lock
 yarn-error.log
 npm-debug.log
-<<<<<<< .merge_file_sGAGsC
-=======
 
->>>>>>> .merge_file_Zzg5o7
 # BUILD & COMPILED FILES
 /build
 /build/
@@ -48,10 +42,7 @@ build/
 dist/
 docs/cache/
 cache/
-<<<<<<< .merge_file_sGAGsC
-=======
 
->>>>>>> .merge_file_Zzg5o7
 # CACHE & TEMPORARY FILES
 *.cache
 *.lock
@@ -65,20 +56,14 @@ cache/
 v8-compile-cache-*
 .php-cs-fixer.cache
 .phpunit.result.cache
-<<<<<<< .merge_file_sGAGsC
-=======
 
->>>>>>> .merge_file_Zzg5o7
 # LOG FILES
 *.log
 error_log
 npm-debug.log*
 yarn-error.log*
 lerna-debug.log*
-<<<<<<< .merge_file_sGAGsC
-=======
 
->>>>>>> .merge_file_Zzg5o7
 # LARAVEL SPECIFIC
 bootstrap/compiled.php
 app/storage/
@@ -90,10 +75,7 @@ storage/*.key
 .env
 .env.*
 !.env.example
-<<<<<<< .merge_file_sGAGsC
-=======
 
->>>>>>> .merge_file_Zzg5o7
 # ENVIRONMENT & CONFIGURATION
 Homestead.yaml
 Homestead.json
@@ -101,18 +83,12 @@ Homestead.json
 /.idea
 .phpintel
 .vscode/
-<<<<<<< .merge_file_sGAGsC
-=======
 
->>>>>>> .merge_file_Zzg5o7
 # GIT SPECIFIC
 .git-rewrite/
 .git-rewrite
 .git-blame-ignore-revs
-<<<<<<< .merge_file_sGAGsC
-=======
 
->>>>>>> .merge_file_Zzg5o7
 # SYSTEM FILES
 .DS_Store
 .DS_Store?
@@ -122,10 +98,7 @@ Homestead.json
 ehthumbs.db
 Thumbs.db
 *~
-<<<<<<< .merge_file_sGAGsC
-=======
 
->>>>>>> .merge_file_Zzg5o7
 # BACKUP FILES
 *.old
 *.old1
@@ -137,10 +110,7 @@ Thumbs.db
 *.bak
 *.bakcup
 *.new
-<<<<<<< .merge_file_sGAGsC
-=======
 
->>>>>>> .merge_file_Zzg5o7
 # DEVELOPMENT TOOLS
 .windsurf/
 .cursor/
@@ -161,10 +131,7 @@ database/Migrations_old/
 database/Seeders_old/
 database/Factories_old/
 database_old/
-<<<<<<< .merge_file_sGAGsC
-=======
 
->>>>>>> .merge_file_Zzg5o7
 # MODULE SPECIFIC - ACTIVITY
 # File di configurazione locale
 config/local.php
@@ -177,14 +144,10 @@ storage/logs/
 # File di test activity
 activity_test_data.json
 test_activity_logs.sql
-<<<<<<< .merge_file_sGAGsC
-# END OF ACTIVITY .GITIGNORE
-=======
 
 # END OF ACTIVITY .GITIGNORE
 
 # END OF ACTIVITY .GITIGNORE
->>>>>>> .merge_file_Zzg5o7
 # File specifici del progetto
 *.fila2
 laravel
@@ -217,10 +180,7 @@ tests/AuditCoverage/
 phpinsights.php
 rector.php
 # graphify-out: generated AST/knowledge graph — never commit (no git-lfs; rebuild with graphify update)
-<<<<<<< .merge_file_sGAGsC
-=======
 graphify-out
->>>>>>> .merge_file_Zzg5o7
 graphify-out/
 .agents
 tools
@@ -248,13 +208,6 @@ workbench/
 .cursor~*
 .windsurf~*
 tests/activity_coverage.xml
-<<<<<<< .merge_file_sGAGsC
-
-# module-root-hygiene (story module-root-hygiene)
-/.github/skills/
-docs/graphify
-resources/lang
-Activity
-=======
 Activity/
->>>>>>> .merge_file_Zzg5o7
+tests/coverage-*.*
+docs/screenshots/

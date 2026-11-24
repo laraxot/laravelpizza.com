@@ -54,7 +54,18 @@ it('has valid coordinates for every timezone and covers the whole tz database of
     $missing = [];
     foreach (DateTimeZone::listIdentifiers() as $zone) {
         $location = (new DateTimeZone($zone))->getLocation();
+<<<<<<< HEAD
         $hasPlace = is_array($location) && ($location['latitude'] != 0 || $location['longitude'] != 0);
+=======
+<<<<<<< HEAD
+        $hasPlace = is_array($location) && ($location['latitude'] != 0 || $location['longitude'] != 0);
+=======
+        // "??" = fuso senza luogo (es. UTC: PHP 8.4 restituisce -90/-180 come segnaposto), non va nella tabella.
+        $hasPlace = is_array($location)
+            && $location['country_code'] !== '??'
+            && ($location['latitude'] != 0 || $location['longitude'] != 0);
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
         if ($hasPlace && ! isset($table[$zone])) {
             $missing[] = $zone;
         }

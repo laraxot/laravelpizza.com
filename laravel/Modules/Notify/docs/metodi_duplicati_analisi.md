@@ -2,14 +2,22 @@
 title: "metodi duplicati analisi"
 type: note
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "metodi duplicati analisi"
 issues: []
 discussions: []
 module: Notify
 topic: METODI_DUPLICATI_ANALISI
 tags: [metodi-duplicati, refactoring]
+<<<<<<< HEAD
 canonical: ../../../Themes/One/docs/shared-components/metodi_duplicati_analisi.md
+=======
+canonical: ../../../Themes/One/docs/shared-components/METODI_DUPLICATI_ANALISI.md
+>>>>>>> laraxot/dev
 ---
 
 # Metodi Duplicati — Analisi Notify

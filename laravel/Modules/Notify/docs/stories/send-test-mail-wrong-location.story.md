@@ -8,6 +8,10 @@ owner: module:Notify
 module: Notify
 related: [modular-architecture, console-commands, production-hotfix]
 tags: [console, commands, architecture, production]
+<<<<<<< HEAD
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # SendTestMail in app/Console su produzione: causa e prevenzione

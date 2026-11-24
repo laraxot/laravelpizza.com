@@ -353,7 +353,10 @@ return [
         ],
     ],
     'actions' => [
+<<<<<<< HEAD
         'change_password' => 'Cambia password',
+=======
+>>>>>>> laraxot/dev
         'create' => [
             'label' => 'Crea Utente',
             'icon' => 'heroicon-o-plus',
@@ -460,8 +463,11 @@ return [
         ],
         'changePassword' => [
             'icon' => 'changePassword',
+<<<<<<< HEAD
             'label' => 'Cambia password',
             'tooltip' => 'Cambia password',
+=======
+>>>>>>> laraxot/dev
         ],
         'layout' => [
             'icon' => 'layout',
@@ -768,7 +774,7 @@ return [
         ],
     ],
     'label' => 'Utente',
-<<<<<<< .merge_file_OcAvtL
+<<<<<<< HEAD
     'sections' => [
         'empty' => [
             'heading' => '',
@@ -780,6 +786,6 @@ return [
         ],
     ],
 =======
->>>>>>> .merge_file_KHrFEM
+>>>>>>> laraxot/dev
     'plural_label' => 'User (Plurale)',
 ];

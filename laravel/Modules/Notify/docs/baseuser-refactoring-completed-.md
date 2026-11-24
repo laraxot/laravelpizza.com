@@ -3,7 +3,11 @@ title: "baseuser refactoring completed 2025 10 15"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "baseuser refactoring completed 2025 10 15"
 issues: []
 discussions: []

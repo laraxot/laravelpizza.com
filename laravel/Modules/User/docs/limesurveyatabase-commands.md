@@ -19,15 +19,33 @@ related:
 ---
 
 # Database Analysis Commands and Tools for app_survey
+<<<<<<< HEAD
 # Database Analysis Commands and Tools for quaeris_survey
+=======
+<<<<<<< HEAD
+# Database Analysis Commands and Tools for quaeris_survey
+=======
+# Database Analysis Commands and Tools for <nome progetto>_survey
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Essential Database Queries
 
 ### 1. Survey Structure Analysis
 ```sql
 -- List all active surveys in the database
+<<<<<<< HEAD
 SELECT sid, surveyls_title, startdate, expires 
 FROM lime_surveys 
+=======
+<<<<<<< HEAD
+SELECT sid, surveyls_title, startdate, expires 
+FROM lime_surveys 
+=======
+SELECT sid, surveyls_title, startdate, expires
+FROM lime_surveys
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 WHERE active = 'Y';
 
 -- Get all questions for a specific survey
@@ -232,18 +250,44 @@ SELECT
     ROUND(COALESCE(r.responses, 0) * 100.0 / NULLIF(t.total_tokens, 0), 2) as response_rate
 FROM lime_surveys s
 LEFT JOIN (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
     SELECT 
         SUBSTRING(table_name, 13) as sid,  -- Extract survey ID from lime_survey_XXXX
         COUNT(*) as responses
     FROM information_schema.tables 
+<<<<<<< HEAD
+=======
+=======
+    SELECT
+        SUBSTRING(table_name, 13) as sid,  -- Extract survey ID from lime_survey_XXXX
+        COUNT(*) as responses
+    FROM information_schema.tables
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
     WHERE table_name LIKE 'lime_survey_%'
     AND table_schema = 'txaesfry_app_survey'
 ) r ON s.sid = r.sid
 LEFT JOIN (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
     SELECT 
         SUBSTRING(table_name, 12) as sid,  -- Extract survey ID from lime_tokens_XXXX
         COUNT(*) as total_tokens
     FROM information_schema.tables 
+<<<<<<< HEAD
+=======
+=======
+    SELECT
+        SUBSTRING(table_name, 12) as sid,  -- Extract survey ID from lime_tokens_XXXX
+        COUNT(*) as total_tokens
+    FROM information_schema.tables
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
     WHERE table_name LIKE 'lime_tokens_%'
     AND table_schema = 'txaesfry_app_survey'
 ) t ON s.sid = t.sid

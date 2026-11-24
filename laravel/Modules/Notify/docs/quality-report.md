@@ -6,7 +6,11 @@ type: report
 tags: [quality, phpstan, pest, coverage]
 module: Notify
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "Notify quality report phpstan pest coverage test ratio"
 ---
 

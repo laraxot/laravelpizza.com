@@ -5,16 +5,15 @@ declare(strict_types=1);
 namespace Modules\Lang\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Support\Carbon;
 // --- traits ---
 // use Laravel\Scout\Searchable;
-<<<<<<< .merge_file_mKhe8Z
-=======
 use Illuminate\Support\Str;
->>>>>>> .merge_file_XThIRG
 use Modules\Lang\Models\Traits\PostMutators;
 use Modules\Lang\Models\Traits\PostRelations;
 use Modules\Xot\Contracts\ProfileContract;
+use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Traits\Updater;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
@@ -22,48 +21,48 @@ use Spatie\Sluggable\SlugOptions;
 /**
  * Colonne allineate a `2026_01_21_211814_create_posts_table`.
  *
- * @property string $id
- * @property int|null $user_id
- * @property string|int|null $post_id
- * @property string|null $lang
- * @property string|null $guid
- * @property string|null $title
- * @property string|null $subtitle
- * @property string|null $post_type
- * @property string|null $txt
- * @property string|null $content
- * @property string|null $excerpt
- * @property string|null $slug
- * @property string|null $status
- * @property Carbon|null $published_at
- * @property string|null $locale
- * @property string|null $category
- * @property string|null $image_src
- * @property string|null $image_alt
- * @property string|null $image_title
- * @property string|null $meta_title
- * @property string|null $meta_description
- * @property string|null $meta_keywords
- * @property int|null $author_id
- * @property string|null $url
+ * @property string                     $id
+ * @property int|null                   $user_id
+ * @property string|int|null            $post_id
+ * @property string|null                $lang
+ * @property string|null                $guid
+ * @property string|null                $title
+ * @property string|null                $subtitle
+ * @property string|null                $post_type
+ * @property string|null                $txt
+ * @property string|null                $content
+ * @property string|null                $excerpt
+ * @property string|null                $slug
+ * @property string|null                $status
+ * @property Carbon|null                $published_at
+ * @property string|null                $locale
+ * @property string|null                $category
+ * @property string|null                $image_src
+ * @property string|null                $image_alt
+ * @property string|null                $image_title
+ * @property string|null                $meta_title
+ * @property string|null                $meta_description
+ * @property string|null                $meta_keywords
+ * @property int|null                   $author_id
+ * @property string|null                $url
  * @property array<string, string>|null $url_lang
- * @property string|null $image_resize_src
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property int|null $category_id
- * @property string|null $image
- * @property int|null $published
- * @property string|null $created_by
- * @property string|null $updated_by
- * @property string|null $linked_count
- * @property string|null $related_count
- * @property string|null $relatedrev_count
- * @property string|null $linkable_type
- * @property int|null $views_count
- * @property ProfileContract|null $creator
- * @property ProfileContract|null $deleter
- * @property Model|null $linkable
- * @property ProfileContract|null $updater
+ * @property string|null                $image_resize_src
+ * @property Carbon|null                $created_at
+ * @property Carbon|null                $updated_at
+ * @property int|null                   $category_id
+ * @property string|null                $image
+ * @property int|null                   $published
+ * @property string|null                $created_by
+ * @property string|null                $updated_by
+ * @property string|null                $linked_count
+ * @property string|null                $related_count
+ * @property string|null                $relatedrev_count
+ * @property string|null                $linkable_type
+ * @property int|null                   $views_count
+ * @property ProfileContract|null       $creator
+ * @property ProfileContract|null       $deleter
+ * @property Model|null                 $linkable
+ * @property ProfileContract|null       $updater
  *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Post newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Post newQuery()
@@ -221,4 +220,36 @@ class Post extends BaseModel
     {
         return $this->only(self::SEARCHABLE_FIELDS);
     }
+<<<<<<< HEAD
+=======
+
+    /**
+     * Le conversioni proprie di questo modello, in aggiunta a quelle di BaseModel.
+     *
+     * `url_lang` e' una colonna `json` e la `@property` qui sopra la dichiara
+     * `array<string, string>|null`, ma senza cast Eloquent restituiva il JSON
+     * grezzo: `$post->url_lang['it']` leggeva il carattere in posizione 'it' di
+     * una stringa. PHPStan non poteva accorgersene, perche' legge la
+     * `@property` — la promessa — e non lo schema. Il cast la rende vera
+     * (base_quaeris_fila5#234).
+     *
+     * `array_merge(parent::casts(), ...)` e non un array nuovo: questo metodo
+     * **sostituisce** quello di `BaseModel`, dove stanno `id`, `uuid`,
+     * `published_at`, `created_at` e `updated_at`. Dichiararne uno proprio
+     * senza unirli li faceva sparire tutti, e il test dei cast sulle date se
+     * n'e' accorto subito.
+     *
+     * Non ci sono: `image_resize_src`, che la migration dichiara `string` come
+     * la sua `@property`; e `deleted_at`, perche' la tabella `posts` non ha
+     * quella colonna e questo modello non usa `SoftDeletes`.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return array_merge(parent::casts(), [
+            'url_lang' => 'array',
+        ]);
+    }
+>>>>>>> laraxot/dev
 }

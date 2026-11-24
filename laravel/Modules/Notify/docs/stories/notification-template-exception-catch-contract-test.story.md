@@ -3,7 +3,11 @@ title: "NotificationTemplateNotFoundException: il test del catch (Exception) div
 type: story
 module: Notify
 created: '2026-11-19'
+<<<<<<< HEAD
 updated: '2026-11-19'
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 status: review
 related:
   - ../../../../../docs/stories/rebase-pull-upstream-case-collisions-vs-module-repair.story.md

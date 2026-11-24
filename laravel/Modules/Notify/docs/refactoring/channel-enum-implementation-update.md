@@ -3,7 +3,11 @@ title: "channel enum implementation update"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "channel enum implementation update"
 issues: []
 discussions: []
@@ -138,4 +142,8 @@ issues: []
 discussions: []
 **Implemented by**: iFlow CLI  
 **Pattern**: Enum-driven architecture  
+<<<<<<< HEAD
 **Compliance**: DRY + KISS + Type Safety
+=======
+**Compliance**: DRY + KISS + Type Safety
+>>>>>>> laraxot/dev

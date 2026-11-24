@@ -3,7 +3,11 @@ title: "mailpace templates integration"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "mailpace templates integration"
 issues: []
 discussions: []
@@ -107,7 +111,18 @@ $mailTemplate->send($user->email, [
 
 - [Documentazione Maizzle](https://maizzle.com/docs/)
 - [Repository MailPace Templates](https://github.com/mailpace/templates)
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_s2m3y0
+- [Guida Spatie Email](../SPATIE_EMAIL_USAGE_GUIDE.md)
+- [Implementazione Slug Field](./SLUG_FIELD_IMPLEMENTATION.md)
+=======
+>>>>>>> laraxot/dev
 - [Guida Spatie Email](../spatie_email_usage_guide.md)
 - [Implementazione Slug Field](slug_field_implementation.md)
 - [Guida Spatie Email](../spatie_email_usage_guide.md)
 - [Implementazione Slug Field](./slug_field_implementation.md)
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_MtHr7M
+>>>>>>> laraxot/dev

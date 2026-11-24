@@ -15,8 +15,11 @@ class AssetAction
 {
     use QueueableActionTrait;
 
+<<<<<<< HEAD
     private XotData $xot;
 
+=======
+>>>>>>> laraxot/dev
     /**
      * Risolve il percorso pubblico di un asset (servito dal symlink verso la cartella `public` del modulo/tema).
      *
@@ -27,8 +30,11 @@ class AssetAction
      */
     public function execute(string $path): string
     {
+<<<<<<< HEAD
         $this->xot = XotData::make();
 
+=======
+>>>>>>> laraxot/dev
         if (Str::startsWith($path, ['https://', 'http://'])) {
             return $path;
         }
@@ -46,7 +52,11 @@ class AssetAction
 
         $ns_after = $this->normalizeNsAfter($ns_after);
 
+<<<<<<< HEAD
         if (\in_array($ns, ['pub_theme', 'adm_theme'], false)) {
+=======
+        if (\in_array($ns, ['pub_theme', 'adm_theme'], true)) {
+>>>>>>> laraxot/dev
             return $this->resolveThemeAsset($ns, $ns_after);
         }
 
@@ -54,7 +64,11 @@ class AssetAction
     }
 
     /**
+<<<<<<< HEAD
      * Normalizes the given path segment.
+=======
+     * Normalizza il segmento dopo `::`: i punti del primo segmento diventano `/` e lo slash iniziale viene tolto.
+>>>>>>> laraxot/dev
      */
     private function normalizeNsAfter(string $ns_after): string
     {
@@ -70,18 +84,33 @@ class AssetAction
     }
 
     /**
+<<<<<<< HEAD
      * Resolves the path for a theme asset.
      */
     private function resolveThemeAsset(string $ns, string $ns_after): string
     {
         $theme = $this->xot->{$ns};
+=======
+     * Risolve l'URL di un asset del tema pubblico (`pub_theme`) o amministrativo (`adm_theme`).
+     *
+     * @param  'pub_theme'|'adm_theme'  $ns
+     */
+    private function resolveThemeAsset(string $ns, string $ns_after): string
+    {
+        $xot = XotData::make();
+        $theme = $ns === 'adm_theme' ? $xot->adm_theme : $xot->pub_theme;
+>>>>>>> laraxot/dev
         Assert::string($theme, 'Il tema deve essere una stringa');
 
         return $this->publicUrl('themes/'.$theme.'/'.$ns_after);
     }
 
     /**
+<<<<<<< HEAD
      * Resolves the path for a module asset.
+=======
+     * Risolve l'URL di un asset di modulo (`modulo::percorso`).
+>>>>>>> laraxot/dev
      */
     private function resolveModuleAsset(string $originalPath, string $ns, string $ns_after): string
     {
@@ -95,11 +124,20 @@ class AssetAction
         // public_html/assets/<modulo> -> ../../laravel/Modules/<Modulo>/public
         // (deploy.sh / xot:module-link). Niente copia.
         $filename_public = app(FixPathAction::class)->execute($module_path.'/public/'.$ns_after);
+<<<<<<< HEAD
         if (File::exists($filename_public)) {
+=======
+        // Ripiego storico: file solo in resources/ — l'URL resta comunque assets/<modulo>
+        // (il symlink punta a public/, quindi va spostato lì per essere servito).
+        $filename_from = app(FixPathAction::class)->execute($module_path.'/resources/'.$ns_after);
+
+        if (File::exists($filename_public) || File::exists($filename_from)) {
+>>>>>>> laraxot/dev
             // Link e URL sempre minuscoli (su Linux assets/Xot ≠ assets/xot).
             return $this->publicUrl('assets/'.Str::lower($ns).'/'.$ns_after);
         }
 
+<<<<<<< HEAD
         // Ripiego storico: file in resources/ — URL ancora via symlink assets/<modulo>.
         $filename_from = app(FixPathAction::class)->execute($module_path.'/resources/'.$ns_after);
 
@@ -118,6 +156,20 @@ class AssetAction
      * (deploy.sh / xot:module-link, xot:theme-link) to the module/theme `public` folder, so the URL is
      * served straight from there. The old per-request copy wrote through the symlink and failed
      * with "Failed to open stream" whenever the link was missing or broken.
+=======
+        if (isRunningTestBench()) {
+            return $originalPath;
+        }
+
+        throw new Exception('file ['.$filename_public.'] not Exists , path ['.$originalPath.']');
+    }
+
+    /**
+     * Nessuna copia: public_html/assets/<modulo> e public_html/themes/<Tema> sono symlink
+     * (deploy.sh / xot:module-link, xot:theme-link) verso la cartella `public` del modulo/tema, quindi
+     * l'URL è servito direttamente da lì. La vecchia copia a ogni richiesta scriveva attraverso il symlink
+     * e falliva con «Failed to open stream» quando il link mancava o era rotto.
+>>>>>>> laraxot/dev
      */
     private function publicUrl(string $assetPath): string
     {

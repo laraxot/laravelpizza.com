@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "redundancy audit 2026 05 21"
 issues: []
 discussions: []

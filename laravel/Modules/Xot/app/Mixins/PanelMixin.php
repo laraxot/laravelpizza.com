@@ -15,7 +15,11 @@ use Webmozart\Assert\Assert;
 /**
  * @method string getId()
  * @method string getName()
+<<<<<<< HEAD
  * @method NwidartModule getModule()
+=======
+ * @method NwidartModule|null getModule()
+>>>>>>> laraxot/dev
  * @method array<string, mixed> getConfig()
  * @method array<string, mixed> getModuleConfig()
  * @method string getNavigationLabel()
@@ -42,11 +46,17 @@ class PanelMixin
      */
     public function getModule()
     {
+<<<<<<< HEAD
         return function (): NwidartModule {
             $name = $this->getName();
             $module = Module::find($name);
 
             return $module;
+=======
+        return function (): ?NwidartModule {
+            $name = $this->getName();
+            return Module::find($name) ?: null;
+>>>>>>> laraxot/dev
         };
     }
 
@@ -70,6 +80,10 @@ class PanelMixin
     {
         return function (): array {
             $module = $this->getModule();
+<<<<<<< HEAD
+=======
+            Assert::isInstanceOf($module, NwidartModule::class, '['.__LINE__.']['.class_basename($this).']');
+>>>>>>> laraxot/dev
             $configFilePath = $module->getPath().'/config/config.php';
             $config = File::getRequire($configFilePath);
             Assert::isArray($config, '['.__LINE__.']['.class_basename($this).']');

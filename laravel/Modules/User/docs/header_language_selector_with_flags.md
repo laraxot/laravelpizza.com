@@ -1,8 +1,24 @@
+<<<<<<< HEAD
+=======
+---
+title: "Header Language Selector With Flags"
+module: User
+type: note
+status: active
+updated: '2026-11-23'
+---
+
+>>>>>>> laraxot/dev
 # Implementazione del Selettore di Lingua con Bandiere SVG
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
 - [Convenzioni Path](./path_conventions.md)
+<<<<<<< HEAD
+=======
+- [Best Practices Chiavi di Traduzione](/laravel/Modules/Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+- [Implementazione Header](/laravel/Modules/User/docs/HEADER_LANGUAGE_AVATAR_IMPLEMENTATION.md)
+>>>>>>> laraxot/dev
 - [Best Practices Chiavi di Traduzione](/laravel/Modules/Lang/docs/translation_keys_best_practices.md)
 - [Implementazione Header](/laravel/Modules/User/docs/header_language_avatar_implementation.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)

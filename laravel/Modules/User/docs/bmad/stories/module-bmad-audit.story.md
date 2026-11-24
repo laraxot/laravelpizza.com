@@ -41,3 +41,34 @@ Rendere verificabile lo stato di User: chi è chi e cosa può fare: utenti, ruol
 ## Esito (2026-11-16)
 
 Baseline aggiornata, nessun codice applicativo modificato. Fix e Pest restano aperti (gate DB test).
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_1ketNX
+
+
+---
+
+<!-- Contenuto unito da module-bmad-audit-.story.md (rimozione date dai nomi file, issue #64) -->
+
+# Story — User: baseline BMAD
+
+Come manutentore del modulo User, voglio una baseline BMAD verificabile, così da poter pianificare lavoro senza confondere ipotesi, WIP e comportamento osservato.
+
+## Acceptance criteria
+
+- [ ] Confermare API pubblica e confini con riferimenti a codice reale.
+- [ ] Inventariare i flussi critici e collegarli a test Pest.
+- [ ] Misurare PHPStan/Pest nel contesto stabile del modulo.
+- [ ] Registrare dipendenze, rischi e decisioni nel modulo.
+- [ ] Aggiornare lo stato reale in `docs/sprint-status.yaml`.
+
+## Task
+
+- [ ] Revisione architettura.
+- [ ] Brainstorming con stakeholder.
+- [ ] Decomposizione epic in story più piccole.
+- [ ] Quality gate e second-brain write-back.
+
+=======
+>>>>>>> .merge_file_CCUMLH
+>>>>>>> laraxot/dev

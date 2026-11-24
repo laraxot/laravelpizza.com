@@ -1,4 +1,8 @@
 ---
+<<<<<<< HEAD
+=======
+qmd: "xot parcheggio readme md"
+>>>>>>> laraxot/dev
 title: "File parcheggiati — Xot"
 document_type: index
 category: documentation

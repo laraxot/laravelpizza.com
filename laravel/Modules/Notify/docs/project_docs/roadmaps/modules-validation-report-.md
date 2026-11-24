@@ -1,10 +1,19 @@
 ---
+<<<<<<< HEAD
 title: "Modules Validation Report"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
 qmd: "Modules Validation Report"
+=======
+title: "modules validation report 2025 10 02"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-11-23
+qmd: "modules validation report 2025 10 02"
+>>>>>>> laraxot/dev
 issues: []
 discussions: []
 ---

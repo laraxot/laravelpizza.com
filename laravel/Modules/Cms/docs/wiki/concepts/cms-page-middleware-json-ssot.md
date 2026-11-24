@@ -29,7 +29,15 @@ Definire **access control per pagina** nel JSON CMS (`config/local/.../content/p
 }
 ```
 
+<<<<<<< HEAD
 Alias supportati come su Laravel (`auth`, `verified`, classi FQCN, parametri `throttle:60,1`).
+=======
+<<<<<<< HEAD
+Alias supportati come su Laravel (`auth`, `guest`, `verified`, classi FQCN, parametri `throttle:60,1`).
+=======
+Alias supportati come su Laravel (`auth`, `verified`, classi FQCN, parametri `throttle:60,1`).
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Flusso
 

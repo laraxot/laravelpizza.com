@@ -411,32 +411,6 @@ Activity/
 - [ ] 85%+ test coverage
 - [ ] Performance optimization
 
-<<<<<<< .merge_file_wmcYCE
-## 🏆 SUCCESS CRITERIA
-
-### ✅ Q1 2025 Goals
-- [ ] Core features implemented
-- [ ] Basic testing complete
-- [ ] Documentation started
-- [ ] Integration working
-
-### 🎯 2025 Year-End Goals
-- [ ] All planned features implemented
-- [ ] Test coverage > 80%
-- [ ] Performance optimized
-- [ ] Documentation complete
-- [ ] Production ready
-- [ ] User satisfaction > 4.5/5
-
----
-
-**Status**: 🚧 PLANNING  
-**Confidence Level**: 70%  
-
----
-
-*Questa roadmap è specifica per il modulo Activity e viene aggiornata regolarmente in base ai progressi e alle nuove esigenze.*
-=======
 ## Next Steps
 1. Begin Phase 1 with activity enhancement
 2. Implement monitoring dashboard
@@ -445,7 +419,6 @@ Activity/
 
 ---
 
->>>>>>> .merge_file_ePmwWN
 **Last Updated**: 2026-01-15
 **Maintainer**: Team Laraxot
 **Status**: Active Development
@@ -479,7 +452,11 @@ See canonical documentation: ../../../Themes/docs/shared-components/roadmap--Mod
 - [roadmap/tasks/realtime-monitoring-dashboard.md](roadmap/tasks/realtime-monitoring-dashboard.md)
 - [roadmap/vision.md](roadmap/vision.md)
 - [stabilization-roadmap.md](stabilization-roadmap.md)
-<<<<<<< .merge_file_wmcYCE
-=======
-=======
->>>>>>> .merge_file_ePmwWN
+
+---
+
+## Contenuto unito da `roadmap.md`
+
+# roadmap
+
+Stub alias post-strip data/timestamp. Canonico: [./roadmap.md](./roadmap.md).

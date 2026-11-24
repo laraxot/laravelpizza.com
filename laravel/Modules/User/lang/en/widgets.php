@@ -179,30 +179,21 @@ return [
             'label' => 'End date:',
         ],
     ],
-<<<<<<< .merge_file_uS9CW7
-    'users_chart' => [
-        'heading' => 'New users',
-    ],
-    'recent_logins' => [
-        'columns' => [
-            'user' => 'User',
-            'login_at' => 'Signed in',
-=======
     'recent_logins' => [
         'heading' => 'Recent logins',
         'columns' => [
             'user' => 'User',
             'login_at' => 'Login time',
->>>>>>> .merge_file_7No0Dw
             'ip_address' => 'IP address',
             'user_agent' => 'Browser',
         ],
     ],
-<<<<<<< .merge_file_uS9CW7
-=======
     'users_chart' => [
+<<<<<<< HEAD
+        'heading' => 'New users',
+=======
         'heading' => 'Users',
+>>>>>>> laraxot/dev
         'label' => 'New users',
     ],
->>>>>>> .merge_file_7No0Dw
 ];

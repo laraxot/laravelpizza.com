@@ -52,3 +52,11 @@ errori phpstan).
 ## Residuo
 Rilanciare `phpstan analyse Modules/Activity` in finestra quieta e
 chiudere il gate; output atteso 0 errori.
+
+---
+
+## Contenuto unito da `phpstan-swarm-cluster5.story.md`
+
+# phpstan swarm cluster5
+
+Stub alias post-strip data/timestamp. Canonico: [./phpstan-swarm-cluster5.story.md](./phpstan-swarm-cluster5.story.md).

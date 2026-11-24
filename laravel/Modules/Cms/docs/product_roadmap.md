@@ -1,10 +1,19 @@
 ---
+<<<<<<< HEAD
 title: "Product Roadmap"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
 qmd: "Product Roadmap"
+=======
+title: "product roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-11-23
+qmd: "product roadmap"
+>>>>>>> laraxot/dev
 issues: []
 discussions: []
 ---
@@ -18,12 +27,28 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
 title: "PRODUCT ROADMAP"
+=======
+<<<<<<< HEAD
+title: "product roadmap"
+=======
+title: "PRODUCT ROADMAP"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
+<<<<<<< HEAD
 qmd: "PRODUCT ROADMAP"
+=======
+<<<<<<< HEAD
+qmd: "product roadmap"
+=======
+qmd: "PRODUCT ROADMAP"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 issues: []
 discussions: []
 ## Vision Statement

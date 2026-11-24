@@ -3,7 +3,11 @@ title: "🧪 Test: Git Subtree Synchronization"
 type: concept
 tags: [issue, subtree, sync, test]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "issue-subtree-sync-test 🧪 test: git subtree synchronization"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

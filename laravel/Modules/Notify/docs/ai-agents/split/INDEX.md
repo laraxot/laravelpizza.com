@@ -4,7 +4,11 @@ type: index
 tags: [notify, docs, ai-agents, split]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify documentazione ai agents split index ai agents documentation index index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -30,8 +34,22 @@ related:
 This directory contains split documentation files for AI assistants used in the Notify project. Each file is focused on a specific area to improve readability and maintainability.
 
 **Original Files** (kept for backward compatibility):
+<<<<<<< HEAD
 - [`AGENTS.md`](../../../../AGENTS.md) — 5349 lines, comprehensive BMad agents + tasks
 - [`docs/CLAUDE.md`](../../../../docs/CLAUDE.md) — 833 lines, Laravel Boost guidelines
+=======
+<<<<<<< HEAD
+- [`AGENTS.md`](../../../../agents.md) — 5349 lines, comprehensive BMad agents + tasks
+- [`docs/CLAUDE.md`](../../../../docs/claude.md) — 833 lines, Laravel Boost guidelines
+- [`QWEN.md`](../../../../qwen.md) — 47 lines, Qwen output language rules
+- [`laravel/GEMINI.md`](../../../../laravel/gemini.md) — 581 lines, Gemini-specific rules
+- [`AGENTS.md`](../../../../agents.md) — 5349 lines, comprehensive BMad agents + tasks
+- [`docs/CLAUDE.md`](../../../../docs/claude.md) — 833 lines, Laravel Boost guidelines
+=======
+- [`AGENTS.md`](../../../../AGENTS.md) — 5349 lines, comprehensive BMad agents + tasks
+- [`docs/CLAUDE.md`](../../../../docs/CLAUDE.md) — 833 lines, Laravel Boost guidelines
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`qwen.md`](../../../../qwen.md) — 47 lines, Qwen output language rules
 - [`laravel/gemini.md`](../../../../laravel/gemini.md) — 581 lines, Gemini-specific rules
 
@@ -90,7 +108,15 @@ This directory contains split documentation files for AI assistants used in the 
 
 ## Laravel Boost (CLAUDE.md)
 
+<<<<<<< HEAD
 Split from [`docs/CLAUDE.md`](../../../../docs/CLAUDE.md):
+=======
+<<<<<<< HEAD
+Split from [`docs/CLAUDE.md`](../../../../docs/claude.md):
+=======
+Split from [`docs/CLAUDE.md`](../../../../docs/CLAUDE.md):
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 | Section | File | Lines |
 |---------|----|----|
@@ -112,7 +138,15 @@ Split from [`docs/CLAUDE.md`](../../../../docs/CLAUDE.md):
 
 ## Gemini Rules
 
+<<<<<<< HEAD
 Split from [`laravel/gemini.md`](../../../../laravel/gemini.md):
+=======
+<<<<<<< HEAD
+Split from [`laravel/GEMINI.md`](../../../../laravel/gemini.md):
+=======
+Split from [`laravel/gemini.md`](../../../../laravel/gemini.md):
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 | Section | File | Lines |
 |---------|----|----|
@@ -128,7 +162,15 @@ Split from [`laravel/gemini.md`](../../../../laravel/gemini.md):
 
 | File | Lines | Notes |
 |----|----|----|
+<<<<<<< HEAD
 | [qwen.md](../../../../qwen.md) | 47 | Too small to split — kept as single file |
+=======
+<<<<<<< HEAD
+| [QWEN.md](../../../../qwen.md) | 47 | Too small to split — kept as single file |
+=======
+| [qwen.md](../../../../qwen.md) | 47 | Too small to split — kept as single file |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 
@@ -144,8 +186,22 @@ Split from [`laravel/gemini.md`](../../../../laravel/gemini.md):
 ### Bidirectional Links
 - ← Back to [Project Root](../../)
 - ← Back to [Docs Index](../../docs/README.md)
+<<<<<<< HEAD
 - ← Back to [AGENTS.md](../../../../AGENTS.md) (original)
 - ← Back to [CLAUDE.md](../../../../docs/CLAUDE.md) (original)
+=======
+<<<<<<< HEAD
+- ← Back to [agents.md](../../../../agents.md) (original)
+- ← Back to [CLAUDE.md](../../../../docs/claude.md) (original)
+- ← Back to [GEMINI.md](../../../../laravel/gemini.md) (original)
+- ← Back to [QWEN.md](../../../../qwen.md) (original)
+- ← Back to [AGENTS.md](../../../../agents.md) (original)
+- ← Back to [CLAUDE.md](../../../../docs/claude.md) (original)
+=======
+- ← Back to [AGENTS.md](../../../../AGENTS.md) (original)
+- ← Back to [CLAUDE.md](../../../../docs/CLAUDE.md) (original)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - ← Back to [gemini.md](../../../../laravel/gemini.md) (original)
 - ← Back to [qwen.md](../../../../qwen.md) (original)
 
@@ -167,4 +223,12 @@ Split from [`laravel/gemini.md`](../../../../laravel/gemini.md):
 ### Changelog
 | Date | Change | Author |
 |------|--------|--------|
+<<<<<<< HEAD
 | 2026-04-11 | Initial split of AGENTS.md, CLAUDE.md, gemini.md | Qwen |
+=======
+<<<<<<< HEAD
+| 2026-04-11 | Initial split of agents.md, CLAUDE.md, GEMINI.md | Qwen |
+=======
+| 2026-04-11 | Initial split of AGENTS.md, CLAUDE.md, gemini.md | Qwen |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

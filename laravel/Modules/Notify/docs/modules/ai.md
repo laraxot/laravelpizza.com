@@ -3,7 +3,11 @@ title: "ai"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "ai"
 issues: []
 discussions: []
@@ -27,6 +31,17 @@ Modulo dedicato alle azioni di intelligenza artificiale, sentiment analysis, int
 ---
 
 ## Altri collegamenti
+<<<<<<< HEAD
 - [Documentazione generale AI](../tutorials.md)
 - [Repository AI](../repositories.md)
 - [Repository AI](../../../AI/docs/repositories.md)
+=======
+<<<<<<< .merge_file_9XVORe
+- [Documentazione generale AI](../../Modules/AI/docs/tutorials.md)
+- [Repository AI](../../Modules/AI/docs/repositories.md)
+=======
+- [Documentazione generale AI](../tutorials.md)
+- [Repository AI](../repositories.md)
+- [Repository AI](../../../AI/docs/repositories.md)
+>>>>>>> .merge_file_ou3w8x
+>>>>>>> laraxot/dev

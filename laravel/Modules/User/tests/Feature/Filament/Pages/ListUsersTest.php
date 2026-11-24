@@ -13,8 +13,13 @@ use Modules\User\Filament\Resources\UserResource\Pages\ListUsers;
 use Modules\User\Filament\Resources\UserResource\Tables\UsersTable;
 use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
 use Modules\User\Models\User;
+<<<<<<< HEAD
 use Modules\User\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+=======
+use PHPUnit\Framework\Assert;
+use Modules\User\Tests\TestCase;
+>>>>>>> laraxot/dev
 
 uses(TestCase::class);
 

@@ -1,5 +1,3 @@
-<<<<<<< .merge_file_PWLev0
-=======
 ---
 title: "Activity: architettura (diagramma non allineato al codice)"
 type: reference
@@ -100,7 +98,6 @@ Activity Module Architecture
 
 ## Quality Gates
 ✅ PHPStan L10: Executed (2026-07-28)
->>>>>>> .merge_file_mCiq10
 # Architecture Documentation
 
 ## Activity Module Architecture
@@ -257,44 +254,7 @@ class ActivityPolicy
 
 ### Related Documentation
 
-<<<<<<< .merge_file_PWLev0
-- [Security](SECURITY.md)
-- [Quality](QUALITY.md)
-- [Performance](PERFORMANCE.md)
-- [Testing](TESTING.md)
----
-title: "Activity Module Architecture"
-type: architecture
-tags: [module, architecture, audit]
-created: 2026-07-28
-updated: 2026-07-28
----
-
-# Activity Module — Architecture
-
-## Purpose
-Provides audit trail and activity logging via Spatie Laravel Activity Log. Tracks user actions, subject changes, and event sourcing.
-
-## Core Components
-
-**Models:**
-- `Activity` — Base activity log model (spatie/laravel-activitylog)
-
-**Actions:**
-- `LogActivityAction` — Primary entrypoint for logging events
-
-**Filament Resources:**
-- `ActivityResource` — Browse/analyze activity logs
-
-## Database Schema
-- `activities` table: id, log_name, description, subject_id, subject_type, causer_id, causer_type, properties, created_at
-
-## Quality Gates
-✅ PHPStan L10: Executed (2026-07-28)
-=======
 - [Security](security.md)
 - [Quality](roadmap/quality.md)
 - [Performance](PERFORMANCE.md) _(target mancante, verificato 2026-10-14)_
 - [Testing](testing.md)
-=======
->>>>>>> .merge_file_mCiq10

@@ -3,7 +3,11 @@ title: "code quality analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "code quality analysis cms 2025-11-24"
 issues: []
 discussions: []
@@ -22,7 +26,15 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
 title: "code quality analysis"
+=======
+<<<<<<< HEAD
+title: "code quality analysis "
+=======
+title: "code quality analysis"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 type: note
 tags: [documentation]
 created: 2026-09-26

@@ -68,3 +68,16 @@ grep -rl '^<<<<<<< \|^=======$\|^>>>>>>> ' docs/ --include='*.md'
 ```
 
 Commit: `7402d521`.
+<<<<<<< HEAD
+=======
+
+## Wave docs 2026-11-23
+
+Nuova ondata di marker annidati (`.merge_file_*`) in `Modules/Lang/docs`:
+45 file risolti (innermost-first; HEAD preferito; no `->label()` hardcoded
+come vincolo di dominio Lang). Dedup chirurgica su
+`translation-keys-rules.md` / `index.md` post-merge.
+
+Verifica: `/bin/grep -rIln '^<<<<<<< \|^>>>>>>> \|^=\{7\}$' laravel/Modules/Lang/docs` → vuoto.
+Status: done.
+>>>>>>> laraxot/dev

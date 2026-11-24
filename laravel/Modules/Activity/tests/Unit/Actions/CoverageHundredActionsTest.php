@@ -75,10 +75,6 @@ test('LogActivityAction execute persiste con user Auth e subject', function (): 
         description: 'Desc',
     ))->execute();
 
-<<<<<<< .merge_file_2uOOEK
-    Assert::assertInstanceOf(Activity::class, $activity);
-=======
->>>>>>> .merge_file_LGq3zy
     Assert::assertSame('custom_evt', $activity->event);
     Assert::assertSame($user->id, $activity->causer_id);
 });
@@ -109,8 +105,6 @@ test('RecordSubjectActivityAction e query actions coprono execute', function ():
     $subject = activityUnitSubject('subj-q');
     $user = activityUnitUser('causer-q');
 
-<<<<<<< .merge_file_2uOOEK
-=======
     // La tabella harness non esiste nel DB di sviluppo da cui parte lo scratch:
     // `with('subject')` farebbe una query su `activity_subject_harness`.
     if (! Schema::hasTable('activity_subject_harness')) {
@@ -124,7 +118,6 @@ test('RecordSubjectActivityAction e query actions coprono execute', function ():
         ['name' => 'Subject'],
     );
 
->>>>>>> .merge_file_LGq3zy
     $recorded = (new RecordSubjectActivityAction)->execute(
         ActivitySubjectHarness::class,
         $subject->id,
@@ -254,9 +247,5 @@ test('ActivityLogger Adapter rifiuta user non User', function (): void {
     $invalid = new LogActivityActionTestModel(['name' => 'bad']);
 
     expect(fn (): Activity => (new ActivityLoggerAdapter)->log('x', $invalid))
-<<<<<<< .merge_file_2uOOEK
-        ->toThrow(\InvalidArgumentException::class, 'User must be an instance of User');
-=======
         ->toThrow(\InvalidArgumentException::class, 'User must implement UserContract');
->>>>>>> .merge_file_LGq3zy
 });

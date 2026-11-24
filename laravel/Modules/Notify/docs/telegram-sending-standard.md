@@ -3,7 +3,11 @@ title: "telegram sending standard"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "telegram sending standard"
 issues: []
 discussions: []
@@ -226,4 +230,8 @@ $action->onQueue('telegram')->execute($data);
 
 ---
 
+<<<<<<< HEAD
 **Seguendo questo standard, l'invio di messaggi Telegram sarà sempre coerente, sicuro, testabile e facilmente estendibile.** 
+=======
+**Seguendo questo standard, l'invio di messaggi Telegram sarà sempre coerente, sicuro, testabile e facilmente estendibile.**
+>>>>>>> laraxot/dev

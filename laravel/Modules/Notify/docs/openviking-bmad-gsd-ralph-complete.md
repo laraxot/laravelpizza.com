@@ -3,7 +3,11 @@ title: "OpenViking + BMAD + GSD + Ralph Loop - Setup Complete Report"
 type: concept
 tags: [openviking, bmad, gsd, ralph]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "openviking-bmad-gsd-ralph-complete openviking + bmad + gsd + ralph loop - setup complete report"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -380,8 +384,18 @@ cat AGENTS.md
 - [BMAD-GSD-Ralph Integration](./bmad-gsd-ralph-integration.md)
 - [Unified Workflow](./unified-ai-workflow.md)
 - [BMAD Workflow](laravel/Modules/Xot/docs/bmad-workflow-guide.md)
+<<<<<<< HEAD
 - [AGENTS.md](../AGENTS.md)
 - [AGENTS.md](../AGENTS.md)
+=======
+<<<<<<< HEAD
+- [AGENTS.md](../agents.md)
+- [agents.md](../agents.md)
+=======
+- [AGENTS.md](../AGENTS.md)
+- [AGENTS.md](../AGENTS.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### Scripts
 - OpenViking Init: `bashscripts/ai/openviking-init.sh`

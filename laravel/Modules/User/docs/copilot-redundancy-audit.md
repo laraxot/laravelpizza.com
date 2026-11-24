@@ -32,3 +32,16 @@ Note per il team
 - Questo file è un punto di partenza; si consiglia una review manuale per decidere le consolidazioni.
 
 Autore: Copilot CLI
+<<<<<<< HEAD
+=======
+
+
+---
+
+<!-- Contenuto unito da copilot-redundancy-audit-.md (rimozione date dai nomi file, issue #64) -->
+
+<!-- recovery from broken basename `copilot-redundancy-audit-.md` after docs-guardian mass rename -->
+
+Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file evita nomi `*-.md`.
+
+>>>>>>> laraxot/dev

@@ -74,7 +74,15 @@ discussions: []
 - [geo-sushi-comparison.md](geo-sushi-comparison.md)
 - [comune-unificazione-analisi.md](comune-unificazione-analisi.md)
 - [Sushi - usesushi.dev](https://usesushi.dev/)
+<<<<<<< HEAD
 - [module_geo.md](module_geo.md)
+=======
+<<<<<<< HEAD
+- [module_geo.md](module_geo.md)
+=======
+- [module_geo.md](module-geo.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 

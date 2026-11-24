@@ -181,12 +181,6 @@ Pattern avanzato per testare widget Filament Livewire con form, validazione, not
 ## 🔗 Links & References
 
 ### **Project Documentation**
-<<<<<<< .merge_file_7yvSk2
-- [LoginTest.php](../laravel/Modules/Cms/tests/Feature/Auth/LoginTest.php) - Main test file
-- [Implementation Guide](../laravel/Modules/Cms/docs/tests/login-test-implementation.md) - Complete documentation
-- [LoginWidget](../laravel/Modules/User/app/Filament/Widgets/LoginWidget.php) - Widget under test
-=======
->>>>>>> .merge_file_qBtQew
 - [LoginTest.php](../../Cms/tests/Feature/Auth/LoginTest.php) - Main test file
 - [Implementation Guide](../../Cms/docs/tests/login-test-implementation.md) - Complete documentation
 - [LoginWidget](../../User/app/Filament/Widgets/LoginWidget.php) - Widget under test

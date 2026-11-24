@@ -7,7 +7,11 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 ---
 
 # 📚 Master Documentation Index
@@ -23,6 +27,21 @@ updated: 2026-08-24
 ### Per Nuovi Arrivati
 1. [Zen of Documentation](./zen_of_documentation.md) - Filosofia e principi
 2. [Documentation Governance](./documentation_governance.md) - Regole e standard
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+3. [Multi-Agent Collaboration](./multi_agent_collaboration.md) - Come lavorare con AI agents
+
+### Per Sviluppatori
+- [Architecture Overview](./architecture/README.md)
+- [Getting Started](./getting_started.md)
+- [Coding Standards](./conventions/README.md)
+
+### Per AI Agents
+- [Project Context](./project/project.md)
+- [Agent Coordination](./multi_agent_collaboration.md)
+=======
+>>>>>>> laraxot/dev
 3. [Multi-Agent Collaboration](./MULTI_AGENT_COLLABORATION.md) - Come lavorare con AI agents
 
 ### Per Sviluppatori
@@ -33,6 +52,10 @@ updated: 2026-08-24
 ### Per AI Agents
 - [Project Context](./project/PROJECT.md)
 - [Agent Coordination](./MULTI_AGENT_COLLABORATION.md)
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [OpenViking Context](../bashscripts/ai/openviking.md)
 
 ---
@@ -58,7 +81,15 @@ updated: 2026-08-24
 - [Naming Conventions](./conventions/naming.md)
 
 ### 🤖 AI Tools
+<<<<<<< HEAD
 - [Multi-Agent Guide](./MULTI_AGENT_COLLABORATION.md)
+=======
+<<<<<<< HEAD
+- [Multi-Agent Guide](./multi_agent_collaboration.md)
+=======
+- [Multi-Agent Guide](./MULTI_AGENT_COLLABORATION.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [BMAD Framework](./bmad/README.md)
 - [GSD Workflow](./gsd/README.md)
 - [NotebookLM](./notebooklm/README.md)
@@ -194,6 +225,13 @@ openviking get-context --query="documentation"
 ### Per Contribuire
 1. Leggi [Documentation Governance](./documentation_governance.md)
 2. Segui [Zen of Documentation](./zen_of_documentation.md)
+<<<<<<< HEAD
+=======
+1. Leggi [Documentation Governance](./documentation_governance.md)
+2. Segui [Zen of Documentation](./zen_of_documentation.md)
+1. Leggi [Documentation Governance](./documentation_governance.md)
+2. Segui [Zen of Documentation](./zen_of_documentation.md)
+>>>>>>> laraxot/dev
 3. Aggiorna questo indice
 4. Esegui quality checks
 

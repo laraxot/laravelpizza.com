@@ -18,7 +18,7 @@ final class ListLogActivitiesActionTestPage extends ListRecords
     {
         self::$resourceClass = $resourceClass;
 
-        return new self;
+        return new self();
     }
 
     public static function getResource(): string

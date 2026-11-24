@@ -19,6 +19,30 @@ tags: [structure, architecture, module]
 │   ├── concepts/                 # Topic/theme pages
 │   ├── entities/                 # Organization/person pages
 │   ├── rules/                    # ⚠️ 151+ regole progettuali
+<<<<<<< HEAD
+=======
+│   │   ├── 00-INDEX.md          # Indice regole
+│   │   ├── 00-TRIGGER_MAP.md    # Trigger map (link a globale)
+│   │   └── *.md                 # Regole specifiche modulo
+│   ├── skills/                   # Skill progettuali
+│   │   ├── INDEX.md
+│   │   └── *.md
+│   ├── commands/                 # Comandi progettuali
+│   │   ├── INDEX.md
+│   │   └── *.md
+│   ├── memories/                 # Memorie progettuali
+│   │   ├── INDEX.md
+│   │   └── *.md
+│   ├── decisions/                # Architecture decision records
+│   └── troubleshooting/          # Bug fixes, error resolutions
+├── ON-DEMAND-PATTERN.md          # 🌟 QUESTO FILE — Pattern on-demand
+├── QMD-SETUP.md                  # Configurazione QMD
+├── PERFORMANCE-OPTIMIZATION.md    # Metriche e best practice
+├── architecture.md                # (opzionale) Architettura modulo
+
+├── ARCHITECTURE.md               # (opzionale) Architettura modulo
+
+>>>>>>> laraxot/dev
 │   │   ├── 00-index.md          # Indice regole
 │   │   ├── 00-TRIGGER_MAP.md    # Trigger map (link a globale)
 │   │   └── *.md                 # Regole specifiche modulo
@@ -50,6 +74,11 @@ tags: [structure, architecture, module]
 | `wiki/log.md` | Storico attività (ingest/query/lint) |
 | `wiki/rules/` | Regole + trigger map locale |
 | `wiki/concepts/` | Concetti specifici del modulo |
+<<<<<<< HEAD
+=======
+| `ON-DEMAND-PATTERN.md` | **Leggi prima** — pattern da seguire |
+
+>>>>>>> laraxot/dev
 | `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
 
 ## Convenzioni
@@ -110,6 +139,11 @@ graph TD
 mkdir -p docs/wiki/{rules,skills,commands,memories,concepts,entities,decisions,troubleshooting}
 
 # 2. Crea INDEX files (già creati)
+<<<<<<< HEAD
+=======
+cp docs/wiki/rules/INDEX.md docs/wiki/rules/
+
+>>>>>>> laraxot/dev
 cp docs/wiki/rules/index.md docs/wiki/rules/
 # ... etc
 

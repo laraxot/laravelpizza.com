@@ -7,7 +7,15 @@ related:
   - "./change-password-command.md"
   - "./console-commands-philosophy-1-1.md"
   - "./console-commands-philosophy.md"
+<<<<<<< HEAD
   - "./console-commands-philosophy.md"
+=======
+<<<<<<< HEAD
+  - "./readme.md"
+=======
+  - "./console-commands-philosophy.md"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./console-commands-philosophy.md"
   - "./README.md"
 ---

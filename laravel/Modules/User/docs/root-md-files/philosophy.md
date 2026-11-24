@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+---
+title: "Philosophy"
+module: User
+type: note
+status: active
+updated: '2026-11-23'
+---
+
+>>>>>>> laraxot/dev
 # User Module Philosophy
 
 Centralized authentication, authorization, identity management, and multi-team roles for all 47 modules.
@@ -99,6 +110,11 @@ If you think a rule is wrong:
 
 ## See Also
 
+<<<<<<< HEAD
+=======
+- `ARCHITECTURE.md` — multi-tenant identity design
+- `TESTING.md` — auth testing strategies
+>>>>>>> laraxot/dev
 - `architecture.md` — multi-tenant identity design
 - `testing.md` — auth testing strategies
 - `docs/oauth2-flows.md` — Passport configuration

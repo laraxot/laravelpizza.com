@@ -93,6 +93,11 @@ class SimpleCalendarWidget extends \Filament\Widgets\Widget
 
 - [Guida Ufficiale Filament 4.x](https://filamentphp.com/docs/4.x/upgrade-guide)
 - [Pacchetto FullCalendar](https://github.com/saade/filament-fullcalendar)
+<<<<<<< HEAD
+=======
+- [Documentazione Modulo UI](../readme.md)
+
+>>>>>>> laraxot/dev
 - [Documentazione Modulo UI](../README.md)
 
 ## 📋 Checklist Completata
@@ -207,6 +212,11 @@ class SimpleCalendarWidget extends \Filament\Widgets\Widget
 
 - [Guida Ufficiale Filament 4.x](https://filamentphp.com/docs/4.x/upgrade-guide)
 - [Pacchetto FullCalendar](https://github.com/saade/filament-fullcalendar)
+<<<<<<< HEAD
+=======
+- [Documentazione Modulo UI](../readme.md)
+
+>>>>>>> laraxot/dev
 - [Documentazione Modulo UI](../README.md)
 
 ## 📋 Checklist Completata

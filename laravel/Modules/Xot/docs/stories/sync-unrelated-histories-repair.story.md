@@ -180,3 +180,56 @@ Da fare: le stesse correzioni vanno nei repo `module_ui_fila5`, `module_geo_fila
       doppie vanno guardate una per una prima di togliere qualcosa.
 - [x] PHPStan: `analyse Modules` a zero (commit `6debfe0f72`).
 - [x] Binding Pest: ADR `Xot/docs/adr/pest-testcase-binding-per-file.md` + guardia (commit `2d57064ac1`).
+<<<<<<< HEAD
+=======
+
+## Terza occorrenza: 2026-11-24, PHPStan non boota
+
+Il rischio scritto in "Aperto" si è avverato: i repo dei pacchetti avevano ancora i marker nel loro
+`laraxot/dev` e un nuovo merge li ha riportati nel root. Ordine dell'utente: `analyse Modules` e
+correggere tutto. Il run non dà un conteggio, si ferma al boot con `Application bootstrap failed ...
+unexpected token "<<"` dopo 2 secondi (JSON vuoto). L'extension-installer è a posto, il guasto è
+nel codice. Il 21/11 `analyse Modules` era a zero: il traguardo è tornarci.
+
+**Misure (sola lettura).** Root `HEAD~4` (`13f95412dc`, 15:10 UTC) senza marker nei `.php`; `HEAD~3`
+(`50aa4ee7f8`, 15:14, messaggio ".") con 343 `.php` marcati. Perciò **`SYNC_BASE=13f95412dc`**, non
+`HEAD~1`: `HEAD~1` ha già i marker (tre commit "." di fila) e gli strumenti confronterebbero marker
+con marker. Dry-run di `classify_conflict_hunks.py` su `Modules`: 4.100 file con marker, 4.310 hunk
+divergenti, 284 file con marker annidati o rotti. Codice e config: 340 file (php 338, json 2), circa
+140 con giudizio; `.md` di docs: 3.741 (Notify 2.908, User 294, Geo 129, Cms 95). Nei repo dei moduli
+il marker sta nel `HEAD` di Cms, Geo, Lang, Notify, UI, User, Xot; Activity e Media non hanno commit
+locali e hanno i marker solo nel working tree. `resolve_by_common_blob.py` dà `no-common-base` quasi
+ovunque: sono divergenze vere, non fast-forward. 349 file hanno marker ma solo 312 falliscono
+`php -l` (in `ActivityServiceProvider.php` stavano in un docblock): il lint verde non basta.
+Mancano i `pre-commit` col guard (`bashscripts/git/guard-conflict-markers.sh` esiste) in root e Notify.
+
+**Metodo, forward-only.** (1) Hunk meccanici (identici, lato vuoto, sottoinsieme): union con
+`classify_conflict_hunks.py <dir> --apply`, nessuna riga persa. (2) Divergenti: leggere i due lati,
+i chiamanti e la storia; "ours" = `git show 13f95412dc:laravel/<path>`. Se il testo del lato
+`laraxot/dev` compare nella storia del root prima di `13f95412dc` è una copia vecchia (mirror ".") e
+vale il lato del root; se non c'è mai stato è contenuto nuovo, da valutare nel merito (unione di
+aggiunte indipendenti, mai due versioni della stessa funzione). (3) Scrittura con `Edit` sul blocco
+esatto: se un altro agente l'ha già cambiato l'edit fallisce e il file si salta; `stat -c %Y` prima,
+sotto 120 s il file è caldo. (4) `php -l` su ogni file toccato; niente PHPStan finché restano marker
+nei file di boot.
+
+**Criteri.** Zero marker nei file di codice e config di `Modules` e `Themes` (con controprova
+positiva); `php -l` pulito; PHPStan boota; baseline `analyse Modules` valida (exit e `totals`), poi
+fix per famiglia. I 3.741 `.md` sono una seconda fase e non bloccano il boot. Prevenzione
+(`pre-commit` col guard nei repo dei moduli, rimessa della guardia su `merge_remote_repo_2.sh`):
+decisione dell'utente, perché la sync smette di committare invece di committare marker.
+
+### Coordinamento (24/11)
+
+| Agente | Scope | Nota |
+|--------|-------|------|
+| codex (PID 1919367, osservato, nessun claim scritto) | `Modules/Activity`, scritture recenti in Lang, Media, UI, Cms `routes/` | in corso: marker di codice Activity da 20 a 6 e UI da 16 a 8 in pochi minuti. Non toccare. |
+| claude-coordinatore | misure, story, baseline PHPStan a marker azzerati | in corso |
+| lane-xot | `Modules/Xot` codice e config con marker | in corso |
+| lane-user | `Modules/User` codice e config con marker | in corso |
+| lane-cms-geo-notify | `Modules/Cms`, `Modules/Geo`, `Modules/Notify` codice e config con marker | in corso |
+| claude (secondo coordinatore, 24/11 15:45 UTC) | nessuno scope di scrittura | arrivato sullo stesso ordine: baseline delle 15:45 = 578 `phpstan.parse` in 86 file, zero errori di tipo; 24 di quei file erano gia' riparati alle 15:49. Non scrive sui marker e non rilancia la baseline (e' del claude-coordinatore): riprende solo a marker azzerati, se il coordinatore non l'ha gia' fatto. |
+| claude (secondo coordinatore, 24/11 16:15 UTC) | `Modules/Cms/resources/views/components/{head,foot}.blade.php`, `tests/fixtures/slug-probe.blade.php`; `docs/adr` di tutti i moduli (issue #252) | fatto per le 3 viste Cms (ferme da 53 min, non PHP, fuori da PHPStan): `head` stampava `<<<<<<< HEAD` dentro `<head>` e non aveva `@stack('styles')`; risolte per unione (`@see` tenuto, `@stack` dal lato `dev`; la fixture era gia' il sovrainsieme nel lato `HEAD`), Blade compilato e `php -l` ok. `docs/adr`: 4 lane in corso, solo `docs/adr`, nessun codice. Restano a te i marker PHP: `Gdpr/app/Models/Traits/HasGdpr.php` ha marker `.merge_file_*` vivi (57 s) e non e' stato toccato (e il suo e' un marker dentro un docblock: `php -l` passa, non e' `phpstan.parse`). **Baseline bloccata alle 16:08:** `analyse Modules` con `APP_ENV=testing` esce in 3 s con `Application bootstrap failed` / `.env.testing mancante` (guardia di `App\Application::environmentFile()`, nessun fallback su `.env` per scelta); ieri 21:22 lo stesso comando dava 0 errori, quindi il file c'era. Nessuna misura PHPStan e nessun Pest finche' l'owner delle credenziali non lo rimette: non ricrearlo e non cambiare `APP_ENV`. Parse errors di codice residui: 0. |
+| claude (secondo coordinatore, 24/11 16:20 UTC) | nessuno (solo misura) | **Quarta occorrenza, ripresa mentre si ripulisce.** Alle 16:07 i file di codice con marker erano 1 (docblock di Gdpr); alle 16:14 sono 28, di cui 26 in `Modules/Lang` (`routes/web.php`, `routes/api.php`, vista del language switcher, test) e 1 in `Activity/app/Providers/ActivityServiceProvider.php`, tutti di meno di 11 minuti. Nel repo di Lang il marker e' **nel `HEAD`**: `routes/web.php` ha 0 marker in `HEAD~1` (9 min fa) e 2 in `bed006b2`/`4b1524db` ("first" e "." di 2-3 min fa). Quindi `merge_remote_repo_2.sh` ha fatto il merge con `laraxot/dev`, lasciato i marker e committato/pushato. Stessa sorte per i README `docs/adr` e `docs/contracts` di Lang appena riscritti dalle lane. Finche' la sync gira senza guardia, ogni fix locale viene ripristinato e il marker torna su `laraxot/dev` (da cui tirano ptvx, trade, restaurant, fixcity). Non e' una decisione mia ne' dei peer: restano la guardia `pre-commit` nei repo dei moduli (`bashscripts/git/guard-conflict-markers.sh`) o la sospensione della sync su Lang, **da decidere dall'utente**. Nessuno ha toccato lo script. |
+| claude (terzo coordinatore, 24/11 16:30 UTC, sessione `analyse Modules`) | lane Lang, User, Geo, Notify+Media+UI: file PHP/js/blade/json con marker. Ora solo `Modules/Geo`: tipi PHPStan nei trait `HasAddresses`, `HasCoordinatePicker`, `GeographicalScopes`, `SushiToJsons` e in `MapPickerTest` (file senza marker). | Ho trovato i file gia' risolti da altri (Lang 7 su 9, Geo 8 su 9, User 16 su 16): nessuna scrittura contro-corrente, gate mtime 120 s. `lint-modules.sh` = OK (da 42 file PHP rotti a 0). **Baseline valida alle ~16:10, ambiente di default (senza `APP_ENV=testing`, per questo non vedo il blocco `.env.testing` della riga sopra)**: `analyse Modules` exit 1 con `totals` valorizzato, zero `phpstan.parse`, 104 errori veri = Geo 103 (32 posizioni distinte, ripetute per ogni classe che usa il trait) e User 1 (`passport_stats.php`, gia' sistemato da un altro agente). Un resolver aveva scelto HEAD e perso 17 `->group('<ID>-INV-n')` (User 4, Media/Notify/UI 13): ripristinati dal backup. Confronto con `13f95412dc`: 37 file su 68 identici; 5 con lato `dev` scelto per merito (User `package.json`/`vite.config.js`/`tailwind.config.js`, `UserResourceTest`, UI `ThemeModelTest`), testo mai presente nella storia del root. Aperto, non toccato: `User/package-lock.json` non coerente con `package.json`; `NoCmsPhantomFolioImportsTest` (User) probabilmente rosso per l'ADR; 2 blade di User citano `app.scss` assente; fixture `*PhpstanProbe*` di Geo contro la regola no-phpstan-probe-models. `merge_remote_repo_2.sh laraxot` gira ancora (Lang, poi Notify): rimisurare i marker a sync finita. |
+>>>>>>> laraxot/dev

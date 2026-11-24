@@ -1,8 +1,13 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< HEAD
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\TextInput;
+=======
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Checkbox;
+>>>>>>> laraxot/dev
 use Modules\User\Filament\Resources\UserResource\Schemas\UserForm;
 use Modules\User\Filament\Widgets\Auth\BaseAuthWidget;
 use Modules\User\Filament\Widgets\LoginWidget;

@@ -8,7 +8,11 @@ status: done
 track: quality/i18n
 priority: P2
 created: 2026-09-29
+<<<<<<< HEAD
 updated: 2026-09-29
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 related:
   - ../../../../../docs/wiki/i18n/navigation-translations-audit.md
   - ../../../../../docs/wiki/i18n/navigation-translations-inventory-2026-09-29.md

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+*Ultimo aggiornamento: 2025-01-22*
+>>>>>>> laraxot/dev
 ---
 module: theme
 topic: phpstan-progress-report

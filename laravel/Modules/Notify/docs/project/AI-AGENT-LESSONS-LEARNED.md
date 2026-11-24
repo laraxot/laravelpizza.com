@@ -3,7 +3,11 @@ title: "AI AGENT LESSONS LEARNED"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "AI AGENT LESSONS LEARNED"
 issues: []
 discussions: []
@@ -204,7 +208,15 @@ Documentation should reflect **reality**, not what we wish was true.
 |------|-------|--------|
 | 11:25 | Created workflow | ✅ Done |
 | 11:27 | Created docs | ✅ Done |
+<<<<<<< HEAD
 | 11:28 | Updated AGENTS.md | ✅ Done |
+=======
+<<<<<<< HEAD
+| 11:28 | Updated agents.md | ✅ Done |
+=======
+| 11:28 | Updated AGENTS.md | ✅ Done |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 | 11:29 | Pushed to dev | ✅ Done |
 | 11:30 | Said "task complete" | ❌ WRONG |
 | 11:35 | User asked to test | ✅ Right |

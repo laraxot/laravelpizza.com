@@ -34,64 +34,6 @@ return [
         'created_by_id' => [
             'label' => 'ID Creatore',
             'tooltip' => '',
-<<<<<<< .merge_file_aUTwQh
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'id' => [
-            'label' => 'ID',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'aggregate_uuid' => [
-            'label' => 'UUID Aggregato',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'aggregate_version' => [
-            'label' => 'Versione Aggregato',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'created_at' => [
-            'label' => 'Data Creazione',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'updated_at' => [
-            'label' => 'Data Aggiornamento',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-        'aggregate_type' => [
-            'label' => 'Tipo Aggregato',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-        ],
-    ],
-    'actions' => [
-        'view' => [
-            'label' => 'Visualizza',
-            'icon' => 'view',
-            'tooltip' => 'Visualizza i dettagli dello snapshot',
-        ],
-        'edit' => [
-            'label' => 'Modifica',
-            'icon' => 'edit',
-            'tooltip' => 'Modifica questo snapshot',
-        ],
-        'delete' => [
-            'label' => 'Elimina',
-            'icon' => 'delete',
-            'tooltip' => 'Elimina questo snapshot',
-=======
->>>>>>> .merge_file_zBIv4s
         ],
     ],
     'label' => 'Snapshot',

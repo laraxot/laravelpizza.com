@@ -3,7 +3,11 @@ title: "06 Cinematic Effects"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "06 Cinematic Effects"
 issues: []
 discussions: []
@@ -11,6 +15,17 @@ discussions: []
 
 # 🎨 Cinematic Effects & Particles
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+**Part of**: [00-INDEX.md](00-index.md) — AI Agents Coordination  
+**Related**: [06-CINEMATIC-EFFECTS.md](06-cinematic-effects.md) — Full guide
+
+## 📋 Quick Reference
+### CSS-only Particles (Recommended)
+
+=======
+>>>>>>> laraxot/dev
 **Part of**: [00-index.md](00-index.md) — AI Agents Coordination  
 **Related**: [06-cinematic-effects.md](06-cinematic-effects.md) — Full guide
 
@@ -40,6 +55,10 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🎯 Kinetic Web Design Principles
 
 Based on Berger+Team study (31 Italian sources):

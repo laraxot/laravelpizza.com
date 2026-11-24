@@ -2,7 +2,15 @@
 title: "PHPStan L10 User Module — Phase 2 (Resource constraints)"
 status: in_progress
 epic: code-quality
+<<<<<<< HEAD
 parent_story: "phpstan-l10-user-lang-fix.story.md"
+=======
+<<<<<<< .merge_file_7Nsct5
+parent_story: "phpstan-l10-user-lang-fix-20261006.story.md"
+=======
+parent_story: "phpstan-l10-user-lang-fix.story.md"
+>>>>>>> .merge_file_jEci9L
+>>>>>>> laraxot/dev
 created: 2026-10-06T14:30Z
 acceptance_criteria:
   - Identify 3–5 fixable PHPStan L10 errors in User module
@@ -53,7 +61,15 @@ acceptance_criteria:
 
 ## Files
 
+<<<<<<< HEAD
 - Story: `laravel/Modules/User/docs/bmad/stories/phpstan-l10-user-phase2.story.md`
+=======
+<<<<<<< .merge_file_7Nsct5
+- Story: `laravel/Modules/User/docs/bmad/stories/phpstan-l10-user-phase2-20261006.story.md`
+=======
+- Story: `laravel/Modules/User/docs/bmad/stories/phpstan-l10-user-phase2.story.md`
+>>>>>>> .merge_file_jEci9L
+>>>>>>> laraxot/dev
 - Code: TBD (fixes staged per-commit)
 
 ## References

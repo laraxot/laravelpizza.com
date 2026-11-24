@@ -4,12 +4,21 @@ declare(strict_types=1);
 
 return [
     'values' => [
+<<<<<<< HEAD
         'mail' => [
             'label' => 'Mail'],
         'sms' => [
             'label' => 'SMS'],
         'whatsapp' => [
             'label' => 'WhatsApp'],
+=======
+    'mail' => [
+        'label' => 'Mail'],
+    'sms' => [
+        'label' => 'SMS'],
+    'whatsapp' => [
+        'label' => 'WhatsApp'],
+>>>>>>> laraxot/dev
     ],
     'label' => 'Channel Enum',
     'plural_label' => 'Channel Enum (Plurale)',

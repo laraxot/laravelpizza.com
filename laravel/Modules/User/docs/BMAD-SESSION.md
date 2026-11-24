@@ -7,7 +7,15 @@
 - SSoT contratti: `Modules\Xot\Contracts\UserContract`, `ProfileContract`
 
 ## Diagnose
+<<<<<<< HEAD
 - PHPStan 485 errori: 309 `class.notFound` (test `User`, `Profile`, `Quaeris`), duplicati import
+=======
+<<<<<<< HEAD
+- PHPStan 485 errori: 309 `class.notFound` (test `User`, `Profile`, `Quaeris`), duplicati import
+=======
+- PHPStan 485 errori: 309 `class.notFound` (test `User`, `Profile`, `<nome progetto>`), duplicati import
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - `XotData::getProfileClass()`: `main_module=''` → `InvalidArgumentException`
 - `Profile.php`: `@property-read User|null $user` (non esistente)
 - `IsProfileTrait.php`: `use UserContract` duplicato
@@ -21,7 +29,15 @@
 - Gdpr actions: `UserContract $user`
 - `BaseProfile.php`: `$incrementing=false`, `$keyType='string'`, UUID `id` in `booted()`
 - Test batch: `use Modules\User\Models\User;` in 8 file `tests/`
+<<<<<<< HEAD
 - `Quaeris` → `User` sostituito nel codice
+=======
+<<<<<<< HEAD
+- `Quaeris` → `User` sostituito nel codice
+=======
+- `<nome progetto>` → `User` sostituito nel codice
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Verify
 - `Profile::firstOrCreate()` → `id` UUID generato (len=36) ✅

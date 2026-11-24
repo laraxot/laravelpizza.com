@@ -3,7 +3,11 @@ title: "🧘 Zen of Documentation - Filosofia Unificata"
 type: concept
 tags: [zen, documentation]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "zen-of-documentation 🧘 zen of documentation - filosofia unificata"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -394,9 +398,19 @@ python scripts/run.py ask_question.py \
 ## 📚 Risorse Correlate
 
 - [Documentation Governance](../../docs/documentation-governance.md)
+<<<<<<< HEAD
 - [Multi-Agent Collaboration](../../../multi-agent-collaboration.md)
 - [Documentation Governance](../../../documentation-governance.md)
 - [Multi-Agent Collaboration](../../../multi-agent-collaboration.md)
+=======
+<<<<<<< .merge_file_SRoiY0
+- [Multi-Agent Collaboration](../../docs/multi-agent-collaboration.md)
+=======
+- [Multi-Agent Collaboration](../../../multi-agent-collaboration.md)
+- [Documentation Governance](../../../documentation-governance.md)
+- [Multi-Agent Collaboration](../../../multi-agent-collaboration.md)
+>>>>>>> .merge_file_afshcs
+>>>>>>> laraxot/dev
 - [Filament Blocks System](../blocks/content-blocks-system.md)
 - [OpenViking Global Context](../../bashscripts/ai/openviking.md)
 

@@ -21,6 +21,11 @@ docs/
 │   ├── index.md           # Catalogo
 │   ├── log.md             # Registro
 │   ├── schema.md          # Questo file
+<<<<<<< HEAD
+=======
+│   ├── SCHEMA.md          # Questo file
+
+>>>>>>> laraxot/dev
 │   ├── schema.md          # Questo file
 │   ├── schema.md          # Questo file
 │   ├── schema.md          # Questo file
@@ -41,6 +46,11 @@ docs/
 
 ---
 
+<<<<<<< HEAD
+=======
+## Contenuto assorbito da `SCHEMA.md`
+
+>>>>>>> laraxot/dev
 ## Contenuto assorbito da `schema.md`
 
 # Documento unificato

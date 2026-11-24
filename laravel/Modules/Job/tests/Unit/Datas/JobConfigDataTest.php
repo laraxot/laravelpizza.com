@@ -47,7 +47,7 @@ test('the worker command is byte for byte the old one until someone saves', func
 
     expect(app(BuildQueueWorkerCommandAction::class)->execute())
         ->toBe(' /usr/local/bin/php '.base_path().'/artisan queue:work --timeout=60 --sleep=5 --tries=3 > /dev/null & echo $!');
-});
+})->group('JOB-WORKER-CMD-INV-1');
 
 test('the worker command carries the saved flags', function (): void {
     FakeTenantJobConfig::bind([
@@ -58,7 +58,7 @@ test('the worker command carries the saved flags', function (): void {
 
     expect(app(BuildQueueWorkerCommandAction::class)->execute())
         ->toContain('queue:work --timeout=80 --sleep=2 --tries=5 ');
-});
+})->group('JOB-WORKER-CMD-INV-2');
 
 test('worker:check starts the worker with the command built from the settings', function (): void {
     $source = file_get_contents((string) (new ReflectionClass(WorkerCheck::class))->getFileName());

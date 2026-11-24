@@ -3,7 +3,11 @@ title: "SUPER MUCCA DOCS ANALYSIS"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "SUPER MUCCA DOCS ANALYSIS"
 issues: []
 discussions: []
@@ -221,5 +225,8 @@ touch laravel/Modules/Seo/docs/README.md
 ---
 
 *"Non avrai altro path all'infuori del relativo"* - Commandamento Laraxot
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> laraxot/dev

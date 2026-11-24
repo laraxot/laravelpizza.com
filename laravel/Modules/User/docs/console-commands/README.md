@@ -481,10 +481,23 @@ Modules/User/
 - [Password Management](../password.md)
 - [README.md](../README.md)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+- [User Models](../models/readme.md)
+- [Role Management](../models/role-management.md)
+- [Password Management](../password.md)
+- [README.md](../readme.md)
+=======
+>>>>>>> laraxot/dev
 - [User Models](../models/README.md)
 - [Role Management](../models/role-management.md)
 - [Password Management](../password.md)
 - [README.md](../README.md)
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Aggiornamenti Recenti
 

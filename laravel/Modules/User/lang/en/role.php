@@ -112,8 +112,6 @@ return [
         'settings' => 'Settings',
         'reports' => 'Report',
     ],
-<<<<<<< .merge_file_isbRQg
-=======
     // Display names of the role codes (spatie role `name`). The code stays the stored value.
     'labels' => [
         'super-admin' => 'Super admin',
@@ -131,7 +129,6 @@ return [
         'waiter' => 'Waiter',
         'respHACCP' => 'HACCP manager',
     ],
->>>>>>> .merge_file_VHLCIL
     'label' => 'Role',
     'plural_label' => 'Roles',
 ];

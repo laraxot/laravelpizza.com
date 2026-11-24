@@ -8,11 +8,7 @@ return [
         'plural' => 'Teams',
         'group' => [
             'name' => 'User management',
-<<<<<<< .merge_file_7IDghU
-            'description' => 'Gestione dei team e delle loro autorizzazioni',
-=======
             'description' => 'Manage teams and their permissions',
->>>>>>> .merge_file_FIxWBd
         ],
         'label' => 'Team',
         'sort' => '18',

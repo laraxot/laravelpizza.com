@@ -1,10 +1,19 @@
 ---
+<<<<<<< HEAD
 title: "Fix Plan"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
 qmd: "Fix Plan"
+=======
+title: "fix plan"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-11-23
+qmd: "fix plan"
+>>>>>>> laraxot/dev
 issues: []
 discussions: []
 ---
@@ -19,12 +28,20 @@ Allineare la homepage FixCity (`/it/tests/homepage`) al design Bootstrap Italia 
 
 ---
 
+<<<<<<< HEAD
 title: "FIX PLAN"
+=======
+title: "fix plan"
+>>>>>>> laraxot/dev
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
+<<<<<<< HEAD
 qmd: "FIX PLAN"
+=======
+qmd: "fix plan"
+>>>>>>> laraxot/dev
 issues: []
 discussions: []
 ## Fase 1: Header & Hero (Settimana 1)

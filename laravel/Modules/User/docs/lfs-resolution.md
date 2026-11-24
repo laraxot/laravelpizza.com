@@ -88,3 +88,16 @@ ls docs/img/      # ✅ Images preserved locally, untracked
    - Force-pushed to `provtv/dev` (commit `1dcd346`)
    - Verified: `git lfs ls-files` returns empty
 5. **Result:** Push now succeeds; images preserved locally (untracked)
+<<<<<<< HEAD
+=======
+
+
+---
+
+<!-- Contenuto unito da lfs-resolution-.md (rimozione date dai nomi file, issue #64) -->
+
+<!-- recovery from broken basename `lfs-resolution-.md` after docs-guardian mass rename -->
+
+Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file evita nomi `*-.md`.
+
+>>>>>>> laraxot/dev

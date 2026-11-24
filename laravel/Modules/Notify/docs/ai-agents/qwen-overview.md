@@ -3,7 +3,11 @@ title: "qwen overview"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "qwen overview"
 issues: []
 discussions: []
@@ -83,5 +87,13 @@ Never: git revert (only forward!)
 ## 🔗 Link
 
 - [Indice QWEN](./qwen-split-index.md)
+<<<<<<< HEAD
 - [qwen.md originale](../../qwen.md)
+=======
+<<<<<<< HEAD
+- [QWEN.md originale](../../qwen.md)
+=======
+- [qwen.md originale](../../qwen.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Index principale](./index.md)

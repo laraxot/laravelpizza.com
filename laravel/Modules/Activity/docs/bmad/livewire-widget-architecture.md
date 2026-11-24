@@ -1,8 +1,4 @@
 ---
-<<<<<<< .merge_file_OVmgPF
-title: "Architecture — Activity"
-=======
->>>>>>> .merge_file_3ojdDv
 title: "Architecture: Activity"
 type: architecture
 module: Activity

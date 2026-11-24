@@ -1,7 +1,11 @@
 ---
+<<<<<<< HEAD
 title: "User: marker di conflitto git residui in docs/ (866 file) — pulizia + aggiornamento indice"
 
 title: "User: marker di conflitto git residui in docs/ (866 file): pulizia + aggiornamento indice"
+=======
+title: "User: marker di conflitto git residui in docs/ — pulizia + aggiornamento indice"
+>>>>>>> laraxot/dev
 type: story
 module: User
 epic: null
@@ -10,7 +14,11 @@ slug: docs-merge-conflict-markers-cleanup
 status: done
 cold_gate: null
 created: '2026-09-22'
+<<<<<<< HEAD
 updated: '2026-09-22'
+=======
+updated: '2026-11-23'
+>>>>>>> laraxot/dev
 repository: "git@github.com:provtv/module_user_fila5.git"
 github_issue: "https://github.com/provtv/module_user_fila5/issues/36"
 github_discussion: "https://github.com/provtv/module_user_fila5/discussions/37"
@@ -24,7 +32,28 @@ owned_scope:
 
 # User: marker di conflitto git residui in docs/ — pulizia + aggiornamento indice
 
+<<<<<<< HEAD
 # User: marker di conflitto git residui in docs/: pulizia + aggiornamento indice
+=======
+<<<<<<< HEAD
+## Coordinamento
+
+- Scope: solo `laravel/Modules/User/docs/**/*.md` (auth, RBAC Spatie, Filament
+  widgets login/register, pattern XotBase — business logic User, non codice PHP).
+- Storia correlata: [user-nested-conflict-marker-cleanup.story.md](./user-nested-conflict-marker-cleanup.story.md)
+  (marker annidati daemon `87273113`/`f548be94`); questa story resta il canone per
+  le ondate di pulizia marker in `docs/`.
+- Sessione 2026-11-23 (docs-guardian): recidiva con **154 file** / ~1409 aperture
+  `<<<<<<<` (quasi tutte annidate `.merge_file_*`). Risoluzione ricorsiva lato
+  più coerente (link lowercase salvo `README.md`, lato non vuoto / più completo).
+  Verifica finale: `/bin/grep -rIln --include='*.md' '^<<<<<<< \|^>>>>>>> \|^=======$'
+  laravel/Modules/User/docs` → **0**. Nessun commit in questa sessione.
+- Fuori scope: consolidamento duplicati case-only (`index.md`/`INDEX.md`,
+  `models/readme.md`/`models/README.md`), codice `app/`, lock intero modulo.
+=======
+# User: marker di conflitto git residui in docs/: pulizia + aggiornamento indice
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Contesto
 
@@ -173,4 +202,17 @@ Lock `laravel/Modules/User:docs` acquisito e rilasciato correttamente
 (`git add` con lista esplicita di path, mai `-A` — repo con ~5000
 modifiche non correlate di altre sessioni in corso).
 
+<<<<<<< HEAD
 (`git add` con lista esplicita di path, mai `-A`: repo con ~5000
+=======
+<<<<<<< HEAD
+## Follow-up 2026-11-23
+
+Ondata marker annidati ripulita in-place su 154 file `docs/` (vedi
+[Coordinamento](#coordinamento)). Residual markers: 0. Duplicati case-only e
+indice monolitico `INDEX.md` non consolidati (scope separato).
+=======
+(`git add` con lista esplicita di path, mai `-A`: repo con ~5000
+modifiche non correlate di altre sessioni in corso).
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -4,7 +4,11 @@ type: index
 tags: [notify, docs, architecture]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "notify documentazione architecture readme architettura progetto - indice index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -46,8 +50,17 @@ e
    - Alternative considerate e scartate
    - Raccomandazione finale: ✅ IMPLEMENTARE
 
+<<<<<<< HEAD
 2. **[Strategia di Implementazione](../../architecture/xotbasepivot-strategy.md)** 📋
 2. **[Strategia di Implementazione](../../architecture/xotbasepivot-strategy.md)** 📋
+=======
+<<<<<<< .merge_file_w9p4vU
+2. **[Strategia di Implementazione](./xotbasepivot-strategy.md)** 📋
+=======
+2. **[Strategia di Implementazione](../../architecture/xotbasepivot-strategy.md)** 📋
+2. **[Strategia di Implementazione](../../architecture/xotbasepivot-strategy.md)** 📋
+>>>>>>> .merge_file_mIknqO
+>>>>>>> laraxot/dev
    - Piano step-by-step (3-4 ore)
    - Moduli impattati (13 moduli, 26 file)
    - Script di migration automatici
@@ -131,8 +144,17 @@ Leggere in ordine:
 
 ### 3. Implementation (3-4 ore)
 
+<<<<<<< HEAD
 Seguire [xotbasepivot-strategy.md](../../architecture/xotbasepivot-strategy.md) step-by-step:
 Seguire [xotbasepivot-strategy.md](../../architecture/xotbasepivot-strategy.md) step-by-step:
+=======
+<<<<<<< .merge_file_w9p4vU
+Seguire [xotbasepivot-strategy.md](./xotbasepivot-strategy.md) step-by-step:
+=======
+Seguire [xotbasepivot-strategy.md](../../architecture/xotbasepivot-strategy.md) step-by-step:
+Seguire [xotbasepivot-strategy.md](../../architecture/xotbasepivot-strategy.md) step-by-step:
+>>>>>>> .merge_file_mIknqO
+>>>>>>> laraxot/dev
 
 1. ✅ Creare XotBasePivot (30 min)
 2. ✅ Migrare User module (45 min)

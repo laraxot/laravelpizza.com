@@ -3,7 +3,11 @@ title: "00 index"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
 qmd: "00 index"
 issues: []
 discussions: []
@@ -28,6 +32,10 @@ status: draft
 
 ## ⚙️ **Configurazione Avanzata**
 - 📦 **[Composer Dependencies](./composer-dependencies.md)** - Firebase, FCM, Telegram: package nel modulo Notify, mai nel root.
+<<<<<<< HEAD
+=======
+- 📬 **[Mail provider dependencies](./mail-provider-dependencies.md)** - Mailjet/Mailtrap/MIME inbound: perché esistono e contratti Action (link richiesto dalla remediation PHPStan mail deps; non supersede composer-dependencies).
+>>>>>>> laraxot/dev
 - 📦 **[Riferimento pacchetti](../../../../docs/composer-packages-reference.md)** | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md) - AWS, Telegram, Postmark, Spatie mail templates
 - 🛠️ **[Channel Provider](./provider-actions-architecture.md)** - Come estendere il modulo con nuovi driver.
 - 🏷️ **[Acronym Naming](./acronym-naming-conventions.md)** - Standard per la denominazione dei driver e canali.

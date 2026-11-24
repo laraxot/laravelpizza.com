@@ -21,6 +21,14 @@ related:
 # Implementazione Corretta della Pagina di Login 
 
 ## Collegamenti correlati
+<<<<<<< HEAD
+=======
+- [Documentazione centrale](/docs/readme.md)
+- [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
+- [Regole Traduzioni](/laravel/modules/lang/docs/translation-keys-rules-2.md)
+- [Implementazione Auth Pages](/laravel/modules/user/docs/auth-pages-implementation.md)
+- [Volt Folio Auth](/laravel/modules/user/docs/volt-folio-auth-implementation-3.md)
+>>>>>>> laraxot/dev
 - [Documentazione centrale](/docs/README.md)
 - [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
 - [Regole Traduzioni](/laravel/modules/lang/docs/translation-keys-rules-2.md)
