@@ -491,6 +491,8 @@ class MetatagData extends Data implements Wireable
      * Get the default Filament colors configuration.
      *
      * @return array<string, array<int, string>|string>
+     *
+     * @see Modules/Xot/docs/datas/metatagdata.md
      */
     public function getFilamentColors(): array
     {

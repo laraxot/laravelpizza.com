@@ -36,15 +36,6 @@ class MapFilterLit extends LitElement {
     connectedCallback() {
         super.connectedCallback();
         this._readFilters();
-<<<<<<< .merge_file_jQzaT2
-<<<<<<< HEAD
-        this._initFromMap();
-    }
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_2d5E9c
         this._initialSelected = this._readInitialSelected();
         this._onGeoMapLoaded = () => {
             this._initFromMap();
@@ -73,15 +64,6 @@ class MapFilterLit extends LitElement {
         this._updateResultsCount(this._initialSelected);
     }
 
-<<<<<<< .merge_file_jQzaT2
-=======
-        this._initFromMap();
-    }
-
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_2d5E9c
     _readFilters() {
         try {
             const parsed = JSON.parse(this.filters || '[]');
@@ -179,23 +161,11 @@ class MapFilterLit extends LitElement {
                 `)}
             </ul>`;
     }
-<<<<<<< .merge_file_jQzaT2
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_2d5E9c
 
     disconnectedCallback() {
         document.removeEventListener('geo-map-loaded', this._onGeoMapLoaded);
         super.disconnectedCallback();
     }
-<<<<<<< .merge_file_jQzaT2
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_2d5E9c
 }
 
 if (!customElements.get('map-filter-lit')) {

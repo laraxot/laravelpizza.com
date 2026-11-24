@@ -72,6 +72,8 @@ abstract class XotBaseListRecords extends FilamentListRecords
      * Get the header actions.
      *
      * @return array<string, Action|ActionGroup>
+     *
+     * @see Modules/Xot/docs/wiki/memories/header-actions-doppi-filament.md
      */
     protected function getHeaderActions(): array
     {
