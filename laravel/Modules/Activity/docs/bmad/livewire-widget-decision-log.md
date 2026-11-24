@@ -1,5 +1,13 @@
 ---
+<<<<<<< HEAD
 title: "Decision log: Activity"
+=======
+<<<<<<< HEAD
+title: "Decision log — Activity"
+=======
+title: "Decision log: Activity"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 type: decision-log
 module: Activity
 related:

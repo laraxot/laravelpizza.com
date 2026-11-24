@@ -6,10 +6,7 @@ namespace Modules\Lang\Actions;
 
 use Illuminate\Support\Facades\File;
 use Spatie\QueueableAction\QueueableAction;
-<<<<<<< HEAD
-=======
 use Throwable;
->>>>>>> laraxot/dev
 
 use function Safe\date;
 use function Safe\exec;
@@ -40,12 +37,6 @@ class WriteTranslationFileAction
         // Verifica la sintassi PHP prima di scrivere
         $this->validatePhpSyntax($phpContent);
 
-<<<<<<< HEAD
-        // Scrivi il file
-        $result = File::put($filePath, $phpContent);
-
-        if ($result === false) {
-=======
         // Una lingua nuova e' una cartella nuova: `lang/de/` non esiste finche'
         // nessuno ha scritto la prima traduzione tedesca. Senza questa riga il
         // primo file di ogni locale nuovo falliva con
@@ -54,7 +45,6 @@ class WriteTranslationFileAction
         File::ensureDirectoryExists(dirname($filePath));
 
         if (! $this->putTranslationFile($filePath, $phpContent)) {
->>>>>>> laraxot/dev
             throw new \Exception("Impossibile scrivere il file: {$filePath}");
         }
 
@@ -65,8 +55,6 @@ class WriteTranslationFileAction
     }
 
     /**
-<<<<<<< HEAD
-=======
      * Scrive il file di traduzione, riportando l'esito come booleano.
      *
      * ## Perche' e' un metodo a parte, e protected
@@ -125,7 +113,6 @@ class WriteTranslationFileAction
     }
 
     /**
->>>>>>> laraxot/dev
      * Crea un backup del file di traduzione.
      *
      * @param  string  $filePath  Percorso del file
@@ -159,16 +146,12 @@ class WriteTranslationFileAction
     {
         // Crea un file temporaneo per la validazione
         $tempFile = tempnam(storage_path('framework/cache'), 'translation_');
-<<<<<<< HEAD
-        file_put_contents($tempFile, $phpContent);
-=======
 
         if ($this->writeLangTempContents($tempFile, $phpContent) === false) {
             unlink($tempFile);
 
             throw new \Exception("Impossibile scrivere il file temporaneo di validazione: {$tempFile}");
         }
->>>>>>> laraxot/dev
 
         // Esegue php -l per validare la sintassi
         $rawOutput = [];

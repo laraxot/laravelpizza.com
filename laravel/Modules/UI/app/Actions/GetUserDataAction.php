@@ -13,14 +13,11 @@ use Modules\Xot\Contracts\UserContract;
 use Spatie\Permission\Contracts\Permission;
 use Spatie\QueueableAction\QueueableAction;
 
-<<<<<<< HEAD
-=======
 /**
  * Dati dell'utente autenticato (identità, ruolo, permessi, impostazioni del profilo).
  *
  * @contract docs/contracts/get-user-data-action.md
  */
->>>>>>> laraxot/dev
 class GetUserDataAction
 {
     use QueueableAction;

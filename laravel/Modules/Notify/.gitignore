@@ -76,15 +76,6 @@ phpmd*
 phpmd.ruleset.xml
 phpmd.ruleset.xml.bak
 phpstan*
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-# BMAD stories/docs named phpstan-* must remain trackable
-!docs/**/phpstan*.md
-!docs/**/phpstan*.story.md
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 .phpstorm.meta.php
 .phpunit.result.cache
 phpunit.xml
@@ -129,15 +120,14 @@ docs/graphify
 resources/lang
 .github/issue_content/
 
-# Tooling/configurazione locale (module-theme-root-hygiene)
+# Regole portate dal remoto laraxot/dev (sync del 24/11), unite alla base senza perdere nulla
+!docs/**/phpstan*.md
+!docs/**/phpstan*.story.md
 .agents/
 .codex/
 .opencode/
 .qwen/
 .php-cs-fixer.php
-.php-cs-fixer.dist.php
-<<<<<<< HEAD
-=======
 tests/coverage-*.*
-docs/screenshots/
->>>>>>> laraxot/dev
+.github/ISSUE_CONTENT/
+tests/graphify-out/

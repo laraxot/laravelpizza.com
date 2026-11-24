@@ -1,5 +1,13 @@
 ---
+<<<<<<< HEAD
 title: "PRD: Activity"
+=======
+<<<<<<< HEAD
+title: "PRD — Activity"
+=======
+title: "PRD: Activity"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 type: prd
 module: Activity
 related:

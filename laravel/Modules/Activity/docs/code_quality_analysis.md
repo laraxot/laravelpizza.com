@@ -443,8 +443,23 @@ $defaultRecordsPerPageSelectOption → $defaultPerPageOption
 
 ## 📚 Related Documentation
 
+<<<<<<< HEAD
 - [ACTIVITY_LOG_OPTIMIZATION.md](./performance/activity_log_optimization.md)
 - [QUERY_OPTIMIZATION_ANALYSIS.md](./query_optimization_analysis.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [ACTIVITY_LOG_OPTIMIZATION.md](./performance/ACTIVITY_LOG_OPTIMIZATION.md)
+- [QUERY_OPTIMIZATION_ANALYSIS.md](./QUERY_OPTIMIZATION_ANALYSIS.md)
+=======
+- [ACTIVITY_LOG_OPTIMIZATION.md](./performance/activity_log_optimization.md)
+- [QUERY_OPTIMIZATION_ANALYSIS.md](./query_optimization_analysis.md)
+>>>>>>> laraxot/dev
+=======
+- [ACTIVITY_LOG_OPTIMIZATION.md](./performance/activity_log_optimization.md)
+- [QUERY_OPTIMIZATION_ANALYSIS.md](./query_optimization_analysis.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [bottlenecks.md](./bottlenecks.md)
 
 This analysis provides a comprehensive roadmap for improving code quality in the Activity module while maintaining data integrity and performance.

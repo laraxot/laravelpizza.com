@@ -34,8 +34,16 @@ Models: 8 | Resources: 3 | Services: 2 | Actions: 17 | Docs: 83
 Resources refactoring (2 giorni)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 **Status:** 🟢 BUONO
 =======
+=======
+=======
+<<<<<<< HEAD
+**Status:** 🟢 BUONO
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 **Status:** 🟢 BUONO
 
 ---
@@ -68,4 +76,10 @@ abstract class BaseModel extends XotBaseModel
 
 ---
 [DRY/KISS Global](../../../docs/dry_kiss_analysis_2025-10-15.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

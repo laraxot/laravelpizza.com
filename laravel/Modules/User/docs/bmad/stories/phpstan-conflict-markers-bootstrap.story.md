@@ -85,3 +85,17 @@ Se Larastan fallisce con `MailtrapSdkProvider not found`, è cache
 Non sostituisce `committed-conflict-markers.story.md` (storico 2026-10, worktree
 già pulito). Aggiorna e punta da `git-merge-conflict-inventory.md` e
 `git-conflicts-resolution.md`.
+
+## Coordinamento — lane-user (2026-11-24)
+
+Scope chiuso: `app/**` production PHP, `database/migrations/*.php`, `lang/**`,
+`module.json` (già clean). Zero marker rimasti in quel perimetro.
+
+Scelte business: `AuthenticatedTenantKey` → `Infrastructure\Tenant` (Support
+deprecato); OAuth `connection = 'user'`; rotte Filament `create` prima di
+`/{record}`; label i18n esplicite su ChangePassword/AttachRole; migration
+`new class extends` (no `()`); lang = array completi (IT label reali, merge
+icone/nav dove presenti). Nessun `@phpstan-ignore`, nessun `phpstan.neon`.
+
+Fuori scope ancora conflittuali: `tests/` (~35), `docs/` (~301),
+`package.json` / `vite.config.js` / `tailwind.config.js`.

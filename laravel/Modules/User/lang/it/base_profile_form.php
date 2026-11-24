@@ -4,25 +4,6 @@ declare(strict_types=1);
 
 return [
     'fields' => [
-<<<<<<< HEAD
-        'user' => [
-            'name' => [
-                'label' => 'user.name',
-                'placeholder' => 'user.name',
-                'helper_text' => 'user.name',
-                'description' => 'user.name',
-            ],
-        ],
-=======
->>>>>>> laraxot/dev
-        'name' => [
-            'label' => 'Nome',
-            'placeholder' => 'name',
-            'helper_text' => 'name',
-            'description' => 'name',
-        ],
-<<<<<<< HEAD
-=======
         'user' => [
             'name' => [
                 'label' => 'Utente',
@@ -31,7 +12,12 @@ return [
                 'description' => 'user.name',
             ],
         ],
->>>>>>> laraxot/dev
+        'name' => [
+            'label' => 'Nome',
+            'placeholder' => 'name',
+            'helper_text' => 'name',
+            'description' => 'name',
+        ],
         'email' => [
             'label' => 'E-mail',
             'placeholder' => 'email',
@@ -49,18 +35,6 @@ return [
             'placeholder' => 'last_name',
             'helper_text' => 'last_name',
             'description' => 'last_name',
-        ],
-        'photo_profile' => [
-            'label' => 'Foto profilo',
-            'placeholder' => 'photo_profile',
-            'helper_text' => 'photo_profile',
-            'description' => 'photo_profile',
-        ],
-    ],
-    'sections' => [
-        'empty' => [
-            'label' => '',
-            'heading' => 'empty',
         ],
     ],
 ];

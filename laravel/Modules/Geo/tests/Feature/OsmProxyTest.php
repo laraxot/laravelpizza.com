@@ -58,6 +58,7 @@ it('serves a tile from our domain with a contactable User-Agent, the forwarded R
     Http::assertSent(fn (Request $request): bool => $request->url() === 'https://tile.openstreetmap.org/13/4350/2985.png'
         && $request->header('User-Agent')[0] === 'CivicApp/osm-proxy (+https://civic.example; ops@civic.example)'
         && $request->header('Referer')[0] === 'https://civic.example/it/tickets');
+<<<<<<< .merge_file_5rjOE4
 <<<<<<< HEAD
 });
 =======
@@ -67,6 +68,9 @@ it('serves a tile from our domain with a contactable User-Agent, the forwarded R
 })->group('GEO-TILE-INV-3');
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+})->group('GEO-TILE-INV-3');
+>>>>>>> .merge_file_Fzv2bh
 
 it('keeps a tile at least 7 days even when OSM says one hour, then revalidates it with a conditional request', function (): void {
     Http::fakeSequence('tile.openstreetmap.org/*')
@@ -85,6 +89,7 @@ it('keeps a tile at least 7 days even when OSM says one hour, then revalidates i
     expect($response->getContent())->toBe(osmPng());
     Http::assertSentCount(2);
     Http::assertSent(fn (Request $request): bool => $request->hasHeader('If-None-Match', '"v1"'));
+<<<<<<< .merge_file_5rjOE4
 <<<<<<< HEAD
 });
 =======
@@ -94,6 +99,9 @@ it('keeps a tile at least 7 days even when OSM says one hour, then revalidates i
 })->group('GEO-TILE-INV-1', 'GEO-TILE-INV-2', 'GEO-TILE-INV-4');
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+})->group('GEO-TILE-INV-1', 'GEO-TILE-INV-2', 'GEO-TILE-INV-4');
+>>>>>>> .merge_file_Fzv2bh
 
 it('serves the stale copy when OSM is down', function (): void {
     Http::fakeSequence('tile.openstreetmap.org/*')
@@ -106,6 +114,7 @@ it('serves the stale copy when OSM is down', function (): void {
     $response = $this->get('/api/geo/tiles/osm/3/1/1.png');
     $response->assertOk();
     expect($response->getContent())->toBe(osmPng());
+<<<<<<< .merge_file_5rjOE4
 <<<<<<< HEAD
 });
 =======
@@ -115,6 +124,9 @@ it('serves the stale copy when OSM is down', function (): void {
 })->group('GEO-TILE-INV-5');
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+})->group('GEO-TILE-INV-5');
+>>>>>>> .merge_file_Fzv2bh
 
 it('answers 404 outside the tile grid without asking OSM', function (string $path): void {
     Http::fake();
@@ -141,6 +153,7 @@ it('proxies an address search in json, in the page language, and caches it', fun
         && ! isset($request['polygon_geojson'])
         && is_string($userAgent = $request->header('User-Agent')[0] ?? null)
         && str_starts_with($userAgent, 'CivicApp/osm-proxy'));
+<<<<<<< .merge_file_5rjOE4
 <<<<<<< HEAD
 });
 =======
@@ -150,6 +163,9 @@ it('proxies an address search in json, in the page language, and caches it', fun
 })->group('GEO-NOMINATIM-INV-2', 'GEO-NOMINATIM-INV-3', 'GEO-NOMINATIM-INV-4', 'GEO-NOMINATIM-INV-6');
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+})->group('GEO-NOMINATIM-INV-2', 'GEO-NOMINATIM-INV-3', 'GEO-NOMINATIM-INV-4', 'GEO-NOMINATIM-INV-6');
+>>>>>>> .merge_file_Fzv2bh
 
 it('rejects invalid geocoding requests without calling Nominatim', function (string $path, int $status): void {
     Http::fake();
@@ -160,6 +176,7 @@ it('rejects invalid geocoding requests without calling Nominatim', function (str
     'query too short' => ['/api/geo/nominatim/search?q=ab', 422],
     'latitude out of range' => ['/api/geo/nominatim/reverse?lat=95&lon=11', 422],
     'unknown endpoint' => ['/api/geo/nominatim/lookup?osm_ids=R1', 404],
+<<<<<<< .merge_file_5rjOE4
 <<<<<<< HEAD
 ]);
 =======
@@ -169,6 +186,9 @@ it('rejects invalid geocoding requests without calling Nominatim', function (str
 ])->group('GEO-NOMINATIM-INV-5');
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+])->group('GEO-NOMINATIM-INV-5');
+>>>>>>> .merge_file_Fzv2bh
 
 it('can be switched off without a software update, as the Nominatim policy requires', function (): void {
     config(['geo.config.osm_proxy.nominatim.enabled' => false]);
@@ -176,6 +196,7 @@ it('can be switched off without a software update, as the Nominatim policy requi
 
     $this->getJson('/api/geo/nominatim/reverse?lat=43.7&lon=11.2')->assertStatus(503);
     Http::assertNothingSent();
+<<<<<<< .merge_file_5rjOE4
 <<<<<<< HEAD
 });
 =======
@@ -185,6 +206,9 @@ it('can be switched off without a software update, as the Nominatim policy requi
 })->group('GEO-NOMINATIM-INV-7');
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+})->group('GEO-NOMINATIM-INV-7');
+>>>>>>> .merge_file_Fzv2bh
 
 it('never sends Nominatim more than one request per second for the whole site', function (): void {
     Http::fake(['nominatim.openstreetmap.org/*' => Http::response([])]);
@@ -195,6 +219,7 @@ it('never sends Nominatim more than one request per second for the whole site', 
 
     Http::assertSentCount(1);
     Sleep::assertSlept(fn (CarbonInterval $duration): bool => $duration->totalSeconds === 1.0, 1);
+<<<<<<< .merge_file_5rjOE4
 <<<<<<< HEAD
 });
 =======
@@ -204,3 +229,6 @@ it('never sends Nominatim more than one request per second for the whole site', 
 })->group('GEO-NOMINATIM-INV-1');
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+})->group('GEO-NOMINATIM-INV-1');
+>>>>>>> .merge_file_Fzv2bh

@@ -88,8 +88,9 @@ return [
         'plural_label' => 'Navigations',
         'group' => 'System',
         'icon' => 'heroicon-o-puzzle-piece',
-        'sort' => 100,
+        'sort' => '100',
     ],
     'label' => 'Navigation',
     'plural_label' => 'Navigations',
+    'select_language' => 'change language',
 ];

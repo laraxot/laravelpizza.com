@@ -1,0 +1,1153 @@
+Note: Using configuration file /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/phpstan.neon.
+
+ Laravel framework bootstrap failed                                             
+
+PHPStan was unable to bootstrap your application because Laravel failed to start.
+
+Larastan launches your Laravel application during analysis to provide smarter results.
+The framework reported an error while starting, so the analysis could not continue.
+
+Tip: Try the following:
+ - Check your environment variables in the .env file
+ - Check the Laravel logs in storage/logs/laravel.log for more details
+ - Run composer dump-autoload to ensure classes are indexed
+ - Verify service provider registration and configuration
+ - Verify the application boots by running php artisan about
+
+Error: Error processing file: /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/module.json. Error: Syntax error
+
+Stack trace:
+#0 vendor/nwidart/laravel-modules/src/Json.php(124): Nwidart/Modules/Json->decodeContents()
+#1 vendor/nwidart/laravel-modules/src/Json.php(38): Nwidart/Modules/Json->getAttributes()
+#2 vendor/nwidart/laravel-modules/src/Json.php(84): Nwidart/Modules/Json->__construct()
+#3 vendor/nwidart/laravel-modules/src/FileRepository.php(212): Nwidart/Modules/Json::make()
+#4 vendor/nwidart/laravel-modules/src/ModuleManifest.php(179): Nwidart/Modules/FileRepository->getModuleJsonFiles()
+#5 vendor/nwidart/laravel-modules/src/ModuleManifest.php(108): Nwidart/Modules/ModuleManifest->getModulesData()
+#6 vendor/nwidart/laravel-modules/src/ModuleManifest.php(124): Nwidart/Modules/ModuleManifest->getAliases()
+#7 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(38): Nwidart/Modules/ModuleManifest->registerAliases()
+#8 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#9 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#10 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#16 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#17 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#33 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#34 vendor/phpstan/phpstan/phpstan(8): require('...')
+#35 vendor/bin/phpstan(119): include('...')
+#36 {main}
+
+
+ Laravel framework bootstrap failed                                             
+
+PHPStan was unable to bootstrap your application because Laravel failed to start.
+
+Larastan launches your Laravel application during analysis to provide smarter results.
+The framework reported an error while starting, so the analysis could not continue.
+
+Tip: Try the following:
+ - Check your environment variables in the .env file
+ - Check the Laravel logs in storage/logs/laravel.log for more details
+ - Run composer dump-autoload to ensure classes are indexed
+ - Verify service provider registration and configuration
+ - Verify the application boots by running php artisan about
+
+Error: Error processing file: /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/module.json. Error: Syntax error
+
+Stack trace:
+#0 vendor/nwidart/laravel-modules/src/Json.php(124): Nwidart/Modules/Json->decodeContents()
+#1 vendor/nwidart/laravel-modules/src/Json.php(38): Nwidart/Modules/Json->getAttributes()
+#2 vendor/nwidart/laravel-modules/src/Json.php(84): Nwidart/Modules/Json->__construct()
+#3 vendor/nwidart/laravel-modules/src/FileRepository.php(212): Nwidart/Modules/Json::make()
+#4 vendor/nwidart/laravel-modules/src/ModuleManifest.php(179): Nwidart/Modules/FileRepository->getModuleJsonFiles()
+#5 vendor/nwidart/laravel-modules/src/ModuleManifest.php(108): Nwidart/Modules/ModuleManifest->getModulesData()
+#6 vendor/nwidart/laravel-modules/src/ModuleManifest.php(124): Nwidart/Modules/ModuleManifest->getAliases()
+#7 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(38): Nwidart/Modules/ModuleManifest->registerAliases()
+#8 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#9 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#10 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#16 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#17 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#33 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#34 vendor/phpstan/phpstan/phpstan(8): require('...')
+#35 vendor/bin/phpstan(119): include('...')
+#36 {main}
+ Laravel framework bootstrap failed                                             
+
+PHPStan was unable to bootstrap your application because Laravel failed to start.
+
+Larastan launches your Laravel application during analysis to provide smarter results.
+The framework reported an error while starting, so the analysis could not continue.
+
+Tip: Try the following:
+ - Check your environment variables in the .env file
+ - Check the Laravel logs in storage/logs/laravel.log for more details
+ - Run composer dump-autoload to ensure classes are indexed
+ - Verify service provider registration and configuration
+ - Verify the application boots by running php artisan about
+
+Error: Error processing file: /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/module.json. Error: Syntax error
+
+Stack trace:
+
+#0 vendor/nwidart/laravel-modules/src/Json.php(124): Nwidart/Modules/Json->decodeContents()
+#1 vendor/nwidart/laravel-modules/src/Json.php(38): Nwidart/Modules/Json->getAttributes()
+#2 vendor/nwidart/laravel-modules/src/Json.php(84): Nwidart/Modules/Json->__construct()
+#3 vendor/nwidart/laravel-modules/src/FileRepository.php(212): Nwidart/Modules/Json::make()
+#4 vendor/nwidart/laravel-modules/src/ModuleManifest.php(179): Nwidart/Modules/FileRepository->getModuleJsonFiles()
+#5 vendor/nwidart/laravel-modules/src/ModuleManifest.php(108): Nwidart/Modules/ModuleManifest->getModulesData()
+#6 vendor/nwidart/laravel-modules/src/ModuleManifest.php(124): Nwidart/Modules/ModuleManifest->getAliases()
+#7 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(38): Nwidart/Modules/ModuleManifest->registerAliases()
+#8 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#9 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#10 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#16 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#17 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+ Laravel framework bootstrap failed                                             
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#33 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#34 vendor/phpstan/phpstan/phpstan(8): require('...')
+#35 vendor/bin/phpstan(119): include('...')
+#36 {main}
+
+PHPStan was unable to bootstrap your application because Laravel failed to start.
+
+Larastan launches your Laravel application during analysis to provide smarter results.
+The framework reported an error while starting, so the analysis could not continue.
+
+Tip: Try the following:
+ - Check your environment variables in the .env file
+ - Check the Laravel logs in storage/logs/laravel.log for more details
+ - Run composer dump-autoload to ensure classes are indexed
+ - Verify service provider registration and configuration
+ - Verify the application boots by running php artisan about
+
+Error: Error processing file: /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/module.json. Error: Syntax error
+
+Stack trace:
+#0 vendor/nwidart/laravel-modules/src/Json.php(124): Nwidart/Modules/Json->decodeContents()
+#1 vendor/nwidart/laravel-modules/src/Json.php(38): Nwidart/Modules/Json->getAttributes()
+#2 vendor/nwidart/laravel-modules/src/Json.php(84): Nwidart/Modules/Json->__construct()
+#3 vendor/nwidart/laravel-modules/src/FileRepository.php(212): Nwidart/Modules/Json::make()
+#4 vendor/nwidart/laravel-modules/src/ModuleManifest.php(179): Nwidart/Modules/FileRepository->getModuleJsonFiles()
+#5 vendor/nwidart/laravel-modules/src/ModuleManifest.php(108): Nwidart/Modules/ModuleManifest->getModulesData()
+#6 vendor/nwidart/laravel-modules/src/ModuleManifest.php(124): Nwidart/Modules/ModuleManifest->getAliases()
+#7 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(38): Nwidart/Modules/ModuleManifest->registerAliases()
+#8 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#9 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#10 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#16 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#17 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#33 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#34 vendor/phpstan/phpstan/phpstan(8): require('...')
+#35 vendor/bin/phpstan(119): include('...')
+#36 {main}
+
+ Laravel framework bootstrap failed                                             
+
+PHPStan was unable to bootstrap your application because Laravel failed to start.
+
+Larastan launches your Laravel application during analysis to provide smarter results.
+The framework reported an error while starting, so the analysis could not continue.
+
+Tip: Try the following:
+ - Check your environment variables in the .env file
+ - Check the Laravel logs in storage/logs/laravel.log for more details
+ - Run composer dump-autoload to ensure classes are indexed
+ - Verify service provider registration and configuration
+ - Verify the application boots by running php artisan about
+
+Error: Error processing file: /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/module.json. Error: Syntax error
+
+Stack trace:
+#0 vendor/nwidart/laravel-modules/src/Json.php(124): Nwidart/Modules/Json->decodeContents()
+#1 vendor/nwidart/laravel-modules/src/Json.php(38): Nwidart/Modules/Json->getAttributes()
+#2 vendor/nwidart/laravel-modules/src/Json.php(84): Nwidart/Modules/Json->__construct()
+#3 vendor/nwidart/laravel-modules/src/FileRepository.php(212): Nwidart/Modules/Json::make()
+#4 vendor/nwidart/laravel-modules/src/ModuleManifest.php(179): Nwidart/Modules/FileRepository->getModuleJsonFiles()
+#5 vendor/nwidart/laravel-modules/src/ModuleManifest.php(108): Nwidart/Modules/ModuleManifest->getModulesData()
+#6 vendor/nwidart/laravel-modules/src/ModuleManifest.php(124): Nwidart/Modules/ModuleManifest->getAliases()
+#7 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(38): Nwidart/Modules/ModuleManifest->registerAliases()
+#8 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#9 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#10 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#16 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#17 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#33 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#34 vendor/phpstan/phpstan/phpstan(8): require('...')
+#35 vendor/bin/phpstan(119): include('...')
+#36 {main}
+
+ Laravel framework bootstrap failed                                             
+
+PHPStan was unable to bootstrap your application because Laravel failed to start.
+
+Larastan launches your Laravel application during analysis to provide smarter results.
+The framework reported an error while starting, so the analysis could not continue.
+
+Tip: Try the following:
+ - Check your environment variables in the .env file
+ - Check the Laravel logs in storage/logs/laravel.log for more details
+ - Run composer dump-autoload to ensure classes are indexed
+ - Verify service provider registration and configuration
+ - Verify the application boots by running php artisan about
+
+Error: Error processing file: /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/module.json. Error: Syntax error
+
+Stack trace:
+#0 vendor/nwidart/laravel-modules/src/Json.php(124): Nwidart/Modules/Json->decodeContents()
+#1 vendor/nwidart/laravel-modules/src/Json.php(38): Nwidart/Modules/Json->getAttributes()
+#2 vendor/nwidart/laravel-modules/src/Json.php(84): Nwidart/Modules/Json->__construct()
+#3 vendor/nwidart/laravel-modules/src/FileRepository.php(212): Nwidart/Modules/Json::make()
+#4 vendor/nwidart/laravel-modules/src/ModuleManifest.php(179): Nwidart/Modules/FileRepository->getModuleJsonFiles()
+#5 vendor/nwidart/laravel-modules/src/ModuleManifest.php(108): Nwidart/Modules/ModuleManifest->getModulesData()
+#6 vendor/nwidart/laravel-modules/src/ModuleManifest.php(124): Nwidart/Modules/ModuleManifest->getAliases()
+#7 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(38): Nwidart/Modules/ModuleManifest->registerAliases()
+#8 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#9 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#10 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#16 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#17 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+
+ Laravel framework bootstrap failed                                             
+
+PHPStan was unable to bootstrap your application because Laravel failed to start.
+
+Larastan launches your Laravel application during analysis to provide smarter results.
+The framework reported an error while starting, so the analysis could not continue.
+
+Tip: Try the following:
+ - Check your environment variables in the .env file
+ - Check the Laravel logs in storage/logs/laravel.log for more details
+ - Run composer dump-autoload to ensure classes are indexed
+ - Verify service provider registration and configuration
+ - Verify the application boots by running php artisan about
+
+Error: Error processing file: /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/module.json. Error: Syntax error
+
+Stack trace:
+#0 vendor/nwidart/laravel-modules/src/Json.php(124): Nwidart/Modules/Json->decodeContents()
+#1 vendor/nwidart/laravel-modules/src/Json.php(38): Nwidart/Modules/Json->getAttributes()
+#2 vendor/nwidart/laravel-modules/src/Json.php(84): Nwidart/Modules/Json->__construct()
+#3 vendor/nwidart/laravel-modules/src/FileRepository.php(212): Nwidart/Modules/Json::make()
+#4 vendor/nwidart/laravel-modules/src/ModuleManifest.php(179): Nwidart/Modules/FileRepository->getModuleJsonFiles()
+#5 vendor/nwidart/laravel-modules/src/ModuleManifest.php(108): Nwidart/Modules/ModuleManifest->getModulesData()
+#6 vendor/nwidart/laravel-modules/src/ModuleManifest.php(124): Nwidart/Modules/ModuleManifest->getAliases()
+#7 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(38): Nwidart/Modules/ModuleManifest->registerAliases()
+#8 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#9 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#10 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#16 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#17 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#33 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#34 vendor/phpstan/phpstan/phpstan(8): require('...')
+#35 vendor/bin/phpstan(119): include('...')
+#36 {main}
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#33 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#34 vendor/phpstan/phpstan/phpstan(8): require('...')
+#35 vendor/bin/phpstan(119): include('...')
+#36 {main}
+
+ Laravel framework bootstrap failed                                             
+
+PHPStan was unable to bootstrap your application because Laravel failed to start.
+
+Larastan launches your Laravel application during analysis to provide smarter results.
+The framework reported an error while starting, so the analysis could not continue.
+
+Tip: Try the following:
+ - Check your environment variables in the .env file
+ - Check the Laravel logs in storage/logs/laravel.log for more details
+ - Run composer dump-autoload to ensure classes are indexed
+ - Verify service provider registration and configuration
+ - Verify the application boots by running php artisan about
+
+Error: Error processing file: /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/module.json. Error: Syntax error
+
+Stack trace:
+#0 vendor/nwidart/laravel-modules/src/Json.php(124): Nwidart/Modules/Json->decodeContents()
+#1 vendor/nwidart/laravel-modules/src/Json.php(38): Nwidart/Modules/Json->getAttributes()
+#2 vendor/nwidart/laravel-modules/src/Json.php(84): Nwidart/Modules/Json->__construct()
+#3 vendor/nwidart/laravel-modules/src/FileRepository.php(212): Nwidart/Modules/Json::make()
+#4 vendor/nwidart/laravel-modules/src/ModuleManifest.php(179): Nwidart/Modules/FileRepository->getModuleJsonFiles()
+#5 vendor/nwidart/laravel-modules/src/ModuleManifest.php(108): Nwidart/Modules/ModuleManifest->getModulesData()
+#6 vendor/nwidart/laravel-modules/src/ModuleManifest.php(124): Nwidart/Modules/ModuleManifest->getAliases()
+#7 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(38): Nwidart/Modules/ModuleManifest->registerAliases()
+#8 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#9 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#10 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#16 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#17 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#33 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#34 vendor/phpstan/phpstan/phpstan(8): require('...')
+#35 vendor/bin/phpstan(119): include('...')
+#36 {main}
+
+ Laravel framework bootstrap failed                                             
+
+PHPStan was unable to bootstrap your application because Laravel failed to start.
+
+Larastan launches your Laravel application during analysis to provide smarter results.
+The framework reported an error while starting, so the analysis could not continue.
+
+Tip: Try the following:
+ - Check your environment variables in the .env file
+ - Check the Laravel logs in storage/logs/laravel.log for more details
+ - Run composer dump-autoload to ensure classes are indexed
+ - Verify service provider registration and configuration
+ - Verify the application boots by running php artisan about
+
+Error: Error processing file: /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/module.json. Error: Syntax error
+
+Stack trace:
+#0 vendor/nwidart/laravel-modules/src/Json.php(124): Nwidart/Modules/Json->decodeContents()
+#1 vendor/nwidart/laravel-modules/src/Json.php(38): Nwidart/Modules/Json->getAttributes()
+#2 vendor/nwidart/laravel-modules/src/Json.php(84): Nwidart/Modules/Json->__construct()
+#3 vendor/nwidart/laravel-modules/src/FileRepository.php(212): Nwidart/Modules/Json::make()
+#4 vendor/nwidart/laravel-modules/src/ModuleManifest.php(179): Nwidart/Modules/FileRepository->getModuleJsonFiles()
+#5 vendor/nwidart/laravel-modules/src/ModuleManifest.php(108): Nwidart/Modules/ModuleManifest->getModulesData()
+#6 vendor/nwidart/laravel-modules/src/ModuleManifest.php(124): Nwidart/Modules/ModuleManifest->getAliases()
+#7 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(38): Nwidart/Modules/ModuleManifest->registerAliases()
+#8 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#9 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#10 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#16 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#17 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#33 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#34 vendor/phpstan/phpstan/phpstan(8): require('...')
+#35 vendor/bin/phpstan(119): include('...')
+#36 {main}
+
+ Laravel framework bootstrap failed                                             
+
+PHPStan was unable to bootstrap your application because Laravel failed to start.
+
+Larastan launches your Laravel application during analysis to provide smarter results.
+The framework reported an error while starting, so the analysis could not continue.
+
+Tip: Try the following:
+ - Check your environment variables in the .env file
+ - Check the Laravel logs in storage/logs/laravel.log for more details
+ - Run composer dump-autoload to ensure classes are indexed
+ - Verify service provider registration and configuration
+ - Verify the application boots by running php artisan about
+
+Error: Error processing file: /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/module.json. Error: Syntax error
+
+Stack trace:
+#0 vendor/nwidart/laravel-modules/src/Json.php(124): Nwidart/Modules/Json->decodeContents()
+#1 vendor/nwidart/laravel-modules/src/Json.php(38): Nwidart/Modules/Json->getAttributes()
+#2 vendor/nwidart/laravel-modules/src/Json.php(84): Nwidart/Modules/Json->__construct()
+#3 vendor/nwidart/laravel-modules/src/FileRepository.php(212): Nwidart/Modules/Json::make()
+#4 vendor/nwidart/laravel-modules/src/ModuleManifest.php(179): Nwidart/Modules/FileRepository->getModuleJsonFiles()
+#5 vendor/nwidart/laravel-modules/src/ModuleManifest.php(108): Nwidart/Modules/ModuleManifest->getModulesData()
+#6 vendor/nwidart/laravel-modules/src/ModuleManifest.php(124): Nwidart/Modules/ModuleManifest->getAliases()
+#7 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(38): Nwidart/Modules/ModuleManifest->registerAliases()
+#8 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#9 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#10 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#16 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#17 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#33 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#34 vendor/phpstan/phpstan/phpstan(8): require('...')
+#35 vendor/bin/phpstan(119): include('...')
+#36 {main}
+
+ Laravel framework bootstrap failed                                             
+
+PHPStan was unable to bootstrap your application because Laravel failed to start.
+
+Larastan launches your Laravel application during analysis to provide smarter results.
+The framework reported an error while starting, so the analysis could not continue.
+
+Tip: Try the following:
+ - Check your environment variables in the .env file
+ - Check the Laravel logs in storage/logs/laravel.log for more details
+ - Run composer dump-autoload to ensure classes are indexed
+ - Verify service provider registration and configuration
+ - Verify the application boots by running php artisan about
+
+Error: Error processing file: /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/module.json. Error: Syntax error
+
+Stack trace:
+#0 vendor/nwidart/laravel-modules/src/Json.php(124): Nwidart/Modules/Json->decodeContents()
+#1 vendor/nwidart/laravel-modules/src/Json.php(38): Nwidart/Modules/Json->getAttributes()
+#2 vendor/nwidart/laravel-modules/src/Json.php(84): Nwidart/Modules/Json->__construct()
+#3 vendor/nwidart/laravel-modules/src/FileRepository.php(212): Nwidart/Modules/Json::make()
+#4 vendor/nwidart/laravel-modules/src/ModuleManifest.php(179): Nwidart/Modules/FileRepository->getModuleJsonFiles()
+#5 vendor/nwidart/laravel-modules/src/ModuleManifest.php(108): Nwidart/Modules/ModuleManifest->getModulesData()
+#6 vendor/nwidart/laravel-modules/src/ModuleManifest.php(124): Nwidart/Modules/ModuleManifest->getAliases()
+#7 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(38): Nwidart/Modules/ModuleManifest->registerAliases()
+#8 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#9 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#10 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#16 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#17 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#33 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#34 vendor/phpstan/phpstan/phpstan(8): require('...')
+#35 vendor/bin/phpstan(119): include('...')
+#36 {main}
+
+ Laravel framework bootstrap failed                                             
+
+PHPStan was unable to bootstrap your application because Laravel failed to start.
+
+Larastan launches your Laravel application during analysis to provide smarter results.
+The framework reported an error while starting, so the analysis could not continue.
+
+
+Tip: Try the following:
+ - Check your environment variables in the .env file
+ - Check the Laravel logs in storage/logs/laravel.log for more details
+ - Run composer dump-autoload to ensure classes are indexed
+ - Verify service provider registration and configuration
+ - Verify the application boots by running php artisan about
+
+Error: Error processing file: /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/module.json. Error: Syntax error
+
+Stack trace:
+#0 vendor/nwidart/laravel-modules/src/Json.php(124): Nwidart/Modules/Json->decodeContents()
+#1 vendor/nwidart/laravel-modules/src/Json.php(38): Nwidart/Modules/Json->getAttributes()
+#2 vendor/nwidart/laravel-modules/src/Json.php(84): Nwidart/Modules/Json->__construct()
+#3 vendor/nwidart/laravel-modules/src/FileRepository.php(212): Nwidart/Modules/Json::make()
+#4 vendor/nwidart/laravel-modules/src/ModuleManifest.php(179): Nwidart/Modules/FileRepository->getModuleJsonFiles()
+#5 vendor/nwidart/laravel-modules/src/ModuleManifest.php(108): Nwidart/Modules/ModuleManifest->getModulesData()
+#6 vendor/nwidart/laravel-modules/src/ModuleManifest.php(124): Nwidart/Modules/ModuleManifest->getAliases()
+#7 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(38): Nwidart/Modules/ModuleManifest->registerAliases()
+#8 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#9 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#10 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#16 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#17 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+ Laravel framework bootstrap failed                                             
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#33 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#34 vendor/phpstan/phpstan/phpstan(8): require('...')
+#35 vendor/bin/phpstan(119): include('...')
+#36 {main}
+ Laravel framework bootstrap failed                                             
+
+PHPStan was unable to bootstrap your application because Laravel failed to start.
+
+Larastan launches your Laravel application during analysis to provide smarter results.
+The framework reported an error while starting, so the analysis could not continue.
+
+Tip: Try the following:
+ - Check your environment variables in the .env file
+ - Check the Laravel logs in storage/logs/laravel.log for more details
+ - Run composer dump-autoload to ensure classes are indexed
+ - Verify service provider registration and configuration
+ - Verify the application boots by running php artisan about
+
+Error: Error processing file: /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/module.json. Error: Syntax error
+
+Stack trace:
+#0 vendor/nwidart/laravel-modules/src/Json.php(124): Nwidart/Modules/Json->decodeContents()
+#1 vendor/nwidart/laravel-modules/src/Json.php(38): Nwidart/Modules/Json->getAttributes()
+#2 vendor/nwidart/laravel-modules/src/Json.php(84): Nwidart/Modules/Json->__construct()
+#3 vendor/nwidart/laravel-modules/src/FileRepository.php(212): Nwidart/Modules/Json::make()
+#4 vendor/nwidart/laravel-modules/src/ModuleManifest.php(179): Nwidart/Modules/FileRepository->getModuleJsonFiles()
+#5 vendor/nwidart/laravel-modules/src/ModuleManifest.php(108): Nwidart/Modules/ModuleManifest->getModulesData()
+#6 vendor/nwidart/laravel-modules/src/ModuleManifest.php(124): Nwidart/Modules/ModuleManifest->getAliases()
+#7 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(38): Nwidart/Modules/ModuleManifest->registerAliases()
+#8 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#9 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#10 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#16 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#17 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#33 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#34 vendor/phpstan/phpstan/phpstan(8): require('...')
+#35 vendor/bin/phpstan(119): include('...')
+#36 {main}
+
+PHPStan was unable to bootstrap your application because Laravel failed to start.
+
+Larastan launches your Laravel application during analysis to provide smarter results.
+The framework reported an error while starting, so the analysis could not continue.
+
+Tip: Try the following:
+ - Check your environment variables in the .env file
+ - Check the Laravel logs in storage/logs/laravel.log for more details
+ - Run composer dump-autoload to ensure classes are indexed
+ - Verify service provider registration and configuration
+ - Verify the application boots by running php artisan about
+
+Error: Error processing file: /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/module.json. Error: Syntax error
+
+Stack trace:
+#0 vendor/nwidart/laravel-modules/src/Json.php(124): Nwidart/Modules/Json->decodeContents()
+#1 vendor/nwidart/laravel-modules/src/Json.php(38): Nwidart/Modules/Json->getAttributes()
+#2 vendor/nwidart/laravel-modules/src/Json.php(84): Nwidart/Modules/Json->__construct()
+#3 vendor/nwidart/laravel-modules/src/FileRepository.php(212): Nwidart/Modules/Json::make()
+#4 vendor/nwidart/laravel-modules/src/ModuleManifest.php(179): Nwidart/Modules/FileRepository->getModuleJsonFiles()
+#5 vendor/nwidart/laravel-modules/src/ModuleManifest.php(108): Nwidart/Modules/ModuleManifest->getModulesData()
+#6 vendor/nwidart/laravel-modules/src/ModuleManifest.php(124): Nwidart/Modules/ModuleManifest->getAliases()
+#7 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(38): Nwidart/Modules/ModuleManifest->registerAliases()
+#8 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#9 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#10 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#16 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#17 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#33 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#34 vendor/phpstan/phpstan/phpstan(8): require('...')
+#35 vendor/bin/phpstan(119): include('...')
+#36 {main}
+
+ Laravel framework bootstrap failed                                             
+
+PHPStan was unable to bootstrap your application because Laravel failed to start.
+
+Larastan launches your Laravel application during analysis to provide smarter results.
+The framework reported an error while starting, so the analysis could not continue.
+
+Tip: Try the following:
+ - Check your environment variables in the .env file
+ - Check the Laravel logs in storage/logs/laravel.log for more details
+ - Run composer dump-autoload to ensure classes are indexed
+ - Verify service provider registration and configuration
+ - Verify the application boots by running php artisan about
+
+Error: Error processing file: /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/module.json. Error: Syntax error
+
+Stack trace:
+#0 vendor/nwidart/laravel-modules/src/Json.php(124): Nwidart/Modules/Json->decodeContents()
+#1 vendor/nwidart/laravel-modules/src/Json.php(38): Nwidart/Modules/Json->getAttributes()
+#2 vendor/nwidart/laravel-modules/src/Json.php(84): Nwidart/Modules/Json->__construct()
+#3 vendor/nwidart/laravel-modules/src/FileRepository.php(212): Nwidart/Modules/Json::make()
+#4 vendor/nwidart/laravel-modules/src/ModuleManifest.php(179): Nwidart/Modules/FileRepository->getModuleJsonFiles()
+#5 vendor/nwidart/laravel-modules/src/ModuleManifest.php(108): Nwidart/Modules/ModuleManifest->getModulesData()
+#6 vendor/nwidart/laravel-modules/src/ModuleManifest.php(124): Nwidart/Modules/ModuleManifest->getAliases()
+#7 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(38): Nwidart/Modules/ModuleManifest->registerAliases()
+#8 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#9 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#10 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#16 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#17 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#33 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#34 vendor/phpstan/phpstan/phpstan(8): require('...')
+#35 vendor/bin/phpstan(119): include('...')
+#36 {main}
+
+ Laravel framework bootstrap failed                                             
+
+PHPStan was unable to bootstrap your application because Laravel failed to start.
+
+Larastan launches your Laravel application during analysis to provide smarter results.
+The framework reported an error while starting, so the analysis could not continue.
+
+Tip: Try the following:
+ - Check your environment variables in the .env file
+ - Check the Laravel logs in storage/logs/laravel.log for more details
+ - Run composer dump-autoload to ensure classes are indexed
+ - Verify service provider registration and configuration
+ - Verify the application boots by running php artisan about
+
+Error: Error processing file: /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/module.json. Error: Syntax error
+
+Stack trace:
+#0 vendor/nwidart/laravel-modules/src/Json.php(124): Nwidart/Modules/Json->decodeContents()
+#1 vendor/nwidart/laravel-modules/src/Json.php(38): Nwidart/Modules/Json->getAttributes()
+#2 vendor/nwidart/laravel-modules/src/Json.php(84): Nwidart/Modules/Json->__construct()
+#3 vendor/nwidart/laravel-modules/src/FileRepository.php(212): Nwidart/Modules/Json::make()
+#4 vendor/nwidart/laravel-modules/src/ModuleManifest.php(179): Nwidart/Modules/FileRepository->getModuleJsonFiles()
+#5 vendor/nwidart/laravel-modules/src/ModuleManifest.php(108): Nwidart/Modules/ModuleManifest->getModulesData()
+#6 vendor/nwidart/laravel-modules/src/ModuleManifest.php(124): Nwidart/Modules/ModuleManifest->getAliases()
+#7 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(38): Nwidart/Modules/ModuleManifest->registerAliases()
+#8 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#9 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#10 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#16 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#17 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#33 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#34 vendor/phpstan/phpstan/phpstan(8): require('...')
+#35 vendor/bin/phpstan(119): include('...')
+#36 {main}
+
+ Laravel framework bootstrap failed                                             
+
+PHPStan was unable to bootstrap your application because Laravel failed to start.
+
+Larastan launches your Laravel application during analysis to provide smarter results.
+The framework reported an error while starting, so the analysis could not continue.
+
+Tip: Try the following:
+ - Check your environment variables in the .env file
+ - Check the Laravel logs in storage/logs/laravel.log for more details
+ - Run composer dump-autoload to ensure classes are indexed
+ - Verify service provider registration and configuration
+ - Verify the application boots by running php artisan about
+
+Error: Error processing file: /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/module.json. Error: Syntax error
+
+Stack trace:
+#0 vendor/nwidart/laravel-modules/src/Json.php(124): Nwidart/Modules/Json->decodeContents()
+#1 vendor/nwidart/laravel-modules/src/Json.php(38): Nwidart/Modules/Json->getAttributes()
+#2 vendor/nwidart/laravel-modules/src/Json.php(84): Nwidart/Modules/Json->__construct()
+#3 vendor/nwidart/laravel-modules/src/FileRepository.php(212): Nwidart/Modules/Json::make()
+#4 vendor/nwidart/laravel-modules/src/ModuleManifest.php(179): Nwidart/Modules/FileRepository->getModuleJsonFiles()
+#5 vendor/nwidart/laravel-modules/src/ModuleManifest.php(108): Nwidart/Modules/ModuleManifest->getModulesData()
+#6 vendor/nwidart/laravel-modules/src/ModuleManifest.php(124): Nwidart/Modules/ModuleManifest->getAliases()
+#7 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(38): Nwidart/Modules/ModuleManifest->registerAliases()
+#8 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#9 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#10 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#16 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#17 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#33 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#34 vendor/phpstan/phpstan/phpstan(8): require('...')
+#35 vendor/bin/phpstan(119): include('...')
+#36 {main}
+
+ Laravel framework bootstrap failed                                             
+
+PHPStan was unable to bootstrap your application because Laravel failed to start.
+
+Larastan launches your Laravel application during analysis to provide smarter results.
+The framework reported an error while starting, so the analysis could not continue.
+
+Tip: Try the following:
+ - Check your environment variables in the .env file
+ - Check the Laravel logs in storage/logs/laravel.log for more details
+ - Run composer dump-autoload to ensure classes are indexed
+ - Verify service provider registration and configuration
+ - Verify the application boots by running php artisan about
+
+Error: Error processing file: /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/module.json. Error: Syntax error
+
+Stack trace:
+#0 vendor/nwidart/laravel-modules/src/Json.php(124): Nwidart/Modules/Json->decodeContents()
+#1 vendor/nwidart/laravel-modules/src/Json.php(38): Nwidart/Modules/Json->getAttributes()
+#2 vendor/nwidart/laravel-modules/src/Json.php(84): Nwidart/Modules/Json->__construct()
+#3 vendor/nwidart/laravel-modules/src/FileRepository.php(212): Nwidart/Modules/Json::make()
+#4 vendor/nwidart/laravel-modules/src/ModuleManifest.php(179): Nwidart/Modules/FileRepository->getModuleJsonFiles()
+#5 vendor/nwidart/laravel-modules/src/ModuleManifest.php(108): Nwidart/Modules/ModuleManifest->getModulesData()
+#6 vendor/nwidart/laravel-modules/src/ModuleManifest.php(124): Nwidart/Modules/ModuleManifest->getAliases()
+#7 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(38): Nwidart/Modules/ModuleManifest->registerAliases()
+#8 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#9 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#10 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#16 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#17 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#33 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#34 vendor/phpstan/phpstan/phpstan(8): require('...')
+#35 vendor/bin/phpstan(119): include('...')
+#36 {main}
+
+ Laravel framework bootstrap failed                                             
+
+PHPStan was unable to bootstrap your application because Laravel failed to start.
+
+Larastan launches your Laravel application during analysis to provide smarter results.
+The framework reported an error while starting, so the analysis could not continue.
+
+Tip: Try the following:
+ - Check your environment variables in the .env file
+ - Check the Laravel logs in storage/logs/laravel.log for more details
+ - Run composer dump-autoload to ensure classes are indexed
+ - Verify service provider registration and configuration
+ - Verify the application boots by running php artisan about
+
+Error: Error processing file: /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/module.json. Error: Syntax error
+
+Stack trace:
+#0 vendor/nwidart/laravel-modules/src/Json.php(124): Nwidart/Modules/Json->decodeContents()
+#1 vendor/nwidart/laravel-modules/src/Json.php(38): Nwidart/Modules/Json->getAttributes()
+#2 vendor/nwidart/laravel-modules/src/Json.php(84): Nwidart/Modules/Json->__construct()
+#3 vendor/nwidart/laravel-modules/src/FileRepository.php(212): Nwidart/Modules/Json::make()
+#4 vendor/nwidart/laravel-modules/src/ModuleManifest.php(179): Nwidart/Modules/FileRepository->getModuleJsonFiles()
+#5 vendor/nwidart/laravel-modules/src/ModuleManifest.php(108): Nwidart/Modules/ModuleManifest->getModulesData()
+#6 vendor/nwidart/laravel-modules/src/ModuleManifest.php(124): Nwidart/Modules/ModuleManifest->getAliases()
+#7 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(38): Nwidart/Modules/ModuleManifest->registerAliases()
+#8 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#9 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#10 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#16 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#17 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#33 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#34 vendor/phpstan/phpstan/phpstan(8): require('...')
+#35 vendor/bin/phpstan(119): include('...')
+#36 {main}
+
+ Laravel framework bootstrap failed                                             
+
+PHPStan was unable to bootstrap your application because Laravel failed to start.
+
+Larastan launches your Laravel application during analysis to provide smarter results.
+The framework reported an error while starting, so the analysis could not continue.
+
+Tip: Try the following:
+ - Check your environment variables in the .env file
+ - Check the Laravel logs in storage/logs/laravel.log for more details
+ - Run composer dump-autoload to ensure classes are indexed
+ - Verify service provider registration and configuration
+ - Verify the application boots by running php artisan about
+
+Error: Error processing file: /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/module.json. Error: Syntax error
+
+Stack trace:
+#0 vendor/nwidart/laravel-modules/src/Json.php(124): Nwidart/Modules/Json->decodeContents()
+#1 vendor/nwidart/laravel-modules/src/Json.php(38): Nwidart/Modules/Json->getAttributes()
+#2 vendor/nwidart/laravel-modules/src/Json.php(84): Nwidart/Modules/Json->__construct()
+#3 vendor/nwidart/laravel-modules/src/FileRepository.php(212): Nwidart/Modules/Json::make()
+#4 vendor/nwidart/laravel-modules/src/ModuleManifest.php(179): Nwidart/Modules/FileRepository->getModuleJsonFiles()
+#5 vendor/nwidart/laravel-modules/src/ModuleManifest.php(108): Nwidart/Modules/ModuleManifest->getModulesData()
+#6 vendor/nwidart/laravel-modules/src/ModuleManifest.php(124): Nwidart/Modules/ModuleManifest->getAliases()
+#7 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(38): Nwidart/Modules/ModuleManifest->registerAliases()
+#8 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#9 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#10 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#16 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#17 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#33 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#34 vendor/phpstan/phpstan/phpstan(8): require('...')
+#35 vendor/bin/phpstan(119): include('...')
+#36 {main}
+
+ Laravel framework bootstrap failed                                             
+
+PHPStan was unable to bootstrap your application because Laravel failed to start.
+
+Larastan launches your Laravel application during analysis to provide smarter results.
+The framework reported an error while starting, so the analysis could not continue.
+
+Tip: Try the following:
+ - Check your environment variables in the .env file
+ - Check the Laravel logs in storage/logs/laravel.log for more details
+ - Run composer dump-autoload to ensure classes are indexed
+ - Verify service provider registration and configuration
+ - Verify the application boots by running php artisan about
+
+Error: Error processing file: /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/Modules/User/module.json. Error: Syntax error
+
+Stack trace:
+#0 vendor/nwidart/laravel-modules/src/Json.php(124): Nwidart/Modules/Json->decodeContents()
+#1 vendor/nwidart/laravel-modules/src/Json.php(38): Nwidart/Modules/Json->getAttributes()
+#2 vendor/nwidart/laravel-modules/src/Json.php(84): Nwidart/Modules/Json->__construct()
+#3 vendor/nwidart/laravel-modules/src/FileRepository.php(212): Nwidart/Modules/Json::make()
+#4 vendor/nwidart/laravel-modules/src/ModuleManifest.php(179): Nwidart/Modules/FileRepository->getModuleJsonFiles()
+#5 vendor/nwidart/laravel-modules/src/ModuleManifest.php(108): Nwidart/Modules/ModuleManifest->getModulesData()
+#6 vendor/nwidart/laravel-modules/src/ModuleManifest.php(124): Nwidart/Modules/ModuleManifest->getAliases()
+#7 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(38): Nwidart/Modules/ModuleManifest->registerAliases()
+#8 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#9 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#10 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#16 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#17 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(74): PHPStan/Command/BootstrapFilesRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#31 vendor/phpstan/phpstan/phpstan(8): require('...')
+#32 vendor/bin/phpstan(119): include('...')
+#33 {main}

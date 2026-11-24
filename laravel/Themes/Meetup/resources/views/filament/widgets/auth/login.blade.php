@@ -8,10 +8,10 @@
             {{-- Header del form --}}
             <div class="text-center mb-6">
                 <h2 class="text-2xl font-bold text-italia-gray-900 dark:text-white">
-                    {{ __('user::auth.login.title') }}
+                    {{ __('user::auth.login.title.text') }}
                 </h2>
                 <p class="mt-2 text-sm text-italia-gray-600 dark:text-gray-400">
-                    {{ __('user::auth.login.subtitle') }}
+                    {{ __('user::auth.login.subtitle.text') }}
                 </p>
             </div>
             {{-- Form renderizzato dal widget Filament 4 --}}
@@ -29,7 +29,7 @@
                             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
-                        <span>{{ __('user::auth.login.submit') }}</span>
+                        <span>{{ __('user::auth.login.submit.text') }}</span>
                     </button>
                 </div>
             </form>
@@ -40,7 +40,7 @@
                     {{ __('user::login.no_account') }}
                     <a 
                         href="{{ \LaravelLocalization::localizeUrl('/auth/register') }}" 
-                        class="font-medium text-primary-600 hover:text-primary-500 underline"
+                        class="font-medium text-red-700 hover:text-red-600 underline dark:text-red-400 dark:hover:text-red-300"
                     >
                         {{ __('user::login.register_now') }}
                     </a>
@@ -50,7 +50,7 @@
                     {{ __('user::login.forgot_password_text') }}
                     <a 
                         href="{{ \LaravelLocalization::localizeUrl('/auth/password/reset') }}" 
-                        class="font-medium text-primary-600 hover:text-primary-500 underline"
+                        class="font-medium text-red-700 hover:text-red-600 underline dark:text-red-400 dark:hover:text-red-300"
                     >
                         {{ __('user::login.reset_it') }}
                     </a>

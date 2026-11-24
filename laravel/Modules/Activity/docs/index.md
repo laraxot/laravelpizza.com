@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_rbZ8Fn
 # Indice documentazione — Modulo Activity
 
@@ -28,6 +33,10 @@ riferimento primario; tutte le varianti restano elencate in fondo, sezione
 =======
 >>>>>>> .merge_file_zeRy6x
 =======
+>>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 ---
 title: "Indice documentazione — Modulo Activity"
@@ -63,6 +72,12 @@ The module follows the Laraxot architecture principles:
 - `ActivityLog` - Detailed activity logging
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+- [architecture.md](architecture.md) — architettura generale del modulo.
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_rbZ8Fn
 - [architecture.md](ARCHITECTURE.md) — architettura generale del modulo.
 =======
@@ -70,6 +85,10 @@ The module follows the Laraxot architecture principles:
 >>>>>>> .merge_file_zeRy6x
 =======
 - [architecture.md](architecture.md) — architettura generale del modulo.
+>>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [architecture/structure.md](architecture/structure.md) — organizzazione interna dettagliata.
 - [structure.md](structure.md) — nota: contenuto quasi identico a `architecture/structure.md` (stesso titolo "Modulo Activity", 414 vs 413 righe); vedi Storico.
@@ -97,6 +116,11 @@ The module follows the Laraxot architecture principles:
 - [domain-logic.md](domain-logic.md), [data-models.md](data-models.md), [validation.md](validation.md), [integration.md](integration.md), [workflows.md](workflows.md), [troubleshooting.md](troubleshooting.md) — placeholder vuoti (solo titolo, nessun contenuto); non cancellati, da popolare o rimuovere in un task dedicato.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_rbZ8Fn
 ## Database, connessioni e migrazioni
 
@@ -120,6 +144,10 @@ The module follows the Laraxot architecture principles:
 >>>>>>> .merge_file_zeRy6x
 =======
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ### Services
 - `ActivityService` - Core activity management logic
 - `ActivityLogger` - Activity logging service
@@ -141,11 +169,20 @@ activity()->log('User logged in');
 - [filament-actions-usage.md](filament-actions-usage.md) — uso delle Filament Actions nel modulo.
 - [filament5-pattern-migration.md](filament5-pattern-migration.md) — migrazione pattern verso Filament 5.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_rbZ8Fn
 - [migration-filament.md](migration-filament.md) / [migration-filament-4.md](migration-filament-4.md) / [migrazione-filament.md](migrazione-filament.md) / [migrazione-filament-4.md](migrazione-filament-4.md) — stub quasi vuoti (6-7 righe) su migrazione Filament 4; contenuto reale nella guida `guida-migrazione-step-by-step.md`.
 =======
 >>>>>>> .merge_file_zeRy6x
 =======
+>>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [migration-filament.md](migration-filament.md) / [migration-filament-4.md](migration-filament.md) / [migrazione-filament.md](migrazione-filament.md) / [migrazione-filament-4.md](migrazione-filament.md) — stub quasi vuoti (6-7 righe) su migrazione Filament 4; contenuto reale nella guida `guida-migrazione-step-by-step.md`.
 - [guida-migrazione-step-by-step.md](guida-migrazione-step-by-step.md) — guida step-by-step migrazione Filament 4.
@@ -155,6 +192,11 @@ activity()->log('User logged in');
 - [filament/errors/static-instance-method-incompatibility.md](filament/errors/static-instance-method-incompatibility.md) — incompatibilita' metodi statici/istanza in Filament.
 - [bugfix-filament-facade-namespace.md](bugfix-filament-facade-namespace.md) — bugfix namespace facade Filament.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_rbZ8Fn
 - [bugfix-getTablePage-mixed-return.md](bugfix-getTablePage-mixed-return.md) — bugfix `getTablePage()` ritorna `mixed` (PHPStan).
 - [bugfix-getUrl-signature-mismatch.md](bugfix-getUrl-signature-mismatch.md) — bugfix signature `getUrl()` + drift enum/colonne.
@@ -163,6 +205,10 @@ activity()->log('User logged in');
 =======
 >>>>>>> .merge_file_zeRy6x
 =======
+>>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [bugfix-getTablePage-mixed-return.md](bugfix-gettablepage-mixed-return.md) — bugfix `getTablePage()` ritorna `mixed` (PHPStan).
 - [bugfix-getUrl-signature-mismatch.md](bugfix-geturl-signature-mismatch.md) — bugfix signature `getUrl()` + drift enum/colonne.
@@ -255,11 +301,20 @@ sono elencati nello Storico.
 - [wiki/concepts/phpstan-module-config-zero.md](wiki/concepts/phpstan-module-config-zero.md), [wiki/concepts/phpstan-pest-discipline.md](wiki/concepts/phpstan-pest-discipline.md) — regole PHPStan modulo/config e disciplina Pest.
 - [wiki/concepts/pest-bootstrap-extend-ignore.md](wiki/concepts/pest-bootstrap-extend-ignore.md) — bootstrap Pest con `pest()->extend()` e ignore inline.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_rbZ8Fn
 - Cronologia interventi PHPStan (snapshot puntuali, non duplicati tra loro): [phpstan-activity-fix.md](phpstan-activity-fix.md), [phpstan-analysis-november.md](phpstan-analysis-november.md), [phpstan-compliance-dec.md](phpstan-compliance-dec.md), [phpstan-corrections-january.md](phpstan-corrections-january.md), [phpstan-corrections.md](phpstan-corrections.md), [phpstan-fixes.md](phpstan-fixes.md), [phpstan-fixes-1.md](phpstan-fixes-1.md), [phpstan-fixes-activity.md](phpstan-fixes-activity.md), [phpstan-fixes-activity-1.md](phpstan-fixes-activity-1.md).
 =======
 >>>>>>> .merge_file_zeRy6x
 =======
+>>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - Cronologia interventi PHPStan (snapshot puntuali, non duplicati tra loro): [phpstan-activity-fix.md](phpstan-activity-fix.md), [phpstan-analysis-november.md](phpstan-analysis-november.md), [phpstan-compliance-dec.md](phpstan-compliance-dec.md), [phpstan-corrections-january.md](phpstan-corrections-january.md), [phpstan-corrections.md](phpstan-corrections.md), [phpstan-fixes.md](phpstan-fixes.md), [phpstan-fixes-1.md](phpstan-fixes-correzioni-modulo-activity.md), [phpstan-fixes-activity.md](phpstan-fixes-activity.md), [phpstan-fixes-activity-1.md](phpstan-fixes-activity-correzioni-modulo.md).
 - [phpmd-analysis.md](phpmd-analysis.md) — analisi e fix PHPMD (PHPMD-ANALYSIS.md duplicato maiuscolo, vedi Storico).
@@ -274,11 +329,20 @@ sono elencati nello Storico.
 - [duplicate_methods.md](duplicate_methods.md), [duplicate_methods_report.md](duplicate_methods_report.md) — report correlati su metodi con nome duplicato nei moduli/temi.
 - [wiki/concepts/duplicate-method-bodies.md](wiki/concepts/duplicate-method-bodies.md), [wiki/concepts/method-name-homonyms.md](wiki/concepts/method-name-homonyms.md) — censimento corpi/metodi omonimi (wiki, piu' recenti).
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_rbZ8Fn
 - [redundancy-audit.md](redundancy-audit.md) — audit ridondanza 2026-05-21 (`redundancy-audit-2026-05-21.md` e' lo stesso contenuto con nome datato, vedi Storico).
 =======
 >>>>>>> .merge_file_zeRy6x
 =======
+>>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [redundancy-audit.md](redundancy-audit.md) — audit ridondanza 2026-05-21 (`redundancy-audit-activity.md` e' lo stesso contenuto con nome datato, vedi Storico).
 - [copilot-redundancy-audit.md](copilot-redundancy-audit.md) — audit ridondanza (variante `-2026-05-25` identica, vedi Storico).
@@ -294,10 +358,19 @@ sono elencati nello Storico.
 - [quality-audit.md](quality-audit.md) — audit di qualita'.
 - [quality_report.md](quality_report.md) — quality report (QUALITY_REPORT.md duplicato maiuscolo, vedi Storico).
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_rbZ8Fn
 - [quality-status.md](quality-status.md) — stato qualita' novembre 2025 (`quality-status-.md` identico, `quality-status-2025-11.md` quasi identico, `quality-status-nov.md` e' stub puntatore vuoto; vedi Storico).
 =======
 >>>>>>> .merge_file_zeRy6x
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [quality-status.md](quality-status.md) — stato qualita' novembre 2025 (`quality-status-.md` identico, `quality-status-activity-module-november.md` quasi identico, `quality-status-nov.md` e' stub puntatore vuoto; vedi Storico).
 =======
 - [quality-status.md](quality-status.md) — stato qualita' novembre 2025 (`quality-status.md` identico, `quality-status-activity-module-november.md` quasi identico, `quality-status-nov.md` e' stub puntatore vuoto; vedi Storico).
@@ -330,11 +403,20 @@ sono elencati nello Storico.
 - [roadmap/legacy-roadmap.md](roadmap/legacy-roadmap.md) — roadmap legacy, gia' marcata come tale.
 - [roadmap/acceptance-criteria.md](roadmap/acceptance-criteria.md), [roadmap/dependencies.md](roadmap/dependencies.md), [roadmap/metrics.md](roadmap/metrics.md), [roadmap/phases.md](roadmap/phases.md), [roadmap/quality.md](roadmap/quality.md), [roadmap/vision.md](roadmap/vision.md) — sezioni tematiche della roadmap.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_rbZ8Fn
 - [roadmap/tasks/enhanced-activity-filtering.md](roadmap/tasks/enhanced-activity-filtering.md), [roadmap/tasks/gdpr-compliance-enhancement.md](roadmap/tasks/gdpr-compliance-enhancement.md), [roadmap/tasks/realtime-monitoring-dashboard.md](roadmap/tasks/realtime-monitoring-dashboard.md) — task di roadmap dettagliati.
 =======
 >>>>>>> .merge_file_zeRy6x
 =======
+>>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - `roadmap/tasks/` (enhanced-activity-filtering, gdpr-compliance-enhancement, realtime-monitoring-dashboard): i tre file non esistono piu' (rimossi nel commit `7e00cedf` del 2026-10-08, verificato 2026-10-14); recuperabili con `git show 7e00cedf^:docs/roadmap/tasks/<nome>.md`.
 - [development/roadmap.md](development/roadmap.md) — roadmap orientata allo sviluppo (documento distinto da `roadmap/README.md`).
@@ -369,6 +451,11 @@ sono elencati nello Storico.
 - [stories/9.1.fix-connection-property-removed.story.md](stories/9.1.fix-connection-property-removed.story.md)
 - [stories/docs-index-audit.story.md](stories/docs-index-audit.story.md) — questo task (audit indice docs).
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_rbZ8Fn
 
 ## Task e backlog dettagliato
@@ -393,6 +480,10 @@ Tutti i file sopra hanno lo stesso template ma contenuto (task ID, descrizione, 
 =======
 >>>>>>> .merge_file_zeRy6x
 =======
+>>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [stories/blade-i18n-no-hardcoded-text.story.md](stories/blade-i18n-no-hardcoded-text.story.md) — niente testi fissi nelle Blade: chiavi `activity::` in it, en, de, es.
 
@@ -441,11 +532,20 @@ solo in [llm-wiki/AGENTS.md](llm-wiki/agents.md) e [llm-wiki/log.md](llm-wiki/lo
 - [rules-index.md](rules-index.md) — indice regole.
 - [docs-health.md](docs-health.md) — stato di salute della documentazione (gia' segnalava 190 file "top-level" prima di questo audit; ora sono 755).
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_rbZ8Fn
 - [docs-archive-policy.md](docs-archive-policy.md) — policy di archiviazione docs.
 =======
 >>>>>>> .merge_file_zeRy6x
 =======
+>>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - `docs-archive-policy.md`: file rimosso nel commit `a871d44e` del 2026-10-08 (verificato 2026-10-14); non esiste piu' in `docs/`.
 - [module-root-hygiene.md](module-root-hygiene.md), [root-file-policy.md](root-file-policy.md), [root-files-hygiene.md](root-files-hygiene.md) — igiene della root del modulo (tre documenti distinti ma tematicamente sovrapposti).
@@ -530,6 +630,14 @@ variante e' collegata come riferimento primario nelle sezioni sopra.
 `qmd-setup.md`/`qmd-setup.md` · `quality_report.md`/`QUALITY_REPORT.md` ·
 `query_optimization_analysis.md`/`QUERY_OPTIMIZATION_ANALYSIS.md` (+ stub quasi vuoto `query-optimization-analysis.md`) ·
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+`quick-start.md`/`quick-start.md` · `SECURITY.md`/`SECURITY.md` · `sprint_planning.md`/`sprint_planning.md` ·
+`tech_spec.md`/`TECH_SPEC.md` · `user_research.md`/`user_research.md` · `readme-update.md`/`readme_update.md` ·
+`redundancy_analysis.md`/`redundancy_analysis.md` (entrambi stub vuoti) ·
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_rbZ8Fn
 `quick-start.md`/`QUICK-START.md` · `security.md`/`SECURITY.md` · `sprint_planning.md`/`SPRINT_PLANNING.md` ·
 `tech_spec.md`/`TECH_SPEC.md` · `user_research.md`/`USER_RESEARCH.md` · `readme-update.md`/`readme_update.md` ·
@@ -546,6 +654,10 @@ variante e' collegata come riferimento primario nelle sezioni sopra.
 `tech_spec.md`/`TECH_SPEC.md` · `user_research.md`/`user_research.md` · `readme-update.md`/`readme_update.md` ·
 `redundancy_analysis.md`/`redundancy_analysis.md` (entrambi stub vuoti) ·
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 `filament/filament-v4-icon-size-fix.md` (+ `filament-v4-icon-size-fix-attribute.md`, ex `-2.md`, `FILAMENT_V4_ICON_SIZE_FIX.md`, `filament_v4_icon_size_fix.md`) ·
 `filament/filament-v4-upgrade.md` (+ `filament-v4-upgrade-documentation.md`, ex `-2.md`, `FILAMENT_V4_UPGRADE.md`, `filament_v4_upgrade.md`) ·
 `filament/archive/filament-v4-icon-size-fix.md` (+ maiuscolo/underscore) ·
@@ -553,12 +665,22 @@ variante e' collegata come riferimento primario nelle sezioni sopra.
 `guides/event-sourcing.md`/`guides/event_sourcing.md` (stub) ·
 `guides/archive/event-sourcing.md`/`guides/archive/event_sourcing.md` ·
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+`llm-wiki/agents.md`/`llm-wiki/AGENTS.md` ·
+=======
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_rbZ8Fn
 `llm-wiki/agents.md`/`llm-wiki/AGENTS.md` ·
 `performance/activity-log-optimization.md` (+ `-2.md`, `ACTIVITY_LOG_OPTIMIZATION.md`, `activity_log_optimization.md`) ·
 =======
 `llm-wiki/AGENTS.md`/`llm-wiki/AGENTS.md` ·
 >>>>>>> .merge_file_zeRy6x
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 =======
 `llm-wiki/AGENTS.md`/`llm-wiki/AGENTS.md` ·
 >>>>>>> laraxot/dev
@@ -571,6 +693,12 @@ variante e' collegata come riferimento primario nelle sezioni sopra.
 `wiki/skills/index.md`/`wiki/skills/index.md` · `tecnico/laraxot/archive/module-activity.md`/`module_activity.md` ·
 `use_cases/shop/archive/console-commands.md`/`console_commands.md` (entrambi stub vuoti) ·
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+`00-index.md`/`00-index.md` (+ `00-index-documentation.md` quasi vuoto).
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_rbZ8Fn
 `00-index.md`/`00-INDEX.md` (+ `00-index-1.md` quasi vuoto).
 `00-index.md`/`00-INDEX.md` (+ `00-index-documentation.md` quasi vuoto).
@@ -579,6 +707,10 @@ variante e' collegata come riferimento primario nelle sezioni sopra.
 >>>>>>> .merge_file_zeRy6x
 =======
 `00-index.md`/`00-index.md` (+ `00-index-documentation.md` quasi vuoto).
+>>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 **Nota**: `bad-practices.md`, `best-practices.md`, `code-quality.md`, `mcp_server_recommended.md`/`mcp-server-recommended.md`,
@@ -600,13 +732,27 @@ sotto). Coesistono per coincidenza di nome con le varianti che invece hanno cont
 `phpstan-analysis-november.md`/`phpstan-analysis-november-2025.md` · `phpstan-fixes.md` (+ `-1.md`, stub underscore) ·
 `phpstan-fixes-activity.md` (+ `-1.md`, underscore) · `quality-status.md` (+ `-.md`, `-2025-11.md`; `-nov.md` e' stub) ·
 <<<<<<< HEAD
+<<<<<<< HEAD
 `roadmap-2025.md`/`roadmap-.md` (+ `roadmap-archive.md`, quasi identico con 2 righe di differenza) ·
 =======
+=======
+=======
+<<<<<<< HEAD
+`roadmap-2025.md`/`roadmap-.md` (+ `roadmap-archive.md`, quasi identico con 2 righe di differenza) ·
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_mp1pTI
 `roadmap.md`/`roadmap.md` (+ `roadmap-archive-1.md`, quasi identico con 2 righe di differenza) ·
 =======
 `roadmap-2025.md`/`roadmap-.md` (+ `roadmap-archive.md`, quasi identico con 2 righe di differenza) ·
 >>>>>>> .merge_file_e6wsvv
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 `event-sourcing-examples-duplicate.md`/`event_sourcing_examples.md` (+ stub `event-sourcing-examples.md`) ·
 `event-sourcing-introduction-duplicate.md`/`event_sourcing_introduction.md` (+ stub `event-sourcing-introduction.md`) ·
@@ -636,11 +782,20 @@ find Modules/Activity/docs/use_cases Modules/Activity/docs/roadmap -regextype po
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_rbZ8Fn
 ### Puntatori a documentazione condivisa (Themes) — stub con frontmatter `canonical:`
 =======
 >>>>>>> .merge_file_zeRy6x
 =======
+>>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 ### Configuration
 The module can be configured through the `config/activity.php` file:
@@ -658,6 +813,12 @@ intenzionale di "on-demand", non un incidente di duplicazione): `ai-methodologie
 `git-conflicts-resolution-sumy.md`, `guides/event-sourcing.md`, `guides/event_sourcing.md`,
 `jpgraph.md`, `logging_optimization.md`, `login-test-implementation.md`,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+`mcp_server_recommended.md`, `mcp-server-recommended.md`, `merge-conflict-files-list.md`,
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_rbZ8Fn
 `mcp_server_recommended.md`, `MCP_SERVER_RECOMMENDED.md`, `merge-conflict-files-list.md`,
 `metodiuplicati-analisi.md`, `migration-filament.md`, `migration-filament-4.md`,
@@ -667,6 +828,10 @@ intenzionale di "on-demand", non un incidente di duplicazione): `ai-methodologie
 >>>>>>> .merge_file_zeRy6x
 =======
 `mcp_server_recommended.md`, `mcp-server-recommended.md`, `merge-conflict-files-list.md`,
+>>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 `metodiuplicati-analisi.md`, `migration-filament.md`, `migration-filament.md`,
 `migrazione-filament.md`, `migrazione-filament.md`, `outputs/README.md`,
@@ -681,12 +846,32 @@ intenzionale di "on-demand", non un incidente di duplicazione): `ai-methodologie
 Non richiedono consolidamento: sono puntatori voluti, non copie accidentali.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+## Related Modules
+<<<<<<< HEAD
+- [User Module](../User/docs/README.md) - User authentication and management
+- [Notify Module](../Notify/docs/index.md) - Notification system
+- [Xot Module](../Xot/docs/index.md) - Core base classes
+- [User Module](../user/docs/readme.md) - User authentication and management
+- [Notify Module](../notify/docs/index.md) - Notification system
+- [Xot Module](../xot/docs/index.md) - Core base classes
+
+## Related Modules
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_rbZ8Fn
 ### Cartelle di import "grezzo" — quasi tutte vuote o segnaposto
 =======
 ## Related Modules
 =======
 ## Related Modules
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_mp1pTI
 - [User Module](../../User/docs/README.md) - User authentication and management
 - [Notify Module](../../Notify/docs/index.md) - Notification system
@@ -711,8 +896,17 @@ Non richiedono consolidamento: sono puntatori voluti, non copie accidentali.
 - [Notify Module](../notify/docs/index.md) - Notification system
 - [Xot Module](../xot/docs/index.md) - Core base classes
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> .merge_file_zeRy6x
 =======
+>>>>>>> laraxot/dev
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> .merge_file_zeRy6x
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 ## Related Modules
@@ -749,6 +943,11 @@ Questi 4 gruppi restano come testimonianza storica di un import automatico mal r
 
 `domain-logic.md`, `data-models.md`, `validation.md`, `integration.md`, `workflows.md`,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 `troubleshooting.md`, `2024-03-27.md`, `archived-note.md`, `documentation.md`,
 <<<<<<< .merge_file_rbZ8Fn
 `documentation-2024-03-27.md`, `documentation-archive-1.md` e i loro equivalenti nelle
@@ -757,6 +956,10 @@ Questi 4 gruppi restano come testimonianza storica di un import automatico mal r
 `documentation-archive.md` e i loro equivalenti nelle
 >>>>>>> .merge_file_zeRy6x
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_mp1pTI
 `troubleshooting.md`, `archived-note.md`, `documentation.md`,
 `documentation-archive-1.md` e i loro equivalenti nelle
@@ -764,6 +967,12 @@ Questi 4 gruppi restano come testimonianza storica di un import automatico mal r
 `troubleshooting.md`, `2024-03-27.md`, `archived-note.md`, `documentation.md`,
 `documentation-archive.md` e i loro equivalenti nelle
 >>>>>>> .merge_file_e6wsvv
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 cartelle di import grezzo sopra citate (49 file a 0 righe in tutto il modulo).
 
@@ -775,6 +984,11 @@ cartelle di import grezzo sopra citate (49 file a 0 righe in tutto il modulo).
 - File stub con puntatore `canonical:` verso `Themes/docs/shared-components/`: 73 (di cui 6 template `_templates/`, 4 ibridi con contenuto reale aggiuntivo, 63 stub puri).
 - File indicizzati esplicitamente per argomento in questo documento: la quasi totalita' dei restanti file con contenuto reale; le eccezioni (import grezzo/placeholder vuoti) sono referenziate per gruppo con comando `find` riproducibile, non singolarmente.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_rbZ8Fn
 ## Troubleshooting
 Common issues and solutions:
@@ -783,6 +997,10 @@ Common issues and solutions:
 - Configuration issues
 - File indicizzati esplicitamente per argomento in questo documento: la quasi totalita' dei restanti file con contenuto reale; le eccezioni (import grezzo/placeholder vuoti) sono referenziate per gruppo con comando `find` riproducibile, non singolarmente.
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Debito naming (date nel filename — flag, non cancellare)
 
 Storici con data nel nome: restano `superseded`/archivio finche' i riferimenti non
@@ -801,26 +1019,59 @@ python3 -I bashscripts/tools/docs/md-filenames.py check --paths laravel/Modules/
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+Esempi ancora presenti: `documentation-2024-03-27.md`, `quality-status-2025-11.md`,
+=======
+<<<<<<< .merge_file_mp1pTI
+=======
+Esempi ancora presenti: `documentation-2024-03-27.md`, `quality-status.md`,
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 =======
 <<<<<<< .merge_file_mp1pTI
 =======
 >>>>>>> laraxot/dev
 Esempi ancora presenti: `documentation-2024-03-27.md`, `quality-status.md`,
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 `stories/phpstan-cleanup-activity.story.md`,
 `bmad/stories/*-20260928*.story.md`, `wiki/troubleshooting/git-merge-conflict-inventory-april.md`,
 `raw/root-import/*2024*`. Procedura: [docs-clean.md](../../../../bashscripts/docs/prompts/docs-clean.md).
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> .merge_file_e6wsvv
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_e6wsvv
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_e6wsvv
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 ## Troubleshooting
 
 - Performance log grandi, entry mancanti, config: vedi wiki troubleshooting del modulo.
 - File vuoti/import grezzo: referenziati per gruppo sopra, non cancellare a tappeto.
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> .merge_file_zeRy6x
 =======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> .merge_file_zeRy6x
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Mappa delle cartelle
 
@@ -857,4 +1108,10 @@ Le cartelle di import grezzo (`raw/`, `root-*-files/`), immagini e log sono escl
 | [`use-cases/`](use-cases/) | 1 |
 | [`use_cases/`](use_cases/) | 116 |
 | [`wiki/`](wiki/index.md) | 105 |
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

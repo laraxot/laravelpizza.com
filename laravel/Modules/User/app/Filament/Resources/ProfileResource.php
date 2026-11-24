@@ -4,18 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Resources;
 
-<<<<<<< HEAD
 use Modules\User\Filament\Resources\ProfileResource\Pages\CreateProfile;
 use Modules\User\Filament\Resources\ProfileResource\Pages\EditProfile;
 use Modules\User\Filament\Resources\ProfileResource\Pages\ListProfiles;
-=======
->>>>>>> laraxot/dev
 use Modules\User\Models\Profile;
 
 class ProfileResource extends BaseProfileResource
 {
     protected static ?string $model = Profile::class;
-<<<<<<< HEAD
 
     /**
      * Pagine di questa risorsa. Senza questo metodo valevano quelle di BaseProfileResource, la cui lista
@@ -31,6 +27,4 @@ class ProfileResource extends BaseProfileResource
             'edit' => EditProfile::route('/{record}/edit'),
         ];
     }
-=======
->>>>>>> laraxot/dev
 }

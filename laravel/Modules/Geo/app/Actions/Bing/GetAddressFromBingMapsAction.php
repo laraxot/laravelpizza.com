@@ -7,10 +7,7 @@ namespace Modules\Geo\Actions\Bing;
 use GuzzleHttp\Promise\PromiseInterface;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
-<<<<<<< HEAD
-=======
 use Modules\Geo\Actions\ValidateCoordinatesAction;
->>>>>>> laraxot/dev
 use Modules\Geo\Datas\Geocoding\AddressData;
 use Modules\Geo\Datas\MapPlatforms\BingMapData;
 use Modules\Geo\Exceptions\InvalidLocationException;
@@ -34,14 +31,11 @@ class GetAddressFromBingMapsAction
      */
     public function execute(float $latitude, float $longitude): AddressData
     {
-<<<<<<< HEAD
-=======
         // Coordinate fuori range: errore immediato, senza consumare una chiamata API.
         if (! app(ValidateCoordinatesAction::class)->execute($latitude, $longitude)) {
             throw InvalidLocationException::invalidCoordinates($latitude, $longitude);
         }
 
->>>>>>> laraxot/dev
         $apiKey = $this->getApiKey();
         /** @var array<string, mixed> $response */
         $response = $this->makeApiRequest($latitude, $longitude, $apiKey);
@@ -51,10 +45,7 @@ class GetAddressFromBingMapsAction
     }
 
     /**
-<<<<<<< HEAD
-=======
     /**
->>>>>>> laraxot/dev
      * Get the Bing Maps API key from configuration.
      *
      *

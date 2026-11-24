@@ -18,6 +18,8 @@ use Override;
  * Montare qui le pagine con Folio è ridondante, anti-DRY e rischia l'ordine delle catch-all.
  *
  * @phpstan-type ModuleConfig array{name: string, alias: string, description: string, keywords: array<int, string>, priority: int, providers: array<int, class-string>}
+ *
+ * @see docs/bmad/stories/folio-routing-centralization.story.md
  */
 class ActivityServiceProvider extends XotBaseServiceProvider
 {
@@ -40,6 +42,8 @@ class ActivityServiceProvider extends XotBaseServiceProvider
      * Boot del service provider.
      *
      * Configura il modulo Activity e registra le configurazioni specifiche.
+     *
+     * @see docs/bmad/stories/folio-routing-centralization.story.md
      */
     #[Override]
     public function boot(): void
@@ -63,6 +67,8 @@ class ActivityServiceProvider extends XotBaseServiceProvider
 
     /**
      * Registra le configurazioni del modulo.
+     *
+     * @see docs/bmad/stories/folio-routing-centralization.story.md
      */
     #[Override]
     protected function registerConfig(): void

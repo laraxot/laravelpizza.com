@@ -4,11 +4,7 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-<<<<<<< HEAD
-        'label' => 'Profiles',
-=======
         'label' => 'Profile',
->>>>>>> laraxot/dev
         'plural' => 'Profiles',
         'group' => [
             'label' => 'User management',
@@ -102,9 +98,5 @@ return [
         'delete' => 'Delete Account',
     ],
     'my_profile' => 'My Profile',
-<<<<<<< HEAD
-    'subheading' => 'Your personal details and password',
-=======
     'subheading' => 'Manage your personal details and security',
->>>>>>> laraxot/dev
 ];

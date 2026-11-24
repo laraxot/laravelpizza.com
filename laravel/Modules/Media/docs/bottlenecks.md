@@ -848,6 +848,25 @@ Implementando queste soluzioni, il modulo Media potrà superare i principali col
 * [bottlenecks.md](../../xot/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../xot/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../dental/docs/bottlenecks.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+* [bottlenecks.md](../../user/docs/bottlenecks.md)
+* [bottlenecks.md](../../user/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](../../ui/docs/bottlenecks.md)
+* [bottlenecks.md](../../ui/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](../../lang/docs/bottlenecks.md)
+* [bottlenecks.md](../../lang/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../job/docs/performance/bottlenecks.md)
+* [bottlenecks.md](performance/bottlenecks.md)
+* [bottlenecks.md](../../activity/docs/bottlenecks.md)
+* [bottlenecks.md](../../patient/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](../../cms/docs/bottlenecks.md)
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 * [bottlenecks.md](../../User/docs/bottlenecks.md)
 * [bottlenecks.md](../../User/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../ui/docs/bottlenecks.md)
@@ -858,4 +877,13 @@ Implementando queste soluzioni, il modulo Media potrà superare i principali col
 * [bottlenecks.md](performance/bottlenecks.md)
 * [bottlenecks.md](../../Activity/docs/bottlenecks.md)
 * [bottlenecks.md](../../patient/docs/roadmap/bottlenecks.md)
+<<<<<<< HEAD
 * [bottlenecks.md](../../Cms/docs/bottlenecks.md)
+=======
+<<<<<<< HEAD
+* [bottlenecks.md](../../Cms/docs/bottlenecks.md)
+>>>>>>> laraxot/dev
+=======
+* [bottlenecks.md](../../Cms/docs/bottlenecks.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -21,11 +21,7 @@ use Modules\Cms\Actions\Head\ResolveRobotsPolicyAction;
 use Modules\Cms\Actions\Head\ResolveWrittenLocalesAction;
 use Modules\Cms\Actions\ResolvePageMetaAction;
 use Modules\Cms\Models\Page;
-<<<<<<< HEAD
-use Modules\Tenant\Actions\Translations\TranslateTenantKeyAction;
-=======
 use Modules\Tenant\Actions\Config\GetTenantConfigArrayAction;
->>>>>>> laraxot/dev
 use Modules\Xot\Datas\MetatagData;
 
 use function Safe\filesize;
@@ -39,11 +35,8 @@ use function Safe\parse_url;
  * di una pagina si usano le props del componente, non `Head::…()` dalla pagina (verrebbe sovrascritto).
  * Testi e immagini del sito arrivano dal tema (`pub_theme::seo.*`, `pub_theme::header.*`) e dal testo della pagina CMS;
  * un tag senza dato reale viene omesso, mai riempito con segnaposto o chiavi grezze.
-<<<<<<< HEAD
-=======
  *
  * @see Modules/Cms/docs/bmad/head-component-adoption-plan.md
->>>>>>> laraxot/dev
  */
 final class Head extends Component
 {
@@ -55,29 +48,14 @@ final class Head extends Component
 
     private const string DEFAULT_THEME_COLOR = '#0f2b46';
 
-<<<<<<< HEAD
-=======
     /**
      * @see Modules/Cms/docs/bmad/head-component-adoption-plan.md
      */
->>>>>>> laraxot/dev
     public function __construct(
         public readonly ?string $title = null,
         public readonly ?string $description = null,
         public readonly ?bool $homepage = null,
         public readonly ?string $themeColor = null,
-<<<<<<< HEAD
-<<<<<<< .merge_file_e5uH8h
-        // Entry Vite del CSS del tema: un tema può servire un foglio più leggero dove non servono i componenti Filament.
-        public readonly string $stylesheet = 'resources/css/app.css',
-=======
-        // false: niente CSS dei pannelli Filament (e font Inter) ne' script del tema scuro. Per i siti
-        // pubblici che non usano componenti Filament: meno peso su telefono. Default true: nulla cambia.
-        public readonly bool $panelAssets = true,
->>>>>>> .merge_file_xI11xm
-    ) {}
-
-=======
         public readonly bool $panelAssets = true,
     ) {
     }
@@ -85,7 +63,6 @@ final class Head extends Component
     /**
      * @see Modules/Cms/docs/bmad/head-component-adoption-plan.md
      */
->>>>>>> laraxot/dev
     public function render(): ViewContract
     {
         $meta = MetatagData::make();
@@ -147,22 +124,11 @@ final class Head extends Component
 
         return view('cms::components.head', [
             'pubTheme' => $meta->getPubTheme(),
-<<<<<<< HEAD
-<<<<<<< .merge_file_e5uH8h
-            'stylesheet' => $this->stylesheet,
-=======
-            'panelAssets' => $this->panelAssets,
->>>>>>> .merge_file_xI11xm
-        ]);
-    }
-
-=======
             'panelAssets' => $this->panelAssets,
         ]);
     }
 
     /** @see Modules/Cms/docs/bmad/head-component-adoption-plan.md */
->>>>>>> laraxot/dev
     private function resolveBrand(MetatagData $meta): string
     {
         $key = 'pub_theme::header.brand.name';
@@ -188,11 +154,8 @@ final class Head extends Component
 
     /**
      * Prop del componente, poi testo della pagina CMS (non per la home, che ha la descrizione curata del sito), poi descrizione del sito.
-<<<<<<< HEAD
-=======
      *
      * @see Modules/Cms/docs/bmad/head-component-adoption-plan.md
->>>>>>> laraxot/dev
      */
     private function resolveDescription(MetatagData $meta, ?Page $page, bool $isHome): ?string
     {
@@ -200,16 +163,9 @@ final class Head extends Component
             return trim($this->description);
         }
 
-<<<<<<< HEAD
-        // Pagine con un modello (evento, profilo); la home tiene la descrizione curata del sito, non il sottotitolo dell'hero.
-        $fromRequest = $isHome ? '' : $this->requestMeta(ResolvePageMetaAction::DESCRIPTION);
-        if ($fromRequest !== '') {
-            return Str::limit($fromRequest, 160);
-=======
         $runtimeDescription = request()->attributes->get(ResolvePageMetaAction::DESCRIPTION);
         if (is_string($runtimeDescription) && trim($runtimeDescription) !== '') {
             return trim($runtimeDescription);
->>>>>>> laraxot/dev
         }
 
         $key = 'pub_theme::seo.site.description';
@@ -226,24 +182,12 @@ final class Head extends Component
             return $siteDescription;
         }
 
-<<<<<<< HEAD
-        // Descrizione del sito curata dal tenant (config/local/{tenant}/lang/{lingua}/metatag.php), nella lingua corrente.
-        $tenantDescription = trim(app(TranslateTenantKeyAction::class)->execute('metatag.description'));
-        if ($tenantDescription !== '' && $tenantDescription !== 'metatag.description') {
-            return $tenantDescription;
-        }
-
-=======
->>>>>>> laraxot/dev
         $fallback = trim($meta->getDescription(limit: 160));
 
         return $fallback !== '' ? $fallback : null;
     }
 
-<<<<<<< HEAD
-=======
     /** @see Modules/Cms/docs/bmad/head-component-adoption-plan.md */
->>>>>>> laraxot/dev
     private function openGraphLocale(): ?string
     {
         $regional = LaravelLocalization::getCurrentLocaleRegional();
@@ -254,11 +198,8 @@ final class Head extends Component
     /**
      * URL pulito della richiesta (senza `index.php`, segmenti-punto, barre doppie e query), https in produzione:
      * la stessa stringa per canonical, `og:url` e dati strutturati.
-<<<<<<< HEAD
-=======
      *
      * @see Modules/Cms/docs/bmad/head-component-adoption-plan.md
->>>>>>> laraxot/dev
      */
     private function canonicalUrl(): string
     {
@@ -278,11 +219,8 @@ final class Head extends Component
     /**
      * Radice del sito senza il file di ingresso (come fa `asset()`: `/index.php/it` non deve finire negli URL dichiarati),
      * https in produzione. Canonical, `@id` e URL dello schema partono tutti da qui, così non possono divergere.
-<<<<<<< HEAD
-=======
      *
      * @see Modules/Cms/docs/bmad/head-component-adoption-plan.md
->>>>>>> laraxot/dev
      */
     private function siteRoot(): string
     {
@@ -291,15 +229,11 @@ final class Head extends Component
         return app()->environment('production') ? Str::of($root)->replaceMatches('/^http:\/\//', 'https://')->toString() : $root;
     }
 
-<<<<<<< HEAD
-    /** `true` se la richiesta è già nella forma del canonical: nessun `index.php` nell'URL e nessun segmento vuoto o punto. */
-=======
     /**
      * `true` se la richiesta è già nella forma del canonical: nessun `index.php` nell'URL e nessun segmento vuoto o punto.
      *
      * @see Modules/Cms/docs/bmad/head-component-adoption-plan.md
      */
->>>>>>> laraxot/dev
     private function isCanonicalForm(): bool
     {
         $request = request();
@@ -308,29 +242,6 @@ final class Head extends Component
             && trim($request->path(), '/') === app(CollapsePathSegmentsAction::class)->execute($request->path());
     }
 
-<<<<<<< HEAD
-    private function resolvePageTitle(?Page $page): string
-    {
-        $pageTitle = trim((string) $this->title);
-        if ($pageTitle === '') {
-            // Pagine con un modello (evento, profilo): ResolvePageMetaAction mette titolo e descrizione nella richiesta.
-            $pageTitle = $this->requestMeta(ResolvePageMetaAction::TITLE);
-        }
-        if ($pageTitle !== '' || $page === null) {
-            return $pageTitle;
-        }
-
-        return trim($this->stringAttribute($page, 'title'));
-    }
-
-    private function requestMeta(string $attribute): string
-    {
-        $value = request()->attributes->get($attribute);
-
-        return is_string($value) ? Str::of(strip_tags($value))->squish()->toString() : '';
-    }
-
-=======
     /** @see Modules/Cms/docs/bmad/head-component-adoption-plan.md */
     private function resolvePageTitle(?Page $page): string
     {
@@ -352,7 +263,6 @@ final class Head extends Component
     }
 
     /** @see Modules/Cms/docs/bmad/head-component-adoption-plan.md */
->>>>>>> laraxot/dev
     private function stringAttribute(Page $page, string $attribute): string
     {
         $value = $page->getAttribute($attribute);
@@ -362,11 +272,8 @@ final class Head extends Component
 
     /**
      * @param  list<string>  $localeCodes
-<<<<<<< HEAD
-=======
      *
      * @see Modules/Cms/docs/bmad/head-component-adoption-plan.md
->>>>>>> laraxot/dev
      */
     private function resolvePage(string $path, array $localeCodes): ?Page
     {
@@ -376,10 +283,7 @@ final class Head extends Component
         return app(ResolveCmsPageAction::class)->execute($path, $localeCodes, is_string($routeName) ? $routeName : null);
     }
 
-<<<<<<< HEAD
-=======
     /** @see Modules/Cms/docs/bmad/head-component-adoption-plan.md */
->>>>>>> laraxot/dev
     private function applyIcons(MetatagData $meta): void
     {
         // Il favicon applicativo vive nel public root; il manifest invece può essere
@@ -403,15 +307,11 @@ final class Head extends Component
         }
     }
 
-<<<<<<< HEAD
-    /** URL dell'asset del tema, solo se il file esiste davvero in `public/` e non e' vuoto. */
-=======
     /**
      * URL dell'asset del tema, solo se il file esiste davvero in `public/` e non e' vuoto.
      *
      * @see Modules/Cms/docs/bmad/head-component-adoption-plan.md
      */
->>>>>>> laraxot/dev
     private function themeAssetUrl(MetatagData $meta, string $file): ?string
     {
         $url = $meta->getPubThemeAsset($file);
@@ -420,10 +320,7 @@ final class Head extends Component
         return is_string($path) && $this->isServableFile(public_path(ltrim($path, '/'))) ? $url : null;
     }
 
-<<<<<<< HEAD
-=======
     /** @see Modules/Cms/docs/bmad/head-component-adoption-plan.md */
->>>>>>> laraxot/dev
     private function publicAssetUrl(string $file): ?string
     {
         $url = asset($file);
@@ -434,11 +331,8 @@ final class Head extends Component
     /**
      * Un file di 0 byte (il segnaposto `favicon.ico` dello scheletro Laravel) non e' un'icona: linkarlo lascia la scheda
      * del browser senza icona e fa credere che l'icona ci sia.
-<<<<<<< HEAD
-=======
      *
      * @see Modules/Cms/docs/bmad/head-component-adoption-plan.md
->>>>>>> laraxot/dev
      */
     private function isServableFile(string $absolutePath): bool
     {
@@ -447,11 +341,8 @@ final class Head extends Component
 
     /**
      * @param  list<string>|null  $siteLocales  lingue in cui il sito è scritto (dalla home CMS); `null` = solo la lingua corrente
-<<<<<<< HEAD
-=======
      *
      * @see Modules/Cms/docs/bmad/head-component-adoption-plan.md
->>>>>>> laraxot/dev
      */
     private function applySchema(MetatagData $meta, string $brand, string $pageTitle, ?string $description, string $canonical, bool $isHome, ?array $siteLocales): void
     {
@@ -472,10 +363,7 @@ final class Head extends Component
                 rootUrl: $this->siteRoot(),
                 homeLabel: Lang::has($homeLabelKey) ? trim((string) __($homeLabelKey)) : '',
                 languages: $siteLocales,
-<<<<<<< HEAD
-=======
                 business: $isHome ? $this->businessData() : [],
->>>>>>> laraxot/dev
                 description: $isHome ? $description : null,
                 sameAs: $isHome ? $meta->getSameAs() : [],
             );
@@ -490,8 +378,6 @@ final class Head extends Component
     }
 
     /**
-<<<<<<< HEAD
-=======
      * Dati dell'attività del tenant (`metatag.php`, chiave `business`): solo dati pubblici, come nel piè di pagina.
      *
      * @return array<string, mixed>
@@ -512,7 +398,6 @@ final class Head extends Component
     }
 
     /**
->>>>>>> laraxot/dev
      * Il JSON-LD è markup pubblico (può finire in una cache condivisa): non riceve mai l'utente della sessione.
      *
      * @return array<string, mixed>
@@ -540,10 +425,7 @@ final class Head extends Component
         );
     }
 
-<<<<<<< HEAD
-=======
     /** @see Modules/Cms/docs/bmad/head-component-adoption-plan.md */
->>>>>>> laraxot/dev
     private function isHomepage(): bool
     {
         if ($this->homepage !== null) {

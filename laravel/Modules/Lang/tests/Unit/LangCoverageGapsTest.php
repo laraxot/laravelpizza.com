@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Schema;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use function Safe\file_get_contents;
+>>>>>>> laraxot/dev
 =======
 use function Safe\file_get_contents;
 >>>>>>> laraxot/dev

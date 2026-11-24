@@ -134,12 +134,8 @@ geo.code-workspace
 
 # Forbidden parallel documentation archive
 docs/archive/
+
+# Regole portate dal remoto laraxot/dev (sync del 24/11), unite alla base senza perdere nulla
 .git/
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 tests/coverage-*.*
-docs/screenshots/
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
+tests/graphify-out/

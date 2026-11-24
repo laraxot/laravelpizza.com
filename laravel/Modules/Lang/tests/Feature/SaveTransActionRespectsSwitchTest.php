@@ -29,7 +29,11 @@ it('non scrive niente quando la scrittura delle chiavi mancanti e spenta', funct
 
     expect($after)->toBe($before);
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
+=======
+})->group('LANG-SAVETRANS-INV-3');
+>>>>>>> laraxot/dev
 =======
 })->group('LANG-SAVETRANS-INV-3');
 >>>>>>> laraxot/dev
@@ -46,7 +50,11 @@ it('sotto test non scrive nemmeno senza configurazione esplicita', function (): 
 
     expect(is_file($target) ? file_get_contents($target) : null)->toBe($before);
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
+=======
+})->group('LANG-SAVETRANS-INV-1');
+>>>>>>> laraxot/dev
 =======
 })->group('LANG-SAVETRANS-INV-1');
 >>>>>>> laraxot/dev

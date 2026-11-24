@@ -81,7 +81,6 @@ abstract class XotBaseListRecords extends FilamentListRecords
             return [];
         }
 
-<<<<<<< HEAD
         $create = CreateAction::make()
             ->icon('heroicon-o-plus')
             ->visible(fn (): bool => static::getResource()::canCreate())
@@ -110,17 +109,6 @@ abstract class XotBaseListRecords extends FilamentListRecords
 
         // Chiave mancante: trans() restituisce la chiave stessa (contiene "::") o un segnaposto "fix:".
         return $label === '' || str_contains($label, '::') || str_starts_with($label, 'fix:') ? null : $label;
-=======
-        return [
-            'create' => CreateAction::make()
-                ->icon('heroicon-o-plus')
-                ->visible(fn (): bool => static::getResource()::canCreate())
-                ->url(fn (): string => RecordAnchor::appendReturnTo(
-                    static::getResource()::getUrl('create'),
-                    RecordAnchor::currentUrl(),
-                )),
-        ];
->>>>>>> laraxot/dev
     }
 
     /**

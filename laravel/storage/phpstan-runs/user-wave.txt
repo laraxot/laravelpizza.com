@@ -1,0 +1,964 @@
+Note: Using configuration file /mnt/nas07/var/www/_bases/base_laravelpizza_fila5/laravel/phpstan.neon.
+
+ Application bootstrap failed                                                   
+
+PHPStan was unable to bootstrap your application due to an error in your code.
+
+Tip: Fix the misconfiguration in your application code and run PHPStan again.
+
+Error: syntax error, unexpected token "<<"
+
+Stack trace:
+#0 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer/Autoload/ClassLoader::initializeIncludeClosure():575}()
+#1 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(969): Composer/Autoload/ClassLoader->loadClass()
+#2 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(901): Illuminate/Foundation/Application->resolveProvider()
+#3 Modules/Xot/app/Providers/XotBaseServiceProvider.php(52): Illuminate/Foundation/Application->register()
+#4 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Modules/Xot/Providers/XotBaseServiceProvider->register()
+#5 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#6 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(41): Illuminate/Foundation/ProviderRepository->load()
+#7 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#8 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#9 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#10 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#16 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#17 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#33 vendor/phpstan/phpstan/phpstan(8): require('...')
+#34 vendor/bin/phpstan(119): include('...')
+#35 {main}
+
+ Application bootstrap failed                                                   
+
+PHPStan was unable to bootstrap your application due to an error in your code.
+
+Tip: Fix the misconfiguration in your application code and run PHPStan again.
+
+Error: syntax error, unexpected token "<<"
+
+Stack trace:
+#0 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer/Autoload/ClassLoader::initializeIncludeClosure():575}()
+#1 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(969): Composer/Autoload/ClassLoader->loadClass()
+#2 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(901): Illuminate/Foundation/Application->resolveProvider()
+#3 Modules/Xot/app/Providers/XotBaseServiceProvider.php(52): Illuminate/Foundation/Application->register()
+#4 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Modules/Xot/Providers/XotBaseServiceProvider->register()
+#5 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#6 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(41): Illuminate/Foundation/ProviderRepository->load()
+#7 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#8 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#9 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#10 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#16 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#17 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#33 vendor/phpstan/phpstan/phpstan(8): require('...')
+#34 vendor/bin/phpstan(119): include('...')
+#35 {main}
+
+ Application bootstrap failed                                                   
+
+PHPStan was unable to bootstrap your application due to an error in your code.
+
+Tip: Fix the misconfiguration in your application code and run PHPStan again.
+
+Error: syntax error, unexpected token "<<"
+
+Stack trace:
+#0 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer/Autoload/ClassLoader::initializeIncludeClosure():575}()
+#1 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(969): Composer/Autoload/ClassLoader->loadClass()
+#2 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(901): Illuminate/Foundation/Application->resolveProvider()
+#3 Modules/Xot/app/Providers/XotBaseServiceProvider.php(52): Illuminate/Foundation/Application->register()
+#4 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Modules/Xot/Providers/XotBaseServiceProvider->register()
+#5 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#6 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(41): Illuminate/Foundation/ProviderRepository->load()
+#7 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#8 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#9 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#10 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#16 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#17 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#33 vendor/phpstan/phpstan/phpstan(8): require('...')
+#34 vendor/bin/phpstan(119): include('...')
+#35 {main}
+
+ Application bootstrap failed                                                   
+
+PHPStan was unable to bootstrap your application due to an error in your code.
+
+Tip: Fix the misconfiguration in your application code and run PHPStan again.
+
+Error: syntax error, unexpected token "<<"
+
+Stack trace:
+#0 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer/Autoload/ClassLoader::initializeIncludeClosure():575}()
+#1 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(969): Composer/Autoload/ClassLoader->loadClass()
+#2 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(901): Illuminate/Foundation/Application->resolveProvider()
+#3 Modules/Xot/app/Providers/XotBaseServiceProvider.php(52): Illuminate/Foundation/Application->register()
+#4 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Modules/Xot/Providers/XotBaseServiceProvider->register()
+#5 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#6 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(41): Illuminate/Foundation/ProviderRepository->load()
+#7 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#8 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#9 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#10 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#16 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#17 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#33 vendor/phpstan/phpstan/phpstan(8): require('...')
+#34 vendor/bin/phpstan(119): include('...')
+#35 {main}
+
+ Application bootstrap failed                                                   
+
+PHPStan was unable to bootstrap your application due to an error in your code.
+
+Tip: Fix the misconfiguration in your application code and run PHPStan again.
+
+Error: syntax error, unexpected token "<<"
+
+Stack trace:
+#0 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer/Autoload/ClassLoader::initializeIncludeClosure():575}()
+#1 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(969): Composer/Autoload/ClassLoader->loadClass()
+#2 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(901): Illuminate/Foundation/Application->resolveProvider()
+#3 Modules/Xot/app/Providers/XotBaseServiceProvider.php(52): Illuminate/Foundation/Application->register()
+#4 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Modules/Xot/Providers/XotBaseServiceProvider->register()
+#5 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#6 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(41): Illuminate/Foundation/ProviderRepository->load()
+#7 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#8 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#9 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#10 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#16 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#17 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#33 vendor/phpstan/phpstan/phpstan(8): require('...')
+#34 vendor/bin/phpstan(119): include('...')
+#35 {main}
+
+ Application bootstrap failed                                                   
+
+PHPStan was unable to bootstrap your application due to an error in your code.
+
+Tip: Fix the misconfiguration in your application code and run PHPStan again.
+
+Error: syntax error, unexpected token "<<"
+
+Stack trace:
+#0 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer/Autoload/ClassLoader::initializeIncludeClosure():575}()
+#1 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(969): Composer/Autoload/ClassLoader->loadClass()
+#2 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(901): Illuminate/Foundation/Application->resolveProvider()
+#3 Modules/Xot/app/Providers/XotBaseServiceProvider.php(52): Illuminate/Foundation/Application->register()
+#4 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Modules/Xot/Providers/XotBaseServiceProvider->register()
+#5 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#6 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(41): Illuminate/Foundation/ProviderRepository->load()
+#7 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#8 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#9 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#10 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#16 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#17 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#33 vendor/phpstan/phpstan/phpstan(8): require('...')
+#34 vendor/bin/phpstan(119): include('...')
+#35 {main}
+
+ Application bootstrap failed                                                   
+
+PHPStan was unable to bootstrap your application due to an error in your code.
+
+Tip: Fix the misconfiguration in your application code and run PHPStan again.
+
+Error: syntax error, unexpected token "<<"
+
+Stack trace:
+#0 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer/Autoload/ClassLoader::initializeIncludeClosure():575}()
+#1 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(969): Composer/Autoload/ClassLoader->loadClass()
+#2 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(901): Illuminate/Foundation/Application->resolveProvider()
+#3 Modules/Xot/app/Providers/XotBaseServiceProvider.php(52): Illuminate/Foundation/Application->register()
+#4 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Modules/Xot/Providers/XotBaseServiceProvider->register()
+#5 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#6 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(41): Illuminate/Foundation/ProviderRepository->load()
+#7 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#8 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#9 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#10 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#16 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#17 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#33 vendor/phpstan/phpstan/phpstan(8): require('...')
+#34 vendor/bin/phpstan(119): include('...')
+#35 {main}
+
+ Application bootstrap failed                                                   
+
+PHPStan was unable to bootstrap your application due to an error in your code.
+
+Tip: Fix the misconfiguration in your application code and run PHPStan again.
+
+Error: syntax error, unexpected token "<<"
+
+Stack trace:
+#0 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer/Autoload/ClassLoader::initializeIncludeClosure():575}()
+#1 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(969): Composer/Autoload/ClassLoader->loadClass()
+#2 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(901): Illuminate/Foundation/Application->resolveProvider()
+#3 Modules/Xot/app/Providers/XotBaseServiceProvider.php(52): Illuminate/Foundation/Application->register()
+#4 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Modules/Xot/Providers/XotBaseServiceProvider->register()
+#5 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#6 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(41): Illuminate/Foundation/ProviderRepository->load()
+#7 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#8 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#9 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#10 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#16 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#17 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#33 vendor/phpstan/phpstan/phpstan(8): require('...')
+#34 vendor/bin/phpstan(119): include('...')
+#35 {main}
+
+ Application bootstrap failed                                                   
+
+PHPStan was unable to bootstrap your application due to an error in your code.
+
+Tip: Fix the misconfiguration in your application code and run PHPStan again.
+
+Error: syntax error, unexpected token "<<"
+
+Stack trace:
+#0 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer/Autoload/ClassLoader::initializeIncludeClosure():575}()
+#1 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(969): Composer/Autoload/ClassLoader->loadClass()
+#2 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(901): Illuminate/Foundation/Application->resolveProvider()
+#3 Modules/Xot/app/Providers/XotBaseServiceProvider.php(52): Illuminate/Foundation/Application->register()
+#4 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Modules/Xot/Providers/XotBaseServiceProvider->register()
+#5 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#6 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(41): Illuminate/Foundation/ProviderRepository->load()
+#7 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#8 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#9 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#10 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#16 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#17 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#33 vendor/phpstan/phpstan/phpstan(8): require('...')
+#34 vendor/bin/phpstan(119): include('...')
+#35 {main}
+
+ Application bootstrap failed                                                   
+
+PHPStan was unable to bootstrap your application due to an error in your code.
+
+Tip: Fix the misconfiguration in your application code and run PHPStan again.
+
+Error: syntax error, unexpected token "<<"
+
+Stack trace:
+#0 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer/Autoload/ClassLoader::initializeIncludeClosure():575}()
+#1 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(969): Composer/Autoload/ClassLoader->loadClass()
+#2 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(901): Illuminate/Foundation/Application->resolveProvider()
+#3 Modules/Xot/app/Providers/XotBaseServiceProvider.php(52): Illuminate/Foundation/Application->register()
+#4 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Modules/Xot/Providers/XotBaseServiceProvider->register()
+#5 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#6 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(41): Illuminate/Foundation/ProviderRepository->load()
+#7 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#8 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#9 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#10 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#16 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#17 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#33 vendor/phpstan/phpstan/phpstan(8): require('...')
+#34 vendor/bin/phpstan(119): include('...')
+#35 {main}
+
+ Application bootstrap failed                                                   
+
+PHPStan was unable to bootstrap your application due to an error in your code.
+
+Tip: Fix the misconfiguration in your application code and run PHPStan again.
+
+Error: syntax error, unexpected token "<<"
+
+Stack trace:
+#0 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer/Autoload/ClassLoader::initializeIncludeClosure():575}()
+#1 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(969): Composer/Autoload/ClassLoader->loadClass()
+#2 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(901): Illuminate/Foundation/Application->resolveProvider()
+#3 Modules/Xot/app/Providers/XotBaseServiceProvider.php(52): Illuminate/Foundation/Application->register()
+#4 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Modules/Xot/Providers/XotBaseServiceProvider->register()
+#5 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#6 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(41): Illuminate/Foundation/ProviderRepository->load()
+#7 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#8 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#9 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#10 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#16 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#17 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#33 vendor/phpstan/phpstan/phpstan(8): require('...')
+#34 vendor/bin/phpstan(119): include('...')
+#35 {main}
+
+ Application bootstrap failed                                                   
+
+PHPStan was unable to bootstrap your application due to an error in your code.
+
+Tip: Fix the misconfiguration in your application code and run PHPStan again.
+
+Error: syntax error, unexpected token "<<"
+
+Stack trace:
+#0 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer/Autoload/ClassLoader::initializeIncludeClosure():575}()
+#1 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(969): Composer/Autoload/ClassLoader->loadClass()
+#2 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(901): Illuminate/Foundation/Application->resolveProvider()
+#3 Modules/Xot/app/Providers/XotBaseServiceProvider.php(52): Illuminate/Foundation/Application->register()
+#4 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Modules/Xot/Providers/XotBaseServiceProvider->register()
+#5 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#6 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(41): Illuminate/Foundation/ProviderRepository->load()
+#7 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#8 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#9 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#10 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#16 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#17 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#33 vendor/phpstan/phpstan/phpstan(8): require('...')
+#34 vendor/bin/phpstan(119): include('...')
+#35 {main}
+
+ Application bootstrap failed                                                   
+
+PHPStan was unable to bootstrap your application due to an error in your code.
+
+Tip: Fix the misconfiguration in your application code and run PHPStan again.
+
+Error: syntax error, unexpected token "<<"
+
+Stack trace:
+#0 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer/Autoload/ClassLoader::initializeIncludeClosure():575}()
+#1 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(969): Composer/Autoload/ClassLoader->loadClass()
+#2 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(901): Illuminate/Foundation/Application->resolveProvider()
+#3 Modules/Xot/app/Providers/XotBaseServiceProvider.php(52): Illuminate/Foundation/Application->register()
+#4 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Modules/Xot/Providers/XotBaseServiceProvider->register()
+#5 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#6 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(41): Illuminate/Foundation/ProviderRepository->load()
+#7 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#8 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#9 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#10 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#16 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#17 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#33 vendor/phpstan/phpstan/phpstan(8): require('...')
+#34 vendor/bin/phpstan(119): include('...')
+#35 {main}
+
+ Application bootstrap failed                                                   
+
+PHPStan was unable to bootstrap your application due to an error in your code.
+
+Tip: Fix the misconfiguration in your application code and run PHPStan again.
+
+Error: syntax error, unexpected token "<<"
+
+Stack trace:
+#0 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer/Autoload/ClassLoader::initializeIncludeClosure():575}()
+#1 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(969): Composer/Autoload/ClassLoader->loadClass()
+#2 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(901): Illuminate/Foundation/Application->resolveProvider()
+#3 Modules/Xot/app/Providers/XotBaseServiceProvider.php(52): Illuminate/Foundation/Application->register()
+#4 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Modules/Xot/Providers/XotBaseServiceProvider->register()
+#5 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#6 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(41): Illuminate/Foundation/ProviderRepository->load()
+#7 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#8 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#9 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#10 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+
+#12 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#16 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#17 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+ Application bootstrap failed                                                   
+
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+PHPStan was unable to bootstrap your application due to an error in your code.
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+
+Tip: Fix the misconfiguration in your application code and run PHPStan again.
+
+Error: syntax error, unexpected token "<<"
+
+Stack trace:
+#0 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer/Autoload/ClassLoader::initializeIncludeClosure():575}()
+#1 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(969): Composer/Autoload/ClassLoader->loadClass()
+#2 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(901): Illuminate/Foundation/Application->resolveProvider()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#3 Modules/Xot/app/Providers/XotBaseServiceProvider.php(52): Illuminate/Foundation/Application->register()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#4 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Modules/Xot/Providers/XotBaseServiceProvider->register()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#5 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#6 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(41): Illuminate/Foundation/ProviderRepository->load()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#7 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#8 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#9 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#10 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#33 vendor/phpstan/phpstan/phpstan(8): require('...')
+#12 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#34 vendor/bin/phpstan(119): include('...')
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#35 {main}
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#16 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#17 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#33 vendor/phpstan/phpstan/phpstan(8): require('...')
+#34 vendor/bin/phpstan(119): include('...')
+#35 {main}
+
+ Application bootstrap failed                                                   
+
+PHPStan was unable to bootstrap your application due to an error in your code.
+
+Tip: Fix the misconfiguration in your application code and run PHPStan again.
+
+Error: syntax error, unexpected token "<<"
+
+Stack trace:
+#0 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer/Autoload/ClassLoader::initializeIncludeClosure():575}()
+#1 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(969): Composer/Autoload/ClassLoader->loadClass()
+#2 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(901): Illuminate/Foundation/Application->resolveProvider()
+#3 Modules/Xot/app/Providers/XotBaseServiceProvider.php(52): Illuminate/Foundation/Application->register()
+#4 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Modules/Xot/Providers/XotBaseServiceProvider->register()
+#5 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#6 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(41): Illuminate/Foundation/ProviderRepository->load()
+#7 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#8 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#9 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#10 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#16 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#17 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#33 vendor/phpstan/phpstan/phpstan(8): require('...')
+#34 vendor/bin/phpstan(119): include('...')
+#35 {main}
+
+ Application bootstrap failed                                                   
+
+PHPStan was unable to bootstrap your application due to an error in your code.
+
+Tip: Fix the misconfiguration in your application code and run PHPStan again.
+
+Error: syntax error, unexpected token "<<"
+
+Stack trace:
+#0 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer/Autoload/ClassLoader::initializeIncludeClosure():575}()
+#1 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(969): Composer/Autoload/ClassLoader->loadClass()
+#2 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(901): Illuminate/Foundation/Application->resolveProvider()
+#3 Modules/Xot/app/Providers/XotBaseServiceProvider.php(52): Illuminate/Foundation/Application->register()
+#4 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Modules/Xot/Providers/XotBaseServiceProvider->register()
+#5 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#6 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(41): Illuminate/Foundation/ProviderRepository->load()
+#7 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#8 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#9 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#10 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#16 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#17 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#33 vendor/phpstan/phpstan/phpstan(8): require('...')
+#34 vendor/bin/phpstan(119): include('...')
+#35 {main}
+
+ Application bootstrap failed                                                   
+
+PHPStan was unable to bootstrap your application due to an error in your code.
+
+Tip: Fix the misconfiguration in your application code and run PHPStan again.
+
+Error: syntax error, unexpected token "<<"
+
+Stack trace:
+#0 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer/Autoload/ClassLoader::initializeIncludeClosure():575}()
+#1 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(969): Composer/Autoload/ClassLoader->loadClass()
+#2 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(901): Illuminate/Foundation/Application->resolveProvider()
+#3 Modules/Xot/app/Providers/XotBaseServiceProvider.php(52): Illuminate/Foundation/Application->register()
+#4 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Modules/Xot/Providers/XotBaseServiceProvider->register()
+#5 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#6 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(41): Illuminate/Foundation/ProviderRepository->load()
+#7 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#8 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#9 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#10 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#16 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#17 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#33 vendor/phpstan/phpstan/phpstan(8): require('...')
+#34 vendor/bin/phpstan(119): include('...')
+#35 {main}
+
+ Application bootstrap failed                                                   
+
+PHPStan was unable to bootstrap your application due to an error in your code.
+
+Tip: Fix the misconfiguration in your application code and run PHPStan again.
+
+Error: syntax error, unexpected token "<<"
+
+Stack trace:
+#0 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer/Autoload/ClassLoader::initializeIncludeClosure():575}()
+#1 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(969): Composer/Autoload/ClassLoader->loadClass()
+#2 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(901): Illuminate/Foundation/Application->resolveProvider()
+#3 Modules/Xot/app/Providers/XotBaseServiceProvider.php(52): Illuminate/Foundation/Application->register()
+#4 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Modules/Xot/Providers/XotBaseServiceProvider->register()
+#5 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#6 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(41): Illuminate/Foundation/ProviderRepository->load()
+#7 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#8 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#9 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#10 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#16 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#17 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#33 vendor/phpstan/phpstan/phpstan(8): require('...')
+#34 vendor/bin/phpstan(119): include('...')
+#35 {main}
+
+ Application bootstrap failed                                                   
+
+PHPStan was unable to bootstrap your application due to an error in your code.
+
+Tip: Fix the misconfiguration in your application code and run PHPStan again.
+
+Error: syntax error, unexpected token "<<"
+
+Stack trace:
+#0 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer/Autoload/ClassLoader::initializeIncludeClosure():575}()
+#1 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(969): Composer/Autoload/ClassLoader->loadClass()
+#2 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(901): Illuminate/Foundation/Application->resolveProvider()
+#3 Modules/Xot/app/Providers/XotBaseServiceProvider.php(52): Illuminate/Foundation/Application->register()
+#4 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Modules/Xot/Providers/XotBaseServiceProvider->register()
+#5 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#6 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(41): Illuminate/Foundation/ProviderRepository->load()
+#7 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#8 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#9 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#10 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#16 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#17 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/WorkerRunner.php(105): PHPStan/Command/BootstrapFilesRunner->run()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ForkedProcess.php(141): PHPStan/Parallel/WorkerRunner->run()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Parallel/ParallelAnalyser.php(229): PHPStan/Parallel/ForkedProcess->start()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(62): PHPStan/Parallel/ParallelAnalyser->analyse()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#30 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#31 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#32 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#33 vendor/phpstan/phpstan/phpstan(8): require('...')
+#34 vendor/bin/phpstan(119): include('...')
+#35 {main}
+
+ Application bootstrap failed                                                   
+
+PHPStan was unable to bootstrap your application due to an error in your code.
+
+Tip: Fix the misconfiguration in your application code and run PHPStan again.
+
+Error: syntax error, unexpected token "<<"
+
+Stack trace:
+#0 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/composer/ClassLoader.php(427): {closure:Composer/Autoload/ClassLoader::initializeIncludeClosure():575}()
+#1 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(969): Composer/Autoload/ClassLoader->loadClass()
+#2 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(901): Illuminate/Foundation/Application->resolveProvider()
+#3 Modules/Xot/app/Providers/XotBaseServiceProvider.php(52): Illuminate/Foundation/Application->register()
+#4 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Modules/Xot/Providers/XotBaseServiceProvider->register()
+#5 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#6 vendor/nwidart/laravel-modules/src/ModulesServiceProvider.php(41): Illuminate/Foundation/ProviderRepository->load()
+#7 vendor/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php(67): Nwidart/Modules/ModulesServiceProvider->registerModules()
+#8 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Nwidart/Modules/LaravelModulesServiceProvider->register()
+#9 Modules/Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php(38): Illuminate/Foundation/Application->register()
+#10 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(904): Coolsam/FilamentModules/CoolModulesServiceProvider->register()
+#11 vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(74): Illuminate/Foundation/Application->register()
+#12 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(879): Illuminate/Foundation/ProviderRepository->load()
+#13 vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(37): Illuminate/Foundation/Application->registerConfiguredProviders()
+#14 vendor/laravel/framework/src/Illuminate/Foundation/Application.php(350): Illuminate/Foundation/Bootstrap/RegisterProviders->bootstrap()
+#15 vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(530): Illuminate/Foundation/Application->bootstrapWith()
+#16 vendor/larastan/larastan/bootstrap.php(31): Illuminate/Foundation/Console/Kernel->bootstrap()
+#17 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(507): require_once('...')
+#18 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/CommandHelper.php(508): PHPStan/Command/CommandHelper::{closure:PHPStan/Command/CommandHelper::executeBootstrapFile():506}()
+#19 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/BootstrapFilesRunner.php(56): PHPStan/Command/CommandHelper::executeBootstrapFile()
+#20 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyserRunner.php(74): PHPStan/Command/BootstrapFilesRunner->run()
+#21 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(211): PHPStan/Command/AnalyserRunner->runAnalyser()
+#22 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseApplication.php(87): PHPStan/Command/AnalyseApplication->runAnalyser()
+#23 phar://vendor/phpstan/phpstan/phpstan.phar/src/Command/AnalyseCommand.php(290): PHPStan/Command/AnalyseApplication->analyse()
+#24 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Command/Command.php(259): PHPStan/Command/AnalyseCommand->execute()
+#25 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(868): _PHPStan_a90af42ea/Symfony/Component/Console/Command/Command->run()
+#26 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(261): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRunCommand()
+#27 phar://vendor/phpstan/phpstan/phpstan.phar/vendor/symfony/console/Application.php(157): _PHPStan_a90af42ea/Symfony/Component/Console/Application->doRun()
+#28 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(120): _PHPStan_a90af42ea/Symfony/Component/Console/Application->run()
+#29 phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan(121): {closure:phar://vendor/phpstan/phpstan/phpstan.phar/bin/phpstan:19}()
+#30 vendor/phpstan/phpstan/phpstan(8): require('...')
+#31 vendor/bin/phpstan(119): include('...')
+#32 {main}

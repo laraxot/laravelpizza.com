@@ -22,7 +22,6 @@ tests/.claude-audit
 # LARAXOT MODULE ACTIVITY - .GITIGNORE
 # Modulo Activity Laraxot - Template standardizzato
 # Ultimo aggiornamento: 2025-01-31
-
 # DEPENDENCIES & PACKAGES
 /vendor/
 /vendor
@@ -34,7 +33,6 @@ yarn.lock
 composer.lock
 yarn-error.log
 npm-debug.log
-
 # BUILD & COMPILED FILES
 /build
 /build/
@@ -42,7 +40,6 @@ build/
 dist/
 docs/cache/
 cache/
-
 # CACHE & TEMPORARY FILES
 *.cache
 *.lock
@@ -56,14 +53,12 @@ cache/
 v8-compile-cache-*
 .php-cs-fixer.cache
 .phpunit.result.cache
-
 # LOG FILES
 *.log
 error_log
 npm-debug.log*
 yarn-error.log*
 lerna-debug.log*
-
 # LARAVEL SPECIFIC
 bootstrap/compiled.php
 app/storage/
@@ -75,7 +70,6 @@ storage/*.key
 .env
 .env.*
 !.env.example
-
 # ENVIRONMENT & CONFIGURATION
 Homestead.yaml
 Homestead.json
@@ -83,12 +77,10 @@ Homestead.json
 /.idea
 .phpintel
 .vscode/
-
 # GIT SPECIFIC
 .git-rewrite/
 .git-rewrite
 .git-blame-ignore-revs
-
 # SYSTEM FILES
 .DS_Store
 .DS_Store?
@@ -98,7 +90,6 @@ Homestead.json
 ehthumbs.db
 Thumbs.db
 *~
-
 # BACKUP FILES
 *.old
 *.old1
@@ -110,7 +101,6 @@ Thumbs.db
 *.bak
 *.bakcup
 *.new
-
 # DEVELOPMENT TOOLS
 .windsurf/
 .cursor/
@@ -131,22 +121,16 @@ database/Migrations_old/
 database/Seeders_old/
 database/Factories_old/
 database_old/
-
 # MODULE SPECIFIC - ACTIVITY
 # File di configurazione locale
 config/local.php
 config/development.php
-
 # Cache activity log
 storage/activity/
 storage/logs/
-
 # File di test activity
 activity_test_data.json
 test_activity_logs.sql
-
-# END OF ACTIVITY .GITIGNORE
-
 # END OF ACTIVITY .GITIGNORE
 # File specifici del progetto
 *.fila2
@@ -157,7 +141,6 @@ _docs/
 tests/coverage/
 tests/coverage.xml/
 activity_coverage.xml
-
 # -----------------------------------------------------------------------------
 # Copie residue da merge/rebase o editor (mai committare — es. `.agent~HEAD`, `*.md~head`)
 *~HEAD
@@ -180,7 +163,6 @@ tests/AuditCoverage/
 phpinsights.php
 rector.php
 # graphify-out: generated AST/knowledge graph — never commit (no git-lfs; rebuild with graphify update)
-graphify-out
 graphify-out/
 .agents
 tools
@@ -208,6 +190,15 @@ workbench/
 .cursor~*
 .windsurf~*
 tests/activity_coverage.xml
+
+# module-root-hygiene (story module-root-hygiene)
+/.github/skills/
+docs/graphify
+resources/lang
+Activity
+
+# Regole portate dal remoto laraxot/dev (sync del 24/11), unite alla base senza perdere nulla
+graphify-out
 Activity/
 tests/coverage-*.*
-docs/screenshots/
+tests/graphify-out/

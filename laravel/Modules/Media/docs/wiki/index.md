@@ -34,14 +34,44 @@ title: "Media Wiki Index"
 module: "Media"
 ---
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+---
+title: "Media Wiki Index"
+module: "Media"
+---
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 # Media Module Wiki
 
 ## Indices
 - [Rules](rules/index.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Skills](skills/INDEX.md)
+- [Commands](commands/INDEX.md)
+- [Memories](memories/INDEX.md)
+- [Concepts](concepts/INDEX.md)
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Skills](skills/index.md)
 - [Commands](commands/index.md)
 - [Memories](memories/index.md)
 - [Concepts](concepts/index.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## On-Demand Workflow
 

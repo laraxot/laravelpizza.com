@@ -1,0 +1,1 @@
+zsh:1: no such file or directory: ./vendor/bin/phpstan

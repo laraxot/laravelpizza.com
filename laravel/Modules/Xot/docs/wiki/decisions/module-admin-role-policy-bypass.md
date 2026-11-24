@@ -56,3 +56,6 @@ scansione) poteva rettificare pesi ed eliminare conferimenti.
 Quelle policy usano il trait `Concerns\RequiresOperationalPermissions`: `moduleAdminRole()` restituisce null,
 quindi passa solo il super-admin. Test: Roosko `AuthorizationTest` ("il ruolo del pannello ... non concede
 abilita' operative").
+
+In questa base il trait e' usato da `OperationalXotBasePolicy` (base astratta per policy
+operative); le policy dominio Roosko/Waste lo ereditano quando il modulo e' presente.

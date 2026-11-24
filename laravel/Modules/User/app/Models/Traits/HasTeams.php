@@ -10,17 +10,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\Pivot;
 use Illuminate\Support\Collection;
-<<<<<<< HEAD
 use Modules\User\Contracts\TeamContract;
 use Modules\User\Models\Role;
 use Modules\User\Models\TeamUser;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
-=======
-use Modules\Xot\Actions\Cast\SafeStringCastAction;
-use Modules\User\Contracts\TeamContract;
-use Modules\User\Models\Role;
-use Modules\User\Models\TeamUser;
->>>>>>> laraxot/dev
 use Modules\Xot\Contracts\UserContract as XotUserContract;
 use Modules\Xot\Datas\XotData;
 use Spatie\Permission\Models\Permission;

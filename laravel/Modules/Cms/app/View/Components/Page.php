@@ -7,10 +7,7 @@ namespace Modules\Cms\View\Components;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View as ViewContract;
 use Illuminate\View\Component;
-<<<<<<< HEAD
-=======
 use Modules\Cms\Actions\ResolvePageAction;
->>>>>>> laraxot/dev
 use Modules\Cms\Actions\ResolvePageMetaAction;
 use Modules\Cms\Datas\BlockData;
 use Modules\Cms\Models\Page as PageModel;
@@ -20,11 +17,8 @@ use Spatie\LaravelData\DataCollection;
  * CMS page shell: blocks loaded by slug. Route/context keys live only in {@see $data}.
  *
  * @SuppressWarnings("PHPMD.StaticAccess")
-<<<<<<< HEAD
-=======
  *
  * @see Modules/Cms/docs/components/page-component-data-contract.md
->>>>>>> laraxot/dev
  */
 final class Page extends Component
 {
@@ -40,11 +34,8 @@ final class Page extends Component
 
     /**
      * @param  array<string, mixed>  $data  Opaque context bag (container0, slug0, models, …)
-<<<<<<< HEAD
-=======
      *
      * @see Modules/Cms/docs/components/page-component-data-contract.md
->>>>>>> laraxot/dev
      */
     public function __construct(
         string $side = 'content',
@@ -70,10 +61,7 @@ final class Page extends Component
         $this->slug = $slug;
 
         $this->blocks = PageModel::getBlocksBySlug($this->slug, $this->side);
-<<<<<<< HEAD
-=======
         $this->resolveDynamicContext();
->>>>>>> laraxot/dev
 
         // Titolo e descrizione della pagina per <x-metatags> (il layout è reso dopo il contenuto).
         if ($this->side === 'content') {
@@ -81,8 +69,6 @@ final class Page extends Component
         }
     }
 
-<<<<<<< HEAD
-=======
     /**
      * Risolve il fallback per le rotte Folio dinamiche senza riportare query o rami di dominio nelle Blade.
      *
@@ -147,7 +133,6 @@ final class Page extends Component
     /**
      * @see Modules/Cms/docs/components/page-component-data-contract.md
      */
->>>>>>> laraxot/dev
     public function render(): ViewContract|Factory
     {
         $viewName = 'cms::components.page';

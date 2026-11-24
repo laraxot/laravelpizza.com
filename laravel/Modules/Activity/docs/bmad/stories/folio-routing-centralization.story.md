@@ -1,8 +1,17 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Centralizzare il routing Folio dei moduli: Activity non monta Folio"
 status: done
 =======
+=======
+=======
+<<<<<<< HEAD
+title: "Centralizzare il routing Folio dei moduli: Activity non monta Folio"
+status: done
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_5Ed99A
 title: "Centralizzare il routing Folio dei moduli"
 status: review
@@ -10,6 +19,12 @@ status: review
 title: "Centralizzare il routing Folio dei moduli: Activity non monta Folio"
 status: done
 >>>>>>> .merge_file_ER34E5
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 module: Activity
 epic: architecture
@@ -47,13 +62,27 @@ Motivi:
 ## Decisione
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 **Progetti con il modulo Cms** — owner del montaggio Folio:
 =======
+=======
+=======
+<<<<<<< HEAD
+**Progetti con il modulo Cms** — owner del montaggio Folio:
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_5Ed99A
 Owner del montaggio Folio in questo progetto:
 =======
 **Progetti con il modulo Cms** — owner del montaggio Folio:
 >>>>>>> .merge_file_ER34E5
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 `Modules\Cms\Providers\FolioVoltServiceProvider`.
 
@@ -64,6 +93,12 @@ Owner del montaggio Folio in questo progetto:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_5Ed99A
 `ActivityServiceProvider` = config/comportamento Activity, **non** router.
 Niente `Folio::path()` lì (rimozione applicata; istruzione utente: aggiungere Folio nel provider «è sbagliato»).
@@ -77,6 +112,12 @@ Folio dei moduli e dei temi è `Cms/app/Providers/FolioVoltServiceProvider`.
 Activity resta proprietario della configurazione e del comportamento Activity,
 non dell'infrastruttura di routing.
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 **Progetti senza il modulo Cms** — Cms non va introdotto solo per questo, e
 `App\Providers\FolioServiceProvider` non va usato come surrogato: il provider
@@ -87,8 +128,18 @@ In entrambi i casi `ActivityServiceProvider` = configurazione/comportamento Acti
 **non** router. Niente `Folio::path()` / `use Laravel\Folio\Folio` lì (rimozione
 applicata; istruzione utente: aggiungere Folio nel provider «è sbagliato»).
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> .merge_file_ER34E5
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_ER34E5
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ER34E5
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 ## Verifica
@@ -105,6 +156,12 @@ applicata; istruzione utente: aggiungere Folio nel provider «è sbagliato»).
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_5Ed99A
 - [ ] Nessuna registrazione `Folio::path()` nel provider Activity (file ancora sotto lock concorrente).
 - [x] Nessun provider Folio applicativo aggiunto o registrato.
@@ -148,6 +205,12 @@ In PTVX Cms non c’è e non deve stare: si **impara** il pattern dai sibling FO
 - [x] `App\Providers\FolioServiceProvider` non registrato e **non scomodato**: nei sibling FO basta FolioVolt; qui non è un surrogato.
 - [x] Pest `ActivityServiceProviderNoFolioMountTest`.
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [x] Nessuna registrazione `Folio::path()` nel provider Activity.
 - [x] Owner unico con Cms: `Cms\FolioVoltServiceProvider` (nessun `App\Providers\FolioServiceProvider`).
@@ -156,6 +219,16 @@ In PTVX Cms non c’è e non deve stare: si **impara** il pattern dai sibling FO
 - [x] Pest `ActivityServiceProviderNoFolioMountTest`.
 - [ ] Pest feature `LogDownloadPageTest` verde in ambiente di test stabile.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> .merge_file_ER34E5
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_ER34E5
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ER34E5
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

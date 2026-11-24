@@ -44,3 +44,19 @@ qmd: "phpstan stabilization"
 issues: []
 discussions: []
 *This document is maintained as a living record of the module's quality status.*
+
+## Wave PHPStan Modules/Geo (zero)
+
+### Cause radice riusabili
+
+1. **`class.notFound` / `missingType.iterableValue` su `HasCoordinatePicker`**
+   - Sintomo: senza `use`, PHPStan risolve `CoordinatePickerHelpers` sotto `Traits\` → `class.notFound`; con corpi Nominatim nel trait, L10 perde i generics `array` (× ogni consumer: MapPicker, GeopointPicker, …).
+   - Fix: `use Modules\Geo\Filament\Forms\Components\CoordinatePickerHelpers`; delegare `searchAddress` / `reverseGeocode` / `normalize` / `extract` agli Helpers (fonte unica Nominatim). Wrapper `#[Exposed]` restano nel trait.
+2. **`trait.unused` su doppioni morti** (`GeographicalScopes`, `HasPlaceTrait`, `SushiToJsons` Geo, `HasAddresses`)
+   - Gia' decisi come morti (canon: `GeoTrait`, `HasAddress`, `Tenant\SushiToJsons`); ricomparsi da merge.
+   - Fix: rimozione + `scopeOrderByDistance` assorbito in `GeoTrait`; probe `*PhpstanProbe*` eliminati (vietati).
+3. **Mai** `@phpstan-ignore` / probe per silenziare `trait.unused`.
+
+Verifica: `cd laravel && ./vendor/bin/phpstan analyse Modules/Geo --no-progress`
+
+Verifica: `./vendor/bin/phpstan analyse Modules/Geo --no-progress` → **0 errori** (exit 0).

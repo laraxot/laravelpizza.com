@@ -6,7 +6,7 @@ La pagina pubblica `/it/profile/{id}` deve seguire lo stesso pattern di `events.
 
 - route Folio generica `pages/[container0]/[slug0]/index.blade.php`;
 - slug CMS `profile.view`;
-- JSON `profile_view.json`;
+- JSON `profile/view.json`;
 - block presenter puro del tema.
 
 ## Dati attesi dal block

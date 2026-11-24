@@ -86,8 +86,9 @@ contiene la tabella minima di mapping fra regola, group e test.
 
 - [Standard di authoring dei contratti](contract-authoring-standard.md)
 - [Template per Behavioral Contract](behavioral-contract-template.md) — IDs, gruppi Pest e comando di conferma
-- [ADR degli entrypoint di route vuoti](../adr/route-entrypoints-canonical-empty.md) — gli entrypoint senza route
-  restano presenti e delegano al percorso canonico senza registrare route.
+- [Story: file route in ogni modulo](../stories/module-route-files-exist-in-all-modules.story.md) — `routes/web.php` e
+  `routes/api.php` devono esistere in tutti i moduli, anche con il solo `<?php`, senza `require` (l'[ADR degli entrypoint
+  vuoti](../adr/route-entrypoints-canonical-empty.md) e' superato).
 - [Bootstrap provider registry](bootstrap-provider-registry.md) — `bootstrap/providers.php` contiene solo `AppServiceProvider`; i provider dei moduli si scoprono via Composer e `AppServiceProvider` tiene la registrazione dei pannelli Filament (`BOOTSTRAP-PROVIDERS-001..003`).
 - [SaveArrayAction](save-array-action.md) — scrive un array su file PHP (default) o JSON, sovrascrivendo; punto unico usato da Lang, Tenant e Xot.
 - [SavePhpArrayAction](save-php-array-action.md) — file PHP con `strict_types`, una chiave per riga, rileggibile con `require`.

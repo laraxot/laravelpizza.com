@@ -18,6 +18,12 @@ related:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_Nvx0tX
 ## Formato
 
@@ -54,6 +60,12 @@ related:
 - Necessità di refactor esistente
 =======
 >>>>>>> .merge_file_qzJqb1
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 Le voci di esempio del template precedente sono state rimosse: non descrivevano il modulo.
 Stati ammessi: PROPOSTA, APERTA, APPROVATA, RIFIUTATA, OBSOLETA; ogni voce dichiara il perché e l'evidenza nel codice.

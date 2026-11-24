@@ -12,6 +12,10 @@ use Illuminate\Support\Facades\Route;
 
 /**
  * Class XotBaseRouteServiceProvider.
+ *
+ * Carica `routes/web.php` e `routes/api.php` di ogni modulo: devono esistere in tutti i moduli, anche con il solo
+ * `<?php` (e `declare(strict_types=1);`) quando il modulo non espone route. Niente `require` di un file vuoto di
+ * un altro modulo.
  */
 abstract class XotBaseRouteServiceProvider extends RouteServiceProvider
 {

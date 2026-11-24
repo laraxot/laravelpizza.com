@@ -5,13 +5,27 @@ status: review
 updated: 2026-11-16
 module: Media
 <<<<<<< HEAD
+<<<<<<< HEAD
 qmd: "piano miglioramento Media P0 P1 P2 BMAD guard diagnostica prunable cast id cancellazione logica codice morto sequenza criteri"
 =======
+=======
+=======
+<<<<<<< HEAD
+qmd: "piano miglioramento Media P0 P1 P2 BMAD guard diagnostica prunable cast id cancellazione logica codice morto sequenza criteri"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_mg11wH
 qmd: "piano miglioramento Media P1 P2 guard diagnostica prunable cast id cancellazione logica codice morto sequenza criteri"
 =======
 qmd: "piano miglioramento Media P0 P1 P2 BMAD guard diagnostica prunable cast id cancellazione logica codice morto sequenza criteri"
 >>>>>>> .merge_file_ZcDMPy
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 related:
   - ./audits/media-audit.md
@@ -23,6 +37,12 @@ related:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_mg11wH
 Derivato dall'[audit](./audits/media-audit.md).
 
@@ -60,6 +80,12 @@ Derivato dall'[audit](./audits/media-audit.md).
 - [ ] ECC `00-index` aggiornato con esiti
 =======
 >>>>>>> .merge_file_ZcDMPy
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 Derivato dall'[audit profondo](./audits/media-audit.md). Epic e AC: [epics.md](./epics.md). Nessun P0 dimostrato.
 
@@ -98,12 +124,27 @@ Derivato dall'[audit profondo](./audits/media-audit.md). Epic e AC: [epics.md](.
 - [ ] D-3 decisa e attuata
 - [ ] PHPStan `Modules/Media` = 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [ ] Pest osservabile o skip motivato
 - [ ] ECC `00-index` aggiornato con gli esiti
 =======
+=======
+=======
+<<<<<<< HEAD
+- [ ] Pest osservabile o skip motivato
+- [ ] ECC `00-index` aggiornato con gli esiti
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_mg11wH
 =======
 - [ ] Pest osservabile o skip motivato
 - [ ] ECC `00-index` aggiornato con gli esiti
 >>>>>>> .merge_file_ZcDMPy
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

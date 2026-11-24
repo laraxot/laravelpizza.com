@@ -643,7 +643,19 @@ private function generateFallbackPdf($user, Exception $e): string
 - [HTML2PDF Best Practices](../../Xot/docs/html2pdf-best-practices.md)
 - [Activity Module README](./README.md)
 - [HTML2PDF Best Practices](../../xot/docs/html2pdf-best-practices.md)
+<<<<<<< HEAD
 - [Activity Module README](./README.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Activity Module README](./readme.md)
+=======
+- [Activity Module README](./README.md)
+>>>>>>> laraxot/dev
+=======
+- [Activity Module README](./README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Filament Actions Documentation](https://filamentphp.com/docs/3.x/actions/overview)
 - [Spatie Activity Log](https://spatie.be/docs/laravel-activitylog)
 

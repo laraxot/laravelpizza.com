@@ -36,15 +36,6 @@ class TranslatorAdapter extends LaravelTranslator
      */
     public function get(mixed $key, array $replace = [], mixed $locale = null, mixed $fallback = true): string|array
     {
-<<<<<<< HEAD
-        // Get without fallback
-        $result = parent::get($key, $replace, $locale, $fallback);
-        if ($result === $key) {
-            $this->notifyMissingKey($key);
-
-            // Reget with fallback
-            $result = parent::get($key, $replace, $locale, $fallback);
-=======
         $result = parent::get($key, $replace, $locale, $fallback);
 
         if ($result === $key) {
@@ -64,20 +55,12 @@ class TranslatorAdapter extends LaravelTranslator
             // viene mai registrata come mancante. Farlo per davvero significa
             // registrare molte piu' chiavi e, in locale, scriverne i file.
             // La scelta sta in base_quaeris_fila5#236.
->>>>>>> laraxot/dev
         }
 
         if (is_array($result)) {
             return $result;
         }
 
-<<<<<<< HEAD
-        if (! is_string($result)) {
-            return (string) $key;
-        }
-
-        return $result;
-=======
         if (is_string($result)) {
             return $result;
         }
@@ -103,7 +86,6 @@ class TranslatorAdapter extends LaravelTranslator
         // `null`, un oggetto, una risorsa: non c'e' niente da mostrare, e la
         // chiave almeno dice al traduttore cosa cercare.
         return (string) $key;
->>>>>>> laraxot/dev
     }
 
     /*

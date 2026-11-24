@@ -8,8 +8,13 @@ use Exception;
 use Illuminate\Support\Facades\Storage;
 use Modules\Media\Actions\SaveAttachmentsAction;
 use Modules\Media\Models\Media;
+<<<<<<< HEAD
 use Modules\Media\Tests\TestCase;
 use Spatie\MediaLibrary\HasMedia;
+=======
+use Modules\Media\Tests\Fixtures\MediaRecordDouble;
+use Modules\Media\Tests\TestCase;
+>>>>>>> laraxot/dev
 use Spatie\MediaLibrary\MediaCollections\FileAdder;
 
 uses(TestCase::class);
@@ -21,7 +26,11 @@ beforeEach(function (): void {
 it('executes save attachments successfully', function (): void {
     $action = new SaveAttachmentsAction;
 
+<<<<<<< HEAD
     $record = $this->makeTestMock(HasMedia::class);
+=======
+    $record = $this->makeTestMock(MediaRecordDouble::class);
+>>>>>>> laraxot/dev
 
     $media = $this->makeTestMock(Media::class);
     $media->method('getPathRelativeToRoot')->willReturn('media/test-path');
@@ -51,7 +60,11 @@ it('executes save attachments successfully', function (): void {
 it('handles empty attachments', function (): void {
     $action = new SaveAttachmentsAction;
 
+<<<<<<< HEAD
     $record = $this->makeTestMock(HasMedia::class);
+=======
+    $record = $this->makeTestMock(MediaRecordDouble::class);
+>>>>>>> laraxot/dev
     $record->expects($this->never())->method('update');
 
     $action->execute($record, [], [], 'attachments');
@@ -60,7 +73,11 @@ it('handles empty attachments', function (): void {
 it('skips nonexistent files', function (): void {
     $action = new SaveAttachmentsAction;
 
+<<<<<<< HEAD
     $record = $this->makeTestMock(HasMedia::class);
+=======
+    $record = $this->makeTestMock(MediaRecordDouble::class);
+>>>>>>> laraxot/dev
     $record->expects($this->never())->method('update');
 
     $attachments = ['invoice'];
@@ -74,7 +91,11 @@ it('skips nonexistent files', function (): void {
 it('handles storage errors gracefully', function (): void {
     $action = new SaveAttachmentsAction;
 
+<<<<<<< HEAD
     $record = $this->makeTestMock(HasMedia::class);
+=======
+    $record = $this->makeTestMock(MediaRecordDouble::class);
+>>>>>>> laraxot/dev
     $record->method('addMedia')->willThrowException(new Exception('Storage error'));
 
     $attachments = ['invoice'];
@@ -91,7 +112,11 @@ it('handles storage errors gracefully', function (): void {
 it('uses correct disk', function (): void {
     $action = new SaveAttachmentsAction;
 
+<<<<<<< HEAD
     $record = $this->makeTestMock(HasMedia::class);
+=======
+    $record = $this->makeTestMock(MediaRecordDouble::class);
+>>>>>>> laraxot/dev
 
     $media = $this->makeTestMock(Media::class);
     $media->method('getPathRelativeToRoot')->willReturn('media/test-path');
@@ -119,7 +144,11 @@ it('uses correct disk', function (): void {
 it('cleans up temp files', function (): void {
     $action = new SaveAttachmentsAction;
 
+<<<<<<< HEAD
     $record = $this->makeTestMock(HasMedia::class);
+=======
+    $record = $this->makeTestMock(MediaRecordDouble::class);
+>>>>>>> laraxot/dev
 
     $media = $this->makeTestMock(Media::class);
     $media->method('getPathRelativeToRoot')->willReturn('media/test-path');
@@ -146,7 +175,11 @@ it('cleans up temp files', function (): void {
 it('handles multiple attachments', function (): void {
     $action = new SaveAttachmentsAction;
 
+<<<<<<< HEAD
     $record = $this->makeTestMock(HasMedia::class);
+=======
+    $record = $this->makeTestMock(MediaRecordDouble::class);
+>>>>>>> laraxot/dev
 
     $media = $this->makeTestMock(Media::class);
     $media->method('getPathRelativeToRoot')->willReturn('media/test-path');

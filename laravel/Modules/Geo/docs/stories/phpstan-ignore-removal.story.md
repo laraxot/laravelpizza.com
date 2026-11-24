@@ -43,25 +43,18 @@ Scopo: `withDistance` aggiunge la colonna `distance` (Haversine, km), `orderByDi
   (comportamento canonico di `GeoTrait`). Il trait non ha utilizzatori applicativi.
 - Test: `tests/Unit/Traits/GeographicalScopesTest.php` con fixture `tests/Fixtures/Traits/GeographicalScopesTestModel.php` (SQL e binding).
 
-## Decisioni aperte per l'utente (nessun file cancellato o spostato)
+## Decisioni chiuse (wave PHPStan Modules)
 
-1. **Doppioni gia' decisi come morti e tornati.** `HasAddresses` (plurale, `app/Traits`), `SushiToJsons` (Geo) e `GeographicalScopes` erano stati
-   eliminati dal `decision-log.md` (2026-10-08: "doppione: Cms usa quello di Tenant", "non usato") e dal commento di `TraitsTest.php`
-   ("HasAddresses ... duplicato dead di HasAddress"); sono ricomparsi con i merge da `laraxot/dev`. Evidenze:
-   - `SushiToJsons` Geo: nessun utilizzatore in `app/`; solo fixture di test. Il trait di Tenant (`Modules\Tenant\Models\Traits\SushiToJsons`) e'
-     quello usato da Cms (`Section`, `Menu`, `Page`, `PageContent`, `Attachment`); quello di Geo legge `base_path('database/content/comuni.json')`
-     (non tenant-aware) e ridefinisce `create`/`update`/`delete` dell'Eloquent.
-   - `HasAddresses`: usato solo da fixture di test; il trait canonico e' `HasAddress` (singolare, `Models/Traits`).
-   - `GeographicalScopes`: duplica `GeoTrait::scopeWithDistance` (che contiene il fix MariaDB).
-   Decisione che serve: cancellarli (come gia' deciso) o tenerli. Non cancellati qui (regola assoluta).
-2. **Fixture `*PhpstanProbe*`** (`tests/Fixtures/Traits/*PhpstanProbe.php`, `GeoPhpstanTraitProbes.php`): sono le uniche a "usare" `HasAddresses` e
-   `SushiToJsons`. Sono i probe vietati dalla regola `no-phpstan-probe-models` (e rimossi due volte dal decision-log). Se si cancellano, `HasAddresses` e
-   `SushiToJsons` tornano a dare `trait.unused` (tolte le annotazioni, restano due errori in `Modules/Geo`): va deciso insieme al punto 1.
-3. **`EnsuresGeoDatabaseSchema` esiste due volte** con lo stesso namespace `Modules\Geo\Tests\Support` in `tests/Support/` (maiuscola, quella caricata da
-   PSR-4) e `tests/support/` (minuscola, mai caricata). Differenza: la copia minuscola ha 7 righe di commento ripetute
-   ("claude-audit documentation ratio"). Nessuno usa il trait ne' chiama `ensureGeoSchema()`. L'annotazione resta su entrambe: la causa
-   (trait mai usato) si risolve solo cancellando una o entrambe le copie, oppure usandolo da `tests/TestCase.php` (cambia il test setup). Decisione
-   dell'utente.
+1. **Doppioni morti rimossi.** Cancellati `HasAddresses`, `SushiToJsons` (copia Geo), `GeographicalScopes`, `HasPlaceTrait`.
+   Canon: `HasAddress` + `GeoTrait::scopeWithDistance` (test in `GeoTraitWithDistanceSqlTest`); `SushiToJsons` vive in Tenant (Cms).
+   `tests/Arch/debt.php` non elenca piu' il SushiToJsons di Geo. Nessun `*PhpstanProbe*` (vietati).
+2. **CoordinatePickerHelpers.** Canon = `Filament/Forms/Components/CoordinatePickerHelpers` (stesso NS di `XotBaseCoordinateField`).
+   `HasCoordinatePicker` deve `use` quella classe: senza import PHPStan risolve sotto `Traits\` → `class.notFound`.
+   Rimossa la copia `Support/CoordinatePickerHelpers` e il `normalizeCoordinate` privato duplicato nel trait.
+   **Nominatim single-source:** `searchAddress` / `reverseGeocode` / `normalizeCoordinate` / `extractCoordinates`
+   vivono solo negli Helpers; il trait (e `XotBaseCoordinateField`) tengono wrapper `#[Exposed]`/`#[Renderless]`
+   che delegano. Motivo: PHPStan L10 perde i tipi `array<…>` sui corpi grandi nei trait (× ogni consumer).
+3. **Aperto:** `EnsuresGeoDatabaseSchema` duplicato `tests/Support/` vs `tests/support/` (fuori scope di questa wave).
 
 ## Acceptance Criteria
 

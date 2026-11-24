@@ -90,7 +90,7 @@ cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
 npm run build
 ```
 
-Gli assets compilati per il tema vengono generati in `public/` (configurazione attuale), poi copiati nella destinazione deploy con `npm run copy`.
+Gli assets compilati per il tema vengono generati in `public/`; `public_html/themes/Meetup` è un symlink a questa cartella, quindi non serve copiarli.
 
 ## 🎨 Palette Colori
 

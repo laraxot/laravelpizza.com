@@ -1,11 +1,33 @@
 ---
+<<<<<<< HEAD
 title: "Activity: BMAD Setup Guide"
+=======
+<<<<<<< HEAD
+title: "Activity — BMAD Setup Guide"
+=======
+title: "Activity: BMAD Setup Guide"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 description: "Setup e configurazione BMAD per il modulo Activity"
 module: "Activity"
 alias: "activity"
 documentation_date: "2026-05-27"
 bmad_version: "6.2.0"
+<<<<<<< HEAD
 type: note
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+---
+
+# Activity — BMAD Setup Guide
+=======
+type: note
+>>>>>>> laraxot/dev
+=======
+type: note
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 status: draft
 updated: 2026-10-07
 tags: [docs, activity, bmad]
@@ -34,7 +56,19 @@ In questo modulo, BMAD serve a:
 - PHPStan Level 10: nessun ignoreErrors
 - Traduzioni dai file: mai hardcoded
 
+<<<<<<< HEAD
 ## Bad Practices (Pratiche Sbagliate: Mai Fare)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+## Bad Practices (Pratiche Sbagliate — Mai Fare)
+=======
+## Bad Practices (Pratiche Sbagliate: Mai Fare)
+>>>>>>> laraxot/dev
+=======
+## Bad Practices (Pratiche Sbagliate: Mai Fare)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 - Mai estendere Filament direttamente
 - Mai silenziare PHPStan
@@ -47,7 +81,19 @@ In questo modulo, BMAD serve a:
 | Termine | Sembra Significare | In Realtà Significa |
 |---|---|---|
 | **Action** | Funzione generica | Classe con `execute()` che estende `QueueableAction` |
+<<<<<<< HEAD
 | **Service** | Servizio generico | **Vietato** in Xot: usare `Actions` |
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+| **Service** | Servizio generico | **Vietato** in Xot — usare `Actions` |
+=======
+| **Service** | Servizio generico | **Vietato** in Xot: usare `Actions` |
+>>>>>>> laraxot/dev
+=======
+| **Service** | Servizio generico | **Vietato** in Xot: usare `Actions` |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 | **Module/Modulo** | Pacchetto generico | Modulo con `module.json`, `XotBaseServiceProvider` |
 | **Resource** | Risorsa generica | `XotBaseResource` con `form()`, `table()` |
 
@@ -59,4 +105,12 @@ In questo modulo, BMAD serve a:
 
 ---
 
+<<<<<<< HEAD
 *Activity · BMAD Setup Guide · data 2026-05-27*
+=======
+<<<<<<< HEAD
+*Activity · BMAD Setup Guide · data 2026-05-27*
+=======
+*Activity · BMAD Setup Guide · data 2026-05-27*
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

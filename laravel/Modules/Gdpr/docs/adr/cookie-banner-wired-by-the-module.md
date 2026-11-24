@@ -21,6 +21,17 @@ related:
 - Il flag `cookie_banner_on` è del tenant, e il tenant si conosce solo con la richiesta.
 - Domanda: dove e come si attacca il banner perché non sparisca in silenzio?
 
+## Driver della decisione
+
+- Lingue: il pacchetto traduce solo en, es, fr, nl, oc, mentre il modulo serve it, en, de, es; senza le righe del modulo il banner
+  mostra le chiavi grezze.
+- Ordine di boot: il pacchetto registra il suo namespace dopo il provider, quindi un'aggiunta fatta al boot del provider verrebbe
+  coperta.
+- Multi-tenant: il flag `cookie_banner_on` è del tenant, che si conosce solo con la richiesta, non all'avvio.
+- Nessun fallimento muto: il banner non deve sparire senza che un test se ne accorga (DCP-445: un mirror ha riportato il provider
+  indietro, nessun banner su nessuna pagina, test verdi).
+- Agnosticismo: il modulo è condiviso tra progetti e non deve richiedere copie di viste e traduzioni in ogni app.
+
 ## Decisione
 
 In `app/Providers/GdprServiceProvider.php::boot()`:
@@ -43,6 +54,13 @@ In `app/Providers/GdprServiceProvider.php::boot()`:
 - Pro: un solo punto di cablaggio, testi in quattro lingue, banner per tenant.
 - Contro: il provider dipende dall'ordine di boot del pacchetto (`app->booted`); un mirror che riporta indietro il file lo rompe.
 - Debito: nessuno noto oltre alla fragilità dei mirror, coperta dalla guardia.
+
+## Conferma
+
+Il cablaggio è rispettato finché `CookieConsentWiringTest` resta verde: è la guardia di DCP-445 e controlla le tre parti della
+decisione (testi nelle quattro lingue, vista del modulo, middleware nel gruppo `web`). Punti di cablaggio:
+`Modules/Gdpr/app/Providers/GdprServiceProvider.php`, `Modules/Gdpr/app/Http/Middleware/InjectCookieBanner.php`, testi in
+`Modules/Gdpr/lang/cookie-consent/{it,en,de,es}/texts.php`, vista in `Modules/Gdpr/resources/views/cookie-consent/index.blade.php`.
 
 ## Verifica
 

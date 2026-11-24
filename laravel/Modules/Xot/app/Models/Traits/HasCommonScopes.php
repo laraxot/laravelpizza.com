@@ -27,9 +27,9 @@ use Illuminate\Support\Carbon;
  * MyModel::published()->get();
  * ```
  *
- * @see docs/METODI_DUPLICATI_ANALISI.md - Proposta 4: Model Traits
+ * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md - Proposta 4: Model Traits
  *
- * Trait di piattaforma riusabile: consumer nei modelli dominio / probe di test.
+ * Trait di piattaforma riusabile: consumer nei modelli dominio.
  */
 trait HasCommonScopes
 {

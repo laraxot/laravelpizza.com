@@ -37,3 +37,11 @@ owner, ciascuna con il proprio contratto in `docs/contracts/`.
   output, invarianti, effetti collaterali, errori e limiti.
 - I consumer legacy devono migrare verso l'Action specifica, non verso una
   nuova classe base generica.
+
+## Verifica
+
+- `Modules/Xot/tests/Arch/ArchitectureTest.php`, regola «a use case is an Action, not a Service»: nessuna classe nel namespace
+  `Modules\Geo\Services` oltre a quelle elencate come debito nella chiave `services` di `Modules/Geo/tests/Arch/debt.php`.
+- Stato al 2026-11-24, violazione aperta: `Modules/Geo/app/Services/BaseGeoService.php` e le altre sette classi di `app/Services`
+  sono ancora sul disco (elencate in `Modules/Geo/tests/Arch/debt.php`); la rimozione descritta nella Decisione e nelle
+  Conseguenze non e' completata. Quando le cartelle spariscono, la chiave `services` del debito diventa `[]`.

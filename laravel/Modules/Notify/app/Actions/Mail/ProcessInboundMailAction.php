@@ -12,10 +12,7 @@ use Illuminate\Support\Str;
 use Modules\Notify\Models\InboundEmail;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Symfony\Component\Mime\Address;
-<<<<<<< HEAD
-=======
 use ZBateson\MailMimeParser\Header\IHeader;
->>>>>>> laraxot/dev
 use ZBateson\MailMimeParser\IMessage;
 use ZBateson\MailMimeParser\MailMimeParser;
 
@@ -33,11 +30,8 @@ use function Safe\preg_match;
  * - Mailgun form: sender, recipient, subject, body-plain, body-html, body-mime
  * - Raw MIME: request content-type message/rfc822 o body che inizia con "From:"
  *
-<<<<<<< HEAD
-=======
  * @contract docs/contracts/process-inbound-mail-action.md
  *
->>>>>>> laraxot/dev
  * @phpstan-type InboundMailData array{
  *     message_id: string|null,
  *     from_email: string|null,
@@ -191,11 +185,6 @@ class ProcessInboundMailAction
         $subject = $message->getHeaderValue('subject');
         [$fromEmail, $fromName] = $this->splitAddress(is_string($from) ? $from : '');
 
-<<<<<<< HEAD
-        $headers = [];
-        foreach ($message->getAllHeaders() as $header) {
-            $headers[$header->getName()] = $header->getValue();
-=======
         /** @var array<string, string> $headers */
         $headers = [];
         foreach ($message->getAllHeaders() as $header) {
@@ -208,7 +197,6 @@ class ProcessInboundMailAction
                 continue;
             }
             $headers[$name] = $value;
->>>>>>> laraxot/dev
         }
 
         return [
@@ -220,14 +208,10 @@ class ProcessInboundMailAction
             'text_body' => $message->getTextContent(),
             'html_body' => $message->getHtmlContent(),
             'headers' => $headers !== [] ? $headers : null,
-<<<<<<< HEAD
-            'payload' => ['provider' => $provider, 'mime_length' => strlen($raw)],
-=======
             'payload' => [
                 'provider' => $provider,
                 'mime_length' => strlen($raw),
             ],
->>>>>>> laraxot/dev
         ];
     }
 

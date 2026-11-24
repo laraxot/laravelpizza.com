@@ -1,13 +1,23 @@
 ---
 title: "Xot — entrypoint route no-op canonico"
 type: decision
-status: accepted
+status: superseded
+superseded_by: ../stories/module-route-files-exist-in-all-modules.story.md
 created: 2026-11-23
 updated: 2026-11-24
 issues: ["#92"]
 ---
 
 # ADR: entrypoint route no-op canonico
+
+> **Superato (2026-11-24, decisione dell'utente).** `require base_path('Modules/Xot/routes/empty.php')` e' brutto,
+> sbagliato e controproducente: lascia in ogni modulo un file che dipende dal percorso di un altro modulo, per un no-op
+> che un file minimo fa da solo. Regola in vigore: `routes/web.php` e `routes/api.php` **devono esistere in tutti i
+> moduli**, anche con il solo `<?php` (qui con `declare(strict_types=1);`, come `AI/routes/web.php` e `Job/routes/web.php`). Nessun
+> `require`, nessun `empty.php` (rimosso), nessun controllo `is_file` nel provider: un file sparito deve restare un
+> errore visibile. Il test `Modules/Xot/tests/Unit/Routing/ModuleRouteEntrypointsExistTest.php` impone l'esistenza dei
+> due file in ogni modulo con `RouteServiceProvider` che estende `XotBaseRouteServiceProvider`. Verificato con
+> `route:list`: 505 route identiche. Il testo sotto resta come cronologia.
 
 ## Contesto
 
@@ -56,6 +66,7 @@ consolidazione.
 
 ## Verifica
 
-`Modules/Xot/tests/Unit/Routing/CanonicalEmptyRouteEntrypointsTest.php` verifica che ogni entrypoint consolidato deleghi
-al file canonico e che il file canonico non registri route:
-`cd laravel && vendor/bin/pest Modules/Xot/tests/Unit/Routing/CanonicalEmptyRouteEntrypointsTest.php`.
+Il test `CanonicalEmptyRouteEntrypointsTest` non esiste piu'. Lo sostituisce
+`Modules/Xot/tests/Unit/Routing/ModuleRouteEntrypointsExistTest.php`, che verifica l'esistenza dei due file in ogni
+modulo con provider base e di quelli che il provider carica davvero:
+`cd laravel && vendor/bin/pest Modules/Xot/tests/Unit/Routing/ModuleRouteEntrypointsExistTest.php`.

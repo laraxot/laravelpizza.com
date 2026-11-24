@@ -8,7 +8,11 @@
 
     // Fallback estremo: prova a caricare dallo slug0 se siamo in una rotta Folio
     if (! $eventModel && isset($slug0)) {
-        $eventModel = \Modules\Meetup\Models\Event::where('slug', $slug0)->first();
+        $currentUser = auth()->user();
+        $eventModel = \Modules\Meetup\Models\Event::query()
+            ->visibleTo($currentUser instanceof \Modules\User\Models\User ? $currentUser : null)
+            ->where('slug', $slug0)
+            ->first();
     }
 
     $eventsIndexUrl = \Mcamara\LaravelLocalization\Facades\LaravelLocalization::localizeUrl('/events');
@@ -53,8 +57,9 @@
     $attendanceModeKey = $attendanceModeValue instanceof \Modules\Meetup\Enums\EventAttendanceMode
         ? $attendanceModeValue->value
         : (is_string($attendanceModeValue) ? $attendanceModeValue : '');
+    // Etichetta dall'enum (values.<case>.label, presente in tutte le lingue del modulo)
     $attendanceModeLabel = $attendanceModeKey !== ''
-        ? (string) __('meetup::event_attendance_mode.'.$attendanceModeKey.'.label')
+        ? (string) __('meetup::event_attendance_mode.values.'.$attendanceModeKey.'.label')
         : '';
 
     $registrationOpensAt = $eventModel?->registration_opens_at
@@ -63,7 +68,6 @@
 
     $organizer = $eventModel?->organizer;
     $organizerName = $organizer?->name;
-    $organizerEmail = $organizer?->email;
     $organizerProfileUrl = null;
     if ($organizer) {
         $possibleProfileRoute = '/profile/'.$organizer->getRouteKey();
@@ -112,8 +116,8 @@
 
     @if($eventModel)
         <div class="relative z-0 h-[400px] bg-slate-900 md:h-[500px]">
-            @if($eventModel->cover_image)
-                <img src="{{ $eventModel->cover_image }}" alt="{{ $eventModel->title }}" class="h-full w-full object-cover opacity-70">
+            @if($eventModel->coverImageUrl())
+                <img src="{{ $eventModel->coverImageUrl() }}" alt="{{ $eventModel->title }}" class="h-full w-full object-cover opacity-70">
             @else
                 <div class="flex h-full w-full items-center justify-center bg-gradient-to-br from-red-600 via-red-700 to-slate-900">
                     <svg class="h-32 w-32 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -132,7 +136,7 @@
                     </a>
 
                     <div class="mb-4 flex flex-wrap gap-3">
-                        <span class="{{ $isUpcoming ? 'bg-green-600' : 'bg-slate-500' }} inline-flex rounded-full px-4 py-1 text-sm font-semibold text-white">
+                        <span class="{{ $isUpcoming ? 'bg-green-700' : 'bg-slate-500' }} inline-flex rounded-full px-4 py-1 text-sm font-semibold text-white">
                             {{ $isUpcoming ? __('pub_theme::event.status.upcoming.label') : __('pub_theme::event.status.past.label') }}
                         </span>
 
@@ -241,9 +245,6 @@
                                         @else
                                             <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $organizerName }}</p>
                                         @endif
-                                        @if($organizerEmail)
-                                            <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">{{ $organizerEmail }}</p>
-                                        @endif
                                     </div>
                                 @endif
 
@@ -331,6 +332,9 @@
                                     >
                                         {{ __('pub_theme::event.actions.rsvp_now.label') }}
                                     </a>
+                                @elseif($eventModel !== null && $eventModel->status === 'published')
+                                    {{-- Iscrizione sulla piattaforma (PRD FR-9/FR-10/FR-11) --}}
+                                    @livewire(\Modules\Meetup\Http\Livewire\EventRegistration::class, ['event' => $eventModel], key('event-registration-'.$eventModel->getKey()))
                                 @elseif($bookingInfoOnly)
                                     <div class="rounded-lg bg-amber-50 px-4 py-3 text-sm font-medium text-amber-800 dark:bg-amber-500/10 dark:text-amber-200">
                                         @if($availableSpots > 0)
@@ -339,6 +343,17 @@
                                             {{ __('pub_theme::event.messages.sold_out.label') }}
                                         @endif
                                     </div>
+                                @endif
+
+                                {{-- I-02: file .ics generato sul momento, nessun servizio esterno coinvolto --}}
+                                @if($eventModel !== null && $eventModel->start_date?->isFuture())
+                                    @php($ics = app(\Modules\Meetup\Actions\Event\BuildEventIcsAction::class))
+                                    <a href="data:text/calendar;charset=utf-8;base64,{{ base64_encode($ics->execute($eventModel)) }}"
+                                       download="{{ $ics->filename($eventModel) }}"
+                                       class="mt-3 flex w-full items-center justify-center gap-2 rounded-lg border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-700">
+                                        <x-filament::icon icon="meetup-icon-calendar" class="h-4 w-4" />
+                                        {{ __('meetup::event_registration.add_to_calendar') }}
+                                    </a>
                                 @endif
 
                                 <p class="mt-4 text-center text-xs text-slate-500 dark:text-slate-400">
@@ -362,9 +377,6 @@
                                     </a>
                                 @else
                                     <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $organizerName }}</p>
-                                @endif
-                                @if($organizerEmail)
-                                    <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">{{ $organizerEmail }}</p>
                                 @endif
                             </div>
                         @endif
@@ -394,7 +406,7 @@
 @push('head')
     @if($schemaOrg)
         <script type="application/ld+json">
-{!! json_encode($schemaOrg, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+{!! json_encode($schemaOrg, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) !!}
         </script>
     @endif
 @endpush

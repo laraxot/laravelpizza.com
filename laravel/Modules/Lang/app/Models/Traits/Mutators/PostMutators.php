@@ -23,13 +23,7 @@ trait PostMutators
             return $value;
         }
 
-<<<<<<< HEAD
-        $postType = is_string($this->attributes['post_type'] ?? null) ? $this->attributes['post_type'] : '';
-        $postId = is_scalar($this->attributes['post_id'] ?? null) ? $this->attributes['post_id'] : '';
-        $value = $postType.' '.$postId;
-=======
         $value = $this->computeTitle();
->>>>>>> laraxot/dev
         $this->title = $value;
 
         if ($this->getKey() !== null) {
@@ -39,8 +33,6 @@ trait PostMutators
         return $value;
     }
 
-<<<<<<< HEAD
-=======
     /**
      * Il guid del post, ricalcolato quando quello salvato non e' utilizzabile.
      *
@@ -70,18 +62,13 @@ trait PostMutators
      * comportamento delle rotte che su quel guid si appoggiano. La scelta sta in
      * base_quaeris_fila5#235.
      */
->>>>>>> laraxot/dev
     public function getGuidAttribute(?string $value): ?string
     {
         if (is_string($value) && $value !== '' && ! str_contains($value, ' ')) {
             return $value;
         }
 
-<<<<<<< HEAD
-        $value = Str::slug($this->title ?? '');
-=======
         $value = $this->computeGuid();
->>>>>>> laraxot/dev
         $this->guid = $value;
 
         if ($this->getKey() !== null) {
@@ -91,8 +78,6 @@ trait PostMutators
         return $value;
     }
 
-<<<<<<< HEAD
-=======
     /**
      * Il titolo da cui ricavare il guid, oppure null se non ce n'e' uno usabile.
      *
@@ -172,7 +157,6 @@ trait PostMutators
         return 'post-'.Str::random(8);
     }
 
->>>>>>> laraxot/dev
     public function getTxtAttribute(?string $value): ?string
     {
         return $value ?? '';

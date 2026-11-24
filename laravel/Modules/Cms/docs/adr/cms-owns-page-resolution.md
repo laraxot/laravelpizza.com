@@ -71,3 +71,16 @@ impedire il ritorno di `render()`, query nella Blade e `@include` speciali.
 
 Verificare middleware, resolver CMS e test Folio prima di aggiungere una nuova pagina.
 Il contratto operativo è [page-slug-middleware.md](../contracts/page-slug-middleware.md).
+
+## Verifica
+
+- `cd laravel && vendor/bin/pest Modules/Cms/tests/Unit/Middleware/PageSlugMiddlewareTest.php` (`Modules/Cms/tests/Unit/Middleware/PageSlugMiddlewareTest.php`):
+  il middleware lascia passare la richiesta se nessuna pagina CMS corrisponde e applica la protezione dichiarata dal JSON.
+- `Modules/Cms/tests/Unit/Actions/ResolvePageActionTest.php`: risoluzione dello slug da parte dell'Action.
+- `Modules/Cms/tests/Unit/Views/PageComponentDataMergeTest.php`: `<x-page>` unisce il contesto di rotta nel data bag dei blocchi
+  senza trasformare gli identificativi in slug.
+- `Modules/Cms/tests/Feature/ResolvePageModelExposureTest.php`: `profile`, `user` e `users` non diventano un fallback pubblico
+  (vedi [container0-model-allowlist](container0-model-allowlist.md)).
+- `Modules/Cms/tests/Feature/IndividualFolioRoutesTest.php`: le pagine Folio rispondono sulle rotte attese.
+- Non documentato: il test statico che, secondo le Conseguenze, deve impedire il ritorno di `render()`, query nella Blade e
+  `@include` speciali nelle pagine Folio non e' stato individuato nel modulo al momento di questa revisione: da ritrovare o scrivere.

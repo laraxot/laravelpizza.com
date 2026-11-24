@@ -12,11 +12,8 @@ use Modules\Lang\Filament\Widgets\LanguageSwitcherWidget;
  * Componente Blade per il Language Switcher.
  *
  * Wrappa il LanguageSwitcherWidget per l'uso nei temi tramite sintassi Blade.
-<<<<<<< HEAD
-=======
  *
  * @see Modules/Lang/docs/contracts/language-switcher-component.md
->>>>>>> laraxot/dev
  */
 class LanguageSwitcher extends Component
 {
@@ -34,13 +31,9 @@ class LanguageSwitcher extends Component
     }
 
     /**
-<<<<<<< HEAD
-     * Renderizza il componente.
-=======
      * Renderizza il componente con URL già risolti dal widget.
      *
      * @see Modules/Lang/docs/contracts/language-switcher-component.md
->>>>>>> laraxot/dev
      */
     public function render(): View
     {
@@ -48,12 +41,6 @@ class LanguageSwitcher extends Component
             return view('lang::components.empty');
         }
 
-<<<<<<< HEAD
-        // Ottiene i dati pubblici dal widget
-        $viewData = [
-            'current_locale' => app()->getLocale(),
-            'available_locales' => $this->widget->getAvailableLocales(),
-=======
         $availableLocales = $this->widget->getAvailableLocales()
             ->map(fn (array $locale): array => [
                 ...$locale,
@@ -63,7 +50,6 @@ class LanguageSwitcher extends Component
         $viewData = [
             'current_locale' => app()->getLocale(),
             'available_locales' => $availableLocales,
->>>>>>> laraxot/dev
             'widget_id' => 'language-switcher-'.uniqid(),
         ];
 

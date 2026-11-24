@@ -31,13 +31,10 @@ final class BuildHeadSchemaAction
      * @param  string|null  $rootUrl  URL della radice del sito, senza lingua: è l'identità dell'entità (`#organization`, `#website`); se manca si usa `$homeUrl`
      * @param  string  $homeLabel  nome della prima briciola («Home»); se vuoto si usa il brand
      * @param  list<string>|null  $languages  lingue in cui il sito è scritto; se manca si usa `$locale`
-<<<<<<< HEAD
-=======
      * @param  array<string, mixed>  $business  dati dell'attività dal tenant (`metatag.business`): `type` (per esempio
      *                                          `ProfessionalService`, sottotipo di LocalBusiness) e proprietà schema.org
      *                                          (`telephone`, `email`, `address`, `areaServed`, `sameAs`, ...). Vuoto =
      *                                          Organization con solo nome, URL e logo.
->>>>>>> laraxot/dev
      * @param  string|null  $description  descrizione dell'organizzazione (home); vuota = proprietà assente
      * @param  list<string>  $sameAs  profili ufficiali (URL https), già filtrati; [] = proprietà assente
      * @return list<SchemaObject|array<string, mixed>>
@@ -54,10 +51,7 @@ final class BuildHeadSchemaAction
         ?string $rootUrl = null,
         string $homeLabel = '',
         ?array $languages = null,
-<<<<<<< HEAD
-=======
         array $business = [],
->>>>>>> laraxot/dev
         ?string $description = null,
         array $sameAs = [],
     ): array {
@@ -65,11 +59,7 @@ final class BuildHeadSchemaAction
 
         if ($isHome) {
             return [
-<<<<<<< HEAD
-                $this->organization($brand, $root, $logoUrl, $description, $sameAs),
-=======
                 $this->organization($brand, $root, $logoUrl, $business, $description, $sameAs),
->>>>>>> laraxot/dev
                 $this->webSite($brand, $root, [] !== ($languages ?? []) ? (array) $languages : [$locale]),
             ];
         }
@@ -81,21 +71,6 @@ final class BuildHeadSchemaAction
     }
 
     /**
-<<<<<<< HEAD
-     * @param  list<string>  $sameAs
-     */
-    private function organization(string $brand, string $root, ?string $logoUrl, ?string $description, array $sameAs): Organization
-    {
-        $organization = (new Organization)->name($brand)->url($root)->set('@id', $root.'#organization');
-        if ($logoUrl !== null) {
-            $organization = $organization->logo($logoUrl);
-        }
-        if ($description !== null && trim($description) !== '') {
-            $organization = $organization->set('description', trim($description));
-        }
-
-        return $sameAs !== [] ? $organization->set('sameAs', array_values($sameAs)) : $organization;
-=======
      * Con i dati dell'attività l'organizzazione diventa un'attività locale (indirizzo, telefono, zona servita): è
      * il segnale che Google usa per le ricerche «servizio + città». Nome, URL, `@id` e logo restano quelli del sito.
      * `description` e `sameAs` del sito entrano se l'attività non li dichiara già.
@@ -138,7 +113,6 @@ final class BuildHeadSchemaAction
         }
 
         return $value === null || (\is_string($value) && trim($value) === '');
->>>>>>> laraxot/dev
     }
 
     /**
@@ -146,20 +120,12 @@ final class BuildHeadSchemaAction
      */
     private function webSite(string $brand, string $root, array $languages): SchemaObject
     {
-<<<<<<< HEAD
-        return (new WebSite)->name($brand)->url($root)->set('@id', $root.'#website')
-=======
         return (new WebSite())->name($brand)->url($root)->set('@id', $root.'#website')
->>>>>>> laraxot/dev
             ->set('inLanguage', count($languages) === 1 ? $languages[0] : $languages);
     }
 
     private function breadcrumbs(string $homeLabel, string $homeUrl, string $pageTitle, string $pageUrl): Breadcrumbs
     {
-<<<<<<< HEAD
-        return (new Breadcrumbs)->item($homeLabel, $homeUrl)->item($pageTitle, $pageUrl);
-=======
         return (new Breadcrumbs())->item($homeLabel, $homeUrl)->item($pageTitle, $pageUrl);
->>>>>>> laraxot/dev
     }
 }

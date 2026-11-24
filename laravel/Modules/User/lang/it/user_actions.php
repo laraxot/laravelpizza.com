@@ -105,11 +105,8 @@ return [
         ],
         'changePassword' => [
             'icon' => 'changePassword',
-<<<<<<< HEAD
             'label' => 'Cambia password',
             'tooltip' => 'Cambia password',
-=======
->>>>>>> laraxot/dev
         ],
         'layout' => [
             'icon' => 'layout',

@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Architecture Decision Records"
 type: index
 tags: [adr, decisioni]
@@ -12,6 +13,8 @@ updated: 2026-11-18
 Il **perche'** delle scelte di questo pacchetto: una decisione per file, con le alternative scartate.
 Il nome del file e' l'argomento, senza date ne' numeri (la data sta nella frontmatter).
 =======
+=======
+>>>>>>> laraxot/dev
 title: "ADR del modulo Notify"
 type: index
 tags: [adr, decisioni, notify]
@@ -35,12 +38,16 @@ contesto, alternative, decisione, conseguenze e una verifica ripetibile; non e' 
 
 Le decisioni si verificano contro codice e test correnti. Una modifica sostanziale crea un nuovo ADR e segna il precedente
 `superseded` o `deprecated`, collegandolo al nuovo.
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 
 ## Formato
 
 ```markdown
 ---
+<<<<<<< HEAD
 <<<<<<< HEAD
 title: "ADR — <decisione in una riga>"
 type: decision
@@ -49,11 +56,16 @@ created: AAAA-MM-GG
 updated: AAAA-MM-GG
 issues: []
 =======
+=======
+>>>>>>> laraxot/dev
 title: "ADR - <decisione>"
 type: decision
 status: proposed | accepted | superseded | deprecated
 created: AAAA-MM-GG
 updated: AAAA-MM-GG
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 ---
 
@@ -71,6 +83,7 @@ Ogni alternativa seria, con il motivo per cui non e' stata scelta.
 ## Conseguenze
 Pro, contro, debito che resta, cosa misurare. Chi cambia la decisione scrive un nuovo ADR e segna questo `superseded`.
 <<<<<<< HEAD
+<<<<<<< HEAD
 ```
 
 ## Decisioni
@@ -82,6 +95,8 @@ Pro, contro, debito che resta, cosa misurare. Chi cambia la decisione scrive un 
 - [sms-actions-consolidation-](../wiki/decisions/sms-actions-consolidation-.md)
 - [sms-actions-consolidation](../wiki/decisions/sms-actions-consolidation.md)
 =======
+=======
+>>>>>>> laraxot/dev
 
 ## Verifica
 Comandi o test che esistono e falliscono se la decisione viene violata; solo cio' che si puo' ripetere.
@@ -101,4 +116,7 @@ Un ADR "sostanziale" aggiunge `## Driver della decisione` e `## Conferma` (come 
 - [Consolidamento migrazioni notification_logs](../wiki/decisions/notification-logs-migration-consolidation.md) — lo schema del modello `NotificationLog` vince sulle due migrazioni duplicate.
 - [Consolidamento delle Action SMS](../wiki/decisions/sms-actions-consolidation.md) — nota deprecata.
 - [Consolidamento delle Action SMS (copia con trattino finale)](../wiki/decisions/sms-actions-consolidation-.md) — nota deprecata.
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev

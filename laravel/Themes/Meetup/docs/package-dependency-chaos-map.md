@@ -19,5 +19,5 @@
 ```bash
 cd laravel/Themes/Meetup
 npm run build
-npm run copy
+# niente copy: public_html/themes/Meetup è un symlink a public/
 ```

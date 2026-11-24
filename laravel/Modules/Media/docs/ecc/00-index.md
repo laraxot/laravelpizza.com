@@ -15,6 +15,12 @@ Collega le verifiche ECC al workflow PTVX (BMAD → lock → fix → PHPStan/Pes
 |---|---|---|
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_vakMWB
 | Inventario statico | verificato | ../bmad/audits/media-audit.md |
 | PHPStan | 0 su tree Modules (2026-11-16) | comando in audit |
@@ -23,6 +29,12 @@ Collega le verifiche ECC al workflow PTVX (BMAD → lock → fix → PHPStan/Pes
 | Docs pack | aggiornato | questo indice + audit ECC |
 =======
 >>>>>>> .merge_file_RPJfdR
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 | Inventario statico | verificato (2026-11-16) | [audit profondo](../bmad/audits/media-audit.md) |
 | PHPStan `Modules/Media` | **0 errori** | comando in audit |

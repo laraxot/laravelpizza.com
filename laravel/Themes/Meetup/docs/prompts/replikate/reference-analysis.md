@@ -163,7 +163,7 @@ These may be added as improvements, but they are NOT on the current target site.
 4. **URL Localization**: `LaravelLocalization::localizeUrl('/path')` sempre. Mai hardcodare `/it/...`
 5. **belongsToManyX**: Mai `belongsToMany()` per M2M
 6. **XotBase**: Filament classes SEMPRE extend XotBase*
-7. **Theme build**: `npm run build && npm run copy` dopo ogni modifica CSS/JS
+7. **Theme build**: `npm run build` dopo ogni modifica CSS/JS
 8. **Routine**: Studio Docs → Implementazione → Verifica → Aggiornamento Docs
 
 

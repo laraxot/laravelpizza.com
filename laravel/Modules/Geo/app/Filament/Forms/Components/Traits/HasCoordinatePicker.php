@@ -6,19 +6,18 @@ namespace Modules\Geo\Filament\Forms\Components\Traits;
 
 use Filament\Support\Components\Attributes\Exposed;
 use Illuminate\Database\Eloquent\Model;
-<<<<<<< HEAD
-use Illuminate\Support\Facades\Http;
-use Livewire\Attributes\Renderless;
-use Modules\Xot\Actions\Cast\SafeStringCastAction;
-=======
 use Livewire\Attributes\Renderless;
 use Modules\Geo\Filament\Forms\Components\CoordinatePickerHelpers;
->>>>>>> laraxot/dev
 
 /**
- * Trait HasCoordinatePicker - Shared logic for geographic components.
- * Rule: No "Default" prefixes for configuration methods.
- * Rule: Unified state {latitude, longitude}.
+ * Shared Filament field behaviour for map/coordinate pickers.
+ *
+ * Business logic and typed array shapes live in {@see CoordinatePickerHelpers}
+ * (concrete class): PHPStan L10 does not reliably keep iterable value types on
+ * large trait method bodies. Keep #[Exposed]/#[Renderless] wrappers here.
+ *
+ * Always `use` CoordinatePickerHelpers: an unqualified call resolves under
+ * Traits\ and becomes class.notFound (× every consumer component).
  */
 trait HasCoordinatePicker
 {
@@ -45,11 +44,14 @@ trait HasCoordinatePicker
     /** Mostra il pannello ricerca indirizzi sul componente Lit (MapPicker / GeopointPicker / …). */
     protected bool $searchVisible = true;
 
+    /**
+     * Hydrates the composite latitude/longitude state from the bound model.
+     *
+     * @see ../../../../../docs/coordinate-picker-purpose.md
+     */
     protected function setUpCoordinatePicker(): void
     {
         $this->default(['latitude' => null, 'longitude' => null]);
-        // Note: Removed $this->dehydrated(false) to allow location data to be saved.
-        // The component now properly persists coordinates to the form state.
 
         $this->afterStateHydrated(static function (self $component, mixed $state): void {
             if (\is_array($state) && isset($state['latitude'], $state['longitude'])) {
@@ -59,20 +61,13 @@ trait HasCoordinatePicker
             $record = $component->getRecord();
             if ($record instanceof Model) {
                 $component->state([
-<<<<<<< HEAD
-                    'latitude' => self::normalizeCoordinate($record->getAttribute($component->getLatitudeColumn())),
-                    'longitude' => self::normalizeCoordinate($record->getAttribute($component->getLongitudeColumn())),
-=======
                     'latitude' => CoordinatePickerHelpers::normalizeCoordinate($record->getAttribute($component->getLatitudeColumn())),
                     'longitude' => CoordinatePickerHelpers::normalizeCoordinate($record->getAttribute($component->getLongitudeColumn())),
->>>>>>> laraxot/dev
                 ]);
 
                 return;
             }
 
-            // No coordinates available yet: keep nulls and let the UI decide how to center
-            // (e.g. geolocation when enabled, otherwise a JS-level fallback).
             $component->state(['latitude' => null, 'longitude' => null]);
         });
     }
@@ -99,16 +94,21 @@ trait HasCoordinatePicker
     }
 
     /**
-     * Set the initial map center.
-     * Supports both center(lat, lng) and center(['lat' => ..., 'lng' => ...]).
-     *
-     * @param  float|array<string, float>  $latitude
+     * @param  float|array{latitude?: float|int|string, lat?: float|int|string, longitude?: float|int|string, lng?: float|int|string}  $latitude
+     * @see ../../../../../docs/coordinate-picker-purpose.md
      */
     public function center(float|array $latitude, ?float $longitude = null): static
     {
         if (\is_array($latitude)) {
-            $this->centerLatitude = $latitude['latitude'] ?? $latitude['lat'] ?? $this->centerLatitude;
-            $this->centerLongitude = $latitude['longitude'] ?? $latitude['lng'] ?? $this->centerLongitude;
+            $centerLatitude = CoordinatePickerHelpers::normalizeCoordinate($latitude['latitude'] ?? $latitude['lat'] ?? null);
+            if ($centerLatitude !== null) {
+                $this->centerLatitude = $centerLatitude;
+            }
+
+            $centerLongitude = CoordinatePickerHelpers::normalizeCoordinate($latitude['longitude'] ?? $latitude['lng'] ?? null);
+            if ($centerLongitude !== null) {
+                $this->centerLongitude = $centerLongitude;
+            }
 
             return $this;
         }
@@ -167,7 +167,6 @@ trait HasCoordinatePicker
         return $this->zoom;
     }
 
-    /** Centro esplicito del campo (`center()`): se manca la mappa si centra sull'utente o sulla vista di partenza (`getMapDefaultView()`). */
     public function getCenterLatitude(): ?float
     {
         return $this->centerLatitude;
@@ -179,23 +178,23 @@ trait HasCoordinatePicker
     }
 
     /**
-     * Vista di partenza della mappa quando non c'e' un punto: territorio dell'ente (`geo.config.map.default_view`), mai il mondo.
-     * Un valore non valido (env sbagliata, config in cache vecchia) ricade sulla panoramica d'Italia: la pagina non si rompe.
-     * Il nome evita `getDefaultView()`, che in Filament e' la vista Blade del componente.
+     * Vista di partenza quando non c'e' un punto: `geo.config.map.default_view`, fallback Italia.
      *
      * @return array{lat: float, lng: float, zoom: int}
+     * @see ../../../../../docs/coordinate-picker-purpose.md
      */
     public function getMapDefaultView(): array
     {
-        $view = config('geo.config.map.default_view');
-<<<<<<< HEAD
-        $lat = \is_array($view) ? self::normalizeCoordinate($view['lat'] ?? null) : null;
-        $lng = \is_array($view) ? self::normalizeCoordinate($view['lng'] ?? null) : null;
-=======
-        $lat = \is_array($view) ? CoordinatePickerHelpers::normalizeCoordinate($view['lat'] ?? null) : null;
-        $lng = \is_array($view) ? CoordinatePickerHelpers::normalizeCoordinate($view['lng'] ?? null) : null;
->>>>>>> laraxot/dev
-        $rawZoom = \is_array($view) ? ($view['zoom'] ?? null) : null;
+        $configuredView = config('geo.config.map.default_view');
+        if (! \is_array($configuredView)) {
+            $view = null;
+        } else {
+            /** @var array<string, mixed> $configuredView */
+            $view = self::mapDefaultViewInput($configuredView);
+        }
+        $lat = $view === null ? null : CoordinatePickerHelpers::normalizeCoordinate($view['lat']);
+        $lng = $view === null ? null : CoordinatePickerHelpers::normalizeCoordinate($view['lng']);
+        $rawZoom = $view === null ? null : $view['zoom'];
         $zoom = is_numeric($rawZoom) ? (float) $rawZoom : null;
 
         if ($lat === null || $lng === null || $zoom === null
@@ -221,6 +220,11 @@ trait HasCoordinatePicker
         return $this->geolocateWhenEmpty;
     }
 
+    /**
+     * Reads and normalizes the latitude from the composite picker state.
+     *
+     * @see ../../../../../docs/coordinate-picker-purpose.md
+     */
     public function getLatitude(): ?float
     {
         $state = $this->getState();
@@ -228,13 +232,15 @@ trait HasCoordinatePicker
             return null;
         }
 
-<<<<<<< HEAD
-        return self::normalizeCoordinate($state['latitude'] ?? null);
-=======
+        /** @var array<string, mixed> $state */
         return CoordinatePickerHelpers::normalizeCoordinate($state['latitude'] ?? null);
->>>>>>> laraxot/dev
     }
 
+    /**
+     * Reads and normalizes the longitude from the composite picker state.
+     *
+     * @see ../../../../../docs/coordinate-picker-purpose.md
+     */
     public function getLongitude(): ?float
     {
         $state = $this->getState();
@@ -242,205 +248,59 @@ trait HasCoordinatePicker
             return null;
         }
 
-<<<<<<< HEAD
-        return self::normalizeCoordinate($state['longitude'] ?? null);
-    }
-
-    /**
-     * Searches for addresses matching the query string via Nominatim.
-     * Server-side to respect rate-limiting and User-Agent policies.
-=======
+        /** @var array<string, mixed> $state */
         return CoordinatePickerHelpers::normalizeCoordinate($state['longitude'] ?? null);
     }
 
     /**
-     * Cerca indirizzi tramite Nominatim lato server (rate limit e User-Agent rispettati).
-     * Logica unica in {@see CoordinatePickerHelpers::searchAddress()}, condivisa con XotBaseCoordinateField.
->>>>>>> laraxot/dev
-     *
      * @return list<array<string, mixed>>
+     * @see ../../../../../docs/coordinate-picker-purpose.md
      */
     #[Exposed]
     #[Renderless]
     public function searchAddress(string $query): array
     {
-<<<<<<< HEAD
-        if (\strlen(trim($query)) < 3) {
-            return [];
-        }
-
-        try {
-            $appName = SafeStringCastAction::cast(config('app.name', 'Laraxot'));
-            $appUrl = SafeStringCastAction::cast(config('app.url', 'localhost'));
-            $response = Http::withHeaders([
-                'User-Agent' => \sprintf('%s/1.0 (%s)', $appName, $appUrl),
-            ])
-                ->timeout(10)
-                ->get('https://nominatim.openstreetmap.org/search', [
-                    'q' => $query,
-                    'format' => 'json',
-                    'addressdetails' => 1,
-                    'limit' => 5,
-                ]);
-
-            if (! $response->successful()) {
-                return [];
-            }
-
-            $data = $response->json();
-
-            if (! \is_array($data)) {
-                return [];
-            }
-
-            $filtered = array_values(array_filter($data, static fn (mixed $item): bool => \is_array($item)));
-
-            /** @var list<array<string, mixed>> $results */
-            $results = [];
-            foreach ($filtered as $item) {
-                if (! \is_array($item)) {
-                    continue;
-                }
-
-                /** @var array<string, mixed> $row */
-                $row = $item;
-                $results[] = $row;
-            }
-
-            return $results;
-        } catch (\Throwable) {
-            return [];
-        }
-    }
-
-    /**
-     * Reverse geocodes coordinates to a structured address.
-     * Returns a rich array for better form integration.
-=======
         return CoordinatePickerHelpers::searchAddress($query);
     }
 
     /**
-     * Geocodifica inversa delle coordinate in un indirizzo strutturato.
->>>>>>> laraxot/dev
-     *
      * @return array<string, mixed>|null
+     * @see ../../../../../docs/coordinate-picker-purpose.md
      */
     #[Exposed]
     #[Renderless]
     public function reverseGeocode(float $latitude, float $longitude): ?array
     {
-<<<<<<< HEAD
-        try {
-            $response = Http::withHeaders([
-                'User-Agent' => 'Laraxot/1.0',
-            ])
-                ->get('https://nominatim.openstreetmap.org/reverse', [
-                    'lat' => $latitude,
-                    'lon' => $longitude,
-                    'format' => 'jsonv2',
-                    'addressdetails' => 1,
-                    'zoom' => 18,
-                ]);
-
-            if (! $response->successful()) {
-                return null;
-            }
-
-            $data = $response->json();
-            if (! \is_array($data)) {
-                return null;
-            }
-
-            /** @var array<string, mixed> $address */
-            $address = $data['address'] ?? [];
-            if (! \is_array($address)) {
-                $address = [];
-            }
-
-            return [
-                'display_name' => \is_string($data['display_name'] ?? null) ? $data['display_name'] : '',
-                'address' => \is_string($data['display_name'] ?? null) ? $data['display_name'] : '',
-                'provider' => 'nominatim',
-                'place_id' => $data['place_id'] ?? null,
-                'osm_type' => $data['osm_type'] ?? null,
-                'osm_id' => $data['osm_id'] ?? null,
-                'licence' => $data['licence'] ?? null,
-                'importance' => is_numeric($data['importance'] ?? null) ? (float) $data['importance'] : null,
-                'type' => $data['type'] ?? null,
-                'class' => $data['category'] ?? $data['class'] ?? null,
-                'boundingbox' => isset($data['boundingbox']) && \is_array($data['boundingbox']) ? $data['boundingbox'] : null,
-                'street' => self::firstString($address, ['road', 'pedestrian', 'footway', 'path', 'residential', 'highway']),
-                'street_number' => self::firstString($address, ['house_number', 'street_number']),
-                'zip' => self::firstString($address, ['postcode']),
-                'postcode' => self::firstString($address, ['postcode']),
-                'city' => self::firstString($address, ['city', 'town', 'village', 'municipality', 'hamlet', 'county']),
-                'suburb' => self::firstString($address, ['suburb', 'neighbourhood', 'quarter', 'city_district']),
-                'province' => self::firstString($address, ['province', 'county', 'state_district']),
-                'state' => self::firstString($address, ['state', 'region']),
-                'country' => self::firstString($address, ['country']),
-                'country_code' => self::firstString($address, ['country_code']),
-                'structured' => [
-                    'road' => self::firstString($address, ['road', 'pedestrian', 'footway', 'path', 'residential', 'highway']),
-                    'house_number' => self::firstString($address, ['house_number', 'street_number']),
-                    'city' => self::firstString($address, ['city', 'town', 'village', 'municipality', 'county']),
-                    'postcode' => self::firstString($address, ['postcode']),
-                    'state' => self::firstString($address, ['state', 'region']),
-                    'country' => self::firstString($address, ['country']),
-                    'city_district' => self::firstString($address, ['city_district', 'suburb', 'neighbourhood', 'quarter']),
-                ],
-                'address_details' => $address,
-                'raw' => $data,
-            ];
-        } catch (\Throwable) {
-            return null;
-        }
-    }
-
-    /**
-     * @param  array<string, mixed>  $data
-     * @param  array<int, string>  $keys
-     */
-    private static function firstString(array $data, array $keys): string
-    {
-        foreach ($keys as $key) {
-            $value = $data[$key] ?? null;
-            if (\is_string($value) && trim($value) !== '') {
-                return $value;
-            }
-        }
-
-        return '';
-=======
         return CoordinatePickerHelpers::reverseGeocode($latitude, $longitude);
->>>>>>> laraxot/dev
     }
 
     /**
      * @param  array<string, mixed>  $data
      * @return array<string, mixed>
+     * @see ../../../../../docs/coordinate-picker-purpose.md
      */
     public static function extractCoordinates(array $data, string $field = 'coordinates', string $latColumn = 'latitude', string $lngColumn = 'longitude'): array
     {
-<<<<<<< HEAD
-        $coordinates = $data[$field] ?? null;
-        if (\is_array($coordinates)) {
-            $data[$latColumn] = self::normalizeCoordinate($coordinates['latitude'] ?? null);
-            $data[$lngColumn] = self::normalizeCoordinate($coordinates['longitude'] ?? null);
-        }
-
-        return $data;
+        return CoordinatePickerHelpers::extractCoordinates($data, $field, $latColumn, $lngColumn);
     }
 
-    private static function normalizeCoordinate(mixed $value): ?float
+    /**
+     * Validates the configuration boundary before the view is normalized.
+     *
+     * @param  array<string, mixed>  $view
+     * @return array{lat: float|int|string, lng: float|int|string, zoom: float|int|string}|null
+     * @see ../../../../../docs/coordinate-picker-purpose.md
+     */
+    private static function mapDefaultViewInput(array $view): ?array
     {
-        if ($value === null || $value === '') {
+        $lat = $view['lat'] ?? null;
+        $lng = $view['lng'] ?? null;
+        $zoom = $view['zoom'] ?? null;
+
+        if (! is_numeric($lat) || ! is_numeric($lng) || ! is_numeric($zoom)) {
             return null;
         }
 
-        return is_numeric($value) ? (float) $value : null;
-=======
-        return CoordinatePickerHelpers::extractCoordinates($data, $field, $latColumn, $lngColumn);
->>>>>>> laraxot/dev
+        return ['lat' => $lat, 'lng' => $lng, 'zoom' => $zoom];
     }
 }

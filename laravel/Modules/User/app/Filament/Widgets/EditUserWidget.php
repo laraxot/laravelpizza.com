@@ -200,10 +200,6 @@ class EditUserWidget extends XotBaseSchemaWidget
 
         return $user;
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
     /**
      * @param  array<int|string, mixed>  $schema
      * @return array<int|string, Component>

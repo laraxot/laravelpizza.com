@@ -86,3 +86,31 @@ Note residue (fuori scope del pack, da girare al parent):
 ## Pest
 
 Skip: intervento solo su file documentazione (`.md`).
+
+## Coordination note (2026-11-24) — boot blockers PHP/routes
+
+Passata successiva (swarm merge-markers): risolti i marker in produzione che
+bloccavano il bootstrap Laravel (`syntax error unexpected <<` in
+`RouteServiceProvider.php`).
+
+File produzione/routes ripuliti (preferenza `laraxot/dev` quando HEAD era
+vuoto/minore; **nessun** `require …/Xot/routes/empty.php`):
+
+- `app/Providers/RouteServiceProvider.php` — locale = `request()->segment(1)`
+- `routes/web.php`, `routes/api.php` — file presenti e vuoti (solo `declare` + commento)
+- `app/Adapters/TranslatorAdapter.php`
+- `app/View/Components/LanguageSwitcher.php`
+- `app/View/Composers/ThemeComposer.php`
+- `app/Actions/WriteTranslationFileAction.php`
+- `app/Actions/Filament/AutoLabelAction.php`
+- `app/Models/Traits/Mutators/PostMutators.php`
+- `app/Filament/Forms/Components/NationalFlagSelect.php`
+- `app/Filament/Widgets/LanguageSwitcherWidget.php`
+
+`php -l` OK su tutti. `Modules/Lang/app` + `routes` = zero marker.
+
+Residui **fuori scope boot** (tests/views): `tests/**`, `resources/views/components/language-switcher.blade.php`.
+
+Verifica `php artisan about --only=environment`: fallisce ancora per problemi
+vendor/moduli (`HasCustomRelations` / `spatie/laravel-data`), non per
+syntax/marker Lang.

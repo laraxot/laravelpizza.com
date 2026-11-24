@@ -57,6 +57,20 @@ ADR sostanziale, path in `## Verifica`), senza Pest:
 - Un nuovo ADR vero: `Limesurvey/docs/adr/per-survey-tables-use-dynamic-models.md` (dall'ADR-001 della radice).
 - ADR sostanziale aggiunto (Driver + Conferma, contenuto ricavato dal codice) in AI, Gdpr, Job, Tenant, Themes/Zero.
 
+## Stato del versionamento (24/11, 16:42 UTC, verificato con `git ls-tree` e `git grep`)
+
+- `bashscripts` e `.claude` sono fuori dal root in `HEAD` (`git ls-tree HEAD bashscripts .claude` vuoto), `.gitignore` ha le tre
+  righe. Ci e' arrivato il commit di sync `98f09436da` (messaggio `.`, senza `#252`: la sync ha raccolto l'indice che avevo
+  preparato; la storia non si riscrive, il riferimento sta qui e nell'ADR).
+- `HEAD` del root contiene ancora **33 file PHP con marker di conflitto (23 Lang, 10 Media)**, committati dalla stessa sync; nel
+  working tree sono **0** (ricontrollato file per file). Le correzioni sono modifiche non committate: finche' non entrano in un
+  commit, `HEAD` e il remoto hanno PHP rotto.
+- Misura sul working tree: ADR 0, contratti 0, marker in `docs/adr` e `docs/contracts` 0, marker nel codice 0 (rilevatore con
+  controprova positiva). Gli ADR e i contratti di Media, Notify e Lang sono stati rimessi in conflitto tre volte dalla sync e
+  ripristinati ogni volta da uno snapshot pulito (`restore_from_snapshot.py` nello scratchpad della sessione).
+- Un solo file differisce dallo snapshot senza marker: `Xot/docs/adr/route-entrypoints-canonical-empty.md`, ora `superseded`
+  (il testo dichiara "decisione dell'utente"; chi l'ha scritto non l'ho verificato, il formato e' conforme): non si tocca.
+
 ## Aperti
 
 - **Senza ADR sostanziale: Chart, CloudStorage, Setting.** Il test lo pretende e nessuna decisione reale è documentata:
@@ -75,7 +89,12 @@ ADR sostanziale, path in `## Verifica`), senza Pest:
   documenti sullo stesso switcher; gli `INDEX.md` legacy di Quaeris, Activity, Cms, User, UI, Lang, Media, Notify sono in
   parte sbagliati; Setting, Limesurvey, Chart e CloudStorage non hanno contratti (23 Action in Chart, tra cui
   `ApplyPlotStyleAction`, usata anche da Quaeris).
-- **Baseline PHPStan bloccata** da `.env.testing` mancante (vedi la story di sync dei peer): niente misure di tipo.
+- **Baseline PHPStan: non e' bloccata** (correzione, 24/11 16:26 UTC). Avevo scritto che `.env.testing` mancante la fermava: era
+  vero per `APP_ENV=testing`, non in generale. Il run delle 16:22:31-16:22:49 del terzo coordinatore, in ambiente di default, e'
+  finito con exit 1 e JSON valido: `errors` 0, `file_errors` 86 (`missingType.iterableValue` 64, `argument.type` 10,
+  `missingType.generics` 11, `property.notFound` 1), tutti in Geo (trait `HasAddresses`, `HasCoordinatePicker`,
+  `GeographicalScopes` letti nel contesto dei fixture) e in `Activity/tests/fixtures/CanPaginateHarness.php`. Verificato io sul
+  JSON, non sul riassunto. Sono file della lane `lane-cms-geo-notify`, riscritti alle 16:24: non li tocco.
 
 ## Coordinamento
 

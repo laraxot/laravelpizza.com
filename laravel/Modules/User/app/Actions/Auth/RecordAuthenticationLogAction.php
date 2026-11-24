@@ -10,10 +10,7 @@ use Modules\User\Actions\Database\IsUserDatabaseConfiguredAction;
 use Modules\User\Contracts\HasAuthentications;
 use Modules\User\Contracts\UserContract;
 use Modules\User\Models\AuthenticationLog;
-<<<<<<< HEAD
 use Modules\User\Models\BaseUser;
-=======
->>>>>>> laraxot/dev
 
 /**
  * Persist an authentication_logs row on the User connection (`user` / fixcity_user).
@@ -24,11 +21,6 @@ use Modules\User\Models\BaseUser;
  * Identity = {@see UserContract}; capability = {@see HasAuthentications}.
  * Never type-hint the concrete BaseUser: that is an internal
  * abstract implementation, not the consumer boundary.
-<<<<<<< HEAD
-=======
- *
- * @contract docs/contracts/record-authentication-log-action.md
->>>>>>> laraxot/dev
  */
 final class RecordAuthenticationLogAction
 {

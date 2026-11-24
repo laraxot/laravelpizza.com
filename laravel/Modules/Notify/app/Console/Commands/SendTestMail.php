@@ -49,23 +49,6 @@ final class SendTestMail extends Command
             return self::FAILURE;
         }
 
-<<<<<<< HEAD
-        $email = (new MailtrapEmail)
-            ->from(new Address(
-                $this->configString('mail.from.address', 'noreply@fixcity.eu'),
-                $this->configString('mail.from.name', 'FixCity'),
-            ))
-            ->to(new Address($recipient))
-            ->subject($this->textInput($this->option('subject')) ?: 'FixCity test email')
-            ->category('Integration Test')
-            ->text('Test email sent by FixCity (notify:test-mail).');
-
-        try {
-            $response = MailtrapClient::initSendingEmails(
-                apiKey: $apiKey,
-                isBulk: false,
-            )->send($email);
-=======
         $email = new MailtrapEmail;
         $email->from(new Address(
             $this->configString('mail.from.address', 'noreply@fixcity.eu'),
@@ -82,7 +65,6 @@ final class SendTestMail extends Command
                 isBulk: false,
             );
             $response = $client->send($email);
->>>>>>> laraxot/dev
 
             $this->info('Email sent successfully to '.$recipient.'.');
             $this->line(json_encode(ResponseHelper::toArray($response)));

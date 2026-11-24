@@ -21,7 +21,11 @@ it('rejects a wrong or missing token', function (): void {
 
     Event::assertNotDispatched(MailDeliveryEventReceived::class);
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
+=======
+})->group('NOTIFY-MAILJET-INV-1');
+>>>>>>> laraxot/dev
 =======
 })->group('NOTIFY-MAILJET-INV-1');
 >>>>>>> laraxot/dev
@@ -54,7 +58,11 @@ it('accepts a single event and a grouped list, and marks permanent failures', fu
 
     Event::assertDispatchedTimes(MailDeliveryEventReceived::class, 3);
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
+=======
+})->group('NOTIFY-MAILJET-INV-2', 'NOTIFY-MAILJET-INV-3', 'NOTIFY-MAILJET-INV-4');
+>>>>>>> laraxot/dev
 =======
 })->group('NOTIFY-MAILJET-INV-2', 'NOTIFY-MAILJET-INV-3', 'NOTIFY-MAILJET-INV-4');
 >>>>>>> laraxot/dev

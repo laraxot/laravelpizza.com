@@ -8,8 +8,10 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
+use Modules\Xot\Models\Traits\HasCommonScopes;
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Models\Traits\RelationX;
+use Modules\Xot\Traits\HasCustomRelations;
 use Modules\Xot\Traits\Updater;
 use Webmozart\Assert\Assert;
 
@@ -20,6 +22,8 @@ use Webmozart\Assert\Assert;
  */
 abstract class XotBaseModel extends EloquentModel
 {
+    use HasCommonScopes;
+    use HasCustomRelations;
     use HasXotFactory;
     use RelationX;
     use Updater;

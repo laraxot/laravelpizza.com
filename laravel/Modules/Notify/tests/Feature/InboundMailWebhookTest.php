@@ -20,7 +20,11 @@ test('inbound webhook rejects requests without valid token', function (): void {
         'Subject' => 'Test',
     ])->assertUnauthorized();
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
+=======
+})->group('NOTIFY-INBOUND-INV-1');
+>>>>>>> laraxot/dev
 =======
 })->group('NOTIFY-INBOUND-INV-1');
 >>>>>>> laraxot/dev
@@ -33,7 +37,11 @@ test('inbound webhook rejects requests when token is not configured', function (
         'From' => 'sender@example.com',
     ])->assertUnauthorized();
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
+=======
+})->group('NOTIFY-INBOUND-INV-1');
+>>>>>>> laraxot/dev
 =======
 })->group('NOTIFY-INBOUND-INV-1');
 >>>>>>> laraxot/dev

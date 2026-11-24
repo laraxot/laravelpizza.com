@@ -17,7 +17,7 @@ Cluster E della remediation `phpstan-modules-remediation`.
 
 | File | Errore | Fix |
 |---|---|---|
-| `app/Models/Policies/Concerns/RequiresOperationalPermissions.php` | `trait.unused` | **Trait mantenuto** (contratto ADR per moduli upstream Roosko/Waste/Warehouse/Processing/Weighing/Labeling/Rentri, assenti in questa base). Reso analizzabile usandolo in `tests/Unit/Models/Policies/RequiresOperationalPermissionsTest.php` (probe policy + Gate). |
+| `app/Models/Policies/Concerns/RequiresOperationalPermissions.php` | `trait.unused` | Wired via `OperationalXotBasePolicy` (base per moduli operativi Roosko/Waste). |
 | `tests/Unit/ThemePublicSymlinkTest.php:27` | `glob` unsafe | `use function Safe\glob` + guard `is_string` (Safe\glob ritorna `list<mixed>`). |
 | `tests/Unit/ThemePublicSymlinkTest.php:40` | `readlink` unsafe | `use function Safe\readlink`. |
 | `tests/Unit/ThemePublicSymlinkTest.php:54` | `toBeTrue()` ridondante | Rimosso `expect(true)`; assertion significativa `is_dir($themeDir)` nel ramo senza `package.json` (evita anche Pest risky). |

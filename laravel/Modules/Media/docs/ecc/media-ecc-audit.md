@@ -5,13 +5,27 @@ status: review
 updated: 2026-11-16
 module: Media
 <<<<<<< HEAD
+<<<<<<< HEAD
 qmd: "ECC audit Media verification security testing laravel checklist security-review clean-code verification-loop inventario misurato finding guard prunable cast id"
 =======
+=======
+=======
+<<<<<<< HEAD
+qmd: "ECC audit Media verification security testing laravel checklist security-review clean-code verification-loop inventario misurato finding guard prunable cast id"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_GKGpqq
 qmd: "ECC audit Media checklist security-review clean-code verification-loop inventario misurato finding guard prunable cast id"
 =======
 qmd: "ECC audit Media verification security testing laravel checklist security-review clean-code verification-loop inventario misurato finding guard prunable cast id"
 >>>>>>> .merge_file_evDJwh
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 related:
   - ./00-index.md
@@ -25,6 +39,12 @@ related:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_GKGpqq
 ECC non sostituisce AGENTS.md/BMAD. Ogni finding: story BMAD, lock, fix causa,
 PHPStan + Pest, aggiornamento docs/QMD.
@@ -42,6 +62,12 @@ PHPStan + Pest, aggiornamento docs/QMD.
 ## Input misurato (2026-11-16)
 =======
 >>>>>>> .merge_file_evDJwh
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 ECC non sostituisce `AGENTS.md`/BMAD. Ogni finding: story BMAD, lock, fix alla causa, PHPStan + Pest, aggiornamento docs/QMD. Dettaglio: [audit profondo](../bmad/audits/media-audit.md).
 
@@ -64,6 +90,12 @@ ECC non sostituisce `AGENTS.md`/BMAD. Ogni finding: story BMAD, lock, fix alla c
 | app PHP | 127 |
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_GKGpqq
 | test | 47 |
 | resources | 3 |
@@ -85,6 +117,12 @@ ECC non sostituisce `AGENTS.md`/BMAD. Ogni finding: story BMAD, lock, fix alla c
 - comportamento o screenshot inventati
 =======
 >>>>>>> .merge_file_evDJwh
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 | test PHP / `*Test.php` | 47 / 41 |
 | Models / Policy / Resource | 4 / 4 / 3 |
@@ -106,17 +144,38 @@ ECC non sostituisce `AGENTS.md`/BMAD. Ogni finding: story BMAD, lock, fix alla c
 
 `migrate:fresh`: 0; `RefreshDatabase`: 0; `@phpstan-ignore`: 2; `dd()`: 0; `->label()`/titoli letterali: ≥ 12 in `AwsTest`, 1 in `ConvertAction`; `$guarded = []`: 1 (`TemporaryUpload.php:99`).
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< .merge_file_GKGpqq
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
+<<<<<<< .merge_file_GKGpqq
+=======
+>>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 Regole sempre valide: niente baseline/`@phpstan-ignore` senza motivazione, niente test svuotati per silenziare errori,
 mai `migrate:fresh` / `RefreshDatabase` / `--force`, niente date nel nome dei file docs, niente comportamento o
 screenshot inventati.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> .merge_file_evDJwh
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_evDJwh
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_evDJwh
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 ## Riferimenti

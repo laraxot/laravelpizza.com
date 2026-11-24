@@ -58,14 +58,6 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
          * }
          * \getRouteParameters();
          */
-<<<<<<< HEAD
-        $n = 1;
-        if (inAdmin()) {
-            $n = 3;
-        }
-
-        $segment = request()->segment($n);
-=======
         // La lingua, quando c'e', e' **sempre** il primo segmento.
         //
         // Qui c'era `if (inAdmin()) { $n = 3; }`, cioe' «in area amministrativa
@@ -90,7 +82,7 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
         // produzione e fa smettere al codice di dire una cosa falsa
         // (base_quaeris_fila5#234).
         $segment = request()->segment(1);
->>>>>>> laraxot/dev
+
 
         if (\is_string($segment) && \in_array($segment, $langs, true)) {
             app()->setLocale($segment);

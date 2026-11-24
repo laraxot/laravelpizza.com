@@ -79,8 +79,9 @@ return [
         'plural_label' => 'Навигации',
         'group' => 'Система',
         'icon' => 'heroicon-o-puzzle-piece',
-        'sort' => 100,
+        'sort' => '100',
     ],
     'label' => 'Навигация',
     'plural_label' => 'Навигации',
+    'select_language' => 'сменить язык',
 ];

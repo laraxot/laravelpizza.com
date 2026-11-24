@@ -46,12 +46,24 @@ Sostituisce il template. Ogni epic nasce da un finding dell'[audit](./audits/med
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_JVgku7
 **Task:**
 - [ ] Task 1
 - [ ] Task 2
 =======
 >>>>>>> .merge_file_xsgdgO
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 ## E6 — Docs e debito (P1-6, P2)
 

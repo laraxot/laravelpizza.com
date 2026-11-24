@@ -15,6 +15,12 @@ related:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_XpISid
 Derivato dall'[audit](./audits/activity-audit.md).
 
@@ -52,6 +58,12 @@ Derivato dall'[audit](./audits/activity-audit.md).
 - [ ] ECC `00-index` aggiornato con esiti
 =======
 >>>>>>> .merge_file_wpB7pV
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 Derivato dall'[audit profondo](./audits/activity-audit.md). Nessun P0 emerso dal codice; i P1 riguardano l'integrità del registro.
 Epic e AC: [epics.md](./epics.md).
@@ -88,10 +100,24 @@ Epic e AC: [epics.md](./epics.md).
 - [ ] PHPStan `Modules/Activity` = 0
 - [ ] ECC `00-index` aggiornato
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [ ] Pest osservabile o skip motivato
 =======
+=======
+=======
+<<<<<<< HEAD
+- [ ] Pest osservabile o skip motivato
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_XpISid
 =======
 - [ ] Pest osservabile o skip motivato
 >>>>>>> .merge_file_wpB7pV
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

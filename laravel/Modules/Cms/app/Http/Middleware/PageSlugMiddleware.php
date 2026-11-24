@@ -7,22 +7,16 @@ namespace Modules\Cms\Http\Middleware;
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-<<<<<<< HEAD
-=======
 use Modules\Cms\Actions\ResolvePageAction;
->>>>>>> laraxot/dev
 use Modules\Cms\Actions\ValidatePageMiddlewareAction;
 use Modules\Cms\Models\Page;
 use Symfony\Component\HttpFoundation\Response;
 
-<<<<<<< HEAD
-=======
 /**
  * Applica la protezione dichiarata dal contenuto CMS senza conoscere domini applicativi.
  *
  * @see Modules/Cms/docs/contracts/page-slug-middleware.md
  */
->>>>>>> laraxot/dev
 class PageSlugMiddleware
 {
     /**
@@ -33,15 +27,10 @@ class PageSlugMiddleware
 
     protected Kernel $kernel;
 
-<<<<<<< HEAD
-    public function handle(Request $request, \Closure $next): Response
-    {
-=======
     /** @see Modules/Cms/docs/adr/cms-owns-page-resolution.md */
     public function handle(Request $request, \Closure $next): Response
     {
         $this->rejectLegacyProfileRoutes($request);
->>>>>>> laraxot/dev
         $middlewares = $this->middlewaresOrRefuse($request);
 
         // Execute middlewares manually in a chain (con lista vuota la catena chiama solo `$next`).
@@ -49,8 +38,6 @@ class PageSlugMiddleware
     }
 
     /**
-<<<<<<< HEAD
-=======
      * @see Modules/Cms/docs/adr/cms-owns-page-resolution.md
      */
     private function rejectLegacyProfileRoutes(Request $request): void
@@ -77,7 +64,6 @@ class PageSlugMiddleware
     }
 
     /**
->>>>>>> laraxot/dev
      * Middleware dichiarati dalla pagina CMS della richiesta, gia' validati (allowlist e risolvibilita').
      *
      * Fail-closed (DCP-283, C-03): se non si riesce a determinare la protezione di una pagina (ricerca dello slug,

@@ -179,7 +179,6 @@ return [
             'label' => 'Data di fine:',
         ],
     ],
-<<<<<<< HEAD
     'users_chart' => [
         'heading' => 'Nuovi utenti',
     ],
@@ -191,6 +190,4 @@ return [
             'user_agent' => 'Browser',
         ],
     ],
-=======
->>>>>>> laraxot/dev
 ];

@@ -24,10 +24,6 @@ class TestCloudFrontConnectionAction
             $keyPairId = config('services.cloudfront.key_pair_id');
             $privateKey = config('services.cloudfront.private_key');
 
-<<<<<<< HEAD
-            if (! $baseUrl || ! $keyPairId || ! $privateKey) {
-                return $this->incompleteConfiguration($baseUrl, $keyPairId, $privateKey);
-=======
             $missing = array_keys(array_filter([
                 'Base URL' => ! $baseUrl,
                 'Key Pair ID' => ! $keyPairId,
@@ -36,7 +32,6 @@ class TestCloudFrontConnectionAction
 
             if ($missing !== []) {
                 return $this->incompleteConfiguration($missing);
->>>>>>> laraxot/dev
             }
 
             $testUrl = app(GetCloudFrontSignedUrlAction::class)->execute($testFile, 5);
@@ -64,36 +59,19 @@ class TestCloudFrontConnectionAction
     }
 
     /**
-<<<<<<< HEAD
-     * @return array<string, mixed>
-     */
-    private function incompleteConfiguration(mixed $baseUrl, mixed $keyPairId, mixed $privateKey): array
-=======
      * Risultato di errore quando mancano chiavi di configurazione CloudFront.
      *
      * @param  list<string>  $missing  etichette delle chiavi mancanti
      * @return array{title: string, status: string, data: array<string, string>}
      */
     private function incompleteConfiguration(array $missing): array
->>>>>>> laraxot/dev
     {
         return [
             'title' => '☁️ CloudFront',
             'status' => 'error',
             'data' => [
                 'Configuration' => '❌ Incomplete',
-<<<<<<< HEAD
-                'Missing' => collect([
-                    'Base URL' => ! $baseUrl,
-                    'Key Pair ID' => ! $keyPairId,
-                    'Private Key' => ! $privateKey,
-                ])
-                    ->filter()
-                    ->keys()
-                    ->implode(', '),
-=======
                 'Missing' => implode(', ', $missing),
->>>>>>> laraxot/dev
             ],
         ];
     }

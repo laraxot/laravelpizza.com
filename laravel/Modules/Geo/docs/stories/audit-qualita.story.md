@@ -41,9 +41,11 @@ Gli altri file di `resources/js` restano: sono importati da `bootstrap.js`/compo
 
 ### Codice
 
-- DRY: `Traits/HasCoordinatePicker` delega `searchAddress`, `reverseGeocode`, `extractCoordinates` e la normalizzazione
-  delle coordinate a `CoordinatePickerHelpers` (corpo identico copiato); restano gli attributi `#[Exposed]`/`#[Renderless]`.
-- Rimossi doppioni morti: `Filament/Forms/Components/Support/CoordinatePickerHelpers.php` (copia non referenziata),
+- DRY: `Traits/HasCoordinatePicker` importa `Modules\Geo\Filament\Forms\Components\CoordinatePickerHelpers`
+  (stesso NS di `XotBaseCoordinateField`) e delega Nominatim + normalize/extract; restano solo
+  `#[Exposed]`/`#[Renderless]` su search/reverse. Senza `use` PHPStan risolve Helpers sotto `Traits\` → `class.notFound`.
+- Rimossi doppioni morti: `Support/CoordinatePickerHelpers.php`, `GeographicalScopes` (→ `GeoTrait`),
+  `HasPlaceTrait`, `SushiToJsons` Geo (→ Tenant), `HasAddresses` (→ `HasAddress`),
   `app/datatransferobjects/LocationDTO.php` (copia in cartella minuscola, stesso namespace di `DataTransferObjects`).
 - Rimossi 10 file `*.disabled*` e 5 backup (`*.bak1`, `,bak`, `.backup-*`, `.bak-*`) in `app/`, `database/`, `resources/`.
 - `mixed` in `app/`: 343 -> 327. I restanti sono quasi tutti confini legittimi (JSON dei provider, prop Blade,

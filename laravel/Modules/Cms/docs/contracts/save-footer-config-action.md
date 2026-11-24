@@ -9,20 +9,6 @@ updated: 2026-11-24
 
 # SaveFooterConfigAction
 
-<<<<<<< HEAD
-## Input
-- Un `FooterData` validato.
-## Output
-- Nessun valore; la configurazione viene salvata nel tenant.
-## Invarianti
-- Scrive la chiave `footer` nella sezione tenant `appearance`.
-## Effetti collaterali
-- Delega la persistenza a `SaveTenantConfigAction`.
-## Errori
-- Gli errori di validazione o persistenza vengono propagati.
-## Non fa
-- Non renderizza il footer e non modifica contenuti o traduzioni.
-=======
 Contratto di comportamento (regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`).
 Sorgente: `app/Actions/SaveFooterConfigAction.php`. Chiamante: pagina Filament
 `app/Filament/Clusters/Appearance/Pages/Footer.php` (salvataggio del form).
@@ -49,11 +35,11 @@ Sorgente: `app/Actions/SaveFooterConfigAction.php`. Chiamante: pagina Filament
 
 ## Errori
 
-- Errori di scrittura del file risalgono al chiamante.
+- Errori di scrittura del file risalgono al chiamante; gli errori di validazione o persistenza vengono propagati.
 
 ## Non fa
 
+- Non renderizza il footer e non modifica contenuti o traduzioni.
 - Non salva nel database: l'aspetto del sito sta nella config del tenant, versionabile con il resto della config.
 - Non svuota la cache di configurazione.
 - Non valida i colori o le classi oltre a quanto fa `FooterData`.
->>>>>>> laraxot/dev

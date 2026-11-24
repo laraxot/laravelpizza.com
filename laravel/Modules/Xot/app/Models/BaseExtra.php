@@ -10,8 +10,8 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Support\Carbon;
 use Modules\Xot\Contracts\ExtraContract;
 use Modules\Xot\Database\Factories\ExtraFactory;
+use Modules\Xot\Traits\HasSchemalessAttributes;
 use Spatie\SchemalessAttributes\Casts\SchemalessAttributes;
-use Spatie\SchemalessAttributes\SchemalessAttributesTrait;
 
 /**
  * Model Extra.
@@ -51,7 +51,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributesTrait;
  */
 abstract class BaseExtra extends BaseModel implements ExtraContract
 {
-    use SchemalessAttributesTrait;
+    use HasSchemalessAttributes;
 
     /** @var string */
     protected $connection = 'xot';
@@ -63,8 +63,7 @@ abstract class BaseExtra extends BaseModel implements ExtraContract
         'extra_attributes',
     ];
 
-    // ✅ CORRETTO: NON implementare scopeWithExtraAttributes() manualmente
-    // Il trait SchemalessAttributesTrait lo fornisce automaticamente!
+    // Scope/helpers schemaless: HasSchemalessAttributes (cast resta in casts()).
 
     /**
      * Il record a cui questi attributi extra appartengono.

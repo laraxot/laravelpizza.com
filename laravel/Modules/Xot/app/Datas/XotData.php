@@ -374,13 +374,6 @@ class XotData extends Data implements Wireable
     public function getMailHtmlLayoutPath(string $key = ''): string
     {
         $themePath = base_path('Themes/'.$this->pub_theme.'/resources/mail-layouts/'.$key);
-<<<<<<< HEAD
-        if ($key === '' || is_file($themePath)) {
-            return $themePath;
-        }
-
-        $notifyPath = base_path('Modules/Notify/resources/mail-layouts/'.$key);
-=======
         $notifyPath = base_path('Modules/Notify/resources/mail-layouts/'.$key);
 
         // Senza chiave serve la cartella (HtmlLayoutPathSelect ne elenca i file): un tema senza mail-layouts
@@ -392,7 +385,6 @@ class XotData extends Data implements Wireable
         if (is_file($themePath)) {
             return $themePath;
         }
->>>>>>> laraxot/dev
 
         return is_file($notifyPath) ? $notifyPath : $themePath;
     }

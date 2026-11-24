@@ -61,7 +61,11 @@ it('does not write in production when nothing is configured', function (): void 
 
     Assert::assertFalse(file_exists($this->target));
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
+=======
+})->group('LANG-SAVETRANS-INV-1');
+>>>>>>> laraxot/dev
 =======
 })->group('LANG-SAVETRANS-INV-1');
 >>>>>>> laraxot/dev
@@ -73,7 +77,11 @@ it('does not write in staging either', function (): void {
 
     Assert::assertFalse(file_exists($this->target));
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
+=======
+})->group('LANG-SAVETRANS-INV-1');
+>>>>>>> laraxot/dev
 =======
 })->group('LANG-SAVETRANS-INV-1');
 >>>>>>> laraxot/dev
@@ -86,7 +94,11 @@ it('writes in the local environment when nothing is configured', function (): vo
     Assert::assertTrue(file_exists($this->target));
     Assert::assertSame(['chiave_di_prova' => ['label' => 'valore']], File::getRequire($this->target));
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
+=======
+})->group('LANG-SAVETRANS-INV-2');
+>>>>>>> laraxot/dev
 =======
 })->group('LANG-SAVETRANS-INV-2');
 >>>>>>> laraxot/dev
@@ -98,7 +110,11 @@ it('does not write under the test environment by default', function (): void {
 
     Assert::assertFalse(file_exists($this->target));
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
+=======
+})->group('LANG-SAVETRANS-INV-1');
+>>>>>>> laraxot/dev
 =======
 })->group('LANG-SAVETRANS-INV-1');
 >>>>>>> laraxot/dev
@@ -111,7 +127,11 @@ it('lets the configuration switch it on in production', function (): void {
 
     Assert::assertTrue(file_exists($this->target));
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
+=======
+})->group('LANG-SAVETRANS-INV-3');
+>>>>>>> laraxot/dev
 =======
 })->group('LANG-SAVETRANS-INV-3');
 >>>>>>> laraxot/dev
@@ -124,8 +144,11 @@ it('lets the configuration switch it off in the local environment', function ():
 
     Assert::assertFalse(file_exists($this->target));
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 =======
+=======
+>>>>>>> laraxot/dev
 })->group('LANG-SAVETRANS-INV-3');
 
 it('writes from the translation panel through persist() even when the switch is off', function (): void {
@@ -145,4 +168,7 @@ it('keeps the keys already in the file when it adds a new one', function (): voi
 
     Assert::assertSame(['esistente' => ['label' => 'Gia qui'], 'nuova' => ['label' => 'Nuova']], File::getRequire($this->target));
 })->group('LANG-SAVETRANS-INV-5');
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev

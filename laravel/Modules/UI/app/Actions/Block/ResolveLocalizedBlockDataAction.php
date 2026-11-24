@@ -9,11 +9,8 @@ use UnexpectedValueException;
 
 /**
  * Risolve dati block localizzati; delega al modulo Cms se presente.
-<<<<<<< HEAD
-=======
  *
  * @contract docs/contracts/resolve-localized-block-data-action.md
->>>>>>> laraxot/dev
  */
 final class ResolveLocalizedBlockDataAction
 {
@@ -25,7 +22,7 @@ final class ResolveLocalizedBlockDataAction
      */
     public function execute(array $viewParams): array
     {
-        $cmsAction = 'Modules\Cms\Actions\ResolveLocalizedBlockDataAction';
+        $cmsAction = 'Modules\\Cms\\Actions\\ResolveLocalizedBlockDataAction';
 
         if (! class_exists($cmsAction)) {
             return $viewParams;

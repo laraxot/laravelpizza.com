@@ -234,8 +234,11 @@ describe('Lang 100% — Actions zero-coverage', function (): void {
 
         try {
 <<<<<<< HEAD
+<<<<<<< HEAD
             app(SaveTransAction::class)->execute('lang::tmpcov.nested.key', 'val');
 =======
+=======
+>>>>>>> laraxot/dev
             // `persist()` e non `execute()`: quest'ultimo e' sbarrato da
             // `lang.save_missing_translations`, che sotto test e' spento di
             // proposito — altrimenti la suite riscriverebbe i file di lingua
@@ -245,6 +248,9 @@ describe('Lang 100% — Actions zero-coverage', function (): void {
             // pannello Lang quando il traduttore salva. Lo sbarramento e'
             // verificato dal suo test, in LangFinalGapsTest.
             app(SaveTransAction::class)->persist('lang::tmpcov.nested.key', 'val');
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 
             Assert::assertFileExists($file);
@@ -270,7 +276,12 @@ describe('Lang 100% — Actions zero-coverage', function (): void {
 
         try {
 <<<<<<< HEAD
+<<<<<<< HEAD
             expect(fn () => app(SaveTransAction::class)->execute('lang::tmproot', 'not-array'))
+=======
+            // Vedi il test precedente: la scrittura si prova da `persist()`.
+            expect(fn () => app(SaveTransAction::class)->persist('lang::tmproot', 'not-array'))
+>>>>>>> laraxot/dev
 =======
             // Vedi il test precedente: la scrittura si prova da `persist()`.
             expect(fn () => app(SaveTransAction::class)->persist('lang::tmproot', 'not-array'))
@@ -311,13 +322,19 @@ describe('Lang 100% — Actions zero-coverage', function (): void {
         Assert::assertSame('Ciao', $adapter->get('messages.known'));
         Assert::assertSame(['a' => 'b'], $adapter->get('messages.tree'));
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> laraxot/dev
         // `'num' => 7` torna la **chiave**, e non e' un difetto di questo
         // progetto: `Translator::getLine()` di Laravel rende solo stringhe e
         // array, e per tutto il resto restituisce null, quindi `get()` ripiega
         // sulla chiave. L'adattatore il 7 non lo vede nemmeno. Diverso il caso
         // delle traduzioni JSON, dove il valore arriva fino a qui: vedi
         // TranslatorAdapter::get() (base_quaeris_fila5#234).
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
         Assert::assertSame('messages.num', $adapter->get('messages.num'));
         $adapterMissingKey = 'messages.missing_'.uniqid('', true);
@@ -876,6 +893,11 @@ describe('Lang 100% — Models policies providers views', function (): void {
 
         Assert::assertSame(['k' => 'v'], $adapter->get('m.tree'));
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        // Vedi il commento nel test gemello: per una chiave di **gruppo** e'
+        // Laravel a scartare i valori non-stringa, non questo adattatore.
+>>>>>>> laraxot/dev
 =======
         // Vedi il commento nel test gemello: per una chiave di **gruppo** e'
         // Laravel a scartare i valori non-stringa, non questo adattatore.

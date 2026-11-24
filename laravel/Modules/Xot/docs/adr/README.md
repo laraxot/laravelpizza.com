@@ -131,7 +131,6 @@ Codice e architettura
 - [filament-widgets-over-standalone-livewire](filament-widgets-over-standalone-livewire.md) — niente componenti Livewire standalone: Filament Widget, Resource, Page
 - [architecture-tests-pest-arch](architecture-tests-pest-arch.md) — regole di architettura con Pest `arch()`: ambito esplicito, debito dichiarato, cinque trappole chiuse
 - [laravel-bootstrap-provider-registry](laravel-bootstrap-provider-registry.md) — bootstrap Laravel 13 minimale e discovery dei moduli (proposed: il codice non lo applica ancora)
-- [route-entrypoints-canonical-empty](route-entrypoints-canonical-empty.md) — entrypoint no-op condiviso per i moduli senza route
 - [no-ticket-logic-in-page-slug-middleware](no-ticket-logic-in-page-slug-middleware.md) — niente logica di dominio ticket in `PageSlugMiddleware` del Cms
 - [auth-register-livewire-tenant-url-defaults](auth-register-livewire-tenant-url-defaults.md) — la registrazione pubblica non eredita il default tenant del pannello
 - [translation-key-protocol](translation-key-protocol.md) — chiavi Laravel con namespace, file, collezione, chiave e tipo esplicito
@@ -154,6 +153,7 @@ Documentazione, contratti e harness
 ## Superate
 
 - [architecture-rules-phparkitect](architecture-rules-phparkitect.md) — PHPArkitect con baseline (superseded da `architecture-tests-pest-arch`)
+- [route-entrypoints-canonical-empty](route-entrypoints-canonical-empty.md) — entrypoint no-op condiviso con `require` di `empty.php` (superseded dalla [story](../stories/module-route-files-exist-in-all-modules.story.md): `routes/web.php` e `routes/api.php` esistono in ogni modulo, anche con il solo `<?php`)
 
 ## Decisioni precedenti (formato libero, da portare ad ADR quando si toccano)
 >>>>>>> laraxot/dev

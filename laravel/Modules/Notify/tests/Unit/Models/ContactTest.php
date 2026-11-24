@@ -8,7 +8,11 @@ use Modules\Notify\Models\Contact;
 use Modules\Notify\Tests\TestCase;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 uses(TestCase::class);
+=======
+uses(\Modules\Notify\Tests\TestCase::class);
+>>>>>>> laraxot/dev
 =======
 uses(\Modules\Notify\Tests\TestCase::class);
 >>>>>>> laraxot/dev

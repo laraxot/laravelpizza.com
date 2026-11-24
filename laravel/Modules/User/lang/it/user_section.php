@@ -2,24 +2,9 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_ksA3Ht
 // Sezione "dati personali" del form utente (Filament/Forms/Components/UserSection).
 return [
     'heading' => 'Dati personali',
-    'fields' => [
-        'first_name' => [
-            'label' => 'Nome',
-        ],
-        'last_name' => [
-            'label' => 'Cognome',
-        ],
-        'email' => [
-            'label' => 'Email',
-=======
-=======
->>>>>>> laraxot/dev
-return [
     'fields' => [
         'ente' => [
             'label' => 'ente',
@@ -50,10 +35,6 @@ return [
             'placeholder' => 'email',
             'helper_text' => 'email',
             'description' => 'email',
-<<<<<<< HEAD
->>>>>>> .merge_file_5ZkM7n
-=======
->>>>>>> laraxot/dev
         ],
     ],
 ];
