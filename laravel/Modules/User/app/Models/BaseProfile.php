@@ -211,18 +211,6 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         });
     }
 
-<<<<<<< HEAD
-    /** @var array<string, bool> chiave "connessione.tabella" → l'id è una stringa (UUID/ULID) */
-    private static array $stringKeyByTable = [];
-
-    /**
-     * Tipo della chiave preso dalla colonna vera: i progetti creano `profiles` con id intero o UUID (es. una migrazione
-     * di progetto con HasUuids). Con 'int' fisso un UUID "01a1c9ab-…" diventava 1 e i link "modifica" portavano a 404.
-     */
-    /**
-     * Senza tipo di ritorno, come in Eloquent: i figli che usano HasUuids/HasUlids ridefiniscono questo metodo con la
-     * firma del trait, e una firma più stretta qui li farebbe fallire (errore fatale al caricamento della classe).
-=======
     /**
      * Tipo PK letto dallo schema reale: alcuni tenant/progetti hanno `profiles.id`
      * UUID/ULID (stringa). Con `int` fisso un UUID "01a1…" diventava `1` e i link
@@ -232,7 +220,6 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
      * firma del trait; una firma più stretta qui causerebbe errore fatale.
      *
      * @see docs/wiki/concepts/profile-id-bigint-uuid-fix.md
->>>>>>> laraxot/dev
      *
      * @return string
      */
@@ -242,27 +229,20 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         return $this->hasStringKey() ? 'string' : 'int';
     }
 
-<<<<<<< HEAD
-    /** @return bool */
-=======
     /**
      * @see docs/wiki/concepts/profile-id-bigint-uuid-fix.md
      *
      * @return bool
      */
->>>>>>> laraxot/dev
     #[\Override]
     public function getIncrementing()
     {
         return ! $this->hasStringKey();
     }
 
-<<<<<<< HEAD
-=======
     /** @var array<string, bool> chiave "connessione.tabella" → id stringa (UUID/ULID) */
     private static array $stringKeyByTable = [];
 
->>>>>>> laraxot/dev
     private function hasStringKey(): bool
     {
         $default = config('database.default');
@@ -274,11 +254,7 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
                 $type = Schema::connection($connection)->getColumnType($this->getTable(), $this->getKeyName());
                 self::$stringKeyByTable[$cacheKey] = \in_array($type, ['varchar', 'char', 'string', 'uuid', 'guid', 'text'], true);
             } catch (\Throwable) {
-<<<<<<< HEAD
-                // Tabella non ancora migrata o database irraggiungibile: comportamento storico (intero).
-=======
                 // Tabella non migrata o DB irraggiungibile: storico = intero.
->>>>>>> laraxot/dev
                 self::$stringKeyByTable[$cacheKey] = false;
             }
         }
@@ -286,14 +262,9 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         return self::$stringKeyByTable[$cacheKey];
     }
 
-<<<<<<< HEAD
-
-    /** @return array<string, string> */
-=======
     /**
      * @return array<string, string>
      */
->>>>>>> laraxot/dev
     #[\Override]
     protected function casts(): array
     {

@@ -18,10 +18,7 @@ use Spatie\QueueableAction\QueueableAction;
  *
  * Handles the creation and dispatch of a One-Time Password (OTP) for secure user authentication.
  *
-<<<<<<< HEAD
-=======
  * @see docs/contracts/send-otp-by-user-action.md
->>>>>>> laraxot/dev
  * @contract docs/contracts/send-otp-by-user-action.md
  */
 class SendOtpByUserAction

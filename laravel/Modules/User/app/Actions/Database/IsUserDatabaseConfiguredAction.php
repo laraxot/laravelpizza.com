@@ -19,12 +19,9 @@ use Spatie\QueueableAction\QueueableAction;
  * di audit invece di far fallire il login.
  *
  * Legge solo la configurazione: non apre la connessione.
-<<<<<<< HEAD
-=======
  *
  * @see docs/contracts/is-user-database-configured-action.md
  * @contract docs/contracts/is-user-database-configured-action.md
->>>>>>> laraxot/dev
  */
 final class IsUserDatabaseConfiguredAction
 {

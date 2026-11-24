@@ -24,12 +24,9 @@ use Spatie\QueueableAction\QueueableAction;
  * Registrato in `UserServiceProvider` al posto del driver `eloquent`: vale per ogni tenant senza toccare i file `config/<tenant>/auth.php`.
  * Il filtro si applica solo ai modelli utente del progetto (`UserContract`, implementato da `BaseUser` che ha `deleted_at`):
  * un altro modello autenticabile potrebbe non avere la colonna. Il confine e' il contratto, non la classe base.
-<<<<<<< HEAD
-=======
  *
  * @see docs/contracts/build-active-user-provider-action.md
  * @contract docs/contracts/build-active-user-provider-action.md
->>>>>>> laraxot/dev
  */
 final class BuildActiveUserProviderAction
 {

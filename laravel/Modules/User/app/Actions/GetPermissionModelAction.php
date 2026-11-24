@@ -8,13 +8,10 @@ use Spatie\Permission\Models\Permission;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
-<<<<<<< HEAD
-=======
 /**
  * @see docs/contracts/get-permission-model-action.md
  * @contract docs/contracts/get-permission-model-action.md
  */
->>>>>>> laraxot/dev
 class GetPermissionModelAction
 {
     use QueueableAction;

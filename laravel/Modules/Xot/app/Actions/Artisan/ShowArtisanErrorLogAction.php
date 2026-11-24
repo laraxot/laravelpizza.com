@@ -11,12 +11,6 @@ use Illuminate\Support\Str;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
-<<<<<<< .merge_file_p3ubCZ
-=======
-
-use function Safe\preg_match_all;
-
->>>>>>> .merge_file_4II0yl
 /**
  * Replaces Modules\Xot\Services\ArtisanService::errorShow().
  * @see docs/contracts/show-artisan-error-log-action.md

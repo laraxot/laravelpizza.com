@@ -16,12 +16,7 @@ use Webmozart\Assert\Assert;
 use function Safe\realpath;
 
 /**
-<<<<<<< HEAD
- * Blocchi del page builder trovati in app/Filament/Blocks di ogni modulo.
- *
-=======
  * @see docs/contracts/get-all-blocks-action.md
->>>>>>> laraxot/dev
  * @contract docs/contracts/get-all-blocks-action.md
  */
 final class GetAllBlocksAction
@@ -50,11 +45,7 @@ final class GetAllBlocksAction
                 $name = Str::before($name, '_block');
             }
 
-<<<<<<< HEAD
-            $module = Str::of($class)->between('Modules\\', '\\Filament\\')->toString();
-=======
             $module = Str::of($class)->between('Modules\\', '\Filament\\')->toString();
->>>>>>> laraxot/dev
 
             return [
                 'name' => $name,

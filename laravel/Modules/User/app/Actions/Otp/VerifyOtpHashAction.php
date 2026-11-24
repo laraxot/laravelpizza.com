@@ -7,13 +7,10 @@ namespace Modules\User\Actions\Otp;
 use Illuminate\Contracts\Hashing\Hasher;
 use Spatie\QueueableAction\QueueableAction;
 
-<<<<<<< HEAD
-=======
 /**
  * @see docs/contracts/verify-otp-hash-action.md
  * @contract docs/contracts/verify-otp-hash-action.md
  */
->>>>>>> laraxot/dev
 final class VerifyOtpHashAction
 {
     use QueueableAction;
