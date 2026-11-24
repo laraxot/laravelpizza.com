@@ -8,10 +8,7 @@ related:
   - ../../app/Actions/Auth/RecordAuthenticationLogAction.php
   - ../../app/Models/BaseModel.php
   - ../contracts/record-authentication-log-action.md
-<<<<<<< HEAD
-=======
 qmd: "authentication log never breaks login registro"
->>>>>>> laraxot/dev
 ---
 
 # ADR: il registro degli accessi sta sulla connessione `user` e non rompe mai il login

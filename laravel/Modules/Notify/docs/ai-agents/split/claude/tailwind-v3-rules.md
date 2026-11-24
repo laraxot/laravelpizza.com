@@ -15,6 +15,10 @@ discussions: []
 
 - Always use Tailwind CSS v3 - verify you're using only classes supported by this version.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 
 ---
@@ -35,3 +39,9 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md) — Original source
 
+<<<<<<< HEAD
+=======
+=======
+## Cross-References
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

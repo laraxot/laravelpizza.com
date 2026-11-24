@@ -3,7 +3,19 @@ title: "agents security guidelines"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "agents security guidelines"
 issues: []
 discussions: []
@@ -20,6 +32,10 @@ Linee guida per la sicurezza.
 - Use **Gates** for simple access control
 - Validate all input through Form Requests
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "agents security guidelines"
@@ -38,6 +54,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Data Protection
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Security Best Practices
 
 ### Never Do
@@ -60,7 +83,31 @@ discussions: []
 ## 🔗 Link
 
 - [Indice AGENTS](./agents-split-index.md)
+<<<<<<< HEAD
 - [laravel-security-audit skill available](../../.opencode/skills/laravel-security-audit/SKILL.md)
 - [AGENTS.md originale](../../AGENTS.md)
 - [AGENTS.md originale](../../AGENTS.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [laravel-security-audit skill available](../../.opencode/skills/laravel-security-audit/SKILL.md)
+- [AGENTS.md originale](../../AGENTS.md)
+- [AGENTS.md originale](../../AGENTS.md)
+=======
+<<<<<<< HEAD
+- [laravel-security-audit skill available](../../.opencode/skills/laravel-security-audit/skill.md)
+- [AGENTS.md originale](../../agents.md)
+- [agents.md originale](../../agents.md)
+=======
+- [laravel-security-audit skill available](../../.opencode/skills/laravel-security-audit/SKILL.md)
+- [AGENTS.md originale](../../AGENTS.md)
+- [AGENTS.md originale](../../AGENTS.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [laravel-security-audit skill available](../../.opencode/skills/laravel-security-audit/skill.md)
+- [AGENTS.md originale](../../agents.md)
+- [agents.md originale](../../agents.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Index principale](./index.md)

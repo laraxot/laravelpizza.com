@@ -21,6 +21,10 @@ discussions: []
 **Last Updated**: 2026-04-03
 **Target**: Make all 54 test pages visually identical to Design Comuni reference using Tailwind CSS + Alpine.js
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "design conversion roadmap 1"
@@ -55,6 +59,15 @@ discussions: []
 - **Total**: 3-4 weeks (with parallel teams)
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 📊 Executive Summary
+### Current State
+### Key Metrics
+### Time Estimate
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## 🎯 Phase Breakdown
 
@@ -363,4 +376,11 @@ node bashscripts/github/create-design-issues.mjs
 ```
 
 Then pick issue #1 and get coding! 🚀
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

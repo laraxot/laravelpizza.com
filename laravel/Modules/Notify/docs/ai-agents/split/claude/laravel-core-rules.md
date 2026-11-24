@@ -54,6 +54,10 @@ discussions: []
 ### Vite Error
 - If you receive an "Illuminate\Foundation\ViteException: Unable to locate file in Vite manifest" error, you can run `npm run build` or ask the user to run `npm run dev` or `composer run dev`.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 
 ---
@@ -74,3 +78,9 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md) — Original source
 
+<<<<<<< HEAD
+=======
+=======
+## Cross-References
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -16,6 +16,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-video-frame-content-action.md
+ *
  * @contract docs/contracts/get-video-frame-content-action.md
  */
 class GetVideoFrameContentAction

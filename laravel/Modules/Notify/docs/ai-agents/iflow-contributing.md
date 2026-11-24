@@ -19,6 +19,10 @@ discussions: []
 
 Come contribuire al progetto.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "iflow contributing"
@@ -35,6 +39,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🤝 Come Contribuire
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Se Am i l Frontend
 
 - Aiuta a rifinire il tema Meetup (`resources/css/app.css`, `resources/js/app.js`)

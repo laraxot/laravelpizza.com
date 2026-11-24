@@ -15,6 +15,10 @@ discussions: []
 **Modulo**: Notify  
 **Status**: 📝 **ROADMAP CREATA**
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "improvements roadmap"
@@ -31,6 +35,13 @@ Roadmap delle migliorie ipotizzate per il modulo Notify basate sull'analisi del 
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📊 Executive Summary
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🎯 Obiettivi
 
 1. **Migliorare UX** dell'editing template email

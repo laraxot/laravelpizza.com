@@ -14,7 +14,14 @@ related:
   - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -85,7 +92,14 @@ Multiple AI agents (Qwen, Claude, Cursor, etc.) are working on the same FixCity 
 **Current Tasks**:
 - ✅ Update `bashscripts/docs/ai/` with sync rules
 - ✅ Update AGENTS.md with commit/push rules
+<<<<<<< HEAD
 - ✅ Update AGENTS.md with commit/push rules
+=======
+<<<<<<< HEAD
+- ✅ Update AGENTS.md with commit/push rules
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - ✅ Update .windsurfrules
 - ⏳ Sync `.github/` with `bashscripts/ai/.github/`
 

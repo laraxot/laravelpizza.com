@@ -45,6 +45,10 @@ discussions: []
 4. Mixed Queries - query=middleware "rate limit" - "middleware" AND exact phrase "rate limit"
 5. Multiple Queries - queries=["authentication", "middleware"] - ANY of these terms
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 
 ---
@@ -65,3 +69,9 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md) — Original source
 
+<<<<<<< HEAD
+=======
+=======
+## Cross-References
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Dentist Moderation Approach in User Module"
 type: note
 qmd: "dentist moderation approach user"
 ---
->>>>>>> laraxot/dev
 # Dentist Moderation Approach in User Module
 
 ## Overview

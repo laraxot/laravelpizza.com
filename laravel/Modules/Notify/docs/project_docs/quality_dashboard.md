@@ -15,6 +15,10 @@ discussions: []
 **Last Updated:** 2025-10-01 21:35  
 **Status:** 🟢 Excellent
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "quality dashboard"
@@ -33,6 +37,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Overall Quality Score: **94.5%** (A+)
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📈 Key Metrics
 
 ### Code Complexity
@@ -298,7 +309,14 @@ Overall Progress: ████████████████████�
 ## 🔗 Related Resources
 
 - [Architecture Documentation](./architecture.md)
+<<<<<<< HEAD
 - [Architecture Documentation](./architecture.md)
+=======
+<<<<<<< HEAD
+- [Architecture Documentation](./architecture.md)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Contributing Guidelines](../contributing.md)
 - [Testing Strategy](../Modules/Xot/docs/testing/testing-strategy.md)
 - [Refactoring Reports](./final_refactoring_report.md)

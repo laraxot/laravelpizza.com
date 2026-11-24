@@ -16,6 +16,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Logs when a user logs in using Queueable Actions
  *
  * @see docs/contracts/log-user-login-action.md
+ *
  * @contract docs/contracts/log-user-login-action.md
  */
 class LogUserLoginAction

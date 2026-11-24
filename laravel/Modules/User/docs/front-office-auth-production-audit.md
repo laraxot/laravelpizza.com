@@ -2,10 +2,7 @@
 title: "User front-office authentication production audit"
 type: bmad-evidence
 tags: [front-office, auth, verification, oauth, production]
-<<<<<<< HEAD
-=======
 qmd: "front office auth production audit user"
->>>>>>> laraxot/dev
 ---
 
 # User front-office authentication production audit

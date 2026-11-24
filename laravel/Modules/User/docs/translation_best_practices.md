@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Best Practices per le Traduzioni"
 type: note
 qmd: "translation best practices traduzioni"
 ---
->>>>>>> laraxot/dev
 # Best Practices per le Traduzioni
 
 ## Principi Generali

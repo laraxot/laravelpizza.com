@@ -17,6 +17,10 @@ discussions: []
 
 **Action Required:** Remove all routine logging. Use only for errors/warnings.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "logging best practices"
@@ -44,6 +48,14 @@ With proper logging:          100-150ms per request
 5. **Noise:** Makes actual errors hard to find
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## The Problem
+### Performance Impact
+### Why It's Slow
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Rules: What NOT To Do
 

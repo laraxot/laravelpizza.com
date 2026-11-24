@@ -23,6 +23,7 @@ use function Safe\stream_get_contents;
  * la pagina.
  *
  * @see docs/contracts/read-log-tail-action.md
+ *
  * @contract docs/contracts/read-log-tail-action.md
  */
 class ReadLogTailAction

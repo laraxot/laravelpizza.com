@@ -18,9 +18,19 @@ use function Safe\preg_replace_callback;
  * un nome o un percorso con punti (`name`, `$name`, `user.address.city`), con la stessa escapatura di `{{ }}` di Blade.
  * Tutto il resto resta testo: altre espressioni, `{!! !!}`, direttive (`@php`, `@if`, `@include`, ...), tre graffe.
  * Stesso approccio di `HasBlocks::compile` (DCP-181): un costrutto in piu' si aggiunge a `PLACEHOLDER` con un test.
+<<<<<<< HEAD
+ *
+ * @see docs/contracts/render-notification-template-string-action.md
+ *
+ * @contract docs/contracts/render-notification-template-string-action.md
+=======
+<<<<<<< HEAD
+=======
  *
  * @see docs/contracts/render-notification-template-string-action.md
  * @contract docs/contracts/render-notification-template-string-action.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
  */
 final class RenderNotificationTemplateStringAction
 {

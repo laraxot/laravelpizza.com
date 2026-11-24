@@ -130,7 +130,3 @@ laravel/Themes/One/resources/views/pages/auth/logout.blade.php
 - Il file `logout.blade.php` è una pagina Folio e non richiede configurazioni aggiuntive in `routes/web.php`.
 - La pagina è accessibile all'URL `/{locale}/auth/logout`.
 - Per maggiori informazioni sulla gestione dell'autenticazione, consultare la documentazione Laravel ufficiale.
-<<<<<<< HEAD
-- Per maggiori informazioni sulla gestione dell'autenticazione, consultare la documentazione Laravel ufficiale.
-=======
->>>>>>> laraxot/dev

@@ -143,7 +143,14 @@ All documents are cross-referenced:
 - Issue Template → Guide + Coordination Log
 - Discussion Template → Coordination Log
 - AGENTS.md → All docs
+<<<<<<< HEAD
 - AGENTS.md → All docs
+=======
+<<<<<<< HEAD
+- AGENTS.md → All docs
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### External Links
 
@@ -196,7 +203,14 @@ All documents are cross-referenced:
 - Created README.md (docs index)
 - Created GitHub Issue/Discussion templates
 - Updated AGENTS.md with coordination guidelines
+<<<<<<< HEAD
 - Updated AGENTS.md with coordination guidelines
+=======
+<<<<<<< HEAD
+- Updated AGENTS.md with coordination guidelines
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 **Testing**:
 - ✅ CLI mode verified

@@ -13,7 +13,9 @@ use Spatie\QueueableAction\QueueableAction;
  * Restituisce il disco come FilesystemAdapter (mimeType(), url(), temporaryUrl()).
  *
  * `Storage::disk()` e' tipizzato sul contratto `Filesystem`, che non dichiara questi metodi.
+ *
  * @see docs/contracts/get-filesystem-adapter-action.md
+ *
  * @contract docs/contracts/get-filesystem-adapter-action.md
  */
 class GetFilesystemAdapterAction

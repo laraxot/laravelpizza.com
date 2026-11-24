@@ -16,6 +16,10 @@ discussions: []
 **Status**: ✅ **READY TO START**  
 **Timeline**: 17 settimane (4 mesi)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "FIXCITY IMPROVEMENT START HERE"
@@ -67,6 +71,23 @@ openviking add-memory "FixCity Improvement Plan started 2026-03-30"
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Quick Start
+### 1. Leggi i Documenti Principali
+# Master plan (1,555 righe)
+# Execution plan (515 righe)
+# Research summary (1 pagina)
+### 2. Inizia Fase 0 (Oggi!)
+# Inizializza GSD
+# Discuti P0.1
+# Pianifica P0.1
+# Esegui con Ralph Loop
+### 3. Aggiorna OpenViking
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📊 Priority Summary
 
 ### P0 - Critical (Settimane 1-2) ⚠️

@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-view-dir-action.md
+ *
  * @contract docs/contracts/get-view-dir-action.md
  */
 class GetViewDirAction

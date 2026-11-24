@@ -8,7 +8,9 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * ---.
+ *
  * @see docs/contracts/diff-assoc-recursive-action.md
+ *
  * @contract docs/contracts/diff-assoc-recursive-action.md
  */
 class DiffAssocRecursiveAction

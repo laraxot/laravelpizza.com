@@ -16,6 +16,10 @@ discussions: []
 **Status**: ✅ CRITICAL RULE  
 **Priority**: BLOCKER
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "translation structure 5 levels"
@@ -46,6 +50,13 @@ __('forecast::messages.success')          // ❌ SOLO 2 livelli!
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 The Rule
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📚 Translation Structure
 
 ### Level 1: Namespace
@@ -287,7 +298,14 @@ __('forecast::fields.outcome.title.label')  // aggiunto .label
 
 ### AI Agents Docs
 - **[Rules Index](00-index.md)** - All rules
+<<<<<<< HEAD
 - **[Rules Index](00-index.md)** - All rules
+=======
+<<<<<<< HEAD
+- **[Rules Index](00-index.md)** - All rules
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **[Multi-Outcome Universal](multi-outcome-universal.md)** - Core principle
 - **[Use Models Not DB::Table](use-models-not-db-table.md)** - Model usage
 

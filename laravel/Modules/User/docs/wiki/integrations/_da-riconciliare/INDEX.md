@@ -5,10 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< HEAD
-=======
 qmd: "user integrations"
->>>>>>> laraxot/dev
 ---
 
 # user — integrations
@@ -106,18 +103,11 @@ Documentation for `user` module categorized as **integrations**.
 - [`business-logic-analysis.md`](./business-logic-analysis.md)
 - [`business-logic-analysis-4.md`](./business-logic-analysis-4.md)
 - [`business-logic-analysis-5.md`](./business-logic-analysis-5.md)
-<<<<<<< HEAD
 - [`business-logic-deep-dive.md`](./business-logic-deep-dive.md)
 - [`business-logic-analysis-3.md`](./business-logic-analysis-3.md)
 - [`business-logic-deep-dive-3.md`](./business-logic-deep-dive-3.md)
 - [`business-logic-deep-dive-4.md`](./business-logic-deep-dive-4.md)
 - [`business-logic-deep-dive-5.md`](./business-logic-deep-dive-5.md)
-=======
-- [`business-logic-analysis.md`](./business-logic-analysis.md)
-- [`business-logic-deep-dive.md`](./business-logic-deep-dive.md)
-- [`business-logic-deep-dive.md`](./business-logic-deep-dive.md)
-- [`business-logic-deep-dive.md`](./business-logic-deep-dive.md)
->>>>>>> laraxot/dev
 - [`business-logic-deep-dive.md`](./business-logic-deep-dive.md)
 - [`business-logic.md`](./business-logic.md)
 - [`business-logiceepive.md`](./business-logiceepive.md)
@@ -136,14 +126,9 @@ Documentation for `user` module categorized as **integrations**.
 - [`code-optimization-analysis.md`](./code-optimization-analysis.md)
 - [`code-optimization.md`](./code-optimization.md)
 - [`code-quality-analysis.md`](./code-quality-analysis.md)
-<<<<<<< HEAD
 - [`code-quality-analysis-3.md`](./code-quality-analysis-3.md)
 - [`code-quality-analysis-4.md`](./code-quality-analysis-4.md)
 - [`code-quality-analysis-5.md`](./code-quality-analysis-5.md)
-=======
-- [`code-quality-analysis.md`](./code-quality-analysis.md)
-- [`code-quality-analysis.md`](./code-quality-analysis.md)
->>>>>>> laraxot/dev
 - [`code-quality-analysis.md`](./code-quality-analysis.md)
 - [`code-quality-tools.md`](./code-quality-tools.md)
 - [`code-quality.md`](./code-quality.md)
@@ -255,14 +240,9 @@ Documentation for `user` module categorized as **integrations**.
 - [`git-conflicts-resolution-.md`](./git-conflicts-resolution-.md)
 - [`git-conflicts-resolution.md`](./git-conflicts-resolution.md)
 - [`git-conflicts-resolution-4.md`](./git-conflicts-resolution-4.md)
-<<<<<<< HEAD
 - [`git-conflicts-resolution-3.md`](./git-conflicts-resolution-3.md)
 - [`git-conflicts-resolution-5.md`](./git-conflicts-resolution-5.md)
 - [`git-conflicts-resolution-6.md`](./git-conflicts-resolution-6.md)
-=======
-- [`git-conflicts-resolution.md`](./git-conflicts-resolution.md)
-- [`git-conflicts-resolution.md`](./git-conflicts-resolution.md)
->>>>>>> laraxot/dev
 - [`git-conflicts-resolution-conflict-06cb77.md`](./git-conflicts-resolution-conflict-06cb77.md)
 - [`git-conflicts-resolution-conflict.md`](./git-conflicts-resolution-conflict.md)
 - [`git-conflicts-resolution-local-swarm-backup.md`](./git-conflicts-resolution-local-swarm-backup.md)
@@ -323,12 +303,8 @@ Documentation for `user` module categorized as **integrations**.
 - [`livewire-namespace.md`](./livewire-namespace.md)
 - [`livewire_namespace.md`](./livewire_namespace.md)
 - [`logging-performance.md`](./logging-performance.md)
-<<<<<<< HEAD
 - [`logging-performance-3.md`](./logging-performance-3.md)
 - [`logging-performance-4.md`](./logging-performance-4.md)
-=======
-- [`logging-performance.md`](./logging-performance.md)
->>>>>>> laraxot/dev
 - [`logging-performance.md`](./logging-performance.md)
 - [`logging_performance.md`](./logging_performance.md)
 - [`login-resolution.md`](./login-resolution.md)
@@ -401,14 +377,9 @@ Documentation for `user` module categorized as **integrations**.
 - [`merge-conflict-files-list.md`](./merge-conflict-files-list.md)
 - [`merge-conflicts-list.md`](./merge-conflicts-list.md)
 - [`metodi-duplicati-analisi.md`](./metodi-duplicati-analisi.md)
-<<<<<<< HEAD
 - [`metodi-duplicati-analisi-3.md`](./metodi-duplicati-analisi-3.md)
 - [`metodi-duplicati-analisi-4.md`](./metodi-duplicati-analisi-4.md)
 - [`metodi-duplicati-analisi-5.md`](./metodi-duplicati-analisi-5.md)
-=======
-- [`metodi-duplicati-analisi.md`](./metodi-duplicati-analisi.md)
-- [`metodi-duplicati-analisi.md`](./metodi-duplicati-analisi.md)
->>>>>>> laraxot/dev
 - [`metodi-duplicati-analisi.md`](./metodi-duplicati-analisi.md)
 - [`metodi_duplicati_analisi.md`](./metodi_duplicati_analisi.md)
 - [`metodiuplicati-analisi.md`](./metodiuplicati-analisi.md)
@@ -420,18 +391,11 @@ Documentation for `user` module categorized as **integrations**.
 - [`missing-features.md`](./missing-features.md)
 - [`model-classification.md`](./model-classification.md)
 - [`model-inheritance-analysis.md`](./model-inheritance-analysis.md)
-<<<<<<< HEAD
 - [`model-inheritance-fixes.md`](./model-inheritance-fixes.md)
 - [`model-inheritance-analysis-3.md`](./model-inheritance-analysis-3.md)
 - [`model-inheritance-analysis-4.md`](./model-inheritance-analysis-4.md)
 - [`model-inheritance-analysis-5.md`](./model-inheritance-analysis-5.md)
 - [`model-inheritance-fixes-3.md`](./model-inheritance-fixes-3.md)
-=======
-- [`model-inheritance-analysis.md`](./model-inheritance-analysis.md)
-- [`model-inheritance-analysis.md`](./model-inheritance-analysis.md)
-- [`model-inheritance-analysis.md`](./model-inheritance-analysis.md)
-- [`model-inheritance-fixes.md`](./model-inheritance-fixes.md)
->>>>>>> laraxot/dev
 - [`model-inheritance-fixes-4.md`](./model-inheritance-fixes-4.md)
 - [`model-inheritance-fixes-5.md`](./model-inheritance-fixes-5.md)
 - [`model-inheritance-fixes.md`](./model-inheritance-fixes.md)
@@ -559,11 +523,8 @@ Documentation for `user` module categorized as **integrations**.
 - [`quality-improvements-summary.md`](./quality-improvements-summary.md)
 - [`quality-improvements.md`](./quality-improvements.md)
 - [`quality-status-11.md`](./quality-status.md)
-<<<<<<< HEAD
 - [`quality-11.md`](./quality-11.md)
 - [`quality-status-11.md`](./quality-status-11.md)
-=======
->>>>>>> laraxot/dev
 - [`quality-status-nov.md`](./quality-status-nov.md)
 - [`quality-status.md`](./quality-status.md)
 - [`quality-tooling.md`](./quality-tooling.md)
@@ -571,14 +532,9 @@ Documentation for `user` module categorized as **integrations**.
 - [`quality-tools.md`](./quality-tools.md)
 - [`quality.md`](./quality.md)
 - [`query-optimization-analysis.md`](./query-optimization-analysis.md)
-<<<<<<< HEAD
 - [`query-optimization-analysis-3.md`](./query-optimization-analysis-3.md)
 - [`query-optimization-analysis-4.md`](./query-optimization-analysis-4.md)
 - [`query-optimization-analysis-5.md`](./query-optimization-analysis-5.md)
-=======
-- [`query-optimization-analysis.md`](./query-optimization-analysis.md)
-- [`query-optimization-analysis.md`](./query-optimization-analysis.md)
->>>>>>> laraxot/dev
 - [`query-optimization-analysis.md`](./query-optimization-analysis.md)
 - [`query-optimization.md`](./query-optimization.md)
 - [`query_optimization_analysis.md`](./query_optimization_analysis.md)
@@ -643,20 +599,12 @@ Documentation for `user` module categorized as **integrations**.
 - [`spatie-models-verification.md`](./spatie-models-verification.md)
 - [`spatie-permission-philosophy.md`](./spatie-permission-philosophy.md)
 - [`spatie-permission-teams-laravel.md`](./spatie-permission-teams-laravel.md)
-<<<<<<< HEAD
 - [`spatie-permission.md`](./spatie-permission.md)
 - [`spatie-permissions-methods.md`](./spatie-permissions-methods.md)
 - [`spatie-permission-teams-laravel-13.md`](./spatie-permission-teams-laravel-13.md)
 - [`spatie-permissions-methods-3.md`](./spatie-permissions-methods-3.md)
 - [`spatie-permissions-methods-4.md`](./spatie-permissions-methods-4.md)
 - [`spatie-permissions-methods-5.md`](./spatie-permissions-methods-5.md)
-=======
-- [`spatie-permission-teams-laravel.md`](./spatie-permission-teams-laravel.md)
-- [`spatie-permission.md`](./spatie-permission.md)
-- [`spatie-permissions-methods.md`](./spatie-permissions-methods.md)
-- [`spatie-permissions-methods.md`](./spatie-permissions-methods.md)
-- [`spatie-permissions-methods.md`](./spatie-permissions-methods.md)
->>>>>>> laraxot/dev
 - [`spatie-permissions-methods.md`](./spatie-permissions-methods.md)
 - [`spatie-permissions.md`](./spatie-permissions.md)
 - [`spatie_permissions.md`](./spatie_permissions.md)
@@ -791,14 +739,9 @@ Documentation for `user` module categorized as **integrations**.
 - [`volt_missing_directive.md`](./volt_missing_directive.md)
 - [`volts.md`](./volts.md)
 - [`widget-rendering-analysis.md`](./widget-rendering-analysis.md)
-<<<<<<< HEAD
 - [`widget-rendering-analysis-3.md`](./widget-rendering-analysis-3.md)
 - [`widget-rendering-analysis-4.md`](./widget-rendering-analysis-4.md)
 - [`widget-rendering-analysis-5.md`](./widget-rendering-analysis-5.md)
-=======
-- [`widget-rendering-analysis.md`](./widget-rendering-analysis.md)
-- [`widget-rendering-analysis.md`](./widget-rendering-analysis.md)
->>>>>>> laraxot/dev
 - [`widget-rendering-analysis.md`](./widget-rendering-analysis.md)
 - [`widget-rendering.md`](./widget-rendering.md)
 - [`widget-translation-rules-3.md`](./widget-translation-rules-3.md)

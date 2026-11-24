@@ -13,6 +13,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/translate-tenant-key-action.md
+ *
  * @contract docs/contracts/translate-tenant-key-action.md
  */
 class TranslateTenantKeyAction

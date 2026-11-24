@@ -26,6 +26,10 @@ NotificationTemplateResource gestisce i template delle notifiche nel sistema. Es
 ### Panoramica
 MailTemplateResource gestisce i template delle email nel sistema. Estende `XotBaseResource` e implementa le funzionalità base per la gestione dei template.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 
@@ -65,6 +69,15 @@ public static function getFormSchema(): array
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+### Schema del Form
+### Versione HEAD
+### Versione Incoming
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
                 Forms\Components\TextInput::make('subject')
                     ->required()
                     ->maxLength(255),
@@ -242,7 +255,14 @@ public static function getTableActions(): array
 
 ### Versione HEAD
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ### Versione Incoming
 
 4. **Validazione JSON**
@@ -255,7 +275,14 @@ public static function getTableActions(): array
    - Struttura gerarchica delle traduzioni
    - Supporto per tooltip e placeholder
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## Collegamenti Bidirezionali
@@ -291,6 +318,16 @@ public static function getTableActions(): array
 * [filament-resources.md](../../Patient/project_docs/filament-resources.md)
 * [filament-resources.md](../../Cms/project_docs/filament-resources.md)
 
+<<<<<<< HEAD
 
 ---
 
+=======
+<<<<<<< HEAD
+
+---
+
+=======
+---
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

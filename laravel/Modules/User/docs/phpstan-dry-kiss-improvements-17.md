@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "PHPStan Level 10 + DRY/KISS Improvements - User Module"
 type: note
 qmd: "phpstan dry kiss improvements 17 level"
 ---
->>>>>>> laraxot/dev
 # PHPStan Level 10 + DRY/KISS Improvements - User Module
 
 ## Summary

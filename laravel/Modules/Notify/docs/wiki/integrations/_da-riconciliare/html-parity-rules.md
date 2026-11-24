@@ -3,13 +3,29 @@ title: "HTML Parity Analysis Rules"
 type: rule
 tags: [html, parity, rules]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "html-parity-rules html parity analysis rules"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
   - "./00-index.md"
   - "./00-index-2.md"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
   - "./00-index.md"
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
@@ -20,6 +36,16 @@ related:
   - "../../../acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
+=======
+=======
+  - "./absolute-completion.md"
+  - "./acronym-naming-conventions.md"
+  - "../../../00-index-documentation.md"
+  - "./absolute-completion-notify-completamento-assoluto.md"
+  - "../../../acronym-naming-conventions.md"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 status: draft
 ---
@@ -413,8 +439,26 @@ trans('<nome progetto>::segnalazione.heading.title.label')
 - [Translation Conventions](./translation-conventions.md)
 - [Blade Architecture](../laravel/CLAUDE.md#blade-components)
 - [Agnostic Scripts](./agnostic-documentation-rule.md)
+<<<<<<< HEAD
 - [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
 - [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
+- [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
+=======
+<<<<<<< .merge_file_f0djDb
+- [Multi-Agent Coordination](./multi-agent-coordination-rules.md)
+=======
+- [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
+- [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
+>>>>>>> .merge_file_dVyEHD
+>>>>>>> laraxot/dev
+=======
+- [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 

@@ -14,6 +14,7 @@ use Modules\Seo\Datas\SeoConfigData;
  * `/{x}.txt` risponde 404, come se la rotta non esistesse; con IndexNow spento non esiste nessun file.
  *
  * @contract docs/contracts/serve-index-now-key-action.md
+ *
  * @see Modules/Seo/docs/adr/search-engine-presence.md
  */
 final class ServeIndexNowKeyAction

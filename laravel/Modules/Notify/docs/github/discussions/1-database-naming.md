@@ -3,7 +3,19 @@ title: "1 database naming"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "1 database naming"
 issues: []
 discussions: []
@@ -44,8 +56,27 @@ database/Seeders/
 
 Ho creato questi documenti:
 
+<<<<<<< HEAD
 1. **[Database Naming Convention](../../conventions/database-naming.md)** - Guida completa
 1. **[Database Naming Convention](../../conventions/database-naming.md)** - Guida completa
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+1. **[Database Naming Convention](../../conventions/database-naming.md)** - Guida completa
+1. **[Database Naming Convention](../../conventions/database-naming.md)** - Guida completa
+=======
+<<<<<<< .merge_file_t6CySg
+1. **[Database Naming Convention](docs/conventions/database-naming.md)** - Guida completa
+=======
+1. **[Database Naming Convention](../../conventions/database-naming.md)** - Guida completa
+1. **[Database Naming Convention](../../conventions/database-naming.md)** - Guida completa
+>>>>>>> .merge_file_vNpEAg
+>>>>>>> laraxot/dev
+=======
+1. **[Database Naming Convention](../../conventions/database-naming.md)** - Guida completa
+1. **[Database Naming Convention](../../conventions/database-naming.md)** - Guida completa
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 2. **[AGENTS.md Update](AGENTS.md)** - Rule aggiunta alle regole architetturali
 3. **[GitHub Issue #5](https://github.com/laraxot/base_fixcity_fila5/issues/5)** - Tracking delle correzioni
 2. **[AGENTS.md Update](AGENTS.md)** - Rule aggiunta alle regole architetturali

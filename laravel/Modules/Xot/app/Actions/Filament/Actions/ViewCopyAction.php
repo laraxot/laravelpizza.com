@@ -9,7 +9,9 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Action for copying views in Filament.
+ *
  * @see docs/contracts/filament-actions-view-copy-action.md
+ *
  * @contract docs/contracts/filament-actions-view-copy-action.md
  */
 class ViewCopyAction extends XotBaseAction

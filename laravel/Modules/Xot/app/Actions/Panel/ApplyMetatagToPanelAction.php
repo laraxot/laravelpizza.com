@@ -11,6 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/apply-metatag-to-panel-action.md
+ *
  * @contract docs/contracts/apply-metatag-to-panel-action.md
  */
 class ApplyMetatagToPanelAction

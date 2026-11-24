@@ -12,7 +12,9 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 /**
  * Classe per l'esportazione di viste in formato Excel.
+ *
  * @see docs/contracts/export-xls-by-view.md
+ *
  * @contract docs/contracts/export-xls-by-view.md
  */
 class ExportXlsByView

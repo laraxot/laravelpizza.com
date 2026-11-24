@@ -3,7 +3,19 @@ title: "quick start"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "quick start"
 issues: []
 discussions: []

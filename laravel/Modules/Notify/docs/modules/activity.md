@@ -15,6 +15,10 @@ discussions: []
 
 [← Torna all'indice PHPStan](../phpstan.md)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "activity"
@@ -29,6 +33,12 @@ discussions: []
 Modulo dedicato al tracciamento e gestione delle attività utente, log, auditing e monitoraggio eventi.
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## Descrizione modulo
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Altri collegamenti
 - [Documentazione generale Activity](../../Modules/Activity/docs/README.md)

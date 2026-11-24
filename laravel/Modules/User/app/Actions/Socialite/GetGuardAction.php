@@ -14,6 +14,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/get-guard-action.md
+ *
  * @contract docs/contracts/get-guard-action.md
  */
 class GetGuardAction

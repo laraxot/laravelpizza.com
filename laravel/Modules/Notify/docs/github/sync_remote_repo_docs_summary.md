@@ -15,6 +15,10 @@ discussions: []
 > **Agent**: Qwen-Code-001  
 > **Task**: Create comprehensive documentation for dual-mode sync script with multi-agent coordination
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "sync remote repo docs summary"
@@ -56,6 +60,16 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📦 Files Created
+### Core Documentation (bashscripts/docs/git/)
+### GitHub Templates (.github/)
+### Documentation Updates
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🎯 Key Features
 
 ### 1. Dual-Mode Documentation
@@ -143,7 +157,14 @@ All documents are cross-referenced:
 - Issue Template → Guide + Coordination Log
 - Discussion Template → Coordination Log
 - AGENTS.md → All docs
+<<<<<<< HEAD
 - AGENTS.md → All docs
+=======
+<<<<<<< HEAD
+- AGENTS.md → All docs
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### External Links
 
@@ -196,7 +217,14 @@ All documents are cross-referenced:
 - Created README.md (docs index)
 - Created GitHub Issue/Discussion templates
 - Updated AGENTS.md with coordination guidelines
+<<<<<<< HEAD
 - Updated AGENTS.md with coordination guidelines
+=======
+<<<<<<< HEAD
+- Updated AGENTS.md with coordination guidelines
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 **Testing**:
 - ✅ CLI mode verified

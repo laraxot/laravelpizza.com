@@ -3,7 +3,19 @@ title: "SQLITE PERMISSION FIX"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "SQLITE PERMISSION FIX"
 issues: []
 discussions: []
@@ -21,6 +33,10 @@ discussions: []
 **Status**: ✅ **FIXED**  
 **Error**: `SQLSTATE[HY000]: General error: 8 attempt to write a readonly database`
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "SQLITE PERMISSION FIX"
@@ -52,6 +68,15 @@ Il file del database SQLite aveva permessi errati:
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🚨 Error Details
+### Original Error
+### Root Cause
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## ✅ Solution Applied
 
 ### Command Executed
@@ -231,8 +256,26 @@ bash bashscripts/fix-permissions.sh
 - [ ] Add permission fix to deployment docs
 - [ ] Create bash script for permissions
 - [ ] Add to pre-deployment checklist
+<<<<<<< HEAD
 - [ ] Document in AGENTS.md
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [ ] Document in AGENTS.md
+
+=======
+<<<<<<< HEAD
+- [ ] document in agents.md
+=======
+- [ ] Document in AGENTS.md
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [ ] document in agents.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## 🎯 Next Steps

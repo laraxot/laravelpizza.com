@@ -15,6 +15,10 @@ discussions: []
 > **Status**: ⚠️ **KNOWN LIMITATION**  
 > **Priority**: CRITICAL
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "bashscripts gitignore workaround"
@@ -36,6 +40,13 @@ Questo significa che:
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Problem
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🔧 Workaround Attuale
 
 ### Opzione 1: Commit Forzato

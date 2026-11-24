@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/test-s3-permissions-action.md
+ *
  * @contract docs/contracts/test-s3-permissions-action.md
  */
 class TestS3PermissionsAction

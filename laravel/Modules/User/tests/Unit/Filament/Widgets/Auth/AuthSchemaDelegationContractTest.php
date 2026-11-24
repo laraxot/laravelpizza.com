@@ -44,4 +44,3 @@ test('auth schema widgets use the shared UserForm contract', function (string $w
     expect(method_exists(UserForm::class, $schemaMethod))->toBeTrue();
     expect(UserForm::{$schemaMethod}())->toBeArray()->not->toBeEmpty();
 })->with('auth schema widgets');
-

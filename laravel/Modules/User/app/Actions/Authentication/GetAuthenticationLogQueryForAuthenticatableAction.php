@@ -11,6 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-authentication-log-query-for-authenticatable-action.md
+ *
  * @contract docs/contracts/get-authentication-log-query-for-authenticatable-action.md
  */
 final class GetAuthenticationLogQueryForAuthenticatableAction

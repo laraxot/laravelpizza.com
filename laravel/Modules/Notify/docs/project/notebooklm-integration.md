@@ -403,6 +403,10 @@ python scripts/run.py ask_question.py \
 4. ⏳ Upload project documentation
 5. ⏳ Integrate with BMAD workflow
 6. ⏳ Store insights in OpenViking
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -416,3 +420,8 @@ issues: []
 discussions: []
 **Last Updated**: 2026-03-30  
 **Status**: Ready for authentication and notebook creation
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

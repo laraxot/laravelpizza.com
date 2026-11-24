@@ -970,6 +970,10 @@ Log::info('Payment processed', ['order_id' => $order->id, 'amount' => $order->am
 - [ ] Verify asset compilation
 - [ ] Update documentation
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "AGENTS"
@@ -1412,6 +1416,31 @@ Before committing code, ensure:
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🔍 PHPSTAN LEVEL 10 COMPLIANCE GUIDE
+### Critical Error Patterns and Prevention
+#### 1. Interface Completeness (HIGHEST PRIORITY)
+#### 2. Factory Classes (CRITICAL)
+#### 3. Mixed Type Safety (IMPORTANT)
+#### 4. Relationship Type Annotations (CRITICAL)
+### 5. DRY Principle - Trait Methods (CRITICAL)
+#### 6. Static Methods vs Instance Methods
+#### 6. Property Type Annotations (REQUIRED)
+### PHPStan Error Resolution Checklist
+### Common PHPStan Error Messages and Solutions
+#### `Access to an undefined property`
+#### `Call to an undefined method`
+#### `Parameter #1 expects X, mixed given`
+#### `Anonymous function should return X but returns mixed`
+#### `Unable to resolve the template type`
+#### `Class not found`
+#### `offsetAccess.nonOffsetAccessible`
+### PHPStan Best Practices
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📖 DOCUMENTATION STANDARDS
 
 ### PHPDoc Requirements
@@ -1721,6 +1750,10 @@ gh run list --limit 10
 - Cross-verification
 - Comprehensive documentation
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 - Simple sentences (one idea per sentence)
 - Consistent terminology (use glossary)
@@ -1800,6 +1833,20 @@ git push origin dev
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+### Documentation Types
+### Before Creating Documentation
+### After Creating Documentation
+### CRITICAL: COMMIT & PUSH RULE
+# Types: feat, fix, docs, ci, refactor, test, chore
+# After GitHub Action success
+# After documentation created
+### Documentation Resources
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📊 PROJECT STATUS
 
 ### Documentation Health

@@ -5,10 +5,7 @@ canonical: ../../../../../Themes/docs/shared-components/concept.md
 related:
   - "./entity.md"
   - "./source.md"
-<<<<<<< HEAD
-=======
 qmd: "concept"
->>>>>>> laraxot/dev
 ---
 
 See canonical documentation: ../../../../../Themes/docs/shared-components/concept.md

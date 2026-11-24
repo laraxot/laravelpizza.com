@@ -13,6 +13,10 @@ discussions: []
 
 Questa guida mostra come creare, documentare e integrare plugin custom Tailwind CSS per pattern condivisi (bottoni, alert, badge, ecc.) secondo le best practice Webcrunch e le regole <nome progetto>.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "tailwind plugin guide"
@@ -27,6 +31,12 @@ discussions: []
 Un plugin Tailwind permette di aggiungere nuove utility, componenti o variant personalizzate, centralizzando la logica di stile e favorendo la coerenza tra moduli/temi.
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 1. Cos'è un Plugin Tailwind
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## 2. Struttura Base di un Plugin
 **Esempio: plugin per button variants**

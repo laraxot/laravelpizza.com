@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "User Module - Spatie Permission Methods Reference"
 type: note
 qmd: "spatie permissions methods user permission reference"
 ---
->>>>>>> laraxot/dev
 # User Module - Spatie Permission Methods Reference
 
 ## Overview

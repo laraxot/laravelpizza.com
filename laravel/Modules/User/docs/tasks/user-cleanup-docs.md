@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Task: User Docs Cleanup"
 type: note
 qmd: "user cleanup task"
 ---
->>>>>>> laraxot/dev
 # Task: User Docs Cleanup
 
 ## 📋 Obiettivo

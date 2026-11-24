@@ -4,6 +4,16 @@
 
 This document describes the design patterns and best practices for authentication pages (login, register, password reset) in the Meetup theme.
 
+## Password dimenticata / nuova password (versione del progetto)
+
+`pages/auth/password/reset.blade.php` (`password.request`) e `pages/auth/password/[token].blade.php` (`password.reset`) usano
+`<x-ui.auth-card>` + `<x-ui.auth-field>`, `middleware(['guest', 'throttle:6,1'])`, la stessa risposta se l'email esiste o no
+(nessuna enumerazione) e, dopo il reset, entrano subito nell'area personale (`xra.post_login_path`). I testi stanno in
+`lang/{it,en,de,es,...}/auth.php` sotto `password.request.*`, `password.reset.*`, `password.confirm.*`, `verify.*`.
+Una sincronizzazione con il tema generico li aveva sostituiti con pagine senza `<h1>` e senza quei testi
+(`FrontOfficePrivacyAndSeoTest`: "forgot password"): ripristinate le pagine del progetto e riunite le chiavi di lingua
+(chiavi del tema generico mantenute, valori del progetto vincenti).
+
 ## URL Structure
 
 All auth pages must be under `/auth/` prefix:

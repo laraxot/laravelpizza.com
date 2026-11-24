@@ -3,7 +3,19 @@ title: "gemini action patterns"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "gemini action patterns"
 issues: []
 discussions: []
@@ -13,6 +25,10 @@ discussions: []
 
 Action Execution Rules - Spatie Queueable Actions.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "gemini action patterns"
@@ -46,6 +62,16 @@ app(CreatePersonalAccessClientAction::class)->execute($data);
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Regola 1: Il Metodo Pubblico è SEMPRE `execute()`
+### ❌ SBAGLIATO
+### ✅ CORRETTO
+### Perché?
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Regola 2: Mai Dependency Injection Pesante
 
 ### ❌ SBAGLIATO
@@ -143,5 +169,21 @@ Alcune eccezioni sono pragmaticamente accettabili:
 
 - [Indice GEMINI](./gemini-split-index.md)
 - [queueable-actions.md](./queueable-actions.md)
+<<<<<<< HEAD
 - [GEMINI.md originale](../../gemini.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [gemini.md originale](../../gemini.md)
+=======
+<<<<<<< HEAD
+- [GEMINI.md originale](../../gemini.md)
+=======
+- [gemini.md originale](../../gemini.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [GEMINI.md originale](../../gemini.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Index principale](./index.md)

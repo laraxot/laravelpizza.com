@@ -8,10 +8,7 @@ tags: [migrato-da-txt, ui]
 converted_from: ratings.txt
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< HEAD
-=======
 qmd: "ratings"
->>>>>>> laraxot/dev
 ---
 
 ----------------------------------------------------------------------------------------------

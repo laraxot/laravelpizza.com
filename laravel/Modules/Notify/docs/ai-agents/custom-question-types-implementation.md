@@ -390,6 +390,10 @@ return AnswersChartData::from([
 ### Tests
 - `Modules/<nome progetto>/tests/Unit/Actions/QuestionChart/CustomQuestionTypesTest.php`
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ### Fila5 Implementation
 - `Modules/<nome progetto>/app/Actions/QuestionChart/Custom/`
 - `Modules/<nome progetto>/app/Actions/QuestionChart/GetAnswersByQuestionChart.php`
@@ -397,6 +401,11 @@ return AnswersChartData::from([
 ### Tests
 - `Modules/<nome progetto>/tests/Unit/Actions/QuestionChart/CustomQuestionTypesTest.php`
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ### GitHub
 - [Custom Chart Implementation Issue](.github/ISSUE_TEMPLATE/custom-chart-implementation.md)
 - [Progress Update](.github/ISSUE_TEMPLATE/custom-chart-progress-update.md)

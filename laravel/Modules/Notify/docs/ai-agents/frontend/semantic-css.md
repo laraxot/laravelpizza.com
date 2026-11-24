@@ -16,6 +16,10 @@ discussions: []
 **Status**: ✅ CANONICAL  
 **Version**: 1.0
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "semantic css"
@@ -34,6 +38,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Core Principle
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📋 Quick Reference
 
 ### ✅ DO - Semantic Classes
@@ -118,7 +129,14 @@ class OutcomesTableWidget extends XotBaseTableWidget
 
 - [Semantic CSS Rule](../../rules/frontend/semantic-css-rule.md) - **MANDATORY** rule
 - [Frontend Rules Index](../../rules/frontend/00-index.md) - All frontend rules
+<<<<<<< HEAD
 - [Frontend Rules Index](../../rules/frontend/00-index.md) - All frontend rules
+=======
+<<<<<<< HEAD
+- [Frontend Rules Index](../../rules/frontend/00-index.md) - All frontend rules
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 

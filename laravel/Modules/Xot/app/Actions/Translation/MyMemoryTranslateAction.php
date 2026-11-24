@@ -6,6 +6,7 @@ namespace Modules\Xot\Actions\Translation;
 
 /**
  * @see docs/contracts/my-memory-translate-action.md
+ *
  * @contract docs/contracts/my-memory-translate-action.md
  */
 class MyMemoryTranslateAction extends BaseTranslateAction

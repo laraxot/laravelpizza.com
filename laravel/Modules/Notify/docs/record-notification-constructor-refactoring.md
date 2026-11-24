@@ -170,6 +170,10 @@ The change reflects the understanding that `RecordNotification` should be respon
 ## Conclusion
 
 The refactoring successfully transforms the `RecordNotification` constructor from a complex object dependency to a simple string identifier, while maintaining all functionality and improving the overall architecture. The change follows established principles and patterns within the project.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 title: "record notification constructor refactoring"
@@ -182,3 +186,8 @@ issues: []
 discussions: []
 **Author**: iFlow CLI  
 **Review Status**: Automated Quality Check Passed
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -3,7 +3,19 @@ title: "agents module architecture"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "agents module architecture"
 issues: []
 discussions: []
@@ -31,6 +43,10 @@ $userClass::query()->count()
 
 Questo permette al modulo di funzionare in qualsiasi progetto senza dipendere da moduli specifici.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "agents module architecture"
@@ -66,6 +82,13 @@ ModuleName/
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Module Directory Structure
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Composer Merge Plugin Configuration
 
 Il progetto usa **Wikimedia Composer Merge Plugin** per gestire le dipendenze dei moduli:
@@ -153,6 +176,26 @@ git rm path/to/submodule
 - [Indice AGENTS](./agents-split-index.md)
 - [module-dependencies.md](./module-dependencies.md) - Più dettagliato
 - [git-submodules.md](./git-submodules.md) - Dettagli git
+<<<<<<< HEAD
 - [AGENTS.md originale](../../AGENTS.md)
 - [AGENTS.md originale](../../AGENTS.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [AGENTS.md originale](../../AGENTS.md)
+- [AGENTS.md originale](../../AGENTS.md)
+=======
+<<<<<<< HEAD
+- [AGENTS.md originale](../../agents.md)
+- [agents.md originale](../../agents.md)
+=======
+- [AGENTS.md originale](../../AGENTS.md)
+- [AGENTS.md originale](../../AGENTS.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [AGENTS.md originale](../../agents.md)
+- [agents.md originale](../../agents.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Index principale](./index.md)

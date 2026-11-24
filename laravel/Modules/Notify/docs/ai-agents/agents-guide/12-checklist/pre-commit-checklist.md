@@ -25,6 +25,10 @@ Before committing or pushing:
 - [ ] XotBase classes used (not raw Filament)
 - [ ] No Controllers for frontoffice
 - [ ] JSON pages for dynamic content
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 title: "pre commit checklist"
@@ -35,3 +39,8 @@ updated: 2026-09-26
 qmd: "pre commit checklist"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

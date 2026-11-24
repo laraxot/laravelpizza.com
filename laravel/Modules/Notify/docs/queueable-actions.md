@@ -13,6 +13,10 @@ discussions: []
 
 In <nome progetto>, per tutte le operazioni asincrone (invio email, preview, azioni Filament) si utilizza il package [spatie/laravel-queueable-action](https://github.com/spatie/laravel-queueable-action). Le Queueable Actions sostituiscono i tradizionali Service/ServiceProvider, garantendo codice più modulare e dispatch asincrono via queue.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 title: "queueable actions"
 type: note
@@ -75,6 +79,16 @@ SendWelcomeMailAction::assertRan(fn ($action) => $action->parameters === [$user]
 ```
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## Installazione
+## Definizione di Action
+## Dispatch sincrono o asincrono
+## Integrazione con Filament
+## Testing
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 *Collegamenti:* 
 - [Panoramica Template Email](email-template-landscape.md)
 - [Deep Dive Template](email-templates-deep-dive.md)

@@ -3,7 +3,19 @@ title: "qwen memories"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "qwen memories"
 issues: []
 discussions: []
@@ -13,6 +25,10 @@ discussions: []
 
 Memorie e lesson learned accumulate da Qwen.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "qwen memories"
@@ -38,6 +54,13 @@ Errori comuni:
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Error Fix Pattern
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Seeder Best Practice
 
 - **MAI** creare utenti nuovi nei seeder (causa DB conflicts)
@@ -244,5 +267,21 @@ Usare `cinematic-particles` per background hero:
 
 - [Indice QWEN](./qwen-split-index.md)
 - [memories.md](./memories.md) - Più memorie
+<<<<<<< HEAD
 - [QWEN.md originale](../../qwen.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [qwen.md originale](../../qwen.md)
+=======
+<<<<<<< HEAD
+- [QWEN.md originale](../../qwen.md)
+=======
+- [qwen.md originale](../../qwen.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [QWEN.md originale](../../qwen.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Index principale](./index.md)

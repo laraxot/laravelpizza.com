@@ -468,6 +468,10 @@ return (new PhpCsFixer\Config())
 - [ ] Process improvement
 - [ ] Documentation update
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "php quality tools"
@@ -498,3 +502,10 @@ discussions: []
 
 
 
+<<<<<<< HEAD
+=======
+=======
+*Questo sistema garantisce la massima qualità del codice nel progetto FixCity Platform.*
+*Questo sistema garantisce la massima qualità del codice nel progetto Notify Platform.*
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

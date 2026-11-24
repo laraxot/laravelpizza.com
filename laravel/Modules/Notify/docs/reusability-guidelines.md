@@ -295,7 +295,14 @@ protected function createTestUser(): mixed
 Prima di committare modifiche al modulo Notify:
 
 - [ ] Nessun riferimento hardcoded a "<nome progetto>" o altri nomi di progetti
+<<<<<<< HEAD
 - [ ] Nessun riferimento hardcoded a "<nome progetto>" o altri nomi di progetti
+=======
+<<<<<<< HEAD
+- [ ] Nessun riferimento hardcoded a "<nome progetto>" o altri nomi di progetti
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [ ] Utilizzo di `XotData::make()->getUserClass()` per la classe User
 - [ ] Configurazioni database dinamiche nei test
 - [ ] Nessun import diretto di modelli da altri progetti

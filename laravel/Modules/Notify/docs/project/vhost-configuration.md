@@ -16,6 +16,10 @@ discussions: []
 > **Environment**: Local Development (WSL2)
 > **Server**: Apache 2.4.64 (Ubuntu)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "vhost configuration"
@@ -41,6 +45,14 @@ This document describes the Apache VirtualHost configuration for local developme
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Overview
+### Key Points
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📁 File Locations
 
 ```

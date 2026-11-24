@@ -16,6 +16,10 @@ discussions: []
 **Live**: https://italia.github.io/design-comuni-pagine-statiche  
 **Status**: ✅ INTEGRATION COMPLETE  
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "DESIGN COMUNI INTEGRATION COMPLETE"
@@ -32,6 +36,13 @@ Analizzato il design system ufficiale dei comuni italiani e integrato i suoi pat
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 OBIETTIVO RAGGIUNTO
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📊 ANALISI DESIGN COMUNI
 
 ### Progetto

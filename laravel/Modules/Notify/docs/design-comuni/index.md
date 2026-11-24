@@ -60,11 +60,31 @@ docs/
 - [Prompt REPLIKATE](./laravel/Themes/Sixteen/docs/prompts/replikate.txt)
 - [Theme Analysis](./docs/theme/sixteen/analysis/)
 - [Homepage Results](./docs/theme/sixteen/analysis/results.md)
+<<<<<<< HEAD
 - [Argomenti Analysis](./docs/design-comuni/pages/argomenti.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_LarcB7
+- [Argomenti Analysis](./docs/design-comuni/pages/argomenti.md)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Argomenti Analysis](pages/argomenti.md)
 - [Theme Analysis](../theme/sixteen/analysis)
 - [Homepage Results](../theme/sixteen/analysis/results.md)
 - [Argomenti Analysis](./pages/argomenti.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_gwl0NT
+>>>>>>> laraxot/dev
+=======
+- [Argomenti Analysis](./docs/design-comuni/pages/argomenti.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 

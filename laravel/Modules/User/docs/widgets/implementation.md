@@ -7,10 +7,7 @@ related:
   - "./implementation-summary.md"
   - "./translation-guidelines.md"
   - "./translationlines.md"
-<<<<<<< HEAD
-=======
 qmd: "implementation"
->>>>>>> laraxot/dev
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/implementation-summary-Modules.md

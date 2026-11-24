@@ -3,7 +3,19 @@ title: "Notify: architecture"
 type: architecture
 tags: [notify, architecture, module-boundary, models, resources, channels]
 created: 2026-09-28
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-28
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "Notify architettura componenti modelli risorse canali provider"
 related:
   - ./README.md

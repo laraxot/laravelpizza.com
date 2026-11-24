@@ -2,10 +2,6 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-use Illuminate\Contracts\Support\Htmlable;
-=======
->>>>>>> laraxot/dev
 use Modules\User\Enums\UserType;
 use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Filament\Resources\UserResource\Pages\CreateUser;
@@ -18,10 +14,7 @@ use Modules\User\Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function (): void {
-<<<<<<< HEAD
     TestCase::$createUserPage = new CreateUser;
-=======
->>>>>>> laraxot/dev
     $this->page = new CreateUser;
 });
 

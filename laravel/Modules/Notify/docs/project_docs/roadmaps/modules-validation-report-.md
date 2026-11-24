@@ -1,5 +1,13 @@
 ---
+<<<<<<< HEAD
 title: "modules validation report 2025 10 02"
+=======
+<<<<<<< HEAD
+title: "Modules Validation Report"
+=======
+title: "modules validation report 2025 10 02"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 type: note
 tags: [documentation]
 created: 2026-09-26
@@ -16,6 +24,10 @@ discussions: []
 **Validation Level**: PHPStan Level 9 (Maximum)  
 **Status**: ✅ **ALL MODULES VALIDATED**
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "MODULES VALIDATION REPORT 2025 10 02"
@@ -41,6 +53,14 @@ This report documents the comprehensive validation of multiple Laravel modules a
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📊 Executive Summary
+### Overall Results
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🎯 Module 1: Fixcity - Civic Reporting System
 
 ### Validation Results ✅

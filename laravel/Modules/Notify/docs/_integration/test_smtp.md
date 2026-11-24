@@ -57,4 +57,11 @@ Mail::raw('Test SMTP', function($m){ $m->to('tuo@email.com')->subject('Test SMTP
 - [TestSmtpPage vs SendEmail: differenze architetturali](./test_smtp.md)
 - [Best practice per la configurazione SMTP](./EMAIL_BEST_PRACTICES.md)
 - [Documentazione Laravel Mail](https://laravel.com/project_docs/mail)
+<<<<<<< HEAD
 - [Documentazione Laravel Mail](https://laravel.com/project_docs/mail)
+=======
+<<<<<<< HEAD
+- [Documentazione Laravel Mail](https://laravel.com/project_docs/mail)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

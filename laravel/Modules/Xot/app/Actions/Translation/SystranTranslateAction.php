@@ -6,6 +6,7 @@ namespace Modules\Xot\Actions\Translation;
 
 /**
  * @see docs/contracts/systran-translate-action.md
+ *
  * @contract docs/contracts/systran-translate-action.md
  */
 class SystranTranslateAction extends BaseTranslateAction

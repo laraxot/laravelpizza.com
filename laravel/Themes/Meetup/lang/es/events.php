@@ -16,4 +16,17 @@ return [
             'label' => 'Eventos pasados',
         ],
     ],
+    'search' => [
+        'see_all' => 'Ver todos los eventos',
+        'label' => 'Buscar eventos',
+        'city' => 'Ciudad',
+        'all_cities' => 'Todas las ciudades',
+        'from' => 'Desde',
+        'until' => 'Hasta',
+        'apply' => 'Buscar',
+        'reset' => 'Quitar filtros',
+        'no_results' => 'No hay eventos con estos filtros.',
+        'show_past' => 'Eventos pasados',
+        'show_upcoming' => 'Próximos eventos',
+    ],
 ];

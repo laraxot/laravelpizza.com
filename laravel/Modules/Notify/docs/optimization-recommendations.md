@@ -245,7 +245,14 @@ php artisan notify:benchmark
 
 #### 1. Riusabilità Compromessa
 - **336+ occorrenze hardcoded** di "<nome progetto>" in test e documentazione
+<<<<<<< HEAD
 - **336+ occorrenze hardcoded** di "<nome progetto>" in test e documentazione
+=======
+<<<<<<< HEAD
+- **336+ occorrenze hardcoded** di "<nome progetto>" in test e documentazione
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **Import diretti** da moduli project-specific
 - **Configurazioni database** hardcoded nei test
 - **Email domains** hardcoded nei test
@@ -260,7 +267,14 @@ php artisan notify:benchmark
 - Test che utilizzano `User::factory()` invece di `XotData::make()->getUserClass()`
 - Configurazioni database hardcoded
 - Riferimenti diretti a modelli <nome progetto>
+<<<<<<< HEAD
 - Riferimenti diretti a modelli <nome progetto>
+=======
+<<<<<<< HEAD
+- Riferimenti diretti a modelli <nome progetto>
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## ✅ OTTIMIZZAZIONI IMPLEMENTATE
 

@@ -18,7 +18,9 @@ use function Safe\simplexml_load_string;
  * sentence/item timing data.
  *
  * @phpstan-type SubtitleRow array{sentence_i: int, item_i: int, start: float|int, end: float|int, time: string, text: string}
+ *
  * @see docs/contracts/parse-subtitle-xml-action.md
+ *
  * @contract docs/contracts/parse-subtitle-xml-action.md
  */
 class ParseSubtitleXmlAction

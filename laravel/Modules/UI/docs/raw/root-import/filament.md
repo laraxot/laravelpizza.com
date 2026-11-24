@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Filament"
 type: note
 qmd: "filament"
 ---
->>>>>>> laraxot/dev
 https://github.com/savannabits/filament-signature-pad
 
 

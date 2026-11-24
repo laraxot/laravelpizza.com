@@ -20,6 +20,7 @@ use function Safe\realpath;
  * di config deve usare il path reale, non l'alias — altrimenti Laravel non trova i file.
  *
  * @see docs/contracts/get-tenant-name-action.md
+ *
  * @contract docs/contracts/get-tenant-name-action.md
  */
 class GetTenantNameAction

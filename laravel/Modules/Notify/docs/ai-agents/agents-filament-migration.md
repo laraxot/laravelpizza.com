@@ -3,7 +3,19 @@ title: "agents filament migration"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "agents filament migration"
 issues: []
 discussions: []
@@ -22,6 +34,10 @@ Guida alla migrazione da Filament v3/v4 a v5.
 | Livewire v4.0+ | ❌ v3 - DA AGGIORNARE | ✅ |
 | Tailwind CSS v4.0+ | ❌ v3 - DA AGGIORNARE | ✅ |
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "agents filament migration"
@@ -50,6 +66,16 @@ composer remove filament/upgrade --dev
 ```
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## Migration Process
+# 1. Install upgrade tool
+# 2. Run automated upgrade script
+# 3. Follow script output commands
+# 4. Remove upgrade tool
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Key Areas to Check After Migration
 
@@ -84,6 +110,26 @@ composer remove filament/upgrade --dev
 
 - [Indice AGENTS](./agents-split-index.md)
 - [filament-patterns.md](./filament-patterns.md) - Pattern Filament
+<<<<<<< HEAD
 - [AGENTS.md originale](../../AGENTS.md)
 - [AGENTS.md originale](../../AGENTS.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [AGENTS.md originale](../../AGENTS.md)
+- [AGENTS.md originale](../../AGENTS.md)
+=======
+<<<<<<< HEAD
+- [AGENTS.md originale](../../agents.md)
+- [agents.md originale](../../agents.md)
+=======
+- [AGENTS.md originale](../../AGENTS.md)
+- [AGENTS.md originale](../../AGENTS.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [AGENTS.md originale](../../agents.md)
+- [agents.md originale](../../agents.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Index principale](./index.md)

@@ -38,7 +38,7 @@ afterEach(function (): void {
 describe('UI state columns — comportamento IconStateColumn', function (): void {
     test('icon color tooltip rispondono allo StateContract', function (): void {
         $column = IconStateColumn::make('state');
-        $state = new UiCoverageStateContract();
+        $state = new UiCoverageStateContract;
 
         Assert::assertSame('heroicon-o-clock', $column->getIcon($state));
         Assert::assertSame('warning', $column->getColor($state));

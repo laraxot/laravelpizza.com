@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Errore nel Logout con Volt e Folio"
 type: note
 qmd: "volt folio logout error errore"
 ---
->>>>>>> laraxot/dev
 # Errore nel Logout con Volt e Folio
 
 ## Il Problema

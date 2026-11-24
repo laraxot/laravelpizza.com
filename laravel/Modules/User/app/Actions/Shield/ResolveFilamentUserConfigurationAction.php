@@ -13,6 +13,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Raggruppa: isFilamentUserRoleEnabled, getFilamentUserRoleName
  *
  * @see docs/contracts/resolve-filament-user-configuration-action.md
+ *
  * @contract docs/contracts/resolve-filament-user-configuration-action.md
  */
 class ResolveFilamentUserConfigurationAction

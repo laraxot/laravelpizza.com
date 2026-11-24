@@ -25,6 +25,11 @@ test('undeclared Filament bulk abilities are denied to ordinary users', function
     $user->shouldReceive('hasRole')
         ->with('super-admin')
         ->andReturnFalse();
+    // `XotBasePolicy::before()` chiede anche il ruolo del pannello del modulo (`xot::admin`):
+    // un utente ordinario non lo ha. ADR: Modules/Xot/docs/wiki/decisions/module-admin-role-policy-bypass.md
+    $user->shouldReceive('hasRole')
+        ->with('xot::admin')
+        ->andReturnFalse();
 
     Gate::policy(UndeclaredAbilityPolicyModel::class, UndeclaredAbilityPolicyProbe::class);
 

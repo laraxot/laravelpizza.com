@@ -13,10 +13,7 @@ related:
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
   - "./folio-pages-owner-pattern.md"
-<<<<<<< HEAD
-=======
 qmd: "context mode user discipline contextmode"
->>>>>>> laraxot/dev
 ---
 
 # User Module — Context-Mode Discipline

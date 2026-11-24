@@ -23,6 +23,7 @@ use Webmozart\Assert\Assert;
  * - NO property_exists: Mai utilizzare property_exists con modelli Eloquent
  *
  * @see docs/contracts/safe-eloquent-cast-action.md
+ *
  * @contract docs/contracts/safe-eloquent-cast-action.md
  */
 class SafeEloquentCastAction

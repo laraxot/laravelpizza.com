@@ -10,6 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/store-morph-many-action.md
+ *
  * @contract docs/contracts/store-morph-many-action.md
  */
 class MorphManyAction

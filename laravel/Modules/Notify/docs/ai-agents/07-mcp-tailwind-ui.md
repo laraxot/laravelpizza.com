@@ -15,6 +15,10 @@ discussions: []
 **Stato**: ✅ OBBLIGATORIO  
 **Priorità**: CRITICAL
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "07 MCP TAILWIND UI"
@@ -35,6 +39,13 @@ Questo progetto utilizza **MCP (Model Context Protocol)** per integrare AI assis
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📋 Panoramica
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🔧 MCP Servers Installati
 
 ### 1. Flowbite MCP ✅

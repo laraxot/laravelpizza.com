@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Code Quality Analysis - User Module"
 type: analysis
 qmd: "code quality analysis user"
 ---
->>>>>>> laraxot/dev
 # Code Quality Analysis - User Module
 
 ## 🚨 Critical Issues Identified

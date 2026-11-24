@@ -11,6 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/is-provider-configured-action.md
+ *
  * @contract docs/contracts/is-provider-configured-action.md
  */
 class IsProviderConfiguredAction

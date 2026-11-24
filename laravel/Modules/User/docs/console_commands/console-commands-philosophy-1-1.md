@@ -13,13 +13,10 @@ related:
   - "./console-commands-philosophy.md"
   - "./console-commands.md"
   - "./readme.md"
-<<<<<<< HEAD
   - "./console-commands-philosophy.md"
   - "./console-commands-philosophy.md"
   - "./console-commands.md"
   - "./README.md"
-=======
->>>>>>> laraxot/dev
 ---
 
 # Filosofia dei Comandi Console - Modulo User
@@ -481,7 +478,4 @@ private function getPasswordLegacy(): string
 
 *Ultimo aggiornamento: 2025-01-27*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev

@@ -17,6 +17,10 @@ discussions: []
 > **Stato**: ✅ Attivo e verificato  
 > **Versione**: 2.0 (GSD v1.26.0 + BMAD v6)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "gsd bmad comprehensive guide"
@@ -40,6 +44,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📖 Indice
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Introduzione
 
 ### Perché GSD + BMAD?

@@ -15,6 +15,10 @@ discussions: []
 > **Versione**: 2.0.0
 > **Maintainer**: Development Team
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "project roadmap"
@@ -38,6 +42,13 @@ discussions: []
 - 🚧 **Notifiche**: Struttura presente, implementazione incompleta
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 📊 EXECUTIVE SUMMARY
+### Stato Attuale
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## 🎯 BUSINESS LOGIC
 

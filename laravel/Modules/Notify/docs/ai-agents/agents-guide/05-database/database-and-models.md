@@ -93,6 +93,10 @@ DB_PASSWORD_USER=marco
 This ensures APP_URL and all other variables remain identical to .env.
 
 **CRITICAL RULE FOR TestCase:** NEVER duplicate database connection configuration in setUp() because CreatesApplication already handles it automatically.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -104,3 +108,8 @@ updated: 2026-09-26
 qmd: "database and models"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

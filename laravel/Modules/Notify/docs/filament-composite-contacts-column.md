@@ -235,6 +235,10 @@ Questo pattern può essere applicato a:
 - **Creazione**: Documentazione iniziale del pattern
 - **Standardizzazione**: Pattern derivato da TechPlanner
 - **Best Practices**: Definite regole architetturali
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -249,3 +253,8 @@ discussions: []
 *Ultimo aggiornamento: [DATE]*  
 *Autore: Sistema Laraxot*  
 *Versione: 1.0*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

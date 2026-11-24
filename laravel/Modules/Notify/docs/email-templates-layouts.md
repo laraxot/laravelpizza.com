@@ -148,6 +148,10 @@ MailTemplate::create([
 - CSS centralizzato riduce dimensioni email
 - Preheader migliora deliverability
 - Immagini ottimizzate con fallback
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -162,3 +166,8 @@ discussions: []
 **Ultimo aggiornamento**: [DATE]  
 **Versione**: 1.0  
 **Compatibilità**: Laravel 12.x, Filament 3.x, Spatie Mail Templates
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

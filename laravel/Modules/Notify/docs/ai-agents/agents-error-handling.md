@@ -93,7 +93,15 @@ try {
 - [Indice AGENTS](./agents-split-index.md)
 - [phpstan.md](../phpstan.md) - Analisi statica
 - [AGENTS.md originale](../../AGENTS.md)
+<<<<<<< HEAD
 - [AGENTS.md originale](../../AGENTS.md)
 - [AGENTS.md originale](../agents.md)
+=======
+<<<<<<< HEAD
+- [AGENTS.md originale](../../AGENTS.md)
+- [AGENTS.md originale](../agents.md)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [AGENTS.md originale](../agents.md)
 - [Index principale](./index.md)

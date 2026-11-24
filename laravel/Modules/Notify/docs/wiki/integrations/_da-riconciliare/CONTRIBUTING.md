@@ -359,6 +359,10 @@ By contributing, you agree that your contributions will be licensed under the sa
 
 <!-- Merged from CONTRIBUTING.md, which collided with this file on case-insensitive filesystems. -->
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 title: "Contributing to <nome progetto>"
 type: concept
@@ -379,6 +383,11 @@ related:
   - "./action-plan-immediate.md"
 ---
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 # Contributing to <nome progetto>
 
 First off, thank you for considering contributing to <nome progetto>! 🎉

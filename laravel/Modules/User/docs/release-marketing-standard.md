@@ -15,10 +15,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< HEAD
-=======
 qmd: "release marketing standard user"
->>>>>>> laraxot/dev
 ---
 
 # Release e README marketing — User

@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/create-filesystem-sts-client-action.md
+ *
  * @contract docs/contracts/create-filesystem-sts-client-action.md
  */
 class CreateFilesystemStsClientAction

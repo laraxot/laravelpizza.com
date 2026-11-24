@@ -16,6 +16,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Extracted from ActivityLogger to separate write and maintenance responsibilities.
  *
  * @see docs/contracts/activity-maintenance-action.md
+ *
  * @contract docs/contracts/activity-maintenance-action.md
  */
 class ActivityMaintenanceAction

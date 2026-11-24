@@ -8,10 +8,7 @@ related:
   - ../../app/Actions/Auth/ConsumeAuthSubmissionSlotAction.php
   - ../../app/Enums/AuthThrottleScope.php
   - ../contracts/consume-auth-submission-slot-action.md
-<<<<<<< HEAD
-=======
 qmd: "auth submission throttle before validation registrazione"
->>>>>>> laraxot/dev
 ---
 
 # ADR: registrazione e recupero password si frenano per IP ed email prima di validare

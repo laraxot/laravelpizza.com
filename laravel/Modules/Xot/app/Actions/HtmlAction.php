@@ -11,7 +11,9 @@ use Spipu\Html2Pdf\Html2Pdf;
 
 /**
  * Class HtmlAction.
+ *
  * @see docs/contracts/html-action.md
+ *
  * @contract docs/contracts/html-action.md
  */
 class HtmlAction

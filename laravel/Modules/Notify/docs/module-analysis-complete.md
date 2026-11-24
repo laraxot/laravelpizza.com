@@ -263,6 +263,10 @@ Il modulo Notify è il sistema di gestione notifiche e comunicazioni riutilizzab
 - Riduzione bug in produzione
 - Accelerazione deployment
 - Miglioramento manutenibilità
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -279,3 +283,8 @@ discussions: []
 **Stato**: In Progress
 **Responsabile**: Team Sviluppo Laraxot
 **Prossima Revisione**: Gennaio 2025
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

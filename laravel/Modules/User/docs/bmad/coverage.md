@@ -1,10 +1,7 @@
 ---
 title: coverage
 module: User
-<<<<<<< HEAD
-=======
 qmd: "coverage"
->>>>>>> laraxot/dev
 ---
 
 # Coverage — User

@@ -15,7 +15,9 @@ use function Safe\file_put_contents;
  * e `SaveTransAction` riscrive i lang così — viola la convenzione clean-code del repo
  * (ordine utente 2026-09-16; SSoT `.codestyle-preferences.md` + memoria
  * `php-array-one-key-per-line.md`).
+ *
  * @see docs/contracts/save-php-array-action.md
+ *
  * @contract docs/contracts/save-php-array-action.md
  */
 class SavePhpArrayAction

@@ -13,7 +13,14 @@ related:
   - "./00-index.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
   - "./actions-calling-actions-pattern.md"
 ---

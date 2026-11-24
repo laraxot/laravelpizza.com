@@ -15,6 +15,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Get activities caused by a user.
  *
  * @see docs/contracts/get-user-activities-action.md
+ *
  * @contract docs/contracts/get-user-activities-action.md
  */
 class GetUserActivitiesAction

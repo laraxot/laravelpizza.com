@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "FullCalendar Scheduler License Key"
 type: note
 qmd: "scheduler license key fullcalendar"
 ---
->>>>>>> laraxot/dev
 # FullCalendar Scheduler License Key
 
 ## Overview

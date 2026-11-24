@@ -10,6 +10,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/resolve-tenant-model-instance-action.md
+ *
  * @contract docs/contracts/resolve-tenant-model-instance-action.md
  */
 class ResolveTenantModelInstanceAction

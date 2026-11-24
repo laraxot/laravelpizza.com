@@ -199,6 +199,10 @@ Le correzioni apportate allineano la classe `SendNetfunSMSAction` con:
 7. L'implementazione della logica di precedenza tra parametri a livello di root e specifici per provider
 
 Queste correzioni garantiscono che l'azione funzioni correttamente con la configurazione standardizzata e sia più robusta, manutenibile ed estensibile.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -211,3 +215,8 @@ qmd: "netfun action errors"
 issues: []
 discussions: []
 *Ultimo aggiornamento: 2025-05-12*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

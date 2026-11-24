@@ -391,6 +391,10 @@ php artisan test --coverage --filter=MailTemplate
 - [PHPUnit Documentation](https://phpunit.de/documentation.html)
 
 - [Pest PHP](https://pestphp.com/docs)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 - [Pest PHP](https://pestphp.com/docs)
 
@@ -489,3 +493,8 @@ php artisan test --coverage --filter=MailTemplate
 - [Pest PHP](https://pestphp.com/docs)
 
 - [Pest PHP](https://pestphp.com/docs)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

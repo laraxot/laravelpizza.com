@@ -6,6 +6,7 @@ namespace Modules\Xot\Actions\Translation;
 
 /**
  * @see docs/contracts/deep-l-translate-action.md
+ *
  * @contract docs/contracts/deep-l-translate-action.md
  */
 class DeepLTranslateAction extends BaseTranslateAction

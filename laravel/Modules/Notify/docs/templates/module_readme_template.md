@@ -173,7 +173,14 @@ composer test -- Modules/[ModuleName]
 
 ### Within Module
 - [architecture.md](./architecture.md) - Design details
+<<<<<<< HEAD
 - [architecture.md](./architecture.md) - Design details
+=======
+<<<<<<< HEAD
+- [architecture.md](./architecture.md) - Design details
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Guides](./guides/) - How-to guides
 
 ### Related Modules

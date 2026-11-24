@@ -11,6 +11,7 @@ use UnexpectedValueException;
  * Risolve dati block localizzati; delega al modulo Cms se presente.
  *
  * @see docs/contracts/resolve-localized-block-data-action.md
+ *
  * @contract docs/contracts/resolve-localized-block-data-action.md
  */
 final class ResolveLocalizedBlockDataAction

@@ -15,10 +15,7 @@ related:
   - "./docs-merge-conflict-markers-cleanup.story.md"
   - "./user-nested-conflict-marker-cleanup.story.md"
   - "./phpstan-zero-errors-user.story.md"
-<<<<<<< HEAD
-=======
 qmd: "phpstan merge bootstrap story user mergemarker"
->>>>>>> laraxot/dev
 ---
 
 # User: PHP merge-marker bootstrap
@@ -82,7 +79,6 @@ I marker residuali bloccano il bootstrap PHPStan (`unexpected token "<<"`) e spe
 1. `rg -l '^<<<<<<<' laravel/Modules/User --glob '*.php'` → 0
 2. `php -l` su tutti i PHP toccati → 0 fail
 3. Forward-only (no checkout/restore/reset)
-<<<<<<< HEAD
 
 ## Chiavi duplicate nei file lang dopo la sync
 
@@ -98,5 +94,3 @@ I marker residuali bloccano il bootstrap PHPStan (`unexpected token "<<"`) e spe
 **File.** `en/profile.php` (`navigation.label` = `Profile`, il plurale è già in `plural`), `en/widgets.php` (`users_chart.heading` = `Users`, la serie è `label` = `New users`), `en/user_overview_widget.php` e `it/user_overview_widget.php` (descrizioni ripristinate: erano state perse tenendo solo il blocco con la sola etichetta), `it/base_profile_form.php` e `it/base_profiles.php` (etichetta `Utente` al posto di `user.name`, campi fusi), `it/oauth_personal_access_clients.php` e `it/password_resets.php` (blocco `fields` curato fuso con `actions`), `it/recent_logins.php` (`Browser (user agent)` e `Utente` al posto di `user_agent` e `user`), `it/user_form.php` (`name` = `Nome visualizzato`, `token` = `Token`), `it/passport_stats.php` (un solo `return`, nessun codice legge questo file).
 
 **Aperto.** `it/widgets.php` non ha `users_chart.label` e `recent_logins.heading`, che il codice legge; `de/profile.php` non ha `my_profile` e `subheading`. Fuori da questa lane.
-=======
->>>>>>> laraxot/dev

@@ -16,6 +16,10 @@ discussions: []
 **Status**: ✅ Active  
 **Owner**: Multi-Agent Team
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "ZEN OF FIXCITY"
@@ -61,6 +65,17 @@ git checkout abc123
 - I team collaborano meglio
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 🎯 The Five Pillars
+### 1. **Git Forward-Only** 🚀
+# ✅ CORRETTO: Rebase per pulire history
+# ✅ CORRETTO: Revert per annullare cambiamenti
+# ❌ SBAGLIATO: Reset che distrugge history
+# ❌ SBAGLIATO: Checkout di vecchi commit
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### 2. **DRY + KISS** 📐
 

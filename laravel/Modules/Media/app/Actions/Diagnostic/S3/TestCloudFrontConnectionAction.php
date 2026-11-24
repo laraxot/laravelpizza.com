@@ -10,6 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/test-cloud-front-connection-action.md
+ *
  * @contract docs/contracts/test-cloud-front-connection-action.md
  */
 class TestCloudFrontConnectionAction

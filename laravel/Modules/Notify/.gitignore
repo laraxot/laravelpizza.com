@@ -145,3 +145,7 @@ tests/graphify-out/
 =======
 .php-cs-fixer.dist.php
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+.git.polluted*
+=======
+>>>>>>> laraxot/dev

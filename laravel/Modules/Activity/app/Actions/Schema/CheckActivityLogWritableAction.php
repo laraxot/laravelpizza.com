@@ -11,6 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
  * CheckActivityLogWritableAction.
  *
  * @see docs/contracts/check-activity-log-writable-action.md
+ *
  * @contract docs/contracts/check-activity-log-writable-action.md
  */
 final class CheckActivityLogWritableAction

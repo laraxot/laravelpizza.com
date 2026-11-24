@@ -14,6 +14,7 @@ use Spatie\QueueableAction\QueueableAction;
  * rather than folded into RegisterDynamicRoutesAction.
  *
  * @see docs/contracts/get-route-method-action.md
+ *
  * @contract docs/contracts/get-route-method-action.md
  */
 class GetRouteMethodAction

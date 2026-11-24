@@ -10,6 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/model-class-copy-from-last-year-action.md
+ *
  * @contract docs/contracts/model-class-copy-from-last-year-action.md
  */
 class CopyFromLastYearAction

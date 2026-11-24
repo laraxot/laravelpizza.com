@@ -11,6 +11,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/store-action.md
+ *
  * @contract docs/contracts/store-action.md
  */
 class StoreAction

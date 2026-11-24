@@ -17,9 +17,19 @@ use Webmozart\Assert\Assert;
  *
  * Coppia di `SchedulePushNotificationAction`, che scrive la cache e mette in coda
  * questa action con `Spatie\QueueableAction\ActionJob::dispatch($action, [$jobId])->delay(...)`.
+<<<<<<< HEAD
+ *
+ * @see docs/contracts/send-scheduled-push-notification-action.md
+ *
+ * @contract docs/contracts/send-scheduled-push-notification-action.md
+=======
+<<<<<<< HEAD
+=======
  *
  * @see docs/contracts/send-scheduled-push-notification-action.md
  * @contract docs/contracts/send-scheduled-push-notification-action.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
  */
 class SendScheduledPushNotificationAction
 {

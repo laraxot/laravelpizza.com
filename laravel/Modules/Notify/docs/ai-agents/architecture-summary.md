@@ -3,7 +3,19 @@ title: "architecture summary"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "architecture summary"
 issues: []
 discussions: []
@@ -50,7 +62,17 @@ Themes are decoupled from business logic.
 - Themes: `laravel/Themes/`
 - Documentation: `docs/` (global) and `laravel/Modules/{Name}/docs/` (local).
 
+<<<<<<< HEAD
 [Return to Documentation Index](../../agents.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+[Return to Documentation Index](../../agents.md)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 title: "architecture summary"
 type: note
@@ -62,3 +84,13 @@ issues: []
 discussions: []
 [Return to Documentation Index](../../AGENTS.md)
 [Return to Documentation Index](../../AGENTS.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+[Return to Documentation Index](../../agents.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

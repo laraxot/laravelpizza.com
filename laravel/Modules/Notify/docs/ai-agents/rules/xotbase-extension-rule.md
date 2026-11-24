@@ -16,6 +16,10 @@ discussions: []
 **Status**: ✅ PHILOSOPHY DEFINED  
 **Priority**: BLOCKER
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "xotbase extension rule"
@@ -42,6 +46,13 @@ class OutcomesTableWidget extends FilamentTableWidget
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 The Rule
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🧠 The WHY (5 Levels of Understanding)
 
 ### Level 1: Blind Obedience ❌

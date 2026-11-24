@@ -21,7 +21,10 @@ use Webmozart\Assert\Assert;
  *
  * HasCommonScopes NON va qui: scopePublished filtra published_at e rompe
  * Event::scopePublished (status). Trait solo sui model dominio che lo usano
- * (es. Notify\NotificationTemplate). Vedi Meetup/docs/contracts/event-published-scope.md.
+ * (Notify\NotificationTemplate e/o Xot\Module).
+ *
+ * @see Modules/Meetup/docs/contracts/event-published-scope.md
+ * @see Modules/Xot/docs/bmad/stories/phpstan-modules-zero-swarm-standing.story.md
  */
 abstract class XotBaseModel extends EloquentModel
 {

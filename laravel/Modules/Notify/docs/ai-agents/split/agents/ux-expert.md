@@ -3,7 +3,19 @@ title: "ux expert"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "ux expert"
 issues: []
 discussions: []
@@ -62,7 +74,23 @@ persona:
 commands:
   - help: Show numbered list of the following commands to allow selection
   - create-front-end-spec: run task create-doc.md with template front-end-spec-tmpl.yaml
+<<<<<<< HEAD
   - generate-ui-prompt: run task generate-ai-frontend-prompt.md
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  - generate-ui-prompt: Run task generate-ai-frontend-prompt.md
+=======
+<<<<<<< HEAD
+  - generate-ui-prompt: run task generate-ai-frontend-prompt.md
+=======
+  - generate-ui-prompt: Run task generate-ai-frontend-prompt.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+  - generate-ui-prompt: run task generate-ai-frontend-prompt.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - exit: Say goodbye as the UX Expert, and then abandon inhabiting this persona
 dependencies:
   data:
@@ -75,6 +103,10 @@ dependencies:
     - front-end-spec-tmpl.yaml
 ```
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -93,3 +125,9 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../AGENTS.md](../../../../../../../../AGENTS.md) — Original source
 
+<<<<<<< HEAD
+=======
+=======
+## Cross-References
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

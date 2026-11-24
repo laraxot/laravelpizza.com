@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Risoluzione Conflitti PasswordResetWidget.php"
 type: note
 qmd: "conflict resolution passwordresetwidget risoluzione conflitti passwordresetwidgetphp"
 ---
->>>>>>> laraxot/dev
 # Risoluzione Conflitti PasswordResetWidget.php
 
 ## Contesto del Conflitto
@@ -97,11 +94,7 @@ Verificare che:
 - Altri widget di autenticazione abbiano componenti simili per coerenza
 
 ## Collegamenti
-<<<<<<< HEAD
-- [User Module Documentation](README.md)
-=======
 - [User Module Documentation](readme.md)
->>>>>>> laraxot/dev
 - [Authentication Widgets Guide](auth_widgets.md)
 - [Filament Form Components](filament_form_components.md)
 - [Root Conflict Resolution Guidelines](../../../docs/conflict-resolution-guidelines.md)

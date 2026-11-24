@@ -1,4 +1,15 @@
 ---
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+title: "Contratto — SendNotificationAction"
+type: contract
+action: "Modules\Notify\Actions\SendNotificationAction"
+tags: [contract, action, notify, template, multicanale]
+created: 2026-11-24
+updated: 2026-11-24
+=======
+>>>>>>> laraxot/dev
 title: "SendNotificationAction — contratto"
 type: contract
 owner: Notify
@@ -6,8 +17,12 @@ status: accepted
 updated: 2026-11-24
 action: "Modules\\Notify\\Actions\\SendNotificationAction"
 qmd: "contract SendNotificationAction notify invio notifica template canali mail sms database NOTIFY-SEND-INV"
+<<<<<<< HEAD
 tags: [contract, action, notify, template, multicanale]
 created: 2026-11-24
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 # SendNotificationAction

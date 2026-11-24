@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/test-cloud-front-config-action.md
+ *
  * @contract docs/contracts/test-cloud-front-config-action.md
  */
 class TestCloudFrontConfigAction

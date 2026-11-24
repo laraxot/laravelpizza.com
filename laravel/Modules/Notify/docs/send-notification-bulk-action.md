@@ -3,7 +3,19 @@ title: "send notification bulk action"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "send notification bulk action"
 issues: []
 discussions: []
@@ -331,9 +343,32 @@ Vedi: [Actions Calling Actions Pattern](./actions-calling-actions-pattern.md)
 - [MailTemplate Model](./models.md#mailtemplate)
 - [RecordNotification Class](../../app/Notifications/RecordNotification.php)
 - [TechPlanner Client Management](../TechPlanner/docs/README.md#client-management)
+<<<<<<< HEAD
 - [Geo Module Reusable Components Philosophy](../../Geo/docs/reusable-components-philosophy.md)
 - [RecordNotification Class](../app/Notifications/RecordNotification.php)
 - [TechPlanner Client Management](../TechPlanner/docs/README.md#client-management)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_wlvibF
+- [Geo Module Reusable Components Philosophy](../geo/docs/reusable-components-philosophy.md)
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+- [Geo Module Reusable Components Philosophy](ai-agents/guidelines/reusable-components-philosophy.md)
+- [RecordNotification Class](../app/Notifications/RecordNotification.php)
+- [TechPlanner Client Management](../TechPlanner/docs/README.md#client-management)
+- [Geo Module Reusable Components Philosophy](../../Geo/docs/reusable-components-philosophy.md)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_uk1hBW
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Xot Filament Class Extension Rules](../xot/docs/filament-class-extension-rules.md)
 
 ---

@@ -8,10 +8,7 @@ tags: [migrato-da-txt, ui]
 converted_from: custom-theme.txt
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< HEAD
-=======
 qmd: "custom theme"
->>>>>>> laraxot/dev
 ---
 
 https://blog.jpat.dev/build-custom-components-inside-a-filament-v3-panel-with-livewire-and-tailwindcss

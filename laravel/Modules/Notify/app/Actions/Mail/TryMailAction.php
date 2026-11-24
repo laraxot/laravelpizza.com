@@ -11,9 +11,19 @@ use Webmozart\Assert\Assert;
 
 /**
  * Prova a recuperare email tramite l'engine configurato (IMAP / try).
+<<<<<<< HEAD
+ *
+ * @see docs/contracts/try-mail-action.md
+ *
+ * @contract docs/contracts/try-mail-action.md
+=======
+<<<<<<< HEAD
+=======
  *
  * @see docs/contracts/try-mail-action.md
  * @contract docs/contracts/try-mail-action.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
  */
 class TryMailAction
 {

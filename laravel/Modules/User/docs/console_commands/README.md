@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Comandi Console - Modulo User"
 type: note
 qmd: "comandi console user"
 ---
->>>>>>> laraxot/dev
 # Comandi Console - Modulo User
 
 ## Panoramica
@@ -218,13 +215,6 @@ Modules/User/
 - [Role Management](../models/role-management.md)
 - [Password Management](../password.md)
 - [README.md](../readme.md)
-<<<<<<< HEAD
-- [User Models](../models/README.md)
-- [Role Management](../models/role-management.md)
-- [Password Management](../password.md)
-- [README.md](../README.md)
-=======
->>>>>>> laraxot/dev
 
 ## Aggiornamenti Recenti
 

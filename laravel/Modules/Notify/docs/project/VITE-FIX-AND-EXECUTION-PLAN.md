@@ -3,7 +3,19 @@ title: "VITE FIX AND EXECUTION PLAN"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "VITE FIX AND EXECUTION PLAN"
 issues: []
 discussions: []
@@ -21,6 +33,10 @@ discussions: []
 **Status**: ✅ **READY TO EXECUTE**  
 **AI Tools**: OpenViking + BMAD + GSD + Ralph Loop + NotebookLM + NotebookLM MCP
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "VITE FIX AND EXECUTION PLAN"
@@ -47,6 +63,14 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Today's Priorities
+### P0.0: Install NotebookLM MCP ✅ COMPLETE
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ### P0.1: Fix Vite Manifest Error 🔴 CRITICAL
 
 **Error**:
@@ -224,7 +248,23 @@ EOF
 # 2. Create notebook
 # Go to notebooklm.google.com
 # Create: "Notify Documentation"
+<<<<<<< HEAD
 # Upload: agents.md, docs/**/*.md, .planning/**/*.md
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+# Upload: AGENTS.md, docs/**/*.md, .planning/**/*.md
+=======
+<<<<<<< HEAD
+# Upload: agents.md, docs/**/*.md, .planning/**/*.md
+=======
+# Upload: AGENTS.md, docs/**/*.md, .planning/**/*.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+# Upload: agents.md, docs/**/*.md, .planning/**/*.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 # Share → Copy link
 
 # 3. Add to library

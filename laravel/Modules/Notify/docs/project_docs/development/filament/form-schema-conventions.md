@@ -147,6 +147,10 @@ class MyResource extends XotBaseResource
 - [Form Validation](./form-validation.md)
 - [Best Practices](./best-practices.md)
 - [Troubleshooting Form](../../troubleshooting/errors/form-errors.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -160,3 +164,8 @@ issues: []
 discussions: []
 *Ultimo aggiornamento: Agosto 2025*
 *Fonte: laravel/Modules/Xot/docs/FILAMENT_FORM_SCHEMA_CONVENTIONS.md* 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -32,6 +32,10 @@ You are the **Notify Wiki Maintainer**. Your job is to:
 ## Frontmatter Schema
 
 ```yaml
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 qmd: "AGENTS"
 issues: []
@@ -46,6 +50,11 @@ tags: [tag1, tag2]
 related:
   - concepts/related.md
 ---
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ```
 
 ## Naming Conventions

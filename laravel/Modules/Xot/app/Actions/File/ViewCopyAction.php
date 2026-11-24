@@ -8,6 +8,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/view-copy-action.md
+ *
  * @contract docs/contracts/view-copy-action.md
  */
 class ViewCopyAction

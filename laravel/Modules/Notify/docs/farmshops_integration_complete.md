@@ -15,6 +15,10 @@ discussions: []
 **Source**: https://github.com/CodeforKarlsruhe/farmshops.eu  
 **Status**: ✅ INTEGRATION COMPLETE  
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "farmshops integration complete"
@@ -31,6 +35,13 @@ Analizzato il progetto farmshops.eu e integrato le sue migliori pratiche e tecno
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 OBIETTIVO RAGGIUNTO
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📊 ANALISI FARMSHOPS.EU
 
 ### Progetto

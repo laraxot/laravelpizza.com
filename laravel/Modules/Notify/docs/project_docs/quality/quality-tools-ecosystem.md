@@ -714,6 +714,10 @@ jobs:
 - **Security Status**: Stato sicurezza
 - **Documentation Status**: Stato documentazione
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "quality tools ecosystem"
@@ -744,3 +748,10 @@ discussions: []
 
 
 
+<<<<<<< HEAD
+=======
+=======
+*Questo ecosistema garantisce la massima qualità del codice in tutti gli aspetti del progetto FixCity Platform.*
+*Questo ecosistema garantisce la massima qualità del codice in tutti gli aspetti del progetto Notify Platform.*
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

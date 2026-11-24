@@ -4,7 +4,19 @@ type: index
 tags: [notify, docs, ai-agents, split, gemini]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "notify documentazione ai agents split gemini index gemini ai guidelines (../../../../laravel/gemini.md) index index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -19,12 +31,32 @@ related:
 ---
 # Gemini AI Guidelines (../../../../laravel/gemini.md) Index
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+**Source**: [`laravel/../../../../laravel/gemini.md`](../../../../../../laravel/../../../../laravel/gemini.md) (581 lines)  
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 **Source**: [`laravel/../../../../laravel/GEMINI.md`](../../../../../../laravel/../../../../laravel/gemini.md) (581 lines)  
 ---
 # Gemini AI Guidelines (../../../../laravel/gemini.md) Index
 
 **Source**: [`laravel/../../../../laravel/GEMINI.md`](../../../../../../laravel/../../../../laravel/gemini.md) (581 lines)  
+<<<<<<< HEAD
 **Source**: [`laravel/../../../../laravel/gemini.md`](../../../../../../laravel/../../../../laravel/gemini.md) (581 lines)  
+=======
+<<<<<<< HEAD
+=======
+**Source**: [`laravel/../../../../laravel/gemini.md`](../../../../../../laravel/../../../../laravel/gemini.md) (581 lines)  
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 **Split Into**: 13 focused files  
 **Last Updated**: 2026-04-11  
 
@@ -92,7 +124,23 @@ related:
 
 ## Usage
 
+<<<<<<< HEAD
 These guidelines are loaded by Gemini AI for Laravel development context. For manual reference, see the original [`laravel/../../../../laravel/GEMINI.md`](../../../../../../laravel/../../../../laravel/gemini.md).
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+These guidelines are loaded by Gemini AI for Laravel development context. For manual reference, see the original [`laravel/../../../../laravel/gemini.md`](../../../../../../laravel/../../../../laravel/gemini.md).
+=======
+<<<<<<< HEAD
+These guidelines are loaded by Gemini AI for Laravel development context. For manual reference, see the original [`laravel/../../../../laravel/GEMINI.md`](../../../../../../laravel/../../../../laravel/gemini.md).
+=======
+These guidelines are loaded by Gemini AI for Laravel development context. For manual reference, see the original [`laravel/../../../../laravel/gemini.md`](../../../../../../laravel/../../../../laravel/gemini.md).
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+These guidelines are loaded by Gemini AI for Laravel development context. For manual reference, see the original [`laravel/../../../../laravel/GEMINI.md`](../../../../../../laravel/../../../../laravel/gemini.md).
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 

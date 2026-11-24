@@ -32,14 +32,20 @@ return [
         ],
     ],
     'logout' => [
+        'in_progress' => 'Abmeldung läuft…',
         'goodbye' => [
             'message' => 'Auf Wiedersehen',
         ],
     ],
     'password' => [
         'reset' => [
-            'title' => 'Passwort zurücksetzen',
+            'title' => 'Neues Passwort wählen',
             'label' => 'Passwort zurücksetzen',
+            'subtitle' => 'Mindestens 8 Zeichen. Nach dem Speichern bist du direkt angemeldet.',
+            'email' => 'E-Mail',
+            'password' => 'Neues Passwort',
+            'password_confirmation' => 'Neues Passwort wiederholen',
+            'submit' => 'Passwort speichern',
         ],
         'email' => [
             'label' => 'E-Mail-Adresse',
@@ -48,7 +54,7 @@ return [
             'label' => 'Passwort bestätigen',
         ],
         'confirm' => [
-            'title' => 'Bestätigen Sie Ihr Passwort',
+            'title' => 'Passwort bestätigen',
             'message' => 'Bitte bestätigen Sie Ihr Passwort, bevor Sie fortfahren',
             'label' => 'Passwort bestätigen',
             'subtitle' => 'Geschützter Bereich: Gib dein Passwort erneut ein, um fortzufahren.',
@@ -68,6 +74,13 @@ return [
         'back_to_login' => [
             'label' => 'zurück zur Anmeldung',
         ],
+        'request' => [
+            'title' => 'Passwort vergessen?',
+            'subtitle' => 'Gib die E-Mail-Adresse deines Kontos ein. Wir senden dir einen Link für ein neues Passwort.',
+            'email' => 'E-Mail',
+            'submit' => 'Link senden',
+            'back_to_login' => 'Zurück zur Anmeldung',
+        ],
     ],
     'sections' => [
         'verify' => [
@@ -81,9 +94,7 @@ return [
         'sign_out' => [
             'label' => 'abmelden',
         ],
-        'resent' => [
-            'message' => 'Ein neuer Bestätigungslink wurde an Ihre E-Mail-Adresse gesendet.',
-        ],
+        'resent' => 'Wir haben dir einen neuen Bestätigungslink gesendet.',
         'instructions' => [
             'message' => 'Bevor Sie fortfahren, prüfen Sie bitte Ihre E-Mails auf den Bestätigungslink. Wenn Sie die E-Mail nicht erhalten haben,',
         ],

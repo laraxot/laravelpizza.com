@@ -10,6 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/destroy-action.md
+ *
  * @contract docs/contracts/destroy-action.md
  */
 class DestroyAction

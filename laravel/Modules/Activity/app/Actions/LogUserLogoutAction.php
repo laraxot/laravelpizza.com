@@ -16,6 +16,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Logs when a user logs out using Queueable Actions
  *
  * @see docs/contracts/log-user-logout-action.md
+ *
  * @contract docs/contracts/log-user-logout-action.md
  */
 class LogUserLogoutAction

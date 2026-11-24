@@ -11,6 +11,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/get-table-indexes-by-model-class-action.md
+ *
  * @contract docs/contracts/get-table-indexes-by-model-class-action.md
  */
 class GetTableIndexesByModelClassAction

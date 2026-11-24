@@ -148,6 +148,10 @@ When encountering errors:
 
 Laravel Boost is currently in beta and receives frequent updates. Always leverage the MCP tools for the most accurate, up-to-date Laravel development assistance.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -167,3 +171,9 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../laravel/gemini.md](../../../../laravel/../../../../laravel/gemini.md) — Original source
 
+<<<<<<< HEAD
+=======
+=======
+## Cross-References
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

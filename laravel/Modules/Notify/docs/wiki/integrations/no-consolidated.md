@@ -7,7 +7,19 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -41,10 +53,34 @@ Consolidated from **35** individual files.
 - [Guida Completa ai Provider di Notifiche ](#notification-providers)
 - [Notification System](#notification-system)
 - [Notification System Behavior](#notification_behavior)
+<<<<<<< HEAD
 - [<<<<<<< HEAD](#notification_providers_guide)
 - [Errori Comuni nelle Notifiche](#notification_errors)
 - [notification channels implementation](#notification_channels_implementation)
 - [notification providers guide](#notification_providers_guide)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [<<<<<<< HEAD](#notification_channels_implementation)
+- [Errori Comuni nelle Notifiche](#notification_errors)
+- [<<<<<<< HEAD](#notification_providers_guide)
+=======
+<<<<<<< HEAD
+- [notification channels implementation](#notification_channels_implementation)
+- [Errori Comuni nelle Notifiche](#notification_errors)
+- [notification providers guide](#notification_providers_guide)
+=======
+- [<<<<<<< HEAD](#notification_channels_implementation)
+- [Errori Comuni nelle Notifiche](#notification_errors)
+- [<<<<<<< HEAD](#notification_providers_guide)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [notification channels implementation](#notification_channels_implementation)
+- [Errori Comuni nelle Notifiche](#notification_errors)
+- [notification providers guide](#notification_providers_guide)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Sistema di Notifiche](#notifications-system)
 - [https://medium.com/@peterhrobar/push-notifications-with-laravel-61049ab9aec6](#notifications)
 - [Sistemazione e Miglioramenti File Traduzione send_email.php - Modulo Notify](#notify-send-email-translations-improvements)
@@ -78,7 +114,17 @@ Rimosse in questo modulo: `_docs/`, `scripts/`, `bashscripts/`, `docs/archive|ar
 
 *Consolidated from: `no-hardcoded-language-religion.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 **Status**: Active
 **Created**: 2026-04-14
 **Last Updated**: 2026-04-14
@@ -594,7 +640,17 @@ Amen.
 
 *Consolidated from: `no-http-controllers.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Rule
 
 No module may contain HTTP controllers. The architecture is Folio + Volt (front office) and Filament (admin) exclusively.
@@ -679,7 +735,17 @@ This keeps the HTTP surface in Folio (the correct location) while the business l
 
 *Consolidated from: `no-notification-tracking-controller-rule.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 Nel modulo Notify non deve esistere `app/Http/Controllers/NotificationTrackingController.php`.
 
 Motivazione:
@@ -698,7 +764,17 @@ Conseguenza operativa:
 
 *Consolidated from: `no-notification-tracking-controller.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Regola
 
 `Modules/Notify/app/Http/Controllers/NotificationTrackingController.php` non deve stare nel modulo.
@@ -726,7 +802,17 @@ La sua ricomparsa va trattata come regressione architetturale, non come semplice
 
 *Consolidated from: `no-orphan-http-controllers.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Regola
 
 Nel modulo `Notify` non devono esistere controller HTTP orfani, cioe' file sotto `app/Http/Controllers` senza route effettive o senza un ruolo architetturale chiaro nel boundary web.
@@ -770,8 +856,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -1164,8 +1258,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -1328,7 +1430,17 @@ pipx run notebooklm-py playwright install chromium
 
 *Consolidated from: `notes.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Architettura
 
 ### Queueable Actions
@@ -1496,8 +1608,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -1591,7 +1711,17 @@ public function via($notifiable)
 
 *Consolidated from: `notification-behavior.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Notification Channels Behavior
 
 ### Issue: Unexpected SMS Channel Execution
@@ -1680,7 +1810,17 @@ public function via($notifiable)
 
 *Consolidated from: `notification-bulk-action-implementation.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 **Date**: 18 Dicembre 2025
 **Status**: ✅ Completed
 **Module**: App → Notify
@@ -1826,7 +1966,17 @@ After implementation, users can:
 
 *Consolidated from: `notification-channels-implementation.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 Questo documento descrive l'architettura e l'implementazione dei canali di notifica nel progetto <nome progetto>, con particolare attenzione al pattern Factory utilizzato.
 
 ## Architettura Generale
@@ -2007,8 +2157,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -2160,7 +2318,17 @@ L'architettura implementata facilita la manutenibilità:
 
 L'implementazione dei canali di notifica  segue un'architettura coerente e ben strutturata, basata sul pattern Factory. Questo approccio garantisce separazione delle responsabilità, riutilizzabilità, testabilità e manutenibilità, facilitando l'estensione del sistema con nuovi provider e tipi di comunicazione.
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Collegamenti a Documentazione Correlata
 - [Modulo di Notifica](./index.md)
 - [Panoramica dell'Architettura](./architecture.md)
@@ -2181,7 +2349,17 @@ L'implementazione dei canali di notifica  segue un'architettura coerente e ben s
 
 *Consolidated from: `notification-channels-implementation.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 Questo documento descrive l'architettura e l'implementazione dei canali di notifica nel progetto , con particolare attenzione al pattern Factory utilizzato.
 Questo documento descrive l'architettura e l'implementazione dei canali di notifica nel progetto <nome progetto>, con particolare attenzione al pattern Factory utilizzato.
 
@@ -2329,7 +2507,17 @@ L'architettura implementata facilita la manutenibilità:
 
 L'implementazione dei canali di notifica  segue un'architettura coerente e ben strutturata, basata sul pattern Factory. Questo approccio garantisce separazione delle responsabilità, riutilizzabilità, testabilità e manutenibilità, facilitando l'estensione del sistema con nuovi provider e tipi di comunicazione.
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Collegamenti a Documentazione Correlata
 - [Modulo di Notifica](./index.md)
 - [Panoramica dell'Architettura](./architecture.md)
@@ -2339,7 +2527,17 @@ L'implementazione dei canali di notifica  segue un'architettura coerente e ben s
 - [Implementazione SMS](../../sms_implementation.md)
 - [Risoluzione dei Problemi](./troubleshooting.md)
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## notification-errors-1
@@ -2365,8 +2563,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -2540,7 +2746,17 @@ class YourNotification extends Notification
 
 *Consolidated from: `notification-errors.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Errore Destinatario Mancante
 
 ### Errore
@@ -2709,7 +2925,17 @@ class YourNotification extends Notification
 
 *Consolidated from: `notification-implementation.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Overview
 We are adding a bulk action to trigger notifications using `RecordNotification`.
 
@@ -2771,14 +2997,34 @@ Vedi: [Contact Extraction Pattern](../../contact-extraction-pattern.md)
 Vedi: [Actions Calling Actions Pattern](./actions-calling-actions-pattern.md)
 Vedi: [Actions Calling Actions Pattern](../../actions-calling-actions-pattern.md)
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## notification-providers-guide-1
 
 *Consolidated from: `notification-providers-guide.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di <nome progetto>.
 
 ## Principi Architetturali per Tutti i Provider
@@ -2942,8 +3188,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -3083,12 +3337,21 @@ Per implementazioni specifiche, vedere i documenti:
 - [PROVIDER_ACTIONS_architecture.md](./provider-actions-architecture.md)
 - [SMS_ACTIONS_PATTERN.md](./sms-actions-pattern.md)
 - [WHATSAPP_PROVIDER_architecture.md](./whatsapp-provider-architecture.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 - [PROVIDER_ACTIONS_architecture.md](./provider-actions-architecture.md)
 - [SMS_ACTIONS_PATTERN.md](./sms-actions-pattern.md)
 - [WHATSAPP_PROVIDER_architecture.md](./whatsapp-provider-architecture.md)
 - [PROVIDER_ACTIONS_architecture.md](../../provider-actions-architecture.md)
 - [SMS_ACTIONS_PATTERN.md](../../sms-actions-pattern.md)
 - [WHATSAPP_PROVIDER_architecture.md](../../whatsapp-provider-architecture.md)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [PROVIDER_ACTIONS_architecture.md](../../provider-actions-architecture.md)
 - [SMS_ACTIONS_PATTERN.md](../../sms-actions-pattern.md)
 - [WHATSAPP_PROVIDER_architecture.md](../../whatsapp-provider-architecture.md)
@@ -3099,7 +3362,17 @@ Per implementazioni specifiche, vedere i documenti:
 
 *Consolidated from: `notification-providers-guide.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di .
 Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di <nome progetto>.
 
@@ -3245,7 +3518,17 @@ Per implementazioni specifiche, vedere i documenti:
 
 *Consolidated from: `notification-providers.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di App.
 Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di <nome progetto>.
 
@@ -3391,14 +3674,34 @@ Per implementazioni specifiche, vedere i documenti:
 
 *Consolidated from: `notification-system.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## notification_behavior
 
 *Consolidated from: `notification_behavior.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Notification Channels Behavior
 
 ### Issue: Unexpected SMS Channel Execution
@@ -3540,7 +3843,17 @@ public function create(?string $driver = null): SmsActionInterface
 {
     $driver = $driver ?? Config::get('sms.default', 'smsfactor');
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
     return match ($driver) {
         'smsfactor' => app(SendSmsFactorSMSAction::class),
         'twilio' => app(SendTwilioSMSAction::class),
@@ -3572,7 +3885,17 @@ class AppointmentReminder extends Notification
         return [SmsChannel::class];
     }
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
     public function toSms($notifiable)
     {
         return new SmsData(
@@ -3640,7 +3963,17 @@ L'architettura implementata facilita la manutenibilità:
 
 L'implementazione dei canali di notifica  segue un'architettura coerente e ben strutturata, basata sul pattern Factory. Questo approccio garantisce separazione delle responsabilità, riutilizzabilità, testabilità e manutenibilità, facilitando l'estensione del sistema con nuovi provider e tipi di comunicazione.
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Collegamenti a Documentazione Correlata
 - [Modulo di Notifica](./index.md)
 - [Panoramica dell'Architettura](./architecture.md)
@@ -3650,14 +3983,34 @@ L'implementazione dei canali di notifica  segue un'architettura coerente e ben s
 - [Implementazione SMS](../../sms_implementation.md)
 - [Risoluzione dei Problemi](./TROUBLESHOOTING.md)
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## notification_errors
 
 *Consolidated from: `notification_errors.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Errore Destinatario Mancante
 
 ### Errore
@@ -3892,7 +4245,17 @@ final class Send{Provider}{Type}Action implements {Type}ProviderActionInterface
 
     // Costruttore con configurazione
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
     // Costruttore con configurazione
 
     // Metodo execute standardizzato
@@ -3910,7 +4273,17 @@ final class Send{Provider}{Type}Action implements {Type}ProviderActionInterface
 return [
     'default' => env('{TYPE}_PROVIDER', 'default_provider'),
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
     'providers' => [
         'provider1' => [
             // Configurazione specifica
@@ -3920,7 +4293,17 @@ return [
         ],
     ],
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
     // Parametri globali
     'from' => env('{TYPE}_FROM'),
     'debug' => (bool) env('{TYPE}_DEBUG', false),
@@ -3980,7 +4363,17 @@ Per implementazioni specifiche, vedere i documenti:
 
 *Consolidated from: `notifications-system.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Panoramica
 Il sistema di notifiche utilizza `RecordNotification` come classe base per gestire tutte le notifiche dell'applicazione.
 
@@ -4131,14 +4524,34 @@ return [
 
 *Consolidated from: `notifications.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## notify-send-email-translations-improvements
 
 *Consolidated from: `notify-send-email-translations-improvements.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Introduzione
 
 Documento che descrive la sistemazione completa dei file di traduzione per la funzionalità `send_email.php` del modulo Notify, con risoluzione di problemi critici e implementazione di best practices.
@@ -4398,7 +4811,17 @@ La sistemazione del file `send_email.php` ha risolto problemi critici e implemen
 
 *Consolidated from: `notify-translation-guide.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento fornisce una guida completa e dettagliata per la gestione delle traduzioni nel modulo Notify di <nome progetto>. Il modulo Notify segue convenzioni specifiche che rappresentano un'eccezione documentata alle convenzioni generali di <nome progetto>.
@@ -4604,8 +5027,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -4799,7 +5230,17 @@ Questo comando verificherà che tutte le chiavi di traduzione necessarie siano p
 
 *Consolidated from: `notify-translation-guide.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento fornisce una guida completa e dettagliata per la gestione delle traduzioni nel modulo Notify di . Il modulo Notify segue convenzioni specifiche che rappresentano un'eccezione documentata alle convenzioni generali di .
@@ -4988,7 +5429,17 @@ Questo comando verificherà che tutte le chiavi di traduzione necessarie siano p
 
 *Consolidated from: `notify-translation.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento fornisce una guida completa e dettagliata per la gestione delle traduzioni nel modulo Notify di . Il modulo Notify segue convenzioni specifiche che rappresentano un'eccezione documentata alle convenzioni generali di .
@@ -5177,7 +5628,17 @@ Questo comando verificherà che tutte le chiavi di traduzione necessarie siano p
 
 *Consolidated from: `notify_translation_guide.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento fornisce una guida completa e dettagliata per la gestione delle traduzioni nel modulo Notify di <nome progetto>. Il modulo Notify segue convenzioni specifiche che rappresentano un'eccezione documentata alle convenzioni generali di <nome progetto>.

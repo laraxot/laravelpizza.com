@@ -16,6 +16,10 @@ discussions: []
 **Status**: ✅ PERMANENT RULE  
 **Priority**: CRITICAL
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "bash commands auto allow"
@@ -33,6 +37,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Rule
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## ✅ ALWAYS ALLOW - No Confirmation Required
 
 ### File Operations (Read-Only)
@@ -158,13 +169,27 @@ File: `.qwen-code-rules.md`
 
 ### AI Agents Docs
 - **[Rules Index](00-index.md)** - All rules
+<<<<<<< HEAD
 - **[Rules Index](00-index.md)** - All rules
+=======
+<<<<<<< HEAD
+- **[Rules Index](00-index.md)** - All rules
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **[XotBase Extension Rule](xotbase-extension-rule.md)** - XotBase philosophy
 
 ### Project Rules
 - **[Qwen Code Rules](../../.qwen-code-rules.md)** - Project-specific rules
 - **[AGENTS.md](../../agents.md)** - Project agents guide
+<<<<<<< HEAD
 - **[AGENTS.md](../../agents.md)** - Project agents guide
+=======
+<<<<<<< HEAD
+- **[AGENTS.md](../../agents.md)** - Project agents guide
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 

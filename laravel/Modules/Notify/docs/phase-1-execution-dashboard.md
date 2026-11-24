@@ -17,6 +17,10 @@ discussions: []
 **Mode**: BMAD Researcher (Option C)  
 **Scope**: segnalazioni-elenco → 90% HTML Parity
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "phase 1 execution dashboard"
@@ -40,6 +44,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🚨 CURRENT STATUS
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 👥 TEAM ASSIGNMENTS & NEXT STEPS
 
 ### 🔴 Executor Agent #1 - NOW WORKING

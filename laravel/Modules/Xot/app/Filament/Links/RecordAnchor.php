@@ -12,6 +12,8 @@ use function Safe\preg_match;
 
 /**
  * Ancora HTML di una riga di elenco.
+ *
+ * @see Modules/Xot/docs/filament/record-anchor-return-to.md
  */
 final class RecordAnchor
 {
@@ -69,6 +71,8 @@ final class RecordAnchor
      * La pagina precedente vale come ritorno solo se e' una pagina della stessa resource (elenco o
      * dettaglio). Chi apre "Nuovo" da un altro pannello o dalla dashboard, dopo il salvataggio deve
      * arrivare alla resource, non tornare alla dashboard con un'ancora che li' non esiste.
+     *
+     * @see Modules/Xot/docs/filament/record-anchor-return-to.md
      */
     public static function previousWithinResource(?string $previousUrl, mixed $resourceIndexUrl): ?string
     {

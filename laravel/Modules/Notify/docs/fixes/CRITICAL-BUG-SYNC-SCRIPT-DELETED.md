@@ -15,6 +15,10 @@ discussions: []
 > **Status**: ❌ **CRITICAL ISSUE**  
 > **Impact**: HIGH
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "CRITICAL BUG SYNC SCRIPT DELETED"
@@ -32,6 +36,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🐛 What Happened
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🔍 Root Cause
 
 1. **bashscripts/ è nel .gitignore**

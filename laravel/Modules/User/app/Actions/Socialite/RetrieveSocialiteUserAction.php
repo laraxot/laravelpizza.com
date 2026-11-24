@@ -13,6 +13,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/retrieve-socialite-user-action.md
+ *
  * @contract docs/contracts/retrieve-socialite-user-action.md
  */
 class RetrieveSocialiteUserAction

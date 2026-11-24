@@ -12,6 +12,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/get-active-schedules-action.md
+ *
  * @contract docs/contracts/get-active-schedules-action.md
  */
 class GetActiveSchedulesAction

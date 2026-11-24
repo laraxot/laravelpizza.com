@@ -19,6 +19,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/login-user-action.md
+ *
  * @contract docs/contracts/login-user-action.md
  */
 class LoginUserAction

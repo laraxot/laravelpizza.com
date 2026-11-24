@@ -11,7 +11,9 @@ use Webmozart\Assert\Assert;
 /**
  * Lingue che il sito supporta (`config/laravellocalization.php`), per scegliere la lingua primaria
  * tra quelle che esistono davvero.
+ *
  * @see docs/contracts/list-supported-locales-action.md
+ *
  * @contract docs/contracts/list-supported-locales-action.md
  */
 final class ListSupportedLocalesAction

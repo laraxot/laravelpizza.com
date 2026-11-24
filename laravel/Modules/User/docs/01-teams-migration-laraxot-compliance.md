@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Teams Migration - Laraxot Compliance Fix"
 type: note
 qmd: "01 teams migration laraxot compliance"
 ---
->>>>>>> laraxot/dev
 # Teams Migration - Laraxot Compliance Fix
 
 ## Data

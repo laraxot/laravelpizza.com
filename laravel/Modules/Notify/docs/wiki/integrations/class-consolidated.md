@@ -32,7 +32,14 @@ Consolidated from **8** individual files.
 
 *Consolidated from: `class-inheritance-best-practices.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 Questo documento definisce le best practices per l'ereditarietà delle classi nel sistema <nome progetto>, con particolare attenzione alle classi che estendono `XotBasePage`.
 
 ## Analisi dell'Ereditarietà di XotBasePage
@@ -137,8 +144,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -228,7 +243,14 @@ Seguire queste best practices garantisce un codice più pulito, manutenibile e m
 
 *Consolidated from: `class-inheritance-best-practices.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 Questo documento definisce le best practices per l'ereditarietà delle classi nel sistema , con particolare attenzione alle classi che estendono `XotBasePage`.
 Questo documento definisce le best practices per l'ereditarietà delle classi nel sistema <nome progetto>, con particolare attenzione alle classi che estendono `XotBasePage`.
 
@@ -426,8 +448,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -694,7 +724,14 @@ grep -r --include="*.php" "extends XotBasePage implements HasForms" Modules/
 
 *Consolidated from: `class_inheritance_best_practices.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 Questo documento definisce le best practices per l'ereditarietà delle classi nel sistema <nome progetto>, con particolare attenzione alle classi che estendono `XotBasePage`.
 
 ## Analisi dell'Ereditarietà di XotBasePage

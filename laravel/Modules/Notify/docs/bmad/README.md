@@ -77,6 +77,10 @@ Modules\Notify\Models\NotificationTemplateVersion
 
 <!-- Merged from readme.md, which collided with this file on case-insensitive filesystems. -->
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 title: "Modulo Notify - Documentazione"
 type: index
@@ -96,6 +100,11 @@ related:
   - integrations/readme.md
   - templates/readme.md
 ---
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 # Modulo Notify - Documentazione
 
 ## 📚 Overview

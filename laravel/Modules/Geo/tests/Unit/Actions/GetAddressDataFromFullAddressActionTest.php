@@ -20,11 +20,11 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 it('returns AddressData when first service succeeds', function (): void {
-    Assert::assertCount(0, (new GetAddressDataFromFullAddressAction())->getErrors());
+    Assert::assertCount(0, (new GetAddressDataFromFullAddressAction)->getErrors());
 });
 
 it('initializes with empty errors collection', function (): void {
-    Assert::assertCount(0, (new GetAddressDataFromFullAddressAction())->getErrors());
+    Assert::assertCount(0, (new GetAddressDataFromFullAddressAction)->getErrors());
 });
 
 it('executes without throwing error for basic call', function (): void {
@@ -44,7 +44,7 @@ it('executes without throwing error for basic call', function (): void {
         'services.opencage.key' => 'test-key',
     ]);
 
-    $action = new GetAddressDataFromFullAddressAction();
+    $action = new GetAddressDataFromFullAddressAction;
     Assert::assertNull($action->execute('Test Address'));
     Assert::assertNotEmpty($action->getErrors());
 })->group('GEO-GEOCODE-INV-2', 'GEO-GEOCODE-INV-3');
@@ -80,7 +80,7 @@ it('asks the provider chosen in geo.driver first and stops at its answer', funct
     app()->instance(GetAddressFromGoogleMapsAction::class, $google);
     config(['geo.driver' => 'photon']);
 
-    $result = (new GetAddressDataFromFullAddressAction())->execute('Piazza della Signoria, Firenze');
+    $result = (new GetAddressDataFromFullAddressAction)->execute('Piazza della Signoria, Firenze');
 
     Assert::assertSame('Firenze', $result?->city);
     Assert::assertSame(['Piazza della Signoria, Firenze'], $photon->calls);
@@ -94,7 +94,7 @@ it('moves to the next provider when one throws, and keeps its message', function
     app()->instance(GetAddressFromGoogleMapsAction::class, $google);
     config(['geo.driver' => 'photon']);
 
-    $action = new GetAddressDataFromFullAddressAction();
+    $action = new GetAddressDataFromFullAddressAction;
     $result = $action->execute('Via Roma 1, Milano');
 
     Assert::assertSame('Milano', $result?->city);

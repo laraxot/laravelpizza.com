@@ -6,6 +6,7 @@ namespace Modules\User\Filament\Widgets\Auth\Schemas;
 
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Component;
 use Illuminate\Support\Facades\Hash;
 use Modules\User\Models\User;
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
@@ -33,18 +34,17 @@ class UserForm extends XotBaseResourceForm
      * (getLoginFormSchema, getRegisterFormSchema, …). Questo metodo soddisfa
      * l'astratto e resta deliberatamente vuoto per non mischiare i flussi.
      *
-     * @return array<string, \Filament\Schemas\Components\Component>
+     * @return array<string, Component>
      */
     public function getFormSchema(): array
     {
         return [];
     }
 
-
     /**
      * FO auth login — SSoT campi per `LoginWidget`.
      *
-     * @return array<string, \Filament\Schemas\Components\Component>
+     * @return array<string, Component>
      */
     public static function getLoginFormSchema(): array
     {
@@ -74,7 +74,7 @@ class UserForm extends XotBaseResourceForm
      *  l'hash pronto, non ri-applica Hash::make. R2: password + confirm stacked
      *  verticali (no Grid(2)).
      *
-     * @return array<string, \Filament\Schemas\Components\Component>
+     * @return array<string, Component>
      */
     public static function getRegisterFormSchema(): array
     {
@@ -123,7 +123,7 @@ class UserForm extends XotBaseResourceForm
                 ->autocomplete('new-password')
                 ->confirmed()
                 ->dehydrateStateUsing(static function (?string $state): ?string {
-                    if (null === $state || '' === $state) {
+                    if ($state === null || $state === '') {
                         return null;
                     }
 
@@ -147,7 +147,7 @@ class UserForm extends XotBaseResourceForm
     /**
      * FO auth forgot-password — SSoT campi per `ForgotPasswordWidget`.
      *
-     * @return array<string, \Filament\Schemas\Components\Component>
+     * @return array<string, Component>
      */
     public static function getForgotPasswordFormSchema(): array
     {
@@ -165,7 +165,7 @@ class UserForm extends XotBaseResourceForm
     /**
      * FO auth password-reset (send link) — SSoT campi per `PasswordResetWidget`.
      *
-     * @return array<string, \Filament\Schemas\Components\Component>
+     * @return array<string, Component>
      */
     public static function getPasswordResetFormSchema(): array
     {
@@ -186,7 +186,7 @@ class UserForm extends XotBaseResourceForm
      * R1: `password` usa `dehydrateStateUsing(Hash::make)`. R2: password +
      *  confirm stacked.
      *
-     * @return array<string, \Filament\Schemas\Components\Component>
+     * @return array<string, Component>
      */
     public static function getResetPasswordFormSchema(): array
     {
@@ -203,7 +203,7 @@ class UserForm extends XotBaseResourceForm
                 ->same('password_confirmation')
                 ->autocomplete('new-password')
                 ->dehydrateStateUsing(static function (?string $state): ?string {
-                    if (null === $state || '' === $state) {
+                    if ($state === null || $state === '') {
                         return null;
                     }
 
@@ -224,7 +224,7 @@ class UserForm extends XotBaseResourceForm
      *
      * R1 + R2.
      *
-     * @return array<string, \Filament\Schemas\Components\Component>
+     * @return array<string, Component>
      */
     public static function getPasswordResetConfirmFormSchema(): array
     {
@@ -243,7 +243,7 @@ class UserForm extends XotBaseResourceForm
                 ->minLength(8)
                 ->suffixIcon('heroicon-o-key')
                 ->dehydrateStateUsing(static function (?string $state): ?string {
-                    if (null === $state || '' === $state) {
+                    if ($state === null || $state === '') {
                         return null;
                     }
 

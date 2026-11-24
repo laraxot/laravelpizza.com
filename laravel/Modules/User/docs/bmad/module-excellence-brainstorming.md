@@ -1,6 +1,4 @@
 ---
-title: "Brainstorming — User module: findings grezzi (5 fork paralleli)"
-
 title: "Brainstorming: User module: findings grezzi (5 fork paralleli)"
 type: brainstorming
 module: User
@@ -11,10 +9,7 @@ related:
   - ./module-excellence-prd.md
   - ./module-excellence-architecture.md
   - ./epics.md
-<<<<<<< HEAD
-=======
 qmd: "excellence brainstorming user findings grezzi fork"
->>>>>>> laraxot/dev
 ---
 
 # Brainstorming: User module — findings grezzi

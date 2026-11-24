@@ -17,6 +17,7 @@ use Spatie\QueueableAction\QueueableAction;
  * - ogni cartella riporta quanti file contiene, sottocartelle comprese.
  *
  * @see docs/contracts/build-log-file-tree-action.md
+ *
  * @contract docs/contracts/build-log-file-tree-action.md
  */
 class BuildLogFileTreeAction

@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "<nome progetto> User Module - Pest Test Implementation Report"
 type: report
 qmd: "pest test report 2 nome progetto"
 ---
->>>>>>> laraxot/dev
 # <nome progetto> User Module - Pest Test Implementation Report
 
 ## Executive Summary

@@ -3,7 +3,19 @@ title: "gemini translation rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "gemini translation rules"
 issues: []
 discussions: []
@@ -13,6 +25,10 @@ discussions: []
 
 Regole gestione traduzioni.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "gemini translation rules"
@@ -66,6 +82,17 @@ La loro **assenza o modifica non autorizzata** può causare errori e incoerenze.
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Regola Critica
+### Chiavi Obbligatorie
+### Esempio
+### Perché Queste Chiavi?
+### Rischio
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Translation Pattern
 
 Tutte le traduzioni DEVONO avere **5 livelli**:
@@ -93,6 +120,26 @@ namespace::context.collection.element.type
 ## 🔗 Link
 
 - [Indice GEMINI](./gemini-split-index.md)
+<<<<<<< HEAD
 - [translation-management skill available](../../.opencode/skills/translation-management/skill.md)
 - [GEMINI.md originale](../../gemini.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [translation-management skill available](../../.opencode/skills/translation-management/SKILL.md)
+- [gemini.md originale](../../gemini.md)
+=======
+<<<<<<< HEAD
+- [translation-management skill available](../../.opencode/skills/translation-management/skill.md)
+- [GEMINI.md originale](../../gemini.md)
+=======
+- [translation-management skill available](../../.opencode/skills/translation-management/SKILL.md)
+- [gemini.md originale](../../gemini.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [translation-management skill available](../../.opencode/skills/translation-management/skill.md)
+- [GEMINI.md originale](../../gemini.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Index principale](./index.md)

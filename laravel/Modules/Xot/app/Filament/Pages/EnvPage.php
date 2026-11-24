@@ -11,6 +11,9 @@ use Modules\Xot\Filament\Widgets\EnvWidget;
 /**
  * Impostazioni dell'ambiente (.env) per il super-admin: la pagina mostra EnvWidget.
  * Prima usava la vista della dashboard, che chiama getColumns()/getVisibleWidgets() dei Dashboard: errore 500.
+ *
+ * @see docs/stories/superadmin-only-operational-pages.story.md
+ * @see docs/wiki/concepts/env-widget-no-ssh-env-editor.md
  */
 class EnvPage extends XotBasePage
 {

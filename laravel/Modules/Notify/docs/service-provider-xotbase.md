@@ -101,6 +101,10 @@ class NotifyServiceProvider extends XotBaseServiceProvider
 - [Best Practices](Modules/Xot/project_docs/service-provider-best-practices.md)
 - [Best Practices](Modules/Xot/docs/service-provider-best-practices.md)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "service provider xotbase"
@@ -204,5 +208,18 @@ class NotifyServiceProvider extends XotBaseServiceProvider
 - [Best Practices](Modules/Xot/project_docs/service-provider-best-practices.md)
 
 ---
+<<<<<<< HEAD
+=======
+=======
+# XotBaseServiceProvider: Analisi, Regole e Best Practice
+## 1. Cos'è XotBaseServiceProvider
+## 2. Proprietà e Metodi Fondamentali
+## 3. Come si Estende Correttamente
+## 4. Errori Comuni da NON Fare Mai Più
+## 5. Esempio Corretto
+## 6. Checklist per PR e Revisione
+## 7. Riferimenti
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 > **Questa documentazione è stata aggiornata dopo un errore di override errato del metodo boot. Seguire SEMPRE queste regole per evitare errori futuri.**

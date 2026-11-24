@@ -12,6 +12,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/get-trans-key-action.md
+ *
  * @contract docs/contracts/get-trans-key-action.md
  */
 class GetTransKeyAction

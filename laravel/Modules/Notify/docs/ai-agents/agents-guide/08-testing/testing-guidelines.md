@@ -15,6 +15,10 @@ discussions: []
 - Use `DatabaseTransactions` (NOT `RefreshDatabase`)
 - Test business logic via Actions
 - Feature tests for user flows
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -26,3 +30,8 @@ updated: 2026-09-26
 qmd: "testing guidelines"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

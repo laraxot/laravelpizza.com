@@ -13,6 +13,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-current-device-action.md
+ *
  * @contract docs/contracts/get-current-device-action.md
  */
 class GetCurrentDeviceAction

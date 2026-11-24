@@ -65,11 +65,20 @@ laravel/config/vhost/fixcity.local.conf
 - /etc/apache2/sites-available/fixcity.local.conf (not versioned)
 - docs/vhost.conf (wrong location)
 - config/fixcity.local.conf (wrong directory)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ❌ WRONG:
 - /etc/apache2/sites-available/fixcity.local.conf (not versioned)
 - docs/vhost.conf (wrong location)
 - config/fixcity.local.conf (wrong directory)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ```
 
 **Rationale**:

@@ -22,6 +22,10 @@ Specialized logic for Notify needs a dedicated, type-safe Module to ensure maint
 ## 🎯 Goals & Success Metrics
 - **Goal 1:** 100% PHPStan L10 compliance.
 - **Goal 2:** Seamless integration with XotBase.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "prd"
@@ -35,6 +39,11 @@ discussions: []
 <!-- Merged from PRD.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 title: "Product Requirements Document (PRD) - Notify Module"
 module: "Notify"
 type: concept
@@ -61,4 +70,11 @@ Notify module for Laraxot platform providing core functionality.
 - PHPStan Level 10 compliance
 - Pest test coverage >90%
 - Integration testing
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

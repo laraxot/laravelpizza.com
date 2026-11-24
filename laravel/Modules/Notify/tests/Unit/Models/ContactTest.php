@@ -7,7 +7,15 @@ namespace Modules\Notify\Tests\Unit\Models;
 use Modules\Notify\Models\Contact;
 use Modules\Notify\Tests\TestCase;
 
+<<<<<<< HEAD
 uses(TestCase::class);
+=======
+<<<<<<< HEAD
+uses(\Modules\Notify\Tests\TestCase::class);
+=======
+uses(TestCase::class);
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 class ContactTest extends TestCase
 {
     protected function setUp(): void

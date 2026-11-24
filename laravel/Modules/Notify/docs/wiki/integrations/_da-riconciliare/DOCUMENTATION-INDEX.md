@@ -7,7 +7,19 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 # 📚 Indice Generale Documentazione - App
@@ -32,16 +44,40 @@ updated: 2026-11-23
 - [README Principale](./README.md) - Panoramica progetto completa
 - [Analisi Super Mucca](./super_mucca_docs_analysis.md) - Report qualità documentazione
 - [Architecture](./architecture_analysis.md) - Analisi architetturale
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Roadmap](./master_roadmap_2025.md) - Piano sviluppo 2025
 
 ### Guide Rapide
 - [Quick Start](./quick_start.md) - Guida avvio rapido
 - [Contributing](./contributing.md) - Come contribuire
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Roadmap](./MASTER_ROADMAP_2025.md) - Piano sviluppo 2025
 
 ### Guide Rapide
 - [Quick Start](./quick_start.md) - Guida avvio rapido
 - [Contributing](./CONTRIBUTING.md) - Come contribuire
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Troubleshooting](./troubleshooting/README.md) - Risoluzione problemi
 
 ---
@@ -278,7 +314,23 @@ updated: 2026-11-23
 ## 📝 Changelog & Versioning
 
 ### Version History
+<<<<<<< HEAD
 - [Changelog](./CHANGELOG.md) - Storico modifiche
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Changelog](./CHANGELOG.md) - Storico modifiche
+=======
+<<<<<<< HEAD
+- [Changelog](./changelog.md) - Storico modifiche
+=======
+- [Changelog](./CHANGELOG.md) - Storico modifiche
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [Changelog](./changelog.md) - Storico modifiche
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Versioning Strategy](./versioning.md) - Strategia versioning
 - [Migration Guides](./migrations/README.md) - Guide migrazione
 
@@ -287,8 +339,28 @@ updated: 2026-11-23
 ## 🤝 Contributing
 
 ### Contribution Guidelines
+<<<<<<< HEAD
 - [How to Contribute](./CONTRIBUTING.md) - Come contribuire
 - [Code of Conduct](./CODE_OF_CONDUCT.md) - Codice condotta
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [How to Contribute](./CONTRIBUTING.md) - Come contribuire
+- [Code of Conduct](./CODE_OF_CONDUCT.md) - Codice condotta
+=======
+<<<<<<< HEAD
+- [How to Contribute](./contributing.md) - Come contribuire
+- [Code of Conduct](./code_of_conduct.md) - Codice condotta
+=======
+- [How to Contribute](./CONTRIBUTING.md) - Come contribuire
+- [Code of Conduct](./CODE_OF_CONDUCT.md) - Codice condotta
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [How to Contribute](./contributing.md) - Come contribuire
+- [Code of Conduct](./code_of_conduct.md) - Codice condotta
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Pull Request Template](./.github/pull_request_template.md) - Template PR
 
 ---

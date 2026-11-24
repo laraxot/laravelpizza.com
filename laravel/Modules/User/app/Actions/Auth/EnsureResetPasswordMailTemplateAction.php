@@ -18,6 +18,7 @@ use Spatie\QueueableAction\QueueableAction;
  * segnaposto resta Mustache (`{{ reset_password_url }}`), nessun Blade::render su stringhe del database.
  *
  * @see docs/contracts/ensure-reset-password-mail-template-action.md
+ *
  * @contract docs/contracts/ensure-reset-password-mail-template-action.md
  */
 class EnsureResetPasswordMailTemplateAction

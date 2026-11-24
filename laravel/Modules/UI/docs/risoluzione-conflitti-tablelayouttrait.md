@@ -7,7 +7,6 @@ tags: [documentation]
 
 # Risoluzione Conflitti in TableLayoutTrait
 
-<<<<<<< HEAD
 ## Stato attuale
 
 Nel modulo ci sono **due** trait con lo stesso nome corto:
@@ -25,8 +24,6 @@ Nei 12 progetti fratelli le copie piu' vecchie di quei due test (21/11) importan
 
 Le sezioni che seguono sono la storia della risoluzione dei conflitti: il namespace era allora `Modules\UI\app\Traits` e `BaseListRecords` vi faceva riferimento, oggi non piu' (namespace `Modules\UI\Traits`, nessun consumatore in `app/`).
 
-=======
->>>>>>> laraxot/dev
 ## Panoramica
 
 Questo documento descrive la risoluzione dei conflitti nel file `TableLayoutTrait.php` all'interno del modulo UI. Il trait fornisce funzionalità per la gestione del layout delle tabelle nelle interfacce utente, consentendo di passare tra visualizzazione a griglia e a lista.

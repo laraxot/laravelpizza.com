@@ -1,4 +1,13 @@
 ---
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 title: "code quality improvements 2025 10"
 type: note
 tags: [documentation]
@@ -205,6 +214,12 @@ This code quality improvement pass has successfully:
 The codebase maintains **PHPStan Level 9 with 0 errors**, demonstrating excellent code quality and type safety. All changes follow Laraxot framework rules and best practices.
 
 *This report is part of the ongoing code quality and documentation improvement initiative for the FixCity platform.*
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 issues: []
 discussions: []
 title: "CODE_QUALITY_IMPROVEMENTS_2025-10-01"
@@ -226,3 +241,12 @@ related:
 ---
 
 > Questo file è stato rinominato in [code-quality-improvements.md](code-quality-improvements.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

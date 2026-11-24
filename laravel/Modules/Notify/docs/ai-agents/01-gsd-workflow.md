@@ -3,7 +3,19 @@ title: "01 GSD Workflow"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "01 GSD Workflow"
 issues: []
 discussions: []
@@ -11,11 +23,26 @@ discussions: []
 
 # 🚀 GSD Workflow (Get Shit Done)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 **Part of**: [00-INDEX.md](00-index.md) — AI Agents Coordination  
 **Related**: [02-BMAD-WORKFLOW.md](02-bmad-workflow.md) — BMAD Method
 
 ## 📋 Overview
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 **Part of**: [00-index.md](00-index.md) — AI Agents Coordination  
 **Related**: [02-bmad-workflow.md](02-bmad-workflow.md) — BMAD Method
 
@@ -45,6 +72,15 @@ GSD is a spec-driven development system for AI coding agents.
 
 ---
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🔧 Installation
 
 ```bash

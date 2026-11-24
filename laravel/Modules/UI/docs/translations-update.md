@@ -3,10 +3,7 @@ title: "Aggiornamento Traduzioni Modulo UI - Gennaio 2026"
 qmd: "ui translations update january 2026 md"
 type: note
 tags: [documentation]
-<<<<<<< HEAD
 created: 2026
-=======
->>>>>>> laraxot/dev
 ---
 
 # Aggiornamento Traduzioni Modulo UI - Gennaio 2026

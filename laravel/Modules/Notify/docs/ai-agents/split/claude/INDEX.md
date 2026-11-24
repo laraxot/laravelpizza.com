@@ -4,8 +4,23 @@ type: index
 tags: [notify, docs, ai-agents, split, claude]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-11-23
 qmd: "notify documentazione ai agents split claude index laravel boost guidelines (../../../../docs/claude.md) index index readme frontmatter qmd search"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-07-20
+qmd: "notify documentazione ai agents split claude index laravel boost guidelines (../../../../docs/CLAUDE.md) index index readme frontmatter qmd search"
+=======
+updated: 2026-11-23
+qmd: "notify documentazione ai agents split claude index laravel boost guidelines (../../../../docs/claude.md) index index readme frontmatter qmd search"
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+qmd: "notify documentazione ai agents split claude index laravel boost guidelines (../../../../docs/claude.md) index index readme frontmatter qmd search"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
 discussions:
@@ -19,7 +34,23 @@ related:
 ---
 # Laravel Boost Guidelines (../../../../docs/CLAUDE.md) Index
 
+<<<<<<< HEAD
 **Source**: [`docs/../../../../docs/CLAUDE.md`](../../../../../../docs/../../../../docs/claude.md) (833 lines)  
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+**Source**: [`docs/../../../../docs/CLAUDE.md`](../../../../../../docs/../../../../docs/CLAUDE.md) (833 lines)  
+=======
+<<<<<<< HEAD
+**Source**: [`docs/../../../../docs/CLAUDE.md`](../../../../../../docs/../../../../docs/claude.md) (833 lines)  
+=======
+**Source**: [`docs/../../../../docs/CLAUDE.md`](../../../../../../docs/../../../../docs/CLAUDE.md) (833 lines)  
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+**Source**: [`docs/../../../../docs/CLAUDE.md`](../../../../../../docs/../../../../docs/claude.md) (833 lines)  
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 **Split Into**: 20 focused files  
 **Last Updated**: 2026-04-11  
 
@@ -97,14 +128,46 @@ related:
 
 ### Bidirectional Links
 - ← Back to [Main AI Docs Index](../index.md)
+<<<<<<< HEAD
 - ← Back to [../../../../docs/CLAUDE.md](../../../../../../docs/../../../../docs/claude.md) (original source)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- ← Back to [../../../../docs/CLAUDE.md](../../../../../../docs/../../../../docs/CLAUDE.md) (original source)
+=======
+<<<<<<< HEAD
+- ← Back to [../../../../docs/CLAUDE.md](../../../../../../docs/../../../../docs/claude.md) (original source)
+=======
+- ← Back to [../../../../docs/CLAUDE.md](../../../../../../docs/../../../../docs/CLAUDE.md) (original source)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- ← Back to [../../../../docs/CLAUDE.md](../../../../../../docs/../../../../docs/claude.md) (original source)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - ← Back to [Project Docs](../../../docs/README.md)
 
 ---
 
 ## Usage
 
+<<<<<<< HEAD
 These guidelines are automatically loaded by Claude/Laravel Boost MCP. For manual reference, see the original [`docs/../../../../docs/CLAUDE.md`](../../../../../../docs/../../../../docs/claude.md).
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+These guidelines are automatically loaded by Claude/Laravel Boost MCP. For manual reference, see the original [`docs/../../../../docs/CLAUDE.md`](../../../../../../docs/../../../../docs/CLAUDE.md).
+=======
+<<<<<<< HEAD
+These guidelines are automatically loaded by Claude/Laravel Boost MCP. For manual reference, see the original [`docs/../../../../docs/CLAUDE.md`](../../../../../../docs/../../../../docs/claude.md).
+=======
+These guidelines are automatically loaded by Claude/Laravel Boost MCP. For manual reference, see the original [`docs/../../../../docs/CLAUDE.md`](../../../../../../docs/../../../../docs/CLAUDE.md).
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+These guidelines are automatically loaded by Claude/Laravel Boost MCP. For manual reference, see the original [`docs/../../../../docs/CLAUDE.md`](../../../../../../docs/../../../../docs/claude.md).
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 

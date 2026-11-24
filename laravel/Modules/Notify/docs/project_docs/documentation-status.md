@@ -3,12 +3,40 @@ title: "📚 DOCUMENTATION STATUS - Ottobre 2025"
 type: concept
 tags: [documentation, status]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "documentation-status 📚 documentation status - ottobre 2025"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
+<<<<<<< HEAD
   - "./2025-excellence-achievement.md"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  - "./2025-excellence-achievement.md"
+=======
+<<<<<<< HEAD
+  - "./excellence-achievement.md"
+=======
+  - "./2025-excellence-achievement.md"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+  - "./excellence-achievement.md"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./agid-implementation-guide.md"
   - "./architecture.md"
   - "./complete-refactoring-analysis.md"
@@ -412,8 +440,26 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 ## 🔗 COLLEGAMENTI UTILI
 
 ### Roadmap Principali
+<<<<<<< HEAD
 - [Master Roadmap](../master-roadmap.md)
 - [Master Roadmap](../master-roadmap.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Master Roadmap](../master-roadmap.md)
+- [Master Roadmap](../master-roadmap.md)
+=======
+<<<<<<< .merge_file_ACGHPs
+- [Master Roadmap](../laravel/master-roadmap.md)
+=======
+- [Master Roadmap](../master-roadmap.md)
+- [Master Roadmap](../master-roadmap.md)
+>>>>>>> .merge_file_dVrxuQ
+>>>>>>> laraxot/dev
+=======
+- [Master Roadmap](../master-roadmap.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Roadmap Status Summary](../roadmap-status-summary.md)
 - [Roadmap Technical](./roadmaps/roadmap-technical.md)
 - [Roadmap Quality](./roadmaps/roadmap-quality.md)

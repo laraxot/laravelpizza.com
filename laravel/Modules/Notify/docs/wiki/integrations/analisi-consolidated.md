@@ -7,7 +7,19 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -92,8 +104,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -123,8 +143,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -155,8 +183,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -460,8 +496,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -876,12 +920,34 @@ Manutenzione Stradale • Illuminazione • Rifiuti • Verde Pubblico • Fogna
 ## 📚 TUTTA LA DOCUMENTAZIONE
 
 ### 📊 Reports & Analysis
+<<<<<<< HEAD
 - **[Master Roadmap Index](./roadmap-master-index.md)** ⭐ START HERE
 - **[Project Analysis & Roadmap](./project-analysis-and-roadmap.md)** ⭐ BUSINESS VIEW
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_mOa6kG
+- **[Master Roadmap Index](./roadmap-master-index.md)** ⭐ START HERE
+- **[Project Analysis & Roadmap](./project-analysis-and-roadmap.md)** ⭐ BUSINESS VIEW
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **[Master Roadmap Index](../../roadmap-master-index.md)** ⭐ START HERE
 - **[Project Analysis & Roadmap](../../project-analysis-and-roadmap.md)** ⭐ BUSINESS VIEW
 - **[Master Roadmap Index](../../roadmap-master-index.md)** ⭐ START HERE
 - **[Project Analysis & Roadmap](../../project-analysis-and-roadmap.md)** ⭐ BUSINESS VIEW
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_28ve8b
+>>>>>>> laraxot/dev
+=======
+- **[Master Roadmap Index](../../roadmap-master-index.md)** ⭐ START HERE
+- **[Project Analysis & Roadmap](../../project-analysis-and-roadmap.md)** ⭐ BUSINESS VIEW
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **[Session Summary 2025-10-01](./phpstan/session-summary-.md.md)** ⭐ TECHNICAL
 - **[Final Report 2025-10-01](./phpstan/final-report-session-.md.md)**
 - **[Questo Documento](./analisi-completa.md)** ⭐ EXECUTIVE
@@ -970,16 +1036,38 @@ Manutenzione Stradale • Illuminazione • Rifiuti • Verde Pubblico • Fogna
 
 *"Un progetto solido con fondamenta eccellenti e potenziale straordinario"* 🏆
 
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## analisi-completa
 
 *Consolidated from: `analisi-completa.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Indice
 1. [Architettura e Struttura](#1-architettura-e-struttura)
 2. [Modelli e Relazioni](#2-modelli-e-relazioni)
@@ -1276,8 +1364,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -1805,7 +1901,17 @@ return [
 
 *Consolidated from: `analisi-dettagliata-architettura-struttura.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Architettura del Sistema
 
 ### 1.1 Struttura del Modulo
@@ -2347,8 +2453,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -3000,7 +3114,17 @@ Schema::create('template_analytics', function (Blueprint $table) {
 
 *Consolidated from: `analisi-dettagliata-modelli-relazioni.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 2. Modelli e Relazioni
 
 ### 2.1 Template Model
@@ -3666,8 +3790,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -4323,7 +4455,17 @@ protected function updateAnalytics(string $messageId, string $event): void
 
 *Consolidated from: `analisi-dettagliata-servizi-core.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 3. Servizi Core
 
 ### 3.1 TemplateService
@@ -4974,7 +5116,17 @@ protected function updateAnalytics(string $messageId, string $event): void
 
 *Consolidated from: `analisi-dettagliata-integrazione-filament.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 4. Integrazione con Filament
 
 ### 4.1 TemplateResource
@@ -5684,8 +5836,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -6384,7 +6544,17 @@ class TemplateTestPage extends Page
 *Consolidated from: `analisi-dettagliata-4.md`*
 *Consolidated from: `analisi-dettagliata-integrazione-filament.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 4. Integrazione con Filament
 
 ### 4.1 TemplateResource
@@ -7096,8 +7266,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -7924,7 +8102,17 @@ class WebhookControllerTest extends TestCase
 
 *Consolidated from: `analisi-dettagliata-testing-parte.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 5. Testing
 
 ### 5.1 Unit Tests
@@ -8763,8 +8951,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -9393,7 +9589,17 @@ class AnalyticsExporter
 
 *Consolidated from: `analisi-dettagliata-monitoraggio-analytics.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 6. Monitoraggio e Analytics
 
 ### 6.1 Logging
@@ -10036,8 +10242,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -10691,7 +10905,17 @@ class MaintainTemplatesCommand extends Command
 
 *Consolidated from: `analisi-dettagliata-manutenzione-backup.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 7. Manutenzione e Backup
 
 ### 7.1 Versioning
@@ -11361,8 +11585,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -11593,7 +11825,17 @@ Il modulo è progettato per essere estensibile e personalizzabile, permettendo l
 
 *Consolidated from: `analisi-dettagliata-finali-parte.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 8. Note Finali
 
 ### 8.1 Best Practices
@@ -11838,8 +12080,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -12464,7 +12714,17 @@ class TemplatePreview extends Component
 
 *Consolidated from: `analisi-dettagliata.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Analisi delle Soluzioni di Template Email
 
 ### 1.1 Laravel Email Templates (simplepleb)
@@ -13082,7 +13342,17 @@ class TemplatePreview extends Component
 
 *Consolidated from: `analisi-metodi-duplicati-INDEX.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 > 🐄✨ **Navigazione Completa dei Documenti di Analisi**
 
 ---
@@ -13090,7 +13360,23 @@ class TemplatePreview extends Component
 ## 🎯 Documenti Principali (START HERE!)
 
 ### 1. 🏆 MASTER EDITION - Il Documento Definitivo
+<<<<<<< HEAD
 📄 **File:** [analisi-metodi-duplicati-MASTER.md](./analisi-metodi-duplicati-master.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+📄 **File:** [analisi-metodi-duplicati-MASTER.md](./analisi-metodi-duplicati-MASTER.md)
+=======
+<<<<<<< HEAD
+📄 **File:** [analisi-metodi-duplicati-MASTER.md](./analisi-metodi-duplicati-master.md)
+=======
+📄 **File:** [analisi-metodi-duplicati-MASTER.md](./analisi-metodi-duplicati-MASTER.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+📄 **File:** [analisi-metodi-duplicati-MASTER.md](./analisi-metodi-duplicati-master.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 **Contenuto:**
 - ✅ Dati REALI dal codebase (non stime!)
@@ -13106,8 +13392,27 @@ class TemplatePreview extends Component
 ---
 
 ### 2. 📖 Documento Originale Completo
+<<<<<<< HEAD
 📄 **File:** [analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)
 📄 **File:** [analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+📄 **File:** [analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)
+📄 **File:** [analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)
+=======
+<<<<<<< .merge_file_mOa6kG
+📄 **File:** [analisi-metodi-duplicati.md](./analisi-metodi-duplicati.md)
+=======
+📄 **File:** [analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)
+📄 **File:** [analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)
+>>>>>>> .merge_file_28ve8b
+>>>>>>> laraxot/dev
+=======
+📄 **File:** [analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)
+📄 **File:** [analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 **Contenuto:**
 - Panoramica generale
@@ -13126,8 +13431,27 @@ class TemplatePreview extends Component
 ### Moduli Core
 
 #### Xot (Modulo Base)
+<<<<<<< HEAD
 📄 **File:** [../Modules/Xot/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📄 **File:** [../Modules/Xot/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+📄 **File:** [../Modules/Xot/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/Xot/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+=======
+<<<<<<< .merge_file_mOa6kG
+📄 **File:** [../Modules/Xot/docs/analisi-metodi-duplicati.md](../Modules/Xot/docs/analisi-metodi-duplicati.md)  
+=======
+📄 **File:** [../Modules/Xot/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/Xot/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+>>>>>>> .merge_file_28ve8b
+>>>>>>> laraxot/dev
+=======
+📄 **File:** [../Modules/Xot/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/Xot/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 📊 **Dati:** 9 proprietà duplicate, 80 LOC, 87% riduzione possibile  
 🎯 **Priorità:** ALTA - Implementare XotBaseModel qui  
 📝 **Alternative:** [metodi_duplicati_analisi.md](../Modules/Xot/docs/metodi_duplicati_analisi.md) (dettagli Filament methods)
@@ -13137,15 +13461,53 @@ class TemplatePreview extends Component
 ### Moduli Business Logic
 
 #### User (Autenticazione & Autorizzazione)
+<<<<<<< HEAD
 📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+=======
+<<<<<<< .merge_file_mOa6kG
+📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../Modules/User/docs/analisi-metodi-duplicati.md)  
+=======
+📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+>>>>>>> .merge_file_28ve8b
+>>>>>>> laraxot/dev
+=======
+📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 📊 **Dati:** 9 proprietà duplicate, 74 LOC, 87% riduzione  
 🎯 **Priorità:** ALTA - Modulo critico  
 ⚠️ **Note:** Testing intensivo necessario (auth)
 
 #### App (Gestione Segnalazioni)
+<<<<<<< HEAD
 📄 **File:** [../Modules/App/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📄 **File:** [../Modules/App/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+📄 **File:** [../Modules/App/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/App/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+=======
+<<<<<<< .merge_file_mOa6kG
+📄 **File:** [../Modules/App/docs/analisi-metodi-duplicati.md](../Modules/App/docs/analisi-metodi-duplicati.md)  
+=======
+📄 **File:** [../Modules/App/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/App/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+>>>>>>> .merge_file_28ve8b
+>>>>>>> laraxot/dev
+=======
+📄 **File:** [../Modules/App/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/App/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 📊 **Dati:** 9 proprietà duplicate, 72 LOC, 79% riduzione  
 🎯 **Priorità:** ALTA - Business core  
 ⚠️ **Note:** Usa SoftDeletes (trait specifico da mantenere)  
@@ -13158,8 +13520,27 @@ class TemplatePreview extends Component
 📝 **Alternative:** [metodi_duplicati_analisi.md](../Modules/<nome progetto>/docs/metodi_duplicati_analisi.md)
 
 #### Cms (Content Management)
+<<<<<<< HEAD
 📄 **File:** [../Modules/Cms/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📄 **File:** [../Modules/Cms/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+📄 **File:** [../Modules/Cms/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/Cms/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+=======
+<<<<<<< .merge_file_mOa6kG
+📄 **File:** [../Modules/Cms/docs/analisi-metodi-duplicati.md](../Modules/Cms/docs/analisi-metodi-duplicati.md)  
+=======
+📄 **File:** [../Modules/Cms/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/Cms/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+>>>>>>> .merge_file_28ve8b
+>>>>>>> laraxot/dev
+=======
+📄 **File:** [../Modules/Cms/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/Cms/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 📊 **Dati:** 8 proprietà duplicate, 70 LOC, 86% riduzione  
 🎯 **Priorità:** MEDIA - Gestisce temi  
 📝 **Alternative:** [metodi_duplicati_analisi.md](../Modules/Cms/docs/metodi_duplicati_analisi.md)
@@ -13217,15 +13598,53 @@ class TemplatePreview extends Component
 ## 🎨 Documenti per Tema
 
 ### Theme Sixteen (AGID Compliant)
+<<<<<<< HEAD
 📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+=======
+<<<<<<< .merge_file_mOa6kG
+📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../Themes/Sixteen/docs/analisi-metodi-duplicati.md)  
+=======
+📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+>>>>>>> .merge_file_28ve8b
+>>>>>>> laraxot/dev
+=======
+📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ⭐ **Valutazione:** ⭐⭐⭐⭐⭐ ECCELLENTE  
 🎯 **Priorità:** BASSA (già ottimizzato)  
 📝 **Focus:** Testing e documentazione, NO refactoring necessario
 
 ### Theme TwentyOne (Semplice)
+<<<<<<< HEAD
 📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+=======
+<<<<<<< .merge_file_mOa6kG
+📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../Themes/TwentyOne/docs/analisi-metodi-duplicati.md)  
+=======
+📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+>>>>>>> .merge_file_28ve8b
+>>>>>>> laraxot/dev
+=======
+📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ⭐ **Valutazione:** ⭐⭐⭐ BUONO  
 🎯 **Priorità:** MEDIA (opzionale ServiceProvider)  
 📝 **Focus:** Valutare se aggiungere ServiceProvider leggero
@@ -13242,14 +13661,35 @@ class TemplatePreview extends Component
 2. 📖 [Xot Module](../../analisi-metodi-duplicati.md) - Capire modulo base
 3. 📖 [Comment Module - METODI_DUPLICATI_ANALISI](../Modules/Comment/docs/metodi_duplicati_analisi.md) - Primo test migration
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 1. 📖 [MASTER EDITION](./analisi-metodi-duplicati-master.md) - Leggere TUTTO (2-3 ore)
 2. 📖 [Xot Module](../../analisi-metodi-duplicati.md) - Capire modulo base
 2. 📖 [Xot Module](../../analisi-metodi-duplicati.md) - Capire modulo base
 2. 📖 [Xot Module](../../analisi-metodi-duplicati.md) - Capire modulo base
 3. 📖 [Comment Module - METODI_DUPLICATI_ANALISI](../Modules/Comment/docs/metodi_duplicati_analisi.md) - Primo test migration
+<<<<<<< HEAD
 1. 📖 [MASTER EDITION](./analisi-metodi-duplicati-MASTER.md) - Leggere TUTTO (2-3 ore)
 2. 📖 [Xot Module](../../analisi-metodi-duplicati.md) - Capire modulo base
 3. 📖 [Comment Module - METODI_DUPLICATI_ANALISI](../Modules/Comment/docs/metodi_duplicati_analisi.md) - Primo test migration
+=======
+<<<<<<< HEAD
+=======
+1. 📖 [MASTER EDITION](./analisi-metodi-duplicati-MASTER.md) - Leggere TUTTO (2-3 ore)
+<<<<<<< .merge_file_mOa6kG
+2. 📖 [Xot Module](../Modules/Xot/docs/analisi-metodi-duplicati.md) - Capire modulo base
+3. 📖 [Comment Module - METODI_DUPLICATI_ANALISI](../Modules/Comment/docs/METODI_DUPLICATI_ANALISI.md) - Primo test migration
+=======
+2. 📖 [Xot Module](../../analisi-metodi-duplicati.md) - Capire modulo base
+2. 📖 [Xot Module](../../analisi-metodi-duplicati.md) - Capire modulo base
+3. 📖 [Comment Module - METODI_DUPLICATI_ANALISI](../Modules/Comment/docs/metodi_duplicati_analisi.md) - Primo test migration
+>>>>>>> .merge_file_28ve8b
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
@@ -13264,10 +13704,33 @@ class TemplatePreview extends Component
 ### Per Tech Lead / Architect
 1. 📖 [MASTER EDITION - Implementazioni Concrete](./analisi-metodi-duplicati-MASTER.md#implementazione-concreta-pronta-all-uso) (1 ora)
 2. 📖 [MASTER EDITION - Script Utili](./analisi-metodi-duplicati-MASTER.md#script-utili) (30 min)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+3. 📖 [Xot Module - Dettagli](../../analisi-metodi-duplicati.md) (30 min)
+3. 📖 [Xot Module - Dettagli](../../analisi-metodi-duplicati.md) (30 min)
+4. 📖 [METODI_DUPLICATI_ANALISI - Filament Details](../Modules/Xot/docs/metodi_duplicati_analisi.md) (1 ora)
+=======
+<<<<<<< .merge_file_mOa6kG
+3. 📖 [Xot Module - Dettagli](../Modules/Xot/docs/analisi-metodi-duplicati.md) (30 min)
+4. 📖 [METODI_DUPLICATI_ANALISI - Filament Details](../Modules/Xot/docs/METODI_DUPLICATI_ANALISI.md) (1 ora)
+=======
+3. 📖 [Xot Module - Dettagli](../../analisi-metodi-duplicati.md) (30 min)
+3. 📖 [Xot Module - Dettagli](../../analisi-metodi-duplicati.md) (30 min)
+4. 📖 [METODI_DUPLICATI_ANALISI - Filament Details](../Modules/Xot/docs/metodi_duplicati_analisi.md) (1 ora)
+>>>>>>> .merge_file_28ve8b
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 3. 📖 [Xot Module - Dettagli](../../analisi-metodi-duplicati.md) (30 min)
 3. 📖 [Xot Module - Dettagli](../../analisi-metodi-duplicati.md) (30 min)
 3. 📖 [Xot Module - Dettagli](../../analisi-metodi-duplicati.md) (30 min)
 4. 📖 [METODI_DUPLICATI_ANALISI - Filament Details](../Modules/Xot/docs/metodi_duplicati_analisi.md) (1 ora)
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 5. 🎯 Architecture review e planning
 
 ### Per QA / Tester
@@ -13364,14 +13827,34 @@ Che questo indice ti guidi verso la saggezza del refactoring perfetto!
 **Manutenuto da:** Super Mucca AI  
 **Prossimo Update:** Dopo implementazione Fase 1
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## analisi-metodi-duplicati-MASTER
 
 *Consolidated from: `analisi-metodi-duplicati-MASTER.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 **Data Analisi:** 2025-10-15  
 **Analista:** Super Mucca AI (Livello Divino)  
 **Versione:** 2.0 ULTIMATE  
@@ -14549,7 +15032,17 @@ Dopo analisi approfondita con **dati REALI dal codebase**, la Super Mucca Divina
 *Data: 2025-10-15*  
 *Status: READY FOR PRODUCTION*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## analisi-metodi-duplicati-index
@@ -14575,8 +15068,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -14605,8 +15106,27 @@ related:
 ---
 
 ### 2. 📖 Documento Originale Completo
+<<<<<<< HEAD
 📄 **File:** [analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)
 📄 **File:** [analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+📄 **File:** [analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)
+📄 **File:** [analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)
+=======
+<<<<<<< .merge_file_mOa6kG
+📄 **File:** [analisi-metodi-duplicati.md](./analisi-metodi-duplicati.md)
+=======
+📄 **File:** [analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)
+📄 **File:** [analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)
+>>>>>>> .merge_file_28ve8b
+>>>>>>> laraxot/dev
+=======
+📄 **File:** [analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)
+📄 **File:** [analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 **Contenuto:**
 - Panoramica generale
@@ -14639,8 +15159,27 @@ related:
 ### Moduli Business Logic
 
 #### User (Autenticazione & Autorizzazione)
+<<<<<<< HEAD
 📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+=======
+<<<<<<< .merge_file_mOa6kG
+📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../Modules/User/docs/analisi-metodi-duplicati.md)  
+=======
+📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+>>>>>>> .merge_file_28ve8b
+>>>>>>> laraxot/dev
+=======
+📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 📊 **Dati:** 9 proprietà duplicate, 74 LOC, 87% riduzione  
 🎯 **Priorità:** ALTA - Modulo critico  
 ⚠️ **Note:** Testing intensivo necessario (auth)
@@ -14718,15 +15257,53 @@ related:
 ## 🎨 Documenti per Tema
 
 ### Theme Sixteen (AGID Compliant)
+<<<<<<< HEAD
 📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+=======
+<<<<<<< .merge_file_mOa6kG
+📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../Themes/Sixteen/docs/analisi-metodi-duplicati.md)  
+=======
+📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+>>>>>>> .merge_file_28ve8b
+>>>>>>> laraxot/dev
+=======
+📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ⭐ **Valutazione:** ⭐⭐⭐⭐⭐ ECCELLENTE  
 🎯 **Priorità:** BASSA (già ottimizzato)  
 📝 **Focus:** Testing e documentazione, NO refactoring necessario
 
 ### Theme TwentyOne (Semplice)
+<<<<<<< HEAD
 📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
 📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+=======
+<<<<<<< .merge_file_mOa6kG
+📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../Themes/TwentyOne/docs/analisi-metodi-duplicati.md)  
+=======
+📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+>>>>>>> .merge_file_28ve8b
+>>>>>>> laraxot/dev
+=======
+📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../analisi-metodi-duplicati.md)  
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ⭐ **Valutazione:** ⭐⭐⭐ BUONO  
 🎯 **Priorità:** MEDIA (opzionale ServiceProvider)  
 📝 **Focus:** Valutare se aggiungere ServiceProvider leggero
@@ -14736,14 +15313,38 @@ related:
 ## 🚀 Percorso di Lettura Consigliato
 
 ### Per Developer che Inizia il Refactoring
+<<<<<<< HEAD
 1. 📖 [MASTER EDITION](./analisi-metodi-duplicati-master-1.md) - Leggere TUTTO (2-3 ore)
 2. 📖 [Xot Module](../Modules/Xot/docs/analisi-metodi-duplicati.md) - Capire modulo base
 3. 📖 [Comment Module - METODI_DUPLICATI_ANALISI](../Modules/Comment/docs/metodi-duplicati-analisi-1.md) - Primo test migration
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_mOa6kG
+1. 📖 [MASTER EDITION](./analisi-metodi-duplicati-master-1.md) - Leggere TUTTO (2-3 ore)
+2. 📖 [Xot Module](../Modules/Xot/docs/analisi-metodi-duplicati.md) - Capire modulo base
+3. 📖 [Comment Module - METODI_DUPLICATI_ANALISI](../Modules/Comment/docs/metodi-duplicati-analisi-1.md) - Primo test migration
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 1. 📖 [MASTER EDITION](./analisi-metodi-duplicati-master.md) - Leggere TUTTO (2-3 ore)
 2. 📖 [Xot Module](../../analisi-metodi-duplicati.md) - Capire modulo base
 3. 📖 [Comment Module - METODI_DUPLICATI_ANALISI](../Modules/Comment/docs/metodi-duplicati-analisi.md) - Primo test migration
 2. 📖 [Xot Module](../../analisi-metodi-duplicati.md) - Capire modulo base
 3. 📖 [Comment Module - METODI_DUPLICATI_ANALISI](../Modules/Comment/docs/metodi-duplicati-analisi.md) - Primo test migration
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_28ve8b
+>>>>>>> laraxot/dev
+=======
+1. 📖 [MASTER EDITION](./analisi-metodi-duplicati-master.md) - Leggere TUTTO (2-3 ore)
+2. 📖 [Xot Module](../../analisi-metodi-duplicati.md) - Capire modulo base
+3. 📖 [Comment Module - METODI_DUPLICATI_ANALISI](../Modules/Comment/docs/metodi-duplicati-analisi.md) - Primo test migration
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 4. 🚀 Iniziare implementazione seguendo MASTER guide
 
 ### Per Project Manager / Stakeholder
@@ -14753,10 +15354,37 @@ related:
 4. 🎯 Decisione GO/NO-GO
 
 ### Per Tech Lead / Architect
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_mOa6kG
+1. 📖 [MASTER EDITION - Implementazioni Concrete](./analisi-metodi-duplicati-master-1.md#implementazione-concreta-pronta-all-uso) (1 ora)
+2. 📖 [MASTER EDITION - Script Utili](./analisi-metodi-duplicati-master-1.md#script-utili) (30 min)
+3. 📖 [Xot Module - Dettagli](../Modules/Xot/docs/analisi-metodi-duplicati.md) (30 min)
+4. 📖 [METODI_DUPLICATI_ANALISI - Filament Details](../Modules/Xot/docs/metodi-duplicati-analisi-1.md) (1 ora)
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 1. 📖 [MASTER EDITION - Implementazioni Concrete](./analisi-metodi-duplicati-master.md#implementazione-concreta-pronta-all-uso) (1 ora)
 2. 📖 [MASTER EDITION - Script Utili](./analisi-metodi-duplicati-master.md#script-utili) (30 min)
 3. 📖 [Xot Module - Dettagli](../../analisi-metodi-duplicati.md) (30 min)
 4. 📖 [METODI_DUPLICATI_ANALISI - Filament Details](../Modules/Xot/docs/metodi-duplicati-analisi.md) (1 ora)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+3. 📖 [Xot Module - Dettagli](../../analisi-metodi-duplicati.md) (30 min)
+4. 📖 [METODI_DUPLICATI_ANALISI - Filament Details](../Modules/Xot/docs/metodi-duplicati-analisi.md) (1 ora)
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_28ve8b
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 5. 🎯 Architecture review e planning
 
 ### Per QA / Tester
@@ -14853,7 +15481,17 @@ Che questo indice ti guidi verso la saggezza del refactoring perfetto!
 **Manutenuto da:** Super Mucca AI  
 **Prossimo Update:** Dopo implementazione Fase 1
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## analisi-metodi-duplicati-master-1
@@ -14879,8 +15517,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -16056,7 +16702,17 @@ Dopo analisi approfondita con **dati REALI dal codebase**, la Super Mucca Divina
 *Data: 2025-10-15*  
 *Status: READY FOR PRODUCTION*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## analisi-metodi-duplicati-master
@@ -16082,8 +16738,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -16632,7 +17296,17 @@ public function getTableFilters(): array
 
 *Consolidated from: `analisi-metodi-duplicati.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Indice
 1. [Panoramica](#panoramica)
 2. [Metodi Duplicati nei BaseModel](#metodi-duplicati-nei-basemodel)
@@ -17253,14 +17927,34 @@ rules:
 **Versione:** 1.0  
 **Status:** Draft per Review
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## analisi-miglioramenti-1
 
 *Consolidated from: `analisi-miglioramenti-modulo-notify.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Analisi delle Soluzioni Esistenti
 
 ### 1. Editor Visuale
@@ -17439,14 +18133,40 @@ class BaseNotification extends Notification
 Per contribuire alla documentazione, seguire le [Linee Guida](../../../../docs/linee-guida-documentazione.md) e le [Regole dei Collegamenti](../../../../docs/regole_collegamenti_documentazione.md).
 
 ## Collegamenti Completi
+<<<<<<< HEAD
 Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../../docs/readme_links.md).
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../../docs/README_links.md).
+=======
+<<<<<<< HEAD
+Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../../docs/readme_links.md).
+=======
+Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../../docs/README_links.md).
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../../docs/readme_links.md).
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## analisi-miglioramenti
 
 *Consolidated from: `analisi-miglioramenti.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Analisi delle Soluzioni Esistenti
 
 ### 1. Editor Visuale
@@ -17748,7 +18468,17 @@ class TemplatePreview extends Component
 
 *Consolidated from: `analisi_completa.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Indice
 1. [Architettura e Struttura](#1-architettura-e-struttura)
 2. [Modelli e Relazioni](#2-modelli-e-relazioni)
@@ -18026,7 +18756,17 @@ class Template extends Model
 
 *Consolidated from: `analisi_dettagliata.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Analisi delle Soluzioni di Template Email
 
 ### 1.1 Laravel Email Templates (simplepleb)
@@ -18644,7 +19384,17 @@ class TemplatePreview extends Component
 
 *Consolidated from: `analisi_dettagliata-architettura-struttura.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Architettura del Sistema
 
 ### 1.1 Struttura del Modulo
@@ -19167,7 +19917,17 @@ return [
 
 *Consolidated from: `analisi_dettagliata-modelli-relazioni.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 2. Modelli e Relazioni
 
 ### 2.1 Template Model
@@ -19814,7 +20574,17 @@ Schema::create('template_analytics', function (Blueprint $table) {
 
 *Consolidated from: `analisi_dettagliata-servizi-core.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 3. Servizi Core
 
 ### 3.1 TemplateService
@@ -20465,7 +21235,17 @@ protected function updateAnalytics(string $messageId, string $event): void
 
 *Consolidated from: `analisi_dettagliata-integrazione-filament.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 4. Integrazione con Filament
 
 ### 4.1 TemplateResource
@@ -21156,7 +21936,17 @@ class TemplateTestPage extends Page
 
 *Consolidated from: `analisi_dettagliata-testing-parte.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 5. Testing
 
 ### 5.1 Unit Tests
@@ -21978,7 +22768,17 @@ class WebhookControllerTest extends TestCase
 
 *Consolidated from: `analisi_dettagliata-monitoraggio-analytics.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 6. Monitoraggio e Analytics
 
 ### 6.1 Logging
@@ -22602,7 +23402,17 @@ class AnalyticsExporter
 
 *Consolidated from: `analisi_dettagliata-manutenzione-backup.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 7. Manutenzione e Backup
 
 ### 7.1 Versioning
@@ -23251,7 +24061,17 @@ class MaintainTemplatesCommand extends Command
 
 *Consolidated from: `analisi_dettagliata-finali-parte.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 8. Note Finali
 
 ### 8.1 Best Practices
@@ -23477,7 +24297,17 @@ Il modulo è progettato per essere estensibile e personalizzabile, permettendo l
 
 *Consolidated from: `analisiettagliata-modelli-relazioni.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 2. Modelli e Relazioni
 
 ### 2.1 Template Model
@@ -24126,7 +24956,17 @@ Schema::create('template_analytics', function (Blueprint $table) {
 
 *Consolidated from: `analisiettagliata-servizi-core.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 3. Servizi Core
 
 ### 3.1 TemplateService
@@ -24777,7 +25617,17 @@ protected function updateAnalytics(string $messageId, string $event): void
 
 *Consolidated from: `analisiettagliata-integrazione-filament.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 4. Integrazione con Filament
 
 ### 4.1 TemplateResource
@@ -25468,7 +26318,17 @@ class TemplateTestPage extends Page
 
 *Consolidated from: `analisiettagliata-testing-parte.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 5. Testing
 
 ### 5.1 Unit Tests
@@ -26290,7 +27150,17 @@ class WebhookControllerTest extends TestCase
 
 *Consolidated from: `analisiettagliata-monitoraggio-analytics.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 6. Monitoraggio e Analytics
 
 ### 6.1 Logging
@@ -26914,7 +27784,17 @@ class AnalyticsExporter
 
 *Consolidated from: `analisiettagliata-manutenzione-backup.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 7. Manutenzione e Backup
 
 ### 7.1 Versioning
@@ -27563,7 +28443,17 @@ class MaintainTemplatesCommand extends Command
 
 *Consolidated from: `analisiettagliata-finali-parte.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 8. Note Finali
 
 ### 8.1 Best Practices
@@ -27789,7 +28679,17 @@ Il modulo è progettato per essere estensibile e personalizzabile, permettendo l
 
 *Consolidated from: `analisiettagliata.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Analisi delle Soluzioni di Template Email
 
 ### 1.1 Laravel Email Templates (simplepleb)

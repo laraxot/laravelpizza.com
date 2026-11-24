@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-module-name-by-class-action.md
+ *
  * @contract docs/contracts/get-module-name-by-class-action.md
  */
 class GetModuleNameByClassAction

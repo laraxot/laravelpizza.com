@@ -8,7 +8,7 @@ use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 test('LogUserLoginAction can execute for a user', function (): void {
     $user = UserFactory::new()->createOne();

@@ -16,6 +16,10 @@ discussions: []
 > **Created**: 2026-04-08  
 > **Purpose**: Prevent architectural and translation errors in HTML parity phases
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "html parity rules"
@@ -45,6 +49,13 @@ The reference HTML structure (tags, attributes, classes, IDs, nesting) MUST be r
 8. **Centralized Docs**: Theme-specific docs in `Themes/<ThemeName>/docs/`
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Core Philosophy
+### Principles (in order of importance)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## 📐 Architecture Patterns
 

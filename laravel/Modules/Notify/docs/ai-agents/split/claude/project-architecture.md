@@ -9,7 +9,14 @@ issues: []
 discussions: []
 ---
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 > **Obsoleto: `npm run copy` non esiste piu' (2026-11-11).** Gli asset dei temi
 > arrivano nella document root con un symlink, non con una copia. Per il
 > procedimento valido vedi
@@ -150,6 +157,10 @@ NEVER proactively create documentation files (*.md) or README files. Only create
 
       
       IMPORTANT: this context may or may not be relevant to your tasks. You should not respond to this context unless it is highly relevant to your task.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "project architecture"
@@ -168,3 +179,9 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md) — Original source
 
+<<<<<<< HEAD
+=======
+=======
+## Cross-References
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

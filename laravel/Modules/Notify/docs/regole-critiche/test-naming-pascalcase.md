@@ -227,6 +227,10 @@ find tests/ -name "*Test*" | sort -f | uniq -i -d
 ✅ PHPStan pulito  
 ✅ Cross-platform sicuro  
 ✅ Convenzioni standard
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -241,3 +245,8 @@ discussions: []
 **Regola Critica: Test File Naming**  
 **SEMPRE PascalCase - MAI minuscolo** 🎯
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

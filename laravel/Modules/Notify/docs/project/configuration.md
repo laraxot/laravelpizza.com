@@ -204,6 +204,10 @@ QUEUE_CONNECTION=sync
 - [Documentation Reorganization Architecture](_bmad/bmm/3-solutioning/docs-reorganization-architecture.md)
 - [Docs Reorganization PRD](_bmad/bmm/2-plan/docs-reorganization-prd.json)
 - [Find Duplicates Script](bashscripts/docs/find-doc-duplicates.sh)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -216,3 +220,8 @@ qmd: "configuration"
 issues: []
 discussions: []
 **Maintenance**: Update this file when APP_URL or theme configuration changes
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

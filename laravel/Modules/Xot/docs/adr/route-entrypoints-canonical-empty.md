@@ -1,15 +1,18 @@
 ---
 title: "Xot — entrypoint route no-op canonico"
 type: decision
-status: accepted
+status: superseded
 module: Xot
 created: 2026-11-23
 updated: 2026-11-24
 issue: "#92"
 qmd: "route entrypoints canonical empty entrypoint noop"
+superseded_by: "no-shared-empty-route-file.md"
 ---
 
 # ADR: entrypoint route no-op canonico
+
+> **Superseded** da [no-shared-empty-route-file.md](./no-shared-empty-route-file.md): non creare `Modules/Xot/routes/empty.php`; stub locale minimo per modulo.
 
 ## Contesto
 

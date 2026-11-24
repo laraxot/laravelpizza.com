@@ -17,6 +17,10 @@ discussions: []
 **Category**: Architecture / Filament 5.x / Canonical Rule  
 **Audience**: All developers + AI agents
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "schemas unified religion"
@@ -42,6 +46,13 @@ Segue invece la semantica del contenuto.
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Tesi
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Regola Operativa
 
 | Se il contenuto e... | Usa | Perche |

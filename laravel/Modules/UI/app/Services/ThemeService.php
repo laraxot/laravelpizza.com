@@ -11,6 +11,4 @@ namespace Modules\UI\Services;
  *
  * @deprecated Empty stub; do not use.
  */
-final class ThemeService
-{
-}
+final class ThemeService {}

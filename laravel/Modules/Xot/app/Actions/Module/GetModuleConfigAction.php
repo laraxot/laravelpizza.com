@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-module-config-action.md
+ *
  * @contract docs/contracts/get-module-config-action.md
  */
 class GetModuleConfigAction

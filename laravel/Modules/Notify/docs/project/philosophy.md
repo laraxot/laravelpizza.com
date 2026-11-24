@@ -132,6 +132,10 @@ Notify è più di un progetto software. È un esperimento sociale tecnologico ch
 
 > *"La città perfetta non esiste, ma il viaggio verso di essa sì."*
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "philosophy"
@@ -147,3 +151,9 @@ discussions: []
 - [PROJECT.md](./project.md) - Visione e obiettivi
 - [AGENTS.md](./AGENTS.md) - Regole per agenti AI
 - [docs/](../docs/) - Documentazione completa
+<<<<<<< HEAD
+=======
+=======
+## Riferimenti
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

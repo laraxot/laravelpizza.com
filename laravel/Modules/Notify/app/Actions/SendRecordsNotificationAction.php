@@ -29,9 +29,19 @@ use Spatie\QueueableAction\QueueableAction;
  * // Utilizzo asincrono
  * $action->onQueue('notifications')->execute($records, 'template-slug', ['mail']);
  * ```
+<<<<<<< HEAD
+ *
+ * @see docs/contracts/send-records-notification-action.md
+ *
+ * @contract docs/contracts/send-records-notification-action.md
+=======
+<<<<<<< HEAD
+=======
  *
  * @see docs/contracts/send-records-notification-action.md
  * @contract docs/contracts/send-records-notification-action.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
  */
 class SendRecordsNotificationAction
 {

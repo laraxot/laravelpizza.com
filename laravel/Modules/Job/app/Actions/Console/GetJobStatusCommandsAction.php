@@ -8,6 +8,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-job-status-commands-action.md
+ *
  * @contract docs/contracts/get-job-status-commands-action.md
  */
 final class GetJobStatusCommandsAction

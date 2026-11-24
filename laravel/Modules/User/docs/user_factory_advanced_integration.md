@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "UserFactory Advanced Integration - Modulo User & SaluteOra"
 type: note
 qmd: "user factory advanced integration userfactory saluteora"
 ---
->>>>>>> laraxot/dev
 # UserFactory Advanced Integration - Modulo User & SaluteOra
 
 ## Post Deep-Study Analysis 

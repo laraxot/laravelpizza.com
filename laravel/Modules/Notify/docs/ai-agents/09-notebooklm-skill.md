@@ -16,6 +16,10 @@ discussions: []
 **Versione**: 1.3.0
 **Stato**: ✅ Installato (auth richiesta)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "09 NOTEBOOKLM SKILL"
@@ -34,6 +38,13 @@ Permette di interrogare notebook Google NotebookLM direttamente da Claude Code /
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Cosa fa
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Setup (una tantum)
 
 ### 1. Installazione (già completata)

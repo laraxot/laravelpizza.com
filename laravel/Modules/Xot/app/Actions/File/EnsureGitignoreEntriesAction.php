@@ -17,7 +17,9 @@ use function Safe\preg_split;
  * - `<nome>/` copre una cartella reale (vecchia copia degli asset);
  * - `<nome>` copre il symlink.
  * Il file tiene anche la cartella nel repository (git non versiona cartelle vuote).
+ *
  * @see docs/contracts/ensure-gitignore-entries-action.md
+ *
  * @contract docs/contracts/ensure-gitignore-entries-action.md
  */
 class EnsureGitignoreEntriesAction

@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Analisi Dettagliata di LoginWidget"
 type: analysis
 qmd: "login widget analysis analisi dettagliata loginwidget"
 ---
->>>>>>> laraxot/dev
 # Analisi Dettagliata di LoginWidget
 
 **File**: `Modules/User/app/Filament/Widgets/LoginWidget.php`  

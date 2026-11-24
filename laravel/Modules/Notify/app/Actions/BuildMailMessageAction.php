@@ -13,10 +13,21 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\mb_convert_encoding;
 
+<<<<<<< HEAD
+/**
+ * @see docs/contracts/build-mail-message-action.md
+ *
+ * @contract docs/contracts/build-mail-message-action.md
+ */
+=======
+<<<<<<< HEAD
+=======
 /**
  * @see docs/contracts/build-mail-message-action.md
  * @contract docs/contracts/build-mail-message-action.md
  */
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 class BuildMailMessageAction
 {
     use QueueableAction;

@@ -15,6 +15,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/build-trend-collection-action.md
+ *
  * @contract docs/contracts/build-trend-collection-action.md
  */
 class BuildTrendCollectionAction

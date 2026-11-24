@@ -16,6 +16,10 @@ discussions: []
 **Versione**: 1.0.0-beta  
 **Status Generale**: 🚀 Progresso Eccellente!
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "progress report"
@@ -34,3 +38,9 @@ Il progetto **FixCity** ha comple
 
 
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Executive Summary
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

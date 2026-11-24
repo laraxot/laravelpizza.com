@@ -102,6 +102,10 @@ Tutte le classi nella cartella `app/Filament/Clusters/*/Pages` **devono terminar
 - In caso di refactoring, aggiornare sia il nome del file che della classe e tutti i riferimenti.
 - Non usare mai nomi generici o ambigui (es. `SendNetfunSMS`), ma sempre `SendNetfunSMSPage`.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "structure standards"
@@ -228,6 +232,30 @@ Tutte le classi nella cartella `app/Filament/Clusters/*/Pages` **devono terminar
 - Non usare mai nomi generici o ambigui (es. `SendNetfunSMS`), ma sempre `SendNetfunSMSPage`.
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## Esempio
+# Regola di Estensione delle Pagine Filament
+## Non estendere mai direttamente Filament\Pages\Page
+### Motivazione
+### Best Practice
+### Esempio
+# Standard di Struttura nel Modulo Notify
+## Directory Principali e Convenzioni di Denominazione
+## Importante: `app/Datas/` vs Altri Pattern
+### ✅ CORRETTO: USARE `app/Datas/`
+### ❌ ERRATO: ALTERNATIVE COMUNI MA ERRATE
+### Perché Questa Distinzione è Importante
+## Verifica dei Percorsi Prima di Utilizzarli
+### Verificare Sempre le Directory Esistenti
+## Esempi di Importazioni Corrette
+# Standard di Struttura per le Pagine Filament
+## Regola di Naming per le Pagine
+### Motivazione
+### Best Practice
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Esempio
 

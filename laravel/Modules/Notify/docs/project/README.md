@@ -4,7 +4,19 @@ type: index
 tags: [notify, docs, project]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "notify documentazione project readme 📁 project documentation index index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -44,16 +56,40 @@ This directory contains project-wide configuration and setup documentation for t
 
 | File | Description | Category |
 |------|-------------|----------|
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 | [`AGENTS.md`](agents.md) | AI agents configuration | AI |
 | [`AI_AGENT_LESSONS_LEARNED.md`](ai_agent_lessons_learned.md) | AI agent learnings | AI |
 | [`AI_SKILLS_AND_PLUGINS_COMPLETE.md`](ai_skills_and_plugins_complete.md) | AI skills setup | AI |
 | [`COMMIT_MESSAGE.md`](commit_message.md) | Commit message guidelines | Git |
 | [`VITE_FIX_AND_EXECUTION_PLAN.md`](vite_fix_and_execution_plan.md) | Vite build fixes | Build |
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 | [`AGENTS.md`](AGENTS.md) | AI agents configuration | AI |
 | [`AI_AGENT_LESSONS_LEARNED.md`](AI_AGENT_LESSONS_LEARNED.md) | AI agent learnings | AI |
 | [`AI_SKILLS_AND_PLUGINS_COMPLETE.md`](AI_SKILLS_AND_PLUGINS_COMPLETE.md) | AI skills setup | AI |
 | [`COMMIT_MESSAGE.md`](COMMIT_MESSAGE.md) | Commit message guidelines | Git |
 | [`VITE_FIX_AND_EXECUTION_PLAN.md`](VITE_FIX_AND_EXECUTION_PLAN.md) | Vite build fixes | Build |
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### Infrastructure
 
@@ -77,14 +113,50 @@ This directory contains project-wide configuration and setup documentation for t
 | File | Description | Category |
 |------|-------------|----------|
 | [`philosophy.md`](philosophy.md) | Project philosophy | Guidelines |
+<<<<<<< HEAD
 | [`NOTIFY_IMPROVEMENT_PLAN.md`](notify_improvement_plan.md) | Improvement plan | Planning |
 | [`NOTIFY_IMPROVEMENT_START_HERE.md`](notify_improvement_start_here.md) | Where to start | Planning |
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+| [`NOTIFY_IMPROVEMENT_PLAN.md`](NOTIFY_IMPROVEMENT_PLAN.md) | Improvement plan | Planning |
+| [`NOTIFY_IMPROVEMENT_START_HERE.md`](NOTIFY_IMPROVEMENT_START_HERE.md) | Where to start | Planning |
+=======
+<<<<<<< HEAD
+| [`NOTIFY_IMPROVEMENT_PLAN.md`](notify_improvement_plan.md) | Improvement plan | Planning |
+| [`NOTIFY_IMPROVEMENT_START_HERE.md`](notify_improvement_start_here.md) | Where to start | Planning |
+=======
+| [`NOTIFY_IMPROVEMENT_PLAN.md`](NOTIFY_IMPROVEMENT_PLAN.md) | Improvement plan | Planning |
+| [`NOTIFY_IMPROVEMENT_START_HERE.md`](NOTIFY_IMPROVEMENT_START_HERE.md) | Where to start | Planning |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+| [`NOTIFY_IMPROVEMENT_PLAN.md`](notify_improvement_plan.md) | Improvement plan | Planning |
+| [`NOTIFY_IMPROVEMENT_START_HERE.md`](notify_improvement_start_here.md) | Where to start | Planning |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### Integrations
 
 | File | Description | Category |
 |------|-------------|----------|
+<<<<<<< HEAD
 | [`NOTEBOOKLM_SETUP_COMPLETE.md`](notebooklm_setup_complete.md) | NotebookLM setup | AI |
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+| [`NOTEBOOKLM_SETUP_COMPLETE.md`](NOTEBOOKLM_SETUP_COMPLETE.md) | NotebookLM setup | AI |
+=======
+<<<<<<< HEAD
+| [`NOTEBOOKLM_SETUP_COMPLETE.md`](notebooklm_setup_complete.md) | NotebookLM setup | AI |
+=======
+| [`NOTEBOOKLM_SETUP_COMPLETE.md`](NOTEBOOKLM_SETUP_COMPLETE.md) | NotebookLM setup | AI |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+| [`NOTEBOOKLM_SETUP_COMPLETE.md`](notebooklm_setup_complete.md) | NotebookLM setup | AI |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 | [`notebooklm-integration.md`](notebooklm-integration.md) | NotebookLM integration | AI |
 
 ---
@@ -145,14 +217,38 @@ echo "127.0.0.1 laraxot.local" | sudo tee -a /etc/hosts
 - [`vhost-configuration.md`](vhost-configuration.md) - Apache vhost setup
 
 **AI & Agents:**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`AGENTS.md`](agents.md)
 - [`AI_AGENT_LESSONS_LEARNED.md`](ai_agent_lessons_learned.md)
 - [`AI_SKILLS_AND_PLUGINS_COMPLETE.md`](ai_skills_and_plugins_complete.md)
 - [`NOTEBOOKLM_SETUP_COMPLETE.md`](notebooklm_setup_complete.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`AGENTS.md`](AGENTS.md)
 - [`AI_AGENT_LESSONS_LEARNED.md`](AI_AGENT_LESSONS_LEARNED.md)
 - [`AI_SKILLS_AND_PLUGINS_COMPLETE.md`](AI_SKILLS_AND_PLUGINS_COMPLETE.md)
 - [`NOTEBOOKLM_SETUP_COMPLETE.md`](NOTEBOOKLM_SETUP_COMPLETE.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`notebooklm-integration.md`](notebooklm-integration.md)
 
 **Configuration:**
@@ -168,6 +264,15 @@ echo "127.0.0.1 laraxot.local" | sudo tee -a /etc/hosts
 - [`2-1-CONTEXT.md`](2-1-context.md)
 
 **Development:**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`COMMIT_MESSAGE.md`](commit_message.md)
 - [`VITE_FIX_AND_EXECUTION_PLAN.md`](vite_fix_and_execution_plan.md)
 
@@ -175,6 +280,12 @@ echo "127.0.0.1 laraxot.local" | sudo tee -a /etc/hosts
 - [`philosophy.md`](philosophy.md)
 - [`NOTIFY_IMPROVEMENT_PLAN.md`](notify_improvement_plan.md)
 - [`NOTIFY_IMPROVEMENT_START_HERE.md`](notify_improvement_start_here.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`COMMIT_MESSAGE.md`](COMMIT_MESSAGE.md)
 - [`VITE_FIX_AND_EXECUTION_PLAN.md`](VITE_FIX_AND_EXECUTION_PLAN.md)
 
@@ -182,6 +293,15 @@ echo "127.0.0.1 laraxot.local" | sudo tee -a /etc/hosts
 - [`philosophy.md`](philosophy.md)
 - [`NOTIFY_IMPROVEMENT_PLAN.md`](NOTIFY_IMPROVEMENT_PLAN.md)
 - [`NOTIFY_IMPROVEMENT_START_HERE.md`](NOTIFY_IMPROVEMENT_START_HERE.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 
@@ -192,8 +312,28 @@ echo "127.0.0.1 laraxot.local" | sudo tee -a /etc/hosts
 1. Create markdown file in this directory
 2. Add to this index under appropriate category
 3. Update main index: [`../index.md`](../index.md)
+<<<<<<< HEAD
 4. Update modules index: [`../../Modules/docs/DOCUMENTATION_INDEX.md`](../../Modules/docs/DOCUMENTATION_INDEX.md)
 5. Update themes index: [`../../Themes/docs/DOCUMENTATION_INDEX.md`](../../Themes/docs/DOCUMENTATION_INDEX.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+4. Update modules index: [`../../Modules/docs/DOCUMENTATION_INDEX.md`](../../Modules/docs/DOCUMENTATION_INDEX.md)
+5. Update themes index: [`../../Themes/docs/DOCUMENTATION_INDEX.md`](../../Themes/docs/DOCUMENTATION_INDEX.md)
+=======
+<<<<<<< HEAD
+4. Update modules index: [`../../Modules/docs/DOCUMENTATION_INDEX.md`](../../Modules/docs/documentation_index.md)
+5. Update themes index: [`../../Themes/docs/DOCUMENTATION_INDEX.md`](../../Themes/docs/documentation_index.md)
+=======
+4. Update modules index: [`../../Modules/docs/DOCUMENTATION_INDEX.md`](../../Modules/docs/DOCUMENTATION_INDEX.md)
+5. Update themes index: [`../../Themes/docs/DOCUMENTATION_INDEX.md`](../../Themes/docs/DOCUMENTATION_INDEX.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+4. Update modules index: [`../../Modules/docs/DOCUMENTATION_INDEX.md`](../../Modules/docs/documentation_index.md)
+5. Update themes index: [`../../Themes/docs/DOCUMENTATION_INDEX.md`](../../Themes/docs/documentation_index.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### Review Schedule
 

@@ -3,7 +3,19 @@ title: "quick reference"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "quick reference"
 issues: []
 discussions: []
@@ -77,6 +89,10 @@ What happens:
 ## Frontmatter Schema
 
 ```yaml
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 qmd: "quick reference"
 issues: []
@@ -92,11 +108,32 @@ related:                               # Optional (array of paths)
   - concepts/related.md
   - entities/entity.md
 ---
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ```
 
 ## Naming Conventions
 
+<<<<<<< HEAD
 - **filenames**: lowercase-kebab-case.md
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- **Filenames**: lowercase-kebab-case.md
+=======
+<<<<<<< HEAD
+- **filenames**: lowercase-kebab-case.md
+=======
+- **Filenames**: lowercase-kebab-case.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- **filenames**: lowercase-kebab-case.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - ✅ `lmsr-mechanics.md`
   - ❌ `LMSR_Mechanics.md`
 - **Directories**: lowercase
@@ -151,7 +188,23 @@ qmd serve ./docs/wiki
 ### Before Committing
 
 - [ ] Frontmatter schema valid
+<<<<<<< HEAD
 - [ ] filename lowercase-kebab-case.md
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [ ] Filename lowercase-kebab-case.md
+=======
+<<<<<<< HEAD
+- [ ] filename lowercase-kebab-case.md
+=======
+- [ ] Filename lowercase-kebab-case.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [ ] filename lowercase-kebab-case.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [ ] Page has 1+ outgoing links
 - [ ] index.md updated (if new page)
 - [ ] log.md updated (if ingestion)
@@ -181,7 +234,31 @@ Templates available:
 ## Related Documentation
 
 - [Complete Integration Guide](wiki/README.md)
+<<<<<<< HEAD
 - [Agent Instructions](wiki/AGENTS.md)
 - [Wiki Overview](wiki/overview.md)
 - [Obsidian Setup](.obsidian/readme.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Agent Instructions](wiki/AGENTS.md)
+- [Wiki Overview](wiki/overview.md)
+- [Obsidian Setup](.obsidian/readme.md)
+=======
+<<<<<<< HEAD
+- [Agent Instructions](wiki/agents.md)
+- [Wiki Overview](wiki/overview.md)
+- [Obsidian Setup](.obsidian/README.md)
+=======
+- [Agent Instructions](wiki/AGENTS.md)
+- [Wiki Overview](wiki/overview.md)
+- [Obsidian Setup](.obsidian/readme.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [Agent Instructions](wiki/agents.md)
+- [Wiki Overview](wiki/overview.md)
+- [Obsidian Setup](.obsidian/README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Module Wiki Guide](Modules/Xot/docs/llm-wiki-integration.md)

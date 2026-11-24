@@ -19,6 +19,10 @@ discussions: []
 ### Target Versione: 2.0.0 (Produzione Completa)
 ### Timeline: Q1-Q2 2025
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "roadmap project"
@@ -65,6 +69,17 @@ discussions: []
 - 🚧 Security audit completo
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Obiettivi Strategici
+### 1. Completare le Funzionalità Core (Priorità Alta)
+### 2. Migliorare User Experience (Priorità Alta)
+### 3. Automazione e Intelligenza (Priorità Media)
+### 4. Scalabilità e Performance (Priorità Media)
+### 5. Qualità e Sicurezza (Priorità Alta)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## 📊 Stato Attuale Moduli
 
@@ -384,5 +399,13 @@ discussions: []
 **Prossima Revisione**: 2025-02-01  
 **Maintainer**: Development Team  
 **Status**: 🚧 In Progress (40% completato)
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

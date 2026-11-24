@@ -63,6 +63,10 @@ discussions: []
 - **Template management** avanzato con log e temi
 
 ## Stato Generale: ✅ COMPLETO
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 title: "models factory seeder analysis"
@@ -75,3 +79,8 @@ issues: []
 discussions: []
 *Ultimo aggiornamento: 2025-01-06*
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

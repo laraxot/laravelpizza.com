@@ -15,6 +15,10 @@ discussions: []
 > **Status**: 🔄 In Progress  
 > **Labels**: `testing`, `subtree`, `sync`, `multi-agent`
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "issue subtree sync test"
@@ -31,6 +35,13 @@ This issue tracks the testing of git subtree synchronization between the main re
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📋 Overview
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🎯 Test Objective
 
 Verify that changes made in module repositories sync correctly to the main repository and vice versa.

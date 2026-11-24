@@ -85,8 +85,8 @@ describe('UI remaining 100 — view e actions', function (): void {
         foreach ([
             (new Std('tpl'))->render(),
             (new Svg('tpl'))->render(),
-            (new Navbar())->render(),
-            (new WithSidebar())->render(),
+            (new Navbar)->render(),
+            (new WithSidebar)->render(),
         ] as $view) {
             Assert::assertInstanceOf(View::class, $view);
             Assert::assertSame('ui::empty', $view->name());
@@ -113,8 +113,11 @@ describe('UI remaining 100 — altri componenti', function (): void {
         File::deleteDirectory($tmp);
     });
 
+    /**
+     * @see Modules/UI/docs/contracts/get-user-data-action.md
+     */
     test('GetUserDataAction avatar da profile_photo_path', function (): void {
-        $user = new UiCoverageAuthUser();
+        $user = new UiCoverageAuthUser;
         $user->forceFill([
             'id' => 5,
             'name' => 'Path User',
@@ -125,7 +128,8 @@ describe('UI remaining 100 — altri componenti', function (): void {
         $data = app(GetUserDataAction::class)->execute();
         Assert::assertNotNull($data);
         Assert::assertSame('avatars/5.jpg', $data->avatar);
-        Auth::logout();
+        // forgetGuards, non logout(): logout() dispatcha l'evento Logout, i cui listener (Activity) scrivono su DB.
+        Auth::forgetGuards();
     });
 });
 
@@ -133,7 +137,7 @@ function uiRemainingSetProperty(object $target, string $name, mixed $value): voi
 {
     $ref = new \ReflectionClass($target);
 
-    while (false !== $ref) {
+    while ($ref !== false) {
         if ($ref->hasProperty($name)) {
             $prop = $ref->getProperty($name);
             $prop->setAccessible(true);
@@ -152,7 +156,7 @@ function uiRemainingGetProperty(object $target, string $name): mixed
 {
     $ref = new \ReflectionClass($target);
 
-    while (false !== $ref) {
+    while ($ref !== false) {
         if ($ref->hasProperty($name)) {
             $prop = $ref->getProperty($name);
             $prop->setAccessible(true);

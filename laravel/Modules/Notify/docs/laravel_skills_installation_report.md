@@ -141,6 +141,10 @@ To use installed skills, they must be activated in the AI guidelines. Check the 
 2. Test the installed laravel-specialist skill
 3. Explore built-in Boost skills
 4. Consider creating custom skills if needed
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -157,3 +161,8 @@ discussions: []
 **Successful Installations**: 1 skill  
 **Built-in Skills Available**: 14 skills  
 **Total Skills Available**: 15 skills
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

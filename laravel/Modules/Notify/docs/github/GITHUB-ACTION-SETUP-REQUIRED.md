@@ -15,6 +15,10 @@ discussions: []
 > **Status**: ⚠️ **REQUIRES MANUAL SETUP**  
 > **Priority**: HIGH
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "GITHUB ACTION SETUP REQUIRED"
@@ -33,6 +37,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## ❗ Action Status
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🔧 What You Need to Do (Manual Steps)
 
 The GitHub Action is **created and pushed**, but **WILL NOT WORK** until you configure the SSH key secret.

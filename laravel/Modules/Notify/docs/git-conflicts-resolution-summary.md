@@ -78,6 +78,10 @@ Tutti i file risolti rispettano:
 - [Architecture Documentation](./architecture.md)
 - [Email Templates](./email_templates.md)
 - [Notification Channels](./notification_channels_implementation.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 title: "git conflicts resolution summary"
@@ -89,3 +93,8 @@ qmd: "git conflicts resolution summary"
 issues: []
 discussions: []
 *Aggiornato automaticamente dopo risoluzione conflitti Git*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

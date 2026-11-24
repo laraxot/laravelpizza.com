@@ -8,10 +8,7 @@ module: UI
 tags: [adr, blocks, cms, dependencies, localization]
 related:
   - ../contracts/resolve-localized-block-data-action.md
-<<<<<<< HEAD
-=======
 qmd: "optional cms delegation for block data"
->>>>>>> laraxot/dev
 ---
 
 # ADR: delega opzionale a Cms per i dati dei blocchi

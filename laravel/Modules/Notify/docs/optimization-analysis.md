@@ -74,6 +74,10 @@ class NotificationTemplateCache
 - **Fase 2**: Bulk notification system
 - **Fase 3**: Template caching e optimization
 - **Fase 4**: Delivery tracking e analytics
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 title: "optimization analysis"
@@ -86,3 +90,8 @@ issues: []
 discussions: []
 *Stato: 🟡 Funzionale ma Necessita Reliability Enhancement*
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

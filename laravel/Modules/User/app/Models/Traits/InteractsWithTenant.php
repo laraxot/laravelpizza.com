@@ -8,8 +8,8 @@ use Filament\Facades\Filament;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Modules\User\Contracts\TenantContract;
-use Modules\User\Models\Scopes\TenantScope;
 use Modules\User\Infrastructure\Tenant\AuthenticatedTenantKey;
+use Modules\User\Models\Scopes\TenantScope;
 use Modules\Xot\Datas\XotData;
 
 /**
@@ -33,6 +33,7 @@ trait InteractsWithTenant
      * Relazione con il tenant a cui appartiene il modello.
      *
      * @return BelongsTo<Model&TenantContract, $this>
+     *
      * @see Modules/User/docs/architecture/architecture.md
      */
     public function tenant(): BelongsTo

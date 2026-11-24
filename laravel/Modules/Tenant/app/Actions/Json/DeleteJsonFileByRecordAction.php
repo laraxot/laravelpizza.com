@@ -20,6 +20,7 @@ use Webmozart\Assert\Assert;
  * `($keyName, $key)` che `UpdateJsonFileByRecordAction` usa per riscrivere la riga.
  *
  * @see docs/contracts/delete-json-file-by-record-action.md
+ *
  * @contract docs/contracts/delete-json-file-by-record-action.md
  */
 class DeleteJsonFileByRecordAction

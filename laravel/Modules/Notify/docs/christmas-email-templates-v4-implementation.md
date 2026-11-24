@@ -15,6 +15,10 @@ discussions: []
 **Versione**: v4.0 - Luxury, Winter Wonderland & Elephant Mascot
 **Status**: ✅ Completato
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "christmas email templates v4 implementation"
@@ -37,6 +41,14 @@ Implementazione di 3 nuovi template email natalizi professionali e festivi per S
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📋 Sommario Esecutivo
+### Template Creati
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🎨 Template Dettagliati
 
 ### 1. christmas-luxury.html

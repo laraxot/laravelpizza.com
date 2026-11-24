@@ -10,6 +10,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/view-path-action.md
+ *
  * @contract docs/contracts/view-path-action.md
  */
 class ViewPathAction

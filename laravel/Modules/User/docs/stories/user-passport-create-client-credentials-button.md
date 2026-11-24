@@ -22,19 +22,13 @@ related:
   - ../../laravel/Modules/Xot/app/Actions/ExecuteArtisanCommandAction.php
   - ../../laravel/Modules/Quaeris/app/Console/Commands/AssociatePassportClientToUser.php
   - ../../laravel/Modules/Quaeris/docs/stories/quaeris-bulk-invite-job-resilience.md
-<<<<<<< HEAD
   - ../../laravel/Modules/<nome progetto>/app/Console/Commands/AssociatePassportClientToUser.php
   - ../../laravel/Modules/<nome progetto>/docs/stories/<nome progetto>-bulk-invite-job-resilience.md
-=======
->>>>>>> laraxot/dev
 github:
   repository: https://github.com/laraxot/module_user_fila5
   issues: https://github.com/laraxot/module_user_fila5/issues
   discussions: https://github.com/laraxot/module_user_fila5/discussions
-<<<<<<< HEAD
-=======
 qmd: "user passport create client credentials button"
->>>>>>> laraxot/dev
 ---
 
 # STORY — Pulsante "Nuovo cliente OAuth" nella Passport Dashboard
@@ -44,10 +38,7 @@ qmd: "user passport create client credentials button"
 Emerso durante il ripristino del servizio invii automatici dopo il trasloco
 server (vedi
 [quaeris-bulk-invite-job-resilience.md](../../laravel/Modules/Quaeris/docs/stories/quaeris-bulk-invite-job-resilience.md)):
-<<<<<<< HEAD
 [<nome progetto>-bulk-invite-job-resilience.md](../../laravel/Modules/<nome progetto>/docs/stories/<nome progetto>-bulk-invite-job-resilience.md)):
-=======
->>>>>>> laraxot/dev
 l'amministratore di questo server **non ha accesso SSH**. Onboardare un
 nuovo cliente (es. un quinto cliente oltre ad ATS/Clara/Smat/Vivaservizi)
 richiede oggi 3 passi, di cui uno bloccato:
@@ -172,11 +163,8 @@ subito.
   uno snapshot di ottobre 2025) non ha la colonna `uuid`, aggiunta da
   migration successive (2026-04-28 modulo User, 2026-08-06 modulo
   Quaeris) mai applicate a quel DB. Il mount di una pagina Filament crea
-<<<<<<< HEAD
   `profiles` nel DB di test (`geek_<nome progetto>_backup_server_23_10_2025_test`,
   <nome progetto>) mai applicate a quel DB. Il mount di una pagina Filament crea
-=======
->>>>>>> laraxot/dev
   un `Profile` per l'utente autenticato e fallisce con `Unknown column
   'uuid' in field list`. Verificato che le migration dichiarano
   davvero la colonna — il DB di test è semplicemente indietro, non un
@@ -209,10 +197,7 @@ subito.
 - [Source: laravel/Modules/Xot/app/Actions/ExecuteArtisanCommandAction.php]
   whitelist esistente, perché non è la via giusta per questo caso
 - [Source: laravel/Modules/Quaeris/app/Console/Commands/AssociatePassportClientToUser.php]
-<<<<<<< HEAD
 - [Source: laravel/Modules/<nome progetto>/app/Console/Commands/AssociatePassportClientToUser.php]
-=======
->>>>>>> laraxot/dev
   passo 3 (associazione utente), già possibile via UI oggi
 
 ## Dev Agent Record
@@ -281,9 +266,6 @@ Repository del modulo, letto con `cd laravel/Modules/User && git remote -v`:
 |---|---|---|
 | Issue (modulo) | aperta | https://github.com/laraxot/module_user_fila5/issues/85 |
 | Issue (root, mirror) | aperta | https://github.com/laraxot/base_quaeris_fila5/issues/181 |
-<<<<<<< HEAD
 | Issue (root, mirror) | aperta | https://github.com/laraxot/base_<nome progetto>_fila5/issues/181 |
-=======
->>>>>>> laraxot/dev
 | Issue correlata (gestione manuale associazione client↔utente, 2026-09-15) | aperta | https://github.com/laraxot/module_user_fila5/issues/97 |
 | Issue correlata (bottone "Nuove credenziali" scomparso, cancellato da commit 9d2362d94, 2026-09-15) | aperta | https://github.com/laraxot/module_user_fila5/issues/98 |

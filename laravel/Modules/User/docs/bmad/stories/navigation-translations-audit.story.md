@@ -14,10 +14,7 @@ related:
   - ../../../../../docs/wiki/i18n/navigation-translations-inventory-2026-09-29.md
 issues: []
 discussions: []
-<<<<<<< HEAD
-=======
 qmd: "navigation translations audit story traduzioni user"
->>>>>>> laraxot/dev
 ---
 
 # Audit traduzioni `.navigation` — modulo User

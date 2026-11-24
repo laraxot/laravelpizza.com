@@ -15,6 +15,7 @@ use Spatie\QueueableAction\QueueableAction;
  * rendendoli immediatamente non validi.
  *
  * @see docs/contracts/revoke-client-action.md
+ *
  * @contract docs/contracts/revoke-client-action.md
  */
 class RevokeClientAction

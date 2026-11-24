@@ -19,6 +19,10 @@ From `.cursorrules`:
 - **Testing**: Enable test discovery, execution, coverage
 - **Security**: Enable vulnerability scanning, quality checks
 - **Performance**: Enable benchmarking, profiling
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -30,3 +34,8 @@ updated: 2026-09-26
 qmd: "cursor rules summary"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

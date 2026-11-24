@@ -313,6 +313,10 @@ Tema configurabile
 - [Package Discovery](https://laravel.com/docs/packages#package-discovery)
 - [Service Providers](https://laravel.com/docs/providers)
 - [Composer Merge Plugin](https://github.com/wikimedia/composer-merge-plugin)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -328,3 +332,8 @@ discussions: []
 **Concetto**: **"Il Tema è un Vestito"**  
 **Registrazione**: **Automatica (NON hardcoded)**  
 **Configurazione**: **Tramite composer.json**
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

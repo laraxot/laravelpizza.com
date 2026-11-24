@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Spatie Permissions"
 type: note
 qmd: "spatie permissions"
 ---
->>>>>>> laraxot/dev
 https://jaydeepamethiya.medium.com/spatie-roles-and-permissions-in-laravel-10-a-comprehensive-guide-536d099d40ae
 
 

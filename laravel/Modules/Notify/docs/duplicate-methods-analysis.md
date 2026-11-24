@@ -62,6 +62,10 @@ public function linkable(): void
 
 **Procedere con refactoring** - Alta confidenza e bassa complessità rendono questa ottimizzazione sicura.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "duplicate methods analysis"
@@ -110,6 +114,17 @@ public static function make(): self
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+### 2. Metodo: `make`
+#### 📊 Analisi Refactoring
+##### ✅ Vantaggi
+##### ⚠️ Rischi e Considerazioni
+##### 💡 Raccomandazione
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ### 3. Metodo: `notifiable`
 
 **Tipo Refactoring**: `Trait` | **Complessità**: 🟢 Low | **Confidenza**: ✅ 100%
@@ -681,7 +696,14 @@ public function execute(string $prompt): CompletionData
 
 ---
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## Legenda
@@ -706,4 +728,11 @@ Indica quanto è probabile che il refactoring sia vantaggioso:
 - **70-89%**: Raccomandato
 - **50-69%**: Valutare caso per caso
 - **< 50%**: Richiede analisi dettagliata
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

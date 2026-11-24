@@ -32,14 +32,20 @@ return [
         ],
     ],
     'logout' => [
+        'in_progress' => 'Cerrando sesión…',
         'goodbye' => [
             'message' => 'Hasta pronto',
         ],
     ],
     'password' => [
         'reset' => [
-            'title' => 'Restablecer contraseña',
+            'title' => 'Elige una nueva contraseña',
             'label' => 'Restablecer contraseña',
+            'subtitle' => 'Al menos 8 caracteres. Al guardarla entrarás directamente.',
+            'email' => 'Email',
+            'password' => 'Nueva contraseña',
+            'password_confirmation' => 'Repite la nueva contraseña',
+            'submit' => 'Guardar contraseña',
         ],
         'email' => [
             'label' => 'Dirección de correo electrónico',
@@ -68,6 +74,13 @@ return [
         'back_to_login' => [
             'label' => 'volver al inicio de sesión',
         ],
+        'request' => [
+            'title' => '¿Olvidaste tu contraseña?',
+            'subtitle' => 'Escribe el email de tu cuenta y te enviaremos un enlace para elegir una nueva.',
+            'email' => 'Email',
+            'submit' => 'Enviar el enlace',
+            'back_to_login' => 'Volver a iniciar sesión',
+        ],
     ],
     'sections' => [
         'verify' => [
@@ -81,9 +94,7 @@ return [
         'sign_out' => [
             'label' => 'cerrar sesión',
         ],
-        'resent' => [
-            'message' => 'Se ha enviado un nuevo enlace de verificación a tu dirección de correo electrónico.',
-        ],
+        'resent' => 'Te hemos enviado un nuevo enlace de confirmación.',
         'instructions' => [
             'message' => 'Antes de continuar, revisa tu correo electrónico para encontrar el enlace de verificación. Si no recibiste el correo,',
         ],

@@ -63,6 +63,9 @@ use function Safe\json_encode;
  *
  * @method static ModuleFactory factory($count = null, $state = [])
  *
+ * @see ../../docs/bmad/stories/phpstan-modules-zero-swarm-standing.story.md HasCommonScopes: mai su XotBaseModel
+ * @see ../../../Meetup/docs/contracts/event-published-scope.md
+ *
  * @mixin \Eloquent
  */
 final class Module extends BaseModel

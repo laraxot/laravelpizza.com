@@ -157,12 +157,26 @@ Split from [`laravel/gemini.md`](../../../../../gemini.md):
 - ← Back to [Project Root](../../)
 - ← Back to [Docs Index](../../docs/README.md)
 - ← Back to [AGENTS.md](../../../../AGENTS.md) (original)
+<<<<<<< HEAD
 - ← Back to [AGENTS.md](../../../../AGENTS.md) (original)
+=======
+<<<<<<< HEAD
+- ← Back to [AGENTS.md](../../../../AGENTS.md) (original)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - ← Back to [CLAUDE.md](../../../../docs/CLAUDE.md) (original)
 - ← Back to [gemini.md](../../../../laravel/gemini.md) (original)
 - ← Back to [Docs Index](../../README.md)
 - ← Back to [AGENTS.md](../../../../../AGENTS.md) (original)
+<<<<<<< HEAD
 - ← Back to [AGENTS.md](../../../../../AGENTS.md) (original)
+=======
+<<<<<<< HEAD
+- ← Back to [AGENTS.md](../../../../../AGENTS.md) (original)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - ← Back to [CLAUDE.md](../../claude.md) (original)
 - ← Back to [gemini.md](../../../../../gemini.md) (original)
 - ← Back to [qwen.md](../../../../qwen.md) (original)

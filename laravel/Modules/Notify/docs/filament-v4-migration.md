@@ -215,6 +215,10 @@ view:cache compila
 - [Filament v4 Upgrade Guide](https://filamentphp.com/docs/4.x/upgrade-guide)
 - [Filament v4 Actions Documentation](https://filamentphp.com/docs/4.x/actions/overview)
 - [Filament v4 Forms Documentation](https://filamentphp.com/docs/4.x/forms/getting-started)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -231,3 +235,8 @@ discussions: []
 **Files modificati**: 4
 **Errori risolti**: 2 (form.actions, form component)
 **Status**: ✅ Completo
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

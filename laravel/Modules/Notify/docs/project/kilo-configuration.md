@@ -369,6 +369,10 @@ kilo chat --model "google/gemini-2.5-pro"
 - [BMAD Integration](docs/project/bmad-gsd-ralph-integration.md)
 - [NotebookLM Integration](docs/project/notebooklm-integration.md)
 - [OpenViking Integration](docs/openviking-integration.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -383,3 +387,8 @@ discussions: []
 **Last Updated**: 2026-03-30  
 **Configuration Version**: 1.0.0  
 **Status**: ✅ Active
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

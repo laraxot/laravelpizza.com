@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Qrcode"
 type: note
 qmd: "qrcode"
 ---
->>>>>>> laraxot/dev
 https://github.com/tecnickcom/TCPDF
 
 simplesoftwareio/simple-qrcode  

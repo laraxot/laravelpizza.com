@@ -143,7 +143,7 @@ final class BuildSitemapAction
     private function lastModified(Page $page): ?string
     {
         $updatedAt = $page->getAttribute('updated_at');
-        if ($updatedAt instanceof \DateTimeInterface) {
+        if ($updatedAt instanceof DateTimeInterface) {
             return $updatedAt->format('Y-m-d');
         }
 

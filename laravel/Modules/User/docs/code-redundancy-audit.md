@@ -16,10 +16,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< HEAD
-=======
 qmd: "code redundancy audit user"
->>>>>>> laraxot/dev
 ---
 
 # Code redundancy audit — User

@@ -12,6 +12,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/resolve-tenant-config-value-action.md
+ *
  * @contract docs/contracts/resolve-tenant-config-value-action.md
  */
 class ResolveTenantConfigValueAction

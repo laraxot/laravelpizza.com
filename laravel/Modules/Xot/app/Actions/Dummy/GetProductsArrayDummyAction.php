@@ -12,6 +12,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/get-products-array-dummy-action.md
+ *
  * @contract docs/contracts/get-products-array-dummy-action.md
  */
 class GetProductsArrayDummyAction

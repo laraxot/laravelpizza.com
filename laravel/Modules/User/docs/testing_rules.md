@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Testing Rules & Strategy"
 type: rule
 qmd: "testing rules strategy"
 ---
->>>>>>> laraxot/dev
 # Testing Rules & Strategy
 
 ## Strict Guidelines (Super Mucca / Laraxot)

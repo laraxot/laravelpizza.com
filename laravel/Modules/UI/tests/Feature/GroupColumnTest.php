@@ -137,7 +137,7 @@ describe('GroupColumn view rendering', function (): void {
         $html = view($viewName, [
             'getFields' => fn () => $fields,
             'getRecord' => fn () => $record,
-            'attributes' => new ComponentAttributeBag(),
+            'attributes' => new ComponentAttributeBag,
             'getExtraAttributes' => fn () => [],
             'isInline' => fn () => false,
         ])->render();
@@ -172,7 +172,7 @@ describe('GroupColumn view rendering', function (): void {
         $html = view($viewName, [
             'getFields' => fn () => $fields,
             'getRecord' => fn () => $record,
-            'attributes' => new ComponentAttributeBag(),
+            'attributes' => new ComponentAttributeBag,
             'getExtraAttributes' => fn () => [],
             'isInline' => fn () => false,
         ])->render();
@@ -193,7 +193,7 @@ describe('GroupColumn view rendering', function (): void {
 
         // The view logic: skip if empty($value) && $value !== 0 && $value !== '0'
         $shouldSkip = static function (mixed $value): bool {
-            return empty($value) && 0 !== $value && '0' !== $value;
+            return empty($value) && $value !== 0 && $value !== '0';
         };
 
         Assert::assertTrue($shouldSkip($record->empty_field));

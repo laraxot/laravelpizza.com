@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Effetcts"
 type: note
 qmd: "effetcts"
 ---
->>>>>>> laraxot/dev
 https://mridul2820.github.io/css-js/
 
 https://github.com/Mridul2820/css-js

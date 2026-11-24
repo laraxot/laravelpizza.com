@@ -15,6 +15,10 @@ discussions: []
 **Durata**: ~15 minuti  
 **Status**: ✅ COMPLETATO CON SUCCESSO
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "refactoring basemodel report"
@@ -52,6 +56,15 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📊 RISULTATI
+### Moduli Refactorati
+### Metriche Globali
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🔧 MODIFICHE IMPLEMENTATE
 
 ### 1. Tenant Module (CRITICO)

@@ -4,7 +4,19 @@ type: index
 tags: [notify, docs]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "notify documentazione .obsidian readme obsidian setup guide index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -190,5 +202,21 @@ LIMIT 10
 ## Related Documentation
 
 - [LLM Wiki Integration Guide](../wiki/README.md)
+<<<<<<< HEAD
 - [Agent Instructions](../wiki/agents.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Agent Instructions](../wiki/AGENTS.md)
+=======
+<<<<<<< HEAD
+- [Agent Instructions](../wiki/agents.md)
+=======
+- [Agent Instructions](../wiki/AGENTS.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [Agent Instructions](../wiki/agents.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Wiki Overview](../wiki/overview.md)

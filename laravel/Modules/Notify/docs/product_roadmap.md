@@ -17,6 +17,10 @@ discussions: []
 **Owner:** Product Team  
 **Status:** In Development
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "PRODUCT ROADMAP"
@@ -41,6 +45,14 @@ To build a **unified notification system** that delivers the right message to th
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Vision Statement
+### Vision Pillars
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Quarterly Timeline (2026)
 
 ### Q1 2026 - Core Notifications

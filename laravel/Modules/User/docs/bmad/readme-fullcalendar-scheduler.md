@@ -1,10 +1,7 @@
 ---
 title: readme-fullcalendar-scheduler
 module: User
-<<<<<<< HEAD
-=======
 qmd: "fullcalendar scheduler readmefullcalendarscheduler"
->>>>>>> laraxot/dev
 ---
 
 # FullCalendar Scheduler Documentation - README

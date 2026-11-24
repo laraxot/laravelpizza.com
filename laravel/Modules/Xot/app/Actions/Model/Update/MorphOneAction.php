@@ -15,7 +15,9 @@ use Webmozart\Assert\Assert;
  * Class MorphOneAction.
  *
  * Handles morphOne relationship updates and creation with strict typing.
+ *
  * @see docs/contracts/update-morph-one-action.md
+ *
  * @contract docs/contracts/update-morph-one-action.md
  */
 final class MorphOneAction

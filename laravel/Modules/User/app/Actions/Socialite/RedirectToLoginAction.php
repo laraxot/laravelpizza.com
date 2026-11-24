@@ -16,6 +16,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/redirect-to-login-action.md
+ *
  * @contract docs/contracts/redirect-to-login-action.md
  */
 class RedirectToLoginAction

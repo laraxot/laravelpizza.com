@@ -163,6 +163,10 @@ The `transClass()` method automatically resolves to `notify::channel_enum.{value
 - Consider creating a base interface for all notification-related enums
 - Document the Smart Enum pattern for team reference
 - Add translations for other languages (en, de) if needed
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -175,3 +179,8 @@ qmd: "channel enum implementation complete"
 issues: []
 discussions: []
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

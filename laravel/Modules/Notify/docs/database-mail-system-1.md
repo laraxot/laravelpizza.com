@@ -397,6 +397,10 @@ php artisan notify:mail-template:test
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
 - [Spatie Packages](https://spatie.be/open-source)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
@@ -409,6 +413,11 @@ php artisan notify:mail-template:test
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
 - [Spatie Packages](https://spatie.be/open-source)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
 
@@ -418,30 +427,10 @@ php artisan notify:mail-template:test
 
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
-- [Spatie Packages](https://spatie.be/open-source)
-
-- [Laravel Mail](https://laravel.com/docs/mail)
-- [Filament Forms](https://filamentphp.com/docs/forms)
-- [Spatie Packages](https://spatie.be/open-source)
-
-- [Laravel Mail](https://laravel.com/docs/mail)
-- [Filament Forms](https://filamentphp.com/docs/forms)
-- [Spatie Packages](https://spatie.be/open-source)
-
-- [Laravel Mail](https://laravel.com/docs/mail)
-- [Filament Forms](https://filamentphp.com/docs/forms)
-- [Spatie Packages](https://spatie.be/open-source)
-
-- [Laravel Mail](https://laravel.com/docs/mail)
-- [Filament Forms](https://filamentphp.com/docs/forms)
-- [Spatie Packages](https://spatie.be/open-source)
-
-- [Laravel Mail](https://laravel.com/docs/mail)
-- [Filament Forms](https://filamentphp.com/docs/forms)
-- [Spatie Packages](https://spatie.be/open-source)
-
-- [Laravel Mail](https://laravel.com/docs/mail)
-- [Filament Forms](https://filamentphp.com/docs/forms)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 - [Spatie Packages](https://spatie.be/open-source)
 
 - [Laravel Mail](https://laravel.com/docs/mail)
@@ -522,7 +511,101 @@ php artisan notify:mail-template:test
 
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
+- [Spatie Packages](https://spatie.be/open-source)
 
+- [Laravel Mail](https://laravel.com/docs/mail)
+- [Filament Forms](https://filamentphp.com/docs/forms)
+- [Spatie Packages](https://spatie.be/open-source)
+
+- [Laravel Mail](https://laravel.com/docs/mail)
+- [Filament Forms](https://filamentphp.com/docs/forms)
+- [Spatie Packages](https://spatie.be/open-source)
+
+- [Laravel Mail](https://laravel.com/docs/mail)
+- [Filament Forms](https://filamentphp.com/docs/forms)
+- [Spatie Packages](https://spatie.be/open-source)
+
+- [Laravel Mail](https://laravel.com/docs/mail)
+- [Filament Forms](https://filamentphp.com/docs/forms)
+- [Spatie Packages](https://spatie.be/open-source)
+
+- [Laravel Mail](https://laravel.com/docs/mail)
+- [Filament Forms](https://filamentphp.com/docs/forms)
+- [Spatie Packages](https://spatie.be/open-source)
+
+- [Laravel Mail](https://laravel.com/docs/mail)
+- [Filament Forms](https://filamentphp.com/docs/forms)
+
+- [Spatie Packages](https://spatie.be/open-source)
+
+- [Laravel Mail](https://laravel.com/docs/mail)
+- [Filament Forms](https://filamentphp.com/docs/forms)
+- [Spatie Packages](https://spatie.be/open-source)
+
+- [Laravel Mail](https://laravel.com/docs/mail)
+- [Filament Forms](https://filamentphp.com/docs/forms)
+- [Spatie Packages](https://spatie.be/open-source)
+
+- [Laravel Mail](https://laravel.com/docs/mail)
+- [Filament Forms](https://filamentphp.com/docs/forms)
+- [Spatie Packages](https://spatie.be/open-source)
+
+- [Laravel Mail](https://laravel.com/docs/mail)
+- [Filament Forms](https://filamentphp.com/docs/forms)
+- [Spatie Packages](https://spatie.be/open-source)
+
+- [Laravel Mail](https://laravel.com/docs/mail)
+- [Filament Forms](https://filamentphp.com/docs/forms)
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> laraxot/dev
+- [Spatie Packages](https://spatie.be/open-source)
+
+- [Laravel Mail](https://laravel.com/docs/mail)
+- [Filament Forms](https://filamentphp.com/docs/forms)
+- [Spatie Packages](https://spatie.be/open-source)
+
+- [Laravel Mail](https://laravel.com/project_docs/mail)
+- [Filament Forms](https://filamentphp.com/project_docs/forms)
+
+- [Laravel Mail](https://laravel.com/docs/mail)
+- [Filament Forms](https://filamentphp.com/docs/forms)
+- [Spatie Packages](https://spatie.be/open-source)
+
+<<<<<<< HEAD
+- [Laravel Mail](https://laravel.com/docs/mail)
+- [Filament Forms](https://filamentphp.com/docs/forms)
+- [Spatie Packages](https://spatie.be/open-source)
+
+- [Laravel Mail](https://laravel.com/docs/mail)
+- [Filament Forms](https://filamentphp.com/docs/forms)
+- [Spatie Packages](https://spatie.be/open-source)
+
+- [Laravel Mail](https://laravel.com/docs/mail)
+- [Filament Forms](https://filamentphp.com/docs/forms)
+- [Spatie Packages](https://spatie.be/open-source)
+
+- [Laravel Mail](https://laravel.com/docs/mail)
+- [Filament Forms](https://filamentphp.com/docs/forms)
+- [Spatie Packages](https://spatie.be/open-source)
+
+- [Laravel Mail](https://laravel.com/docs/mail)
+- [Filament Forms](https://filamentphp.com/docs/forms)
+>>>>>>> laraxot/dev
+- [Spatie Packages](https://spatie.be/open-source)
+
+- [Laravel Mail](https://laravel.com/docs/mail)
+- [Filament Forms](https://filamentphp.com/docs/forms)
+- [Spatie Packages](https://spatie.be/open-source)
+
+- [Laravel Mail](https://laravel.com/project_docs/mail)
+- [Filament Forms](https://filamentphp.com/project_docs/forms)
+
+<<<<<<< HEAD
+- [Laravel Mail](https://laravel.com/docs/mail)
+- [Filament Forms](https://filamentphp.com/docs/forms)
 - [Spatie Packages](https://spatie.be/open-source)
 
 - [Laravel Mail](https://laravel.com/docs/mail)
@@ -552,43 +635,20 @@ php artisan notify:mail-template:test
 - [Laravel Mail](https://laravel.com/project_docs/mail)
 - [Filament Forms](https://filamentphp.com/project_docs/forms)
 
-- [Laravel Mail](https://laravel.com/docs/mail)
-- [Filament Forms](https://filamentphp.com/docs/forms)
-- [Spatie Packages](https://spatie.be/open-source)
-
-- [Laravel Mail](https://laravel.com/docs/mail)
-- [Filament Forms](https://filamentphp.com/docs/forms)
-- [Spatie Packages](https://spatie.be/open-source)
-
-- [Laravel Mail](https://laravel.com/docs/mail)
-- [Filament Forms](https://filamentphp.com/docs/forms)
-- [Spatie Packages](https://spatie.be/open-source)
-
-- [Laravel Mail](https://laravel.com/docs/mail)
-- [Filament Forms](https://filamentphp.com/docs/forms)
-- [Spatie Packages](https://spatie.be/open-source)
-
-- [Laravel Mail](https://laravel.com/docs/mail)
-- [Filament Forms](https://filamentphp.com/docs/forms)
-- [Spatie Packages](https://spatie.be/open-source)
-
-- [Laravel Mail](https://laravel.com/docs/mail)
-- [Filament Forms](https://filamentphp.com/docs/forms)
-- [Spatie Packages](https://spatie.be/open-source)
-
-- [Laravel Mail](https://laravel.com/docs/mail)
-- [Filament Forms](https://filamentphp.com/docs/forms)
-- [Spatie Packages](https://spatie.be/open-source)
-
-- [Laravel Mail](https://laravel.com/project_docs/mail)
-- [Filament Forms](https://filamentphp.com/project_docs/forms)
-
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Laravel Mail](https://laravel.com/project_docs/mail)
 - [Filament Forms](https://filamentphp.com/project_docs/forms)
 
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
 - [Spatie Packages](https://spatie.be/open-source)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
@@ -749,3 +809,8 @@ php artisan notify:mail-template:test
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
 - [Spatie Packages](https://spatie.be/open-source)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

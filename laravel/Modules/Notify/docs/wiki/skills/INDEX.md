@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_c4T9f5
+>>>>>>> laraxot/dev
 ---
 title: "Notify Module - skills Index"
 type: index
@@ -17,6 +24,14 @@ related:
   - ../../integrations/readme.md
   - ../../templates/readme.md
 ---
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> .merge_file_cg8yIq
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 # Notify Module - skills Index
 
 ## Purpose

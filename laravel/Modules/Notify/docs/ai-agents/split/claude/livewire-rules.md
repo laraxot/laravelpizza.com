@@ -37,7 +37,14 @@ discussions: []
     public function updatedSearch() { $this->resetPage(); }
 </code-snippet>
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Testing Livewire
 
 <code-snippet name="Example Livewire component test" lang="php">
@@ -49,12 +56,23 @@ discussions: []
         ->assertStatus(200);
 </code-snippet>
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
     <code-snippet name="Testing a Livewire component exists within a page" lang="php">
         $this->get('/posts/create')
         ->assertSeeLivewire(CreatePost::class);
     </code-snippet>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 === livewire/v3 rules ===
 
@@ -77,3 +95,11 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md) — Original source
 
+<<<<<<< HEAD
+=======
+=======
+=== livewire/v3 rules ===
+
+## Cross-References
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

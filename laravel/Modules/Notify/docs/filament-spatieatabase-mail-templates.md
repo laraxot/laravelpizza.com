@@ -15,6 +15,10 @@ discussions: []
 **Modulo**: Notify  
 **Status**: 📝 **ANALISI COMPLETATA**
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "filament spatieatabase mail templates"
@@ -31,6 +35,13 @@ Analisi del repository `filament-spatie-laravel-database-mail-templates` per ide
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📊 Executive Summary
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🔍 Caratteristiche del Repository Analizzato
 
 ### Architettura Plugin Filament

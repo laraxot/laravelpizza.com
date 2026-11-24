@@ -13,6 +13,7 @@ use Webmozart\Assert\Assert;
  * RestoreActivityAction.
  *
  * @see docs/contracts/restore-activity-action.md
+ *
  * @contract docs/contracts/restore-activity-action.md
  */
 class RestoreActivityAction

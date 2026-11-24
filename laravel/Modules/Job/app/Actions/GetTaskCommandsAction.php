@@ -12,6 +12,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/get-task-commands-action.md
+ *
  * @contract docs/contracts/get-task-commands-action.md
  */
 class GetTaskCommandsAction

@@ -11,6 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/analyze-socialite-email-domain-action.md
+ *
  * @contract docs/contracts/analyze-socialite-email-domain-action.md
  */
 final class AnalyzeSocialiteEmailDomainAction

@@ -183,8 +183,16 @@ Project Root/
 **For Developers**:
 - Read: laravel/Themes/Sixteen/docs/index.md
 - Reference: bashscripts/docs/index.md (for tools)
+<<<<<<< HEAD
 - Read: laravel/Themes/Sixteen/docs/index.md
 - Reference: bashscripts/docs/index.md (for tools)
+=======
+<<<<<<< HEAD
+- Read: laravel/Themes/Sixteen/docs/index.md
+- Reference: bashscripts/docs/index.md (for tools)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - Analyze: pages/<page-name>/DETAILED-ANALYSIS.md (per page)
 
 **For DevOps/CI-CD**:

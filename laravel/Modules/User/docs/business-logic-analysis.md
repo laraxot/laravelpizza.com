@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "User Module - Business Logic Analysis"
 type: analysis
 qmd: "business logic analysis user"
 ---
->>>>>>> laraxot/dev
 # User Module - Business Logic Analysis
 
 ## Overview

@@ -12,6 +12,8 @@ qmd: "Xot foundation module documentation index"
 - [README](README.md) — identità e aree della documentazione;
 - [contracts/xotbase-classes.md](contracts/xotbase-classes.md) — **cosa garantiscono le classi `XotBase*` a chi le
   estende**: il contratto che rende prevedibile ogni modifica a questo modulo;
+- [filament/record-anchor-return-to.md](filament/record-anchor-return-to.md) — tornare alla riga giusta dopo Crea/Modifica
+  e perche' `return_to` e' validato contro l'open redirect (`RecordAnchor`);
 - [architecture/](architecture/) — architettura fondazionale;
 - [bmad/](bmad/) — decisioni e storie;
 - [wiki/](wiki/) — regole operative;

@@ -14,6 +14,10 @@ discussions: []
 ## Obiettivo
 Consentire la gestione runtime (CRUD) dei template email direttamente dal backend Filament, con fallback su file statici. Garantire robustezza, versioning, localizzazione e coerenza con le regole <nome progetto>.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "crud template email filament"
@@ -41,6 +45,12 @@ Schema::create('email_templates', function (Blueprint $table) {
 ```
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 1. Struttura Database (Esempio Migration)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## 2. Model Eloquent
 ```php

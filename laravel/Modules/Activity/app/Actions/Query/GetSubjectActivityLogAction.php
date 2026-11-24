@@ -11,6 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Get activity log entries for a subject identified by class and id.
  *
  * @see docs/contracts/get-subject-activity-log-action.md
+ *
  * @contract docs/contracts/get-subject-activity-log-action.md
  */
 class GetSubjectActivityLogAction

@@ -312,6 +312,10 @@ For better performance with many queries:
 2. **Environment-specific exclusions**: Always check environment before disabling security features
 3. **Package auto-discovery**: Modern Laravel packages auto-register, but you still need to check configuration
 4. **Documentation is key**: Always document why certain exclusions exist (future maintainers will thank you)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -326,3 +330,8 @@ discussions: []
 **Last Updated**: 2026-04-01  
 **Author**: Qwen Code AI Assistant  
 **Status**: ✅ Resolved
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

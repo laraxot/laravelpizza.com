@@ -41,6 +41,10 @@ discussions: []
 
 **Conformità Totale**: 67%
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "sessione analisi homepage"
@@ -70,6 +74,12 @@ discussions: []
 - footer_bootstrap_italia.png
 
 ---
+<<<<<<< HEAD
+=======
+=======
+#### 2. Screenshot Analysis
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 #### 3. Fix Plan
 **File**: `docs/screenshots/homepage/fix_plan.md`

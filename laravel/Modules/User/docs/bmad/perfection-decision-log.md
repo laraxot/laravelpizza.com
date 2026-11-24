@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-title: "Decision log — Perfezione assoluta del modulo User"
-
->>>>>>> laraxot/dev
 title: "Decision log: Perfezione assoluta del modulo User"
 type: decision-log
 module: User
@@ -15,10 +10,7 @@ related:
   - ./perfection-epics.md
   - ./perfection-brainstorming.md
   - ./decision-log.md
-<<<<<<< HEAD
-=======
 qmd: "perfection decision log perfezione assoluta user"
->>>>>>> laraxot/dev
 ---
 
 # Decision log: audit "perfezione assoluta" — 2026-09-22
@@ -168,11 +160,6 @@ brainstorming): non e' un gap di documentazione, e' una scelta di dove investire
 con una query read-only reale su questa installazione (Ptv): 482/482 righe hanno
 `model_type='user'` corretto, zero righe stantie. Il debito riguardava il tenant
 Quaeris, non questo. Nessuna azione necessaria su Ptv per questo punto specifico.
-<<<<<<< HEAD
-`model_has_role.model_type='Modules\<nome progetto>\Models\User'`) e' stato riverificato
-<nome progetto>, non questo. Nessuna azione necessaria su Ptv per questo punto specifico.
-=======
->>>>>>> laraxot/dev
 
 **Rationale:** modulo condiviso fra progetti (Sigma/Ptv/Fila5/Quaeris) — un data
 

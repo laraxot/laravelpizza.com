@@ -8,10 +8,7 @@ tags: [migrato-da-txt, ui]
 converted_from: blocks.txt
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< HEAD
-=======
 qmd: "blocks risorse esterne"
->>>>>>> laraxot/dev
 ---
 
 # Blocks — risorse esterne

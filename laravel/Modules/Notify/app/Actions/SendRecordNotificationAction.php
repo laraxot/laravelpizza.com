@@ -10,10 +10,21 @@ use Modules\Notify\Enums\ChannelEnum;
 use Modules\Notify\Notifications\RecordNotification;
 use Spatie\QueueableAction\QueueableAction;
 
+<<<<<<< HEAD
+/**
+ * @see docs/contracts/send-record-notification-action.md
+ *
+ * @contract docs/contracts/send-record-notification-action.md
+ */
+=======
+<<<<<<< HEAD
+=======
 /**
  * @see docs/contracts/send-record-notification-action.md
  * @contract docs/contracts/send-record-notification-action.md
  */
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 class SendRecordNotificationAction
 {
     use QueueableAction;

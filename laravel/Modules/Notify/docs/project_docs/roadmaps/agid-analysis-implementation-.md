@@ -1,5 +1,13 @@
 ---
+<<<<<<< HEAD
 title: "agid analysis implementation 2025 10 02"
+=======
+<<<<<<< HEAD
+title: "Agid Analysis Implementation"
+=======
+title: "agid analysis implementation 2025 10 02"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 type: note
 tags: [documentation]
 created: 2026-09-26
@@ -16,6 +24,10 @@ discussions: []
 **Status**: ✅ **ANALYSIS COMPLETE + COMPONENTS IMPLEMENTED**  
 **User Request**: *"studia a fondo design-comuni-pagine-statiche, documenta tutto, implementa le cose mancanti"*
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "AGID ANALYSIS IMPLEMENTATION 2025 10 02"
@@ -44,6 +56,14 @@ Comprehensive analysis of AGID (Agenzia per l'Italia Digitale) design system for
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📋 Executive Summary
+### Deliverables
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🔍 Analysis Performed
 
 ### 1. design-comuni-pagine-statiche Repository Study

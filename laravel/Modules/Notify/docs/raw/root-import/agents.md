@@ -74,6 +74,10 @@ docs/
 - **Query**: Chiedi → consulta wiki → rispondi con citazioni
 - **Lint**: Verifica consistenza e cross-references
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "agents"
@@ -96,6 +100,12 @@ discussions: []
 - [Task: nfr-assess](./.agents/docs/main-rules/task-nfr-assess.md)
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## Reusable Tasks
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 **See also:**
 - [CLAUDE.md](./claude.md)
 - [qwen.md](./qwen.md)
@@ -103,7 +113,14 @@ discussions: []
 
 *Ultimo aggiornamento: Aprile 2026*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 <claude-mem-context>
 # Memory Context
 

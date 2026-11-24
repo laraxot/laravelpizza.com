@@ -222,6 +222,10 @@ protected ?string $connection = 'user'; // Stessa connessione del modello
 - [PHPStan Best Practices](../phpstan/best-practices.md)
 - [Troubleshooting Migrations](../../troubleshooting/errors/migration-errors.md)
 - [Architecture Standards](../../architecture/standards/)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -235,3 +239,8 @@ issues: []
 discussions: []
 *Ultimo aggiornamento: Agosto 2025*
 *Fonte: laravel/Modules/Xot/docs/MIGRATION_STANDARDS.md* 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

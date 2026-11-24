@@ -11,6 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/delete-user-action.md
+ *
  * @contract docs/contracts/delete-user-action.md
  */
 class DeleteUserAction

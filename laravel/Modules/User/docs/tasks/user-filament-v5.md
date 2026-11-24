@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Task: User Filament v5 Alignment (Clusters)"
 type: note
 qmd: "user filament v5 task alignment clusters"
 ---
->>>>>>> laraxot/dev
 # Task: User Filament v5 Alignment (Clusters)
 
 ## 📋 Obiettivo

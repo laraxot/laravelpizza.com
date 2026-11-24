@@ -15,6 +15,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Questa action crea un nuovo client OAuth2 con le configurazioni specificate.
  *
  * @see docs/contracts/create-client-action.md
+ *
  * @contract docs/contracts/create-client-action.md
  */
 class CreateClientAction

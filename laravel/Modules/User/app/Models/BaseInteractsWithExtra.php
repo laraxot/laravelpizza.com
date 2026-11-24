@@ -9,6 +9,4 @@ use Modules\Xot\Models\InteractsWithExtra as XotInteractsWithExtra;
 /**
  * Alias User verso lo SSoT Xot (HasExtraTrait).
  */
-abstract class BaseInteractsWithExtra extends XotInteractsWithExtra
-{
-}
+abstract class BaseInteractsWithExtra extends XotInteractsWithExtra {}

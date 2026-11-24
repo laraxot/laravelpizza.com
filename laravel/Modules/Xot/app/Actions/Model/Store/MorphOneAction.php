@@ -14,6 +14,7 @@ use function Safe\json_decode;
 
 /**
  * @see docs/contracts/store-morph-one-action.md
+ *
  * @contract docs/contracts/store-morph-one-action.md
  */
 class MorphOneAction

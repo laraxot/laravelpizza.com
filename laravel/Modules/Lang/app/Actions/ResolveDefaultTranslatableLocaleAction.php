@@ -12,6 +12,7 @@ use Spatie\QueueableAction\QueueableAction;
  * `$fallback` (ogni chiamante aveva il suo: `app.locale` per le Resource, `it` per il selettore).
  *
  * @see docs/contracts/resolve-default-translatable-locale-action.md
+ *
  * @contract docs/contracts/resolve-default-translatable-locale-action.md
  */
 class ResolveDefaultTranslatableLocaleAction

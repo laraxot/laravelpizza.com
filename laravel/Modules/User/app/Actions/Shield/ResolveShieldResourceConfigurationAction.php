@@ -16,6 +16,7 @@ use Spatie\QueueableAction\QueueableAction;
  * isResourceNavigationGroupEnabled, isResourceGloballySearchable
  *
  * @see docs/contracts/resolve-shield-resource-configuration-action.md
+ *
  * @contract docs/contracts/resolve-shield-resource-configuration-action.md
  */
 class ResolveShieldResourceConfigurationAction

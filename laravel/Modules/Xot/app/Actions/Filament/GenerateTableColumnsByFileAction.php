@@ -21,6 +21,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/generate-table-columns-by-file-action.md
+ *
  * @contract docs/contracts/generate-table-columns-by-file-action.md
  */
 class GenerateTableColumnsByFileAction

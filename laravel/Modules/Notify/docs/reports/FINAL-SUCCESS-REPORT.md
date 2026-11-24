@@ -3,7 +3,19 @@ title: "FINAL SUCCESS REPORT"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "FINAL SUCCESS REPORT"
 issues: []
 discussions: []
@@ -151,7 +163,20 @@ test -f bashscripts/git/subtrees/sync_remote_repo.sh || { echo "sync_remote_repo
 1. **QUANDO aggiorni .github/ → DEVI sincronizzare bashscripts/ai/.github/**
    - bashscripts/ è nel .gitignore
    - Copia manuale required
+<<<<<<< HEAD
    - documenta in sync_log.md
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+   - Documenta in SYNC_LOG.md
+
+=======
+   - documenta in sync_log.md
+>>>>>>> laraxot/dev
+=======
+   - documenta in sync_log.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 2. **MAI dire "task completo" senza**:
    - ✅ Code committed
    - ✅ Pushed to GitHub
@@ -174,9 +199,27 @@ test -f bashscripts/git/subtrees/sync_remote_repo.sh || { echo "sync_remote_repo
 - [Actions Tab](https://github.com/laraxot/base_fixcity_fila5/actions)
 
 ### Documentation
+<<<<<<< HEAD
 - [Bashscripts Gitignore Workaround](docs/bashscripts_gitignore_workaround.md)
 - [Multi-Agent Collaboration Guide](docs/multi_agent_collaboration_guide.md)
 - [GitHub Sync Rule](docs/github_sync_rule.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Bashscripts Gitignore Workaround](docs/BASHSCRIPTS_GITIGNORE_WORKAROUND.md)
+- [Multi-Agent Collaboration Guide](docs/MULTI_AGENT_COLLABORATION_GUIDE.md)
+- [GitHub Sync Rule](docs/GITHUB_SYNC_RULE.md)
+=======
+- [Bashscripts Gitignore Workaround](docs/bashscripts_gitignore_workaround.md)
+- [Multi-Agent Collaboration Guide](docs/multi_agent_collaboration_guide.md)
+- [GitHub Sync Rule](docs/github_sync_rule.md)
+>>>>>>> laraxot/dev
+=======
+- [Bashscripts Gitignore Workaround](docs/bashscripts_gitignore_workaround.md)
+- [Multi-Agent Collaboration Guide](docs/multi_agent_collaboration_guide.md)
+- [GitHub Sync Rule](docs/github_sync_rule.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Bashscripts Gitignore Workaround](../bashscripts_gitignore_workaround.md)
 - [Multi-Agent Collaboration Guide](../multi_agent_collaboration_guide.md)
 - [GitHub Sync Rule](../github_sync_rule.md)

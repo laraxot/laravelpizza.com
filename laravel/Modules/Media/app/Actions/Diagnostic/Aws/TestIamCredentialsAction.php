@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/test-iam-credentials-action.md
+ *
  * @contract docs/contracts/test-iam-credentials-action.md
  */
 class TestIamCredentialsAction

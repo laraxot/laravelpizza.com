@@ -13,6 +13,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/generate-model-by-model-class.md
+ *
  * @contract docs/contracts/generate-model-by-model-class.md
  */
 class GenerateModelByModelClass

@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Api"
 type: reference
 qmd: "ui api"
 module: UI
 ---
->>>>>>> laraxot/dev
 -------------------------------------------------------------------------------------------------
 Render HTTP JSON Responses for API-based Projects in Laravel
 https://codebrisk.com/blog/render-http-json-responses-for-api-based-projects-in-laravel

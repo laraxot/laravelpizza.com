@@ -265,7 +265,14 @@ This document provides an index of all module roadmaps in the Laraxot ecosystem.
 - [Laraxot Architecture Rules](./laravel/Modules/Xot/docs/laraxot-architecture-rules.md)
 - [Project Roadmap](./project_roadmap.md)
 - [AGENTS.md](./agents.md)
+<<<<<<< HEAD
 - [AGENTS.md](./agents.md)
+=======
+<<<<<<< HEAD
+- [AGENTS.md](./agents.md)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Getting Started](./quick_start.md)
 
 ## 🤝 Contributing
@@ -285,6 +292,10 @@ For questions about module roadmaps:
 - **Issues**: [GitHub Issues](https://github.com/laraxot/laraxot/issues)
 - **Discord**: [Laraxot Discord](https://discord.gg/laraxot)
 - **Documentation**: [Full Documentation](./)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -297,3 +308,8 @@ qmd: "module roadmaps index"
 issues: []
 discussions: []
 **Maintainer**: Laraxot Team
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

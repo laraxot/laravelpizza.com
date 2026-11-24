@@ -200,8 +200,5 @@ Activity
 # Regole portate dal remoto laraxot/dev (sync del 24/11), unite alla base senza perdere nulla
 graphify-out
 Activity/
-<<<<<<< .merge_file_9aqn5x
 tests/coverage-*.*
 tests/graphify-out/
-=======
->>>>>>> .merge_file_y3N6lF

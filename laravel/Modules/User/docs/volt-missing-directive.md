@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Errore VoltDirectiveMissingException"
 type: note
 qmd: "volt missing directive errore voltdirectivemissingexception"
 ---
->>>>>>> laraxot/dev
 # Errore VoltDirectiveMissingException
 
 ## Descrizione

@@ -185,6 +185,10 @@ Prima di modificare la configurazione SMS, verificare che:
 - [Struttura Standardizzata della Configurazione SMS](./standardized_sms_config_structure.md)
 - [Configurazione Netfun](./netfun_config_requirements.md)
 - [Laravel Configuration Best Practices](https://laravel.com/docs/configuration)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -197,3 +201,8 @@ qmd: "sms global vs specific params"
 issues: []
 discussions: []
 *Ultimo aggiornamento: [DATE]*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

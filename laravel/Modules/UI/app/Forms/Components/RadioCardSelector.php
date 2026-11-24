@@ -34,7 +34,7 @@ class RadioCardSelector extends XotBaseField
     /**
      * Imposta le card disponibili per la selezione.
      *
-     * @param array<int, array<string, mixed>>|\Closure $cards
+     * @param  array<int, array<string, mixed>>|\Closure  $cards
      */
     public function cards(array|\Closure $cards): static
     {
@@ -118,8 +118,7 @@ class RadioCardSelector extends XotBaseField
     }
 
     /**
-     * @param array<mixed, mixed> $item
-     *
+     * @param  array<mixed, mixed>  $item
      * @return array<string, mixed>
      */
     private static function normalizeCardRow(array $item): array

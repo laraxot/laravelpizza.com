@@ -14,6 +14,10 @@ discussions: []
 **Generated:** 2025-10-01 19:44:11  
 **Analyzer:** Super Mucca 🐮
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "cyclomatic complexity report"
@@ -36,6 +40,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📊 Summary Statistics
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🎯 Cyclomatic Complexity Overview
 
 ### What is Cyclomatic Complexity?
@@ -100,7 +111,14 @@ These methods should be considered for refactoring:
 
 ### Priority:
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## 📚 References

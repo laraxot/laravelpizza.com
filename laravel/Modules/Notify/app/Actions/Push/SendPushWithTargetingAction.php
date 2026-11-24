@@ -11,9 +11,19 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Invia una notifica push ai token che soddisfano criteri di targeting.
+<<<<<<< HEAD
+ *
+ * @see docs/contracts/send-push-with-targeting-action.md
+ *
+ * @contract docs/contracts/send-push-with-targeting-action.md
+=======
+<<<<<<< HEAD
+=======
  *
  * @see docs/contracts/send-push-with-targeting-action.md
  * @contract docs/contracts/send-push-with-targeting-action.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
  */
 class SendPushWithTargetingAction
 {

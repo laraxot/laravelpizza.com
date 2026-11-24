@@ -3,7 +3,19 @@ title: "DISCUSSION AI WORK SUMMARY"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "DISCUSSION AI WORK SUMMARY"
 issues: []
 discussions: []
@@ -15,6 +27,10 @@ discussions: []
 > **Status**: 🔄 In Progress  
 > **Agent**: @marco76tv
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "DISCUSSION AI WORK SUMMARY"
@@ -31,6 +47,13 @@ This discussion tracks the AI agent's work on improving GitHub Actions, document
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📋 Overview
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## ✅ Completed Work
 
 ### 1. GitHub Actions Created/Updated
@@ -185,8 +208,28 @@ ssh-keygen -t ed25519 -C "actions@github.com"
 
 ### Documentation
 - [GitHub Action Setup Guide](github_action_setup_required.md)
+<<<<<<< HEAD
 - [AI Lessons Learned](ai_agent_lessons_learned.md)
 - [Critical AI Rules](docs/ai_rules_critical.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [AI Lessons Learned](AI_AGENT_LESSONS_LEARNED.md)
+- [Critical AI Rules](docs/AI_RULES_CRITICAL.md)
+=======
+<<<<<<< HEAD
+- [AI Lessons Learned](ai_agent_lessons_learned.md)
+- [Critical AI Rules](docs/ai_rules_critical.md)
+=======
+- [AI Lessons Learned](AI_AGENT_LESSONS_LEARNED.md)
+- [Critical AI Rules](docs/AI_RULES_CRITICAL.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [AI Lessons Learned](ai_agent_lessons_learned.md)
+- [Critical AI Rules](docs/ai_rules_critical.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Sync Subtrees Docs](bashscripts/docs/github/actions/sync-subtrees.md)
 
 ### GitHub Links

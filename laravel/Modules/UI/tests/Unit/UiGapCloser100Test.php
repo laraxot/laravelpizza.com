@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\View\View;
 use Modules\UI\Enums\TableLayoutEnum;
+use Modules\UI\Filament\Actions\Table\TableLayoutTrait;
 use Modules\UI\Filament\Blocks\Image;
 use Modules\UI\Filament\Forms\Components\RadioCardSelector;
 use Modules\UI\Filament\Forms\Components\YearSelect;
@@ -21,11 +22,6 @@ use Modules\UI\Filament\Widgets\UserCalendarWidget;
 use Modules\UI\Http\Middleware\SetLocale;
 use Modules\UI\Rules\OpeningHoursRule;
 use Modules\UI\Tests\TestCase;
-<<<<<<< HEAD
-use Modules\UI\Filament\Actions\Table\TableLayoutTrait;
-=======
-use Modules\UI\Traits\TableLayoutTrait;
->>>>>>> laraxot/dev
 use Modules\UI\View\Components\Render\Block;
 use Modules\UI\View\Components\Render\Blocks;
 use Modules\UI\View\Composers\ThemeComposer;
@@ -182,7 +178,6 @@ describe('UI gap closer 100 — middleware trait rules', function (): void {
         Assert::assertSame(200, $response->getStatusCode());
     });
 
-<<<<<<< HEAD
     test('TableLayoutTrait session branches and reset', function (): void {
         // GateGuard facts: exercises Modules\UI\Filament\Actions\Table\TableLayoutTrait
         // (session layout SSoT). Existing coverage: this file + UiHighestMissCoverageTest.
@@ -209,44 +204,6 @@ describe('UI gap closer 100 — middleware trait rules', function (): void {
 
         $subject->resetLayout();
         Assert::assertSame(TableLayoutEnum::LIST, $subject->getTableLayout());
-=======
-    test('TableLayoutTrait session branches and refresh', function (): void {
-        $subject = new class
-        {
-            use TableLayoutTrait;
-
-            public int $dispatched = 0;
-
-            public function dispatch(mixed ...$params): void
-            {
-                $this->dispatched++;
-            }
-        };
-
-        // Una variabile per scenario: la sessione cambia fra una lettura e l'altra,
-        // il valore letto prima non dice niente su quello letto dopo.
-        Session::put('table_layout', TableLayoutEnum::LIST);
-        $fromEnum = $subject->getTableLayout();
-        Assert::assertSame(TableLayoutEnum::LIST, $fromEnum);
-
-        Session::put('table_layout', 'list');
-        $fromString = $subject->getTableLayout();
-        Assert::assertSame(TableLayoutEnum::LIST, $fromString);
-
-        Session::put('table_layout', 'invalid');
-        $fromInvalid = $subject->getTableLayout();
-        Assert::assertSame(TableLayoutEnum::GRID, $fromInvalid);
-
-        Session::forget('table_layout');
-        $withoutSession = $subject->getTableLayout();
-        Assert::assertSame(TableLayoutEnum::GRID, $withoutSession);
-
-        $subject->setTableLayout(TableLayoutEnum::GRID);
-        Assert::assertSame('grid', Session::get('table_layout'));
-
-        $subject->refreshTable();
-        Assert::assertGreaterThan(0, $subject->dispatched);
->>>>>>> laraxot/dev
     });
 
     test('OpeningHoursRule cleanTimeValue rejects non-string', function (): void {

@@ -9,10 +9,7 @@ related:
   - ../../app/Actions/Auth/HasVerifiedIdentityAction.php
   - ../stories/dcp-144-accesso-del-cittadino-con-spid-cie-o-decisione-motivata.story.md
   - ../contracts/upsert-user-from-digital-identity-action.md
-<<<<<<< HEAD
-=======
 qmd: "digital identity upsert by fiscal code"
->>>>>>> laraxot/dev
 ---
 
 # ADR: l'utente SPID/CIE si riconosce dal codice fiscale, poi dall'email verificata

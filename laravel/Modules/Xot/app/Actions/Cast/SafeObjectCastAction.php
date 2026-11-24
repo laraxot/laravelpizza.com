@@ -23,6 +23,7 @@ use Webmozart\Assert\Assert;
  * - Assert: Utilizza webmozart/assert per validazioni robuste
  *
  * @see docs/contracts/safe-object-cast-action.md
+ *
  * @contract docs/contracts/safe-object-cast-action.md
  */
 class SafeObjectCastAction

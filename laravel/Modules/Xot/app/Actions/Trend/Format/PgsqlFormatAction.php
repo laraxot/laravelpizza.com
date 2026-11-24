@@ -6,6 +6,7 @@ namespace Modules\Xot\Actions\Trend\Format;
 
 /**
  * @see docs/contracts/pgsql-format-action.md
+ *
  * @contract docs/contracts/pgsql-format-action.md
  */
 class PgsqlFormatAction extends BaseFormatAction

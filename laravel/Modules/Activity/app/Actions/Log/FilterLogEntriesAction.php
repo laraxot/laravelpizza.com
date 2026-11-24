@@ -13,6 +13,7 @@ use Spatie\QueueableAction\QueueableAction;
  * restituisce dalla piu' recente alla piu' vecchia, limitate a un massimo per non appesantire la pagina.
  *
  * @see docs/contracts/filter-log-entries-action.md
+ *
  * @contract docs/contracts/filter-log-entries-action.md
  */
 class FilterLogEntriesAction

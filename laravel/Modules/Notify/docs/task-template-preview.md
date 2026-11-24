@@ -15,6 +15,10 @@ discussions: []
 **Priorita'**: Bassa
 **Completamento**: 20%
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "task template preview"
@@ -35,3 +39,10 @@ Aggiungere preview real-time dei template email/SMS nell'admin Filament.
 - [ ] Preview SMS testo in Filament
 - [ ] Variabili di test inseribili
 - [ ] Send test notification
+<<<<<<< HEAD
+=======
+=======
+## Descrizione
+## Criteri di Completamento
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

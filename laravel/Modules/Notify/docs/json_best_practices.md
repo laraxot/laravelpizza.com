@@ -3,7 +3,19 @@ title: "json best practices"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "json best practices"
 issues: []
 discussions: []
@@ -218,8 +230,28 @@ protected function rollback(): void
 ## Collegamenti Correlati
 
 - [Documentazione Migrazioni](./migration_rules.md)
+<<<<<<< HEAD
 - [Gestione Errori](./error_handling.md)
 - [Best Practices Database](./database_best_practices.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Gestione Errori](./ERROR_HANDLING.md)
+- [Best Practices Database](./DATABASE_BEST_PRACTICES.md)
+=======
+<<<<<<< HEAD
+- [Gestione Errori](./error_handling.md)
+- [Best Practices Database](./database_best_practices.md)
+=======
+- [Gestione Errori](./ERROR_HANDLING.md)
+- [Best Practices Database](./DATABASE_BEST_PRACTICES.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [Gestione Errori](./error_handling.md)
+- [Best Practices Database](./database_best_practices.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Note Importanti
 

@@ -8,10 +8,7 @@ related:
   - "./SECURITY.md"
   - "./styling.md"
   - "./usage.md"
-<<<<<<< HEAD
-=======
 qmd: "advanced"
->>>>>>> laraxot/dev
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/advanced.md

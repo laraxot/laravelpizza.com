@@ -15,6 +15,10 @@ discussions: []
 **Priorita'**: Alta
 **Completamento**: 10%
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "task consolidare documentazione"
@@ -41,3 +45,11 @@ discussions: []
 - [ ] Ridurre da 749 a max 100 docs attivi
 - [ ] Duplicati rimossi
 - [ ] README.md con indice
+<<<<<<< HEAD
+=======
+=======
+## Descrizione
+## Azioni
+## Criteri di Completamento
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

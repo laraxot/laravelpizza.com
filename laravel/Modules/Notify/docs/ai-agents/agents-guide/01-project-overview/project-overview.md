@@ -64,6 +64,10 @@ Modules/{ModuleName}/
 └── composer.json
 ```
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 title: "project overview"
 type: note
@@ -73,4 +77,9 @@ updated: 2026-09-26
 qmd: "project overview"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 [Back to index](../index.md) | [Guidelines](guidelines.md) | [Links](links.md)

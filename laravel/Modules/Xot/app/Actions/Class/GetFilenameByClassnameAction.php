@@ -8,6 +8,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/class-get-filename-by-classname-action.md
+ *
  * @contract docs/contracts/class-get-filename-by-classname-action.md
  */
 class GetFilenameByClassnameAction

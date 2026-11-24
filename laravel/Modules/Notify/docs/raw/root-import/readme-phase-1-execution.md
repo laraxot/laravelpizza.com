@@ -17,6 +17,10 @@ discussions: []
 **Status**: 🟠 EXECUTION IN PROGRESS  
 **Target**: segnalazioni-elenco → 90% HTML parity
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "readme phase 1 execution"
@@ -43,6 +47,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 QUICK ORIENTATION
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📚 DOCUMENT NAVIGATION
 
 ### 🎯 STATUS & COORDINATION (START HERE)
@@ -132,7 +143,14 @@ laravel/Themes/Sixteen/docs/
 - ⏳ Input: Final comparison results from Subtask 5
 - 📝 Create: PHASE-1-COMPLETION-REPORT.md
 - 🔄 Update: 00-index.md with Phase 1 status
+<<<<<<< HEAD
 - 🔄 Update: 00-index.md with Phase 1 status
+=======
+<<<<<<< HEAD
+- 🔄 Update: 00-index.md with Phase 1 status
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 **Read First**:
 1. PHASE-1-EXECUTION-STATUS.md (overview)
@@ -298,7 +316,14 @@ Before starting your subtask:
 - **Strategy**: PHASE-1-STRATEGY.md
 - **Execution**: GSD-PHASE-1-EXECUTION.md
 - **Tools**: bashscripts/docs/html/index.md
+<<<<<<< HEAD
 - **Tools**: bashscripts/docs/html/index.md
+=======
+<<<<<<< HEAD
+- **Tools**: bashscripts/docs/html/index.md
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **Blade fixes**: EXECUTOR-2-SUBTASKS-3-4.md
 - **Analysis**: SUBTASK-2-ANALYSIS-WORKFLOW.md
 - **Status**: PHASE-1-EXECUTION-STATUS.md

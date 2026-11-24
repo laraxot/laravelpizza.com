@@ -15,7 +15,14 @@ related:
   - ../architecture/README.md
   - ../conventions/README.md
   - ../rules/README.md
+<<<<<<< HEAD
   - ../README.md
+=======
+<<<<<<< HEAD
+  - ../README.md
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 # Convenzioni di Naming
 

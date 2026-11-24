@@ -97,6 +97,10 @@ php artisan optimize:clear
 **Documentazione correlata**:
 - [Xot/docs/module-namespace-path-convention.md](../../xot/docs/module-namespace-path-convention.md)
 - [Xot/docs/modules/structure.md](../../xot/docs/modules/structure.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -112,3 +116,8 @@ discussions: []
 **Status**: ✅ File conformi PSR-4  
 **Azione**: Nessuna (già corretti)
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

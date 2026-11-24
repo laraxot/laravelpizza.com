@@ -50,6 +50,7 @@ final class Head extends Component
 
     /**
      * @see Modules/Cms/docs/bmad/head-component-adoption-plan.md
+     * @see Modules/Cms/docs/bmad/filament-layout-styles-scripts.md  prop `stylesheet` e `@stack('head')`
      */
     public function __construct(
         public readonly ?string $title = null,
@@ -57,8 +58,9 @@ final class Head extends Component
         public readonly ?bool $homepage = null,
         public readonly ?string $themeColor = null,
         public readonly bool $panelAssets = true,
-    ) {
-    }
+        // Entry Vite del CSS del tema: un tema può servire un foglio più leggero dove non servono i componenti Filament.
+        public readonly string $stylesheet = 'resources/css/app.css',
+    ) {}
 
     /**
      * @see Modules/Cms/docs/bmad/head-component-adoption-plan.md
@@ -125,6 +127,7 @@ final class Head extends Component
         return view('cms::components.head', [
             'pubTheme' => $meta->getPubTheme(),
             'panelAssets' => $this->panelAssets,
+            'stylesheet' => $this->stylesheet,
         ]);
     }
 

@@ -50,6 +50,10 @@ npm run dev && npm run build
 composer go
 ```
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 title: "quick commands"
 type: note
@@ -59,4 +63,9 @@ updated: 2026-09-26
 qmd: "quick commands"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 [Back to index](../index.md)

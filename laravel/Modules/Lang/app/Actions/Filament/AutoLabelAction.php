@@ -26,6 +26,7 @@ use Webmozart\Assert\Assert;
  * li usa; applicata a tutti i componenti con `configureUsing()` in LangServiceProvider.
  *
  * @see docs/contracts/auto-label-action.md
+ *
  * @contract docs/contracts/auto-label-action.md
  */
 class AutoLabelAction
@@ -63,7 +64,7 @@ class AutoLabelAction
      * («il primo frame fuori da questa classe») e' una modifica a se', da fare
      * sapendo che si riscrivono delle chiavi.
      *
-     * @return array<string, mixed>  il frame trovato, o `[]` se nessuno corrisponde
+     * @return array<string, mixed> il frame trovato, o `[]` se nessuno corrisponde
      */
     protected function findCallerFrame(Field|Entry|BaseFilter|Column|Step|Action|Section $component): array
     {
@@ -204,7 +205,7 @@ class AutoLabelAction
         // Se la traduzione manca si salva (solo in locale, vedi SaveTransAction) ma solo per l'etichetta:
         // per helper_text, placeholder, description e tooltip il "valore di comodo" era il nome del campo,
         // che poi compariva sotto e dentro i campi ("route", "postal_code"). Meglio nessun testo d'aiuto.
-        if (is_string($label) && $label_key === $label && 'label' === $type) {
+        if (is_string($label) && $label_key === $label && $type === 'label') {
             app(SaveTransAction::class)->execute($label_key, $default_val ?? $val);
         }
         if ($isAuxiliaryText && is_string($label) && ($label === '' || $label === $val)) {

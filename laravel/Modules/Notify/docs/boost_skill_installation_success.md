@@ -217,6 +217,10 @@ The `InteractsWithComments` trait is temporarily disabled in `Modules\Fixcity\Mo
 - [Laravel Boost Documentation](https://github.com/laravel/boost)
 - [Composer Merge Plugin](https://github.com/wikimedia/composer-merge-plugin)
 - [Spatie Comments Package](https://github.com/spatie/laravel-comments)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -231,3 +235,8 @@ discussions: []
 **Report Generated**: 2026-03-02  
 **Installation Time**: ~30 minutes  
 **Status**: ✅ SUCCESSFUL
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

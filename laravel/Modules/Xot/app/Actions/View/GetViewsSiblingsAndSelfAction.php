@@ -13,6 +13,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-views-siblings-and-self-action.md
+ *
  * @contract docs/contracts/get-views-siblings-and-self-action.md
  */
 class GetViewsSiblingsAndSelfAction

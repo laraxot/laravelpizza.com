@@ -245,6 +245,10 @@ Build a landing page with:
 10. Custom skill creation
 11. Performance optimization
 12. Community contribution
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -258,3 +262,8 @@ issues: []
 discussions: []
 **Stato**: ✅ **SKILLS INSTALLATE E CONFIGURATE**  
 **Prossimo**: 🧪 Testing e creazione esempi
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

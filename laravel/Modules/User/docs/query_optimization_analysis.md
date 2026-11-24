@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "User Module - Query Optimization Analysis"
 type: analysis
 qmd: "query optimization analysis user"
 ---
->>>>>>> laraxot/dev
 # User Module - Query Optimization Analysis
 
 ## Overview

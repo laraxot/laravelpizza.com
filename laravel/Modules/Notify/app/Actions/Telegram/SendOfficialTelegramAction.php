@@ -16,10 +16,21 @@ use Spatie\QueueableAction\QueueableAction;
 use function Safe\json_decode;
 use function Safe\json_encode;
 
+<<<<<<< HEAD
+/**
+ * @see docs/contracts/send-official-telegram-action.md
+ *
+ * @contract docs/contracts/send-official-telegram-action.md
+ */
+=======
+<<<<<<< HEAD
+=======
 /**
  * @see docs/contracts/send-official-telegram-action.md
  * @contract docs/contracts/send-official-telegram-action.md
  */
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 final class SendOfficialTelegramAction implements TelegramProviderActionInterface
 {
     use QueueableAction;

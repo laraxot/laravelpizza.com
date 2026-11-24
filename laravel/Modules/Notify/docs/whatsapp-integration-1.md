@@ -544,6 +544,10 @@ L'integrazione WhatsApp  segue gli stessi pattern e standard utilizzati per l'in
 4. **Testabilità**: Le azioni sono facilmente testabili grazie all'interfaccia comune
 
 Seguendo questa architettura, l'integrazione WhatsApp si inserisce perfettamente nell'ecosistema di notifiche di <nome progetto>, mantenendo la coerenza con le altre modalità di comunicazione.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -556,3 +560,8 @@ qmd: "whatsapp integration 1"
 issues: []
 discussions: []
 *Ultimo aggiornamento: 2023-05-12*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

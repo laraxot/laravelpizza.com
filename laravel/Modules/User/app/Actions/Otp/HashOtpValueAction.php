@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/hash-otp-value-action.md
+ *
  * @contract docs/contracts/hash-otp-value-action.md
  */
 final class HashOtpValueAction

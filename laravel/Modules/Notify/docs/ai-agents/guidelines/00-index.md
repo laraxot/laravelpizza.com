@@ -16,6 +16,10 @@ discussions: []
 **Status**: ✅ Production Ready  
 **Files**: 2 guidelines
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "00 index"
@@ -33,6 +37,13 @@ A differenza delle rules (obbligatorie), le guidelines sono **consigli** per scr
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Purpose
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📁 Guidelines
 
 ### 1. Reusable Components Philosophy

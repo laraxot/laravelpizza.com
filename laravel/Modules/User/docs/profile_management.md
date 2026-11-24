@@ -5,10 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< HEAD
-=======
 qmd: "profile management laravel modules"
->>>>>>> laraxot/dev
 ---
 
 # Profile Management in Laravel Modules
@@ -78,12 +75,7 @@ This document outlines the best practices for managing user profiles within a La
 
 ## Links to Related Documentation
 - [User Module Index](./index.md)
-<<<<<<< HEAD
 - [User Module Index](./README.md)
-=======
-
-- [User Module Index](./index.md)
->>>>>>> laraxot/dev
 - [BaseUser Model](./baseuser.md)
 - [Authentication Pages Implementation](./auth_pages_implementation.md)
 - [Routing Best Practices](./routing_best_practices.md)

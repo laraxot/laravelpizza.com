@@ -16,6 +16,7 @@ use Spatie\QueueableAction\QueueableAction;
  * La usano sia la pagina Log sia il download, cosi' la regola e' una sola.
  *
  * @see docs/contracts/authorize-log-access-action.md
+ *
  * @contract docs/contracts/authorize-log-access-action.md
  */
 class AuthorizeLogAccessAction

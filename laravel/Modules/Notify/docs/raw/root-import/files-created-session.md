@@ -21,6 +21,10 @@ discussions: []
 **Date**: 2026-04-03
 **Total Files**: 13+ (scripts, docs, analysis files)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "files created session"
@@ -49,6 +53,13 @@ bashscripts/
 **Total**: 4 analysis scripts + 1 GitHub integration script = **5 new executable scripts**
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 📊 File Inventory
+### Scripts (Executable)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### Documentation (Theme Level)
 ```
@@ -197,8 +208,16 @@ Project Root/
 **For Developers**:
 - Read: laravel/Themes/Sixteen/docs/index.md
 - Reference: bashscripts/docs/index.md (for tools)
+<<<<<<< HEAD
 - Read: laravel/Themes/Sixteen/docs/index.md
 - Reference: bashscripts/docs/index.md (for tools)
+=======
+<<<<<<< HEAD
+- Read: laravel/Themes/Sixteen/docs/index.md
+- Reference: bashscripts/docs/index.md (for tools)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - Analyze: pages/<page-name>/DETAILED-ANALYSIS.md (per page)
 
 **For DevOps/CI-CD**:

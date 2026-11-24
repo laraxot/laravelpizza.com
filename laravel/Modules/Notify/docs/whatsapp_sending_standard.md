@@ -14,6 +14,10 @@ discussions: []
 ## Introduzione
 Questa guida definisce lo standard per l'invio di messaggi WhatsApp all'interno del modulo Notify, seguendo la stessa architettura modulare, configurazione e best practice già adottate per email e SMS. L'obiettivo è garantire coerenza, riusabilità e facilità di manutenzione, indipendentemente dal provider utilizzato (Twilio, Vonage, WhatsApp Business API, ecc.).
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "whatsapp sending standard"
@@ -50,6 +54,13 @@ interface WhatsAppActionInterface
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 1. Struttura delle Azioni WhatsApp
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 2. Configurazione
 
 - Tutti i provider WhatsApp vanno configurati in `config/whatsapp.php` (o in una sezione dedicata di `config/services.php` o `config/notify.php`).
@@ -237,4 +248,12 @@ $action->onQueue('whatsapp')->execute($data);
 
 ---
 
+<<<<<<< HEAD
 **Seguendo questo standard, l'invio di messaggi WhatsApp sarà sempre coerente, sicuro, testabile e facilmente estendibile.** 
+=======
+<<<<<<< HEAD
+**Seguendo questo standard, l'invio di messaggi WhatsApp sarà sempre coerente, sicuro, testabile e facilmente estendibile.** 
+=======
+**Seguendo questo standard, l'invio di messaggi WhatsApp sarà sempre coerente, sicuro, testabile e facilmente estendibile.**
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

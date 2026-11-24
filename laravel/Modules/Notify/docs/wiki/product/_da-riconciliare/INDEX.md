@@ -7,7 +7,19 @@ module: notify
 type: product
 tags: [product, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 # notify — product
@@ -16,7 +28,23 @@ Documentation for `notify` module categorized as **product**.
 
 ## Files
 
+<<<<<<< HEAD
 - [`INDEX.md`](./index.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [`index.md`](./index.md)
+=======
+<<<<<<< HEAD
+- [`INDEX.md`](./index.md)
+=======
+- [`index.md`](./index.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [`INDEX.md`](./index.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [`composer-strategy.md`](./composer-strategy.md)
 - [`inbound-keting-strategy.md`](./inbound-keting-strategy.md)
 - [`inbound-marketing-strategy.md`](./inbound-marketing-strategy.md)

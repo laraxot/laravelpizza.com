@@ -15,10 +15,7 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-<<<<<<< HEAD
-=======
 qmd: "xotbase table columns enforcement xotbaseresourcetable user"
->>>>>>> laraxot/dev
 ---
 
 # User Module: XotBaseResourceTable Columns

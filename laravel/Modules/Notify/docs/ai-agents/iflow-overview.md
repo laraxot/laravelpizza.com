@@ -13,6 +13,10 @@ discussions: []
 
 Panoramica del progetto LaravelPizza.com.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "iflow overview"
@@ -29,6 +33,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🍕 LaravelPizza.com
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🎯 Missione del Progetto
 
 **Questo è una CONVERSIONE e MIGLIORAMENTO di https://laravelpizza.com/**

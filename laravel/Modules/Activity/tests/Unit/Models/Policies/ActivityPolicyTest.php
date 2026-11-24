@@ -5,13 +5,12 @@ declare(strict_types=1);
 use Modules\Activity\Models\Policies\ActivityBasePolicy;
 use Modules\Activity\Models\Policies\ActivityPolicy;
 use Modules\Activity\Models\Policies\SnapshotPolicy;
-use Modules\Activity\Models\Policies\StoredEventPolicy;
 use Modules\Activity\Tests\TestCase;
 use Modules\User\Models\Policies\UserBasePolicy;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 test('ActivityPolicy can be instantiated', function () {
     $reflection = new ReflectionClass(ActivityPolicy::class);
@@ -32,7 +31,7 @@ test('SnapshotPolicy can be instantiated', function (): void {
 });
 
 test('ActivityPolicy method signatures', function () {
-    $policy = new ActivityPolicy();
+    $policy = new ActivityPolicy;
     $reflection = new ReflectionClass($policy);
     $expectedMethods = ['view', 'create', 'update', 'delete', 'restore', 'forceDelete'];
 

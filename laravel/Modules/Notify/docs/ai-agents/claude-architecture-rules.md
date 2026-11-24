@@ -40,6 +40,10 @@ npm run build
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "claude architecture rules"
@@ -59,6 +63,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 2. BelongsToMany - CRITICAL
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 3. Database Config - CRITICAL
 
 **`config/database.php`** (base) e **`config/local/{tenant}/database.php`** devono seguire lo standard Laravel 12.

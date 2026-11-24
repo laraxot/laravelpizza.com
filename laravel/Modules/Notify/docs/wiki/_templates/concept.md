@@ -7,7 +7,19 @@ type: concept
 sources: ["raw/articles/source-filename.md"]
 confidence: medium
 created: {{date}}
+<<<<<<< HEAD
 updated: {{date}}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: {{date}}
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 tags: [tag1, tag2]
 related: []
 ---

@@ -22,6 +22,10 @@ In questo documento proponiamo un’implementazione open source per la gestione 
 - spatie/laravel-mailcoach-mailer
 - esempi di Blade render, logo customization
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "improved email templates"
@@ -42,6 +46,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 1. Gap dei Plugin Esistenti
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 2. Obiettivi della Nostra Soluzione
 
 - **Storage DB**: tutte le proprietà del template (soggetto, body markdown, variabili, versioni)

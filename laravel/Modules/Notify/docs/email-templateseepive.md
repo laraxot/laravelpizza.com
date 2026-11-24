@@ -13,6 +13,10 @@ discussions: []
 
 Un'analisi dettagliata delle risorse, pacchetti, editor e tecniche per gestire i template email in Laravel.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 title: "email templateseepive"
 type: note
@@ -53,6 +57,14 @@ public function build()
 ```
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 1. Core Laravel Mail System
+### 1.1 Blade Templates
+### 1.2 Markdown Mailables
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 2. Pacchetti GitHub
 
 ### 2.1 simplepleb/laravel-email-templates

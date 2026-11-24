@@ -15,6 +15,10 @@ discussions: []
 **Last Updated**: 2026-03-31  
 **Server**: Apache 2.4.64 (Ubuntu)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "vhost app"
@@ -38,6 +42,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Configuration Summary
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## File Locations
 
 | File | Path |

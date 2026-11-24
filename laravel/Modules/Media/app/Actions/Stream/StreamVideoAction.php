@@ -20,7 +20,9 @@ use function Safe\set_time_limit;
 
 /**
  * Streams video content from storage with HTTP range support.
+ *
  * @see docs/contracts/stream-video-action.md
+ *
  * @contract docs/contracts/stream-video-action.md
  */
 class StreamVideoAction

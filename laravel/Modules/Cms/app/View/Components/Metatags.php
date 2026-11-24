@@ -30,8 +30,7 @@ final class Metatags extends Component
     public function __construct(
         private ?string $title = null,
         private ?string $description = null,
-    ) {
-    }
+    ) {}
 
     /**
      * Get the view / contents that represents the component.

@@ -3,7 +3,19 @@ title: "MODULAR DOCUMENTATION REFACTORING"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "MODULAR DOCUMENTATION REFACTORING"
 issues: []
 discussions: []
@@ -15,6 +27,10 @@ discussions: []
 **Stato**: ✅ COMPLETATO  
 **Principio**: "Boy Scout Rule - Lascia i file migliori di come li hai trovati"
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "MODULAR DOCUMENTATION REFACTORING"
@@ -31,14 +47,36 @@ Organizzare la documentazione AI agents in file modulari più piccoli e gestibil
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 OBIETTIVO
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📊 PRIMA vs DOPO
 
 ### Prima (File Grandi)
 ```
 AGENTS.md      - 104 righe  ❌ Troppo grande
+<<<<<<< HEAD
 QWEN.md        - 890 righe  ❌ Enorme
 CLAUDE.md      - 592 righe  ❌ Difficile da navigare
 GEMINI.md      - 369 righe  ❌ Contenuti mischiati
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+QWEN.md        - 890 righe  ❌ Enorme
+CLAUDE.md      - 592 righe  ❌ Difficile da navigare
+GEMINI.md      - 369 righe  ❌ Contenuti mischiati
+>>>>>>> laraxot/dev
+=======
+QWEN.md        - 890 righe  ❌ Enorme
+CLAUDE.md      - 592 righe  ❌ Difficile da navigare
+GEMINI.md      - 369 righe  ❌ Contenuti mischiati
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qwen.md        - 890 righe  ❌ Enorme
 CLAUDE.md      - 592 righe  ❌ Difficile da navigare
 gemini.md      - 369 righe  ❌ Contenuti mischiati
@@ -115,7 +153,23 @@ TOTALE: ~2,500 righe  ✅ Organizzate, navigabili, mantenibili
 
 ### Da File Originali a Moduli
 ```markdown
+<<<<<<< HEAD
 # AGENTS.md (compatto)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+# AGENTS.md (compatto)
+=======
+<<<<<<< HEAD
+# agents.md (compatto)
+=======
+# AGENTS.md (compatto)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+# agents.md (compatto)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Contenuto Diviso
 | Sezione | File |
 |---------|------|
@@ -128,9 +182,29 @@ TOTALE: ~2,500 righe  ✅ Organizzate, navigabili, mantenibili
 ```markdown
 # .agents/docs/overview/agents-overview.md
 ## Riferimenti
+<<<<<<< HEAD
 - [agents.md](../../agents.md) - File originale compatto
 - [QWEN.md](../../qwen.md) - Contesto Qwen Code
 - [AGENTS.md](../../agents.md) - File originale compatto
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [AGENTS.md](../../AGENTS.md) - File originale compatto
+=======
+<<<<<<< HEAD
+- [agents.md](../../agents.md) - File originale compatto
+- [QWEN.md](../../qwen.md) - Contesto Qwen Code
+- [AGENTS.md](../../agents.md) - File originale compatto
+=======
+- [AGENTS.md](../../AGENTS.md) - File originale compatto
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [agents.md](../../agents.md) - File originale compatto
+- [QWEN.md](../../qwen.md) - Contesto Qwen Code
+- [AGENTS.md](../../agents.md) - File originale compatto
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [qwen.md](../../qwen.md) - Contesto Qwen Code
 ```
 
@@ -214,9 +288,24 @@ TOTALE: ~2,500 righe  ✅ Organizzate, navigabili, mantenibili
 
 ### File Originali (Compatti)
 - `AGENTS.md` - Link a tutti i moduli
+<<<<<<< HEAD
 - `QWEN.md` - Contesto Qwen Code
 - `CLAUDE.md` - Claude-specific patterns
 - `GEMINI.md` - Gemini-specific patterns
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+- `QWEN.md` - Contesto Qwen Code
+- `CLAUDE.md` - Claude-specific patterns
+- `GEMINI.md` - Gemini-specific patterns
+>>>>>>> laraxot/dev
+=======
+- `QWEN.md` - Contesto Qwen Code
+- `CLAUDE.md` - Claude-specific patterns
+- `GEMINI.md` - Gemini-specific patterns
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - `qwen.md` - Contesto Qwen Code
 - `CLAUDE.md` - Claude-specific patterns
 - `gemini.md` - Gemini-specific patterns

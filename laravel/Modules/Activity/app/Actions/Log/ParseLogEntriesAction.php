@@ -21,6 +21,7 @@ use function Safe\preg_match;
  * "grezza" senza data ne' livello.
  *
  * @see docs/contracts/parse-log-entries-action.md
+ *
  * @contract docs/contracts/parse-log-entries-action.md
  */
 class ParseLogEntriesAction

@@ -15,6 +15,7 @@ use Spatie\QueueableAction\QueueableAction;
  * the request lifecycle.
  *
  * @see docs/contracts/set-theme-action.md
+ *
  * @contract docs/contracts/set-theme-action.md
  */
 class SetThemeAction

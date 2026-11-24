@@ -307,8 +307,5 @@ return [
 
 ---
 
-<<<<<<< HEAD
 **Ultimo aggiornamento:** Gennaio 2025  
-=======
->>>>>>> laraxot/dev
 **Versione:** 2.0 - Consolidata DRY + KISS

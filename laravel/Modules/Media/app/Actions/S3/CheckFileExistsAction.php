@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/check-file-exists-action.md
+ *
  * @contract docs/contracts/check-file-exists-action.md
  */
 class CheckFileExistsAction extends BaseS3Action

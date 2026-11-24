@@ -3,7 +3,19 @@ title: "qwen overview"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "qwen overview"
 issues: []
 discussions: []
@@ -30,6 +42,10 @@ Panoramica e stato attuale del progetto Base Forecast Fila5.
 | Filament Widgets | 2026-03-20 | ✅ DOCUMENTATO |
 | Incident Composer | 2026-03-19 | ✅ RISOLTO |
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "qwen overview"
@@ -58,6 +74,14 @@ Senza alcun se o ma. Deve essere perfetta in ogni aspetto.
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Obiettivo Principale
+### Obiettivi Specifici
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Git Workflow
 
 ```
@@ -83,5 +107,21 @@ Never: git revert (only forward!)
 ## 🔗 Link
 
 - [Indice QWEN](./qwen-split-index.md)
+<<<<<<< HEAD
 - [QWEN.md originale](../../qwen.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [qwen.md originale](../../qwen.md)
+=======
+<<<<<<< HEAD
+- [QWEN.md originale](../../qwen.md)
+=======
+- [qwen.md originale](../../qwen.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [QWEN.md originale](../../qwen.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Index principale](./index.md)

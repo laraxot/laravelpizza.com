@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Task: Audit Completo Dipendenze User"
 type: audit
 qmd: "audit dipendenze user task completo"
 ---
->>>>>>> laraxot/dev
 # Task: Audit Completo Dipendenze User
 
 **Modulo**: User  

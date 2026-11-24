@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Blocks"
 type: note
 qmd: "blocks"
 ---
->>>>>>> laraxot/dev
 https://github.com/whitecube/nova-flexible-content
 
 

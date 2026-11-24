@@ -10,6 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/update-has-many-deep-action.md
+ *
  * @contract docs/contracts/update-has-many-deep-action.md
  */
 class HasManyDeepAction

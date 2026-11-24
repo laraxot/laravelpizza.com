@@ -23,7 +23,7 @@ afterEach(function (): void {
 });
 
 it('hands the block data to the Cms resolver and returns what it resolves', function (): void {
-    app()->instance(UI_CMS_BLOCK_RESOLVER, new class()
+    app()->instance(UI_CMS_BLOCK_RESOLVER, new class
     {
         /**
          * @param  array<string, mixed>  $data
@@ -45,8 +45,8 @@ it('returns the input untouched when the resolver has no execute or returns a no
 
     expect(app(ResolveLocalizedBlockDataAction::class)->execute(['title' => 'Ciao']))->toBe(['title' => 'Ciao']);
 })->with([
-    'no execute' => fn (): object => new class() {},
-    'non array result' => fn (): object => new class()
+    'no execute' => fn (): object => new class {},
+    'non array result' => fn (): object => new class
     {
         /** @param  array<string, mixed>  $data */
         public function execute(array $data): string
@@ -57,7 +57,7 @@ it('returns the input untouched when the resolver has no execute or returns a no
 ])->group('UI-BLOCKDATA-INV-2');
 
 it('refuses resolved data with non string keys', function (): void {
-    app()->instance(UI_CMS_BLOCK_RESOLVER, new class()
+    app()->instance(UI_CMS_BLOCK_RESOLVER, new class
     {
         /**
          * @param  array<string, mixed>  $data

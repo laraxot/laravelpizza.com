@@ -15,6 +15,10 @@ discussions: []
 **Priorita'**: Media
 **Completamento**: 0%
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "task ridurre phpstan suppressioni"
@@ -38,3 +42,10 @@ discussions: []
 
 - [ ] Tutte le 4 suppressioni risolte
 - [ ] PHPStan 0 errori mantenuto
+<<<<<<< HEAD
+=======
+=======
+## File Coinvolti (4 suppressioni)
+## Criteri di Completamento
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

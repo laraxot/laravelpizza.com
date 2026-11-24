@@ -79,7 +79,7 @@ abstract class TestCase extends XotBaseTestCase
 
         $testFile = $this->resolvePestTestFile();
 
-        if (null !== $testFile && is_file($testFile)) {
+        if ($testFile !== null && is_file($testFile)) {
             $source = file_get_contents($testFile);
             if (str_contains($source, "group('no-ui-db')")) {
                 return false;
@@ -89,7 +89,7 @@ abstract class TestCase extends XotBaseTestCase
             }
         }
 
-        if (null !== $testFile && str_contains($testFile, '/tests/Unit/')) {
+        if ($testFile !== null && str_contains($testFile, '/tests/Unit/')) {
             return false;
         }
 
@@ -109,7 +109,7 @@ abstract class TestCase extends XotBaseTestCase
 
         $file = (new \ReflectionClass($this))->getFileName();
 
-        return false !== $file ? $file : null;
+        return $file !== false ? $file : null;
     }
 
     /**

@@ -1,10 +1,7 @@
 ---
 title: team-permissions-sqlite-migration.story
 module: User
-<<<<<<< HEAD
-=======
 qmd: "team permissions sqlite migration story teampermissionssqlitemigrationstory"
->>>>>>> laraxot/dev
 ---
 
 # Story: team_permissions migration on SQLite

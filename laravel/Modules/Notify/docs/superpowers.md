@@ -17,6 +17,10 @@ discussions: []
 **License**: MIT  
 **Status**: ✅ Installed
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "superpowers"
@@ -39,6 +43,13 @@ Superpowers è un framework di skill componibili per coding agent (OpenCode, Cla
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Cosa è
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Installazione
 
 ### File: `opencode.json`

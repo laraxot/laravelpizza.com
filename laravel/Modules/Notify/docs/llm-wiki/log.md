@@ -15,6 +15,10 @@ discussions: []
 > **Purpose**: Append-only chronological record of wiki activity
 > **Created**: 2026-04-15
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "log"
@@ -38,5 +42,11 @@ discussions: []
 - Commit: docs: initialize Notify module wiki
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## [2026-04-15] maintenance | Initial wiki setup
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 _Log entries appended chronologically below_

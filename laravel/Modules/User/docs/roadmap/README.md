@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "User Module Roadmap"
 type: note
 qmd: "user roadmap"
 ---
->>>>>>> laraxot/dev
 # User Module Roadmap
 
 > "Authentication, authorization, and user management for the entire Laraxot ecosystem."

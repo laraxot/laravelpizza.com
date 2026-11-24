@@ -266,6 +266,10 @@ composer update "filament/*" -W
 - [ ] Check all modules use ^5.0
 - [ ] No mixed versions
 - [ ] No old versions
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -281,3 +285,8 @@ discussions: []
 **Versione Attuale**: **Filament 5.x**  
 **Prossimo Aggiornamento**: **Quando esce Filament 6**  
 **Regola**: **MAI versioni vecchie, SEMPRE ultima stabile**
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

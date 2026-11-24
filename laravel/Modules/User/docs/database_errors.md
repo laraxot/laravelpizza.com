@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Database Errors in User Module"
 type: note
 qmd: "database errors user"
 ---
->>>>>>> laraxot/dev
 # Database Errors in User Module
 
 ## Missing `doctor_team` Table

@@ -8,6 +8,7 @@ use function Safe\preg_replace;
 
 /**
  * @see docs/contracts/sanitize-action.md
+ *
  * @contract docs/contracts/sanitize-action.md
  */
 class SanitizeAction

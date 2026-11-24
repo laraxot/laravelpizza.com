@@ -7,7 +7,19 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 # analysis — Consolidated Documentation
@@ -52,7 +64,17 @@ Consolidated from **29** individual files.
 
 *Consolidated from: `analysis-completa.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Indice
 1. [Architettura e Struttura](#1-architettura-e-struttura)
 2. [Modelli e Relazioni](#2-modelli-e-relazioni)
@@ -330,7 +352,17 @@ class Template extends Model
 
 *Consolidated from: `analysis-complete.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## analysis-detailed-1
@@ -356,64 +388,155 @@ related:
   - "./action-plan-immediate.md"
 ---
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## analysis-detailed-3
 
 *Consolidated from: `analysis-detailed.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## analysis-detailed-4
 
 *Consolidated from: `analysis-detailed.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## analysis-detailed-5
 
 *Consolidated from: `analysis-detailed.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## analysis-detailed-6
 
 *Consolidated from: `analysis-detailed.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## analysis-detailed-7
 
 *Consolidated from: `analysis-detailed.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## analysis-detailed-8
 
 *Consolidated from: `analysis-detailed.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## analysis-detailed
 
 *Consolidated from: `analysis-detailed.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## analysis-dettagliata-1
 
 *Consolidated from: `analysis-dettagliata-1.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Architettura del Sistema
 
 ### 1.1 Struttura del Modulo
@@ -936,7 +1059,17 @@ return [
 
 *Consolidated from: `analysis-dettagliata-2.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 2. Modelli e Relazioni
 
 ### 2.1 Template Model
@@ -1583,7 +1716,17 @@ Schema::create('template_analytics', function (Blueprint $table) {
 
 *Consolidated from: `analysis-dettagliata-3.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 3. Servizi Core
 
 ### 3.1 TemplateService
@@ -2234,7 +2377,17 @@ protected function updateAnalytics(string $messageId, string $event): void
 
 *Consolidated from: `analysis-dettagliata-4.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 4. Integrazione con Filament
 
 ### 4.1 TemplateResource
@@ -2925,7 +3078,17 @@ class TemplateTestPage extends Page
 
 *Consolidated from: `analysis-dettagliata-5.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 5. Testing
 
 ### 5.1 Unit Tests
@@ -3745,7 +3908,17 @@ class WebhookControllerTest extends TestCase
 
 *Consolidated from: `analysis-dettagliata-6.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 6. Monitoraggio e Analytics
 
 ### 6.1 Logging
@@ -4369,7 +4542,17 @@ class AnalyticsExporter
 
 *Consolidated from: `analysis-dettagliata-7.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 7. Manutenzione e Backup
 
 ### 7.1 Versioning
@@ -5018,7 +5201,17 @@ class MaintainTemplatesCommand extends Command
 
 *Consolidated from: `analysis-dettagliata-8.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 8. Note Finali
 
 ### 8.1 Best Practices
@@ -5244,7 +5437,17 @@ Il modulo è progettato per essere estensibile e personalizzabile, permettendo l
 
 *Consolidated from: `analysis-dettagliata.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Analisi delle Soluzioni di Template Email
 
 ### 1.1 Laravel Email Templates (simplepleb)
@@ -5862,7 +6065,17 @@ class TemplatePreview extends Component
 
 *Consolidated from: `analysis-improvements.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Analisi delle Soluzioni Esistenti
 
 ### 1. Editor Visuale
@@ -6161,7 +6374,17 @@ class TemplatePreview extends Component
 
 *Consolidated from: `analysis.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Overview
 The Notify module provides specialized functionality within the Laravel application.
 
@@ -6222,7 +6445,17 @@ Modules/Notify/
 - Performance testing
 ### Versione HEAD
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Collegamenti tra versioni di analysis.md
 * [analysis.md](../../../notify/docs/analysis.md)
 * [analysis.md](../../../notify/docs/phpstan/analysis.md)
@@ -6238,10 +6471,25 @@ Modules/Notify/
 * [analysis.md](../../../media/docs/phpstan/analysis.md)
 * [analysis.md](../../../../themes/one/docs/analysis.md)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ### Versione Incoming
 
 ---
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### Versione Incoming
 
@@ -6249,13 +6497,32 @@ Modules/Notify/
 ---
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## analysisettagliata-2
 
 *Consolidated from: `analysisettagliata-2.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 2. Modelli e Relazioni
 
 ### 2.1 Template Model
@@ -6902,7 +7169,17 @@ Schema::create('template_analytics', function (Blueprint $table) {
 
 *Consolidated from: `analysisettagliata-3.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 3. Servizi Core
 
 ### 3.1 TemplateService
@@ -7553,7 +7830,17 @@ protected function updateAnalytics(string $messageId, string $event): void
 
 *Consolidated from: `analysisettagliata-4.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 4. Integrazione con Filament
 
 ### 4.1 TemplateResource
@@ -8244,7 +8531,17 @@ class TemplateTestPage extends Page
 
 *Consolidated from: `analysisettagliata-5.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 5. Testing
 
 ### 5.1 Unit Tests
@@ -9064,7 +9361,17 @@ class WebhookControllerTest extends TestCase
 
 *Consolidated from: `analysisettagliata-6.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 6. Monitoraggio e Analytics
 
 ### 6.1 Logging
@@ -9688,7 +9995,17 @@ class AnalyticsExporter
 
 *Consolidated from: `analysisettagliata-7.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 7. Manutenzione e Backup
 
 ### 7.1 Versioning
@@ -10337,7 +10654,17 @@ class MaintainTemplatesCommand extends Command
 
 *Consolidated from: `analysisettagliata-8.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 8. Note Finali
 
 ### 8.1 Best Practices
@@ -10563,7 +10890,17 @@ Il modulo è progettato per essere estensibile e personalizzabile, permettendo l
 
 *Consolidated from: `analysisettagliata.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Analisi delle Soluzioni di Template Email
 
 ### 1.1 Laravel Email Templates (simplepleb)

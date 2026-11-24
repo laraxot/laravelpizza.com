@@ -18,9 +18,19 @@ use function Safe\json_encode;
 
 /**
  * @property string $base_endpoint
+<<<<<<< HEAD
+ *
+ * @see docs/contracts/esendex-send-action.md
+ *
+ * @contract docs/contracts/esendex-send-action.md
+=======
+<<<<<<< HEAD
+=======
  *
  * @see docs/contracts/esendex-send-action.md
  * @contract docs/contracts/esendex-send-action.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
  */
 class EsendexSendAction
 {

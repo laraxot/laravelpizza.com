@@ -7,7 +7,19 @@ type: source
 sources: ["raw/articles/source-filename.md"]
 confidence: high
 created: {{date}}
+<<<<<<< HEAD
 updated: {{date}}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: {{date}}
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 tags: [article, paper, documentation]
 related: []
 ---

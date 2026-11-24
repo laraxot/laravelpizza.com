@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Testing del Bug Fix: Infinite Loop in make:filament-user"
 type: note
 qmd: "testing fix infinite loop makefilamentuser"
 ---
->>>>>>> laraxot/dev
 # Testing del Bug Fix: Infinite Loop in make:filament-user
 
 ## Overview

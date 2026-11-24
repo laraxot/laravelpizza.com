@@ -3,7 +3,19 @@ title: "04 Filament Philosophy"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "04 Filament Philosophy"
 issues: []
 discussions: []
@@ -11,11 +23,26 @@ discussions: []
 
 # 🎨 Filament Forms & Tables Philosophy
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 **Part of**: [00-INDEX.md](00-index.md) — AI Agents Coordination  
 **Related**: [03-ARCHITECTURE-ZEN.md](03-architecture-zen.md) — Architecture
 
 ## 🔴 Fundamental Rule
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 **Part of**: [00-index.md](00-index.md) — AI Agents Coordination  
 **Related**: [03-architecture-zen.md](03-architecture-zen.md) — Architecture
 
@@ -39,6 +66,15 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🧠 Philosophy (The WHY)
 
 ### 1. **Don't Repeat Yourself (DRY)**

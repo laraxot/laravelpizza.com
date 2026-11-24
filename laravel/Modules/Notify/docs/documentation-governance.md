@@ -14,7 +14,14 @@ related:
   - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -445,7 +452,14 @@ jobs:
 ## 📚 Related Documents
 
 - [AGENTS.md](../../../AGENTS.md) - Agent guidelines
+<<<<<<< HEAD
 - [AGENTS.md](../../../AGENTS.md) - Agent guidelines
+=======
+<<<<<<< HEAD
+- [AGENTS.md](../../../AGENTS.md) - Agent guidelines
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [.windsurfrules](../../../.windsurfrules) - IDE rules
 - [documentation-index.md](../../../docs/documentation-index.md) - Master index
 

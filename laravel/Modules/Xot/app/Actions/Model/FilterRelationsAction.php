@@ -10,6 +10,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/filter-relations-action.md
+ *
  * @contract docs/contracts/filter-relations-action.md
  */
 class FilterRelationsAction

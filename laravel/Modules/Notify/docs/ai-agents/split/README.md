@@ -111,7 +111,14 @@ Splitting improves:
 ### Bidirectional Links
 Every split file contains links back to:
 - Its section index (e.g., `agents/index.md`)
+<<<<<<< HEAD
 - Its section index (e.g., `agents/index.md`)
+=======
+<<<<<<< HEAD
+- Its section index (e.g., `agents/index.md`)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - The master index (`index.md`)
 - The original source file
 

@@ -10,7 +10,9 @@ use Webmozart\Assert\Assert;
 
 /**
  * Genera il path per le conversioni di un upload temporaneo.
+ *
  * @see docs/contracts/get-temporary-upload-conversion-path-action.md
+ *
  * @contract docs/contracts/get-temporary-upload-conversion-path-action.md
  */
 final class GetTemporaryUploadConversionPathAction

@@ -17,6 +17,10 @@ discussions: []
 **Category**: Architecture / Religion / i18n / DRY  
 **Audience**: All developers + AI agents
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "trans choice dry religion"
@@ -37,6 +41,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## LA REGOLA AUREA
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Perche (Filosofia Profonda)
 
 ### Il Problema: Chiavi Duplicate per Ogni Caso

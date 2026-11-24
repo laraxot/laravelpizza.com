@@ -6,7 +6,9 @@ namespace Modules\Xot\Actions;
 
 /**
  * Class ConfigAction.
+ *
  * @see docs/contracts/config-action.md
+ *
  * @contract docs/contracts/config-action.md
  */
 class ConfigAction

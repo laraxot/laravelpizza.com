@@ -10,6 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/update-pivot-action.md
+ *
  * @contract docs/contracts/update-pivot-action.md
  */
 class PivotAction

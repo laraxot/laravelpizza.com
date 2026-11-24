@@ -5,10 +5,7 @@ type: product
 tags: [product, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< HEAD
-=======
 qmd: "user product"
->>>>>>> laraxot/dev
 ---
 
 # user — product

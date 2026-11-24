@@ -16,6 +16,7 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
  * {@see ResolveLogFilePathAction}, quindi non si puo' uscire da storage/logs.
  *
  * @see docs/contracts/download-log-file-action.md
+ *
  * @contract docs/contracts/download-log-file-action.md
  */
 class DownloadLogFileAction

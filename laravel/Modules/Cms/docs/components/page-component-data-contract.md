@@ -79,6 +79,16 @@ Poi ogni blocco viene incluso:
 ```
 Questo espone `$container0`, `$slug0`, `$event`, `$item`, ecc. nel blocco incluso.
 
+## `item` gia' risolto dalla pagina Folio
+
+Per le rotte dinamiche (`container0` + `slug0` nel data bag) il componente risolve il contenitore CMS con `ResolvePageAction`
+e risponde 404 se non c'e' ne' un modello ne' una pagina CMS. Se pero' la pagina Folio passa gia' un `item` (oggetto) nel
+data bag, il componente **non** lo rilegge e **non** decide la visibilita': il record e' stato risolto e autorizzato dal
+codice della pagina (es. `Event::visibleTo()` per `/events/{slug}`, con anteprima della bozza al proprietario; `User` per
+`/profile/{id}`), non dall'URL. Prima di questa uscita un record valido dava 404 perche' `ResolvePageAction` non conosceva
+il contenitore (allowlist `container0_models` vuota). Gli identificativi senza `item` seguono invece la risoluzione di
+`ResolvePageAction` (vedi [container0-model-allowlist](../adr/container0-model-allowlist.md)).
+
 ## Regola: non aggiungere parametri espliciti al costruttore
 
 NON aggiungere parametri come `container0`, `slug0`, `container1` al costruttore del `Page` component.

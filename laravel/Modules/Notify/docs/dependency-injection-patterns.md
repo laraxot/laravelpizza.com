@@ -99,6 +99,10 @@ This approach aligns with:
 - **Clean Code Principles**: Appropriate tool for the specific use case
 - **DRY + KISS**: Simple and effective implementation
 - **Project Preferences**: Following established patterns in the codebase
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -111,3 +115,8 @@ qmd: "dependency injection patterns"
 issues: []
 discussions: []
 *Documento conforme agli standard Laraxot - DRY + KISS + SOLID*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

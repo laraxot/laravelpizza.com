@@ -234,7 +234,14 @@ Create these NotebookLM notebooks:
 
 ### 1. Laraxot Framework Docs
 - **Upload**: Laraxot documentation, AGENTS.md, .windsurfrules
+<<<<<<< HEAD
 - **Upload**: Laraxot documentation, AGENTS.md, .windsurfrules
+=======
+<<<<<<< HEAD
+- **Upload**: Laraxot documentation, AGENTS.md, .windsurfrules
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **Topics**: laravel, architecture, modules, filament, xot
 - **Use**: Technical research, implementation verification
 
@@ -362,6 +369,10 @@ DEFAULT_NOTEBOOK_ID=ptv-project-docs
 - **Integration Guide**: `docs/project/notebooklm-integration.md`
 - **Scripts**: `~/.claude/skills/notebooklm/scripts/`
 - **GitHub**: https://github.com/PleasePrompto/notebooklm-skill
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -376,3 +387,8 @@ discussions: []
 **Status**: ✅ Ready for authentication and notebook creation  
 **Last Updated**: 2026-03-30  
 **Integrated By**: AI Agent (BMAD + GSD + Ralph Workflow)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -11,6 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/save-tenant-config-action.md
+ *
  * @contract docs/contracts/save-tenant-config-action.md
  */
 class SaveTenantConfigAction

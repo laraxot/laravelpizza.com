@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Errore VoltDirectiveMissingException in Folio"
 type: note
 qmd: "volt folio error errore voltdirectivemissingexception"
 ---
->>>>>>> laraxot/dev
 # Errore VoltDirectiveMissingException in Folio
 
 ## Il Problema

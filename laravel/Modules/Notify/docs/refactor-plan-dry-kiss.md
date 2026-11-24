@@ -154,6 +154,10 @@ Creare sistema di navigazione coerente:
 - Navigazione intuitiva
 - Documentazione completa e aggiornata
 - Onboarding sviluppatori semplificato
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -169,3 +173,8 @@ discussions: []
 **Priorità**: Alta  
 **Responsabile**: Sistema automatico  
 **Deadline**: Immediata
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

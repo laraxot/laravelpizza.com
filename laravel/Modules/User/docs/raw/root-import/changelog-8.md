@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Changelog"
 type: note
 qmd: "changelog 8"
 ---
->>>>>>> laraxot/dev
 # Changelog
 
 Tutte le modifiche notevoli a questo modulo saranno documentate in questo file.

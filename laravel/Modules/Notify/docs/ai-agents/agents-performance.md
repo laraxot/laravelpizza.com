@@ -3,7 +3,19 @@ title: "agents performance"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "agents performance"
 issues: []
 discussions: []
@@ -20,6 +32,10 @@ Best practices per l'ottimizzazione delle performance.
 - Implement **caching** for frequently accessed data
 - Use Laravel's query builder for complex operations
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "agents performance"
@@ -39,6 +55,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Frontend Optimization
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Core Web Vitals 2026
 
 | Metrica | Target | Importanza |
@@ -62,6 +85,26 @@ discussions: []
 
 - [Indice AGENTS](./agents-split-index.md)
 - [website-checklist.md](./website-checklist.md) - Checklist completa
+<<<<<<< HEAD
 - [AGENTS.md originale](../../AGENTS.md)
 - [AGENTS.md originale](../../AGENTS.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [AGENTS.md originale](../../AGENTS.md)
+- [AGENTS.md originale](../../AGENTS.md)
+=======
+<<<<<<< HEAD
+- [AGENTS.md originale](../../agents.md)
+- [agents.md originale](../../agents.md)
+=======
+- [AGENTS.md originale](../../AGENTS.md)
+- [AGENTS.md originale](../../AGENTS.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [AGENTS.md originale](../../agents.md)
+- [agents.md originale](../../agents.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Index principale](./index.md)

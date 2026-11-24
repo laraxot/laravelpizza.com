@@ -23,6 +23,10 @@ discussions: []
 
 > **Citizens know what happens to their report.** Email, templates, channels — enterprise notification orchestration.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "readme en"
@@ -62,6 +66,16 @@ Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filamen
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Why it exists
+## Superpowers
+## Certifications
+## Join the team
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Documentation
 
 | Language | Link |

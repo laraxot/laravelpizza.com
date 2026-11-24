@@ -22,7 +22,9 @@
         </script>
         @filamentStyles
     @endif
-    @vite(['resources/css/app.css'], 'themes/'.$pubTheme)
+    @vite([$stylesheet], 'themes/'.$pubTheme)
+    {{-- Tag aggiunti dalle pagine e dai layout (@push('head'): JSON-LD dell'evento, JS del tema). --}}
+    @stack('head')
     {{-- Stili dei blocchi della pagina (@push('styles'), per esempio content.simple): senza lo stack non arrivavano mai. --}}
     @stack('styles')
 </head>

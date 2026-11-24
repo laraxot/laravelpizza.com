@@ -207,8 +207,5 @@ xot.code-workspace
 .qwen/
 .php-cs-fixer.php
 .php-cs-fixer.dist.php
-<<<<<<< .merge_file_PIqIOf
-=======
 tests/coverage-*.*
 docs/screenshots/
->>>>>>> .merge_file_5xrpHf

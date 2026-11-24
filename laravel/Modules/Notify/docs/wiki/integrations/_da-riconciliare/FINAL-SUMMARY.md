@@ -7,7 +7,19 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 # 📊 NOTIFY - RIEPILOGO FINALE COMPLETAMENTO
@@ -47,7 +59,23 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
 ### 👥 Modulo User (3)
 11. ✅ **2FA_GUIDE.md** - Implementazione 2FA completa (TOTP, recovery codes, testing)
 12. ✅ **SSO_GUIDE.md** - SAML 2.0 + OIDC completo (Azure AD, Google, Okta)
+<<<<<<< HEAD
 13. ✅ **ROADMAP.md** - Aggiornata Q4 2025-Q1 2026
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+13. ✅ **roadmap.md** - Aggiornata Q4 2025-Q1 2026
+=======
+<<<<<<< HEAD
+13. ✅ **ROADMAP.md** - Aggiornata Q4 2025-Q1 2026
+=======
+13. ✅ **roadmap.md** - Aggiornata Q4 2025-Q1 2026
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+13. ✅ **ROADMAP.md** - Aggiornata Q4 2025-Q1 2026
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### 🎨 Tema Sixteen (1)
 14. ✅ **ROADMAP_2025.md** - Aggiornata Q4 2025-Q2 2026
@@ -145,7 +173,23 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
     │
     ├── Modules/User/docs/              ✅ 92% COMPLETO
     │   ├── README.md                   ✅ Completo
+<<<<<<< HEAD
     │   ├── ROADMAP.md                  ✅ Aggiornato
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    │   ├── roadmap.md                  ✅ Aggiornato
+=======
+<<<<<<< HEAD
+    │   ├── ROADMAP.md                  ✅ Aggiornato
+=======
+    │   ├── roadmap.md                  ✅ Aggiornato
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+    │   ├── ROADMAP.md                  ✅ Aggiornato
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
     │   ├── 2FA_GUIDE.md                ✅ NEW - Implementazione completa
     │   ├── SSO_GUIDE.md                ✅ NEW - SAML + OIDC
     │   └── API.md                      📋 TODO
@@ -215,7 +259,23 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
 - ✅ **ROADMAP_STATUS_SUMMARY.md** - Master status
 - ✅ **App/ROADMAP_2025.md** - Timeline Q4 2025-Q2 2026
 - ✅ **<nome progetto>/ROADMAP_2025.md** - Timeline Q4 2025-Q2 2026
+<<<<<<< HEAD
 - ✅ **User/ROADMAP.md** - Timeline Q4 2025-Q1 2026
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- ✅ **User/roadmap.md** - Timeline Q4 2025-Q1 2026
+=======
+<<<<<<< HEAD
+- ✅ **User/ROADMAP.md** - Timeline Q4 2025-Q1 2026
+=======
+- ✅ **User/roadmap.md** - Timeline Q4 2025-Q1 2026
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- ✅ **User/ROADMAP.md** - Timeline Q4 2025-Q1 2026
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - ✅ **Sixteen/ROADMAP_2025.md** - Timeline Q4 2025-Q2 2026
 
 ---
@@ -297,6 +357,15 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
 - **Slack**: #laraxot-dev
 
 ### Per Utenti
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **User Guide**: [USER_GUIDE.md](./laravel/Modules/App/docs/user_guide.md)
 - **Admin Guide**: [ADMIN_GUIDE.md](./laravel/Modules/App/docs/admin_guide.md)
 - **Support**: support@laraxot.it
@@ -314,6 +383,12 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
 - **API Documentation**: [API.md](./laravel/Modules/<nome progetto>/docs/api.md)
 - **2FA Guide**: [2FA_GUIDE.md](./laravel/Modules/User/docs/2fa_guide.md)
 - **SSO Guide**: [SSO_GUIDE.md](./laravel/Modules/User/docs/sso_guide.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **User Guide**: [USER_GUIDE.md](./laravel/Modules/App/docs/USER_GUIDE.md)
 - **Admin Guide**: [ADMIN_GUIDE.md](./laravel/Modules/App/docs/ADMIN_GUIDE.md)
 - **Support**: support@laraxot.it
@@ -331,6 +406,15 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
 - **API Documentation**: [API.md](./laravel/Modules/<nome progetto>/docs/API.md)
 - **2FA Guide**: [2FA_GUIDE.md](./laravel/Modules/User/docs/2FA_GUIDE.md)
 - **SSO Guide**: [SSO_GUIDE.md](./laravel/Modules/User/docs/SSO_GUIDE.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 
@@ -370,7 +454,23 @@ Il progetto <nome progetto> ha raggiunto un livello di documentazione e organizz
 ### Modulo User
 - [x] 2FA_GUIDE.md creato
 - [x] SSO_GUIDE.md creato
+<<<<<<< HEAD
 - [x] ROADMAP.md aggiornato
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [x] roadmap.md aggiornato
+=======
+<<<<<<< HEAD
+- [x] ROADMAP.md aggiornato
+=======
+- [x] roadmap.md aggiornato
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [x] ROADMAP.md aggiornato
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [ ] API.md da creare
 
 ### Tema Sixteen

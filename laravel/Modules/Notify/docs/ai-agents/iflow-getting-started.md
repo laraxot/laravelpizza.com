@@ -19,6 +19,10 @@ discussions: []
 
 Come iniziare a lavorare sul progetto.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "iflow getting started"
@@ -35,6 +39,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🚀 In 3 Passi
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ### 1. Leggi le Regole Critiche
 
 - `laravel/Modules/Xot/docs/critical-rules-consolidated.md`
@@ -78,7 +89,14 @@ Confronta con `https://laravelpizza.com` e trova le differenze da colmare.
 
 - **MAI** creare file .md in posizioni sbagliate
 - **MAI** usare maiuscole nei nomi .md (eccetto README.md e CHANGELOG.md)
+<<<<<<< HEAD
 - **MAI** usare maiuscole nei nomi .md (eccetto README.md e CHANGELOG.md)
+=======
+<<<<<<< HEAD
+- **MAI** usare maiuscole nei nomi .md (eccetto README.md e CHANGELOG.md)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **SEMPRE** usare PHPStan Level 10 dopo aver modificato un file
 - **SEMPRE** eseguire PHPMD e PHPInsights
 - **MAI** usare `property_exists()` su modelli Eloquent

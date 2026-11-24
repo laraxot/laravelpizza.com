@@ -125,6 +125,10 @@ Channel-specific logic can be extended by adding methods to ChannelEnum:
 - New validation rules
 - Additional configuration options
 - Channel-specific processing rules
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -139,3 +143,8 @@ discussions: []
 **Implemented by**: iFlow CLI  
 **Pattern**: Enum-driven architecture  
 **Compliance**: DRY + KISS + Type Safety
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

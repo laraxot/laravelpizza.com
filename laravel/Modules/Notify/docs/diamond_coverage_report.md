@@ -16,6 +16,10 @@ discussions: []
 **Obiettivo**: 100% Test Coverage  
 **Status**: 🚀 IN PROGRESS  
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "diamond coverage report"
@@ -32,6 +36,13 @@ Raggiungere il **100% di test coverage** su tutti i moduli critici con test comp
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 OBIETTIVO DIAMANTE
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📊 TEST SUITES CREATE (8 totali)
 
 ### Modulo Fixcity (4 suites)

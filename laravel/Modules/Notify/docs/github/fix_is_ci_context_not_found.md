@@ -16,6 +16,10 @@ discussions: []
 > **Stato**: ✅ RISOLTO  
 > **Priorità**: Critica
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "fix is ci context not found"
@@ -43,6 +47,15 @@ bashscripts/git/subtrees/sync_remote_repo.sh: line 50: is_interactive_shell: com
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🚨 Problema
+### Errori Segnalati
+### Sintomi
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🔍 Causa Radice
 
 ### Due Versioni dello Script

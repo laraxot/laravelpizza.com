@@ -2,10 +2,28 @@
 title: "Audit approfondito modulo Notify"
 type: audit
 status: review
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-11-16
+module: Notify
+qmd: "audit approfondito Notify inventario PHPStan Pest policy NotificationLog webhook inbound canali Filament Actions"
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 updated: 2026-11-23
 module: Notify
 qmd: "audit approfondito Notify inventario PHPStan Pest policy NotificationLog webhook inbound canali Filament Actions"
 created: 2026-11-23
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 # Audit approfondito — Notify

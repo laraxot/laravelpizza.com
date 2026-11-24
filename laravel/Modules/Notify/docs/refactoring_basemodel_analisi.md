@@ -16,6 +16,10 @@ discussions: []
 **ROI Opportunità**: 517,275%
 **Linee Eliminabili**: ~8,868
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "refactoring basemodel analisi"
@@ -36,6 +40,14 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Domanda Iniziale
+## ✅ RISPOSTA: SÌ, SONO D'ACCORDO
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📊 Situazione Attuale (Stato AS-IS)
 
 ### Gerarchia Esistente

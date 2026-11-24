@@ -18,15 +18,7 @@ cd laravel/Modules/UI/docs
 rm -f advanced_form_components.md
 rm -f blade_data_handling.md
 rm -f naming_conventions.md
-<<<<<<< HEAD
-<<<<<<< HEAD
 rm -f phpstan_fixes_2025.md
-=======
-rm -f phpstan_fixes.md
->>>>>>> laraxot/dev
-=======
-rm -f phpstan_fixes_2025.md
->>>>>>> laraxot/dev
 ```
 
 ## File Duplicati da Eliminare
@@ -71,15 +63,7 @@ rm -f naming_conventions.md
 rm -f naming_rules.md
 
 # PHPStan
-<<<<<<< HEAD
-<<<<<<< HEAD
 rm -f phpstan_fixes_2025.md
-=======
-rm -f phpstan_fixes.md
->>>>>>> laraxot/dev
-=======
-rm -f phpstan_fixes_2025.md
->>>>>>> laraxot/dev
 rm -f phpstan_corrections_summary.md
 rm -f phpstan_radio_badge_fix.md
 
@@ -110,15 +94,7 @@ mv dry-kiss-analysis-[DATE].md archive/dry-kiss-analysis.md 2>/dev/null
 mv phpstan-level-10-cleanup-[DATE].md archive/phpstan-level-10-cleanup.md 2>/dev/null
 
 # Consolidare file PHPStan con date
-<<<<<<< HEAD
-<<<<<<< HEAD
 # phpstan-fixes-correzioni-gennaio.md → consolidare in phpstan-compliance.md
-=======
-# phpstan-fixes.md → consolidare in phpstan-compliance.md
->>>>>>> laraxot/dev
-=======
-# phpstan-fixes-correzioni-gennaio.md → consolidare in phpstan-compliance.md
->>>>>>> laraxot/dev
 ```
 
 ## File con Maiuscole da Rinominare

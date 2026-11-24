@@ -147,6 +147,10 @@ class RoadmapMetricsUpdater
 **PHPStan**: [✅/🚧] Level [X] ([X] errori)  
 **Filament**: [✅/🚧] 4.x Compatibile  
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "roadmap update system"
@@ -185,6 +189,20 @@ discussions: []
 [Success criteria and goals]
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 🎯 MODULE OVERVIEW
+## ✅ COMPLETED FEATURES
+## 🚧 IN PROGRESS FEATURES
+## 📅 PLANNED FEATURES
+## 🛠️ TECHNICAL IMPROVEMENTS
+## 🎯 SUCCESS METRICS
+## 🛠️ IMPLEMENTATION PLAN
+## 🎯 IMMEDIATE NEXT STEPS
+## 🏆 SUCCESS CRITERIA
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 **Status**: [Status]  
 **Confidence Level**: [X]%  

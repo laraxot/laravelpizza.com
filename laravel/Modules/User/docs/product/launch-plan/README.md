@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "User Module - Product Launch Plan"
 type: note
 qmd: "user product launch plan"
 ---
->>>>>>> laraxot/dev
 # User Module - Product Launch Plan
 
 ## Launch Overview

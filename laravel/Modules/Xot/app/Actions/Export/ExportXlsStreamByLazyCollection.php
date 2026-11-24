@@ -17,6 +17,7 @@ use function Safe\fputcsv;
 
 /**
  * @see docs/contracts/export-xls-stream-by-lazy-collection.md
+ *
  * @contract docs/contracts/export-xls-stream-by-lazy-collection.md
  */
 class ExportXlsStreamByLazyCollection

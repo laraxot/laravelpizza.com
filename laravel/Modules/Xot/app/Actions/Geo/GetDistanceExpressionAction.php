@@ -13,7 +13,9 @@ use Spatie\QueueableAction\QueueableAction;
  *
  * Questa action centralizza la logica di generazione dell'espressione SQL
  * per il calcolo della distanza tra due punti geografici.
+ *
  * @see docs/contracts/get-distance-expression-action.md
+ *
  * @contract docs/contracts/get-distance-expression-action.md
  */
 class GetDistanceExpressionAction

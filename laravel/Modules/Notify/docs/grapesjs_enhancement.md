@@ -13,6 +13,10 @@ discussions: []
 
 Questo documento analizza il plugin [Dotswan GrapesJS](https://filamentphp.com/plugins/dotswan-grapesjs) per Filament e propone una versione in-house open source migliorata.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "grapesjs enhancement"
@@ -145,6 +149,22 @@ class PublishPageTemplateAction {
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 1. Plugin di riferimento
+## 2. Funzionalità chiave del plugin
+## 3. Gap e Limitazioni
+## 4. Obiettivi Soluzione In-House
+## 5. Architettura Proposta
+### 5.1 Migrazione e Modello
+### 5.2 Filament Resource
+### 5.3 Stati Template
+### 5.4 Queueable Actions
+## 6. Vantaggi
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 **Link Utili**:
 
 - Plugin ufficiale: https://filamentphp.com/plugins/dotswan-grapesjs

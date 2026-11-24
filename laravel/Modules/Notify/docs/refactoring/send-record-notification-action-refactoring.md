@@ -190,6 +190,10 @@ private function sendNotification(Model $record, string $templateSlug, ChannelEn
 - [x] Extensibility improved
 - [x] Performance maintained
 - [x] Test compatibility preserved
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -204,3 +208,8 @@ discussions: []
 **Refactored by**: iFlow CLI  
 **Compliance**: 100% DRY + KISS + Clean Code  
 **Status**: Ready for production deployment
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

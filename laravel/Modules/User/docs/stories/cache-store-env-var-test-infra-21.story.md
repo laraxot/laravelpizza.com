@@ -20,10 +20,7 @@ related:
 github:
   repository: null
   issues: []
-<<<<<<< HEAD
-=======
 qmd: "cache store env var test infra"
->>>>>>> laraxot/dev
 ---
 
 # phpunit.xml: CACHE_DRIVER non ha effetto, serve CACHE_STORE

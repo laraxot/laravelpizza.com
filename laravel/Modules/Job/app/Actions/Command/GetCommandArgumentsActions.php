@@ -9,6 +9,7 @@ use Symfony\Component\Console\Command\Command;
 
 /**
  * @see docs/contracts/get-command-arguments-actions.md
+ *
  * @contract docs/contracts/get-command-arguments-actions.md
  */
 class GetCommandArgumentsActions

@@ -13,15 +13,9 @@ return [
     'fields' => [
         'authenticatable' => [
             'name' => [
-<<<<<<< HEAD
-                'label' => 'Utente autenticato',
-            ],
-            'label' => 'Utente autenticato',
-=======
                 'label' => 'authenticatable.name',
             ],
             'label' => '',
->>>>>>> laraxot/dev
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -30,15 +24,6 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-<<<<<<< HEAD
-            'label' => 'Ora accesso',
-        ],
-        'ip_address' => [
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-            'label' => 'Indirizzo IP',
-=======
             'label' => 'login_at',
         ],
         'ip_address' => [
@@ -46,7 +31,6 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
->>>>>>> laraxot/dev
         ],
         'user_agent' => [
             'label' => 'Browser (user agent)',
@@ -80,61 +64,15 @@ return [
             'description' => '',
         ],
         'user' => [
-<<<<<<< HEAD
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
-            'label' => 'Utente',
-=======
             'label' => 'Utente',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
->>>>>>> laraxot/dev
         ],
     ],
     'actions' => [
         'reorderRecords' => [
             'icon' => 'reorderRecords',
-<<<<<<< HEAD
-            'label' => 'Riordina',
-        ],
-        'openColumnManager' => [
-            'icon' => 'openColumnManager',
-            'label' => 'Gestisci colonne',
-        ],
-        'applyTableColumnManager' => [
-            'icon' => 'applyTableColumnManager',
-            'label' => 'Applica colonne',
-        ],
-        'resetFilters' => [
-            'icon' => 'resetFilters',
-            'label' => 'Reimposta filtri',
-        ],
-        'applyFilters' => [
-            'icon' => 'applyFilters',
-            'label' => 'Applica filtri',
-        ],
-        'openFilters' => [
-            'icon' => 'openFilters',
-            'label' => 'Apri filtri',
-        ],
-        'resetColumnManager' => [
-            'icon' => 'resetColumnManager',
-            'label' => 'Reimposta colonne',
-        ],
-        'delete' => [
-            'icon' => 'delete',
-            'label' => 'Elimina',
-        ],
-        'layout' => [
-            'icon' => 'layout',
-            'label' => 'Layout',
-        ],
-        'create' => [
-            'icon' => 'create',
-            'label' => 'Crea',
-=======
             'label' => 'reorderRecords',
         ],
         'openColumnManager' => [
@@ -172,7 +110,6 @@ return [
         'create' => [
             'icon' => 'create',
             'label' => 'create',
->>>>>>> laraxot/dev
         ],
     ],
     'navigation' => [

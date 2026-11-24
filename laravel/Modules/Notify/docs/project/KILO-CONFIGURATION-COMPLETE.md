@@ -3,7 +3,19 @@ title: "KILO CONFIGURATION COMPLETE"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "KILO CONFIGURATION COMPLETE"
 issues: []
 discussions: []
@@ -16,6 +28,10 @@ discussions: []
 **Config File**: `.kilo/kilo.jsonc` (symlink → `bashscripts/ai/.agents/kilo.jsonc`)  
 **Schema**: https://app.kilo.ai/config.json
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "KILO CONFIGURATION COMPLETE"
@@ -44,6 +60,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Cos'è Kilo Code
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Configurazione Notify
 
 ### File di Configurazione
@@ -69,10 +92,25 @@ discussions: []
   
   // Documentazione per contesto AI
   "instructions": [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
     "agents.md",
     "laravel/agents.md"
     "agents.md",
     "laravel/agents.md"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
     "AGENTS.md",
     "laravel/AGENTS.md"
   ],
@@ -116,7 +154,23 @@ discussions: []
 | `autoupdate` | boolean | Auto-update | `true` |
 | `snapshot` | boolean | Snapshot | `true` |
 | `mcp` | object | MCP servers | `{}` |
+<<<<<<< HEAD
 | `instructions` | array | Docs contesto | `["agents.md", ...]` |
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+| `instructions` | array | Docs contesto | `["AGENTS.md", ...]` |
+=======
+<<<<<<< HEAD
+| `instructions` | array | Docs contesto | `["agents.md", ...]` |
+=======
+| `instructions` | array | Docs contesto | `["AGENTS.md", ...]` |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+| `instructions` | array | Docs contesto | `["agents.md", ...]` |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 | `tools` | object | Tool abilitati | `{write, edit, bash...}` |
 | `permission` | object | Permessi | `{bash: "ask", ...}` |
 | `experimental` | object | Feature sperimentali | `{}` |
@@ -200,7 +254,23 @@ Ctrl+Q         - Esci
 Kilo legge automaticamente:
 
 1. **AGENTS.md** - Contesto principale
+<<<<<<< HEAD
 2. **laravel/agents.md** - Contesto Laravel
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+2. **laravel/AGENTS.md** - Contesto Laravel
+=======
+<<<<<<< HEAD
+2. **laravel/agents.md** - Contesto Laravel
+=======
+2. **laravel/AGENTS.md** - Contesto Laravel
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+2. **laravel/agents.md** - Contesto Laravel
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### Per Aggiungere Altra Docs
 
@@ -209,10 +279,25 @@ Modifica `.kilo/kilo.jsonc`:
 ```jsonc
 {
   "instructions": [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
     "agents.md",
     "laravel/agents.md",
     "agents.md",
     "laravel/agents.md",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
     "AGENTS.md",
     "laravel/AGENTS.md",
     "docs/**/*.md",                    // Tutta la docs

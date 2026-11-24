@@ -431,6 +431,10 @@ return [
 - **2025-01**: Aggiunta traduzioni EN, IT, DE
 - **2025-01**: Implementazione `columns()` metodo unificato CREATE/UPDATE
 - **2025-01**: Pattern DRY + KISS ispirato da AddressItemEnum e workers_table
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -444,3 +448,8 @@ issues: []
 discussions: []
 > **Nota**: Questo documento segue la filosofia del progetto: Scopo, Logica, Filosofia, Politica, Religione, Zen.
 > Ogni modifica all'enum DEVE essere documentata e tradotta.
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

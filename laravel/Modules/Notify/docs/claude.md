@@ -12,6 +12,10 @@ discussions: []
 <!-- CLAUDE SPLIT STUB
 - Split index: .agents/docs/root-claude/index.md
 - AI docs index: .agents/docs/index.md
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 title: "claude root stub"
 type: concept
@@ -31,6 +35,11 @@ related:
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 <!-- CLAUDE SPLIT STUB
 - Split index: .agents/docs/root-claude/index.md
@@ -46,7 +55,16 @@ Questo file e' uno stub corto per ridurre token.
 - [Root CLAUDE index](./.agents/docs/root-claude/index.md)
 - [AI docs index](./.agents/docs/index.md)
 - [Docs CLAUDE index](./.agents/docs/claude/index.md)
+<<<<<<< HEAD
 - [Root CLAUDE index](./.agents/docs/root-claude/index.md)
 - [AI docs index](./.agents/docs/index.md)
 - [Docs CLAUDE index](./.agents/docs/claude/index.md)
+=======
+<<<<<<< HEAD
+- [Root CLAUDE index](./.agents/docs/root-claude/index.md)
+- [AI docs index](./.agents/docs/index.md)
+- [Docs CLAUDE index](./.agents/docs/claude/index.md)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **LLM‑Wiki rule** – Every module and theme must contain a `docs/wiki/` directory (and the corresponding `llm‑wiki` scaffolding).

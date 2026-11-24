@@ -10,9 +10,19 @@ use function Safe\preg_split;
 
 /**
  * Azione per l'invio di SMS tramite Agile Telecom.
+<<<<<<< HEAD
+ *
+ * @see docs/contracts/format-sms-message-action.md
+ *
+ * @contract docs/contracts/format-sms-message-action.md
+=======
+<<<<<<< HEAD
+=======
  *
  * @see docs/contracts/format-sms-message-action.md
  * @contract docs/contracts/format-sms-message-action.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
  */
 class FormatSmsMessageAction
 {

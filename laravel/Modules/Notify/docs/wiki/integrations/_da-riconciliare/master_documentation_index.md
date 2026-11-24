@@ -7,7 +7,19 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -28,7 +40,25 @@ status: draft
 
 ### Per Sviluppatori
 - [Architecture Overview](./architecture/README.md)
+<<<<<<< HEAD
 - [Getting Started](../../../GETTING_STARTED.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Getting Started](../../../GETTING_STARTED.md)
+- [Getting Started](../../../GETTING_STARTED.md)
+=======
+<<<<<<< .merge_file_KLp0Mn
+- [Getting Started](./GETTING_STARTED.md)
+=======
+- [Getting Started](../../../GETTING_STARTED.md)
+- [Getting Started](../../../GETTING_STARTED.md)
+>>>>>>> .merge_file_QE5d84
+>>>>>>> laraxot/dev
+=======
+- [Getting Started](../../../GETTING_STARTED.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Coding Standards](./conventions/README.md)
 
 ### Per AI Agents
@@ -67,8 +97,26 @@ status: draft
 
 ### 📊 Reports
 - [Status Reports](./reports/README.md)
+<<<<<<< HEAD
 - [Quality Reports](../../../roadmap/quality.md)
 - [Quality Reports](../../../roadmap/quality.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Quality Reports](../../../roadmap/quality.md)
+- [Quality Reports](../../../roadmap/quality.md)
+=======
+<<<<<<< .merge_file_KLp0Mn
+- [Quality Reports](./reports/quality.md)
+=======
+- [Quality Reports](../../../roadmap/quality.md)
+- [Quality Reports](../../../roadmap/quality.md)
+>>>>>>> .merge_file_QE5d84
+>>>>>>> laraxot/dev
+=======
+- [Quality Reports](../../../roadmap/quality.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Performance Reports](./reports/performance.md)
 
 ---

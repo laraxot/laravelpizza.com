@@ -189,6 +189,10 @@ Lo script `bashscripts/create_svg_structure.sh` è stato utilizzato per creare a
 - [Componenti UI](./ui-components.md)
 - [Best Practices Filament](../filament/best-practices.md)
 - [Script di Automazione](../../bashscripts/create_svg_structure.sh)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -202,3 +206,8 @@ issues: []
 discussions: []
 *Struttura SVG creata: Agosto 2025*
 *Responsabile: DRY + KISS SVG Structure* 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

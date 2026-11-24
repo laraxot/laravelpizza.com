@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 /**
  * @see docs/contracts/pdf-by-html-action-portrait.md
+ *
  * @contract docs/contracts/pdf-by-html-action-portrait.md
  */
 class PdfByHtmlAction_Portrait

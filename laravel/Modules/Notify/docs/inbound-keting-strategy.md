@@ -13,6 +13,10 @@ discussions: []
 **Module**: Notify
 **Scope**: Strategia inbound marketing per lead generation
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "inbound keting strategy"
@@ -29,6 +33,13 @@ Il sito target ha una base di inbound marketing decente con lead magnets e newsl
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📋 Sommario Esecutivo
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🎯 Funnel di Conversione Inbound
 
 ### Stage 1: Attract (Attrazione)

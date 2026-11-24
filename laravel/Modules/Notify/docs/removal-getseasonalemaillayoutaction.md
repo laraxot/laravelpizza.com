@@ -123,6 +123,10 @@ Delega semplice invece di azione complessa separata.
 2. **Rispettare DRY**: Se la logica esiste già, riutilizzarla invece di duplicarla
 3. **KISS prima di tutto**: La soluzione più semplice è spesso la migliore
 4. **Separazione responsabilità**: La logica di contesto stagionale appartiene al modulo core (Xot), non al modulo specifico (Notify)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -136,3 +140,8 @@ issues: []
 discussions: []
 **Ultimo aggiornamento**: 19 Dicembre 2025  
 **Filosofia**: *"Type safety first, simplicity second, DRY always"*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

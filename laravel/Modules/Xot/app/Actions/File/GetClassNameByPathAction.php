@@ -11,6 +11,7 @@ use function Safe\preg_match;
 
 /**
  * @see docs/contracts/get-class-name-by-path-action.md
+ *
  * @contract docs/contracts/get-class-name-by-path-action.md
  */
 class GetClassNameByPathAction

@@ -9,10 +9,21 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\preg_replace;
 
+<<<<<<< HEAD
+/**
+ * @see docs/contracts/normalize-phone-number-action.md
+ *
+ * @contract docs/contracts/normalize-phone-number-action.md
+ */
+=======
+<<<<<<< HEAD
+=======
 /**
  * @see docs/contracts/normalize-phone-number-action.md
  * @contract docs/contracts/normalize-phone-number-action.md
  */
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 class NormalizePhoneNumberAction
 {
     use QueueableAction;

@@ -71,7 +71,7 @@ final class Ensure
     }
 
     /**
-     * @param list<int|string> $keys
+     * @param  list<int|string>  $keys
      */
     public function toHaveKeys(array $keys): self
     {
@@ -97,8 +97,8 @@ final class Ensure
     }
 
     /**
-     * @param callable(): mixed $callback
-     * @param class-string<Throwable> $exception
+     * @param  callable(): mixed  $callback
+     * @param  class-string<Throwable>  $exception
      */
     public static function throws(callable $callback, string $exception, ?string $message = null): void
     {

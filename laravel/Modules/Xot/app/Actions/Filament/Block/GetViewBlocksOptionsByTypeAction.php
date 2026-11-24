@@ -17,7 +17,9 @@ use Webmozart\Assert\Assert;
 
 /**
  * Classe per ottenere le opzioni dei blocchi di vista per un tipo specifico.
+ *
  * @see docs/contracts/get-view-blocks-options-by-type-action.md
+ *
  * @contract docs/contracts/get-view-blocks-options-by-type-action.md
  */
 class GetViewBlocksOptionsByTypeAction

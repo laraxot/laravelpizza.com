@@ -43,6 +43,10 @@ Project Root:
 └── FILES-CREATED-SESSION-REPLIKATE.md  ✅ THIS FILE
 ```
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "files created session replikate"
@@ -67,6 +71,13 @@ discussions: []
 ```
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 🧪 Analysis Output Files
+### Temporary Analysis Directory
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## 📊 Document Summary
 

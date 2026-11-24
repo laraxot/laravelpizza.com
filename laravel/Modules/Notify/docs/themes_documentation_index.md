@@ -3,7 +3,19 @@ title: "themes documentation index"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "themes documentation index"
 issues: []
 discussions: []
@@ -28,12 +40,27 @@ Connects all theme docs with bidirectional links and visual architecture.
 
 **Core Documentation:**
 - [00-index.md](../laravel/Themes/Sixteen/docs/00-index.md) - Start here
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Design Comuni Integration](../laravel/Themes/Sixteen/docs/design-comuni-integration.md)
 - [Component Catalog](../laravel/Themes/Sixteen/docs/component_catalog.md)
 - [Layout Architecture](../laravel/Themes/Sixteen/docs/layout-hierarchy.md)
 - [00-index.md](../../../Themes/Sixteen/docs/00-index.md) - Start here
 - [Design Comuni Integration](../../../Themes/Sixteen/docs/design-comuni-integration.md)
 - [Component Catalog](../laravel/Themes/Sixteen/docs/component_catalog.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [00-index.md](../laravel/Themes/Sixteen/docs/00-index.md) - Start here
 - [Design Comuni Integration](../laravel/Themes/Sixteen/docs/design-comuni-integration.md)
 - [Component Catalog](../laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md)
@@ -42,6 +69,15 @@ Connects all theme docs with bidirectional links and visual architecture.
 - [00-index.md](../../../Themes/Sixteen/docs/00-index.md) - Start here
 - [Design Comuni Integration](../../../Themes/Sixteen/docs/design-comuni-integration.md)
 - [Component Catalog](../laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Layout Architecture](../../../Themes/Sixteen/docs/layout-hierarchy.md)
 
 **Directory Structure:**
@@ -340,7 +376,23 @@ Typography:
 
 | File | Purpose | View |
 |------|---------|------|
+<<<<<<< HEAD
 | `COMPONENT_CATALOG.md` | All 47 components listed | [View](../laravel/Themes/Sixteen/docs/component_catalog.md) |
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+| `COMPONENT_CATALOG.md` | All 47 components listed | [View](../laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md) |
+=======
+<<<<<<< HEAD
+| `COMPONENT_CATALOG.md` | All 47 components listed | [View](../laravel/Themes/Sixteen/docs/component_catalog.md) |
+=======
+| `COMPONENT_CATALOG.md` | All 47 components listed | [View](../laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md) |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+| `COMPONENT_CATALOG.md` | All 47 components listed | [View](../laravel/Themes/Sixteen/docs/component_catalog.md) |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 | `components/navigation.md` | Navigation components | [View](../laravel/Themes/Sixteen/docs/components/navigation.md) |
 | `components/forms.md` | Form components | [View](../laravel/Themes/Sixteen/docs/components/forms.md) |
 | `components/blocks.md` | Content blocks | [View](../laravel/Themes/Sixteen/docs/components/blocks.md) |
@@ -359,7 +411,23 @@ Typography:
 
 | File | Purpose | View |
 |------|---------|------|
+<<<<<<< HEAD
 | `guides/getting-started.md` | Theme setup | [View](GETTING-STARTED.md) |
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+| `guides/getting-started.md` | Theme setup | [View](GETTING-STARTED.md) |
+=======
+<<<<<<< HEAD
+| `guides/getting-started.md` | Theme setup | [View](getting-started.md) |
+=======
+| `guides/getting-started.md` | Theme setup | [View](GETTING-STARTED.md) |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+| `guides/getting-started.md` | Theme setup | [View](getting-started.md) |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 | `guides/adding-components.md` | Create new component | [View](../laravel/Themes/Sixteen/docs/guides/adding-components.md) |
 | `guides/styling-guide.md` | Styling best practices | [View](../laravel/Themes/Sixteen/docs/guides/styling-guide.md) |
 | `guides/responsive-design.md` | Mobile-first approach | [View](../laravel/Themes/Sixteen/docs/guides/responsive-design.md) |
@@ -473,14 +541,38 @@ public_html/assets/
 - **Architecture Diagrams:** [architecture-diagrams.md](architecture-diagrams.md)
 - **Module Docs Index:** [MODULE_DOCS_INDEX.md](module_docs_index.md)
 - **Master Index:** [00-index.md](../laravel/Themes/Sixteen/docs/00-index.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **Code Quality:** [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
 - **Framework Rules:** [../laravel/CLAUDE.md](../laravel/claude.md)
 - **Master Index:** [00-index.md](../../../Themes/Sixteen/docs/00-index.md)
 - **Code Quality:** [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **Code Quality:** [CODE_QUALITY_STANDARDS.md](CODE_QUALITY_STANDARDS.md)
 - **Framework Rules:** [../laravel/CLAUDE.md](../laravel/CLAUDE.md)
 - **Master Index:** [00-index.md](../../../Themes/Sixteen/docs/00-index.md)
 - **Code Quality:** [CODE_QUALITY_STANDARDS.md](CODE_QUALITY_STANDARDS.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **Framework Rules:** [../laravel/CLAUDE.md](../../../claude.md)
 
 ---

@@ -8,10 +8,7 @@ module: UI
 tags: [adr, blocks, filament, builder, convention]
 related:
   - ../contracts/get-all-blocks-action.md
-<<<<<<< HEAD
-=======
 qmd: "block discovery by filament blocks folder"
->>>>>>> laraxot/dev
 ---
 
 # ADR: scoperta dei blocchi per cartella e nome di classe

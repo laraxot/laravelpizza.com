@@ -36,6 +36,10 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 
 <!-- Merged from gemini.md, which collided with this file on case-insensitive filesystems. -->
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 title: "Gemini Rules (Modular)"
 type: concept
@@ -56,6 +60,11 @@ related:
   - "./action-plan-immediate.md"
 ---
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 # Gemini Rules (Modular)
 
 Questa documentazione è stata divisa in moduli per una gestione più efficiente del contesto.

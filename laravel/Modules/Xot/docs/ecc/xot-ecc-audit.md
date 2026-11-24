@@ -2,12 +2,59 @@
 title: "ECC audit operativo — Xot"
 type: ecc-audit
 status: review
-updated: 2026-11-16
+updated: 2026-11-24
 module: Xot
 qmd: "ECC audit Xot verification security testing laravel security-review clean-code laravel-verification verification-loop tdd-workflow"
 ---
 
 # ECC audit operativo — Xot
+
+## Aggiornamento audit — 2026-11-24
+
+### Gate statico corrente
+
+Il comando canonico è stato eseguito da `laravel/`:
+
+```text
+./vendor/bin/phpstan analyse Modules
+```
+
+Il gate non è certificabile come verde. PHPStan ha rilevato sei errori di
+parsing in `Modules/User` (due nella migration e quattro file di traduzione) e un
+errore interno di lettura della result cache condivisa. Questi file sono fuori
+dal perimetro modificabile di questo audit; nessun test o file di codice è stato
+toccato. Prima del prossimo gate occorre stabilizzare il worktree concorrente,
+risolvere i marker alla sorgente e usare una cache PHPStan privata.
+
+### Convenzioni verificate
+
+- `AGENTS.md` ora esplicita il contratto `@see`: il link deve usare la forma
+  `Modules/<Modulo>/docs/<file-kebab>.md` e il documento deve esistere nello
+  stesso cambiamento.
+- Le story attive Xot di PHPStan, conflitti e documentazione non sono una sola
+  fonte di stato: alcune conservano risultati storici `verified-zero` mentre il
+  gate corrente è rosso. Le evidenze datate restano storico, non certificazione.
+- La story `phpstan-modules-zero-swarm-standing.story.md` è stata riallineata
+  al gate corrente; la storia del precedente zero è conservata nel diario.
+- La story di risoluzione conflitti dichiarava contemporaneamente frontmatter
+  `active` e corpo `done`; il frontmatter è stato corretto a `done`.
+
+### Audit `@see` sui PHP recentemente osservabili
+
+Il controllo ha esaminato i riferimenti `@see` del perimetro Xot e ha
+verificato che i target dichiarati dal codice Xot esistano quando sono espressi
+come link locali canonici. Non è stato eseguito un backfill indiscriminato sui
+file invariati. Le difformità residue (forma relativa, FQCN o documenti non
+canonici) richiedono una modifica al PHP proprietario e quindi sono state solo
+registrate, perché questo incarico autorizza esclusivamente documentazione root
+e `Modules/Xot/docs`.
+
+### Conflitti Git residui nel codice attivo
+
+La scansione ha trovato marker fuori Xot, principalmente in `Modules/UI` e
+`Modules/User`, inclusi file applicativi, route e configurazione. Sono stati
+lasciati intatti per rispettare il perimetro. La loro presenza spiega perché un
+run globale possa fallire prima di valutare la qualità semantica del codice.
 
 ## Contratto PTVX
 

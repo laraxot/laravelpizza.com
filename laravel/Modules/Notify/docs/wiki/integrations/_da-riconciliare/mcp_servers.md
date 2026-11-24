@@ -7,7 +7,19 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -141,8 +153,26 @@ MCP (Model Context Protocol) servers provide AI assistants with persistent memor
   - `qmd update` - Re-index collections
   - `qmd embed` - Generate vector embeddings
 - **MCP**: `qmd mcp` (stdio transport)
+<<<<<<< HEAD
 - **Docs**: [qmd-local-docs-search.md](../../../project/qmd-local-docs-search.md)
 - **Docs**: [qmd-local-docs-search.md](../../../project/qmd-local-docs-search.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- **Docs**: [qmd-local-docs-search.md](../../../project/qmd-local-docs-search.md)
+- **Docs**: [qmd-local-docs-search.md](../../../project/qmd-local-docs-search.md)
+=======
+<<<<<<< .merge_file_j57djO
+- **Docs**: [qmd-local-docs-search.md](./project/qmd-local-docs-search.md)
+=======
+- **Docs**: [qmd-local-docs-search.md](../../../project/qmd-local-docs-search.md)
+- **Docs**: [qmd-local-docs-search.md](../../../project/qmd-local-docs-search.md)
+>>>>>>> .merge_file_6wESuZ
+>>>>>>> laraxot/dev
+=======
+- **Docs**: [qmd-local-docs-search.md](../../../project/qmd-local-docs-search.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Configuration
 

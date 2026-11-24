@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Generic User Moderation Strategy in User Module"
 type: note
 qmd: "generic user moderation strategy"
 ---
->>>>>>> laraxot/dev
 # Generic User Moderation Strategy in User Module
 
 ## Overview

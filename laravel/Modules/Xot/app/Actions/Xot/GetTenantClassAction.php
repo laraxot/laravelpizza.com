@@ -10,7 +10,9 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Replaces Modules\Xot\Services\XotService::getTenantClass().
+ *
  * @see docs/contracts/get-tenant-class-action.md
+ *
  * @contract docs/contracts/get-tenant-class-action.md
  */
 class GetTenantClassAction

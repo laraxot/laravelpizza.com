@@ -15,6 +15,10 @@ discussions: []
 **Auditor:** Documentation Quality System  
 **Scope:** All modules, themes, and project documentation
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "documentation audit"
@@ -48,6 +52,15 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Executive Summary
+### Key Findings
+### Critical Issues
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Exact Duplicate Files
 
 ### 1.1 Duplicate Patterns Identified

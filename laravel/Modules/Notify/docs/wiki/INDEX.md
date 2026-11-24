@@ -4,12 +4,36 @@ type: index
 module: Notify
 tags: [notify, wiki, index, qmd]
 created: 2026-04-15
+<<<<<<< HEAD
 updated: 2026-11-23
 qmd: "notify module wiki index notifications qmd second brain"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+updated: 2026-11-23
+qmd: "notify module wiki index notifications qmd second brain"
+=======
+>>>>>>> laraxot/dev
+updated: 2026-06-05
+qmd: "notify module wiki index notifications qmd second brain"
+>>>>>>> laraxot/dev
 # Da popolare con thread reali di git@github.com:laraxot/module_notify_fila5.git
 # (repo owner del modulo, vedi `git remote -v`). Le due voci precedenti puntavano
 # a `laraxot/platform` (repo inesistente) e a `laraxot/base_fixcity_fila5`
 # (progetto diverso): entrambe vietate dalla regola wiki-markdown-frontmatter-mandatory.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+qmd: "notify module wiki index notifications qmd second brain"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 issues: []
 discussions: []
 related:
@@ -18,10 +42,25 @@ related:
   - ../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md
   - ../../docs/wiki/concepts/ai-harness-module-discipline.md
 ---
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 # Da popolare con thread reali di git@github.com:laraxot/module_notify_fila5.git
 # (repo owner del modulo, vedi `git remote -v`). Le due voci precedenti puntavano
 # a `laraxot/platform` (repo inesistente) e a `laraxot/base_fixcity_fila5`
 # (progetto diverso): entrambe vietate dalla regola wiki-markdown-frontmatter-mandatory.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 # Knowledge Base Index
 

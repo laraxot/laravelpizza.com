@@ -3,7 +3,19 @@ title: "master documentation index"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "master documentation index"
 issues: []
 discussions: []
@@ -65,8 +77,27 @@ status: draft
 
 ### 📊 Reports
 - [Status Reports](./reports/README.md)
+<<<<<<< HEAD
 - [Quality Reports](roadmap/quality.md)
 - [Quality Reports](./roadmap/quality.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Quality Reports](roadmap/quality.md)
+- [Quality Reports](./roadmap/quality.md)
+=======
+<<<<<<< .merge_file_ok6BMV
+- [Quality Reports](./reports/quality.md)
+=======
+- [Quality Reports](roadmap/quality.md)
+- [Quality Reports](./roadmap/quality.md)
+>>>>>>> .merge_file_44X0Lb
+>>>>>>> laraxot/dev
+=======
+- [Quality Reports](roadmap/quality.md)
+- [Quality Reports](./roadmap/quality.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Performance Reports](./reports/performance.md)
 
 ---

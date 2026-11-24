@@ -17,6 +17,10 @@ discussions: []
 **Category**: Architecture / Religion / i18n  
 **Audience**: All developers + AI agents
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "translation namespace religion"
@@ -36,6 +40,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## LA REGOLA AUREA
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Perche (Filosofia Profonda)
 
 ### Il Problema: Namespace per Componente UI

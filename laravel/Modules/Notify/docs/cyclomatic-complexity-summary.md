@@ -14,6 +14,10 @@ discussions: []
 **Generated:** 2025-10-01 19:44:12  
 **Analyzer:** Super Mucca 🐮
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "cyclomatic complexity summary"
@@ -37,6 +41,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📊 Global Statistics
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📈 Global Complexity Distribution
 
 | Risk Level | Count | Percentage |

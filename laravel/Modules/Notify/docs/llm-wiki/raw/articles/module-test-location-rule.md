@@ -14,6 +14,10 @@ discussions: []
 **Fonte:** Incidente del 2026-04-21 — test del modulo Notify creati erroneamente nella root del progetto
 **Scope:** Architettura Laraxot — si applica a TUTTI i moduli e temi
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "module test location rule"
@@ -130,3 +134,15 @@ al modulo corrente, non come path assoluto dalla root del progetto.
 - "tests/Feature" → `laravel/Modules/<CurrentModule>/tests/Feature/`
 - "tests/Unit" → `laravel/Modules/<CurrentModule>/tests/Unit/`
 - NEVER → `tests/Feature/` at project root
+<<<<<<< HEAD
+=======
+=======
+## Il Problema
+## Causa Radice
+## La Regola
+## Principio DDD Sottostante
+## Checklist Prima di Creare un Test
+## Applicazione a tutti i Moduli
+## Legame con la Skill pest-testing
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

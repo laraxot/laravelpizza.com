@@ -14,6 +14,7 @@ use function Safe\mb_chr;
  * presi da `laravellocalization.supportedLocales`, l'elenco delle lingue note al progetto.
  *
  * @see docs/contracts/list-locale-options-action.md
+ *
  * @contract docs/contracts/list-locale-options-action.md
  */
 class ListLocaleOptionsAction

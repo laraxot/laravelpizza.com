@@ -12,6 +12,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Verifica che la tabella notifications esista sulla connection User prima di query FO.
  *
  * @see docs/contracts/is-notification-schema-readable-action.md
+ *
  * @contract docs/contracts/is-notification-schema-readable-action.md
  */
 final class IsNotificationSchemaReadableAction

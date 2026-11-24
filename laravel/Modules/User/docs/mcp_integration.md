@@ -5,10 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< HEAD
-=======
 qmd: "mcp integration integrazione server user"
->>>>>>> laraxot/dev
 ---
 
 # Integrazione dei Server MCP con il Modulo User
@@ -16,10 +13,7 @@ qmd: "mcp integration integrazione server user"
 ## Panoramica
 
 Questo documento fornisce linee guida per l'integrazione dei server MCP (Model Context Protocol) con il modulo User, seguendo le regole di sviluppo e le convenzioni di codice stabilite per i progetti base_predict_fila3_mono.
-<<<<<<< HEAD
 Questo documento fornisce linee guida per l'integrazione dei server MCP (Model Context Protocol) con il modulo User, seguendo le regole di sviluppo e le convenzioni di codice stabilite per i progetti base_predict_fila5.
-=======
->>>>>>> laraxot/dev
 
 ## Server MCP Consigliati
 
@@ -368,7 +362,4 @@ class EditUser extends EditRecord
 ## Conclusione
 
 L'integrazione dei server MCP con il modulo User consente di migliorare significativamente le funzionalità del modulo, fornendo memorizzazione efficiente delle preferenze degli utenti, interazione con API esterne per la verifica dei dati, operazioni complesse sul database e gestione avanzata della cache. Seguendo le linee guida e gli esempi forniti in questo documento, è possibile implementare queste funzionalità in modo conforme alle regole di sviluppo stabilite per i progetti base_predict_fila3_mono.
-<<<<<<< HEAD
 L'integrazione dei server MCP con il modulo User consente di migliorare significativamente le funzionalità del modulo, fornendo memorizzazione efficiente delle preferenze degli utenti, interazione con API esterne per la verifica dei dati, operazioni complesse sul database e gestione avanzata della cache. Seguendo le linee guida e gli esempi forniti in questo documento, è possibile implementare queste funzionalità in modo conforme alle regole di sviluppo stabilite per i progetti base_predict_fila5.
-=======
->>>>>>> laraxot/dev

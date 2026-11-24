@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "User Module - Product Strategy Document"
 type: note
 qmd: "user product strategy document"
 ---
->>>>>>> laraxot/dev
 # User Module - Product Strategy Document
 
 ## Document Information

@@ -3,7 +3,19 @@ title: "openviking bmad gsd ralph complete"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "openviking bmad gsd ralph complete"
 issues: []
 discussions: []
@@ -371,8 +383,28 @@ cat AGENTS.md
 - [BMAD-GSD-Ralph Integration](./bmad-gsd-ralph-integration.md)
 - [Unified Workflow](./unified-ai-workflow.md)
 - [BMAD Workflow](laravel/Modules/Xot/docs/bmad-workflow-guide.md)
+<<<<<<< HEAD
 - [AGENTS.md](../agents.md)
 - [agents.md](../agents.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [AGENTS.md](../AGENTS.md)
+- [AGENTS.md](../AGENTS.md)
+=======
+<<<<<<< HEAD
+- [AGENTS.md](../agents.md)
+- [agents.md](../agents.md)
+=======
+- [AGENTS.md](../AGENTS.md)
+- [AGENTS.md](../AGENTS.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [AGENTS.md](../agents.md)
+- [agents.md](../agents.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### Scripts
 - OpenViking Init: `bashscripts/ai/openviking-init.sh`
@@ -413,6 +445,10 @@ This integration provides:
 4. **Quality**: Built-in quality gates and verification
 5. **Traceability**: Full audit trail from requirements to implementation
 6. **Scalability**: Works for solo developers and multi-agent teams
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -428,3 +464,8 @@ discussions: []
 **Created**: 2026-03-30  
 **Status**: ✅ Infrastructure Complete, ⚠️ Server Setup Required  
 **Next Action**: Start OpenViking server and run initialization
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

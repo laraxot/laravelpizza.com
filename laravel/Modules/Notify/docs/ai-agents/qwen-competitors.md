@@ -3,7 +3,19 @@ title: "qwen competitors"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "qwen competitors"
 issues: []
 discussions: []
@@ -14,6 +26,10 @@ discussions: []
 Analisi dei competitor di prediction market.
 Analisi dei competitor di forecast market.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "qwen competitors"
@@ -41,6 +57,14 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Competitor Analysis
+### Polymarket (Leader)
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ### Kalshi
 
 | Feature | Presente |
@@ -98,5 +122,21 @@ discussions: []
 ## 🔗 Link
 
 - [Indice QWEN](./qwen-split-index.md)
+<<<<<<< HEAD
 - [QWEN.md originale](../../qwen.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [qwen.md originale](../../qwen.md)
+=======
+<<<<<<< HEAD
+- [QWEN.md originale](../../qwen.md)
+=======
+- [qwen.md originale](../../qwen.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [QWEN.md originale](../../qwen.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Index principale](./index.md)

@@ -1,5 +1,13 @@
 ---
+<<<<<<< HEAD
 title: "architecture"
+=======
+<<<<<<< HEAD
+title: "Architecture"
+=======
+title: "architecture"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 type: note
 tags: [documentation]
 created: 2026-09-26
@@ -15,6 +23,10 @@ discussions: []
 **Date:** 2025-10-01  
 **Status:** Production Ready
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "ARCHITECTURE"
@@ -62,6 +74,14 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📐 System Architecture
+### High-Level Overview
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🏗️ Modular Architecture
 
 ### Module Structure

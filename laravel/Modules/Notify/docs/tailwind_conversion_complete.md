@@ -15,6 +15,10 @@ discussions: []
 **Obiettivo**: Replicare Design Comuni usando Tailwind CSS  
 **Status**: ✅ HOMEPAGE COMPLETA  
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "TAILWIND CONVERSION COMPLETE"
@@ -41,6 +45,14 @@ Convertito il design Bootstrap Italia dei Comuni in **Tailwind CSS puro**!
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 OBIETTIVO RAGGIUNTO
+### ✅ COMPLETATO
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📊 CONVERSIONE
 
 ### Bootstrap Italia → Tailwind CSS

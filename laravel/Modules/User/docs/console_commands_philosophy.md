@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Filosofia dei Console Commands in Laraxot (Standard Supremo)"
 type: note
 qmd: "console commands philosophy filosofia laraxot standard"
 ---
->>>>>>> laraxot/dev
 # Filosofia dei Console Commands in Laraxot (Standard Supremo)
 
 ## Filosofia Fondamentale

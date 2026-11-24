@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Hash;
 use Modules\User\Enums\UserType;
 use Modules\User\Models\User;
@@ -136,5 +137,5 @@ test('user has timestamps', function (): void {
 // usa `SoftDeletes` (nessun `use SoftDeletes` ne' nel model ne' in `BaseUser`).
 test('user soft delete functionality', function (): void {
     expect(class_uses_recursive(User::class))
-        ->not->toContain(Illuminate\Database\Eloquent\SoftDeletes::class);
+        ->not->toContain(SoftDeletes::class);
 })->skip('User model does not implement SoftDeletes trait');

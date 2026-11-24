@@ -14,6 +14,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Logs when a model is updated using Queueable Actions
  *
  * @see docs/contracts/log-model-updated-action.md
+ *
  * @contract docs/contracts/log-model-updated-action.md
  */
 class LogModelUpdatedAction

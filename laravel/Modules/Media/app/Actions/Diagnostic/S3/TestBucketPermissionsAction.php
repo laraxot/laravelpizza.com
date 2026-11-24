@@ -12,6 +12,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/test-bucket-permissions-action.md
+ *
  * @contract docs/contracts/test-bucket-permissions-action.md
  */
 class TestBucketPermissionsAction

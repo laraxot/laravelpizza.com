@@ -15,6 +15,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/update-has-many-action.md
+ *
  * @contract docs/contracts/update-has-many-action.md
  */
 class HasManyAction

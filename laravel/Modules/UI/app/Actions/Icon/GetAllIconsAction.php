@@ -12,6 +12,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-all-icons-action.md
+ *
  * @contract docs/contracts/get-all-icons-action.md
  */
 class GetAllIconsAction

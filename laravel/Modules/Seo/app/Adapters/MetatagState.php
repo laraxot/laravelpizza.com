@@ -16,6 +16,6 @@ final class MetatagState
 
     public function __construct()
     {
-        $this->data = new MetatagData();
+        $this->data = new MetatagData;
     }
 }

@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "User Module - Spring Planning Meeting"
 type: note
 qmd: "user spring planning meeting"
 ---
->>>>>>> laraxot/dev
 # User Module - Spring Planning Meeting
 
 ## Meeting Overview

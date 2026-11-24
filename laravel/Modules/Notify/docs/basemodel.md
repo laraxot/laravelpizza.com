@@ -36,6 +36,10 @@ class NotificationTemplate extends BaseModel {}
 - [../module_notify.md](../module_notify.md)
 - [../../Patient/docs/basemodel.md](../../patient/docs/basemodel.md)
 - Regola "evita override inutili" nei prompt e docs root.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 title: "basemodel"
@@ -47,3 +51,8 @@ qmd: "basemodel"
 issues: []
 discussions: []
 **Nota:** Se trovi un model che estende Model invece di BaseModel, correggi subito e segnala l’errore nella PR.
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

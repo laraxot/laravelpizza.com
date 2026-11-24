@@ -84,7 +84,14 @@ ls -la public_html/themes/Sixteen/manifest.json
 - `npm install`: Installs correct Node packages from package.json
 - `npm run build`: Vite builds assets → generates manifest.json
 - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+<<<<<<< HEAD
 - `public_html/themes/<Tema>` e' un symlink a `laravel/Themes/<Tema>/public` (`npm run copy` dismesso): asset serviti via symlink, nessuna copia.
+=======
+<<<<<<< HEAD
+- `public_html/themes/<Tema>` e' un symlink a `laravel/Themes/<Tema>/public` (`npm run copy` dismesso): asset serviti via symlink, nessuna copia.
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 **AI Tool Assignment**:
 - **Ralph Loop**: Autonomous execution for both themes

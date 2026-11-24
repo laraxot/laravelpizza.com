@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Carousel Slider"
 type: note
 qmd: "carousel slider"
 ---
->>>>>>> laraxot/dev
 https://www.embla-carousel.com/examples/predefined/
 
 

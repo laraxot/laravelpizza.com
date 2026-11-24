@@ -52,6 +52,10 @@ npm run build    # ✓
 - Minor padding variations
 - Typography slightly different sizes
 - Structure is functionally identical
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -65,3 +69,8 @@ issues: []
 discussions: []
 *Last Updated: 2026-04-07*
 *Status: COMPLETED*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

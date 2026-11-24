@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Illuminate\Database\Eloquent\Model;
 use Modules\Activity\Actions\LogModelCreatedAction;
 use Modules\Activity\Actions\LogModelDeletedAction;
 use Modules\Activity\Actions\LogModelUpdatedAction;
@@ -19,7 +20,7 @@ uses(TestCase::class);
  */
 
 test('created, updated and deleted logs never carry passwords or tokens', function (string $action, string $fixture): void {
-    /** @var \Illuminate\Database\Eloquent\Model $model */
+    /** @var Model $model */
     $model = new $fixture;
     $model->forceFill([
         'id' => 'redact-'.$action,

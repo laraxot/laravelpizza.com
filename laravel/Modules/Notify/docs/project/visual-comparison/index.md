@@ -13,6 +13,10 @@ discussions: []
 
 **Date**: 2026-04-02
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "index"
@@ -29,6 +33,13 @@ Make local homepage (http://127.0.0.1:8000/it/tests/homepage) visually identical
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Objective
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Screenshots Summary
 
 ### Header - Sixteen Theme

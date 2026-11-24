@@ -5,10 +5,7 @@ canonical: ../../../../Themes/docs/shared-components/set-password.jpg
 related:
   - "./create-user.jpg.md"
   - "./roles-list.jpg.md"
-<<<<<<< HEAD
-=======
 qmd: "set password jpg passwordjpg"
->>>>>>> laraxot/dev
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/set-password.jpg

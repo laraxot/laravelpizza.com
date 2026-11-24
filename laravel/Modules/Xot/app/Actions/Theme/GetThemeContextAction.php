@@ -17,6 +17,7 @@ use Spatie\QueueableAction\QueueableAction;
  * behavior/visuals accordingly.
  *
  * @see docs/contracts/get-theme-context-action.md
+ *
  * @contract docs/contracts/get-theme-context-action.md
  */
 class GetThemeContextAction

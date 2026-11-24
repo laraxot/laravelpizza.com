@@ -4,10 +4,7 @@ type: reference
 tags: [user, database, schema]
 created: 2026-07-28
 updated: 2026-07-28
-<<<<<<< HEAD
-=======
 qmd: "database schema user"
->>>>>>> laraxot/dev
 ---
 
 # User Module — Database Schema

@@ -2,10 +2,28 @@
 title: "Bug Fix Report - 2025-01-14"
 type: note
 status: draft
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-10-08
+tags: [docs, notify, reports]
+qmd: "bug fix report - 2025-01-14 notify"
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 updated: 2026-11-23
 tags: [docs, notify, reports]
 qmd: "bug fix report - 2025-01-14 notify"
 created: 2026-11-23
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 # Bug Fix Report - 2025-01-14
 
@@ -171,7 +189,19 @@ protected function registerObservers(): void
 | `Modules/User/tests/Unit/CurrentTeamInfiniteLoopFixTest.php` | Nuovo | Test Pest (11 test case) |
 | `Modules/User/tests/Unit/HasTeamsTraitCurrentTeamTest.php` | Nuovo | Test PHPUnit (7 test case) |
 | `docs/bugs/user-creation-infinite-loop-fix.md` | Nuovo | Riepilogo fix |
+<<<<<<< HEAD
 | `docs/bugs/SUMMARY.md` | Nuovo | Summary generale bug fixes |
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+| `docs/bugs/summary.md` | Nuovo | Summary generale bug fixes |
+=======
+| `docs/bugs/SUMMARY.md` | Nuovo | Summary generale bug fixes |
+>>>>>>> laraxot/dev
+=======
+| `docs/bugs/SUMMARY.md` | Nuovo | Summary generale bug fixes |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Testing
 
@@ -271,7 +301,19 @@ $user->initializeCurrentTeam();
    - Configurazione
    - Testing
 
+<<<<<<< HEAD
 3. **Summary Generale**: `docs/bugs/SUMMARY.md`
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+3. **Summary Generale**: `docs/bugs/summary.md`
+=======
+3. **Summary Generale**: `docs/bugs/SUMMARY.md`
+>>>>>>> laraxot/dev
+=======
+3. **Summary Generale**: `docs/bugs/SUMMARY.md`
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
    - Lista di tutti i bug fixes
    - Stato di ogni fix
 

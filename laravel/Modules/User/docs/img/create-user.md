@@ -6,10 +6,7 @@ topic: create_user
 canonical: ../../../../Themes/docs/shared-components/create-user.jpg
 created: 2026-07-22
 updated: 2026-07-22
-<<<<<<< HEAD
-=======
 qmd: "create user createuser"
->>>>>>> laraxot/dev
 ---
 
 # create_user

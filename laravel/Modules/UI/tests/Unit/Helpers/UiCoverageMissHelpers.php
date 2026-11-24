@@ -14,7 +14,7 @@ final class UiCoverageMissHelpers
     public static function prop(object $target, string $name): mixed
     {
         $ref = new \ReflectionClass($target);
-        while (false !== $ref) {
+        while ($ref !== false) {
             if ($ref->hasProperty($name)) {
                 $prop = $ref->getProperty($name);
                 $prop->setAccessible(true);
@@ -30,7 +30,7 @@ final class UiCoverageMissHelpers
     public static function set(object $target, string $name, mixed $value): void
     {
         $ref = new \ReflectionClass($target);
-        while (false !== $ref) {
+        while ($ref !== false) {
             if ($ref->hasProperty($name)) {
                 $prop = $ref->getProperty($name);
                 $prop->setAccessible(true);

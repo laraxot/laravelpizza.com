@@ -1,4 +1,13 @@
 ---
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 title: "agid analysis implementation 2025 10"
 type: note
 tags: [documentation]
@@ -491,6 +500,12 @@ discussions: []
 *Next Action: Team reviews docs and starts implementation*
 
 **END OF AGID ANALYSIS & IMPLEMENTATION REPORT** 🏆
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 issues: []
 discussions: []
 title: "AGID_ANALYSIS_IMPLEMENTATION_2025-10-02"
@@ -512,3 +527,12 @@ related:
 ---
 
 > Questo file è stato rinominato in [agid-analysis-implementation.md](agid-analysis-implementation.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

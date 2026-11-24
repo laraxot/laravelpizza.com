@@ -90,6 +90,10 @@ Indice centralizzato: `laravel/docs/roadmap/00-index.md`
 2. **After coding**: Verify and improve docs
 3. **No new docs directories** - always use existing ones
 4. **Consistent structure** - follow the same patterns across all modules
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -101,3 +105,8 @@ updated: 2026-09-26
 qmd: "file patterns and docs standards"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -15,6 +15,10 @@ discussions: []
 **Domanda**: Tutti i BaseModel devono estendere XotBaseModel e rimuovere metodi/parametri duplicati?  
 **Risposta**: **SÌ, MA CON ECCEZIONI DOCUMENTATE** ✅⚠️
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "decisione basemodel refactoring"
@@ -53,6 +57,14 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📊 Situazione Attuale (VERIFICATA)
+### Stato dei 18 Moduli
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🔍 Analisi Dettagliata XotBaseModel
 
 ### Cosa Fornisce XotBaseModel

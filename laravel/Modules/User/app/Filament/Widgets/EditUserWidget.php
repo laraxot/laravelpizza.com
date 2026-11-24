@@ -200,6 +200,7 @@ class EditUserWidget extends XotBaseSchemaWidget
 
         return $user;
     }
+
     /**
      * @param  array<int|string, mixed>  $schema
      * @return array<int|string, Component>

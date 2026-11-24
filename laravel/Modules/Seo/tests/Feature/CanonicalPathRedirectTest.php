@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 use Modules\Seo\Tests\TestCase;
-use PHPUnit\Framework\Assert;
 
 use function Pest\Laravel\get;
 

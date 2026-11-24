@@ -129,6 +129,10 @@ Le modifiche vengono tracciate nel repository GitHub.
 * [module_notify.md](docs/module_notify.md)
 * [module_notify.md](../../../notify/docs/module_notify.md)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ### Versione Incoming
 
@@ -144,3 +148,11 @@ updated: 2026-09-26
 qmd: "module notify"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
+=======
+### Versione Incoming
+
+Le modifiche vengono tracciate nel repository GitHub.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

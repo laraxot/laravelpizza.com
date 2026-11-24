@@ -15,6 +15,10 @@ discussions: []
 
 Nel factory `SmsActionFactory`, invece di usare un `match` esplicito per risolvere la classe action in base al driver, si può calcolare dinamicamente il nome della classe action tramite una formula.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "sms action factory resolution"
@@ -41,6 +45,13 @@ $action = match ($driver) {
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 1. Esempio di match esplicito
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 2. Esempio di risoluzione dinamica tramite formula
 
 ```php
@@ -97,4 +108,12 @@ return app($class);
 
 ## 7. Conclusione
 
+<<<<<<< HEAD
 La risoluzione dinamica tramite formula è **più scalabile e manutenibile** rispetto al match esplicito, ma richiede disciplina nella naming convention e test automatici di coerenza. In progetti modulari e in crescita è la scelta preferibile, purché ben documentata e sorvegliata. 
+=======
+<<<<<<< HEAD
+La risoluzione dinamica tramite formula è **più scalabile e manutenibile** rispetto al match esplicito, ma richiede disciplina nella naming convention e test automatici di coerenza. In progetti modulari e in crescita è la scelta preferibile, purché ben documentata e sorvegliata. 
+=======
+La risoluzione dinamica tramite formula è **più scalabile e manutenibile** rispetto al match esplicito, ma richiede disciplina nella naming convention e test automatici di coerenza. In progetti modulari e in crescita è la scelta preferibile, purché ben documentata e sorvegliata.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

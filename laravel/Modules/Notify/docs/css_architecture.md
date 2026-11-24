@@ -179,6 +179,10 @@ class="btn btn-outline-primary btn-sm"
 - [Tailwind CSS Docs](https://tailwindcss.com/docs)
 - [Filament Docs](https://filamentphp.com/docs)
 - [AGID Design System](https://www.agid.gov.it/it/design-sviluppo/design-system)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -193,3 +197,8 @@ discussions: []
 **Ultimo Aggiornamento**: 2026-03-31  
 **Tema**: Sixteen v1.0  
 **Framework**: Bootstrap Italia 2.8.8 + Tailwind CSS 4.x + Filament 5.x
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

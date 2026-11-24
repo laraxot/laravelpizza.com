@@ -13,6 +13,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/has-column-action.md
+ *
  * @contract docs/contracts/has-column-action.md
  */
 class HasColumnAction

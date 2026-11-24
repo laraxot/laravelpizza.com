@@ -34,6 +34,7 @@ use Spatie\QueueableAction\QueueableAction;
  * $bool = SafeBooleanCastAction::castFromString($mixedValue, ['yes', 'on', '1']);
  *
  * @see docs/contracts/safe-boolean-cast-action.md
+ *
  * @contract docs/contracts/safe-boolean-cast-action.md
  */
 class SafeBooleanCastAction

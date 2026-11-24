@@ -16,10 +16,7 @@ related:
   - "./folio-pages-owner-pattern.md"
   - "../../../../../../docs/wiki/concepts/filament-v5-form-in-blade.md"
   - "../../../../../../docs/wiki/memories/view-cache-gate-mandatory.md"
-<<<<<<< HEAD
-=======
 qmd: "filament widget resource form delegation delega"
->>>>>>> laraxot/dev
 ---
 
 # Widget Filament → schema in `*Form` (SSoT)

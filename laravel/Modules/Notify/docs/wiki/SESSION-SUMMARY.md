@@ -304,6 +304,10 @@ commit a21032a60: docs: integrate Karpathy LLM Wiki pattern
 - ⏳ First source ingested (next step)
 - ⏳ Weekly lint schedule established (next step)
 - ⏳ 50+ wiki pages created (ongoing)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -316,3 +320,8 @@ qmd: "SESSION SUMMARY"
 issues: []
 discussions: []
 **Session Complete** - Ready for first ingestion! 🚀
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

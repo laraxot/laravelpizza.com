@@ -23,6 +23,10 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 - [Regole Filament](./.agents/docs/main-rules/gemini-filament.md)
 - [Folio & Volt](./.agents/docs/main-rules/gemini-folio-volt.md)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 title: "GEMINI"
 type: note
@@ -63,6 +67,13 @@ related:
   - "./action-plan-immediate.md"
 ---
 
+<<<<<<< HEAD
+=======
+=======
+<!-- Merged from gemini.md, which collided with this file on case-insensitive filesystems. -->
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 # Gemini Rules (Modular)
 
 Questa documentazione è stata divisa in moduli per una gestione più efficiente del contesto.

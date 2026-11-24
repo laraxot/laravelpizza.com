@@ -11,6 +11,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/get-fieldnames-by-tablename-action.md
+ *
  * @contract docs/contracts/get-fieldnames-by-tablename-action.md
  */
 final class GetFieldnamesByTablenameAction

@@ -13,6 +13,7 @@ use function Safe\unlink;
 
 /**
  * @see docs/contracts/test-file-upload-download-action.md
+ *
  * @contract docs/contracts/test-file-upload-download-action.md
  */
 class TestFileUploadDownloadAction

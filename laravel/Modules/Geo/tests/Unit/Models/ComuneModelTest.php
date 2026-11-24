@@ -56,7 +56,7 @@ function comuneModelFixturePath(): string
     return storage_path('framework/testing/geo/comuni-model-test.json');
 }
 
-uses(\Modules\Geo\Tests\TestCase::class);
+uses(TestCase::class);
 
 beforeEach(function (): void {
     File::ensureDirectoryExists(\dirname(comuneModelFixturePath()));

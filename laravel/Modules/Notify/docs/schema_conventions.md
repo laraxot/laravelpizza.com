@@ -69,6 +69,10 @@ Here's a complete example of a properly formatted schema:
 * [schema_conventions.md](docs/schema_conventions.md)
 * [schema_conventions.md](../../../Notify/docs/schema_conventions.md)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ### Versione Incoming
 
@@ -86,3 +90,11 @@ qmd: "schema conventions"
 issues: []
 discussions: []
 ```
+<<<<<<< HEAD
+=======
+=======
+### Versione Incoming
+
+```
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -17,7 +17,9 @@ use Spatie\QueueableAction\QueueableAction;
  *
  * Intervention Image (already installed, GD driver) applies the EXIF orientation first, so the photo keeps its rotation, then
  * writes a new file that carries pixels only. Any other mime type (PDF, ...) is left untouched. Updates `size` on the media row.
+ *
  * @see docs/contracts/strip-image-metadata-action.md
+ *
  * @contract docs/contracts/strip-image-metadata-action.md
  */
 final class StripImageMetadataAction

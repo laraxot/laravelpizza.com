@@ -22,6 +22,10 @@ Il file `routes/web.php` del modulo Notify **deve rimanere vuoto**.
 - [structure.md](structure.md#regola-sulle-rotte)
 - [grapesjs-filament.md](grapesjs-filament.md#regola-sulle-rotte)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "database mail"
@@ -51,6 +55,14 @@ Un sistema di gestione email basato su database che permette di:
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Collegamenti correlati
+## Panoramica
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Analisi comparativa plugin & pacchetti
 
 ### Plugin/Packages studiati:

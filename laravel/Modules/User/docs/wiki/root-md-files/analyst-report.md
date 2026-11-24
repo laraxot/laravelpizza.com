@@ -1,10 +1,7 @@
 ---
 title: analyst-report
 module: User
-<<<<<<< HEAD
-=======
 qmd: "analyst report analystreport"
->>>>>>> laraxot/dev
 ---
 
 # User Module — Analyst Report

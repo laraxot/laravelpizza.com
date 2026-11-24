@@ -41,6 +41,10 @@ The current active theme is configured via `config('xra.pub_theme')` which retur
 - One migration per table creation
 - Schema changes use new migration files: `add_{column}_to_{table}.php`
 - Use `XotBaseMigration` with `tableCreate()` and `tableUpdate()` methods
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -52,3 +56,8 @@ updated: 2026-09-26
 qmd: "pub theme namespace critical rule"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

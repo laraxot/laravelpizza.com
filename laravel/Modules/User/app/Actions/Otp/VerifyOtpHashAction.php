@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/verify-otp-hash-action.md
+ *
  * @contract docs/contracts/verify-otp-hash-action.md
  */
 final class VerifyOtpHashAction

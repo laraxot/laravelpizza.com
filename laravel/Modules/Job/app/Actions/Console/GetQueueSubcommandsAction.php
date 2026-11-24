@@ -8,6 +8,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-queue-subcommands-action.md
+ *
  * @contract docs/contracts/get-queue-subcommands-action.md
  */
 final class GetQueueSubcommandsAction

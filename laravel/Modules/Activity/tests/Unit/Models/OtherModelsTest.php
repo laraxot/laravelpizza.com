@@ -15,7 +15,7 @@ test('Snapshot model can be instantiated', function (): void {
 });
 
 test('BaseModel model can be instantiated', function (): void {
-    $baseModel = new class() extends BaseModel
+    $baseModel = new class extends BaseModel
     {
         protected $table = 'activity_base_models';
     };
@@ -24,19 +24,19 @@ test('BaseModel model can be instantiated', function (): void {
 });
 
 test('Snapshot model has correct connection', function (): void {
-    $snapshot = new Snapshot();
+    $snapshot = new Snapshot;
 
     Assert::assertIsString($snapshot->getConnectionName());
 });
 
 test('StoredEvent model has correct connection', function (): void {
-    $storedEvent = new StoredEvent();
+    $storedEvent = new StoredEvent;
 
     Assert::assertIsString($storedEvent->getConnectionName());
 });
 
 test('BaseModel model has correct connection', function (): void {
-    $baseModel = new class() extends BaseModel
+    $baseModel = new class extends BaseModel
     {
         protected $table = 'activity_base_models';
     };

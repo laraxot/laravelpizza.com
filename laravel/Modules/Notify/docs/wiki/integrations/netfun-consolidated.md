@@ -7,7 +7,19 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -63,8 +75,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -268,7 +288,17 @@ Queste correzioni garantiscono che l'azione funzioni correttamente con la config
 
 *Consolidated from: `netfun-action-errors.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Errori Identificati
 
 Nella classe `SendNetfunSMSAction` sono stati identificati diversi errori che non rispettano le best practice e la configurazione standardizzata SMS. Questo documento elenca gli errori e le correzioni apportate.
@@ -468,7 +498,17 @@ Queste correzioni garantiscono che l'azione funzioni correttamente con la config
 
 *Consolidated from: `netfun-action-updates.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Panoramica delle Modifiche
 
 La classe `SendNetfunSMSAction` è stata completamente rivista per allinearla con le best practice del progetto <nome progetto> e con il pattern di configurazione standardizzato per i servizi SMS. Inoltre, è stato creato un nuovo DTO `SmsMessageData` per standardizzare la gestione dei dati SMS.
@@ -813,8 +853,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -1144,7 +1192,17 @@ Questi miglioramenti garantiscono:
 
 *Consolidated from: `netfun-action-updates.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Panoramica delle Modifiche
 
 La classe `SendNetfunSMSAction` è stata completamente rivista per allinearla con le best practice del progetto  e con il pattern di configurazione standardizzato per i servizi SMS. Inoltre, è stato creato un nuovo DTO `SmsMessageData` per standardizzare la gestione dei dati SMS.
@@ -1472,7 +1530,17 @@ Questi miglioramenti garantiscono:
 
 *Consolidated from: `netfun-actions.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Errori Identificati
 
 Nella classe `SendNetfunSMSAction` sono stati identificati diversi errori che non rispettano le best practice e la configurazione standardizzata SMS. Questo documento elenca gli errori e le correzioni apportate.
@@ -1668,7 +1736,17 @@ Queste correzioni garantiscono che l'azione funzioni correttamente con la config
 
 *Consolidated from: `netfun-channel.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Struttura Base
 
 ### 1.1 Data Transfer Objects
@@ -2378,8 +2456,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -3075,7 +3161,17 @@ Log::info('SMS inviato', [
 
 *Consolidated from: `netfun-channel.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Struttura Base
 
 ### 1.1 Data Transfer Objects
@@ -3786,8 +3882,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -3876,8 +3980,16 @@ NETFUN_API_URL=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 
 - [Struttura Standardizzata della Configurazione SMS](./standardized-sms-config-structure.md)
 - [Canale SMS Netfun](./sms-netfun-channel.md)
+<<<<<<< HEAD
 - [Struttura Standardizzata della Configurazione SMS](./standardized-sms-config-structure.md)
 - [Canale SMS Netfun](./sms-netfun-channel.md)
+=======
+<<<<<<< HEAD
+- [Struttura Standardizzata della Configurazione SMS](./standardized-sms-config-structure.md)
+- [Canale SMS Netfun](./sms-netfun-channel.md)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Supporto
 
@@ -3934,9 +4046,31 @@ NETFUN_ENDPOINT=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 
 - [Documentazione Completa Netfun Channel](./sms-netfun-channel.md)
 - [Esempi di Utilizzo Netfun](./netfun-examples.md)
+<<<<<<< HEAD
 - [Documentazione Completa Netfun Channel](./sms-netfun-channel.md)
 - [Esempi di Utilizzo Netfun](./netfun-examples.md)
 - [Risoluzione Conflitti Netfun](../../netfunchannel-conflict-resolution.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Documentazione Completa Netfun Channel](./sms-netfun-channel.md)
+- [Esempi di Utilizzo Netfun](./netfun-examples.md)
+- [Risoluzione Conflitti Netfun](../../netfunchannel-conflict-resolution.md)
+=======
+<<<<<<< .merge_file_woKPNf
+- [Documentazione Completa Netfun Channel](./sms-netfun-channel-2.md)
+- [Esempi di Utilizzo Netfun](./netfun-examples-2.md)
+- [Risoluzione Conflitti Netfun](./netfunchannel-conflict-resolution.md)
+=======
+- [Documentazione Completa Netfun Channel](./sms-netfun-channel.md)
+- [Esempi di Utilizzo Netfun](./netfun-examples.md)
+- [Risoluzione Conflitti Netfun](../../netfunchannel-conflict-resolution.md)
+>>>>>>> .merge_file_y9MOzY
+>>>>>>> laraxot/dev
+=======
+- [Risoluzione Conflitti Netfun](../../netfunchannel-conflict-resolution.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 
@@ -3947,7 +4081,17 @@ NETFUN_ENDPOINT=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 
 *Consolidated from: `netfun-config-requirements.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 Questa guida descrive la configurazione necessaria per utilizzare il provider Netfun come driver SMS nel modulo Notify.
 
 ## 1. Parametri Obbligatori
@@ -4104,7 +4248,17 @@ NETFUN_ENDPOINT=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 
 *Consolidated from: `netfun-examples.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Invio SMS OTP
 
 ### 1.1 Notification Class
@@ -5055,8 +5209,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -5754,7 +5916,17 @@ This document provides examples for Netfun integration.
 
 *Consolidated from: `netfun-examples.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Invio SMS OTP
 
 ### 1.1 Notification Class
@@ -6686,7 +6858,17 @@ class NetfunNotificationIntegrationTest extends TestCase
 
 *Consolidated from: `netfun_action_errors.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Errori Identificati
 
 Nella classe `SendNetfunSMSAction` sono stati identificati diversi errori che non rispettano le best practice e la configurazione standardizzata SMS. Questo documento elenca gli errori e le correzioni apportate.
@@ -6886,7 +7068,17 @@ Queste correzioni garantiscono che l'azione funzioni correttamente con la config
 
 *Consolidated from: `netfun_action_updates.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Panoramica delle Modifiche
 
 La classe `SendNetfunSMSAction` è stata completamente rivista per allinearla con le best practice del progetto <nome progetto> e con il pattern di configurazione standardizzato per i servizi SMS. Inoltre, è stato creato un nuovo DTO `SmsMessageData` per standardizzare la gestione dei dati SMS.
@@ -7201,7 +7393,17 @@ Questi miglioramenti garantiscono:
 
 *Consolidated from: `netfun_channel.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Struttura Base
 
 ### 1.1 Data Transfer Objects
@@ -7887,7 +8089,17 @@ Log::info('SMS inviato', [
 
 *Consolidated from: `netfun_config_requirements.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 Questa guida descrive la configurazione necessaria per utilizzare il provider Netfun come driver SMS nel modulo Notify.
 
 ## 1. Parametri Obbligatori
@@ -8044,7 +8256,17 @@ NETFUN_ENDPOINT=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 
 *Consolidated from: `netfun_examples.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Invio SMS OTP
 
 ### 1.1 Notification Class
@@ -9004,7 +9226,17 @@ class NetfunNotificationIntegrationTest extends TestCase
 
 *Consolidated from: `netfunchannel-conflict-resolution.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Motivazione
 Il conflitto era dovuto a merge multipli che hanno duplicato blocchi identici nel metodo send().
 

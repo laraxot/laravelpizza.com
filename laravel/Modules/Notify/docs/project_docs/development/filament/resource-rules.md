@@ -197,6 +197,10 @@ class DoctorResource extends XotBaseResource
 - [Traduzioni](../translations/)
 - [Best Practices](./best-practices.md)
 - [Troubleshooting Filament](../../troubleshooting/errors/filament-errors.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -210,3 +214,8 @@ issues: []
 discussions: []
 *Ultimo aggiornamento: Agosto 2025*
 *Fonte: laravel/Modules/Xot/docs/FILAMENT_RESOURCE_RULES.md* 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

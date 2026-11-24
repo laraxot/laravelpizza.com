@@ -96,7 +96,14 @@ $notificationData = [
 ### Moduli Specifici del Progetto
 - ****: Solo per progetto
 - **<nome progetto>**: Solo per progetto <nome progetto>
+<<<<<<< HEAD
 - **<nome progetto>**: Solo per progetto <nome progetto>
+=======
+<<<<<<< HEAD
+- **<nome progetto>**: Solo per progetto <nome progetto>
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **Patient**: Solo per progetti sanitari specifici
 
 ## Checklist Pre-Commit
@@ -165,6 +172,10 @@ Ogni progetto può personalizzare i valori tramite variabili d'ambiente senza mo
 - [Testing Guidelines](testing-guidelines.md)
 - [ConfigHelper Documentation](config-helper.md)
 - [Configuration Guide](configuration-guide.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -177,3 +188,8 @@ qmd: "modularity hardcoded names"
 issues: []
 discussions: []
 **Questa correzione è CRITICA per mantenere l'architettura modulare del sistema. Ogni violazione deve essere corretta immediatamente.**
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

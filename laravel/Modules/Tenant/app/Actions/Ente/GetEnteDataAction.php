@@ -20,6 +20,7 @@ use function Safe\preg_match;
  * un'icona nello sprite Design Comuni. Ogni testo puo' essere una stringa o una mappa per lingua.
  *
  * @see docs/contracts/get-ente-data-action.md
+ *
  * @contract docs/contracts/get-ente-data-action.md
  */
 class GetEnteDataAction

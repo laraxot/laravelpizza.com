@@ -11,10 +11,7 @@ created: 2026-11-18
 updated: 2026-11-18
 tags: [parcheggio, debito-tecnico]
 description: "File con estensione finta spostati fuori da app/ in UI, con il motivo per ciascuna famiglia."
-<<<<<<< HEAD
-=======
 qmd: "parcheggiati"
->>>>>>> laraxot/dev
 ---
 
 # File parcheggiati — UI
@@ -30,10 +27,7 @@ sempre da dove veniva.
 |---|---|
 | `app/Actions/Panel/ApplyCalendarToPanelAction.php.disabled` | 1538 |
 | `app/Filament/Widgets/UserCalendarWidget.php.disabled` | 5973 |
-<<<<<<< HEAD
 | `app/Traits/TableLayoutTrait.php.zero_used` | 1185 |
-=======
->>>>>>> laraxot/dev
 
 
 ## Prima di riprenderne uno
@@ -44,7 +38,6 @@ che c'e' adesso: in uno di questi, a ottobre, c'erano 135 righe di lavoro non
 fuso che per poco non sono state cancellate. Quando il lavoro e' finito,
 cancella il file parcheggiato.
 
-<<<<<<< HEAD
 ## `TableLayoutTrait` legacy: ritirato, esaminato
 
 `Modules\UI\Traits\TableLayoutTrait` (sessione `table_layout`, default GRID, con `refreshTable()` e
@@ -65,7 +58,5 @@ Per riprenderlo: copiarlo in `app/Traits/TableLayoutTrait.php` senza `.zero_used
 vuole non possa usare il trait vivo. Contesto completo:
 [risoluzione-conflitti-tablelayouttrait](../risoluzione-conflitti-tablelayouttrait.md).
 
-=======
->>>>>>> laraxot/dev
 Tracciato in
 [module_quaeris_fila5#61](https://github.com/laraxot/module_quaeris_fila5/issues/61).

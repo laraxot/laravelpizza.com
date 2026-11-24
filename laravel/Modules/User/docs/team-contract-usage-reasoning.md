@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "TeamContract Usage Reasoning"
 type: contract
 qmd: "team contract usage reasoning teamcontract"
 ---
->>>>>>> laraxot/dev
 # TeamContract Usage Reasoning
 
 ## Overview

@@ -384,6 +384,10 @@ Completare il progetto Notify in ogni aspetto seguendo le roadmap specifiche di 
 - **Job**: Job management
 - **AI**: Artificial intelligence
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "roadmap master"
@@ -401,4 +405,9 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 *Questa Master Roadmap consolida tutte le roadmap specifiche dei moduli e temi, garantendo coerenza architetturale e completamento del progetto in ogni aspetto.*

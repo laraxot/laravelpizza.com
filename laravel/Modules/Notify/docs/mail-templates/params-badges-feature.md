@@ -177,6 +177,10 @@ Badge: [user_name] [reset_link] [expiry_time]
 - [Mail Templates Index](./index.md)
 - [Filament UI Enhancements](./filament_ui_enhancements.md)
 - [Email Templates Guide](./email_templates_guide.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -191,3 +195,8 @@ discussions: []
 **Ultimo aggiornamento**: Gennaio 2025  
 **Versione**: 1.0  
 **Compatibilità**: Filament 3.x, Laravel 10+ 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

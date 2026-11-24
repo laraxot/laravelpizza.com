@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\File;
 use Mockery;
 use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
 use Modules\Tenant\Actions\Translations\TranslateTenantKeyAction;
-use Modules\Tenant\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 beforeEach(function (): void {

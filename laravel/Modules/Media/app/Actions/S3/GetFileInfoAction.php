@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-file-info-action.md
+ *
  * @contract docs/contracts/get-file-info-action.md
  */
 class GetFileInfoAction extends BaseS3Action

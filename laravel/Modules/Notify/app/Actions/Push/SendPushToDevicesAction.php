@@ -12,9 +12,19 @@ use Webmozart\Assert\Assert;
 
 /**
  * Invia una notifica push a più token, raggruppandoli per piattaforma.
+<<<<<<< HEAD
+ *
+ * @see docs/contracts/send-push-to-devices-action.md
+ *
+ * @contract docs/contracts/send-push-to-devices-action.md
+=======
+<<<<<<< HEAD
+=======
  *
  * @see docs/contracts/send-push-to-devices-action.md
  * @contract docs/contracts/send-push-to-devices-action.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
  */
 class SendPushToDevicesAction
 {

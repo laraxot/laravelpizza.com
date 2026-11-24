@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "User Module Metrics Dashboard"
 type: note
 qmd: "metrics dashboard user"
 ---
->>>>>>> laraxot/dev
 # User Module Metrics Dashboard
 
 ## Overview

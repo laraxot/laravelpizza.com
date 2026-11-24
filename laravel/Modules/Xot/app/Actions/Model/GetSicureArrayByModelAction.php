@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-sicure-array-by-model-action.md
+ *
  * @contract docs/contracts/get-sicure-array-by-model-action.md
  */
 class GetSicureArrayByModelAction

@@ -41,6 +41,7 @@ trait CanPaginate
         if (is_numeric($page)) {
             return (int) $page;
         }
+
         return 1;
     }
 
@@ -78,6 +79,7 @@ trait CanPaginate
 
     /**
      * @template TModel of Model
+     *
      * @param  Builder<TModel>  $query
      * @return Paginator<int, TModel>|CursorPaginator<int, TModel>|LengthAwarePaginator<int, TModel>
      */

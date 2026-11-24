@@ -236,7 +236,14 @@ bash bashscripts/fix-permissions.sh
 - [ ] Create bash script for permissions
 - [ ] Add to pre-deployment checklist
 - [ ] Document in AGENTS.md
+<<<<<<< HEAD
 - [ ] Document in AGENTS.md
+=======
+<<<<<<< HEAD
+- [ ] Document in AGENTS.md
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 

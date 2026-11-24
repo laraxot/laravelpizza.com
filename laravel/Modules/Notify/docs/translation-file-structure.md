@@ -3,7 +3,19 @@ title: "translation file structure"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "translation file structure"
 issues: []
 discussions: []
@@ -161,4 +173,20 @@ return [
 ## Riferimenti
 - [Regole di Naming per i File di Traduzione](./translation_file_naming_rules.md)
 - [Regole di Naming per i File di Traduzione](./translation-file-naming-rules.md)
+<<<<<<< HEAD
 - [Regole Generali per le Traduzioni](../../Lang/docs/translation_keys_rules.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Regole Generali per le Traduzioni](../../Lang/docs/translation_keys_rules.md)
+=======
+<<<<<<< HEAD
+- [Regole Generali per le Traduzioni](../../lang/docs/translation_keys_rules.md)
+=======
+- [Regole Generali per le Traduzioni](../../Lang/docs/translation_keys_rules.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [Regole Generali per le Traduzioni](../../lang/docs/translation_keys_rules.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

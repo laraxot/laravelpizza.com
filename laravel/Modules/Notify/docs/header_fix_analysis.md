@@ -14,6 +14,10 @@ discussions: []
 ## Data: 2026-03-31
 ## Problema: Header non conforme al reference
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "header fix analysis"
@@ -55,6 +59,17 @@ discussions: []
 **FixCity**: Spaziature non conformi
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 🔴 Problemi Identificati
+### 1. Logo non visibile ❌
+### 2. Nome del Comune non leggibile ❌
+### 3. Slogan non leggibile ❌
+### 4. Colori diversi ❌
+### 5. Spaziature diverse ❌
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## ✅ Soluzione Applicata
 

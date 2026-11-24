@@ -5,10 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< HEAD
-=======
 qmd: "ottimizzazioni consolidated"
->>>>>>> laraxot/dev
 ---
 
 # ottimizzazioni — Consolidated Documentation
@@ -1109,10 +1106,7 @@ class UserResource extends XotBaseResource
 - [Modulo Xot](../xot/docs/ottimizzazioni-dry-kiss.md)
 
 ---
-<<<<<<< HEAD
 ---
-=======
->>>>>>> laraxot/dev
 
 **Consolidated by:** Phase 2f intelligent merging
 **Date:** 2026-08-04

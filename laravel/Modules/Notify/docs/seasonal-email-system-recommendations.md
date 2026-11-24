@@ -232,6 +232,10 @@ Lo sviluppo del sistema email stagionali deve sempre tenere conto dei seguenti p
 5. **Zen**: Cercare l'armonia tra funzionalità, semplicità e manutenibilità
 
 Queste raccomandazioni rappresentano un punto di riferimento per tutti gli sviluppatori che lavoreranno sul sistema email stagionali, garantendo coerenza e qualità nel tempo.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -247,3 +251,8 @@ discussions: []
 **Data**: 19 Dicembre 2025  
 **Versione**: 1.0  
 **Approvazione**: Sistema Pronto per la Produzione
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

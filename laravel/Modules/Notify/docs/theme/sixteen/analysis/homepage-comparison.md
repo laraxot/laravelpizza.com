@@ -188,6 +188,10 @@ cd laravel/Themes/Sixteen
 npm run build    # Build CSS/JS
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -201,3 +205,8 @@ issues: []
 discussions: []
 *Generated: 2026-04-07*
 *Last Updated: 2026-04-07*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

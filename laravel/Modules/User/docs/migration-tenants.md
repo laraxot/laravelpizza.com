@@ -230,11 +230,7 @@ done
 ### This Analysis
 
 - [Migration Violations](./migration-violations-tenants.md) - Detailed analysis
-<<<<<<< HEAD
-- [User Module README](./README.md)
-=======
 - [User Module README](./readme.md)
->>>>>>> laraxot/dev
 
 ---
 

@@ -14,6 +14,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Logs when a model is created using Queueable Actions
  *
  * @see docs/contracts/log-model-created-action.md
+ *
  * @contract docs/contracts/log-model-created-action.md
  */
 class LogModelCreatedAction

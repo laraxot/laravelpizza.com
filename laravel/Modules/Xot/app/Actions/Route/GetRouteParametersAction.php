@@ -10,6 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-route-parameters-action.md
+ *
  * @contract docs/contracts/get-route-parameters-action.md
  */
 class GetRouteParametersAction

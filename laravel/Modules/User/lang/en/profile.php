@@ -4,11 +4,7 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-<<<<<<< HEAD
-        'label' => 'Profile',
-=======
         'label' => 'Profiles',
->>>>>>> laraxot/dev
         'plural' => 'Profiles',
         'group' => [
             'label' => 'User management',
@@ -92,13 +88,8 @@ return [
         'title' => 'Privacy policy',
         'description' => 'How we handle your personal data.',
     ],
-<<<<<<< HEAD
-    'label' => 'Profile',
-    'plural_label' => 'Profiles',
-=======
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
->>>>>>> laraxot/dev
     'delete_account' => [
         'title' => 'Delete Account',
         'description' => 'Once your account is deleted, all of its resources and data will be permanently deleted. Before proceeding, please download any data you wish to retain.',
@@ -107,9 +98,5 @@ return [
         'delete' => 'Delete Account',
     ],
     'my_profile' => 'My Profile',
-<<<<<<< HEAD
-    'subheading' => 'Manage your personal details and security',
-=======
     'subheading' => 'Your personal details and password',
->>>>>>> laraxot/dev
 ];

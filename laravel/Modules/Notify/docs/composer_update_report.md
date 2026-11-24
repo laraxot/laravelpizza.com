@@ -166,6 +166,10 @@ composer update -W
 2. ⏳ Testare applicazione
 3. ⏳ Verificare moduli
 4. ⏳ Testare Filament 5.x
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -181,3 +185,8 @@ discussions: []
 **Filament Version**: **5.x**  
 **Strategia**: **Root minimale, moduli specifici**  
 **Merge Plugin**: **Configurato e funzionante**
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

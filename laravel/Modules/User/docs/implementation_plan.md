@@ -5,10 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< HEAD
-=======
 qmd: "implementation plan piano implementazione componenti header"
->>>>>>> laraxot/dev
 ---
 
 # Piano di Implementazione Componenti Header

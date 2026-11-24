@@ -15,6 +15,10 @@ discussions: []
 **Status**: ✅ **CORRECTED**  
 **Principle**: Theme is a "vestito" (outfit) - configurable and swappable!
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "theme system dynamic"
@@ -92,6 +96,16 @@ public function boot(): void
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 How It Works
+### 1. Theme Configuration
+### 2. Dynamic Registration
+### 3. Xot Module Auto-Registration
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🎨 Theme Structure
 
 ### Theme Directory

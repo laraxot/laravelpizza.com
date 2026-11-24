@@ -16,7 +16,9 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
  * different `php.ini` than FPM or the built-in server that receives the upload.
  *
  * Nginx `client_max_body_size` is not visible from PHP; the browser still needs to send small files (see the camera upload ADR).
+ *
  * @see docs/contracts/get-effective-upload-limit-action.md
+ *
  * @contract docs/contracts/get-effective-upload-limit-action.md
  */
 final class GetEffectiveUploadLimitAction

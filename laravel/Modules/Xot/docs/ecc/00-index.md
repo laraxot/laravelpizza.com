@@ -1,8 +1,8 @@
 ---
 title: "ECC — indice operativo Xot"
 type: index
-status: in-progress
-updated: 2026-11-17
+status: review
+updated: 2026-11-24
 module: Xot
 qmd: "ECC indice Xot verification gates esito phpstan saturazione swarm"
 ---
@@ -23,9 +23,16 @@ Su worktree condiviso: prima di PHPStan rispettare saturazione HARD
 | Controllo | Stato | Evidenza |
 |---|---|---|
 | Inventario statico | verificato (2026-11-16) | [audit](../bmad/audits/xot-audit.md) |
-| PHPStan `Modules/Xot` | 0 errori (rerun; prima passata 6+ errori in `FeatureFlagsTest` mentre un altro agente lo editava) | `phpstan analyse Modules/Xot` (17:10 / rerun 17:21) |
+| PHPStan `Modules/Xot` | ultimo stato storico: 0 errori; gate globale corrente bloccato da parse error in `Modules/User` | `phpstan analyse Modules/Xot` storico; gate globale 2026-11-24 documentato in [xot-ecc-audit.md](./xot-ecc-audit.md) |
 | Pest | skip documentato | DB di test configurato irraggiungibile + `TestDatabaseGuard` |
 | Security review | parziale | P2-X3 `HandleArtisanActRequestAction`; `--force` solo su SQLite di test e symlink opt-in |
 | Docs pack | aggiornato | audit, epics, decision-log, brainstorming, story |
 
 Dettaglio: [xot-ecc-audit.md](./xot-ecc-audit.md)
+
+## Audit convenzioni e qualità — 2026-11-24
+
+L'audit corrente ha verificato AGENTS.md, le story BMAD attive, il contratto
+`@see` e il perimetro ECC. Le correzioni consentite sono state limitate a
+questa documentazione Xot. I marker Git rilevati in `Modules/UI` e `Modules/User`
+restano fuori perimetro: non sono stati modificati.

@@ -13,6 +13,10 @@ discussions: []
 
 Fonte: [Webcrunch Tailwind CSS Collection](https://webcrunch.com/collections/tailwind-css)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "tailwind css webcrunch approfondimento"
@@ -27,6 +31,12 @@ discussions: []
 Tailwind CSS è un framework CSS utility-first che permette di costruire interfacce moderne e responsive in modo estremamente rapido e modulare, sfruttando classi predefinite e personalizzabili. Webcrunch raccoglie una serie di guide che coprono sia l’uso base che pattern avanzati, plugin e componenti riutilizzabili.
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## Cos'è Tailwind CSS secondo Webcrunch
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Tutorial e Pattern Analizzati
 

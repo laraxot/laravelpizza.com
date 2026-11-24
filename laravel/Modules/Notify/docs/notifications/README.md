@@ -186,6 +186,10 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 ---
 
 <!-- Merged from README.md, which collided with this file on case-insensitive filesystems. -->
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 title: "Readme"
@@ -207,3 +211,8 @@ related:
   - "./netfun-sms-implementation.md"
 ---
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

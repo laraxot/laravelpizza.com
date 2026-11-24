@@ -131,8 +131,7 @@ final class GeoMapDatasetAction
     }
 
     /**
-     * @param array<array-key, mixed> $decoded
-     *
+     * @param  array<array-key, mixed>  $decoded
      * @return list<GeoFeature>
      */
     private function normalizeFeatureCollection(array $decoded): array
@@ -162,8 +161,7 @@ final class GeoMapDatasetAction
     }
 
     /**
-     * @param array<array-key, mixed> $feature
-     *
+     * @param  array<array-key, mixed>  $feature
      * @return GeoFeature|null
      */
     private function normalizeFeature(array $feature): ?array
@@ -200,8 +198,7 @@ final class GeoMapDatasetAction
     }
 
     /**
-     * @param array<array-key, mixed> $properties
-     *
+     * @param  array<array-key, mixed>  $properties
      * @return GeoProperties|null
      */
     private function normalizeProperties(array $properties): ?array

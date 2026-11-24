@@ -8,10 +8,7 @@ tags: [migrato-da-txt, user]
 converted_from: fix02.txt
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< HEAD
-=======
 qmd: "fix02"
->>>>>>> laraxot/dev
 ---
 
 [COMPLETATO] OauthAccessToken rimosso, consolidato su OauthToken.

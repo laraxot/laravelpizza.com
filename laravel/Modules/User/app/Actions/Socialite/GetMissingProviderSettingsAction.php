@@ -15,6 +15,7 @@ use function Safe\preg_match;
  * non dice che il provider sia configurato, e Socialite costruisce comunque l'URL, senza `client_id`.
  *
  * @see docs/contracts/get-missing-provider-settings-action.md
+ *
  * @contract docs/contracts/get-missing-provider-settings-action.md
  */
 class GetMissingProviderSettingsAction

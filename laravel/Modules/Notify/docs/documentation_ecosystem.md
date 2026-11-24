@@ -3,7 +3,19 @@ title: "documentation ecosystem"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "documentation ecosystem"
 issues: []
 discussions: []
@@ -13,6 +25,10 @@ discussions: []
 
 **📍 Complete Bidirectional Links & Cross-References**
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "documentation ecosystem"
@@ -69,6 +85,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🗺️ Documentation Ecosystem Overview
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📊 Documentation Hierarchy
 
 ### Level 1: Entry Points
@@ -267,13 +290,45 @@ Xot (Core) ◄──────────────────────
 | Quick start | [Copilot Inst.](../../.github/copilot-instructions.md) | [Architecture](architecture-diagrams.md) | Your task |
 | Module overview | [Module Index](module_docs_index.md) | `Modules/{Name}/docs/00-index.md` | Details |
 | Theme overview | [Theme Index](themes_documentation_index.md) | `Themes/{Name}/docs/00-index.md` | Details |
+<<<<<<< HEAD
 | Create content | [Cms Docs](../laravel/Modules/Cms/docs/) | [Block Catalog](../laravel/Themes/Sixteen/docs/component_catalog.md) | Examples |
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+| Create content | [Cms Docs](../laravel/Modules/Cms/docs/) | [Block Catalog](../laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md) | Examples |
+=======
+<<<<<<< HEAD
+| Create content | [Cms Docs](../laravel/Modules/Cms/docs/) | [Block Catalog](../laravel/Themes/Sixteen/docs/component_catalog.md) | Examples |
+=======
+| Create content | [Cms Docs](../laravel/Modules/Cms/docs/) | [Block Catalog](../laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md) | Examples |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+| Create content | [Cms Docs](../laravel/Modules/Cms/docs/) | [Block Catalog](../laravel/Themes/Sixteen/docs/component_catalog.md) | Examples |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 | Add component | [Component Guide](../laravel/Themes/Sixteen/docs/guides/adding-components.md) | [Layout Hierarchy](../laravel/Themes/Sixteen/docs/layout-hierarchy.md) | Code |
 | Authentication | [User Docs](../laravel/Modules/User/docs/) | [Auth Guide](../laravel/Modules/User/docs/guides/) | Examples |
 | Handle files | [Media Docs](../laravel/Modules/Media/docs/) | [File Upload](../laravel/Modules/Media/docs/guides/) | Examples |
 | Send notifications | [Notify Docs](../laravel/Modules/Notify/docs/) | [Channels](../laravel/Modules/Notify/docs/guides/) | Examples |
 | Track changes | [Activity Docs](../laravel/Modules/Activity/docs/) | [Audit Trail](../laravel/Modules/Activity/docs/guides/) | Examples |
+<<<<<<< HEAD
 | Code standards | [CLAUDE.md](../laravel/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+| Code standards | [CLAUDE.md](../laravel/CLAUDE.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
+=======
+<<<<<<< HEAD
+| Code standards | [CLAUDE.md](../laravel/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
+=======
+| Code standards | [CLAUDE.md](../laravel/CLAUDE.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+| Code standards | [CLAUDE.md](../laravel/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 | Architecture | [Architecture](architecture-diagrams.md) | [Design Comuni](../laravel/Themes/Sixteen/docs/design-comuni/) | Deep dive |
 
 ---
@@ -444,8 +499,28 @@ laravel/Themes/
 - **System Architecture** → [architecture-diagrams.md](architecture-diagrams.md)
 - **Module Development** → [MODULE_DOCS_INDEX.md](module_docs_index.md)
 - **Theme Development** → [THEMES_DOCUMENTATION_INDEX.md](themes_documentation_index.md)
+<<<<<<< HEAD
 - **Code Quality** → [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
 - **Framework Rules** → [laravel/CLAUDE.md](../laravel/claude.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- **Code Quality** → [CODE_QUALITY_STANDARDS.md](CODE_QUALITY_STANDARDS.md)
+- **Framework Rules** → [laravel/CLAUDE.md](../laravel/CLAUDE.md)
+=======
+<<<<<<< HEAD
+- **Code Quality** → [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
+- **Framework Rules** → [laravel/CLAUDE.md](../laravel/claude.md)
+=======
+- **Code Quality** → [CODE_QUALITY_STANDARDS.md](CODE_QUALITY_STANDARDS.md)
+- **Framework Rules** → [laravel/CLAUDE.md](../laravel/CLAUDE.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- **Code Quality** → [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
+- **Framework Rules** → [laravel/CLAUDE.md](../laravel/claude.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **Copilot Usage** → [.github/copilot-instructions.md](../../.github/copilot-instructions.md)
 - **Design Comuni** → Search for `DESIGN_COMUNI_` files
 
@@ -484,7 +559,14 @@ laravel/Themes/
 
 2. Follow structure:
    - 00-index.md (always)
+<<<<<<< HEAD
    - 00-index.md (always)
+=======
+<<<<<<< HEAD
+   - 00-index.md (always)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
    - architecture/ (how it works)
    - guides/ (how-to)
    - reference/ (API)
@@ -551,9 +633,24 @@ Connected Via:
 1. Start: [Copilot Instructions](../../.github/copilot-instructions.md)
 2. Understand: [Architecture Diagrams](architecture-diagrams.md)
 3. Explore: [Module Index](module_docs_index.md) or [Theme Index](themes_documentation_index.md)
+<<<<<<< HEAD
 4. Deep Dive: Relevant module/theme 00-INDEX.md
 2. Understand: [Architecture Diagrams](architecture-diagrams.md)
 3. Explore: [Module Index](module_docs_index.md) or [Theme Index](themes_documentation_index.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+4. Deep Dive: Relevant module/theme 00-INDEX.md
+2. Understand: [Architecture Diagrams](architecture-diagrams.md)
+3. Explore: [Module Index](module_docs_index.md) or [Theme Index](themes_documentation_index.md)
+>>>>>>> laraxot/dev
+=======
+4. Deep Dive: Relevant module/theme 00-INDEX.md
+2. Understand: [Architecture Diagrams](architecture-diagrams.md)
+3. Explore: [Module Index](module_docs_index.md) or [Theme Index](themes_documentation_index.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 4. Deep Dive: Relevant module/theme 00-index.md
 5. Implement: Using guides and examples
 6. Validate: Against CLAUDE.md standards
@@ -563,7 +660,23 @@ Connected Via:
 1. Start: [Architecture Diagrams](architecture-diagrams.md)
 2. Understand: [Module Relationships](module_docs_index.md#cross-module-communication)
 3. Design: Using module/theme structure
+<<<<<<< HEAD
 4. Review: [Code Quality Standards](code_quality_standards.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+4. Review: [Code Quality Standards](CODE_QUALITY_STANDARDS.md)
+=======
+<<<<<<< HEAD
+4. Review: [Code Quality Standards](code_quality_standards.md)
+=======
+4. Review: [Code Quality Standards](CODE_QUALITY_STANDARDS.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+4. Review: [Code Quality Standards](code_quality_standards.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 5. Validate: Against framework rules in CLAUDE.md
 
 ### For New Project Members

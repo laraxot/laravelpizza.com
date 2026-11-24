@@ -14,28 +14,10 @@ related:
 # Regole per le Chiavi di Traduzione
 
 ## Collegamenti correlati
-<<<<<<< HEAD
-- [Documentazione centrale](README.md)
-- [Collegamenti documentazione](./collegamenti-documentazione.md)
-- [Implementazione Auth Pages](../../User/docs/auth_pages_implementation.md)
-- [Regole Traduzioni User](../../User/docs/translation_keys_rules.md)
-- [Documentazione Lang](README.md)
-- [Documentazione centrale](./README.md)
-- [Collegamenti documentazione](./collegamenti-documentazione.md)
-- [Implementazione Auth Pages](../../User/docs/auth_pages_implementation.md)
-- [Regole Traduzioni User](../../User/docs/translation_keys_rules.md)
-- [Documentazione Lang](README.md)
-- [Documentazione centrale](./README.md)
-- [Collegamenti documentazione](./collegamenti-documentazione.md)
-- [Implementazione Auth Pages](auth_pages_implementation.md)
-- [Regole Traduzioni User](translation_keys_rules.md)
-- [Documentazione Lang](./README.md)
-=======
 - [Documentazione Lang](./README.md)
 - [Collegamenti documentazione](./collegamenti-documentazione.md)
 - [Implementazione Auth Pages](../../User/docs/auth_pages_implementation.md)
 - [Regole Traduzioni User](../../User/docs/translation_keys_rules.md)
->>>>>>> laraxot/dev
 
 ## Regole Fondamentali per le Traduzioni
 

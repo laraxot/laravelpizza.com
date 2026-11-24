@@ -471,6 +471,10 @@ vendor/bin/phpstan analyse --level=10
 4. ✅ Run quality gates
 5. ✅ Commit after each phase
 6. ✅ Link documentation with viking:// URIs
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -485,3 +489,8 @@ discussions: []
 **Version**: 1.0.0  
 **Last Updated**: 2026-03-30  
 **Status**: Initial Implementation
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

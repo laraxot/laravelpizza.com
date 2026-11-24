@@ -32,14 +32,20 @@ return [
         ],
     ],
     'logout' => [
+        'in_progress' => 'Signing you out…',
         'goodbye' => [
             'message' => 'Goodbye',
         ],
     ],
     'password' => [
         'reset' => [
-            'title' => 'Reset password',
+            'title' => 'Choose a new password',
             'label' => 'Reset password',
+            'subtitle' => 'At least 8 characters. Once saved, you\'re signed in straight away.',
+            'email' => 'Email',
+            'password' => 'New password',
+            'password_confirmation' => 'Repeat the new password',
+            'submit' => 'Save password',
         ],
         'email' => [
             'label' => 'Email address',
@@ -68,6 +74,13 @@ return [
         'back_to_login' => [
             'label' => 'return to login',
         ],
+        'request' => [
+            'title' => 'Forgot your password?',
+            'subtitle' => 'Enter your account email and we\'ll send you a link to choose a new one.',
+            'email' => 'Email',
+            'submit' => 'Send me the link',
+            'back_to_login' => 'Back to sign in',
+        ],
     ],
     'sections' => [
         'verify' => [
@@ -81,9 +94,7 @@ return [
         'sign_out' => [
             'label' => 'sign out',
         ],
-        'resent' => [
-            'message' => 'A fresh verification link has been sent to your email address.',
-        ],
+        'resent' => 'We sent you a new confirmation link.',
         'instructions' => [
             'message' => 'Before proceeding, please check your email for a verification link. If you did not receive the email,',
         ],

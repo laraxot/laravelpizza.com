@@ -26,6 +26,7 @@ use Spatie\QueueableAction\QueueableAction;
  * un altro modello autenticabile potrebbe non avere la colonna. Il confine e' il contratto, non la classe base.
  *
  * @see docs/contracts/build-active-user-provider-action.md
+ *
  * @contract docs/contracts/build-active-user-provider-action.md
  */
 final class BuildActiveUserProviderAction

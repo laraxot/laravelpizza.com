@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 /**
  * @see docs/contracts/pdf-by-view-action.md
+ *
  * @contract docs/contracts/pdf-by-view-action.md
  */
 class PdfByViewAction

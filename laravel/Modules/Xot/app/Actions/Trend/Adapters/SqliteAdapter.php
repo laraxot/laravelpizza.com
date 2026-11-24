@@ -9,6 +9,7 @@ use Override;
 
 /**
  * @see docs/contracts/sqlite-adapter.md
+ *
  * @contract docs/contracts/sqlite-adapter.md
  */
 class SqliteAdapter extends AbstractAdapter

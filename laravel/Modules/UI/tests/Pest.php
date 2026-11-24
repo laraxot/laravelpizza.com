@@ -14,7 +14,7 @@ use Modules\UI\Models\Collection;
  */
 
 /**
- * @param array<string, mixed> $attributes
+ * @param  array<string, mixed>  $attributes
  */
 function createCategory(array $attributes = []): Category
 {
@@ -22,7 +22,7 @@ function createCategory(array $attributes = []): Category
 }
 
 /**
- * @param array<string, mixed> $attributes
+ * @param  array<string, mixed>  $attributes
  */
 function makeCategory(array $attributes = []): Category
 {
@@ -30,7 +30,7 @@ function makeCategory(array $attributes = []): Category
 }
 
 /**
- * @param array<string, mixed> $attributes
+ * @param  array<string, mixed>  $attributes
  */
 function createCollection(array $attributes = []): Collection
 {
@@ -38,7 +38,7 @@ function createCollection(array $attributes = []): Collection
 }
 
 /**
- * @param array<string, mixed> $attributes
+ * @param  array<string, mixed>  $attributes
  */
 function makeCollection(array $attributes = []): Collection
 {

@@ -19,6 +19,10 @@ Aggiornamento completo della documentazione per la pagina FAQ del progetto Desig
 - **Responsabile**: AI Agent Team
 - **Stato**: ✅ COMPLETATO
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "documentazione report finale"
@@ -49,6 +53,14 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📚 Documenti Creati
+### 1. Modulo Cms
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ### 2. Modulo UI
 
 **File**: `laravel/Modules/UI/docs/design-comuni-faq-components.md`

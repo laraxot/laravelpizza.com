@@ -20,6 +20,7 @@ use Webmozart\Assert\Assert;
  * in scrittura e da rimuovere in cancellazione.
  *
  * @see docs/contracts/update-json-file-by-record-action.md
+ *
  * @contract docs/contracts/update-json-file-by-record-action.md
  */
 class UpdateJsonFileByRecordAction

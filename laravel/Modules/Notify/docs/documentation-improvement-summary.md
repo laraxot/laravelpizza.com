@@ -1,4 +1,13 @@
 ---
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 title: "documentation improvement summary 2026 03"
 type: note
 tags: [documentation]
@@ -359,6 +368,12 @@ ls laravel/.github/skills/documentation-management/SKILL.md
 **Priority**: High
 
 *This summary is maintained in git. For latest status, check repository.*
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 issues: []
 discussions: []
 title: "DOCUMENTATION_IMPROVEMENT_SUMMARY_2026-03-13"
@@ -380,3 +395,12 @@ related:
 ---
 
 > Questo file è stato rinominato in [documentation-improvement-summary.md](documentation-improvement-summary.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

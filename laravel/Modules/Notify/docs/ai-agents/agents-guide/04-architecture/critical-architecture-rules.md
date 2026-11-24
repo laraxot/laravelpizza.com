@@ -394,6 +394,10 @@ LaravelLocalization::getLocalizedURL($locale, null, [], true)
 // WRONG
 url('/en/path')
 ```
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -405,3 +409,8 @@ updated: 2026-09-26
 qmd: "critical architecture rules"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

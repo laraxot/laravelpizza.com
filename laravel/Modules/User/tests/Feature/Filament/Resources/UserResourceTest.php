@@ -4,15 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Feature\Filament\Resources;
 
-<<<<<<< HEAD
-use Carbon\Carbon;
-=======
->>>>>>> laraxot/dev
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Forms\Components\Field;
 use Filament\Forms\Components\TextInput;
-<<<<<<< HEAD
 use Filament\Infolists\Components\Entry;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Components\Component;
@@ -27,29 +22,13 @@ use Livewire\Component as LivewireComponent;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Enums\UserType;
 use Modules\User\Filament\Resources\UserResource;
-use Modules\User\Filament\Resources\UserResource\Pages\CreateUser;
-use Modules\User\Filament\Resources\UserResource\Pages\EditUser;
 use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
 use Modules\User\Models\User;
-=======
-use Filament\Infolists\Components\TextEntry;
-use Filament\Schemas\Components\Component;
-use Filament\Schemas\Components\Section;
-use Illuminate\Support\Facades\Hash;
-use Modules\User\Database\Factories\UserFactory;
-use Modules\User\Enums\UserType;
-use Modules\User\Filament\Resources\UserResource;
-use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
->>>>>>> laraxot/dev
 use Modules\User\Tests\TestCase;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use PHPUnit\Framework\Assert;
-<<<<<<< HEAD
-use ReflectionMethod;
-=======
->>>>>>> laraxot/dev
 
 uses(TestCase::class);
 
@@ -71,7 +50,6 @@ function userResourceFormSchema(): array
     return $schema;
 }
 
-<<<<<<< HEAD
 /**
  * Figli dichiarati di un componente (chiave = nome del blocco, es. 'main', 'signin'). A differenza di
  * getChildComponents() non richiede un container Livewire.
@@ -104,7 +82,7 @@ function userResourceFormFindByName(array $components, string $name): Field|Entr
         }
 
         $found = userResourceFormFindByName(userResourceFormChildren($component), $name);
-        if (null !== $found) {
+        if ($found !== null) {
             return $found;
         }
     }
@@ -128,8 +106,6 @@ function userResourceFormFieldOnPage(string $name, HasSchemas&LivewireComponent 
     return $field;
 }
 
-=======
->>>>>>> laraxot/dev
 beforeEach(function (): void {
     UserFactory::new()
         ->create([

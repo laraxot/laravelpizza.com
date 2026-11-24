@@ -10,6 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/base-s3-action.md
+ *
  * @contract docs/contracts/base-s3-action.md
  */
 abstract class BaseS3Action

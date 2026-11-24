@@ -61,8 +61,4 @@ protected function getSomeValue(): float
 ---
 **Riferimenti**:
 - [Documento Canonico AI Agents](../../../../.agents/docs/accessor-auto-persistence.md)
-<<<<<<< HEAD
 - [index.md](index.md)
-=======
-- [INDEX.md](INDEX.md)
->>>>>>> laraxot/dev

@@ -14,6 +14,10 @@ use Webmozart\Assert\Assert;
 /**
  * Trait HasTenantNotifications.
  *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
  * Log di notifica multi-tenant (NotificationLog), non le database notifications Laravel.
  * Evitare di combinarlo con Illuminate\Notifications\Notifiable sullo stesso modello
  * (collisioni su notifications() / unreadNotifications()).
@@ -24,6 +28,14 @@ use Webmozart\Assert\Assert;
  * @property string|int|null $tenant_id
  *
  * @see Modules/Notify/docs/contracts/has-tenant-notifications.md
+<<<<<<< HEAD
+=======
+=======
+ * Fornisce funzionalità per la gestione delle notifiche per tenant.
+ *
+ * Usato da test/unit helpers (es. NotifyTenantDummyModel); non ignorare trait.unused.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
  */
 trait HasTenantNotifications
 {
@@ -52,8 +64,18 @@ trait HasTenantNotifications
     }
 
     /**
+<<<<<<< HEAD
      * @param  Builder<$this>  $query
      * @return Builder<$this>
+=======
+<<<<<<< HEAD
+     * @param  Builder<$this>  $query
+     * @return Builder<$this>
+=======
+     * @param  Builder<static>  $query
+     * @return Builder<static>
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
      */
     public function scopeForTenant(Builder $query, ?string $tenantId = null): Builder
     {
@@ -67,7 +89,15 @@ trait HasTenantNotifications
      */
     public function belongsToTenant(string $tenantId): bool
     {
+<<<<<<< HEAD
         return (string) $this->tenant_id === $tenantId;
+=======
+<<<<<<< HEAD
+        return (string) $this->tenant_id === $tenantId;
+=======
+        return $this->tenant_id === $tenantId;
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
     }
 
     /**
@@ -96,7 +126,14 @@ trait HasTenantNotifications
         });
 
         static::addGlobalScope('tenant', function (Builder $builder): void {
+<<<<<<< HEAD
             /** @var Builder<static> $builder */
+=======
+<<<<<<< HEAD
+            /** @var Builder<static> $builder */
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
             $model = $builder->getModel();
 
             if (! $model instanceof static) {
@@ -114,6 +151,10 @@ trait HasTenantNotifications
     /**
      * Relazione morph verso NotificationLog filtrata per tenant corrente.
      *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
      * @return MorphMany<NotificationLog, $this>
      */
     protected function tenantNotificationLogs(): MorphMany
@@ -122,6 +163,16 @@ trait HasTenantNotifications
         $relation = $this->morphMany(NotificationLog::class, 'notifiable');
 
         return $relation->where('tenant_id', $this->getTenantId());
+<<<<<<< HEAD
+=======
+=======
+     * @return MorphMany<NotificationLog, static>
+     */
+    protected function tenantNotificationLogs(): MorphMany
+    {
+        return $this->morphMany(NotificationLog::class, 'notifiable')->where('tenant_id', $this->getTenantId());
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
     }
 
     /**

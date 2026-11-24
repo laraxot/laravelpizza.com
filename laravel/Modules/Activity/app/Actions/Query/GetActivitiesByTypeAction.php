@@ -13,6 +13,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Get activities by event type.
  *
  * @see docs/contracts/get-activities-by-type-action.md
+ *
  * @contract docs/contracts/get-activities-by-type-action.md
  */
 class GetActivitiesByTypeAction

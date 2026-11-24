@@ -10,7 +10,9 @@ use Webmozart\Assert\Assert;
 
 /**
  * Genera il path per l'upload temporaneo originale di un media.
+ *
  * @see docs/contracts/get-temporary-upload-path-action.md
+ *
  * @contract docs/contracts/get-temporary-upload-path-action.md
  */
 final class GetTemporaryUploadPathAction

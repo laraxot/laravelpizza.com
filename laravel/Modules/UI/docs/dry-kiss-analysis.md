@@ -3,10 +3,7 @@ title: "DRY & KISS Analysis - Modulo UI"
 qmd: "ui dry kiss analysis md"
 type: note
 tags: [documentation]
-<<<<<<< HEAD
 created: 2025-10-15
-=======
->>>>>>> laraxot/dev
 ---
 
 # DRY & KISS Analysis - Modulo UI

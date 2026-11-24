@@ -11,6 +11,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/guess-pivot-action.md
+ *
  * @contract docs/contracts/guess-pivot-action.md
  */
 class GuessPivotAction

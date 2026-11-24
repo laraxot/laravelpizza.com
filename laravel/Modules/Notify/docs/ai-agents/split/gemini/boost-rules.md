@@ -49,6 +49,10 @@ discussions: []
 4. Mixed Queries - query=middleware "rate limit" - "middleware" AND exact phrase "rate limit".
 5. Multiple Queries - queries=["authentication", "middleware"] - ANY of these terms.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -68,3 +72,9 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../laravel/gemini.md](../../../../laravel/../../../../laravel/gemini.md) — Original source
 
+<<<<<<< HEAD
+=======
+=======
+## Cross-References
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

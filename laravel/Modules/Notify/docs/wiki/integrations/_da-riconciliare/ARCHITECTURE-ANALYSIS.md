@@ -7,7 +7,19 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 # NOTIFY ARCHITECTURE DEEP DIVE ANALYSIS
@@ -1662,7 +1674,23 @@ Tasks:
 
 ### Recommended New Documentation
 ```
+<<<<<<< HEAD
 1. ARCHITECTURE.md
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+1. architecture.md
+=======
+<<<<<<< HEAD
+1. ARCHITECTURE.md
+=======
+1. architecture.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+1. ARCHITECTURE.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
    - System architecture diagrams
    - Module dependency graph
    - Database schema diagrams

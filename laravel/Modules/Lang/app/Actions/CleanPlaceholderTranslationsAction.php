@@ -22,6 +22,7 @@ use function Safe\unlink;
  * resterebbe "congelato" al valore calcolato qui, quindi non si tocca.
  *
  * @see docs/contracts/clean-placeholder-translations-action.md
+ *
  * @contract docs/contracts/clean-placeholder-translations-action.md
  */
 class CleanPlaceholderTranslationsAction

@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Convenzione dei Percorsi per le Actions"
 type: note
 qmd: "actions path convention convenzione percorsi"
 ---
->>>>>>> laraxot/dev
 # Convenzione dei Percorsi per le Actions
 
 ## Regola Fondamentale

@@ -11,6 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Record activity for a subject identified by class and id (no Model instance required).
  *
  * @see docs/contracts/record-subject-activity-action.md
+ *
  * @contract docs/contracts/record-subject-activity-action.md
  */
 class RecordSubjectActivityAction

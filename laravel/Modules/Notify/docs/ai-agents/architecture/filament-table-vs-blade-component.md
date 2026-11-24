@@ -15,6 +15,10 @@ discussions: []
 **Status**: ✅ MANDATORY ARCHITECTURE RULE  
 **Priority**: 🔴 CRITICAL
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "filament table vs blade component"
@@ -32,6 +36,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🚨 REGOLA FONDAMENTALE
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📊 DECISION MATRIX
 
 | Use Case | Component Type | File Pattern | Features |

@@ -72,6 +72,10 @@ The `sendWhatsApp()` method was slightly different but still shared the core not
 ✅ **Type Safety**: Maintained strict typing throughout  
 ✅ **Backward Compatibility**: Public interface unchanged  
 ✅ **Laraxot Philosophy**: Follows established architectural patterns
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -84,3 +88,8 @@ qmd: "send record notification action refactoring"
 issues: []
 discussions: []
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

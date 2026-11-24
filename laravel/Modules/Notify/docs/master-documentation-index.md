@@ -3,13 +3,29 @@ title: "📚 Master Documentation Index"
 type: concept
 tags: [master, documentation, index]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "master-documentation-index 📚 master documentation index"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./00-index.md"
   - "./00-index-2.md"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
   - "./00-index.md"
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
@@ -20,6 +36,15 @@ related:
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
+=======
+=======
+  - "./absolute-completion.md"
+  - "./acronym-naming-conventions.md"
+  - "./00-index-documentation.md"
+  - "./absolute-completion-completamento-assoluto.md"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 status: draft
 ---
@@ -80,8 +105,27 @@ status: draft
 
 ### 📊 Reports
 - [Status Reports](./reports/README.md)
+<<<<<<< HEAD
 - [Quality Reports](roadmap/quality.md)
 - [Quality Reports](./roadmap/quality.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Quality Reports](roadmap/quality.md)
+- [Quality Reports](./roadmap/quality.md)
+=======
+<<<<<<< .merge_file_6oWKXT
+- [Quality Reports](./reports/quality.md)
+=======
+- [Quality Reports](roadmap/quality.md)
+- [Quality Reports](./roadmap/quality.md)
+>>>>>>> .merge_file_4u754E
+>>>>>>> laraxot/dev
+=======
+- [Quality Reports](roadmap/quality.md)
+- [Quality Reports](./roadmap/quality.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Performance Reports](./reports/performance.md)
 
 ---

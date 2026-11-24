@@ -6,6 +6,7 @@ namespace Modules\Xot\Actions\Translation;
 
 /**
  * @see docs/contracts/apertium-translate-action.md
+ *
  * @contract docs/contracts/apertium-translate-action.md
  */
 class ApertiumTranslateAction extends BaseTranslateAction

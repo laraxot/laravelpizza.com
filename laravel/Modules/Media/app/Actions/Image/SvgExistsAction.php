@@ -12,7 +12,9 @@ use Webmozart\Assert\Assert;
  * Verifica l'esistenza di un SVG registrato utilizzando BladeUI Icons.
  *
  * @method bool execute(string $svgName)
+ *
  * @see docs/contracts/svg-exists-action.md
+ *
  * @contract docs/contracts/svg-exists-action.md
  */
 class SvgExistsAction

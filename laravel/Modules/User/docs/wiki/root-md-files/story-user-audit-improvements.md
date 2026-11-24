@@ -1,10 +1,7 @@
 ---
 title: story-user-audit-improvements
 module: User
-<<<<<<< HEAD
-=======
 qmd: "story user audit improvements storyuserauditimprovements"
->>>>>>> laraxot/dev
 ---
 
 # BMAD Story: User Module Audit Improvements

@@ -3,7 +3,19 @@ title: "agents project rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "agents project rules"
 issues: []
 discussions: []
@@ -37,6 +49,10 @@ Regole generali del progetto.
 - Shared project docs live under `docs/project/`
 - Module/theme docs remain local in each `docs/` directory
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "agents project rules"
@@ -78,6 +94,15 @@ done
 ```
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## JSON Page File Naming
+### CRITICAL Rule
+### Validation
+# Check all JSON files match their slugs
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Module SVG Rules
 
@@ -127,6 +152,26 @@ done
 
 - [Indice AGENTS](./agents-split-index.md)
 - [regole-critiche.md](./regole-critiche.md) - Regole critiche
+<<<<<<< HEAD
 - [AGENTS.md originale](../../AGENTS.md)
 - [AGENTS.md originale](../../AGENTS.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [AGENTS.md originale](../../AGENTS.md)
+- [AGENTS.md originale](../../AGENTS.md)
+=======
+<<<<<<< HEAD
+- [AGENTS.md originale](../../agents.md)
+- [agents.md originale](../../agents.md)
+=======
+- [AGENTS.md originale](../../AGENTS.md)
+- [AGENTS.md originale](../../AGENTS.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [AGENTS.md originale](../../agents.md)
+- [agents.md originale](../../agents.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Index principale](./index.md)

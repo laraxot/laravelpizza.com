@@ -102,12 +102,28 @@ return [
     'status' => [
         'all' => [
             'label' => 'Tutti gli eventi',
+            'description' => 'Filtro: tutti gli eventi',
         ],
         'upcoming' => [
             'label' => 'In arrivo',
+            'description' => 'Filtro: eventi futuri',
         ],
         'past' => [
-            'label' => 'Eventi passati',
+            'label' => 'Passati',
+            'description' => 'Filtro: eventi passati',
         ],
+    ],
+    'search' => [
+        'see_all' => 'Vedi tutti gli eventi',
+        'label' => 'Cerca eventi',
+        'city' => 'Città',
+        'all_cities' => 'Tutte le città',
+        'from' => 'Dal',
+        'until' => 'Al',
+        'apply' => 'Cerca',
+        'reset' => 'Togli i filtri',
+        'no_results' => 'Nessun evento con questi filtri.',
+        'show_past' => 'Eventi passati',
+        'show_upcoming' => 'Prossimi eventi',
     ],
 ];

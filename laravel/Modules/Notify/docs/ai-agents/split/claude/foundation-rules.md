@@ -69,7 +69,15 @@ This application is a Laravel application and its main Laravel ecosystems packag
 
 - ← [CLAUDE Index](index.md): All Laravel Boost guidelines
 - ← [Main AI Docs Index](../index.md): Master index
+<<<<<<< HEAD
 - ← [CLAUDE Index](index.md): All Laravel Boost guidelines
 - ← [Main AI Docs Index](../index.md): Master index
+=======
+<<<<<<< HEAD
+- ← [CLAUDE Index](index.md): All Laravel Boost guidelines
+- ← [Main AI Docs Index](../index.md): Master index
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md): Original source
 

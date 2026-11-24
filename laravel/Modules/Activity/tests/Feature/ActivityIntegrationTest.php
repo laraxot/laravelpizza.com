@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Activity\Tests\Feature;
 
 use Closure;
+use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Str;
 use Modules\Activity\Database\Factories\ActivityFactory;
@@ -306,14 +307,14 @@ test('activity module handles data consistency across models', function () {
     // SchemalessAttributes is Arrayable (toArray), not Collection (all).
     $activityProperties = is_array($activityPropertiesValue)
         ? $activityPropertiesValue
-        : ($activityPropertiesValue instanceof \Illuminate\Contracts\Support\Arrayable
+        : ($activityPropertiesValue instanceof Arrayable
             ? $activityPropertiesValue->toArray()
             : []);
     $snapshotStateValue = $snapshot->state;
     Assert::assertNotNull($snapshotStateValue);
     $snapshotState = is_array($snapshotStateValue)
         ? $snapshotStateValue
-        : ($snapshotStateValue instanceof \Illuminate\Contracts\Support\Arrayable
+        : ($snapshotStateValue instanceof Arrayable
             ? $snapshotStateValue->toArray()
             : (array) $snapshotStateValue);
     $storedEventPropertiesValue = $storedEvent->event_properties;
@@ -336,7 +337,7 @@ test('activity module handles data consistency across models', function () {
     Assert::assertNotNull($freshActivityPropertiesValue);
     $freshActivityProperties = is_array($freshActivityPropertiesValue)
         ? $freshActivityPropertiesValue
-        : ($freshActivityPropertiesValue instanceof \Illuminate\Contracts\Support\Arrayable
+        : ($freshActivityPropertiesValue instanceof Arrayable
             ? $freshActivityPropertiesValue->toArray()
             : []);
     $freshSnapshotState = $freshSnapshot->state;
@@ -389,14 +390,14 @@ test('activity module supports bulk operations efficiently', function () {
     Assert::assertNotNull($firstActivityPropertiesValue);
     $firstActivityProperties = is_array($firstActivityPropertiesValue)
         ? $firstActivityPropertiesValue
-        : ($firstActivityPropertiesValue instanceof \Illuminate\Contracts\Support\Arrayable
+        : ($firstActivityPropertiesValue instanceof Arrayable
             ? $firstActivityPropertiesValue->toArray()
             : []);
     $lastActivityPropertiesValue = $lastActivity->properties;
     Assert::assertNotNull($lastActivityPropertiesValue);
     $lastActivityProperties = is_array($lastActivityPropertiesValue)
         ? $lastActivityPropertiesValue
-        : ($lastActivityPropertiesValue instanceof \Illuminate\Contracts\Support\Arrayable
+        : ($lastActivityPropertiesValue instanceof Arrayable
             ? $lastActivityPropertiesValue->toArray()
             : []);
 

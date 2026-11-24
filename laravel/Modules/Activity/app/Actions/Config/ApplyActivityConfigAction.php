@@ -18,6 +18,7 @@ use Spatie\QueueableAction\QueueableAction;
  * (`ACTIVITY_LOGGER_ENABLED`).
  *
  * @see docs/contracts/apply-activity-config-action.md
+ *
  * @contract docs/contracts/apply-activity-config-action.md
  */
 class ApplyActivityConfigAction

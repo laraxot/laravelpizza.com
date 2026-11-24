@@ -5,10 +5,7 @@ status: done-with-blocker
 priority: medium
 created: 2026-10-06
 module: User
-<<<<<<< HEAD
-=======
 qmd: "phpstan cleanup user story scopo prima"
->>>>>>> laraxot/dev
 ---
 
 # [STORY] PHPStan cleanup modulo User

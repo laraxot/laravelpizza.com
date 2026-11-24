@@ -11,6 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/publish-translation-action.md
+ *
  * @contract docs/contracts/publish-translation-action.md
  */
 class PublishTranslationAction

@@ -15,6 +15,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/generate-form-by-file-action.md
+ *
  * @contract docs/contracts/generate-form-by-file-action.md
  */
 class GenerateFormByFileAction

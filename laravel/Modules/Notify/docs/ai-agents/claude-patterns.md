@@ -41,6 +41,10 @@ class CreateEventAction
 }
 ```
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "claude patterns"
@@ -70,6 +74,13 @@ class EventData extends Data
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 2. Data Transfer Objects
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 3. Strict Typing
 
 **ALWAYS** declare strict types:

@@ -9,7 +9,15 @@ issues: []
 discussions: []
 ---
 
+<<<<<<< HEAD
 # Sistema Backup Email 
+=======
+<<<<<<< HEAD
+# Sistema Backup Email 
+=======
+# Sistema Backup Email
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Panoramica
 
@@ -56,7 +64,15 @@ class MailTemplateBackup
         }
 
         $data = json_decode(Storage::get($path), true);
+<<<<<<< HEAD
         
+=======
+<<<<<<< HEAD
+        
+=======
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
         return MailTemplate::updateOrCreate(
             ['id' => $data['id']],
             [
@@ -185,7 +201,15 @@ class MailNotificationBackup
         }
 
         $data = json_decode(Storage::get($path), true);
+<<<<<<< HEAD
         
+=======
+<<<<<<< HEAD
+        
+=======
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
         return MailNotification::updateOrCreate(
             ['id' => $data['id']],
             [
@@ -315,7 +339,15 @@ class MailQueueBackup
         }
 
         $data = json_decode(Storage::get($path), true);
+<<<<<<< HEAD
         
+=======
+<<<<<<< HEAD
+        
+=======
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
         return MailQueue::updateOrCreate(
             ['id' => $data['id']],
             [

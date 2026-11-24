@@ -5,6 +5,23 @@
 > `npm run build` il sito vede già la build. Le istruzioni di copia qui sotto sono storiche. Regola e motivi:
 > [public-html-symlink-assets.md](/laravel/Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md).
 
+## PostCSS: nessun plugin (Tailwind v4 e' in `@tailwindcss/vite`)
+
+`postcss.config.js` esporta `{ plugins: {} }` di proposito. Tailwind v4 e' gia' eseguito da `@tailwindcss/vite`
+(`vite.config.js`) e fa da solo `@import`, nesting e prefissi vendor. Non reintrodurre:
+
+- **`@tailwindcss/postcss`**: non e' in `package.json`, quindi `npm run build` (CI, job "Theme Build") fallisce con
+  `Failed to load PostCSS config ... Cannot find module '@tailwindcss/postcss'`; e aggiungerlo farebbe elaborare Tailwind due volte.
+- **`./postcss/layer-button-preflight.cjs` e `./postcss/isolate-legacy-important.cjs`**: sono del tema Sixteen (DCP-195, DCP-03),
+  copiati qui con la config e senza i file (`postcss/` non esiste nel tema). Anche se esistessero non servirebbero:
+  Meetup usa `@import 'tailwindcss'` (il preflight dei bottoni e' gia' in `@layer base`: il primo plugin non cambia un byte sul CSS
+  di Meetup) e non usa lo scope `.page-content[data-dc]` (il secondo aggiungerebbe un guard a ogni regola: da 789 KB a 1,29 MB).
+- `postcss-import`, `postcss-nesting`, `autoprefixer`: ridondanti con Vite e Tailwind v4 (il build senza config e quello con
+  `plugins: {}` producono CSS identico byte per byte; con i tre plugin cambiano solo alcuni prefissi `-webkit-`/`-moz-`).
+
+Se un giorno serve un plugin PostCSS, aggiungi la dipendenza a `package.json`, il file del plugin al repo del tema e rifai un
+`npm ci && npm run build` pulito prima di fare il commit.
+
 ## Data
 [DATE]
 

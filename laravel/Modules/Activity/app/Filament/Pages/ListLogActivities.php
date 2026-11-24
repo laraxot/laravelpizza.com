@@ -7,7 +7,6 @@ namespace Modules\Activity\Filament\Pages;
 use Exception;
 use Filament\Notifications\Notification;
 use Filament\Pages\Concerns\InteractsWithFormActions;
-use function Safe\json_encode;
 use Filament\Resources\Pages\Concerns\InteractsWithRecord;
 use Filament\Schemas\Schema;
 use Filament\Tables\Enums\PaginationMode;
@@ -26,6 +25,7 @@ use Modules\Activity\Models\Activity;
 use Modules\Xot\Filament\Resources\Pages\XotBasePage;
 use Stringable;
 
+use function Safe\json_encode;
 
 /**
  * Classe base per visualizzare lo storico delle attività di un record.

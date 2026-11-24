@@ -12,6 +12,7 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 /**
  * @see docs/contracts/pdf-by-model-action.md
+ *
  * @contract docs/contracts/pdf-by-model-action.md
  */
 class PdfByModelAction

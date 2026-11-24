@@ -261,6 +261,10 @@ niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../larave
 <<<<<<< HEAD
 ### 9. Vite Build: outDir: './public' + symlink public_html/themes (npm run copy obsoleto) ✅
 =======
+<<<<<<< HEAD
+### 9. Vite Build: outDir: './public' + symlink public_html/themes (npm run copy obsoleto) ✅
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 **Decision**: Build theme independently, copy to public_html.

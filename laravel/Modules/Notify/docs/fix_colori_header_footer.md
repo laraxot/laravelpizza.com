@@ -14,6 +14,10 @@ discussions: []
 ## Data: 2026-03-31
 ## Status: ✅ Header e Footer Fixati
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "fix colori header footer"
@@ -50,6 +54,15 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📊 Colori Ufficiali Bootstrap Italia
+### Header
+### Footer
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## ✅ Fix Applicati
 
 ### 1. Header Slim

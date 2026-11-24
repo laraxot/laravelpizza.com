@@ -15,6 +15,10 @@ discussions: []
 
 **Certificate of Excellence 2025**
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "PROJECT COMPLETION CERTIFICATE"
@@ -35,6 +39,13 @@ This document certifies that the project **Notify - Base Fila4 Mono** has succes
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📜 Official Certification
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## ✅ Certification Criteria Met
 
 ### 1. Code Quality Standards ✅

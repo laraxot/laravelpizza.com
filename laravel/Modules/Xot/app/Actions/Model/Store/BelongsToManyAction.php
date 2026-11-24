@@ -14,6 +14,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/store-belongs-to-many-action.md
+ *
  * @contract docs/contracts/store-belongs-to-many-action.md
  */
 class BelongsToManyAction

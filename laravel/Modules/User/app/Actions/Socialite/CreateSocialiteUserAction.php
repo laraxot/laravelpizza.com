@@ -15,6 +15,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/create-socialite-user-action.md
+ *
  * @contract docs/contracts/create-socialite-user-action.md
  */
 class CreateSocialiteUserAction

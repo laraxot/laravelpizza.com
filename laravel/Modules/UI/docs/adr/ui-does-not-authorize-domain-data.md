@@ -1,17 +1,12 @@
 ---
-<<<<<<< HEAD
 title: "ADR — UI è il layer condiviso e non possiede né autorizza il dominio"
 type: decision
 status: proposed
 created: 2026-11-23
 updated: 2026-11-24
 decision-makers: UI module owner
-=======
-status: proposed
 date: 2026-11-23
-decision-makers: UI module owner
 qmd: "ui does not authorize domain data"
->>>>>>> laraxot/dev
 ---
 
 # UI è il layer condiviso e non possiede il dominio Geo
@@ -64,7 +59,6 @@ soggette alle policy del modulo owner.
 - Fallback: [`NullMapService`](../../app/Services/Map/NullMapService.php) e
   [`NullGeocodingService`](../../app/Services/Map/NullGeocodingService.php).
 - Riferimento: [`docs/architecture.md`](../architecture.md).
-<<<<<<< HEAD
 
 ## Verifica
 
@@ -77,5 +71,3 @@ soggette alle policy del modulo owner.
   resta `proposed`. Non ci sono test sui fallback Null.
 - Estensioni `XotBase` per i componenti Filament: `rg -l 'extends Filament' laravel/Modules/UI/app` non deve trovare
   classi che estendono direttamente Filament.
-=======
->>>>>>> laraxot/dev

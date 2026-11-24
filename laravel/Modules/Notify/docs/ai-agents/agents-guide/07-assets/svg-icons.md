@@ -14,6 +14,10 @@ discussions: []
 - Store SVGs in `Modules/Meetup/resources/svg/`
 - Reference via: `<x-filament::icon icon="meetup-{name}" />`
 - NO inline SVGs in Blade files
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -25,3 +29,8 @@ updated: 2026-09-26
 qmd: "svg icons"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

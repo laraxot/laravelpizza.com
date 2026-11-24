@@ -14,6 +14,10 @@ discussions: []
 **Data**: 2026-03-30  
 **Status**: ✅ **SUCCESSFULLY UPGRADED**
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "filament 5 upgrade complete"
@@ -37,6 +41,14 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎉 Upgrade Completato
+### Versioni Installate
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🔧 Modifiche Applicate
 
 ### 1. Root composer.json (MINIMALE)

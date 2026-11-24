@@ -5,9 +5,9 @@ declare(strict_types=1);
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
-use PHPUnit\Framework\Assert;
 use Modules\Seo\Contracts\SitemapPathsContract;
 use Modules\Seo\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
 use function Safe\simplexml_load_string;
 

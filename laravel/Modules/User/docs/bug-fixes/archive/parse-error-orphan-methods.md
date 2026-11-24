@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "parse-error-orphan-methods-2025-01-27 - User"
 type: note
 qmd: "parse error orphan methods parseerrororphanmethods20250127 user"
 ---
->>>>>>> laraxot/dev
 # parse-error-orphan-methods-2025-01-27 - User
 
 ## Overview

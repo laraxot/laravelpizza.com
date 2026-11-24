@@ -50,6 +50,10 @@ php artisan tinker --execute="
 ### Stato
 ✅ **RISOLTO** - Testato e verificato funzionante
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "SUMMARY"
@@ -63,3 +67,9 @@ discussions: []
 ## Prossimi Bug da Analizzare
 
 Nessuno al momento.
+<<<<<<< HEAD
+=======
+=======
+## Prossimi Bug da Analizzare
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

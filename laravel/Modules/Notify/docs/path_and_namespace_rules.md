@@ -164,6 +164,10 @@ namespace Modules\Notify\App\Console\Commands;
 ```
 
 > **Nota:** Anche per i comandi console, il namespace non deve mai includere il segmento `App`.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -176,3 +180,8 @@ qmd: "path and namespace rules"
 issues: []
 discussions: []
 *Ultimo aggiornamento: 2025-05-12*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

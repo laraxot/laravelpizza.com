@@ -3,15 +3,7 @@ title: "Lang — vista language switcher standalone"
 type: decision
 status: accepted
 created: 2026-11-23
-<<<<<<< HEAD
-<<<<<<< HEAD
-updated: 2026-11-23
-=======
 updated: 2026-11-24
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
 ---
 
 # ADR: vista language switcher standalone
@@ -24,7 +16,6 @@ updated: 2026-11-23
 
 `LanguageSwitcherWidget` prepara gli URL localizzati nei dati della lingua. La vista renderizza link HTML ordinari e non accede a `$this`.
 
-<<<<<<< HEAD
 ## Alternative scartate
 
 Non documentate al momento della decisione: da ricostruire.
@@ -42,8 +33,3 @@ Il selettore funziona nelle pagine pubbliche Folio/Blade e resta compatibile con
 - `Modules/Lang/tests/Unit/LangHundredPercentCoverageTest.php` copre gli URL e i dati di vista del widget
   (test «covers changeLanguage urls and view data»).
 - Contratto della vista: [language-switcher-component](../contracts/language-switcher-component.md).
-=======
-## Conseguenze
-
-Il selettore funziona nelle pagine pubbliche Folio/Blade e resta compatibile con la sorgente di localizzazione esistente. L’interazione non richiede JavaScript.
->>>>>>> laraxot/dev

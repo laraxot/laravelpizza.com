@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Filosofia dei Comandi Console - Modulo User"
 type: note
 qmd: "console commands philosophy filosofia comandi user"
 ---
->>>>>>> laraxot/dev
 # Filosofia dei Comandi Console - Modulo User
 
 ## Principi Fondamentali

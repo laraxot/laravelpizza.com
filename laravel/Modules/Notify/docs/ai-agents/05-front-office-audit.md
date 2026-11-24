@@ -3,7 +3,19 @@ title: "05 Front Office Audit"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "05 Front Office Audit"
 issues: []
 discussions: []
@@ -11,6 +23,15 @@ discussions: []
 
 # 📋 Front Office Pages Audit Checklist
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 **Part of**: [00-INDEX.md](00-index.md) — AI Agents Coordination  
 **Related**: [03-ARCHITECTURE-ZEN.md](03-architecture-zen.md) — Architecture
 
@@ -22,6 +43,12 @@ discussions: []
 ### 5. Real Data (NO Mock)
 ### 6. Web Design Checklist (31 sources)
 ### 7. Quality Gate
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 **Part of**: [00-index.md](00-index.md) — AI Agents Coordination  
 **Related**: [03-architecture-zen.md](03-architecture-zen.md) — Architecture
 
@@ -73,6 +100,15 @@ discussions: []
 - [ ] ✅ Pest: Test passing
 
 ---
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## 📁 Pages to Audit
 

@@ -16,6 +16,10 @@ discussions: []
 > **Platform**: Cursor  
 > **Version**: v5.0.6
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "installation"
@@ -43,6 +47,15 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📋 Prerequisites
+### Required
+### Recommended
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🚀 Installation Steps
 
 ### Step 1: Open Cursor

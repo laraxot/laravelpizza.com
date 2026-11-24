@@ -15,10 +15,7 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-<<<<<<< HEAD
-=======
 qmd: "xotbasepage inheritance rules autotranslation transtrait"
->>>>>>> laraxot/dev
 ---
 
 # XotBasePage Inheritance Rules

@@ -14,6 +14,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/get-tree-options-by-model-class-action.md
+ *
  * @contract docs/contracts/get-tree-options-by-model-class-action.md
  */
 class GetTreeOptionsByModelClassAction

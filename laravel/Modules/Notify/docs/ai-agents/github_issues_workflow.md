@@ -13,6 +13,10 @@ discussions: []
 
 **CRITICAL RULE**: GitHub Issues e Discussions si creano **ONLINE** su GitHub, NON come file locali!
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "github issues workflow"
@@ -32,6 +36,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Repository
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## ✅ CORRECT: Create Issues Online
 
 ### Method 1: GitHub Web Interface

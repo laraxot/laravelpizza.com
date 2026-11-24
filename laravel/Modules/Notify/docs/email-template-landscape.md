@@ -13,6 +13,10 @@ discussions: []
 
 Questo documento raggruppa e analizza le principali risorse, pacchetti e tutorial per la gestione dei template email in Laravel, con vantaggi e svantaggi di ciascuna soluzione.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 title: "email template landscape"
 type: note
@@ -76,6 +80,17 @@ Link: https://filamentphp.com/plugins/visual-builder-email-templates
 - Dipendenza da versione Filament core
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 1. Pacchetti GitHub Principali
+### 1.1 laravel-email-templates (simplepleb)
+### 1.2 spatie/laravel-database-mail-templates
+### 1.3 mlanin/laravel-email-templates-optimization
+### 1.4 Qoraiche/laravel-mail-editor
+### 1.5 filamentphp Visual Builder Email Templates
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 2. Framework e Template Engine
 
 - **Blade + Mailable** (core Laravel): leggero, nativo, ottimo per layout semplici

@@ -16,6 +16,10 @@ discussions: []
 **Status:** ✅ **Active**  
 **Total Docs:** 7,137+ markdown files  
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "module docs index"
@@ -37,6 +41,13 @@ Questo documento crea un **sistema di indicizzazione centrale** con collegamenti
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Purpose
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📚 Documentation Hierarchy
 
 ```

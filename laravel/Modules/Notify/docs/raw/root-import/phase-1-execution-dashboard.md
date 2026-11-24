@@ -17,6 +17,10 @@ discussions: []
 **Mode**: BMAD Researcher (Option C)  
 **Scope**: segnalazioni-elenco → 90% HTML Parity
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "phase 1 execution dashboard"
@@ -40,6 +44,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🚨 CURRENT STATUS
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 👥 TEAM ASSIGNMENTS & NEXT STEPS
 
 ### 🔴 Executor Agent #1 - NOW WORKING
@@ -322,7 +333,14 @@ Phase 2 planning can begin
 - [ ] Metrics documented
 - [ ] Lessons learned captured
 - [ ] 00-index.md updated
+<<<<<<< HEAD
 - [ ] 00-index.md updated
+=======
+<<<<<<< HEAD
+- [ ] 00-index.md updated
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [ ] Phase 2 strategy outlined
 
 ---
@@ -363,7 +381,14 @@ Phase 2 planning can begin
 
 **Tools** (5-10 min read):
 - bashscripts/docs/html/index.md (comparison tools)
+<<<<<<< HEAD
 - bashscripts/docs/html/index.md (comparison tools)
+=======
+<<<<<<< HEAD
+- bashscripts/docs/html/index.md (comparison tools)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 

@@ -4,9 +4,9 @@ declare(strict_types=1);
 use Illuminate\Contracts\Auth\Authenticatable;
 use Mockery\MockInterface;
 use Modules\Activity\Actions\Log\AuthorizeLogAccessAction;
+use Modules\Activity\Tests\TestCase;
 use Modules\Xot\Contracts\UserContract;
 use Spatie\Permission\Exceptions\PermissionDoesNotExist;
-use Modules\Activity\Tests\TestCase;
 
 uses(TestCase::class);
 

@@ -7,13 +7,13 @@ namespace Modules\Activity\Filament\Pages;
 use Filament\Actions\Action;
 use Filament\Facades\Filament;
 use Modules\Activity\Actions\Log\AuthorizeLogAccessAction;
-use Modules\Activity\Actions\Log\DownloadLogFileAction;
 use Modules\Activity\Actions\Log\BuildLogViewerStateAction;
+use Modules\Activity\Actions\Log\DownloadLogFileAction;
 use Modules\Activity\Actions\Log\ListLogFilesAction;
 use Modules\Activity\Actions\Log\ResolveLogFilePathAction;
 use Modules\Activity\Datas\LogFileData;
-use Modules\Activity\Exceptions\InvalidLogFileException;
 use Modules\Activity\Datas\LogViewerStateData;
+use Modules\Activity\Exceptions\InvalidLogFileException;
 use Modules\Xot\Filament\Pages\XotBasePage;
 
 /**
@@ -34,7 +34,6 @@ use Modules\Xot\Filament\Pages\XotBasePage;
  */
 class LogViewer extends XotBasePage
 {
-
     protected string $view = 'activity::filament.pages.log-viewer';
 
     /** Percorso relativo a storage/logs del file scelto. */

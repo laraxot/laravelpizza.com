@@ -7,10 +7,7 @@ tags:
   - phpstan
   - larastan
   - user
-<<<<<<< HEAD
-=======
 qmd: "phpstan user relations"
->>>>>>> laraxot/dev
 ---
 
 # PHPStan User Relations

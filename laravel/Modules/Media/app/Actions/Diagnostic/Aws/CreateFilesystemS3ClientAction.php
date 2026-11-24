@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/create-filesystem-s3-client-action.md
+ *
  * @contract docs/contracts/create-filesystem-s3-client-action.md
  */
 class CreateFilesystemS3ClientAction

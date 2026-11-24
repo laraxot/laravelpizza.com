@@ -18,6 +18,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Scopo: dashboard audit senza query ripetute; `typedQuery`/`typedGet` tengono il contratto tipizzato.
  *
  * @see docs/contracts/get-activity-statistics-action.md
+ *
  * @contract docs/contracts/get-activity-statistics-action.md
  */
 class GetActivityStatisticsAction

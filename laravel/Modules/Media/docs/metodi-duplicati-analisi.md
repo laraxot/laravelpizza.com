@@ -9,11 +9,7 @@ discussions: []
 module: Media
 topic: METODI_DUPLICATI_ANALISI
 tags: [metodi-duplicati, refactoring]
-<<<<<<< HEAD
 canonical: ../../../Themes/One/docs/shared-components/metodi_duplicati_analisi.md
-=======
-canonical: ../../../Themes/One/docs/shared-components/METODI_DUPLICATI_ANALISI.md
->>>>>>> laraxot/dev
 ---
 # 🐄⚡ ANALISI METODI DUPLICATI - SUPER MUCCA EDITION
 

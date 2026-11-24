@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< HEAD
-=======
 qmd: "user states configurazione stati utente state"
->>>>>>> laraxot/dev
 ---
 # Configurazione Stati Utente (state)
 

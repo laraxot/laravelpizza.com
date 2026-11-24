@@ -18,6 +18,10 @@ discussions: []
 - IMPORTANT: Always use `search-docs` tool for version-specific Volt documentation and updated code examples.
 - IMPORTANT: Activate `volt-development` every time you're working with a Volt or single-file component-related task.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -37,3 +41,9 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../laravel/gemini.md](../../../../laravel/../../../../laravel/gemini.md) — Original source
 
+<<<<<<< HEAD
+=======
+=======
+## Cross-References
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

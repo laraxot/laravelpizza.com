@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/validate-provider-action.md
+ *
  * @contract docs/contracts/validate-provider-action.md
  */
 class ValidateProviderAction

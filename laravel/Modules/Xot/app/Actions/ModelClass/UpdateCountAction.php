@@ -12,6 +12,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Counts records for a given model class using optimized table information.
  *
  * @see docs/contracts/update-count-action.md
+ *
  * @contract docs/contracts/update-count-action.md
  */
 class UpdateCountAction

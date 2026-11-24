@@ -16,6 +16,7 @@ use Webmozart\Assert\Assert;
  * Un valore che non e' una stringa e' un errore di dati, e la mail non deve partire.
  *
  * @see docs/contracts/resolve-notifiable-email-action.md
+ *
  * @contract docs/contracts/resolve-notifiable-email-action.md
  */
 final class ResolveNotifiableEmailAction

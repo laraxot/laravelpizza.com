@@ -211,6 +211,10 @@ Utilizzo:
 - [DRY Composition Pattern](./dry-composition-pattern.md) - Pattern composizione Actions
 - [SendRecordNotificationAction](../../app/Actions/SendRecordNotificationAction.php) - Implementazione completa
 - [SendNotificationBulkAction](./send-notification-bulk-action.md) - Azione bulk che usa SendRecordNotificationAction
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -225,3 +229,8 @@ discussions: []
 **Filosofia**: "Estrai una volta, usa ovunque" - DRY Principle  
 **Pattern**: Metodo generico + wrapper specifici  
 **Beneficio**: ~30 righe duplicate eliminate, codice più manutenibile
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

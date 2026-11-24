@@ -937,6 +937,10 @@ test('welcome email is sent', function () {
 - [MailTemplateResource](../app/Filament/Resources/MailTemplateResource.php)
 - [Mail Layouts README](../resources/mail-layouts/README.md)
 - [Spatie Translatable Integration](./spatie-translatable-integration.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -952,3 +956,8 @@ discussions: []
 **Versione Pacchetto**: spatie/laravel-database-mail-templates 3.7.1  
 **Compatibilità**: Laravel 12.x, PHP 8.3+
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

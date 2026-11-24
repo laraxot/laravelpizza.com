@@ -11,7 +11,14 @@ use Modules\Notify\Actions\RenderNotificationTemplateStringAction;
 use Modules\Notify\Enums\NotificationTypeEnum;
 use Modules\Notify\Models\Traits\NotificationTemplateMutators;
 use Modules\Xot\Contracts\ProfileContract;
+<<<<<<< HEAD
 use Modules\Xot\Models\Traits\HasCommonScopes;
+=======
+<<<<<<< HEAD
+use Modules\Xot\Models\Traits\HasCommonScopes;
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Spatie\Translatable\HasTranslations;
@@ -19,10 +26,19 @@ use Spatie\Translatable\HasTranslations;
 /**
  * Class NotificationTemplate.
  *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
  * Gli scope comuni (active/inactive/...) arrivano da HasCommonScopes: niente copia inline.
  *
  * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
  *
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
  * @property string|null $name
  * @property string|null $code
  * @property string|null $description
@@ -61,7 +77,14 @@ use Spatie\Translatable\HasTranslations;
  */
 class NotificationTemplate extends BaseModel implements HasMedia
 {
+<<<<<<< HEAD
     use HasCommonScopes;
+=======
+<<<<<<< HEAD
+    use HasCommonScopes;
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
     use HasTranslations;
     use NotificationTemplateMutators;
 
@@ -191,6 +214,11 @@ class NotificationTemplate extends BaseModel implements HasMedia
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
      * Scope a query to only include active templates.
      */
     /**
@@ -203,6 +231,10 @@ class NotificationTemplate extends BaseModel implements HasMedia
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
      * Scope a query to only include templates for a specific channel.
      */
     /**

@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/import-button.md
+ *
  * @contract docs/contracts/import-button.md
  */
 class ImportButton

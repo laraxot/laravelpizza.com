@@ -11,6 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-tenant-file-path-action.md
+ *
  * @contract docs/contracts/get-tenant-file-path-action.md
  */
 class GetTenantFilePathAction

@@ -13,6 +13,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-all-models-action.md
+ *
  * @contract docs/contracts/get-all-models-action.md
  */
 class GetAllModelsAction

@@ -217,6 +217,10 @@ Each module has specific MCP usage guidelines. See module-specific docs:
 - [Coding Conventions](conventions/)
 - [Module Index](modules/index.md)
 - [Theme Index](themes/index.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -229,3 +233,8 @@ qmd: "mcp servers"
 issues: []
 discussions: []
 *This document follows DRY+KISS principles. For questions or updates, edit this file and update cross-references.*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -6,6 +6,9 @@ namespace Modules\Job\Tests\Unit;
 
 use Mockery;
 use Mockery\MockInterface;
+use Modules\Job\Models\FailedJob;
+use Modules\Job\Models\Job;
+use Modules\Job\Models\JobBatch;
 use Modules\Job\Models\Policies\FailedImportRowPolicy;
 use Modules\Job\Models\Policies\FailedJobPolicy;
 use Modules\Job\Models\Policies\ImportPolicy;
@@ -86,7 +89,7 @@ test('TaskCommentPolicy espone CRUD', function (): void {
 
 test('JobPolicy deny-default su jobs', function (): void {
     $policy = new JobPolicy;
-    $job = new \Modules\Job\Models\Job;
+    $job = new Job;
 
     Assert::assertFalse($policy->viewAny(jobFakeUser()));
     Assert::assertFalse($policy->create(jobFakeUser()));
@@ -96,8 +99,8 @@ test('JobPolicy deny-default su jobs', function (): void {
 });
 
 test('FailedJobPolicy e JobBatchPolicy deny-default', function (): void {
-    $failed = new \Modules\Job\Models\FailedJob;
-    $batch = new \Modules\Job\Models\JobBatch;
+    $failed = new FailedJob;
+    $batch = new JobBatch;
     foreach ([
         [new FailedJobPolicy, $failed],
         [new JobBatchPolicy, $batch],

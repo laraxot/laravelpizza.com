@@ -12,6 +12,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/get-schema-manager-by-model-class-action.md
+ *
  * @contract docs/contracts/get-schema-manager-by-model-class-action.md
  */
 class GetSchemaManagerByModelClassAction

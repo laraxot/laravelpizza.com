@@ -10,10 +10,7 @@ epic: ../../../Xot/docs/bmad/epic-code-quality-ratchet.md
 depends_on: ["../../../Xot/docs/stories/test-database-guard.story.md (codice scritto, boot reale non verificato)", "verdetto Pest P0 dell'utente", "conferma dell'utente che i DB *_test sono usa-e-getta"]
 related: ["../../../Xot/docs/stories/dcp-45-isolamento-db-test-pest-scratch.story.md", "phpstan-test-wave-user-b.story.md", "7.2.phpstan-test-harness-contracts.story.md"]
 tags: [bmad, test, database, sicurezza, refresh-database]
-<<<<<<< HEAD
-=======
 qmd: "user test senza refresh database story"
->>>>>>> laraxot/dev
 ---
 
 # Test User senza RefreshDatabase

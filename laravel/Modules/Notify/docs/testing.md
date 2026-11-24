@@ -513,6 +513,10 @@ Remember: Good tests are the foundation of reliable software development.
 
 <!-- Merged from testing.md, which collided with this file on case-insensitive filesystems. -->
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 title: "Notify Module Testing"
 type: guide
@@ -520,6 +524,11 @@ tags: [notify, testing, pest]
 created: 2026-07-28
 ---
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 # Notify Module: Testing
 
 ```php

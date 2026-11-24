@@ -14,6 +14,10 @@ discussions: []
 ## Data: 2026-03-31
 ## Status: ✅ 100% COMPLETATO
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "sessione 100 percent"
@@ -41,6 +45,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📊 Conformità Raggiunta
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## ✅ Task Completati (8/8)
 
 ### Fase 1: Header & Hero

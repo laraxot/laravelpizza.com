@@ -3,7 +3,19 @@ title: "xotbasemigration best practices"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "xotbasemigration best practices"
 issues: []
 discussions: []
@@ -126,5 +138,23 @@ Quando si utilizza `Schema::hasColumn()` direttamente, si bypassa tutta questa l
 ## Riferimenti
 
 - [Xot Module Documentation]([project-root]/laravel/Modules/Xot/docs/MIGRATIONS.md)
+<<<<<<< HEAD
 - [JSON Migration Best Practices](json_migration_fixes.md)
 - [JSON Migration Best Practices](json_migration_fixes.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [JSON Migration Best Practices](json_migration_fixes.md)
+- [JSON Migration Best Practices](json_migration_fixes.md)
+=======
+<<<<<<< .merge_file_kFMjJ8
+- [JSON Migration Best Practices]([project-root]/laravel/Modules/Notify/docs/mail-templates/JSON_MIGRATION_FIXES.md)
+=======
+- [JSON Migration Best Practices](json_migration_fixes.md)
+- [JSON Migration Best Practices](json_migration_fixes.md)
+>>>>>>> .merge_file_sac6At
+>>>>>>> laraxot/dev
+=======
+- [JSON Migration Best Practices](json_migration_fixes.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

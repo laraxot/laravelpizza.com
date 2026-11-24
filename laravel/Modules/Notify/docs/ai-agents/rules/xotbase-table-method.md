@@ -16,6 +16,10 @@ discussions: []
 **Status**: ✅ CRITICAL RULE  
 **Priority**: BLOCKER
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "xotbase table method"
@@ -52,6 +56,13 @@ class OutcomesTableWidget extends XotBaseTableWidget
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 The Rule
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🧠 The WHY
 
 ### Level 1: DRY Principle
@@ -287,7 +298,14 @@ class MyWidget extends XotBaseTableWidget
 
 ### AI Agents Docs
 - **[Rules Index](00-index.md)** - All rules
+<<<<<<< HEAD
 - **[Rules Index](00-index.md)** - All rules
+=======
+<<<<<<< HEAD
+- **[Rules Index](00-index.md)** - All rules
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **[XotBase Extension Rule](xotbase-extension-rule.md)** - Why extend XotBase
 - **[Bash Commands Auto-Allow](bash-commands-auto-allow.md)** - Bash permissions
 

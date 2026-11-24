@@ -16,6 +16,10 @@ discussions: []
 > **Workflow**: `.github/workflows/sync-remote-repo.yml`  
 > **Date**: 2026-03-13
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "SYNC REMOTE REPO TEST PLAN"
@@ -42,6 +46,14 @@ Verify that git subtrees sync works **BIDIRECTIONALLY**:
 - ✅ Files are properly synced
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Test Objectives
+### Primary Goal
+### Secondary Goals
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## 📋 Test Scenarios
 

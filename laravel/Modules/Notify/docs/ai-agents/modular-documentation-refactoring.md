@@ -129,7 +129,14 @@ TOTALE: ~2,500 righe  ✅ Organizzate, navigabili, mantenibili
 # .agents/docs/overview/agents-overview.md
 ## Riferimenti
 - [AGENTS.md](../../AGENTS.md) - File originale compatto
+<<<<<<< HEAD
 - [AGENTS.md](../../AGENTS.md) - File originale compatto
+=======
+<<<<<<< HEAD
+- [AGENTS.md](../../AGENTS.md) - File originale compatto
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [qwen.md](../../qwen.md) - Contesto Qwen Code
 ```
 

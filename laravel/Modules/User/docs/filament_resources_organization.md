@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Organization of Filament Resources"
 type: note
 qmd: "filament resources organization"
 ---
->>>>>>> laraxot/dev
 # Organization of Filament Resources
 
 ## Namespace Structure

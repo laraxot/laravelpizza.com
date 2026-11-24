@@ -25,6 +25,10 @@ discussions: []
 6. [Best Practices](#best-practices)
 7. [Testing](#testing)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "seasonal email templates"
@@ -49,6 +53,14 @@ Il sistema di **Seasonal Email Templates** permette di utilizzare layout HTML te
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Overview
+### Vantaggi
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Architettura
 
 ### Stack Tecnologico

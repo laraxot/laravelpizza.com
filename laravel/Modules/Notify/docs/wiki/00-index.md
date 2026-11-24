@@ -4,11 +4,30 @@ type: docs/bmad
 module: Notify
 scope: documentation
 bmad_version: 1.0
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-10-06
+status: stale
+tags: [docs, notify, wiki]
+qmd: "**indice documentazione modulo notify** notify"
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 updated: 2026-11-23
 status: stale
 tags: [docs, notify, wiki]
 qmd: "**indice documentazione modulo notify** notify"
 created: 2026-11-23
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 > Nota 2026-10-14 (docs-audit): Variante di maiuscole di wiki/00-index.md, stesso testo; l'indice operativo e' ../00-index.md. Contenuto non riscritto, verificare prima di usarlo.
@@ -35,6 +54,12 @@ created: 2026-11-23
 - 🛠️ **[Channel Provider](./provider-actions-architecture.md)** - Come estendere il modulo con nuovi driver.
 - 🏷️ **[Acronym Naming](./acronym-naming-conventions.md)** - Standard per la denominazione dei driver e canali.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_K8DfDX
+>>>>>>> laraxot/dev
 - 🔄 **[Queue Management](./monitoring.md)** - Monitoraggio delle code e dei fallback.
 
 ## 🧪 **Qualità e Sviluppo**
@@ -44,6 +69,12 @@ created: 2026-11-23
 - 🚫 **[No NotificationTrackingController](./no-notification-tracking-controller.md)** - Il tracking notifiche non deve vivere in un controller HTTP legacy.
 - 🧹 **[PHPStan cleanup Notify 2026-10-06](../stories/2026-10-06-phpstan-cleanup-notify.dev.md)** - NotificationLog ripristinato + enum, stub push, pagine Test Filament ([story](../stories/2026-10-06-phpstan-cleanup-notify.story.md)).
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - 🔄 **[Queue Management](../monitoring.md)** - Monitoraggio delle code e dei fallback.
 - 📧 **[Email System](../email-templates.md)** - Gestione template dinamici e stagionali (Spatie integration).
 - 💬 **[SMS & WhatsApp](./whatsapp-integration.md)** - Integrazione con NetFun e altri provider.
@@ -58,11 +89,36 @@ created: 2026-11-23
 - 🔄 **[Queue Management](../monitoring.md)** - Monitoraggio delle code e dei fallback.
 
 ## 🧪 **Qualità e Sviluppo**
+<<<<<<< HEAD
 - ✅ **[PHPStan Analysis](../phpstan-fixes.md)** - Report di conformità Level 10.
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- ✅ **[PHPStan Analysis](../PHPSTAN-FIXES.md)** - Report di conformità Level 10.
+=======
+<<<<<<< HEAD
+- ✅ **[PHPStan Analysis](../phpstan-fixes.md)** - Report di conformità Level 10.
+=======
+- ✅ **[PHPStan Analysis](../PHPSTAN-FIXES.md)** - Report di conformità Level 10.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- ✅ **[PHPStan Analysis](../phpstan-fixes.md)** - Report di conformità Level 10.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - 🚨 **[PHPStan Cluster 2026-03-10](../phpstan-cluster.md)** - Modelli canonici mancanti per log/canali e impatto su factory/controller.
 - 🧭 **[No Orphan Http Controllers](../no-orphan-http-controllers.md)** - I controller web senza route o boundary chiaro non devono restare nel modulo.
 - 🚫 **[No NotificationTrackingController](../no-notification-tracking-controller.md)** - Il tracking notifiche non deve vivere in un controller HTTP legacy.
 - 🧹 **[PHPStan cleanup Notify 2026-10-06](../stories/phpstan-cleanup-notify.dev.md)** - NotificationLog ripristinato + enum, stub push, pagine Test Filament ([story](../stories/phpstan-cleanup-notify.story.md)).
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_bwW5Gg
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - 🧹 **[PHPStan Notify push delivery 2026-10-08](../stories/2026-10-08-phpstan-notify-push-delivery.story.md)** - Tre copie del recapito push ridotte alle Action `Actions/Push/*` (il facade residuo e' stato poi eliminato).
 - 🧹 **[Notify senza Services 2026-10-08](../stories/services-to-actions-notify.story.md)** - `app/Services` eliminata (test sulle Action), `STATUS_*` -> `NotificationLogStatusEnum`, consegne push simulate tracciate.
@@ -71,8 +127,28 @@ created: 2026-11-23
 - 🧪 **PSR-4 Test Helpers** - Nei file Pest usare helper anonimi o support file dedicati; evitare classi top-level extra che rompono `composer dump-autoload`.
 
 ## 🪮 **Ponytail audit**
+<<<<<<< HEAD
 - 📋 **[Over-engineering audit](../ponytail-audit-over-engineering.md)** - SMS multi-driver, policy stub, remediation `.bak`.
 - 🧾 **[SMS Actions consolidation decision](./decisions/sms-actions-consolidation.md)** - Cosa è stato consolidato in `.bak`, cosa resta attivo (netfun/smsfactor raggiungibili da Filament `SendSmsPage`) e perché.
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- 📋 **[Over-engineering audit](../ponytail-audit-over-engineering.md)** - SMS multi-driver, policy stub, remediation `.bak`.
+- 🧾 **[SMS Actions consolidation decision](./decisions/sms-actions-consolidation.md)** - Cosa è stato consolidato in `.bak`, cosa resta attivo (netfun/smsfactor raggiungibili da Filament `SendSmsPage`) e perché.
+=======
+<<<<<<< .merge_file_K8DfDX
+- 📋 **[Over-engineering audit](./ponytail-audit-over-engineering.md)** - SMS multi-driver, policy stub, remediation `.bak`.
+- 🧾 **[SMS Actions consolidation decision](./wiki/decisions/sms-actions-consolidation-2026-06-30.md)** - Cosa è stato consolidato in `.bak`, cosa resta attivo (netfun/smsfactor raggiungibili da Filament `SendSmsPage`) e perché.
+=======
+- 📋 **[Over-engineering audit](../ponytail-audit-over-engineering.md)** - SMS multi-driver, policy stub, remediation `.bak`.
+- 🧾 **[SMS Actions consolidation decision](./decisions/sms-actions-consolidation.md)** - Cosa è stato consolidato in `.bak`, cosa resta attivo (netfun/smsfactor raggiungibili da Filament `SendSmsPage`) e perché.
+>>>>>>> .merge_file_bwW5Gg
+>>>>>>> laraxot/dev
+=======
+- 📋 **[Over-engineering audit](../ponytail-audit-over-engineering.md)** - SMS multi-driver, policy stub, remediation `.bak`.
+- 🧾 **[SMS Actions consolidation decision](./decisions/sms-actions-consolidation.md)** - Cosa è stato consolidato in `.bak`, cosa resta attivo (netfun/smsfactor raggiungibili da Filament `SendSmsPage`) e perché.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## 🧹 **Manutenzione**
 - 🗑️ **[Cleanup Plan](./translation-cleanup-plan.md)** - Rimozione dei 500+ file obsoleti accumulati.
@@ -107,5 +183,23 @@ created: 2026-11-23
 
 ## Dependency Intelligence
 
+<<<<<<< HEAD
 - [Dependency intelligence](../dependency-intelligence.md)
 - [Dependency intelligence](../dependency-intelligence.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Dependency intelligence](../dependency-intelligence.md)
+- [Dependency intelligence](../dependency-intelligence.md)
+=======
+<<<<<<< .merge_file_K8DfDX
+- [Dependency intelligence](dependency-intelligence.md)
+=======
+- [Dependency intelligence](../dependency-intelligence.md)
+- [Dependency intelligence](../dependency-intelligence.md)
+>>>>>>> .merge_file_bwW5Gg
+>>>>>>> laraxot/dev
+=======
+- [Dependency intelligence](../dependency-intelligence.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

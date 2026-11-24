@@ -11,10 +11,7 @@ related:
   - "./log.md"
   - "./overview.md"
   - "./socialite-architecture.md"
-<<<<<<< HEAD
-=======
 qmd: "bmad method"
->>>>>>> laraxot/dev
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/bmad-method.md

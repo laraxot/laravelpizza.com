@@ -30,6 +30,10 @@ $action = match ($driver) {
 
 È stato chiesto se questa logica non sarebbe meglio spostarla all'interno del DTO `SmsData`.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "sms channel action resolution"
@@ -60,6 +64,14 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Analisi delle due soluzioni
+### 1. Logica nel Canale (`SmsChannel`)
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ### 2. Logica nel DTO (`SmsData`)
 
 **Vantaggi:**
@@ -98,4 +110,12 @@ discussions: []
 - Logica nel canale/factory: **85% pro, 15% contro**
 - Logica nel DTO: **20% pro, 80% contro**
 
+<<<<<<< HEAD
 **Motivazione:** Separation of Concerns, testabilità, estendibilità, aderenza alle best practice Laravel e DDD. 
+=======
+<<<<<<< HEAD
+**Motivazione:** Separation of Concerns, testabilità, estendibilità, aderenza alle best practice Laravel e DDD. 
+=======
+**Motivazione:** Separation of Concerns, testabilità, estendibilità, aderenza alle best practice Laravel e DDD.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

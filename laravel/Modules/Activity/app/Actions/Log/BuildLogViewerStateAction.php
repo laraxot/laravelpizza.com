@@ -21,6 +21,7 @@ use function Safe\filemtime;
  * generico (quello dell'eccezione contiene il percorso richiesto e non va mostrato).
  *
  * @see docs/contracts/build-log-viewer-state-action.md
+ *
  * @contract docs/contracts/build-log-viewer-state-action.md
  */
 class BuildLogViewerStateAction

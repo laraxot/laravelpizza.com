@@ -14,6 +14,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/is-user-allowed-action.md
+ *
  * @contract docs/contracts/is-user-allowed-action.md
  */
 class IsUserAllowedAction

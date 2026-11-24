@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Task: Query Optimization User"
 type: note
 qmd: "query optimization user task"
 ---
->>>>>>> laraxot/dev
 # Task: Query Optimization User
 
 **Modulo**: User  

@@ -18,6 +18,10 @@ discussions: []
 **Files Analizzati:** 753  
 **Linee di Codice Totali:** ~2,777 (solo Models)  
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "analisi metodi duplicati master"
@@ -85,6 +89,16 @@ TOTALE METODI: 252 occorrenze duplicate
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Executive Summary Ultra-Preciso
+### Dati Reali dal Codebase
+### Duplicazione QUANTIFICATA
+### ROI PRECISISSIMO
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📊 PARTE 1: BASEMODEL - ANALISI DETTAGLIATA
 
 ### 1.1 Proprietà Duplicate - Analisi File per File
@@ -1188,4 +1202,11 @@ Dopo analisi approfondita con **dati REALI dal codebase**, la Super Mucca Divina
 *Versione: 2.0 ULTIMATE*  
 *Data: 2025-10-15*  
 *Status: READY FOR PRODUCTION*
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

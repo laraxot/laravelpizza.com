@@ -30,8 +30,16 @@ use function Safe\preg_match;
  * - Mailgun form: sender, recipient, subject, body-plain, body-html, body-mime
  * - Raw MIME: request content-type message/rfc822 o body che inizia con "From:"
  *
+<<<<<<< HEAD
  * @contract docs/contracts/process-inbound-mail-action.md
  *
+=======
+<<<<<<< HEAD
+ * @contract docs/contracts/process-inbound-mail-action.md
+ *
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
  * @phpstan-type InboundMailData array{
  *     message_id: string|null,
  *     from_email: string|null,
@@ -43,9 +51,19 @@ use function Safe\preg_match;
  *     headers: array<array-key, mixed>|null,
  *     payload: array<array-key, mixed>|null
  * }
+<<<<<<< HEAD
+ *
+ * @see docs/contracts/process-inbound-mail-action.md
+ *
+ * @contract docs/contracts/process-inbound-mail-action.md
+=======
+<<<<<<< HEAD
+=======
  *
  * @see docs/contracts/process-inbound-mail-action.md
  * @contract docs/contracts/process-inbound-mail-action.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
  */
 class ProcessInboundMailAction
 {

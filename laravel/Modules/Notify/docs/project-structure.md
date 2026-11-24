@@ -5,7 +5,19 @@ discussions: []
 title: "Project Structure — Module Notify"
 type: documentation
 created: 2026-05-11
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-05-11
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 tags: [structure, architecture, module]
 ---
 
@@ -35,10 +47,25 @@ tags: [structure, architecture, module]
 │   │   └── *.md
 │   ├── decisions/                # Architecture decision records
 │   └── troubleshooting/          # Bug fixes, error resolutions
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ├── ON-DEMAND-PATTERN.md          # 🌟 QUESTO FILE — Pattern on-demand
 ├── QMD-SETUP.md                  # Configurazione QMD
 ├── PERFORMANCE-OPTIMIZATION.md    # Metriche e best practice
 ├── ARCHITECTURE.md               # (opzionale) Architettura modulo
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ├── on-demand-pattern.md          # 🌟 QUESTO FILE — Pattern on-demand
 ├── qmd-setup.md                  # Configurazione QMD
 ├── performance-optimization.md    # Metriche e best practice
@@ -54,19 +81,55 @@ tags: [structure, architecture, module]
 | `wiki/log.md` | Storico attività (ingest/query/lint) |
 | `wiki/rules/` | Regole + trigger map locale |
 | `wiki/concepts/` | Concetti specifici del modulo |
+<<<<<<< HEAD
 | `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+| `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
+=======
+<<<<<<< HEAD
+| `ON-DEMAND-PATTERN.md` | **Leggi prima** — pattern da seguire |
+=======
+| `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+| `ON-DEMAND-PATTERN.md` | **Leggi prima** — pattern da seguire |
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Convenzioni
 
 ### Naming
 
+<<<<<<< HEAD
 - **filenames**: lowercase-kebab-case.md
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- **Filenames**: lowercase-kebab-case.md
+=======
+<<<<<<< HEAD
+- **filenames**: lowercase-kebab-case.md
+=======
+- **Filenames**: lowercase-kebab-case.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- **filenames**: lowercase-kebab-case.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **Directories**: lowercase
 - **Titles**: Title Case
 
 ### Frontmatter Schema
 
 \`\`\`yaml
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 title: "Page Title"
 type: concept|entity|source|comparison|decision|troubleshooting
@@ -78,6 +141,11 @@ tags: [tag1, tag2]
 related:
   - ../concepts/related.md
 ---
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 \`\`\`
 
 ### Link Rules

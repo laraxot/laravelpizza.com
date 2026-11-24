@@ -3,7 +3,19 @@ title: "qwen 1"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "qwen 1"
 issues: []
 discussions: []
@@ -12,7 +24,22 @@ discussions: []
 ## Qwen Added Memories
 
 - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+<<<<<<< HEAD
 - **Documentation System:** Master index at docs/MODULE_DOCS_INDEX.md with 7,305+ files (6,812 module docs, 325 theme docs, 15+ BMad docs, 153 project docs). All docs must have bidirectional links (min 3 cross-references). Vite config outDir: './public' is CORRECT - builds to local public/, then symlink public_html/themes (npm run copy obsoleto) copies to public_html/themes/Sixteen/.
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- **Documentation System:** Master index at docs/MODULE_DOCS_INDEX.md with 7,305+ files (6,812 module docs, 325 theme docs, 15+ BMad docs, 153 project docs). All docs must have bidirectional links (min 3 cross-references). Vite config outDir: './public' is CORRECT - builds to local public/, then symlink public_html/themes (npm run copy obsoleto) copies to public_html/themes/Sixteen/.
+=======
+<<<<<<< .merge_file_QjfcpB
+
+- **Documentation System:** Master index at docs/MODULE_DOCS_INDEX.md with 7,305+ files (6,812 module docs, 325 theme docs, 15+ BMad docs, 153 project docs). All docs must have bidirectional links (min 3 cross-references). Vite config outDir: './public' is CORRECT - builds to local public/, then symlink public_html/themes (npm run copy obsoleto) copies to public_html/themes/Sixteen/.
+=======
+>>>>>>> .merge_file_txp8wN
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 - **BMad-METHOD Complete:** 15+ documents in _bmad-output/ (9 general BMad docs + 6+ Design Comuni docs). Design Comuni suite: PRD, Architecture, UI Spec, Epics, Sprint Plan, Block Analysis (38 pagine, 47 componenti), Index. All BMad docs linked to Master Index and module/theme docs with bidirectional links. Total project documentation: 552,500+ lines across 7,305+ files.
 
@@ -25,7 +52,22 @@ discussions: []
 - **Theme Detection:** APP_URL from .env → remove protocol → remove www → explode by "." → reverse array → join with "/" → config path. Example: http://fixcity.local → local/fixcity → laravel/config/local/fixcity/xra.php → pub_theme = "Sixteen" → Theme folder: laravel/Themes/Sixteen/
 
 - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+<<<<<<< HEAD
 - **Vite Build for Themes:** outDir: './public' in vite.config.js, build in laravel/Themes/Sixteen/, copy to public_html/themes/Sixteen/ via symlink public_html/themes (npm run copy obsoleto). Use @vite(['resources/css/app.css'], 'themes/Sixteen') with theme parameter. Bootstrap Italia replicated with Tailwind @apply in style-apply.css, NOT @import.
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- **Vite Build for Themes:** outDir: './public' in vite.config.js, build in laravel/Themes/Sixteen/, copy to public_html/themes/Sixteen/ via symlink public_html/themes (npm run copy obsoleto). Use @vite(['resources/css/app.css'], 'themes/Sixteen') with theme parameter. Bootstrap Italia replicated with Tailwind @apply in style-apply.css, NOT @import.
+=======
+<<<<<<< .merge_file_QjfcpB
+
+- **Vite Build for Themes:** outDir: './public' in vite.config.js, build in laravel/Themes/Sixteen/, copy to public_html/themes/Sixteen/ via symlink public_html/themes (npm run copy obsoleto). Use @vite(['resources/css/app.css'], 'themes/Sixteen') with theme parameter. Bootstrap Italia replicated with Tailwind @apply in style-apply.css, NOT @import.
+=======
+>>>>>>> .merge_file_txp8wN
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 - **Vite @vite() Second Parameter:** For theme builds, MUST use @vite(['resources/css/app.css'], 'themes/Sixteen') with second parameter. Without it, Laravel looks in public_html/build/manifest.json (WRONG). With it, Laravel looks in public_html/themes/Sixteen/manifest.json (CORRECT). Theme is built independently in laravel/Themes/Sixteen/, outDir: './public', copied to public_html/themes/Sixteen/.
 

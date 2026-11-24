@@ -5,13 +5,41 @@ title: "riepilogo-risoluzione-conflitti-2025-09-30"
 type: concept
 tags: [deprecated]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "riepilogo-risoluzione-conflitti-2025-09-30 deprecated"
 status: deprecated
 related:
   - "./excellence-achievement.md"
   - "./agid-implementation-guide.md"
+<<<<<<< HEAD
   - "./ARCHITECTURE.md"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  - "./architecture.md"
+=======
+<<<<<<< HEAD
+  - "./ARCHITECTURE.md"
+=======
+  - "./architecture.md"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+  - "./ARCHITECTURE.md"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./complete-refactoring-analysis.md"
   - "./documentation-status.md"
   - "./final-implementation-report-.md"

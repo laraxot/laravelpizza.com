@@ -15,6 +15,10 @@ discussions: []
 **Date**: 2026-03-26  
 **Status**: ✅ PHILOSOPHY DEFINED
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "reusable components philosophy"
@@ -53,6 +57,14 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 The Zen of Reusable Components
+### Perché Componenti Riutilizzabili?
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🏗️ Architecture Principles
 
 ### Principle 1: Single Responsibility

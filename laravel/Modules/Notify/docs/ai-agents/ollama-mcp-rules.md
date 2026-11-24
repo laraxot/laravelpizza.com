@@ -16,6 +16,10 @@ discussions: []
 **Versione**: 1.0.0  
 **Status**: Active
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "ollama mcp rules"
@@ -80,6 +84,16 @@ Task complexity?
 4. Aggiorna docs con risultati
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 🚨 Regole Critiche
+### 1. MCP-First Approach
+### 2. Routing Intelligence
+### 3. Token Efficiency Priority
+### 4. Docs-First Protocol
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## 📋 Regole Tecniche
 

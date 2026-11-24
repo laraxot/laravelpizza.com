@@ -7,7 +7,19 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 # Mixed (tipo di dato) - Solo come Ultima Spiaggia
@@ -27,4 +39,20 @@ updated: 2026-11-23
 - [array-keys-mixed-property-exists.mdc](../.cursor/rules/array-keys-mixed-property-exists.mdc)
 - [filament-array-typing.mdc](../.cursor/rules/filament-array-typing.mdc)
 - [critical-rules-and-memories](../laravel/Modules/Xot/docs/critical-rules-and-memories.md)
+<<<<<<< HEAD
 - [agents.md](../agents.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [AGENTS.md](../AGENTS.md)
+=======
+<<<<<<< HEAD
+- [agents.md](../agents.md)
+=======
+- [AGENTS.md](../AGENTS.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [agents.md](../agents.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

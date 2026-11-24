@@ -73,6 +73,10 @@ protected function casts(): array
 - Throw in constructors only if critical
 - Catch specific exceptions
 - Never suppress errors with `@`
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -84,3 +88,8 @@ updated: 2026-09-26
 qmd: "code style guidelines"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -18,6 +18,7 @@ use Webmozart\Assert\Assert;
  * Handles the creation of a new user from a socialite authentication.
  *
  * @see docs/contracts/socialite-create-user-action.md
+ *
  * @contract docs/contracts/socialite-create-user-action.md
  */
 class CreateUserAction

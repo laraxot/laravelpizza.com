@@ -30,6 +30,7 @@ use Spatie\QueueableAction\QueueableAction;
  * @see Modules/Xot/docs/app/Actions/Filament/GetRelatedResourceClassAction.php.md
  * @see Modules/Xot/docs/stories/xotbasemanagerelatedrecords-convention-over-configuration.story.md
  * @see docs/contracts/get-related-resource-class-action.md
+ *
  * @contract docs/contracts/get-related-resource-class-action.md
  */
 class GetRelatedResourceClassAction

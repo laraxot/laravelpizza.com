@@ -149,6 +149,10 @@ Il tema Sixteen è:
 **AppServiceProvider**: ✅ **PULITO - Nessuna registrazione hardcoded**
 
 **Concetto**: ✅ **"Il Tema è un Vestito" - IMPLEMENTATO CORRETTAMENTE**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -164,3 +168,8 @@ discussions: []
 **Tema**: **Sixteen (auto-registrato)**  
 **Architettura**: **Configurabile (NON hardcoded)**  
 **Documentazione**: **Completata**
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

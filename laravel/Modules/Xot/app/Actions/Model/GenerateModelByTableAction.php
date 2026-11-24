@@ -12,6 +12,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/generate-model-by-table-action.md
+ *
  * @contract docs/contracts/generate-model-by-table-action.md
  */
 class GenerateModelByTableAction

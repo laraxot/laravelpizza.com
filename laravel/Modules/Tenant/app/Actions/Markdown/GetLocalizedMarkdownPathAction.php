@@ -10,6 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-localized-markdown-path-action.md
+ *
  * @contract docs/contracts/get-localized-markdown-path-action.md
  */
 class GetLocalizedMarkdownPathAction

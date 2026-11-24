@@ -14,7 +14,14 @@ related:
   - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -243,7 +250,14 @@ Create these NotebookLM notebooks:
 
 ### 1. Laraxot Framework Docs
 - **Upload**: Laraxot documentation, AGENTS.md, .windsurfrules
+<<<<<<< HEAD
 - **Upload**: Laraxot documentation, AGENTS.md, .windsurfrules
+=======
+<<<<<<< HEAD
+- **Upload**: Laraxot documentation, AGENTS.md, .windsurfrules
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **Topics**: laravel, architecture, modules, filament, xot
 - **Use**: Technical research, implementation verification
 

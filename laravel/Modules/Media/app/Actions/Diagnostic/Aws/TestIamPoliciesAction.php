@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/test-iam-policies-action.md
+ *
  * @contract docs/contracts/test-iam-policies-action.md
  */
 class TestIamPoliciesAction

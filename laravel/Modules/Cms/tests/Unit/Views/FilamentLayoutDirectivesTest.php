@@ -24,7 +24,9 @@ test('cms head blade contains @filamentStyles before theme vite css', function (
     Assert::assertFileExists($path);
     $blade = file_get_contents($path);
     Assert::assertStringContainsString('@filamentStyles', $blade);
-    Assert::assertMatchesRegularExpression('/@if \(\$panelAssets\)[\s\S]*@filamentStyles\s*\n\s*@endif\s*\n\s*@vite\(\[\'resources\/css\/app\.css\'\]/', $blade);
+    Assert::assertMatchesRegularExpression('/@if \(\$panelAssets\)[\s\S]*@filamentStyles\s*\n\s*@endif\s*\n\s*@vite\(\[\$stylesheet\]/', $blade);
+    // Il foglio di stile è una prop del componente (default `resources/css/app.css`) e le pagine aggiungono tag con @push('head').
+    Assert::assertStringContainsString('@stack(\'head\')', $blade);
 });
 
 /** @see Modules/Cms/docs/bmad/filament-layout-styles-scripts.md */

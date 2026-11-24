@@ -5,10 +5,7 @@ bmad: true
 status: complete
 owner: module:User
 tags: [user, migration, convention, schema]
-<<<<<<< HEAD
-=======
 qmd: "users migration owner convention story user"
->>>>>>> laraxot/dev
 ---
 
 # User migration owner convention

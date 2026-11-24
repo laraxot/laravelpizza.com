@@ -12,6 +12,7 @@ use Spatie\QueueableAction\QueueableAction;
  * non arriva mai all'editor: torna il default della Data.
  *
  * @see docs/contracts/resolve-translatable-locales-action.md
+ *
  * @contract docs/contracts/resolve-translatable-locales-action.md
  */
 class ResolveTranslatableLocalesAction

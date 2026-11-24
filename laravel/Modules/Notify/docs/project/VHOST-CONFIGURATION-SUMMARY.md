@@ -15,6 +15,10 @@ discussions: []
 > **Status**: ✅ Complete  
 > **Domain**: laraxot.local
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "VHOST CONFIGURATION SUMMARY"
@@ -31,6 +35,13 @@ This document summarizes the complete VHost configuration implementation for the
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📋 Overview
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## ✅ Completed Tasks
 
 ### 1. Configuration File Created

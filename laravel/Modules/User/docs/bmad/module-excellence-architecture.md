@@ -1,6 +1,4 @@
 ---
-title: "Architecture — User module: stato attuale vs perfezione assoluta"
-
 title: "Architecture: User module: stato attuale vs perfezione assoluta"
 type: architecture
 module: User
@@ -11,10 +9,7 @@ related:
   - ./module-excellence-prd.md
   - ./epics.md
   - ../purpose.md
-<<<<<<< HEAD
-=======
 qmd: "excellence architecture user stato attuale perfezione"
->>>>>>> laraxot/dev
 ---
 
 # Architecture: User module — stato attuale vs target

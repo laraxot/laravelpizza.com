@@ -8,10 +8,7 @@ tags: [migrato-da-txt, ui]
 converted_from: global-search.txt
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< HEAD
-=======
 qmd: "global search risorse esterne"
->>>>>>> laraxot/dev
 ---
 
 # Global search — risorse esterne

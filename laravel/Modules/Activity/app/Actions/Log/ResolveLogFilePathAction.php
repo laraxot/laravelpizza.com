@@ -23,6 +23,7 @@ use function Safe\realpath;
  *   (per esempio un link simbolico verso /etc) il file e' rifiutato.
  *
  * @see docs/contracts/resolve-log-file-path-action.md
+ *
  * @contract docs/contracts/resolve-log-file-path-action.md
  */
 class ResolveLogFilePathAction

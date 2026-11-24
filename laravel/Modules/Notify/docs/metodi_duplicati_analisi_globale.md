@@ -16,6 +16,10 @@ discussions: []
 **Data Generazione**: 2025-10-15 06:50:01
 **Opportunità Totali**: 76
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "METODI DUPLICATI ANALISI GLOBALE"
@@ -104,6 +108,21 @@ Opportunità rimanenti: 44 - Richiedono analisi approfondita
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Executive Summary
+### 💰 Impatto Economico
+## 🔥 TOP 15 Opportunità per ROI
+## 📊 Statistiche per Modulo
+## 🎨 Distribuzione Strategie
+## 🗺️ Roadmap Refactoring
+### Sprint 1 (Priorità Critica)
+### Sprint 2-3 (Priorità Alta)
+### Backlog (Valutazione)
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🐮 Note Finali
 
 Questa analisi è stata generata utilizzando algoritmi avanzati che includono:

@@ -1,4 +1,15 @@
 ---
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+title: "Contratto — HandleMailjetEventsAction"
+type: contract
+action: "Modules\Notify\Actions\Mail\Mailjet\HandleMailjetEventsAction"
+tags: [contract, action, notify, mailjet, webhook]
+created: 2026-11-24
+updated: 2026-11-24
+=======
+>>>>>>> laraxot/dev
 title: "HandleMailjetEventsAction — contratto"
 type: contract
 owner: Notify
@@ -6,8 +17,12 @@ status: accepted
 updated: 2026-11-24
 action: "Modules\\Notify\\Actions\\Mail\\Mailjet\\HandleMailjetEventsAction"
 qmd: "HandleMailjetEventsAction webhook Mailjet eventi bounce click open spam unsub MailDeliveryEventReceived token"
+<<<<<<< HEAD
 tags: [contract, action, notify, mailjet, webhook]
 created: 2026-11-24
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 # HandleMailjetEventsAction

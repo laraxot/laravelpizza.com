@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 /**
  * @see docs/contracts/spipu-pdf-by-html-action.md
+ *
  * @contract docs/contracts/spipu-pdf-by-html-action.md
  */
 class SpipuPdfByHtmlAction

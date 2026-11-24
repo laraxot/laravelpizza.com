@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-days-mapping-action.md
+ *
  * @contract docs/contracts/get-days-mapping-action.md
  */
 final class GetDaysMappingAction

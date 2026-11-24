@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Implementazione del Selettore di Lingua e Avatar Utente nell'Header"
 type: note
 qmd: "header language avatar implementation implementazione selettore"
 ---
->>>>>>> laraxot/dev
 # Implementazione del Selettore di Lingua e Avatar Utente nell'Header
 
 ## Collegamenti correlati

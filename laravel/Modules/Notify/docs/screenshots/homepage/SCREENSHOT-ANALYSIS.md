@@ -35,6 +35,10 @@ URL: https://italia.github.io/design-comuni-pagine-statiche/sito/homepage.html
 - Text: `#1A1A1A`
 - Hover: `#0052A3`
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "SCREENSHOT ANALYSIS"
@@ -66,6 +70,12 @@ Screenshot: hero_bootstrap_italia.png
 - Image aspect ratio: `4:3`
 
 ---
+<<<<<<< HEAD
+=======
+=======
+### 2. Hero Section
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### 3. Governance Cards
 ```

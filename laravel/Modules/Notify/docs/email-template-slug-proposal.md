@@ -3,7 +3,19 @@ title: "email template slug proposal"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "email template slug proposal"
 issues: []
 discussions: []
@@ -247,5 +259,21 @@ MailTemplate::all()->each(function ($template) {
 ## Collegamenti Correlati
 
 - [Documentazione Email Template](./email_templates.md)
+<<<<<<< HEAD
 - [Gestione Traduzioni](../Lang/docs/translation_keys_best_practices.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Gestione Traduzioni](../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+=======
+<<<<<<< HEAD
+- [Gestione Traduzioni](../Lang/docs/translation_keys_best_practices.md)
+=======
+- [Gestione Traduzioni](../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [Gestione Traduzioni](../Lang/docs/translation_keys_best_practices.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Configurazione Email](../../../docs/email-configuration.md) 

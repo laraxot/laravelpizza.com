@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Analisi Approfondita dell'Errore nell'Implementazione del Logout"
 type: analysis
 qmd: "logout blade error analysis analisi approfondita"
 ---
->>>>>>> laraxot/dev
 # Analisi Approfondita dell'Errore nell'Implementazione del Logout
 
 ## Collegamenti correlati

@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/model-get-trans-key-by-model-class-action.md
+ *
  * @contract docs/contracts/model-get-trans-key-by-model-class-action.md
  */
 class GetTransKeyByModelClassAction

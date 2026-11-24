@@ -1286,14 +1286,6 @@ Core functionality tests pass:
 - [architecture.md](./architecture.md) — System architecture
 - [ARCHITECTURE.md](./ARCHITECTURE.md) — System architecture
 - [ARCHITECTURE.md](./ARCHITECTURE.md) — System architecture
-<<<<<<< HEAD
-- [architecture.md](./architecture.md) — System architecture
-- [architecture.md](./architecture.md) — System architecture
-- [architecture.md](./architecture.md) — System architecture
-- [architecture.md](./architecture.md) — System architecture
-- [architecture.md](./architecture.md) — System architecture
-=======
->>>>>>> laraxot/dev
 - [patterns.md](./patterns.md) — Design patterns and workflows
 - [icon-system.md](icons/icon-system.md) — Icon system details
 

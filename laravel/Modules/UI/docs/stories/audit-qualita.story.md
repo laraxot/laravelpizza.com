@@ -7,10 +7,7 @@ created: 2026-11-19
 updated: 2026-11-19
 issues: ["laraxot/base_techplanner_fila5#64"]
 tags: [audit, qualita, docs, phpstan, pest]
-<<<<<<< HEAD
-=======
 qmd: "audit qualita story"
->>>>>>> laraxot/dev
 ---
 
 # Audit qualita' — modulo UI

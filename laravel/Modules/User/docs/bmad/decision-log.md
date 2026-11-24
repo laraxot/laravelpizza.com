@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-title: "Decision log — SuperAdmin widget"
-
->>>>>>> laraxot/dev
 title: "Decision log: SuperAdmin widget"
 type: decision-log
 module: User
@@ -16,10 +11,7 @@ related:
   - ./architecture.md
   - ./livewire-inventory.md
   - ./epics.md
-<<<<<<< HEAD
-=======
 qmd: "decision log superadmin widget"
->>>>>>> laraxot/dev
 ---
 
 # Decision log — SuperAdmin Livewire → Filament widget
@@ -264,12 +256,6 @@ catalogo `auth`.
 **Decision:** in `buildMorphMap()` forzare `$typedMap['user'] = XotData::make()->getUserClass()` dopo il loop config: la chiave 'user' è sempre la classe canonica dell'install, mai la voce stantia. Allineato `config/localhost/morph_map.php`.
 
 **Data debt:** `model_has_role` contiene ancora 40 righe con `model_type='Modules\Quaeris\Models\User'` (scritte prima del fix): richiedono `UPDATE model_has_role SET model_type='user' WHERE model_type='Modules\Quaeris\Models\User'`. Non eseguita: scrittura DB da approvare.
-<<<<<<< HEAD
-**Root cause (verificata, non ipotizzata):** `IsProfileTrait::isSuperAdmin()` chiama `$this->user->hasRole('super-admin')`, dove `Profile::user` risolve `Modules\<nome progetto>\Models\User` (la user class canonica, `XotData::getUserClass()`). La morph map registrata da `TenantServiceProvider::buildMorphMap()` leggeva `config('morph_map')` con `'user' => Modules\User\Models\User` (classe padre): <nome progetto>\ServiceProvider la mappava correttamente a `<nome progetto>\Models\User` in `boot()`, ma il provider Tenant sovrascriveva dopo. Risultato: `<nome progetto>\User::getMorphClass()` = FQCN, mentre `model_has_role.model_type` contiene `'user'` → query `roles()` filtrava il morph sbagliato → ruoli invisibili → widget vuoto.
-
-**Data debt:** `model_has_role` contiene ancora 40 righe con `model_type='Modules\<nome progetto>\Models\User'` (scritte prima del fix): richiedono `UPDATE model_has_role SET model_type='user' WHERE model_type='Modules\<nome progetto>\Models\User'`. Non eseguita: scrittura DB da approvare.
-=======
->>>>>>> laraxot/dev
 
 **Verifica:** tinker: `getMorphClass()='user'`, `isSuperAdmin()=true`, widget renderizza `data-super-admin-state` (LEN 2293).
 
@@ -444,10 +430,6 @@ contro il gia'-superseded `11.1.team-change-widget.story.md`: entrambe
 - **Verifica:** `cd laravel && php -d memory_limit=2G ./vendor/bin/phpstan analyse Modules/User Modules/Comment Modules/Notify Modules/Activity` → exit 0, `[OK] No errors` (config unica `laravel/phpstan.neon`).
 - **Docs:** `md-filenames.py check` su `docs/` → 0 violazioni date/suffissi; legacy maiuscole in radice segnalate, nessuna rinomina (tool `name` non propone alias sicuri).
 - **Track:** [phpstan-fixes.md](../phpstan-fixes.md), [00-INDEX.md](../00-index.md) (misura modulo), hub [phpstan-modules-zero-gate](../../../Xot/docs/stories/phpstan-modules-zero-gate.story.md).
-<<<<<<< HEAD
-- **Track:** [phpstan-fixes.md](../phpstan-fixes.md), [00-INDEX.md](../README.md) (misura modulo), hub [phpstan-modules-zero-gate](../../../Xot/docs/stories/phpstan-modules-zero-gate.story.md).
-=======
->>>>>>> laraxot/dev
 
 ## [2026-10-26] DCP-285 policy utenti, mail di reset, verify, revoca consensi
 

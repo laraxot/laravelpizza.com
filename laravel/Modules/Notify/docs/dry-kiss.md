@@ -42,6 +42,10 @@ abstract class BaseModel extends XotBaseModel implements HasMedia
 - ⏸️ verified_at: Valutare se domain-specific
 - 🔄 ServiceProvider: Auto-detect nome
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 title: "dry kiss"
 type: note
@@ -51,4 +55,9 @@ updated: 2026-09-26
 qmd: "dry kiss"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 [DRY/KISS Global](../../../docs/dry_kiss_analysis_[date].md)

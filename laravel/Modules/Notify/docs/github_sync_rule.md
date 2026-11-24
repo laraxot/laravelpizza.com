@@ -15,6 +15,10 @@ discussions: []
 > **Status**: ✅ Active  
 > **Rule**: CRITICAL
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "github sync rule"
@@ -31,6 +35,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Rule Statement
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📋 Why
 
 1. **bashscripts/ è nel .gitignore**

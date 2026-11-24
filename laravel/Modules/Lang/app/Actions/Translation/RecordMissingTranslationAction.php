@@ -15,6 +15,7 @@ use Spatie\QueueableAction\QueueableAction;
  * delegates to it so the framework-bound singleton stays thin.
  *
  * @see docs/contracts/record-missing-translation-action.md
+ *
  * @contract docs/contracts/record-missing-translation-action.md
  */
 class RecordMissingTranslationAction

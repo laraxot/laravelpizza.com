@@ -15,6 +15,10 @@ discussions: []
 **Durata**: ~35 minuti  
 **Status**: ✅ BUILDERS IMPLEMENTATI | ⚠️ PIVOT DA REFACTORARE
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "implementazione builders report"
@@ -43,6 +47,15 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📊 RISULTATI IMPLEMENTAZIONE
+### ✅ Builders Creati (3 file)
+### 📝 Esempi Refactorati
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🔧 COLUMN BUILDER - Metodi Implementati
 
 ### Colonne Base

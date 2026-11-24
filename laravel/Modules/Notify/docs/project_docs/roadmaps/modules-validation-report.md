@@ -1,4 +1,13 @@
 ---
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 title: "modules validation report 2025 10"
 type: note
 tags: [documentation]
@@ -734,6 +743,12 @@ We have successfully validated **2 major Laravel modules** at **PHPStan Level 9*
 *Status: ✅ **PERFECT - TOP 5% QUALITY***
 
 **END OF VALIDATION REPORT** 🏆
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 issues: []
 discussions: []
 title: "MODULES_VALIDATION_REPORT_2025-10-02"
@@ -755,3 +770,12 @@ related:
 ---
 
 > Questo file è stato rinominato in [modules-validation-report.md](modules-validation-report.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

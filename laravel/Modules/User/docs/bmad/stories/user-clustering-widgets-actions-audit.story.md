@@ -19,10 +19,7 @@ excluded_scope:
   - app/Filament/Widgets/Auth/**  # owner concorrente PID 5418, in-progress su sprint-status.yaml
   - app/Filament/Widgets/Profile/DeleteAccountWidget.php
   - app/Filament/Widgets/PrivacyPolicyWidget.php
-<<<<<<< HEAD
-=======
 qmd: "user clustering widgets actions audit story"
->>>>>>> laraxot/dev
 ---
 
 # Story: audit + interventi su clustering, widget e action di UserResource

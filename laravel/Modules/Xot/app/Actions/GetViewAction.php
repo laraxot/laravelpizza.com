@@ -10,6 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-view-action.md
+ *
  * @contract docs/contracts/get-view-action.md
  */
 class GetViewAction

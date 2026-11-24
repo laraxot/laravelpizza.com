@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-bmad_status: active
-scope: ui-docs
-=======
->>>>>>> laraxot/dev
 title: "Decision log — UI"
 type: decision-log
 status: review

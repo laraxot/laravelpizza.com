@@ -3,7 +3,19 @@ title: "gemini super mucca"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "gemini super mucca"
 issues: []
 discussions: []
@@ -13,6 +25,10 @@ discussions: []
 
 > Metodologia "Super Mucca" - Laraxot Zen
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "gemini super mucca"
@@ -35,6 +51,13 @@ La metodologia "Super Mucca" si basa su tre pilastri:
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Concetto Fondamentale
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📊 Livelli di Confidenza
 
 ### Livello 3: Super Mucca (OBIETTIVO)
@@ -122,5 +145,21 @@ Prima di toccare **qualsiasi** codice, devi comprendere:
 
 - [Indice GEMINI](./gemini-split-index.md)
 - [memories.md](./memories.md)
+<<<<<<< HEAD
 - [GEMINI.md originale](../../gemini.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [gemini.md originale](../../gemini.md)
+=======
+<<<<<<< HEAD
+- [GEMINI.md originale](../../gemini.md)
+=======
+- [gemini.md originale](../../gemini.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [GEMINI.md originale](../../gemini.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Index principale](./index.md)

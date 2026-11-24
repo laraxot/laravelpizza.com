@@ -112,6 +112,10 @@ php artisan view:clear
 php artisan cache:clear
 php artisan filament:optimize-clear
 ```
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -123,3 +127,8 @@ updated: 2026-09-26
 qmd: "build lint test commands"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

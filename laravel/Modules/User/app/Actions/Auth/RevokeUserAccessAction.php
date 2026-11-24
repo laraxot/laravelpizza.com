@@ -19,6 +19,7 @@ use Spatie\QueueableAction\QueueableAction;
  * successiva, perche' il provider non trova piu' l'utente.
  *
  * @see docs/contracts/revoke-user-access-action.md
+ *
  * @contract docs/contracts/revoke-user-access-action.md
  */
 final class RevokeUserAccessAction

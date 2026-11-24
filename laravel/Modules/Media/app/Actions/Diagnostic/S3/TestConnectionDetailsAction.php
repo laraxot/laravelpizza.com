@@ -11,6 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/test-connection-details-action.md
+ *
  * @contract docs/contracts/test-connection-details-action.md
  */
 class TestConnectionDetailsAction

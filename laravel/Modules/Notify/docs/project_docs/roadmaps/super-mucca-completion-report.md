@@ -1,4 +1,13 @@
 ---
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 title: "super mucca completion report 2025 10"
 type: note
 tags: [documentation]
@@ -549,6 +558,12 @@ discussions: []
 **Session End**: 2025-10-01T21:39:00+02:00  
 **Duration**: Full intensive session  
 **Result**: 🏆 EXCELLENCE ACHIEVED
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 issues: []
 discussions: []
 title: "SUPER_MUCCA_COMPLETION_REPORT_2025-10-01"
@@ -570,3 +585,12 @@ related:
 ---
 
 > Questo file è stato rinominato in [super-mucca-completion-report.md](super-mucca-completion-report.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

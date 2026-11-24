@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Manuale d'uso per attori — UI"
 type: note
 qmd: "manuale uso attori duso"
 ---
->>>>>>> laraxot/dev
 # Manuale d'uso per attori — UI
 
 ## Scopo e perimetro

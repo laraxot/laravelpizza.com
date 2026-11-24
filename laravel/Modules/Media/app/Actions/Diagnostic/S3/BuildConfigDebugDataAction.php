@@ -8,6 +8,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/build-config-debug-data-action.md
+ *
  * @contract docs/contracts/build-config-debug-data-action.md
  */
 class BuildConfigDebugDataAction

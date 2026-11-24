@@ -9,7 +9,9 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Aggiunge la dichiarazione strict_types ai file PHP che ne sono sprovvisti.
+ *
  * @see docs/contracts/add-strict-types-declaration-action.md
+ *
  * @contract docs/contracts/add-strict-types-declaration-action.md
  */
 class AddStrictTypesDeclarationAction

@@ -137,6 +137,10 @@ private function formatContacts(Client $record): string
 4. [ ] Refactoring ContactColumn.php con pattern corretto
 5. [ ] Testing della soluzione corretta
 6. [ ] Validazione conformità alle memorie
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -155,3 +159,8 @@ discussions: []
 
 *Ultimo aggiornamento: [DATE]*  
 *Errori identificati e documentati per prevenzione futura*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

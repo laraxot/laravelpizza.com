@@ -1,4 +1,8 @@
 ---
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 title: "INDEX — Notify"
 type: index
 status: active

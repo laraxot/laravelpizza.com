@@ -285,6 +285,10 @@ Each skill includes:
 - 🚀 Team training
 - 🚀 Custom skill creation
 - 🚀 Community contribution
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -299,3 +303,8 @@ discussions: []
 **Stato**: ✅ **COMPLETAMENTE INTEGRATO E PRONTO ALL'USO**  
 **Qualità**: ⭐⭐⭐⭐⭐  
 **Prossimo**: 🧪 Testing e training team
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -16,6 +16,10 @@ discussions: []
 **Difficulty**: Intermediate  
 **Estimated Time**: Follow step-by-step tutorials
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "AGID IMPLEMENTATION GUIDE"
@@ -36,6 +40,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📚 Table of Contents
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Multi-Step Form Wizard
 
 ### 🎯 Objective

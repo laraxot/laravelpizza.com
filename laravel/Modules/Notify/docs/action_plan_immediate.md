@@ -19,6 +19,10 @@ Questo documento identifica le **azioni immediate** da intraprendere per portare
 **Status Attuale**: 60% completo  
 **Target**: Q2 2025 (Aprile-Giugno)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "action plan immediate"
@@ -64,6 +68,16 @@ discussions: []
 - [ ] Verificare tutti gli asset compilano correttamente
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 🚨 Priorità CRITICHE (Settimana 1-2)
+### 1. ✅ Correzioni Tecniche Base (COMPLETATE)
+### 2. 🚧 Risoluzione Conflitti Git
+### 3. 🔧 Stabilizzazione Moduli Core
+### 4. 📦 Build & Deploy Check
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## ⚡ Priorità ALTE (Settimana 3-6)
 
@@ -502,5 +516,13 @@ test('citizen can create ticket via UI', function () {
 **Data Creazione**: 2025-01-01  
 **Maintainer**: Project Lead  
 **Revisione**: Settimanale
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -1,9 +1,6 @@
 ---
 title: User — Support → Actions
-<<<<<<< HEAD
-=======
 qmd: "services support to actions user"
->>>>>>> laraxot/dev
 ---
 
 # Migrazione `app/Support/` → `app/Actions/`

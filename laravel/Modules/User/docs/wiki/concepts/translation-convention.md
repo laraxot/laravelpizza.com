@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Translation Convention - User Module"
 type: concept
 qmd: "translation convention user"
 ---
->>>>>>> laraxot/dev
 # Translation Convention - User Module
 
 ## Regola

@@ -3,7 +3,19 @@ title: "AI SKILLS AND PLUGINS COMPLETE"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "AI SKILLS AND PLUGINS COMPLETE"
 issues: []
 discussions: []
@@ -15,6 +27,10 @@ discussions: []
 **Status**: ✅ **ALL INSTALLED & CONFIGURED**  
 **Documentation**: Complete & DRY + KISS compliant
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "AI SKILLS AND PLUGINS COMPLETE"
@@ -31,6 +47,13 @@ Tutti gli AI skill e plugins sono stati **studiati, installati, configurati e do
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📊 Riepilogo Generale
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. **NotebookLM Skill** ✅
 
 ### Cos'è
@@ -61,7 +84,23 @@ ls -la ~/.claude/skills/notebooklm/
 "Set up NotebookLM authentication"
 
 # 2. Crea notebook su notebooklm.google.com
+<<<<<<< HEAD
 #    - Upload: agents.md, docs/**/*.md, .planning/**/*.md
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+#    - Upload: AGENTS.md, docs/**/*.md, .planning/**/*.md
+=======
+<<<<<<< HEAD
+#    - Upload: agents.md, docs/**/*.md, .planning/**/*.md
+=======
+#    - Upload: AGENTS.md, docs/**/*.md, .planning/**/*.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+#    - Upload: agents.md, docs/**/*.md, .planning/**/*.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 #    - Share → Copy link
 
 # 3. Aggiungi a library
@@ -357,7 +396,23 @@ claude
 
 # 3. Create notebook
 #    - Go to notebooklm.google.com
+<<<<<<< HEAD
 #    - Upload: agents.md, docs/, .planning/
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+#    - Upload: AGENTS.md, docs/, .planning/
+=======
+<<<<<<< HEAD
+#    - Upload: agents.md, docs/, .planning/
+=======
+#    - Upload: AGENTS.md, docs/, .planning/
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+#    - Upload: agents.md, docs/, .planning/
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 #    - Share → Copy link
 
 # 4. Add to library

@@ -10,6 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/send-mail-by-records-action.md
+ *
  * @contract docs/contracts/send-mail-by-records-action.md
  */
 class SendMailByRecordsAction

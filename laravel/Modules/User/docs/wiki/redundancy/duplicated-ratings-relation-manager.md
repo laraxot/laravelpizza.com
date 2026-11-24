@@ -9,10 +9,7 @@ related:
   - "./duplicated-profile-form.md"
   - "./duplicated-users-relation-manager.md"
   - "./oauth-dual-resource-trees.md"
-<<<<<<< HEAD
-=======
 qmd: "duplicated ratings relation manager ratingsrelationmanager occurrences"
->>>>>>> laraxot/dev
 ---
 
 # Duplicated RatingsRelationManager

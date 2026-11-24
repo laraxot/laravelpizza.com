@@ -16,6 +16,7 @@ use function Safe\unlink;
 
 /**
  * @see docs/contracts/write-translation-file-action.md
+ *
  * @contract docs/contracts/write-translation-file-action.md
  */
 class WriteTranslationFileAction

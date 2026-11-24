@@ -13,10 +13,7 @@ related:
   - "./index.md"
   - "./log.md"
   - "./socialite-architecture.md"
-<<<<<<< HEAD
-=======
 qmd: "overview wiki"
->>>>>>> laraxot/dev
 ---
 
 # User Wiki Overview

@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-tenant-config-path-action.md
+ *
  * @contract docs/contracts/get-tenant-config-path-action.md
  */
 class GetTenantConfigPathAction

@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "UserFactory Advanced Implementation - COMPLETE ✅"
 type: note
 qmd: "userfactory advanced implementation complete"
 ---
->>>>>>> laraxot/dev
 # UserFactory Advanced Implementation - COMPLETE ✅
 
 ## 🎉 Mission Accomplished

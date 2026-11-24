@@ -155,6 +155,10 @@ GET /it/tests/amministrazione → tests.view (slug=amministrazione)
 - `docs/ALLINEAMENTO_BOOTSTRAP_ITALIA.md`
 - `docs/FIX_TESTS_HOMEPAGE.md`
 - `docs/VERIFICA_HOMEPAGE.md`
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -170,3 +174,8 @@ discussions: []
 **Data**: 2026-03-31  
 **URL Test**: http://fixcity.local/it/tests/homepage
 **URL Test**: http://ptv.local/it/tests/homepage
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

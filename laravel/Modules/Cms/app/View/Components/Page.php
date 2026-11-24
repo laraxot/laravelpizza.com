@@ -89,6 +89,13 @@ final class Page extends Component
             return;
         }
 
+        // Se la pagina Folio ha gia' risolto (e autorizzato) il record e lo passa nel data bag, il Page non lo
+        // rilegge ne' decide la visibilita': l'oggetto arriva dal codice della pagina, mai dall'URL.
+        // Senza questa uscita /events/{slug} e /profile/{id} rispondevano 404 anche per un record valido.
+        if (is_object($this->data['item'] ?? null)) {
+            return;
+        }
+
         $resolved = app(ResolvePageAction::class)->execute($container0, $slug0);
         $resolvedPage = PageModel::findUniqueBySlug($resolved->pageSlug);
         $requestedSlug = $container0.'.'.$slug0;

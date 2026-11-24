@@ -20,10 +20,7 @@ related:
 github:
   repository: null
   issues: []
-<<<<<<< HEAD
-=======
 qmd: "superadmin widget icons 21 story superadminwidget"
->>>>>>> laraxot/dev
 ---
 
 # SuperAdminWidget: icone piu' adeguate

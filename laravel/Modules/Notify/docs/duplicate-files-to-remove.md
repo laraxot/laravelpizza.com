@@ -111,6 +111,10 @@ rm Modules/Notify/resources/views/emails/templates/widgets/newfeaturestart.blade
 git add -A
 git commit -m "fix: remove lowercase duplicate files (case sensitivity compliance)"
 ```
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -126,3 +130,8 @@ discussions: []
 - [Xot File Naming Rules](../../xot/docs/file-naming-case-sensitivity.md)
 - [Bashscripts Location Policy](../../xot/docs/bashscripts-location-policy.md)
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

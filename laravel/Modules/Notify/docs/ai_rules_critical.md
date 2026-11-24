@@ -15,6 +15,10 @@ discussions: []
 > **Status**: ✅ Active  
 > **Version**: 4.0
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "ai rules critical"
@@ -67,6 +71,21 @@ gh run list --repo laraxot/base_ptv_fila5
 ```
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 🚨 CRITICAL RULE #1: GIT COMMIT & PUSH
+### Rule Statement
+### Why
+### How
+# After creating/modifying files
+# 1. Add all changes
+# 2. Check what will be committed
+# 3. Commit with descriptive message
+# 4. Push to remote
+# 5. Verify on GitHub
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## 🚨 CRITICAL RULE #2: TEST ON GITHUB
 

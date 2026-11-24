@@ -2,7 +2,19 @@
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "module readme template"
 issues: []
 discussions: []
@@ -10,7 +22,23 @@ title: [Module Name]
 module: [module-slug]
 status: production
 related:
+<<<<<<< HEAD
   - "./README.md"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  - "./README.md"
+=======
+<<<<<<< HEAD
+  - "./readme.md"
+=======
+  - "./README.md"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+  - "./readme.md"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 # [Module Name] Module

@@ -26,6 +26,10 @@ discussions: []
 **Category**: AI Efficiency / System / Religion  
 **Audience**: All AI agents + developers
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "token efficiency religion"
@@ -45,6 +49,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## LA REGOLA AUREA
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Perche (Filosofia Profonda)
 
 ### 1. Costo Reale

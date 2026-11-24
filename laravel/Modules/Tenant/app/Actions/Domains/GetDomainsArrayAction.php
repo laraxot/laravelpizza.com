@@ -10,6 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-domains-array-action.md
+ *
  * @contract docs/contracts/get-domains-array-action.md
  */
 class GetDomainsArrayAction

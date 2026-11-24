@@ -16,6 +16,10 @@ discussions: []
 **Status**: ✅ ALWAYS ACTIVE  
 **Priority**: BLOCKER (violation = STOP immediately)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "00 index"
@@ -77,6 +81,15 @@ class PredictTableWidget extends TableWidget
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Rule #1: Filament Tables for Lists
+### ✅ CORRECT - Filament Table Widget
+### ❌ WRONG - Custom Blade
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🎯 Rule #2: Multi-Outcome Universal
 
 > **TUTTO è multi-risposta** (anche SÌ/NO = 2 outcomes)

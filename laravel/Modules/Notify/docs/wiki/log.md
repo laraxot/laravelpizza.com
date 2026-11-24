@@ -71,7 +71,14 @@ module: "Notify"
 
 - Created wiki structure: rules/, skills/, commands/, memories/, concepts/
 - Created index.md for each section
+<<<<<<< HEAD
 - Created index.md for each section
+=======
+<<<<<<< HEAD
+- Created index.md for each section
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - Created module index.md
 - Ready for on-demand loading via QMD
 

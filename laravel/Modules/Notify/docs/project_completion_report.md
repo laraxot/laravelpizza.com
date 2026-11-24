@@ -292,6 +292,10 @@ Il sistema è pronto per il deployment in produzione e può essere facilmente pe
 ## Licenza
 
 MIT License - Vedi file LICENSE per dettagli.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -313,3 +317,8 @@ discussions: []
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

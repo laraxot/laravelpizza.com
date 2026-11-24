@@ -10,10 +10,7 @@ references:
   - ../architecture/module-boundary.md
   - ../brainstorming/module-opportunities.md
   - ../epics/module-roadmap.md
-<<<<<<< HEAD
-=======
 qmd: "bmad audit story baseline analisi completa"
->>>>>>> laraxot/dev
 ---
 # Story — UI: baseline BMAD
 

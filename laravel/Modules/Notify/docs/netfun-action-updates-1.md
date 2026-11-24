@@ -325,6 +325,10 @@ Questi miglioramenti garantiscono:
 3. Supporto per diversi tipi di DTO
 4. Normalizzazione corretta dei numeri di telefono
 5. Configurazione standardizzata e coerente
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -337,3 +341,8 @@ qmd: "netfun action updates 1"
 issues: []
 discussions: []
 *Ultimo aggiornamento: 2023-05-12*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

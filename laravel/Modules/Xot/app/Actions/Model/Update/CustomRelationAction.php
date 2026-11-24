@@ -12,6 +12,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/custom-relation-action.md
+ *
  * @contract docs/contracts/custom-relation-action.md
  */
 class CustomRelationAction

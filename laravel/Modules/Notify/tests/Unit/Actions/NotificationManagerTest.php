@@ -15,8 +15,11 @@ use Modules\Notify\Models\Notification;
 use Modules\Notify\Models\NotificationTemplate;
 use Modules\Notify\Tests\TestCase;
 
+<<<<<<< HEAD
+=======
 use function Safe\class_parents;
 
+>>>>>>> laraxot/dev
 uses(TestCase::class);
 function actionsNotificationManagerActiveTemplate(string $code): NotificationTemplate
 {

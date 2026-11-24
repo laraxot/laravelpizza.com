@@ -15,6 +15,10 @@ discussions: []
 > **PHPStan Level:** Target 10
 > **Status:** Major Syntax Fixes Completed
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "code fixes"
@@ -31,6 +35,13 @@ Complete overhaul of the Notify module addressing **41 files with critical PHP s
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Executive Summary
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Problems Identified
 
 ### Root Cause Analysis

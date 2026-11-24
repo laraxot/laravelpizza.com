@@ -3,7 +3,19 @@ title: "spatie translatable integration"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "spatie translatable integration"
 issues: []
 discussions: []
@@ -271,8 +283,19 @@ Schema::table('mail_templates', function (Blueprint $table) {
 
 ### Documentazione Interna
 - [Errore Plugin Not Registered](./errori/plugin-spatie-translatable-not-registered.md)
+<<<<<<< HEAD
 - [Lang Module README](../../lang/docs/README.md)
 - [Filament Panels Configuration](../../xot/docs/filament/panel-configuration.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+- [Lang Module README](../../lang/docs/README.md)
+- [Filament Panels Configuration](../../xot/docs/filament/panel-configuration.md)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Lang Module README](../../Lang/docs/readme.md)
 - [Filament Panels Configuration](../../xot/docs/filament/panel-configuration.md)
 
@@ -291,3 +314,14 @@ discussions: []
 **Compatibilità**: Filament 4.x
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [Lang Module README](../../lang/docs/README.md)
+- [Filament Panels Configuration](../../xot/docs/filament/panel-configuration.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

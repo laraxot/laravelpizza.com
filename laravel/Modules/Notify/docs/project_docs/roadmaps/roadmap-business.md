@@ -502,6 +502,10 @@ EBITDA: €0 (Break-even Q4 2025)
 - **Local Focus**: Conoscenza mercato italiano
 - **Public Sector**: Specializzazione PA
 - **Compliance**: GDPR e normative italiane
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -524,3 +528,8 @@ discussions: []
 **🔄 Ultimo Aggiornamento**: Gennaio 2025  
 **📊 Progresso**: 0% → 100% (Target Dicembre 2025)  
 **🎯 Prossimo Milestone**: Pilot Program (Marzo 2025)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

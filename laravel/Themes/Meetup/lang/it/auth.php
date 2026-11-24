@@ -32,14 +32,20 @@ return [
         ],
     ],
     'logout' => [
+        'in_progress' => 'Disconnessione in corso…',
         'goodbye' => [
             'message' => 'Arrivederci',
         ],
     ],
     'password' => [
         'reset' => [
-            'title' => 'Reimposta la password',
+            'title' => 'Scegli una nuova password',
             'label' => 'Reimposta la password',
+            'subtitle' => 'Almeno 8 caratteri. Dopo il salvataggio entri subito nel sito.',
+            'email' => 'Email',
+            'password' => 'Nuova password',
+            'password_confirmation' => 'Ripeti la nuova password',
+            'submit' => 'Salva la password',
         ],
         'email' => [
             'label' => 'Indirizzo email',
@@ -48,7 +54,7 @@ return [
             'label' => 'Conferma password',
         ],
         'confirm' => [
-            'title' => 'Conferma la tua password',
+            'title' => 'Conferma la password',
             'message' => 'Conferma la tua password prima di continuare',
             'label' => 'Conferma password',
             'subtitle' => 'È una zona protetta: per continuare scrivi di nuovo la tua password.',
@@ -68,6 +74,13 @@ return [
         'back_to_login' => [
             'label' => 'torna al login',
         ],
+        'request' => [
+            'title' => 'Password dimenticata?',
+            'subtitle' => 'Scrivi l\'email del tuo account: ti mandiamo un link per sceglierne una nuova.',
+            'email' => 'Email',
+            'submit' => 'Inviami il link',
+            'back_to_login' => 'Torna all\'accesso',
+        ],
     ],
     'sections' => [
         'verify' => [
@@ -81,9 +94,7 @@ return [
         'sign_out' => [
             'label' => 'esci',
         ],
-        'resent' => [
-            'message' => 'Un nuovo link di verifica è stato inviato al tuo indirizzo email.',
-        ],
+        'resent' => 'Ti abbiamo mandato un nuovo link di conferma.',
         'instructions' => [
             'message' => 'Prima di procedere, controlla la tua email per trovare il link di verifica. Se non hai ricevuto l\'email,',
         ],

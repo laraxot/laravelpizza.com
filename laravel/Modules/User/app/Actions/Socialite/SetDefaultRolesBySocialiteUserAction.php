@@ -15,6 +15,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/set-default-roles-by-socialite-user-action.md
+ *
  * @contract docs/contracts/set-default-roles-by-socialite-user-action.md
  */
 class SetDefaultRolesBySocialiteUserAction

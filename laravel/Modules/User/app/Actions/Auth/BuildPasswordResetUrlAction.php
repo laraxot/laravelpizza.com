@@ -14,6 +14,7 @@ use function Safe\preg_replace;
  * quindi non dipende dalla richiesta.
  *
  * @see docs/contracts/build-password-reset-url-action.md
+ *
  * @contract docs/contracts/build-password-reset-url-action.md
  */
 final class BuildPasswordResetUrlAction

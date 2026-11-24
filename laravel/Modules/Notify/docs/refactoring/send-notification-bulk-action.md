@@ -3,7 +3,19 @@ title: "send notification bulk action"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "send notification bulk action"
 issues: []
 discussions: []
@@ -232,8 +244,27 @@ public function execute(
 
 **⚠️ Nota Filament 4**: Il metodo `->form()` è deprecato. Usare sempre `->schema()` per definire lo schema del form nelle Actions e BulkActions.
 
+<<<<<<< HEAD
 **✅ Componenti Riutilizzabili**: Usare `MailTemplateSelect` e `ChannelCheckboxList` invece di configurare `Select`/`CheckboxList` inline. Vedi [Componenti Form Riutilizzabili](../forms/components-reusable.md).
 **✅ Componenti Riutilizzabili**: Usare `MailTemplateSelect` e `ChannelCheckboxList` invece di configurare `Select`/`CheckboxList` inline. Vedi [Componenti Form Riutilizzabili](../forms/components-reusable.md).
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+**✅ Componenti Riutilizzabili**: Usare `MailTemplateSelect` e `ChannelCheckboxList` invece di configurare `Select`/`CheckboxList` inline. Vedi [Componenti Form Riutilizzabili](../forms/components-reusable.md).
+**✅ Componenti Riutilizzabili**: Usare `MailTemplateSelect` e `ChannelCheckboxList` invece di configurare `Select`/`CheckboxList` inline. Vedi [Componenti Form Riutilizzabili](../forms/components-reusable.md).
+=======
+<<<<<<< .merge_file_tRyc6v
+**✅ Componenti Riutilizzabili**: Usare `MailTemplateSelect` e `ChannelCheckboxList` invece di configurare `Select`/`CheckboxList` inline. Vedi [Componenti Form Riutilizzabili](./forms/components-reusable.md).
+=======
+**✅ Componenti Riutilizzabili**: Usare `MailTemplateSelect` e `ChannelCheckboxList` invece di configurare `Select`/`CheckboxList` inline. Vedi [Componenti Form Riutilizzabili](../forms/components-reusable.md).
+**✅ Componenti Riutilizzabili**: Usare `MailTemplateSelect` e `ChannelCheckboxList` invece di configurare `Select`/`CheckboxList` inline. Vedi [Componenti Form Riutilizzabili](../forms/components-reusable.md).
+>>>>>>> .merge_file_6h6jrk
+>>>>>>> laraxot/dev
+=======
+**✅ Componenti Riutilizzabili**: Usare `MailTemplateSelect` e `ChannelCheckboxList` invece di configurare `Select`/`CheckboxList` inline. Vedi [Componenti Form Riutilizzabili](../forms/components-reusable.md).
+**✅ Componenti Riutilizzabili**: Usare `MailTemplateSelect` e `ChannelCheckboxList` invece di configurare `Select`/`CheckboxList` inline. Vedi [Componenti Form Riutilizzabili](../forms/components-reusable.md).
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 **🧘 Extract Method Pattern**: Estrarre metodi privati per migliorare leggibilità e manutenibilità. Vedi [Extract Method Pattern](./extract-method-pattern.md).
 

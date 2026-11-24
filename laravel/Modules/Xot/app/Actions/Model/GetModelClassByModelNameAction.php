@@ -12,6 +12,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/get-model-class-by-model-name-action.md
+ *
  * @contract docs/contracts/get-model-class-by-model-name-action.md
  */
 class GetModelClassByModelNameAction

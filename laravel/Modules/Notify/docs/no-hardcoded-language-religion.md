@@ -17,6 +17,10 @@ discussions: []
 **Category**: Architecture / Religion / i18n  
 **Audience**: All developers + AI agents
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "no hardcoded language religion"
@@ -41,6 +45,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## LA REGOLA AUREA
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Perche Succede (Il Problema Profondo)
 
 ### 1. Pigrizia dello Sviluppatore

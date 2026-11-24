@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Struttura Navigazione"
 type: note
 qmd: "navigation structure struttura navigazione"
 ---
->>>>>>> laraxot/dev
 # Struttura Navigazione
 
 ## Overview

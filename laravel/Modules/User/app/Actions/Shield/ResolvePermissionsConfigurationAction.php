@@ -19,6 +19,7 @@ use function Safe\class_implements;
  * getResourcePermissionPrefixes, getRoleModel, getPermissionModel, roleResourceExists
  *
  * @see docs/contracts/resolve-permissions-configuration-action.md
+ *
  * @contract docs/contracts/resolve-permissions-configuration-action.md
  */
 class ResolvePermissionsConfigurationAction

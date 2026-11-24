@@ -5,20 +5,11 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-<<<<<<< HEAD
-/**
-=======
 /*
->>>>>>> laraxot/dev
  * Canonical owner migration for `User::users` (consolidated 2026-11-12).
  * The tableUpdate block is also the forward-only repair path for legacy schemas.
  * 2026-11-17: absorbed add_lang_column, repair_users_type_state_columns and
  * add_digital_identity_columns_to_users_table (removed: one model = one migration).
-<<<<<<< HEAD
- *
- * @see Modules/User/docs/migrations.md
-=======
->>>>>>> laraxot/dev
  */
 return new class extends XotBaseMigration
 {

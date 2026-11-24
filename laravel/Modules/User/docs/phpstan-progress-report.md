@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 *Ultimo aggiornamento: 2025-01-22*
-=======
->>>>>>> laraxot/dev
 ---
 module: theme
 topic: phpstan-progress-report
@@ -15,10 +12,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< HEAD
-=======
 qmd: "phpstan progress report"
->>>>>>> laraxot/dev
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-progress-report.md

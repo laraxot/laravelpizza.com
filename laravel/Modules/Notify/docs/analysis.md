@@ -71,7 +71,14 @@ Modules/Notify/
 - Performance testing
 ### Versione HEAD
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Collegamenti tra versioni di analysis.md
 * [analysis.md](../../../notify/docs/analysis.md)
 * [analysis.md](../../../notify/docs/phpstan/analysis.md)
@@ -87,6 +94,10 @@ Modules/Notify/
 * [analysis.md](../../../media/docs/phpstan/analysis.md)
 * [analysis.md](../../../../themes/one/docs/analysis.md)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ### Versione Incoming
 
@@ -101,3 +112,9 @@ updated: 2026-09-26
 qmd: "analysis"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
+=======
+### Versione Incoming
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

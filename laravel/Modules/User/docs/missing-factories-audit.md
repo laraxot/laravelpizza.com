@@ -153,15 +153,9 @@ related:
 
 ## Collegamenti
 
-<<<<<<< HEAD
-- [README Modulo User](./README.md)
-- [Factory Audit Root](../../../../docs/project/factory-audit-2025.md)
-- [Models Documentation](./models/README.md)
-=======
 - [README Modulo User](./readme.md)
 - [Factory Audit Root](../../../../docs/project/factory-audit-2025.md)
 - [Models Documentation](./models/readme.md)
->>>>>>> laraxot/dev
 
 ---
 **Errore gravissimo da non ripetere mai più**  

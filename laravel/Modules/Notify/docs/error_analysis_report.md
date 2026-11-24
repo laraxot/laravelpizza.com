@@ -15,6 +15,10 @@ discussions: []
 **Errore Critico**: Type mismatch in Resource classes  
 **Causa**: Violazione regole XotBase + Filament 4  
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "ERROR ANALYSIS REPORT"
@@ -44,6 +48,14 @@ Il file `FaqCategoryResource.php` usa metodi Filament 3 invece di XotBase patter
 - ✅ NON definire `$navigationGroup` come proprietà
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 🔴 ERRORE PRINCIPALE
+### Causa Root
+### Dovrebbe Usare
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## 📋 FILES CON ERRORI SIMILI
 

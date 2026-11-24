@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< HEAD
-=======
 qmd: "activitylog moderation best practices practice moderazione"
->>>>>>> laraxot/dev
 ---
 # Best Practice: ActivityLog per la Moderazione Utenti
 

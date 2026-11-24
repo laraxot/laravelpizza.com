@@ -5,25 +5,23 @@ declare(strict_types=1);
 namespace Modules\UI\Tests\Unit\Components;
 
 use Illuminate\Contracts\View\View;
-use Illuminate\View\Component;
+use Illuminate\Support\Facades\Blade;
 use Modules\UI\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
+/**
+ * @see Modules/UI/docs/test-fix-philosophy.md
+ */
 describe('Component', function (): void {
     test('ui components can be rendered', function (): void {
-        $component = new class extends Component {
-            public function render(): View
-            {
-                /** @var view-string $buttonView */
-                $buttonView = 'ui::components.ui.button';
+        // `$slot` e `$attributes` li inietta Blade solo quando il componente e' usato come tag:
+        // un `view()` diretto del blade anonimo non e' un uso reale. `<x-ui.button />` (slot vuoto) si'.
+        $html = Blade::render('<x-ui.button />');
 
-                return view($buttonView);
-            }
-        };
-
-        Assert::assertStringContainsString('button', (string) $component->render()->render());
+        Assert::assertStringContainsString('<button', $html);
+        Assert::assertStringContainsString('</button>', $html);
     });
 
     test('ui button component has correct attributes', function (): void {

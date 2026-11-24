@@ -14,6 +14,10 @@ discussions: []
 ## Data: 2026-03-31
 ## Status: ✅ Header Completamente Rifatto
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "HEADER FIX COMPLETE"
@@ -47,6 +51,17 @@ discussions: []
 **Dopo**: `py-2` (top bar), `py-6` (main header), `py-3` (nav)
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 🔴 Problemi Risolti
+### 1. Logo non visibile ✅ RISOLTO
+### 2. Nome del Comune non leggibile ✅ RISOLTO
+### 3. Slogan non leggibile ✅ RISOLTO
+### 4. Colori diversi ✅ RISOLTO
+### 5. Spaziature diverse ✅ RISOLTO
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## ✅ Nuovo Header Design Comuni
 

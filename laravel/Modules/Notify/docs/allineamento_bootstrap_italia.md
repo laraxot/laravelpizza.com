@@ -17,6 +17,10 @@ I componenti blade usano classi Tailwind ma Bootstrap Italia richiede classi spe
 ## Soluzione
 Creare componenti compatibili Bootstrap Italia.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "allineamento bootstrap italia"
@@ -82,6 +86,16 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Componenti da Fixare
+### 1. Hero Homepage
+### 2. Governance Cards
+### 3. Events Calendar
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Piano d'Azione
 
 ### Fase 1: Mappatura Classi

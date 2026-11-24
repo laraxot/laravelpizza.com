@@ -3,7 +3,19 @@ title: "gemini dependencies"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "gemini dependencies"
 issues: []
 discussions: []
@@ -13,6 +25,10 @@ discussions: []
 
 Gestione dipendenze Composer e moduli.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "gemini dependencies"
@@ -29,6 +45,13 @@ Il `composer.json` nella **root** (`laravel/composer.json`) **NON DEVE ESSERE MO
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Regola Critica
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Workflow Corretto
 
 1. **Aggiungi il pacchetto** nel `composer.json` del **MODULO specifico** (es: `Modules/Meetup/composer.json`).
@@ -78,5 +101,21 @@ composer run go
 
 - [Indice GEMINI](./gemini-split-index.md)
 - [packages-spatie.md](./packages-spatie.md)
+<<<<<<< HEAD
 - [GEMINI.md originale](../../gemini.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [gemini.md originale](../../gemini.md)
+=======
+<<<<<<< HEAD
+- [GEMINI.md originale](../../gemini.md)
+=======
+- [gemini.md originale](../../gemini.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [GEMINI.md originale](../../gemini.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Index principale](./index.md)

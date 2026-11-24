@@ -15,6 +15,7 @@ use function Safe\unlink;
 
 /**
  * @see docs/contracts/save-attachments-action.md
+ *
  * @contract docs/contracts/save-attachments-action.md
  */
 class SaveAttachmentsAction

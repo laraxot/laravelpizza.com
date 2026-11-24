@@ -3,7 +3,19 @@ title: "qwen web design"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "qwen web design"
 issues: []
 discussions: []
@@ -13,6 +25,10 @@ discussions: []
 
 Studio web design basato su 31 fonti italiane.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "qwen web design"
@@ -38,6 +54,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📊 10 Priorità (70% Successo Sito)
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Core Web Vitals 2026
 
 | Metrica | Target |
@@ -132,5 +155,21 @@ discussions: []
 
 - [Indice QWEN](./qwen-split-index.md)
 - [website-checklist.md](./website-checklist.md) - Checklist completa
+<<<<<<< HEAD
 - [QWEN.md originale](../../qwen.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [qwen.md originale](../../qwen.md)
+=======
+<<<<<<< HEAD
+- [QWEN.md originale](../../qwen.md)
+=======
+- [qwen.md originale](../../qwen.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [QWEN.md originale](../../qwen.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Index principale](./index.md)

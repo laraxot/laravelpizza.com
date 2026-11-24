@@ -15,6 +15,10 @@ discussions: []
 **Status Generale**: 🚧 IN CORSO - 65% completato  
 **Priorità**: ALTA  
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "documentation status"
@@ -33,6 +37,13 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 EXECUTIVE SUMMARY
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📊 STATO DOCUMENTAZIONE PER MODULO
 
 ### 🏗️ **Moduli Core** (90% completati)

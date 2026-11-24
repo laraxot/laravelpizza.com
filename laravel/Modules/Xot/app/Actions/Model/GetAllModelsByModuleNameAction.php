@@ -14,6 +14,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-all-models-by-module-name-action.md
+ *
  * @contract docs/contracts/get-all-models-by-module-name-action.md
  */
 class GetAllModelsByModuleNameAction

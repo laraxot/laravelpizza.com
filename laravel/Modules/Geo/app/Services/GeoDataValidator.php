@@ -76,8 +76,7 @@ class GeoDataValidator
     /**
      * Ottiene gli errori di validazione.
      *
-     * @param array<string, mixed> $data Dati da validare
-     *
+     * @param  array<string, mixed>  $data  Dati da validare
      * @return array<string, array<int, string>>
      */
     public function getErrors(array $data): array

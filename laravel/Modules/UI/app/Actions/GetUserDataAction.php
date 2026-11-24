@@ -15,6 +15,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-user-data-action.md
+ *
  * @contract docs/contracts/get-user-data-action.md
  */
 class GetUserDataAction

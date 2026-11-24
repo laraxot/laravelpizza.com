@@ -3,10 +3,7 @@ title: "User Module: Support → QueueableActions Refactoring Complete"
 type: documentation
 date: 2026-07-21
 status: COMPLETED
-<<<<<<< HEAD
-=======
 qmd: "actions refactoring completion user support queueableactions"
->>>>>>> laraxot/dev
 ---
 
 # User Module: Support → QueueableActions Refactoring

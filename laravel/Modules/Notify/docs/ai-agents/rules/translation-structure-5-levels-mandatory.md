@@ -16,6 +16,10 @@ discussions: []
 **Status**: ✅ CRITICAL RULE  
 **Priority**: BLOCKER
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "translation structure 5 levels mandatory"
@@ -35,6 +39,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 The Rule
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## ❌ WRONG Examples (NEVER DO THIS)
 
 ```blade

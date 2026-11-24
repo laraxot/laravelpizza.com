@@ -7,7 +7,19 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -42,6 +54,24 @@ status: draft
 - Usability test sul nuovo pannello Filament 5.
 
 ## 6. References
+<<<<<<< HEAD
 - [strategy.md](../../../strategy.md)
 - [strategy.md](../../../strategy.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [strategy.md](../../../strategy.md)
+- [strategy.md](../../../strategy.md)
+=======
+<<<<<<< .merge_file_UnrOuf
+- [strategy.md](strategy.md)
+=======
+- [strategy.md](../../../strategy.md)
+- [strategy.md](../../../strategy.md)
+>>>>>>> .merge_file_FLVxPb
+>>>>>>> laraxot/dev
+=======
+- [strategy.md](../../../strategy.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [prd.md](prd.md)

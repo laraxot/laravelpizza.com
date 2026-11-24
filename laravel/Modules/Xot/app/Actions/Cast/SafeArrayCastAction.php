@@ -34,6 +34,7 @@ use Spatie\QueueableAction\QueueableAction;
  * $array = SafeArrayCastAction::castWithKeys($mixedValue, ['required_key']);
  *
  * @see docs/contracts/safe-array-cast-action.md
+ *
  * @contract docs/contracts/safe-array-cast-action.md
  */
 class SafeArrayCastAction

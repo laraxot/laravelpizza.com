@@ -16,6 +16,10 @@ discussions: []
 **Status**: ✅ CRITICAL RULE  
 **Priority**: BLOCKER
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "multi outcome no binary fields"
@@ -47,6 +51,13 @@ $pivot->percentage  // Unico campo valido
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 The Rule
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🧠 The WHY (Philosophy)
 
 ### Level 1: Domain Reality ❌
@@ -213,7 +224,14 @@ $pivot->percentage  // ✅ Unico campo valido
 
 ### AI Agents Docs
 - **[Rules Index](00-index.md)** - All rules
+<<<<<<< HEAD
 - **[Rules Index](00-index.md)** - All rules
+=======
+<<<<<<< HEAD
+- **[Rules Index](00-index.md)** - All rules
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - **[Multi-Outcome Universal](multi-outcome-universal.md)** - Core principle
 - **[Use Models Not DB::Table](use-models-not-db-table.md)** - Model usage
 

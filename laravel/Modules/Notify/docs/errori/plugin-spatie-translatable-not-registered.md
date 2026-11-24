@@ -3,7 +3,19 @@ title: "plugin spatie translatable not registered"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "plugin spatie translatable not registered"
 issues: []
 discussions: []
@@ -373,8 +385,19 @@ Prima di usare `LangBase*`:
 - [Spatie Laravel Translatable](https://spatie.be/docs/laravel-translatable/v6/introduction)
 
 ### Documentazione Interna
+<<<<<<< HEAD
 - [Lang Module README](../../../lang/docs/README.md)
 - [Filament Panel Configuration](../../../xot/docs/filament/panel-configuration.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+- [Lang Module README](../../../lang/docs/README.md)
+- [Filament Panel Configuration](../../../xot/docs/filament/panel-configuration.md)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Lang Module README](../../../Lang/docs/readme.md)
 - [Filament Panel Configuration](../../../xot/docs/filament/panel-configuration.md)
 
@@ -393,3 +416,14 @@ discussions: []
 **Next Step**: Decidere se MailTemplate deve essere traducibile
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [Lang Module README](../../../lang/docs/README.md)
+- [Filament Panel Configuration](../../../xot/docs/filament/panel-configuration.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

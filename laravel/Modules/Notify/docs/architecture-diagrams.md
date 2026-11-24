@@ -18,6 +18,10 @@ discussions: []
 - [Theme Architecture](#theme-architecture)
 - [Data Flow](#data-flow)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "architecture diagrams"
@@ -83,6 +87,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## System Architecture Overview
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Module Dependency Graph
 
 ```

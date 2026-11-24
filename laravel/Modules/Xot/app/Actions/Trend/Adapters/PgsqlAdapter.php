@@ -9,6 +9,7 @@ use Override;
 
 /**
  * @see docs/contracts/pgsql-adapter.md
+ *
  * @contract docs/contracts/pgsql-adapter.md
  */
 class PgsqlAdapter extends AbstractAdapter

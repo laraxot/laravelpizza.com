@@ -13,10 +13,21 @@ use Modules\Notify\Datas\SmsData;
 use Modules\Notify\Models\Contracts\SmsActionContract;
 use Spatie\QueueableAction\QueueableAction;
 
+<<<<<<< HEAD
+/**
+ * @see docs/contracts/send-nexmo-sms-action.md
+ *
+ * @contract docs/contracts/send-nexmo-sms-action.md
+ */
+=======
+<<<<<<< HEAD
+=======
 /**
  * @see docs/contracts/send-nexmo-sms-action.md
  * @contract docs/contracts/send-nexmo-sms-action.md
  */
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 final class SendNexmoSMSAction implements SmsActionContract
 {
     use QueueableAction;

@@ -12,6 +12,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/delete-table-index-by-model-class-index-name-action.md
+ *
  * @contract docs/contracts/delete-table-index-by-model-class-index-name-action.md
  */
 class DeleteTableIndexByModelClassIndexNameAction

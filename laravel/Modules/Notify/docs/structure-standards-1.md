@@ -92,6 +92,10 @@ Tutte le classi nella cartella `app/Filament/Clusters/*/Pages` **devono terminar
 - In caso di refactoring, aggiornare sia il nome del file che della classe e tutti i riferimenti.
 - Non usare mai nomi generici o ambigui (es. `SendNetfunSMS`), ma sempre `SendNetfunSMSPage`.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "structure standards 1"
@@ -134,3 +138,14 @@ class MyPage extends \Filament\Pages\Page {}
 // ✅ CORRETTO
 class MyPage extends Modules\Xot\Filament\Pages\XotBasePage {}
 ```
+<<<<<<< HEAD
+=======
+=======
+## Esempio
+# Regola di Estensione delle Pagine Filament
+## Non estendere mai direttamente Filament\Pages\Page
+### Motivazione
+### Best Practice
+### Esempio
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

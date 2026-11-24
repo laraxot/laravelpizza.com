@@ -19,6 +19,10 @@ discussions: []
 
 > **Piattaforma di segnalazione civica per la gestione intelligente dei disservizi urbani**
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "project overview"
@@ -41,6 +45,13 @@ Trasformare il rapporto cittadino-amministrazione attraverso:
 - 🤝 **Partecipazione**: Coinvolgimento attivo della comunità
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Project Purpose
+### Vision
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## 🏗️ Architecture Overview
 

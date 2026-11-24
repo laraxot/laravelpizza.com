@@ -20,6 +20,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Logs user activities and system events using Queueable Actions
  *
  * @see docs/contracts/activity-logger.md
+ *
  * @contract docs/contracts/activity-logger.md
  */
 class ActivityLogger

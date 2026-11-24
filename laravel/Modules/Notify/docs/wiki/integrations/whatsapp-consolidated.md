@@ -7,7 +7,19 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -27,8 +39,24 @@ Consolidated from **12** individual files.
 - [Standard per Invio Messaggi WhatsApp nel Modulo Notify](#whatsapp-sending-standard)
 - [https://levelup.gitconnected.com/how-to-send-whatsapp-messages-with-laravel-ed6426b4be96](#whatsapp)
 - [Implementazione Canale WhatsApp](#whatsapp_channel)
+<<<<<<< HEAD
 - [whatsapp integration](#whatsapp_integration)
 - [<<<<<<< HEAD](#whatsapp_integration)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [<<<<<<< HEAD](#whatsapp_integration)
+=======
+<<<<<<< HEAD
+- [whatsapp integration](#whatsapp_integration)
+=======
+- [<<<<<<< HEAD](#whatsapp_integration)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [whatsapp integration](#whatsapp_integration)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Standard per Invio Messaggi WhatsApp nel Modulo Notify](#whatsapp_sending_standard)
 
 ---
@@ -37,7 +65,17 @@ Consolidated from **12** individual files.
 
 *Consolidated from: `whatsapp-channel-implementazione-canale.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Struttura Base
 
 Il canale WhatsApp implementa le funzionalità per l'invio di messaggi tramite l'API di WhatsApp. La struttura include:
@@ -146,8 +184,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -499,7 +545,17 @@ class WhatsAppTest extends TestCase
 
 *Consolidated from: `whatsapp-channel.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Struttura Base
 
 ### 1.1 Data Transfer Objects
@@ -846,7 +902,17 @@ class WhatsAppTest extends TestCase
 
 *Consolidated from: `whatsapp-integration.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Questo documento descrive l'architettura e l'implementazione dell'integrazione WhatsApp nel modulo Notify di <nome progetto>, seguendo gli stessi standard e pattern utilizzati per l'invio di email e SMS.
@@ -1410,8 +1476,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -1961,7 +2035,17 @@ Seguendo questa architettura, l'integrazione WhatsApp si inserisce perfettamente
 
 *Consolidated from: `whatsapp-integration.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Panoramica
 
 Questo documento descrive l'architettura e l'implementazione dell'integrazione WhatsApp nel modulo Notify di App, seguendo gli stessi standard e pattern utilizzati per l'invio di email e SMS.
@@ -2524,8 +2608,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -2757,7 +2849,17 @@ $action->onQueue('whatsapp')->execute($data);
 
 *Consolidated from: `whatsapp-sending-standard.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Introduzione
 Questa guida definisce lo standard per l'invio di messaggi WhatsApp all'interno del modulo Notify, seguendo la stessa architettura modulare, configurazione e best practice già adottate per email e SMS. L'obiettivo è garantire coerenza, riusabilità e facilità di manutenzione, indipendentemente dal provider utilizzato (Twilio, Vonage, WhatsApp Business API, ecc.).
 
@@ -2984,25 +3086,63 @@ $action->onQueue('whatsapp')->execute($data);
 
 *Consolidated from: `whatsapp.md`*
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 tutorial
 https://medium.com/@snomanali1996/whatsapp-integration-with-laravel-using-twilio-api-9bd8ecd06dbf#id_token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImEzYjc2MmY4NzFjZGIzYmFlMDA0NGM2NDk2MjJmYzEzOTZlZGEzZTMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyMTYyOTYwMzU4MzQtazFrNnFlMDYwczJ0cDJhMmphbTRsamRjbXMwMHN0dGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyMTYyOTYwMzU4MzQtazFrNnFlMDYwczJ0cDJhMmphbTRsamRjbXMwMHN0dGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTU5MDIwMjQzMjQ3MDkwMzIyMDkiLCJlbWFpbCI6Im1hcmNvLnNvdHRhbmFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5iZiI6MTcxNTg0MzUyMSwibmFtZSI6Ik1hcmNvIFNvdHRhbmEiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSUYxbWNZSmp0S0lfazl5TUlfMFlTVlprMmxlWTdJMlBwV3ljNk1MR0I5N2h2MHA1dzI9czk2LWMiLCJnaXZlbl9uYW1lIjoiTWFyY28iLCJmYW1pbHlfbmFtZSI6IlNvdHRhbmEiLCJpYXQiOjE3MTU4NDM4MjEsImV4cCI6MTcxNTg0NzQyMSwianRpIjoiZjdiYjEwNDhhNTkwMWYzMWIwY2E4NDhmY2Q2Zjk1ZjhhY2FmZmUxMiJ9.KKOALFgLe1bPDydIwVMMKxm13eUptiYbadyytOc0bV2bdahDDsc-LUROZR3mIYvbheUcYChJNWkgK7ulHWnp4H36-FdNhKMrLuGIqU79jwEUwgJITYW9s7HJ6OxrTY5ieFJ3b8ituoAOHz8cSxmLOJt_XnnHpTSan_JUXe61In7nz72fX6dMBBv90KzNSZuTge2NqN3kply8qAFO7cDgxcMd11uy0-fVPBXNXIZGdj9wJhL2E0DOv9VjYcj1NHZov906NpyOB4c7siz0SaQHyD2IFUEi5Z5RGoEcsAqU7uhxylKv82rELgr7LHCSuuubtp-7a7eMMIfgJQDNrYoO9A
 
 
+<<<<<<< HEAD
+=======
+=======
+tutorial
+https://medium.com/@snomanali1996/whatsapp-integration-with-laravel-using-twilio-api-9bd8ecd06dbf#id_token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImEzYjc2MmY4NzFjZGIzYmFlMDA0NGM2NDk2MjJmYzEzOTZlZGEzZTMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyMTYyOTYwMzU4MzQtazFrNnFlMDYwczJ0cDJhMmphbTRsamRjbXMwMHN0dGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyMTYyOTYwMzU4MzQtazFrNnFlMDYwczJ0cDJhMmphbTRsamRjbXMwMHN0dGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTU5MDIwMjQzMjQ3MDkwMzIyMDkiLCJlbWFpbCI6Im1hcmNvLnNvdHRhbmFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5iZiI6MTcxNTg0MzUyMSwibmFtZSI6Ik1hcmNvIFNvdHRhbmEiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSUYxbWNZSmp0S0lfazl5TUlfMFlTVlprMmxlWTdJMlBwV3ljNk1MR0I5N2h2MHA1dzI9czk2LWMiLCJnaXZlbl9uYW1lIjoiTWFyY28iLCJmYW1pbHlfbmFtZSI6IlNvdHRhbmEiLCJpYXQiOjE3MTU4NDM4MjEsImV4cCI6MTcxNTg0NzQyMSwianRpIjoiZjdiYjEwNDhhNTkwMWYzMWIwY2E4NDhmY2Q2Zjk1ZjhhY2FmZmUxMiJ9.KKOALFgLe1bPDydIwVMMKxm13eUptiYbadyytOc0bV2bdahDDsc-LUROZR3mIYvbheUcYChJNWkgK7ulHWnp4H36-FdNhKMrLuGIqU79jwEUwgJITYW9s7HJ6OxrTY5ieFJ3b8ituoAOHz8cSxmLOJt_XnnHpTSan_JUXe61In7nz72fX6dMBBv90KzNSZuTge2NqN3kply8qAFO7cDgxcMd11uy0-fVPBXNXIZGdj9wJhL2E0DOv9VjYcj1NHZov906NpyOB4c7siz0SaQHyD2IFUEi5Z5RGoEcsAqU7uhxylKv82rELgr7LHCSuuubtp-7a7eMMIfgJQDNrYoO9A
+
+>>>>>>> laraxot/dev
+=======
+tutorial
+https://medium.com/@snomanali1996/whatsapp-integration-with-laravel-using-twilio-api-9bd8ecd06dbf#id_token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImEzYjc2MmY4NzFjZGIzYmFlMDA0NGM2NDk2MjJmYzEzOTZlZGEzZTMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyMTYyOTYwMzU4MzQtazFrNnFlMDYwczJ0cDJhMmphbTRsamRjbXMwMHN0dGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyMTYyOTYwMzU4MzQtazFrNnFlMDYwczJ0cDJhMmphbTRsamRjbXMwMHN0dGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTU5MDIwMjQzMjQ3MDkwMzIyMDkiLCJlbWFpbCI6Im1hcmNvLnNvdHRhbmFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5iZiI6MTcxNTg0MzUyMSwibmFtZSI6Ik1hcmNvIFNvdHRhbmEiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSUYxbWNZSmp0S0lfazl5TUlfMFlTVlprMmxlWTdJMlBwV3ljNk1MR0I5N2h2MHA1dzI9czk2LWMiLCJnaXZlbl9uYW1lIjoiTWFyY28iLCJmYW1pbHlfbmFtZSI6IlNvdHRhbmEiLCJpYXQiOjE3MTU4NDM4MjEsImV4cCI6MTcxNTg0NzQyMSwianRpIjoiZjdiYjEwNDhhNTkwMWYzMWIwY2E4NDhmY2Q2Zjk1ZjhhY2FmZmUxMiJ9.KKOALFgLe1bPDydIwVMMKxm13eUptiYbadyytOc0bV2bdahDDsc-LUROZR3mIYvbheUcYChJNWkgK7ulHWnp4H36-FdNhKMrLuGIqU79jwEUwgJITYW9s7HJ6OxrTY5ieFJ3b8ituoAOHz8cSxmLOJt_XnnHpTSan_JUXe61In7nz72fX6dMBBv90KzNSZuTge2NqN3kply8qAFO7cDgxcMd11uy0-fVPBXNXIZGdj9wJhL2E0DOv9VjYcj1NHZov906NpyOB4c7siz0SaQHyD2IFUEi5Z5RGoEcsAqU7uhxylKv82rELgr7LHCSuuubtp-7a7eMMIfgJQDNrYoO9A
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 twilio - vonage
 https://www.twilio.com/blog/create-laravel-php-notification-channel-whatsapp-twilio
 
 ufficial
 https://developers.facebook.com/docs/whatsapp/cloud-api/get-started
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 ## whatsapp_channel
 
 *Consolidated from: `whatsapp_channel.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Struttura Base
 
 ### 1.1 Data Transfer Objects
@@ -3459,14 +3599,34 @@ return [
             'from' => env('TWILIO_WHATSAPP_FROM'),
         ],
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
         'vonage' => [
             'api_key' => env('VONAGE_KEY'),
             'api_secret' => env('VONAGE_SECRET'),
             'from' => env('VONAGE_WHATSAPP_FROM'),
         ],
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
         'facebook' => [
             'app_id' => env('FACEBOOK_APP_ID'),
             'app_secret' => env('FACEBOOK_APP_SECRET'),
@@ -3474,7 +3634,17 @@ return [
             'phone_number_id' => env('FACEBOOK_PHONE_NUMBER_ID'),
         ],
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
         '360dialog' => [
             'api_key' => env('360DIALOG_API_KEY'),
             'phone_number_id' => env('360DIALOG_PHONE_NUMBER_ID'),
@@ -3588,7 +3758,17 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
         $from = 'whatsapp:' . ($whatsAppData->from ?? $this->defaultSender);
         $to = 'whatsapp:' . $whatsAppData->to;
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
         $client = new Client([
             'timeout' => $this->timeout,
             'auth' => [$this->accountSid, $this->authToken]
@@ -3596,7 +3776,17 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
 
         $endpoint = $this->baseUrl . '/Accounts/' . $this->accountSid . '/Messages.json';
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
         $endpoint = $this->baseUrl . '/Accounts/' . $this->accountSid . '/Messages.json';
 
         $payload = [
@@ -3605,13 +3795,33 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
             'Body' => $whatsAppData->body,
         ];
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
         // Aggiungi media se presente
         if (!empty($whatsAppData->media)) {
             $payload['MediaUrl'] = $whatsAppData->media[0];
         }
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
         try {
             $response = $client->post($endpoint, [
                 'form_params' => $payload
@@ -3620,7 +3830,17 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
             $this->vars['status_code'] = $response->getStatusCode();
             $this->vars['status_txt'] = $response->getBody()->getContents();
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
             $this->vars['status_code'] = $response->getStatusCode();
             $this->vars['status_txt'] = $response->getBody()->getContents();
 
@@ -3699,7 +3919,17 @@ final class SendFacebookWhatsAppAction implements WhatsAppProviderActionInterfac
 
         $endpoint = $this->baseUrl . '/' . $this->phoneNumberId . '/messages';
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
         $endpoint = $this->baseUrl . '/' . $this->phoneNumberId . '/messages';
 
         $payload = [
@@ -3708,7 +3938,17 @@ final class SendFacebookWhatsAppAction implements WhatsAppProviderActionInterfac
             'to' => $whatsAppData->to,
         ];
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
         // Gestione diversi tipi di messaggi
         if ($whatsAppData->type === 'text') {
             $payload['type'] = 'text';
@@ -3726,7 +3966,17 @@ final class SendFacebookWhatsAppAction implements WhatsAppProviderActionInterfac
             ];
         }
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
         try {
             $response = $client->post($endpoint, [
                 'json' => $payload
@@ -3737,7 +3987,17 @@ final class SendFacebookWhatsAppAction implements WhatsAppProviderActionInterfac
 
             $responseData = json_decode($this->vars['status_txt'], true);
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
             $this->vars['status_code'] = $response->getStatusCode();
             $this->vars['status_txt'] = $response->getBody()->getContents();
 
@@ -3852,7 +4112,17 @@ class WhatsAppChannel
 
         $driver = Config::get('whatsapp.default', 'twilio');
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
         $driver = Config::get('whatsapp.default', 'twilio');
 
         $action = match ($driver) {
@@ -3863,7 +4133,17 @@ class WhatsAppChannel
             default => throw new \Exception("Unsupported WhatsApp driver: {$driver}"),
         };
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
         return $action->execute($whatsAppData);
     }
 }
@@ -3900,7 +4180,17 @@ final class SendLogWhatsAppAction implements WhatsAppProviderActionInterface
             'type' => $whatsAppData->type,
         ]);
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
         return [
             'success' => true,
             'message_id' => 'log-' . uniqid(),
@@ -3932,7 +4222,17 @@ Seguendo questa architettura, l'integrazione WhatsApp si inserisce perfettamente
 
 *Consolidated from: `whatsapp_sending_standard.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Introduzione
 Questa guida definisce lo standard per l'invio di messaggi WhatsApp all'interno del modulo Notify, seguendo la stessa architettura modulare, configurazione e best practice già adottate per email e SMS. L'obiettivo è garantire coerenza, riusabilità e facilità di manutenzione, indipendentemente dal provider utilizzato (Twilio, Vonage, WhatsApp Business API, ecc.).
 

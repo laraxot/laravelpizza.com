@@ -3,7 +3,19 @@ title: "NOTEBOOKLM SETUP COMPLETE"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "NOTEBOOKLM SETUP COMPLETE"
 issues: []
 discussions: []
@@ -16,6 +28,10 @@ discussions: []
 **Status**: ✅ **INSTALLED & READY**  
 **Last Updated**: 2026-03-30
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "NOTEBOOKLM SETUP COMPLETE"
@@ -41,6 +57,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Cos'è NotebookLM
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Architettura
 
 ```
@@ -130,8 +153,28 @@ notebooklm/
 ```
 Notebook Name: "Notify Documentation"
 Sources:
+<<<<<<< HEAD
   - agents.md
   - laravel/agents.md
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  - AGENTS.md
+  - laravel/AGENTS.md
+=======
+<<<<<<< HEAD
+  - agents.md
+  - laravel/agents.md
+=======
+  - AGENTS.md
+  - laravel/AGENTS.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+  - agents.md
+  - laravel/agents.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - docs/**/*.md
   - .planning/**/*.md
   - laravel/Modules/docs/README.md
@@ -207,16 +250,40 @@ Result: Gemini connects info from multiple docs
 **Notebook 1: Notify Core**
 ```
 Sources:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - agents.md
   - laravel/agents.md
   - .planning/project.md
   - .planning/config.json
   - notify_improvement_plan.md
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - AGENTS.md
   - laravel/AGENTS.md
   - .planning/PROJECT.md
   - .planning/config.json
   - NOTIFY_IMPROVEMENT_PLAN.md
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ```
 
 **Notebook 2: Module Documentation**
@@ -234,7 +301,23 @@ Sources:
 Sources:
   - laravel/Themes/docs/README.md
   - laravel/Themes/Sixteen/docs/
+<<<<<<< HEAD
   - .planning/theme_context.md
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  - .planning/THEME_CONTEXT.md
+=======
+<<<<<<< HEAD
+  - .planning/theme_context.md
+=======
+  - .planning/THEME_CONTEXT.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+  - .planning/theme_context.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ```
 
 **Notebook 4: Technical Guides**
@@ -430,7 +513,23 @@ claude
 "Set up NotebookLM authentication"
 
 # 4. Crea notebook su notebooklm.google.com
+<<<<<<< HEAD
 #    - Upload agents.md, docs/**/*.md
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+#    - Upload AGENTS.md, docs/**/*.md
+=======
+<<<<<<< HEAD
+#    - Upload agents.md, docs/**/*.md
+=======
+#    - Upload AGENTS.md, docs/**/*.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+#    - Upload agents.md, docs/**/*.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 #    - Share → Copy link
 
 # 5. Aggiungi a library
@@ -468,7 +567,23 @@ claude
 - [x] Skill installato (`~/.claude/skills/notebooklm/`)
 - [ ] Autenticazione completata
 - [ ] Notebook creato su notebooklm.google.com
+<<<<<<< HEAD
 - [ ] Documenti uploadati (agents.md, docs/, etc.)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [ ] Documenti uploadati (AGENTS.md, docs/, etc.)
+=======
+<<<<<<< HEAD
+- [ ] Documenti uploadati (agents.md, docs/, etc.)
+=======
+- [ ] Documenti uploadati (AGENTS.md, docs/, etc.)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [ ] Documenti uploadati (agents.md, docs/, etc.)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [ ] Notebook condiviso pubblicamente
 - [ ] Link aggiunto a Claude library
 - [ ] Prima query testata

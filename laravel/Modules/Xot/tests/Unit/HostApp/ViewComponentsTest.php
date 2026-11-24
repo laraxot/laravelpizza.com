@@ -9,8 +9,8 @@ use App\View\Components\Header;
 use App\View\Components\Input;
 use Illuminate\Contracts\View\View as ViewContract;
 use Illuminate\Support\Facades\View;
-use PHPUnit\Framework\Assert;
 use Modules\Xot\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
 /*
  * Contratto dei componenti Blade di App\View\Components: quale vista sceglie

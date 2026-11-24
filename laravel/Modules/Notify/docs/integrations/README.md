@@ -143,6 +143,10 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 ---
 
 <!-- Merged from README.md, which collided with this file on case-insensitive filesystems. -->
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 title: "Readme"
@@ -156,3 +160,8 @@ discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
 ---
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

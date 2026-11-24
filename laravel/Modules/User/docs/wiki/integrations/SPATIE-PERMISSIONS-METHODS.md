@@ -5,10 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< HEAD
-=======
 qmd: "spatie permissions methods user permission reference"
->>>>>>> laraxot/dev
 ---
 
 # User Module - Spatie Permission Methods Reference

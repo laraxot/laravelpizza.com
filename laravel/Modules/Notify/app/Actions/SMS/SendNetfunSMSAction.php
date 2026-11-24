@@ -16,10 +16,21 @@ use Spatie\QueueableAction\QueueableAction;
 use function Safe\json_decode;
 use function Safe\mb_convert_encoding;
 
+<<<<<<< HEAD
+/**
+ * @see docs/contracts/send-netfun-sms-action.md
+ *
+ * @contract docs/contracts/send-netfun-sms-action.md
+ */
+=======
+<<<<<<< HEAD
+=======
 /**
  * @see docs/contracts/send-netfun-sms-action.md
  * @contract docs/contracts/send-netfun-sms-action.md
  */
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 final class SendNetfunSMSAction implements SmsActionContract
 {
     use QueueableAction;

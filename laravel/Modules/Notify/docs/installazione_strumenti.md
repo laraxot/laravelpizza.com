@@ -70,6 +70,10 @@ Aggiungi a `~/.cursor/mcp.json`:
 }
 ```
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "installazione strumenti"
@@ -104,6 +108,15 @@ docs/
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Documentazione Progetto
+### Struttura
+### Skill Installate
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Prossimi Passi
 
 1. Configurare OpenViking context per FixCity

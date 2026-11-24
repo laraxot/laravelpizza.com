@@ -5,10 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< HEAD
-=======
 qmd: "graphify map user mappa"
->>>>>>> laraxot/dev
 ---
 
 # User Module — Mappa Graphify

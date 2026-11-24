@@ -17,6 +17,10 @@ discussions: []
 
 **Solution**: Implement governance rules, rename files, and replace content with generic placeholders.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "migration plan"
@@ -47,6 +51,15 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Impact Analysis
+### Scope
+### Breakdown by Type
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Completed Work (Phase 1)
 
 ### ✅ 1. Governance Document Created

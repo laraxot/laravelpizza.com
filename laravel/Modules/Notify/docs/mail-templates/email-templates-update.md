@@ -3,7 +3,19 @@ title: "email templates update"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "email templates update"
 issues: []
 discussions: []
@@ -94,7 +106,27 @@ I modelli base si trovano in:
 
 ## Documentazione Correlata
 
+<<<<<<< HEAD
 - [Email Templates Structure](./email_templates_structure.md)
 - [Responsive Email Design](./responsive_email_templates.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Email Templates Structure](./EMAIL_TEMPLATES_STRUCTURE.md)
+- [Responsive Email Design](./RESPONSIVE_EMAIL_TEMPLATES.md)
+=======
+<<<<<<< HEAD
+- [Email Templates Structure](./email_templates_structure.md)
+- [Responsive Email Design](./responsive_email_templates.md)
+=======
+- [Email Templates Structure](./EMAIL_TEMPLATES_STRUCTURE.md)
+- [Responsive Email Design](./RESPONSIVE_EMAIL_TEMPLATES.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [Email Templates Structure](./email_templates_structure.md)
+- [Responsive Email Design](./responsive_email_templates.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Email HTML Best Practices](../email_html_best_practices.md)
 - [Email Templates Implementation](../email_templates.md)

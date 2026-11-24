@@ -15,6 +15,7 @@ use Symfony\Component\Console\Input\InputOption;
 
 /**
  * @see docs/contracts/get-commands-action.md
+ *
  * @contract docs/contracts/get-commands-action.md
  */
 class GetCommandsAction

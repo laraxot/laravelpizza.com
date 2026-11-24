@@ -1,6 +1,5 @@
 ---
 title: "Module BMAD audit — UI"
-<<<<<<< HEAD
 status: review
 updated: 2026-11-16
 module: UI
@@ -27,8 +26,6 @@ qmd: "story BMAD audit modulo UI inventario gate"
 ## Esito
 
 Baseline audit aggiornata. PHPStan tree `Modules` a 0. Pest e chiusura P0/P1 aperti.
-=======
->>>>>>> laraxot/dev
 type: story
 status: review
 updated: 2026-11-16
@@ -63,7 +60,6 @@ Rendere verificabile lo stato di UI: vocabolario visivo condiviso (componenti, w
 ## Esito (2026-11-16)
 
 Baseline aggiornata, nessun codice applicativo modificato. Fix e Pest restano aperti (gate DB test).
-<<<<<<< HEAD
 
 ---
 
@@ -87,5 +83,3 @@ Come manutentore del modulo UI, voglio una baseline BMAD verificabile, così da 
 - [ ] Brainstorming con stakeholder.
 - [ ] Decomposizione epic in story più piccole.
 - [ ] Quality gate e second-brain write-back.
-=======
->>>>>>> laraxot/dev

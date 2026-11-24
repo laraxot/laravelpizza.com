@@ -18,6 +18,10 @@ discussions: []
 **Module**: Fixcity  
 **Theme**: Sixteen
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "design comuni wizard parity"
@@ -35,6 +39,13 @@ https://italia.github.io/design-comuni-pagine-statiche/sito/segnalazione-02-dati
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Obiettivo
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Struttura Reference (Design Comuni)
 
 ```

@@ -15,6 +15,10 @@ discussions: []
 > **Status**: ✅ Complete  
 > **Action**: Removed all `.gitattributes` files
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "gitattributes cleanup"
@@ -31,6 +35,13 @@ Tutti i file `.gitattributes` sono stati rimossi dal progetto e sostituiti con r
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📋 Summary
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🎯 Why We Did This
 
 ### Problems with .gitattributes
@@ -201,7 +212,14 @@ cp /path/to/backup/.gitattributes laravel/Modules/Blog/
 - [x] Update root `.gitignore`
 - [x] Create module `.gitignore` files
 - [x] Update AGENTS.md
+<<<<<<< HEAD
 - [x] Update AGENTS.md
+=======
+<<<<<<< HEAD
+- [x] Update AGENTS.md
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [x] Document cleanup
 - [x] Verify with git check-ignore
 

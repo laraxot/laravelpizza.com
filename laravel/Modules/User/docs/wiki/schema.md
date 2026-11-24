@@ -6,10 +6,7 @@ tags:
   - conventions
   - llm-instructions
 created: 2026-04-15
-<<<<<<< HEAD
-=======
 qmd: "schema wiki"
->>>>>>> laraxot/dev
 ---
 
 # Wiki Schema - User

@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Type Safety Refactoring: Elimination of mixed Types"
 type: note
 qmd: "type safety refactoring elimination mixed types"
 ---
->>>>>>> laraxot/dev
 # Type Safety Refactoring: Elimination of `mixed` Types
 
 **Session Date**: 2026-09-04  

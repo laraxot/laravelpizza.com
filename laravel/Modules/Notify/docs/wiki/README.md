@@ -1,5 +1,13 @@
 ---
+<<<<<<< HEAD
 title: "FixCity LLM Wiki"
+=======
+<<<<<<< HEAD
+title: "Notify LLM Wiki"
+=======
+title: "FixCity LLM Wiki"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 type: index
 tags: [notify, docs, wiki]
 module: Notify

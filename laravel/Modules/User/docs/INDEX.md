@@ -4,10 +4,7 @@ module: User
 type: note
 status: active
 updated: '2026-11-23'
-<<<<<<< HEAD
-=======
 qmd: "index"
->>>>>>> laraxot/dev
 ---
 
 # Documentation Index

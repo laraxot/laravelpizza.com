@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Implementazione del Logout con Widget Filament"
 type: note
 qmd: "logout filament widget implementazione"
 ---
->>>>>>> laraxot/dev
 # Implementazione del Logout con Widget Filament
 
 ## Collegamenti correlati

@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Implementazione del Logout con Volt"
 type: note
 qmd: "volt logout implementazione"
 ---
->>>>>>> laraxot/dev
 # Implementazione del Logout con Volt
 
 ## Il Problema

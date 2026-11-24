@@ -15,10 +15,7 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-<<<<<<< HEAD
-=======
 qmd: "translation 5 level structure 5level never"
->>>>>>> laraxot/dev
 ---
 
 # Translation 5-Level Structure Rule

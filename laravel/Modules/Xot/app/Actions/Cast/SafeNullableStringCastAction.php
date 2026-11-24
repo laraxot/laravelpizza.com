@@ -6,6 +6,7 @@ namespace Modules\Xot\Actions\Cast;
 
 /**
  * @see docs/contracts/safe-nullable-string-cast-action.md
+ *
  * @contract docs/contracts/safe-nullable-string-cast-action.md
  */
 final class SafeNullableStringCastAction

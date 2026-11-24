@@ -3,13 +3,29 @@ title: "📚 Master Documentation Index"
 type: concept
 tags: [master, documentation, index]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "master-documentation-index 📚 master documentation index"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
   - "./00-index.md"
   - "./00-index-2.md"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
   - "./00-index.md"
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
@@ -20,6 +36,16 @@ related:
   - "../../../acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
+=======
+=======
+  - "./absolute-completion.md"
+  - "./acronym-naming-conventions.md"
+  - "../../../00-index-documentation.md"
+  - "./absolute-completion-notify-completamento-assoluto.md"
+  - "../../../acronym-naming-conventions.md"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 status: draft
 ---
@@ -41,19 +67,57 @@ status: draft
 
 ### Per Sviluppatori
 - [Architecture Overview](./architecture/README.md)
+<<<<<<< HEAD
 - [Getting Started](./GETTING_STARTED.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_sgGvbU
+- [Getting Started](./GETTING_STARTED.md)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Getting Started](../../../GETTING_STARTED.md)
 3. [Multi-Agent Collaboration](../../../multi-agent-collaboration.md) - Come lavorare con AI agents
 
 ### Per Sviluppatori
 - [Architecture Overview](./architecture/README.md)
 - [Getting Started](../../../GETTING_STARTED.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_rGUzFu
+>>>>>>> laraxot/dev
+=======
+- [Getting Started](../../../GETTING_STARTED.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Coding Standards](./conventions/README.md)
 
 ### Per AI Agents
 - [Project Context](./project/project.md)
+<<<<<<< HEAD
 - [Agent Coordination](../../../multi-agent-collaboration.md)
 - [Agent Coordination](../../../multi-agent-collaboration.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Agent Coordination](../../../multi-agent-collaboration.md)
+- [Agent Coordination](../../../multi-agent-collaboration.md)
+=======
+<<<<<<< .merge_file_sgGvbU
+- [Agent Coordination](./multi-agent-collaboration.md)
+=======
+- [Agent Coordination](../../../multi-agent-collaboration.md)
+- [Agent Coordination](../../../multi-agent-collaboration.md)
+>>>>>>> .merge_file_rGUzFu
+>>>>>>> laraxot/dev
+=======
+- [Agent Coordination](../../../multi-agent-collaboration.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [OpenViking Context](../bashscripts/ai/openviking.md)
 
 ---
@@ -79,8 +143,26 @@ status: draft
 - [Naming Conventions](./conventions/naming.md)
 
 ### 🤖 AI Tools
+<<<<<<< HEAD
 - [Multi-Agent Guide](../../../multi-agent-collaboration.md)
 - [Multi-Agent Guide](../../../multi-agent-collaboration.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Multi-Agent Guide](../../../multi-agent-collaboration.md)
+- [Multi-Agent Guide](../../../multi-agent-collaboration.md)
+=======
+<<<<<<< .merge_file_sgGvbU
+- [Multi-Agent Guide](./multi-agent-collaboration.md)
+=======
+- [Multi-Agent Guide](../../../multi-agent-collaboration.md)
+- [Multi-Agent Guide](../../../multi-agent-collaboration.md)
+>>>>>>> .merge_file_rGUzFu
+>>>>>>> laraxot/dev
+=======
+- [Multi-Agent Guide](../../../multi-agent-collaboration.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [BMAD Framework](./bmad/README.md)
 - [GSD Workflow](./gsd/README.md)
 - [NotebookLM](./notebooklm/README.md)
@@ -88,8 +170,26 @@ status: draft
 
 ### 📊 Reports
 - [Status Reports](./reports/README.md)
+<<<<<<< HEAD
 - [Quality Reports](../../../roadmap/quality.md)
 - [Quality Reports](../../../roadmap/quality.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Quality Reports](../../../roadmap/quality.md)
+- [Quality Reports](../../../roadmap/quality.md)
+=======
+<<<<<<< .merge_file_sgGvbU
+- [Quality Reports](./reports/quality.md)
+=======
+- [Quality Reports](../../../roadmap/quality.md)
+- [Quality Reports](../../../roadmap/quality.md)
+>>>>>>> .merge_file_rGUzFu
+>>>>>>> laraxot/dev
+=======
+- [Quality Reports](../../../roadmap/quality.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Performance Reports](./reports/performance.md)
 
 ---

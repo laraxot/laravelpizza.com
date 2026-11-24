@@ -17,6 +17,10 @@ discussions: []
 **PHPStan**: ✅ level 10 (0 errori)
 **Filament**: ✅ 4.x Compatibile
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "roadmap conflict"
@@ -60,6 +64,13 @@ Notify Module
 ```
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 🎯 MODULE OVERVIEW
+### 🏗️ Architettura Modulo
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## ✅ COMPLETED FEATURES
 

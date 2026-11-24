@@ -65,7 +65,14 @@ discussions: []
 - [Integrazioni](packages/integrations.md) 
 ### Versione HEAD
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Collegamenti tra versioni di packages.md
 * [packages.md](../../../gdpr/docs/packages.md)
 * [packages.md](../../../notify/docs/packages.md)
@@ -77,6 +84,10 @@ discussions: []
 * [packages.md](../../../media/docs/packages.md)
 * [packages.md](../../../tenant/docs/packages.md)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ### Versione Incoming
 
@@ -91,3 +102,9 @@ updated: 2026-09-26
 qmd: "packages"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
+=======
+### Versione Incoming
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

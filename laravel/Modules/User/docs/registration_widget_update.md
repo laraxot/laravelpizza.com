@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Aggiornamento relativo a DoctorResource.php"
 type: note
 qmd: "registration widget update aggiornamento relativo doctorresourcephp"
 ---
->>>>>>> laraxot/dev
 # Aggiornamento relativo a DoctorResource.php
 
 ## Nota del 2025-05-15

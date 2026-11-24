@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Errori Comuni in Volt e Soluzioni"
 type: note
 qmd: "volt errors errori comuni soluzioni"
 ---
->>>>>>> laraxot/dev
 # Errori Comuni in Volt e Soluzioni
 
 ## VoltDirectiveMissingException

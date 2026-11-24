@@ -60,7 +60,7 @@ test('it generates calendar data and marks enabled dates', function (): void {
                 continue;
             }
             $dateValue = $day['datetime'] ?? $day['dateString'] ?? null;
-            if ('2025-06-15' === $dateValue) {
+            if ($dateValue === '2025-06-15') {
                 $found = true;
                 Assert::assertTrue((bool) ($day['isEnabled'] ?? false));
             }
@@ -169,7 +169,7 @@ test('it is kiss simple and clear', function (): void {
 });
 
 /**
- * @param array<int, mixed> $parameters
+ * @param  array<int, mixed>  $parameters
  */
 function invokeInlineDatePickerMethod(object $object, string $methodName, array $parameters = []): mixed
 {

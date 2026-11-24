@@ -138,6 +138,10 @@ Full multi-language support with:
 - Spanish (es)
 - French (fr)
 - Polish (pl)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -150,3 +154,8 @@ qmd: "bulk notification action"
 issues: []
 discussions: []
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

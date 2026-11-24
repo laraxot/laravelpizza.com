@@ -10,6 +10,10 @@ discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./00-index.md"
   - "./00-index-2.md"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
   - "./00-index.md"
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
@@ -24,6 +28,16 @@ related:
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
+<<<<<<< HEAD
+=======
+=======
+  - "./absolute-completion.md"
+  - "./acronym-naming-conventions.md"
+  - "./action-plan-immediate.md"
+  - "./00-index-documentation.md"
+  - "./absolute-completion-completamento-assoluto.md"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 status: draft
 ---
 

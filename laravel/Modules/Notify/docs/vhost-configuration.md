@@ -15,6 +15,10 @@ discussions: []
 > **Status**: ✅ Active  
 > **Environment**: Local Development
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "vhost configuration"
@@ -40,6 +44,14 @@ This guide covers the Apache VirtualHost configuration for FixCity local develop
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📋 Overview
+### Primary Domain
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📁 Configuration Files
 
 ### Master Configuration

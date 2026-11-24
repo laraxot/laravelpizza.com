@@ -10,6 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/select-action.md
+ *
  * @contract docs/contracts/select-action.md
  */
 class SelectAction

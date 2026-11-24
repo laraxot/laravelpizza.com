@@ -10,10 +10,7 @@ related:
   - "./base-classes-corrections.md"
   - "./phpstan-fixes.md"
   - "./phpstan-fixes.md"
-<<<<<<< HEAD
-=======
 qmd: "phpstanes"
->>>>>>> laraxot/dev
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/phpstan-fixes-Modules.md

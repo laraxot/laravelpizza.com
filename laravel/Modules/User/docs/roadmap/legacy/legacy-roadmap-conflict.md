@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "👥 USER MODULE - ROADMAP 2025"
 type: note
 qmd: "legacy roadmap conflict user 2025"
 ---
->>>>>>> laraxot/dev
 # 👥 USER MODULE - ROADMAP 2025
 
 **Modulo**: User (Authentication & Authorization)

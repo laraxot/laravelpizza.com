@@ -11,6 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/register-blade-components-action.md
+ *
  * @contract docs/contracts/register-blade-components-action.md
  */
 class RegisterBladeComponentsAction

@@ -63,8 +63,6 @@ I duplicati di un canonico restano come alias `superseded`.
   `archive/historical/login-widget-translation-audit-2025.md` → `login-widget-translation-audit-historical.md`;
   `git-conflicts-resolution-2025-01-27.md` → `git-conflicts-resolution-.md`. Residui fuori perimetro `.md`:
   `password_translation_completion_2025.md.bak`, `roadmap/2025-q4-roadmap.md.bak`, `parcheggio/2024_03_27_*.wip`.
-<<<<<<< HEAD
-=======
 
 <!-- GateGuard facts: (1) no supersede — append only to existing User companion docs-md-filename-date-debt.story.md; (2) linked-from: Xot docs-md-filename-date-debt + sprint-status; (3) edit existing not new file; (4) user: "avanza un chunk REALISTICO" priorità User + update story. -->
 
@@ -72,4 +70,3 @@ I duplicati di un canonico restano come alias `superseded`.
   (`phpstan-fixes-2025`, `phpstan-fixes-gennaio-2025*`, `roadmap-2025`,
   `translation-syntax-fixes-2025`, `git-conflicts-resolution-2025-01-27`).
   Residui ISO/year **attivi** User: **24** (soprattutto `wiki/archive/**`).
->>>>>>> laraxot/dev

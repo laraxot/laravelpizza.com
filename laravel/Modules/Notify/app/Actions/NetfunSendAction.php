@@ -11,10 +11,21 @@ use Illuminate\Support\Str;
 use Modules\Notify\Datas\SmsData;
 use Spatie\QueueableAction\QueueableAction;
 
+<<<<<<< HEAD
+/**
+ * @see docs/contracts/netfun-send-action.md
+ *
+ * @contract docs/contracts/netfun-send-action.md
+ */
+=======
+<<<<<<< HEAD
+=======
 /**
  * @see docs/contracts/netfun-send-action.md
  * @contract docs/contracts/netfun-send-action.md
  */
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 class NetfunSendAction
 {
     use QueueableAction;

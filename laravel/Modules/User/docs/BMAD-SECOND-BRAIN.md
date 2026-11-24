@@ -1,22 +1,15 @@
-<<<<<<< HEAD
-=======
 ---
 title: "BMAD + Second Brain — Fix Log"
 type: story
 qmd: "bmad second brain"
 ---
->>>>>>> laraxot/dev
 # BMAD + Second Brain — Fix Log
 
 ## Diagnosi
 - `main_module=''` → `XotData::getProfileClass()` falliva (`InvalidArgumentException`)
 - `IsProfileTrait.php`: duplicato `use UserContract`
 - `BaseProfile.php`: `id` UUID mancante (`PDOException` 1364)
-<<<<<<< HEAD
 - PHPStan: 309 `class.notFound` (mancanti `User`/`Profile` nei test, Riferimenti `<nome progetto>`)
-=======
-- PHPStan: 309 `class.notFound` (mancanti `User`/`Profile` nei test, Riferimenti `Quaeris`)
->>>>>>> laraxot/dev
 
 ## Fix applicati (SSoT)
 - `Modules\Xot\Contracts\UserContract` / `ProfileContract`

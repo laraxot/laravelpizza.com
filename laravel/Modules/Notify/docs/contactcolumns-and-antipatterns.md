@@ -225,6 +225,10 @@ Implementare ContactColumn che:
 - [ContactTypeEnum](../app/Enums/ContactTypeEnum.php)
 - [Pattern ViewColumn Filament](https://filamentphp.com/docs/3.x/tables/columns/view)
 - [Accessibilità WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -240,3 +244,8 @@ discussions: []
 *Gravità: CRITICA*  
 *Stato: REFACTOR RICHIESTO*  
 *Responsabile: Laraxot Team*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

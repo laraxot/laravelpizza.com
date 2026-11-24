@@ -16,6 +16,10 @@ discussions: []
 **Frequenza**: Continuo  
 **Scope**: Tutte le cartelle docs dei moduli e temi  
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "DOCS MONITORING SYSTEM"
@@ -36,6 +40,13 @@ Monitorare costantemente tutte le cartelle `docs` dei moduli e temi per:
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 OBIETTIVO
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📊 STATO ATTUALE DOCUMENTAZIONE
 
 ### 🏗️ **Moduli - Documentazione**
@@ -278,6 +289,10 @@ find . -name "*.md" -exec sed -i 's/Laravel 11/Laravel 12/g' {} \;
 ---
 
 *Questo sistema di monitoraggio garantisce che tutta la documentazione rimanga sempre aggiornata e coerente con lo stato attuale del progetto.*
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 
 
@@ -286,3 +301,8 @@ find . -name "*.md" -exec sed -i 's/Laravel 11/Laravel 12/g' {} \;
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -11,6 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/fix-path-action.md
+ *
  * @contract docs/contracts/fix-path-action.md
  */
 class FixPathAction

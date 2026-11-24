@@ -4,7 +4,19 @@ type: index
 tags: [notify, docs, notifications]
 module: Notify
 created: 2026-07-20
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "notify documentazione notifications index indice documentazione notifiche index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -22,9 +34,32 @@ status: draft
 
 ## Collegamenti Correlati
 - [Indice Documentazione Notify](../index.md)
+<<<<<<< HEAD
 - [README Modulo Notify](../readme.md)
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 - [Documentazione Generale Quaeris](../../../../../../docs/readme.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [README Modulo Notify](../README.md)
+- [Documentazione Generale <nome progetto>](../../../../../../docs/README.md)
+- [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
+=======
+<<<<<<< .merge_file_OQ5uaP
+- [README Modulo Notify](../readme.md)
+- [Documentazione Generale Quaeris](../../../../../../docs/readme.md)
+=======
+- [README Modulo Notify](../README.md)
+- [Documentazione Generale <nome progetto>](../../../../../../docs/README.md)
+- [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
+>>>>>>> .merge_file_sLnj1e
+>>>>>>> laraxot/dev
+=======
+- [README Modulo Notify](../README.md)
+- [Documentazione Generale <nome progetto>](../../../../../../docs/README.md)
+- [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Collegamenti Documentazione](../../../../../../docs/collegamenti-documentazione.md)
 
 ## Guida Implementazione

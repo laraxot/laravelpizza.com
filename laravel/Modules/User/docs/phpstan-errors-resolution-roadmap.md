@@ -216,8 +216,5 @@ Tutti gli errori sono stati corretti:
     - Aggiornato modello per estendere `Laravel\Passport\DeviceCode` invece di `BaseModel` per conformità rigorosa ai tipi.
 3. **PHPMD**:
     - Aggiunto `@SuppressWarnings` per `StaticAccess` e `CouplingBetweenObjects` in `PassportServiceProvider`.
-<<<<<<< HEAD
 
 *Ultimo aggiornamento: 2025-01-27*
-=======
->>>>>>> laraxot/dev

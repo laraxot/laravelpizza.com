@@ -16,6 +16,10 @@ discussions: []
 **Script**: `bashscripts/git/subtrees/sync_remote_repo.sh`  
 **Workflow**: `.github/workflows/sync-remote-repo.yml`
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "sync remote repo test plan"
@@ -35,6 +39,13 @@ Verify that `sync_remote_repo.sh` works correctly for **bidirectional sync**:
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Test Objective
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📋 Test Scenarios
 
 ### Test 1: Local → Remote Sync

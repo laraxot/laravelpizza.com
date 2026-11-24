@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "spatie_permissions"
 type: note
 qmd: "spatie permissions spatiepermissions"
 ---
->>>>>>> laraxot/dev
 # spatie_permissions
 
 <!-- Contenuto migrato da _docs/spatie_permissions.txt -->

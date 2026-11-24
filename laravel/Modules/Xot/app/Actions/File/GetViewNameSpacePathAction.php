@@ -10,6 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/file-get-view-name-space-path-action.md
+ *
  * @contract docs/contracts/file-get-view-name-space-path-action.md
  */
 class GetViewNameSpacePathAction

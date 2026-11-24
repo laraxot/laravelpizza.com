@@ -4,10 +4,7 @@ type: guide
 module: User
 status: active
 tags: [email, verification, smtp, imap]
-<<<<<<< HEAD
-=======
 qmd: "email infrastructure integration autenticazione posta"
->>>>>>> laraxot/dev
 ---
 
 # Autenticazione e posta email

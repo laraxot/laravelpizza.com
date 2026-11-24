@@ -359,6 +359,10 @@ class EmailLayoutResource extends XotBaseResource
 - [Base Layout](../resources/mail-layouts/base.html)
 - [Default Layout](../resources/mail-layouts/base/default.html)
 - [Responsive Layout](../resources/mail-layouts/base/responsive.html)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -374,3 +378,8 @@ discussions: []
 **Pattern**: Layout per tema con fallback chain  
 **Status**: ✅ IMPLEMENTATO
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

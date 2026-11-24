@@ -41,7 +41,6 @@ Rendere verificabile lo stato di User: chi è chi e cosa può fare: utenti, ruol
 ## Esito (2026-11-16)
 
 Baseline aggiornata, nessun codice applicativo modificato. Fix e Pest restano aperti (gate DB test).
-<<<<<<< HEAD
 
 
 ---
@@ -67,5 +66,3 @@ Come manutentore del modulo User, voglio una baseline BMAD verificabile, così d
 - [ ] Decomposizione epic in story più piccole.
 - [ ] Quality gate e second-brain write-back.
 
-=======
->>>>>>> laraxot/dev

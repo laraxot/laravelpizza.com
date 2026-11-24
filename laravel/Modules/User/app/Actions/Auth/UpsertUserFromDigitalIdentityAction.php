@@ -21,6 +21,7 @@ use Webmozart\Assert\Assert;
  * - Si conservano solo i dati necessari (vedi la migrazione owner `create_users_table`).
  *
  * @see docs/contracts/upsert-user-from-digital-identity-action.md
+ *
  * @contract docs/contracts/upsert-user-from-digital-identity-action.md
  */
 final class UpsertUserFromDigitalIdentityAction

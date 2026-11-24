@@ -10,10 +10,7 @@ related:
   - "../../passport-oauth-cluster.md"
   - "../../wiki/redundancy/oauth-dual-resource-trees.md"
   - "../../stories/12.4.oauth-dup-resources-ssot.story.md"
-<<<<<<< HEAD
-=======
 qmd: "passport oauth dedup story passportoauth cluster"
->>>>>>> laraxot/dev
 ---
 
 # Story — Dedup documentazione "passport/oauth cluster"

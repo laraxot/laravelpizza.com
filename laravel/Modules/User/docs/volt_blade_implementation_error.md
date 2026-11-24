@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Analisi dell'Errore di Implementazione Volt/Blade"
 type: note
 qmd: "volt blade implementation error analisi dellerrore"
 ---
->>>>>>> laraxot/dev
 # Analisi dell'Errore di Implementazione Volt/Blade
 
 ## Collegamenti correlati

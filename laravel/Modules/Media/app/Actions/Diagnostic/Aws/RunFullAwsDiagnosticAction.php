@@ -8,6 +8,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/run-full-aws-diagnostic-action.md
+ *
  * @contract docs/contracts/run-full-aws-diagnostic-action.md
  */
 class RunFullAwsDiagnosticAction

@@ -23,6 +23,10 @@ First off, thank you for considering contributing to FixCity! 🎉
 - [Commit Guidelines](#commit-guidelines)
 - [Pull Request Process](#pull-request-process)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "contributing"
@@ -39,6 +43,13 @@ This project adheres to a Code of Conduct that all contributors are expected to 
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📜 Code of Conduct
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🚀 Getting Started
 
 ### Prerequisites

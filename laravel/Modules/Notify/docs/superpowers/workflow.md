@@ -15,6 +15,10 @@ discussions: []
 > **Status**: ✅ Active  
 > **Version**: v5.0.6
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "workflow"
@@ -35,6 +39,13 @@ The Superpowers workflow is a structured development process that ensures qualit
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📋 Overview
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🔄 Complete Workflow
 
 ### Phase 1: Brainstorming

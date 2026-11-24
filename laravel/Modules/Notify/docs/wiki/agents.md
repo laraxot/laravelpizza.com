@@ -93,6 +93,10 @@ Themes/{Name}/docs/llm-wiki/
 **Required Schema**:
 
 ```yaml
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 qmd: "agents"
 issues: []
@@ -108,6 +112,11 @@ related:
   - concepts/related-concept.md
   - entities/some-entity.md
 ---
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ```
 
 **Field Definitions**:
@@ -508,6 +517,10 @@ git merge --no-ff wiki-experiments  # Preserve experiment history
 ### Example: Valid Wiki Page
 
 ```markdown
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 title: "LMSR Market Mechanics"
 type: concept
@@ -521,6 +534,11 @@ related:
   - entities/forecast-module.md
   - sources/karpathy-llm-wiki.md
 ---
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 # LMSR Market Mechanics
 

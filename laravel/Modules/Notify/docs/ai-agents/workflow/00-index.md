@@ -15,6 +15,10 @@ discussions: []
 **Last Updated**: 2026-03-26
 **Status**: ✅ Auto-generated
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "00 index"
@@ -35,6 +39,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📊 Statistics
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📁 Files in This Directory
 
 - [agents-gsd-bmad](agents-gsd-bmad.md)

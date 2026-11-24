@@ -3,7 +3,19 @@ title: "smart slug generation"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "smart slug generation"
 issues: []
 discussions: []
@@ -214,6 +226,33 @@ Per il modulo Notify di <nome progetto>, questa soluzione rappresenta un equilib
 
 - [Articolo Laravel News](https://laravel-news.com/generating-slugs-from-a-title-in-filament)
 - [Documentazione Filament Forms](https://filamentphp.com/docs/3.x/forms/advanced)
+<<<<<<< HEAD
 - [Implementazione Modello con Slug](./model_slug_implementation.md)
 - [Componente TitleWithSlug](./title_with_slug_component.md)
 - [Miglioramenti UI/UX per Slug](./ui_ux_enhancements.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_ZIPbej
+- [Implementazione Modello con Slug](./MODEL_SLUG_IMPLEMENTATION.md)
+- [Componente TitleWithSlug](./TITLE_WITH_SLUG_COMPONENT.md)
+- [Miglioramenti UI/UX per Slug](./UI_UX_ENHANCEMENTS.md)
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+- [Implementazione Modello con Slug](model_slug_implementation.md)
+- [Componente TitleWithSlug](title_with_slug_component.md)
+- [Miglioramenti UI/UX per Slug](ui_ux_enhancements.md)
+- [Implementazione Modello con Slug](./model_slug_implementation.md)
+- [Componente TitleWithSlug](./title_with_slug_component.md)
+- [Miglioramenti UI/UX per Slug](./ui_ux_enhancements.md)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_5PqPrf
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

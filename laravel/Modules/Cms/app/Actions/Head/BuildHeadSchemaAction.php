@@ -120,12 +120,12 @@ final class BuildHeadSchemaAction
      */
     private function webSite(string $brand, string $root, array $languages): SchemaObject
     {
-        return (new WebSite())->name($brand)->url($root)->set('@id', $root.'#website')
+        return (new WebSite)->name($brand)->url($root)->set('@id', $root.'#website')
             ->set('inLanguage', count($languages) === 1 ? $languages[0] : $languages);
     }
 
     private function breadcrumbs(string $homeLabel, string $homeUrl, string $pageTitle, string $pageUrl): Breadcrumbs
     {
-        return (new Breadcrumbs())->item($homeLabel, $homeUrl)->item($pageTitle, $pageUrl);
+        return (new Breadcrumbs)->item($homeLabel, $homeUrl)->item($pageTitle, $pageUrl);
     }
 }

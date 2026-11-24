@@ -49,7 +49,14 @@ Su filesystem case-insensitive (Windows, macOS default), file con nomi che diffe
 - README.md (maiuscolo - convenzione universale)
 - roadmap.md (maiuscolo - convenzione universale)
 - CHANGELOG.md (maiuscolo - convenzione universale)
+<<<<<<< HEAD
 - CHANGELOG.md (maiuscolo - convenzione universale)
+=======
+<<<<<<< HEAD
+- CHANGELOG.md (maiuscolo - convenzione universale)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - LICENSE.md (maiuscolo - convenzione universale)
 - CONTRIBUTING.md (maiuscolo - convenzione universale)
 - SECURITY.md (maiuscolo - convenzione universale)

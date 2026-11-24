@@ -181,6 +181,10 @@ discussions: []
 - [ ] WCAG 2.1 AA compliant
 - [ ] SOC 2 Type II (planned)
 - [ ] ISO 27001 (planned)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -197,3 +201,8 @@ discussions: []
 **Contact**: development@fixcity.io
 **Contact**: development@ptv.io
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

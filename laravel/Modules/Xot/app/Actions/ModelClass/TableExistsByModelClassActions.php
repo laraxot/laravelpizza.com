@@ -10,6 +10,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/model-class-table-exists-by-model-class-actions.md
+ *
  * @contract docs/contracts/model-class-table-exists-by-model-class-actions.md
  */
 class TableExistsByModelClassActions

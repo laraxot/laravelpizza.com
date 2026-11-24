@@ -52,6 +52,10 @@ npm run build    # ✓ Completato
 1. Verificare visualmente la homepage su http://127.0.0.1:8000/it/tests/homepage
 2. Confrontare visivamente con reference
 3. Applicare ulteriori correzioni CSS se necessario
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -65,3 +69,8 @@ issues: []
 discussions: []
 *Last Updated: 2026-04-07*
 *Status: in_progress*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

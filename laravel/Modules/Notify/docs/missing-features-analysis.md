@@ -244,6 +244,10 @@ Nessuna funzionalità critica mancante - il modulo Notify è ben implementato
 - [Modulo <nome progetto>](../<nome progetto>/docs/README.md)
 - [Modulo Limesurvey](../limesurvey/docs/README.md)
 - [Notify README](./README.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -256,3 +260,8 @@ qmd: "missing features analysis"
 issues: []
 discussions: []
 **Prossima Revisione**: [DATE]
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

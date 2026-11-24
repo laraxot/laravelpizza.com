@@ -214,6 +214,10 @@ Access module routes at:
 
 Replace `[PROJECT_NAME]`, `[DOMAIN]`, and `[ModuleName]` with your actual project values.
 ```
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -228,3 +232,8 @@ discussions: []
 **Version**: 1.0  
 **Effective Date**: 2026-03-30  
 **Applies To**: All Modules/*/docs/ and Themes/*/docs/ directories
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

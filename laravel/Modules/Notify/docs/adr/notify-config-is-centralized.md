@@ -33,6 +33,10 @@ La configurazione è cacheabile e verificabile; ogni nuovo canale deve passare d
 ## Conferma
 
 Verificare configurazione compilata, adapter e test del canale.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ## Verifica
 
@@ -42,3 +46,8 @@ Verificare configurazione compilata, adapter e test del canale.
   le letture da ambiente stanno in `Modules/Notify/config/notify.php` (`Env::get`) e nel merge di
   `Modules/Notify/app/Providers/Concerns/MergesNotifyConfigFromEnv.php`.
 - PHPStan: la regola `larastan.noEnvCallsOutsideOfConfig` e' attiva in `laravel/phpstan-strict.neon`.
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/delete-file-action.md
+ *
  * @contract docs/contracts/delete-file-action.md
  */
 class DeleteFileAction extends BaseS3Action

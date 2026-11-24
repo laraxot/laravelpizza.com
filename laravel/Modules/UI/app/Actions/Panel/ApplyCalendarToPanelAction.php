@@ -14,6 +14,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Il pacchetto Saade\FilamentFullCalendar non è ancora compatibile con Filament v4.
  *
  * @see docs/contracts/apply-calendar-to-panel-action.md
+ *
  * @contract docs/contracts/apply-calendar-to-panel-action.md
  */
 final class ApplyCalendarToPanelAction

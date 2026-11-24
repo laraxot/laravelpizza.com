@@ -13,10 +13,21 @@ use Modules\Notify\Datas\SmsData;
 use Modules\Notify\Models\Contracts\SmsActionContract;
 use Spatie\QueueableAction\QueueableAction;
 
+<<<<<<< HEAD
+/**
+ * @see docs/contracts/send-plivo-sms-action.md
+ *
+ * @contract docs/contracts/send-plivo-sms-action.md
+ */
+=======
+<<<<<<< HEAD
+=======
 /**
  * @see docs/contracts/send-plivo-sms-action.md
  * @contract docs/contracts/send-plivo-sms-action.md
  */
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 final class SendPlivoSMSAction implements SmsActionContract
 {
     use QueueableAction;

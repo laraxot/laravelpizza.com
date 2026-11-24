@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Filosofia dei Comandi Console - Modulo User"
 type: note
 qmd: "console commands philosophy filosofia comandi user"
 ---
->>>>>>> laraxot/dev
 # Filosofia dei Comandi Console - Modulo User
 
 ## Principi Fondamentali
@@ -447,11 +444,7 @@ private function getPasswordLegacy(): string
 ```
 
 ## Collegamenti
-<<<<<<< HEAD
-- [README Comandi Console](README.md)
-=======
 - [README Comandi Console](readme.md)
->>>>>>> laraxot/dev
 - [ChangePasswordCommand](change-password-command.md)
 - [AssignModuleCommand](assign-module-command.md)
 - [Testing Strategy](../testing/console-commands-testing.md)

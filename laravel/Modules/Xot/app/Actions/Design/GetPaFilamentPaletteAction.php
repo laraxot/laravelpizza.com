@@ -13,6 +13,7 @@ use Spatie\QueueableAction\QueueableAction;
  *
  * @see laravel/Themes/Sixteen/tailwind.config.js (primary verde, italia-blue)
  * @see docs/contracts/get-pa-filament-palette-action.md
+ *
  * @contract docs/contracts/get-pa-filament-palette-action.md
  */
 final class GetPaFilamentPaletteAction

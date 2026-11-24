@@ -26,6 +26,7 @@ use function Safe\preg_replace;
  * methods of this single execute() entrypoint instead.
  *
  * @see docs/contracts/register-dynamic-routes-action.md
+ *
  * @contract docs/contracts/register-dynamic-routes-action.md
  */
 class RegisterDynamicRoutesAction

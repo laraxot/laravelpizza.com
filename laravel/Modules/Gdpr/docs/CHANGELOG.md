@@ -1,9 +1,5 @@
 ---
-<<<<<<< .merge_file_az0SwX
-title: "CHANGELOG"
-=======
 title: "Changelog"
->>>>>>> .merge_file_0ittFs
 type: note
 tags: [documentation]
 created: 2026-09-26

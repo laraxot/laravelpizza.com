@@ -15,6 +15,10 @@ discussions: []
 > **Status**: ✅ Active  
 > **Version**: v5.0.6
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "skills reference"
@@ -31,6 +35,13 @@ This document lists all available Superpowers skills with descriptions, triggers
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📋 Overview
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🎨 Planning & Design Skills
 
 ### brainstorming

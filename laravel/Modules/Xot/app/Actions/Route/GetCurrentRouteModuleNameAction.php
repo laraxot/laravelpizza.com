@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-current-route-module-name-action.md
+ *
  * @contract docs/contracts/get-current-route-module-name-action.md
  */
 class GetCurrentRouteModuleNameAction

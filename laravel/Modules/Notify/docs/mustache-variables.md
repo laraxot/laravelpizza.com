@@ -19,6 +19,10 @@ discussions: []
 
 I template email utilizzano il motore di rendering **Mustache** per sostituire variabili dinamiche nel contenuto HTML. Questo documento elenca tutte le variabili disponibili automaticamente e come aggiungerne di personalizzate.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "mustache variables"
@@ -101,6 +105,19 @@ Tre variabili per il logo con fallback automatico:
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Variabili Automatiche (Sempre Disponibili)
+### Informazioni Email
+### Informazioni Azienda/Organizzazione
+### Logo Aziendale
+### Link e URL
+### Social Media Links
+### Lingua
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Variabili dal Record (Modello Eloquent)
 
 Tutte le proprietà accessibili del modello passato al costruttore di `SpatieEmail` sono disponibili come variabili Mustache.

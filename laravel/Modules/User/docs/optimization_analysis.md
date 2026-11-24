@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "user module documentation optimization analysis"
 type: analysis
 qmd: "optimization analysis user"
 ---
->>>>>>> laraxot/dev
 # user module documentation optimization analysis
 
 ## current state analysis

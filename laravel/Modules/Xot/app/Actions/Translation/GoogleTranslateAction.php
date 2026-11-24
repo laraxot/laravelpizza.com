@@ -6,6 +6,7 @@ namespace Modules\Xot\Actions\Translation;
 
 /**
  * @see docs/contracts/google-translate-action.md
+ *
  * @contract docs/contracts/google-translate-action.md
  */
 class GoogleTranslateAction extends BaseTranslateAction

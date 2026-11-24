@@ -16,6 +16,10 @@ discussions: []
 **Status**: ✅ PRODUCTION READY  
 **Priority**: HIGH
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "semantic html css"
@@ -38,6 +42,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Philosophy
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📚 What are Semantic Elements?
 
 ### Definition

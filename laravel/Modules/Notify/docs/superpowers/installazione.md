@@ -90,6 +90,10 @@ Per pinning versione specifica:
 - Repo: https://github.com/obra/superpowers
 - Issues: https://github.com/obra/superpowers/issues
 - Discord: https://discord.gg/Jd8Vphy9jq
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -102,3 +106,8 @@ qmd: "installazione"
 issues: []
 discussions: []
 *Documento creato: 2026-03-31*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

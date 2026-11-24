@@ -15,6 +15,10 @@ discussions: []
 **Priorita'**: Media
 **Completamento**: 30%
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "task test canali notifica"
@@ -43,3 +47,11 @@ Testare tutti i canali di notifica con mock dei servizi esterni.
 - [ ] 12+ test per canali notifica
 - [ ] Mock per tutti i servizi esterni
 - [ ] Test error handling per ogni canale
+<<<<<<< HEAD
+=======
+=======
+## Descrizione
+## Test da Implementare
+## Criteri di Completamento
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

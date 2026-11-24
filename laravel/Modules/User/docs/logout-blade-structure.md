@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Struttura del Logout Blade nel Theme One"
 type: note
 qmd: "logout blade structure struttura theme"
 ---
->>>>>>> laraxot/dev
 # Struttura del Logout Blade nel Theme One
 
 ## Posizione Corretta

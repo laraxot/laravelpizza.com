@@ -80,6 +80,10 @@ nome-panoramica.md
 
 ### Frontmatter
 ```yaml
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 qmd: "wiki schema"
 issues: []
@@ -92,6 +96,11 @@ created: 2026-04-15
 updated: 2026-04-15
 related: [altra-pagina.md, ancora-un-altra.md]
 ---
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ```
 
 ### Link Interni

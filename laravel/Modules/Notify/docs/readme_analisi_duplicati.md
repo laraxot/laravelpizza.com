@@ -230,6 +230,10 @@ A: 5 settimane totali, ma benefici visibili già dopo Fase 1.
 - **Documento Master**: `/docs/ANALISI_METODI_DUPLICATI_MASTER.md`
 - **Issue Tracker**: GitHub Issues
 - **Team Lead**: [Da definire]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -244,3 +248,8 @@ discussions: []
 **🐄 Super Mucca Approved**: Documento basato su analisi REALE del codice con confidenza 99.9%.
 
 **Ultima Revisione**: 15 Ottobre 2025
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

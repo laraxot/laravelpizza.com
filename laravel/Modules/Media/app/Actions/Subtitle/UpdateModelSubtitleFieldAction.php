@@ -9,7 +9,9 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Extracts the plain text of a subtitle file and stores it on the given model field.
+ *
  * @see docs/contracts/update-model-subtitle-field-action.md
+ *
  * @contract docs/contracts/update-model-subtitle-field-action.md
  */
 class UpdateModelSubtitleFieldAction

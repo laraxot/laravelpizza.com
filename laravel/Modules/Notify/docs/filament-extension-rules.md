@@ -243,6 +243,10 @@ class CreateUserAction
 app(CreateUserAction::class)->execute($data);
 ```
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "filament extension rules"
@@ -317,3 +321,17 @@ find Modules -path "*/Filament/*/*.php" -type f -exec grep -l "extends.*Filament
 ```
 
 Le pagine che violano questa regola devono essere immediatamente corrette per mantenere l'integrità dell'architettura.
+<<<<<<< HEAD
+=======
+=======
+# Regole di Estensione delle Classi Filament
+## Regola Fondamentale
+## Mappatura Classi Corretta
+## Esempi
+### ❌ Errato
+### ✅ Corretto
+## Motivazione
+## Vantaggi del Pattern di Wrapper
+## Verifica
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -14,6 +14,7 @@ use Webmozart\Assert\Assert;
  * quale URI registrare e dove impostarle. Il testo vive nei file di lingua, i dati dei provider solo qui.
  *
  * @see docs/contracts/get-provider-setup-guide-action.md
+ *
  * @contract docs/contracts/get-provider-setup-guide-action.md
  */
 class GetProviderSetupGuideAction

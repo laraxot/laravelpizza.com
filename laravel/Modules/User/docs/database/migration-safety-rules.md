@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Migration Safety Rules - NEVER Destroy Data"
 type: rule
 qmd: "migration safety rules never destroy data"
 ---
->>>>>>> laraxot/dev
 # Migration Safety Rules - NEVER Destroy Data
 
 ## Regola ASSOLUTA

@@ -12,7 +12,9 @@ use Spatie\QueueableAction\QueueableAction;
  * (connection.tabella.colonna): lo usano le Table (HasXotTable::hasColumn) e i componenti
  * Filament riutilizzabili che si nascondono da soli dove la colonna non c'e' (es. le date
  * dell'esperienza in QualificaSection/QualificaColumn, presenti solo su progressione.schede).
+ *
  * @see docs/contracts/model-has-column-action.md
+ *
  * @contract docs/contracts/model-has-column-action.md
  */
 class ModelHasColumnAction

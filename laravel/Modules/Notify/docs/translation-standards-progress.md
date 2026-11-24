@@ -30,11 +30,20 @@ discussions: []
    - `Modules/Notify/lang/it/edit_mail_template.php`
    - `Modules/Notify/lang/it/send_netfun_sms.php`
    - `Modules/Notify/lang/it/notification_template.php`
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
    - `Modules/Notify/lang/it/send_aws_email.php`
    - `Modules/Notify/lang/it/setting.php`
    - `Modules/Notify/lang/it/edit_mail_template.php`
    - `Modules/Notify/lang/it/send_netfun_sms.php`
    - `Modules/Notify/lang/it/notification_template.php`
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
    - E altri 15 file (elenco completo in appendice)
 
 ### Correzioni Implementate
@@ -46,6 +55,10 @@ discussions: []
 2. **File Corretti**
    - Creato `Modules/Notify/lang/it/send_whatsapp.php` con struttura corretta
    - Aggiornato `Modules/Notify/lang/it/send_netfun_sms.php` con struttura completa
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
    - Creato `Modules/Notify/docs/TRANSLATION_FILE_NAMING_RULES.md`
    - Creato `Modules/Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md`
 
@@ -58,6 +71,11 @@ discussions: []
 2. **File Corretti**
    - Creato `Modules/Notify/lang/it/send_whatsapp.php` con struttura corretta
    - Aggiornato `Modules/Notify/lang/it/send_netfun_sms.php` con struttura completa
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
    - Rimosso il file con naming errato `send_whats_app.php`
 
 ### Prossime Correzioni da Implementare
@@ -69,6 +87,10 @@ discussions: []
 
 2. **Verifiche da Eseguire**
    - Analisi della cartella `Modules/Notify/lang/en/` per identificare problemi simili
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
    - `Modules/Notify/lang/it/send_email.php`
    - `Modules/Notify/lang/it/send_sms.php`
    - `Modules/Notify/lang/it/send_telegram.php`
@@ -81,6 +103,11 @@ discussions: []
 
 2. **Verifiche da Eseguire**
    - Analisi della cartella `Modules/Notify/lang/en/` per identificare problemi simili
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
    - Controllo dei riferimenti nel codice che potrebbero puntare ai vecchi file
 
 ## Documentazione di Riferimento

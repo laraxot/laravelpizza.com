@@ -259,6 +259,10 @@ Seguire questo pattern garantisce:
 2. **Manutenibilità**: Il codice è più facile da mantenere e aggiornare
 3. **Estensibilità**: È facile aggiungere nuovi provider SMS
 4. **Testabilità**: Le azioni sono facilmente testabili grazie all'interfaccia comune
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -271,3 +275,8 @@ qmd: "sms actions pattern"
 issues: []
 discussions: []
 *Ultimo aggiornamento: 2023-05-12*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

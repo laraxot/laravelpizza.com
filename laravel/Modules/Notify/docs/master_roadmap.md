@@ -13,6 +13,10 @@ discussions: []
 
 > **Roadmap strategica completa per il completamento e l'evoluzione della piattaforma**
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "master roadmap"
@@ -33,6 +37,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📊 Executive Summary
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🎯 Strategic Phases
 
 ### Phase 0: Foundation (COMPLETATO ✅)

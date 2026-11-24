@@ -8,6 +8,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-aws-config-snapshot-action.md
+ *
  * @contract docs/contracts/get-aws-config-snapshot-action.md
  */
 class GetAwsConfigSnapshotAction

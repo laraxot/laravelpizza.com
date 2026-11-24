@@ -17,6 +17,7 @@ use Symfony\Component\Finder\Finder;
  * elencati. Il numero di file restituiti e' limitato per non appesantire la pagina.
  *
  * @see docs/contracts/list-log-files-action.md
+ *
  * @contract docs/contracts/list-log-files-action.md
  */
 class ListLogFilesAction

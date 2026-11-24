@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Soluzione Errori di Routing nel Frontoffice"
 type: note
 qmd: "routing error solution soluzione errori frontoffice"
 ---
->>>>>>> laraxot/dev
 # Soluzione Errori di Routing nel Frontoffice
 
 In un modulo User che usa Volt + Folio + Filament, **non** definire mai rotte in `routes/web.php`. Se incappi in un errore di tipo “Route not found” o conflitti di middleware dovuti a rotte imperative, ecco come risolvere:

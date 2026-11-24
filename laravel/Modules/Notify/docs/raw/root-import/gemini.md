@@ -22,6 +22,10 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 - [Specifiche Laravel 12](./.agents/docs/main-rules/gemini-v12.md)
 - [Regole Filament](./.agents/docs/main-rules/gemini-filament.md)
 - [Folio & Volt](./.agents/docs/main-rules/gemini-folio-volt.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 title: "gemini"
@@ -39,3 +43,8 @@ discussions: []
 - [qwen.md](./qwen.md)
 
 *Ultimo aggiornamento: Aprile 2026*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

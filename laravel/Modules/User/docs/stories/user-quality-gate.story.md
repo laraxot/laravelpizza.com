@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Story: Quality-gate closure — Modules/User (2026-09-04)"
 type: story
 qmd: "user quality gate story qualitygate closure"
 ---
->>>>>>> laraxot/dev
 # Story: Quality-gate closure — Modules/User (2026-09-04)
 
 ## BMAD phase

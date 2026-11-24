@@ -12,6 +12,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-model-fields-by-model-action.md
+ *
  * @contract docs/contracts/get-model-fields-by-model-action.md
  */
 class GetModelFieldsByModelAction

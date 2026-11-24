@@ -11,6 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/run-s3-save-test-action.md
+ *
  * @contract docs/contracts/run-s3-save-test-action.md
  */
 class RunS3SaveTestAction

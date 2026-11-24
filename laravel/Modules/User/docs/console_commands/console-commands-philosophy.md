@@ -12,14 +12,8 @@ related:
   - "./change-password-command.md"
   - "./console-commands-philosophy-1-1.md"
   - "./console-commands-philosophy.md"
-<<<<<<< HEAD
-  - "./console-commands-philosophy.md"
   - "./console-commands.md"
   - "./README.md"
-=======
-  - "./console-commands.md"
-  - "./readme.md"
->>>>>>> laraxot/dev
 ---
 
 # Filosofia dei Comandi Console - Modulo User
@@ -463,11 +457,7 @@ private function getPasswordLegacy(): string
 ```
 
 ## Collegamenti
-<<<<<<< HEAD
 - [README Comandi Console](README.md)
-=======
-- [README Comandi Console](readme.md)
->>>>>>> laraxot/dev
 - [ChangePasswordCommand](change-password-command.md)
 - [AssignModuleCommand](assign-module-command.md)
 - [Testing Strategy](../testing/console-commands-testing.md)
@@ -924,11 +914,7 @@ private function getPasswordLegacy(): string
 ```
 
 ## Collegamenti
-<<<<<<< HEAD
 - [README Comandi Console](README.md)
-=======
-- [README Comandi Console](readme.md)
->>>>>>> laraxot/dev
 - [ChangePasswordCommand](change-password-command.md)
 - [AssignModuleCommand](assign-module-command.md)
 - [Testing Strategy](../testing/console-commands-testing.md)

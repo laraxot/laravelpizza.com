@@ -94,12 +94,21 @@ cd laravel && vendor/bin/phpstan analyse Modules/<nome progetto>/app/Filament/Wi
 
 # 3. Check for syntax errors in related services
 cd laravel && php -l Modules/<nome progetto>/app/Services/ChartService.php
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 # 2. Verify PHPStan compliance
 cd laravel && vendor/bin/phpstan analyse Modules/<nome progetto>/app/Filament/Widgets/Simple05ChartWidget.php
 
 # 3. Check for syntax errors in related services
 cd laravel && php -l Modules/<nome progetto>/app/Services/ChartService.php
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ```
 
 ## Chart Widget Pattern (CRITICAL)

@@ -17,7 +17,9 @@ use Webmozart\Assert\Assert;
 
 /**
  * Classe per automatizzare l'assegnazione di etichette ai componenti Filament.
+ *
  * @see docs/contracts/auto-label-action.md
+ *
  * @contract docs/contracts/auto-label-action.md
  */
 class AutoLabelAction

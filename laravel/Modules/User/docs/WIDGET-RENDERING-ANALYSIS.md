@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "🔍 Analisi Rendering LoginWidget - Docs.Italia.it Style"
 type: analysis
 qmd: "widget rendering analysis analisi loginwidget docsitaliait"
 ---
->>>>>>> laraxot/dev
 # 🔍 Analisi Rendering LoginWidget - Docs.Italia.it Style
 
 ## 📋 Problema Analizzato

@@ -8,10 +8,7 @@ tags: [migrato-da-txt, user]
 converted_from: socialite.txt
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< HEAD
-=======
 qmd: "socialite risorse esterne"
->>>>>>> laraxot/dev
 ---
 
 # Socialite — risorse esterne

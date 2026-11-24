@@ -13,6 +13,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/store-morph-to-many-action.md
+ *
  * @contract docs/contracts/store-morph-to-many-action.md
  */
 class MorphToManyAction

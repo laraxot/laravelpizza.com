@@ -15,6 +15,10 @@ discussions: []
 **Data Analisi**: 1 Ottobre 2025  
 **Status PHPStan**: ✅ 0 errori (Level 10)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "roadmap ands"
@@ -40,6 +44,14 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📊 STATO ATTUALE
+### Completezza Funzionale: 70%
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📬 CANALI SUPPORTATI
 
 ### ✅ Implementati
@@ -270,4 +282,11 @@ class TicketDigest extends Notification implements ShouldQueue
 **Status**: ✅ BUONO  
 **PHPStan**: ✅ 0 errori  
 **Focus**: Real-Time + Push + Preferences
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

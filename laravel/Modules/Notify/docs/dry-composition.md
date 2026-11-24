@@ -210,6 +210,10 @@ Prima di creare una bulk action:
 - [Actions Calling Actions Pattern](./actions-calling-actions-pattern.md) - Pattern per chiamare Actions con `app()`
 - [SendNotificationBulkAction](./send-notification-bulk-action.md) - Implementazione completa
 - [Geo Module Architectural Philosophy](../geo/docs/architectural-philosophy.md) - Filosofia architetturale modulare
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -224,3 +228,8 @@ discussions: []
 **Filosofia**: "Una volta, una sola volta, in un solo posto" - DRY Principle  
 **Pattern**: Bulk Action compone Single Action  
 **Naming**: Bulk Action con plurale nel nome (Records, not Record)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

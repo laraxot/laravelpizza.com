@@ -3,13 +3,29 @@ title: "🏆 PROGETTO <nome progetto> - 100% COMPLETATO!"
 type: concept
 tags: [progetto, completato, 100, percento]
 created: 2026-07-14
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "progetto-completato-100-percento 🏆 progetto <nome progetto> - 100% completato!"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
   - "./00-index.md"
   - "./00-index-2.md"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
   - "./00-index.md"
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
@@ -20,6 +36,16 @@ related:
   - "../../../acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
+=======
+=======
+  - "./absolute-completion.md"
+  - "./acronym-naming-conventions.md"
+  - "../../../00-index-documentation.md"
+  - "./absolute-completion-notify-completamento-assoluto.md"
+  - "../../../acronym-naming-conventions.md"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 status: draft
 ---
@@ -354,8 +380,27 @@ Result: {"totals":{"errors":0,"file_errors":0}}
 **[→ ANALISI COMPLETA](./analisi-completa.md)** - Executive Summary del progetto
 
 ### 🗺️ ROADMAP
+<<<<<<< HEAD
 **[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
 **[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+**[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
+**[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
+=======
+<<<<<<< .merge_file_RXS4lp
+**[→ Master Roadmap Index](./roadmap-master-index.md)** - Indice completo roadmap moduli
+=======
+**[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
+**[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
+>>>>>>> .merge_file_Rid000
+>>>>>>> laraxot/dev
+=======
+**[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
+**[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ### 📊 TECHNICAL
 **[→ Session Summary](./phpstan/session-summary-.md.md)** - Dettagli tecnici sessione
@@ -574,8 +619,26 @@ php artisan queue:work --queue=high,notifications,default
 ## 🔗 LINK FINALI
 
 - [← Torna all'Indice](./index.md)
+<<<<<<< HEAD
 - [← Master Roadmap](../../../roadmap-master-index.md)
 - [← Master Roadmap](../../../roadmap-master-index.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [← Master Roadmap](../../../roadmap-master-index.md)
+- [← Master Roadmap](../../../roadmap-master-index.md)
+=======
+<<<<<<< .merge_file_RXS4lp
+- [← Master Roadmap](./roadmap-master-index.md)
+=======
+- [← Master Roadmap](../../../roadmap-master-index.md)
+- [← Master Roadmap](../../../roadmap-master-index.md)
+>>>>>>> .merge_file_Rid000
+>>>>>>> laraxot/dev
+=======
+- [← Master Roadmap](../../../roadmap-master-index.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [← Analisi Completa](./analisi-completa.md)
 
 ---
@@ -939,13 +1002,33 @@ Result: {"totals":{"errors":0,"file_errors":0}}
 
 ### 🗺️ ROADMAP
 <<<<<<< HEAD
+<<<<<<< HEAD
 **[→ Master Roadmap Index](./roadmap-master-index.md)** - Indice completo roadmap moduli
 =======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_RXS4lp
+**[→ Master Roadmap Index](./roadmap-master-index.md)** - Indice completo roadmap moduli
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 **[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
 **[→ ANALISI COMPLETA](../../../analisi-completa-ottobre-data.md)** - Executive Summary del progetto
 
 ### 🗺️ ROADMAP
 **[→ Master Roadmap Index](../../../roadmap-master-index.md)** - Indice completo roadmap moduli
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_Rid000
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
 ### 📊 TECHNICAL
@@ -1169,8 +1252,32 @@ php artisan queue:work --queue=high,notifications,default
 ## 🔗 LINK FINALI
 
 - [← Torna all'Indice](./index.md)
+<<<<<<< HEAD
 - [← Master Roadmap](../../../roadmap-master-index.md)
 - [← Analisi Completa](../../../analisi-completa-ottobre-data.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_RXS4lp
+- [← Master Roadmap](./roadmap-master-index.md)
+- [← Analisi Completa](./ANALISI-COMPLETA-2025-10-01.md)
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+- [← Master Roadmap](../../../roadmap-master-index.md)
+- [← Analisi Completa](./ANALISI-COMPLETA.md)
+- [← Master Roadmap](../../../roadmap-master-index.md)
+- [← Analisi Completa](../../../analisi-completa-ottobre-data.md)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_Rid000
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 

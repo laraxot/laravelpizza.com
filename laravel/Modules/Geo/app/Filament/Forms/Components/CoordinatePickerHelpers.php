@@ -5,12 +5,13 @@ declare(strict_types=1);
 namespace Modules\Geo\Filament\Forms\Components;
 
 use Illuminate\Support\Facades\Http;
+use Modules\Geo\Filament\Forms\Components\Traits\HasCoordinatePicker;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 
 /**
  * Single source for Nominatim search/reverse + coordinate normalize/extract.
  *
- * Used by {@see XotBaseCoordinateField} and {@see \Modules\Geo\Filament\Forms\Components\Traits\HasCoordinatePicker}
+ * Used by {@see XotBaseCoordinateField} and {@see HasCoordinatePicker}
  * (thin #[Exposed] wrappers). Concrete class keeps array generics for PHPStan L10;
  * large trait bodies lose iterable value types.
  */

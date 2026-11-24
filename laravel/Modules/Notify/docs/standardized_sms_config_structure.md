@@ -169,6 +169,10 @@ $debug = $config['drivers'][$driver]['debug'] ?? $config['debug'];
 
 - [Configurazione Netfun](./netfun_config_requirements.md)
 - [Provider SMS Supportati](./notifications/sms_provider_configuration.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -181,3 +185,8 @@ qmd: "standardized sms config structure"
 issues: []
 discussions: []
 *Ultimo aggiornamento: 2025-05-12*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

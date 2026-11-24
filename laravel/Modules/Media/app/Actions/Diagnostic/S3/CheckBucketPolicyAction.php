@@ -13,6 +13,7 @@ use function Safe\json_encode;
 
 /**
  * @see docs/contracts/check-bucket-policy-action.md
+ *
  * @contract docs/contracts/check-bucket-policy-action.md
  */
 class CheckBucketPolicyAction

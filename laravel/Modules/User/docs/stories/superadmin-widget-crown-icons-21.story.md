@@ -19,10 +19,7 @@ related:
 github:
   repository: null
   issues: []
-<<<<<<< HEAD
-=======
 qmd: "superadmin widget crown icons 21 story"
->>>>>>> laraxot/dev
 ---
 
 # SuperAdminWidget: icone corona + fix bug reale @svg()

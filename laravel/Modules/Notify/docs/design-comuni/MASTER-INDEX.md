@@ -3,7 +3,19 @@ title: "MASTER INDEX"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "MASTER INDEX"
 issues: []
 discussions: []
@@ -28,6 +40,10 @@ Replicazione delle 38 pagine statiche del progetto [Design Comuni Italia](https:
 | Argomenti | ⏳ 60% | ⏳ 50% | ⏳ 0% | ⏳ Parziali | ⏳ 37% |
 | Altre 35 pagine | ❌ 0% | ❌ 0% | ❌ 0% | ❌ Assenti | ❌ 0% |
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "MASTER INDEX"
@@ -130,6 +146,18 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📚 Documentazione per Modulo/Tema
+### 🎨 Tema Sixteen
+### 🐙 GitHub Integration
+### 📦 Modulo Cms
+### 🧩 Modulo UI
+### 🛠️ Scripts & Tools
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 🔗 Link Bidirezionali Completi
 
 ### FAQ Page → Tutti i Documenti Correlati
@@ -225,7 +253,23 @@ Ogni documento contiene:
 1. **Iniziare da qui**: [Index Design Comuni](../laravel/Themes/Sixteen/docs/design-comuni/00-index.md)
 2. **Capire architettura**: [FAQ Architecture (Cms)](../laravel/Modules/Cms/docs/design-comuni-faq.md)
 3. **Vedere componenti**: [FAQ Components (UI)](../laravel/Modules/UI/docs/design-comuni-faq-components.md)
+<<<<<<< HEAD
 4. **Analizzare differenze**: [Analisi HTML (Sixteen)](../laravel/Themes/Sixteen/docs/design-comuni/domande_frequenti_html_analysis.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+4. **Analizzare differenze**: [Analisi HTML (Sixteen)](../laravel/Themes/Sixteen/docs/design-comuni/DOMANDE_FREQUENTI_HTML_ANALYSIS.md)
+=======
+<<<<<<< HEAD
+4. **Analizzare differenze**: [Analisi HTML (Sixteen)](../laravel/Themes/Sixteen/docs/design-comuni/domande_frequenti_html_analysis.md)
+=======
+4. **Analizzare differenze**: [Analisi HTML (Sixteen)](../laravel/Themes/Sixteen/docs/design-comuni/DOMANDE_FREQUENTI_HTML_ANALYSIS.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+4. **Analizzare differenze**: [Analisi HTML (Sixteen)](../laravel/Themes/Sixteen/docs/design-comuni/domande_frequenti_html_analysis.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 5. **Testare visivamente**: [Screenshots](../laravel/Themes/Sixteen/docs/design-comuni/screenshots/)
 
 ### Per AI Agents
@@ -238,8 +282,28 @@ Ogni documento contiene:
 ### Per Project Managers
 
 1. **Stato progetto**: Questo file (master index)
+<<<<<<< HEAD
 2. **Dettaglio implementazione**: [Report Finale FAQ](../laravel/Themes/Sixteen/docs/design-comuni/domande_frequenti_report_finale.md)
 3. **Analisi visiva**: [Analisi Visiva](../laravel/Themes/Sixteen/docs/design-comuni/domande_frequenti_analisi_visiva.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+2. **Dettaglio implementazione**: [Report Finale FAQ](../laravel/Themes/Sixteen/docs/design-comuni/DOMANDE_FREQUENTI_REPORT_FINALE.md)
+3. **Analisi visiva**: [Analisi Visiva](../laravel/Themes/Sixteen/docs/design-comuni/DOMANDE_FREQUENTI_ANALISI_VISIVA.md)
+=======
+<<<<<<< HEAD
+2. **Dettaglio implementazione**: [Report Finale FAQ](../laravel/Themes/Sixteen/docs/design-comuni/domande_frequenti_report_finale.md)
+3. **Analisi visiva**: [Analisi Visiva](../laravel/Themes/Sixteen/docs/design-comuni/domande_frequenti_analisi_visiva.md)
+=======
+2. **Dettaglio implementazione**: [Report Finale FAQ](../laravel/Themes/Sixteen/docs/design-comuni/DOMANDE_FREQUENTI_REPORT_FINALE.md)
+3. **Analisi visiva**: [Analisi Visiva](../laravel/Themes/Sixteen/docs/design-comuni/DOMANDE_FREQUENTI_ANALISI_VISIVA.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+2. **Dettaglio implementazione**: [Report Finale FAQ](../laravel/Themes/Sixteen/docs/design-comuni/domande_frequenti_report_finale.md)
+3. **Analisi visiva**: [Analisi Visiva](../laravel/Themes/Sixteen/docs/design-comuni/domande_frequenti_analisi_visiva.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ---
 

@@ -12,6 +12,7 @@ use Spatie\QueueableAction\QueueableAction;
  * utente arriva alla shell se non come numero.
  *
  * @see docs/contracts/build-queue-worker-command-action.md
+ *
  * @contract docs/contracts/build-queue-worker-command-action.md
  */
 class BuildQueueWorkerCommandAction

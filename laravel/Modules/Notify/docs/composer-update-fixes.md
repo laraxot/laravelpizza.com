@@ -42,6 +42,10 @@ $related_model = (new ReflectionClass($related))->getName();
 
 **File Modificato**: `Modules/Xot/helpers/Helper.php:727-728`
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "composer update fixes"
@@ -75,6 +79,13 @@ $notify = $recordNotification->mergeData($data);
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+### 2. Errore di Sintassi in SendSmsPage.php
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ### 3. Errore di Sintassi in SendSpatieEmailPage.php
 
 **File**: `Modules/Notify/app/Filament/Clusters/Test/Pages/SendSpatieEmailPage.php:120`

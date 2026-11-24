@@ -21,6 +21,10 @@ discussions: []
 | `Resource` | `XotBaseResource` |
 | `Page` | `XotBasePage` |
 | `Widget` | `XotBaseWidget` |
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -32,3 +36,8 @@ updated: 2026-09-26
 qmd: "filament admin patterns"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

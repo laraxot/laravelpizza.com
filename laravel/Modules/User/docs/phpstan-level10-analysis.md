@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 - [Passport Documentation](file:///var/www/_bases/base_ptvx_fila4_mono/laravel/Modules/User/docs/passport.md)
 
 ---
@@ -7,8 +6,6 @@
 **Estimated Time**: 25 minutes  
 **Complexity**: ⭐⭐ Simple  
 **Priority**: 🟡 Medium
-=======
->>>>>>> laraxot/dev
 ---
 module: theme
 topic: phpstan-level10-analysis
@@ -22,10 +19,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< HEAD
-=======
 qmd: "phpstan level10 analysis"
->>>>>>> laraxot/dev
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-level10-analysis.md

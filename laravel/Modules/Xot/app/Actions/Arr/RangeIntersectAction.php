@@ -8,7 +8,9 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * ---.
+ *
  * @see docs/contracts/range-intersect-action.md
+ *
  * @contract docs/contracts/range-intersect-action.md
  */
 class RangeIntersectAction

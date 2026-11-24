@@ -14,8 +14,8 @@ use Webmozart\Assert\Assert;
  * SUPERSEDED — duplicato flat. Usare {@see \Modules\Job\Actions\Schedule\GetActiveSchedulesAction}.
  *
  * @deprecated Prefer Modules\Job\Actions\Schedule\GetActiveSchedulesAction
- *
  * @see docs/contracts/root-get-active-schedules-action.md
+ *
  * @contract docs/contracts/root-get-active-schedules-action.md
  */
 class GetActiveSchedulesAction

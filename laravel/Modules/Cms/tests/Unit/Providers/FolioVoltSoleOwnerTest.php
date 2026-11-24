@@ -9,6 +9,7 @@ declare(strict_types=1);
  * @see Modules/Cms/docs/bmad/folio-volt-sole-owner.md
  */
 
+use App\Providers\FolioServiceProvider;
 use Modules\Cms\Providers\FolioVoltServiceProvider;
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
@@ -23,7 +24,7 @@ uses(TestCase::class);
 test('app providers must not define FolioServiceProvider', function (): void {
     $path = base_path('app/Providers/FolioServiceProvider.php');
     Assert::assertFileDoesNotExist($path);
-    Assert::assertFalse(class_exists(\App\Providers\FolioServiceProvider::class, false));
+    Assert::assertFalse(class_exists(FolioServiceProvider::class, false));
 });
 
 test('Cms FolioVoltServiceProvider class exists and is the mount owner', function (): void {

@@ -14,6 +14,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/update-user-action.md
+ *
  * @contract docs/contracts/update-user-action.md
  */
 class UpdateUserAction

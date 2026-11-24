@@ -10,6 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/get-trans-path-action.md
+ *
  * @contract docs/contracts/get-trans-path-action.md
  */
 class GetTransPathAction

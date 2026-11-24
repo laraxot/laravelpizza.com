@@ -10,6 +10,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/get-trans-filename-action.md
+ *
  * @contract docs/contracts/get-trans-filename-action.md
  */
 class GetTransFilenameAction

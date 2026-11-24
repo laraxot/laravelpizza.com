@@ -21,6 +21,10 @@ discussions: []
 **Last Updated**: 2026-04-09  
 **Status**: Active - Memory and Development Workflow MCP Servers Configured
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "mcp overview"
@@ -41,6 +45,13 @@ MCP (Model Context Protocol) servers enhance AI agent capabilities for:
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Purpose
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📦 Installed MCP Servers
 
 ### 1. SuperMemory (✅ Active - Memory)

@@ -143,6 +143,10 @@ After implementation, users can:
 - Advanced template personalization options
 - Scheduling capabilities for notifications
 - Enhanced reporting and analytics for sent notifications
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -155,3 +159,8 @@ qmd: "notification bulk action implementation"
 issues: []
 discussions: []
 *Documento conforme agli standard Laraxot - DRY + KISS + SOLID*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

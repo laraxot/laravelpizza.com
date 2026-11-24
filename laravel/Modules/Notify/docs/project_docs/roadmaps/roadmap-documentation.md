@@ -625,6 +625,10 @@ paths:
 - [ ] Analisi competitor
 - [ ] Planning innovazioni
 - [ ] Budget e risorse
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -647,3 +651,8 @@ discussions: []
 **🔄 Ultimo Aggiornamento**: Gennaio 2025  
 **📊 Progresso**: 40% → 100% (Target Dicembre 2025)  
 **🎯 Prossimo Milestone**: Foundation Complete (Marzo 2025)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

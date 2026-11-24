@@ -14,6 +14,10 @@ discussions: []
 ## Introduzione
 Questa guida definisce lo standard per l'invio di messaggi Telegram all'interno del modulo Notify, seguendo la stessa architettura modulare, configurazione e best practice già adottate per email, SMS e WhatsApp. L'obiettivo è garantire coerenza, riusabilità e facilità di manutenzione, indipendentemente dal provider utilizzato (Bot API ufficiale, pacchetti community, ecc.).
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "telegram sending standard"
@@ -50,6 +54,13 @@ interface TelegramActionInterface
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 1. Struttura delle Azioni Telegram
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 2. Configurazione
 
 - Tutti i provider Telegram vanno configurati in `config/telegram.php` (o in una sezione dedicata di `config/services.php` o `config/notify.php`).
@@ -226,4 +237,12 @@ $action->onQueue('telegram')->execute($data);
 
 ---
 
+<<<<<<< HEAD
 **Seguendo questo standard, l'invio di messaggi Telegram sarà sempre coerente, sicuro, testabile e facilmente estendibile.** 
+=======
+<<<<<<< HEAD
+**Seguendo questo standard, l'invio di messaggi Telegram sarà sempre coerente, sicuro, testabile e facilmente estendibile.** 
+=======
+**Seguendo questo standard, l'invio di messaggi Telegram sarà sempre coerente, sicuro, testabile e facilmente estendibile.**
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

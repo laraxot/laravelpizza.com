@@ -93,6 +93,10 @@ Themes/{Name}/docs/llm-wiki/
 **Required Schema**:
 
 ```yaml
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 qmd: "AGENTS"
 issues: []
@@ -108,6 +112,11 @@ related:
   - concepts/related-concept.md
   - entities/some-entity.md
 ---
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ```
 
 **Field Definitions**:
@@ -154,6 +163,10 @@ related:
   - ✅ `docs: ingest karpathy-llm-wiki article`
   - ✅ `docs: lint wiki - resolve contradictions in prediction market concepts`
 ---
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
   - ✅ `docs: lint wiki - resolve contradictions in prediction market concepts`
   - ✅ `docs: lint wiki - resolve contradictions in forecast market concepts`
@@ -273,6 +286,19 @@ LLM Agent Actions:
 
 ```
 ---
+<<<<<<< HEAD
+=======
+=======
+### Rule 7: DRY Knowledge
+## Workflow: Ingest
+### Steps:
+   ## [2026-04-15] ingest | {Source Title}
+### Example:
+## Workflow: Query
+### Steps:
+### Example:
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 User: "How does LMSR work with prediction markets?"
 
 LLM Agent Actions:
@@ -538,6 +564,10 @@ git merge --no-ff wiki-experiments  # Preserve experiment history
 ### Example: Valid Wiki Page
 
 ```markdown
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 title: "LMSR Market Mechanics"
 type: concept
@@ -551,6 +581,11 @@ related:
   - entities/forecast-module.md
   - sources/karpathy-llm-wiki.md
 ---
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 # LMSR Market Mechanics
 
@@ -582,6 +617,10 @@ Logarithmic Market Scoring Rule (LMSR) is the core pricing mechanism...
 - [[lmsr-mechanics]] - Logarithmic Market Scoring Rule pricing algorithm
 - [[prediction-market-design]] - Market clarity, resolution trust, calibration principles
 ---
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 - [[prediction-market-design]] - Market clarity, resolution trust, calibration principles
 - [[forecast-market-design]] - Market clarity, resolution trust, calibration principles
@@ -646,3 +685,18 @@ Logarithmic Market Scoring Rule (LMSR) is the core pricing mechanism...
 - [Documentation Standards](../rules/docs-standards.md)
 - [Multi-Agent Collaboration](../multi_agent_collaboration.md)
 - [Karpathy's Original Gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
+<<<<<<< HEAD
+=======
+=======
+## Entities
+## Sources
+## Decisions
+## Troubleshooting
+### Example: Log.md Entry
+# Wiki Activity Log
+## [2026-04-15] ingest | Karpathy LLM Wiki Article
+## [2026-04-15] query | LMSR mechanics explanation
+## [2026-04-15] lint | Weekly health check
+## Related Documentation
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

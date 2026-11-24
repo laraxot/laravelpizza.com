@@ -10,6 +10,4 @@ namespace Modules\UI\Services;
  *
  * @deprecated Empty stub; do not use.
  */
-final class ComponentService
-{
-}
+final class ComponentService {}

@@ -17,6 +17,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Logs a single activity using Queueable Actions
  *
  * @see docs/contracts/log-activity-action.md
+ *
  * @contract docs/contracts/log-activity-action.md
  */
 class LogActivityAction

@@ -17,6 +17,10 @@ discussions: []
 
 Questo non significa non documentare. Significa documentare in modo **intelligente, sostenibile e automatico**.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "zen of documentation"
@@ -131,6 +135,23 @@ La documentazione è progettata per **AI agents multipli**:
 ```
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 🎯 I Cinque Principi dello Zen
+### 1. 📦 **Single Source of Truth (SSOT)**
+### 2. 🔄 **Documentazione Viva (Living Docs)**
+### 3. 🗂️ **Indicizzazione Bidirezionale**
+# Hero Block
+### 4. 🚫 **No Temporal Strings**
+# ❌ CATTIVO
+# ✅ BUONO
+# Per la storia: usa git
+### 5. 🤖 **Multi-Agent Collaboration**
+## 🤖 AI Agent Notes
+### Agent Coordination
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## 📐 Sistema di Indicizzazione Avanzato
 

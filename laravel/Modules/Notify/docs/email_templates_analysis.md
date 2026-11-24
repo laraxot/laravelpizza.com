@@ -131,6 +131,10 @@ Sono state analizzate le principali soluzioni open source, best practice e patte
 - Implementare preview e fallback
 - Valutare builder visuali per template avanzati
 - Automatizzare test rendering
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -143,3 +147,8 @@ qmd: "email templates analysis"
 issues: []
 discussions: []
 _Analisi aggiornata al 2025-05-05. Per dettagli e approfondimenti, consultare i README specifici delle soluzioni nella cartella email-templates._
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

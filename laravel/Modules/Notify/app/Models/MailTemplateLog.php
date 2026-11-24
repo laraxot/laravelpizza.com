@@ -47,7 +47,10 @@ class MailTemplateLog extends BaseModel
 {
     use MailTemplateLogRelations;
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> laraxot/dev
     protected $fillable = [
         'template_id',
         'mailable_type',

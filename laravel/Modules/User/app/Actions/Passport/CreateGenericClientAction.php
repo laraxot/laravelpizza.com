@@ -11,6 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/create-generic-client-action.md
+ *
  * @contract docs/contracts/create-generic-client-action.md
  */
 class CreateGenericClientAction

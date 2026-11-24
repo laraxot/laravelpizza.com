@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< HEAD
-=======
 qmd: "moderation contracts contratti interfacce moderazione utenti"
->>>>>>> laraxot/dev
 ---
 # Contratti e Interfacce per la Moderazione Utenti
 

@@ -1,5 +1,13 @@
 ---
+<<<<<<< HEAD
 title: "implementation status 2025 10 02"
+=======
+<<<<<<< HEAD
+title: "Implementation Status"
+=======
+title: "implementation status 2025 10 02"
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 type: note
 tags: [documentation]
 created: 2026-09-26

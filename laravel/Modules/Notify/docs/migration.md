@@ -3,7 +3,19 @@ title: "migration"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "migration"
 issues: []
 discussions: []
@@ -192,7 +204,23 @@ return new class () extends XotBaseMigration {
 
 ## Collegamenti Correlati
 
+<<<<<<< HEAD
 - [Documentazione XotBaseMigration](../../Xot/docs/rules/laraxot-rules.md)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [Documentazione XotBaseMigration](../../Xot/docs/rules/laraxot-rules.md)
+=======
+<<<<<<< HEAD
+- [Documentazione XotBaseMigration](../../xot/docs/rules/laraxot-rules.md)
+=======
+- [Documentazione XotBaseMigration](../../Xot/docs/rules/laraxot-rules.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [Documentazione XotBaseMigration](../../xot/docs/rules/laraxot-rules.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Standard Migrazioni](../../../../docs/regole/standard_migrazioni.md)
 - [Best Practices Database](../../../../docs/best-practices/database.md)
 - [Gestione Errori](./error_handling.md)

@@ -13,6 +13,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/get-attachments-schema-action.md
+ *
  * @contract docs/contracts/get-attachments-schema-action.md
  */
 class GetAttachmentsSchemaAction

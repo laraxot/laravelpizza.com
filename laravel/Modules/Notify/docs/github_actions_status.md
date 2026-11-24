@@ -15,6 +15,10 @@ discussions: []
 **Status**: In Progress  
 **Author**: AI Agent
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "github actions status"
@@ -32,6 +36,13 @@ Analisi e fix delle GitHub Actions del repository base_ptv_fila5.
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Summary
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Current Status (2026-03-13 11:00)
 
 ### ✅ Working Actions

@@ -25,7 +25,14 @@ Ogni fix o nuova feature deve preferire componenti riusabili, documentazione can
 - ogni cartella documentale significativa deve avere `00-index.md`
 - ogni documento deve linkare il proprio `00-index.md` con percorso relativo
 - modulo e tema aggiornano i rispettivi `docs/00-index.md` quando si tocca il loro perimetro
+<<<<<<< HEAD
 - modulo e tema aggiornano i rispettivi `docs/00-index.md` quando si tocca il loro perimetro
+=======
+<<<<<<< HEAD
+- modulo e tema aggiornano i rispettivi `docs/00-index.md` quando si tocca il loro perimetro
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - `AGENTS.md`, `CLAUDE.md`, `qwen.md` devono puntare a documenti canonici, non duplicarne il contenuto
 
 ## Anti pattern

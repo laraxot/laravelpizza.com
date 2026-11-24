@@ -15,6 +15,10 @@ discussions: []
 **Status**: Active  
 **Applies to**: All modules and themes
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "documentation governance"
@@ -31,6 +35,13 @@ This document establishes the governance framework for all documentation in the 
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 Purpose
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📁 Standard Directory Structure
 
 ### Module Documentation Structure
@@ -444,7 +455,14 @@ jobs:
 ## 📚 Related Documents
 
 - [AGENTS.md](../../../AGENTS.md) - Agent guidelines
+<<<<<<< HEAD
 - [AGENTS.md](../../../AGENTS.md) - Agent guidelines
+=======
+<<<<<<< HEAD
+- [AGENTS.md](../../../AGENTS.md) - Agent guidelines
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [.windsurfrules](../../../.windsurfrules) - IDE rules
 - [DOCUMENTATION_INDEX.md](../../../docs/DOCUMENTATION_INDEX.md) - Master index
 

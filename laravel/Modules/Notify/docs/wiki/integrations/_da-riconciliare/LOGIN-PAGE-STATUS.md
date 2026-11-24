@@ -7,7 +7,19 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 # 📊 Status Pagina Login - Verifica Tecnica
@@ -298,7 +310,23 @@ Password: password
 
 ## 📚 Documentazione Correlata
 
+<<<<<<< HEAD
 1. **[Widget Rendering Analysis](../laravel/Modules/User/docs/widget_rendering_analysis.md)**
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+1. **[Widget Rendering Analysis](../laravel/Modules/User/docs/WIDGET_RENDERING_ANALYSIS.md)**
+=======
+<<<<<<< HEAD
+1. **[Widget Rendering Analysis](../laravel/Modules/User/docs/widget_rendering_analysis.md)**
+=======
+1. **[Widget Rendering Analysis](../laravel/Modules/User/docs/WIDGET_RENDERING_ANALYSIS.md)**
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+1. **[Widget Rendering Analysis](../laravel/Modules/User/docs/widget_rendering_analysis.md)**
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
    - Analisi completa architettura LoginWidget
    - Diagrammi flusso
    - Best practices
@@ -336,5 +364,16 @@ Password: password
 **Confidence**: 💯 MASSIMA
 
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

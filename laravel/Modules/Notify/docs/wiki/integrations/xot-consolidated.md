@@ -54,8 +54,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -222,7 +230,14 @@ Questa convenzione dovrebbe essere seguita rigorosamente in tutto il progetto pe
 
 *Consolidated from: `xot-base-classes-analysis.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Contesto
 Nel nostro progetto, abbiamo deciso di non estendere direttamente le classi Filament, ma di utilizzare classi base personalizzate nel modulo Xot. Questo approccio ha diverse implicazioni e vantaggi.
 
@@ -403,8 +418,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -494,7 +517,14 @@ Per correggere automaticamente i file che non seguono queste convenzioni:
 
 *Consolidated from: `xot-base-classes-checklist.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Import
 - [ ] Non importare mai direttamente le classi Filament
 - [ ] Usare sempre l'import da `Modules\Xot\Filament\Pages\XotBasePage`
@@ -598,8 +628,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -703,7 +741,14 @@ class SendSMSPage extends XotBasePage implements HasForms  // Estensione corrett
 
 *Consolidated from: `xot-base-classes-convention.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Regola di Estensione
 Tutte le classi che normalmente estenderebbero direttamente una classe Filament devono invece estendere la corrispondente classe base Xot. Questo è un requisito per mantenere la coerenza e la manutenibilità del codice.
 
@@ -804,7 +849,14 @@ class SendSMSPage extends XotBasePage implements HasForms  // Estensione corrett
 
 *Consolidated from: `xot-base-classes.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Contesto
 Nel nostro progetto, abbiamo deciso di non estendere direttamente le classi Filament, ma di utilizzare classi base personalizzate nel modulo Xot. Questo approccio ha diverse implicazioni e vantaggi.
 
@@ -968,7 +1020,14 @@ Questa convenzione dovrebbe essere seguita rigorosamente in tutto il progetto pe
 
 *Consolidated from: `xot_base_classes_analysis.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Contesto
 Nel nostro progetto, abbiamo deciso di non estendere direttamente le classi Filament, ma di utilizzare classi base personalizzate nel modulo Xot. Questo approccio ha diverse implicazioni e vantaggi.
 
@@ -1130,7 +1189,14 @@ Questa convenzione dovrebbe essere seguita rigorosamente in tutto il progetto pe
 
 *Consolidated from: `xot_base_classes_checklist.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 1. Import
 - [ ] Non importare mai direttamente le classi Filament
 - [ ] Usare sempre l'import da `Modules\Xot\Filament\Pages\XotBasePage`
@@ -1215,7 +1281,14 @@ Per correggere automaticamente i file che non seguono queste convenzioni:
 
 *Consolidated from: `xot_base_classes_convention.md`*
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Regola di Estensione
 Tutte le classi che normalmente estenderebbero direttamente una classe Filament devono invece estendere la corrispondente classe base Xot. Questo è un requisito per mantenere la coerenza e la manutenibilità del codice.
 
@@ -1333,8 +1406,16 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
+<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
+=======
+<<<<<<< HEAD
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -1696,7 +1777,14 @@ Post-mortem meeting per lessons learned.
 
 **TL;DR:** Implementare XotBasePivot elimina 2.340+ righe duplicate, migliora manutenibilità 26x, richiede solo 3-4 ore, ROI 58.500% in 1 anno. Pattern già validato (XotBaseModel). Risk basso. **APPROVATO ⭐⭐⭐⭐⭐**
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 **Consolidated by:** Phase 2f intelligent merging

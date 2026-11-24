@@ -101,6 +101,10 @@ NETFUN_API_URL=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 
 Per problemi di configurazione o domande sull'integrazione con Netfun, consultare la documentazione ufficiale di Netfun o contattare il team di supporto.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "netfun config requirements"
@@ -164,4 +168,18 @@ NETFUN_ENDPOINT=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 2. Esempio di .env
+# NETFUN_CALLBACK_URL=https://tuodominio.it/sms/callback
+## 3. Descrizione Parametri
+## 4. Note Importanti
+## 5. Riferimenti
+## Errori Comuni
+## Checklist di Verifica
+## Collegamenti
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 *Ultimo aggiornamento: [DATE]*

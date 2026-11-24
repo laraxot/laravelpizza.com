@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Widget Translation Rules - SaluteOra Project"
 type: rule
 qmd: "widget translation rules saluteora project"
 ---
->>>>>>> laraxot/dev
 # Widget Translation Rules - SaluteOra Project
 # Widget Translation Rules - FixCity Project
 
@@ -150,10 +147,7 @@ protected static string $view = 'user::widgets.edit-user';
 - [EditUserWidget Documentation](../modules/user/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../modules/user/docs/widgets/translation-guidelines.md)
 - [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
-<<<<<<< HEAD
 - [Filament Widget Conventions](best-practices/filament-widgets.md)
-=======
->>>>>>> laraxot/dev
 ## Memory Integration
 This document serves as a reference for:
 - Widget development standards
@@ -350,10 +344,7 @@ protected static string $view = 'user::widgets.edit-user';
 - [EditUserWidget Documentation](../Modules/User/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../Modules/User/docs/widgets/translation-guidelines.md)
 - [Filament Widget Conventions](../Modules/Xot/docs/filament-widgets.md)
-<<<<<<< HEAD
 - [Filament Widget Conventions](best-practices/filament-widgets.md)
-=======
->>>>>>> laraxot/dev
 
 ## Memory Integration
 

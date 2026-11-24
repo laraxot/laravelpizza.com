@@ -15,6 +15,10 @@ discussions: []
 **Ultimo Aggiornamento**: 2026-03-20  
 **Stato**: ✅ IMPLEMENTATO
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "agents gsd bmad"
@@ -75,6 +79,26 @@ discussions: []
 ```
 
 ---
+<<<<<<< HEAD
+=======
+=======
+## 🎯 GSD (Get Shit Done)
+### Comandi Principali
+#### Inizializzazione
+#### Fasi Workflow
+#### Utils
+### Flusso Tipico
+# 1. Discuti architettura
+# Output: docs/get-shit-done/phase-1-discussion.md
+# 2. Crea piano
+# Output: docs/get-shit-done/phase-1-plan.md
+# 3. Esegui
+# Output: Commit atomici, verificati
+# 4. Verifica
+# Output: docs/get-shit-done/phase-1-verification.md
+# 5. Completa
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## 🧠 BMAD (Build Measure Analyze Decide)
 

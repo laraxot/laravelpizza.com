@@ -12,6 +12,10 @@ discussions: []
 # 📊 ANALISI COMPLETA PROGETTO FIXCITY
 ## Data: 1 Ottobre 2025
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "analisi completa 2025 10 01"
@@ -33,6 +37,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🎯 EXECUTIVE SUMMARY
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## 📦 COSA È FIXCITY
 
 ### Scopo Principale
@@ -490,6 +501,15 @@ Manutenzione Stradale • Illuminazione • Rifiuti • Verde Pubblico • Fogna
 ---
 
 *"Un progetto solido con fondamenta eccellenti e potenziale straordinario"* 🏆
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

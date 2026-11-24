@@ -298,13 +298,27 @@ Agent: [Systematic debugging]
 - [Workflow Guide](docs/superpowers/workflow.md)
 - [Skills Reference](docs/superpowers/skills-reference.md)
 - [Quick Index](docs/superpowers/index.md)
+<<<<<<< HEAD
 - [Quick Index](docs/superpowers/index.md)
+=======
+<<<<<<< HEAD
+- [Quick Index](docs/superpowers/index.md)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Main README](README.md)
 - [Installation Guide](installation.md)
 - [Workflow Guide](workflow.md)
 - [Skills Reference](skills-reference.md)
 - [Quick Index](index.md)
+<<<<<<< HEAD
 - [Quick Index](index.md)
+=======
+<<<<<<< HEAD
+- [Quick Index](index.md)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Laravel Integration](laravel/Modules/docs/superpowers.md)
 
 ### External

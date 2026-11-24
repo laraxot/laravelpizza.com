@@ -18,6 +18,10 @@ discussions: []
 
 In Laraxot architecture, every category of file (database files, test files, migrations) must exist in ONE location only. Never both.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "laraxot philosophy"
@@ -51,6 +55,13 @@ Modules/Cms/
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## File structure philosophy
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Test structure philosophy
 
 Test files must be in ONE consistent directory per module.

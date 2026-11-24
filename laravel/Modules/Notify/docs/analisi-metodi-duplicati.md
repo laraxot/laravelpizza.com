@@ -21,6 +21,10 @@ discussions: []
 7. [Svantaggi e Rischi dell'Unificazione](#svantaggi-e-rischi-dellunificazione)
 8. [Raccomandazioni](#raccomandazioni)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "analisi metodi duplicati"
@@ -41,6 +45,13 @@ Questo documento analizza i metodi duplicati trovati all'interno dei moduli Lara
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Panoramica
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Metodi Duplicati nei BaseModel
 
 ### 1. Metodo `casts(): array`
@@ -637,4 +648,11 @@ rules:
 **Data:** 2025-10-15  
 **Versione:** 1.0  
 **Status:** Draft per Review
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

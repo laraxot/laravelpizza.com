@@ -15,6 +15,10 @@ discussions: []
 **Ultimo Aggiornamento**: 2026-03-20  
 **Stato**: ✅ CRITICAL RULE
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "agents filament widgets"
@@ -32,6 +36,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 🔴 REGOLA FONDAMENTALE
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## ❌ SBAGLIATO (VIETATO!)
 
 ### Blade Custom con foreach

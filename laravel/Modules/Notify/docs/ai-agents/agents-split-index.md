@@ -3,7 +3,19 @@ title: "agents split index"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< HEAD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 qmd: "agents split index"
 issues: []
 discussions: []
@@ -30,8 +42,28 @@ discussions: []
 
 ## 🔗 Collegamento all'Originale
 
+<<<<<<< HEAD
 - [AGENTS.md originale](../../AGENTS.md) - File completo (deprecato)
 - [AGENTS.md originale](../../AGENTS.md) - File completo (deprecato)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [AGENTS.md originale](../../AGENTS.md) - File completo (deprecato)
+- [AGENTS.md originale](../../AGENTS.md) - File completo (deprecato)
+=======
+<<<<<<< HEAD
+- [AGENTS.md originale](../../agents.md) - File completo (deprecato)
+- [agents.md originale](../../agents.md) - File completo (deprecato)
+=======
+- [AGENTS.md originale](../../AGENTS.md) - File completo (deprecato)
+- [AGENTS.md originale](../../AGENTS.md) - File completo (deprecato)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+- [AGENTS.md originale](../../agents.md) - File completo (deprecato)
+- [agents.md originale](../../agents.md) - File completo (deprecato)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Index principale](./index.md) - Torna all'indice
 
 ## 📝 Note

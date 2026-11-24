@@ -17,6 +17,7 @@ use Illuminate\Support\Str;
  * ogni richiesta, che per un endpoint API di login e' lo schema standard. Un test blocca la coerenza delle due soglie.
  *
  * @see docs/contracts/build-api-login-limit-action.md
+ *
  * @contract docs/contracts/build-api-login-limit-action.md
  */
 final class BuildApiLoginLimitAction

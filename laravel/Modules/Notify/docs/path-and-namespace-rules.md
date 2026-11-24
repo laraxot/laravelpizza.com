@@ -187,6 +187,10 @@ namespace Modules\Notify\App\Console\Commands;
 
 > **Nota:** Anche per i comandi console, il namespace non deve mai includere il segmento `App`.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "path and namespace rules"
@@ -356,4 +360,30 @@ namespace Modules\Notify\App\Console\Commands;
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+# Regole per Path e Namespace nel Modulo Notify
+## Struttura Corretta dei Path
+### ✅ Path Corretti
+### ❌ Path Errati
+## Struttura Corretta dei Namespace
+### ✅ Namespace Corretti
+### ❌ Namespace Errati
+## Regola Fondamentale
+## Esempi Concreti
+### Esempio 1: Action per invio SMS
+### Esempio 2: Controller
+### Esempio 3: Provider
+### Esempio 4: Data per SMS Netfun
+## Motivo di questa Regola
+## Esempio per Datas
+### ❌ Namespace Errato
+### ✅ Namespace Corretto
+## Collegamento alle Regole Generali
+## Collegamenti
+### Esempio 5: Console Command
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 *Ultimo aggiornamento: 2025-05-12*

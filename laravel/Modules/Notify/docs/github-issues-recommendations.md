@@ -1,4 +1,13 @@
 ---
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 title: "github issues recommendations 2026 03"
 type: note
 tags: [documentation]
@@ -699,6 +708,12 @@ Discuss CI/CD pipeline improvements. Topics include:
 **Document Version**: 1.0
 **Last Updated**: 2026-03-02
 **Status**: Ready for Implementation
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 issues: []
 discussions: []
 title: "GITHUB_ISSUES_RECOMMENDATIONS_2026-03-02"
@@ -720,3 +735,12 @@ related:
 ---
 
 > Questo file è stato rinominato in [github-issues-recommendations.md](github-issues-recommendations.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -132,11 +132,7 @@ related:
 - Struttura wiki/log.md inizializzata.
 - Layer raw: tutti i file in `docs/` (eccetto `wiki/`).
 - Layer wiki: `docs/wiki/` — LLM-maintained, sintesi ad alto riuso.
-<<<<<<< HEAD
 - Schema: `docs/.schema/wiki_schema.md`
-=======
-- Schema: `docs/.schema/WIKI_SCHEMA.md`
->>>>>>> laraxot/dev
 - Adozione moduli: `docs/project/llm-wiki-module-adoption.md`
 
 ## [2026-04-20] bugfix | profiles.uuid nella migrazione canonica unica

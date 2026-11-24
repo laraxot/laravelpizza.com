@@ -24,6 +24,10 @@ Panoramica del progetto LaravelPizza/Base Forecast Fila5.
 
 **NON** è un progetto e-commerce pizza - è una piattaforma per Laravel developer meetups e tech communities.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "claude overview"
@@ -50,6 +54,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Stack Tecnologico
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Architettura
 
 ```

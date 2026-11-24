@@ -32,8 +32,8 @@ describe('UI Filament widgets and components coverage', function (): void {
             if (! str_contains($class, 'Filament\\Widgets\\')) {
                 continue;
             }
-            Assert::assertInstanceOf($class, new $class());
-            ++$seen;
+            Assert::assertInstanceOf($class, new $class);
+            $seen++;
         }
         Assert::assertGreaterThan(0, $seen);
     });
@@ -49,7 +49,7 @@ describe('UI Filament widgets and components coverage', function (): void {
             $class = 'Modules\\UI\\'.str_replace(['/', '.php'], ['\\', ''], substr($file->getPathname(), strlen($appRoot) + 1));
             if (class_exists($class)) {
                 Assert::assertTrue(class_exists($class));
-                ++$count;
+                $count++;
             }
         }
         Assert::assertGreaterThan(0, $count);
@@ -69,7 +69,7 @@ describe('UI coverage boost — Enums', function (): void {
 
 describe('UI coverage boost — Rules and policies', function (): void {
     test('OpeningHoursRule accepts empty array value', function (): void {
-        $rule = new OpeningHoursRule();
+        $rule = new OpeningHoursRule;
         $failed = false;
         $rule->validate(
             'hours',
@@ -83,28 +83,38 @@ describe('UI coverage boost — Rules and policies', function (): void {
         Assert::assertFalse($failed);
     });
 
-    test('UiBasePolicy before grants super-admin', function (): void {
+    /**
+     * `before()` concede a super-admin e al ruolo del pannello `ui::admin`, e lascia decidere alla policy a tutti gli altri.
+     *
+     * @see Modules/Xot/docs/wiki/decisions/module-admin-role-policy-bypass.md
+     */
+    test('UiBasePolicy before grants super-admin and the ui::admin panel role', function (): void {
         /** @var MockInterface&UserContract $superAdmin */
         $superAdmin = \Mockery::mock(UserContract::class);
         TestCase::expectMethod($superAdmin, 'hasRole')->with('super-admin')->andReturn(true);
+        /** @var MockInterface&UserContract $panelAdmin */
+        $panelAdmin = \Mockery::mock(UserContract::class);
+        TestCase::expectMethod($panelAdmin, 'hasRole')->with('super-admin')->andReturn(false);
+        TestCase::expectMethod($panelAdmin, 'hasRole')->with('ui::admin')->andReturn(true);
         /** @var MockInterface&UserContract $regular */
         $regular = \Mockery::mock(UserContract::class);
         TestCase::expectMethod($regular, 'hasRole')->with('super-admin')->andReturn(false);
+        TestCase::expectMethod($regular, 'hasRole')->with('ui::admin')->andReturn(false);
 
-        $policy = new class extends UiBasePolicy {
-        };
+        $policy = new class extends UiBasePolicy {};
         Assert::assertTrue($policy->before($superAdmin, 'viewAny'));
+        Assert::assertTrue($policy->before($panelAdmin, 'viewAny'));
         Assert::assertNull($policy->before($regular, 'viewAny'));
     });
 });
 
 describe('UI coverage boost — Models and providers', function (): void {
     test('Category fillable matches domain fields', function (): void {
-        Assert::assertContains('name', (new Category())->getFillable());
+        Assert::assertContains('name', (new Category)->getFillable());
     });
 
     test('StatsOverviewWidget declares heading', function (): void {
-        $widget = new StatsOverviewWidget();
+        $widget = new StatsOverviewWidget;
         $ref = new \ReflectionClass($widget);
         $prop = $ref->getProperty('heading');
         $prop->setAccessible(true);

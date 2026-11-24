@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Analisi Violazione Filosofia Laraxot - Migration Teams"
 type: analysis
 qmd: "migration teams owner id violation analysis"
 ---
->>>>>>> laraxot/dev
 # Analisi Violazione Filosofia Laraxot - Migration Teams
 
 ## Data

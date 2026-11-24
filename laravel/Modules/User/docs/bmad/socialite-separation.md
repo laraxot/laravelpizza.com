@@ -6,10 +6,7 @@ status: active
 related:
   - ./decision-log.md
   - ./architecture.md
-<<<<<<< HEAD
-=======
 qmd: "socialite separation from userserviceprovider"
->>>>>>> laraxot/dev
 ---
 
 # Decision: Separate Socialite logic

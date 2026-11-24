@@ -1,4 +1,15 @@
 ---
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+title: "Contratto — ProcessInboundMailAction"
+type: contract
+action: "Modules\Notify\Actions\Mail\ProcessInboundMailAction"
+tags: [contract, action, notify, inbound, webhook, email]
+created: 2026-11-24
+updated: 2026-11-24
+=======
+>>>>>>> laraxot/dev
 title: "ProcessInboundMailAction — contratto"
 type: contract
 owner: Notify
@@ -6,8 +17,12 @@ status: accepted
 updated: 2026-11-24
 action: "Modules\\Notify\\Actions\\Mail\\ProcessInboundMailAction"
 qmd: "ProcessInboundMailAction webhook inbound email postmark mailgun MIME token InboundEmail eml"
+<<<<<<< HEAD
 tags: [contract, action, notify, inbound, webhook, email]
 created: 2026-11-24
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ---
 
 # ProcessInboundMailAction

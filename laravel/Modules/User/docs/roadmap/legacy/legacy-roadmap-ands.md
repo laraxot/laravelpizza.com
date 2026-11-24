@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "User Module - Roadmap, Issues & Optimization"
 type: note
 qmd: "legacy roadmap ands user issues optimization"
 ---
->>>>>>> laraxot/dev
 # User Module - Roadmap, Issues & Optimization
 
 **Modulo**: User (Authentication, Authorization, Profiles)  

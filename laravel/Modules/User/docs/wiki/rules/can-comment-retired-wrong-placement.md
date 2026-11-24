@@ -28,13 +28,10 @@ related:
 - Nessuna SSOT attiva in `User`: il modulo identity non espone contratti o trait di Comment.
 - `BaseUser` non deve implementare `CanComment` né usare trait/comment relations di moduli opzionali.
 
-<<<<<<< HEAD
 ## Verifica
 
 - `grep -rn "Modules\\\\Comment" laravel/Modules/User/app/` → 0 risultati
 - `grep -rn "CanComment" laravel/Modules/User/app/` → 0 risultati (solo `.old` archived)
 - Test `NoCommentModuleDependencyTest.php` passa
 
-=======
->>>>>>> laraxot/dev
 Non reintrodurre alias attivi in User.

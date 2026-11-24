@@ -11,6 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Rimuove attributi sensibili prima della persistenza nel log attività.
  *
  * @see docs/contracts/redact-model-attributes-action.md
+ *
  * @contract docs/contracts/redact-model-attributes-action.md
  */
 final class RedactModelAttributesAction

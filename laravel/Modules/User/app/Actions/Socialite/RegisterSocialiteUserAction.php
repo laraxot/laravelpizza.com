@@ -20,6 +20,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see docs/contracts/register-socialite-user-action.md
+ *
  * @contract docs/contracts/register-socialite-user-action.md
  */
 class RegisterSocialiteUserAction

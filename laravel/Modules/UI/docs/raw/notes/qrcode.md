@@ -8,10 +8,7 @@ tags: [migrato-da-txt, ui]
 converted_from: qrcode.txt
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< HEAD
-=======
 qmd: "qrcode risorse esterne"
->>>>>>> laraxot/dev
 ---
 
 # Qrcode — risorse esterne

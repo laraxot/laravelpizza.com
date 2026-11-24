@@ -15,6 +15,10 @@ discussions: []
 > Last Updated: April 3, 2026  
 > Status: 🟢 ACTIVE DEVELOPMENT
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "roadmap"
@@ -42,6 +46,13 @@ FixCity is a civic technology platform connecting citizens and municipalities to
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📊 Roadmap Overview
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## ✅ Completed Phases (1-10)
 
 ### Phase 0: Foundation Excellence ✅ COMPLETE

@@ -142,6 +142,17 @@ Themes/Meetup/resources/views/pages/auth/
     └── {token}.blade.php # Reset with token
 ```
 
+## Pagina di logout (`auth.logout`)
+
+`pages/auth/logout.blade.php` e' la pagina GET `/{locale}/auth/logout` (link da email, bookmark). E' una Folio + Volt con `@volt('auth.logout')`
+(senza la direttiva Volt risponde 500) che mostra `pub_theme::auth.logout.in_progress` e, con `wire:init`, esegue
+`Modules\User\Http\Volt\LogoutAction` (la stessa della rotta POST) e reindirizza alla home della lingua corrente.
+
+- Nome rotta `auth.logout`: `logout` e' della rotta POST di `Modules/User/routes/web.php` usata dai form di navigazione.
+- Nessun `dd()` o debug nella pagina: la GET deve rendere 200 anche da ospite.
+- `in_progress` esiste in tutte le lingue del tema con auth (it, en, de, es, fr, ru).
+- Test di guardia: `Modules/Meetup/tests/Feature/Security/LogoutPageTest.php`.
+
 ## Testing Checklist
 
 - [ ] Form validation works correctly

@@ -4,10 +4,7 @@ module: User
 type: note
 status: active
 updated: '2026-11-23'
-<<<<<<< HEAD
-=======
 qmd: "logout implementation best practices"
->>>>>>> laraxot/dev
 ---
 
 # Best Practices per l'Implementazione del Logout 
@@ -19,11 +16,7 @@ qmd: "logout implementation best practices"
 # Best Practices per l'Implementazione del Logout
 
 ## Collegamenti correlati
-<<<<<<< HEAD
-- [README modulo User](./README.md)
-=======
 - [README modulo User](./readme.md)
->>>>>>> laraxot/dev
 - [Best Practices Componenti di Autenticazione](./auth_components_best_practices.md)
 - [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/laravel_localization_usage.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)

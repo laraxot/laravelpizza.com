@@ -16,6 +16,10 @@ discussions: []
 > **Version**: v5.0.6  
 > **Platform**: Cursor
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "INSTALLATION SUMMARY"
@@ -32,6 +36,13 @@ Successfully installed and configured the **Superpowers** agentic skills framewo
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## 📋 Overview
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## ✅ Completed Tasks
 
 ### 1. Framework Installation

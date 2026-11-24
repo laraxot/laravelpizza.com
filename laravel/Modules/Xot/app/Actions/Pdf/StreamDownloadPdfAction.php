@@ -11,6 +11,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/stream-download-pdf-action.md
+ *
  * @contract docs/contracts/stream-download-pdf-action.md
  */
 class StreamDownloadPdfAction

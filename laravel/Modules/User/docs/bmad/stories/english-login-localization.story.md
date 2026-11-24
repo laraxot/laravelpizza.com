@@ -8,10 +8,7 @@ issues:
   - "https://github.com/laraxot/base_fixcity_fila5/issues/572"
 discussions:
   - "https://github.com/laraxot/base_fixcity_fila5/discussions/573"
-<<<<<<< HEAD
-=======
 qmd: "english login localization story inglese senza"
->>>>>>> laraxot/dev
 ---
 
 # Login inglese senza fallback italiano

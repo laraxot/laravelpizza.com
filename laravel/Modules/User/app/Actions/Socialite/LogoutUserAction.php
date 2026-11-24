@@ -16,6 +16,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * @see docs/contracts/logout-user-action.md
+ *
  * @contract docs/contracts/logout-user-action.md
  */
 class LogoutUserAction

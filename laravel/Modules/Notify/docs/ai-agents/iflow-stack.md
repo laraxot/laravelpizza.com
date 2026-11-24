@@ -13,6 +13,10 @@ discussions: []
 
 Stack tecnologico del progetto.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 
 title: "iflow stack"
@@ -35,6 +39,13 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+=======
+=======
+## Backend
+
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 ## Frontend
 
 | Tecnologia | Descrizione |

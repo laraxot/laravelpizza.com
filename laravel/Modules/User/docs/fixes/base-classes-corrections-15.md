@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Correzione Estensioni Classi Base - Modulo User"
 type: note
 qmd: "base classes corrections 15 correzione estensioni"
 ---
->>>>>>> laraxot/dev
 # Correzione Estensioni Classi Base - Modulo User
 
 **Data:** 15 Ottobre 2025  
