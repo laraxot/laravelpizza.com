@@ -1,0 +1,42 @@
+name: Feature / Improvement
+description: Propose a focused improvement that others can pick up
+title: "[Feature]: "
+labels: ["enhancement", "help wanted"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Prefer small, shippable changes. Newcomers: look for `good first issue`.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / opportunity
+      description: What is broken or missing for meetup organizers / contributors?
+      placeholder: Organizers cannot X because Y.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Concrete scope (files/modules if known). Keep Folio+Volt for front office.
+    validations:
+      required: true
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty for a newcomer
+      options:
+        - good first issue (docs, copy, small Blade/CSS)
+        - medium (module Action/DTO, tests)
+        - hard (architecture / multi-module)
+    validations:
+      required: true
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Constraints acknowledged
+      options:
+        - label: No traditional front-office controllers/routes
+        - label: PHPStan level 10 + Pint for PHP changes
+        - label: Docs updated in the relevant module/theme `docs/` folder

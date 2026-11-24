@@ -4,10 +4,13 @@
 ![Filament 5.x](https://img.shields.io/badge/Filament-5.x-blue.svg)
 ![Livewire 4.x](https://img.shields.io/badge/Livewire-4.x-orange.svg)
 ![PHPStan Level 10](https://img.shields.io/badge/PHPStan-Level%2010-brightgreen.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Good first issues](https://img.shields.io/github/issues/laraxot/laravelpizza.com/good%20first%20issue)](https://github.com/laraxot/laravelpizza.com/labels/good%20first%20issue)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/laraxot/laravelpizza.com/badge)](https://securityscorecards.dev/viewer/?uri=github.com/laraxot/laravelpizza.com)
 
 ## 🎯 Missione del Progetto
 
-**Questo è una CONVERSIONE e MIGLIORAMENTO di https://laravelpizza.com/**
+**Questa è una CONVERSIONE e MIGLIORAMENTO di https://laravelpizza.com/**
 
 Non stiamo solo replicando - stiamo **ELEVANDO** il sito originale per renderlo:
 - ✨ **PIÙ COOL** - Design premium e moderno che cattura l'attenzione
@@ -58,7 +61,7 @@ Benvenuto nella base ufficiale di **LaravelPizza.com**: qui costruiamo un ecosis
 
 ## 🚀 Perché questo repo vale il tuo tempo (e le tue PR)
 
- - **Tema frontoffice enhanced**: stiamo prendendo `laravelpizza.com` e lo stiamo **migliorando** dentro il **Meetup Theme**
+- **Tema frontoffice enhanced**: stiamo prendendo `laravelpizza.com` e lo stiamo **migliorando** dentro il **Meetup Theme**
   (home, events, menu, pagina contatti, auth, ecc.), con **Folio + Volt** come architettura obbligatoria.
   **Non è una copia** - è una versione premium, più cool, più coinvolgente.
 - **Architettura Laraxot**: un vero "framework nel framework":
@@ -144,9 +147,9 @@ Se ti riconosci in questa filosofia, ti troverai a casa.
 > Non serve essere "guru": serve voglia di imparare e rispetto per le regole del progetto.
 
 - **1. Leggi le regole critiche**
-  - `laravel/Modules/Xot/docs/critical-rules-consolidated.md`
-  - `laravel/Modules/Meetup/docs/rules-index.md`
-  - `laravel/Themes/Meetup/docs/critical-rules-consolidated.md`
+  - `laravel/Modules/Xot/docs/`
+  - [Regole del modulo Meetup](laravel/Modules/Meetup/docs/rules-index.md)
+  - [Regole del tema Meetup](laravel/Themes/Meetup/docs/critical-rules-consolidated.md)
 - **2. Avvia l'ambiente**
   - setup Laravel classico (database, `.env`, ecc.)
   - dal tema Meetup:
@@ -161,6 +164,8 @@ Se ti riconosci in questa filosofia, ti troverai a casa.
 ---
 
 ## 🤝 Come puoi contribuire (anche se è la tua prima volta)
+
+Leggi [CONTRIBUTING.md](CONTRIBUTING.md), il [Code of Conduct](CODE_OF_CONDUCT.md) e scegli un issue con label [`good first issue`](https://github.com/laraxot/laravelpizza.com/labels/good%20first%20issue). **Apri una PR da fork** (è così che contiamo i contributor esterni).
 
 - **Se ami il frontend**:
   - Aiuta a rifinire il tema Meetup (`resources/css/app.css`, `resources/js/app.js`)
@@ -178,11 +183,13 @@ Ogni contributo che:
 - rende più facile per altri capire il progetto,
 è il benvenuto.
 
+Maintainer: playbook candidatura Claude Ultra OSS in [docs/claude-for-open-source-eligibility.md](docs/claude-for-open-source-eligibility.md).
+
 ---
 
 ## 🍕 Perché il nome "LaravelPizza"?
 
-Perché l'idea è semplice: **mettere insieme le due cose che rendono felice il 90% degli sviluppatori**:
+Perché l'idea è semplice: **mettere insieme le tre cose che rendono felice il 90% degli sviluppatori**:
 
 - scrivere buon codice Laravel,
 - mangiare una pizza in compagnia,
