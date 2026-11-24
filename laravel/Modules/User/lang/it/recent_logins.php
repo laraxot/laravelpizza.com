@@ -13,9 +13,9 @@ return [
     'fields' => [
         'authenticatable' => [
             'name' => [
-                'label' => 'authenticatable.name',
+                'label' => 'Utente autenticato',
             ],
-            'label' => '',
+            'label' => 'Utente autenticato',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -24,13 +24,13 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-            'label' => 'login_at',
+            'label' => 'Ora accesso',
         ],
         'ip_address' => [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-            'label' => 'ip_address',
+            'label' => 'Indirizzo IP',
         ],
         'user_agent' => [
             'label' => 'Browser (user agent)',

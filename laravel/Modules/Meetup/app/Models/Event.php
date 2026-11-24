@@ -331,7 +331,7 @@ class Event extends BaseModel
 
     /**
      * Scope: only published events (status=published).
-     * Overrides HasCommonScopes::scopePublished (published_at) for Event domain.
+     * Domain status filter — not HasCommonScopes published_at (that trait stays off XotBaseModel).
      *
      * @param  Builder<$this>  $query
      * @return Builder<$this>

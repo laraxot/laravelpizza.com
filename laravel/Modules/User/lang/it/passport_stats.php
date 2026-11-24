@@ -6,7 +6,7 @@ return [
     'sections' => [
         'empty' => [
             'label' => '',
-            'heading' => 'empty',
+            'heading' => '',
         ],
     ],
 ];

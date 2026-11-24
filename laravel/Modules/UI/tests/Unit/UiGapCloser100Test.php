@@ -21,7 +21,7 @@ use Modules\UI\Filament\Widgets\UserCalendarWidget;
 use Modules\UI\Http\Middleware\SetLocale;
 use Modules\UI\Rules\OpeningHoursRule;
 use Modules\UI\Tests\TestCase;
-use Modules\UI\Traits\TableLayoutTrait;
+use Modules\UI\Filament\Actions\Table\TableLayoutTrait;
 use Modules\UI\View\Components\Render\Block;
 use Modules\UI\View\Components\Render\Blocks;
 use Modules\UI\View\Composers\ThemeComposer;
@@ -178,42 +178,32 @@ describe('UI gap closer 100 — middleware trait rules', function (): void {
         Assert::assertSame(200, $response->getStatusCode());
     });
 
-    test('TableLayoutTrait session branches and refresh', function (): void {
+    test('TableLayoutTrait session branches and reset', function (): void {
+        // GateGuard facts: exercises Modules\UI\Filament\Actions\Table\TableLayoutTrait
+        // (session layout SSoT). Existing coverage: this file + UiHighestMissCoverageTest.
+        // User: «If dead: move to docs/parcheggio» — tests follow the surviving trait.
         $subject = new class
         {
             use TableLayoutTrait;
-
-            public int $dispatched = 0;
-
-            public function dispatch(mixed ...$params): void
-            {
-                $this->dispatched++;
-            }
         };
 
-        // Una variabile per scenario: la sessione cambia fra una lettura e l'altra,
-        // il valore letto prima non dice niente su quello letto dopo.
-        Session::put('table_layout', TableLayoutEnum::LIST);
-        $fromEnum = $subject->getTableLayout();
-        Assert::assertSame(TableLayoutEnum::LIST, $fromEnum);
+        Session::put('table_layout_default', TableLayoutEnum::LIST);
+        Assert::assertSame(TableLayoutEnum::LIST, $subject->getTableLayout());
 
-        Session::put('table_layout', 'list');
-        $fromString = $subject->getTableLayout();
-        Assert::assertSame(TableLayoutEnum::LIST, $fromString);
+        Session::put('table_layout_default', 'list');
+        Assert::assertSame(TableLayoutEnum::LIST, $subject->getTableLayout());
 
-        Session::put('table_layout', 'invalid');
-        $fromInvalid = $subject->getTableLayout();
-        Assert::assertSame(TableLayoutEnum::GRID, $fromInvalid);
+        Session::put('table_layout_default', 'invalid');
+        Assert::assertSame(TableLayoutEnum::LIST, $subject->getTableLayout());
 
-        Session::forget('table_layout');
-        $withoutSession = $subject->getTableLayout();
-        Assert::assertSame(TableLayoutEnum::GRID, $withoutSession);
+        Session::forget('table_layout_default');
+        Assert::assertSame(TableLayoutEnum::LIST, $subject->getTableLayout());
 
         $subject->setTableLayout(TableLayoutEnum::GRID);
-        Assert::assertSame('grid', Session::get('table_layout'));
+        Assert::assertSame('grid', Session::get('table_layout_default'));
 
-        $subject->refreshTable();
-        Assert::assertGreaterThan(0, $subject->dispatched);
+        $subject->resetLayout();
+        Assert::assertSame(TableLayoutEnum::LIST, $subject->getTableLayout());
     });
 
     test('OpeningHoursRule cleanTimeValue rejects non-string', function (): void {

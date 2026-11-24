@@ -5,10 +5,10 @@ declare(strict_types=1);
 return [
     'fields' => [
         'name' => [
-            'label' => 'Nome',
-            'placeholder' => 'name',
-            'helper_text' => 'name',
-            'description' => 'name',
+            'label' => 'Nome visualizzato',
+            'placeholder' => 'Inserisci il nome visualizzato',
+            'helper_text' => 'Il nome mostrato nel sito e nei pannelli.',
+            'description' => 'Nome visualizzato',
         ],
         'created_at' => [
             'label' => 'Creato il',

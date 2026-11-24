@@ -78,3 +78,18 @@ I marker residuali bloccano il bootstrap PHPStan (`unexpected token "<<"`) e spe
 1. `rg -l '^<<<<<<<' laravel/Modules/User --glob '*.php'` → 0
 2. `php -l` su tutti i PHP toccati → 0 fail
 3. Forward-only (no checkout/restore/reset)
+
+## Chiavi duplicate nei file lang dopo la sync
+
+**Cosa è successo.** La sync ha unito le due storie tenendo entrambi i lati dei conflitti. Nei file `lang/*/*.php` la stessa chiave compariva due volte nello stesso array: PHP tiene in silenzio l'ultimo valore, PHPStan segnala `array.duplicateKey` (27 errori). In `it/passport_stats.php` il doppio `return` dava `deadCode.unreachable`. Le copie erano di due tipi: il testo curato (`'Utente'`, `'Nome visualizzato'`) e uno stub generato dall'app (valore uguale alla chiave, tipo `'placeholder' => 'team_id'`, `'label' => 'user.name'`, `'heading' => 'empty'`, oppure inglese in un file `it`).
+
+**Regola applicata** (per ogni chiave: prima si guarda cosa legge il codice con `grep "user::<file>\."`):
+
+1. vince il testo reale; mai uno stub uguale alla propria chiave, mai inglese in `it` se esiste l'italiano;
+2. se le due copie hanno sotto-array diversi si fondono le sotto-chiavi, senza perdere testo reale;
+3. testo di aiuto (`placeholder`, `helper_text`, `description`) vuoto o assente è meglio di un nome di campo (contratto di `AutoLabelAction`: solo l'etichetta ha un ripiego); una sezione senza titolo salva `heading` vuoto, non `'empty'`;
+4. le chiavi lette dal codice restano tutte: `user_overview_widget.*.{label,description}` (`UserOverview`, con test), `user_form.fields.*` e `actions.*` (viste auth, `AuthPagesLocalesTest`), `widgets.users_chart.*` e `widgets.recent_logins.*`, `profile.*`.
+
+**File.** `en/profile.php` (`navigation.label` = `Profile`, il plurale è già in `plural`), `en/widgets.php` (`users_chart.heading` = `Users`, la serie è `label` = `New users`), `en/user_overview_widget.php` e `it/user_overview_widget.php` (descrizioni ripristinate: erano state perse tenendo solo il blocco con la sola etichetta), `it/base_profile_form.php` e `it/base_profiles.php` (etichetta `Utente` al posto di `user.name`, campi fusi), `it/oauth_personal_access_clients.php` e `it/password_resets.php` (blocco `fields` curato fuso con `actions`), `it/recent_logins.php` (`Browser (user agent)` e `Utente` al posto di `user_agent` e `user`), `it/user_form.php` (`name` = `Nome visualizzato`, `token` = `Token`), `it/passport_stats.php` (un solo `return`, nessun codice legge questo file).
+
+**Aperto.** `it/widgets.php` non ha `users_chart.label` e `recent_logins.heading`, che il codice legge; `de/profile.php` non ha `my_profile` e `subheading`. Fuori da questa lane.

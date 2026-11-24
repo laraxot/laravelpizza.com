@@ -1,11 +1,19 @@
 # Event published scope contract
 
 `Event::published()` returns only events whose workflow status is exactly
-`published`. It overrides `HasCommonScopes::scopePublished` (which filters
-`published_at`) because Event domain uses the `status` column.
+`published`. Domain filter on the `status` column — not Spatie/CMS
+`published_at`.
 
-PHPDoc uses `Builder<$this>` so the override stays compatible with the
-parent `Builder<static>` signature on `HasCommonScopes`.
+`HasCommonScopes::scopePublished` (filters `published_at`) must **not** live
+on `XotBaseModel`: wiring it there made `Event::scopePublished` a child
+override and PHPStan failed (`method.childParameterType` /
+`method.childReturnType` on `Builder<$this>` vs `Builder<static(XotBaseModel)>`).
+Consumer of `HasCommonScopes`: `Notify\Models\NotificationTemplate` only.
 
 The scope filters the internal workflow `status`; the Schema.org
 `event_status` enum remains a separate representation concern.
+
+## Related
+
+- [Xot standing PHPStan story](../../../Xot/docs/bmad/stories/phpstan-modules-zero-swarm-standing.story.md)
+- [Notify NotificationTemplate](../../../Notify/app/Models/NotificationTemplate.php)

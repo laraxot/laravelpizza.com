@@ -7,6 +7,23 @@ tags: [documentation]
 
 # Risoluzione Conflitti in TableLayoutTrait
 
+## Stato attuale
+
+Nel modulo ci sono **due** trait con lo stesso nome corto:
+
+| Trait | Sessione | Default | Chi lo usa |
+|---|---|---|---|
+| `Modules\UI\Filament\Actions\Table\TableLayoutTrait` | `table_layout_{id}` | LIST | `HasTableLayoutPage` (e quindi `HasXotTable`), `TableLayoutToggleTableAction` |
+| `Modules\UI\Traits\TableLayoutTrait` | `table_layout` | GRID | nessuna classe di `app/`; solo `tests/Unit/UiGapCloser100Test.php` e `tests/Unit/UiHighestMissCoverageTest.php` |
+
+Il secondo e' la versione legacy per i componenti Livewire (ha anche `refreshTable()` e `resetTable()`). PHPStan lo segnala `trait.unused` perche' i test sono esclusi dall'analisi (`excludePaths: ./*/tests/*`), quindi il trait porta un `@phpstan-ignore trait.unused` motivato nel docblock.
+
+Perche' resta e non e' parcheggiato: censimento su 13 progetti in `_bases` (`grep` e `rg`), zero consumatori di produzione ovunque, ma i due test lo importano in ogni progetto e si romperebbero; non e' mai stato usato da codice di `app/` nella storia del modulo. Perche' non e' fuso con quello vivo: cambierebbero chiave di sessione e default, cioe' la preferenza gia' salvata dagli utenti.
+
+Per ritirarlo serve una decisione esplicita: parcheggio in `docs/parcheggio/app/Traits/TableLayoutTrait.php.zero_used` e rimozione dei due blocchi di test che lo esercitano. Non per chiudere l'errore PHPStan.
+
+Le sezioni che seguono sono la storia della risoluzione dei conflitti: il namespace era allora `Modules\UI\app\Traits` e `BaseListRecords` vi faceva riferimento, oggi non piu' (namespace `Modules\UI\Traits`, nessun consumatore in `app/`).
+
 ## Panoramica
 
 Questo documento descrive la risoluzione dei conflitti nel file `TableLayoutTrait.php` all'interno del modulo UI. Il trait fornisce funzionalità per la gestione del layout delle tabelle nelle interfacce utente, consentendo di passare tra visualizzazione a griglia e a lista.
