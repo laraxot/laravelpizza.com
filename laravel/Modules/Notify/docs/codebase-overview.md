@@ -30,7 +30,15 @@ github:
 created_at: '2026-07-20'
 updated_at: '2026-07-20'
 created: 2026-07-20
+<<<<<<< .merge_file_S1Rtsg
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_pN2vHQ
 ---
 
 # Panoramica codebase Notify

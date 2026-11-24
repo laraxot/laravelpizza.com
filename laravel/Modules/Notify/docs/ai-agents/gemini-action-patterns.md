@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_vJ8Mkq
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_TzCmAK
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_vJ8Mkq
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_TzCmAK
 qmd: "gemini action patterns"
 issues: []
 discussions: []
@@ -170,10 +176,13 @@ Alcune eccezioni sono pragmaticamente accettabili:
 - [Indice GEMINI](./gemini-split-index.md)
 - [queueable-actions.md](./queueable-actions.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_vJ8Mkq
 - [GEMINI.md originale](../../gemini.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_TzCmAK
 - [gemini.md originale](../../gemini.md)
 =======
 <<<<<<< HEAD
@@ -182,8 +191,11 @@ Alcune eccezioni sono pragmaticamente accettabili:
 - [gemini.md originale](../../gemini.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_vJ8Mkq
 =======
 - [GEMINI.md originale](../../gemini.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_TzCmAK
 - [Index principale](./index.md)

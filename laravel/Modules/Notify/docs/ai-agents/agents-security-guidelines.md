@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_1Pryx4
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_GtjvwJ
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_1Pryx4
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_GtjvwJ
 qmd: "agents security guidelines"
 issues: []
 discussions: []
@@ -89,6 +95,7 @@ discussions: []
 - [AGENTS.md originale](../../AGENTS.md)
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_1Pryx4
 <<<<<<< HEAD
 - [laravel-security-audit skill available](../../.opencode/skills/laravel-security-audit/SKILL.md)
 - [AGENTS.md originale](../../AGENTS.md)
@@ -108,6 +115,15 @@ discussions: []
 - [laravel-security-audit skill available](../../.opencode/skills/laravel-security-audit/skill.md)
 - [AGENTS.md originale](../../agents.md)
 - [agents.md originale](../../agents.md)
+=======
+- [laravel-security-audit skill available](../../.opencode/skills/laravel-security-audit/skill.md)
+- [AGENTS.md originale](../../agents.md)
+- [agents.md originale](../../agents.md)
+=======
+- [laravel-security-audit skill available](../../.opencode/skills/laravel-security-audit/SKILL.md)
+- [AGENTS.md originale](../../AGENTS.md)
+- [AGENTS.md originale](../../AGENTS.md)
+>>>>>>> .merge_file_GtjvwJ
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [Index principale](./index.md)

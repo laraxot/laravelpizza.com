@@ -3,7 +3,15 @@ title: "php coding standards"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_IRoUzx
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_HGf8C9
 qmd: "php coding standards"
 issues: []
 discussions: []

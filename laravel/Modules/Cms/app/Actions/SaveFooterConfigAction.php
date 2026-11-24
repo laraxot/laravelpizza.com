@@ -12,10 +12,13 @@ use Spatie\QueueableAction\QueueableAction;
  * Salva il piede del sito nella config appearance del tenant.
  *
  * @contract docs/contracts/save-footer-config-action.md
+<<<<<<< .merge_file_rz9Yfj
 <<<<<<< .merge_file_tTjRYw
  *
 =======
 >>>>>>> .merge_file_on5uXm
+=======
+>>>>>>> .merge_file_70UsYP
  * @see docs/contracts/save-footer-config-action.md
  */
 class SaveFooterConfigAction

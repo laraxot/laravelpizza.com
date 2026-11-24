@@ -3,7 +3,15 @@ title: "GITHUB ISSUES WORKFLOW"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_V0v9wV
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_ffjz65
 qmd: "GITHUB ISSUES WORKFLOW"
 issues: []
 discussions: []
@@ -13,10 +21,13 @@ discussions: []
 
 **CRITICAL RULE**: GitHub Issues e Discussions si creano **ONLINE** su GitHub, NON come file locali!
 
+<<<<<<< .merge_file_V0v9wV
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_ffjz65
 ---
 
 title: "GITHUB ISSUES WORKFLOW"
@@ -34,6 +45,7 @@ discussions: []
 
 ---
 
+<<<<<<< .merge_file_V0v9wV
 <<<<<<< HEAD
 =======
 =======
@@ -41,6 +53,8 @@ discussions: []
 
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_ffjz65
 ## ✅ CORRECT: Create Issues Online
 
 ### Method 1: GitHub Web Interface

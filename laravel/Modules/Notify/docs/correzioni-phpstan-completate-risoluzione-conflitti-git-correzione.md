@@ -169,6 +169,7 @@ Durante la risoluzione:
 ## Collegamenti
 
 - [Git Conflicts Guide](../../Geo/docs_project/git-conflicts-resolution-guide.md)
+<<<<<<< .merge_file_J4ODT1
 <<<<<<< HEAD
 - [Git Conflicts Guide](../../Geo/docs_project/git-conflicts-resolution-guide.md)
 =======
@@ -177,6 +178,9 @@ Durante la risoluzione:
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- [Git Conflicts Guide](../../Geo/docs_project/git-conflicts-resolution-guide.md)
+>>>>>>> .merge_file_lB28pk
 - [Notify Best Practices](best-practices.md)
 - [PHPStan Configuration](../../phpstan.neon)
 - [PHPStan User Guide](https://phpstan.org/user-guide/getting-started)

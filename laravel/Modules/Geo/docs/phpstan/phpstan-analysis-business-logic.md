@@ -307,9 +307,12 @@ use function Safe\json_encode;
 ## 📚 **Documentazione Correlata**
 
 - [Business Logic Factory & Seeder Audit](../business-logic-factory-seeder-audit.md)
+<<<<<<< .merge_file_ED411q
 <<<<<<< .merge_file_Rba7Rr
 - [PHPStan Critical Rules](../phpstan-critical-rule.md)
 =======
+=======
+>>>>>>> .merge_file_b74irg
 <<<<<<< HEAD
 - [PHPStan Critical Rules](./phpstan-critical-rule.md)
 =======
@@ -319,7 +322,10 @@ use function Safe\json_encode;
 - [PHPStan Critical Rules](../phpstan-critical-rule.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_ED411q
 >>>>>>> .merge_file_2jxqu7
+=======
+>>>>>>> .merge_file_b74irg
 - [Factory Best Practices](../factory-best-practices.md)
 - [Testing Business Behavior Supreme Rule](../testing/testing-business-behavior-supreme-rule.md)
 

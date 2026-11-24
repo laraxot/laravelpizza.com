@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_iUxhYs
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_tYHAhA
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_iUxhYs
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_tYHAhA
 qmd: "agents first rule"
 issues: []
 discussions: []
@@ -28,6 +34,7 @@ discussions: []
 > Source: [AGENTS.md](../../AGENTS.md)
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_iUxhYs
 <<<<<<< HEAD
 > Source: [AGENTS.md](../../AGENTS.md)
 > Source: [AGENTS.md](../../AGENTS.md)
@@ -43,6 +50,13 @@ discussions: []
 =======
 > Source: [AGENTS.md](../../agents.md)
 > Source: [agents.md](../../agents.md)
+=======
+> Source: [AGENTS.md](../../agents.md)
+> Source: [agents.md](../../agents.md)
+=======
+> Source: [AGENTS.md](../../AGENTS.md)
+> Source: [AGENTS.md](../../AGENTS.md)
+>>>>>>> .merge_file_tYHAhA
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 > Back: [index](index.md) | [workflow.md](workflow.md)

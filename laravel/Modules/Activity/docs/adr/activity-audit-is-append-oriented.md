@@ -1,8 +1,11 @@
 ---
+<<<<<<< .merge_file_pBM7Ze
 <<<<<<< .merge_file_hRCawF
 status: accepted
 module: Activity
 =======
+=======
+>>>>>>> .merge_file_jAU5VI
 title: "ADR — L'audit delle attività è append-oriented"
 type: decision
 status: accepted
@@ -10,7 +13,10 @@ module: Activity
 tags: [adr, activity, audit]
 created: 2026-11-23
 updated: 2026-11-24
+<<<<<<< .merge_file_pBM7Ze
 >>>>>>> .merge_file_Lfz30q
+=======
+>>>>>>> .merge_file_jAU5VI
 ---
 
 # L'audit delle attività è append-oriented
@@ -39,8 +45,11 @@ La cronologia resta affidabile e interrogabile; le viste devono interpretare gli
 ## Conferma
 
 Verificare recorder, policy e test di registrazione prima di cambiare lo schema dell'audit.
+<<<<<<< .merge_file_pBM7Ze
 <<<<<<< .merge_file_hRCawF
 =======
+=======
+>>>>>>> .merge_file_jAU5VI
 
 ## Verifica
 
@@ -54,4 +63,7 @@ Verificare recorder, policy e test di registrazione prima di cambiare lo schema 
   del soggetto con `properties.old`, non la riga del log. Ogni nuovo punto che modifica una riga di `activity_log` va giustificato qui.
 - La pulizia per anzianita' (`Modules/Activity/app/Actions/ActivityMaintenanceAction.php`) cancella righe vecchie: e' retention,
   non riscrittura della cronologia.
+<<<<<<< .merge_file_pBM7Ze
 >>>>>>> .merge_file_Lfz30q
+=======
+>>>>>>> .merge_file_jAU5VI

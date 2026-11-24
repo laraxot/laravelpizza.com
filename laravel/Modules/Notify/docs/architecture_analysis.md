@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_i69MMD
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_i0KyoP
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_i69MMD
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_i0KyoP
 qmd: "architecture analysis"
 issues: []
 discussions: []
@@ -1821,11 +1827,14 @@ Frontend:
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 [ ] Asset buildati (`npm run build`) e serviti via symlink in `public_html/themes` (`npm run copy` obsoleto)
 =======
+<<<<<<< .merge_file_i69MMD
 <<<<<<< HEAD
 <<<<<<< HEAD
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 [ ] Asset buildati (`npm run build`) e serviti via symlink in `public_html/themes` (`npm run copy` obsoleto)
 =======
+=======
+>>>>>>> .merge_file_i0KyoP
 <<<<<<< .merge_file_GfMJI8
 [ ] Assets deployed (symlink public_html/themes (npm run copy obsoleto))
 [ ] Asset buildati (`npm run build`) e serviti via symlink in `public_html/themes` (`npm run copy` obsoleto)
@@ -1833,10 +1842,13 @@ niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../larave
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 >>>>>>> .merge_file_HLa6bH
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_i69MMD
 =======
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_i0KyoP
 [ ] Dark mode tested
 [ ] Responsive design tested
 [ ] Accessibility tested

@@ -36,12 +36,18 @@ L'obiettivo è fornire una panoramica neutra e riutilizzabile dei pattern, dei v
 - [Audit Log](../audit_log/readme.md)
 - [Workflow Approval](../workflow_approval/readme.md)
 - [Task Management](../task_management/readme.md)
+<<<<<<< .merge_file_I2Kab8
 <<<<<<< .merge_file_PmM8Hy
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_3iYUGb
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_j1toQG
 - [<nome progetto>ion Market](../<nome progetto>ion_market/README.md)
 - [Event Sourcing & CQRS](../event_sourcing_cqrs/README.md)
 - [Audit Log](../audit_log/README.md)

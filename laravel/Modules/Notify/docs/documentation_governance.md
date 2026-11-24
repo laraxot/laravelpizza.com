@@ -3,7 +3,15 @@ title: "documentation governance"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_9U9Gge
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_NS4Ji4
 qmd: "documentation governance"
 issues: []
 discussions: []
@@ -455,6 +463,7 @@ jobs:
 ## 📚 Related Documents
 
 - [AGENTS.md](../../../AGENTS.md) - Agent guidelines
+<<<<<<< .merge_file_9U9Gge
 <<<<<<< HEAD
 - [AGENTS.md](../../../AGENTS.md) - Agent guidelines
 =======
@@ -463,6 +472,9 @@ jobs:
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- [AGENTS.md](../../../AGENTS.md) - Agent guidelines
+>>>>>>> .merge_file_NS4Ji4
 - [.windsurfrules](../../../.windsurfrules) - IDE rules
 - [DOCUMENTATION_INDEX.md](../../../docs/DOCUMENTATION_INDEX.md) - Master index
 

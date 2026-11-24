@@ -29,6 +29,7 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 ### **Per Amministratori**
 1. [best_practices.md](best_practices.md) - Best practices e linee guida
 <<<<<<< HEAD
+<<<<<<< .merge_file_3TzivT
 <<<<<<< HEAD
 2. [TROUBLESHOOTING.md](troubleshooting.md) - Guida troubleshooting
 =======
@@ -40,6 +41,15 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 >>>>>>> laraxot/dev
 =======
 2. [troubleshooting.md](troubleshooting.md) - Guida troubleshooting
+=======
+2. [TROUBLESHOOTING.md](troubleshooting.md) - Guida troubleshooting
+=======
+<<<<<<< HEAD
+2. [troubleshooting.md](troubleshooting.md) - Guida troubleshooting
+=======
+2. [TROUBLESHOOTING.md](troubleshooting.md) - Guida troubleshooting
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_VAt2al
 >>>>>>> laraxot/dev
 3. [config/lang.php](../config/lang.php) - Configurazione e ottimizzazioni
 
@@ -47,15 +57,21 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 1. [API_REFERENCE.md](api_reference.md) - Riferimento API completo
 2. [EXAMPLES.md](examples.md) - Esempi di integrazione
 <<<<<<< HEAD
+<<<<<<< .merge_file_3TzivT
 <<<<<<< HEAD
 =======
-3. [BEST_PRACTICES.md](best_practices.md) - Pattern di implementazione
-
->>>>>>> laraxot/dev
+>>>>>>> .merge_file_VAt2al
 =======
 3. [BEST_PRACTICES.md](best_practices.md) - Pattern di implementazione
 
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_3TzivT
+=======
+3. [BEST_PRACTICES.md](best_practices.md) - Pattern di implementazione
+
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_VAt2al
 3. [best_practices.md](best_practices.md) - Pattern di implementazione
 1. [README.md](README.md) - Documentazione principale e panoramica
 2. [config/lang.php](../config/lang.php) - Configurazione centralizzata
@@ -63,15 +79,21 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 
 ### **Per Amministratori**
 <<<<<<< HEAD
+<<<<<<< .merge_file_3TzivT
 <<<<<<< HEAD
 =======
-1. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Best practices e linee guida
-
->>>>>>> laraxot/dev
+>>>>>>> .merge_file_VAt2al
 =======
 1. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Best practices e linee guida
 
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_3TzivT
+=======
+1. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Best practices e linee guida
+
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_VAt2al
 1. [best_practices.md](best_practices.md) - Best practices e linee guida
 2. [TROUBLESHOOTING.md](troubleshooting.md) - Guida troubleshooting
 3. [config/lang.php](../config/lang.php) - Configurazione e ottimizzazioni
@@ -80,15 +102,21 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 1. [API_REFERENCE.md](api_reference.md) - Riferimento API completo
 2. [EXAMPLES.md](examples.md) - Esempi di integrazione
 <<<<<<< HEAD
+<<<<<<< .merge_file_3TzivT
 <<<<<<< HEAD
 =======
-3. [BEST_PRACTICES.md](best_practices.md) - Pattern di implementazione
-
->>>>>>> laraxot/dev
+>>>>>>> .merge_file_VAt2al
 =======
 3. [BEST_PRACTICES.md](best_practices.md) - Pattern di implementazione
 
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_3TzivT
+=======
+3. [BEST_PRACTICES.md](best_practices.md) - Pattern di implementazione
+
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_VAt2al
 3. [best_practices.md](best_practices.md) - Pattern di implementazione
 1. [README.md](README.md) - Documentazione principale e panoramica
 2. [config/lang.php](../config/lang.php) - Configurazione centralizzata
@@ -96,15 +124,21 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 
 ### **Per Amministratori**
 <<<<<<< HEAD
+<<<<<<< .merge_file_3TzivT
 <<<<<<< HEAD
 =======
-1. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Best practices e linee guida
-
->>>>>>> laraxot/dev
+>>>>>>> .merge_file_VAt2al
 =======
 1. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Best practices e linee guida
 
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_3TzivT
+=======
+1. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Best practices e linee guida
+
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_VAt2al
 1. [best_practices.md](best_practices.md) - Best practices e linee guida
 2. [TROUBLESHOOTING.md](troubleshooting.md) - Guida troubleshooting
 3. [config/lang.php](../config/lang.php) - Configurazione e ottimizzazioni
@@ -113,11 +147,14 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 1. [API_REFERENCE.md](API_REFERENCE.md) - Riferimento API completo
 2. [EXAMPLES.md](examples.md) - Esempi di integrazione
 <<<<<<< HEAD
+<<<<<<< .merge_file_3TzivT
 <<<<<<< HEAD
 =======
 3. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Pattern di implementazione
 
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_VAt2al
 =======
 3. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Pattern di implementazione
 
@@ -155,32 +192,45 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 
 ### **🔒 Sicurezza e Validazione**
 <<<<<<< HEAD
+<<<<<<< .merge_file_3TzivT
 <<<<<<< HEAD
 =======
-- **Validazione File**: [BEST_PRACTICES.md](BEST_PRACTICES.md#sicurezza-e-validazione)
-
->>>>>>> laraxot/dev
+>>>>>>> .merge_file_VAt2al
 =======
 - **Validazione File**: [BEST_PRACTICES.md](BEST_PRACTICES.md#sicurezza-e-validazione)
 
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_3TzivT
+=======
+- **Validazione File**: [BEST_PRACTICES.md](BEST_PRACTICES.md#sicurezza-e-validazione)
+
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_VAt2al
 - **Validazione File**: [best_practices.md](best_practices.md#sicurezza-e-validazione)
 - **Controlli Integrità**: [TROUBLESHOOTING.md](troubleshooting.md#problemi-di-sicurezza)
 - **Rate Limiting**: [TROUBLESHOOTING.md](troubleshooting.md#rate-limiting)
 
 ### **🚀 Performance e Ottimizzazione**
 <<<<<<< HEAD
+<<<<<<< .merge_file_3TzivT
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_VAt2al
 - **Cache Strategy**: [BEST_PRACTICES.md](BEST_PRACTICES.md#performance-e-ottimizzazione)
 - **Lazy Loading**: [BEST_PRACTICES.md](BEST_PRACTICES.md#lazy-loading)
 - **Memory Management**: [BEST_PRACTICES.md](BEST_PRACTICES.md#memory-management)
 
+<<<<<<< .merge_file_3TzivT
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
+=======
+>>>>>>> .merge_file_VAt2al
 >>>>>>> laraxot/dev
 - **Cache Strategy**: [best_practices.md](best_practices.md#performance-e-ottimizzazione)
 - **Lazy Loading**: [best_practices.md](best_practices.md#lazy-loading)
@@ -238,15 +288,21 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 2. [EXAMPLES.md](examples.md) - Integrazione Filament e Testing
 3. [TROUBLESHOOTING.md](troubleshooting.md) - Problemi comuni
 <<<<<<< HEAD
+<<<<<<< .merge_file_3TzivT
 <<<<<<< HEAD
 =======
-1. [BEST_PRACTICES.md](best_practices.md) - Tutte le sezioni
-
->>>>>>> laraxot/dev
+>>>>>>> .merge_file_VAt2al
 =======
 1. [BEST_PRACTICES.md](best_practices.md) - Tutte le sezioni
 
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_3TzivT
+=======
+1. [BEST_PRACTICES.md](best_practices.md) - Tutte le sezioni
+
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_VAt2al
 1. [best_practices.md](best_practices.md) - Tutte le sezioni
 2. [EXAMPLES.md](examples.md) - Integrazione Filament e Testing
 3. [TROUBLESHOOTING.md](troubleshooting.md) - Problemi comuni
@@ -274,15 +330,21 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 3. [TROUBLESHOOTING.md](troubleshooting.md) - Problemi complessi
 1. [API_REFERENCE.md](api_reference.md) - Tutte le sezioni
 <<<<<<< HEAD
+<<<<<<< .merge_file_3TzivT
 <<<<<<< HEAD
 =======
-2. [BEST_PRACTICES.md](best_practices.md) - Pattern avanzati
-
->>>>>>> laraxot/dev
+>>>>>>> .merge_file_VAt2al
 =======
 2. [BEST_PRACTICES.md](best_practices.md) - Pattern avanzati
 
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_3TzivT
+=======
+2. [BEST_PRACTICES.md](best_practices.md) - Pattern avanzati
+
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_VAt2al
 2. [best_practices.md](best_practices.md) - Pattern avanzati
 3. [TROUBLESHOOTING.md](troubleshooting.md) - Problemi complessi
 
@@ -297,11 +359,14 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 
 ### **Localizzazione**
 <<<<<<< HEAD
+<<<<<<< .merge_file_3TzivT
 <<<<<<< HEAD
 =======
 - **File PHP**: [BEST_PRACTICES.md](BEST_PRACTICES.md#sintassi-file-php)
 
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_VAt2al
 =======
 - **File PHP**: [BEST_PRACTICES.md](BEST_PRACTICES.md#sintassi-file-php)
 
@@ -316,10 +381,14 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 - **Actions**: [EXAMPLES.md](examples.md#actions-personalizzate)
 - **Resources**: [EXAMPLES.md](examples.md#resource-base)
 <<<<<<< HEAD
+<<<<<<< .merge_file_3TzivT
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_VAt2al
 - **Integrazione**: [BEST_PRACTICES.md](BEST_PRACTICES.md#integrazione-filament)
 
 ### **Performance**
@@ -332,9 +401,12 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 - **Sintassi**: [BEST_PRACTICES.md](BEST_PRACTICES.md#sintassi-valida)
 - **Struttura**: [BEST_PRACTICES.md](BEST_PRACTICES.md#struttura-gerarchica)
 
+<<<<<<< .merge_file_3TzivT
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
+=======
+>>>>>>> .merge_file_VAt2al
 >>>>>>> laraxot/dev
 - **Integrazione**: [best_practices.md](best_practices.md#integrazione-filament)
 
@@ -354,12 +426,15 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 - **Unit Test**: [EXAMPLES.md](examples.md#test-unitari)
 - **Feature Test**: [EXAMPLES.md](examples.md#test-feature)
 <<<<<<< HEAD
+<<<<<<< .merge_file_3TzivT
 <<<<<<< HEAD
 =======
 - **PHPStan**: [BEST_PRACTICES.md](BEST_PRACTICES.md#phpstan-compliance)
 - **Validazione**: [BEST_PRACTICES.md](BEST_PRACTICES.md#validazione-automatica)
 
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_VAt2al
 =======
 - **PHPStan**: [BEST_PRACTICES.md](BEST_PRACTICES.md#phpstan-compliance)
 - **Validazione**: [BEST_PRACTICES.md](BEST_PRACTICES.md#validazione-automatica)

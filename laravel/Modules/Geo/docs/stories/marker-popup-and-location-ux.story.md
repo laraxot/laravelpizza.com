@@ -1,14 +1,20 @@
 ---
+<<<<<<< .merge_file_lGZzfN
 <<<<<<< .merge_file_HRE3uW
 created: 2026-10-07
 =======
+=======
+>>>>>>> .merge_file_Vh36lN
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_6LCBgu
 created: 2026-10-07
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_lGZzfN
 >>>>>>> .merge_file_1sGxuy
+=======
+>>>>>>> .merge_file_Vh36lN
 title: "Marker Popup and Location UX .story"
 type: note
 tags: [documentation]
@@ -18,13 +24,19 @@ qmd: "Marker Popup and Location UX .story"
 date_originale_nome_file: 2026-10-07
 issues: [122]
 discussions: []
+<<<<<<< .merge_file_lGZzfN
 <<<<<<< .merge_file_HRE3uW
 =======
+=======
+>>>>>>> .merge_file_Vh36lN
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_XD49sI
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_lGZzfN
 >>>>>>> .merge_file_1sGxuy
+=======
+>>>>>>> .merge_file_Vh36lN
 ---
 
 # Popup marker e posizione: leggibilita e layout

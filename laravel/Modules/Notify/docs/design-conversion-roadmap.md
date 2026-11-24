@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_DiboGp
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_0JYqnc
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_DiboGp
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_0JYqnc
 qmd: "DESIGN CONVERSION ROADMAP"
 issues: []
 discussions: []
@@ -176,6 +182,7 @@ laravel/Themes/Sixteen/docs/pages/<page-name>/
 ```
 laravel/Themes/Sixteen/docs/
 <<<<<<< HEAD
+<<<<<<< .merge_file_DiboGp
 ├── INDEX.md                                    # Main index
 =======
 <<<<<<< HEAD
@@ -190,6 +197,14 @@ laravel/Themes/Sixteen/docs/
 >>>>>>> laraxot/dev
 =======
 ├── INDEX.md                                    # Main index
+=======
+├── index.md                                    # Main index
+=======
+<<<<<<< HEAD
+├── INDEX.md                                    # Main index
+=======
+├── index.md                                    # Main index
+>>>>>>> .merge_file_0JYqnc
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 ├── COMPLETE-VISUAL-PARITY-REPORT.md          # All 54 pages
@@ -405,6 +420,7 @@ node bashscripts/github/create-design-issues.mjs
 
 Then pick issue #1 and get coding! 🚀
 <<<<<<< HEAD
+<<<<<<< .merge_file_DiboGp
 
 =======
 <<<<<<< HEAD
@@ -415,3 +431,8 @@ Then pick issue #1 and get coding! 🚀
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_0JYqnc

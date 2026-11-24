@@ -57,11 +57,14 @@ Pagine brevi e riusabili (concetti, regole, memorie) che completano le story. Mi
 |---|---|---|
 | `concepts/` | 37 | [concepts/index.md](./concepts/index.md) |
 | `testing/` | 11 | nessuno |
+<<<<<<< .merge_file_iKIcOw
 <<<<<<< .merge_file_2TfzB0
 | `rules/` | 4 | [rules/index.md](./rules/index.md) |
 | `memories/` | 4 | [memories/index.md](./memories/index.md) |
 | `skills/` | 2 | [skills/index.md](./skills/index.md) |
 =======
+=======
+>>>>>>> .merge_file_TatMu6
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -92,7 +95,10 @@ Pagine brevi e riusabili (concetti, regole, memorie) che completano le story. Mi
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_iKIcOw
 >>>>>>> .merge_file_eHsfDm
+=======
+>>>>>>> .merge_file_TatMu6
 | `howto/`, `_templates/` | 3 ciascuna | nessuno |
 | `troubleshooting/`, `integrations/`, `features/`, `commands/`, `analysis/` | 2 ciascuna | nessuno |
 | `sources/`, `product/`, `patterns/`, `overviews/`, `how-to/` | 1 ciascuna | nessuno |
@@ -105,9 +111,12 @@ Cartelle previste dal modello ma senza alcun `.md`: `decisions/`, `entities/`, `
 qmd search "Activity <argomento>" --limit 5
 ```
 
+<<<<<<< .merge_file_iKIcOw
 <<<<<<< .merge_file_2TfzB0
 I documenti sorgente grezzi stanno in `../raw/` (immutabile). Prima di creare una pagina nuova controllare [index.md](./index.md) e le pagine di `concepts/` per non duplicarla.
 =======
+=======
+>>>>>>> .merge_file_TatMu6
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -127,4 +136,7 @@ I documenti sorgente grezzi stanno in `../raw/` (immutabile). Prima di creare un
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_iKIcOw
 >>>>>>> .merge_file_eHsfDm
+=======
+>>>>>>> .merge_file_TatMu6

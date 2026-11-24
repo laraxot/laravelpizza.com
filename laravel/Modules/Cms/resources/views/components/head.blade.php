@@ -21,7 +21,10 @@
             document.documentElement.classList.add('dark');
         }
     </script>
+<<<<<<< .merge_file_jEvbsY
 >>>>>>> .merge_file_rvBUmt
+=======
+>>>>>>> .merge_file_HoUbwL
     @if ($panelAssets)
         <script>
             if (typeof Storage !== 'undefined' && localStorage.getItem('dark_mode') === 'true') {
@@ -30,6 +33,7 @@
         </script>
         @filamentStyles
     @endif
+<<<<<<< .merge_file_jEvbsY
 <<<<<<< .merge_file_3ZlJ1k
     @vite([$stylesheet], 'themes/'.$pubTheme)
     {{-- Tag aggiunti dalle pagine e dai layout (@push('head'): JSON-LD dell'evento, JS del tema). --}}
@@ -39,6 +43,11 @@
     @filamentStyles
     @vite(['resources/css/app.css'], 'themes/'.$pubTheme)
 >>>>>>> .merge_file_rvBUmt
+=======
+    @vite(['resources/css/app.css'], 'themes/'.$pubTheme)
+    @filamentStyles
+    @vite(['resources/css/app.css'], 'themes/'.$pubTheme)
+>>>>>>> .merge_file_HoUbwL
     {{-- Stili dei blocchi della pagina (@push('styles'), per esempio content.simple): senza lo stack non arrivavano mai. --}}
     @stack('styles')
 </head>

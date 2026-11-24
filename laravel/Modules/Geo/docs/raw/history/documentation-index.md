@@ -194,11 +194,14 @@ Remove exclusions progressively:
 ## Module Documentation Links
 
 ### Core Modules
+<<<<<<< .merge_file_xc8kDc
 <<<<<<< .merge_file_pckojp
 - [Xot Module Documentation](module-xot.md) ⚠️ *Incomplete - Syntax Errors*
 - User Module Documentation ⚠️ *Incomplete - Type Issues*
 - [Lang Module Documentation](module-lang.md) ❌ *Blocked - Dependencies*
 =======
+=======
+>>>>>>> .merge_file_8qbUrQ
 <<<<<<< HEAD
 - [Xot Module Documentation](docs/module-xot.md) ⚠️ *Incomplete - Syntax Errors*
 - [User Module Documentation](docs/module-user.md) ⚠️ *Incomplete - Type Issues*
@@ -214,7 +217,10 @@ Remove exclusions progressively:
 - [Lang Module Documentation](docs/module-lang.md) ❌ *Blocked - Dependencies*
 >>>>>>> .merge_file_kjFih2
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_xc8kDc
 >>>>>>> .merge_file_sQgLyK
+=======
+>>>>>>> .merge_file_8qbUrQ
 
 ### Theme Documentation
 - [Theme Zero Documentation](docs/theme-zero.md) ⚠️ *Syntax Error*

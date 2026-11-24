@@ -3,7 +3,15 @@ title: "use models not db table"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_j5a2dx
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_bjb9ms
 qmd: "use models not db table"
 issues: []
 discussions: []
@@ -210,6 +218,10 @@ Rating::query()->...
 ## 🔗 Related Documentation
 
 ### AI Agents Docs
+<<<<<<< .merge_file_j5a2dx
+=======
+- **[Rules Index](00-index.md)** - All rules
+>>>>>>> .merge_file_bjb9ms
 - **[Rules Index](00-index.md)** - All rules
 <<<<<<< HEAD
 - **[Rules Index](00-index.md)** - All rules

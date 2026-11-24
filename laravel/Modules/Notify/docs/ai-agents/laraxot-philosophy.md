@@ -3,7 +3,15 @@ title: "laraxot philosophy"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_zuY3ba
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_CgF2pZ
 qmd: "laraxot philosophy"
 issues: []
 discussions: []

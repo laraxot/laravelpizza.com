@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_MPBD0a
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_CfZxcu
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_MPBD0a
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_CfZxcu
 qmd: "project patterns"
 issues: []
 discussions: []
@@ -42,7 +48,10 @@ app(MyAction::class)->createPersonalAccessClient();
 - **Short array syntax (CRITICAL)**: **ALWAYS** `[]`: **NEVER** `array()` in any PHP file.
 - **Packages**: Add to `Modules/{Module}/composer.json`, then run `composer go` from `laravel/`.
 <<<<<<< HEAD
+<<<<<<< .merge_file_MPBD0a
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_CfZxcu
 - **Git Rules**:
   - NEVER `git remote set-url`: only project owner does this.
   - Git goes forward only: never restore old versions.
@@ -53,6 +62,7 @@ app(MyAction::class)->createPersonalAccessClient();
   - Git goes forward only — never restore old versions.
 =======
 - **Git Rules**:
+<<<<<<< .merge_file_MPBD0a
   - NEVER `git remote set-url`: only project owner does this.
   - Git goes forward only: never restore old versions.
 >>>>>>> .merge_file_ZKezpx
@@ -61,6 +71,11 @@ app(MyAction::class)->createPersonalAccessClient();
 - **Git Rules**:
   - NEVER `git remote set-url`: only project owner does this.
   - Git goes forward only: never restore old versions.
+=======
+  - NEVER `git remote set-url`: only project owner does this.
+  - Git goes forward only: never restore old versions.
+>>>>>>> .merge_file_ZKezpx
+>>>>>>> .merge_file_CfZxcu
 >>>>>>> laraxot/dev
   - Every error fix: git commit + GitHub issue + GitHub discussion.
 

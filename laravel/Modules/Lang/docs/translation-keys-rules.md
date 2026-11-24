@@ -14,7 +14,16 @@ related:
 # Regole per le Chiavi di Traduzione
 
 ## Collegamenti correlati
+<<<<<<< .merge_file_UAUX9u
 - [Documentazione Lang](./README.md)
+=======
+- [Documentazione centrale](README.md)
+- [Collegamenti documentazione](./collegamenti-documentazione.md)
+- [Implementazione Auth Pages](../../User/docs/auth_pages_implementation.md)
+- [Regole Traduzioni User](../../User/docs/translation_keys_rules.md)
+- [Documentazione Lang](README.md)
+- [Documentazione centrale](./README.md)
+>>>>>>> .merge_file_Vrw1zA
 - [Collegamenti documentazione](./collegamenti-documentazione.md)
 - [Implementazione Auth Pages](../../User/docs/auth_pages_implementation.md)
 - [Regole Traduzioni User](../../User/docs/translation_keys_rules.md)

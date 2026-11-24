@@ -1,7 +1,10 @@
 ---
+<<<<<<< .merge_file_ovFlFM
 <<<<<<< .merge_file_FCOViZ
 title: "Product brief — Activity"
 =======
+=======
+>>>>>>> .merge_file_7g8e9c
 <<<<<<< HEAD
 title: "Product brief: Activity"
 =======
@@ -11,7 +14,10 @@ title: "Product brief — Activity"
 title: "Product brief: Activity"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_ovFlFM
 >>>>>>> .merge_file_McN1p7
+=======
+>>>>>>> .merge_file_7g8e9c
 type: product-brief
 module: Activity
 related:

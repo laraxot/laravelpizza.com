@@ -1,9 +1,12 @@
 ---
 <<<<<<< HEAD
+<<<<<<< .merge_file_9k1dbg
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_3z2QnL
 issues: []
 discussions: []
 title: "baseuser-dry-violation-2025-10-15"
@@ -17,8 +20,11 @@ qmd: "baseuser-dry-violation-2025-10-15 deprecated"
 updated: 2026-07-14
 qmd: "baseuser-dry-violation-2025-10-15 deprecated"
 =======
+<<<<<<< .merge_file_9k1dbg
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_3z2QnL
 title: "baseuser dry violation 2025 10"
 type: note
 tags: [documentation]
@@ -27,10 +33,13 @@ updated: 2026-11-23
 qmd: "baseuser dry violation 2025 10"
 issues: []
 discussions: []
+<<<<<<< .merge_file_9k1dbg
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_3z2QnL
 >>>>>>> laraxot/dev
 status: deprecated
 related:
@@ -43,12 +52,15 @@ related:
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_9k1dbg
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_3z2QnL
   - "./action-plan-immediate.md"
 ---
 
@@ -435,11 +447,15 @@ Il refactoring di `BaseUser` per rimuovere i metodi duplicati è:
 
 **Procedere con implementazione!** 🚀
 
+<<<<<<< .merge_file_9k1dbg
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_3z2QnL
 >>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
@@ -448,10 +464,13 @@ Il refactoring di `BaseUser` per rimuovere i metodi duplicati è:
 > Questo file è stato rinominato in [baseuser-dry-violation.md](baseuser-dry-violation.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_9k1dbg
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
+=======
+>>>>>>> .merge_file_3z2QnL
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

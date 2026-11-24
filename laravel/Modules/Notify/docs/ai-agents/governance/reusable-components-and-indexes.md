@@ -3,7 +3,15 @@ title: "reusable components and indexes"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_7PW1Zp
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_ljag3I
 qmd: "reusable components and indexes"
 issues: []
 discussions: []
@@ -25,6 +33,7 @@ Ogni fix o nuova feature deve preferire componenti riusabili, documentazione can
 - ogni cartella documentale significativa deve avere `00-index.md`
 - ogni documento deve linkare il proprio `00-index.md` con percorso relativo
 - modulo e tema aggiornano i rispettivi `docs/00-index.md` quando si tocca il loro perimetro
+<<<<<<< .merge_file_7PW1Zp
 <<<<<<< HEAD
 - modulo e tema aggiornano i rispettivi `docs/00-index.md` quando si tocca il loro perimetro
 =======
@@ -33,6 +42,9 @@ Ogni fix o nuova feature deve preferire componenti riusabili, documentazione can
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- modulo e tema aggiornano i rispettivi `docs/00-index.md` quando si tocca il loro perimetro
+>>>>>>> .merge_file_ljag3I
 - `AGENTS.md`, `CLAUDE.md`, `qwen.md` devono puntare a documenti canonici, non duplicarne il contenuto
 
 ## Anti pattern

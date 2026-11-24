@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_ohmOHr
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_iYmD4R
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_ohmOHr
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_iYmD4R
 qmd: "agents overview"
 issues: []
 discussions: []
@@ -247,6 +253,7 @@ vendor/bin/pest --coverage
 
 ### Getting Started
 <<<<<<< HEAD
+<<<<<<< .merge_file_ohmOHr
 - [Coding Standards](../standards/agents-coding-standards.md)
 - [Module Architecture](../architecture/agents-module-architecture.md)
 =======
@@ -273,6 +280,21 @@ vendor/bin/pest --coverage
 - [Coding Standards](../agents-coding-standards.md)
 - [Module Architecture](../agents-module-architecture.md)
 >>>>>>> laraxot/dev
+=======
+=======
+<<<<<<< .merge_file_qXG9tu
+- [Coding Standards](../standards/agents-coding-standards.md)
+- [Module Architecture](../architecture/agents-module-architecture.md)
+=======
+>>>>>>> laraxot/dev
+- [Coding Standards](../agents-coding-standards.md)
+- [Module Architecture](../agents-module-architecture.md)
+- [Coding Standards](../agents-coding-standards.md)
+- [Module Architecture](../agents-module-architecture.md)
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_rWzNve
+>>>>>>> .merge_file_iYmD4R
 >>>>>>> laraxot/dev
 - [Quality Gate](../workflow/agents-quality-gate.md)
 

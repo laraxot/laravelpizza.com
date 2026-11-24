@@ -83,7 +83,10 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
 <<<<<<< HEAD
 =======
 
+<<<<<<< .merge_file_3oTdXV
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_vlgIHc
     use HasTranslations;
 
     /** @var list<string> */

@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_dJK2GU
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_VnZbcg
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_dJK2GU
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_VnZbcg
 qmd: "links"
 issues: []
 discussions: []
@@ -37,16 +43,22 @@ status: draft
 - [Filament Guide](../filament.md)
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_dJK2GU
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> .merge_file_VnZbcg
 <<<<<<< .merge_file_WDMRt8
 - [MCP Guide](../mcp.md)
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_dJK2GU
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_VnZbcg
 - [MCP Guide](../../mcp.md)
 - [Agent docs index](../../../index.md)
 - [Agent Teams](../../agent-teams.md)
@@ -63,6 +75,7 @@ status: draft
 =======
 - [MCP Guide](../../mcp.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_dJK2GU
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_xdYSp1
@@ -70,6 +83,11 @@ status: draft
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_xdYSp1
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_VnZbcg
 
 ---
 [Back to index](../index.md) | [Overview](project-overview.md) | [Guidelines](guidelines.md)

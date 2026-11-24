@@ -4,7 +4,15 @@ type: index
 tags: [notify, docs, ai-agents, split, tasks]
 module: Notify
 created: 2026-07-20
+<<<<<<< .merge_file_B4gyQU
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_iadOOc
 qmd: "notify documentazione ai agents split tasks index bmad tasks index index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"

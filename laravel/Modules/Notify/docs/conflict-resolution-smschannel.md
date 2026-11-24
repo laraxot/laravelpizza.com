@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_ZJ2cBU
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_Be45rg
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_ZJ2cBU
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Be45rg
 qmd: "conflict resolution smschannel"
 issues: []
 discussions: []
@@ -77,19 +83,25 @@ return $action->execute($smsData);
 - [Notify Module Documentation](README.md)
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_ZJ2cBU
 <<<<<<< HEAD
 - [Notify Module Documentation](README.md)
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_Be45rg
 - [Notify Module Documentation](readme.md)
 =======
 - [Notify Module Documentation](README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_ZJ2cBU
 =======
 - [Notify Module Documentation](readme.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Be45rg
 - [SMS Channel Architecture](sms_channel_action_resolution.md)
 - [Root Conflict Resolution Guidelines](../../../../docs/project/conflict-resolution-guidelines.md)
 

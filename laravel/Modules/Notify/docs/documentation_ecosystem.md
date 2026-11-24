@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_sTAD0m
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_4Fu97P
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_sTAD0m
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_4Fu97P
 qmd: "documentation ecosystem"
 issues: []
 discussions: []
@@ -291,10 +297,13 @@ Xot (Core) ◄──────────────────────
 | Module overview | [Module Index](module_docs_index.md) | `Modules/{Name}/docs/00-index.md` | Details |
 | Theme overview | [Theme Index](themes_documentation_index.md) | `Themes/{Name}/docs/00-index.md` | Details |
 <<<<<<< HEAD
+<<<<<<< .merge_file_sTAD0m
 | Create content | [Cms Docs](../laravel/Modules/Cms/docs/) | [Block Catalog](../laravel/Themes/Sixteen/docs/component_catalog.md) | Examples |
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_4Fu97P
 | Create content | [Cms Docs](../laravel/Modules/Cms/docs/) | [Block Catalog](../laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md) | Examples |
 =======
 <<<<<<< HEAD
@@ -303,20 +312,26 @@ Xot (Core) ◄──────────────────────
 | Create content | [Cms Docs](../laravel/Modules/Cms/docs/) | [Block Catalog](../laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md) | Examples |
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_sTAD0m
 =======
 | Create content | [Cms Docs](../laravel/Modules/Cms/docs/) | [Block Catalog](../laravel/Themes/Sixteen/docs/component_catalog.md) | Examples |
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_4Fu97P
 | Add component | [Component Guide](../laravel/Themes/Sixteen/docs/guides/adding-components.md) | [Layout Hierarchy](../laravel/Themes/Sixteen/docs/layout-hierarchy.md) | Code |
 | Authentication | [User Docs](../laravel/Modules/User/docs/) | [Auth Guide](../laravel/Modules/User/docs/guides/) | Examples |
 | Handle files | [Media Docs](../laravel/Modules/Media/docs/) | [File Upload](../laravel/Modules/Media/docs/guides/) | Examples |
 | Send notifications | [Notify Docs](../laravel/Modules/Notify/docs/) | [Channels](../laravel/Modules/Notify/docs/guides/) | Examples |
 | Track changes | [Activity Docs](../laravel/Modules/Activity/docs/) | [Audit Trail](../laravel/Modules/Activity/docs/guides/) | Examples |
 <<<<<<< HEAD
+<<<<<<< .merge_file_sTAD0m
 | Code standards | [CLAUDE.md](../laravel/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_4Fu97P
 | Code standards | [CLAUDE.md](../laravel/CLAUDE.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
 =======
 <<<<<<< HEAD
@@ -325,10 +340,13 @@ Xot (Core) ◄──────────────────────
 | Code standards | [CLAUDE.md](../laravel/CLAUDE.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_sTAD0m
 =======
 | Code standards | [CLAUDE.md](../laravel/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_4Fu97P
 | Architecture | [Architecture](architecture-diagrams.md) | [Design Comuni](../laravel/Themes/Sixteen/docs/design-comuni/) | Deep dive |
 
 ---
@@ -500,6 +518,7 @@ laravel/Themes/
 - **Module Development** → [MODULE_DOCS_INDEX.md](module_docs_index.md)
 - **Theme Development** → [THEMES_DOCUMENTATION_INDEX.md](themes_documentation_index.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_sTAD0m
 - **Code Quality** → [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
 - **Framework Rules** → [laravel/CLAUDE.md](../laravel/claude.md)
 =======
@@ -519,6 +538,17 @@ laravel/Themes/
 =======
 - **Code Quality** → [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
 - **Framework Rules** → [laravel/CLAUDE.md](../laravel/claude.md)
+=======
+- **Code Quality** → [CODE_QUALITY_STANDARDS.md](CODE_QUALITY_STANDARDS.md)
+- **Framework Rules** → [laravel/CLAUDE.md](../laravel/CLAUDE.md)
+=======
+<<<<<<< HEAD
+- **Code Quality** → [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
+- **Framework Rules** → [laravel/CLAUDE.md](../laravel/claude.md)
+=======
+- **Code Quality** → [CODE_QUALITY_STANDARDS.md](CODE_QUALITY_STANDARDS.md)
+- **Framework Rules** → [laravel/CLAUDE.md](../laravel/CLAUDE.md)
+>>>>>>> .merge_file_4Fu97P
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - **Copilot Usage** → [.github/copilot-instructions.md](../../.github/copilot-instructions.md)
@@ -558,6 +588,10 @@ laravel/Themes/
    - General? → docs/
 
 2. Follow structure:
+<<<<<<< .merge_file_sTAD0m
+=======
+   - 00-index.md (always)
+>>>>>>> .merge_file_4Fu97P
    - 00-index.md (always)
 <<<<<<< HEAD
    - 00-index.md (always)
@@ -634,6 +668,7 @@ Connected Via:
 2. Understand: [Architecture Diagrams](architecture-diagrams.md)
 3. Explore: [Module Index](module_docs_index.md) or [Theme Index](themes_documentation_index.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_sTAD0m
 4. Deep Dive: Relevant module/theme 00-INDEX.md
 2. Understand: [Architecture Diagrams](architecture-diagrams.md)
 3. Explore: [Module Index](module_docs_index.md) or [Theme Index](themes_documentation_index.md)
@@ -650,6 +685,12 @@ Connected Via:
 2. Understand: [Architecture Diagrams](architecture-diagrams.md)
 3. Explore: [Module Index](module_docs_index.md) or [Theme Index](themes_documentation_index.md)
 >>>>>>> laraxot/dev
+=======
+=======
+4. Deep Dive: Relevant module/theme 00-INDEX.md
+2. Understand: [Architecture Diagrams](architecture-diagrams.md)
+3. Explore: [Module Index](module_docs_index.md) or [Theme Index](themes_documentation_index.md)
+>>>>>>> .merge_file_4Fu97P
 >>>>>>> laraxot/dev
 4. Deep Dive: Relevant module/theme 00-index.md
 5. Implement: Using guides and examples
@@ -661,10 +702,13 @@ Connected Via:
 2. Understand: [Module Relationships](module_docs_index.md#cross-module-communication)
 3. Design: Using module/theme structure
 <<<<<<< HEAD
+<<<<<<< .merge_file_sTAD0m
 4. Review: [Code Quality Standards](code_quality_standards.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_4Fu97P
 4. Review: [Code Quality Standards](CODE_QUALITY_STANDARDS.md)
 =======
 <<<<<<< HEAD
@@ -673,10 +717,13 @@ Connected Via:
 4. Review: [Code Quality Standards](CODE_QUALITY_STANDARDS.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_sTAD0m
 =======
 4. Review: [Code Quality Standards](code_quality_standards.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_4Fu97P
 5. Validate: Against framework rules in CLAUDE.md
 
 ### For New Project Members

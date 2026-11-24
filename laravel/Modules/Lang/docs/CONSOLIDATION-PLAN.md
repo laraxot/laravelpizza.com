@@ -92,10 +92,14 @@ dependency-intelligence.md
 docs-health.md
 coverage.md
 <<<<<<< HEAD
+<<<<<<< .merge_file_kjfsAP
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_Uubzc1
 REDUNDANCY_ANALYSIS.md
 
 # Index duplicates (consolidate into README.md)
@@ -103,9 +107,12 @@ REDUNDANCY_ANALYSIS.md
 00-index.md
 INDEX.md
 
+<<<<<<< .merge_file_kjfsAP
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
+=======
+>>>>>>> .merge_file_Uubzc1
 >>>>>>> laraxot/dev
 redundancy_analysis.md
 
@@ -158,10 +165,14 @@ mkdir -p wiki/strategies wiki/how-to wiki/overviews wiki/rules
 
 # Move strategy/research
 <<<<<<< HEAD
+<<<<<<< .merge_file_kjfsAP
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_Uubzc1
 mv PRODUCT_LAUNCH_PLAN.md wiki/strategies/
 mv TRANSLATION_STRATEGIES.md wiki/strategies/
 mv USER_RESEARCH.md wiki/strategies/
@@ -171,9 +182,12 @@ mv SPRINT_PLANNING.md wiki/strategies/
 # Move how-to guides
 mv QMD-SETUP.md wiki/how-to/
 
+<<<<<<< .merge_file_kjfsAP
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
+=======
+>>>>>>> .merge_file_Uubzc1
 >>>>>>> laraxot/dev
 mv product_launch_plan.md wiki/strategies/
 mv TRANSLATION_STRATEGIES.md wiki/strategies/
@@ -200,11 +214,14 @@ mv schema.md wiki/overviews/
 
 # Move rules/patterns
 <<<<<<< HEAD
+<<<<<<< .merge_file_kjfsAP
 <<<<<<< HEAD
 =======
 mv ON-DEMAND-PATTERN.md wiki/rules/
 
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Uubzc1
 =======
 mv ON-DEMAND-PATTERN.md wiki/rules/
 
@@ -223,11 +240,14 @@ laravel/Modules/Lang/docs/
 ├── PHPSTAN_L10.md                   # Technical status & fixes
 ├── MIGRATIONS.md                    # Schema/migrations
 <<<<<<< HEAD
+<<<<<<< .merge_file_kjfsAP
 <<<<<<< HEAD
 =======
 ├── PRODUCT_STRATEGY.md              # Product vision (optional: move to wiki/)
 
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Uubzc1
 =======
 ├── PRODUCT_STRATEGY.md              # Product vision (optional: move to wiki/)
 
@@ -313,7 +333,10 @@ rm -f \
   docs-health.md \
   coverage.md \
 <<<<<<< HEAD
+<<<<<<< .merge_file_kjfsAP
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_Uubzc1
   redundancy_analysis.md \
 =======
 <<<<<<< HEAD
@@ -324,11 +347,14 @@ redundancy_analysis.md \
   redundancy_analysis.md \
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_kjfsAP
 =======
   REDUNDANCY_ANALYSIS.md \
 
 redundancy_analysis.md \
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Uubzc1
   00-index.md \
   index.md
 ---
@@ -337,19 +363,27 @@ redundancy_analysis.md \
   index.md
 ---
 <<<<<<< HEAD
+<<<<<<< .merge_file_kjfsAP
 <<<<<<< HEAD
   00-index.md \
 =======
 =======
 >>>>>>> laraxot/dev
+=======
+  00-index.md \
+=======
+>>>>>>> .merge_file_Uubzc1
   00-INDEX.md \
   00-index.md \
   INDEX.md
 
 00-index.md \
+<<<<<<< .merge_file_kjfsAP
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
+=======
+>>>>>>> .merge_file_Uubzc1
 >>>>>>> laraxot/dev
   00-index.md \
   index.md
@@ -365,10 +399,14 @@ mkdir -p wiki/strategies wiki/how-to wiki/overviews wiki/rules
 
 # 6. Move strategy/research files
 <<<<<<< HEAD
+<<<<<<< .merge_file_kjfsAP
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_Uubzc1
 mv PRODUCT_LAUNCH_PLAN.md wiki/strategies/ 2>/dev/null || true
 mv TRANSLATION_STRATEGIES.md wiki/strategies/ 2>/dev/null || true
 mv USER_RESEARCH.md wiki/strategies/ 2>/dev/null || true
@@ -378,9 +416,12 @@ mv SPRINT_PLANNING.md wiki/strategies/ 2>/dev/null || true
 # 7. Move how-to guides
 mv QMD-SETUP.md wiki/how-to/ 2>/dev/null || true
 
+<<<<<<< .merge_file_kjfsAP
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
+=======
+>>>>>>> .merge_file_Uubzc1
 >>>>>>> laraxot/dev
 mv product_launch_plan.md wiki/strategies/ 2>/dev/null || true
 mv TRANSLATION_STRATEGIES.md wiki/strategies/ 2>/dev/null || true
@@ -408,11 +449,14 @@ mv MCAMARA_IMPLEMENTATION_GUIDE.md wiki/overviews/ 2>/dev/null || true
 
 # 9. Move rules
 <<<<<<< HEAD
+<<<<<<< .merge_file_kjfsAP
 <<<<<<< HEAD
 =======
 mv ON-DEMAND-PATTERN.md wiki/rules/ 2>/dev/null || true
 
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Uubzc1
 =======
 mv ON-DEMAND-PATTERN.md wiki/rules/ 2>/dev/null || true
 

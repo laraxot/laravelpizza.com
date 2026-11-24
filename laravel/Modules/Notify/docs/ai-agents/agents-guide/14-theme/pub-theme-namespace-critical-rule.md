@@ -3,7 +3,15 @@ title: "pub theme namespace critical rule"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_78IxoO
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_yZNVvI
 qmd: "pub theme namespace critical rule"
 issues: []
 discussions: []
@@ -56,8 +64,11 @@ updated: 2026-09-26
 qmd: "pub theme namespace critical rule"
 issues: []
 discussions: []
+<<<<<<< .merge_file_78IxoO
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_yZNVvI

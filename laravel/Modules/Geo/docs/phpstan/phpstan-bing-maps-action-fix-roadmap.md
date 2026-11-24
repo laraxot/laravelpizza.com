@@ -187,9 +187,12 @@ L'errore PHPStan è stato risolto con successo! Ecco le modifiche implementate:
 
 - [GetAddressFromBingMapsAction.php](../../app/Actions/Bing/GetAddressFromBingMapsAction.php)
 - [PHPStan Code Quality Guide](../../../xot/docs/phpstan-code-quality-guide.md)
+<<<<<<< .merge_file_KWX2zg
 <<<<<<< .merge_file_WWC9hW
 - [Geo Module PHPStan Fixes](./phpstan-fixes-gennaio.md)
 =======
+=======
+>>>>>>> .merge_file_tPTWIK
 <<<<<<< HEAD
 - [Geo Module PHPStan Fixes](./phpstan-fixes-gennaio-2025.md)
 =======
@@ -199,5 +202,8 @@ L'errore PHPStan è stato risolto con successo! Ecco le modifiche implementate:
 - [Geo Module PHPStan Fixes](../phpstan-fixes-gennaio-2025.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_KWX2zg
 >>>>>>> .merge_file_Ea3cRt
+=======
+>>>>>>> .merge_file_tPTWIK
 - [Pattern Type Safety](../../../xot/docs/phpstan-patterns.md)

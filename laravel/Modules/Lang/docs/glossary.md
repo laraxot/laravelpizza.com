@@ -1,4 +1,7 @@
+<<<<<<< .merge_file_SbQnln
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_LECYvR
 # Glossario di dominio Lang
 
 <!-- Le parole del dominio e dove stanno nel codice. Topology di AGENTS.md punta qui.
@@ -6,6 +9,7 @@
 
 | Termine | Significato | Nel codice |
 |---|---|---|
+<<<<<<< .merge_file_SbQnln
 | <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
 =======
 ---
@@ -38,3 +42,6 @@ Se glossario e codice divergono vale il codice. Percorsi relativi a `laravel/Mod
 | Campo multilingua | Cast Eloquent per attributi con valori per lingua. | `app/Casts/LangField.php`, `app/Models/TranslatableModel.php` |
 | Riga di lingua | Modello della tabella delle traduzioni a database. | `app/Models/LanguageLine.php`, `app/Models/Translation.php` |
 >>>>>>> laraxot/dev
+=======
+| <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
+>>>>>>> .merge_file_LECYvR

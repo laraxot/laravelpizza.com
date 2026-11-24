@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_iuCoUf
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_R300rw
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_iuCoUf
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_R300rw
 qmd: "gemini split index"
 issues: []
 discussions: []
@@ -38,10 +44,13 @@ discussions: []
 ## 🔗 Collegamento
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_iuCoUf
 - [GEMINI.md originale](../../gemini.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_R300rw
 - [gemini.md originale](../../gemini.md)
 =======
 <<<<<<< HEAD
@@ -50,8 +59,11 @@ discussions: []
 - [gemini.md originale](../../gemini.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_iuCoUf
 =======
 - [GEMINI.md originale](../../gemini.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_R300rw
 - [Index principale](./index.md)

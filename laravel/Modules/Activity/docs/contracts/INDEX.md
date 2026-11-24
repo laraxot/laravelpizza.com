@@ -1,4 +1,5 @@
 ---
+<<<<<<< .merge_file_amyfs8
 <<<<<<< .merge_file_kocLtO
 title: "INDEX contratti — Activity"
 type: index
@@ -34,6 +35,8 @@ Action ad alto rischio senza contract:
 
 Totale Action nel modulo: 30 file in `app/Actions` (`find app/Actions -name '*.php' | wc -l`), di cui 3 con contract.
 =======
+=======
+>>>>>>> .merge_file_Sta1he
 title: "INDEX — Activity"
 type: index
 status: active
@@ -52,5 +55,9 @@ Indice dei contratti comportamentali del modulo Activity: ogni operazione pubbli
 |---|---|---|---|
 | *(nessuno)* | — | — | Nessun contratto audito per questo modulo |
 
+<<<<<<< .merge_file_amyfs8
 (End of file - total 20 lines)
 >>>>>>> .merge_file_1AhMXJ
+=======
+(End of file - total 20 lines)
+>>>>>>> .merge_file_Sta1he

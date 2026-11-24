@@ -8,15 +8,21 @@ created: 2026-05-11
 updated: 2026-05-11
 tags: [performance, optimization, tokens, context]
 related:
+<<<<<<< .merge_file_Xd0z6i
 <<<<<<< .merge_file_YMth9G
   - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
 =======
+=======
+>>>>>>> .merge_file_eupNO5
 <<<<<<< HEAD
   - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
 =======
   - ../../docs/wiki/concepts/llm-wiki-operational-discipline.md
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Xd0z6i
 >>>>>>> .merge_file_rqmDXD
+=======
+>>>>>>> .merge_file_eupNO5
 ---
 
 # Performance Optimization — Module **Geo**

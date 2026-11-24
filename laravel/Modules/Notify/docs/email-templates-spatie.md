@@ -3,7 +3,15 @@ title: "email templates spatie"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_pA0R9T
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_XUM88k
 qmd: "email templates spatie"
 issues: []
 discussions: []

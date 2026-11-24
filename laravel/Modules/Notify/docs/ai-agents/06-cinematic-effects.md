@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_6VK4Zu
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_W7HOSN
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_6VK4Zu
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_W7HOSN
 qmd: "06 Cinematic Effects"
 issues: []
 discussions: []
@@ -26,23 +32,30 @@ discussions: []
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_6VK4Zu
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_W7HOSN
 **Part of**: [00-INDEX.md](00-index.md) — AI Agents Coordination  
 **Related**: [06-CINEMATIC-EFFECTS.md](06-cinematic-effects.md) — Full guide
 
 ## 📋 Quick Reference
 ### CSS-only Particles (Recommended)
 
+<<<<<<< .merge_file_6VK4Zu
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_W7HOSN
 >>>>>>> laraxot/dev
 **Part of**: [00-index.md](00-index.md) — AI Agents Coordination  
 **Related**: [06-cinematic-effects.md](06-cinematic-effects.md) — Full guide
@@ -75,11 +88,14 @@ discussions: []
 
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_6VK4Zu
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
+=======
+>>>>>>> .merge_file_W7HOSN
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 ## 🎯 Kinetic Web Design Principles

@@ -11,6 +11,7 @@ use Modules\Notify\Actions\RenderNotificationTemplateStringAction;
 use Modules\Notify\Enums\NotificationTypeEnum;
 use Modules\Notify\Models\Traits\NotificationTemplateMutators;
 use Modules\Xot\Contracts\ProfileContract;
+<<<<<<< .merge_file_PkxXss
 <<<<<<< HEAD
 use Modules\Xot\Models\Traits\HasCommonScopes;
 =======
@@ -19,6 +20,9 @@ use Modules\Xot\Models\Traits\HasCommonScopes;
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+use Modules\Xot\Models\Traits\HasCommonScopes;
+>>>>>>> .merge_file_v8IFAw
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Spatie\Translatable\HasTranslations;
@@ -77,6 +81,7 @@ use Spatie\Translatable\HasTranslations;
  */
 class NotificationTemplate extends BaseModel implements HasMedia
 {
+<<<<<<< .merge_file_PkxXss
 <<<<<<< HEAD
     use HasCommonScopes;
 =======
@@ -85,6 +90,9 @@ class NotificationTemplate extends BaseModel implements HasMedia
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+    use HasCommonScopes;
+>>>>>>> .merge_file_v8IFAw
     use HasTranslations;
     use NotificationTemplateMutators;
 
@@ -214,6 +222,7 @@ class NotificationTemplate extends BaseModel implements HasMedia
     }
 
     /**
+<<<<<<< .merge_file_PkxXss
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -235,6 +244,8 @@ class NotificationTemplate extends BaseModel implements HasMedia
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_v8IFAw
      * Scope a query to only include templates for a specific channel.
      */
     /**

@@ -1,5 +1,27 @@
 ---
+<<<<<<< .merge_file_LG35MD
 qmd: "media bmad stories quality gates phpstan swarm story md"
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_4iFgAE
+qmd: "media bmad stories quality gates phpstan swarm story md"
+=======
+>>>>>>> .merge_file_3PvcCd
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_YUxPho
 id: quality-gates-phpstan-swarm-2026-09-23
 slug: media-phpstan-swarm-2026-09-23-verify-clean
 title: "PHPStan swarm 2026-09-23: verifica Modules/Media, 0 errori confermati"

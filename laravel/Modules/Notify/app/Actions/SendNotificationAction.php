@@ -18,6 +18,7 @@ use Spatie\QueueableAction\QueueableAction;
 /**
  * Action per l'invio di notifiche multi-canale.
  *
+<<<<<<< .merge_file_HFkGQW
 <<<<<<< HEAD
  * @see docs/contracts/send-notification-action.md
  *
@@ -27,6 +28,8 @@ use Spatie\QueueableAction\QueueableAction;
  * @see docs/contracts/send-notification-action.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_bzzOjN
  * @contract docs/contracts/send-notification-action.md
  */
 class SendNotificationAction

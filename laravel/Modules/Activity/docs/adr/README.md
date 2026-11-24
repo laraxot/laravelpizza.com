@@ -1,6 +1,7 @@
 ---
 title: "ADR del modulo Activity"
 type: index
+<<<<<<< .merge_file_Da8Tch
 <<<<<<< .merge_file_C1B1vE
 module: Activity
 status: active
@@ -12,10 +13,16 @@ tags: [adr, decisioni, activity]
 created: 2026-11-18
 updated: 2026-11-24
 >>>>>>> .merge_file_CRel7N
+=======
+tags: [adr, decisioni, activity]
+created: 2026-11-18
+updated: 2026-11-24
+>>>>>>> .merge_file_sdNCPs
 ---
 
 # ADR del modulo Activity
 
+<<<<<<< .merge_file_Da8Tch
 <<<<<<< .merge_file_C1B1vE
 Un ADR registra una scelta difficile da invertire, sorprendente o frutto di un trade-off reale, e il suo perche'.
 Non e' un diario ne' una spiegazione retroattiva: se la decisione non e' dimostrabile dal codice o da una story/doc del repo, non si scrive.
@@ -45,6 +52,8 @@ Chi cambia una decisione scrive un nuovo ADR e segna il precedente `superseded b
 
 Elenco con stato: [INDEX.md](INDEX.md).
 =======
+=======
+>>>>>>> .merge_file_sdNCPs
 <<<<<<< HEAD
 Il **perché** delle scelte di questo pacchetto: una decisione per file, con le alternative scartate. Oggi spiegano due
 forme di Activity che sembrano eccessive: i modelli su una connessione dedicata (`activity`) invece della default, e il
@@ -131,4 +140,7 @@ Un ADR "sostanziale" aggiunge `## Driver della decisione` e `## Conferma`.
 >>>>>>> laraxot/dev
 - [I modelli di Activity usano la connessione 'activity'](activity-models-on-dedicated-connection.md) — log separabile in un altro database e rollback dei test coerente; debito: Spatie scrive sulla default.
 - [Visualizzatore dei log: un solo risolutore di percorsi](log-viewer-single-path-resolver.md) — `realpath` e solo `.log` dentro `storage/logs`, una regola di accesso, download a blocchi.
+<<<<<<< .merge_file_Da8Tch
 >>>>>>> .merge_file_CRel7N
+=======
+>>>>>>> .merge_file_sdNCPs

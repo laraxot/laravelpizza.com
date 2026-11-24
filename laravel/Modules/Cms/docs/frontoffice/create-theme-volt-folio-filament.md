@@ -430,9 +430,12 @@ npm run preview
 
 3. **Copiatura degli Asset**
 ```bash
+<<<<<<< .merge_file_7OVbfa
 <<<<<<< .merge_file_lYp9kY
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
 =======
+=======
+>>>>>>> .merge_file_fw9HkQ
 <<<<<<< HEAD
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 =======
@@ -442,7 +445,10 @@ npm run preview
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_7OVbfa
 >>>>>>> .merge_file_jakShO
+=======
+>>>>>>> .merge_file_fw9HkQ
 ```
 
 ## Troubleshooting

@@ -3,7 +3,15 @@ title: "boost skill installation error"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_p7Y1oj
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_gJWPoN
 qmd: "boost skill installation error"
 issues: []
 discussions: []

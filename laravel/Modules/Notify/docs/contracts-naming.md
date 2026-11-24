@@ -5,19 +5,32 @@ discussions: []
 title: "Contracts Naming & Placement"
 type: concept
 created: 2026-07-12
+<<<<<<< .merge_file_8UB8SX
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-07-12
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_zPc1vb
 tags: [contract, naming, architecture, laraxot, notify]
 related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
+<<<<<<< .merge_file_8UB8SX
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
 <<<<<<< HEAD
   - "./acronym-naming-conventions.md"
 =======
 <<<<<<< HEAD
+=======
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
+>>>>>>> .merge_file_zPc1vb
   - "./acronym-naming-conventions.md"
 =======
 >>>>>>> laraxot/dev

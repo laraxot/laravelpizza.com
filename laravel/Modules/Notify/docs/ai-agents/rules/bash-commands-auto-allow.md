@@ -3,7 +3,15 @@ title: "bash commands auto allow"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_JuTEid
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_hNyRfV
 qmd: "bash commands auto allow"
 issues: []
 discussions: []
@@ -168,6 +176,10 @@ File: `.qwen-code-rules.md`
 ## 🔗 Related Documentation
 
 ### AI Agents Docs
+<<<<<<< .merge_file_JuTEid
+=======
+- **[Rules Index](00-index.md)** - All rules
+>>>>>>> .merge_file_hNyRfV
 - **[Rules Index](00-index.md)** - All rules
 <<<<<<< HEAD
 - **[Rules Index](00-index.md)** - All rules
@@ -182,6 +194,7 @@ File: `.qwen-code-rules.md`
 ### Project Rules
 - **[Qwen Code Rules](../../.qwen-code-rules.md)** - Project-specific rules
 - **[AGENTS.md](../../agents.md)** - Project agents guide
+<<<<<<< .merge_file_JuTEid
 <<<<<<< HEAD
 - **[AGENTS.md](../../agents.md)** - Project agents guide
 =======
@@ -190,6 +203,9 @@ File: `.qwen-code-rules.md`
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- **[AGENTS.md](../../agents.md)** - Project agents guide
+>>>>>>> .merge_file_hNyRfV
 
 ---
 

@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_2a3fU1
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_LJLSsw
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_2a3fU1
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_LJLSsw
 qmd: "email troubleshooting"
 issues: []
 discussions: []
@@ -70,7 +76,10 @@ L'implementazione attuale include:
 4. **Documentazione PHPDoc completa**: Miglior supporto IDE e type hints
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_2a3fU1
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_LJLSsw
 Per maggiori dettagli, consultare [ATTACHMENTS_USAGE.md](attachments_usage.md).
 Per maggiori dettagli, consultare [ATTACHMENTS_USAGE.md](./attachments_usage.md).
 =======
@@ -78,12 +87,17 @@ Per maggiori dettagli, consultare [ATTACHMENTS_USAGE.md](./attachments_usage.md)
 Per maggiori dettagli, consultare [ATTACHMENTS_USAGE.md](./ATTACHMENTS_USAGE.md).
 =======
 Per maggiori dettagli, consultare [ATTACHMENTS_USAGE.md](attachments_usage.md).
+<<<<<<< .merge_file_2a3fU1
 Per maggiori dettagli, consultare [ATTACHMENTS_USAGE.md](./attachments_usage.md).
 >>>>>>> .merge_file_btTFfA
 >>>>>>> laraxot/dev
 =======
 Per maggiori dettagli, consultare [ATTACHMENTS_USAGE.md](attachments_usage.md).
 Per maggiori dettagli, consultare [ATTACHMENTS_USAGE.md](./attachments_usage.md).
+=======
+Per maggiori dettagli, consultare [ATTACHMENTS_USAGE.md](./attachments_usage.md).
+>>>>>>> .merge_file_btTFfA
+>>>>>>> .merge_file_LJLSsw
 >>>>>>> laraxot/dev
 
 ### 2. Errore: "View [notify::emails.template-name] not found"
@@ -244,12 +258,15 @@ public function test_can_send_email_with_attachments()
 ## Collegamenti alla Documentazione Correlata
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_2a3fU1
 - [ATTACHMENTS_USAGE.md](./attachments_usage.md)
 - [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/email_layouts_best_practices.md)
 - [SPATIE_MAIL_TEMPLATES_STRUCTURE.md](../mail-templates/spatie_mail_templates_structure.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_LJLSsw
 =======
 <<<<<<< .merge_file_xhPfvm
 - [ATTACHMENTS_USAGE.md](./ATTACHMENTS_USAGE.md)
@@ -257,8 +274,11 @@ public function test_can_send_email_with_attachments()
 - [SPATIE_MAIL_TEMPLATES_STRUCTURE.md](../mail-templates/SPATIE_MAIL_TEMPLATES_STRUCTURE.md)
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_2a3fU1
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_LJLSsw
 - [ATTACHMENTS_USAGE.md](attachments_usage.md)
 - [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/email_layouts_best_practices.md)
 - [SPATIE_MAIL_TEMPLATES_STRUCTURE.md](../mail-templates/spatie_mail_templates_structure.md)
@@ -266,6 +286,7 @@ public function test_can_send_email_with_attachments()
 - [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/email_layouts_best_practices.md)
 - [SPATIE_MAIL_TEMPLATES_STRUCTURE.md](../mail-templates/spatie_mail_templates_structure.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_2a3fU1
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_btTFfA
@@ -273,3 +294,8 @@ public function test_can_send_email_with_attachments()
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_btTFfA
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_LJLSsw

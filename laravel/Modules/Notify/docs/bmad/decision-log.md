@@ -6,44 +6,59 @@ module: Notify
 scope: documentation
 bmad_version: 1.0
 <<<<<<< HEAD
+<<<<<<< .merge_file_zsx6dx
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_2OTXwN
 updated: 2026-11-16
 =======
 <<<<<<< HEAD
 updated: 2026-11-23
 =======
 <<<<<<< .merge_file_0uH3zr
+<<<<<<< .merge_file_zsx6dx
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_2OTXwN
 tags: [docs, notify, bmad]
 related:
   - ./filament-blueprint.md
   - ../bmad-planning.md
+<<<<<<< .merge_file_zsx6dx
 <<<<<<< HEAD
 qmd: "Notify decision log ADR NotificationLog policy webhook canali"
 created: 2026-11-23
 =======
+=======
+>>>>>>> .merge_file_2OTXwN
 updated: 2026-11-16
 qmd: "Notify decision log ADR NotificationLog policy webhook canali"
 =======
 updated: 2026-11-16
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_zsx6dx
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_2OTXwN
 tags: [docs, notify, bmad]
 qmd: "Notify decision log ADR NotificationLog policy webhook canali"
 related:
   - ./filament-blueprint.md
 <<<<<<< HEAD
+<<<<<<< .merge_file_zsx6dx
 <<<<<<< HEAD
 =======
 created: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_2OTXwN
 =======
 created: 2026-11-23
 >>>>>>> laraxot/dev

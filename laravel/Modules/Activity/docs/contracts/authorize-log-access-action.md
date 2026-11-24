@@ -1,6 +1,7 @@
 ---
 title: "Contratto — AuthorizeLogAccessAction"
 type: contract
+<<<<<<< .merge_file_bFKREA
 <<<<<<< .merge_file_t2MXr9
 owner: Activity
 status: accepted
@@ -8,6 +9,8 @@ updated: 2026-11-24
 action: "Modules\\Activity\\Actions\\Log\\AuthorizeLogAccessAction"
 qmd: "contract AuthorizeLogAccessAction activity log viewer permesso log.viewAny super-admin ACT-LOGAUTH-INV"
 =======
+=======
+>>>>>>> .merge_file_dui7tX
 action: "Modules\Activity\Actions\Log\AuthorizeLogAccessAction"
 tags: [contract, action, log-viewer, authorization]
 created: 2026-11-24
@@ -17,11 +20,15 @@ related:
   - ../../app/Actions/Log/AuthorizeLogAccessAction.php
   - ../../app/Filament/Pages/LogViewer.php
   - ../../tests/Unit/Actions/Log/AuthorizeLogAccessActionTest.php
+<<<<<<< .merge_file_bFKREA
 >>>>>>> .merge_file_a0NK35
+=======
+>>>>>>> .merge_file_dui7tX
 ---
 
 # AuthorizeLogAccessAction
 
+<<<<<<< .merge_file_bFKREA
 <<<<<<< .merge_file_t2MXr9
 Chi puo' consultare e scaricare i file di log. Regola unica usata da `LogViewer::canAccess()` (`app/Filament/Pages/LogViewer.php:62`) e dal download (`LogViewer.php:128`).
 
@@ -55,6 +62,8 @@ Chi puo' consultare e scaricare i file di log. Regola unica usata da `LogViewer:
 - Non registra i tentativi negati.
 - Non crea il permesso mancante.
 =======
+=======
+>>>>>>> .merge_file_dui7tX
 Chi può consultare e scaricare i file di log dal pannello. Una sola regola per la pagina (`LogViewer::canAccess()`) e
 per il download. Sorgente: `app/Actions/Log/AuthorizeLogAccessAction.php`.
 
@@ -89,4 +98,7 @@ Test: `cd laravel && vendor/bin/pest Modules/Activity/tests/Unit/Actions/Log/Aut
 - Non crea il permesso `log.viewAny`: va creato e assegnato dall'amministrazione dei ruoli.
 - Non usa una Policy Laravel: la pagina non ha un modello; chi aggiunge un'altra via ai log riusa questa Action.
 - Non registra gli accessi ai log.
+<<<<<<< .merge_file_bFKREA
 >>>>>>> .merge_file_a0NK35
+=======
+>>>>>>> .merge_file_dui7tX

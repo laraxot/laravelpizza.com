@@ -151,6 +151,7 @@ bashscripts/
 .claude/
 .kilocode
 bashscripts
+<<<<<<< .merge_file_iuNxlU
 <<<<<<< .merge_file_ojt8XL
 laravel/Modules/Notify/.git.polluted*
 
@@ -163,3 +164,5 @@ laravel/Modules/Notify/.git.polluted*
 .git.old*/
 =======
 >>>>>>> .merge_file_W6laNk
+=======
+>>>>>>> .merge_file_Khz2TM

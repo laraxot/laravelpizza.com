@@ -33,9 +33,12 @@ Questo documento **non** sostituisce [head-component-adoption-plan.md](./head-co
 |---|---|---|
 | Head FO | `resources/views/components/head.blade.php` | `@filamentStyles` |
 | Foot FO | `resources/views/components/foot.blade.php` | `@filamentScripts` |
+<<<<<<< .merge_file_iW39oZ
 <<<<<<< .merge_file_2vUDJd
 | Componenti | `app/View/Components/Head.php`, `Foot.php` | renderano le view sopra; prop `panelAssets` (default `true`) per i siti pubblici senza componenti Filament |
 =======
+=======
+>>>>>>> .merge_file_AqH4wF
 <<<<<<< HEAD
 | Componenti | `app/View/Components/Head.php`, `Foot.php` | renderano le view sopra |
 =======
@@ -45,7 +48,10 @@ Questo documento **non** sostituisce [head-component-adoption-plan.md](./head-co
 | Componenti | `app/View/Components/Head.php`, `Foot.php` | renderano le view sopra |
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_iW39oZ
 >>>>>>> .merge_file_1JYKoD
+=======
+>>>>>>> .merge_file_AqH4wF
 | Temi | es. Trattoria `layouts/main` | usano `<x-cms::head />` + `<x-cms::foot />` — **non** duplicare né omettere |
 
 ## Ordine canonico (KISS)
@@ -63,26 +69,35 @@ Questo documento **non** sostituisce [head-component-adoption-plan.md](./head-co
 
 - Notifications: **sempre** `@livewire('notifications')`, mai wrappato in `@auth` (doc Filament).
 - `@livewireStyles` / `@livewireScripts`: non richiesti se `livewire.inject_assets` è true e si usano le direttive Filament.
+<<<<<<< .merge_file_iW39oZ
 <<<<<<< .merge_file_2vUDJd
 - `<x-cms::head :panel-assets="false" />` / `<x-cms::foot :panel-assets="false" />`: `@filamentStyles`, lo script del tema scuro, `@livewire('notifications')` e `@filamentScripts` stanno dentro `@if ($panelAssets)` e si saltano (meno CSS/JS su telefono); `@vite` del tema resta sempre. Default `true`: nessun tema lo spegne oggi.
 - `<x-cms::head stylesheet="resources/css/site.css" />`: l'entry Vite del CSS e' una prop (default `resources/css/app.css`), cosi' un tema serve un foglio piu' leggero dove non servono i componenti Filament (Meetup: `site.css` ai visitatori anonimi, `app.css` in login/registrazione e da loggati; test `Modules/Meetup/tests/Feature/SeoTechnicalTest.php`).
 - `@stack('head')` sta nel `<head>` dopo il CSS: layout e pagine vi aggiungono tag con `@push('head')` (JS del tema, JSON-LD `Event` del dettaglio evento). Senza lo stack quei tag non arrivavano mai.
 =======
 >>>>>>> .merge_file_1JYKoD
+=======
+>>>>>>> .merge_file_AqH4wF
 
 ## Anti-pattern
 
 - Rimuovere `@filamentStyles` / `@filamentScripts` “per alleggerire” il FO
 - Mettere notifications solo per utenti autenticati
 - Duplicare le direttive nei temi che già includono `x-cms::head` / `x-cms::foot`
+<<<<<<< .merge_file_iW39oZ
 <<<<<<< .merge_file_2vUDJd
 - Passare `:panel-assets="false"` in una pagina che usa componenti Filament/Livewire o le notifiche: restano senza CSS/JS
 =======
+=======
+>>>>>>> .merge_file_AqH4wF
 <<<<<<< HEAD
 =======
 - Aggiungere una prop `panelAssets` che non viene valorizzata dai caller
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_iW39oZ
 >>>>>>> .merge_file_1JYKoD
+=======
+>>>>>>> .merge_file_AqH4wF
 - Aggiungere `@filamentStyles` in `metatags` **e** in `head` sulla stessa pagina (una sola fonte)
 
 ## Verifica

@@ -17,10 +17,13 @@ use Spatie\QueueableAction\QueueableAction;
  * Perché: chart e conversioni generano più PNG da accorpare in un unico asset pubblico;
  * Intervention v4 espone ImageManager tipizzato (decodePath/createImage/insert/save) senza
  * facade legacy v2.
+<<<<<<< .merge_file_EwXLDa
  *
  * @see docs/contracts/merge.md
  *
  * @contract docs/contracts/merge.md
+=======
+>>>>>>> .merge_file_jPQA1h
  */
 class Merge
 {

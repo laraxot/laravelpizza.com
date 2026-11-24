@@ -3,7 +3,15 @@ title: "boost skill solution plan"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_lMTjok
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_pSyb0d
 qmd: "boost skill solution plan"
 issues: []
 discussions: []

@@ -3,7 +3,15 @@ title: "iflow getting started"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_5PDP6p
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_CYC7kh
 qmd: "iflow getting started"
 issues: []
 discussions: []
@@ -89,6 +97,7 @@ Confronta con `https://laravelpizza.com` e trova le differenze da colmare.
 
 - **MAI** creare file .md in posizioni sbagliate
 - **MAI** usare maiuscole nei nomi .md (eccetto README.md e CHANGELOG.md)
+<<<<<<< .merge_file_5PDP6p
 <<<<<<< HEAD
 - **MAI** usare maiuscole nei nomi .md (eccetto README.md e CHANGELOG.md)
 =======
@@ -97,6 +106,9 @@ Confronta con `https://laravelpizza.com` e trova le differenze da colmare.
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- **MAI** usare maiuscole nei nomi .md (eccetto README.md e CHANGELOG.md)
+>>>>>>> .merge_file_CYC7kh
 - **SEMPRE** usare PHPStan Level 10 dopo aver modificato un file
 - **SEMPRE** eseguire PHPMD e PHPInsights
 - **MAI** usare `property_exists()` su modelli Eloquent

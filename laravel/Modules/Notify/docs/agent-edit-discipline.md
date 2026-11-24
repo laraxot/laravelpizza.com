@@ -12,15 +12,21 @@ updated: 2026-11-23
 title: agent edit discipline: puntatore
 type: reference
 <<<<<<< HEAD
+<<<<<<< .merge_file_WDUWnI
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_N0pC0l
 updated: 2026-05-19
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_WDUWnI
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_N0pC0l
 status: draft
 ---
 

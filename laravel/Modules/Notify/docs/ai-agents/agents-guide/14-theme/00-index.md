@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_2e1Zz0
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_rFUIkn
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_2e1Zz0
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_rFUIkn
 qmd: "00 index"
 issues: []
 discussions: []
@@ -76,12 +82,15 @@ discussions: []
 - [📋 Skills Index](../skills/00-MASTER-INDEX.md)
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_2e1Zz0
 <<<<<<< HEAD
 - [📋 Master Index](bashscripts/ai/.agents/00-MASTER-INDEX.md)
 - [📋 Rules Index](../rules/00-index.md)
 - [📋 Skills Index](../skills/00-MASTER-INDEX.md)
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_rFUIkn
 - [📋 Master Index](bashscripts/ai/.agents/00-master-index.md)
 - [📋 Rules Index](../rules/00-index.md)
 - [📋 Skills Index](../skills/00-master-index.md)
@@ -91,12 +100,15 @@ discussions: []
 - [📋 Skills Index](../skills/00-MASTER-INDEX.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_2e1Zz0
 =======
 - [📋 Master Index](bashscripts/ai/.agents/00-master-index.md)
 - [📋 Rules Index](../rules/00-index.md)
 - [📋 Skills Index](../skills/00-master-index.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_rFUIkn
 - [📋 Workflows Index](../workflows/00-index.md)
 - [📋 Guidelines Index](../guidelines/00-index.md)
 - [📋 Memories Index](../memories/00-index.md)

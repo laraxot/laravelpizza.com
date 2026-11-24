@@ -70,8 +70,11 @@ class MailTemplateVersion extends BaseModel
     use SoftDeletes;
     use Updater;
 
+<<<<<<< .merge_file_enQjAF
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> .merge_file_rjHEdy
 
 >>>>>>> laraxot/dev
     protected $connection = 'notify';

@@ -13,8 +13,11 @@ related:
 
 # Piano di miglioramento — Activity
 
+<<<<<<< .merge_file_kwSGsE
 <<<<<<< .merge_file_47XSL6
 =======
+=======
+>>>>>>> .merge_file_20MglA
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -67,7 +70,10 @@ Derivato dall'[audit](./audits/activity-audit.md).
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_kwSGsE
 >>>>>>> .merge_file_JzReRT
+=======
+>>>>>>> .merge_file_20MglA
 Derivato dall'[audit profondo](./audits/activity-audit.md). Nessun P0 emerso dal codice; i P1 riguardano l'integrità del registro.
 Epic e AC: [epics.md](./epics.md).
 
@@ -102,9 +108,12 @@ Epic e AC: [epics.md](./epics.md).
 - [ ] Nessun segreto in `properties` (Pest su `User`)
 - [ ] PHPStan `Modules/Activity` = 0
 - [ ] ECC `00-index` aggiornato
+<<<<<<< .merge_file_kwSGsE
 <<<<<<< .merge_file_47XSL6
 - [ ] Pest osservabile o skip motivato
 =======
+=======
+>>>>>>> .merge_file_20MglA
 <<<<<<< HEAD
 <<<<<<< HEAD
 - [ ] Pest osservabile o skip motivato
@@ -127,4 +136,7 @@ Epic e AC: [epics.md](./epics.md).
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_kwSGsE
 >>>>>>> .merge_file_JzReRT
+=======
+>>>>>>> .merge_file_20MglA

@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_vlmtJ0
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_athtyk
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_vlmtJ0
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_athtyk
 qmd: "00 index"
 issues: []
 discussions: []
@@ -58,7 +64,10 @@ status: draft
 | [accessor-auto-persistence.md](./accessor-auto-persistence.md) | Pattern SACRO Accessor con Auto-Persistenza |
 | [ai-agents/index.md](./ai-agents/index.md) | Master index regole condivise Claude/Gemini/Qwen |
 <<<<<<< HEAD
+<<<<<<< .merge_file_vlmtJ0
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_athtyk
 | [ai-agents/shared/accessor-mutator.md](./ai-agents/shared/accessor-mutator.md) | Pattern Accessor/Mutator: Livelli 1–4, auto-persistenza |
 | [ai-agents/shared/critical-rules.md](critical-rules.md) | PHPStan L10, array syntax, DI, MCP |
 | [ai-agents/shared/critical-rules.md](./critical-rules.md) | PHPStan L10, array syntax, DI, MCP |
@@ -69,6 +78,7 @@ status: draft
 =======
 | [ai-agents/shared/accessor-mutator.md](./ai-agents/shared/accessor-mutator.md) | Pattern Accessor/Mutator: Livelli 1–4, auto-persistenza |
 | [ai-agents/shared/critical-rules.md](critical-rules.md) | PHPStan L10, array syntax, DI, MCP |
+<<<<<<< .merge_file_vlmtJ0
 | [ai-agents/shared/critical-rules.md](./critical-rules.md) | PHPStan L10, array syntax, DI, MCP |
 >>>>>>> .merge_file_Mf0OiL
 >>>>>>> laraxot/dev
@@ -76,6 +86,10 @@ status: draft
 | [ai-agents/shared/accessor-mutator.md](./ai-agents/shared/accessor-mutator.md) | Pattern Accessor/Mutator: Livelli 1–4, auto-persistenza |
 | [ai-agents/shared/critical-rules.md](critical-rules.md) | PHPStan L10, array syntax, DI, MCP |
 | [ai-agents/shared/critical-rules.md](./critical-rules.md) | PHPStan L10, array syntax, DI, MCP |
+=======
+| [ai-agents/shared/critical-rules.md](./critical-rules.md) | PHPStan L10, array syntax, DI, MCP |
+>>>>>>> .merge_file_Mf0OiL
+>>>>>>> .merge_file_athtyk
 >>>>>>> laraxot/dev
 | [ai-agents/shared/translation-rules.md](./ai-agents/shared/translation-rules.md) | Struttura obbligatoria 5 chiavi per campo |
 

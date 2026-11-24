@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_cAn2Yu
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_AZgTVr
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_cAn2Yu
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_AZgTVr
 qmd: "agents coding standards"
 issues: []
 discussions: []
@@ -210,6 +216,7 @@ enum Status: string implements HasLabel, HasColor {
 - [code-style.md](./code-style.md) - Più dettagliato
 - [critical-rules.md](./critical-rules.md) - Regole critiche
 <<<<<<< HEAD
+<<<<<<< .merge_file_cAn2Yu
 - [AGENTS.md originale](../../AGENTS.md)
 - [AGENTS.md originale](../../AGENTS.md)
 =======
@@ -229,6 +236,17 @@ enum Status: string implements HasLabel, HasColor {
 =======
 - [AGENTS.md originale](../../agents.md)
 - [agents.md originale](../../agents.md)
+=======
+- [AGENTS.md originale](../../AGENTS.md)
+- [AGENTS.md originale](../../AGENTS.md)
+=======
+<<<<<<< HEAD
+- [AGENTS.md originale](../../agents.md)
+- [agents.md originale](../../agents.md)
+=======
+- [AGENTS.md originale](../../AGENTS.md)
+- [AGENTS.md originale](../../AGENTS.md)
+>>>>>>> .merge_file_AZgTVr
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [Index principale](./index.md)

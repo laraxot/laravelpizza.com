@@ -3,7 +3,15 @@ title: "analisi dettagliata 6"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_u6Ul1i
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_RSLg5e
 qmd: "analisi dettagliata 6"
 issues: []
 discussions: []

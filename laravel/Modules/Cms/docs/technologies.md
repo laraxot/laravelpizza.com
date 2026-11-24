@@ -3,15 +3,21 @@ title: "technologies"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_F9rDW3
 <<<<<<< .merge_file_JxXolF
 updated: 2026-11-23
 =======
+=======
+>>>>>>> .merge_file_xKAkVz
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_F9rDW3
 >>>>>>> .merge_file_XXeCLU
+=======
+>>>>>>> .merge_file_xKAkVz
 qmd: "technologies"
 issues: []
 discussions: []
@@ -129,9 +135,12 @@ Questo documento descrive le tecnologie principali utilizzate nel modulo CMS.
 ## Collegamenti
 
 - [Architettura](architecture.md)
+<<<<<<< .merge_file_F9rDW3
 <<<<<<< .merge_file_JxXolF
 - [API](api/README.md)
 =======
+=======
+>>>>>>> .merge_file_xKAkVz
 <<<<<<< HEAD
 - [API](api/README.md)
 =======
@@ -141,7 +150,10 @@ Questo documento descrive le tecnologie principali utilizzate nel modulo CMS.
 - [API](api/README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_F9rDW3
 >>>>>>> .merge_file_XXeCLU
+=======
+>>>>>>> .merge_file_xKAkVz
 - [Frontend](frontoffice/README.md)
 - [Sviluppo](developer/README.md)
 - [Utente](user/README.md)

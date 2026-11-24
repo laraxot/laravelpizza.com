@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_f8jZTs
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_cQQnaf
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_f8jZTs
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_cQQnaf
 qmd: "filament blade components"
 issues: []
 discussions: []
@@ -52,17 +58,23 @@ In <nome progetto>, la **prima scelta per i componenti Blade** sono SEMPRE i [co
 - [README Notify](README.md)
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_f8jZTs
 <<<<<<< HEAD
 - [README Notify](README.md)
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_cQQnaf
 - [README Notify](readme.md)
 =======
 - [README Notify](README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_f8jZTs
 =======
 - [README Notify](readme.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_cQQnaf
 - [queueable-action.md](queueable-action.md)

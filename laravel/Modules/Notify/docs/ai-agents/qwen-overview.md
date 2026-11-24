@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_9VY3uN
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_HemL9t
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_9VY3uN
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_HemL9t
 qmd: "qwen overview"
 issues: []
 discussions: []
@@ -108,10 +114,13 @@ Never: git revert (only forward!)
 
 - [Indice QWEN](./qwen-split-index.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_9VY3uN
 - [QWEN.md originale](../../qwen.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_HemL9t
 - [qwen.md originale](../../qwen.md)
 =======
 <<<<<<< HEAD
@@ -120,8 +129,11 @@ Never: git revert (only forward!)
 - [qwen.md originale](../../qwen.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_9VY3uN
 =======
 - [QWEN.md originale](../../qwen.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_HemL9t
 - [Index principale](./index.md)

@@ -12,7 +12,11 @@ use Illuminate\Support\Arr;
  * avvia l'applicazione) e dicono quale file e' incoerente.
  *
  * @see Modules/Xot/docs/lessons/module-sync-merge-conflicts.md sezione «Regressioni silenziose»: analisi, numeri e rimedio
+<<<<<<< .merge_file_uyoaAh
  * @see bashscripts/docs/operations/sync-repair-tools.md come trovare e riparare questi danni
+=======
+ * @see bashscripts/docs/sync-repair-tools.md come trovare e riparare questi danni
+>>>>>>> .merge_file_8m4RCi
  */
 
 /**

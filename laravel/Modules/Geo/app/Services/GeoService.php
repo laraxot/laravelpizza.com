@@ -34,11 +34,15 @@ class GeoService
     public static function getInstance(): self
     {
         if (! self::$_instance instanceof GeoService) {
+<<<<<<< .merge_file_AT5BiJ
 <<<<<<< .merge_file_gTydVs
             self::$_instance = new self;
 =======
             self::$_instance = new self();
 >>>>>>> .merge_file_2HuYBt
+=======
+            self::$_instance = new self();
+>>>>>>> .merge_file_LvGbIW
         }
 
         return self::$_instance;

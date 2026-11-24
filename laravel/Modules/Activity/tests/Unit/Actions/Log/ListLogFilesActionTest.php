@@ -7,4 +7,7 @@ use Illuminate\Support\Facades\File;
 use Modules\Activity\Actions\Log\ListLogFilesAction;
 use Modules\Activity\Datas\LogFileData;
 use Safe\Exceptions\FilesystemException;
+<<<<<<< .merge_file_4TdGyS
 >>>>>>> .merge_file_CPvIms
+=======
+>>>>>>> .merge_file_A3ptW0

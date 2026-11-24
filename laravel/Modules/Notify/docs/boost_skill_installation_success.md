@@ -3,7 +3,15 @@ title: "boost skill installation success"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_WSnoxv
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_eW7yjY
 qmd: "boost skill installation success"
 issues: []
 discussions: []
@@ -235,8 +243,11 @@ discussions: []
 **Report Generated**: 2026-03-02  
 **Installation Time**: ~30 minutes  
 **Status**: ✅ SUCCESSFUL
+<<<<<<< .merge_file_WSnoxv
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_eW7yjY

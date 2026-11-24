@@ -8,12 +8,15 @@ qmd: "notify scopo modulo notifiche template canali email sms comunicazione trac
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_r36gtl
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Pyiljt
 updated: 2026-11-23
 issues:
   - "https://github.com/provtv/module_notify_fila5/issues/"
@@ -23,11 +26,15 @@ discussions:
   # DA CREARE — `gh` non autenticato: mai numeri inventati.
   # gh issue create --repo provtv/module_notify_fila5 --title "<argomento del file>"
   # DA CREARE — vedi sopra.
+<<<<<<< .merge_file_r36gtl
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_Pyiljt
 >>>>>>> laraxot/dev
 updated: 2026-09-02
 issues:
@@ -40,11 +47,14 @@ discussions:
 ---
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_r36gtl
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
+=======
+>>>>>>> .merge_file_Pyiljt
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 

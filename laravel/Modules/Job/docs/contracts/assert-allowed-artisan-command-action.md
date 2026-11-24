@@ -1,6 +1,7 @@
 ---
 title: "Contratto — AssertAllowedArtisanCommandAction"
 type: contract
+<<<<<<< .merge_file_s2jo1J
 <<<<<<< .merge_file_vP7bDi
 owner: Job
 status: accepted
@@ -8,15 +9,21 @@ updated: 2026-11-24
 action: "Modules\\Job\\Actions\\Console\\AssertAllowedArtisanCommandAction"
 qmd: "AssertAllowedArtisanCommandAction job whitelist artisan JobStatus JOB-CMD-INV contract"
 =======
+=======
+>>>>>>> .merge_file_5HsHPm
 action: "Modules\Job\Actions\Console\AssertAllowedArtisanCommandAction"
 tags: [contract, action, artisan, security]
 created: 2026-11-24
 updated: 2026-11-24
+<<<<<<< .merge_file_s2jo1J
 >>>>>>> .merge_file_IXcDgM
+=======
+>>>>>>> .merge_file_5HsHPm
 ---
 
 # AssertAllowedArtisanCommandAction
 
+<<<<<<< .merge_file_s2jo1J
 <<<<<<< .merge_file_vP7bDi
 Controlla che un comando Artisan richiesto dal pannello `JobStatus` sia nella whitelist. Codice: `app/Actions/Console/AssertAllowedArtisanCommandAction.php:10-22`. Decisione di fondo: [ADR 0001](../adr/0001-controlli-operativi-solo-super-admin-e-whitelist.md).
 
@@ -51,6 +58,8 @@ Controlla che un comando Artisan richiesto dal pannello `JobStatus` sia nella wh
 - Non costruisce la whitelist.
 - La classe e' `final`.
 =======
+=======
+>>>>>>> .merge_file_5HsHPm
 Sorgente: `app/Actions/Console/AssertAllowedArtisanCommandAction.php`. Perché esiste:
 [ADR allowlist a match esatto](../adr/artisan-commands-from-ui-exact-match-allowlist.md).
 Unico chiamante in produzione: `Filament/Pages/JobStatus.php::artisan()`.
@@ -87,4 +96,7 @@ Unico chiamante in produzione: `Filament/Pages/JobStatus.php::artisan()`.
 - Non costruisce l'elenco: non aggiungere qui comandi "di default"; l'elenco viene dai pulsanti della pagina.
 - Non accetta argomenti separati né li valida: un comando con parametri non è supportato dal pattern.
 - Non è usata da `JobStatusWidget` né da `ScheduleStatusWidget`, che hanno un `in_array` proprio (debito nell'ADR).
+<<<<<<< .merge_file_s2jo1J
 >>>>>>> .merge_file_IXcDgM
+=======
+>>>>>>> .merge_file_5HsHPm

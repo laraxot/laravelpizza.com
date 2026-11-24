@@ -298,9 +298,12 @@ PASS: 2 files formattati correttamente
 
 - [Activity Module README](./README.md)
 - [Laraxot UI/UX Guidelines](../../Xot/docs/ui-ux-best-practices.md)
+<<<<<<< .merge_file_DUWOs0
 <<<<<<< .merge_file_7x8Tx3
 - [Activity Module README](./readme.md)
 =======
+=======
+>>>>>>> .merge_file_UkdPPM
 <<<<<<< HEAD
 - [Activity Module README](./README.md)
 =======
@@ -314,7 +317,10 @@ PASS: 2 files formattati correttamente
 - [Activity Module README](./README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_DUWOs0
 >>>>>>> .merge_file_IwBrcS
+=======
+>>>>>>> .merge_file_UkdPPM
 - [Laraxot UI/UX Guidelines](../../xot/docs/ui-ux-best-practices.md)
 - [Heroicon Reference](https://heroicons.com/)
 

@@ -3,15 +3,21 @@ title: "architecture"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_VQkpEL
 <<<<<<< .merge_file_JKadJt
 updated: 2026-11-23
 =======
+=======
+>>>>>>> .merge_file_YZRan1
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_VQkpEL
 >>>>>>> .merge_file_fAo08X
+=======
+>>>>>>> .merge_file_YZRan1
 qmd: "architecture"
 issues: []
 discussions: []
@@ -125,9 +131,12 @@ I blocchi sono l'unità base di contenuto. Ogni blocco:
 
 ## Documentazione Correlata
 
+<<<<<<< .merge_file_VQkpEL
 <<<<<<< .merge_file_JKadJt
 - [Gestione dei Temi](../themes/README.md)
 =======
+=======
+>>>>>>> .merge_file_YZRan1
 <<<<<<< HEAD
 - [Gestione dei Temi](../themes/README.md)
 =======
@@ -137,7 +146,10 @@ I blocchi sono l'unità base di contenuto. Ogni blocco:
 - [Gestione dei Temi](../themes/README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_VQkpEL
 >>>>>>> .merge_file_fAo08X
+=======
+>>>>>>> .merge_file_YZRan1
 - [Componenti UI](../components/README.md)
 - [Configurazione Blocchi](../blocks/README.md)
 - [Ottimizzazione Performance](../performance/README.md)

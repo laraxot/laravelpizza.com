@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
 /**
+<<<<<<< .merge_file_0MxnHO
 <<<<<<< .merge_file_hUOF3N
  * SUPERSEDED — duplicato flat. Usare {@see Schedule\ClearScheduleCacheAction}.
  *
@@ -24,6 +25,11 @@ use Webmozart\Assert\Assert;
  *
  * @contract docs/contracts/clear-schedule-cache-action.md
 >>>>>>> .merge_file_lZRo9l
+=======
+ * Dimentica la cache delle schedulazioni attive (store e chiave da `job::cache.*`).
+ *
+ * @contract docs/contracts/clear-schedule-cache-action.md
+>>>>>>> .merge_file_QPztDs
  */
 class ClearScheduleCacheAction
 {

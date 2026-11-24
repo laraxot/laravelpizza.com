@@ -61,6 +61,7 @@ docs/
 - [Theme Analysis](./docs/theme/sixteen/analysis/)
 - [Homepage Results](./docs/theme/sixteen/analysis/results.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_7RNWjy
 - [Argomenti Analysis](./docs/design-comuni/pages/argomenti.md)
 =======
 <<<<<<< HEAD
@@ -70,6 +71,12 @@ docs/
 - [Argomenti Analysis](./docs/design-comuni/pages/argomenti.md)
 =======
 >>>>>>> laraxot/dev
+=======
+=======
+<<<<<<< .merge_file_LarcB7
+- [Argomenti Analysis](./docs/design-comuni/pages/argomenti.md)
+=======
+>>>>>>> .merge_file_Id0XWW
 >>>>>>> laraxot/dev
 - [Argomenti Analysis](pages/argomenti.md)
 - [Theme Analysis](../theme/sixteen/analysis)
@@ -77,6 +84,7 @@ docs/
 - [Argomenti Analysis](./pages/argomenti.md)
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_7RNWjy
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_gwl0NT
@@ -85,6 +93,10 @@ docs/
 - [Argomenti Analysis](./docs/design-comuni/pages/argomenti.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_gwl0NT
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_Id0XWW
 
 ---
 

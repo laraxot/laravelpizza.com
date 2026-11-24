@@ -240,6 +240,20 @@ Implementare:
 ### Versione HEAD
 
 ## Collegamenti tra versioni di bottlenecks.md
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+* [bottlenecks.md](../../../gdpr/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../../xot/docs/bottlenecks.md)
+* [bottlenecks.md](../../../xot/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../../xot/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](../../../user/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](../../../ui/docs/roadmap/bottlenecks.md)
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 * [bottlenecks.md](../../../Gdpr/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../xot/docs/bottlenecks.md)
 * [bottlenecks.md](../../../xot/docs/performance/bottlenecks.md)
@@ -249,6 +263,16 @@ Implementare:
 * [bottlenecks.md](../../../Lang/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Job/docs/performance/bottlenecks.md)
 * [bottlenecks.md](bottlenecks.md)
+<<<<<<< .merge_file_shn1MB
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_7YY3XN
 * [bottlenecks.md](../../../patient/docs/roadmap/bottlenecks.md)
 
 ### Versione Incoming

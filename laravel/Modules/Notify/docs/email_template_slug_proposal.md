@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_bvc7SB
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_rPaqg2
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_bvc7SB
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_rPaqg2
 qmd: "email template slug proposal"
 issues: []
 discussions: []
@@ -260,10 +266,13 @@ MailTemplate::all()->each(function ($template) {
 
 - [Documentazione Email Template](./email_templates.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_bvc7SB
 - [Gestione Traduzioni](../Lang/docs/translation_keys_best_practices.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_rPaqg2
 - [Gestione Traduzioni](../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 =======
 <<<<<<< HEAD
@@ -272,8 +281,11 @@ MailTemplate::all()->each(function ($template) {
 - [Gestione Traduzioni](../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_bvc7SB
 =======
 - [Gestione Traduzioni](../Lang/docs/translation_keys_best_practices.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_rPaqg2
 - [Configurazione Email](../../../docs/email-configuration.md) 

@@ -27,8 +27,11 @@ Audit source-first del modulo che deve garantire "chi ha cambiato cosa, quando e
 - [x] Pest `Modules/Activity/tests/Feature` completato su scratch DB: 0 failed / 181 passed / 9 skipped (vedi sotto).
 - [ ] Pest suite completa del modulo: parziale — 25 pass in 2 probe (`ActivityManagementTest`, `BaseModelBusinessLogicTest`); suite completa in timeout a 900 s (carico macchina).
 - [ ] E1–E4 chiuse con test di regressione.
+<<<<<<< .merge_file_0nJnEE
 <<<<<<< .merge_file_1iwDfm
 =======
+=======
+>>>>>>> .merge_file_cktgYw
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -38,13 +41,19 @@ Audit source-first del modulo che deve garantire "chi ha cambiato cosa, quando e
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_6s2Vt8
+<<<<<<< .merge_file_0nJnEE
 >>>>>>> .merge_file_cILxgZ
+=======
+>>>>>>> .merge_file_cktgYw
 
 ## Riferimenti
 
 1. Lock dei file di `docs/` del modulo (`bashscripts/lock/`), unlock a fine lavoro.
+<<<<<<< .merge_file_0nJnEE
 <<<<<<< .merge_file_1iwDfm
 =======
+=======
+>>>>>>> .merge_file_cktgYw
 2. Audit codice → docs; nessun PHP toccato.
 3. Pack ECC e indici aggiornati; `qmd update`.
 =======
@@ -59,7 +68,10 @@ Audit source-first del modulo che deve garantire "chi ha cambiato cosa, quando e
 ## Procedura
 
 1. Lock dei file di `docs/` del modulo (`bashscripts/lock/`), unlock a fine lavoro.
+<<<<<<< .merge_file_0nJnEE
 >>>>>>> .merge_file_cILxgZ
+=======
+>>>>>>> .merge_file_cktgYw
 2. Audit codice → docs; nessun PHP toccato dall'audit (i fix Pest qui sotto sono un intervento separato).
 3. Pack ECC e indici aggiornati; `qmd update`.
 
@@ -68,8 +80,11 @@ Audit source-first del modulo che deve garantire "chi ha cambiato cosa, quando e
 - [audit](../audit.md)
 - [piano](../piano-miglioramento.md)
 - [ECC](../../ecc/activity-ecc-audit.md)
+<<<<<<< .merge_file_0nJnEE
 <<<<<<< .merge_file_1iwDfm
 =======
+=======
+>>>>>>> .merge_file_cktgYw
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -84,13 +99,19 @@ Audit source-first del modulo che deve garantire "chi ha cambiato cosa, quando e
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_0nJnEE
 >>>>>>> .merge_file_cILxgZ
+=======
+>>>>>>> .merge_file_cktgYw
 
 ## Esito
 
 Baseline audit consegnata: 0 P0, 5 P1, P2 elencati. Chiusura dei P1 demandata alle story figlie di [epics.md](../epics.md).
+<<<<<<< .merge_file_0nJnEE
 <<<<<<< .merge_file_1iwDfm
 =======
+=======
+>>>>>>> .merge_file_cktgYw
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -107,7 +128,10 @@ Baseline audit consegnata: 0 P0, 5 P1, P2 elencati. Chiusura dei P1 demandata al
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_0nJnEE
 >>>>>>> .merge_file_cILxgZ
+=======
+>>>>>>> .merge_file_cktgYw
 PHPStan `Modules/Activity` a 0.
 
 ## Pest Feature fixes 2026-11-16
@@ -144,8 +168,11 @@ File toccati: `tests/TestCase.php`, `tests/Feature/{ActionsTest,BaseModelBusines
 BaseModelBusinessLogicPestTest,CodeQualityTest,FilamentTest}.php`,
 `tests/Feature/Filament/Actions/ListLogActivitiesActionTest.php`,
 `tests/Security/AccessControlTest.php`, `app/Providers/ActivityServiceProvider.php`.
+<<<<<<< .merge_file_0nJnEE
 <<<<<<< .merge_file_1iwDfm
 =======
+=======
+>>>>>>> .merge_file_cktgYw
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -160,4 +187,7 @@ BaseModelBusinessLogicPestTest,CodeQualityTest,FilamentTest}.php`,
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_0nJnEE
 >>>>>>> .merge_file_cILxgZ
+=======
+>>>>>>> .merge_file_cktgYw

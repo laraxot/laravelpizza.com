@@ -5,18 +5,24 @@ tags: [notify, docs, conventions, database, naming]
 module: Notify
 created: 2026-07-20
 <<<<<<< HEAD
+<<<<<<< .merge_file_4CRmsT
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_BM5suG
 updated: 2026-07-20
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_4CRmsT
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_BM5suG
 qmd: "notify documentazione conventions database naming database directory naming convention frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -322,6 +328,7 @@ find laravel/Modules -type d -name "Seeders"
 - [AGENTS.md - Database Naming](../../AGENTS.md)
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_4CRmsT
 <<<<<<< HEAD
 - [AGENTS.md - Database Naming](../../AGENTS.md)
 - [AGENTS.md - Database Naming](../../AGENTS.md)
@@ -337,6 +344,13 @@ find laravel/Modules -type d -name "Seeders"
 =======
 - [AGENTS.md - Database Naming](../../agents.md)
 - [agents.md - Database Naming](../../agents.md)
+=======
+- [AGENTS.md - Database Naming](../../agents.md)
+- [agents.md - Database Naming](../../agents.md)
+=======
+- [AGENTS.md - Database Naming](../../AGENTS.md)
+- [AGENTS.md - Database Naming](../../AGENTS.md)
+>>>>>>> .merge_file_BM5suG
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 

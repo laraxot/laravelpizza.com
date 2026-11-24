@@ -6,7 +6,15 @@ discussions: []
 title: "Cosa migliorare: modulo Notify"
 type: report
 module: Notify
+<<<<<<< .merge_file_bTvXJa
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-01
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_xpdjp1
 qmd: "cosa migliorare notify phpstan phpmd phpinsights coverage debito priorita"
 ---
 

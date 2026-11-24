@@ -36,8 +36,11 @@ use Modules\Xot\Filament\Pages\XotBasePage;
  */
 class LogViewer extends XotBasePage
 {
+<<<<<<< .merge_file_g796dn
 <<<<<<< .merge_file_vRLAFq
 =======
+=======
+>>>>>>> .merge_file_sbbD1t
 
 >>>>>>> .merge_file_CxVmHC
     protected string $view = 'activity::filament.pages.log-viewer';

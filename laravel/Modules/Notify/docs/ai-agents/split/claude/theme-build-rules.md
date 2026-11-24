@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_4sxAZw
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_s9ccxe
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_4sxAZw
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_s9ccxe
 qmd: "theme build rules"
 issues: []
 discussions: []
@@ -57,11 +63,14 @@ npm run build
 - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 - Without `public_html/themes/<Tema>` symlinked to `laravel/Themes/<Tema>/public` (`npm run copy` dismesso), the changes won't be available to the main Laravel application
 =======
+<<<<<<< .merge_file_4sxAZw
 <<<<<<< HEAD
 <<<<<<< HEAD
 - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 - Without `public_html/themes/<Tema>` symlinked to `laravel/Themes/<Tema>/public` (`npm run copy` dismesso), the changes won't be available to the main Laravel application
 =======
+=======
+>>>>>>> .merge_file_s9ccxe
 <<<<<<< .merge_file_9mWvKC
 - Without `symlink public_html/themes (npm run copy obsoleto)`, the changes won't be available to the main Laravel application
 - Without `public_html/themes/<Tema>` symlinked to `laravel/Themes/<Tema>/public` (`npm run copy` dismesso), the changes won't be available to the main Laravel application
@@ -69,10 +78,13 @@ npm run build
 - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 >>>>>>> .merge_file_MPiezw
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_4sxAZw
 =======
 - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_s9ccxe
 - Users will NOT see any frontend changes without these steps
 
 ### Remember:
@@ -86,6 +98,11 @@ This is a fundamental rule that must NEVER be forgotten when working with themes
 ---
 ## Cross-References
 
+<<<<<<< .merge_file_4sxAZw
+=======
+- ← [CLAUDE Index](index.md): All Laravel Boost guidelines
+- ← [Main AI Docs Index](../index.md): Master index
+>>>>>>> .merge_file_s9ccxe
 - ← [CLAUDE Index](index.md): All Laravel Boost guidelines
 - ← [Main AI Docs Index](../index.md): Master index
 <<<<<<< HEAD

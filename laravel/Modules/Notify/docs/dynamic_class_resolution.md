@@ -3,7 +3,15 @@ title: "dynamic class resolution"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_rOzZhm
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_GvwOPX
 qmd: "dynamic class resolution"
 issues: []
 discussions: []

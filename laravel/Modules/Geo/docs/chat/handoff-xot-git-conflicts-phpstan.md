@@ -3,15 +3,21 @@ title: "handoff xot git conflicts phpstan"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_fDV8xL
 <<<<<<< .merge_file_bsvBb0
 updated: 2026-11-23
 =======
+=======
+>>>>>>> .merge_file_a1HNj9
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_fDV8xL
 >>>>>>> .merge_file_IduRdS
+=======
+>>>>>>> .merge_file_a1HNj9
 qmd: "handoff xot git conflicts phpstan"
 issues: []
 discussions: []

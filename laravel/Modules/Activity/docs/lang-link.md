@@ -10,10 +10,13 @@ tags: [documentation]
 Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../../Lang/docs/).
 
 Consulta la documentazione delle traduzioni qui:
+<<<<<<< .merge_file_zbH8R2
 <<<<<<< .merge_file_DYjKXX
 - [Introduzione alle Traduzioni](../../lang/docs/introduction.md)
 - [Struttura delle Traduzioni](../../lang/docs/structure.md)
 =======
+=======
+>>>>>>> .merge_file_cfPZgl
 <<<<<<< HEAD
 - [Introduzione alle Traduzioni](../../Lang/docs/introduction.md)
 - [Struttura delle Traduzioni](../../Lang/docs/structure.md)
@@ -31,7 +34,10 @@ Consulta la documentazione delle traduzioni qui:
 - [Struttura delle Traduzioni](../../Lang/docs/structure.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_zbH8R2
 >>>>>>> .merge_file_LG2ICN
+=======
+>>>>>>> .merge_file_cfPZgl
 - [Gestione dei File di Lingua](../../lang/docs/module_lang.md)
 Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../../Lang/project_docs/).
 

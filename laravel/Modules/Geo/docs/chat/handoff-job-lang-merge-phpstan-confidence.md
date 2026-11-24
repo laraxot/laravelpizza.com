@@ -6,15 +6,21 @@ discussions: []
 title: handoff sessione Job Lang merge PHPStan
 type: chat
 tags: [handoff, job, lang, phpstan, merge-conflicts, confidence]
+<<<<<<< .merge_file_JAKGRt
 <<<<<<< .merge_file_0YQLbn
 updated: 2026-11-23
 =======
+=======
+>>>>>>> .merge_file_TJ0l7k
 <<<<<<< HEAD
 updated: 2026-05-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_JAKGRt
 >>>>>>> .merge_file_SdbmNU
+=======
+>>>>>>> .merge_file_TJ0l7k
 related:
   - ../wiki/how-to/git-merge-marker-sweep.md
   - ../wiki/memories/phpstan-modules-inventory.md

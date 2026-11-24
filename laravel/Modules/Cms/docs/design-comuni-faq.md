@@ -152,9 +152,12 @@ Universal Blocks Renderer
 ```bash
 cd laravel/Themes/Sixteen
 npm run build    # Compila CSS/JS
+<<<<<<< .merge_file_uijTEj
 <<<<<<< .merge_file_YX1l4V
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
 =======
+=======
+>>>>>>> .merge_file_rF9oUx
 <<<<<<< HEAD
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 =======
@@ -164,7 +167,10 @@ npm run build    # Compila CSS/JS
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_uijTEj
 >>>>>>> .merge_file_Z4esBV
+=======
+>>>>>>> .merge_file_rF9oUx
 ```
 
 ## Testing
@@ -251,8 +257,11 @@ Icone utilizzate:
 
 ---
 
+<<<<<<< .merge_file_uijTEj
 <<<<<<< .merge_file_YX1l4V
 =======
+=======
+>>>>>>> .merge_file_rF9oUx
 title: "design comuni faq"
 type: note
 tags: [documentation]
@@ -261,7 +270,10 @@ updated: 2026-09-26
 qmd: "design comuni faq"
 issues: []
 discussions: []
+<<<<<<< .merge_file_uijTEj
 >>>>>>> .merge_file_Z4esBV
+=======
+>>>>>>> .merge_file_rF9oUx
 **Ultimo Aggiornamento**: 2026-04-03  
 **Stato**: ✅ 90% Completato  
 **Responsabile**: AI Agent Team

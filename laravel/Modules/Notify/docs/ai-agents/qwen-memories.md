@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_iQMkPB
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_uM4HBs
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_iQMkPB
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_uM4HBs
 qmd: "qwen memories"
 issues: []
 discussions: []
@@ -268,10 +274,13 @@ Usare `cinematic-particles` per background hero:
 - [Indice QWEN](./qwen-split-index.md)
 - [memories.md](./memories.md) - Più memorie
 <<<<<<< HEAD
+<<<<<<< .merge_file_iQMkPB
 - [QWEN.md originale](../../qwen.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_uM4HBs
 - [qwen.md originale](../../qwen.md)
 =======
 <<<<<<< HEAD
@@ -280,8 +289,11 @@ Usare `cinematic-particles` per background hero:
 - [qwen.md originale](../../qwen.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_iQMkPB
 =======
 - [QWEN.md originale](../../qwen.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_uM4HBs
 - [Index principale](./index.md)

@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_xMSx8Y
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_fYHuye
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_xMSx8Y
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_fYHuye
 qmd: "module architecture"
 issues: []
 discussions: []
@@ -90,6 +96,7 @@ class User extends Illuminate\Database\Eloquent\Model
 - [AGENTS.md - Module Architecture Section](../../AGENTS.md)
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_xMSx8Y
 <<<<<<< HEAD
 - [CLAUDE.md - Architecture Section](../../CLAUDE.md)
 - [AGENTS.md - Module Architecture Section](../../AGENTS.md)
@@ -109,5 +116,14 @@ class User extends Illuminate\Database\Eloquent\Model
 - [CLAUDE.md - Architecture Section](../../claude.md)
 - [AGENTS.md - Module Architecture Section](../../agents.md)
 - [agents.md - Module Architecture Section](../../agents.md)
+=======
+- [CLAUDE.md - Architecture Section](../../claude.md)
+- [AGENTS.md - Module Architecture Section](../../agents.md)
+- [agents.md - Module Architecture Section](../../agents.md)
+=======
+- [CLAUDE.md - Architecture Section](../../CLAUDE.md)
+- [AGENTS.md - Module Architecture Section](../../AGENTS.md)
+- [AGENTS.md - Module Architecture Section](../../AGENTS.md)
+>>>>>>> .merge_file_fYHuye
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

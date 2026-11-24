@@ -3,7 +3,15 @@ title: "laravel v11 rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_yZCQBn
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_YTFiRV
 qmd: "laravel v11 rules"
 issues: []
 discussions: []

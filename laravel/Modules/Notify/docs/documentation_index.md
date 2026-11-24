@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_vDDphs
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_Kj7CLm
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_vDDphs
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Kj7CLm
 qmd: "documentation index"
 issues: []
 discussions: []
@@ -59,11 +65,14 @@ status: draft
 - [Database Schema](wiki/schema.md) - Schema database
 - [Database Schema](./wiki/schema.md) - Schema database
 =======
+<<<<<<< .merge_file_vDDphs
 <<<<<<< HEAD
 <<<<<<< HEAD
 - [Database Schema](wiki/schema.md) - Schema database
 - [Database Schema](./wiki/schema.md) - Schema database
 =======
+=======
+>>>>>>> .merge_file_Kj7CLm
 <<<<<<< .merge_file_vbQUet
 - [Database Schema](./database/schema.md) - Schema database
 =======
@@ -71,11 +80,14 @@ status: draft
 - [Database Schema](./wiki/schema.md) - Schema database
 >>>>>>> .merge_file_NUr3D1
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_vDDphs
 =======
 - [Database Schema](wiki/schema.md) - Schema database
 - [Database Schema](./wiki/schema.md) - Schema database
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Kj7CLm
 - [API Documentation](./api/README.md) - Documentazione API
 - [Security](./security/README.md) - Sicurezza e conformità
 
@@ -257,19 +269,25 @@ status: draft
 ### Coding Guidelines
 - [PHP Standards](./standards/php.md) - Standard PHP (PSR-12)
 <<<<<<< HEAD
+<<<<<<< .merge_file_vDDphs
 <<<<<<< HEAD
 - [Laravel Best Practices](./standards/laravel.md) - Best practices Laravel
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_Kj7CLm
 =======
 <<<<<<< .merge_file_vbQUet
 - [Laravel Best Practices](./standards/laravel.md) - Best practices Laravel
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_vDDphs
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Kj7CLm
 - [Laravel Best Practices](html2pdf/laravel.md) - Best practices Laravel
 - [Environment Setup](./ai-agents/setup.md) - Configurazione ambiente
 - [Docker Setup](./development/docker.md) - Configurazione Docker
@@ -280,6 +298,7 @@ status: draft
 - [Laravel Best Practices](./html2pdf/laravel.md) - Best practices Laravel
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_vDDphs
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -288,6 +307,10 @@ status: draft
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_NUr3D1
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_Kj7CLm
 - [Filament Guidelines](./standards/filament.md) - Linee guida Filament
 - [Blade Components](./standards/blade.md) - Componenti Blade
 
@@ -297,15 +320,19 @@ status: draft
 - [Testing Strategy](strategy.md) - Strategia testing
 - [Testing Strategy](./strategy.md) - Strategia testing
 =======
+<<<<<<< .merge_file_vDDphs
 <<<<<<< HEAD
 <<<<<<< HEAD
 - [Testing Strategy](strategy.md) - Strategia testing
 - [Testing Strategy](./strategy.md) - Strategia testing
 =======
+=======
+>>>>>>> .merge_file_Kj7CLm
 <<<<<<< .merge_file_vbQUet
 - [Testing Strategy](./testing/strategy.md) - Strategia testing
 =======
 - [Testing Strategy](strategy.md) - Strategia testing
+<<<<<<< .merge_file_vDDphs
 - [Testing Strategy](./strategy.md) - Strategia testing
 >>>>>>> .merge_file_NUr3D1
 >>>>>>> laraxot/dev
@@ -313,6 +340,10 @@ status: draft
 - [Testing Strategy](strategy.md) - Strategia testing
 - [Testing Strategy](./strategy.md) - Strategia testing
 >>>>>>> laraxot/dev
+=======
+- [Testing Strategy](./strategy.md) - Strategia testing
+>>>>>>> .merge_file_NUr3D1
+>>>>>>> .merge_file_Kj7CLm
 >>>>>>> laraxot/dev
 - [CI/CD Pipeline](./ci-cd/README.md) - Continuous integration
 
@@ -358,15 +389,19 @@ status: draft
 - [Usage Analytics](html2pdf/usage.md) - Analisi utilizzo
 - [Usage Analytics](./html2pdf/usage.md) - Analisi utilizzo
 =======
+<<<<<<< .merge_file_vDDphs
 <<<<<<< HEAD
 <<<<<<< HEAD
 - [Usage Analytics](html2pdf/usage.md) - Analisi utilizzo
 - [Usage Analytics](./html2pdf/usage.md) - Analisi utilizzo
 =======
+=======
+>>>>>>> .merge_file_Kj7CLm
 <<<<<<< .merge_file_vbQUet
 - [Usage Analytics](./analytics/usage.md) - Analisi utilizzo
 =======
 - [Usage Analytics](html2pdf/usage.md) - Analisi utilizzo
+<<<<<<< .merge_file_vDDphs
 - [Usage Analytics](./html2pdf/usage.md) - Analisi utilizzo
 >>>>>>> .merge_file_NUr3D1
 >>>>>>> laraxot/dev
@@ -374,6 +409,10 @@ status: draft
 - [Usage Analytics](html2pdf/usage.md) - Analisi utilizzo
 - [Usage Analytics](./html2pdf/usage.md) - Analisi utilizzo
 >>>>>>> laraxot/dev
+=======
+- [Usage Analytics](./html2pdf/usage.md) - Analisi utilizzo
+>>>>>>> .merge_file_NUr3D1
+>>>>>>> .merge_file_Kj7CLm
 >>>>>>> laraxot/dev
 - [Business Metrics](./analytics/business.md) - Metriche business
 
@@ -386,15 +425,19 @@ status: draft
 - [Security Guidelines](ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
 - [Security Guidelines](./ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
 =======
+<<<<<<< .merge_file_vDDphs
 <<<<<<< HEAD
 <<<<<<< HEAD
 - [Security Guidelines](ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
 - [Security Guidelines](./ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
 =======
+=======
+>>>>>>> .merge_file_Kj7CLm
 <<<<<<< .merge_file_vbQUet
 - [Security Guidelines](./security/guidelines.md) - Linee guida sicurezza
 =======
 - [Security Guidelines](ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
+<<<<<<< .merge_file_vDDphs
 - [Security Guidelines](./ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
 >>>>>>> .merge_file_NUr3D1
 >>>>>>> laraxot/dev
@@ -402,6 +445,10 @@ status: draft
 - [Security Guidelines](ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
 - [Security Guidelines](./ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
 >>>>>>> laraxot/dev
+=======
+- [Security Guidelines](./ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
+>>>>>>> .merge_file_NUr3D1
+>>>>>>> .merge_file_Kj7CLm
 >>>>>>> laraxot/dev
 - [GDPR Compliance](./security/gdpr.md) - Conformità GDPR
 - [Authentication](./security/authentication.md) - Sistema autenticazione

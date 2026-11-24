@@ -3,15 +3,21 @@ title: "header language user dropdown"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_1HwnV8
 <<<<<<< .merge_file_jnwXU0
 updated: 2026-11-23
 =======
+=======
+>>>>>>> .merge_file_rQcUpF
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_1HwnV8
 >>>>>>> .merge_file_CgPqza
+=======
+>>>>>>> .merge_file_rQcUpF
 qmd: "header language user dropdown"
 issues: []
 discussions: []
@@ -20,9 +26,12 @@ discussions: []
 # Implementazione del Selettore di Lingua e Dropdown Utente nell'Header
 
 ## Collegamenti correlati
+<<<<<<< .merge_file_1HwnV8
 <<<<<<< .merge_file_jnwXU0
 - [Documentazione centrale](/project_docs/README.md)
 =======
+=======
+>>>>>>> .merge_file_rQcUpF
 <<<<<<< HEAD
 - [Documentazione centrale](/project_docs/README.md)
 =======
@@ -32,7 +41,10 @@ discussions: []
 - [Documentazione centrale](/project_docs/README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_1HwnV8
 >>>>>>> .merge_file_CgPqza
+=======
+>>>>>>> .merge_file_rQcUpF
 - [Collegamenti documentazione](/project_docs/collegamenti-documentazione.md)
 - [Documentazione sezioni](/project_docs/sections.md)
 - [Sezioni CMS](/laravel/modules/cms/project_docs/sections.md)

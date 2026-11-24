@@ -4,7 +4,33 @@ type: ecc-audit
 status: review
 updated: 2026-11-16
 module: Media
+<<<<<<< .merge_file_f2koOo
 qmd: "ECC audit Media verification security testing laravel checklist security-review clean-code verification-loop inventario misurato finding guard prunable cast id"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+qmd: "ECC audit Media verification security testing laravel checklist security-review clean-code verification-loop inventario misurato finding guard prunable cast id"
+=======
+=======
+=======
+<<<<<<< HEAD
+qmd: "ECC audit Media verification security testing laravel checklist security-review clean-code verification-loop inventario misurato finding guard prunable cast id"
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_GKGpqq
+qmd: "ECC audit Media checklist security-review clean-code verification-loop inventario misurato finding guard prunable cast id"
+=======
+qmd: "ECC audit Media verification security testing laravel checklist security-review clean-code verification-loop inventario misurato finding guard prunable cast id"
+>>>>>>> .merge_file_evDJwh
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_S4RFpW
 related:
   - ./00-index.md
   - ../bmad/audits/media-audit.md
@@ -15,6 +41,41 @@ related:
 
 ## Contratto PTVX
 
+<<<<<<< .merge_file_f2koOo
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_GKGpqq
+ECC non sostituisce AGENTS.md/BMAD. Ogni finding: story BMAD, lock, fix causa,
+PHPStan + Pest, aggiornamento docs/QMD.
+
+## Checklist
+
+- [ ] `clean-code`: DRY/KISS, Actions su Services, niente wrapper inutili
+- [ ] `security-review`: policy, mass assignment, export, log, privacy, tenant
+- [ ] `laravel-verification`: route, config, migration additive, container
+- [ ] `verification-loop`: PHPStan level max + Pest mirato
+- [ ] `tdd-workflow`: regressione sui finding P0
+- [ ] `documentation-sync`: story + indici + qmd
+- [ ] `context-engineering`: QMD/graphify prima; registrare il perché dopo
+
+## Input misurato (2026-11-16)
+=======
+>>>>>>> .merge_file_evDJwh
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_S4RFpW
 ECC non sostituisce `AGENTS.md`/BMAD. Ogni finding: story BMAD, lock, fix alla causa, PHPStan + Pest, aggiornamento docs/QMD. Dettaglio: [audit profondo](../bmad/audits/media-audit.md).
 
 ## Checklist (stato misurato 2026-11-16)
@@ -34,6 +95,45 @@ ECC non sostituisce `AGENTS.md`/BMAD. Ogni finding: story BMAD, lock, fix alla c
 | Voce | N |
 |---|---:|
 | app PHP | 127 |
+<<<<<<< .merge_file_f2koOo
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_GKGpqq
+| test | 47 |
+| resources | 3 |
+| actions | 51 |
+| services | 0 |
+| policies (files approx) | 8 |
+
+## Gate osservati
+
+- PHPStan `Modules` (2026-11-16): 0 errori
+- Pest: pending (ambiente testing)
+
+## Anti-pattern vietati
+
+- baseline/`@phpstan-ignore` senza motivazione
+- test svuotati per silenziare errori
+- migrate:fresh / RefreshDatabase / --force
+- docs con date nel nome file
+- comportamento o screenshot inventati
+=======
+>>>>>>> .merge_file_evDJwh
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_S4RFpW
 | test PHP / `*Test.php` | 47 / 41 |
 | Models / Policy / Resource | 4 / 4 / 3 |
 | Pagine Resource / pagine cluster `Test` / Widget | 15 / 2 / 1 |
@@ -53,10 +153,46 @@ ECC non sostituisce `AGENTS.md`/BMAD. Ogni finding: story BMAD, lock, fix alla c
 ## Anti-pattern vietati (stato)
 
 `migrate:fresh`: 0; `RefreshDatabase`: 0; `@phpstan-ignore`: 2; `dd()`: 0; `->label()`/titoli letterali: ≥ 12 in `AwsTest`, 1 in `ConvertAction`; `$guarded = []`: 1 (`TemporaryUpload.php:99`).
+<<<<<<< .merge_file_f2koOo
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_GKGpqq
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
+<<<<<<< .merge_file_GKGpqq
+=======
+>>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_S4RFpW
 
 Regole sempre valide: niente baseline/`@phpstan-ignore` senza motivazione, niente test svuotati per silenziare errori,
 mai `migrate:fresh` / `RefreshDatabase` / `--force`, niente date nel nome dei file docs, niente comportamento o
 screenshot inventati.
+<<<<<<< .merge_file_f2koOo
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_evDJwh
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_evDJwh
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_evDJwh
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_S4RFpW
 
 ## Riferimenti
 

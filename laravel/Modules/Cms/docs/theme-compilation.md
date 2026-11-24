@@ -110,9 +110,12 @@ Per pubblicare il tema compilato, è necessario eseguire il seguente comando:
 
 ```bash
 cd /var/www/html/<nome progetto>/laravel/Themes/One
+<<<<<<< .merge_file_9D3pfj
 <<<<<<< .merge_file_RqiqpY
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
 =======
+=======
+>>>>>>> .merge_file_yY9Jgh
 <<<<<<< HEAD
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 =======
@@ -122,7 +125,10 @@ cd /var/www/html/<nome progetto>/laravel/Themes/One
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_9D3pfj
 >>>>>>> .merge_file_dm1q2t
+=======
+>>>>>>> .merge_file_yY9Jgh
 ```
 
 Questo comando copia tutti i file dalla directory `resources/dist` alla directory pubblica `public_html/themes/One`:

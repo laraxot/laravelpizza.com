@@ -1,4 +1,5 @@
 ---
+<<<<<<< .merge_file_djp61H
 <<<<<<< .merge_file_X52Y6E
 title: "Contratto — ClearScheduleCacheAction (Schedule)"
 type: contract
@@ -17,6 +18,8 @@ Invalida la voce di cache degli schedule. Codice: `app/Actions/Schedule/ClearSch
 
 - Nessun argomento. Legge `config('job::cache.store')` e `config('job::cache.key')`, entrambe asserite `string` (righe 23-24).
 =======
+=======
+>>>>>>> .merge_file_Bc5hrt
 title: "Contratto — ClearScheduleCacheAction"
 type: contract
 action: "Modules\Job\Actions\ClearScheduleCacheAction"
@@ -34,7 +37,10 @@ Sorgente: `app/Actions/ClearScheduleCacheAction.php`. Chiamanti: `Observers/Sche
 ## Input
 
 - Nessun parametro. Legge `config('job::cache.store')` e `config('job::cache.key')`.
+<<<<<<< .merge_file_djp61H
 >>>>>>> .merge_file_QFr01p
+=======
+>>>>>>> .merge_file_Bc5hrt
 
 ## Output
 
@@ -42,6 +48,7 @@ Sorgente: `app/Actions/ClearScheduleCacheAction.php`. Chiamanti: `Observers/Sche
 
 ## Invarianti
 
+<<<<<<< .merge_file_djp61H
 <<<<<<< .merge_file_X52Y6E
 | ID | Regola | Test |
 |---|---|---|
@@ -64,6 +71,8 @@ Nota su INV-2: `job::cache.*` non e' definita in nessun file del modulo (`config
 - Non svuota lo store intero e non tocca altre chiavi.
 - Chiamanti verificati: `Observers/ScheduleObserver.php:62-66` (protetto da `config('job::cache.enabled')`, che e' null, quindi non raggiunge l'Action) e `Console/Commands/ScheduleClearCacheCommand.php:30` (comando `schedule:clear-cache`, **senza** guardia: con la config attuale fallisce). Da verificare a runtime.
 =======
+=======
+>>>>>>> .merge_file_Bc5hrt
 | ID | Regola | Group Pest |
 |---|---|---|
 | JOB-SCHED-CACHE-INV-1 | Cancella una sola chiave (`job::cache.key`) su un solo store (`job::cache.store`), mai un flush dello store. | — |
@@ -86,4 +95,7 @@ Nota su INV-2: `job::cache.*` non e' definita in nessun file del modulo (`config
 - Esiste un duplicato con lo stesso corpo, `Modules\Job\Actions\Schedule\ClearScheduleCacheAction`, senza chiamanti in
   produzione (la story `../stories/job-services-to-actions.story.md` lo dichiara come versione da tenere, il codice usa questa):
   non creare una terza copia; chi consolida sceglie una delle due e aggiorna questo contratto.
+<<<<<<< .merge_file_djp61H
 >>>>>>> .merge_file_QFr01p
+=======
+>>>>>>> .merge_file_Bc5hrt

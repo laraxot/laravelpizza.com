@@ -233,10 +233,13 @@ docs/design-comuni/master-index.md
 
 <<<<<<< HEAD
 1. **Iniziare**: [Master Index](master-index.md)
+<<<<<<< .merge_file_cZVbqd
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 1. **Iniziare**: [Master Index](master-index.md)
+=======
+>>>>>>> .merge_file_GzEowu
 1. **Iniziare**: [Master Index](master-index.md)
 =======
 <<<<<<< .merge_file_Ihf4TF
@@ -246,10 +249,13 @@ docs/design-comuni/master-index.md
 1. **Iniziare**: [Master Index](master-index.md)
 >>>>>>> .merge_file_OVPFCN
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_cZVbqd
 =======
 1. **Iniziare**: [Master Index](../master-index.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_GzEowu
 2. **Architettura**: [Cms FAQ Architecture](../laravel/Modules/Cms/docs/design-comuni-faq.md)
 3. **Componenti**: [UI FAQ Components](../laravel/Modules/UI/docs/design-comuni-faq-components.md)
 4. **Analisi**: [Sixteen HTML Analysis](../laravel/Themes/Sixteen/docs/design-comuni/DOMANDE_FREQUENTI_HTML_analysis.md)
@@ -266,10 +272,13 @@ docs/design-comuni/master-index.md
 
 <<<<<<< HEAD
 1. **Stato**: [Master Index](master-index.md) (sezione Stato Globale)
+<<<<<<< .merge_file_cZVbqd
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 1. **Stato**: [Master Index](master-index.md) (sezione Stato Globale)
+=======
+>>>>>>> .merge_file_GzEowu
 1. **Stato**: [Master Index](master-index.md) (sezione Stato Globale)
 =======
 <<<<<<< .merge_file_Ihf4TF
@@ -279,10 +288,13 @@ docs/design-comuni/master-index.md
 1. **Stato**: [Master Index](master-index.md) (sezione Stato Globale)
 >>>>>>> .merge_file_OVPFCN
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_cZVbqd
 =======
 1. **Stato**: [Master Index](../master-index.md) (sezione Stato Globale)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_GzEowu
 2. **Dettaglio**: [Report Finale FAQ](../laravel/Themes/Sixteen/docs/design-comuni/DOMANDE_FREQUENTI_report-finale.md)
 3. **Visivo**: [Analisi Visiva](../laravel/Themes/Sixteen/docs/design-comuni/DOMANDE_FREQUENTI_analisi-visiva.md)
 
@@ -338,10 +350,13 @@ docs/design-comuni/master-index.md
 
 <<<<<<< HEAD
 - **Master Index**: [docs/design-comuni/master-index.md](master-index.md)
+<<<<<<< .merge_file_cZVbqd
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 - **Master Index**: [docs/design-comuni/master-index.md](master-index.md)
+=======
+>>>>>>> .merge_file_GzEowu
 - **Master Index**: [docs/design-comuni/master-index.md](master-index.md)
 =======
 <<<<<<< .merge_file_Ihf4TF
@@ -351,10 +366,13 @@ docs/design-comuni/master-index.md
 - **Master Index**: [docs/design-comuni/master-index.md](master-index.md)
 >>>>>>> .merge_file_OVPFCN
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_cZVbqd
 =======
 - **Master Index**: [docs/design-comuni/master-index.md](../master-index.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_GzEowu
 - **Tema Sixteen**: [laravel/Themes/Sixteen/docs/design-comuni/](../laravel/Themes/Sixteen/docs/design-comuni/)
 - **Modulo Cms**: [laravel/Modules/Cms/docs/](../laravel/Modules/Cms/docs/)
 - **Modulo UI**: [laravel/Modules/UI/docs/](../laravel/Modules/UI/docs/)

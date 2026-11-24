@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_BYQp00
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_E6Wfv4
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_BYQp00
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_E6Wfv4
 qmd: "one migration per model"
 issues: []
 discussions: []
@@ -213,7 +219,10 @@ Tutto il resto è **RUMORE**.
 ### AI Agents Docs
 - **[Rules Index](00-index.md)** - All rules
 <<<<<<< HEAD
+<<<<<<< .merge_file_BYQp00
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_E6Wfv4
 - **[Rules Index](00-index.md)** - All rules
 - **[DRY Principle](../../dry-kiss.md)** - DRY + KISS
 - **[DRY Principle](../../dry-kiss.md)** - DRY + KISS
@@ -223,11 +232,16 @@ Tutto il resto è **RUMORE**.
 =======
 - **[Rules Index](00-index.md)** - All rules
 - **[DRY Principle](../../dry-kiss.md)** - DRY + KISS
+<<<<<<< .merge_file_BYQp00
 - **[DRY Principle](../../dry-kiss.md)** - DRY + KISS
 >>>>>>> .merge_file_no9qeo
 >>>>>>> laraxot/dev
 =======
 - **[DRY Principle](../../dry-kiss.md)** - DRY + KISS
+=======
+- **[DRY Principle](../../dry-kiss.md)** - DRY + KISS
+>>>>>>> .merge_file_no9qeo
+>>>>>>> .merge_file_E6Wfv4
 >>>>>>> laraxot/dev
 - **[Translation Structure](translation-structure-5-levels.md)** - 5 levels rule
 

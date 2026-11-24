@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_Vd5bm6
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_yqM1R1
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Vd5bm6
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_yqM1R1
 qmd: "packages other"
 issues: []
 discussions: []
@@ -35,12 +41,17 @@ Struttura moduli del progetto:
 ```
 Modules/
 <<<<<<< HEAD
+<<<<<<< .merge_file_Vd5bm6
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_YMysJM
 >>>>>>> laraxot/dev
+=======
+=======
+<<<<<<< .merge_file_YMysJM
+>>>>>>> .merge_file_yqM1R1
   Activity/   — event sourcing, activity log
   Chart/      — chart rendering (Chart.js + JpGraph)
   Cms/        — content management
@@ -58,11 +69,14 @@ Modules/
   User/       — autenticazione, Passport, Socialite
   Xot/        — core module (XotBase, traits, utilities)
 =======
+<<<<<<< .merge_file_Vd5bm6
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_yqM1R1
 >>>>>>> laraxot/dev
   Activity/  : event sourcing, activity log
   Chart/     : chart rendering (Chart.js + JpGraph)
@@ -82,6 +96,7 @@ Modules/
   Xot/       : core module (XotBase, traits, utilities)
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_Vd5bm6
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -90,6 +105,10 @@ Modules/
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_GnLBPv
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_yqM1R1
 ```
 
 **Regole namespace** (v12, già configurato):

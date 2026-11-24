@@ -4,7 +4,15 @@ type: concept
 tags: [notify, docs, best-practices, path, conventions]
 module: Notify
 created: 2026-07-20
+<<<<<<< .merge_file_Ozsb3Q
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_HC3rpk
 qmd: "notify documentazione best practices path conventions convenzioni sui percorsi frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"

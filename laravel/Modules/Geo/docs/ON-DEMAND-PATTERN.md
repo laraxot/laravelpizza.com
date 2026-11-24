@@ -8,10 +8,13 @@ created: 2026-05-11
 updated: 2026-05-11
 tags: [on-demand, pattern, wiki, qmd]
 related:
+<<<<<<< .merge_file_n5jkTh
 <<<<<<< .merge_file_jI2uOA
   - ../../../../docs/wiki/rules/on-demand-pattern.md
   - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
 =======
+=======
+>>>>>>> .merge_file_gmvodx
 <<<<<<< HEAD
   - ../../../../docs/wiki/rules/on-demand-pattern.md
   - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
@@ -24,14 +27,20 @@ related:
   - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
 >>>>>>> .merge_file_RBkhdS
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_n5jkTh
 >>>>>>> .merge_file_tPShNl
+=======
+>>>>>>> .merge_file_gmvodx
 ---
 
 # On-Demand Pattern — Module **Geo**
 
+<<<<<<< .merge_file_n5jkTh
 <<<<<<< .merge_file_jI2uOA
 **Fonte canonica**: [docs/wiki/rules/on-demand-pattern.md](../../../../docs/wiki/rules/on-demand-pattern.md)
 =======
+=======
+>>>>>>> .merge_file_gmvodx
 <<<<<<< HEAD
 **Fonte canonica**: [docs/wiki/rules/on-demand-pattern.md](../../../../docs/wiki/rules/on-demand-pattern.md)
 =======
@@ -41,7 +50,10 @@ related:
 **Fonte canonica**: [docs/wiki/rules/on-demand-pattern.md](../../../../docs/wiki/rules/on-demand-pattern.md)
 >>>>>>> .merge_file_RBkhdS
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_n5jkTh
 >>>>>>> .merge_file_tPShNl
+=======
+>>>>>>> .merge_file_gmvodx
 
 ## Principio
 
@@ -116,11 +128,14 @@ qmd search "<topic>"
 
 ## Riferimenti
 
+<<<<<<< .merge_file_n5jkTh
 <<<<<<< .merge_file_jI2uOA
 - [Global On-Demand Pattern](../../../../docs/wiki/rules/on-demand-pattern.md)
 - [LLM Wiki Operational Discipline](../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
 - [Trigger Map](../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
 =======
+=======
+>>>>>>> .merge_file_gmvodx
 <<<<<<< HEAD
 - [Global On-Demand Pattern](../../../../docs/wiki/rules/on-demand-pattern.md)
 - [LLM Wiki Operational Discipline](../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
@@ -136,7 +151,10 @@ qmd search "<topic>"
 - [Trigger Map](../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
 >>>>>>> .merge_file_RBkhdS
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_n5jkTh
 >>>>>>> .merge_file_tPShNl
+=======
+>>>>>>> .merge_file_gmvodx
 - [Module Wiki Index](./wiki/index.md)
 
 ---

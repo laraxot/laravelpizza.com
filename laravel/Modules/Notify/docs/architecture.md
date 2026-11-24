@@ -3,7 +3,15 @@ title: "architecture"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_y9fp2p
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_wcUCok
 qmd: "architecture"
 issues: []
 discussions: []
@@ -70,10 +78,13 @@ This document outlines the architectural design of the Notify module, focusing o
 - [Email Templates](./email_templates.md)
 - [SMS Implementation](./sms_implementation.md)
 - [Troubleshooting](./troubleshooting.md)
+<<<<<<< .merge_file_y9fp2p
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_wcUCok
 - [Troubleshooting](./troubleshooting.md)
 
 ---
@@ -89,12 +100,15 @@ discussions: []
 <!-- Merged from architecture.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
+<<<<<<< .merge_file_y9fp2p
 <<<<<<< HEAD
 =======
 =======
 
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_wcUCok
 title: "Notify Module Architecture"
 type: architecture
 tags: [module, architecture, notify]

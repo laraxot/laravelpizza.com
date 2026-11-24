@@ -1,7 +1,10 @@
 ---
+<<<<<<< .merge_file_K9kKie
 <<<<<<< .merge_file_KgoRZN
 title: "Decision log — Activity"
 =======
+=======
+>>>>>>> .merge_file_NEDaxm
 <<<<<<< HEAD
 title: "Decision log: Activity"
 =======
@@ -11,7 +14,10 @@ title: "Decision log — Activity"
 title: "Decision log: Activity"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_K9kKie
 >>>>>>> .merge_file_mXCym5
+=======
+>>>>>>> .merge_file_NEDaxm
 type: decision-log
 module: Activity
 related:

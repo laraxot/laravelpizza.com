@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_1lNpOz
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_2XmOPY
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_1lNpOz
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_2XmOPY
 qmd: "critical rules summary"
 issues: []
 discussions: []
@@ -40,7 +46,10 @@ status: draft
 
 ---
 <<<<<<< HEAD
+<<<<<<< .merge_file_1lNpOz
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_2XmOPY
 [Back to index](../index.md) | [Full Rules](../../critical-rules.md)
 [Back to index](../../../index.md) | [Full Rules](../../critical-rules.md)
 =======
@@ -56,10 +65,15 @@ discussions: []
 [Back to index](../index.md) | [Full Rules](../critical-rules.md)
 =======
 [Back to index](../index.md) | [Full Rules](../../critical-rules.md)
+<<<<<<< .merge_file_1lNpOz
 [Back to index](../../../index.md) | [Full Rules](../../critical-rules.md)
 >>>>>>> .merge_file_rjJJOa
 >>>>>>> laraxot/dev
 =======
 [Back to index](../index.md) | [Full Rules](../../critical-rules.md)
 [Back to index](../../../index.md) | [Full Rules](../../critical-rules.md)
+=======
+[Back to index](../../../index.md) | [Full Rules](../../critical-rules.md)
+>>>>>>> .merge_file_rjJJOa
+>>>>>>> .merge_file_2XmOPY
 >>>>>>> laraxot/dev

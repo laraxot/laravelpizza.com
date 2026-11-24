@@ -91,9 +91,12 @@ protected function setUp(): void
 
 ## 🔗 Collegamenti
 
+<<<<<<< .merge_file_JLpQIt
 <<<<<<< .merge_file_O9H1pI
 - [Testing Rules](../testing-rules.md)
 =======
+=======
+>>>>>>> .merge_file_DYCZKH
 <<<<<<< HEAD
 - [Testing Rules](testing-rules.md)
 =======
@@ -103,7 +106,10 @@ protected function setUp(): void
 - [Testing Rules](../testing-rules.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_JLpQIt
 >>>>>>> .merge_file_ghP4B3
+=======
+>>>>>>> .merge_file_DYCZKH
 - [Activity TestCase Fix](../../../Activity/docs/testing-testcase-database-connection-fix.md)
 - [User TestCase](../../../User/tests/TestCase.php)
 

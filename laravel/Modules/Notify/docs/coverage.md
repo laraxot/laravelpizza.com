@@ -7,7 +7,15 @@ type: reference
 status: active
 tags: [coverage, testing, pest, notify]
 created: 2026-08-24
+<<<<<<< .merge_file_zx14b2
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-11
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_T70GXL
 qmd: "notify coverage pest unit 6.3 percento misurato xdebug db irraggiungibile; notificationlogresource completato 2026-09-11"
 ---
 

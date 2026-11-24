@@ -3,7 +3,15 @@ title: "project overview"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_DS8FG0
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_ybeTFs
 qmd: "project overview"
 issues: []
 discussions: []
@@ -77,9 +85,12 @@ updated: 2026-09-26
 qmd: "project overview"
 issues: []
 discussions: []
+<<<<<<< .merge_file_DS8FG0
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_ybeTFs
 [Back to index](../index.md) | [Guidelines](guidelines.md) | [Links](links.md)

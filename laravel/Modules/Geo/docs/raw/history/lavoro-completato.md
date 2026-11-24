@@ -3,15 +3,21 @@ title: "lavoro completato"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_KIsXNb
 <<<<<<< .merge_file_L7dpJC
 updated: 2026-11-23
 =======
+=======
+>>>>>>> .merge_file_WoAveG
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_KIsXNb
 >>>>>>> .merge_file_nQzEHn
+=======
+>>>>>>> .merge_file_WoAveG
 qmd: "lavoro completato"
 issues: []
 discussions: []

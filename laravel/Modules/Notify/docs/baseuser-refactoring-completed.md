@@ -1,9 +1,12 @@
 ---
 <<<<<<< HEAD
+<<<<<<< .merge_file_3rJ6vM
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_6jDAOP
 issues: []
 discussions: []
 title: "baseuser-refactoring-completed-2025-10-15"
@@ -17,8 +20,11 @@ qmd: "baseuser-refactoring-completed-2025-10-15 deprecated"
 updated: 2026-07-14
 qmd: "baseuser-refactoring-completed-2025-10-15 deprecated"
 =======
+<<<<<<< .merge_file_3rJ6vM
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_6jDAOP
 title: "baseuser refactoring completed 2025 10"
 type: note
 tags: [documentation]
@@ -27,10 +33,13 @@ updated: 2026-11-23
 qmd: "baseuser refactoring completed 2025 10"
 issues: []
 discussions: []
+<<<<<<< .merge_file_3rJ6vM
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_6jDAOP
 >>>>>>> laraxot/dev
 status: deprecated
 related:
@@ -43,12 +52,15 @@ related:
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_3rJ6vM
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_6jDAOP
   - "./action-plan-immediate.md"
 ---
 
@@ -425,11 +437,15 @@ Il refactoring di `BaseUser.php` rappresenta un **caso di studio perfetto** di c
 
 *"Prima lo fai funzionare, poi lo fai giusto, poi lo fai veloce."*  
 *Oggi abbiamo fatto tutti e tre!* ✨
+<<<<<<< .merge_file_3rJ6vM
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_6jDAOP
 >>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
@@ -438,10 +454,13 @@ Il refactoring di `BaseUser.php` rappresenta un **caso di studio perfetto** di c
 > Questo file è stato rinominato in [baseuser-refactoring-completed.md](baseuser-refactoring-completed.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_3rJ6vM
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
+=======
+>>>>>>> .merge_file_6jDAOP
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

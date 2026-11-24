@@ -1,7 +1,10 @@
 ---
+<<<<<<< .merge_file_9IqwXK
 <<<<<<< .merge_file_vgFbrr
 title: "UX — Activity"
 =======
+=======
+>>>>>>> .merge_file_faw68H
 <<<<<<< HEAD
 title: "UX: Activity"
 =======
@@ -11,7 +14,10 @@ title: "UX — Activity"
 title: "UX: Activity"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_9IqwXK
 >>>>>>> .merge_file_17Z2Fv
+=======
+>>>>>>> .merge_file_faw68H
 type: ux-design
 module: Activity
 related:

@@ -1,6 +1,14 @@
 ---
 tags: [documentation]
+<<<<<<< .merge_file_QzghFy
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_cswJhK
 qmd: "PHPSTAN L10"
 issues: []
 discussions: []

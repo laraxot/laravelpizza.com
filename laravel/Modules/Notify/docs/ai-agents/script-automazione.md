@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_zGZCFH
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_vCVDLn
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_zGZCFH
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_vCVDLn
 qmd: "script automazione"
 issues: []
 discussions: []
@@ -43,19 +49,27 @@ La cartella `bashscripts/` contiene script organizzati per categoria:
 - Comando documentato: [chaos-readiness](../chaos-readiness.md)
 - Comando documentato: [chaos-readiness](../chaos-readiness.md)
 =======
+<<<<<<< .merge_file_zGZCFH
 <<<<<<< HEAD
 <<<<<<< HEAD
 - Comando documentato: [chaos-readiness](../chaos-readiness.md)
 - Comando documentato: [chaos-readiness](../chaos-readiness.md)
 =======
+=======
+>>>>>>> .merge_file_vCVDLn
 <<<<<<< .merge_file_Ot8b6i
 - Comando documentato: [chaos-readiness](../commands/chaos-readiness.md)
 =======
 - Comando documentato: [chaos-readiness](../chaos-readiness.md)
+<<<<<<< .merge_file_zGZCFH
 - Comando documentato: [chaos-readiness](../chaos-readiness.md)
 >>>>>>> .merge_file_yZ9wco
 >>>>>>> laraxot/dev
 =======
 - Comando documentato: [chaos-readiness](../chaos-readiness.md)
 >>>>>>> laraxot/dev
+=======
+- Comando documentato: [chaos-readiness](../chaos-readiness.md)
+>>>>>>> .merge_file_yZ9wco
+>>>>>>> .merge_file_vCVDLn
 >>>>>>> laraxot/dev

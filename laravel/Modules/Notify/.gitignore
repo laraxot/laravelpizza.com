@@ -126,6 +126,7 @@ docs/graphify
 resources/lang
 .github/issue_content/
 
+<<<<<<< .merge_file_FifGI9
 <<<<<<< HEAD
 # Regole portate dal remoto laraxot/dev (sync del 24/11), unite alla base senza perdere nulla
 !docs/**/phpstan*.md
@@ -133,11 +134,17 @@ resources/lang
 =======
 # Tooling/configurazione locale (module-theme-root-hygiene)
 >>>>>>> laraxot/dev
+=======
+# Regole portate dal remoto laraxot/dev (sync del 24/11), unite alla base senza perdere nulla
+!docs/**/phpstan*.md
+!docs/**/phpstan*.story.md
+>>>>>>> .merge_file_ICtv50
 .agents/
 .codex/
 .opencode/
 .qwen/
 .php-cs-fixer.php
+<<<<<<< .merge_file_FifGI9
 <<<<<<< HEAD
 tests/coverage-*.*
 .github/ISSUE_CONTENT/
@@ -149,3 +156,8 @@ tests/graphify-out/
 .git.polluted*
 =======
 >>>>>>> laraxot/dev
+=======
+tests/coverage-*.*
+.github/ISSUE_CONTENT/
+tests/graphify-out/
+>>>>>>> .merge_file_ICtv50

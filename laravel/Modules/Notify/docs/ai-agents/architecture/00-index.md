@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_EzGgwl
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_XGtLJ0
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_EzGgwl
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_XGtLJ0
 qmd: "00 index"
 issues: []
 discussions: []
@@ -37,10 +43,13 @@ discussions: []
 
 - [../../../../docs/project/gsd-and-bmad-workflow.md](../../../../docs/project/gsd-and-bmad-workflow.md) — ordine canonico BMAD -> GSD -> Ralph
 <<<<<<< HEAD
+<<<<<<< .merge_file_EzGgwl
 - [../../ralph/00-INDEX.md](../../ralph/00-index.md) — albero Ralph locale, senza duplicare template nel root del repository
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_XGtLJ0
 - [../../ralph/00-index.md](../../ralph/00-index.md) — albero Ralph locale, senza duplicare template nel root del repository
 =======
 <<<<<<< HEAD
@@ -49,10 +58,13 @@ discussions: []
 - [../../ralph/00-index.md](../../ralph/00-index.md) — albero Ralph locale, senza duplicare template nel root del repository
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_EzGgwl
 =======
 - [../../ralph/00-INDEX.md](../../ralph/00-index.md) — albero Ralph locale, senza duplicare template nel root del repository
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_XGtLJ0
 
 ## Quick Decision Guide
 
@@ -68,10 +80,13 @@ discussions: []
 
 - [../00-index.md](../00-index.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_EzGgwl
 - [../../../../AGENTS.md](../../../../agents.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_XGtLJ0
 - [../../../../AGENTS.md](../../../../AGENTS.md)
 =======
 <<<<<<< HEAD
@@ -80,7 +95,10 @@ discussions: []
 - [../../../../AGENTS.md](../../../../AGENTS.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_EzGgwl
 =======
 - [../../../../AGENTS.md](../../../../agents.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_XGtLJ0

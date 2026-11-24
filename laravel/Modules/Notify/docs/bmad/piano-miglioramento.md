@@ -2,10 +2,22 @@
 title: "Piano di miglioramento — Notify"
 type: plan
 status: review
+<<<<<<< .merge_file_52DycG
+=======
+<<<<<<< HEAD
+updated: 2026-11-16
+module: Notify
+qmd: "piano miglioramento Notify P0 P1 P2 BMAD"
+=======
+>>>>>>> .merge_file_5dy7PG
 updated: 2026-11-23
 module: Notify
 qmd: "piano miglioramento Notify P0 P1 P2 BMAD"
 created: 2026-11-23
+<<<<<<< .merge_file_52DycG
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_5dy7PG
 ---
 
 # Piano di miglioramento — Notify

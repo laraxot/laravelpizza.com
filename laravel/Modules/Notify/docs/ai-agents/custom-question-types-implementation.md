@@ -3,7 +3,15 @@ title: "custom question types implementation"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_nON02Q
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_VLxEqe
 qmd: "custom question types implementation"
 issues: []
 discussions: []

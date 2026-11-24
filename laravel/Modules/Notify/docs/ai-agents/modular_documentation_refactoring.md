@@ -3,7 +3,15 @@ title: "modular documentation refactoring"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_Y28RXf
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_gA8B1U
 qmd: "modular documentation refactoring"
 issues: []
 discussions: []
@@ -119,6 +127,7 @@ TOTALE: ~2,500 righe  ✅ Organizzate, navigabili, mantenibili
 # .agents/docs/overview/agents-overview.md
 ## Riferimenti
 - [AGENTS.md](../../AGENTS.md) - File originale compatto
+<<<<<<< .merge_file_Y28RXf
 <<<<<<< HEAD
 - [AGENTS.md](../../AGENTS.md) - File originale compatto
 =======
@@ -127,6 +136,9 @@ TOTALE: ~2,500 righe  ✅ Organizzate, navigabili, mantenibili
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- [AGENTS.md](../../AGENTS.md) - File originale compatto
+>>>>>>> .merge_file_gA8B1U
 - [qwen.md](../../qwen.md) - Contesto Qwen Code
 ```
 

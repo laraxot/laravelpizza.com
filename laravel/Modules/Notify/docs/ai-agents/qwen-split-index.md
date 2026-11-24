@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_Sfcu84
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_NyU0uG
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Sfcu84
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_NyU0uG
 qmd: "qwen split index"
 issues: []
 discussions: []
@@ -38,10 +44,13 @@ discussions: []
 ## 🔗 Collegamento
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_Sfcu84
 - [QWEN.md originale](../../qwen.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_NyU0uG
 - [qwen.md originale](../../qwen.md)
 =======
 <<<<<<< HEAD
@@ -50,10 +59,13 @@ discussions: []
 - [qwen.md originale](../../qwen.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Sfcu84
 =======
 - [QWEN.md originale](../../qwen.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_NyU0uG
 - [Index principale](./index.md)
 
 ## Note

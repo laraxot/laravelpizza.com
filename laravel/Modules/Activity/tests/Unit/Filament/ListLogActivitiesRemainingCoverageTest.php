@@ -21,4 +21,7 @@ use Modules\Activity\Tests\Fixtures\ListLogActivitiesMountablePage;
 use Modules\Activity\Tests\Fixtures\ListLogActivitiesNestedFormPage;
 use Modules\Activity\Tests\Fixtures\ListLogActivitiesNonSchemaFormPage;
 use Modules\Activity\Tests\Fixtures\ListLogActivitiesPageHarness;
+<<<<<<< .merge_file_SFfRjb
 >>>>>>> .merge_file_5R9Z5H
+=======
+>>>>>>> .merge_file_vcB5v6

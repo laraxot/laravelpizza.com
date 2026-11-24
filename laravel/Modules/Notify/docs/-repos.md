@@ -7,7 +7,15 @@ module: notify
 type: reference
 tags: [wiki, notify, link-dump]
 created: 2026-08-24
+<<<<<<< .merge_file_dVpe0u
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_iuyarF
 ---
 
 -------------------------------------------------------------

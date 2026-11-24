@@ -3,7 +3,15 @@ title: "07 MCP Tailwind UI"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_WURDxh
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_5qnXCm
 qmd: "07 MCP Tailwind UI"
 issues: []
 discussions: []

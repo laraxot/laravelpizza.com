@@ -1,8 +1,11 @@
 ---
+<<<<<<< .merge_file_3ZMTdm
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_GQvY3m
 title: "INDEX — Notify"
 type: index
 status: active
@@ -21,6 +24,7 @@ Elenco operativo dei contract comportamentali del modulo Notify.
 |---|---|---|---|
 | Gestione stati modello | [modelwithstatuscontract](modelwithstatuscontract.md) | `Modules\Xot\Contracts\ModelWithStatusContract` | NOTIFY-INV-1 |
 
+<<<<<<< .merge_file_3ZMTdm
 (End of file - total 16 lines)
 =======
 title: "INDEX contratti — Notify"
@@ -56,3 +60,6 @@ Action ad alto rischio (invio a terzi, dati personali) senza contract:
 
 Totale Action nel modulo: 54 file in `app/Actions` (`find app/Actions -name '*.php' | wc -l`), di cui 1 con contract.
 >>>>>>> laraxot/dev
+=======
+(End of file - total 16 lines)
+>>>>>>> .merge_file_GQvY3m

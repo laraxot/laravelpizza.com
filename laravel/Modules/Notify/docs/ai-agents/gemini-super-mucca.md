@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_ymYfxM
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_uJcYvl
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_ymYfxM
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_uJcYvl
 qmd: "gemini super mucca"
 issues: []
 discussions: []
@@ -146,10 +152,13 @@ Prima di toccare **qualsiasi** codice, devi comprendere:
 - [Indice GEMINI](./gemini-split-index.md)
 - [memories.md](./memories.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_ymYfxM
 - [GEMINI.md originale](../../gemini.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_uJcYvl
 - [gemini.md originale](../../gemini.md)
 =======
 <<<<<<< HEAD
@@ -158,8 +167,11 @@ Prima di toccare **qualsiasi** codice, devi comprendere:
 - [gemini.md originale](../../gemini.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_ymYfxM
 =======
 - [GEMINI.md originale](../../gemini.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_uJcYvl
 - [Index principale](./index.md)

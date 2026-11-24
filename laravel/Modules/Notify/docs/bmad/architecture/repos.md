@@ -4,7 +4,15 @@ module: notify
 type: reference
 tags: [wiki, notify, link-dump]
 created: 2026-08-24
+<<<<<<< .merge_file_RT93BC
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_WX4YXm
 ---
 
 -------------------------------------------------------------

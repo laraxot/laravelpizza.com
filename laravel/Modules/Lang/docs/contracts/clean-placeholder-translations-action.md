@@ -1,7 +1,10 @@
 ---
 title: "Contratto — CleanPlaceholderTranslationsAction"
 type: contract
+<<<<<<< .merge_file_rAFkqa
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_t1H45M
 action: "Modules\Lang\Actions\CleanPlaceholderTranslationsAction"
 tags: [contract, action, translations, lang-files, cleanup]
 created: 2026-11-24
@@ -11,6 +14,7 @@ related:
   - ../../app/Actions/CleanPlaceholderTranslationsAction.php
   - ../../app/Console/Commands/CleanPlaceholderTranslationsCommand.php
   - ../../tests/Feature/CleanPlaceholderTranslationsActionTest.php
+<<<<<<< .merge_file_rAFkqa
 =======
 owner: Lang
 status: accepted
@@ -18,11 +22,16 @@ updated: 2026-11-24
 action: "Modules\\Lang\\Actions\\CleanPlaceholderTranslationsAction"
 qmd: "CleanPlaceholderTranslationsAction segnaposto helper_text placeholder label uguale al nome campo file lingua pulizia LANG-CLEAN"
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_t1H45M
 ---
 
 # CleanPlaceholderTranslationsAction
 
+<<<<<<< .merge_file_rAFkqa
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_t1H45M
 Toglie dai file di lingua le «traduzioni segnaposto» che `AutoLabelAction` scriveva in passato: `helper_text`,
 `placeholder`, `description`, `tooltip`, `label`, `heading`, `hint` uguali al nome del campo che li contiene (comparivano
 in produzione come «route», «postal_code» sotto i campi). Chiamante: `php artisan lang:clean-placeholders {moduli?*}
@@ -67,6 +76,7 @@ Test: `cd laravel && vendor/bin/pest Modules/Lang/tests/Feature/CleanPlaceholder
 - Non conosce le lingue né i moduli: lavora sulla cartella che riceve (il comando sceglie i moduli).
 - Non impedisce che i segnaposto tornino: lo garantisce `AutoLabelAction` (LANG-AUTOLABEL-INV-2).
 - Non fa backup: usarla su un albero sotto git e controllare il diff.
+<<<<<<< .merge_file_rAFkqa
 =======
 Toglie dai file di lingua le traduzioni segnaposto (uguali al nome del campo che le contiene). Codice: `app/Actions/CleanPlaceholderTranslationsAction.php:24-147`.
 
@@ -105,3 +115,5 @@ Toglie dai file di lingua le traduzioni segnaposto (uguali al nome del campo che
 - Non tocca file che contengono codice, anche se contengono traduzioni.
 - Chiamante verificato: `Console/Commands/CleanPlaceholderTranslationsCommand.php`.
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_t1H45M

@@ -4,7 +4,15 @@ type: architecture
 status: active
 module: Notify
 created: 2026-09-28
+<<<<<<< .merge_file_w88foD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-28
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_MZUUm5
 qmd: "Notify architettura confini componenti PHP Laravel Filament"
 ---
 # Notify — architettura

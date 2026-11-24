@@ -76,12 +76,17 @@ class GeoDataValidator
     /**
      * Ottiene gli errori di validazione.
      *
+<<<<<<< .merge_file_hGk19g
 <<<<<<< .merge_file_O7hL0k
      * @param  array<string, mixed>  $data  Dati da validare
 =======
      * @param array<string, mixed> $data Dati da validare
      *
 >>>>>>> .merge_file_JIl1Fk
+=======
+     * @param array<string, mixed> $data Dati da validare
+     *
+>>>>>>> .merge_file_xmPklL
      * @return array<string, array<int, string>>
      */
     public function getErrors(array $data): array

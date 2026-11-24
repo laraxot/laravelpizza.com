@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_QHVhYt
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_o0ISzI
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_QHVhYt
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_o0ISzI
 qmd: "MODULAR DOCUMENTATION REFACTORING"
 issues: []
 discussions: []
@@ -27,10 +33,13 @@ discussions: []
 **Stato**: ✅ COMPLETATO  
 **Principio**: "Boy Scout Rule - Lascia i file migliori di come li hai trovati"
 
+<<<<<<< .merge_file_QHVhYt
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_o0ISzI
 ---
 
 title: "MODULAR DOCUMENTATION REFACTORING"
@@ -47,6 +56,7 @@ Organizzare la documentazione AI agents in file modulari più piccoli e gestibil
 
 ---
 
+<<<<<<< .merge_file_QHVhYt
 <<<<<<< HEAD
 =======
 =======
@@ -54,12 +64,15 @@ Organizzare la documentazione AI agents in file modulari più piccoli e gestibil
 
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_o0ISzI
 ## 📊 PRIMA vs DOPO
 
 ### Prima (File Grandi)
 ```
 AGENTS.md      - 104 righe  ❌ Troppo grande
 <<<<<<< HEAD
+<<<<<<< .merge_file_QHVhYt
 QWEN.md        - 890 righe  ❌ Enorme
 CLAUDE.md      - 592 righe  ❌ Difficile da navigare
 GEMINI.md      - 369 righe  ❌ Contenuti mischiati
@@ -72,11 +85,16 @@ CLAUDE.md      - 592 righe  ❌ Difficile da navigare
 GEMINI.md      - 369 righe  ❌ Contenuti mischiati
 >>>>>>> laraxot/dev
 =======
+>>>>>>> .merge_file_o0ISzI
+=======
 QWEN.md        - 890 righe  ❌ Enorme
 CLAUDE.md      - 592 righe  ❌ Difficile da navigare
 GEMINI.md      - 369 righe  ❌ Contenuti mischiati
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_QHVhYt
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_o0ISzI
 qwen.md        - 890 righe  ❌ Enorme
 CLAUDE.md      - 592 righe  ❌ Difficile da navigare
 gemini.md      - 369 righe  ❌ Contenuti mischiati
@@ -157,19 +175,25 @@ TOTALE: ~2,500 righe  ✅ Organizzate, navigabili, mantenibili
 # AGENTS.md (compatto)
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_QHVhYt
 <<<<<<< HEAD
 # AGENTS.md (compatto)
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_o0ISzI
 # agents.md (compatto)
 =======
 # AGENTS.md (compatto)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_QHVhYt
 =======
 # agents.md (compatto)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_o0ISzI
 ## Contenuto Diviso
 | Sezione | File |
 |---------|------|
@@ -183,12 +207,15 @@ TOTALE: ~2,500 righe  ✅ Organizzate, navigabili, mantenibili
 # .agents/docs/overview/agents-overview.md
 ## Riferimenti
 <<<<<<< HEAD
+<<<<<<< .merge_file_QHVhYt
 - [agents.md](../../agents.md) - File originale compatto
 - [QWEN.md](../../qwen.md) - Contesto Qwen Code
 - [AGENTS.md](../../agents.md) - File originale compatto
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_o0ISzI
 - [AGENTS.md](../../AGENTS.md) - File originale compatto
 =======
 <<<<<<< HEAD
@@ -199,12 +226,15 @@ TOTALE: ~2,500 righe  ✅ Organizzate, navigabili, mantenibili
 - [AGENTS.md](../../AGENTS.md) - File originale compatto
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_QHVhYt
 =======
 - [agents.md](../../agents.md) - File originale compatto
 - [QWEN.md](../../qwen.md) - Contesto Qwen Code
 - [AGENTS.md](../../agents.md) - File originale compatto
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_o0ISzI
 - [qwen.md](../../qwen.md) - Contesto Qwen Code
 ```
 
@@ -289,6 +319,7 @@ TOTALE: ~2,500 righe  ✅ Organizzate, navigabili, mantenibili
 ### File Originali (Compatti)
 - `AGENTS.md` - Link a tutti i moduli
 <<<<<<< HEAD
+<<<<<<< .merge_file_QHVhYt
 - `QWEN.md` - Contesto Qwen Code
 - `CLAUDE.md` - Claude-specific patterns
 - `GEMINI.md` - Gemini-specific patterns
@@ -296,16 +327,21 @@ TOTALE: ~2,500 righe  ✅ Organizzate, navigabili, mantenibili
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> .merge_file_o0ISzI
+=======
 - `QWEN.md` - Contesto Qwen Code
 - `CLAUDE.md` - Claude-specific patterns
 - `GEMINI.md` - Gemini-specific patterns
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_QHVhYt
 =======
 - `QWEN.md` - Contesto Qwen Code
 - `CLAUDE.md` - Claude-specific patterns
 - `GEMINI.md` - Gemini-specific patterns
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_o0ISzI
 - `qwen.md` - Contesto Qwen Code
 - `CLAUDE.md` - Claude-specific patterns
 - `gemini.md` - Gemini-specific patterns

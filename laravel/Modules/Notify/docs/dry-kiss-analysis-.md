@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_j3t4Kk
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_D72TOB
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_j3t4Kk
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_D72TOB
 qmd: "dry kiss analysis 2025 10 15"
 issues: []
 discussions: []
@@ -55,16 +61,22 @@ abstract class BaseModel extends XotBaseModel implements HasMedia
 - 🔄 ServiceProvider: Auto-detect nome
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_j3t4Kk
 [DRY/KISS Global](../../docs/dry_kiss_analysis.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> .merge_file_D72TOB
+=======
 <<<<<<< HEAD
 [DRY/KISS Global](../../docs/dry_kiss_analysis.md)
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_j3t4Kk
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_D72TOB
 ---
 title: "dry kiss analysis 2025 10 15"
 type: note
@@ -78,11 +90,14 @@ discussions: []
 
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_j3t4Kk
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 [DRY/KISS Global](../../docs/dry_kiss_analysis.md)
+=======
+>>>>>>> .merge_file_D72TOB
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

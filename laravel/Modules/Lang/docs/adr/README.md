@@ -1,7 +1,10 @@
 ---
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< .merge_file_7mhAfB
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_VPTGvl
 title: "Architecture Decision Records"
 type: index
 tags: [adr, decisioni]
@@ -135,6 +138,7 @@ created: AAAA-MM-GG
 - [Cambio lingua con URL localizzato](cambio-lingua-con-url-localizzato.md) — `LanguageSwitcherWidget` con `getLocalizedURL()` e solo locali supportati.
 - [Lang possiede i dati di localizzazione](lang-owns-localization-data.md) — selezione e dati di traduzione stanno in Lang; i moduli owner forniscono le chiavi.
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_7mhAfB
 =======
 title: "ADR — Lang"
 type: index
@@ -157,3 +161,5 @@ Elenco con stato: [INDEX.md](INDEX.md). Ultimo aggiunto: [filament-labels-are-au
 
 Policy trasversale su dati sacri e test isolati: [0013-dati-sacri-migrazioni-e-test](../../../Xot/docs/adr/0013-dati-sacri-migrazioni-e-test.md).
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_VPTGvl

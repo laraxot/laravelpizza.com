@@ -4,7 +4,15 @@ type: concept
 tags: [notify, docs, best-practices, markdown, linking, conventions]
 module: Notify
 created: 2026-07-20
+<<<<<<< .merge_file_U1tijI
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_ZybUgj
 qmd: "notify documentazione best practices markdown linking conventions convenzioni per i collegamenti nei file markdown frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"

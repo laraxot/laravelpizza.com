@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_iB39rO
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_HIdQm7
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_iB39rO
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_HIdQm7
 qmd: "agents overview"
 issues: []
 discussions: []
@@ -53,11 +59,14 @@ Panoramica delle preferenze utente e del canone operativo del repository.
 - [Architecture index](./architecture/00-index.md)
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_iB39rO
 <<<<<<< HEAD
 - [Main docs index](./00-index.md)
 - [Architecture index](./architecture/00-index.md)
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_HIdQm7
 - [Main docs index](./00-INDEX.md)
 - [Architecture index](./architecture/00-INDEX.md)
 =======
@@ -65,11 +74,14 @@ Panoramica delle preferenze utente e del canone operativo del repository.
 - [Architecture index](./architecture/00-index.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_iB39rO
 =======
 - [Main docs index](./00-INDEX.md)
 - [Architecture index](./architecture/00-INDEX.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_HIdQm7
 - [Main docs index](./00-index.md)
 - [Architecture index](./architecture/00-index.md)
 - [Filament table vs blade component](./architecture/filament-table-vs-blade-component.md)

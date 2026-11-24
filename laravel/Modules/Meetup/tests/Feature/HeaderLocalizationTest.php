@@ -24,11 +24,18 @@ test('header navigation shows the auth labels in the language of the url', funct
     $response = $this->get('/'.$locale);
     $response->assertStatus(200);
 
+<<<<<<< .merge_file_tGrPkp
     // Le view del tema leggono la chiave foglia `.label` (lang/<locale>/navigation.php: auth.login.label).
     $login = __('pub_theme::navigation.auth.login.label', [], $locale);
     $register = __('pub_theme::navigation.auth.register.label', [], $locale);
 
     expect($login)->not->toBe('pub_theme::navigation.auth.login.label')
+=======
+    $login = __('pub_theme::navigation.auth.login', [], $locale);
+    $register = __('pub_theme::navigation.auth.register', [], $locale);
+
+    expect($login)->not->toBe('pub_theme::navigation.auth.login')
+>>>>>>> .merge_file_W3xTjj
         ->and(headerOf($response))->toContain($login)->toContain($register);
 
     if ($locale !== 'it') {

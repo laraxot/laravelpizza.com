@@ -3,15 +3,21 @@ title: "conflict resolution report"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_86jiZZ
 <<<<<<< .merge_file_VLeFmx
 updated: 2026-11-23
 =======
+=======
+>>>>>>> .merge_file_Cfek6F
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_86jiZZ
 >>>>>>> .merge_file_nb7wCa
+=======
+>>>>>>> .merge_file_Cfek6F
 qmd: "conflict resolution report"
 issues: []
 discussions: []

@@ -391,10 +391,13 @@ php artisan test --coverage --filter=MailTemplate
 - [PHPUnit Documentation](https://phpunit.de/documentation.html)
 
 - [Pest PHP](https://pestphp.com/docs)
+<<<<<<< .merge_file_ENk2JI
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_RTc2dC
 
 - [Pest PHP](https://pestphp.com/docs)
 
@@ -493,8 +496,11 @@ php artisan test --coverage --filter=MailTemplate
 - [Pest PHP](https://pestphp.com/docs)
 
 - [Pest PHP](https://pestphp.com/docs)
+<<<<<<< .merge_file_ENk2JI
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_RTc2dC

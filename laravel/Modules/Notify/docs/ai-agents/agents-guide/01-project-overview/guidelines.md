@@ -3,7 +3,15 @@ title: "guidelines"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_2XnkpP
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_uIszL0
 qmd: "guidelines"
 issues: []
 discussions: []
@@ -38,9 +46,12 @@ updated: 2026-09-26
 qmd: "guidelines"
 issues: []
 discussions: []
+<<<<<<< .merge_file_2XnkpP
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_uIszL0
 [Back to index](../index.md) | [Overview](project-overview.md) | [Links](links.md)

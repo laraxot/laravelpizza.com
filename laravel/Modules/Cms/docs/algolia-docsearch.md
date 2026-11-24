@@ -1,6 +1,9 @@
 ---
+<<<<<<< .merge_file_aSoOmI
 <<<<<<< .merge_file_P13CgD
 =======
+=======
+>>>>>>> .merge_file_ZhrlEN
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -109,6 +112,7 @@ status: stub
 module: theme
 topic: algolia-docsearch
 canonical: ../../../Themes/docs/shared-components/algolia-docsearch-old.md
+<<<<<<< .merge_file_aSoOmI
 >>>>>>> .merge_file_LVwjK1
 ---
 
@@ -183,6 +187,8 @@ For more details, visit the [official Algolia DocSearch documentation.](https://
 * [algolia-docsearch.md](laravel/modules/xot/docs/algolia-docsearch.md)
 * [algolia-docsearch.md](laravel/modules/ui/docs/algolia-docsearch.md)
 * [algolia-docsearch.md](laravel/modules/cms/docs/algolia-docsearch.md)
+=======
+>>>>>>> .merge_file_ZhrlEN
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/algolia-docsearch-old.md

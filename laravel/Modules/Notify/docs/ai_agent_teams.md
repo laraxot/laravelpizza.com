@@ -3,7 +3,15 @@ title: "ai agent teams"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_XNtGoN
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_IWEC65
 qmd: "ai agent teams"
 issues: []
 discussions: []
@@ -95,6 +103,7 @@ Multiple AI agents (Qwen, Claude, Cursor, etc.) are working on the same FixCity 
 **Current Tasks**:
 - ✅ Update `bashscripts/docs/ai/` with sync rules
 - ✅ Update AGENTS.md with commit/push rules
+<<<<<<< .merge_file_XNtGoN
 <<<<<<< HEAD
 - ✅ Update AGENTS.md with commit/push rules
 =======
@@ -103,6 +112,9 @@ Multiple AI agents (Qwen, Claude, Cursor, etc.) are working on the same FixCity 
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- ✅ Update AGENTS.md with commit/push rules
+>>>>>>> .merge_file_IWEC65
 - ✅ Update .windsurfrules
 - ⏳ Sync `.github/` with `bashscripts/ai/.github/`
 

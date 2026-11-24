@@ -3,7 +3,15 @@ title: "analisi completa 2025 10 01"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_aIEy2Q
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_uHWBCI
 qmd: "analisi completa 2025 10 01"
 issues: []
 discussions: []
@@ -12,10 +20,13 @@ discussions: []
 # 📊 ANALISI COMPLETA PROGETTO FIXCITY
 ## Data: 1 Ottobre 2025
 
+<<<<<<< .merge_file_aIEy2Q
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_uHWBCI
 ---
 
 title: "analisi completa 2025 10 01"
@@ -37,6 +48,7 @@ discussions: []
 
 ---
 
+<<<<<<< .merge_file_aIEy2Q
 <<<<<<< HEAD
 =======
 =======
@@ -44,6 +56,8 @@ discussions: []
 
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_uHWBCI
 ## 📦 COSA È FIXCITY
 
 ### Scopo Principale
@@ -501,6 +515,7 @@ Manutenzione Stradale • Illuminazione • Rifiuti • Verde Pubblico • Fogna
 ---
 
 *"Un progetto solido con fondamenta eccellenti e potenziale straordinario"* 🏆
+<<<<<<< .merge_file_aIEy2Q
 <<<<<<< HEAD
 
 
@@ -513,3 +528,8 @@ Manutenzione Stradale • Illuminazione • Rifiuti • Verde Pubblico • Fogna
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+
+
+
+>>>>>>> .merge_file_uHWBCI

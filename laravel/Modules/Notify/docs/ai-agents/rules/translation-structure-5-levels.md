@@ -3,7 +3,15 @@ title: "translation structure 5 levels"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_NkzDbT
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_I2FMZv
 qmd: "translation structure 5 levels"
 issues: []
 discussions: []
@@ -297,6 +305,10 @@ __('forecast::fields.outcome.title.label')  // aggiunto .label
 ## 🔗 Related Documentation
 
 ### AI Agents Docs
+<<<<<<< .merge_file_NkzDbT
+=======
+- **[Rules Index](00-index.md)** - All rules
+>>>>>>> .merge_file_I2FMZv
 - **[Rules Index](00-index.md)** - All rules
 <<<<<<< HEAD
 - **[Rules Index](00-index.md)** - All rules

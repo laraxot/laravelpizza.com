@@ -4,7 +4,15 @@ type: index
 tags: [notify, docs, ai-agents, split]
 module: Notify
 created: 2026-07-20
+<<<<<<< .merge_file_b3u9xY
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_sFifsa
 qmd: "notify documentazione ai agents split readme ai assistant documentation index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -111,6 +119,7 @@ Splitting improves:
 ### Bidirectional Links
 Every split file contains links back to:
 - Its section index (e.g., `agents/index.md`)
+<<<<<<< .merge_file_b3u9xY
 <<<<<<< HEAD
 - Its section index (e.g., `agents/index.md`)
 =======
@@ -119,6 +128,9 @@ Every split file contains links back to:
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- Its section index (e.g., `agents/index.md`)
+>>>>>>> .merge_file_sFifsa
 - The master index (`index.md`)
 - The original source file
 

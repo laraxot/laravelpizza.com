@@ -1,6 +1,7 @@
 ---
 title: "Contratto — ResolveLogFilePathAction"
 type: contract
+<<<<<<< .merge_file_8LMiqh
 <<<<<<< .merge_file_R9cwav
 owner: Activity
 status: accepted
@@ -8,6 +9,8 @@ updated: 2026-11-24
 action: "Modules\\Activity\\Actions\\Log\\ResolveLogFilePathAction"
 qmd: "contract ResolveLogFilePathAction activity log viewer path traversal ACT-LOGPATH-INV"
 =======
+=======
+>>>>>>> .merge_file_sIylQJ
 action: "Modules\Activity\Actions\Log\ResolveLogFilePathAction"
 tags: [contract, action, log-viewer, security, filesystem]
 created: 2026-11-24
@@ -16,11 +19,15 @@ related:
   - ../adr/log-viewer-single-path-resolver.md
   - ../../app/Actions/Log/ResolveLogFilePathAction.php
   - ../../tests/Unit/Actions/Log/ResolveLogFilePathActionTest.php
+<<<<<<< .merge_file_8LMiqh
 >>>>>>> .merge_file_a8cJtC
+=======
+>>>>>>> .merge_file_sIylQJ
 ---
 
 # ResolveLogFilePathAction
 
+<<<<<<< .merge_file_8LMiqh
 <<<<<<< .merge_file_R9cwav
 Unico punto in cui l'input dell'utente del visualizzatore di log (`Filament/Pages/LogViewer.php`) diventa un percorso su disco; lettura (`BuildLogViewerStateAction`) e download (`DownloadLogFileAction`) passano da qui.
 
@@ -59,6 +66,8 @@ Unico punto in cui l'input dell'utente del visualizzatore di log (`Filament/Page
 - Non filtra il contenuto dei log, che puo' contenere dati personali.
 - Non limita la dimensione del file.
 =======
+=======
+>>>>>>> .merge_file_sIylQJ
 L'unico punto del visualizzatore dei log che trasforma un input dell'utente (il file scelto) in un percorso su disco.
 Lettura (`BuildLogViewerStateAction`) e download (`DownloadLogFileAction`) passano tutti da qui. Perché uno solo:
 [ADR un solo risolutore di percorsi](../adr/log-viewer-single-path-resolver.md). Sorgente:
@@ -102,4 +111,7 @@ Test: `cd laravel && vendor/bin/pest Modules/Activity/tests/Unit/Actions/Log/Res
 - Non legge né apre il file: lettura a coda in `ReadLogTailAction`, download in `DownloadLogFileAction`.
 - Non elenca i file: `ListLogFilesAction`.
 - Non accetta estensioni diverse da `.log` "per comodità" (`.txt`, `.gz`): allargare la lista è una decisione di sicurezza.
+<<<<<<< .merge_file_8LMiqh
 >>>>>>> .merge_file_a8cJtC
+=======
+>>>>>>> .merge_file_sIylQJ

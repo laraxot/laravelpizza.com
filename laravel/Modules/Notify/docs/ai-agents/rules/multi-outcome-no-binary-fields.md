@@ -3,7 +3,15 @@ title: "multi outcome no binary fields"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_pCGhhm
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_CBEpco
 qmd: "multi outcome no binary fields"
 issues: []
 discussions: []
@@ -223,6 +231,10 @@ $pivot->percentage  // ✅ Unico campo valido
 ## 🔗 Related Documentation
 
 ### AI Agents Docs
+<<<<<<< .merge_file_pCGhhm
+=======
+- **[Rules Index](00-index.md)** - All rules
+>>>>>>> .merge_file_CBEpco
 - **[Rules Index](00-index.md)** - All rules
 <<<<<<< HEAD
 - **[Rules Index](00-index.md)** - All rules

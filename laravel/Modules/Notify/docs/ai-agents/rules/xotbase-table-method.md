@@ -3,7 +3,15 @@ title: "xotbase table method"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_pyGr8U
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_utI0Wm
 qmd: "xotbase table method"
 issues: []
 discussions: []
@@ -297,6 +305,10 @@ class MyWidget extends XotBaseTableWidget
 ## 🔗 Related Documentation
 
 ### AI Agents Docs
+<<<<<<< .merge_file_pyGr8U
+=======
+- **[Rules Index](00-index.md)** - All rules
+>>>>>>> .merge_file_utI0Wm
 - **[Rules Index](00-index.md)** - All rules
 <<<<<<< HEAD
 - **[Rules Index](00-index.md)** - All rules

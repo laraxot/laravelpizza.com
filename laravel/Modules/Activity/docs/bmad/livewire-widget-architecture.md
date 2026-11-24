@@ -1,7 +1,10 @@
 ---
+<<<<<<< .merge_file_EGonw1
 <<<<<<< .merge_file_Knnzc8
 title: "Architecture — Activity"
 =======
+=======
+>>>>>>> .merge_file_eVH5tP
 <<<<<<< HEAD
 title: "Architecture: Activity"
 =======
@@ -11,7 +14,10 @@ title: "Architecture — Activity"
 title: "Architecture: Activity"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_EGonw1
 >>>>>>> .merge_file_KZgoH5
+=======
+>>>>>>> .merge_file_eVH5tP
 type: architecture
 module: Activity
 related:

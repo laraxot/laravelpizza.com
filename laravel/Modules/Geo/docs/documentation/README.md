@@ -3,15 +3,21 @@ title: "README"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_Imt41n
 <<<<<<< .merge_file_2p2v8b
 updated: 2026-11-23
 =======
+=======
+>>>>>>> .merge_file_dZTomI
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Imt41n
 >>>>>>> .merge_file_hXy1Qw
+=======
+>>>>>>> .merge_file_dZTomI
 qmd: "README"
 issues: []
 discussions: []

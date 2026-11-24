@@ -1,4 +1,5 @@
 ---
+<<<<<<< .merge_file_68spMn
 <<<<<<< .merge_file_7DgO7a
 title: "ADR del modulo Job"
 type: index
@@ -40,6 +41,8 @@ Chi cambia una decisione scrive un nuovo ADR e segna il precedente `superseded b
 
 Elenco con stato: [INDEX.md](INDEX.md).
 =======
+=======
+>>>>>>> .merge_file_V0uNZu
 title: "ADR — Job"
 type: index
 tags: [adr, decisioni, job]
@@ -63,4 +66,7 @@ Formato e regole: [action-behavioral-contract](../../../Xot/docs/rules/action-be
 - [Comandi Artisan dalla UI: allowlist a match esatto](artisan-commands-from-ui-exact-match-allowlist.md) — solo super-admin, autorizzazione ripetuta nel metodo Livewire, nessun argomento libero.
 - [Flag del worker dalle impostazioni del tenant](queue-worker-flags-from-tenant-settings.md) — `timeout/sleep/tries` per tenant, nella shell entrano solo interi.
 - [Tabella jobs in sola lettura](jobs-table-read-only-in-admin.md) — `JobResource` senza create/edit: la coda la scrive il codice.
+<<<<<<< .merge_file_68spMn
 >>>>>>> .merge_file_79kwDv
+=======
+>>>>>>> .merge_file_V0uNZu

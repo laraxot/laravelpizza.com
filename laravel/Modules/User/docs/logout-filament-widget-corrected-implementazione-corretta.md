@@ -16,23 +16,12 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< HEAD
 status: draft
-=======
->>>>>>> laraxot/dev
 ---
 
 # Implementazione Corretta del Logout con Widget Filament
 
 ## Collegamenti correlati
-<<<<<<< HEAD
-- [Documentazione centrale](/docs/readme.md)
-- [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
-- [Implementazione Auth Pages](auth-pages-implementation.md)
-- [Implementazione Logout](logout-blade-implementation-posizione-corretta.md)
-- [Analisi Errore Logout](logout-blade-error-analysis.md)
-=======
->>>>>>> laraxot/dev
 - [Documentazione centrale](/docs/README.md)
 - [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
 - [Implementazione Auth Pages](auth-pages-implementation.md)
@@ -43,11 +32,7 @@ status: draft
 
 ## Introduzione
 
-<<<<<<< HEAD
 Questo documento descrive l'implementazione corretta del logout utilizzando un widget Filament, rispettando le convenzioni di <nome progetto> e la struttura di `XotBaseWidget`. L'approccio con widget Filament è particolarmente utile quando si desidera mantenere una pagina di conferma per il logout.
-=======
-Questo documento descrive l'implementazione corretta del logout utilizzando un widget Filament, rispettando le convenzioni di Quaeris e la struttura di `XotBaseWidget`. L'approccio con widget Filament è particolarmente utile quando si desidera mantenere una pagina di conferma per il logout.
->>>>>>> laraxot/dev
 
 ## Errore Comune da Evitare
 
@@ -266,11 +251,7 @@ name('logout');
    - Implementare il metodo astratto `getFormSchema()` invece di tentare di sovrascrivere `form()`
    - Utilizzare correttamente i componenti Filament
 
-<<<<<<< HEAD
 2. **Convenzioni di <nome progetto> per i Widget**:
-=======
-2. **Convenzioni di Quaeris per i Widget**:
->>>>>>> laraxot/dev
    - Namespace corretto: `Modules\User\Filament\Widgets`
    - Path della vista: `filament.widgets.auth.logout` (senza namespace del modulo per l'utilizzo diretto nelle Blade)
    - Due copie della vista: una con namespace del modulo e una senza
@@ -289,14 +270,6 @@ name('logout');
 2. **Coerenza UI**: Utilizza i componenti UI nativi di Filament, garantendo coerenza visiva.
 3. **Manutenibilità**: Separa chiaramente la logica dalla presentazione.
 4. **Estensibilità**: Facilmente estensibile per aggiungere funzionalità aggiuntive.
-<<<<<<< HEAD
-5. **Conformità alle convenzioni**: Segue le convenzioni di <nome progetto> per i widget Filament.
-
-## Alternativa: Logout Immediato
-
-Se non è necessaria una conferma per il logout, è preferibile utilizzare l'approccio "Folio con PHP puro" come descritto in [LOGOUT_BLADE_IMPLEMENTATION.md](logout-blade-implementation-posizione-corretta.md), che esegue il logout immediatamente senza richiedere conferma.
-=======
->>>>>>> laraxot/dev
 5. **Conformità alle convenzioni**: Segue le convenzioni di Quaeris per i widget Filament.
 
 ## Alternativa: Logout Immediato

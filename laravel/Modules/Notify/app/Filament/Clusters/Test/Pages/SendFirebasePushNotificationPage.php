@@ -35,6 +35,7 @@ class SendFirebasePushNotificationPage extends XotBasePage
 
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-bell-alert';
 
+<<<<<<< .merge_file_s12KLu
 <<<<<<< HEAD
     protected string $view = 'notify::filament.pages.send-push-notification';
 =======
@@ -44,6 +45,9 @@ class SendFirebasePushNotificationPage extends XotBasePage
     protected string $view = '';
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+    protected string $view = 'notify::filament.pages.send-push-notification';
+>>>>>>> .merge_file_WFsbQm
 
     protected static ?string $cluster = Test::class;
 

@@ -388,10 +388,13 @@ return [
 - [**Extension Guide**](extension-guide.md) - Guida per estensioni custom
 
 ### Guide Amministratore
+<<<<<<< .merge_file_8iJdJj
 <<<<<<< .merge_file_3XQ2vy
 - [**Deployment**](../../roadmap/deployment.md) - Guida deployment produzione
 - [**Maintenance**](../../roadmap/maintenance.md) - Operazioni di manutenzione
 =======
+=======
+>>>>>>> .merge_file_t43nPp
 <<<<<<< HEAD
 - [**Deployment**](deployment.md) - Guida deployment produzione
 - [**Maintenance**](maintenance.md) - Operazioni di manutenzione
@@ -399,7 +402,10 @@ return [
 - [**Deployment**](../../roadmap/deployment.md) - Guida deployment produzione
 - [**Maintenance**](../../roadmap/maintenance.md) - Operazioni di manutenzione
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_8iJdJj
 >>>>>>> .merge_file_JJXjmS
+=======
+>>>>>>> .merge_file_t43nPp
 - [**Troubleshooting**](troubleshooting.md) - Risoluzione problemi comuni
 
 ---

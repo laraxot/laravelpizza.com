@@ -1,0 +1,81 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Notify\Actions;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Messages\MailMessage;
+use Modules\Notify\Actions\NotifyTheme\Get;
+use Modules\Notify\Datas\AttachmentData;
+use Modules\Notify\Datas\NotifyThemeData;
+use Spatie\QueueableAction\QueueableAction;
+
+use function Safe\mb_convert_encoding;
+
+class BuildMailMessageAction
+{
+    use QueueableAction;
+
+    /**
+     * @param  array<string, mixed>  $view_params
+     * @param  array<int, AttachmentData>|null  $attachments
+     */
+    public function execute(
+        string $name,
+        Model $model,
+        array $view_params = [],
+        ?array $attachments = null,
+    ): MailMessage {
+        /** @var array<string, mixed> $view_params */
+        $view_params = array_merge($model->toArray(), $view_params);
+
+        $type = 'email';
+
+        /** @var NotifyThemeData $theme */
+        $theme = app(Get::class)->execute($name, $type, $view_params);
+        $view_html = 'notify::email';
+        // dddx([$theme, $view_params]);
+        /** @var string $fromAddress */
+        $fromAddress = $theme->view_params['from_email'] ?? $theme->from_email;
+        /** @var string|null $fromName */
+        $fromName = $theme->view_params['from'] ?? $theme->from;
+        /** @var string $subject */
+        $subject = $view_params['subject'] ?? $theme->subject;
+
+        $bodyHtml = $this->decodeRichText($theme->body_html);
+        $subject = $this->decodeRichText($subject);
+        $viewParams = $theme->view_params;
+        $viewParams['body_html'] = $bodyHtml;
+        $viewParams['subject'] = $subject;
+
+        $email = (new MailMessage)
+            ->from($fromAddress, $fromName)
+            ->subject($subject)
+            ->view($view_html, $viewParams);
+
+        if (is_array($attachments)) {
+            foreach ($attachments as $attachment) {
+                $email = $email->attach($attachment->path, ['as' => $attachment->as, 'mime' => $attachment->mime]);
+            }
+        }
+
+        return $email;
+    }
+
+    private function decodeRichText(?string $content): string
+    {
+        if ($content === null) {
+            return '';
+        }
+
+        $decoded = (string) html_entity_decode($content, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+
+        if (! mb_check_encoding($decoded, 'UTF-8') || str_contains($decoded, 'Ã') || str_contains($decoded, 'Â')) {
+            $converted = mb_convert_encoding($decoded, 'UTF-8', 'ISO-8859-1');
+            $decoded = is_string($converted) ? $converted : '';
+        }
+
+        return $decoded;
+    }
+}

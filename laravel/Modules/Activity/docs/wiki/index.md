@@ -33,9 +33,12 @@ related:
 ## Completamento
 
 - [overviews/completion-status.md](./overviews/completion-status.md) — stato modulo post gate chef
+<<<<<<< .merge_file_TVBeIz
 <<<<<<< .merge_file_imDhTN
 - [PROJECT-ROADMAP.md](./PROJECT-ROADMAP.md) — milestone Activity
 =======
+=======
+>>>>>>> .merge_file_6AHns7
 <<<<<<< HEAD
 - [PROJECT-ROADMAP.md](./project-roadmap.md) — milestone Activity
 =======
@@ -49,7 +52,10 @@ related:
 - [PROJECT-ROADMAP.md](./project-roadmap.md) — milestone Activity
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_TVBeIz
 >>>>>>> .merge_file_ZJD6yu
+=======
+>>>>>>> .merge_file_6AHns7
 - [platform-completion-roadmap (Xot)](../../Xot/docs/wiki/overviews/platform-completion-roadmap.md)
 
 ## Concepts
@@ -70,10 +76,13 @@ _No entities tracked yet._
 
 ## On-Demand References
 
+<<<<<<< .merge_file_TVBeIz
 <<<<<<< .merge_file_imDhTN
 - [rules-index](./rules/INDEX.md) — entrypoint locale per regole ricorrenti del modulo
 - [skills-index](./skills/INDEX.md) — skill on-demand, incluse skill condivise Xot
 =======
+=======
+>>>>>>> .merge_file_6AHns7
 <<<<<<< HEAD
 <<<<<<< HEAD
 - [rules-index](./rules/index.md) — entrypoint locale per regole ricorrenti del modulo
@@ -96,7 +105,10 @@ _No entities tracked yet._
 - [skills-index](./skills/index.md) — skill on-demand, incluse skill condivise Xot
 >>>>>>> .merge_file_wuMCaK
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_TVBeIz
 >>>>>>> .merge_file_ZJD6yu
+=======
+>>>>>>> .merge_file_6AHns7
 
 ## Comparisons
 

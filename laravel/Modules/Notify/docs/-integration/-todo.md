@@ -3,7 +3,15 @@ title: " todo"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_r3frLh
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_Tpcx6m
 qmd: " todo"
 issues: []
 discussions: []

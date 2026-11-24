@@ -8,7 +8,10 @@ status: done
 track: quality/fleet
 related:
   - ../../../Xot/docs/bmad/stories/merge-marker-fleet-residue.story.md
+<<<<<<< .merge_file_SCHQXh
 qmd: "git status fleet merge markers media"
+=======
+>>>>>>> .merge_file_K3u6LU
 ---
 
 # git-status-fleet-merge-markers-media
@@ -40,9 +43,15 @@ Tool: `bashscripts/tools/resolve-merge-markers.sh`.
 | `git status --porcelain` post-apply | 4 (3 restored + untracked preesistente) |
 
 Dettaglio restore:
+<<<<<<< HEAD
 - `docs/copilot-redundancy-audit-2026-05-25.md` ← `b5c0652d` (commits_reverted=3)
 - `docs/redundancy-audit-2026-05-21.md` ← `0f56cdc0` (commits_reverted=3)
 - `docs/wiki/troubleshooting/git-merge-conflict-inventory-2026-04-28.md` ← `0f56cdc0` (commits_reverted=1)
+=======
+- `docs/copilot-redundancy-audit.md` ← `b5c0652d` (commits_reverted=3)
+- `docs/redundancy-audit.md` ← `0f56cdc0` (commits_reverted=3)
+- `docs/wiki/troubleshooting/git-merge-conflict-inventory.md` ← `0f56cdc0` (commits_reverted=1)
+>>>>>>> laraxot/dev
 
 ## MANUAL irrisolti
 

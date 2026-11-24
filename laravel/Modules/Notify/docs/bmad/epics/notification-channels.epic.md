@@ -3,7 +3,15 @@ title: "Notify — epic 5.251: canali e provider di notifica"
 type: epic
 tags: [notify, epic, channels, sms, telegram, whatsapp, push, email]
 created: 2026-09-28
+<<<<<<< .merge_file_mUedkw
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-28
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_Y8CnwF
 qmd: "Notify epic canali provider SMS Telegram WhatsApp push email notifiche"
 related:
   - ../architecture.md

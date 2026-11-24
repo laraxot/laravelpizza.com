@@ -1,7 +1,33 @@
 ---
 title: "Architettura — Media"
 type: architecture
+<<<<<<< .merge_file_ykZTSY
 tags: [architecture, structure, module, media, storage]
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+tags: [architecture, structure, module, media, storage]
+=======
+=======
+=======
+<<<<<<< HEAD
+tags: [architecture, structure, module, media, storage]
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+<<<<<<< .merge_file_fG7tBd
+tags: [architecture, structure]
+=======
+tags: [architecture, structure, module, media, storage]
+>>>>>>> .merge_file_YVd6a5
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_llDfAH
 created: 2026-07-14
 status: review
 updated: 2026-11-16
@@ -55,6 +81,25 @@ Logica in Spatie Queueable Action, nessun Service, estensione di `XotBaseResourc
 ## Decisioni collegate
 
 [decision-log.md](./decision-log.md): D-1 (prune), D-2 (cast `id`), D-3 (allegati-prova), D-4 (guard diagnostica), D-5 (codice morto).
+<<<<<<< .merge_file_ykZTSY
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_fG7tBd
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
+<<<<<<< .merge_file_fG7tBd
+=======
+>>>>>>> laraxot/dev
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_llDfAH
 
 ## Convenzioni (dalla versione precedente, ancora valide)
 
@@ -70,3 +115,20 @@ storage con isolamento per tenant, dipendenza da Tenant e User, uso da Activity,
 Nel codice: nessuna occorrenza di HLS/DASH; `Actions/Image/Merge.php` fa solo una sovrapposizione «tipo watermark»,
 non automatica; 0 `use Modules\Tenant` e 0 `use Modules\User` in `app/`; i consumatori reali sono quelli elencati in
 «Confini e dipendenze»; i file PHP in `app/` sono 127. Non vanno ripristinate senza una verifica sul codice.
+<<<<<<< .merge_file_ykZTSY
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_YVd6a5
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_YVd6a5
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_YVd6a5
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_llDfAH

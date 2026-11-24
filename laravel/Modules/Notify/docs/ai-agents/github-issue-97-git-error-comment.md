@@ -3,7 +3,15 @@ title: "github issue 97 git error comment"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_YE0CQj
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_N9ndB2
 qmd: "github issue 97 git error comment"
 issues: []
 discussions: []

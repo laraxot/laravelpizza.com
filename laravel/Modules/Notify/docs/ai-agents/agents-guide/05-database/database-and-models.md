@@ -3,7 +3,15 @@ title: "database and models"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_s9plpj
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_ibW0CY
 qmd: "database and models"
 issues: []
 discussions: []
@@ -108,8 +116,11 @@ updated: 2026-09-26
 qmd: "database and models"
 issues: []
 discussions: []
+<<<<<<< .merge_file_s9plpj
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_ibW0CY

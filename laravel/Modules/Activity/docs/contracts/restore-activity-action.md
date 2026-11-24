@@ -1,6 +1,7 @@
 ---
 title: "Contratto — RestoreActivityAction"
 type: contract
+<<<<<<< .merge_file_UOZjvR
 <<<<<<< .merge_file_NaSsdx
 owner: Activity
 status: accepted
@@ -8,6 +9,8 @@ updated: 2026-11-24
 action: "Modules\\Activity\\Actions\\RestoreActivityAction"
 qmd: "contract RestoreActivityAction activity ripristino record valori precedenti update fillable pagina log ACT-RESTORE"
 =======
+=======
+>>>>>>> .merge_file_QTyR6m
 action: "Modules\Activity\Actions\RestoreActivityAction"
 tags: [contract, action, activity-log, restore]
 created: 2026-11-24
@@ -16,11 +19,15 @@ related:
   - ../../app/Actions/RestoreActivityAction.php
   - ../../app/Filament/Pages/ListLogActivities.php
   - ../../tests/Unit/Actions/RestoreActivityActionExecuteTest.php
+<<<<<<< .merge_file_UOZjvR
 >>>>>>> .merge_file_3JQ7Hc
+=======
+>>>>>>> .merge_file_QTyR6m
 ---
 
 # RestoreActivityAction
 
+<<<<<<< .merge_file_UOZjvR
 <<<<<<< .merge_file_NaSsdx
 Ripristina un record con i valori precedenti di un'attività (`old` di un evento `updated`). Chiamata da `ListLogActivities` (riga 193).
 
@@ -29,6 +36,8 @@ Ripristina un record con i valori precedenti di un'attività (`old` di un evento
 - `Model $record`: record da aggiornare.
 - `array<string, mixed> $oldProperties`: valori da riportare; non vuoto.
 =======
+=======
+>>>>>>> .merge_file_QTyR6m
 Riporta un record ai valori che aveva prima di una modifica, presi dalle `properties.old` di un'attività registrata.
 Chiamante: la pagina `app/Filament/Pages/ListLogActivities.php` (azione «ripristina» sulla cronologia di un record).
 Sorgente: `app/Actions/RestoreActivityAction.php`.
@@ -39,7 +48,10 @@ Test: `cd laravel && vendor/bin/pest Modules/Activity/tests/Unit/Actions/Restore
 
 - `Model $record`: il record da ripristinare.
 - `array<string, mixed> $oldProperties`: i valori precedenti, così come stanno nell'attività.
+<<<<<<< .merge_file_UOZjvR
 >>>>>>> .merge_file_3JQ7Hc
+=======
+>>>>>>> .merge_file_QTyR6m
 
 ## Output
 
@@ -47,6 +59,7 @@ Test: `cd laravel && vendor/bin/pest Modules/Activity/tests/Unit/Actions/Restore
 
 ## Invarianti
 
+<<<<<<< .merge_file_UOZjvR
 <<<<<<< .merge_file_NaSsdx
 | ID | Regola | Test |
 |---|---|---|
@@ -70,6 +83,8 @@ Test: `cd laravel && vendor/bin/pest Modules/Activity/tests/Unit/Actions/Restore
 - Non controlla l'autorizzazione: è responsabilità della pagina.
 
 =======
+=======
+>>>>>>> .merge_file_QTyR6m
 | ID | Regola | Group Pest |
 |---|---|---|
 | ACTIVITY-RESTORE-INV-1 | Il record riceve un solo `update()` con esattamente i valori passati. | `ACTIVITY-RESTORE-INV-1` |
@@ -92,4 +107,7 @@ Test: `cd laravel && vendor/bin/pest Modules/Activity/tests/Unit/Actions/Restore
   `properties` (password, token) verrebbero riscritti. La pulizia è del chiamante.
 - Non apre transazioni né controlla i permessi (lo fa la pagina).
 - Non ripristina record cancellati (`restore()` di SoftDeletes): aggiorna solo record esistenti.
+<<<<<<< .merge_file_UOZjvR
 >>>>>>> .merge_file_3JQ7Hc
+=======
+>>>>>>> .merge_file_QTyR6m

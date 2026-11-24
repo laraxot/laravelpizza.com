@@ -3,15 +3,21 @@ title: "filament components 1"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_v4NYq9
 <<<<<<< .merge_file_PDmD1G
 updated: 2026-11-23
 =======
+=======
+>>>>>>> .merge_file_P11D8V
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_v4NYq9
 >>>>>>> .merge_file_dLrjjY
+=======
+>>>>>>> .merge_file_P11D8V
 qmd: "filament components 1"
 issues: []
 discussions: []
@@ -160,9 +166,12 @@ Filament offre una vasta gamma di componenti Blade riutilizzabili. Di seguito i 
 ## Vedi Anche
 - [Modulo UI](../../UI/docs/README.md) - Componenti UI riutilizzabili
 - [Modulo Xot](../../Xot/docs/README.md) - Classi base Filament personalizzate
+<<<<<<< .merge_file_v4NYq9
 <<<<<<< .merge_file_PDmD1G
 - [Modulo Theme](../theme/docs/README.md) - Personalizzazione temi Filament
 =======
+=======
+>>>>>>> .merge_file_P11D8V
 <<<<<<< HEAD
 - [Modulo Theme](../theme/docs/README.md) - Personalizzazione temi Filament
 =======
@@ -172,7 +181,10 @@ Filament offre una vasta gamma di componenti Blade riutilizzabili. Di seguito i 
 - [Modulo Theme](../theme/docs/README.md) - Personalizzazione temi Filament
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_v4NYq9
 >>>>>>> .merge_file_dLrjjY
+=======
+>>>>>>> .merge_file_P11D8V
 - [Convenzioni Namespace](convenzioni-namespace-filament.md) - Convenzioni di namespace
 - [Documentazione Filament](https://filamentphp.com/docs) - Documentazione ufficiale
 ## Collegamenti tra versioni di filament-components.md

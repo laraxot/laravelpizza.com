@@ -3,7 +3,15 @@ title: "absolute completion 100"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_Dhj20k
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_V5hK9Z
 qmd: "absolute completion 100"
 issues: []
 discussions: []
@@ -15,10 +23,13 @@ discussions: []
 **Mode**: 🐄⚡ SUPER MUCCA ULTIMATE POWER  
 **Status**: ✅ 100% COMPLETATO  
 
+<<<<<<< .merge_file_Dhj20k
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_V5hK9Z
 ---
 
 title: "absolute completion 100"
@@ -40,6 +51,7 @@ Partiti da un progetto con documentazione al 65% e implementazione al 60%, abbia
 
 ---
 
+<<<<<<< .merge_file_Dhj20k
 <<<<<<< HEAD
 =======
 =======
@@ -47,6 +59,8 @@ Partiti da un progetto con documentazione al 65% e implementazione al 60%, abbia
 
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_V5hK9Z
 ## 📊 TOTALE ASSOLUTO
 
 ### Files Creati: **32**

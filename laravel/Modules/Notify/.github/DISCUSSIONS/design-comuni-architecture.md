@@ -258,6 +258,7 @@ x-layouts.main (base HTML: DOCTYPE, head, body, scripts)
 ---
 
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
+<<<<<<< .merge_file_bHs77P
 <<<<<<< HEAD
 ### 9. Vite Build: outDir: './public' + symlink public_html/themes (npm run copy obsoleto) ✅
 =======
@@ -266,6 +267,9 @@ niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../larave
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+### 9. Vite Build: outDir: './public' + symlink public_html/themes (npm run copy obsoleto) ✅
+>>>>>>> .merge_file_dCDFaG
 
 **Decision**: Build theme independently, copy to public_html.
 

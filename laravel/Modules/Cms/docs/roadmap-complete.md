@@ -24,8 +24,11 @@ Il modulo **CMS** (Content Management System) gestisce tutti i contenuti dinamic
 
 ---
 
+<<<<<<< .merge_file_noirXK
 <<<<<<< .merge_file_BX2YWW
 =======
+=======
+>>>>>>> .merge_file_zquTXC
 title: "roadmap complete"
 type: note
 tags: [documentation]
@@ -34,7 +37,10 @@ updated: 2026-09-26
 qmd: "roadmap complete"
 issues: []
 discussions: []
+<<<<<<< .merge_file_noirXK
 >>>>>>> .merge_file_OS4QD3
+=======
+>>>>>>> .merge_file_zquTXC
 ## 🎯 Funzionalità Implementate
 
 ### ✅ Core Content Management

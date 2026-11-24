@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_cjKWhq
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_y0GjMC
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_cjKWhq
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_y0GjMC
 qmd: "PERFECTION AUDIT"
 issues: []
 discussions: []
@@ -27,10 +33,13 @@ discussions: []
 **Scope**: `laravel/Modules/Notify/docs/`
 **Metodo**: BMAD document-project + fix_docs_naming_convention.sh
 
+<<<<<<< .merge_file_cjKWhq
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_y0GjMC
 ---
 
 title: "PERFECTION AUDIT"
@@ -49,6 +58,7 @@ Notify ha **1,516 file .md** (100% uppercase) con **44 stub vuoti**. Secondo mod
 
 ---
 
+<<<<<<< .merge_file_cjKWhq
 <<<<<<< HEAD
 =======
 =======
@@ -56,6 +66,8 @@ Notify ha **1,516 file .md** (100% uppercase) con **44 stub vuoti**. Secondo mod
 
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_y0GjMC
 ## Numeri
 
 | Metrica | Valore | Soglia salute |
@@ -72,23 +84,29 @@ Notify ha **1,516 file .md** (100% uppercase) con **44 stub vuoti**. Secondo mod
 Tutti i file in `Notify/docs/` sono maiuscoli. Esempi:
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_cjKWhq
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_y0GjMC
 - `ACTIONS.md`
 - `AGENTS.md`
 - `CHANGELOG.md`
 - `INDEX.md`
 - `PROJECT-STRUCTURE.md`
+<<<<<<< .merge_file_cjKWhq
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_y0GjMC
 >>>>>>> laraxot/dev
 - `actions.md`
 - `AGENTS.md`
@@ -102,10 +120,13 @@ Residui di iterazioni agenti, 0-100 byte ciascuno.
 
 ### P0.3 — Nessun indice consolidato
 <<<<<<< HEAD
+<<<<<<< .merge_file_cjKWhq
 Nessun `00-index.md` o `INDEX.md` (a parte l'uppercase `INDEX.md`). Impossibile trovare contenuti.
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_y0GjMC
 Nessun `00-index.md` o `index.md` (a parte l'uppercase `index.md`). Impossibile trovare contenuti.
 =======
 <<<<<<< HEAD
@@ -114,10 +135,13 @@ Nessun `00-index.md` o `INDEX.md` (a parte l'uppercase `INDEX.md`). Impossibile 
 Nessun `00-index.md` o `index.md` (a parte l'uppercase `index.md`). Impossibile trovare contenuti.
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_cjKWhq
 =======
 Nessun `00-index.md` o `INDEX.md` (a parte l'uppercase `INDEX.md`). Impossibile trovare contenuti.
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_y0GjMC
 
 ---
 
@@ -128,19 +152,25 @@ Nessun `00-index.md` o `INDEX.md` (a parte l'uppercase `INDEX.md`). Impossibile 
 - `docs/actions.md` (regole Actions)
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_cjKWhq
 <<<<<<< HEAD
 - `docs/actions.md` (regole Actions)
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_y0GjMC
 - `docs/ACTIONS.md` (regole Actions)
 =======
 - `docs/actions.md` (regole Actions)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_cjKWhq
 =======
 - `docs/ACTIONS.md` (regole Actions)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_y0GjMC
 - `docs/AGENTS.md` (configurazione agenti)
 
 ---
@@ -167,24 +197,30 @@ find laravel/Modules/Notify/docs -type f -name "*.md" \
 ### Fase 3 — Consolidamento
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_cjKWhq
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_y0GjMC
 - Merge `INDEX.md` → `00-index.md`
 - Merge `AGENTS.md` → `agents.md`
 - Merge `ACTIONS.md` → `actions.md`
 - Merge `CHANGELOG.md` → `changelog.md`
 - Merge `PRD.md` → `prd.md`
 - Merge `PROJECT-STRUCTURE.md` → `project-structure.md`
+<<<<<<< .merge_file_cjKWhq
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_y0GjMC
 >>>>>>> laraxot/dev
 - Merge `index.md` → `00-index.md`
 - Merge `AGENTS.md` → `AGENTS.md`
@@ -213,6 +249,7 @@ find laravel/Modules/Notify/docs -type f -name "*.md" \
 <<<<<<< HEAD
 - `docs/wiki/rules/00-TRIGGER_MAP.md`
 =======
+<<<<<<< .merge_file_cjKWhq
 <<<<<<< HEAD
 <<<<<<< HEAD
 - `docs/wiki/rules/00-TRIGGER_MAP.md`
@@ -223,3 +260,7 @@ find laravel/Modules/Notify/docs -type f -name "*.md" \
 - `docs/wiki/rules/00-TRIGGER_MAP.md`
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `docs/wiki/rules/00-TRIGGER_MAP.md`
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_y0GjMC

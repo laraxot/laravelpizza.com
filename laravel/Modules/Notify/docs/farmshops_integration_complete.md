@@ -3,7 +3,15 @@ title: "farmshops integration complete"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_aYo6SP
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_Gp0x3N
 qmd: "farmshops integration complete"
 issues: []
 discussions: []

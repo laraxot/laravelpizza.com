@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_ZFhrgt
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_dnh6cs
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_ZFhrgt
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_dnh6cs
 qmd: "agents testing standards"
 issues: []
 discussions: []
@@ -123,6 +129,7 @@ Prima di ogni commit:
 - [testing.md](./testing.md) - Più dettagliato
 - [pest-testing.md](./pest-testing.md) - Guida Pest
 <<<<<<< HEAD
+<<<<<<< .merge_file_ZFhrgt
 - [AGENTS.md originale](../../AGENTS.md)
 - [AGENTS.md originale](../../AGENTS.md)
 =======
@@ -142,6 +149,17 @@ Prima di ogni commit:
 =======
 - [AGENTS.md originale](../../agents.md)
 - [agents.md originale](../../agents.md)
+=======
+- [AGENTS.md originale](../../AGENTS.md)
+- [AGENTS.md originale](../../AGENTS.md)
+=======
+<<<<<<< HEAD
+- [AGENTS.md originale](../../agents.md)
+- [agents.md originale](../../agents.md)
+=======
+- [AGENTS.md originale](../../AGENTS.md)
+- [AGENTS.md originale](../../AGENTS.md)
+>>>>>>> .merge_file_dnh6cs
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [Index principale](./index.md)

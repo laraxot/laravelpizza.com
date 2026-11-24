@@ -459,9 +459,12 @@ class SchedaObserver
 - [Activity Module - README](../README.md)
 - [BaseScheda Activity Log](../../Ptv/docs/models/base-scheda-activity-log.md)
 - [SchedaTrait Refactoring Plan](../../Sigma/docs/refactoring/scheda-trait-accessors.md)
+<<<<<<< .merge_file_22tHlZ
 <<<<<<< .merge_file_pD0Qn3
 - [Activity Module - README](../readme.md)
 =======
+=======
+>>>>>>> .merge_file_klyAGY
 <<<<<<< HEAD
 - [Activity Module - README](../README.md)
 =======
@@ -475,7 +478,10 @@ class SchedaObserver
 - [Activity Module - README](../README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_22tHlZ
 >>>>>>> .merge_file_HabDxj
+=======
+>>>>>>> .merge_file_klyAGY
 - [BaseScheda Activity Log](../../ptv/docs/models/base-scheda-activity-log.md)
 - [SchedaTrait Refactoring Plan](../../sigma/docs/refactoring/scheda-trait-accessors.md)
 

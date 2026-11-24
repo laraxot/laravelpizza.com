@@ -9,7 +9,19 @@ discussions: []
 module: Media
 topic: METODI_DUPLICATI_ANALISI
 tags: [metodi-duplicati, refactoring]
+<<<<<<< .merge_file_8iadew
 canonical: ../../../Themes/One/docs/shared-components/metodi_duplicati_analisi.md
+=======
+<<<<<<< HEAD
+canonical: ../../../Themes/One/docs/shared-components/metodi_duplicati_analisi.md
+=======
+<<<<<<< HEAD
+canonical: ../../../Themes/One/docs/shared-components/METODI_DUPLICATI_ANALISI.md
+=======
+canonical: ../../../Themes/One/docs/shared-components/metodi_duplicati_analisi.md
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_k3perO
 ---
 
 # Metodi Duplicati — Analisi Media

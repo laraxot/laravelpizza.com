@@ -3,15 +3,21 @@ title: "git conflicts themes resolution"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_ikUylT
 <<<<<<< .merge_file_OwaYhz
 updated: 2026-11-23
 =======
+=======
+>>>>>>> .merge_file_hkVfaL
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_ikUylT
 >>>>>>> .merge_file_0AwrPK
+=======
+>>>>>>> .merge_file_hkVfaL
 qmd: "git conflicts themes resolution"
 issues: []
 discussions: []
@@ -219,8 +225,11 @@ php artisan view:clear
 
 ---
 
+<<<<<<< .merge_file_ikUylT
 <<<<<<< .merge_file_OwaYhz
 =======
+=======
+>>>>>>> .merge_file_hkVfaL
 title: "git conflicts themes resolution"
 type: note
 tags: [documentation]
@@ -229,5 +238,8 @@ updated: 2026-09-26
 qmd: "git conflicts themes resolution"
 issues: []
 discussions: []
+<<<<<<< .merge_file_ikUylT
 >>>>>>> .merge_file_0AwrPK
+=======
+>>>>>>> .merge_file_hkVfaL
 *Autore: Sistema di Risoluzione Conflitti Git*

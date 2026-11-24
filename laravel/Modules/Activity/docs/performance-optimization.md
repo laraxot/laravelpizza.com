@@ -21,15 +21,21 @@ qmd: "performance optimization   module **activity** activity"
 
 ```diff
 - 150+ rules embeddate in AGENTS.md
+<<<<<<< .merge_file_O7NdUh
 <<<<<<< .merge_file_YxQwJh
 + 0 rules embeddate — tutte on-demand
 =======
+=======
+>>>>>>> .merge_file_BlIATR
 
 - 150+ rules embeddate in AGENTS.md
 + 0 rules embeddate — tutte on-demand
 
 - 150+ rules embeddate in AGENTS.md+ 0 rules embeddate — tutte on-demand
+<<<<<<< .merge_file_O7NdUh
 >>>>>>> .merge_file_zHUCsi
+=======
+>>>>>>> .merge_file_BlIATR
 ```
 
 ### 2. Cache Esterna al Repo

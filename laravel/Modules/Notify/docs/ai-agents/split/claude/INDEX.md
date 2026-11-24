@@ -5,22 +5,28 @@ tags: [notify, docs, ai-agents, split, claude]
 module: Notify
 created: 2026-07-20
 <<<<<<< HEAD
+<<<<<<< .merge_file_eU2niu
 updated: 2026-11-23
 qmd: "notify documentazione ai agents split claude index laravel boost guidelines (../../../../docs/claude.md) index index readme frontmatter qmd search"
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_WkfDjv
 updated: 2026-07-20
 qmd: "notify documentazione ai agents split claude index laravel boost guidelines (../../../../docs/CLAUDE.md) index index readme frontmatter qmd search"
 =======
 updated: 2026-11-23
 qmd: "notify documentazione ai agents split claude index laravel boost guidelines (../../../../docs/claude.md) index index readme frontmatter qmd search"
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_eU2niu
 =======
 updated: 2026-11-23
 qmd: "notify documentazione ai agents split claude index laravel boost guidelines (../../../../docs/claude.md) index index readme frontmatter qmd search"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_WkfDjv
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
 discussions:
@@ -35,10 +41,13 @@ related:
 # Laravel Boost Guidelines (../../../../docs/CLAUDE.md) Index
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_eU2niu
 **Source**: [`docs/../../../../docs/CLAUDE.md`](../../../../../../docs/../../../../docs/claude.md) (833 lines)  
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_WkfDjv
 **Source**: [`docs/../../../../docs/CLAUDE.md`](../../../../../../docs/../../../../docs/CLAUDE.md) (833 lines)  
 =======
 <<<<<<< HEAD
@@ -47,10 +56,13 @@ related:
 **Source**: [`docs/../../../../docs/CLAUDE.md`](../../../../../../docs/../../../../docs/CLAUDE.md) (833 lines)  
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_eU2niu
 =======
 **Source**: [`docs/../../../../docs/CLAUDE.md`](../../../../../../docs/../../../../docs/claude.md) (833 lines)  
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_WkfDjv
 **Split Into**: 20 focused files  
 **Last Updated**: 2026-04-11  
 
@@ -129,10 +141,13 @@ related:
 ### Bidirectional Links
 - ← Back to [Main AI Docs Index](../index.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_eU2niu
 - ← Back to [../../../../docs/CLAUDE.md](../../../../../../docs/../../../../docs/claude.md) (original source)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_WkfDjv
 - ← Back to [../../../../docs/CLAUDE.md](../../../../../../docs/../../../../docs/CLAUDE.md) (original source)
 =======
 <<<<<<< HEAD
@@ -141,10 +156,13 @@ related:
 - ← Back to [../../../../docs/CLAUDE.md](../../../../../../docs/../../../../docs/CLAUDE.md) (original source)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_eU2niu
 =======
 - ← Back to [../../../../docs/CLAUDE.md](../../../../../../docs/../../../../docs/claude.md) (original source)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_WkfDjv
 - ← Back to [Project Docs](../../../docs/README.md)
 
 ---
@@ -152,10 +170,13 @@ related:
 ## Usage
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_eU2niu
 These guidelines are automatically loaded by Claude/Laravel Boost MCP. For manual reference, see the original [`docs/../../../../docs/CLAUDE.md`](../../../../../../docs/../../../../docs/claude.md).
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_WkfDjv
 These guidelines are automatically loaded by Claude/Laravel Boost MCP. For manual reference, see the original [`docs/../../../../docs/CLAUDE.md`](../../../../../../docs/../../../../docs/CLAUDE.md).
 =======
 <<<<<<< HEAD
@@ -164,10 +185,13 @@ These guidelines are automatically loaded by Claude/Laravel Boost MCP. For manua
 These guidelines are automatically loaded by Claude/Laravel Boost MCP. For manual reference, see the original [`docs/../../../../docs/CLAUDE.md`](../../../../../../docs/../../../../docs/CLAUDE.md).
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_eU2niu
 =======
 These guidelines are automatically loaded by Claude/Laravel Boost MCP. For manual reference, see the original [`docs/../../../../docs/CLAUDE.md`](../../../../../../docs/../../../../docs/claude.md).
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_WkfDjv
 
 ---
 

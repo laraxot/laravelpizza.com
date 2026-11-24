@@ -3,7 +3,15 @@ title: "module rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_SF6t8E
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_N6ovOc
 qmd: "module rules"
 issues: []
 discussions: []
@@ -94,21 +102,27 @@ cd laravel && vendor/bin/phpstan analyse Modules/<nome progetto>/app/Filament/Wi
 
 # 3. Check for syntax errors in related services
 cd laravel && php -l Modules/<nome progetto>/app/Services/ChartService.php
+<<<<<<< .merge_file_SF6t8E
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_N6ovOc
 
 # 2. Verify PHPStan compliance
 cd laravel && vendor/bin/phpstan analyse Modules/<nome progetto>/app/Filament/Widgets/Simple05ChartWidget.php
 
 # 3. Check for syntax errors in related services
 cd laravel && php -l Modules/<nome progetto>/app/Services/ChartService.php
+<<<<<<< .merge_file_SF6t8E
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_N6ovOc
 ```
 
 ## Chart Widget Pattern (CRITICAL)

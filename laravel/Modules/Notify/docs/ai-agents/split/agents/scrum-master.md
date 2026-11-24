@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_9yUFwr
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_QCAxxH
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_9yUFwr
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_QCAxxH
 qmd: "scrum master"
 issues: []
 discussions: []
@@ -69,12 +75,15 @@ persona:
 commands:
   - help: Show numbered list of the following commands to allow selection
 <<<<<<< HEAD
+<<<<<<< .merge_file_9yUFwr
   - correct-course: execute task correct-course.md
   - draft: execute task create-next-story.md
   - story-checklist: execute task execute-checklist.md with checklist story-draft-checklist.md
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_QCAxxH
   - correct-course: Execute task correct-course.md
   - draft: Execute task create-next-story.md
   - story-checklist: Execute task execute-checklist.md with checklist story-draft-checklist.md
@@ -89,12 +98,15 @@ commands:
   - story-checklist: Execute task execute-checklist.md with checklist story-draft-checklist.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_9yUFwr
 =======
   - correct-course: execute task correct-course.md
   - draft: execute task create-next-story.md
   - story-checklist: execute task execute-checklist.md with checklist story-draft-checklist.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_QCAxxH
   - exit: Say goodbye as the Scrum Master, and then abandon inhabiting this persona
 dependencies:
   checklists:

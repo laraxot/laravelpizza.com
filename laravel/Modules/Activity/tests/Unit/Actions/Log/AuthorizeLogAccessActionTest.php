@@ -7,10 +7,14 @@ use Modules\Activity\Actions\Log\AuthorizeLogAccessAction;
 use Modules\Activity\Tests\TestCase;
 use Modules\Xot\Contracts\UserContract;
 use Spatie\Permission\Exceptions\PermissionDoesNotExist;
+<<<<<<< .merge_file_6P1CxA
 <<<<<<< .merge_file_8jGnWn
 =======
 use Modules\Activity\Tests\TestCase;
 >>>>>>> .merge_file_Uv2Pxd
+=======
+use Modules\Activity\Tests\TestCase;
+>>>>>>> .merge_file_P5O8gG
 
 uses(TestCase::class);
 

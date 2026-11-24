@@ -5,18 +5,24 @@ tags: [notify, docs, architecture, xotbasepivot, strategy]
 module: Notify
 created: 2026-07-20
 <<<<<<< HEAD
+<<<<<<< .merge_file_BTgYa8
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_oQbeyW
 updated: 2026-07-20
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_BTgYa8
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_oQbeyW
 qmd: "notify documentazione architecture xotbasepivot strategy xotbasepivot - strategia di implementazione progetto frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -579,21 +585,29 @@ git push origin hotfix/xotbasepivot-fix
 - [Project Architecture](../ai-agents/split/claude/project-architecture.md)
 - [Project Architecture](../ai-agents/split/claude/project-architecture.md)
 =======
+<<<<<<< .merge_file_BTgYa8
 <<<<<<< HEAD
 <<<<<<< HEAD
 - [Project Architecture](../ai-agents/split/claude/project-architecture.md)
 - [Project Architecture](../ai-agents/split/claude/project-architecture.md)
 =======
+=======
+>>>>>>> .merge_file_oQbeyW
 <<<<<<< .merge_file_AOo02c
 - [Project Architecture](./project-architecture.md)
 =======
 - [Project Architecture](../ai-agents/split/claude/project-architecture.md)
+<<<<<<< .merge_file_BTgYa8
 - [Project Architecture](../ai-agents/split/claude/project-architecture.md)
 >>>>>>> .merge_file_gI4EY1
 >>>>>>> laraxot/dev
 =======
 - [Project Architecture](../ai-agents/split/claude/project-architecture.md)
 >>>>>>> laraxot/dev
+=======
+- [Project Architecture](../ai-agents/split/claude/project-architecture.md)
+>>>>>>> .merge_file_gI4EY1
+>>>>>>> .merge_file_oQbeyW
 >>>>>>> laraxot/dev
 - [Laravel Pivot Documentation](https://laravel.com/docs/11.x/eloquent-relationships#defining-custom-intermediate-table-models)
 

@@ -15,13 +15,52 @@ related:
 
 SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/lang-audit.md](./audits/lang-audit.md).
 
+<<<<<<< .merge_file_FFk0sO
 **Scopo in una frase:** Lang tiene fuori dal codice ogni parola che un utente legge: nessuna etichetta si scrive dentro una classe, si dichiara in un file di lingua ([purpose.md](./purpose.md)).
+=======
+<<<<<<< HEAD
+**Scopo in una frase:** Lang tiene fuori dal codice ogni parola che un utente legge: nessuna etichetta si scrive dentro una classe, si dichiara in un file di lingua ([purpose.md](./purpose.md)).
+=======
+<<<<<<< .merge_file_RTGPLE
+**Scopo in una frase:** Lang tiene fuori dal codice ogni parola che un utente legge ([purpose.md](./purpose.md)).
+=======
+**Scopo in una frase:** Lang tiene fuori dal codice ogni parola che un utente legge: nessuna etichetta si scrive dentro una classe, si dichiara in un file di lingua ([purpose.md](./purpose.md)).
+>>>>>>> .merge_file_mrLFNn
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_n7vxIv
 
 ## Sintesi (2026-11-16)
 
 | Metrica | Valore |
 |---|---:|
+<<<<<<< .merge_file_FFk0sO
 | PHP `app/` / test PHP / `*Test.php` | 72 / 51 / 29 (ricontato 2026-11-19: 72 / 53 / 29) |
+=======
+<<<<<<< HEAD
+| PHP `app/` / test PHP / `*Test.php` | 72 / 51 / 29 (ricontato 2026-11-19: 72 / 53 / 29) |
+=======
+<<<<<<< .merge_file_RTGPLE
+| PHP `app/` | 72 |
+| Test | 51 |
+| Resources | 2 |
+| Actions | 17 |
+| Services | 0 |
+| Policy `return true` | 2 |
+| Marker | 0 |
+
+## Lo scopo in una frase **Lang tiene fuori dal codice ogni parola che un utente legge: nessuna etichetta si scrive dentro una classe, si dichiara in un file di lingua.**
+
+## Gate
+
+- PHPStan modulo / `Modules`: 0 errori (verifica 2026-11-16).
+- Pest: da eseguire in ambiente testing non produttivo.
+- Security/runtime: story figlie su finding P0/P1 dell'audit dettagliato.
+| PHP `app/` / test PHP / `*Test.php` | 72 / 51 / 29 |
+=======
+| PHP `app/` / test PHP / `*Test.php` | 72 / 51 / 29 (ricontato 2026-11-19: 72 / 53 / 29) |
+>>>>>>> .merge_file_mrLFNn
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_n7vxIv
 | Models / Policy / Resource / Widget | 7 / 4 / 2 / 1 |
 | Actions / Services / Migration / Lang IT | 17 / 0 / 11 / 33 |
 | Marker conflitto / `RefreshDatabase` / `dd()` | 0 / 0 / 0 |

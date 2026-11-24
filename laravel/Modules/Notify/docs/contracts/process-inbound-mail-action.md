@@ -1,13 +1,17 @@
 ---
+<<<<<<< .merge_file_fDZCOa
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_aQ7Yqw
 title: "Contratto — ProcessInboundMailAction"
 type: contract
 action: "Modules\Notify\Actions\Mail\ProcessInboundMailAction"
 tags: [contract, action, notify, inbound, webhook, email]
 created: 2026-11-24
 updated: 2026-11-24
+<<<<<<< .merge_file_fDZCOa
 =======
 >>>>>>> laraxot/dev
 title: "ProcessInboundMailAction — contratto"
@@ -23,11 +27,16 @@ created: 2026-11-24
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_aQ7Yqw
 ---
 
 # ProcessInboundMailAction
 
+<<<<<<< .merge_file_fDZCOa
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_aQ7Yqw
 Contratto di comportamento (regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`).
 Sorgente: `app/Actions/Mail/ProcessInboundMailAction.php`. Decisione: [token nel percorso](../adr/webhooks-authenticate-with-a-token-in-the-path.md).
 
@@ -74,6 +83,7 @@ message id»), oggi rosse nel DB di prova condiviso (manca la tabella `inbound_e
 - Non smista né risponde ai messaggi e non crea entità di dominio: lo fa il progetto leggendo `inbound_emails`.
 - Non cancella mai i `.eml` né le righe: la conservazione dei dati personali va decisa dal progetto.
 - Non valida il `{provider}` dell'URL: è solo un'etichetta.
+<<<<<<< .merge_file_fDZCOa
 =======
 Webhook invocabile (`__invoke`) che riceve email in ingresso da Postmark, Mailgun o MIME grezzo e le salva in `InboundEmail`.
 
@@ -115,3 +125,5 @@ Webhook invocabile (`__invoke`) che riceve email in ingresso da Postmark, Mailgu
 - Non verifica la firma del provider: l'unico controllo e' il token nel path.
 - Non invia risposte ne' notifiche interne.
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_aQ7Yqw

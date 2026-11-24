@@ -71,7 +71,11 @@ final class Ensure
     }
 
     /**
+<<<<<<< .merge_file_KdXBMf
      * @param  list<int|string>  $keys
+=======
+     * @param list<int|string> $keys
+>>>>>>> .merge_file_yf1JJz
      */
     public function toHaveKeys(array $keys): self
     {
@@ -97,8 +101,13 @@ final class Ensure
     }
 
     /**
+<<<<<<< .merge_file_KdXBMf
      * @param  callable(): mixed  $callback
      * @param  class-string<Throwable>  $exception
+=======
+     * @param callable(): mixed $callback
+     * @param class-string<Throwable> $exception
+>>>>>>> .merge_file_yf1JJz
      */
     public static function throws(callable $callback, string $exception, ?string $message = null): void
     {

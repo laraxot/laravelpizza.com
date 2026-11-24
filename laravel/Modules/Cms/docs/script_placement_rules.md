@@ -1,6 +1,9 @@
 ---
+<<<<<<< .merge_file_76mqRh
 <<<<<<< .merge_file_9jyfkV
 =======
+=======
+>>>>>>> .merge_file_3gWq0a
 <<<<<<< HEAD
 title: "Script Placement Rules"
 type: note
@@ -9,17 +12,24 @@ created: 2026-09-26
 updated: 2026-09-26
 qmd: "Script Placement Rules"
 =======
+<<<<<<< .merge_file_76mqRh
 >>>>>>> .merge_file_xA6Jp9
+=======
+>>>>>>> .merge_file_3gWq0a
 title: "script placement rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "script placement rules"
+<<<<<<< .merge_file_76mqRh
 <<<<<<< .merge_file_9jyfkV
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_xA6Jp9
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_3gWq0a
 issues: []
 discussions: []
 ---

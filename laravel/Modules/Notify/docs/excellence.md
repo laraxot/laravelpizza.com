@@ -3,8 +3,19 @@ title: "🏆 FIXCITY - ECCELLENZA 2025"
 type: concept
 tags: [excellence, 2025]
 created: 2026-07-14
+<<<<<<< .merge_file_fDOUIc
 updated: 2026-11-23
 qmd: "excellence-2025 🏆 fixcity - eccellenza 2025"
+=======
+<<<<<<< HEAD
+updated: 2026-07-14
+qmd: "excellence-2025 🏆 fixcity - eccellenza 2025"
+qmd: "excellence-2025 🏆 ptv - eccellenza 2025"
+=======
+updated: 2026-11-23
+qmd: "excellence-2025 🏆 fixcity - eccellenza 2025"
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_rFwdda
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
@@ -12,12 +23,17 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
+<<<<<<< .merge_file_fDOUIc
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
 <<<<<<< HEAD
   - "./acronym-naming-conventions.md"
 =======
 <<<<<<< HEAD
+=======
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
+>>>>>>> .merge_file_rFwdda
   - "./acronym-naming-conventions.md"
 =======
 >>>>>>> laraxot/dev

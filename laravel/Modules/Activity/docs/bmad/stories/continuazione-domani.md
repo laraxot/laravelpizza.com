@@ -1,7 +1,10 @@
 ---
+<<<<<<< .merge_file_UJp6tA
 <<<<<<< .merge_file_rpY8sR
 title: "Continuazione BMAD — Domani (Activity)"
 =======
+=======
+>>>>>>> .merge_file_EsyEir
 <<<<<<< HEAD
 title: "Continuazione BMAD: Domani (Activity)"
 =======
@@ -11,7 +14,10 @@ title: "Continuazione BMAD — Domani (Activity)"
 title: "Continuazione BMAD: Domani (Activity)"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_UJp6tA
 >>>>>>> .merge_file_ZWIEi3
+=======
+>>>>>>> .merge_file_EsyEir
 type: module-fix
 scope: Activity
 epic: docs-conflict-markers-cleanup
@@ -19,22 +25,34 @@ bmad_version: v3.30.1
 updated_at: '2026-09-22'
 status: in-progress
 related:
+<<<<<<< .merge_file_UJp6tA
 <<<<<<< .merge_file_rpY8sR
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> .merge_file_ZWIEi3
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> .merge_file_EsyEir
   - ./conflict-markers-cleanup-2026-09-22.story.md
 ---
 
 # Activity — Continuazione Domani
+<<<<<<< .merge_file_UJp6tA
 <<<<<<< .merge_file_rpY8sR
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_ZWIEi3
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_EsyEir
   - ./conflict-markers-cleanup.story.md
 updated: 2026-10-07
 tags: [docs, activity, bmad]
@@ -51,6 +69,7 @@ qmd: "activity   continuazione domani activity"
   (`docs/00-index.md`: 39 righe marker su 385). Causa reale: il fix del
   mattino (`6db1c9e3`, 09:40:04) era stato **annullato** dal merge
   `baf9bfbd` "Merge remote-tracking branch 'laraxot/dev' into dev" che ha
+<<<<<<< .merge_file_UJp6tA
 <<<<<<< .merge_file_rpY8sR
   reintrodotto la versione remota stale — entrambi i commit verificati ora
 =======
@@ -68,14 +87,32 @@ qmd: "activity   continuazione domani activity"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_ZWIEi3
+=======
+<<<<<<< HEAD
+  reintrodotto la versione remota stale: entrambi i commit verificati ora
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  reintrodotto la versione remota stale — entrambi i commit verificati ora
+=======
+  reintrodotto la versione remota stale: entrambi i commit verificati ora
+>>>>>>> laraxot/dev
+=======
+  reintrodotto la versione remota stale: entrambi i commit verificati ora
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_EsyEir
   con `git show -s --format=%H %ci %s`, esistono davvero nella history locale.
   Fix definitivo ri-applicato: `5fe111e1` (contenuto, 90 file), `e6eb12dd`
   (story), `7836580e` (root cause), `d79c39d5` (fence markdown orfana in
   `implementation.md`), `d0bc6e4f` (quality gate). `git status` pulito,
   `dev` ora 1 commit avanti a `laraxot/dev` (il commit `.` che ha introdotto
+<<<<<<< .merge_file_UJp6tA
 <<<<<<< .merge_file_rpY8sR
   questo stesso file, autore daemon auto-commit — non ancora pushato).
 =======
+=======
+>>>>>>> .merge_file_EsyEir
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -113,16 +150,22 @@ qmd: "activity   continuazione domani activity"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_UJp6tA
 >>>>>>> .merge_file_ZWIEi3
+=======
+>>>>>>> .merge_file_EsyEir
   Pest **non eseguito**: `10.100.200.53:3306` irraggiungibile (`nc -z`
   fallito), pattern noto (`project-test-db-unreachable-drives-skips.md`).
 - Nessun altro file `*.story.md` con stato aperto nel modulo: l'unica story
   esistente oltre a questo file è `conflict-markers-cleanup-2026-09-22`, ed
   è `done`.
 
+<<<<<<< .merge_file_UJp6tA
 <<<<<<< .merge_file_rpY8sR
 ## Continuazione — priorità, in ordine
 =======
+=======
+>>>>>>> .merge_file_EsyEir
 <<<<<<< HEAD
 ## Continuazione: priorità, in ordine
 =======
@@ -130,6 +173,7 @@ qmd: "activity   continuazione domani activity"
 <<<<<<< HEAD
 ## Continuazione — priorità, in ordine
 =======
+<<<<<<< .merge_file_UJp6tA
 ## Continuazione: priorità, in ordine
 >>>>>>> laraxot/dev
 =======
@@ -137,6 +181,14 @@ qmd: "activity   continuazione domani activity"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_ZWIEi3
+=======
+## Continuazione: priorità, in ordine
+>>>>>>> laraxot/dev
+=======
+## Continuazione: priorità, in ordine
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_EsyEir
 
 1. **Follow-up esplicito lasciato aperto dalla story stessa** (sezione
    `notes`): nessun gate impedisce che un `merge`/`pull` da `laraxot/dev`
@@ -148,9 +200,12 @@ qmd: "activity   continuazione domani activity"
    `bashscripts/` così da coprire tutti i moduli con un solo tool.
 2. **Due trait morti mascherati da soppressione silenziosa**:
    `app/Traits/HasEvents.php` e `app/Traits/HasSnapshots.php` hanno
+<<<<<<< .merge_file_UJp6tA
 <<<<<<< .merge_file_rpY8sR
    `/** @phpstan-ignore trait.unused */` — verificato con
 =======
+=======
+>>>>>>> .merge_file_EsyEir
 <<<<<<< HEAD
    `/** @phpstan-ignore trait.unused */`: verificato con
 =======
@@ -164,13 +219,17 @@ qmd: "activity   continuazione domani activity"
    `/** @phpstan-ignore trait.unused */`: verificato con
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_UJp6tA
 >>>>>>> .merge_file_ZWIEi3
+=======
+>>>>>>> .merge_file_EsyEir
    `grep -rn "HasEvents\|HasSnapshots" app/` (esclusi i file stessi): **zero
    usi** in tutto il modulo. `HasSnapshots` è dichiarato esplicitamente
    placeholder vuoto nel proprio commento ("This trait can be extended...
    For now, it's a placeholder"). Per il pilastro "ogni soppressione nasconde
    un errore vero": decidere se cablare i trait sui model che dovrebbero
    usarli (event sourcing / snapshot pattern, coerente col resto del modulo
+<<<<<<< .merge_file_UJp6tA
 <<<<<<< .merge_file_rpY8sR
    `StoredEvent`/`Snapshot`) o rimuoverli — non lasciarli come dead code
    silenziato da un ignore permanente.
@@ -178,6 +237,8 @@ qmd: "activity   continuazione domani activity"
    `app/Filament/Pages/ListLogActivities.php`** (righe 70, 95, 290): tutti
    mascherano lo stesso problema — `__()` di Laravel ritorna
 =======
+=======
+>>>>>>> .merge_file_EsyEir
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -203,7 +264,10 @@ qmd: "activity   continuazione domani activity"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_UJp6tA
 >>>>>>> .merge_file_ZWIEi3
+=======
+>>>>>>> .merge_file_EsyEir
    `string|array|null` e il codice fa `implode()`/cast su un valore che
    PHPStan non riesce a restringere. Vale la pena valutare un helper tipizzato
    (`__string()` o simile, già eventualmente presente in Xot) da riusare al
@@ -214,9 +278,12 @@ qmd: "activity   continuazione domani activity"
    stato verificato a runtime in questa sessione.
 5. **Push del commit locale in sospeso**: `dev` è 1 commit avanti a
    `laraxot/dev` (il commit `.` con questo stesso file, generato dal daemon
+<<<<<<< .merge_file_UJp6tA
 <<<<<<< .merge_file_rpY8sR
    auto-commit prima di questa sessione) — verificare che sia stato pushato
 =======
+=======
+>>>>>>> .merge_file_EsyEir
 <<<<<<< HEAD
    auto-commit prima di questa sessione): verificare che sia stato pushato
 =======
@@ -230,7 +297,10 @@ qmd: "activity   continuazione domani activity"
    auto-commit prima di questa sessione): verificare che sia stato pushato
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_UJp6tA
 >>>>>>> .merge_file_ZWIEi3
+=======
+>>>>>>> .merge_file_EsyEir
    insieme al commit di questa sessione.
 
 ## Second brain

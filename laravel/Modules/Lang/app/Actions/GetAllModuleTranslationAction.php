@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\glob;
 
+<<<<<<< .merge_file_Cq6Lgb
 <<<<<<< .merge_file_Xv33pm
 /**
  * @see docs/contracts/get-all-module-translation-action.md
@@ -17,6 +18,8 @@ use function Safe\glob;
  */
 =======
 >>>>>>> .merge_file_XpBHB6
+=======
+>>>>>>> .merge_file_medXmT
 class GetAllModuleTranslationAction
 {
     use QueueableAction;

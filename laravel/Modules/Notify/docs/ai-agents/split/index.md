@@ -4,7 +4,15 @@ type: index
 tags: [notify, docs, ai-agents, split]
 module: Notify
 created: 2026-07-20
+<<<<<<< .merge_file_xCeLtZ
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_rdSmFV
 qmd: "notify documentazione ai agents split index ai agents documentation index index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -157,6 +165,7 @@ Split from [`laravel/gemini.md`](../../../../../gemini.md):
 - ← Back to [Project Root](../../)
 - ← Back to [Docs Index](../../docs/README.md)
 - ← Back to [AGENTS.md](../../../../AGENTS.md) (original)
+<<<<<<< .merge_file_xCeLtZ
 <<<<<<< HEAD
 - ← Back to [AGENTS.md](../../../../AGENTS.md) (original)
 =======
@@ -165,10 +174,14 @@ Split from [`laravel/gemini.md`](../../../../../gemini.md):
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- ← Back to [AGENTS.md](../../../../AGENTS.md) (original)
+>>>>>>> .merge_file_rdSmFV
 - ← Back to [CLAUDE.md](../../../../docs/CLAUDE.md) (original)
 - ← Back to [gemini.md](../../../../laravel/gemini.md) (original)
 - ← Back to [Docs Index](../../README.md)
 - ← Back to [AGENTS.md](../../../../../AGENTS.md) (original)
+<<<<<<< .merge_file_xCeLtZ
 <<<<<<< HEAD
 - ← Back to [AGENTS.md](../../../../../AGENTS.md) (original)
 =======
@@ -177,6 +190,9 @@ Split from [`laravel/gemini.md`](../../../../../gemini.md):
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- ← Back to [AGENTS.md](../../../../../AGENTS.md) (original)
+>>>>>>> .merge_file_rdSmFV
 - ← Back to [CLAUDE.md](../../claude.md) (original)
 - ← Back to [gemini.md](../../../../../gemini.md) (original)
 - ← Back to [qwen.md](../../../../qwen.md) (original)

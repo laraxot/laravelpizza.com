@@ -3,7 +3,15 @@ title: "09 Notebooklm Skill"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_DX154x
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_jVWZc7
 qmd: "09 Notebooklm Skill"
 issues: []
 discussions: []

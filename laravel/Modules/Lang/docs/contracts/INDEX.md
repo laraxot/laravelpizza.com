@@ -1,5 +1,8 @@
 ---
+<<<<<<< .merge_file_ThFA98
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ssfOC2
 title: "INDEX — Lang"
 type: index
 status: active
@@ -20,6 +23,7 @@ Elenco operativo dei contract comportamentali del modulo Lang.
 | Dati vista language switcher | [language-switcher-view-data](language-switcher-view-data.md) | `LanguageSwitcherWidget` | LANG-SWITCHER-001, LANG-SWITCHER-002 |
 | Componente language switcher | [language-switcher-component](language-switcher-component.md) | `Modules\Lang\View\Components\LanguageSwitcher` | LANG-SWITCHER-001, LANG-SWITCHER-002, LANG-SWITCHER-003 |
 
+<<<<<<< .merge_file_ThFA98
 (End of file - total 18 lines)
 =======
 title: "INDEX contratti — Lang"
@@ -52,3 +56,6 @@ Action ad alto rischio senza contract (scrivono file di lingua; `laravel/Modules
 
 Totale Action in `app/Actions`: 17 file `.php`. Contract di Action: 0; contract di presentazione: 3.
 >>>>>>> laraxot/dev
+=======
+(End of file - total 18 lines)
+>>>>>>> .merge_file_ssfOC2

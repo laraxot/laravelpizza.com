@@ -108,11 +108,15 @@ test('TaskPolicy rifiuta utente senza permessi e concede con permessi', function
 
 test('JobPolicy: deny-default; before apre solo super-admin e job::admin', function (): void {
     $policy = new JobPolicy;
+<<<<<<< .merge_file_WIxEIU
 <<<<<<< .merge_file_YQ1GGb
     $job = new Job;
 =======
     $job = new \Modules\Job\Models\Job;
 >>>>>>> .merge_file_WG51y7
+=======
+    $job = new \Modules\Job\Models\Job;
+>>>>>>> .merge_file_fx6p7J
     $outsider = jobBehaviorUser();
     $admin = jobBehaviorUser(roles: ['job::admin']);
     $super = jobBehaviorUser(roles: ['super-admin']);
@@ -150,6 +154,7 @@ test('TaskCommentPolicy deny/allow su permesso task_comment.view', function (): 
 });
 
 test('FailedJobPolicy e JobBatchPolicy deny-default create/view', function (): void {
+<<<<<<< .merge_file_WIxEIU
 <<<<<<< .merge_file_YQ1GGb
     $failed = new FailedJob;
     $batch = new JobBatch;
@@ -157,6 +162,10 @@ test('FailedJobPolicy e JobBatchPolicy deny-default create/view', function (): v
     $failed = new \Modules\Job\Models\FailedJob;
     $batch = new \Modules\Job\Models\JobBatch;
 >>>>>>> .merge_file_WG51y7
+=======
+    $failed = new \Modules\Job\Models\FailedJob;
+    $batch = new \Modules\Job\Models\JobBatch;
+>>>>>>> .merge_file_fx6p7J
     foreach ([
         [new FailedJobPolicy, $failed],
         [new JobBatchPolicy, $batch],

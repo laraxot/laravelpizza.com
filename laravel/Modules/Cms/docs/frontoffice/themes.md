@@ -57,9 +57,12 @@ laravel/Themes/One/
 npm run build
 
 # Pubblicazione
+<<<<<<< .merge_file_Vt9Wrd
 <<<<<<< .merge_file_ZR5ORZ
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
 =======
+=======
+>>>>>>> .merge_file_5qW2WY
 <<<<<<< HEAD
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 =======
@@ -69,7 +72,10 @@ npm run build
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Vt9Wrd
 >>>>>>> .merge_file_NdJJhC
+=======
+>>>>>>> .merge_file_5qW2WY
 ```
 
 ## Riflessioni e Linee Guida
@@ -150,9 +156,12 @@ npm run build
    ls -la public/themes/One
 
    # Forza copia
+<<<<<<< .merge_file_Vt9Wrd
 <<<<<<< .merge_file_ZR5ORZ
    # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
 =======
+=======
+>>>>>>> .merge_file_5qW2WY
 <<<<<<< HEAD
    # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 =======
@@ -162,7 +171,10 @@ npm run build
    # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Vt9Wrd
 >>>>>>> .merge_file_NdJJhC
+=======
+>>>>>>> .merge_file_5qW2WY
    ```
 
 3. **Problemi di Cache**

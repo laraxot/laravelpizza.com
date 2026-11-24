@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_OpiGZ1
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_5KcZuH
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 qmd: "project docs index"
 issues: []
 discussions: []
@@ -27,6 +33,7 @@ status: draft
 Indice generato automaticamente da file markdown in cartelle docs (esclusi vendor/node_modules/archive).
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -35,6 +42,10 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+=======
+<<<<<<< .merge_file_TEccoT
+>>>>>>> .merge_file_OpiGZ1
 - `.agents/docs/build-and-dev-commands.md` — Build & development commands
 - `.agents/docs/chart-widgets.md` — Chart widgets (Chart.js + Filament v5)
 - `.agents/docs/code-quality-commands.md` — Code quality commands
@@ -54,18 +65,24 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `.devcontainer/README.md` — README
 - `AGENTS.md` — AGENTS.MD - Development Guidelines
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 - `CLAUDE.md` — CLAUDE.md
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `claude.md` — claude.md
 =======
 - `CLAUDE.md` — CLAUDE.md
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_5KcZuH
 =======
 - `claude.md` — claude.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `GEMINI.md` — Gemini Project Context: Quaeris Fila4 Mono - Laravel Survey Management System
 - `IFLOW.md` — Quaeris Fila4 Mono - 项目指南
 - `README.md` — Quaeris Fila4 Mono - Laravel Survey Management System
@@ -102,18 +119,24 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `bashscripts/ai/.phive/README.md` — Phive Configuration
 - `bashscripts/ai/.vscode/README.md` — Visual Studio Code Configuration
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 - `bashscripts/ai/CLAUDE.md` — CLAUDE.md
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `bashscripts/ai/claude.md` — claude.md
 =======
 - `bashscripts/ai/CLAUDE.md` — CLAUDE.md
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_5KcZuH
 =======
 - `bashscripts/ai/claude.md` — claude.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `bashscripts/ai/IFLOW.md` — Project Overview
 - `bashscripts/analysis/README.md` — Script di Testing
 - `bashscripts/backup/README.md` — Script di Backup
@@ -211,6 +234,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `bashscripts/docs/git_subtree_push_org.md` — Script Push Subtree per Organizzazioni
 - `bashscripts/docs/github-actions-subtrees.md` — GitHub Actions - Subtrees Sync
 - `bashscripts/docs/github-workflows-bashscripts-setup.md` — GitHub Workflows - Bashscripts Setup
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `bashscripts/docs/operations/gitignore-standardization.md` — Standardizzazione .gitignore per bashscripts
 =======
@@ -220,6 +244,9 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `bashscripts/docs/gitignore-standardization.md` — Standardizzazione .gitignore per bashscripts
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `bashscripts/docs/gitignore-standardization.md` — Standardizzazione .gitignore per bashscripts
+>>>>>>> .merge_file_OpiGZ1
 - `bashscripts/docs/icons.md` — Sistema di Icone
 - `bashscripts/docs/installation.md` — Installazione {#installazione}
 - `bashscripts/docs/introduction.md` — Introducendo Lang {#introducendo-lang}
@@ -229,6 +256,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `bashscripts/docs/laraxot.md` — Laravel XOT Architecture Documentation
 - `bashscripts/docs/laraxot_conventions.md` — Convenzioni per lo Sviluppo in Laraxot PTVX
 - `bashscripts/docs/layouts-and-themes.md` — Layouts e Temi UI
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `bashscripts/docs/operations/library-dependencies.md` — Library Dependencies Documentation
 =======
@@ -238,6 +266,9 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `bashscripts/docs/library-dependencies.md` — Library Dependencies Documentation
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `bashscripts/docs/library-dependencies.md` — Library Dependencies Documentation
+>>>>>>> .merge_file_OpiGZ1
 - `bashscripts/docs/links.md` — links
 - `bashscripts/docs/localization-guide.md` — Guida alla Localizzazione nel Framework Laraxot PTVX
 - `bashscripts/docs/login_test_implementation_summary.md` — Login Test Implementation Summary - SaluteOra Project
@@ -246,6 +277,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `bashscripts/docs/markdown-conflicts-cleanup-summary.md` — Pulizia Marker Conflitti Git nei File Markdown
 - `bashscripts/docs/master-session-2025-01-04.md` — 🎯 MASTER SESSION REPORT - 4 Gennaio 2025
 - `bashscripts/docs/mcp-configuration.md` — Configurazione MCP Server per PTVX Fila4 Mono
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `bashscripts/docs/integrations/mcp-optimization-workflow.md` — Workflow di Ottimizzazione Continua MCP per SimpleChartWidget
 =======
@@ -255,6 +287,9 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `bashscripts/docs/mcp-optimization-workflow.md` — Workflow di Ottimizzazione Continua MCP per SimpleChartWidget
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `bashscripts/docs/mcp-optimization-workflow.md` — Workflow di Ottimizzazione Continua MCP per SimpleChartWidget
+>>>>>>> .merge_file_OpiGZ1
 - `bashscripts/docs/mcp_errors_and_lessons.md` — Analisi Errori e Lezioni Apprese sull'Implementazione MCP
 - `bashscripts/docs/mcp_implementation_correction.md` — MCP Implementation Correction
 - `bashscripts/docs/mcp_implementation_guide.md` — Guida all'Implementazione del Model Context Protocol (MCP)
@@ -282,6 +317,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `bashscripts/docs/no_duplicate_functions_in_sourced_scripts.md` — ERRORE GRAVE: Duplicazione di funzioni in presenza di 'source'
 - `bashscripts/docs/noconsole.md` — Cartella NoConsole
 - `bashscripts/docs/orbit_sushi_to_json.md` — Invece di usare Orbit {#invece-di-usare-orbit}
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `bashscripts/docs/governance/organization.md` — Organizzazione Script Bash
 =======
@@ -291,6 +327,9 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `bashscripts/docs/organization.md` — Organizzazione Script Bash
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `bashscripts/docs/organization.md` — Organizzazione Script Bash
+>>>>>>> .merge_file_OpiGZ1
 - `bashscripts/docs/organize-scripts-summary.md` — Organizzazione Script per Categoria
 - `bashscripts/docs/package.md` — Package utilizzati {#package-utilizzati}
 - `bashscripts/docs/password.md` — password
@@ -325,6 +364,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `bashscripts/docs/project.md` — Project
 - `bashscripts/docs/project_notes.md` — Project Notes
 - `bashscripts/docs/project_roadmap.md` — Roadmap del Progetto
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `bashscripts/docs/governance/project_structure_rules.md` — Regole Struttura Progetto Laraxot
 - `bashscripts/docs/operations/quality-assurance-scripts.md` — Quality Assurance Scripts
@@ -337,6 +377,10 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `bashscripts/docs/quality-assurance-scripts.md` — Quality Assurance Scripts
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `bashscripts/docs/project_structure_rules.md` — Regole Struttura Progetto Laraxot
+- `bashscripts/docs/quality-assurance-scripts.md` — Quality Assurance Scripts
+>>>>>>> .merge_file_OpiGZ1
 - `bashscripts/docs/reactphp.md` — Gestione Processi ReactPHP
 - `bashscripts/docs/readme-template.md` — Modulo [Nome Modulo]
 - `bashscripts/docs/readme.es.md` — 🚀 Kit de Herramientas de Automatización Git
@@ -379,6 +423,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `bashscripts/docs/schema_conventions.md` — Schema Conventions in Notify Module
 - `bashscripts/docs/schema-conventions.md` — Schema Conventions in Notify Module
 - `bashscripts/docs/scripts-conflict-resolution.md` — Risoluzione Conflitti negli Script Bash
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `bashscripts/docs/operations/scripts-index.md` — Bashscripts Scripts Index
 =======
@@ -388,6 +433,9 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `bashscripts/docs/scripts-index.md` — Bashscripts Scripts Index
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `bashscripts/docs/scripts-index.md` — Bashscripts Scripts Index
+>>>>>>> .merge_file_OpiGZ1
 - `bashscripts/docs/scripts.md` — 🚀 Script Bash di il progetto: La Tua Guida Definitiva
 - `bashscripts/docs/scripts_conflict_resolution.md` — Risoluzione Conflitti negli Script Bash
 - `bashscripts/docs/scripts_index.md` — Bash Scripts Index
@@ -548,10 +596,13 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `docs/model-architecture.md` — Model Architecture in Laraxot
 - `docs/modern-chart-implementation-roadmap.md` — Modern Chart Implementation Roadmap
 - `docs/moduli-scopo.md` — Scopo dei moduli - Quaeris Fila5 Mono
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `docs/laravel-boost-mcp.md` — Laravel Boost MCP – Configurazione progetto
 - `docs/mcp-all-agents-complete.md` — ✅ MCP Implementation Complete - All AI Agents Configured
 - `docs/mcp-configuration-complete.md` — MCP Configuration Complete Guide for Quaeris Fila5 Mono
@@ -561,11 +612,14 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `docs/model-architecture.md` — Model Architecture in Laraxot
 - `docs/modern-chart-implementation-roadmap.md` — Modern Chart Implementation Roadmap
 - `docs/moduli-scopo.md` — Scopo dei moduli - Quaeris Fila5 Mono
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `docs/mysql-testing-configuration.md` — MySQL Testing Configuration - Laraxot Database Standard
 - `docs/operational-rules/README.md` — Operational Rules - Regole Operative Assolute
 - `docs/operational-rules/action-classes-purity-rule.md` — Action Classes Purity Rule - Regola Fondamentale
@@ -3200,6 +3254,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Lang/docs/conflict-resolution-translation-file-syntax-1.md` — risoluzione conflitto translation-file-syntax.md
 - `laravel/Modules/Lang/docs/conflict-resolution-translation-file-syntax.md` — risoluzione conflitto translation-file-syntax.md
 =======
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 <<<<<<< HEAD
 - `laravel/Modules/Lang/docs/conflict-resolution-translation-file-syntax-1.md` — risoluzione conflitto translation-file-syntax.md
@@ -3213,24 +3268,35 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Lang/docs/conflict-resolution-translation-file-syntax.md` — risoluzione conflitto translation-file-syntax.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `laravel/Modules/Lang/docs/conflict-resolution-translation-file-syntax-1.md` — Risoluzione Conflitto translation-file-syntax.md
+- `laravel/Modules/Lang/docs/conflict-resolution-translation-file-syntax.md` — Risoluzione Conflitto translation-file-syntax.md
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Lang/docs/conflict-resolution-writetranslationfileaction.md` — Risoluzione Conflitto WriteTranslationFileAction
 - `laravel/Modules/Lang/docs/conflicts/php-cs-fixer-dist-resolution.md` — Risoluzione Conflitto in .php-cs-fixer.dist.php
 - `laravel/Modules/Lang/docs/conflicts/php-cs-fixer-resolution.md` — Risoluzione Conflitto in .php-cs-fixer.php
 - `laravel/Modules/Lang/docs/conflicts/translation-model-resolution.md` — Risoluzione Conflitto nel Modello Translation
 - `laravel/Modules/Lang/docs/conflicts/vscode-php-cs-fixer-resolution.md` — Risoluzione Conflitto in .vscode/.php-cs-fixer.php
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 - `laravel/Modules/Lang/docs/conflicts-analysis.md` — Analisi Conflitti - README.md
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Lang/docs/conflicts-analysis.md` — analisi conflitti - readme.md
 =======
 - `laravel/Modules/Lang/docs/conflicts-analysis.md` — Analisi Conflitti - README.md
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_5KcZuH
 =======
 - `laravel/Modules/Lang/docs/conflicts-analysis.md` — analisi conflitti - readme.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Lang/docs/conflicts.md` — Risoluzione Conflitti - Lang
 - `laravel/Modules/Lang/docs/console-commands.md` — Console Commands - Lang Module
 - `laravel/Modules/Lang/docs/core/architecture.md` — Architettura Modulo Lang
@@ -3772,22 +3838,28 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Media/docs/conflict-resolution-convertvideobymediaconvertaction.md` — Risoluzione Conflitti ConvertVideoByMediaConvertAction.php
 - `laravel/Modules/Media/docs/conflict-resolution-iconmediacolumn.md` — Risoluzione Conflitto IconMediaColumn.php
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 - `laravel/Modules/Media/docs/conflicts-analysis-1.md` — Analisi Conflitti - README.md
 - `laravel/Modules/Media/docs/conflicts-analysis.md` — Analisi Conflitti - README.md
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Media/docs/conflicts-analysis-1.md` — analisi conflitti - readme.md
 - `laravel/Modules/Media/docs/conflicts-analysis.md` — analisi conflitti - readme.md
 =======
 - `laravel/Modules/Media/docs/conflicts-analysis-1.md` — Analisi Conflitti - README.md
 - `laravel/Modules/Media/docs/conflicts-analysis.md` — Analisi Conflitti - README.md
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_5KcZuH
 =======
 - `laravel/Modules/Media/docs/conflicts-analysis-1.md` — analisi conflitti - readme.md
 - `laravel/Modules/Media/docs/conflicts-analysis.md` — analisi conflitti - readme.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Media/docs/conflicts.md` — Risoluzione Conflitti - Media
 - `laravel/Modules/Media/docs/conflitti-merge-risolti-1.md` — Risoluzione dei Conflitti Git nel Modulo Media
 - `laravel/Modules/Media/docs/conflitti-merge-risolti.md` — Risoluzione dei Conflitti Git nel Modulo Media
@@ -4148,6 +4220,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Notify/docs/configuration.md` — Configuration
 - `laravel/Modules/Notify/docs/configuration-architecture.md` — Architettura delle Configurazioni nei Moduli Laravel
 - `laravel/Modules/Notify/docs/configurations-usage-principles.md` — Principi di Utilizzo delle Configurazioni
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `laravel/Modules/Notify/docs/configurations-usage-principles.md` — Principi di Utilizzo delle Configurazioni
 =======
@@ -4156,6 +4229,9 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `laravel/Modules/Notify/docs/configurations-usage-principles.md` — Principi di Utilizzo delle Configurazioni
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Notify/docs/conflict-resolution-mailtemplate.md` — Risoluzione Conflitti MailTemplate.php
 - `laravel/Modules/Notify/docs/conflict-resolution-recordnotification.md` — Risoluzione Conflitti RecordNotification.php
 - `laravel/Modules/Notify/docs/conflict-resolution-sendsmspage.md` — Risoluzione Conflitti SendSmsPage.php
@@ -4167,18 +4243,24 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Notify/docs/conflict_resolution_smschannel.md` — Risoluzione Conflitti SmsChannel.php
 - `laravel/Modules/Notify/docs/conflict_resolution_smsdriverenum.md` — Risoluzione Conflitto SmsDriverEnum
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 - `laravel/Modules/Notify/docs/conflicts-analysis.md` — Analisi Conflitti - README.md
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Notify/docs/conflicts-analysis.md` — analisi conflitti - readme.md
 =======
 - `laravel/Modules/Notify/docs/conflicts-analysis.md` — Analisi Conflitti - README.md
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_5KcZuH
 =======
 - `laravel/Modules/Notify/docs/conflicts-analysis.md` — analisi conflitti - readme.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Notify/docs/conflicts.md` — Risoluzione Conflitti - Notify
 - `laravel/Modules/Notify/docs/conflitti-git.md` — Risoluzione Conflitti Git - Modulo Notify
 - `laravel/Modules/Notify/docs/contact-column-error-fix.md` — Correzione Errori ContactColumn - Modulo Notify
@@ -4316,19 +4398,25 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Notify/docs/email_best_practices.md` — Best Practices per il Sistema Email
 - `laravel/Modules/Notify/docs/email_cache.md` — Sistema Cache Email
 - `laravel/Modules/Notify/docs/email_html_best_practices.md` — Best Practices HTML per Email
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Notify/docs/email_backup.md` — Sistema Backup Email
 - `laravel/Modules/Notify/docs/email_best_practices.md` — Best Practices per il Sistema Email
 - `laravel/Modules/Notify/docs/email_cache.md` — Sistema Cache Email
 - `laravel/Modules/Notify/docs/email_html_best_practices.md` — Best Practices HTML per Email
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Notify/docs/email_logs.md` — Sistema Log Email
 - `laravel/Modules/Notify/docs/email_migrations.md` — Sistema Migrazione Email
 - `laravel/Modules/Notify/docs/email_monitoring.md` — Sistema Monitoraggio Email
@@ -4458,10 +4546,13 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Notify/docs/improvements-roadmap.md` — Notify Module - Improvements Roadmap
 - `laravel/Modules/Notify/docs/improvements.md` — Notify Module - Improvements Roadmap
 - `laravel/Modules/Notify/docs/inbound-keting-strategy.md` — Strategia Inbound Marketing - TechPlanner
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Notify/docs/implementazione-pratica.md` — Implementazione Pratica del Modulo Notify
 - `laravel/Modules/Notify/docs/implementazione_pratica.md` — Implementazione Pratica del Modulo Notify
 - `laravel/Modules/Notify/docs/improved-email-templates.md` — Versione Migliorata: Filament Email Templates In-House
@@ -4469,11 +4560,14 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Notify/docs/improvements-roadmap.md` — Notify Module - Improvements Roadmap
 - `laravel/Modules/Notify/docs/improvements.md` — Notify Module - Improvements Roadmap
 - `laravel/Modules/Notify/docs/inbound-keting-strategy.md` — Strategia Inbound Marketing - TechPlanner
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Notify/docs/index-1.md` — Notify Module Documentation
 - `laravel/Modules/Notify/docs/index-conflict.md` — Notify Module Documentation
 - `laravel/Modules/Notify/docs/index.md` — Notify Module Documentation
@@ -4501,6 +4595,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Notify/docs/json-migration-error.md` — Errore di Migrazione JSON e Soluzione
 - `laravel/Modules/Notify/docs/kdown-linking-conventions.md` — Convenzioni per i Collegamenti nei File Markdown
 - `laravel/Modules/Notify/docs/lang-link.md` — Collegamento alle Traduzioni del Modulo Notify
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `laravel/Modules/Notify/docs/lang-link.md` — Collegamento alle Traduzioni del Modulo Notify
 =======
@@ -4509,6 +4604,9 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `laravel/Modules/Notify/docs/lang-link.md` — Collegamento alle Traduzioni del Modulo Notify
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Notify/docs/laravel-path-conventions-1.md` — Convenzioni dei Path in Laravel e <nome progetto>
 - `laravel/Modules/Notify/docs/laravel-path-conventions.md` — Convenzioni dei Path in Laravel e
 - `laravel/Modules/Notify/docs/laravel_path_conventions.md` — Convenzioni dei Path in Laravel e <nome progetto>
@@ -4539,19 +4637,25 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Notify/docs/mail-templates/email_templates_best_practices.md` — Best Practices per Template Email
 - `laravel/Modules/Notify/docs/mail-templates/email_templates_guide.md` — Guida ai Template Email Responsive
 - `laravel/Modules/Notify/docs/mail-templates/email_templates_update.md` — Email Templates Update Guide
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Notify/docs/mail-templates/email_layouts_best_practices.md` — Email Layouts Best Practices
 - `laravel/Modules/Notify/docs/mail-templates/email_templates_best_practices.md` — Best Practices per Template Email
 - `laravel/Modules/Notify/docs/mail-templates/email_templates_guide.md` — Guida ai Template Email Responsive
 - `laravel/Modules/Notify/docs/mail-templates/email_templates_update.md` — Email Templates Update Guide
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Notify/docs/mail-templates/filament-slug-generation-1.md` — Generazione di Slug in Filament
 - `laravel/Modules/Notify/docs/mail-templates/filament-slug-generation.md` — Generazione di Slug in Filament
 - `laravel/Modules/Notify/docs/mail-templates/filament-ui-enhancements-1.md` — Miglioramenti UI/UX per MailTemplateResource
@@ -4580,10 +4684,13 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Notify/docs/mail-templates/model-mail-template-changes.md` — Modifiche Tecniche al Modello MailTemplate
 - `laravel/Modules/Notify/docs/mail-templates/model-slug-implementation.md` — Implementazione del Campo `slug` nel Modello MailTemplate
 - `laravel/Modules/Notify/docs/mail-templates/model_mail_template_changes.md` — Modifiche Tecniche al Modello MailTemplate
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Notify/docs/mail-templates/mailpace-templates-analysis.md` — Analisi Mailpace Templates
 - `laravel/Modules/Notify/docs/mail-templates/mailpace-templates-integration.md` — Integrazione MailPace Templates
 - `laravel/Modules/Notify/docs/mail-templates/mailpace_templates_analysis.md` — Analisi Mailpace Templates
@@ -4595,11 +4702,14 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Notify/docs/mail-templates/model-mail-template-changes.md` — Modifiche Tecniche al Modello MailTemplate
 - `laravel/Modules/Notify/docs/mail-templates/model-slug-implementation.md` — Implementazione del Campo `slug` nel Modello MailTemplate
 - `laravel/Modules/Notify/docs/mail-templates/model_mail_template_changes.md` — Modifiche Tecniche al Modello MailTemplate
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Notify/docs/mail-templates/model_slug_implementation.md` — Implementazione del Campo `slug` nel Modello MailTemplate
 - `laravel/Modules/Notify/docs/mail-templates/params-badges-feature.md` — Visualizzazione Parametri come Badge - Mail Templates
 - `laravel/Modules/Notify/docs/mail-templates/resource-slug-implementation.md` — Implementazione del Campo `slug` in MailTemplateResource
@@ -4639,10 +4749,13 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Notify/docs/mail_template_slug_proposal.md` — Proposta: Implementazione Campo Slug nei Template Email
 - `laravel/Modules/Notify/docs/mail_template_ui_improvements.md` — Miglioramenti UI/UX per MailTemplateResource
 - `laravel/Modules/Notify/docs/mail_templates.md` — Mail Templates in Notify Module
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Notify/docs/mail_layouts_guide.md` — Guida ai Layout Email nel Modulo Notify
 - `laravel/Modules/Notify/docs/mail_template_migration_guide.md` — Guida alla Migrazione di MailTemplate
 - `laravel/Modules/Notify/docs/mail_template_model_changes.md` — Modifiche al Modello MailTemplate
@@ -4650,11 +4763,14 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Notify/docs/mail_template_slug_proposal.md` — Proposta: Implementazione Campo Slug nei Template Email
 - `laravel/Modules/Notify/docs/mail_template_ui_improvements.md` — Miglioramenti UI/UX per MailTemplateResource
 - `laravel/Modules/Notify/docs/mail_templates.md` — Mail Templates in Notify Module
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Notify/docs/mail_templates_structure.md` — Struttura Template Email
 - `laravel/Modules/Notify/docs/maintenance.md` — Manutenzione del Modulo Notify
 - `laravel/Modules/Notify/docs/markdown-linking-conventions-1.md` — Convenzioni per i Collegamenti nei File Markdown
@@ -4996,10 +5112,13 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Notify/docs/sms_driver_enum_translations.md` — Traduzioni SmsDriverEnum - Modulo Notify
 - `laravel/Modules/Notify/docs/sms_driver_selection_analysis.md` — Analisi: Spostamento Logica Selezione Driver in SmsData
 - `laravel/Modules/Notify/docs/sms_driver_selection_specific_analysis.md` — Analisi Specifica: Validazione e Selezione Driver in SmsData
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Notify/docs/sms_actions.md` — Azioni SMS
 - `laravel/Modules/Notify/docs/sms_actions_pattern.md` — Pattern per le Azioni SMS
 - `laravel/Modules/Notify/docs/sms_best_practices.md` — Best Practices per l'Invio SMS
@@ -5009,11 +5128,14 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Notify/docs/sms_driver_enum_translations.md` — Traduzioni SmsDriverEnum - Modulo Notify
 - `laravel/Modules/Notify/docs/sms_driver_selection_analysis.md` — Analisi: Spostamento Logica Selezione Driver in SmsData
 - `laravel/Modules/Notify/docs/sms_driver_selection_specific_analysis.md` — Analisi Specifica: Validazione e Selezione Driver in SmsData
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Notify/docs/sms_factor_data_implementation.md` — SmsFactorData Implementation Summary
 - `laravel/Modules/Notify/docs/sms_global_vs_specific_params.md` — Parametri a Livello di Root vs Specifici per Provider nella Configurazione SMS
 - `laravel/Modules/Notify/docs/sms_implementation.md` — Implementazione SMS in Laravel
@@ -9685,22 +9807,28 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Xot/docs/templates/git-conflict-composer-json.md` — Template Gestione Conflitti Git - composer.json
 - `laravel/Modules/Xot/docs/templates/git-conflict-package-json.md` — Template Gestione Conflitti Git - package.json
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 - `laravel/Modules/Xot/docs/templates/git-conflict-readme-md.md` — Template Gestione Conflitti Git - README.md
 - `laravel/Modules/Xot/docs/templates/git-conflict-subtree-error-resolution.md` — Template Gestione Conflitti Git - git_subtree_error_resolution.md
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Xot/docs/templates/git-conflict-readme-md.md` — template gestione conflitti git - readme.md
 - `laravel/Modules/Xot/docs/templates/git-conflict-subtree-error-resolution.md` — template gestione conflitti git - git_subtree_error_resolution.md
 =======
 - `laravel/Modules/Xot/docs/templates/git-conflict-readme-md.md` — Template Gestione Conflitti Git - README.md
 - `laravel/Modules/Xot/docs/templates/git-conflict-subtree-error-resolution.md` — Template Gestione Conflitti Git - git_subtree_error_resolution.md
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_5KcZuH
 =======
 - `laravel/Modules/Xot/docs/templates/git-conflict-readme-md.md` — template gestione conflitti git - readme.md
 - `laravel/Modules/Xot/docs/templates/git-conflict-subtree-error-resolution.md` — template gestione conflitti git - git_subtree_error_resolution.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Xot/docs/templates/git-conflict-template.md` — 📝 Documentazione Conflitti Git
 - `laravel/Modules/Xot/docs/tenant.md` — tenant
 - `laravel/Modules/Xot/docs/test-placementlines.md` — Test Placement Guidelines (Xot)
@@ -10024,10 +10152,13 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/docs/complete-project-philosophy.md` — Quaeris - Filosofia Completa del Progetto: Logica, Religione, Politica, Zen
 - `laravel/docs/composer-merge-plugin.md` — Composer Merge Plugin Configuration
 - `laravel/docs/comprehensive-module-analysis-2026.md` — Quaeris Fila5 Mono - Complete Module Analysis & Documentation
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/docs/JPGRAPH_IMPLEMENTATION.md` — 📚 GUIDA JpGraph PDF Generation - COMPLETO IMPLEMENTAZIONE
 - `laravel/docs/README.md` — Testing Documentation Index
 - `laravel/docs/architecture/filament-extension-rules.md` — Filament Class Extension Rules (Laraxot Canonical Guide)
@@ -10038,11 +10169,14 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/docs/complete-project-philosophy.md` — Quaeris - Filosofia Completa del Progetto: Logica, Religione, Politica, Zen
 - `laravel/docs/composer-merge-plugin.md` — Composer Merge Plugin Configuration
 - `laravel/docs/comprehensive-module-analysis-2026.md` — Quaeris Fila5 Mono - Complete Module Analysis & Documentation
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/docs/config/database-standard-laravel-12.md` — Config Database Standard Laravel 12.x - 2026-01-21
 - `laravel/docs/config/database-standard-summary-2026-01-21.md` — Riepilogo: Database Config Standard Laravel 12.x - 2026-01-21
 - `laravel/docs/config/database-standard-verification-2026-01-21.md` — Verifica: Database Config Standard Laravel 12.x - 2026-01-21
@@ -10113,10 +10247,13 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/docs/standards/large-data-processing.md` — Large Data Processing Standards
 - `laravel/docs/standards/security-standards.md` — Standard di Sicurezza per il Progetto Quaeris
 - `laravel/docs/standards/testing-standards.md` — Standard di Testing per il Progetto Quaeris
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/docs/phpstan-roadmap-overview.md` — PHPStan Level 10 Compliance Roadmap
 - `laravel/docs/project-master-analysis.md` — Quaeris Fila5 Mono - Analisi Master Completa del Progetto
 - `laravel/docs/readme-pattern-template.md` — 📋 README Pattern Template - MODULO CONVINCENTE E STUPEFACENTE
@@ -10130,11 +10267,14 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/docs/standards/large-data-processing.md` — Large Data Processing Standards
 - `laravel/docs/standards/security-standards.md` — Standard di Sicurezza per il Progetto Quaeris
 - `laravel/docs/standards/testing-standards.md` — Standard di Testing per il Progetto Quaeris
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/docs/test-configuration-analysis-2026-01-30.md` — Test Configuration Analysis Report
 - `laravel/docs/testing/autoload-configuration.md` — Autoloading Configuration for Testing
 - `laravel/docs/testing/composer-merge-plugin.md` — Wikimedia Composer Merge Plugin
@@ -10158,6 +10298,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/docs/troubleshooting.md` — Troubleshooting Guide
 - `laravel/docs/type-contravariance-fixes.md` — Type Contravariance Fixes
 - `laravel/themes/zero/docs/anti-pattern-question-chart-answers-triple-widget.md` — Anti-Pattern: QuestionChartAnswersTripleChartWidget
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 =======
@@ -10166,6 +10307,9 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 >>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_OpiGZ1
 >>>>>>> laraxot/dev
 - `.agents/docs/build-and-dev-commands.md`: Build & development commands
 - `.agents/docs/chart-widgets.md`: Chart widgets (Chart.js + Filament v5)
@@ -10186,6 +10330,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `.devcontainer/README.md`: README
 - `AGENTS.md`: AGENTS.MD - Development Guidelines
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10195,22 +10340,33 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `CLAUDE.md`: CLAUDE.md
+=======
+<<<<<<< HEAD
+>>>>>>> .merge_file_OpiGZ1
 - `claude.md`: claude.md
 - `GEMINI.md`: Gemini Project Context: <nome progetto> Fila4 Mono - Laravel Survey Management System
 - `IFLOW.md`: <nome progetto> Fila4 Mono - 项目指南
 - `README.md`: <nome progetto> Fila4 Mono - Laravel Survey Management System
 - `GEMINI.md`: Gemini Project Context: App Fila4 Mono - Laravel Survey Management System
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `CLAUDE.md`: CLAUDE.md
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> .merge_file_OpiGZ1
+=======
 - `CLAUDE.md`: CLAUDE.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_5KcZuH
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `gemini.md`: Gemini Project Context: <nome progetto> Fila4 Mono - Laravel Survey Management System
 - `IFLOW.md`: <nome progetto> Fila4 Mono - 项目指南
 - `README.md`: <nome progetto> Fila4 Mono - Laravel Survey Management System
@@ -10250,19 +10406,25 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `bashscripts/ai/CLAUDE.md`: CLAUDE.md
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `bashscripts/ai/CLAUDE.md`: CLAUDE.md
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `bashscripts/ai/claude.md`: claude.md
 =======
 - `bashscripts/ai/CLAUDE.md`: CLAUDE.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_5KcZuH
 =======
 - `bashscripts/ai/claude.md`: claude.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `bashscripts/ai/IFLOW.md`: Project Overview
 - `bashscripts/analysis/README.md`: Script di Testing
 - `bashscripts/backup/README.md`: Script di Backup
@@ -10589,7 +10751,10 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `docs/01-documentation-rules.md`: Regole Fondamentali per la Documentazione
 - `docs/AI_CODING_MEMORY.md`: AI Coding Memory - Critical Rules & Patterns
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `docs/BUGFIX_SUMMARY-HasXotFactory.md`: 🐛 Bugfix Summary - HasXotFactory Trait Restoration
 =======
 <<<<<<< HEAD
@@ -10598,9 +10763,12 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `docs/BUGFIX_SUMMARY-HasXotFactory.md`: 🐛 Bugfix Summary - HasXotFactory Trait Restoration
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_5KcZuH
 =======
 - `docs/BUGFIX_SUMMARY_2025-10-22_HasXotFactory.md`: 🐛 Bugfix Summary - HasXotFactory Trait Restoration
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `docs/BUGFIX_SUMMARY_2025-10-22_<nome progetto>_Dashboard.md`: 🐛 Bugfix Summary - <nome progetto> Dashboard & Chart Widgets
 - `docs/BUGFIX_SUMMARY_2025-10-22_App_Dashboard.md`: 🐛 Bugfix Summary - App Dashboard & Chart Widgets
 - `docs/DRY-KISS-VIOLATIONS-SUMMARY.md`: DRY and KISS Violations Analysis Report
@@ -10709,10 +10877,13 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `docs/model-architecture.md`: Model Architecture in Laraxot
 - `docs/modern-chart-implementation-roadmap.md`: Modern Chart Implementation Roadmap
 - `docs/moduli-scopo.md`: Scopo dei moduli - <nome progetto> fila5
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `docs/laravel-boost-mcp.md`: Laravel Boost MCP – Configurazione progetto
 - `docs/mcp-all-agents-complete.md`: ✅ MCP Implementation Complete - All AI Agents Configured
 - `docs/mcp-configuration-complete.md`: MCP Configuration Complete Guide for <nome progetto> fila5
@@ -10722,11 +10893,14 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `docs/model-architecture.md`: Model Architecture in Laraxot
 - `docs/modern-chart-implementation-roadmap.md`: Modern Chart Implementation Roadmap
 - `docs/moduli-scopo.md`: Scopo dei moduli - <nome progetto> fila5
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `docs/mysql-testing-configuration.md`: MySQL Testing Configuration - Laraxot Database Standard
 - `docs/operational-rules/README.md`: Operational Rules - Regole Operative Assolute
 - `docs/operational-rules/action-classes-purity-rule.md`: Action Classes Purity Rule - Regola Fondamentale
@@ -10762,6 +10936,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `docs/progress-report.md`: Quality Improvement Progress - Session 2 (November 15, 2025)
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `docs/progress-report.md`: Quality Improvement Progress - Session 2 (November 15, 2025)
 =======
@@ -10773,6 +10948,11 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 >>>>>>> laraxot/dev
 =======
 - `docs/progress-report-2025-11-15.md`: Quality Improvement Progress - Session 2 (November 15, 2025)
+=======
+- `docs/progress-report-2025-11-15.md`: Quality Improvement Progress - Session 2 (November 15, 2025)
+=======
+- `docs/progress-report.md`: Quality Improvement Progress - Session 2 (November 15, 2025)
+>>>>>>> .merge_file_OpiGZ1
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - `docs/project-overview.md`: 🎯 <nome progetto> Fila4 Mono - Panoramica Progetto
@@ -10811,6 +10991,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Activity/docs/00-index-documentation.md`: Documentation Index
 - `laravel/Modules/Activity/docs/00-index.md`: 📚 **Indice Documentazione Modulo Activity**
 - `laravel/Modules/Activity/docs/CHANGELOG.md`: Changelog
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `laravel/Modules/Activity/docs/CHANGELOG.md`: Changelog
 =======
@@ -10819,6 +11000,9 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `laravel/Modules/Activity/docs/CHANGELOG.md`: Changelog
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Activity/docs/README.md`: Activity Module - Spatie Laravel Activity Log Integration
 - `laravel/Modules/Activity/docs/_integration/filament.md`: filament
 - `laravel/Modules/Activity/docs/actions/list-log-activities-action.md`: ListLogActivitiesAction - Documentazione Completa
@@ -10935,7 +11119,10 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Activity/docs/jpgraph-class-reference-comprehensive-analysis.md`: 📚 JpGraph Class Reference - Analisi Completta 2024
 - `laravel/Modules/Activity/docs/jpgraph.md`: JpGraph 4.4.2 Guide
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Activity/docs/lang-link-1.md`: Collegamento alle Traduzioni del Modulo Activity
 =======
 <<<<<<< HEAD
@@ -10944,9 +11131,12 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Activity/docs/lang-link-1.md`: Collegamento alle Traduzioni del Modulo Activity
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_5KcZuH
 =======
 - `laravel/Modules/Activity/docs/lang-link.md`: Collegamento alle Traduzioni del Modulo Activity
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Activity/docs/lang-link-collegamento-alle-traduzioni-modulo.md`: Collegamento alle Traduzioni del Modulo Activity
 - `laravel/Modules/Activity/docs/lang-link-duplicate.md`: Collegamento alle Traduzioni del Modulo Activity
 - `laravel/Modules/Activity/docs/lang-link.md`: Collegamento alle Traduzioni del Modulo Activity
@@ -12317,6 +12507,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Cms/docs/phpstan-errors.md`: PHPStan Errors - Cms Module
 - `laravel/Modules/Cms/docs/phpstan-fixes-.md`: PHPStan Fixes for Cms Module (2025-12-30)
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `laravel/Modules/Cms/docs/phpstan-fixes-gennaio-2025.md`: Correzioni PHPStan - Gennaio 2025
 =======
@@ -12329,6 +12520,16 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 - `laravel/Modules/Cms/docs/phpstan-fixes-gennaio.md`: Correzioni PHPStan - Gennaio 2025
 >>>>>>> laraxot/dev
+=======
+- `laravel/Modules/Cms/docs/phpstan-fixes-gennaio-2025.md`: Correzioni PHPStan - Gennaio 2025
+=======
+<<<<<<< HEAD
+- `laravel/Modules/Cms/docs/phpstan-fixes-gennaio.md`: Correzioni PHPStan - Gennaio 2025
+=======
+- `laravel/Modules/Cms/docs/phpstan-fixes-gennaio-2025.md`: Correzioni PHPStan - Gennaio 2025
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Cms/docs/phpstan-fixes-january.md`: Correzioni PHPStan - Gennaio 2025
 - `laravel/Modules/Cms/docs/phpstan-fixes-roadmap.md`: PHPStan Level 10 Fixes Roadmap - Modulo Cms
 - `laravel/Modules/Cms/docs/phpstan-fixes-summary.md`: PHPStan Fixes Summary - CMS Module
@@ -12523,6 +12724,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Cms/docs/xot_link.md`: Collegamenti al Modulo Xot
 - `laravel/Modules/DbForge/README.md`: DbForge Module
 - `laravel/Modules/DbForge/docs/CHANGELOG.md`: Changelog
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `laravel/Modules/DbForge/docs/CHANGELOG.md`: Changelog
 =======
@@ -12531,6 +12733,9 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `laravel/Modules/DbForge/docs/CHANGELOG.md`: Changelog
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/DbForge/docs/README.md`: 🛠️ **DbForge Module** - Schema Automation & Intelligence
 - `laravel/Modules/DbForge/docs/adminpanelprovider-implementation.md`: Implementazione AdminPanelProvider - Modulo DbForge
 - `laravel/Modules/DbForge/docs/api-documentation.md`: API Documentation - Modulo DbForge
@@ -12563,6 +12768,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Gdpr/README.md`: GDPR Module
 - `laravel/Modules/Gdpr/docs/00-index.md`: 📚 **Indice Documentazione Modulo Gdpr**
 - `laravel/Modules/Gdpr/docs/CHANGELOG.md`: Changelog
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `laravel/Modules/Gdpr/docs/CHANGELOG.md`: Changelog
 =======
@@ -12571,6 +12777,9 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `laravel/Modules/Gdpr/docs/CHANGELOG.md`: Changelog
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Gdpr/docs/README.md`: 🛡️ **Gdpr Module** - Privacy, Compliance & Data Sovereignty
 - `laravel/Modules/Gdpr/docs/_integration/cloudflare.md`: cloudflare
 - `laravel/Modules/Gdpr/docs/_integration/consents.md`: consents
@@ -12581,7 +12790,10 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Gdpr/docs/_integration/repo.md`: repo
 - `laravel/Modules/Gdpr/docs/actions.md`: GDPR Actions
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Gdpr/docs/algolia-docsearch-1.md`: Algolia DocSearch {#algolia-docsearch}
 =======
 <<<<<<< HEAD
@@ -12590,9 +12802,12 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Gdpr/docs/algolia-docsearch-1.md`: Algolia DocSearch {#algolia-docsearch}
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_5KcZuH
 =======
 - `laravel/Modules/Gdpr/docs/algolia-docsearch.md`: Algolia DocSearch {#algolia-docsearch}
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Gdpr/docs/algolia-docsearch-duplicate.md`: algolia-docsearch-duplicate
 - `laravel/Modules/Gdpr/docs/algolia-docsearch.md`: algolia-docsearch
 - `laravel/Modules/Gdpr/docs/algolia_docsearch.md`: algolia_docsearch
@@ -12618,22 +12833,29 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Gdpr/docs/consent-packages-research.md`: Research: GDPR & Legal Consent Packages
 - `laravel/Modules/Gdpr/docs/consent-packages-research.md`: consent-packages-research
 - `laravel/Modules/Gdpr/docs/consent_packages_research.md`: consent_packages_research
 - `laravel/Modules/Gdpr/docs/consents.md`: consents
 - `laravel/Modules/Gdpr/docs/cookie-consent.md`: cookie-consent-1
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_OpiGZ1
 >>>>>>> laraxot/dev
 - `laravel/Modules/Gdpr/docs/consent-packages-research-1.md`: Research: GDPR & Legal Consent Packages
 - `laravel/Modules/Gdpr/docs/consent-packages-research.md`: consent-packages-research
@@ -12642,11 +12864,14 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Gdpr/docs/cookie-consent-1.md`: cookie-consent-1
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
+=======
+>>>>>>> .merge_file_OpiGZ1
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - `laravel/Modules/Gdpr/docs/cookie-consent.md`: cookie-consent
@@ -12686,7 +12911,10 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Gdpr/docs/getting-started.md`: GDPR Module - Getting Started
 - `laravel/Modules/Gdpr/docs/getting_started.md`: getting_started
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Gdpr/docs/google-analytics-1.md`: google-analytics-1
 =======
 <<<<<<< HEAD
@@ -12695,9 +12923,12 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Gdpr/docs/google-analytics-1.md`: google-analytics-1
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_5KcZuH
 =======
 - `laravel/Modules/Gdpr/docs/google-analytics.md`: google-analytics-1
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Gdpr/docs/google-analytics.md`: google-analytics
 - `laravel/Modules/Gdpr/docs/guida-migrazione-step-by-step.md`: guida-migrazione-step-by-step
 - `laravel/Modules/Gdpr/docs/html2pdf/README.md`: Html2Pdf - Panoramica e Installazione
@@ -12721,6 +12952,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Gdpr/docs/index.md`: GDPR Module Documentation
 - `laravel/Modules/Gdpr/docs/integration.md`: integration
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `laravel/Modules/Gdpr/docs/lang-link-1.md`: Collegamento alle Traduzioni del Modulo Gdpr
 =======
@@ -12732,6 +12964,15 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 >>>>>>> laraxot/dev
 =======
 - `laravel/Modules/Gdpr/docs/lang-link.md`: Collegamento alle Traduzioni del Modulo Gdpr
+=======
+- `laravel/Modules/Gdpr/docs/lang-link-1.md`: Collegamento alle Traduzioni del Modulo Gdpr
+=======
+<<<<<<< HEAD
+- `laravel/Modules/Gdpr/docs/lang-link.md`: Collegamento alle Traduzioni del Modulo Gdpr
+=======
+- `laravel/Modules/Gdpr/docs/lang-link-1.md`: Collegamento alle Traduzioni del Modulo Gdpr
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_OpiGZ1
 >>>>>>> laraxot/dev
 - `laravel/Modules/Gdpr/docs/lang-link.md`: lang-link
 - `laravel/Modules/Gdpr/docs/lang_link.md`: lang_link
@@ -12749,7 +12990,10 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Gdpr/docs/models-factory-seeder-analysis.md`: models-factory-seeder-analysis
 - `laravel/Modules/Gdpr/docs/module-analysis.md`: Gdpr Module - Comprehensive Analysis
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Gdpr/docs/module-gdpr-1.md`: Modulo GDPR
 =======
 <<<<<<< HEAD
@@ -12758,9 +13002,12 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Gdpr/docs/module-gdpr-1.md`: Modulo GDPR
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_5KcZuH
 =======
 - `laravel/Modules/Gdpr/docs/module-gdpr.md`: Modulo GDPR
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Gdpr/docs/module-gdpr.md`: module-gdpr
 - `laravel/Modules/Gdpr/docs/multi-language-translation-guidelines.md`: Multi-Language Translation Guidelines for Laravel Pizza
 - `laravel/Modules/Gdpr/docs/navigation.md`: navigation
@@ -12883,6 +13130,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Geo/docs/address-model-italian.md`: Modello Address per Indirizzi Italiani
 - `laravel/Modules/Geo/docs/address-relationships.md`: Relazioni del Modello Address
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `laravel/Modules/Geo/docs/address-resource-1.md`: Risorsa Filament per il Modello Address
 =======
@@ -12895,13 +13143,26 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 - `laravel/Modules/Geo/docs/address-resource.md`: Risorsa Filament per il Modello Address
 >>>>>>> laraxot/dev
+=======
+- `laravel/Modules/Geo/docs/address-resource-1.md`: Risorsa Filament per il Modello Address
+=======
+<<<<<<< HEAD
+- `laravel/Modules/Geo/docs/address-resource.md`: Risorsa Filament per il Modello Address
+=======
+- `laravel/Modules/Geo/docs/address-resource-1.md`: Risorsa Filament per il Modello Address
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Geo/docs/address-resource-analysis.md`: Analisi AddressResource.php
 - `laravel/Modules/Geo/docs/address-resource-improvements.md`: Suggerimenti di Miglioramento per AddressResource.php
 - `laravel/Modules/Geo/docs/address-resource-summary.md`: Sintesi Analisi AddressResource - Modulo Geo
 - `laravel/Modules/Geo/docs/address-resource-sumy.md`: Sintesi Analisi AddressResource - Modulo Geo
 - `laravel/Modules/Geo/docs/address-resource.md`: Risorsa Filament per il Modello Address
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Geo/docs/address-translation-fixes-1.md`: Correzioni Traduzioni Address - Gennaio 2025
 =======
 <<<<<<< HEAD
@@ -12910,9 +13171,12 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Geo/docs/address-translation-fixes-1.md`: Correzioni Traduzioni Address - Gennaio 2025
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_5KcZuH
 =======
 - `laravel/Modules/Geo/docs/address-translation-fixes.md`: Correzioni Traduzioni Address - Gennaio 2025
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Geo/docs/address-translation-fixes-correzioni-traduzioni-gennaio.md`: Correzioni Traduzioni Address - Gennaio 2025
 - `laravel/Modules/Geo/docs/address-translation-fixes.md`: Correzioni Traduzioni Address - Gennaio 2025
 - `laravel/Modules/Geo/docs/address-translationes.md`: Correzioni Traduzioni Address - Gennaio 2025
@@ -13391,6 +13655,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Job/docs/.github/links.md`: links
 - `laravel/Modules/Job/docs/00-index.md`: 📚 **Indice Documentazione Modulo Job**
 - `laravel/Modules/Job/docs/CHANGELOG.md`: Changelog
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `laravel/Modules/Job/docs/CHANGELOG.md`: Changelog
 =======
@@ -13399,6 +13664,9 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `laravel/Modules/Job/docs/CHANGELOG.md`: Changelog
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Job/docs/README.md`: ⚡ **Job Module** - Enterprise Queue & Schedule Management
 - `laravel/Modules/Job/docs/_integration/artisan.md`: artisan
 - `laravel/Modules/Job/docs/_integration/filament.md`: filament
@@ -13558,10 +13826,13 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Job/docs/soketi.md`: soketi
 - `laravel/Modules/Job/docs/solutions.md`: Soluzioni Tecniche - Modulo Job
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 - `laravel/Modules/Job/docs/storage-server.md`: storage-server-1
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Job/docs/storage-server-1.md`: storage-server-1
 =======
 <<<<<<< HEAD
@@ -13570,10 +13841,13 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Job/docs/storage-server-1.md`: storage-server-1
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_5KcZuH
 =======
 - `laravel/Modules/Job/docs/storage-server.md`: storage-server-1
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Job/docs/storage-server.md`: storage-server
 - `laravel/Modules/Job/docs/structure.md`: Struttura del Modulo Job
 - `laravel/Modules/Job/docs/task-aumentare-copertura-test.md`: Task: Aumentare Copertura Test - Job
@@ -13598,6 +13872,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Lang/docs/.github/links.md`: links
 - `laravel/Modules/Lang/docs/00-index.md`: 📚 **Indice Documentazione Modulo Lang**
 - `laravel/Modules/Lang/docs/CHANGELOG.md`: Changelog
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `laravel/Modules/Lang/docs/CHANGELOG.md`: Changelog
 =======
@@ -13606,6 +13881,9 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `laravel/Modules/Lang/docs/CHANGELOG.md`: Changelog
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Lang/docs/README.md`: Module Documentation
 - `laravel/Modules/Lang/docs/_integration/README.md`: readme
 - `laravel/Modules/Lang/docs/_integration/filament.md`: filament
@@ -13636,8 +13914,11 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Lang/docs/case-sensitivity.md`: Case Sensitivity Rules - Lang Module
 - `laravel/Modules/Lang/docs/cases.md`: Case-Insensitive File Conflicts
 - `laravel/Modules/Lang/docs/CHANGELOG.md`: Changelog
+<<<<<<< .merge_file_5KcZuH
 - `laravel/Modules/Lang/docs/cms-link.md`: Collegamento al Modulo Cms
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Lang/docs/cms-link.md`: Collegamento al Modulo Cms
 =======
 <<<<<<< HEAD
@@ -13655,6 +13936,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Lang/docs/conflict-resolution-langserviceprovider.md`: Risoluzione Conflitto LangServiceProvider
 - `laravel/Modules/Lang/docs/conflict-resolution-readtranslationfileaction.md`: Risoluzione Conflitto ReadTranslationFileAction
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 - `laravel/Modules/Lang/docs/conflict-resolution-translation-file-syntax-1.md`: risoluzione conflitto translation-file-syntax.md
 - `laravel/Modules/Lang/docs/conflict-resolution-translation-file-syntax.md`: risoluzione conflitto translation-file-syntax.md
 =======
@@ -13674,6 +13956,17 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 - `laravel/Modules/Lang/docs/conflict-resolution-translation-file-syntax-1.md`: risoluzione conflitto translation-file-syntax.md
 - `laravel/Modules/Lang/docs/conflict-resolution-translation-file-syntax.md`: risoluzione conflitto translation-file-syntax.md
+=======
+- `laravel/Modules/Lang/docs/conflict-resolution-translation-file-syntax-1.md`: Risoluzione Conflitto translation-file-syntax.md
+- `laravel/Modules/Lang/docs/conflict-resolution-translation-file-syntax.md`: Risoluzione Conflitto translation-file-syntax.md
+=======
+<<<<<<< HEAD
+- `laravel/Modules/Lang/docs/conflict-resolution-translation-file-syntax-1.md`: risoluzione conflitto translation-file-syntax.md
+- `laravel/Modules/Lang/docs/conflict-resolution-translation-file-syntax.md`: risoluzione conflitto translation-file-syntax.md
+=======
+- `laravel/Modules/Lang/docs/conflict-resolution-translation-file-syntax-1.md`: Risoluzione Conflitto translation-file-syntax.md
+- `laravel/Modules/Lang/docs/conflict-resolution-translation-file-syntax.md`: Risoluzione Conflitto translation-file-syntax.md
+>>>>>>> .merge_file_OpiGZ1
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - `laravel/Modules/Lang/docs/conflict-resolution-writetranslationfileaction.md`: Risoluzione Conflitto WriteTranslationFileAction
@@ -13682,6 +13975,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Lang/docs/conflicts/translation-model-resolution.md`: Risoluzione Conflitto nel Modello Translation
 - `laravel/Modules/Lang/docs/conflicts/vscode-php-cs-fixer-resolution.md`: Risoluzione Conflitto in .vscode/.php-cs-fixer.php
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 - `laravel/Modules/Lang/docs/conflicts-analysis.md`: Analisi Conflitti - README.md
 =======
 <<<<<<< HEAD
@@ -13696,6 +13990,14 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 >>>>>>> laraxot/dev
 =======
 - `laravel/Modules/Lang/docs/conflicts-analysis.md`: analisi conflitti - readme.md
+=======
+- `laravel/Modules/Lang/docs/conflicts-analysis.md`: Analisi Conflitti - README.md
+=======
+<<<<<<< HEAD
+- `laravel/Modules/Lang/docs/conflicts-analysis.md`: analisi conflitti - readme.md
+=======
+- `laravel/Modules/Lang/docs/conflicts-analysis.md`: Analisi Conflitti - README.md
+>>>>>>> .merge_file_OpiGZ1
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - `laravel/Modules/Lang/docs/conflicts.md`: Risoluzione Conflitti - Lang
@@ -14218,6 +14520,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Media/docs/-competitors.md`: -competitors
 - `laravel/Modules/Media/docs/00-index.md`: 📚 **Indice Documentazione Modulo Media**
 - `laravel/Modules/Media/docs/CHANGELOG.md`: Changelog
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `laravel/Modules/Media/docs/CHANGELOG.md`: Changelog
 =======
@@ -14226,6 +14529,9 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `laravel/Modules/Media/docs/CHANGELOG.md`: Changelog
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Media/docs/README.md`: 🎞️ **Media Module** - High-Performance Asset Management
 - `laravel/Modules/Media/docs/_integration/--stream.md`: --stream
 - `laravel/Modules/Media/docs/_integration/-competitors.md`: -competitors
@@ -14279,21 +14585,28 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Media/docs/conflicts-analysis-1.md`: analisi conflitti - readme.md
 - `laravel/Modules/Media/docs/conflicts-analysis.md`: analisi conflitti - readme.md
 - `laravel/Modules/Media/docs/conflicts.md`: Risoluzione Conflitti - Media
 - `laravel/Modules/Media/docs/conflitti-merge-risolti.md`: Risoluzione dei Conflitti Git nel Modulo Media
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_OpiGZ1
 >>>>>>> laraxot/dev
 - `laravel/Modules/Media/docs/conflicts-analysis-1.md`: Analisi Conflitti - README.md
 - `laravel/Modules/Media/docs/conflicts-analysis.md`: Analisi Conflitti - README.md
@@ -14302,11 +14615,14 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Media/docs/conflitti-merge-risolti.md`: Risoluzione dei Conflitti Git nel Modulo Media
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
+=======
+>>>>>>> .merge_file_OpiGZ1
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - `laravel/Modules/Media/docs/contracts/path-generator.md`: PathGenerator Interface
@@ -14393,6 +14709,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Media/docs/icon-usage-guidelines.md`: Media Module Icon Usage Guidelines
 - `laravel/Modules/Media/docs/index.md`: Indice della Documentazione - Modulo Media
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 - `laravel/Modules/Media/docs/lang-link.md`: Collegamento alle Traduzioni del Modulo Media
 =======
 <<<<<<< HEAD
@@ -14407,6 +14724,14 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 >>>>>>> laraxot/dev
 =======
 - `laravel/Modules/Media/docs/lang-link.md`: Collegamento alle Traduzioni del Modulo Media
+=======
+- `laravel/Modules/Media/docs/lang-link-1.md`: Collegamento alle Traduzioni del Modulo Media
+=======
+<<<<<<< HEAD
+- `laravel/Modules/Media/docs/lang-link.md`: Collegamento alle Traduzioni del Modulo Media
+=======
+- `laravel/Modules/Media/docs/lang-link-1.md`: Collegamento alle Traduzioni del Modulo Media
+>>>>>>> .merge_file_OpiGZ1
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - `laravel/Modules/Media/docs/lang-link-collegamento-alle-traduzioni-modulo.md`: Collegamento alle Traduzioni del Modulo Media
@@ -14515,6 +14840,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Media/docs/s3test-corrections.md`: Correzioni S3Test.php - Modulo Media
 - `laravel/Modules/Media/docs/s3test_corrections.md`: Correzioni S3Test.php - Modulo Media
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `laravel/Modules/Media/docs/stream-1.md`: stream-1
 =======
@@ -14527,6 +14853,16 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 - `laravel/Modules/Media/docs/stream.md`: stream-1
 >>>>>>> laraxot/dev
+=======
+- `laravel/Modules/Media/docs/stream-1.md`: stream-1
+=======
+<<<<<<< HEAD
+- `laravel/Modules/Media/docs/stream.md`: stream-1
+=======
+- `laravel/Modules/Media/docs/stream-1.md`: stream-1
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Media/docs/stream.md`: stream
 - `laravel/Modules/Media/docs/structure.md`: Modulo Media
 - `laravel/Modules/Media/docs/support/temporary-upload-path-generator-1.md`: TemporaryUploadPathGenerator
@@ -14830,19 +15166,25 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Notify/docs/conflicts-analysis.md`: Analisi Conflitti - README.md
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `laravel/Modules/Notify/docs/conflicts-analysis.md`: Analisi Conflitti - README.md
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Notify/docs/conflicts-analysis.md`: analisi conflitti - readme.md
 =======
 - `laravel/Modules/Notify/docs/conflicts-analysis.md`: Analisi Conflitti - README.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_5KcZuH
 =======
 - `laravel/Modules/Notify/docs/conflicts-analysis.md`: analisi conflitti - readme.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Notify/docs/conflicts.md`: Risoluzione Conflitti - Notify
 - `laravel/Modules/Notify/docs/conflitti-git.md`: Risoluzione Conflitti Git - Modulo Notify
 - `laravel/Modules/Notify/docs/contact-column-error-fix.md`: Correzione Errori ContactColumn - Modulo Notify
@@ -15228,6 +15570,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Notify/docs/inheritance_conventions.md`: Convenzioni di Ereditarietà
 - `laravel/Modules/Notify/docs/inheritance-conventions.md`: Convenzioni di Ereditarietà
 - `laravel/Modules/Notify/docs/integrations/README.md`: Integrazioni
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `laravel/Modules/Notify/docs/integrations/README.md`: Integrazioni
 =======
@@ -15236,6 +15579,9 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `laravel/Modules/Notify/docs/integrations/README.md`: Integrazioni
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Notify/docs/integrazioni.md`: Integrazioni
 - `laravel/Modules/Notify/docs/interface-naming-convention-1.md`: Deprecated
 - `laravel/Modules/Notify/docs/interface-naming-convention.md`: Convenzione di Naming per le Interfacce
@@ -16003,6 +16349,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Notify/docs/template-management.md`: Template Management
 - `laravel/Modules/Notify/docs/template-system.md`: Sistema Template Email
 - `laravel/Modules/Notify/docs/templates/README.md`: Template Email
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `laravel/Modules/Notify/docs/templates/README.md`: Template Email
 =======
@@ -16011,6 +16358,9 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `laravel/Modules/Notify/docs/templates/README.md`: Template Email
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Notify/docs/templates.md`: Email Templates
 - `laravel/Modules/Notify/docs/test-smtp-page.md`: Test smtp page
 - `laravel/Modules/Notify/docs/test-smtp.md`: Come far funzionare la pagina SendEmail
@@ -16419,6 +16769,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Tenant/README.md`: Tenant Module
 - `laravel/Modules/Tenant/docs/00-index.md`: 📚 **Indice Documentazione Modulo Tenant**
 - `laravel/Modules/Tenant/docs/CHANGELOG.md`: Changelog
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `laravel/Modules/Tenant/docs/CHANGELOG.md`: Changelog
 =======
@@ -16427,6 +16778,9 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `laravel/Modules/Tenant/docs/CHANGELOG.md`: Changelog
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Tenant/docs/README.md`: 🏢 **Tenant Module** - Multi-Tenancy & Isolamento Dati
 - `laravel/Modules/Tenant/docs/_integration/links.md`: links
 - `laravel/Modules/Tenant/docs/_integration/tenant.md`: tenant
@@ -16513,7 +16867,10 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Tenant/docs/it/project-configurations.md`: Configurazione progetti {#configurazione-progetti}
 - `laravel/Modules/Tenant/docs/it/xra.md`: Il file xra.php {#il-file-xra}
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Tenant/docs/lang-link-1.md`: Collegamento alle Traduzioni del Modulo Tenant
 =======
 <<<<<<< HEAD
@@ -16522,9 +16879,12 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Tenant/docs/lang-link-1.md`: Collegamento alle Traduzioni del Modulo Tenant
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_5KcZuH
 =======
 - `laravel/Modules/Tenant/docs/lang-link.md`: Collegamento alle Traduzioni del Modulo Tenant
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Tenant/docs/lang-link.md`: lang-link
 - `laravel/Modules/Tenant/docs/links.md`: links
 - `laravel/Modules/Tenant/docs/mcp-configuration.md`: MCP Server Configuration - Tenant Module
@@ -16662,6 +17022,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/UI/README.md`: UI Module
 - `laravel/Modules/UI/docs/00-index.md`: 📚 **Indice Documentazione Modulo UI**
 - `laravel/Modules/UI/docs/CHANGELOG.md`: Changelog
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `laravel/Modules/UI/docs/CHANGELOG.md`: Changelog
 =======
@@ -16670,6 +17031,9 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `laravel/Modules/UI/docs/CHANGELOG.md`: Changelog
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/UI/docs/README.md`: 🎨 UI Module - Componenti e Interfaccia Utente
 - `laravel/Modules/UI/docs/_integration/api.md`: api
 - `laravel/Modules/UI/docs/_integration/blocks.md`: blocks
@@ -17199,6 +17563,10 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/User/docs/business_logic_analysis.md`: User Module - Business Logic Analysis
 - `laravel/Modules/User/docs/BUSINESS_LOGIC_DEEP_DIVE.md`: User Module - Business Logic Deep Dive
 - `laravel/Modules/User/docs/CODE_QUALITY_ANALYSIS.md`: Code Quality Analysis - User Module
+<<<<<<< .merge_file_5KcZuH
+=======
+- `laravel/Modules/User/docs/index.md`: User Module Documentation
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/User/docs/index.md`: User Module Documentation
 <<<<<<< HEAD
 - `laravel/Modules/User/docs/index.md`: User Module Documentation
@@ -18098,7 +18466,10 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/User/docs/phpstan-fixes-gennaio-modulo-user.md`: 🔧 PHPStan Fixes - Modulo User - Gennaio 2025
 - `laravel/Modules/User/docs/phpstan-fixes-gennaio-2025-complete.md`: PHPStan Fixes Complete - Gennaio 2025
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/User/docs/phpstan-fixes-gennaio-2025.md`: 🔧 PHPStan Fixes - Modulo User - Gennaio 2025
 =======
 <<<<<<< HEAD
@@ -18107,9 +18478,12 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/User/docs/phpstan-fixes-gennaio-2025.md`: 🔧 PHPStan Fixes - Modulo User - Gennaio 2025
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_5KcZuH
 =======
 - `laravel/Modules/User/docs/phpstan-fixes-gennaio.md`: 🔧 PHPStan Fixes - Modulo User - Gennaio 2025
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/User/docs/phpstan-fixes-gennaio-complete.md`: PHPStan Fixes Complete - Gennaio 2025
 - `laravel/Modules/User/docs/phpstan-fixes-gennaio.md`: 🔧 PHPStan Fixes - Modulo User - Gennaio 2025
 - `laravel/Modules/User/docs/phpstan-fixes-gennaiocomplete.md`: PHPStan Fixes Complete - Gennaio 2025
@@ -18634,6 +19008,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Xot/docs/-integration/to-integrate.md`: ___to_integrate
 - `laravel/Modules/Xot/docs/-integration/to-study.md`: __to_study
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `laravel/Modules/Xot/docs/-integration/todo-1.md`: _todo
 =======
@@ -18645,6 +19020,15 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 >>>>>>> laraxot/dev
 =======
 - `laravel/Modules/Xot/docs/-integration/todo.md`: _todo
+=======
+- `laravel/Modules/Xot/docs/-integration/todo-1.md`: _todo
+=======
+<<<<<<< HEAD
+- `laravel/Modules/Xot/docs/-integration/todo.md`: _todo
+=======
+- `laravel/Modules/Xot/docs/-integration/todo-1.md`: _todo
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_OpiGZ1
 >>>>>>> laraxot/dev
 - `laravel/Modules/Xot/docs/-integration/todo.md`: todo
 - `laravel/Modules/Xot/docs/-integration/tree.md`: tree
@@ -18667,6 +19051,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Xot/docs/01-indexetails.md`: Xot Module Documentation Index
 - `laravel/Modules/Xot/docs/CHANGELOG.MD`: Changelog - Modulo Xot
 - `laravel/Modules/Xot/docs/CHANGELOG.md`: Changelog - Modulo Xot
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `laravel/Modules/Xot/docs/CHANGELOG.md`: Changelog - Modulo Xot
 =======
@@ -18675,6 +19060,9 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `laravel/Modules/Xot/docs/CHANGELOG.md`: Changelog - Modulo Xot
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Xot/docs/CODE_QUALITY_STANDARDS.md`: Code Quality Standards - Xot Module
 - `laravel/Modules/Xot/docs/COMMON_ANTI_PATTERNS.md`: Common Anti-Patterns - Xot Module
 - `laravel/Modules/Xot/docs/COMMON_FILAMENT_TRAIT_CONFLICTS.md`: Common Filament Trait Conflicts - Xot Module
@@ -19039,6 +19427,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Xot/docs/code-quality-improvement-guide.md`: Code Quality Improvement Guide
 - `laravel/Modules/Xot/docs/code-quality-improvement.md`: Code Quality Improvement Guide
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `laravel/Modules/Xot/docs/code-quality-improvements-01.md`: Code Quality Improvements - Modulo Xot (Gennaio 2025)
 =======
@@ -19051,6 +19440,16 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 - `laravel/Modules/Xot/docs/code-quality-improvements.md`: Code Quality Improvements - Modulo Xot (Gennaio 2025)
 >>>>>>> laraxot/dev
+=======
+- `laravel/Modules/Xot/docs/code-quality-improvements-01.md`: Code Quality Improvements - Modulo Xot (Gennaio 2025)
+=======
+<<<<<<< HEAD
+- `laravel/Modules/Xot/docs/code-quality-improvements.md`: Code Quality Improvements - Modulo Xot (Gennaio 2025)
+=======
+- `laravel/Modules/Xot/docs/code-quality-improvements-01.md`: Code Quality Improvements - Modulo Xot (Gennaio 2025)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Xot/docs/code-quality-improvements-consolidated.md`: Code Quality Improvements - Documento Consolidato
 - `laravel/Modules/Xot/docs/code-quality-improvements-summary-.md`: 📊 Code Quality Improvements Summary - 2025-11-11
 - `laravel/Modules/Xot/docs/code-quality-improvements-summary-1.md`: 📊 Code Quality Improvements Summary - 2025-11-11
@@ -19330,10 +19729,13 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Xot/docs/consolidated/phpstan/phpstan-factory-best-practices.md`: phpstan-factory-best-practices
 - `laravel/Modules/Xot/docs/consolidated/phpstan/phpstan-fixes-2025.md`: phpstan-fixes-2025
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 - `laravel/Modules/Xot/docs/consolidated/phpstan/phpstan-fixes-gennaio.md`: phpstan-fixes-gennaio-2025
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Xot/docs/consolidated/phpstan/phpstan-fixes-gennaio-2025.md`: phpstan-fixes-gennaio-2025
 =======
 <<<<<<< HEAD
@@ -19342,10 +19744,13 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Xot/docs/consolidated/phpstan/phpstan-fixes-gennaio-2025.md`: phpstan-fixes-gennaio-2025
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_5KcZuH
 =======
 - `laravel/Modules/Xot/docs/consolidated/phpstan/phpstan-fixes-gennaio.md`: phpstan-fixes-gennaio-2025
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Modules/Xot/docs/consolidated/phpstan/phpstan-fixes-gennaio.md`: phpstan-fixes-gennaio
 - `laravel/Modules/Xot/docs/consolidated/phpstan/phpstan-fixes-summary.md`: phpstan-fixes-summary-2
 - `laravel/Modules/Xot/docs/consolidated/phpstan/phpstan-fixes-summary.md`: phpstan-fixes-summary-3
@@ -20980,6 +21385,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Modules/Xot/docs/templates/git-conflict-composer-json.md`: Template Gestione Conflitti Git - composer.json
 - `laravel/Modules/Xot/docs/templates/git-conflict-package-json.md`: Template Gestione Conflitti Git - package.json
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 - `laravel/Modules/Xot/docs/templates/git-conflict-readme-md.md`: Template Gestione Conflitti Git - README.md
 - `laravel/Modules/Xot/docs/templates/git-conflict-subtree-error-resolution.md`: Template Gestione Conflitti Git - git_subtree_error_resolution.md
 =======
@@ -20999,6 +21405,17 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 - `laravel/Modules/Xot/docs/templates/git-conflict-readme-md.md`: template gestione conflitti git - readme.md
 - `laravel/Modules/Xot/docs/templates/git-conflict-subtree-error-resolution.md`: template gestione conflitti git - git_subtree_error_resolution.md
+=======
+- `laravel/Modules/Xot/docs/templates/git-conflict-readme-md.md`: Template Gestione Conflitti Git - README.md
+- `laravel/Modules/Xot/docs/templates/git-conflict-subtree-error-resolution.md`: Template Gestione Conflitti Git - git_subtree_error_resolution.md
+=======
+<<<<<<< HEAD
+- `laravel/Modules/Xot/docs/templates/git-conflict-readme-md.md`: template gestione conflitti git - readme.md
+- `laravel/Modules/Xot/docs/templates/git-conflict-subtree-error-resolution.md`: template gestione conflitti git - git_subtree_error_resolution.md
+=======
+- `laravel/Modules/Xot/docs/templates/git-conflict-readme-md.md`: Template Gestione Conflitti Git - README.md
+- `laravel/Modules/Xot/docs/templates/git-conflict-subtree-error-resolution.md`: Template Gestione Conflitti Git - git_subtree_error_resolution.md
+>>>>>>> .merge_file_OpiGZ1
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - `laravel/Modules/Xot/docs/templates/git-conflict-template.md`: 📝 Documentazione Conflitti Git
@@ -21251,6 +21668,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/Themes/Zero/README.md`: base_healthcare_app_fila4_mono
 - `laravel/Themes/Zero/docs/00-index.md`: Zero Theme - Documentation Index
 - `laravel/Themes/Zero/docs/CHANGELOG.md`: Changelog
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 - `laravel/Themes/Zero/docs/CHANGELOG.md`: Changelog
 =======
@@ -21259,6 +21677,9 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- `laravel/Themes/Zero/docs/CHANGELOG.md`: Changelog
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/Themes/Zero/docs/README.md`: Documentazione del Tema Zero
 - `laravel/Themes/Zero/docs/ai-development-guide.md`: AI-Assisted Development Guide - Zero Theme
 - `laravel/Themes/Zero/docs/ai-handoff.md`: ai handoff
@@ -21331,10 +21752,13 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/docs/complete-project-philosophy.md`: <nome progetto> - Filosofia Completa del Progetto: Logica, Religione, Politica, Zen
 - `laravel/docs/composer-merge-plugin.md`: Composer Merge Plugin Configuration
 - `laravel/docs/comprehensive-module-analysis-2026.md`: <nome progetto> fila5 - Complete Module Analysis & Documentation
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/docs/JPGRAPH_IMPLEMENTATION.md`: 📚 GUIDA JpGraph PDF Generation - COMPLETO IMPLEMENTAZIONE
 - `laravel/docs/README.md`: Testing Documentation Index
 - `laravel/docs/architecture/filament-extension-rules.md`: Filament Class Extension Rules (Laraxot Canonical Guide)
@@ -21345,11 +21769,14 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/docs/complete-project-philosophy.md`: <nome progetto> - Filosofia Completa del Progetto: Logica, Religione, Politica, Zen
 - `laravel/docs/composer-merge-plugin.md`: Composer Merge Plugin Configuration
 - `laravel/docs/comprehensive-module-analysis-2026.md`: <nome progetto> fila5 - Complete Module Analysis & Documentation
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/docs/config/database-standard-laravel-12.md`: Config Database Standard Laravel 12.x - 2026-01-21
 - `laravel/docs/config/database-standard-summary-2026-01-21.md`: Riepilogo: Database Config Standard Laravel 12.x - 2026-01-21
 - `laravel/docs/config/database-standard-verification-2026-01-21.md`: Verifica: Database Config Standard Laravel 12.x - 2026-01-21
@@ -21414,16 +21841,22 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/docs/roadmap-global-summary.md`: Roadmap Globale - Riepilogo Completo Moduli e Temi
 - `laravel/docs/roadmap-index.md`: Laraxot Framework - Roadmaps Index
 <<<<<<< HEAD
+<<<<<<< .merge_file_5KcZuH
 - `laravel/docs/security.md`: Sicurezza nel Progetto <nome progetto>
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> .merge_file_OpiGZ1
+=======
 <<<<<<< HEAD
 - `laravel/docs/security.md`: Sicurezza nel Progetto <nome progetto>
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_5KcZuH
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_OpiGZ1
 - `laravel/docs/SECURITY.md`: Sicurezza nel Progetto <nome progetto>
 - `laravel/docs/simple-chartwidget-dual-labels-fix-completion-summary.md`: SimpleChartWidget Dual Labels Fix - Completion Summary
 - `laravel/docs/simple-chartwidget-dual-labels-pattern.md`: SimpleChartWidget Dual Labels Pattern - Implementation Guide
@@ -21440,12 +21873,15 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/docs/SECURITY.md`: Sicurezza nel Progetto <nome progetto>
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 - `laravel/docs/security.md`: Sicurezza nel Progetto <nome progetto>
+=======
+>>>>>>> .merge_file_OpiGZ1
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - `laravel/docs/simple-chartwidget-dual-labels-fix-completion-summary.md`: SimpleChartWidget Dual Labels Fix - Completion Summary
@@ -21480,6 +21916,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 - `laravel/themes/zero/docs/anti-pattern-question-chart-answers-triple-widget.md`: Anti-Pattern: QuestionChartAnswersTripleChartWidget
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_5KcZuH
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -21488,3 +21925,7 @@ Indice generato automaticamente da file markdown in cartelle docs (esclusi vendo
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_kczJqJ
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_OpiGZ1

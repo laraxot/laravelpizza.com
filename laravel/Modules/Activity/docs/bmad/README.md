@@ -1,7 +1,10 @@
 ---
+<<<<<<< .merge_file_Mv2Zna
 <<<<<<< .merge_file_ohyfSA
 title: "Activity — BMAD Method Integration"
 =======
+=======
+>>>>>>> .merge_file_BX1pBv
 <<<<<<< HEAD
 title: "Activity: BMAD Method Integration"
 =======
@@ -11,7 +14,10 @@ title: "Activity — BMAD Method Integration"
 title: "Activity: BMAD Method Integration"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Mv2Zna
 >>>>>>> .merge_file_Dh8IN0
+=======
+>>>>>>> .merge_file_BX1pBv
 description: "BMAD workflow documentation per il modulo Activity"
 module: "Activity"
 alias: "activity"
@@ -29,6 +35,7 @@ extended_by: 40
 documentation_date: "2026-05-27"
 bmad_version: "6.2.0"
 bmad_track: "core-foundation"
+<<<<<<< .merge_file_Mv2Zna
 <<<<<<< .merge_file_ohyfSA
 ---
 
@@ -37,6 +44,8 @@ updated: 2026-10-07
 tags: [docs, activity, bmad]
 qmd: "activity   bmad method integration activity"
 =======
+=======
+>>>>>>> .merge_file_BX1pBv
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -68,7 +77,10 @@ qmd: "activity   bmad method integration activity"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Mv2Zna
 >>>>>>> .merge_file_Dh8IN0
+=======
+>>>>>>> .merge_file_BX1pBv
 - [BMAD Planning](../bmad-planning.md)
 - [BMAD Brainstorming](../bmad-brainstorming.md)
 - [Filament blueprint](./filament-blueprint.md)

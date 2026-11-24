@@ -3,7 +3,15 @@ title: "php rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_KGh6Sk
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_V4Rn5H
 qmd: "php rules"
 issues: []
 discussions: []

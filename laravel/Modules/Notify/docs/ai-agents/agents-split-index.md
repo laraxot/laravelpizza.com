@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_jIeUdc
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_aW9Y3o
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_jIeUdc
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_aW9Y3o
 qmd: "agents split index"
 issues: []
 discussions: []
@@ -47,6 +53,7 @@ discussions: []
 - [AGENTS.md originale](../../AGENTS.md) - File completo (deprecato)
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_jIeUdc
 <<<<<<< HEAD
 - [AGENTS.md originale](../../AGENTS.md) - File completo (deprecato)
 - [AGENTS.md originale](../../AGENTS.md) - File completo (deprecato)
@@ -62,6 +69,13 @@ discussions: []
 =======
 - [AGENTS.md originale](../../agents.md) - File completo (deprecato)
 - [agents.md originale](../../agents.md) - File completo (deprecato)
+=======
+- [AGENTS.md originale](../../agents.md) - File completo (deprecato)
+- [agents.md originale](../../agents.md) - File completo (deprecato)
+=======
+- [AGENTS.md originale](../../AGENTS.md) - File completo (deprecato)
+- [AGENTS.md originale](../../AGENTS.md) - File completo (deprecato)
+>>>>>>> .merge_file_aW9Y3o
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [Index principale](./index.md) - Torna all'indice

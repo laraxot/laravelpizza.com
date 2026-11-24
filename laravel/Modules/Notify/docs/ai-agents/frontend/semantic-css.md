@@ -3,7 +3,15 @@ title: "semantic css"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_nRRm9J
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_M79vcm
 qmd: "semantic css"
 issues: []
 discussions: []
@@ -128,6 +136,10 @@ class OutcomesTableWidget extends XotBaseTableWidget
 ### Rules & Enforcement
 
 - [Semantic CSS Rule](../../rules/frontend/semantic-css-rule.md) - **MANDATORY** rule
+<<<<<<< .merge_file_nRRm9J
+=======
+- [Frontend Rules Index](../../rules/frontend/00-index.md) - All frontend rules
+>>>>>>> .merge_file_M79vcm
 - [Frontend Rules Index](../../rules/frontend/00-index.md) - All frontend rules
 <<<<<<< HEAD
 - [Frontend Rules Index](../../rules/frontend/00-index.md) - All frontend rules

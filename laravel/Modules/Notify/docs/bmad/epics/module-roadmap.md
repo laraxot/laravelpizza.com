@@ -4,7 +4,15 @@ type: epic
 status: active
 module: Notify
 created: 2026-09-28
+<<<<<<< .merge_file_R9rW6J
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-28
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_57xZXN
 qmd: "Notify epic roadmap qualità architettura test documentazione"
 ---
 # Notify — epic roadmap

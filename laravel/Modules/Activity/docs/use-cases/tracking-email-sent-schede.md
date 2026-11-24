@@ -368,9 +368,12 @@ public function it_logs_activity_when_sending_email(): void
 - [Activity - README](../../README.md)
 - [Ptv - Analisi Filosofica](../../../ptv/docs/activity-log-email-tracking-philosophical-analysis.md)
 - [Ptv - Implementation Guide](../../../ptv/docs/activity-log-email-tracking-implementation.md)
+<<<<<<< .merge_file_Clr4Ew
 <<<<<<< .merge_file_K7mjtr
 - [Activity - README](../../readme.md)
 =======
+=======
+>>>>>>> .merge_file_j2D1zi
 <<<<<<< HEAD
 - [Activity - README](../../README.md)
 =======
@@ -384,7 +387,10 @@ public function it_logs_activity_when_sending_email(): void
 - [Activity - README](../../README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Clr4Ew
 >>>>>>> .merge_file_jYc0vl
+=======
+>>>>>>> .merge_file_j2D1zi
 - [Activity - LogActivityAction](../../app/Actions/LogActivityAction.php)
 
 ---

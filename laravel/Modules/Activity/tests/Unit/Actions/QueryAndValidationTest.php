@@ -26,4 +26,7 @@ use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
 use Webmozart\Assert\InvalidArgumentException as AssertInvalidArgumentException;
 
+<<<<<<< .merge_file_xaqWlF
 >>>>>>> .merge_file_wUlVxX
+=======
+>>>>>>> .merge_file_pEtZUf

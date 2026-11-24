@@ -3,7 +3,15 @@ title: "Document Root Architecture"
 type: concept
 tags: [document, root, architecture]
 created: 2026-07-14
+<<<<<<< .merge_file_y4gLqd
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_ykx4P4
 qmd: "document-root-architecture document root architecture"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

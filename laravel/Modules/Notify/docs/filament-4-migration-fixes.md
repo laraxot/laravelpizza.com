@@ -3,7 +3,15 @@ title: "filament 4 migration fixes"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_Cl3gUQ
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_bIjvtC
 qmd: "filament 4 migration fixes"
 issues: []
 discussions: []

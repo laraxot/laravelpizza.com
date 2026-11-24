@@ -3,7 +3,15 @@ title: "database mail queue 1"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_wUwSCs
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_9oJBEx
 qmd: "database mail queue 1"
 issues: []
 discussions: []

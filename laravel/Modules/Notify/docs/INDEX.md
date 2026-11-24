@@ -1,31 +1,43 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_bIonwC
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_D6KpcQ
 ---
 title: "INDEX"
 created: 2026-11-23
 updated: 2026-11-23
 ---
 
+<<<<<<< .merge_file_bIonwC
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_DJbd2p
 >>>>>>> laraxot/dev
+=======
+=======
+<<<<<<< .merge_file_DJbd2p
+>>>>>>> .merge_file_D6KpcQ
 ---
 title: "Indice documentazione — Notify"
 type: index
 status: active
+<<<<<<< .merge_file_bIonwC
 <<<<<<< HEAD
 created: 2026-11-23
 updated: 2026-11-23
 =======
 updated: 2026-11-16
 >>>>>>> laraxot/dev
+=======
+updated: 2026-11-16
+>>>>>>> .merge_file_D6KpcQ
 module: Notify
 qmd: "indice docs modulo Notify BMAD ECC purpose"
 ---
@@ -37,12 +49,15 @@ qmd: "indice docs modulo Notify BMAD ECC purpose"
 - [ECC](./ecc/00-index.md)
 - [Audit](./bmad/audit.md)
 - [Piano di miglioramento](./bmad/piano-miglioramento.md)
+<<<<<<< .merge_file_bIonwC
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_D6KpcQ
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -119,18 +134,24 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - [Documentazione Generale PTV](../../../../docs/README.md)
 - [Documentazione Generale SaluteOra](../../../../docs/README.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_bIonwC
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../docs/documentation_standards.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> .merge_file_D6KpcQ
+=======
 <<<<<<< HEAD
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../docs/documentation_standards.md)
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_bIonwC
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_D6KpcQ
 - [Documentazione Generale SaluteOra](../../../../docs/README.md)
 - [Documentazione Generale SaluteOra](../../../../docs/README.md)
 - [Documentazione Generale SaluteOra](../../../../docs/README.md)
@@ -138,6 +159,7 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - [Standard di Documentazione](../../../../docs/DOCUMENTATION_STANDARDS.md)
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_bIonwC
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
@@ -145,6 +167,8 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 =======
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../docs/documentation_standards.md)
+=======
+>>>>>>> .merge_file_D6KpcQ
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [Modulo Xot](../../Xot/docs/README.md)
@@ -156,6 +180,7 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 
 
 =======
+<<<<<<< .merge_file_bIonwC
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -164,12 +189,15 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 >>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_D6KpcQ
 >>>>>>> laraxot/dev
 ## Categorie Principali
 
 ### Architettura e Struttura
 - [README](./README.md) - Panoramica generale del modulo
 - [Architettura](./architecture.md) - Architettura generale del modulo
+<<<<<<< .merge_file_bIonwC
 <<<<<<< HEAD
 - [README](./README.md) - Panoramica generale del modulo
 - [Architettura](./architecture.md) - Architettura generale del modulo
@@ -180,6 +208,10 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- [README](./README.md) - Panoramica generale del modulo
+- [Architettura](./architecture.md) - Architettura generale del modulo
+>>>>>>> .merge_file_D6KpcQ
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
 - [Modelli](./models.md) - Documentazione dei modelli Eloquent
 - [Eventi](./events.md) - Eventi e listeners
@@ -219,10 +251,13 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 
 ### Testing e Qualità
 <<<<<<< HEAD
+<<<<<<< .merge_file_bIonwC
 - [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_D6KpcQ
 - [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md) - Correzioni per PHPStan Level 10
 =======
 <<<<<<< HEAD
@@ -231,10 +266,13 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md) - Correzioni per PHPStan Level 10
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_bIonwC
 =======
 - [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_D6KpcQ
 - [Testing](./testing.md) - Strategie e approcci per il testing
 
 ## Linee Guida per l'Implementazione
@@ -268,10 +306,13 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 ## Documentazione e Aggiornamenti
 - Documentare qualsiasi implementazione personalizzata o nuovi canali di notifica nella cartella di documentazione pertinente
 - Aggiornare questo indice se vengono introdotte nuove funzionalità o modifiche significative al modulo Notify
+<<<<<<< .merge_file_bIonwC
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_D6KpcQ
 ## Documentazione e Aggiornamenti
 - Documentare qualsiasi implementazione personalizzata o nuovi canali di notifica nella cartella di documentazione pertinente
 - Aggiornare questo indice se vengono introdotte nuove funzionalità o modifiche significative al modulo Notify
@@ -284,21 +325,27 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 ## Documentazione e Aggiornamenti
 - Documentare qualsiasi implementazione personalizzata o nuovi canali di notifica nella cartella di documentazione pertinente
 - Aggiornare questo indice se vengono introdotte nuove funzionalità o modifiche significative al modulo Notify
+<<<<<<< .merge_file_bIonwC
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_D6KpcQ
 
 ## Sottocartelle
 
 ### Mail Templates
 - [Index](./mail-templates/index.md) - Indice della documentazione sui template email
 <<<<<<< HEAD
+<<<<<<< .merge_file_bIonwC
 - [Implementazione Slug](./mail-templates/mail_template_slug_implementation.md) - Implementazione del campo slug
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_D6KpcQ
 - [Implementazione Slug](./mail-templates/MAIL_TEMPLATE_SLUG_IMPLEMENTATION.md) - Implementazione del campo slug
 =======
 <<<<<<< HEAD
@@ -307,10 +354,13 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 - [Implementazione Slug](./mail-templates/MAIL_TEMPLATE_SLUG_IMPLEMENTATION.md) - Implementazione del campo slug
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_bIonwC
 =======
 - [Implementazione Slug](./mail-templates/mail_template_slug_implementation.md) - Implementazione del campo slug
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_D6KpcQ
 
 ### Notifications
 - [Index](./notifications/index.md) - Indice della documentazione sulle notifiche
@@ -335,6 +385,7 @@ Ultimo aggiornamento: 14 Maggio 2025
 - Il file `lang/it/notify_theme.php` è stato risolto manualmente mantenendo PSR-12, strict_types, array short syntax e solo chiavi effettive, come richiesto dagli standard PHPStan livello 10.
 - Il file `NOTIFICATION_CHANNELS_IMPLEMENTATION.md` è stato risolto manualmente mantenendo la versione più aggiornata e coerente con le best practice architetturali del modulo Notify.
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
+<<<<<<< .merge_file_bIonwC
 <<<<<<< HEAD
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 =======
@@ -343,6 +394,9 @@ Ultimo aggiornamento: 14 Maggio 2025
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
+>>>>>>> .merge_file_D6KpcQ
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 ## Note sulla Manutenzione
 Questa documentazione viene aggiornata regolarmente. Prima di apportare modifiche al codice, consultare la documentazione pertinente e aggiornare i documenti correlati.
@@ -375,6 +429,7 @@ Ultimo aggiornamento: 14 Maggio 2025
 - Il file `NOTIFICATION_CHANNELS_IMPLEMENTATION.md` è stato risolto manualmente mantenendo la versione più aggiornata e coerente con le best practice architetturali del modulo Notify.
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
+<<<<<<< .merge_file_bIonwC
 <<<<<<< HEAD
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 =======
@@ -383,6 +438,9 @@ Ultimo aggiornamento: 14 Maggio 2025
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
+>>>>>>> .merge_file_D6KpcQ
 *Ultimo aggiornamento: Gennaio 2025*
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 *Ultimo aggiornamento: Gennaio 2025*
@@ -393,10 +451,13 @@ Ultimo aggiornamento: 14 Maggio 2025
 *Ultimo aggiornamento: Gennaio 2025*
 - Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
+<<<<<<< .merge_file_bIonwC
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_D6KpcQ
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 *Ultimo aggiornamento: Gennaio 2025*
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
@@ -413,6 +474,7 @@ Ultimo aggiornamento: 14 Maggio 2025
 *Ultimo aggiornamento: Gennaio 2025*
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_bIonwC
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_LeHRke
@@ -426,3 +488,7 @@ Ultimo aggiornamento: 14 Maggio 2025
 *Ultimo aggiornamento: Gennaio 2025*
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_LeHRke
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_D6KpcQ

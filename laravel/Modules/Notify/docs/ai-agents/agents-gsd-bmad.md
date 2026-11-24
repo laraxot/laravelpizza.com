@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_8ZWKKr
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_39XlYh
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_8ZWKKr
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_39XlYh
 qmd: "agents gsd bmad"
 issues: []
 discussions: []
@@ -153,6 +159,7 @@ bmad-verify-work [N]         # Verifica
 - [Indice AGENTS](./agents-split-index.md)
 - [gsd-bmad-comprehensive-guide.md](./gsd-bmad-comprehensive-guide.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_8ZWKKr
 - [AGENTS.md originale](../../AGENTS.md)
 - [AGENTS.md originale](../../AGENTS.md)
 =======
@@ -172,6 +179,17 @@ bmad-verify-work [N]         # Verifica
 =======
 - [AGENTS.md originale](../../agents.md)
 - [agents.md originale](../../agents.md)
+=======
+- [AGENTS.md originale](../../AGENTS.md)
+- [AGENTS.md originale](../../AGENTS.md)
+=======
+<<<<<<< HEAD
+- [AGENTS.md originale](../../agents.md)
+- [agents.md originale](../../agents.md)
+=======
+- [AGENTS.md originale](../../AGENTS.md)
+- [AGENTS.md originale](../../AGENTS.md)
+>>>>>>> .merge_file_39XlYh
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [Index principale](./index.md)

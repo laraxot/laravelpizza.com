@@ -326,9 +326,12 @@ Ho creato uno script intelligente (`smart_populate_models.php`) che:
 - [<nome progetto> Factory](../modules/<nome progetto>/docs/factory-issues-analysis.md)
 - [User Factory](../../User/docs/factory-audit-lessons-learned.md)
 - [Geo Factory](factory-creation-geo-module.md)
+<<<<<<< .merge_file_bTkq34
 <<<<<<< .merge_file_BqWej1
 - [Media Factory](../../Media/docs/readme.md)
 =======
+=======
+>>>>>>> .merge_file_SiL3py
 <<<<<<< HEAD
 - [Media Factory](../../Media/docs/README.md)
 =======
@@ -338,7 +341,10 @@ Ho creato uno script intelligente (`smart_populate_models.php`) che:
 - [Media Factory](../../Media/docs/README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_bTkq34
 >>>>>>> .merge_file_kiDfhV
+=======
+>>>>>>> .merge_file_SiL3py
 
 ### Documentazione Tecnica
 - [Business Logic](../business-logic-consolidated.md)

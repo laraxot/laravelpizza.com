@@ -1,6 +1,7 @@
 ---
 title: "Contratto — LogActivityAction"
 type: contract
+<<<<<<< .merge_file_4dnj5A
 <<<<<<< .merge_file_hbA2rL
 owner: Activity
 status: accepted
@@ -8,6 +9,8 @@ updated: 2026-11-24
 action: "Modules\\Activity\\Actions\\LogActivityAction"
 qmd: "contract LogActivityAction activity scrittura singola attivita causer subject properties log_name Auth fallback ACT-LOGACT"
 =======
+=======
+>>>>>>> .merge_file_1gGMlY
 action: "Modules\Activity\Actions\LogActivityAction"
 tags: [contract, action, activity-log, audit]
 created: 2026-11-24
@@ -17,11 +20,15 @@ related:
   - ../../app/Actions/LogActivityAction.php
   - ../../tests/Unit/Actions/LogActivityActionConstructorTest.php
   - ../../tests/Unit/Actions/LogActivityActionExecuteValidationTest.php
+<<<<<<< .merge_file_4dnj5A
 >>>>>>> .merge_file_Q7WI6W
+=======
+>>>>>>> .merge_file_1gGMlY
 ---
 
 # LogActivityAction
 
+<<<<<<< .merge_file_4dnj5A
 <<<<<<< .merge_file_hbA2rL
 Scrive una riga in `activity_log`. È il punto comune usato da `LogModel*Action`, `LogUser*Action`.
 
@@ -60,6 +67,8 @@ Scrive una riga in `activity_log`. È il punto comune usato da `LogModel*Action`
   - `log_name` vale il tipo qui, mentre `ActivityLogger::log()` e `RecordSubjectActivityAction` usano `'default'`.
 
 =======
+=======
+>>>>>>> .merge_file_1gGMlY
 Scrive una riga di `activity_log` (modello `Modules\Activity\Models\Activity`, connessione `activity`). È il mattone
 delle Action `LogModelCreated/Updated/Deleted` e `LogUserLogin/Logout` e dell'adapter `Adapters/ActivityLogger`.
 Sorgente: `app/Actions/LogActivityAction.php`. Si costruisce con `new` (parametri nel costruttore), non con `app()`.
@@ -105,4 +114,7 @@ Test: `cd laravel && vendor/bin/pest Modules/Activity/tests/Unit/Actions/LogActi
   interi (password e token compresi). `RedactModelAttributesAction` esiste ma oggi non la chiama nessuno: debito.
 - Non controlla `activitylog.enabled`.
 - Non accoda: scrive in modo sincrono nella richiesta corrente.
+<<<<<<< .merge_file_4dnj5A
 >>>>>>> .merge_file_Q7WI6W
+=======
+>>>>>>> .merge_file_1gGMlY

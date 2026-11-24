@@ -1,22 +1,28 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_CrcG6C
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_EdULxp
 ---
 title: "excellence year note"
 created: 2026-11-23
 updated: 2026-11-23
+<<<<<<< .merge_file_CrcG6C
 <<<<<<< HEAD
 ---title: "excellence 2025"
 type: note
 tags: [documentation]
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_EdULxp
 =======
 >>>>>>> laraxot/dev
 ---title: "excellence 2025"
@@ -24,18 +30,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
+<<<<<<< .merge_file_CrcG6C
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_EdULxp
 qmd: "excellence 2025"
 issues: []
 discussions: []
 superseded_by: excellence.md
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_CrcG6C
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
+=======
+>>>>>>> .merge_file_EdULxp
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 ---
@@ -46,10 +58,13 @@ superseded_by: excellence.md
 **Status**: 🚀 BEST IN CLASS  
 **Obiettivo**: Piattaforma #1 per gestione segnalazioni urbane in Italia  
 
+<<<<<<< .merge_file_CrcG6C
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_EdULxp
 ---
 
 title: "excellence 2025"
@@ -71,6 +86,7 @@ FixCity è la piattaforma enterprise leader per la gestione delle segnalazioni u
 
 ---
 
+<<<<<<< .merge_file_CrcG6C
 <<<<<<< HEAD
 =======
 =======
@@ -78,6 +94,8 @@ FixCity è la piattaforma enterprise leader per la gestione delle segnalazioni u
 
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_EdULxp
 ## ✅ LAVORO COMPLETATO (2025-10-01)
 
 ### 📚 Documentazione Strategica (5 documenti)
@@ -101,19 +119,25 @@ FixCity è la piattaforma enterprise leader per la gestione delle segnalazioni u
 - ✅ **roadmap.md** - Timeline Q4 2025-Q1 2026
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_CrcG6C
 <<<<<<< HEAD
 - ✅ **roadmap.md** - Timeline Q4 2025-Q1 2026
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_EdULxp
 - ✅ **ROADMAP.md** - Timeline Q4 2025-Q1 2026
 =======
 - ✅ **roadmap.md** - Timeline Q4 2025-Q1 2026
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_CrcG6C
 =======
 - ✅ **ROADMAP.md** - Timeline Q4 2025-Q1 2026
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_EdULxp
 - 📋 **API.md** - Authentication API (TODO)
 
 ### 🎨 Tema Sixteen - ECCELLENZA (78%)
@@ -486,12 +510,15 @@ FixCity è orgogliosamente open source:
 
 ### API
 <<<<<<< HEAD
+<<<<<<< .merge_file_CrcG6C
 - **[Fixcity API](./laravel/Modules/Fixcity/docs/api.md)** - REST API
 - **[User 2FA](./laravel/Modules/User/docs/2fa_guide.md)** - 2FA Guide
 - **[User SSO](./laravel/Modules/User/docs/sso_guide.md)** - SSO Guide
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_EdULxp
 - **[Fixcity API](./laravel/Modules/Fixcity/docs/API.md)** - REST API
 - **[User 2FA](./laravel/Modules/User/docs/2FA_GUIDE.md)** - 2FA Guide
 - **[User SSO](./laravel/Modules/User/docs/SSO_GUIDE.md)** - SSO Guide
@@ -506,12 +533,15 @@ FixCity è orgogliosamente open source:
 - **[User SSO](./laravel/Modules/User/docs/SSO_GUIDE.md)** - SSO Guide
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_CrcG6C
 =======
 - **[Fixcity API](./laravel/Modules/Fixcity/docs/api.md)** - REST API
 - **[User 2FA](./laravel/Modules/User/docs/2fa_guide.md)** - 2FA Guide
 - **[User SSO](./laravel/Modules/User/docs/sso_guide.md)** - SSO Guide
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_EdULxp
 
 ---
 

@@ -91,4 +91,16 @@ class CustomMediaRelationManager extends MediaRelationManager
 ```
 ## Collegamenti tra versioni di media-relation-manager.md
 * [media-relation-manager.md](../filament/relation-managers/media-relation-manager.md)
+<<<<<<< .merge_file_8B239b
 * [media-relation-manager.md](media-relation-manager.md)
+=======
+<<<<<<< HEAD
+* [media-relation-manager.md](media-relation-manager.md)
+=======
+<<<<<<< HEAD
+* [media-relation-manager.md](media-relation-manager.md)
+=======
+* [media-relation-manager.md](media-relation-manager.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_6TpOSe

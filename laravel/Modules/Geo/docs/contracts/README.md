@@ -1,7 +1,10 @@
 ---
+<<<<<<< .merge_file_90heRA
 <<<<<<< .merge_file_Lkxzyg
 title: "Contratti del modulo Geo"
 =======
+=======
+>>>>>>> .merge_file_OHfR16
 <<<<<<< .merge_file_9Y1g0g
 <<<<<<< HEAD
 =======
@@ -11,7 +14,10 @@ title: "Contratti"
 =======
 title: "Contratti del modulo Geo"
 >>>>>>> .merge_file_6f7glE
+<<<<<<< .merge_file_90heRA
 >>>>>>> .merge_file_Xq0chD
+=======
+>>>>>>> .merge_file_OHfR16
 type: index
 tags: [contracts, actions, interfaces, geo]
 created: 2026-11-18
@@ -30,10 +36,13 @@ Leggili prima di chiamare, modificare o imitare una di queste Action; le invaria
 Formato (sei sezioni, tabella invarianti con ID, `@contract` nel docblock):
 [action-behavioral-contract](../../../Xot/docs/rules/action-behavioral-contract.md).
 
+<<<<<<< .merge_file_90heRA
 <<<<<<< .merge_file_Lkxzyg
 ## Indice
 
 =======
+=======
+>>>>>>> .merge_file_OHfR16
 Cosa promette la superficie pubblica di questo pacchetto: le Action che scrivono dati, chiamano servizi esterni o hanno
 effetti collaterali, e le interfacce (`app/Contracts`). Regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`.
 
@@ -86,16 +95,25 @@ Formato (sei sezioni, tabella invarianti con ID, `@contract` nel docblock):
 
 =======
 >>>>>>> .merge_file_6f7glE
+<<<<<<< .merge_file_90heRA
 >>>>>>> .merge_file_Xq0chD
+=======
+>>>>>>> .merge_file_OHfR16
 - [FetchOsmTileAction](fetch-osm-tile-action.md) — tile OSM dal nostro dominio, cache su disco di almeno 7 giorni, richieste condizionali, copia scaduta se OSM è giù.
 - [QueryNominatimAction](query-nominatim-action.md) — ricerca e geocodifica inversa via proxy: 1 richiesta/s per il sito, parametri filtrati, cache, spegnibile da config.
 - [GetAddressDataFromFullAddressAction](get-address-data-from-full-address-action.md) — dispatcher della geocodifica: provider di `geo.driver` per primo, poi fallback; mai eccezioni, errori in `getErrors()`.
 - [UpdateCoordinatesFromAddressAction](update-coordinates-from-address-action.md) — geocodifica l'indirizzo di un modello e scrive solo `latitude`/`longitude`.
+<<<<<<< .merge_file_90heRA
 <<<<<<< .merge_file_Lkxzyg
 =======
+=======
+>>>>>>> .merge_file_OHfR16
 <<<<<<< .merge_file_9Y1g0g
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_6f7glE
+<<<<<<< .merge_file_90heRA
 >>>>>>> .merge_file_Xq0chD
+=======
+>>>>>>> .merge_file_OHfR16

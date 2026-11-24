@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_BAGdGc
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_vVXgqz
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_BAGdGc
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_vVXgqz
 qmd: "gemini translation rules"
 issues: []
 discussions: []
@@ -121,11 +127,14 @@ namespace::context.collection.element.type
 
 - [Indice GEMINI](./gemini-split-index.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_BAGdGc
 - [translation-management skill available](../../.opencode/skills/translation-management/skill.md)
 - [GEMINI.md originale](../../gemini.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_vVXgqz
 - [translation-management skill available](../../.opencode/skills/translation-management/SKILL.md)
 - [gemini.md originale](../../gemini.md)
 =======
@@ -137,9 +146,12 @@ namespace::context.collection.element.type
 - [gemini.md originale](../../gemini.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_BAGdGc
 =======
 - [translation-management skill available](../../.opencode/skills/translation-management/skill.md)
 - [GEMINI.md originale](../../gemini.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_vVXgqz
 - [Index principale](./index.md)

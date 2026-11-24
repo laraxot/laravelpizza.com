@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_VDWdqE
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_STs1VJ
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_VDWdqE
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_STs1VJ
 qmd: "agents filament migration"
 issues: []
 discussions: []
@@ -111,6 +117,7 @@ composer remove filament/upgrade --dev
 - [Indice AGENTS](./agents-split-index.md)
 - [filament-patterns.md](./filament-patterns.md) - Pattern Filament
 <<<<<<< HEAD
+<<<<<<< .merge_file_VDWdqE
 - [AGENTS.md originale](../../AGENTS.md)
 - [AGENTS.md originale](../../AGENTS.md)
 =======
@@ -130,6 +137,17 @@ composer remove filament/upgrade --dev
 =======
 - [AGENTS.md originale](../../agents.md)
 - [agents.md originale](../../agents.md)
+=======
+- [AGENTS.md originale](../../AGENTS.md)
+- [AGENTS.md originale](../../AGENTS.md)
+=======
+<<<<<<< HEAD
+- [AGENTS.md originale](../../agents.md)
+- [agents.md originale](../../agents.md)
+=======
+- [AGENTS.md originale](../../AGENTS.md)
+- [AGENTS.md originale](../../AGENTS.md)
+>>>>>>> .merge_file_STs1VJ
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [Index principale](./index.md)

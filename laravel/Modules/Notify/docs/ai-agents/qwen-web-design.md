@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_jENU3G
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_x2YkbG
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_jENU3G
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_x2YkbG
 qmd: "qwen web design"
 issues: []
 discussions: []
@@ -156,10 +162,13 @@ discussions: []
 - [Indice QWEN](./qwen-split-index.md)
 - [website-checklist.md](./website-checklist.md) - Checklist completa
 <<<<<<< HEAD
+<<<<<<< .merge_file_jENU3G
 - [QWEN.md originale](../../qwen.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_x2YkbG
 - [qwen.md originale](../../qwen.md)
 =======
 <<<<<<< HEAD
@@ -168,8 +177,11 @@ discussions: []
 - [qwen.md originale](../../qwen.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_jENU3G
 =======
 - [QWEN.md originale](../../qwen.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_x2YkbG
 - [Index principale](./index.md)

@@ -3,7 +3,15 @@ title: "analisi dettagliata 5"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_WBmwIN
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_3n1r6C
 qmd: "analisi dettagliata 5"
 issues: []
 discussions: []

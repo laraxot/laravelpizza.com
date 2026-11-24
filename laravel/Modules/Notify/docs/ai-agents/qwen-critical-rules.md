@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_hIwmfd
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_xgPLru
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_hIwmfd
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_xgPLru
 qmd: "qwen critical rules"
 issues: []
 discussions: []
@@ -203,10 +209,13 @@ namespace::context.collection.element.type
 - [Indice QWEN](./qwen-split-index.md)
 - [critical-rules.md](./critical-rules.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_hIwmfd
 - [QWEN.md originale](../../qwen.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_xgPLru
 - [qwen.md originale](../../qwen.md)
 =======
 <<<<<<< HEAD
@@ -215,8 +224,11 @@ namespace::context.collection.element.type
 - [qwen.md originale](../../qwen.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_hIwmfd
 =======
 - [QWEN.md originale](../../qwen.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_xgPLru
 - [Index principale](./index.md)

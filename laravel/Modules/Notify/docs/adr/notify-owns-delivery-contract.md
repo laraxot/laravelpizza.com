@@ -1,5 +1,6 @@
 ---
 title: "notify owns delivery contract"
+<<<<<<< .merge_file_oseXAF
 <<<<<<< HEAD
 status: proposed
 type: decision
@@ -11,6 +12,10 @@ status: accepted
 status: proposed
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+type: decision
+status: accepted
+>>>>>>> .merge_file_rVt2cX
 date: 2026-11-23
 decision-makers: Notify module owner
 created: 2026-11-23
@@ -64,10 +69,13 @@ eventi inbound e callback dei provider.
 - Invio a destinatario: [`SendNotificationToRecipientAction`](../../app/Actions/SendNotificationToRecipientAction.php).
 - Confine HTTP: [`routes/web.php`](../../routes/web.php) e [`routes/api.php`](../../routes/api.php).
 - Riferimento: [`docs/architecture.md`](../architecture.md).
+<<<<<<< .merge_file_oseXAF
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_rVt2cX
 
 ## Verifica
 
@@ -78,8 +86,11 @@ eventi inbound e callback dei provider.
 - Confine HTTP, revisione ripetibile: `rg -n '^Route::' laravel/Modules/Notify/routes/web.php` non deve trovare nulla; in
   `Modules/Notify/routes/api.php` restano solo le due rotte tecniche dei fornitori (`/inbound/{provider}/{token}`,
   `/notify/mailjet/events/{token}`).
+<<<<<<< .merge_file_oseXAF
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_rVt2cX

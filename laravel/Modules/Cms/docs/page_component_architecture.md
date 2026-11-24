@@ -1,6 +1,9 @@
 ---
+<<<<<<< .merge_file_i8q6Ww
 <<<<<<< .merge_file_CgoLlM
 =======
+=======
+>>>>>>> .merge_file_JOGEfO
 <<<<<<< HEAD
 title: "Page Component Architecture"
 type: note
@@ -9,17 +12,24 @@ created: 2026-09-26
 updated: 2026-09-26
 qmd: "Page Component Architecture"
 =======
+<<<<<<< .merge_file_i8q6Ww
 >>>>>>> .merge_file_pxlzIq
+=======
+>>>>>>> .merge_file_JOGEfO
 title: "page component architecture"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "page component architecture"
+<<<<<<< .merge_file_i8q6Ww
 <<<<<<< .merge_file_CgoLlM
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_pxlzIq
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_JOGEfO
 issues: []
 discussions: []
 ---
@@ -33,8 +43,11 @@ discussions: []
 
 ---
 
+<<<<<<< .merge_file_i8q6Ww
 <<<<<<< .merge_file_CgoLlM
 =======
+=======
+>>>>>>> .merge_file_JOGEfO
 <<<<<<< HEAD
 title: "PAGE COMPONENT ARCHITECTURE"
 =======
@@ -59,7 +72,10 @@ qmd: "PAGE COMPONENT ARCHITECTURE"
 >>>>>>> laraxot/dev
 issues: []
 discussions: []
+<<<<<<< .merge_file_i8q6Ww
 >>>>>>> .merge_file_pxlzIq
+=======
+>>>>>>> .merge_file_JOGEfO
 ## 🎯 Scopo
 
 Questo documento spiega l'architettura del componente `Page` nel modulo Cms e come i temi devono (o non devono) overridearlo.

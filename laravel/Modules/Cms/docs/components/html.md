@@ -3,15 +3,21 @@ title: "html"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_zo0zFx
 <<<<<<< .merge_file_nzmA8q
 updated: 2026-11-23
 =======
+=======
+>>>>>>> .merge_file_i2YLn8
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_zo0zFx
 >>>>>>> .merge_file_uhTDS0
+=======
+>>>>>>> .merge_file_i2YLn8
 qmd: "html"
 issues: []
 discussions: []
@@ -178,9 +184,12 @@ I componenti HTML del modulo CMS seguono le best practices HTML5 e utilizzano ta
 ## Collegamenti
 - [Elementi Semantici](../html/semantic.md)
 - [Struttura Layout](../structure/layout.md)
+<<<<<<< .merge_file_zo0zFx
 <<<<<<< .merge_file_nzmA8q
 - [Accessibilità](../accessibility/README.md)
 =======
+=======
+>>>>>>> .merge_file_i2YLn8
 <<<<<<< HEAD
 - [Accessibilità](../accessibility/README.md)
 =======
@@ -190,4 +199,7 @@ I componenti HTML del modulo CMS seguono le best practices HTML5 e utilizzano ta
 - [Accessibilità](../accessibility/README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_zo0zFx
 >>>>>>> .merge_file_uhTDS0
+=======
+>>>>>>> .merge_file_i2YLn8

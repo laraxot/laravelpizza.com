@@ -20,4 +20,7 @@ use Modules\Activity\Tests\Fixtures\ListLogActivitiesRestorableResource;
 use Modules\Activity\Tests\Fixtures\ListLogActivitiesStdClassResourceHarness;
 use Modules\Activity\Tests\Fixtures\RestoreActivityActionFails;
 use Modules\Activity\Tests\Fixtures\RestoreActivityActionNoOp;
+<<<<<<< .merge_file_p82tdX
 >>>>>>> .merge_file_pgK3Xn
+=======
+>>>>>>> .merge_file_gWGvU3

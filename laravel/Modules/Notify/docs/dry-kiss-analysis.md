@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_hGJf31
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_NH81tA
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_hGJf31
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_NH81tA
 qmd: "dry kiss analysis"
 issues: []
 discussions: []
@@ -55,16 +61,22 @@ abstract class BaseModel extends XotBaseModel implements HasMedia
 - 🔄 ServiceProvider: Auto-detect nome
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_hGJf31
 [DRY/KISS Global](../../docs/dry_kiss_analysis.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> .merge_file_NH81tA
+=======
 <<<<<<< HEAD
 [DRY/KISS Global](../../docs/dry_kiss_analysis.md)
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_hGJf31
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_NH81tA
 ---
 title: "dry kiss analysis"
 type: note
@@ -78,11 +90,14 @@ discussions: []
 
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_hGJf31
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 [DRY/KISS Global](../../docs/dry_kiss_analysis.md)
+=======
+>>>>>>> .merge_file_NH81tA
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

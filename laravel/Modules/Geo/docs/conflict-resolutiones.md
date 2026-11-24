@@ -3,15 +3,21 @@ title: "conflict resolutiones"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_UOLG3N
 <<<<<<< .merge_file_h8v5RK
 updated: 2026-11-23
 =======
+=======
+>>>>>>> .merge_file_E54v87
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_UOLG3N
 >>>>>>> .merge_file_gXW0wd
+=======
+>>>>>>> .merge_file_E54v87
 qmd: "conflict resolutiones"
 issues: []
 discussions: []

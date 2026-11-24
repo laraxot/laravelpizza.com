@@ -14,11 +14,14 @@ use function Safe\file_put_contents;
 use function Safe\tempnam;
 use function Safe\unlink;
 
+<<<<<<< .merge_file_AYWuuz
 /**
  * @see docs/contracts/write-translation-file-action.md
  *
  * @contract docs/contracts/write-translation-file-action.md
  */
+=======
+>>>>>>> .merge_file_rAwdUL
 class WriteTranslationFileAction
 {
     use QueueableAction;

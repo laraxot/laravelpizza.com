@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_R4oZyi
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_q5F80N
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_R4oZyi
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_q5F80N
 qmd: "gemini overview"
 issues: []
 discussions: []
@@ -106,10 +112,13 @@ composer run test
 
 - [Indice GEMINI](./gemini-split-index.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_R4oZyi
 - [GEMINI.md originale](../../gemini.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_q5F80N
 - [gemini.md originale](../../gemini.md)
 =======
 <<<<<<< HEAD
@@ -118,8 +127,11 @@ composer run test
 - [gemini.md originale](../../gemini.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_R4oZyi
 =======
 - [GEMINI.md originale](../../gemini.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_q5F80N
 - [Index principale](./index.md)

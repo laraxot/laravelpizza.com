@@ -3,7 +3,15 @@ title: "📚 MODULAR DOCUMENTATION REFACTORING REPORT"
 type: concept
 tags: [modular, documentation, refactoring]
 created: 2026-07-14
+<<<<<<< .merge_file_pU4bYA
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_P9lqtc
 qmd: "modular-documentation-refactoring 📚 modular documentation refactoring report"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -129,6 +137,7 @@ TOTALE: ~2,500 righe  ✅ Organizzate, navigabili, mantenibili
 # .agents/docs/overview/agents-overview.md
 ## Riferimenti
 - [AGENTS.md](../../AGENTS.md) - File originale compatto
+<<<<<<< .merge_file_pU4bYA
 <<<<<<< HEAD
 - [AGENTS.md](../../AGENTS.md) - File originale compatto
 =======
@@ -137,6 +146,9 @@ TOTALE: ~2,500 righe  ✅ Organizzate, navigabili, mantenibili
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- [AGENTS.md](../../AGENTS.md) - File originale compatto
+>>>>>>> .merge_file_P9lqtc
 - [qwen.md](../../qwen.md) - Contesto Qwen Code
 ```
 

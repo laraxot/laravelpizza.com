@@ -1,7 +1,10 @@
 ---
+<<<<<<< .merge_file_LvhIWh
 <<<<<<< .merge_file_GSYmLF
 title: "Project context — Activity"
 =======
+=======
+>>>>>>> .merge_file_JmAWKr
 <<<<<<< HEAD
 title: "Project context: Activity"
 =======
@@ -11,7 +14,10 @@ title: "Project context — Activity"
 title: "Project context: Activity"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_LvhIWh
 >>>>>>> .merge_file_oKic8N
+=======
+>>>>>>> .merge_file_JmAWKr
 type: constitution
 module: Activity
 related:

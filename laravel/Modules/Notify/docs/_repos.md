@@ -7,7 +7,15 @@ title: "Repos"
 type: reference
 status: active
 created: 2026-08-27
+<<<<<<< .merge_file_wBnVMm
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-08-27
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_5MLLIl
 note: "Convertito da _repos.txt (documento) da convert-docs-txt-to-md.py."
 ---
 

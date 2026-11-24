@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_g48Uw3
 <<<<<<< .merge_file_Pfkwr0
 ---
 title: "Glossario di dominio Activity"
@@ -32,6 +33,8 @@ Percorsi relativi a `laravel/Modules/Activity/`.
 | Livello di log | Gravita' di una riga di log: EMERGENCY, ALERT, CRITICAL, ERROR, WARNING, NOTICE, INFO, DEBUG. | `app/Enums/LogLevelEnum.php` |
 | Percorso di log risolto | Percorso reale e relativo di un file `.log`, garantito dentro la cartella dei log. | `app/Actions/Log/ResolveLogFilePathAction.php`, `app/Datas/ResolvedLogFileData.php` |
 =======
+=======
+>>>>>>> .merge_file_dNKxJG
 # Glossario di dominio Activity
 
 <!-- Le parole del dominio e dove stanno nel codice. Topology di AGENTS.md punta qui.
@@ -39,5 +42,9 @@ Percorsi relativi a `laravel/Modules/Activity/`.
 
 | Termine | Significato | Nel codice |
 |---|---|---|
+<<<<<<< .merge_file_g48Uw3
 | <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
 >>>>>>> .merge_file_GGMAma
+=======
+| <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
+>>>>>>> .merge_file_dNKxJG

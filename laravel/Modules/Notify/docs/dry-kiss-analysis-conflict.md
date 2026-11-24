@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_sdYoID
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_AEkiun
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_sdYoID
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_AEkiun
 qmd: "dry kiss analysis conflict"
 issues: []
 discussions: []
@@ -55,16 +61,22 @@ abstract class BaseModel extends XotBaseModel implements HasMedia
 - 🔄 ServiceProvider: Auto-detect nome
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_sdYoID
 [DRY/KISS Global](../../../docs/dry_kiss_analysis.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> .merge_file_AEkiun
+=======
 <<<<<<< HEAD
 [DRY/KISS Global](../../../docs/dry_kiss_analysis.md)
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_sdYoID
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_AEkiun
 ---
 title: "dry kiss analysis conflict"
 type: note
@@ -77,11 +89,14 @@ discussions: []
 [DRY/KISS Global](../../../docs/DRY_KISS_ANALYSIS.md)
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_sdYoID
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 [DRY/KISS Global](../../../docs/dry_kiss_analysis.md)
+=======
+>>>>>>> .merge_file_AEkiun
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

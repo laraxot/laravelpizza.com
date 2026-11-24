@@ -3,7 +3,15 @@ title: "appointment field naming issues"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_SEjjYu
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_CDhg6w
 qmd: "appointment field naming issues"
 issues: []
 discussions: []

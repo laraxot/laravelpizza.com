@@ -5,18 +5,24 @@ tags: [notify, docs, ai-agents, split, agents]
 module: Notify
 created: 2026-07-20
 <<<<<<< HEAD
+<<<<<<< .merge_file_188Crp
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_IGrcse
 updated: 2026-07-20
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_188Crp
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_IGrcse
 qmd: "notify documentazione ai agents split agents index bmad agents index index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -32,6 +38,7 @@ related:
 # BMad Agents Index
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_188Crp
 **Source**: [`../../../../AGENTS.md`](../../../../../../../../../../agents.md) (lines 40-904)  
 **Source**: [`../../../../agents.md`](../../../../../../../../../../agents.md) (lines 40-904)  
 =======
@@ -51,6 +58,17 @@ related:
 =======
 **Source**: [`../../../../AGENTS.md`](../../../../../../../../../../agents.md) (lines 40-904)  
 **Source**: [`../../../../agents.md`](../../../../../../../../../../agents.md) (lines 40-904)  
+=======
+**Source**: [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md) (lines 40-904)  
+**Source**: [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md) (lines 40-904)  
+=======
+<<<<<<< HEAD
+**Source**: [`../../../../AGENTS.md`](../../../../../../../../../../agents.md) (lines 40-904)  
+**Source**: [`../../../../agents.md`](../../../../../../../../../../agents.md) (lines 40-904)  
+=======
+**Source**: [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md) (lines 40-904)  
+**Source**: [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md) (lines 40-904)  
+>>>>>>> .merge_file_IGrcse
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 **Total Agents**: 10  
@@ -89,10 +107,13 @@ related:
 ### Bidirectional Links
 - ← Back to [Main AI Docs Index](../index.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_188Crp
 - ← Back to [../../../../AGENTS.md](../../../../../../../../../../agents.md) (original source)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_IGrcse
 - ← Back to [../../../../AGENTS.md](../../../../../../../../../../AGENTS.md) (original source)
 =======
 <<<<<<< HEAD
@@ -101,10 +122,13 @@ related:
 - ← Back to [../../../../AGENTS.md](../../../../../../../../../../AGENTS.md) (original source)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_188Crp
 =======
 - ← Back to [../../../../AGENTS.md](../../../../../../../../../../agents.md) (original source)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_IGrcse
 - ← Back to [Project Docs](../../../docs/README.md)
 
 ---
@@ -117,6 +141,7 @@ To activate an agent, mention their ID or name in your request:
 - "As dev, implement the story..."
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_188Crp
 For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../agents.md).
 For full agent definitions, see the original [`../../../../agents.md`](../../../../../../../../../../agents.md).
 =======
@@ -136,6 +161,17 @@ For full agent definitions, see the original [`../../../../AGENTS.md`](../../../
 =======
 For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../agents.md).
 For full agent definitions, see the original [`../../../../agents.md`](../../../../../../../../../../agents.md).
+=======
+For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md).
+For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md).
+=======
+<<<<<<< HEAD
+For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../agents.md).
+For full agent definitions, see the original [`../../../../agents.md`](../../../../../../../../../../agents.md).
+=======
+For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md).
+For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md).
+>>>>>>> .merge_file_IGrcse
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 

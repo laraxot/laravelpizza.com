@@ -3,7 +3,15 @@ title: "PHPSTAN FIX COORDINATION"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_CFFEKh
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_j8KBqK
 qmd: "PHPSTAN FIX COORDINATION"
 issues: []
 discussions: []
@@ -190,10 +198,13 @@ git push
 4. ⏳ Analyze and fix Batch 2 modules
 5. ✅ Run final quality gates
 6. ✅ Update all documentation
+<<<<<<< .merge_file_CFFEKh
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_j8KBqK
 
 ---
 
@@ -211,8 +222,11 @@ discussions: []
 - Small focused commits (one module per commit)
 - Communicate progress in this document
 - Cross-verify each other's work
+<<<<<<< .merge_file_CFFEKh
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_j8KBqK

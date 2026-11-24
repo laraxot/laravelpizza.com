@@ -3,7 +3,15 @@ title: "decisione basemodel refactoring"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_NMPEBT
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_PEKygH
 qmd: "decisione basemodel refactoring"
 issues: []
 discussions: []

@@ -3,7 +3,15 @@ title: "baseuser refactoring completed 2025 10 15"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_Jw7arI
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_0zec6Q
 qmd: "baseuser refactoring completed 2025 10 15"
 issues: []
 discussions: []
@@ -380,10 +388,13 @@ Il refactoring di `BaseUser.php` rappresenta un **caso di studio perfetto** di c
 - 🎯 **Bug count** ridotto
 - 🎯 **Technical debt** diminuito
 
+<<<<<<< .merge_file_Jw7arI
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_0zec6Q
 ---
 
 title: "baseuser refactoring completed 2025 10 15"
@@ -406,6 +417,7 @@ discussions: []
 *"Prima lo fai funzionare, poi lo fai giusto, poi lo fai veloce."*  
 *Oggi abbiamo fatto tutti e tre!* ✨
 
+<<<<<<< .merge_file_Jw7arI
 <<<<<<< HEAD
 =======
 =======
@@ -413,3 +425,5 @@ discussions: []
 *Oggi abbiamo fatto tutti e tre!* ✨
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_0zec6Q

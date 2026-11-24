@@ -3,15 +3,21 @@ title: "PRD"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_OFwEJ2
 <<<<<<< .merge_file_8w9AL4
 updated: 2026-11-23
 =======
+=======
+>>>>>>> .merge_file_3Wi9Rc
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_OFwEJ2
 >>>>>>> .merge_file_2QMBBc
+=======
+>>>>>>> .merge_file_3Wi9Rc
 qmd: "PRD"
 issues: []
 discussions: []
@@ -26,8 +32,11 @@ discussions: []
 
 ---
 
+<<<<<<< .merge_file_OFwEJ2
 <<<<<<< .merge_file_8w9AL4
 =======
+=======
+>>>>>>> .merge_file_3Wi9Rc
 title: "PRD"
 type: note
 tags: [documentation]
@@ -36,7 +45,10 @@ updated: 2026-09-26
 qmd: "PRD"
 issues: []
 discussions: []
+<<<<<<< .merge_file_OFwEJ2
 >>>>>>> .merge_file_2QMBBc
+=======
+>>>>>>> .merge_file_3Wi9Rc
 ## Document Control
 
 | Version | Date | Author | Changes |
@@ -528,9 +540,12 @@ CREATE TABLE cms_navigation (
 
 ### 12.3 Related PRDs
 - [Blog Module PRD](../../Blog/docs/PRD.md)
+<<<<<<< .merge_file_OFwEJ2
 <<<<<<< .merge_file_8w9AL4
 - [Media Module PRD](../../Media/docs/prd.md)
 =======
+=======
+>>>>>>> .merge_file_3Wi9Rc
 <<<<<<< HEAD
 - [Media Module PRD](../../Media/docs/prd.md)
 =======
@@ -540,7 +555,10 @@ CREATE TABLE cms_navigation (
 - [Media Module PRD](../../Media/docs/prd.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_OFwEJ2
 >>>>>>> .merge_file_2QMBBc
+=======
+>>>>>>> .merge_file_3Wi9Rc
 - [Seo Module PRD](../../Seo/docs/PRD.md)
 - [Lang Module PRD](../../Lang/docs/PRD.md)
 

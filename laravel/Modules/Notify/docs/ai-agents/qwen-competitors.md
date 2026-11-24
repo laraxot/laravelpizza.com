@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_jyvKia
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_R5HQEI
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_jyvKia
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_R5HQEI
 qmd: "qwen competitors"
 issues: []
 discussions: []
@@ -123,10 +129,13 @@ discussions: []
 
 - [Indice QWEN](./qwen-split-index.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_jyvKia
 - [QWEN.md originale](../../qwen.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_R5HQEI
 - [qwen.md originale](../../qwen.md)
 =======
 <<<<<<< HEAD
@@ -135,8 +144,11 @@ discussions: []
 - [qwen.md originale](../../qwen.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_jyvKia
 =======
 - [QWEN.md originale](../../qwen.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_R5HQEI
 - [Index principale](./index.md)

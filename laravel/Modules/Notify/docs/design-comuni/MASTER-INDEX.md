@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_arW1Am
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_os8fvD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_arW1Am
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_os8fvD
 qmd: "MASTER INDEX"
 issues: []
 discussions: []
@@ -40,10 +46,13 @@ Replicazione delle 38 pagine statiche del progetto [Design Comuni Italia](https:
 | Argomenti | ⏳ 60% | ⏳ 50% | ⏳ 0% | ⏳ Parziali | ⏳ 37% |
 | Altre 35 pagine | ❌ 0% | ❌ 0% | ❌ 0% | ❌ Assenti | ❌ 0% |
 
+<<<<<<< .merge_file_arW1Am
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_os8fvD
 ---
 
 title: "MASTER INDEX"
@@ -146,6 +155,7 @@ discussions: []
 
 ---
 
+<<<<<<< .merge_file_arW1Am
 <<<<<<< HEAD
 =======
 =======
@@ -158,6 +168,8 @@ discussions: []
 
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_os8fvD
 ## 🔗 Link Bidirezionali Completi
 
 ### FAQ Page → Tutti i Documenti Correlati
@@ -254,10 +266,13 @@ Ogni documento contiene:
 2. **Capire architettura**: [FAQ Architecture (Cms)](../laravel/Modules/Cms/docs/design-comuni-faq.md)
 3. **Vedere componenti**: [FAQ Components (UI)](../laravel/Modules/UI/docs/design-comuni-faq-components.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_arW1Am
 4. **Analizzare differenze**: [Analisi HTML (Sixteen)](../laravel/Themes/Sixteen/docs/design-comuni/domande_frequenti_html_analysis.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_os8fvD
 4. **Analizzare differenze**: [Analisi HTML (Sixteen)](../laravel/Themes/Sixteen/docs/design-comuni/DOMANDE_FREQUENTI_HTML_ANALYSIS.md)
 =======
 <<<<<<< HEAD
@@ -266,10 +281,13 @@ Ogni documento contiene:
 4. **Analizzare differenze**: [Analisi HTML (Sixteen)](../laravel/Themes/Sixteen/docs/design-comuni/DOMANDE_FREQUENTI_HTML_ANALYSIS.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_arW1Am
 =======
 4. **Analizzare differenze**: [Analisi HTML (Sixteen)](../laravel/Themes/Sixteen/docs/design-comuni/domande_frequenti_html_analysis.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_os8fvD
 5. **Testare visivamente**: [Screenshots](../laravel/Themes/Sixteen/docs/design-comuni/screenshots/)
 
 ### Per AI Agents
@@ -283,11 +301,14 @@ Ogni documento contiene:
 
 1. **Stato progetto**: Questo file (master index)
 <<<<<<< HEAD
+<<<<<<< .merge_file_arW1Am
 2. **Dettaglio implementazione**: [Report Finale FAQ](../laravel/Themes/Sixteen/docs/design-comuni/domande_frequenti_report_finale.md)
 3. **Analisi visiva**: [Analisi Visiva](../laravel/Themes/Sixteen/docs/design-comuni/domande_frequenti_analisi_visiva.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_os8fvD
 2. **Dettaglio implementazione**: [Report Finale FAQ](../laravel/Themes/Sixteen/docs/design-comuni/DOMANDE_FREQUENTI_REPORT_FINALE.md)
 3. **Analisi visiva**: [Analisi Visiva](../laravel/Themes/Sixteen/docs/design-comuni/DOMANDE_FREQUENTI_ANALISI_VISIVA.md)
 =======
@@ -299,11 +320,14 @@ Ogni documento contiene:
 3. **Analisi visiva**: [Analisi Visiva](../laravel/Themes/Sixteen/docs/design-comuni/DOMANDE_FREQUENTI_ANALISI_VISIVA.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_arW1Am
 =======
 2. **Dettaglio implementazione**: [Report Finale FAQ](../laravel/Themes/Sixteen/docs/design-comuni/domande_frequenti_report_finale.md)
 3. **Analisi visiva**: [Analisi Visiva](../laravel/Themes/Sixteen/docs/design-comuni/domande_frequenti_analisi_visiva.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_os8fvD
 
 ---
 

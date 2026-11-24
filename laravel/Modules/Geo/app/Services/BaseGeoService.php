@@ -40,6 +40,7 @@ abstract class BaseGeoService
     /**
      * Esegue una richiesta HTTP con rate limiting, cache e retry.
      *
+<<<<<<< .merge_file_1syP4b
 <<<<<<< .merge_file_a0nUxc
      * @param  string  $method  Metodo HTTP (GET, POST, etc.)
      * @param  string  $url  URL della richiesta
@@ -49,6 +50,8 @@ abstract class BaseGeoService
      *
      * @throws \RuntimeException Se la richiesta fallisce
 =======
+=======
+>>>>>>> .merge_file_etrk2W
      * @param string               $method   Metodo HTTP (GET, POST, etc.)
      * @param string               $url      URL della richiesta
      * @param array<string, mixed> $params   Parametri della richiesta
@@ -57,7 +60,10 @@ abstract class BaseGeoService
      * @throws \RuntimeException Se la richiesta fallisce
      *
      * @return array<string, mixed>
+<<<<<<< .merge_file_1syP4b
 >>>>>>> .merge_file_8LkqqS
+=======
+>>>>>>> .merge_file_etrk2W
      */
     protected function makeRequest(string $method, string $url, array $params = [], bool $useCache = true): array
     {

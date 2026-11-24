@@ -10,11 +10,15 @@ use Modules\Job\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use Spatie\QueueableAction\QueueableAction;
 
+<<<<<<< .merge_file_WhTCta
 <<<<<<< .merge_file_iTOqFW
 uses(TestCase::class);
 =======
 uses(\Modules\Job\Tests\TestCase::class);
 >>>>>>> .merge_file_RPiuNO
+=======
+uses(\Modules\Job\Tests\TestCase::class);
+>>>>>>> .merge_file_26ibie
 
 describe('Schedule Actions', function () {
     it('GetActiveSchedulesAction uses QueueableAction and has execute method', function () {

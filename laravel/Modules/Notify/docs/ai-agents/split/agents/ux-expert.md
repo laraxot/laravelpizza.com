@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_CrZLSW
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ExZ01e
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_CrZLSW
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_ExZ01e
 qmd: "ux expert"
 issues: []
 discussions: []
@@ -75,10 +81,13 @@ commands:
   - help: Show numbered list of the following commands to allow selection
   - create-front-end-spec: run task create-doc.md with template front-end-spec-tmpl.yaml
 <<<<<<< HEAD
+<<<<<<< .merge_file_CrZLSW
   - generate-ui-prompt: run task generate-ai-frontend-prompt.md
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ExZ01e
   - generate-ui-prompt: Run task generate-ai-frontend-prompt.md
 =======
 <<<<<<< HEAD
@@ -87,10 +96,13 @@ commands:
   - generate-ui-prompt: Run task generate-ai-frontend-prompt.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_CrZLSW
 =======
   - generate-ui-prompt: run task generate-ai-frontend-prompt.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_ExZ01e
   - exit: Say goodbye as the UX Expert, and then abandon inhabiting this persona
 dependencies:
   data:

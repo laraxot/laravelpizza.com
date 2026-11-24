@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_VCKi9U
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_uGDWF2
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_VCKi9U
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_uGDWF2
 qmd: "code quality"
 issues: []
 discussions: []
@@ -67,6 +73,7 @@ bash laravel/tools/phpmd.sh laravel text phpmd.xml --exclude vendor,node_modules
 - → [AGENTS.md - Quality Checks](../../AGENTS.md#quality-checks-obbligatori-dopo-ogni-modifica)
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_VCKi9U
 <<<<<<< HEAD
 - → [CLAUDE.md - Code Quality](../../CLAUDE.md)
 - → [AGENTS.md - Quality Checks](../../AGENTS.md#quality-checks-obbligatori-dopo-ogni-modifica)
@@ -86,6 +93,15 @@ bash laravel/tools/phpmd.sh laravel text phpmd.xml --exclude vendor,node_modules
 - → [CLAUDE.md - Code Quality](../../claude.md)
 - → [AGENTS.md - Quality Checks](../../AGENTS.md#quality-checks-obbligatori-dopo-ogni-modifica)
 - → [agents.md - Quality Checks](../../agents.md#quality-checks-obbligatori-dopo-ogni-modifica)
+=======
+- → [CLAUDE.md - Code Quality](../../claude.md)
+- → [AGENTS.md - Quality Checks](../../AGENTS.md#quality-checks-obbligatori-dopo-ogni-modifica)
+- → [agents.md - Quality Checks](../../agents.md#quality-checks-obbligatori-dopo-ogni-modifica)
+=======
+- → [CLAUDE.md - Code Quality](../../CLAUDE.md)
+- → [AGENTS.md - Quality Checks](../../AGENTS.md#quality-checks-obbligatori-dopo-ogni-modifica)
+- → [AGENTS.md - Quality Checks](../../AGENTS.md#quality-checks-obbligatori-dopo-ogni-modifica)
+>>>>>>> .merge_file_uGDWF2
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - → [INDEX](index.md)

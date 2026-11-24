@@ -3,7 +3,15 @@ title: "cyclomatic complexity summary"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_f9v1kd
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_laXcHa
 qmd: "cyclomatic complexity summary"
 issues: []
 discussions: []

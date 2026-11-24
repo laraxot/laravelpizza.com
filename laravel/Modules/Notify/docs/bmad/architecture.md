@@ -4,18 +4,24 @@ type: architecture
 tags: [notify, architecture, module-boundary, models, resources, channels]
 created: 2026-09-28
 <<<<<<< HEAD
+<<<<<<< .merge_file_F77U7N
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_bOuN04
 updated: 2026-09-28
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_F77U7N
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_bOuN04
 qmd: "Notify architettura componenti modelli risorse canali provider"
 related:
   - ./README.md
@@ -235,7 +241,10 @@ status: draft
 - [Quick reference](./quick-reference.md)
 - [Setup guide](./setup-guide.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_F77U7N
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_bOuN04
 - [BMAD method (Xot)](../wiki/bmad-method.md)
 =======
 <<<<<<< .merge_file_NhZGhy
@@ -266,6 +275,9 @@ cluster `Test`, tutte `SuperAdminOnlyTrait`).
 - [BMAD method (Xot)](../wiki/bmad-method.md)
 >>>>>>> .merge_file_YUlKHn
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_F77U7N
 =======
 - [BMAD method (Xot)](../wiki/bmad-method.md)
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_bOuN04

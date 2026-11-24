@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+use PHPUnit\Framework\Assert;
+
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\File;
 use Modules\Lang\Actions\GetTransPathAction;

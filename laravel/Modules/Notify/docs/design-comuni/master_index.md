@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_OIkZe7
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_5dzUh5
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_OIkZe7
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_5dzUh5
 qmd: "master index"
 issues: []
 discussions: []
@@ -73,9 +79,12 @@ Replicazione delle 38 pagine statiche del progetto [Design Comuni Italia](https:
 | **Screenshots All Pages** | [screenshots/all-pages/](../laravel/Themes/Sixteen/docs/design-comuni/screenshots/all-pages/) | Screenshots tutte 54 pagine |
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_OIkZe7
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> .merge_file_5dzUh5
 <<<<<<< .merge_file_qusjCE
 | **All Pages Analysis** | [ALL_PAGES_ANALYSIS.md](../laravel/Themes/Sixteen/docs/design-comuni/ALL_PAGES_ANALYSIS.md) | Analisi completa 54 pagine |
 | **Progress Report** | [PROGRESS_REPORT.md](../laravel/Themes/Sixteen/docs/design-comuni/PROGRESS_REPORT.md) | Report progresso aggiornato |
@@ -96,9 +105,12 @@ Replicazione delle 38 pagine statiche del progetto [Design Comuni Italia](https:
 | **Fail Pages Fix Report** | [FAIL_PAGES_FIX_REPORT.md](../laravel/Themes/Sixteen/docs/design-comuni/FAIL_PAGES_FIX_REPORT.md) | Report fix pagine fail |
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_OIkZe7
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_5dzUh5
 | **All Pages Analysis** | [ALL_PAGES_ANALYSIS.md](../laravel/Themes/Sixteen/docs/design-comuni/all-pages-analysis.md) | Analisi completa 54 pagine |
 | **Progress Report** | [PROGRESS_REPORT.md](../progress-report.md) | Report progresso aggiornato |
 | **Fail Pages Analysis** | [FAIL_PAGES_ANALYSIS.md](../laravel/Themes/Sixteen/docs/design-comuni/fail-pages-analysis.md) | Analisi pagine fail |
@@ -118,6 +130,7 @@ Replicazione delle 38 pagine statiche del progetto [Design Comuni Italia](https:
 | **Fail Pages Fix Report** | [FAIL_PAGES_FIX_REPORT.md](../laravel/Themes/Sixteen/docs/design-comuni/fail-pages-fix-report.md) | Report fix pagine fail |
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_OIkZe7
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -126,6 +139,10 @@ Replicazione delle 38 pagine statiche del progetto [Design Comuni Italia](https:
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_zNxexk
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_5dzUh5
 
 ### 🐙 GitHub Integration
 

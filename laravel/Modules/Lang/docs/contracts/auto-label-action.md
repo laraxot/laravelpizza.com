@@ -1,7 +1,10 @@
 ---
 title: "Contratto — AutoLabelAction"
 type: contract
+<<<<<<< .merge_file_3gTbAL
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_KlZJQP
 action: "Modules\Lang\Actions\Filament\AutoLabelAction"
 tags: [contract, action, filament, translations, labels]
 created: 2026-11-24
@@ -11,6 +14,7 @@ related:
   - ../../app/Actions/Filament/AutoLabelAction.php
   - ../../app/Providers/LangServiceProvider.php
   - ../../tests/Feature/AutoLabelActionContractTest.php
+<<<<<<< .merge_file_3gTbAL
 =======
 owner: Lang
 status: accepted
@@ -18,11 +22,16 @@ updated: 2026-11-24
 action: "Modules\\Lang\\Actions\\Filament\\AutoLabelAction"
 qmd: "AutoLabelAction etichetta automatica Filament componente chiave traduzione chiamante stack debug_backtrace label helperText icon LANG-AUTOLABEL"
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_KlZJQP
 ---
 
 # AutoLabelAction
 
+<<<<<<< .merge_file_3gTbAL
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_KlZJQP
 Dà a ogni componente Filament (campo, colonna, filtro, entry, step, sezione, azione) l'etichetta e i testi presi dal
 file di lingua del modulo che lo usa. È applicata a **tutti** i componenti da `LangServiceProvider::registerFilamentLabel()`
 con `configureUsing()`. Perché: [ADR etichette dai file di lingua](../adr/filament-labels-from-module-translation-files.md).
@@ -74,6 +83,7 @@ concreta, tradotto da Xot `GetTransKeyAction` (es. `blog::article`); senza class
 - Non crea le chiavi di placeholder, helper text o descrizione: vanno scritte a mano nel file di lingua.
 - Non pulisce i segnaposto salvati in passato: lo fa `CleanPlaceholderTranslationsAction`.
 - Non è la classe omonima `Modules\Xot\Actions\Filament\AutoLabelAction`: quella non è registrata in `configureUsing`.
+<<<<<<< .merge_file_3gTbAL
 =======
 Applica al componente Filament l'etichetta (o helper text, placeholder, icona) presa dal file di lingua, con chiave derivata dalla classe chiamante. Codice: `app/Actions/Filament/AutoLabelAction.php:24-267`.
 
@@ -113,3 +123,5 @@ Applica al componente Filament l'etichetta (o helper text, placeholder, icona) p
 - Non traduce il valore di default: lo salva com'e'.
 - Registrazione: `Providers/LangServiceProvider.php`.
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_KlZJQP

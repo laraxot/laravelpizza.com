@@ -3,7 +3,15 @@ title: "contact column error fix"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_xIoxfe
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_fksMzz
 qmd: "contact column error fix"
 issues: []
 discussions: []

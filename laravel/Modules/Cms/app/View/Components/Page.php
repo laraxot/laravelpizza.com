@@ -89,6 +89,7 @@ final class Page extends Component
             return;
         }
 
+<<<<<<< .merge_file_nWoZMa
 <<<<<<< .merge_file_OPNc9e
         // Se la pagina Folio ha gia' risolto (e autorizzato) il record e lo passa nel data bag, il Page non lo
         // rilegge ne' decide la visibilita': l'oggetto arriva dal codice della pagina, mai dall'URL.
@@ -99,6 +100,8 @@ final class Page extends Component
 
 =======
 >>>>>>> .merge_file_KKfqoh
+=======
+>>>>>>> .merge_file_zn1V8P
         $resolved = app(ResolvePageAction::class)->execute($container0, $slug0);
         $resolvedPage = PageModel::findUniqueBySlug($resolved->pageSlug);
         $requestedSlug = $container0.'.'.$slug0;

@@ -3,7 +3,15 @@ title: "Notify Module Documentation"
 type: documentation
 tags: [module, documentation]
 created: 2026-06-05
+<<<<<<< .merge_file_PeHR7r
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-08-02
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_Q1anZd
 status: draft
 qmd: "documentation notify"
 ---

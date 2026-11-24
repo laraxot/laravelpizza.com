@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_owG9Lw
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_NLHTWu
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_owG9Lw
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_NLHTWu
 qmd: "gemini dependencies"
 issues: []
 discussions: []
@@ -102,10 +108,13 @@ composer run go
 - [Indice GEMINI](./gemini-split-index.md)
 - [packages-spatie.md](./packages-spatie.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_owG9Lw
 - [GEMINI.md originale](../../gemini.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_NLHTWu
 - [gemini.md originale](../../gemini.md)
 =======
 <<<<<<< HEAD
@@ -114,8 +123,11 @@ composer run go
 - [gemini.md originale](../../gemini.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_owG9Lw
 =======
 - [GEMINI.md originale](../../gemini.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_NLHTWu
 - [Index principale](./index.md)

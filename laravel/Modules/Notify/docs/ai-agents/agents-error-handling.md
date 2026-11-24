@@ -3,7 +3,15 @@ title: "agents error handling"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_6FnyG3
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_WM0lNq
 qmd: "agents error handling"
 issues: []
 discussions: []
@@ -93,6 +101,7 @@ try {
 - [Indice AGENTS](./agents-split-index.md)
 - [phpstan.md](../phpstan.md) - Analisi statica
 - [AGENTS.md originale](../../AGENTS.md)
+<<<<<<< .merge_file_6FnyG3
 <<<<<<< HEAD
 - [AGENTS.md originale](../../AGENTS.md)
 - [AGENTS.md originale](../agents.md)
@@ -103,5 +112,9 @@ try {
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- [AGENTS.md originale](../../AGENTS.md)
+- [AGENTS.md originale](../agents.md)
+>>>>>>> .merge_file_WM0lNq
 - [AGENTS.md originale](../agents.md)
 - [Index principale](./index.md)

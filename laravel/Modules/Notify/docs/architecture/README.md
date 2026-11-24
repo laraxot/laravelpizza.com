@@ -4,7 +4,15 @@ type: index
 tags: [notify, docs, architecture]
 module: Notify
 created: 2026-07-20
+<<<<<<< .merge_file_zxRpln
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_92dQdJ
 qmd: "notify documentazione architecture readme architettura progetto - indice index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"

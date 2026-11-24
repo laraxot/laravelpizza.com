@@ -17,6 +17,7 @@ Il componente **Coordinate Picker** (mappa interattiva) nel wizard di creazione 
 
 ## Nominatim + normalize: fonte unica
 
+<<<<<<< .merge_file_UcJRPO
 <<<<<<< .merge_file_LNcJsT
 `CoordinatePickerHelpers` e' la classe concreta in
 `app/Filament/Forms/Components/CoordinatePickerHelpers.php` (stesso NS di
@@ -31,13 +32,18 @@ Trait morti `GeographicalScopes` / `HasPlaceTrait` / `SushiToJsons` rimossi/parc
 Vedi anche: [phpstan-ignore-removal.story.md](./stories/phpstan-ignore-removal.story.md), [phpstan-stabilization.md](./phpstan-stabilization.md),
 [Xot standing PHPStan story](../../Xot/docs/bmad/stories/phpstan-modules-zero-swarm-standing.story.md).
 =======
+=======
+>>>>>>> .merge_file_H4TGwC
 `CoordinatePickerHelpers` (stesso NS di `XotBaseCoordinateField`) e' l'unica sede di
 `searchAddress` / `reverseGeocode` / `normalizeCoordinate` / `extractCoordinates`.
 `HasCoordinatePicker` e `XotBaseCoordinateField` espongono solo wrapper `#[Exposed]`/`#[Renderless]`
 che delegano: evita corpi Nominatim duplicati nei trait (PHPStan L10 perde i tipi `array<…>` × ogni consumer).
 
 Vedi anche: [phpstan-ignore-removal.story.md](./stories/phpstan-ignore-removal.story.md), [phpstan-stabilization.md](./phpstan-stabilization.md).
+<<<<<<< .merge_file_UcJRPO
 >>>>>>> .merge_file_aSIwnw
+=======
+>>>>>>> .merge_file_H4TGwC
 
 ## 🧩 Component Extraction Rule (DRY Principle)
 

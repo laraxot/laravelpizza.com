@@ -3,15 +3,21 @@ title: "convenzioni namespace filament"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_2CVWfb
 <<<<<<< .merge_file_JZEPoq
 updated: 2026-11-23
 =======
+=======
+>>>>>>> .merge_file_fWikIG
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_2CVWfb
 >>>>>>> .merge_file_DF2C6j
+=======
+>>>>>>> .merge_file_fWikIG
 qmd: "convenzioni namespace filament"
 issues: []
 discussions: []
@@ -91,9 +97,12 @@ namespace Modules\User\App\Filament\Widgets;
 - Per temi custom (es. Themes/One) la build e pubblicazione asset si fa SOLO dalla cartella del tema:
   ```sh
   npm run build
+<<<<<<< .merge_file_2CVWfb
 <<<<<<< .merge_file_JZEPoq
   # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
 =======
+=======
+>>>>>>> .merge_file_fWikIG
 <<<<<<< HEAD
   # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 =======
@@ -103,7 +112,10 @@ namespace Modules\User\App\Filament\Widgets;
   # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_2CVWfb
 >>>>>>> .merge_file_DF2C6j
+=======
+>>>>>>> .merge_file_fWikIG
   ```
 - Non usare mai `vendor:publish` per asset dei temi custom.
 - Vedi anche [README tema One](../../../../themes/one/README.md)
@@ -177,8 +189,11 @@ Section::make('Anteprima')
 
 ---
 
+<<<<<<< .merge_file_2CVWfb
 <<<<<<< .merge_file_JZEPoq
 =======
+=======
+>>>>>>> .merge_file_fWikIG
 title: "convenzioni namespace filament"
 type: note
 tags: [documentation]
@@ -187,5 +202,8 @@ updated: 2026-09-26
 qmd: "convenzioni namespace filament"
 issues: []
 discussions: []
+<<<<<<< .merge_file_2CVWfb
 >>>>>>> .merge_file_DF2C6j
+=======
+>>>>>>> .merge_file_fWikIG
 > **Nota**: Questo documento è linkato anche dal README di Xot per garantire coerenza tra i moduli.

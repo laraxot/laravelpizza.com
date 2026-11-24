@@ -3,7 +3,15 @@ title: "testing"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_MzBeol
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_26hGhi
 qmd: "testing"
 issues: []
 discussions: []
@@ -62,6 +70,7 @@ it('creates user successfully', function () {
 
 **Di ritorno:**
 - → [AGENTS.md - Testing Patterns](../../AGENTS.md#testing-patterns)
+<<<<<<< .merge_file_MzBeol
 <<<<<<< HEAD
 - → [AGENTS.md - Testing Patterns](../../AGENTS.md#testing-patterns)
 - → [AGENTS.md - Testing Patterns](../agents.md#testing-patterns)
@@ -72,6 +81,10 @@ it('creates user successfully', function () {
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- → [AGENTS.md - Testing Patterns](../../AGENTS.md#testing-patterns)
+- → [AGENTS.md - Testing Patterns](../agents.md#testing-patterns)
+>>>>>>> .merge_file_26hGhi
 - → [AGENTS.md - Testing Patterns](../agents.md#testing-patterns)
 - → [AGENT_MEMORY.md - Testing Patterns](../../AGENT_MEMORY.md#-testing-validation-patterns)
 - → [commands.md](commands.md)

@@ -1,7 +1,10 @@
 ---
+<<<<<<< .merge_file_7iZyKM
 <<<<<<< .merge_file_bHBgIx
 title: "Activity — BMAD Setup Guide"
 =======
+=======
+>>>>>>> .merge_file_2mUGPb
 <<<<<<< HEAD
 title: "Activity: BMAD Setup Guide"
 =======
@@ -11,17 +14,23 @@ title: "Activity — BMAD Setup Guide"
 title: "Activity: BMAD Setup Guide"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_7iZyKM
 >>>>>>> .merge_file_npZoSW
+=======
+>>>>>>> .merge_file_2mUGPb
 description: "Setup e configurazione BMAD per il modulo Activity"
 module: "Activity"
 alias: "activity"
 documentation_date: "2026-05-27"
 bmad_version: "6.2.0"
+<<<<<<< .merge_file_7iZyKM
 <<<<<<< .merge_file_bHBgIx
 ---
 
 # Activity — BMAD Setup Guide
 =======
+=======
+>>>>>>> .merge_file_2mUGPb
 <<<<<<< HEAD
 type: note
 =======
@@ -31,6 +40,7 @@ type: note
 
 # Activity — BMAD Setup Guide
 =======
+<<<<<<< .merge_file_7iZyKM
 type: note
 >>>>>>> laraxot/dev
 =======
@@ -38,6 +48,14 @@ type: note
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_npZoSW
+=======
+type: note
+>>>>>>> laraxot/dev
+=======
+type: note
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_2mUGPb
 status: draft
 updated: 2026-10-07
 tags: [docs, activity, bmad]
@@ -66,6 +84,7 @@ In questo modulo, BMAD serve a:
 - PHPStan Level 10: nessun ignoreErrors
 - Traduzioni dai file: mai hardcoded
 
+<<<<<<< .merge_file_7iZyKM
 <<<<<<< .merge_file_bHBgIx
 ## Bad Practices (Pratiche Sbagliate — Mai Fare)
 =======
@@ -83,6 +102,21 @@ In questo modulo, BMAD serve a:
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_npZoSW
+=======
+<<<<<<< HEAD
+## Bad Practices (Pratiche Sbagliate: Mai Fare)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+## Bad Practices (Pratiche Sbagliate — Mai Fare)
+=======
+## Bad Practices (Pratiche Sbagliate: Mai Fare)
+>>>>>>> laraxot/dev
+=======
+## Bad Practices (Pratiche Sbagliate: Mai Fare)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_2mUGPb
 
 - Mai estendere Filament direttamente
 - Mai silenziare PHPStan
@@ -95,9 +129,12 @@ In questo modulo, BMAD serve a:
 | Termine | Sembra Significare | In Realtà Significa |
 |---|---|---|
 | **Action** | Funzione generica | Classe con `execute()` che estende `QueueableAction` |
+<<<<<<< .merge_file_7iZyKM
 <<<<<<< .merge_file_bHBgIx
 | **Service** | Servizio generico | **Vietato** in Xot — usare `Actions` |
 =======
+=======
+>>>>>>> .merge_file_2mUGPb
 <<<<<<< HEAD
 | **Service** | Servizio generico | **Vietato** in Xot: usare `Actions` |
 =======
@@ -111,7 +148,10 @@ In questo modulo, BMAD serve a:
 | **Service** | Servizio generico | **Vietato** in Xot: usare `Actions` |
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_7iZyKM
 >>>>>>> .merge_file_npZoSW
+=======
+>>>>>>> .merge_file_2mUGPb
 | **Module/Modulo** | Pacchetto generico | Modulo con `module.json`, `XotBaseServiceProvider` |
 | **Resource** | Risorsa generica | `XotBaseResource` con `form()`, `table()` |
 
@@ -123,9 +163,12 @@ In questo modulo, BMAD serve a:
 
 ---
 
+<<<<<<< .merge_file_7iZyKM
 <<<<<<< .merge_file_bHBgIx
 *Activity · BMAD Setup Guide · data 2026-05-27*
 =======
+=======
+>>>>>>> .merge_file_2mUGPb
 <<<<<<< HEAD
 *Activity · BMAD Setup Guide · data 2026-05-27*
 =======
@@ -135,4 +178,7 @@ In questo modulo, BMAD serve a:
 *Activity · BMAD Setup Guide · data 2026-05-27*
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_7iZyKM
 >>>>>>> .merge_file_npZoSW
+=======
+>>>>>>> .merge_file_2mUGPb

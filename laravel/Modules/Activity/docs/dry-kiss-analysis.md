@@ -61,14 +61,20 @@ canonical: ../../../Themes/docs/shared-components/dry-kiss-analysis--Modules.md
 - 🔄 ServiceProvider: Auto-detect nome
 
 ---
+<<<<<<< .merge_file_CgCxYI
 <<<<<<< .merge_file_3X1AYz
 =======
+=======
+>>>>>>> .merge_file_CXookB
 <<<<<<< HEAD
 [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< .merge_file_CgCxYI
 >>>>>>> .merge_file_JTMMqP
+=======
+>>>>>>> .merge_file_CXookB
 [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
 ---
 module: theme

@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_QOurxP
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_cDpgUE
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_QOurxP
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_cDpgUE
 qmd: "memories"
 issues: []
 discussions: []
@@ -76,7 +82,10 @@ Vedi [index](index.md) per navigazione completa.
 - Per test queued usare `Queue::fake()` + `Spatie\QueueableAction\Testing\QueueableActionFake`.
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_QOurxP
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_cDpgUE
 ### <nome progetto> question-chart pipeline: prima lint, poi app boot
 ### App question-chart pipeline: prima lint, poi app boot
 =======
@@ -88,10 +97,13 @@ Vedi [index](index.md) per navigazione completa.
 ### App question-chart pipeline: prima lint, poi app boot
 >>>>>>> .merge_file_udktB5
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_QOurxP
 =======
 ### <nome progetto> question-chart pipeline: prima lint, poi app boot
 ### App question-chart pipeline: prima lint, poi app boot
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_cDpgUE
 - Nei flussi `ViewQuestionChart` il primo blocker puo` essere sintattico e non applicativo.
 - Prima di inseguire Livewire/Filament o query runtime, lintare l'intera catena caricata subito:
   - `QuestionChartChartData`
@@ -101,7 +113,10 @@ Vedi [index](index.md) per navigazione completa.
 - Se lo stack trace dell'utente punta a una riga che sul disco non corrisponde piu`, trattarlo come possibile errore stale e verificare il file attuale con `php -l` + `nl -ba`.
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_QOurxP
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_cDpgUE
 ### QuestionChart root ancestor: distinguere metodo assente da runtime stale
 - `QuestionChart::getRootQuestionAncestorId()` e` parte del contratto del modulo <nome progetto>.
 =======
@@ -113,10 +128,13 @@ Vedi [index](index.md) per navigazione completa.
 - `QuestionChart::getRootQuestionAncestorId()` e` parte del contratto del modulo <nome progetto>.
 >>>>>>> .merge_file_udktB5
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_QOurxP
 =======
 ### QuestionChart root ancestor: distinguere metodo assente da runtime stale
 - `QuestionChart::getRootQuestionAncestorId()` e` parte del contratto del modulo <nome progetto>.
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_cDpgUE
 - `QuestionChart::getRootQuestionAncestorId()` e` parte del contratto del modulo App.
 - Se l'errore utente dice "undefined method" ma:
   - il metodo esiste sul file corrente

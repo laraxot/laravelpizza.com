@@ -1,6 +1,9 @@
 ---
+<<<<<<< .merge_file_ZfSoNN
 <<<<<<< .merge_file_ZpktZi
 =======
+=======
+>>>>>>> .merge_file_JvTEd5
 <<<<<<< HEAD
 title: "Product Roadmap"
 type: note
@@ -9,17 +12,24 @@ created: 2026-09-26
 updated: 2026-09-26
 qmd: "Product Roadmap"
 =======
+<<<<<<< .merge_file_ZfSoNN
 >>>>>>> .merge_file_ehCZuf
+=======
+>>>>>>> .merge_file_JvTEd5
 title: "product roadmap"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "product roadmap"
+<<<<<<< .merge_file_ZfSoNN
 <<<<<<< .merge_file_ZpktZi
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_ehCZuf
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_JvTEd5
 issues: []
 discussions: []
 ---
@@ -33,8 +43,11 @@ discussions: []
 
 ---
 
+<<<<<<< .merge_file_ZfSoNN
 <<<<<<< .merge_file_ZpktZi
 =======
+=======
+>>>>>>> .merge_file_JvTEd5
 <<<<<<< HEAD
 title: "PRODUCT ROADMAP"
 =======
@@ -59,7 +72,10 @@ qmd: "PRODUCT ROADMAP"
 >>>>>>> laraxot/dev
 issues: []
 discussions: []
+<<<<<<< .merge_file_ZfSoNN
 >>>>>>> .merge_file_ehCZuf
+=======
+>>>>>>> .merge_file_JvTEd5
 ## Vision Statement
 
 To provide a **flexible content management system** that empowers non-technical users to create, manage, and publish content across the platform without developer intervention.
@@ -152,7 +168,11 @@ To provide a **flexible content management system** that empowers non-technical 
 | **Content Reuse** | 10% | 25% | 40% | 60% |
 
 ---
+<<<<<<< .merge_file_ZfSoNN
 <<<<<<< .merge_file_ZpktZi
 =======
 
 >>>>>>> .merge_file_ehCZuf
+=======
+
+>>>>>>> .merge_file_JvTEd5

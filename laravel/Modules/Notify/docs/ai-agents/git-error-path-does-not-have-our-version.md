@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_MsjAvB
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_BvBOOZ
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_MsjAvB
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_BvBOOZ
 qmd: "git error path does not have our version"
 issues: []
 discussions: []
@@ -526,12 +532,15 @@ git rebase --continue
 **Next Review**: As needed
 **Maintainer**: Development Team
 =======
+<<<<<<< .merge_file_MsjAvB
 <<<<<<< HEAD
 <<<<<<< HEAD
 **Last Review**: 2026-03-17
 **Next Review**: As needed
 **Maintainer**: Development Team
 =======
+=======
+>>>>>>> .merge_file_BvBOOZ
 <<<<<<< .merge_file_GSAw5d
 **Last Review**: 2026-03-17  
 **Next Review**: As needed  
@@ -542,10 +551,13 @@ git rebase --continue
 **Maintainer**: Development Team
 >>>>>>> .merge_file_uM7rUJ
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_MsjAvB
 =======
 **Last Review**: 2026-03-17
 **Next Review**: As needed
 **Maintainer**: Development Team
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_BvBOOZ
 **Status**: ✅ Complete Reference

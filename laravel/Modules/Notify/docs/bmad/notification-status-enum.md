@@ -4,7 +4,15 @@ module: Notify
 type: decision
 tags: [notify, enum, notification-log, status]
 created: 2026-10-06
+<<<<<<< .merge_file_NgsiA3
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-10-06
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_0RF9ig
 ---
 
 # Notification status

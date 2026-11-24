@@ -11,11 +11,15 @@ use Modules\Xot\Actions\Cast\SafeStringCastAction;
 /**
  * Single source for Nominatim search/reverse + coordinate normalize/extract.
  *
+<<<<<<< .merge_file_CmZrod
 <<<<<<< .merge_file_nM3F81
  * Used by {@see XotBaseCoordinateField} and {@see HasCoordinatePicker}
 =======
  * Used by {@see XotBaseCoordinateField} and {@see \Modules\Geo\Filament\Forms\Components\Traits\HasCoordinatePicker}
 >>>>>>> .merge_file_WN762w
+=======
+ * Used by {@see XotBaseCoordinateField} and {@see \Modules\Geo\Filament\Forms\Components\Traits\HasCoordinatePicker}
+>>>>>>> .merge_file_WgNspj
  * (thin #[Exposed] wrappers). Concrete class keeps array generics for PHPStan L10;
  * large trait bodies lose iterable value types.
  */

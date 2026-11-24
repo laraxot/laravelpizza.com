@@ -1,7 +1,10 @@
 ---
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< .merge_file_OOlaPi
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_UnVkpT
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
@@ -131,6 +134,7 @@ Tre documenti sullo stesso componente (`LanguageSwitcher` e `LanguageSwitcherWid
 - [INDEX](INDEX.md) — tabella operativa operazione, contratto, classe, invarianti; censisce solo i tre documenti del language switcher.
 - [Template di contratto](_template.md) — scheletro con le sei sezioni e la tabella degli invarianti, da copiare per una nuova Action.
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_OOlaPi
 =======
 title: "Contratti — Lang"
 type: index
@@ -156,3 +160,5 @@ Contract di Action: frontmatter `type: contract` e `action: "Modules\\Lang\\Acti
 
 I tre file si sovrappongono parzialmente (stesso componente, stessi ID); consolidarli è lavoro futuro: non sono stati riscritti.
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_UnVkpT

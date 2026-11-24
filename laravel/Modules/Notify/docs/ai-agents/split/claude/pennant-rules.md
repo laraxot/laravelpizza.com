@@ -3,7 +3,15 @@ title: "pennant rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_vHcYKz
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_WMSY0t
 qmd: "pennant rules"
 issues: []
 discussions: []

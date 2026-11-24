@@ -3,15 +3,21 @@ title: "scripts conflict resolution"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_AKLxtX
 <<<<<<< .merge_file_VrpSj0
 updated: 2026-11-23
 =======
+=======
+>>>>>>> .merge_file_CPDbLL
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_AKLxtX
 >>>>>>> .merge_file_IzhCOS
+=======
+>>>>>>> .merge_file_CPDbLL
 qmd: "scripts conflict resolution"
 issues: []
 discussions: []
