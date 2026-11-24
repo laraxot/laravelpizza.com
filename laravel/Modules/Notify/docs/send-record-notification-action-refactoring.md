@@ -87,8 +87,4 @@ updated: 2026-09-26
 qmd: "send record notification action refactoring"
 issues: []
 discussions: []
-<<<<<<< HEAD
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
-=======
-*Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
->>>>>>> laraxot/dev

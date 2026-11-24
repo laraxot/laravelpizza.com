@@ -507,7 +507,4 @@ FixCity è posizionata per diventare la **piattaforma leader europea** per il ci
 
 **Per domande o approfondimenti**: development@fixcity.io
 **Per domande o approfondimenti**: development@ptv.io
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev

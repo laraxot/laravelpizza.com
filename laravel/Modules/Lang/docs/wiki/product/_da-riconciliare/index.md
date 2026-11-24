@@ -2,11 +2,8 @@
 qmd: "Index"
 issues: []
 discussions: []
-<<<<<<< HEAD
-=======
 title: "lang — product"
 
->>>>>>> laraxot/dev
 title: "Index"
 module: lang
 type: product
@@ -21,11 +18,8 @@ Documentation for `lang` module categorized as **product**.
 
 ## Files
 
-<<<<<<< HEAD
-=======
 - [`INDEX.md`](./index.md)
 
->>>>>>> laraxot/dev
 - [`index.md`](./index.md)
 - [`product-strategy.md`](./product-strategy.md)
 - [`strategy.md`](./strategy.md)

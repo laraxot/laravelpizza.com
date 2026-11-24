@@ -494,9 +494,6 @@ Manutenzione Stradale • Illuminazione • Rifiuti • Verde Pubblico • Fogna
 ---
 
 *"Un progetto solido con fondamenta eccellenti e potenziale straordinario"* 🏆
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> laraxot/dev

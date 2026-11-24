@@ -28,10 +28,7 @@ discussions: []
     <flux:button variant="primary"/>
 </code-snippet>
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ### Available Components
 This is correct as of Boost installation, but there may be additional components within the codebase.
 

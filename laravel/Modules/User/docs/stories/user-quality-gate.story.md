@@ -9,12 +9,9 @@ giornata (2026-09-04), con e senza path arg, dopo un refresh `ide-helper:generat
 story copre il resto del gate: phpmd, phpinsights (verificato non disponibile), pest, coverage, git.
 
 ## Coordinamento
-<<<<<<< HEAD
-=======
 - Docs marker (2026-11-23): ripuliti 154 file in `docs/` con conflitti annidati;
   canone in [docs-merge-conflict-markers-cleanup.story.md](./docs-merge-conflict-markers-cleanup.story.md)
   § Coordinamento. Non tocca il gate PHP di questa story.
->>>>>>> laraxot/dev
 - Letti `docs/chat/*.md` per note/collisioni su User prima di editare. Rilevanti:
   `swarm-sync-user-cloudstorage-ownership.md` (fix `dddx()` hot-path pregressi, non in conflitto),
   `user-profile-instanceof-two-independent-fixes.md` (`ProfileEditVoltComponent.php` — due varianti dello

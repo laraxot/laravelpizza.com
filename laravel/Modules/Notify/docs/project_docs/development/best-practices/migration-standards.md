@@ -238,8 +238,4 @@ qmd: "migration standards"
 issues: []
 discussions: []
 *Ultimo aggiornamento: Agosto 2025*
-<<<<<<< HEAD
 *Fonte: laravel/Modules/Xot/docs/MIGRATION_STANDARDS.md* 
-=======
-*Fonte: laravel/Modules/Xot/docs/MIGRATION_STANDARDS.md* 
->>>>>>> laraxot/dev

@@ -163,8 +163,4 @@ qmd: "form schema conventions"
 issues: []
 discussions: []
 *Ultimo aggiornamento: Agosto 2025*
-<<<<<<< HEAD
 *Fonte: laravel/Modules/Xot/docs/FILAMENT_FORM_SCHEMA_CONVENTIONS.md* 
-=======
-*Fonte: laravel/Modules/Xot/docs/FILAMENT_FORM_SCHEMA_CONVENTIONS.md* 
->>>>>>> laraxot/dev

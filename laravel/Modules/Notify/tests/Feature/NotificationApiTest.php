@@ -14,12 +14,6 @@ use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 beforeEach(function (): void {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    $user = UserFactory::new()->createOne(['email' => 'test@example.com']);
-=======
-=======
->>>>>>> laraxot/dev
     // L'email la genera la factory, unica per costruzione. Prima era fissata a
     // `test@example.com`, e tutti gli otto test di questo file morivano qui con
     // `users_email_unique` — non per un difetto di Notify, ma perche' una riga
@@ -29,10 +23,6 @@ beforeEach(function (): void {
     // un indirizzo globalmente libero e' fragile per costruzione: nessuna
     // asserzione qui guarda l'email (base_quaeris_fila5#234).
     $user = UserFactory::new()->createOne();
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
     $this->actingAs($user);
     Http::fake();
 });

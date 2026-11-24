@@ -472,7 +472,4 @@ Must achieve ALL criteria:
 *FixCity Sixteen Theme - Phase 1 HTML Structural Parity*  
 *Notify Sixteen Theme - Phase 1 HTML Structural Parity*  
 *Monitoring Subtask 1... Awaiting comparison results...*
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev

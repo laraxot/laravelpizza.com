@@ -227,10 +227,7 @@ Prima di creare un nuovo DTO, verificare che:
 
 *Consolidated from: `dto-structure-conventions.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento definisce le convenzioni per la struttura e l'organizzazione dei Data Transfer Objects (DTO) nel modulo Notify. Seguire queste convenzioni è essenziale per mantenere coerenza e prevenire errori.
@@ -541,10 +538,7 @@ related:
 
 *Consolidated from: `dto-structure-rules.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Directory e Namespace
 
 1. **Directory**
@@ -666,10 +660,7 @@ related:
 
 *Consolidated from: `dto-structure.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Directory e Namespace
 
 1. **Directory**
@@ -1000,10 +991,7 @@ Basandoci sull'analisi percentuale:
 
 *Consolidated from: `dto-vs-factory-analysis.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 Questo documento analizza in dettaglio i vantaggi e gli svantaggi di posizionare la logica di selezione del driver SMS all'interno del DTO `SmsData`, confrontando questo approccio con il pattern Factory implementato e con l'approccio originale (nel canale).
 
 ## Opzione 1: Logica nel DTO (SmsData)
@@ -1192,10 +1180,7 @@ Basandoci sull'analisi percentuale:
 
 *Consolidated from: `dto-vs-factory.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 Questo documento analizza in dettaglio i vantaggi e gli svantaggi di posizionare la logica di selezione del driver SMS all'interno del DTO `SmsData`, confrontando questo approccio con il pattern Factory implementato e con l'approccio originale (nel canale).
 
 ## Opzione 1: Logica nel DTO (SmsData)
@@ -1384,10 +1369,7 @@ Basandoci sull'analisi percentuale:
 
 *Consolidated from: `dto_structure_conventions.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento definisce le convenzioni per la struttura e l'organizzazione dei Data Transfer Objects (DTO) nel modulo Notify. Seguire queste convenzioni è essenziale per mantenere coerenza e prevenire errori.
@@ -1556,10 +1538,7 @@ Prima di creare un nuovo DTO, verificare che:
 
 *Consolidated from: `dto_structure_rules.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Directory e Namespace
 
 1. **Directory**
@@ -1681,10 +1660,7 @@ Prima di creare un nuovo DTO, verificare che:
 
 *Consolidated from: `dto_vs_factory_analysis.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 Questo documento analizza in dettaglio i vantaggi e gli svantaggi di posizionare la logica di selezione del driver SMS all'interno del DTO `SmsData`, confrontando questo approccio con il pattern Factory implementato e con l'approccio originale (nel canale).
 
 ## Opzione 1: Logica nel DTO (SmsData)

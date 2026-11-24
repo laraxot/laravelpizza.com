@@ -91,8 +91,6 @@ related:
 - Nessun test esistente copre i file modificati (verificato con `find`).
 
 **Stato**: ✅ Risolto
-<<<<<<< HEAD
-=======
 
 
 ---
@@ -103,4 +101,3 @@ related:
 
 Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file evita nomi `*-.md`.
 
->>>>>>> laraxot/dev

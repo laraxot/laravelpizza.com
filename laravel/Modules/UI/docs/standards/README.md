@@ -126,8 +126,6 @@ class XotBaseStatsOverview extends Widget
 - Errori JavaScript
 - Tempi di caricamento
 ## Collegamenti tra versioni di README.md
-<<<<<<< HEAD
-=======
 * [README.md](bashscripts/docs/readme.md)
 * [README.md](bashscripts/docs/it/readme.md)
 * [README.md](docs/laravel-app/phpstan/readme.md)
@@ -205,7 +203,6 @@ class XotBaseStatsOverview extends Widget
 * [README.md](../../../../themes/two/docs/readme.md)
 * [README.md](../../../../themes/one/docs/readme.md)
 
->>>>>>> laraxot/dev
 * [README.md](bashscripts/docs/README.md)
 * [README.md](bashscripts/docs/it/README.md)
 * [README.md](docs/laravel-app/phpstan/README.md)

@@ -2,11 +2,8 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-=======
 use Modules\User\Models\BaseTenant;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
->>>>>>> laraxot/dev
 use Filament\Models\Contracts\HasAvatar;
 use Modules\User\Contracts\TenantContract;
 use Modules\User\Models\Tenant;

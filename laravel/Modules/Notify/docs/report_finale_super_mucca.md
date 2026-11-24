@@ -479,7 +479,4 @@ cat Modules/User/docs/dry-kiss-analysis.md
 **Ore Investite:** 9  
 **Valore Creato:** Inestimabile  
 **Completamento:** 100% ✅
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev

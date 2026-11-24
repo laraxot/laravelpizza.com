@@ -45,12 +45,9 @@ related:
 - 🗑️ **[Cleanup Plan](./docs-naming-convention-fix.md)** - Rimozione dei 260+ file obsoleti.
 
 ## 🔗 **Moduli Correlati**
-<<<<<<< HEAD
-=======
 - [Xot](../../xot/docs/readme.md) - Base framework e classi `XotBaseChartWidget`.
 - [UI](../../ui/docs/readme.md) - Componenti Blade e Filament che consumano le traduzioni.
 
->>>>>>> laraxot/dev
 - [Xot](../../xot/docs/README.md) - Base framework e classi `XotBaseChartWidget`.
 - [UI](../../ui/docs/README.md) - Componenti Blade e Filament che consumano le traduzioni.
 
@@ -85,11 +82,8 @@ related:
 ## 🔗 **Moduli Correlati**
 - [Xot](../../Xot/docs/README.md) - Base framework e classi `XotBaseChartWidget`.
 - [UI](../../UI/docs/README.md) - Componenti Blade e Filament che consumano le traduzioni.
-<<<<<<< HEAD
-=======
 - [agents.md](../../../../agents.md) - Project guidelines
 
->>>>>>> laraxot/dev
 - [AGENTS.md](../../../../AGENTS.md) - Project guidelines
 
 ---
@@ -149,12 +143,9 @@ related:
 - 📁 **[Path canonico migrazioni](./wiki/concepts/migration-path-canonical.md)** — solo `database/migrations/`; mai `Migrations/` annidata.
 
 ## 🔗 **Moduli Correlati**
-<<<<<<< HEAD
-=======
 - [Xot](../../xot/docs/readme.md) - Base framework e classi `XotBaseChartWidget`.
 - [UI](../../ui/docs/readme.md) - Componenti Blade e Filament che consumano le traduzioni.
 
->>>>>>> laraxot/dev
 - [Xot](../../xot/docs/README.md) - Base framework e classi `XotBaseChartWidget`.
 - [UI](../../ui/docs/README.md) - Componenti Blade e Filament che consumano le traduzioni.
 

@@ -136,8 +136,4 @@ Vedi [Queueable Actions con Spatie](queueable-actions.md) per definizione delle 
 
 ---
 *Documento generato il 2025-05-05T21:45:20+02:00*
-<<<<<<< HEAD
 *Documento generato il 2025-05-05T21:45:20+02:00*
-=======
-*Documento generato il 2025-05-05T21:45:20+02:00*
->>>>>>> laraxot/dev

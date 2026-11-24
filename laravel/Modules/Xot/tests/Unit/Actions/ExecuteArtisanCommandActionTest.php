@@ -31,11 +31,7 @@ it('executes allowed artisan command correctly', function (): void {
     /** @var array<int, string> $output */
     $output = $result['output'];
     Assert::assertStringContainsString('Migration successful', implode("\n", $output));
-<<<<<<< HEAD
-});
-=======
 })->group('XOT-ARTISAN-EXEC-INV-2');
->>>>>>> laraxot/dev
 
 it('handles failed artisan command correctly', function (): void {
     Process::fake([
@@ -50,9 +46,6 @@ it('handles failed artisan command correctly', function (): void {
     /** @var array<int, string> $output */
     $output = $result['output'];
     Assert::assertStringContainsString('[ERROR] Migration failed', implode("\n", $output));
-<<<<<<< HEAD
-});
-=======
 })->group('XOT-ARTISAN-EXEC-INV-2');
 
 it('refuses commands that are not identical to an allowed one and never starts a process', function (string $command): void {
@@ -67,4 +60,3 @@ it('refuses commands that are not identical to an allowed one and never starts a
     'case change' => 'MIGRATE',
     'leading space' => ' migrate',
 ])->group('XOT-ARTISAN-EXEC-INV-1');
->>>>>>> laraxot/dev

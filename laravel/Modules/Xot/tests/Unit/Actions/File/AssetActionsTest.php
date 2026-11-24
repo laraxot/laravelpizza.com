@@ -4,17 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit\Actions\File;
 
-<<<<<<< HEAD
-use Modules\Xot\Actions\File\AssetAction;
-use Modules\Xot\Actions\File\AssetPathAction;
-use Modules\Xot\Actions\File\GetModulePathAction;
-=======
 use Exception;
 use Modules\Xot\Actions\File\AssetAction;
 use Modules\Xot\Actions\File\AssetPathAction;
 use Modules\Xot\Actions\File\GetModulePathAction;
 use Modules\Xot\Datas\XotData;
->>>>>>> laraxot/dev
 use Modules\Xot\Tests\TestCase;
 use Nwidart\Modules\Facades\Module;
 use PHPUnit\Framework\Assert;
@@ -75,11 +69,7 @@ it('resolves a module asset to its public url without copying anything into publ
 
     try {
         $result = app(AssetAction::class)->execute('XotAssetTest::css/style.css');
-<<<<<<< HEAD
-Assert::assertStringContainsString('assets/xotassettest/css/style.css', $result);
-=======
         Assert::assertStringContainsString('assets/xotassettest/css/style.css', $result);
->>>>>>> laraxot/dev
         Assert::assertFileDoesNotExist($dest, 'the asset must be served through the symlink, never copied');
     } finally {
         if (is_file($resourceFile)) {
@@ -120,8 +110,6 @@ it('does not throw when public assets dir is a plain file left by a checkout wit
     }
 });
 
-<<<<<<< HEAD
-=======
 /**
  * Senza namespace `modulo::` l'asset appartiene al tema attivo (pub_theme fuori dal pannello admin):
  * l'URL passa dal symlink public_html/themes/<Tema>.
@@ -158,7 +146,6 @@ it('fails when a module asset exists neither in public nor in resources', functi
     expect(fn (): string => app(AssetAction::class)->execute($path))
         ->toThrow(Exception::class, 'not Exists');
 });
->>>>>>> laraxot/dev
 it('calculates asset path correctly in AssetPathAction', function (): void {
     Module::partialMock()
         ->shouldReceive('getModulePath')

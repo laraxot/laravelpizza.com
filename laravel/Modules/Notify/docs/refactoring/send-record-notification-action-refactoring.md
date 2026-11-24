@@ -207,8 +207,4 @@ issues: []
 discussions: []
 **Refactored by**: iFlow CLI  
 **Compliance**: 100% DRY + KISS + Clean Code  
-<<<<<<< HEAD
 **Status**: Ready for production deployment
-=======
-**Status**: Ready for production deployment
->>>>>>> laraxot/dev

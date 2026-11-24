@@ -58,8 +58,6 @@ File con marker (da risolvere forward-only se riappaiono):
 - Rigenerare lista: `git grep -l '^<<<<<<<' -- '*.md' 'docs/'`
 - Non risolvere in parallelo senza lock; preferire wiki canonico `docs/wiki/` rispetto a duplicati root `docs/*.md`.
 - Task dedicato marker doc: `docs/tasks/fix-doc-merge-markers.md`
-<<<<<<< HEAD
-=======
 
 
 ---
@@ -94,4 +92,3 @@ Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file
 
 - Inventory generated from `rg -l "^(<<<<<<<|=======|>>>>>>>)"`.
 - Use this list as a volatile coordination map; re-open each file before editing because other agents may resolve items in parallel.
->>>>>>> laraxot/dev

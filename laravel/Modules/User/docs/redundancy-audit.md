@@ -34,8 +34,6 @@ Suggested cleanup order:
 2. Audit migrations by table name before deleting any duplicate timestamp.
 3. Move shared UI primitives to `Modules/UI`; leave only User-specific wrappers in User.
 4. Normalize docs to lowercase-kebab-case, then update local indexes.
-<<<<<<< HEAD
-=======
 
 
 ---
@@ -71,4 +69,3 @@ Suggested cleanup order:
 2. Audit migrations by table name before deleting any duplicate timestamp.
 3. Move shared UI primitives to `Modules/UI`; leave only User-specific wrappers in User.
 4. Normalize docs to lowercase-kebab-case, then update local indexes.
->>>>>>> laraxot/dev

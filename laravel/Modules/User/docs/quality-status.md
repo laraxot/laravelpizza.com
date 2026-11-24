@@ -234,8 +234,6 @@ related:
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/quality-status.md
-<<<<<<< HEAD
-=======
 
 
 ---
@@ -744,4 +742,3 @@ After fixes:
 *PHPStan: IMPROVED (13 → ~5 errors)*
 *Status: IN PROGRESS*
 *Priority: CRITICAL*
->>>>>>> laraxot/dev

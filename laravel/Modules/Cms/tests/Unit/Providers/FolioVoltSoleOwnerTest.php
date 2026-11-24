@@ -9,10 +9,6 @@ declare(strict_types=1);
  * @see Modules/Cms/docs/bmad/folio-volt-sole-owner.md
  */
 
-<<<<<<< HEAD
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Providers\FolioVoltServiceProvider;
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
@@ -24,7 +20,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 test('app providers must not define FolioServiceProvider', function (): void {
     $path = base_path('app/Providers/FolioServiceProvider.php');
     Assert::assertFileDoesNotExist($path);

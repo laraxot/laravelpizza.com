@@ -448,7 +448,4 @@ Per domande su questa sessione:
 3. Contattare team per Q&A session
 
 **Ready for Team Review and Implementation! 🚀**
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev

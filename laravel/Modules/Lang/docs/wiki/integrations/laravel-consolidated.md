@@ -3320,11 +3320,8 @@ related:
 - [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header_language_selector_with_flags.md)
 - [README modulo Lang](./README.md)
 - [Best Practices Chiavi di Traduzione](translation-keys-best-practices.md)
-<<<<<<< HEAD
-=======
 - [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/HEADER_LANGUAGE_SELECTOR_WITH_FLAGS.md)
 
->>>>>>> laraxot/dev
 - [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header_language_selector_with_flags.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
@@ -3565,11 +3562,8 @@ Questi middleware sono già configurati  e non è necessario modificarli.
 - [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header_language_selector_with_flags.md)
 - [README modulo Lang](./README.md)
 - [Best Practices Chiavi di Traduzione](translation-keys-best-practices.md)
-<<<<<<< HEAD
-=======
 - [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/HEADER_LANGUAGE_SELECTOR_WITH_FLAGS.md)
 
->>>>>>> laraxot/dev
 - [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header_language_selector_with_flags.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
@@ -5128,11 +5122,8 @@ related:
 ## Collegamenti correlati
 - [README modulo Lang](./README.md)
 - [Best Practices Chiavi di Traduzione](translation-keys-best-practices.md)
-<<<<<<< HEAD
-=======
 - [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/HEADER_LANGUAGE_SELECTOR_WITH_FLAGS.md)
 
->>>>>>> laraxot/dev
 - [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header_language_selector_with_flags.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 

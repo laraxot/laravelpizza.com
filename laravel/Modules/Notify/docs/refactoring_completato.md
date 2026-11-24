@@ -381,7 +381,4 @@ Che il tuo codice sia:
 4. Fase 2: Filament Resources refactoring
 
 **Nota:** Tenant module richiede attenzione speciale (non estende XotBaseModel)
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev

@@ -298,10 +298,7 @@ class TemplateControllerTest extends TestCase
 
 *Consolidated from: `implementation-guide.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Setup Iniziale
 
 ### 1. Installazione Dipendenze
@@ -542,10 +539,7 @@ class TemplateControllerTest extends TestCase
 
 *Consolidated from: `implementation-pratica.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## 1. Setup Iniziale
 
 ### 1.1 Installazione Dipendenze
@@ -1914,7 +1908,6 @@ L'implementazione del design system per i comuni italiani è stata completata co
 
 Il progetto è ora pronto per il deployment e l'utilizzo in produzione, con un sistema completo e professionale per la gestione delle segnalazioni comunali.
 
-<<<<<<< HEAD
 
 
 
@@ -1922,18 +1915,13 @@ Il progetto è ora pronto per il deployment e l'utilizzo in produzione, con un s
 
 
 
-=======
->>>>>>> laraxot/dev
 ---
 
 ## implementation
 
 *Consolidated from: `implementation.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Setup Iniziale
 
 ### 1. Installazione Dipendenze
@@ -2174,10 +2162,7 @@ class TemplateControllerTest extends TestCase
 
 *Consolidated from: `implementation_guide.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Setup Iniziale
 
 ### 1. Installazione Dipendenze

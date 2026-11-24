@@ -50,7 +50,4 @@ Le Rules progettuali vivono qui, nel wiki del Module **User**, e vengono caricat
 2. Aggiungi la voce in `../rules/00-TRIGGER_MAP.md`
 3. Aggiorna questo indice se la Rules e' ricorrente
 4. Committa: `docs: add rules <nome>`
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev

@@ -158,8 +158,4 @@ issues: []
 discussions: []
 **Verified by**: iFlow CLI  
 **Quality Status**: ✅ All gates passed  
-<<<<<<< HEAD
 **Deployment Ready**: ✅ Approved
-=======
-**Deployment Ready**: ✅ Approved
->>>>>>> laraxot/dev

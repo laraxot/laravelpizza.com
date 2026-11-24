@@ -114,8 +114,4 @@ updated: 2026-09-26
 qmd: "dependency injection patterns"
 issues: []
 discussions: []
-<<<<<<< HEAD
 *Documento conforme agli standard Laraxot - DRY + KISS + SOLID*
-=======
-*Documento conforme agli standard Laraxot - DRY + KISS + SOLID*
->>>>>>> laraxot/dev

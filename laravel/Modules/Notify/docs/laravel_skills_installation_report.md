@@ -160,8 +160,4 @@ discussions: []
 **Installation Attempts**: 13 repositories  
 **Successful Installations**: 1 skill  
 **Built-in Skills Available**: 14 skills  
-<<<<<<< HEAD
 **Total Skills Available**: 15 skills
-=======
-**Total Skills Available**: 15 skills
->>>>>>> laraxot/dev

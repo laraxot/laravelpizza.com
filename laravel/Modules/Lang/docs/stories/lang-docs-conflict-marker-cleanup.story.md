@@ -68,8 +68,6 @@ grep -rl '^<<<<<<< \|^=======$\|^>>>>>>> ' docs/ --include='*.md'
 ```
 
 Commit: `7402d521`.
-<<<<<<< HEAD
-=======
 
 ## Wave docs 2026-11-23
 
@@ -80,4 +78,3 @@ come vincolo di dominio Lang). Dedup chirurgica su
 
 Verifica: `/bin/grep -rIln '^<<<<<<< \|^>>>>>>> \|^=\{7\}$' laravel/Modules/Lang/docs` → vuoto.
 Status: done.
->>>>>>> laraxot/dev

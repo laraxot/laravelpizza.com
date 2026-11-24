@@ -4,11 +4,8 @@ type: runbook
 module: Notify
 status: active
 tags: [email, smtp, imap, postfix, dovecot, dns, production]
-<<<<<<< HEAD
-=======
 created: 2026-11-23
 updated: 2026-11-23
->>>>>>> laraxot/dev
 ---
 
 # Infrastruttura email del server FixCity

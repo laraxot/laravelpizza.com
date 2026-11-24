@@ -279,8 +279,4 @@ qmd: "strategies"
 issues: []
 discussions: []
 *Ultimo aggiornamento: Agosto 2025*
-<<<<<<< HEAD
 *Fonte: laravel/Modules/Lang/docs/TRANSLATION_STRATEGIES.md* 
-=======
-*Fonte: laravel/Modules/Lang/docs/TRANSLATION_STRATEGIES.md* 
->>>>>>> laraxot/dev

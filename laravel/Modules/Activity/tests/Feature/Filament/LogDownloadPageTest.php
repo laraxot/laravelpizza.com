@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Facades\File;
-<<<<<<< HEAD
 use Mockery;
-=======
->>>>>>> laraxot/dev
 use Mockery\MockInterface;
 use Modules\Activity\Tests\TestCase;
 use Modules\Xot\Contracts\UserContract;
@@ -28,10 +25,7 @@ uses(TestCase::class);
  * nel database, cosa che questi test non devono fare.
  */
 beforeEach(function (): void {
-<<<<<<< HEAD
-=======
     // Skip se Folio non ha montato /api/log-download (ambiente senza Cms/FolioVolt).
->>>>>>> laraxot/dev
     $uris = [];
     foreach (app('router')->getRoutes()->getRoutes() as $route) {
         $uris[] = $route->uri();
@@ -41,10 +35,7 @@ beforeEach(function (): void {
         test()->markTestSkipped('Folio /api/log-download non montato (Cms/FolioVolt assente in PTVX)');
     }
 
-<<<<<<< HEAD
     /** @var TestCase $this */
-=======
->>>>>>> laraxot/dev
     $this->originalStorage = storage_path();
     $this->tempStorage = $this->originalStorage.'/framework/testing/log-download-page-'.uniqid('', true);
     File::makeDirectory($this->tempStorage.'/logs/reports/252', 0777, true);
@@ -55,10 +46,7 @@ beforeEach(function (): void {
     File::put($this->originalStorage.'/framework/testing/segreto-pagina.log', 'segreto');
 
     $this->statusOf = function (string $url): int {
-<<<<<<< HEAD
         /** @var TestCase $this */
-=======
->>>>>>> laraxot/dev
         try {
             $response = $this->withoutExceptionHandling()->get($url);
 
@@ -99,20 +87,14 @@ it('answers 403 to a guest and never serves the file', function (): void {
 });
 
 it('answers 403 to a logged in user without role and without permission', function (): void {
-<<<<<<< HEAD
     /** @var TestCase $this */
-=======
->>>>>>> laraxot/dev
     $this->actingAs(($this->user)(false, false));
 
     expect(($this->statusOf)('/api/log-download?file=laravel.log'))->toBe(403);
 });
 
 it('streams the requested file to a super-admin', function (): void {
-<<<<<<< HEAD
     /** @var TestCase $this */
-=======
->>>>>>> laraxot/dev
     $response = $this->actingAs(($this->user)(true))->get('/api/log-download?file=reports/252/daily.log');
 
     $response->assertOk();
@@ -128,20 +110,14 @@ it('streams the requested file to a super-admin', function (): void {
 });
 
 it('streams the requested file to a user with the log.viewAny permission', function (): void {
-<<<<<<< HEAD
     /** @var TestCase $this */
-=======
->>>>>>> laraxot/dev
     $this->actingAs(($this->user)(false, true))
         ->get('/api/log-download?file=laravel.log')
         ->assertOk();
 });
 
 it('answers 404 to a file outside the log directory, missing, or a request without a file', function (): void {
-<<<<<<< HEAD
     /** @var TestCase $this */
-=======
->>>>>>> laraxot/dev
     $this->actingAs(($this->user)(true));
 
     foreach ([

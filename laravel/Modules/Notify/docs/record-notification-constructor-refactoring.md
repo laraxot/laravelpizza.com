@@ -185,8 +185,4 @@ qmd: "record notification constructor refactoring"
 issues: []
 discussions: []
 **Author**: iFlow CLI  
-<<<<<<< HEAD
 **Review Status**: Automated Quality Check Passed
-=======
-**Review Status**: Automated Quality Check Passed
->>>>>>> laraxot/dev

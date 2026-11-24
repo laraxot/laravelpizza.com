@@ -281,11 +281,8 @@ php phpmd.phar Modules/UI/database/factories text cleancode,codesize,controversi
 
 ## 🔗 Collegamenti
 
-<<<<<<< HEAD
-=======
 - [← UI Module README](../readme.md)
 
->>>>>>> laraxot/dev
 - [← UI Module README](../README.md)
 - [← Components Documentation](./components.md)
 - [← Project Roadmap](../../../docs/project-analysis-and-roadmap.md)

@@ -41,10 +41,7 @@ discussions: []
     public function updatedSearch() { $this->resetPage(); }
 </code-snippet>
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## Testing Livewire
 
 <code-snippet name="Example Livewire component test" lang="php">
@@ -56,10 +53,7 @@ discussions: []
         ->assertStatus(200);
 </code-snippet>
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
     <code-snippet name="Testing a Livewire component exists within a page" lang="php">
         $this->get('/posts/create')
         ->assertSeeLivewire(CreatePost::class);

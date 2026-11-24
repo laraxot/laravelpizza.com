@@ -6,14 +6,7 @@ namespace Modules\Notify\Tests;
 
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 use Modules\Xot\Tests\XotBaseTestCase;
->>>>>>> laraxot/dev
-=======
-use Modules\Xot\Tests\XotBaseTestCase;
->>>>>>> laraxot/dev
 use Illuminate\Support\Facades\DB;
 use Mockery;
 use Mockery\Expectation;
@@ -23,13 +16,6 @@ use Modules\Notify\Models\NotifyTheme;
 use Modules\Notify\Models\NotifyThemeable;
 use Modules\Notify\Providers\NotifyServiceProvider;
 use Modules\Xot\Tests\XotBasePest;
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Modules\Xot\Tests\XotBaseTestCase;
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
 use ReflectionProperty;

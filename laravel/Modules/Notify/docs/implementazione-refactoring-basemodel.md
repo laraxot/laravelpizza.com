@@ -556,7 +556,4 @@ Il refactoring BaseModel è un **SUCCESSO TOTALE**:
 **MU-UU-UU! 🐄✨**
 
 *La Super Mucca approva questo refactoring!*
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev

@@ -2,11 +2,8 @@
 qmd: "On Demand Pattern"
 issues: []
 discussions: []
-<<<<<<< HEAD
-=======
 title: "On-Demand Pattern — Module Lang"
 
->>>>>>> laraxot/dev
 title: "On Demand Pattern"
 type: documentation
 created: 2026-05-11
@@ -81,11 +78,8 @@ qmd search "<topic>"
 
 ## Regole Critiche per Module
 
-<<<<<<< HEAD
-=======
 1. **Nessun bootstrap pesante** — Non elencare rules in agents.md o CLAUDE.md
 
->>>>>>> laraxot/dev
 1. **Nessun bootstrap pesante** — Non elencare rules in AGENTS.md o CLAUDE.md
 2. **Carica only what you need** — Ogni task carica max 3-5 file
 3. **Mantieni la wiki aggiornata** — Dopo ogni task, aggiorna ./laravel/Modules/Lang/docs/wiki/log.md

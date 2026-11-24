@@ -68,10 +68,6 @@ File cancellati, recuperabili da `HEAD` del repo `Modules/UI`: `git show HEAD:ap
 - Il binding dei Contract `UI\Contracts\MapServiceContract` / `GeocodingServiceContract` non esiste. Non l'ho creato
   (nessun consumatore): se Geo li dovesse usare, il fallback va registrato nel provider UI con `bindIf`.
 
-<<<<<<< HEAD
-## Aperto
-
-=======
 ## Boy scout 2026-11-23
 
 Cinque file `app/Services/` riapparsi da merge → stub SUPERSEDED (no-delete). Canonici
@@ -80,6 +76,5 @@ invariati (`AssetAction`, `Adapters/Map/Null*`). Nessun caller da migrare.
 ## Aperto
 
 - Auth per cancellare i residui `app/Services/` (+ eventuali `.bak`).
->>>>>>> laraxot/dev
 - I due Contract `UI\Contracts\*ServiceContract` e le implementazioni null non hanno consumatori (Geo ha i propri
   `Geo\Contracts\GeocodingServiceContract`). Valutare se eliminarli insieme (cluster Geo, onda 4).

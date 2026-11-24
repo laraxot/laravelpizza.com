@@ -10,8 +10,6 @@ related:
 ---
 
 > Questo file è stato rinominato in [contracts-and-lang-backup-archival.md](contracts-and-lang-backup-archival.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-<<<<<<< HEAD
-=======
 
 
 ---
@@ -115,4 +113,3 @@ cartelle `archive.bak`.
 
 Questi tre punti sono pre-esistenti all'intervento e vanno segnalati/risolti a livello
 di infrastruttura, non di codice del modulo User.
->>>>>>> laraxot/dev

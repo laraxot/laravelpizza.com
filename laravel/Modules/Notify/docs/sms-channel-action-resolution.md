@@ -102,8 +102,4 @@ discussions: []
 - Logica nel canale/factory: **85% pro, 15% contro**
 - Logica nel DTO: **20% pro, 80% contro**
 
-<<<<<<< HEAD
 **Motivazione:** Separation of Concerns, testabilità, estendibilità, aderenza alle best practice Laravel e DDD. 
-=======
-**Motivazione:** Separation of Concerns, testabilità, estendibilità, aderenza alle best practice Laravel e DDD.
->>>>>>> laraxot/dev

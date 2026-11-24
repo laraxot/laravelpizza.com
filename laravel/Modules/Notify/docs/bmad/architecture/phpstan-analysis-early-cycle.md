@@ -1,12 +1,8 @@
 ---
-<<<<<<< HEAD
-superseded_by: ../../phpstan-analysis.md
-=======
 title: "phpstan analysis early cycle"
 superseded_by: ../../phpstan-analysis.md
 created: 2026-11-23
 updated: 2026-11-23
->>>>>>> laraxot/dev
 ---
 
 # Analisi PHPStan Completa - Gennaio 2025

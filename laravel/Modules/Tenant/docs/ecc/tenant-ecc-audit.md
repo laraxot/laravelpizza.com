@@ -73,7 +73,6 @@ Azioni al posto dei service, base Xot, nessuna label hardcoded, array PHP una ch
 
 - [00-index](./00-index.md)
 - [BMAD audit](../bmad/audit.md)
-<<<<<<< .merge_file_wPsvcd
 qmd: "ECC audit Tenant php-reviewer security-reviewer database-reviewer architect tenant isolation Host TrustHosts policy password"
 ---
 
@@ -98,5 +97,3 @@ Mappa finding → capability ECC. Dettaglio: [../bmad/audits/tenant-audit.md](..
 ## Regole PTVX applicate
 
 Azioni al posto dei service, base Xot, nessuna label hardcoded, array PHP una chiave per riga, dati sacri (solo migrate additivo).
-=======
->>>>>>> .merge_file_PtUj7g

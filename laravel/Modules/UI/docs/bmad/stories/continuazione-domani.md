@@ -2,10 +2,6 @@
 title: "Continuazione BMAD — Domani (regressione marker docs/architecture.md + Geo boundary InteractiveMap)"
 
 title: "Continuazione BMAD: Domani (regressione marker docs/architecture.md + Geo boundary InteractiveMap)"
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
 type: module-fix
 scope: UI
 epic: "root-hygiene-conflict-markers"
@@ -49,10 +45,6 @@ updated: 2026-10-07
 tags: [docs, ui, bmad]
 qmd: "ui   continuazione domani ui"
 ---
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
 
 # UI — Continuazione Domani
 
@@ -72,7 +64,3 @@ qmd: "ui   continuazione domani ui"
 4. Segnali minori in `app/` (pochi, citati per intero, non un dump): 2 `TODO` reali (`app/Filament/Widgets/UserCalendarWidget.php:89`, `app/Actions/Panel/ApplyCalendarToPanelAction.php:22` — entrambi rimandano a un pacchetto FullCalendar/Filament v4 non ancora disponibile, non azionabili subito) e 2 file con `dddx(...)` commentato (debug residuo in `app/Filament/Widgets/OverlookWidget.php:51`, `app/Filament/Blocks/Slider.php:20,23` — rimozione a costo zero quando si tocca quel file).
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev

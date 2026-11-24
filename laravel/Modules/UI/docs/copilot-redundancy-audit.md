@@ -3,10 +3,7 @@ title: "copilot redundancy audit"
 qmd: "ui copilot redundancy audit md"
 type: note
 tags: [documentation]
-<<<<<<< HEAD
-=======
 created: 2026-05-25
->>>>>>> laraxot/dev
 ---
 
 Copilot Redundancy Audit — 2026-05-25

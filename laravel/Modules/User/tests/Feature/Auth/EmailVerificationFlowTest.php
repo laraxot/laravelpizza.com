@@ -8,10 +8,7 @@ use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\URL;
 use Modules\User\Database\Factories\UserFactory;
-<<<<<<< HEAD
 use Modules\User\Http\Middleware\EnsureVerifiedIdentity;
-=======
->>>>>>> laraxot/dev
 use Modules\User\Tests\TestCase;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use PHPUnit\Framework\Assert;

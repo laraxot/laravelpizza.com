@@ -57,12 +57,9 @@ issues: []
 ## Contesto
 Fatti e vincoli che hanno reso necessaria la scelta (misure, norme, policy, incidenti).
 
-<<<<<<< HEAD
-=======
 ## Driver
 Facoltativa: vincoli, rischi e obiettivi che pesano sulla scelta.
 
->>>>>>> laraxot/dev
 ## Decisione
 Cosa si fa, in concreto, e dove sta nel codice.
 

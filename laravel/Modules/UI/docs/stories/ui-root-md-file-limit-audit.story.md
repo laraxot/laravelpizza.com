@@ -24,12 +24,9 @@ Il 25° file (`custom-theme.md`) differiva dalla copia raw solo per un H1 ridond
 
 Root keepers (6, invariati salvo CHANGELOG.md):
 - `README.md`
-<<<<<<< HEAD
-=======
 - `ARCHITECTURE.md`
 - `TESTING.md`
 
->>>>>>> laraxot/dev
 - `architecture.md`
 - `testing.md`
 - `PHILOSOPHY.md`
@@ -45,29 +42,22 @@ Per gli altri 25, poiché il contenuto era già duplicato verbatim (o quasi) in 
 | api.md | docs/raw/root-import/api-1.md | docs/raw/root-import/api.md | identico |
 | blocks.md | docs/raw/root-import/blocks-1.md | docs/raw/root-import/blocks.md | identico |
 | carousel-slider.md | docs/raw/root-import/carousel-slider-1.md | docs/raw/root-import/carousel-slider.md | identico |
-<<<<<<< HEAD
-| CHANGELOG.md | docs/raw/root-import/changelog-1.md | docs/raw/root-import/CHANGELOG.md | identico (+ fuso in CHANGELOG.md, vedi sotto) |
-=======
 | CHANGELOG.md | docs/raw/root-import/changelog.md | docs/raw/root-import/CHANGELOG.md | identico (+ fuso in CHANGELOG.md, vedi sotto) |
 
 | CHANGELOG.md | docs/raw/root-import/changelog-1.md | docs/raw/root-import/CHANGELOG.md | identico (+ fuso in CHANGELOG.md, vedi sotto) |
 
 | changelog.md | docs/raw/root-import/changelog-1.md | docs/raw/root-import/changelog.md | identico (+ fuso in CHANGELOG.md, vedi sotto) |
->>>>>>> laraxot/dev
 | chunk.md | docs/raw/root-import/chunk-1.md | docs/raw/root-import/chunk.md | identico |
 | ci.md | docs/raw/root-import/ci-1.md | docs/raw/root-import/ci.md | identico |
 | custom-firm-fields.md | docs/raw/root-import/custom-firm-fields-1.md | docs/raw/root-import/custom-firm-fields.md | identico |
 | custom-theme.md | docs/raw/root-import/custom-theme-1.md | docs/raw/root-import/custom-theme.md | quasi identico (solo H1+commento ridondanti in root) |
 | eav.md | docs/raw/root-import/eav-1.md | docs/raw/root-import/eav.md | identico |
 | effetcts.md | docs/raw/root-import/effetcts-1.md | docs/raw/root-import/effetcts.md | identico |
-<<<<<<< HEAD
-=======
 | filament.md | docs/raw/root-import/filament.md | docs/raw/root-import/filament.md | identico |
 | flip-cards.md | docs/raw/root-import/flip-cards-1.md | docs/raw/root-import/flip-cards.md | identico |
 | global-search.md | docs/raw/root-import/global-search-1.md | docs/raw/root-import/global-search.md | identico |
 | links.md | docs/raw/root-import/links.md | docs/raw/root-import/links.md | identico |
 
->>>>>>> laraxot/dev
 | filament.md | docs/raw/root-import/filament-1.md | docs/raw/root-import/filament.md | identico |
 | flip-cards.md | docs/raw/root-import/flip-cards-1.md | docs/raw/root-import/flip-cards.md | identico |
 | global-search.md | docs/raw/root-import/global-search-1.md | docs/raw/root-import/global-search.md | identico |
@@ -79,20 +69,13 @@ Per gli altri 25, poiché il contenuto era già duplicato verbatim (o quasi) in 
 | qrcode.md | docs/raw/root-import/qrcode-1.md | docs/raw/root-import/qrcode.md | identico |
 | ratings.md | docs/raw/root-import/ratings-1.md | docs/raw/root-import/ratings.md | identico |
 | tailwind-themes.md | docs/raw/root-import/tailwind-themes-1.md | docs/raw/root-import/tailwind-themes.md | identico |
-<<<<<<< HEAD
-=======
 | test.md | docs/raw/root-import/test.md | docs/raw/root-import/test.md | identico (entrambi contenuto minimale) |
 
->>>>>>> laraxot/dev
 | test.md | docs/raw/root-import/test-1.md | docs/raw/root-import/test.md | identico (entrambi contenuto minimale) |
 | theme.md | docs/raw/root-import/theme-1.md | docs/raw/root-import/theme.md | identico |
 | ubuntu.md | docs/raw/root-import/ubuntu-1.md | docs/raw/root-import/ubuntu.md | identico |
 | widgets.md | docs/raw/root-import/widgets-1.md | docs/raw/root-import/widgets.md | identico |
 
-<<<<<<< HEAD
-## Fusione CHANGELOG.md → CHANGELOG.md
-
-=======
 ## Fusione changelog.md → CHANGELOG.md
 
 `changelog.md` (root, minuscolo) conteneva solo: "Tutte le variazioni importanti di UI saranno generate automaticamente da semantic-release." Contenuto non presente in `CHANGELOG.md` (maiuscolo, keeper). Aggiunta come nota citata subito dopo il titolo di `CHANGELOG.md`, poi rimosso `changelog.md` dalla root (il contenuto originale resta comunque anche in `docs/raw/root-import/changelog-1.md`).
@@ -100,7 +83,6 @@ Per gli altri 25, poiché il contenuto era già duplicato verbatim (o quasi) in 
 
 `CHANGELOG.md` (root, minuscolo) conteneva solo: "Tutte le variazioni importanti di UI saranno generate automaticamente da semantic-release." Contenuto non presente in `CHANGELOG.md` (maiuscolo, keeper). Aggiunta come nota citata subito dopo il titolo di `CHANGELOG.md`, poi rimosso `CHANGELOG.md` dalla root (il contenuto originale resta comunque anche in `docs/raw/root-import/changelog.md`).
 
->>>>>>> laraxot/dev
 `CHANGELOG.md` (root, minuscolo) conteneva solo: "Tutte le variazioni importanti di UI saranno generate automaticamente da semantic-release." Contenuto non presente in `CHANGELOG.md` (maiuscolo, keeper). Aggiunta come nota citata subito dopo il titolo di `CHANGELOG.md`, poi rimosso `CHANGELOG.md` dalla root (il contenuto originale resta comunque anche in `docs/raw/root-import/changelog-1.md`).
 
 ## Verifica finale
@@ -137,11 +119,8 @@ Trovati due file untracked pre-esistenti (non creati da questo task, timestamp 2
 ## Best practices
 
 - Prima di spostare un file duplicato, verificare sempre con `diff -q` se una copia identica esiste già altrove nell'albero `docs/` — evita di creare una terza copia in un repo che ha già centinaia di duplicati noti.
-<<<<<<< HEAD
-=======
 - Escludere sempre `git add -A` quando ci sono file untracked non correlati nella working tree (qui `docs/GETTING_STARTED.md` e `docs/TESTING.md`): usare `git add <path>` esplicito.
 
->>>>>>> laraxot/dev
 - Escludere sempre `git add -A` quando ci sono file untracked non correlati nella working tree (qui `docs/GETTING_STARTED.md` e `docs/testing.md`): usare `git add <path>` esplicito.
 
 ## Bad practices

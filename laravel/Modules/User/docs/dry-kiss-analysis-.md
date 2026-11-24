@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Dry Kiss Analysis"
 module: User
@@ -8,7 +6,6 @@ status: active
 updated: '2026-11-23'
 ---
 
->>>>>>> laraxot/dev
 # DRY & KISS Analysis - Modulo User
 
 **Data:** 15 Ottobre 2025  
@@ -134,7 +131,4 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
 ---
 
 **Conclusione:** Modulo User ha architettura solida, DRY eccellente, e complessità giustificata.
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev

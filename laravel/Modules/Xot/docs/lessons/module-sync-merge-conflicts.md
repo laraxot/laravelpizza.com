@@ -58,7 +58,6 @@ Tolti i marcatori, la CI è ripartita e ha mostrato i problemi che i conflitti n
 
 Regola in più: dopo un sync, **migrare un database vuoto** (non solo quello locale, già migrato) e aprire tutte le
 pagine admin. Un database già migrato nasconde l'ordine sbagliato delle migrazioni.
-<<<<<<< HEAD
 
 ## Regressioni silenziose: il sync del 21/11 non lascia marcatori (24/11/2026)
 
@@ -97,5 +96,3 @@ usate dalle viste e assenti da `lang/it` o `lang/en`.
 Trappole di shell trovate lavorando: in zsh `"$B:laravel/x"` legge `:l` come modificatore (minuscole), quindi scrivere
 `"${B}:laravel/x"`; `git diff <commit>` ignora i file non tracciati, quindi un file ripristinato ma ancora non
 aggiunto compare come `D`.
-=======
->>>>>>> laraxot/dev

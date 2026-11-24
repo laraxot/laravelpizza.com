@@ -241,8 +241,4 @@ $action->onQueue('whatsapp')->execute($data);
 
 ---
 
-<<<<<<< HEAD
 **Seguendo questo standard, l'invio di messaggi WhatsApp sarà sempre coerente, sicuro, testabile e facilmente estendibile.** 
-=======
-**Seguendo questo standard, l'invio di messaggi WhatsApp sarà sempre coerente, sicuro, testabile e facilmente estendibile.**
->>>>>>> laraxot/dev

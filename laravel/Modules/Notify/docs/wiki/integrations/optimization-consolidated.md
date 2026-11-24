@@ -170,10 +170,7 @@ docs/
 
 *Consolidated from: `optimization-analysis.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## 🎯 Principi Applicati: DRY + KISS + SOLID + ROBUST + Laraxot
 
 ### 📊 Stato Attuale
@@ -241,20 +238,14 @@ class NotificationTemplateCache
 ---
 *Stato: 🟡 Funzionale ma Necessita Reliability Enhancement*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ---
 
 ## optimization-recommendations-1
 
 *Consolidated from: `optimization-recommendations-1.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## 🎯 Stato Attuale e Problemi Critici
 
 ### ❌ PROBLEMI CRITICI IDENTIFICATI
@@ -745,10 +736,7 @@ php artisan notify:benchmark
 
 *Consolidated from: `optimization-recommendations.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## 🎯 Stato Attuale e Problemi Critici
 
 ### ❌ PROBLEMI CRITICI IDENTIFICATI
@@ -1210,10 +1198,7 @@ php artisan notify:benchmark
 
 *Consolidated from: `optimization.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## 🎯 Principi Applicati: DRY + KISS + SOLID + ROBUST + Laraxot
 
 ### 📊 Stato Attuale
@@ -1281,20 +1266,14 @@ class NotificationTemplateCache
 ---
 *Stato: 🟡 Funzionale ma Necessita Reliability Enhancement*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ---
 
 ## optimization_analysis
 
 *Consolidated from: `optimization_analysis.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 ## current state analysis
 - **total md files**: 644
 - **significant duplication**: multiple notification system documentation versions
@@ -1409,10 +1388,7 @@ docs/
 
 *Consolidated from: `optimization_recommendations.md`*
 
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 > ⚠️ **Historical Document**: Questo documento contiene riferimenti a progetti legacy (<nome progetto>) non più presenti nel codebase. Le raccomandazioni di ottimizzazione rimangono valide, ma adattare al contesto del progetto corrente (ptvx).
 
 ## 🎯 Stato Attuale e Problemi Critici

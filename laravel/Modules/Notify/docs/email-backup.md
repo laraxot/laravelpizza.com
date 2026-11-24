@@ -13,11 +13,7 @@ issues: []
 discussions: []
 ---
 
-<<<<<<< HEAD
 # Sistema Backup Email 
-=======
-# Sistema Backup Email
->>>>>>> laraxot/dev
 
 ## Panoramica
 
@@ -64,11 +60,7 @@ class MailTemplateBackup
         }
 
         $data = json_decode(Storage::get($path), true);
-<<<<<<< HEAD
         
-=======
-
->>>>>>> laraxot/dev
         return MailTemplate::updateOrCreate(
             ['id' => $data['id']],
             [
@@ -197,11 +189,7 @@ class MailNotificationBackup
         }
 
         $data = json_decode(Storage::get($path), true);
-<<<<<<< HEAD
         
-=======
-
->>>>>>> laraxot/dev
         return MailNotification::updateOrCreate(
             ['id' => $data['id']],
             [
@@ -331,11 +319,7 @@ class MailQueueBackup
         }
 
         $data = json_decode(Storage::get($path), true);
-<<<<<<< HEAD
         
-=======
-
->>>>>>> laraxot/dev
         return MailQueue::updateOrCreate(
             ['id' => $data['id']],
             [
@@ -665,9 +649,6 @@ class MailBackupDebugger
 ## Vedi Anche
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
-<<<<<<< HEAD
-- [Laravel Commands](https://laravel.com/docs/artisan) 
-=======
 - [Laravel Commands](https://laravel.com/docs/artisan)
 - [Laravel Storage](https://laravel.com/project_docs/storage)
 - [Laravel Encryption](https://laravel.com/project_docs/encryption)
@@ -699,4 +680,3 @@ class MailBackupDebugger
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
->>>>>>> laraxot/dev

@@ -47,11 +47,7 @@ describe('Save Json Array Action', function () use (&$tempDir): void {
 
         Assert::assertTrue($result);
         Assert::assertSame($data, json_decode(file_get_contents($path), true));
-<<<<<<< HEAD
-    });
-=======
     })->group('XOT-SAVE-JSON-INV-1');
->>>>>>> laraxot/dev
 
     test('saves empty array', function () use (&$tempDir): void {
         $path = $tempDir.'/empty.json';
@@ -59,9 +55,5 @@ describe('Save Json Array Action', function () use (&$tempDir): void {
 
         Assert::assertTrue($result);
         Assert::assertSame([], json_decode(file_get_contents($path), true));
-<<<<<<< HEAD
-    });
-=======
     })->group('XOT-SAVE-JSON-INV-1');
->>>>>>> laraxot/dev
 });

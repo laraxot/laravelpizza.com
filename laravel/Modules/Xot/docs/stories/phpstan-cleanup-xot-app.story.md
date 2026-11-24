@@ -61,8 +61,6 @@ Issue: TODO (gh non installato su questa macchina)
 Discussion: TODO
 
 Vedi [dev](./2026-10-06-phpstan-cleanup-xot-app.dev.md).
-<<<<<<< HEAD
-=======
 
 ## Rimozione `@phpstan-ignore` residue in Xot (seconda tornata)
 
@@ -100,4 +98,3 @@ Duplicati docblock+inline: se si resta su (c), tenerne uno solo. Cancellare o sp
 - `phpstan analyse Modules/Xot` (cartella, cache attiva): 0 errori prima (con le due annotazioni) e 0 dopo (senza); `phpstan.neon` invariato. Fra la prima e l'ultima corsa il bootstrap e' stato bloccato piu' volte da marcatori di conflitto di merge di altri agenti (Employee, Notify, Rating, User): corse ripetute a file puliti.
 - Il fix e' gia' in `bc975dae5` (commit di un altro agente).
 - Non verificato: `analyse Modules` intero; il fallimento preesistente di `UserFilamentSchemaCoverageTest`.
->>>>>>> laraxot/dev

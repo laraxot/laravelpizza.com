@@ -17,12 +17,9 @@ related:
   - ../../../Gdpr/docs/stories/dcp-454-terze-parti-prima-del-consenso-gravatar-e-openstreetmap.story.md
   - ../../app/Actions/Osm/FetchOsmTileAction.php
   - ../../app/Actions/Osm/QueryNominatimAction.php
-<<<<<<< HEAD
-=======
   - ../contracts/fetch-osm-tile-action.md
   - ../contracts/query-nominatim-action.md
   - ../../tests/Feature/OsmProxyTest.php
->>>>>>> laraxot/dev
 ---
 
 # ADR: tile e geocoding OpenStreetMap passano dal nostro server
@@ -67,8 +64,6 @@ related:
 - Gli strati scelti esplicitamente dal cittadino (satellitare e topografico Esri, umanitario OSM France) restano diretti: partono
   solo per una sua scelta, e informativa e cookie policy lo dicono.
 - Da fare se il traffico cresce: pulizia periodica della cache dei tile piu' vecchi; valutare un tile server proprio.
-<<<<<<< HEAD
-=======
 
 ## Verifica
 
@@ -80,4 +75,3 @@ related:
 - Solo revisione: che i layout che vogliono zero terze parti dichiarino `data-geo-tile-url` / `data-geo-nominatim-url` su
   `<html>` (lettura in `resources/js/components/map/endpoints.js`) e che nessun componente JS chiami Nominatim mentre si
   digita. Nessun test controlla oggi le richieste del browser.
->>>>>>> laraxot/dev

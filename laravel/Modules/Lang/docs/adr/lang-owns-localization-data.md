@@ -1,9 +1,6 @@
 ---
-<<<<<<< HEAD
-=======
 title: "Lang possiede i dati di localizzazione"
 type: decision
->>>>>>> laraxot/dev
 status: accepted
 module: Lang
 ---
@@ -45,8 +42,6 @@ Le lingue restano coerenti tra superfici; una nuova chiave deve avere una sorgen
 ## Conferma
 
 Verificare risoluzione locale, fallback e cataloghi del modulo Lang.
-<<<<<<< HEAD
-=======
 
 ## Verifica
 
@@ -56,4 +51,3 @@ Verificare risoluzione locale, fallback e cataloghi del modulo Lang.
   configurazione del modulo.
 - Nessun test vieta traduzioni duplicate nel tema: la parte «il tema non duplica traduzioni di dominio» è solo
   revisione (da coprire con un test source-level).
->>>>>>> laraxot/dev

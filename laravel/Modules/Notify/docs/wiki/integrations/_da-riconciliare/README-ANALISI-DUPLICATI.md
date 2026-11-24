@@ -29,8 +29,6 @@ Questo è il documento PRINCIPALE con:
 - ✅ Piano di implementazione dettagliato
 
 ### Copie nei Moduli
-<<<<<<< HEAD
-=======
 Ogni modulo ha una copia in `Modules/{ModuleName}/docs/METODI_DUPLICATI_ANALISI.md`:
 
 - `Modules/AI/docs/METODI_DUPLICATI_ANALISI.md`
@@ -52,7 +50,6 @@ Ogni modulo ha una copia in `Modules/{ModuleName}/docs/METODI_DUPLICATI_ANALISI.
 - `Modules/UI/docs/METODI_DUPLICATI_ANALISI.md`
 - `Modules/User/docs/METODI_DUPLICATI_ANALISI.md`
 - `Modules/Xot/docs/METODI_DUPLICATI_ANALISI.md`
->>>>>>> laraxot/dev
 Ogni modulo ha una copia in `Modules/{ModuleName}/docs/metodi_duplicati_analisi.md`:
 
 - `Modules/AI/docs/metodi_duplicati_analisi.md`

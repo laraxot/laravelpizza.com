@@ -388,8 +388,5 @@ discussions: []
 **Prossima Revisione**: 2025-02-01  
 **Maintainer**: Development Team  
 **Status**: 🚧 In Progress (40% completato)
-<<<<<<< HEAD
 
 
-=======
->>>>>>> laraxot/dev

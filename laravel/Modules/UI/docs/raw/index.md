@@ -27,11 +27,8 @@ Il layer raw per questo modulo/tema è **l'intera cartella `docs/`** (esclusa `d
 
 ## Schema di riferimento
 
-<<<<<<< HEAD
-=======
 → `docs/.schema/WIKI_SCHEMA.md` (root progetto)
 
->>>>>>> laraxot/dev
 → `docs/.schema/wiki_schema.md` (root progetto)
 → `docs/project/llm-wiki-module-adoption.md` (guida per moduli/temi)
 

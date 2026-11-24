@@ -8,8 +8,6 @@ tags: [documentation]
 # Modulo UI
 
 ## Informazioni Generali
-<<<<<<< HEAD
-=======
 - **Nome**: `laraxot/module_ui_fila3`
 - **Descrizione**: Modulo per la gestione dell'interfaccia utente
 - **Namespace**: `Modules\UI`
@@ -17,7 +15,6 @@ tags: [documentation]
 
 - **Repository**: https://github.com/laraxot/module_ui_fila3.git
 
->>>>>>> laraxot/dev
 - **Nome**: `laraxot/module_ui_fila5`
 - **Descrizione**: Modulo per la gestione dell'interfaccia utente
 - **Namespace**: `Modules\UI`
@@ -129,8 +126,4 @@ composer format        # Formatta il codice
 - File upload
 
 ## Changelog
-<<<<<<< HEAD
-Le modifiche vengono tracciate nel repository GitHub.
-=======
 Le modifiche vengono tracciate nel repository GitHub. 
->>>>>>> laraxot/dev

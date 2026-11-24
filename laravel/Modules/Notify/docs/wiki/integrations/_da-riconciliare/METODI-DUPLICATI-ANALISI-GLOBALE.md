@@ -78,8 +78,6 @@ updated: 2026-11-23
 | App | 72 | 69279.0% | 773 | 148h | [📄 Vedi](Modules/App/docs/metodi_duplicati_analisi.md) |
 | <nome progetto> | 72 | 69279.0% | 773 | 148h | [📄 Vedi](Modules/<nome progetto>/docs/metodi_duplicati_analisi.md) |
 | Seo | 1 | 55.0% | 3 | 3h | [📄 Vedi](Modules/Seo/docs/metodi_duplicati_analisi.md) |
-<<<<<<< HEAD
-=======
 | Comment | 3 | 517275.0% | 126 | 0h | [📄 Vedi](Modules/Comment/docs/metodi_duplicati_analisi.md) |
 | Gdpr | 3 | 517275.0% | 126 | 0h | [📄 Vedi](Modules/Gdpr/docs/metodi_duplicati_analisi.md) |
 | Job | 30 | 244452.3% | 708 | 31h | [📄 Vedi](Modules/Job/docs/metodi_duplicati_analisi.md) |
@@ -99,7 +97,6 @@ updated: 2026-11-23
 | App | 72 | 69279.0% | 773 | 148h | [📄 Vedi](Modules/App/docs/metodi_duplicati_analisi.md) |
 | <nome progetto> | 72 | 69279.0% | 773 | 148h | [📄 Vedi](Modules/<nome progetto>/docs/metodi_duplicati_analisi.md) |
 | Seo | 1 | 55.0% | 3 | 3h | [📄 Vedi](Modules/Seo/docs/metodi_duplicati_analisi.md) |
->>>>>>> laraxot/dev
 
 ## 🎨 Distribuzione Strategie
 

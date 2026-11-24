@@ -2,11 +2,8 @@
 qmd: "Project Structure"
 issues: []
 discussions: []
-<<<<<<< HEAD
-=======
 title: "Project Structure — Module Lang"
 
->>>>>>> laraxot/dev
 title: "Project Structure"
 type: documentation
 created: 2026-05-11
@@ -40,14 +37,11 @@ tags: [structure, architecture, module]
 │   │   └── *.md
 │   ├── decisions/                # Architecture decision records
 │   └── troubleshooting/          # Bug fixes, error resolutions
-<<<<<<< HEAD
-=======
 ├── ON-DEMAND-PATTERN.md          # 🌟 QUESTO FILE — Pattern on-demand
 ├── QMD-SETUP.md                  # Configurazione QMD
 ├── PERFORMANCE-OPTIMIZATION.md    # Metriche e best practice
 ├── ARCHITECTURE.md               # (opzionale) Architettura modulo
 
->>>>>>> laraxot/dev
 ├── on-demand-pattern.md          # 🌟 QUESTO FILE — Pattern on-demand
 ├── qmd-setup.md                  # Configurazione QMD
 ├── performance-optimization.md    # Metriche e best practice
@@ -63,11 +57,8 @@ tags: [structure, architecture, module]
 | `wiki/log.md` | Storico attività (ingest/query/lint) |
 | `wiki/rules/` | Regole + trigger map locale |
 | `wiki/concepts/` | Concetti specifici del modulo |
-<<<<<<< HEAD
-=======
 | `ON-DEMAND-PATTERN.md` | **Leggi prima** — pattern da seguire |
 
->>>>>>> laraxot/dev
 | `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
 
 ## Convenzioni
