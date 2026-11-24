@@ -10,7 +10,7 @@
 
 ## 🎯 Missione del Progetto
 
-**Questo è una CONVERSIONE e MIGLIORAMENTO di https://laravelpizza.com/**
+**Questa è una CONVERSIONE e MIGLIORAMENTO di https://laravelpizza.com/**
 
 Non stiamo solo replicando - stiamo **ELEVANDO** il sito originale per renderlo:
 - ✨ **PIÙ COOL** - Design premium e moderno che cattura l'attenzione
@@ -61,7 +61,7 @@ Benvenuto nella base ufficiale di **LaravelPizza.com**: qui costruiamo un ecosis
 
 ## 🚀 Perché questo repo vale il tuo tempo (e le tue PR)
 
- - **Tema frontoffice enhanced**: stiamo prendendo `laravelpizza.com` e lo stiamo **migliorando** dentro il **Meetup Theme**
+- **Tema frontoffice enhanced**: stiamo prendendo `laravelpizza.com` e lo stiamo **migliorando** dentro il **Meetup Theme**
   (home, events, menu, pagina contatti, auth, ecc.), con **Folio + Volt** come architettura obbligatoria.
   **Non è una copia** - è una versione premium, più cool, più coinvolgente.
 - **Architettura Laraxot**: un vero "framework nel framework":
@@ -189,7 +189,7 @@ Maintainer: playbook candidatura Claude Ultra OSS in [docs/claude-for-open-sourc
 
 ## 🍕 Perché il nome "LaravelPizza"?
 
-Perché l'idea è semplice: **mettere insieme le due cose che rendono felice il 90% degli sviluppatori**:
+Perché l'idea è semplice: **mettere insieme le tre cose che rendono felice il 90% degli sviluppatori**:
 
 - scrivere buon codice Laravel,
 - mangiare una pizza in compagnia,
