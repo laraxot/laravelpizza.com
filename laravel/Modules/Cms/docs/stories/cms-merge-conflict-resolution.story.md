@@ -1,6 +1,7 @@
 ---
 title: "cms merge conflict resolution.story"
 type: note
+<<<<<<< .merge_file_aknW8A
 <<<<<<< .merge_file_QBwZGR
 <<<<<<< .merge_file_7mPt9d
 tags: [documentation, coordinamento]
@@ -9,6 +10,8 @@ updated: 2026-11-23
 =======
 =======
 >>>>>>> .merge_file_0tCFf8
+=======
+>>>>>>> .merge_file_avOJKr
 <<<<<<< HEAD
 tags: [documentation]
 created: 2026-09-26
@@ -18,16 +21,20 @@ tags: [documentation, coordinamento]
 created: 2026-09-26
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_aknW8A
 <<<<<<< .merge_file_QBwZGR
 >>>>>>> .merge_file_iCTGu9
 =======
 >>>>>>> .merge_file_0tCFf8
+=======
+>>>>>>> .merge_file_avOJKr
 qmd: "cms merge conflict resolution.story"
 issues: []
 discussions: []
 ---
 
 # Story: Cms module merge conflict resolution + phpstan
+<<<<<<< .merge_file_aknW8A
 <<<<<<< .merge_file_QBwZGR
 <<<<<<< .merge_file_7mPt9d
 =======
@@ -40,6 +47,11 @@ discussions: []
 =======
 <<<<<<< HEAD
 >>>>>>> .merge_file_0tCFf8
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> .merge_file_avOJKr
 
 Status: docs-markers-done (PHP/test conflicts: vedi anche `6.1.resolve-git-conflicts-and-phpstan.story.md`)
 Module: Modules/Cms
@@ -59,6 +71,7 @@ Module: Modules/Cms
 
 - [x] Marker merge assenti in `docs/**/*.md`
 - [ ] PHPStan 0 / Pest / push — fuori scope di questa sweep docs
+<<<<<<< .merge_file_aknW8A
 <<<<<<< .merge_file_QBwZGR
 <<<<<<< .merge_file_7mPt9d
 =======
@@ -69,6 +82,10 @@ Module: Modules/Cms
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_0tCFf8
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_avOJKr
 Status: in-progress
 Module: Modules/Cms (independent .git)
 Context: 6 files modified; merge conflict with laraxot/dev on: DownloadAttachmentPlaceHolder.php, PublicProfileRouteTest.php, HeaderNavJsonTest.php, HomepageContentManagementTest.php. Resolve conflicts keeping both modifications, then full quality gate.

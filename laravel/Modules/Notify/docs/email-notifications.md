@@ -3,7 +3,7 @@ title: "email notifications"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_UxPqtR
+<<<<<<< .merge_file_tprgi4
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_E1cKYR
+>>>>>>> .merge_file_j0fa0X
 qmd: "email notifications"
 issues: []
 discussions: []

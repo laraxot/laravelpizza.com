@@ -1,5 +1,5 @@
 ---
-title: Root .md Consolidation Analysis: Activity Module
+title: "Root .md Consolidation Analysis: Activity Module"
 date: 2026-08-18
 type: note
 updated: 2026-10-07

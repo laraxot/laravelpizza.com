@@ -2,6 +2,7 @@
 title: "AI quality gate audit 2026-11-05"
 type: audit
 module: AI
+date_originale_nome_file: 2026-11-05
 ---
 
 # AI quality gate audit

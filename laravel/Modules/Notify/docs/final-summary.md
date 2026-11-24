@@ -4,18 +4,24 @@ type: concept
 tags: [final, summary]
 created: 2026-07-14
 <<<<<<< HEAD
+<<<<<<< .merge_file_iZK9qN
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_C02cHD
 updated: 2026-07-14
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_iZK9qN
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_C02cHD
 qmd: "final-summary 📊 ptv - riepilogo finale completamento"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -76,6 +82,7 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
 3. ✅ **quick-start.md** - Guida rapida sviluppatori con regole Laraxot
 4. ✅ **project-completion-status.md** - Tracking avanzamento progetto
 <<<<<<< HEAD
+<<<<<<< .merge_file_iZK9qN
 5. ✅ **excellence-year-note-snake.md** - Visione eccellenza e obiettivi
 =======
 <<<<<<< HEAD
@@ -90,6 +97,14 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
 >>>>>>> laraxot/dev
 =======
 5. ✅ **excellence-year-note-snake.md** - Visione eccellenza e obiettivi
+=======
+5. ✅ **excellence-2025.md** - Visione eccellenza e obiettivi
+=======
+<<<<<<< HEAD
+5. ✅ **excellence-year-note-snake.md** - Visione eccellenza e obiettivi
+=======
+5. ✅ **excellence-2025.md** - Visione eccellenza e obiettivi
+>>>>>>> .merge_file_C02cHD
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 6. ✅ **WORK-COMPLETED-.md.md** - Riepilogo tecnico aggiornamenti
@@ -179,6 +194,7 @@ base_ptv_fila5/
 │   ├── quick-start.md                  ✅ Guida rapida
 │   ├── roadmap-status-summary.md       ✅ Status master
 <<<<<<< HEAD
+<<<<<<< .merge_file_iZK9qN
 │   ├── excellence-year-note-snake.md              ✅ Visione eccellenza
 =======
 <<<<<<< HEAD
@@ -193,6 +209,14 @@ base_ptv_fila5/
 >>>>>>> laraxot/dev
 =======
 │   ├── excellence-year-note-snake.md              ✅ Visione eccellenza
+=======
+│   ├── excellence-2025.md              ✅ Visione eccellenza
+=======
+<<<<<<< HEAD
+│   ├── excellence-year-note-snake.md              ✅ Visione eccellenza
+=======
+│   ├── excellence-2025.md              ✅ Visione eccellenza
+>>>>>>> .merge_file_C02cHD
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 │   ├── project-completion-status.md    ✅ Tracking progetto
@@ -399,10 +423,13 @@ Il progetto FixCity ha raggiunto un livello di documentazione e organizzazione e
 - [x] documentation-index.md creato
 - [x] quick-start.md creato
 <<<<<<< HEAD
+<<<<<<< .merge_file_iZK9qN
 - [x] excellence-year-note-snake.md creato
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_C02cHD
 - [x] excellence-2025.md creato
 =======
 <<<<<<< HEAD
@@ -411,10 +438,13 @@ Il progetto FixCity ha raggiunto un livello di documentazione e organizzazione e
 - [x] excellence-2025.md creato
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_iZK9qN
 =======
 - [x] excellence-year-note-snake.md creato
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_C02cHD
 - [x] project-completion-status.md creato
 
 ### Modulo Fixcity

@@ -1,3 +1,8 @@
+---
+title: "Correzioni PHPStan per il Modulo Activity"
+type: note
+qmd: "phpstan fixes 1 correzioni activity"
+---
 # Correzioni PHPStan per il Modulo Activity
 
 ## Panoramica

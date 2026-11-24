@@ -3,7 +3,7 @@ title: "composer strategy"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_F451W9
+<<<<<<< .merge_file_sA50oD
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_keclGj
+>>>>>>> .merge_file_4dlSxm
 qmd: "composer strategy"
 issues: []
 discussions: []

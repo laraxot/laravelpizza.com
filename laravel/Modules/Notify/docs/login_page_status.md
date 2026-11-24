@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_xtdIW6
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_lQZeoD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_xtdIW6
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_lQZeoD
 qmd: "login page status"
 issues: []
 discussions: []
@@ -31,11 +37,15 @@ Questo documento descriveva una pagina di login basata su
 
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_xtdIW6
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_OKKY4Q
 >>>>>>> laraxot/dev
+=======
+<<<<<<< .merge_file_OKKY4Q
+>>>>>>> .merge_file_lQZeoD
 ---
 
 title: "LOGIN PAGE STATUS"
@@ -364,6 +374,7 @@ Password: password
 **Confidence**: 💯 MASSIMA
 
 
+<<<<<<< .merge_file_xtdIW6
 <<<<<<< HEAD
 =======
 =======
@@ -372,6 +383,11 @@ Password: password
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_NMvlcU
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_lQZeoD
 **Non e' pertinente a questo repository.** Questo progetto (`base_<nome progetto>_fila5`)
 usa il tema "Zero", non "Sixteen", e la pagina di login reale e' la classe
 nativa Filament `Filament\Auth\Pages\Login` servita dai panel Filament

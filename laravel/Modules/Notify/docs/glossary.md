@@ -1,6 +1,9 @@
+<<<<<<< .merge_file_QhGeu7
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_9slqKs
 # Glossario di dominio Notify
 
 <!-- Le parole del dominio e dove stanno nel codice. Topology di AGENTS.md punta qui.
@@ -8,6 +11,7 @@
 
 | Termine | Significato | Nel codice |
 |---|---|---|
+<<<<<<< .merge_file_QhGeu7
 | <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
 =======
 >>>>>>> laraxot/dev
@@ -49,3 +53,6 @@ Percorsi relativi a `laravel/Modules/Notify/`.
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+| <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
+>>>>>>> .merge_file_9slqKs

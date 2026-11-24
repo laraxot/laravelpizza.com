@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_QZLxnh
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_n7by6K
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_QZLxnh
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_n7by6K
 qmd: "master documentation index"
 issues: []
 discussions: []
@@ -81,15 +87,19 @@ status: draft
 - [Quality Reports](roadmap/quality.md)
 - [Quality Reports](./roadmap/quality.md)
 =======
+<<<<<<< .merge_file_QZLxnh
 <<<<<<< HEAD
 <<<<<<< HEAD
 - [Quality Reports](roadmap/quality.md)
 - [Quality Reports](./roadmap/quality.md)
 =======
+=======
+>>>>>>> .merge_file_n7by6K
 <<<<<<< .merge_file_ok6BMV
 - [Quality Reports](./reports/quality.md)
 =======
 - [Quality Reports](roadmap/quality.md)
+<<<<<<< .merge_file_QZLxnh
 - [Quality Reports](./roadmap/quality.md)
 >>>>>>> .merge_file_44X0Lb
 >>>>>>> laraxot/dev
@@ -97,6 +107,10 @@ status: draft
 - [Quality Reports](roadmap/quality.md)
 - [Quality Reports](./roadmap/quality.md)
 >>>>>>> laraxot/dev
+=======
+- [Quality Reports](./roadmap/quality.md)
+>>>>>>> .merge_file_44X0Lb
+>>>>>>> .merge_file_n7by6K
 >>>>>>> laraxot/dev
 - [Performance Reports](./reports/performance.md)
 

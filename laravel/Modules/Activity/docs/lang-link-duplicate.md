@@ -35,12 +35,15 @@ Consulta la documentazione delle traduzioni qui:
 
 - [Torna a README](./README.md)
 
+<<<<<<< .merge_file_wtLTyl
 <<<<<<< .merge_file_BSi9hP
 <<<<<<< .merge_file_v2S6ZM
 - [Torna a README](./readme.md)
 =======
 =======
 >>>>>>> .merge_file_8zBLWT
+=======
+>>>>>>> .merge_file_2zMxSA
 <<<<<<< HEAD
 - [Torna a README](./README.md)
 =======
@@ -54,10 +57,13 @@ Consulta la documentazione delle traduzioni qui:
 - [Torna a README](./README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_wtLTyl
 <<<<<<< .merge_file_BSi9hP
 >>>>>>> .merge_file_OaybJQ
 =======
 >>>>>>> .merge_file_8zBLWT
+=======
+>>>>>>> .merge_file_2zMxSA
 - [Vai a Struttura](./structure.md)
 
 - [Torna a README](./README.md)- [Vai a Struttura](./structure.md)

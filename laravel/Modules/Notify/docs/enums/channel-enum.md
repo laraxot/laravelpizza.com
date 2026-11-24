@@ -3,7 +3,7 @@ title: "channel enum"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_jCXuoN
+<<<<<<< .merge_file_tr0QVj
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_gxWlSL
+>>>>>>> .merge_file_btW3wJ
 qmd: "channel enum"
 issues: []
 discussions: []

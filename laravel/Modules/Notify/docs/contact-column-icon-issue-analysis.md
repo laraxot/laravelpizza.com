@@ -3,7 +3,7 @@ title: "contact column icon issue analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_MbheWl
+<<<<<<< .merge_file_pV3LQz
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_ozDb7R
+>>>>>>> .merge_file_2hiuC7
 qmd: "contact column icon issue analysis"
 issues: []
 discussions: []

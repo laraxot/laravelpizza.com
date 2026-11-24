@@ -389,12 +389,15 @@ cd /var/www/html/_bases/base_<nome progetto>/laravel
 - [Modulo Geo README](../README.md)
 - [JSON Database Documentation](../json-database.md)
 - [Services Architecture](../services/README.md)
+<<<<<<< .merge_file_k5D1EN
 <<<<<<< .merge_file_a59NTg
 <<<<<<< .merge_file_qafuUQ
 - [Geographic Data Handling](../geo-entities.md)
 =======
 =======
 >>>>>>> .merge_file_5NGohT
+=======
+>>>>>>> .merge_file_CFcUYn
 <<<<<<< HEAD
 - [Geographic Data Handling](../geo_entities.md)
 =======
@@ -404,10 +407,13 @@ cd /var/www/html/_bases/base_<nome progetto>/laravel
 - [Geographic Data Handling](../geo-entities.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_k5D1EN
 <<<<<<< .merge_file_a59NTg
 >>>>>>> .merge_file_lxHTkS
 =======
 >>>>>>> .merge_file_5NGohT
+=======
+>>>>>>> .merge_file_CFcUYn
 - [PHPStan Level 9 Guide](../../../docs/phpstan-level9-guide.md)
 - [Filament Best Practices](../filament/filament-best-practices.md)
 

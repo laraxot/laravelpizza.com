@@ -3,7 +3,15 @@ title: "sync remote repo docs summary"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_3l0XNb
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_kaeC1q
 qmd: "sync remote repo docs summary"
 issues: []
 discussions: []
@@ -157,6 +165,7 @@ All documents are cross-referenced:
 - Issue Template → Guide + Coordination Log
 - Discussion Template → Coordination Log
 - AGENTS.md → All docs
+<<<<<<< .merge_file_3l0XNb
 <<<<<<< HEAD
 - AGENTS.md → All docs
 =======
@@ -165,6 +174,9 @@ All documents are cross-referenced:
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- AGENTS.md → All docs
+>>>>>>> .merge_file_kaeC1q
 
 ### External Links
 
@@ -217,6 +229,7 @@ All documents are cross-referenced:
 - Created README.md (docs index)
 - Created GitHub Issue/Discussion templates
 - Updated AGENTS.md with coordination guidelines
+<<<<<<< .merge_file_3l0XNb
 <<<<<<< HEAD
 - Updated AGENTS.md with coordination guidelines
 =======
@@ -225,6 +238,9 @@ All documents are cross-referenced:
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- Updated AGENTS.md with coordination guidelines
+>>>>>>> .merge_file_kaeC1q
 
 **Testing**:
 - ✅ CLI mode verified

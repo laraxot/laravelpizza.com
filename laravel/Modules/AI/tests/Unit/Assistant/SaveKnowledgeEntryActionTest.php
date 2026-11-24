@@ -15,4 +15,8 @@ test('_refuses_an_empty_question_or_answer_before_touching_the_database', functi
 })->with([
     'domanda vuota' => ['  ', 'Risposta'],
     'risposta vuota' => ['Domanda?', "\n"],
+<<<<<<< HEAD
+])->throws(ValidationException::class)->group('AI-KNOWLEDGE-INV-1');
+=======
 ])->throws(ValidationException::class);
+>>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))

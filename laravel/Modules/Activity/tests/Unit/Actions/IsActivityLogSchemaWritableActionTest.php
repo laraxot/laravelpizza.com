@@ -6,6 +6,7 @@ use Modules\Activity\Actions\Schema\IsActivityLogSchemaWritableAction;
 use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
+<<<<<<< .merge_file_t2LikM
 <<<<<<< .merge_file_skoAK0
 <<<<<<< .merge_file_JFRXGI
 uses(TestCase::class);
@@ -15,6 +16,9 @@ uses(\Modules\Activity\Tests\TestCase::class);
 =======
 uses(\Modules\Activity\Tests\TestCase::class);
 >>>>>>> .merge_file_NJZXp8
+=======
+uses(\Modules\Activity\Tests\TestCase::class);
+>>>>>>> .merge_file_2BdkEM
 
 it('returns false when activity log is disabled', function (): void {
     config(['activitylog.enabled' => false]);

@@ -24,11 +24,14 @@ Il modulo **CMS** (Content Management System) gestisce tutti i contenuti dinamic
 
 ---
 
+<<<<<<< .merge_file_j3xpEw
 <<<<<<< .merge_file_8ADffk
 <<<<<<< .merge_file_J8y1TF
 =======
 =======
 >>>>>>> .merge_file_NUfzGb
+=======
+>>>>>>> .merge_file_NQ3Boi
 title: "legacy roadmap complete"
 type: note
 tags: [documentation]
@@ -37,10 +40,13 @@ updated: 2026-09-26
 qmd: "legacy roadmap complete"
 issues: []
 discussions: []
+<<<<<<< .merge_file_j3xpEw
 <<<<<<< .merge_file_8ADffk
 >>>>>>> .merge_file_mxI7uc
 =======
 >>>>>>> .merge_file_NUfzGb
+=======
+>>>>>>> .merge_file_NQ3Boi
 ## 🎯 Funzionalità Implementate
 
 ### ✅ Core Content Management

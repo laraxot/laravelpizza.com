@@ -5,18 +5,24 @@ tags: [notify, docs]
 module: Notify
 created: 2026-07-20
 <<<<<<< HEAD
+<<<<<<< .merge_file_L6mvhc
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_3rxRQe
 updated: 2026-07-20
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_L6mvhc
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_3rxRQe
 qmd: "notify documentazione index notify module documentation index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -102,18 +108,24 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - [Documentazione Generale PTV](../../../../docs/README.md)
 - [Documentazione Generale SaluteOra](../../../../docs/README.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_L6mvhc
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../docs/documentation_standards.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> .merge_file_3rxRQe
+=======
 <<<<<<< HEAD
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../docs/documentation_standards.md)
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_L6mvhc
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_3rxRQe
 - [Documentazione Generale SaluteOra](../../../../docs/README.md)
 - [Documentazione Generale SaluteOra](../../../../docs/README.md)
 - [Documentazione Generale SaluteOra](../../../../docs/README.md)
@@ -121,6 +133,7 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - [Standard di Documentazione](../../../../docs/DOCUMENTATION_STANDARDS.md)
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_L6mvhc
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
@@ -128,6 +141,8 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 =======
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../docs/documentation_standards.md)
+=======
+>>>>>>> .merge_file_3rxRQe
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [Modulo Xot](../../Xot/docs/README.md)
@@ -136,18 +151,24 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_L6mvhc
 
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_3rxRQe
 
 
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_L6mvhc
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_3rxRQe
 ## Categorie Principali
 
 ### Architettura e Struttura
@@ -192,6 +213,7 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 
 ### Testing e Qualità
 <<<<<<< HEAD
+<<<<<<< .merge_file_L6mvhc
 - [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
 =======
 <<<<<<< HEAD
@@ -206,6 +228,14 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 >>>>>>> laraxot/dev
 =======
 - [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
+=======
+- [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md) - Correzioni per PHPStan Level 10
+=======
+<<<<<<< HEAD
+- [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
+=======
+- [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md) - Correzioni per PHPStan Level 10
+>>>>>>> .merge_file_3rxRQe
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [Testing](./testing.md) - Strategie e approcci per il testing
@@ -268,10 +298,13 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 ### Mail Templates
 - [Index](./mail-templates/index.md) - Indice della documentazione sui template email
 <<<<<<< HEAD
+<<<<<<< .merge_file_L6mvhc
 - [Implementazione Slug](./mail-templates/mail_template_slug_implementation.md) - Implementazione del campo slug
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_3rxRQe
 - [Implementazione Slug](./mail-templates/MAIL_TEMPLATE_SLUG_IMPLEMENTATION.md) - Implementazione del campo slug
 =======
 <<<<<<< HEAD
@@ -280,10 +313,13 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 - [Implementazione Slug](./mail-templates/MAIL_TEMPLATE_SLUG_IMPLEMENTATION.md) - Implementazione del campo slug
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_L6mvhc
 =======
 - [Implementazione Slug](./mail-templates/mail_template_slug_implementation.md) - Implementazione del campo slug
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_3rxRQe
 
 ### Notifications
 - [Index](./notifications/index.md) - Indice della documentazione sulle notifiche

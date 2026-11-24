@@ -10,7 +10,10 @@ use Modules\Activity\Listeners\LogoutListener;
 use Modules\Activity\Tests\TestCase;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
+<<<<<<< .merge_file_aWlz40
 <<<<<<< .merge_file_7U3XLD
 >>>>>>> .merge_file_bLFPXl
 =======
 >>>>>>> .merge_file_csTOeA
+=======
+>>>>>>> .merge_file_SURCtU

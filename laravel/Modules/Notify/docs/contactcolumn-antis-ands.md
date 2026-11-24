@@ -3,7 +3,7 @@ title: "contactcolumn antis ands"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Bkrsoa
+<<<<<<< .merge_file_LJim9k
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_BH86E4
+>>>>>>> .merge_file_Y4yubf
 qmd: "contactcolumn antis ands"
 issues: []
 discussions: []

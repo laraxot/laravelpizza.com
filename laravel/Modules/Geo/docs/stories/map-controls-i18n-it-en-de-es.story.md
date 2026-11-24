@@ -1,20 +1,26 @@
 ---
+<<<<<<< .merge_file_CVIQeb
 <<<<<<< .merge_file_7fkRlv
 <<<<<<< .merge_file_ihS3Oq
 created: 2026-10-07
 =======
 =======
 >>>>>>> .merge_file_li6tN0
+=======
+>>>>>>> .merge_file_3zND1n
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_pK6kYa
 created: 2026-10-07
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_CVIQeb
 <<<<<<< .merge_file_7fkRlv
 >>>>>>> .merge_file_KPMKuA
 =======
 >>>>>>> .merge_file_li6tN0
+=======
+>>>>>>> .merge_file_3zND1n
 title: "Map Controls I18n It En De Es .story"
 type: note
 tags: [documentation]
@@ -24,19 +30,25 @@ qmd: "Map Controls I18n It En De Es .story"
 date_originale_nome_file: 2026-10-07
 issues: [122]
 discussions: []
+<<<<<<< .merge_file_CVIQeb
 <<<<<<< .merge_file_7fkRlv
 <<<<<<< .merge_file_ihS3Oq
 =======
 =======
 >>>>>>> .merge_file_li6tN0
+=======
+>>>>>>> .merge_file_3zND1n
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_oaUIXM
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_CVIQeb
 <<<<<<< .merge_file_7fkRlv
 >>>>>>> .merge_file_KPMKuA
 =======
 >>>>>>> .merge_file_li6tN0
+=======
+>>>>>>> .merge_file_3zND1n
 ---
 
 # Controlli e popup della mappa tradotti in it, en, de, es

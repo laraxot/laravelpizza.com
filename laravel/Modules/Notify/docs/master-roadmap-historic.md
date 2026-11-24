@@ -1,16 +1,20 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_QK4fon
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_fgccMr
 ---
 title: "master roadmap historic"
 created: 2026-11-23
 updated: 2026-11-23
+<<<<<<< .merge_file_QK4fon
 <<<<<<< HEAD
 ---title: "🗺️ FIXCITY PLATFORM - MASTER ROADMAP 2025"
 type: concept
@@ -18,6 +22,8 @@ tags: [master, roadmap, 2025]
 qmd: "master-roadmap-2025 🗺️ fixcity platform - master roadmap 2025"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_fgccMr
 =======
 >>>>>>> laraxot/dev
 ---title: "🗺️ FIXCITY PLATFORM - MASTER ROADMAP 2025"
@@ -27,7 +33,10 @@ created: 2026-07-14
 updated: 2026-07-14
 qmd: "master-roadmap-2025 🗺️ fixcity platform - master roadmap 2025"
 qmd: "master-roadmap-2025 🗺️ ptv platform - master roadmap 2025"
+<<<<<<< .merge_file_QK4fon
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_fgccMr
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
@@ -42,11 +51,14 @@ related:
 superseded_by: master-roadmap.md
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_QK4fon
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
+=======
+>>>>>>> .merge_file_fgccMr
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 ---

@@ -4,24 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
-<<<<<<< .merge_file_hGJf31
+<<<<<<< .merge_file_t8EDN4
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_NH81tA
+>>>>>>> .merge_file_wDrY7n
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_hGJf31
+<<<<<<< .merge_file_t8EDN4
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_NH81tA
+>>>>>>> .merge_file_wDrY7n
 qmd: "dry kiss analysis"
 issues: []
 discussions: []
@@ -61,22 +61,22 @@ abstract class BaseModel extends XotBaseModel implements HasMedia
 - 🔄 ServiceProvider: Auto-detect nome
 
 <<<<<<< HEAD
-<<<<<<< .merge_file_hGJf31
+<<<<<<< .merge_file_t8EDN4
 [DRY/KISS Global](../../docs/dry_kiss_analysis.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_NH81tA
+>>>>>>> .merge_file_wDrY7n
 =======
 <<<<<<< HEAD
 [DRY/KISS Global](../../docs/dry_kiss_analysis.md)
 =======
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_hGJf31
+<<<<<<< .merge_file_t8EDN4
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_NH81tA
+>>>>>>> .merge_file_wDrY7n
 ---
 title: "dry kiss analysis"
 type: note
@@ -90,7 +90,7 @@ discussions: []
 
 <<<<<<< HEAD
 =======
-<<<<<<< .merge_file_hGJf31
+<<<<<<< .merge_file_t8EDN4
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
@@ -98,6 +98,6 @@ discussions: []
 =======
 [DRY/KISS Global](../../docs/dry_kiss_analysis.md)
 =======
->>>>>>> .merge_file_NH81tA
+>>>>>>> .merge_file_wDrY7n
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

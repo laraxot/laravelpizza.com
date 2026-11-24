@@ -3,7 +3,15 @@ title: "ISSUE SUBTREE SYNC TEST"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_gYCNzD
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_JrQ9Gu
 qmd: "ISSUE SUBTREE SYNC TEST"
 issues: []
 discussions: []
@@ -15,10 +23,13 @@ discussions: []
 > **Status**: 🔄 In Progress  
 > **Labels**: `testing`, `subtree`, `sync`, `multi-agent`
 
+<<<<<<< .merge_file_gYCNzD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_JrQ9Gu
 ---
 
 title: "ISSUE SUBTREE SYNC TEST"
@@ -35,6 +46,7 @@ This issue tracks the testing of git subtree synchronization between the main re
 
 ---
 
+<<<<<<< .merge_file_gYCNzD
 <<<<<<< HEAD
 =======
 =======
@@ -42,6 +54,8 @@ This issue tracks the testing of git subtree synchronization between the main re
 
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_JrQ9Gu
 ## 🎯 Test Objective
 
 Verify that changes made in module repositories sync correctly to the main repository and vice versa.

@@ -14,6 +14,8 @@ use function Safe\error_log;
 
 /**
  * Sentiment analysis using transformers when available, otherwise basic pattern matching.
+ *
+ * @see Modules/AI/docs/sentiment-analysis.md
  */
 class SentimentAction
 {

@@ -3,7 +3,7 @@ type: decision-log
 title: "Decision Log: Notify"
 links: {github_issue: "#XXX", discussion: "#XXX"}
 status: draft
-<<<<<<< .merge_file_umRqUd
+<<<<<<< .merge_file_hpiMWp
 updated: 2026-11-23
 tags: [docs, notify]
 qmd: "decision log   notify notify"
@@ -19,7 +19,7 @@ tags: [docs, notify]
 qmd: "decision log   notify notify"
 created: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_bStTcs
+>>>>>>> .merge_file_sSwX1E
 ---
 # Decision Log: Notify
 

@@ -3,7 +3,7 @@ title: "contact column icon"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_q7t2tR
+<<<<<<< .merge_file_gcZfcT
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_xfRMLH
+>>>>>>> .merge_file_YQoBP8
 qmd: "contact column icon"
 issues: []
 discussions: []

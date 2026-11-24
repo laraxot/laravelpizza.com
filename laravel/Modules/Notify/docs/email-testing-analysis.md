@@ -3,7 +3,7 @@ title: "email testing analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_T6wiou
+<<<<<<< .merge_file_50G8vL
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_tZSEg8
+>>>>>>> .merge_file_b3MMa3
 qmd: "email testing analysis"
 issues: []
 discussions: []

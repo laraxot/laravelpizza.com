@@ -3,7 +3,7 @@ title: "conflict resolution"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_bEtNQq
+<<<<<<< .merge_file_jgX8JR
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_qhnYEH
+>>>>>>> .merge_file_j7iWnK
 qmd: "conflict resolution"
 issues: []
 discussions: []

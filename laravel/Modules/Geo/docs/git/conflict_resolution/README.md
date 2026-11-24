@@ -3,21 +3,27 @@ title: "README"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_4Iuawm
 <<<<<<< .merge_file_jHypxR
 <<<<<<< .merge_file_LjwfRy
 updated: 2026-11-23
 =======
 =======
 >>>>>>> .merge_file_9qJtfB
+=======
+>>>>>>> .merge_file_eUkIMm
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_4Iuawm
 <<<<<<< .merge_file_jHypxR
 >>>>>>> .merge_file_jf2YA9
 =======
 >>>>>>> .merge_file_9qJtfB
+=======
+>>>>>>> .merge_file_eUkIMm
 qmd: "README"
 issues: []
 discussions: []

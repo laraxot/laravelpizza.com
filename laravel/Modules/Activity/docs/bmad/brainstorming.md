@@ -1,9 +1,12 @@
 ---
+<<<<<<< .merge_file_dnS7mj
 <<<<<<< .merge_file_hahAft
 <<<<<<< .merge_file_PIPOJv
 =======
 =======
 >>>>>>> .merge_file_Wg2F5A
+=======
+>>>>>>> .merge_file_Vl8gyH
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -27,10 +30,13 @@ module: Activity
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_dnS7mj
 <<<<<<< .merge_file_hahAft
 >>>>>>> .merge_file_dYvep0
 =======
 >>>>>>> .merge_file_Wg2F5A
+=======
+>>>>>>> .merge_file_Vl8gyH
 title: "Activity — brainstorming BMAD"
 type: concept
 tags: [brainstorming, activity, decisioni, debito-tecnico, event-sourcing]

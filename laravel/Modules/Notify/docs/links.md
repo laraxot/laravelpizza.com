@@ -3,7 +3,15 @@ title: "links"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_AO2n53
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_k8xh4V
 qmd: "links"
 issues: []
 discussions: []

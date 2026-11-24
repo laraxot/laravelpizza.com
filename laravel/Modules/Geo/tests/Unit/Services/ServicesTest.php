@@ -6,6 +6,7 @@ namespace Modules\Geo\Tests\Unit\Services;
 
 use PHPUnit\Framework\Assert;
 
+<<<<<<< .merge_file_zbOlS4
 <<<<<<< .merge_file_RW4e5O
 <<<<<<< .merge_file_eHLUZu
 uses(TestCase::class);
@@ -15,10 +16,14 @@ uses(\Modules\Geo\Tests\TestCase::class);
 =======
 uses(\Modules\Geo\Tests\TestCase::class);
 >>>>>>> .merge_file_8A33vv
+=======
+uses(\Modules\Geo\Tests\TestCase::class);
+>>>>>>> .merge_file_KaWFnY
 
 use Modules\Geo\Services\GeoService;
 use Modules\Geo\Services\GoogleMapsService;
 use Modules\Geo\Services\HereService;
+<<<<<<< .merge_file_zbOlS4
 <<<<<<< .merge_file_RW4e5O
 <<<<<<< .merge_file_eHLUZu
 use Modules\Geo\Tests\TestCase;
@@ -26,6 +31,8 @@ use Modules\Geo\Tests\TestCase;
 >>>>>>> .merge_file_O4pbEA
 =======
 >>>>>>> .merge_file_8A33vv
+=======
+>>>>>>> .merge_file_KaWFnY
 
 test('GeoService can be instantiated', function () {
     $service = app(GeoService::class);

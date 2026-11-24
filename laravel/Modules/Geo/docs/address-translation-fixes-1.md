@@ -229,6 +229,7 @@ Le stesse correzioni sono state applicate a:
 
 ## Collegamenti
 
+<<<<<<< .merge_file_UR6gU5
 <<<<<<< .merge_file_Z1gFtK
 <<<<<<< .merge_file_muzVC7
 - [README Modulo Geo](README.md) - Documentazione principale
@@ -236,6 +237,8 @@ Le stesse correzioni sono state applicate a:
 =======
 =======
 >>>>>>> .merge_file_mBxd99
+=======
+>>>>>>> .merge_file_2igma1
 <<<<<<< HEAD
 - [README Modulo Geo](README.md) - Documentazione principale
 - [Translation Standards](../../Lang/docs/translation-helper-text-standards.md) - Standard traduzioni
@@ -248,10 +251,13 @@ Le stesse correzioni sono state applicate a:
 - [Translation Standards](../../Lang/docs/translation-helper-text-standards.md) - Standard traduzioni
 >>>>>>> .merge_file_YIV1SK
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_UR6gU5
 <<<<<<< .merge_file_Z1gFtK
 >>>>>>> .merge_file_716YyD
 =======
 >>>>>>> .merge_file_mBxd99
+=======
+>>>>>>> .merge_file_2igma1
 - [Address Implementation](address-implementation.md) - Implementazione indirizzi
 
 ---

@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_udd5Dv
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_5EIouS
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_udd5Dv
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_5EIouS
 qmd: "discussion ai work summary"
 issues: []
 discussions: []
@@ -191,12 +197,15 @@ ssh-keygen -t ed25519 -C "actions@github.com"
 ### Documentation
 - [GitHub Action Setup Guide](github_action_setup_required.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_udd5Dv
 - [AI Lessons Learned](../project/ai_agent_lessons_learned.md)
 - [Critical AI Rules](docs/ai_rules_critical.md)
 - [AI Lessons Learned](../project/ai_agent_lessons_learned.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_5EIouS
 - [AI Lessons Learned](../project/AI_AGENT_LESSONS_LEARNED.md)
 - [Critical AI Rules](docs/AI_RULES_CRITICAL.md)
 - [AI Lessons Learned](../project/AI_AGENT_LESSONS_LEARNED.md)
@@ -211,12 +220,15 @@ ssh-keygen -t ed25519 -C "actions@github.com"
 - [AI Lessons Learned](../project/AI_AGENT_LESSONS_LEARNED.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_udd5Dv
 =======
 - [AI Lessons Learned](../project/ai_agent_lessons_learned.md)
 - [Critical AI Rules](docs/ai_rules_critical.md)
 - [AI Lessons Learned](../project/ai_agent_lessons_learned.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_5EIouS
 - [Critical AI Rules](../ai_rules_critical.md)
 - [Sync Subtrees Docs](bashscripts/docs/github/actions/sync-subtrees.md)
 

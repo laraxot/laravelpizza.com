@@ -351,12 +351,15 @@ class ListMyModelActivities extends ListLogActivities
 
 ### Documentazione Interna
 - [README Activity Module](../README.md)
+<<<<<<< .merge_file_4aMKkC
 <<<<<<< .merge_file_kZjL3I
 <<<<<<< .merge_file_0WDeVA
 - [README Activity Module](../readme.md)
 =======
 =======
 >>>>>>> .merge_file_VbG5Ii
+=======
+>>>>>>> .merge_file_DrfX8V
 <<<<<<< HEAD
 - [README Activity Module](../README.md)
 =======
@@ -370,10 +373,13 @@ class ListMyModelActivities extends ListLogActivities
 - [README Activity Module](../README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_4aMKkC
 <<<<<<< .merge_file_kZjL3I
 >>>>>>> .merge_file_Eg9rXM
 =======
 >>>>>>> .merge_file_VbG5Ii
+=======
+>>>>>>> .merge_file_DrfX8V
 - [ListLogActivitiesAction Details](./actions/list-log-activities-action.md)
 - [ListLogActivities Page](./pages/list-log-activities.md)
 

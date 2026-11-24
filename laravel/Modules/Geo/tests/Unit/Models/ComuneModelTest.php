@@ -56,12 +56,15 @@ function comuneModelFixturePath(): string
     return storage_path('framework/testing/geo/comuni-model-test.json');
 }
 
+<<<<<<< .merge_file_q7pmf4
 <<<<<<< .merge_file_HhSoOU
 <<<<<<< .merge_file_T1x0gZ
 uses(TestCase::class);
 =======
 =======
 >>>>>>> .merge_file_TdpqrV
+=======
+>>>>>>> .merge_file_HDvOxJ
 uses(\Modules\Geo\Tests\TestCase::class);
 >>>>>>> .merge_file_6SqcRN
 

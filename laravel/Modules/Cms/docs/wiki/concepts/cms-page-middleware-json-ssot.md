@@ -29,12 +29,15 @@ Definire **access control per pagina** nel JSON CMS (`config/local/.../content/p
 }
 ```
 
+<<<<<<< .merge_file_g44Hyv
 <<<<<<< .merge_file_7e6s8d
 <<<<<<< .merge_file_J0oLhI
 Alias supportati come su Laravel (`auth`, `guest`, parametri `throttle:60,1`), ma solo i nomi presenti in `cms.config.page_middleware_allowlist` (default `auth`, `guest`, `throttle`): `verified` o una classe FQCN vanno prima aggiunti all'allowlist, ogni altro nome lancia `InvalidArgumentException` (`ValidatePageMiddlewareAction`).
 =======
 =======
 >>>>>>> .merge_file_aPFfLD
+=======
+>>>>>>> .merge_file_q0KKZU
 <<<<<<< HEAD
 Alias supportati come su Laravel (`auth`, `verified`, classi FQCN, parametri `throttle:60,1`).
 =======
@@ -44,10 +47,13 @@ Alias supportati come su Laravel (`auth`, `guest`, `verified`, classi FQCN, para
 Alias supportati come su Laravel (`auth`, `verified`, classi FQCN, parametri `throttle:60,1`).
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_g44Hyv
 <<<<<<< .merge_file_7e6s8d
 >>>>>>> .merge_file_k20InM
 =======
 >>>>>>> .merge_file_aPFfLD
+=======
+>>>>>>> .merge_file_q0KKZU
 
 ## Flusso
 

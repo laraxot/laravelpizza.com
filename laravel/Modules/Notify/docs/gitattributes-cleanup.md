@@ -3,7 +3,15 @@ title: "gitattributes cleanup"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_aKrmhx
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_3pL3Fr
 qmd: "gitattributes cleanup"
 issues: []
 discussions: []
@@ -212,6 +220,7 @@ cp /path/to/backup/.gitattributes laravel/Modules/Blog/
 - [x] Update root `.gitignore`
 - [x] Create module `.gitignore` files
 - [x] Update AGENTS.md
+<<<<<<< .merge_file_aKrmhx
 <<<<<<< HEAD
 - [x] Update AGENTS.md
 =======
@@ -220,6 +229,9 @@ cp /path/to/backup/.gitattributes laravel/Modules/Blog/
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- [x] Update AGENTS.md
+>>>>>>> .merge_file_3pL3Fr
 - [x] Document cleanup
 - [x] Verify with git check-ignore
 

@@ -3,7 +3,7 @@ title: "📚 Documentazione Finale - Sixteen Theme CSS Architecture"
 type: concept
 tags: [css, architecture]
 created: 2026-07-14
-<<<<<<< .merge_file_8tHBEg
+<<<<<<< .merge_file_WLiOFl
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-07-14
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_dZyeFp
+>>>>>>> .merge_file_PRrtW1
 qmd: "css-architecture 📚 documentazione finale - sixteen theme css architecture"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -20,7 +20,7 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_8tHBEg
+<<<<<<< .merge_file_WLiOFl
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
 <<<<<<< HEAD
@@ -30,7 +30,7 @@ related:
 =======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_dZyeFp
+>>>>>>> .merge_file_PRrtW1
   - "./acronym-naming-conventions.md"
 =======
 >>>>>>> laraxot/dev

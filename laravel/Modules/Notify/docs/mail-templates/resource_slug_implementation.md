@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_oywXDR
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_Le1HoL
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_oywXDR
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Le1HoL
 qmd: "resource slug implementation"
 issues: []
 discussions: []
@@ -194,11 +200,14 @@ return [
 - [Struttura della Migrazione](./migration_structure.md)
 - [Guida alla Migrazione](../mail_template_migration_guide.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_oywXDR
 - [Convenzioni Filament](../../../../docs/filament_conventions.md)
 - [Regole per Filament](../../../../docs/filament_rules.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_Le1HoL
 - [Convenzioni Filament](../../../../docs/FILAMENT_CONVENTIONS.md)
 - [Regole per Filament](../../../../docs/FILAMENT_RULES.md)
 =======
@@ -210,8 +219,11 @@ return [
 - [Regole per Filament](../../../../docs/FILAMENT_RULES.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_oywXDR
 =======
 - [Convenzioni Filament](../../../../docs/filament_conventions.md)
 - [Regole per Filament](../../../../docs/filament_rules.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Le1HoL

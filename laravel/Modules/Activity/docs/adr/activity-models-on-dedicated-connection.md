@@ -12,6 +12,7 @@ related:
   - ../../../Tenant/app/Providers/TenantServiceProvider.php
   - ../../tests/Unit/BaseModelTest.php
   - ../basemodel-connection-why-activity-not-null.md
+qmd: "activity models on dedicated connection modelli"
 ---
 
 # ADR: i modelli di Activity usano la connessione `activity`

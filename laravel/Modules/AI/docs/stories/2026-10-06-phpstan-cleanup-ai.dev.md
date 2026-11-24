@@ -7,6 +7,7 @@ status: done
 created: 2026-10-06
 updated: 2026-10-06
 tags: [phpstan, cleanup, bmad, ai]
+date_originale_nome_file: 2026-10-06
 ---
 
 # [DEV] PHPStan cleanup — AI
@@ -28,7 +29,7 @@ tags: [phpstan, cleanup, bmad, ai]
 - `database/factories/AiActionProposalFactory.php`, `AiToolLogFactory.php`, `AiMessageFactory.php`
 - `tests/Unit/Models/AiActionProposalTest.php` (valori enum + cast di `status`)
 - `app/Actions/Prompt/AIPromptTemplates.php`, `app/Datas/AIPromptTemplates.php`, `app/Services/AIServicePromptTemplates.php` (`const string`)
-- `docs/bmad/domain-status-enum.md`, `docs/00-INDEX.md` (write-back)
+- `docs/bmad/domain-status-enum.md`, `docs/00-index.md` (write-back)
 
 ## Implementation Steps
 

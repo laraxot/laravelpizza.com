@@ -244,20 +244,26 @@ bashscripts/git/subtrees/
 ### Related Documentation
 
 - [Git Subtrees Guide](../../docs/git/subtrees.md)
+<<<<<<< .merge_file_QuZAVd
 <<<<<<< .merge_file_Ap7dEG
 <<<<<<< .merge_file_PRRBxc
 =======
 =======
 >>>>>>> .merge_file_dKA8Wr
+=======
+>>>>>>> .merge_file_yc6mcC
 <<<<<<< HEAD
 - [GitHub Actions Guide](../../docs/github/actions.md)
 - [AI Agent Coordination](../../docs/ai-agent-coordination.md)
 =======
 <<<<<<< .merge_file_wXePl4
+<<<<<<< .merge_file_QuZAVd
 <<<<<<< .merge_file_Ap7dEG
 >>>>>>> .merge_file_jcMcZ6
 =======
 >>>>>>> .merge_file_dKA8Wr
+=======
+>>>>>>> .merge_file_yc6mcC
 - GitHub Actions Guide
 - [AI Agent Coordination](../raw/history/ai-agent-coordination.md)
 =======

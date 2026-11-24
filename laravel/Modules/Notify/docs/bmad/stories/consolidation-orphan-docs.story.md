@@ -5,7 +5,7 @@ status: active
 module: Notify
 scope: documentation
 bmad_version: 1.0
-<<<<<<< .merge_file_waT1md
+<<<<<<< .merge_file_vcq2kw
 updated: 2026-11-23
 created: 2026-11-23
 =======
@@ -15,7 +15,7 @@ updated: 2026-10-06
 updated: 2026-11-23
 created: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_lzTUOf
+>>>>>>> .merge_file_qkvO58
 ---
 
 # BMAD Story: Consolidate Orphan .md Files in Notify Docs

@@ -12,6 +12,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Salva la testata del sito nella config appearance del tenant.
  *
  * @contract docs/contracts/save-headernav-config-action.md
+<<<<<<< .merge_file_FXDcdR
 <<<<<<< .merge_file_xxpqKl
 <<<<<<< .merge_file_F7JsEE
  *
@@ -19,6 +20,8 @@ use Spatie\QueueableAction\QueueableAction;
 >>>>>>> .merge_file_9LzPjn
 =======
 >>>>>>> .merge_file_togOFj
+=======
+>>>>>>> .merge_file_hQL1un
  * @see docs/contracts/save-headernav-config-action.md
  */
 class SaveHeadernavConfigAction

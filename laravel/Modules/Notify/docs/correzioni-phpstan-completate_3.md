@@ -3,7 +3,7 @@ title: "correzioni phpstan completate 3"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_q0lizp
+<<<<<<< .merge_file_SStYCi
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_a3LokR
+>>>>>>> .merge_file_HXynmG
 qmd: "correzioni phpstan completate 3"
 issues: []
 discussions: []
@@ -35,7 +35,7 @@ discussions: []
 ### Falsi Syntax Errors
 L'analisi PHPStan riportava 147 "syntax errors", ma in realt� **NON erano errori di sintassi PHP**. Erano **conflitti git non risolti** lasciati nel codice sorgente dopo merge multipli.
 
-<<<<<<< .merge_file_q0lizp
+<<<<<<< .merge_file_SStYCi
 <<<<<<< HEAD
 
 =======
@@ -46,7 +46,7 @@ L'analisi PHPStan riportava 147 "syntax errors", ma in realt� **NON erano erro
 >>>>>>> laraxot/dev
 =======
 
->>>>>>> .merge_file_a3LokR
+>>>>>>> .merge_file_HXynmG
 ## File Corretti
 
 ### 1. Modules/Notify/app/Actions/EsendexSendAction.php
@@ -211,13 +211,13 @@ Durante la risoluzione:
 - [PHPStan Configuration](../../phpstan.neon)
 - [PHPStan User Guide](https://phpstan.org/user-guide/getting-started)
 
-<<<<<<< .merge_file_q0lizp
+<<<<<<< .merge_file_SStYCi
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_a3LokR
+>>>>>>> .merge_file_HXynmG
 ---
 
 title: "correzioni phpstan completate 3"
@@ -360,7 +360,7 @@ I pattern di type safety implementati possono essere applicati a:
 4. **Testing** con classi dinamiche
 
 ---
-<<<<<<< .merge_file_q0lizp
+<<<<<<< .merge_file_SStYCi
 <<<<<<< HEAD
 =======
 =======
@@ -394,7 +394,7 @@ I pattern di type safety implementati possono essere applicati a:
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_a3LokR
+>>>>>>> .merge_file_HXynmG
 
 ## ✅ MISSIONE COMPLETATA
 

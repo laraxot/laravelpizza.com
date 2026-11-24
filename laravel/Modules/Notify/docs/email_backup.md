@@ -3,7 +3,7 @@ title: "email backup"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_EaZyd4
+<<<<<<< .merge_file_RG1e88
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_ragObP
+>>>>>>> .merge_file_rYYn2q
 qmd: "email backup"
 issues: []
 discussions: []

@@ -13,6 +13,7 @@ related:
   - ./phpstan-conflict-markers-bootstrap.story.md
 references:
   - sprint-status: "Activity — swarm phpstan Activity+Progressioni+Sigma, 2026-09-29"
+qmd: "quality gates phpstan swarm story gate"
 ---
 
 # Activity — PHPStan quality gate swarm (2026-09-29)

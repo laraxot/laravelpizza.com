@@ -4,24 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
-<<<<<<< .merge_file_HKb8a2
+<<<<<<< .merge_file_cIk2FI
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_Bagavm
+>>>>>>> .merge_file_pggygl
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_HKb8a2
+<<<<<<< .merge_file_cIk2FI
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_Bagavm
+>>>>>>> .merge_file_pggygl
 qmd: "plugin spatie translatable not registered"
 issues: []
 discussions: []
@@ -392,24 +392,24 @@ Prima di usare `LangBase*`:
 
 ### Documentazione Interna
 <<<<<<< HEAD
-<<<<<<< .merge_file_HKb8a2
+<<<<<<< .merge_file_cIk2FI
 - [Lang Module README](../../../lang/docs/README.md)
 - [Filament Panel Configuration](../../../xot/docs/filament/panel-configuration.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_Bagavm
+>>>>>>> .merge_file_pggygl
 =======
 <<<<<<< HEAD
 - [Lang Module README](../../../lang/docs/README.md)
 - [Filament Panel Configuration](../../../xot/docs/filament/panel-configuration.md)
 =======
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_HKb8a2
+<<<<<<< .merge_file_cIk2FI
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_Bagavm
+>>>>>>> .merge_file_pggygl
 - [Lang Module README](../../../Lang/docs/readme.md)
 - [Filament Panel Configuration](../../../xot/docs/filament/panel-configuration.md)
 
@@ -430,7 +430,7 @@ discussions: []
 
 <<<<<<< HEAD
 =======
-<<<<<<< .merge_file_HKb8a2
+<<<<<<< .merge_file_cIk2FI
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
@@ -439,6 +439,6 @@ discussions: []
 - [Lang Module README](../../../lang/docs/README.md)
 - [Filament Panel Configuration](../../../xot/docs/filament/panel-configuration.md)
 =======
->>>>>>> .merge_file_Bagavm
+>>>>>>> .merge_file_pggygl
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

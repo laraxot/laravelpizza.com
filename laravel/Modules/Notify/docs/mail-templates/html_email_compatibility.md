@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_wjQHgK
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_qEIBXl
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_wjQHgK
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_qEIBXl
 qmd: "html email compatibility"
 issues: []
 discussions: []
@@ -153,24 +159,31 @@ I template nella directory `mail-layouts` seguono queste linee guida di compatib
 ## Riferimenti
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_wjQHgK
 - [Guida ai Layout Email](../mail_layouts_guide.md)
 - [Integrazione MailPace](./mailpace_templates_integration.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_qEIBXl
 =======
 <<<<<<< .merge_file_KghNY4
 - [Guida ai Layout Email](../MAIL_LAYOUTS_GUIDE.md)
 - [Integrazione MailPace](./MAILPACE_TEMPLATES_INTEGRATION.md)
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_wjQHgK
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_qEIBXl
 - [Guida ai Layout Email](../mail_layouts_guide.md)
 - [Integrazione MailPace](mailpace_templates_integration.md)
 - [Guida ai Layout Email](../mail_layouts_guide.md)
 - [Integrazione MailPace](./mailpace_templates_integration.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_wjQHgK
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_DhVEuh
@@ -178,5 +191,10 @@ I template nella directory `mail-layouts` seguono queste linee guida di compatib
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_DhVEuh
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_qEIBXl
 - [Campaign Monitor Guide](https://www.campaignmonitor.com/css/)
 - [Email Client Market Share](https://emailclientmarketshare.com/)

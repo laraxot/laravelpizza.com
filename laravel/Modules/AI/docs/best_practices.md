@@ -1,10 +1,10 @@
 ---
-title: "best practices"
+title: "Best Practices"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "best practices"
+qmd: "Best Practices"
 issues: []
 discussions: []
 ---
@@ -25,5 +25,5 @@ discussions: []
 - Testa la generazione di prompt con unit test.
 
 ## Documentazione
-- Aggiorna `docs/INDEX.md` quando aggiungi nuove funzioni.
+- Aggiorna `docs/index.md` quando aggiungi nuove funzioni.
 - Inserisci link a OpenAI/Anthropic SDK docs.

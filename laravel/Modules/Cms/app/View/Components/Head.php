@@ -50,6 +50,7 @@ final class Head extends Component
 
     /**
      * @see Modules/Cms/docs/bmad/head-component-adoption-plan.md
+<<<<<<< .merge_file_BP6Px0
 <<<<<<< .merge_file_KcqFkc
 <<<<<<< .merge_file_h9dbSa
      * @see Modules/Cms/docs/bmad/filament-layout-styles-scripts.md  prop `stylesheet` e `@stack('head')`
@@ -57,6 +58,8 @@ final class Head extends Component
 >>>>>>> .merge_file_v4eLtv
 =======
 >>>>>>> .merge_file_msIwfG
+=======
+>>>>>>> .merge_file_BUadS6
      */
     public function __construct(
         public readonly ?string $title = null,
@@ -64,6 +67,7 @@ final class Head extends Component
         public readonly ?bool $homepage = null,
         public readonly ?string $themeColor = null,
         public readonly bool $panelAssets = true,
+<<<<<<< .merge_file_BP6Px0
 <<<<<<< .merge_file_KcqFkc
 <<<<<<< .merge_file_h9dbSa
         // Entry Vite del CSS del tema: un tema può servire un foglio più leggero dove non servono i componenti Filament.
@@ -77,6 +81,10 @@ final class Head extends Component
     ) {
     }
 >>>>>>> .merge_file_msIwfG
+=======
+    ) {
+    }
+>>>>>>> .merge_file_BUadS6
 
     /**
      * @see Modules/Cms/docs/bmad/head-component-adoption-plan.md
@@ -143,6 +151,7 @@ final class Head extends Component
         return view('cms::components.head', [
             'pubTheme' => $meta->getPubTheme(),
             'panelAssets' => $this->panelAssets,
+<<<<<<< .merge_file_BP6Px0
 <<<<<<< .merge_file_KcqFkc
 <<<<<<< .merge_file_h9dbSa
             'stylesheet' => $this->stylesheet,
@@ -150,6 +159,8 @@ final class Head extends Component
 >>>>>>> .merge_file_v4eLtv
 =======
 >>>>>>> .merge_file_msIwfG
+=======
+>>>>>>> .merge_file_BUadS6
         ]);
     }
 

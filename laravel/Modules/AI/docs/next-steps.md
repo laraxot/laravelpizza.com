@@ -1,10 +1,10 @@
 ---
-title: "next steps"
+title: "Next Steps"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "next steps"
+qmd: "Next Steps"
 issues: []
 discussions: []
 ---
@@ -18,12 +18,20 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+title: "NEXT STEPS"
+=======
 title: "next steps"
+>>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
+<<<<<<< HEAD
+qmd: "NEXT STEPS"
+=======
 qmd: "next steps"
+>>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 issues: []
 discussions: []
 ## ✅ Cosa è Stato Completato

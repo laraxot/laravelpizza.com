@@ -1,9 +1,12 @@
 ---
+<<<<<<< .merge_file_6R2QO8
 <<<<<<< .merge_file_xujR2Q
 <<<<<<< .merge_file_wKmp4G
 =======
 =======
 >>>>>>> .merge_file_d9ntKn
+=======
+>>>>>>> .merge_file_TY9Mde
 <<<<<<< HEAD
 title: "Sprint Planning"
 type: note
@@ -12,16 +15,20 @@ created: 2026-09-26
 updated: 2026-09-26
 qmd: "Sprint Planning"
 =======
+<<<<<<< .merge_file_6R2QO8
 <<<<<<< .merge_file_xujR2Q
 >>>>>>> .merge_file_wfONff
 =======
 >>>>>>> .merge_file_d9ntKn
+=======
+>>>>>>> .merge_file_TY9Mde
 title: "sprint planning"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "sprint planning"
+<<<<<<< .merge_file_6R2QO8
 <<<<<<< .merge_file_xujR2Q
 <<<<<<< .merge_file_wKmp4G
 =======
@@ -30,6 +37,9 @@ qmd: "sprint planning"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_d9ntKn
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_TY9Mde
 issues: []
 discussions: []
 ---
@@ -42,11 +52,14 @@ discussions: []
 
 ---
 
+<<<<<<< .merge_file_6R2QO8
 <<<<<<< .merge_file_xujR2Q
 <<<<<<< .merge_file_wKmp4G
 =======
 =======
 >>>>>>> .merge_file_d9ntKn
+=======
+>>>>>>> .merge_file_TY9Mde
 <<<<<<< HEAD
 title: "SPRINT PLANNING"
 =======
@@ -71,10 +84,13 @@ qmd: "SPRINT PLANNING"
 >>>>>>> laraxot/dev
 issues: []
 discussions: []
+<<<<<<< .merge_file_6R2QO8
 <<<<<<< .merge_file_xujR2Q
 >>>>>>> .merge_file_wfONff
 =======
 >>>>>>> .merge_file_d9ntKn
+=======
+>>>>>>> .merge_file_TY9Mde
 ## Sprint Goal
 
 Launch core CMS page builder with content creation and publishing capabilities.
@@ -132,6 +148,7 @@ Launch core CMS page builder with content creation and publishing capabilities.
 | Performance | Lazy loading, caching |
 
 ---
+<<<<<<< .merge_file_6R2QO8
 <<<<<<< .merge_file_xujR2Q
 <<<<<<< .merge_file_wKmp4G
 =======
@@ -140,3 +157,6 @@ Launch core CMS page builder with content creation and publishing capabilities.
 =======
 
 >>>>>>> .merge_file_d9ntKn
+=======
+
+>>>>>>> .merge_file_TY9Mde

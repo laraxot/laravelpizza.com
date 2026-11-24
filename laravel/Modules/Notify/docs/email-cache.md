@@ -3,7 +3,7 @@ title: "email cache"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_aOuw0m
+<<<<<<< .merge_file_EQFxDC
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_qL0S9S
+>>>>>>> .merge_file_KZnME1
 qmd: "email cache"
 issues: []
 discussions: []

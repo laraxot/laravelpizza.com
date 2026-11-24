@@ -9,6 +9,7 @@ updated: 2026-10-06
 tags: [phpstan, cleanup, bmad, activity]
 superseded_by: "./phpstan-cleanup-activity.dev.md"
 updated: 2026-11-17
+qmd: "phpstan cleanup activity wave dev"
 ---
 
 # [DEV] PHPStan cleanup — Activity

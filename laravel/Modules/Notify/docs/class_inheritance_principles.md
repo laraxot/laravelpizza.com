@@ -3,7 +3,7 @@ title: "class inheritance principles"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_IonhuV
+<<<<<<< .merge_file_UgUln2
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_b41LkA
+>>>>>>> .merge_file_vVVaW1
 qmd: "class inheritance principles"
 issues: []
 discussions: []

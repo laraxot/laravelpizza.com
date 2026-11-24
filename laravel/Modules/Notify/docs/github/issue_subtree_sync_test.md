@@ -3,7 +3,15 @@ title: "issue subtree sync test"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_VdZBEI
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_Of6cyb
 qmd: "issue subtree sync test"
 issues: []
 discussions: []

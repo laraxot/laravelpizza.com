@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\File;
 use Modules\Activity\Actions\Log\ResolveLogDirectoryAction;
 use Modules\Activity\Actions\Log\ResolveLogFilePathAction;
 use Modules\Activity\Exceptions\InvalidLogFileException;
+<<<<<<< .merge_file_yt3k2W
 <<<<<<< .merge_file_yEM7t6
 <<<<<<< .merge_file_9PE8Di
 use Modules\Activity\Tests\TestCase;
@@ -16,15 +17,22 @@ use Safe\Exceptions\FilesystemException;
 <<<<<<< HEAD
 use Safe\Exceptions\FilesystemException;
 >>>>>>> .merge_file_mE7Fxm
+=======
+<<<<<<< HEAD
+use Safe\Exceptions\FilesystemException;
+>>>>>>> .merge_file_4k4vlI
 use Modules\Activity\Tests\TestCase;
 =======
 use Modules\Activity\Tests\TestCase;
 use Safe\Exceptions\FilesystemException;
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_yt3k2W
 <<<<<<< .merge_file_yEM7t6
 >>>>>>> .merge_file_NKWJiY
 =======
 >>>>>>> .merge_file_mE7Fxm
+=======
+>>>>>>> .merge_file_4k4vlI
 
 use function Safe\realpath;
 use function Safe\symlink;
@@ -32,24 +40,31 @@ use function Safe\symlink;
 uses(TestCase::class);
 
 /*
+<<<<<<< .merge_file_yt3k2W
 <<<<<<< .merge_file_yEM7t6
 <<<<<<< .merge_file_9PE8Di
 =======
 =======
 >>>>>>> .merge_file_mE7Fxm
+=======
+>>>>>>> .merge_file_4k4vlI
 <<<<<<< HEAD
  * Usa Tests\TestCase (root) e non Modules\Activity\Tests\TestCase: queste azioni lavorano solo sul
  * filesystem e la seconda richiede un file sqlite condiviso non presente in ogni ambiente
  * (stesso motivo dei test di Modules/Xot/tests/Feature/Filament/Widgets/EnvWidgetTest.php).
 =======
+<<<<<<< .merge_file_yt3k2W
 <<<<<<< .merge_file_yEM7t6
 >>>>>>> .merge_file_NKWJiY
 =======
 >>>>>>> .merge_file_mE7Fxm
+=======
+>>>>>>> .merge_file_4k4vlI
  * Usa Modules\Activity\Tests\TestCase. Il commento precedente diceva "Tests\TestCase (root)":
  * era rimasto dal tempo in cui esisteva laravel/tests/, sciolta nel commit 63f7bebfe ("ogni
  * modulo ha la sua cartella"). Il TestCase del modulo prepara lo sqlite condiviso e apre le
  * transazioni: queste azioni non toccano il database, ma il setup non le disturba.
+<<<<<<< .merge_file_yt3k2W
 <<<<<<< .merge_file_yEM7t6
 <<<<<<< .merge_file_9PE8Di
 =======
@@ -58,6 +73,9 @@ uses(TestCase::class);
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_mE7Fxm
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_4k4vlI
  *
  * Ogni test lavora in una cartella temporanea dentro storage/framework/testing, mai in storage/logs.
  * `$this->root` contiene `logs/` (la cartella base) e, accanto, un `secret.log` FUORI dalla base:

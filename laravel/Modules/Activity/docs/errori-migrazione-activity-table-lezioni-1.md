@@ -1,3 +1,8 @@
+---
+title: "Lezioni Apprese: Errori Migrazione Activity Table"
+type: note
+qmd: "errori migrazione activity table lezioni 1"
+---
 # Lezioni Apprese: Errori Migrazione Activity Table
 
 ## Caso Studio: Errore Critico nella Modifica Migrazione Activity

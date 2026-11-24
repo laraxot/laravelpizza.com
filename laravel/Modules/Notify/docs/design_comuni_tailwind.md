@@ -7,7 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< .merge_file_ytWiZv
+<<<<<<< .merge_file_EztHOE
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -15,7 +15,7 @@ updated: 2026-08-24
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_bamSzY
+>>>>>>> .merge_file_sUs0XS
 ---
 
 # 🎨 Design Comuni con Tailwind CSS Puro

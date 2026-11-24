@@ -150,11 +150,14 @@ All Cms resources must be tested to ensure:
 - [LangBaseResource Documentation](../../Lang/docs/filament/lang-base-resource.md)
 - [Multilingual Best Practices](../../Lang/docs/translation-best-practices.md)
 - [Filament Resource Guidelines](../../Xot/docs/filament-resource-rules.md)
+<<<<<<< .merge_file_PATmie
 <<<<<<< .merge_file_8NyQzG
 <<<<<<< .merge_file_e3YR4k
 =======
 =======
 >>>>>>> .merge_file_P6jtgR
+=======
+>>>>>>> .merge_file_nsn8ez
 =======
 <<<<<<< HEAD
 - [XotBaseResource Documentation](../../xot/docs/filament/resources/xot-base-resource.md)
@@ -168,7 +171,10 @@ All Cms resources must be tested to ensure:
 - [Filament Resource Guidelines](../../Xot/docs/filament-resource-rules.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_PATmie
 <<<<<<< .merge_file_8NyQzG
 >>>>>>> .merge_file_FUuwpK
 =======
 >>>>>>> .merge_file_P6jtgR
+=======
+>>>>>>> .merge_file_nsn8ez

@@ -3,7 +3,7 @@ title: "email templates 1"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_7g0Ha9
+<<<<<<< .merge_file_sgJrCF
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_jLHpIO
+>>>>>>> .merge_file_tOQ9sk
 qmd: "email templates 1"
 issues: []
 discussions: []

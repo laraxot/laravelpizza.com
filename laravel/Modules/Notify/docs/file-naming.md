@@ -7,7 +7,15 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
+<<<<<<< .merge_file_AY7wtN
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_jlHYAN
 ---
 
 # Regole di Naming per File
@@ -48,6 +56,7 @@ Su filesystem case-insensitive (Windows, macOS default), file con nomi che diffe
 ✅ CORRETTO:
 - README.md (maiuscolo - convenzione universale)
 - roadmap.md (maiuscolo - convenzione universale)
+<<<<<<< .merge_file_AY7wtN
 - CHANGELOG.md (maiuscolo - convenzione universale)
 <<<<<<< HEAD
 - CHANGELOG.md (maiuscolo - convenzione universale)
@@ -57,6 +66,10 @@ Su filesystem case-insensitive (Windows, macOS default), file con nomi che diffe
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- CHANGELOG.md (maiuscolo - convenzione universale)
+- CHANGELOG.md (maiuscolo - convenzione universale)
+>>>>>>> .merge_file_jlHYAN
 - LICENSE.md (maiuscolo - convenzione universale)
 - CONTRIBUTING.md (maiuscolo - convenzione universale)
 - SECURITY.md (maiuscolo - convenzione universale)

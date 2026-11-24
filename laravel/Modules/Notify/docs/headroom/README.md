@@ -4,7 +4,15 @@ type: how-to
 tags: [headroom, module, notify, codex, mcp]
 module: Notify
 created: 2026-08-02
+<<<<<<< .merge_file_USwyOf
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-08-02
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_TJ6RCj
 qmd: "headroom modulo Notify proxy codex mcp context compression"
 issues:
   - "https://github.com/provtv/base_ptv_fila5/issues/218"

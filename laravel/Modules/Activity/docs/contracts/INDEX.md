@@ -1,4 +1,5 @@
 ---
+<<<<<<< .merge_file_Qrkq23
 <<<<<<< .merge_file_amyfs8
 <<<<<<< .merge_file_kocLtO
 title: "INDEX contratti — Activity"
@@ -37,6 +38,8 @@ Totale Action nel modulo: 30 file in `app/Actions` (`find app/Actions -name '*.p
 =======
 =======
 >>>>>>> .merge_file_Sta1he
+=======
+>>>>>>> .merge_file_xN7gg1
 title: "INDEX — Activity"
 type: index
 status: active
@@ -55,9 +58,13 @@ Indice dei contratti comportamentali del modulo Activity: ogni operazione pubbli
 |---|---|---|---|
 | *(nessuno)* | — | — | Nessun contratto audito per questo modulo |
 
+<<<<<<< .merge_file_Qrkq23
 <<<<<<< .merge_file_amyfs8
 (End of file - total 20 lines)
 >>>>>>> .merge_file_1AhMXJ
 =======
 (End of file - total 20 lines)
 >>>>>>> .merge_file_Sta1he
+=======
+(End of file - total 20 lines)
+>>>>>>> .merge_file_xN7gg1

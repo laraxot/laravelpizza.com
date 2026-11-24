@@ -13,6 +13,7 @@ document_type: story
 category: bmad
 created: 2026-11-19
 updated: 2026-11-19
+qmd: "phpstan log tests false positives story"
 ---
 
 # 227.1 Activity — 183 segnalazioni PHPStan, zero difetti

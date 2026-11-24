@@ -3,7 +3,7 @@ title: "configuration architecture"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_cdUKdA
+<<<<<<< .merge_file_oKBVIl
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_1GptKd
+>>>>>>> .merge_file_TGdFiH
 qmd: "configuration architecture"
 issues: []
 discussions: []

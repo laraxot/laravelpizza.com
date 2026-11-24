@@ -6,7 +6,15 @@ issues: []
 discussions: []
 title: "html2pdf security: puntatore"
 type: reference
+<<<<<<< .merge_file_4OSkHA
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-05-21
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_kTW5Lm
 related:
   - "../../../Media/docs/html2pdf/SECURITY.md"
 status: draft

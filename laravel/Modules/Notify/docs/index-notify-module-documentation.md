@@ -1,23 +1,29 @@
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_mfIeSb
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Tsm3qv
 ---
 title: "index notify module documentation"
 created: 2026-11-23
 updated: 2026-11-23
 ---
 
+<<<<<<< .merge_file_mfIeSb
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Tsm3qv
 >>>>>>> laraxot/dev
 # Notify Module Documentation
 
@@ -91,10 +97,13 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_mfIeSb
 - [Standard di Documentazione](../../../../../docs/documentation_standards.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_Tsm3qv
 - [Standard di Documentazione](../../../../../docs/DOCUMENTATION_STANDARDS.md)
 =======
 <<<<<<< HEAD
@@ -103,10 +112,13 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - [Standard di Documentazione](../../../../../docs/DOCUMENTATION_STANDARDS.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_mfIeSb
 =======
 - [Standard di Documentazione](../../../../../docs/documentation_standards.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Tsm3qv
 - [Modulo Xot](../../Xot/docs/README.md)
 - [Modulo Lang](../../Lang/docs/README.md)
 - [Modulo UI](../../UI/docs/README.md)
@@ -195,10 +207,13 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 ### Mail Templates
 - [Index](./mail-templates/index.md) - Indice della documentazione sui template email
 <<<<<<< HEAD
+<<<<<<< .merge_file_mfIeSb
 - [Implementazione Slug](./mail-templates/mail_template_slug_implementation.md) - Implementazione del campo slug
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_Tsm3qv
 - [Implementazione Slug](./mail-templates/MAIL_TEMPLATE_SLUG_IMPLEMENTATION.md) - Implementazione del campo slug
 =======
 <<<<<<< HEAD
@@ -207,10 +222,13 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 - [Implementazione Slug](./mail-templates/MAIL_TEMPLATE_SLUG_IMPLEMENTATION.md) - Implementazione del campo slug
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_mfIeSb
 =======
 - [Implementazione Slug](./mail-templates/mail_template_slug_implementation.md) - Implementazione del campo slug
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Tsm3qv
 
 ### Notifications
 - [Index](./notifications/index.md) - Indice della documentazione sulle notifiche

@@ -3,7 +3,15 @@ title: "mail template slug implementation"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_o5vnJX
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_tP7zrv
 qmd: "mail template slug implementation"
 issues: []
 discussions: []

@@ -14,6 +14,7 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 beforeEach(function (): void {
+<<<<<<< .merge_file_OPFETu
 <<<<<<< .merge_file_0a5cdj
 <<<<<<< .merge_file_28wBbn
     $this->page = new class extends ListLogActivities
@@ -22,6 +23,8 @@ beforeEach(function (): void {
 =======
 =======
 >>>>>>> .merge_file_JwJUVf
+=======
+>>>>>>> .merge_file_CYhmpZ
 <<<<<<< HEAD
     /** @var \Modules\Activity\Tests\TestCase $this */
 $this->page = new class extends ListLogActivities
@@ -56,15 +59,19 @@ $this->page = new class extends ListLogActivities
             return $this->sendRestoreSuccessNotification();
         }
 
+<<<<<<< .merge_file_OPFETu
 <<<<<<< .merge_file_0a5cdj
 >>>>>>> .merge_file_WXxJie
 =======
 >>>>>>> .merge_file_JwJUVf
+=======
+>>>>>>> .merge_file_CYhmpZ
         public function exposeRestoreFailure(?string $message = null): Notification
         {
             return $this->sendRestoreFailureNotification($message);
         }
     };
+<<<<<<< .merge_file_OPFETu
 <<<<<<< .merge_file_0a5cdj
 <<<<<<< .merge_file_28wBbn
 =======
@@ -73,16 +80,22 @@ $this->page = new class extends ListLogActivities
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_JwJUVf
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_CYhmpZ
 });
 
 describe('List Log Activities Page Coverage', function (): void {
     test('get breadcrumb returns string', function (): void {
+<<<<<<< .merge_file_OPFETu
 <<<<<<< .merge_file_0a5cdj
 <<<<<<< .merge_file_28wBbn
         $result = $this->requirePage()->getBreadcrumb();
 =======
 =======
 >>>>>>> .merge_file_JwJUVf
+=======
+>>>>>>> .merge_file_CYhmpZ
 <<<<<<< HEAD
         /** @var \Modules\Activity\Tests\TestCase $this */
 $result = $this->requirePage()->getBreadcrumb();
@@ -90,10 +103,13 @@ $result = $this->requirePage()->getBreadcrumb();
         /** @var TestCase $this */
         $result = $this->requirePage()->getBreadcrumb();
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_OPFETu
 <<<<<<< .merge_file_0a5cdj
 >>>>>>> .merge_file_WXxJie
 =======
 >>>>>>> .merge_file_JwJUVf
+=======
+>>>>>>> .merge_file_CYhmpZ
 
         Assert::assertNotEmpty($result);
     });
@@ -114,21 +130,27 @@ $result = $this->requirePage()->getBreadcrumb();
     });
 
     test('can restore activity returns false when resource class does not exist', function (): void {
+<<<<<<< .merge_file_OPFETu
 <<<<<<< .merge_file_0a5cdj
 <<<<<<< .merge_file_28wBbn
         Assert::assertFalse(class_exists('NonExistentClass\That\Does\Not\Exist'));
 =======
 =======
 >>>>>>> .merge_file_JwJUVf
+=======
+>>>>>>> .merge_file_CYhmpZ
 <<<<<<< HEAD
 Assert::assertFalse(class_exists('NonExistentClass\That\Does\Not\Exist'));
 =======
         Assert::assertFalse(class_exists('NonExistentClass\That\Does\Not\Exist'));
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_OPFETu
 <<<<<<< .merge_file_0a5cdj
 >>>>>>> .merge_file_WXxJie
 =======
 >>>>>>> .merge_file_JwJUVf
+=======
+>>>>>>> .merge_file_CYhmpZ
     });
 
     test('can restore activity returns false when resource lacks can restore method', function (): void {
@@ -144,43 +166,55 @@ Assert::assertFalse(class_exists('NonExistentClass\That\Does\Not\Exist'));
     });
 
     test('get pagination mode returns default', function (): void {
+<<<<<<< .merge_file_OPFETu
 <<<<<<< .merge_file_0a5cdj
 <<<<<<< .merge_file_28wBbn
         $mode = $this->requirePage()->getPaginationMode();
 =======
 =======
 >>>>>>> .merge_file_JwJUVf
+=======
+>>>>>>> .merge_file_CYhmpZ
 <<<<<<< HEAD
 $mode = $this->requirePage()->getPaginationMode();
 =======
         /** @var TestCase $this */
         $mode = $this->requirePage()->getPaginationMode();
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_OPFETu
 <<<<<<< .merge_file_0a5cdj
 >>>>>>> .merge_file_WXxJie
 =======
 >>>>>>> .merge_file_JwJUVf
+=======
+>>>>>>> .merge_file_CYhmpZ
 
         Assert::assertSame(PaginationMode::Default, $mode);
     });
 
     test('get field label returns name when not in map', function (): void {
+<<<<<<< .merge_file_OPFETu
 <<<<<<< .merge_file_0a5cdj
 <<<<<<< .merge_file_28wBbn
         try {
 =======
 =======
 >>>>>>> .merge_file_JwJUVf
+=======
+>>>>>>> .merge_file_CYhmpZ
 <<<<<<< HEAD
 try {
 =======
         /** @var TestCase $this */
         try {
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_OPFETu
 <<<<<<< .merge_file_0a5cdj
 >>>>>>> .merge_file_WXxJie
 =======
 >>>>>>> .merge_file_JwJUVf
+=======
+>>>>>>> .merge_file_CYhmpZ
             $label = $this->requirePage()->getFieldLabel('nonexistent_field');
             Assert::assertSame('nonexistent_field', $label);
         } catch (\Throwable $e) {
@@ -246,22 +280,28 @@ try {
     });
 
     test('can restore activity with record executes resource check', function (): void {
+<<<<<<< .merge_file_OPFETu
 <<<<<<< .merge_file_0a5cdj
 <<<<<<< .merge_file_28wBbn
         $result = $this->requirePage()->canRestoreActivity();
 =======
 =======
 >>>>>>> .merge_file_JwJUVf
+=======
+>>>>>>> .merge_file_CYhmpZ
 <<<<<<< HEAD
 $result = $this->requirePage()->canRestoreActivity();
 =======
         /** @var TestCase $this */
         $result = $this->requirePage()->canRestoreActivity();
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_OPFETu
 <<<<<<< .merge_file_0a5cdj
 >>>>>>> .merge_file_WXxJie
 =======
 >>>>>>> .merge_file_JwJUVf
+=======
+>>>>>>> .merge_file_CYhmpZ
         Assert::assertFalse($result);
     });
 });

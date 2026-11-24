@@ -3,6 +3,7 @@ title: "Git Conflict Inventory"
 qmd: "activity wiki troubleshooting git merge conflict inventory md"
 type: note
 tags: [documentation]
+<<<<<<< .merge_file_BvRo3S
 <<<<<<< .merge_file_xKOnJk
 <<<<<<< .merge_file_hgoqUH
 =======
@@ -11,6 +12,9 @@ created: 2026-04-28
 =======
 created: 2026-04-28
 >>>>>>> .merge_file_ejpkoC
+=======
+created: 2026-04-28
+>>>>>>> .merge_file_1i3fpe
 ---
 
 # Git Conflict Inventory

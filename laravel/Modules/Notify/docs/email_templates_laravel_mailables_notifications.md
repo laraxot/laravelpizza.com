@@ -3,7 +3,7 @@ title: "email templates laravel mailables notifications"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_cHRIm0
+<<<<<<< .merge_file_p5kCVS
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_4Fv7iz
+>>>>>>> .merge_file_t0sM7G
 qmd: "email templates laravel mailables notifications"
 issues: []
 discussions: []

@@ -9,6 +9,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\error_log;
 
+/** @see Modules/AI/docs/sentiment-analysis.md */
 final class AnalyzeTransformersSentimentAction
 {
     use QueueableAction;

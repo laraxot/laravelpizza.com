@@ -4,24 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
-<<<<<<< .merge_file_D4w5Ch
+<<<<<<< .merge_file_CqBpiK
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_BKuPjT
+>>>>>>> .merge_file_b8LnBE
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_D4w5Ch
+<<<<<<< .merge_file_CqBpiK
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_BKuPjT
+>>>>>>> .merge_file_b8LnBE
 qmd: "documentation system update complete"
 issues: []
 discussions: []
@@ -247,14 +247,14 @@ export default defineConfig({
 2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 2. **Nessuna copia:** `public_html/themes/Sixteen` e' un symlink a `laravel/Themes/Sixteen/public` (`npm run copy` obsoleto)
 =======
-<<<<<<< .merge_file_D4w5Ch
+<<<<<<< .merge_file_CqBpiK
 <<<<<<< HEAD
 <<<<<<< HEAD
 2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 2. **Nessuna copia:** `public_html/themes/Sixteen` e' un symlink a `laravel/Themes/Sixteen/public` (`npm run copy` obsoleto)
 =======
 =======
->>>>>>> .merge_file_BKuPjT
+>>>>>>> .merge_file_b8LnBE
 <<<<<<< .merge_file_GvKH2P
 2. **Copy Step:** `symlink public_html/themes (npm run copy obsoleto)` copies to `../../public_html/themes/Sixteen/`
 2. **Nessuna copia:** `public_html/themes/Sixteen` e' un symlink a `laravel/Themes/Sixteen/public` (`npm run copy` obsoleto)
@@ -262,13 +262,13 @@ export default defineConfig({
 2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 >>>>>>> .merge_file_iW3ZsR
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_D4w5Ch
+<<<<<<< .merge_file_CqBpiK
 =======
 2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_BKuPjT
+>>>>>>> .merge_file_b8LnBE
 3. **Manifest Location:** Both locations have manifest.json after build
 4. **Laravel Vite:** Reads from `public_html/themes/Sixteen/manifest.json`
 
@@ -278,14 +278,14 @@ export default defineConfig({
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 resources/ → Vite Build → public/ ← symlink ← public_html/themes/Sixteen
 =======
-<<<<<<< .merge_file_D4w5Ch
+<<<<<<< .merge_file_CqBpiK
 <<<<<<< HEAD
 <<<<<<< HEAD
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 resources/ → Vite Build → public/ ← symlink ← public_html/themes/Sixteen
 =======
 =======
->>>>>>> .merge_file_BKuPjT
+>>>>>>> .merge_file_b8LnBE
 <<<<<<< .merge_file_GvKH2P
 resources/ → Vite Build → public/ → symlink public_html/themes (npm run copy obsoleto) → public_html/themes/Sixteen/
 resources/ → Vite Build → public/ ← symlink ← public_html/themes/Sixteen
@@ -293,13 +293,13 @@ resources/ → Vite Build → public/ ← symlink ← public_html/themes/Sixteen
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 >>>>>>> .merge_file_iW3ZsR
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_D4w5Ch
+<<<<<<< .merge_file_CqBpiK
 =======
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_BKuPjT
+>>>>>>> .merge_file_b8LnBE
 ```
 
 ---

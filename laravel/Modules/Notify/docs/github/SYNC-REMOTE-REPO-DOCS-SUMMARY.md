@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_EXmLnc
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_BNfPed
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_EXmLnc
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_BNfPed
 qmd: "SYNC REMOTE REPO DOCS SUMMARY"
 issues: []
 discussions: []
@@ -27,10 +33,13 @@ discussions: []
 > **Agent**: Qwen-Code-001  
 > **Task**: Create comprehensive documentation for dual-mode sync script with multi-agent coordination
 
+<<<<<<< .merge_file_EXmLnc
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_BNfPed
 ---
 
 title: "SYNC REMOTE REPO DOCS SUMMARY"
@@ -72,6 +81,7 @@ discussions: []
 
 ---
 
+<<<<<<< .merge_file_EXmLnc
 <<<<<<< HEAD
 =======
 =======
@@ -82,6 +92,8 @@ discussions: []
 
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_BNfPed
 ## 🎯 Key Features
 
 ### 1. Dual-Mode Documentation
@@ -104,10 +116,13 @@ bashscripts/git/subtrees/sync_remote_repo.sh laraxot
 ### 2. Multi-Agent Coordination
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_EXmLnc
 **Coordination Log** (`SYNC_REMOTE_REPO_COORDINATION.md`):
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_BNfPed
 **Coordination Log** (`sync_remote_repo_coordination.md`):
 =======
 <<<<<<< HEAD
@@ -116,10 +131,13 @@ bashscripts/git/subtrees/sync_remote_repo.sh laraxot
 **Coordination Log** (`sync_remote_repo_coordination.md`):
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_EXmLnc
 =======
 **Coordination Log** (`SYNC_REMOTE_REPO_COORDINATION.md`):
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_BNfPed
 - Entry template for agent work tracking
 - Lock file protocol for exclusive work
 - Agent teams structure
@@ -162,10 +180,13 @@ bashscripts/docs/git/
 ├── README.md                          # Index for git docs
 ├── sync-remote-repo-guide.md          # Comprehensive guide
 <<<<<<< HEAD
+<<<<<<< .merge_file_EXmLnc
 ├── SYNC_REMOTE_REPO_COORDINATION.md   # Coordination log
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_BNfPed
 ├── sync_remote_repo_coordination.md   # Coordination log
 =======
 <<<<<<< HEAD
@@ -174,10 +195,13 @@ bashscripts/docs/git/
 ├── sync_remote_repo_coordination.md   # Coordination log
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_EXmLnc
 =======
 ├── SYNC_REMOTE_REPO_COORDINATION.md   # Coordination log
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_BNfPed
 ├── GITHUB_WIKI_SYNC.md                # Wiki sync guide
 └── subtrees/                          # Subtree scripts folder
 
@@ -204,19 +228,25 @@ All documents are cross-referenced:
 - AGENTS.md → All docs
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_EXmLnc
 <<<<<<< HEAD
 - AGENTS.md → All docs
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_BNfPed
 - agents.md → All docs
 =======
 - AGENTS.md → All docs
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_EXmLnc
 =======
 - agents.md → All docs
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_BNfPed
 
 ### External Links
 
@@ -266,23 +296,29 @@ All documents are cross-referenced:
 - Created sync-remote-repo-guide.md (comprehensive guide)
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_EXmLnc
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_BNfPed
 - Created SYNC_REMOTE_REPO_COORDINATION.md (coordination log)
 - Created GITHUB_WIKI_SYNC.md (wiki sync guide)
 - Created README.md (docs index)
 - Created GitHub Issue/Discussion templates
 - Updated agents.md with coordination guidelines
+<<<<<<< .merge_file_EXmLnc
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_BNfPed
 >>>>>>> laraxot/dev
 - Created sync_remote_repo_coordination.md (coordination log)
 - Created GITHUB_WIKI_SYNC.md (wiki sync guide)
@@ -345,10 +381,13 @@ All documents are cross-referenced:
 **To Join**: Add your agent ID to coordination log  
 **Teams**: Choose from Script Core, CI/CD, Documentation, Testing  
 <<<<<<< HEAD
+<<<<<<< .merge_file_EXmLnc
 **Process**: Follow coordination guidelines in SYNC_REMOTE_REPO_COORDINATION.md
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_BNfPed
 **Process**: Follow coordination guidelines in sync_remote_repo_coordination.md
 =======
 <<<<<<< HEAD
@@ -357,10 +396,13 @@ All documents are cross-referenced:
 **Process**: Follow coordination guidelines in sync_remote_repo_coordination.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_EXmLnc
 =======
 **Process**: Follow coordination guidelines in SYNC_REMOTE_REPO_COORDINATION.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_BNfPed
 
 ---
 
@@ -369,11 +411,14 @@ All documents are cross-referenced:
 When reviewing this work:
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_EXmLnc
 - [ ] read sync-remote-repo-guide.md
 - [ ] read sync_remote_repo_coordination.md
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_BNfPed
 - [ ] Read sync-remote-repo-guide.md
 - [ ] Read sync_remote_repo_coordination.md
 =======
@@ -385,11 +430,14 @@ When reviewing this work:
 - [ ] Read sync_remote_repo_coordination.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_EXmLnc
 =======
 - [ ] read sync-remote-repo-guide.md
 - [ ] read sync_remote_repo_coordination.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_BNfPed
 - [ ] Test CLI mode locally
 - [ ] Test CI mode (trigger workflow)
 - [ ] Add your agent ID to coordination log
@@ -426,10 +474,13 @@ When reviewing this work:
 
 - **Main Guide**: `bashscripts/docs/git/sync-remote-repo-guide.md`
 <<<<<<< HEAD
+<<<<<<< .merge_file_EXmLnc
 - **Coordination Log**: `bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md`
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_BNfPed
 - **Coordination Log**: `bashscripts/docs/git/sync_remote_repo_coordination.md`
 =======
 <<<<<<< HEAD
@@ -438,10 +489,13 @@ When reviewing this work:
 - **Coordination Log**: `bashscripts/docs/git/sync_remote_repo_coordination.md`
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_EXmLnc
 =======
 - **Coordination Log**: `bashscripts/docs/git/SYNC_REMOTE_REPO_COORDINATION.md`
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_BNfPed
 - **Docs Index**: `bashscripts/docs/git/README.md`
 - **Wiki Sync**: `bashscripts/docs/git/GITHUB_WIKI_SYNC.md`
 - **Issue Template**: `.github/ISSUE_TEMPLATE/sync-remote-repo.md`
@@ -467,10 +521,13 @@ This documentation is successful if:
 **Status**: ✅ Complete  
 **Next Review**: As needed by agent teams  
 <<<<<<< HEAD
+<<<<<<< .merge_file_EXmLnc
 **Coordination**: See SYNC_REMOTE_REPO_COORDINATION.md
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_BNfPed
 **Coordination**: See sync_remote_repo_coordination.md
 =======
 <<<<<<< HEAD
@@ -479,7 +536,10 @@ This documentation is successful if:
 **Coordination**: See sync_remote_repo_coordination.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_EXmLnc
 =======
 **Coordination**: See SYNC_REMOTE_REPO_COORDINATION.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_BNfPed

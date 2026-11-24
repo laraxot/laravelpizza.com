@@ -3,7 +3,15 @@ title: "GITHUB ACTION SETUP REQUIRED"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_gwwF2V
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_Qrgw32
 qmd: "GITHUB ACTION SETUP REQUIRED"
 issues: []
 discussions: []
@@ -15,10 +23,13 @@ discussions: []
 > **Status**: ⚠️ **REQUIRES MANUAL SETUP**  
 > **Priority**: HIGH
 
+<<<<<<< .merge_file_gwwF2V
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Qrgw32
 ---
 
 title: "GITHUB ACTION SETUP REQUIRED"
@@ -37,6 +48,7 @@ discussions: []
 
 ---
 
+<<<<<<< .merge_file_gwwF2V
 <<<<<<< HEAD
 =======
 =======
@@ -44,6 +56,8 @@ discussions: []
 
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Qrgw32
 ## 🔧 What You Need to Do (Manual Steps)
 
 The GitHub Action is **created and pushed**, but **WILL NOT WORK** until you configure the SSH key secret.

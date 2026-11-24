@@ -4,7 +4,15 @@ title: "Handoff multi-org sync (STORY-003)"
 type: handoff
 tags: [git, multi-org, bmad, story-003]
 created: 2026-07-21
+<<<<<<< .merge_file_cti3Oz
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-07-21
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_GDJ0vo
 module: "Notify"
 issues:
   - "https://github.com/provtv/module_notify_fila5/issues/22"

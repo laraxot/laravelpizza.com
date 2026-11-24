@@ -2,7 +2,7 @@
 qmd: "activity investigation investigation md"
 type: investigation
 title: "Investigation Audit Log Completamento Workflow"
-links: {github_issue: #XXX}
+links: {github_issue: "#XXX"}
 ---
 # Investigation: Audit Log Completamento Workflow
 

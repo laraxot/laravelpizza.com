@@ -4,24 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
-<<<<<<< .merge_file_2TWZI8
+<<<<<<< .merge_file_ePi3Ec
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_QRHR7d
+>>>>>>> .merge_file_E98zUB
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_2TWZI8
+<<<<<<< .merge_file_ePi3Ec
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_QRHR7d
+>>>>>>> .merge_file_E98zUB
 qmd: "attachments usage"
 issues: []
 discussions: []
@@ -319,7 +319,7 @@ foreach ($records as $record) {
 - [Ptv - Complete PDF Email Guide](../../../Ptv/docs/pdf-email-attachments-complete-guide.md)
 - [Xot - PDF Generation Technical](../../../Xot/docs/actions/pdf-content-generation-technical.md)
 <<<<<<< HEAD
-<<<<<<< .merge_file_2TWZI8
+<<<<<<< .merge_file_ePi3Ec
 - [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/email_layouts_best_practices.md)
 - [SPATIE_MAIL_TEMPLATES_STRUCTURE.md](../mail-templates/spatie_mail_templates_structure.md)
 - [EMAIL_TROUBLESHOOTING.md](./email_troubleshooting.md)
@@ -327,7 +327,7 @@ foreach ($records as $record) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_QRHR7d
+>>>>>>> .merge_file_E98zUB
 =======
 <<<<<<< .merge_file_TXoG9S
 - [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/EMAIL_LAYOUTS_BEST_PRACTICES.md)
@@ -335,11 +335,11 @@ foreach ($records as $record) {
 - [EMAIL_TROUBLESHOOTING.md](./EMAIL_TROUBLESHOOTING.md)
 =======
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_2TWZI8
+<<<<<<< .merge_file_ePi3Ec
 =======
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_QRHR7d
+>>>>>>> .merge_file_E98zUB
 - [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/email_layouts_best_practices.md)
 - [SPATIE_MAIL_TEMPLATES_STRUCTURE.md](../mail-templates/spatie_mail_templates_structure.md)
 - [EMAIL_TROUBLESHOOTING.md](email_troubleshooting.md)
@@ -347,7 +347,7 @@ foreach ($records as $record) {
 - [SPATIE_MAIL_TEMPLATES_STRUCTURE.md](../mail-templates/spatie_mail_templates_structure.md)
 - [EMAIL_TROUBLESHOOTING.md](./email_troubleshooting.md)
 <<<<<<< HEAD
-<<<<<<< .merge_file_2TWZI8
+<<<<<<< .merge_file_ePi3Ec
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_nVtctG
@@ -359,7 +359,7 @@ foreach ($records as $record) {
 =======
 >>>>>>> .merge_file_nVtctG
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_QRHR7d
+>>>>>>> .merge_file_E98zUB
 
 ### File Correlati
 - `Modules/Notify/app/Emails/SpatieEmail.php` - Gestione allegati

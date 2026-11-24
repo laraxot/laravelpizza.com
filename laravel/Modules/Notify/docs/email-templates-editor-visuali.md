@@ -3,7 +3,7 @@ title: "email templates editor visuali"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_GXAHCF
+<<<<<<< .merge_file_qfTCDJ
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_IsHGOA
+>>>>>>> .merge_file_u7bnNp
 qmd: "email templates editor visuali"
 issues: []
 discussions: []

@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_9gG9hI
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_WyfBkT
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_9gG9hI
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_WyfBkT
 qmd: "email templates update"
 issues: []
 discussions: []
@@ -107,11 +113,14 @@ I modelli base si trovano in:
 ## Documentazione Correlata
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_9gG9hI
 - [Email Templates Structure](./email_templates_structure.md)
 - [Responsive Email Design](./responsive_email_templates.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_WyfBkT
 - [Email Templates Structure](./EMAIL_TEMPLATES_STRUCTURE.md)
 - [Responsive Email Design](./RESPONSIVE_EMAIL_TEMPLATES.md)
 =======
@@ -123,10 +132,13 @@ I modelli base si trovano in:
 - [Responsive Email Design](./RESPONSIVE_EMAIL_TEMPLATES.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_9gG9hI
 =======
 - [Email Templates Structure](./email_templates_structure.md)
 - [Responsive Email Design](./responsive_email_templates.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_WyfBkT
 - [Email HTML Best Practices](../email_html_best_practices.md)
 - [Email Templates Implementation](../email_templates.md)

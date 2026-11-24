@@ -22,6 +22,7 @@ Welcome to the central knowledge base for the **PTVX** project. This wiki is aut
 - [Tenant](../../../Tenant/docs/wiki): Multi-tenancy and data isolation.
 - [UI](../../../UI/docs/wiki): Shared Blade and Filament components.
 - [Lang](../../../Lang/docs/wiki): Internationalization and translation logic.
+<<<<<<< .merge_file_Vjk1bZ
 <<<<<<< .merge_file_MIhxa4
 <<<<<<< .merge_file_IFOAoA
 =======
@@ -34,11 +35,17 @@ Welcome to the central knowledge base for the **PTVX** project. This wiki is aut
 =======
 <<<<<<< .merge_file_SWZIxS
 >>>>>>> .merge_file_cfnhEc
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_SWZIxS
+>>>>>>> .merge_file_kG0s3W
 - [Xot](../../laravel/Modules/Xot/docs/wiki/): Core framework wrappers and shared utilities.
 - [User](../../laravel/Modules/User/docs/wiki/): Identity, authentication, and profiles.
 - [Tenant](../../laravel/Modules/Tenant/docs/wiki/): Multi-tenancy and data isolation.
 - [UI](../../laravel/Modules/UI/docs/wiki/): Shared Blade and Filament components.
 - [Lang](../../laravel/Modules/Lang/docs/wiki/): Internationalization and translation logic.
+<<<<<<< .merge_file_Vjk1bZ
 <<<<<<< .merge_file_MIhxa4
 <<<<<<< .merge_file_IFOAoA
 =======
@@ -51,6 +58,11 @@ Welcome to the central knowledge base for the **PTVX** project. This wiki is aut
 >>>>>>> .merge_file_095sru
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_cfnhEc
+=======
+=======
+>>>>>>> .merge_file_095sru
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_kG0s3W
 
 ## Architectural Principles
 

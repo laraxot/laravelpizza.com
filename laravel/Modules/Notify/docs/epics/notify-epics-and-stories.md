@@ -6,7 +6,7 @@ title: "Notify Epics and User Stories"
 type: user_stories
 tags: [user stories, epics, notify]
 created: 2026-08-04
-<<<<<<< .merge_file_pj1nnY
+<<<<<<< .merge_file_JUEMjh
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -14,7 +14,7 @@ updated: 2026-08-04
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_I6mUMT
+>>>>>>> .merge_file_hp5PC3
 ---
 # Notify Epics and User Stories
 

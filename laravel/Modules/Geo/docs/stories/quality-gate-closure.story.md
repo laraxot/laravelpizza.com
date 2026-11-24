@@ -13,19 +13,25 @@ updated: 2026-09-26
 created: 2026-09-26
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_ErgHmu
 <<<<<<< .merge_file_bdp3Ra
 >>>>>>> .merge_file_XgORBl
 =======
 >>>>>>> .merge_file_4FnCDB
+=======
+>>>>>>> .merge_file_2i908o
 qmd: "quality gate closure 2026 09 04.story"
 issues: []
 discussions: []
 date_originale_nome_file: 2026-09-04
+<<<<<<< .merge_file_ErgHmu
 <<<<<<< .merge_file_bdp3Ra
 <<<<<<< .merge_file_Zad8SJ
 =======
 =======
 >>>>>>> .merge_file_4FnCDB
+=======
+>>>>>>> .merge_file_2i908o
 <<<<<<< HEAD
 =======
 =======
@@ -44,10 +50,13 @@ date_originale_nome_file: 2026-09-04
 >>>>>>> .merge_file_bKFsva
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_ErgHmu
 <<<<<<< .merge_file_bdp3Ra
 >>>>>>> .merge_file_XgORBl
 =======
 >>>>>>> .merge_file_4FnCDB
+=======
+>>>>>>> .merge_file_2i908o
 ---
 
 # Story: Quality-gate closure — Modules/Geo (2026-09-04)
@@ -72,6 +81,7 @@ story copre il resto del gate: phpmd, phpinsights (verificato non disponibile), 
 - `Modules/Geo` stesso portava già drift di una sessione concorrente ("riduzione mixed", vedi
   `docs/coverage.md`) su 7 file mai toccati da questa sessione — non aggiunti a git, vedi sotto.
 
+<<<<<<< .merge_file_ErgHmu
 <<<<<<< .merge_file_bdp3Ra
 <<<<<<< .merge_file_Zad8SJ
 =======
@@ -82,12 +92,17 @@ story copre il resto del gate: phpmd, phpinsights (verificato non disponibile), 
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_4FnCDB
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_2i908o
 ### Follow-up docs markers 2026-11-23
 
 - Sweep `Modules/Geo/docs/**/*.md`: **56** file con conflitti annidati ripuliti; grep `.md` → **0**.
 - Dominio invariato: geocoding/mappe (AddressInput, Leaflet, driver `geo.driver`) — nessuna nuova architettura.
 - Residuo atteso: script sotto `docs/git/**` e simili che *cercano* i marker (non conflitti commessi).
 
+<<<<<<< .merge_file_ErgHmu
 <<<<<<< .merge_file_bdp3Ra
 <<<<<<< .merge_file_Zad8SJ
 =======
@@ -96,6 +111,9 @@ story copre il resto del gate: phpmd, phpinsights (verificato non disponibile), 
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_4FnCDB
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_2i908o
 ## Cosa e' stato trovato
 - `php -l` su 545 file `.php` del modulo: nessun errore di sintassi.
 - PHPStan baseline (cache pulita, con path arg, memoria 4096M): **0 errori** confermato via

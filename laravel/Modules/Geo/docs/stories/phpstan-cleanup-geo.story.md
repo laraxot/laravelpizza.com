@@ -9,12 +9,15 @@ updated: 2026-10-06
 tags: [phpstan, geo, constants, typeCoverage, cache, tests, bmad]
 related:
   - ./phpstan-cleanup-geo.dev.md
+<<<<<<< .merge_file_BW5Ky1
 <<<<<<< .merge_file_fzbBEw
 <<<<<<< .merge_file_sMxyO3
 date_originale_nome_file: 2026-10-06
 =======
 =======
 >>>>>>> .merge_file_O6cILd
+=======
+>>>>>>> .merge_file_O2rUH6
 <<<<<<< HEAD
 date_originale_nome_file: 2026-10-06
 =======
@@ -23,10 +26,13 @@ date_originale_nome_file: 2026-10-06
 date_originale_nome_file: 2026-10-06
 >>>>>>> .merge_file_CXfXxw
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_BW5Ky1
 <<<<<<< .merge_file_fzbBEw
 >>>>>>> .merge_file_vD6tbl
 =======
 >>>>>>> .merge_file_O6cILd
+=======
+>>>>>>> .merge_file_O2rUH6
 ---
 
 # [STORY] PHPStan cleanup modulo Geo

@@ -3,7 +3,15 @@ title: "GitHub Actions Status & Fixes"
 type: concept
 tags: [github, actions, status]
 created: 2026-07-14
+<<<<<<< .merge_file_eUZFgJ
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_0Ru8SK
 qmd: "github-actions-status github actions status & fixes"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -12,12 +20,17 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
+<<<<<<< .merge_file_eUZFgJ
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
 <<<<<<< HEAD
   - "./acronym-naming-conventions.md"
 =======
 <<<<<<< HEAD
+=======
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
+>>>>>>> .merge_file_0Ru8SK
   - "./acronym-naming-conventions.md"
 =======
 >>>>>>> laraxot/dev

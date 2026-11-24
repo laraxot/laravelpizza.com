@@ -3,7 +3,7 @@ title: "email plugins"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_nYRkEn
+<<<<<<< .merge_file_8KhrTm
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_RvhEiz
+>>>>>>> .merge_file_77Kiiw
 qmd: "email plugins"
 issues: []
 discussions: []

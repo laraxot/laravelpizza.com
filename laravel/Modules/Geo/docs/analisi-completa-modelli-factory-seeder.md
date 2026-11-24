@@ -290,12 +290,15 @@ Tutti i modelli BaseModel, BasePivot, BaseUser, etc. sono classi astratte utiliz
 ### Documentazione Moduli
 - [<nome progetto> Analysis](../laravel/modules/<nome progetto>/docs/modelli_factory_seeder_analisi.md)
 - [User Analysis](../../User/docs/modelli_factory_seeder_analisi.md)
+<<<<<<< .merge_file_Pdp5Ts
 <<<<<<< .merge_file_rPjvRC
 <<<<<<< .merge_file_HMYLgK
 - [Geo Analysis](modelli-factory-seeder-analisi.md)
 =======
 =======
 >>>>>>> .merge_file_hK7jUA
+=======
+>>>>>>> .merge_file_5xqkUv
 <<<<<<< HEAD
 - [Geo Analysis](modelli_factory_seeder_analisi.md)
 =======
@@ -305,10 +308,13 @@ Tutti i modelli BaseModel, BasePivot, BaseUser, etc. sono classi astratte utiliz
 - [Geo Analysis](modelli-factory-seeder-analisi.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Pdp5Ts
 <<<<<<< .merge_file_rPjvRC
 >>>>>>> .merge_file_H4SJpf
 =======
 >>>>>>> .merge_file_hK7jUA
+=======
+>>>>>>> .merge_file_5xqkUv
 - [Media Analysis](../../Media/docs/modelli_factory_seeder_analisi.md)
 - [Notify Analysis](../../Notify/docs/modelli_factory_seeder_analisi.md)
 - [Job Analysis](../../Job/docs/modelli_factory_seeder_analisi.md)

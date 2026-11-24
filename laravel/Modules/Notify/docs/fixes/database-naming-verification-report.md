@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_QpLt31
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_XMDaWF
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_QpLt31
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_XMDaWF
 qmd: "database naming verification report"
 issues: []
 discussions: []
@@ -37,6 +43,7 @@ La verifica ha confermato che:
 - ✅ 18/18 moduli hanno directory corrette
 - ✅ Documentazione del modulo Blog corretta
 - ✅ AGENTS.md aggiornato con la rule
+<<<<<<< .merge_file_QpLt31
 <<<<<<< HEAD
 - ✅ AGENTS.md aggiornato con la rule
 =======
@@ -45,6 +52,9 @@ La verifica ha confermato che:
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- ✅ AGENTS.md aggiornato con la rule
+>>>>>>> .merge_file_XMDaWF
 - ✅ GitHub Issue #5 creata per tracking
 - ✅ Documentazione di convenzione creata
 
@@ -183,6 +193,7 @@ Questi sono **accettabili** perché:
 ### 3. ✅ Created Preventive Documentation
 - Guida completa alla convenzione
 - Rule in AGENTS.md
+<<<<<<< .merge_file_QpLt31
 <<<<<<< HEAD
 - Rule in AGENTS.md
 =======
@@ -191,6 +202,9 @@ Questi sono **accettabili** perché:
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- Rule in AGENTS.md
+>>>>>>> .merge_file_XMDaWF
 - Esempi e best practices
 
 ### 4. ✅ Established GitHub Workflow
@@ -210,6 +224,7 @@ Questi sono **accettabili** perché:
 ### Immediate (Done ✅)
 - ✅ Fix Blog module documentation
 - ✅ Update AGENTS.md
+<<<<<<< .merge_file_QpLt31
 <<<<<<< HEAD
 - ✅ Update AGENTS.md
 =======
@@ -218,6 +233,9 @@ Questi sono **accettabili** perché:
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- ✅ Update AGENTS.md
+>>>>>>> .merge_file_XMDaWF
 - ✅ Create convention documentation
 - ✅ Create GitHub Issue #5
 
@@ -270,24 +288,31 @@ find docs/ laravel/Modules/*/docs/ -type f -name "*.md" -exec sed -i \
 - [Database Naming Convention](../conventions/database-naming.md)
 - [AGENTS.md](../../AGENTS.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_QpLt31
 - [Fix Summary](database-naming-fix-summary.md)
 - [Database Naming Convention](../conventions/database-naming.md)
 - [AGENTS.md](../agents.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_XMDaWF
 =======
 <<<<<<< .merge_file_aLoQoh
 - [Fix Summary](fixes/database-naming-fix-summary.md)
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_QpLt31
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_XMDaWF
 - [Fix Summary](database-naming-fix-summary.md)
 - [Database Naming Convention](../conventions/database-naming.md)
 - [AGENTS.md](../agents.md)
 - [Fix Summary](database-naming-fix-summary.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_QpLt31
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_0CgbOB
@@ -295,6 +320,11 @@ find docs/ laravel/Modules/*/docs/ -type f -name "*.md" -exec sed -i \
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_0CgbOB
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_XMDaWF
 - [GitHub Issue #5](https://github.com/laraxot/base_fixcity_fila5/issues/5)
 - [Laravel Directory Structure](https://laravel.com/docs/structure)
 

@@ -3,7 +3,7 @@ title: "email templates analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_8BwPrO
+<<<<<<< .merge_file_U1BUPO
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_Vj4Eyd
+>>>>>>> .merge_file_TQw0MD
 qmd: "email templates analysis"
 issues: []
 discussions: []

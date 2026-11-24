@@ -3,7 +3,15 @@ title: "leggi qui domani"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_b3XRFF
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_ewDy0f
 qmd: "leggi qui domani"
 issues: []
 discussions: []

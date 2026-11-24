@@ -1,3 +1,8 @@
+---
+title: "Analisi Modelli, Factory e Seeder - Moduli Activity, Gdpr, Tenant, UI, <nome progetto>, Xot"
+type: analysis
+qmd: "modelli factory seeder analisi 1 moduli"
+---
 # Analisi Modelli, Factory e Seeder - Moduli Activity, Gdpr, Tenant, UI, <nome progetto>, Xot
 
 ## Modulo Activity

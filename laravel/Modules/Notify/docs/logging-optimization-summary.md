@@ -1,9 +1,12 @@
 ---
 <<<<<<< HEAD
+<<<<<<< .merge_file_G4m2Bk
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_zzKjT7
 issues: []
 discussions: []
 title: "LOGGING_OPTIMIZATION_SUMMARY_2026-03-02"
@@ -17,8 +20,11 @@ qmd: "logging_optimization_summary_2026-03-02 deprecated"
 updated: 2026-07-14
 qmd: "logging_optimization_summary_2026-03-02 deprecated"
 =======
+<<<<<<< .merge_file_G4m2Bk
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_zzKjT7
 title: "logging optimization summary 2026 03"
 type: note
 tags: [documentation]
@@ -27,10 +33,13 @@ updated: 2026-11-23
 qmd: "logging optimization summary 2026 03"
 issues: []
 discussions: []
+<<<<<<< .merge_file_G4m2Bk
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_zzKjT7
 >>>>>>> laraxot/dev
 status: deprecated
 related:
@@ -43,12 +52,15 @@ related:
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_G4m2Bk
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_zzKjT7
   - "./action-plan-immediate.md"
 ---
 
@@ -544,11 +556,15 @@ This session successfully:
 **Status**: READY FOR IMPLEMENTATION
 **Priority**: HIGH
 **Estimated Impact**: 20% performance improvement
+<<<<<<< .merge_file_G4m2Bk
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_zzKjT7
 >>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
@@ -557,10 +573,13 @@ This session successfully:
 > Questo file è stato rinominato in [logging-optimization-summary.md](logging-optimization-summary.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_G4m2Bk
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
+=======
+>>>>>>> .merge_file_zzKjT7
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

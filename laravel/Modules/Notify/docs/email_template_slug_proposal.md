@@ -4,24 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
-<<<<<<< .merge_file_bvc7SB
+<<<<<<< .merge_file_GPsCmh
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_rPaqg2
+>>>>>>> .merge_file_XT5Y2w
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_bvc7SB
+<<<<<<< .merge_file_GPsCmh
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_rPaqg2
+>>>>>>> .merge_file_XT5Y2w
 qmd: "email template slug proposal"
 issues: []
 discussions: []
@@ -266,13 +266,13 @@ MailTemplate::all()->each(function ($template) {
 
 - [Documentazione Email Template](./email_templates.md)
 <<<<<<< HEAD
-<<<<<<< .merge_file_bvc7SB
+<<<<<<< .merge_file_GPsCmh
 - [Gestione Traduzioni](../Lang/docs/translation_keys_best_practices.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_rPaqg2
+>>>>>>> .merge_file_XT5Y2w
 - [Gestione Traduzioni](../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 =======
 <<<<<<< HEAD
@@ -281,11 +281,11 @@ MailTemplate::all()->each(function ($template) {
 - [Gestione Traduzioni](../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_bvc7SB
+<<<<<<< .merge_file_GPsCmh
 =======
 - [Gestione Traduzioni](../Lang/docs/translation_keys_best_practices.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_rPaqg2
+>>>>>>> .merge_file_XT5Y2w
 - [Configurazione Email](../../../docs/email-configuration.md) 

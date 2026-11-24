@@ -4,24 +4,24 @@ type: concept
 tags: [documentation, analysis, improvement, plan]
 created: 2026-07-14
 <<<<<<< HEAD
-<<<<<<< .merge_file_EPBmZB
+<<<<<<< .merge_file_6bvmKX
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_RXtLbw
+>>>>>>> .merge_file_4N6i8O
 updated: 2026-07-14
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_EPBmZB
+<<<<<<< .merge_file_6bvmKX
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_RXtLbw
+>>>>>>> .merge_file_4N6i8O
 qmd: "documentation-analysis-and-improvement-plan documentation analysis and improvement plan"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -30,7 +30,7 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_EPBmZB
+<<<<<<< .merge_file_6bvmKX
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
 <<<<<<< HEAD
@@ -40,7 +40,7 @@ related:
 =======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_RXtLbw
+>>>>>>> .merge_file_4N6i8O
   - "./acronym-naming-conventions.md"
 =======
 >>>>>>> laraxot/dev
@@ -205,7 +205,7 @@ The FixCity platform has extensive documentation across modules and themes, but 
 3. **Update Governance**
    - Finalize documentation governance
 <<<<<<< HEAD
-<<<<<<< .merge_file_EPBmZB
+<<<<<<< .merge_file_6bvmKX
    - add to agents.md
 =======
 <<<<<<< HEAD
@@ -231,7 +231,7 @@ The FixCity platform has extensive documentation across modules and themes, but 
 =======
    - Add to AGENTS.md
    - Add to AGENTS.md
->>>>>>> .merge_file_RXtLbw
+>>>>>>> .merge_file_4N6i8O
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
    - Add to .windsurfrules
@@ -473,7 +473,7 @@ echo "  snake_case: $(find laravel/Modules/*/docs/ -name '*_*.md' | wc -l)"
 
 - [documentation-governance.md](documentation-governance.md) - Governance framework
 <<<<<<< HEAD
-<<<<<<< .merge_file_EPBmZB
+<<<<<<< .merge_file_6bvmKX
 - [AGENTS.md](../../../AGENTS.md) - Agent guidelines
 - [AGENTS.md](../../../AGENTS.md) - Agent guidelines
 =======
@@ -503,7 +503,7 @@ echo "  snake_case: $(find laravel/Modules/*/docs/ -name '*_*.md' | wc -l)"
 =======
 - [AGENTS.md](../../../AGENTS.md) - Agent guidelines
 - [AGENTS.md](../../../AGENTS.md) - Agent guidelines
->>>>>>> .merge_file_RXtLbw
+>>>>>>> .merge_file_4N6i8O
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [.windsurfrules](../../../.windsurfrules) - IDE rules

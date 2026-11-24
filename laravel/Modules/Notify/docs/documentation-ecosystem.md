@@ -3,7 +3,7 @@ title: "FixCity Documentation Ecosystem - Visual Map"
 type: concept
 tags: [documentation, ecosystem]
 created: 2026-07-14
-<<<<<<< .merge_file_z9ycHD
+<<<<<<< .merge_file_6QnOqG
 updated: 2026-11-23
 qmd: "documentation-ecosystem fixcity documentation ecosystem - visual map"
 =======
@@ -15,7 +15,7 @@ qmd: "documentation-ecosystem ptv documentation ecosystem - visual map"
 updated: 2026-11-23
 qmd: "documentation-ecosystem fixcity documentation ecosystem - visual map"
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_lFtASx
+>>>>>>> .merge_file_KIEHLG
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
@@ -23,7 +23,7 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_z9ycHD
+<<<<<<< .merge_file_6QnOqG
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
 <<<<<<< HEAD
@@ -33,7 +33,7 @@ related:
 =======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_lFtASx
+>>>>>>> .merge_file_KIEHLG
   - "./acronym-naming-conventions.md"
 =======
 >>>>>>> laraxot/dev

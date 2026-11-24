@@ -1,9 +1,12 @@
 ---
+<<<<<<< .merge_file_DKSjwR
 <<<<<<< .merge_file_n8aavK
 <<<<<<< .merge_file_fj0qqm
 =======
 =======
 >>>>>>> .merge_file_b7zAcg
+=======
+>>>>>>> .merge_file_0SqaTD
 <<<<<<< HEAD
 title: "Activity — architettura BMAD"
 type: concept
@@ -26,10 +29,13 @@ module: Activity
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_DKSjwR
 <<<<<<< .merge_file_n8aavK
 >>>>>>> .merge_file_uaKkDc
 =======
 >>>>>>> .merge_file_b7zAcg
+=======
+>>>>>>> .merge_file_0SqaTD
 title: "Activity — architettura BMAD"
 type: concept
 >>>>>>> laraxot/dev
@@ -52,12 +58,15 @@ discussions: []
 > **SUMMARY**: mappa reale del modulo `Modules/Activity` (alias `activity`): due
 > sottosistemi distinti — audit delle azioni utente su Spatie Activity + event
 > sourcing, e un visualizzatore dei log di file Laravel — con tre Resource
+<<<<<<< .merge_file_DKSjwR
 <<<<<<< .merge_file_n8aavK
 <<<<<<< .merge_file_fj0qqm
 > Filament, 30 Action e 8 DTO (misura 2026-11-19; 7 DTO del log viewer + `ActivityConfigData`).
 =======
 =======
 >>>>>>> .merge_file_b7zAcg
+=======
+>>>>>>> .merge_file_0SqaTD
 <<<<<<< HEAD
 > Filament, 30 Action e 8 DTO (misura 2026-11-19; 7 DTO del log viewer + `ActivityConfigData`).
 =======
@@ -78,10 +87,13 @@ discussions: []
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_DKSjwR
 <<<<<<< .merge_file_n8aavK
 >>>>>>> .merge_file_uaKkDc
 =======
 >>>>>>> .merge_file_b7zAcg
+=======
+>>>>>>> .merge_file_0SqaTD
 
 ## Identita del modulo
 
@@ -110,21 +122,27 @@ e il **contratto pubblico** del modulo.
 - `app/Contracts/ActivityRecorderInterface.php` — interfaccia gemella non vincolata al tipaggio stretto.
 - `app/Adapters/ActivityRecorder.php` e `app/Adapters/ActivityLogger.php` — implementazioni concrete.
 
+<<<<<<< .merge_file_DKSjwR
 <<<<<<< .merge_file_n8aavK
 <<<<<<< .merge_file_fj0qqm
 ## Action — tre famiglie distinte
 =======
 =======
 >>>>>>> .merge_file_b7zAcg
+=======
+>>>>>>> .merge_file_0SqaTD
 <<<<<<< HEAD
 ## Action — famiglie
 =======
 ## Action — tre famiglie distinte
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_DKSjwR
 <<<<<<< .merge_file_n8aavK
 >>>>>>> .merge_file_uaKkDc
 =======
 >>>>>>> .merge_file_b7zAcg
+=======
+>>>>>>> .merge_file_0SqaTD
 
 **Query (`app/Actions/Query`, 6)** — letture per il pannello: `GetActivitiesByTypeAction`,
 `GetActivityStatisticsAction`, `GetModelActivitiesAction`, `GetRecentActivitiesAction`,
@@ -140,11 +158,14 @@ e il **contratto pubblico** del modulo.
 `IsActivityLogSchemaWritableAction`: verificano se la tabella di audit e la
 struttura del log sono scrivibili prima di tentare l'operazione.
 
+<<<<<<< .merge_file_DKSjwR
 <<<<<<< .merge_file_n8aavK
 <<<<<<< .merge_file_fj0qqm
 =======
 =======
 >>>>>>> .merge_file_b7zAcg
+=======
+>>>>>>> .merge_file_0SqaTD
 <<<<<<< HEAD
 **Radice (`app/Actions`, 11) e Config (`app/Actions/Config`, 1)** — scrittura e manutenzione del log:
 `LogActivityAction`, `LogModelCreatedAction`, `LogModelUpdatedAction`, `LogModelDeletedAction`,
@@ -154,10 +175,13 @@ struttura del log sono scrivibili prima di tentare l'operazione.
 
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_DKSjwR
 <<<<<<< .merge_file_n8aavK
 >>>>>>> .merge_file_uaKkDc
 =======
 >>>>>>> .merge_file_b7zAcg
+=======
+>>>>>>> .merge_file_0SqaTD
 ## DTO (`app/Datas`, 8)
 
 `ActivityConfigData` (configurazione del modulo) e `FilteredLogEntriesData`, `LogEntryData`, `LogFileData`, `LogTailData`,
@@ -193,11 +217,14 @@ Alto numero ma qualita da verificare: 8 file senza casi, 19 punti di skip, 0 `Li
 
 - [module-boundary.md](./architecture/module-boundary.md) — confini del modulo.
 - [module-map.md](./architecture/module-map.md) — mappa file -> responsabilita, una riga per file.
+<<<<<<< .merge_file_DKSjwR
 <<<<<<< .merge_file_n8aavK
 <<<<<<< .merge_file_fj0qqm
 =======
 =======
 >>>>>>> .merge_file_b7zAcg
+=======
+>>>>>>> .merge_file_0SqaTD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -226,10 +253,13 @@ Risorse Filament per il pannello di amministrazione.
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_DKSjwR
 <<<<<<< .merge_file_n8aavK
 >>>>>>> .merge_file_uaKkDc
 =======
 >>>>>>> .merge_file_b7zAcg
+=======
+>>>>>>> .merge_file_0SqaTD
 - [brainstorming.md](./brainstorming.md) — decisioni prese e problemi aperti.
 
 ## Flussi di dati (verificati sul codice, 2026-11-16)
@@ -255,11 +285,14 @@ Policy per permesso (`activity.*`, `snapshot.*`, `stored_event.*`) su `UserBaseP
 
 ## Pattern utilizzati
 
+<<<<<<< .merge_file_DKSjwR
 <<<<<<< .merge_file_n8aavK
 <<<<<<< .merge_file_fj0qqm
 =======
 =======
 >>>>>>> .merge_file_b7zAcg
+=======
+>>>>>>> .merge_file_0SqaTD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -279,10 +312,13 @@ Policy per permesso (`activity.*`, `snapshot.*`, `stored_event.*`) su `UserBaseP
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_DKSjwR
 <<<<<<< .merge_file_n8aavK
 >>>>>>> .merge_file_uaKkDc
 =======
 >>>>>>> .merge_file_b7zAcg
+=======
+>>>>>>> .merge_file_0SqaTD
 - Action Queueable invece di Service (0 Services).
 - Resource con `Schemas/` e `Tables/` separati, base `XotBase*`.
 - Array una chiave per riga.

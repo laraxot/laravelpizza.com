@@ -1,10 +1,10 @@
 ---
-title: "false friends"
+title: "False Friends"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "false friends"
+qmd: "False Friends"
 issues: []
 discussions: []
 ---

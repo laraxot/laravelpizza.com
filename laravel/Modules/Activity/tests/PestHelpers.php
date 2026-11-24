@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< .merge_file_KLGXRj
 <<<<<<< .merge_file_KCzkzX
 <<<<<<< .merge_file_ZpSZFy
 =======
@@ -9,3 +10,6 @@ declare(strict_types=1);
 =======
 
 >>>>>>> .merge_file_7dGWoJ
+=======
+
+>>>>>>> .merge_file_GVYziV

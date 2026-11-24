@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_gkqCSm
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_gXhwyk
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_gkqCSm
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_gXhwyk
 qmd: "smart slug generation"
 issues: []
 discussions: []
@@ -192,7 +198,10 @@ public static function getFormSchema(): array
 ### 1. Pacchetto TitleWithSlugInput
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_gkqCSm
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_gXhwyk
 Come documentato in [TITLE_WITH_SLUG_COMPONENT.md](title_with_slug_component.md), il pacchetto `filament-title-with-slug` offre funzionalità simili con un'interfaccia più ricca. Tuttavia, l'approccio presentato qui può essere implementato senza dipendenze aggiuntive.
 Come documentato in [TITLE_WITH_SLUG_COMPONENT.md](./title_with_slug_component.md), il pacchetto `filament-title-with-slug` offre funzionalità simili con un'interfaccia più ricca. Tuttavia, l'approccio presentato qui può essere implementato senza dipendenze aggiuntive.
 =======
@@ -200,12 +209,17 @@ Come documentato in [TITLE_WITH_SLUG_COMPONENT.md](./title_with_slug_component.m
 Come documentato in [TITLE_WITH_SLUG_COMPONENT.md](./TITLE_WITH_SLUG_COMPONENT.md), il pacchetto `filament-title-with-slug` offre funzionalità simili con un'interfaccia più ricca. Tuttavia, l'approccio presentato qui può essere implementato senza dipendenze aggiuntive.
 =======
 Come documentato in [TITLE_WITH_SLUG_COMPONENT.md](title_with_slug_component.md), il pacchetto `filament-title-with-slug` offre funzionalità simili con un'interfaccia più ricca. Tuttavia, l'approccio presentato qui può essere implementato senza dipendenze aggiuntive.
+<<<<<<< .merge_file_gkqCSm
 Come documentato in [TITLE_WITH_SLUG_COMPONENT.md](./title_with_slug_component.md), il pacchetto `filament-title-with-slug` offre funzionalità simili con un'interfaccia più ricca. Tuttavia, l'approccio presentato qui può essere implementato senza dipendenze aggiuntive.
 >>>>>>> .merge_file_5PqPrf
 >>>>>>> laraxot/dev
 =======
 Come documentato in [TITLE_WITH_SLUG_COMPONENT.md](title_with_slug_component.md), il pacchetto `filament-title-with-slug` offre funzionalità simili con un'interfaccia più ricca. Tuttavia, l'approccio presentato qui può essere implementato senza dipendenze aggiuntive.
 Come documentato in [TITLE_WITH_SLUG_COMPONENT.md](./title_with_slug_component.md), il pacchetto `filament-title-with-slug` offre funzionalità simili con un'interfaccia più ricca. Tuttavia, l'approccio presentato qui può essere implementato senza dipendenze aggiuntive.
+=======
+Come documentato in [TITLE_WITH_SLUG_COMPONENT.md](./title_with_slug_component.md), il pacchetto `filament-title-with-slug` offre funzionalità simili con un'interfaccia più ricca. Tuttavia, l'approccio presentato qui può essere implementato senza dipendenze aggiuntive.
+>>>>>>> .merge_file_5PqPrf
+>>>>>>> .merge_file_gXhwyk
 >>>>>>> laraxot/dev
 
 ### 2. Reindirizzamenti Automatici
@@ -227,12 +241,15 @@ Per il modulo Notify di <nome progetto>, questa soluzione rappresenta un equilib
 - [Articolo Laravel News](https://laravel-news.com/generating-slugs-from-a-title-in-filament)
 - [Documentazione Filament Forms](https://filamentphp.com/docs/3.x/forms/advanced)
 <<<<<<< HEAD
+<<<<<<< .merge_file_gkqCSm
 - [Implementazione Modello con Slug](./model_slug_implementation.md)
 - [Componente TitleWithSlug](./title_with_slug_component.md)
 - [Miglioramenti UI/UX per Slug](./ui_ux_enhancements.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_gXhwyk
 =======
 <<<<<<< .merge_file_ZIPbej
 - [Implementazione Modello con Slug](./MODEL_SLUG_IMPLEMENTATION.md)
@@ -240,8 +257,11 @@ Per il modulo Notify di <nome progetto>, questa soluzione rappresenta un equilib
 - [Miglioramenti UI/UX per Slug](./UI_UX_ENHANCEMENTS.md)
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_gkqCSm
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_gXhwyk
 - [Implementazione Modello con Slug](model_slug_implementation.md)
 - [Componente TitleWithSlug](title_with_slug_component.md)
 - [Miglioramenti UI/UX per Slug](ui_ux_enhancements.md)
@@ -249,6 +269,7 @@ Per il modulo Notify di <nome progetto>, questa soluzione rappresenta un equilib
 - [Componente TitleWithSlug](./title_with_slug_component.md)
 - [Miglioramenti UI/UX per Slug](./ui_ux_enhancements.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_gkqCSm
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_5PqPrf
@@ -256,3 +277,8 @@ Per il modulo Notify di <nome progetto>, questa soluzione rappresenta un equilib
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_5PqPrf
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_gXhwyk

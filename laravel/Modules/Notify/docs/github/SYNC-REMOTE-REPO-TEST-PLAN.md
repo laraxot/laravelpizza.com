@@ -3,7 +3,15 @@ title: "SYNC REMOTE REPO TEST PLAN"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_MKflhz
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_eiMZWZ
 qmd: "SYNC REMOTE REPO TEST PLAN"
 issues: []
 discussions: []
@@ -16,10 +24,13 @@ discussions: []
 > **Workflow**: `.github/workflows/sync-remote-repo.yml`  
 > **Date**: 2026-03-13
 
+<<<<<<< .merge_file_MKflhz
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_eiMZWZ
 ---
 
 title: "SYNC REMOTE REPO TEST PLAN"
@@ -46,6 +57,7 @@ Verify that git subtrees sync works **BIDIRECTIONALLY**:
 - ✅ Files are properly synced
 
 ---
+<<<<<<< .merge_file_MKflhz
 <<<<<<< HEAD
 =======
 =======
@@ -54,6 +66,8 @@ Verify that git subtrees sync works **BIDIRECTIONALLY**:
 ### Secondary Goals
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_eiMZWZ
 
 ## 📋 Test Scenarios
 

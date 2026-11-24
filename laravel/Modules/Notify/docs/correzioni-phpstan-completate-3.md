@@ -3,7 +3,7 @@ title: "correzioni phpstan completate 3"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_JXTI6I
+<<<<<<< .merge_file_SKt5zg
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_SaTsWV
+>>>>>>> .merge_file_qUSbq9
 qmd: "correzioni phpstan completate 3"
 issues: []
 discussions: []
@@ -35,7 +35,7 @@ discussions: []
 ### Falsi Syntax Errors
 L'analisi PHPStan riportava 147 "syntax errors", ma in realt� **NON erano errori di sintassi PHP**. Erano **conflitti git non risolti** lasciati nel codice sorgente dopo merge multipli.
 
-<<<<<<< .merge_file_JXTI6I
+<<<<<<< .merge_file_SKt5zg
 <<<<<<< HEAD
 
 =======
@@ -46,7 +46,7 @@ L'analisi PHPStan riportava 147 "syntax errors", ma in realt� **NON erano erro
 >>>>>>> laraxot/dev
 =======
 
->>>>>>> .merge_file_SaTsWV
+>>>>>>> .merge_file_qUSbq9
 ## File Corretti
 
 ### 1. Modules/Notify/app/Actions/EsendexSendAction.php
@@ -211,13 +211,13 @@ Durante la risoluzione:
 - [PHPStan Configuration](../../phpstan.neon)
 - [PHPStan User Guide](https://phpstan.org/user-guide/getting-started)
 
-<<<<<<< .merge_file_JXTI6I
+<<<<<<< .merge_file_SKt5zg
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_SaTsWV
+>>>>>>> .merge_file_qUSbq9
 ---
 
 title: "correzioni phpstan completate 3"
@@ -360,7 +360,7 @@ I pattern di type safety implementati possono essere applicati a:
 4. **Testing** con classi dinamiche
 
 ---
-<<<<<<< .merge_file_JXTI6I
+<<<<<<< .merge_file_SKt5zg
 <<<<<<< HEAD
 =======
 =======
@@ -394,7 +394,7 @@ I pattern di type safety implementati possono essere applicati a:
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_SaTsWV
+>>>>>>> .merge_file_qUSbq9
 
 ## ✅ MISSIONE COMPLETATA
 
@@ -406,13 +406,13 @@ I pattern di type safety implementati possono essere applicati a:
 *Metodologia: Type safety + Riusabilità*  
 *Risultato: 0 errori PHPStan Level 9*
 ---
-<<<<<<< .merge_file_JXTI6I
+<<<<<<< .merge_file_SKt5zg
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_SaTsWV
+>>>>>>> .merge_file_qUSbq9
 ---
 title: "Correzioni Phpstan Completate 3"
 type: concept
@@ -433,11 +433,11 @@ related:
   - "./action-plan-immediate.md"
 ---
 
-<<<<<<< .merge_file_JXTI6I
+<<<<<<< .merge_file_SKt5zg
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_SaTsWV
+>>>>>>> .merge_file_qUSbq9

@@ -1,3 +1,8 @@
+---
+title: "Login Test Implementation Summary - <nome progetto> Project"
+type: note
+qmd: "login test implementation summary 1 nome"
+---
 # Login Test Implementation Summary - <nome progetto> Project
 
 ## 🎊 Mission Accomplished: Complete Login Testing Suite

@@ -3,7 +3,7 @@ title: "email templates deep dive"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_U68R34
+<<<<<<< .merge_file_fWmiKq
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_znNwkj
+>>>>>>> .merge_file_ShkzCg
 qmd: "email templates deep dive"
 issues: []
 discussions: []

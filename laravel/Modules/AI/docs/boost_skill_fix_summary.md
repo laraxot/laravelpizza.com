@@ -1,10 +1,10 @@
 ---
-title: "boost skill fix summary"
+title: "Boost Skill Fix Summary"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "boost skill fix summary"
+qmd: "Boost Skill Fix Summary"
 issues: []
 discussions: []
 ---
@@ -72,7 +72,7 @@ php artisan boost:remove-skill <name>
 
 - `/docs/BOOST_SKILL_INSTALLATION_ERROR.md` - Issue analysis
 - `/docs/BOOST_SKILL_SOLUTION_PLAN.md` - Solution plan
-- `Modules/Xot/docs/BOOST_SKILL_FIX_SUMMARY.md` - Core module fix
+- `Modules/Xot/docs/boost_skill_fix_summary.md` - Core module fix
 
 ## Lessons Learned
 

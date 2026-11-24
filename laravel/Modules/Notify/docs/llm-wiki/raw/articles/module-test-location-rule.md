@@ -3,7 +3,15 @@ title: "module test location rule"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_4ugWjx
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_nrHsjp
 qmd: "module test location rule"
 issues: []
 discussions: []

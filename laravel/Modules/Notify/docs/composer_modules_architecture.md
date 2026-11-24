@@ -7,7 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< .merge_file_z3Lohk
+<<<<<<< .merge_file_I9y5Fn
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -15,7 +15,7 @@ updated: 2026-08-24
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_lKhdse
+>>>>>>> .merge_file_93Bkup
 ---
 
 # Composer & Laravel-Modules Architecture

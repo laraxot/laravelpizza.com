@@ -3,7 +3,15 @@ title: "Risoluzione Conflitti Git - Modulo Notify"
 type: concept
 tags: [git, conflicts, resolution, sumy]
 created: 2026-07-14
+<<<<<<< .merge_file_QlkAZV
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_Snu4Ba
 qmd: "git-conflicts-resolution-sumy risoluzione conflitti git - modulo notify"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -12,12 +20,17 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
+<<<<<<< .merge_file_QlkAZV
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
 <<<<<<< HEAD
   - "./acronym-naming-conventions.md"
 =======
 <<<<<<< HEAD
+=======
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
+>>>>>>> .merge_file_Snu4Ba
   - "./acronym-naming-conventions.md"
 =======
 >>>>>>> laraxot/dev

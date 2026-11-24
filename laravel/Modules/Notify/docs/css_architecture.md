@@ -3,7 +3,7 @@ title: "css architecture"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_79Y3G8
+<<<<<<< .merge_file_lZrHbe
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_Y8MK0m
+>>>>>>> .merge_file_DdYiFv
 qmd: "css architecture"
 issues: []
 discussions: []

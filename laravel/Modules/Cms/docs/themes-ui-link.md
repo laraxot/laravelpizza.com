@@ -3,21 +3,27 @@ title: "themes ui link"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_51jkrf
 <<<<<<< .merge_file_uWruq7
 <<<<<<< .merge_file_ILiJAI
 updated: 2026-11-23
 =======
 =======
 >>>>>>> .merge_file_ykDxkb
+=======
+>>>>>>> .merge_file_aK5OSQ
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_51jkrf
 <<<<<<< .merge_file_uWruq7
 >>>>>>> .merge_file_ggbrrk
 =======
 >>>>>>> .merge_file_ykDxkb
+=======
+>>>>>>> .merge_file_aK5OSQ
 qmd: "themes ui link"
 issues: []
 discussions: []
@@ -36,12 +42,15 @@ Secondo le regole di organizzazione della documentazione:
 
 ## Collegamenti ai Temi nel Modulo UI
 
+<<<<<<< .merge_file_51jkrf
 <<<<<<< .merge_file_uWruq7
 <<<<<<< .merge_file_ILiJAI
 - [Componenti UI](../../ui/project_docs/README.md) - Panoramica dei componenti UI disponibili
 =======
 =======
 >>>>>>> .merge_file_ykDxkb
+=======
+>>>>>>> .merge_file_aK5OSQ
 <<<<<<< HEAD
 - [Componenti UI](../../ui/project_docs/README.md) - Panoramica dei componenti UI disponibili
 =======
@@ -51,10 +60,13 @@ Secondo le regole di organizzazione della documentazione:
 - [Componenti UI](../../ui/project_docs/README.md) - Panoramica dei componenti UI disponibili
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_51jkrf
 <<<<<<< .merge_file_uWruq7
 >>>>>>> .merge_file_ggbrrk
 =======
 >>>>>>> .merge_file_ykDxkb
+=======
+>>>>>>> .merge_file_aK5OSQ
 - [Layout e Temi](../../ui/project_docs/layouts-and-themes.md) - Documentazione sui layout e temi
 - [Componenti Blade](../../ui/project_docs/blade-components.md) - Componenti Blade riutilizzabili
 

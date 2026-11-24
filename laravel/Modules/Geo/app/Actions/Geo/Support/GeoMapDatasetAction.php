@@ -131,6 +131,7 @@ final class GeoMapDatasetAction
     }
 
     /**
+<<<<<<< .merge_file_C9ebnG
 <<<<<<< .merge_file_qXZzdw
 <<<<<<< .merge_file_6AhIdr
      * @param  array<array-key, mixed>  $decoded
@@ -142,6 +143,10 @@ final class GeoMapDatasetAction
      * @param array<array-key, mixed> $decoded
      *
 >>>>>>> .merge_file_Ra9lIB
+=======
+     * @param array<array-key, mixed> $decoded
+     *
+>>>>>>> .merge_file_OADLLL
      * @return list<GeoFeature>
      */
     private function normalizeFeatureCollection(array $decoded): array
@@ -171,6 +176,7 @@ final class GeoMapDatasetAction
     }
 
     /**
+<<<<<<< .merge_file_C9ebnG
 <<<<<<< .merge_file_qXZzdw
 <<<<<<< .merge_file_6AhIdr
      * @param  array<array-key, mixed>  $feature
@@ -182,6 +188,10 @@ final class GeoMapDatasetAction
      * @param array<array-key, mixed> $feature
      *
 >>>>>>> .merge_file_Ra9lIB
+=======
+     * @param array<array-key, mixed> $feature
+     *
+>>>>>>> .merge_file_OADLLL
      * @return GeoFeature|null
      */
     private function normalizeFeature(array $feature): ?array
@@ -218,6 +228,7 @@ final class GeoMapDatasetAction
     }
 
     /**
+<<<<<<< .merge_file_C9ebnG
 <<<<<<< .merge_file_qXZzdw
 <<<<<<< .merge_file_6AhIdr
      * @param  array<array-key, mixed>  $properties
@@ -229,6 +240,10 @@ final class GeoMapDatasetAction
      * @param array<array-key, mixed> $properties
      *
 >>>>>>> .merge_file_Ra9lIB
+=======
+     * @param array<array-key, mixed> $properties
+     *
+>>>>>>> .merge_file_OADLLL
      * @return GeoProperties|null
      */
     private function normalizeProperties(array $properties): ?array

@@ -4,24 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
-<<<<<<< .merge_file_h3VDv0
+<<<<<<< .merge_file_46VDLk
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_Hl7QT1
+>>>>>>> .merge_file_L7N41W
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_h3VDv0
+<<<<<<< .merge_file_46VDLk
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_Hl7QT1
+>>>>>>> .merge_file_L7N41W
 qmd: "documentation analysis and improvement plan"
 issues: []
 discussions: []
@@ -205,20 +205,20 @@ The FixCity platform has extensive documentation across modules and themes, but 
 3. **Update Governance**
    - Finalize documentation governance
 <<<<<<< HEAD
-<<<<<<< .merge_file_h3VDv0
+<<<<<<< .merge_file_46VDLk
    - add to agents.md
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_Hl7QT1
+>>>>>>> .merge_file_L7N41W
    - Add to AGENTS.md
    - Add to AGENTS.md
 =======
 <<<<<<< HEAD
    - add to agents.md
 =======
-<<<<<<< .merge_file_h3VDv0
+<<<<<<< .merge_file_46VDLk
    - Add to AGENTS.md
    - Add to AGENTS.md
 >>>>>>> laraxot/dev
@@ -228,7 +228,7 @@ The FixCity platform has extensive documentation across modules and themes, but 
 =======
    - Add to AGENTS.md
    - Add to AGENTS.md
->>>>>>> .merge_file_Hl7QT1
+>>>>>>> .merge_file_L7N41W
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
    - Add to .windsurfrules
@@ -471,7 +471,7 @@ echo "  snake_case: $(find laravel/Modules/*/docs/ -name '*_*.md' | wc -l)"
 - [DOCUMENTATION_GOVERNANCE.md](documentation_governance.md) - Governance framework
 <<<<<<< HEAD
 - [AGENTS.md](../../../AGENTS.md) - Agent guidelines
-<<<<<<< .merge_file_h3VDv0
+<<<<<<< .merge_file_46VDLk
 - [AGENTS.md](../../../AGENTS.md) - Agent guidelines
 =======
 <<<<<<< HEAD
@@ -499,7 +499,7 @@ echo "  snake_case: $(find laravel/Modules/*/docs/ -name '*_*.md' | wc -l)"
 =======
 - [AGENTS.md](../../../AGENTS.md) - Agent guidelines
 - [AGENTS.md](../../../AGENTS.md) - Agent guidelines
->>>>>>> .merge_file_Hl7QT1
+>>>>>>> .merge_file_L7N41W
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [.windsurfrules](../../../.windsurfrules) - IDE rules

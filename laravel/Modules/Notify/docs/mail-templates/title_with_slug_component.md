@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_ifmn0f
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_yk1yw4
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_ifmn0f
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_yk1yw4
 qmd: "title with slug component"
 issues: []
 discussions: []
@@ -239,12 +245,15 @@ L'implementazione dovrebbe seguire le convenzioni del progetto, con particolare 
 - [Repository GitHub del Pacchetto](https://github.com/camya/filament-title-with-slug)
 - [Documentazione Filament](https://filamentphp.com/docs)
 <<<<<<< HEAD
+<<<<<<< .merge_file_ifmn0f
 - [Implementazione Modello con Slug](./model_slug_implementation.md)
 - [Implementazione Risorsa con Slug](./resource_slug_implementation.md)
 - [Miglioramenti UI/UX](./ui_ux_enhancements.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_yk1yw4
 =======
 <<<<<<< .merge_file_jMdAIi
 - [Implementazione Modello con Slug](./MODEL_SLUG_IMPLEMENTATION.md)
@@ -252,8 +261,11 @@ L'implementazione dovrebbe seguire le convenzioni del progetto, con particolare 
 - [Miglioramenti UI/UX](./UI_UX_ENHANCEMENTS.md)
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_ifmn0f
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_yk1yw4
 - [Implementazione Modello con Slug](model_slug_implementation.md)
 - [Implementazione Risorsa con Slug](resource_slug_implementation.md)
 - [Miglioramenti UI/UX](ui_ux_enhancements.md)
@@ -261,6 +273,7 @@ L'implementazione dovrebbe seguire le convenzioni del progetto, con particolare 
 - [Implementazione Risorsa con Slug](./resource_slug_implementation.md)
 - [Miglioramenti UI/UX](./ui_ux_enhancements.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_ifmn0f
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_hsKFsg
@@ -268,3 +281,8 @@ L'implementazione dovrebbe seguire le convenzioni del progetto, con particolare 
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_hsKFsg
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_yk1yw4

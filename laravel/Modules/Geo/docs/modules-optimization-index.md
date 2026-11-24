@@ -61,12 +61,15 @@ discussions: []
 **Azione**: Documentation update + performance optimization
 **Tempo**: 4 ore | **Impatto**: Migliora manutenibilità
 
+<<<<<<< .merge_file_3Ow4hH
 <<<<<<< .merge_file_6prFda
 <<<<<<< .merge_file_uPyK9U
 #### [Modulo Geo](optimization-recommendations.md)
 =======
 =======
 >>>>>>> .merge_file_AJmtj1
+=======
+>>>>>>> .merge_file_zrTODc
 <<<<<<< HEAD
 #### [Modulo Geo](optimization_recommendations.md)
 =======
@@ -76,10 +79,13 @@ discussions: []
 #### [Modulo Geo](optimization-recommendations.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_3Ow4hH
 <<<<<<< .merge_file_6prFda
 >>>>>>> .merge_file_iqPp3n
 =======
 >>>>>>> .merge_file_AJmtj1
+=======
+>>>>>>> .merge_file_zrTODc
 **Stato**: Funzionalità complete con Google API
 **Azione**: Generalizzazione docs + Google API caching
 **Tempo**: 3 ore | **Impatto**: Modulo geo riutilizzabile

@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_UQuQJF
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_JNNrVQ
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_UQuQJF
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_JNNrVQ
 qmd: "json best practices"
 issues: []
 discussions: []
@@ -231,11 +237,14 @@ protected function rollback(): void
 
 - [Documentazione Migrazioni](./migration_rules.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_UQuQJF
 - [Gestione Errori](./error_handling.md)
 - [Best Practices Database](./database_best_practices.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_JNNrVQ
 - [Gestione Errori](./ERROR_HANDLING.md)
 - [Best Practices Database](./DATABASE_BEST_PRACTICES.md)
 =======
@@ -247,11 +256,14 @@ protected function rollback(): void
 - [Best Practices Database](./DATABASE_BEST_PRACTICES.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_UQuQJF
 =======
 - [Gestione Errori](./error_handling.md)
 - [Best Practices Database](./database_best_practices.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_JNNrVQ
 
 ## Note Importanti
 

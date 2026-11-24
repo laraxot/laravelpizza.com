@@ -4,7 +4,15 @@ type: index
 tags: [notify, docs, integrations]
 module: Notify
 created: 2026-07-20
+<<<<<<< .merge_file_DGWUIt
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-07-20
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_0XHiYP
 qmd: "notify documentazione integrations readme integrazioni index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -143,10 +151,13 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 ---
 
 <!-- Merged from README.md, which collided with this file on case-insensitive filesystems. -->
+<<<<<<< .merge_file_DGWUIt
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_0XHiYP
 
 ---
 title: "Readme"

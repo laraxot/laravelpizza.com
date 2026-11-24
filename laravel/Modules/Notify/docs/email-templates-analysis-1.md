@@ -3,7 +3,7 @@ title: "email templates analysis 1"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_YXPORC
+<<<<<<< .merge_file_PLsuIy
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_URNLMe
+>>>>>>> .merge_file_Ks4viW
 qmd: "email templates analysis 1"
 issues: []
 discussions: []
@@ -139,13 +139,13 @@ Sono state analizzate le principali soluzioni open source, best practice e patte
 - Implementare preview e fallback
 - Valutare builder visuali per template avanzati
 - Automatizzare test rendering
-<<<<<<< .merge_file_YXPORC
+<<<<<<< .merge_file_PLsuIy
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_URNLMe
+>>>>>>> .merge_file_Ks4viW
 
 ---
 
@@ -158,11 +158,11 @@ qmd: "email templates analysis 1"
 issues: []
 discussions: []
 _Analisi aggiornata al 2025-05-05. Per dettagli e approfondimenti, consultare i README specifici delle soluzioni nella cartella email-templates._
-<<<<<<< .merge_file_YXPORC
+<<<<<<< .merge_file_PLsuIy
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_URNLMe
+>>>>>>> .merge_file_Ks4viW

@@ -5,6 +5,7 @@ declare(strict_types=1);
 /**
  * Contratto Filament 5.x layout: le Blade Cms head/foot devono contenere
  * le direttive filamentStyles / filamentScripts (Configuring your layout).
+<<<<<<< .merge_file_lSOxvm
 <<<<<<< .merge_file_VYZPNS
 <<<<<<< .merge_file_KN37he
  *
@@ -16,6 +17,8 @@ declare(strict_types=1);
 =======
 =======
 >>>>>>> .merge_file_VMdUSI
+=======
+>>>>>>> .merge_file_xKjBN0
 <<<<<<< HEAD
  *
  * @see https://filamentphp.com/docs/5.x/introduction/installation#configuring-your-layout
@@ -29,21 +32,27 @@ declare(strict_types=1);
  * @see https://filamentphp.com/docs/5.x/introduction/installation#configuring-your-layout
  * @see Modules/Cms/docs/bmad/filament-layout-styles-scripts.md
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_lSOxvm
 <<<<<<< .merge_file_VYZPNS
 >>>>>>> .merge_file_tpKcEw
 =======
 >>>>>>> .merge_file_VMdUSI
+=======
+>>>>>>> .merge_file_xKjBN0
  */
 
 use PHPUnit\Framework\Assert;
 
 use function Safe\file_get_contents;
 
+<<<<<<< .merge_file_lSOxvm
 <<<<<<< .merge_file_VYZPNS
 <<<<<<< .merge_file_KN37he
 =======
 =======
 >>>>>>> .merge_file_VMdUSI
+=======
+>>>>>>> .merge_file_xKjBN0
 <<<<<<< HEAD
 test('cms head blade contains @filamentStyles before theme vite css', function (): void {
     $path = module_path('Cms', 'resources/views/components/head.blade.php');
@@ -56,10 +65,13 @@ test('cms head blade contains @filamentStyles before theme vite css', function (
 test('cms foot blade contains notifications then @filamentScripts then theme vite js', function (): void {
     $path = module_path('Cms', 'resources/views/components/foot.blade.php');
 =======
+<<<<<<< .merge_file_lSOxvm
 <<<<<<< .merge_file_VYZPNS
 >>>>>>> .merge_file_tpKcEw
 =======
 >>>>>>> .merge_file_VMdUSI
+=======
+>>>>>>> .merge_file_xKjBN0
 // This is a pure Blade contract test; it does not boot the Laravel application.
 /** @see Modules/Cms/docs/bmad/filament-layout-styles-scripts.md */
 test('cms head blade contains @filamentStyles before theme vite css', function (): void {
@@ -67,6 +79,7 @@ test('cms head blade contains @filamentStyles before theme vite css', function (
     Assert::assertFileExists($path);
     $blade = file_get_contents($path);
     Assert::assertStringContainsString('@filamentStyles', $blade);
+<<<<<<< .merge_file_lSOxvm
 <<<<<<< .merge_file_VYZPNS
 <<<<<<< .merge_file_KN37he
     Assert::assertMatchesRegularExpression('/@if \(\$panelAssets\)[\s\S]*@filamentStyles\s*\n\s*@endif\s*\n\s*@vite\(\[\$stylesheet\]/', $blade);
@@ -78,11 +91,15 @@ test('cms head blade contains @filamentStyles before theme vite css', function (
 =======
     Assert::assertMatchesRegularExpression('/@filamentStyles\s*\n\s*@vite\(\[\'resources\/css\/app\.css\'\]/', $blade);
 >>>>>>> .merge_file_VMdUSI
+=======
+    Assert::assertMatchesRegularExpression('/@filamentStyles\s*\n\s*@vite\(\[\'resources\/css\/app\.css\'\]/', $blade);
+>>>>>>> .merge_file_xKjBN0
 });
 
 /** @see Modules/Cms/docs/bmad/filament-layout-styles-scripts.md */
 test('cms foot blade contains notifications then @filamentScripts then theme vite js', function (): void {
     $path = dirname(__DIR__, 3).'/resources/views/components/foot.blade.php';
+<<<<<<< .merge_file_lSOxvm
 <<<<<<< .merge_file_VYZPNS
 <<<<<<< .merge_file_KN37he
 =======
@@ -91,25 +108,34 @@ test('cms foot blade contains notifications then @filamentScripts then theme vit
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_VMdUSI
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_xKjBN0
     Assert::assertFileExists($path);
     $blade = file_get_contents($path);
     Assert::assertStringContainsString("@livewire('notifications')", $blade);
     // Nessun wrapp auth attorno alle notifications (contratto Filament layout).
     Assert::assertDoesNotMatchRegularExpression('/@auth\s*\n\s*@livewire\(\'notifications\'\)/', $blade);
     Assert::assertStringContainsString('@filamentScripts', $blade);
+<<<<<<< .merge_file_lSOxvm
 <<<<<<< .merge_file_VYZPNS
 <<<<<<< .merge_file_KN37he
     Assert::assertMatchesRegularExpression("/@if \\(\\\$panelAssets\\)\\s*\\n\\s*@livewire\\('notifications'\\)\\s*\\n\\s*\\n\\s*@filamentScripts\\s*\\n@endif\\s*\\n@vite\\(\\['resources\\/js\\/app\\.js'\\]/", $blade);
 =======
 =======
 >>>>>>> .merge_file_VMdUSI
+=======
+>>>>>>> .merge_file_xKjBN0
 <<<<<<< HEAD
     Assert::assertMatchesRegularExpression("/@if \\(\\\$panelAssets\\)\\s*\\n\\s*@livewire\\('notifications'\\)\\s*\\n\\s*\\n\\s*@filamentScripts\\s*\\n@endif\\s*\\n@vite\\(\\['resources\\/js\\/app\\.js'\\]/", $blade);
 =======
     Assert::assertMatchesRegularExpression("/@livewire\\('notifications'\\)\\s*\\n\\s*\\n@filamentScripts\\s*\\n@vite\\(\\['resources\\/js\\/app\\.js'\\]/", $blade);
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_lSOxvm
 <<<<<<< .merge_file_VYZPNS
 >>>>>>> .merge_file_tpKcEw
 =======
 >>>>>>> .merge_file_VMdUSI
+=======
+>>>>>>> .merge_file_xKjBN0
 });

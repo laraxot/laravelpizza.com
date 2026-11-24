@@ -3,21 +3,27 @@ title: "header language avatar implementation"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_axXyxY
 <<<<<<< .merge_file_MAsPz5
 <<<<<<< .merge_file_VQRic0
 updated: 2026-11-23
 =======
 =======
 >>>>>>> .merge_file_jeS5r1
+=======
+>>>>>>> .merge_file_2c6hIj
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_axXyxY
 <<<<<<< .merge_file_MAsPz5
 >>>>>>> .merge_file_Xi05Ms
 =======
 >>>>>>> .merge_file_jeS5r1
+=======
+>>>>>>> .merge_file_2c6hIj
 qmd: "header language avatar implementation"
 issues: []
 discussions: []
@@ -26,12 +32,15 @@ discussions: []
 # Implementazione del Selettore di Lingua e Avatar Utente nell'Header
 
 ## Collegamenti correlati
+<<<<<<< .merge_file_axXyxY
 <<<<<<< .merge_file_MAsPz5
 <<<<<<< .merge_file_VQRic0
 - [README modulo Cms](./README.md)
 =======
 =======
 >>>>>>> .merge_file_jeS5r1
+=======
+>>>>>>> .merge_file_2c6hIj
 <<<<<<< HEAD
 - [README modulo Cms](./README.md)
 =======
@@ -41,10 +50,13 @@ discussions: []
 - [README modulo Cms](./README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_axXyxY
 <<<<<<< .merge_file_MAsPz5
 >>>>>>> .merge_file_Xi05Ms
 =======
 >>>>>>> .merge_file_jeS5r1
+=======
+>>>>>>> .merge_file_2c6hIj
 - [Documentazione User](../../user/project_docs/header_language_avatar_implementation.md)
 - [Documentazione Sezioni](./sections_structure.md)
 - [Collegamenti Documentazione](/project_docs/collegamenti-documentazione.md)

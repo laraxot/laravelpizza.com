@@ -7,7 +7,7 @@ type: source
 status: draft
 tags: [code-audit, redundancy, dry, second-brain, module]
 created: "2026-05-26"
-<<<<<<< .merge_file_NWe552
+<<<<<<< .merge_file_YNk9XL
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -15,7 +15,7 @@ updated: "2026-05-26"
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_pDrrT2
+>>>>>>> .merge_file_T5ooTd
 owner: "Notify"
 issue: "https://github.com/provtv/base_ptv_fila5/issues/150"
 ---
@@ -95,7 +95,7 @@ Ridurre rumore, duplicazione e ambiguita' nel codice di questo module, senza per
 
 - Markdown locale + Git restano la base piu' portabile: gli agenti leggono/scrivono file senza database esterni.
 - AGENTS.md/SKILL.md devono restare manifest leggeri, con YAML/front matter e routing on-demand.
-<<<<<<< .merge_file_NWe552
+<<<<<<< .merge_file_YNk9XL
 <<<<<<< HEAD
 - AGENTS.md/SKILL.md devono restare manifest leggeri, con YAML/front matter e routing on-demand.
 =======
@@ -106,7 +106,7 @@ Ridurre rumore, duplicazione e ambiguita' nel codice di questo module, senza per
 >>>>>>> laraxot/dev
 =======
 - AGENTS.md/SKILL.md devono restare manifest leggeri, con YAML/front matter e routing on-demand.
->>>>>>> .merge_file_pDrrT2
+>>>>>>> .merge_file_T5ooTd
 - I descrittori architetturali navigabili riducono i passi di localizzazione: ogni owner dovrebbe avere mappa scopo -> file chiave.
 - AI utile = recupero mirato, non pre-caricamento: report atomici, QMD, issue e log.
 

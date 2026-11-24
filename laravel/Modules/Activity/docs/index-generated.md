@@ -243,10 +243,13 @@ Testing strategies and guidelines:
 | 2026-07-28 | [quick-start.md](quick-start.md) | root |
 | 2026-07-28 | [architecture.md](architecture.md) | root |
 | 2026-07-28 | [archive/index.md](archive/index.md) | archive |
+<<<<<<< .merge_file_PpqWd4
 <<<<<<< .merge_file_8jheEV
 >>>>>>> .merge_file_ieJCLH
 =======
 >>>>>>> .merge_file_G7Sm9O
+=======
+>>>>>>> .merge_file_6KZi0R
 | 2026-07-28 | [wiki/troubleshooting/git-push-dual-remote.md](wiki/troubleshooting/git-push-dual-remote.md) | wiki |
 | 2026-07-28 | [wiki/concepts/xotbase-resource-zen-pattern.md](wiki/concepts/xotbase-resource-zen-pattern.md) | wiki |
 | 2026-07-28 | [wiki/concepts/phpstan-pest-discipline.md](wiki/concepts/phpstan-pest-discipline.md) | wiki |
@@ -278,12 +281,15 @@ Testing strategies and guidelines:
 <<<<<<< HEAD
 | 2026-07-28 | [test-14-02-2024.md](raw/root-import/test-14-02-2024.md) | root |
 | 2026-07-28 | [raw/root-import/changelog.md](raw/root-import/changelog.md) | raw |
+<<<<<<< .merge_file_PpqWd4
 <<<<<<< .merge_file_8jheEV
 <<<<<<< .merge_file_2AwHso
 =======
 =======
 >>>>>>> .merge_file_G7Sm9O
 =======
+>>>>>>> .merge_file_6KZi0R
+=======
 | 2026-07-28 | [test.md](raw/root-import/test.md) | root |
 | 2026-07-28 | [raw/root-import/changelog-1.md](raw/root-import/changelog-1.md) | raw |
 >>>>>>> laraxot/dev
@@ -292,10 +298,13 @@ Testing strategies and guidelines:
 | 2026-07-28 | [raw/root-import/changelog-1.md](raw/root-import/changelog-1.md) | raw |
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_PpqWd4
 <<<<<<< .merge_file_8jheEV
 >>>>>>> .merge_file_ieJCLH
 =======
 >>>>>>> .merge_file_G7Sm9O
+=======
+>>>>>>> .merge_file_6KZi0R
 
 ---
 

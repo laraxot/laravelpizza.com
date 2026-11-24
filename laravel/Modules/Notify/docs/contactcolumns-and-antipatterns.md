@@ -3,7 +3,7 @@ title: "contactcolumns and antipatterns"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Df0k1s
+<<<<<<< .merge_file_Mfe1OT
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_GT1zB0
+>>>>>>> .merge_file_LHqF3y
 qmd: "contactcolumns and antipatterns"
 issues: []
 discussions: []

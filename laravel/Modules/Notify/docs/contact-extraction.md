@@ -3,7 +3,7 @@ title: "contact extraction"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_YPqm5r
+<<<<<<< .merge_file_TBj1vX
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_kXOw5N
+>>>>>>> .merge_file_Ro8zyP
 qmd: "contact extraction"
 issues: []
 discussions: []

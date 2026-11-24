@@ -1,10 +1,13 @@
 ---
+<<<<<<< .merge_file_6sPQGk
 <<<<<<< .merge_file_HNx14A
 <<<<<<< .merge_file_RxkF73
 title: "Tech spec — Activity"
 =======
 =======
 >>>>>>> .merge_file_g6m5nB
+=======
+>>>>>>> .merge_file_D48pn6
 <<<<<<< HEAD
 title: "Tech spec: Activity"
 =======
@@ -14,10 +17,13 @@ title: "Tech spec — Activity"
 title: "Tech spec: Activity"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_6sPQGk
 <<<<<<< .merge_file_HNx14A
 >>>>>>> .merge_file_bqRfn2
 =======
 >>>>>>> .merge_file_g6m5nB
+=======
+>>>>>>> .merge_file_D48pn6
 type: tech-spec
 module: Activity
 related:

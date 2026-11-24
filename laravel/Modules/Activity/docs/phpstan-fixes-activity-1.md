@@ -1,3 +1,8 @@
+---
+title: "Correzioni PHPStan - Modulo Activity"
+type: note
+qmd: "phpstan fixes activity 1 correzioni"
+---
 # Correzioni PHPStan - Modulo Activity
 
 ## 🚨 Errori PHPStan Risolti

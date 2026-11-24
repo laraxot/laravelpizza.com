@@ -1,10 +1,10 @@
 ---
-title: "product strategy"
+title: "Product Strategy"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "product strategy"
+qmd: "Product Strategy"
 issues: []
 discussions: []
 ---
@@ -17,12 +17,20 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+title: "PRODUCT STRATEGY"
+=======
 title: "product strategy"
+>>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
+<<<<<<< HEAD
+qmd: "PRODUCT STRATEGY"
+=======
 qmd: "product strategy"
+>>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 issues: []
 discussions: []
 ## Executive Summary

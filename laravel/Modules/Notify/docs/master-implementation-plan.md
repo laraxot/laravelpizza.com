@@ -3,8 +3,19 @@ title: "🎯 FIXCITY - MASTER IMPLEMENTATION PLAN"
 type: concept
 tags: [master, implementation, plan]
 created: 2026-07-14
+<<<<<<< .merge_file_6jduno
 updated: 2026-11-23
 qmd: "master-implementation-plan 🎯 fixcity - master implementation plan"
+=======
+<<<<<<< HEAD
+updated: 2026-07-14
+qmd: "master-implementation-plan 🎯 fixcity - master implementation plan"
+qmd: "master-implementation-plan 🎯 ptv - master implementation plan"
+=======
+updated: 2026-11-23
+qmd: "master-implementation-plan 🎯 fixcity - master implementation plan"
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_5LmK46
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
@@ -12,12 +23,17 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
+<<<<<<< .merge_file_6jduno
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
 <<<<<<< HEAD
   - "./acronym-naming-conventions.md"
 =======
 <<<<<<< HEAD
+=======
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
+>>>>>>> .merge_file_5LmK46
   - "./acronym-naming-conventions.md"
 =======
 >>>>>>> laraxot/dev

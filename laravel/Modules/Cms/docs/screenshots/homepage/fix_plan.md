@@ -1,9 +1,12 @@
 ---
+<<<<<<< .merge_file_gvcXj6
 <<<<<<< .merge_file_EPBOuC
 <<<<<<< .merge_file_LSFdMh
 =======
 =======
 >>>>>>> .merge_file_bHWZNH
+=======
+>>>>>>> .merge_file_KHdFi8
 <<<<<<< HEAD
 title: "Fix Plan"
 type: note
@@ -12,16 +15,20 @@ created: 2026-09-26
 updated: 2026-09-26
 qmd: "Fix Plan"
 =======
+<<<<<<< .merge_file_gvcXj6
 <<<<<<< .merge_file_EPBOuC
 >>>>>>> .merge_file_DpXTvF
 =======
 >>>>>>> .merge_file_bHWZNH
+=======
+>>>>>>> .merge_file_KHdFi8
 title: "fix plan"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "fix plan"
+<<<<<<< .merge_file_gvcXj6
 <<<<<<< .merge_file_EPBOuC
 <<<<<<< .merge_file_LSFdMh
 =======
@@ -30,6 +37,9 @@ qmd: "fix plan"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_bHWZNH
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_KHdFi8
 issues: []
 discussions: []
 ---
@@ -44,11 +54,14 @@ Allineare la homepage FixCity (`/it/tests/homepage`) al design Bootstrap Italia 
 
 ---
 
+<<<<<<< .merge_file_gvcXj6
 <<<<<<< .merge_file_EPBOuC
 <<<<<<< .merge_file_LSFdMh
 =======
 =======
 >>>>>>> .merge_file_bHWZNH
+=======
+>>>>>>> .merge_file_KHdFi8
 <<<<<<< HEAD
 title: "FIX PLAN"
 =======
@@ -65,10 +78,13 @@ qmd: "fix plan"
 >>>>>>> laraxot/dev
 issues: []
 discussions: []
+<<<<<<< .merge_file_gvcXj6
 <<<<<<< .merge_file_EPBOuC
 >>>>>>> .merge_file_DpXTvF
 =======
 >>>>>>> .merge_file_bHWZNH
+=======
+>>>>>>> .merge_file_KHdFi8
 ## Fase 1: Header & Hero (Settimana 1)
 
 ### Task 1.1: Header Slim Component

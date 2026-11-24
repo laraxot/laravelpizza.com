@@ -1,19 +1,25 @@
 ---
+<<<<<<< .merge_file_PszAem
 <<<<<<< .merge_file_NjEozq
 <<<<<<< .merge_file_PdLM9V
 title: "Changelog"
 =======
 =======
 >>>>>>> .merge_file_JvX8QK
+=======
+>>>>>>> .merge_file_XgqprP
 <<<<<<< .merge_file_az0SwX
 title: "CHANGELOG"
 =======
 title: "Changelog"
 >>>>>>> .merge_file_0ittFs
+<<<<<<< .merge_file_PszAem
 <<<<<<< .merge_file_NjEozq
 >>>>>>> .merge_file_RfioNZ
 =======
 >>>>>>> .merge_file_JvX8QK
+=======
+>>>>>>> .merge_file_XgqprP
 type: note
 tags: [documentation]
 created: 2026-09-26

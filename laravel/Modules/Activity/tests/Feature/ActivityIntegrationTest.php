@@ -307,6 +307,7 @@ test('activity module handles data consistency across models', function () {
     // SchemalessAttributes is Arrayable (toArray), not Collection (all).
     $activityProperties = is_array($activityPropertiesValue)
         ? $activityPropertiesValue
+<<<<<<< .merge_file_tj7h9Y
 <<<<<<< .merge_file_Vwkxhv
 <<<<<<< .merge_file_F74jev
         : ($activityPropertiesValue instanceof Arrayable
@@ -316,12 +317,16 @@ test('activity module handles data consistency across models', function () {
 =======
         : ($activityPropertiesValue instanceof \Illuminate\Contracts\Support\Arrayable
 >>>>>>> .merge_file_cjM7q3
+=======
+        : ($activityPropertiesValue instanceof \Illuminate\Contracts\Support\Arrayable
+>>>>>>> .merge_file_1ibkvU
             ? $activityPropertiesValue->toArray()
             : []);
     $snapshotStateValue = $snapshot->state;
     Assert::assertNotNull($snapshotStateValue);
     $snapshotState = is_array($snapshotStateValue)
         ? $snapshotStateValue
+<<<<<<< .merge_file_tj7h9Y
 <<<<<<< .merge_file_Vwkxhv
 <<<<<<< .merge_file_F74jev
         : ($snapshotStateValue instanceof Arrayable
@@ -331,6 +336,9 @@ test('activity module handles data consistency across models', function () {
 =======
         : ($snapshotStateValue instanceof \Illuminate\Contracts\Support\Arrayable
 >>>>>>> .merge_file_cjM7q3
+=======
+        : ($snapshotStateValue instanceof \Illuminate\Contracts\Support\Arrayable
+>>>>>>> .merge_file_1ibkvU
             ? $snapshotStateValue->toArray()
             : (array) $snapshotStateValue);
     $storedEventPropertiesValue = $storedEvent->event_properties;
@@ -353,6 +361,7 @@ test('activity module handles data consistency across models', function () {
     Assert::assertNotNull($freshActivityPropertiesValue);
     $freshActivityProperties = is_array($freshActivityPropertiesValue)
         ? $freshActivityPropertiesValue
+<<<<<<< .merge_file_tj7h9Y
 <<<<<<< .merge_file_Vwkxhv
 <<<<<<< .merge_file_F74jev
         : ($freshActivityPropertiesValue instanceof Arrayable
@@ -362,6 +371,9 @@ test('activity module handles data consistency across models', function () {
 =======
         : ($freshActivityPropertiesValue instanceof \Illuminate\Contracts\Support\Arrayable
 >>>>>>> .merge_file_cjM7q3
+=======
+        : ($freshActivityPropertiesValue instanceof \Illuminate\Contracts\Support\Arrayable
+>>>>>>> .merge_file_1ibkvU
             ? $freshActivityPropertiesValue->toArray()
             : []);
     $freshSnapshotState = $freshSnapshot->state;
@@ -414,6 +426,7 @@ test('activity module supports bulk operations efficiently', function () {
     Assert::assertNotNull($firstActivityPropertiesValue);
     $firstActivityProperties = is_array($firstActivityPropertiesValue)
         ? $firstActivityPropertiesValue
+<<<<<<< .merge_file_tj7h9Y
 <<<<<<< .merge_file_Vwkxhv
 <<<<<<< .merge_file_F74jev
         : ($firstActivityPropertiesValue instanceof Arrayable
@@ -423,12 +436,16 @@ test('activity module supports bulk operations efficiently', function () {
 =======
         : ($firstActivityPropertiesValue instanceof \Illuminate\Contracts\Support\Arrayable
 >>>>>>> .merge_file_cjM7q3
+=======
+        : ($firstActivityPropertiesValue instanceof \Illuminate\Contracts\Support\Arrayable
+>>>>>>> .merge_file_1ibkvU
             ? $firstActivityPropertiesValue->toArray()
             : []);
     $lastActivityPropertiesValue = $lastActivity->properties;
     Assert::assertNotNull($lastActivityPropertiesValue);
     $lastActivityProperties = is_array($lastActivityPropertiesValue)
         ? $lastActivityPropertiesValue
+<<<<<<< .merge_file_tj7h9Y
 <<<<<<< .merge_file_Vwkxhv
 <<<<<<< .merge_file_F74jev
         : ($lastActivityPropertiesValue instanceof Arrayable
@@ -438,6 +455,9 @@ test('activity module supports bulk operations efficiently', function () {
 =======
         : ($lastActivityPropertiesValue instanceof \Illuminate\Contracts\Support\Arrayable
 >>>>>>> .merge_file_cjM7q3
+=======
+        : ($lastActivityPropertiesValue instanceof \Illuminate\Contracts\Support\Arrayable
+>>>>>>> .merge_file_1ibkvU
             ? $lastActivityPropertiesValue->toArray()
             : []);
 

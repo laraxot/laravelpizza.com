@@ -253,12 +253,15 @@ class TeamRoleManagerTest extends TestCase
 ## Link Correlati
 - [Performance Optimization](./performance-optimization.md)
 - [Multi-tenancy](./multi-tenancy.md)
+<<<<<<< .merge_file_9XHYPa
 <<<<<<< .merge_file_spcqrW
 <<<<<<< .merge_file_23kEWM
 - Error Handling
 =======
 =======
 >>>>>>> .merge_file_91FrxZ
+=======
+>>>>>>> .merge_file_4K24Wy
 <<<<<<< HEAD
 - [Error Handling](./error-handling.md)
 =======
@@ -268,10 +271,13 @@ class TeamRoleManagerTest extends TestCase
 - [Error Handling](./error-handling.md)
 >>>>>>> .merge_file_Z0X8nu
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_9XHYPa
 <<<<<<< .merge_file_spcqrW
 >>>>>>> .merge_file_uGGklI
 =======
 >>>>>>> .merge_file_91FrxZ
+=======
+>>>>>>> .merge_file_4K24Wy
 
 ## Note e Considerazioni
 - Validare input utente

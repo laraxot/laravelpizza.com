@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_lvXx7Q
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_PpnznE
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_lvXx7Q
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_PpnznE
 qmd: "mailpace templates integration"
 issues: []
 discussions: []
@@ -120,24 +126,31 @@ $mailTemplate->send($user->email, [
 - [Documentazione Maizzle](https://maizzle.com/docs/)
 - [Repository MailPace Templates](https://github.com/mailpace/templates)
 <<<<<<< HEAD
+<<<<<<< .merge_file_lvXx7Q
 - [Guida Spatie Email](../spatie_email_usage_guide.md)
 - [Implementazione Slug Field](./slug_field_implementation.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_PpnznE
 =======
 <<<<<<< .merge_file_s2m3y0
 - [Guida Spatie Email](../SPATIE_EMAIL_USAGE_GUIDE.md)
 - [Implementazione Slug Field](./SLUG_FIELD_IMPLEMENTATION.md)
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_lvXx7Q
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_PpnznE
 - [Guida Spatie Email](../spatie_email_usage_guide.md)
 - [Implementazione Slug Field](slug_field_implementation.md)
 - [Guida Spatie Email](../spatie_email_usage_guide.md)
 - [Implementazione Slug Field](./slug_field_implementation.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_lvXx7Q
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_MtHr7M
@@ -145,3 +158,8 @@ $mailTemplate->send($user->email, [
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_MtHr7M
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_PpnznE

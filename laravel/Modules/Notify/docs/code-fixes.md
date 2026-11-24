@@ -3,7 +3,7 @@ title: "code fixes"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_LAWIbt
+<<<<<<< .merge_file_At9CrD
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_rzueBo
+>>>>>>> .merge_file_CDyjcQ
 qmd: "code fixes"
 issues: []
 discussions: []

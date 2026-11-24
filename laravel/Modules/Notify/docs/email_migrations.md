@@ -3,7 +3,7 @@ title: "email migrations"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_lznwaQ
+<<<<<<< .merge_file_wYk6GD
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_75Y0nB
+>>>>>>> .merge_file_BJt5k5
 qmd: "email migrations"
 issues: []
 discussions: []

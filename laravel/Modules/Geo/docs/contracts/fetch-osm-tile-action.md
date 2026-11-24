@@ -2,11 +2,14 @@
 title: "Contratto — FetchOsmTileAction"
 type: contract
 action: "Modules\Geo\Actions\Osm\FetchOsmTileAction"
+<<<<<<< .merge_file_5PFsKj
 <<<<<<< .merge_file_JC9nqb
 <<<<<<< .merge_file_LOCsnn
 =======
 =======
 >>>>>>> .merge_file_G2gA35
+=======
+>>>>>>> .merge_file_Ex2U3P
 <<<<<<< .merge_file_YKQJ4t
 <<<<<<< HEAD
 tags: [contract, action]
@@ -20,10 +23,13 @@ updated: 2026-11-18
 =======
 =======
 >>>>>>> .merge_file_sThhkT
+<<<<<<< .merge_file_5PFsKj
 <<<<<<< .merge_file_JC9nqb
 >>>>>>> .merge_file_5gSd43
 =======
 >>>>>>> .merge_file_G2gA35
+=======
+>>>>>>> .merge_file_Ex2U3P
 tags: [contract, action, openstreetmap, tile, cache, privacy]
 created: 2026-11-18
 updated: 2026-11-24
@@ -32,29 +38,38 @@ related:
   - ../../app/Actions/Osm/FetchOsmTileAction.php
   - ../../app/Http/Controllers/OsmTileController.php
   - ../../tests/Feature/OsmProxyTest.php
+<<<<<<< .merge_file_5PFsKj
 <<<<<<< .merge_file_JC9nqb
 <<<<<<< .merge_file_LOCsnn
 =======
 =======
 >>>>>>> .merge_file_G2gA35
+=======
+>>>>>>> .merge_file_Ex2U3P
 <<<<<<< .merge_file_YKQJ4t
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_sThhkT
+<<<<<<< .merge_file_5PFsKj
 <<<<<<< .merge_file_JC9nqb
 >>>>>>> .merge_file_5gSd43
 =======
 >>>>>>> .merge_file_G2gA35
+=======
+>>>>>>> .merge_file_Ex2U3P
 ---
 
 # FetchOsmTileAction
 
+<<<<<<< .merge_file_5PFsKj
 <<<<<<< .merge_file_JC9nqb
 <<<<<<< .merge_file_LOCsnn
 =======
 =======
 >>>>>>> .merge_file_G2gA35
+=======
+>>>>>>> .merge_file_Ex2U3P
 <<<<<<< .merge_file_YKQJ4t
 <<<<<<< HEAD
 =======
@@ -97,10 +112,13 @@ Sorgente: `app/Actions/Osm/FetchOsmTileAction.php`.
 =======
 =======
 >>>>>>> .merge_file_sThhkT
+<<<<<<< .merge_file_5PFsKj
 <<<<<<< .merge_file_JC9nqb
 >>>>>>> .merge_file_5gSd43
 =======
 >>>>>>> .merge_file_G2gA35
+=======
+>>>>>>> .merge_file_Ex2U3P
 Un tile OpenStreetMap servito dal nostro server, con cache su disco, nel rispetto della Tile Usage Policy di OSMF.
 Perché esiste: [ADR proxy tile e Nominatim](../adr/osm-proxy-tile-nominatim.md). Sorgente:
 `app/Actions/Osm/FetchOsmTileAction.php`; unico chiamante: `app/Http/Controllers/OsmTileController.php`
@@ -158,17 +176,23 @@ Configurazione letta (`config/config.php`, chiave `geo.config.osm_proxy`): `tile
 - Non pulisce la cache su disco (cresce con le zone viste): debito dichiarato nell'ADR.
 - Non pre-scarica zone né fa da tile server per terzi (vietato dalla policy).
 - Non usa altri strati (Esri, OSM France): restano diretti dal browser, solo su scelta esplicita del cittadino.
+<<<<<<< .merge_file_5PFsKj
 <<<<<<< .merge_file_JC9nqb
 <<<<<<< .merge_file_LOCsnn
 =======
 =======
 >>>>>>> .merge_file_G2gA35
+=======
+>>>>>>> .merge_file_Ex2U3P
 <<<<<<< .merge_file_YKQJ4t
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_sThhkT
+<<<<<<< .merge_file_5PFsKj
 <<<<<<< .merge_file_JC9nqb
 >>>>>>> .merge_file_5gSd43
 =======
 >>>>>>> .merge_file_G2gA35
+=======
+>>>>>>> .merge_file_Ex2U3P

@@ -4,18 +4,24 @@ type: concept
 tags: [files, created, session, 007]
 created: 2026-07-14
 <<<<<<< HEAD
+<<<<<<< .merge_file_28cDJL
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_EOzr92
 updated: 2026-07-14
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_28cDJL
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_EOzr92
 qmd: "files-created-session-007 files created in session 007"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -40,6 +46,7 @@ related:
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
+<<<<<<< .merge_file_28cDJL
 <<<<<<< HEAD
 =======
 =======
@@ -50,6 +57,8 @@ related:
   - "./absolute-completion-completamento-assoluto.md"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_EOzr92
 ---
 
 # Files Created in Session 007
@@ -227,10 +236,13 @@ Project Root/
 
 **For Project Managers**:
 <<<<<<< HEAD
+<<<<<<< .merge_file_28cDJL
 - read: design-conversion-roadmap.md
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_EOzr92
 - Read: design-conversion-roadmap.md
 =======
 <<<<<<< HEAD
@@ -239,6 +251,7 @@ Project Root/
 - Read: design-conversion-roadmap.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_28cDJL
 =======
 - read: design-conversion-roadmap.md
 >>>>>>> laraxot/dev
@@ -246,6 +259,13 @@ Project Root/
 - Reference: PRIORITY-MATRIX.json (for timeline/effort)
 
 **For Developers**:
+=======
+- Reference: PRIORITY-MATRIX.json (for timeline/effort)
+
+**For Developers**:
+- Read: laravel/Themes/Sixteen/docs/index.md
+- Reference: bashscripts/docs/index.md (for tools)
+>>>>>>> .merge_file_EOzr92
 - Read: laravel/Themes/Sixteen/docs/index.md
 - Reference: bashscripts/docs/index.md (for tools)
 <<<<<<< HEAD

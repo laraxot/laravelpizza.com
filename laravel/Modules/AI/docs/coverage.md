@@ -19,9 +19,7 @@ discussions: []
 
 **Changed**: 6 occurrences across 6 files, all docblock-only (no native `mixed` type-hints were touched — see "left as mixed" below for why the native ones stay). Replaced `array<string, mixed>` / `array<int, array<string, mixed>>` with a concrete shape once the returned/consumed structure was evidently stable:
 
-- `Modules/AI/app/Contracts/SentimentAnalyzer.php` — `analyze()` return: `array{label: string, score: int|float, warning: string}`.
-- `Modules/AI/app/Actions/Sentiment/BasicSentimentAnalyzer.php` — same shape (implements the contract).
-- `Modules/AI/app/Actions/Sentiment/TransformersSentimentAnalyzer.php` — same shape.
+- ~~`Contracts/SentimentAnalyzer`, `Actions/Sentiment/BasicSentimentAnalyzer`, `TransformersSentimentAnalyzer`~~ — eliminati il 2026-11-19: duplicati senza chiamanti delle Action sotto (vedi `sentiment-analysis.md`).
 - `Modules/AI/app/Actions/Sentiment/AnalyzeBasicSentimentAction.php` — same shape.
 - `Modules/AI/app/Actions/Sentiment/AnalyzeTransformersSentimentAction.php` — same shape.
 - `Modules/AI/app/Actions/Prediction/GetPredictionFallbackTemplatesAction.php` — `execute()` return tightened from `array<int, array<string, mixed>>` to `array<int, array{category: string, title: string, subtitle: string, description: string, analysis: string, tags: list<string>, options: list<string>}>` (hardcoded literal templates, shape evident and stable; this also benefits the one consumer, `GeneratePredictionDraftsAction::fallbackDrafts()`).

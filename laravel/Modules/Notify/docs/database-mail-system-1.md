@@ -3,7 +3,7 @@ title: "database mail system 1"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_5P53w1
+<<<<<<< .merge_file_priSNV
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_oXbavE
+>>>>>>> .merge_file_bzTvva
 qmd: "database mail system 1"
 issues: []
 discussions: []
@@ -405,7 +405,7 @@ php artisan notify:mail-template:test
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
 - [Spatie Packages](https://spatie.be/open-source)
-<<<<<<< .merge_file_5P53w1
+<<<<<<< .merge_file_priSNV
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -442,7 +442,7 @@ php artisan notify:mail-template:test
 >>>>>>> laraxot/dev
 - [Spatie Packages](https://spatie.be/open-source)
 =======
->>>>>>> .merge_file_oXbavE
+>>>>>>> .merge_file_bzTvva
 
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
@@ -455,7 +455,7 @@ php artisan notify:mail-template:test
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
 - [Spatie Packages](https://spatie.be/open-source)
-<<<<<<< .merge_file_5P53w1
+<<<<<<< .merge_file_priSNV
 
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
@@ -463,7 +463,7 @@ php artisan notify:mail-template:test
 =======
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
->>>>>>> .merge_file_oXbavE
+>>>>>>> .merge_file_bzTvva
 
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
@@ -551,10 +551,10 @@ php artisan notify:mail-template:test
 
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
-<<<<<<< .merge_file_5P53w1
+<<<<<<< .merge_file_priSNV
 
 =======
->>>>>>> .merge_file_oXbavE
+>>>>>>> .merge_file_bzTvva
 - [Spatie Packages](https://spatie.be/open-source)
 
 - [Laravel Mail](https://laravel.com/docs/mail)
@@ -575,19 +575,19 @@ php artisan notify:mail-template:test
 
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
-<<<<<<< .merge_file_5P53w1
+<<<<<<< .merge_file_priSNV
 <<<<<<< HEAD
 =======
 =======
 
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_oXbavE
+>>>>>>> .merge_file_bzTvva
 - [Spatie Packages](https://spatie.be/open-source)
 
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
-<<<<<<< .merge_file_5P53w1
+<<<<<<< .merge_file_priSNV
 - [Spatie Packages](https://spatie.be/open-source)
 
 - [Laravel Mail](https://laravel.com/project_docs/mail)
@@ -602,7 +602,7 @@ php artisan notify:mail-template:test
 
 - [Spatie Packages](https://spatie.be/open-source)
 
->>>>>>> .merge_file_oXbavE
+>>>>>>> .merge_file_bzTvva
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
 - [Spatie Packages](https://spatie.be/open-source)
@@ -621,10 +621,10 @@ php artisan notify:mail-template:test
 
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
-<<<<<<< .merge_file_5P53w1
+<<<<<<< .merge_file_priSNV
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_oXbavE
+>>>>>>> .merge_file_bzTvva
 - [Spatie Packages](https://spatie.be/open-source)
 
 - [Laravel Mail](https://laravel.com/docs/mail)
@@ -634,10 +634,10 @@ php artisan notify:mail-template:test
 - [Laravel Mail](https://laravel.com/project_docs/mail)
 - [Filament Forms](https://filamentphp.com/project_docs/forms)
 
-<<<<<<< .merge_file_5P53w1
+<<<<<<< .merge_file_priSNV
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_oXbavE
+>>>>>>> .merge_file_bzTvva
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
 - [Spatie Packages](https://spatie.be/open-source)
@@ -669,26 +669,26 @@ php artisan notify:mail-template:test
 - [Laravel Mail](https://laravel.com/project_docs/mail)
 - [Filament Forms](https://filamentphp.com/project_docs/forms)
 
-<<<<<<< .merge_file_5P53w1
+<<<<<<< .merge_file_priSNV
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_oXbavE
+>>>>>>> .merge_file_bzTvva
 - [Laravel Mail](https://laravel.com/project_docs/mail)
 - [Filament Forms](https://filamentphp.com/project_docs/forms)
 
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
 - [Spatie Packages](https://spatie.be/open-source)
-<<<<<<< .merge_file_5P53w1
+<<<<<<< .merge_file_priSNV
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_oXbavE
+>>>>>>> .merge_file_bzTvva
 
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
@@ -849,11 +849,11 @@ php artisan notify:mail-template:test
 - [Laravel Mail](https://laravel.com/docs/mail)
 - [Filament Forms](https://filamentphp.com/docs/forms)
 - [Spatie Packages](https://spatie.be/open-source)
-<<<<<<< .merge_file_5P53w1
+<<<<<<< .merge_file_priSNV
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_oXbavE
+>>>>>>> .merge_file_bzTvva

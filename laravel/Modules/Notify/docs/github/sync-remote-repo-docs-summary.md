@@ -3,7 +3,15 @@ title: "Sync Remote Repo Documentation - Creation Summary"
 type: concept
 tags: [sync, remote, repo, docs]
 created: 2026-07-14
+<<<<<<< .merge_file_N2hJEs
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_9RUes7
 qmd: "sync-remote-repo-docs-summary sync remote repo documentation - creation summary"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -143,6 +151,7 @@ All documents are cross-referenced:
 - Issue Template → Guide + Coordination Log
 - Discussion Template → Coordination Log
 - AGENTS.md → All docs
+<<<<<<< .merge_file_N2hJEs
 <<<<<<< HEAD
 - AGENTS.md → All docs
 =======
@@ -151,6 +160,9 @@ All documents are cross-referenced:
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- AGENTS.md → All docs
+>>>>>>> .merge_file_9RUes7
 
 ### External Links
 
@@ -203,6 +215,7 @@ All documents are cross-referenced:
 - Created README.md (docs index)
 - Created GitHub Issue/Discussion templates
 - Updated AGENTS.md with coordination guidelines
+<<<<<<< .merge_file_N2hJEs
 <<<<<<< HEAD
 - Updated AGENTS.md with coordination guidelines
 =======
@@ -211,6 +224,9 @@ All documents are cross-referenced:
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- Updated AGENTS.md with coordination guidelines
+>>>>>>> .merge_file_9RUes7
 
 **Testing**:
 - ✅ CLI mode verified

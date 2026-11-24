@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_aVWwKW
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_Hcf4cE
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_aVWwKW
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Hcf4cE
 qmd: "json migration error"
 issues: []
 discussions: []
@@ -170,10 +176,13 @@ if ($validRecords !== $totalRecords) {
 - [Documentazione Migrazioni](./migration_rules.md)
 - [Best Practices JSON](./json_best_practices.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_aVWwKW
 - [Gestione Errori](./error_handling.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_Hcf4cE
 - [Gestione Errori](./ERROR_HANDLING.md)
 =======
 <<<<<<< HEAD
@@ -182,10 +191,13 @@ if ($validRecords !== $totalRecords) {
 - [Gestione Errori](./ERROR_HANDLING.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_aVWwKW
 =======
 - [Gestione Errori](./error_handling.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Hcf4cE
 
 ## Note Importanti
 

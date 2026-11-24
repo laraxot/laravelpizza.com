@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_Gu0Tk0
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_8E19Uw
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Gu0Tk0
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_8E19Uw
 qmd: "mail template ui improvements"
 issues: []
 discussions: []
@@ -183,10 +189,13 @@ Section::make('Informazioni Template')
 - [Documentazione Filament](https://filamentphp.com/docs)
 - [Best Practices UI/UX](./best-practices.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_Gu0Tk0
 - [Componenti Filament](./filament_components.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_8E19Uw
 - [Componenti Filament](./FILAMENT_COMPONENTS.md)
 =======
 <<<<<<< HEAD
@@ -195,10 +204,13 @@ Section::make('Informazioni Template')
 - [Componenti Filament](./FILAMENT_COMPONENTS.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_Gu0Tk0
 =======
 - [Componenti Filament](./filament_components.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_8E19Uw
 
 ## Note Importanti
 

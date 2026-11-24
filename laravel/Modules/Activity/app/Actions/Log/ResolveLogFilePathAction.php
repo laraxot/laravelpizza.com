@@ -22,6 +22,7 @@ use function Safe\realpath;
  * - `realpath()` risolve `..` e link simbolici: se il risultato non e' dentro la cartella base
  *   (per esempio un link simbolico verso /etc) il file e' rifiutato.
  *
+<<<<<<< .merge_file_PHhcGj
 <<<<<<< .merge_file_vYRetU
 <<<<<<< .merge_file_IJoAML
  * @see docs/contracts/resolve-log-file-path-action.md
@@ -30,6 +31,8 @@ use function Safe\realpath;
 >>>>>>> .merge_file_fgD3Qj
 =======
 >>>>>>> .merge_file_hxU0V4
+=======
+>>>>>>> .merge_file_L0sJwz
  * @contract docs/contracts/resolve-log-file-path-action.md
  */
 class ResolveLogFilePathAction

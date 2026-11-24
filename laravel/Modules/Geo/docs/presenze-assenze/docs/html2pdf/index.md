@@ -3,29 +3,38 @@
 Questa sezione fornisce una panoramica generale della libreria Html2Pdf, le novità dell'ultima versione, le istruzioni per l'installazione e l'architettura di integrazione nel progetto.
 
 **Menu di Navigazione:**
+<<<<<<< .merge_file_AxHgqg
 <<<<<<< .merge_file_oiYg4t
 <<<<<<< .merge_file_T2kmwM
 =======
 =======
 >>>>>>> .merge_file_qcoarl
+=======
+>>>>>>> .merge_file_0P7pHO
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_AxHgqg
 <<<<<<< .merge_file_oiYg4t
 >>>>>>> .merge_file_4fJfx8
 =======
 >>>>>>> .merge_file_qcoarl
+=======
+>>>>>>> .merge_file_0P7pHO
 *   [Utilizzo Base e Layout](./usage.md)
 *   [Guida agli Stili](./styling.md)
 *   [Funzionalità Avanzate](./advanced.md)
 *   [Integrazione con Laravel e Best Practices](./laravel.md)
 *   [Configurazione della Sicurezza](./security.md)
+<<<<<<< .merge_file_AxHgqg
 <<<<<<< .merge_file_oiYg4t
 <<<<<<< .merge_file_T2kmwM
 =======
 =======
 >>>>>>> .merge_file_qcoarl
+=======
+>>>>>>> .merge_file_0P7pHO
 <<<<<<< HEAD
 =======
 =======
@@ -36,10 +45,13 @@ Questa sezione fornisce una panoramica generale della libreria Html2Pdf, le novi
 *   [Configurazione della Sicurezza](../../../gdpr/docs/html2pdf/security.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_AxHgqg
 <<<<<<< .merge_file_oiYg4t
 >>>>>>> .merge_file_4fJfx8
 =======
 >>>>>>> .merge_file_qcoarl
+=======
+>>>>>>> .merge_file_0P7pHO
 
 ---
 
@@ -56,12 +68,15 @@ Questa sezione fornisce una panoramica generale della libreria Html2Pdf, le novi
 ## 🆕 **Novità Versione 5.3.x (2025)**
 
 ### 🔒 **Security Service Avanzato**
+<<<<<<< .merge_file_AxHgqg
 <<<<<<< .merge_file_oiYg4t
 <<<<<<< .merge_file_T2kmwM
 Html2Pdf 5.3+ include un [servizio di sicurezza](./security.md) configurabile per proteggere da accessi non autorizzati.
 =======
 =======
 >>>>>>> .merge_file_qcoarl
+=======
+>>>>>>> .merge_file_0P7pHO
 <<<<<<< HEAD
 Html2Pdf 5.3+ include un [servizio di sicurezza](./security.md) configurabile per proteggere da accessi non autorizzati.
 =======
@@ -71,10 +86,13 @@ Html2Pdf 5.3+ include un [servizio di sicurezza](./security.md) configurabile pe
 Html2Pdf 5.3+ include un [servizio di sicurezza](../../../gdpr/docs/html2pdf/security.md) configurabile per proteggere da accessi non autorizzati.
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_AxHgqg
 <<<<<<< .merge_file_oiYg4t
 >>>>>>> .merge_file_4fJfx8
 =======
 >>>>>>> .merge_file_qcoarl
+=======
+>>>>>>> .merge_file_0P7pHO
 
 ### 📝 **Supporto Readonly Attributes**
 Nuovo supporto per attributi `readonly` negli elementi input e textarea.

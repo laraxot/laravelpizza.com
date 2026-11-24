@@ -3,7 +3,15 @@ title: "MCP Servers - Master Index"
 type: concept
 tags: [mcp, servers]
 created: 2026-07-14
+<<<<<<< .merge_file_s4ikHu
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_Uks9fa
 qmd: "mcp-servers mcp servers - master index"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -12,12 +20,17 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
+<<<<<<< .merge_file_s4ikHu
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
 <<<<<<< HEAD
   - "./acronym-naming-conventions.md"
 =======
 <<<<<<< HEAD
+=======
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
+>>>>>>> .merge_file_Uks9fa
   - "./acronym-naming-conventions.md"
 =======
 >>>>>>> laraxot/dev

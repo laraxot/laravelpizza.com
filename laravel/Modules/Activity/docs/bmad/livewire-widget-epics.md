@@ -1,10 +1,13 @@
 ---
+<<<<<<< .merge_file_RAZ9jM
 <<<<<<< .merge_file_RzuFEM
 <<<<<<< .merge_file_ZgQlhf
 title: "Epics — Activity"
 =======
 =======
 >>>>>>> .merge_file_lkPjFw
+=======
+>>>>>>> .merge_file_wEn5Lb
 <<<<<<< HEAD
 title: "Epics: Activity"
 =======
@@ -14,10 +17,13 @@ title: "Epics — Activity"
 title: "Epics: Activity"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_RAZ9jM
 <<<<<<< .merge_file_RzuFEM
 >>>>>>> .merge_file_xPC9x3
 =======
 >>>>>>> .merge_file_lkPjFw
+=======
+>>>>>>> .merge_file_wEn5Lb
 type: epics
 module: Activity
 related:

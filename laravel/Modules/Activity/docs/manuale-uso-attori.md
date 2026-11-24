@@ -1,3 +1,8 @@
+---
+title: "Manuale d'uso per attori"
+type: note
+qmd: "manuale uso attori duso"
+---
 # Manuale d'uso per attori
 
 ## Scopo

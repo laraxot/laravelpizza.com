@@ -3,7 +3,7 @@ title: "design comuni wizard parity"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_KPW2cu
+<<<<<<< .merge_file_mKhQ0a
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_r5xvaD
+>>>>>>> .merge_file_aVeJK4
 qmd: "design comuni wizard parity"
 issues: []
 discussions: []

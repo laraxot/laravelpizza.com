@@ -36,12 +36,15 @@ updated: 2026-10-08
 tags: [docs, activity]
 qmd: "best practices   activity activity"
 ---
+<<<<<<< .merge_file_cbiSJ4
 <<<<<<< .merge_file_bosp9k
 <<<<<<< .merge_file_4aV1tF
 See canonical documentation: ../../../Themes/docs/shared-components/best_practices.md
 =======
 =======
 >>>>>>> .merge_file_YudubE
+=======
+>>>>>>> .merge_file_dMRMx1
 <<<<<<< HEAD
 
 # Best Practices – Activity
@@ -109,7 +112,10 @@ See canonical documentation: ../../../Themes/docs/shared-components/best_practic
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_cbiSJ4
 <<<<<<< .merge_file_bosp9k
 >>>>>>> .merge_file_oMuuCW
 =======
 >>>>>>> .merge_file_YudubE
+=======
+>>>>>>> .merge_file_dMRMx1

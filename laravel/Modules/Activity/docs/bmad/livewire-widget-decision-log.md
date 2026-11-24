@@ -1,10 +1,13 @@
 ---
+<<<<<<< .merge_file_O5Fg3B
 <<<<<<< .merge_file_K9kKie
 <<<<<<< .merge_file_KgoRZN
 title: "Decision log — Activity"
 =======
 =======
 >>>>>>> .merge_file_NEDaxm
+=======
+>>>>>>> .merge_file_fmYWPK
 <<<<<<< HEAD
 title: "Decision log: Activity"
 =======
@@ -14,10 +17,13 @@ title: "Decision log — Activity"
 title: "Decision log: Activity"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_O5Fg3B
 <<<<<<< .merge_file_K9kKie
 >>>>>>> .merge_file_mXCym5
 =======
 >>>>>>> .merge_file_NEDaxm
+=======
+>>>>>>> .merge_file_fmYWPK
 type: decision-log
 module: Activity
 related:

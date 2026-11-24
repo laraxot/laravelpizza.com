@@ -3,7 +3,7 @@ title: "dry composition"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_8PLSYa
+<<<<<<< .merge_file_V1Lsit
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_woUAIk
+>>>>>>> .merge_file_UeVpgr
 qmd: "dry composition"
 issues: []
 discussions: []
@@ -218,13 +218,13 @@ Prima di creare una bulk action:
 - [Actions Calling Actions Pattern](./actions-calling-actions-pattern.md) - Pattern per chiamare Actions con `app()`
 - [SendNotificationBulkAction](./send-notification-bulk-action.md) - Implementazione completa
 - [Geo Module Architectural Philosophy](../geo/docs/architectural-philosophy.md) - Filosofia architetturale modulare
-<<<<<<< .merge_file_8PLSYa
+<<<<<<< .merge_file_V1Lsit
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_woUAIk
+>>>>>>> .merge_file_UeVpgr
 
 ---
 

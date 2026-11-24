@@ -3,7 +3,7 @@ title: "database mail"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_nCGcip
+<<<<<<< .merge_file_fDnYWI
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_7B2HfS
+>>>>>>> .merge_file_J2YgRz
 qmd: "database mail"
 issues: []
 discussions: []

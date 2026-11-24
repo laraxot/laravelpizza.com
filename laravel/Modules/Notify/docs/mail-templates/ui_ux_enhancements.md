@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_xVjVwR
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_1n98x2
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_xVjVwR
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_1n98x2
 qmd: "ui ux enhancements"
 issues: []
 discussions: []
@@ -259,24 +265,31 @@ L'implementazione di questi miglioramenti rispetta le convenzioni del progetto <
 
 - [Documentazione Filament Forms](https://filamentphp.com/docs/forms/fields/text-input)
 <<<<<<< HEAD
+<<<<<<< .merge_file_xVjVwR
 - [Implementazione Modello con Slug](./model_slug_implementation.md)
 - [Implementazione Risorsa con Slug](./resource_slug_implementation.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_1n98x2
 =======
 <<<<<<< .merge_file_afbaDw
 - [Implementazione Modello con Slug](./MODEL_SLUG_IMPLEMENTATION.md)
 - [Implementazione Risorsa con Slug](./RESOURCE_SLUG_IMPLEMENTATION.md)
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_xVjVwR
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_1n98x2
 - [Implementazione Modello con Slug](model_slug_implementation.md)
 - [Implementazione Risorsa con Slug](resource_slug_implementation.md)
 - [Implementazione Modello con Slug](./model_slug_implementation.md)
 - [Implementazione Risorsa con Slug](./resource_slug_implementation.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_xVjVwR
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_baP0ti
@@ -284,3 +297,8 @@ L'implementazione di questi miglioramenti rispetta le convenzioni del progetto <
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_baP0ti
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_1n98x2

@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_QGPYlS
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_hZAIOY
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_QGPYlS
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_hZAIOY
 qmd: "SQLITE PERMISSION FIX"
 issues: []
 discussions: []
@@ -33,10 +39,13 @@ discussions: []
 **Status**: ✅ **FIXED**  
 **Error**: `SQLSTATE[HY000]: General error: 8 attempt to write a readonly database`
 
+<<<<<<< .merge_file_QGPYlS
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_hZAIOY
 ---
 
 title: "SQLITE PERMISSION FIX"
@@ -68,6 +77,7 @@ Il file del database SQLite aveva permessi errati:
 
 ---
 
+<<<<<<< .merge_file_QGPYlS
 <<<<<<< HEAD
 =======
 =======
@@ -77,6 +87,8 @@ Il file del database SQLite aveva permessi errati:
 
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_hZAIOY
 ## ✅ Solution Applied
 
 ### Command Executed
@@ -261,21 +273,27 @@ bash bashscripts/fix-permissions.sh
 
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_QGPYlS
 <<<<<<< HEAD
 - [ ] Document in AGENTS.md
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_hZAIOY
 - [ ] document in agents.md
 =======
 - [ ] Document in AGENTS.md
 
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_QGPYlS
 =======
 - [ ] document in agents.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_hZAIOY
 ---
 
 ## 🎯 Next Steps

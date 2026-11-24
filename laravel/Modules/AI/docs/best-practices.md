@@ -25,5 +25,5 @@ discussions: []
 - Testa la generazione di prompt con unit test.
 
 ## Documentazione
-- Aggiorna `docs/INDEX.md` quando aggiungi nuove funzioni.
+- Aggiorna `docs/index.md` quando aggiungi nuove funzioni.
 - Inserisci link a OpenAI/Anthropic SDK docs.

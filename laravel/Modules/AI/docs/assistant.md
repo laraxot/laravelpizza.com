@@ -10,7 +10,11 @@ issues: [25, 26]
 discussions: []
 related:
   - ./stories/assistant-knowledge-base.story.md
+<<<<<<< HEAD
+  - ../architecture.md
+=======
   - ../ARCHITECTURE.md
+>>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 ---
 
 # Assistente clienti
@@ -19,7 +23,11 @@ Mattoni **agnostici** per costruire un assistente che risponde alle domande dei 
 usando solo risposte ufficiali e passa a una persona tutto il resto.
 
 Il modulo AI non conosce nessun progetto: è il **modulo principale del progetto**
+<<<<<<< HEAD
+(qualunque progetto che lo adotta) che chiama queste Action con la propria `collection`,
+=======
 (Fixcity, Restaurant, ...) che chiama queste Action con la propria `collection`,
+>>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 le proprie parole sensibili e, se serve, il proprio handler di presa in carico.
 
 ## Per chi parte da zero
@@ -53,7 +61,11 @@ use Modules\AI\Actions\Assistant\BuildAssistantReportAction;
 // 1. Domanda del cliente (il thread lo crea/riusa il progetto)
 $answer = app(AnswerQuestionAction::class)->execute(
     thread: $thread,                 // Modules\AI\Models\AiThread
+<<<<<<< HEAD
+    collection: 'my-project-faq',    // base di conoscenza del progetto
+=======
     collection: 'fixcity-faq',       // base di conoscenza del progetto
+>>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
     question: $request->string('question')->toString(),
     userId: auth()->id(),            // null per visitatori anonimi; intero o UUID (salvato come stringa)
     handoffKeywords: ['allerg'],     // opzionale: parole sensibili di questa chiamata (es. per attività); null = config
@@ -65,7 +77,11 @@ $answer->handoffReason; // no_knowledge | sensitive_topic:<parola> | ai_unavaila
 $answer->sourceIds;     // id delle AiKnowledgeEntry usate
 
 // 2. Report (pianificazione e invio li decide il progetto)
+<<<<<<< HEAD
+$report = app(BuildAssistantReportAction::class)->execute('my-project-faq', now()->subWeek(), now());
+=======
 $report = app(BuildAssistantReportAction::class)->execute('fixcity-faq', now()->subWeek(), now());
+>>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 ```
 
 ### Parole sensibili (opzionale)

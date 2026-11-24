@@ -15,6 +15,7 @@ test('Snapshot model can be instantiated', function (): void {
 });
 
 test('BaseModel model can be instantiated', function (): void {
+<<<<<<< .merge_file_Ih7das
 <<<<<<< .merge_file_h7ssOe
 <<<<<<< .merge_file_nRWDdA
     $baseModel = new class extends BaseModel
@@ -24,6 +25,9 @@ test('BaseModel model can be instantiated', function (): void {
 =======
     $baseModel = new class() extends BaseModel
 >>>>>>> .merge_file_XGc7sZ
+=======
+    $baseModel = new class() extends BaseModel
+>>>>>>> .merge_file_k9nKon
     {
         protected $table = 'activity_base_models';
     };
@@ -32,6 +36,7 @@ test('BaseModel model can be instantiated', function (): void {
 });
 
 test('Snapshot model has correct connection', function (): void {
+<<<<<<< .merge_file_Ih7das
 <<<<<<< .merge_file_h7ssOe
 <<<<<<< .merge_file_nRWDdA
     $snapshot = new Snapshot;
@@ -41,11 +46,15 @@ test('Snapshot model has correct connection', function (): void {
 =======
     $snapshot = new Snapshot();
 >>>>>>> .merge_file_XGc7sZ
+=======
+    $snapshot = new Snapshot();
+>>>>>>> .merge_file_k9nKon
 
     Assert::assertIsString($snapshot->getConnectionName());
 });
 
 test('StoredEvent model has correct connection', function (): void {
+<<<<<<< .merge_file_Ih7das
 <<<<<<< .merge_file_h7ssOe
 <<<<<<< .merge_file_nRWDdA
     $storedEvent = new StoredEvent;
@@ -55,11 +64,15 @@ test('StoredEvent model has correct connection', function (): void {
 =======
     $storedEvent = new StoredEvent();
 >>>>>>> .merge_file_XGc7sZ
+=======
+    $storedEvent = new StoredEvent();
+>>>>>>> .merge_file_k9nKon
 
     Assert::assertIsString($storedEvent->getConnectionName());
 });
 
 test('BaseModel model has correct connection', function (): void {
+<<<<<<< .merge_file_Ih7das
 <<<<<<< .merge_file_h7ssOe
 <<<<<<< .merge_file_nRWDdA
     $baseModel = new class extends BaseModel
@@ -69,6 +82,9 @@ test('BaseModel model has correct connection', function (): void {
 =======
     $baseModel = new class() extends BaseModel
 >>>>>>> .merge_file_XGc7sZ
+=======
+    $baseModel = new class() extends BaseModel
+>>>>>>> .merge_file_k9nKon
     {
         protected $table = 'activity_base_models';
     };

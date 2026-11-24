@@ -3,7 +3,7 @@ title: "DOCUMENTAZIONE REPORT FINALE"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_DbRyup
+<<<<<<< .merge_file_4TxdzB
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_eVVSJq
+>>>>>>> .merge_file_XA7w5L
 qmd: "DOCUMENTAZIONE REPORT FINALE"
 issues: []
 discussions: []
@@ -27,13 +27,13 @@ Aggiornamento completo della documentazione per la pagina FAQ del progetto Desig
 - **Responsabile**: AI Agent Team
 - **Stato**: ✅ COMPLETATO
 
-<<<<<<< .merge_file_DbRyup
+<<<<<<< .merge_file_4TxdzB
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_eVVSJq
+>>>>>>> .merge_file_XA7w5L
 ---
 
 title: "DOCUMENTAZIONE REPORT FINALE"
@@ -64,7 +64,7 @@ discussions: []
 
 ---
 
-<<<<<<< .merge_file_DbRyup
+<<<<<<< .merge_file_4TxdzB
 <<<<<<< HEAD
 =======
 =======
@@ -74,7 +74,7 @@ discussions: []
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_eVVSJq
+>>>>>>> .merge_file_XA7w5L
 ### 2. Modulo UI
 
 **File**: `laravel/Modules/UI/docs/design-comuni-faq-components.md`

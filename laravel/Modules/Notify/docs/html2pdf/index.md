@@ -6,7 +6,15 @@ issues: []
 discussions: []
 title: "html2pdf index: puntatore"
 type: reference
+<<<<<<< .merge_file_dy6ZTS
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-05-21
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_pbtegY
 related:
   - "../../../Media/docs/html2pdf/index.md"
 status: draft

@@ -8,7 +8,7 @@ status: done
 track: quality/i18n
 priority: P2
 created: 2026-09-29
-<<<<<<< .merge_file_35vSVk
+<<<<<<< .merge_file_oJeNqo
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -16,7 +16,7 @@ updated: 2026-09-29
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_Sm2ax6
+>>>>>>> .merge_file_xo7KaS
 related:
   - ../../../../../docs/wiki/i18n/navigation-translations-audit.md
   - ../../../../../docs/wiki/i18n/navigation-translations-inventory-2026-09-29.md

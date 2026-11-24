@@ -26,6 +26,7 @@ use Modules\Xot\Datas\MetatagData;
  */
 final class Foot extends Component
 {
+<<<<<<< .merge_file_AVTEPK
 <<<<<<< .merge_file_icVjEa
 <<<<<<< .merge_file_YvDOAh
     public function __construct(public readonly bool $panelAssets = true) {}
@@ -39,6 +40,11 @@ final class Foot extends Component
     {
     }
 >>>>>>> .merge_file_tYAVfD
+=======
+    public function __construct(public readonly bool $panelAssets = true)
+    {
+    }
+>>>>>>> .merge_file_54PEyl
 
     public function render(): ViewContract
     {

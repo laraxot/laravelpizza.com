@@ -1,6 +1,7 @@
 ---
 title: Consolidation activity docs 2026 10 06.story
 module: Activity
+qmd: "consolidation activity story 2026 06story"
 ---
 
 # Story: Activity Module Documentation Consolidation (Phase 1)

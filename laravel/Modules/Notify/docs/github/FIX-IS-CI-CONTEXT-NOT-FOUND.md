@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_MNhea8
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_rMlKes
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_MNhea8
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_rMlKes
 qmd: "FIX IS CI CONTEXT NOT FOUND"
 issues: []
 discussions: []
@@ -28,10 +34,13 @@ discussions: []
 > **Stato**: ✅ RISOLTO  
 > **Priorità**: Critica
 
+<<<<<<< .merge_file_MNhea8
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_rMlKes
 ---
 
 title: "FIX IS CI CONTEXT NOT FOUND"
@@ -59,6 +68,7 @@ bashscripts/git/subtrees/sync_remote_repo.sh: line 50: is_interactive_shell: com
 
 ---
 
+<<<<<<< .merge_file_MNhea8
 <<<<<<< HEAD
 =======
 =======
@@ -68,6 +78,8 @@ bashscripts/git/subtrees/sync_remote_repo.sh: line 50: is_interactive_shell: com
 
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_rMlKes
 ## 🔍 Causa Radice
 
 ### Due Versioni dello Script
@@ -222,21 +234,28 @@ bashscripts/git/subtrees/sync_remote_repo.sh laraxot
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_MNhea8
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_rMlKes
 | [DIRECTORY_STRUCTURE.md](bashscripts/docs/git/directory_structure.md) | Path corretti |
 | [TROUBLESHOOTING.md](bashscripts/docs/git/troubleshooting.md) | Risoluzione errori |
 | [README.md](bashscripts/docs/git/README.md) | Index documentazione |
 | [SYNC_REMOTE_REPO_COORDINATION.md](bashscripts/docs/git/sync_remote_repo_coordination.md) | Coordineamento agenti |
+<<<<<<< .merge_file_MNhea8
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_rMlKes
 >>>>>>> laraxot/dev
 | [DIRECTORY_STRUCTURE.md](bashscripts/docs/git/DIRECTORY_STRUCTURE.md) | Path corretti |
 | [TROUBLESHOOTING.md](bashscripts/docs/git/TROUBLESHOOTING.md) | Risoluzione errori |
@@ -244,11 +263,14 @@ bashscripts/git/subtrees/sync_remote_repo.sh laraxot
 | [sync_remote_repo_coordination.md](bashscripts/docs/git/sync_remote_repo_coordination.md) | Coordineamento agenti |
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_MNhea8
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
+=======
+>>>>>>> .merge_file_rMlKes
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
@@ -257,10 +279,13 @@ bashscripts/git/subtrees/sync_remote_repo.sh laraxot
 1. **Verifica path**: Usa solo `bashscripts/git/subtrees/`
 2. **Controlla librerie**: `ls bashscripts/lib/`
 <<<<<<< HEAD
+<<<<<<< .merge_file_MNhea8
 3. **Leggi troubleshooting**: [TROUBLESHOOTING.md](bashscripts/docs/git/troubleshooting.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_rMlKes
 3. **Leggi troubleshooting**: [TROUBLESHOOTING.md](bashscripts/docs/git/TROUBLESHOOTING.md)
 =======
 <<<<<<< HEAD
@@ -269,10 +294,13 @@ bashscripts/git/subtrees/sync_remote_repo.sh laraxot
 3. **Leggi troubleshooting**: [TROUBLESHOOTING.md](bashscripts/docs/git/TROUBLESHOOTING.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_MNhea8
 =======
 3. **Leggi troubleshooting**: [TROUBLESHOOTING.md](bashscripts/docs/git/troubleshooting.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_rMlKes
 4. **Apri issue**: [GitHub Issues](https://github.com/laraxot/bashscripts_fila5/issues)
 
 ---
@@ -313,10 +341,13 @@ Creare documenti per:
 ### Prima di Lavorare su Questo Script
 
 <<<<<<< HEAD
+<<<<<<< .merge_file_MNhea8
 1. ✅ Leggi `SYNC_REMOTE_REPO_COORDINATION.md`
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_rMlKes
 1. ✅ Leggi `sync_remote_repo_coordination.md`
 =======
 <<<<<<< HEAD
@@ -325,10 +356,13 @@ Creare documenti per:
 1. ✅ Leggi `sync_remote_repo_coordination.md`
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_MNhea8
 =======
 1. ✅ Leggi `SYNC_REMOTE_REPO_COORDINATION.md`
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_rMlKes
 2. ✅ Verifica path corretto: `bashscripts/git/subtrees/`
 3. ✅ Controlla che `bashscripts/subtrees/` sia eliminato
 4. ✅ Testa con `bash -n script.sh`
@@ -390,11 +424,14 @@ bashscripts/git/subtrees/sync_remote_repo.sh  # ✅ USE THIS
 
 ### Documentation
 <<<<<<< HEAD
+<<<<<<< .merge_file_MNhea8
 - [DIRECTORY_STRUCTURE.md](bashscripts/docs/git/directory_structure.md) - Correct paths
 - [TROUBLESHOOTING.md](bashscripts/docs/git/troubleshooting.md) - Error resolution
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_rMlKes
 - [DIRECTORY_STRUCTURE.md](bashscripts/docs/git/DIRECTORY_STRUCTURE.md) - Correct paths
 - [TROUBLESHOOTING.md](bashscripts/docs/git/TROUBLESHOOTING.md) - Error resolution
 =======
@@ -406,11 +443,14 @@ bashscripts/git/subtrees/sync_remote_repo.sh  # ✅ USE THIS
 - [TROUBLESHOOTING.md](bashscripts/docs/git/TROUBLESHOOTING.md) - Error resolution
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_MNhea8
 =======
 - [DIRECTORY_STRUCTURE.md](bashscripts/docs/git/directory_structure.md) - Correct paths
 - [TROUBLESHOOTING.md](bashscripts/docs/git/troubleshooting.md) - Error resolution
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_rMlKes
 
 **Status**: ✅ RESOLVED  
 **Date**: 2026-03-13  

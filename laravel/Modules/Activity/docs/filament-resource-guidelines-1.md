@@ -1,3 +1,8 @@
+---
+title: "Activity Module Filament Resource Guidelines"
+type: guide
+qmd: "filament resource guidelines 1 activity"
+---
 # Activity Module Filament Resource Guidelines
 
 ## Extension Patterns

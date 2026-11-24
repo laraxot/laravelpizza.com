@@ -4,24 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
-<<<<<<< .merge_file_74tRe8
+<<<<<<< .merge_file_VaP6XS
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_PPePIK
+>>>>>>> .merge_file_MdBsrD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_74tRe8
+<<<<<<< .merge_file_VaP6XS
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_PPePIK
+>>>>>>> .merge_file_MdBsrD
 qmd: "commands"
 issues: []
 discussions: []
@@ -321,7 +321,7 @@ dev:reset-demo
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-<<<<<<< .merge_file_74tRe8
+<<<<<<< .merge_file_VaP6XS
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -329,12 +329,12 @@ dev:reset-demo
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_PPePIK
+>>>>>>> .merge_file_MdBsrD
 ## 🚨 REGOLA CRITICA - Frontend
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 
 *Comando più importante: `php artisan` - Il cuore dell'ecosistema Laravel*
-<<<<<<< .merge_file_74tRe8
+<<<<<<< .merge_file_VaP6XS
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -342,7 +342,7 @@ dev:reset-demo
 >>>>>>> laraxot/dev
 =======
 =======
->>>>>>> .merge_file_PPePIK
+>>>>>>> .merge_file_MdBsrD
 >>>>>>> laraxot/dev
 ---
 
@@ -370,7 +370,7 @@ Senza questi comandi, le modifiche frontend NON saranno visibili agli utenti!
 <<<<<<< HEAD
 *Comando più importante: `php artisan` - Il cuore dell'ecosistema Laravel* 
 =======
-<<<<<<< .merge_file_74tRe8
+<<<<<<< .merge_file_VaP6XS
 <<<<<<< HEAD
 *Comando più importante: `php artisan` - Il cuore dell'ecosistema Laravel* 
 =======
@@ -384,4 +384,4 @@ Senza questi comandi, le modifiche frontend NON saranno visibili agli utenti!
 *Comando più importante: `php artisan` - Il cuore dell'ecosistema Laravel* 
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_PPePIK
+>>>>>>> .merge_file_MdBsrD

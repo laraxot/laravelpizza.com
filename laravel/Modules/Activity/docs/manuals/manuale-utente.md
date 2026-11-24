@@ -3,6 +3,7 @@ title: "Manuale utente — Activity"
 type: user-manual
 status: active
 screenshot: assets/front-office-home.png
+qmd: "manuale utente activity"
 ---
 
 > Screenshot reale del front office FixCity, verificato il 23 novembre 2026. Per questo modulo è una superficie condivisa: il manuale non attribuisce al modulo una UI propria se non documentata dalle fonti.

@@ -5,18 +5,24 @@ tags: [notify, docs, github]
 module: Notify
 created: 2026-07-20
 <<<<<<< HEAD
+<<<<<<< .merge_file_BD8u7P
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_fvus82
 updated: 2026-07-20
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_BD8u7P
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_fvus82
 qmd: "notify documentazione github readme github issues & discussions - laraxot platform index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -90,12 +96,15 @@ Alcuni file di documentazione facevano riferimento a directory del database con 
 #### References
 - [Database Naming Convention](../conventions/database-naming.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_BD8u7P
 - [AGENTS.md](../../agents.md)
 - [Database Naming Convention](../conventions/database-naming.md)
 - [AGENTS.md](../agents.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_fvus82
 =======
 <<<<<<< HEAD
 - [AGENTS.md](../../agents.md)
@@ -103,6 +112,7 @@ Alcuni file di documentazione facevano riferimento a directory del database con 
 - [AGENTS.md](../agents.md)
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_BD8u7P
 >>>>>>> laraxot/dev
 - [AGENTS.md](../../AGENTS.md)
 - [AGENTS.md](../../AGENTS.md)
@@ -119,6 +129,15 @@ Alcuni file di documentazione facevano riferimento a directory del database con 
 - [AGENTS.md](../../agents.md)
 - [Database Naming Convention](../conventions/database-naming.md)
 - [AGENTS.md](../agents.md)
+=======
+- [AGENTS.md](../../AGENTS.md)
+- [AGENTS.md](../../AGENTS.md)
+- [Database Naming Convention](../conventions/database-naming.md)
+- [AGENTS.md](../agents.md)
+- [AGENTS.md](../agents.md)
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_fvus82
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 

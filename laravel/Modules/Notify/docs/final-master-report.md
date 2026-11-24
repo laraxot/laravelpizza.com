@@ -4,18 +4,24 @@ type: concept
 tags: [final, master, report]
 created: 2026-07-14
 <<<<<<< HEAD
+<<<<<<< .merge_file_CWW7l3
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ZAnbQC
 updated: 2026-07-14
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_CWW7l3
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_ZAnbQC
 qmd: "final-master-report 🏆 ptv - final master report"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -70,6 +76,7 @@ status: draft
 3. quick-start.md
 4. project-completion-status.md
 <<<<<<< HEAD
+<<<<<<< .merge_file_CWW7l3
 5. excellence-year-note-snake.md
 =======
 <<<<<<< HEAD
@@ -84,6 +91,14 @@ status: draft
 >>>>>>> laraxot/dev
 =======
 5. excellence-year-note-snake.md
+=======
+5. excellence-2025.md
+=======
+<<<<<<< HEAD
+5. excellence-year-note-snake.md
+=======
+5. excellence-2025.md
+>>>>>>> .merge_file_ZAnbQC
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 6. final-summary.md
@@ -293,10 +308,13 @@ base_ptv_fila5/
 │   ├── documentation-index.md
 │   ├── quick-start.md
 <<<<<<< HEAD
+<<<<<<< .merge_file_CWW7l3
 │   ├── excellence-year-note-snake.md
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ZAnbQC
 │   ├── excellence-2025.md
 =======
 <<<<<<< HEAD
@@ -305,10 +323,13 @@ base_ptv_fila5/
 │   ├── excellence-2025.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_CWW7l3
 =======
 │   ├── excellence-year-note-snake.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_ZAnbQC
 │   ├── gap-analysis-implementation.md
 │   ├── perfection-plan.md
 │   ├── final-master-report.md

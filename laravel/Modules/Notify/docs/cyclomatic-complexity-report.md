@@ -3,7 +3,7 @@ title: "cyclomatic complexity report"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_tn65SJ
+<<<<<<< .merge_file_At1M8T
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_d7GMr5
+>>>>>>> .merge_file_fWtTZH
 qmd: "cyclomatic complexity report"
 issues: []
 discussions: []

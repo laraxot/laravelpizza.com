@@ -1,3 +1,8 @@
+---
+title: "Karpathy LLM Wiki Pattern"
+type: pattern
+qmd: "karpathy llm wiki pattern"
+---
 # Karpathy LLM Wiki Pattern
 
 **Source:** Andrej Karpathy's GitHub gist and social media posts  

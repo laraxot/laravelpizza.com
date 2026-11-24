@@ -3,7 +3,7 @@ title: "dry composition pattern"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_st2cC0
+<<<<<<< .merge_file_ssQZFE
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_nYgBVN
+>>>>>>> .merge_file_TYSQmu
 qmd: "dry composition pattern"
 issues: []
 discussions: []
@@ -219,13 +219,13 @@ Prima di creare una bulk action:
 - [Actions Calling Actions Pattern](./actions-calling-actions-pattern.md) - Pattern per chiamare Actions con `app()`
 - [SendNotificationBulkAction](./send-notification-bulk-action.md) - Implementazione completa
 - [Geo Module Architectural Philosophy](../Geo/docs/architectural-philosophy.md) - Filosofia architetturale modulare
-<<<<<<< .merge_file_st2cC0
+<<<<<<< .merge_file_ssQZFE
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_nYgBVN
+>>>>>>> .merge_file_TYSQmu
 
 ---
 

@@ -226,12 +226,15 @@ Usare sempre file esistenti del progetto come riferimento per i namespace.
 
 - [ListLogActivitiesAction.php](../app/Filament/Actions/ListLogActivitiesAction.php) - File fixato
 - [XotBasePage.php](../../Xot/app/Filament/Pages/XotBasePage.php) - Reference corretta
+<<<<<<< .merge_file_V3ince
 <<<<<<< .merge_file_YuPHQf
 <<<<<<< .merge_file_ET1SVf
 - [Activity Module README](./readme.md)
 =======
 =======
 >>>>>>> .merge_file_o6eE5M
+=======
+>>>>>>> .merge_file_oOND8i
 <<<<<<< HEAD
 - [Activity Module README](./README.md)
 =======
@@ -245,10 +248,13 @@ Usare sempre file esistenti del progetto come riferimento per i namespace.
 - [Activity Module README](./README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_V3ince
 <<<<<<< .merge_file_YuPHQf
 >>>>>>> .merge_file_DrdwSS
 =======
 >>>>>>> .merge_file_o6eE5M
+=======
+>>>>>>> .merge_file_oOND8i
 
 ### Regole e Best Practices
 

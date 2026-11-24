@@ -3,7 +3,15 @@ title: "CRITICAL BUG SYNC SCRIPT DELETED"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_hdVgT3
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_NaCIqb
 qmd: "CRITICAL BUG SYNC SCRIPT DELETED"
 issues: []
 discussions: []
@@ -15,10 +23,13 @@ discussions: []
 > **Status**: ❌ **CRITICAL ISSUE**  
 > **Impact**: HIGH
 
+<<<<<<< .merge_file_hdVgT3
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_NaCIqb
 ---
 
 title: "CRITICAL BUG SYNC SCRIPT DELETED"
@@ -36,6 +47,7 @@ discussions: []
 
 ---
 
+<<<<<<< .merge_file_hdVgT3
 <<<<<<< HEAD
 =======
 =======
@@ -43,6 +55,8 @@ discussions: []
 
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_NaCIqb
 ## 🔍 Root Cause
 
 1. **bashscripts/ è nel .gitignore**

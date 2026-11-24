@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_sQWAAp
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_na6aVs
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_sQWAAp
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_na6aVs
 qmd: "mail templates structure"
 issues: []
 discussions: []
@@ -145,10 +151,13 @@ $attachments = [
 - [Documentazione MailPace](https://github.com/mailpace/templates)
 - [Best Practices Email HTML](./email_html_best_practices.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_sQWAAp
 - [Guida Testing](./email_testing.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_na6aVs
 - [Guida Testing](./EMAIL_TESTING.md)
 =======
 <<<<<<< HEAD
@@ -157,10 +166,13 @@ $attachments = [
 - [Guida Testing](./EMAIL_TESTING.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_sQWAAp
 =======
 - [Guida Testing](./email_testing.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_na6aVs
 
 ## Supporto
 

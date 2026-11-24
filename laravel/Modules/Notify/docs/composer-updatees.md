@@ -7,7 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< .merge_file_UCdto0
+<<<<<<< .merge_file_E1P0ob
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -15,7 +15,7 @@ updated: 2026-08-24
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_6bzd9T
+>>>>>>> .merge_file_3YurzO
 ---
 
 # Composer Update Fixes - 24 Novembre 2025

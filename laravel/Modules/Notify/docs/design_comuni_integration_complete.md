@@ -3,7 +3,7 @@ title: "DESIGN COMUNI INTEGRATION COMPLETE"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_kUyWE0
+<<<<<<< .merge_file_3Dr3Op
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_uxNT8M
+>>>>>>> .merge_file_MRc2Ai
 qmd: "DESIGN COMUNI INTEGRATION COMPLETE"
 issues: []
 discussions: []

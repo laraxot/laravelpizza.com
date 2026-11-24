@@ -7,6 +7,7 @@ priority: medium
 created: 2026-10-06
 updated: 2026-10-06
 tags: [phpstan, cleanup, bmad, ai]
+date_originale_nome_file: 2026-10-06
 ---
 
 # [STORY] PHPStan cleanup — AI

@@ -3,7 +3,7 @@ title: "email tests"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_gL4Bl7
+<<<<<<< .merge_file_Z6ipnI
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_C5yktu
+>>>>>>> .merge_file_Q2Ja3O
 qmd: "email tests"
 issues: []
 discussions: []

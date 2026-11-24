@@ -3,7 +3,15 @@ title: "implementation summary 2025 01 27"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_4c6aTX
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_oAHboT
 qmd: "implementation summary 2025 01 27"
 issues: []
 discussions: []
@@ -13,10 +21,13 @@ discussions: []
 
 > **Sessione di implementazione priorità critiche Fixcity Module**
 
+<<<<<<< .merge_file_4c6aTX
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_oAHboT
 ---
 
 title: "implementation summary 2025 01 27"
@@ -68,6 +79,7 @@ discussions: []
 7. ✅ Retry on failure
 
 ---
+<<<<<<< .merge_file_4c6aTX
 <<<<<<< HEAD
 =======
 =======
@@ -78,6 +90,8 @@ discussions: []
 #### Test Coverage:
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_oAHboT
 
 ### 🎯 Task #2: Eager Loading in ListTickets (CRITICAL)
 **Status**: ✅ COMPLETATO

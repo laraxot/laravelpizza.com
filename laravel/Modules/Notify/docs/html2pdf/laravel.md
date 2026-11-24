@@ -6,7 +6,15 @@ issues: []
 discussions: []
 title: "html2pdf laravel: puntatore"
 type: reference
+<<<<<<< .merge_file_qxkd0I
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-05-21
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_uzQeFk
 related:
   - "../../../Media/docs/html2pdf/laravel.md"
 status: draft

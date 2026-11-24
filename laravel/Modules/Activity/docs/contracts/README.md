@@ -1,4 +1,5 @@
 ---
+<<<<<<< .merge_file_BmCgAN
 <<<<<<< .merge_file_tlvQwE
 <<<<<<< .merge_file_gR4lCw
 title: "Contratti del modulo Activity"
@@ -11,6 +12,8 @@ qmd: "activity contracts readme azioni invarianti pest group audit log"
 =======
 =======
 >>>>>>> .merge_file_MeOvX4
+=======
+>>>>>>> .merge_file_ifvO80
 <<<<<<< HEAD
 <<<<<<< HEAD
 title: "Contratti"
@@ -27,14 +30,18 @@ type: index
 tags: [contracts, actions, interfaces, activity, audit, log-viewer]
 created: 2026-11-18
 updated: 2026-11-24
+<<<<<<< .merge_file_BmCgAN
 <<<<<<< .merge_file_tlvQwE
 >>>>>>> .merge_file_d0M8Ez
 =======
 >>>>>>> .merge_file_MeOvX4
+=======
+>>>>>>> .merge_file_ifvO80
 ---
 
 # Contratti del modulo Activity
 
+<<<<<<< .merge_file_BmCgAN
 <<<<<<< .merge_file_tlvQwE
 <<<<<<< .merge_file_gR4lCw
 Un contract descrive il comportamento promesso da una Action che accede a file di log, applica permessi o cancella dati di audit.
@@ -57,6 +64,8 @@ Copertura e backlog: [INDEX.md](INDEX.md).
 =======
 =======
 >>>>>>> .merge_file_MeOvX4
+=======
+>>>>>>> .merge_file_ifvO80
 Cosa promettono le Action di Activity che scrivono il log delle attività, riscrivono un record dal suo storico, o
 aprono file di `storage/logs` scelti dall'utente (sicurezza dei percorsi e degli accessi). Le Action di sola query
 (`Actions/Query`) e di parsing dei log non hanno effetti collaterali e restano fuori.
@@ -141,7 +150,10 @@ Formato (sei sezioni, tabella invarianti con ID, `@contract` nel docblock):
 - [INDEX.md](INDEX.md) — inventario machine-readable del modulo (la sua tabella oggi dichiara «nessun contratto»: vale l'elenco qui sopra).
 - [_template.md](_template.md) — template minimo `type: contract` con `action: <FQCN>` e le sei sezioni.
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_BmCgAN
 <<<<<<< .merge_file_tlvQwE
 >>>>>>> .merge_file_d0M8Ez
 =======
 >>>>>>> .merge_file_MeOvX4
+=======
+>>>>>>> .merge_file_ifvO80

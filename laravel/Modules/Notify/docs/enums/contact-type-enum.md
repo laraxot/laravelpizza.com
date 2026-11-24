@@ -3,7 +3,7 @@ title: "contact type enum"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_pohipc
+<<<<<<< .merge_file_QHE8CN
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_LpZuco
+>>>>>>> .merge_file_z3cljI
 qmd: "contact type enum"
 issues: []
 discussions: []

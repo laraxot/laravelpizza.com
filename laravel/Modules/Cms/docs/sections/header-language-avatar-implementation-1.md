@@ -3,21 +3,27 @@ title: "header language avatar implementation 1"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_G7TC6Z
 <<<<<<< .merge_file_ThmsqG
 <<<<<<< .merge_file_6bDGLI
 updated: 2026-11-23
 =======
 =======
 >>>>>>> .merge_file_po0aqV
+=======
+>>>>>>> .merge_file_STn3Aa
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_G7TC6Z
 <<<<<<< .merge_file_ThmsqG
 >>>>>>> .merge_file_itRgBk
 =======
 >>>>>>> .merge_file_po0aqV
+=======
+>>>>>>> .merge_file_STn3Aa
 qmd: "header language avatar implementation 1"
 issues: []
 discussions: []
@@ -26,12 +32,15 @@ discussions: []
 # Implementazione del Selettore di Lingua e Avatar Utente nell'Header
 
 ## Collegamenti correlati
+<<<<<<< .merge_file_G7TC6Z
 <<<<<<< .merge_file_ThmsqG
 <<<<<<< .merge_file_6bDGLI
 - [README modulo Cms](./README.md)
 =======
 =======
 >>>>>>> .merge_file_po0aqV
+=======
+>>>>>>> .merge_file_STn3Aa
 <<<<<<< HEAD
 - [README modulo Cms](./README.md)
 =======
@@ -41,10 +50,13 @@ discussions: []
 - [README modulo Cms](./README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_G7TC6Z
 <<<<<<< .merge_file_ThmsqG
 >>>>>>> .merge_file_itRgBk
 =======
 >>>>>>> .merge_file_po0aqV
+=======
+>>>>>>> .merge_file_STn3Aa
 - [Documentazione User](../../../User/docs/header_language_avatar_implementation.md)
 - [Documentazione Sezioni](./sections_structure.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)

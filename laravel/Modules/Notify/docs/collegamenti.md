@@ -3,7 +3,7 @@ title: "collegamenti"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_oNvXWl
+<<<<<<< .merge_file_cejQcd
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_COPr2H
+>>>>>>> .merge_file_hdYtYS
 qmd: "collegamenti"
 issues: []
 discussions: []

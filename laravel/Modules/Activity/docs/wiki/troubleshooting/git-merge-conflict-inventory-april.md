@@ -1,3 +1,8 @@
+---
+title: "Git Conflict Inventory"
+type: guide
+qmd: "git merge conflict inventory april"
+---
 # Git Conflict Inventory
 
 - Date: 2026-04-28

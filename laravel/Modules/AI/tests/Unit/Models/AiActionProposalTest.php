@@ -6,7 +6,10 @@ namespace Modules\AI\Tests\Unit\Models;
 
 use Modules\AI\Enums\AiActionProposalStatusEnum;
 use Modules\AI\Models\AiActionProposal;
+use Modules\AI\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 
 test('ai action proposal casts attributes', function (): void {
     $casts = (new AiActionProposal)->getCasts();

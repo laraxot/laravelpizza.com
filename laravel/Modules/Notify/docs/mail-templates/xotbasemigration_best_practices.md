@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_OXZlEu
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_yy53U9
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_OXZlEu
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_yy53U9
 qmd: "xotbasemigration best practices"
 issues: []
 discussions: []
@@ -142,19 +148,27 @@ Quando si utilizza `Schema::hasColumn()` direttamente, si bypassa tutta questa l
 - [JSON Migration Best Practices](json_migration_fixes.md)
 - [JSON Migration Best Practices](json_migration_fixes.md)
 =======
+<<<<<<< .merge_file_OXZlEu
 <<<<<<< HEAD
 <<<<<<< HEAD
 - [JSON Migration Best Practices](json_migration_fixes.md)
 - [JSON Migration Best Practices](json_migration_fixes.md)
 =======
+=======
+>>>>>>> .merge_file_yy53U9
 <<<<<<< .merge_file_kFMjJ8
 - [JSON Migration Best Practices]([project-root]/laravel/Modules/Notify/docs/mail-templates/JSON_MIGRATION_FIXES.md)
 =======
 - [JSON Migration Best Practices](json_migration_fixes.md)
+<<<<<<< .merge_file_OXZlEu
 - [JSON Migration Best Practices](json_migration_fixes.md)
 >>>>>>> .merge_file_sac6At
 >>>>>>> laraxot/dev
 =======
 - [JSON Migration Best Practices](json_migration_fixes.md)
 >>>>>>> laraxot/dev
+=======
+- [JSON Migration Best Practices](json_migration_fixes.md)
+>>>>>>> .merge_file_sac6At
+>>>>>>> .merge_file_yy53U9
 >>>>>>> laraxot/dev

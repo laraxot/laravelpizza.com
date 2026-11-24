@@ -4,24 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
-<<<<<<< .merge_file_ICu5MG
+<<<<<<< .merge_file_iu5crQ
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_rszPs8
+>>>>>>> .merge_file_egrvPL
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_ICu5MG
+<<<<<<< .merge_file_iu5crQ
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_rszPs8
+>>>>>>> .merge_file_egrvPL
 qmd: "roadmap"
 issues: []
 discussions: []
@@ -113,7 +113,7 @@ Overall Module Completion: 60%
 * [roadmap.md](docs/roadmap.md)
 <<<<<<< HEAD
 =======
-<<<<<<< .merge_file_ICu5MG
+<<<<<<< .merge_file_iu5crQ
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -121,7 +121,7 @@ Overall Module Completion: 60%
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_rszPs8
+>>>>>>> .merge_file_egrvPL
 * [roadmap.md](../../../gdpr/docs/roadmap.md)
 * [roadmap.md](../../../notify/docs/roadmap.md)
 * [roadmap.md](../../../xot/docs/roadmap.md)
@@ -135,7 +135,7 @@ Overall Module Completion: 60%
 * [roadmap.md](../../../activity/docs/roadmap.md)
 * [roadmap.md](../../../patient/docs/roadmap.md)
 * [roadmap.md](../../../cms/docs/roadmap.md)
-<<<<<<< .merge_file_ICu5MG
+<<<<<<< .merge_file_iu5crQ
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -143,7 +143,7 @@ Overall Module Completion: 60%
 =======
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_rszPs8
+>>>>>>> .merge_file_egrvPL
 >>>>>>> laraxot/dev
 * [roadmap.md](../../../Gdpr/docs/roadmap.md)
 * [roadmap.md](../roadmap.md)
@@ -322,13 +322,13 @@ Overall Module Completion: 60%
 
 ## Contribuire
 <<<<<<< HEAD
-<<<<<<< .merge_file_ICu5MG
+<<<<<<< .merge_file_iu5crQ
 Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../docs/readme_links.md).
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_rszPs8
+>>>>>>> .merge_file_egrvPL
 Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../docs/README_links.md).
 =======
 <<<<<<< HEAD
@@ -337,13 +337,13 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../docs/README_links.md).
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_ICu5MG
+<<<<<<< .merge_file_iu5crQ
 =======
 Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../docs/readme_links.md).
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_rszPs8
+>>>>>>> .merge_file_egrvPL
 Per contribuire alla documentazione, seguire le [Linee Guida](../../../../docs/linee-guida-documentazione.md) e le [Regole dei Collegamenti](../../../../docs/regole_collegamenti_documentazione.md).
 
 ## Collegamenti Completi

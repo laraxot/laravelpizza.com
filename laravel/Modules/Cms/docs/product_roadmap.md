@@ -1,9 +1,12 @@
 ---
+<<<<<<< .merge_file_SbwM3y
 <<<<<<< .merge_file_ZfSoNN
 <<<<<<< .merge_file_ZpktZi
 =======
 =======
 >>>>>>> .merge_file_JvTEd5
+=======
+>>>>>>> .merge_file_5AYZgF
 <<<<<<< HEAD
 title: "Product Roadmap"
 type: note
@@ -12,16 +15,20 @@ created: 2026-09-26
 updated: 2026-09-26
 qmd: "Product Roadmap"
 =======
+<<<<<<< .merge_file_SbwM3y
 <<<<<<< .merge_file_ZfSoNN
 >>>>>>> .merge_file_ehCZuf
 =======
 >>>>>>> .merge_file_JvTEd5
+=======
+>>>>>>> .merge_file_5AYZgF
 title: "product roadmap"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "product roadmap"
+<<<<<<< .merge_file_SbwM3y
 <<<<<<< .merge_file_ZfSoNN
 <<<<<<< .merge_file_ZpktZi
 =======
@@ -30,6 +37,9 @@ qmd: "product roadmap"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_JvTEd5
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_5AYZgF
 issues: []
 discussions: []
 ---
@@ -43,11 +53,14 @@ discussions: []
 
 ---
 
+<<<<<<< .merge_file_SbwM3y
 <<<<<<< .merge_file_ZfSoNN
 <<<<<<< .merge_file_ZpktZi
 =======
 =======
 >>>>>>> .merge_file_JvTEd5
+=======
+>>>>>>> .merge_file_5AYZgF
 <<<<<<< HEAD
 title: "PRODUCT ROADMAP"
 =======
@@ -72,10 +85,13 @@ qmd: "PRODUCT ROADMAP"
 >>>>>>> laraxot/dev
 issues: []
 discussions: []
+<<<<<<< .merge_file_SbwM3y
 <<<<<<< .merge_file_ZfSoNN
 >>>>>>> .merge_file_ehCZuf
 =======
 >>>>>>> .merge_file_JvTEd5
+=======
+>>>>>>> .merge_file_5AYZgF
 ## Vision Statement
 
 To provide a **flexible content management system** that empowers non-technical users to create, manage, and publish content across the platform without developer intervention.
@@ -168,6 +184,7 @@ To provide a **flexible content management system** that empowers non-technical 
 | **Content Reuse** | 10% | 25% | 40% | 60% |
 
 ---
+<<<<<<< .merge_file_SbwM3y
 <<<<<<< .merge_file_ZfSoNN
 <<<<<<< .merge_file_ZpktZi
 =======
@@ -176,3 +193,6 @@ To provide a **flexible content management system** that empowers non-technical 
 =======
 
 >>>>>>> .merge_file_JvTEd5
+=======
+
+>>>>>>> .merge_file_5AYZgF

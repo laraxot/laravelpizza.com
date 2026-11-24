@@ -10,6 +10,7 @@ use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Log;
 use Modules\Cms\Http\Middleware\PageSlugMiddleware;
 use Modules\Cms\Models\Page;
+<<<<<<< .merge_file_NU3aic
 <<<<<<< .merge_file_oLRwyL
 <<<<<<< .merge_file_t1m6Cf
 use Modules\Cms\Tests\TestCase;
@@ -19,14 +20,19 @@ use Modules\Cms\Tests\Unit\Http\Middleware\Dcp283ReturnsNothingMiddleware;
 =======
 =======
 >>>>>>> .merge_file_gZKvsm
+=======
+>>>>>>> .merge_file_A5zSmA
 use Modules\Cms\Tests\Unit\Http\Middleware\Dcp283NoHandleMiddleware;
 use Modules\Cms\Tests\Unit\Http\Middleware\Dcp283ProbeMiddleware;
 use Modules\Cms\Tests\Unit\Http\Middleware\Dcp283ReturnsNothingMiddleware;
 use Modules\Cms\Tests\TestCase;
+<<<<<<< .merge_file_NU3aic
 <<<<<<< .merge_file_oLRwyL
 >>>>>>> .merge_file_vUIgiJ
 =======
 >>>>>>> .merge_file_gZKvsm
+=======
+>>>>>>> .merge_file_A5zSmA
 use Monolog\Handler\TestHandler;
 use Monolog\Level;
 use Monolog\Logger as Monolog;

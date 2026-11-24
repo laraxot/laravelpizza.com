@@ -13,6 +13,7 @@ related:
   - ../wiki/concepts/ai-services-support-to-actions.md
   - ../bmad/domain-status-enum.md
   - ../../../../../bmad-output/epic-code-standards-services-mixed-const.md
+date_originale_nome_file: 2026-10-08
 ---
 
 # [STORY] AI: Services eliminati, const ripristinate a enum
@@ -106,3 +107,41 @@ I valori backed sono i literal gia' persistiti (`pending`, `ok`, `user`...): col
 - `RequestChatCompletionAction` (zero chiamanti) duplica `MakeAIRequestAction`.
 - Rischio ricorrente: un nuovo merge da `laraxot/dev` puo' riesumare Services e const. Le modifiche sono nel working tree: vanno
   committate forward-only dal proprietario del repo del modulo.
+<<<<<<< HEAD:docs/stories/services-to-actions-ai.story.md
+
+## Seguito 2026-11-19: analizzatori di sentiment eliminati
+
+**Rosso**: `tests/Unit/Actions/QueueableActionContractTest.php` («keeps AI actions queueable with execute
+entrypoints») su `Actions\Sentiment\BasicSentimentAnalyzer` e `TransformersSentimentAnalyzer`.
+
+**Decisione**: codice morto, non adattatori. Si eliminano i due analizzatori e il contratto
+`Contracts\SentimentAnalyzer`; il test resta com'e' (la regola che verifica e' giusta).
+
+**Prove**:
+- `grep -rn` su `laravel/Modules` e `laravel/Themes`: nessun riferimento oltre alle classi stesse e ai docs;
+  nessun test li usa.
+- `AIServiceProvider`: nessun binding (lega solo `MessageStoreInterface`, `PersistenceInterface` e il registry).
+- `SentimentAction` chiama gia' `AnalyzeTransformersSentimentAction`/`AnalyzeBasicSentimentAction`; gli
+  analizzatori erano la versione precedente (la basic senza gestione delle negazioni).
+- Il contratto non aveva altre implementazioni ne' consumatori.
+
+**Anche**: tolto un docblock orfano (`@param list<string> $words`) in `AnalyzeBasicSentimentAction`;
+`@see` a `docs/sentiment-analysis.md` sulle tre Action del sentiment.
+
+**File**: eliminati `app/Actions/Sentiment/BasicSentimentAnalyzer.php`,
+`app/Actions/Sentiment/TransformersSentimentAnalyzer.php`, `app/Contracts/SentimentAnalyzer.php`;
+modificati `app/Actions/SentimentAction.php`, `app/Actions/Sentiment/Analyze*SentimentAction.php`,
+`ARCHITECTURE.md`, `docs/PHILOSOPHY.md`, `docs/coverage.md`; nuovo `docs/sentiment-analysis.md`.
+
+### Secondo rosso dello stesso test: `Actions/Prompt/AIPromptTemplates`
+
+Tolti gli analizzatori, `QueueableActionContractTest` falliva ancora su `Actions\Prompt\AIPromptTemplates`
+(classe statica con `classification()`/`solutions()`, riportata dalla sync del 2026-10-20 dopo che questa
+story aveva deciso di tenere i testi dentro `BuildAIPromptAction`). Unico consumatore `BuildAIPromptAction`:
+i due metodi diventano `private static` li' (`classificationPrompt()`, `solutionsPrompt()`), stesso testo, e il
+file e' eliminato. `docs/queueable-actions.md` e `docs/PHILOSOPHY.md` aggiornati.
+
+Ancora aperto: `app/Datas/AIPromptTemplates.php` (costanti `ROUTING_JSON`/`PATTERN_JSON`/`IMPROVEMENTS_JSON`)
+e' tornato anch'esso con la sync, zero riferimenti; non fa fallire test, lasciato al proprietario.
+=======
+>>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip)):docs/stories/2026-10-08-services-to-actions-ai.story.md

@@ -17,7 +17,7 @@ related:
 Static metrics: 302 files scanned, 3 case-only groups, 24 duplicate hash groups, 0 duplicate FQCN.
 
 Findings:
-- Case-only docs: `INDEX.md`/`index.md`, `PRD.md`/`prd.md`, `ROADMAP.md`/`roadmap.md`.
+- Case-only docs: `index.md`/`index.md`, `PRD.md`/`prd.md`, `roadmap.md`/`roadmap.md`.
 - Duplicate docs by dash/underscore variants: `create_an_assistant.md`/`create-an-assistant.md`, `google-gemini.md`/`google_gemini.md`, `fine_tuning.md`/`fine-tuning.md`, `video-tutorial.md`/`video_tutorial.md`.
 - MCP docs contain numbered dash/underscore variants such as `11-aggiornamenti.md` and `11_aggiornamenti.md`.
 

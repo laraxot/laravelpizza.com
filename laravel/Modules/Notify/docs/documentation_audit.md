@@ -3,7 +3,7 @@ title: "documentation audit"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_p0gJHj
+<<<<<<< .merge_file_2nBGba
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_4uCHZ1
+>>>>>>> .merge_file_wsPwUE
 qmd: "documentation audit"
 issues: []
 discussions: []

@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_c8Ca35
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_m8kRwQ
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_c8Ca35
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_m8kRwQ
 qmd: "mailpace templates analysis"
 issues: []
 discussions: []
@@ -232,6 +238,7 @@ return [
 ## Collegamenti
 - [Mailpace Templates](https://github.com/mailpace/templates)
 <<<<<<< HEAD
+<<<<<<< .merge_file_c8Ca35
 - [Email Best Practices](./EMAIL_BEST_PRACTICES.md)
 - [Template Management](./template-management.md) 
 =======
@@ -258,4 +265,19 @@ return [
 - [Email Best Practices](./email_best_practices.md)
 - [Template Management](../template-management.md) 
 >>>>>>> laraxot/dev
+=======
+=======
+<<<<<<< .merge_file_HdUiMQ
+- [Email Best Practices](./EMAIL_BEST_PRACTICES.md)
+- [Template Management](./template-management.md) 
+=======
+>>>>>>> laraxot/dev
+- [Email Best Practices](./email_best_practices.md)
+- [Template Management](../template-management.md) 
+- [Email Best Practices](./email_best_practices.md)
+- [Template Management](../template-management.md) 
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_x2xSU5
+>>>>>>> .merge_file_m8kRwQ
 >>>>>>> laraxot/dev

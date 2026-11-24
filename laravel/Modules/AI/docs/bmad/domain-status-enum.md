@@ -32,4 +32,8 @@ Le colonne restano `string` (le migration non cambiano): la conversione avviene 
 - `lang/*/action_proposal.php` conserva le chiavi `statuses.*` (non piu' lette dal codice del modulo): rimuovibili dopo aver verificato che nessun tema le usi.
 - La cartella `Modules/AI/Enums/` (fuori da `app/`, quindi fuori da PSR-4) contiene un `AiActionProposalStatus` orfano e mai referenziato: non e' l'enum in uso.
 
+<<<<<<< HEAD
+Storia: [2026-10-06-phpstan-cleanup-ai](../stories/phpstan-cleanup-ai.story.md).
+=======
 Storia: [2026-10-06-phpstan-cleanup-ai](../stories/2026-10-06-phpstan-cleanup-ai.story.md).
+>>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))

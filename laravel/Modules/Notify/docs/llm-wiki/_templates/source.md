@@ -10,6 +10,7 @@ created: {{date}}
 <<<<<<< HEAD
 updated: {{date}}
 =======
+<<<<<<< .merge_file_OKCgje
 <<<<<<< HEAD
 <<<<<<< HEAD
 updated: {{date}}
@@ -20,6 +21,10 @@ updated: 2026-11-23
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_m16J1f
 tags: [article, paper, documentation]
 related: []
 ---

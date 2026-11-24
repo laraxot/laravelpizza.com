@@ -1,8 +1,8 @@
 ---
-qmd: "performance optimization"
+qmd: "Performance Optimization"
 issues: []
 discussions: []
-title: "Performance Optimization — Module AI"
+title: "Performance Optimization"
 type: documentation
 created: 2026-05-11
 updated: 2026-05-11
@@ -117,8 +117,13 @@ context-mode ctx-stats
 ## Riferimenti
 
 - [Global Performance Guide](../../docs/wiki/concepts/performance-optimization.md)
+<<<<<<< HEAD
+- [On-Demand Pattern](./on-demand-pattern.md)
+- [QMD Setup](./qmd-setup.md)
+=======
 - [On-Demand Pattern](./ON-DEMAND-PATTERN.md)
 - [QMD Setup](./QMD-SETUP.md)
+>>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 
 ---
 *Status: Ottimizzato | Token risparmiati: ~48K per session*

@@ -66,19 +66,19 @@ Replicazione delle 38 pagine statiche del progetto [Design Comuni Italia](https:
 | **All Pages Analysis** | [ALL_PAGES_analysis.md](../laravel/Themes/Sixteen/docs/design-comuni/ALL_PAGES_analysis.md) | Analisi completa 54 pagine |
 <<<<<<< HEAD
 | **Progress Report** | [progress-report.md](../progress-report.md) | Report progresso aggiornato |
-<<<<<<< .merge_file_cVWMIu
+<<<<<<< .merge_file_M1Odfn
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 | **Progress Report** | [progress-report.md](../progress-report.md) | Report progresso aggiornato |
 =======
->>>>>>> .merge_file_0IXmn8
+>>>>>>> .merge_file_ACQbra
 | **Progress Report** | [progress-report.md](../progress-report.md) | Report progresso aggiornato |
 =======
 <<<<<<< .merge_file_i3LdqE
 | **Progress Report** | [progress-report.md](../laravel/Themes/Sixteen/docs/design-comuni/progress-report.md) | Report progresso aggiornato |
 =======
-<<<<<<< .merge_file_cVWMIu
+<<<<<<< .merge_file_M1Odfn
 | **Progress Report** | [progress-report.md](../progress-report.md) | Report progresso aggiornato |
 | **Progress Report** | [progress-report.md](../progress-report.md) | Report progresso aggiornato |
 >>>>>>> .merge_file_KZ5Whe
@@ -92,7 +92,7 @@ Replicazione delle 38 pagine statiche del progetto [Design Comuni Italia](https:
 | **Progress Report** | [progress-report.md](../progress-report.md) | Report progresso aggiornato |
 >>>>>>> .merge_file_KZ5Whe
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_0IXmn8
+>>>>>>> .merge_file_ACQbra
 | **Fail Pages Analysis** | [FAIL_PAGES_analysis.md](../laravel/Themes/Sixteen/docs/design-comuni/FAIL_PAGES_analysis.md) | Analisi pagine fail |
 | **Skills & Rules** | [SKILLS_RULES.md](../laravel/Themes/Sixteen/docs/design-comuni/skills-rules.md) | Skills, rules e best practices |
 | **Segnalazioni Elenco Analisi** | [SEGNALAZIONI_ELENCO_ANALISI.md](../laravel/Themes/Sixteen/docs/design-comuni/segnalazioni-elenco-analisi.md) | Analisi segnalazioni elenco (95.7%) |

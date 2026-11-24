@@ -1,10 +1,10 @@
 ---
-title: "index"
+title: "Index"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "index"
+qmd: "Index"
 issues: []
 discussions: []
 ---
@@ -25,12 +25,20 @@ qmd search "AI rules" --limit 5
 - [Root Wiki](../../../docs/wiki/)
 
 ---
+<<<<<<< HEAD
+title: "INDEX"
+=======
 title: "index"
+>>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
+<<<<<<< HEAD
+qmd: "INDEX"
+=======
 qmd: "index"
+>>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 issues: []
 discussions: []
 *Updated: 2026-05-11*

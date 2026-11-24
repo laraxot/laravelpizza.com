@@ -1,10 +1,13 @@
 ---
+<<<<<<< .merge_file_guQ6sf
 <<<<<<< .merge_file_AcX1yi
 <<<<<<< .merge_file_RxgkMc
 title: "Brainstorming — Activity"
 =======
 =======
 >>>>>>> .merge_file_GQ8azv
+=======
+>>>>>>> .merge_file_ZDii9M
 <<<<<<< HEAD
 title: "Brainstorming: Activity"
 =======
@@ -14,10 +17,13 @@ title: "Brainstorming — Activity"
 title: "Brainstorming: Activity"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_guQ6sf
 <<<<<<< .merge_file_AcX1yi
 >>>>>>> .merge_file_YQoOWU
 =======
 >>>>>>> .merge_file_GQ8azv
+=======
+>>>>>>> .merge_file_ZDii9M
 type: brainstorming
 module: Activity
 related:

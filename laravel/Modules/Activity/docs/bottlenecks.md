@@ -339,11 +339,14 @@ class ListActivities extends XotBasePage
 ## Collegamenti tra versioni di bottlenecks.md
 * [bottlenecks.md](../../../../bashscripts/docs/bottlenecks.md)
 * [bottlenecks.md](../../chart/docs/bottlenecks.md)
+<<<<<<< .merge_file_6CnGjF
 <<<<<<< .merge_file_51riI4
 <<<<<<< .merge_file_qx99f6
 =======
 =======
 >>>>>>> .merge_file_tP6cUT
+=======
+>>>>>>> .merge_file_FTL6pi
 * [bottlenecks.md](../../Chart/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../Gdpr/docs/bottlenecks.md)
 * [bottlenecks.md](../../Gdpr/docs/performance/bottlenecks.md)
@@ -352,6 +355,7 @@ class ListActivities extends XotBasePage
 * [bottlenecks.md](../../xot/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../xot/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../dental/docs/bottlenecks.md)
+<<<<<<< .merge_file_6CnGjF
 <<<<<<< .merge_file_51riI4
 <<<<<<< .merge_file_qx99f6
 * [bottlenecks.md](../../patient/docs/roadmap/bottlenecks.md)
@@ -359,6 +363,8 @@ class ListActivities extends XotBasePage
 =======
 =======
 >>>>>>> .merge_file_tP6cUT
+=======
+>>>>>>> .merge_file_FTL6pi
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -387,10 +393,13 @@ class ListActivities extends XotBasePage
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_6CnGjF
 <<<<<<< .merge_file_51riI4
 >>>>>>> .merge_file_ox3FYC
 =======
 >>>>>>> .merge_file_tP6cUT
+=======
+>>>>>>> .merge_file_FTL6pi
 * [bottlenecks.md](../../Chart/docs/bottlenecks.md)
 * [bottlenecks.md](../../Chart/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../Gdpr/docs/bottlenecks.md)

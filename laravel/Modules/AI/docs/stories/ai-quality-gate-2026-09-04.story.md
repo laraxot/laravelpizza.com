@@ -8,6 +8,7 @@ title: "Quality gate closure - AI module (PHPMD + Pest + coverage + git)"
 status: done
 type: story
 created: 2026-09-04
+date_originale_nome_file: 2026-09-04
 ---
 
 # Quality gate closure - AI module (PHPMD + Pest + coverage + git)

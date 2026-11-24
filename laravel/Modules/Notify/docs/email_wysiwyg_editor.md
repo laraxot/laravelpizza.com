@@ -3,7 +3,7 @@ title: "email wysiwyg editor"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_fOOj0a
+<<<<<<< .merge_file_02BOTZ
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_azyHDV
+>>>>>>> .merge_file_h05xSb
 qmd: "email wysiwyg editor"
 issues: []
 discussions: []

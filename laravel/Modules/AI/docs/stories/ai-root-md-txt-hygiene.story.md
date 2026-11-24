@@ -35,6 +35,6 @@ Spostati con `git mv` per preservare la history. Nessun contenuto cancellato. La
 
 ## Esito
 
-- Root `Modules/AI/`: 3 file `.md` (README.md, ARCHITECTURE.md, CHANGELOG.md), 0 file `.txt`.
+- Root `Modules/AI/`: 3 file `.md` (README.md, architecture.md, CHANGELOG.md), 0 file `.txt`.
 - Verificato con `find laravel/Modules/AI -maxdepth 1 -iname '*.md' -o -maxdepth 1 -iname '*.txt'`.
 - Nessun file `phpstan.neon` toccato, nessun `@phpstan-ignore` aggiunto.

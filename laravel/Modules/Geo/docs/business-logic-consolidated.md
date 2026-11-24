@@ -3,21 +3,27 @@ title: "business logic consolidated"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_GsASqH
 <<<<<<< .merge_file_kBVXZB
 <<<<<<< .merge_file_Yh5lF0
 updated: 2026-11-23
 =======
 =======
 >>>>>>> .merge_file_O7LNjP
+=======
+>>>>>>> .merge_file_msTbf2
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_GsASqH
 <<<<<<< .merge_file_kBVXZB
 >>>>>>> .merge_file_sZfPRr
 =======
 >>>>>>> .merge_file_O7LNjP
+=======
+>>>>>>> .merge_file_msTbf2
 qmd: "business logic consolidated"
 issues: []
 discussions: []
@@ -264,6 +270,7 @@ User (base)
 
 ### Documentazione Moduli
 - [<nome progetto>](../modules/<nome progetto>/docs/README.md)
+<<<<<<< .merge_file_GsASqH
 <<<<<<< .merge_file_kBVXZB
 <<<<<<< .merge_file_Yh5lF0
 - [User](../../User/docs/README.md)
@@ -272,6 +279,8 @@ User (base)
 =======
 =======
 >>>>>>> .merge_file_O7LNjP
+=======
+>>>>>>> .merge_file_msTbf2
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -280,10 +289,13 @@ User (base)
 - [Media](../../Media/docs/readme.md)
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_GsASqH
 <<<<<<< .merge_file_kBVXZB
 >>>>>>> .merge_file_sZfPRr
 =======
 >>>>>>> .merge_file_O7LNjP
+=======
+>>>>>>> .merge_file_msTbf2
 - [<nome progetto>](../modules/<nome progetto>/docs/README.md)
 - [User](../../User/docs/README.md)
 - [Geo](README.md)

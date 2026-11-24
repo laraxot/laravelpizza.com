@@ -3,21 +3,27 @@ title: "integration strategy"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_94sIIZ
 <<<<<<< .merge_file_8IcaVz
 <<<<<<< .merge_file_e3Ag3j
 updated: 2026-11-23
 =======
 =======
 >>>>>>> .merge_file_mdKIxg
+=======
+>>>>>>> .merge_file_QXHBVo
 <<<<<<< HEAD
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_94sIIZ
 <<<<<<< .merge_file_8IcaVz
 >>>>>>> .merge_file_SRCDmT
 =======
 >>>>>>> .merge_file_mdKIxg
+=======
+>>>>>>> .merge_file_QXHBVo
 qmd: "integration strategy"
 issues: []
 discussions: []
@@ -182,12 +188,15 @@ class TailkitAssetManager
 
 ## Collegamenti
 - [Tailkit Components](tailkit-components.md)
+<<<<<<< .merge_file_94sIIZ
 <<<<<<< .merge_file_8IcaVz
 <<<<<<< .merge_file_e3Ag3j
 - [Theme System](../themes/README.md)
 =======
 =======
 >>>>>>> .merge_file_mdKIxg
+=======
+>>>>>>> .merge_file_QXHBVo
 <<<<<<< HEAD
 - [Theme System](../themes/README.md)
 =======
@@ -197,8 +206,11 @@ class TailkitAssetManager
 - [Theme System](../themes/README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_94sIIZ
 <<<<<<< .merge_file_8IcaVz
 >>>>>>> .merge_file_SRCDmT
 =======
 >>>>>>> .merge_file_mdKIxg
+=======
+>>>>>>> .merge_file_QXHBVo
 - [Performance Guidelines](../performance.md)

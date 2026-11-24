@@ -3,7 +3,7 @@ title: "dynamic class resolution"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_4A1gpk
+<<<<<<< .merge_file_2YJ4JL
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_l9cgEH
+>>>>>>> .merge_file_SHRpdp
 qmd: "dynamic class resolution"
 issues: []
 discussions: []

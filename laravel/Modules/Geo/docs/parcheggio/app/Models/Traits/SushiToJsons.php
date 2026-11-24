@@ -37,6 +37,7 @@ trait SushiToJsons
      * Salva i dati nel file JSON.
      *
      * @param  array<int, array<string, mixed>>  $data
+<<<<<<< .merge_file_yCaUnL
 <<<<<<< .merge_file_Fy2VPK
 <<<<<<< .merge_file_t2YAeh
      * @param  array<int, array<string, mixed>>  $data
@@ -46,6 +47,9 @@ trait SushiToJsons
 =======
      * @param array<int, array<string, mixed>> $data
 >>>>>>> .merge_file_GXmblf
+=======
+     * @param array<int, array<string, mixed>> $data
+>>>>>>> .merge_file_bSqbBc
      */
     public function saveToJson(array $data): bool
     {
@@ -66,6 +70,7 @@ trait SushiToJsons
     /**
      * Crea un nuovo record.
      *
+<<<<<<< .merge_file_yCaUnL
 <<<<<<< .merge_file_Fy2VPK
 <<<<<<< .merge_file_t2YAeh
      * @param  array<string, mixed>  $attributes
@@ -75,6 +80,9 @@ trait SushiToJsons
 =======
      * @param array<string, mixed> $attributes
 >>>>>>> .merge_file_GXmblf
+=======
+     * @param array<string, mixed> $attributes
+>>>>>>> .merge_file_bSqbBc
      */
     public function create(array $attributes = []): static
     {
@@ -95,6 +103,7 @@ trait SushiToJsons
     /**
      * Aggiorna un record esistente.
      *
+<<<<<<< .merge_file_yCaUnL
 <<<<<<< .merge_file_Fy2VPK
 <<<<<<< .merge_file_t2YAeh
      * @param  array<string, mixed>  $attributes
@@ -104,12 +113,16 @@ trait SushiToJsons
 =======
      * @param array<string, mixed> $attributes
 >>>>>>> .merge_file_GXmblf
+=======
+     * @param array<string, mixed> $attributes
+>>>>>>> .merge_file_bSqbBc
      */
     public function update(array $attributes = [], array $options = []): bool
     {
         $data = $this->loadFromJson();
         $index = $this->findIndex($this->getKey());
 
+<<<<<<< .merge_file_yCaUnL
 <<<<<<< .merge_file_Fy2VPK
 <<<<<<< .merge_file_t2YAeh
         if ($index === null) {
@@ -119,6 +132,9 @@ trait SushiToJsons
 =======
         if (null === $index) {
 >>>>>>> .merge_file_GXmblf
+=======
+        if (null === $index) {
+>>>>>>> .merge_file_bSqbBc
             return false;
         }
 
@@ -141,6 +157,7 @@ trait SushiToJsons
         $data = $this->loadFromJson();
         $index = $this->findIndex($this->getKey());
 
+<<<<<<< .merge_file_yCaUnL
 <<<<<<< .merge_file_Fy2VPK
 <<<<<<< .merge_file_t2YAeh
         if ($index === null) {
@@ -150,6 +167,9 @@ trait SushiToJsons
 =======
         if (null === $index) {
 >>>>>>> .merge_file_GXmblf
+=======
+        if (null === $index) {
+>>>>>>> .merge_file_bSqbBc
             return false;
         }
 

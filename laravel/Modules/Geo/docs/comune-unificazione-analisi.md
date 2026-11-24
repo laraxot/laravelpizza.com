@@ -75,12 +75,15 @@ discussions: []
 ## 7. Collegamenti
 - [geo-json-model.md](geo-json-model.md)
 - [geo-sushi-comparison.md](geo-sushi-comparison.md)
+<<<<<<< .merge_file_rtRBrO
 <<<<<<< .merge_file_YoDrtI
 <<<<<<< .merge_file_lJCIlF
 - [module_geo.md](module-geo.md)
 =======
 =======
 >>>>>>> .merge_file_Fy7BPo
+=======
+>>>>>>> .merge_file_UPB75I
 <<<<<<< HEAD
 - [module_geo.md](module_geo.md)
 =======
@@ -90,10 +93,13 @@ discussions: []
 - [module_geo.md](module-geo.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_rtRBrO
 <<<<<<< .merge_file_YoDrtI
 >>>>>>> .merge_file_b0ItFK
 =======
 >>>>>>> .merge_file_Fy7BPo
+=======
+>>>>>>> .merge_file_UPB75I
 - [Xot/module-structure.md](../../xot/project_docs/module-structure.md)
 
 ---

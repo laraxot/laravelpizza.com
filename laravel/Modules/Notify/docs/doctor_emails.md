@@ -3,7 +3,7 @@ title: "doctor emails"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_tPSKsU
+<<<<<<< .merge_file_EHydtx
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_qqxsgC
+>>>>>>> .merge_file_5s4knP
 qmd: "doctor emails"
 issues: []
 discussions: []

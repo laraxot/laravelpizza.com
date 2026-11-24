@@ -3,7 +3,7 @@ title: "class inheritance best practices"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_t4svIc
+<<<<<<< .merge_file_gavHY6
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_KbzCbZ
+>>>>>>> .merge_file_II7nep
 qmd: "class inheritance best practices"
 issues: []
 discussions: []

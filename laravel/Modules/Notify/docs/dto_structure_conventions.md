@@ -3,7 +3,7 @@ title: "dto structure conventions"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_4onAZv
+<<<<<<< .merge_file_RI4R2g
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_lSpyxy
+>>>>>>> .merge_file_b182B7
 qmd: "dto structure conventions"
 issues: []
 discussions: []

@@ -3,7 +3,15 @@ title: "Sync Remote Repo - Test Plan"
 type: concept
 tags: [sync, remote, repo, test]
 created: 2026-07-14
+<<<<<<< .merge_file_2zroCe
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-07-14
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_khq6yW
 qmd: "sync-remote-repo-test-plan sync remote repo - test plan"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

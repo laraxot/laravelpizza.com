@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_eyEtms
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_9jytku
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_eyEtms
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_9jytku
 qmd: "mail template slug implementation"
 issues: []
 discussions: []
@@ -29,19 +35,25 @@ discussions: []
 - [README del modulo Notify](./README.md)
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_eyEtms
 <<<<<<< HEAD
 - [README del modulo Notify](./README.md)
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_9jytku
 - [README del modulo Notify](./readme.md)
 =======
 - [README del modulo Notify](./README.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_eyEtms
 =======
 - [README del modulo Notify](./readme.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_9jytku
 - [Guida all'utilizzo di SpatieEmail](./spatie_email_usage_guide.md)
 - [Documentazione Template Email](./email_templates.md)
 - [Documentazione Root](../../../../../docs/collegamenti-documentazione.md)

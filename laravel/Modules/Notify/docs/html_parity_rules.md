@@ -3,7 +3,15 @@ title: "html parity rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_CI6X4b
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_rlx5cl
 qmd: "html parity rules"
 issues: []
 discussions: []

@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_6b4hS5
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_Ur4hm1
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_6b4hS5
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Ur4hm1
 qmd: "index conflict"
 issues: []
 discussions: []
@@ -95,18 +101,24 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - [Documentazione Generale PTV](../../../../../docs/README.md)
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_6b4hS5
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../../docs/documentation_standards.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> .merge_file_Ur4hm1
+=======
 <<<<<<< HEAD
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../../docs/documentation_standards.md)
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_6b4hS5
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Ur4hm1
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
@@ -114,6 +126,7 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - [Standard di Documentazione](../../../../../docs/DOCUMENTATION_STANDARDS.md)
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_6b4hS5
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
@@ -121,6 +134,8 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 =======
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../../docs/documentation_standards.md)
+=======
+>>>>>>> .merge_file_Ur4hm1
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [Modulo Xot](../../Xot/docs/README.md)
@@ -171,6 +186,7 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 
 ### Testing e Qualità
 <<<<<<< HEAD
+<<<<<<< .merge_file_6b4hS5
 - [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
 =======
 <<<<<<< HEAD
@@ -185,6 +201,14 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 >>>>>>> laraxot/dev
 =======
 - [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
+=======
+- [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md) - Correzioni per PHPStan Level 10
+=======
+<<<<<<< HEAD
+- [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
+=======
+- [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md) - Correzioni per PHPStan Level 10
+>>>>>>> .merge_file_Ur4hm1
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [Testing](./testing.md) - Strategie e approcci per il testing
@@ -247,10 +271,13 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 ### Mail Templates
 - [Index](./mail-templates/index.md) - Indice della documentazione sui template email
 <<<<<<< HEAD
+<<<<<<< .merge_file_6b4hS5
 - [Implementazione Slug](./mail-templates/mail_template_slug_implementation.md) - Implementazione del campo slug
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_Ur4hm1
 - [Implementazione Slug](./mail-templates/MAIL_TEMPLATE_SLUG_IMPLEMENTATION.md) - Implementazione del campo slug
 =======
 <<<<<<< HEAD
@@ -259,10 +286,13 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 - [Implementazione Slug](./mail-templates/MAIL_TEMPLATE_SLUG_IMPLEMENTATION.md) - Implementazione del campo slug
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_6b4hS5
 =======
 - [Implementazione Slug](./mail-templates/mail_template_slug_implementation.md) - Implementazione del campo slug
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Ur4hm1
 
 ### Notifications
 - [Index](./notifications/index.md) - Indice della documentazione sulle notifiche
@@ -452,9 +482,12 @@ Ultimo aggiornamento: 14 Maggio 2025
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
+<<<<<<< .merge_file_6b4hS5
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Ur4hm1
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".

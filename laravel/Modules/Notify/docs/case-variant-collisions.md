@@ -3,7 +3,7 @@ title: "case variant collisions"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_jvahkD
+<<<<<<< .merge_file_fHurfJ
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_3GzJ36
+>>>>>>> .merge_file_XOL9Xg
 qmd: "case variant collisions"
 issues: []
 discussions: []

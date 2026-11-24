@@ -3,7 +3,15 @@ title: "mcp server recommended"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_s0o9F2
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_pQ5Xan
 qmd: "mcp server recommended"
 issues: []
 discussions: []

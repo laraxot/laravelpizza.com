@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_T8mctv
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_6SAudX
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_T8mctv
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_6SAudX
 qmd: "components reusable"
 issues: []
 discussions: []
@@ -316,21 +322,29 @@ Lo schema deve sempre avere chiavi string per conformità Filament:
 - [ChannelEnum](../enums/channel-enum.md) - Smart Enum per canali notifica
 - [ChannelEnum](../enums/channel-enum.md) - Smart Enum per canali notifica
 =======
+<<<<<<< .merge_file_T8mctv
 <<<<<<< HEAD
 <<<<<<< HEAD
 - [ChannelEnum](../enums/channel-enum.md) - Smart Enum per canali notifica
 - [ChannelEnum](../enums/channel-enum.md) - Smart Enum per canali notifica
 =======
+=======
+>>>>>>> .merge_file_6SAudX
 <<<<<<< .merge_file_1Pj9ba
 - [ChannelEnum](./enums/channel-enum.md) - Smart Enum per canali notifica
 =======
 - [ChannelEnum](../enums/channel-enum.md) - Smart Enum per canali notifica
+<<<<<<< .merge_file_T8mctv
 - [ChannelEnum](../enums/channel-enum.md) - Smart Enum per canali notifica
 >>>>>>> .merge_file_gpA1xx
 >>>>>>> laraxot/dev
 =======
 - [ChannelEnum](../enums/channel-enum.md) - Smart Enum per canali notifica
 >>>>>>> laraxot/dev
+=======
+- [ChannelEnum](../enums/channel-enum.md) - Smart Enum per canali notifica
+>>>>>>> .merge_file_gpA1xx
+>>>>>>> .merge_file_6SAudX
 >>>>>>> laraxot/dev
 - [MailTemplate Model](./../models.md) - Modello template email
 

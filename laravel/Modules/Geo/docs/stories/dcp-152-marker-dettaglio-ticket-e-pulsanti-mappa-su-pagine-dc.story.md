@@ -10,12 +10,15 @@ created: 2026-10-14
 updated: 2026-10-14
 qmd: "marker dettaglio ticket nero punto interrogativo coordinate-picker-lit markerCardStylesText ctrl-btn trasparente data-dc reset button usa la mia posizione http"
 related: [dcp-148, dcp-127, dcp-146, dcp-93]
+<<<<<<< .merge_file_p0tJX9
 <<<<<<< .merge_file_VPKEP0
 <<<<<<< .merge_file_5Qd2jl
 date_originale_nome_file: 2026-10-14
 =======
 =======
 >>>>>>> .merge_file_Y6X1Fj
+=======
+>>>>>>> .merge_file_J2Qx9j
 <<<<<<< HEAD
 date_originale_nome_file: 2026-10-14
 =======
@@ -24,10 +27,13 @@ date_originale_nome_file: 2026-10-14
 date_originale_nome_file: 2026-10-14
 >>>>>>> .merge_file_8O2KTF
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_p0tJX9
 <<<<<<< .merge_file_VPKEP0
 >>>>>>> .merge_file_728N27
 =======
 >>>>>>> .merge_file_Y6X1Fj
+=======
+>>>>>>> .merge_file_J2Qx9j
 ---
 
 # DCP-152: marker e pulsanti del picker nelle pagine ospiti
@@ -75,12 +81,15 @@ Lead: sessione Claude principale. Lo swarm MCP (`swarm_init`, `claims_*`) non e'
 | P1-VERIFY-UI | sola lettura sul codice; scrive solo nello scratchpad | claim 06:2x | |
 | P2-PHPSTAN-GEO | `Modules/Geo/app/**`, `Modules/Geo/tests/**` (solo PHP) | chiuso 06:3x, 5 tool | PHPStan Geo gia' a 0 prima e dopo, nessun file modificato; lead: rilanciato, `errors 0` |
 | P3-PHPSTAN-FIXCITY | `Modules/Fixcity/app/**`, `Modules/Fixcity/tests/**` (solo PHP) | chiuso 06:4x, 57 tool, PARZIALE | PHPStan Fixcity 128 -> 108 (lead: rilanciato, 108 = 105 `noEnvCallsOutsideOfConfig` + 3 `class.notFound` orbit). Corretti: `config/morph_map.php` (12 chiavi duplicate), `config/comments.php` (classe inesistente -> `Modules\Comment\...\NotifyApprovedCommentAction`), `config/database.php`, 3 test. DB dev invariato (18 ticket, 11 utenti). Residuo: DECISIONE UTENTE sui 14 file `Modules/Fixcity/config/*.php` copiati da `config/eu/fixcity/` |
+<<<<<<< .merge_file_p0tJX9
 <<<<<<< .merge_file_VPKEP0
 <<<<<<< .merge_file_5Qd2jl
 | P4-DOCS-GEO | `Modules/Geo/docs/**` (non `stories/2026-10-14-dcp-152*`) | chiuso 06:4x, 85 tool | `docs/DOCS-MIGRATION-MAP.md` (622 righe, stato proposto, nulla spostato), `index.md` unico (00-INDEX/00-index superseded), concepts 148/148 elencati, 340 link riparati (lead: 479 link nuovi tutti esistenti, 265/317 sostituzioni sono solo maiuscole), 8 affermazioni false corrette (lead: `import 'leaflet.heat'` r.18 di `geo-map-lit.js` confermato). AVVISO: `wiki/.gitignore` ignora `concepts/` (147 file tracciati con force-add): `git add -f` per i nuovi |
 =======
 =======
 >>>>>>> .merge_file_Y6X1Fj
+=======
+>>>>>>> .merge_file_J2Qx9j
 <<<<<<< HEAD
 | P4-DOCS-GEO | `Modules/Geo/docs/**` (non `stories/2026-10-14-dcp-152*`) | chiuso 06:4x, 85 tool | `docs/DOCS-MIGRATION-MAP.md` (622 righe, stato proposto, nulla spostato), `index.md` unico (00-INDEX/00-index superseded), concepts 148/148 elencati, 340 link riparati (lead: 479 link nuovi tutti esistenti, 265/317 sostituzioni sono solo maiuscole), 8 affermazioni false corrette (lead: `import 'leaflet.heat'` r.18 di `geo-map-lit.js` confermato). AVVISO: `wiki/.gitignore` ignora `concepts/` (147 file tracciati con force-add): `git add -f` per i nuovi |
 =======
@@ -90,10 +99,13 @@ Lead: sessione Claude principale. Lo swarm MCP (`swarm_init`, `claims_*`) non e'
 | P4-DOCS-GEO | `Modules/Geo/docs/**` (non `stories/2026-10-14-dcp-152*`) | chiuso 06:4x, 85 tool | `docs/DOCS-MIGRATION-MAP.md` (622 righe, stato proposto, nulla spostato), `index.md` unico (00-INDEX/00-index superseded), concepts 148/148 elencati, 340 link riparati (lead: 479 link nuovi tutti esistenti, 265/317 sostituzioni sono solo maiuscole), 8 affermazioni false corrette (lead: `import 'leaflet.heat'` r.18 di `geo-map-lit.js` confermato). AVVISO: `wiki/.gitignore` ignora `concepts/` (147 file tracciati con force-add): `git add -f` per i nuovi |
 >>>>>>> .merge_file_8O2KTF
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_p0tJX9
 <<<<<<< .merge_file_VPKEP0
 >>>>>>> .merge_file_728N27
 =======
 >>>>>>> .merge_file_Y6X1Fj
+=======
+>>>>>>> .merge_file_J2Qx9j
 
 ### Conflitto con un peer (2026-10-14 06:27)
 Un altro agente, con gli stessi prompt, ha riscritto `renderButton` in `Modules/Geo/resources/js/components/map/controls/geolocation.js` con uno stile inline verde `#007a52` solo sul pulsante «posizione» (gli altri cinque restano bianchi: incoerente) e un `@focus-visible`, che non e' un evento DOM (codice morto). Il bundle servito non lo conteneva ancora (0 occorrenze di `005c3d`). Poiche' la causa vera (reset `button` delle pagine data-dc, specificita' 0,2,2) e' risolta per tutti i pulsanti da `.map-container .ctrl-btn.ctrl-btn`, il lead ha RIPRISTINATO `renderButton` alla versione a classe `ctrl-btn` (copia della versione del peer: scratchpad `geolocation.peer-version.js`). Lo stesso peer ha modificato `Themes/Sixteen/resources/views/tickets/index.blade.php` togliendo `fill="#007a52"` dal pin: la vista non e' servita da nessuna rotta (0 occorrenze di `ticket-marker-visible` su `/it/tickets`), lasciata com'e', ma senza `fill` il pin sarebbe nero. Le sue note `Themes/Sixteen/docs/bmad/geo-map-tickets-updates-2026-10-14.md` (STORY-054/530/XXX) attribuiscono la causa a `APP_URL` e a `bg-transparent`: non verificato dal peer, smentito dalle misure di questa story. Regola: prima di scrivere sul marker o sui pulsanti del picker leggere questa story.

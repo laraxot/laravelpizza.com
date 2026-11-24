@@ -15,6 +15,7 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
  * di un download Livewire (che lo legge tutto e lo codifica in base64). Il percorso passa da
  * {@see ResolveLogFilePathAction}, quindi non si puo' uscire da storage/logs.
  *
+<<<<<<< .merge_file_IxieXr
 <<<<<<< .merge_file_apM7PN
 <<<<<<< .merge_file_OFTYiy
  * @see docs/contracts/download-log-file-action.md
@@ -23,6 +24,8 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
 >>>>>>> .merge_file_IU3ysZ
 =======
 >>>>>>> .merge_file_GxBVV1
+=======
+>>>>>>> .merge_file_6gaIrL
  * @contract docs/contracts/download-log-file-action.md
  */
 class DownloadLogFileAction

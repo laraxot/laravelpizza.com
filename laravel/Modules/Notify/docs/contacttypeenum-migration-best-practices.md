@@ -3,7 +3,7 @@ title: "contacttypeenum migration best practices"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_s5O6uG
+<<<<<<< .merge_file_i81iOT
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_1ak268
+>>>>>>> .merge_file_CbOQEc
 qmd: "contacttypeenum migration best practices"
 issues: []
 discussions: []

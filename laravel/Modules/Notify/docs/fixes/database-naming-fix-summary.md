@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_dB20j0
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ia7NZ9
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_dB20j0
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_ia7NZ9
 qmd: "database naming fix summary"
 issues: []
 discussions: []
@@ -187,10 +193,13 @@ grep -A 5 "autoload" laravel/Modules/*/composer.json | grep -i "database"
 - ✅ Fix Blog module docs
 <<<<<<< HEAD
 - ✅ Update AGENTS.md
+<<<<<<< .merge_file_dB20j0
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 - ✅ Update AGENTS.md
+=======
+>>>>>>> .merge_file_ia7NZ9
 - ✅ Update AGENTS.md
 =======
 <<<<<<< HEAD
@@ -200,10 +209,13 @@ grep -A 5 "autoload" laravel/Modules/*/composer.json | grep -i "database"
 - ✅ Update AGENTS.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_dB20j0
 =======
 - ✅ update agents.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_ia7NZ9
 - ✅ Create convention doc
 - ✅ Create GitHub Issue #5
 - ✅ Setup MCP for GitHub
@@ -226,12 +238,15 @@ grep -A 5 "autoload" laravel/Modules/*/composer.json | grep -i "database"
 
 - [Database Naming Convention](../conventions/database-naming.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_dB20j0
 - [AGENTS.md](../../agents.md)
 - [Database Naming Convention](../conventions/database-naming.md)
 - [AGENTS.md](../agents.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ia7NZ9
 =======
 <<<<<<< HEAD
 - [AGENTS.md](../../agents.md)
@@ -239,6 +254,7 @@ grep -A 5 "autoload" laravel/Modules/*/composer.json | grep -i "database"
 - [AGENTS.md](../agents.md)
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_dB20j0
 >>>>>>> laraxot/dev
 - [AGENTS.md](../../AGENTS.md)
 - [AGENTS.md](../../AGENTS.md)
@@ -255,6 +271,15 @@ grep -A 5 "autoload" laravel/Modules/*/composer.json | grep -i "database"
 - [AGENTS.md](../../agents.md)
 - [Database Naming Convention](../conventions/database-naming.md)
 - [AGENTS.md](../agents.md)
+=======
+- [AGENTS.md](../../AGENTS.md)
+- [AGENTS.md](../../AGENTS.md)
+- [Database Naming Convention](../conventions/database-naming.md)
+- [AGENTS.md](../agents.md)
+- [AGENTS.md](../agents.md)
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ia7NZ9
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [GitHub Issues & Discussions](github/README.md)

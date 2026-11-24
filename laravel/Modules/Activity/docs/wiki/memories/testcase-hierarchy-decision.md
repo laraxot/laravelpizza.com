@@ -54,11 +54,14 @@ Tests stay Pest. Use Pest `uses(TestCase::class)` in test files. Do not convert 
 - Every model connection used by the module is listed in `$connectionsToTransact`.
 - Provider list composes the parent provider list.
 - PHPStan command runs from `laravel` and uses `phpstan.neon` unchanged.
+<<<<<<< .merge_file_iQAEKe
 <<<<<<< .merge_file_Q829TH
 <<<<<<< .merge_file_S5ZtoV
 =======
 =======
 >>>>>>> .merge_file_fjszCG
+=======
+>>>>>>> .merge_file_ouPres
 
 ---
 
@@ -67,7 +70,10 @@ Tests stay Pest. Use Pest `uses(TestCase::class)` in test files. Do not convert 
 # testcase hierarchy decision
 
 Stub alias post-strip data/timestamp. Canonico: [./testcase-hierarchy-decision.md](./testcase-hierarchy-decision.md).
+<<<<<<< .merge_file_iQAEKe
 <<<<<<< .merge_file_Q829TH
 >>>>>>> .merge_file_s72X1Z
 =======
 >>>>>>> .merge_file_fjszCG
+=======
+>>>>>>> .merge_file_ouPres

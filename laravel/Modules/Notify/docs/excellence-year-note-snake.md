@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-<<<<<<< .merge_file_amXHMQ
+<<<<<<< .merge_file_OwqzZD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -9,12 +9,12 @@
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_6acCIz
+>>>>>>> .merge_file_yWe9lP
 ---
 title: "excellence year note snake"
 created: 2026-11-23
 updated: 2026-11-23
-<<<<<<< .merge_file_amXHMQ
+<<<<<<< .merge_file_OwqzZD
 <<<<<<< HEAD
 ---title: "excellence 2025"
 type: note
@@ -22,7 +22,7 @@ tags: [documentation]
 =======
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_6acCIz
+>>>>>>> .merge_file_yWe9lP
 =======
 >>>>>>> laraxot/dev
 ---title: "excellence 2025"
@@ -30,24 +30,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-<<<<<<< .merge_file_amXHMQ
+<<<<<<< .merge_file_OwqzZD
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_6acCIz
+>>>>>>> .merge_file_yWe9lP
 qmd: "excellence 2025"
 issues: []
 discussions: []
 superseded_by: excellence.md
 <<<<<<< HEAD
 =======
-<<<<<<< .merge_file_amXHMQ
+<<<<<<< .merge_file_OwqzZD
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 =======
->>>>>>> .merge_file_6acCIz
+>>>>>>> .merge_file_yWe9lP
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 ---
@@ -58,13 +58,13 @@ superseded_by: excellence.md
 **Status**: 🚀 BEST IN CLASS  
 **Obiettivo**: Piattaforma #1 per gestione segnalazioni urbane in Italia  
 
-<<<<<<< .merge_file_amXHMQ
+<<<<<<< .merge_file_OwqzZD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_6acCIz
+>>>>>>> .merge_file_yWe9lP
 ---
 
 title: "excellence 2025"
@@ -86,7 +86,7 @@ FixCity è la piattaforma enterprise leader per la gestione delle segnalazioni u
 
 ---
 
-<<<<<<< .merge_file_amXHMQ
+<<<<<<< .merge_file_OwqzZD
 <<<<<<< HEAD
 =======
 =======
@@ -95,7 +95,7 @@ FixCity è la piattaforma enterprise leader per la gestione delle segnalazioni u
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_6acCIz
+>>>>>>> .merge_file_yWe9lP
 ## ✅ LAVORO COMPLETATO (2025-10-01)
 
 ### 📚 Documentazione Strategica (5 documenti)
@@ -119,25 +119,25 @@ FixCity è la piattaforma enterprise leader per la gestione delle segnalazioni u
 - ✅ **roadmap.md** - Timeline Q4 2025-Q1 2026
 =======
 <<<<<<< HEAD
-<<<<<<< .merge_file_amXHMQ
+<<<<<<< .merge_file_OwqzZD
 <<<<<<< HEAD
 - ✅ **roadmap.md** - Timeline Q4 2025-Q1 2026
 =======
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_6acCIz
+>>>>>>> .merge_file_yWe9lP
 - ✅ **ROADMAP.md** - Timeline Q4 2025-Q1 2026
 =======
 - ✅ **roadmap.md** - Timeline Q4 2025-Q1 2026
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_amXHMQ
+<<<<<<< .merge_file_OwqzZD
 =======
 - ✅ **ROADMAP.md** - Timeline Q4 2025-Q1 2026
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_6acCIz
+>>>>>>> .merge_file_yWe9lP
 - 📋 **API.md** - Authentication API (TODO)
 
 ### 🎨 Tema Sixteen - ECCELLENZA (78%)
@@ -510,7 +510,7 @@ FixCity è orgogliosamente open source:
 
 ### API
 <<<<<<< HEAD
-<<<<<<< .merge_file_amXHMQ
+<<<<<<< .merge_file_OwqzZD
 - **[Fixcity API](./laravel/Modules/Fixcity/docs/api.md)** - REST API
 - **[User 2FA](./laravel/Modules/User/docs/2fa_guide.md)** - 2FA Guide
 - **[User SSO](./laravel/Modules/User/docs/sso_guide.md)** - SSO Guide
@@ -518,7 +518,7 @@ FixCity è orgogliosamente open source:
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> .merge_file_6acCIz
+>>>>>>> .merge_file_yWe9lP
 - **[Fixcity API](./laravel/Modules/Fixcity/docs/API.md)** - REST API
 - **[User 2FA](./laravel/Modules/User/docs/2FA_GUIDE.md)** - 2FA Guide
 - **[User SSO](./laravel/Modules/User/docs/SSO_GUIDE.md)** - SSO Guide
@@ -533,7 +533,7 @@ FixCity è orgogliosamente open source:
 - **[User SSO](./laravel/Modules/User/docs/SSO_GUIDE.md)** - SSO Guide
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_amXHMQ
+<<<<<<< .merge_file_OwqzZD
 =======
 - **[Fixcity API](./laravel/Modules/Fixcity/docs/api.md)** - REST API
 - **[User 2FA](./laravel/Modules/User/docs/2fa_guide.md)** - 2FA Guide
@@ -541,7 +541,7 @@ FixCity è orgogliosamente open source:
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_6acCIz
+>>>>>>> .merge_file_yWe9lP
 
 ---
 

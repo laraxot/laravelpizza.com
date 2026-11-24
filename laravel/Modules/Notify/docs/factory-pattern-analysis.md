@@ -3,7 +3,7 @@ title: "factory pattern analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_MYi0KE
+<<<<<<< .merge_file_ByLwqR
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_Wb7CWG
+>>>>>>> .merge_file_cvfcUT
 qmd: "factory pattern analysis"
 issues: []
 discussions: []

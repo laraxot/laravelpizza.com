@@ -2,12 +2,15 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< .merge_file_drxh4B
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_f04nB6
 title: "github issues recommendations 2026 03"
 type: note
 tags: [documentation]
@@ -708,11 +711,15 @@ Discuss CI/CD pipeline improvements. Topics include:
 **Document Version**: 1.0
 **Last Updated**: 2026-03-02
 **Status**: Ready for Implementation
+<<<<<<< .merge_file_drxh4B
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_f04nB6
 >>>>>>> laraxot/dev
 issues: []
 discussions: []
@@ -737,10 +744,13 @@ related:
 > Questo file è stato rinominato in [github-issues-recommendations.md](github-issues-recommendations.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 <<<<<<< HEAD
 =======
+<<<<<<< .merge_file_drxh4B
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
+=======
+>>>>>>> .merge_file_f04nB6
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

@@ -1,4 +1,18 @@
 {
+<<<<<<< HEAD
+  "name": "@laraxot/module-ai-assets",
+  "private": true,
+  "type": "module",
+  "description": "Sorgenti JS agnostici del modulo AI (renderer A2UI del pannello). Non si compilano qui: li importa il bundle del modulo che li usa (es. Passaparola).",
+  "dependencies": {
+    "@a2ui/lit": "^0.15.0",
+    "@a2ui/markdown-it": "^0.2.2",
+    "@a2ui/web_core": "^0.15.0",
+    "chart.js": "^4.5.1",
+    "lit": "^3.3.3",
+    "zod": "^3.25.76"
+  }
+=======
     "private": true,
     "type": "module",
     "scripts": {
@@ -12,4 +26,5 @@
         "tailwindcss": "^4.0.0",
         "vite": "^7.0.0"
     }
+>>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 }

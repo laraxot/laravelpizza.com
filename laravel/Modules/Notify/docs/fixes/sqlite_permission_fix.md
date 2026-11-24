@@ -3,7 +3,15 @@ title: "sqlite permission fix"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_OBoSJg
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_6kmaoM
 qmd: "sqlite permission fix"
 issues: []
 discussions: []
@@ -252,6 +260,7 @@ bash bashscripts/fix-permissions.sh
 - [ ] Create bash script for permissions
 - [ ] Add to pre-deployment checklist
 - [ ] Document in AGENTS.md
+<<<<<<< .merge_file_OBoSJg
 <<<<<<< HEAD
 - [ ] Document in AGENTS.md
 =======
@@ -260,6 +269,9 @@ bash bashscripts/fix-permissions.sh
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+- [ ] Document in AGENTS.md
+>>>>>>> .merge_file_6kmaoM
 
 ---
 

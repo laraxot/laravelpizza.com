@@ -3,7 +3,7 @@ title: "contracts architecture"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_8YbRDe
+<<<<<<< .merge_file_hPZm33
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_1g0jkb
+>>>>>>> .merge_file_CQ4Wk7
 qmd: "contracts architecture"
 issues: []
 discussions: []

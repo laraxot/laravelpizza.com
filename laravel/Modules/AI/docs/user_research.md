@@ -1,10 +1,10 @@
 ---
-title: "user research"
+title: "User Research"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "user research"
+qmd: "User Research"
 issues: []
 discussions: []
 ---
@@ -17,12 +17,20 @@ discussions: []
 
 ---
 
+<<<<<<< HEAD
+title: "USER RESEARCH"
+=======
 title: "user research"
+>>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
+<<<<<<< HEAD
+qmd: "USER RESEARCH"
+=======
 qmd: "user research"
+>>>>>>> eab1d98 (chore(AI): sync working tree (docs, phpstan fixes, wip))
 issues: []
 discussions: []
 ## Research Goals

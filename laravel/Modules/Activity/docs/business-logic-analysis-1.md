@@ -1,3 +1,8 @@
+---
+title: "Activity Module - Business Logic Analysis"
+type: analysis
+qmd: "business logic analysis 1 activity"
+---
 # Activity Module - Business Logic Analysis
 
 ## Overview

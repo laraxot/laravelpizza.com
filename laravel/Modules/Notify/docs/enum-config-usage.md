@@ -3,7 +3,7 @@ title: "enum config usage"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_nwNHyp
+<<<<<<< .merge_file_PC1rlr
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_SWePPb
+>>>>>>> .merge_file_qwqqe9
 qmd: "enum config usage"
 issues: []
 discussions: []

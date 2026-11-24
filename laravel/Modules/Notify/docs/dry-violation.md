@@ -3,7 +3,7 @@ title: "dry violation"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_LLjG3P
+<<<<<<< .merge_file_9akaH0
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_niKqQd
+>>>>>>> .merge_file_O88jZo
 qmd: "dry violation"
 issues: []
 discussions: []

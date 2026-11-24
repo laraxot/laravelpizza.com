@@ -3,7 +3,15 @@ title: "laravel skills installation report"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_GazRfa
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_AuEI4Y
 qmd: "laravel skills installation report"
 issues: []
 discussions: []
@@ -161,8 +169,11 @@ discussions: []
 **Successful Installations**: 1 skill  
 **Built-in Skills Available**: 14 skills  
 **Total Skills Available**: 15 skills
+<<<<<<< .merge_file_GazRfa
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_AuEI4Y

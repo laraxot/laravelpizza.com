@@ -1,9 +1,12 @@
 ---
+<<<<<<< .merge_file_pImHLk
 <<<<<<< .merge_file_TQOhpS
 <<<<<<< .merge_file_ufqS07
 =======
 =======
 >>>>>>> .merge_file_luzgpg
+=======
+>>>>>>> .merge_file_qud9sW
 <<<<<<< HEAD
 title: "Analisi Visiva"
 type: note
@@ -12,16 +15,20 @@ created: 2026-09-26
 updated: 2026-09-26
 qmd: "Analisi Visiva"
 =======
+<<<<<<< .merge_file_pImHLk
 <<<<<<< .merge_file_TQOhpS
 >>>>>>> .merge_file_r9h7yE
 =======
 >>>>>>> .merge_file_luzgpg
+=======
+>>>>>>> .merge_file_qud9sW
 title: "analisi visiva"
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
 qmd: "analisi visiva"
+<<<<<<< .merge_file_pImHLk
 <<<<<<< .merge_file_TQOhpS
 <<<<<<< .merge_file_ufqS07
 =======
@@ -30,6 +37,9 @@ qmd: "analisi visiva"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_luzgpg
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_qud9sW
 issues: []
 discussions: []
 ---
@@ -44,11 +54,14 @@ discussions: []
 
 ---
 
+<<<<<<< .merge_file_pImHLk
 <<<<<<< .merge_file_TQOhpS
 <<<<<<< .merge_file_ufqS07
 =======
 =======
 >>>>>>> .merge_file_luzgpg
+=======
+>>>>>>> .merge_file_qud9sW
 <<<<<<< HEAD
 title: "ANALISI VISIVA"
 =======
@@ -65,10 +78,13 @@ qmd: "analisi visiva"
 >>>>>>> laraxot/dev
 issues: []
 discussions: []
+<<<<<<< .merge_file_pImHLk
 <<<<<<< .merge_file_TQOhpS
 >>>>>>> .merge_file_r9h7yE
 =======
 >>>>>>> .merge_file_luzgpg
+=======
+>>>>>>> .merge_file_qud9sW
 ## 1. Header Structure
 
 ### Bootstrap Italia

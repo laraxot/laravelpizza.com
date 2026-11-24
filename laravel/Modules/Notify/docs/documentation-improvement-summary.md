@@ -2,7 +2,7 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-<<<<<<< .merge_file_JAO95z
+<<<<<<< .merge_file_DeE5j1
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -10,7 +10,7 @@
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
->>>>>>> .merge_file_1mBueJ
+>>>>>>> .merge_file_hANRuf
 title: "documentation improvement summary 2026 03"
 type: note
 tags: [documentation]
@@ -371,7 +371,7 @@ ls laravel/.github/skills/documentation-management/SKILL.md
 **Priority**: High
 
 *This summary is maintained in git. For latest status, check repository.*
-<<<<<<< .merge_file_JAO95z
+<<<<<<< .merge_file_DeE5j1
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -379,7 +379,7 @@ ls laravel/.github/skills/documentation-management/SKILL.md
 >>>>>>> laraxot/dev
 =======
 =======
->>>>>>> .merge_file_1mBueJ
+>>>>>>> .merge_file_hANRuf
 >>>>>>> laraxot/dev
 issues: []
 discussions: []
@@ -404,13 +404,13 @@ related:
 > Questo file è stato rinominato in [documentation-improvement-summary.md](documentation-improvement-summary.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 <<<<<<< HEAD
 =======
-<<<<<<< .merge_file_JAO95z
+<<<<<<< .merge_file_DeE5j1
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 =======
->>>>>>> .merge_file_1mBueJ
+>>>>>>> .merge_file_hANRuf
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

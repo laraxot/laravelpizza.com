@@ -3,7 +3,15 @@ title: "mcp servers"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_pF5Zdf
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_amyBu9
 qmd: "mcp servers"
 issues: []
 discussions: []

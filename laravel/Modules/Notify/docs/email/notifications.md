@@ -3,7 +3,7 @@ title: "notifications"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_j1O7kl
+<<<<<<< .merge_file_EePcmB
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_Icbgrk
+>>>>>>> .merge_file_sfUdY0
 qmd: "notifications"
 issues: []
 discussions: []

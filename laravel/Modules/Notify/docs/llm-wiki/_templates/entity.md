@@ -10,6 +10,7 @@ created: {{date}}
 <<<<<<< HEAD
 updated: {{date}}
 =======
+<<<<<<< .merge_file_2vphEv
 <<<<<<< HEAD
 <<<<<<< HEAD
 updated: {{date}}
@@ -20,6 +21,10 @@ updated: 2026-11-23
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_KlLyUy
 tags: [person, organization, module]
 related: []
 ---

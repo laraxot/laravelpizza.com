@@ -4,18 +4,24 @@ type: note
 tags: [documentation]
 created: 2026-09-26
 <<<<<<< HEAD
+<<<<<<< .merge_file_t14rU0
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_qxGnv4
 updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_t14rU0
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_qxGnv4
 qmd: "email layouts best practices"
 issues: []
 discussions: []
@@ -228,12 +234,15 @@ Il supporto per la Dark Mode migliora l'esperienza utente e riduce l'affaticamen
 
 - [Documentazione Spatie Laravel Database Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
 <<<<<<< HEAD
+<<<<<<< .merge_file_t14rU0
 - [Email Templates Guide](./email_templates_guide.md)
 - [Spatie Mail Templates Structure](./spatie_mail_templates_structure.md)
 - [Template Content Examples](./template_content_examples.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_qxGnv4
 =======
 <<<<<<< .merge_file_gCWb7X
 - [Email Templates Guide](./EMAIL_TEMPLATES_GUIDE.md)
@@ -241,8 +250,11 @@ Il supporto per la Dark Mode migliora l'esperienza utente e riduce l'affaticamen
 - [Template Content Examples](./TEMPLATE_CONTENT_EXAMPLES.md)
 =======
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_t14rU0
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_qxGnv4
 - [Email Templates Guide](email_templates_guide.md)
 - [Spatie Mail Templates Structure](spatie_mail_templates_structure.md)
 - [Template Content Examples](template_content_examples.md)
@@ -250,6 +262,7 @@ Il supporto per la Dark Mode migliora l'esperienza utente e riduce l'affaticamen
 - [Spatie Mail Templates Structure](./spatie_mail_templates_structure.md)
 - [Template Content Examples](./template_content_examples.md)
 <<<<<<< HEAD
+<<<<<<< .merge_file_t14rU0
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_0siDwn
@@ -257,3 +270,8 @@ Il supporto per la Dark Mode migliora l'esperienza utente e riduce l'affaticamen
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+=======
+>>>>>>> .merge_file_0siDwn
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_qxGnv4

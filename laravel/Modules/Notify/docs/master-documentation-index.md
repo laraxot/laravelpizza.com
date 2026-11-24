@@ -4,18 +4,24 @@ type: concept
 tags: [master, documentation, index]
 created: 2026-07-14
 <<<<<<< HEAD
+<<<<<<< .merge_file_3hFTvh
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_Ml5W30
 updated: 2026-07-14
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
+<<<<<<< .merge_file_3hFTvh
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Ml5W30
 qmd: "master-documentation-index 📚 master documentation index"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -109,15 +115,19 @@ status: draft
 - [Quality Reports](roadmap/quality.md)
 - [Quality Reports](./roadmap/quality.md)
 =======
+<<<<<<< .merge_file_3hFTvh
 <<<<<<< HEAD
 <<<<<<< HEAD
 - [Quality Reports](roadmap/quality.md)
 - [Quality Reports](./roadmap/quality.md)
 =======
+=======
+>>>>>>> .merge_file_Ml5W30
 <<<<<<< .merge_file_6oWKXT
 - [Quality Reports](./reports/quality.md)
 =======
 - [Quality Reports](roadmap/quality.md)
+<<<<<<< .merge_file_3hFTvh
 - [Quality Reports](./roadmap/quality.md)
 >>>>>>> .merge_file_4u754E
 >>>>>>> laraxot/dev
@@ -125,6 +135,10 @@ status: draft
 - [Quality Reports](roadmap/quality.md)
 - [Quality Reports](./roadmap/quality.md)
 >>>>>>> laraxot/dev
+=======
+- [Quality Reports](./roadmap/quality.md)
+>>>>>>> .merge_file_4u754E
+>>>>>>> .merge_file_Ml5W30
 >>>>>>> laraxot/dev
 - [Performance Reports](./reports/performance.md)
 

@@ -3,7 +3,7 @@ title: "conflitti git"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_FmJLFs
+<<<<<<< .merge_file_GNC5Iz
 updated: 2026-11-23
 =======
 <<<<<<< HEAD
@@ -11,7 +11,7 @@ updated: 2026-09-26
 =======
 updated: 2026-11-23
 >>>>>>> laraxot/dev
->>>>>>> .merge_file_PzPTPW
+>>>>>>> .merge_file_Tv5uxe
 qmd: "conflitti git"
 issues: []
 discussions: []

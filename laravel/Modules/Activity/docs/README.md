@@ -1,3 +1,8 @@
+---
+title: "Activity"
+type: note
+qmd: "activity"
+---
 # Activity
 
 [![Module](https://img.shields.io/badge/Module-Activity-8B0000.svg)]()

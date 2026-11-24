@@ -12,6 +12,7 @@ related:
   - ../../stories/phpstan-log-tests-false-positives.story.md
 issues:
   - "https://github.com/laraxot/base_quaeris_fila5/issues/227"
+qmd: "log viewer sicurezza lettura pannello come"
 ---
 
 # Lettura dei log dal pannello

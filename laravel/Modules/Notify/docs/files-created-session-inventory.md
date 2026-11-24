@@ -3,7 +3,15 @@ title: "files created session 007"
 type: note
 tags: [documentation]
 created: 2026-09-26
+<<<<<<< .merge_file_2nnF3d
 updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-09-26
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_cqlYqh
 qmd: "files created session 007"
 issues: []
 discussions: []
@@ -181,6 +189,11 @@ Project Root/
 - Reference: PRIORITY-MATRIX.json (for timeline/effort)
 
 **For Developers**:
+<<<<<<< .merge_file_2nnF3d
+=======
+- Read: laravel/Themes/Sixteen/docs/index.md
+- Reference: bashscripts/docs/index.md (for tools)
+>>>>>>> .merge_file_cqlYqh
 - Read: laravel/Themes/Sixteen/docs/index.md
 - Reference: bashscripts/docs/index.md (for tools)
 <<<<<<< HEAD
