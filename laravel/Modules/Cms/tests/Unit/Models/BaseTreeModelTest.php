@@ -4,11 +4,6 @@ declare(strict_types=1);
 
 use Modules\Cms\Models\BaseModel;
 use Modules\Cms\Models\BaseTreeModel;
-<<<<<<< HEAD
-use PHPUnit\Framework\Assert;
-use Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships;
@@ -20,7 +15,6 @@ use Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 test('BaseTreeModel is abstract and extends BaseModel', function () {
     $reflection = new ReflectionClass(BaseTreeModel::class);
 

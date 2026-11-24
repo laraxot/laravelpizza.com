@@ -11,6 +11,10 @@ use Illuminate\Support\Str;
 use Modules\Xot\Contracts\ModelContract;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/get-model-type-by-model-action.md
+ * @contract docs/contracts/get-model-type-by-model-action.md
+ */
 class GetModelTypeByModelAction
 {
     use QueueableAction;

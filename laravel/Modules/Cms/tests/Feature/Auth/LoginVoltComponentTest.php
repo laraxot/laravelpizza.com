@@ -10,11 +10,6 @@ use Illuminate\Support\Facades\Session;
 use Livewire\Component;
 use Livewire\Features\SupportTesting\Testable;
 use Livewire\Volt\Volt as LivewireVolt;
-<<<<<<< HEAD
-use Modules\User\Models\User;
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
@@ -26,7 +21,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 // ---- Volt Component Rendering ----
 
 it('renders the volt login component', function (): void {

@@ -1,54 +1,48 @@
 ---
-title: "Contratto — SendMailByRecordAction"
+title: "SendMailByRecordAction — contratto"
 type: contract
-action: "Modules\Xot\Actions\Mail\SendMailByRecordAction"
-tags: [contract, action, mail, pdf, personal-data]
-created: 2026-11-24
+owner: Xot
+status: accepted
 updated: 2026-11-24
+action: "Modules\\Xot\\Actions\\Mail\\SendMailByRecordAction"
+qmd: "SendMailByRecordAction invio mail record email allegato PDF SmtpData myLogs sendMail msg option log authId"
 ---
 
 # SendMailByRecordAction
 
-Sorgente: `app/Actions/Mail/SendMailByRecordAction.php`. Chiamante: `app/Actions/Mail/SendMailByRecordsAction.php` (un
-invio per record). Manda al record il suo PDF via SMTP e registra l'invio nei log del record.
+Invia una mail a un record con oggetto e corpo letti dal record, allega il PDF del modello e registra l'invio nei log.
+
+Codice: `app/Actions/Mail/SendMailByRecordAction.php:14-99`.
 
 ## Input
 
-- `Model $record`: deve avere `email` non vuota, il metodo `myLogs()` e uno tra `msg(string)` e `option(string)`.
-- `string $mailClass`: deve essere una classe esistente (controllata con `Assert::classExists`).
+- `Model $record`: deve avere `email` non vuota e il metodo `myLogs()`.
+- `string $mailClass`: verificato con `Assert::classExists`, poi non usato.
 
 ## Output
 
-- `void`.
+`void`.
 
 ## Invarianti
 
-| ID | Regola | Group Pest |
-|---|---|---|
-| XOT-MAIL-RECORD-INV-1 | Senza `email` sul record nessuna mail parte e nessun log viene scritto: l'eccezione arriva prima di PDF e SMTP. | `XOT-MAIL-RECORD-INV-1` |
-| XOT-MAIL-RECORD-INV-2 | Il destinatario è sempre `$record->email`, mai un indirizzo fisso o di debug. | — |
-| XOT-MAIL-RECORD-INV-3 | Oggetto e testo vengono da `msg('mail_oggetto'/'mail_testo')` se esiste, altrimenti da `option(...)`. | — |
-| XOT-MAIL-RECORD-INV-4 | Il log `act = 'sendMail'` si scrive solo dopo un invio SMTP riuscito. | — |
+- `MAIL-REC-INV-1`: la classe `$mailClass` deve esistere (riga 26), ma non è usata per costruire il messaggio: il Mailable è commentato (righe 30-36). Test: Nessun test dedicato.
+- `MAIL-REC-INV-2`: email assente o vuota: `InvalidArgumentException` (righe 39-41). Test: tests/Unit/SendMailByRecordActionTest.php:25.
+- `MAIL-REC-INV-3`: senza metodo `myLogs` lancia `InvalidArgumentException` (righe 43-45). Test: Nessun test dedicato.
+- `MAIL-REC-INV-4`: oggetto e corpo sono letti con `msg()` (`mail_oggetto`, `mail_testo`) se esiste, altrimenti con `option()`, altrimenti eccezione (righe 52-60); valori non stringa diventano stringa vuota (righe 65-70). Test: Nessun test dedicato.
+- `MAIL-REC-INV-5`: il PDF del modello è generato con `PdfByModelAction` in modalità `path` e allegato (righe 72-85). Test: Nessun test dedicato.
+- `MAIL-REC-INV-6`: ordine: generazione PDF, invio SMTP, poi scrittura del log `sendMail` con `authId()` (righe 86-97). Se la scrittura del log fallisce, la mail è già partita. Test: Nessun test dedicato.
 
 ## Effetti collaterali
 
-- Genera il PDF del record con `Export/PdfByModelAction` (`out: 'path'`, default `filename = 'my_doc.pdf'`,
-  `disk = 'cache'`): scrive **sempre lo stesso file** `my_doc.pdf` sul disco `cache`. Due invii concorrenti (es. in coda
-  con più worker) possono allegare il PDF di un altro record: per gli invii in parallelo è un rischio di dati personali.
-- Invia una mail con il PDF allegato via `Modules\Notify\Datas\SmtpData::make()->send(EmailData)`.
-- Scrive una riga di log con `$record->myLogs()->create(['act' => 'sendMail', 'handle' => authId()])`.
+Scrittura di un PDF in disco (disco `cache`, tramite `PdfByModelAction`). Invio SMTP tramite `SmtpData` (esterno, non annullabile). Insert in `myLogs`. Nessuna transazione: nessun rollback se un passo fallisce dopo l'invio.
 
 ## Errori
 
-- `Webmozart\Assert\InvalidArgumentException` se `$mailClass` non esiste.
-- `InvalidArgumentException` se manca `email`, `myLogs()`, `msg()`/`option()`, se l'email non è stringa, se il percorso
-  del PDF non è stringa o se `myLogs()` non ha `create()`.
-- Le eccezioni SMTP e di generazione del PDF risalgono: in quel caso il log non viene scritto.
+`InvalidArgumentException` per record non validi; errori SMTP e di PDF si propagano prima del log, quindi il tentativo non viene registrato.
 
 ## Non fa
 
-- Non usa `$mailClass` per costruire la mail (il codice relativo è commentato): l'invio passa da `SmtpData`, la classe
-  è solo controllata. Non aggiungere logica che si aspetti un `Mailable`.
-- Non va in coda da sola: per l'invio asincrono il chiamante usa `->onQueue()`.
-- Non cancella il PDF generato e non usa un nome di file per record.
-- Non controlla consensi o preferenze di contatto del destinatario.
+- Non usa il Mailable indicato da `$mailClass`.
+- Se oggetto o corpo non sono stringhe la mail parte con valori vuoti.
+- Non gestisce retry né deduplica.
+- Il codice contiene un indirizzo di debug commentato: non va riattivato.

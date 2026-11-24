@@ -12,6 +12,10 @@ use Illuminate\Support\Facades\Validator;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/update-action.md
+ * @contract docs/contracts/update-action.md
+ */
 class UpdateAction
 {
     use QueueableAction;

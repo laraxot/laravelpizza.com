@@ -11,6 +11,8 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Classe per ottenere una vista basata su una classe.
+ * @see docs/contracts/get-view-by-class-action.md
+ * @contract docs/contracts/get-view-by-class-action.md
  */
 class GetViewByClassAction
 {

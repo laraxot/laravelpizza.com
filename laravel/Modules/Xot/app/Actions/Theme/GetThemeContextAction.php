@@ -15,6 +15,9 @@ use Spatie\QueueableAction\QueueableAction;
  * This is a central source of truth for "What time of year is it?" from a
  * thematic perspective, allowing Themes and Modules to adapt their
  * behavior/visuals accordingly.
+ *
+ * @see docs/contracts/get-theme-context-action.md
+ * @contract docs/contracts/get-theme-context-action.md
  */
 class GetThemeContextAction
 {

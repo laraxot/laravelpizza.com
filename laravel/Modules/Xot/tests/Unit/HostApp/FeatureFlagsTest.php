@@ -19,13 +19,8 @@ use PHPUnit\Framework\Assert;
  * App\Support\FeatureFlags exists only in host apps that ship the full skeleton
  * (ptvx, predict, ...). Slim hosts (restaurant, techplanner, ...) do not provide
  * it, so every test skips itself when the class is absent instead of failing.
-<<<<<<< HEAD
- * Assert::assertIs* narrows FeatureFlags::get() (mixed) and pins return contracts;
- * prefer Assert over Pest expect() to avoid argument.templateType su PHPStan max.
-=======
  * Assert::assertIs* narrows FeatureFlags::get() (mixed); prefer Assert over Pest
  * expect() to avoid argument.templateType su PHPStan max.
->>>>>>> laraxot/dev
  */
 
 uses(XotBaseTestCase::class);
@@ -101,8 +96,6 @@ describe('FeatureFlags::isEnabled', function (): void {
 
         $email = FeatureFlags::isEnabled('notifications.email.enabled');
         $sms = FeatureFlags::isEnabled('notifications.sms.enabled');
-        Assert::assertIsBool($email);
-        Assert::assertIsBool($sms);
 
         Assert::assertTrue($email);
         Assert::assertFalse($sms);
@@ -115,8 +108,6 @@ describe('FeatureFlags::isEnabled', function (): void {
 
         $missing = FeatureFlags::isEnabled('missing.flag');
         $missingWithDefault = FeatureFlags::isEnabled('missing.flag', true);
-        Assert::assertIsBool($missing);
-        Assert::assertIsBool($missingWithDefault);
 
         Assert::assertFalse($missing);
         Assert::assertTrue($missingWithDefault);
@@ -130,7 +121,6 @@ describe('FeatureFlags::isAnyEnabled', function (): void {
         }
 
         $any = FeatureFlags::isAnyEnabled('notifications');
-        Assert::assertIsBool($any);
 
         Assert::assertTrue($any);
     });
@@ -146,7 +136,6 @@ describe('FeatureFlags::isAnyEnabled', function (): void {
         ]);
 
         $any = FeatureFlags::isAnyEnabled('notifications');
-        Assert::assertIsBool($any);
 
         Assert::assertFalse($any);
     });
@@ -157,7 +146,6 @@ describe('FeatureFlags::isAnyEnabled', function (): void {
         }
 
         $any = FeatureFlags::isAnyEnabled('telepathy');
-        Assert::assertIsBool($any);
 
         Assert::assertFalse($any);
     });
@@ -170,7 +158,6 @@ describe('FeatureFlags::listEnabled', function (): void {
         }
 
         $enabled = FeatureFlags::listEnabled('notifications');
-        Assert::assertIsArray($enabled);
 
         Assert::assertSame(['email', 'slack'], $enabled);
     });
@@ -181,7 +168,6 @@ describe('FeatureFlags::listEnabled', function (): void {
         }
 
         $enabled = FeatureFlags::listEnabled('telepathy');
-        Assert::assertIsArray($enabled);
 
         Assert::assertSame([], $enabled);
     });
@@ -192,7 +178,6 @@ describe('FeatureFlags::listEnabled', function (): void {
         }
 
         $enabled = FeatureFlags::listEnabled('cache');
-        Assert::assertIsArray($enabled);
 
         Assert::assertSame([], $enabled);
     });
@@ -205,13 +190,6 @@ describe('FeatureFlags::all', function (): void {
         }
 
         $all = FeatureFlags::all();
-<<<<<<< HEAD
-        Assert::assertIsArray($all);
-=======
-        if (! is_array($all)) {
-            Assert::fail('FeatureFlags::all() deve restituire un array.');
-        }
->>>>>>> laraxot/dev
 
         Assert::assertArrayHasKey('cache.store', $all);
         Assert::assertSame('redis', $all['cache.store']);
@@ -226,7 +204,6 @@ describe('FeatureFlags::all', function (): void {
         config()->set('features', 'not-an-array');
 
         $all = FeatureFlags::all();
-        Assert::assertIsArray($all);
 
         Assert::assertSame([], $all);
     });
@@ -242,7 +219,6 @@ describe('FeatureFlags::all', function (): void {
         ]);
 
         $all = FeatureFlags::all();
-        Assert::assertIsArray($all);
 
         Assert::assertSame(['cache.store' => 'file'], $all);
     });

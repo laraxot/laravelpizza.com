@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Feature;
 
-<<<<<<< HEAD
-use function Pest\Laravel\get;
-
-=======
 use Modules\Cms\Tests\TestCase;
 
 use function Pest\Laravel\get;
@@ -19,7 +15,6 @@ use function Pest\Laravel\get;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 describe('Homepage Content Management', function () {
     it('loads homepage content from JSON correctly', function () {
         $response = get('/');

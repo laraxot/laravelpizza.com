@@ -57,8 +57,6 @@ discussions: []
 **Last Validated:** 2026-06-16 16:00 GMT+2  
 **Commit:** ce9b4a8eb  
 **Coordinator:** Haiku (claude-haiku-4-5-20251001)
-<<<<<<< HEAD
-=======
 
 ## Versione unita da `handoff-phpstan-session-2026-06-16.md` (2026-06-16)
 
@@ -200,4 +198,3 @@ done
 **Agente**: Claude Code (xhigh effort)  
 **Data**: 2026-07-08  
 **Token**: ~140K/200K
->>>>>>> laraxot/dev

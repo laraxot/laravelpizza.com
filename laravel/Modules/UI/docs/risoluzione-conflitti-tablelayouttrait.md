@@ -16,9 +16,9 @@ Nel modulo ci sono **due** trait con lo stesso nome corto:
 | `Modules\UI\Filament\Actions\Table\TableLayoutTrait` | `table_layout_{id}` | LIST | `HasTableLayoutPage` (e quindi `HasXotTable`), `TableLayoutToggleTableAction` |
 | `Modules\UI\Traits\TableLayoutTrait` | `table_layout` | GRID | nessuna classe di `app/`; solo `tests/Unit/UiGapCloser100Test.php` e `tests/Unit/UiHighestMissCoverageTest.php` |
 
-Il secondo e' la versione legacy per i componenti Livewire (ha anche `refreshTable()` e `resetTable()`). PHPStan lo segnala `trait.unused` perche' i test sono esclusi dall'analisi (`excludePaths: ./*/tests/*`), quindi il trait porta un `@phpstan-ignore trait.unused` motivato nel docblock.
+Il secondo era la versione legacy per i componenti Livewire (aveva anche `refreshTable()` e `resetTable()`) ed e' stato ritirato il 2026-11-24. PHPStan lo segnalava `trait.unused` e aveva ragione: non era un falso positivo.
 
-Perche' resta e non e' parcheggiato: censimento su 13 progetti in `_bases` (`grep` e `rg`), zero consumatori di produzione ovunque, ma i due test lo importano in ogni progetto e si romperebbero; non e' mai stato usato da codice di `app/` nella storia del modulo. Perche' non e' fuso con quello vivo: cambierebbero chiave di sessione e default, cioe' la preferenza gia' salvata dagli utenti.
+Prova: una ricerca per **nome completo** (`grep -F` e `rg -F` su `Modules\UI\Traits\TableLayoutTrait`, anche nella forma `use Modules\UI\Traits\{...}`) non trova nessun riferimento in PHP, Blade o test di questo progetto; i due test del modulo importano il trait vivo. Una ricerca per **nome corto** li mostrerebbe invece come consumatori: e' la trappola dei falsi positivi descritta in `Xot/docs/bmad/stories/phpstan-modules-zero-swarm-standing.story.md`. Non e' fuso con quello vivo perche' cambierebbero chiave di sessione e default, cioe' la preferenza gia' salvata dagli utenti.
 
 Per ritirarlo serve una decisione esplicita: parcheggio in `docs/parcheggio/app/Traits/TableLayoutTrait.php.zero_used` e rimozione dei due blocchi di test che lo esercitano. Non per chiudere l'errore PHPStan.
 

@@ -8,6 +8,10 @@ use Filament\Support\Facades\FilamentView;
 use Illuminate\Support\Facades\Blade;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/render-context-navigation.md
+ * @contract docs/contracts/render-context-navigation.md
+ */
 class RenderContextNavigation
 {
     use QueueableAction;

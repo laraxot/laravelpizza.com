@@ -11,6 +11,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Schema;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/has-column-action.md
+ * @contract docs/contracts/has-column-action.md
+ */
 class HasColumnAction
 {
     use QueueableAction;

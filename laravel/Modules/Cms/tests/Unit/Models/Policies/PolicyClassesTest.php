@@ -9,11 +9,6 @@ use Modules\Cms\Models\Policies\ModulePolicy;
 use Modules\Cms\Models\Policies\PageContentPolicy;
 use Modules\Cms\Models\Policies\PagePolicy;
 use Modules\Cms\Models\Policies\SectionPolicy;
-<<<<<<< HEAD
-use Modules\Xot\Contracts\UserContract;
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use Modules\Xot\Contracts\UserContract;
 use PHPUnit\Framework\Assert;
@@ -25,7 +20,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 test('CmsBasePolicy is an abstract class', function () {
     $reflection = new ReflectionClass(CmsBasePolicy::class);
 

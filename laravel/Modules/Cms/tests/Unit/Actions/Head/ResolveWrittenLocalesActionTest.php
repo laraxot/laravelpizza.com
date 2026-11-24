@@ -6,10 +6,6 @@ namespace Modules\Cms\Tests\Unit\Actions\Head;
 
 use Modules\Cms\Actions\Head\ResolveRobotsPolicyAction;
 use Modules\Cms\Actions\Head\ResolveWrittenLocalesAction;
-<<<<<<< HEAD
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
@@ -20,7 +16,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 test('written locales keep only the languages with a non-empty title', function (): void {
     $action = new ResolveWrittenLocalesAction;
 

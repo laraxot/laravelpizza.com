@@ -39,8 +39,6 @@ abstract class TestCase extends XotBaseTestCase
 
     use DatabaseTransactions;
 
-<<<<<<< HEAD
-=======
     /**
      * Le connessioni che la transazione di test deve coprire.
      *
@@ -68,7 +66,6 @@ abstract class TestCase extends XotBaseTestCase
         'quaeris_data',
     ];
 
->>>>>>> laraxot/dev
     public static function mockExpectation(MockInterface $mock, string $method): Expectation
     {
         return self::singleExpectation($mock, $method);

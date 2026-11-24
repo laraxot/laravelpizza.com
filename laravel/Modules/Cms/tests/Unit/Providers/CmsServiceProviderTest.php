@@ -6,10 +6,6 @@ use Illuminate\Routing\Router;
 use Modules\Cms\Providers\CmsServiceProvider;
 use Modules\Cms\Providers\EventServiceProvider;
 use Modules\Cms\Providers\RouteServiceProvider;
-<<<<<<< HEAD
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
@@ -20,7 +16,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 test('CmsServiceProvider has correct name', function () {
     $provider = new CmsServiceProvider(app());
     $reflection = new ReflectionClass($provider);

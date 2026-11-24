@@ -7,6 +7,10 @@ namespace Modules\Xot\Actions\Trend\Adapters;
 use Error;
 use Override;
 
+/**
+ * @see docs/contracts/sqlite-adapter.md
+ * @contract docs/contracts/sqlite-adapter.md
+ */
 class SqliteAdapter extends AbstractAdapter
 {
     #[Override]

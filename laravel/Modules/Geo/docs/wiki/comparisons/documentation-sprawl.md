@@ -6,11 +6,7 @@ title: "Documentation Sprawl Analysis — Geo Module"
 type: comparison
 tags: [geo, documentation, redundancy, sprawl, dry]
 created: "2026-05-25"
-<<<<<<< HEAD
-updated: "2026-05-25"
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
 ---
 
 # Documentation Sprawl Analysis — Geo Module
@@ -31,10 +27,7 @@ Many files exist with both naming conventions and nearly identical content:
 
 ### 2. Fragmentation by Detail
 Topics are split into too many small files that should be consolidated:
-<<<<<<< HEAD
-=======
 - **Address Resource**: `address-resource.md`, `address-resource.md`, `address-resource-analysis.md`, `address-resource-improvements.md`, `address-resource-summary.md`, `address-resource-sumy.md`, `addressresource.md`, etc.
->>>>>>> laraxot/dev
 - **Address Resource**: `address-resource.md`, `address-resource-1.md`, `address-resource-analysis.md`, `address-resource-improvements.md`, `address-resource-summary.md`, `address-resource-sumy.md`, `addressresource.md`, etc.
 - **Comune Model**: `comune_model.md`, `comune-model.md`, `comune_sushi_analisi.md`, `comune_sushi_conversion.md`, `comune_sushi_implementation.md`, `comune-sushi-analysis.md`, etc.
 

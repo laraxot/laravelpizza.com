@@ -1,51 +1,44 @@
 ---
-title: "Contratto — SaveArrayAction"
+title: "SaveArrayAction — contratto"
 type: contract
-action: "Modules\Xot\Actions\Arr\SaveArrayAction"
-tags: [contract, action, file, array, config, translations]
-created: 2026-11-24
+owner: Xot
+status: accepted
 updated: 2026-11-24
+action: "Modules\\Xot\\Actions\\Arr\\SaveArrayAction"
+qmd: "SaveArrayAction salva array formato json php delega SaveJsonArrayAction SavePhpArrayAction formato non supportato"
 ---
 
 # SaveArrayAction
 
-Sorgente: `app/Actions/Arr/SaveArrayAction.php`. Unico punto con cui i moduli scrivono un array su file: file di
-traduzione (`Lang/app/Actions/SaveTransAction.php`, `PublishTranslationAction.php`), config dei tenant
-(`Tenant/app/Actions/Config/SaveTenantConfigAction.php`), righe JSON dei model "su file"
-(`Tenant/app/Actions/Json/{Create,Update,Delete}JsonFileByRecordAction.php`), config di modulo
-(`Xot/app/Filament/Resources/ModuleResource/Pages/EditModule.php`).
+Punto di ingresso unico per salvare un array su file, scegliendo il formato. Codice: `app/Actions/Arr/SaveArrayAction.php:9-23`.
 
 ## Input
 
-- `array<int|string, mixed> $data`: l'array completo da scrivere (non un delta).
-- `string $filename`: percorso assoluto del file.
-- `string $format`: `'php'` (default) o `'json'`.
+- `array<int|string, mixed> $data`: dati da salvare (`execute`, riga 16).
+- `string $filename`: percorso di destinazione (riga 16).
+- `string $format = 'php'`: `json` oppure `php` (riga 16).
 
 ## Output
 
-- `bool`: `true` se il file è stato scritto (in pratica sempre: un errore di scrittura è un'eccezione).
+- `bool`: il valore restituito dall'Action delegata (riga 18-22).
 
 ## Invarianti
 
-| ID | Regola | Group Pest |
-|---|---|---|
-| XOT-SAVE-ARRAY-INV-1 | Senza `$format` scrive PHP (`<?php … return [...]`) rileggibile con `require` allo stesso array. | `XOT-SAVE-ARRAY-INV-1` |
-| XOT-SAVE-ARRAY-INV-2 | Con `'json'` scrive JSON che `json_decode(…, true)` riporta allo stesso array. | `XOT-SAVE-ARRAY-INV-2` |
-| XOT-SAVE-ARRAY-INV-3 | Un formato diverso da `php`/`json` è un'eccezione, mai un file scritto in un formato a caso. | `XOT-SAVE-ARRAY-INV-3` |
+| ID | Regola | Prova nel codice | Test esistente |
+|---|---|---|---|
+| `ARR-SAVE-INV-1` | `json` delega a `SaveJsonArrayAction`, `php` delega a `SavePhpArrayAction`. | righe 18-21 | `tests/Unit/Actions/ArrayArrActionsTest.php:107` |
+| `ARR-SAVE-INV-2` | Qualsiasi altro formato lancia `\InvalidArgumentException` ("Formato non supportato"). | riga 21 | `tests/Unit/Actions/ArrayArrActionsTest.php:119` |
 
 ## Effetti collaterali
 
-- Delega a [SavePhpArrayAction](save-php-array-action.md) o [SaveJsonArrayAction](save-json-array-action.md): **sovrascrive**
-  il file intero.
+Quelli dell'Action delegata: scrittura del file (vedi `save-json-array-action` e `save-php-array-action`).
 
 ## Errori
 
-- `InvalidArgumentException('Formato non supportato: <format>')` per un formato sconosciuto.
-- Le eccezioni delle Action delegate (`Safe\Exceptions\FilesystemException`, `JsonException`).
+- `\InvalidArgumentException` per formato non supportato.
 
 ## Non fa
 
-- Non unisce con il contenuto esistente: chi vuole aggiornare una chiave legge, modifica e passa l'array completo.
-- Non fa backup, non scrive in modo atomico, non prende lock: due scritture concorrenti sullo stesso file, vince l'ultima.
-- Non valida il percorso: chi chiama decide dove si scrive (mai un percorso preso da input utente senza controllo).
-- Non invalida cache di config o traduzioni (`config:cache`, cache delle traduzioni): lo fa il chiamante se serve.
+- Non valida `$filename`.
+- Il confronto del formato è case-sensitive: `JSON` non è accettato.
+- Marker `@contract` aggiunto nel docblock della classe.

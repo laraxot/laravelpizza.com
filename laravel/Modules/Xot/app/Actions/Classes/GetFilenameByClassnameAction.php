@@ -6,6 +6,10 @@ namespace Modules\Xot\Actions\Classes;
 
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/classes-get-filename-by-classname-action.md
+ * @contract docs/contracts/classes-get-filename-by-classname-action.md
+ */
 class GetFilenameByClassnameAction
 {
     use QueueableAction;

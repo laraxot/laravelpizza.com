@@ -6,16 +6,11 @@ use Modules\Cms\Filament\Resources\MenuResource;
 use Modules\Cms\Filament\Resources\PageContentResource;
 use Modules\Cms\Filament\Resources\PageResource;
 use Modules\Cms\Filament\Resources\SectionResource;
-<<<<<<< HEAD
-=======
 use Modules\Cms\Tests\TestCase;
->>>>>>> laraxot/dev
 use Modules\Lang\Filament\Resources\LangBaseResource;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use PHPUnit\Framework\Assert;
 
-<<<<<<< HEAD
-=======
 // Senza questo binding le closure di `test()`/`it()` restano legate a
 // PHPUnit\Framework\TestCase, cioe' a un caso di test SENZA applicazione
 // Laravel: `app()`, `config()` e le facade non si risolvono. Era la causa di
@@ -23,7 +18,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 test('cms resources extend proper base resources', function () {
     foreach ([PageResource::class, PageContentResource::class, SectionResource::class] as $resourceClass) {
         Assert::assertTrue((new ReflectionClass($resourceClass))->isSubclassOf(LangBaseResource::class), "{$resourceClass} must extend LangBaseResource");

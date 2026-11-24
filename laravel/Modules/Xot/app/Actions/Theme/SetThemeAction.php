@@ -13,6 +13,9 @@ use Spatie\QueueableAction\QueueableAction;
  * Persists the active theme into config('theme.active') so GetThemeAction,
  * IsThemeAction and GetThemePathAction read it back consistently across
  * the request lifecycle.
+ *
+ * @see docs/contracts/set-theme-action.md
+ * @contract docs/contracts/set-theme-action.md
  */
 class SetThemeAction
 {

@@ -11,6 +11,10 @@ use Modules\Xot\Actions\Class\GetFilenameByClassnameAction;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/generate-model-by-model-class.md
+ * @contract docs/contracts/generate-model-by-model-class.md
+ */
 class GenerateModelByModelClass
 {
     use QueueableAction;

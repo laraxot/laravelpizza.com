@@ -3,7 +3,7 @@ title: "ADR — Protocollo delle chiavi di traduzione"
 type: decision
 status: accepted
 created: 2026-11-23
-updated: 2026-11-24
+updated: 2026-11-23
 decision-makers: [Xot, Lang]
 issues: []
 ---
@@ -108,10 +108,3 @@ una vista di modulo non deve spostare nel tema una traduzione di dominio.
 
 - Le modifiche al codice aggiungono un `@see` al documento owner; le modifiche
   a un'Action con effetti collaterali mantengono anche il relativo `@contract`.
-
-## Verifica
-
-Solo revisione: non è stato individuato un test automatico che controlli la forma delle chiavi di traduzione
-(controllato il 2026-11-24: nessun file PHP di moduli o temi cita questo ADR). Il controllo ripetibile è la scomposizione in cinque elementi
-descritta in Conferma e la ricerca delle occorrenze con `rg "__\\(|trans\\(" laravel/Modules laravel/Themes`; il
-debito è dichiarato: una regola eseguibile sulla struttura delle chiavi va scritta da chi possiede i cataloghi (Lang).

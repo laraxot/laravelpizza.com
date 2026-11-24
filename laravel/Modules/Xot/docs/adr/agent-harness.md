@@ -17,7 +17,7 @@ related:
 
 # Harness minimo per gli agenti, sul modello del workshop laravelday
 
-## Context and Problem Statement
+## Contesto
 
 Su questo repo lavorano più agenti (Claude, Codex, Cursor) e una sync che committa ogni minuto. Le regole esistono
 (CLAUDE.md, `docs/wiki/rules`, memorie) ma sono prosa: un agente le legge, o no, e niente impedisce di violarle.
@@ -26,7 +26,7 @@ mesi con PHPStan verde, un test che cancellava `lang/en`. Il workshop laravelday
 propone un harness minimo: ambiente leggibile, fatti verificabili, contract, lezioni che diventano controlli.
 Quanto di quell'harness adottiamo, e in che forma, senza duplicare BMAD, la wiki e il second brain che ci sono già?
 
-## Decision Drivers
+## Driver della decisione
 
 - Le regole devono essere **verificabili da una macchina**, non solo scritte.
 - Un hook deve funzionare anche quando l'app è rotta (oggi PHPStan e Laravel non partivano): PHP puro, niente bootstrap.
@@ -34,7 +34,7 @@ Quanto di quell'harness adottiamo, e in che forma, senza duplicare BMAD, la wiki
 - `.claude` è un symlink a `bashscripts/ai/.agents`, condiviso da altri progetti: un hook lì non deve rompere un progetto senza `.harness/`.
 - Le regole del progetto battono quelle del workshop dove divergono (migrazioni: qui si evolve lo schema con `tableUpdate()`).
 
-## Considered Options
+## Alternative scartate
 
 - **A — Adottare l'harness del workshop così com'è** (`.harness/` con tasks, rules, stop hook con receipt, trace).
   Scartata: il Task Contract con scope e stop hook bloccante su ogni "fatto" pesa su sessioni che spesso sono
@@ -44,7 +44,7 @@ Quanto di quell'harness adottiamo, e in che forma, senza duplicare BMAD, la wiki
 - **C — Harness minimo adattato** (scelta): i pezzi che trasformano una regola in un controllo, mappati su quello che
   il progetto ha già.
 
-## Decision Outcome
+## Decisione
 
 Scelta: **C**, perché ogni pezzo risponde a un fallimento osservato (lezioni L-001…L-006) e riusa le strutture esistenti.
 
@@ -61,7 +61,7 @@ Scelta: **C**, perché ogni pezzo risponde a un fallimento osservato (lezioni L-
 | `[ATTESA-UMANO]: <domanda>` per fermarsi su una decisione umana | Stesso, in `AGENTS.md` → Commands. |
 | Stop hook con receipt | Non adottato (vedi A): il gate resta "PHPStan + Pest + verify-facts prima di dire fatto". |
 
-### Consequences
+## Conseguenze
 
 - Buono, perché le regole più costose da violare (dati, segreti, storia git) ora sono bloccate prima che succeda, e il blocco lascia traccia.
 - Buono, perché i fatti invecchiano in modo visibile: `verify-facts` esce con 1 quando uno non regge più.
@@ -69,7 +69,7 @@ Scelta: **C**, perché ogni pezzo risponde a un fallimento osservato (lezioni L-
 - Cattivo, perché il guard è euristico sui comandi shell: un comando composto in modi strani può passare. È una rete, non un muro.
 - Cattivo, perché l'hook è registrato nel `settings.json` condiviso: un progetto che aggiunge un suo `.harness/bin/guard` lo attiva per sé.
 
-### Confirmation
+## Conferma
 
 - `vendor/bin/pest Modules/Xot/tests/Unit/Harness/GuardTest.php`: ogni regola ha un caso che scatta e uno vicino che passa.
 - `php .harness/bin/verify-facts` esce con 0.

@@ -12,6 +12,8 @@ use Spatie\QueueableAction\QueueableAction;
  * Palette Design Comuni / PA per Filament (FO widget + pannelli admin).
  *
  * @see laravel/Themes/Sixteen/tailwind.config.js (primary verde, italia-blue)
+ * @see docs/contracts/get-pa-filament-palette-action.md
+ * @contract docs/contracts/get-pa-filament-palette-action.md
  */
 final class GetPaFilamentPaletteAction
 {

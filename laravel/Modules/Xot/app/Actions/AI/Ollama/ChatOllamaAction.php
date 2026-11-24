@@ -13,6 +13,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\json_decode;
 
+/**
+ * @see docs/contracts/chat-ollama-action.md
+ * @contract docs/contracts/chat-ollama-action.md
+ */
 class ChatOllamaAction
 {
     use QueueableAction;

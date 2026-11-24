@@ -30,19 +30,11 @@ describe('Region Business Logic', function () {
     });
 
     test('region has correct key type configured', function () {
-<<<<<<< HEAD
-        Assert::assertSame('integer', (new Region)->getKeyType());
-    });
-
-    test('region has schema definition for geographic data', function () {
-        $schema = (new Region)->getSchema();
-=======
         Assert::assertSame('integer', (new Region())->getKeyType());
     });
 
     test('region has schema definition for geographic data', function () {
         $schema = (new Region())->getSchema();
->>>>>>> laraxot/dev
 
         Assert::assertIsArray($schema);
         Assert::assertSame('integer', $schema['id'] ?? null);
@@ -52,11 +44,7 @@ describe('Region Business Logic', function () {
     test('region factory produces region instance', function () {})->todo();
 
     test('region model can be instantiated without errors', function () {
-<<<<<<< HEAD
-        $region = new Region;
-=======
         $region = new Region();
->>>>>>> laraxot/dev
 
         Assert::assertFalse($region->exists);
     });

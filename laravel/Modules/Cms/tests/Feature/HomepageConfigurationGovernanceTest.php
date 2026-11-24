@@ -2,16 +2,11 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-=======
 use Modules\Cms\Tests\TestCase;
->>>>>>> laraxot/dev
 use PHPUnit\Framework\Assert;
 
 use function Safe\glob;
 
-<<<<<<< HEAD
-=======
 // Senza questo binding le closure di `test()`/`it()` restano legate a
 // PHPUnit\Framework\TestCase, cioe' a un caso di test SENZA applicazione
 // Laravel: `app()`, `config()` e le facade non si risolvono. Era la causa di
@@ -19,7 +14,6 @@ use function Safe\glob;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 beforeEach(function (): void {
     /* @var \Modules\Cms\Tests\TestCase $this */
     cmsSkipTest('Homepage governance tests target predict JSON fixtures, not fixcity.');

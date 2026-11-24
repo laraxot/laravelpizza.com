@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Session;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/destroy-action.md
+ * @contract docs/contracts/destroy-action.md
+ */
 class DestroyAction
 {
     use QueueableAction;

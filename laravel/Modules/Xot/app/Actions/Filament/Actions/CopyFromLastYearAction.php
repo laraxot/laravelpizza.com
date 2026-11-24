@@ -10,6 +10,8 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Action for copying data from the previous year in Filament.
+ * @see docs/contracts/filament-actions-copy-from-last-year-action.md
+ * @contract docs/contracts/filament-actions-copy-from-last-year-action.md
  */
 class CopyFromLastYearAction extends XotBaseAction
 {

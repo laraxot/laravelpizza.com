@@ -2,11 +2,6 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-use Modules\Cms\View\Composers\ThemeComposer;
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use Modules\Cms\View\Composers\ThemeComposer;
 use PHPUnit\Framework\Assert;
@@ -18,7 +13,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 test('ThemeComposer can be instantiated', function () {
     $composer = new ThemeComposer;
     Assert::assertSame(ThemeComposer::class, $composer::class);

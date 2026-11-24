@@ -4,30 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests;
 
-<<<<<<< .merge_file_AzgVPr
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Http;
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-use Illuminate\Support\Facades\Http;
->>>>>>> .merge_file_sK14Fm
 use Modules\Xot\Tests\XotBaseTestCase;
 
 /**
  * LightTestCase - Base test class for Geo module.
  * Extends XotBaseTestCase for common test functionality.
  */
-<<<<<<< .merge_file_AzgVPr
-<<<<<<< HEAD
-abstract class LightTestCase extends XotBaseTestCase {}
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_sK14Fm
 abstract class LightTestCase extends XotBaseTestCase
 {
     /**
@@ -63,10 +46,3 @@ abstract class LightTestCase extends XotBaseTestCase
         Http::preventStrayRequests();
     }
 }
-<<<<<<< .merge_file_AzgVPr
-=======
-abstract class LightTestCase extends XotBaseTestCase {}
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_sK14Fm

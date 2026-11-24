@@ -7,6 +7,10 @@ namespace Modules\Xot\Actions\Filament\Filter;
 use Filament\Tables\Filters\SelectFilter;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/get-year-filter.md
+ * @contract docs/contracts/get-year-filter.md
+ */
 class GetYearFilter
 {
     use QueueableAction;

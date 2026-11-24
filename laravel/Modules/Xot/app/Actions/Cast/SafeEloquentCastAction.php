@@ -21,6 +21,9 @@ use Webmozart\Assert\Assert;
  * - Laravel Way: Rispetta l'architettura Eloquent
  * - Assert: Utilizza webmozart/assert per validazioni robuste
  * - NO property_exists: Mai utilizzare property_exists con modelli Eloquent
+ *
+ * @see docs/contracts/safe-eloquent-cast-action.md
+ * @contract docs/contracts/safe-eloquent-cast-action.md
  */
 class SafeEloquentCastAction
 {

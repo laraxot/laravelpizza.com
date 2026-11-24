@@ -8,6 +8,10 @@ use Illuminate\View\View;
 use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
+/**
+ * @see docs/contracts/pdf-by-view-action.md
+ * @contract docs/contracts/pdf-by-view-action.md
+ */
 class PdfByViewAction
 {
     use QueueableAction;

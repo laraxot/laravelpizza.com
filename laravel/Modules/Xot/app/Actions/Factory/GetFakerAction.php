@@ -16,6 +16,8 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * @see https://github.com/mpociot/laravel-test-factory-helper/blob/master/src/Console/GenerateCommand.php#L213
+ * @see docs/contracts/get-faker-action.md
+ * @contract docs/contracts/get-faker-action.md
  */
 class GetFakerAction
 {

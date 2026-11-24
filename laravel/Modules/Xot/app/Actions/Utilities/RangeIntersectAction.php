@@ -6,6 +6,10 @@ namespace Modules\Xot\Actions\Utilities;
 
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/utilities-range-intersect-action.md
+ * @contract docs/contracts/utilities-range-intersect-action.md
+ */
 class RangeIntersectAction
 {
     use QueueableAction;

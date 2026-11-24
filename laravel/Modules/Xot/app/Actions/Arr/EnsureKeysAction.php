@@ -10,6 +10,8 @@ use Spatie\QueueableAction\QueueableAction;
  * Allinea ogni riga alle chiavi attese dallo schema: le mancanti diventano null,
  * le presenti vengono conservate. Serve a mantenere il file JSON coerente con lo
  * schema del modello anche quando una riga salvata in precedenza e' incompleta.
+ * @see docs/contracts/ensure-keys-action.md
+ * @contract docs/contracts/ensure-keys-action.md
  */
 class EnsureKeysAction
 {

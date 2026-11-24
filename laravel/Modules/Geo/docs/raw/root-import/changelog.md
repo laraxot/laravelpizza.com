@@ -9,15 +9,6 @@ issues: []
 discussions: []
 ---
 
-<<<<<<< HEAD
-# Changelog
-
-All notable changes to `:package_name` will be documented in this file.
-
-## 1.0.0 - 202X-XX-XX
-
-- initial release
-=======
 # 1.0.0 (2026-06-03)
 
 
@@ -208,4 +199,3 @@ All notable changes to `:package_name` will be documented in this file.
 All notable changes to this project are documented in this file.
 
 This file is updated automatically by [semantic-release](https://github.com/semantic-release/semantic-release) via the [Release](.github/workflows/release.yml) workflow.
->>>>>>> laraxot/dev

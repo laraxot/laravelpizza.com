@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Datas\RelationData as RelationDTO;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/update-has-many-through-action.md
+ * @contract docs/contracts/update-has-many-through-action.md
+ */
 class HasManyThroughAction
 {
     use QueueableAction;

@@ -8,6 +8,10 @@ use Modules\Xot\Datas\PdfData;
 use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
+/**
+ * @see docs/contracts/pdf-pdf-by-html-action.md
+ * @contract docs/contracts/pdf-pdf-by-html-action.md
+ */
 class PdfByHtmlAction
 {
     use QueueableAction;

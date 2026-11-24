@@ -3,10 +3,6 @@
 declare(strict_types=1);
 
 use Modules\Cms\Filament\Clusters\Appearance\Pages\Breadcrumb;
-<<<<<<< HEAD
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
@@ -17,7 +13,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 test('Breadcrumb page uses correct view', function () {
     $page = new Breadcrumb;
     // Access protected property via reflection

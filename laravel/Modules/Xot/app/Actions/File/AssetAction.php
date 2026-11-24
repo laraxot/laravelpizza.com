@@ -11,6 +11,10 @@ use Modules\Xot\Datas\XotData;
 use Spatie\QueueableAction\QueueableAction as QueueableActionTrait;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/asset-action.md
+ * @contract docs/contracts/asset-action.md
+ */
 class AssetAction
 {
     use QueueableActionTrait;

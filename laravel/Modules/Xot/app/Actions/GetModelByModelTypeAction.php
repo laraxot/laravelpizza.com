@@ -11,6 +11,10 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/get-model-by-model-type-action.md
+ * @contract docs/contracts/get-model-by-model-type-action.md
+ */
 class GetModelByModelTypeAction
 {
     use QueueableAction;

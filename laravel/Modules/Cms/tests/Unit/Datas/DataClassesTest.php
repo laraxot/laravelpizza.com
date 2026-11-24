@@ -8,10 +8,6 @@ use Modules\Cms\Datas\HeadernavData;
 use Modules\Cms\Datas\LinkData;
 use Modules\Cms\Datas\NavbarMenuData;
 use Modules\Cms\Datas\ThemeData;
-<<<<<<< HEAD
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
@@ -22,7 +18,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 test('BlockData can be instantiated', function () {
     Assert::assertTrue(class_exists(BlockData::class));
 });

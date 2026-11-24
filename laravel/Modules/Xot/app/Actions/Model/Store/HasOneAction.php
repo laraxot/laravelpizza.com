@@ -11,6 +11,10 @@ use Modules\Xot\Datas\RelationData as RelationDTO;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/store-has-one-action.md
+ * @contract docs/contracts/store-has-one-action.md
+ */
 class HasOneAction
 {
     use QueueableAction;

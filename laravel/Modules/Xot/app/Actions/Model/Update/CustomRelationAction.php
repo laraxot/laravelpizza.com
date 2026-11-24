@@ -10,6 +10,10 @@ use Modules\Xot\Datas\RelationData as RelationDTO;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/custom-relation-action.md
+ * @contract docs/contracts/custom-relation-action.md
+ */
 class CustomRelationAction
 {
     use QueueableAction;

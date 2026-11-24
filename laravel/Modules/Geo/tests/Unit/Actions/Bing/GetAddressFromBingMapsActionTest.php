@@ -26,22 +26,11 @@ it('throws exception when api key is not configured', function (): void {
 it('throws exception for invalid latitude range', function (): void {
     config(['services.bing.maps_api_key' => 'test_key']);
 
-<<<<<<< .merge_file_K6Ul1X
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
     Http::fake();
->>>>>>> .merge_file_MGNtjq
     $action = new GetAddressFromBingMapsAction;
     try {
         $action->execute(91.0, 9.1900);
         Assert::fail('Expected InvalidLocationException was not thrown');
-<<<<<<< HEAD
-    } catch (InvalidLocationException) {
-    }
-=======
     } catch (InvalidLocationException $exception) {
         // Il `catch` era vuoto, quindi il test non registrava nessuna
         // asserzione e PHPUnit lo segnalava come «risky»: passava per il solo
@@ -52,43 +41,22 @@ it('throws exception for invalid latitude range', function (): void {
     }
     // Coordinate fuori range: nessuna chiamata a Bing.
     Http::assertNothingSent();
-<<<<<<< .merge_file_K6Ul1X
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_MGNtjq
 });
 
 it('throws exception for invalid longitude range', function (): void {
     config(['services.bing.maps_api_key' => 'test_key']);
 
-<<<<<<< .merge_file_K6Ul1X
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
     Http::fake();
->>>>>>> .merge_file_MGNtjq
     $action = new GetAddressFromBingMapsAction;
     try {
         $action->execute(45.0, 181.0);
         Assert::fail('Expected InvalidLocationException was not thrown');
-<<<<<<< HEAD
-    } catch (InvalidLocationException) {
-    }
-=======
     } catch (InvalidLocationException $exception) {
         // Vedi il test gemello: un `catch` vuoto non asserisce niente.
         Assert::assertStringContainsString('181', $exception->getMessage());
     }
     // Coordinate fuori range: nessuna chiamata a Bing.
     Http::assertNothingSent();
-<<<<<<< .merge_file_K6Ul1X
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_MGNtjq
 });
 
 it('throws exception when api response is not successful', function (): void {

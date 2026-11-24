@@ -10,6 +10,8 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Plain text for Filament grid labels — Htmlable, enum HasLabel, scalar.
+ * @see docs/contracts/plain-text-from-filament-value-action.md
+ * @contract docs/contracts/plain-text-from-filament-value-action.md
  */
 class PlainTextFromFilamentValueAction
 {

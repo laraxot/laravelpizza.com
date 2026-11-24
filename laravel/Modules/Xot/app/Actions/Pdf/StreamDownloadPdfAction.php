@@ -9,6 +9,10 @@ use Spipu\Html2Pdf\Html2Pdf;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/stream-download-pdf-action.md
+ * @contract docs/contracts/stream-download-pdf-action.md
+ */
 class StreamDownloadPdfAction
 {
     use QueueableAction;

@@ -58,19 +58,7 @@ test('il codice del picker non contiene coordinate fisse, servizi IP esterni, co
         'app/Filament/Forms/Components/Traits/HasCoordinatePicker.php',
         'config/config.php',
         'resources/views/filament/forms/components/coordinate-picker.blade.php',
-<<<<<<< .merge_file_vXBKL1
-<<<<<<< HEAD
-        '../Fixcity/resources/views/filament/forms/components/dc-place-autocomplete.blade.php',
-=======
-<<<<<<< HEAD
-        '../Fixcity/resources/views/filament/forms/components/dc-place-autocomplete.blade.php',
-=======
         // Il modulo Geo e' condiviso: non verifica file di moduli di altri progetti (es. Fixcity, assente qui).
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-        // Il modulo Geo e' condiviso: non verifica file di moduli di altri progetti (es. Fixcity, assente qui).
->>>>>>> .merge_file_9sFQsg
     ];
 
     foreach ($sources as $source) {

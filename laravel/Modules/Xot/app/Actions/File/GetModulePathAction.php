@@ -11,6 +11,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\scandir;
 
+/**
+ * @see docs/contracts/get-module-path-action.md
+ * @contract docs/contracts/get-module-path-action.md
+ */
 class GetModulePathAction
 {
     use QueueableAction;

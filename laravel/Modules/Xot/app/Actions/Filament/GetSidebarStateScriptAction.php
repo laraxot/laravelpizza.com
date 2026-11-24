@@ -14,6 +14,8 @@ use Spatie\QueueableAction\QueueableAction;
  * tutti i gruppi della sidebar falliscono e il menu dei moduli non si vede.
  * Lo script scrive `[]` solo quando il valore manca o e' `null`, cosi' le
  * preferenze gia' salvate dall'utente restano intatte.
+ * @see docs/contracts/get-sidebar-state-script-action.md
+ * @contract docs/contracts/get-sidebar-state-script-action.md
  */
 class GetSidebarStateScriptAction
 {

@@ -4,16 +4,11 @@ declare(strict_types=1);
 
 use Livewire\Features\SupportTesting\Testable;
 use Livewire\Livewire;
-<<<<<<< HEAD
-=======
 use Modules\Cms\Tests\TestCase;
->>>>>>> laraxot/dev
 use Modules\User\Filament\Widgets\RegistrationWidget;
 use Modules\Xot\Actions\View\GetViewByClassAction;
 use PHPUnit\Framework\Assert;
 
-<<<<<<< HEAD
-=======
 // Senza questo binding le closure di `test()`/`it()` restano legate a
 // PHPUnit\Framework\TestCase, cioe' a un caso di test SENZA applicazione
 // Laravel: `app()`, `config()` e le facade non si risolvono. Era la causa di
@@ -21,7 +16,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 beforeEach(function (): void {
     /* @var \Modules\Cms\Tests\TestCase $this */
     cmsSkipTest('patient/doctor registration types not configured in this install.');

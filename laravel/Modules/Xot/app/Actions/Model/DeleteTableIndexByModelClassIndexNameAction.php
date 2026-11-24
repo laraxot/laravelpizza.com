@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Schema;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/delete-table-index-by-model-class-index-name-action.md
+ * @contract docs/contracts/delete-table-index-by-model-class-index-name-action.md
+ */
 class DeleteTableIndexByModelClassIndexNameAction
 {
     use QueueableAction;

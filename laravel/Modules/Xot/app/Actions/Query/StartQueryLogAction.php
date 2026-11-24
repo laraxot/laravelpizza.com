@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Log;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/start-query-log-action.md
+ * @contract docs/contracts/start-query-log-action.md
+ */
 class StartQueryLogAction
 {
     use QueueableAction;

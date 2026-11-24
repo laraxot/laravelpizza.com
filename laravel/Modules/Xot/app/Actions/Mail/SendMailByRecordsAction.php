@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/send-mail-by-records-action.md
+ * @contract docs/contracts/send-mail-by-records-action.md
+ */
 class SendMailByRecordsAction
 {
     use QueueableAction;

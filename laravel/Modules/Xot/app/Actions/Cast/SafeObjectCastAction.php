@@ -21,6 +21,9 @@ use Webmozart\Assert\Assert;
  * - Robustezza: Gestisce tutti i casi edge e mantiene type safety
  * - Sicurezza: Previene errori di accesso a proprietà inesistenti
  * - Assert: Utilizza webmozart/assert per validazioni robuste
+ *
+ * @see docs/contracts/safe-object-cast-action.md
+ * @contract docs/contracts/safe-object-cast-action.md
  */
 class SafeObjectCastAction
 {

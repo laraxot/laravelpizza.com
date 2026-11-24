@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Illuminate\Support\Facades\Schema;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/model-table-exists-by-model-class-actions.md
+ * @contract docs/contracts/model-table-exists-by-model-class-actions.md
+ */
 class TableExistsByModelClassActions
 {
     public function execute(string $modelClass): bool

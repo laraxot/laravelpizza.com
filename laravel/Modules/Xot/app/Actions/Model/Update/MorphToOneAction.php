@@ -16,6 +16,8 @@ use Spatie\QueueableAction\QueueableAction;
  * Handles the creation of MorphToOne relationship records.
  *
  * @template TModel of Model
+ * @see docs/contracts/update-morph-to-one-action.md
+ * @contract docs/contracts/update-morph-to-one-action.md
  */
 class MorphToOneAction
 {

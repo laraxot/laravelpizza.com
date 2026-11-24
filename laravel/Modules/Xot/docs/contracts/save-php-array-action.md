@@ -1,47 +1,45 @@
 ---
-title: "Contratto — SavePhpArrayAction"
+title: "SavePhpArrayAction — contratto"
 type: contract
-action: "Modules\Xot\Actions\Arr\SavePhpArrayAction"
-tags: [contract, action, file, array, php, code-style]
-created: 2026-11-24
+owner: Xot
+status: accepted
 updated: 2026-11-24
+action: "Modules\\Xot\\Actions\\Arr\\SavePhpArrayAction"
+qmd: "SavePhpArrayAction array PHP una chiave per riga var_export return file lang nested inline clean code"
 ---
 
 # SavePhpArrayAction
 
-Sorgente: `app/Actions/Arr/SavePhpArrayAction.php`. Si chiama di solito tramite [SaveArrayAction](save-array-action.md).
-Il docblock spiega perché non usa `var_export`/VarExporter sull'array intero: i file scritti (traduzioni, config) sono
-poi letti e modificati da persone e devono rispettare lo stile del repository.
+Salva un array come file PHP `return [...]` con una chiave per riga, senza array annidati inline. Codice: `app/Actions/Arr/SavePhpArrayAction.php:19-66`.
 
 ## Input
 
-- `array<int|string, mixed> $data`.
-- `string $filename`: percorso assoluto; la cartella deve esistere.
+- `array<int|string, mixed> $data` (`execute`, riga 26).
+- `string $filename`: file di destinazione (riga 26).
 
 ## Output
 
-- `bool`: `true` a scrittura riuscita.
+- `bool`: `(bool)` dei byte scritti da `Safe\file_put_contents` (riga 31).
 
 ## Invarianti
 
-| ID | Regola | Group Pest |
-|---|---|---|
-| XOT-SAVE-PHP-INV-1 | Il file rilletto con `require` ritorna esattamente `$data`. | `XOT-SAVE-PHP-INV-1` |
-| XOT-SAVE-PHP-INV-2 | Il file inizia con `<?php` e `declare(strict_types=1);`. | `XOT-SAVE-PHP-INV-2` |
-| XOT-SAVE-PHP-INV-3 | Una chiave per riga a ogni livello: un array annidato non è mai scritto inline. | `XOT-SAVE-PHP-INV-3` |
+| ID | Regola | Prova nel codice | Test esistente |
+|---|---|---|---|
+| `ARR-SAVEPHP-INV-1` | Ogni chiave è su una riga propria; un array annidato è esploso su righe indentate di 4 spazi per livello. Un array vuoto è `[]`. | righe 37-55 | `tests/Unit/Actions/ArrayArrActionsTest.php:97`; `tests/Arch/debt.php:16` |
+| `ARR-SAVEPHP-INV-2` | Le chiavi intere sono scritte senza apici; le chiavi stringa con `var_export`. | righe 47-48 | come sopra |
+| `ARR-SAVEPHP-INV-3` | Il file ha la forma `<?php`, `declare(strict_types=1)`, `return <array>;`. | riga 29 | come sopra |
+| `ARR-SAVEPHP-INV-4` | I valori non array sono scritti con `var_export`. | righe 57-65 | come sopra |
 
 ## Effetti collaterali
 
-- `Safe\file_put_contents($filename, …)`: sovrascrive il file intero.
+Scrittura del file (sovrascrive). Non crea la cartella di destinazione, a differenza di `SaveJsonArrayAction`.
 
 ## Errori
 
-- `Safe\Exceptions\FilesystemException` se la cartella non esiste o il file non è scrivibile.
+- Le funzioni `Safe\*` lanciano eccezioni su I/O fallito.
 
 ## Non fa
 
-- Non crea la cartella (a differenza di `SaveJsonArrayAction`).
-- Non esporta oggetti in modo rileggibile: un valore oggetto passa per `var_export` e produce `\Class::__set_state(...)`;
-  passare solo scalari e array.
-- Non conserva commenti o formattazione del file precedente.
-- Non invalida l'opcache del file scritto.
+- Non scrive in modo atomico.
+- Non valida il contenuto né la leggibilità della chiave.
+- Marker `@contract` aggiunto nel docblock della classe.

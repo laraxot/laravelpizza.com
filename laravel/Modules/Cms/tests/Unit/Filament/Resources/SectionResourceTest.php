@@ -5,10 +5,6 @@ declare(strict_types=1);
 use Modules\Cms\Filament\Resources\SectionResource;
 use Modules\Cms\Filament\Resources\SectionResource\Schemas\SectionForm;
 use Modules\Cms\Models\Section;
-<<<<<<< HEAD
-use PHPUnit\Framework\Assert;
-
-=======
 use Modules\Cms\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
@@ -19,7 +15,6 @@ use PHPUnit\Framework\Assert;
 // (base_quaeris_fila5#228).
 uses(TestCase::class);
 
->>>>>>> laraxot/dev
 describe('SectionResource', function (): void {
     test('section resource has correct model', function (): void {
         $resource = new SectionResource;

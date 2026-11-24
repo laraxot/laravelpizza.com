@@ -11,6 +11,10 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 
 use function Safe\base64_decode;
 
+/**
+ * @see docs/contracts/make-pdf-spatie-test-action.md
+ * @contract docs/contracts/make-pdf-spatie-test-action.md
+ */
 class MakePdfSpatieTestAction
 {
     use QueueableAction;

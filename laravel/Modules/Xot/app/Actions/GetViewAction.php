@@ -8,6 +8,10 @@ use Illuminate\Support\Str;
 use Modules\Xot\Actions\File\FixPathAction;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/get-view-action.md
+ * @contract docs/contracts/get-view-action.md
+ */
 class GetViewAction
 {
     use QueueableAction;

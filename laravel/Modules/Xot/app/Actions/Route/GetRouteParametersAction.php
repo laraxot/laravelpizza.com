@@ -8,6 +8,10 @@ use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Route as RouteFacade;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/get-route-parameters-action.md
+ * @contract docs/contracts/get-route-parameters-action.md
+ */
 class GetRouteParametersAction
 {
     use QueueableAction;

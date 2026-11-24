@@ -172,8 +172,6 @@ discussions: []
 - Serial validation in progress (due to parallel memory issues)
 - Commit: ce9b4a8eb
 
-<<<<<<< HEAD
-=======
 ## Versione unita da `swarm-phpstan-random-2026-06-16.md` (2026-06-16)
 
 # Swarm PHPStan Random Analysis — 2026-06-16
@@ -338,4 +336,3 @@ discussions: []
 - Documentation updated
 - Serial validation in progress (due to parallel memory issues)
 - Commit: ce9b4a8eb
->>>>>>> laraxot/dev

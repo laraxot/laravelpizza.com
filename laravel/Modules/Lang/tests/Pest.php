@@ -7,14 +7,6 @@ use Modules\Lang\Actions\ReadTranslationFileAction;
 use Modules\Lang\Database\Factories\TranslationFactory;
 use Modules\Lang\Models\BaseModel;
 use Modules\Lang\Models\Translation;
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Modules\Lang\Providers\LangServiceProvider;
-use Modules\Lang\Tests\TestCase;
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
 use PHPUnit\Framework\Assert;
 
 use function Safe\file_put_contents;
@@ -69,21 +61,9 @@ function makeLangBaseModel(): BaseModel
     };
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-function makeLangServiceProvider(): LangServiceProvider
-{
-    return TestCase::makeLangServiceProvider();
-=======
 function makeLangServiceProvider(): Modules\Lang\Providers\LangServiceProvider
 {
     return Modules\Lang\Tests\TestCase::makeLangServiceProvider();
->>>>>>> laraxot/dev
-=======
-function makeLangServiceProvider(): Modules\Lang\Providers\LangServiceProvider
-{
-    return Modules\Lang\Tests\TestCase::makeLangServiceProvider();
->>>>>>> laraxot/dev
 }
 
 /** @return array<string, mixed> */
@@ -110,10 +90,3 @@ function makeReadTranslationFileAction(): ReadTranslationFileAction
 {
     return new ReadTranslationFileAction;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev

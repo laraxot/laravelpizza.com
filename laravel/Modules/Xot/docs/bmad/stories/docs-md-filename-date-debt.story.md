@@ -9,26 +9,12 @@ acceptance_criteria:
   - "Un canonico per argomento; duplicati → alias superseded_by"
   - "Nessuna data nel nuovo nome; data solo nel frontmatter"
 references:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   - bashscripts/docs/prompts/54-documentazione.md
   - bashscripts/docs/prompts/00-master-prompt.md
   - docs/wiki/rules/markdown-documentation-standard.md
 related:
   - ./prompts-standing-order-alignment-phpstan-wave.story.md
   - ./docs-prompts-reorganization.story.md
-=======
->>>>>>> laraxot/dev
-  - bashscripts/docs/prompts/30-documentation-standards.md
-  - bashscripts/docs/prompts/00-master-prompt.md
-  - docs/wiki/rules/markdown-documentation-standard.md
-related:
-  - ./phpstan-modules-swarm-session.story.md
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ---
 
 # Docs md filename date debt
@@ -103,8 +89,6 @@ Link interni Lang: nessuno da riscrivere.
   (User 570, IR 104, Activity 79, Rating 61, ICL 44, Xot 36, Media 28, Lang 27).
   Recovery HEAD → `D=0`. Moratoria rename docs; STOP aggiornato. I `git mv` validi
   (es. `*-historical.md`) restano; non rilanciare guardian finché pre-flight pulito.
-<<<<<<< HEAD
-=======
 
 ### Spot-check 2026-11-23 (docs-guardian, no rename)
 
@@ -118,4 +102,3 @@ Ambito: moduli con errori PHPStan attesi (AI / Notify / Xot). Solo inventario; m
 | **Themes/Zero** | Ancora `f1-world-champion-2026-theme-analysis.md` + story dated `quality-gates-phpstan-swarm-2026-09-23.story.md` (lane dedicata, non mass-rename). |
 
 Prossimo (quando hygiene stabile): wave Notify indici (un canonico + link) e Xot `consolidated/phpstan` fuse/alias; Themes Zero F1 `git mv` singolo. Refs: [prompts-standing-order-alignment-phpstan-wave.story.md](./prompts-standing-order-alignment-phpstan-wave.story.md).
->>>>>>> laraxot/dev

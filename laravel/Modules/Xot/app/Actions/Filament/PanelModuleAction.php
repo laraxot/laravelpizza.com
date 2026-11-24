@@ -16,6 +16,8 @@ use Webmozart\Assert\Assert;
 
 /**
  * Lettura config modulo nwidart da un Filament Panel (funzioni pure — non QueueableAction).
+ * @see docs/contracts/panel-module-action.md
+ * @contract docs/contracts/panel-module-action.md
  */
 final class PanelModuleAction
 {

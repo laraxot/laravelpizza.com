@@ -24,8 +24,6 @@ Questa cartella contiene gli standard di codice e le convenzioni utilizzate nel 
 Questi standard si applicano a tutti i moduli del progetto e devono essere seguiti per mantenere la coerenza del codice.
 
 ## Collegamenti tra versioni di README.md
-<<<<<<< HEAD
-=======
 * [README.md](docs/laravel-app/phpstan/readme.md)
 * [README.md](docs/laravel-app/readme.md)
 * [README.md](docs/moduli/struttura/readme.md)
@@ -93,7 +91,6 @@ Questi standard si applicano a tutti i moduli del progetto e devono essere segui
 * [README.md](../../../patient/docs/standards/readme.md)
 * [README.md](../../../patient/docs/value-objects/readme.md)
 
->>>>>>> laraxot/dev
 * [README.md](docs/laravel-app/phpstan/README.md)
 * [README.md](docs/laravel-app/README.md)
 * [README.md](docs/moduli/struttura/README.md)

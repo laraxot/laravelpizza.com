@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Log;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/copy-action.md
+ * @contract docs/contracts/copy-action.md
+ */
 class CopyAction
 {
     use QueueableAction;

@@ -7,6 +7,10 @@ namespace Modules\Xot\Actions\Model;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/get-sicure-array-by-model-action.md
+ * @contract docs/contracts/get-sicure-array-by-model-action.md
+ */
 class GetSicureArrayByModelAction
 {
     use QueueableAction;

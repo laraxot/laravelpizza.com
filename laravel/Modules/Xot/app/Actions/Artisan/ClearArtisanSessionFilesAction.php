@@ -9,6 +9,8 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Replaces Modules\Xot\Services\ArtisanService::sessionClear().
+ * @see docs/contracts/clear-artisan-session-files-action.md
+ * @contract docs/contracts/clear-artisan-session-files-action.md
  */
 class ClearArtisanSessionFilesAction
 {

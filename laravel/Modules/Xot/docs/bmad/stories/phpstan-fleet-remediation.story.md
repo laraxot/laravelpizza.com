@@ -1,28 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_2oHWxL
----
-title: "PHPStan fleet remediation — 2026-10-06"
-qmd: "xot bmad stories phpstan fleet remediation story md"
-type: note
-tags: [documentation]
-module: Xot
-bmad: true
-status: active
----
-
-=======
->>>>>>> laraxot/dev
-=======
 ---
 title: "Xot - phpstan-fleet-remediation-2026-10-06.story.md"
 module: Xot
 bmad: true
 status: active
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_zXCJ1F
->>>>>>> laraxot/dev
 # PHPStan fleet remediation — 2026-10-06
 
 ## Epic

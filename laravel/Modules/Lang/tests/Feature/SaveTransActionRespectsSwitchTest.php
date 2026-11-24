@@ -28,15 +28,7 @@ it('non scrive niente quando la scrittura delle chiavi mancanti e spenta', funct
     $after = is_file($target) ? file_get_contents($target) : null;
 
     expect($after)->toBe($before);
-<<<<<<< HEAD
-<<<<<<< HEAD
-});
-=======
 })->group('LANG-SAVETRANS-INV-3');
->>>>>>> laraxot/dev
-=======
-})->group('LANG-SAVETRANS-INV-3');
->>>>>>> laraxot/dev
 
 it('sotto test non scrive nemmeno senza configurazione esplicita', function (): void {
     // Il caso che conta: nessuno ha impostato niente, e la suite non deve comunque
@@ -49,12 +41,4 @@ it('sotto test non scrive nemmeno senza configurazione esplicita', function (): 
     app(SaveTransAction::class)->execute('lang::lang.altra_chiave_assente.label', 'valore');
 
     expect(is_file($target) ? file_get_contents($target) : null)->toBe($before);
-<<<<<<< HEAD
-<<<<<<< HEAD
-});
-=======
 })->group('LANG-SAVETRANS-INV-1');
->>>>>>> laraxot/dev
-=======
-})->group('LANG-SAVETRANS-INV-1');
->>>>>>> laraxot/dev

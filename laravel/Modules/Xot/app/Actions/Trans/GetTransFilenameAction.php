@@ -8,6 +8,10 @@ use Illuminate\Support\Str;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/get-trans-filename-action.md
+ * @contract docs/contracts/get-trans-filename-action.md
+ */
 class GetTransFilenameAction
 {
     public function execute(string $filename): string

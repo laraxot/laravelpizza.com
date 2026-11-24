@@ -8,6 +8,10 @@ use Spatie\QueueableAction\QueueableAction;
 use Spipu\Html2Pdf\Exception\Html2PdfException;
 use Spipu\Html2Pdf\Html2Pdf;
 
+/**
+ * @see docs/contracts/generate-pdf-action.md
+ * @contract docs/contracts/generate-pdf-action.md
+ */
 final class GeneratePdfAction
 {
     use QueueableAction;

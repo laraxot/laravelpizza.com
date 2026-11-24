@@ -11,6 +11,10 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/get-views-siblings-and-self-action.md
+ * @contract docs/contracts/get-views-siblings-and-self-action.md
+ */
 class GetViewsSiblingsAndSelfAction
 {
     use QueueableAction;

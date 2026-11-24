@@ -23,14 +23,6 @@ Ogni modulo Laraxot ha `app/Actions/` (800 classi nel checkout del 2026-11-24) e
 quelle esistenti copia la forma del file più vicino: se il vicino è un Service, nasce un Service nuovo.
 Che forma ha un'operazione applicativa nuova, sapendo che i Services legacy restano finché qualcuno non li migra?
 
-## Driver della decisione
-
-- Un'operazione = un file: il contratto di comportamento e i suoi test hanno un solo bersaglio, citato con `@contract`.
-- L'autorizzazione sta in una Policy, visibile nel punto che avvia l'operazione, non sparsa nei Service.
-- Transazione e audit stanno nello stesso punto dell'operazione, così si vedono in revisione.
-- Nessuna riscrittura forzata del legacy: i Services in produzione funzionano e hanno chiamanti; la loro correzione
-  non è un prerequisito per scrivere codice nuovo nella forma giusta.
-
 ## Decisione
 
 - Ogni operazione applicativa nuova è una classe in `Modules/<Modulo>/app/Actions/<Area>/<Verbo><Oggetto>Action.php`
@@ -57,15 +49,6 @@ Che forma ha un'operazione applicativa nuova, sapendo che i Services legacy rest
 - Buono: la stessa Action gira sincrona, in coda, da Filament, da console.
 - Cattivo: per un periodo convivono due stili in AI, Geo e Job; chi legge `app/` deve sapere che i Services sono debito.
 - Cattivo: molte classi piccole; serve la disciplina del nome (`<Verbo><Oggetto>Action`) per ritrovarle.
-
-## Conferma
-
-- In revisione: una classe nuova sotto `app/Services/`, o un metodo pubblico nuovo in un Service legacy, si respinge
-  con un rimando a questo ADR.
-- Ogni Action applicativa usa il trait `Spatie\QueueableAction\QueueableAction`; non si introduce un Job Laravel
-  parallelo per la stessa operazione ([queueable-actions-over-jobs](queueable-actions-over-jobs.md)).
-- Ogni Action nuova che scrive dati, chiama servizi esterni o ha effetti collaterali ha `@contract` nel docblock e il
-  suo contratto in `docs/contracts/` ([contract-docblock-reference](contract-docblock-reference.md)).
 
 ## Verifica
 

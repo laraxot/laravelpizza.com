@@ -153,8 +153,6 @@ resolver del modulo) — non cancellato: la storia delle decisioni resta.
 - Second brain: initiative Hindsight `kp-8acd5914cdc14a178e18f52d8f8540d8`
   (audit FO produzione) — questo lavoro è un item dell'audit.
 
-<<<<<<< HEAD
-=======
 ## Decisione layout asset Filament
 
 `Head` e `Foot` non espongono più `panelAssets`: nessun caller valorizzava la prop
@@ -170,7 +168,6 @@ Marker nested in `head.blade.php`, `foot.blade.php` e
 contratto «sempre emesso» (niente guard `$panelAssets`): allinea Blade, test e
 questa decisione. Fonte: `../bmad/filament-layout-styles-scripts.md`.
 
->>>>>>> laraxot/dev
 ---
 
 ## Verifica indipendente e misure (seconda sessione, 2026-11-11)

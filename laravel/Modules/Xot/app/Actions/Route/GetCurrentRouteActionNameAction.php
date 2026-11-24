@@ -7,6 +7,10 @@ namespace Modules\Xot\Actions\Route;
 use Illuminate\Support\Str;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/get-current-route-action-name-action.md
+ * @contract docs/contracts/get-current-route-action-name-action.md
+ */
 class GetCurrentRouteActionNameAction
 {
     use QueueableAction;

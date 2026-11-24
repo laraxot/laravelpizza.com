@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\File;
 use Nwidart\Modules\Exceptions\ModuleNotFoundException;
 
+/**
+ * @see docs/contracts/get-module-path-by-generator-action.md
+ * @contract docs/contracts/get-module-path-by-generator-action.md
+ */
 class GetModulePathByGeneratorAction
 {
     public function execute(string $moduleName, string $generatorPath): string

@@ -8,17 +8,7 @@ use Illuminate\Support\Facades\Session;
 use Modules\UI\Enums\TableLayoutEnum;
 
 /**
- * Layout tabella legacy in sessione (chiave `table_layout`, default GRID) con `refreshTable()` e
- * `resetTable()` per i componenti Livewire.
- *
- * Nessuna classe di `app/` lo usa, in nessun progetto: lo esercitano solo i test del modulo
- * (`UiGapCloser100Test`, `UiHighestMissCoverageTest`). Il trait vivo, usato da `HasTableLayoutPage` e
- * `TableLayoutToggleTableAction`, e' `Modules\UI\Filament\Actions\Table\TableLayoutTrait` (chiave
- * `table_layout_{id}`, default LIST): i due non si fondono senza cambiare chiave di sessione e default.
- *
- * @see Modules/UI/docs/risoluzione-conflitti-tablelayouttrait.md perche' due trait e perche' questo resta
- *
- * @phpstan-ignore trait.unused (API legacy del modulo condiviso, coperta dai test UI: si ritira solo con una decisione esplicita, insieme a quei due blocchi di test, non per chiudere l'errore.)
+ * @phpstan-ignore trait.unused (API del modulo condiviso: in laravelpizza nessuna classe lo usa, altri progetti sì. Si toglie solo se il trait viene ritirato.)
  */
 trait TableLayoutTrait
 {

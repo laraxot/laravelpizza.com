@@ -12,6 +12,10 @@ use Spatie\QueueableAction\QueueableAction;
 use Staudenmeir\LaravelAdjacencyList\Eloquent\Collection as TreeCollection;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/get-tree-options-by-model-class-action.md
+ * @contract docs/contracts/get-tree-options-by-model-class-action.md
+ */
 class GetTreeOptionsByModelClassAction
 {
     use QueueableAction;

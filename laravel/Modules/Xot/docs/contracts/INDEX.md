@@ -1,51 +1,53 @@
 ---
-title: Xot behavioral contract index
----
-
-# Xot behavioral contract index
-
-This is the machine-readable inventory of behavioral contracts owned by the **Xot** module.
-
-A contract describes an existing public operation or boundary. It names the owner, input, output, stable invariants, side effects and their order, errors, and non-goals. Every invariant gets a stable ID and a Pest group when a test exists; missing coverage is recorded as debt instead of being implied away.
-
-## Contracts
-
-- [Bootstrap provider registry](bootstrap-provider-registry.md)
-
-- [contract-authoring-standard](contract-authoring-standard.md)
-- [xotbase-classes](xotbase-classes.md)
-
-## Authoring
-
-Use [Xot contract authoring standard](../../Xot/docs/contracts/contract-authoring-standard.md) and the shared template. Legacy behavior is documented as-is and is not a model for new code.
-
----
-title: "INDEX — Xot"
+title: "Indice contract — Xot"
 type: index
 status: active
+owner: Xot
 created: 2026-11-23
-updated: 2026-11-23
-decision-makers: []
+updated: 2026-11-24
+qmd: "xot contract indice invarianti pest group coperto non coperto backlog contract action"
 ---
 
-<!-- File: docs/contracts/INDEX.md · formato MADR breve. -->
-# <!-- Titolo: indice operativo Xot -->
+# Indice contract — Xot
 
-## Contratti di comportamento
+Inventario dei contratti comportamentali del pacchetto **Xot**. Un contratto descrive un'operazione o un confine pubblico esistente; ogni invariante ha un ID stabile e, se esiste un test, un gruppo Pest con lo stesso ID. L'assenza di copertura è dichiarata, non sottintesa. Formato: [contract-authoring-standard](contract-authoring-standard.md), [README](README.md), decisione [ADR 0012](../adr/0012-behavioral-contract-governance.md).
 
-Xot è il modulo base: estende `XotBasePage`, `XotBaseResource`, `XotBaseServiceProvider`,
-`XotBaseMigration` e i relativi RelationManager. I contratti qui descritti sono la
-superficie di estensione per tutti i moduli figli.
+Verifica di un invariante: `rg -n "group\('<ID>'\)" laravel/Modules/Xot/tests`; esecuzione: `vendor/bin/pest --group=<ID>` da `laravel/`.
 
-| Operazione | Contract | Classe | Invarianti |
+## Contract
+
+| Contract | Owner / classe | Invarianti | Stato copertura |
 |---|---|---|---|
-| Bootstrap provider registry | [bootstrap-provider-registry](bootstrap-provider-registry.md) | `Modules\Xot\Providers\XotServiceProvider` | BOOTSTRAP-PROVIDERS-001..003 |
-| XotBase class surface | [xotbase-classes](xotbase-classes.md) | `XotBasePage`, `XotBaseResource`, `XotBaseServiceProvider`, `XotBaseMigration` | XOTBASE-001..004 |
-| Behavioral contract authoring | [behavioral-contract-template](behavioral-contract-template.md) | template standard | CONTRACT-AUTHOR-001 |
-| Contract authoring standard | [contract-authoring-standard](contract-authoring-standard.md) | standard | CONTRACT-AUTHOR-002 |
+| [bootstrap-provider-registry](bootstrap-provider-registry.md) | `bootstrap/providers.php` (registro provider Laravel) | `BOOTSTRAP-PROVIDERS-001`, `BOOTSTRAP-PROVIDERS-002`, `BOOTSTRAP-PROVIDERS-003` | non coperto (nessun `group('...')` con questi ID in `Modules/Xot/tests`) |
+| [xotbase-classes](xotbase-classes.md) | famiglia `XotBase*` (`XotBaseResource`, `XotBaseModel`, `XotBasePolicy`, `XotBaseServiceProvider`, `XotBaseMigration`, `XotBaseTestCase`) | nessun ID dichiarato nel file | non coperto: contratto narrativo senza invarianti con ID |
 
-- [README dei contratti](README.md) — indice e convenzioni storiche del package.
-- [Standard di authoring](contract-authoring-standard.md) — regole di formato e
-  verifica.
-- [Regola Action Behavioral Contract](../rules/action-behavioral-contract.md) —
-  quando il contratto è obbligatorio.
+## Documenti di metodo (non sono contract)
+
+Non contengono invarianti propri e non vanno contati come contract.
+
+- [contract-authoring-standard](contract-authoring-standard.md) — standard di authoring (tipo `standard`).
+- [behavioral-contract-template](behavioral-contract-template.md), [0000-template](0000-template.md), [_template](_template.md) — modelli; gli ID `MODULE-INV-1` e `<SCOPE>-INV-1` sono segnaposto, **non coperto** e da non citare.
+- [README](README.md) — convenzioni storiche del pacchetto.
+- [Regola Action Behavioral Contract](../rules/action-behavioral-contract.md) — quando il contract è obbligatorio.
+
+## Stato di copertura
+
+| ID | Contract | Gruppo Pest | Stato |
+|---|---|---|---|
+| `BOOTSTRAP-PROVIDERS-001` | bootstrap-provider-registry | assente | non coperto |
+| `BOOTSTRAP-PROVIDERS-002` | bootstrap-provider-registry | assente | non coperto |
+| `BOOTSTRAP-PROVIDERS-003` | bootstrap-provider-registry | assente | non coperto |
+| `MODULE-INV-1` | modello (segnaposto) | assente | non coperto |
+
+Divergenza docs-codice rilevata il 2026-11-24: `BOOTSTRAP-PROVIDERS-001` (e [ADR 0009](../adr/0009-laravel-bootstrap-provider-registry.md)) dicono che `bootstrap/providers.php` contiene solo `AppServiceProvider`, ma il file in `laravel/bootstrap/providers.php` elenca anche `App\Providers\Filament\AdminPanelProvider`. Va deciso se correggere il contract o il file; in attesa il contract non è verificato. Il test `Modules/Xot/tests/Unit/Bootstrap/FolioProviderNotRegisteredTest.php` controlla solo l'assenza di `FolioServiceProvider` e non copre nessun ID.
+
+Divergenza di formato: il [README](README.md) prescrive ID `<OWNER>-<OPERAZIONE>-INV-<N>`, il template `<SCOPE>-INV-<N>`; gli ID del contract bootstrap (`BOOTSTRAP-PROVIDERS-00N`) seguono un terzo schema. Quando si scrive il primo test si allineano.
+
+## Backlog contract
+
+Nessun contract nuovo in questo giro. Xot ha **238 file** in `app/Actions`, nessun contract di Action e nessun marker `@contract` nei docblock (`rg -c "@contract" app/Actions` vuoto). Contract da scrivere per rischio decrescente, solo dove il codice lo dimostra:
+
+- Action che scrivono su filesystem o config: `SavePhpArrayAction` (`app/Actions/Arr`), azioni in `Actions/File`, `Actions/Config`, `Actions/Composer`, `Actions/Artisan`.
+- Action sul confine con i tenant: `GetTenantConfigArrayAction`.
+- Invarianti di `XotBaseMigration` (`tableCreate()` / `tableUpdate()`, forward-only) già descritte in [xotbase-classes](xotbase-classes.md): da estrarre con ID e gruppo Pest.
+- Le restanti Action di lettura/trasformazione non hanno effetti collaterali e restano fuori scopo ([ADR 0011](../adr/0011-contract-docblock-reference.md)).

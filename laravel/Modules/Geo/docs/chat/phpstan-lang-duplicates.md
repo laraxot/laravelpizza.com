@@ -56,8 +56,6 @@ discussions: []
 **Prossimi step:**
 - Monitorare Lang per ricorrenza di duplicate key
 - Continuare audit su altri moduli critici
-<<<<<<< HEAD
-=======
 
 ## Versione unita da `phpstan-lang-duplicates-2026-06-15.md` (2026-06-15)
 
@@ -108,4 +106,3 @@ discussions: []
 **Prossimi step:**
 - Monitorare Lang per ricorrenza di duplicate key
 - Continuare audit su altri moduli critici
->>>>>>> laraxot/dev

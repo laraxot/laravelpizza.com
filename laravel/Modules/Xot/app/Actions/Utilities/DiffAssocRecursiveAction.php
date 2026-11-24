@@ -6,6 +6,10 @@ namespace Modules\Xot\Actions\Utilities;
 
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/utilities-diff-assoc-recursive-action.md
+ * @contract docs/contracts/utilities-diff-assoc-recursive-action.md
+ */
 class DiffAssocRecursiveAction
 {
     use QueueableAction;

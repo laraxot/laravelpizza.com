@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Http;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/get-products-array-dummy-action.md
+ * @contract docs/contracts/get-products-array-dummy-action.md
+ */
 class GetProductsArrayDummyAction
 {
     use QueueableAction;

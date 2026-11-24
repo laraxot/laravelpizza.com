@@ -14,6 +14,8 @@ use Webmozart\Assert\Assert;
  *
  * `XotBasePanelProvider` rende predefinito il pannello del modulo principale: indicarne uno senza pannello
  * lascerebbe il sito senza pannello predefinito, per questo la SettingPage offre solo questi.
+ * @see docs/contracts/list-main-module-candidates-action.md
+ * @contract docs/contracts/list-main-module-candidates-action.md
  */
 final class ListMainModuleCandidatesAction
 {

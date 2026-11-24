@@ -10,6 +10,10 @@ use Modules\Xot\Datas\XotData;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/get-trans-key-action.md
+ * @contract docs/contracts/get-trans-key-action.md
+ */
 class GetTransKeyAction
 {
     use QueueableAction;

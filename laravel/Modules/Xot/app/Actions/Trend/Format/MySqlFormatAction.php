@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Trend\Format;
 
+/**
+ * @see docs/contracts/my-sql-format-action.md
+ * @contract docs/contracts/my-sql-format-action.md
+ */
 class MySqlFormatAction extends BaseFormatAction
 {
     #[\Override]

@@ -8,6 +8,10 @@ use Illuminate\Support\Str;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/view-path-action.md
+ * @contract docs/contracts/view-path-action.md
+ */
 class ViewPathAction
 {
     use QueueableAction;

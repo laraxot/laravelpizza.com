@@ -5,11 +5,8 @@ status: review
 epic: quality-gates
 references:
   - ./fleet-blocking-merge-conflict-markers.story.md
-<<<<<<< HEAD
-=======
 
 - ./fleet-blocking-merge-conflict-markers-20260929.story.md
->>>>>>> laraxot/dev
   - ../../../../../../bashscripts/ai/wiki/memories/phpstan-bootstrap-merge-file-markers.md
 ---
 

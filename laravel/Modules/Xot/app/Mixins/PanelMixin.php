@@ -8,7 +8,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-use Nwidart\Modules\Facades\Module;
+use Nwidart\Modules\Contracts\RepositoryInterface as ModuleRepositoryContract;
 use Nwidart\Modules\Module as NwidartModule;
 use Webmozart\Assert\Assert;
 
@@ -45,7 +45,7 @@ class PanelMixin
         return function (): ?NwidartModule {
             $name = $this->getName();
 
-            return Module::find($name) ?: null;
+            return app(ModuleRepositoryContract::class)->find($name);
         };
     }
 

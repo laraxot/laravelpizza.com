@@ -6,6 +6,10 @@ namespace Modules\Xot\Actions;
 
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/array-action.md
+ * @contract docs/contracts/array-action.md
+ */
 class ArrayAction
 {
     use QueueableAction;

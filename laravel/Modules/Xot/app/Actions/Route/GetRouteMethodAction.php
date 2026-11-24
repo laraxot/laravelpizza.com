@@ -12,6 +12,9 @@ use Spatie\QueueableAction\QueueableAction;
  *
  * Standalone pure helper (independently tested), kept as its own Action
  * rather than folded into RegisterDynamicRoutesAction.
+ *
+ * @see docs/contracts/get-route-method-action.md
+ * @contract docs/contracts/get-route-method-action.md
  */
 class GetRouteMethodAction
 {
