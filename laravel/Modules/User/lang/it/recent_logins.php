@@ -73,43 +73,43 @@ return [
     'actions' => [
         'reorderRecords' => [
             'icon' => 'reorderRecords',
-            'label' => 'reorderRecords',
+            'label' => 'Riordina',
         ],
         'openColumnManager' => [
             'icon' => 'openColumnManager',
-            'label' => 'openColumnManager',
+            'label' => 'Gestisci colonne',
         ],
         'applyTableColumnManager' => [
             'icon' => 'applyTableColumnManager',
-            'label' => 'applyTableColumnManager',
+            'label' => 'Applica colonne',
         ],
         'resetFilters' => [
             'icon' => 'resetFilters',
-            'label' => 'resetFilters',
+            'label' => 'Reimposta filtri',
         ],
         'applyFilters' => [
             'icon' => 'applyFilters',
-            'label' => 'applyFilters',
+            'label' => 'Applica filtri',
         ],
         'openFilters' => [
             'icon' => 'openFilters',
-            'label' => 'openFilters',
+            'label' => 'Apri filtri',
         ],
         'resetColumnManager' => [
             'icon' => 'resetColumnManager',
-            'label' => 'resetColumnManager',
+            'label' => 'Reimposta colonne',
         ],
         'delete' => [
             'icon' => 'delete',
-            'label' => 'delete',
+            'label' => 'Elimina',
         ],
         'layout' => [
             'icon' => 'layout',
-            'label' => 'layout',
+            'label' => 'Layout',
         ],
         'create' => [
             'icon' => 'create',
-            'label' => 'create',
+            'label' => 'Crea',
         ],
     ],
     'navigation' => [

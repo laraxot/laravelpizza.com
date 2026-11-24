@@ -22,6 +22,14 @@ status: draft
 
 # Git — inventario conflitti merge (User)
 
+## Stato 2026-11-24 (post merge_remote_repo_2)
+
+- `module.json` valido (providers User+AdminPanel+Passport+Socialite, requires Xot+UI).
+- `app/**/*.php`: **0** marker `<<<<<<<` (incl. `HasTeams.php`).
+- Lang: dedup `array.duplicateKey` su overview widgets, oauth PAC, password_resets, base_profile(s); parse mashup `attach_role`/`user_section`/`passport_stats` ripuliti.
+- Verify: `php artisan about --only=environment` OK; `phpstan analyse Modules/User` → `errors=0`, `file_errors=0`.
+- Restano marker in `docs/` e `tests/` (fuori scope boot/PHPStan: tests esclusi da `phpstan.neon`).
+
 ## Stato 2026-11-16
 
 - Marker PHP User risolti (bootstrap `UserServiceProvider` + BaseUser/BaseTenant/Socialite/UserForm):

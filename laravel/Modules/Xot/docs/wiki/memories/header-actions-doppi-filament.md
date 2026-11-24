@@ -62,3 +62,18 @@ le azioni di contesto della tabella. Ma va deciso con l'utenza aperta.
   il duplicato.
 - **NON** assumere che `getTableHeaderActions()` sia "quello vecchio": è public per un motivo
   preciso documentato nel docblock del trait.
+
+## Stato attuale di `XotBaseListRecords::getHeaderActions()`
+
+Il metodo non e' piu' il semplice `['create' => CreateAction::make()->icon('heroicon-o-plus')]` descritto sopra
+(la decisione "quale header sopravvive" resta aperta). Oggi:
+
+1. Se la risorsa non ha la pagina `create` (es. moderazione commenti) ritorna `[]`: altrimenti `getUrl('create')`
+   lancia `RouteNotFound` e l'elenco va in 500.
+2. Altrimenti ritorna `['create' => CreateAction]` con icona, `visible` su `Resource::canCreate()` e `url` con
+   `returnTo` (`RecordAnchor`); l'etichetta e' quella del modulo (`<modulo>::<risorsa>.actions.create.label`) se
+   tradotta (`createActionLabel()`), altrimenti quella di Filament.
+
+Un merge tra storie aveva lasciato in coda a `createActionLabel()` il vecchio `return ['create' => ...]` della versione
+precedente di `getHeaderActions()`: era irraggiungibile (`deadCode.unreachable`) e privo di guardia e di etichetta;
+tenuta solo la versione corrente.

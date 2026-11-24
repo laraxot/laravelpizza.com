@@ -96,6 +96,8 @@ trait RelationX
      * @param  class-string<TRelatedModel>  $related
      * @param  class-string<TPivot>|null  $pivotClass  Concrete pivot class; inferred from convention when null
      * @return MorphToMany<TRelatedModel, $this, ($pivotClass is null ? MorphPivot : TPivot), 'pivot'>
+     *
+     * @see Modules/Xot/docs/traits/relation-x.md
      */
     public function morphToManyX(
         string $related,

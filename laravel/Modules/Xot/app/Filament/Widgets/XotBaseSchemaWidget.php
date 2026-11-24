@@ -77,6 +77,9 @@ abstract class XotBaseSchemaWidget extends XotBaseWidget implements HasSchemas
         return [];
     }
 
+    /**
+     * @see Modules/Xot/docs/filament/xotbase-schema-widget.md
+     */
     public function form(Schema $schema): Schema
     {
         $formClass = static::formClass();
