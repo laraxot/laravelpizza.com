@@ -16,6 +16,17 @@ Grazie per voler contribuire a **LaravelPizza** / Laraxot.
 3. Rispetta PHPStan level 10, Pint, Folio+Volt per il frontoffice.
 4. Apri la PR con il template e collega l'issue.
 
+## Checklist per la prima PR
+
+Sei nuovo qui? Segui questa breve checklist per la tua prima pull request:
+
+- [ ] Fai un fork del repository e clona il tuo fork; non fare mai push diretto sul branch predefinito.
+- [ ] Crea un branch tematico (`docs/...`, `fix/...` o `feature/...`).
+- [ ] Se hai modificato file PHP, esegui `vendor/bin/pint` e PHPStan livello 10 sui
+      file modificati (vedi [Code Standards](docs/contributing.md#code-standards)).
+- [ ] Compila il [template della pull request](.github/pull_request_template.md), collega
+      l'issue (`Closes #...`) e apri la PR dal tuo fork.
+
 ## Perché le PR contano
 
 Questo progetto vuole essere un starter riusabile per meetup Laravel.
