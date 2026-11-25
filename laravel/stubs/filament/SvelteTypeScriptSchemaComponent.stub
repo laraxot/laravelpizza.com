@@ -1,7 +1,0 @@
-<script lang="ts">
-    import type { JsComponentProps } from '@filament/schemas/js-component'
-
-    let { configuration }: JsComponentProps<{ message?: string }> = $props()
-</script>
-
-<p>{configuration.message ?? 'Your component is ready.'}</p>
