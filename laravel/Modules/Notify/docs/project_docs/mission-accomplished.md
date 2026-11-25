@@ -3,15 +3,7 @@ title: "🎉 MISSION ACCOMPLISHED! 🏆"
 type: concept
 tags: [mission, accomplished]
 created: 2026-07-14
-<<<<<<< .merge_file_vzeLtN
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_SAsEAq
 qmd: "mission-accomplished 🎉 mission accomplished! 🏆"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

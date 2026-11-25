@@ -3,15 +3,7 @@ title: "send record notification action refactoring"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ofeskK
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_DLJ7A5
 qmd: "send record notification action refactoring"
 issues: []
 discussions: []
@@ -80,10 +72,6 @@ The `sendWhatsApp()` method was slightly different but still shared the core not
 ✅ **Type Safety**: Maintained strict typing throughout  
 ✅ **Backward Compatibility**: Public interface unchanged  
 ✅ **Laraxot Philosophy**: Follows established architectural patterns
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -96,11 +84,3 @@ qmd: "send record notification action refactoring"
 issues: []
 discussions: []
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
-<<<<<<< .merge_file_ofeskK
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_DLJ7A5

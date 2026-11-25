@@ -3,31 +3,7 @@ title: "agents overview"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_SNrff6
-<<<<<<< .merge_file_ohmOHr
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_iYmD4R
-=======
->>>>>>> .merge_file_IxQov3
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_SNrff6
-<<<<<<< .merge_file_ohmOHr
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_iYmD4R
-=======
->>>>>>> .merge_file_IxQov3
 qmd: "agents overview"
 issues: []
 discussions: []
@@ -258,66 +234,26 @@ vendor/bin/pest --coverage
 ## 📖 Quick Links
 
 ### Getting Started
-<<<<<<< HEAD
-<<<<<<< .merge_file_SNrff6
-<<<<<<< .merge_file_ohmOHr
 - [Coding Standards](../standards/agents-coding-standards.md)
 - [Module Architecture](../architecture/agents-module-architecture.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_qXG9tu
 - [Coding Standards](../standards/agents-coding-standards.md)
 - [Module Architecture](../architecture/agents-module-architecture.md)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Coding Standards](../agents-coding-standards.md)
 - [Module Architecture](../agents-module-architecture.md)
 - [Coding Standards](../agents-coding-standards.md)
 - [Module Architecture](../agents-module-architecture.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_rWzNve
->>>>>>> laraxot/dev
-=======
-- [Coding Standards](../agents-coding-standards.md)
-- [Module Architecture](../agents-module-architecture.md)
->>>>>>> laraxot/dev
-=======
-=======
-<<<<<<< .merge_file_qXG9tu
 - [Coding Standards](../standards/agents-coding-standards.md)
 - [Module Architecture](../architecture/agents-module-architecture.md)
-=======
->>>>>>> laraxot/dev
 - [Coding Standards](../agents-coding-standards.md)
 - [Module Architecture](../agents-module-architecture.md)
 - [Coding Standards](../agents-coding-standards.md)
 - [Module Architecture](../agents-module-architecture.md)
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_rWzNve
->>>>>>> .merge_file_iYmD4R
-=======
-=======
-<<<<<<< .merge_file_qXG9tu
 - [Coding Standards](../standards/agents-coding-standards.md)
 - [Module Architecture](../architecture/agents-module-architecture.md)
-=======
->>>>>>> laraxot/dev
 - [Coding Standards](../agents-coding-standards.md)
 - [Module Architecture](../agents-module-architecture.md)
 - [Coding Standards](../agents-coding-standards.md)
 - [Module Architecture](../agents-module-architecture.md)
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_rWzNve
->>>>>>> .merge_file_IxQov3
->>>>>>> laraxot/dev
 - [Quality Gate](../workflow/agents-quality-gate.md)
 
 ### Critical Rules

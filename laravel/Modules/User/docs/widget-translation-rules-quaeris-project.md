@@ -16,9 +16,21 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_xLXxhJ
 status: draft
 ---
 
+=======
+---
+
+# Widget Translation Rules - Quaeris Project
+status: draft
+---
+
+# Widget Translation Rules - <nome progetto> Project
+---
+
+>>>>>>> .merge_file_CfFHu4
 # Widget Translation Rules - Quaeris Project
 
 ## Core Principles
@@ -134,6 +146,16 @@ class EditUserWidget extends XotBaseWidget
     <h2 class="text-xl font-semibold mb-4">
         {{ __('user::widgets.edit_user.title') }}
     </h2>
+<<<<<<< .merge_file_xLXxhJ
+=======
+
+    <p class="text-gray-600 mb-6">
+        {{ __('user::widgets.edit_user.description') }}
+    </p>
+
+    {{ $this->form }}
+
+>>>>>>> .merge_file_CfFHu4
     
     <p class="text-gray-600 mb-6">
         {{ __('user::widgets.edit_user.description') }}
@@ -207,6 +229,13 @@ protected static string $view = 'user::widgets.edit-user';
 - [User Module Widget Structure](widgets-structure-user.md)
 - [EditUserWidget Documentation](widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](widgets/translation-guidelines.md)
+<<<<<<< .merge_file_xLXxhJ
+=======
+- [Filament Widget Conventions](best-practices/filament-widgets.md)
+- [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
+- [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
+- [Filament Widget Conventions](best-practices/filament-widgets.md)
+>>>>>>> .merge_file_CfFHu4
 - [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
 
 ## Memory Integration
@@ -217,4 +246,11 @@ This document serves as a reference for:
 - Code quality requirements
 - Documentation standards
 
+<<<<<<< .merge_file_xLXxhJ
+=======
+All widget development should follow these rules to maintain consistency and quality across the <nome progetto> project.
+All widget development should follow these rules to maintain consistency and quality across the Quaeris project.
+All widget development should follow these rules to maintain consistency and quality across the Quaeris project.
+All widget development should follow these rules to maintain consistency and quality across the <nome progetto> project.
+>>>>>>> .merge_file_CfFHu4
 All widget development should follow these rules to maintain consistency and quality across the Quaeris project.

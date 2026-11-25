@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 ---
 title: "Implementazione Tailwind CSS nel Modulo Notify"
 type: note
 qmd: "tailwind implementation implementazione css notify"
 ---
-=======
->>>>>>> laraxot/dev
 # Implementazione Tailwind CSS nel Modulo Notify
 
 ## 1. Configurazione Base

@@ -3,15 +3,7 @@ title: "completion summary 2025 10 01"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_xLE52p
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_lh1TUZ
 qmd: "completion summary 2025 10 01"
 issues: []
 discussions: []
@@ -35,13 +27,6 @@ Diventare la piattaforma civic tech leader in Italia con:
 - **Test coverage >80%** per affidabilità
 - **Filament 4.x** per admin panel moderno
 
-<<<<<<< .merge_file_xLE52p
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_lh1TUZ
 ---
 
 title: "completion summary 2025 10 01"
@@ -75,18 +60,10 @@ discussions: []
 
 ---
 
-<<<<<<< .merge_file_xLE52p
-<<<<<<< HEAD
-=======
-=======
 ## 📊 Stato Attuale (2025-10-01)
 ### Moduli Principali
 ### Temi Principali
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_lh1TUZ
 ## ✅ Lavoro Completato Oggi
 
 ### 1. Code Quality Improvements

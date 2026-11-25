@@ -3,27 +3,7 @@ title: "design comuni homepage"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_rWvLdS
-<<<<<<< .merge_file_Z3b2SR
-<<<<<<< .merge_file_PtpDPx
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_4OAAKh
-=======
->>>>>>> .merge_file_XjsHgu
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_rWvLdS
-<<<<<<< .merge_file_Z3b2SR
->>>>>>> .merge_file_Kl1Pn1
-=======
->>>>>>> .merge_file_4OAAKh
-=======
->>>>>>> .merge_file_XjsHgu
 qmd: "design comuni homepage"
 issues: []
 discussions: []
@@ -75,28 +55,6 @@ La homepage di test ` /it/tests/homepage ` e' orchestrata da due livelli distint
 
 - [00-index.md](./00-index.md) - Indice del modulo Cms
 - [architecture/homepage-structure.md](./architecture/homepage-structure.md) - Architettura runtime aggiornata
-<<<<<<< .merge_file_rWvLdS
-<<<<<<< .merge_file_Z3b2SR
-<<<<<<< .merge_file_PtpDPx
 - [page-component-architecture-3.md](./page-component-architecture-3.md) - Architettura generale dei componenti pagina
-=======
-=======
->>>>>>> .merge_file_4OAAKh
-=======
->>>>>>> .merge_file_XjsHgu
-<<<<<<< HEAD
-- [page-component-architecture-3.md](./page-component-architecture-3.md) - Architettura generale dei componenti pagina
-=======
-<<<<<<< HEAD
 - [page-component-architecture-2.md](./page-component-architecture-2.md) - Architettura generale dei componenti pagina
-=======
 - [page-component-architecture-3.md](./page-component-architecture-3.md) - Architettura generale dei componenti pagina
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_rWvLdS
-<<<<<<< .merge_file_Z3b2SR
->>>>>>> .merge_file_Kl1Pn1
-=======
->>>>>>> .merge_file_4OAAKh
-=======
->>>>>>> .merge_file_XjsHgu

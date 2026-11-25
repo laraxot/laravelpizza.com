@@ -3,15 +3,7 @@ title: "tailwind blade components"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_kqSmWH
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_WWYBZX
 qmd: "tailwind blade components"
 issues: []
 discussions: []
@@ -21,10 +13,6 @@ discussions: []
 
 Questa guida mostra come creare Blade component riutilizzabili, accessibili e responsive usando pattern Tailwind CSS, secondo le best practice Webcrunch e le regole <nome progetto>.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "tailwind blade components"
@@ -63,13 +51,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 1. Button Component
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 2. Card Component
 
 **resources/views/components/card.blade.php**

@@ -414,5 +414,3 @@ return [
 **Versione**: 1.0.0
 
 
-
-

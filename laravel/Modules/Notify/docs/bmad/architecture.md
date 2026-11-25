@@ -3,31 +3,7 @@ title: "Notify: architecture"
 type: architecture
 tags: [notify, architecture, module-boundary, models, resources, channels]
 created: 2026-09-28
-<<<<<<< HEAD
-<<<<<<< .merge_file_uuncbG
-<<<<<<< .merge_file_F77U7N
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_bOuN04
-=======
->>>>>>> .merge_file_V47fhh
-updated: 2026-09-28
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_uuncbG
-<<<<<<< .merge_file_F77U7N
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_bOuN04
-=======
->>>>>>> .merge_file_V47fhh
 qmd: "Notify architettura componenti modelli risorse canali provider"
 related:
   - ./README.md
@@ -246,17 +222,6 @@ status: draft
 - [Epic channels](./epics/notification-channels.epic.md)
 - [Quick reference](./quick-reference.md)
 - [Setup guide](./setup-guide.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_uuncbG
-<<<<<<< .merge_file_F77U7N
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_bOuN04
-=======
->>>>>>> .merge_file_V47fhh
-- [BMAD method (Xot)](../wiki/bmad-method.md)
-=======
-<<<<<<< .merge_file_NhZGhy
 - [BMAD method (Xot)](../../Xot/docs/bmad-method.md)
 
 ## Evidenza audit 2026-11-16
@@ -280,16 +245,5 @@ cluster `Test`, tutte `SuperAdminOnlyTrait`).
 | Telegram | parziale: `TelegramChannel.php:26,34` TODO |
 | WhatsApp | parziale: `WhatsAppNotification.php:66` TODO |
 | Push Firebase | parziale: pagina test `SendFirebasePushNotificationPage.php:112` TODO |
-=======
 - [BMAD method (Xot)](../wiki/bmad-method.md)
->>>>>>> .merge_file_YUlKHn
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_uuncbG
-<<<<<<< .merge_file_F77U7N
-=======
 - [BMAD method (Xot)](../wiki/bmad-method.md)
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_bOuN04
-=======
->>>>>>> .merge_file_V47fhh

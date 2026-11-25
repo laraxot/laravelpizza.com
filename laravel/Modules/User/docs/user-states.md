@@ -11,6 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_9X52z1
 <<<<<<< .merge_file_o5dyZX
 <<<<<<< .merge_file_Xaxtn4
 qmd: "user states configurazione stati utente state"
@@ -19,6 +20,9 @@ qmd: "user states configurazione stati utente state"
 =======
 qmd: "user states configurazione stati utente state"
 >>>>>>> .merge_file_kkg2Jb
+=======
+qmd: "user states configurazione stati utente state"
+>>>>>>> .merge_file_GDH8tw
 ---
 # Configurazione Stati Utente (state)
 

@@ -3,21 +3,7 @@ title: "bash commands auto allow"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_4oDK8v
-<<<<<<< .merge_file_JuTEid
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_oMEBU7
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_4oDK8v
->>>>>>> .merge_file_hNyRfV
-=======
->>>>>>> .merge_file_oMEBU7
 qmd: "bash commands auto allow"
 issues: []
 discussions: []
@@ -30,10 +16,6 @@ discussions: []
 **Status**: ✅ PERMANENT RULE  
 **Priority**: CRITICAL
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "bash commands auto allow"
@@ -51,13 +33,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 Rule
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## ✅ ALWAYS ALLOW - No Confirmation Required
 
 ### File Operations (Read-Only)
@@ -182,44 +159,17 @@ File: `.qwen-code-rules.md`
 ## 🔗 Related Documentation
 
 ### AI Agents Docs
-<<<<<<< .merge_file_4oDK8v
-<<<<<<< .merge_file_JuTEid
-=======
 - **[Rules Index](00-index.md)** - All rules
->>>>>>> .merge_file_hNyRfV
 - **[Rules Index](00-index.md)** - All rules
-<<<<<<< HEAD
 - **[Rules Index](00-index.md)** - All rules
-=======
-<<<<<<< HEAD
-=======
 - **[Rules Index](00-index.md)** - All rules
->>>>>>> .merge_file_oMEBU7
 - **[Rules Index](00-index.md)** - All rules
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - **[XotBase Extension Rule](xotbase-extension-rule.md)** - XotBase philosophy
 
 ### Project Rules
 - **[Qwen Code Rules](../../.qwen-code-rules.md)** - Project-specific rules
 - **[AGENTS.md](../../agents.md)** - Project agents guide
-<<<<<<< .merge_file_4oDK8v
-<<<<<<< .merge_file_JuTEid
-<<<<<<< HEAD
 - **[AGENTS.md](../../agents.md)** - Project agents guide
-=======
-<<<<<<< HEAD
-- **[AGENTS.md](../../agents.md)** - Project agents guide
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- **[AGENTS.md](../../agents.md)** - Project agents guide
->>>>>>> .merge_file_hNyRfV
-=======
-- **[AGENTS.md](../../agents.md)** - Project agents guide
->>>>>>> .merge_file_oMEBU7
 
 ---
 

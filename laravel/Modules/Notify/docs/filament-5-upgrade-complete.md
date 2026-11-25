@@ -3,21 +3,7 @@ title: "Filament 5 Upgrade - COMPLETO ✅"
 type: concept
 tags: [filament, upgrade, complete]
 created: 2026-07-14
-<<<<<<< .merge_file_SdgQZM
-<<<<<<< .merge_file_PyLIKj
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_ExP4hO
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_SdgQZM
->>>>>>> .merge_file_1FAgWe
-=======
->>>>>>> .merge_file_ExP4hO
 qmd: "filament-5-upgrade-complete filament 5 upgrade - completo ✅"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -26,26 +12,14 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_SdgQZM
-<<<<<<< .merge_file_PyLIKj
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_1FAgWe
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_ExP4hO
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

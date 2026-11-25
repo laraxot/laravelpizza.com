@@ -45,6 +45,10 @@ Fase BMAD: implementazione chiusa, in attesa di revisione. Story scritta prima d
 
 ## Richiesta
 
+<<<<<<< .merge_file_esxNox
+=======
+L'utente ha rilanciato PHPStan dopo il fix dei fatal in Quaeris e ha chiesto di risolvere i 2 errori rimasti seguendo prima linee guida, documentazione, story, issue e discussion. Davanti a due strade ha risposto: seguire sempre cio' che dice la convenzione.
+>>>>>>> .merge_file_3oUhlW
 L'utente ha rilanciato PHPStan dopo il fix dei fatal in <nome progetto> e ha chiesto di risolvere i 2 errori rimasti seguendo prima linee guida, documentazione, story, issue e discussion. Davanti a due strade ha risposto: seguire sempre cio' che dice la convenzione.
 
 ```text
@@ -190,6 +194,10 @@ L'ultimo test monta il widget con Livewire e controlla che nell'HTML ci sia `wir
 
 PHPStan su tutto `Modules`, lo stesso comando dell'utente, finito alle 12:34 CEST: `exit=0`, nessun errore.
 
+<<<<<<< .merge_file_esxNox
+=======
+PHPMD: il modulo User non ha un ruleset. Con quello di Quaeris escono due note, entrambe in metodi non toccati e gia' presenti in `HEAD`:
+>>>>>>> .merge_file_3oUhlW
 PHPMD: il modulo User non ha un ruleset. Con quello di <nome progetto> escono due note, entrambe in metodi non toccati e gia' presenti in `HEAD`:
 
 ```text

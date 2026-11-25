@@ -3,36 +3,8 @@ title: "🔍 FIXCITY - GAP ANALYSIS & IMPLEMENTATION PLAN"
 type: concept
 tags: [gap, analysis, implementation]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_IExlYc
 updated: 2026-11-23
 qmd: "gap-analysis-implementation 🔍 fixcity - gap analysis & implementation plan"
-=======
-=======
-<<<<<<< .merge_file_Csp57c
-<<<<<<< .merge_file_3GVLzM
-updated: 2026-11-23
-qmd: "gap-analysis-implementation 🔍 fixcity - gap analysis & implementation plan"
-=======
-=======
->>>>>>> .merge_file_nQ1bzQ
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-07-14
-qmd: "gap-analysis-implementation 🔍 fixcity - gap analysis & implementation plan"
-qmd: "gap-analysis-implementation 🔍 ptv - gap analysis & implementation plan"
-=======
-updated: 2026-11-23
-qmd: "gap-analysis-implementation 🔍 fixcity - gap analysis & implementation plan"
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_HRLzHT
-=======
-<<<<<<< .merge_file_Csp57c
->>>>>>> .merge_file_03FjOT
-=======
->>>>>>> .merge_file_nQ1bzQ
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
@@ -40,34 +12,14 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< HEAD
-<<<<<<< .merge_file_IExlYc
-=======
-<<<<<<< .merge_file_Csp57c
-<<<<<<< .merge_file_3GVLzM
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
->>>>>>> .merge_file_HRLzHT
-=======
->>>>>>> .merge_file_03FjOT
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_nQ1bzQ
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

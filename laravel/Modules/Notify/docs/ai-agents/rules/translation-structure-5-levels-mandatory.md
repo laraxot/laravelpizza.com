@@ -3,21 +3,7 @@ title: "translation structure 5 levels mandatory"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Ryc9OI
-<<<<<<< .merge_file_8zgS5a
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_jyEC56
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Ryc9OI
->>>>>>> .merge_file_eiFQin
-=======
->>>>>>> .merge_file_jyEC56
 qmd: "translation structure 5 levels mandatory"
 issues: []
 discussions: []
@@ -30,10 +16,6 @@ discussions: []
 **Status**: ✅ CRITICAL RULE  
 **Priority**: BLOCKER
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "translation structure 5 levels mandatory"
@@ -53,13 +35,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 The Rule
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## ❌ WRONG Examples (NEVER DO THIS)
 
 ```blade

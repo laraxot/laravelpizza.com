@@ -3,15 +3,7 @@ title: "design conversion roadmap"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_zKPeuW
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_Ew3N4Z
 qmd: "design conversion roadmap"
 issues: []
 discussions: []
@@ -29,10 +21,6 @@ discussions: []
 **Last Updated**: 2026-04-03
 **Target**: Make all 54 test pages visually identical to Design Comuni reference using Tailwind CSS + Alpine.js
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "design conversion roadmap"
@@ -67,15 +55,10 @@ discussions: []
 - **Total**: 3-4 weeks (with parallel teams)
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## 📊 Executive Summary
 ### Current State
 ### Key Metrics
 ### Time Estimate
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## 🎯 Phase Breakdown
 
@@ -375,23 +358,12 @@ cat laravel/Themes/Sixteen/docs/visual-parity-data.json
 - **Design Comuni**: https://italia.github.io/design-comuni-pagine-statiche/
 - **Tailwind CSS**: https://tailwindcss.com/
 - **Alpine.js**: https://alpinejs.dev/
-<<<<<<< .merge_file_zKPeuW
-=======
 - **Internal Docs**: `laravel/Themes/Sixteen/docs/index.md`
 - **Tools Guide**: `bashscripts/docs/index.md`
->>>>>>> .merge_file_Ew3N4Z
 - **Internal Docs**: `laravel/Themes/Sixteen/docs/index.md`
 - **Tools Guide**: `bashscripts/docs/index.md`
-<<<<<<< HEAD
 - **Internal Docs**: `laravel/Themes/Sixteen/docs/index.md`
 - **Tools Guide**: `bashscripts/docs/index.md`
-=======
-<<<<<<< HEAD
-- **Internal Docs**: `laravel/Themes/Sixteen/docs/index.md`
-- **Tools Guide**: `bashscripts/docs/index.md`
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ---
 
@@ -403,11 +375,3 @@ node bashscripts/github/create-design-issues.mjs
 ```
 
 Then pick issue #1 and get coding! 🚀
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

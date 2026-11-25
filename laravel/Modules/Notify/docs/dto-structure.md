@@ -3,21 +3,7 @@ title: "dto structure"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_42GtyM
-<<<<<<< .merge_file_gluHfA
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_CigjeY
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_42GtyM
->>>>>>> .merge_file_MJ3R43
-=======
->>>>>>> .merge_file_CigjeY
 qmd: "dto structure"
 issues: []
 discussions: []

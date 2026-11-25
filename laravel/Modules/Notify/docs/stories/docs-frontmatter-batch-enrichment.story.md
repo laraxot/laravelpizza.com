@@ -1,15 +1,7 @@
 ---
 type: note
 tags: [documentation]
-<<<<<<< .merge_file_zA041M
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_1kSQ1P
 qmd: "docs frontmatter batch enrichment.story"
 issues: []
 discussions: []

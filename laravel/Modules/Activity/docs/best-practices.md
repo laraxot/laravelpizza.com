@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_NhjdI1
 # Best Practices – Activity
 
 ## Principi DRY/KISS
@@ -22,12 +16,6 @@
 ## Documentazione
 - Aggiorna `docs/INDEX.md` con nuovi modelli e relazioni.
 - Collega a `Projects` e `Tasks` per contesto operativo.
-=======
->>>>>>> .merge_file_uxNKiV
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ---
 title: "Best Practices – Activity"
 type: note
@@ -36,19 +24,7 @@ updated: 2026-10-08
 tags: [docs, activity]
 qmd: "best practices   activity activity"
 ---
-<<<<<<< .merge_file_pBiOAx
-<<<<<<< .merge_file_cbiSJ4
-<<<<<<< .merge_file_bosp9k
-<<<<<<< .merge_file_4aV1tF
 See canonical documentation: best-practices-3.md
-=======
-=======
->>>>>>> .merge_file_YudubE
-=======
->>>>>>> .merge_file_dMRMx1
-=======
->>>>>>> .merge_file_Xu8nKF
-<<<<<<< HEAD
 
 # Best Practices – Activity
 
@@ -67,12 +43,6 @@ See canonical documentation: best-practices-3.md
 
 ## Documentazione
 - Aggiorna `docs/00-index.md` con nuovi modelli e relazioni.
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_6yH1xN
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_NhjdI1
 # Best Practices – Activity
 
 ## Principi DRY/KISS
@@ -97,31 +67,5 @@ topic: best-practices
 canonical: ../../../Themes/docs/shared-components/best-practices-2.md
 ---
 
-=======
-<<<<<<< .merge_file_6yH1xN
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 See canonical documentation: ../../../Themes/docs/shared-components/best-practices-2.md
-=======
-=======
 See canonical documentation: best-practices-3.md
-<<<<<<< HEAD
->>>>>>> .merge_file_jtJt7D
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_uxNKiV
-=======
->>>>>>> .merge_file_jtJt7D
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_pBiOAx
-<<<<<<< .merge_file_cbiSJ4
-<<<<<<< .merge_file_bosp9k
->>>>>>> .merge_file_oMuuCW
-=======
->>>>>>> .merge_file_YudubE
-=======
->>>>>>> .merge_file_dMRMx1
-=======
->>>>>>> .merge_file_Xu8nKF

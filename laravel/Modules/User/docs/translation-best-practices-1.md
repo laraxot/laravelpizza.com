@@ -11,6 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_7fDviT
 <<<<<<< .merge_file_6FT4BI
 <<<<<<< .merge_file_aFptOX
 qmd: "translation best practices 1"
@@ -19,6 +20,9 @@ qmd: "translation best practices 1"
 =======
 qmd: "translation best practices 1"
 >>>>>>> .merge_file_YYtZVd
+=======
+qmd: "translation best practices 1"
+>>>>>>> .merge_file_87FVRH
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/translation-best-practices.md

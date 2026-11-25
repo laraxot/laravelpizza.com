@@ -7,10 +7,7 @@ module: Notify
 created: 2026-10-06
 updated: 2026-10-06
 tags: [notify, phpstan, enum, push, notification-log]
-<<<<<<< HEAD
 qmd: "phpstan cleanup notify story scopo codice"
-=======
->>>>>>> laraxot/dev
 ---
 
 # [STORY] PHPStan cleanup Notify

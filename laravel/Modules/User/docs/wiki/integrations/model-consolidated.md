@@ -224,6 +224,10 @@ Dopo le modifiche, eseguire:
 ## Collegamenti
 
 - [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+<<<<<<< .merge_file_XirlKT
+=======
+- [Regole Qualità Codice](../../code-quality.md)
+>>>>>>> .merge_file_wQfzgL
 - [BaseModel](../../../app/Models/BaseModel.php)
 - [BasePivot](../../../app/Models/BasePivot.php)
 - [BaseMorphPivot](../../../app/Models/BaseMorphPivot.php)
@@ -400,6 +404,10 @@ Dopo le modifiche, eseguire:
 ## Collegamenti
 
 - [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+<<<<<<< .merge_file_XirlKT
+=======
+- [Regole Qualità Codice](../../code-quality.md)
+>>>>>>> .merge_file_wQfzgL
 - [BaseModel](../../../app/Models/BaseModel.php)
 - [BasePivot](../../../app/Models/BasePivot.php)
 - [BaseMorphPivot](../../../app/Models/BaseMorphPivot.php)
@@ -576,6 +584,10 @@ Dopo le modifiche, eseguire:
 ## Collegamenti
 
 - [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+<<<<<<< .merge_file_XirlKT
+=======
+- [Regole Qualità Codice](../../code-quality.md)
+>>>>>>> .merge_file_wQfzgL
 - [BaseModel](../../../app/Models/BaseModel.php)
 - [BasePivot](../../../app/Models/BasePivot.php)
 - [BaseMorphPivot](../../../app/Models/BaseMorphPivot.php)
@@ -752,6 +764,10 @@ Dopo le modifiche, eseguire:
 ## Collegamenti
 
 - [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+<<<<<<< .merge_file_XirlKT
+=======
+- [Regole Qualità Codice](../../code-quality.md)
+>>>>>>> .merge_file_wQfzgL
 - [BaseModel](../../../app/Models/BaseModel.php)
 - [BasePivot](../../../app/Models/BasePivot.php)
 - [BaseMorphPivot](../../../app/Models/BaseMorphPivot.php)
@@ -1172,6 +1188,10 @@ Per verificare che non ci siano più modelli che estendono direttamente `Model`:
 
 ```bash
 cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
+<<<<<<< .merge_file_XirlKT
+=======
+cd /var/www/_bases/base_<nome progetto>_fila4_mono/laravel/Modules/User
+>>>>>>> .merge_file_wQfzgL
 grep -r "extends Model" app/Models/ --include="*.php" | grep -v "BaseModel\|BasePivot\|BaseMorphPivot"
 ```
 
@@ -1181,6 +1201,10 @@ Dopo le modifiche, eseguire:
 
 ```bash
 cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
+<<<<<<< .merge_file_XirlKT
+=======
+cd /var/www/_bases/base_<nome progetto>_fila4_mono/laravel/Modules/User
+>>>>>>> .merge_file_wQfzgL
 ./vendor/bin/phpstan analyse --memory-limit=2G
 ```
 
@@ -1718,6 +1742,10 @@ Dopo le modifiche, eseguire:
 ## Collegamenti
 
 - [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+<<<<<<< .merge_file_XirlKT
+=======
+- [Regole Qualità Codice](../../code-quality.md)
+>>>>>>> .merge_file_wQfzgL
 - [BaseModel](../../../app/Models/BaseModel.php)
 - [BasePivot](../../../app/Models/BasePivot.php)
 - [BaseMorphPivot](../../../app/Models/BaseMorphPivot.php)
@@ -2482,6 +2510,10 @@ Dopo le modifiche, eseguire:
 ## Collegamenti
 
 - [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+<<<<<<< .merge_file_XirlKT
+=======
+- [Regole Qualità Codice](../../code-quality.md)
+>>>>>>> .merge_file_wQfzgL
 - [BaseModel](../../../app/Models/BaseModel.php)
 - [BasePivot](../../../app/Models/BasePivot.php)
 - [BaseMorphPivot](../../../app/Models/BaseMorphPivot.php)
@@ -2662,6 +2694,10 @@ Per verificare che non ci siano più modelli che estendono direttamente `Model`:
 
 ```bash
 cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
+<<<<<<< .merge_file_XirlKT
+=======
+cd /var/www/_bases/base_<nome progetto>_fila4_mono/laravel/Modules/User
+>>>>>>> .merge_file_wQfzgL
 grep -r "extends Model" app/Models/ --include="*.php" | grep -v "BaseModel\|BasePivot\|BaseMorphPivot"
 ```
 
@@ -2671,6 +2707,10 @@ Dopo le modifiche, eseguire:
 
 ```bash
 cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
+<<<<<<< .merge_file_XirlKT
+=======
+cd /var/www/_bases/base_<nome progetto>_fila4_mono/laravel/Modules/User
+>>>>>>> .merge_file_wQfzgL
 ./vendor/bin/phpstan analyse --memory-limit=2G
 ```
 
@@ -2683,19 +2723,24 @@ cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
 
 ## Collegamenti
 
+<<<<<<< .merge_file_XirlKT
 <<<<<<< .merge_file_v7EcpL
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_wQfzgL
 - [Analisi Completa](./model-inheritance-analysis-3.md)
 - [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
-<<<<<<< .merge_file_Edg1kc
-=======
-=======
-<<<<<<< HEAD
 - [Analisi Completa](./model-inheritance-analysis-3.md)
+<<<<<<< .merge_file_XirlKT
 =======
 - [Analisi Completa](./MODEL_INHERITANCE_ANALYSIS.md)
 >>>>>>> .merge_file_BQMhDZ
 - [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+=======
+- [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
+- [Analisi Completa](./model-inheritance-analysis.md)
+- [Regole Qualità Codice](../../code-quality.md)
+>>>>>>> .merge_file_wQfzgL
 - [BaseModel](../../../app/Models/BaseModel.php)
 - [BasePivot](../../../app/Models/BasePivot.php)
 - [BaseMorphPivot](../../../app/Models/BaseMorphPivot.php)

@@ -11,6 +11,7 @@ related:
   - "./log.md"
   - "./overview.md"
   - "./socialite-architecture.md"
+<<<<<<< .merge_file_xKJhuq
 <<<<<<< .merge_file_5Ayvmd
 <<<<<<< .merge_file_S0pWNi
 qmd: "agents"
@@ -19,6 +20,9 @@ qmd: "agents"
 =======
 qmd: "agents"
 >>>>>>> .merge_file_4uf1P7
+=======
+qmd: "agents"
+>>>>>>> .merge_file_RoouaP
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/AGENTS-Modules.md

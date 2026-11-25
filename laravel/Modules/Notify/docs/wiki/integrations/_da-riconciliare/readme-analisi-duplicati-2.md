@@ -7,23 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_pXovsY
-=======
-<<<<<<< .merge_file_7W7h3O
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_fsQYsc
-=======
->>>>>>> .merge_file_zsS1Qq
->>>>>>> laraxot/dev
 ---
 
 # 🐄 Analisi Metodi Duplicati - Guida Rapida

@@ -3,25 +3,7 @@ title: "interface naming convention"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_EbnxX0
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_n3loag
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_EbnxX0
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_n3loag
 qmd: "interface naming convention"
 issues: []
 discussions: []
@@ -79,10 +61,6 @@ grep -r "interface.*Interface" --include="*.php" Modules
 
 # Cerca interfacce con naming corretto
 grep -r "interface.*Contract" --include="*.php" Modules
-grep -r "interface.*Interface" --include="*.php" Modules
-
-# Cerca interfacce con naming corretto
-grep -r "interface.*Contract" --include="*.php" Modules
 ```
 
 ## Riferimenti
@@ -92,43 +70,16 @@ grep -r "interface.*Contract" --include="*.php" Modules
 - [Modulo Xot Contracts](laravel/Modules/Xot/app/Contracts/)
 - [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
 - [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
-<<<<<<< HEAD
-<<<<<<< .merge_file_EbnxX0
 - [<nome progetto> Code Quality Guidelines](docs/code-quality.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_n3loag
-=======
-<<<<<<< .merge_file_PPgPBV
 - [<nome progetto> Code Quality Guidelines](docs/code-quality.md)
-=======
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_EbnxX0
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_n3loag
 - [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
 - [PTVX Code Quality Guidelines](ai-agents/code-quality.md)
 - [Modulo Xot Contracts](laravel/Modules/Xot/app/Contracts/)
 - [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
 - [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
 - [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_EbnxX0
 - [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_n3loag
-=======
->>>>>>> .merge_file_RIdq5K
->>>>>>> laraxot/dev
 - [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 # Convenzione di Naming per le Interfacce
 
 ## Regola Fondamentale
@@ -199,13 +150,6 @@ grep -r "interface.*Contract" --include="*.php" Modules
 - [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
 - [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
 - [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
-<<<<<<< .merge_file_EbnxX0
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_n3loag
 - [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
 - [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
 - [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
@@ -213,22 +157,8 @@ grep -r "interface.*Contract" --include="*.php" Modules
 - [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
 - [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
 - [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
-<<<<<<< HEAD
-<<<<<<< .merge_file_EbnxX0
 - [<nome progetto> Code Quality Guidelines](project_docs/code-quality.md)
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_n3loag
-=======
-<<<<<<< .merge_file_PPgPBV
 - [<nome progetto> Code Quality Guidelines](project_docs/code-quality.md)
-=======
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_EbnxX0
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_n3loag
 - [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
 - [PTVX Code Quality Guidelines](ai-agents/code-quality.md)
 - [Modulo Xot Contracts](laravel/Modules/Xot/app/Contracts/)
@@ -241,10 +171,6 @@ grep -r "interface.*Contract" --include="*.php" Modules
 - [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
 - [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
 - [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
 - [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
 - [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
 - [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
@@ -252,17 +178,3 @@ grep -r "interface.*Contract" --include="*.php" Modules
 - [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
 - [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
 - [<nome progetto> Code Quality Guidelines](ai-agents/code-quality.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_EbnxX0
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_RIdq5K
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_RIdq5K
->>>>>>> laraxot/dev
->>>>>>> .merge_file_n3loag

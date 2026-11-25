@@ -3,21 +3,7 @@ title: "contactcolumns and antipatterns"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_CdDGmT
-<<<<<<< .merge_file_Mfe1OT
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_RF716j
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_CdDGmT
->>>>>>> .merge_file_LHqF3y
-=======
->>>>>>> .merge_file_RF716j
 qmd: "contactcolumns and antipatterns"
 issues: []
 discussions: []
@@ -239,10 +225,6 @@ Implementare ContactColumn che:
 - [ContactTypeEnum](../app/Enums/ContactTypeEnum.php)
 - [Pattern ViewColumn Filament](https://filamentphp.com/docs/3.x/tables/columns/view)
 - [Accessibilità WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -258,8 +240,3 @@ discussions: []
 *Gravità: CRITICA*  
 *Stato: REFACTOR RICHIESTO*  
 *Responsabile: Laraxot Team*
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

@@ -7,25 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_rShd0A
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_tBXOze
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_rShd0A
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_tBXOze
 ---
 
 # Notify Module Documentation
@@ -77,48 +59,14 @@ This document serves as the central index for the Notify module, providing guida
 
 ## Links to Related Documentation
 - [Architecture Overview](./architecture.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_rShd0A
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_tBXOze
 - [Notification Channels Implementation](../../../notification-channels-implementation-2.md)
 - [Email Templates](../../../email-templates-2.md)
 - [SMS Implementation](../../../sms-implementation-2.md)
 - [Troubleshooting](./troubleshooting.md)
-<<<<<<< .merge_file_rShd0A
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_tBXOze
->>>>>>> laraxot/dev
 - [Notification Channels Implementation](../../../notification-channels-implementation-2.md)
 - [Email Templates](../../../email-templates-2.md)
 - [SMS Implementation](../../../sms-implementation-2.md)
 - [Troubleshooting](./TROUBLESHOOTING.md)
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_rShd0A
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_tBXOze
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 # Indice della Documentazione - Modulo Notify
 
@@ -139,44 +87,17 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 - [Documentazione Generale PTV](../../../../../docs/README.md)
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_rShd0A
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../../docs/documentation-standards-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_tBXOze
-=======
-<<<<<<< HEAD
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../../docs/documentation-standards-2.md)
-=======
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_rShd0A
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_tBXOze
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../../User/docs/documentation-standards-2.md)
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_rShd0A
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../../docs/documentation-standards-2.md)
-=======
->>>>>>> .merge_file_tBXOze
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Modulo Xot](../../Xot/docs/README.md)
 - [Modulo Lang](../../Lang/docs/README.md)
 - [Modulo UI](../../UI/docs/README.md)
@@ -193,18 +114,6 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 ### Sistema Email
 - [Sistema Email Database](../../../database-mail-system-2.md) - Sistema di gestione delle email basato su database
 - [Code Email](../../../database-mail-queue-2.md) - Sistema di code per l'invio di email
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_rShd0A
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_tBXOze
 - [Template Email](../../../email-templates-2.md) - Struttura e utilizzo dei template email
 - [Best Practices Email](./email_best_practices.md) - Linee guida per le email
 - [Template Responsivi](../../../responsive-email-templates-2.md) - Implementazione di template email responsivi
@@ -214,16 +123,6 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - [SMS](../../../sms-implementation-2.md) - Implementazione del canale SMS
 - [WhatsApp](../../../whatsapp-channel-2.md) - Implementazione del canale WhatsApp
 - [Telegram](../../../telegram-channel-2.md) - Implementazione del canale Telegram
-<<<<<<< .merge_file_rShd0A
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_tBXOze
->>>>>>> laraxot/dev
 - [Template Email](../../../email-templates-2.md) - Struttura e utilizzo dei template email
 - [Best Practices Email](./EMAIL_BEST_PRACTICES.md) - Linee guida per le email
 - [Template Responsivi](../../../responsive-email-templates-2.md) - Implementazione di template email responsivi
@@ -233,34 +132,10 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - [SMS](../../../sms-implementation-2.md) - Implementazione del canale SMS
 - [WhatsApp](../../../whatsapp-channel-2.md) - Implementazione del canale WhatsApp
 - [Telegram](../../../telegram-channel-2.md) - Implementazione del canale Telegram
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_rShd0A
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_tBXOze
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ### Filament UI
 - [Risorse Filament](../../../../../Activity/docs/filament-resources-3.md) - Componenti Filament Resources
 - [Pagine Filament](../../../filament-pages-2.md) - Componenti Filament Pages
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_rShd0A
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_tBXOze
 - [Convenzioni Filament](../../../filament-extension-pattern-2.md) - Pattern di estensione per Filament
 
 ### Configurazione
@@ -280,16 +155,6 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 
 ### Testing e Qualità
 - [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
-<<<<<<< .merge_file_rShd0A
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_tBXOze
->>>>>>> laraxot/dev
 - [Convenzioni Filament](../../../filament-extension-pattern-2.md) - Pattern di estensione per Filament
 
 ### Configurazione
@@ -309,18 +174,6 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 
 ### Testing e Qualità
 - [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md) - Correzioni per PHPStan Level 10
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_rShd0A
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_tBXOze
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Testing](./testing.md) - Strategie e approcci per il testing
 
 ## Linee Guida per l'Implementazione
@@ -354,10 +207,6 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 ## Documentazione e Aggiornamenti
 - Documentare qualsiasi implementazione personalizzata o nuovi canali di notifica nella cartella di documentazione pertinente
 - Aggiornare questo indice se vengono introdotte nuove funzionalità o modifiche significative al modulo Notify
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ## Documentazione e Aggiornamenti
 - Documentare qualsiasi implementazione personalizzata o nuovi canali di notifica nella cartella di documentazione pertinente
 - Aggiornare questo indice se vengono introdotte nuove funzionalità o modifiche significative al modulo Notify
@@ -370,90 +219,27 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 ## Documentazione e Aggiornamenti
 - Documentare qualsiasi implementazione personalizzata o nuovi canali di notifica nella cartella di documentazione pertinente
 - Aggiornare questo indice se vengono introdotte nuove funzionalità o modifiche significative al modulo Notify
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Sottocartelle
 
 ### Mail Templates
 - [Index](./mail-templates/index.md) - Indice della documentazione sui template email
-<<<<<<< HEAD
-<<<<<<< .merge_file_rShd0A
 - [Implementazione Slug](../../../mail-template-slug-implementation-2.md) - Implementazione del campo slug
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_tBXOze
 - [Implementazione Slug](../../../mail-template-slug-implementation-2.md) - Implementazione del campo slug
-=======
-<<<<<<< HEAD
-- [Implementazione Slug](../../../mail-template-slug-implementation-2.md) - Implementazione del campo slug
-=======
-- [Implementazione Slug](../../../mail-template-slug-implementation-2.md) - Implementazione del campo slug
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_rShd0A
-=======
-- [Implementazione Slug](../../../mail-template-slug-implementation-2.md) - Implementazione del campo slug
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_tBXOze
 
 ### Notifications
 - [Index](./notifications/index.md) - Indice della documentazione sulle notifiche
 
 ## Collegamenti alla Documentazione Correlata
 - [Panoramica Architettura](./architecture.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_rShd0A
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_tBXOze
 - [Implementazione Canali Notifica](../../../notification-channels-implementation-2.md)
 - [Template Email](../../../email-templates-2.md)
 - [Implementazione SMS](../../../sms-implementation-2.md)
 - [Troubleshooting](./troubleshooting.md)
-<<<<<<< .merge_file_rShd0A
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_tBXOze
->>>>>>> laraxot/dev
 - [Implementazione Canali Notifica](../../../notification-channels-implementation-2.md)
 - [Template Email](../../../email-templates-2.md)
 - [Implementazione SMS](../../../sms-implementation-2.md)
 - [Troubleshooting](./TROUBLESHOOTING.md)
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_rShd0A
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_tBXOze
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-
-## Note sulla Manutenzione
-Questa documentazione viene aggiornata regolarmente. Prima di apportare modifiche al codice, consultare la documentazione pertinente e aggiornare i documenti correlati.
 
 ## Note sulla Manutenzione
 Questa documentazione viene aggiornata regolarmente. Prima di apportare modifiche al codice, consultare la documentazione pertinente e aggiornare i documenti correlati.
@@ -467,15 +253,6 @@ Ultimo aggiornamento: 14 Maggio 2025
 - Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-
-## Note sulla Manutenzione
-Questa documentazione viene aggiornata regolarmente. Prima di apportare modifiche al codice, consultare la documentazione pertinente e aggiornare i documenti correlati.
-
-## Note sulla Manutenzione
-Questa documentazione viene aggiornata regolarmente. Prima di apportare modifiche al codice, consultare la documentazione pertinente e aggiornare i documenti correlati.
-
-## Note sulla Manutenzione
-Questa documentazione viene aggiornata regolarmente. Prima di apportare modifiche al codice, consultare la documentazione pertinente e aggiornare i documenti correlati.
 
 ## Note sulla Manutenzione
 Questa documentazione viene aggiornata regolarmente. Prima di apportare modifiche al codice, consultare la documentazione pertinente e aggiornare i documenti correlati.
@@ -500,14 +277,7 @@ Ultimo aggiornamento: 14 Maggio 2025
 - Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-<<<<<<< HEAD
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-=======
-<<<<<<< HEAD
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 *Ultimo aggiornamento: Gennaio 2025*
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 *Ultimo aggiornamento: Gennaio 2025*
@@ -518,24 +288,13 @@ Ultimo aggiornamento: 14 Maggio 2025
 *Ultimo aggiornamento: Gennaio 2025*
 - Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-<<<<<<< HEAD
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-=======
-<<<<<<< HEAD
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 *Ultimo aggiornamento: Gennaio 2025*
 
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
 - Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 - Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
@@ -546,11 +305,6 @@ Ultimo aggiornamento: 14 Maggio 2025
 
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 *Ultimo aggiornamento: Gennaio 2025*
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 *Ultimo aggiornamento: Gennaio 2025*
@@ -561,10 +315,6 @@ Ultimo aggiornamento: 14 Maggio 2025
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 - Vedi anche: [../../../../../docs/project/README.md](../../../../../docs/project/README.md)
 
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
@@ -615,27 +365,4 @@ Ultimo aggiornamento: 14 Maggio 2025
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-
-- Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-
-- Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-
-- Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-
-- Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-
-- Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-<<<<<<< .merge_file_rShd0A
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_tBXOze
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".

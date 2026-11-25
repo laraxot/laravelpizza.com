@@ -664,8 +664,6 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 
 --- 
 
----
-
 ## git-conflicts-resolution-
 
 *Consolidated from: `git-conflicts-resolution-.md`*
@@ -698,9 +696,12 @@ related:
 Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i file modificati e le decisioni prese per migliorare la stabilità del sistema.
 
 ## Collegamenti correlati
+<<<<<<< .merge_file_ddf11r
 <<<<<<< .merge_file_FG8LR1
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> .merge_file_aL70T1
 - [Indice documentazione User](/laravel/Modules/User/docs/index-3.md)
 =======
 - [Indice documentazione User](/laravel/modules/user/docs/index.md)
@@ -1019,9 +1020,12 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i file modificati e le decisioni prese per migliorare la stabilità del sistema.
 
 ## Collegamenti correlati
+<<<<<<< .merge_file_ddf11r
 <<<<<<< .merge_file_FG8LR1
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> .merge_file_aL70T1
 - [Indice documentazione User](/laravel/Modules/User/docs/index-3.md)
 =======
 - [Indice documentazione User](/laravel/modules/user/docs/index.md)
@@ -1329,8 +1333,6 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 - [ ] Validare traduzioni per tutti i widget
 - [ ] Aggiornare esempi in documentazione
 - [ ] Creare test di regressione per prevenire conflitti futuri
-
----
 
 ---
 
@@ -1366,9 +1368,12 @@ related:
 Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i file modificati e le decisioni prese per migliorare la stabilità del sistema.
 
 ## Collegamenti correlati
+<<<<<<< .merge_file_ddf11r
 <<<<<<< .merge_file_FG8LR1
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> .merge_file_aL70T1
 - [Indice documentazione User](/laravel/Modules/User/docs/index-3.md)
 =======
 - [Indice documentazione User](/laravel/modules/user/docs/index.md)
@@ -1678,8 +1683,6 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 - [ ] Creare test di regressione per prevenire conflitti futuri
 
 --- 
-
----
 
 ## git-conflicts-resolution-4
 
@@ -1739,9 +1742,12 @@ related:
 Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i file modificati e le decisioni prese per migliorare la stabilità del sistema.
 
 ## Collegamenti correlati
+<<<<<<< .merge_file_ddf11r
 <<<<<<< .merge_file_FG8LR1
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> .merge_file_aL70T1
 - [Indice documentazione User](/laravel/Modules/User/docs/index-3.md)
 =======
 - [Indice documentazione User](/laravel/modules/user/docs/index.md)
@@ -2052,8 +2058,6 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 
 --- 
 
----
-
 ## git-conflicts-resolution-6
 
 *Consolidated from: `git-conflicts-resolution.md`*
@@ -2086,9 +2090,12 @@ related:
 Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i file modificati e le decisioni prese per migliorare la stabilità del sistema.
 
 ## Collegamenti correlati
+<<<<<<< .merge_file_ddf11r
 <<<<<<< .merge_file_FG8LR1
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> .merge_file_aL70T1
 - [Indice documentazione User](/laravel/Modules/User/docs/index-3.md)
 =======
 - [Indice documentazione User](/laravel/modules/user/docs/index.md)
@@ -2432,9 +2439,12 @@ related:
 Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i file modificati e le decisioni prese per migliorare la stabilità del sistema.
 
 ## Collegamenti correlati
+<<<<<<< .merge_file_ddf11r
 <<<<<<< .merge_file_FG8LR1
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> .merge_file_aL70T1
 - [Indice documentazione User](/laravel/Modules/User/docs/index-3.md)
 =======
 - [Indice documentazione User](/laravel/modules/user/docs/index.md)
@@ -2745,8 +2755,6 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 
 ---
 
----
-
 ## git-conflicts-resolution-conflict
 
 *Consolidated from: `git-conflicts-resolution-conflict.md`*
@@ -2779,9 +2787,12 @@ related:
 Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i file modificati e le decisioni prese per migliorare la stabilità del sistema.
 
 ## Collegamenti correlati
+<<<<<<< .merge_file_ddf11r
 <<<<<<< .merge_file_FG8LR1
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> .merge_file_aL70T1
 - [Indice documentazione User](/laravel/Modules/User/docs/index-3.md)
 =======
 - [Indice documentazione User](/laravel/modules/user/docs/index.md)
@@ -3135,9 +3146,12 @@ related:
 Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i file modificati e le decisioni prese per migliorare la stabilità del sistema.
 
 ## Collegamenti correlati
+<<<<<<< .merge_file_ddf11r
 <<<<<<< .merge_file_FG8LR1
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> .merge_file_aL70T1
 - [Indice documentazione User](/laravel/Modules/User/docs/index-3.md)
 =======
 - [Indice documentazione User](/laravel/modules/user/docs/index.md)
@@ -3447,8 +3461,6 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 - [ ] Creare test di regressione per prevenire conflitti futuri
 
 --- 
-
----
 
 ## git-conflicts-resolution-summary
 
@@ -3958,9 +3970,12 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i file modificati e le decisioni prese per migliorare la stabilità del sistema.
 
 ## Collegamenti correlati
+<<<<<<< .merge_file_ddf11r
 <<<<<<< .merge_file_FG8LR1
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> .merge_file_aL70T1
 - [Indice documentazione User](/laravel/Modules/User/docs/index-3.md)
 =======
 - [Indice documentazione User](/laravel/modules/user/docs/index.md)
@@ -4381,6 +4396,10 @@ git -c core.editor="echo" rebase --continue
 
 ## Riferimenti
 
+<<<<<<< .merge_file_ddf11r
+=======
+- [passport-pages-fix](../../../docs/FIX_REPORTS/passport-pages-fix-2026-03-17.md)
+>>>>>>> .merge_file_aL70T1
 - [passport-pages-fix](../../../docs/FIX_REPORTS/passport-pages-fix.md)
 - [oauth-access-token-removal](oauth-access-token-removal.md)
 
@@ -4418,7 +4437,6 @@ git config -f .gitmodules --get-regexp '^submodule\..*\.path$' |
         url=$(git config -f .gitmodules --get "$url_key")
         echo $path
         echo $url
-        
         
         
         git submodule add -f $url $path  
@@ -4681,6 +4699,10 @@ Documentazione per git_conflict_resolution nel modulo User.
 ## Collegamenti
 
 - [Modulo Principale](../README.md)
+<<<<<<< .merge_file_ddf11r
+=======
+- [Modulo Principale](../readme.md)
+>>>>>>> .merge_file_aL70T1
 
 
 ---
@@ -4999,8 +5021,6 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 
 --- 
 
----
-
 ## gits-resolution-06cb77
 
 *Consolidated from: `gits-resolution-06cb77.md`*
@@ -5033,9 +5053,12 @@ related:
 Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i file modificati e le decisioni prese per migliorare la stabilità del sistema.
 
 ## Collegamenti correlati
+<<<<<<< .merge_file_ddf11r
 <<<<<<< .merge_file_FG8LR1
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> .merge_file_aL70T1
 - [Indice documentazione User](/laravel/Modules/User/docs/index-3.md)
 =======
 - [Indice documentazione User](/laravel/modules/user/docs/index.md)
@@ -5343,8 +5366,6 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 - [ ] Validare traduzioni per tutti i widget
 - [ ] Aggiornare esempi in documentazione
 - [ ] Creare test di regressione per prevenire conflitti futuri
-
----
 
 ---
 

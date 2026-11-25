@@ -3,31 +3,7 @@ title: "05 Front Office Audit"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_PNJXmF
-<<<<<<< .merge_file_QnkNwu
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_qldbCM
-=======
->>>>>>> .merge_file_sEt5HI
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_PNJXmF
-<<<<<<< .merge_file_QnkNwu
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_qldbCM
-=======
->>>>>>> .merge_file_sEt5HI
 qmd: "05 Front Office Audit"
 issues: []
 discussions: []
@@ -35,21 +11,6 @@ discussions: []
 
 # 📋 Front Office Pages Audit Checklist
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_PNJXmF
-<<<<<<< .merge_file_QnkNwu
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_qldbCM
-=======
->>>>>>> .merge_file_sEt5HI
 **Part of**: [00-INDEX.md](00-index.md) — AI Agents Coordination  
 **Related**: [03-architecture-zen-2.md](03-architecture-zen.md) — Architecture
 
@@ -61,20 +22,6 @@ discussions: []
 ### 5. Real Data (NO Mock)
 ### 6. Web Design Checklist (31 sources)
 ### 7. Quality Gate
-<<<<<<< .merge_file_PNJXmF
-<<<<<<< .merge_file_QnkNwu
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_qldbCM
-=======
-=======
->>>>>>> .merge_file_sEt5HI
->>>>>>> laraxot/dev
 **Part of**: [00-index.md](00-index.md) — AI Agents Coordination  
 **Related**: [03-architecture-zen.md](03-architecture-zen.md) — Architecture
 
@@ -126,21 +73,6 @@ discussions: []
 - [ ] ✅ Pest: Test passing
 
 ---
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_PNJXmF
-<<<<<<< .merge_file_QnkNwu
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_qldbCM
-=======
->>>>>>> .merge_file_sEt5HI
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## 📁 Pages to Audit
 

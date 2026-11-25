@@ -3,21 +3,7 @@ title: "php rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_K3nyi2
-<<<<<<< .merge_file_A7obfe
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_4NfXij
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_K3nyi2
->>>>>>> .merge_file_ry3L18
-=======
->>>>>>> .merge_file_4NfXij
 qmd: "php rules"
 issues: []
 discussions: []
@@ -54,11 +40,6 @@ protected function isAccessible(User $user, ?string $path = null): bool
 ## Enums
 - Typically, keys in an Enum should be TitleCase. For example: `FavoritePerson`, `BestLake`, `Monthly`.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-
 
 ---
 
@@ -78,9 +59,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

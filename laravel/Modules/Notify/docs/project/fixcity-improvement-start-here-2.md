@@ -3,15 +3,7 @@ title: "FIXCITY IMPROVEMENT START HERE"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Nv4zcV
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_Hpw2VR
 qmd: "FIXCITY IMPROVEMENT START HERE"
 issues: []
 discussions: []
@@ -24,13 +16,6 @@ discussions: []
 **Status**: ✅ **READY TO START**  
 **Timeline**: 17 settimane (4 mesi)
 
-<<<<<<< .merge_file_Nv4zcV
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_Hpw2VR
 ---
 
 title: "FIXCITY IMPROVEMENT START HERE"
@@ -82,10 +67,6 @@ openviking add-memory "FixCity Improvement Plan started 2026-03-30"
 
 ---
 
-<<<<<<< .merge_file_Nv4zcV
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 Quick Start
 ### 1. Leggi i Documenti Principali
 # Master plan (1,555 righe)
@@ -98,10 +79,6 @@ openviking add-memory "FixCity Improvement Plan started 2026-03-30"
 # Esegui con Ralph Loop
 ### 3. Aggiorna OpenViking
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_Hpw2VR
 ## 📊 Priority Summary
 
 ### P0 - Critical (Settimane 1-2) ⚠️

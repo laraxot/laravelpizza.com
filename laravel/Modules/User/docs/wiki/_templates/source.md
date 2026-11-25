@@ -10,8 +10,8 @@ tags: [article, paper, documentation]
 related:
   - "./concept.md"
   - "./entity.md"
-<<<<<<< .merge_file_GbeX0Z
 qmd: "source title"
+<<<<<<< .merge_file_vW7XsR
 =======
 >>>>>>> .merge_file_eJHA9b
 =======
@@ -21,6 +21,8 @@ tags: [article, paper, documentation]
 related:
 qmd: "source title"
 >>>>>>> .merge_file_GBwxoy
+=======
+>>>>>>> .merge_file_ApqJCI
 ---
 
 # {{title}}

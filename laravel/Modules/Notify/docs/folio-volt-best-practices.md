@@ -7,31 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_jh9lOb
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_7WlqRI
-<<<<<<< .merge_file_y0mN6E
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_RXEOsa
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_MWv2yU
-=======
-<<<<<<< .merge_file_7WlqRI
->>>>>>> .merge_file_kjTx4l
-=======
->>>>>>> .merge_file_RXEOsa
->>>>>>> laraxot/dev
 ---
 
 # Laravel Folio + Volt - Best Practices and Patterns Analysis

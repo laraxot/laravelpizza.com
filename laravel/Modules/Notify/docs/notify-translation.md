@@ -3,15 +3,7 @@ title: "notify translation"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_HV2yv4
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_NMNPOX
 qmd: "notify translation"
 issues: []
 discussions: []

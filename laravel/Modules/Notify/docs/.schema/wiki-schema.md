@@ -3,21 +3,7 @@ title: "wiki schema"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_g4UldE
-<<<<<<< .merge_file_Hf1l5b
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_Jm1Ukp
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_g4UldE
->>>>>>> .merge_file_TB0MFu
-=======
->>>>>>> .merge_file_Jm1Ukp
 qmd: "wiki schema"
 issues: []
 discussions: []
@@ -94,10 +80,6 @@ nome-panoramica.md
 
 ### Frontmatter
 ```yaml
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 qmd: "wiki schema"
 issues: []
@@ -110,11 +92,6 @@ created: 2026-04-15
 updated: 2026-04-15
 related: [altra-pagina.md, ancora-un-altra.md]
 ---
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ```
 
 ### Link Interni

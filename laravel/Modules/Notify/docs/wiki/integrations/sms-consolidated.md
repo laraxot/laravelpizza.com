@@ -7,19 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -78,24 +66,8 @@ Consolidated from **63** individual files.
 - [Azioni SMS](#sms_actions)
 - [Best Practices per l'Invio SMS](#sms_best_practices)
 - [Dove posizionare la logica di risoluzione dell'action SMS?](#sms_channel_action_resolution)
-<<<<<<< HEAD
 - [sms config structure](#sms_config_structure)
 - [<<<<<<< HEAD](#sms_config_structure)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [<<<<<<< HEAD](#sms_config_structure)
-=======
-<<<<<<< HEAD
-- [sms config structure](#sms_config_structure)
-=======
-- [<<<<<<< HEAD](#sms_config_structure)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- [sms config structure](#sms_config_structure)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Traduzioni SmsDriverEnum - Modulo Notify](#sms_driver_enum_translations)
 - [Analisi: Spostamento Logica Selezione Driver in SmsData](#sms_driver_selection_analysis)
 - [Analisi Specifica: Validazione e Selezione Driver in SmsData](#sms_driver_selection_specific_analysis)
@@ -103,24 +75,8 @@ Consolidated from **63** individual files.
 - [Parametri a Livello di Root vs Specifici per Provider nella Configurazione SMS](#sms_global_vs_specific_params)
 - [Implementazione SMS in Laravel](#sms_implementation)
 - [Integrazione Netfun SMS Channel in Laravel](#sms_netfun_channel)
-<<<<<<< HEAD
 - [sms provider configuration](#sms_provider_configuration)
 - [<<<<<<< HEAD](#sms_provider_configuration)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [<<<<<<< HEAD](#sms_provider_configuration)
-=======
-<<<<<<< HEAD
-- [sms provider configuration](#sms_provider_configuration)
-=======
-- [<<<<<<< HEAD](#sms_provider_configuration)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- [sms provider configuration](#sms_provider_configuration)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Best Practices per la Configurazione dei Provider SMS](#sms_provider_configuration_best_practices)
 - [Troubleshooting SMS](#sms_troubleshooting)
 - [Traduzioni SmsDriverEnum - Modulo Notify](#smsriver-enum-translations)
@@ -152,16 +108,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -282,17 +230,6 @@ Si consiglia di implementare la soluzione ibrida per ottenere i vantaggi di entr
 
 *Consolidated from: `sms-action-factory-analysis-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Contesto Attuale
 ```php
 $action = match ($driver) {
@@ -427,16 +364,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -528,17 +457,6 @@ La risoluzione dinamica tramite formula è **più scalabile e manutenibile** ris
 
 *Consolidated from: `sms-action-factory-resolution-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Contesto
 
 Nel factory `SmsActionFactory`, invece di usare un `match` esplicito per risolvere la classe action in base al driver, si può calcolare dinamicamente il nome della classe action tramite una formula.
@@ -625,17 +543,6 @@ La risoluzione dinamica tramite formula è **più scalabile e manutenibile** ris
 
 *Consolidated from: `sms-action-factory.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Contesto Attuale
 ```php
 $action = match ($driver) {
@@ -751,17 +658,6 @@ Si consiglia di implementare la soluzione ibrida per ottenere i vantaggi di entr
 
 *Consolidated from: `sms-actions-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Interfaccia
 
 Tutte le azioni di invio SMS devono implementare l'interfaccia `SmsActionInterface`:
@@ -859,16 +755,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -951,17 +839,6 @@ $result = $action->execute($smsData);
 
 *Consolidated from: `sms-actions-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Interfaccia
 
 Tutte le azioni di invio SMS devono implementare l'interfaccia `SmsActionInterface`:
@@ -1060,16 +937,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -1330,17 +1199,6 @@ try {
 
 *Consolidated from: `sms-best-practices-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 1. Gestione dei Template
 
 ### Struttura Template
@@ -1615,16 +1473,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -1717,17 +1567,6 @@ $action = match ($driver) {
 
 *Consolidated from: `sms-channel-action-resolution-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Contesto
 
 Attualmente la logica di risoluzione dell'action SMS in base al driver configurato è posizionata nel canale custom `SmsChannel`:
@@ -1816,17 +1655,6 @@ $action = match ($driver) {
 *Consolidated from: `sms-config-structure-2.md`*
 *Consolidated from: `sms-config-structure-struttura-configurazione.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento definisce la struttura corretta del file di configurazione SMS (`config/sms.php`) nel modulo Notify, con particolare attenzione alla gestione delle configurazioni generiche vs specifiche per provider.
@@ -2009,16 +1837,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -2176,10 +1996,6 @@ $retryDelay = $config['drivers'][$driver]['retry_delay'] ?? $config['retry']['de
 - [Configurazione Netfun](../../netfun-config-requirements-2.md)
 - [Provider SMS Supportati](./notifications/sms-provider-configuration.md)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 - [Configurazione Netfun](../../netfun-config-requirements-2.md)
@@ -2188,11 +2004,6 @@ $retryDelay = $config['drivers'][$driver]['retry_delay'] ?? $config['retry']['de
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 *Ultimo aggiornamento: 2025-05-12*
 ---
 
@@ -2200,17 +2011,6 @@ $retryDelay = $config['drivers'][$driver]['retry_delay'] ?? $config['retry']['de
 
 *Consolidated from: `sms-config-structure-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento definisce la struttura corretta del file di configurazione SMS (`config/sms.php`) nel modulo Notify, con particolare attenzione alla gestione delle configurazioni generiche vs specifiche per provider.
@@ -2376,17 +2176,6 @@ $retryDelay = $config['drivers'][$driver]['retry_delay'] ?? $config['retry']['de
 
 *Consolidated from: `sms-configuration-access.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Problema Identificato
 
 È stato identificato un errore comune nell'implementazione delle azioni SMS: l'utilizzo di `config('services.*.token')` invece di `config('sms.drivers.*.token')`.
@@ -2455,17 +2244,6 @@ Per ogni azione SMS, verificare che:
 
 *Consolidated from: `sms-driver-enum-translations-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Panoramica
 
 Il `SmsDriverEnum` utilizza il `TransTrait` per gestire automaticamente le traduzioni dei driver SMS supportati. Questo permette di avere etichette, colori, icone e descrizioni localizzate per ogni provider SMS.
@@ -2655,10 +2433,6 @@ php -l laravel/Modules/Notify/lang/de/sms_driver_enum.php
 - [Documentazione Traduzioni](../../Lang/docs/)
 - [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../Lang/docs/)- [Documentazione Traduzioni](../../Lang/project_docs/)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 - [Documentazione Traduzioni](../../Lang/docs/)
 - [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../Lang/docs/)- [Documentazione Traduzioni](../../Lang/project_docs/)
@@ -2678,12 +2452,7 @@ php -l laravel/Modules/Notify/lang/de/sms_driver_enum.php
 - [Documentazione Traduzioni](../../Lang/docs/)
 - [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../Lang/docs/)- [Documentazione Traduzioni](../../Lang/project_docs/)
-<<<<<<< HEAD
-=======
-=======
 - [Documentazione Traduzioni](../../Lang/project_docs/)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Documentazione Traduzioni](../../Lang/docs/)
 - [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../Lang/docs/)- [Documentazione Traduzioni](../../Lang/project_docs/)
@@ -2697,10 +2466,6 @@ php -l laravel/Modules/Notify/lang/de/sms_driver_enum.php
 - [Documentazione Traduzioni](../../../../Lang/docs)
 - [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../../../Lang/docs)- [Documentazione Traduzioni](../../Lang/project_docs/)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 - [Documentazione Traduzioni](../../../../Lang/docs)
 - [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../../../Lang/docs)- [Documentazione Traduzioni](../../Lang/project_docs/)
@@ -3194,21 +2959,10 @@ php -l laravel/Modules/Notify/lang/de/sms_driver_enum.php
 - [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../../../Lang/docs)- [Documentazione Traduzioni](../../Lang/project_docs/)
 
-<<<<<<< HEAD
----
-=======
-<<<<<<< HEAD
----
-=======
-<<<<<<< HEAD
 - [Documentazione Traduzioni](../../../../Lang/docs)
 - [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../../../Lang/docs)- [Documentazione Traduzioni](../../Lang/project_docs/)
-=======
 ---
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 - [Documentazione Traduzioni](../../../../Lang/docs)
 - [Documentazione Traduzioni](../../Lang/project_docs/)
@@ -3361,32 +3115,15 @@ php -l laravel/Modules/Notify/lang/de/sms_driver_enum.php
 - [Documentazione Traduzioni](../../../../Lang/docs)
 
 ---
-<<<<<<< HEAD
-=======
-=======
-- [Documentazione Traduzioni](../../Lang/project_docs/)
-
-- [Documentazione Traduzioni](../../Lang/docs/)
-- [Documentazione Traduzioni](../../Lang/project_docs/)
-- [Documentazione Traduzioni](../../Lang/docs/)- [Documentazione Traduzioni](../../Lang/project_docs/)
-
-- [Documentazione Traduzioni](../../Lang/docs/)
 - [Documentazione Traduzioni](../../Lang/project_docs/)
-- [Documentazione Traduzioni](../../Lang/docs/)- [Documentazione Traduzioni](../../Lang/project_docs/)
 
 - [Documentazione Traduzioni](../../Lang/docs/)
 - [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../Lang/docs/)- [Documentazione Traduzioni](../../Lang/project_docs/)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 - [Documentazione Traduzioni](../../../../Lang/docs)
 - [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../../../Lang/docs)- [Documentazione Traduzioni](../../Lang/project_docs/)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 - [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../../../Lang/docs)- [Documentazione Traduzioni](../../Lang/project_docs/)
 
@@ -3413,31 +3150,14 @@ php -l laravel/Modules/Notify/lang/de/sms_driver_enum.php
 - [Documentazione Traduzioni](../../../../Lang/docs)
 - [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../../../Lang/docs)- [Documentazione Traduzioni](../../Lang/project_docs/)
-- [Documentazione Traduzioni](../../Lang/project_docs/)
-<<<<<<< HEAD
-=======
-=======
-
-- [Documentazione Traduzioni](../../../../Lang/docs)
 - [Documentazione Traduzioni](../../Lang/project_docs/)
-- [Documentazione Traduzioni](../../../../Lang/docs)- [Documentazione Traduzioni](../../Lang/project_docs/)
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Documentazione Traduzioni](../../../../Lang/docs)
 - [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../../../Lang/docs)- [Documentazione Traduzioni](../../Lang/project_docs/)
-
-<<<<<<< HEAD
----
 
-=======
-<<<<<<< HEAD
 ---
 
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## sms-driver-enum-translations-2
 
 *Consolidated from: `sms-driver-enum-translations-2.md`*
@@ -3461,16 +3181,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -3674,17 +3386,6 @@ php -l laravel/Modules/Notify/lang/de/sms_driver_enum.php
 
 *Consolidated from: `sms-driver-enum-translations-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Panoramica
 
 Il `SmsDriverEnum` utilizza il `TransTrait` per gestire automaticamente le traduzioni dei driver SMS supportati. Questo permette di avere etichette, colori, icone e descrizioni localizzate per ogni provider SMS.
@@ -3904,16 +3605,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -4047,17 +3740,6 @@ Questa soluzione:
 
 *Consolidated from: `sms-driver-selection-analysis-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Contesto Attuale
 Attualmente, la logica di selezione del driver SMS è implementata nel canale di notifica:
 
@@ -4205,16 +3887,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -4327,17 +4001,6 @@ Questa soluzione:
 
 *Consolidated from: `sms-driver-selection-specific-analysis-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Contesto Specifico
 ```php
 if (! $smsData instanceof SmsData) {
@@ -4464,16 +4127,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -4667,17 +4322,6 @@ The implementation of `SmsFactorData` and the refactoring of `SendSmsFactorSMSAc
 
 *Consolidated from: `sms-factor-data-implementation-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Overview
 
 This document summarizes the implementation of the `SmsFactorData` class and the refactoring of `SendSmsFactorSMSAction` to follow the same pattern as `AgiletelecomData`.
@@ -4869,17 +4513,6 @@ The implementation of `SmsFactorData` and the refactoring of `SendSmsFactorSMSAc
 
 *Consolidated from: `sms-factorata-implementation.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Overview
 
 This document summarizes the implementation of the `SmsFactorData` class and the refactoring of `SendSmsFactorSMSAction` to follow the same pattern as `AgiletelecomData`.
@@ -5090,16 +4723,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -5292,17 +4917,6 @@ Prima di modificare la configurazione SMS, verificare che:
 
 *Consolidated from: `sms-global-vs-specific-params-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento chiarisce la distinzione fondamentale tra parametri a livello di root e specifici per provider nella configurazione SMS del modulo Notify. Una corretta comprensione di questa distinzione è essenziale per evitare duplicazioni e inconsistenze nella configurazione.
@@ -5509,16 +5123,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -5899,17 +5505,6 @@ SMSFACTOR_SENDER=YourApp
 
 *Consolidated from: `sms-implementation-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Panoramica
 Questo documento descrive l'implementazione del sistema di invio SMS nel modulo Notify, utilizzando il pacchetto `gr8shivam/laravel-sms-api` come driver principale **e** il pacchetto [`spatie/laravel-queueable-action`](https://github.com/spatie/laravel-queueable-action) per la gestione delle azioni asincrone e sincrone.
 
@@ -6285,17 +5880,6 @@ SMSFACTOR_SENDER=YourApp
 
 *Consolidated from: `sms-integration.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ---
 
 ## sms-netfun-channel-1
@@ -6303,17 +5887,6 @@ SMSFACTOR_SENDER=YourApp
 *Consolidated from: `sms-netfun-channel-2.md`*
 *Consolidated from: `sms-netfun-channel-integrazione-laravel.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Introduzione
 Questa guida spiega come integrare il provider Netfun come canale custom per l'invio di SMS in Laravel, seguendo le best practice del framework e sfruttando il pacchetto [`spatie/laravel-queueable-action`](https://github.com/spatie/laravel-queueable-action) per la gestione asincrona.
 
@@ -6869,16 +6442,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -7423,17 +6988,6 @@ class NetfunSMSTest extends TestCase
 
 *Consolidated from: `sms-netfun-channel-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Introduzione
 Questa guida spiega come integrare il provider Netfun come canale custom per l'invio di SMS in Laravel, seguendo le best practice del framework e sfruttando il pacchetto [`spatie/laravel-queueable-action`](https://github.com/spatie/laravel-queueable-action) per la gestione asincrona.
 
@@ -7967,23 +7521,10 @@ class NetfunSMSTest extends TestCase
 
 ---
 
----
-
 ## sms-provider-configuration-1
 
 *Consolidated from: `sms-provider-configuration.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 This file is deprecated.
 
 Use:
@@ -8015,16 +7556,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -8150,17 +7683,6 @@ TWILIO_AUTH_TOKEN=your_auth_token_here
 
 *Consolidated from: `sms-provider-configuration-best-practices-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Struttura Corretta della Configurazione
 
 , il file di configurazione SMS (`config/sms.php`) deve seguire una struttura precisa che separa chiaramente le configurazioni generiche dalle configurazioni specifiche dei provider.
@@ -8306,16 +7828,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -8436,19 +7950,10 @@ $token = config('services.netfun.token');
 - [SMS Implementation](../../sms-implementation-2.md)
 - [SMS Best Practices](../../sms-best-practices-2.md)
 - [Netfun Authentication Methods](../../netfun-authentication-methods-2.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 - [SMS Provider Architecture](../../sms-provider-architecture-2.md)
 - [SMS Implementation](../../sms-implementation-2.md)
 - [SMS Best Practices](../../sms-best-practices-2.md)
 - [Netfun Authentication Methods](../../netfun-authentication-methods-2.md)
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [SMS Provider Architecture](../../sms-provider-architecture.md)
 - [SMS Implementation](../../sms-implementation.md)
 - [SMS Best Practices](../../sms-best-practices.md)
@@ -8459,17 +7964,6 @@ $token = config('services.netfun.token');
 
 *Consolidated from: `sms-provider-configuration-best-practices-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Struttura Corretta della Configurazione
 
 , il file di configurazione SMS (`config/sms.php`) deve seguire una struttura precisa che separa chiaramente le configurazioni generiche dalle configurazioni specifiche dei provider.
@@ -8597,17 +8091,6 @@ $token = config('services.netfun.token');
 
 *Consolidated from: `sms-provider-configuration.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Regola Fondamentale
 
 , tutte le configurazioni relative ai provider SMS **DEVONO** essere gestite esclusivamente attraverso il file `config/sms.php` e non tramite il file `config/services.php`.
@@ -8838,17 +8321,6 @@ TWILIO_AUTH_TOKEN=your_auth_token_here
 
 *Consolidated from: `sms-troubleshooting-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Errori Comuni e Soluzioni
 
 ### 1. Errore di Autenticazione
@@ -9087,16 +8559,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -9306,17 +8770,6 @@ Log::debug('SMS Debug', [
 
 *Consolidated from: `sms-troubleshooting-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Errori Comuni e Soluzioni
 
 ### 1. Errore di Autenticazione
@@ -9520,34 +8973,12 @@ Log::debug('SMS Debug', [
 
 *Consolidated from: `sms.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ---
 
 ## sms_action_factory_analysis
 
 *Consolidated from: `sms-action-factory-analysis-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Contesto Attuale
 ```php
 $action = match ($driver) {
@@ -9663,17 +9094,6 @@ Si consiglia di implementare la soluzione ibrida per ottenere i vantaggi di entr
 
 *Consolidated from: `sms-action-factory-resolution-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Contesto
 
 Nel factory `SmsActionFactory`, invece di usare un `match` esplicito per risolvere la classe action in base al driver, si può calcolare dinamicamente il nome della classe action tramite una formula.
@@ -9760,17 +9180,6 @@ La risoluzione dinamica tramite formula è **più scalabile e manutenibile** ris
 
 *Consolidated from: `sms-actions-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Interfaccia
 
 Tutte le azioni di invio SMS devono implementare l'interfaccia `SmsActionInterface`:
@@ -9850,17 +9259,6 @@ $result = $action->execute($smsData);
 
 *Consolidated from: `sms-best-practices-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 1. Gestione dei Template
 
 ### Struttura Template
@@ -10116,17 +9514,6 @@ try {
 
 *Consolidated from: `sms-channel-action-resolution-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Contesto
 
 Attualmente la logica di risoluzione dell'action SMS in base al driver configurato è posizionata nel canale custom `SmsChannel`:
@@ -10228,33 +9615,11 @@ return [
     // Driver predefinito
     'default' => env('SMS_DRIVER', 'default_provider'),
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
     // Configurazione dei driver/provider
     'drivers' => [
         // Configurazioni specifiche per provider...
     ],
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
     // Configurazioni generiche per tutti i provider
     'queue' => env('SMS_QUEUE', 'default'),
     'retry' => [...],
@@ -10306,34 +9671,12 @@ Le configurazioni specifiche per provider sono definite all'interno della sezion
         ],
     ],
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
     'twilio' => [
         'account_sid' => env('TWILIO_ACCOUNT_SID'),
         'auth_token' => env('TWILIO_AUTH_TOKEN'),
         'from' => env('TWILIO_FROM'),
     ],
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
     // Altri provider...
 ],
 ```
@@ -10428,17 +9771,6 @@ $retryDelay = $config['drivers'][$driver]['retry_delay'] ?? $config['retry']['de
 
 *Consolidated from: `sms-driver-enum-translations-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Panoramica
 
 Il `SmsDriverEnum` utilizza il `TransTrait` per gestire automaticamente le traduzioni dei driver SMS supportati. Questo permette di avere etichette, colori, icone e descrizioni localizzate per ogni provider SMS.
@@ -10637,17 +9969,6 @@ php -l laravel/Modules/Notify/lang/de/sms_driver_enum.php
 
 *Consolidated from: `sms-driver-selection-analysis-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Contesto Attuale
 Attualmente, la logica di selezione del driver SMS è implementata nel canale di notifica:
 
@@ -10776,17 +10097,6 @@ Questa soluzione:
 
 *Consolidated from: `sms-driver-selection-specific-analysis-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Contesto Specifico
 ```php
 if (! $smsData instanceof SmsData) {
@@ -10894,17 +10204,6 @@ Questa soluzione:
 
 *Consolidated from: `sms-factor-data-implementation-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Overview
 
 This document summarizes the implementation of the `SmsFactorData` class and the refactoring of `SendSmsFactorSMSAction` to follow the same pattern as `AgiletelecomData`.
@@ -11093,17 +10392,6 @@ The implementation of `SmsFactorData` and the refactoring of `SendSmsFactorSMSAc
 
 *Consolidated from: `sms-global-vs-specific-params-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Introduzione
 
 Questo documento chiarisce la distinzione fondamentale tra parametri a livello di root e specifici per provider nella configurazione SMS del modulo Notify. Una corretta comprensione di questa distinzione è essenziale per evitare duplicazioni e inconsistenze nella configurazione.
@@ -11291,17 +10579,6 @@ Prima di modificare la configurazione SMS, verificare che:
 
 *Consolidated from: `sms-implementation-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Panoramica
 Questo documento descrive l'implementazione del sistema di invio SMS nel modulo Notify, utilizzando il pacchetto `gr8shivam/laravel-sms-api` come driver principale **e** il pacchetto [`spatie/laravel-queueable-action`](https://github.com/spatie/laravel-queueable-action) per la gestione delle azioni asincrone e sincrone.
 
@@ -11677,17 +10954,6 @@ SMSFACTOR_SENDER=YourApp
 
 *Consolidated from: `sms-netfun-channel-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Introduzione
 Questa guida spiega come integrare il provider Netfun come canale custom per l'invio di SMS in Laravel, seguendo le best practice del framework e sfruttando il pacchetto [`spatie/laravel-queueable-action`](https://github.com/spatie/laravel-queueable-action) per la gestione asincrona.
 
@@ -12053,14 +11319,7 @@ Notification::assertSentTo($user, OrderShipped::class);
 - [Netfun SMS API](https://www.netfunitalia.it/)
 - [spatie/laravel-queueable-action](https://github.com/spatie/laravel-queueable-action)
 - [Laravel Notifications](https://laravel.com/docs/notifications)
-<<<<<<< HEAD
 - [Laravel Notifications](https://laravel.com/docs/notifications)
-=======
-<<<<<<< HEAD
-- [Laravel Notifications](https://laravel.com/docs/notifications)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ---
 
@@ -12260,17 +11519,6 @@ return [
         'decay_minutes' => env('SMS_RATE_LIMIT_DECAY_MINUTES', 1),
     ],
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
     // Configurazione specifiche dei provider
     'drivers' => [
         'netfun' => [
@@ -12307,17 +11555,6 @@ public function __construct()
         throw new Exception('API Key Netfun non configurata in sms.php');
     }
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
     // Parametri generici a livello di root
     $this->defaultSender = config('sms.from');
     $this->timeout = config('sms.timeout', 30);
@@ -12381,17 +11618,6 @@ TWILIO_AUTH_TOKEN=your_auth_token_here
 
 *Consolidated from: `sms-provider-configuration-best-practices-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Struttura Corretta della Configurazione
 
 , il file di configurazione SMS (`config/sms.php`) deve seguire una struttura precisa che separa chiaramente le configurazioni generiche dalle configurazioni specifiche dei provider.
@@ -12405,50 +11631,17 @@ return [
     // Driver predefinito
     'default' => env('SMS_DRIVER', 'netfun'),
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
     // Configurazioni generiche applicabili a tutti i driver
     'from' => env('SMS_FROM'),
     'timeout' => (int) env('SMS_TIMEOUT', 30),
     'debug' => (bool) env('SMS_DEBUG', false),
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
     // Configurazione per retry e circuit breaker
     'retry' => [
         'attempts' => (int) env('SMS_RETRY_ATTEMPTS', 3),
         'delay' => (int) env('SMS_RETRY_DELAY', 60),
     ],
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
     // Configurazione per rate limiting
     'rate_limit' => [
         'enabled' => (bool) env('SMS_RATE_LIMIT_ENABLED', true),
@@ -12456,17 +11649,6 @@ return [
         'decay_minutes' => (int) env('SMS_RATE_LIMIT_DECAY_MINUTES', 1),
     ],
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
     // Configurazioni specifiche per driver
     'drivers' => [
         'netfun' => [
@@ -12477,17 +11659,6 @@ return [
             'api_url' => env('NETFUN_API_URL', 'https://v2.smsviainternet.it/api/rest/v1/sms-batch.json'),
         ],
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
         'twilio' => [
             // Solo parametri specifici per Twilio
             'account_sid' => env('TWILIO_ACCOUNT_SID'),
@@ -12495,17 +11666,6 @@ return [
             'from' => env('TWILIO_FROM'),
         ],
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
         // Altri provider...
     ],
 ];
@@ -12521,14 +11681,7 @@ return [
 
 - **Configurazione Generica** (sezioni separate):
   - Sezione `retry` per tentativi di ripetizione
-<<<<<<< HEAD
   - Sezione `retry` per tentativi di ripetizione
-=======
-<<<<<<< HEAD
-  - Sezione `retry` per tentativi di ripetizione
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - Sezione `rate_limit` per limitazione delle richieste
   - Sezione `timeout` per timeout globale
   - Sezione `debug` per flag di debug
@@ -12593,17 +11746,6 @@ $token = config('services.netfun.token');
 
 *Consolidated from: `sms-troubleshooting-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Errori Comuni e Soluzioni
 
 ### 1. Errore di Autenticazione
@@ -12808,17 +11950,6 @@ Log::debug('SMS Debug', [
 
 *Consolidated from: `smsriver-enum-translations.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Panoramica
 
 Il `SmsDriverEnum` utilizza il `TransTrait` per gestire automaticamente le traduzioni dei driver SMS supportati. Questo permette di avere etichette, colori, icone e descrizioni localizzate per ogni provider SMS.
@@ -13015,17 +12146,6 @@ php -l laravel/Modules/Notify/lang/de/sms_driver_enum.php
 
 *Consolidated from: `smsriver-selection-specific.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Contesto Specifico
 ```php
 if (! $smsData instanceof SmsData) {
@@ -13133,17 +12253,6 @@ Questa soluzione:
 
 *Consolidated from: `smsriver-selection.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Contesto Attuale
 Attualmente, la logica di selezione del driver SMS è implementata nel canale di notifica:
 

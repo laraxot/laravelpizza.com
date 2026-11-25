@@ -3,15 +3,7 @@ title: "channel enum implementation update"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_b1qQgk
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_DuqVaE
 qmd: "channel enum implementation update"
 issues: []
 discussions: []
@@ -133,10 +125,6 @@ Channel-specific logic can be extended by adding methods to ChannelEnum:
 - New validation rules
 - Additional configuration options
 - Channel-specific processing rules
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -151,11 +139,3 @@ discussions: []
 **Implemented by**: iFlow CLI  
 **Pattern**: Enum-driven architecture  
 **Compliance**: DRY + KISS + Type Safety
-<<<<<<< .merge_file_b1qQgk
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_DuqVaE

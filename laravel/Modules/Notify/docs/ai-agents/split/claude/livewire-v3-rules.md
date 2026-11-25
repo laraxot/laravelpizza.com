@@ -3,21 +3,7 @@ title: "livewire v3 rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_r2v5l2
-<<<<<<< .merge_file_uNrwd1
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_ENVZnb
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_r2v5l2
->>>>>>> .merge_file_o4PdDV
-=======
->>>>>>> .merge_file_ENVZnb
 qmd: "livewire v3 rules"
 issues: []
 discussions: []
@@ -56,11 +42,6 @@ document.addEventListener('livewire:init', function () {
 });
 </code-snippet>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-
 
 ---
 
@@ -80,9 +61,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

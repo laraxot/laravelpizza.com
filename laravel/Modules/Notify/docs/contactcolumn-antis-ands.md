@@ -3,21 +3,7 @@ title: "contactcolumn antis ands"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_clwzoq
-<<<<<<< .merge_file_LJim9k
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_Bz02Pq
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_clwzoq
->>>>>>> .merge_file_Y4yubf
-=======
->>>>>>> .merge_file_Bz02Pq
 qmd: "contactcolumn antis ands"
 issues: []
 discussions: []
@@ -151,10 +137,6 @@ private function formatContacts(Client $record): string
 4. [ ] Refactoring ContactColumn.php con pattern corretto
 5. [ ] Testing della soluzione corretta
 6. [ ] Validazione conformità alle memorie
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -172,8 +154,3 @@ discussions: []
 **LEZIONE**: SEMPRE studiare docs/memories prima di implementare  
 
 *Errori identificati e documentati per prevenzione futura*
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

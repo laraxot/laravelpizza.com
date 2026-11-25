@@ -3,31 +3,7 @@ title: "filament resource pages architecture"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_ufsoiW
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_VXveg9
-<<<<<<< .merge_file_t2UmKa
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_XGedPZ
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_uM7ojE
-=======
-<<<<<<< .merge_file_VXveg9
->>>>>>> .merge_file_OZPCj4
-=======
->>>>>>> .merge_file_XGedPZ
->>>>>>> laraxot/dev
 qmd: "filament resource pages architecture"
 issues: []
 discussions: []

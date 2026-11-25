@@ -3,15 +3,7 @@ title: "testing testcase database connection fix"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_MdhrXH
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_kLqENZ
 qmd: "testing testcase database connection fix"
 issues: []
 discussions: []
@@ -105,10 +97,6 @@ protected function setUp(): void
 - [Activity TestCase Fix](../../Activity/docs/testing-testcase-database-connection-fix.md)
 - [Geo TestCase Fix](../../Geo/docs/testing-testcase-database-connection-fix.md)
 - [Media TestCase Fix](../../Media/docs/testing-testcase-database-connection-fix.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -122,8 +110,3 @@ issues: []
 discussions: []
 **Status**: Completed
 **Risultato**: Test Notify ora configurano correttamente le connessioni database
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

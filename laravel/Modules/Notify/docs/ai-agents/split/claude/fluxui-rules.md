@@ -3,21 +3,7 @@ title: "fluxui rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_JovddQ
-<<<<<<< .merge_file_evD1gO
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_iBEPAw
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_JovddQ
->>>>>>> .merge_file_SBPv24
-=======
->>>>>>> .merge_file_iBEPAw
 qmd: "fluxui rules"
 issues: []
 discussions: []
@@ -38,25 +24,12 @@ discussions: []
     <flux:button variant="primary"/>
 </code-snippet>
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ### Available Components
 This is correct as of Boost installation, but there may be additional components within the codebase.
 
 <available-flux-components>
 avatar, badge, brand, breadcrumbs, button, callout, checkbox, dropdown, field, heading, icon, input, modal, navbar, profile, radio, select, separator, switch, text, textarea, tooltip
 </available-flux-components>
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 
 ---
@@ -77,9 +50,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

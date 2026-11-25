@@ -4,15 +4,7 @@ type: rule
 tags: [notify, docs, rules, vhost, governance]
 module: Notify
 created: 2026-07-20
-<<<<<<< .merge_file_sdXi25
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_sG9Ifi
 qmd: "notify documentazione rules vhost governance 🌐 vhost governance rules frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -73,20 +65,11 @@ laravel/config/vhost/fixcity.local.conf
 - /etc/apache2/sites-available/fixcity.local.conf (not versioned)
 - docs/vhost.conf (wrong location)
 - config/fixcity.local.conf (wrong directory)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ❌ WRONG:
 - /etc/apache2/sites-available/fixcity.local.conf (not versioned)
 - docs/vhost.conf (wrong location)
 - config/fixcity.local.conf (wrong directory)
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ```
 
 **Rationale**:

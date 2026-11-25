@@ -486,9 +486,6 @@ Tutti i widget Filament che estendono `XotBaseWidget` e usano `statePath('data')
 
 ---
 
-
----
-
 ## login-widget-livewire-binding-fix
 
 *Consolidated from: `login-widget-livewire-binding-fix.md`*

@@ -4,15 +4,7 @@ title: "translation keys rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_VDcBkc
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_8omRgq
 qmd: "translation keys rules"
 issues: []
 discussions: []

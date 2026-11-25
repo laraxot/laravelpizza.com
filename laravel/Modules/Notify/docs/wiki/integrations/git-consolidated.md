@@ -401,14 +401,6 @@ git push
 
 *Consolidated from: `git-conflicts-inventory.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## File con conflitti di merge non risolti
 
 ### File PHP
@@ -434,14 +426,6 @@ git push
 
 *Consolidated from: `git-conflicts-resolution-summary.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Data Risoluzione
 4 Agosto 2025 - 11:23:35
 
@@ -734,14 +718,6 @@ git push provtv dev
 ```bash
 ```
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ---
 
 **Segnale di errore:**
@@ -836,14 +812,6 @@ php ./vendor/bin/phpstan analyse Modules
 - Verificare se il problema è diffuso (colpisce altri moduli?)
 - Soluzione temporanea: escludere laraxot da push automatici finché non risanato
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ### 3. Larastan Bootstrap Optimization
 - Timeout globale non è colpa di Notify
 - Problema architetturale (cross-module dependencies + Livewire registration in XotBaseServiceProvider)
@@ -892,14 +860,6 @@ Remote sync: ✅ provtv, ❌ laraxot (corrupted)
 
 *Consolidated from: `gitattributes-cleanup.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 > **Date**: 2026-03-13  
 > **Status**: ✅ Complete  
 > **Action**: Removed all `.gitattributes` files
@@ -1458,14 +1418,6 @@ ls -la bashscripts/ai/.github/workflows/
 
 *Consolidated from: `gits-resolution.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Data Risoluzione
 4 Agosto 2025 - 11:23:35
 

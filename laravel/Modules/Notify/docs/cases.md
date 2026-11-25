@@ -7,21 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< .merge_file_wFgjPV
-<<<<<<< .merge_file_DmBTTI
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_7qpQVs
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_wFgjPV
->>>>>>> .merge_file_KTqERZ
-=======
->>>>>>> .merge_file_7qpQVs
 ---
 
 # Case-Insensitive File Conflicts

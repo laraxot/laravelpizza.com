@@ -3,33 +3,7 @@ title: "README"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_IHCx9l
-<<<<<<< .merge_file_zyYraX
-<<<<<<< .merge_file_Imt41n
-<<<<<<< .merge_file_2p2v8b
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_dZTomI
-=======
->>>>>>> .merge_file_hoWTIV
-=======
->>>>>>> .merge_file_QwHEiY
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_IHCx9l
-<<<<<<< .merge_file_zyYraX
-<<<<<<< .merge_file_Imt41n
->>>>>>> .merge_file_hXy1Qw
-=======
->>>>>>> .merge_file_dZTomI
-=======
->>>>>>> .merge_file_hoWTIV
-=======
->>>>>>> .merge_file_QwHEiY
 qmd: "README"
 issues: []
 discussions: []
@@ -426,15 +400,8 @@ php validate-docs.php --dashboard
 
 # Output dashboard completo:
 # 📊 LARAXOT Documentation Quality Dashboard
-<<<<<<< HEAD
-# ============================================
-=======
-<<<<<<< HEAD
 # --------------------------------------------
-=======
 # ============================================
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 # 
 # 🎯 Overall Metrics
 #    Coverage: 95% (38/40 modules)

@@ -3,21 +3,7 @@ title: "email templates layouts"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_qGCYli
-<<<<<<< .merge_file_3zFTyl
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_p4DLYa
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_qGCYli
->>>>>>> .merge_file_9soa8Q
-=======
->>>>>>> .merge_file_p4DLYa
 qmd: "email templates layouts"
 issues: []
 discussions: []
@@ -162,10 +148,6 @@ MailTemplate::create([
 - CSS centralizzato riduce dimensioni email
 - Preheader migliora deliverability
 - Immagini ottimizzate con fallback
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -180,8 +162,3 @@ discussions: []
 **Ultimo aggiornamento**: [DATE]  
 **Versione**: 1.0  
 **Compatibilità**: Laravel 12.x, Filament 3.x, Spatie Mail Templates
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

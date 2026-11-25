@@ -3,31 +3,7 @@ title: "architecture summary"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_E25nXe
-<<<<<<< .merge_file_bfOQtn
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_Sb5XHg
-=======
->>>>>>> .merge_file_IdZDsU
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_E25nXe
-<<<<<<< .merge_file_bfOQtn
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_Sb5XHg
-=======
->>>>>>> .merge_file_IdZDsU
 qmd: "architecture summary"
 issues: []
 discussions: []
@@ -74,29 +50,8 @@ Themes are decoupled from business logic.
 - Themes: `laravel/Themes/`
 - Documentation: `docs/` (global) and `laravel/Modules/{Name}/docs/` (local).
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_E25nXe
-<<<<<<< .merge_file_bfOQtn
 [Return to Documentation Index](../../agents.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_Sb5XHg
-=======
->>>>>>> .merge_file_IdZDsU
-=======
-<<<<<<< HEAD
 [Return to Documentation Index](../../agents.md)
-=======
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_E25nXe
-<<<<<<< .merge_file_bfOQtn
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_Sb5XHg
-=======
->>>>>>> .merge_file_IdZDsU
 ---
 title: "architecture summary"
 type: note
@@ -106,28 +61,8 @@ updated: 2026-09-26
 qmd: "architecture summary"
 issues: []
 discussions: []
-<<<<<<< .merge_file_E25nXe
-<<<<<<< .merge_file_bfOQtn
-=======
->>>>>>> .merge_file_IdZDsU
 [Return to Documentation Index](../../AGENTS.md)
 [Return to Documentation Index](../../AGENTS.md)
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_E25nXe
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 [Return to Documentation Index](../../agents.md)
-=======
 [Return to Documentation Index](../../AGENTS.md)
 [Return to Documentation Index](../../AGENTS.md)
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_Sb5XHg
-=======
->>>>>>> .merge_file_IdZDsU
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

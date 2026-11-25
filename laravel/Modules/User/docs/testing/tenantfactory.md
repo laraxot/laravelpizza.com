@@ -7,6 +7,7 @@ related:
   - "./tenant-test-fixes.md"
   - "./tenantfactory-fix.md"
   - "./tenanttest-fixes.md"
+<<<<<<< .merge_file_FxaEJL
 <<<<<<< .merge_file_dbcaOj
 <<<<<<< .merge_file_2qvgpK
 qmd: "tenantfactory"
@@ -15,6 +16,9 @@ qmd: "tenantfactory"
 =======
 qmd: "tenantfactory"
 >>>>>>> .merge_file_Fhk6sS
+=======
+qmd: "tenantfactory"
+>>>>>>> .merge_file_szNgkS
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/tenantfactory-fix.md

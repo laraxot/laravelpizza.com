@@ -1,17 +1,23 @@
+<<<<<<< .merge_file_itITiz
 <<<<<<< .merge_file_EHZ43R
 <<<<<<< .merge_file_o5df8B
 =======
 >>>>>>> .merge_file_T8UYvu
+=======
+>>>>>>> .merge_file_MoK7ih
 ---
 title: "Refactor Completo Campi \"Città\" - Modulo User"
 type: note
 qmd: "translation city field refactor 08 completo"
 ---
+<<<<<<< .merge_file_itITiz
 <<<<<<< .merge_file_EHZ43R
 =======
 >>>>>>> .merge_file_YNVSsZ
 =======
 >>>>>>> .merge_file_T8UYvu
+=======
+>>>>>>> .merge_file_MoK7ih
 # Refactor Completo Campi "Città" - Modulo User
 
 ## Riepilogo Intervento

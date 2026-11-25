@@ -3,31 +3,7 @@ title: "git conflict resolution 2026 07 31"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_bsDFBw
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_onP6QU
-<<<<<<< .merge_file_zBIU6X
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_Ynkhwq
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_5iAxsJ
-=======
-<<<<<<< .merge_file_onP6QU
->>>>>>> .merge_file_8jmcVI
-=======
->>>>>>> .merge_file_Ynkhwq
->>>>>>> laraxot/dev
 qmd: "git conflict resolution 2026 07 31"
 issues: []
 discussions: []

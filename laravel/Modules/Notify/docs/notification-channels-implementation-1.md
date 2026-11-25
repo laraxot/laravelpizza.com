@@ -3,15 +3,7 @@ title: "notification channels implementation 1"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_x2BRpR
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_tp3omG
 qmd: "notification channels implementation 1"
 issues: []
 discussions: []

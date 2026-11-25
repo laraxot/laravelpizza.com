@@ -3,31 +3,7 @@ title: "project patterns"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_daVx0a
-<<<<<<< .merge_file_MPBD0a
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_CfZxcu
-=======
->>>>>>> .merge_file_Mtt7CM
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_daVx0a
-<<<<<<< .merge_file_MPBD0a
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_CfZxcu
-=======
->>>>>>> .merge_file_Mtt7CM
 qmd: "project patterns"
 issues: []
 discussions: []
@@ -53,45 +29,22 @@ app(MyAction::class)->createPersonalAccessClient();
 
 - **Short array syntax (CRITICAL)**: **ALWAYS** `[]`: **NEVER** `array()` in any PHP file.
 - **Packages**: Add to `Modules/{Module}/composer.json`, then run `composer go` from `laravel/`.
-<<<<<<< HEAD
-<<<<<<< .merge_file_daVx0a
-<<<<<<< .merge_file_MPBD0a
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_CfZxcu
-=======
->>>>>>> .merge_file_Mtt7CM
 - **Git Rules**:
   - NEVER `git remote set-url`: only project owner does this.
   - Git goes forward only: never restore old versions.
-=======
-<<<<<<< .merge_file_rO33t1
 - **Git Rules**: 
   - NEVER `git remote set-url` — only project owner does this.
   - Git goes forward only — never restore old versions.
-=======
-- **Git Rules**:
-<<<<<<< .merge_file_daVx0a
-<<<<<<< .merge_file_MPBD0a
-  - NEVER `git remote set-url`: only project owner does this.
-  - Git goes forward only: never restore old versions.
->>>>>>> .merge_file_ZKezpx
->>>>>>> laraxot/dev
-=======
 - **Git Rules**:
   - NEVER `git remote set-url`: only project owner does this.
   - Git goes forward only: never restore old versions.
-=======
+- **Git Rules**:
   - NEVER `git remote set-url`: only project owner does this.
   - Git goes forward only: never restore old versions.
->>>>>>> .merge_file_ZKezpx
->>>>>>> .merge_file_CfZxcu
-=======
   - NEVER `git remote set-url`: only project owner does this.
   - Git goes forward only: never restore old versions.
->>>>>>> .merge_file_ZKezpx
->>>>>>> .merge_file_Mtt7CM
->>>>>>> laraxot/dev
+  - NEVER `git remote set-url`: only project owner does this.
+  - Git goes forward only: never restore old versions.
   - Every error fix: git commit + GitHub issue + GitHub discussion.
 
 ## Session Best Practices

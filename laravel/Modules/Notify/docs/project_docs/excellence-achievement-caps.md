@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 ---
 title: "2025 EXCELLENCE ACHIEVEMENT"
-=======
 ---title: "2025 EXCELLENCE ACHIEVEMENT"
->>>>>>> laraxot/dev
 type: note
 tags: [documentation]
 created: 2026-09-26

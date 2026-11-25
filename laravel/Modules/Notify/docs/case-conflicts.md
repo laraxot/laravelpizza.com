@@ -3,21 +3,7 @@ title: "case conflicts"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_orqZgZ
-<<<<<<< .merge_file_FgKTOe
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_BYjM2q
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_orqZgZ
->>>>>>> .merge_file_CHALzh
-=======
->>>>>>> .merge_file_BYjM2q
 qmd: "case conflicts"
 issues: []
 discussions: []

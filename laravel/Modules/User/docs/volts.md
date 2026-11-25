@@ -11,6 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_Rd4hyf
 <<<<<<< .merge_file_hA1F6Y
 <<<<<<< .merge_file_hSXxRr
 qmd: "volts"
@@ -19,6 +20,9 @@ qmd: "volts"
 =======
 qmd: "volts"
 >>>>>>> .merge_file_zLlAa8
+=======
+qmd: "volts"
+>>>>>>> .merge_file_jnMBKz
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/volt-errors.md

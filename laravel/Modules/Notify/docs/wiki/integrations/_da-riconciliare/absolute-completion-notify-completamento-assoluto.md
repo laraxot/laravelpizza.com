@@ -7,23 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_6h7WVy
-=======
-<<<<<<< .merge_file_q2Xlq3
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_4rYD4j
-=======
->>>>>>> .merge_file_XXnzz1
->>>>>>> laraxot/dev
 ---
 
 # 🏆 NOTIFY - COMPLETAMENTO ASSOLUTO 100%

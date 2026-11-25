@@ -3,15 +3,7 @@ title: "roadmap update system"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_FP5pKZ
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_UottiQ
 qmd: "roadmap update system"
 issues: []
 discussions: []
@@ -155,10 +147,6 @@ class RoadmapMetricsUpdater
 **PHPStan**: [✅/🚧] Level [X] ([X] errori)  
 **Filament**: [✅/🚧] 4.x Compatibile  
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "roadmap update system"
@@ -197,9 +185,6 @@ discussions: []
 [Success criteria and goals]
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 MODULE OVERVIEW
 ## ✅ COMPLETED FEATURES
 ## 🚧 IN PROGRESS FEATURES
@@ -209,8 +194,6 @@ discussions: []
 ## 🛠️ IMPLEMENTATION PLAN
 ## 🎯 IMMEDIATE NEXT STEPS
 ## 🏆 SUCCESS CRITERIA
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 **Status**: [Status]  
 **Confidence Level**: [X]%  

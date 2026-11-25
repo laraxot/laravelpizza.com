@@ -3,21 +3,7 @@ title: "Boost Skill Installation - Success Report"
 type: concept
 tags: [boost, skill, installation, success]
 created: 2026-07-14
-<<<<<<< .merge_file_EhjblL
-<<<<<<< .merge_file_BWCHlK
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_9wTmYy
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_EhjblL
->>>>>>> .merge_file_o7l7nO
-=======
->>>>>>> .merge_file_9wTmYy
 qmd: "boost-skill-installation-success boost skill installation - success report"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -26,26 +12,14 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_EhjblL
-<<<<<<< .merge_file_BWCHlK
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_o7l7nO
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_9wTmYy
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

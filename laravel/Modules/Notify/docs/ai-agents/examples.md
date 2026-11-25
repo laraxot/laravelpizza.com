@@ -3,21 +3,7 @@ title: "examples"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_r32u7g
-<<<<<<< .merge_file_5KC0fj
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_MTMjD5
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_r32u7g
->>>>>>> .merge_file_TJ0bxY
-=======
->>>>>>> .merge_file_MTMjD5
 qmd: "examples"
 issues: []
 discussions: []

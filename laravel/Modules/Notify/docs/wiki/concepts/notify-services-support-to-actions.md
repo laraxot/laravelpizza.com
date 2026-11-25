@@ -4,15 +4,7 @@ title: "Notify Services/Support -> Actions migration"
 type: concept
 tags: [notify, actions, queueable-action, services, refactor]
 created: 2026-07-13
-<<<<<<< .merge_file_BAMZwH
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-11-17
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_SuKnJO
 qmd: "Notify app Services Support converted to QueueableAction migration mapping"
 issues:
 related:

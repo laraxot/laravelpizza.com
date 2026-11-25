@@ -3,21 +3,7 @@ title: "duplicate files to remove"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_6NxNbI
-<<<<<<< .merge_file_P5qim5
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_0BabOA
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_6NxNbI
->>>>>>> .merge_file_GWc5gv
-=======
->>>>>>> .merge_file_0BabOA
 qmd: "duplicate files to remove"
 issues: []
 discussions: []
@@ -125,10 +111,6 @@ rm Modules/Notify/resources/views/emails/templates/widgets/newfeaturestart.blade
 git add -A
 git commit -m "fix: remove lowercase duplicate files (case sensitivity compliance)"
 ```
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -144,8 +126,3 @@ discussions: []
 - [Xot File Naming Rules](../../xot/docs/file-naming-case-sensitivity.md)
 - [Bashscripts Location Policy](../../xot/docs/bashscripts-location-policy.md)
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

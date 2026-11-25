@@ -7,23 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_8VsB4A
-=======
-<<<<<<< .merge_file_fdB9L3
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_jEXYyr
-=======
->>>>>>> .merge_file_kTyPNS
->>>>>>> laraxot/dev
 ---
 
 # 🧘 Zen of Documentation - Filosofia Unificata

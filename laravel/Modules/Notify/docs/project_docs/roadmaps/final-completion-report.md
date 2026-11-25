@@ -1,16 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_hfcEnX
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_s515Nu
 title: "final completion report 2025 10"
 type: note
 tags: [documentation]
@@ -682,16 +670,6 @@ Con questa base solida, FixCity è pronta per:
 *"With Super Cow powers, even the impossible becomes possible!"*
 
 **END OF REPORT** ✅
-<<<<<<< .merge_file_hfcEnX
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_s515Nu
->>>>>>> laraxot/dev
 issues: []
 discussions: []
 title: "FINAL_COMPLETION_REPORT_2025-10-01"
@@ -713,15 +691,3 @@ related:
 ---
 
 > Questo file è stato rinominato in [final-completion-report.md](final-completion-report.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_hfcEnX
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_s515Nu
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

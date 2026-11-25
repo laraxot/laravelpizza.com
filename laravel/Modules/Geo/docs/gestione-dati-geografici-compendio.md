@@ -180,37 +180,9 @@ Indipendentemente dalla strategia scelta, le seguenti best practices dovrebbero 
 Per facilitare la navigazione nella documentazione esistente, ecco una mappa organizzata per argomento:
 
 ### Analisi Generali
-<<<<<<< .merge_file_ZThv8b
-<<<<<<< .merge_file_1J7d0O
-<<<<<<< .merge_file_YEv9hs
-<<<<<<< .merge_file_YSGQAM
 - [module-geo-2.md](module-geo.md) - Panoramica del modulo Geo
-=======
-=======
->>>>>>> .merge_file_QgJDRl
-=======
->>>>>>> .merge_file_vcrEbE
-=======
->>>>>>> .merge_file_LZaLd3
-<<<<<<< HEAD
 - [module-geo-2.md](module-geo-2.md) - Panoramica del modulo Geo
-=======
-<<<<<<< HEAD
-- [module-geo-2.md](module-geo-2.md) - Panoramica del modulo Geo
-=======
 - [module-geo-2.md](module-geo.md) - Panoramica del modulo Geo
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ZThv8b
-<<<<<<< .merge_file_1J7d0O
-<<<<<<< .merge_file_YEv9hs
->>>>>>> .merge_file_JETZsG
-=======
->>>>>>> .merge_file_QgJDRl
-=======
->>>>>>> .merge_file_vcrEbE
-=======
->>>>>>> .merge_file_LZaLd3
 - [architecture.md](architecture.md) - Architettura del modulo
 
 ### GeoJsonModel

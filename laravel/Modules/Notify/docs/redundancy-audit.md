@@ -1,13 +1,5 @@
 ---
-<<<<<<< .merge_file_bDDcj1
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_mQndas
 qmd: "redundancy audit"
 issues: []
 discussions: []

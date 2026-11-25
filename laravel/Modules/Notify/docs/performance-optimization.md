@@ -5,23 +5,7 @@ discussions: []
 title: "Performance Optimization — Module Notify"
 type: documentation
 created: 2026-05-11
-<<<<<<< HEAD
-<<<<<<< .merge_file_E5nFf0
-=======
-<<<<<<< .merge_file_pcLZe1
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-05-11
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_h72VQe
-=======
->>>>>>> .merge_file_xzinKl
->>>>>>> laraxot/dev
 tags: [performance, optimization, tokens, context]
 related:
   - ../../docs/wiki/concepts/llm-wiki-operational-discipline.md

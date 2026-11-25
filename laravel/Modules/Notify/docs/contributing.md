@@ -3,21 +3,7 @@ title: "contributing"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_IDlq97
-<<<<<<< .merge_file_3WbzVZ
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_Sz9w8U
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_IDlq97
->>>>>>> .merge_file_ZxqYS8
-=======
->>>>>>> .merge_file_Sz9w8U
 qmd: "contributing"
 issues: []
 discussions: []
@@ -37,10 +23,6 @@ First off, thank you for considering contributing to FixCity! 🎉
 - [Commit Guidelines](#commit-guidelines)
 - [Pull Request Process](#pull-request-process)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "contributing"
@@ -57,13 +39,8 @@ This project adheres to a Code of Conduct that all contributors are expected to 
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 📜 Code of Conduct
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🚀 Getting Started
 
 ### Prerequisites

@@ -3,23 +3,7 @@ title: "plan"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_livt3Z
-=======
-<<<<<<< .merge_file_zLhiwR
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_uu9kF2
-=======
->>>>>>> .merge_file_ZP9Pvt
->>>>>>> laraxot/dev
 qmd: "plan"
 issues: []
 discussions: []

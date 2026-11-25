@@ -2,32 +2,10 @@
 title: "Audit BMAD — Notify"
 type: audit
 status: review
-<<<<<<< .merge_file_GYLo7w
-<<<<<<< .merge_file_64fJUn
-=======
-=======
->>>>>>> .merge_file_YNBN0N
-<<<<<<< HEAD
-updated: 2026-11-16
-module: Notify
-qmd: "audit BMAD Notify sintesi finding P1 NotificationLog policy webhook inbound canali incompleti"
-=======
-<<<<<<< .merge_file_GYLo7w
->>>>>>> .merge_file_h0a6Fp
-=======
->>>>>>> .merge_file_YNBN0N
 updated: 2026-11-23
 module: Notify
 qmd: "audit BMAD Notify sintesi finding P1 NotificationLog policy webhook inbound canali incompleti"
 created: 2026-11-23
-<<<<<<< .merge_file_GYLo7w
-<<<<<<< .merge_file_64fJUn
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_h0a6Fp
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_YNBN0N
 ---
 
 # Audit BMAD — Notify

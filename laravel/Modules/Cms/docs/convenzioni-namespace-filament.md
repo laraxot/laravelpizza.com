@@ -3,27 +3,7 @@ title: "convenzioni namespace filament"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ouDDRp
-<<<<<<< .merge_file_2CVWfb
-<<<<<<< .merge_file_JZEPoq
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_fWikIG
-=======
->>>>>>> .merge_file_QRqSDH
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ouDDRp
-<<<<<<< .merge_file_2CVWfb
->>>>>>> .merge_file_DF2C6j
-=======
->>>>>>> .merge_file_fWikIG
-=======
->>>>>>> .merge_file_QRqSDH
 qmd: "convenzioni namespace filament"
 issues: []
 discussions: []
@@ -81,19 +61,9 @@ namespace Modules\User\App\Filament\Widgets;
   }
   ```
 
-<<<<<<< HEAD
-- Per le regole generali e best practice consulta la doc del modulo [Xot](../../xot/project_docs/README.md).
-=======
-<<<<<<< HEAD
 - Per le regole generali e best practice consulta la doc del modulo [Xot](../../xot/project_docs/readme.md).
-=======
-<<<<<<< .merge_file_nammGU
 - Per le regole generali e best practice consulta la doc del modulo [Xot](../../Xot/docs/README.md).
-=======
 - Per le regole generali e best practice consulta la doc del modulo [Xot](../../xot/project_docs/README.md).
->>>>>>> .merge_file_SYrrp5
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Regole Tailwind CSS con Filament
 - **IMPORTANTE:** Con Filament 3.x, usare solo `tailwindcss@3.x` (NO 4.x). Riferimento: [Filament Docs](https://filamentphp.com/project_docs/3.x/notifications/installation#installing-tailwind-css).
@@ -103,31 +73,9 @@ namespace Modules\User\App\Filament\Widgets;
 - Per temi custom (es. Themes/One) la build e pubblicazione asset si fa SOLO dalla cartella del tema:
   ```sh
   npm run build
-<<<<<<< .merge_file_ouDDRp
-<<<<<<< .merge_file_2CVWfb
-<<<<<<< .merge_file_JZEPoq
   # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
-=======
-=======
->>>>>>> .merge_file_fWikIG
-=======
->>>>>>> .merge_file_QRqSDH
-<<<<<<< HEAD
   # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
-<<<<<<< HEAD
-  # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
   # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ouDDRp
-<<<<<<< .merge_file_2CVWfb
->>>>>>> .merge_file_DF2C6j
-=======
->>>>>>> .merge_file_fWikIG
-=======
->>>>>>> .merge_file_QRqSDH
   ```
 - Non usare mai `vendor:publish` per asset dei temi custom.
 - Vedi anche [README tema One](../../../../themes/one/README.md)
@@ -153,28 +101,19 @@ Section::make('Anteprima')
 ## Collegamenti Bidirezionali
 
 ### Modulo Xot (Core)
-<<<<<<< HEAD
 - [README.md](../../xot/project_docs/README.md) - Indice principale della documentazione
 - [Struttura dei Moduli](../../xot/project_docs/module_structure.md) - Struttura standard dei moduli
 - [Case Sensitivity delle Directory](../../xot/project_docs/directory-case-sensitivity.md) - Regole per la case sensitivity
 - [Regole per i Namespace](../../Notify/docs/namespace-rules-2.md) - Convenzioni per i namespace
-=======
-<<<<<<< HEAD
 - [README.md](../../xot/project_docs/readme.md) - Indice principale della documentazione
 - [Struttura dei Moduli](../../xot/project_docs/module_structure.md) - Struttura standard dei moduli
 - [Case Sensitivity delle Directory](../../xot/project_docs/directory-case-sensitivity.md) - Regole per la case sensitivity
 - [Regole per i Namespace](../../Notify/docs/namespace-rules-2.md) - Convenzioni per i namespace
-=======
-<<<<<<< .merge_file_nammGU
 - [README.md](../../Xot/docs/README.md) - Indice principale della documentazione
-=======
 - [README.md](../../xot/project_docs/README.md) - Indice principale della documentazione
->>>>>>> .merge_file_SYrrp5
 - [Struttura dei Moduli](../../xot/project_docs/module_structure.md) - Struttura standard dei moduli
 - [Case Sensitivity delle Directory](../../Xot/docs/directory-case-sensitivity.md) - Regole per la case sensitivity
 - [Regole per i Namespace](../../Notify/docs/namespace-rules-2.md) - Convenzioni per i namespace
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ### Filament
 - [Widget Filament](../../xot/project_docs/filament/widgets/xot-base-widget.md) - Documentazione su XotBaseWidget
@@ -182,15 +121,8 @@ Section::make('Anteprima')
 - [Risorse Filament](../../xot/project_docs/filament-resources.md) - Struttura delle risorse Filament
 
 ### Moduli Correlati
-<<<<<<< HEAD
 - [Lang - Filament Translations](../../Lang/docs/filament-translations-2.md) - Traduzioni in Filament
-=======
-<<<<<<< HEAD
-- [Lang - Filament Translations](../../Lang/docs/filament-translations-2.md) - Traduzioni in Filament
-=======
 - [Lang - Filament Translations](../../Lang/docs/filament-translations.md) - Traduzioni in Filament
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [UI - Form Filament Widgets](../../ui/project_docs/form_filament_widgets.md) - Widget per form Filament
 - [User - Filament Best Practices](../../user/project_docs/filament-best-practices-2.md) - Best practices per Filament
 
@@ -201,14 +133,6 @@ Section::make('Anteprima')
 
 ---
 
-<<<<<<< .merge_file_ouDDRp
-<<<<<<< .merge_file_2CVWfb
-<<<<<<< .merge_file_JZEPoq
-=======
-=======
->>>>>>> .merge_file_fWikIG
-=======
->>>>>>> .merge_file_QRqSDH
 title: "convenzioni namespace filament"
 type: note
 tags: [documentation]
@@ -217,11 +141,4 @@ updated: 2026-09-26
 qmd: "convenzioni namespace filament"
 issues: []
 discussions: []
-<<<<<<< .merge_file_ouDDRp
-<<<<<<< .merge_file_2CVWfb
->>>>>>> .merge_file_DF2C6j
-=======
->>>>>>> .merge_file_fWikIG
-=======
->>>>>>> .merge_file_QRqSDH
 > **Nota**: Questo documento è linkato anche dal README di Xot per garantire coerenza tra i moduli.

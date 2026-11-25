@@ -7,21 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< .merge_file_owxB6M
-<<<<<<< .merge_file_C2trJJ
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_6XGf81
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_owxB6M
->>>>>>> .merge_file_Mxa6YL
-=======
->>>>>>> .merge_file_6XGf81
 ---
 
 # Pattern: Actions che chiamano altre Actions

@@ -3,15 +3,7 @@ title: "schema conventions"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_fg7UyC
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_W10Sw9
 qmd: "schema conventions"
 issues: []
 discussions: []
@@ -77,10 +69,6 @@ Here's a complete example of a properly formatted schema:
 * [schema-conventions.md](docs/schema-conventions.md)
 * [schema-conventions.md](../../../Notify/docs/schema-conventions.md)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ### Versione Incoming
 
@@ -98,11 +86,6 @@ qmd: "schema conventions"
 issues: []
 discussions: []
 ```
-<<<<<<< HEAD
-=======
-=======
 ### Versione Incoming
 
 ```
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

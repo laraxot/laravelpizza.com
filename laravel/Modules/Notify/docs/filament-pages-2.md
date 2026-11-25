@@ -3,31 +3,7 @@ title: "filament pages"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_wKO2ql
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_4hOmKI
-<<<<<<< .merge_file_O6NnYu
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_O18tDV
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_lKvVPO
-=======
-<<<<<<< .merge_file_4hOmKI
->>>>>>> .merge_file_03Rb8m
-=======
->>>>>>> .merge_file_O18tDV
->>>>>>> laraxot/dev
 qmd: "filament pages"
 issues: []
 discussions: []

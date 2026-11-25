@@ -3,23 +3,7 @@ title: "path and interface rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_528rCh
-=======
-<<<<<<< .merge_file_KWMTCU
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_vjTira
-=======
->>>>>>> .merge_file_3Vg2nN
->>>>>>> laraxot/dev
 qmd: "path and interface rules"
 issues: []
 discussions: []

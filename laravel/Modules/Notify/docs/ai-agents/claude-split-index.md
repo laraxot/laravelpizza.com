@@ -3,21 +3,7 @@ title: "claude split index"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_0CWzog
-<<<<<<< .merge_file_uZ4JAo
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_ub924r
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_0CWzog
->>>>>>> .merge_file_e9EcLX
-=======
->>>>>>> .merge_file_ub924r
 qmd: "claude split index"
 issues: []
 discussions: []

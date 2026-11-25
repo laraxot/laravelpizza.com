@@ -5,6 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_fMZiTh
 <<<<<<< .merge_file_VlmsGk
 <<<<<<< .merge_file_Gwykmu
 qmd: "user research"
@@ -13,6 +14,9 @@ qmd: "user research"
 =======
 qmd: "user research"
 >>>>>>> .merge_file_CrV5o9
+=======
+qmd: "user research"
+>>>>>>> .merge_file_vURv7U
 ---
 
 # User Module - User Research

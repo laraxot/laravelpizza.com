@@ -3,21 +3,7 @@ title: "Summary"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_4yAdXk
-<<<<<<< .merge_file_QBiEoQ
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_1I5AOd
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_4yAdXk
->>>>>>> .merge_file_Cgtzh1
-=======
->>>>>>> .merge_file_1I5AOd
 qmd: "Summary"
 issues: []
 discussions: []
@@ -64,10 +50,6 @@ php artisan tinker --execute="
 ### Stato
 ✅ **RISOLTO** - Testato e verificato funzionante
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "SUMMARY"
@@ -81,9 +63,4 @@ discussions: []
 ## Prossimi Bug da Analizzare
 
 Nessuno al momento.
-<<<<<<< HEAD
-=======
-=======
 ## Prossimi Bug da Analizzare
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

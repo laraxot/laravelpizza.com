@@ -7,19 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -62,16 +50,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -331,16 +311,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -526,42 +498,16 @@ Themes/Sixteen/resources/views/
 ## 📚 Risorse
 
 ### Documentazione
-<<<<<<< HEAD
 - [Analisi Visiva](../../screenshots/homepage/analisi-visiva.md)
 - [Screenshot Analysis](docs/screenshots/homepage/screenshot-analysis-3.md)
 - [Fix Plan](../../screenshots/homepage/fix-plan.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Analisi Visiva](../../screenshots/homepage/analisi-visiva-2.md)
 - [Screenshot Analysis](docs/screenshots/homepage/SCREENSHOT_analysis.md)
-=======
-<<<<<<< HEAD
-- [Analisi Visiva](../../screenshots/homepage/analisi-visiva.md)
-- [Screenshot Analysis](docs/screenshots/homepage/screenshot-analysis-3.md)
-- [Fix Plan](../../screenshots/homepage/fix-plan.md)
-=======
-- [Analisi Visiva](../../screenshots/homepage/analisi-visiva-2.md)
-- [Screenshot Analysis](docs/screenshots/homepage/SCREENSHOT_analysis.md)
-<<<<<<< .merge_file_guls4i
 - [Fix Plan](docs/screenshots/homepage/fix-plan.md)
-=======
->>>>>>> laraxot/dev
 - [Fix Plan](../../screenshots/homepage/fix-plan-2.md)
 - [Analisi Visiva](../../screenshots/homepage/analisi-visiva-2.md)
 - [Screenshot Analysis](docs/screenshots/homepage/SCREENSHOT_analysis.md)
 - [Fix Plan](../../screenshots/homepage/fix-plan-2.md)
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_VI8aQQ
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- [Analisi Visiva](../../screenshots/homepage/analisi-visiva.md)
-- [Screenshot Analysis](docs/screenshots/homepage/screenshot-analysis-3.md)
-- [Fix Plan](../../screenshots/homepage/fix-plan.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [OpenViking Context](.openvikings/homepage_alignment_context.md)
 
 ### Link Esterni
@@ -615,16 +561,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -807,16 +745,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -1029,16 +959,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -1067,27 +989,9 @@ Analizzare e documentare la necessità di creare `XotBasePivot` seguendo princip
    - ✅ Filosofia Zen e principi SOLID
    - ✅ **Raccomandazione: IMPLEMENTARE ⭐⭐⭐⭐⭐**
 
-<<<<<<< HEAD
-2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
-2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
-2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
-=======
-<<<<<<< .merge_file_guls4i
 2. **[XotBasePivot Strategy](./architecture/xotbasepivot-strategy.md)** (3.500+ parole)
-=======
 2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
 2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
->>>>>>> .merge_file_VI8aQQ
->>>>>>> laraxot/dev
-=======
-2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
-2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
    - ✅ Piano step-by-step (3-4 ore totali)
    - ✅ 13 moduli impattati, 26 file da refactorare
    - ✅ Script di migration automatici
@@ -1396,27 +1300,9 @@ public function getConnectionName(): ?string
 
 **Passi:**
 1. Leggere [XotBasePivot Analysis](./architecture/xotbasepivot-analysis.md)
-<<<<<<< HEAD
-2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
-2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
-2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
-=======
-<<<<<<< .merge_file_guls4i
 2. Seguire [XotBasePivot Strategy](./architecture/xotbasepivot-strategy.md)
-=======
 2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
 2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
->>>>>>> .merge_file_VI8aQQ
->>>>>>> laraxot/dev
-=======
-2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
-2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 3. Iniziare da User module (priorità alta)
 4. Testare continuamente con PHPStan Level 10
 
@@ -1510,17 +1396,6 @@ Per domande su questa sessione:
 
 **Ready for Team Review and Implementation! 🚀**
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ---
 
 ## sessione-super-mucca
@@ -1545,16 +1420,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -1567,17 +1434,6 @@ related:
 
 *Consolidated from: `sessionesuper-mucca.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🎯 Obiettivo
 
 Analizzare e documentare la necessità di creare `XotBasePivot` seguendo principi **DRY** e **KISS**, poi **implementare** la soluzione con **PHPStan Level 10** compliance.
@@ -1601,27 +1457,9 @@ Analizzare e documentare la necessità di creare `XotBasePivot` seguendo princip
    - ✅ Filosofia Zen e principi SOLID
    - ✅ **Raccomandazione: IMPLEMENTARE ⭐⭐⭐⭐⭐**
 
-<<<<<<< HEAD
-2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
-2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
-2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
-=======
-<<<<<<< .merge_file_guls4i
 2. **[XotBasePivot Strategy](./architecture/xotbasepivot-strategy.md)** (3.500+ parole)
-=======
 2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
 2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
->>>>>>> .merge_file_VI8aQQ
->>>>>>> laraxot/dev
-=======
-2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
-2. **[XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)** (3.500+ parole)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
    - ✅ Piano step-by-step (3-4 ore totali)
    - ✅ 13 moduli impattati, 26 file da refactorare
    - ✅ Script di migration automatici
@@ -1647,23 +1485,8 @@ Analizzare e documentare la necessità di creare `XotBasePivot` seguendo princip
    - ✅ Next steps e pattern correlati
    - ✅ FAQ per nuovi developer
 
-<<<<<<< HEAD
 6. **[Executive Summary](./xotbasepivot-executive-summary.md)** (2.000+ parole)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 6. **[Executive Summary](./XotBasePivot-Executive-Summary.md)** (2.000+ parole)
-=======
-<<<<<<< HEAD
-6. **[Executive Summary](./xotbasepivot-executive-summary.md)** (2.000+ parole)
-=======
-6. **[Executive Summary](./XotBasePivot-Executive-Summary.md)** (2.000+ parole)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-6. **[Executive Summary](./xotbasepivot-executive-summary.md)** (2.000+ parole)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
    - ✅ TL;DR per management
    - ✅ Business case con ROI 58.500%
    - ✅ Risk assessment (basso)
@@ -1946,27 +1769,9 @@ public function getConnectionName(): ?string
 
 **Passi:**
 1. Leggere [XotBasePivot Analysis](./architecture/xotbasepivot-analysis.md)
-<<<<<<< HEAD
-2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
-2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
-2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
-=======
-<<<<<<< .merge_file_guls4i
 2. Seguire [XotBasePivot Strategy](./architecture/xotbasepivot-strategy.md)
-=======
 2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
 2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
->>>>>>> .merge_file_VI8aQQ
->>>>>>> laraxot/dev
-=======
-2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
-2. Seguire [XotBasePivot Strategy](../../architecture/xotbasepivot-strategy.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 3. Iniziare da User module (priorità alta)
 4. Testare continuamente con PHPStan Level 10
 
@@ -2060,17 +1865,6 @@ Per domande su questa sessione:
 
 **Ready for Team Review and Implementation! 🚀**
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ---
 
 **Consolidated by:** Phase 2f intelligent merging

@@ -3,21 +3,7 @@ title: "xotbase table method"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_3yPuug
-<<<<<<< .merge_file_pyGr8U
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_BVuoWF
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_3yPuug
->>>>>>> .merge_file_utI0Wm
-=======
->>>>>>> .merge_file_BVuoWF
 qmd: "xotbase table method"
 issues: []
 discussions: []
@@ -30,10 +16,6 @@ discussions: []
 **Status**: ✅ CRITICAL RULE  
 **Priority**: BLOCKER
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "xotbase table method"
@@ -70,13 +52,8 @@ class OutcomesTableWidget extends XotBaseTableWidget
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 The Rule
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🧠 The WHY
 
 ### Level 1: DRY Principle
@@ -311,23 +288,11 @@ class MyWidget extends XotBaseTableWidget
 ## 🔗 Related Documentation
 
 ### AI Agents Docs
-<<<<<<< .merge_file_3yPuug
-<<<<<<< .merge_file_pyGr8U
-=======
 - **[Rules Index](00-index.md)** - All rules
->>>>>>> .merge_file_utI0Wm
 - **[Rules Index](00-index.md)** - All rules
-<<<<<<< HEAD
 - **[Rules Index](00-index.md)** - All rules
-=======
-<<<<<<< HEAD
-=======
 - **[Rules Index](00-index.md)** - All rules
->>>>>>> .merge_file_BVuoWF
 - **[Rules Index](00-index.md)** - All rules
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - **[XotBase Extension Rule](xotbase-extension-rule.md)** - Why extend XotBase
 - **[Bash Commands Auto-Allow](bash-commands-auto-allow.md)** - Bash permissions
 

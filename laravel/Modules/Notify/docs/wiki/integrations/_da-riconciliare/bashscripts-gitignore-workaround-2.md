@@ -7,25 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_Lvh8ca
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_xi6ZuN
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Lvh8ca
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_xi6ZuN
 ---
 
 # 🚨 CRITICAL: bashscripts/ in .gitignore
@@ -175,39 +157,15 @@ gh run list --repo laraxot/<nome repitory>
 
 ## 📚 Related Documentation
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_Lvh8ca
 - [Multi-Agent Collaboration Guide](multi-agent-collaboration-guide-2.md)
 - [GitHub Sync Rule](github-sync-rule-3.md)
 - [AI Rules](../.qwen/ai-rules-critical-3.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_xi6ZuN
 - [Multi-Agent Collaboration Guide](multi-agent-collaboration-guide-2.md)
 - [GitHub Sync Rule](github-sync-rule-3.md)
 - [AI Rules](../.qwen/AI_RULES_CRITICAL.md)
-=======
-<<<<<<< HEAD
 - [Multi-Agent Collaboration Guide](multi-agent-collaboration-guide-2.md)
 - [GitHub Sync Rule](github-sync-rule-3.md)
 - [AI Rules](../.qwen/ai-rules-critical-3.md)
-=======
-- [Multi-Agent Collaboration Guide](multi-agent-collaboration-guide-2.md)
-- [GitHub Sync Rule](github-sync-rule-3.md)
-- [AI Rules](../.qwen/AI_RULES_CRITICAL.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Lvh8ca
-=======
-- [Multi-Agent Collaboration Guide](multi-agent-collaboration-guide-2.md)
-- [GitHub Sync Rule](github-sync-rule-3.md)
-- [AI Rules](../.qwen/ai-rules-critical-3.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_xi6ZuN
 
 ---
 

@@ -7,25 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_YkTTJQ
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_btKOhI
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_YkTTJQ
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_btKOhI
 ---
 
 # 🐄✨ MISSIONE SUPER MUCCA - COMPLETAMENTO TOTALE ✨🐄
@@ -145,29 +127,11 @@ updated: 2026-11-23
 
 **Documento Master Riepilogo (1):**
 ```
-<<<<<<< HEAD
 ✅ docs/dry-kiss-analysis-master.md
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_YkTTJQ
-<<<<<<< HEAD
 ✅ docs/dry-kiss-analysis-master.md
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_btKOhI
 ✅ docs/dry-kiss-analysis-master-2.md
-=======
 ✅ docs/dry-kiss-analysis-master.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_YkTTJQ
-=======
 ✅ docs/dry-kiss-analysis-master-2.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_btKOhI
 ```
 
 ---
@@ -240,29 +204,11 @@ Durante l'analisi ho anche **IMPLEMENTATO** tutto quello che era stato documenta
 - Elimina ~200 LOC future
 
 ✅ **Documentazione Aggiornata:**
-<<<<<<< HEAD
 - 18 metodi-duplicati-analisi-2.md aggiornati
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_YkTTJQ
-<<<<<<< HEAD
 - 18 metodi-duplicati-analisi-2.md aggiornati
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_btKOhI
 - 18 metodi-duplicati-analisi-2.md aggiornati
-=======
 - 18 metodi-duplicati-analisi-2.md aggiornati
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_YkTTJQ
-=======
 - 18 metodi-duplicati-analisi-2.md aggiornati
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_btKOhI
 - 10+ documenti master creati
 - 35+ files totali
 
@@ -309,29 +255,11 @@ Durante l'analisi ho anche **IMPLEMENTATO** tutto quello che era stato documenta
 1. docs/analisi-metodi-duplicati.md
 2. ../../../analisi-metodi-duplicati-master-2.md (100+ pagine)
 3. docs/analisi-metodi-duplicati-INDEX.md
-<<<<<<< HEAD
 4. 18× metodi-duplicati-analisi-2.md aggiornati
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_YkTTJQ
-<<<<<<< HEAD
 4. 18× metodi-duplicati-analisi-2.md aggiornati
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_btKOhI
 4. 18× metodi-duplicati-analisi-2.md aggiornati
-=======
 4. 18× metodi-duplicati-analisi-2.md aggiornati
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_YkTTJQ
-=======
 4. 18× metodi-duplicati-analisi-2.md aggiornati
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_btKOhI
 5. 4× analisi-metodi-duplicati.md per moduli chiave
 6. 2× analisi-metodi-duplicati.md per temi
 
@@ -345,29 +273,11 @@ Durante l'analisi ho anche **IMPLEMENTATO** tutto quello che era stato documenta
 13. docs/README_REFACTORING.md
 
 **FASE 3: Analisi DRY/KISS**
-<<<<<<< HEAD
 14. docs/dry-kiss-analysis-master.md (questo documento madre)
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_YkTTJQ
-<<<<<<< HEAD
 14. docs/dry-kiss-analysis-master.md (questo documento madre)
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_btKOhI
 14. docs/dry-kiss-analysis-master-2.md (questo documento madre)
-=======
 14. docs/dry-kiss-analysis-master.md (questo documento madre)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_YkTTJQ
-=======
 14. docs/dry-kiss-analysis-master-2.md (questo documento madre)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_btKOhI
 15-34. 20× dry-kiss-analysis.md (ogni modulo/tema)
 35. ../../../missione-super-mucca-completata-2.md (questo file)
 
@@ -410,29 +320,8 @@ Durante l'analisi ho anche **IMPLEMENTATO** tutto quello che era stato documenta
 cat Modules/User/docs/dry-kiss-analysis.md
 
 # Analisi metodi duplicati
-<<<<<<< HEAD
-<<<<<<< .merge_file_YkTTJQ
 cat Modules/User/docs/metodi-duplicati-analisi-2.md
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_btKOhI
 cat Modules/User/docs/metodi-duplicati-analisi-2.md
-=======
-<<<<<<< HEAD
-cat Modules/User/docs/metodi-duplicati-analisi-2.md
-=======
-cat Modules/User/docs/metodi-duplicati-analisi-2.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_YkTTJQ
-=======
-cat Modules/User/docs/metodi-duplicati-analisi-2.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_btKOhI
 
 # Overview completa
 cat Modules/User/docs/analisi-metodi-duplicati.md
@@ -442,29 +331,11 @@ cat Modules/User/docs/analisi-metodi-duplicati.md
 
 ```bash
 # Master analysis DRY/KISS
-<<<<<<< HEAD
 cat docs/dry-kiss-analysis-master.md
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_YkTTJQ
-<<<<<<< HEAD
 cat docs/dry-kiss-analysis-master.md
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_btKOhI
 cat docs/dry-kiss-analysis-master-2.md
-=======
 cat docs/dry-kiss-analysis-master.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_YkTTJQ
-=======
 cat docs/dry-kiss-analysis-master-2.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_btKOhI
 
 # Master analysis duplicati
 cat ../../../analisi-metodi-duplicati-master-2.md

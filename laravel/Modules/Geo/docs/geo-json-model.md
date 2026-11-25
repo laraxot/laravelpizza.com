@@ -3,26 +3,6 @@ title: "geo json model"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_0KeXXL
-<<<<<<< .merge_file_iJs8ex
-<<<<<<< .merge_file_uKrua6
-<<<<<<< .merge_file_Wz3KIj
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_fmTGtQ
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_vCownP
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_H8BoxE
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_YP31pr
 updated: 2026-11-23
 qmd: "geo json model"
 issues: []
@@ -326,50 +306,10 @@ title: "geo json model"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_0KeXXL
-<<<<<<< .merge_file_iJs8ex
-<<<<<<< .merge_file_uKrua6
-<<<<<<< .merge_file_Wz3KIj
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_fmTGtQ
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_vCownP
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_H8BoxE
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_YP31pr
 updated: 2026-09-26
 qmd: "geo json model"
 issues: []
 discussions: []
-<<<<<<< .merge_file_0KeXXL
-<<<<<<< .merge_file_iJs8ex
-<<<<<<< .merge_file_uKrua6
-<<<<<<< .merge_file_Wz3KIj
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_fmTGtQ
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_vCownP
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_H8BoxE
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_YP31pr
 - Vedi anche [geo-entities-2.md](./geo-entities-2.md) per motivazione e percentuali di adozione.
 
 ## Approfondimento: Sushi (calebporzio/sushi) per modelli geografici
@@ -571,54 +511,9 @@ trait SushiToJsons
 ---
 
 - Vedi anche [geo-entities-2.md](./geo-entities-2.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
-<<<<<<< .merge_file_0KeXXL
-<<<<<<< .merge_file_iJs8ex
-<<<<<<< .merge_file_uKrua6
-<<<<<<< .merge_file_Wz3KIj
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_fmTGtQ
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_vCownP
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_H8BoxE
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_YP31pr
 module: theme
 topic: geo-json-model
 canonical: ../../../Themes/docs/shared-components/geo-json-model-1.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/geo-json-model-1.md
-<<<<<<< .merge_file_0KeXXL
-<<<<<<< .merge_file_iJs8ex
-<<<<<<< .merge_file_uKrua6
-<<<<<<< .merge_file_Wz3KIj
-=======
-=======
->>>>>>> .merge_file_vCownP
-=======
->>>>>>> .merge_file_H8BoxE
-=======
->>>>>>> .merge_file_YP31pr
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_0KeXXL
-<<<<<<< .merge_file_iJs8ex
-<<<<<<< .merge_file_uKrua6
->>>>>>> .merge_file_fmTGtQ
-=======
->>>>>>> .merge_file_vCownP
-=======
->>>>>>> .merge_file_H8BoxE
-=======
->>>>>>> .merge_file_YP31pr

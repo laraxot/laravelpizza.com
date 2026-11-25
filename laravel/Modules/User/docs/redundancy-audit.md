@@ -46,7 +46,6 @@ Suggested cleanup order:
 Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file evita nomi `*-.md`.
 
 
-
 ---
 
 <!-- Contenuto unito da redundancy-audit-21.md (rimozione date dai nomi file, issue #64) -->

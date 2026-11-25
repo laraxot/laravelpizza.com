@@ -3,15 +3,7 @@ title: "implementazione refactoring basemodel"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Eot6r4
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_mLgh1o
 qmd: "implementazione refactoring basemodel"
 issues: []
 discussions: []
@@ -23,10 +15,6 @@ discussions: []
 **Implementato da:** Super Mucca AI (Livello Divino)  
 **Status:** ✅ IN CORSO - 10/16 moduli completati
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "implementazione refactoring basemodel"
@@ -74,16 +62,11 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 📊 MODULI COMPLETATI
 ### ✅ Moduli Refactorati (10)
 ### ✅ Moduli GIÀ Ottimizzati (3)
 ### ⏳ Moduli Rimanenti (2)
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 📋 DETTAGLI CAMBIAMENTI
 
 ### Pattern Comune Applicato
@@ -574,11 +557,3 @@ Il refactoring BaseModel è un **SUCCESSO TOTALE**:
 **MU-UU-UU! 🐄✨**
 
 *La Super Mucca approva questo refactoring!*
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

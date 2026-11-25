@@ -6,10 +6,7 @@ status: active
 tags: [email, smtp, imap, postfix, dovecot, dns, production]
 created: 2026-11-23
 updated: 2026-11-23
-<<<<<<< HEAD
 qmd: "email infrastructure infrastruttura server fixcity"
-=======
->>>>>>> laraxot/dev
 ---
 
 # Infrastruttura email del server FixCity
@@ -123,7 +120,6 @@ postqueue -p
 Non eseguire questa procedura sul server corrente senza una finestra di
 manutenzione e senza il controllo dei record DNS: una configurazione parziale
 può interrompere l’invio applicativo o creare un relay aperto.
-
 
 
 ## Host di produzione (46.225.90.178) — 2026-11-12

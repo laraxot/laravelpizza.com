@@ -3,21 +3,7 @@ title: "Documentation Governance Framework"
 type: concept
 tags: [documentation, governance]
 created: 2026-07-14
-<<<<<<< .merge_file_VIDUD0
-<<<<<<< .merge_file_TDWCQ9
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_bCRgFy
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_VIDUD0
->>>>>>> .merge_file_XZ9VEb
-=======
->>>>>>> .merge_file_bCRgFy
 qmd: "documentation-governance documentation governance framework"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -26,26 +12,14 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_VIDUD0
-<<<<<<< .merge_file_TDWCQ9
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_XZ9VEb
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_bCRgFy
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -476,22 +450,7 @@ jobs:
 ## 📚 Related Documents
 
 - [AGENTS.md](../../../AGENTS.md) - Agent guidelines
-<<<<<<< .merge_file_VIDUD0
-<<<<<<< .merge_file_TDWCQ9
-<<<<<<< HEAD
 - [AGENTS.md](../../../AGENTS.md) - Agent guidelines
-=======
-<<<<<<< HEAD
-- [AGENTS.md](../../../AGENTS.md) - Agent guidelines
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- [AGENTS.md](../../../AGENTS.md) - Agent guidelines
->>>>>>> .merge_file_XZ9VEb
-=======
-- [AGENTS.md](../../../AGENTS.md) - Agent guidelines
->>>>>>> .merge_file_bCRgFy
 - [.windsurfrules](../../../.windsurfrules) - IDE rules
 - [documentation-index.md](../../../docs/documentation-index.md) - Master index
 

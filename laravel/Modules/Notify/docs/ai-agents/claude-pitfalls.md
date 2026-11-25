@@ -3,31 +3,7 @@ title: "claude pitfalls"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_Ti8tYl
-<<<<<<< .merge_file_YsWRuw
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_5dADWc
-=======
->>>>>>> .merge_file_aQK1yo
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Ti8tYl
-<<<<<<< .merge_file_YsWRuw
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_5dADWc
-=======
->>>>>>> .merge_file_aQK1yo
 qmd: "claude pitfalls"
 issues: []
 discussions: []
@@ -110,55 +86,20 @@ Errori comuni da evitare.
 
 ---
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_Ti8tYl
-<<<<<<< .merge_file_YsWRuw
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_5dADWc
-=======
->>>>>>> .merge_file_aQK1yo
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 **✅ CORRETTO**: Sempre eseguire copy per deploy assets
 ### 14. ❌ Dimenticare il symlink `public_html/themes/<Tema>` dopo theme build (`npm run copy` dismesso)
 **✅ CORRETTO**: Verificare che `public_html/themes/<Tema>` sia symlink a `laravel/Themes/<Tema>/public` (`php artisan xot:theme-link`, una volta per installazione); `npm run copy` non serve più.
-<<<<<<< .merge_file_Ti8tYl
-<<<<<<< .merge_file_YsWRuw
-<<<<<<< HEAD
-=======
-=======
->>>>>>> .merge_file_5dADWc
-=======
->>>>>>> .merge_file_aQK1yo
-=======
-<<<<<<< .merge_file_lfMRCx
 ### 14. ❌ Dimenticare symlink public_html/themes (npm run copy obsoleto) dopo theme build
 **✅ CORRETTO**: Sempre eseguire copy per deploy assets
 ### 14. ❌ Dimenticare il symlink `public_html/themes/<Tema>` dopo theme build (`npm run copy` dismesso)
 **✅ CORRETTO**: Verificare che `public_html/themes/<Tema>` sia symlink a `laravel/Themes/<Tema>/public` (`php artisan xot:theme-link`, una volta per installazione); `npm run copy` non serve più.
-=======
-niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-<<<<<<< .merge_file_Ti8tYl
-<<<<<<< .merge_file_YsWRuw
-**✅ CORRETTO**: Sempre eseguire copy per deploy assets
->>>>>>> .merge_file_6Ij9VU
->>>>>>> laraxot/dev
-=======
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 **✅ CORRETTO**: Sempre eseguire copy per deploy assets
->>>>>>> laraxot/dev
-=======
+niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 **✅ CORRETTO**: Sempre eseguire copy per deploy assets
->>>>>>> .merge_file_6Ij9VU
->>>>>>> .merge_file_5dADWc
-=======
 **✅ CORRETTO**: Sempre eseguire copy per deploy assets
->>>>>>> .merge_file_6Ij9VU
->>>>>>> .merge_file_aQK1yo
->>>>>>> laraxot/dev
+**✅ CORRETTO**: Sempre eseguire copy per deploy assets
 
 ---
 

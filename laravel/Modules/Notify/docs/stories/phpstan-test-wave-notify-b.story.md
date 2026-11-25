@@ -14,10 +14,7 @@ related:
   - ../../../Xot/docs/stories/phpstan-test-wave-regression.story.md
   - ./4.32.notify-phpstan-swarm-internal-errors.story.md
   - ./4.31.phpstan-swarm-already-clean.story.md
-<<<<<<< HEAD
 qmd: "phpstan test wave notify b story"
-=======
->>>>>>> laraxot/dev
 ---
 
 # PHPStan test wave Notify: lane notify-b

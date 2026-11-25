@@ -1,49 +1,22 @@
 ---
 title: "Contratto — DownloadLogFileAction"
 type: contract
-<<<<<<< .merge_file_KNlbi6
-<<<<<<< .merge_file_buweCp
-<<<<<<< .merge_file_hu8OVZ
-<<<<<<< .merge_file_D81Iwc
 owner: Activity
 status: accepted
 updated: 2026-11-24
 action: "Modules\\Activity\\Actions\\Log\\DownloadLogFileAction"
 qmd: "contract DownloadLogFileAction activity log download file BinaryFileResponse streaming storage logs ACT-LOGDL"
-=======
-=======
->>>>>>> .merge_file_BXSE7g
-=======
->>>>>>> .merge_file_2sep6r
-=======
->>>>>>> .merge_file_QGpZKN
-action: "Modules\Activity\Actions\Log\DownloadLogFileAction"
 tags: [contract, action, log-viewer, download, filesystem]
 created: 2026-11-24
-updated: 2026-11-24
 related:
   - ../adr/log-viewer-single-path-resolver.md
   - resolve-log-file-path-action.md
   - ../../app/Actions/Log/DownloadLogFileAction.php
   - ../../tests/Unit/Actions/Log/DownloadLogFileActionTest.php
-<<<<<<< .merge_file_KNlbi6
-<<<<<<< .merge_file_buweCp
-<<<<<<< .merge_file_hu8OVZ
->>>>>>> .merge_file_TUBgGy
-=======
->>>>>>> .merge_file_BXSE7g
-=======
->>>>>>> .merge_file_2sep6r
-=======
->>>>>>> .merge_file_QGpZKN
 ---
 
 # DownloadLogFileAction
 
-<<<<<<< .merge_file_KNlbi6
-<<<<<<< .merge_file_buweCp
-<<<<<<< .merge_file_hu8OVZ
-<<<<<<< .merge_file_D81Iwc
 Risposta HTTP di download per un file di log scelto dall'utente. Il percorso passa da `ResolveLogFilePathAction`.
 
 ## Input
@@ -75,13 +48,6 @@ Risposta HTTP di download per un file di log scelto dall'utente. Il percorso pas
 - Non verifica l'autorizzazione: il chiamante (`LogViewer`, riga 128) usa `AuthorizeLogAccessAction`.
 - Se il file sparisce tra la risoluzione e l'invio, il comportamento è quello di Symfony (non verificato).
 
-=======
-=======
->>>>>>> .merge_file_BXSE7g
-=======
->>>>>>> .merge_file_2sep6r
-=======
->>>>>>> .merge_file_QGpZKN
 Risposta di download per un file di log scelto dall'utente nella pagina `LogViewer` (azione Filament di download).
 Sorgente: `app/Actions/Log/DownloadLogFileAction.php`.
 
@@ -118,13 +84,3 @@ Test: `cd laravel && vendor/bin/pest Modules/Activity/tests/Unit/Actions/Log/Dow
 - Non usa il download di Livewire (`response()->streamDownload` dentro un componente): quello legge tutto il file in
   memoria e lo codifica in base64.
 - Non comprime e non taglia il file: il download è sempre il file intero (la pagina mostra solo la coda).
-<<<<<<< .merge_file_KNlbi6
-<<<<<<< .merge_file_buweCp
-<<<<<<< .merge_file_hu8OVZ
->>>>>>> .merge_file_TUBgGy
-=======
->>>>>>> .merge_file_BXSE7g
-=======
->>>>>>> .merge_file_2sep6r
-=======
->>>>>>> .merge_file_QGpZKN

@@ -27,6 +27,10 @@ Questa documentazione descrive la relazione many-to-many tra utenti e team nel m
 
 ## Collegamenti
 - [Documentazione generale sulle migrazioni](mdc:../../../../docs/database-migrations.md)
+<<<<<<< .merge_file_UwZDMS
+=======
+- [Best practice XotBaseMigration](mdc:../../xot/docs/migrations.md)
+>>>>>>> .merge_file_qrfLs4
 - [Best practice XotBaseMigration](migrations.md)
 
 ---

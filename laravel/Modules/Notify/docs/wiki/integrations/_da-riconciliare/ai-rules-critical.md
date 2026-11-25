@@ -3,23 +3,7 @@ title: "🤖 AI Agent Rules - CRITICAL UPDATE"
 type: rule
 tags: [rules, critical]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_99Rlvc
-=======
-<<<<<<< .merge_file_0E3wyX
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_YDpjgx
-=======
->>>>>>> .merge_file_gW4ovw
->>>>>>> laraxot/dev
 qmd: "ai-rules-critical 🤖 ai agent rules - critical update"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -30,25 +14,8 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
-<<<<<<< .merge_file_99Rlvc
-=======
-<<<<<<< .merge_file_0E3wyX
->>>>>>> laraxot/dev
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_YDpjgx
-=======
->>>>>>> .merge_file_gW4ovw
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

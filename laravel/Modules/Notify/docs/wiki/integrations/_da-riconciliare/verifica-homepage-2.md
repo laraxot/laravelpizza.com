@@ -7,23 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_bEjIx8
-=======
-<<<<<<< .merge_file_b6amb9
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_bvgU4T
-=======
->>>>>>> .merge_file_w3m5Ai
->>>>>>> laraxot/dev
 ---
 
 # 📸 Verifica Visiva Homepage Notify

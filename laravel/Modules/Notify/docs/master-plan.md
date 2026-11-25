@@ -3,19 +3,8 @@ title: "FixCity Platform - Master Plan 🚀"
 type: concept
 tags: [master, plan]
 created: 2026-07-14
-<<<<<<< .merge_file_G3Yh3r
 updated: 2026-11-23
 qmd: "master-plan fixcity platform - master plan 🚀"
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-qmd: "master-plan fixcity platform - master plan 🚀"
-qmd: "master-plan ptv platform - master plan 🚀"
-=======
-updated: 2026-11-23
-qmd: "master-plan fixcity platform - master plan 🚀"
->>>>>>> laraxot/dev
->>>>>>> .merge_file_LMGLmt
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
@@ -23,21 +12,12 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_G3Yh3r
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_LMGLmt
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

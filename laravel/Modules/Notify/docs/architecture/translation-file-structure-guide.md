@@ -4,21 +4,7 @@ type: concept
 tags: [notify, docs, architecture, translation, file, structure]
 module: Notify
 created: 2026-07-20
-<<<<<<< .merge_file_7wKaWe
-<<<<<<< .merge_file_dUcx65
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_0uaYjD
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_7wKaWe
->>>>>>> .merge_file_7YnvIG
-=======
->>>>>>> .merge_file_0uaYjD
 qmd: "notify documentazione architecture translation file structure guide guida alla struttura dei file di traduzione frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -183,19 +169,7 @@ return [
 ## Riferimenti
 - [Regole di Naming per i File di Traduzione](../translation-file-naming-rules-2.md)
 - [Regole Generali per le Traduzioni](../../../Lang/docs/translation-keys-rules-3.md)
-<<<<<<< HEAD
 - [Regole di Naming per i File di Traduzione](../translation-file-naming-rules-2.md)
 - [Regole Generali per le Traduzioni](../../../Lang/docs/translation-keys-rules-2.md)
-<<<<<<< .merge_file_7wKaWe
-<<<<<<< .merge_file_dUcx65
-=======
-<<<<<<< HEAD
 - [Regole di Naming per i File di Traduzione](../translation-file-naming-rules-2.md)
 - [Regole Generali per le Traduzioni](../../../Lang/docs/translation-keys-rules-2.md)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_7YnvIG
-=======
->>>>>>> .merge_file_0uaYjD

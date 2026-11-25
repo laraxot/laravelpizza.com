@@ -3,52 +3,16 @@ title: "📚 DOCUMENTATION STATUS - Ottobre 2025"
 type: concept
 tags: [documentation, status]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_WU7KBm
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_Rs2cNR
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_WU7KBm
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_Rs2cNR
 qmd: "documentation-status 📚 documentation status - ottobre 2025"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-<<<<<<< HEAD
   - "./2025-excellence-achievement.md"
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_WU7KBm
-<<<<<<< HEAD
   - "./2025-excellence-achievement.md"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_Rs2cNR
   - "./excellence-achievement.md"
-=======
   - "./2025-excellence-achievement.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_WU7KBm
-=======
   - "./excellence-achievement.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_Rs2cNR
   - "./agid-implementation-guide.md"
   - "./architecture.md"
   - "./complete-refactoring-analysis.md"
@@ -452,34 +416,15 @@ consolidamento seguendo le roadmap definite. Focus attuale: completamento docume
 ## 🔗 COLLEGAMENTI UTILI
 
 ### Roadmap Principali
-<<<<<<< HEAD
 - [Master Roadmap](../master-roadmap.md)
 - [Master Roadmap](../master-roadmap.md)
-=======
-<<<<<<< .merge_file_WU7KBm
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Master Roadmap](../master-roadmap.md)
 - [Master Roadmap](../master-roadmap.md)
-=======
-=======
->>>>>>> .merge_file_Rs2cNR
-<<<<<<< .merge_file_ACGHPs
 - [Master Roadmap](../master-roadmap-2.md)
-=======
 - [Master Roadmap](../master-roadmap.md)
-<<<<<<< .merge_file_WU7KBm
 - [Master Roadmap](../master-roadmap.md)
->>>>>>> .merge_file_dVrxuQ
->>>>>>> laraxot/dev
-=======
 - [Master Roadmap](../master-roadmap.md)
->>>>>>> laraxot/dev
-=======
 - [Master Roadmap](../master-roadmap.md)
->>>>>>> .merge_file_dVrxuQ
->>>>>>> .merge_file_Rs2cNR
->>>>>>> laraxot/dev
 - [Roadmap Status Summary](../roadmap-status-summary.md)
 - [Roadmap Technical](./roadmaps/roadmap-technical.md)
 - [Roadmap Quality](./roadmaps/roadmap-quality.md)

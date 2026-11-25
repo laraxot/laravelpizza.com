@@ -3,25 +3,7 @@ title: "migration"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_JRdjWf
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_CNrYNY
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_JRdjWf
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_CNrYNY
 qmd: "migration"
 issues: []
 discussions: []
@@ -210,29 +192,11 @@ return new class () extends XotBaseMigration {
 
 ## Collegamenti Correlati
 
-<<<<<<< HEAD
 - [Documentazione XotBaseMigration](../../Xot/docs/rules/laraxot-rules.md)
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_JRdjWf
-<<<<<<< HEAD
 - [Documentazione XotBaseMigration](../../Xot/docs/rules/laraxot-rules.md)
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_CNrYNY
 - [Documentazione XotBaseMigration](../../Geo/docs/rules/laraxot-rules-2.md)
-=======
 - [Documentazione XotBaseMigration](../../Xot/docs/rules/laraxot-rules.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_JRdjWf
-=======
 - [Documentazione XotBaseMigration](../../Geo/docs/rules/laraxot-rules-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_CNrYNY
 - [Standard Migrazioni](../../../../docs/regole/standard_migrazioni.md)
 - [Best Practices Database](../../../../docs/best-practices/database.md)
 - [Gestione Errori](../../User/docs/error-handling-2.md)

@@ -50,5 +50,9 @@ related:
 
 ## Collegamenti
 
+<<<<<<< .merge_file_5gs2bw
+=======
+- [00-index-1.md](./README.md)
+>>>>>>> .merge_file_r3VoQl
 - [00-index-1.md](./00-index-indice-documentazione-modulo-user.md)
 - [Xot audit](../../Xot/docs/ponytail-audit-over-engineering.md)

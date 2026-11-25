@@ -11,6 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_Gen7vY
 <<<<<<< .merge_file_MTHiOu
 <<<<<<< .merge_file_Yum2Bp
 qmd: "tailwind"
@@ -19,6 +20,9 @@ qmd: "tailwind"
 =======
 qmd: "tailwind"
 >>>>>>> .merge_file_0uGrbf
+=======
+qmd: "tailwind"
+>>>>>>> .merge_file_H6IU9U
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/tailwind.md

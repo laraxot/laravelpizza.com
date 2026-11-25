@@ -2,25 +2,7 @@
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_jBQ5iI
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_ChAbZz
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_jBQ5iI
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_ChAbZz
 qmd: "module readme template"
 issues: []
 discussions: []
@@ -28,29 +10,11 @@ title: [Module Name]
 module: [module-slug]
 status: production
 related:
-<<<<<<< HEAD
   - "./README.md"
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_jBQ5iI
-<<<<<<< HEAD
   - "./README.md"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_ChAbZz
   - "./readme.md"
-=======
   - "./README.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_jBQ5iI
-=======
   - "./readme.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_ChAbZz
 ---
 
 # [Module Name] Module

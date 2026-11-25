@@ -339,48 +339,17 @@ class ListActivities extends XotBasePage
 ## Collegamenti tra versioni di bottlenecks.md
 * [bottlenecks.md](../../../../bashscripts/docs/bottlenecks.md)
 * [bottlenecks.md](../../chart/docs/bottlenecks.md)
-<<<<<<< .merge_file_rfRMpj
-<<<<<<< .merge_file_6CnGjF
-<<<<<<< .merge_file_51riI4
-<<<<<<< .merge_file_qx99f6
-=======
-=======
->>>>>>> .merge_file_tP6cUT
-=======
->>>>>>> .merge_file_FTL6pi
-=======
->>>>>>> .merge_file_Z6Z52B
 * [bottlenecks.md](../../Chart/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../Gdpr/docs/bottlenecks.md)
 * [bottlenecks.md](../../Gdpr/docs/performance/bottlenecks.md)
->>>>>>> .merge_file_ox3FYC
 * [bottlenecks.md](../../xot/docs/bottlenecks.md)
 * [bottlenecks.md](../../xot/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../xot/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../dental/docs/bottlenecks.md)
-<<<<<<< .merge_file_rfRMpj
-<<<<<<< .merge_file_6CnGjF
-<<<<<<< .merge_file_51riI4
-<<<<<<< .merge_file_qx99f6
 * [bottlenecks.md](../../patient/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../cms/docs/bottlenecks.md)
-=======
-=======
->>>>>>> .merge_file_tP6cUT
-=======
->>>>>>> .merge_file_FTL6pi
-=======
->>>>>>> .merge_file_Z6Z52B
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 * [bottlenecks.md](../../patient/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../cms/docs/bottlenecks.md)
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 * [bottlenecks.md](../../User/docs/bottlenecks.md)
 * [bottlenecks.md](../../User/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../ui/docs/bottlenecks.md)
@@ -392,23 +361,6 @@ class ListActivities extends XotBasePage
 * [bottlenecks.md](../../Media/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../patient/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../Cms/docs/bottlenecks.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_rfRMpj
-<<<<<<< .merge_file_6CnGjF
-<<<<<<< .merge_file_51riI4
->>>>>>> .merge_file_ox3FYC
-=======
->>>>>>> .merge_file_tP6cUT
-=======
->>>>>>> .merge_file_FTL6pi
-=======
->>>>>>> .merge_file_Z6Z52B
 * [bottlenecks.md](../../Chart/docs/bottlenecks.md)
 * [bottlenecks.md](../../Chart/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../Gdpr/docs/bottlenecks.md)

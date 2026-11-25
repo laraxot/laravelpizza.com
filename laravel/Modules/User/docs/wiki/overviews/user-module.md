@@ -5,6 +5,7 @@ sources:
 confidence: high
 updated: 2026-04-15
 related:
+<<<<<<< .merge_file_AGLl3v
 <<<<<<< .merge_file_3MmVvH
 <<<<<<< .merge_file_prF2Ds
 qmd: "user overview"
@@ -13,6 +14,9 @@ qmd: "user overview"
 =======
 qmd: "user overview"
 >>>>>>> .merge_file_NKMwGA
+=======
+qmd: "user overview"
+>>>>>>> .merge_file_OwEw8y
 ---
 
 # User Module — Overview

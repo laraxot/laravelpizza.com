@@ -3,19 +3,7 @@ title: "🎯 PHASE 1 EXECUTION DASHBOARD"
 type: concept
 tags: [phase, execution, dashboard]
 created: 2026-07-14
-<<<<<<< HEAD
 updated: 2026-11-23
-=======
-<<<<<<< .merge_file_oh4PzM
-updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_DFpf0n
->>>>>>> laraxot/dev
 qmd: "phase-1-execution-dashboard 🎯 phase 1 execution dashboard"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -26,23 +14,8 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_oh4PzM
->>>>>>> laraxot/dev
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> .merge_file_DFpf0n
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

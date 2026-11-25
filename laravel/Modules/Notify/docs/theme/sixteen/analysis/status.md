@@ -3,15 +3,7 @@ title: "status"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_OyydIP
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_vsZlWq
 qmd: "status"
 issues: []
 discussions: []
@@ -60,10 +52,6 @@ npm run build    # ✓ Completato
 1. Verificare visualmente la homepage su http://127.0.0.1:8000/it/tests/homepage
 2. Confrontare visivamente con reference
 3. Applicare ulteriori correzioni CSS se necessario
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -77,11 +65,3 @@ issues: []
 discussions: []
 *Last Updated: 2026-04-07*
 *Status: in_progress*
-<<<<<<< .merge_file_OyydIP
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_vsZlWq

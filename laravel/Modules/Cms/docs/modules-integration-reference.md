@@ -7,10 +7,7 @@ updated: 2026-09-26
 qmd: "modules integration reference"
 issues: []
 discussions: []
-<<<<<<< HEAD
-=======
 status: draft
->>>>>>> laraxot/dev
 ---
 
 # Modules Integration Reference
@@ -447,34 +444,11 @@ Vite Build Process:
 2. Compiles resources/css/app.css
 3. Compiles resources/js/app.js
 4. Outputs to public/
-<<<<<<< .merge_file_wgv0nu
-<<<<<<< .merge_file_vdyt1h
-<<<<<<< .merge_file_9ic7wg
 5. (niente copia: public_html/themes/Meetup è un symlink a Themes/Meetup/public)
-=======
-=======
->>>>>>> .merge_file_GyIf6C
-=======
->>>>>>> .merge_file_yNutS3
-<<<<<<< HEAD
-5. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-5. npm run copy (dismesso: symlink public_html/themes/<Tema>) (copies to public_html/themes/Meetup)
-=======
-<<<<<<< HEAD
 5. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 
 5. npm run copy (dismesso: symlink public_html/themes/<Tema>) (copies to public_html/themes/Meetup)
-=======
 5. (niente copia: public_html/themes/Meetup è un symlink a Themes/Meetup/public)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_wgv0nu
-<<<<<<< .merge_file_vdyt1h
->>>>>>> .merge_file_jYcQB9
-=======
->>>>>>> .merge_file_GyIf6C
-=======
->>>>>>> .merge_file_yNutS3
 ```
 
 ## Common Integration Patterns

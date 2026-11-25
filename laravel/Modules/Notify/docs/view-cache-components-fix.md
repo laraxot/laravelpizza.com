@@ -1,46 +1,12 @@
 ---
-<<<<<<< HEAD
-<<<<<<< .merge_file_qRefMm
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_AF7iLK
 issues: []
 discussions: []
 title: "view-cache-components-fix-2025-10-15"
 type: concept
-tags: [deprecated]
+tags: [deprecated, documentation]
 created: 2026-07-14
-<<<<<<< HEAD
 updated: 2026-11-23
 qmd: "view-cache-components-fix-2025-10-15 deprecated"
-=======
-updated: 2026-07-14
-qmd: "view-cache-components-fix-2025-10-15 deprecated"
-=======
-<<<<<<< .merge_file_qRefMm
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_AF7iLK
-title: "view cache components fix 2025 10"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-11-23
-qmd: "view cache components fix 2025 10"
-issues: []
-discussions: []
-<<<<<<< .merge_file_qRefMm
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_AF7iLK
->>>>>>> laraxot/dev
 status: deprecated
 related:
   - "./00-index-1.md"
@@ -49,18 +15,6 @@ related:
   - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_qRefMm
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_AF7iLK
   - "./action-plan-immediate.md"
 ---
 
@@ -246,30 +200,8 @@ L'implementazione ha risolto con successo il problema della cache delle viste, c
 - [Sessione Super Mucca](./sessione-2025-10-15-super-mucca.md)
 - [Architecture](./architecture/)
 
-<<<<<<< .merge_file_qRefMm
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_AF7iLK
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
 
 > Questo file è stato rinominato in [view-cache-components-fix.md](view-cache-components-fix.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_qRefMm
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_AF7iLK
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

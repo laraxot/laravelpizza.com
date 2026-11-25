@@ -3,15 +3,7 @@ title: "implementation summary"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_7LmVZs
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_PYClYB
 qmd: "implementation summary"
 issues: []
 discussions: []
@@ -228,10 +220,5 @@ L'implementazione del design system per i comuni italiani è stata completata co
 6. **Personalizzazione**: Facile adattamento alle esigenze specifiche
 
 Il progetto è ora pronto per il deployment e l'utilizzo in produzione, con un sistema completo e professionale per la gestione delle segnalazioni comunali.
-
-
-
-
-
 
 

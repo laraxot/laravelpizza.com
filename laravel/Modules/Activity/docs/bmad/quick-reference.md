@@ -1,67 +1,17 @@
 ---
-<<<<<<< .merge_file_LipTyB
-<<<<<<< .merge_file_1PQ3ID
-<<<<<<< .merge_file_Ut4Ixt
 title: "Activity — BMAD Quick Reference"
-=======
-=======
->>>>>>> .merge_file_LNmZ6F
-=======
->>>>>>> .merge_file_3vtww0
-<<<<<<< HEAD
-title: "Activity: BMAD Quick Reference"
-=======
-<<<<<<< HEAD
-title: "Activity — BMAD Quick Reference"
-=======
-title: "Activity: BMAD Quick Reference"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_LipTyB
-<<<<<<< .merge_file_1PQ3ID
->>>>>>> .merge_file_b4cSSm
-=======
->>>>>>> .merge_file_LNmZ6F
-=======
->>>>>>> .merge_file_3vtww0
 description: "Comandi rapidi BMAD per il modulo Activity"
 module: "Activity"
 alias: "activity"
 documentation_date: "2026-05-27"
 bmad_version: "6.2.0"
-<<<<<<< .merge_file_LipTyB
-<<<<<<< .merge_file_1PQ3ID
-<<<<<<< .merge_file_Ut4Ixt
 ---
 
 # Activity — BMAD Quick Reference
-=======
-=======
->>>>>>> .merge_file_LNmZ6F
-=======
->>>>>>> .merge_file_3vtww0
-<<<<<<< HEAD
-type: note
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 ---
 
 # Activity — BMAD Quick Reference
-=======
 type: note
->>>>>>> laraxot/dev
-=======
-type: note
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_LipTyB
-<<<<<<< .merge_file_1PQ3ID
->>>>>>> .merge_file_b4cSSm
-=======
->>>>>>> .merge_file_LNmZ6F
-=======
->>>>>>> .merge_file_3vtww0
 status: draft
 updated: 2026-10-07
 tags: [docs, activity, bmad]
@@ -118,28 +68,5 @@ bmad-quick-spec "Specifica retention log"
 
 ---
 
-<<<<<<< .merge_file_LipTyB
-<<<<<<< .merge_file_1PQ3ID
-<<<<<<< .merge_file_Ut4Ixt
 *Activity · BMAD Quick Reference · data 2026-05-27*
-=======
-=======
->>>>>>> .merge_file_LNmZ6F
-=======
->>>>>>> .merge_file_3vtww0
-<<<<<<< HEAD
 *Activity · BMAD Quick Reference · data 2026-05-27*
-=======
-<<<<<<< HEAD
-*Activity · BMAD Quick Reference · data 2026-05-27*
-=======
-*Activity · BMAD Quick Reference · data 2026-05-27*
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_LipTyB
-<<<<<<< .merge_file_1PQ3ID
->>>>>>> .merge_file_b4cSSm
-=======
->>>>>>> .merge_file_LNmZ6F
-=======
->>>>>>> .merge_file_3vtww0

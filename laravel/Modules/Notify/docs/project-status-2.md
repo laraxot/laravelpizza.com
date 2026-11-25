@@ -3,15 +3,7 @@ title: "project status"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_JYNTUE
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_GIAmlv
 qmd: "project status"
 issues: []
 discussions: []
@@ -189,10 +181,6 @@ discussions: []
 - [ ] WCAG 2.1 AA compliant
 - [ ] SOC 2 Type II (planned)
 - [ ] ISO 27001 (planned)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -209,8 +197,3 @@ discussions: []
 **Contact**: development@fixcity.io
 **Contact**: development@ptv.io
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

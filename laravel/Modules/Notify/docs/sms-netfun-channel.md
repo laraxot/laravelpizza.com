@@ -3,15 +3,7 @@ title: "sms netfun channel"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_RydQMX
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_3MD1EW
 qmd: "sms netfun channel"
 issues: []
 discussions: []
@@ -24,10 +16,6 @@ Questa guida spiega come integrare il provider Netfun come canale custom per l'i
 
 > **IMPORTANTE**: Prima di procedere, assicurati che la [configurazione richiesta per Netfun](./netfun-config-requirements-2.md) sia stata completata correttamente nel file `config/sms.php` del modulo Notify.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "sms netfun channel"
@@ -162,16 +150,11 @@ NETFUN_SENDER=YourSender
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 1. Creazione del Channel Netfun
 ### 1.1. Struttura del Channel
 #### Invio Batch Multiplo
 ### 1.2. Configurazione
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 2. Creazione della Queueable Action (Spatie)
 
 Crea la action in `app/Actions/SendNetfunSmsAction.php`:
@@ -570,12 +553,4 @@ class NetfunSMSTest extends TestCase
 }
 ```
 
-<<<<<<< HEAD
---- 
-=======
-<<<<<<< HEAD
---- 
-=======
 ---
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

@@ -3,21 +3,7 @@ title: "duplicate methods"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_FWxrDX
-<<<<<<< .merge_file_EpvASf
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_jtq14m
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_FWxrDX
->>>>>>> .merge_file_UtbVV5
-=======
->>>>>>> .merge_file_jtq14m
 qmd: "duplicate methods"
 issues: []
 discussions: []
@@ -75,10 +61,6 @@ public function linkable(): void
 
 **Procedere con refactoring** - Alta confidenza e bassa complessità rendono questa ottimizzazione sicura.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "duplicate methods"
@@ -127,17 +109,12 @@ public static function make(): self
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ### 2. Metodo: `make`
 #### 📊 Analisi Refactoring
 ##### ✅ Vantaggi
 ##### ⚠️ Rischi e Considerazioni
 ##### 💡 Raccomandazione
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ### 3. Metodo: `notifiable`
 
 **Tipo Refactoring**: `Trait` | **Complessità**: 🟢 Low | **Confidenza**: ✅ 100%
@@ -709,16 +686,6 @@ public function execute(string $prompt): CompletionData
 
 ---
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
----
-
 ## Legenda
 
 ### Tipo di Refactoring
@@ -741,11 +708,3 @@ Indica quanto è probabile che il refactoring sia vantaggioso:
 - **70-89%**: Raccomandato
 - **50-69%**: Valutare caso per caso
 - **< 50%**: Richiede analisi dettagliata
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

@@ -3,33 +3,7 @@ title: "address item enum"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_6FDELh
-<<<<<<< .merge_file_rc5Yym
-<<<<<<< .merge_file_Q6GHAv
-<<<<<<< .merge_file_S3g4OC
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_lDQ9I5
-=======
->>>>>>> .merge_file_N42SBg
-=======
->>>>>>> .merge_file_B88IVt
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_6FDELh
-<<<<<<< .merge_file_rc5Yym
-<<<<<<< .merge_file_Q6GHAv
->>>>>>> .merge_file_8DpaUI
-=======
->>>>>>> .merge_file_lDQ9I5
-=======
->>>>>>> .merge_file_N42SBg
-=======
->>>>>>> .merge_file_B88IVt
 qmd: "address item enum"
 issues: []
 discussions: []
@@ -313,21 +287,12 @@ Il metodo `columns()` è **intelligente** e si adatta al contesto:
 ```php
 use Modules\Geo\Enums\AddressItemEnum;
 
-<<<<<<< HEAD
-// ============================================
-// BLOCCO CREATE - Nessun check necessario
-// ============================================
-=======
-<<<<<<< HEAD
 // --------------------------------------------
 // BLOCCO CREATE - Nessun check necessario
 // --------------------------------------------
-=======
 // ============================================
 // BLOCCO CREATE - Nessun check necessario
 // ============================================
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 $this->tableCreate(function (Blueprint $table): void {
     $table->id();
 
@@ -339,21 +304,12 @@ $this->tableCreate(function (Blueprint $table): void {
     AddressItemEnum::columns($table, null, true);
 });
 
-<<<<<<< HEAD
-// ============================================
-// BLOCCO UPDATE - Con hasColumn() checks
-// ============================================
-=======
-<<<<<<< HEAD
 // --------------------------------------------
 // BLOCCO UPDATE - Con hasColumn() checks
 // --------------------------------------------
-=======
 // ============================================
 // BLOCCO UPDATE - Con hasColumn() checks
 // ============================================
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 $this->tableUpdate(function (Blueprint $table): void {
     // $this = UPDATE context (fa hasColumn() check prima di aggiungere)
     // true = include anche legacy fields

@@ -7,23 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_d1MVb5
-=======
-<<<<<<< .merge_file_VV6LPW
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_8vzBzc
-=======
->>>>>>> .merge_file_Ys6nKM
->>>>>>> laraxot/dev
 ---
 
 # Agnostic Documentation Rule

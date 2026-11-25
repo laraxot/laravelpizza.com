@@ -7,10 +7,7 @@ scope: documentation
 bmad_version: 1.0
 updated: 2026-11-23
 created: 2026-11-23
-<<<<<<< HEAD
 qmd: "consolidation orphan 06 story notify document"
-=======
->>>>>>> laraxot/dev
 ---
 
 # BMAD Story: Consolidate Orphan .md Files in Notify Docs

@@ -11,6 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_M671ss
 <<<<<<< .merge_file_fpUHdP
 <<<<<<< .merge_file_eSqcre
 qmd: "two factor 1"
@@ -19,6 +20,9 @@ qmd: "two factor 1"
 =======
 qmd: "two factor 1"
 >>>>>>> .merge_file_VqV004
+=======
+qmd: "two factor 1"
+>>>>>>> .merge_file_i2MIaz
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/two_factor.txt

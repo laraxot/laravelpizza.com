@@ -246,7 +246,6 @@ See canonical documentation: ../../../Themes/docs/shared-components/quality-stat
 Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file evita nomi `*-.md`.
 
 
-
 ---
 
 <!-- Contenuto unito da quality-status-11.md (rimozione date dai nomi file, issue #64) -->

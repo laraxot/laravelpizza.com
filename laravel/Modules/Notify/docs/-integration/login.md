@@ -3,21 +3,7 @@ title: "login"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Motf56
-<<<<<<< .merge_file_10CYIV
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_UkHCEv
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Motf56
->>>>>>> .merge_file_TUWs9C
-=======
->>>>>>> .merge_file_UkHCEv
 qmd: "login"
 issues: []
 discussions: []

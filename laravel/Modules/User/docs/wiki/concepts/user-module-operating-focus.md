@@ -13,6 +13,7 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
+<<<<<<< .merge_file_PSXmng
 <<<<<<< .merge_file_plZgmU
 <<<<<<< .merge_file_wGTjf6
 qmd: "user operating focus"
@@ -21,6 +22,9 @@ qmd: "user operating focus"
 =======
 qmd: "user operating focus"
 >>>>>>> .merge_file_NkWFET
+=======
+qmd: "user operating focus"
+>>>>>>> .merge_file_AIKFaH
 ---
 
 # User Module Operating Focus

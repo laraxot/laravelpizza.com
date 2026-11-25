@@ -3,21 +3,7 @@ title: "filament extension"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_GrLw2u
-<<<<<<< .merge_file_aGx3o2
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_tFnXxy
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_GrLw2u
->>>>>>> .merge_file_fRqYgW
-=======
->>>>>>> .merge_file_tFnXxy
 qmd: "filament extension"
 issues: []
 discussions: []

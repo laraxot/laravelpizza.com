@@ -3,31 +3,7 @@ title: "filament blade components"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_uDYfbb
-<<<<<<< .merge_file_f8jZTs
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_cQQnaf
-=======
->>>>>>> .merge_file_JmvyRX
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_uDYfbb
-<<<<<<< .merge_file_f8jZTs
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_cQQnaf
-=======
->>>>>>> .merge_file_JmvyRX
 qmd: "filament blade components"
 issues: []
 discussions: []
@@ -60,33 +36,9 @@ In <nome progetto>, la **prima scelta per i componenti Blade** sono SEMPRE i [co
 ## Collegamenti
 - [Documentazione Filament Blade Components](https://filamentphp.com/project_docs/3.x/support/blade-components/overview)
 - [Documentazione Filament Blade Components](https://filamentphp.com/docs/3.x/support/blade-components/overview)
-<<<<<<< HEAD
 - [README Notify](README.md)
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_uDYfbb
-<<<<<<< .merge_file_f8jZTs
-<<<<<<< HEAD
 - [README Notify](README.md)
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_cQQnaf
-=======
->>>>>>> .merge_file_JmvyRX
 - [README Notify](readme.md)
-=======
 - [README Notify](README.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_uDYfbb
-<<<<<<< .merge_file_f8jZTs
-=======
 - [README Notify](readme.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_cQQnaf
-=======
->>>>>>> .merge_file_JmvyRX
 - [queueable-action.md](queueable-action.md)

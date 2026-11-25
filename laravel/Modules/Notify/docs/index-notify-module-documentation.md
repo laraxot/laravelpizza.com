@@ -1,34 +1,10 @@
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_ZiDzUd
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_PoAkm3
 ---
 title: "index notify module documentation"
 created: 2026-11-23
 updated: 2026-11-23
-<<<<<<< HEAD
 qmd: "notify"
-=======
->>>>>>> laraxot/dev
 ---
 
-<<<<<<< .merge_file_ZiDzUd
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_PoAkm3
->>>>>>> laraxot/dev
 # Notify Module Documentation
 
 ## Overview
@@ -100,29 +76,9 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 ## Collegamenti Correlati
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_ZiDzUd
 - [Standard di Documentazione](../../../../../docs/documentation-standards-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_PoAkm3
 - [Standard di Documentazione](../../User/docs/documentation-standards-2.md)
-=======
-<<<<<<< HEAD
 - [Standard di Documentazione](../../../../../docs/documentation-standards-2.md)
-=======
-- [Standard di Documentazione](../../User/docs/documentation-standards-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ZiDzUd
-=======
-- [Standard di Documentazione](../../../../../docs/documentation-standards-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_PoAkm3
 - [Modulo Xot](../../Xot/docs/README.md)
 - [Modulo Lang](../../Lang/docs/README.md)
 - [Modulo UI](../../UI/docs/README.md)
@@ -210,29 +166,9 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 
 ### Mail Templates
 - [Index](./mail-templates/index.md) - Indice della documentazione sui template email
-<<<<<<< HEAD
-<<<<<<< .merge_file_ZiDzUd
 - [Implementazione Slug](./mail-templates/mail-template-slug-implementation-2.md) - Implementazione del campo slug
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_PoAkm3
 - [Implementazione Slug](mail-template-slug-implementation-2.md) - Implementazione del campo slug
-=======
-<<<<<<< HEAD
 - [Implementazione Slug](./mail-templates/mail-template-slug-implementation-2.md) - Implementazione del campo slug
-=======
-- [Implementazione Slug](mail-template-slug-implementation-2.md) - Implementazione del campo slug
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ZiDzUd
-=======
-- [Implementazione Slug](./mail-templates/mail-template-slug-implementation-2.md) - Implementazione del campo slug
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_PoAkm3
 
 ### Notifications
 - [Index](./notifications/index.md) - Indice della documentazione sulle notifiche

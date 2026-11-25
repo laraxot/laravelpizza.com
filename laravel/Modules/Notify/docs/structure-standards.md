@@ -3,15 +3,7 @@ title: "structure standards"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_OFbSwf
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_ILvoK2
 qmd: "structure standards"
 issues: []
 discussions: []
@@ -26,7 +18,6 @@ discussions: []
 | `app/Datas/` | **Data Transfer Objects** (usati per trasferire dati tra componenti) | `NetfunSmsData.php` |
 | `app/Actions/` | **Azioni** (business logic, usano Spatie Queueable Action) | `SendNetfunSMSAction.php` |
 | `app/Services/` | **Servizi** (logica di business complessa, orchestrazione) | `SmsService.php` |
-<<<<<<< .merge_file_OFbSwf
 | `app/Channels/` | **Canali di notifica** (implementazioni per Laravel Notifications) | `NetfunChannel.php` |
 
 ## Importante: `app/Datas/` vs Altri Pattern
@@ -111,10 +102,6 @@ Tutte le classi nella cartella `app/Filament/Clusters/*/Pages` **devono terminar
 - In caso di refactoring, aggiornare sia il nome del file che della classe e tutti i riferimenti.
 - Non usare mai nomi generici o ambigui (es. `SendNetfunSMS`), ma sempre `SendNetfunSMSPage`.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "structure standards"
@@ -166,8 +153,6 @@ class MyPage extends Modules\Xot\Filament\Pages\XotBasePage {}
 | `app/Datas/` | **Data Transfer Objects** (usati per trasferire dati tra componenti) | `NetfunSmsData.php` |
 | `app/Actions/` | **Azioni** (business logic, usano Spatie Queueable Action) | `SendNetfunSMSAction.php` |
 | `app/Services/` | **Servizi** (logica di business complessa, orchestrazione) | `SmsService.php` |
-=======
->>>>>>> .merge_file_ILvoK2
 | `app/Channels/` | **Canali di notifica** (implementazioni per Laravel Notifications) | `NetfunChannel.php` |
 
 ## Importante: `app/Datas/` vs Altri Pattern
@@ -253,16 +238,11 @@ Tutte le classi nella cartella `app/Filament/Clusters/*/Pages` **devono terminar
 - Non usare mai nomi generici o ambigui (es. `SendNetfunSMS`), ma sempre `SendNetfunSMSPage`.
 
 ---
-<<<<<<< .merge_file_OFbSwf
-<<<<<<< HEAD
-=======
-=======
 ## Esempio
 # Regola di Estensione delle Pagine Filament
 ## Non estendere mai direttamente Filament\Pages\Page
 ### Motivazione
 ### Best Practice
-=======
 
 title: "structure standards"
 type: note
@@ -295,7 +275,6 @@ Tutte le pagine custom devono estendere una classe base personalizzata (es. `Mod
 - Aggiornare la documentazione e le regole interne in caso di modifica della base
 - Aggiungere test statici/CI che segnalano errori di estensione diretta
 
->>>>>>> .merge_file_ILvoK2
 ### Esempio
 # Standard di Struttura nel Modulo Notify
 ## Directory Principali e Convenzioni di Denominazione
@@ -310,8 +289,6 @@ Tutte le pagine custom devono estendere una classe base personalizzata (es. `Mod
 ## Regola di Naming per le Pagine
 ### Motivazione
 ### Best Practice
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Esempio
 

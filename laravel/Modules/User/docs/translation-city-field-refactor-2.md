@@ -11,6 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_rsv9Nn
 <<<<<<< .merge_file_SIyyf5
 <<<<<<< .merge_file_FGkSeQ
 qmd: "translation city field refactor 2"
@@ -19,6 +20,9 @@ qmd: "translation city field refactor 2"
 =======
 qmd: "translation city field refactor 2"
 >>>>>>> .merge_file_GUOGVP
+=======
+qmd: "translation city field refactor 2"
+>>>>>>> .merge_file_kukPqI
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/translation-city-field-refactor-4.md

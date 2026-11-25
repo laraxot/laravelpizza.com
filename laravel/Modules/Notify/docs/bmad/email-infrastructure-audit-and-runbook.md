@@ -6,10 +6,7 @@ status: active
 tags: [email, smtp, imap, postfix, dovecot, mailtrap, bmad, ecc]
 created: 2026-11-23
 updated: 2026-11-23
-<<<<<<< HEAD
 qmd: "email infrastructure audit and runbook"
-=======
->>>>>>> laraxot/dev
 ---
 
 # Email infrastructure: audit and runbook

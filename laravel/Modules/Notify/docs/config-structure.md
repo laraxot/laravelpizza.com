@@ -3,21 +3,7 @@ title: "config structure"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_DyUMk2
-<<<<<<< .merge_file_oK9lOl
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_9oOEKa
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_DyUMk2
->>>>>>> .merge_file_TPr12B
-=======
->>>>>>> .merge_file_9oOEKa
 qmd: "config structure"
 issues: []
 discussions: []

@@ -3,15 +3,7 @@ title: "log"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_nyYZzX
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_lMZ16U
 qmd: "log"
 issues: []
 discussions: []
@@ -23,10 +15,6 @@ discussions: []
 > **Purpose**: Append-only chronological record of wiki activity
 > **Created**: 2026-04-15
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "log"
@@ -50,11 +38,6 @@ discussions: []
 - Commit: docs: initialize Notify module wiki
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## [2026-04-15] maintenance | Initial wiki setup
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 _Log entries appended chronologically below_

@@ -10,8 +10,8 @@ tags: [tag1, tag2]
 related:
   - "./entity.md"
   - "./source.md"
-<<<<<<< .merge_file_ZZSEJr
 qmd: "concept untitled"
+<<<<<<< .merge_file_ZwKkTA
 =======
 >>>>>>> .merge_file_nJxy7f
 =======
@@ -21,6 +21,8 @@ tags: [tag1, tag2]
 related:
 qmd: "concept untitled"
 >>>>>>> .merge_file_BXtvWo
+=======
+>>>>>>> .merge_file_4GzST2
 ---
 
 # {{title}}

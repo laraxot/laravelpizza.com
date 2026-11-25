@@ -4,15 +4,7 @@ type: concept
 tags: [notify, docs, architecture, standardized, sms, config]
 module: Notify
 created: 2026-07-20
-<<<<<<< .merge_file_yrs85s
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_IIhI4V
 qmd: "notify documentazione architecture standardized sms config structure struttura standardizzata della configurazione sms frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"

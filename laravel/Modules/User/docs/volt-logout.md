@@ -1,17 +1,23 @@
+<<<<<<< .merge_file_uHOoNj
 <<<<<<< .merge_file_JmG1v3
 <<<<<<< .merge_file_H0R7c8
 =======
 >>>>>>> .merge_file_AB3glF
+=======
+>>>>>>> .merge_file_t0Dfwk
 ---
 title: "Implementazione del Logout con Volt"
 type: note
 qmd: "volt logout implementazione"
 ---
+<<<<<<< .merge_file_uHOoNj
 <<<<<<< .merge_file_JmG1v3
 =======
 >>>>>>> .merge_file_kI17NF
 =======
 >>>>>>> .merge_file_AB3glF
+=======
+>>>>>>> .merge_file_t0Dfwk
 # Implementazione del Logout con Volt
 
 ## Il Problema

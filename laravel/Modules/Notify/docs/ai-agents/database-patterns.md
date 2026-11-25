@@ -3,21 +3,7 @@ title: "database patterns"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_kIOUv3
-<<<<<<< .merge_file_dY8wiL
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_3c9Ds7
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_kIOUv3
->>>>>>> .merge_file_N9GRlE
-=======
->>>>>>> .merge_file_3c9Ds7
 qmd: "database patterns"
 issues: []
 discussions: []

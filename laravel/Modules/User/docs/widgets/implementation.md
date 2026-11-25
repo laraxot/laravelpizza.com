@@ -7,6 +7,7 @@ related:
   - "./implementation-summary.md"
   - "./translation-guidelines.md"
   - "./translationlines.md"
+<<<<<<< .merge_file_CR9PeJ
 <<<<<<< .merge_file_6wFaPl
 <<<<<<< .merge_file_4LqFL8
 qmd: "implementation"
@@ -15,6 +16,9 @@ qmd: "implementation"
 =======
 qmd: "implementation"
 >>>>>>> .merge_file_ahz9ww
+=======
+qmd: "implementation"
+>>>>>>> .merge_file_6yIUCW
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/implementation-summary-Modules.md

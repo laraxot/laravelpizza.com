@@ -7,15 +7,7 @@ discussions: []
 title: "censimento omonimi metodi — modulo Notify"
 type: analysis
 module: Notify
-<<<<<<< .merge_file_caHf23
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-06-15
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_skyVnn
 related:
   - ../../../../../../docs/wiki/method-name-homonym-census.md
   - ../../../../../../bashscripts/docs/method-homonym-census.json
@@ -259,8 +251,6 @@ _… +10 metodi in questa categoria_
 - `Notify` · `NotificationTemplate` · `Modules/Notify/app/Models/NotificationTemplate.php`
 
 _… +13 metodi in questa categoria_
-
-
 
 
 ## Rigenerazione

@@ -11,6 +11,7 @@ related:
   - "./navigation-properties.md"
   - "./no-filament-labels.md"
   - "./no-notifications-migration-in-user-module.md"
+<<<<<<< .merge_file_Yp8fzR
 <<<<<<< .merge_file_GpsHmH
 <<<<<<< .merge_file_DUMlDy
 qmd: "header auth flow"
@@ -19,6 +20,9 @@ qmd: "header auth flow"
 =======
 qmd: "header auth flow"
 >>>>>>> .merge_file_NJ2n8X
+=======
+qmd: "header auth flow"
+>>>>>>> .merge_file_15he2X
 ---
 
 ## Rule Overview

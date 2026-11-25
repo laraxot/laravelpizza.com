@@ -3,19 +3,7 @@ title: "work completed 2025 10 01"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 qmd: "work completed 2025 10 01"
 issues: []
 discussions: []
@@ -27,10 +15,6 @@ discussions: []
 **Tipo**: Aggiornamento Roadmap e Documentazione  
 **Status**: ✅ COMPLETATO  
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "work completed 2025 10 01"
@@ -48,13 +32,8 @@ portandole allo stato attuale (Q4 2025) e allineandole con i progressi effettivi
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 OBIETTIVO
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## ✅ LAVORO SVOLTO
 
 ### 1. 📊 Analisi Stato Attuale
@@ -149,23 +128,8 @@ portandole allo stato attuale (Q4 2025) e allineandole con i progressi effettivi
 
 ### 5. 👥 Aggiornamento Roadmap Modulo User
 
-<<<<<<< HEAD
 **File**: `/laravel/Modules/User/docs/roadmap-2.md`
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 **File**: `/laravel/Modules/User/docs/roadmap.md`
-=======
-<<<<<<< HEAD
-**File**: `/laravel/Modules/User/docs/roadmap-2.md`
-=======
-**File**: `/laravel/Modules/User/docs/roadmap.md`
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-**File**: `/laravel/Modules/User/docs/roadmap-2.md`
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 **Modifiche**:
 - ✅ Ristrutturato "Prossimi Passi" in Q4 2025 e Q1 2026
@@ -272,23 +236,8 @@ portandole allo stato attuale (Q4 2025) e allineandole con i progressi effettivi
 
 ### Roadmap
 - **[roadmap-status-summary-2.md](./roadmap-status-summary-2.md)** - Status generale
-<<<<<<< HEAD
 - **[master-roadmap-2.md](./laravel/master-roadmap-2.md)** - Roadmap strategica 18 mesi
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 - **[master-roadmap-2.md](master-roadmap-2.md)** - Roadmap strategica 18 mesi
-=======
-<<<<<<< HEAD
-- **[master-roadmap-2.md](./laravel/master-roadmap-2.md)** - Roadmap strategica 18 mesi
-=======
-- **[master-roadmap-2.md](master-roadmap-2.md)** - Roadmap strategica 18 mesi
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- **[master-roadmap-2.md](./laravel/master-roadmap-2.md)** - Roadmap strategica 18 mesi
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - **[roadmap-master.md](./project_docs/roadmaps/roadmap-master.md)** - Consolidamento moduli
 
 ### Documentazione
@@ -297,18 +246,9 @@ portandole allo stato attuale (Q4 2025) e allineandole con i progressi effettivi
 - **[quick-start-2.md](./quick-start-2.md)** - Guida rapida sviluppatori
 
 ### Moduli Principali
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 - **[Fixcity ROADMAP_2025.md](./laravel/Modules/Fixcity/docs/ROADMAP_2025.md)**
 - **[User roadmap.md](./laravel/Modules/User/docs/roadmap.md)**
 - **[Sixteen roadmap-3.md](../../User/docs/roadmap-3.md)**
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - **[Fixcity roadmap-3.md](../../User/docs/roadmap-3.md)**
 - **[User ROADMAP.md](./laravel/Modules/User/docs/roadmap.md)**
 - **[documentation-index.md](./documentation-index-2.md)** - Indice completo
@@ -319,21 +259,9 @@ portandole allo stato attuale (Q4 2025) e allineandole con i progressi effettivi
 - **[Fixcity roadmap-3.md](../../User/docs/roadmap-3.md)**
 - **[User roadmap.md](./laravel/Modules/User/docs/roadmap.md)**
 - **[Sixteen roadmap-3.md](../../User/docs/roadmap-3.md)**
-<<<<<<< HEAD
 - **[Fixcity roadmap-3.md](../../User/docs/roadmap-3.md)**
 - **[User roadmap.md](./laravel/Modules/User/docs/roadmap.md)**
 - **[Sixteen roadmap-3.md](../../User/docs/roadmap-3.md)**
-=======
-<<<<<<< HEAD
-=======
-- **[Fixcity roadmap-3.md](../../User/docs/roadmap-3.md)**
-- **[User roadmap.md](./laravel/Modules/User/docs/roadmap.md)**
-- **[Sixteen roadmap-3.md](../../User/docs/roadmap-3.md)**
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ---
 
@@ -347,23 +275,8 @@ portandole allo stato attuale (Q4 2025) e allineandole con i progressi effettivi
 ### Aggiornamenti
 - [x] roadmap-status-summary-2.md aggiornato
 - [x] Fixcity ROADMAP_2025.md aggiornato
-<<<<<<< HEAD
-- [x] User roadmap.md aggiornato
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [x] User roadmap.md aggiornato
-=======
-<<<<<<< HEAD
 - [x] User ROADMAP.md aggiornato
-=======
 - [x] User roadmap.md aggiornato
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- [x] User ROADMAP.md aggiornato
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [x] Sixteen ROADMAP_2025.md aggiornato
 
 ### Nuovi Documenti

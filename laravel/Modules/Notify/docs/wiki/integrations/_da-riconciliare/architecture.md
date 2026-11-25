@@ -6,15 +6,7 @@ title: "Architecture"
 type: architecture
 tags: [module, architecture, notifications]
 created: 2026-07-28
-<<<<<<< .merge_file_sNViUs
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-28
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_tR4Ssk
 ---
 
 # Notify Module — Architecture

@@ -389,6 +389,10 @@ php artisan queue:prune-failed --hours=48
 
 ## 🔗 Collegamenti
 
+<<<<<<< .merge_file_FWb307
+=======
+- [← User Module README](./readme.md)
+>>>>>>> .merge_file_kzZsC0
 - [← User Module README](./README.md)
 - [← PHPStan Fixes [DATE]](./phpstan-fixes-[DATE].md)
 - [← Project Roadmap](../../../../docs/project-analysis-and-roadmap.md)

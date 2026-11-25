@@ -3,15 +3,7 @@ title: "vhost configuration"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Ob0nRB
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_97N7Im
 qmd: "vhost configuration"
 issues: []
 discussions: []
@@ -23,10 +15,6 @@ discussions: []
 > **Status**: ✅ Active  
 > **Environment**: Local Development
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "vhost configuration"
@@ -52,14 +40,9 @@ This guide covers the Apache VirtualHost configuration for FixCity local develop
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 📋 Overview
 ### Primary Domain
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 📁 Configuration Files
 
 ### Master Configuration

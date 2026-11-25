@@ -4,15 +4,7 @@ type: concept
 tags: [notify, docs, architecture, structure, standards]
 module: Notify
 created: 2026-07-20
-<<<<<<< .merge_file_vKGtA3
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_2hu4h3
 qmd: "notify documentazione architecture structure standards standard di struttura nel modulo notify frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"

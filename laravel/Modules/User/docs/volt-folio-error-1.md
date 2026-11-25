@@ -11,6 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_vnxkSs
 <<<<<<< .merge_file_tp7mOK
 <<<<<<< .merge_file_7bn7lj
 qmd: "volt folio error 1"
@@ -19,6 +20,9 @@ qmd: "volt folio error 1"
 =======
 qmd: "volt folio error 1"
 >>>>>>> .merge_file_rIb4Zm
+=======
+qmd: "volt folio error 1"
+>>>>>>> .merge_file_dXUvu5
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/volt-folio-error.md

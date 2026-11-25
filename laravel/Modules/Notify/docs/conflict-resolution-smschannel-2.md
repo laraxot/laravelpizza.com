@@ -3,21 +3,7 @@ title: "conflict resolution smschannel"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_AKaUgZ
-<<<<<<< .merge_file_CHcsP3
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_h7zpAp
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_AKaUgZ
->>>>>>> .merge_file_w1grKz
-=======
->>>>>>> .merge_file_h7zpAp
 qmd: "conflict resolution smschannel"
 issues: []
 discussions: []

@@ -3,15 +3,7 @@ title: "seasonal email templates report"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_0f5e41
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_xC4x0W
 qmd: "seasonal email templates report"
 issues: []
 discussions: []

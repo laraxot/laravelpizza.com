@@ -4722,7 +4722,6 @@ public function test_bulk_sti_creation()
 *Consolidated from: `user-invitation-2.md`*
 
 
-
 ---
 
 ## userfactory-advanced-implementation-complete

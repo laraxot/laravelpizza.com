@@ -7,15 +7,7 @@ slug: notify-unit-tests-claude-audit-100
 status: ready-for-dev
 priority: high
 created: 2026-09-27
-<<<<<<< .merge_file_bFoo7o
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-27
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_A6DCHs
 issues:
   - "https://github.com/laraxot/base_fixcity_fila5/issues/XXXX"
 discussions:
@@ -24,10 +16,7 @@ related:
   - "docs/stories/geo-unit-tests-claude-audit-100.story.md"
   - "docs/stories/tenant-unit-tests-claude-audit-100.story.md"
   - "../../../docs/wiki/guidelines/claude-audit-static-free-tier.md"
-<<<<<<< HEAD
 qmd: "notify unit tests claude audit story"
-=======
->>>>>>> laraxot/dev
 ---
 
 # Notify — Unit Tests for claude-audit 100/100

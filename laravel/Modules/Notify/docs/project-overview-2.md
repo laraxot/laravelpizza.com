@@ -3,15 +3,7 @@ title: "project overview"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_2yLeLc
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_XQQQqG
 qmd: "project overview"
 issues: []
 discussions: []
@@ -27,10 +19,6 @@ discussions: []
 
 > **Piattaforma di segnalazione civica per la gestione intelligente dei disservizi urbani**
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "project overview"
@@ -53,13 +41,8 @@ Trasformare il rapporto cittadino-amministrazione attraverso:
 - 🤝 **Partecipazione**: Coinvolgimento attivo della comunità
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 Project Purpose
 ### Vision
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## 🏗️ Architecture Overview
 

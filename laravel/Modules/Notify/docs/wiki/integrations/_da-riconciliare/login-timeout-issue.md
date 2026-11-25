@@ -7,15 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< .merge_file_jRZxHk
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_TY7PTu
 ---
 
 # 🚨 Problema Timeout Pagina Login - Diagnosi e Soluzione
@@ -352,7 +344,5 @@ Fammi sapere il messaggio esatto e posso dare una soluzione mirata.
 
 **Preparato da**: Super Mucca Debugging Team 🐄  
 **Confidence**: 95% sulla diagnosi
-
-
 
 

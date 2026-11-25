@@ -3,47 +3,13 @@ title: "🚀 <nome progetto> - GUIDA RAPIDA SVILUPPATORI"
 type: concept
 tags: [quick, start]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_U85485
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> .merge_file_iij523
->>>>>>> laraxot/dev
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_U85485
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-=======
-=======
->>>>>>> .merge_file_iij523
->>>>>>> laraxot/dev
 qmd: "quick-start 🚀 <nome progetto> - guida rapida sviluppatori"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
   - "./00-index.md"
   - "./00-index-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
   - "./00-index.md"
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
@@ -54,16 +20,11 @@ related:
   - "../../../acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
-<<<<<<< HEAD
-=======
-=======
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
   - "../../../00-index-documentation.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "../../../acronym-naming-conventions.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 status: draft
 ---
@@ -546,62 +507,22 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 
 ### Documentazione
 - **[Indice Documentazione](./documentation-index.md)**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_U85485
->>>>>>> laraxot/dev
 - **[Roadmap Status](../../../roadmap-status-summary-2.md)**
 - **[Documentation Status](./project_docs/documentation-status.md)**
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_ihyH3q
 - **[Roadmap Status](../../../roadmap-status-summary-2.md)**
 - **[Documentation Status](./project_docs/documentation-status.md)**
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - **[Roadmap Status](../../../roadmap-status-summary.md)**
 - **[Documentation Status](../../../project_docs/documentation-status.md)**
 - **[Roadmap Status](../../../roadmap-status-summary.md)**
 - **[Documentation Status](../../../project_docs/documentation-status.md)**
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
-<<<<<<< .merge_file_ihyH3q
 - **[Roadmap Status](../../../roadmap-status-summary-2.md)**
 - **[Documentation Status](./project_docs/documentation-status.md)**
-=======
->>>>>>> laraxot/dev
 - **[Roadmap Status](../../../roadmap-status-summary.md)**
 - **[Documentation Status](../../../project_docs/documentation-status.md)**
 - **[Roadmap Status](../../../roadmap-status-summary.md)**
 - **[Documentation Status](../../../project_docs/documentation-status.md)**
->>>>>>> .merge_file_iij523
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_2Wtrhu
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_U85485
->>>>>>> laraxot/dev
-=======
 - **[Roadmap Status](../../../roadmap-status-summary.md)**
 - **[Documentation Status](../../../project_docs/documentation-status.md)**
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-=======
-=======
->>>>>>> .merge_file_iij523
->>>>>>> laraxot/dev
 
 ### Framework
 - **[Laravel Docs](https://laravel.com/docs/11.x)**
@@ -610,44 +531,14 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 
 ### Regole Progetto
 - **[Laraxot Rules](./.windsurf/rules/user_15338591596331277449.md)**
-<<<<<<< HEAD
 - **[Code Quality](../../../ai-agents/code-quality.md)**
 - **[Code Quality](../../../ai-agents/code-quality.md)**
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_U85485
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-<<<<<<< HEAD
 - **[Code Quality](../../../ai-agents/code-quality.md)**
 - **[Code Quality](../../../ai-agents/code-quality.md)**
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> .merge_file_iij523
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ihyH3q
 - **[Code Quality](./.windsurf/rules/code-quality.md)**
-=======
 - **[Code Quality](../../../ai-agents/code-quality.md)**
 - **[Code Quality](../../../ai-agents/code-quality.md)**
->>>>>>> .merge_file_2Wtrhu
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_U85485
->>>>>>> laraxot/dev
-=======
 - **[Code Quality](../../../ai-agents/code-quality.md)**
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-=======
-=======
->>>>>>> .merge_file_iij523
->>>>>>> laraxot/dev
 - **[Project Rules](./.windsurf/rules/project-rules.md)**
 
 ---
@@ -684,31 +575,6 @@ php artisan optimize:clear
 
 ---
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_U85485
->>>>>>> laraxot/dev
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-=======
-=======
-
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_iij523
->>>>>>> laraxot/dev
----
-
 *Per contribuire al progetto, leggi attentamente questa guida e le regole Laraxot. In caso di dubbi, consulta la
 documentazione del modulo specifico o chiedi supporto al team.*
 
@@ -716,10 +582,6 @@ documentazione del modulo specifico o chiedi supporto al team.*
 
 <!-- Merged from quick-start.md, which collided with this file on case-insensitive filesystems. -->
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 title: "Notify Module Quick Start"
 type: guide
@@ -728,11 +590,6 @@ created: 2026-07-28
 updated: 2026-07-28
 ---
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 # Notify Module: Quick Start
 
 ## Send Notification

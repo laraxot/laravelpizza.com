@@ -6,15 +6,7 @@ type: report
 tags: [quality, phpstan, pest, coverage]
 module: Notify
 created: 2026-08-24
-<<<<<<< .merge_file_oEOaTQ
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_JKyc2p
 qmd: "Notify quality report phpstan pest coverage test ratio"
 ---
 

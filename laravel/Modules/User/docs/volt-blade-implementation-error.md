@@ -1,17 +1,23 @@
+<<<<<<< .merge_file_qAu9ko
 <<<<<<< .merge_file_VcG2Ik
 <<<<<<< .merge_file_lvPh2K
 =======
 >>>>>>> .merge_file_1kRmdi
+=======
+>>>>>>> .merge_file_tndYIe
 ---
 title: "Analisi dell'Errore di Implementazione Volt/Blade"
 type: note
 qmd: "volt blade implementation error analisi dellerrore"
 ---
+<<<<<<< .merge_file_qAu9ko
 <<<<<<< .merge_file_VcG2Ik
 =======
 >>>>>>> .merge_file_7Ls347
 =======
 >>>>>>> .merge_file_1kRmdi
+=======
+>>>>>>> .merge_file_tndYIe
 # Analisi dell'Errore di Implementazione Volt/Blade
 
 ## Collegamenti correlati

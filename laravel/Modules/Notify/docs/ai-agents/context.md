@@ -3,21 +3,7 @@ title: "context"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_65CvT8
-<<<<<<< .merge_file_1nt2ey
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_Q2Bfzj
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_65CvT8
->>>>>>> .merge_file_NTgpif
-=======
->>>>>>> .merge_file_Q2Bfzj
 qmd: "context"
 issues: []
 discussions: []

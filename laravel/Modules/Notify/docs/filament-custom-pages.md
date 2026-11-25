@@ -3,21 +3,7 @@ title: "filament custom pages"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_AFUonp
-<<<<<<< .merge_file_T0Ib5Z
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_vLekeJ
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_AFUonp
->>>>>>> .merge_file_kU5GlI
-=======
->>>>>>> .merge_file_vLekeJ
 qmd: "filament custom pages"
 issues: []
 discussions: []

@@ -3,21 +3,7 @@ title: "✅ Conferma: Classi Bootstrap Italia Corrette"
 type: concept
 tags: [conferma, classi, bootstrap]
 created: 2026-07-14
-<<<<<<< .merge_file_TwR0d8
-<<<<<<< .merge_file_Gu9htt
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_EuFRvy
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_TwR0d8
->>>>>>> .merge_file_Bg7dHd
-=======
->>>>>>> .merge_file_EuFRvy
 qmd: "conferma-classi-bootstrap ✅ conferma: classi bootstrap italia corrette"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -26,26 +12,14 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_TwR0d8
-<<<<<<< .merge_file_Gu9htt
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_Bg7dHd
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_EuFRvy
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

@@ -3,21 +3,7 @@ title: "bmad master"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_yubCIA
-<<<<<<< .merge_file_FPBir6
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_YlaYjh
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_yubCIA
->>>>>>> .merge_file_dKNks3
-=======
->>>>>>> .merge_file_YlaYjh
 qmd: "bmad master"
 issues: []
 discussions: []
@@ -130,10 +116,6 @@ dependencies:
     - greenfield-ui.yaml
 ```
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -152,9 +134,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../AGENTS.md](../../../../../../../../AGENTS.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

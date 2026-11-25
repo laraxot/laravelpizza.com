@@ -3,21 +3,7 @@ title: "claude theme dev"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_p4wdTY
-<<<<<<< .merge_file_Tyr9US
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_MQ58gj
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_p4wdTY
->>>>>>> .merge_file_hdLpMZ
-=======
->>>>>>> .merge_file_MQ58gj
 qmd: "claude theme dev"
 issues: []
 discussions: []
@@ -47,10 +33,6 @@ Il Meetup theme è una **VERSIONE MIGLIORATA** di laravelpizza.com usando Tailwi
 
 Il tema deve far dire "WOW!" ai visitatori.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "claude theme dev"
@@ -75,15 +57,10 @@ npm run build
 ```
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## Setup & Build
 # Development
 # Production build
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Key Files
 

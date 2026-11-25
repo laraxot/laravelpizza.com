@@ -3,15 +3,7 @@ title: "log cleanup report"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_AFV3fV
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_JgTqad
 qmd: "log cleanup report"
 issues: []
 discussions: []
@@ -170,10 +162,6 @@ time curl http://localhost:8000/api/endpoint
 - **Estimated Time:** 2-3 hours
 - **Performance Gain:** 25-50%
 - **Priority:** CRITICAL
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -186,8 +174,3 @@ qmd: "log cleanup report"
 issues: []
 discussions: []
 **Next Step:** Begin Phase 1 cleanup of high-priority files
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

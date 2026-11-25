@@ -3,15 +3,7 @@ title: "ROADMAP STATUS SUMMARY"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_CG5UrP
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_csKosD
 qmd: "ROADMAP STATUS SUMMARY"
 issues: []
 discussions: []
@@ -26,10 +18,6 @@ discussions: []
 **Test Coverage**: 🚧 65% (Target 80%)  
 **Production Status**: 🚧 STAGING READY  
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "ROADMAP STATUS SUMMARY"
@@ -54,13 +42,8 @@ con successo. Focus attuale: Feature Expansion con API development, mobile optim
 - 🔄 **AGID Compliance**: 85% completato
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 EXECUTIVE SUMMARY
 ### 📈 Progressi Chiave
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## 📋 MODULI - ROADMAP STATUS
 

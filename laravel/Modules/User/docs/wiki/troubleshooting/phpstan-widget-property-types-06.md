@@ -1,17 +1,23 @@
+<<<<<<< .merge_file_kOAf3u
 <<<<<<< .merge_file_ZWB2Ct
 <<<<<<< .merge_file_SvbV8s
 =======
 >>>>>>> .merge_file_jwZ5Ei
+=======
+>>>>>>> .merge_file_8LTmy8
 ---
 title: "PHPStan widget property types"
 type: guide
 qmd: "phpstan widget property types 06"
 ---
+<<<<<<< .merge_file_kOAf3u
 <<<<<<< .merge_file_ZWB2Ct
 =======
 >>>>>>> .merge_file_jyR3eb
 =======
 >>>>>>> .merge_file_jwZ5Ei
+=======
+>>>>>>> .merge_file_8LTmy8
 # PHPStan widget property types
 
 ## Contesto

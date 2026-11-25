@@ -3,15 +3,7 @@ title: "PSR-4 nei test Notify"
 type: concept
 tags: [psr-4, composer, tests, fixtures]
 created: 2026-07-16
-<<<<<<< .merge_file_ALbWNr
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-16
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_yotjjn
 qmd: "notify psr-4 test doubles phpstan probes composer autoload"
 issues:
   - "https://github.com/laraxot/base_techplanner_fila5/issues/38"

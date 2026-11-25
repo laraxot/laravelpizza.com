@@ -3,21 +3,7 @@ title: "build lint test commands"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_49qqbs
-<<<<<<< .merge_file_NpLP3o
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_8l4fuN
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_49qqbs
->>>>>>> .merge_file_4dZfCB
-=======
->>>>>>> .merge_file_8l4fuN
 qmd: "build lint test commands"
 issues: []
 discussions: []
@@ -126,10 +112,6 @@ php artisan view:clear
 php artisan cache:clear
 php artisan filament:optimize-clear
 ```
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -141,14 +123,3 @@ updated: 2026-09-26
 qmd: "build lint test commands"
 issues: []
 discussions: []
-<<<<<<< .merge_file_49qqbs
-<<<<<<< .merge_file_NpLP3o
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_4dZfCB
-=======
->>>>>>> .merge_file_8l4fuN

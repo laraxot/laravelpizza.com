@@ -3,25 +3,7 @@ title: "mail template ui improvements"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_qujz2W
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_wDueeq
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_qujz2W
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_wDueeq
 qmd: "mail template ui improvements"
 issues: []
 discussions: []
@@ -188,29 +170,8 @@ Section::make('Informazioni Template')
 
 - [Documentazione Filament](https://filamentphp.com/docs)
 - [Best Practices UI/UX](./best-practices.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_qujz2W
 - [Componenti Filament](../../Cms/docs/filament-components-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_wDueeq
 - [Componenti Filament](../../Cms/docs/filament-components-2.md)
-=======
-<<<<<<< HEAD
-- [Componenti Filament](../../Cms/docs/filament-components-2.md)
-=======
-- [Componenti Filament](../../Cms/docs/filament-components-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_qujz2W
-=======
-- [Componenti Filament](../../Cms/docs/filament-components-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_wDueeq
 
 ## Note Importanti
 

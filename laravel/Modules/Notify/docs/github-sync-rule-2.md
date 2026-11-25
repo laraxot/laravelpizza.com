@@ -3,15 +3,7 @@ title: "github sync rule"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_HEztSI
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_QCZU5H
 qmd: "github sync rule"
 issues: []
 discussions: []
@@ -23,10 +15,6 @@ discussions: []
 > **Status**: ✅ Active  
 > **Rule**: CRITICAL
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "github sync rule"
@@ -43,13 +31,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 Rule Statement
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 📋 Why
 
 1. **bashscripts/ è nel .gitignore**

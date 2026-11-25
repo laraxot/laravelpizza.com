@@ -3,31 +3,7 @@ title: "filament grapesjs"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_crHMhX
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_CrZ28F
-<<<<<<< .merge_file_Cx9kkB
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_9vn6tl
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_AOpb18
-=======
-<<<<<<< .merge_file_CrZ28F
->>>>>>> .merge_file_GMhySk
-=======
->>>>>>> .merge_file_9vn6tl
->>>>>>> laraxot/dev
 qmd: "filament grapesjs"
 issues: []
 discussions: []

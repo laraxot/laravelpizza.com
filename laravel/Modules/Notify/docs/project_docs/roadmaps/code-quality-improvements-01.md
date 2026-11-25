@@ -3,15 +3,7 @@ title: "code quality improvements 2025 10 01"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_gL5W5b
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_C9NEV1
 qmd: "code quality improvements 2025 10 01"
 issues: []
 discussions: []
@@ -212,13 +204,6 @@ This code quality improvement pass has successfully:
 
 The codebase maintains **PHPStan Level 9 with 0 errors**, demonstrating excellent code quality and type safety. All changes follow Laraxot framework rules and best practices.
 
-<<<<<<< .merge_file_gL5W5b
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_C9NEV1
 ---
 
 title: "code quality improvements 2025 10 01"
@@ -239,12 +224,4 @@ discussions: []
 
 ---
 
-<<<<<<< .merge_file_gL5W5b
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_C9NEV1
 *This report is part of the ongoing code quality and documentation improvement initiative for the FixCity platform.*

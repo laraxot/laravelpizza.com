@@ -3,31 +3,7 @@ title: "packages other"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_DOxXca
-<<<<<<< .merge_file_Vd5bm6
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_yqM1R1
-=======
->>>>>>> .merge_file_RGsKJ1
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_DOxXca
-<<<<<<< .merge_file_Vd5bm6
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_yqM1R1
-=======
->>>>>>> .merge_file_RGsKJ1
 qmd: "packages other"
 issues: []
 discussions: []
@@ -46,23 +22,6 @@ Struttura moduli del progetto:
 
 ```
 Modules/
-<<<<<<< HEAD
-<<<<<<< .merge_file_DOxXca
-<<<<<<< .merge_file_Vd5bm6
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_YMysJM
->>>>>>> laraxot/dev
-=======
-=======
-<<<<<<< .merge_file_YMysJM
->>>>>>> .merge_file_yqM1R1
-=======
-=======
-<<<<<<< .merge_file_YMysJM
->>>>>>> .merge_file_RGsKJ1
   Activity/   — event sourcing, activity log
   Chart/      — chart rendering (Chart.js + JpGraph)
   Cms/        — content management
@@ -79,19 +38,6 @@ Modules/
   UI/         — componenti UI
   User/       — autenticazione, Passport, Socialite
   Xot/        — core module (XotBase, traits, utilities)
-=======
-<<<<<<< .merge_file_DOxXca
-<<<<<<< .merge_file_Vd5bm6
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_yqM1R1
-=======
->>>>>>> .merge_file_RGsKJ1
->>>>>>> laraxot/dev
   Activity/  : event sourcing, activity log
   Chart/     : chart rendering (Chart.js + JpGraph)
   Cms/       : content management
@@ -108,26 +54,6 @@ Modules/
   UI/        : componenti UI
   User/      : autenticazione, Passport, Socialite
   Xot/       : core module (XotBase, traits, utilities)
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_DOxXca
-<<<<<<< .merge_file_Vd5bm6
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_GnLBPv
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_GnLBPv
->>>>>>> laraxot/dev
->>>>>>> .merge_file_yqM1R1
-=======
->>>>>>> .merge_file_GnLBPv
->>>>>>> laraxot/dev
->>>>>>> .merge_file_RGsKJ1
 ```
 
 **Regole namespace** (v12, già configurato):

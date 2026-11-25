@@ -1,38 +1,10 @@
 ---
-<<<<<<< .merge_file_3o9qrP
-<<<<<<< HEAD
-title: '🎨 Theme Architecture - "Il Tema è un Vestito"'
+title: "🎨 Theme Architecture - "Il Tema è un Vestito""
 type: concept
 tags: [theme, architecture]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: 'theme-architecture 🎨 theme architecture - "il tema è un vestito"'
-=======
-title: "🎨 Theme Architecture - "Il Tema è un Vestito""
-type: concept
-tags: [theme, architecture]
-created: 2026-07-14
-<<<<<<< HEAD
-=======
-title: "🎨 Theme Architecture - "Il Tema è un Vestito""
-type: concept
-tags: [theme, architecture]
-created: 2026-07-14
->>>>>>> .merge_file_lCRFo8
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_3o9qrP
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-qmd: "theme-architecture 🎨 theme architecture - "il tema è un vestito""
->>>>>>> laraxot/dev
-=======
-qmd: "theme-architecture 🎨 theme architecture - "il tema è un vestito""
->>>>>>> .merge_file_lCRFo8
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
@@ -40,21 +12,12 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_3o9qrP
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_lCRFo8
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

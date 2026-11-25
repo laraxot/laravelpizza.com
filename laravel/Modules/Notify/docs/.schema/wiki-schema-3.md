@@ -3,21 +3,7 @@ title: "Wiki Schema"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_A9wM9r
-<<<<<<< .merge_file_j69nkA
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_csplHj
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_A9wM9r
->>>>>>> .merge_file_ydSBr6
-=======
->>>>>>> .merge_file_csplHj
 qmd: "Wiki Schema"
 issues: []
 discussions: []
@@ -91,10 +77,6 @@ nome-panoramica.md
 
 ### Frontmatter
 ```yaml
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 qmd: "WIKI SCHEMA"
 issues: []
@@ -107,11 +89,6 @@ created: 2026-04-15
 updated: 2026-04-15
 related: [altra-pagina.md, ancora-un-altra.md]
 ---
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ```
 
 ### Link Interni

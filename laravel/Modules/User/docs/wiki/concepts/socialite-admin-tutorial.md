@@ -12,6 +12,7 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
+<<<<<<< .merge_file_GPuEpV
 <<<<<<< .merge_file_2lJ1Vj
 <<<<<<< .merge_file_0rfMqT
 qmd: "socialite admin tutorial configurare google oauth"
@@ -20,6 +21,9 @@ qmd: "socialite admin tutorial configurare google oauth"
 =======
 qmd: "socialite admin tutorial configurare google oauth"
 >>>>>>> .merge_file_rXjlTI
+=======
+qmd: "socialite admin tutorial configurare google oauth"
+>>>>>>> .merge_file_Kq6IGI
 ---
 
 # Tutorial: Configurare Google OAuth nel Backoffice

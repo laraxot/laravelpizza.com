@@ -3,21 +3,7 @@ title: "testing commands"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_vgrcvv
-<<<<<<< .merge_file_lbvI3T
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_uaCJar
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_vgrcvv
->>>>>>> .merge_file_APSDWo
-=======
->>>>>>> .merge_file_uaCJar
 qmd: "testing commands"
 issues: []
 discussions: []

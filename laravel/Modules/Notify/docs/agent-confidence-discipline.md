@@ -7,21 +7,7 @@ type: rule
 status: approved
 tags: [agent, confidence, verification]
 created: "2026-05-26"
-<<<<<<< .merge_file_PijuDX
-<<<<<<< .merge_file_NM5fdJ
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_QmGFEF
-<<<<<<< HEAD
-updated: "2026-05-26"
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_PijuDX
->>>>>>> .merge_file_eLFlGd
-=======
->>>>>>> .merge_file_QmGFEF
 related:
   - "../../Xot/docs/wiki/concepts/agent-confidence-discipline.md"
 issue: "https://github.com/provtv/base_ptv_fila5/issues/152"

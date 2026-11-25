@@ -3,15 +3,7 @@ title: "send record notification action refactoring"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_8vtPQr
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_1jiPdt
 qmd: "send record notification action refactoring"
 issues: []
 discussions: []
@@ -198,10 +190,6 @@ private function sendNotification(Model $record, string $templateSlug, ChannelEn
 - [x] Extensibility improved
 - [x] Performance maintained
 - [x] Test compatibility preserved
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -216,11 +204,3 @@ discussions: []
 **Refactored by**: iFlow CLI  
 **Compliance**: 100% DRY + KISS + Clean Code  
 **Status**: Ready for production deployment
-<<<<<<< .merge_file_8vtPQr
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_1jiPdt

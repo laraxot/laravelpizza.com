@@ -7,23 +7,7 @@ module: notify
 type: product
 tags: [product, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_knvxTr
-=======
-<<<<<<< .merge_file_YBltqj
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_Z96kyI
-=======
->>>>>>> .merge_file_Y9kn45
->>>>>>> laraxot/dev
 ---
 
 # Notify - Product Strategy

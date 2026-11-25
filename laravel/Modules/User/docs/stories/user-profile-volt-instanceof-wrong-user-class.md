@@ -19,6 +19,12 @@ related:
   - ../../laravel/Modules/User/app/Models/BaseUser.php
   - ../../laravel/Modules/User/app/Models/User.php
   - ../../laravel/Modules/Quaeris/app/Models/User.php
+<<<<<<< .merge_file_nF9q3w
+=======
+  - ../../laravel/Modules/<nome progetto>/app/Models/User.php
+  - ../../laravel/Modules/Quaeris/app/Models/User.php
+  - ../../laravel/Modules/<nome progetto>/app/Models/User.php
+>>>>>>> .merge_file_3mcUmh
 github:
   repository: https://github.com/laraxot/module_user_fila5
   issues: https://github.com/laraxot/module_user_fila5/issues
@@ -44,6 +50,13 @@ errori `cast.string` / `argument.type` / `method.nonObject` su
 ```
 
 Il model di auth reale e' `Modules\Quaeris\Models\User`, non
+<<<<<<< .merge_file_nF9q3w
+=======
+'model' => Modules\<nome progetto>\Models\User::class,
+```
+
+Il model di auth reale e' `Modules\<nome progetto>\Models\User`, non
+>>>>>>> .merge_file_3mcUmh
 `Modules\User\Models\User`. Le due classi sono **sorelle**, entrambe
 `extends Modules\User\Models\BaseUser` — non genitore/figlio.
 
@@ -105,6 +118,12 @@ presente:
 - AC5 (non verificato in questa sessione — DB di test con nota separata,
   vedi [[env-sqlite-manca-suite-non-eseguibile]]): un test Pest end-to-end
   che autentica un utente reale (`Modules\Quaeris\Models\User`) e chiama
+<<<<<<< .merge_file_nF9q3w
+=======
+  che autentica un utente reale (`Modules\<nome progetto>\Models\User`) e chiama
+  che autentica un utente reale (`Modules\Quaeris\Models\User`) e chiama
+  che autentica un utente reale (`Modules\<nome progetto>\Models\User`) e chiama
+>>>>>>> .merge_file_3mcUmh
   `updateProfile()`/`updatePassword()`/`deleteAccount()` deve passare senza
   finire nel catch generico.
 
@@ -175,7 +194,14 @@ Claude Sonnet 5
 - `laravel/Modules/User/app/Models/BaseUser.php` (fix docblock: `$id` +
   `Carbon|null`)
 
+<<<<<<< .merge_file_nF9q3w
 ## Aggiornamento 2026-09-10 (subagent-quaeris-user, terza occorrenza indipendente)
+=======
+## Aggiornamento 2026-09-10 (subagent-quaeris-user, terza occorrenza indipendente)
+## Aggiornamento 2026-09-10 (subagent-quaeris-user, terza occorrenza indipendente)
+## Aggiornamento 2026-09-10 (subagent-<nome progetto>-user, terza occorrenza indipendente)
+## Aggiornamento 2026-09-10 (subagent-<nome progetto>-user, terza occorrenza indipendente)
+>>>>>>> .merge_file_3mcUmh
 
 Task assegnato come "4 errori PHPStan cast.string/argument.type/method.nonObject
 su `ProfileEditVoltComponent.php`" (righe 142/348/353/362), senza riferimento a

@@ -1,28 +1,10 @@
 ---
 title: "Notify Platform - Master Plan 🚀"
-<<<<<<< .merge_file_VPTFit
 type: concept
 tags: [master, plan]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "master-plan laraxot platform - master plan 🚀"
-=======
-<<<<<<< HEAD
-title: "<nome progetto> Platform - Master Plan 🚀"
-type: concept
-tags: [master, plan]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "master-plan laraxot platform - master plan 🚀"
-qmd: "master-plan <nome progetto> platform - master plan 🚀"
-=======
-type: concept
-tags: [master, plan]
-created: 2026-07-14
-updated: 2026-11-23
-qmd: "master-plan laraxot platform - master plan 🚀"
->>>>>>> laraxot/dev
->>>>>>> .merge_file_GuPdzh
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
@@ -32,17 +14,8 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< .merge_file_VPTFit
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_GuPdzh
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

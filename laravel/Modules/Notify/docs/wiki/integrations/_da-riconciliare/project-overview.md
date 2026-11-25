@@ -1,43 +1,15 @@
 ---
 title: "🏛️ NOTIFY - Civic Engagement Platform"
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_fHpKSE
->>>>>>> laraxot/dev
 type: concept
 tags: [project, overview]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "project-overview 🏛️ laraxot - civic engagement platform"
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-title: "🏛️ <nome progetto> - Civic Engagement Platform"
-type: concept
-tags: [project, overview]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "project-overview 🏛️ laraxot - civic engagement platform"
-qmd: "project-overview 🏛️ <nome progetto> - civic engagement platform"
-=======
-type: concept
-tags: [project, overview]
-created: 2026-07-14
-updated: 2026-11-23
-qmd: "project-overview 🏛️ laraxot - civic engagement platform"
->>>>>>> laraxot/dev
->>>>>>> .merge_file_u2hOCQ
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
   - "./00-index.md"
   - "./00-index-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
   - "./00-index.md"
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
@@ -48,16 +20,11 @@ related:
   - "../../../acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
-<<<<<<< HEAD
-=======
-=======
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
   - "../../../00-index-documentation.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "../../../acronym-naming-conventions.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

@@ -3,15 +3,7 @@ title: "✅ Kilo (OpenCode) Configuration - COMPLETE"
 type: concept
 tags: [kilo, configuration, complete]
 created: 2026-07-14
-<<<<<<< .merge_file_12zuCT
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_ZU4g1b
 qmd: "kilo-configuration-complete ✅ kilo (opencode) configuration - complete"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

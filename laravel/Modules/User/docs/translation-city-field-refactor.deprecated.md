@@ -17,16 +17,18 @@ related:
   - "./actions-path-convention.md"
 ---
 
+<<<<<<< .merge_file_1JgFOO
 <<<<<<< .merge_file_UqWx1f
 <<<<<<< HEAD
-> Questo file è stato rinominato in [translation-city-field-refactor-2.deprecated.md](translation-city-field-refactor-2.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 =======
-<<<<<<< HEAD
+>>>>>>> .merge_file_kCB9vX
 > Questo file è stato rinominato in [translation-city-field-refactor-2.deprecated.md](translation-city-field-refactor-2.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-=======
 > Questo file è stato rinominato in [translation-city-field-refactor-2.deprecated.md](./translation-city-field-refactor.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+<<<<<<< .merge_file_1JgFOO
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 > Questo file è stato rinominato in [translation-city-field-refactor-.deprecated.md](translation-city-field-refactor-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 >>>>>>> .merge_file_NtFORF
+=======
+>>>>>>> .merge_file_kCB9vX

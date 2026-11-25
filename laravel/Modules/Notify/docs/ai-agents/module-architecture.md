@@ -3,31 +3,7 @@ title: "module architecture"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_vicUNJ
-<<<<<<< .merge_file_xMSx8Y
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_fYHuye
-=======
->>>>>>> .merge_file_9piTkn
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_vicUNJ
-<<<<<<< .merge_file_xMSx8Y
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_fYHuye
-=======
->>>>>>> .merge_file_9piTkn
 qmd: "module architecture"
 issues: []
 discussions: []
@@ -96,46 +72,21 @@ class User extends Illuminate\Database\Eloquent\Model
 **Precedente:** [Project Context](project-context.md) | **Successivo:** [Code Style](code-style.md)
 
 **Di ritorno:**
-<<<<<<< HEAD
 - [CLAUDE.md - Architecture Section](../../../Geo/docs/root-md-files/claude.md)
 - [AGENTS.md - Module Architecture Section](../../AGENTS.md)
 - [AGENTS.md - Module Architecture Section](../../AGENTS.md)
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_vicUNJ
-<<<<<<< .merge_file_xMSx8Y
-<<<<<<< HEAD
-- [CLAUDE.md - Architecture Section](../../../Geo/docs/root-md-files/claude.md)
-- [AGENTS.md - Module Architecture Section](../../AGENTS.md)
-- [AGENTS.md - Module Architecture Section](../../AGENTS.md)
-=======
-<<<<<<< HEAD
 - [CLAUDE.md - Architecture Section](../../../Geo/docs/root-md-files/claude.md)
 - [AGENTS.md - Module Architecture Section](../../agents.md)
 - [agents.md - Module Architecture Section](../../agents.md)
-=======
 - [CLAUDE.md - Architecture Section](../../../Geo/docs/root-md-files/claude.md)
 - [AGENTS.md - Module Architecture Section](../../AGENTS.md)
 - [AGENTS.md - Module Architecture Section](../../AGENTS.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 - [CLAUDE.md - Architecture Section](../../../Geo/docs/root-md-files/claude.md)
 - [AGENTS.md - Module Architecture Section](../../agents.md)
 - [agents.md - Module Architecture Section](../../agents.md)
-=======
-=======
->>>>>>> .merge_file_9piTkn
 - [CLAUDE.md - Architecture Section](../../../Geo/docs/root-md-files/claude.md)
 - [AGENTS.md - Module Architecture Section](../../agents.md)
 - [agents.md - Module Architecture Section](../../agents.md)
-=======
 - [CLAUDE.md - Architecture Section](../../../Geo/docs/root-md-files/claude.md)
 - [AGENTS.md - Module Architecture Section](../../AGENTS.md)
 - [AGENTS.md - Module Architecture Section](../../AGENTS.md)
-<<<<<<< .merge_file_vicUNJ
->>>>>>> .merge_file_fYHuye
-=======
->>>>>>> .merge_file_9piTkn
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

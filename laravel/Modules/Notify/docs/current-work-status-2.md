@@ -3,21 +3,7 @@ title: "current work status"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_3DtHET
-<<<<<<< .merge_file_TcQF1K
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_rPbklv
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_3DtHET
->>>>>>> .merge_file_uN5wpA
-=======
->>>>>>> .merge_file_rPbklv
 qmd: "current work status"
 issues: []
 discussions: []

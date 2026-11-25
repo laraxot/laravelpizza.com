@@ -3,21 +3,7 @@ title: "filament table vs blade component"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_fuffj8
-<<<<<<< .merge_file_G0Y96l
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_6gY4Mo
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_fuffj8
->>>>>>> .merge_file_BDFVaG
-=======
->>>>>>> .merge_file_6gY4Mo
 qmd: "filament table vs blade component"
 issues: []
 discussions: []
@@ -29,10 +15,6 @@ discussions: []
 **Status**: ✅ MANDATORY ARCHITECTURE RULE  
 **Priority**: 🔴 CRITICAL
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "filament table vs blade component"
@@ -50,13 +32,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🚨 REGOLA FONDAMENTALE
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 📊 DECISION MATRIX
 
 | Use Case | Component Type | File Pattern | Features |

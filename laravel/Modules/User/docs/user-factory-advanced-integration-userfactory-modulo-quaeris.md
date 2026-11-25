@@ -19,6 +19,14 @@ related:
 status: draft
 ---
 
+<<<<<<< .merge_file_t6YfRD
+=======
+# UserFactory Advanced Integration - Modulo User & <nome progetto>
+
+## Post Deep-Study Analysis
+---
+
+>>>>>>> .merge_file_Vr1NCt
 # UserFactory Advanced Integration - Modulo User & Quaeris
 
 ## Post Deep-Study Analysis 
@@ -33,11 +41,27 @@ BaseUser (User Module)
 ├── User (Quaeris) - STI Base + Business Logic
     ├── Patient (HasParent) - Healthcare Consumer
     ├── Doctor (HasParent) - Healthcare Provider  
+<<<<<<< .merge_file_t6YfRD
+=======
+├── User (<nome progetto>) - STI Base + Business Logic
+    ├── Patient (HasParent) - Healthcare Consumer
+    ├── Doctor (HasParent) - Healthcare Provider
+├── User (Quaeris) - STI Base + Business Logic
+    ├── Patient (HasParent) - Healthcare Consumer
+    ├── Doctor (HasParent) - Healthcare Provider  
+>>>>>>> .merge_file_Vr1NCt
     └── Admin (HasParent) - System Administrator
 ```
 
 ### Cross-Module Compatibility Matrix
 
+<<<<<<< .merge_file_t6YfRD
+=======
+| BaseUser Field | <nome progetto> User | Business Logic | Factory Support |
+| BaseUser Field | Quaeris User | Business Logic | Factory Support |
+| BaseUser Field | Quaeris User | Business Logic | Factory Support |
+| BaseUser Field | <nome progetto> User | Business Logic | Factory Support |
+>>>>>>> .merge_file_Vr1NCt
 | BaseUser Field | Quaeris User | Business Logic | Factory Support |
 |----------------|----------------|----------------|-----------------|
 | `name` | `name` | Full name concat | ✅ Complete |
@@ -102,6 +126,13 @@ User::factory()->gdprCompliant()->create();
 
 ### Connection Strategy Perfezionata
 ```php
+<<<<<<< .merge_file_t6YfRD
+=======
+// BaseUser (User Module)
+protected $connection = 'user';
+
+// <nome progetto> User (Healthcare Domain)
+>>>>>>> .merge_file_Vr1NCt
 // BaseUser (User Module) 
 protected $connection = 'user';
 
@@ -130,6 +161,16 @@ $address = $doctor->address; // Cross-module morph relation
 public function test_cross_module_compatibility()
 {
     $user = User::factory()->create();
+<<<<<<< .merge_file_t6YfRD
+=======
+
+    // BaseUser contracts respected
+    expect($user)->toHaveProperty('email');
+    expect($user)->toHaveProperty('password');
+    expect($user->email_verified_at)->toBeInstanceOf(Carbon::class);
+
+// <nome progetto> domain contracts
+>>>>>>> .merge_file_Vr1NCt
     
     // BaseUser contracts respected
     expect($user)->toHaveProperty('email');
@@ -165,6 +206,14 @@ public function test_bulk_sti_performance()
         ...User::factory()->doctor()->count(30)->make(),
         ...User::factory()->admin()->count(5)->make(),
     ]);
+<<<<<<< .merge_file_t6YfRD
+=======
+
+    User::insert($users->toArray()); // Single query
+
+    expect(Patient::count())->toBe(100);
+    expect(Doctor::count())->toBe(30);
+>>>>>>> .merge_file_Vr1NCt
     
     User::insert($users->toArray()); // Single query
     
@@ -210,11 +259,19 @@ public function run(): void
     User::factory()->patient()->count(500)->create();
     User::factory()->patient()->pregnant()->count(50)->create();
     User::factory()->patient()->eligibleForFreeServices()->count(200)->create();
+<<<<<<< .merge_file_t6YfRD
     
     // Professional doctor network
     User::factory()->doctorWithStudio()->count(50)->create();
     User::factory()->doctor()->specialist()->count(20)->create();
     
+=======
+
+    // Professional doctor network
+    User::factory()->doctorWithStudio()->count(50)->create();
+    User::factory()->doctor()->specialist()->count(20)->create();
+    
+>>>>>>> .merge_file_Vr1NCt
     // Administrative structure
     User::factory()->admin()->count(5)->create();
 }
@@ -282,7 +339,15 @@ public function run(): void
 - **Reusability**: Base authentication contracts preserved
 - **Testability**: Comprehensive user scenario testing
 
+<<<<<<< .merge_file_t6YfRD
 ### For Quaeris Module
+=======
+### For <nome progetto> Module
+### For Quaeris Module
+### For Quaeris Module
+### For <nome progetto> Module
+### For Quaeris Module
+>>>>>>> .merge_file_Vr1NCt
 - **Domain Focus**: Healthcare-specific data generation
 - **Business Logic**: Real-world scenario testing
 - **Compliance**: GDPR and healthcare regulation support
@@ -301,6 +366,22 @@ public function run(): void
 
 ## Link Documentazione
 
+<<<<<<< .merge_file_t6YfRD
+=======
+### <nome progetto> Module
+- [Advanced Improvements Analysis](../../<nome progetto>/docs/factories/userfactory-advanced-improvements-analysis.md)
+- [Implementation Completed](../../<nome progetto>/docs/factories/userfactory_implementation_completed.md)
+- [Model States](../../<nome progetto>/docs/models/states.md)
+
+### User Module
+- [User Factory Integration](./user-factory-integration-module.md)
+- [Traits Complete Guide](./traits-complete-guide-aggiornato-post.md)
+- [BaseUser Architecture](./parental-inheritance.md)
+
+### Root Documentation
+- [UserFactory <nome progetto> Integration](../../../../../docs/userfactory_<nome progetto>_integration.md)
+- [Testing Standards](../../../../../docs/testing_standards.md)
+>>>>>>> .merge_file_Vr1NCt
 ### Quaeris Module
 - [Advanced Improvements Analysis](../../Quaeris/docs/factories/userfactory-advanced-improvements-analysis.md)
 - [Implementation Completed](../../Quaeris/docs/factories/userfactory_implementation_completed.md)
@@ -313,4 +394,8 @@ public function run(): void
 
 ### Root Documentation  
 - [UserFactory Quaeris Integration](../../../../../docs/userfactory_Quaeris_integration.md)
+<<<<<<< .merge_file_t6YfRD
 - [Testing Standards](../../../../../docs/testing_standards.md) 
+=======
+- [Testing Standards](../../../../../docs/testing_standards.md) 
+>>>>>>> .merge_file_Vr1NCt

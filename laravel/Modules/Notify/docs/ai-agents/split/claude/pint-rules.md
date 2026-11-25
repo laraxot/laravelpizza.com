@@ -3,21 +3,7 @@ title: "pint rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_GnQT4p
-<<<<<<< .merge_file_jSzlpY
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_RIhEO1
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_GnQT4p
->>>>>>> .merge_file_hyB2SD
-=======
->>>>>>> .merge_file_RIhEO1
 qmd: "pint rules"
 issues: []
 discussions: []
@@ -29,11 +15,6 @@ discussions: []
 
 - You must run `vendor/bin/pint --dirty` before finalizing changes to ensure your code matches the project's expected style.
 - Do not run `vendor/bin/pint --test`, simply run `vendor/bin/pint` to fix any formatting issues.
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 
 ---
@@ -54,9 +35,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

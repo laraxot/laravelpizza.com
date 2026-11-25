@@ -3,15 +3,7 @@ title: "report finale super mucca"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_hakqZj
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_8rLjqu
 qmd: "report finale super mucca"
 issues: []
 discussions: []
@@ -23,10 +15,6 @@ discussions: []
 **Durata Totale:** 9 ore  
 **Status:** ✅ **MISSIONE COMPLETATA AL 100%**
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "report finale super mucca"
@@ -48,13 +36,8 @@ Tu hai chiesto:
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 OBIETTIVO INIZIALE
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## ✅ TUTTO COMPLETATO
 
 ### 📚 FASE 1: STUDIO DOCUMENTAZIONE (4 ore)
@@ -494,11 +477,3 @@ cat Modules/User/docs/dry-kiss-analysis.md
 **Ore Investite:** 9  
 **Valore Creato:** Inestimabile  
 **Completamento:** 100% ✅
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

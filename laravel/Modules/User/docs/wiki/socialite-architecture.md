@@ -8,22 +8,23 @@ qmd: "socialite-architecture socialite authentication architecture"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
+<<<<<<< .merge_file_nMD4JI
 <<<<<<< .merge_file_uC0Ftj
 <<<<<<< HEAD
-  - "./agents-2.md"
 =======
-<<<<<<< HEAD
+>>>>>>> .merge_file_7hjPaI
+  - "./agents-2.md"
   - "./agents.md"
-<<<<<<< .merge_file_Y4Q7li
-=======
-=======
   - "./agents-2.md"
+<<<<<<< .merge_file_nMD4JI
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_NFekXM
 =======
   - "./agents.md"
 >>>>>>> .merge_file_29NT3m
+=======
+>>>>>>> .merge_file_7hjPaI
   - "./architecture.md"
   - "./auth-patterns.md"
   - "./bmad-method.md"

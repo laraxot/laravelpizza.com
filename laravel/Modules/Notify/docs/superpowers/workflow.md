@@ -3,15 +3,7 @@ title: "workflow"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_tS3kgS
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_nGfUT6
 qmd: "workflow"
 issues: []
 discussions: []
@@ -23,10 +15,6 @@ discussions: []
 > **Status**: ✅ Active  
 > **Version**: v5.0.6
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "workflow"
@@ -47,13 +35,8 @@ The Superpowers workflow is a structured development process that ensures qualit
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 📋 Overview
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🔄 Complete Workflow
 
 ### Phase 1: Brainstorming

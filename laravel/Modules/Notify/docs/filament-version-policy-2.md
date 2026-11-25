@@ -3,31 +3,7 @@ title: "filament version policy"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_N0SluW
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_f20v43
-<<<<<<< .merge_file_C8gfLQ
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_PvM6vD
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_tzVYSK
-=======
-<<<<<<< .merge_file_f20v43
->>>>>>> .merge_file_vxy1xs
-=======
->>>>>>> .merge_file_PvM6vD
->>>>>>> laraxot/dev
 qmd: "filament version policy"
 issues: []
 discussions: []
@@ -290,10 +266,6 @@ composer update "filament/*" -W
 - [ ] Check all modules use ^5.0
 - [ ] No mixed versions
 - [ ] No old versions
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -309,8 +281,3 @@ discussions: []
 **Versione Attuale**: **Filament 5.x**  
 **Prossimo Aggiornamento**: **Quando esce Filament 6**  
 **Regola**: **MAI versioni vecchie, SEMPRE ultima stabile**
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

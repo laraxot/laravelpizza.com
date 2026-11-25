@@ -7,15 +7,7 @@ type: concept
 sources: []
 confidence: high
 created: 2026-06-10
-<<<<<<< .merge_file_B82LFe
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-06-10
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_bUfXga
 tags: [migration, notifications, module-owner, notify, user]
 related:
   - ../../../../wiki/rules/one-migration-per-model.md

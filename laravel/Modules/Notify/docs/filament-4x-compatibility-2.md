@@ -3,31 +3,7 @@ title: "filament 4x compatibility"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_y32NSF
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_oM2QuA
-<<<<<<< .merge_file_AyHSi1
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_1NeJHe
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_Dqnjoa
-=======
-<<<<<<< .merge_file_oM2QuA
->>>>>>> .merge_file_9FgF1T
-=======
->>>>>>> .merge_file_1NeJHe
->>>>>>> laraxot/dev
 qmd: "filament 4x compatibility"
 issues: []
 discussions: []

@@ -7,41 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< .merge_file_kyj9E6
-=======
-<<<<<<< .merge_file_7s1Ppz
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_bGJ6JJ
-=======
->>>>>>> .merge_file_4pVYtN
->>>>>>> laraxot/dev
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-<<<<<<< .merge_file_kyj9E6
-=======
-<<<<<<< .merge_file_7s1Ppz
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_bGJ6JJ
-=======
->>>>>>> .merge_file_4pVYtN
->>>>>>> laraxot/dev
 ---
 
 # 🚀 NOTIFY - GUIDA RAPIDA SVILUPPATORI
@@ -542,50 +508,16 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 
 ### Documentazione
 - **[Indice Documentazione](./documentation-index-3.md)**
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< .merge_file_kyj9E6
-=======
-<<<<<<< .merge_file_7s1Ppz
->>>>>>> laraxot/dev
 - **[Roadmap Status](./roadmap-status-summary-2.md)**
 - **[Documentation Status](./project_docs/documentation-status-3.md)**
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_bGJ6JJ
-=======
->>>>>>> .merge_file_4pVYtN
->>>>>>> laraxot/dev
 - **[Roadmap Status](../../../roadmap-status-summary-2.md)**
 - **[Documentation Status](./project_docs/DOCUMENTATION_STATUS.md)**
-=======
-<<<<<<< HEAD
 - **[Roadmap Status](./roadmap-status-summary-2.md)**
 - **[Documentation Status](./project_docs/documentation-status-3.md)**
-=======
 - **[Roadmap Status](../../../roadmap-status-summary-2.md)**
 - **[Documentation Status](./project_docs/DOCUMENTATION_STATUS.md)**
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-<<<<<<< .merge_file_kyj9E6
-=======
-<<<<<<< .merge_file_7s1Ppz
->>>>>>> laraxot/dev
-=======
 - **[Roadmap Status](./roadmap-status-summary-2.md)**
 - **[Documentation Status](./project_docs/documentation-status-3.md)**
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_bGJ6JJ
-=======
->>>>>>> .merge_file_4pVYtN
->>>>>>> laraxot/dev
 
 ### Framework
 - **[Laravel Docs](https://laravel.com/docs/11.x)**

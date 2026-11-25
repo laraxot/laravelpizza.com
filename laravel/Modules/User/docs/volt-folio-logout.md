@@ -22,6 +22,7 @@ related:
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
+<<<<<<< .merge_file_MCZ3Cb
 <<<<<<< .merge_file_hdkTqi
 <<<<<<< .merge_file_CSTYEh
 - [Convenzioni Path](./path-conventions-user.md)
@@ -30,15 +31,19 @@ related:
 - [Convenzioni Path](./path-conventions-user.md)
 =======
 <<<<<<< .merge_file_xWsMQT
-- [Convenzioni Path](./path-conventions-2.md)
 =======
+>>>>>>> .merge_file_O0cRo6
+- [Convenzioni Path](./path-conventions-2.md)
 - [Convenzioni Path](./path-conventions-user.md)
+<<<<<<< .merge_file_MCZ3Cb
 >>>>>>> .merge_file_KBDmaN
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_wyE40k
 =======
 - [Convenzioni Path](./path-conventions-user.md)
 >>>>>>> .merge_file_UKpXE4
+=======
+>>>>>>> .merge_file_O0cRo6
 - [Analisi Logout Blade](./logout-blade-analysis-3.md)
 - [Best Practices Volt e Folio](../../xot/docs/volt_folio_best_practices.md)
 
@@ -222,6 +227,7 @@ Seguire l'approccio Folio con Volt è raccomandato per la gestione del logout . 
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
+<<<<<<< .merge_file_MCZ3Cb
 <<<<<<< .merge_file_hdkTqi
 <<<<<<< .merge_file_CSTYEh
 - [Convenzioni Path](./path-conventions-user.md)
@@ -230,15 +236,19 @@ Seguire l'approccio Folio con Volt è raccomandato per la gestione del logout . 
 - [Convenzioni Path](./path-conventions-user.md)
 =======
 <<<<<<< .merge_file_xWsMQT
-- [Convenzioni Path](./path-conventions-2.md)
 =======
+>>>>>>> .merge_file_O0cRo6
+- [Convenzioni Path](./path-conventions-2.md)
 - [Convenzioni Path](./path-conventions-user.md)
+<<<<<<< .merge_file_MCZ3Cb
 >>>>>>> .merge_file_KBDmaN
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_wyE40k
 =======
 - [Convenzioni Path](./path-conventions-user.md)
 >>>>>>> .merge_file_UKpXE4
+=======
+>>>>>>> .merge_file_O0cRo6
 - [Analisi Logout Blade](./logout-blade-analysis-3.md)
 - [Best Practices Volt e Folio](../../xot/docs/volt_folio_best_practices.md)
 

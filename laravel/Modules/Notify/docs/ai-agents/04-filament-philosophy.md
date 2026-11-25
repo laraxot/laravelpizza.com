@@ -3,31 +3,7 @@ title: "04 Filament Philosophy"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_qCGMhI
-<<<<<<< .merge_file_VqlYgC
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_z0ySpi
-=======
->>>>>>> .merge_file_64Btx5
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_qCGMhI
-<<<<<<< .merge_file_VqlYgC
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_z0ySpi
-=======
->>>>>>> .merge_file_64Btx5
 qmd: "04 Filament Philosophy"
 issues: []
 discussions: []
@@ -35,40 +11,11 @@ discussions: []
 
 # 🎨 Filament Forms & Tables Philosophy
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_qCGMhI
-<<<<<<< .merge_file_VqlYgC
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_z0ySpi
-=======
->>>>>>> .merge_file_64Btx5
 **Part of**: [00-INDEX.md](00-index.md) — AI Agents Coordination  
 **Related**: [03-architecture-zen-2.md](03-architecture-zen.md) — Architecture
 
 ## 🔴 Fundamental Rule
 
-<<<<<<< .merge_file_qCGMhI
-<<<<<<< .merge_file_VqlYgC
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_z0ySpi
-=======
-=======
->>>>>>> .merge_file_64Btx5
->>>>>>> laraxot/dev
 **Part of**: [00-index.md](00-index.md) — AI Agents Coordination  
 **Related**: [03-architecture-zen.md](03-architecture-zen.md) — Architecture
 
@@ -92,21 +39,6 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_qCGMhI
-<<<<<<< .merge_file_VqlYgC
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_z0ySpi
-=======
->>>>>>> .merge_file_64Btx5
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🧠 Philosophy (The WHY)
 
 ### 1. **Don't Repeat Yourself (DRY)**

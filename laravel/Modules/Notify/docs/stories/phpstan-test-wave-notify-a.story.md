@@ -14,10 +14,7 @@ related:
   - ../../../Xot/docs/stories/phpstan-test-wave-regression.story.md
   - ./phpstan-test-wave-notify-b.story.md
   - ./4.29.notify-services-to-actions.story.md
-<<<<<<< HEAD
 qmd: "phpstan test wave notify story lane"
-=======
->>>>>>> laraxot/dev
 ---
 
 # PHPStan test wave Notify, lane notify-a

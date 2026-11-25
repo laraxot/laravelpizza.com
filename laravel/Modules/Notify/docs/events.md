@@ -3,21 +3,7 @@ title: "events"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_DZFtHY
-<<<<<<< .merge_file_1WXauD
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_CqvFZe
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_DZFtHY
->>>>>>> .merge_file_dKjXF3
-=======
->>>>>>> .merge_file_CqvFZe
 qmd: "events"
 issues: []
 discussions: []

@@ -1,17 +1,23 @@
+<<<<<<< .merge_file_Ya27kN
 <<<<<<< .merge_file_T4I7GX
 <<<<<<< .merge_file_OAV7Dr
 =======
 >>>>>>> .merge_file_TusCCZ
+=======
+>>>>>>> .merge_file_XO9qYY
 ---
 title: "Teams Migration - Laraxot Compliance Fix"
 type: note
 qmd: "teams migration laraxot compliance fix"
 ---
+<<<<<<< .merge_file_Ya27kN
 <<<<<<< .merge_file_T4I7GX
 =======
 >>>>>>> .merge_file_KyvaGU
 =======
 >>>>>>> .merge_file_TusCCZ
+=======
+>>>>>>> .merge_file_XO9qYY
 # Teams Migration - Laraxot Compliance Fix
 
 ## Data

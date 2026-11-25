@@ -1,21 +1,7 @@
 ---
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_8KhE4I
-<<<<<<< .merge_file_jJ4zUC
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_iGOWKy
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_8KhE4I
->>>>>>> .merge_file_1CQwFG
-=======
->>>>>>> .merge_file_iGOWKy
 qmd: "livewire widget epics"
 issues: []
 discussions: []

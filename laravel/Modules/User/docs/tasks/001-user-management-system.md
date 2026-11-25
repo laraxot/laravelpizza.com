@@ -1,14 +1,20 @@
+<<<<<<< .merge_file_4nXBB4
 <<<<<<< .merge_file_FFiI1H
 <<<<<<< .merge_file_79UVIF
+=======
+>>>>>>> .merge_file_MREu6L
 ---
 title: "Task 001: Implement User Management and Authentication System"
 type: note
 qmd: "001 user management system task implement"
 ---
+<<<<<<< .merge_file_4nXBB4
 =======
 >>>>>>> .merge_file_AQsJCL
 =======
 >>>>>>> .merge_file_noO5Di
+=======
+>>>>>>> .merge_file_MREu6L
 # Task 001: Implement User Management and Authentication System
 
 ## Description

@@ -1,34 +1,10 @@
 ---
 title: "Pagine Create - Notify Sixteen Theme"
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_MB6KK4
->>>>>>> laraxot/dev
 type: concept
 tags: [pagine, create]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "pagine-create pagine create - laraxot sixteen theme"
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-title: "Pagine Create - <nome progetto> Sixteen Theme"
-type: concept
-tags: [pagine, create]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "pagine-create pagine create - laraxot sixteen theme"
-qmd: "pagine-create pagine create - <nome progetto> sixteen theme"
-=======
-type: concept
-tags: [pagine, create]
-created: 2026-07-14
-updated: 2026-11-23
-qmd: "pagine-create pagine create - laraxot sixteen theme"
->>>>>>> laraxot/dev
->>>>>>> .merge_file_fSpGHB
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
@@ -38,23 +14,8 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_MB6KK4
->>>>>>> laraxot/dev
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> .merge_file_fSpGHB
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

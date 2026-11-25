@@ -6,10 +6,7 @@ created: 2026-11-23
 updated: 2026-11-23
 issues: []
 module: Notify
-<<<<<<< HEAD
 qmd: "notify config is centralized configurazione centralizzata"
-=======
->>>>>>> laraxot/dev
 ---
 
 # ADR — Configurazione Notify centralizzata
@@ -37,16 +34,6 @@ La configurazione è cacheabile e verificabile; ogni nuovo canale deve passare d
 ## Conferma
 
 Verificare configurazione compilata, adapter e test del canale.
-<<<<<<< .merge_file_1C9Q5S
-<<<<<<< .merge_file_gRHRq1
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_I6tDcy
-=======
->>>>>>> .merge_file_0wDSe3
 
 ## Verifica
 
@@ -56,14 +43,3 @@ Verificare configurazione compilata, adapter e test del canale.
   le letture da ambiente stanno in `Modules/Notify/config/notify.php` (`Env::get`) e nel merge di
   `Modules/Notify/app/Providers/Concerns/MergesNotifyConfigFromEnv.php`.
 - PHPStan: la regola `larastan.noEnvCallsOutsideOfConfig` e' attiva in `laravel/phpstan-strict.neon`.
-<<<<<<< .merge_file_1C9Q5S
-<<<<<<< .merge_file_gRHRq1
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_I6tDcy
-=======
->>>>>>> .merge_file_0wDSe3

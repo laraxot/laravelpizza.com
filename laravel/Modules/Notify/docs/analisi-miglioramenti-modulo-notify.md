@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 ---
 title: "Analisi e Miglioramenti Modulo Notify"
 type: analysis
 qmd: "analisi miglioramenti notify"
 ---
-=======
->>>>>>> laraxot/dev
 # Analisi e Miglioramenti Modulo Notify
 
 ## Analisi delle Soluzioni Esistenti

@@ -7,6 +7,7 @@ tags: [memories, index, on-demand]
 related:
   - ../rules/00-TRIGGER_MAP.md
   - ../rules/on-demand-pattern.md
+<<<<<<< .merge_file_2BlpO8
 <<<<<<< .merge_file_i2i6iz
 <<<<<<< .merge_file_QE5Ps4
 qmd: "memories"
@@ -15,6 +16,9 @@ qmd: "memories"
 =======
 qmd: "memories"
 >>>>>>> .merge_file_ede2Yv
+=======
+qmd: "memories"
+>>>>>>> .merge_file_xReeyt
 ---
 
 # Memories Index

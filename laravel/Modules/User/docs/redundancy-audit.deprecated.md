@@ -17,16 +17,18 @@ related:
   - "./actions-path-convention.md"
 ---
 
+<<<<<<< .merge_file_FjMgwE
 <<<<<<< .merge_file_j9WrGJ
 <<<<<<< HEAD
-> Questo file è stato rinominato in [redundancy-audit-2.deprecated.md](redundancy-audit-2.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 =======
-<<<<<<< HEAD
+>>>>>>> .merge_file_OGrhYN
 > Questo file è stato rinominato in [redundancy-audit-2.deprecated.md](redundancy-audit-2.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-=======
 > Questo file è stato rinominato in [redundancy-audit-2.deprecated.md](./redundancy-audit.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+<<<<<<< .merge_file_FjMgwE
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 > Questo file è stato rinominato in [redundancy-audit-.deprecated.md](redundancy-audit-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 >>>>>>> .merge_file_Rr6zcI
+=======
+>>>>>>> .merge_file_OGrhYN

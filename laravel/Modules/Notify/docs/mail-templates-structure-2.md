@@ -3,25 +3,7 @@ title: "mail templates structure"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_frvYSd
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_tMCggH
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_frvYSd
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_tMCggH
 qmd: "mail templates structure"
 issues: []
 discussions: []
@@ -150,29 +132,9 @@ $attachments = [
 
 - [Documentazione MailPace](https://github.com/mailpace/templates)
 - [Best Practices Email HTML](./email-html-best-practices-2.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_frvYSd
 - [Guida Testing](./email_testing.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_tMCggH
 - [Guida Testing](./EMAIL_TESTING.md)
-=======
-<<<<<<< HEAD
 - [Guida Testing](./email_testing.md)
-=======
-- [Guida Testing](./EMAIL_TESTING.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_frvYSd
-=======
-- [Guida Testing](./email_testing.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_tMCggH
 
 ## Supporto
 

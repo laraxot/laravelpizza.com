@@ -3,21 +3,7 @@ title: "claude ptvx guide"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_sjtryq
-<<<<<<< .merge_file_6VgAaj
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_Vu3uX9
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_sjtryq
->>>>>>> .merge_file_UQ6Rs2
-=======
->>>>>>> .merge_file_Vu3uX9
 qmd: "claude ptvx guide"
 issues: []
 discussions: []

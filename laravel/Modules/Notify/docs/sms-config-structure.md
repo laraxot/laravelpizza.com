@@ -3,15 +3,7 @@ title: "sms config structure"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_jO61Nn
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_nwny0L
 qmd: "sms config structure"
 issues: []
 discussions: []
@@ -172,10 +164,6 @@ $retryDelay = $config['drivers'][$driver]['retry_delay'] ?? $config['retry']['de
 
 - [Configurazione Netfun](./netfun-config-requirements-2.md)
 - [Provider SMS Supportati](./notifications/sms-provider-configuration-2.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -188,8 +176,3 @@ qmd: "sms config structure"
 issues: []
 discussions: []
 *Ultimo aggiornamento: [DATE]*
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

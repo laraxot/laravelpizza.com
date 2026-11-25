@@ -5,6 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_kwJ36s
 <<<<<<< .merge_file_2mnBYN
 <<<<<<< .merge_file_1Z2MN7
 qmd: "model inheritance analysis analisi ereditarietà modelli"
@@ -13,6 +14,9 @@ qmd: "model inheritance analysis analisi ereditarietà modelli"
 =======
 qmd: "model inheritance analysis analisi ereditarietà modelli"
 >>>>>>> .merge_file_9Djyya
+=======
+qmd: "model inheritance analysis analisi ereditarietà modelli"
+>>>>>>> .merge_file_nwLPcm
 ---
 
 # Analisi Ereditarietà Modelli - Modulo User
@@ -158,6 +162,7 @@ Dopo le modifiche, eseguire:
 
 ## Collegamenti
 
+<<<<<<< .merge_file_kwJ36s
 <<<<<<< .merge_file_2mnBYN
 <<<<<<< .merge_file_1Z2MN7
 - [Regole Qualità Codice](../../code-quality.md)
@@ -166,9 +171,11 @@ Dopo le modifiche, eseguire:
 - [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
 =======
 <<<<<<< HEAD
-- [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
 =======
+>>>>>>> .merge_file_nwLPcm
+- [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
 - [Regole Qualità Codice](../../code-quality.md)
+<<<<<<< .merge_file_kwJ36s
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_s4nAVW
@@ -176,6 +183,8 @@ Dopo le modifiche, eseguire:
 - [Regole Qualità Codice](../../code-quality.md)
 - [Regole Qualità Codice](../../code-quality.md)
 >>>>>>> .merge_file_9Djyya
+=======
+>>>>>>> .merge_file_nwLPcm
 - [BaseModel](../../../app/Models/BaseModel.php)
 - [BasePivot](../../../app/Models/BasePivot.php)
 - [BaseMorphPivot](../../../app/Models/BaseMorphPivot.php)

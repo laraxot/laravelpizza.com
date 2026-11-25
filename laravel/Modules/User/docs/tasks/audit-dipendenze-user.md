@@ -1,14 +1,20 @@
+<<<<<<< .merge_file_2a2mBE
 <<<<<<< .merge_file_lERbOr
 <<<<<<< .merge_file_Z3ouFO
+=======
+>>>>>>> .merge_file_ahRt5x
 ---
 title: "Task: Audit Completo Dipendenze User"
 type: audit
 qmd: "audit dipendenze user task completo"
 ---
+<<<<<<< .merge_file_2a2mBE
 =======
 >>>>>>> .merge_file_mb4S1r
 =======
 >>>>>>> .merge_file_7tq397
+=======
+>>>>>>> .merge_file_ahRt5x
 # Task: Audit Completo Dipendenze User
 
 **Modulo**: User  

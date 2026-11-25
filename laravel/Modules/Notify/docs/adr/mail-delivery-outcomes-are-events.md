@@ -9,10 +9,7 @@ updated: 2026-11-24
 related:
   - ../contracts/handle-mailjet-events-action.md
   - ../email/mailjet.md
-<<<<<<< HEAD
 qmd: "mail delivery outcomes are events esiti"
-=======
->>>>>>> laraxot/dev
 ---
 
 # ADR: gli esiti delle email sono un evento, non una scrittura nel modulo

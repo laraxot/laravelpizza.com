@@ -3,21 +3,7 @@ title: "07 MCP Tailwind UI"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_lc66mH
-<<<<<<< .merge_file_WURDxh
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_MhdDEL
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_lc66mH
->>>>>>> .merge_file_5qnXCm
-=======
->>>>>>> .merge_file_MhdDEL
 qmd: "07 MCP Tailwind UI"
 issues: []
 discussions: []
@@ -29,10 +15,6 @@ discussions: []
 **Stato**: ✅ OBBLIGATORIO  
 **Priorità**: CRITICAL
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "07 MCP TAILWIND UI"
@@ -53,13 +35,8 @@ Questo progetto utilizza **MCP (Model Context Protocol)** per integrare AI assis
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 📋 Panoramica
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🔧 MCP Servers Installati
 
 ### 1. Flowbite MCP ✅

@@ -3,21 +3,7 @@ title: "filament patterns"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_QcW0Bc
-<<<<<<< .merge_file_P8ABHA
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_IIahUU
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_QcW0Bc
->>>>>>> .merge_file_bW4Hfh
-=======
->>>>>>> .merge_file_IIahUU
 qmd: "filament patterns"
 issues: []
 discussions: []

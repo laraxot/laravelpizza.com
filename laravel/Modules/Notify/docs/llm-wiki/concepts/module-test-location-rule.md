@@ -7,15 +7,7 @@ type: concept
 sources: ["raw/articles/module-test-location-rule.md"]
 confidence: high
 created: 2026-04-21
-<<<<<<< .merge_file_QUvXG4
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-04-21
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_9Z9RiG
 tags: [testing, architecture, laraxot, bounded-context, ddd, modules]
 related:
   - concepts/laraxot-architecture.md

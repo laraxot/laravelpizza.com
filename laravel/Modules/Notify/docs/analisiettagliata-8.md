@@ -3,21 +3,7 @@ title: "analisiettagliata 8"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_LjQSo7
-<<<<<<< .merge_file_wN49aO
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_lpN5K3
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_LjQSo7
->>>>>>> .merge_file_0c51DK
-=======
->>>>>>> .merge_file_lpN5K3
 qmd: "analisiettagliata 8"
 issues: []
 discussions: []

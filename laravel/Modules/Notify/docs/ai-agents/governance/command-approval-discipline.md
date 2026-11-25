@@ -3,21 +3,7 @@ title: "command approval discipline"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_iG9xM1
-<<<<<<< .merge_file_eslg6u
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_8CYXyc
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_iG9xM1
->>>>>>> .merge_file_JYgIkh
-=======
->>>>>>> .merge_file_8CYXyc
 qmd: "command approval discipline"
 issues: []
 discussions: []

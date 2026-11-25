@@ -1,28 +1,10 @@
 ---
 title: "📸 Header Notify vs Bootstrap Italia - Analisi e Fix"
-<<<<<<< .merge_file_FCdYmO
 type: concept
 tags: [header, fix, analysis]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "header-fix-analysis 📸 header laraxot vs bootstrap italia - analisi e fix"
-=======
-<<<<<<< HEAD
-title: "📸 Header <nome progetto> vs Bootstrap Italia - Analisi e Fix"
-type: concept
-tags: [header, fix, analysis]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "header-fix-analysis 📸 header laraxot vs bootstrap italia - analisi e fix"
-qmd: "header-fix-analysis 📸 header <nome progetto> vs bootstrap italia - analisi e fix"
-=======
-type: concept
-tags: [header, fix, analysis]
-created: 2026-07-14
-updated: 2026-11-23
-qmd: "header-fix-analysis 📸 header laraxot vs bootstrap italia - analisi e fix"
->>>>>>> laraxot/dev
->>>>>>> .merge_file_ikMhxW
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
@@ -32,17 +14,8 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< .merge_file_FCdYmO
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_ikMhxW
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

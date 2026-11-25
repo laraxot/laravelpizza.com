@@ -15,10 +15,7 @@ related:
   - ./phpstan-test-wave-notify-a.story.md
   - ./phpstan-test-wave-notify-b.story.md
   - ./notify-phpstan-push-sms-tests.story.md
-<<<<<<< HEAD
 qmd: "phpstan test wave notify story lane"
-=======
->>>>>>> laraxot/dev
 ---
 
 # PHPStan test wave Notify: lane notify (residuo)

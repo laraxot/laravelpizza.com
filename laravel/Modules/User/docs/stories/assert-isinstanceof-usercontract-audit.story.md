@@ -1,8 +1,13 @@
 ---
 id: story-assert-isinstanceof-usercontract-audit-2026-09-21
 slug: assert-isinstanceof-usercontract-audit-2026-09-21
+<<<<<<< .merge_file_UmY9aA
 title: "STORY — Assert::isInstanceOf contro Model concreto invece di UserContract, audit repo-wide"
 description: "Modules\\User\\Models\\User e Modules\\Quaeris\\Models\\User sono sorelle (entrambe figlie di BaseUser), non genitore/figlio: instanceof/Assert contro il model concreto sbagliato e' sempre falso a runtime per l'auth model reale. Pattern ricorrente, gia' documentato in user-profile-volt-instanceof-wrong-user-class.md; oggi trovate altre occorrenze, una gia' corretta da sessione concorrente."
+=======
+title: "STORY: Assert::isInstanceOf contro Model concreto invece di UserContract, audit repo-wide"
+description: "Modules\\User\\Models\\User e Modules\\<nome progetto>\\Models\\User sono sorelle (entrambe figlie di BaseUser), non genitore/figlio: instanceof/Assert contro il model concreto sbagliato e' sempre falso a runtime per l'auth model reale. Pattern ricorrente, gia' documentato in user-profile-volt-instanceof-wrong-user-class.md; oggi trovate altre occorrenze, una gia' corretta da sessione concorrente."
+>>>>>>> .merge_file_nxGJBL
 document_type: story
 category: bmad
 scope: module:User
@@ -28,11 +33,23 @@ github:
 qmd: "assert isinstanceof usercontract audit story assertisinstanceof"
 ---
 
+<<<<<<< .merge_file_UmY9aA
+=======
+# STORY: Assert::isInstanceOf contro Model concreto invece di UserContract, audit repo-wide
+>>>>>>> .merge_file_nxGJBL
 # STORY — Assert::isInstanceOf contro Model concreto invece di UserContract, audit repo-wide
 
 ## Contesto
 
 Utente, mid-turn su un altro task: "fare Assert::isInstanceOf($user,
+<<<<<<< .merge_file_UmY9aA
+=======
+User::class); e' sbagliato meglio confrontare con UserContract!" — stesso
+User::class); e' sbagliato meglio confrontare con UserContract!": stesso
+principio architetturale gia' documentato in
+`user-profile-volt-instanceof-wrong-user-class.md` (2026-09-03/04):
+`config/auth.php` usa `Modules\<nome progetto>\Models\User` come auth model reale,
+>>>>>>> .merge_file_nxGJBL
 User::class); e' sbagliato meglio confrontare con UserContract!" — stesso
 principio architetturale gia' documentato in
 `user-profile-volt-instanceof-wrong-user-class.md` (2026-09-03/04):
@@ -55,6 +72,10 @@ in `getFullNameAttribute`, `getFirstNameAttribute`, `getLastNameAttribute`,
 `UserContract::class` ovunque, import `use Modules\User\Models\User;`
 rimosso): una sessione concorrente sulla stessa working tree condivisa aveva
 appena applicato esattamente questo fix, in parallelo alla segnalazione
+<<<<<<< .merge_file_UmY9aA
+=======
+dell'utente. Nessuna mia azione necessaria su questo file: verificato solo
+>>>>>>> .merge_file_nxGJBL
 dell'utente. Nessuna mia azione necessaria su questo file — verificato solo
 lo stato finale (`git diff` completo salvato in memoria
 `profile-contract-over-model.md`).
@@ -72,6 +93,10 @@ Grep `isInstanceOf.*User::class` sul repo (esclude `vendor`) ha trovato altri
 | `Modules/Tenant/tests/Unit/TenantModelsTest.php` | 72 |
 
 `LoginController.php` e `AssignTeamCommand.php` usano gia' `BaseUser::class`
+<<<<<<< .merge_file_UmY9aA
+=======
+(il genitore comune concreto, non `UserContract`): pattern diverso,
+>>>>>>> .merge_file_nxGJBL
 (il genitore comune concreto, non `UserContract`) — pattern diverso,
 probabilmente accettabile (`BaseUser` e' comune a entrambe le sorelle), non
 toccato, non auditato a fondo in questa story.
@@ -81,6 +106,10 @@ toccato, non auditato a fondo in questa story.
 Fix da confermare con l'utente prima di procedere sui 4 file residui: stesso
 tipo di modifica (swap `User::class` → `UserContract::class`, rimuovere
 import inutilizzato se non serve altrove nel file), rischio basso ma tocca
+<<<<<<< .merge_file_UmY9aA
+=======
+4 file in 3 moduli diversi (User, Cms, Tenant): fuori dall'Owned
+>>>>>>> .merge_file_nxGJBL
 4 file in 3 moduli diversi (User, Cms, Tenant) — fuori dall'Owned
 File/Module Scope implicito di questa segnalazione puntuale.
 
@@ -91,6 +120,10 @@ File/Module Scope implicito di questa segnalazione puntuale.
 
 ## Status
 
+<<<<<<< .merge_file_UmY9aA
+=======
+`review`: fix confermato per `IsProfileTrait.php` (gia' fatto da altri),
+>>>>>>> .merge_file_nxGJBL
 `review` — fix confermato per `IsProfileTrait.php` (gia' fatto da altri),
 audit completato per il resto del repo, correzione dei 4 file residui in
 attesa di conferma esplicita dell'utente.

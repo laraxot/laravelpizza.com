@@ -3,15 +3,7 @@ title: "Posta in uscita: Postfix locale e verifica email"
 type: how-to
 tags: [notify, mail, postfix, smtp, verify-email, mustache]
 created: 2026-10-07
-<<<<<<< .merge_file_K1DyBy
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-10-07
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_Lc55Im
 qmd: "postfix locale mail laravel verify-email spatie mail template mustache gmail spf dkim relay"
 issues: []
 discussions: []

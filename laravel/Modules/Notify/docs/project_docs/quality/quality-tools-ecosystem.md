@@ -3,15 +3,7 @@ title: "quality tools ecosystem"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_fSxthU
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_iEDBMG
 qmd: "quality tools ecosystem"
 issues: []
 discussions: []
@@ -722,10 +714,6 @@ jobs:
 - **Security Status**: Stato sicurezza
 - **Documentation Status**: Stato documentazione
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "quality tools ecosystem"
@@ -745,21 +733,3 @@ discussions: []
 
 *Questo ecosistema garantisce la massima qualità del codice in tutti gli aspetti del progetto FixCity Platform.*
 *Questo ecosistema garantisce la massima qualità del codice in tutti gli aspetti del progetto Notify Platform.*
-
-
-
-
-
-
-
-
-
-
-
-<<<<<<< HEAD
-=======
-=======
-*Questo ecosistema garantisce la massima qualità del codice in tutti gli aspetti del progetto FixCity Platform.*
-*Questo ecosistema garantisce la massima qualità del codice in tutti gli aspetti del progetto Notify Platform.*
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

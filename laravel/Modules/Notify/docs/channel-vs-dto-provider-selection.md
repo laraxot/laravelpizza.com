@@ -3,21 +3,7 @@ title: "channel vs dto provider selection"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_g82cCI
-<<<<<<< .merge_file_jOTJIe
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_xyPv3R
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_g82cCI
->>>>>>> .merge_file_Yb0ssj
-=======
->>>>>>> .merge_file_xyPv3R
 qmd: "channel vs dto provider selection"
 issues: []
 discussions: []

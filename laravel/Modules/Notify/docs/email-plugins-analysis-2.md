@@ -3,21 +3,7 @@ title: "email plugins analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_hwj4Ct
-<<<<<<< .merge_file_h9PM6n
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_sDXMTy
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_hwj4Ct
->>>>>>> .merge_file_PZGDMo
-=======
->>>>>>> .merge_file_sDXMTy
 qmd: "email plugins analysis"
 issues: []
 discussions: []

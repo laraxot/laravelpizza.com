@@ -4,15 +4,7 @@ type: index
 tags: [notify, docs, integrations]
 module: Notify
 created: 2026-07-20
-<<<<<<< .merge_file_dDbBPz
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_7mKPfm
 qmd: "notify documentazione integrations readme integrazioni index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -151,13 +143,6 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 ---
 
 <!-- Merged from README.md, which collided with this file on case-insensitive filesystems. -->
-<<<<<<< .merge_file_dDbBPz
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_7mKPfm
 
 ---
 title: "Readme"
@@ -171,8 +156,3 @@ discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
 ---
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

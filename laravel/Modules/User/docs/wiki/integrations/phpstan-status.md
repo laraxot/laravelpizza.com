@@ -5,6 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_zlw2A5
 <<<<<<< .merge_file_ygK262
 <<<<<<< .merge_file_B1pIF0
 qmd: "phpstan status user"
@@ -13,6 +14,9 @@ qmd: "phpstan status user"
 =======
 qmd: "phpstan status user"
 >>>>>>> .merge_file_ictRX2
+=======
+qmd: "phpstan status user"
+>>>>>>> .merge_file_t8BDcC
 ---
 
 # PHPStan Status — User Module

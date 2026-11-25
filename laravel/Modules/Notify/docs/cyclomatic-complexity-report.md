@@ -3,21 +3,7 @@ title: "cyclomatic complexity report"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_RsL1vY
-<<<<<<< .merge_file_At1M8T
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_cvOy1i
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_RsL1vY
->>>>>>> .merge_file_fWtTZH
-=======
->>>>>>> .merge_file_cvOy1i
 qmd: "cyclomatic complexity report"
 issues: []
 discussions: []
@@ -28,10 +14,6 @@ discussions: []
 **Generated:** 2025-10-01 19:44:11  
 **Analyzer:** Super Mucca 🐮
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "cyclomatic complexity report"
@@ -54,13 +36,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 📊 Summary Statistics
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🎯 Cyclomatic Complexity Overview
 
 ### What is Cyclomatic Complexity?
@@ -125,14 +102,6 @@ These methods should be considered for refactoring:
 
 ### Priority:
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ---
 
 ## 📚 References

@@ -1,16 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_kskv4N
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_79YL04
 title: "system admin summary 2026 03"
 type: note
 tags: [documentation]
@@ -326,16 +314,6 @@ systemctl is-active apache2 ollama
 **Administrator**: AI Assistant
 
 *This summary is maintained in git. For latest status, check repository.*
-<<<<<<< .merge_file_kskv4N
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_79YL04
->>>>>>> laraxot/dev
 issues: []
 discussions: []
 title: "SYSTEM_ADMIN_SUMMARY_2026-03-13"
@@ -357,15 +335,3 @@ related:
 ---
 
 > Questo file è stato rinominato in [system-admin-summary.md](system-admin-summary.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_kskv4N
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_79YL04
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

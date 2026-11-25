@@ -186,6 +186,16 @@ $this->assertTrue($user->belongsToTeam($team));
 - [TeamUser Model](../app/Models/TeamUser.php)
 - [TeamInvitation Model](../app/Models/TeamInvitation.php)
 - [UserServiceProvider](../app/Providers/UserServiceProvider.php)
+<<<<<<< .merge_file_EwDO7Q
+=======
+- [Critical Errors Documentation](../../<nome progetto>/docs/critical-errors-resolved.md)
+
+---
+
+**Autore**: AI Assistant
+**Data**: Gennaio 2025
+**Versione**: 1.0
+>>>>>>> .merge_file_6em64h
 - [Critical Errors Documentation](../../Quaeris/docs/critical-errors-resolved.md)
 
 ---

@@ -3,21 +3,7 @@ title: "baseuser refactoring completed 2025 10 15"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_14Bi2U
-<<<<<<< .merge_file_am9y8i
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_MTcPvM
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_14Bi2U
->>>>>>> .merge_file_jCX4Gi
-=======
->>>>>>> .merge_file_MTcPvM
 qmd: "baseuser refactoring completed 2025 10 15"
 issues: []
 discussions: []
@@ -394,16 +380,6 @@ Il refactoring di `BaseUser.php` rappresenta un **caso di studio perfetto** di c
 - 🎯 **Bug count** ridotto
 - 🎯 **Technical debt** diminuito
 
-<<<<<<< .merge_file_14Bi2U
-<<<<<<< .merge_file_am9y8i
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_jCX4Gi
-=======
->>>>>>> .merge_file_MTcPvM
 ---
 
 title: "baseuser refactoring completed 2025 10 15"
@@ -425,17 +401,3 @@ discussions: []
 
 *"Prima lo fai funzionare, poi lo fai giusto, poi lo fai veloce."*  
 *Oggi abbiamo fatto tutti e tre!* ✨
-
-<<<<<<< .merge_file_14Bi2U
-<<<<<<< .merge_file_am9y8i
-<<<<<<< HEAD
-=======
-=======
-*"Prima lo fai funzionare, poi lo fai giusto, poi lo fai veloce."*  
-*Oggi abbiamo fatto tutti e tre!* ✨
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_jCX4Gi
-=======
->>>>>>> .merge_file_MTcPvM

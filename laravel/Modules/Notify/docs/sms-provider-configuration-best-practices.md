@@ -3,15 +3,7 @@ title: "sms provider configuration best practices"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_s7y1pU
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_7GS8aZ
 qmd: "sms provider configuration best practices"
 issues: []
 discussions: []
@@ -131,27 +123,15 @@ $token = config('services.netfun.token');
 
 ## Documentazione Correlata
 
-<<<<<<< .merge_file_s7y1pU
-=======
 - [SMS Provider Architecture](./sms-provider-architecture-2.md)
 - [SMS Implementation](./sms-implementation-2.md)
 - [SMS Best Practices](./sms-best-practices-2.md)
 - [Netfun Authentication Methods](./netfun-authentication-methods-2.md)
->>>>>>> .merge_file_7GS8aZ
 - [SMS Provider Architecture](./sms-provider-architecture-2.md)
 - [SMS Implementation](./sms-implementation-2.md)
 - [SMS Best Practices](./sms-best-practices-2.md)
 - [Netfun Authentication Methods](./netfun-authentication-methods-2.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 - [SMS Provider Architecture](./sms-provider-architecture-2.md)
 - [SMS Implementation](./sms-implementation-2.md)
 - [SMS Best Practices](./sms-best-practices-2.md)
 - [Netfun Authentication Methods](./netfun-authentication-methods-2.md)
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

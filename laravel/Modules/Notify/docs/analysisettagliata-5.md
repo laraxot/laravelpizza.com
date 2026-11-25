@@ -3,21 +3,7 @@ title: "analysisettagliata 5"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Nj4odB
-<<<<<<< .merge_file_vpiEq6
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_EfzVPG
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Nj4odB
->>>>>>> .merge_file_Vwqg14
-=======
->>>>>>> .merge_file_EfzVPG
 qmd: "analysisettagliata 5"
 issues: []
 discussions: []

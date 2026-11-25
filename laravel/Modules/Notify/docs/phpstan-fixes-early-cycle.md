@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 ---
 title: "phpstan fixes gennaio"
-=======
 ---title: "phpstan fixes gennaio"
->>>>>>> laraxot/dev
 type: note
 tags: [documentation]
 created: 2026-09-26

@@ -9,10 +9,7 @@ discussions: []
 related:
   - "./send-test-mail-wrong-location.story.md"
 updated: 2026-11-23
-<<<<<<< HEAD
 qmd: "mailtrap sdk bridge study story laravel"
-=======
->>>>>>> laraxot/dev
 ---
 
 # Mailtrap SDK Laravel bridge — studio e integrazione

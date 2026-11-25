@@ -3,21 +3,7 @@ title: "database mail system tests"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_L4mS52
-<<<<<<< .merge_file_H08OFs
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_u95f3f
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_L4mS52
->>>>>>> .merge_file_xhL26T
-=======
->>>>>>> .merge_file_u95f3f
 qmd: "database mail system tests"
 issues: []
 discussions: []

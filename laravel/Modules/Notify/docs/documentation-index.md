@@ -3,35 +3,13 @@ title: "📚 Indice Generale Documentazione - Fixcity"
 type: concept
 tags: [documentation, index]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_PBTpsQ
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_QCqgJf
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_PBTpsQ
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_QCqgJf
 qmd: "documentation-index 📚 indice generale documentazione - ptv"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./00-index.md"
   - "./00-index-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
   - "./00-index.md"
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
@@ -42,15 +20,10 @@ related:
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
-<<<<<<< HEAD
-=======
-=======
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
   - "./00-index-documentation.md"
   - "./absolute-completion-completamento-assoluto.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 status: draft
 ---
@@ -76,32 +49,13 @@ status: draft
 - [README Principale](./README.md) - Panoramica progetto completa
 - [Analisi Super Mucca](./super-mucca-docs-analysis.md) - Report qualità documentazione
 - [Architecture](./architecture-analysis.md) - Analisi architetturale
-<<<<<<< HEAD
-<<<<<<< .merge_file_PBTpsQ
 - [Roadmap](./master-roadmap-historic.md) - Piano sviluppo 2025
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [Roadmap](./master-roadmap-2025.md) - Piano sviluppo 2025
-=======
-<<<<<<< HEAD
 - [Roadmap](./master-roadmap-historic.md) - Piano sviluppo 2025
-=======
 - [Roadmap](./master-roadmap-2025.md) - Piano sviluppo 2025
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 - [Roadmap](./master-roadmap-historic.md) - Piano sviluppo 2025
-=======
 - [Roadmap](./master-roadmap-2025.md) - Piano sviluppo 2025
-=======
-<<<<<<< HEAD
 - [Roadmap](./master-roadmap-historic.md) - Piano sviluppo 2025
-=======
 - [Roadmap](./master-roadmap-2025.md) - Piano sviluppo 2025
->>>>>>> .merge_file_QCqgJf
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ### Guide Rapide
 - [Quick Start](./quick-start.md) - Guida avvio rapido
@@ -114,33 +68,15 @@ status: draft
 
 ### Documentazione Architetturale
 - [Design Patterns](./architecture.md) - Pattern architetturali
-<<<<<<< HEAD
 - [Database Schema](wiki/schema.md) - Schema database
 - [Database Schema](./wiki/schema.md) - Schema database
-=======
-<<<<<<< .merge_file_PBTpsQ
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Database Schema](wiki/schema.md) - Schema database
 - [Database Schema](./wiki/schema.md) - Schema database
-=======
-=======
->>>>>>> .merge_file_QCqgJf
-<<<<<<< .merge_file_xR6oT3
 - [Database Schema](../../Lang/docs/wiki/schema-3.md) - Schema database
-=======
 - [Database Schema](wiki/schema.md) - Schema database
 - [Database Schema](./wiki/schema.md) - Schema database
->>>>>>> .merge_file_U7k6E3
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_PBTpsQ
-=======
 - [Database Schema](wiki/schema.md) - Schema database
 - [Database Schema](./wiki/schema.md) - Schema database
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_QCqgJf
 - [API Documentation](./api/README.md) - Documentazione API
 - [Security](./security/README.md) - Sicurezza e conformità
 
@@ -321,26 +257,8 @@ status: draft
 
 ### Coding Guidelines
 - [PHP Standards](./standards/php.md) - Standard PHP (PSR-12)
-<<<<<<< HEAD
-<<<<<<< .merge_file_PBTpsQ
-<<<<<<< HEAD
 - [Laravel Best Practices](./standards/laravel.md) - Best practices Laravel
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_QCqgJf
-=======
-<<<<<<< .merge_file_xR6oT3
 - [Laravel Best Practices](./standards/laravel.md) - Best practices Laravel
-=======
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_PBTpsQ
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_QCqgJf
 - [Laravel Best Practices](html2pdf/laravel.md) - Best practices Laravel
 - [Environment Setup](./ai-agents/setup.md) - Configurazione ambiente
 - [Docker Setup](./development/docker.md) - Configurazione Docker
@@ -349,55 +267,21 @@ status: draft
 ### Coding Guidelines
 - [PHP Standards](./standards/php.md) - Standard PHP (PSR-12)
 - [Laravel Best Practices](./html2pdf/laravel.md) - Best practices Laravel
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_PBTpsQ
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_U7k6E3
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_U7k6E3
->>>>>>> laraxot/dev
->>>>>>> .merge_file_QCqgJf
 - [Filament Guidelines](./standards/filament.md) - Linee guida Filament
 - [Blade Components](./standards/blade.md) - Componenti Blade
 
 ### Quality Assurance
 - [PHPStan Configuration](./phpstan/README.md) - Analisi statica
-<<<<<<< HEAD
 - [Testing Strategy](strategy.md) - Strategia testing
 - [Testing Strategy](./strategy.md) - Strategia testing
-=======
-<<<<<<< .merge_file_PBTpsQ
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Testing Strategy](strategy.md) - Strategia testing
 - [Testing Strategy](./strategy.md) - Strategia testing
-=======
-=======
->>>>>>> .merge_file_QCqgJf
-<<<<<<< .merge_file_xR6oT3
 - [Testing Strategy](./testing/strategy.md) - Strategia testing
-=======
-- [Testing Strategy](strategy.md) - Strategia testing
-<<<<<<< .merge_file_PBTpsQ
-- [Testing Strategy](./strategy.md) - Strategia testing
->>>>>>> .merge_file_U7k6E3
->>>>>>> laraxot/dev
-=======
 - [Testing Strategy](strategy.md) - Strategia testing
 - [Testing Strategy](./strategy.md) - Strategia testing
->>>>>>> laraxot/dev
-=======
+- [Testing Strategy](strategy.md) - Strategia testing
 - [Testing Strategy](./strategy.md) - Strategia testing
->>>>>>> .merge_file_U7k6E3
->>>>>>> .merge_file_QCqgJf
->>>>>>> laraxot/dev
+- [Testing Strategy](./strategy.md) - Strategia testing
 - [CI/CD Pipeline](./ci-cd/README.md) - Continuous integration
 
 ---
@@ -438,33 +322,15 @@ status: draft
 - [Error Tracking](./monitoring/errors.md) - Tracking errori
 
 ### Analytics
-<<<<<<< HEAD
 - [Usage Analytics](html2pdf/usage.md) - Analisi utilizzo
 - [Usage Analytics](./html2pdf/usage.md) - Analisi utilizzo
-=======
-<<<<<<< .merge_file_PBTpsQ
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Usage Analytics](html2pdf/usage.md) - Analisi utilizzo
 - [Usage Analytics](./html2pdf/usage.md) - Analisi utilizzo
-=======
-=======
->>>>>>> .merge_file_QCqgJf
-<<<<<<< .merge_file_xR6oT3
 - [Usage Analytics](./analytics/usage.md) - Analisi utilizzo
-=======
 - [Usage Analytics](html2pdf/usage.md) - Analisi utilizzo
 - [Usage Analytics](./html2pdf/usage.md) - Analisi utilizzo
->>>>>>> .merge_file_U7k6E3
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_PBTpsQ
-=======
 - [Usage Analytics](html2pdf/usage.md) - Analisi utilizzo
 - [Usage Analytics](./html2pdf/usage.md) - Analisi utilizzo
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_QCqgJf
 - [Business Metrics](./analytics/business.md) - Metriche business
 
 ---
@@ -472,35 +338,16 @@ status: draft
 ## 🔒 Security
 
 ### Security Documentation
-<<<<<<< HEAD
 - [Security Guidelines](ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
 - [Security Guidelines](./ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
-=======
-<<<<<<< .merge_file_PBTpsQ
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Security Guidelines](ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
 - [Security Guidelines](./ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
-=======
-=======
->>>>>>> .merge_file_QCqgJf
-<<<<<<< .merge_file_xR6oT3
 - [Security Guidelines](./security/guidelines.md) - Linee guida sicurezza
-=======
-- [Security Guidelines](ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
-<<<<<<< .merge_file_PBTpsQ
-- [Security Guidelines](./ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
->>>>>>> .merge_file_U7k6E3
->>>>>>> laraxot/dev
-=======
 - [Security Guidelines](ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
 - [Security Guidelines](./ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
->>>>>>> laraxot/dev
-=======
+- [Security Guidelines](ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
 - [Security Guidelines](./ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
->>>>>>> .merge_file_U7k6E3
->>>>>>> .merge_file_QCqgJf
->>>>>>> laraxot/dev
+- [Security Guidelines](./ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
 - [GDPR Compliance](./security/gdpr.md) - Conformità GDPR
 - [Authentication](./security/authentication.md) - Sistema autenticazione
 - [Authorization](./security/authorization.md) - Sistema autorizzazioni

@@ -4,10 +4,7 @@ type: decision
 tags: [notify, console, architecture, regression]
 created: 2026-11-23
 updated: 2026-11-23
-<<<<<<< HEAD
 qmd: "command ownership notify console"
-=======
->>>>>>> laraxot/dev
 ---
 
 # Notify console command ownership

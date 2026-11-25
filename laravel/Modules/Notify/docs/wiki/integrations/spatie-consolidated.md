@@ -7,19 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -63,16 +51,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -324,16 +304,8 @@ Nonostante i potenziali svantaggi, i benefici superano i costi di implementazion
 - [Documentazione Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
 - [Sistema di Template Email](../../email-templates-2.md)
 - [Email per i Dottori](../../doctor-emails-2.md)
-<<<<<<< HEAD
 - [Sistema di Template Email](../../email-templates-2.md)
 - [Email per i Dottori](../../doctor-emails-2.md)
-=======
-<<<<<<< HEAD
-- [Sistema di Template Email](../../email-templates-2.md)
-- [Email per i Dottori](../../doctor-emails-2.md)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Filament Resources](../../../../Activity/docs/filament-resources-3.md)
 - [Sistema di Template Email](../../email-templates.md)
 - [Email per i Dottori](../../doctor-emails.md)
@@ -379,17 +351,6 @@ $this->tableUpdate(
 
 *Consolidated from: `spatie-email-slug-proposal-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Introduzione
 
 Questa proposta analizza l'aggiunta di un parametro `slug` al sistema di template email basato su Spatie, per migliorare l'identificazione e la gestione dei template.
@@ -634,28 +595,8 @@ Nonostante i potenziali svantaggi, i benefici superano i costi di implementazion
 ## Collegamenti Correlati
 
 - [Documentazione Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
-<<<<<<< HEAD
 - [Sistema di Template Email](../../email-templates-2.md)
 - [Email per i Dottori](../../doctor-emails-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [Sistema di Template Email](../../email-templates-2.md)
-- [Email per i Dottori](../../doctor-emails-2.md)
-=======
-<<<<<<< HEAD
-- [Sistema di Template Email](../../email-templates-2.md)
-- [Email per i Dottori](../../doctor-emails-2.md)
-=======
-- [Sistema di Template Email](../../email-templates-2.md)
-- [Email per i Dottori](../../doctor-emails-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- [Sistema di Template Email](../../email-templates-2.md)
-- [Email per i Dottori](../../doctor-emails-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Filament Resources](../../../../Activity/docs/filament-resources-3.md)
 - [Sistema di Template Email](../../email-templates-2.md)
 - [Email per i Dottori](../../doctor-emails-2.md)
@@ -719,16 +660,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -1011,17 +944,6 @@ L'utilizzo di `SpatieEmail` nel sistema permette di gestire in modo flessibile e
 
 *Consolidated from: `spatie-email-usage-guide-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Introduzione
 
 Questa guida illustra come utilizzare la classe `SpatieEmail` per inviare email personalizzate nel sistema, basandosi sul pacchetto `spatie/laravel-database-mail-templates`.
@@ -1029,28 +951,8 @@ Questa guida illustra come utilizzare la classe `SpatieEmail` per inviare email 
 ## Collegamenti correlati
 
 - [README del modulo Notify](./README.md)
-<<<<<<< HEAD
 - [Documentazione Email Templates](../../email-templates-2.md)
 - [Email Specifiche per Dottori](../../doctor-emails-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [Documentazione Email Templates](../../email-templates-2.md)
-- [Email Specifiche per Dottori](../../doctor-emails-2.md)
-=======
-<<<<<<< HEAD
-- [Documentazione Email Templates](../../email-templates-2.md)
-- [Email Specifiche per Dottori](../../doctor-emails-2.md)
-=======
-- [Documentazione Email Templates](../../email-templates-2.md)
-- [Email Specifiche per Dottori](../../doctor-emails-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- [Documentazione Email Templates](../../email-templates-2.md)
-- [Email Specifiche per Dottori](../../doctor-emails-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Implementazione Database Mail](../../database-mail-2.md)
 - [Documentazione Centrale](../../../../docs/collegamenti-documentazione.md)
 - [Modulo Xot](../../../Xot/docs/README.md)
@@ -1320,17 +1222,6 @@ L'utilizzo di `SpatieEmail` nel sistema permette di gestire in modo flessibile e
 
 *Consolidated from: `spatie-email-usage.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Introduzione
 
 Questa guida illustra come utilizzare la classe `SpatieEmail` per inviare email personalizzate nel sistema, basandosi sul pacchetto `spatie/laravel-database-mail-templates`.
@@ -1609,17 +1500,6 @@ L'utilizzo di `SpatieEmail` nel sistema permette di gestire in modo flessibile e
 
 *Consolidated from: `spatie-translatable-integration.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Overview
 
 Il modulo Notify usa il plugin **Lara Zeus Spatie Translatable** per supportare contenuti multilingua nelle risorse Filament.
@@ -1755,27 +1635,9 @@ Nel form di edit/create:
 ### Errore: Plugin Not Registered
 
 **Causa**: Plugin non registrato nel panel  
-<<<<<<< HEAD
-**Soluzione**: Vedere [plugin-spatie-translatable-not-registered.md](../../errori/plugin-spatie-translatable-not-registered.md)
-**Soluzione**: Vedere [plugin-spatie-translatable-not-registered.md](../../errori/plugin-spatie-translatable-not-registered.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-**Soluzione**: Vedere [plugin-spatie-translatable-not-registered.md](../../errori/plugin-spatie-translatable-not-registered.md)
-**Soluzione**: Vedere [plugin-spatie-translatable-not-registered.md](../../errori/plugin-spatie-translatable-not-registered.md)
-=======
-<<<<<<< .merge_file_G9PqFk
 **Soluzione**: Vedere [plugin-spatie-translatable-not-registered.md](./errori/plugin-spatie-translatable-not-registered.md)
-=======
 **Soluzione**: Vedere [plugin-spatie-translatable-not-registered.md](../../errori/plugin-spatie-translatable-not-registered.md)
 **Soluzione**: Vedere [plugin-spatie-translatable-not-registered.md](../../errori/plugin-spatie-translatable-not-registered.md)
->>>>>>> .merge_file_TS0NDO
->>>>>>> laraxot/dev
-=======
-**Soluzione**: Vedere [plugin-spatie-translatable-not-registered.md](../../errori/plugin-spatie-translatable-not-registered.md)
-**Soluzione**: Vedere [plugin-spatie-translatable-not-registered.md](../../errori/plugin-spatie-translatable-not-registered.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ### Errore: Undefined Method `getTranslation()`
 
@@ -1911,36 +1773,12 @@ Schema::table('mail_templates', function (Blueprint $table) {
 **Status**: ✅ PLUGIN REGISTRATO  
 **Compatibilità**: Filament 4.x
 
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ---
 
 ## spatie_email_slug_proposal
 
 *Consolidated from: `spatie-email-slug-proposal-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Introduzione
 
 Questa proposta analizza l'aggiunta di un parametro `slug` al sistema di template email basato su Spatie, per migliorare l'identificazione e la gestione dei template.
@@ -2185,28 +2023,8 @@ Nonostante i potenziali svantaggi, i benefici superano i costi di implementazion
 ## Collegamenti Correlati
 
 - [Documentazione Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
-<<<<<<< HEAD
 - [Sistema di Template Email](../../email-templates-2.md)
 - [Email per i Dottori](../../doctor-emails-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [Sistema di Template Email](../../email-templates-2.md)
-- [Email per i Dottori](../../doctor-emails-2.md)
-=======
-<<<<<<< HEAD
-- [Sistema di Template Email](../../email-templates-2.md)
-- [Email per i Dottori](../../doctor-emails-2.md)
-=======
-- [Sistema di Template Email](../../email-templates-2.md)
-- [Email per i Dottori](../../doctor-emails-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- [Sistema di Template Email](../../email-templates-2.md)
-- [Email per i Dottori](../../doctor-emails-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Filament Resources](../../../../Activity/docs/filament-resources-3.md)
 - [Sistema di Template Email](../../email-templates-2.md)
 - [Email per i Dottori](../../doctor-emails-2.md)
@@ -2251,17 +2069,6 @@ $this->tableUpdate(
 
 *Consolidated from: `spatie-email-usage-guide-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Introduzione
 
 Questa guida illustra come utilizzare la classe `SpatieEmail` per inviare email personalizzate nel sistema, basandosi sul pacchetto `spatie/laravel-database-mail-templates`.
@@ -2269,28 +2076,8 @@ Questa guida illustra come utilizzare la classe `SpatieEmail` per inviare email 
 ## Collegamenti correlati
 
 - [README del modulo Notify](./README.md)
-<<<<<<< HEAD
 - [Documentazione Email Templates](../../email-templates-2.md)
 - [Email Specifiche per Dottori](../../doctor-emails-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [Documentazione Email Templates](../../email-templates-2.md)
-- [Email Specifiche per Dottori](../../doctor-emails-2.md)
-=======
-<<<<<<< HEAD
-- [Documentazione Email Templates](../../email-templates-2.md)
-- [Email Specifiche per Dottori](../../doctor-emails-2.md)
-=======
-- [Documentazione Email Templates](../../email-templates-2.md)
-- [Email Specifiche per Dottori](../../doctor-emails-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- [Documentazione Email Templates](../../email-templates-2.md)
-- [Email Specifiche per Dottori](../../doctor-emails-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Implementazione Database Mail](../../database-mail-2.md)
 - [Documentazione Centrale](../../../../docs/collegamenti-documentazione.md)
 - [Modulo Xot](../../../Xot/docs/README.md)

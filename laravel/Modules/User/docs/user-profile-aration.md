@@ -11,6 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_lbhZ79
 <<<<<<< .merge_file_VZHgdJ
 <<<<<<< .merge_file_jkYVsU
 qmd: "user profile aration"
@@ -19,6 +20,9 @@ qmd: "user profile aration"
 =======
 qmd: "user profile aration"
 >>>>>>> .merge_file_v9CKbe
+=======
+qmd: "user profile aration"
+>>>>>>> .merge_file_CfTMXt
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/user-profile-separation.md

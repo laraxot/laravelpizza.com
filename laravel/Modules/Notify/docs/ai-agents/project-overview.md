@@ -3,21 +3,7 @@ title: "project overview"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Ye1iQY
-<<<<<<< .merge_file_RH3aaZ
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_eZUN2h
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Ye1iQY
->>>>>>> .merge_file_u6Rt2S
-=======
->>>>>>> .merge_file_eZUN2h
 qmd: "project overview"
 issues: []
 discussions: []

@@ -15,10 +15,6 @@ discussions: []
 > **Scope**: Project-wide concepts, entities, and decisions
 > **Updated**: 2026-04-15
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "overview"
@@ -144,8 +140,6 @@ Blog, Activity, Comment, Rating, Notify, Job, Tenant, Gdpr
 
 ### Priorità 3: Active Usage
 
-### Priorità 3: Active Usage
-
 1. Usare la wiki per tutte le query architetturali
 2. Lint settimanale
 3. Ogni nuova feature → aggiorna la wiki del modulo interessato
@@ -185,9 +179,6 @@ LLM: Scans for contradictions, orphans, stale claims → reports findings → ap
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## What is This Wiki?
 ## Architecture
 ### Three-Layer Model
@@ -207,6 +198,4 @@ LLM: Scans for contradictions, orphans, stale claims → reports findings → ap
 ### Lint the Wiki
 ## Related Resources
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 _This overview is synthesized from the wiki's current state and will be updated as knowledge compounds._

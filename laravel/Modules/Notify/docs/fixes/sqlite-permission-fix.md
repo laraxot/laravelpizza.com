@@ -3,31 +3,7 @@ title: "✅ SQLite Database Permission Fix - COMPLETE"
 type: concept
 tags: [sqlite, permission, fix]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_TOY4zP
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_1skETk
-<<<<<<< .merge_file_mM4wZ5
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_HtNryu
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_qgqjjD
-=======
-<<<<<<< .merge_file_1skETk
->>>>>>> .merge_file_k52G0v
-=======
->>>>>>> .merge_file_HtNryu
->>>>>>> laraxot/dev
 qmd: "sqlite-permission-fix ✅ sqlite database permission fix - complete"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -260,30 +236,9 @@ bash bashscripts/fix-permissions.sh
 - [ ] Create bash script for permissions
 - [ ] Add to pre-deployment checklist
 - [ ] Document in AGENTS.md
-<<<<<<< HEAD
-<<<<<<< .merge_file_TOY4zP
-=======
-<<<<<<< .merge_file_1skETk
-<<<<<<< .merge_file_mM4wZ5
->>>>>>> laraxot/dev
-<<<<<<< HEAD
 - [ ] Document in AGENTS.md
-=======
-<<<<<<< HEAD
 - [ ] Document in AGENTS.md
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 - [ ] Document in AGENTS.md
-<<<<<<< HEAD
->>>>>>> .merge_file_qgqjjD
-=======
->>>>>>> .merge_file_k52G0v
-=======
-- [ ] Document in AGENTS.md
->>>>>>> .merge_file_HtNryu
->>>>>>> laraxot/dev
 
 ---
 

@@ -3,25 +3,7 @@ title: "login page status"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_tHEojd
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_pLezEu
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_tHEojd
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_pLezEu
 qmd: "login page status"
 issues: []
 discussions: []
@@ -35,17 +17,6 @@ Questo documento descriveva una pagina di login basata su
 `Themes/Sixteen/resources/views/pages/auth/login.blade.php` e URL
 `http://127.0.0.1:8000/it/auth/login`.
 
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_tHEojd
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_OKKY4Q
->>>>>>> laraxot/dev
-=======
-<<<<<<< .merge_file_OKKY4Q
->>>>>>> .merge_file_pLezEu
 ---
 
 title: "LOGIN PAGE STATUS"
@@ -374,20 +345,6 @@ Password: password
 **Confidence**: 💯 MASSIMA
 
 
-<<<<<<< .merge_file_tHEojd
-<<<<<<< HEAD
-=======
-=======
->>>>>>> .merge_file_NMvlcU
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_NMvlcU
->>>>>>> laraxot/dev
->>>>>>> .merge_file_pLezEu
 **Non e' pertinente a questo repository.** Questo progetto (`base_<nome progetto>_fila5`)
 usa il tema "Zero", non "Sixteen", e la pagina di login reale e' la classe
 nativa Filament `Filament\Auth\Pages\Login` servita dai panel Filament

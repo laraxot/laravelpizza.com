@@ -3,21 +3,7 @@ title: "ralph gsd bmad orchestration"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_fr9QSz
-<<<<<<< .merge_file_0uTDNE
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_99oBGz
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_fr9QSz
->>>>>>> .merge_file_Y8r0II
-=======
->>>>>>> .merge_file_99oBGz
 qmd: "ralph gsd bmad orchestration"
 issues: []
 discussions: []

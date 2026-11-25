@@ -3,15 +3,7 @@ title: "filament v4 upgrade notes"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_d1vYX4
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_jSy6ri
 qmd: "filament v4 upgrade notes"
 issues: []
 discussions: []

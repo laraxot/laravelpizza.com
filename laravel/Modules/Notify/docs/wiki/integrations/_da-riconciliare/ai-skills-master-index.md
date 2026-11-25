@@ -3,35 +3,13 @@ title: "AI Skills Master Index"
 type: concept
 tags: [skills, master, index]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_EXx37l
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_c6OClR
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_EXx37l
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_c6OClR
 qmd: "ai-skills-master-index ai skills master index"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
   - "./00-index.md"
   - "./00-index-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
   - "./00-index.md"
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
@@ -42,16 +20,11 @@ related:
   - "../../../acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
-<<<<<<< HEAD
-=======
-=======
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
   - "../../../00-index-documentation.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "../../../acronym-naming-conventions.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 status: draft
 ---
@@ -173,35 +146,16 @@ Questa documentazione elenca tutte le skill AI installate e configurate per il p
 
 **Usage**: Skills auto-attivano quando l'agente rileva task rilevanti
 
-<<<<<<< HEAD
 **File**: [superpowers/installazione.md](../../../superpowers/installazione.md)
 **File**: [superpowers/installazione.md](../../../superpowers/installazione.md)
-=======
-<<<<<<< .merge_file_EXx37l
-<<<<<<< HEAD
-<<<<<<< HEAD
 **File**: [superpowers/installazione.md](../../../superpowers/installazione.md)
 **File**: [superpowers/installazione.md](../../../superpowers/installazione.md)
-=======
-=======
->>>>>>> .merge_file_c6OClR
-<<<<<<< .merge_file_5nWcT6
 **File**: [superpowers/installazione.md](./superpowers/installazione.md)
-=======
-**File**: [superpowers/installazione.md](../../../superpowers/installazione.md)
-<<<<<<< .merge_file_EXx37l
-**File**: [superpowers/installazione.md](../../../superpowers/installazione.md)
->>>>>>> .merge_file_hB3BZH
->>>>>>> laraxot/dev
-=======
 **File**: [superpowers/installazione.md](../../../superpowers/installazione.md)
 **File**: [superpowers/installazione.md](../../../superpowers/installazione.md)
->>>>>>> laraxot/dev
-=======
 **File**: [superpowers/installazione.md](../../../superpowers/installazione.md)
->>>>>>> .merge_file_hB3BZH
->>>>>>> .merge_file_c6OClR
->>>>>>> laraxot/dev
+**File**: [superpowers/installazione.md](../../../superpowers/installazione.md)
+**File**: [superpowers/installazione.md](../../../superpowers/installazione.md)
 
 ---
 

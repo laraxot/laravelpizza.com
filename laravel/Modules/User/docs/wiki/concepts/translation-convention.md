@@ -1,17 +1,23 @@
+<<<<<<< .merge_file_bMHf0E
 <<<<<<< .merge_file_sNAXD7
 <<<<<<< .merge_file_Lnk62d
 =======
 >>>>>>> .merge_file_zhw04S
+=======
+>>>>>>> .merge_file_X7SWdG
 ---
 title: "Translation Convention - User Module"
 type: concept
 qmd: "translation convention user"
 ---
+<<<<<<< .merge_file_bMHf0E
 <<<<<<< .merge_file_sNAXD7
 =======
 >>>>>>> .merge_file_V0udny
 =======
 >>>>>>> .merge_file_zhw04S
+=======
+>>>>>>> .merge_file_X7SWdG
 # Translation Convention - User Module
 
 ## Regola

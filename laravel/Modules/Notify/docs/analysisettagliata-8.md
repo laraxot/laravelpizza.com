@@ -3,21 +3,7 @@ title: "analysisettagliata 8"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ZUmii4
-<<<<<<< .merge_file_PjZb0O
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_KixiDg
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ZUmii4
->>>>>>> .merge_file_LHiVaX
-=======
->>>>>>> .merge_file_KixiDg
 qmd: "analysisettagliata 8"
 issues: []
 discussions: []

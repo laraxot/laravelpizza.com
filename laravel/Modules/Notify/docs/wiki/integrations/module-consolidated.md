@@ -30,14 +30,6 @@ Consolidated from **6** individual files.
 
 *Consolidated from: `module-analysis-complete.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 📊 Panoramica Generale
 
 Il modulo Notify è il sistema di gestione notifiche e comunicazioni riutilizzabile per progetti Laraxot, fornendo modelli e funzionalità per la gestione di template email, notifiche, contatti e temi di notifica. Questo documento fornisce un'analisi completa dello stato attuale di factory, seeder e test, con focus sulla business logic.
@@ -305,14 +297,6 @@ Il modulo Notify è il sistema di gestione notifiche e comunicazioni riutilizzab
 
 *Consolidated from: `module-analysis-3.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Module Overview
 **Module Name**: Notify
 **Type**: Notification & Communication Module
@@ -428,16 +412,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -909,28 +885,12 @@ Main content here.
 
 *Consolidated from: `module-notify-root-symlink.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ---
 
 ## module-notify
 
 *Consolidated from: `module-notify.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Informazioni Generali
 - **Nome**: `laraxot/module_notify_fila5`
 - **Descrizione**: Modulo dedicato alla gestione delle notifiche
@@ -1049,14 +1009,6 @@ Le modifiche vengono tracciate nel repository GitHub.
 * [module_notify.md](docs/module_notify.md)
 * [module_notify.md](../../../notify/docs/module_notify.md)
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ### Versione Incoming
 
 Le modifiche vengono tracciate nel repository GitHub.
@@ -1067,14 +1019,6 @@ Le modifiche vengono tracciate nel repository GitHub.
 
 *Consolidated from: `module.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Module Overview
 **Module Name**: Notify
 **Type**: Notification & Communication Module

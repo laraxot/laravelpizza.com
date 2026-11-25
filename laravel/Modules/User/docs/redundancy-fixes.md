@@ -11,6 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_lDvsiZ
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/redundancy-fixes-january.md
@@ -146,6 +147,10 @@ qmd: "redundancy fixes"
 
 See canonical documentation: ../../../Themes/docs/shared-components/redundancy-fixes-january.md
 =======
+=======
+qmd: "redundancy fixes"
+status: draft
+>>>>>>> .merge_file_bXXTdp
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/redundancy-fixes-january.md
@@ -276,8 +281,11 @@ Prima di committare, verifica:
 - [XotBaseRelationManager Documentation](../../Xot/docs/filament/relation-managers.md)
 
 *Ultimo aggiornamento: Gennaio 2026*
+<<<<<<< .merge_file_lDvsiZ
 qmd: "redundancy fixes"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/redundancy-fixes-january.md
 =======
+=======
+>>>>>>> .merge_file_bXXTdp

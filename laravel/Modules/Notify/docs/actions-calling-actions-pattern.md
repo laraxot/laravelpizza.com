@@ -3,21 +3,7 @@ title: "actions calling actions pattern"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_uapWQm
-<<<<<<< .merge_file_BATwRA
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_xNyAev
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_uapWQm
->>>>>>> .merge_file_rkORjr
-=======
->>>>>>> .merge_file_xNyAev
 qmd: "actions calling actions pattern"
 issues: []
 discussions: []
@@ -238,10 +224,6 @@ Prima di aggiungere dependency injection nel costruttore per chiamare altre Acti
 - [Queueable Actions Pattern](../Geo/docs/architectural-philosophy.md#action-architecture-pattern)
 - [Action Execution Pattern](../../Xot/docs/action-execution-pattern.md)
 - [Spatie QueueableAction Documentation](../../../../docs/patterns/queueable-actions.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -256,8 +238,3 @@ discussions: []
 **Filosofia**: "La semplicità è la massima sofisticazione" - Leonardo da Vinci  
 **Principio**: KISS > DI quando non necessaria  
 **Pattern**: `app(Action::class)->execute()` dentro `execute()`
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

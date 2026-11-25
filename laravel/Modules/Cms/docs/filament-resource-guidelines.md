@@ -145,36 +145,15 @@ All Cms resources must be tested to ensure:
 
 ### Related Documentation
 
-<<<<<<< HEAD
 - [XotBaseResource Documentation](../../Xot/docs/filament/resources/xot-base-resource.md)
 - [LangBaseResource Documentation](../../Lang/docs/filament/lang-base-resource.md)
 - [Multilingual Best Practices](../../User/docs/translation-best-practices-2.md)
 - [Filament Resource Guidelines](../../Xot/docs/filament-resource-rules.md)
-<<<<<<< .merge_file_PATmie
-<<<<<<< .merge_file_8NyQzG
-<<<<<<< .merge_file_e3YR4k
-=======
-=======
->>>>>>> .merge_file_P6jtgR
-=======
->>>>>>> .merge_file_nsn8ez
-=======
-<<<<<<< HEAD
 - [XotBaseResource Documentation](../../xot/docs/filament/resources/xot-base-resource.md)
 - [LangBaseResource Documentation](../../lang/docs/filament/lang-base-resource.md)
 - [Multilingual Best Practices](../../User/docs/translation-best-practices-2.md)
 - [Filament Resource Guidelines](../../xot/docs/filament-resource-rules.md)
-=======
 - [XotBaseResource Documentation](../../Xot/docs/filament/resources/xot-base-resource.md)
 - [LangBaseResource Documentation](../../Lang/docs/filament/lang-base-resource.md)
 - [Multilingual Best Practices](../../User/docs/translation-best-practices-2.md)
 - [Filament Resource Guidelines](../../Xot/docs/filament-resource-rules.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_PATmie
-<<<<<<< .merge_file_8NyQzG
->>>>>>> .merge_file_FUuwpK
-=======
->>>>>>> .merge_file_P6jtgR
-=======
->>>>>>> .merge_file_nsn8ez

@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 ---
 title: "Best Practices Implementazione"
 type: note
 qmd: "best practices implementazione"
 ---
-=======
->>>>>>> laraxot/dev
 # Best Practices Implementazione
 
 ## Template Email

@@ -458,9 +458,6 @@ return [
 **Versione**: 1.0.0
 
 
-
-
-
 ---
 
 ## widget-rendering-analysis-4
@@ -890,9 +887,6 @@ return [
 **Autore**: Super Mucca Documentation Team  
 **Status**: ✅ Validato e Testato  
 **Versione**: 1.0.0
-
-
-
 
 
 ---
@@ -1326,9 +1320,6 @@ return [
 **Versione**: 1.0.0
 
 
-
-
-
 ---
 
 ## widget-rendering-analysis
@@ -1758,9 +1749,6 @@ return [
 **Autore**: Super Mucca Documentation Team  
 **Status**: ✅ Validato e Testato  
 **Versione**: 1.0.0
-
-
-
 
 
 ---
@@ -2194,9 +2182,6 @@ return [
 **Versione**: 1.0.0
 
 
-
-
-
 ---
 
 ## widget-translation-rules-3
@@ -2432,6 +2417,10 @@ protected static string $view = 'user::widgets.edit-user';
 - [User Module Widget Structure](../modules/user/docs/widgets-structure-2.md)
 - [EditUserWidget Documentation](../modules/user/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../modules/user/docs/widgets/translation-guidelines.md)
+<<<<<<< .merge_file_O8sBiC
+=======
+- [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
+>>>>>>> .merge_file_HjE2ju
 - [Filament Widget Conventions](../../best-practices/filament-widgets.md)
 ## Memory Integration
 This document serves as a reference for:
@@ -3053,9 +3042,6 @@ return [
 **Versione**: 1.0.0
 
 
-
-
-
 ---
 
 ## widget_translation_rules
@@ -3301,6 +3287,10 @@ Documentazione per widgets_structure nel modulo User.
 ## Collegamenti
 
 - [Modulo Principale](../README.md)
+<<<<<<< .merge_file_O8sBiC
+=======
+- [Modulo Principale](../readme.md)
+>>>>>>> .merge_file_HjE2ju
 
 
 ---

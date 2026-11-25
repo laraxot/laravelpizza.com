@@ -11,6 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_INdbRh
 <<<<<<< .merge_file_m0Dh6c
 <<<<<<< .merge_file_M9B2Yy
 qmd: "windsurf rules regola migrazioni xotbasemigration"
@@ -19,6 +20,9 @@ qmd: "windsurf rules regola migrazioni xotbasemigration"
 =======
 qmd: "windsurf rules regola migrazioni xotbasemigration"
 >>>>>>> .merge_file_UusVie
+=======
+qmd: "windsurf rules regola migrazioni xotbasemigration"
+>>>>>>> .merge_file_rdc7Zu
 ---
 # Regola Windsurf: Migrazioni XotBaseMigration
 

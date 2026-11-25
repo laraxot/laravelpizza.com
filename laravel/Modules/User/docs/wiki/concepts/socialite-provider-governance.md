@@ -13,6 +13,7 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
+<<<<<<< .merge_file_YkYq6Q
 <<<<<<< .merge_file_qFICtQ
 <<<<<<< .merge_file_Q0APmA
 qmd: "socialite provider governance"
@@ -21,6 +22,9 @@ qmd: "socialite provider governance"
 =======
 qmd: "socialite provider governance"
 >>>>>>> .merge_file_wM0EX6
+=======
+qmd: "socialite provider governance"
+>>>>>>> .merge_file_ivAyPQ
 ---
 
 # socialite provider governance

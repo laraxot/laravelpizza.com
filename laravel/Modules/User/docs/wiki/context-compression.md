@@ -8,22 +8,23 @@ qmd: "context-compression context compression - user module"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
+<<<<<<< .merge_file_nQVLjy
 <<<<<<< .merge_file_EFdhUG
 <<<<<<< HEAD
-  - "./agents-2.md"
 =======
-<<<<<<< HEAD
+>>>>>>> .merge_file_WgpPlj
+  - "./agents-2.md"
   - "./agents.md"
-<<<<<<< .merge_file_IDVNpX
-=======
-=======
   - "./agents-2.md"
+<<<<<<< .merge_file_nQVLjy
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_yxbhDZ
 =======
   - "./agents.md"
 >>>>>>> .merge_file_iuk5ny
+=======
+>>>>>>> .merge_file_WgpPlj
   - "./architecture.md"
   - "./auth-patterns.md"
   - "./bmad-method.md"

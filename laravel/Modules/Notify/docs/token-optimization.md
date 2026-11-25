@@ -3,15 +3,7 @@ title: "token optimization"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_6gJ4YW
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_za0F8W
 qmd: "token optimization"
 issues: []
 discussions: []
@@ -25,10 +17,6 @@ discussions: []
 
 **Per regole attive e complete**: Leggi [docs/token-efficiency-religion.md](./token-efficiency-religion.md)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "token optimization"
@@ -99,10 +87,6 @@ Mantenere ≤ 2,000 token (≈ 1,500 parole). Il file root `CLAUDE.md` attuale �
 - [Sitepoint — Claude API Token Optimization](https://www.sitepoint.com/claude-api-token-optimization/)
 - [Reddit — Practical Guide (Pochi)](https://www.reddit.com/r/AI_Agents/comments/1remock/wrote_a_practical_guide_on_reducing_token_usage/)
 - [LogRocket — 10 Ways to Cut Token Usage](https://blog.logrocket.com/stop-wasting-ai-tokens-10-ways-to-reduce-usage/)
-<<<<<<< .merge_file_6gJ4YW
-<<<<<<< HEAD
-=======
-=======
 ## Ricerca effettuata: Aprile 2026
 ## Tecniche e risparmio atteso
 ## Regole di sessione per questo progetto
@@ -111,7 +95,3 @@ Mantenere ≤ 2,000 token (≈ 1,500 parole). Il file root `CLAUDE.md` attuale �
 ### File pesanti da NON leggere intero
 ## Strategia CLAUDE.md/qwen.md ottimale
 ## Fonti
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_za0F8W

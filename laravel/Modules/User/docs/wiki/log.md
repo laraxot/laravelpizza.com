@@ -9,22 +9,23 @@ qmd: "user module wiki log phpstan no comment dependency"
 issues:
 discussions:
 related:
+<<<<<<< .merge_file_q9z1CI
 <<<<<<< .merge_file_faCy52
 <<<<<<< HEAD
-  - "./agents-2.md"
 =======
-<<<<<<< HEAD
+>>>>>>> .merge_file_xSO5v0
+  - "./agents-2.md"
   - "./agents.md"
-<<<<<<< .merge_file_2RBtzJ
-=======
-=======
   - "./agents-2.md"
+<<<<<<< .merge_file_q9z1CI
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_VNy3bD
 =======
   - "./agents.md"
 >>>>>>> .merge_file_fwPJ4J
+=======
+>>>>>>> .merge_file_xSO5v0
   - "./architecture.md"
   - "./auth-patterns.md"
   - "./bmad-method.md"
@@ -147,6 +148,10 @@ related:
 - Struttura wiki/log.md inizializzata.
 - Layer raw: tutti i file in `docs/` (eccetto `wiki/`).
 - Layer wiki: `docs/wiki/` — LLM-maintained, sintesi ad alto riuso.
+<<<<<<< .merge_file_q9z1CI
+=======
+- Schema: `docs/.schema/WIKI_SCHEMA.md`
+>>>>>>> .merge_file_xSO5v0
 - Schema: `docs/.schema/wiki_schema.md`
 - Adozione moduli: `docs/project/llm-wiki-module-adoption.md`
 

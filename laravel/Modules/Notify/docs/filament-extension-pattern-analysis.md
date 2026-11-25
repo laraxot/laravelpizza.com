@@ -3,21 +3,7 @@ title: "filament extension pattern analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_T63lot
-<<<<<<< .merge_file_g6tVsp
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_UZGjFY
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_T63lot
->>>>>>> .merge_file_2Ne9UA
-=======
->>>>>>> .merge_file_UZGjFY
 qmd: "filament extension pattern analysis"
 issues: []
 discussions: []

@@ -3,21 +3,7 @@ title: "🤖 AI Agent Rules - CRITICAL UPDATE"
 type: rule
 tags: [rules, critical]
 created: 2026-07-14
-<<<<<<< .merge_file_tFkTL6
-<<<<<<< .merge_file_BYpQSk
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_qukJR7
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_tFkTL6
->>>>>>> .merge_file_9T3fc7
-=======
->>>>>>> .merge_file_qukJR7
 qmd: "ai-rules-critical 🤖 ai agent rules - critical update"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -26,26 +12,14 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_tFkTL6
-<<<<<<< .merge_file_BYpQSk
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_9T3fc7
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_qukJR7
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

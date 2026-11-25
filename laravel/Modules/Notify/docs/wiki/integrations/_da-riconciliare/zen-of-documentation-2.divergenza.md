@@ -7,23 +7,7 @@ module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_Q0GrTl
-=======
-<<<<<<< .merge_file_VzNsvX
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_4EjRpE
-=======
->>>>>>> .merge_file_ODgzJN
->>>>>>> laraxot/dev
 ---
 
 # Divergenza: `ZEN_OF_DOCUMENTATION.md`

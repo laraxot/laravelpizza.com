@@ -1,46 +1,12 @@
 ---
-<<<<<<< HEAD
-<<<<<<< .merge_file_SyZZEB
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_WLWjL9
 issues: []
 discussions: []
 title: "super-admin-setup-fix-2025-10-15"
 type: concept
-tags: [deprecated]
+tags: [deprecated, documentation]
 created: 2026-07-14
-<<<<<<< HEAD
 updated: 2026-11-23
 qmd: "super-admin-setup-fix-2025-10-15 deprecated"
-=======
-updated: 2026-07-14
-qmd: "super-admin-setup-fix-2025-10-15 deprecated"
-=======
-<<<<<<< .merge_file_SyZZEB
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_WLWjL9
-title: "super admin setup fix 2025 10"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-11-23
-qmd: "super admin setup fix 2025 10"
-issues: []
-discussions: []
-<<<<<<< .merge_file_SyZZEB
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_WLWjL9
->>>>>>> laraxot/dev
 status: deprecated
 related:
   - "./00-index-1.md"
@@ -49,18 +15,6 @@ related:
   - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_SyZZEB
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_WLWjL9
   - "./action-plan-immediate.md"
 ---
 
@@ -524,30 +478,8 @@ Il setup del super-admin è un passaggio critico per iniziare a utilizzare l'app
 > **"Automatizza ciò che ripeti"**  
 > Script di setup per velocizzare il processo
 
-<<<<<<< .merge_file_SyZZEB
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_WLWjL9
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
 
 > Questo file è stato rinominato in [super-admin-setup-fix.md](super-admin-setup-fix.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_SyZZEB
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_WLWjL9
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

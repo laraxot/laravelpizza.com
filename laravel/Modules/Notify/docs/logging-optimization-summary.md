@@ -1,46 +1,12 @@
 ---
-<<<<<<< HEAD
-<<<<<<< .merge_file_rdPgdH
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_HnuFwn
 issues: []
 discussions: []
 title: "LOGGING_OPTIMIZATION_SUMMARY_2026-03-02"
 type: concept
-tags: [deprecated]
+tags: [deprecated, documentation]
 created: 2026-07-14
-<<<<<<< HEAD
 updated: 2026-11-23
 qmd: "logging_optimization_summary_2026-03-02 deprecated"
-=======
-updated: 2026-07-14
-qmd: "logging_optimization_summary_2026-03-02 deprecated"
-=======
-<<<<<<< .merge_file_rdPgdH
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_HnuFwn
-title: "logging optimization summary 2026 03"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-11-23
-qmd: "logging optimization summary 2026 03"
-issues: []
-discussions: []
-<<<<<<< .merge_file_rdPgdH
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_HnuFwn
->>>>>>> laraxot/dev
 status: deprecated
 related:
   - "./00-index-1.md"
@@ -49,18 +15,6 @@ related:
   - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_rdPgdH
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_HnuFwn
   - "./action-plan-immediate.md"
 ---
 
@@ -556,30 +510,8 @@ This session successfully:
 **Status**: READY FOR IMPLEMENTATION
 **Priority**: HIGH
 **Estimated Impact**: 20% performance improvement
-<<<<<<< .merge_file_rdPgdH
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_HnuFwn
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
 
 > Questo file è stato rinominato in [logging-optimization-summary.md](logging-optimization-summary.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_rdPgdH
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_HnuFwn
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

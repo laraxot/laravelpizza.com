@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 ---
 title: "Task: Cleanup Notify Docs"
 type: note
 qmd: "cleanup notify task"
 ---
-=======
->>>>>>> laraxot/dev
 # Task: Cleanup Notify Docs
 
 ## 📋 Obiettivo

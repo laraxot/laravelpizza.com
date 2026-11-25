@@ -3,21 +3,7 @@ title: "filament page naming convention"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ip3kSZ
-<<<<<<< .merge_file_2TxbJd
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_ZwT7L0
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ip3kSZ
->>>>>>> .merge_file_3oGJUC
-=======
->>>>>>> .merge_file_ZwT7L0
 qmd: "filament page naming convention"
 issues: []
 discussions: []

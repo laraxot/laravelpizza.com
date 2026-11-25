@@ -3,21 +3,7 @@ title: "tenant config"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_x8khiL
-<<<<<<< .merge_file_8oRmEA
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_bP1CTq
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_x8khiL
->>>>>>> .merge_file_VKL7nA
-=======
->>>>>>> .merge_file_bP1CTq
 qmd: "tenant config"
 issues: []
 discussions: []

@@ -3,25 +3,7 @@ title: "unified ai workflow"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_gOk1xQ
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_CGtOvL
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_gOk1xQ
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_CGtOvL
 qmd: "unified ai workflow"
 issues: []
 discussions: []
@@ -599,40 +581,20 @@ cat .ralph/iteration-log.md
 - [OpenViking Integration](./openviking-integration.md)
 - [BMAD-GSD-Ralph Integration](./bmad-gsd-ralph-integration.md)
 - [BMAD Workflow](laravel/Modules/Xot/docs/bmad-workflow-guide.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_gOk1xQ
 - [AGENTS.md](../agents.md)
 - [agents.md](../agents.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [AGENTS.md](../AGENTS.md)
-- [AGENTS.md](../AGENTS.md)
-=======
-<<<<<<< HEAD
 - [AGENTS.md](../agents.md)
 - [agents.md](../agents.md)
-=======
 - [AGENTS.md](../AGENTS.md)
 - [AGENTS.md](../AGENTS.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 - [AGENTS.md](../agents.md)
 - [agents.md](../agents.md)
-=======
 - [AGENTS.md](../AGENTS.md)
 - [AGENTS.md](../AGENTS.md)
-=======
-<<<<<<< HEAD
 - [AGENTS.md](../agents.md)
 - [agents.md](../agents.md)
-=======
 - [AGENTS.md](../AGENTS.md)
 - [AGENTS.md](../AGENTS.md)
->>>>>>> .merge_file_CGtOvL
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ### Scripts
 - OpenViking Init: `bashscripts/ai/openviking-init.sh`
@@ -697,10 +659,6 @@ After each feature, ask:
 5. ✅ What can be improved next time?
 
 Document answers in retrospectives and store in OpenViking.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -716,8 +674,3 @@ discussions: []
 **Last Updated**: 2026-03-30  
 **Status**: Initial Implementation  
 **Next Review**: After first feature using complete workflow
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

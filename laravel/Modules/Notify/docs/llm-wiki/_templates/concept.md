@@ -6,30 +6,8 @@ title: "Untitled Concept"
 type: concept
 sources: ["raw/articles/source-filename.md"]
 confidence: medium
-<<<<<<< HEAD
 created: "{{date}}"
-updated: 2026-11-23
-=======
-created: {{date}}
-<<<<<<< HEAD
 updated: {{date}}
-=======
-<<<<<<< .merge_file_hHD9hd
-<<<<<<< HEAD
-<<<<<<< HEAD
-updated: {{date}}
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_f4RA6f
->>>>>>> laraxot/dev
 tags: [tag1, tag2]
 related: []
 ---

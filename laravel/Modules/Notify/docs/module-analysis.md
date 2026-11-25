@@ -3,15 +3,7 @@ title: "module analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_2D5Ghj
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_GqM18s
 qmd: "module analysis"
 issues: []
 discussions: []

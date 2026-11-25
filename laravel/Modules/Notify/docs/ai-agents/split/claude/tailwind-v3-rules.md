@@ -3,21 +3,7 @@ title: "tailwind v3 rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_7dR33n
-<<<<<<< .merge_file_9dlEJx
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_UpMApq
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_7dR33n
->>>>>>> .merge_file_9OgmUX
-=======
->>>>>>> .merge_file_UpMApq
 qmd: "tailwind v3 rules"
 issues: []
 discussions: []
@@ -28,11 +14,6 @@ discussions: []
 ## Tailwind 3
 
 - Always use Tailwind CSS v3 - verify you're using only classes supported by this version.
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 
 ---
@@ -53,9 +34,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

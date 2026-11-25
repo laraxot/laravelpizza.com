@@ -37,7 +37,6 @@ Actions Spatie Queueable e Filament XotBase.
 | Tables | Colonne complete + IDColumn; no filtri Restaurant |
 | Adapter | `UserContract` (non `User` relativo al namespace Adapter) |
 
-<<<<<<< HEAD
 ## Seconda ondata: test Pest con marker annidati
 
 Il sync dei moduli condivisi (`bashscripts/git/subtrees/merge_remote_repo_2.sh`) ha rimesso marker
@@ -71,8 +70,3 @@ non dipende dalla risoluzione dei conflitti. Non si risolve con `RefreshDatabase
 
 - Story: [phpstan-conflict-markers-bootstrap](./bmad/stories/phpstan-conflict-markers-bootstrap.story.md)
 - Story: [01.activity-sync-marker-repair](./stories/01.activity-sync-marker-repair.story.md)
-=======
-## Backlink
-
-- Story: [phpstan-conflict-markers-bootstrap](./bmad/stories/phpstan-conflict-markers-bootstrap.story.md)
->>>>>>> laraxot/dev

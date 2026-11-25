@@ -3,21 +3,7 @@ title: "volt rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Gg9KH2
-<<<<<<< .merge_file_sZN7TH
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_JFfYym
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Gg9KH2
->>>>>>> .merge_file_ycI5So
-=======
->>>>>>> .merge_file_JFfYym
 qmd: "volt rules"
 issues: []
 discussions: []
@@ -32,10 +18,6 @@ discussions: []
 - IMPORTANT: Always use `search-docs` tool for version-specific Volt documentation and updated code examples.
 - IMPORTANT: Activate `volt-development` every time you're working with a Volt or single-file component-related task.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -55,9 +37,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../wiki/integrations/_da-riconciliare/gemini-2.md](../../../wiki/integrations/_da-riconciliare/gemini-2.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

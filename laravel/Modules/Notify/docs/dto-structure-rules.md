@@ -3,21 +3,7 @@ title: "dto structure rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_uzsOWW
-<<<<<<< .merge_file_bT7MdP
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_nOWavw
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_uzsOWW
->>>>>>> .merge_file_Fy81Dr
-=======
->>>>>>> .merge_file_nOWavw
 qmd: "dto structure rules"
 issues: []
 discussions: []

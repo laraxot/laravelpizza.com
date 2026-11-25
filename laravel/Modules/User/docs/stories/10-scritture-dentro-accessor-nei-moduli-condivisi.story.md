@@ -7,7 +7,13 @@ created: 2026-11-10
 module: User
 related:
   - "../../../Quaeris/docs/stories/token-failure-silently-breaks-invite-chain.story.md"
+<<<<<<< .merge_file_LsyrZi
 tags: [bmad, eloquent, performance, moduli-condivisi]
+=======
+  - "../../../Quaeris/docs/stories/2026-11-05-token-failure-silently-breaks-invite-chain.story.md"
+tags: [bmad, eloquent, performance, moduli-condivisi]
+qmd: "10 scritture dentro accessor nei moduli"
+>>>>>>> .merge_file_HRQPX5
 ---
 
 # Sei accessor nei moduli condivisi scrivono a database quando vengono letti

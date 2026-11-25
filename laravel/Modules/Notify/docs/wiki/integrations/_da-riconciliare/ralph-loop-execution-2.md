@@ -7,23 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_qu9Cjz
-=======
-<<<<<<< .merge_file_BvGQxz
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_Lg64wb
-=======
->>>>>>> .merge_file_ZsTJiA
->>>>>>> laraxot/dev
 ---
 
 # 🚀 Ralph Loop Execution Log - Homepage Bootstrap Italia Fix

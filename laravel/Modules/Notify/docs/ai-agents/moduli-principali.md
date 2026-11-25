@@ -3,21 +3,7 @@ title: "moduli principali"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ZebHM7
-<<<<<<< .merge_file_W57tH8
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_2BwSlJ
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ZebHM7
->>>>>>> .merge_file_mDpgvD
-=======
->>>>>>> .merge_file_2BwSlJ
 qmd: "moduli principali"
 issues: []
 discussions: []

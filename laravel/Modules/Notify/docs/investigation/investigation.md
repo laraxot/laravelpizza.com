@@ -1,16 +1,10 @@
 ---
 type: investigation
 title: "Investigation Email Deliverability"
-<<<<<<< HEAD
 links: {github_issue: "#XXX"}
 created: 2026-11-23
 updated: 2026-11-23
 qmd: "investigation email deliverability"
-=======
-links: {github_issue: #XXX}
-created: 2026-11-23
-updated: 2026-11-23
->>>>>>> laraxot/dev
 ---
 # Investigation: Email Deliverability
 

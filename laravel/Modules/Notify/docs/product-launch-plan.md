@@ -7,23 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_mlzSt5
-=======
-<<<<<<< .merge_file_MwFyGt
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_CJZwX8
-=======
->>>>>>> .merge_file_7H7eyt
->>>>>>> laraxot/dev
 ---
 
 # Notify - Product Launch Plan

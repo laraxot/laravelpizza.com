@@ -7,23 +7,7 @@ module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_ES556R
-=======
-<<<<<<< .merge_file_w739Px
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_3LOkyU
-=======
->>>>>>> .merge_file_76AP6e
->>>>>>> laraxot/dev
 ---
 
 # Divergenza: `QUICK_START.md`

@@ -11,6 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_dXxbGT
 <<<<<<< .merge_file_nMap5s
 <<<<<<< .merge_file_f0YG3W
 qmd: "translations"
@@ -19,6 +20,9 @@ qmd: "translations"
 =======
 qmd: "translations"
 >>>>>>> .merge_file_SSGtQD
+=======
+qmd: "translations"
+>>>>>>> .merge_file_2PHuNn
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/translations.md

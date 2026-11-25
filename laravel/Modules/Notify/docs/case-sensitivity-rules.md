@@ -3,21 +3,7 @@ title: "case sensitivity rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ihh44v
-<<<<<<< .merge_file_wIMYPH
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_QffyIT
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ihh44v
->>>>>>> .merge_file_yiW6oB
-=======
->>>>>>> .merge_file_QffyIT
 qmd: "case sensitivity rules"
 issues: []
 discussions: []

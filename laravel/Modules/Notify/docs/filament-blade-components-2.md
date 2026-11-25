@@ -3,31 +3,7 @@ title: "filament blade components"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_cn5d0M
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_ZNyQcF
-<<<<<<< .merge_file_EJgDlJ
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_0u5o9I
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_gGz9Kn
-=======
-<<<<<<< .merge_file_ZNyQcF
->>>>>>> .merge_file_aVUeSQ
-=======
->>>>>>> .merge_file_0u5o9I
->>>>>>> laraxot/dev
 qmd: "filament blade components"
 issues: []
 discussions: []

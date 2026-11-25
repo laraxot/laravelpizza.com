@@ -3,15 +3,7 @@ title: "phase 1 execution dashboard"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_dFCHJk
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_m2fGPD
 qmd: "phase 1 execution dashboard"
 issues: []
 discussions: []
@@ -25,10 +17,6 @@ discussions: []
 **Mode**: BMAD Researcher (Option C)  
 **Scope**: segnalazioni-elenco → 90% HTML Parity
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "phase 1 execution dashboard"
@@ -52,13 +40,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🚨 CURRENT STATUS
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 👥 TEAM ASSIGNMENTS & NEXT STEPS
 
 ### 🔴 Executor Agent #1 - NOW WORKING
@@ -340,19 +323,9 @@ Phase 2 planning can begin
 - [ ] PHASE-1-COMPLETION-REPORT.md created
 - [ ] Metrics documented
 - [ ] Lessons learned captured
-<<<<<<< .merge_file_dFCHJk
-=======
 - [ ] 00-index.md updated
->>>>>>> .merge_file_m2fGPD
 - [ ] 00-index.md updated
-<<<<<<< HEAD
 - [ ] 00-index.md updated
-=======
-<<<<<<< HEAD
-- [ ] 00-index.md updated
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [ ] Phase 2 strategy outlined
 
 ---
@@ -392,19 +365,9 @@ Phase 2 planning can begin
 - EXECUTOR-2-SUBTASKS-3-4.md (for Executor #2)
 
 **Tools** (5-10 min read):
-<<<<<<< .merge_file_dFCHJk
-=======
 - bashscripts/docs/html/index.md (comparison tools)
->>>>>>> .merge_file_m2fGPD
 - bashscripts/docs/html/index.md (comparison tools)
-<<<<<<< HEAD
 - bashscripts/docs/html/index.md (comparison tools)
-=======
-<<<<<<< HEAD
-- bashscripts/docs/html/index.md (comparison tools)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ---
 

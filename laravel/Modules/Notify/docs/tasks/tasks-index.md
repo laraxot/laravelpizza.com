@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 ---
 title: "Indice task - Modulo Notify"
 type: note
 qmd: "tasks indice task notify"
 ---
-=======
->>>>>>> laraxot/dev
 # Indice task - Modulo Notify
 
 Lista dei task del modulo con link ai file .md separati. Ogni task è un file nella cartella `tasks/`. Dettagli dalla [roadmap](../roadmap.md).

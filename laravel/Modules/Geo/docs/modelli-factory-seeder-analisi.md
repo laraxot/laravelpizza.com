@@ -185,41 +185,12 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 
 ### Documentazione Correlata
 - [Geo JSON Model](./geo-json-model-2.md)
-<<<<<<< .merge_file_KGgNTu
-<<<<<<< .merge_file_SMXKmJ
-<<<<<<< .merge_file_lWNzVZ
-<<<<<<< .merge_file_WfWAhF
 - [Comune Unificazione](comune-unificazione-analisi.md)
 - [Consolidamento Modelli](consolidamento-modelli-geografici.md)
-=======
-=======
->>>>>>> .merge_file_6GwSyL
-=======
->>>>>>> .merge_file_Bmwuhp
-=======
->>>>>>> .merge_file_4agpCI
-<<<<<<< HEAD
 - [Comune Unificazione](./comune-unificazione-analisi-2.md)
 - [Consolidamento Modelli](./consolidamento-modelli-geografici-2.md)
-=======
-<<<<<<< HEAD
-- [Comune Unificazione](./comune-unificazione-analisi-2.md)
-- [Consolidamento Modelli](./consolidamento-modelli-geografici-2.md)
-=======
 - [Comune Unificazione](comune-unificazione-analisi.md)
 - [Consolidamento Modelli](consolidamento-modelli-geografici.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_KGgNTu
-<<<<<<< .merge_file_SMXKmJ
-<<<<<<< .merge_file_lWNzVZ
->>>>>>> .merge_file_V74x8S
-=======
->>>>>>> .merge_file_6GwSyL
-=======
->>>>>>> .merge_file_Bmwuhp
-=======
->>>>>>> .merge_file_4agpCI
 - [Cache Strategy](./cache_strategy.md)
 
 ### Moduli Collegati

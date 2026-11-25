@@ -54,6 +54,10 @@ grezze minuscole (`email*`, `password*`, `remember` due volte). `de` e `es` avev
 
 - Sweep delle pagine pubbliche (`/en`, `/de`, `/es`, `/{lang}/tickets`, `/en/auth/password/reset`): chiusi i residui
   "Contatta il comune"/"Richiedi assistenza" (blocco contatti), `breadcrumb` e `Cerca` (controlli mappa, vedi
+<<<<<<< .merge_file_y5gT3H
+=======
+  [map-controls-i18n-it-en-de-es-2026-10-07.story.md](../../../Geo/docs/stories/map-controls-i18n-it-en-de-es-2026-10-07.story.md)).
+>>>>>>> .merge_file_PcHpEb
   [map-controls-i18n-it-en-de-es.story.md](../../../Geo/docs/stories/map-controls-i18n-it-en-de-es.story.md)).
 - Pulsante di login in inglese: "Login", mentre il titolo dice "Sign in".
 - Docblock di `LoginWidget` da correggere: le etichette vengono da `user_form`.

@@ -3,15 +3,7 @@ title: "task consolidare documentazione"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_I2eheG
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_7JvnUg
 qmd: "task consolidare documentazione"
 issues: []
 discussions: []
@@ -23,10 +15,6 @@ discussions: []
 **Priorita'**: Alta
 **Completamento**: 10%
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "task consolidare documentazione"
@@ -53,11 +41,6 @@ discussions: []
 - [ ] Ridurre da 749 a max 100 docs attivi
 - [ ] Duplicati rimossi
 - [ ] README.md con indice
-<<<<<<< HEAD
-=======
-=======
 ## Descrizione
 ## Azioni
 ## Criteri di Completamento
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

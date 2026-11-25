@@ -3,21 +3,7 @@ title: "iflow getting started"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ubEysI
-<<<<<<< .merge_file_5PDP6p
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_ZUZOls
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ubEysI
->>>>>>> .merge_file_CYC7kh
-=======
->>>>>>> .merge_file_ZUZOls
 qmd: "iflow getting started"
 issues: []
 discussions: []
@@ -33,10 +19,6 @@ discussions: []
 
 Come iniziare a lavorare sul progetto.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "iflow getting started"
@@ -53,13 +35,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🚀 In 3 Passi
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ### 1. Leggi le Regole Critiche
 
 - `laravel/Modules/Xot/docs/critical-rules-consolidated.md`
@@ -103,22 +80,7 @@ Confronta con `https://laravelpizza.com` e trova le differenze da colmare.
 
 - **MAI** creare file .md in posizioni sbagliate
 - **MAI** usare maiuscole nei nomi .md (eccetto README.md e CHANGELOG.md)
-<<<<<<< .merge_file_ubEysI
-<<<<<<< .merge_file_5PDP6p
-<<<<<<< HEAD
 - **MAI** usare maiuscole nei nomi .md (eccetto README.md e CHANGELOG.md)
-=======
-<<<<<<< HEAD
-- **MAI** usare maiuscole nei nomi .md (eccetto README.md e CHANGELOG.md)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- **MAI** usare maiuscole nei nomi .md (eccetto README.md e CHANGELOG.md)
->>>>>>> .merge_file_CYC7kh
-=======
-- **MAI** usare maiuscole nei nomi .md (eccetto README.md e CHANGELOG.md)
->>>>>>> .merge_file_ZUZOls
 - **SEMPRE** usare PHPStan Level 10 dopo aver modificato un file
 - **SEMPRE** eseguire PHPMD e PHPInsights
 - **MAI** usare `property_exists()` su modelli Eloquent

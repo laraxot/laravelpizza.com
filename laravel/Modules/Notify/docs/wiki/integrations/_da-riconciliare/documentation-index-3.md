@@ -7,25 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_hGwDox
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_MXrEJL
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_hGwDox
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_MXrEJL
 status: superseded
 superseded_by: documentation-index.md
 ---
@@ -65,32 +47,14 @@ superseded_by: documentation-index.md
 
 ### Documentazione Architetturale
 - [Design Patterns](./architecture.md) - Pattern architetturali
-<<<<<<< HEAD
 - [Database Schema](../../schema.md) - Schema database
 - [Database Schema](../../schema.md) - Schema database
-=======
-<<<<<<< .merge_file_hGwDox
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Database Schema](../../schema.md) - Schema database
 - [Database Schema](../../schema.md) - Schema database
-=======
-=======
->>>>>>> .merge_file_MXrEJL
-<<<<<<< .merge_file_AdMKct
 - [Database Schema](../../../../../Lang/docs/wiki/schema-3.md) - Schema database
-=======
 - [Database Schema](../../schema.md) - Schema database
 - [Database Schema](../../schema.md) - Schema database
->>>>>>> .merge_file_AJXJiK
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_hGwDox
-=======
 - [Database Schema](../../schema.md) - Schema database
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_MXrEJL
 - [API Documentation](./api/README.md) - Documentazione API
 - [Security](./security/README.md) - Sicurezza e conformità
 
@@ -253,24 +217,9 @@ superseded_by: documentation-index.md
 
 ### Coding Guidelines
 - [PHP Standards](./standards/php.md) - Standard PHP (PSR-12)
-<<<<<<< HEAD
-<<<<<<< .merge_file_hGwDox
 - [Laravel Best Practices](./standards/laravel.md) - Best practices Laravel
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_AdMKct
 - [Laravel Best Practices](./standards/laravel.md) - Best practices Laravel
-=======
->>>>>>> laraxot/dev
-=======
-=======
-<<<<<<< .merge_file_AdMKct
 - [Laravel Best Practices](./standards/laravel.md) - Best practices Laravel
-=======
->>>>>>> .merge_file_MXrEJL
->>>>>>> laraxot/dev
 - [Laravel Best Practices](../../../html2pdf/laravel.md) - Best practices Laravel
 - [Environment Setup](../../../ai-agents/setup.md) - Configurazione ambiente
 - [Docker Setup](./development/docker.md) - Configurazione Docker
@@ -279,52 +228,20 @@ superseded_by: documentation-index.md
 ### Coding Guidelines
 - [PHP Standards](./standards/php.md) - Standard PHP (PSR-12)
 - [Laravel Best Practices](../../../html2pdf/laravel.md) - Best practices Laravel
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_hGwDox
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_AJXJiK
->>>>>>> laraxot/dev
-=======
 - [Laravel Best Practices](../../../html2pdf/laravel.md) - Best practices Laravel
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_AJXJiK
->>>>>>> laraxot/dev
->>>>>>> .merge_file_MXrEJL
 - [Filament Guidelines](../../../../../Activity/docs/filament-3.md) - Linee guida Filament
 - [Blade Components](./standards/blade.md) - Componenti Blade
 
 ### Quality Assurance
 - [PHPStan Configuration](./phpstan/README.md) - Analisi statica
-<<<<<<< HEAD
 - [Testing Strategy](../../../strategy.md) - Strategia testing
 - [Testing Strategy](../../../strategy.md) - Strategia testing
-=======
-<<<<<<< .merge_file_hGwDox
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Testing Strategy](../../../strategy.md) - Strategia testing
 - [Testing Strategy](../../../strategy.md) - Strategia testing
-=======
-=======
->>>>>>> .merge_file_MXrEJL
-<<<<<<< .merge_file_AdMKct
 - [Testing Strategy](./testing/strategy.md) - Strategia testing
-=======
 - [Testing Strategy](../../../strategy.md) - Strategia testing
 - [Testing Strategy](../../../strategy.md) - Strategia testing
->>>>>>> .merge_file_AJXJiK
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_hGwDox
-=======
 - [Testing Strategy](../../../strategy.md) - Strategia testing
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_MXrEJL
 - [CI/CD Pipeline](./ci-cd/README.md) - Continuous integration
 
 ---
@@ -365,32 +282,14 @@ superseded_by: documentation-index.md
 - [Error Tracking](./monitoring/errors.md) - Tracking errori
 
 ### Analytics
-<<<<<<< HEAD
 - [Usage Analytics](../../../html2pdf/usage.md) - Analisi utilizzo
 - [Usage Analytics](../../../html2pdf/usage.md) - Analisi utilizzo
-=======
-<<<<<<< .merge_file_hGwDox
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Usage Analytics](../../../html2pdf/usage.md) - Analisi utilizzo
 - [Usage Analytics](../../../html2pdf/usage.md) - Analisi utilizzo
-=======
-=======
->>>>>>> .merge_file_MXrEJL
-<<<<<<< .merge_file_AdMKct
 - [Usage Analytics](./analytics/usage.md) - Analisi utilizzo
-=======
 - [Usage Analytics](../../../html2pdf/usage.md) - Analisi utilizzo
 - [Usage Analytics](../../../html2pdf/usage.md) - Analisi utilizzo
->>>>>>> .merge_file_AJXJiK
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_hGwDox
-=======
 - [Usage Analytics](../../../html2pdf/usage.md) - Analisi utilizzo
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_MXrEJL
 - [Business Metrics](./analytics/business.md) - Metriche business
 
 ---
@@ -398,34 +297,15 @@ superseded_by: documentation-index.md
 ## 🔒 Security
 
 ### Security Documentation
-<<<<<<< HEAD
 - [Security Guidelines](../../../ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
 - [Security Guidelines](../../../ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
-=======
-<<<<<<< .merge_file_hGwDox
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Security Guidelines](../../../ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
 - [Security Guidelines](../../../ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
-=======
-=======
->>>>>>> .merge_file_MXrEJL
-<<<<<<< .merge_file_AdMKct
 - [Security Guidelines](./security/guidelines.md) - Linee guida sicurezza
-=======
 - [Security Guidelines](../../../ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
-<<<<<<< .merge_file_hGwDox
 - [Security Guidelines](../../../ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
->>>>>>> .merge_file_AJXJiK
->>>>>>> laraxot/dev
-=======
 - [Security Guidelines](../../../ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
->>>>>>> laraxot/dev
-=======
 - [Security Guidelines](../../../ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
->>>>>>> .merge_file_AJXJiK
->>>>>>> .merge_file_MXrEJL
->>>>>>> laraxot/dev
 - [GDPR Compliance](./security/gdpr.md) - Conformità GDPR
 - [Authentication](./security/authentication.md) - Sistema autenticazione
 - [Authorization](./security/authorization.md) - Sistema autorizzazioni

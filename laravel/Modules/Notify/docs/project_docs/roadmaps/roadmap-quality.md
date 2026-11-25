@@ -3,15 +3,7 @@ title: "roadmap quality"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_sStQiK
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_QepDU6
 qmd: "roadmap quality"
 issues: []
 discussions: []
@@ -588,10 +580,6 @@ composer require --dev phpstan/phpstan-phpunit
 - **Performance Awards**: Speed and efficiency
 - **Quality Standards**: ISO compliance
 - **Open Source**: Community recognition
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -614,8 +602,3 @@ discussions: []
 **🔄 Ultimo Aggiornamento**: Gennaio 2025  
 **📊 Progresso**: 60% → 100% (Target Dicembre 2025)  
 **🎯 Prossimo Milestone**: Code Excellence (Marzo 2025)
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

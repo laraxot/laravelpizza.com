@@ -3,21 +3,7 @@ title: "contact column icon"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_UaBB9N
-<<<<<<< .merge_file_gcZfcT
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_N4rLd2
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_UaBB9N
->>>>>>> .merge_file_YQoBP8
-=======
->>>>>>> .merge_file_N4rLd2
 qmd: "contact column icon"
 issues: []
 discussions: []
@@ -157,10 +143,6 @@ La sintassi `@svg()` utilizzata nella view Blade non è compatibile con il siste
 | **Performance** | N/A | ✅ Ottimizzata (Filament caching) |
 | **Manutenibilità** | ❌ Sintassi obsoleta | ✅ Sintassi standard |
 | **Compatibilità** | ❌ Non garantita | ✅ Filament 3.x native |
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -176,8 +158,3 @@ discussions: []
 **Priorità**: 🔴 ALTA (Funzionalità core non funzionante)  
 **Tempo Stimato Fix**: 5 minuti  
 **Rischio**: 🟢 BASSO (Modifica isolata)
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

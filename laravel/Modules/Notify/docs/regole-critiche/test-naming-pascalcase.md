@@ -3,15 +3,7 @@ title: "test naming pascalcase"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_CKQuNy
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_4v1Qnj
 qmd: "test naming pascalcase"
 issues: []
 discussions: []
@@ -235,10 +227,6 @@ find tests/ -name "*Test*" | sort -f | uniq -i -d
 ✅ PHPStan pulito  
 ✅ Cross-platform sicuro  
 ✅ Convenzioni standard
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -253,8 +241,3 @@ discussions: []
 **Regola Critica: Test File Naming**  
 **SEMPRE PascalCase - MAI minuscolo** 🎯
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

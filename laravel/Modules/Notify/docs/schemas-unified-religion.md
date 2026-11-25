@@ -3,15 +3,7 @@ title: "schemas unified religion"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_dWglir
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_20nQA0
 qmd: "schemas unified religion"
 issues: []
 discussions: []
@@ -25,10 +17,6 @@ discussions: []
 **Category**: Architecture / Filament 5.x / Canonical Rule  
 **Audience**: All developers + AI agents
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "schemas unified religion"
@@ -54,13 +42,8 @@ Segue invece la semantica del contenuto.
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## Tesi
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Regola Operativa
 
 | Se il contenuto e... | Usa | Perche |

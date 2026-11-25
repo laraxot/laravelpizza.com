@@ -3,21 +3,7 @@ title: "factory pattern advantages"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_fnVVEU
-<<<<<<< .merge_file_N3Dudy
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_q8Hoxz
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_fnVVEU
->>>>>>> .merge_file_3j89CX
-=======
->>>>>>> .merge_file_q8Hoxz
 qmd: "factory pattern advantages"
 issues: []
 discussions: []

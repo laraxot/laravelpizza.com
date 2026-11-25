@@ -3,21 +3,7 @@ title: "conflict resolution mailtemplate"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_OG5Pfi
-<<<<<<< .merge_file_EnUZW6
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_t8umBp
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_OG5Pfi
->>>>>>> .merge_file_sWy3qw
-=======
->>>>>>> .merge_file_t8umBp
 qmd: "conflict resolution mailtemplate"
 issues: []
 discussions: []

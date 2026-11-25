@@ -3,21 +3,7 @@ title: "vhost app"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_n0zlL3
-<<<<<<< .merge_file_5gywJN
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_OHfgM7
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_n0zlL3
->>>>>>> .merge_file_XBgr00
-=======
->>>>>>> .merge_file_OHfgM7
 qmd: "vhost app"
 issues: []
 discussions: []
@@ -29,10 +15,6 @@ discussions: []
 **Last Updated**: 2026-03-31  
 **Server**: Apache 2.4.64 (Ubuntu)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "vhost app"
@@ -56,13 +38,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## Configuration Summary
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## File Locations
 
 | File | Path |

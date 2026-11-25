@@ -3,21 +3,7 @@ title: "analisiettagliata 2"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ArZNQ3
-<<<<<<< .merge_file_e6mO1T
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_oO5jew
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ArZNQ3
->>>>>>> .merge_file_1XALzg
-=======
->>>>>>> .merge_file_oO5jew
 qmd: "analisiettagliata 2"
 issues: []
 discussions: []

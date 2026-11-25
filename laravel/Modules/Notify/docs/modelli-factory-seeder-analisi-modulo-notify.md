@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 ---
 title: "Analisi Modelli, Factory e Seeder - Modulo Notify"
 type: analysis
 qmd: "modelli factory seeder analisi notify"
 ---
-=======
->>>>>>> laraxot/dev
 # Analisi Modelli, Factory e Seeder - Modulo Notify
 
 ## Panoramica
@@ -279,13 +276,6 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 
 ### Moduli Collegati
 - [<nome progetto> Module](../../<nome progetto>/docs/modelli-factory-seeder-analisi-2.md) - Notifiche mediche
-<<<<<<< .merge_file_mkW9lQ
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_nOO0I6
 - [<nome progetto> Module](../../<nome progetto>/docs/modelli-factory-seeder-analisi-2.md) - Notifiche mediche
 - [<nome progetto> Module](../../<nome progetto>/docs/modelli-factory-seeder-analisi-2.md) - Notifiche mediche
 - [<nome progetto> Module](../../<nome progetto>/docs/modelli-factory-seeder-analisi-2.md) - Notifiche mediche
@@ -297,16 +287,8 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 - [<nome progetto> Module](../../<nome progetto>/docs/modelli-factory-seeder-analisi-2.md) - Notifiche mediche
 - [<nome progetto> Module](../../<nome progetto>/docs/modelli-factory-seeder-analisi-2.md) - Notifiche mediche
 - [<nome progetto> Module](../../<nome progetto>/docs/modelli-factory-seeder-analisi-2.md) - Notifiche mediche
-<<<<<<< .merge_file_mkW9lQ
-<<<<<<< HEAD
-=======
-=======
 - [<nome progetto> Module](../../../../docs/modelli-factory-seeder-analisi-2.md) - Notifiche mediche
 - [<nome progetto> Module](../../<nome progetto>/docs/modelli-factory-seeder-analisi-2.md) - Notifiche mediche
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_nOO0I6
 - [User Module](../../User/docs/modelli-factory-seeder-analisi-3.md) - Notifiche utente
 - [Media Module](../../Media/docs/modelli-factory-seeder-analisi-2.md) - Allegati notifiche
 - [Lang Module](../../Lang/docs/modelli-factory-seeder-analisi-2.md) - Localizzazione

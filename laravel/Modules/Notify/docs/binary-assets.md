@@ -7,21 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< .merge_file_1r5EPN
-<<<<<<< .merge_file_jqLCY1
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_GP1E7X
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_1r5EPN
->>>>>>> .merge_file_uGYzPA
-=======
->>>>>>> .merge_file_GP1E7X
 ---
 
 # Asset binari

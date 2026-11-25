@@ -7,25 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_tIedlY
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_NMAMg9
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_tIedlY
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_NMAMg9
 ---
 
 # Mixed (tipo di dato) - Solo come Ultima Spiaggia
@@ -45,29 +27,10 @@ updated: 2026-11-23
 - [array-keys-mixed-property-exists.mdc](../.cursor/rules/array-keys-mixed-property-exists.mdc)
 - [filament-array-typing.mdc](../.cursor/rules/filament-array-typing.mdc)
 - [critical-rules-and-memories](../laravel/Modules/Xot/docs/critical-rules-and-memories.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_tIedlY
 - [agents.md](../agents.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [agents-2.md](../agents-2.md)
-=======
-<<<<<<< HEAD
 - [agents.md](../agents.md)
-=======
 - [agents-2.md](../agents-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 - [agents.md](../agents.md)
-=======
 - [agents-2.md](../agents-2.md)
-=======
-<<<<<<< HEAD
 - [agents.md](../agents.md)
-=======
 - [agents-2.md](../agents-2.md)
->>>>>>> .merge_file_NMAMg9
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

@@ -3,15 +3,7 @@ title: "roadmap"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_NndqdJ
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_72uUFk
 qmd: "roadmap"
 issues: []
 discussions: []
@@ -23,10 +15,6 @@ discussions: []
 > Last Updated: April 3, 2026  
 > Status: 🟢 ACTIVE DEVELOPMENT
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "roadmap"
@@ -54,13 +42,8 @@ FixCity is a civic technology platform connecting citizens and municipalities to
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 📊 Roadmap Overview
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## ✅ Completed Phases (1-10)
 
 ### Phase 0: Foundation Excellence ✅ COMPLETE

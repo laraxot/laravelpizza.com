@@ -3,21 +3,7 @@ title: "configurazione"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_yef59L
-<<<<<<< .merge_file_Zoqqdk
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_6XlNpM
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_yef59L
->>>>>>> .merge_file_AO37i6
-=======
->>>>>>> .merge_file_6XlNpM
 qmd: "configurazione"
 issues: []
 discussions: []

@@ -3,15 +3,7 @@ title: "vhost configuration"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_aNMD5F
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_SHENSt
 qmd: "vhost configuration"
 issues: []
 discussions: []
@@ -24,10 +16,6 @@ discussions: []
 > **Environment**: Local Development (WSL2)
 > **Server**: Apache 2.4.64 (Ubuntu)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "vhost configuration"
@@ -53,14 +41,9 @@ This document describes the Apache VirtualHost configuration for local developme
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 Overview
 ### Key Points
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 📁 File Locations
 
 ```

@@ -3,21 +3,7 @@ title: "email translations"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_1VeNHR
-<<<<<<< .merge_file_M7n3yF
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_dY0Oad
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_1VeNHR
->>>>>>> .merge_file_3ETwj4
-=======
->>>>>>> .merge_file_dY0Oad
 qmd: "email translations"
 issues: []
 discussions: []

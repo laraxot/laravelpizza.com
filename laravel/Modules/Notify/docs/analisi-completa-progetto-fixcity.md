@@ -3,21 +3,7 @@ title: "analisi completa progetto fixcity"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_FgyfSA
-<<<<<<< .merge_file_sgAXMP
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_qte04A
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_FgyfSA
->>>>>>> .merge_file_BDWduI
-=======
->>>>>>> .merge_file_qte04A
 qmd: "analisi completa progetto fixcity"
 issues: []
 discussions: []
@@ -507,6 +493,5 @@ Manutenzione Stradale • Illuminazione • Rifiuti • Verde Pubblico • Fogna
 ---
 
 *"Un progetto solido con fondamenta eccellenti e potenziale straordinario"* 🏆
-
 
 

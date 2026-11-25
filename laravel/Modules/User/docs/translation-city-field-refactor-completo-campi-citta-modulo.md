@@ -1,17 +1,23 @@
+<<<<<<< .merge_file_Oy6L6K
 <<<<<<< .merge_file_6lq6Oc
 <<<<<<< .merge_file_17k6bI
 =======
 >>>>>>> .merge_file_FN3oCp
+=======
+>>>>>>> .merge_file_LaxajM
 ---
 title: "Refactor Completo Campi \"Città\" - Modulo User"
 type: note
 qmd: "translation city field refactor completo campi"
 ---
+<<<<<<< .merge_file_Oy6L6K
 <<<<<<< .merge_file_6lq6Oc
 =======
 >>>>>>> .merge_file_T6X5JR
 =======
 >>>>>>> .merge_file_FN3oCp
+=======
+>>>>>>> .merge_file_LaxajM
 # Refactor Completo Campi "Città" - Modulo User
 
 ## Riepilogo Intervento

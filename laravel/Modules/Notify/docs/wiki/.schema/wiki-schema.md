@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: Nome Visualizzato
 type: concept|entity|summary|comparison|overview
@@ -9,8 +8,6 @@ updated: 2026-04-15
 related: [altra-pagina.md, ancora-un-altra.md]
 qmd: "wiki schema nome visualizzato"
 ---
-=======
->>>>>>> laraxot/dev
 # LLM Wiki Schema
 
 Questo documento istruisce l'LLM su come costruire e mantenere la Wiki Knowledge Base secondo il pattern Karpathy.
@@ -82,8 +79,6 @@ nome-panoramica.md
 
 ### Frontmatter
 ```yaml
-<<<<<<< HEAD
-=======
 ---
 title: Nome Visualizzato
 type: concept|entity|summary|comparison|overview
@@ -93,7 +88,6 @@ created: 2026-04-15
 updated: 2026-04-15
 related: [altra-pagina.md, ancora-un-altra.md]
 ---
->>>>>>> laraxot/dev
 ```
 
 ### Link Interni

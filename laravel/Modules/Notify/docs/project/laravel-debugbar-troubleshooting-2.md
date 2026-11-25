@@ -3,15 +3,7 @@ title: "LARAVEL DEBUGBAR TROUBLESHOOTING"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_YGBDqZ
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_pS9qY0
 qmd: "LARAVEL DEBUGBAR TROUBLESHOOTING"
 issues: []
 discussions: []
@@ -320,13 +312,6 @@ For better performance with many queries:
 2. **Environment-specific exclusions**: Always check environment before disabling security features
 3. **Package auto-discovery**: Modern Laravel packages auto-register, but you still need to check configuration
 4. **Documentation is key**: Always document why certain exclusions exist (future maintainers will thank you)
-<<<<<<< .merge_file_YGBDqZ
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_pS9qY0
 
 ---
 
@@ -341,11 +326,3 @@ discussions: []
 **Last Updated**: 2026-04-01  
 **Author**: Qwen Code AI Assistant  
 **Status**: ✅ Resolved
-<<<<<<< .merge_file_YGBDqZ
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_pS9qY0

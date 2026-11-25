@@ -1,6 +1,7 @@
 ---
 title: pest-test-report-2
 module: User
+<<<<<<< .merge_file_aLu44K
 <<<<<<< .merge_file_N44jee
 <<<<<<< .merge_file_3FsHL1
 qmd: "pest test report pesttestreport2"
@@ -9,6 +10,9 @@ qmd: "pest test report pesttestreport2"
 =======
 qmd: "pest test report pesttestreport2"
 >>>>>>> .merge_file_5baBPI
+=======
+qmd: "pest test report pesttestreport2"
+>>>>>>> .merge_file_WikLoU
 ---
 
 # <nome progetto> User Module - Pest Test Implementation Report

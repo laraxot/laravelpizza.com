@@ -2,6 +2,7 @@
 module: User
 concept: Architecture
 last_updated: 2026-04-15
+<<<<<<< .merge_file_oDek2D
 <<<<<<< .merge_file_zIv4jT
 <<<<<<< .merge_file_R9hMvH
 qmd: "architecture user"
@@ -10,6 +11,9 @@ qmd: "architecture user"
 =======
 qmd: "architecture user"
 >>>>>>> .merge_file_duhAPd
+=======
+qmd: "architecture user"
+>>>>>>> .merge_file_r2I8Kq
 ---
 
 # User Module Architecture

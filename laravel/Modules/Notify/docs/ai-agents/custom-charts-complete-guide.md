@@ -3,21 +3,7 @@ title: "custom charts complete guide"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_FQwlP5
-<<<<<<< .merge_file_SKcqbB
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_VJfRfY
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_FQwlP5
->>>>>>> .merge_file_UstWtD
-=======
->>>>>>> .merge_file_VJfRfY
 qmd: "custom charts complete guide"
 issues: []
 discussions: []

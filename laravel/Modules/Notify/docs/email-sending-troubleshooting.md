@@ -3,21 +3,7 @@ title: "email sending troubleshooting"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_aJ3Mac
-<<<<<<< .merge_file_6o9H8H
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_wqEV72
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_aJ3Mac
->>>>>>> .merge_file_RCOzoQ
-=======
->>>>>>> .merge_file_wqEV72
 qmd: "email sending troubleshooting"
 issues: []
 discussions: []

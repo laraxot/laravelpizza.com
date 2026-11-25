@@ -3,21 +3,7 @@ title: "analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_kEB2Th
-<<<<<<< .merge_file_xdAXeY
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_afPf9Q
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_kEB2Th
->>>>>>> .merge_file_dc3UMu
-=======
->>>>>>> .merge_file_afPf9Q
 qmd: "analysis"
 issues: []
 discussions: []
@@ -85,14 +71,6 @@ Modules/Notify/
 - Performance testing
 ### Versione HEAD
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Collegamenti tra versioni di analysis.md
 * [analysis.md](../../../notify/docs/analysis.md)
 * [analysis.md](../../../notify/docs/phpstan/analysis.md)
@@ -108,10 +86,6 @@ Modules/Notify/
 * [analysis.md](../../../media/docs/phpstan/analysis.md)
 * [analysis.md](../../../../themes/one/docs/analysis.md)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ### Versione Incoming
 
@@ -126,15 +100,4 @@ updated: 2026-09-26
 qmd: "analysis"
 issues: []
 discussions: []
-<<<<<<< .merge_file_kEB2Th
-<<<<<<< .merge_file_xdAXeY
-<<<<<<< HEAD
-=======
-=======
 ### Versione Incoming
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_dc3UMu
-=======
->>>>>>> .merge_file_afPf9Q

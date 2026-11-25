@@ -3,21 +3,7 @@ title: "chart widgets"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_hyfJ6J
-<<<<<<< .merge_file_BGsi60
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_kjEGf5
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_hyfJ6J
->>>>>>> .merge_file_KOijBj
-=======
->>>>>>> .merge_file_kjEGf5
 qmd: "chart widgets"
 issues: []
 discussions: []

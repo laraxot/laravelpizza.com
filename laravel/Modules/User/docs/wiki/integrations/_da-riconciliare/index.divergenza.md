@@ -5,6 +5,7 @@ type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_cM95Cb
 <<<<<<< .merge_file_XIzPO8
 <<<<<<< .merge_file_MyEMxA
 qmd: "divergenza riconciliare indexmd"
@@ -13,6 +14,9 @@ qmd: "divergenza riconciliare indexmd"
 =======
 qmd: "divergenza riconciliare indexmd"
 >>>>>>> .merge_file_AP1jEF
+=======
+qmd: "divergenza riconciliare indexmd"
+>>>>>>> .merge_file_MgMDJJ
 ---
 
 # Divergenza: `index.md`

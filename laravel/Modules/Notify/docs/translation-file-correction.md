@@ -3,15 +3,7 @@ title: "translation file correction"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_x0A14G
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_1rUMRr
 qmd: "translation file correction"
 issues: []
 discussions: []
@@ -47,10 +39,6 @@ touch Modules/Notify/lang/it/nome_corretto.php
 # (vedere Passo 3 per la struttura corretta)
 
 # 3. Verificare che non ci siano riferimenti al vecchio file
-grep -r "nome_errato" Modules/Notify
-
-# 4. Rimuovere il file con naming errato
-rm Modules/Notify/lang/it/nome_errato.php
 grep -r "nome_errato" Modules/Notify
 
 # 4. Rimuovere il file con naming errato

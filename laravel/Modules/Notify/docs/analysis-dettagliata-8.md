@@ -3,21 +3,7 @@ title: "analysis dettagliata 8"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_nCb9o9
-<<<<<<< .merge_file_ZxPbzO
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_QFS4F1
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_nCb9o9
->>>>>>> .merge_file_7cIqPc
-=======
->>>>>>> .merge_file_QFS4F1
 qmd: "analysis dettagliata 8"
 issues: []
 discussions: []

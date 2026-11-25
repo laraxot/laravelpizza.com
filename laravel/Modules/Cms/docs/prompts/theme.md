@@ -7,10 +7,7 @@ updated: 2026-09-26
 qmd: "theme"
 issues: []
 discussions: []
-<<<<<<< HEAD
-=======
 status: draft
->>>>>>> laraxot/dev
 ---
 
 # Theme
@@ -31,30 +28,8 @@ cd laravel/Themes/<nome tem>
 composer update -W 
 npm install
 npm run build
-<<<<<<< .merge_file_8Ge7g6
-<<<<<<< .merge_file_FxKSAX
-<<<<<<< .merge_file_qjNdli
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
-=======
-=======
->>>>>>> .merge_file_QPShFt
-=======
->>>>>>> .merge_file_o0S6Y9
-<<<<<<< HEAD
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
-<<<<<<< HEAD
-# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_8Ge7g6
-<<<<<<< .merge_file_FxKSAX
->>>>>>> .merge_file_FaApti
-=======
->>>>>>> .merge_file_QPShFt
-=======
->>>>>>> .merge_file_o0S6Y9
 capisci te i perche' 
 utilizza openviking installato globalmente, bmad, gsd , ralph loop e notebooklm

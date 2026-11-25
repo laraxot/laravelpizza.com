@@ -3,25 +3,7 @@ title: "THEME DETECTION SYSTEM"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_xVBDO6
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_MI9Kgg
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_xVBDO6
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_MI9Kgg
 qmd: "THEME DETECTION SYSTEM"
 issues: []
 discussions: []
@@ -40,13 +22,6 @@ discussions: []
 **Status:** ✅ **Documented**
 **Priority:** 🔴 **Critical Architecture**
 
-<<<<<<< .merge_file_xVBDO6
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_MI9Kgg
 ---
 
 title: "THEME DETECTION SYSTEM"
@@ -63,16 +38,8 @@ Questo documento spiega il sistema di rilevamento del tema basato su `APP_URL` e
 
 ---
 
-<<<<<<< .merge_file_xVBDO6
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 Scopo
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_MI9Kgg
 ## 📐 Theme Detection Flow
 
 ### Algoritmo di Rilevamento
@@ -443,49 +410,14 @@ new class extends Component {
 
 ### Internal Documents
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_xVBDO6
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_MI9Kgg
 - → [Layout Architecture](Themes/Sixteen/docs/layout_architecture_and_namespace.md) - Layout hierarchy
 - → [Page Component Architecture](Modules/Cms/docs/page-component-architecture-3.md) - Page component
 - → [Vite Build System](Themes/Sixteen/docs/vite_manifest_fix_complete.md) - Build process
 - → [Master Index](docs/module-docs-index-2.md) - Central navigation
-<<<<<<< .merge_file_xVBDO6
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_MI9Kgg
 - → [Layout Architecture](Themes/Sixteen/docs/LAYOUT_ARCHITECTURE_AND_NAMESPACE.md) - Layout hierarchy
 - → [Page Component Architecture](Modules/Cms/docs/page-component-architecture-3.md) - Page component
 - → [Vite Build System](Themes/Sixteen/docs/VITE_MANIFEST_FIX_COMPLETE.md) - Build process
 - → [Master Index](../module-docs-index-2.md) - Central navigation
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_xVBDO6
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_MI9Kgg
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ### External Resources
 

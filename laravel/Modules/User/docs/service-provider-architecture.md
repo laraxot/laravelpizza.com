@@ -388,6 +388,10 @@ test('user service provider only configures, not registers dependencies', functi
 ### Documentazione Correlata
 - [PASSPORT_INTEGRATION.md](./passport-integration.md) - Passport integration completa
 - [FILOSOFIA_MODULO_USER.md](./filosofia-modulo-user.md) - Filosofia generale modulo
+<<<<<<< .merge_file_hWPmm4
+=======
+- [README.md](./readme.md) - Overview modulo
+>>>>>>> .merge_file_bQEmuZ
 - [README.md](./README.md) - Overview modulo
 
 ### Documentazione Esterna

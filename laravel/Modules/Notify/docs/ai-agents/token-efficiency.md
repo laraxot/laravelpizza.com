@@ -3,21 +3,7 @@ title: "token efficiency"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_kyM19X
-<<<<<<< .merge_file_MaxPgP
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_ENjOQR
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_kyM19X
->>>>>>> .merge_file_n5eSPL
-=======
->>>>>>> .merge_file_ENjOQR
 qmd: "token efficiency"
 issues: []
 discussions: []

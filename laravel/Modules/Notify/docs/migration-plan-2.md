@@ -3,15 +3,7 @@ title: "migration plan"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_7hJCwP
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_XW0dvV
 qmd: "migration plan"
 issues: []
 discussions: []
@@ -25,10 +17,6 @@ discussions: []
 
 **Solution**: Implement governance rules, rename files, and replace content with generic placeholders.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "migration plan"
@@ -59,15 +47,10 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## Impact Analysis
 ### Scope
 ### Breakdown by Type
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Completed Work (Phase 1)
 
 ### ✅ 1. Governance Document Created

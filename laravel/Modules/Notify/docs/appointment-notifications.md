@@ -3,21 +3,7 @@ title: "appointment notifications"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_UxllCV
-<<<<<<< .merge_file_sUIycW
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_QXVPTJ
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_UxllCV
->>>>>>> .merge_file_uiGeDe
-=======
->>>>>>> .merge_file_QXVPTJ
 qmd: "appointment notifications"
 issues: []
 discussions: []

@@ -7,15 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< .merge_file_30Brt1
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_0Q0Ynl
 ---
 
 # Analisi Modelli, Factory e Seeder - Modulo Notify
@@ -280,18 +272,7 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 
 ### Moduli Collegati
 - [<nome progetto> Module](../../<nome progetto>/docs/modelli_factory_seeder_analisi.md) - Notifiche mediche
-<<<<<<< .merge_file_30Brt1
-<<<<<<< HEAD
 - [<nome progetto> Module](../../<nome progetto>/docs/modelli_factory_seeder_analisi.md) - Notifiche mediche
-=======
-<<<<<<< HEAD
-- [<nome progetto> Module](../../<nome progetto>/docs/modelli_factory_seeder_analisi.md) - Notifiche mediche
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- [<nome progetto> Module](../../<nome progetto>/docs/modelli_factory_seeder_analisi.md) - Notifiche mediche
->>>>>>> .merge_file_0Q0Ynl
 - [User Module](../../User/docs/modelli-factory-seeder-analisi-3.md) - Notifiche utente
 - [Media Module](../../Media/docs/modelli-factory-seeder-analisi-2.md) - Allegati notifiche
 - [Lang Module](../../Lang/docs/modelli-factory-seeder-analisi-2.md) - Localizzazione

@@ -3,21 +3,7 @@ title: "pub theme namespace critical rule"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_DjzIPb
-<<<<<<< .merge_file_78IxoO
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_Df2HRT
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_DjzIPb
->>>>>>> .merge_file_yZNVvI
-=======
->>>>>>> .merge_file_Df2HRT
 qmd: "pub theme namespace critical rule"
 issues: []
 discussions: []
@@ -55,10 +41,6 @@ The current active theme is configured via `config('xra.pub_theme')` which retur
 - One migration per table creation
 - Schema changes use new migration files: `add_{column}_to_{table}.php`
 - Use `XotBaseMigration` with `tableCreate()` and `tableUpdate()` methods
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -70,14 +52,3 @@ updated: 2026-09-26
 qmd: "pub theme namespace critical rule"
 issues: []
 discussions: []
-<<<<<<< .merge_file_DjzIPb
-<<<<<<< .merge_file_78IxoO
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_yZNVvI
-=======
->>>>>>> .merge_file_Df2HRT

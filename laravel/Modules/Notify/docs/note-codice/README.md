@@ -7,10 +7,7 @@ status: active
 updated_at: '2026-11-12'
 created: 2026-11-23
 updated: 2026-11-23
-<<<<<<< HEAD
 qmd: "note codice notify"
-=======
->>>>>>> laraxot/dev
 ---
 
 # Note di codice

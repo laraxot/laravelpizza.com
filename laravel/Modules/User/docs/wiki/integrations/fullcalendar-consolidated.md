@@ -586,7 +586,6 @@ related:
 ---
 
  
- 
 ---
 
 ## fullcalendar-scheduler-license-troubleshooting

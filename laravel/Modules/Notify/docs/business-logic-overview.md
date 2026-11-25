@@ -3,21 +3,7 @@ title: "business logic overview"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_SAw6BN
-<<<<<<< .merge_file_ve5JH8
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_nzm79N
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_SAw6BN
->>>>>>> .merge_file_eEyN0L
-=======
->>>>>>> .merge_file_nzm79N
 qmd: "business logic overview"
 issues: []
 discussions: []

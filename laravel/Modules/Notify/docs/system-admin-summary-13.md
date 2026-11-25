@@ -3,15 +3,7 @@ title: "system admin summary 2026 03 13"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_7VrMMl
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_F5axc1
 qmd: "system admin summary 2026 03 13"
 issues: []
 discussions: []
@@ -23,13 +15,6 @@ discussions: []
 **Status**: ✅ All Tasks Complete  
 **Administrator**: AI Assistant
 
-<<<<<<< .merge_file_7VrMMl
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_F5axc1
 ---
 
 title: "system admin summary 2026 03 13"
@@ -64,17 +49,9 @@ copy_*
 
 ---
 
-<<<<<<< .merge_file_7VrMMl
-<<<<<<< HEAD
-=======
-=======
 ## 📋 Tasks Completed
 ### 1. ✅ Copy Files Cleanup
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_F5axc1
 ### 2. ✅ Apache2 Service Fix
 
 **Problem**: Apache2 failed to start with error

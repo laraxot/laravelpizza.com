@@ -3,21 +3,7 @@ title: "email tests"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_cnFuxh
-<<<<<<< .merge_file_Z6ipnI
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_h7sUKA
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_cnFuxh
->>>>>>> .merge_file_Q2Ja3O
-=======
->>>>>>> .merge_file_h7sUKA
 qmd: "email tests"
 issues: []
 discussions: []

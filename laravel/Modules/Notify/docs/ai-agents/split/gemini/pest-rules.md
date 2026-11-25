@@ -3,21 +3,7 @@ title: "pest rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_OYOKLr
-<<<<<<< .merge_file_6dgpEf
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_9HZ2Zu
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_OYOKLr
->>>>>>> .merge_file_sfDcPN
-=======
->>>>>>> .merge_file_9HZ2Zu
 qmd: "pest rules"
 issues: []
 discussions: []
@@ -33,10 +19,6 @@ discussions: []
 - CRITICAL: ALWAYS use `search-docs` tool for version-specific Pest documentation and updated code examples.
 - IMPORTANT: Activate `pest-testing` every time you're working with a Pest or testing-related task.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -56,9 +38,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../wiki/integrations/_da-riconciliare/gemini-2.md](../../../wiki/integrations/_da-riconciliare/gemini-2.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

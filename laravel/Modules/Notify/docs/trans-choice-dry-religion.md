@@ -3,15 +3,7 @@ title: "trans choice dry religion"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_UYJl2F
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_3yWCRs
 qmd: "trans choice dry religion"
 issues: []
 discussions: []
@@ -25,10 +17,6 @@ discussions: []
 **Category**: Architecture / Religion / i18n / DRY  
 **Audience**: All developers + AI agents
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "trans choice dry religion"
@@ -49,13 +37,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## LA REGOLA AUREA
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Perche (Filosofia Profonda)
 
 ### Il Problema: Chiavi Duplicate per Ogni Caso

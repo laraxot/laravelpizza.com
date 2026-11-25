@@ -3,31 +3,7 @@ title: "ux expert"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_Tr5K5u
-<<<<<<< .merge_file_CrZLSW
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_ExZ01e
-=======
->>>>>>> .merge_file_BTzppE
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Tr5K5u
-<<<<<<< .merge_file_CrZLSW
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_ExZ01e
-=======
->>>>>>> .merge_file_BTzppE
 qmd: "ux expert"
 issues: []
 discussions: []
@@ -86,35 +62,11 @@ persona:
 commands:
   - help: Show numbered list of the following commands to allow selection
   - create-front-end-spec: run task create-doc.md with template front-end-spec-tmpl.yaml
-<<<<<<< HEAD
-<<<<<<< .merge_file_Tr5K5u
-<<<<<<< .merge_file_CrZLSW
   - generate-ui-prompt: run task generate-ai-frontend-prompt.md
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_ExZ01e
-=======
->>>>>>> .merge_file_BTzppE
   - generate-ui-prompt: Run task generate-ai-frontend-prompt.md
-=======
-<<<<<<< HEAD
   - generate-ui-prompt: run task generate-ai-frontend-prompt.md
-=======
   - generate-ui-prompt: Run task generate-ai-frontend-prompt.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Tr5K5u
-<<<<<<< .merge_file_CrZLSW
-=======
   - generate-ui-prompt: run task generate-ai-frontend-prompt.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_ExZ01e
-=======
->>>>>>> .merge_file_BTzppE
   - exit: Say goodbye as the UX Expert, and then abandon inhabiting this persona
 dependencies:
   data:
@@ -127,10 +79,6 @@ dependencies:
     - front-end-spec-tmpl.yaml
 ```
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -149,9 +97,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../AGENTS.md](../../../../../../../../AGENTS.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

@@ -3,67 +3,16 @@
 Questa sezione fornisce una panoramica generale della libreria Html2Pdf, le novità dell'ultima versione, le istruzioni per l'installazione e l'architettura di integrazione nel progetto.
 
 **Menu di Navigazione:**
-<<<<<<< .merge_file_bwEr21
-<<<<<<< .merge_file_g7ZcYm
-<<<<<<< .merge_file_ACAoVt
-<<<<<<< .merge_file_wvjf59
-=======
-=======
->>>>>>> .merge_file_d698EY
-=======
->>>>>>> .merge_file_Nv7tHY
-=======
->>>>>>> .merge_file_4AQaPh
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_bwEr21
-<<<<<<< .merge_file_g7ZcYm
-<<<<<<< .merge_file_ACAoVt
->>>>>>> .merge_file_CRfjCv
-=======
->>>>>>> .merge_file_d698EY
-=======
->>>>>>> .merge_file_Nv7tHY
-=======
->>>>>>> .merge_file_4AQaPh
 *   [Utilizzo Base e Layout](./usage.md)
 *   [Guida agli Stili](./styling.md)
 *   [Funzionalità Avanzate](./advanced.md)
 *   [Integrazione con Laravel e Best Practices](./laravel.md)
 *   [Configurazione della Sicurezza](./security.md)
-<<<<<<< .merge_file_bwEr21
-<<<<<<< .merge_file_g7ZcYm
-<<<<<<< .merge_file_ACAoVt
-<<<<<<< .merge_file_wvjf59
-=======
-=======
->>>>>>> .merge_file_d698EY
-=======
->>>>>>> .merge_file_Nv7tHY
-=======
->>>>>>> .merge_file_4AQaPh
-<<<<<<< HEAD
-=======
-=======
 *   [Utilizzo Base e Layout](../../../../gdpr/docs/html2pdf/usage.md)
 *   [Guida agli Stili](../../../../gdpr/docs/html2pdf/styling.md)
 *   [Funzionalità Avanzate](../../../../gdpr/docs/html2pdf/advanced.md)
 *   [Integrazione con Laravel e Best Practices](../../../../gdpr/docs/html2pdf/laravel.md)
 *   [Configurazione della Sicurezza](../../../../gdpr/docs/html2pdf/security.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_bwEr21
-<<<<<<< .merge_file_g7ZcYm
-<<<<<<< .merge_file_ACAoVt
->>>>>>> .merge_file_CRfjCv
-=======
->>>>>>> .merge_file_d698EY
-=======
->>>>>>> .merge_file_Nv7tHY
-=======
->>>>>>> .merge_file_4AQaPh
 
 ---
 
@@ -80,37 +29,9 @@ Questa sezione fornisce una panoramica generale della libreria Html2Pdf, le novi
 ## 🆕 **Novità Versione 5.3.x (2025)**
 
 ### 🔒 **Security Service Avanzato**
-<<<<<<< .merge_file_bwEr21
-<<<<<<< .merge_file_g7ZcYm
-<<<<<<< .merge_file_ACAoVt
-<<<<<<< .merge_file_wvjf59
 Html2Pdf 5.3+ include un [servizio di sicurezza](./security.md) configurabile per proteggere da accessi non autorizzati.
-=======
-=======
->>>>>>> .merge_file_d698EY
-=======
->>>>>>> .merge_file_Nv7tHY
-=======
->>>>>>> .merge_file_4AQaPh
-<<<<<<< HEAD
 Html2Pdf 5.3+ include un [servizio di sicurezza](./security.md) configurabile per proteggere da accessi non autorizzati.
-=======
-<<<<<<< HEAD
-Html2Pdf 5.3+ include un [servizio di sicurezza](./security.md) configurabile per proteggere da accessi non autorizzati.
-=======
 Html2Pdf 5.3+ include un [servizio di sicurezza](../../../../gdpr/docs/html2pdf/security.md) configurabile per proteggere da accessi non autorizzati.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_bwEr21
-<<<<<<< .merge_file_g7ZcYm
-<<<<<<< .merge_file_ACAoVt
->>>>>>> .merge_file_CRfjCv
-=======
->>>>>>> .merge_file_d698EY
-=======
->>>>>>> .merge_file_Nv7tHY
-=======
->>>>>>> .merge_file_4AQaPh
 
 ### 📝 **Supporto Readonly Attributes**
 Nuovo supporto per attributi `readonly` negli elementi input e textarea.

@@ -3,21 +3,7 @@ title: "email testing rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_r5kdmx
-<<<<<<< .merge_file_77T6T1
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_gkJknw
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_r5kdmx
->>>>>>> .merge_file_n7qYG2
-=======
->>>>>>> .merge_file_gkJknw
 qmd: "email testing rules"
 issues: []
 discussions: []

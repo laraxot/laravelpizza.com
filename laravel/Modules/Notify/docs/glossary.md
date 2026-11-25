@@ -1,9 +1,3 @@
-<<<<<<< .merge_file_Al9o6D
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_ed1VsL
 # Glossario di dominio Notify
 
 <!-- Le parole del dominio e dove stanno nel codice. Topology di AGENTS.md punta qui.
@@ -11,10 +5,7 @@
 
 | Termine | Significato | Nel codice |
 |---|---|---|
-<<<<<<< .merge_file_Al9o6D
 | <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
-=======
->>>>>>> laraxot/dev
 ---
 title: "Glossario di dominio Notify"
 type: glossary
@@ -49,10 +40,3 @@ Percorsi relativi a `laravel/Modules/Notify/`.
 | Normalizzazione telefono | Porta un numero in formato internazionale prima dell'invio SMS. | `app/Actions/SMS/NormalizePhoneNumberAction.php` |
 | Driver SMS | Fornitore SMS selezionabile: oggi `smsfactor` nell'enum; altre Action SMS esistono per singolo fornitore. | `app/Enums/SmsDriverEnum.php`, `app/Actions/SMS/SendSmsFactorSMSAction.php` |
 | Push | Invio a dispositivo, piattaforma, topic o tutti gli utenti. | `app/Actions/Push/` (`SendPushToDeviceAction`, `SendPushToTopicAction`, `SendPushToAllUsersAction`), contratto `app/Contracts/CanReceivePushNotifications.php` |
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-| <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
->>>>>>> .merge_file_ed1VsL

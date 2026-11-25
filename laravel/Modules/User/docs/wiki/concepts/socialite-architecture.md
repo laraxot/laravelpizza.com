@@ -12,6 +12,7 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
+<<<<<<< .merge_file_msNmPv
 <<<<<<< .merge_file_zoMCeL
 <<<<<<< .merge_file_fkA0S1
 qmd: "socialite architecture googleid column rule"
@@ -20,6 +21,9 @@ qmd: "socialite architecture googleid column rule"
 =======
 qmd: "socialite architecture googleid column rule"
 >>>>>>> .merge_file_FWxtiF
+=======
+qmd: "socialite architecture googleid column rule"
+>>>>>>> .merge_file_xM8tjC
 ---
 
 # Socialite Architecture

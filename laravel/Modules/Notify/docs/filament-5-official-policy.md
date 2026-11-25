@@ -3,21 +3,7 @@ title: "🚨 FILAMENT 5 - OFFICIAL POLICY"
 type: concept
 tags: [filament, official, policy]
 created: 2026-07-14
-<<<<<<< .merge_file_Lnm2gx
-<<<<<<< .merge_file_foTfh3
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_ltyH1m
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Lnm2gx
->>>>>>> .merge_file_BuBJek
-=======
->>>>>>> .merge_file_ltyH1m
 qmd: "filament-5-official-policy 🚨 filament 5 - official policy"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -26,26 +12,14 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_Lnm2gx
-<<<<<<< .merge_file_foTfh3
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_BuBJek
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_ltyH1m
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

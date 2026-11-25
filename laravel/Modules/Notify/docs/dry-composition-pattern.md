@@ -3,21 +3,7 @@ title: "dry composition pattern"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_nuvaPg
-<<<<<<< .merge_file_ssQZFE
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_j1J5Zu
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_nuvaPg
->>>>>>> .merge_file_TYSQmu
-=======
->>>>>>> .merge_file_j1J5Zu
 qmd: "dry composition pattern"
 issues: []
 discussions: []
@@ -225,16 +211,6 @@ Prima di creare una bulk action:
 - [Actions Calling Actions Pattern](./actions-calling-actions-pattern.md) - Pattern per chiamare Actions con `app()`
 - [SendNotificationBulkAction](./send-notification-bulk-action.md) - Implementazione completa
 - [Geo Module Architectural Philosophy](../Geo/docs/architectural-philosophy.md) - Filosofia architetturale modulare
-<<<<<<< .merge_file_nuvaPg
-<<<<<<< .merge_file_ssQZFE
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_TYSQmu
-=======
->>>>>>> .merge_file_j1J5Zu
 
 ---
 
@@ -249,8 +225,3 @@ discussions: []
 **Filosofia**: "Una volta, una sola volta, in un solo posto" - DRY Principle  
 **Pattern**: Bulk Action compone Single Action  
 **Naming**: Bulk Action con plurale nel nome (Records, not Record)
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

@@ -3,15 +3,7 @@ title: "bmad gsd ralph integration"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_C0AmwU
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_kaDEJo
 qmd: "bmad gsd ralph integration"
 issues: []
 discussions: []
@@ -479,10 +471,6 @@ vendor/bin/phpstan analyse --level=10
 4. ✅ Run quality gates
 5. ✅ Commit after each phase
 6. ✅ Link documentation with viking:// URIs
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -497,8 +485,3 @@ discussions: []
 **Version**: 1.0.0  
 **Last Updated**: 2026-03-30  
 **Status**: Initial Implementation
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

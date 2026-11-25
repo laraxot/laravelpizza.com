@@ -3,21 +3,7 @@ title: "dependency injection patterns"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_3JbTLc
-<<<<<<< .merge_file_NC48XN
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_Qvcl4E
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_3JbTLc
->>>>>>> .merge_file_86mUcW
-=======
->>>>>>> .merge_file_Qvcl4E
 qmd: "dependency injection patterns"
 issues: []
 discussions: []
@@ -113,10 +99,6 @@ This approach aligns with:
 - **Clean Code Principles**: Appropriate tool for the specific use case
 - **DRY + KISS**: Simple and effective implementation
 - **Project Preferences**: Following established patterns in the codebase
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -129,14 +111,3 @@ qmd: "dependency injection patterns"
 issues: []
 discussions: []
 *Documento conforme agli standard Laraxot - DRY + KISS + SOLID*
-<<<<<<< .merge_file_3JbTLc
-<<<<<<< .merge_file_NC48XN
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_86mUcW
-=======
->>>>>>> .merge_file_Qvcl4E
