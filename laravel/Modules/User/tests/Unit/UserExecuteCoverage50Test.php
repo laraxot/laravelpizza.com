@@ -425,7 +425,6 @@ describe('User execute coverage floor 50', function (): void {
         Assert::assertSame(User::class, ShieldUtilsAction::showModelPath($resourceClass));
         Assert::assertSame(Role::class, ShieldUtilsAction::getRoleModel());
         Assert::assertSame(Permission::class, ShieldUtilsAction::getPermissionModel());
-
     });
 
     test('profile edit volt component mount inizializza stato utente', function (): void {

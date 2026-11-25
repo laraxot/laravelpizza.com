@@ -3,6 +3,7 @@ title: "Source Title"
 type: source
 sources: ["raw/articles/source-filename.md"]
 confidence: high
+<<<<<<< .merge_file_L06pWL
 created: "{{date}}"
 updated: "{{date}}"
 tags: [article, paper, documentation]
@@ -10,6 +11,18 @@ related:
   - "./concept.md"
   - "./entity.md"
 qmd: "source title"
+<<<<<<< .merge_file_vW7XsR
+=======
+>>>>>>> .merge_file_eJHA9b
+=======
+created: {{date}}
+updated: {{date}}
+tags: [article, paper, documentation]
+related:
+qmd: "source title"
+>>>>>>> .merge_file_GBwxoy
+=======
+>>>>>>> .merge_file_ApqJCI
 ---
 
 # {{title}}

@@ -16,17 +16,25 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_o6zpwa
+=======
 status: draft
+>>>>>>> .merge_file_gvbdIM
 ---
 
 # Implementazione dei Form con Widget Filament
 
 ## Collegamenti correlati
+<<<<<<< .merge_file_o6zpwa
+=======
 - [README modulo User](./README.md)
+>>>>>>> .merge_file_gvbdIM
 - [README modulo User](./readme.md)
 - [Convenzioni Path](./path-conventions-user.md)
 - [Best Practices Volt e Folio](../../xot/docs/volt_folio_best_practices.md)
 - [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error-3.md)
+<<<<<<< .merge_file_o6zpwa
+=======
 - [README modulo User](./readme.md)
 - [Convenzioni Path](./path-conventions-user.md)
 - [Best Practices Volt e Folio](../../xot/docs/volt_folio_best_practices.md)
@@ -36,6 +44,7 @@ status: draft
 - [Best Practices Volt e Folio](../../xot/docs/volt_folio_best_practices.md)
 - [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error-identificazione-dell.md)
 - [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error-3.md)
+>>>>>>> .merge_file_gvbdIM
 
 ## Introduzione
 
@@ -54,11 +63,15 @@ Per i form complessi , l'approccio raccomandato è utilizzare i widget Filament 
 ## Struttura delle Directory
 
 ```
+<<<<<<< .merge_file_o6zpwa
+/var/www/html/Quaeris/laravel/
+=======
 /var/www/html/<nome progetto>/laravel/
 /var/www/html/Quaeris/laravel/
 /var/www/html/Quaeris/laravel/
 /var/www/html/<nome progetto>/laravel/
 /var/www/html/Quaeris/laravel/
+>>>>>>> .merge_file_gvbdIM
 ├── Modules/
 │   └── User/
 │       └── app/
@@ -198,6 +211,8 @@ class LoginFormWidget extends XotBaseWidget
             ])
             ->statePath('data');
     }
+<<<<<<< .merge_file_o6zpwa
+=======
 
     public function login(): void
     {
@@ -213,6 +228,7 @@ class LoginFormWidget extends XotBaseWidget
             redirect('/' . $locale . '/dashboard');
         }
 
+>>>>>>> .merge_file_gvbdIM
     
     public function login(): void
     {
@@ -284,7 +300,11 @@ class RegisterFormWidget extends XotBaseWidget
             ])
             ->statePath('data');
     }
+<<<<<<< .merge_file_o6zpwa
+    
+=======
 
+>>>>>>> .merge_file_gvbdIM
     public function register(): void
     {
         $data = $this->form->getState();
@@ -333,7 +353,10 @@ L'utilizzo di widget Filament per l'implementazione dei form  offre un approccio
 ## Collegamenti Correlati
 - [Documentazione Filament Widgets](https://filamentphp.com/docs/3.x/panels/widgets)
 - [Best Practices di Sicurezza](./security_best_practices.md)
+<<<<<<< .merge_file_o6zpwa
+=======
 - [Gestione Sessione](./session-management-gestione-sessioni.md)
 - [Tema One Documentation](../../themes/one/docs/readme.md)
+>>>>>>> .merge_file_gvbdIM
 - [Gestione Sessione](./session-management.md)
 - [Tema One Documentation](../../themes/one/docs/README.md) 

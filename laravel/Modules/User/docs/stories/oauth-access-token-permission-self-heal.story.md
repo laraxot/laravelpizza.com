@@ -104,7 +104,7 @@ volte, stato finale stabile e confermato per iscritto qui.
 
 1. `.env.testing` usa `CACHE_DRIVER=array` (chiave Laravel <11, ignorata da `config/cache.php` che legge
    `CACHE_STORE`, default `database`). Causa fallimento silenzioso di QUALSIASI test che tocchi permission-cache
-   Spatie (tabella `cache` assente su `<nome progetto>_data_test`), non solo questo. File dichiarato generato da
+   Spatie (tabella `cache` assente su `quaeris_data_test`), non solo questo. File dichiarato generato da
    `bashscripts/tools/sync-env-testing.sh` -> non editato a mano in questo task, utente non ha ancora risposto
    se vuole che venga sistemato.
 
@@ -114,7 +114,7 @@ volte, stato finale stabile e confermato per iscritto qui.
    `.env.sqlite` (cercato per primo da `app/Application.php::environmentFile()`) non esiste su disco
    in questo repo, quindi si cade sempre su `.env.testing`. Test rieseguiti senza override CLI:
    5 passed (9 assertions). Dettagli:
-   `Modules/User/docs/stories/cache-store-env-var-test-infra.story.md`.
+   `Modules/User/docs/stories/cache-store-env-var-test-infra-2026-09-21.story.md`.
 2. `Modules/Lang/tests/Unit/Models/BaseModelTest.php` vs `Modules/Lang/tests/unit/models/BaseModelTest.php`
    (case-variant duplicate): rompe qualunque `--filter` che carichi l'intera suite configurata. Pre-esistente,
    non correlato a questo fix.

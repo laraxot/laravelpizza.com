@@ -1,4 +1,6 @@
 ---
+title: "Brainstorming — User module: findings grezzi (5 fork paralleli)"
+
 title: "Brainstorming: User module: findings grezzi (5 fork paralleli)"
 type: brainstorming
 module: User

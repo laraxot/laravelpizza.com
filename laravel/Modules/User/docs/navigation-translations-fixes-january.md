@@ -220,3 +220,4 @@ Tutte le traduzioni seguono ora la struttura espansa completa:
 
 *Intervento completato il: 2026-01-22*
 *Conforme alle regole DRY + KISS*
+*Conforme alle regole DRY + KISS*

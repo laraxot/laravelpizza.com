@@ -19,7 +19,7 @@ use function Safe\json_decode;
  * senza controllare nulla (misurato: `expect('Modules')->not->toHaveSuffix('Service')` verde con 22 Service presenti).
  * Qui si leggono i prefissi dai composer.json dei pacchetti, e `scope_is_resolvable()` verifica che Pest li veda.
  *
- * ADR: Modules/Xot/docs/adr/architecture-tests-pest-arch.md.
+ * ADR: Modules/Xot/docs/adr/0020-architecture-tests-pest-arch.md.
  */
 
 /**

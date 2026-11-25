@@ -11,7 +11,18 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_RWKkXA
+<<<<<<< .merge_file_AP7618
+<<<<<<< .merge_file_GoxhgK
 qmd: "user research 1"
+=======
+>>>>>>> .merge_file_gdiXEs
+=======
+qmd: "user research 1"
+>>>>>>> .merge_file_pW1IxH
+=======
+qmd: "user research 1"
+>>>>>>> .merge_file_sINJrf
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/USER_RESEARCH-Modules.md

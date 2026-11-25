@@ -1,8 +1,20 @@
+<<<<<<< .merge_file_2oaE5q
+<<<<<<< .merge_file_5zdCHM
+<<<<<<< .merge_file_F0omTV
+=======
+>>>>>>> .merge_file_duBfYl
 ---
 title: "Task: Spostamento Widget Violante"
 type: note
 qmd: "spostamento widget violante task"
 ---
+<<<<<<< .merge_file_2oaE5q
+=======
+>>>>>>> .merge_file_ZOSvxf
+=======
+>>>>>>> .merge_file_BBaUey
+=======
+>>>>>>> .merge_file_duBfYl
 # Task: Spostamento Widget Violante
 
 **Modulo**: User  

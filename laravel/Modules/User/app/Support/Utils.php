@@ -9,13 +9,14 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Modules\User\Contracts\HasShieldPermissions;
 use Modules\User\Datas\FilamentShieldData;
+
+use function Safe\class_implements;
+use function Safe\class_uses;
+
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Traits\HasRoles;
 use Webmozart\Assert\Assert;
-
-use function Safe\class_implements;
-use function Safe\class_uses;
 
 /**
  * ---.
@@ -37,7 +38,7 @@ class Utils
             '/',
         ));
 
-        $filesystem = new Filesystem;
+        $filesystem = new Filesystem();
 
         return $filesystem->exists($roleResourcePath);
     }

@@ -16,7 +16,7 @@ uses(TestCase::class)->group('no-xot-db');
  * Il guard PreToolUse dell'harness (.harness/bin/guard) blocca con exit 2 le azioni vietate dalle regole del
  * progetto e lascia passare tutto il resto: ogni regola ha almeno un caso che la fa scattare e uno vicino che no.
  *
- * @see Modules/Xot/docs/adr/agent-harness.md
+ * @see Modules/Xot/docs/adr/0018-agent-harness.md
  */
 
 /**

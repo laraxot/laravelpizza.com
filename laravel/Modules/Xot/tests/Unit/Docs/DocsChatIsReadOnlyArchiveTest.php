@@ -24,7 +24,7 @@ uses(TestCase::class);
  * Legge solo il filesystem: niente `TestCase` e niente database, cosi' gira anche dove il DB
  * di test non e' raggiungibile.
  *
- * @see docs/wiki/rules/agent-chat-directory.md
+ * @see bashscripts/ai/wiki/rules/11-forms/agent-chat-directory.md
  */
 
 /**

@@ -53,7 +53,6 @@ class GetViewBlocksOptionsByTypeAction
         Assert::isCallable([$fixPathAction, 'execute'], 'FixPathAction::execute deve essere chiamabile');
 
         $opts = Arr::mapWithKeys($files, function (string $path) use ($img, $type, $fixPathAction): array {
-
             // Normalizziamo il percorso
             $pathStr = $fixPathAction->execute($path);
             Assert::stringNotEmpty($pathStr, 'Il percorso normalizzato non può essere vuoto');

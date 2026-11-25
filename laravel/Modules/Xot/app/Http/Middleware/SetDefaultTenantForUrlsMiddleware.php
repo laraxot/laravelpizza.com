@@ -24,7 +24,7 @@ class SetDefaultTenantForUrlsMiddleware
     /**
      * Handle the incoming request.
      *
-     * @see Modules/Xot/docs/adr/auth-register-livewire-tenant-url-defaults.md
+     * @see Modules/Xot/docs/adr/0021-auth-register-livewire-tenant-url-defaults.md
      */
     public function handle(
         Request $request,
@@ -54,7 +54,7 @@ class SetDefaultTenantForUrlsMiddleware
     }
 
     /**
-     * @see Modules/Xot/docs/adr/auth-register-livewire-tenant-url-defaults.md
+     * @see Modules/Xot/docs/adr/0021-auth-register-livewire-tenant-url-defaults.md
      */
     private function isFrontOfficeRegistrationRequest(Request $request): bool
     {
@@ -73,7 +73,7 @@ class SetDefaultTenantForUrlsMiddleware
     }
 
     /**
-     * @see Modules/Xot/docs/adr/auth-register-livewire-tenant-url-defaults.md
+     * @see Modules/Xot/docs/adr/0021-auth-register-livewire-tenant-url-defaults.md
      */
     private function isRegistrationPath(string $path): bool
     {

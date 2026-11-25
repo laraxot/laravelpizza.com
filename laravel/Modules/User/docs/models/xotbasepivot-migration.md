@@ -9,6 +9,10 @@ related:
   - "./team.md"
   - "./teampermission.md"
   - "./xotbaivot-migration.md"
+  - "./readme.md"
+  - "./team.md"
+  - "./teampermission.md"
+  - "./xotbaivot-migration.md"
 qmd: "xotbasepivot migration"
 ---
 

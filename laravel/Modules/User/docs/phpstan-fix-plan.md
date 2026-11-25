@@ -635,6 +635,12 @@ This confirms that the project is using a version of Filament where Forms seem t
 ## Implementation
 - Search for `Grid.php`.
 - Update `OauthClientResource` imports.
+<<<<<<< .merge_file_xGM4Qv
+<<<<<<< .merge_file_iYQw6A
+<<<<<<< .merge_file_gnYkkB
+=======
+=======
+>>>>>>> .merge_file_h80Gx9
 
 
 ---
@@ -691,3 +697,9 @@ related:
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-fix-plan-2.md
+<<<<<<< .merge_file_xGM4Qv
+>>>>>>> .merge_file_xWCJfJ
+=======
+>>>>>>> .merge_file_xACIQ5
+=======
+>>>>>>> .merge_file_h80Gx9

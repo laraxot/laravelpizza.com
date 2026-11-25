@@ -3,6 +3,7 @@ title: "Entity Name"
 type: entity
 sources: ["raw/articles/source-filename.md"]
 confidence: high
+<<<<<<< .merge_file_sc1UXi
 created: "{{date}}"
 updated: "{{date}}"
 tags: [person, organization, module]
@@ -10,6 +11,18 @@ related:
   - "./concept.md"
   - "./source.md"
 qmd: "entity name"
+<<<<<<< .merge_file_VzwWld
+=======
+>>>>>>> .merge_file_lzB5yj
+=======
+created: {{date}}
+updated: {{date}}
+tags: [person, organization, module]
+related:
+qmd: "entity name"
+>>>>>>> .merge_file_ctj71R
+=======
+>>>>>>> .merge_file_qVzN6f
 ---
 
 # {{title}}

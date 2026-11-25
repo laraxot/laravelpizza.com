@@ -143,10 +143,46 @@ All widget text follows the expanded translation structure:
 ## Related Documentation
 * [User Module Widget Structure](../widgets-structure-user.md)
 * [Widget Translation Guidelines](./translation-guidelines.md)
+<<<<<<< .merge_file_Ob1W8i
+<<<<<<< .merge_file_yddQm1
+<<<<<<< .merge_file_fSNKwI
+=======
+>>>>>>> .merge_file_n88XxW
+* [Filament Widget Conventions](../best-practices/filament-widgets.md)
+* [Translation System Overview](../../xot/docs/translations.md)
+=======
+<<<<<<< HEAD
+* [Filament Widget Conventions](../../xot/docs/filament-widgets.md)
+* [Translation System Overview](../../xot/docs/translations.md)
+* [Filament Widget Conventions](../../xot/project_docs/filament-widgets.md)
+=======
+=======
+>>>>>>> .merge_file_sQEMZ7
 * [Filament Widget Conventions](../../xot/docs/filament-widgets.md)
 * [Translation System Overview](../../xot/docs/translations.md)
 * [Filament Widget Conventions](../../xot/project_docs/filament-widgets.md)
 * [Filament Widget Conventions](../best-practices/filament-widgets.md)
 * [Translation System Overview](../../xot/docs/translations.md)
 * [Filament Widget Conventions](../best-practices/filament-widgets.md)
+<<<<<<< .merge_file_Ob1W8i
+<<<<<<< .merge_file_yddQm1
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_pPMmyn
+=======
+=======
+* [Filament Widget Conventions](../../xot/docs/filament-widgets.md)
+* [Translation System Overview](../../xot/docs/translations.md)
+* [Filament Widget Conventions](../../xot/project_docs/filament-widgets.md)
+=======
+* [Filament Widget Conventions](../../xot/docs/filament-widgets.md)
+* [Translation System Overview](../../xot/docs/translations.md)
+* [Filament Widget Conventions](../../xot/project_docs/filament-widgets.md)
+=======
+* [Filament Widget Conventions](../../xot/docs/filament-widgets.md)
+* [Translation System Overview](../../xot/docs/translations.md)
+* [Filament Widget Conventions](../../xot/project_docs/filament-widgets.md)
+>>>>>>> .merge_file_n88XxW
+=======
+>>>>>>> .merge_file_sQEMZ7
 * [Translation System Overview](../../xot/project_docs/translations.md)

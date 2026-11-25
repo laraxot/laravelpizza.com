@@ -17,7 +17,7 @@ uses(TestCase::class);
  *
  * I `CLAUDE.md` sono istruzioni caricate a ogni sessione: un riferimento a un file che non
  * c'e' non produce nessun errore, non compare in nessun log, e chi lo segue conclude che
- * la regola non esiste. Trovato cosi' il 2026-09-08: `../../../../Geo/docs/root-md-files/claude.md` chiudeva la
+ * la regola non esiste. Trovato cosi' il 2026-09-08: `.claude/CLAUDE.md` chiudeva la
  * sezione «BMAD obbligatorio» con «Memoria collegata: feedback_bmad_mandatory.md», e quel
  * file non era mai stato scritto.
  *
@@ -27,8 +27,8 @@ uses(TestCase::class);
  */
 test('ogni file citato nei CLAUDE.md esiste nel repo', function (): void {
     $roots = [
-        base_path('../../../../Geo/docs/root-md-files/claude.md'),
-        base_path('../../../../Geo/docs/root-md-files/claude.md'),
+        base_path('../CLAUDE.md'),
+        base_path('../.claude/CLAUDE.md'),
         base_path('CLAUDE.md'),
     ];
 

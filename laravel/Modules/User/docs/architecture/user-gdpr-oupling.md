@@ -11,6 +11,10 @@ related:
   - "./structure.md"
   - "./testing-structure.md"
   - "./user-gdpr-decoupling.md"
+  - "./readme.md"
+  - "./structure.md"
+  - "./testing-structure.md"
+  - "./user-gdpr-decoupling.md"
 qmd: "user gdpr oupling"
 ---
 

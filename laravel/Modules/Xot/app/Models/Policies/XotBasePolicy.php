@@ -10,6 +10,8 @@ namespace Modules\Xot\Models\Policies;
 use Illuminate\Auth\Access\HandlesAuthorization;
 use Illuminate\Auth\Access\Response;
 use Modules\Xot\Contracts\UserContract;
+use Modules\Xot\Filament\Actions\Header\ExportPdfAction;
+use Modules\Xot\Filament\Actions\Header\ExportXlsAction;
 use Modules\Xot\Models\Policies\Concerns\DeniesUndeclaredFilamentAbilities;
 
 // use Modules\Xot\Datas\XotData;
@@ -54,6 +56,28 @@ abstract class XotBasePolicy
     }
 
     public function viewAny(UserContract $user): Response|bool
+    {
+        return false;
+    }
+
+    /**
+     * Export XLS della lista ({@see ExportXlsAction}).
+     *
+     * Va dichiarata qui: Laravel chiama `before()` solo se la policy ha il metodo
+     * dell'abilità (`Gate::resolvePolicyCallback`). Senza, anche super-admin e
+     * `{modulo}::admin` venivano negati e il bottone spariva da tutte le liste.
+     * Default deny; le policy ridefiniscono (anche con `?Model $model = null`).
+     */
+    public function xlsExport(UserContract $user): bool
+    {
+        return false;
+    }
+
+    /**
+     * Export PDF della lista ({@see ExportPdfAction}).
+     * Stesso motivo di {@see self::xlsExport()}.
+     */
+    public function graduatoriaPdf(UserContract $user): bool
     {
         return false;
     }

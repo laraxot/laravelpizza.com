@@ -10,7 +10,18 @@ related:
   - ./spatie-permission-table-names.md
   - ./migration-naming-religion-user.md
   - ../../../../Xot/docs/wiki/concepts/xotbase-migration-religion.md
+<<<<<<< .merge_file_PfXCAx
+<<<<<<< .merge_file_PmLtSe
+<<<<<<< .merge_file_EuBK7P
 qmd: "spatie permission migration no table name"
+=======
+>>>>>>> .merge_file_iQYX3h
+=======
+qmd: "spatie permission migration no table name"
+>>>>>>> .merge_file_4vcNZL
+=======
+qmd: "spatie permission migration no table name"
+>>>>>>> .merge_file_cgQ3gz
 ---
 
 # Migrazione pivot Spatie — mai il nome tabella nel file

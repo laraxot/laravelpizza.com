@@ -162,7 +162,7 @@
       "issue": "Duplicate/variant .md filenames",
       "examples": [
         "Lang: advanced-language-switching.md vs advanced_language_switching.md",
-        "UI: advanced-form-components.md vs advanced-form-components-2.md"
+        "UI: advanced-form-components.md vs advanced_form_components.md"
       ],
       "action": "Consolidate to single filename, update references"
     },

@@ -1,8 +1,23 @@
+<<<<<<< .merge_file_rc8abb
+<<<<<<< .merge_file_GbHZhx
+<<<<<<< .merge_file_ZMWvOG
+=======
+>>>>>>> .merge_file_udJDiV
+=======
+>>>>>>> .merge_file_6N9MCM
 ---
 title: "Logout via Volt Action"
 type: note
 qmd: "volt logout action"
 ---
+<<<<<<< .merge_file_rc8abb
+<<<<<<< .merge_file_GbHZhx
+=======
+>>>>>>> .merge_file_3Q9r4e
+=======
+>>>>>>> .merge_file_udJDiV
+=======
+>>>>>>> .merge_file_6N9MCM
 # Logout via Volt Action
 
 ## Contesto

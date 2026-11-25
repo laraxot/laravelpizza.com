@@ -1,8 +1,3 @@
----
-title: "TeamsRelationManager in User Module"
-type: note
-qmd: "teams relation manager teamsrelationmanager user"
----
 # TeamsRelationManager in User Module
 
 ## Panoramica
@@ -189,4 +184,3 @@ public function getTableActions(): array
 - [HasXotTable Trait](/laravel/modules/xot/docs/filament/xot_table.md)
 - [Regole di Traduzione per Filament](/laravel/modules/xot/docs/translation_rules.md)
 
-*Ultimo aggiornamento: 3 Giugno 2025*

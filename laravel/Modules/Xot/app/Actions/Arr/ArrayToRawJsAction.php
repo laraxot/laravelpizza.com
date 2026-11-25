@@ -36,15 +36,29 @@ class ArrayToRawJsAction
         foreach ($array as $key => $value) {
             $k = $this->jsKey((string) $key);
             if ($value instanceof RawJs) {
-                $parts[] = $k.': '.$value->toHtml();
+                $parts[] = $k.': '.$this->rawJsExpression($value);
             } elseif (is_array($value)) {
-                $parts[] = $k.': '.$this->execute($value)->toHtml();
+                /** @var array<int|string, mixed> $value */
+                $parts[] = $k.': '.$this->rawJsExpression($this->execute($value));
             } else {
                 $parts[] = $k.': '.$this->jsValue($value);
             }
         }
 
         return RawJs::make('{'.implode(', ', $parts).'}');
+    }
+
+    /**
+     * Espressione JS grezza da un RawJs.
+     *
+     * RawJs estende Illuminate\Support\Js (Htmlable + Stringable): il contenuto
+     * vive in `protected $js` ed e' esposto da __toString()/toHtml(). Si usa il
+     * cast a string (contratto Stringable) cosi' PHPStan non dipende dalla
+     * visibilita' ereditata di toHtml() sul sottotipo Filament.
+     */
+    private function rawJsExpression(RawJs $raw): string
+    {
+        return (string) $raw;
     }
 
     /** Chiave JS sicura per attributo HTML: identificatore o 'key'. */

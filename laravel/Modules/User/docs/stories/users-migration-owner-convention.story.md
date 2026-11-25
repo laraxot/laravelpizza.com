@@ -5,7 +5,18 @@ bmad: true
 status: complete
 owner: module:User
 tags: [user, migration, convention, schema]
+<<<<<<< .merge_file_ocwUq0
+<<<<<<< .merge_file_HB80df
+<<<<<<< .merge_file_wgHRku
 qmd: "users migration owner convention story user"
+=======
+>>>>>>> .merge_file_AGRIsL
+=======
+qmd: "users migration owner convention story user"
+>>>>>>> .merge_file_PVFNhX
+=======
+qmd: "users migration owner convention story user"
+>>>>>>> .merge_file_rMUzX2
 ---
 
 # User migration owner convention

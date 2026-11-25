@@ -165,7 +165,10 @@ related:
 * [bottlenecks.md](../../../xot/docs/bottlenecks.md)
 * [bottlenecks.md](../../../xot/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../xot/docs/roadmap/bottlenecks.md)
+<<<<<<< .merge_file_3CYizN
+=======
 * [bottlenecks.md](../../../user/docs/roadmap/bottlenecks.md)
+>>>>>>> .merge_file_vZM4g7
 * [bottlenecks.md](bottlenecks.md)
 * [bottlenecks.md](../../../ui/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../../Lang/docs/performance/bottlenecks.md)

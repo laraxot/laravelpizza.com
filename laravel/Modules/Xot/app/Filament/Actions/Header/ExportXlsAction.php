@@ -50,7 +50,7 @@ class ExportXlsAction extends XotBaseAction
                 return (string) __('xot::export_xls.tooltip');
             })
             ->icon('xot-files.xls')
-            // Ability tipica: policy del model della Resource; undeclared = deny; admin via before().
+            // Ability dichiarata (default deny) in XotBasePolicy: senza il metodo Laravel salta before() e nega anche super-admin.
             ->authorize('xlsExport')
             ->action(static function (ListRecords $livewire, ExportXlsAction $action) {
                 $modelClass = $livewire->getResource()::getModel();

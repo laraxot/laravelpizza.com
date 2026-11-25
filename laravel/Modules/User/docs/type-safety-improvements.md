@@ -11,7 +11,18 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_c47wD8
+<<<<<<< .merge_file_P65OKG
+<<<<<<< .merge_file_Koc2h4
 qmd: "type safety improvements"
+=======
+>>>>>>> .merge_file_YPhYbL
+=======
+qmd: "type safety improvements"
+>>>>>>> .merge_file_rBla7A
+=======
+qmd: "type safety improvements"
+>>>>>>> .merge_file_To4y5X
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/type-safety-improvements.md

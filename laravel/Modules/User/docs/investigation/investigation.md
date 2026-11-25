@@ -1,8 +1,7 @@
 ---
 type: investigation
 title: "Investigation Teams & Roles"
-links: {github_issue: "#XXX"}
-qmd: "investigation teams roles"
+links: {github_issue: #XXX}
 ---
 # Investigation: Teams & Roles
 

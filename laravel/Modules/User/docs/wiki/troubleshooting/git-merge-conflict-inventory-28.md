@@ -1,8 +1,23 @@
+<<<<<<< .merge_file_guf5EA
+<<<<<<< .merge_file_OMY7rN
+<<<<<<< .merge_file_6M2sBR
+=======
+>>>>>>> .merge_file_60dpYX
+=======
+>>>>>>> .merge_file_fdFgUi
 ---
 title: "Git Conflict Inventory"
 type: guide
 qmd: "git merge conflict inventory 28"
 ---
+<<<<<<< .merge_file_guf5EA
+<<<<<<< .merge_file_OMY7rN
+=======
+>>>>>>> .merge_file_rhPkTU
+=======
+>>>>>>> .merge_file_60dpYX
+=======
+>>>>>>> .merge_file_fdFgUi
 # Git Conflict Inventory
 
 - Date: 2026-04-28

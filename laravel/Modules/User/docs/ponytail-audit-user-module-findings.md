@@ -1,10 +1,7 @@
 ---
 title: "Ponytail-audit 2026-07-02: User module findings"
 type: audit
-status: draft
-updated: 2026-10-07
-tags: [docs, user]
-qmd: "ponytail-audit 2026-07-02: user module findings user"
+qmd: "ponytail audit user findings ponytailaudit 20260702"
 ---
 # Ponytail-audit 2026-07-02: User module findings
 
@@ -21,13 +18,19 @@ suffixed file (117 lines, an abandoned draft of a migration toward
 ## Why this is not just a style nit
 
 The `.to_xot` extension means PHP's autoloader (PSR-4, `.php` only) never loads the
+<<<<<<< .merge_file_cNcbsz
+=======
 file: it was dead weight from the moment it landed, not a currently-working
+>>>>>>> .merge_file_KsfywZ
 file — it was dead weight from the moment it landed, not a currently-working
 alternative implementation. A prior audit pass
 (`Modules/User/docs/wiki/decisions/contracts-and-lang-backup-archival-2026-06-30.md`)
 had already identified this exact file and stated it would be archived to
 `UserContract.php.to_xot.bak`, but `git log --follow` on the file shows that rename
+<<<<<<< .merge_file_cNcbsz
+=======
 was never actually committed to this module's repo: the `.to_xot` file was still
+>>>>>>> .merge_file_KsfywZ
 was never actually committed to this module's repo — the `.to_xot` file was still
 present and untouched on disk. This session deletes it outright rather than
 re-attempting the archive-as-`.bak` pattern, since the file has zero references
@@ -36,6 +39,8 @@ drafts provides no value over deletion.
 
 ## Verification performed
 
+<<<<<<< .merge_file_cNcbsz
+=======
 - `grep -rln "UserContract" Modules/ --include="*.php"`: only real hits are the
   active `Modules/User/app/Contracts/UserContract.php` (aliasing
   `Modules\Xot\Contracts\UserContract`) and its ~900 legitimate repo-wide references;
@@ -47,6 +52,7 @@ drafts provides no value over deletion.
   out of scope for this module's repo and left untouched.
 - `git status` in `Modules/User` was clean before the delete and showed exactly one
   `D app/Contracts/UserContract.php.to_xot` after: no collateral deletions.
+>>>>>>> .merge_file_KsfywZ
 - `grep -rln "UserContract" Modules/ --include="*.php"` — only real hits are the
   active `Modules/User/app/Contracts/UserContract.php` (aliasing
   `Modules\Xot\Contracts\UserContract`) and its ~900 legitimate repo-wide references;
@@ -68,7 +74,10 @@ real `UserContract.php` is untouched.
 
 - **PHPStan** (`Modules/User`): 1 pre-existing error, unrelated to this change
   (`app/Models/Traits/HasDevices.php does not exist`, referenced by
+<<<<<<< .merge_file_cNcbsz
+=======
   `phpstan.neon` path config: not touched by this session).
+>>>>>>> .merge_file_KsfywZ
   `phpstan.neon` path config — not touched by this session).
 - **PHPMD** (`Modules/User/app/Contracts`, rulesets
   cleancode/codesize/controversial/design/naming/unusedcode): zero violations.
@@ -84,6 +93,22 @@ real `UserContract.php` is untouched.
 - `Modules/User/docs/wiki/decisions/contracts-and-lang-backup-archival-2026-06-30.md`:
   prior session that first identified this file and intended (but never committed)
   an archive-as-`.bak` rename.
+<<<<<<< .merge_file_cNcbsz
+<<<<<<< .merge_file_znF7fW
+<<<<<<< HEAD
+- `Modules/Xot/docs/ponytail-audit-2.md`, `Modules/Notify/docs/ponytail-audit-2.md`:
+=======
+<<<<<<< .merge_file_3oJRH7
+=======
+>>>>>>> .merge_file_KsfywZ
 - `Modules/Xot/docs/ponytail-audit-user-module-findings.md`, `Modules/Notify/docs/ponytail-audit-user-module-findings.md`:
 - `Modules/Xot/docs/ponytail-audit-2.md`, `Modules/Notify/docs/ponytail-audit-2.md`:
+<<<<<<< .merge_file_cNcbsz
+>>>>>>> .merge_file_B3Fqns
+>>>>>>> laraxot/dev
+=======
+- `Modules/Xot/docs/ponytail-audit-2026-07-02.md`, `Modules/Notify/docs/ponytail-audit-2026-07-02.md`:
+>>>>>>> .merge_file_B2HZJH
+=======
+>>>>>>> .merge_file_KsfywZ
   sibling module findings from the same repo-wide audit pass.

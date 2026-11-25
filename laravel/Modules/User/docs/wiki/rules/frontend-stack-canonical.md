@@ -12,7 +12,18 @@ related:
   - "./navigation-properties.md"
   - "./no-filament-labels.md"
   - "./no-notifications-migration-in-user-module.md"
+<<<<<<< .merge_file_nxkzq4
+<<<<<<< .merge_file_6Nf1Vh
+<<<<<<< .merge_file_rSNMsS
 qmd: "frontend stack canonical canonico user stub"
+=======
+>>>>>>> .merge_file_NfUx0H
+=======
+qmd: "frontend stack canonical canonico user stub"
+>>>>>>> .merge_file_NXyCqi
+=======
+qmd: "frontend stack canonical canonico user stub"
+>>>>>>> .merge_file_IuskfD
 ---
 
 # Stack frontend — modulo User

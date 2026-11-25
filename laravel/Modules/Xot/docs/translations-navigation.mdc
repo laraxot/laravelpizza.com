@@ -1,7 +1,7 @@
 ---
 module: theme
 topic: translations-navigation
-canonical: ../../Lang/docs/traduzioni-navigation-3.md
+canonical: ../../../Themes/docs/shared-components/traduzioni-navigation.md
 ---
 
-See canonical documentation: ../../Lang/docs/traduzioni-navigation-3.md
+See canonical documentation: ../../../Themes/docs/shared-components/traduzioni-navigation.md

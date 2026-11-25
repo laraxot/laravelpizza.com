@@ -1,4 +1,6 @@
 ---
+title: "Perfection Plan — Module User Absolute Perfection"
+
 title: "Perfection Plan: Module User Absolute Perfection"
 type: plan
 module: User

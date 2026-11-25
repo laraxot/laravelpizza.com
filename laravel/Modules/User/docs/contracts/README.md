@@ -23,7 +23,7 @@ documentate qui. Il group Pest, se c'è, prova l'invariante
 (`vendor/bin/pest Modules/User/tests --group=<ID>`), «—» è debito dichiarato.
 
 Leggili prima di chiamare, modificare o imitare un'Action di autenticazione. Formato e regola:
-`Modules/Xot/docs/rules/action-behavioral-contract.md`; standard condiviso: [contract-authoring-standard](../../../Xot/docs/contracts/contract-authoring-standard.md), governance: [ADR 0012](../../../Xot/docs/adr/0012-behavioral-contract-governance.md).
+`Modules/Xot/docs/rules/action-behavioral-contract.md`.
 
 ## Contratto di comportamento di un'Action
 
@@ -63,7 +63,12 @@ La cartella contiene un contratto per quasi ogni Action di `app/Actions`: qui so
 
 ## Indice e template
 
+<<<<<<< .merge_file_AqARh9
 - [INDEX](index.md) — registro operativo: contratti di autenticazione con ID degli invarianti, group Pest presenti, comando per eseguirli, e le classi di `app/Actions` ancora senza contratto.
 - [Template di contratto](template.md) — scheletro con le sei sezioni e la tabella degli invarianti, da copiare per una nuova Action.
 
 I file `*.md.bak` sono copie di lavoro, non contratti.
+=======
+- [INDEX](INDEX.md) — tabella operativa operazione, contratto, classe, invarianti; è un elenco precedente a questo README e alcuni suoi nomi di file e classi non coincidono con i contratti qui sopra.
+- [Template di contratto](_template.md) — scheletro con le sei sezioni e la tabella degli invarianti, da copiare per una nuova Action.
+>>>>>>> .merge_file_MrgTaL

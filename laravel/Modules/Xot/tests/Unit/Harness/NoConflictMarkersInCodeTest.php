@@ -15,7 +15,7 @@ use function Safe\preg_match;
  * <head> e la sua Action non compilavano, in Seo la sitemap, in Geo vite.config.js; in Blog e Rating i tipi dei docblock erano doppi.
  * Source-level (niente app): deve girare proprio quando il codice non compila.
  *
- * @see Modules/Xot/docs/adr/agent-harness.md
+ * @see Modules/Xot/docs/adr/0018-agent-harness.md
  */
 
 it('keeps PHP, Blade and vite.config files free of git conflict markers', function (): void {

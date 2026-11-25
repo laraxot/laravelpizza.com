@@ -4,8 +4,8 @@ type: index
 module: Xot
 tags: [xot, wiki, index, xotbase, migrations, phpstan]
 created: 2026-10-28
-updated: 2026-10-28
-qmd: "xot module wiki index XotBase migrations phpstan filament actions pest domain ownership"
+updated: 2026-11-25
+qmd: "xot module wiki index XotBase migrations phpstan filament actions pest domain ownership docs md hygiene"
 issues:
   - "https://github.com/laraxot/module_xot_fila5/issues/28"
 discussions:
@@ -17,7 +17,7 @@ related:
   - ./concepts/second-brain-local-discipline.md  # target mancante, verificato 2026-10-14
   - ./concepts/no-domain-actions-in-xot.md  # target mancante, verificato 2026-10-14
   - ./rules/module-testcase-xotbase-hierarchy.md  # target mancante, verificato 2026-10-14
-  - ../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
+  - ../../../../../bashscripts/ai/wiki/concepts/agents-harness-tooling.md#hackernoon-ai-coding-tips-fixcity-map
   - ../../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md
   - ../../../../../docs/wiki/rules/domain-actions-belong-to-domain-module.md
 status: active
@@ -35,7 +35,7 @@ Indice operativo del wiki Xot (core framework).
 
 ## Struttura canonica (sacred)
 
-- [no-docs-archive](../../../../../bashscripts/ai/wiki/concepts/no-docs-archive-rule.md): regola Second Brain cross-modulo: niente alberi `docs/archive/`; storia wiki in `docs/wiki/_archive/`.
+- [no-docs-archive](../../../../../bashscripts/ai/wiki/concepts/modules-structure-rules.md#no-docs-archive-rule): regola Second Brain cross-modulo: niente alberi `docs/archive/`; storia wiki in `docs/wiki/_archive/`.
 
 - [module-directory-structure-rule.md](../module-directory-structure-rule.md) _(target mancante, verificato 2026-10-14)_: regola cartelle modulo (PHP solo in `app/`)
 - [concepts/](./concepts/): Pattern architetturali e metodologie Xot/Laraxot.
@@ -52,6 +52,10 @@ Indice operativo del wiki Xot (core framework).
 - [_archive/](./_archive/): Documentazione legacy.
 - [_templates/](./_templates/): Template standard.
 
+## Hygiene docs (debito misurato)
+
+- [docs-md-hygiene-debt.md](./docs-md-hygiene-debt.md): conteggi dated/frontmatter/marker/dup; campagna [docs-md-filename-date-debt](../bmad/stories/0060-docs-md-filename-date-debt.story.md)
+
 ## Regole collegate
 
 - [ai-harness-xot-discipline.md](./concepts/ai-harness-xot-discipline.md): harness agenti (canon moduli)
@@ -59,8 +63,8 @@ Indice operativo del wiki Xot (core framework).
 - [composer-root-skeleton-modular.md](./concepts/composer-root-skeleton-modular.md): root Composer minimo, merge solo `Modules/*/composer.json`
 - [pest-global-class-imports.md](./rules/pest-global-class-imports.md): nei test senza namespace rimuovere `use ReflectionClass;` e altre import globali inutili
 - [second-brain-local-discipline.md](./concepts/second-brain-local-discipline.md)
-- [hackernoon-ai-coding-tips-fixcity-map](../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md) (root)
-- [forbidden-folders-rule](../../../../docs/wiki/concepts/forbidden-folders.md): Vincoli strutturali strict.
+- [hackernoon-ai-coding-tips-fixcity-map](../../../../../bashscripts/ai/wiki/concepts/agents-harness-tooling.md#hackernoon-ai-coding-tips-fixcity-map) (root)
+- [forbidden-folders-rule](../../../../../bashscripts/ai/wiki/concepts/modules-structure-rules.md#forbidden-folders): Vincoli strutturali strict.
 - [llm-wiki-standard](../../../../docs/project/karpathy-llm-wiki-adoption.md): Mapping repository e ciclo di vita conoscenza.
 - [laraxot-core](../../../../docs/wiki/concepts/laraxot-core.md): Core XotBase classes rules.
 - [xotbase-check](../../../../docs/wiki/concepts/xotbase-check.md): Verify XotBase usage.
@@ -90,7 +94,7 @@ Core framework Laraxot: XotBase classes, Actions, PHPStan Level 10, Filament int
 | [policy-base-strategy](./concepts/policy-base-strategy.md) | Concept | Policy strategy | 2026-04-27 |
 | [policy-module-matrix](./concepts/policy-module-matrix.md) | Concept | Policy matrix | 2026-04-27 |
 | [laravel13-modular-package-compatibility-matrix](./concepts/laravel13-modular-package-compatibility-matrix.md) | Concept | Compatibilita' pacchetti modulo | 2026-04-28 |
-| [module-config-php-religion](./concepts/module-config-php-religion.md) | Concept | `config/config.php` obbligatorio per modulo | 2026-07-27 |
+| [module-config-php-religion](../../../../../bashscripts/ai/wiki/concepts/modules-structure-rules.md#module-config-php-religion) | Concept | `config/config.php` obbligatorio per modulo | 2026-07-27 |
 | [module-model-artifact-parity](./concepts/module-model-artifact-parity.md) | Concept | N modelli owner = N migrate + factory + seeder; audit cross-modulo | 2026-06-05 |
 | [module-testcase-xotbase-hierarchy](./rules/module-testcase-xotbase-hierarchy.md) | Rule | TestCase modulo -> XotBaseTestCase -> Laravel; no nWidart dev-only base | 2026-06-10 |
 | [pest-global-class-imports](./rules/pest-global-class-imports.md) | Rule | Pest: niente import inutili di classi globali (`ReflectionClass`) nei file senza namespace | 2026-06-12 |
@@ -98,7 +102,7 @@ Core framework Laraxot: XotBase classes, Actions, PHPStan Level 10, Filament int
 
 ## Best Practices
 
-- Ogni modulo Nwidart deve avere `config/config.php` (vedi [module-config-php-religion](./concepts/module-config-php-religion.md))
+- Ogni modulo Nwidart deve avere `config/config.php` (vedi [module-config-php-religion](../../../../../bashscripts/ai/wiki/concepts/modules-structure-rules.md#module-config-php-religion))
 - Usare Actions non Services (vedi [actions-over-services-governance](https://github.com/laraxot/base_fixcity_fila5/blob/main/.opencode/skills/actions-over-services-governance/SKILL.md))
 - Implementare `casts()` method non `$casts` property (vedi [custom-casts](../-integration/custom-casts.md))
 - PHPStan enforcement (vedi [PHPStan troubleshooting](../archive/_integration/phpstan.md))
@@ -127,21 +131,21 @@ Aggiornato: 2026-07-27
 
 | Argomento | Doc |
 |-----------|-----|
-| Doppia registrazione provider | [module-providers-dual-registration-mandatory.md](./concepts/module-providers-dual-registration-mandatory.md) |
+| Doppia registrazione provider | [module-providers-dual-registration-mandatory.md](../../../../../bashscripts/ai/wiki/concepts/modules-structure-rules.md#module-providers-dual-registration-mandatory) |
 | Trinità panel Filament (SSoT) | [module-filament-panel-triad.md](./concepts/module-filament-panel-triad.md) |
-| `config/config.php` | [module-config-php-religion.md](./concepts/module-config-php-religion.md) |
-| `AdminPanelProvider` + doppia registrazione | [module-admin-panel-provider-mandatory.md](./concepts/module-admin-panel-provider-mandatory.md) |
-| `Dashboard.php` | [module-dashboard-page-mandatory.md](./concepts/module-dashboard-page-mandatory.md) |
+| `config/config.php` | [modules-structure-rules.md#module-config-php-religion](../../../../../bashscripts/ai/wiki/concepts/modules-structure-rules.md#module-config-php-religion) |
+| `AdminPanelProvider` + doppia registrazione | [modules-structure-rules.md#module-admin-panel-provider-mandatory](../../../../../bashscripts/ai/wiki/concepts/modules-structure-rules.md#module-admin-panel-provider-mandatory) |
+| `Dashboard.php` | [modules-structure-rules.md#module-dashboard-page-mandatory](../../../../../bashscripts/ai/wiki/concepts/modules-structure-rules.md#module-dashboard-page-mandatory) |
 | Hub runtime cross-modulo | [runtime-config-religion-hub](../../../../Themes/docs/shared-components/runtime-config-religion-hub.md) |
 | Tenant `modules_statuses` | [tenant-module-status-registry](../../Tenant/docs/tenant-module-status-registry.md) |
 
 ## Lezioni 2026-10-06: PHPStan cleanup Xot/app
 
-- [dev-story](../stories/phpstan-cleanup-xot-app.dev.md): scopo prima dell'errore: variabili orfane = logica tolta (`RelationX`, `RouteService`), costanti tipizzate vs `composer.json` `php ^8.2`, result-cache PHPStan stale tra agenti paralleli. Story: [story](../stories/phpstan-cleanup-xot-app.story.md).
+- [dev-story](../stories/phpstan-cleanup-xot-app.dev.md): scopo prima dell'errore: variabili orfane = logica tolta (`RelationX`, `RouteService`), costanti tipizzate vs `composer.json` `php ^8.2`, result-cache PHPStan stale tra agenti paralleli. Story: [story](../stories/0034-phpstan-cleanup-xot-app-2.story.md).
 
 ## Lezioni 2026-10-06: PHPStan cleanup Xot (tests, helpers, stub Pest)
 
-- [dev-story](../stories/phpstan-cleanup-xot-rest.dev.md): test segnaposto con variabile non letta = asserzione persa; stub `Pest\Laravel\*` risolti da `tests/PestStubs.php` prima del vendor (firme intoccabili, parametri resi utili con `xotPestStubFailure()`); classe anonima annidata = PHPDoc non risolto, serve una classe nominata. Story: [story](../stories/phpstan-cleanup-xot-rest.story.md).
+- [dev-story](../stories/phpstan-cleanup-xot-rest.dev.md): test segnaposto con variabile non letta = asserzione persa; stub `Pest\Laravel\*` risolti da `tests/PestStubs.php` prima del vendor (firme intoccabili, parametri resi utili con `xotPestStubFailure()`); classe anonima annidata = PHPDoc non risolto, serve una classe nominata. Story: [story](../stories/0035-phpstan-cleanup-xot-rest-2.story.md).
 
 ## Decisioni in discussione: 2026-09-11
 

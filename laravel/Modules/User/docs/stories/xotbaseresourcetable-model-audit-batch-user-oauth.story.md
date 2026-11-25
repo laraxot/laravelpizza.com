@@ -169,9 +169,12 @@ Illuminate\Support\Facades\Schema::connection($model->getConnectionName())->getC
 
 ```bash
 cd /var/www/_bases/base_<nome progetto>_fila5/laravel
+<<<<<<< .merge_file_VwMFI2
+=======
 cd /var/www/_bases/base_quaeris_fila5/laravel
 cd /var/www/_bases/base_quaeris_fila5/laravel
 cd /var/www/_bases/base_quaeris_fila5/laravel
+>>>>>>> .merge_file_AezsPe
 cd /var/www/_bases/base_<nome progetto>_fila5/laravel
 php -l Modules/User/app/Filament/Resources/ClientResource/Tables/OauthClientsTable.php
 php -l Modules/User/app/Filament/Resources/PermissionResource/Tables/PermissionsTable.php
@@ -217,6 +220,8 @@ certezza al 100%).
 - `Schema::getColumnListing()` senza specificare la connessione del model usa la
   connessione di default (`mysql`/`<nome progetto>_data`), che in questo modulo puo'
   essere un DB diverso da quello reale del model (`user`/`<nome progetto>_user`). Va
+<<<<<<< .merge_file_VwMFI2
+=======
   connessione di default (`mysql`/`quaeris_data`), che in questo modulo puo'
   essere un DB diverso da quello reale del model (`user`/`quaeris_user`). Va
   connessione di default (`mysql`/`quaeris_data`), che in questo modulo puo'
@@ -225,6 +230,7 @@ certezza al 100%).
   essere un DB diverso da quello reale del model (`user`/`quaeris_user`). Va
   connessione di default (`mysql`/`<nome progetto>_data`), che in questo modulo puo'
   essere un DB diverso da quello reale del model (`user`/`<nome progetto>_user`). Va
+>>>>>>> .merge_file_AezsPe
   sempre passato `Schema::connection($model->getConnectionName())`, altrimenti il
   risultato e' silenziosamente sbagliato (nel caso di `features` e' risultato un
   array vuoto invece di un errore, facile da scambiare per "tabella vuota di

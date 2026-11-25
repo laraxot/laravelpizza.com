@@ -5,6 +5,7 @@ created: 2026-05-11
 updated: 2026-05-11
 tags: [structure, architecture, module]
 related:
+<<<<<<< .merge_file_eLhxV8
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
@@ -14,6 +15,14 @@ related:
   - "./actions-path-convention-convenzione-percorsi.md"
   - "../../../actions-path-convention-2.md"
 qmd: "project structure user"
+<<<<<<< .merge_file_VoSU4s
+=======
+>>>>>>> .merge_file_ojnTJK
+=======
+qmd: "project structure user"
+>>>>>>> .merge_file_MRuNZY
+=======
+>>>>>>> .merge_file_rgyohT
 ---
 
 # Project Structure — Module **User**
@@ -187,10 +196,31 @@ At module root level, these folders MUST NOT exist:
 │   │   └── *.md
 │   ├── decisions/                # Architecture decision records
 │   └── troubleshooting/          # Bug fixes, error resolutions
+<<<<<<< .merge_file_VoSU4s
+<<<<<<< .merge_file_eLhxV8
+<<<<<<< .merge_file_uuojqs
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ojnTJK
+=======
+>>>>>>> .merge_file_MRuNZY
+=======
+>>>>>>> .merge_file_rgyohT
 ├── ON-DEMAND-PATTERN.md          # 🌟 QUESTO FILE — Pattern on-demand
 ├── qmd-setup-3.md                  # Configurazione QMD
 ├── PERFORMANCE-OPTIMIZATION.md    # Metriche e best practice
 ├── ARCHITECTURE.md               # (opzionale) Architettura modulo
+<<<<<<< .merge_file_VoSU4s
+<<<<<<< .merge_file_eLhxV8
+<<<<<<< .merge_file_uuojqs
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_ojnTJK
+=======
+>>>>>>> .merge_file_MRuNZY
+=======
+>>>>>>> .merge_file_rgyohT
 ├── on-demand-pattern.md          # 🌟 QUESTO FILE — Pattern on-demand
 ├── qmd-setup-3.md                  # Configurazione QMD
 ├── performance-optimization.md    # Metriche e best practice
@@ -206,8 +236,28 @@ At module root level, these folders MUST NOT exist:
 | `wiki/log.md` | Storico attività (ingest/query/lint) |
 | `wiki/rules/` | Regole + trigger map locale |
 | `wiki/concepts/` | Concetti specifici del modulo |
+<<<<<<< .merge_file_VoSU4s
+<<<<<<< .merge_file_eLhxV8
+<<<<<<< .merge_file_uuojqs
+| `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
+=======
+<<<<<<< HEAD
+| `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_rgyohT
 | `ON-DEMAND-PATTERN.md` | **Leggi prima** — pattern da seguire |
 | `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
+<<<<<<< .merge_file_VoSU4s
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_ojnTJK
+=======
+| `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
+>>>>>>> .merge_file_MRuNZY
+=======
+>>>>>>> .merge_file_rgyohT
 
 ## Convenzioni
 

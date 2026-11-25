@@ -1,8 +1,24 @@
+<<<<<<< .merge_file_oVpwVK
+<<<<<<< .merge_file_nluyRt
+<<<<<<< .merge_file_2pz136
+=======
+>>>>>>> .merge_file_g7cCqG
+=======
+>>>>>>> .merge_file_ObQQdl
 ---
 title: "Task: User Docs Cleanup"
 type: note
 qmd: "user cleanup task"
 ---
+<<<<<<< .merge_file_oVpwVK
+<<<<<<< .merge_file_nluyRt
+=======
+>>>>>>> .merge_file_lxRTSt
+=======
+
+>>>>>>> .merge_file_g7cCqG
+=======
+>>>>>>> .merge_file_ObQQdl
 # Task: User Docs Cleanup
 
 ## 📋 Obiettivo
@@ -20,4 +36,4 @@ Riorganizzare la mastodontica cartella docs del modulo User (550+ file) che cont
 - [ ] Spostamento massivo in `archive/` di analisi risalenti al 2024 o precedenti.
 
 ## 🔗 Riferimenti
-- [Index Documentazione](../README.md)
+- [Index Documentazione](../00-index.md)

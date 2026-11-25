@@ -16,7 +16,10 @@ updated_at: 2026-09-21
 tags: [testing, cache, phpunit, spatie-permission, env]
 related:
   - Modules/User/docs/stories/10.3.retire-auth-livewire-twins.story.md
+<<<<<<< .merge_file_9qIvAB
+=======
   - Modules/User/docs/stories/dashboard-lang-collateral-damage.story.md
+>>>>>>> .merge_file_aaKYCe
   - Modules/User/docs/stories/dashboard-lang-collateral-damage-2026-09-21.story.md
 github:
   repository: null
@@ -34,7 +37,10 @@ Durante verifica del fix concorrente su `HasSpatiePermission::hasPermissionToOrC
 
 ```
 QueryException: SQLSTATE[42S02]: Base table or view not found:
+<<<<<<< .merge_file_9qIvAB
+=======
 1146 Table '<nome progetto>_data_test.cache' doesn't exist
+>>>>>>> .merge_file_aaKYCe
 1146 Table 'quaeris_data_test.cache' doesn't exist
 ```
 
@@ -42,16 +48,22 @@ QueryException: SQLSTATE[42S02]: Base table or view not found:
 
 - `config/cache.php:19` → `'default' => env('CACHE_STORE', 'database')`. Legge **solo**
   `CACHE_STORE`. Non legge `CACHE_DRIVER` (nome deprecato, pre-Laravel 11).
+<<<<<<< .merge_file_9qIvAB
+=======
 - `phpunit.xml` impostava `<env name="CACHE_DRIVER" value="array" />`: nessun effetto,
+>>>>>>> .merge_file_aaKYCe
 - `phpunit.xml` impostava `<env name="CACHE_DRIVER" value="array" />` — nessun effetto,
   var mai letta.
 - `APP_ENV=testing` → `app/Application.php::environmentFile()` cerca prima `.env.sqlite`
   poi `.env.testing`. Verificato: **`.env.sqlite` non esiste** su disco (`ls` → No such
   file or directory). Carica quindi `.env.testing`, che a sua volta ha
+<<<<<<< .merge_file_9qIvAB
+=======
   `CACHE_DRIVER=array` (riga 48): stesso bug, stesso nome sbagliato.
 - Risultato: nessuna delle due fonti setta `CACHE_STORE`. Laravel ripiega sul default
   `'database'`, che richiede la tabella `cache` (migration standard Laravel): assente
   da `<nome progetto>_data_test`.
+>>>>>>> .merge_file_aaKYCe
   `CACHE_DRIVER=array` (riga 48) — stesso bug, stesso nome sbagliato.
 - Risultato: nessuna delle due fonti setta `CACHE_STORE`. Laravel ripiega sul default
   `'database'`, che richiede la tabella `cache` (migration standard Laravel) — assente
@@ -71,7 +83,10 @@ Aggiunta riga in `phpunit.xml` (`CACHE_DRIVER` lasciata per compatibilità, inno
 ```
 
 `<env>` in phpunit.xml è settato prima del boot Laravel (via `putenv`/`$_ENV`), quindi
+<<<<<<< .merge_file_9qIvAB
+=======
 vince su qualsiasi valore in `.env.testing`: non serve toccare quel file.
+>>>>>>> .merge_file_aaKYCe
 vince su qualsiasi valore in `.env.testing` — non serve toccare quel file.
 
 ## Verifica
@@ -84,13 +99,19 @@ Prima del fix: 3/5 test falliti su `QueryException` tabella `cache` mancante (by
 solo con `CACHE_STORE=array` via CLI, non persistito).
 Dopo il fix (nessun override CLI): **5 passed (9 assertions)**.
 
+<<<<<<< .merge_file_9qIvAB
+=======
 Nota tooling: `XDEBUG_MODE=off` fa uscire Pest senza eseguire nulla (silenzioso): vedi
+>>>>>>> .merge_file_aaKYCe
 Nota tooling: `XDEBUG_MODE=off` fa uscire Pest senza eseguire nulla (silenzioso) — vedi
 memoria `pest-coverage-xdebug-mode-coverage-non-off.md`. Serve `XDEBUG_MODE=coverage`.
 
 ## Feature verificata di sponda (non mia, sessione concorrente)
 
+<<<<<<< .merge_file_9qIvAB
+=======
 `Modules\User\Models\Traits\HasSpatiePermission::hasPermissionToOrCreate()`: wrapper
+>>>>>>> .merge_file_aaKYCe
 `Modules\User\Models\Traits\HasSpatiePermission::hasPermissionToOrCreate()` — wrapper
 che auto-crea il permesso mancante (`Permission::findOrCreate`) invece di lasciar
 esplodere `PermissionDoesNotExist`, poi richiama `hasPermissionTo()` normale. Usato in
@@ -99,10 +120,13 @@ tutti e 7 i metodi di `OauthAccessTokenPolicy`. Codice e uso confermati corretti
 
 ## Reperto collaterale: dead code già rimosso
 
+<<<<<<< .merge_file_9qIvAB
+=======
 `Modules/User/app/Actions/Permission/EnsurePermissionExistsAction.php`: Action ormai
 bypassata dal refactor sopra (che chiama `Permission::findOrCreate()` diretto). Grep
 repo-wide conferma zero riferimenti. Il file risulta già `D` (deleted, non committato)
 in `git status`: cancellato dalla sessione concorrente, non da me. Nessuna azione
+>>>>>>> .merge_file_aaKYCe
 `Modules/User/app/Actions/Permission/EnsurePermissionExistsAction.php` — Action ormai
 bypassata dal refactor sopra (che chiama `Permission::findOrCreate()` diretto). Grep
 repo-wide conferma zero riferimenti. Il file risulta già `D` (deleted, non committato)
@@ -111,7 +135,10 @@ necessaria.
 
 ## File toccati da me in questa story
 
+<<<<<<< .merge_file_9qIvAB
+=======
 - `phpunit.xml`: +1 riga (`CACHE_STORE`)
+>>>>>>> .merge_file_aaKYCe
 - `phpunit.xml` — +1 riga (`CACHE_STORE`)
 
 ## Non toccato (fuori scope, di altre sessioni)

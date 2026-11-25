@@ -130,10 +130,26 @@ diverse da quella di default (`protected $connection = 'user'` → DB fisico
 `quaeris_data` ma schema separato). Un primo giro di verifica fatto con
 `quaeris_user`; `'quaeris'` per il model `Profile` concreto → DB
 `quaeris_data` ma schema separato). Un primo giro di verifica fatto con
+<<<<<<< .merge_file_n6fheb
+=======
+=======
+>>>>>>> .merge_file_rwBNCd
 `quaeris_user`; `'quaeris'` per il model `Profile` concreto → DB
 `quaeris_data` ma schema separato). Un primo giro di verifica fatto con
 `<nome progetto>_user`; `'<nome progetto>'` per il model `Profile` concreto → DB
 `<nome progetto>_data` ma schema separato). Un primo giro di verifica fatto con
+<<<<<<< .merge_file_n6fheb
+=======
+`quaeris_user`; `'quaeris'` per il model `Profile` concreto → DB
+`quaeris_data` ma schema separato). Un primo giro di verifica fatto con
+=======
+`quaeris_user`; `'quaeris'` per il model `Profile` concreto → DB
+`quaeris_data` ma schema separato). Un primo giro di verifica fatto con
+=======
+`quaeris_user`; `'quaeris'` per il model `Profile` concreto → DB
+`quaeris_data` ma schema separato). Un primo giro di verifica fatto con
+=======
+>>>>>>> .merge_file_rwBNCd
 `Schema::getColumnListing()` (connection di default, senza specificarla) ha
 prodotto **8 falsi positivi** (`grant_types`, `redirect_uris`, `owner_id`,
 `owner_type` su `oauth_clients`; `is_otp`, `type`, `state`,
@@ -167,9 +183,12 @@ BaseUsersTable, ClientsTable.
 - `BaseProfilesTable.php`: `user.name` (relazione, non verificabile via
   Schema, saltata). `first_name`/`last_name`/`email` presenti su
   `Schema::connection('<nome progetto>')->getColumnListing('profiles')`. `is_active`
+<<<<<<< .merge_file_n6fheb
+=======
   `Schema::connection('quaeris')->getColumnListing('profiles')`. `is_active`
   `Schema::connection('quaeris')->getColumnListing('profiles')`. `is_active`
   `Schema::connection('quaeris')->getColumnListing('profiles')`. `is_active`
+>>>>>>> .merge_file_rwBNCd
   `Schema::connection('<nome progetto>')->getColumnListing('profiles')`. `is_active`
   **non presente** sul DB dev corrente via la connection corretta, ma
   verificato come intenzionale: `$fillable`

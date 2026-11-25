@@ -7,7 +7,18 @@ tags: [skills, index, on-demand]
 related:
   - ../rules/00-TRIGGER_MAP.md
   - ../rules/on-demand-pattern.md
+<<<<<<< .merge_file_7gboSK
+<<<<<<< .merge_file_9XgN31
+<<<<<<< .merge_file_QXMxkE
 qmd: "skills"
+=======
+>>>>>>> .merge_file_hodL3F
+=======
+qmd: "skills"
+>>>>>>> .merge_file_JfFWIk
+=======
+qmd: "skills"
+>>>>>>> .merge_file_wHAtNr
 ---
 
 # Skills Index

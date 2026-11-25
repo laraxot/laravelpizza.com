@@ -16,8 +16,7 @@ use Modules\UI\Filament\Tables\Columns\IDColumn;
  * @phpstan-ignore trait.unused
  */
 trait HasTableFunctionsTrait // @phpstan-ignore trait.unused
-{
-    /**
+{/**
      * Get the table columns for the list view.
      *
      * @return array<string, Column>

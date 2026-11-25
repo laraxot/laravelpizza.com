@@ -43,6 +43,7 @@ trait HasCommonScopes
      *
      * @param  Builder<TModel>  $query
      * @return Builder<TModel>
+     *
      * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
      */
     public function scopeActive(Builder $query): Builder
@@ -55,6 +56,7 @@ trait HasCommonScopes
      *
      * @param  Builder<TModel>  $query
      * @return Builder<TModel>
+     *
      * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
      */
     public function scopeInactive(Builder $query): Builder
@@ -69,6 +71,7 @@ trait HasCommonScopes
      *
      * @param  Builder<TModel>  $query
      * @return Builder<TModel>
+     *
      * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
      */
     public function scopePublished(Builder $query): Builder
@@ -84,6 +87,7 @@ trait HasCommonScopes
      *
      * @param  Builder<TModel>  $query
      * @return Builder<TModel>
+     *
      * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
      */
     public function scopeDraft(Builder $query): Builder
@@ -99,6 +103,7 @@ trait HasCommonScopes
      *
      * @param  Builder<TModel>  $query
      * @return Builder<TModel>
+     *
      * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
      */
     public function scopeCreatedAfter(Builder $query, \DateTimeInterface|string|int $date): Builder
@@ -111,6 +116,7 @@ trait HasCommonScopes
      *
      * @param  Builder<TModel>  $query
      * @return Builder<TModel>
+     *
      * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
      */
     public function scopeCreatedBefore(Builder $query, \DateTimeInterface|string|int $date): Builder
@@ -123,6 +129,7 @@ trait HasCommonScopes
      *
      * @param  Builder<TModel>  $query
      * @return Builder<TModel>
+     *
      * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
      */
     public function scopeUpdatedAfter(Builder $query, \DateTimeInterface|string|int $date): Builder
@@ -135,6 +142,7 @@ trait HasCommonScopes
      *
      * @param  Builder<TModel>  $query
      * @return Builder<TModel>
+     *
      * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
      */
     public function scopeCreatedBy(Builder $query, string|int $userId): Builder

@@ -1,8 +1,23 @@
+<<<<<<< .merge_file_kSTXG5
+<<<<<<< .merge_file_59iViG
+<<<<<<< .merge_file_rU8nWc
+=======
+>>>>>>> .merge_file_LOUUmX
+=======
+>>>>>>> .merge_file_5mw5Qc
 ---
 title: "Errore VoltDirectiveMissingException"
 type: note
 qmd: "volt missing directive errore voltdirectivemissingexception"
 ---
+<<<<<<< .merge_file_kSTXG5
+<<<<<<< .merge_file_59iViG
+=======
+>>>>>>> .merge_file_V75Kp4
+=======
+>>>>>>> .merge_file_LOUUmX
+=======
+>>>>>>> .merge_file_5mw5Qc
 # Errore VoltDirectiveMissingException
 
 ## Descrizione

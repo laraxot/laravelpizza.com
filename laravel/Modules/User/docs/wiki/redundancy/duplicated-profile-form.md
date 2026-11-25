@@ -9,7 +9,18 @@ related:
   - "./duplicated-ratings-relation-manager.md"
   - "./duplicated-users-relation-manager.md"
   - "./oauth-dual-resource-trees.md"
+<<<<<<< .merge_file_r5AXfu
+<<<<<<< .merge_file_kRY3TP
+<<<<<<< .merge_file_bFpDrl
 qmd: "duplicated profile form profileform oauth forms"
+=======
+>>>>>>> .merge_file_zBM5ef
+=======
+qmd: "duplicated profile form profileform oauth forms"
+>>>>>>> .merge_file_IKtKTN
+=======
+qmd: "duplicated profile form profileform oauth forms"
+>>>>>>> .merge_file_dt1Uny
 ---
 
 # Duplicated ProfileForm and OAuth Forms (User Module)

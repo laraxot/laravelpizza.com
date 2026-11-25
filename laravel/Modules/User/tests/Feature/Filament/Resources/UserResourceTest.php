@@ -86,7 +86,11 @@ function userResourceFormFindByName(array $components, string $name): Field|Entr
         }
 
         $found = userResourceFormFindByName(userResourceFormChildren($component), $name);
+<<<<<<< .merge_file_ZseMpJ
         if ($found !== null) {
+=======
+        if (null !== $found) {
+>>>>>>> .merge_file_QdZsK8
             return $found;
         }
     }
@@ -132,6 +136,7 @@ describe('User Resource', function (): void {
     });
 
     test('user resource has correct form schema', function (): void {
+<<<<<<< .merge_file_ZseMpJ
         $form = userResourceFormSchema();
 
         Assert::assertCount(1, $form);
@@ -161,6 +166,31 @@ describe('User Resource', function (): void {
             TextEntry::class,
             userResourceFormFindByName(userResourceFormChildren($recordInfo), 'created_at'),
         );
+=======
+        /** @var TestCase $this */
+        $form = userResourceFormSchema();
+
+        Assert::assertArrayHasKey('section01', $form);
+        Assert::assertArrayHasKey('section02', $form);
+        $section01 = $form['section01'];
+        Assert::assertInstanceOf(Section::class, $section01);
+        $section01Schema = userResourceSectionComponents($this, $section01);
+        Assert::assertGreaterThanOrEqual(1, count($section01Schema));
+
+        $hasNameOrEmail = collect($section01Schema)->contains(
+            fn (Component|Action|ActionGroup $component, int $index): bool => $component instanceof Field
+                && in_array($component->getName(), ['name', 'email', 'password'], true)
+        );
+        Assert::assertTrue($hasNameOrEmail);
+        $section02 = $form['section02'];
+        Assert::assertInstanceOf(Section::class, $section02);
+        $section02Schema = userResourceSectionComponents($this, $section02);
+        Assert::assertGreaterThanOrEqual(1, count($section02Schema));
+
+        $createdAtField = userResourceFindComponentByName($section02Schema, 'created_at');
+        Assert::assertNotNull($createdAtField);
+        Assert::assertInstanceOf(TextEntry::class, $createdAtField);
+>>>>>>> .merge_file_QdZsK8
     });
 
     test('user resource has combined relation manager tabs', function (): void {
@@ -172,6 +202,7 @@ describe('User Resource', function (): void {
     });
 
     test('user resource form schema has correct column spans', function (): void {
+<<<<<<< .merge_file_ZseMpJ
         $root = userResourceFormSchema()[0];
         Assert::assertInstanceOf(Grid::class, $root);
         $columns = userResourceFormChildren($root);
@@ -219,6 +250,69 @@ describe('User Resource', function (): void {
 
     test('user resource password field has correct type', function (): void {
         $passwordField = userResourceFormFindByName(userResourceFormSchema(), 'password');
+=======
+        $form = userResourceFormSchema();
+
+        $section01 = $form['section01'];
+        $section02 = $form['section02'];
+
+        Assert::assertInstanceOf(Section::class, $section01);
+        Assert::assertInstanceOf(Section::class, $section02);
+    });
+
+    test('user resource name field is required', function (): void {
+        /** @var TestCase $this */
+        $form = userResourceFormSchema();
+        $section01 = $form['section01'];
+        $section01Schema = userResourceSectionComponents($this, $section01);
+
+        $nameField = userResourceFindComponentByName($section01Schema, 'name');
+
+        if ($nameField === null) {
+            $this->skipTest('name field not found in section01 schema');
+        }
+
+        Assert::assertInstanceOf(TextInput::class, $nameField);
+    });
+
+    test('user resource email field is required', function (): void {
+        /** @var TestCase $this */
+        $form = userResourceFormSchema();
+        $section01 = $form['section01'];
+        $section01Schema = userResourceSectionComponents($this, $section01);
+
+        $emailField = userResourceFindComponentByName($section01Schema, 'email');
+
+        if ($emailField === null) {
+            $this->skipTest('email field not found in section01 schema');
+        }
+
+        Assert::assertInstanceOf(TextInput::class, $emailField);
+    });
+
+    test('user resource password field is required only on create', function (): void {
+        /** @var TestCase $this */
+        $form = userResourceFormSchema();
+        $section01 = $form['section01'];
+        $section01Schema = userResourceSectionComponents($this, $section01);
+
+        $passwordField = userResourceFindComponentByName($section01Schema, 'password');
+
+        if ($passwordField === null) {
+            $this->skipTest('password field not found in section01 schema');
+        }
+
+        Assert::assertInstanceOf(TextInput::class, $passwordField);
+    });
+
+    test('user resource password field has correct type', function (): void {
+        /** @var TestCase $this */
+        $form = userResourceFormSchema();
+        $section01 = $form['section01'];
+        $section01Schema = userResourceSectionComponents($this, $section01);
+
+        $passwordField = userResourceFindComponentByName($section01Schema, 'password');
+>>>>>>> .merge_file_QdZsK8
 
         Assert::assertNotNull($passwordField);
         Assert::assertInstanceOf(TextInput::class, $passwordField);
@@ -226,6 +320,7 @@ describe('User Resource', function (): void {
     });
 
     test('user resource email field has unique validation', function (): void {
+<<<<<<< .merge_file_ZseMpJ
         $emailField = userResourceFormFieldOnPage('email', new CreateUser);
         Assert::assertInstanceOf(TextInput::class, $emailField);
 
@@ -246,6 +341,35 @@ describe('User Resource', function (): void {
 
         Assert::assertInstanceOf(TextEntry::class, $createdAtField);
         Assert::assertSame($createdAt->diffForHumans(), $createdAtField->getState());
+=======
+        /** @var TestCase $this */
+        $form = userResourceFormSchema();
+        $section01 = $form['section01'];
+        $section01Schema = userResourceSectionComponents($this, $section01);
+
+        $emailField = userResourceFindComponentByName($section01Schema, 'email');
+
+        if ($emailField === null) {
+            $this->skipTest('email field not found in section01 schema');
+        }
+
+        Assert::assertInstanceOf(TextInput::class, $emailField);
+    });
+
+    test('user resource created at field shows diff for humans', function (): void {
+        /** @var TestCase $this */
+        $form = userResourceFormSchema();
+        $section02 = $form['section02'];
+        $section02Schema = userResourceSectionComponents($this, $section02);
+
+        $createdAtField = userResourceFindComponentByName($section02Schema, 'created_at');
+
+        if ($createdAtField === null) {
+            $this->skipTest('created_at field not found in section02 schema');
+        }
+
+        Assert::assertInstanceOf(TextEntry::class, $createdAtField);
+>>>>>>> .merge_file_QdZsK8
     });
 
     test('user resource can be instantiated', function (): void {

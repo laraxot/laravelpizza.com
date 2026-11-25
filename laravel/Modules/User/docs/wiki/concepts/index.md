@@ -4,7 +4,18 @@ type: index
 tags: [concepts, User]
 created: 2026-05-11
 updated: 2026-08-19
+<<<<<<< .merge_file_6i3OYM
+<<<<<<< .merge_file_3bSy2a
+<<<<<<< .merge_file_CK6gqS
 qmd: "concepts user"
+=======
+>>>>>>> .merge_file_LFo0ZZ
+=======
+qmd: "concepts user"
+>>>>>>> .merge_file_buNQll
+=======
+qmd: "concepts user"
+>>>>>>> .merge_file_hLMP3H
 ---
 
 # concepts Index — User
@@ -25,6 +36,11 @@ Concetti specifici del modulo User. Carica on-demand via `qmd search` o consulta
 - [filament-widget-no-validate-form](../../llm-wiki/concepts/filament-widget-no-validate-form.md) — validazione solo in `UserForm`; submit = `getState()`, no `validateForm()`
 - [filament-widget-linear-crud-model-create](filament-widget-linear-crud-model-create.md) — `getUserClass()::create($data)`, no Action banale
 - [filament-widget-resource-form-delegation](filament-widget-resource-form-delegation.md) — widget → `UserForm::get*FormSchema()`
+<<<<<<< .merge_file_6i3OYM
+<<<<<<< .merge_file_3bSy2a
+=======
+=======
+>>>>>>> .merge_file_hLMP3H
 - [filament-widget-no-validate-form](filament-widget-no-validate-form.md) — validazione solo in `UserForm`; submit = `getState()`, no `validateForm()`
 - [filament-widget-linear-crud-model-create](filament-widget-linear-crud-model-create.md) — `getUserClass()::create($data)`, no Action banale
 - [filament-widget-resource-form-delegation](filament-widget-resource-form-delegation.md) — widget → `UserForm::get*FormSchema()`
@@ -33,6 +49,12 @@ Concetti specifici del modulo User. Carica on-demand via `qmd search` o consulta
 - [filament-widget-linear-crud-model-create](filament-widget-linear-crud-model-create.md): `getUserClass()::create($data)`, no Action banale
 - [filament-widget-resource-form-delegation](filament-widget-resource-form-delegation.md): widget → `UserForm::get*FormSchema()`
 
+<<<<<<< .merge_file_6i3OYM
+>>>>>>> .merge_file_LFo0ZZ
+=======
+>>>>>>> .merge_file_buNQll
+=======
+>>>>>>> .merge_file_hLMP3H
 
 ## Testing
 

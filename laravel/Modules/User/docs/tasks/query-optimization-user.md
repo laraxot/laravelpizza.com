@@ -1,8 +1,20 @@
+<<<<<<< .merge_file_F3K46T
+<<<<<<< .merge_file_NLhk4U
+<<<<<<< .merge_file_ty6JZ3
+=======
+>>>>>>> .merge_file_Ami1Vm
 ---
 title: "Task: Query Optimization User"
 type: note
 qmd: "query optimization user task"
 ---
+<<<<<<< .merge_file_F3K46T
+=======
+>>>>>>> .merge_file_UuT7E7
+=======
+>>>>>>> .merge_file_JRFO5z
+=======
+>>>>>>> .merge_file_Ami1Vm
 # Task: Query Optimization User
 
 **Modulo**: User  

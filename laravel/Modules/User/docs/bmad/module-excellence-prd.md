@@ -1,4 +1,6 @@
 ---
+title: "PRD — User module: percorso verso la perfezione assoluta"
+
 title: "PRD: User module: percorso verso la perfezione assoluta"
 type: prd
 module: User

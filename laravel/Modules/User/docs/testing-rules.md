@@ -1,8 +1,23 @@
+<<<<<<< .merge_file_Vn5UVu
+<<<<<<< .merge_file_DbcsFQ
+<<<<<<< .merge_file_Jeo3nP
+=======
+>>>>>>> .merge_file_msdh6a
+=======
+>>>>>>> .merge_file_uSbgGh
 ---
 title: "Testing Rules & Strategy"
 type: rule
 qmd: "testing rules strategy"
 ---
+<<<<<<< .merge_file_Vn5UVu
+<<<<<<< .merge_file_DbcsFQ
+=======
+>>>>>>> .merge_file_5LgLpK
+=======
+>>>>>>> .merge_file_msdh6a
+=======
+>>>>>>> .merge_file_uSbgGh
 # Testing Rules & Strategy
 
 ## Strict Guidelines (Super Mucca / Laraxot)

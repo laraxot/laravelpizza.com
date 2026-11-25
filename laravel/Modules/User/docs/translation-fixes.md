@@ -11,7 +11,18 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_nIK0sQ
+<<<<<<< .merge_file_91Kn8W
+<<<<<<< .merge_file_qHdEw7
 qmd: "translation fixes"
+=======
+>>>>>>> .merge_file_cjI0pT
+=======
+qmd: "translation fixes"
+>>>>>>> .merge_file_Xdnbby
+=======
+qmd: "translation fixes"
+>>>>>>> .merge_file_J6JqqY
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/translation-fixes.md

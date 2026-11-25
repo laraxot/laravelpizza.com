@@ -1,4 +1,6 @@
 ---
+title: "Brainstorming — Perfezione assoluta del modulo User"
+
 title: "Brainstorming: Perfezione assoluta del modulo User"
 type: brainstorming
 module: User

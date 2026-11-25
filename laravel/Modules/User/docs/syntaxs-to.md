@@ -11,7 +11,18 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_wHODDZ
+<<<<<<< .merge_file_8zvbSe
+<<<<<<< .merge_file_FyiakU
 qmd: "syntaxs to"
+=======
+>>>>>>> .merge_file_UuZdjF
+=======
+qmd: "syntaxs to"
+>>>>>>> .merge_file_BhNUWF
+=======
+qmd: "syntaxs to"
+>>>>>>> .merge_file_EqPX0L
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/syntax-errors-to-fix.md

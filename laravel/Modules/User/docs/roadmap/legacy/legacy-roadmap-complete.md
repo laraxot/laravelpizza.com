@@ -1,8 +1,3 @@
----
-title: "🗺️ ROADMAP COMPLETA - Modulo User"
-type: note
-qmd: "legacy roadmap complete completa user"
----
 # 🗺️ ROADMAP COMPLETA - Modulo User
 
 ## 📊 Business Logic

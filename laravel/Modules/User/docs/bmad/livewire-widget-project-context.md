@@ -1,4 +1,6 @@
 ---
+title: "Project context — solo Filament widget"
+
 title: "Project context: solo Filament widget"
 type: constitution
 module: User

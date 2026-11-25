@@ -12,6 +12,8 @@ qmd: "phpstan-fixes-gennaio-2025-complete alias superseded"
 Canonico: [`./phpstan-fixes-gennaio-complete.md`](./phpstan-fixes-gennaio-complete.md).
 
 Questo path resta solo per link storici; non aggiungere contenuto qui.
+<<<<<<< .merge_file_LChncJ
+=======
 module: theme
 topic: phpstan-fixes-gennaio-2025-complete
 canonical: ../../../Themes/docs/shared-components/phpstan-fixes-gennaio-2025-complete.md
@@ -27,3 +29,4 @@ related:
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-fixes-gennaio-2025-complete.md
+>>>>>>> .merge_file_PUoDEB

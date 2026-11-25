@@ -1,8 +1,23 @@
+<<<<<<< .merge_file_pse5FQ
+<<<<<<< .merge_file_VWnYrp
+<<<<<<< .merge_file_vNTMcn
+=======
+>>>>>>> .merge_file_6sSF1F
+=======
+>>>>>>> .merge_file_mrrgTS
 ---
 title: "Fix Binding Team Models nel Modulo User"
 type: note
 qmd: "team bindings fix binding models user"
 ---
+<<<<<<< .merge_file_pse5FQ
+<<<<<<< .merge_file_VWnYrp
+=======
+>>>>>>> .merge_file_JyJY7K
+=======
+>>>>>>> .merge_file_6sSF1F
+=======
+>>>>>>> .merge_file_mrrgTS
 # Fix Binding Team Models nel Modulo User
 
 ## Panoramica

@@ -1,10 +1,10 @@
 ---
-title: "index"
-type: note
+title: "Xot: indice concepts wiki"
+type: index
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "index"
+qmd: "xot concepts indice wiki asset pubblici symlink moduli skeleton provider panel migrazioni filament phpstan"
 issues: []
 discussions: []
 ---
@@ -29,10 +29,10 @@ qmd search "Xot concepts" --limit 5
 - [module-theme-root-hygiene.md](./module-theme-root-hygiene.md) — root lowercase, workspace, IDE folders vietate
 - [module-providers-dual-registration-mandatory.md](./module-providers-dual-registration-mandatory.md) — **min 2 provider** in `module.json` + `composer.json`
 - [module-filament-panel-triad.md](./module-filament-panel-triad.md) — **SSoT** trinità panel
-- [module-config-php-religion.md](./module-config-php-religion.md) — **obbligatorio** `Modules/{M}/config/config.php`
+- [modules-structure-rules.md#module-config-php-religion](../../../../../../bashscripts/ai/wiki/concepts/modules-structure-rules.md#module-config-php-religion) — **obbligatorio** `Modules/{M}/config/config.php`
 - [module-config-icon-svg.md](./module-config-icon-svg.md) — `resources/svg/icon.svg` → `{alias}-icon`
-- [module-admin-panel-provider-mandatory.md](./module-admin-panel-provider-mandatory.md) — `AdminPanelProvider` + doppia registrazione
-- [module-dashboard-page-mandatory.md](./module-dashboard-page-mandatory.md) — **obbligatorio** `app/Filament/Pages/Dashboard.php`
+- [modules-structure-rules.md#module-admin-panel-provider-mandatory](../../../../../../bashscripts/ai/wiki/concepts/modules-structure-rules.md#module-admin-panel-provider-mandatory) — `AdminPanelProvider` + doppia registrazione
+- [modules-structure-rules.md#module-dashboard-page-mandatory](../../../../../../bashscripts/ai/wiki/concepts/modules-structure-rules.md#module-dashboard-page-mandatory) — **obbligatorio** `app/Filament/Pages/Dashboard.php`
 - [module-providers-dual-registration-mandatory.md](./module-providers-dual-registration-mandatory.md) — `module.json` + `composer.json`
 - [module-model-artifact-parity.md](./module-model-artifact-parity.md) — N modelli = N migrate + factory + seeder
 - [composer-root-skeleton-modular.md](./composer-root-skeleton-modular.md) — Root Composer minimo
@@ -62,12 +62,4 @@ qmd search "Xot concepts" --limit 5
 - Audit: `bash bashscripts/tools/audit-module-config-php.sh`
 
 ---
-title: "index"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "index"
-issues: []
-discussions: []
 *Updated: 2026-07-27*

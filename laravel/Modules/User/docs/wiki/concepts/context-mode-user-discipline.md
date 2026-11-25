@@ -13,7 +13,18 @@ related:
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
   - "./folio-pages-owner-pattern.md"
+<<<<<<< .merge_file_GqTzXu
+<<<<<<< .merge_file_wqIldK
+<<<<<<< .merge_file_Q7lN2D
 qmd: "context mode user discipline contextmode"
+=======
+>>>>>>> .merge_file_R1ImCp
+=======
+qmd: "context mode user discipline contextmode"
+>>>>>>> .merge_file_ZYbOxV
+=======
+qmd: "context mode user discipline contextmode"
+>>>>>>> .merge_file_JdauVN
 ---
 
 # User Module — Context-Mode Discipline

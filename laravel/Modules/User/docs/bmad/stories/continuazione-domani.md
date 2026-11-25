@@ -1,4 +1,6 @@
 ---
+title: "Continuazione BMAD — Domani (User)"
+
 title: "Continuazione BMAD: Domani (User)"
 type: module-fix
 scope: User

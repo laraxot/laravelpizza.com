@@ -1015,8 +1015,11 @@ See [roadmap.md](./roadmap.md) for details.
 - [Xot Module](../../Xot/docs/README.md) - Core foundation
 - [Activity Module](../../Activity/docs/readme.md) - Activity tracking
 - [Lang Module](../../Lang/docs/readme.md) - Translations
+<<<<<<< .merge_file_tjXI2X
+=======
 - [Activity Module](../../Activity/docs/README.md) - Activity tracking
 - [Lang Module](../../Lang/docs/README.md) - Translations
+>>>>>>> .merge_file_PMDery
 - [Tenant Module](../../Tenant/docs/README.md) - Enhanced tenancy
 
 ### Project Documentation

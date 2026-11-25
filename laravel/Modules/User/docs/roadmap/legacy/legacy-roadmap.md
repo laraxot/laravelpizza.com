@@ -1,8 +1,3 @@
----
-title: "User Module - Complete Roadmap 2026"
-type: note
-qmd: "legacy roadmap user complete 2026"
----
 # User Module - Complete Roadmap 2026
 
 **Generated**: 2026-01-02

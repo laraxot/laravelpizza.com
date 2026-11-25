@@ -5,6 +5,7 @@ declare(strict_types=1);
 use Modules\User\Http\Controllers\Socialite\RedirectToProviderController;
 use Modules\User\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+use ReflectionMethod;
 
 uses(TestCase::class);
 

@@ -88,7 +88,10 @@ Questo documento fornisce linee guida per la gestione delle sessioni utente all'
 
 ## Collegamenti a Documentazione Correlata
 - [Indice del Modulo Utente](./index.md)
+<<<<<<< .merge_file_8fSxP6
+=======
 - [Indice del Modulo Utente](./README.md)
+>>>>>>> .merge_file_DlfnGP
 - [Modello BaseUser](./baseuser.md)
 - [Implementazione delle Pagine di Autenticazione](./auth-pages-implementation.md)
 - [Gestione del Profilo](./profile-management.md)
@@ -96,8 +99,15 @@ Questo documento fornisce linee guida per la gestione delle sessioni utente all'
 - [Best Practices di Sicurezza](./security_best_practices.md)
 - [Documentazione Volt](./volt-blade-implementation-3.md)
 - [Indice del Modulo Utente](./README.md)
+<<<<<<< .merge_file_8fSxP6
+- [Indice del Modulo Utente](./index.md)
+<<<<<<< .merge_file_18wNQs
+=======
+<<<<<<< HEAD
+=======
 - [Tema One Documentation](../../themes/one/docs/README.md) 
 - [Indice del Modulo Utente](./index.md)
+>>>>>>> .merge_file_DlfnGP
 - [Tema One Documentation](../../themes/one/docs/readme.md) 
 - [Indice del Modulo Utente](./index-3.md)
 - [Tema One Documentation](../../themes/one/docs/README.md) 
@@ -106,6 +116,14 @@ Questo documento fornisce linee guida per la gestione delle sessioni utente all'
 - [Indice del Modulo Utente](./README.md)
 - [Tema One Documentation](../../themes/one/docs/README.md) 
 - [Indice del Modulo Utente](./index.md)
+<<<<<<< .merge_file_8fSxP6
+>>>>>>> .merge_file_OPvJiW
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_Th9ddb
+=======
+>>>>>>> .merge_file_DlfnGP
 - [Modello BaseUser](./baseuser.md)
 - [Implementazione delle Pagine di Autenticazione](./auth-pages-implementation.md)
 - [Gestione del Profilo](./profile-management.md)
@@ -114,8 +132,11 @@ Questo documento fornisce linee guida per la gestione delle sessioni utente all'
 - [Documentazione Volt](./volt-blade-implementation.md)
 - [Tema One Documentation](../../Themes/One/docs/README.md) 
 - [Indice del Modulo Utente](./index.md)
+<<<<<<< .merge_file_8fSxP6
+=======
 - [Indice del Modulo Utente](./README.md)
 - [Indice del Modulo Utente](./index.md)
+>>>>>>> .merge_file_DlfnGP
 - [Modello BaseUser](./baseuser.md)
 - [Implementazione delle Pagine di Autenticazione](./auth-pages-implementation-3.md)
 - [Gestione del Profilo](./profile-management-3.md)

@@ -12,6 +12,7 @@ related:
   - "./change-password-command.md"
   - "./console-commands-philosophy-1-1.md"
   - "./console-commands-philosophy.md"
+  - "./console-commands-philosophy.md"
   - "./console-commands.md"
   - "./README.md"
 ---
@@ -457,6 +458,7 @@ private function getPasswordLegacy(): string
 ```
 
 ## Collegamenti
+- [README Comandi Console](README.md)
 - [README Comandi Console](README.md)
 - [ChangePasswordCommand](change-password-command.md)
 - [AssignModuleCommand](assign-module-command.md)

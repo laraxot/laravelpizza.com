@@ -1396,8 +1396,17 @@ The [@volt] directive is required when using Volt anonymous components in Folio 
 ## Collegamenti
 - [Documentazione Volt](https://livewire.laravel.com/docs/volt)
 - [Documentazione Folio](https://laravel.com/docs/folio)
+<<<<<<< .merge_file_oNwnss
 - [Best Practices Routing](../../routing-best-practices-2.md) 
 - [Best Practices Routing](../../routing-best-practices-2.md) 
+<<<<<<< .merge_file_L0gh72
+>>>>>>> .merge_file_uRRoaw
+=======
+- [Best Practices Routing](./routing-best-practices.md) 
+- [Best Practices Routing](./routing-best-practices.md) 
+>>>>>>> .merge_file_x1L9oM
+=======
+>>>>>>> .merge_file_RLLpiF
 ---
 
 ## volt-folio-logout-debug

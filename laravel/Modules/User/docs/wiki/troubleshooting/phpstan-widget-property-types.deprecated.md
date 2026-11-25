@@ -17,5 +17,19 @@ related:
   - "./spatie-permission-team-model-not-configured.md"
 ---
 
+<<<<<<< .merge_file_uisJSl
+<<<<<<< .merge_file_S7y2LG
+<<<<<<< .merge_file_uqgAMY
+=======
+>>>>>>> .merge_file_UzmWo5
 > Questo file è stato rinominato in [phpstan-widget-property-types-2.deprecated.md](phpstan-widget-property-types-2.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 > Questo file è stato rinominato in [phpstan-widget-property-types-2.deprecated.md](./phpstan-widget-property-types.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+<<<<<<< .merge_file_uisJSl
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_swEvLa
+=======
+> Questo file è stato rinominato in [phpstan-widget-property-types-.deprecated.md](phpstan-widget-property-types-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+>>>>>>> .merge_file_QAIt6T
+=======
+>>>>>>> .merge_file_UzmWo5

@@ -22,4 +22,7 @@ Come manutentore del modulo User, voglio un `docs/index.md` organizzato per argo
 ## Riferimenti
 
 - [../index.md](../index.md)
+<<<<<<< .merge_file_hcEb3m
+=======
 - [../index.md](../README.md)
+>>>>>>> .merge_file_8bDkxe

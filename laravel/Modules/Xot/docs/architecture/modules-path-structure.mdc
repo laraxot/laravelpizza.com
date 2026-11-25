@@ -81,7 +81,7 @@ class User extends Model {
 - **Enum PHP usato come state**: va migrato a State Class.
 
 ## Docs collegate
-- [.windsurf/rules/model-states.mdc](../../../.windsurf/rules/model-states.mdc)
+- [.windsurf/rules/enums-states.md](../../../.windsurf/rules/enums-states.md)
 - [<nome progetto>/docs/uso-label-filament.mdc](../../<nome progetto>/docs/uso-label-filament.mdc)
 - https://github.com/spatie/laravel-model-states
 
@@ -108,7 +108,7 @@ class User extends Model {
 - **Valori statici, nessuna logica?** → enum PHP.
 
 ## 5. Collegamenti
-- [.windsurf/rules/model-states.mdc](../../../.windsurf/rules/model-states.mdc)
+- [.windsurf/rules/enums-states.md](../../../.windsurf/rules/enums-states.md)
 - [<nome progetto>/docs/uso-label-filament.mdc](../../<nome progetto>/docs/uso-label-filament.mdc)
 - https://github.com/spatie/laravel-model-states
 
@@ -139,7 +139,7 @@ Modules/<nome progetto>/Actions/Patient/Calendar/FetchEventsAction.php
 ```
 
 ## Collegamenti
-- Vedi anche: `naming-conventions.md`, `directory-structure-2.md`, `best-practices-3.md`
+- Vedi anche: `naming-conventions.md`, `directory-structure.md`, `best-practices.md`
 - Aggiornare sempre la documentazione dei moduli e Xot in caso di modifica della struttura.
 
 ## Actions Queueable

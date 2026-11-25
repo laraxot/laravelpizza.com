@@ -12,7 +12,7 @@ use Filament\Schemas\Schema;
 use Illuminate\Support\Str;
 use Modules\Tenant\Actions\Config\GetTenantConfigArrayAction;
 use Modules\Tenant\Actions\Config\SaveTenantConfigAction;
-use Modules\Xot\Actions\Config\ResolveModuleConfigDataAction;
+use Modules\Xot\Actions\Config\GetModuleConfigDataAction;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Modules\Xot\Filament\Traits\SuperAdminOnlyTrait;
 use Spatie\LaravelData\Data;
@@ -61,13 +61,13 @@ abstract class BaseSettingPage extends XotBasePage
 
     /**
      * `Modules\{Modulo}\Datas\{Modulo}ConfigData`, stessa regola dei componenti condivisi
-     * (ResolveModuleConfigDataAction).
+     * (GetModuleConfigDataAction).
      *
      * @return class-string<Data>
      */
     public static function getConfigDataClass(): string
     {
-        $class = ResolveModuleConfigDataAction::dataClassFor(static::class);
+        $class = GetModuleConfigDataAction::dataClassFor(static::class);
         Assert::notNull($class, static::class.': manca la Data di configurazione Modules\\'.static::getModuleName().'\\Datas\\'.static::getModuleName().'ConfigData');
 
         return $class;

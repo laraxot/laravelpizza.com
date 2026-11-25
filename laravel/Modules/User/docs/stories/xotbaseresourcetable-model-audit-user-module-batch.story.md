@@ -1,5 +1,5 @@
 ---
-title: "XotBaseResourceTable: audit \$model + verifica colonne (batch modulo User)"
+title: "XotBaseResourceTable: audit $model + verifica colonne (batch modulo User)"
 type: story
 module: User
 epic: null
@@ -55,6 +55,8 @@ confermato che sono tutti corretti, incluso il caso non ovvio di
 `TenantResource` che risolve dinamicamente `XotData::getTenantClass()` →
 `config('xot.tenant_class')` → in questo progetto `Modules\Quaeris\Models\Customer`
 `config('xot.tenant_class')` → in questo progetto `Modules\<nome progetto>\Models\Customer`
+<<<<<<< .merge_file_hMIRIW
+=======
 `config('xot.tenant_class')` → in questo progetto `Modules\Quaeris\Models\Customer`
 `config('xot.tenant_class')` → in questo progetto `Modules\<nome progetto>\Models\Customer`
 (non `Modules\User\Models\Tenant`, che pure esiste con una propria migration
@@ -267,3 +269,4 @@ Claude Sonnet 5
   `TenantsTable`/`TenantUsersTable`/`TeamUsersTable.uuid` sono fuori dallo
   scope dell'altro batch, che copriva OAuth/Passport/Permission — vedi
   issue collegata #90 di quel batch, distinta dalla #91 di questo).
+>>>>>>> .merge_file_mcYueh

@@ -8,8 +8,7 @@ namespace Modules\Xot\Models\Traits;
  * @phpstan-ignore trait.unused
  */
 trait HasDynamicFillable // @phpstan-ignore trait.unused
-{
-    /**
+{/**
      * Overrides the default getFillable method to include fields from specified Enums.
      *
      * Models using this trait should define a protected array property `$dynamicFillableEnums`

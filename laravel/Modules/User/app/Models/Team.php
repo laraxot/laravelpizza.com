@@ -85,6 +85,7 @@ use Modules\Xot\Contracts\ProfileContract;
  */
 class Team extends BaseTeam
 {
+
     protected $fillable = [
         'user_id',
         'name',

@@ -10,5 +10,18 @@ related:
   - "./contracts-and-lang-backup-archival.md"
 ---
 
+<<<<<<< .merge_file_LPteby
+<<<<<<< .merge_file_kBiXmz
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_Qmxn2A
 > Questo file è stato rinominato in [contracts-and-lang-backup-archival-2.deprecated.md](contracts-and-lang-backup-archival-2.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 > Questo file è stato rinominato in [contracts-and-lang-backup-archival-2.deprecated.md](./contracts-and-lang-backup-archival.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+<<<<<<< .merge_file_LPteby
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
+> Questo file è stato rinominato in [contracts-and-lang-backup-archival-.deprecated.md](contracts-and-lang-backup-archival-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+>>>>>>> .merge_file_OxeSzB
+=======
+>>>>>>> .merge_file_Qmxn2A

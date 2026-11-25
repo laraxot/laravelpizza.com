@@ -1,8 +1,23 @@
+<<<<<<< .merge_file_90RCHJ
+<<<<<<< .merge_file_YDJ9Yc
+<<<<<<< .merge_file_NUAQ6j
+=======
+>>>>>>> .merge_file_snaG7y
+=======
+>>>>>>> .merge_file_BiEo1p
 ---
 title: "Widget Translation Rules - SaluteOra Project"
 type: rule
 qmd: "widget translation rules saluteora project"
 ---
+<<<<<<< .merge_file_90RCHJ
+<<<<<<< .merge_file_YDJ9Yc
+=======
+>>>>>>> .merge_file_Mg6ZWJ
+=======
+>>>>>>> .merge_file_snaG7y
+=======
+>>>>>>> .merge_file_BiEo1p
 # Widget Translation Rules - SaluteOra Project
 # Widget Translation Rules - FixCity Project
 
@@ -147,12 +162,25 @@ protected static string $view = 'user::widgets.edit-user';
 - [EditUserWidget Documentation](../modules/user/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../modules/user/docs/widgets/translation-guidelines.md)
 - [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
+<<<<<<< .merge_file_90RCHJ
+<<<<<<< .merge_file_YDJ9Yc
+<<<<<<< .merge_file_NUAQ6j
+=======
+>>>>>>> .merge_file_BiEo1p
 - [Filament Widget Conventions](best-practices/filament-widgets.md)
 - [Filament Widget Conventions](best-practices/filament-widgets.md)
 - [User Module Widget Structure](../modules/user/docs/widgets-structure-2.md)
 - [EditUserWidget Documentation](../modules/user/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../modules/user/docs/widgets/translation-guidelines.md)
 - [Filament Widget Conventions](best-practices/filament-widgets.md)
+<<<<<<< .merge_file_90RCHJ
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_Mg6ZWJ
+=======
+>>>>>>> .merge_file_snaG7y
+=======
+>>>>>>> .merge_file_BiEo1p
 ## Memory Integration
 This document serves as a reference for:
 - Widget development standards
@@ -348,10 +376,24 @@ protected static string $view = 'user::widgets.edit-user';
 - [User Module Widget Structure](../Modules/User/docs/widgets-structure-2.md)
 - [EditUserWidget Documentation](../Modules/User/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../Modules/User/docs/widgets/translation-guidelines.md)
+<<<<<<< .merge_file_90RCHJ
+<<<<<<< .merge_file_YDJ9Yc
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_BiEo1p
 - [Filament Widget Conventions](../Modules/Xot/docs/filament-widgets.md)
 - [Filament Widget Conventions](best-practices/filament-widgets.md)
 - [Filament Widget Conventions](../Modules/Xot/docs/filament-widgets.md)
 - [Filament Widget Conventions](best-practices/filament-widgets.md)
+<<<<<<< .merge_file_90RCHJ
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_Mg6ZWJ
+=======
+- [Filament Widget Conventions](../Modules/Xot/docs/filament-widgets.md)
+>>>>>>> .merge_file_snaG7y
+=======
+>>>>>>> .merge_file_BiEo1p
 
 ## Memory Integration
 

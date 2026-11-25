@@ -1,8 +1,20 @@
+<<<<<<< .merge_file_t8XiPf
+<<<<<<< .merge_file_e0MsTQ
+<<<<<<< .merge_file_08y4DL
+=======
+>>>>>>> .merge_file_Maro4n
 ---
 title: "Task: Fix Documentation Merge Markers (User Module)"
 type: note
 qmd: "fix merge markers task user"
 ---
+<<<<<<< .merge_file_t8XiPf
+=======
+>>>>>>> .merge_file_NKngK8
+=======
+>>>>>>> .merge_file_RtW4pT
+=======
+>>>>>>> .merge_file_Maro4n
 # Task: Fix Documentation Merge Markers (User Module)
 
 ## 📋 Obiettivo

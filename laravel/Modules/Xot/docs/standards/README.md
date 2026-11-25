@@ -180,7 +180,7 @@ Questi standard si applicano a tutti i moduli del progetto e devono essere segui
 - [Gestione campi e migrazioni con STI (README Patient)](../../../patient/docs/README.md)
 - [DoctorResource: Step Informazioni Personali (Patient)](../../../patient/docs/filament/resources/doctor-resource.md)
 - [Struttura progetto e STI (Patient)](../../../patient/docs/architecture/struttura-progetto.md)
-- [Migrazioni e database (Patient)](../../../Lang/docs/migrations-3.md)
+- [Migrazioni e database (Patient)](../../../patient/docs/database/migrations.md)
 
 ## Regola generale
 

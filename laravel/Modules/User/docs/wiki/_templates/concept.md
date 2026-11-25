@@ -3,6 +3,7 @@ title: "Untitled Concept"
 type: concept
 sources: ["raw/articles/source-filename.md"]
 confidence: medium
+<<<<<<< .merge_file_Ypbe7V
 created: "{{date}}"
 updated: "{{date}}"
 tags: [tag1, tag2]
@@ -10,6 +11,18 @@ related:
   - "./entity.md"
   - "./source.md"
 qmd: "concept untitled"
+<<<<<<< .merge_file_ZwKkTA
+=======
+>>>>>>> .merge_file_nJxy7f
+=======
+created: {{date}}
+updated: {{date}}
+tags: [tag1, tag2]
+related:
+qmd: "concept untitled"
+>>>>>>> .merge_file_BXtvWo
+=======
+>>>>>>> .merge_file_4GzST2
 ---
 
 # {{title}}

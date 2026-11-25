@@ -1,5 +1,5 @@
 ---
-title: "User — mai Filament\*, sempre XotBase*"
+title: "User — mai Filament\\*, sempre XotBase*"
 type: concept
 module: User
 tags: [user, filament, xotbase, architecture]

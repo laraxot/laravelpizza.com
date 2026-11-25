@@ -10,5 +10,19 @@ related:
   - "./phpstan-belongstomany-covariance.md"
 ---
 
+<<<<<<< .merge_file_5oeBWY
+<<<<<<< .merge_file_sIPziU
+<<<<<<< .merge_file_5MFbTI
+=======
+>>>>>>> .merge_file_ePRqw7
 > Questo file è stato rinominato in [phpstan-belongstomany-covariance-2.deprecated.md](phpstan-belongstomany-covariance-2.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 > Questo file è stato rinominato in [phpstan-belongstomany-covariance-2.deprecated.md](./phpstan-belongstomany-covariance.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+<<<<<<< .merge_file_5oeBWY
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_VjVkQ1
+=======
+> Questo file è stato rinominato in [phpstan-belongstomany-covariance-.deprecated.md](phpstan-belongstomany-covariance-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+>>>>>>> .merge_file_9FijF7
+=======
+>>>>>>> .merge_file_ePRqw7

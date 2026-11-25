@@ -1,8 +1,20 @@
+<<<<<<< .merge_file_Qg3nJI
+<<<<<<< .merge_file_9yiU9I
+<<<<<<< .merge_file_GwOf6F
+=======
+>>>>>>> .merge_file_VQt6y1
 ---
 title: "Indice task - Modulo User"
 type: note
 qmd: "tasks indice task user"
 ---
+<<<<<<< .merge_file_Qg3nJI
+=======
+>>>>>>> .merge_file_2QSvyb
+=======
+>>>>>>> .merge_file_lJ30NW
+=======
+>>>>>>> .merge_file_VQt6y1
 # Indice task - Modulo User
 
 Lista dei task del modulo con link ai file .md separati. Ogni task è un file nella cartella `tasks/`.
@@ -29,5 +41,9 @@ Lista dei task del modulo con link ai file .md separati. Ogni task è un file ne
 ## Collegamenti
 
 - [Roadmap User](../roadmap.md)
+<<<<<<< .merge_file_Qg3nJI
+- [README User](../readme.md)
+=======
 - [README User](../README.md)
+>>>>>>> .merge_file_VQt6y1
 - [Scopo moduli progetto](../../../../../docs/moduli-scopo.md)

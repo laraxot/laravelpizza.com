@@ -1,5 +1,5 @@
 ---
-title: "Follow-up — colonne sospette/bug reale trovati nell'audit \$model (modulo User)"
+title: "Follow-up — colonne sospette/bug reale trovati nell'audit $model (modulo User)"
 type: story
 module: User
 epic: xotbaseresourcetable-model-property-and-column-audit

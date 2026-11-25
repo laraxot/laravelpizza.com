@@ -5,7 +5,18 @@ tags: [skill, user, filament, translations, langserviceprovider]
 module: "User"
 created: 2026-05-12
 updated: 2026-05-12
+<<<<<<< .merge_file_DD7eRa
+<<<<<<< .merge_file_2iybMC
+<<<<<<< .merge_file_7fwxv4
 qmd: "filament translation audit skill traduzioni user"
+=======
+>>>>>>> .merge_file_wU9Scd
+=======
+qmd: "filament translation audit skill traduzioni user"
+>>>>>>> .merge_file_TdQxDa
+=======
+qmd: "filament translation audit skill traduzioni user"
+>>>>>>> .merge_file_MVj6Dr
 ---
 
 # Skill — Audit traduzioni Filament User

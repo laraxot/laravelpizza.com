@@ -12,7 +12,11 @@ related:
   - "./base-classes-corrections-2.md"
   - "./base-classes-corrections-3.md"
   - "./base-classes-corrections.md"
+<<<<<<< .merge_file_jEb90v
   - "../../../UI/docs/phpstan-fixes-1-2.md"
+=======
+  - "./phpstan-fixes.md"
+>>>>>>> .merge_file_B0rQyX
   - "./phpstan-fixes.md"
   - "./phpstanes.md"
 ---

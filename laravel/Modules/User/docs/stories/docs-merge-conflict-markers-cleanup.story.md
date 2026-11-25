@@ -24,7 +24,10 @@ qmd: "merge conflict markers cleanup story user"
 
 # User: marker di conflitto git residui in docs/ — pulizia + aggiornamento indice
 
+<<<<<<< .merge_file_I1gHYz
+=======
 # User: marker di conflitto git residui in docs/: pulizia + aggiornamento indice
+>>>>>>> .merge_file_S1Xs9B
 ## Coordinamento
 
 - Scope: solo `laravel/Modules/User/docs/**/*.md` (auth, RBAC Spatie, Filament
@@ -39,7 +42,10 @@ qmd: "merge conflict markers cleanup story user"
   laravel/Modules/User/docs` → **0**. Nessun commit in questa sessione.
 - Fuori scope: consolidamento duplicati case-only (`index-3.md`/`index-3.md`,
   `models/readme.md`/`models/README.md`), codice `app/`, lock intero modulo.
+<<<<<<< .merge_file_I1gHYz
+=======
 # User: marker di conflitto git residui in docs/: pulizia + aggiornamento indice
+>>>>>>> .merge_file_S1Xs9B
 
 ## Contesto
 
@@ -185,6 +191,10 @@ di rilevazione (`grep -rlE '^<<<<<<< |^=======$|^>>>>>>> '` al posto di
 
 Lock `laravel/Modules/User:docs` acquisito e rilasciato correttamente
 (scope limitato a `docs/`, non l'intero modulo). Commit unico, 867 file
+<<<<<<< .merge_file_I1gHYz
+(`git add` con lista esplicita di path, mai `-A`: repo con ~5000
+modifiche non correlate di altre sessioni in corso).
+=======
 (`git add` con lista esplicita di path, mai `-A` — repo con ~5000
 modifiche non correlate di altre sessioni in corso).
 
@@ -196,3 +206,4 @@ modifiche non correlate di altre sessioni in corso).
 Ondata marker annidati ripulita in-place su 154 file `docs/` (vedi
 [Coordinamento](#coordinamento)). Residual markers: 0. Duplicati case-only e
 indice monolitico `INDEX.md` non consolidati (scope separato).
+>>>>>>> .merge_file_S1Xs9B

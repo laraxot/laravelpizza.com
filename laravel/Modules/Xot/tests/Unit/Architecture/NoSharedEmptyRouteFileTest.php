@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * ADR docs/adr/no-shared-empty-route-file.md.
+ * ADR docs/adr/0029-no-shared-empty-route-file.md.
  * Pure filesystem check: no Laravel bootstrap (avoids unrelated module.json conflicts).
  */
 
@@ -23,7 +23,7 @@ it('forbids require of Modules/Xot/routes/empty.php in module route files', func
     }
 
     expect($hits)->toBeEmpty(
-        'Shared empty route require found (see Xot docs/adr/no-shared-empty-route-file.md): '
+        'Shared empty route require found (see Xot docs/adr/0029-no-shared-empty-route-file.md): '
         .implode(', ', $hits)
     );
 });
