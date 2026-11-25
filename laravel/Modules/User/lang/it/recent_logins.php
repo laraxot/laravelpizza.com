@@ -12,10 +12,9 @@ return [
     ],
     'fields' => [
         'authenticatable' => [
-            'name' => [
-                'label' => 'Utente autenticato',
-            ],
+'name' => [
             'label' => 'Utente autenticato',
+        ],
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',

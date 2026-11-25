@@ -21,8 +21,6 @@ audit-coverage/
 bashscripts
 _bmad-output
 bootstrap/compiled.php
-<<<<<<< .merge_file_za59Jg
-=======
 cache/*
 docs/cache/
 docs/phpstan/
@@ -54,14 +52,11 @@ yarn-error.log
 # ====
 # BUILD & COMPILED FILES
 # ====
->>>>>>> .merge_file_iDl8fO
 /build
 /build/
 build/
 *.cache
 cache/*
-<<<<<<< .merge_file_za59Jg
-=======
 build/
 
 # ====
@@ -74,7 +69,6 @@ build/
 
 bashscripts
 _bmad-output
->>>>>>> .merge_file_iDl8fO
 .circleci
 .claude-audit
 .codex/
@@ -140,7 +134,6 @@ Homestead.yaml
 *.jar
 .kilocode
 .kiro
-<<<<<<< .merge_file_za59Jg
 lang/lang/
 laravel
 lerna-debug.log*
@@ -148,7 +141,6 @@ lerna-debug.log*
 *.log
 .merge_file_*
 *.new
-=======
 .ralph
 scripts
 test-results
@@ -161,7 +153,6 @@ tests/.claude-audit
 # Grouped, deduped. See docs/wiki/rules/module-theme-root-cleanup.md
 # --- Dependencies & packages ---
 /vendor/
->>>>>>> .merge_file_iDl8fO
 /node_modules/
 node_modules
 node_modules/
@@ -173,8 +164,6 @@ npm-debug.log*
 .opencode/
 *.orig
 package-lock.json
-<<<<<<< .merge_file_za59Jg
-=======
 yarn.lock
 composer.lock
 # --- Build & compiled ---
@@ -188,7 +177,6 @@ docs/phpstan/
 # --- Cache & temporary ---
 *.cache
 *.lock
->>>>>>> .merge_file_iDl8fO
 *.phar
 .php-cs-fixer.cache
 .php-cs-fixer.php
@@ -197,8 +185,6 @@ phpinsights.php
 .phpintel
 .phpstorm.meta.php
 .phpunit.result.cache
-<<<<<<< .merge_file_za59Jg
-=======
 
 
 # --- Logs ---
@@ -249,11 +235,9 @@ lerna-debug.log*
 
 app/storage/
 public/storage
->>>>>>> .merge_file_iDl8fO
 public/hot
 public_html
 public_html/hot
-<<<<<<< .merge_file_za59Jg
 public_html/storage
 public/storage
 .qwen/
@@ -281,7 +265,6 @@ tests/.claude-audit
 tests/coverage-*.*
 tests/graphify-out/
 tests/Unit/graphify-out/
-=======
 storage/*.key
 
 
@@ -549,19 +532,16 @@ laravel
 public_html
 config/local.php
 config/development.php
->>>>>>> .merge_file_iDl8fO
 test_users.json
 Thumbs.db
 *.tmp
 tools/
 .Trashes
 user_test_data.csv
-<<<<<<< .merge_file_za59Jg
 v8-compile-cache-*
 /.vagrant
 /vendor/
 vendor/
-=======
 
 
 # --- Legacy directories (historic cleanup) ---
@@ -585,13 +565,10 @@ resources/views/node_modules
 # Laraxot — IDE folders forbidden at module/theme root (see module-theme-root-hygiene)
 .cursor/
 .devcontainer/
->>>>>>> .merge_file_iDl8fO
 .vscode/
 /.vscode
 /.vscode/
 .windsurf/
-<<<<<<< .merge_file_za59Jg
-=======
 
 # Laraxot — quality tool configs forbidden in module/theme root (use laravel/phpinsights.php, laravel/rector.php)
 phpinsights.php
@@ -618,16 +595,13 @@ app/Models/Models
 /phpinsights.php
 /.cursor
 /.cursor/
->>>>>>> .merge_file_iDl8fO
 /.windsurf
 /.windsurf/
 .windsurf~*
-<<<<<<< .merge_file_za59Jg
 yarn-error.log
 yarn-error.log*
 yarn.lock
 *:Zone.Identifier
-=======
 
 node_modules
 # graphify-out: generated AST/knowledge graph — never commit (no git-lfs; rebuild with graphify update)
@@ -686,4 +660,3 @@ docs/**/backup/
 docs/backups/
 docs/**/backups/
 .docs-archive/
->>>>>>> .merge_file_iDl8fO

@@ -45,4 +45,3 @@ dal pannello. L'append-only e' una regola delle Action, non del database ([conse
 - `ConsentResource` e `ProfileResource` esistono due volte: in `app/Filament/Resources/` e in
   `app/Filament/Clusters/Profile/Resources/` (pagine, schemi, tabelle). Il `ConsentForm` differisce (il cluster usa `Section`,
   quello standalone `Select::relationship`). Da unificare tenendo la versione standalone; `ProfileResource` dovrebbe vivere in `User`.
-- `Event` non ha `Seeder`/factory coerenti con la tabella `gdpr_events`; vedi [database.md](database.md).

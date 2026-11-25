@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Deduplicated .gitignore - generated from original
 
 ._*
@@ -183,7 +182,6 @@ vendor/
 yarn-error.log*
 yarn.lock
 *:Zone.Identifier
-=======
 # Auto-generated forbidden paths — do not edit manually
 # Reason: root cleanup policy (see docs/wiki/rules/root-cleanup-policy.md)
 
@@ -476,4 +474,3 @@ docs/**/backup/
 docs/backups/
 docs/**/backups/
 .docs-archive/
->>>>>>> laraxot/dev

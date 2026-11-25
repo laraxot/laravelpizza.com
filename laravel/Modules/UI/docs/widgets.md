@@ -33,9 +33,10 @@ valori che prima stavano nel codice: nulla cambia finche' nessuno salva.
 - Regola emersa dall'inventario "Livewire -> widget Filament" (story 12.1): **un gemello gia' esistente batte una classe
   nuova**. Il toggle tema ha il gemello `DarkModeSwitcherWidget`; `ThemeToggleWidget` e `ToastNotificationWidget` non
   vanno creati (toast del pannello = Filament Notifications).
-- `Toast` e' montato come `<livewire:toast />` nel layout radice `resources/views/components/layouts/main.blade.php`
-  (e nel layout principale del modulo User): non e' orfano. Il tag funziona senza registrazione manuale perche'
-  Xot registra i componenti da `_components.json` (`RegisterLivewireComponentsAction`).
+- `Toast` e' montato come `<livewire:toast />` nel layout principale del modulo User
+  (`Modules/User/resources/views/components/layouts/main.blade.php`) e nello stub `layouts/main.blade.php.stub` di UI:
+  non e' orfano. I componenti Livewire dei moduli sono scoperti da `Xot\Actions\File\GetComponentsAction`, che
+  produce i `_components.json`.
 - Osservato oggi: sotto `app/Http/Livewire/` sono rientrati `DarkModeSwitcher.php` e `Toast.php` (il primo era stato
   ritirato dalla 12.1 e riappare dal merge del remoto); `_components.json` li elenca entrambi. Da ritirare di nuovo
   `DarkModeSwitcher` quando si autorizza la cancellazione.
