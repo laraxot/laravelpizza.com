@@ -6,8 +6,7 @@ Contesto: repo `/mnt/nas07/var/www/_bases/base_laravelpizza_fila5`, app Laravel 
 ## App in esecuzione
 
 - Front office + pannelli: `http://127.0.0.1:8000` (php artisan serve già attivo)
-- Login admin (super-admin): `marco.sottana@gmail.com` / `password` (la password `marco`
-  del seeder NON funziona: verificato Hash::check=false — sospetto bug DemoUserSeeder)
+- Login admin (super-admin): `marco.sottana@gmail.com` / `marco`
 - Altri demo: `cittadino@example.test`/`password123`, `waiter1@example.test`/`waiter123`
 - Pannello Filament di ogni modulo: `http://127.0.0.1:8000/<modulo-minuscolo>/admin`
   (es. `/activity/admin`, `/notify/admin`, `/user/admin`, `/xot/admin`, `/media/admin`,
@@ -75,3 +74,22 @@ Modello: `laravel/Modules/Notify/docs/manuals/manuale-utente.md` e
 
 Per ogni modulo: file creati/modificati, screenshot acquisiti (lista), bug trovati e fixati,
 test/phpstan eseguiti con esito, commit hash nel repo modulo, note/limiti.
+
+## Aggiornamenti sessione 2026-11-25 (seconda parte)
+
+- **Attore concorrente**: `codex --yolo` (PID variabile) svolge lo stesso task manuali con metodo
+  proprio: story `Modules/Xot/docs/stories/0176-manuali-moduli-screenshot-reali.story.md`,
+  tool `bashscripts/tools/docs/manual-screenshots.mjs`, istanza scratch `laravelpizza.local`,
+  asset `.webp` + `docs/manuals/screenshots.json` (status HTTP + sha256). Prima di scrivere in un
+  modulo verificare `git status` e `pgrep -af codex`; se c'è lavoro fresco (<1h) di un altro agente,
+  saltare il modulo.
+- **Password admin instabile**: `marco.sottana@gmail.com` / `marco` (DemoUserSeeder) — ma retry di
+  seed di agenti paralleli la resettano. Se il login fallisce: ripristinare con
+  `php artisan tinker --execute='$u=\Modules\User\Models\User::where("email","marco.sottana@gmail.com")->first(); $u->password="marco"; $u->save();'`
+- **Login pannello modulo**: `/admin` redirige al login FO `/it/auth/login` (Volt); per gli screenshot
+  del pannello modulo usare direttamente `/<modulo>/admin/login` (campi Filament `#form.email`).
+- **PDF**: `node tools/visual/md-to-pdf.mjs --md <manuale-utente.md> [--out <pdf>]` (markdown-it +
+  playwright da `base_fixcity_fila5/node_modules`, Chrome di sistema). Rigenerato per Activity, Geo,
+  Media, Notify, UI, User, Xot.
+- **PHPStan Modules**: 0 errori (i 3 `trait.unused` di Rating sono stati risolti aggiungendo gli abstract host
+  `AbstractHasRatingHost`/`AbstractLikeableHost`/`AbstractRatingsFormCaller` che usano i trait).
