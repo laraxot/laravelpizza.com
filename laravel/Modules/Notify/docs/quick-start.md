@@ -3,35 +3,13 @@ title: "🚀 FIXCITY - GUIDA RAPIDA SVILUPPATORI"
 type: concept
 tags: [quick, start]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_HiyUcv
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_HMndFG
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_HiyUcv
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_HMndFG
 qmd: "quick-start 🚀 ptv - guida rapida sviluppatori"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./00-index.md"
   - "./00-index-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
   - "./00-index.md"
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
@@ -42,15 +20,10 @@ related:
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
-<<<<<<< HEAD
-=======
-=======
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
   - "./00-index-documentation.md"
   - "./absolute-completion-completamento-assoluto.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 status: draft
 ---
@@ -547,30 +520,14 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 
 ### Regole Progetto
 - **[Laraxot Rules](./.windsurf/rules/user_15338591596331277449.md)**
-<<<<<<< HEAD
-<<<<<<< .merge_file_HiyUcv
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_HMndFG
 - **[Code Quality](ai-agents/code-quality.md)**
 - **[Code Quality](./ai-agents/code-quality.md)**
-=======
-<<<<<<< .merge_file_tAkpjv
 - **[Code Quality](./.windsurf/rules/code-quality.md)**
-=======
-- **[Code Quality](ai-agents/code-quality.md)**
-<<<<<<< .merge_file_HiyUcv
-- **[Code Quality](./ai-agents/code-quality.md)**
->>>>>>> .merge_file_c5OsDJ
->>>>>>> laraxot/dev
-=======
 - **[Code Quality](ai-agents/code-quality.md)**
 - **[Code Quality](./ai-agents/code-quality.md)**
-=======
+- **[Code Quality](ai-agents/code-quality.md)**
 - **[Code Quality](./ai-agents/code-quality.md)**
->>>>>>> .merge_file_c5OsDJ
->>>>>>> .merge_file_HMndFG
->>>>>>> laraxot/dev
+- **[Code Quality](./ai-agents/code-quality.md)**
 - **[Project Rules](./.windsurf/rules/project-rules.md)**
 
 ---
@@ -607,35 +564,12 @@ php artisan optimize:clear
 
 ---
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_HiyUcv
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_HMndFG
----
-
 *Per contribuire al progetto, leggi attentamente questa guida e le regole Laraxot. In caso di dubbi, consulta la
 documentazione del modulo specifico o chiedi supporto al team.*
 ---
 
 <!-- Merged from quick-start.md, which collided with this file on case-insensitive filesystems. -->
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 title: "Notify Module Quick Start"
 type: guide
@@ -644,11 +578,6 @@ created: 2026-07-28
 updated: 2026-07-28
 ---
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 # Notify Module: Quick Start
 
 ## Send Notification

@@ -1,5 +1,4 @@
 ---
-<<<<<<< HEAD
 title: "github-issues-recommendations-3.md (alias)"
 status: superseded
 superseded_by: "./github-issues-recommendations.md"
@@ -13,7 +12,6 @@ qmd: "github-issues-recommendations-2026-03 alias superseded"
 Canonico: [`./github-issues-recommendations.md`](./github-issues-recommendations.md).
 
 Questo path resta solo per link storici; non aggiungere contenuto qui.
-=======
 title: "github issues recommendations 2026 03 02"
 type: note
 tags: [documentation]
@@ -715,4 +713,3 @@ Discuss CI/CD pipeline improvements. Topics include:
 **Document Version**: 1.0
 **Last Updated**: 2026-03-02
 **Status**: Ready for Implementation
->>>>>>> laraxot/dev

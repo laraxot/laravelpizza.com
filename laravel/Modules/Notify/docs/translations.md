@@ -3,15 +3,7 @@ title: "translations"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ShqP3D
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_Ta5GQI
 qmd: "translations"
 issues: []
 discussions: []
@@ -142,10 +134,6 @@ Notification::make()
 * [translations.md](../../../Activity/docs/translations.md)
 * [translations.md](../../../Patient/docs/translations.md)
 * [translations.md](../../../Cms/docs/translations.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 title: "translations"
@@ -156,11 +144,3 @@ updated: 2026-09-26
 qmd: "translations"
 issues: []
 discussions: []
-<<<<<<< .merge_file_ShqP3D
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_Ta5GQI

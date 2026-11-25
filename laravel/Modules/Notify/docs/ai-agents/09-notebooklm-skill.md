@@ -3,21 +3,7 @@ title: "09 Notebooklm Skill"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_4cczId
-<<<<<<< .merge_file_DX154x
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_rGh1mf
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_4cczId
->>>>>>> .merge_file_jVWZc7
-=======
->>>>>>> .merge_file_rGh1mf
 qmd: "09 Notebooklm Skill"
 issues: []
 discussions: []
@@ -30,10 +16,6 @@ discussions: []
 **Versione**: 1.3.0
 **Stato**: ✅ Installato (auth richiesta)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "09 NOTEBOOKLM SKILL"
@@ -52,13 +34,8 @@ Permette di interrogare notebook Google NotebookLM direttamente da Claude Code /
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## Cosa fa
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Setup (una tantum)
 
 ### 1. Installazione (già completata)

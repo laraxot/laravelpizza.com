@@ -4,21 +4,7 @@ type: brainstorming
 status: active
 module: Notify
 created: 2026-09-28
-<<<<<<< .merge_file_1h0SSX
-<<<<<<< .merge_file_HTNIm1
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_FYSnpV
-<<<<<<< HEAD
-updated: 2026-09-28
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_1h0SSX
->>>>>>> .merge_file_6INLAI
-=======
->>>>>>> .merge_file_FYSnpV
 qmd: "Notify brainstorming rischi opportunità domande aperte"
 ---
 # Notify — brainstorming

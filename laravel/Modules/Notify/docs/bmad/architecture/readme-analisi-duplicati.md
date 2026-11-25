@@ -3,21 +3,7 @@ title: "🐄 Analisi Metodi Duplicati - Guida Rapida"
 type: concept
 tags: [readme, analisi, duplicati]
 created: 2026-07-14
-<<<<<<< .merge_file_nfsqlD
-<<<<<<< .merge_file_ucsVCY
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_w79NN7
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_nfsqlD
->>>>>>> .merge_file_G2qtnS
-=======
->>>>>>> .merge_file_w79NN7
 qmd: "readme-analisi-duplicati 🐄 analisi metodi duplicati - guida rapida"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -28,20 +14,7 @@ related:
   - "../../wiki/integrations/_da-riconciliare/absolute-completion-100.md"
   - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< .merge_file_nfsqlD
-<<<<<<< .merge_file_ucsVCY
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_G2qtnS
-=======
->>>>>>> .merge_file_w79NN7
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

@@ -5,14 +5,10 @@ module: Activity
 story: "./phpstan-cleanup-activity-wave.story.md"
 status: done
 created: 2026-10-06
-updated: 2026-10-06
+updated: 2026-11-17
 tags: [phpstan, cleanup, bmad, activity]
 superseded_by: "./phpstan-cleanup-activity.dev.md"
-updated: 2026-11-17
-<<<<<<< .merge_file_aoWaco
 qmd: "phpstan cleanup activity wave dev"
-=======
->>>>>>> .merge_file_YrUILu
 ---
 
 # [DEV] PHPStan cleanup — Activity

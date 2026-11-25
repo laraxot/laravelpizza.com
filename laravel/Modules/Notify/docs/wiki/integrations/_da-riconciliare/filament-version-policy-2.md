@@ -7,25 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_6JqH1d
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_2mrF2o
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_6JqH1d
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_2mrF2o
 ---
 
 # 🎯 Filament Version Policy - ALWAYS LATEST
@@ -262,29 +244,8 @@ composer update "filament/*" -W
 
 ### Project Documentation
 - [COMPOSER_STRATEGY.md](composer-strategy-3.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_6JqH1d
 - [composer-update-report-2.md](composer-update-report-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_2mrF2o
 - [composer-update-report-2.md](composer-update-report-2.md)
-=======
-<<<<<<< HEAD
-- [composer-update-report-2.md](composer-update-report-2.md)
-=======
-- [composer-update-report-2.md](composer-update-report-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_6JqH1d
-=======
-- [composer-update-report-2.md](composer-update-report-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_2mrF2o
 
 ## ✅ Checklist
 

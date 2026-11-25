@@ -3,15 +3,7 @@ title: "refactoring completato"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_SpKmeH
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_C7QeAv
 qmd: "refactoring completato"
 issues: []
 discussions: []
@@ -23,10 +15,6 @@ discussions: []
 **Tempo Totale:** 62 minuti  
 **Status:** ✅ **FASE 1 COMPLETATA CON SUCCESSO**
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "refactoring completato"
@@ -64,15 +52,10 @@ TEMPO SPESO: 62 minuti
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 RISULTATI FINALI
 ### Statistiche Precise
 ### ROI Immediato
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## ✅ MODULI COMPLETATI
 
 ### 1. Activity Module
@@ -398,11 +381,3 @@ Che il tuo codice sia:
 4. Fase 2: Filament Resources refactoring
 
 **Nota:** Tenant module richiede attenzione speciale (non estende XotBaseModel)
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

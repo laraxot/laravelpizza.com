@@ -2,29 +2,9 @@
 title: "Mailtrap production DNS — fixcity.eu"
 type: bmad-production-runbook
 status: verified-dns-gap
-<<<<<<< HEAD
 updated: 2026-11-23
 created: 2026-11-23
 qmd: "mailtrap fixcity eu dns production fixcityeu"
-=======
-<<<<<<< .merge_file_WjQrcR
-<<<<<<< .merge_file_7UrD1q
-updated: 2026-11-23
-created: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_EqwZxe
-<<<<<<< HEAD
-updated: 2026-11-12
-=======
-updated: 2026-11-23
-created: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_WjQrcR
->>>>>>> .merge_file_peuib6
-=======
->>>>>>> .merge_file_EqwZxe
->>>>>>> laraxot/dev
 ---
 
 # Stato verificato

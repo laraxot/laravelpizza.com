@@ -3,33 +3,7 @@ title: "workflow init"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_IwH7Le
-<<<<<<< .merge_file_t2ivlA
-<<<<<<< .merge_file_gAtsBV
-<<<<<<< .merge_file_R6a9Ze
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_pKNToM
-=======
->>>>>>> .merge_file_6IZYg7
-=======
->>>>>>> .merge_file_CqjDsU
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_IwH7Le
-<<<<<<< .merge_file_t2ivlA
-<<<<<<< .merge_file_gAtsBV
->>>>>>> .merge_file_EUnGfN
-=======
->>>>>>> .merge_file_pKNToM
-=======
->>>>>>> .merge_file_6IZYg7
-=======
->>>>>>> .merge_file_CqjDsU
 qmd: "workflow init"
 issues: []
 discussions: []
@@ -202,64 +176,16 @@ Crea lo script di inizializzazione `bashscripts/bmad/workflow-init.sh`:
 ```bash
 #!/bin/bash
 
-<<<<<<< .merge_file_IwH7Le
-<<<<<<< .merge_file_t2ivlA
-<<<<<<< .merge_file_gAtsBV
-<<<<<<< .merge_file_R6a9Ze
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_EUnGfN
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_pKNToM
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_6IZYg7
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_CqjDsU
 # -----------------------------------------------------------------------------
 # BMAD Workflow Init
 # -----------------------------------------------------------------------------
 # Configura BMAD Method per il progetto PTVX
 # -----------------------------------------------------------------------------
-<<<<<<< .merge_file_IwH7Le
-<<<<<<< .merge_file_t2ivlA
-<<<<<<< .merge_file_gAtsBV
-<<<<<<< .merge_file_R6a9Ze
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_EUnGfN
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_pKNToM
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_6IZYg7
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_CqjDsU
 # =============================================================================
 # BMAD Workflow Init
 # =============================================================================
 # Configura BMAD Method per il progetto PTVX
 # =============================================================================
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 set -e
 

@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_rlrve8
 qmd: "phpstan relationship"
-=======
->>>>>>> .merge_file_2tNo5w
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-relationship-fix.md

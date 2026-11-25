@@ -3,15 +3,7 @@ title: "verification report"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_8XqwEf
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_hDfpPu
 qmd: "verification report"
 issues: []
 discussions: []
@@ -55,10 +47,6 @@ This report verifies the compliance of Bulk Actions with strict Filament extensi
 ## Conclusion
 
 All active Bulk Actions in the scope are now compliant with the strict architectural rules imposed.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 title: "verification report"
@@ -70,8 +58,3 @@ qmd: "verification report"
 issues: []
 discussions: []
 **Verified by**: iFlow CLI
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

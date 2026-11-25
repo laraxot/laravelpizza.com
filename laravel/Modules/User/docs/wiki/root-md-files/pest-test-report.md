@@ -1,10 +1,7 @@
 ---
 title: pest-test-report-2
 module: User
-<<<<<<< .merge_file_3FsHL1
 qmd: "pest test report pesttestreport2"
-=======
->>>>>>> .merge_file_xBKI7G
 ---
 
 # <nome progetto> User Module - Pest Test Implementation Report

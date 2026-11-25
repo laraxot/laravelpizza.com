@@ -3,31 +3,7 @@ title: "GEMINI"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_K82uWK
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_tyjGBY
-<<<<<<< .merge_file_DxJMAJ
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_fMQdYS
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_g8LSiO
-=======
-<<<<<<< .merge_file_tyjGBY
->>>>>>> .merge_file_26kyjf
-=======
->>>>>>> .merge_file_fMQdYS
->>>>>>> laraxot/dev
 qmd: "GEMINI"
 issues: []
 discussions: []
@@ -47,10 +23,6 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 - [Regole Filament](./.agents/docs/main-rules/gemini-filament.md)
 - [Folio & Volt](./.agents/docs/main-rules/gemini-folio-volt.md)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 title: "GEMINI"
 type: note
@@ -91,13 +63,8 @@ related:
   - "./action-plan-immediate.md"
 ---
 
-<<<<<<< HEAD
-=======
-=======
 <!-- Merged from gemini.md, which collided with this file on case-insensitive filesystems. -->
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 # Gemini Rules (Modular)
 
 Questa documentazione è stata divisa in moduli per una gestione più efficiente del contesto.

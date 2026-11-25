@@ -3,21 +3,7 @@ title: " repos"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_dzZokU
-<<<<<<< .merge_file_sk5FgD
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_rdUzAL
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_dzZokU
->>>>>>> .merge_file_ExBR7a
-=======
->>>>>>> .merge_file_rdUzAL
 qmd: " repos"
 issues: []
 discussions: []

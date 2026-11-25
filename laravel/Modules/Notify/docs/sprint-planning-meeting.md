@@ -3,15 +3,7 @@ title: "sprint planning meeting"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_HFMVu4
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_biD8s6
 qmd: "sprint planning meeting"
 issues: []
 discussions: []

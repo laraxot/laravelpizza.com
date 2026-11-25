@@ -3,15 +3,7 @@ title: "migrations"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_WzYSGU
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_8zZRmw
 qmd: "migrations"
 issues: []
 discussions: []
@@ -243,10 +235,6 @@ public function template(): BelongsTo
 ## Collegamenti tra versioni di migrations.md
 * [migrations.md](../../Gdpr/docs/migrations.md)
 * [migrations.md](../../Activity/docs/database/migrations.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 title: "migrations"
@@ -257,11 +245,3 @@ updated: 2026-09-26
 qmd: "migrations"
 issues: []
 discussions: []
-<<<<<<< .merge_file_WzYSGU
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_8zZRmw

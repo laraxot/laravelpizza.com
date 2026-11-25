@@ -7,25 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_0HLF4J
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_yUgMti
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_0HLF4J
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_yUgMti
 ---
 
 # 📚 Master Documentation Index
@@ -41,18 +23,6 @@ updated: 2026-11-23
 ### Per Nuovi Arrivati
 1. [Zen of Documentation](./zen-of-documentation-3.md) - Filosofia e principi
 2. [Documentation Governance](./documentation-governance-3.md) - Regole e standard
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_0HLF4J
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_yUgMti
 3. [Multi-Agent Collaboration](./multi-agent-collaboration-2.md) - Come lavorare con AI agents
 
 ### Per Sviluppatori
@@ -63,17 +33,6 @@ updated: 2026-11-23
 ### Per AI Agents
 - [Project Context](./project/project.md)
 - [Agent Coordination](./multi-agent-collaboration-2.md)
-<<<<<<< .merge_file_0HLF4J
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_yUgMti
 3. [Multi-Agent Collaboration](../../../multi-agent-collaboration-2.md) - Come lavorare con AI agents
 
 ### Per Sviluppatori
@@ -84,18 +43,6 @@ updated: 2026-11-23
 ### Per AI Agents
 - [Project Context](./project/project-2.md)
 - [Agent Coordination](../../../multi-agent-collaboration-2.md)
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_0HLF4J
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_yUgMti
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [OpenViking Context](../bashscripts/ai/openviking.md)
 
 ---
@@ -121,29 +68,9 @@ updated: 2026-11-23
 - [Naming Conventions](./conventions/naming.md)
 
 ### 🤖 AI Tools
-<<<<<<< HEAD
-<<<<<<< .merge_file_0HLF4J
 - [Multi-Agent Guide](./multi-agent-collaboration-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_yUgMti
 - [Multi-Agent Guide](../../../multi-agent-collaboration-2.md)
-=======
-<<<<<<< HEAD
 - [Multi-Agent Guide](./multi-agent-collaboration-2.md)
-=======
-- [Multi-Agent Guide](../../../multi-agent-collaboration-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_0HLF4J
-=======
-- [Multi-Agent Guide](./multi-agent-collaboration-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_yUgMti
 - [BMAD Framework](./bmad/README.md)
 - [GSD Workflow](./gsd/README.md)
 - [NotebookLM](./notebooklm/README.md)
@@ -279,31 +206,10 @@ openviking get-context --query="documentation"
 ### Per Contribuire
 1. Leggi [Documentation Governance](./documentation-governance-3.md)
 2. Segui [Zen of Documentation](./zen-of-documentation-3.md)
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_0HLF4J
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_yUgMti
 1. Leggi [Documentation Governance](./documentation-governance-3.md)
 2. Segui [Zen of Documentation](./zen-of-documentation-3.md)
 1. Leggi [Documentation Governance](./documentation-governance-3.md)
 2. Segui [Zen of Documentation](./zen-of-documentation-3.md)
-<<<<<<< .merge_file_0HLF4J
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_yUgMti
->>>>>>> laraxot/dev
 3. Aggiorna questo indice
 4. Esegui quality checks
 

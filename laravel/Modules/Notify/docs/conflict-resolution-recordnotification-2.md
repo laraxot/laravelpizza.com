@@ -3,21 +3,7 @@ title: "conflict resolution recordnotification"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_uPGP9y
-<<<<<<< .merge_file_Iw2GFk
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_k7JOno
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_uPGP9y
->>>>>>> .merge_file_nj2BZz
-=======
->>>>>>> .merge_file_k7JOno
 qmd: "conflict resolution recordnotification"
 issues: []
 discussions: []

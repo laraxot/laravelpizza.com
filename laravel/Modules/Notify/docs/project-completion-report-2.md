@@ -3,15 +3,7 @@ title: "project completion report"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_LMO2Zp
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_B574zr
 qmd: "project completion report"
 issues: []
 discussions: []
@@ -300,10 +292,6 @@ Il sistema è pronto per il deployment in produzione e può essere facilmente pe
 ## Licenza
 
 MIT License - Vedi file LICENSE per dettagli.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -320,13 +308,3 @@ discussions: []
 **Status**: ✅ COMPLETATO
 
 
-
-
-
-
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

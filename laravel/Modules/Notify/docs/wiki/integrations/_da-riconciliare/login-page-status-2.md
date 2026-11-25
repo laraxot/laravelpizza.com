@@ -7,25 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_12A4Ul
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_aJhbd3
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_12A4Ul
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_aJhbd3
 ---
 
 # 📊 Status Pagina Login - Verifica Tecnica
@@ -316,29 +298,8 @@ Password: password
 
 ## 📚 Documentazione Correlata
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_12A4Ul
 1. **[Widget Rendering Analysis](../laravel/Modules/User/docs/widget-rendering-analysis-3.md)**
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_aJhbd3
 1. **[Widget Rendering Analysis](../laravel/Modules/User/docs/widget-rendering-analysis-3.md)**
-=======
-<<<<<<< HEAD
-1. **[Widget Rendering Analysis](../laravel/Modules/User/docs/widget-rendering-analysis-3.md)**
-=======
-1. **[Widget Rendering Analysis](../laravel/Modules/User/docs/widget-rendering-analysis-3.md)**
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_12A4Ul
-=======
-1. **[Widget Rendering Analysis](../laravel/Modules/User/docs/widget-rendering-analysis-3.md)**
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_aJhbd3
    - Analisi completa architettura LoginWidget
    - Diagrammi flusso
    - Best practices
@@ -376,19 +337,3 @@ Password: password
 **Confidence**: 💯 MASSIMA
 
 
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< .merge_file_12A4Ul
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_aJhbd3
->>>>>>> laraxot/dev

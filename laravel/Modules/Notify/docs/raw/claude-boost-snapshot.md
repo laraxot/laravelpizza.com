@@ -3,25 +3,7 @@ title: "claude boost snapshot"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_aDI4RE
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_P5D9zw
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_aDI4RE
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_P5D9zw
 qmd: "claude boost snapshot"
 issues: []
 discussions: []
@@ -586,14 +568,12 @@ $delete = fn(Product $product) => $product->delete();
 </code-snippet>
 
 
-
 <code-snippet name="Real-Time Search With Volt" lang="php">
     <flux:input
         wire:model.live.debounce.300ms="search"
         placeholder="Search..."
     />
 </code-snippet>
-
 
 
 <code-snippet name="Loading States With Volt" lang="php">
@@ -730,28 +710,10 @@ npm run build
 - The Laravel application reads compiled assets from the theme's `resources/dist/` directory
 - Without `npm run build`, Tailwind won't compile new classes or changes
 - niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-<<<<<<< HEAD
 - Without `symlink public_html/themes (npm run copy obsoleto)`, the changes won't be available to the main Laravel application
-=======
-<<<<<<< .merge_file_aDI4RE
-<<<<<<< HEAD
-<<<<<<< HEAD
 - Without `symlink public_html/themes (npm run copy obsoleto)`, the changes won't be available to the main Laravel application
-=======
-=======
->>>>>>> .merge_file_P5D9zw
-<<<<<<< .merge_file_YkJVPr
 
 - Without `symlink public_html/themes (npm run copy obsoleto)`, the changes won't be available to the main Laravel application
-=======
->>>>>>> .merge_file_rsSwKq
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_aDI4RE
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_P5D9zw
 - Users will NOT see any frontend changes without these steps
 
 ### Remember:

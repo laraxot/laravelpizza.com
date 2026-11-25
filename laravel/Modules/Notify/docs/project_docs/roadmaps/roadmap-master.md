@@ -3,15 +3,7 @@ title: "roadmap master"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_JWBxlc
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_wtYLlo
 qmd: "roadmap master"
 issues: []
 discussions: []
@@ -392,10 +384,6 @@ Completare il progetto Notify in ogni aspetto seguendo le roadmap specifiche di 
 - **Job**: Job management
 - **AI**: Artificial intelligence
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "roadmap master"
@@ -413,9 +401,4 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 *Questa Master Roadmap consolida tutte le roadmap specifiche dei moduli e temi, garantendo coerenza architetturale e completamento del progetto in ogni aspetto.*

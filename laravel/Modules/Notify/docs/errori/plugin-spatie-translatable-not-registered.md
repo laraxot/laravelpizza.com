@@ -3,31 +3,7 @@ title: "plugin spatie translatable not registered"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_KXR81y
-<<<<<<< .merge_file_cIk2FI
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_pggygl
-=======
->>>>>>> .merge_file_3H2nQH
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_KXR81y
-<<<<<<< .merge_file_cIk2FI
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_pggygl
-=======
->>>>>>> .merge_file_3H2nQH
 qmd: "plugin spatie translatable not registered"
 issues: []
 discussions: []
@@ -397,31 +373,10 @@ Prima di usare `LangBase*`:
 - [Spatie Laravel Translatable](https://spatie.be/docs/laravel-translatable/v6/introduction)
 
 ### Documentazione Interna
-<<<<<<< HEAD
-<<<<<<< .merge_file_KXR81y
-<<<<<<< .merge_file_cIk2FI
 - [Lang Module README](../../../lang/docs/README.md)
 - [Filament Panel Configuration](../../../xot/docs/filament/panel-configuration.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_pggygl
-=======
->>>>>>> .merge_file_3H2nQH
-=======
-<<<<<<< HEAD
 - [Lang Module README](../../../lang/docs/README.md)
 - [Filament Panel Configuration](../../../xot/docs/filament/panel-configuration.md)
-=======
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_KXR81y
-<<<<<<< .merge_file_cIk2FI
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_pggygl
-=======
->>>>>>> .merge_file_3H2nQH
 - [Lang Module README](../../../Lang/docs/readme.md)
 - [Filament Panel Configuration](../../../xot/docs/filament/panel-configuration.md)
 
@@ -440,20 +395,5 @@ discussions: []
 **Next Step**: Decidere se MailTemplate deve essere traducibile
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_KXR81y
-<<<<<<< .merge_file_cIk2FI
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 - [Lang Module README](../../../lang/docs/README.md)
 - [Filament Panel Configuration](../../../xot/docs/filament/panel-configuration.md)
-=======
->>>>>>> .merge_file_pggygl
-=======
->>>>>>> .merge_file_3H2nQH
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

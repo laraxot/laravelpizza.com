@@ -3,21 +3,7 @@ title: "laraxot model rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_jp8aLr
-<<<<<<< .merge_file_6flSwW
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_BrYs5G
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_jp8aLr
->>>>>>> .merge_file_piIcMn
-=======
->>>>>>> .merge_file_BrYs5G
 qmd: "laraxot model rules"
 issues: []
 discussions: []

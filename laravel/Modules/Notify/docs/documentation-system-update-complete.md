@@ -3,35 +3,13 @@ title: "Documentation System Update - Complete"
 type: concept
 tags: [documentation, system, update, complete]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_H7Fp6x
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_MWofMu
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_H7Fp6x
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_MWofMu
 qmd: "documentation-system-update-complete documentation system update - complete"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./00-index.md"
   - "./00-index-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
   - "./00-index.md"
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
@@ -42,15 +20,10 @@ related:
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
-<<<<<<< HEAD
-=======
-=======
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
   - "./00-index-documentation.md"
   - "./absolute-completion-completamento-assoluto.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 status: draft
 ---
@@ -271,63 +244,27 @@ export default defineConfig({
 **Why This is Correct:**
 
 1. **Build Target:** `./public` (local theme public folder)
-<<<<<<< HEAD
 2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 2. **Nessuna copia:** `public_html/themes/Sixteen` e' un symlink a `laravel/Themes/Sixteen/public` (`npm run copy` obsoleto)
-=======
-<<<<<<< .merge_file_H7Fp6x
-<<<<<<< HEAD
-<<<<<<< HEAD
 2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 2. **Nessuna copia:** `public_html/themes/Sixteen` e' un symlink a `laravel/Themes/Sixteen/public` (`npm run copy` obsoleto)
-=======
-=======
->>>>>>> .merge_file_MWofMu
-<<<<<<< .merge_file_mud8xU
 2. **Copy Step:** `symlink public_html/themes (npm run copy obsoleto)` copies to `../../public_html/themes/Sixteen/`
 2. **Nessuna copia:** `public_html/themes/Sixteen` e' un symlink a `laravel/Themes/Sixteen/public` (`npm run copy` obsoleto)
-=======
 2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
->>>>>>> .merge_file_wjGy6R
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_H7Fp6x
-=======
 2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_MWofMu
 3. **Manifest Location:** Both locations have manifest.json after build
 4. **Laravel Vite:** Reads from `public_html/themes/Sixteen/manifest.json`
 
 **Build Flow:**
 ```
-<<<<<<< HEAD
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 resources/ → Vite Build → public/ ← symlink ← public_html/themes/Sixteen
-=======
-<<<<<<< .merge_file_H7Fp6x
-<<<<<<< HEAD
-<<<<<<< HEAD
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 resources/ → Vite Build → public/ ← symlink ← public_html/themes/Sixteen
-=======
-=======
->>>>>>> .merge_file_MWofMu
-<<<<<<< .merge_file_mud8xU
 resources/ → Vite Build → public/ → symlink public_html/themes (npm run copy obsoleto) → public_html/themes/Sixteen/
 resources/ → Vite Build → public/ ← symlink ← public_html/themes/Sixteen
-=======
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
->>>>>>> .merge_file_wjGy6R
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_H7Fp6x
-=======
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_MWofMu
 ```
 
 ---

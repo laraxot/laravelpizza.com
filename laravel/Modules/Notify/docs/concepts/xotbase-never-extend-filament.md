@@ -1,48 +1,12 @@
 ---
 issues: []
 discussions: []
-<<<<<<< .merge_file_ahT2xB
-<<<<<<< .merge_file_w7eyEn
-<<<<<<< HEAD
 title: "Notify — mai Filament*, sempre XotBase*"
-=======
-title: "Notify — mai Filament\*, sempre XotBase*"
->>>>>>> laraxot/dev
-=======
-title: "Notify — mai Filament\*, sempre XotBase*"
->>>>>>> .merge_file_9SytgG
-=======
-title: "Notify — mai Filament\*, sempre XotBase*"
->>>>>>> .merge_file_6GeQJO
 type: concept
 module: Notify
 tags: [notify, filament, xotbase, architecture]
 created: 2026-07-16
-<<<<<<< HEAD
-<<<<<<< .merge_file_ahT2xB
-<<<<<<< .merge_file_w7eyEn
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_9SytgG
-=======
->>>>>>> .merge_file_6GeQJO
-updated: 2026-07-16
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ahT2xB
-<<<<<<< .merge_file_w7eyEn
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_9SytgG
-=======
->>>>>>> .merge_file_6GeQJO
 qmd: "Notify filament never extend Filament class XotBase mirror path"
 related:
   - ../../../../docs/wiki/rules/xotbase-critical-rules.md

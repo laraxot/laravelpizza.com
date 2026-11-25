@@ -3,21 +3,7 @@ title: "boost rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_KZqoWK
-<<<<<<< .merge_file_wmEfzS
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_b94kzF
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_KZqoWK
->>>>>>> .merge_file_87LlBW
-=======
->>>>>>> .merge_file_b94kzF
 qmd: "boost rules"
 issues: []
 discussions: []
@@ -63,10 +49,6 @@ discussions: []
 4. Mixed Queries - query=middleware "rate limit" - "middleware" AND exact phrase "rate limit".
 5. Multiple Queries - queries=["authentication", "middleware"] - ANY of these terms.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -86,9 +68,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../wiki/integrations/_da-riconciliare/gemini-2.md](../../../wiki/integrations/_da-riconciliare/gemini-2.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

@@ -6,20 +6,9 @@ priority: medium
 module: Notify
 story: ./2026-10-06-phpstan-cleanup-notify.story.md
 created: 2026-10-06
-<<<<<<< .merge_file_JdciQ2
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-10-06
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_sel9a2
 tags: [notify, phpstan, enum, push, notification-log]
-<<<<<<< HEAD
 qmd: "06 phpstan cleanup notify dev"
-=======
->>>>>>> laraxot/dev
 ---
 
 # [DEV] PHPStan cleanup Notify

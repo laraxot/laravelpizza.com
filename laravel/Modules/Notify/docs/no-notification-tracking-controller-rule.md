@@ -3,15 +3,7 @@ title: "no notification tracking controller rule"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_s6Gcbs
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_Kw40WW
 qmd: "no notification tracking controller rule"
 issues: []
 discussions: []

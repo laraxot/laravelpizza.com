@@ -4,15 +4,7 @@ type: index
 tags: [notify, docs, mcp]
 module: Notify
 created: 2026-07-20
-<<<<<<< .merge_file_8b3ClN
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_0mZyYv
 qmd: "notify documentazione mcp index mcp server index - laraxot project index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"

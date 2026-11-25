@@ -3,21 +3,7 @@ title: "claude architecture rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_321VHV
-<<<<<<< .merge_file_lSZ4wW
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_LmSUoc
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_321VHV
->>>>>>> .merge_file_OTMSUQ
-=======
->>>>>>> .merge_file_LmSUoc
 qmd: "claude architecture rules"
 issues: []
 discussions: []
@@ -54,10 +40,6 @@ npm run build
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "claude architecture rules"
@@ -77,13 +59,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 2. BelongsToMany - CRITICAL
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 3. Database Config - CRITICAL
 
 **`config/database.php`** (base) e **`config/local/{tenant}/database.php`** devono seguire lo standard Laravel 12.

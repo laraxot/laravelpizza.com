@@ -3,21 +3,7 @@ title: "composer update report"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_JKTE9v
-<<<<<<< .merge_file_HHwoVj
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_z6b0y2
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_JKTE9v
->>>>>>> .merge_file_7zaqTI
-=======
->>>>>>> .merge_file_z6b0y2
 qmd: "composer update report"
 issues: []
 discussions: []
@@ -180,10 +166,6 @@ composer update -W
 2. ⏳ Testare applicazione
 3. ⏳ Verificare moduli
 4. ⏳ Testare Filament 5.x
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -199,8 +181,3 @@ discussions: []
 **Filament Version**: **5.x**  
 **Strategia**: **Root minimale, moduli specifici**  
 **Merge Plugin**: **Configurato e funzionante**
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

@@ -3,31 +3,7 @@ title: "agents gsd bmad"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_ph5MI5
-<<<<<<< .merge_file_8ZWKKr
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_39XlYh
-=======
->>>>>>> .merge_file_PxJRsb
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ph5MI5
-<<<<<<< .merge_file_8ZWKKr
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_39XlYh
-=======
->>>>>>> .merge_file_PxJRsb
 qmd: "agents gsd bmad"
 issues: []
 discussions: []
@@ -63,10 +39,6 @@ $gsd-quick "task"
 - [GSD GitHub](https://github.com/gsd-build/get-shit-done)
 - [GSD Docs](https://gsd-build-get-shit-done.mintlify.app/)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "agents gsd bmad"
@@ -109,16 +81,11 @@ bmad-verify-work [N]         # Verifica
 - [BMAD Docs](https://docs.bmad-method.org/)
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## BMAD (Breakthrough Method for Agile AI-Driven Development)
 ### Moduli BMAD
 ### Comandi
 # Con bmad-help skill in agente AI
 ### Documentazione
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Quando Usare GSD vs BMAD
 
@@ -164,48 +131,22 @@ bmad-verify-work [N]         # Verifica
 
 - [Indice AGENTS](./agents-split-index.md)
 - [gsd-bmad-comprehensive-guide.md](./gsd-bmad-comprehensive-guide.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_ph5MI5
-<<<<<<< .merge_file_8ZWKKr
 - [AGENTS.md originale](../../AGENTS.md)
 - [AGENTS.md originale](../../AGENTS.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [AGENTS.md originale](../../AGENTS.md)
-- [AGENTS.md originale](../../AGENTS.md)
-=======
-<<<<<<< HEAD
 - [AGENTS.md originale](../../agents.md)
 - [agents.md originale](../../agents.md)
-=======
 - [AGENTS.md originale](../../AGENTS.md)
 - [AGENTS.md originale](../../AGENTS.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 - [AGENTS.md originale](../../agents.md)
 - [agents.md originale](../../agents.md)
-=======
 - [AGENTS.md originale](../../AGENTS.md)
 - [AGENTS.md originale](../../AGENTS.md)
-=======
 - [AGENTS.md originale](../../AGENTS.md)
 - [AGENTS.md originale](../../AGENTS.md)
->>>>>>> .merge_file_PxJRsb
-=======
-<<<<<<< HEAD
 - [AGENTS.md originale](../../agents.md)
 - [agents.md originale](../../agents.md)
-=======
 - [AGENTS.md originale](../../AGENTS.md)
 - [AGENTS.md originale](../../AGENTS.md)
-<<<<<<< .merge_file_ph5MI5
->>>>>>> .merge_file_39XlYh
-=======
->>>>>>> .merge_file_PxJRsb
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Index principale](./index.md)
 
 ## Differenze vs Originale

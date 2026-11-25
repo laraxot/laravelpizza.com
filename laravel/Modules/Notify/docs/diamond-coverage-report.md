@@ -3,25 +3,8 @@ title: "💎 FIXCITY - DIAMOND COVERAGE REPORT"
 type: concept
 tags: [diamond, coverage, report]
 created: 2026-07-14
-<<<<<<< .merge_file_A9IsAu
-<<<<<<< .merge_file_B5YtLx
 updated: 2026-11-23
 qmd: "diamond-coverage-report 💎 fixcity - diamond coverage report"
-=======
-=======
->>>>>>> .merge_file_6i1g6j
-<<<<<<< HEAD
-updated: 2026-07-14
-qmd: "diamond-coverage-report 💎 fixcity - diamond coverage report"
-qmd: "diamond-coverage-report 💎 ptv - diamond coverage report"
-=======
-updated: 2026-11-23
-qmd: "diamond-coverage-report 💎 fixcity - diamond coverage report"
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_A9IsAu
->>>>>>> .merge_file_Hpr3SY
-=======
->>>>>>> .merge_file_6i1g6j
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
@@ -29,26 +12,14 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_A9IsAu
-<<<<<<< .merge_file_B5YtLx
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_6i1g6j
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_Hpr3SY
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

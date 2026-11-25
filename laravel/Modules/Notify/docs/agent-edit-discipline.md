@@ -4,41 +4,9 @@ created: 2026-09-26
 qmd: "agent edit discipline"
 issues: []
 discussions: []
-<<<<<<< HEAD
 title: "agent edit discipline: puntatore"
 type: reference
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-title: "agent edit discipline: puntatore"
-type: reference
-updated: 2026-11-23
-=======
-title: agent edit discipline: puntatore
-type: reference
-<<<<<<< HEAD
-<<<<<<< .merge_file_7WT3Z8
-<<<<<<< .merge_file_WDUWnI
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_N0pC0l
-=======
->>>>>>> .merge_file_EjkGRq
-updated: 2026-05-19
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_7WT3Z8
-<<<<<<< .merge_file_WDUWnI
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_N0pC0l
-=======
->>>>>>> .merge_file_EjkGRq
->>>>>>> laraxot/dev
 status: draft
 ---
 

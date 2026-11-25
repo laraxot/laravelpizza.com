@@ -3,21 +3,7 @@ title: "architettura"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_CO978s
-<<<<<<< .merge_file_oeK8Zq
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_w5Tkqb
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_CO978s
->>>>>>> .merge_file_t86eku
-=======
->>>>>>> .merge_file_w5Tkqb
 qmd: "architettura"
 issues: []
 discussions: []

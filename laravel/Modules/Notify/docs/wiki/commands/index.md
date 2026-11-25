@@ -5,15 +5,7 @@ discussions: []
 title: "Commands Index"
 type: index
 created: 2026-05-11
-<<<<<<< .merge_file_DhePQv
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-05-11
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_N5Wd6Z
 tags: [commands, index, on-demand]
 related:
   - ../rules/00-TRIGGER_MAP.md

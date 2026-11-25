@@ -3,15 +3,7 @@ title: "strategies"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Saz2RX
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_LGzUPK
 qmd: "strategies"
 issues: []
 discussions: []
@@ -271,10 +263,6 @@ php artisan translation:extract
 - [Filament Translations](../filament/translations.md)
 - [Troubleshooting Translations](../../troubleshooting/errors/translation-errors.md)
 - [Module Translations](../../modules/lang/)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -288,11 +276,3 @@ issues: []
 discussions: []
 *Ultimo aggiornamento: Agosto 2025*
 *Fonte: laravel/Modules/Lang/docs/TRANSLATION_STRATEGIES.md* 
-<<<<<<< .merge_file_Saz2RX
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_LGzUPK

@@ -3,15 +3,7 @@ title: "removal christmasgreetingmailable"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_vp8LQk
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_guovki
 qmd: "removal christmasgreetingmailable"
 issues: []
 discussions: []
@@ -200,10 +192,6 @@ Una sola classe (`SpatieEmail`) per tutte le email stagionali, non una per ogni 
 - [ZEN_STRATEGY.md](./refactoring/ZEN_STRATEGY.md) - Filosofia Zen per sistema stagionale
 - [removal-getseasonalemaillayoutaction.md](./removal-getseasonalemaillayoutaction.md) - Rimozione GetSeasonalEmailLayoutAction
 - [seasonal-email-templates.md](./seasonal-email-templates.md) - Guida completa template stagionali
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -217,8 +205,3 @@ issues: []
 discussions: []
 **Ultimo aggiornamento**: 19 Dicembre 2025  
 **Filosofia**: *"Genericity first, simplicity second, DRY always, KISS forever"*
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

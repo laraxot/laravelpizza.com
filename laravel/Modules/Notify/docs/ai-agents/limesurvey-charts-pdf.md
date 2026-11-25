@@ -3,21 +3,7 @@ title: "limesurvey charts pdf"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_fvCedS
-<<<<<<< .merge_file_sCP0t7
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_UN06Nn
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_fvCedS
->>>>>>> .merge_file_JJQUJp
-=======
->>>>>>> .merge_file_UN06Nn
 qmd: "limesurvey charts pdf"
 issues: []
 discussions: []

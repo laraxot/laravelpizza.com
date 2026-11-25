@@ -7,23 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_oQL1x4
-=======
-<<<<<<< .merge_file_yNkbvs
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_4QCZpp
-=======
->>>>>>> .merge_file_3nKB8A
->>>>>>> laraxot/dev
 ---
 
 # SuperMemory - AI Memory Infrastructure

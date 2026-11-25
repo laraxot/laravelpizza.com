@@ -3,21 +3,7 @@ title: "project overview"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_yGy84v
-<<<<<<< .merge_file_DS8FG0
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_YrXfmU
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_yGy84v
->>>>>>> .merge_file_ybeTFs
-=======
->>>>>>> .merge_file_YrXfmU
 qmd: "project overview"
 issues: []
 discussions: []
@@ -78,10 +64,6 @@ Modules/{ModuleName}/
 └── composer.json
 ```
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 title: "project overview"
 type: note
@@ -91,15 +73,4 @@ updated: 2026-09-26
 qmd: "project overview"
 issues: []
 discussions: []
-<<<<<<< .merge_file_yGy84v
-<<<<<<< .merge_file_DS8FG0
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_ybeTFs
-=======
->>>>>>> .merge_file_YrXfmU
 [Back to index](../index.md) | [Guidelines](guidelines.md) | [Links](links.md)

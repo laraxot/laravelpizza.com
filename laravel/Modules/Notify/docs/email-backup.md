@@ -3,35 +3,13 @@ title: "email backup"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Gz0xO3
-<<<<<<< .merge_file_mw0QGC
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_gVnrnN
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Gz0xO3
->>>>>>> .merge_file_4pL3cS
-=======
->>>>>>> .merge_file_gVnrnN
 qmd: "email backup"
 issues: []
 discussions: []
 ---
 
-<<<<<<< HEAD
-# Sistema Backup Email 
-=======
-<<<<<<< HEAD
-# Sistema Backup Email 
-=======
 # Sistema Backup Email
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Panoramica
 
@@ -78,15 +56,7 @@ class MailTemplateBackup
         }
 
         $data = json_decode(Storage::get($path), true);
-<<<<<<< HEAD
-        
-=======
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
         return MailTemplate::updateOrCreate(
             ['id' => $data['id']],
             [
@@ -215,15 +185,7 @@ class MailNotificationBackup
         }
 
         $data = json_decode(Storage::get($path), true);
-<<<<<<< HEAD
-        
-=======
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
         return MailNotification::updateOrCreate(
             ['id' => $data['id']],
             [
@@ -353,15 +315,7 @@ class MailQueueBackup
         }
 
         $data = json_decode(Storage::get($path), true);
-<<<<<<< HEAD
-        
-=======
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
         return MailQueue::updateOrCreate(
             ['id' => $data['id']],
             [

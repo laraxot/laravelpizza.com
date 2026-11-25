@@ -3,31 +3,7 @@ title: "agents coding standards"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_kuBZjv
-<<<<<<< .merge_file_cAn2Yu
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_AZgTVr
-=======
->>>>>>> .merge_file_K8VLq1
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_kuBZjv
-<<<<<<< .merge_file_cAn2Yu
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_AZgTVr
-=======
->>>>>>> .merge_file_K8VLq1
 qmd: "agents coding standards"
 issues: []
 discussions: []
@@ -52,10 +28,6 @@ Standard di codifica PHP e naming conventions.
 ### PHPDoc
 - Use **PHPDoc blocks** for class documentation (avoid inline comments)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "agents coding standards"
@@ -78,13 +50,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## Naming Conventions
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Import Organization
 
 ```php
@@ -221,49 +188,20 @@ enum Status: string implements HasLabel, HasColor {
 - [Indice AGENTS](./agents-split-index.md)
 - [code-style.md](./code-style.md) - Più dettagliato
 - [critical-rules.md](./critical-rules.md) - Regole critiche
-<<<<<<< HEAD
-<<<<<<< .merge_file_kuBZjv
-<<<<<<< .merge_file_cAn2Yu
-=======
->>>>>>> .merge_file_K8VLq1
 - [AGENTS.md originale](../../AGENTS.md)
 - [AGENTS.md originale](../../AGENTS.md)
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_kuBZjv
-<<<<<<< HEAD
-- [AGENTS.md originale](../../AGENTS.md)
-- [AGENTS.md originale](../../AGENTS.md)
-=======
-<<<<<<< HEAD
 - [AGENTS.md originale](../../agents.md)
 - [agents.md originale](../../agents.md)
-=======
 - [AGENTS.md originale](../../AGENTS.md)
 - [AGENTS.md originale](../../AGENTS.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_K8VLq1
 - [AGENTS.md originale](../../agents.md)
 - [agents.md originale](../../agents.md)
-=======
 - [AGENTS.md originale](../../AGENTS.md)
 - [AGENTS.md originale](../../AGENTS.md)
-<<<<<<< .merge_file_kuBZjv
-=======
-<<<<<<< HEAD
 - [AGENTS.md originale](../../agents.md)
 - [agents.md originale](../../agents.md)
-=======
 - [AGENTS.md originale](../../AGENTS.md)
 - [AGENTS.md originale](../../AGENTS.md)
->>>>>>> .merge_file_AZgTVr
-=======
->>>>>>> .merge_file_K8VLq1
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Index principale](./index.md)
 
 ## Miglioramenti vs Originale

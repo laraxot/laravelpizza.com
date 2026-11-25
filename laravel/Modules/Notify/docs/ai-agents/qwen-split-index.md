@@ -3,31 +3,7 @@ title: "qwen split index"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_UurqPW
-<<<<<<< .merge_file_Sfcu84
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_NyU0uG
-=======
->>>>>>> .merge_file_KYRZAu
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_UurqPW
-<<<<<<< .merge_file_Sfcu84
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_NyU0uG
-=======
->>>>>>> .merge_file_KYRZAu
 qmd: "qwen split index"
 issues: []
 discussions: []
@@ -49,35 +25,10 @@ discussions: []
 
 ## 🔗 Collegamento
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_UurqPW
-<<<<<<< .merge_file_Sfcu84
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_NyU0uG
-=======
->>>>>>> .merge_file_KYRZAu
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
-=======
-<<<<<<< HEAD
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
-=======
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_UurqPW
-<<<<<<< .merge_file_Sfcu84
-=======
-- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_NyU0uG
-=======
->>>>>>> .merge_file_KYRZAu
 - [Index principale](../../../Lang/docs/wiki/integrations/_da-riconciliare/index-3.md)
 
 ## Note

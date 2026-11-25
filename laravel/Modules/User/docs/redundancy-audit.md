@@ -13,10 +13,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_RbsDnZ
 qmd: "redundancy audit user 20260521"
-=======
->>>>>>> .merge_file_wQAoGS
 ---
 
 # User redundancy audit 2026-05-21
@@ -47,7 +44,6 @@ Suggested cleanup order:
 <!-- recovery from broken basename `redundancy-audit-2.md` after docs-guardian mass rename -->
 
 Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file evita nomi `*-.md`.
-
 
 
 ---

@@ -3,23 +3,7 @@ title: "phase 1 execution dashboard"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_UJM6e1
-=======
-<<<<<<< .merge_file_YU9iJ7
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_5OAPQJ
-=======
->>>>>>> .merge_file_uUuWEe
->>>>>>> laraxot/dev
 qmd: "phase 1 execution dashboard"
 issues: []
 discussions: []
@@ -33,10 +17,6 @@ discussions: []
 **Mode**: BMAD Researcher (Option C)  
 **Scope**: segnalazioni-elenco → 90% HTML Parity
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "phase 1 execution dashboard"
@@ -60,13 +40,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🚨 CURRENT STATUS
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 👥 TEAM ASSIGNMENTS & NEXT STEPS
 
 ### 🔴 Executor Agent #1 - NOW WORKING

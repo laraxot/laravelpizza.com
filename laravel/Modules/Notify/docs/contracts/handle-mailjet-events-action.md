@@ -1,51 +1,17 @@
 ---
-<<<<<<< .merge_file_vYZxH1
-<<<<<<< .merge_file_lL8aFX
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_V8vax0
-=======
->>>>>>> .merge_file_rfdseb
 title: "Contratto — HandleMailjetEventsAction"
 type: contract
 action: "Modules\Notify\Actions\Mail\Mailjet\HandleMailjetEventsAction"
 tags: [contract, action, notify, mailjet, webhook]
 created: 2026-11-24
 updated: 2026-11-24
-<<<<<<< .merge_file_vYZxH1
-<<<<<<< .merge_file_lL8aFX
-=======
->>>>>>> laraxot/dev
-title: "HandleMailjetEventsAction — contratto"
-type: contract
 owner: Notify
 status: accepted
-updated: 2026-11-24
-action: "Modules\\Notify\\Actions\\Mail\\Mailjet\\HandleMailjetEventsAction"
 qmd: "HandleMailjetEventsAction webhook Mailjet eventi bounce click open spam unsub MailDeliveryEventReceived token"
-<<<<<<< HEAD
-tags: [contract, action, notify, mailjet, webhook]
-created: 2026-11-24
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_V8vax0
-=======
->>>>>>> .merge_file_rfdseb
 ---
 
 # HandleMailjetEventsAction
 
-<<<<<<< .merge_file_vYZxH1
-<<<<<<< .merge_file_lL8aFX
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_V8vax0
-=======
->>>>>>> .merge_file_rfdseb
 Contratto di comportamento (regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`).
 Sorgente: `app/Actions/Mail/Mailjet/HandleMailjetEventsAction.php`. Studio e integrazione: `docs/email/mailjet.md`.
 Decisioni: [token nel percorso](../adr/webhooks-authenticate-with-a-token-in-the-path.md),
@@ -88,9 +54,6 @@ Test: `tests/Feature/MailjetEventsWebhookTest.php`.
 - Non deduplica: un evento ritrasmesso da Mailjet arriva due volte ai listener.
 - Non verifica firme né IP di provenienza: l'unica autenticazione è il token.
 - Non manda email (`CreateMailjetTransportAction` è il trasporto in uscita).
-<<<<<<< .merge_file_vYZxH1
-<<<<<<< .merge_file_lL8aFX
-=======
 Webhook Mailjet: valida il token nel path, normalizza gli eventi e li rilancia come `MailDeliveryEventReceived`.
 
 ## Input
@@ -123,8 +86,3 @@ Webhook Mailjet: valida il token nel path, normalizza gli eventi e li rilancia c
 
 - Non verifica la firma dei webhook Mailjet: solo il token nel path.
 - Non scrive direttamente su DB (lo fanno i listener, non letti qui).
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_V8vax0
-=======
->>>>>>> .merge_file_rfdseb

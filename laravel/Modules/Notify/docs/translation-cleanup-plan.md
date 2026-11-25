@@ -3,15 +3,7 @@ title: "translation cleanup plan"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_I8jpoY
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-10-23
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_mQaeIP
 qmd: "translation cleanup plan"
 issues: []
 discussions: []

@@ -3,21 +3,7 @@ title: "reusable components philosophy"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Yg86Mm
-<<<<<<< .merge_file_gsDIzb
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_t2pjJk
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Yg86Mm
->>>>>>> .merge_file_WnNlUW
-=======
->>>>>>> .merge_file_t2pjJk
 qmd: "reusable components philosophy"
 issues: []
 discussions: []
@@ -29,10 +15,6 @@ discussions: []
 **Date**: 2026-03-26  
 **Status**: ✅ PHILOSOPHY DEFINED
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "reusable components philosophy"
@@ -71,14 +53,9 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 The Zen of Reusable Components
 ### Perché Componenti Riutilizzabili?
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🏗️ Architecture Principles
 
 ### Principle 1: Single Responsibility

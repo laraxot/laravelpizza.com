@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_OAV7Dr
 ---
 title: "Teams Migration - Laraxot Compliance Fix"
 type: note
 qmd: "teams migration laraxot compliance fix"
 ---
-=======
->>>>>>> .merge_file_KyvaGU
 # Teams Migration - Laraxot Compliance Fix
 
 ## Data

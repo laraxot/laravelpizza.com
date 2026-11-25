@@ -3,21 +3,7 @@ title: "analisi metodi duplicati"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_FTrj4f
-<<<<<<< .merge_file_GT2D6e
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_f9wdl9
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_FTrj4f
->>>>>>> .merge_file_Uvegrj
-=======
->>>>>>> .merge_file_f9wdl9
 qmd: "analisi metodi duplicati"
 issues: []
 discussions: []
@@ -35,10 +21,6 @@ discussions: []
 7. [Svantaggi e Rischi dell'Unificazione](#svantaggi-e-rischi-dellunificazione)
 8. [Raccomandazioni](#raccomandazioni)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "analisi metodi duplicati"
@@ -59,13 +41,8 @@ Questo documento analizza i metodi duplicati trovati all'interno dei moduli Lara
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## Panoramica
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Metodi Duplicati nei BaseModel
 
 ### 1. Metodo `casts(): array`
@@ -662,11 +639,3 @@ rules:
 **Data:** 2025-10-15  
 **Versione:** 1.0  
 **Status:** Draft per Review
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

@@ -6,23 +6,7 @@ issues: []
 discussions: []
 title: agent edit discipline — puntatore
 type: reference
-<<<<<<< HEAD
-<<<<<<< .merge_file_W3aw1b
-=======
-<<<<<<< .merge_file_uvTNGB
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-05-19
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_IFlzp4
-=======
->>>>>>> .merge_file_DeCJxW
->>>>>>> laraxot/dev
 ---
 
 # Disciplina edit e qualità (puntatore)

@@ -3,25 +3,7 @@ title: "filament resources"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_OqImeE
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_zszErU
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_OqImeE
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zszErU
 qmd: "filament resources"
 issues: []
 discussions: []
@@ -44,10 +26,6 @@ NotificationTemplateResource gestisce i template delle notifiche nel sistema. Es
 ### Panoramica
 MailTemplateResource gestisce i template delle email nel sistema. Estende `XotBaseResource` e implementa le funzionalità base per la gestione dei template.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 
@@ -87,15 +65,10 @@ public static function getFormSchema(): array
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ### Schema del Form
 ### Versione HEAD
 ### Versione Incoming
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
                 Forms\Components\TextInput::make('subject')
                     ->required()
                     ->maxLength(255),
@@ -273,20 +246,6 @@ public static function getTableActions(): array
 
 ### Versione HEAD
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< .merge_file_OqImeE
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zszErU
->>>>>>> laraxot/dev
 ### Versione Incoming
 
 4. **Validazione JSON**
@@ -299,23 +258,7 @@ public static function getTableActions(): array
    - Struttura gerarchica delle traduzioni
    - Supporto per tooltip e placeholder
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_OqImeE
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_zszErU
 ---
 
 ## Collegamenti Bidirezionali
@@ -330,34 +273,12 @@ public static function getTableActions(): array
 - [Gestione Notifiche](../../../../../docs/architecture/notifications.md)
 
 ### Collegamenti ai Moduli
-<<<<<<< HEAD
-<<<<<<< .merge_file_OqImeE
-- [XotBaseResource](../../Xot/docs/xotbaseresource.md)
-- [Gestione Template](template-management.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_zszErU
-- [XotBaseResource](../../Xot/docs/xotbaseresource.md)
-- [Gestione Template](template-management.md)
-=======
-<<<<<<< .merge_file_wrGwPC
 - [XotBaseResource](../../Xot/docs/XotBaseResource.md)
 - [Gestione Template](../template-management.md)
-=======
 - [XotBaseResource](../../Xot/docs/xotbaseresource.md)
 - [Gestione Template](template-management.md)
->>>>>>> .merge_file_nTt6D2
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_OqImeE
-=======
 - [XotBaseResource](../../Xot/docs/xotbaseresource.md)
 - [Gestione Template](template-management.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zszErU
 
 ## Note Importanti
 
@@ -388,24 +309,4 @@ public static function getTableActions(): array
 * [filament-resources.md](../../Patient/docs/filament-resources.md)
 * [filament-resources.md](../../Cms/docs/filament-resources.md)
 
-<<<<<<< HEAD
-
 ---
-
-=======
-<<<<<<< .merge_file_OqImeE
-<<<<<<< HEAD
-<<<<<<< HEAD
-
----
-
-=======
----
->>>>>>> laraxot/dev
-=======
----
->>>>>>> laraxot/dev
-=======
----
->>>>>>> .merge_file_zszErU
->>>>>>> laraxot/dev

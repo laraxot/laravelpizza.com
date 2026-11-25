@@ -3,21 +3,7 @@ title: "tailwind rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_42rxxD
-<<<<<<< .merge_file_Oh70rn
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_BjXooX
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_42rxxD
->>>>>>> .merge_file_YstR98
-=======
->>>>>>> .merge_file_BjXooX
 qmd: "tailwind rules"
 issues: []
 discussions: []
@@ -43,14 +29,9 @@ discussions: []
         </div>
     </code-snippet>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ### Dark Mode
 - If existing pages and components support dark mode, new pages and components must support dark mode in a similar way, typically using `dark:`.
-
 
 
 ---
@@ -70,16 +51,8 @@ discussions: []
 - ← [CLAUDE Index](index.md) — All Laravel Boost guidelines
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md) — Original source
-<<<<<<< .merge_file_42rxxD
 
-<<<<<<< HEAD
-=======
-=======
 ### Dark Mode
 - If existing pages and components support dark mode, new pages and components must support dark mode in a similar way, typically using `dark:`.
-=======
->>>>>>> .merge_file_BjXooX
 
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

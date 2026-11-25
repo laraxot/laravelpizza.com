@@ -1,54 +1,6 @@
 ---
-<<<<<<< .merge_file_CNz8EF
-<<<<<<< .merge_file_BaQlYa
-<<<<<<< .merge_file_exBtp9
-<<<<<<< .merge_file_tzPeNS
 title: "Centralizzare il routing Folio dei moduli: Activity non monta Folio"
 status: done
-=======
-=======
->>>>>>> .merge_file_eOlB5K
-=======
->>>>>>> .merge_file_Bf5c1p
-=======
->>>>>>> .merge_file_W7oRrX
-<<<<<<< HEAD
-<<<<<<< HEAD
-title: "Centralizzare il routing Folio dei moduli: Activity non monta Folio"
-status: done
-=======
-=======
-=======
-<<<<<<< HEAD
-title: "Centralizzare il routing Folio dei moduli: Activity non monta Folio"
-status: done
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_5Ed99A
-title: "Centralizzare il routing Folio dei moduli"
-status: review
-=======
-title: "Centralizzare il routing Folio dei moduli: Activity non monta Folio"
-status: done
->>>>>>> .merge_file_ER34E5
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_CNz8EF
-<<<<<<< .merge_file_BaQlYa
-<<<<<<< .merge_file_exBtp9
->>>>>>> .merge_file_3SXS1r
-=======
->>>>>>> .merge_file_eOlB5K
-=======
->>>>>>> .merge_file_Bf5c1p
-=======
->>>>>>> .merge_file_W7oRrX
 module: Activity
 epic: architecture
 qmd: "BMAD Folio routing Activity provider CMS FolioVoltServiceProvider confine modulo no mount Cms assente"
@@ -84,51 +36,11 @@ Motivi:
 
 ## Decisione
 
-<<<<<<< .merge_file_CNz8EF
-<<<<<<< .merge_file_BaQlYa
-<<<<<<< .merge_file_exBtp9
-<<<<<<< .merge_file_tzPeNS
 **Progetti con il modulo Cms** — owner del montaggio Folio:
-=======
-=======
->>>>>>> .merge_file_eOlB5K
-=======
->>>>>>> .merge_file_Bf5c1p
-=======
->>>>>>> .merge_file_W7oRrX
-<<<<<<< HEAD
-<<<<<<< HEAD
 **Progetti con il modulo Cms** — owner del montaggio Folio:
-=======
-=======
-=======
-<<<<<<< HEAD
 **Progetti con il modulo Cms** — owner del montaggio Folio:
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_5Ed99A
 Owner del montaggio Folio in questo progetto:
-=======
 **Progetti con il modulo Cms** — owner del montaggio Folio:
->>>>>>> .merge_file_ER34E5
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_CNz8EF
-<<<<<<< .merge_file_BaQlYa
-<<<<<<< .merge_file_exBtp9
->>>>>>> .merge_file_3SXS1r
-=======
->>>>>>> .merge_file_eOlB5K
-=======
->>>>>>> .merge_file_Bf5c1p
-=======
->>>>>>> .merge_file_W7oRrX
 `Modules\Cms\Providers\FolioVoltServiceProvider`.
 
 - monta tema + `resources/views/pages` di ogni modulo abilitato (`uri($locale)`);
@@ -136,26 +48,6 @@ Owner del montaggio Folio in questo progetto:
   → `log-download.blade.php` = GET `/api/log-download`;
 - mount in `booted()` (non prima delle fallback Filament).
 
-<<<<<<< .merge_file_CNz8EF
-<<<<<<< .merge_file_BaQlYa
-<<<<<<< .merge_file_exBtp9
-<<<<<<< .merge_file_tzPeNS
-=======
-=======
->>>>>>> .merge_file_eOlB5K
-=======
->>>>>>> .merge_file_Bf5c1p
-=======
->>>>>>> .merge_file_W7oRrX
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_5Ed99A
 `ActivityServiceProvider` = config/comportamento Activity, **non** router.
 Niente `Folio::path()` lì (rimozione applicata; istruzione utente: aggiungere Folio nel provider «è sbagliato»).
 In questo checkout il modulo `Cms` non è presente e non va introdotto. Di
@@ -167,24 +59,6 @@ Nei progetti che includono il modulo comune CMS, il solo owner delle pagine
 Folio dei moduli e dei temi è `Cms/app/Providers/FolioVoltServiceProvider`.
 Activity resta proprietario della configurazione e del comportamento Activity,
 non dell'infrastruttura di routing.
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_CNz8EF
-<<<<<<< .merge_file_BaQlYa
-<<<<<<< .merge_file_exBtp9
->>>>>>> .merge_file_3SXS1r
-=======
->>>>>>> .merge_file_eOlB5K
-=======
->>>>>>> .merge_file_Bf5c1p
-=======
->>>>>>> .merge_file_W7oRrX
 **Progetti senza il modulo Cms** — Cms non va introdotto solo per questo, e
 `App\Providers\FolioServiceProvider` non va usato come surrogato: il provider
 applicativo monta soltanto `resources/views/pages`, non le pagine dei moduli. Il
@@ -193,41 +67,6 @@ pattern si impara dai progetti che hanno Cms, non si importa il modulo.
 In entrambi i casi `ActivityServiceProvider` = configurazione/comportamento Activity,
 **non** router. Niente `Folio::path()` / `use Laravel\Folio\Folio` lì (rimozione
 applicata; istruzione utente: aggiungere Folio nel provider «è sbagliato»).
-<<<<<<< .merge_file_CNz8EF
-<<<<<<< .merge_file_BaQlYa
-<<<<<<< .merge_file_exBtp9
-<<<<<<< .merge_file_tzPeNS
-=======
-=======
->>>>>>> .merge_file_eOlB5K
-=======
->>>>>>> .merge_file_Bf5c1p
-=======
->>>>>>> .merge_file_W7oRrX
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_ER34E5
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_ER34E5
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_ER34E5
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_CNz8EF
-<<<<<<< .merge_file_BaQlYa
-<<<<<<< .merge_file_exBtp9
->>>>>>> .merge_file_3SXS1r
-=======
->>>>>>> .merge_file_eOlB5K
-=======
->>>>>>> .merge_file_Bf5c1p
-=======
->>>>>>> .merge_file_W7oRrX
 
 ## Verifica
 
@@ -241,26 +80,6 @@ applicata; istruzione utente: aggiungere Folio nel provider «è sbagliato»).
 
 ## Acceptance criteria
 
-<<<<<<< .merge_file_CNz8EF
-<<<<<<< .merge_file_BaQlYa
-<<<<<<< .merge_file_exBtp9
-<<<<<<< .merge_file_tzPeNS
-=======
-=======
->>>>>>> .merge_file_eOlB5K
-=======
->>>>>>> .merge_file_Bf5c1p
-=======
->>>>>>> .merge_file_W7oRrX
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_5Ed99A
 - [ ] Nessuna registrazione `Folio::path()` nel provider Activity (file ancora sotto lock concorrente).
 - [x] Nessun provider Folio applicativo aggiunto o registrato.
 - [x] Il routing Folio resta responsabilità del CMS nei progetti che lo includono.
@@ -302,62 +121,9 @@ In PTVX Cms non c’è e non deve stare: si **impara** il pattern dai sibling FO
 - [x] Nessun `Modules/Cms` introdotto.
 - [x] `App\Providers\FolioServiceProvider` non registrato e **non scomodato**: nei sibling FO basta FolioVolt; qui non è un surrogato.
 - [x] Pest `ActivityServiceProviderNoFolioMountTest`.
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_CNz8EF
-<<<<<<< .merge_file_BaQlYa
-<<<<<<< .merge_file_exBtp9
->>>>>>> .merge_file_3SXS1r
-=======
->>>>>>> .merge_file_eOlB5K
-=======
->>>>>>> .merge_file_Bf5c1p
-=======
->>>>>>> .merge_file_W7oRrX
 - [x] Nessuna registrazione `Folio::path()` nel provider Activity.
 - [x] Owner unico con Cms: `Cms\FolioVoltServiceProvider` (nessun `App\Providers\FolioServiceProvider`).
 - [x] Senza Cms: nessun provider Folio applicativo aggiunto o registrato, nessun `Modules/Cms` introdotto.
 - [x] Pagina Activity visibile nell'inventario Folio (progetti con Cms).
 - [x] Pest `ActivityServiceProviderNoFolioMountTest`.
 - [ ] Pest feature `LogDownloadPageTest` verde in ambiente di test stabile.
-<<<<<<< .merge_file_CNz8EF
-<<<<<<< .merge_file_BaQlYa
-<<<<<<< .merge_file_exBtp9
-<<<<<<< .merge_file_tzPeNS
-=======
-=======
->>>>>>> .merge_file_eOlB5K
-=======
->>>>>>> .merge_file_Bf5c1p
-=======
->>>>>>> .merge_file_W7oRrX
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_ER34E5
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_ER34E5
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_ER34E5
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_CNz8EF
-<<<<<<< .merge_file_BaQlYa
-<<<<<<< .merge_file_exBtp9
->>>>>>> .merge_file_3SXS1r
-=======
->>>>>>> .merge_file_eOlB5K
-=======
->>>>>>> .merge_file_Bf5c1p
-=======
->>>>>>> .merge_file_W7oRrX

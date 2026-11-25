@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_SI21ja
 ---
 title: "User Module - SSO Providers Implementation"
 type: note
 qmd: "sso providers implementation user"
 ---
-=======
->>>>>>> .merge_file_lM6JC3
 # User Module - SSO Providers Implementation
 
 ## Overview

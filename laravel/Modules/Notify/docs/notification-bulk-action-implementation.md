@@ -3,15 +3,7 @@ title: "notification bulk action implementation"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_rPbAhh
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_WX9pkF
 qmd: "notification bulk action implementation"
 issues: []
 discussions: []
@@ -151,10 +143,6 @@ After implementation, users can:
 - Advanced template personalization options
 - Scheduling capabilities for notifications
 - Enhanced reporting and analytics for sent notifications
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -167,11 +155,3 @@ qmd: "notification bulk action implementation"
 issues: []
 discussions: []
 *Documento conforme agli standard Laraxot - DRY + KISS + SOLID*
-<<<<<<< .merge_file_rPbAhh
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_WX9pkF

@@ -12,10 +12,7 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-<<<<<<< .merge_file_oSl65S
 qmd: "method name homonyms censimento omonimi metodi"
-=======
->>>>>>> .merge_file_9lEFaZ
 ---
 
 # Censimento omonimi metodi — User
@@ -251,8 +248,6 @@ _… +25 metodi in questa categoria_
 - `User` · `RegisterTenant` · `Modules/User/app/Filament/Pages/Tenancy/RegisterTenant.php`
 
 _… +54 metodi in questa categoria_
-
-
 
 
 ## Rigenerazione

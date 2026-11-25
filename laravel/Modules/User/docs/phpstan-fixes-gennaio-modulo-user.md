@@ -248,7 +248,4 @@ $subject = Lang::get('user::email.password_reset_subject');
 **🌐 Translation Standards**: IT/EN complete ✅
 **🚀 Performance**: 95/100 score
 **✨ Test Coverage**: 85% ✅
-<<<<<<< .merge_file_JjzI1h
-=======
 **✨ Test Coverage**: 85% ✅
->>>>>>> .merge_file_29XQJC

@@ -1,19 +1,5 @@
 ---
-<<<<<<< .merge_file_SmJjQR
-<<<<<<< .merge_file_QAKsJi
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_rkRNv4
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_SmJjQR
->>>>>>> .merge_file_qgWwzk
-=======
->>>>>>> .merge_file_rkRNv4
 qmd: "database schema"
 issues: []
 discussions: []

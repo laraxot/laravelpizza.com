@@ -3,15 +3,7 @@ title: "Boost Skill Installation - Success Report"
 type: concept
 tags: [boost, skill, installation, success]
 created: 2026-07-14
-<<<<<<< .merge_file_5sDvSi
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_qPxYHs
 qmd: "boost-skill-installation-success boost skill installation - success report"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -22,17 +14,8 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< .merge_file_5sDvSi
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_qPxYHs
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

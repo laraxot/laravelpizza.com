@@ -3,15 +3,7 @@ title: "🎨 UI/UX Pro Max Skills - Integration Guide"
 type: concept
 tags: [pro, max, skills, integration]
 created: 2026-07-14
-<<<<<<< .merge_file_LeAXlV
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_bFwFJC
 qmd: "ui-ux-pro-max-skills-integration 🎨 ui/ux pro max skills - integration guide"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -20,21 +12,12 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_LeAXlV
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_bFwFJC
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

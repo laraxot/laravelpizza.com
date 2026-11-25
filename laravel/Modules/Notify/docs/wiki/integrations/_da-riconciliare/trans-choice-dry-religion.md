@@ -7,19 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -357,34 +345,12 @@ Amen.
 - [Laravel Localization - Pluralization](https://laravel.com/docs/localization#pluralization)
 - [ticket.php (corretto)](../../Modules/App/lang/it/ticket.php)
 - [ticket.php (corretto)](../../Modules/<nome progetto>/lang/it/ticket.php)
-<<<<<<< HEAD
 - [Translation Namespace Religion](../../docs/translation-namespace-religion.md)
 - [No Hardcoded Language Religion](../../docs/no-hardcoded-language-religion.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_3zLLlh
-- [Translation Namespace Religion](../../docs/translation-namespace-religion.md)
-- [No Hardcoded Language Religion](../../docs/no-hardcoded-language-religion.md)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Translation Namespace Religion](../../../translation-namespace-religion.md)
 - [No Hardcoded Language Religion](../../../no-hardcoded-language-religion.md)
 - [Translation Namespace Religion](../../../translation-namespace-religion.md)
 - [No Hardcoded Language Religion](../../../no-hardcoded-language-religion.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_cISHru
->>>>>>> laraxot/dev
-=======
-- [Translation Namespace Religion](../../../translation-namespace-religion.md)
-- [No Hardcoded Language Religion](../../../no-hardcoded-language-religion.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ---
 

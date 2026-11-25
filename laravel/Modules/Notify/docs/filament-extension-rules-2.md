@@ -3,31 +3,7 @@ title: "filament extension rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_xEXtdi
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_gl6ki2
-<<<<<<< .merge_file_dqyBYb
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_MIYiYy
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_t3yQqP
-=======
-<<<<<<< .merge_file_gl6ki2
->>>>>>> .merge_file_3n235I
-=======
->>>>>>> .merge_file_MIYiYy
->>>>>>> laraxot/dev
 qmd: "filament extension rules"
 issues: []
 discussions: []

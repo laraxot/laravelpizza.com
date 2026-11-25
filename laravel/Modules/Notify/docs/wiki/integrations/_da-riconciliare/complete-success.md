@@ -1,28 +1,10 @@
 ---
 title: "🏆 NOTIFY - COMPLETE SUCCESS"
-<<<<<<< .merge_file_zp37AQ
 type: concept
 tags: [complete, success]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "complete-success 🏆 laraxot - complete success"
-=======
-<<<<<<< HEAD
-title: "🏆 <nome progetto> - COMPLETE SUCCESS"
-type: concept
-tags: [complete, success]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "complete-success 🏆 laraxot - complete success"
-qmd: "complete-success 🏆 <nome progetto> - complete success"
-=======
-type: concept
-tags: [complete, success]
-created: 2026-07-14
-updated: 2026-11-23
-qmd: "complete-success 🏆 laraxot - complete success"
->>>>>>> laraxot/dev
->>>>>>> .merge_file_P1Tfnp
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
@@ -32,17 +14,8 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< .merge_file_zp37AQ
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_P1Tfnp
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

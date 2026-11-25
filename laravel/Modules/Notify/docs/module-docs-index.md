@@ -3,19 +3,8 @@ title: "Master Documentation Index - FixCity Fila5"
 type: concept
 tags: [module, docs, index]
 created: 2026-07-14
-<<<<<<< .merge_file_6BcX8M
 updated: 2026-11-23
 qmd: "module-docs-index master documentation index - fixcity fila5"
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-qmd: "module-docs-index master documentation index - fixcity fila5"
-qmd: "module-docs-index master documentation index - ptv fila5"
-=======
-updated: 2026-11-23
-qmd: "module-docs-index master documentation index - fixcity fila5"
->>>>>>> laraxot/dev
->>>>>>> .merge_file_wYGNcM
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
@@ -23,21 +12,12 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_6BcX8M
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_wYGNcM
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

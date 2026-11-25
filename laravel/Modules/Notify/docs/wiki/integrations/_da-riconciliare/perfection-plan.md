@@ -1,34 +1,10 @@
 ---
 title: "🎯 NOTIFY - PERFECTION PLAN"
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_ubrPbr
->>>>>>> laraxot/dev
 type: concept
 tags: [perfection, plan]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "perfection-plan 🎯 laraxot - perfection plan"
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-title: "🎯 <nome progetto> - PERFECTION PLAN"
-type: concept
-tags: [perfection, plan]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "perfection-plan 🎯 laraxot - perfection plan"
-qmd: "perfection-plan 🎯 <nome progetto> - perfection plan"
-=======
-type: concept
-tags: [perfection, plan]
-created: 2026-07-14
-updated: 2026-11-23
-qmd: "perfection-plan 🎯 laraxot - perfection plan"
->>>>>>> laraxot/dev
->>>>>>> .merge_file_Sl3HYt
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
@@ -38,23 +14,8 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_ubrPbr
->>>>>>> laraxot/dev
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> .merge_file_Sl3HYt
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

@@ -3,21 +3,7 @@ title: "file patterns and docs standards"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_jAxoy8
-<<<<<<< .merge_file_jkhiDg
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_qa12iH
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_jAxoy8
->>>>>>> .merge_file_4lGU1z
-=======
->>>>>>> .merge_file_qa12iH
 qmd: "file patterns and docs standards"
 issues: []
 discussions: []
@@ -104,10 +90,6 @@ Indice centralizzato: `laravel/docs/roadmap/00-index.md`
 2. **After coding**: Verify and improve docs
 3. **No new docs directories** - always use existing ones
 4. **Consistent structure** - follow the same patterns across all modules
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -119,14 +101,3 @@ updated: 2026-09-26
 qmd: "file patterns and docs standards"
 issues: []
 discussions: []
-<<<<<<< .merge_file_jAxoy8
-<<<<<<< .merge_file_jkhiDg
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_4lGU1z
-=======
->>>>>>> .merge_file_qa12iH

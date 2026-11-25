@@ -1,28 +1,10 @@
 ---
 title: "📊 Quality Dashboard - FixCity Project"
-<<<<<<< .merge_file_mR2SEV
 type: concept
 tags: [quality, dashboard]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "quality-dashboard 📊 quality dashboard - fixcity project"
-=======
-<<<<<<< HEAD
-title: "📊 Quality Dashboard - Notify Project"
-type: concept
-tags: [quality, dashboard]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "quality-dashboard 📊 quality dashboard - fixcity project"
-qmd: "quality-dashboard 📊 quality dashboard - laraxot project"
-=======
-type: concept
-tags: [quality, dashboard]
-created: 2026-07-14
-updated: 2026-11-23
-qmd: "quality-dashboard 📊 quality dashboard - fixcity project"
->>>>>>> laraxot/dev
->>>>>>> .merge_file_5NfSzg
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:

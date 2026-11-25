@@ -3,21 +3,7 @@ title: "dynamic class resolution pattern"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_cMrlNa
-<<<<<<< .merge_file_D9KBHP
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_TTJRoj
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_cMrlNa
->>>>>>> .merge_file_yMiRlw
-=======
->>>>>>> .merge_file_TTJRoj
 qmd: "dynamic class resolution pattern"
 issues: []
 discussions: []

@@ -1,34 +1,10 @@
 ---
 title: "Notify Platform - Project Status Report"
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_nAMMwQ
->>>>>>> laraxot/dev
 type: concept
 tags: [project, status]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "project-status laraxot platform - project status report"
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-title: "<nome progetto> Platform - Project Status Report"
-type: concept
-tags: [project, status]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "project-status laraxot platform - project status report"
-qmd: "project-status <nome progetto> platform - project status report"
-=======
-type: concept
-tags: [project, status]
-created: 2026-07-14
-updated: 2026-11-23
-qmd: "project-status laraxot platform - project status report"
->>>>>>> laraxot/dev
->>>>>>> .merge_file_GIdsKA
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
@@ -38,23 +14,8 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_nAMMwQ
->>>>>>> laraxot/dev
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> .merge_file_GIdsKA
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

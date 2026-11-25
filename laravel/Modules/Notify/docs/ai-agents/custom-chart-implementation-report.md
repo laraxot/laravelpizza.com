@@ -3,21 +3,7 @@ title: "custom chart implementation report"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_gyj7gn
-<<<<<<< .merge_file_5rFhl9
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_bhIUlU
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_gyj7gn
->>>>>>> .merge_file_pW8Kcu
-=======
->>>>>>> .merge_file_bhIUlU
 qmd: "custom chart implementation report"
 issues: []
 discussions: []

@@ -3,23 +3,7 @@ title: "progetto completato 100 percento"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_7QFb3b
-=======
-<<<<<<< .merge_file_6RxGp2
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_Lfv7qI
-=======
->>>>>>> .merge_file_6J0h6v
->>>>>>> laraxot/dev
 qmd: "progetto completato 100 percento"
 issues: []
 discussions: []
@@ -590,6 +574,5 @@ php artisan queue:work --queue=high,notifications,default
 *"Da oggi FixCity può cambiare le città italiane!"* 🇮🇹🏙️✨
 
 **GRAZIE PER L'OPPORTUNITÀ DI CONTRIBUIRE A QUESTO PROGETTO STRAORDINARIO!** 🙏
-
 
 

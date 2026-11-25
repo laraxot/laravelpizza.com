@@ -3,15 +3,7 @@ title: "analysisettagliata 3"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_dvGB7q
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_F3bik1
 qmd: "analysisettagliata 3"
 issues: []
 discussions: []

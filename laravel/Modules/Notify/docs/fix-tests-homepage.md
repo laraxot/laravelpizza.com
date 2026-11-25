@@ -3,31 +3,7 @@ title: "✅ Fix Applicati - Tests Homepage"
 type: concept
 tags: [fix, tests, homepage]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_GM6cyU
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_g2FRct
-<<<<<<< .merge_file_yWT5qI
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_owOcfe
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_sjbYfm
-=======
-<<<<<<< .merge_file_g2FRct
->>>>>>> .merge_file_64oblb
-=======
->>>>>>> .merge_file_owOcfe
->>>>>>> laraxot/dev
 qmd: "fix-tests-homepage ✅ fix applicati - tests homepage"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -36,34 +12,14 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< HEAD
-<<<<<<< .merge_file_GM6cyU
-=======
-<<<<<<< .merge_file_g2FRct
-<<<<<<< .merge_file_yWT5qI
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
->>>>>>> .merge_file_sjbYfm
-=======
->>>>>>> .merge_file_64oblb
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_owOcfe
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

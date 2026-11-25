@@ -3,21 +3,7 @@ title: "editor visuale"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_At4rWf
-<<<<<<< .merge_file_HDF6m1
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_FKfaOP
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_At4rWf
->>>>>>> .merge_file_QdJNjr
-=======
->>>>>>> .merge_file_FKfaOP
 qmd: "editor visuale"
 issues: []
 discussions: []

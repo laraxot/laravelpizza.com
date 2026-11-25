@@ -1,7 +1,5 @@
 ---
 title: "ANALISI COMPLETA 2025 10 01"
-<<<<<<< .merge_file_jD9qgG
-<<<<<<< .merge_file_pspoHD
 type: note
 tags: [documentation]
 created: 2026-09-26
@@ -14,21 +12,13 @@ discussions: []
 # 📊 ANALISI COMPLETA PROGETTO FIXCITY
 ## Data: 1 Ottobre 2025
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "ANALISI COMPLETA 2025 10 01"
-=======
->>>>>>> .merge_file_edXbze
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
 updated: 2026-09-26
-<<<<<<< .merge_file_pspoHD
 qmd: "ANALISI COMPLETA 2025 10 01"
 issues: []
 discussions: []
@@ -43,13 +33,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 EXECUTIVE SUMMARY
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 📦 COSA È FIXCITY
 
 ### Scopo Principale
@@ -254,36 +239,7 @@ Manutenzione Stradale • Illuminazione • Rifiuti • Verde Pubblico • Fogna
 
 ---
 
-=======
-=======
 updated: 2026-11-23
->>>>>>> laraxot/dev
-qmd: "ANALISI COMPLETA 2025 10 01"
-issues: []
-discussions: []
----
-
-# 📊 ANALISI COMPLETA PROGETTO FIXCITY
-## Data: 1 Ottobre 2025
-
----
-
-title: "ANALISI COMPLETA 2025 10 01"
-=======
->>>>>>> .merge_file_hVlaNG
-type: note
-tags: [documentation]
-created: 2026-09-26
-<<<<<<< HEAD
-updated: 2026-09-26
-<<<<<<< .merge_file_jD9qgG
-qmd: "ANALISI COMPLETA 2025 10 01"
-issues: []
-discussions: []
-=======
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
 qmd: "ANALISI COMPLETA 2025 10 01"
 issues: []
 discussions: []
@@ -302,7 +258,25 @@ updated: 2026-09-26
 qmd: "ANALISI COMPLETA 2025 10 01"
 issues: []
 discussions: []
->>>>>>> .merge_file_hVlaNG
+updated: 2026-11-23
+qmd: "ANALISI COMPLETA 2025 10 01"
+issues: []
+discussions: []
+---
+
+# 📊 ANALISI COMPLETA PROGETTO FIXCITY
+## Data: 1 Ottobre 2025
+
+---
+
+title: "ANALISI COMPLETA 2025 10 01"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "ANALISI COMPLETA 2025 10 01"
+issues: []
+discussions: []
 ## 🎯 EXECUTIVE SUMMARY
 
 **FixCity** è una piattaforma di segnalazione cittadina **enterprise-ready** con:
@@ -518,10 +492,6 @@ Manutenzione Stradale • Illuminazione • Rifiuti • Verde Pubblico • Fogna
 
 ---
 
-<<<<<<< .merge_file_jD9qgG
->>>>>>> .merge_file_edXbze
-=======
->>>>>>> .merge_file_hVlaNG
 ### API Waste
 
 1. **Geocoding** - No cache = chiamate ripetute
@@ -775,27 +745,5 @@ Manutenzione Stradale • Illuminazione • Rifiuti • Verde Pubblico • Fogna
 ---
 
 *"Un progetto solido con fondamenta eccellenti e potenziale straordinario"* 🏆
-<<<<<<< .merge_file_jD9qgG
-<<<<<<< .merge_file_pspoHD
-<<<<<<< HEAD
 
 
-
-=======
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-
-
-
->>>>>>> .merge_file_edXbze
-=======
-
-
-
->>>>>>> .merge_file_hVlaNG

@@ -3,15 +3,7 @@ title: "html parity rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_9TNsDQ
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_jEcgDx
 qmd: "html parity rules"
 issues: []
 discussions: []
@@ -24,10 +16,6 @@ discussions: []
 > **Created**: 2026-04-08  
 > **Purpose**: Prevent architectural and translation errors in HTML parity phases
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "html parity rules"
@@ -57,13 +45,8 @@ The reference HTML structure (tags, attributes, classes, IDs, nesting) MUST be r
 8. **Centralized Docs**: Theme-specific docs in `Themes/<ThemeName>/docs/`
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 Core Philosophy
 ### Principles (in order of importance)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## 📐 Architecture Patterns
 

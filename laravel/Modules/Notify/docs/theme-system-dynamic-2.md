@@ -3,15 +3,7 @@ title: "theme system dynamic"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_pCRpKH
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_qjP06T
 qmd: "theme system dynamic"
 issues: []
 discussions: []
@@ -23,10 +15,6 @@ discussions: []
 **Status**: ✅ **CORRECTED**  
 **Principle**: Theme is a "vestito" (outfit) - configurable and swappable!
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "theme system dynamic"
@@ -104,16 +92,11 @@ public function boot(): void
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 How It Works
 ### 1. Theme Configuration
 ### 2. Dynamic Registration
 ### 3. Xot Module Auto-Registration
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🎨 Theme Structure
 
 ### Theme Directory

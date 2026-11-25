@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_AbYDS8
 qmd: "phpstan error roadmap"
-=======
->>>>>>> .merge_file_FryWpg
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-error-roadmap.md

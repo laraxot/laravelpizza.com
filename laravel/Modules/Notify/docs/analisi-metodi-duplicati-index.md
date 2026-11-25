@@ -3,31 +3,7 @@ title: "analisi metodi duplicati index"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_xelsRo
-<<<<<<< .merge_file_loEymP
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_gQrV5y
-=======
->>>>>>> .merge_file_w0DSmQ
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_xelsRo
-<<<<<<< .merge_file_loEymP
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_gQrV5y
-=======
->>>>>>> .merge_file_w0DSmQ
 qmd: "analisi metodi duplicati index"
 issues: []
 discussions: []
@@ -87,38 +63,15 @@ status: draft
 ### Moduli Business Logic
 
 #### User (Autenticazione & Autorizzazione)
-<<<<<<< HEAD
-<<<<<<< .merge_file_xelsRo
-<<<<<<< .merge_file_loEymP
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_gQrV5y
-=======
->>>>>>> .merge_file_w0DSmQ
 📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](analisi-metodi-duplicati.md)  
 📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../User/docs/analisi-metodi-duplicati.md)  
-=======
-<<<<<<< .merge_file_07e63T
 📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../Modules/User/docs/analisi-metodi-duplicati.md)  
-=======
-📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](analisi-metodi-duplicati.md)  
-<<<<<<< .merge_file_xelsRo
-<<<<<<< .merge_file_loEymP
-📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../User/docs/analisi-metodi-duplicati.md)  
->>>>>>> .merge_file_zKbbvY
->>>>>>> laraxot/dev
-=======
 📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](analisi-metodi-duplicati.md)  
 📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../User/docs/analisi-metodi-duplicati.md)  
-=======
+📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](analisi-metodi-duplicati.md)  
 📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../User/docs/analisi-metodi-duplicati.md)  
->>>>>>> .merge_file_zKbbvY
->>>>>>> .merge_file_gQrV5y
-=======
 📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../User/docs/analisi-metodi-duplicati.md)  
->>>>>>> .merge_file_zKbbvY
->>>>>>> .merge_file_w0DSmQ
->>>>>>> laraxot/dev
+📄 **File:** [../Modules/User/docs/analisi-metodi-duplicati.md](../../User/docs/analisi-metodi-duplicati.md)  
 📊 **Dati:** 9 proprietà duplicate, 74 LOC, 87% riduzione  
 🎯 **Priorità:** ALTA - Modulo critico  
 ⚠️ **Note:** Testing intensivo necessario (auth)
@@ -196,71 +149,25 @@ status: draft
 ## 🎨 Documenti per Tema
 
 ### Theme Sixteen (AGID Compliant)
-<<<<<<< HEAD
-<<<<<<< .merge_file_xelsRo
-<<<<<<< .merge_file_loEymP
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_gQrV5y
-=======
->>>>>>> .merge_file_w0DSmQ
-📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](analisi-metodi-duplicati.md)  
-📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../../Themes/Sixteen/docs/analisi-metodi-duplicati.md)  
-=======
-<<<<<<< .merge_file_07e63T
 📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../Themes/Sixteen/docs/analisi-metodi-duplicati.md)  
-=======
 📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](analisi-metodi-duplicati.md)  
 📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../../Themes/Sixteen/docs/analisi-metodi-duplicati.md)  
->>>>>>> .merge_file_zKbbvY
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_xelsRo
-<<<<<<< .merge_file_loEymP
-=======
 📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](analisi-metodi-duplicati.md)  
 📄 **File:** [../Themes/Sixteen/docs/analisi-metodi-duplicati.md](../../../Themes/Sixteen/docs/analisi-metodi-duplicati.md)  
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_gQrV5y
-=======
->>>>>>> .merge_file_w0DSmQ
 ⭐ **Valutazione:** ⭐⭐⭐⭐⭐ ECCELLENTE  
 🎯 **Priorità:** BASSA (già ottimizzato)  
 📝 **Focus:** Testing e documentazione, NO refactoring necessario
 
 ### Theme TwentyOne (Semplice)
-<<<<<<< HEAD
-<<<<<<< .merge_file_xelsRo
-<<<<<<< .merge_file_loEymP
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_gQrV5y
-=======
->>>>>>> .merge_file_w0DSmQ
 📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](analisi-metodi-duplicati.md)  
 📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../../Themes/TwentyOne/docs/analisi-metodi-duplicati.md)  
-=======
-<<<<<<< .merge_file_07e63T
 📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../Themes/TwentyOne/docs/analisi-metodi-duplicati.md)  
-=======
-📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](analisi-metodi-duplicati.md)  
-<<<<<<< .merge_file_xelsRo
-<<<<<<< .merge_file_loEymP
-📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../../Themes/TwentyOne/docs/analisi-metodi-duplicati.md)  
->>>>>>> .merge_file_zKbbvY
->>>>>>> laraxot/dev
-=======
 📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](analisi-metodi-duplicati.md)  
 📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../../Themes/TwentyOne/docs/analisi-metodi-duplicati.md)  
-=======
+📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](analisi-metodi-duplicati.md)  
 📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../../Themes/TwentyOne/docs/analisi-metodi-duplicati.md)  
->>>>>>> .merge_file_zKbbvY
->>>>>>> .merge_file_gQrV5y
-=======
 📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../../Themes/TwentyOne/docs/analisi-metodi-duplicati.md)  
->>>>>>> .merge_file_zKbbvY
->>>>>>> .merge_file_w0DSmQ
->>>>>>> laraxot/dev
+📄 **File:** [../Themes/TwentyOne/docs/analisi-metodi-duplicati.md](../../../Themes/TwentyOne/docs/analisi-metodi-duplicati.md)  
 ⭐ **Valutazione:** ⭐⭐⭐ BUONO  
 🎯 **Priorità:** MEDIA (opzionale ServiceProvider)  
 📝 **Focus:** Valutare se aggiungere ServiceProvider leggero
@@ -283,37 +190,10 @@ status: draft
 4. 🎯 Decisione GO/NO-GO
 
 ### Per Tech Lead / Architect
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_xelsRo
-<<<<<<< .merge_file_loEymP
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_gQrV5y
-=======
->>>>>>> .merge_file_w0DSmQ
 1. 📖 [MASTER EDITION - Implementazioni Concrete](analisi-metodi-duplicati-master-2.md#implementazione-concreta-pronta-all-uso) (1 ora)
 2. 📖 [MASTER EDITION - Script Utili](analisi-metodi-duplicati-master-2.md#script-utili) (30 min)
 3. 📖 [Xot Module - Dettagli](analisi-metodi-duplicati.md) (30 min)
 4. 📖 [METODI_DUPLICATI_ANALISI - Filament Details](../Modules/Xot/docs/metodi-duplicati-analisi-2.md) (1 ora)
-<<<<<<< .merge_file_xelsRo
-<<<<<<< .merge_file_loEymP
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_gQrV5y
-=======
->>>>>>> .merge_file_w0DSmQ
->>>>>>> laraxot/dev
 1. 📖 [MASTER EDITION - Implementazioni Concrete](./analisi-metodi-duplicati-master.md#implementazione-concreta-pronta-all-uso) (1 ora)
 2. 📖 [MASTER EDITION - Script Utili](./analisi-metodi-duplicati-master.md#script-utili) (30 min)
 3. 📖 [Xot Module - Dettagli](analisi-metodi-duplicati.md) (30 min)

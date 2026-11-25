@@ -3,15 +3,7 @@ title: "send push notification conflict resolution"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_XlwZt5
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_WRWB1h
 qmd: "send push notification conflict resolution"
 issues: []
 discussions: []

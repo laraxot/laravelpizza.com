@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 ---
 title: "📧 BMAD Story: Email Deliverability Setup"
 type: story
 qmd: "email deliverability setup story bmad"
 ---
-=======
->>>>>>> laraxot/dev
 # 📧 BMAD Story: Email Deliverability Setup
 
 > **Valori non verificati (2026-11-12).** Gli esempi qui sotto non sono misure: l'IP SPF `185.71.12.45`, i parametri `postconf dkim_*` e il DMARC `p=quarantine` immediato non vengono da DNS o dal server. Il dominio invia via Mailtrap con DMARC `p=none` in osservazione: valori e stato reali in [mail-deliverability.md](../../mail-deliverability.md) (e `php artisan notify:check-dns`). Lo «stato operativo» dichiarato sotto non regge: i 4 CNAME Mailtrap sono pubblicati senza punto finale.

@@ -3,21 +3,7 @@ title: "code style"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_64O2GZ
-<<<<<<< .merge_file_Thci5p
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_fYWffY
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_64O2GZ
->>>>>>> .merge_file_oryQSF
-=======
->>>>>>> .merge_file_fYWffY
 qmd: "code style"
 issues: []
 discussions: []

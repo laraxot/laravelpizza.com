@@ -1,19 +1,5 @@
 ---
-<<<<<<< .merge_file_hYGc5i
-<<<<<<< .merge_file_p6Aw2g
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_Wb4qYz
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_hYGc5i
->>>>>>> .merge_file_i8DUph
-=======
->>>>>>> .merge_file_Wb4qYz
 qmd: "api"
 issues: []
 discussions: []

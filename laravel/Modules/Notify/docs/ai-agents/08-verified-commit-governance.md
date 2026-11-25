@@ -3,21 +3,7 @@ title: "08 Verified Commit Governance"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Y7Atss
-<<<<<<< .merge_file_ex3swN
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_Uk9put
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Y7Atss
->>>>>>> .merge_file_PTGVFY
-=======
->>>>>>> .merge_file_Uk9put
 qmd: "08 Verified Commit Governance"
 issues: []
 discussions: []

@@ -3,15 +3,7 @@ title: "translation namespace religion"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_7y1PzC
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_QONYh9
 qmd: "translation namespace religion"
 issues: []
 discussions: []
@@ -25,10 +17,6 @@ discussions: []
 **Category**: Architecture / Religion / i18n  
 **Audience**: All developers + AI agents
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "translation namespace religion"
@@ -48,13 +36,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## LA REGOLA AUREA
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Perche (Filosofia Profonda)
 
 ### Il Problema: Namespace per Componente UI

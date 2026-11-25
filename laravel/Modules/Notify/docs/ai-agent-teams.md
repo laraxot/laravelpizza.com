@@ -3,21 +3,7 @@ title: "AI Agent Teams - Coordination Hub"
 type: concept
 tags: [agent, teams]
 created: 2026-07-14
-<<<<<<< .merge_file_gkA0Bw
-<<<<<<< .merge_file_aNSWJ0
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_40PdZo
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_gkA0Bw
->>>>>>> .merge_file_epRjM9
-=======
->>>>>>> .merge_file_40PdZo
 qmd: "ai-agent-teams ai agent teams - coordination hub"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -26,27 +12,15 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_gkA0Bw
-<<<<<<< .merge_file_aNSWJ0
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_epRjM9
-  - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions.md"
->>>>>>> .merge_file_40PdZo
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions.md"
+  - "./acronym-naming-conventions-2.md"
+  - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -117,22 +91,7 @@ Multiple AI agents (Qwen, Claude, Cursor, etc.) are working on the same FixCity 
 **Current Tasks**:
 - ✅ Update `bashscripts/docs/ai/` with sync rules
 - ✅ Update AGENTS.md with commit/push rules
-<<<<<<< .merge_file_gkA0Bw
-<<<<<<< .merge_file_aNSWJ0
-<<<<<<< HEAD
 - ✅ Update AGENTS.md with commit/push rules
-=======
-<<<<<<< HEAD
-- ✅ Update AGENTS.md with commit/push rules
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- ✅ Update AGENTS.md with commit/push rules
->>>>>>> .merge_file_epRjM9
-=======
-- ✅ Update AGENTS.md with commit/push rules
->>>>>>> .merge_file_40PdZo
 - ✅ Update .windsurfrules
 - ⏳ Sync `.github/` with `bashscripts/ai/.github/`
 

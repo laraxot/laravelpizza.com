@@ -7,21 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< .merge_file_V7zk2z
-<<<<<<< .merge_file_yOBK0Q
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_6SU8ZO
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_V7zk2z
->>>>>>> .merge_file_M3IHXk
-=======
->>>>>>> .merge_file_6SU8ZO
 ---
 
 # Analisi Architetturale: Selezione Provider nei Canali vs Data Transfer Objects

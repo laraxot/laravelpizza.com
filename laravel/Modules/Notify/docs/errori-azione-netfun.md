@@ -3,21 +3,7 @@ title: "errori azione netfun"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_wIJmla
-<<<<<<< .merge_file_whniyV
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_LqVujO
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_wIJmla
->>>>>>> .merge_file_3Q7qVY
-=======
->>>>>>> .merge_file_LqVujO
 qmd: "errori azione netfun"
 issues: []
 discussions: []

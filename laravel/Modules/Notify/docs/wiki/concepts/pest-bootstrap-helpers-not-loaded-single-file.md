@@ -7,15 +7,7 @@ type: concept
 module: Notify
 tags: [pest, bootstrap, helpers, second-brain]
 created: 2026-07-06
-<<<<<<< .merge_file_WtGk6x
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-06
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_nZcvRk
 related:
   - "./claude-audit-static.md"
   - "./code-redundancy-notify.md"

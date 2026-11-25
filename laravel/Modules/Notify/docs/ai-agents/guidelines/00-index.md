@@ -3,21 +3,7 @@ title: "00 index"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_eU8eJo
-<<<<<<< .merge_file_iZMuwb
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_6lbP8S
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_eU8eJo
->>>>>>> .merge_file_c36NaR
-=======
->>>>>>> .merge_file_6lbP8S
 qmd: "00 index"
 issues: []
 discussions: []
@@ -30,10 +16,6 @@ discussions: []
 **Status**: ✅ Production Ready  
 **Files**: 2 guidelines
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "00 index"
@@ -51,13 +33,8 @@ A differenza delle rules (obbligatorie), le guidelines sono **consigli** per scr
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 Purpose
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 📁 Guidelines
 
 ### 1. Reusable Components Philosophy

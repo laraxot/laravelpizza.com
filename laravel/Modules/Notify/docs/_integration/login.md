@@ -3,21 +3,7 @@ title: "login"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_SDGm6P
-<<<<<<< .merge_file_APWMKU
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_oyb6Bu
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_SDGm6P
->>>>>>> .merge_file_1PRfoE
-=======
->>>>>>> .merge_file_oyb6Bu
 qmd: "login"
 issues: []
 discussions: []

@@ -3,15 +3,7 @@ title: "openviking integration"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_0qOEDx
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_BBnrev
 qmd: "openviking integration"
 issues: []
 discussions: []
@@ -439,10 +431,6 @@ openviking status
 4. ✅ Create unified workflow guide
 5. ⏳ Train team on integrated workflow
 6. ⏳ Establish context maintenance routine
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -457,8 +445,3 @@ discussions: []
 **Last Updated**: 2026-03-30  
 **Version**: 1.0.0  
 **Status**: Initial Implementation
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

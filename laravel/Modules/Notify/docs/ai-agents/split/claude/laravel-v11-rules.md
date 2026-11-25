@@ -3,21 +3,7 @@ title: "laravel v11 rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_2iXPiq
-<<<<<<< .merge_file_yZCQBn
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_0VWA71
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_2iXPiq
->>>>>>> .merge_file_YTFiRV
-=======
->>>>>>> .merge_file_0VWA71
 qmd: "laravel v11 rules"
 issues: []
 discussions: []
@@ -50,11 +36,6 @@ discussions: []
     - `php artisan make:class`
     - `php artisan make:interface`
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-
 
 ---
 
@@ -74,9 +55,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

@@ -3,21 +3,7 @@ title: "whatsapp"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_vL5bXB
-<<<<<<< .merge_file_Qt4qsM
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_NYIU2e
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_vL5bXB
->>>>>>> .merge_file_DEQl6b
-=======
->>>>>>> .merge_file_NYIU2e
 qmd: "whatsapp"
 issues: []
 discussions: []

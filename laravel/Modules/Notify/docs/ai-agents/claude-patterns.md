@@ -3,21 +3,7 @@ title: "claude patterns"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_SVnhb9
-<<<<<<< .merge_file_5BIwaQ
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_GL5eT1
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_SVnhb9
->>>>>>> .merge_file_v47HZ0
-=======
->>>>>>> .merge_file_GL5eT1
 qmd: "claude patterns"
 issues: []
 discussions: []
@@ -55,10 +41,6 @@ class CreateEventAction
 }
 ```
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "claude patterns"
@@ -88,13 +70,8 @@ class EventData extends Data
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 2. Data Transfer Objects
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 3. Strict Typing
 
 **ALWAYS** declare strict types:

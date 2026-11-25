@@ -3,21 +3,7 @@ title: "email monitoring"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_QKxKgY
-<<<<<<< .merge_file_H6rjYY
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_YgwMYu
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_QKxKgY
->>>>>>> .merge_file_bTOBpx
-=======
->>>>>>> .merge_file_YgwMYu
 qmd: "email monitoring"
 issues: []
 discussions: []

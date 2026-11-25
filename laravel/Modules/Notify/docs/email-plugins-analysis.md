@@ -3,21 +3,7 @@ title: "email plugins analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_WSiQ54
-<<<<<<< .merge_file_TSpATy
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_v568Ai
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_WSiQ54
->>>>>>> .merge_file_rfrGiL
-=======
->>>>>>> .merge_file_v568Ai
 qmd: "email plugins analysis"
 issues: []
 discussions: []

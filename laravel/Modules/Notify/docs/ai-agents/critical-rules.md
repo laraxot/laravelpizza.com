@@ -3,21 +3,7 @@ title: "critical rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_2dODt7
-<<<<<<< .merge_file_2KXPoF
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_Y7tQni
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_2dODt7
->>>>>>> .merge_file_dKJjUB
-=======
->>>>>>> .merge_file_Y7tQni
 qmd: "critical rules"
 issues: []
 discussions: []

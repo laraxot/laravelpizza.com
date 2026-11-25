@@ -3,15 +3,7 @@ title: "activity"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_yW1m84
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_mKGjiA
 qmd: "activity"
 issues: []
 discussions: []
@@ -23,10 +15,6 @@ discussions: []
 
 [← Torna all'indice PHPStan](../phpstan.md)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "activity"
@@ -41,12 +29,7 @@ discussions: []
 Modulo dedicato al tracciamento e gestione delle attività utente, log, auditing e monitoraggio eventi.
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## Descrizione modulo
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Altri collegamenti
 - [Documentazione generale Activity](../../Modules/Activity/docs/README.md)

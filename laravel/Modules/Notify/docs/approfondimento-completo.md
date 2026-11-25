@@ -3,21 +3,7 @@ title: "approfondimento completo"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_0Gdjly
-<<<<<<< .merge_file_43n1G1
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_N8S5Dg
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_0Gdjly
->>>>>>> .merge_file_GIyPk0
-=======
->>>>>>> .merge_file_N8S5Dg
 qmd: "approfondimento completo"
 issues: []
 discussions: []

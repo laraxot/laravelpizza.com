@@ -3,21 +3,7 @@ title: "boost rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_sxzNpN
-<<<<<<< .merge_file_kpwHVe
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_a9SGSb
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_sxzNpN
->>>>>>> .merge_file_BY4CJ2
-=======
->>>>>>> .merge_file_a9SGSb
 qmd: "boost rules"
 issues: []
 discussions: []
@@ -59,11 +45,6 @@ discussions: []
 4. Mixed Queries - query=middleware "rate limit" - "middleware" AND exact phrase "rate limit"
 5. Multiple Queries - queries=["authentication", "middleware"] - ANY of these terms
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-
 
 ---
 
@@ -83,9 +64,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

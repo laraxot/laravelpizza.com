@@ -3,25 +3,7 @@ title: "migration rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_HbV8Mt
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_bspyig
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_HbV8Mt
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_bspyig
 qmd: "migration rules"
 issues: []
 discussions: []
@@ -213,29 +195,8 @@ return new class () extends XotBaseMigration {
 - [Documentazione XotBaseMigration](../../Xot/docs/rules/laraxot-rules.md)
 - [Standard Migrazioni](../../../docs/regole/standard_migrazioni.md)
 - [Best Practices Database](../../../docs/best-practices/database.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_HbV8Mt
 - [Gestione Errori](../../User/docs/error-handling-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_bspyig
 - [Gestione Errori](../../User/docs/error-handling-2.md)
-=======
-<<<<<<< HEAD
-- [Gestione Errori](../../User/docs/error-handling-2.md)
-=======
-- [Gestione Errori](../../User/docs/error-handling-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_HbV8Mt
-=======
-- [Gestione Errori](../../User/docs/error-handling-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_bspyig
 
 ## Supporto
 

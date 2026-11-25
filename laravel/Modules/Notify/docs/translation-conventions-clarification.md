@@ -3,15 +3,7 @@ title: "translation conventions clarification"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_SZq450
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_itpuhD
 qmd: "translation conventions clarification"
 issues: []
 discussions: []

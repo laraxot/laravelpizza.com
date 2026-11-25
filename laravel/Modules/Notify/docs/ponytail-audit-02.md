@@ -3,41 +3,7 @@ title: "ponytail audit 2026 07 02"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< .merge_file_K0aqSf
-=======
-<<<<<<< .merge_file_anIjMc
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_fywTgu
-=======
->>>>>>> .merge_file_nX5czr
->>>>>>> laraxot/dev
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-<<<<<<< .merge_file_K0aqSf
-=======
-<<<<<<< .merge_file_anIjMc
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_fywTgu
-=======
->>>>>>> .merge_file_nX5czr
->>>>>>> laraxot/dev
 qmd: "ponytail audit 2026 07 02"
 issues: []
 discussions: []
@@ -68,45 +34,11 @@ Discussion [#82](https://github.com/laraxot/base_quaeris_fila5/discussions/82) /
 - Discussion #82/#83: Actions over Services architecture decision (canonical rule).
 - Issue #103: NotificationManager wrapper removal (yagni).
 - Issue #112: firstOrFail + domain exception (stdlib).
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< .merge_file_K0aqSf
-=======
-<<<<<<< .merge_file_anIjMc
->>>>>>> laraxot/dev
 - Known doc-sprawl debt in this module (discussion #22) is out of scope here; `Modules/Notify/docs/` still has duplicate `README.md`/`index.md`/`index-2.md`/`00-index.md` entrypoints pending consolidation.
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_fywTgu
-=======
->>>>>>> .merge_file_nX5czr
->>>>>>> laraxot/dev
 - Known doc-sprawl debt in this module (discussion #22) is out of scope here; `Modules/Notify/docs/` still has duplicate `README.md`/`index.md`/`index.md`/`00-index.md` entrypoints pending consolidation.
-=======
-<<<<<<< HEAD
 - Known doc-sprawl debt in this module (discussion #22) is out of scope here; `Modules/Notify/docs/` still has duplicate `README.md`/`index.md`/`index-2.md`/`00-index.md` entrypoints pending consolidation.
-=======
 - Known doc-sprawl debt in this module (discussion #22) is out of scope here; `Modules/Notify/docs/` still has duplicate `README.md`/`index.md`/`index.md`/`00-index.md` entrypoints pending consolidation.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-<<<<<<< .merge_file_K0aqSf
-=======
-<<<<<<< .merge_file_anIjMc
->>>>>>> laraxot/dev
-=======
 - Known doc-sprawl debt in this module (discussion #22) is out of scope here; `Modules/Notify/docs/` still has duplicate `README.md`/`index.md`/`index-2.md`/`00-index.md` entrypoints pending consolidation.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_fywTgu
-=======
->>>>>>> .merge_file_nX5czr
->>>>>>> laraxot/dev
 
 ## 2026-07-02 (second pass): collapsed single-driver Sms/Telegram/WhatsApp factories
 

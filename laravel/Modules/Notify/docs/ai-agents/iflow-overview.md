@@ -3,21 +3,7 @@ title: "iflow overview"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_VkAdYY
-<<<<<<< .merge_file_NcWpUV
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_oYgWI4
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_VkAdYY
->>>>>>> .merge_file_pVMi6v
-=======
->>>>>>> .merge_file_oYgWI4
 qmd: "iflow overview"
 issues: []
 discussions: []
@@ -27,10 +13,6 @@ discussions: []
 
 Panoramica del progetto LaravelPizza.com.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "iflow overview"
@@ -47,13 +29,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🍕 LaravelPizza.com
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🎯 Missione del Progetto
 
 **Questo è una CONVERSIONE e MIGLIORAMENTO di https://laravelpizza.com/**

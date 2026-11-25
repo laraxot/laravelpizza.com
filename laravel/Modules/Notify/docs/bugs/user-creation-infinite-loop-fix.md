@@ -3,21 +3,7 @@ title: "user creation infinite loop fix"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_QN8UZA
-<<<<<<< .merge_file_90Dr9g
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_FhrMpi
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_QN8UZA
->>>>>>> .merge_file_HOq7io
-=======
->>>>>>> .merge_file_FhrMpi
 qmd: "user creation infinite loop fix"
 issues: []
 discussions: []

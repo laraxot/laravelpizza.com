@@ -3,31 +3,7 @@ title: "email backup 1"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_CGldDU
-<<<<<<< .merge_file_ARxVLO
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_dB5FpX
-=======
->>>>>>> .merge_file_2HrtwG
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_CGldDU
-<<<<<<< .merge_file_ARxVLO
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_dB5FpX
-=======
->>>>>>> .merge_file_2HrtwG
 qmd: "email backup 1"
 issues: []
 discussions: []
@@ -670,36 +646,15 @@ class MailBackupDebugger
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
-<<<<<<< HEAD
-<<<<<<< .merge_file_CGldDU
-<<<<<<< .merge_file_ARxVLO
 - [Laravel Storage](https://laravel.com/project_docs/storage)
 - [Laravel Encryption](https://laravel.com/project_docs/encryption)
 - [Laravel Commands](https://laravel.com/project_docs/artisan)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 - [Laravel Storage](https://laravel.com/project_docs/storage)
 - [Laravel Encryption](https://laravel.com/project_docs/encryption)
 - [Laravel Commands](https://laravel.com/project_docs/artisan)
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_dB5FpX
-=======
->>>>>>> .merge_file_2HrtwG
-=======
 - [Laravel Storage](https://laravel.com/project_docs/storage)
 - [Laravel Encryption](https://laravel.com/project_docs/encryption)
 - [Laravel Commands](https://laravel.com/project_docs/artisan)
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_CGldDU
-<<<<<<< .merge_file_ARxVLO
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_dB5FpX
-=======
->>>>>>> .merge_file_2HrtwG
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
@@ -709,45 +664,9 @@ class MailBackupDebugger
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
-<<<<<<< HEAD
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_CGldDU
-<<<<<<< .merge_file_ARxVLO
-<<<<<<< HEAD
-- [Laravel Storage](https://laravel.com/docs/storage)
-- [Laravel Encryption](https://laravel.com/docs/encryption)
-- [Laravel Commands](https://laravel.com/docs/artisan)
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_dB5FpX
-=======
->>>>>>> .merge_file_2HrtwG
-- [Laravel Storage](https://laravel.com/project_docs/storage)
-- [Laravel Encryption](https://laravel.com/project_docs/encryption)
-- [Laravel Commands](https://laravel.com/project_docs/artisan)
-=======
-- [Laravel Storage](https://laravel.com/docs/storage)
-- [Laravel Encryption](https://laravel.com/docs/encryption)
-- [Laravel Commands](https://laravel.com/docs/artisan)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_CGldDU
-<<<<<<< .merge_file_ARxVLO
-=======
-- [Laravel Storage](https://laravel.com/project_docs/storage)
-- [Laravel Encryption](https://laravel.com/project_docs/encryption)
-- [Laravel Commands](https://laravel.com/project_docs/artisan)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_dB5FpX
-=======
->>>>>>> .merge_file_2HrtwG
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
@@ -757,49 +676,30 @@ class MailBackupDebugger
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
-<<<<<<< .merge_file_CGldDU
-<<<<<<< .merge_file_ARxVLO
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_dB5FpX
-=======
->>>>>>> .merge_file_2HrtwG
-- [Laravel Storage](https://laravel.com/docs/storage)
-- [Laravel Encryption](https://laravel.com/docs/encryption)
-- [Laravel Commands](https://laravel.com/docs/artisan)
-- [Laravel Storage](https://laravel.com/docs/storage)
-- [Laravel Encryption](https://laravel.com/docs/encryption)
-- [Laravel Commands](https://laravel.com/docs/artisan)
-<<<<<<< .merge_file_CGldDU
-<<<<<<< .merge_file_ARxVLO
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_dB5FpX
-=======
->>>>>>> .merge_file_2HrtwG
 - [Laravel Storage](https://laravel.com/project_docs/storage)
 - [Laravel Encryption](https://laravel.com/project_docs/encryption)
 - [Laravel Commands](https://laravel.com/project_docs/artisan)
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
-<<<<<<< .merge_file_CGldDU
-<<<<<<< .merge_file_ARxVLO
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_dB5FpX
-=======
->>>>>>> .merge_file_2HrtwG
+- [Laravel Storage](https://laravel.com/project_docs/storage)
+- [Laravel Encryption](https://laravel.com/project_docs/encryption)
+- [Laravel Commands](https://laravel.com/project_docs/artisan)
+- [Laravel Storage](https://laravel.com/docs/storage)
+- [Laravel Encryption](https://laravel.com/docs/encryption)
+- [Laravel Commands](https://laravel.com/docs/artisan)
+- [Laravel Storage](https://laravel.com/docs/storage)
+- [Laravel Encryption](https://laravel.com/docs/encryption)
+- [Laravel Commands](https://laravel.com/docs/artisan)
+- [Laravel Storage](https://laravel.com/docs/storage)
+- [Laravel Encryption](https://laravel.com/docs/encryption)
+- [Laravel Commands](https://laravel.com/docs/artisan)
+- [Laravel Storage](https://laravel.com/project_docs/storage)
+- [Laravel Encryption](https://laravel.com/project_docs/encryption)
+- [Laravel Commands](https://laravel.com/project_docs/artisan)
+- [Laravel Storage](https://laravel.com/docs/storage)
+- [Laravel Encryption](https://laravel.com/docs/encryption)
+- [Laravel Commands](https://laravel.com/docs/artisan)
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
@@ -1124,14 +1024,3 @@ class MailBackupDebugger
 - [Laravel Storage](https://laravel.com/docs/storage)
 - [Laravel Encryption](https://laravel.com/docs/encryption)
 - [Laravel Commands](https://laravel.com/docs/artisan)
-<<<<<<< .merge_file_CGldDU
-<<<<<<< .merge_file_ARxVLO
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_dB5FpX
-=======
->>>>>>> .merge_file_2HrtwG

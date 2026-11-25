@@ -7,25 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_4Yt5BD
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_P59DxA
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_4Yt5BD
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_P59DxA
 ---
 
 # OpenViking + BMAD + GSD + Ralph Loop - Setup Complete Report
@@ -377,31 +359,10 @@ cat .ralph/iteration-log.md
 ls -la _bmad/
 ls -la .planning/
 
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_4Yt5BD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_P59DxA
 # Review agents.md
 cat agents.md
 # Review agents.md
 cat agents.md
-<<<<<<< .merge_file_4Yt5BD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_P59DxA
->>>>>>> laraxot/dev
 # Review agents-2.md
 cat agents-2.md
 ```
@@ -413,29 +374,9 @@ cat agents-2.md
 - [BMAD-GSD-Ralph Integration](./bmad-gsd-ralph-integration.md)
 - [Unified Workflow](./unified-ai-workflow.md)
 - [BMAD Workflow](laravel/Modules/Xot/docs/bmad-workflow-guide.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_4Yt5BD
 - [agents.md](../agents.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_P59DxA
 - [agents-2.md](../agents-2.md)
-=======
-<<<<<<< HEAD
 - [agents.md](../agents.md)
-=======
-- [agents-2.md](../agents-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_4Yt5BD
-=======
-- [agents.md](../agents.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_P59DxA
 
 ### Scripts
 - OpenViking Init: `bashscripts/ai/openviking-init.sh`

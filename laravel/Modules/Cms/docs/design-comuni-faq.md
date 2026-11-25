@@ -7,10 +7,7 @@ updated: 2026-09-26
 qmd: "design comuni faq"
 issues: []
 discussions: []
-<<<<<<< HEAD
-=======
 status: draft
->>>>>>> laraxot/dev
 ---
 
 # Design Comuni - Domande Frequenti (FAQ)
@@ -152,31 +149,9 @@ Universal Blocks Renderer
 ```bash
 cd laravel/Themes/Sixteen
 npm run build    # Compila CSS/JS
-<<<<<<< .merge_file_SKltsr
-<<<<<<< .merge_file_uijTEj
-<<<<<<< .merge_file_YX1l4V
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
-=======
-=======
->>>>>>> .merge_file_rF9oUx
-=======
->>>>>>> .merge_file_vzHtVS
-<<<<<<< HEAD
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
-<<<<<<< HEAD
-# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_SKltsr
-<<<<<<< .merge_file_uijTEj
->>>>>>> .merge_file_Z4esBV
-=======
->>>>>>> .merge_file_rF9oUx
-=======
->>>>>>> .merge_file_vzHtVS
 ```
 
 ## Testing
@@ -214,18 +189,10 @@ Output: `Themes/Sixteen/docs/design-comuni/screenshots/`
 - [Documentazione Script](../../../bashscripts/docs/DESIGN_COMUNI_SCREENSHOT_SCRIPT.md)
 
 ### Moduli Correlati
-<<<<<<< HEAD
 - [UI Module - Blocks System](../UI/docs/blocks-system.md)
 - [UI Module - Design System](../UI/docs/design-system.md)
-=======
-<<<<<<< HEAD
-- [UI Module - Blocks System](../UI/docs/blocks-system.md)
-- [UI Module - Design System](../UI/docs/design-system.md)
-=======
 - [UI Module - Blocks System](../../UI/docs/blocks-system.md)
 - [UI Module - Design System](../../UI/docs/design-system.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Prossimi Passi
 
@@ -263,14 +230,6 @@ Icone utilizzate:
 
 ---
 
-<<<<<<< .merge_file_SKltsr
-<<<<<<< .merge_file_uijTEj
-<<<<<<< .merge_file_YX1l4V
-=======
-=======
->>>>>>> .merge_file_rF9oUx
-=======
->>>>>>> .merge_file_vzHtVS
 title: "design comuni faq"
 type: note
 tags: [documentation]
@@ -279,13 +238,6 @@ updated: 2026-09-26
 qmd: "design comuni faq"
 issues: []
 discussions: []
-<<<<<<< .merge_file_SKltsr
-<<<<<<< .merge_file_uijTEj
->>>>>>> .merge_file_Z4esBV
-=======
->>>>>>> .merge_file_rF9oUx
-=======
->>>>>>> .merge_file_vzHtVS
 **Ultimo Aggiornamento**: 2026-04-03  
 **Stato**: ✅ 90% Completato  
 **Responsabile**: AI Agent Team
@@ -293,15 +245,8 @@ discussions: []
 ## Verifica corrente 2026-04-03
 
 Verifica rilanciata sui render attuali:
-<<<<<<< HEAD
 - [Theme parity report](../../../Themes/Sixteen/docs/design-comuni/domande-frequenti-parity-2026-04-03.md)
-=======
-<<<<<<< HEAD
-- [Theme parity report](../../../Themes/Sixteen/docs/design-comuni/domande-frequenti-parity-2026-04-03.md)
-=======
 - [Theme parity report](../../../Themes/Sixteen/docs/design-comuni/domande-frequenti-parity.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Structure diff](../../../Themes/Sixteen/docs/pages/domande-frequenti/STRUCTURE-DIFF.md)
 
 Esito aggiornato:

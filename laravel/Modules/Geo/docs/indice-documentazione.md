@@ -29,37 +29,9 @@ Questo documento fornisce un indice completo e organizzato di tutta la documenta
 Documenti che forniscono una panoramica generale del modulo Geo, della sua architettura e dei suoi componenti principali.
 
 - [README.md](README.md) - Introduzione generale al modulo Geo
-<<<<<<< .merge_file_8SkHHe
-<<<<<<< .merge_file_ahlFlo
-<<<<<<< .merge_file_jTlakO
-<<<<<<< .merge_file_itf7Ld
 - [module-geo-2.md](module-geo.md) - Panoramica dettagliata del modulo
-=======
-=======
->>>>>>> .merge_file_774mgQ
-=======
->>>>>>> .merge_file_0lKZio
-=======
->>>>>>> .merge_file_bkXzhK
-<<<<<<< HEAD
 - [module-geo-2.md](module-geo-2.md) - Panoramica dettagliata del modulo
-=======
-<<<<<<< HEAD
-- [module-geo-2.md](module-geo-2.md) - Panoramica dettagliata del modulo
-=======
 - [module-geo-2.md](module-geo.md) - Panoramica dettagliata del modulo
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_8SkHHe
-<<<<<<< .merge_file_ahlFlo
-<<<<<<< .merge_file_jTlakO
->>>>>>> .merge_file_1JKd1b
-=======
->>>>>>> .merge_file_774mgQ
-=======
->>>>>>> .merge_file_0lKZio
-=======
->>>>>>> .merge_file_bkXzhK
 - [architecture.md](architecture.md) - Architettura del modulo Geo
 - [structure.md](structure.md) - Struttura del modulo e organizzazione dei file
 - [gestione-dati-geografici-compendio.md](gestione-dati-geografici-compendio.md) - Compendio completo sulla gestione dei dati geografici
@@ -68,37 +40,9 @@ Documenti che forniscono una panoramica generale del modulo Geo, della sua archi
 
 Documenti relativi ai modelli dati, alle entità geografiche e alle strutture dati utilizzate nel modulo.
 
-<<<<<<< .merge_file_8SkHHe
-<<<<<<< .merge_file_ahlFlo
-<<<<<<< .merge_file_jTlakO
-<<<<<<< .merge_file_itf7Ld
 - [geo-entities-2.md](geo-entities.md) - Entità geografiche principali
-=======
-=======
->>>>>>> .merge_file_774mgQ
-=======
->>>>>>> .merge_file_0lKZio
-=======
->>>>>>> .merge_file_bkXzhK
-<<<<<<< HEAD
 - [geo-entities-2.md](geo-entities-2.md) - Entità geografiche principali
-=======
-<<<<<<< HEAD
-- [geo-entities-2.md](geo-entities-2.md) - Entità geografiche principali
-=======
 - [geo-entities-2.md](geo-entities.md) - Entità geografiche principali
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_8SkHHe
-<<<<<<< .merge_file_ahlFlo
-<<<<<<< .merge_file_jTlakO
->>>>>>> .merge_file_1JKd1b
-=======
->>>>>>> .merge_file_774mgQ
-=======
->>>>>>> .merge_file_0lKZio
-=======
->>>>>>> .merge_file_bkXzhK
 - [comune-model.md](comune-model.md) - Documentazione del modello Comune
 - [comune-unificazione-analisi.md](comune-unificazione-analisi.md) - Analisi dell'unificazione dei modelli
 - [consolidamento-modelli-geografici.md](consolidamento-modelli-geografici.md) - Documento sul consolidamento
@@ -155,37 +99,9 @@ Documenti che descrivono l'integrazione del modulo Geo con altri componenti del 
 - [filament-integration.md](filament-integration.md) - Integrazione con Filament
 - [filament.md](filament.md) - Utilizzo di Filament nel modulo Geo
 - [squire-integration.md](squire-integration.md) - Integrazione con Squire
-<<<<<<< .merge_file_8SkHHe
-<<<<<<< .merge_file_ahlFlo
-<<<<<<< .merge_file_jTlakO
-<<<<<<< .merge_file_itf7Ld
 - [address-autocomplete-2.md](address-autocomplete.md) - Autocompletamento indirizzi
-=======
-=======
->>>>>>> .merge_file_774mgQ
-=======
->>>>>>> .merge_file_0lKZio
-=======
->>>>>>> .merge_file_bkXzhK
-<<<<<<< HEAD
 - [address-autocomplete-2.md](address-autocomplete-2.md) - Autocompletamento indirizzi
-=======
-<<<<<<< HEAD
-- [address-autocomplete-2.md](address-autocomplete-2.md) - Autocompletamento indirizzi
-=======
 - [address-autocomplete-2.md](address-autocomplete.md) - Autocompletamento indirizzi
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_8SkHHe
-<<<<<<< .merge_file_ahlFlo
-<<<<<<< .merge_file_jTlakO
->>>>>>> .merge_file_1JKd1b
-=======
->>>>>>> .merge_file_774mgQ
-=======
->>>>>>> .merge_file_0lKZio
-=======
->>>>>>> .merge_file_bkXzhK
 - [autocomplete.md](autocomplete.md) - Funzionalità di autocompletamento
 - [location-select.md](location-select.md) - Selezione della posizione
 
@@ -202,82 +118,24 @@ Documenti specifici per l'analisi e il miglioramento dell'AddressResource.
 Documenti relativi all'integrazione con servizi geografici esterni.
 
 - [here.md](here.md) - Integrazione con HERE
-<<<<<<< .merge_file_8SkHHe
-<<<<<<< .merge_file_ahlFlo
-<<<<<<< .merge_file_jTlakO
-<<<<<<< .merge_file_itf7Ld
 - [here-com-2.md](here-com.md) - Utilizzo dell'API HERE.com
-=======
-=======
->>>>>>> .merge_file_774mgQ
-=======
->>>>>>> .merge_file_0lKZio
-=======
->>>>>>> .merge_file_bkXzhK
-<<<<<<< HEAD
 - [here-com-2.md](here-com-2.md) - Utilizzo dell'API HERE.com
-=======
-<<<<<<< HEAD
-- [here-com-2.md](here-com-2.md) - Utilizzo dell'API HERE.com
-=======
 - [here-com-2.md](here-com.md) - Utilizzo dell'API HERE.com
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_8SkHHe
-<<<<<<< .merge_file_ahlFlo
-<<<<<<< .merge_file_jTlakO
->>>>>>> .merge_file_1JKd1b
-=======
->>>>>>> .merge_file_774mgQ
-=======
->>>>>>> .merge_file_0lKZio
-=======
->>>>>>> .merge_file_bkXzhK
 - [tomtom-com-2.md](tomtom-com-2.md) - Integrazione con TomTom
 
 ## Best Practices
 
 Guide alle best practices e pattern raccomandati per lo sviluppo nel modulo Geo.
 
-<<<<<<< .merge_file_8SkHHe
-<<<<<<< .merge_file_ahlFlo
-<<<<<<< .merge_file_jTlakO
-<<<<<<< .merge_file_itf7Ld
 - [eloquent-3.md](--eloquent.md) - Best practices per Eloquent
 - [tips-and-links-2.md](tips-and-links-2.md) - Suggerimenti e link utili
 - [laravel-packages-2.md](laravel-packages.md) - Pacchetti Laravel consigliati
-=======
-=======
->>>>>>> .merge_file_774mgQ
-=======
->>>>>>> .merge_file_0lKZio
-=======
->>>>>>> .merge_file_bkXzhK
-<<<<<<< HEAD
 - [eloquent-3.md](eloquent-3.md) - Best practices per Eloquent
 - [tips-and-links-2.md](tips-and-links-2.md) - Suggerimenti e link utili
 - [laravel-packages-2.md](laravel-packages-2.md) - Pacchetti Laravel consigliati
-=======
-<<<<<<< HEAD
-- [eloquent-3.md](eloquent-3.md) - Best practices per Eloquent
-- [tips-and-links-2.md](tips-and-links-2.md) - Suggerimenti e link utili
-- [laravel-packages-2.md](laravel-packages-2.md) - Pacchetti Laravel consigliati
-=======
 - [eloquent-3.md](--eloquent.md) - Best practices per Eloquent
 - [tips-and-links-2.md](tips-and-links-2.md) - Suggerimenti e link utili
 - [laravel-packages-2.md](laravel-packages.md) - Pacchetti Laravel consigliati
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_8SkHHe
-<<<<<<< .merge_file_ahlFlo
-<<<<<<< .merge_file_jTlakO
->>>>>>> .merge_file_1JKd1b
-=======
->>>>>>> .merge_file_774mgQ
-=======
->>>>>>> .merge_file_0lKZio
-=======
->>>>>>> .merge_file_bkXzhK
 
 ## Riferimenti API
 

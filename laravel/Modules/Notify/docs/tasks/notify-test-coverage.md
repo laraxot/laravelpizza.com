@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 ---
 title: "Task: Rafforzamento Test Suite Notify (Pest)"
 type: note
 qmd: "notify test coverage task rafforzamento suite"
 ---
-=======
->>>>>>> laraxot/dev
 # Task: Rafforzamento Test Suite Notify (Pest)
 
 **Modulo**: Notify  

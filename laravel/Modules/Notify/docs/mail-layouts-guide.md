@@ -3,25 +3,7 @@ title: "mail layouts guide"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_y98YRV
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_nSqASa
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_y98YRV
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_nSqASa
 qmd: "mail layouts guide"
 issues: []
 discussions: []
@@ -160,73 +142,27 @@ I CSS sono definiti inline all'interno di ciascun layout per massimizzare la com
 
 ## Integrazione con MailPace
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_y98YRV
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_nSqASa
 I layout attuali sono compatibili con l'approccio utilizzato da [mailpace/templates](https://github.com/mailpace/templates). Vedere [mailpace-templates-integration-2.md](mail-templates/mailpace-templates-integration-2.md) per dettagli sull'integrazione.
 I layout attuali sono compatibili con l'approccio utilizzato da [mailpace/templates](https://github.com/mailpace/templates). Vedere [mailpace-templates-integration-2.md](./mail-templates/mailpace-templates-integration-2.md) per dettagli sull'integrazione.
-=======
-<<<<<<< .merge_file_UVp1fr
 I layout attuali sono compatibili con l'approccio utilizzato da [mailpace/templates](https://github.com/mailpace/templates). Vedere [mailpace-templates-integration-2.md](mail-templates/mailpace-templates-integration-2.md) per dettagli sull'integrazione.
-=======
-I layout attuali sono compatibili con l'approccio utilizzato da [mailpace/templates](https://github.com/mailpace/templates). Vedere [mailpace-templates-integration-2.md](mail-templates/mailpace-templates-integration-2.md) per dettagli sull'integrazione.
-<<<<<<< .merge_file_y98YRV
-I layout attuali sono compatibili con l'approccio utilizzato da [mailpace/templates](https://github.com/mailpace/templates). Vedere [mailpace-templates-integration-2.md](./mail-templates/mailpace-templates-integration-2.md) per dettagli sull'integrazione.
->>>>>>> .merge_file_EShDkl
->>>>>>> laraxot/dev
-=======
 I layout attuali sono compatibili con l'approccio utilizzato da [mailpace/templates](https://github.com/mailpace/templates). Vedere [mailpace-templates-integration-2.md](mail-templates/mailpace-templates-integration-2.md) per dettagli sull'integrazione.
 I layout attuali sono compatibili con l'approccio utilizzato da [mailpace/templates](https://github.com/mailpace/templates). Vedere [mailpace-templates-integration-2.md](./mail-templates/mailpace-templates-integration-2.md) per dettagli sull'integrazione.
-=======
+I layout attuali sono compatibili con l'approccio utilizzato da [mailpace/templates](https://github.com/mailpace/templates). Vedere [mailpace-templates-integration-2.md](mail-templates/mailpace-templates-integration-2.md) per dettagli sull'integrazione.
 I layout attuali sono compatibili con l'approccio utilizzato da [mailpace/templates](https://github.com/mailpace/templates). Vedere [mailpace-templates-integration-2.md](./mail-templates/mailpace-templates-integration-2.md) per dettagli sull'integrazione.
->>>>>>> .merge_file_EShDkl
->>>>>>> .merge_file_nSqASa
->>>>>>> laraxot/dev
+I layout attuali sono compatibili con l'approccio utilizzato da [mailpace/templates](https://github.com/mailpace/templates). Vedere [mailpace-templates-integration-2.md](./mail-templates/mailpace-templates-integration-2.md) per dettagli sull'integrazione.
 
 ## Riferimenti
 
 - [Laravel Mail Documentation](https://laravel.com/docs/mail)
-<<<<<<< HEAD
-<<<<<<< .merge_file_y98YRV
 - [Spatie Email Documentation](./spatie-email-usage-guide-2.md)
 - [Email Best Practices](./mail-templates/email-best-practices-2.md)
 - [HTML Email Compatibility Guide](./mail-templates/html-email-compatibility-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_nSqASa
-=======
-<<<<<<< .merge_file_UVp1fr
 - [Spatie Email Documentation](spatie-email-usage-guide-2.md)
 - [Email Best Practices](mail-templates/email-best-practices-2.md)
 - [HTML Email Compatibility Guide](mail-templates/html-email-compatibility-2.md)
-=======
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_y98YRV
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_nSqASa
 - [Spatie Email Documentation](./spatie-email-usage-guide-2.md)
 - [Email Best Practices](./mail-templates/email-best-practices-2.md)
 - [HTML Email Compatibility Guide](mail-templates/html-email-compatibility-2.md)
 - [Spatie Email Documentation](./spatie-email-usage-guide-2.md)
 - [Email Best Practices](./mail-templates/email-best-practices-2.md)
 - [HTML Email Compatibility Guide](./mail-templates/html-email-compatibility-2.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_y98YRV
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_EShDkl
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_EShDkl
->>>>>>> laraxot/dev
->>>>>>> .merge_file_nSqASa

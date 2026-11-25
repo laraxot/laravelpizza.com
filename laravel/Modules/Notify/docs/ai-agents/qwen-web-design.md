@@ -3,31 +3,7 @@ title: "qwen web design"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_Uqo8JI
-<<<<<<< .merge_file_jENU3G
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_x2YkbG
-=======
->>>>>>> .merge_file_vVFEHV
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Uqo8JI
-<<<<<<< .merge_file_jENU3G
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_x2YkbG
-=======
->>>>>>> .merge_file_vVFEHV
 qmd: "qwen web design"
 issues: []
 discussions: []
@@ -37,10 +13,6 @@ discussions: []
 
 Studio web design basato su 31 fonti italiane.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "qwen web design"
@@ -66,13 +38,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 📊 10 Priorità (70% Successo Sito)
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Core Web Vitals 2026
 
 | Metrica | Target |
@@ -167,33 +134,8 @@ discussions: []
 
 - [Indice QWEN](./qwen-split-index.md)
 - [website-checklist.md](./website-checklist.md) - Checklist completa
-<<<<<<< HEAD
-<<<<<<< .merge_file_Uqo8JI
-<<<<<<< .merge_file_jENU3G
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_x2YkbG
-=======
->>>>>>> .merge_file_vVFEHV
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
-=======
-<<<<<<< HEAD
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
-=======
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Uqo8JI
-<<<<<<< .merge_file_jENU3G
-=======
-- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_x2YkbG
-=======
->>>>>>> .merge_file_vVFEHV
 - [Index principale](../../../Lang/docs/wiki/integrations/_da-riconciliare/index-3.md)

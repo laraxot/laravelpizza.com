@@ -3,21 +3,7 @@ title: "project docs curated"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Evs9qN
-<<<<<<< .merge_file_gWhM3Z
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_zNaDck
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Evs9qN
->>>>>>> .merge_file_FlffI3
-=======
->>>>>>> .merge_file_zNaDck
 qmd: "project docs curated"
 issues: []
 discussions: []

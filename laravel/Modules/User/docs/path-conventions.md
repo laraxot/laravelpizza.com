@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_3PJpt8
 qmd: "path conventions"
-=======
->>>>>>> .merge_file_5oWFSh
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/path-conventions.md

@@ -3,21 +3,7 @@ title: "filament v3 rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_tZc1SC
-<<<<<<< .merge_file_HFe6e8
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_BgxXdK
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_tZc1SC
->>>>>>> .merge_file_yUDdac
-=======
->>>>>>> .merge_file_BgxXdK
 qmd: "filament v3 rules"
 issues: []
 discussions: []
@@ -36,11 +22,6 @@ discussions: []
 - Form and table schemas now use fluent method chaining.
 - Added `php artisan filament:optimize` command for production optimization.
 - Requires implementing `FilamentUser` contract for production access control.
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 
 ---
@@ -61,9 +42,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

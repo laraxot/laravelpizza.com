@@ -3,15 +3,7 @@ title: "params badges feature"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_EqLujE
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_dPjpgn
 qmd: "params badges feature"
 issues: []
 discussions: []
@@ -185,10 +177,6 @@ Badge: [user_name] [reset_link] [expiry_time]
 - [Mail Templates Index](./index.md)
 - [Filament UI Enhancements](./filament-ui-enhancements-2.md)
 - [Email Templates Guide](./email-templates-guide-2.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -203,11 +191,3 @@ discussions: []
 **Ultimo aggiornamento**: Gennaio 2025  
 **Versione**: 1.0  
 **Compatibilità**: Filament 3.x, Laravel 10+ 
-<<<<<<< .merge_file_EqLujE
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_dPjpgn

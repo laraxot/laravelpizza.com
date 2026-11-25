@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_VfmK3O
 qmd: "spatie permissions"
-=======
->>>>>>> .merge_file_op1jBz
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/spatie-permissions-2.md

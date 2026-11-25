@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_EqzUKd
 qmd: "uuid trait conflict resolution"
-=======
->>>>>>> .merge_file_J7PWvr
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/uuid-trait-conflict-resolution.md

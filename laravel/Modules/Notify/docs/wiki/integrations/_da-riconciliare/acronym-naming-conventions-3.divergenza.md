@@ -7,23 +7,7 @@ module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_Mfz6H4
-=======
-<<<<<<< .merge_file_PEBWUu
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_aGyg7N
-=======
->>>>>>> .merge_file_cdJ8yW
->>>>>>> laraxot/dev
 ---
 
 # Divergenza: `acronym-naming-conventions-2.md`

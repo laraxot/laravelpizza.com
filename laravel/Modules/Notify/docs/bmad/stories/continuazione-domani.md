@@ -1,21 +1,7 @@
 ---
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_RZTffn
-<<<<<<< .merge_file_nwlf30
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_LwFMJZ
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_RZTffn
->>>>>>> .merge_file_j0sYgQ
-=======
->>>>>>> .merge_file_LwFMJZ
 qmd: "continuazione domani"
 issues: []
 discussions: []

@@ -3,15 +3,7 @@ title: "translation implementation plan"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_TuvpmJ
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_LKnnLy
 qmd: "translation implementation plan"
 issues: []
 discussions: []
@@ -90,13 +82,6 @@ Dall'analisi dei file di traduzione esistenti, sono stati identificati i seguent
 ```bash
 
 # Rimozione dei file senza nome
-rm -f Modules/Notify/lang/it/.php
-
-# Rimozione dei file con nomi errati dopo aver verificato che esistano le versioni corrette
-rm -f Modules/Notify/lang/it/send_s_m_s.php
-rm -f Modules/Notify/lang/it/send_a_w_s_email.php
-rm -f Modules/Notify/lang/it/send_whats_app.php
-rm -f Modules/Notify/lang/it/send_netfun_s_m_s.php
 rm -f Modules/Notify/lang/it/.php
 
 # Rimozione dei file con nomi errati dopo aver verificato che esistano le versioni corrette

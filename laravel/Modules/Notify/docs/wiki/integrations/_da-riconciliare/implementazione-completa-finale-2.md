@@ -7,25 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_wqKDsa
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_zLbhCL
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_wqKDsa
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zLbhCL
 ---
 
 # 🐄✨ IMPLEMENTAZIONE COMPLETA - REPORT FINALE ✨🐄
@@ -38,29 +20,11 @@ updated: 2026-11-23
 
 ## 📋 RISPOSTA ALLA DOMANDA
 
-<<<<<<< HEAD
 > "percio' hai gia' eseguito tutto quello che avevi analizzato e scritto dentro i vari duplicate-methods-analysis.md e metodi-duplicati-analisi-2.md dentro le cartelle docs dentro i moduli e dentro i temi, e li hai aggiornati che ci sono meno metodi e parametri duplicati? e hai implementato quello che avevi documentato e aggiornato la documentazione?"
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_wqKDsa
-<<<<<<< HEAD
 > "percio' hai gia' eseguito tutto quello che avevi analizzato e scritto dentro i vari duplicate-methods-analysis.md e metodi-duplicati-analisi-2.md dentro le cartelle docs dentro i moduli e dentro i temi, e li hai aggiornati che ci sono meno metodi e parametri duplicati? e hai implementato quello che avevi documentato e aggiornato la documentazione?"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_zLbhCL
 > "percio' hai gia' eseguito tutto quello che avevi analizzato e scritto dentro i vari duplicate-methods-analysis.md e metodi-duplicati-analisi-2.md dentro le cartelle docs dentro i moduli e dentro i temi, e li hai aggiornati che ci sono meno metodi e parametri duplicati? e hai implementato quello che avevi documentato e aggiornato la documentazione?"
-=======
 > "percio' hai gia' eseguito tutto quello che avevi analizzato e scritto dentro i vari duplicate-methods-analysis.md e metodi-duplicati-analisi-2.md dentro le cartelle docs dentro i moduli e dentro i temi, e li hai aggiornati che ci sono meno metodi e parametri duplicati? e hai implementato quello che avevi documentato e aggiornato la documentazione?"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_wqKDsa
-=======
 > "percio' hai gia' eseguito tutto quello che avevi analizzato e scritto dentro i vari duplicate-methods-analysis.md e metodi-duplicati-analisi-2.md dentro le cartelle docs dentro i moduli e dentro i temi, e li hai aggiornati che ci sono meno metodi e parametri duplicati? e hai implementato quello che avevi documentato e aggiornato la documentazione?"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zLbhCL
 
 ### ✅ **SÌ, TUTTO COMPLETATO!**
 
@@ -147,29 +111,11 @@ updated: 2026-11-23
 - [x] Creato `docs/implementazione-refactoring-basemodel.md`
 - [x] Creato `../../../refactoring-completato-2.md`
 - [x] Creato `../../../implementazione-completa-finale-2.md` (questo file)
-<<<<<<< HEAD
 - [x] Aggiornati **18 file** `metodi-duplicati-analisi-2.md` con sezione implementazione
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_wqKDsa
-<<<<<<< HEAD
 - [x] Aggiornati **18 file** `metodi-duplicati-analisi-2.md` con sezione implementazione
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_zLbhCL
 - [x] Aggiornati **18 file** `metodi-duplicati-analisi-2.md` con sezione implementazione
-=======
 - [x] Aggiornati **18 file** `metodi-duplicati-analisi-2.md` con sezione implementazione
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_wqKDsa
-=======
 - [x] Aggiornati **18 file** `metodi-duplicati-analisi-2.md` con sezione implementazione
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zLbhCL
 - [x] Aggiornati documenti per moduli specifici (Xot, User, Cms, App)
 - [x] Aggiornati documenti per moduli specifici (Xot, User, Cms, <nome progetto>)
 - [x] Aggiornati documenti per temi (Sixteen, TwentyOne)
@@ -233,29 +179,11 @@ updated: 2026-11-23
 ║  ✅ Documentazione:                                 ║
 ║     - Files aggiornati: 25                          ║
 ║     - Files creati: 10                              ║
-<<<<<<< HEAD
 ║     - metodi-duplicati-analisi-2.md: 18 aggiornati   ║
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_wqKDsa
-<<<<<<< HEAD
 ║     - metodi-duplicati-analisi-2.md: 18 aggiornati   ║
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_zLbhCL
 ║     - metodi-duplicati-analisi-2.md: 18 aggiornati   ║
-=======
 ║     - metodi-duplicati-analisi-2.md: 18 aggiornati   ║
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_wqKDsa
-=======
 ║     - metodi-duplicati-analisi-2.md: 18 aggiornati   ║
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zLbhCL
 ║                                                      ║
 ║  📊 TOTALE:                                         ║
 ║     - Files modificati/creati: 38                   ║
@@ -293,29 +221,11 @@ docs/
 └── IMPLEMENTAZIONE_COMPLETA_FINALE.md      ✅ Questo file
 
 Modules/*/docs/
-<<<<<<< HEAD
 ├── metodi-duplicati-analisi-2.md (18 files)  ✅ Aggiornati
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_wqKDsa
-<<<<<<< HEAD
 ├── metodi-duplicati-analisi-2.md (18 files)  ✅ Aggiornati
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_zLbhCL
 ├── metodi-duplicati-analisi-2.md (18 files)  ✅ Aggiornati
-=======
 ├── metodi-duplicati-analisi-2.md (18 files)  ✅ Aggiornati
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_wqKDsa
-=======
 ├── metodi-duplicati-analisi-2.md (18 files)  ✅ Aggiornati
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zLbhCL
 ├── analisi-metodi-duplicati.md (4 files)   ✅ Creati
 └── duplicate-methods-analysis.md (vari)    ✅ Esistenti
 
@@ -504,33 +414,9 @@ ROI totale = (1,950 + 310 - 600) / 600 = +276%
 
 ## 🎯 COSA È STATO IMPLEMENTATO ESATTAMENTE
 
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_wqKDsa
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zLbhCL
 ### Da metodi-duplicati-analisi-2.md
 
 I documenti `metodi-duplicati-analisi-2.md` contenevano 4 proposte principali:
-### Da metodi-duplicati-analisi-2.md
-
-I documenti `metodi-duplicati-analisi-2.md` contenevano 4 proposte principali:
-<<<<<<< .merge_file_wqKDsa
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zLbhCL
->>>>>>> laraxot/dev
 ### Da metodi-duplicati-analisi-2.md
 
 I documenti `metodi-duplicati-analisi-2.md` contenevano 4 proposte principali:
@@ -562,17 +448,6 @@ I documenti `metodi-duplicati-analisi-2.md` contenevano 4 proposte principali:
 
 **TUTTI I 18 MODULI:**
 ```
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_wqKDsa
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zLbhCL
 ✅ Modules/Activity/docs/metodi-duplicati-analisi-2.md
 ✅ Modules/AI/docs/metodi-duplicati-analisi-2.md
 ✅ Modules/Blog/docs/metodi-duplicati-analisi-2.md
@@ -592,16 +467,6 @@ I documenti `metodi-duplicati-analisi-2.md` contenevano 4 proposte principali:
 ✅ Modules/Notify/docs/wiki/integrations/_da-riconciliare/metodi-duplicati-analisi-2.md
 ✅ Modules/User/docs/metodi-duplicati-analisi-2.md
 ✅ Modules/Notify/docs/wiki/integrations/_da-riconciliare/metodi-duplicati-analisi-2.md
-<<<<<<< .merge_file_wqKDsa
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zLbhCL
->>>>>>> laraxot/dev
 ✅ Modules/Activity/docs/metodi-duplicati-analisi-2.md
 ✅ Modules/AI/docs/metodi-duplicati-analisi-3.md
 ✅ Modules/Blog/docs/metodi-duplicati-analisi-2.md
@@ -802,29 +667,11 @@ TOTALE (Fase 1 + 2):
    - Riduzione 97% codice scopes
 
 5. ✅ **Documentazione Completa**
-<<<<<<< HEAD
    - 18 metodi-duplicati-analisi-2.md aggiornati
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_wqKDsa
-<<<<<<< HEAD
    - 18 metodi-duplicati-analisi-2.md aggiornati
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_zLbhCL
    - 18 metodi-duplicati-analisi-2.md aggiornati
-=======
    - 18 metodi-duplicati-analisi-2.md aggiornati
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_wqKDsa
-=======
    - 18 metodi-duplicati-analisi-2.md aggiornati
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zLbhCL
    - 10 nuovi documenti creati
    - 25 documenti totali aggiornati
    - Sezione implementazione in ogni file
@@ -847,29 +694,11 @@ TOTALE (Fase 1 + 2):
 ## 💬 RISPOSTA DIRETTA ALLA TUA DOMANDA
 
 ### Hai chiesto:
-<<<<<<< HEAD
 > "hai gia' eseguito tutto quello che avevi analizzato e scritto dentro i vari duplicate-methods-analysis.md e metodi-duplicati-analisi-2.md?"
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_wqKDsa
-<<<<<<< HEAD
 > "hai gia' eseguito tutto quello che avevi analizzato e scritto dentro i vari duplicate-methods-analysis.md e metodi-duplicati-analisi-2.md?"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_zLbhCL
 > "hai gia' eseguito tutto quello che avevi analizzato e scritto dentro i vari duplicate-methods-analysis.md e metodi-duplicati-analisi-2.md?"
-=======
 > "hai gia' eseguito tutto quello che avevi analizzato e scritto dentro i vari duplicate-methods-analysis.md e metodi-duplicati-analisi-2.md?"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_wqKDsa
-=======
 > "hai gia' eseguito tutto quello che avevi analizzato e scritto dentro i vari duplicate-methods-analysis.md e metodi-duplicati-analisi-2.md?"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zLbhCL
 
 ### ✅ RISPOSTA: **SÌ, AL 100%!**
 
@@ -880,29 +709,11 @@ TOTALE (Fase 1 + 2):
 4. ✅ **Creato** ActionPresets (Proposta 3)
 5. ✅ **Creato** ColumnBuilder (Proposta 2)
 6. ✅ **Creato** HasCommonScopes (Proposta 4)
-<<<<<<< HEAD
 7. ✅ **Aggiornato** tutti i 18 metodi-duplicati-analisi-2.md
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_wqKDsa
-<<<<<<< HEAD
 7. ✅ **Aggiornato** tutti i 18 metodi-duplicati-analisi-2.md
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_zLbhCL
 7. ✅ **Aggiornato** tutti i 18 metodi-duplicati-analisi-2.md
-=======
 7. ✅ **Aggiornato** tutti i 18 metodi-duplicati-analisi-2.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_wqKDsa
-=======
 7. ✅ **Aggiornato** tutti i 18 metodi-duplicati-analisi-2.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zLbhCL
 8. ✅ **Documentato** tutto con esempi concreti
 9. ✅ **Validato** con PHPStan (0 errori)
 10. ✅ **Formattato** con Pint
@@ -928,29 +739,11 @@ TOTALE (Fase 1 + 2):
 ║     ✅ HasCommonScopes: 160 LOC                           ║
 ║                                                            ║
 ║  📚 Documentazione:                                        ║
-<<<<<<< HEAD
 ║     ✅ 18 metodi-duplicati-analisi-2.md aggiornati          ║
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_wqKDsa
-<<<<<<< HEAD
 ║     ✅ 18 metodi-duplicati-analisi-2.md aggiornati          ║
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_zLbhCL
 ║     ✅ 18 metodi-duplicati-analisi-2.md aggiornati          ║
-=======
 ║     ✅ 18 metodi-duplicati-analisi-2.md aggiornati          ║
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_wqKDsa
-=======
 ║     ✅ 18 metodi-duplicati-analisi-2.md aggiornati          ║
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zLbhCL
 ║     ✅ 10 nuovi documenti creati                          ║
 ║     ✅ 38 files totali modificati                         ║
 ║                                                            ║

@@ -3,25 +3,7 @@ title: "NOTEBOOKLM SETUP COMPLETE"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_EYbVe1
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_Q88VdD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_EYbVe1
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_Q88VdD
 qmd: "NOTEBOOKLM SETUP COMPLETE"
 issues: []
 discussions: []
@@ -34,13 +16,6 @@ discussions: []
 **Status**: ✅ **INSTALLED & READY**  
 **Last Updated**: 2026-03-30
 
-<<<<<<< .merge_file_EYbVe1
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_Q88VdD
 ---
 
 title: "NOTEBOOKLM SETUP COMPLETE"
@@ -66,16 +41,8 @@ discussions: []
 
 ---
 
-<<<<<<< .merge_file_EYbVe1
-<<<<<<< HEAD
-=======
-=======
 ## Cos'è NotebookLM
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_Q88VdD
 ## Architettura
 
 ```
@@ -165,34 +132,12 @@ notebooklm/
 ```
 Notebook Name: "Notify Documentation"
 Sources:
-<<<<<<< HEAD
-<<<<<<< .merge_file_EYbVe1
   - agents.md
   - laravel/agents.md
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_Q88VdD
   - agents-2.md
   - laravel/agents-2.md
-=======
-<<<<<<< HEAD
   - agents.md
   - laravel/agents.md
-=======
-  - agents-2.md
-  - laravel/agents-2.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_EYbVe1
-=======
-  - agents.md
-  - laravel/agents.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_Q88VdD
   - docs/**/*.md
   - .planning/**/*.md
   - laravel/Modules/docs/README.md
@@ -268,50 +213,16 @@ Result: Gemini connects info from multiple docs
 **Notebook 1: Notify Core**
 ```
 Sources:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_EYbVe1
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_Q88VdD
   - agents.md
   - laravel/agents.md
   - .planning/project.md
   - .planning/config.json
   - notify_improvement_plan.md
-<<<<<<< .merge_file_EYbVe1
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_Q88VdD
->>>>>>> laraxot/dev
   - agents-2.md
   - laravel/agents-2.md
   - .planning/project-2.md
   - .planning/config.json
   - NOTIFY_IMPROVEMENT_PLAN.md
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_EYbVe1
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_Q88VdD
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ```
 
 **Notebook 2: Module Documentation**
@@ -329,29 +240,9 @@ Sources:
 Sources:
   - laravel/Themes/docs/README.md
   - laravel/Themes/Sixteen/docs/
-<<<<<<< HEAD
-<<<<<<< .merge_file_EYbVe1
   - .planning/theme_context.md
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_Q88VdD
   - .planning/THEME_CONTEXT.md
-=======
-<<<<<<< HEAD
   - .planning/theme_context.md
-=======
-  - .planning/THEME_CONTEXT.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_EYbVe1
-=======
-  - .planning/theme_context.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_Q88VdD
 ```
 
 **Notebook 4: Technical Guides**
@@ -547,29 +438,9 @@ claude
 "Set up NotebookLM authentication"
 
 # 4. Crea notebook su notebooklm.google.com
-<<<<<<< HEAD
-<<<<<<< .merge_file_EYbVe1
 #    - Upload agents.md, docs/**/*.md
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_Q88VdD
 #    - Upload agents-2.md, docs/**/*.md
-=======
-<<<<<<< HEAD
 #    - Upload agents.md, docs/**/*.md
-=======
-#    - Upload agents-2.md, docs/**/*.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_EYbVe1
-=======
-#    - Upload agents.md, docs/**/*.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_Q88VdD
 #    - Share → Copy link
 
 # 5. Aggiungi a library
@@ -607,29 +478,9 @@ claude
 - [x] Skill installato (`~/.claude/skills/notebooklm/`)
 - [ ] Autenticazione completata
 - [ ] Notebook creato su notebooklm.google.com
-<<<<<<< HEAD
-<<<<<<< .merge_file_EYbVe1
 - [ ] Documenti uploadati (agents.md, docs/, etc.)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_Q88VdD
 - [ ] Documenti uploadati (agents-2.md, docs/, etc.)
-=======
-<<<<<<< HEAD
 - [ ] Documenti uploadati (agents.md, docs/, etc.)
-=======
-- [ ] Documenti uploadati (agents-2.md, docs/, etc.)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_EYbVe1
-=======
-- [ ] Documenti uploadati (agents.md, docs/, etc.)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_Q88VdD
 - [ ] Notebook condiviso pubblicamente
 - [ ] Link aggiunto a Claude library
 - [ ] Prima query testata

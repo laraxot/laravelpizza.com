@@ -3,21 +3,7 @@ title: "key documentation references"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_jZSpr6
-<<<<<<< .merge_file_6y0SCv
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_dGehUI
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_jZSpr6
->>>>>>> .merge_file_cAqpmx
-=======
->>>>>>> .merge_file_dGehUI
 qmd: "key documentation references"
 issues: []
 discussions: []

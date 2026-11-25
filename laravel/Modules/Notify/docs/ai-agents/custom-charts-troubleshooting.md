@@ -3,15 +3,7 @@ title: "custom charts troubleshooting"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_PwgROa
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_rljEd7
 qmd: "custom charts troubleshooting"
 issues: []
 discussions: []

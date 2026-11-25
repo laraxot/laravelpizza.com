@@ -7,23 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_JUonUx
-=======
-<<<<<<< .merge_file_NmqGEq
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_kSjgEX
-=======
->>>>>>> .merge_file_jny4aR
->>>>>>> laraxot/dev
 ---
 
 # 🎯 PIANO D'AZIONE IMMEDIATO - Notify Platform

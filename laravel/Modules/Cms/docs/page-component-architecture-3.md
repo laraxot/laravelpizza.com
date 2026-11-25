@@ -1,45 +1,10 @@
 ---
-<<<<<<< .merge_file_V87cih
-<<<<<<< .merge_file_i8q6Ww
-<<<<<<< .merge_file_CgoLlM
-=======
-=======
->>>>>>> .merge_file_JOGEfO
-=======
->>>>>>> .merge_file_9Krs0g
-<<<<<<< HEAD
 title: "Page Component Architecture"
 type: note
 tags: [documentation]
 created: 2026-09-26
-updated: 2026-09-26
-qmd: "Page Component Architecture"
-=======
-<<<<<<< .merge_file_V87cih
-<<<<<<< .merge_file_i8q6Ww
->>>>>>> .merge_file_pxlzIq
-=======
->>>>>>> .merge_file_JOGEfO
-=======
->>>>>>> .merge_file_9Krs0g
-title: "page component architecture"
-type: note
-tags: [documentation]
-created: 2026-09-26
 updated: 2026-11-23
-qmd: "page component architecture"
-<<<<<<< .merge_file_V87cih
-<<<<<<< .merge_file_i8q6Ww
-<<<<<<< .merge_file_CgoLlM
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_pxlzIq
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_JOGEfO
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_9Krs0g
+qmd: "Page Component Architecture"
 issues: []
 discussions: []
 ---
@@ -53,45 +18,16 @@ discussions: []
 
 ---
 
-<<<<<<< .merge_file_V87cih
-<<<<<<< .merge_file_i8q6Ww
-<<<<<<< .merge_file_CgoLlM
-=======
-=======
->>>>>>> .merge_file_JOGEfO
-=======
->>>>>>> .merge_file_9Krs0g
-<<<<<<< HEAD
-title: "PAGE COMPONENT ARCHITECTURE"
-=======
-<<<<<<< HEAD
 title: "page component architecture"
-=======
 title: "PAGE COMPONENT ARCHITECTURE"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
-<<<<<<< HEAD
-qmd: "PAGE COMPONENT ARCHITECTURE"
-=======
-<<<<<<< HEAD
 qmd: "page component architecture"
-=======
 qmd: "PAGE COMPONENT ARCHITECTURE"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 issues: []
 discussions: []
-<<<<<<< .merge_file_V87cih
-<<<<<<< .merge_file_i8q6Ww
->>>>>>> .merge_file_pxlzIq
-=======
->>>>>>> .merge_file_JOGEfO
-=======
->>>>>>> .merge_file_9Krs0g
 ## 🎯 Scopo
 
 Questo documento spiega l'architettura del componente `Page` nel modulo Cms e come i temi devono (o non devono) overridearlo.

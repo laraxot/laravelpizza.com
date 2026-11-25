@@ -12,15 +12,7 @@ slug: notify-pest-suite-database-resolver-broken
 status: ready-for-dev
 cold_gate: null
 created: '2026-09-15'
-<<<<<<< .merge_file_3bjNth
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: '2026-09-15'
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_lcDoNc
 repository: "https://github.com/laraxot/module_notify_fila5.git"
 github_issue: "https://github.com/laraxot/module_notify_fila5/issues/70"
 github_discussion: "https://github.com/laraxot/module_notify_fila5/discussions/71"

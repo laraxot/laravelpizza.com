@@ -7,23 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_R8rXFJ
-=======
-<<<<<<< .merge_file_nRez64
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_Bon58L
-=======
->>>>>>> .merge_file_xUNkOb
->>>>>>> laraxot/dev
 ---
 
 # Notify Platform - Project Status Report

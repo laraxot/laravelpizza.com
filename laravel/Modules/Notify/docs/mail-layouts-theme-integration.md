@@ -3,15 +3,7 @@ title: "mail layouts theme integration"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_hSMwkM
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_yvR2cA
 qmd: "mail layouts theme integration"
 issues: []
 discussions: []
@@ -367,10 +359,6 @@ class EmailLayoutResource extends XotBaseResource
 - [Base Layout](../resources/mail-layouts/base.html)
 - [Default Layout](../resources/mail-layouts/base/default.html)
 - [Responsive Layout](../resources/mail-layouts/base/responsive.html)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -386,8 +374,3 @@ discussions: []
 **Pattern**: Layout per tema con fallback chain  
 **Status**: ✅ IMPLEMENTATO
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

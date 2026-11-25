@@ -3,15 +3,7 @@ title: "lang link"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_YjM0eJ
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_FlR3EX
 qmd: "lang link"
 issues: []
 discussions: []

@@ -3,15 +3,7 @@ title: "module test location rule"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_rBR5fY
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_WKvloK
 qmd: "module test location rule"
 issues: []
 discussions: []
@@ -22,10 +14,6 @@ discussions: []
 **Fonte:** Incidente del 2026-04-21 — test del modulo Notify creati erroneamente nella root del progetto
 **Scope:** Architettura Laraxot — si applica a TUTTI i moduli e temi
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "module test location rule"
@@ -142,9 +130,6 @@ al modulo corrente, non come path assoluto dalla root del progetto.
 - "tests/Feature" → `laravel/Modules/<CurrentModule>/tests/Feature/`
 - "tests/Unit" → `laravel/Modules/<CurrentModule>/tests/Unit/`
 - NEVER → `tests/Feature/` at project root
-<<<<<<< HEAD
-=======
-=======
 ## Il Problema
 ## Causa Radice
 ## La Regola
@@ -152,5 +137,3 @@ al modulo corrente, non come path assoluto dalla root del progetto.
 ## Checklist Prima di Creare un Test
 ## Applicazione a tutti i Moduli
 ## Legame con la Skill pest-testing
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

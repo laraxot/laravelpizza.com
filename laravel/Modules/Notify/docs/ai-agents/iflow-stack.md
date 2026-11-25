@@ -3,21 +3,7 @@ title: "iflow stack"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_sJ6ySr
-<<<<<<< .merge_file_glY6Ay
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_ZzayV6
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_sJ6ySr
->>>>>>> .merge_file_1XHiJV
-=======
->>>>>>> .merge_file_ZzayV6
 qmd: "iflow stack"
 issues: []
 discussions: []
@@ -27,10 +13,6 @@ discussions: []
 
 Stack tecnologico del progetto.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "iflow stack"
@@ -53,13 +35,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## Backend
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Frontend
 
 | Tecnologia | Descrizione |

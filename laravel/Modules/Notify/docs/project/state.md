@@ -3,15 +3,7 @@ title: "STATE: Notify Platform"
 type: concept
 tags: [state]
 created: 2026-07-14
-<<<<<<< .merge_file_1Ho3nM
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_SdBkrM
 qmd: "state state: laraxot platform"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

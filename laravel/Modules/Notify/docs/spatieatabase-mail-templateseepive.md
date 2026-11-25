@@ -3,15 +3,7 @@ title: "spatieatabase mail templateseepive"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_NiLN4Z
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_6yUJTV
 qmd: "spatieatabase mail templateseepive"
 issues: []
 discussions: []
@@ -945,10 +937,6 @@ test('welcome email is sent', function () {
 - [MailTemplateResource](../app/Filament/Resources/MailTemplateResource.php)
 - [Mail Layouts README](../resources/mail-layouts/README.md)
 - [Spatie Translatable Integration](./spatie-translatable-integration.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -964,8 +952,3 @@ discussions: []
 **Versione Pacchetto**: spatie/laravel-database-mail-templates 3.7.1  
 **Compatibilità**: Laravel 12.x, PHP 8.3+
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

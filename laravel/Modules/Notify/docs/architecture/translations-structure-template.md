@@ -4,21 +4,7 @@ type: concept
 tags: [notify, docs, architecture, translations, structure, template]
 module: Notify
 created: 2026-07-20
-<<<<<<< .merge_file_QE2IEz
-<<<<<<< .merge_file_nkGX4E
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_t4B8Gg
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_QE2IEz
->>>>>>> .merge_file_cas5qO
-=======
->>>>>>> .merge_file_t4B8Gg
 qmd: "notify documentazione architecture translations structure template template di struttura per le traduzioni frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"

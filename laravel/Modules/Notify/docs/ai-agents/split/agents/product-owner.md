@@ -3,21 +3,7 @@ title: "product owner"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Ksl63v
-<<<<<<< .merge_file_jY8I0f
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_pksxLO
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Ksl63v
->>>>>>> .merge_file_PbAcSR
-=======
->>>>>>> .merge_file_pksxLO
 qmd: "product owner"
 issues: []
 discussions: []
@@ -99,10 +85,6 @@ dependencies:
     - story-tmpl.yaml
 ```
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -121,9 +103,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../AGENTS.md](../../../../../../../../AGENTS.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

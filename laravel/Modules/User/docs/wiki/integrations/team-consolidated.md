@@ -5,10 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_3uPzia
 qmd: "team consolidated"
-=======
->>>>>>> .merge_file_QnWEA4
 ---
 
 # team — Consolidated Documentation

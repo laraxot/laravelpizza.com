@@ -3,31 +3,7 @@ title: "email template slug proposal"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_lBSwp9
-<<<<<<< .merge_file_dCIv25
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_3fDKJ7
-=======
->>>>>>> .merge_file_9FiRi4
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_lBSwp9
-<<<<<<< .merge_file_dCIv25
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_3fDKJ7
-=======
->>>>>>> .merge_file_9FiRi4
 qmd: "email template slug proposal"
 issues: []
 discussions: []
@@ -271,33 +247,9 @@ MailTemplate::all()->each(function ($template) {
 ## Collegamenti Correlati
 
 - [Documentazione Email Template](./email-templates-2.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_lBSwp9
-<<<<<<< .merge_file_dCIv25
 - [Gestione Traduzioni](../Lang/docs/translation-keys-best-practices-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_3fDKJ7
-=======
->>>>>>> .merge_file_9FiRi4
 - [Gestione Traduzioni](../../Lang/docs/translation-keys-best-practices-2.md)
-=======
-<<<<<<< HEAD
 - [Gestione Traduzioni](../Lang/docs/translation-keys-best-practices-2.md)
-=======
 - [Gestione Traduzioni](../../Lang/docs/translation-keys-best-practices-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_lBSwp9
-<<<<<<< .merge_file_dCIv25
-=======
 - [Gestione Traduzioni](../Lang/docs/translation-keys-best-practices-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_3fDKJ7
-=======
->>>>>>> .merge_file_9FiRi4
 - [Configurazione Email](../../../docs/email-configuration.md) 

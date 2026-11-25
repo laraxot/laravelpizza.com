@@ -3,25 +3,7 @@ title: "translation file structure"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_Suaru1
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_BNEeQ9
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Suaru1
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_BNEeQ9
 qmd: "translation file structure"
 issues: []
 discussions: []
@@ -179,26 +161,8 @@ return [
 ## Riferimenti
 - [Regole di Naming per i File di Traduzione](./translation-file-naming-rules-2.md)
 - [Regole di Naming per i File di Traduzione](./translation-file-naming-rules.md)
-<<<<<<< HEAD
 - [Regole Generali per le Traduzioni](../../Lang/docs/translation-keys-rules-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_Suaru1
-<<<<<<< HEAD
 - [Regole Generali per le Traduzioni](../../Lang/docs/translation-keys-rules-2.md)
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_BNEeQ9
 - [Regole Generali per le Traduzioni](../../lang/docs/translation-keys-rules-2.md)
-=======
 - [Regole Generali per le Traduzioni](../../Lang/docs/translation-keys-rules-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Suaru1
-=======
 - [Regole Generali per le Traduzioni](../../lang/docs/translation-keys-rules-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_BNEeQ9

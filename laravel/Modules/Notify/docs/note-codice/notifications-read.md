@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 ---
 title: "Notifications Read"
 type: note
 qmd: "notifications read"
 ---
-=======
->>>>>>> laraxot/dev
 Mail::send([], [], function($message) use ($data) {
     $message->from($data['from']);
     $message->to($data['to']);

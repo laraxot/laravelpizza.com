@@ -1,28 +1,10 @@
 ---
 title: "🎯 NOTIFY - MASTER IMPLEMENTATION PLAN"
-<<<<<<< .merge_file_W3hfNg
 type: concept
 tags: [master, implementation, plan]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "master-implementation-plan 🎯 laraxot - master implementation plan"
-=======
-<<<<<<< HEAD
-title: "🎯 <nome progetto> - MASTER IMPLEMENTATION PLAN"
-type: concept
-tags: [master, implementation, plan]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "master-implementation-plan 🎯 laraxot - master implementation plan"
-qmd: "master-implementation-plan 🎯 <nome progetto> - master implementation plan"
-=======
-type: concept
-tags: [master, implementation, plan]
-created: 2026-07-14
-updated: 2026-11-23
-qmd: "master-implementation-plan 🎯 laraxot - master implementation plan"
->>>>>>> laraxot/dev
->>>>>>> .merge_file_7Ks3z3
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
@@ -32,17 +14,8 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< .merge_file_W3hfNg
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_7Ks3z3
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

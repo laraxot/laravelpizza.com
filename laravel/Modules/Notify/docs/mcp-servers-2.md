@@ -3,15 +3,7 @@ title: "mcp servers"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_GbJX3f
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_dhr23H
 qmd: "mcp servers"
 issues: []
 discussions: []
@@ -225,10 +217,6 @@ Each module has specific MCP usage guidelines. See module-specific docs:
 - [Coding Conventions](conventions/)
 - [Module Index](modules/index.md)
 - [Theme Index](themes/index.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -241,8 +229,3 @@ qmd: "mcp servers"
 issues: []
 discussions: []
 *This document follows DRY+KISS principles. For questions or updates, edit this file and update cross-references.*
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

@@ -3,15 +3,7 @@ title: "gits resolution"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ua0J1L
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_on1n9s
 qmd: "gits resolution"
 issues: []
 discussions: []
@@ -86,10 +78,6 @@ Tutti i file risolti rispettano:
 - [Architecture Documentation](./architecture.md)
 - [Email Templates](./email-templates-2.md)
 - [Notification Channels](./notification-channels-implementation-2.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 title: "gits resolution"
@@ -101,8 +89,3 @@ qmd: "gits resolution"
 issues: []
 discussions: []
 *Aggiornato automaticamente dopo risoluzione conflitti Git*
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

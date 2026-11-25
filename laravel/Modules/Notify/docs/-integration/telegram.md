@@ -3,21 +3,7 @@ title: "telegram"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_sBaPmX
-<<<<<<< .merge_file_PiFUOM
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_KwutYn
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_sBaPmX
->>>>>>> .merge_file_LRWZt3
-=======
->>>>>>> .merge_file_KwutYn
 qmd: "telegram"
 issues: []
 discussions: []

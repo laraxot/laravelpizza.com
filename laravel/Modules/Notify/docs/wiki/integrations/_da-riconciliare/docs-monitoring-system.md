@@ -3,15 +3,7 @@ title: "📚 DOCS MONITORING SYSTEM - Sistema di Monitoraggio Documentazione"
 type: concept
 tags: [docs, monitoring, system]
 created: 2026-07-14
-<<<<<<< .merge_file_vHjM1E
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_6wDv3r
 qmd: "docs-monitoring-system 📚 docs monitoring system - sistema di monitoraggio documentazione"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -22,17 +14,8 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< .merge_file_vHjM1E
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_6wDv3r
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -304,11 +287,5 @@ find . -name "*.md" -exec sed -i 's/Laravel 11/Laravel 12/g' {} \;
 ---
 
 *Questo sistema di monitoraggio garantisce che tutta la documentazione rimanga sempre aggiornata e coerente con lo stato attuale del progetto.*
-
-
-
-
-
-
 
 

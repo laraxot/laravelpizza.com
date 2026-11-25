@@ -9,10 +9,7 @@ tags: [person, organization, module]
 related:
   - "./concept.md"
   - "./source.md"
-<<<<<<< .merge_file_AbWzJB
 qmd: "entity name"
-=======
->>>>>>> .merge_file_lzB5yj
 ---
 
 # {{title}}

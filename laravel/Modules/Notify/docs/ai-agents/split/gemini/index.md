@@ -4,31 +4,7 @@ type: index
 tags: [notify, docs, ai-agents, split, gemini]
 module: Notify
 created: 2026-07-20
-<<<<<<< HEAD
-<<<<<<< .merge_file_X1xUKC
-<<<<<<< .merge_file_zOdnyC
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_x1xPJ1
-=======
->>>>>>> .merge_file_VIK07r
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_X1xUKC
-<<<<<<< .merge_file_zOdnyC
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_x1xPJ1
-=======
->>>>>>> .merge_file_VIK07r
 qmd: "notify documentazione ai agents split gemini index gemini ai guidelines (../../../wiki/integrations/_da-riconciliare/gemini-2.md) index index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -43,56 +19,16 @@ related:
 ---
 # Gemini AI Guidelines (../../../wiki/integrations/_da-riconciliare/gemini-2.md) Index
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_X1xUKC
-<<<<<<< .merge_file_zOdnyC
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 **Source**: [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../../wiki/integrations/_da-riconciliare/gemini-2.md) (581 lines)  
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 **Source**: [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../../wiki/integrations/_da-riconciliare/gemini-2.md) (581 lines)  
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_x1xPJ1
-=======
 **Source**: [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../../wiki/integrations/_da-riconciliare/gemini-2.md) (581 lines)  
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_VIK07r
 **Source**: [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../../wiki/integrations/_da-riconciliare/gemini-2.md) (581 lines)  
 ---
 # Gemini AI Guidelines (../../../wiki/integrations/_da-riconciliare/gemini-2.md) Index
 
 **Source**: [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../../wiki/integrations/_da-riconciliare/gemini-2.md) (581 lines)  
-<<<<<<< .merge_file_X1xUKC
-<<<<<<< .merge_file_zOdnyC
-<<<<<<< HEAD
 **Source**: [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../../wiki/integrations/_da-riconciliare/gemini-2.md) (581 lines)  
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_x1xPJ1
-=======
->>>>>>> .merge_file_VIK07r
-=======
 **Source**: [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../../wiki/integrations/_da-riconciliare/gemini-2.md) (581 lines)  
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_X1xUKC
-<<<<<<< .merge_file_zOdnyC
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_x1xPJ1
-=======
->>>>>>> .merge_file_VIK07r
 **Split Into**: 13 focused files  
 **Last Updated**: 2026-04-11  
 
@@ -160,35 +96,10 @@ related:
 
 ## Usage
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_X1xUKC
-<<<<<<< .merge_file_zOdnyC
 These guidelines are loaded by Gemini AI for Laravel development context. For manual reference, see the original [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../../wiki/integrations/_da-riconciliare/gemini-2.md).
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_x1xPJ1
-=======
->>>>>>> .merge_file_VIK07r
 These guidelines are loaded by Gemini AI for Laravel development context. For manual reference, see the original [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../../wiki/integrations/_da-riconciliare/gemini-2.md).
-=======
-<<<<<<< HEAD
 These guidelines are loaded by Gemini AI for Laravel development context. For manual reference, see the original [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../../wiki/integrations/_da-riconciliare/gemini-2.md).
-=======
 These guidelines are loaded by Gemini AI for Laravel development context. For manual reference, see the original [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../../wiki/integrations/_da-riconciliare/gemini-2.md).
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_X1xUKC
-<<<<<<< .merge_file_zOdnyC
-=======
-These guidelines are loaded by Gemini AI for Laravel development context. For manual reference, see the original [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../../wiki/integrations/_da-riconciliare/gemini-2.md).
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_x1xPJ1
-=======
->>>>>>> .merge_file_VIK07r
 
 ---
 

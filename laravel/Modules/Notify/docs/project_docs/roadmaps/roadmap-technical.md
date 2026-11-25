@@ -3,15 +3,7 @@ title: "roadmap technical"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_itwYRc
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_x7uHzL
 qmd: "roadmap technical"
 issues: []
 discussions: []
@@ -473,10 +465,6 @@ jobs:
 - **Q2**: Advanced features ready
 - **Q3**: Production preparation
 - **Q4**: Scale and optimization
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -499,8 +487,3 @@ discussions: []
 **🔄 Ultimo Aggiornamento**: Gennaio 2025  
 **📊 Progresso**: 40% → 100% (Target Dicembre 2025)  
 **🎯 Prossimo Milestone**: Core Complete (Marzo 2025)
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

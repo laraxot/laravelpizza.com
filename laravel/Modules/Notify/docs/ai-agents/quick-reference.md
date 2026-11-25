@@ -3,21 +3,7 @@ title: "quick reference"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ZlZuiS
-<<<<<<< .merge_file_pdlvrG
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_9yoxyP
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ZlZuiS
->>>>>>> .merge_file_03mnhV
-=======
->>>>>>> .merge_file_9yoxyP
 qmd: "quick reference"
 issues: []
 discussions: []

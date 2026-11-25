@@ -3,21 +3,7 @@ title: "analisi metodi duplicati master"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ieKPiU
-<<<<<<< .merge_file_b1t3Tw
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_xRntpa
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ieKPiU
->>>>>>> .merge_file_iBmH16
-=======
->>>>>>> .merge_file_xRntpa
 qmd: "analisi metodi duplicati master"
 issues: []
 discussions: []
@@ -30,10 +16,6 @@ discussions: []
 **Versione**: 2.0 ULTIMATE  
 **Confidenza**: 99.9% (Dati Reali dal Codice)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "analisi metodi duplicati master"
@@ -63,14 +45,9 @@ Analisi **REALE e APPROFONDITA** di **18 moduli** + **2 temi** del framework Lar
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 Executive Summary
 ### Dati Chiave (VERIFICATI)
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 📊 ANALISI QUANTITATIVA REALE
 
 ### BaseModel - Confronto Reale

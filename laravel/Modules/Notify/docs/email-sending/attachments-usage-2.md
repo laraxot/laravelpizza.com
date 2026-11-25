@@ -3,31 +3,7 @@ title: "attachments usage"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_D0Z9lc
-<<<<<<< .merge_file_ePi3Ec
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_E98zUB
-=======
->>>>>>> .merge_file_B4sHpa
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_D0Z9lc
-<<<<<<< .merge_file_ePi3Ec
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_E98zUB
-=======
->>>>>>> .merge_file_B4sHpa
 qmd: "attachments usage"
 issues: []
 discussions: []
@@ -324,60 +300,18 @@ foreach ($records as $record) {
 ### Documentazione Interna
 - [Ptv - Complete PDF Email Guide](../../../Ptv/docs/pdf-email-attachments-complete-guide.md)
 - [Xot - PDF Generation Technical](../../../Xot/docs/actions/pdf-content-generation-technical.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_D0Z9lc
-<<<<<<< .merge_file_ePi3Ec
 - [email-layouts-best-practices-2.md](../mail-templates/email-layouts-best-practices-2.md)
 - [spatie-mail-templates-structure-2.md](../mail-templates/spatie-mail-templates-structure-2.md)
 - [email-troubleshooting-2.md](./email-troubleshooting-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_E98zUB
-=======
->>>>>>> .merge_file_B4sHpa
-=======
-<<<<<<< .merge_file_TXoG9S
 - [email-layouts-best-practices-2.md](../mail-templates/email-layouts-best-practices-2.md)
 - [spatie-mail-templates-structure-2.md](../mail-templates/spatie-mail-templates-structure-2.md)
 - [email-troubleshooting-2.md](email-troubleshooting-2.md)
-=======
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_D0Z9lc
-<<<<<<< .merge_file_ePi3Ec
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_E98zUB
-=======
->>>>>>> .merge_file_B4sHpa
 - [email-layouts-best-practices-2.md](../mail-templates/email-layouts-best-practices-2.md)
 - [spatie-mail-templates-structure-2.md](../mail-templates/spatie-mail-templates-structure-2.md)
 - [email-troubleshooting-2.md](email-troubleshooting-2.md)
 - [email-layouts-best-practices-2.md](../mail-templates/email-layouts-best-practices-2.md)
 - [spatie-mail-templates-structure-2.md](../mail-templates/spatie-mail-templates-structure-2.md)
 - [email-troubleshooting-2.md](./email-troubleshooting-2.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_D0Z9lc
-<<<<<<< .merge_file_ePi3Ec
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_nVtctG
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_nVtctG
->>>>>>> laraxot/dev
->>>>>>> .merge_file_E98zUB
-=======
-=======
->>>>>>> .merge_file_nVtctG
->>>>>>> laraxot/dev
->>>>>>> .merge_file_B4sHpa
 
 ### File Correlati
 - `Modules/Notify/app/Emails/SpatieEmail.php` - Gestione allegati

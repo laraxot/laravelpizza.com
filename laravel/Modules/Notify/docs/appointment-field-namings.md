@@ -3,21 +3,7 @@ title: "appointment field namings"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Gns77L
-<<<<<<< .merge_file_NQnGVf
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_YbTkKY
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Gns77L
->>>>>>> .merge_file_ImHp0c
-=======
->>>>>>> .merge_file_YbTkKY
 qmd: "appointment field namings"
 issues: []
 discussions: []

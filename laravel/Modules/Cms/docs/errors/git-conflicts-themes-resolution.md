@@ -3,27 +3,7 @@ title: "git conflicts themes resolution"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_J1yJLy
-<<<<<<< .merge_file_ikUylT
-<<<<<<< .merge_file_OwaYhz
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_hkVfaL
-=======
->>>>>>> .merge_file_BcbRL0
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_J1yJLy
-<<<<<<< .merge_file_ikUylT
->>>>>>> .merge_file_0AwrPK
-=======
->>>>>>> .merge_file_hkVfaL
-=======
->>>>>>> .merge_file_BcbRL0
 qmd: "git conflicts themes resolution"
 issues: []
 discussions: []
@@ -33,15 +13,8 @@ discussions: []
 
 ## Descrizione del Problema
 
-<<<<<<< HEAD
-Durante il processo di sviluppo e merge dei branch, si sono verificati conflitti Git in diversi file del tema Sixteen. Questi conflitti si manifestavano con marcatori `=======`, `<<<<<<<`, e `>>>>>>>` che impedivano il corretto funzionamento del tema.
-=======
-<<<<<<< HEAD
 Durante il processo di sviluppo e merge dei branch, si sono verificati conflitti Git in diversi file del tema Sixteen. Questi conflitti si manifestavano con marcatori `-------`, `CONFLICT_START`, e `CONFLICT_END` che impedivano il corretto funzionamento del tema.
-=======
 Durante il processo di sviluppo e merge dei branch, si sono verificati conflitti Git in diversi file del tema Sixteen. Questi conflitti si manifestavano con marcatori `=======`, `<<<<<<<`, e `>>>>>>>` che impedivano il corretto funzionamento del tema.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## File Interessati
 
@@ -167,15 +140,8 @@ Per ogni file con conflitti:
 
 ```bash
 # Verifica file con conflitti residui
-<<<<<<< HEAD
-find . -name "*.php" -o -name "*.blade.php" | xargs grep -l "======="
-=======
-<<<<<<< HEAD
 find . -name "*.php" -o -name "*.blade.php" | xargs grep -l "-------"
-=======
 find . -name "*.php" -o -name "*.blade.php" | xargs grep -l "======="
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 # Verifica sintassi PHP
 php -l file.php
@@ -231,14 +197,6 @@ php artisan view:clear
 
 ---
 
-<<<<<<< .merge_file_J1yJLy
-<<<<<<< .merge_file_ikUylT
-<<<<<<< .merge_file_OwaYhz
-=======
-=======
->>>>>>> .merge_file_hkVfaL
-=======
->>>>>>> .merge_file_BcbRL0
 title: "git conflicts themes resolution"
 type: note
 tags: [documentation]
@@ -247,11 +205,4 @@ updated: 2026-09-26
 qmd: "git conflicts themes resolution"
 issues: []
 discussions: []
-<<<<<<< .merge_file_J1yJLy
-<<<<<<< .merge_file_ikUylT
->>>>>>> .merge_file_0AwrPK
-=======
->>>>>>> .merge_file_hkVfaL
-=======
->>>>>>> .merge_file_BcbRL0
 *Autore: Sistema di Risoluzione Conflitti Git*

@@ -3,21 +3,7 @@ title: "iflow split index"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_VJNmQu
-<<<<<<< .merge_file_Y6j0Of
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_2Vo3BJ
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_VJNmQu
->>>>>>> .merge_file_uE1XwW
-=======
->>>>>>> .merge_file_2Vo3BJ
 qmd: "iflow split index"
 issues: []
 discussions: []

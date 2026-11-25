@@ -3,31 +3,7 @@ title: "filament xot architecture"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_IGYotT
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_DQbjEV
-<<<<<<< .merge_file_13Bpbn
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_rYpJns
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_MN6G8r
-=======
-<<<<<<< .merge_file_DQbjEV
->>>>>>> .merge_file_I8t4gd
-=======
->>>>>>> .merge_file_rYpJns
->>>>>>> laraxot/dev
 qmd: "filament xot architecture"
 issues: []
 discussions: []

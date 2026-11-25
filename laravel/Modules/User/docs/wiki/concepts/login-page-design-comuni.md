@@ -15,10 +15,7 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-<<<<<<< .merge_file_nVRWgf
 qmd: "login page design comuni italiani alignment"
-=======
->>>>>>> .merge_file_ymBZDt
 ---
 
 # Login Page - Design Comuni Italiani Alignment

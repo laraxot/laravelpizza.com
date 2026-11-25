@@ -5,10 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_Yrm3DH
 qmd: "widget rendering analysis analisi loginwidget docsitaliait"
-=======
->>>>>>> .merge_file_DpOk2Z
 ---
 
 # 🔍 Analisi Rendering LoginWidget - Docs.Italia.it Style
@@ -415,7 +412,5 @@ return [
 **Autore**: Super Mucca Documentation Team  
 **Status**: ✅ Validato e Testato  
 **Versione**: 1.0.0
-
-
 
 

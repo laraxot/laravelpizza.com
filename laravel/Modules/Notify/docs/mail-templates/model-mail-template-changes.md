@@ -3,15 +3,7 @@ title: "model mail template changes"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_eXk9j6
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_vzOz7d
 qmd: "model mail template changes"
 issues: []
 discussions: []

@@ -3,15 +3,7 @@ title: "📊 Status Pagina Login - Verifica Tecnica"
 type: concept
 tags: [login, page, status]
 created: 2026-07-14
-<<<<<<< .merge_file_NcvbrO
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_SCndWb
 qmd: "login-page-status 📊 status pagina login - verifica tecnica"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -22,17 +14,8 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< .merge_file_NcvbrO
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_SCndWb
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -360,7 +343,5 @@ Password: password
 **Verificato da**: Super Mucca AI Team  
 **Data**: 14 Ottobre 2025  
 **Confidence**: 💯 MASSIMA
-
-
 
 

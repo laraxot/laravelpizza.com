@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_FnVBui
 ---
 title: "Roadmap Index - User"
 type: note
 qmd: "00 roadmap user"
 ---
-=======
->>>>>>> .merge_file_vX202H
 # Roadmap Index - User
 
 ## Scope

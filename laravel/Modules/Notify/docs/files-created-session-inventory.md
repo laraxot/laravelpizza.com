@@ -3,31 +3,7 @@ title: "files created session 007"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_926hJl
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_ipIExu
-<<<<<<< .merge_file_2nnF3d
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_OK1215
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_V7AmsB
-=======
-<<<<<<< .merge_file_ipIExu
->>>>>>> .merge_file_cqlYqh
-=======
->>>>>>> .merge_file_OK1215
->>>>>>> laraxot/dev
 qmd: "files created session 007"
 issues: []
 discussions: []
@@ -205,39 +181,18 @@ Project Root/
 - Reference: PRIORITY-MATRIX.json (for timeline/effort)
 
 **For Developers**:
-<<<<<<< HEAD
-<<<<<<< .merge_file_926hJl
-=======
 - Read: laravel/Themes/Sixteen/docs/index.md
 - Reference: bashscripts/docs/index.md (for tools)
->>>>>>> .merge_file_V7AmsB
-=======
-<<<<<<< .merge_file_ipIExu
-<<<<<<< .merge_file_2nnF3d
-=======
 - Read: laravel/Themes/Sixteen/docs/index.md
 - Reference: bashscripts/docs/index.md (for tools)
->>>>>>> .merge_file_cqlYqh
->>>>>>> laraxot/dev
 - Read: laravel/Themes/Sixteen/docs/index.md
 - Reference: bashscripts/docs/index.md (for tools)
-<<<<<<< HEAD
 - Read: laravel/Themes/Sixteen/docs/index.md
 - Reference: bashscripts/docs/index.md (for tools)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 - Read: laravel/Themes/Sixteen/docs/index.md
 - Reference: bashscripts/docs/index.md (for tools)
->>>>>>> .merge_file_OK1215
->>>>>>> laraxot/dev
 - Read: laravel/Themes/Sixteen/docs/index.md
 - Reference: bashscripts/docs/index.md (for tools)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - Analyze: pages/<page-name>/DETAILED-ANALYSIS.md (per page)
 
 **For DevOps/CI-CD**:

@@ -3,15 +3,7 @@ title: "filament spatieatabase mail templates"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_BjSNDj
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_hWKEpu
 qmd: "filament spatieatabase mail templates"
 issues: []
 discussions: []
@@ -23,10 +15,6 @@ discussions: []
 **Modulo**: Notify  
 **Status**: 📝 **ANALISI COMPLETATA**
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "filament spatieatabase mail templates"
@@ -43,13 +31,8 @@ Analisi del repository `filament-spatie-laravel-database-mail-templates` per ide
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 📊 Executive Summary
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🔍 Caratteristiche del Repository Analizzato
 
 ### Architettura Plugin Filament

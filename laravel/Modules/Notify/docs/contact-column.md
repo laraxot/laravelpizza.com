@@ -3,21 +3,7 @@ title: "contact column"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_jc7XfH
-<<<<<<< .merge_file_JbUdgI
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_ObNUwJ
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_jc7XfH
->>>>>>> .merge_file_n38kq4
-=======
->>>>>>> .merge_file_ObNUwJ
 qmd: "contact column"
 issues: []
 discussions: []

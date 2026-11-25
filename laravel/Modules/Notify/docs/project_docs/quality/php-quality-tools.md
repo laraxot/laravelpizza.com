@@ -3,15 +3,7 @@ title: "php quality tools"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Nu5rWy
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_r8bgx5
 qmd: "php quality tools"
 issues: []
 discussions: []
@@ -476,10 +468,6 @@ return (new PhpCsFixer\Config())
 - [ ] Process improvement
 - [ ] Documentation update
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "php quality tools"
@@ -499,21 +487,3 @@ discussions: []
 
 *Questo sistema garantisce la massima qualità del codice nel progetto FixCity Platform.*
 *Questo sistema garantisce la massima qualità del codice nel progetto Notify Platform.*
-
-
-
-
-
-
-
-
-
-
-
-<<<<<<< HEAD
-=======
-=======
-*Questo sistema garantisce la massima qualità del codice nel progetto FixCity Platform.*
-*Questo sistema garantisce la massima qualità del codice nel progetto Notify Platform.*
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

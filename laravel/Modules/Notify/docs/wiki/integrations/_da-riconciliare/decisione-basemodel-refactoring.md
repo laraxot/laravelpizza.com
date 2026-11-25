@@ -3,15 +3,7 @@ title: "🎯 DECISIONE: BaseModel Refactoring - Analisi Approfondita"
 type: concept
 tags: [decisione, basemodel, refactoring]
 created: 2026-07-14
-<<<<<<< .merge_file_YD25z5
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_0bgQ6f
 qmd: "decisione-basemodel-refactoring 🎯 decisione: basemodel refactoring - analisi approfondita"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -22,17 +14,8 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< .merge_file_YD25z5
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_0bgQ6f
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

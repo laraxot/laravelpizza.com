@@ -7,31 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_sqSlaC
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_hsHVvr
-<<<<<<< .merge_file_AY7wtN
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_936axB
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_rLnT5B
-=======
-<<<<<<< .merge_file_hsHVvr
->>>>>>> .merge_file_jlHYAN
-=======
->>>>>>> .merge_file_936axB
->>>>>>> laraxot/dev
 ---
 
 # Regole di Naming per File
@@ -72,33 +48,12 @@ Su filesystem case-insensitive (Windows, macOS default), file con nomi che diffe
 ✅ CORRETTO:
 - README.md (maiuscolo - convenzione universale)
 - roadmap.md (maiuscolo - convenzione universale)
-<<<<<<< HEAD
-<<<<<<< .merge_file_sqSlaC
-=======
-<<<<<<< .merge_file_hsHVvr
-<<<<<<< .merge_file_AY7wtN
->>>>>>> laraxot/dev
-- CHANGELOG.md (maiuscolo - convenzione universale)
-<<<<<<< HEAD
-- CHANGELOG.md (maiuscolo - convenzione universale)
-=======
-<<<<<<< HEAD
-- CHANGELOG.md (maiuscolo - convenzione universale)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 - CHANGELOG.md (maiuscolo - convenzione universale)
 - CHANGELOG.md (maiuscolo - convenzione universale)
-<<<<<<< HEAD
->>>>>>> .merge_file_rLnT5B
-=======
->>>>>>> .merge_file_jlHYAN
-=======
 - CHANGELOG.md (maiuscolo - convenzione universale)
 - CHANGELOG.md (maiuscolo - convenzione universale)
->>>>>>> .merge_file_936axB
->>>>>>> laraxot/dev
+- CHANGELOG.md (maiuscolo - convenzione universale)
+- CHANGELOG.md (maiuscolo - convenzione universale)
 - LICENSE.md (maiuscolo - convenzione universale)
 - contributing-2.md (maiuscolo - convenzione universale)
 - SECURITY.md (maiuscolo - convenzione universale)

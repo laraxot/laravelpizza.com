@@ -3,21 +3,7 @@ title: "livewire rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_vpWTO2
-<<<<<<< .merge_file_ow576N
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_eLEOtv
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_vpWTO2
->>>>>>> .merge_file_SxYa2h
-=======
->>>>>>> .merge_file_eLEOtv
 qmd: "livewire rules"
 issues: []
 discussions: []
@@ -51,14 +37,6 @@ discussions: []
     public function updatedSearch() { $this->resetPage(); }
 </code-snippet>
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Testing Livewire
 
 <code-snippet name="Example Livewire component test" lang="php">
@@ -70,23 +48,11 @@ discussions: []
         ->assertStatus(200);
 </code-snippet>
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
     <code-snippet name="Testing a Livewire component exists within a page" lang="php">
         $this->get('/posts/create')
         ->assertSeeLivewire(CreatePost::class);
     </code-snippet>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 === livewire/v3 rules ===
 
@@ -109,11 +75,6 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 === livewire/v3 rules ===
 
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

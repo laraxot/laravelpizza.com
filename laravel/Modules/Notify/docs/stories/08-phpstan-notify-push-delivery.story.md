@@ -5,24 +5,13 @@ status: done
 priority: high
 module: Notify
 created: 2026-10-08
-<<<<<<< .merge_file_OWlgnA
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-10-08
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_hrP7EO
 tags: [notify, phpstan, push, dedup, swarm, services-to-actions]
 related:
   - ./4.29.notify-services-to-actions.story.md
   - ./2026-10-06-phpstan-cleanup-notify.dev.md
   - ../wiki/concepts/services-to-actions-migration.md
-<<<<<<< HEAD
 qmd: "08 phpstan notify push delivery story"
-=======
->>>>>>> laraxot/dev
 ---
 
 # [STORY] PHPStan Notify push delivery

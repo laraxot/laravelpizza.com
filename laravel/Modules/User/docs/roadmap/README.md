@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_koQicU
 ---
 title: "User Module Roadmap"
 type: note
 qmd: "user roadmap"
 ---
-=======
->>>>>>> .merge_file_8toBs5
 # User Module Roadmap
 
 > "Authentication, authorization, and user management for the entire Laraxot ecosystem."

@@ -3,31 +3,7 @@ title: "agents first rule"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_Iih77j
-<<<<<<< .merge_file_iUxhYs
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_tYHAhA
-=======
->>>>>>> .merge_file_VMaTl8
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Iih77j
-<<<<<<< .merge_file_iUxhYs
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_tYHAhA
-=======
->>>>>>> .merge_file_VMaTl8
 qmd: "agents first rule"
 issues: []
 discussions: []
@@ -35,42 +11,20 @@ discussions: []
 
 # Agents first rule: Read → Reason → Study → Update → Improve
 
-<<<<<<< HEAD
 > Source: [AGENTS.md](../../AGENTS.md)
 > Source: [AGENTS.md](../../AGENTS.md)
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_Iih77j
-<<<<<<< .merge_file_iUxhYs
-<<<<<<< HEAD
 > Source: [AGENTS.md](../../AGENTS.md)
 > Source: [AGENTS.md](../../AGENTS.md)
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_VMaTl8
 > Source: [AGENTS.md](../../agents.md)
 > Source: [agents.md](../../agents.md)
-=======
 > Source: [AGENTS.md](../../AGENTS.md)
 > Source: [AGENTS.md](../../AGENTS.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Iih77j
-=======
 > Source: [AGENTS.md](../../agents.md)
 > Source: [agents.md](../../agents.md)
-=======
 > Source: [AGENTS.md](../../agents.md)
 > Source: [agents.md](../../agents.md)
-=======
 > Source: [AGENTS.md](../../AGENTS.md)
 > Source: [AGENTS.md](../../AGENTS.md)
->>>>>>> .merge_file_tYHAhA
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_VMaTl8
 > Back: [index](index.md) | [workflow.md](workflow.md)
 
 ## The fundamental rule

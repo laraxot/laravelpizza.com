@@ -1,28 +1,10 @@
 ---
 title: "🔒 FixCity Security Checklist"
-<<<<<<< .merge_file_la5uIT
 type: concept
 tags: [security, checklist]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "security-checklist 🔒 fixcity security checklist"
-=======
-<<<<<<< HEAD
-title: "🔒 Notify Security Checklist"
-type: concept
-tags: [security, checklist]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "security-checklist 🔒 fixcity security checklist"
-qmd: "security-checklist 🔒 laraxot security checklist"
-=======
-type: concept
-tags: [security, checklist]
-created: 2026-07-14
-updated: 2026-11-23
-qmd: "security-checklist 🔒 fixcity security checklist"
->>>>>>> laraxot/dev
->>>>>>> .merge_file_8QI4Up
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:

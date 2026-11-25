@@ -1,9 +1,6 @@
 ---
 title: User — Support → Actions
-<<<<<<< .merge_file_NUK1kT
 qmd: "services support to actions user"
-=======
->>>>>>> .merge_file_4feA0b
 ---
 
 # Migrazione `app/Support/` → `app/Actions/`

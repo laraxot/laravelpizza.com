@@ -1,70 +1,12 @@
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< .merge_file_DoRyKn
-=======
-<<<<<<< .merge_file_iqVrEc
->>>>>>> laraxot/dev
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_yofuwX
-=======
->>>>>>> .merge_file_dq0ueS
->>>>>>> laraxot/dev
 issues: []
 discussions: []
 title: "ponytail-audit-2026-07-02"
 type: concept
-tags: [deprecated]
+tags: [deprecated, documentation]
 created: 2026-07-14
-<<<<<<< HEAD
 updated: 2026-11-23
 qmd: "ponytail-audit-2026-07-02 deprecated"
-=======
-updated: 2026-07-14
-qmd: "ponytail-audit-2026-07-02 deprecated"
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_DoRyKn
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_yofuwX
-=======
-<<<<<<< .merge_file_iqVrEc
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_dq0ueS
->>>>>>> laraxot/dev
-title: "ponytail audit 2026 07"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-11-23
-qmd: "ponytail audit 2026 07"
-issues: []
-discussions: []
-<<<<<<< HEAD
-<<<<<<< .merge_file_DoRyKn
-=======
-<<<<<<< .merge_file_iqVrEc
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_yofuwX
-=======
->>>>>>> .merge_file_dq0ueS
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 status: deprecated
 related:
   - "./00-index-1.md"
@@ -73,26 +15,6 @@ related:
   - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< .merge_file_DoRyKn
-=======
-<<<<<<< .merge_file_iqVrEc
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_yofuwX
-=======
->>>>>>> .merge_file_dq0ueS
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -161,46 +83,8 @@ Checked `app/Actions/{SMS,Telegram,WhatsApp}/` directly rather than trusting the
 ### Not collapsed (report only)
 
 Telegram and WhatsApp factories were left untouched because both genuinely have 2+ swappable runtime-selected drivers, which is exactly the case the Factory pattern exists for.
-<<<<<<< HEAD
-<<<<<<< .merge_file_DoRyKn
-=======
-<<<<<<< .merge_file_iqVrEc
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_yofuwX
-=======
->>>>>>> .merge_file_dq0ueS
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
 
 > Questo file è stato rinominato in [ponytail-audit.md](ponytail-audit.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_DoRyKn
-=======
-<<<<<<< .merge_file_iqVrEc
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_yofuwX
-=======
->>>>>>> .merge_file_dq0ueS
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

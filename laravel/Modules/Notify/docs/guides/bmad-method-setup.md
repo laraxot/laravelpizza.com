@@ -3,15 +3,7 @@ title: "bmad method setup"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_jV2tgp
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_SqiwzY
 qmd: "bmad method setup"
 issues: []
 discussions: []
@@ -24,10 +16,6 @@ discussions: []
 **Progetto:** FixCity Fila5 (Laraxot)
 **Progetto:** Notify Fila5 (Laraxot)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "bmad method setup"
@@ -66,15 +54,10 @@ Un framework open-source (MIT) per lo sviluppo software guidato da AI che fornis
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## documentazione canonica (naming stabile)
 ## Cos'è il BMAD Method
 ### Sito e Risorse
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Prerequisiti
 
 - **Node.js** v20+ (attuale: v25.6.0)

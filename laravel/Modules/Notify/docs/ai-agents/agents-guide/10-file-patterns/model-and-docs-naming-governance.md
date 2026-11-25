@@ -3,21 +3,7 @@ title: "model and docs naming governance"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_fC13Oq
-<<<<<<< .merge_file_Vt3JiN
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_gIABF0
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_fC13Oq
->>>>>>> .merge_file_S2KTTH
-=======
->>>>>>> .merge_file_gIABF0
 qmd: "model and docs naming governance"
 issues: []
 discussions: []

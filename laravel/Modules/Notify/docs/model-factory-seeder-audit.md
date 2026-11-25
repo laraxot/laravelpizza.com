@@ -3,15 +3,7 @@ title: "model factory seeder audit"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_nTTkb8
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_08SYuC
 qmd: "model factory seeder audit"
 issues: []
 discussions: []

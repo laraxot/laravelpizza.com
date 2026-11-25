@@ -3,21 +3,7 @@ title: "email templates analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_8ZUYPD
-<<<<<<< .merge_file_U1BUPO
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_D0AeQG
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_8ZUYPD
->>>>>>> .merge_file_TQw0MD
-=======
->>>>>>> .merge_file_D0AeQG
 qmd: "email templates analysis"
 issues: []
 discussions: []
@@ -145,10 +131,6 @@ Sono state analizzate le principali soluzioni open source, best practice e patte
 - Implementare preview e fallback
 - Valutare builder visuali per template avanzati
 - Automatizzare test rendering
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -161,8 +143,3 @@ qmd: "email templates analysis"
 issues: []
 discussions: []
 _Analisi aggiornata al 2025-05-05. Per dettagli e approfondimenti, consultare i README specifici delle soluzioni nella cartella email-templates._
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

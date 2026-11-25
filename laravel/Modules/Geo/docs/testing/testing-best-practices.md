@@ -605,37 +605,9 @@ describe('Edge Cases', function () {
 
 ## Collegamenti
 
-<<<<<<< .merge_file_G7x4pZ
-<<<<<<< .merge_file_BuLpBt
-<<<<<<< .merge_file_3bzvVr
-<<<<<<< .merge_file_G37oXM
 - [Architettura Testing Principale](../testing-architecture-overview.md)
-=======
-=======
->>>>>>> .merge_file_awZqHP
-=======
->>>>>>> .merge_file_Jw5JNv
-=======
->>>>>>> .merge_file_K7lJln
-<<<<<<< HEAD
 - [Architettura Testing Principale](./testing-architecture-overview.md)
-=======
-<<<<<<< HEAD
-- [Architettura Testing Principale](./testing-architecture-overview.md)
-=======
 - [Architettura Testing Principale](../testing-architecture-overview.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_G7x4pZ
-<<<<<<< .merge_file_BuLpBt
-<<<<<<< .merge_file_3bzvVr
->>>>>>> .merge_file_9MOuO1
-=======
->>>>>>> .merge_file_awZqHP
-=======
->>>>>>> .merge_file_Jw5JNv
-=======
->>>>>>> .merge_file_K7lJln
 - [Guida Risoluzione Conflitti](../git/git-conflicts-resolution-guide.md)
 - [Best Practices Modulo <nome modulo>](../../laravel/modules/<nome modulo>/docs/testing-best-practices.md)
 - [Best Practices Modulo <nome progetto>](../../laravel/modules/<nome progetto>/docs/testing-best-practices.md)

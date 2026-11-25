@@ -3,15 +3,7 @@ title: "analisi dettagliata 3"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_YeY0ec
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_BQQzeI
 qmd: "analisi dettagliata 3"
 issues: []
 discussions: []

@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_xpjnKP
 qmd: "phpstan level 10es"
-=======
->>>>>>> .merge_file_1u0std
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-level-10-fixes-Modules.md

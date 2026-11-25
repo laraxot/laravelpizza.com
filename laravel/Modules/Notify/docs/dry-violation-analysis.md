@@ -3,21 +3,7 @@ title: "dry violation analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_LaOlsM
-<<<<<<< .merge_file_s1jy4S
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_IT72yT
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_LaOlsM
->>>>>>> .merge_file_HWVdyd
-=======
->>>>>>> .merge_file_IT72yT
 qmd: "dry violation analysis"
 issues: []
 discussions: []
@@ -29,10 +15,6 @@ discussions: []
 **Status**: ✅ **RISOLTO** - Tutte le "cagate" sistemate
 **Approccio**: **DRY + KISS applicati correttamente**
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "dry violation analysis"
@@ -51,14 +33,9 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 📋 Successo: "Fare GetSeasonalEmailLayoutAction e DetermineSeasonalLayoutPathAction era una cagata!"
 ### Problema Identificato e Risolto
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🎯 Approccio Corretto Implementato (KISS + DRY)
 
 ### ✅ Approccio CORRETTO (Logica Integrata - Semplice)

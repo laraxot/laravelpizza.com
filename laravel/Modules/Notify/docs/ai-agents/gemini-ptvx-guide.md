@@ -3,21 +3,7 @@ title: "gemini ptvx guide"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_hhemEn
-<<<<<<< .merge_file_zBEC9c
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_Og1n2c
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_hhemEn
->>>>>>> .merge_file_hEVs0c
-=======
->>>>>>> .merge_file_Og1n2c
 qmd: "gemini ptvx guide"
 issues: []
 discussions: []

@@ -3,15 +3,7 @@ title: "🚀 AGID Implementation Guide - Practical Developer Guide"
 type: guide
 tags: [agid, implementation, guide]
 created: 2026-07-14
-<<<<<<< .merge_file_CpFhhp
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_8pHjXI
 qmd: "agid-implementation-guide 🚀 agid implementation guide - practical developer guide"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

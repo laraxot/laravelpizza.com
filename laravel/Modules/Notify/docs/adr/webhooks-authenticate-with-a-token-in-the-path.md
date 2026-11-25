@@ -10,10 +10,7 @@ related:
   - ../contracts/handle-mailjet-events-action.md
   - ../contracts/process-inbound-mail-action.md
   - ../email/mailjet.md
-<<<<<<< HEAD
 qmd: "webhooks authenticate with token path webhook"
-=======
->>>>>>> laraxot/dev
 ---
 
 # ADR: i webhook in ingresso si autenticano con un token segreto nel percorso

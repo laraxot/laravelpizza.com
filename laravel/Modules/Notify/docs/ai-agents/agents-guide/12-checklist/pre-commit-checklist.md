@@ -3,21 +3,7 @@ title: "pre commit checklist"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_cig291
-<<<<<<< .merge_file_dowTNN
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_IY0N4A
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_cig291
->>>>>>> .merge_file_Tdg6GP
-=======
->>>>>>> .merge_file_IY0N4A
 qmd: "pre commit checklist"
 issues: []
 discussions: []
@@ -39,10 +25,6 @@ Before committing or pushing:
 - [ ] XotBase classes used (not raw Filament)
 - [ ] No Controllers for frontoffice
 - [ ] JSON pages for dynamic content
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 title: "pre commit checklist"
@@ -53,14 +35,3 @@ updated: 2026-09-26
 qmd: "pre commit checklist"
 issues: []
 discussions: []
-<<<<<<< .merge_file_cig291
-<<<<<<< .merge_file_dowTNN
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_Tdg6GP
-=======
->>>>>>> .merge_file_IY0N4A

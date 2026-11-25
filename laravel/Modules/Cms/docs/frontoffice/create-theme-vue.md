@@ -7,10 +7,7 @@ updated: 2026-09-26
 qmd: "create theme vue"
 issues: []
 discussions: []
-<<<<<<< HEAD
-=======
 status: draft
->>>>>>> laraxot/dev
 ---
 
 # Creazione di un Tema con Vue
@@ -221,31 +218,9 @@ npm run preview
 
 3. **Copiatura degli Asset**
 ```bash
-<<<<<<< .merge_file_9VHab7
-<<<<<<< .merge_file_IxKurl
-<<<<<<< .merge_file_dkrmU4
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
-=======
-=======
->>>>>>> .merge_file_nULgWN
-=======
->>>>>>> .merge_file_1so8QS
-<<<<<<< HEAD
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
-<<<<<<< HEAD
-# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_9VHab7
-<<<<<<< .merge_file_IxKurl
->>>>>>> .merge_file_IOd7Yp
-=======
->>>>>>> .merge_file_nULgWN
-=======
->>>>>>> .merge_file_1so8QS
 ```
 
 ## Troubleshooting
@@ -277,18 +252,9 @@ npm run preview
 ## Alternative
 
 Se preferisci utilizzare un altro approccio, puoi consultare le guide per:
-<<<<<<< HEAD
-- [Creazione di un tema con Volt, Folio e Filament](create_theme_volt_folio_filament.md)
-- [Creazione di un tema con React](create_theme_react.md)
-- [Creazione di un tema con Laravel](create-theme-2.md)
-=======
-<<<<<<< .merge_file_z9VxGU
 - [Creazione di un tema con Volt, Folio e Filament](create-theme-volt-folio-filament.md)
 - [Creazione di un tema con React](create-theme-react.md)
 - [Creazione di un tema con Laravel](../create-theme-2.md)
-=======
 - [Creazione di un tema con Volt, Folio e Filament](create_theme_volt_folio_filament.md)
 - [Creazione di un tema con React](create_theme_react.md)
 - [Creazione di un tema con Laravel](create-theme-2.md)
->>>>>>> .merge_file_06dOId
->>>>>>> laraxot/dev

@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_kQIEST
 ---
 title: "Lezioni Apprese: Errori Migrazione Activity Table"
 type: note
 qmd: "errori migrazione activity table lezioni 1"
 ---
-=======
->>>>>>> .merge_file_B7vzNF
 # Lezioni Apprese: Errori Migrazione Activity Table
 
 ## Caso Studio: Errore Critico nella Modifica Migrazione Activity

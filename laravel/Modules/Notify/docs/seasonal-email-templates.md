@@ -3,15 +3,7 @@ title: "seasonal email templates"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_z9lBEg
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_WNtf0l
 qmd: "seasonal email templates"
 issues: []
 discussions: []
@@ -33,10 +25,6 @@ discussions: []
 6. [Best Practices](#best-practices)
 7. [Testing](#testing)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "seasonal email templates"
@@ -61,14 +49,9 @@ Il sistema di **Seasonal Email Templates** permette di utilizzare layout HTML te
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## Overview
 ### Vantaggi
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Architettura
 
 ### Stack Tecnologico

@@ -3,21 +3,7 @@ title: "ollama token optimization"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ls5Ghw
-<<<<<<< .merge_file_yakpA7
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_Kln1oY
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ls5Ghw
->>>>>>> .merge_file_LOeAkO
-=======
->>>>>>> .merge_file_Kln1oY
 qmd: "ollama token optimization"
 issues: []
 discussions: []

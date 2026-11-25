@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_AYpdCB
 qmd: "team user permissions fix"
-=======
->>>>>>> .merge_file_wjqo2I
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/team-user-permissions-fix.md

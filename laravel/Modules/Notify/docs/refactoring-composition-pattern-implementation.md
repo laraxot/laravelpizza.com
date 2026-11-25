@@ -3,15 +3,7 @@ title: "refactoring composition pattern implementation"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_o5g95r
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_WYnmVu
 qmd: "refactoring composition pattern implementation"
 issues: []
 discussions: []
@@ -114,10 +106,6 @@ foreach ($records as $record) {
 - Apply same pattern to other bulk operations in the system
 - Consider creating a generic BulkAction template for similar use cases
 - Ensure all similar bulk operations follow the same composition pattern
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -130,11 +118,3 @@ qmd: "refactoring composition pattern implementation"
 issues: []
 discussions: []
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
-<<<<<<< .merge_file_o5g95r
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_WYnmVu

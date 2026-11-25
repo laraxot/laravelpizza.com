@@ -3,21 +3,7 @@ title: "GitHub Issues - CORRECT WORKFLOW"
 type: concept
 tags: [github, issues, workflow]
 created: 2026-07-14
-<<<<<<< .merge_file_kE1sHQ
-<<<<<<< .merge_file_0JIgTh
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_9SPra3
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_kE1sHQ
->>>>>>> .merge_file_LREZ5P
-=======
->>>>>>> .merge_file_9SPra3
 qmd: "github-issues-workflow github issues - correct workflow"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

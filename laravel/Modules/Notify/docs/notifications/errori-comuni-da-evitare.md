@@ -3,15 +3,7 @@ title: "errori comuni da evitare"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ulJjSr
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_vePyyj
 qmd: "errori comuni da evitare"
 issues: []
 discussions: []
@@ -25,19 +17,10 @@ discussions: []
 1. **Errore di Case nelle Directory**
    - ❌ ERRATO: `Modules/Notify/App/Actions/`
    - ✅ CORRETTO: `Modules/Notify/app/Actions/`
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
    - ❌ ERRATO: `Modules/Notify/App/Actions/`
    - ✅ CORRETTO: `Modules/Notify/app/Actions/`
    - ❌ ERRATO: `Modules/Notify/App/Actions/`
    - ✅ CORRETTO: `Modules/Notify/app/Actions/`
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
    > Le directory standard di Laravel sono sempre in lowercase (`app`, `config`, `resources`, ecc.)
 

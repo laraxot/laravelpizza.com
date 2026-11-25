@@ -3,21 +3,7 @@ title: "architect"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_6vZAuD
-<<<<<<< .merge_file_igaC13
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_JzNvYu
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_6vZAuD
->>>>>>> .merge_file_mwGkBg
-=======
->>>>>>> .merge_file_JzNvYu
 qmd: "architect"
 issues: []
 discussions: []
@@ -105,10 +91,6 @@ dependencies:
     - fullstack-architecture-tmpl.yaml
 ```
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -127,9 +109,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../AGENTS.md](../../../../../../../../AGENTS.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

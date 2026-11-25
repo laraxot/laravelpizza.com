@@ -8,10 +8,7 @@ updated: 2026-11-23
 tags: [testing, architecture, laraxot, bounded-context, ddd, modules]
 related:
   - concepts/laraxot-architecture.md
-<<<<<<< HEAD
 qmd: "test location rule"
-=======
->>>>>>> laraxot/dev
 ---
 
 # Regola: I Test Appartengono al Modulo

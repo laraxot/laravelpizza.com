@@ -3,21 +3,7 @@ title: "filosofia sviluppo"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_k7FPZB
-<<<<<<< .merge_file_n5vFhf
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_uvYQtv
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_k7FPZB
->>>>>>> .merge_file_VV0t2B
-=======
->>>>>>> .merge_file_uvYQtv
 qmd: "filosofia sviluppo"
 issues: []
 discussions: []

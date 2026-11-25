@@ -5,10 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_egxdwm
 qmd: "logout consolidated"
-=======
->>>>>>> .merge_file_6YQz0J
 ---
 
 # logout — Consolidated Documentation

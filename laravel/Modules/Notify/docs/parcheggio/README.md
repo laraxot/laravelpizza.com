@@ -7,10 +7,7 @@ status: active
 updated_at: '2026-11-18'
 created: 2026-11-23
 updated: 2026-11-23
-<<<<<<< HEAD
 qmd: "parcheggiati notify"
-=======
->>>>>>> laraxot/dev
 ---
 
 # File parcheggiati
@@ -91,21 +88,4 @@ versione minuscola e' **piu' grande** di quella in CamelCase.
 **Questi non sono stati esaminati riga per riga**, a differenza dei `.wip` qui
 sopra: sono stati spostati, non giudicati. Prima di copiarne uno nel codice
 vivo, confrontalo con quello che c'e' adesso.
-<<<<<<< HEAD
-<<<<<<< .merge_file_HdZIBh
-=======
-<<<<<<< .merge_file_HDtTx6
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_AAhbCv
-=======
->>>>>>> .merge_file_T0uFwi
->>>>>>> laraxot/dev

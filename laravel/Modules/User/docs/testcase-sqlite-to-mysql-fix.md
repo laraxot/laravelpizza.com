@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_90Wrmk
 qmd: "testcase sqlite to mysql fix"
-=======
->>>>>>> .merge_file_sZnJrI
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/testcase-sqlite-to-mysql-fix.md

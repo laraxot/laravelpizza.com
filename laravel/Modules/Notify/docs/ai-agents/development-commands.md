@@ -3,21 +3,7 @@ title: "development commands"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_5eFcKH
-<<<<<<< .merge_file_QxVIUx
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_LCaqL8
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_5eFcKH
->>>>>>> .merge_file_2UfZc2
-=======
->>>>>>> .merge_file_LCaqL8
 qmd: "development commands"
 issues: []
 discussions: []

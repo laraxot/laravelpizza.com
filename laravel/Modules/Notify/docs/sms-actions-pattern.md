@@ -3,15 +3,7 @@ title: "sms actions pattern"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Xyltoe
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_OgoKKa
 qmd: "sms actions pattern"
 issues: []
 discussions: []
@@ -267,10 +259,6 @@ Seguire questo pattern garantisce:
 2. **Manutenibilità**: Il codice è più facile da mantenere e aggiornare
 3. **Estensibilità**: È facile aggiungere nuovi provider SMS
 4. **Testabilità**: Le azioni sono facilmente testabili grazie all'interfaccia comune
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -283,8 +271,3 @@ qmd: "sms actions pattern"
 issues: []
 discussions: []
 *Ultimo aggiornamento: [DATE]*
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

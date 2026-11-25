@@ -2,34 +2,11 @@
 title: "Module BMAD audit — Notify"
 type: story
 status: review
-<<<<<<< .merge_file_lTU4aC
-<<<<<<< .merge_file_zMwMBR
-=======
-=======
->>>>>>> .merge_file_k5TCcS
-<<<<<<< HEAD
-updated: 2026-11-16
-module: Notify
-bmad: true
-qmd: "story BMAD audit modulo Notify inventario finding P1 gate PHPStan Pest"
-=======
-<<<<<<< .merge_file_lTU4aC
->>>>>>> .merge_file_BenJQ4
-=======
->>>>>>> .merge_file_k5TCcS
 updated: 2026-11-23
 module: Notify
 bmad: true
 qmd: "story BMAD audit modulo Notify inventario finding P1 gate PHPStan Pest"
 created: 2026-11-23
-<<<<<<< .merge_file_lTU4aC
-<<<<<<< .merge_file_zMwMBR
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_BenJQ4
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_k5TCcS
 ---
 
 # Story: audit BMAD del modulo Notify

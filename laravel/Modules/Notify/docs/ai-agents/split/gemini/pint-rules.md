@@ -3,21 +3,7 @@ title: "pint rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ZGmkGj
-<<<<<<< .merge_file_i23VKq
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_NXda8w
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ZGmkGj
->>>>>>> .merge_file_TWCHfh
-=======
->>>>>>> .merge_file_NXda8w
 qmd: "pint rules"
 issues: []
 discussions: []
@@ -30,10 +16,6 @@ discussions: []
 - If you have modified any PHP files, you must run `vendor/bin/pint --dirty --format agent` before finalizing changes to ensure your code matches the project's expected style.
 - Do not run `vendor/bin/pint --test --format agent`, simply run `vendor/bin/pint --format agent` to fix any formatting issues.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -53,9 +35,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../wiki/integrations/_da-riconciliare/gemini-2.md](../../../wiki/integrations/_da-riconciliare/gemini-2.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

@@ -16,10 +16,6 @@ Questo file è il "agents-2.md" della wiki: istruzioni per l'LLM su come mantene
 
 Questo file è il "agents-2.md" della wiki: istruzioni per l'LLM su come mantenere la wiki.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "schema"
@@ -57,9 +53,6 @@ No duplicati. Se esiste già una pagina per un concetto, aggiornarla.
 Prima di creare una nuova pagina, cercare in `index.md`.
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## Regole Fondamentali
 ### R1 — Raw è Immutabile
 ### R2 — Wiki è Proprietà dell'LLM
@@ -67,8 +60,6 @@ Prima di creare una nuova pagina, cercare in `index.md`.
 ### R4 — Index è la Porta d'Ingresso
 ### R5 — Wikilink per Cross-Reference
 ### R6 — Una Pagina per Entità
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Formato Pagina Wiki
 

@@ -3,21 +3,7 @@ title: "contracts architecture"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_V5gt8R
-<<<<<<< .merge_file_hPZm33
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_FqLGPg
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_V5gt8R
->>>>>>> .merge_file_CQ4Wk7
-=======
->>>>>>> .merge_file_FqLGPg
 qmd: "contracts architecture"
 issues: []
 discussions: []
@@ -33,11 +19,6 @@ Le interfacce **DEVONO** essere posizionate nella directory `app/Contracts/`, **
 
 ```
 ✅ CORRETTO:
-Modules/Notify/app/Contracts/SmsProviderActionInterface.php
-
-❌ ERRATO:
-Modules/Notify/app/Actions/SMS/SmsActionInterface.php
-Modules/Notify/app/Contracts/SMS/SmsActionInterface.php (sottocartella non corretta)
 Modules/Notify/app/Contracts/SmsProviderActionInterface.php
 
 ❌ ERRATO:

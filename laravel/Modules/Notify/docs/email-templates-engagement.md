@@ -3,21 +3,7 @@ title: "email templates engagement"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_uHjJFj
-<<<<<<< .merge_file_VfpSCv
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_lVP8Rp
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_uHjJFj
->>>>>>> .merge_file_mgK8Jy
-=======
->>>>>>> .merge_file_lVP8Rp
 qmd: "email templates engagement"
 issues: []
 discussions: []

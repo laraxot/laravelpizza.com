@@ -3,25 +3,7 @@ title: "KILO CONFIGURATION COMPLETE"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_mi6dhK
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_kx5GJF
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_mi6dhK
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_kx5GJF
 qmd: "KILO CONFIGURATION COMPLETE"
 issues: []
 discussions: []
@@ -34,13 +16,6 @@ discussions: []
 **Config File**: `.kilo/kilo.jsonc` (symlink → `bashscripts/ai/.agents/kilo.jsonc`)  
 **Schema**: https://app.kilo.ai/config.json
 
-<<<<<<< .merge_file_mi6dhK
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_kx5GJF
 ---
 
 title: "KILO CONFIGURATION COMPLETE"
@@ -69,16 +44,8 @@ discussions: []
 
 ---
 
-<<<<<<< .merge_file_mi6dhK
-<<<<<<< HEAD
-=======
-=======
 ## Cos'è Kilo Code
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_kx5GJF
 ## Configurazione Notify
 
 ### File di Configurazione
@@ -104,31 +71,10 @@ discussions: []
   
   // Documentazione per contesto AI
   "instructions": [
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_mi6dhK
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_kx5GJF
     "agents.md",
     "laravel/agents.md"
     "agents.md",
     "laravel/agents.md"
-<<<<<<< .merge_file_mi6dhK
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_kx5GJF
->>>>>>> laraxot/dev
     "agents-2.md",
     "laravel/agents-2.md"
   ],
@@ -172,29 +118,9 @@ discussions: []
 | `autoupdate` | boolean | Auto-update | `true` |
 | `snapshot` | boolean | Snapshot | `true` |
 | `mcp` | object | MCP servers | `{}` |
-<<<<<<< HEAD
-<<<<<<< .merge_file_mi6dhK
 | `instructions` | array | Docs contesto | `["agents.md", ...]` |
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_kx5GJF
 | `instructions` | array | Docs contesto | `["agents-2.md", ...]` |
-=======
-<<<<<<< HEAD
 | `instructions` | array | Docs contesto | `["agents.md", ...]` |
-=======
-| `instructions` | array | Docs contesto | `["agents-2.md", ...]` |
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_mi6dhK
-=======
-| `instructions` | array | Docs contesto | `["agents.md", ...]` |
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_kx5GJF
 | `tools` | object | Tool abilitati | `{write, edit, bash...}` |
 | `permission` | object | Permessi | `{bash: "ask", ...}` |
 | `experimental` | object | Feature sperimentali | `{}` |
@@ -278,29 +204,9 @@ Ctrl+Q         - Esci
 Kilo legge automaticamente:
 
 1. **agents-2.md** - Contesto principale
-<<<<<<< HEAD
-<<<<<<< .merge_file_mi6dhK
 2. **laravel/agents.md** - Contesto Laravel
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_kx5GJF
 2. **laravel/agents-2.md** - Contesto Laravel
-=======
-<<<<<<< HEAD
 2. **laravel/agents.md** - Contesto Laravel
-=======
-2. **laravel/agents-2.md** - Contesto Laravel
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_mi6dhK
-=======
-2. **laravel/agents.md** - Contesto Laravel
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_kx5GJF
 
 ### Per Aggiungere Altra Docs
 
@@ -309,31 +215,10 @@ Modifica `.kilo/kilo.jsonc`:
 ```jsonc
 {
   "instructions": [
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_mi6dhK
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_kx5GJF
     "agents.md",
     "laravel/agents.md",
     "agents.md",
     "laravel/agents.md",
-<<<<<<< .merge_file_mi6dhK
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_kx5GJF
->>>>>>> laraxot/dev
     "agents-2.md",
     "laravel/agents-2.md",
     "docs/**/*.md",                    // Tutta la docs

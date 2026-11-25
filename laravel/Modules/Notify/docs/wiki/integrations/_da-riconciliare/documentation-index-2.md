@@ -7,25 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_ZlfR2J
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_vhXqrI
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ZlfR2J
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_vhXqrI
 ---
 
 # 📚 Indice Generale Documentazione - App
@@ -50,51 +32,16 @@ updated: 2026-11-23
 - [README Principale](./README.md) - Panoramica progetto completa
 - [Analisi Super Mucca](./super-mucca-docs-analysis-3.md) - Report qualità documentazione
 - [Architecture](./architecture-analysis-4.md) - Analisi architetturale
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_ZlfR2J
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_vhXqrI
 - [Roadmap](./master_roadmap_2025.md) - Piano sviluppo 2025
 
 ### Guide Rapide
 - [Quick Start](./quick-start-3.md) - Guida avvio rapido
 - [Contributing](./contributing.md) - Come contribuire
-<<<<<<< .merge_file_ZlfR2J
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_vhXqrI
 - [Roadmap](./MASTER_ROADMAP_2025.md) - Piano sviluppo 2025
 
 ### Guide Rapide
 - [Quick Start](./quick-start-3.md) - Guida avvio rapido
 - [Contributing](./contributing-2.md) - Come contribuire
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_ZlfR2J
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_vhXqrI
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Troubleshooting](./troubleshooting/README.md) - Risoluzione problemi
 
 ---
@@ -331,29 +278,11 @@ updated: 2026-11-23
 ## 📝 Changelog & Versioning
 
 ### Version History
-<<<<<<< HEAD
 - [Changelog](./CHANGELOG.md) - Storico modifiche
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_ZlfR2J
-<<<<<<< HEAD
 - [Changelog](./CHANGELOG.md) - Storico modifiche
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_vhXqrI
 - [Changelog](../../../../../UI/docs/changelog.md) - Storico modifiche
-=======
 - [Changelog](./CHANGELOG.md) - Storico modifiche
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ZlfR2J
-=======
 - [Changelog](../../../../../UI/docs/changelog.md) - Storico modifiche
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_vhXqrI
 - [Versioning Strategy](./versioning.md) - Strategia versioning
 - [Migration Guides](./migrations/README.md) - Guide migrazione
 
@@ -362,34 +291,16 @@ updated: 2026-11-23
 ## 🤝 Contributing
 
 ### Contribution Guidelines
-<<<<<<< HEAD
 - [How to Contribute](./contributing-2.md) - Come contribuire
 - [Code of Conduct](./CODE_OF_CONDUCT.md) - Codice condotta
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_ZlfR2J
-<<<<<<< HEAD
 - [How to Contribute](./contributing-2.md) - Come contribuire
 - [Code of Conduct](./CODE_OF_CONDUCT.md) - Codice condotta
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_vhXqrI
 - [How to Contribute](./contributing.md) - Come contribuire
 - [Code of Conduct](./code_of_conduct.md) - Codice condotta
-=======
 - [How to Contribute](./contributing-2.md) - Come contribuire
 - [Code of Conduct](./CODE_OF_CONDUCT.md) - Codice condotta
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ZlfR2J
-=======
 - [How to Contribute](./contributing.md) - Come contribuire
 - [Code of Conduct](./code_of_conduct.md) - Codice condotta
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_vhXqrI
 - [Pull Request Template](./.github/pull_request_template.md) - Template PR
 
 ---

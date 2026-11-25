@@ -4,15 +4,7 @@ type: story
 bmad: true
 status: in-progress
 created: 2026-11-12
-<<<<<<< .merge_file_mHs40V
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-11-12
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_8Yo9yY
 owner: module:Notify
 module: Notify
 related:
@@ -23,10 +15,7 @@ related:
   - send-test-mail-wrong-location.story.md
   - ../../../../../bashscripts/docs/mail/mail-server.md
 tags: [mail, postfix, dovecot, opendkim, dns, deliverability, spam, production]
-<<<<<<< HEAD
 qmd: "mail server send receive story produzione"
-=======
->>>>>>> laraxot/dev
 ---
 
 # Mail server di produzione: invio e ricezione su fixcity.eu

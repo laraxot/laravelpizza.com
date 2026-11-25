@@ -3,15 +3,7 @@ title: "NotebookLM Integration"
 type: concept
 tags: [notebooklm, integration]
 created: 2026-07-14
-<<<<<<< .merge_file_9fK7rR
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_YXOu1z
 qmd: "notebooklm-integration notebooklm integration"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -22,18 +14,7 @@ related:
   - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< .merge_file_9fK7rR
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-  - "./acronym-naming-conventions.md"
->>>>>>> .merge_file_YXOu1z
   - "./action-plan-immediate.md"
 ---
 

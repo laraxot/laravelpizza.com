@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 ---
 title: "Best Practices Implementazione Tailwind CSS nel Modulo Notify"
 type: note
 qmd: "tailwind best practices implementazione css notify"
 ---
-=======
->>>>>>> laraxot/dev
 # Best Practices Implementazione Tailwind CSS nel Modulo Notify
 
 ## 1. Organizzazione del Codice

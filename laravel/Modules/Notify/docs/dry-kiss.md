@@ -3,21 +3,7 @@ title: "dry kiss"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ZA80Ye
-<<<<<<< .merge_file_avtdI1
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_bHCbKN
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ZA80Ye
->>>>>>> .merge_file_fRvfY2
-=======
->>>>>>> .merge_file_bHCbKN
 qmd: "dry kiss"
 issues: []
 discussions: []
@@ -56,10 +42,6 @@ abstract class BaseModel extends XotBaseModel implements HasMedia
 - ⏸️ verified_at: Valutare se domain-specific
 - 🔄 ServiceProvider: Auto-detect nome
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 title: "dry kiss"
 type: note
@@ -69,15 +51,4 @@ updated: 2026-09-26
 qmd: "dry kiss"
 issues: []
 discussions: []
-<<<<<<< .merge_file_ZA80Ye
-<<<<<<< .merge_file_avtdI1
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_fRvfY2
-=======
->>>>>>> .merge_file_bHCbKN
 [DRY/KISS Global](../../../docs/dry_kiss_analysis_[date].md)

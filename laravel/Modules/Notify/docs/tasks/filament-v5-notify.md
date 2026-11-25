@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 ---
 title: "Task: Notify Filament v5 Alignment (Clusters)"
 type: note
 qmd: "filament v5 notify task alignment clusters"
 ---
-=======
->>>>>>> laraxot/dev
 # Task: Notify Filament v5 Alignment (Clusters)
 
 ## 📋 Obiettivo

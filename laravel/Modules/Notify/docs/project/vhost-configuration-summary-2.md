@@ -3,15 +3,7 @@ title: "VHOST CONFIGURATION SUMMARY"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_sLlpAH
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_MQBBHc
 qmd: "VHOST CONFIGURATION SUMMARY"
 issues: []
 discussions: []
@@ -23,13 +15,6 @@ discussions: []
 > **Status**: ✅ Complete  
 > **Domain**: laraxot.local
 
-<<<<<<< .merge_file_sLlpAH
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_MQBBHc
 ---
 
 title: "VHOST CONFIGURATION SUMMARY"
@@ -46,16 +31,8 @@ This document summarizes the complete VHost configuration implementation for the
 
 ---
 
-<<<<<<< .merge_file_sLlpAH
-<<<<<<< HEAD
-=======
-=======
 ## 📋 Overview
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_MQBBHc
 ## ✅ Completed Tasks
 
 ### 1. Configuration File Created

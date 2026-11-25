@@ -5,10 +5,7 @@ type: reference
 tags: [wiki, notify, link-dump]
 created: 2026-08-24
 updated: 2026-11-23
-<<<<<<< HEAD
 qmd: "repos"
-=======
->>>>>>> laraxot/dev
 ---
 
 -------------------------------------------------------------

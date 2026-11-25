@@ -3,21 +3,7 @@ title: "filament rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_A8JhpQ
-<<<<<<< .merge_file_bn9DlY
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_FufozD
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_A8JhpQ
->>>>>>> .merge_file_QuwJyq
-=======
->>>>>>> .merge_file_FufozD
 qmd: "filament rules"
 issues: []
 discussions: []
@@ -56,14 +42,6 @@ Forms\Components\Select::make('user_id')
     ->required(),
 </code-snippet>
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Testing
 - It's important to test Filament functionality for user satisfaction.
 - Ensure that you are authenticated to access the application within the test.
@@ -112,11 +90,6 @@ Forms\Components\Select::make('user_id')
     expect($invoice->refresh())->isSent()->toBeTrue();
 </code-snippet>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-
 
 ---
 
@@ -136,9 +109,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

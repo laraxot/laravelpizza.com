@@ -5,18 +5,9 @@ type: overview
 created: "2026-04-15T08:28:51Z"
 updated: "2026-04-15T08:28:51Z"
 related:
-<<<<<<< HEAD
   - "./agents-2.md"
-=======
-<<<<<<< HEAD
   - "./agents.md"
-<<<<<<< .merge_file_snqlmd
-=======
-=======
   - "./agents-2.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> .merge_file_uQangC
   - "./architecture.md"
   - "./auth-patterns.md"
   - "./bmad-method.md"
@@ -24,10 +15,7 @@ related:
   - "./index.md"
   - "./log.md"
   - "./socialite-architecture.md"
-<<<<<<< .merge_file_snqlmd
 qmd: "overview wiki"
-=======
->>>>>>> .merge_file_uQangC
 ---
 
 # User Wiki Overview

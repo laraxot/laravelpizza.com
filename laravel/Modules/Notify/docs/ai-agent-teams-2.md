@@ -3,21 +3,7 @@ title: "ai agent teams"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ivbyea
-<<<<<<< .merge_file_XNtGoN
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_9QelPE
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ivbyea
->>>>>>> .merge_file_IWEC65
-=======
->>>>>>> .merge_file_9QelPE
 qmd: "ai agent teams"
 issues: []
 discussions: []
@@ -29,10 +15,6 @@ discussions: []
 **Status**: Active  
 **Purpose**: Coordinate multiple AI agents working on the same codebase
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "ai agent teams"
@@ -55,13 +37,8 @@ Multiple AI agents (Qwen, Claude, Cursor, etc.) are working on the same FixCity 
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 Why Agent Teams?
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 👥 Current Agent Teams
 
 ### 1. **Sync Team** 🔄
@@ -109,22 +86,7 @@ Multiple AI agents (Qwen, Claude, Cursor, etc.) are working on the same FixCity 
 **Current Tasks**:
 - ✅ Update `bashscripts/docs/ai/` with sync rules
 - ✅ Update AGENTS.md with commit/push rules
-<<<<<<< .merge_file_ivbyea
-<<<<<<< .merge_file_XNtGoN
-<<<<<<< HEAD
 - ✅ Update AGENTS.md with commit/push rules
-=======
-<<<<<<< HEAD
-- ✅ Update AGENTS.md with commit/push rules
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- ✅ Update AGENTS.md with commit/push rules
->>>>>>> .merge_file_IWEC65
-=======
-- ✅ Update AGENTS.md with commit/push rules
->>>>>>> .merge_file_9QelPE
 - ✅ Update .windsurfrules
 - ⏳ Sync `.github/` with `bashscripts/ai/.github/`
 

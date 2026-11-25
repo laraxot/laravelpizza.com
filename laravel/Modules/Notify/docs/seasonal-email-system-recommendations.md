@@ -3,15 +3,7 @@ title: "seasonal email system recommendations"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_DjFs9v
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_e6DveI
 qmd: "seasonal email system recommendations"
 issues: []
 discussions: []
@@ -240,10 +232,6 @@ Lo sviluppo del sistema email stagionali deve sempre tenere conto dei seguenti p
 5. **Zen**: Cercare l'armonia tra funzionalità, semplicità e manutenibilità
 
 Queste raccomandazioni rappresentano un punto di riferimento per tutti gli sviluppatori che lavoreranno sul sistema email stagionali, garantendo coerenza e qualità nel tempo.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -259,11 +247,3 @@ discussions: []
 **Data**: 19 Dicembre 2025  
 **Versione**: 1.0  
 **Approvazione**: Sistema Pronto per la Produzione
-<<<<<<< .merge_file_DjFs9v
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_e6DveI

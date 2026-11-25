@@ -3,31 +3,7 @@ title: "file naming rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_pcCCya
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_a2fMPM
-<<<<<<< .merge_file_okJiaD
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_4G3siO
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_c7F90H
-=======
-<<<<<<< .merge_file_a2fMPM
->>>>>>> .merge_file_jUNgTD
-=======
->>>>>>> .merge_file_4G3siO
->>>>>>> laraxot/dev
 qmd: "file naming rules"
 issues: []
 discussions: []

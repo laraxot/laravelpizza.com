@@ -4,15 +4,7 @@ type: index
 tags: [notify, docs, notifications]
 module: Notify
 created: 2026-07-20
-<<<<<<< .merge_file_WDlQnN
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_LyMM5o
 qmd: "notify documentazione notifications readme notifiche index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -194,13 +186,6 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 ---
 
 <!-- Merged from README.md, which collided with this file on case-insensitive filesystems. -->
-<<<<<<< .merge_file_WDlQnN
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_LyMM5o
 
 ---
 title: "Readme"
@@ -222,8 +207,3 @@ related:
   - "./netfun-sms-implementation.md"
 ---
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

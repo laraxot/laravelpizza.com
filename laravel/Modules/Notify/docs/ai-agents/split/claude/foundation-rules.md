@@ -3,21 +3,7 @@ title: "foundation rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_hbAsHg
-<<<<<<< .merge_file_Mkc3BT
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_Y8xjts
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_hbAsHg
->>>>>>> .merge_file_Ea2Awo
-=======
->>>>>>> .merge_file_Y8xjts
 qmd: "foundation rules"
 issues: []
 discussions: []
@@ -77,31 +63,16 @@ This application is a Laravel application and its main Laravel ecosystems packag
 - You must only create documentation files if explicitly requested by the user.
 
 
-
 ---
 ## Cross-References
 
-<<<<<<< .merge_file_hbAsHg
-<<<<<<< .merge_file_Mkc3BT
-=======
-=======
 - ← [CLAUDE Index](index.md): All Laravel Boost guidelines
 - ← [Main AI Docs Index](../index.md): Master index
->>>>>>> .merge_file_Y8xjts
 - ← [CLAUDE Index](index.md): All Laravel Boost guidelines
 - ← [Main AI Docs Index](../index.md): Master index
->>>>>>> .merge_file_Ea2Awo
 - ← [CLAUDE Index](index.md): All Laravel Boost guidelines
 - ← [Main AI Docs Index](../index.md): Master index
-<<<<<<< HEAD
 - ← [CLAUDE Index](index.md): All Laravel Boost guidelines
 - ← [Main AI Docs Index](../index.md): Master index
-=======
-<<<<<<< HEAD
-- ← [CLAUDE Index](index.md): All Laravel Boost guidelines
-- ← [Main AI Docs Index](../index.md): Master index
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - ← [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md): Original source
 

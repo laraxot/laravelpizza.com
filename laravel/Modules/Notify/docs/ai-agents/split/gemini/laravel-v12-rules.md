@@ -3,21 +3,7 @@ title: "laravel v12 rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_P0e1HD
-<<<<<<< .merge_file_sUKw8j
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_GnxZ49
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_P0e1HD
->>>>>>> .merge_file_2uhuFr
-=======
->>>>>>> .merge_file_GnxZ49
 qmd: "laravel v12 rules"
 issues: []
 discussions: []
@@ -48,10 +34,6 @@ discussions: []
 
 - Casts can and likely should be set in a `casts()` method on a model rather than the `$casts` property. Follow existing conventions from other models.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -71,9 +53,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../wiki/integrations/_da-riconciliare/gemini-2.md](../../../wiki/integrations/_da-riconciliare/gemini-2.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

@@ -3,15 +3,7 @@ title: "removal getseasonalemaillayoutaction"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_yzbjtD
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_g9P9Iu
 qmd: "removal getseasonalemaillayoutaction"
 issues: []
 discussions: []
@@ -131,10 +123,6 @@ Delega semplice invece di azione complessa separata.
 2. **Rispettare DRY**: Se la logica esiste già, riutilizzarla invece di duplicarla
 3. **KISS prima di tutto**: La soluzione più semplice è spesso la migliore
 4. **Separazione responsabilità**: La logica di contesto stagionale appartiene al modulo core (Xot), non al modulo specifico (Notify)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -148,8 +136,3 @@ issues: []
 discussions: []
 **Ultimo aggiornamento**: 19 Dicembre 2025  
 **Filosofia**: *"Type safety first, simplicity second, DRY always"*
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

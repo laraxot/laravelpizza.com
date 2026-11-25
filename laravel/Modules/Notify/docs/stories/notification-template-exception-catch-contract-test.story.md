@@ -3,22 +3,11 @@ title: "NotificationTemplateNotFoundException: il test del catch (Exception) div
 type: story
 module: Notify
 created: '2026-11-19'
-<<<<<<< .merge_file_37SQTx
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: '2026-11-19'
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_xiZWpt
 status: review
 related:
   - ../../../../../docs/stories/rebase-pull-upstream-case-collisions-vs-module-repair.story.md
-<<<<<<< HEAD
 qmd: "notification template exception catch contract test"
-=======
->>>>>>> laraxot/dev
 ---
 
 # NotificationTemplateNotFoundException: il test del catch (Exception) diventa un test di comportamento

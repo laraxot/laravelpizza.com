@@ -3,15 +3,7 @@ title: "improved email templates"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_k4ucPR
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_ZKT0yj
 qmd: "improved email templates"
 issues: []
 discussions: []
@@ -30,10 +22,6 @@ In questo documento proponiamo un’implementazione open source per la gestione 
 - spatie/laravel-mailcoach-mailer
 - esempi di Blade render, logo customization
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "improved email templates"
@@ -54,13 +42,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 1. Gap dei Plugin Esistenti
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 2. Obiettivi della Nostra Soluzione
 
 - **Storage DB**: tutte le proprietà del template (soggetto, body markdown, variabili, versioni)

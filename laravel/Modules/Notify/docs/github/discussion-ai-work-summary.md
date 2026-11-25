@@ -3,15 +3,7 @@ title: "🤖 AI Agent Work Summary - GitHub Actions & Documentation"
 type: concept
 tags: [discussion, work, summary]
 created: 2026-07-14
-<<<<<<< .merge_file_CnulRJ
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_EWkvr4
 qmd: "discussion-ai-work-summary 🤖 ai agent work summary - github actions & documentation"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

@@ -3,21 +3,7 @@ title: "contact column implementation"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_acNcQH
-<<<<<<< .merge_file_fMrVcH
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_BNVubU
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_acNcQH
->>>>>>> .merge_file_hctYZj
-=======
->>>>>>> .merge_file_BNVubU
 qmd: "contact column implementation"
 issues: []
 discussions: []

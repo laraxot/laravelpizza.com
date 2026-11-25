@@ -3,15 +3,7 @@ title: "send email translation improvement"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_nY7Eqq
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_YB2B6k
 qmd: "send email translation improvement"
 issues: []
 discussions: []
@@ -324,10 +316,6 @@ php -l Modules/Notify/lang/it/send_email.php
 3. **Review**: Code review per verificare conformità standards
 4. **Deployment**: Deploy in ambiente di sviluppo per testing
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "send email translation improvement"
@@ -624,9 +612,6 @@ php -l Modules/Notify/lang/it/send_email.php
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 # Miglioramento File Traduzione send_email.php
 ## 🔍 Analisi del Problema
 ### 1. Conflitto di Merge Non Risolto
@@ -655,7 +640,5 @@ php -l Modules/Notify/lang/it/send_email.php
 ## 📝 Note di Implementazione
 ## 🚀 Prossimi Passi
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 **Ultimo aggiornamento**: Gennaio 2025
 **Autore**: Sistema di miglioramento automatico

@@ -3,21 +3,7 @@ title: "agents filament widgets"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ZmnmSm
-<<<<<<< .merge_file_EbXscl
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_b4Sxl3
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ZmnmSm
->>>>>>> .merge_file_L3GKtt
-=======
->>>>>>> .merge_file_b4Sxl3
 qmd: "agents filament widgets"
 issues: []
 discussions: []
@@ -29,10 +15,6 @@ discussions: []
 **Ultimo Aggiornamento**: 2026-03-20  
 **Stato**: ✅ CRITICAL RULE
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "agents filament widgets"
@@ -50,13 +32,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🔴 REGOLA FONDAMENTALE
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## ❌ SBAGLIATO (VIETATO!)
 
 ### Blade Custom con foreach

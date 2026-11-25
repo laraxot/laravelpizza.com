@@ -64,44 +64,15 @@ Replicazione delle 38 pagine statiche del progetto [Design Comuni Italia](https:
 | **Screenshots Argomenti** | [screenshots/argomenti/](../laravel/Themes/Sixteen/docs/design-comuni/screenshots/argomenti/) | Screenshots argomenti |
 | **Screenshots All Pages** | [screenshots/all-pages/](../laravel/Themes/Sixteen/docs/design-comuni/screenshots/all-pages/) | Screenshots tutte 54 pagine |
 | **All Pages Analysis** | [ALL_PAGES_analysis.md](../laravel/Themes/Sixteen/docs/design-comuni/ALL_PAGES_analysis.md) | Analisi completa 54 pagine |
-<<<<<<< HEAD
 | **Progress Report** | [progress-report-2.md](../progress-report.md) | Report progresso aggiornato |
-<<<<<<< .merge_file_jWJ4it
-<<<<<<< .merge_file_M1Odfn
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 | **Progress Report** | [progress-report-2.md](../progress-report.md) | Report progresso aggiornato |
-=======
->>>>>>> .merge_file_ACQbra
-=======
->>>>>>> .merge_file_uJUQwZ
 | **Progress Report** | [progress-report-2.md](../progress-report.md) | Report progresso aggiornato |
-=======
-<<<<<<< .merge_file_i3LdqE
 | **Progress Report** | [progress-report-2.md](../progress-report-2.md) | Report progresso aggiornato |
-=======
-<<<<<<< .merge_file_jWJ4it
-<<<<<<< .merge_file_M1Odfn
 | **Progress Report** | [progress-report-2.md](../progress-report.md) | Report progresso aggiornato |
 | **Progress Report** | [progress-report-2.md](../progress-report.md) | Report progresso aggiornato |
->>>>>>> .merge_file_KZ5Whe
->>>>>>> laraxot/dev
-=======
 | **Progress Report** | [progress-report-2.md](../progress-report-2.md) | Report progresso aggiornato |
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_uJUQwZ
 | **Progress Report** | [progress-report-2.md](../progress-report.md) | Report progresso aggiornato |
 | **Progress Report** | [progress-report-2.md](../progress-report.md) | Report progresso aggiornato |
->>>>>>> .merge_file_KZ5Whe
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_jWJ4it
->>>>>>> .merge_file_ACQbra
-=======
->>>>>>> .merge_file_uJUQwZ
 | **Fail Pages Analysis** | [FAIL_PAGES_analysis.md](../laravel/Themes/Sixteen/docs/design-comuni/FAIL_PAGES_analysis.md) | Analisi pagine fail |
 | **Skills & Rules** | [SKILLS_RULES.md](../laravel/Themes/Sixteen/docs/design-comuni/skills-rules.md) | Skills, rules e best practices |
 | **Segnalazioni Elenco Analisi** | [SEGNALAZIONI_ELENCO_ANALISI.md](../laravel/Themes/Sixteen/docs/design-comuni/segnalazioni-elenco-analisi.md) | Analisi segnalazioni elenco (95.7%) |

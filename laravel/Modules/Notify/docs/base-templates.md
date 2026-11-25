@@ -3,21 +3,7 @@ title: "base templates"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_0O4rfL
-<<<<<<< .merge_file_eX5oSH
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_ZFP9wm
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_0O4rfL
->>>>>>> .merge_file_h8Ge92
-=======
->>>>>>> .merge_file_ZFP9wm
 qmd: "base templates"
 issues: []
 discussions: []

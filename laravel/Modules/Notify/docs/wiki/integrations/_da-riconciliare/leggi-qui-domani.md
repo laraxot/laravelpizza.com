@@ -3,35 +3,13 @@ title: "📖 LEGGI QUI DOMANI MATTINA - 2 Ottobre 2025"
 type: concept
 tags: [leggi, qui, domani]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_Ph3EAZ
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_CTR6oF
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Ph3EAZ
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_CTR6oF
 qmd: "leggi-qui-domani 📖 leggi qui domani mattina - 2 ottobre 2025"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
   - "./00-index.md"
   - "./00-index-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
   - "./00-index.md"
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
@@ -42,16 +20,11 @@ related:
   - "../../../acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
-<<<<<<< HEAD
-=======
-=======
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
   - "../../../00-index-documentation.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "../../../acronym-naming-conventions.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 status: draft
 ---
@@ -194,48 +167,15 @@ cd /var/www/_bases/<nome repitory>_mono/laravel
 3. **[User Roadmap](../Modules/User/docs/roadmap-and-issues.md)** - Errori dettagliati User
 
 ### Fine Giornata (update)
-<<<<<<< HEAD
-<<<<<<< .merge_file_Ph3EAZ
-<<<<<<< HEAD
 4. **[Master Roadmap](./roadmap-master-index.md)** - Aggiornare status
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_sEDPAF
 4. **[Master Roadmap](./roadmap-master-index.md)** - Aggiornare status
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-=======
-=======
-<<<<<<< .merge_file_sEDPAF
 4. **[Master Roadmap](./roadmap-master-index.md)** - Aggiornare status
-=======
->>>>>>> .merge_file_CTR6oF
->>>>>>> laraxot/dev
 4. **[Master Roadmap](../../../roadmap-master-index.md)** - Aggiornare status
 2. **[Xot Roadmap](../../../roadmap-and-issues.md)** - Errori dettagliati Xot
 3. **[User Roadmap](../../../roadmap-and-issues.md)** - Errori dettagliati User
 
 ### Fine Giornata (update)
 4. **[Master Roadmap](../../../roadmap-master-index.md)** - Aggiornare status
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_Ph3EAZ
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_mCCltw
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_mCCltw
->>>>>>> laraxot/dev
->>>>>>> .merge_file_CTR6oF
 5. **[Analisi Completa](../../../analisi-completa-3.md)** - Executive summary
 
 ---
@@ -494,30 +434,12 @@ cd /var/www/_bases/<nome repitory>_mono/laravel
 3. **[User Roadmap](../Modules/User/docs/roadmap-and-issues.md)** - Errori dettagliati User
 
 ### Fine Giornata (update)
-<<<<<<< HEAD
-<<<<<<< .merge_file_Ph3EAZ
-<<<<<<< HEAD
 4. **[Master Roadmap](./roadmap-master-index.md)** - Aggiornare status
 5. **[Analisi Completa](./ANALISI-COMPLETA-2025-10-01.md)** - Executive summary
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_sEDPAF
 4. **[Master Roadmap](./roadmap-master-index.md)** - Aggiornare status
 5. **[Analisi Completa](./ANALISI-COMPLETA-2025-10-01.md)** - Executive summary
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-=======
-=======
-<<<<<<< .merge_file_sEDPAF
 4. **[Master Roadmap](./roadmap-master-index.md)** - Aggiornare status
 5. **[Analisi Completa](./ANALISI-COMPLETA-2025-10-01.md)** - Executive summary
-=======
->>>>>>> .merge_file_CTR6oF
->>>>>>> laraxot/dev
 4. **[Master Roadmap](../../../roadmap-master-index.md)** - Aggiornare status
 5. **[Analisi Completa](../../../analisi-completa-3.md)** - Executive summary
 2. **[Xot Roadmap](../../../roadmap-and-issues.md)** - Errori dettagliati Xot
@@ -526,21 +448,6 @@ cd /var/www/_bases/<nome repitory>_mono/laravel
 ### Fine Giornata (update)
 4. **[Master Roadmap](../../../roadmap-master-index.md)** - Aggiornare status
 5. **[Analisi Completa](../../../analisi-completa-ottobre-data.md)** - Executive summary
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_Ph3EAZ
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_mCCltw
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_mCCltw
->>>>>>> laraxot/dev
->>>>>>> .merge_file_CTR6oF
 
 ---
 
@@ -654,6 +561,5 @@ Ricorda: **Qualità del codice = Qualità del servizio ai cittadini** 🏙️
 **Goal**: 100% PHPStan Compliance
 
 **Let's do this! 🚀**
-
 
 

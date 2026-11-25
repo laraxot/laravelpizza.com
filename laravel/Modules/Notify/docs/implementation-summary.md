@@ -3,15 +3,7 @@ title: "Riepilogo Implementazione Design Comuni"
 type: concept
 tags: [implementation, summary]
 created: 2026-07-14
-<<<<<<< .merge_file_wR5Xid
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_lGUzDH
 qmd: "implementation-summary riepilogo implementazione design comuni"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -20,21 +12,12 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_wR5Xid
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_lGUzDH
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -249,10 +232,5 @@ L'implementazione del design system per i comuni italiani è stata completata co
 6. **Personalizzazione**: Facile adattamento alle esigenze specifiche
 
 Il progetto è ora pronto per il deployment e l'utilizzo in produzione, con un sistema completo e professionale per la gestione delle segnalazioni comunali.
-
-
-
-
-
 
 

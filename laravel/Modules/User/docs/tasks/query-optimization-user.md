@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_ty6JZ3
 ---
 title: "Task: Query Optimization User"
 type: note
 qmd: "query optimization user task"
 ---
-=======
->>>>>>> .merge_file_UuT7E7
 # Task: Query Optimization User
 
 **Modulo**: User  

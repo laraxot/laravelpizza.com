@@ -11,10 +11,7 @@ related:
   - "./02-goals.md"
   - "./02-next.md"
   - "./03-later.md"
-<<<<<<< .merge_file_s7Vvd9
 qmd: "later"
-=======
->>>>>>> .merge_file_A2bdKv
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/03-later-Modules.md

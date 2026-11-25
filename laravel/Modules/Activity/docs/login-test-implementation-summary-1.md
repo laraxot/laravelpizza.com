@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_esFIkX
 ---
 title: "Login Test Implementation Summary - <nome progetto> Project"
 type: note
 qmd: "login test implementation summary 1 nome"
 ---
-=======
->>>>>>> .merge_file_BtyS9K
 # Login Test Implementation Summary - <nome progetto> Project
 
 ## 🎊 Mission Accomplished: Complete Login Testing Suite

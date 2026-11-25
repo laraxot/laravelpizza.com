@@ -3,21 +3,7 @@ title: "product manager"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_H3aQdy
-<<<<<<< .merge_file_9ImkYS
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_ZlgarF
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_H3aQdy
->>>>>>> .merge_file_SsAsa8
-=======
->>>>>>> .merge_file_ZlgarF
 qmd: "product manager"
 issues: []
 discussions: []
@@ -104,10 +90,6 @@ dependencies:
     - prd-tmpl.yaml
 ```
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -126,9 +108,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../AGENTS.md](../../../../../../../../AGENTS.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

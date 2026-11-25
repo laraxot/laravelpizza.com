@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_MiJefr
 qmd: "team user composite primary key fix"
-=======
->>>>>>> .merge_file_RoyKz6
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/team-user-composite-primary-key-fix.md

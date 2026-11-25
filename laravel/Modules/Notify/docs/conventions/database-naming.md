@@ -4,31 +4,7 @@ type: concept
 tags: [notify, docs, conventions, database, naming]
 module: Notify
 created: 2026-07-20
-<<<<<<< HEAD
-<<<<<<< .merge_file_T5FNIW
-<<<<<<< .merge_file_WLbV3q
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_FHs5nc
-=======
->>>>>>> .merge_file_plh98y
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_T5FNIW
-<<<<<<< .merge_file_WLbV3q
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_FHs5nc
-=======
->>>>>>> .merge_file_plh98y
 qmd: "notify documentazione conventions database naming database directory naming convention frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -329,42 +305,20 @@ find laravel/Modules -type d -name "Seeders"
 - [Laravel Migrations](https://laravel.com/docs/migrations)
 - [Laravel Seeders](https://laravel.com/docs/seeding)
 - [PSR-4 Autoloading](https://www.php-fig.org/psr/psr-4/)
-<<<<<<< HEAD
 - [AGENTS.md - Database Naming](../../AGENTS.md)
 - [AGENTS.md - Database Naming](../../AGENTS.md)
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_T5FNIW
-<<<<<<< .merge_file_WLbV3q
-<<<<<<< HEAD
 - [AGENTS.md - Database Naming](../../AGENTS.md)
 - [AGENTS.md - Database Naming](../../AGENTS.md)
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_plh98y
 - [AGENTS.md - Database Naming](../../agents.md)
 - [agents.md - Database Naming](../../agents.md)
-=======
 - [AGENTS.md - Database Naming](../../AGENTS.md)
 - [AGENTS.md - Database Naming](../../AGENTS.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_T5FNIW
-=======
 - [AGENTS.md - Database Naming](../../agents.md)
 - [agents.md - Database Naming](../../agents.md)
-=======
 - [AGENTS.md - Database Naming](../../agents.md)
 - [agents.md - Database Naming](../../agents.md)
-=======
 - [AGENTS.md - Database Naming](../../AGENTS.md)
 - [AGENTS.md - Database Naming](../../AGENTS.md)
->>>>>>> .merge_file_FHs5nc
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_plh98y
 
 ---
 

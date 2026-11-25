@@ -3,31 +3,7 @@ title: "qwen memories"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_JNaB4t
-<<<<<<< .merge_file_iQMkPB
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_uM4HBs
-=======
->>>>>>> .merge_file_XBLjka
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_JNaB4t
-<<<<<<< .merge_file_iQMkPB
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_uM4HBs
-=======
->>>>>>> .merge_file_XBLjka
 qmd: "qwen memories"
 issues: []
 discussions: []
@@ -37,10 +13,6 @@ discussions: []
 
 Memorie e lesson learned accumulate da Qwen.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "qwen memories"
@@ -66,13 +38,8 @@ Errori comuni:
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## Error Fix Pattern
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Seeder Best Practice
 
 - **MAI** creare utenti nuovi nei seeder (causa DB conflicts)
@@ -279,33 +246,8 @@ Usare `cinematic-particles` per background hero:
 
 - [Indice QWEN](./qwen-split-index.md)
 - [memories.md](./memories.md) - Più memorie
-<<<<<<< HEAD
-<<<<<<< .merge_file_JNaB4t
-<<<<<<< .merge_file_iQMkPB
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_uM4HBs
-=======
->>>>>>> .merge_file_XBLjka
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
-=======
-<<<<<<< HEAD
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
-=======
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_JNaB4t
-<<<<<<< .merge_file_iQMkPB
-=======
-- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_uM4HBs
-=======
->>>>>>> .merge_file_XBLjka
 - [Index principale](../../../Lang/docs/wiki/integrations/_da-riconciliare/index-3.md)

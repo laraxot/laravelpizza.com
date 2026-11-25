@@ -6,33 +6,7 @@ discussions: []
 title: handoff PHPStan zero moduli
 type: chat
 tags: [handoff, phpstan, bootstrap, quality-gate]
-<<<<<<< .merge_file_agl9dB
-<<<<<<< .merge_file_l2S6XW
-<<<<<<< .merge_file_hTrwmW
-<<<<<<< .merge_file_RNnPUz
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_7nSvXx
-=======
->>>>>>> .merge_file_pdSfzY
-=======
->>>>>>> .merge_file_i4QNAU
-<<<<<<< HEAD
-updated: 2026-06-15
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_agl9dB
-<<<<<<< .merge_file_l2S6XW
-<<<<<<< .merge_file_hTrwmW
->>>>>>> .merge_file_Bp3Jt7
-=======
->>>>>>> .merge_file_7nSvXx
-=======
->>>>>>> .merge_file_pdSfzY
-=======
->>>>>>> .merge_file_i4QNAU
 related:
   - ../wiki/memories/phpstan-modules-inventory.md
   - ../wiki/reflective.md
@@ -60,15 +34,8 @@ cd laravel && ./vendor/bin/phpstan analyse Modules
 ## Aperto (handoff precedente)
 
 - **Lang:** 8 errori chiavi duplicate (`locale_switcher_refresh`, `translation_editor`) — vedi [handoff-job-lang-merge-phpstan-confidence.md](handoff-job-lang-merge-phpstan-confidence.md)
-<<<<<<< HEAD
-- **Merge marker sweep:** `git grep '^<<<<<<< '`
-=======
-<<<<<<< HEAD
 - **Merge marker sweep:** `git grep '^CONFLICT_START '`
-=======
 - **Merge marker sweep:** `git grep '^<<<<<<< '`
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Regole sessione
 
@@ -77,26 +44,6 @@ cd laravel && ./vendor/bin/phpstan analyse Modules
 - Test: solo Pest
 
 **Agente:** Auto (Cursor) · **Data:** 2026-06-15
-<<<<<<< .merge_file_agl9dB
-<<<<<<< .merge_file_l2S6XW
-<<<<<<< .merge_file_hTrwmW
-<<<<<<< .merge_file_RNnPUz
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_Bp3Jt7
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_7nSvXx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_pdSfzY
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_i4QNAU
 
 ## Versione unita da `handoff-phpstan-modules-zero-2.md` (2026-07-07)
 
@@ -158,19 +105,3 @@ php -d memory_limit=2048M ./vendor/bin/phpstan analyse Modules --no-progress
 ## Regola nuova da rispettare
 
 **No probe**: non creare file che finiscono per `PhpstanProbeModel.php`, `PhpstanTraitProbe.php` o directory `app/Phpstan`.
-<<<<<<< .merge_file_agl9dB
-<<<<<<< .merge_file_l2S6XW
-<<<<<<< .merge_file_hTrwmW
-<<<<<<< .merge_file_RNnPUz
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_Bp3Jt7
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_7nSvXx
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_pdSfzY
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_i4QNAU

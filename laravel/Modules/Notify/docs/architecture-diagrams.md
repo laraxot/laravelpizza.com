@@ -3,15 +3,7 @@ title: "architecture diagrams"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_dsAy8c
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_aGnNbF
 qmd: "architecture diagrams"
 issues: []
 discussions: []
@@ -26,10 +18,6 @@ discussions: []
 - [Theme Architecture](#theme-architecture)
 - [Data Flow](#data-flow)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "architecture diagrams"
@@ -95,13 +83,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## System Architecture Overview
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Module Dependency Graph
 
 ```

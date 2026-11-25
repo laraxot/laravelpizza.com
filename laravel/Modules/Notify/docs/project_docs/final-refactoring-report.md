@@ -3,52 +3,16 @@ title: "🐮 Super Mucca - Final Refactoring Report"
 type: concept
 tags: [final, refactoring, report]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_GUHCdu
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_qtdLmJ
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_GUHCdu
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_qtdLmJ
 qmd: "final-refactoring-report 🐮 super mucca - final refactoring report"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-<<<<<<< HEAD
   - "./2025-excellence-achievement.md"
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_GUHCdu
-<<<<<<< HEAD
   - "./2025-excellence-achievement.md"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_qtdLmJ
   - "./excellence-achievement.md"
-=======
   - "./2025-excellence-achievement.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_GUHCdu
-=======
   - "./excellence-achievement.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_qtdLmJ
   - "./agid-implementation-guide.md"
   - "./architecture.md"
   - "./complete-refactoring-analysis.md"

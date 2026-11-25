@@ -4,31 +4,7 @@ type: index
 tags: [notify, docs, ai-agents, split, claude]
 module: Notify
 created: 2026-07-20
-<<<<<<< HEAD
-<<<<<<< .merge_file_5mM1Z2
-<<<<<<< .merge_file_cj36iD
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_MpXNtk
-=======
->>>>>>> .merge_file_WX7925
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_5mM1Z2
-<<<<<<< .merge_file_cj36iD
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_MpXNtk
-=======
->>>>>>> .merge_file_WX7925
 qmd: "notify documentazione ai agents split claude index laravel boost guidelines (../../../../../Geo/docs/root-md-files/claude.md) index index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -43,35 +19,10 @@ related:
 ---
 # Laravel Boost Guidelines (../../../../../Geo/docs/root-md-files/claude.md) Index
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_5mM1Z2
-<<<<<<< .merge_file_cj36iD
 **Source**: [`../../../../../Geo/docs/root-md-files/claude.md`](../../../../../Geo/docs/root-md-files/claude.md) (833 lines)  
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_MpXNtk
-=======
->>>>>>> .merge_file_WX7925
 **Source**: [`../../../../../Geo/docs/root-md-files/claude.md`](../../../../../Geo/docs/root-md-files/claude.md) (833 lines)  
-=======
-<<<<<<< HEAD
 **Source**: [`../../../../../Geo/docs/root-md-files/claude.md`](../../../../../Geo/docs/root-md-files/claude.md) (833 lines)  
-=======
 **Source**: [`../../../../../Geo/docs/root-md-files/claude.md`](../../../../../Geo/docs/root-md-files/claude.md) (833 lines)  
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_5mM1Z2
-<<<<<<< .merge_file_cj36iD
-=======
-**Source**: [`../../../../../Geo/docs/root-md-files/claude.md`](../../../../../Geo/docs/root-md-files/claude.md) (833 lines)  
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_MpXNtk
-=======
->>>>>>> .merge_file_WX7925
 **Split Into**: 20 focused files  
 **Last Updated**: 2026-04-11  
 
@@ -150,70 +101,20 @@ related:
 
 ### Bidirectional Links
 - ← Back to [Main AI Docs Index](../index.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_5mM1Z2
-<<<<<<< .merge_file_cj36iD
 - ← Back to [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md) (original source)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_MpXNtk
-=======
->>>>>>> .merge_file_WX7925
 - ← Back to [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md) (original source)
-=======
-<<<<<<< HEAD
 - ← Back to [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md) (original source)
-=======
 - ← Back to [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md) (original source)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_5mM1Z2
-<<<<<<< .merge_file_cj36iD
-=======
-- ← Back to [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md) (original source)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_MpXNtk
-=======
->>>>>>> .merge_file_WX7925
 - ← Back to [Project Docs](../../../docs/README.md)
 
 ---
 
 ## Usage
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_5mM1Z2
-<<<<<<< .merge_file_cj36iD
 These guidelines are automatically loaded by Claude/Laravel Boost MCP. For manual reference, see the original [`../../../../../Geo/docs/root-md-files/claude.md`](../../../../../Geo/docs/root-md-files/claude.md).
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_MpXNtk
-=======
->>>>>>> .merge_file_WX7925
 These guidelines are automatically loaded by Claude/Laravel Boost MCP. For manual reference, see the original [`../../../../../Geo/docs/root-md-files/claude.md`](../../../../../Geo/docs/root-md-files/claude.md).
-=======
-<<<<<<< HEAD
 These guidelines are automatically loaded by Claude/Laravel Boost MCP. For manual reference, see the original [`../../../../../Geo/docs/root-md-files/claude.md`](../../../../../Geo/docs/root-md-files/claude.md).
-=======
 These guidelines are automatically loaded by Claude/Laravel Boost MCP. For manual reference, see the original [`../../../../../Geo/docs/root-md-files/claude.md`](../../../../../Geo/docs/root-md-files/claude.md).
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_5mM1Z2
-<<<<<<< .merge_file_cj36iD
-=======
-These guidelines are automatically loaded by Claude/Laravel Boost MCP. For manual reference, see the original [`../../../../../Geo/docs/root-md-files/claude.md`](../../../../../Geo/docs/root-md-files/claude.md).
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_MpXNtk
-=======
->>>>>>> .merge_file_WX7925
 
 ---
 

@@ -3,25 +3,7 @@ title: "json migration error"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_BY4UpY
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_XdpcxJ
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_BY4UpY
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_XdpcxJ
 qmd: "json migration error"
 issues: []
 discussions: []
@@ -175,29 +157,8 @@ if ($validRecords !== $totalRecords) {
 
 - [Documentazione Migrazioni](./migration-rules-2.md)
 - [Best Practices JSON](./json-best-practices-2.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_BY4UpY
 - [Gestione Errori](../../User/docs/error-handling-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_XdpcxJ
 - [Gestione Errori](../../User/docs/error-handling-2.md)
-=======
-<<<<<<< HEAD
-- [Gestione Errori](../../User/docs/error-handling-2.md)
-=======
-- [Gestione Errori](../../User/docs/error-handling-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_BY4UpY
-=======
-- [Gestione Errori](../../User/docs/error-handling-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_XdpcxJ
 
 ## Note Importanti
 

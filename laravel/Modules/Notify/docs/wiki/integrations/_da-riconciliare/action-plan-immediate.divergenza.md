@@ -7,23 +7,7 @@ module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_3klDjf
-=======
-<<<<<<< .merge_file_LNb1e4
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_BE3821
-=======
->>>>>>> .merge_file_cDtl3r
->>>>>>> laraxot/dev
 ---
 
 # Divergenza: `action-plan-immediate.md`

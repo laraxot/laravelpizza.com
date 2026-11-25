@@ -3,21 +3,7 @@ title: "custom question types implementation"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_rbf7xL
-<<<<<<< .merge_file_nON02Q
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_ZHGbop
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_rbf7xL
->>>>>>> .merge_file_VLxEqe
-=======
->>>>>>> .merge_file_ZHGbop
 qmd: "custom question types implementation"
 issues: []
 discussions: []
@@ -404,10 +390,6 @@ return AnswersChartData::from([
 ### Tests
 - `Modules/<nome progetto>/tests/Unit/Actions/QuestionChart/CustomQuestionTypesTest.php`
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ### Fila5 Implementation
 - `Modules/<nome progetto>/app/Actions/QuestionChart/Custom/`
 - `Modules/<nome progetto>/app/Actions/QuestionChart/GetAnswersByQuestionChart.php`
@@ -415,11 +397,6 @@ return AnswersChartData::from([
 ### Tests
 - `Modules/<nome progetto>/tests/Unit/Actions/QuestionChart/CustomQuestionTypesTest.php`
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ### GitHub
 - [Custom Chart Implementation Issue](.github/ISSUE_TEMPLATE/custom-chart-implementation.md)
 - [Progress Update](.github/ISSUE_TEMPLATE/custom-chart-progress-update.md)

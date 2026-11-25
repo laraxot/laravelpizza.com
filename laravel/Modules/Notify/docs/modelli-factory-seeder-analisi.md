@@ -3,15 +3,7 @@ title: "modelli factory seeder analisi"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_rjJX0v
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_3nC4dt
 qmd: "modelli factory seeder analisi"
 issues: []
 discussions: []
@@ -555,14 +547,7 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 
 ### Moduli Collegati
 - [<nome progetto> Module](../../<nome progetto>/docs/modelli-factory-seeder-analisi-2.md) - Notifiche mediche
-<<<<<<< HEAD
 - [<nome progetto> Module](../../<nome progetto>/docs/modelli-factory-seeder-analisi-2.md) - Notifiche mediche
-=======
-<<<<<<< HEAD
-- [<nome progetto> Module](../../<nome progetto>/docs/modelli-factory-seeder-analisi-2.md) - Notifiche mediche
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [User Module](../../User/docs/modelli-factory-seeder-analisi-3.md) - Notifiche utente
 - [Media Module](../../Media/docs/modelli-factory-seeder-analisi-2.md) - Allegati notifiche
 - [Lang Module](../../Lang/docs/modelli-factory-seeder-analisi-2.md) - Localizzazione

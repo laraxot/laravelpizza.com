@@ -7,25 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_bDdxAq
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_y1q8bc
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_bDdxAq
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_y1q8bc
 status: draft
 ---
 
@@ -46,35 +28,15 @@ status: draft
 
 ### Per Sviluppatori
 - [Architecture Overview](./architecture/README.md)
-<<<<<<< HEAD
 - [Getting Started](../../../getting-started-2.md)
-<<<<<<< .merge_file_bDdxAq
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Getting Started](../../../getting-started-2.md)
-=======
->>>>>>> .merge_file_y1q8bc
 - [Getting Started](../../../getting-started-2.md)
-=======
-<<<<<<< .merge_file_KLp0Mn
 - [Getting Started](./getting-started-2.md)
-=======
-<<<<<<< .merge_file_bDdxAq
 - [Getting Started](../../../getting-started-2.md)
 - [Getting Started](../../../getting-started-2.md)
->>>>>>> .merge_file_QE5d84
->>>>>>> laraxot/dev
-=======
-- [Getting Started](../../../getting-started-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 - [Getting Started](../../../getting-started-2.md)
 - [Getting Started](../../../getting-started-2.md)
->>>>>>> .merge_file_QE5d84
->>>>>>> laraxot/dev
->>>>>>> .merge_file_y1q8bc
+- [Getting Started](../../../getting-started-2.md)
 - [Coding Standards](./conventions/README.md)
 
 ### Per AI Agents
@@ -113,34 +75,15 @@ status: draft
 
 ### 📊 Reports
 - [Status Reports](./reports/README.md)
-<<<<<<< HEAD
 - [Quality Reports](../../../roadmap/quality.md)
 - [Quality Reports](../../../roadmap/quality.md)
-=======
-<<<<<<< .merge_file_bDdxAq
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Quality Reports](../../../roadmap/quality.md)
 - [Quality Reports](../../../roadmap/quality.md)
-=======
-=======
->>>>>>> .merge_file_y1q8bc
-<<<<<<< .merge_file_KLp0Mn
 - [Quality Reports](./reports/quality.md)
-=======
 - [Quality Reports](../../../roadmap/quality.md)
-<<<<<<< .merge_file_bDdxAq
 - [Quality Reports](../../../roadmap/quality.md)
->>>>>>> .merge_file_QE5d84
->>>>>>> laraxot/dev
-=======
 - [Quality Reports](../../../roadmap/quality.md)
->>>>>>> laraxot/dev
-=======
 - [Quality Reports](../../../roadmap/quality.md)
->>>>>>> .merge_file_QE5d84
->>>>>>> .merge_file_y1q8bc
->>>>>>> laraxot/dev
 - [Performance Reports](./reports/performance.md)
 
 ---

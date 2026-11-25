@@ -3,31 +3,7 @@ title: "filament extension pattern"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_Ce1R6x
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_Ffw2YB
-<<<<<<< .merge_file_3VxfqZ
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_H6RtMl
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_SeHJD3
-=======
-<<<<<<< .merge_file_Ffw2YB
->>>>>>> .merge_file_Bp9QQd
-=======
->>>>>>> .merge_file_H6RtMl
->>>>>>> laraxot/dev
 qmd: "filament extension pattern"
 issues: []
 discussions: []

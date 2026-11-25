@@ -3,21 +3,7 @@ title: "00 index"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_D27PIl
-<<<<<<< .merge_file_ZHgspy
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_aNL0nr
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_D27PIl
->>>>>>> .merge_file_ohhhKh
-=======
->>>>>>> .merge_file_aNL0nr
 qmd: "00 index"
 issues: []
 discussions: []
@@ -30,10 +16,6 @@ discussions: []
 **Status**: ✅ ALWAYS ACTIVE  
 **Priority**: BLOCKER (violation = STOP immediately)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "00 index"
@@ -95,15 +77,10 @@ class PredictTableWidget extends TableWidget
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 Rule #1: Filament Tables for Lists
 ### ✅ CORRECT - Filament Table Widget
 ### ❌ WRONG - Custom Blade
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🎯 Rule #2: Multi-Outcome Universal
 
 > **TUTTO è multi-risposta** (anche SÌ/NO = 2 outcomes)

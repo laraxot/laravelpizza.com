@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_Gky6i0
 ---
 title: "User Module - Product Requirements Document (PRD)"
 type: note
 qmd: "user product requirements document prd"
 ---
-=======
->>>>>>> .merge_file_Mz4NHV
 # User Module - Product Requirements Document (PRD)
 
 ## Document Information

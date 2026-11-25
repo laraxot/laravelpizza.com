@@ -3,27 +3,8 @@ title: "🏆 FIXCITY - PERFEZIONE RAGGIUNTA"
 type: concept
 tags: [perfection, achieved]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_S2CvfV
-=======
-<<<<<<< .merge_file_0w4Ker
->>>>>>> laraxot/dev
 updated: 2026-11-23
 qmd: "perfection-achieved 🏆 fixcity - perfezione raggiunta"
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-qmd: "perfection-achieved 🏆 fixcity - perfezione raggiunta"
-qmd: "perfection-achieved 🏆 ptv - perfezione raggiunta"
-=======
-updated: 2026-11-23
-qmd: "perfection-achieved 🏆 fixcity - perfezione raggiunta"
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_ic73DE
-=======
->>>>>>> .merge_file_AJFLHU
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
@@ -31,29 +12,12 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< HEAD
-<<<<<<< .merge_file_S2CvfV
-=======
-<<<<<<< .merge_file_0w4Ker
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
->>>>>>> .merge_file_ic73DE
-=======
->>>>>>> .merge_file_AJFLHU
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

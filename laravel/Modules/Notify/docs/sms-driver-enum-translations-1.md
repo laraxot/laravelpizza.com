@@ -3,25 +3,7 @@ title: "sms driver enum translations 1"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_Ud9PgZ
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_p2vlZJ
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Ud9PgZ
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_p2vlZJ
 qmd: "sms driver enum translations 1"
 issues: []
 discussions: []
@@ -212,13 +194,6 @@ php -l laravel/Modules/Notify/lang/de/sms_driver_enum.php
 - [TransTrait](../../Xot/app/Traits/TransTrait.php)
 - [Configurazione SMS](../config/sms.php)
 - [Documentazione Traduzioni](../../Lang/docs/)
-<<<<<<< .merge_file_Ud9PgZ
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_p2vlZJ
 - [Documentazione Traduzioni](../../Lang/docs/)
 - [Documentazione Traduzioni](../../Lang/docs/)
 - [Documentazione Traduzioni](../../Lang/docs/)
@@ -249,29 +224,14 @@ php -l laravel/Modules/Notify/lang/de/sms_driver_enum.php
 - [Documentazione Traduzioni](../../Lang/docs/)
 - [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../Lang/docs/)- [Documentazione Traduzioni](../../Lang/project_docs/)
-<<<<<<< .merge_file_Ud9PgZ
-<<<<<<< HEAD
-=======
-=======
 - [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../Lang/docs/)- [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../Lang/project_docs/)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_p2vlZJ
 - [Documentazione Traduzioni](../../Lang/docs/)
 - [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../Lang/docs/)- [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../Lang/project_docs/)
 
-<<<<<<< .merge_file_Ud9PgZ
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_p2vlZJ
 ---
 
 title: "sms driver enum translations 1"
@@ -427,27 +387,12 @@ discussions: []
 - [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../Lang/docs/)- [Documentazione Traduzioni](../../Lang/project_docs/)
 
-<<<<<<< HEAD
 ---
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_Ud9PgZ
 ---
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_p2vlZJ
 - [Documentazione Traduzioni](../../Lang/docs/)
 - [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../Lang/docs/)- [Documentazione Traduzioni](../../Lang/project_docs/)
-=======
 ---
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Ud9PgZ
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_p2vlZJ
 
 - [Documentazione Traduzioni](../../Lang/docs/)
 - [Documentazione Traduzioni](../../Lang/project_docs/)
@@ -549,8 +494,6 @@ discussions: []
 
 ---
 
----
-
 - [Documentazione Traduzioni](../../Lang/docs/)
 
 ---
@@ -638,10 +581,6 @@ discussions: []
 - [Documentazione Traduzioni](../../Lang/docs/)- [Documentazione Traduzioni](../../Lang/project_docs/)
 
 ---
-<<<<<<< .merge_file_Ud9PgZ
-<<<<<<< HEAD
-=======
-=======
 - [Documentazione Traduzioni](../../Lang/docs/)
 - [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../Lang/docs/)- [Documentazione Traduzioni](../../Lang/project_docs/)
@@ -649,11 +588,3 @@ discussions: []
 - [Documentazione Traduzioni](../../Lang/docs/)
 - [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../Lang/docs/)- [Documentazione Traduzioni](../../Lang/project_docs/)
-
-- [Documentazione Traduzioni](../../Lang/docs/)
-- [Documentazione Traduzioni](../../Lang/project_docs/)
-- [Documentazione Traduzioni](../../Lang/docs/)- [Documentazione Traduzioni](../../Lang/project_docs/)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_p2vlZJ

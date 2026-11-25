@@ -3,21 +3,7 @@ title: "filament 5x compatibility"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_TYHAez
-<<<<<<< .merge_file_Tb46qq
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_qAwt0q
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_TYHAez
->>>>>>> .merge_file_bLn4cf
-=======
->>>>>>> .merge_file_qAwt0q
 qmd: "filament 5x compatibility"
 issues: []
 discussions: []

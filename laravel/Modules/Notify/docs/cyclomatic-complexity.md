@@ -7,21 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< .merge_file_UB7Ilf
-<<<<<<< .merge_file_fNzbwN
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_jETiPT
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_UB7Ilf
->>>>>>> .merge_file_h16xJg
-=======
->>>>>>> .merge_file_jETiPT
 ---
 
 # Cyclomatic Complexity Report - Module: Notify

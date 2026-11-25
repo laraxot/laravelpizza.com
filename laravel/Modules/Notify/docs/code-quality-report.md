@@ -3,21 +3,7 @@ title: "code quality report"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_15zwDw
-<<<<<<< .merge_file_K7FK6w
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_VELWKe
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_15zwDw
->>>>>>> .merge_file_VNVBxG
-=======
->>>>>>> .merge_file_VELWKe
 qmd: "code quality report"
 issues: []
 discussions: []
@@ -106,7 +92,6 @@ Report locale (2026-07-17). Metodo: `phpstan analyse` livello max, `phpmd` (rule
 | UI | - | - | 34% | 4 |
 | User | - | - | 23% | 4 |
 | Xot | - | - | 28% | 57 |
-
 
 
 ## Come migliorare — modifiche effettive da fare

@@ -3,15 +3,7 @@ title: "psr4 namespace warnings"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_RHACcy
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_fHBmaw
 qmd: "psr4 namespace warnings"
 issues: []
 discussions: []
@@ -105,10 +97,6 @@ php artisan optimize:clear
 **Documentazione correlata**:
 - [Xot/docs/module-namespace-path-convention.md](../../xot/docs/module-namespace-path-convention.md)
 - [Xot/docs/modules/structure.md](../../xot/docs/modules/structure.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -124,8 +112,3 @@ discussions: []
 **Status**: ✅ File conformi PSR-4  
 **Azione**: Nessuna (già corretti)
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

@@ -3,31 +3,7 @@ title: "email troubleshooting"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_fvNnt8
-<<<<<<< .merge_file_qrbYeQ
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_6TdZKF
-=======
->>>>>>> .merge_file_uEsr71
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_fvNnt8
-<<<<<<< .merge_file_qrbYeQ
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_6TdZKF
-=======
->>>>>>> .merge_file_uEsr71
 qmd: "email troubleshooting"
 issues: []
 discussions: []
@@ -81,38 +57,15 @@ L'implementazione attuale include:
 3. **Gestione opzionale di nome e MIME type**: Personalizzazione flessibile degli allegati
 4. **Documentazione PHPDoc completa**: Miglior supporto IDE e type hints
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_fvNnt8
-<<<<<<< .merge_file_qrbYeQ
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_6TdZKF
-=======
->>>>>>> .merge_file_uEsr71
 Per maggiori dettagli, consultare [attachments-usage-2.md](attachments-usage-2.md).
 Per maggiori dettagli, consultare [attachments-usage-2.md](./attachments-usage-2.md).
-=======
-<<<<<<< .merge_file_xhPfvm
 Per maggiori dettagli, consultare [attachments-usage-2.md](attachments-usage-2.md).
-=======
-Per maggiori dettagli, consultare [attachments-usage-2.md](attachments-usage-2.md).
-<<<<<<< .merge_file_fvNnt8
-<<<<<<< .merge_file_qrbYeQ
-Per maggiori dettagli, consultare [attachments-usage-2.md](./attachments-usage-2.md).
->>>>>>> .merge_file_btTFfA
->>>>>>> laraxot/dev
-=======
 Per maggiori dettagli, consultare [attachments-usage-2.md](attachments-usage-2.md).
 Per maggiori dettagli, consultare [attachments-usage-2.md](./attachments-usage-2.md).
-=======
+Per maggiori dettagli, consultare [attachments-usage-2.md](attachments-usage-2.md).
 Per maggiori dettagli, consultare [attachments-usage-2.md](./attachments-usage-2.md).
->>>>>>> .merge_file_btTFfA
->>>>>>> .merge_file_6TdZKF
-=======
 Per maggiori dettagli, consultare [attachments-usage-2.md](./attachments-usage-2.md).
->>>>>>> .merge_file_btTFfA
->>>>>>> .merge_file_uEsr71
->>>>>>> laraxot/dev
+Per maggiori dettagli, consultare [attachments-usage-2.md](./attachments-usage-2.md).
 
 ### 2. Errore: "View [notify::emails.template-name] not found"
 
@@ -271,57 +224,15 @@ public function test_can_send_email_with_attachments()
 
 ## Collegamenti alla Documentazione Correlata
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_fvNnt8
-<<<<<<< .merge_file_qrbYeQ
 - [attachments-usage-2.md](./attachments-usage-2.md)
 - [email-layouts-best-practices-2.md](../mail-templates/email-layouts-best-practices-2.md)
 - [spatie-mail-templates-structure-2.md](../mail-templates/spatie-mail-templates-structure-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_6TdZKF
-=======
->>>>>>> .merge_file_uEsr71
-=======
-<<<<<<< .merge_file_xhPfvm
 - [attachments-usage-2.md](attachments-usage-2.md)
 - [email-layouts-best-practices-2.md](../mail-templates/email-layouts-best-practices-2.md)
 - [spatie-mail-templates-structure-2.md](../mail-templates/spatie-mail-templates-structure-2.md)
-=======
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_fvNnt8
-<<<<<<< .merge_file_qrbYeQ
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_6TdZKF
-=======
->>>>>>> .merge_file_uEsr71
 - [attachments-usage-2.md](attachments-usage-2.md)
 - [email-layouts-best-practices-2.md](../mail-templates/email-layouts-best-practices-2.md)
 - [spatie-mail-templates-structure-2.md](../mail-templates/spatie-mail-templates-structure-2.md)
 - [attachments-usage-2.md](./attachments-usage-2.md)
 - [email-layouts-best-practices-2.md](../mail-templates/email-layouts-best-practices-2.md)
 - [spatie-mail-templates-structure-2.md](../mail-templates/spatie-mail-templates-structure-2.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_fvNnt8
-<<<<<<< .merge_file_qrbYeQ
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_btTFfA
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_btTFfA
->>>>>>> laraxot/dev
->>>>>>> .merge_file_6TdZKF
-=======
-=======
->>>>>>> .merge_file_btTFfA
->>>>>>> laraxot/dev
->>>>>>> .merge_file_uEsr71

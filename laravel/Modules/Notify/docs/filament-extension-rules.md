@@ -3,21 +3,7 @@ title: "filament extension rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_p1SX5u
-<<<<<<< .merge_file_gof3Ii
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_d8SXQr
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_p1SX5u
->>>>>>> .merge_file_eiKeIy
-=======
->>>>>>> .merge_file_d8SXQr
 qmd: "filament extension rules"
 issues: []
 discussions: []
@@ -257,10 +243,6 @@ class CreateUserAction
 app(CreateUserAction::class)->execute($data);
 ```
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "filament extension rules"
@@ -335,9 +317,6 @@ find Modules -path "*/Filament/*/*.php" -type f -exec grep -l "extends.*Filament
 ```
 
 Le pagine che violano questa regola devono essere immediatamente corrette per mantenere l'integrità dell'architettura.
-<<<<<<< HEAD
-=======
-=======
 # Regole di Estensione delle Classi Filament
 ## Regola Fondamentale
 ## Mappatura Classi Corretta
@@ -347,5 +326,3 @@ Le pagine che violano questa regola devono essere immediatamente corrette per ma
 ## Motivazione
 ## Vantaggi del Pattern di Wrapper
 ## Verifica
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

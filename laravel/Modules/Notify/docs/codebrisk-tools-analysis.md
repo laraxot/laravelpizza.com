@@ -3,21 +3,7 @@ title: "codebrisk tools analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_QLUpWD
-<<<<<<< .merge_file_5JTe39
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_ABjhkQ
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_QLUpWD
->>>>>>> .merge_file_ntE8iC
-=======
->>>>>>> .merge_file_ABjhkQ
 qmd: "codebrisk tools analysis"
 issues: []
 discussions: []
@@ -27,10 +13,6 @@ discussions: []
 
 Questo documento analizza in dettaglio tre risorse del blog CodeBrisk e i relativi package, con vantaggi, svantaggi, snippet di implementazione e consigli d’uso.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 title: "codebrisk tools analysis"
 type: note
@@ -78,12 +60,7 @@ protected function schedule(Schedule $schedule)
 - Complessità minima di setup e configurazione.
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## 1. Laravel Mailator
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 2. mailspfchecker
 Link: https://codebrisk.com/blog/check-if-you-can-send-email-via-given-mail-server-in-laravel
 Package: `dietercoopman/mailspfchecker`

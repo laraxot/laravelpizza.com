@@ -3,21 +3,7 @@ title: "test smtp"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_0I6XHm
-<<<<<<< .merge_file_S6sDn7
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_6OxwPX
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_0I6XHm
->>>>>>> .merge_file_5GOMMS
-=======
->>>>>>> .merge_file_6OxwPX
 qmd: "test smtp"
 issues: []
 discussions: []
@@ -71,11 +57,4 @@ Mail::raw('Test SMTP', function($m){ $m->to('tuo@email.com')->subject('Test SMTP
 - [TestSmtpPage vs SendEmail: differenze architetturali](./test-smtp-2.md)
 - [Best practice per la configurazione SMTP](./EMAIL_BEST_PRACTICES.md)
 - [Documentazione Laravel Mail](https://laravel.com/project_docs/mail)
-<<<<<<< HEAD
 - [Documentazione Laravel Mail](https://laravel.com/project_docs/mail)
-=======
-<<<<<<< HEAD
-- [Documentazione Laravel Mail](https://laravel.com/project_docs/mail)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

@@ -3,31 +3,7 @@ title: "gemini overview"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_s6On5E
-<<<<<<< .merge_file_R4oZyi
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_q5F80N
-=======
->>>>>>> .merge_file_zXeW1B
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_s6On5E
-<<<<<<< .merge_file_R4oZyi
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_q5F80N
-=======
->>>>>>> .merge_file_zXeW1B
 qmd: "gemini overview"
 issues: []
 discussions: []
@@ -41,10 +17,6 @@ Panoramica del progetto Laravel per agenti Gemini.
 
 Questo è un progetto Laravel che fornisce un tema "meetup" per Laravel meetups. Usa un'architettura modulare chiamata "Laraxot", dove le feature sono separate in moduli. Il progetto usa tecnologie moderne come Folio (file-based routing) e Volt (single-file Livewire components), e Filament per l'admin panel.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "gemini overview"
@@ -73,14 +45,9 @@ Questo installerà:
 - Build frontend assets
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## Building and Running
 ### Setup
 # Dalla cartella laravel
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ### Development
 
@@ -117,33 +84,9 @@ composer run test
 ## 🔗 Link
 
 - [Indice GEMINI](./gemini-split-index.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_s6On5E
-<<<<<<< .merge_file_R4oZyi
 - [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_q5F80N
-=======
->>>>>>> .merge_file_zXeW1B
 - [gemini-2.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
-=======
-<<<<<<< HEAD
 - [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
-=======
 - [gemini-2.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_s6On5E
-<<<<<<< .merge_file_R4oZyi
-=======
 - [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_q5F80N
-=======
->>>>>>> .merge_file_zXeW1B
 - [Index principale](../../../Lang/docs/wiki/integrations/_da-riconciliare/index-3.md)

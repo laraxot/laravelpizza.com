@@ -3,21 +3,7 @@ title: "cyclomatic complexity summary"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_lTZNcu
-<<<<<<< .merge_file_ayZldb
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_TJUGR1
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_lTZNcu
->>>>>>> .merge_file_irM59D
-=======
->>>>>>> .merge_file_TJUGR1
 qmd: "cyclomatic complexity summary"
 issues: []
 discussions: []
@@ -28,10 +14,6 @@ discussions: []
 **Generated:** 2025-10-01 19:44:12  
 **Analyzer:** Super Mucca 🐮
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "cyclomatic complexity summary"
@@ -55,13 +37,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 📊 Global Statistics
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 📈 Global Complexity Distribution
 
 | Risk Level | Count | Percentage |

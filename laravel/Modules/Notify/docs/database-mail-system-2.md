@@ -3,21 +3,7 @@ title: "database mail system"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_re3TRW
-<<<<<<< .merge_file_8JxQpC
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_3gBiYI
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_re3TRW
->>>>>>> .merge_file_YDVBnr
-=======
->>>>>>> .merge_file_3gBiYI
 qmd: "database mail system"
 issues: []
 discussions: []

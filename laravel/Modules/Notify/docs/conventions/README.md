@@ -4,21 +4,7 @@ type: index
 tags: [notify, docs, conventions]
 module: Notify
 created: 2026-07-20
-<<<<<<< .merge_file_4NsvTI
-<<<<<<< .merge_file_7OOmkG
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_5vOEOB
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_4NsvTI
->>>>>>> .merge_file_icjNEw
-=======
->>>>>>> .merge_file_5vOEOB
 qmd: "notify documentazione conventions readme 📏 coding conventions index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"

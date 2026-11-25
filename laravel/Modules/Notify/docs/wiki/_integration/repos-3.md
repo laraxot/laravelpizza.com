@@ -5,23 +5,9 @@ status: active
 module: Notify
 scope: documentation
 bmad_version: 1.0
-<<<<<<< HEAD
 updated: 2026-11-23
 created: 2026-11-23
 qmd: "repos notify document"
-=======
-<<<<<<< .merge_file_trN4He
-updated: 2026-11-23
-created: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-10-06
-=======
-updated: 2026-11-23
-created: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_J2Fc3x
->>>>>>> laraxot/dev
 ---
 
 # _repos

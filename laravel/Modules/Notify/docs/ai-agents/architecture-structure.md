@@ -3,21 +3,7 @@ title: "architecture structure"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_lIMPXr
-<<<<<<< .merge_file_KCTcKW
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_LAZsar
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_lIMPXr
->>>>>>> .merge_file_Ol2cjq
-=======
->>>>>>> .merge_file_LAZsar
 qmd: "architecture structure"
 issues: []
 discussions: []

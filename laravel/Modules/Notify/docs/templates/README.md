@@ -4,15 +4,7 @@ type: index
 tags: [notify, docs, templates]
 module: Notify
 created: 2026-07-20
-<<<<<<< .merge_file_ALqCJU
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_EAjSWb
 qmd: "notify documentazione templates readme template email index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -171,13 +163,6 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 ---
 
 <!-- Merged from README.md, which collided with this file on case-insensitive filesystems. -->
-<<<<<<< .merge_file_ALqCJU
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_EAjSWb
 
 ---
 title: "Readme"
@@ -192,8 +177,3 @@ related:
   - "./module-readme-template.md"
 ---
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

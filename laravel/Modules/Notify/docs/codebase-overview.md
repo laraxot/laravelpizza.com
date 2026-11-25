@@ -30,21 +30,7 @@ github:
 created_at: '2026-07-20'
 updated_at: '2026-07-20'
 created: 2026-07-20
-<<<<<<< .merge_file_GVk9GI
-<<<<<<< .merge_file_pNWv0l
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_G1TUvP
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_GVk9GI
->>>>>>> .merge_file_oidLwM
-=======
->>>>>>> .merge_file_G1TUvP
 ---
 
 # Panoramica codebase Notify

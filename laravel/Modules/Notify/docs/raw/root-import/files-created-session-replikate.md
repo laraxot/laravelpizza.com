@@ -3,15 +3,7 @@ title: "files created session replikate"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_qIyofR
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_8nyzp6
 qmd: "files created session replikate"
 issues: []
 discussions: []
@@ -51,10 +43,6 @@ Project Root:
 └── FILES-CREATED-SESSION-REPLIKATE.md  ✅ THIS FILE
 ```
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "files created session replikate"
@@ -79,13 +67,8 @@ discussions: []
 ```
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## 🧪 Analysis Output Files
 ### Temporary Analysis Directory
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## 📊 Document Summary
 

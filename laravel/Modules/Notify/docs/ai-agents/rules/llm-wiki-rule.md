@@ -3,21 +3,7 @@ title: "llm wiki rule"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_qvxweW
-<<<<<<< .merge_file_MgSmeE
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_uR2CqP
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_qvxweW
->>>>>>> .merge_file_FREie2
-=======
->>>>>>> .merge_file_uR2CqP
 qmd: "llm wiki rule"
 issues: []
 discussions: []

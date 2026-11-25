@@ -3,15 +3,7 @@ title: "notifications implementation guide"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_cT5bz4
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_jiJk30
 qmd: "notifications implementation guide"
 issues: []
 discussions: []

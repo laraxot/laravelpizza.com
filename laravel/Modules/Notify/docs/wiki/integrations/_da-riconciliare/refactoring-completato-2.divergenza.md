@@ -7,23 +7,7 @@ module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_4x78Nv
-=======
-<<<<<<< .merge_file_Ka9pIC
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_lYi8Vy
-=======
->>>>>>> .merge_file_StY3nX
->>>>>>> laraxot/dev
 ---
 
 # Divergenza: `REFACTORING_COMPLETATO.md`

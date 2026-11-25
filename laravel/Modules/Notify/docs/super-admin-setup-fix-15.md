@@ -3,15 +3,7 @@ title: "super admin setup fix 2025 10 15"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ZR0W8Q
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_aMDF6W
 qmd: "super admin setup fix 2025 10 15"
 issues: []
 discussions: []

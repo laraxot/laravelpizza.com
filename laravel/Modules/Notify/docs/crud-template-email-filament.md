@@ -3,21 +3,7 @@ title: "crud template email filament"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_AIfMn6
-<<<<<<< .merge_file_tGCcwP
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_vmZEbv
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_AIfMn6
->>>>>>> .merge_file_unqqTG
-=======
->>>>>>> .merge_file_vmZEbv
 qmd: "crud template email filament"
 issues: []
 discussions: []
@@ -28,10 +14,6 @@ discussions: []
 ## Obiettivo
 Consentire la gestione runtime (CRUD) dei template email direttamente dal backend Filament, con fallback su file statici. Garantire robustezza, versioning, localizzazione e coerenza con le regole <nome progetto>.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "crud template email filament"
@@ -59,12 +41,7 @@ Schema::create('email_templates', function (Blueprint $table) {
 ```
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## 1. Struttura Database (Esempio Migration)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## 2. Model Eloquent
 ```php

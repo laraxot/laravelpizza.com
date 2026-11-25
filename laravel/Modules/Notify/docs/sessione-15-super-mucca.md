@@ -3,15 +3,7 @@ title: "sessione 2025 10 15 super mucca"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_eXkE1M
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_e9vcRf
 qmd: "sessione 2025 10 15 super mucca"
 issues: []
 discussions: []
@@ -23,13 +15,6 @@ discussions: []
 
 Analizzare e documentare la necessità di creare `XotBasePivot` seguendo principi **DRY** e **KISS**, poi **implementare** la soluzione con **PHPStan Level 10** compliance.
 
-<<<<<<< .merge_file_eXkE1M
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_e9vcRf
 ---
 
 title: "sessione 2025 10 15 super mucca"
@@ -91,18 +76,10 @@ discussions: []
 
 ---
 
-<<<<<<< .merge_file_eXkE1M
-<<<<<<< HEAD
-=======
-=======
 ## ✅ Lavoro Completato
 ### 1. Analisi Architettuale Completa (2 ore)
 #### 📄 Documenti Principali
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_e9vcRf
 ### 2. Implementazione XotBasePivot (30 min)
 
 #### ✅ File Implementati con PHPStan Level 10
@@ -471,15 +448,4 @@ Per domande su questa sessione:
 3. Contattare team per Q&A session
 
 **Ready for Team Review and Implementation! 🚀**
-<<<<<<< .merge_file_eXkE1M
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-
->>>>>>> .merge_file_e9vcRf

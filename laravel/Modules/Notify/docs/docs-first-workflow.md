@@ -3,21 +3,7 @@ title: "docs first workflow"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_EI03NW
-<<<<<<< .merge_file_yBOJ3r
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_Vusv5T
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_EI03NW
->>>>>>> .merge_file_3snYUU
-=======
->>>>>>> .merge_file_Vusv5T
 qmd: "docs first workflow"
 issues: []
 discussions: []

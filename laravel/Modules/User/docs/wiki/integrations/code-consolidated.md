@@ -5,10 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_18YQ3n
 qmd: "code consolidated"
-=======
->>>>>>> .merge_file_PPZgof
 ---
 
 # code — Consolidated Documentation
@@ -2010,14 +2007,6 @@ npm install
 ---
 
 *Il modulo User mantiene i più alti standard di qualità del codice attraverso l'utilizzo di strumenti di analisi all'avanguardia.*
-
-
-
-
-
-
-
-
 
 
 ---

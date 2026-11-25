@@ -3,21 +3,7 @@ title: "test architect"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_V0h1N2
-<<<<<<< .merge_file_25KQ70
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_wTAx9P
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_V0h1N2
->>>>>>> .merge_file_DdqeLz
-=======
->>>>>>> .merge_file_wTAx9P
 qmd: "test architect"
 issues: []
 discussions: []
@@ -107,10 +93,6 @@ dependencies:
     - story-tmpl.yaml
 ```
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -129,9 +111,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../AGENTS.md](../../../../../../../../AGENTS.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

@@ -3,21 +3,7 @@ title: "baseuser dry violation 2025 10 15"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_cNaFLt
-<<<<<<< .merge_file_1s3rzm
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_zyMtxZ
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_cNaFLt
->>>>>>> .merge_file_Bn1cDC
-=======
->>>>>>> .merge_file_zyMtxZ
 qmd: "baseuser dry violation 2025 10 15"
 issues: []
 discussions: []

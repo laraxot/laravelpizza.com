@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_2uqUZS
 qmd: "phpstan corrections summary 1"
-=======
->>>>>>> .merge_file_vMEN5R
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-corrections-summary-2.md

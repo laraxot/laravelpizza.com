@@ -3,31 +3,7 @@ title: "01 GSD Workflow"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_FMFhW6
-<<<<<<< .merge_file_GdMPEV
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_V3faQK
-=======
->>>>>>> .merge_file_HryMrd
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_FMFhW6
-<<<<<<< .merge_file_GdMPEV
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_V3faQK
-=======
->>>>>>> .merge_file_HryMrd
 qmd: "01 GSD Workflow"
 issues: []
 discussions: []
@@ -35,40 +11,11 @@ discussions: []
 
 # 🚀 GSD Workflow (Get Shit Done)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_FMFhW6
-<<<<<<< .merge_file_GdMPEV
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_V3faQK
-=======
->>>>>>> .merge_file_HryMrd
 **Part of**: [00-INDEX.md](00-index.md) — AI Agents Coordination  
 **Related**: [02-bmad-workflow-2.md](02-bmad-workflow.md) — BMAD Method
 
 ## 📋 Overview
 
-<<<<<<< .merge_file_FMFhW6
-<<<<<<< .merge_file_GdMPEV
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_V3faQK
-=======
-=======
->>>>>>> .merge_file_HryMrd
->>>>>>> laraxot/dev
 **Part of**: [00-index.md](00-index.md) — AI Agents Coordination  
 **Related**: [02-bmad-workflow.md](02-bmad-workflow.md) — BMAD Method
 
@@ -98,21 +45,6 @@ GSD is a spec-driven development system for AI coding agents.
 
 ---
 
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_FMFhW6
-<<<<<<< .merge_file_GdMPEV
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_V3faQK
-=======
->>>>>>> .merge_file_HryMrd
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🔧 Installation
 
 ```bash

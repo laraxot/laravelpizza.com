@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_QMShLT
 qmd: "spatie models verification"
-=======
->>>>>>> .merge_file_tRo66x
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/spatie-models-verification.md

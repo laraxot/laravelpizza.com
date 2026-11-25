@@ -3,15 +3,7 @@ title: "gsd bmad comprehensive guide"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_dLOkkn
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_ZaaKZO
 qmd: "gsd bmad comprehensive guide"
 issues: []
 discussions: []
@@ -25,10 +17,6 @@ discussions: []
 > **Stato**: ✅ Attivo e verificato  
 > **Versione**: 2.0 (GSD v1.26.0 + BMAD v6)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "gsd bmad comprehensive guide"
@@ -52,13 +40,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 📖 Indice
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Introduzione
 
 ### Perché GSD + BMAD?

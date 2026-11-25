@@ -4,10 +4,7 @@ module: User
 type: note
 status: active
 updated: '2026-11-23'
-<<<<<<< .merge_file_SLQDyI
 qmd: "philosophy"
-=======
->>>>>>> .merge_file_hHdgwc
 ---
 
 # User Module Philosophy

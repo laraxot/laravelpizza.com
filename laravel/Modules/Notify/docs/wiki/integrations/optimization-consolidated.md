@@ -166,14 +166,6 @@ docs/
 
 *Consolidated from: `optimization-analysis.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🎯 Principi Applicati: DRY + KISS + SOLID + ROBUST + Laraxot
 
 ### 📊 Stato Attuale
@@ -241,28 +233,12 @@ class NotificationTemplateCache
 ---
 *Stato: 🟡 Funzionale ma Necessita Reliability Enhancement*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ---
 
 ## optimization-recommendations-1
 
 *Consolidated from: `optimization-recommendations-1-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🎯 Stato Attuale e Problemi Critici
 
 ### ❌ PROBLEMI CRITICI IDENTIFICATI
@@ -753,14 +729,6 @@ php artisan notify:benchmark
 
 *Consolidated from: `optimization-recommendations.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🎯 Stato Attuale e Problemi Critici
 
 ### ❌ PROBLEMI CRITICI IDENTIFICATI
@@ -1222,14 +1190,6 @@ php artisan notify:benchmark
 
 *Consolidated from: `optimization.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🎯 Principi Applicati: DRY + KISS + SOLID + ROBUST + Laraxot
 
 ### 📊 Stato Attuale
@@ -1297,28 +1257,12 @@ class NotificationTemplateCache
 ---
 *Stato: 🟡 Funzionale ma Necessita Reliability Enhancement*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ---
 
 ## optimization_analysis
 
 *Consolidated from: `optimization_analysis.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## current state analysis
 - **total md files**: 644
 - **significant duplication**: multiple notification system documentation versions
@@ -1433,14 +1377,6 @@ docs/
 
 *Consolidated from: `optimization_recommendations.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 > ⚠️ **Historical Document**: Questo documento contiene riferimenti a progetti legacy (<nome progetto>) non più presenti nel codebase. Le raccomandazioni di ottimizzazione rimangono valide, ma adattare al contesto del progetto corrente (ptvx).
 
 ## 🎯 Stato Attuale e Problemi Critici

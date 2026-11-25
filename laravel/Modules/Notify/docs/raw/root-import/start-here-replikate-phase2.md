@@ -3,15 +3,7 @@ title: "start here replikate phase2"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_KsucCT
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_QuHaDh
 qmd: "start here replikate phase2"
 issues: []
 discussions: []
@@ -29,10 +21,6 @@ discussions: []
 **Your Job**: Execute Phase 2 - HTML Structure Fixes ⏳  
 **Time Estimate**: ~50 minutes
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "start here replikate phase2"
@@ -65,13 +53,8 @@ REPLIKATE Project Lifecycle
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 📍 You Are Here
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 📖 What To Read (In Order)
 
 ### 1️⃣ Navigation Hub (5 min read)

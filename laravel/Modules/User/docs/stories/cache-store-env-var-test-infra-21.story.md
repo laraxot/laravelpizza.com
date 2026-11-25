@@ -20,10 +20,7 @@ related:
 github:
   repository: null
   issues: []
-<<<<<<< .merge_file_Xpy0bM
 qmd: "cache store env var test infra"
-=======
->>>>>>> .merge_file_1SWDhs
 ---
 
 # phpunit.xml: CACHE_DRIVER non ha effetto, serve CACHE_STORE

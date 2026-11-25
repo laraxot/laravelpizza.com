@@ -1,21 +1,7 @@
 ---
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_zq9hKY
-<<<<<<< .merge_file_VJrsgx
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_G3XF8e
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_zq9hKY
->>>>>>> .merge_file_DPLkCH
-=======
->>>>>>> .merge_file_G3XF8e
 qmd: "actions refactoring learnings"
 issues: []
 discussions: []

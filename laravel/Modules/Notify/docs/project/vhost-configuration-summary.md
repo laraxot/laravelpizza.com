@@ -3,25 +3,7 @@ title: "🌐 VHost Configuration Summary"
 type: concept
 tags: [vhost, configuration, summary]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_zojeb3
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_1GAIrG
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_zojeb3
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_1GAIrG
 qmd: "vhost-configuration-summary 🌐 vhost configuration summary"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -311,34 +293,15 @@ curl -I http://laraxot.local
 
 ### For DevOps
 
-<<<<<<< HEAD
 - [Governance Rules](../rules/vhost-governance.md)
 - [Governance Rules](../rules/vhost-governance.md)
-=======
-<<<<<<< .merge_file_zojeb3
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Governance Rules](../rules/vhost-governance.md)
 - [Governance Rules](../rules/vhost-governance.md)
-=======
-=======
->>>>>>> .merge_file_1GAIrG
-<<<<<<< .merge_file_9HTp4i
 - [Governance Rules](docs/rules/vhost-governance.md)
-=======
 - [Governance Rules](../rules/vhost-governance.md)
-<<<<<<< .merge_file_zojeb3
 - [Governance Rules](../rules/vhost-governance.md)
->>>>>>> .merge_file_5Utlgr
->>>>>>> laraxot/dev
-=======
 - [Governance Rules](../rules/vhost-governance.md)
->>>>>>> laraxot/dev
-=======
 - [Governance Rules](../rules/vhost-governance.md)
->>>>>>> .merge_file_5Utlgr
->>>>>>> .merge_file_1GAIrG
->>>>>>> laraxot/dev
 - [Management Skill](.github/skills/vhost-management/SKILL.md)
 - [Configuration File](laravel/config/vhost/laraxot.local.conf)
 

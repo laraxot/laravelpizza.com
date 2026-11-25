@@ -4,21 +4,10 @@ slug: placeholder-translations-cleanup
 title: "Via le traduzioni segnaposto dai file di lingua"
 status: done
 created: 2026-11-10
-<<<<<<< .merge_file_A2WGwf
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-11-10
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_DBxSbW
 related:
   - "../../../Lang/docs/stories/placeholder-translations.story.md"
-<<<<<<< HEAD
 qmd: "placeholder translations cleanup story traduzioni segnaposto"
-=======
->>>>>>> laraxot/dev
 ---
 
 # Via le traduzioni segnaposto dai file di lingua

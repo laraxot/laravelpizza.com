@@ -8,10 +8,7 @@ story: ./2026-10-06-phpstan-cleanup-notify.story.md
 created: 2026-10-06
 updated: 2026-10-06
 tags: [notify, phpstan, enum, push, notification-log]
-<<<<<<< HEAD
 qmd: "phpstan cleanup notify dev"
-=======
->>>>>>> laraxot/dev
 ---
 
 # [DEV] PHPStan cleanup Notify

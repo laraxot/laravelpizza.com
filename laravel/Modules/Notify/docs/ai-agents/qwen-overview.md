@@ -3,31 +3,7 @@ title: "qwen overview"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_N6zkWt
-<<<<<<< .merge_file_9VY3uN
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_HemL9t
-=======
->>>>>>> .merge_file_SwVpxe
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_N6zkWt
-<<<<<<< .merge_file_9VY3uN
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_HemL9t
-=======
->>>>>>> .merge_file_SwVpxe
 qmd: "qwen overview"
 issues: []
 discussions: []
@@ -54,10 +30,6 @@ Panoramica e stato attuale del progetto Base Forecast Fila5.
 | Filament Widgets | 2026-03-20 | ✅ DOCUMENTATO |
 | Incident Composer | 2026-03-19 | ✅ RISOLTO |
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "qwen overview"
@@ -86,14 +58,9 @@ Senza alcun se o ma. Deve essere perfetta in ogni aspetto.
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 Obiettivo Principale
 ### Obiettivi Specifici
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Git Workflow
 
 ```
@@ -119,33 +86,8 @@ Never: git revert (only forward!)
 ## 🔗 Link
 
 - [Indice QWEN](./qwen-split-index.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_N6zkWt
-<<<<<<< .merge_file_9VY3uN
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_HemL9t
-=======
->>>>>>> .merge_file_SwVpxe
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
-=======
-<<<<<<< HEAD
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
-=======
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_N6zkWt
-<<<<<<< .merge_file_9VY3uN
-=======
-- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_HemL9t
-=======
->>>>>>> .merge_file_SwVpxe
 - [Index principale](../../../Lang/docs/wiki/integrations/_da-riconciliare/index-3.md)

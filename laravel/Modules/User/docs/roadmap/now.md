@@ -11,10 +11,7 @@ related:
   - "./02-goals.md"
   - "./02-next.md"
   - "./03-later.md"
-<<<<<<< .merge_file_s1RoCk
 qmd: "now"
-=======
->>>>>>> .merge_file_GWbTej
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/01-now-Modules.md

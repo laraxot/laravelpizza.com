@@ -3,15 +3,7 @@ title: "session 007 summary"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_MrLBHX
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_WBvGHB
 qmd: "session 007 summary"
 issues: []
 discussions: []
@@ -26,10 +18,6 @@ discussions: []
 **Scope**: Notify Sixteen Theme - Phase 1 HTML Parity (segnalazioni-elenco)  
 **Status**: 🟠 EXECUTION IN PROGRESS
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "session 007 summary"
@@ -113,9 +101,6 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 📊 SESSION WORK COMPLETED
 ### 1. EXECUTION ORCHESTRATION
 ### 2. DOCUMENTATION CREATED FOR EXECUTION (8 NEW DOCUMENTS)
@@ -125,8 +110,6 @@ discussions: []
 #### Session Support
 ### 3. DATABASE UPDATES
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 📁 FILES CREATED/MODIFIED
 
 ### New Files (8 documents)
@@ -416,19 +399,9 @@ Must achieve ALL criteria:
 - EXECUTOR-2-SUBTASKS-3-4.md (for Executor #2)
 
 **Tools**:
-<<<<<<< .merge_file_MrLBHX
-=======
 - bashscripts/docs/html/index.md (comparison tools)
->>>>>>> .merge_file_WBvGHB
 - bashscripts/docs/html/index.md (comparison tools)
-<<<<<<< HEAD
 - bashscripts/docs/html/index.md (comparison tools)
-=======
-<<<<<<< HEAD
-- bashscripts/docs/html/index.md (comparison tools)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ---
 
@@ -505,11 +478,3 @@ Must achieve ALL criteria:
 *FixCity Sixteen Theme - Phase 1 HTML Structural Parity*  
 *Notify Sixteen Theme - Phase 1 HTML Structural Parity*  
 *Monitoring Subtask 1... Awaiting comparison results...*
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

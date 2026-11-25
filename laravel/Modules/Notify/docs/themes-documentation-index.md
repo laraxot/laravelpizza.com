@@ -3,35 +3,13 @@ title: "Theme Documentation Master Index"
 type: concept
 tags: [themes, documentation, index]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_UrxtUW
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_t8tqVs
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_UrxtUW
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_t8tqVs
 qmd: "themes-documentation-index theme documentation master index"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./00-index.md"
   - "./00-index-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
   - "./00-index.md"
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
@@ -42,15 +20,10 @@ related:
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
-<<<<<<< HEAD
-=======
-=======
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
   - "./00-index-documentation.md"
   - "./absolute-completion-completamento-assoluto.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 status: draft
 ---
@@ -75,48 +48,14 @@ Connects all theme docs with bidirectional links and visual architecture.
 **Core Documentation:**
 - [00-index-1.md](../laravel/Themes/Sixteen/docs/00-index-1.md) - Start here
 - [Design Comuni Integration](../laravel/Themes/Sixteen/docs/design-comuni-integration.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_UrxtUW
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_t8tqVs
 - [Component Catalog](../laravel/Themes/Sixteen/docs/component_catalog.md)
 - [Layout Architecture](../laravel/Themes/Sixteen/docs/layout-hierarchy.md)
 - [Design Comuni Integration](../../../Themes/Sixteen/docs/design-comuni-integration.md)
 - [Component Catalog](../laravel/Themes/Sixteen/docs/component_catalog.md)
-<<<<<<< .merge_file_UrxtUW
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_t8tqVs
->>>>>>> laraxot/dev
 - [Component Catalog](../laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md)
 - [Layout Architecture](../laravel/Themes/Sixteen/docs/layout-hierarchy.md)
 - [Design Comuni Integration](../../../Themes/Sixteen/docs/design-comuni-integration.md)
 - [Component Catalog](../laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md)
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_UrxtUW
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_t8tqVs
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Layout Architecture](../../../Themes/Sixteen/docs/layout-hierarchy.md)
 
 **Directory Structure:**
@@ -415,29 +354,9 @@ Typography:
 
 | File | Purpose | View |
 |------|---------|------|
-<<<<<<< HEAD
-<<<<<<< .merge_file_UrxtUW
 | `COMPONENT_CATALOG.md` | All 47 components listed | [View](../laravel/Themes/Sixteen/docs/component_catalog.md) |
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_t8tqVs
 | `COMPONENT_CATALOG.md` | All 47 components listed | [View](../laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md) |
-=======
-<<<<<<< HEAD
 | `COMPONENT_CATALOG.md` | All 47 components listed | [View](../laravel/Themes/Sixteen/docs/component_catalog.md) |
-=======
-| `COMPONENT_CATALOG.md` | All 47 components listed | [View](../laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md) |
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_UrxtUW
-=======
-| `COMPONENT_CATALOG.md` | All 47 components listed | [View](../laravel/Themes/Sixteen/docs/component_catalog.md) |
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_t8tqVs
 | `components/navigation.md` | Navigation components | [View](../laravel/Themes/Sixteen/docs/components/navigation.md) |
 | `components/forms.md` | Form components | [View](../laravel/Themes/Sixteen/docs/components/forms.md) |
 | `components/blocks.md` | Content blocks | [View](../laravel/Themes/Sixteen/docs/components/blocks.md) |
@@ -456,29 +375,11 @@ Typography:
 
 | File | Purpose | View |
 |------|---------|------|
-<<<<<<< HEAD
 | `guides/getting-started.md` | Theme setup | [View](getting-started-2.md) |
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_UrxtUW
-<<<<<<< HEAD
 | `guides/getting-started.md` | Theme setup | [View](getting-started-2.md) |
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_t8tqVs
 | `guides/getting-started.md` | Theme setup | [View](getting-started.md) |
-=======
 | `guides/getting-started.md` | Theme setup | [View](getting-started-2.md) |
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_UrxtUW
-=======
 | `guides/getting-started.md` | Theme setup | [View](getting-started.md) |
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_t8tqVs
 | `guides/adding-components.md` | Create new component | [View](../laravel/Themes/Sixteen/docs/guides/adding-components.md) |
 | `guides/styling-guide.md` | Styling best practices | [View](../laravel/Themes/Sixteen/docs/guides/styling-guide.md) |
 | `guides/responsive-design.md` | Mobile-first approach | [View](../laravel/Themes/Sixteen/docs/guides/responsive-design.md) |
@@ -592,34 +493,12 @@ public_html/assets/
 - **Architecture Diagrams:** [architecture-diagrams.md](architecture-diagrams.md)
 - **Module Docs Index:** [module-docs-index.md](module-docs-index.md)
 - **Master Index:** [00-index-1.md](../laravel/Themes/Sixteen/docs/00-index-1.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_UrxtUW
 - **Code Quality:** [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
 - **Framework Rules:** [../../Geo/docs/root-md-files/claude.md](../laravel/claude.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_t8tqVs
 - **Code Quality:** [CODE_QUALITY_STANDARDS.md](CODE_QUALITY_STANDARDS.md)
 - **Framework Rules:** [../../Geo/docs/root-md-files/claude.md](../../Geo/docs/root-md-files/claude.md)
-=======
-<<<<<<< HEAD
 - **Code Quality:** [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
 - **Framework Rules:** [../../Geo/docs/root-md-files/claude.md](../laravel/claude.md)
-=======
-- **Code Quality:** [CODE_QUALITY_STANDARDS.md](CODE_QUALITY_STANDARDS.md)
-- **Framework Rules:** [../../Geo/docs/root-md-files/claude.md](../../Geo/docs/root-md-files/claude.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_UrxtUW
-=======
-- **Code Quality:** [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
-- **Framework Rules:** [../../Geo/docs/root-md-files/claude.md](../laravel/claude.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_t8tqVs
 - **Framework Rules:** [../../Geo/docs/root-md-files/claude.md](../../../claude.md)
 
 ---

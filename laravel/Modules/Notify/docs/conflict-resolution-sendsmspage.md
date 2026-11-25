@@ -3,21 +3,7 @@ title: "conflict resolution sendsmspage"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_VjLa84
-<<<<<<< .merge_file_wB3y1q
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_nJJYNk
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_VjLa84
->>>>>>> .merge_file_Kmpx13
-=======
->>>>>>> .merge_file_nJJYNk
 qmd: "conflict resolution sendsmspage"
 issues: []
 discussions: []

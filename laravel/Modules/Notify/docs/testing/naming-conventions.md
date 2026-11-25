@@ -3,25 +3,7 @@ title: "naming conventions"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_gHmfY6
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_osVn43
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_gHmfY6
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_osVn43
 qmd: "naming conventions"
 issues: []
 discussions: []
@@ -193,29 +175,8 @@ Modules/Xot/tests/Feature/fixstructuretest.pest.php
 
 ### Riferimenti Interni
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_gHmfY6
 - [../quality/phpstan-fixes.md](../phpstan-fixes.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_osVn43
 - [../quality/phpstan-fixes.md](../phpstan-fixes.md)
-=======
-<<<<<<< HEAD
-- [../quality/phpstan-fixes.md](../phpstan-fixes.md)
-=======
-- [../quality/phpstan-fixes.md](../phpstan-fixes.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_gHmfY6
-=======
-- [../quality/phpstan-fixes.md](../phpstan-fixes.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_osVn43
 - [../../Modules/Activity/docs/testing-guidelines.md](../../laravel/Modules/Activity/docs/testing-guidelines.md)
 - [../../Modules/Activity/docs/testing-guidelines.md](../../../Activity/docs/testing-guidelines.md)
 - [./test-structure.md](./test-structure.md)

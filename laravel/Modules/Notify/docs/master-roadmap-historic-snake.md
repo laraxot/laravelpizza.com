@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 ---
 title: "MASTER ROADMAP 2025"
-=======
 ---title: "MASTER ROADMAP 2025"
->>>>>>> laraxot/dev
 type: note
 tags: [documentation]
 created: 2026-09-26

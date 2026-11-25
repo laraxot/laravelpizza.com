@@ -7,25 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_lJrlY8
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_dcVCH2
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_lJrlY8
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_dcVCH2
 status: draft
 ---
 
@@ -1846,32 +1828,14 @@ Monitoring:
 
 Frontend:
 [ ] Theme built (npm run build)
-<<<<<<< HEAD
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 [ ] Asset buildati (`npm run build`) e serviti via symlink in `public_html/themes` (`npm run copy` obsoleto)
-=======
-<<<<<<< .merge_file_lJrlY8
-<<<<<<< HEAD
-<<<<<<< HEAD
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 [ ] Asset buildati (`npm run build`) e serviti via symlink in `public_html/themes` (`npm run copy` obsoleto)
-=======
-=======
->>>>>>> .merge_file_dcVCH2
-<<<<<<< .merge_file_yYgJnq
 [ ] Assets deployed (symlink public_html/themes (npm run copy obsoleto))
 [ ] Asset buildati (`npm run build`) e serviti via symlink in `public_html/themes` (`npm run copy` obsoleto)
-=======
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
->>>>>>> .merge_file_ZvkS6i
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_lJrlY8
-=======
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_dcVCH2
 [ ] Dark mode tested
 [ ] Responsive design tested
 [ ] Accessibility tested

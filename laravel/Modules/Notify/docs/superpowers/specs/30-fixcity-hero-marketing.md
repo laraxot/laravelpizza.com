@@ -3,15 +3,7 @@ title: "2026 03 30 fixcity hero marketing"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_NpeuED
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_M4Qnok
 qmd: "2026 03 30 fixcity hero marketing"
 issues: []
 discussions: []

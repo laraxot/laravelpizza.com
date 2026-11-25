@@ -3,15 +3,7 @@ title: "notebooklm integration"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_5fjZaF
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_KGqZ5s
 qmd: "notebooklm integration"
 issues: []
 discussions: []
@@ -411,10 +403,6 @@ python scripts/run.py ask_question.py \
 4. ⏳ Upload project documentation
 5. ⏳ Integrate with BMAD workflow
 6. ⏳ Store insights in OpenViking
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -428,8 +416,3 @@ issues: []
 discussions: []
 **Last Updated**: 2026-03-30  
 **Status**: Ready for authentication and notebook creation
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

@@ -4,21 +4,7 @@ type: concept
 tags: [notify, docs, architecture, structure]
 module: Notify
 created: 2026-07-20
-<<<<<<< .merge_file_dGFYXF
-<<<<<<< .merge_file_fe2WPb
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_74ztMS
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_dGFYXF
->>>>>>> .merge_file_MWfpU8
-=======
->>>>>>> .merge_file_74ztMS
 qmd: "notify documentazione architecture structure modulo notify frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"

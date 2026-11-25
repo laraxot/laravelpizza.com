@@ -3,31 +3,7 @@ title: "gemini dependencies"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_JYM6mF
-<<<<<<< .merge_file_owG9Lw
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_NLHTWu
-=======
->>>>>>> .merge_file_leqbA6
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_JYM6mF
-<<<<<<< .merge_file_owG9Lw
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_NLHTWu
-=======
->>>>>>> .merge_file_leqbA6
 qmd: "gemini dependencies"
 issues: []
 discussions: []
@@ -37,10 +13,6 @@ discussions: []
 
 Gestione dipendenze Composer e moduli.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "gemini dependencies"
@@ -57,13 +29,8 @@ Il `composer.json` nella **root** (`laravel/composer.json`) **NON DEVE ESSERE MO
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## Regola Critica
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Workflow Corretto
 
 1. **Aggiungi il pacchetto** nel `composer.json` del **MODULO specifico** (es: `Modules/Meetup/composer.json`).
@@ -113,33 +80,9 @@ composer run go
 
 - [Indice GEMINI](./gemini-split-index.md)
 - [packages-spatie.md](./packages-spatie.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_JYM6mF
-<<<<<<< .merge_file_owG9Lw
 - [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_NLHTWu
-=======
->>>>>>> .merge_file_leqbA6
 - [gemini-2.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
-=======
-<<<<<<< HEAD
 - [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
-=======
 - [gemini-2.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_JYM6mF
-<<<<<<< .merge_file_owG9Lw
-=======
 - [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_NLHTWu
-=======
->>>>>>> .merge_file_leqbA6
 - [Index principale](../../../Lang/docs/wiki/integrations/_da-riconciliare/index-3.md)

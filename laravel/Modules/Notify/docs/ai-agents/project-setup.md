@@ -3,21 +3,7 @@ title: "project setup"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_8fJ4Lr
-<<<<<<< .merge_file_2l3buL
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_uHoFYP
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_8fJ4Lr
->>>>>>> .merge_file_NtrUED
-=======
->>>>>>> .merge_file_uHoFYP
 qmd: "project setup"
 issues: []
 discussions: []

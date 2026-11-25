@@ -3,21 +3,7 @@ title: "correzioni phpstan completate"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_3erlWP
-<<<<<<< .merge_file_B7wRrI
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_OGvjmK
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_3erlWP
->>>>>>> .merge_file_UYZBqp
-=======
->>>>>>> .merge_file_OGvjmK
 qmd: "correzioni phpstan completate"
 issues: []
 discussions: []
@@ -150,10 +136,6 @@ I pattern di type safety implementati possono essere applicati a:
 3. **Configuration** completamente dinamica
 4. **Testing** con classi dinamiche
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "correzioni phpstan completate"
@@ -174,9 +156,4 @@ discussions: []
 *Metodologia: Type safety + Riusabilità*  
 *Risultato: 0 errori PHPStan Level 9*
 
-<<<<<<< HEAD
-=======
-=======
 ## ✅ MISSIONE COMPLETATA
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

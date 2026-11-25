@@ -3,15 +3,7 @@ title: "roadmap "
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ilMWjW
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_pPB2hZ
 qmd: "roadmap "
 issues: []
 discussions: []
@@ -31,10 +23,6 @@ Transform communication from a technical challenge into a **business superpower*
 - **Template Mastery**: Beautiful, consistent messaging across all channels
 - **Delivery Assurance**: No message lost, all deliveries tracked and verified
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "roadmap "
@@ -97,9 +85,6 @@ discussions: []
 - **Solution**: Automated cleanup and archive strategies
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## 📊 Current Architecture Assessment
 ### ✅ Architectural Strengths
 #### 1. **ChannelEnum Abstraction Pattern**
@@ -111,8 +96,6 @@ discussions: []
 #### 1. **Service vs Action Confusion**
 #### 2. **Channel Registration Complexity**
 #### 3. **Template Version Management Overhead**
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## 🎯 2026 Strategic Priorities
 

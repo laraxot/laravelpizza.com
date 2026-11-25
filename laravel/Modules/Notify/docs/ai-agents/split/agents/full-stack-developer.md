@@ -3,21 +3,7 @@ title: "full stack developer"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_PTO3hh
-<<<<<<< .merge_file_AFBZQ4
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_pEshPp
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_PTO3hh
->>>>>>> .merge_file_fqwYzh
-=======
->>>>>>> .merge_file_pEshPp
 qmd: "full stack developer"
 issues: []
 discussions: []
@@ -101,10 +87,6 @@ dependencies:
     - validate-next-story.md
 ```
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -123,9 +105,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../AGENTS.md](../../../../../../../../AGENTS.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

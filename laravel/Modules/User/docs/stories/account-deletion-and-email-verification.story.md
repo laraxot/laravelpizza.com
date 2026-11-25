@@ -8,10 +8,7 @@ owner: module:User
 module: User
 related: [SEC-05, SEC-14, PRD-02, DEC-11, dcp-285]
 tags: [security, gdpr, auth, passport, email-verification]
-<<<<<<< .merge_file_EqtAs7
 qmd: "account deletion and email verification story"
-=======
->>>>>>> .merge_file_Xt7XQw
 ---
 
 # Account cancellati senza accesso e verifica email reale

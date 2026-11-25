@@ -3,15 +3,7 @@ title: "models factory seeder analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_QUGBcR
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_EED7L1
 qmd: "models factory seeder analysis"
 issues: []
 discussions: []
@@ -71,10 +63,6 @@ discussions: []
 - **Template management** avanzato con log e temi
 
 ## Stato Generale: ✅ COMPLETO
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 title: "models factory seeder analysis"
@@ -87,8 +75,3 @@ issues: []
 discussions: []
 *Ultimo aggiornamento: 2025-01-06*
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

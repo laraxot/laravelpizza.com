@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 ---
 title: "Risoluzione Conflitti Git e Correzione Errori PHPStan - Modulo Notify"
 type: note
 qmd: "correzioni phpstan completate risoluzione conflitti git"
 ---
-=======
->>>>>>> laraxot/dev
 # Risoluzione Conflitti Git e Correzione Errori PHPStan - Modulo Notify
 
 ## Data
@@ -177,22 +174,7 @@ Durante la risoluzione:
 ## Collegamenti
 
 - [Git Conflicts Guide](../../Geo/docs_project/git-conflicts-resolution-guide.md)
-<<<<<<< .merge_file_W4qyBL
-<<<<<<< .merge_file_gbCt3U
-<<<<<<< HEAD
 - [Git Conflicts Guide](../../Geo/docs_project/git-conflicts-resolution-guide.md)
-=======
-<<<<<<< HEAD
-- [Git Conflicts Guide](../../Geo/docs_project/git-conflicts-resolution-guide.md)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- [Git Conflicts Guide](../../Geo/docs_project/git-conflicts-resolution-guide.md)
->>>>>>> .merge_file_a2YRb6
-=======
-- [Git Conflicts Guide](../../Geo/docs_project/git-conflicts-resolution-guide.md)
->>>>>>> .merge_file_XMJzy1
 - [Notify Best Practices](best-practices.md)
 - [PHPStan Configuration](../../phpstan.neon)
 - [PHPStan User Guide](https://phpstan.org/user-guide/getting-started)

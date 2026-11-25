@@ -3,21 +3,7 @@ title: "filament composite contacts column"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_jGv3Bt
-<<<<<<< .merge_file_KIa9sa
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_EueOqs
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_jGv3Bt
->>>>>>> .merge_file_d8pzWf
-=======
->>>>>>> .merge_file_EueOqs
 qmd: "filament composite contacts column"
 issues: []
 discussions: []
@@ -249,10 +235,6 @@ Questo pattern può essere applicato a:
 - **Creazione**: Documentazione iniziale del pattern
 - **Standardizzazione**: Pattern derivato da TechPlanner
 - **Best Practices**: Definite regole architetturali
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -267,8 +249,3 @@ discussions: []
 *Ultimo aggiornamento: [DATE]*  
 *Autore: Sistema Laraxot*  
 *Versione: 1.0*
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

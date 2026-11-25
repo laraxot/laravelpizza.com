@@ -3,21 +3,7 @@ title: "database mail enhancement"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_6E4h6C
-<<<<<<< .merge_file_dHcYMl
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_pRHEC3
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_6E4h6C
->>>>>>> .merge_file_9uNeou
-=======
->>>>>>> .merge_file_pRHEC3
 qmd: "database mail enhancement"
 issues: []
 discussions: []
@@ -109,10 +95,6 @@ testable class SendEmailTemplateAction {
 - Elevata personalizzazione e integrazione con Spatie
 - Testabilità e scalabilità
 - Allineato alle convenzioni di progetto
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -130,8 +112,3 @@ discussions: []
 - [spatie/laravel-database-mail-templates](https://github.com/spatie/laravel-database-mail-templates)
 - [spatie/laravel-mailcoach-mailer](https://github.com/spatie/laravel-mailcoach-mailer)
 - [spatie/laravel-queueable-action](https://github.com/spatie/laravel-queueable-action)
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

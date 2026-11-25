@@ -5,47 +5,21 @@ discussions: []
 title: "Contracts Naming & Placement"
 type: concept
 created: 2026-07-12
-<<<<<<< .merge_file_sRDD5R
-<<<<<<< .merge_file_BqkQW2
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_uoIKnL
-<<<<<<< HEAD
-updated: 2026-07-12
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_sRDD5R
->>>>>>> .merge_file_O5LOJw
-=======
->>>>>>> .merge_file_uoIKnL
 tags: [contract, naming, architecture, laraxot, notify]
 related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_sRDD5R
-<<<<<<< .merge_file_BqkQW2
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_O5LOJw
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_uoIKnL
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

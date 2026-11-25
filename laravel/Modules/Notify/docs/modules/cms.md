@@ -3,25 +3,7 @@ title: "cms"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_HZwk8b
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_8eKg8R
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_HZwk8b
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_8eKg8R
 qmd: "cms"
 issues: []
 discussions: []
@@ -54,29 +36,12 @@ Il modulo CMS include funzionalità per la gestione dei temi, inclusi:
 Per risolvere l'errore "Unable to locate file in Vite manifest", eseguire:
 
 ```bash
-<<<<<<< HEAD
-<<<<<<< .merge_file_HZwk8b
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_8eKg8R
-cd /var/www/html/_bases/base_fixcity_fila5/laravel/Themes/Sixteen
-cd /var/www/html/_bases/base_ptvx_fila5/laravel/Themes/Sixteen
-=======
-<<<<<<< .merge_file_lq0caa
 cd /var/www/html/_bases/base_fixcity_fila5_mono/laravel/Themes/Sixteen
 cd /var/www/html/_bases/base_ptvx_fila5_mono/laravel/Themes/Sixteen
-=======
 cd /var/www/html/_bases/base_fixcity_fila5/laravel/Themes/Sixteen
 cd /var/www/html/_bases/base_ptvx_fila5/laravel/Themes/Sixteen
->>>>>>> .merge_file_uRkCoT
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_HZwk8b
-=======
 cd /var/www/html/_bases/base_fixcity_fila5/laravel/Themes/Sixteen
 cd /var/www/html/_bases/base_ptvx_fila5/laravel/Themes/Sixteen
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_8eKg8R
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
 

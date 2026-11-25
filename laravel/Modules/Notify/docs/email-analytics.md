@@ -3,21 +3,7 @@ title: "email analytics"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Q0JN55
-<<<<<<< .merge_file_LtfqoZ
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_cxmhOd
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Q0JN55
->>>>>>> .merge_file_643QgY
-=======
->>>>>>> .merge_file_cxmhOd
 qmd: "email analytics"
 issues: []
 discussions: []

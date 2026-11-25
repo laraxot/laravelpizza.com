@@ -6,30 +6,8 @@ title: "Comparison Title"
 type: comparison
 sources: ["raw/articles/source-1.md", "raw/articles/source-2.md"]
 confidence: medium
-<<<<<<< HEAD
 created: "{{date}}"
-updated: 2026-11-23
-=======
-created: {{date}}
-<<<<<<< HEAD
 updated: {{date}}
-=======
-<<<<<<< .merge_file_9VWUe2
-<<<<<<< HEAD
-<<<<<<< HEAD
-updated: {{date}}
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_xiPys2
->>>>>>> laraxot/dev
 tags: [comparison, analysis]
 related: []
 ---

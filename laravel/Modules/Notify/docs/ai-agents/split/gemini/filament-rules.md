@@ -3,21 +3,7 @@ title: "filament rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_AqYcZM
-<<<<<<< .merge_file_aap9hs
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_JCpTT2
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_AqYcZM
->>>>>>> .merge_file_lbT0Hv
-=======
->>>>>>> .merge_file_JCpTT2
 qmd: "filament rules"
 issues: []
 discussions: []
@@ -175,10 +161,6 @@ livewire(ListUsers::class)
 
 </laravel-boost-guidelines>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "filament rules"
@@ -197,9 +179,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../wiki/integrations/_da-riconciliare/gemini-2.md](../../../wiki/integrations/_da-riconciliare/gemini-2.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

@@ -3,21 +3,7 @@ title: "email templates simplepleb"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_zEdE4f
-<<<<<<< .merge_file_VMt7om
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_bGoXTN
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_zEdE4f
->>>>>>> .merge_file_OiqceG
-=======
->>>>>>> .merge_file_bGoXTN
 qmd: "email templates simplepleb"
 issues: []
 discussions: []

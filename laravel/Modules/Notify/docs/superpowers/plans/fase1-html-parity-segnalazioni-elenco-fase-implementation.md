@@ -3,25 +3,7 @@ title: "2026 04 08 fase1 html parity segnalazioni elenco"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_zhMbsT
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_HWiFTS
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_zhMbsT
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_HWiFTS
 qmd: "2026 04 08 fase1 html parity segnalazioni elenco"
 issues: []
 discussions: []
@@ -276,32 +258,13 @@ Rileggi il nuovo `report.md`, identifica ulteriori diff, correggi, ri-esegui.
 
 **Files:**
 - Modify: `laravel/Themes/Sixteen/docs/body-structure-comparison/segnalazioni-elenco/FASE1-FINAL-REPORT.md`
-<<<<<<< HEAD
-<<<<<<< .merge_file_zhMbsT
 - Modify: `laravel/Themes/Sixteen/docs/body-structure-comparison/INDEX.md`
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- Modify: `laravel/Themes/Sixteen/docs/body-structure-comparison/index.md`
-=======
-<<<<<<< HEAD
 - Modify: `laravel/Themes/Sixteen/docs/body-structure-comparison/INDEX.md`
-=======
 - Modify: `laravel/Themes/Sixteen/docs/body-structure-comparison/index.md`
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 - Modify: `laravel/Themes/Sixteen/docs/body-structure-comparison/INDEX.md`
-=======
 - Modify: `laravel/Themes/Sixteen/docs/body-structure-comparison/index.md`
-=======
-<<<<<<< HEAD
 - Modify: `laravel/Themes/Sixteen/docs/body-structure-comparison/INDEX.md`
-=======
 - Modify: `laravel/Themes/Sixteen/docs/body-structure-comparison/index.md`
->>>>>>> .merge_file_HWiFTS
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - Modify: `laravel/Themes/Sixteen/docs/body-structure-comparison/index.md`
 - Read: `laravel/Themes/Sixteen/docs/body-structure-comparison/segnalazioni-elenco/summary.json`
 
@@ -313,46 +276,27 @@ Apri `FASE1-FINAL-REPORT.md` e aggiorna:
 - Le correzioni applicate in questa sessione
 - Checklist completamento
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_zhMbsT
 - [ ] **Step 5.2: Aggiorna INDEX.md**
 
 In `laravel/Themes/Sixteen/docs/body-structure-comparison/INDEX.md`, aggiorna la riga di `segnalazioni-elenco` con il parity score reale e la data odierna.
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_HWiFTS
 - [ ] **Step 5.2: Aggiorna index.md**
 
 In `laravel/Themes/Sixteen/docs/body-structure-comparison/index.md`, aggiorna la riga di `segnalazioni-elenco` con il parity score reale e la data odierna.
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_zhMbsT
 - [ ] **Step 5.2: Aggiorna INDEX.md**
 
 In `laravel/Themes/Sixteen/docs/body-structure-comparison/INDEX.md`, aggiorna la riga di `segnalazioni-elenco` con il parity score reale e la data odierna.
-=======
 - [ ] **Step 5.2: Aggiorna index.md**
 
 In `laravel/Themes/Sixteen/docs/body-structure-comparison/index.md`, aggiorna la riga di `segnalazioni-elenco` con il parity score reale e la data odierna.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 - [ ] **Step 5.2: Aggiorna INDEX.md**
 
 In `laravel/Themes/Sixteen/docs/body-structure-comparison/INDEX.md`, aggiorna la riga di `segnalazioni-elenco` con il parity score reale e la data odierna.
-=======
 - [ ] **Step 5.2: Aggiorna INDEX.md**
 
 In `laravel/Themes/Sixteen/docs/body-structure-comparison/INDEX.md`, aggiorna la riga di `segnalazioni-elenco` con il parity score reale e la data odierna.
-=======
 - [ ] **Step 5.2: Aggiorna index.md**
 
 In `laravel/Themes/Sixteen/docs/body-structure-comparison/index.md`, aggiorna la riga di `segnalazioni-elenco` con il parity score reale e la data odierna.
->>>>>>> .merge_file_HWiFTS
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [ ] **Step 5.2: Aggiorna index.md**
 
 In `laravel/Themes/Sixteen/docs/body-structure-comparison/index.md`, aggiorna la riga di `segnalazioni-elenco` con il parity score reale e la data odierna.

@@ -7,21 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< .merge_file_3cd8n8
-<<<<<<< .merge_file_eJkwaP
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_T8oOM7
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_3cd8n8
->>>>>>> .merge_file_n0DmRE
-=======
->>>>>>> .merge_file_T8oOM7
 ---
 
 # Notify Module - Code Fixes & Improvements (2025)

@@ -3,31 +3,7 @@ title: "🚨 CRITICAL BUG: sync_remote_repo.sh Deleted"
 type: concept
 tags: [critical, bug, sync, script]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_0syCx2
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_GgaNms
-<<<<<<< .merge_file_e9v0xV
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_bmCv55
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_SZdUaj
-=======
-<<<<<<< .merge_file_GgaNms
->>>>>>> .merge_file_6simEJ
-=======
->>>>>>> .merge_file_bmCv55
->>>>>>> laraxot/dev
 qmd: "critical-bug-sync-script-deleted 🚨 critical bug: sync_remote_repo.sh deleted"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

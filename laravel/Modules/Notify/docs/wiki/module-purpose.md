@@ -7,10 +7,7 @@ scope: documentation
 bmad_version: 1.0
 updated: 2026-11-23
 created: 2026-11-23
-<<<<<<< HEAD
 qmd: "purpose notify document"
-=======
->>>>>>> laraxot/dev
 ---
 
 # Notify — Scopo modulo

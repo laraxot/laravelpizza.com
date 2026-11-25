@@ -7,25 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_bril67
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_NpYrKw
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_bril67
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_NpYrKw
 ---
 
 # HTML Parity Analysis Rules
@@ -417,29 +399,9 @@ trans('<nome progetto>::segnalazione.heading.title.label')
 - [Translation Conventions](../../../translation-conventions-2.md)
 - [Blade Architecture](../../../../../Geo/docs/root-md-files/claude.md#blade-components)
 - [Agnostic Scripts](./agnostic-documentation-rule-3.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_bril67
 - [Multi-Agent Coordination](./multi-agent-coordination-rules-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_NpYrKw
 - [Multi-Agent Coordination](../../../multi-agent-coordination-rules-2.md)
-=======
-<<<<<<< HEAD
 - [Multi-Agent Coordination](./multi-agent-coordination-rules-2.md)
-=======
-- [Multi-Agent Coordination](../../../multi-agent-coordination-rules-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_bril67
-=======
-- [Multi-Agent Coordination](./multi-agent-coordination-rules-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_NpYrKw
 
 ---
 

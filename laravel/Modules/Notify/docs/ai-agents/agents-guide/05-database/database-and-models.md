@@ -3,21 +3,7 @@ title: "database and models"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_FPY5Wx
-<<<<<<< .merge_file_s9plpj
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_D8Id9E
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_FPY5Wx
->>>>>>> .merge_file_ibW0CY
-=======
->>>>>>> .merge_file_D8Id9E
 qmd: "database and models"
 issues: []
 discussions: []
@@ -107,10 +93,6 @@ DB_PASSWORD_USER=marco
 This ensures APP_URL and all other variables remain identical to .env.
 
 **CRITICAL RULE FOR TestCase:** NEVER duplicate database connection configuration in setUp() because CreatesApplication already handles it automatically.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -122,14 +104,3 @@ updated: 2026-09-26
 qmd: "database and models"
 issues: []
 discussions: []
-<<<<<<< .merge_file_FPY5Wx
-<<<<<<< .merge_file_s9plpj
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_ibW0CY
-=======
->>>>>>> .merge_file_D8Id9E
