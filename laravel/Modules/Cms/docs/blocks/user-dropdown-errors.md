@@ -240,5 +240,5 @@ return [
 
 ## Collegamenti
 - [Documentazione User Dropdown](./user-dropdown.md)
-- [Best Practices UI/UX](./guida-implementazione-ux.md)
+- [Best Practices UI/UX](../guida-implementazione-ux-2.md)
 - [Documentazione Accessibilità](./accessibility.md)

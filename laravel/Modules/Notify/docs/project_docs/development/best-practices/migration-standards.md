@@ -155,9 +155,9 @@ if (! $this->hasIndex('nome_indice')) {
 
 Ogni modulo può avere best practices specifiche per le migrazioni. Consultare la documentazione del modulo per ulteriori dettagli:
 
-- [Best Practices Modulo User](../../modules/user/migration-best-practices.md)
-- [Best Practices Modulo Tenant](../../modules/tenant/migration-best-practices.md)
-- [Best Practices Modulo Patient](../../modules/patient/migration-best-practices.md)
+- [Best Practices Modulo User](../../../../../Lang/docs/migration-best-practices-3.md)
+- [Best Practices Modulo Tenant](../../../../../Lang/docs/migration-best-practices-3.md)
+- [Best Practices Modulo Patient](../../../../../Lang/docs/migration-best-practices-3.md)
 
 ## Errori Comuni e Come Evitarli
 
@@ -227,7 +227,7 @@ protected ?string $connection = 'user'; // Stessa connessione del modello
 ## Collegamenti
 
 - [Database Guidelines](./database-guidelines.md)
-- [PHPStan Best Practices](../phpstan/best-practices.md)
+- [PHPStan Best Practices](../../../../../Activity/docs/best-practices-3.md)
 - [Troubleshooting Migrations](../../troubleshooting/errors/migration-errors.md)
 - [Architecture Standards](../../architecture/standards/)
 <<<<<<< HEAD

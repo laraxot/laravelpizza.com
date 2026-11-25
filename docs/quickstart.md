@@ -398,7 +398,7 @@ chmod -R 775 storage bootstrap/cache
    - `FEATURES.md` - Tutte le features disponibili
    - `DEVELOPMENT.md` - Workflow completo
    - `MODELS_REFERENCE.md` - Models e relationships
-   - `DOCUMENTATION_INDEX.md` - Indice completo docs
+   - `documentation-index.md` - Indice completo docs
 
 2. **Esplora il Codice** 🔍
    - `/Modules/Meetup/app/Models/` - I modelli principali

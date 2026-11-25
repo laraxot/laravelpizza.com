@@ -111,7 +111,7 @@ $token = config('services.netfun.token');
 
 ## Documentazione Correlata
 
-- [SMS Provider Architecture](./SMS_PROVIDER_ARCHITECTURE.md)
-- [SMS Implementation](./SMS_IMPLEMENTATION.md)
-- [SMS Best Practices](./SMS_BEST_PRACTICES.md)
-- [Netfun Authentication Methods](./NETFUN_AUTHENTICATION_METHODS.md)
+- [SMS Provider Architecture](../laravel/Modules/Notify/docs/sms-provider-architecture-2.md)
+- [SMS Implementation](../laravel/Modules/Notify/docs/sms-implementation-2.md)
+- [SMS Best Practices](../laravel/Modules/Notify/docs/sms-best-practices-2.md)
+- [Netfun Authentication Methods](../laravel/Modules/Notify/docs/netfun-authentication-methods-2.md)

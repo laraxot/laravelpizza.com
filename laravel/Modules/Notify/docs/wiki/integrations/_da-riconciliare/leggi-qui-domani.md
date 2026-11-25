@@ -236,7 +236,7 @@ cd /var/www/_bases/<nome repitory>_mono/laravel
 >>>>>>> .merge_file_mCCltw
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_CTR6oF
-5. **[Analisi Completa](./analisi-completa.md)** - Executive summary
+5. **[Analisi Completa](../../../analisi-completa-3.md)** - Executive summary
 
 ---
 
@@ -487,7 +487,7 @@ cd /var/www/_bases/<nome repitory>_mono/laravel
 ## 📂 DOCUMENTI IMPORTANTI DA LEGGERE
 
 ### Prima di Iniziare (5 minuti)
-1. **[Session Summary](./phpstan/session-summary.md)** - Recap ieri
+1. **[Session Summary](../../session-summary-2.md)** - Recap ieri
 
 ### Durante il Lavoro (reference)
 2. **[Xot Roadmap](../Modules/Xot/docs/roadmap-and-issues.md)** - Errori dettagliati Xot
@@ -519,7 +519,7 @@ cd /var/www/_bases/<nome repitory>_mono/laravel
 >>>>>>> .merge_file_CTR6oF
 >>>>>>> laraxot/dev
 4. **[Master Roadmap](../../../roadmap-master-index.md)** - Aggiornare status
-5. **[Analisi Completa](./ANALISI-COMPLETA.md)** - Executive summary
+5. **[Analisi Completa](../../../analisi-completa-3.md)** - Executive summary
 2. **[Xot Roadmap](../../../roadmap-and-issues.md)** - Errori dettagliati Xot
 3. **[User Roadmap](../../../roadmap-and-issues.md)** - Errori dettagliati User
 

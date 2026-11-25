@@ -138,7 +138,7 @@ pint.json             # Laravel Pint (standard Laravel)
 - ✅ `filament-best-practices.md`
 - ✅ `model-base-rules.md`
 - ✅ `service-provider-guide.md`
-- ❌ `Filament_Best_Practices.md`
+- ❌ `filament-best-practices-2.md`
 - ❌ `ModelBaseRules.md`
 
 ### 3. **Struttura Documentazione Standardizzata**

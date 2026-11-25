@@ -41,10 +41,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -278,7 +278,7 @@ Log::info('Batch completed', ['count' => $count]); // ✅ ONE LOG
 
 ## logging-best-practices
 
-*Consolidated from: `logging-best-practices.md`*
+*Consolidated from: `logging-best-practices-2.md`*
 
 <<<<<<< HEAD
 
@@ -776,7 +776,7 @@ By removing excessive logging and implementing proper audit trails:
 
 ## logging-optimization-summary-
 
-*Consolidated from: `logging-optimization-summary-.md`*
+*Consolidated from: `logging-optimization-summary-2.md`*
 
 title: "LOGGING_OPTIMIZATION_SUMMARY_2026-03-02.deprecated"
 type: concept
@@ -789,10 +789,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -816,10 +816,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -1275,7 +1275,7 @@ LOG_LEVEL=debug
 
 ### Documentation
 - `laravel/Modules/Xot/docs/LOGGING_BEST_PRACTICES_2026-03-02.md`
-- `docs/LOGGING-OPTIMIZATION-SUMMARY-.md.md`
+- `../../logging-optimization-summary-4.md`
 - `AGENTS.md` - Updated with logging rules
 
 ### Laravel Documentation
@@ -1336,10 +1336,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 

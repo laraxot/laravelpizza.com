@@ -283,7 +283,7 @@ Composer vede:
 - [Composer Documentation](https://getcomposer.org/doc/)
 
 ### Project Documentation
-- [COMPOSER_STRATEGY.md](composer_strategy.md) - Questo file
+- [COMPOSER_STRATEGY.md](composer-strategy-3.md) - Questo file
 - [MODULES_ARCHITECTURE.md](MODULES_ARCHITECTURE.md) - Architettura moduli
 
 ---

@@ -1,9 +1,6 @@
 ---
 created: 2025-10-13
-<<<<<<< .merge_file_bXRTeF
 qmd: "phpstan fixes tenant 20251013"
-=======
->>>>>>> .merge_file_KQKRIE
 ---
 
 # PHPStan Fixes - Tenant Module - 2025-10-13

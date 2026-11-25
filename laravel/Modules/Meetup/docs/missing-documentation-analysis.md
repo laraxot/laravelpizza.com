@@ -100,7 +100,7 @@ Modules/{Module}/docs/
 ├── actions.md                # Action patterns and usage
 ├── events.md                 # Event sourcing patterns
 ├── testing.md                # Testing strategies
-├── security.md               # Security considerations
+├── security-2.md               # Security considerations
 └── integration.md            # Integration patterns
 ```
 

@@ -113,7 +113,7 @@ collegato o marcato superseded.
 
 Questo modulo ospitava anche coppie di file che differivano **solo per maiuscole**
 (`AGENTS.md`/`AGENTS.md`, `quick-reference.md`/`quick-reference.md`,
-`SESSION-SUMMARY.md`/`session-summary.md`), risolte il 2026-09-02: rompevano il
+`session-summary-2.md`/`session-summary-2.md`), risolte il 2026-09-02: rompevano il
 checkout su macOS e Windows.
 
 ### 4. I template vanno versionati e validati

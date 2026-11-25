@@ -149,4 +149,4 @@ return [
 
 ## Riferimenti
 - [Regole di Naming per i File di Traduzione](./translation_file_naming_rules.md)
-- [Regole Generali per le Traduzioni](../../lang/docs/translation_keys_rules.md)
+- [Regole Generali per le Traduzioni](../../lang/docs/translation-keys-rules-2.md)

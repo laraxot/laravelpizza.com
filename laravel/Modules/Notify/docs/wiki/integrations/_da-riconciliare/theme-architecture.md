@@ -306,9 +306,9 @@ Tema configurabile
 ## 🔗 Riferimenti
 
 ### Project Documentation
-- [THEME_ARCHITECTURE.md](theme_architecture.md) - Questo file
-- [COMPOSER_STRATEGY.md](composer_strategy.md) - Strategia composer
-- [FILAMENT_5_OFFICIAL_POLICY.md](FILAMENT_5_OFFICIAL_POLICY.md) - Politica Filament
+- [THEME_ARCHITECTURE.md](theme-architecture-3.md) - Questo file
+- [COMPOSER_STRATEGY.md](composer-strategy-3.md) - Strategia composer
+- [filament-5-official-policy-2.md](filament-5-official-policy-2.md) - Politica Filament
 
 ### Laravel Documentation
 - [Package Discovery](https://laravel.com/docs/packages#package-discovery)

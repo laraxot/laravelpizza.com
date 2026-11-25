@@ -11,7 +11,7 @@ discussions:
   - "https://github.com/laraxot/base_fixcity_fila5/discussions/273"
 related:
   - ../../../../../../docs/wiki/bmad/architecture-folio-page-shell.md
-  - ../../folio_routing_system.md
+  - ../../folio-routing-system-2.md
   - ../../../../../../docs/wiki/memories/volt-route-params-mount-contract.md
   - ../../../../../Themes/Sixteen/docs/wiki/concepts/folio-route-params-mount.md
 ---

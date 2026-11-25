@@ -36,9 +36,9 @@ Autore: Copilot CLI
 
 ---
 
-<!-- Contenuto unito da copilot-redundancy-audit-.md (rimozione date dai nomi file, issue #64) -->
+<!-- Contenuto unito da copilot-redundancy-audit-2.md (rimozione date dai nomi file, issue #64) -->
 
-<!-- recovery from broken basename `copilot-redundancy-audit-.md` after docs-guardian mass rename -->
+<!-- recovery from broken basename `copilot-redundancy-audit-2.md` after docs-guardian mass rename -->
 
 Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file evita nomi `*-.md`.
 

@@ -10,7 +10,7 @@ updated: 2026-07-07
 
 ## 0. Scopo del Documento
 
-Questo PRD è rivolto a chi implementa e verifica la piattaforma (sviluppatori, QA) e a chi ne guida la direzione di prodotto. Costruisce sul [Product Brief](../../briefs/brief-laravelpizza.com-2026-07-07/brief.md) già finalizzato (non lo duplica) e sui requisiti già tracciati in `.planning/REQUIREMENTS.md`, che qui vengono formalizzati come Functional Requirements con ID stabili globali per essere referenziabili da epics/story a valle. Il documento è organizzato per Feature, con i FR annidati sotto ciascuna; il Glossario fissa il vocabolario usato ovunque senza sinonimi; gli `[ASSUMPTION]` inline sono indicizzati in fondo per conferma esplicita.
+Questo PRD è rivolto a chi implementa e verifica la piattaforma (sviluppatori, QA) e a chi ne guida la direzione di prodotto. Costruisce sul [Product Brief](../../briefs/brief-laravelpizza.com-2026-07-07/brief.md) già finalizzato (non lo duplica) e sui requisiti già tracciati in `.planning/requirements-2.md`, che qui vengono formalizzati come Functional Requirements con ID stabili globali per essere referenziabili da epics/story a valle. Il documento è organizzato per Feature, con i FR annidati sotto ciascuna; il Glossario fissa il vocabolario usato ovunque senza sinonimi; gli `[ASSUMPTION]` inline sono indicizzati in fondo per conferma esplicita.
 
 ## 1. Visione
 
@@ -95,7 +95,7 @@ L'Amministratore visualizza una dashboard con il numero di Eventi programmati/pa
 - I dati mostrati riflettono lo stato del database al momento del caricamento della pagina (nessuna cache stantia oltre la durata della request).
 
 #### FR-4: Gestione Iscrizioni e liste iscritti
-L'Amministratore può visualizzare e gestire la lista Iscrizioni per ciascun Evento. [ASSUMPTION: l'esportazione della lista iscritti (es. CSV) è un'estensione rispetto al requisito originale ADMN-04 in `.planning/REQUIREMENTS.md`, non esplicitamente richiesta — da confermare prima dello sviluppo.]
+L'Amministratore può visualizzare e gestire la lista Iscrizioni per ciascun Evento. [ASSUMPTION: l'esportazione della lista iscritti (es. CSV) è un'estensione rispetto al requisito originale ADMN-04 in `.planning/requirements-2.md`, non esplicitamente richiesta — da confermare prima dello sviluppo.]
 
 **Consequences (testable):**
 - L'Amministratore può visualizzare la lista completa delle Iscrizioni per un dato Evento, incluso lo stato (confermata/in attesa).
@@ -242,7 +242,7 @@ Ogni pagina di dettaglio Evento include dati strutturati JSON-LD.
 
 - Non costruiamo un sistema di pagamento/biglietteria in v1 (Stripe/Apple Pay, rimandato a v2) **né la fatturazione/ricevute automatiche associate (v2 PAYM-02)** — costo accettato: nessun evento a pagamento è organizzabile tramite la piattaforma finché v2 non è consegnato.
 - Non costruiamo profili utente pubblici con storico partecipazioni in v1 — costo accettato: nessuna visibilità sociale delle proprie iscrizioni passate, coerente con la scelta di tenere la registrazione a basso attrito (§2.1) invece che arricchire il profilo.
-- Non costruiamo chat in tempo reale, app native, live streaming o login OAuth esterno in v1 — vedi `.planning/REQUIREMENTS.md` per il razionale di ciascuna esclusione.
+- Non costruiamo chat in tempo reale, app native, live streaming o login OAuth esterno in v1 — vedi `.planning/requirements-2.md` per il razionale di ciascuna esclusione.
 - Non diventiamo una piattaforma di eventi generica multi-categoria: restiamo scoped a meetup tecnici, con focus Laravel/community italiana — costo accettato: rinunciamo a un mercato più ampio in cambio di una identità di prodotto chiara e coerente con lo scopo vetrina (§1).
 
 ## 6. Scope MVP
@@ -269,7 +269,7 @@ Ogni pagina di dettaglio Evento include dati strutturati JSON-LD.
 - **SM-2**: Il repository riceve interesse esterno misurabile (star, fork, o almeno una issue/PR da contributore non affiliato al team originale) entro 6 mesi. Valida la Visione (nessun FR diretto — obiettivo di prodotto trasversale).
 
 **Secondary**
-- **SM-3**: Tutti i requisiti FR-1 – FR-21 completati e verificati (da `.planning/REQUIREMENTS.md`).
+- **SM-3**: Tutti i requisiti FR-1 – FR-21 completati e verificati (da `.planning/requirements-2.md`).
 - **SM-4** [ASSUMPTION]: PHPStan livello 10 a zero errori e copertura test Pest mantenuta secondo l'obiettivo Track B di `.planning/PROJECT.md`, come precondizione di credibilità per SM-2.
 
 **Counter-metrics (da non ottimizzare)**

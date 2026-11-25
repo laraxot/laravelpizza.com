@@ -97,7 +97,7 @@ Notify/docs/
 │   ├── factory-usage.md
 │   └── business-logic-tests.md
 ├── integration/
-│   ├── filament-integration.md
+│   ├── filament-integration-3.md
 │   ├── providers.md
 │   └── tailwind-integration.md
 └── troubleshooting/
@@ -116,7 +116,7 @@ Notify/docs/
 - **Email**: 15+ file → `channels/email.md`
 - **SMS**: 10+ file → `channels/sms.md`
 - **Testing**: 8+ file → `testing/testing-guidelines.md`
-- **Filament**: 12+ file → `integration/filament-integration.md`
+- **Filament**: 12+ file → `../../Lang/docs/filament-integration-3.md`
 
 ### 3. Miglioramenti Codice (NORMALE - 1-2 giorni)
 
@@ -240,7 +240,7 @@ php artisan notify:benchmark
 
 ## Collegamenti
 
-- [Linee Guida Riusabilità](reusability_guidelines.md)
+- [Linee Guida Riusabilità](reusability-guidelines-2.md)
 - [Piano Implementazione](../../../../docs/module_reusability_implementation_plan.md)
 - [Script Controllo](../../../bashscripts/check_module_reusability.sh)
 
@@ -343,7 +343,7 @@ Notify/docs/
 │   ├── factory-usage.md
 │   └── business-logic-tests.md
 ├── integration/
-│   ├── filament-integration.md
+│   ├── filament-integration-3.md
 │   ├── providers.md
 │   └── tailwind-integration.md
 └── troubleshooting/
@@ -362,7 +362,7 @@ Notify/docs/
 - **Email**: 15+ file → `channels/email.md`
 - **SMS**: 10+ file → `channels/sms.md`
 - **Testing**: 8+ file → `testing/testing-guidelines.md`
-- **Filament**: 12+ file → `integration/filament-integration.md`
+- **Filament**: 12+ file → `../../Lang/docs/filament-integration-3.md`
 
 ### 3. Miglioramenti Codice (NORMALE - 1-2 giorni)
 
@@ -486,7 +486,7 @@ php artisan notify:benchmark
 
 ## Collegamenti
 
-- [Linee Guida Riusabilità](reusability_guidelines.md)
+- [Linee Guida Riusabilità](reusability-guidelines-2.md)
 - [Piano Implementazione](../../../../docs/module_reusability_implementation_plan.md)
 - [Script Controllo](../../../bashscripts/check_module_reusability.sh)
 

@@ -45,7 +45,7 @@
 
 ## Collegamenti
 - [Roadmap Principale](../../roadmap.md)
-- [Best Practices Performance](../../BEST-PRACTICES.md#performance)
+- [Best Practices Performance](../../../laravel/Modules/Activity/docs/best-practices-3.md#performance)
 - [Performance Guidelines](../../performance/optimization.md)
 ## Collegamenti tra versioni di optimization.md
 * [optimization.md](../../../xot/docs/roadmap/performance/optimization.md)

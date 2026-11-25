@@ -213,6 +213,6 @@ $screenshotPath = $this->mcpService->puppeteer()->captureScreenshot(
 - [Documentazione ufficiale Cursor MCP](https://docs.cursor.com/context/model-context-protocol)
 - [model_context_protocol.md](../../../docs/model_context_protocol.md)
 - [mcp_implementation_guide.md](../../../docs/mcp_implementation_guide.md)
-- [mcp_implementation_correction.md](../../../docs/mcp_implementation_correction.md)
+- [mcp-implementation-correction-2.md](../../../docs/mcp-implementation-correction-2.md)
 - [mcp_errors_and_lessons.md](../../../docs/mcp_errors_and_lessons.md)
 - [Indice e collegamenti root](../../../../../docs/links.md) 

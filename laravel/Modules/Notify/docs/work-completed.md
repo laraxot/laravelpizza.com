@@ -36,7 +36,7 @@ discussions: []
 
 ### 2. 📝 Aggiornamento Roadmap Principali
 
-#### ROADMAP_STATUS_SUMMARY.md
+#### roadmap-status-summary-2.md
 - ✅ Aggiornata data a 2025-10-01
 - ✅ Aggiornato status generale: Fase 1 completata, Fase 2 in corso
 - ✅ Aggiunte metriche: Test Coverage 65%, Production Status: STAGING READY
@@ -44,7 +44,7 @@ discussions: []
 - ✅ Aggiornata sezione progressi chiave
 - ✅ Aggiornato footer con Current Sprint: Q4 2025 - Feature Expansion
 
-**File**: `/ROADMAP_STATUS_SUMMARY.md`
+**File**: `/roadmap-status-summary-2.md`
 
 ---
 
@@ -63,7 +63,7 @@ discussions: []
 
 ---
 
-#### DOCUMENTATION_INDEX.md
+#### documentation-index.md
 **Contenuto**:
 - ✅ Indice completo di tutta la documentazione progetto
 - ✅ Sezioni per ogni modulo con link a docs
@@ -75,11 +75,11 @@ discussions: []
 - ✅ Metriche di successo
 - ✅ Link utili e contatti
 
-**File**: `/DOCUMENTATION_INDEX.md`
+**File**: `/documentation-index.md`
 
 ---
 
-#### QUICK_START.md
+#### quick-start-2.md
 **Contenuto**:
 - ✅ Guida rapida per sviluppatori
 - ✅ Prerequisiti e setup iniziale
@@ -95,7 +95,7 @@ discussions: []
 - ✅ Troubleshooting
 - ✅ Link utili
 
-**File**: `/QUICK_START.md`
+**File**: `/quick-start-2.md`
 
 ---
 
@@ -166,8 +166,8 @@ discussions: []
 
 ### Documenti Creati
 - ✅ DOCUMENTATION_STATUS.md (65% coverage documentazione)
-- ✅ DOCUMENTATION_INDEX.md (indice completo)
-- ✅ QUICK_START.md (guida sviluppatori)
+- ✅ documentation-index.md (indice completo)
+- ✅ quick-start-2.md (guida sviluppatori)
 - ✅ WORK_COMPLETED_2025-10-01.md (questo documento)
 
 ### Coverage Documentazione
@@ -226,19 +226,19 @@ discussions: []
 ## 🔗 DOCUMENTI PRINCIPALI
 
 ### Roadmap
-- **[ROADMAP_STATUS_SUMMARY.md](./roadmap_status_summary.md)** - Status generale
-- **[MASTER_ROADMAP.md](./laravel/master_roadmap.md)** - Roadmap strategica 18 mesi
+- **[roadmap-status-summary-2.md](./roadmap-status-summary-2.md)** - Status generale
+- **[master-roadmap-2.md](./laravel/master-roadmap-2.md)** - Roadmap strategica 18 mesi
 - **[roadmap-master.md](./project_docs/roadmaps/roadmap-master.md)** - Consolidamento moduli
 
 ### Documentazione
-- **[DOCUMENTATION_INDEX.md](./documentation_index.md)** - Indice completo
-- **[DOCUMENTATION_STATUS.md](./project_docs/documentation_status.md)** - Stato documentazione
-- **[QUICK_START.md](./quick_start.md)** - Guida rapida sviluppatori
+- **[documentation-index.md](./documentation-index-2.md)** - Indice completo
+- **[DOCUMENTATION_STATUS.md](./project_docs/documentation-status-3.md)** - Stato documentazione
+- **[quick-start-2.md](./quick-start-2.md)** - Guida rapida sviluppatori
 
 ### Moduli Principali
 - **[Fixcity ROADMAP_2025.md](./laravel/Modules/Fixcity/docs/roadmap_2025.md)**
 - **[User roadmap.md](./laravel/Modules/User/docs/roadmap.md)**
-- **[Sixteen ROADMAP_2025.md](./laravel/Themes/Sixteen/docs/roadmap_2025.md)**
+- **[Sixteen roadmap-3.md](../../User/docs/roadmap-3.md)**
 
 ---
 
@@ -250,15 +250,15 @@ discussions: []
 - [x] Identificate aree da aggiornare
 
 ### Aggiornamenti
-- [x] ROADMAP_STATUS_SUMMARY.md aggiornato
-- [x] Fixcity ROADMAP_2025.md aggiornato
+- [x] roadmap-status-summary-2.md aggiornato
+- [x] Fixcity roadmap-3.md aggiornato
 - [x] User roadmap.md aggiornato
 - [x] Sixteen ROADMAP_2025.md aggiornato
 
 ### Nuovi Documenti
 - [x] DOCUMENTATION_STATUS.md creato
-- [x] DOCUMENTATION_INDEX.md creato
-- [x] QUICK_START.md creato
+- [x] documentation-index.md creato
+- [x] quick-start-2.md creato
 - [x] WORK_COMPLETED_2025-10-01.md creato
 
 ### Qualità

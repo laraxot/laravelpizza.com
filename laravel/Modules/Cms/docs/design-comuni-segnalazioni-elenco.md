@@ -50,7 +50,7 @@ Analisi e implementazione della pagina elenco segnalazioni del progetto Design C
 ### Tema Sixteen
 - [Analisi HTML](../../../Themes/Sixteen/docs/design-comuni/SEGNALAZIONI_ELENCO_ANALISI.md)
 - [Report](../../../Themes/Sixteen/docs/design-comuni/SEGNALAZIONI_ELENCO_REPORT.md)
-- [Progress Report](../../../Themes/Sixteen/docs/design-comuni/PROGRESS_REPORT.md)
+- [Progress Report](../../Notify/docs/progress-report-2.md)
 - [All Pages Analysis](../../../Themes/Sixteen/docs/design-comuni/ALL_PAGES_ANALYSIS.md)
 
 ### Master Index

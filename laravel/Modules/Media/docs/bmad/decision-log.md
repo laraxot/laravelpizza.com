@@ -16,15 +16,6 @@ related:
 
 # Decision log — Media
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Nvx0tX
 ## Formato
 
 - **Data:** YYYY-MM-DD
@@ -58,24 +49,6 @@ related:
 **Conseguenze:** 
 - Migliore leggibilità e gestione dei conflitti in git
 - Necessità di refactor esistente
-<<<<<<< .merge_file_cW7Ka5
-<<<<<<< .merge_file_gbpRQ1
-=======
-=======
->>>>>>> .merge_file_vBdwvZ
-=======
->>>>>>> .merge_file_qzJqb1
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_cW7Ka5
->>>>>>> .merge_file_giek2L
-=======
->>>>>>> .merge_file_vBdwvZ
 Le voci di esempio del template precedente sono state rimosse: non descrivevano il modulo.
 Stati ammessi: PROPOSTA, APERTA, APPROVATA, RIFIUTATA, OBSOLETA; ogni voce dichiara il perché e l'evidenza nel codice.
 
@@ -96,3 +69,4 @@ Stati ammessi: PROPOSTA, APERTA, APPROVATA, RIFIUTATA, OBSOLETA; ogni voce dichi
 | B. Collection «documentale» protetta | protegge solo ciò che è prova | serve classificare le collection esistenti |
 
 Raccomandazione: B (più piccola, aderente allo scopo). Decide il committente.
+

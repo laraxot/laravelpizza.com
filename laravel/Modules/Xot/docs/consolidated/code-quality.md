@@ -287,7 +287,7 @@ unset($translations['existing_key']); // MAI!
 - [xot-base-classes.md](./xot-base-classes.md)
 - [filament-resource-rules.md](./filament-resource-rules.md)
 - [migration-standards.md](./migration-standards.md)
-- [phpstan-implementation-guide.md](./phpstan-implementation-guide.md)
+- [phpstan-implementation-guide-2.md](phpstan/phpstan-implementation-guide-2.md)
 - [translations-best-practices.md](./translations-best-practices.md)
 - [namespace-conventions.md](./namespace-conventions.md)
 
@@ -356,15 +356,15 @@ This document outlines the best practices for maintaining high code quality with
 
 ## Links to Related Documentation
 - [Xot Base Classes](../Xot/project_docs/XOT_BASE_CLASSES.md)
-- [Filament Extension Pattern](../../Notify/project_docs/FILAMENT_EXTENSION_PATTERN.md)
-- [Filament Extension Pattern Analysis](../../Notify/project_docs/FILAMENT_EXTENSION_PATTERN_ANALYSIS.md)
-- [Patient Module - Namespace Conventions](../../Patient/project_docs/NAMESPACE_CONVENTIONS.md)
+- [Filament Extension Pattern](../../../Notify/docs/filament-extension-pattern-2.md)
+- [Filament Extension Pattern Analysis](../../../Notify/docs/filament-extension-pattern-analysis-2.md)
+- [Patient Module - Namespace Conventions](namespace-conventions-2.md)
 - [Patient Module - Validation Errors](../../Patient/project_docs/VALIDATION_ERRORS.md)
 - [PHP Strict Types](./PHP-STRICT-TYPES.md)
-- [PHPStan Implementation Guide](./PHPSTAN-IMPLEMENTATION-GUIDE.md)
+- [PHPStan Implementation Guide](phpstan/phpstan-implementation-guide-2.md)
 - [Naming Conventions](./NAMING-CONVENTIONS.md)
 - [Service Provider Best Practices](./SERVICE-PROVIDER-BEST-PRACTICES.md)
-- [Filament Best Practices](./FILAMENT-BEST-PRACTICES.md)
+- [Filament Best Practices](filament-best-practices-2.md)
 # Code Quality Guidelines for Laravel Modules
 
 ## Overview
@@ -435,12 +435,12 @@ This document outlines the best practices for maintaining high code quality with
 
 ## Links to Related Documentation
 - [Xot Base Classes](../Xot/project_docs/XOT_BASE_CLASSES.md)
-- [Filament Extension Pattern](../../Notify/project_docs/FILAMENT_EXTENSION_PATTERN.md)
-- [Filament Extension Pattern Analysis](../../Notify/project_docs/FILAMENT_EXTENSION_PATTERN_ANALYSIS.md)
-- [Patient Module - Namespace Conventions](../../Patient/project_docs/NAMESPACE_CONVENTIONS.md)
+- [Filament Extension Pattern](../../../Notify/docs/filament-extension-pattern-2.md)
+- [Filament Extension Pattern Analysis](../../../Notify/docs/filament-extension-pattern-analysis-2.md)
+- [Patient Module - Namespace Conventions](namespace-conventions-2.md)
 - [Patient Module - Validation Errors](../../Patient/project_docs/VALIDATION_ERRORS.md)
 - [PHP Strict Types](./PHP-STRICT-TYPES.md)
-- [PHPStan Implementation Guide](./PHPSTAN-IMPLEMENTATION-GUIDE.md)
+- [PHPStan Implementation Guide](phpstan/phpstan-implementation-guide-2.md)
 - [Naming Conventions](./NAMING-CONVENTIONS.md)
 - [Service Provider Best Practices](./SERVICE-PROVIDER-BEST-PRACTICES.md)
-- [Filament Best Practices](./FILAMENT-BEST-PRACTICES.md)
+- [Filament Best Practices](filament-best-practices-2.md)

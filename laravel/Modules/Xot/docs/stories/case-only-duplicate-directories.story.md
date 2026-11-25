@@ -81,7 +81,7 @@ Inventario finale delle cartelle: **zero** coppie.
       `2026_11_17_114812_create_users_table.php`. Va deciso nella story del modulo User, guardando
       la tabella `migrations`, mai rinominando né togliendo a mano.
 - [ ] Le collisioni di **file** restano: 2435 percorsi (circa 1180 gruppi), per lo più `docs/`
-      (`README.md`/`readme.md`, `INDEX.md`/`index.md`, `CONTRIBUTING.md`/`contributing.md` in 15
+      (`README.md`/`readme.md`, `INDEX.md`/`index.md`, `CONTRIBUTING.md`/`../contributing.md` in 15
       moduli), più residui `.up`, `.test`, `.wip` in `app/` di Cms, Notify, Geo, Xot, viste email
       di Notify in camelCase/minuscolo e asset Leaflet di Geo. Si bonificano con
       `python3 bashscripts/tools/audit/audit-case-collisions.py --fix-identical` per gli identici

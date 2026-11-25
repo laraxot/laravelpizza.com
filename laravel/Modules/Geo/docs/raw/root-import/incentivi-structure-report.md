@@ -269,7 +269,7 @@ discussions: []
 - **analysis.md** - Analisi del modulo
 - **models/domain-model.md** - Domain model diagram
 - **conflicts.md** - Conflitti noti
-- **phpstan-report.md** - Rapporto PHPStan (level 9)
+- **phpstan-report-2.md** - Rapporto PHPStan (level 9)
 - **phpmd-report.txt** - Rapporto PHPMD
 
 #### 🛠️ Documentazione Specifiche:

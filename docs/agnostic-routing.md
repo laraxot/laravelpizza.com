@@ -173,7 +173,7 @@ resources/views/components/blocks/products/detail.blade.php
 
 ## Collegamenti
 
-- [Documentazione CMS Routing](../../../../../modules/cms/docs/folio_routing_system.md)
+- [Documentazione CMS Routing](../../../../../modules/cms/docs/folio-routing-system-2.md)
 - [Pattern Container0/Slug0 - Memory di Sistema](../../../../../.cursor/memories/)
 - [Folio Volt Structure](../folio-volt-structure.md)
 

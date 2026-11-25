@@ -9,11 +9,11 @@ issues: []
 discussions: []
 module: theme
 topic: sprint-planning
-canonical: ../../../Themes/docs/shared-components/SPRINT_PLANNING.md  # target mancante, verificato 2026-10-08
+canonical: ../../../Themes/docs/shared-components/sprint-planning-2.md  # target mancante, verificato 2026-10-08
 status: stub
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/SPRINT_PLANNING.md
+See canonical documentation: ../../../Themes/docs/shared-components/sprint-planning-2.md
 ---
 # Seo Module - Sprint Planning
 

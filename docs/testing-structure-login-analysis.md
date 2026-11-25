@@ -141,7 +141,7 @@ function createTestUser(array $attributes = []): UserContract
 ## 🔗 **Collegamenti Documentazione**
 
 ### **Pattern Architetturali**
-- [laravel/Modules/Cms/docs/architecture-xotdata-pattern.md](../laravel/modules/cms/docs/architecture-xotdata-pattern.md)
+- [laravel/Modules/Cms/docs/architecture-xotdata-pattern.md](../laravel/Modules/Cms/docs/architecture-xotdata-pattern-2.md)
 - [laravel/Modules/Xot/docs/architecture-violations-and-fixes.md](../laravel/modules/xot/docs/architecture-violations-and-fixes.md)
 
 ### **Sistema Folio/Volt**

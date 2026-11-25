@@ -56,7 +56,7 @@ Test, audit o controllo ripetibile che dimostra il rispetto della decisione.
 
 Ogni ADR non superseded ha, in questo ordine o equivalente: `## Contesto`, `## Driver della decisione`, `## Alternative scartate`, `## Decisione`, `## Conseguenze`, `## Conferma`. Una sezione può mancare solo con una deroga dichiarata nel file (esempio: [0010](0010-no-ticket-logic-in-page-slug-middleware.md), dove la Conferma non è eseguibile in Xot). Il modello breve in stile MADR è [0000-template](0000-template.md) (intestazioni inglesi: lo si adatta alle sezioni italiane qui sopra).
 
-La governance dei contratti comportamentali, collegati agli ADR tramite invarianti con ID stabile e gruppo Pest, è la decisione [0012](0012-behavioral-contract-governance.md); gli indici sono in [../contracts/INDEX.md](../contracts/INDEX.md).
+La governance dei contratti comportamentali, collegati agli ADR tramite invarianti con ID stabile e gruppo Pest, è la decisione [0012](0012-behavioral-contract-governance.md); gli indici sono in [../contracts/index.md](../contracts/index.md).
 
 ## Duplicati e superseded
 
@@ -64,7 +64,7 @@ Un file duplicato non si cancella: riceve `status: superseded by <canonico>.md` 
 
 ## Decisioni
 
-L'elenco completo, con numero, stato e canonico/superseded, è in [INDEX.md](INDEX.md): è l'unico inventario e va aggiornato nello stesso commit che aggiunge o modifica un ADR.
+L'elenco completo, con numero, stato e canonico/superseded, è in [index.md](index.md): è l'unico inventario e va aggiornato nello stesso commit che aggiunge o modifica un ADR.
 
 ## Decisioni precedenti (formato libero, non ancora ADR)
 

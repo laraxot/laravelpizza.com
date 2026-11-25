@@ -103,7 +103,7 @@ Questo approccio dichiarativo permette di definire form complessi in modo chiaro
 
 Per una documentazione più approfondita sull'utilizzo dei widget Filament in il progetto, consulta:
 
-- [Utilizzo dei Widget Filament per i Form](../laravel/modules/cms/docs/filament_forms.md) - Documentazione tecnica dettagliata
+- [Utilizzo dei Widget Filament per i Form](../laravel/modules/cms/docs/filament-forms-2.md) - Documentazione tecnica dettagliata
 - [Creazione di Componenti Personalizzati](../laravel/modules/cms/docs/custom_filament_components.md) (da creare)
 - [Best Practices per i Form in il progetto](../laravel/modules/cms/docs/form_best_practices.md) (da creare)
 
@@ -215,7 +215,7 @@ Questo approccio dichiarativo permette di definire form complessi in modo chiaro
 
 Per una documentazione più approfondita sull'utilizzo dei widget Filament in il progetto, consulta:
 
-- [Utilizzo dei Widget Filament per i Form](../laravel/modules/cms/docs/filament_forms.md) - Documentazione tecnica dettagliata
+- [Utilizzo dei Widget Filament per i Form](../laravel/modules/cms/docs/filament-forms-2.md) - Documentazione tecnica dettagliata
 - [Creazione di Componenti Personalizzati](../laravel/modules/cms/docs/custom_filament_components.md) (da creare)
 - [Best Practices per i Form in il progetto](../laravel/modules/cms/docs/form_best_practices.md) (da creare)
 

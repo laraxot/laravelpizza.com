@@ -48,8 +48,8 @@ Indice operativo del wiki Rating.
 
 ## On-Demand Entry Points
 
-- [rules/INDEX](./rules/INDEX.md): regole locali e root per Rating/XotBase/Filament.
-- [skills/INDEX](./skills/INDEX.md): skill locali e condivise da caricare on-demand.
+- [rules/INDEX](rules/index.md): regole locali e root per Rating/XotBase/Filament.
+- [skills/INDEX](skills/index.md): skill locali e condivise da caricare on-demand.
 
 ## Scopo Rating Module
 

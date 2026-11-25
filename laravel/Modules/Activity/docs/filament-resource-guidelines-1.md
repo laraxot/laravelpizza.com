@@ -112,7 +112,7 @@ All resources must be tested to ensure:
 ### Related Documentation
 
 - [XotBaseResource Documentation](../../Xot/docs/filament/resources/xot-base-resource.md)
-- [Filament Best Practices](../../Xot/docs/filament-best-practices.md)
+- [Filament Best Practices](../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Laraxot Extension Patterns](../../Xot/docs/base-classes.md)
 ---
 module: theme

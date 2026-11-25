@@ -49,7 +49,7 @@ discussions: []
    • utilities/ - General tools
 
 6️⃣  DOCUMENTATION NAMING
-   ❌ NEVER: Analysis-2025-01-02.md, CODE_QUALITY.md
+   ❌ NEVER: Analysis-2025-01-02.md, code-quality-2.md
    ✅ ALWAYS: code-analysis.md, best-practices.md
    📚 Exceptions: README.md, CHANGELOG.md only
    📚 Why: Consistency, searchability, DRY

@@ -398,8 +398,8 @@ npm run build
 - [MASTER_IMPLEMENTATION_PLAN.md](../../laravel/Themes/Sixteen/docs/design-comuni/MASTER_IMPLEMENTATION_PLAN.md)
 - [ARCHITECTURAL_DECISIONS.md](../../laravel/Themes/Sixteen/docs/design-comuni/ARCHITECTURAL_DECISIONS.md)
 - [HTML_PARITY_VERIFICATION_REPORT.md](../../laravel/Themes/Sixteen/docs/design-comuni/HTML_PARITY_VERIFICATION_REPORT.md)
-- [QWEN.md](../../QWEN.md)
-- [qwen.md](../../qwen.md)
+- [qwen-2.md](../../qwen-2.md)
+- [qwen-2.md](../../docs/wiki/integrations/_da-riconciliare/qwen-2.md)
 
 ---
 

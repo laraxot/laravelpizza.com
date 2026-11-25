@@ -995,4 +995,4 @@ updated: 2026-09-26
 qmd: "04 integrazione moduli"
 issues: []
 discussions: []
-Continua con la sezione [Implementazione Pratica](05_implementazione_pratica.md) per vedere esempi concreti di implementazione dei server MCP in progetti Laravel.
+Continua con la sezione [Implementazione Pratica](05-implementazione-pratica-2.md) per vedere esempi concreti di implementazione dei server MCP in progetti Laravel.

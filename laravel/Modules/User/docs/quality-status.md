@@ -242,7 +242,7 @@ See canonical documentation: ../../../Themes/docs/shared-components/quality-stat
 
 ---
 
-<!-- Contenuto unito da quality-status-.md (rimozione date dai nomi file, issue #64) -->
+<!-- Contenuto unito da quality-status-2.md (rimozione date dai nomi file, issue #64) -->
 
 <!-- recovery from broken basename `quality-status-.md.md` after docs-guardian mass rename -->
 

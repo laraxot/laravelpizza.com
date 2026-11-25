@@ -47,7 +47,7 @@ return [
 Esiste una discrepanza tra le convenzioni utilizzate nel modulo Notify e le convenzioni generali di :
 Esiste una discrepanza tra le convenzioni utilizzate nel modulo Notify e le convenzioni generali di <nome progetto>:
 
-1. **Convenzioni Generali (Modules/Lang/docs/TRANSLATION_KEYS_RULES.md)**:
+1. **Convenzioni Generali (Modules/Lang/docs/translation-keys-rules-2.md)**:
    - Struttura gerarchica espansa senza chiavi come `.navigation`
    - Formato: `modulo::risorsa.fields.campo.label`
    - Nessun uso di chiavi in italiano
@@ -101,7 +101,7 @@ Dopo un'analisi approfondita, è stato determinato che:
 Per chiarire questa situazione e prevenire confusioni future, sono state intraprese le seguenti azioni:
 
 1. **Documentazione Aggiornata**:
-   - Creato il documento `TRANSLATION_CONVENTIONS_CLARIFICATION.md` che spiega la discrepanza
+   - Creato il documento `translation-conventions-clarification-2.md` che spiega la discrepanza
    - Aggiornate le regole in `.windsurf/rules/translation-conventions-notify.md` e `.cursor/rules/translation-conventions-notify.md`
 
 2. **Mantenimento della Struttura Esistente**:
@@ -124,5 +124,5 @@ Per garantire la coerenza futura, si raccomanda di:
 
 - [Convenzioni di Traduzione nel Modulo Notify](./translation_conventions.md)
 - [Chiarimento sulle Convenzioni di Traduzione](./translation_conventions_clarification.md)
-- [Regole Generali per le Chiavi di Traduzione](../../lang/docs/translation_keys_rules.md)
-- [Best Practices per le Chiavi di Traduzione](../../lang/docs/translation_keys_best_practices.md)
+- [Regole Generali per le Chiavi di Traduzione](../../lang/docs/translation-keys-rules-2.md)
+- [Best Practices per le Chiavi di Traduzione](../../lang/docs/translation-keys-best-practices-2.md)

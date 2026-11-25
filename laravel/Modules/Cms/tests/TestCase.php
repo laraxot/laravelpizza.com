@@ -21,6 +21,8 @@ use function Safe\json_decode;
 
 /**
  * TestCase base per il modulo Cms.
+ *
+ * @see Modules/Cms/docs/testing.md
  */
 abstract class TestCase extends XotBaseTestCase
 {

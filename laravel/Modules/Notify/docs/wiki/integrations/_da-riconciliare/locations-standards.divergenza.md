@@ -18,12 +18,12 @@ updated: 2026-11-23
 >>>>>>> .merge_file_55ZFi4
 ---
 
-# Divergenza: `locations_standards.md`
+# Divergenza: `locations-standards-2.md`
 
-Questo file veniva da `docs/wiki/integrations/modules/notify/locations_standards.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+Questo file veniva da `../../../locations-standards-2.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
 
-- versione del modulo: `laravel/Modules/Notify/docs/locations_standards.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/locations_standards.md`
+- versione del modulo: `laravel/Modules/Notify/docs/locations-standards-2.md`
+- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/locations-standards-2.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 

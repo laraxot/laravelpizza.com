@@ -18,7 +18,7 @@ updated: 2026-09-22
 
 ## Story
 
-Nelle root dei moduli ci devono stare al massimo 5 file .md (README.md, CHANGELOG.md, LICENSE.md, AGENTS.md, CLAUDE.md). I file .md extra vanno spostati in docs/ con naming standard. I duplicati di sola maiuscola vanno rimossi.
+Nelle root dei moduli ci devono stare al massimo 5 file .md (README.md, CHANGELOG.md, ../../license.md, AGENTS.md, CLAUDE.md). I file .md extra vanno spostati in docs/ con naming standard. I duplicati di sola maiuscola vanno rimossi.
 
 ## Acceptance Criteria
 

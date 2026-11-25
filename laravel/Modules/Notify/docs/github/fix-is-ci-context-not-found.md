@@ -113,7 +113,7 @@ ls -la bashscripts/lib/parse_gitmodules_ini.sh
 
 Creati documenti per prevenire errori futuri:
 
-- `DIRECTORY_STRUCTURE.md` - Spiega i path corretti
+- `directory-structure-2.md` - Spiega i path corretti
 - `TROUBLESHOOTING.md` - Guida risoluzione errori
 - Aggiornato `README.md` - Index con tutti i doc
 
@@ -203,10 +203,10 @@ bashscripts/git/subtrees/sync_remote_repo.sh laraxot
 
 | Documento | Scopo |
 |-----------|-------|
-| [DIRECTORY_STRUCTURE.md](bashscripts/docs/git/DIRECTORY_STRUCTURE.md) | Path corretti |
+| [directory-structure-2.md](../../../Geo/docs/raw/history/directory-structure-2.md) | Path corretti |
 | [TROUBLESHOOTING.md](bashscripts/docs/git/TROUBLESHOOTING.md) | Risoluzione errori |
 | [README.md](bashscripts/docs/git/README.md) | Index documentazione |
-| [sync_remote_repo_coordination.md](bashscripts/docs/git/sync_remote_repo_coordination.md) | Coordineamento agenti |
+| [sync-remote-repo-coordination-2.md](bashscripts/docs/git/sync-remote-repo-coordination-2.md) | Coordineamento agenti |
 
 ### Se gli Errori Persistono
 
@@ -252,7 +252,7 @@ Creare documenti per:
 
 ### Prima di Lavorare su Questo Script
 
-1. ✅ Leggi `sync_remote_repo_coordination.md`
+1. ✅ Leggi `sync-remote-repo-coordination-2.md`
 2. ✅ Verifica path corretto: `bashscripts/git/subtrees/`
 3. ✅ Controlla che `bashscripts/subtrees/` sia eliminato
 4. ✅ Testa con `bash -n script.sh`
@@ -278,7 +278,7 @@ ls -la bashscripts/lib/
 - [x] Eliminato script obsoleto: `rm -rf bashscripts/subtrees/`
 - [x] Verificato script corretto: `bashscripts/git/subtrees/`
 - [x] Verificate librerie: `bashscripts/lib/`
-- [x] Creata documentazione: `DIRECTORY_STRUCTURE.md`
+- [x] Creata documentazione: `directory-structure-2.md`
 - [x] Creato troubleshooting: `TROUBLESHOOTING.md`
 - [x] Aggiornato coordination log
 - [x] Testato sintassi script
@@ -313,7 +313,7 @@ bashscripts/git/subtrees/sync_remote_repo.sh  # ✅ USE THIS
 ```
 
 ### Documentation
-- [DIRECTORY_STRUCTURE.md](bashscripts/docs/git/DIRECTORY_STRUCTURE.md) - Correct paths
+- [directory-structure-2.md](../../../Geo/docs/raw/history/directory-structure-2.md) - Correct paths
 - [TROUBLESHOOTING.md](bashscripts/docs/git/TROUBLESHOOTING.md) - Error resolution
 
 **Status**: ✅ RESOLVED  

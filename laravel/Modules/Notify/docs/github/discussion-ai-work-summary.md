@@ -62,7 +62,7 @@ This discussion tracks the AI agent's work on improving GitHub Actions, document
 
 | File | Purpose | Location |
 |------|---------|----------|
-| **ai-agent-lessons-learned.md** | Honest report about testing failures | Root |
+| **ai-agent-lessons-learned-2.md** | Honest report about testing failures | Root |
 | **github-action-setup-required.md** | Step-by-step setup guide | Root |
 | **task-complete-git-pushed.md** | Final completion report | Root |
 | **docs/ai-rules-critical.md** | Critical rules for AI agents | docs/ |

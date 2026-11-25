@@ -57,14 +57,14 @@ Una collisione di merge e' un punto in cui due storie dello stesso file si sono 
 | A | User: `Authentication`, `AuthenticationLog`, `BaseTeam`, `BaseTeamUser`, `BaseTenant`; Tenant: `TenantSetting`, `TenantSubscription` | User, Tenant |
 | B | User: `Device`, `DeviceUser`, `OauthPersonalAccessClient`, `Profile`, `Role` | User |
 | C | User: `SocialiteUser`, `SsoProvider`, `TeamInvitation`, `TeamPermission` | User |
-| D | `.gitattributes` e `.gitignore` di Activity, AI, Cms; `AI/docs/index.md`; `Cms/docs/00-index.md`; `Cms/docs/stories/docs-organization-cms.story.md` | Activity, AI, Cms |
+| D | `.gitattributes` e `.gitignore` di Activity, AI, Cms; `AI/docs/index.md`; `../../../AI/docs/00-index-2.md`; `Cms/docs/stories/docs-organization-cms.story.md` | Activity, AI, Cms |
 | E1 | Nomi doppi in `User/docs/archive`, `User/docs/bug-fixes` | User |
 | E2 | Nomi doppi in `Xot/docs/consolidated`, `Xot/docs/laragon`, `docs/chat/swarm`, `Media/docs` | Xot, Media |
 | Coordinatore | `Xot/docs/stories/phpstan-modules-zero-errors.story.md`, questa story, wiki, memoria, run PHPStan intero | Xot |
 
 ## Coordinamento con Codex (rilevato 2026-11-06 ~07:47)
 
-`codex` ha acquisito alle 07:44:56 i lock del task `collision-rewrite-20261106` su 16 file di questa story: `User/app/Models/{Authentication,AuthenticationLog,BaseTeam,BaseTeamUser,BaseTenant,Device,DeviceUser,OauthPersonalAccessClient,Role,SocialiteUser,SsoProvider,TeamInvitation,TeamPermission}.php`, `AI/docs/index.md`, `Cms/docs/00-index.md`, `Cms/docs/stories/docs-organization-cms.story.md`, piu' `Xot/docs/stories/phpstan-modules-zero-errors.story.md`.
+`codex` ha acquisito alle 07:44:56 i lock del task `collision-rewrite-20261106` su 16 file di questa story: `User/app/Models/{Authentication,AuthenticationLog,BaseTeam,BaseTeamUser,BaseTenant,Device,DeviceUser,OauthPersonalAccessClient,Role,SocialiteUser,SsoProvider,TeamInvitation,TeamPermission}.php`, `AI/docs/index.md`, `../../../AI/docs/00-index-2.md`, `Cms/docs/stories/docs-organization-cms.story.md`, piu' `Xot/docs/stories/phpstan-modules-zero-errors.story.md`.
 
 Regola di collaborazione (protocollo `bashscripts/lock/README.md`): un lock vivo non si ruba e non si duplica il lavoro. Quindi:
 
@@ -123,7 +123,7 @@ Decisioni aperte: nessuna bloccante. Proposto: tipizzare `avatar` come nullable 
 
 ### Agente D: `.gitattributes` e `.gitignore` di Activity, AI, Cms; verifica dei tre documenti
 
-Perimetro ridotto dal coordinatore: Codex (`codex`, task `collision-rewrite-20261106`, lock delle 07:44:56) teneva `AI/docs/index.md`, `Cms/docs/00-index.md` e `Cms/docs/stories/docs-organization-cms.story.md`. Questi tre file non sono stati toccati (sola lettura). Lock presi e rilasciati: i quattro file di config piu' `Activity/docs/no-git-lfs.md`.
+Perimetro ridotto dal coordinatore: Codex (`codex`, task `collision-rewrite-20261106`, lock delle 07:44:56) teneva `AI/docs/index.md`, `../../../AI/docs/00-index-2.md` e `Cms/docs/stories/docs-organization-cms.story.md`. Questi tre file non sono stati toccati (sola lettura). Lock presi e rilasciati: i quattro file di config piu' `Activity/docs/no-git-lfs.md`.
 
 **Stato trovato.** Alle 07:47 il working tree dei sette file aveva gia' zero marcatori (i quattro file di config erano gia' nel commit `d81a42a62`, i tre documenti nel working tree di Codex). Il lavoro dell'agente e' stato quindi riscrivere e provare i quattro file di config, non risolvere regioni.
 
@@ -151,7 +151,7 @@ Perimetro ridotto dal coordinatore: Codex (`codex`, task `collision-rewrite-2026
 
 - Cms: 989 file, 542 nella radice; AI: 286 file, 115 nella radice. `md-filenames.py check` non segnala nulla in Cms, AI, Activity (i 14 nomi doppi sono tutti in User, Xot, Media).
 - Gemelli per trattino/underscore o maiuscole nella stessa cartella: Cms 106 gruppi, AI 36. In AI 35 su 36 sono gia' gestiti (gemello `superseded` o `stub`). Restano da decidere **15 gruppi in Cms** e **1 in AI**, tutti `draft` contro `draft`: Cms (radice) `business-logic-report`, `cleanup-log`, `content-blocks-system`, `filament-4x-compatibility`, `filament-5x-compatibility`, `filament-forms`, `folio-routing-system`, `git-conflicts-resolution-impact`, `product-strategy`, `roadmap-renamed`, `testing-registration-widget`, `volt-folio-esempio`, `volt-web-application`, `web-design-rules`, piu' `errors/pub-theme-view-not-found`; AI `product-strategy.md` contro `product_strategy.md`. Quelli con dimensioni quasi uguali sono copie; quelli con dimensioni diverse (`folio-routing-system` 6680 B contro 17196 B, AI `product-strategy` 1713 B contro 2829 B) hanno contenuti diversi e non si fondono (precedente: le coppie chiuse per concetto nella story Cms, `prd-corporate.md`, `product-strategy-corporate.md`). Il `product_strategy.md` di AI e' un testo con TAM/SAM/SOM e proiezioni finanziarie senza fonte: va deciso dall'utente.
-- Perche' non spostare: la radice di `Cms/docs` non si sposta senza migration map (regola DOC-006, ripetuta in `00-index.md`), e qualunque spostamento rompe i link degli indici in lavorazione di Codex. Nessun file e' stato mosso o cancellato.
+- Perche' non spostare: la radice di `Cms/docs` non si sposta senza migration map (regola DOC-006, ripetuta in `00-index-2.md`), e qualunque spostamento rompe i link degli indici in lavorazione di Codex. Nessun file e' stato mosso o cancellato.
 
 **Aperto, per decisione del coordinatore o dell'utente.**
 
@@ -167,20 +167,20 @@ Perimetro: le sei violazioni di `md-filenames.py check` in `User/docs` (quattro 
 
 **`archive/quality-status.md`** (nuovo; ritirati `quality-status-11.md` e `quality-status.md`)
 - Scopo: istantanea PHPStan del modulo di autenticazione a novembre 2025 (13 errori scesi a circa 5: `ChangeTypeCommand`, `EditUserWidget`).
-- Da `-11`: tutto il corpo. Da `-2025-11`: nulla in piu' del corpo (identico riga per riga, verificato con `diff`); il suo front matter aveva `related` verso file mai esistiti (`00-index-1.md`, `actions-path-convention.md`, ...) e un issue di un altro repository, tolti. La data reale (15 novembre 2025, dal piede del documento) va in `created`.
+- Da `-11`: tutto il corpo. Da `-2025-11`: nulla in piu' del corpo (identico riga per riga, verificato con `diff`); il suo front matter aveva `related` verso file mai esistiti (`00-index-1.md`, `actions-path-convention-2.md`, ...) e un issue di un altro repository, tolti. La data reale (15 novembre 2025, dal piede del documento) va in `created`.
 - Migliorato: sezione "Stato verificato oggi" (`EditUserWidget` usa ancora `Assert::classExists`/`subclassOf` e `array_fill_keys` annotato; `ChangeTypeCommand` conserva `method_exists(..., 'getLabel')` a riga 66; User a zero errori nel run intero del 2026-11-06); i controlli segnati come eseguiti senza prova sono ora un elenco di controlli, non una prova; le metriche senza misura (+40%) dichiarate stime.
 - Verifica: `frontmatter-check` 0 invalidi; tutti i link relativi risolti.
 
-**`archive/historical/phpstan-fixes.md`** (riscritto; ritirati `phpstan-fixes-2.md` e `phpstan-fixes-3.md`)
+**`archive/historical/phpstan-fixes.md`** (riscritto; ritirati `phpstan-fixes-2-2.md` e `phpstan-fixes-3.md`)
 - Scopo: registro dei quattro errori PHPStan di gennaio 2025 e del loro esito. Il nome pulito era occupato da un alias ("identico al canonico", `canonical: archive/phpstan-fixes.md`) che puntava a un altro documento, la sessione di ottobre 2025: l'alias era falso per questo testo.
 - Da `-2`: il corpo. Da `-3`: stesso corpo, front matter con `related` morti, tolto. Dall'alias: il rinvio alla sessione di ottobre, ora una voce di "Altre cronache PHPStan".
-- Migliorato: tabella con la colonna "Oggi" verificata sul codice (`BaseListUsers` non dichiara piu' `getTableActions()`; `PasswordResetConfirmWidget` estende `XotBaseSchemaWidget` e non ha piu' `$view`; `is_string` ancora in `RegisterWidget` e `ResetPasswordWidget`; il callback di `UserTypeRegistrationsChartWidget` accetta `mixed` e restringe con `instanceof TrendValue`); la raccomandazione `@phpstan-ignore-next-line` e' dichiarata **superata** dalla regola `docs/wiki/rules/phpstan-l10-compliance.md`; elencate le copie dello stesso testo (`phpstan-fixes-2025.md`, `phpstan-fixes-conflict.md`, `phpstan-fixes-conflict-2e.md`, `../phpstan_fixes_2025.md`).
+- Migliorato: tabella con la colonna "Oggi" verificata sul codice (`BaseListUsers` non dichiara piu' `getTableActions()`; `PasswordResetConfirmWidget` estende `XotBaseSchemaWidget` e non ha piu' `$view`; `is_string` ancora in `RegisterWidget` e `ResetPasswordWidget`; il callback di `UserTypeRegistrationsChartWidget` accetta `mixed` e restringe con `instanceof TrendValue`); la raccomandazione `@phpstan-ignore-next-line` e' dichiarata **superata** dalla regola `docs/wiki/rules/phpstan-l10-compliance.md`; elencate le copie dello stesso testo (`phpstan-fixes-4.md`, `phpstan-fixes-conflict.md`, `phpstan-fixes-conflict-2e.md`, `../../../User/docs/phpstan-fixes-4.md`).
 - Verifica: `frontmatter-check` 0; link risolti.
 
-**`archive/historical/actions-structure.md`** (riscritto; ritirato `actions-structure-1.md`)
+**`../../../User/docs/actions-structure-4.md`** (riscritto; ritirato `actions-structure-1.md`)
 - Scopo: dove stanno le Actions (`app/Actions/`), namespace senza `App`, come si scrive un'Action Spatie.
-- Da `-1`: la struttura del testo e le regole. Dalla `actions-structure.md` precedente: lo stesso corpo, ma scritto due volte di seguito (artefatto di concatenazione), con due segnaposto diversi per il nome del progetto (`<main module>`, `<nome progetto>`) e una prima frase senza soggetto.
-- Migliorato: esempio corretto `Auth/LoginAction.php` (non esiste) sostituito con `Auth/ResendEmailVerificationAction.php`, codice dell'Action preso dal file reale; tipizzazione sul contratto (`UserContract`, `MustVerifyEmail`) invece del modello concreto; regola no-services e no-proxy-delle-relazioni; `composer.json` con il mapping vero; link al `best-practices/queueable-actions.md` ora risolvibile (prima puntava a una cartella inesistente). Status `active` perche' verificato su `composer.json`, sulla cartella `app/Actions/` e su `DeleteAccountWidget`.
+- Da `-1`: la struttura del testo e le regole. Dalla `actions-structure-4.md` precedente: lo stesso corpo, ma scritto due volte di seguito (artefatto di concatenazione), con due segnaposto diversi per il nome del progetto (`<main module>`, `<nome progetto>`) e una prima frase senza soggetto.
+- Migliorato: esempio corretto `Auth/LoginAction.php` (non esiste) sostituito con `Auth/ResendEmailVerificationAction.php`, codice dell'Action preso dal file reale; tipizzazione sul contratto (`UserContract`, `MustVerifyEmail`) invece del modello concreto; regola no-services e no-proxy-delle-relazioni; `composer.json` con il mapping vero; link al `../../../Notify/docs/queueable-actions-2.md` ora risolvibile (prima puntava a una cartella inesistente). Status `active` perche' verificato su `composer.json`, sulla cartella `app/Actions/` e su `DeleteAccountWidget`.
 - Non toccata: la copia in radice `docs/actions-structure.md`, che ha lo stesso difetto (corpo doppio, segnaposto).
 
 **`bug-fixes/legacy/parse-error-orphan-methods-2025-01-27.md`** (ritirata; riscritto `legacy/parse-error-orphan-methods.md`; **fuori lista:** riscritto `bug-fixes/parse-error-orphan-methods.md`)
@@ -189,14 +189,14 @@ Perimetro: le sei violazioni di `md-filenames.py check` in `User/docs` (quattro 
 - Migliorato: un solo documento con causa, sintomi, fix, prevenzione e la sezione "Stato verificato oggi" (`RegisterWidget` 133 righe, `php -l` pulito, `}` ultima riga, `getUserTypeOptions()` non esiste piu'); aggiunto il legame con le fusioni di rami e il rinvio a `docs/wiki/how-to/git-merge-marker-sweep.md` ("senza marcatori" non vuol dire "valido": `php -l` sempre); link morti (`../git-conflicts-resolution-.md.md`, `bug-fixing-guidelines.md`) sostituiti con documenti reali; il registro `legacy/` dice che cosa era ciascuna variante.
 - Restano, da ritirare quando si decide: gli stub `parse-error-orphan-methods-*` e `parse-orphan-methods.md` in `bug-fixes/`, e `-.md`/`-archive.md` in `legacy/`.
 
-**Indice del modulo.** `User/docs/00-index.md`: nuova sezione "Cronache storiche riscritte in un documento unico" con i cinque documenti e il loro stato; "Debito noto" aggiornato (i 33 nomi con suffisso o data sono chiusi: `check` non ne segnala piu' in User; restano le copie con nomi diversi e `actions-structure.md` in radice); `updated`, `qmd` e `related` allineati. `User/docs/README.md` non toccato (rimanda gia' a `00-index.md`).
+**Indice del modulo.** `User/docs/00-index.md`: nuova sezione "Cronache storiche riscritte in un documento unico" con i cinque documenti e il loro stato; "Debito noto" aggiornato (i 33 nomi con suffisso o data sono chiusi: `check` non ne segnala piu' in User; restano le copie con nomi diversi e `actions-structure-4.md` in radice); `updated`, `qmd` e `related` allineati. `User/docs/README.md` non toccato (rimanda gia' a `00-index.md`).
 
 **Misure.** `md-filenames.py check`: nessuna riga in `User/docs` (prima 6). `md-filenames.py links`: 38572 prima, 38563 dopo (non peggiorato; il delta include il lavoro degli altri agenti). `frontmatter-check` su `bug-fixes/` e sui cinque file: 0 invalidi. Link relativi dei cinque documenti e del nuovo blocco dell'indice: tutti risolti. Lock presi e rilasciati: 13, nessuno residuo. Nessun codice PHP toccato, Pest non coinvolto.
 
 **Aperto, per decisione dell'utente o del coordinatore.**
-- Ritirare le copie con nomi diversi elencate sopra (`phpstan-fixes-2025.md`, `phpstan-fixes-conflict*.md`, `../phpstan_fixes_2025.md`, stub `parse-error-orphan-methods-*`) e allineare `docs/actions-structure.md` in radice (propongo: ritiro o `superseded_by` verso i documenti nuovi).
+- Ritirare le copie con nomi diversi elencate sopra (`phpstan-fixes-4.md`, `phpstan-fixes-conflict*.md`, `../../../User/docs/phpstan-fixes-4.md`, stub `parse-error-orphan-methods-*`) e allineare `docs/actions-structure.md` in radice (propongo: ritiro o `superseded_by` verso i documenti nuovi).
 - `User/docs/quality-status.md` (radice) ha lo stesso corpo piu' un front matter `module: theme` incollato in fondo, con rinvio a `Themes/docs/shared-components/` inesistente: non toccato.
 - I `issues:`/`discussions:` verso `provtv/base_ptv_fila5` compaiono in centinaia di documenti del modulo; non sono di questo repository (`festionali/base_restaurant_fila5`).
 - `fixrefs`: nessun link `.md` ai sei nomi ritirati nel repo (cercati con `rg` su `laravel`, `docs`, `bashscripts`; l'unico accostamento, `UI/docs-archive/INDEX.md`, riguarda file di un altro modulo); restano solo menzioni in testo libero in `dcp-201` e in log JSON di rinomina.
 
-- `fixrefs`: nessun link `.md` ai sei nomi ritirati nel repo (cercati con `rg` su `laravel`, `docs`, `bashscripts`; l'unico accostamento, `UI/docs-archive/index.md`, riguarda file di un altro modulo); restano solo menzioni in testo libero in `dcp-201` e in log JSON di rinomina.
+- `fixrefs`: nessun link `.md` ai sei nomi ritirati nel repo (cercati con `rg` su `laravel`, `docs`, `bashscripts`; l'unico accostamento, `../../../UI/docs/index-2.md`, riguarda file di un altro modulo); restano solo menzioni in testo libero in `dcp-201` e in log JSON di rinomina.

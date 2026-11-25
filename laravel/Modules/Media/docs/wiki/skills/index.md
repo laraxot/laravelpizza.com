@@ -1,3 +1,8 @@
+---
+title: "Media Module - skills Index"
+type: note
+qmd: "media skills"
+---
 # Media Module - skills Index
 
 ## Purpose

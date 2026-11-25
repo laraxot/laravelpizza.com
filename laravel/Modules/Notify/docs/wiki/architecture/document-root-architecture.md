@@ -16,13 +16,13 @@ qmd: "document-root-architecture document root architecture"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./config-structure.md"
+  - "../../config-structure-2.md"
   - "./dto-structure-conventions.md"
   - "./dto-structure-rules.md"
-  - "./interface-structure-clarification.md"
-  - "./mail-templates-structure.md"
+  - "../../interface-structure-clarification-2.md"
+  - "../../mail-templates-structure-2.md"
   - "./queueable-action-pattern.md"
-  - "./sms-config-structure.md"
+  - "../../sms-config-structure-2.md"
   - "./standardized-sms-config-structure.md"
 ---
 
@@ -203,4 +203,4 @@ However, instead of moving, the project now uses the **custom Application class*
 
 - Laravel Documentation: [Directory Structure](https://laravel.com/docs/structure)
 - Laraxot Installation: `laravel/Modules/Xot/docs/install/install-from-zero.md`
-- UI Module: `laravel/Modules/UI/docs/public-resources-management.md`
+- UI Module: `laravel/Modules/UI/docs/archive/public-resources-management-2.md`

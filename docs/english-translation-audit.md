@@ -293,7 +293,7 @@ return array(
 ## Collegamenti
 
 - [Regole Traduzioni](../../docs/translation-standards.md)
-- [Best Practices Filament](../../docs/FILAMENT-BEST-PRACTICES.md)
+- [Best Practices Filament](../laravel/Modules/Xot/docs/consolidated/filament-best-practices-2.md)
 - [Convenzioni Laraxot](../../docs/laraxot_conventions.md)
 
 ---
@@ -595,7 +595,7 @@ return array(
 ## Collegamenti
 
 - [Regole Traduzioni](../../docs/translation-standards.md)
-- [Best Practices Filament](../../docs/FILAMENT-BEST-PRACTICES.md)
+- [Best Practices Filament](../laravel/Modules/Xot/docs/consolidated/filament-best-practices-2.md)
 - [Convenzioni Laraxot](../../docs/laraxot_conventions.md)
 
 ---

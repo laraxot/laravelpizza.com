@@ -127,7 +127,7 @@ documentation:
 
   reference:
     - name: "Commands"
-      local: "/docs/reference/commands.md"
+      local: "/../../../../laravel/Modules/Geo/docs/gsd/commands-2.md"
       online: "/reference/commands/"
 
     - name: "Configuration"
@@ -316,8 +316,8 @@ knowledge_fragments:
       description: "Token persistence and multi-user auth"
 
     - name: "error-handling"
-      path: "/src/testarch/knowledge/error-handling.md"
-      github: "https://github.com/bmad-code-org/bmad-method-test-architecture-enterprise/blob/main/src/testarch/knowledge/error-handling.md"
+      path: "/../../../../laravel/Modules/User/docs/error-handling-2.md"
+      github: "https://../../../../laravel/Modules/User/docs/error-handling-2.md"
       description: "Exception handling and retry validation"
 
 # Quick Reference Maps

@@ -138,7 +138,7 @@ Il progetto è ora pronto per lo sviluppo continuo con una base solida e manuten
 
 ## Collegamenti Correlati
 
-- [Regole Laraxot](../laraxot-rules.md)
+- [Regole Laraxot](../laravel/Modules/Geo/docs/rules/laraxot-rules-2.md)
 - [Best Practices PHP](../php-best-practices.md)
 - [Architettura Modulare](../modular-architecture.md)
 - [Guida Risoluzione Conflitti](../conflict-resolution-guide.md)
@@ -348,7 +348,7 @@ Il progetto è ora pronto per lo sviluppo continuo con una base solida e manuten
 
 ## Collegamenti Correlati
 
-- [Regole Laraxot](../laraxot-rules.md)
+- [Regole Laraxot](../laravel/Modules/Geo/docs/rules/laraxot-rules-2.md)
 - [Best Practices PHP](../php-best-practices.md)
 - [Architettura Modulare](../modular-architecture.md)
 - [Guida Risoluzione Conflitti](../conflict-resolution-guide.md)
@@ -518,7 +518,7 @@ Il progetto è ora pronto per lo sviluppo continuo con una base solida e manuten
 
 ## Collegamenti Correlati
 
-- [Regole Laraxot](../laraxot-rules.md)
+- [Regole Laraxot](../laravel/Modules/Geo/docs/rules/laraxot-rules-2.md)
 - [Best Practices PHP](../php-best-practices.md)
 - [Architettura Modulare](../modular-architecture.md)
 - [Guida Risoluzione Conflitti](../conflict-resolution-guide.md)

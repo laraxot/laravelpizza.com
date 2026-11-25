@@ -168,14 +168,14 @@ Azioni (6 file):
 
 HTML to PDF (6 file):
 ✓ index.md, usage.md, laravel.md
-✓ advanced.md, styling.md, security.md
+✓ advanced.md, styling.md, security-2.md
 
 Code Quality:
-✓ phpstan-report.md (Level 9)
+✓ phpstan-report-2.md (Level 9)
 ✓ phpmd-report.txt
 
 Altro:
-✓ CHANGELOG.md - Storia versioni
+✓ changelog.md - Storia versioni
 ✓ troubleshooting.md - Guida risoluzione problemi
 ✓ conflicts.md - Conflitti noti
 ✓ module-icons.md - Icone utilizzate

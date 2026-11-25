@@ -181,5 +181,5 @@ Dipendenze principali del framework interno. Tutti i moduli dipendono da Xot.
 ## Collegamenti
 
 - [AGENTS.md](../../AGENTS.md) - Guida sviluppo
-- [CLAUDE.md](../../CLAUDE.md) - Regole architetturali
+- [CLAUDE.md](../laravel/Modules/Geo/docs/root-md-files/claude.md) - Regole architetturali
 - [roadmap/00-index](roadmap/00-index.md) - Roadmap progetto

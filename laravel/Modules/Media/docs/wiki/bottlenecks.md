@@ -827,32 +827,14 @@ Implementando queste soluzioni, il modulo Media potrà superare i principali col
 ## Collegamenti
 - [Roadmap Principale](./roadmap.md)
 - [Sintesi Colli di Bottiglia](../../../docs/performance_bottlenecks.md)
-- [Best Practices](../xot/docs/best-practices.md)
-- [Struttura Moduli](../xot/docs/module_structure.md)
+- [Best Practices](../../../Activity/docs/best-practices-3.md)
+- [Struttura Moduli](../xot/docs/module-structure-2.md)
 
 ## Collegamenti tra versioni di BOTTLENECKS.md
 * [BOTTLENECKS.md](../../../xot/docs/bottlenecks.md)
-<<<<<<< HEAD
 * [BOTTLENECKS.md](../../../User/docs/bottlenecks.md)
 * [BOTTLENECKS.md](../bottlenecks.md)
 * [BOTTLENECKS.md](../../../Cms/docs/bottlenecks.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-* [BOTTLENECKS.md](../../../user/docs/bottlenecks.md)
-* [BOTTLENECKS.md](../../../media/docs/bottlenecks.md)
-* [BOTTLENECKS.md](../../../cms/docs/bottlenecks.md)
-=======
-* [BOTTLENECKS.md](../../../User/docs/bottlenecks.md)
-* [BOTTLENECKS.md](../bottlenecks.md)
-* [BOTTLENECKS.md](../../../Cms/docs/bottlenecks.md)
->>>>>>> laraxot/dev
-=======
-* [BOTTLENECKS.md](../../../User/docs/bottlenecks.md)
-* [BOTTLENECKS.md](../bottlenecks.md)
-* [BOTTLENECKS.md](../../../Cms/docs/bottlenecks.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Collegamenti tra versioni di bottlenecks.md
 * [bottlenecks.md](../../../../bashscripts/docs/bottlenecks.md)

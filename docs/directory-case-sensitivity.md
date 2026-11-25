@@ -132,6 +132,6 @@ Rispettare la struttura corretta delle directory è fondamentale per garantire l
 
 - [README.md](./readme.md) - Indice principale della documentazione
 - [MODULE_STRUCTURE.md](./module_structure.md) - Struttura standard dei moduli
-- [NAMESPACE-RULES.md](./namespace-rules.md) - Regole per i namespace nei moduli
+- [namespace-rules-2.md](./namespace-rules.md) - Regole per i namespace nei moduli
 - [FOLIO_VOLT_FILAMENT_INTEGRATION.md](./folio_volt_filament_integration.md) - Integrazione Folio, Volt e Filament
 - [filament/widgets/xot-base-widget.md](./filament/widgets/xot-base-widget.md) - Documentazione su XotBaseWidget

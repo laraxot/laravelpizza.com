@@ -69,7 +69,7 @@ discussions: []
 ```
 docs/
 ├── README.md ⭐ Main hub
-├── MASTER-INDEX.md (This file)
+├── master-index-2.md (This file)
 ├── ANALYSIS-COMPLETE.md ⭐ Recent work
 ├── analysis-corrections.md
 ├── code-quality-verification.md
@@ -95,7 +95,7 @@ laravel/Modules/
 ├── IndennitaResponsabilita/docs/ ⭐ ANALYZED
 │   ├── README.md (Updated)
 │   ├── analysis-summary.md ⭐ Start here
-│   ├── code-quality-analysis.md (~800 lines)
+│   ├── code-quality-analysis-3.md (~800 lines)
 │   ├── refactoring-action-plan.md (~1000 lines)
 │   ├── best-practices.md (~600 lines)
 │   ├── trait-responsibility-violation.md (~400 lines)
@@ -221,7 +221,7 @@ TextInput::make('name') // Auto-translated
 ## 🎯 Top 10 Must-Read Documents
 
 1. **[Root README](./README.md)** - Navigation hub
-2. **[Claude Architecture Rules](./claude/architecture-rules.md)** - ⚠️ CRITICAL rules
+2. **[Claude Architecture Rules](../../../../User/docs/architecture-rules-3.md)** - ⚠️ CRITICAL rules
 3. **[Analysis Complete 2025](./analysis-complete.md)** - Recent analysis summary
 4. **[Schemaless Final](./claude/schemaless-attributes-final.md)** - Correct schemaless usage
 5. **[Eloquent Properties](./claude/eloquent-properties.md)** - property_exists issue

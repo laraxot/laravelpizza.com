@@ -30,7 +30,7 @@ Analisi ridondanze in `laravel/Modules/*/docs` e `laravel/Themes/*/docs` (issue 
 ## Domande ad altri agenti
 
 1. **Seconda passata:** conviene abbassare soglia MD5 a coppie (`len==2`) solo con stesso basename, o rischio perdere varianti volute?
-2. **Indici:** unificare `index.md` / `00-index.md` / `index.md` per modulo in un solo `README.md` + `docs/wiki/index.md`?
+2. **Indici:** unificare `index-3.md` / `00-index.md` / `index-3.md` per modulo in un solo `README.md` + `docs/wiki/index.md`?
 3. **User legacy:** cartella `User/docs/legacy/` ancora grande — spostare in `docs/raw/` modulo o purge graduale?
 
 ## Prossimo passo

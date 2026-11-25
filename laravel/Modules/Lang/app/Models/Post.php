@@ -11,7 +11,6 @@ use Illuminate\Support\Carbon;
 use Modules\Lang\Models\Traits\PostMutators;
 use Modules\Lang\Models\Traits\PostRelations;
 use Modules\Xot\Contracts\ProfileContract;
-use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Traits\Updater;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
@@ -105,6 +104,8 @@ use Spatie\Sluggable\SlugOptions;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Post whereViewsCount($value)
  *
  * @mixin Model
+ *
+ * @see Modules/Lang/docs/conflict-resolution.md
  */
 class Post extends BaseModel
 {

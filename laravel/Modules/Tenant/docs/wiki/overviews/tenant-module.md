@@ -9,7 +9,7 @@ type: overview
 module: Tenant
 sources:
   - ../../../module.md
-  - ../../../philosophy.md
+  - ../../philosophy-2.md
   - ../../../configuration.md
   - ../../../structure.md
 confidence: high
@@ -114,7 +114,7 @@ Tutti gli altri moduli del progetto sono automaticamente multi-tenant via Xot:
 ## Raw Sources Prioritari
 
 - `module.md` — funzionalità implementate, architettura stack
-- `philosophy.md` — sovranità, isolamento, etica, zen
+- `../../philosophy-2.md` — sovranità, isolamento, etica, zen
 - `configuration.md` — configurazione base, dipendenze
 - `traits/sushi-to-json.md` — pattern JSON models
 - `it/config/` — file configurazione per tenant

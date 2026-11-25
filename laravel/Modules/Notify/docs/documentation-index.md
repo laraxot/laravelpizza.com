@@ -127,7 +127,7 @@ status: draft
 =======
 >>>>>>> .merge_file_QCqgJf
 <<<<<<< .merge_file_xR6oT3
-- [Database Schema](./database/schema.md) - Schema database
+- [Database Schema](../../Lang/docs/wiki/schema-3.md) - Schema database
 =======
 - [Database Schema](wiki/schema.md) - Schema database
 - [Database Schema](./wiki/schema.md) - Schema database
@@ -145,7 +145,7 @@ status: draft
 - [Security](./security/README.md) - Sicurezza e conformità
 
 ### Best Practices
-- [Coding Standards](./standards/coding-standards.md) - Standard codifica
+- [Coding Standards](../../Geo/docs/development/coding-standards-2.md) - Standard codifica
 - [PHPStan Guidelines](./phpstan/README.md) - Analisi statica
 - [Testing Standards](./testing/README.md) - Standard testing
 - [Translation Guidelines](./translations/README.md) - Gestione traduzioni

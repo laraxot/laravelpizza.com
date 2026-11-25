@@ -414,7 +414,7 @@ trans('ptv::segnalazione.heading.title.label')
 ## 🔗 Related Documentation
 
 - [Translation Conventions](./translation-conventions.md)
-- [Blade Architecture](../laravel/CLAUDE.md#blade-components)
+- [Blade Architecture](../../Geo/docs/root-md-files/claude.md#blade-components)
 - [Agnostic Scripts](./agnostic-documentation-rule.md)
 - [Multi-Agent Coordination](./multi-agent-coordination-rules.md)
 

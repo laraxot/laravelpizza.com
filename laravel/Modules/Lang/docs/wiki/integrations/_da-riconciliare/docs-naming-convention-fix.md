@@ -31,14 +31,14 @@ Le cartelle `docs` contenevano file e sottocartelle con caratteri maiuscoli, vio
 - ✅ `naming-conventions.md` → `naming-conventions-uppercase.md`
 - ✅ `php-strict-types.md` → `php-strict-types.md`
 - ✅ `testing_best_practices.md` → `testing-best-practices-uppercase.md`
-- ✅ `filament-best-practices.md` → `filament-best-practices-uppercase.md`
-- ✅ `filament/infinite-loop-getStepByName-fix.md` → `filament/infinite-loop-getstepbyname-fix.md`
+- ✅ `filament-best-practices-2.md` → `filament-best-practices-uppercase.md`
+- ✅ `../../../../../Xot/docs/consolidated/filament/infinite-loop-getstepbyname-fix-2.md` → `../../../../../Xot/docs/consolidated/filament/infinite-loop-getstepbyname-fix-2.md`
 
 ### Modulo Geo
 - ✅ `MCP_SERVER_RECOMMENDED.md` → `mcp_server_recommended.md`
 
 - ✅ `mcp_server_recommended.md` → `mcp_server_recommended.md`
-- ✅ `phpstan_fixes.md` → `phpstan-fixes-uppercase.md`
+- ✅ `phpstan-fixes.md` → `phpstan-fixes-uppercase.md`
 
 ### Modulo UI
 - ✅ `INLINE_DATE_PICKER.md` → `inline-date-picker.md`

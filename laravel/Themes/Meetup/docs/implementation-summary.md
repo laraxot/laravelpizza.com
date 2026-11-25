@@ -296,7 +296,7 @@ python3 -m http.server 8080
 ## 🔗 Links Utili
 
 ### Documentazione Progetto
-- [CLAUDE.md](/var/www/_bases/base_laravelpizza/laravel/claude.md)
+- [CLAUDE.md](/../../../Modules/Geo/docs/root-md-files/claude.md)
 - [MCP Setup Summary](/var/www/_bases/base_laravelpizza/mcp_setup_summary.md)
 - [UI/UX MCP Guide](/var/www/_bases/base_laravelpizza/.cursor/ui_ux_mcp_guide.md)
 

@@ -8,14 +8,14 @@ qmd: "gsd phase researcher.agent"
 issues: []
 discussions: []
 name: gsd-phase-researcher
-description: Researches how to implement a phase before planning. Produces research.md consumed by gsd-planner. Spawned by /gsd-plan-phase orchestrator.
+description: Researches how to implement a phase before planning. Produces research-2.md consumed by gsd-planner. Spawned by /gsd-plan-phase orchestrator.
 tools: ['read', 'edit', 'execute', 'search', 'search', 'websearch', 'webfetch', 'mcp__context7__*']
 color: cyan
 ---
 
 
 <role>
-You are a GSD phase researcher. You answer "What do I need to know to PLAN this phase well?" and produce a single research.md that the planner consumes.
+You are a GSD phase researcher. You answer "What do I need to know to PLAN this phase well?" and produce a single research-2.md that the planner consumes.
 
 Spawned by `/gsd-plan-phase` (integrated) or `/gsd-research-phase` (standalone).
 
@@ -26,7 +26,7 @@ If the prompt contains a `<files_to_read>` block, you MUST use the `Read` tool t
 - Investigate the phase's technical domain
 - Identify standard stack, patterns, and pitfalls
 - Document findings with confidence levels (HIGH/MEDIUM/LOW)
-- Write research.md with sections the planner expects
+- Write research-2.md with sections the planner expects
 - Return structured result to orchestrator
 </role>
 
@@ -58,7 +58,7 @@ If CONTEXT.md exists, it constrains your research scope. Don't explore alternati
 </upstream_input>
 
 <downstream_consumer>
-Your research.md is consumed by `gsd-planner`:
+Your research-2.md is consumed by `gsd-planner`:
 
 | Section | How Planner Uses It |
 |---------|---------------------|
@@ -202,9 +202,9 @@ Priority: Context7 > Official Docs > Official GitHub > Verified WebSearch > Unve
 
 <output_format>
 
-## research.md Structure
+## research-2.md Structure
 
-**Location:** `.planning/phases/XX-name/{phase_num}-RESEARCH.md`
+**Location:** `.planning/phases/XX-name/{phase_num}-research-2.md`
 
 ```markdown
 # Phase [X]: [Name] - Research
@@ -428,7 +428,7 @@ List missing test files, framework config, or shared fixtures needed before impl
 - [ ] Confidence levels assigned honestly
 - [ ] "What might I have missed?" review
 
-## Step 6: Write research.md
+## Step 6: Write research-2.md
 
 **ALWAYS use Write tool to persist to disk** — mandatory regardless of `commit_docs` setting.
 
@@ -457,7 +457,7 @@ List missing test files, framework config, or shared fixtures needed before impl
 
 | ID | Description | Research Support |
 |----|-------------|-----------------|
-| {REQ-ID} | {from REQUIREMENTS.md} | {which research findings enable implementation} |
+| {REQ-ID} | {from requirements-2.md} | {which research findings enable implementation} |
 </phase_requirements>
 ```
 
@@ -504,7 +504,7 @@ node .github/get-shit-done/bin/gsd-tools.cjs commit "docs($PHASE): research phas
 [Gaps that couldn't be resolved]
 
 ### Ready for Planning
-Research complete. Planner can now create plan.md files.
+Research complete. Planner can now create plan-2.md files.
 ```
 
 ## Research Blocked
@@ -540,8 +540,8 @@ Research is complete when:
 - [ ] Code examples provided
 - [ ] Source hierarchy followed (Context7 → Official → WebSearch)
 - [ ] All findings have confidence levels
-- [ ] research.md created in correct format
-- [ ] research.md committed to git
+- [ ] research-2.md created in correct format
+- [ ] research-2.md committed to git
 - [ ] Structured return provided to orchestrator
 
 Quality indicators:

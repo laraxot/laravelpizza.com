@@ -32,19 +32,19 @@ discussions: []
 **Mode:** {standard | gap_closure}
 
 **Project State:**
-@.planning/STATE.md
+@.planning/state-2.md
 
 **Roadmap:**
 @.planning/roadmap.md
 
 **Requirements (if exists):**
-@.planning/REQUIREMENTS.md
+@.planning/requirements-2.md
 
 **Phase Context (if exists):**
 @.planning/phases/{phase_dir}/{phase_num}-CONTEXT.md
 
 **Research (if exists):**
-@.planning/phases/{phase_dir}/{phase_num}-RESEARCH.md
+@.planning/phases/{phase_dir}/{phase_num}-research-2.md
 
 **Gap Closure (if --gaps mode):**
 @.planning/phases/{phase_dir}/{phase_num}-VERIFICATION.md
@@ -63,7 +63,7 @@ Plans must be executable prompts with:
 
 <quality_gate>
 Before returning PLANNING COMPLETE:
-- [ ] plan.md files created in phase directory
+- [ ] plan-2.md files created in phase directory
 - [ ] Each plan has valid frontmatter
 - [ ] Tasks are specific and actionable
 - [ ] Dependencies correctly identified
@@ -118,7 +118,7 @@ Continue planning for Phase {phase_number}: {phase_name}
 
 <prior_state>
 Phase directory: @.planning/phases/{phase_dir}/
-Existing plans: @.planning/phases/{phase_dir}/*-PLAN.md
+Existing plans: @.planning/phases/{phase_dir}/*-plan-2.md
 </prior_state>
 
 <checkpoint_response>

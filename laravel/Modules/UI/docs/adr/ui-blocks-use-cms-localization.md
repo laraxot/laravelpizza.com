@@ -6,10 +6,7 @@ created: 2026-11-23
 updated: 2026-11-23
 issues: []
 module: UI
-<<<<<<< .merge_file_tIwMAM
 qmd: "ui blocks use cms localization blocchi"
-=======
->>>>>>> .merge_file_o0O0NY
 ---
 
 # ADR — Blocchi UI localizzati dal CMS

@@ -218,7 +218,7 @@ $locale = app()->getLocale();
 
 - [Documentazione Generale sul Routing](../../../xot/docs/routing.md) - Modulo Xot
 - [Architettura Folio + Volt + Filament](../../../xot/docs/folio_volt_architecture.md) - Modulo Xot
-- [Struttura dei Moduli](../../../xot/docs/module_structure.md) - Modulo Xot
+- [Struttura dei Moduli](../../../xot/docs/module-structure-2.md) - Modulo Xot
 - [Localizzazione](../../../lang/docs/packages/localization.md) - Modulo Lang
 - [Collegamenti alla Root](../../../../../docs/routing.md)
 

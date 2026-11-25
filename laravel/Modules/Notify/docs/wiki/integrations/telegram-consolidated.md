@@ -63,7 +63,7 @@ Consolidated from **13** individual files.
 
 ## telegram-channel-1
 
-*Consolidated from: `telegram-channel.md`*
+*Consolidated from: `telegram-channel-2.md`*
 
 <<<<<<< HEAD
 
@@ -627,10 +627,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -1086,7 +1086,7 @@ class TelegramTest extends TestCase
 
 ## telegram-channel
 
-*Consolidated from: `telegram-channel.md`*
+*Consolidated from: `telegram-channel-2.md`*
 
 <<<<<<< HEAD
 
@@ -1549,7 +1549,7 @@ class TelegramTest extends TestCase
 
 ## telegram-integration-1
 
-*Consolidated from: `telegram-integration.md`*
+*Consolidated from: `telegram-integration-2.md`*
 
 <<<<<<< HEAD
 
@@ -1756,10 +1756,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -1944,7 +1944,7 @@ TELEGRAM_PARSE_MODE=HTML
 
 ## telegram-integration
 
-*Consolidated from: `telegram-integration.md`*
+*Consolidated from: `telegram-integration-2.md`*
 
 <<<<<<< HEAD
 
@@ -2152,10 +2152,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -2374,7 +2374,7 @@ $action->onQueue('telegram')->execute($data);
 
 ## telegram-sending-standard
 
-*Consolidated from: `telegram-sending-standard.md`*
+*Consolidated from: `telegram-sending-standard-2.md`*
 
 <<<<<<< HEAD
 
@@ -2722,7 +2722,7 @@ Twilio test.
 
 ## Related docs
 
-- `Modules/Notify/docs/telegram_provider_architecture.md` and
+- `Modules/Notify/docs/telegram-provider-architecture-2.md` and
   `Modules/Notify/docs/whatsapp-provider-architecture.md` describe an
   aspirational/example architecture (e.g. `SendBotTelegramAction`,
   `SendApiTelegramAction`) that does not match the actual driver class names
@@ -2784,7 +2784,7 @@ https://abstractentropy.com/laravel-notifications-telegram-bot/
 
 ## telegram_channel
 
-*Consolidated from: `telegram_channel.md`*
+*Consolidated from: `telegram-channel-2.md`*
 
 <<<<<<< HEAD
 
@@ -3247,7 +3247,7 @@ class TelegramTest extends TestCase
 
 ## telegram_integration
 
-*Consolidated from: `telegram_integration.md`*
+*Consolidated from: `telegram-integration-2.md`*
 
 # Integrazione Telegram
 
@@ -3429,7 +3429,7 @@ TELEGRAM_PARSE_MODE=HTML
 
 ## telegram_sending_standard
 
-*Consolidated from: `telegram_sending_standard.md`*
+*Consolidated from: `telegram-sending-standard-2.md`*
 
 <<<<<<< HEAD
 

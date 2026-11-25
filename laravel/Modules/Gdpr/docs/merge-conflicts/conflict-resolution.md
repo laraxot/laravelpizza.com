@@ -20,4 +20,4 @@ discussions: []
 - docs/nestedset-migration-best-practices.md
 
 ## Backlinks
-- [Root conflict resolution report](../../../../docs/conflict-resolution-report.md)
+- [Root conflict resolution report](../../../User/docs/conflict-resolution-report-3.md)

@@ -221,7 +221,7 @@ This story addresses the critical and high-severity findings via a structured, p
 
 ## Related Documentation
 
-- `/laravel/Modules/User/ANALYST_REPORT.md` — Detailed audit findings
+- `/laravel/Modules/User/docs/analyst-report.md` — Detailed audit findings
 - `/laravel/Modules/User/docs/code-quality-analysis-2.md` — Code quality baseline
 - `/laravel/Modules/User/docs/dry-kiss-improvements.md` — DRY pattern reference
 - `/laravel/Modules/User/docs/phpstan-dry-kiss-improvements.md` — Type compliance

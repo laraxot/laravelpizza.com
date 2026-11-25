@@ -67,7 +67,7 @@ Gestione conformità GDPR, privacy policy, consensi utente e cookie.
 
 - NON creare Service classes - usare Actions (vedi [actions-over-services-governance](../../../../docs/wiki/concepts/actions-over-services-governance.md))
 - NON usare `dehydrated(false)` nei trait - blocca salvataggio (vedi Geo CoordinatePicker fix)
-- NON hardcodare privacy text - usare translation files (vedi [laravel-localization](../../../../docs/wiki/concepts/laravel-localization.md))
+- NON hardcodare privacy text - usare translation files (vedi [laravel-localization](../../../Lang/docs/laravel-localization-2.md))
 
 ## False Friends
 

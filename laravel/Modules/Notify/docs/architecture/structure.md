@@ -70,8 +70,8 @@ Il file `routes/web.php` del modulo Notify **deve essere vuoto**:
 > - Mantiene il modulo riutilizzabile e conforme alle best practice
 
 **Collegamenti:**
-- [database-mail.md](database-mail.md#regola-sulle-rotte)
-- [grapesjs-filament.md](grapesjs-filament.md#regola-sulle-rotte)
+- [database-mail-2.md](database-mail-2.md#regola-sulle-rotte)
+- [grapesjs-filament-2.md](grapesjs-filament-2.md#regola-sulle-rotte)
 
 ## Struttura delle directory
 
@@ -460,8 +460,8 @@ tests/Unit
 ---
 
 ## Collegamenti correlati
-- [Regola sulle rotte vuote in database-mail.md](database-mail.md#regola-sulle-rotte)
-- [Regola sulle rotte vuote in grapesjs-filament.md](grapesjs-filament.md#regola-sulle-rotte)
+- [Regola sulle rotte vuote in database-mail-2.md](database-mail-2.md#regola-sulle-rotte)
+- [Regola sulle rotte vuote in grapesjs-filament-2.md](grapesjs-filament-2.md#regola-sulle-rotte)
 ### Versione HEAD
 
 

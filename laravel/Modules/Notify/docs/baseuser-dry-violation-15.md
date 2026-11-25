@@ -346,11 +346,11 @@ test('hasRole con pipe syntax', function () {
 ### Modulo User
 - [Analisi Completa DRY Violation](../Modules/User/docs/baseuser-dry-violation-analysis.md)
 - [BaseUser Model](../Modules/User/docs/models/baseuser.md)
-- [Roles & Permissions](../Modules/User/docs/roles-permissions.md)
+- [Roles & Permissions](../../User/docs/roles-permissions-2.md)
 
 ### Root Progetto
 - [DRY Violations Analysis](./dry-violations-analysis.md)
-- [Code Quality](./code-quality-analysis.md)
+- [Code Quality](../../Activity/docs/code-quality-analysis-3.md)
 - [Super Admin Setup](./super-admin-setup-fix-2025-10-15.md)
 
 ### Spatie Documentation

@@ -48,7 +48,7 @@ Documentazione del modulo Cms per il progetto Design Comuni Italia.
 | Documento | File | Descrizione |
 |-----------|------|-------------|
 | **All Pages Analysis** | [ALL_PAGES_ANALYSIS.md](../../../Themes/Sixteen/docs/design-comuni/ALL_PAGES_ANALYSIS.md) | Analisi 54 pagine |
-| **Progress Report** | [PROGRESS_REPORT.md](../../../Themes/Sixteen/docs/design-comuni/PROGRESS_REPORT.md) | Report progresso |
+| **Progress Report** | [progress-report-2.md](../../Notify/docs/progress-report-2.md) | Report progresso |
 | **Fail Pages Analysis** | [FAIL_PAGES_ANALYSIS.md](../../../Themes/Sixteen/docs/design-comuni/FAIL_PAGES_ANALYSIS.md) | Analisi pagine fail |
 | **Argomenti Analisi** | [ARGOMENTI_ANALISI.md](../../../Themes/Sixteen/docs/design-comuni/ARGOMENTI_ANALISI.md) | Analisi argomenti |
 | **Argomenti Report** | [ARGOMENTI_REPORT_AGGIORNATO.md](../../../Themes/Sixteen/docs/design-comuni/ARGOMENTI_REPORT_AGGIORNATO.md) | Report argomenti |

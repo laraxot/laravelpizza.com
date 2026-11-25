@@ -94,7 +94,7 @@ public function scopeWithExtraAttributes(
 
 ### IndennitaResponsabilita Module (6 docs)
 
-1. **[Code Quality Analysis](laravel/Modules/IndennitaResponsabilita/docs/code-quality-analysis.md)** 
+1. **[Code Quality Analysis](laravel/Modules/Activity/docs/code-quality-analysis-3.md)** 
    - 37 violations detailed
    - ~800 lines
 
@@ -275,7 +275,7 @@ public function scopeWithExtraAttributes(
 
 ### For Tech Lead
 
-1. Review [Code Quality Analysis](laravel/Modules/IndennitaResponsabilita/docs/code-quality-analysis.md)
+1. Review [Code Quality Analysis](laravel/Modules/Activity/docs/code-quality-analysis-3.md)
 2. Assess [Quality Verification](docs/code-quality-verification.md)
 3. Approve [Refactoring Plan](laravel/Modules/IndennitaResponsabilita/docs/refactoring-action-plan.md)
 4. Assign resources

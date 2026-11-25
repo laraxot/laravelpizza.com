@@ -137,9 +137,9 @@ class CreateUserAction { use QueueableAction; }
 ```
 Modules/ModuleName/docs/
 ├── README.md              # Module overview and usage
-├── api.md                 # API endpoints and contracts
+├── api-2.md                 # API endpoints and contracts
 ├── models.md              # Model relationships and business logic
-├── filament.md            # Admin interface documentation
+├── filament-3.md            # Admin interface documentation
 └── examples.md            # Usage examples and code samples
 ```
 

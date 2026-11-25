@@ -143,5 +143,5 @@ La migrazione ora segue completamente gli standard del progetto:
 ## Riferimenti
 
 - [Standard Migrazioni](../../Xot/docs/migration_standards.md)
-- [Best Practices Migrazioni Lang](migration_best_practices.md)
+- [Best Practices Migrazioni Lang](migration-best-practices-3.md)
 - [Documentazione Generale](../../Xot/docs/migration_guidelines.md)

@@ -42,9 +42,9 @@ Scelta: **Spatie Queueable Actions**, perché è l'unica opzione in cui contract
 ## Conferma
 
 - In revisione: una classe nuova sotto `app/Services/`, o un metodo pubblico nuovo in `RefundService`, si respinge con un rimando a questo ADR.
-- Ogni Action nuova ha `@contract` nel docblock e il suo contract è in `docs/contracts/INDEX.md`.
+- Ogni Action nuova ha `@contract` nel docblock e il suo contract è in `docs/contracts/index.md`.
 
 - Ogni Action nuova ha `@contract` nel docblock e il suo contract è in `docs/contracts/index.md`.
 
-- Ogni Action nuova ha `@contract` nel docblock e il suo contract è in `docs/contracts/INDEX.md`.
+- Ogni Action nuova ha `@contract` nel docblock e il suo contract è in `docs/contracts/index.md`.
 - Ogni Action applicativa usa il trait `Spatie\\QueueableAction\\QueueableAction`; non si introduce un Job Laravel parallelo per la stessa operazione.

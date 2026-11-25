@@ -61,4 +61,4 @@ Ogni rilascio di modulo o feature core deve seguire questa checklist non negozia
 ## 4. References
 - [prd.md](prd.md)
 - [roadmap.md](roadmap.md)
-- [CONTRIBUTING.md](CONTRIBUTING.md)
+- [contributing-2.md](contributing-2.md)

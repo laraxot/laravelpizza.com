@@ -3,7 +3,7 @@
 ## Collegamenti correlati
 - [README modulo User](./readme.md)
 - [Best Practices Componenti di Autenticazione](./auth_components_best_practices.md)
-- [Utilizzo di Laravel Localization](/laravel/modules/lang/docs/laravel_localization_usage.md)
+- [Utilizzo di Laravel Localization](/laravel/modules/lang/docs/laravel-localization-usage-2.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
 ## Panoramica
@@ -244,7 +244,7 @@ $this->redirect(LaravelLocalization::getLocalizedURL($locale, route('home')));
 ## Collegamenti correlati
 - [README modulo User](./readme.md)
 - [Best Practices Componenti di Autenticazione](./auth_components_best_practices.md)
-- [Utilizzo di Laravel Localization](/laravel/modules/lang/docs/laravel_localization_usage.md)
+- [Utilizzo di Laravel Localization](/laravel/modules/lang/docs/laravel-localization-usage-2.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
 ## Panoramica

@@ -78,19 +78,19 @@ La homepage di test ` /it/tests/homepage ` e' orchestrata da due livelli distint
 <<<<<<< .merge_file_rWvLdS
 <<<<<<< .merge_file_Z3b2SR
 <<<<<<< .merge_file_PtpDPx
-- [page_component_architecture.md](./page_component_architecture.md) - Architettura generale dei componenti pagina
+- [page-component-architecture-3.md](./page-component-architecture-3.md) - Architettura generale dei componenti pagina
 =======
 =======
 >>>>>>> .merge_file_4OAAKh
 =======
 >>>>>>> .merge_file_XjsHgu
 <<<<<<< HEAD
-- [page_component_architecture.md](./page_component_architecture.md) - Architettura generale dei componenti pagina
+- [page-component-architecture-3.md](./page-component-architecture-3.md) - Architettura generale dei componenti pagina
 =======
 <<<<<<< HEAD
-- [PAGE_COMPONENT_ARCHITECTURE.md](./PAGE_COMPONENT_ARCHITECTURE.md) - Architettura generale dei componenti pagina
+- [page-component-architecture-2.md](./page-component-architecture-2.md) - Architettura generale dei componenti pagina
 =======
-- [page_component_architecture.md](./page_component_architecture.md) - Architettura generale dei componenti pagina
+- [page-component-architecture-3.md](./page-component-architecture-3.md) - Architettura generale dei componenti pagina
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_rWvLdS

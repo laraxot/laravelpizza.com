@@ -925,11 +925,11 @@ class UserResourceTest extends TestCase
 
 ### **1. Documentazione**
 - [README.md](README.md) - Documentazione principale
-- [best_practices.md](best_practices.md) - Best practices
+- [best-practices-3.md](best-practices-3.md) - Best practices
 - [API_REFERENCE.md](api_reference.md) - Riferimento API
 - [TROUBLESHOOTING.md](troubleshooting.md) - Troubleshooting
 - [README.md](README.md) - Documentazione principale
-- [best_practices.md](best_practices.md) - Best practices
+- [best-practices-3.md](best-practices-3.md) - Best practices
 - [API_REFERENCE.md](API_REFERENCE.md) - Riferimento API
 - [TROUBLESHOOTING.md](troubleshooting.md) - Troubleshooting
 

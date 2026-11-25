@@ -467,6 +467,6 @@ Log::info('SMS sent', [
 
 ## Collegamenti alla Documentazione Correlata
 
-- [MULTI_CHANNEL_NOTIFICATIONS.md](./MULTI_CHANNEL_NOTIFICATIONS.md)
-- [NOTIFICATIONS_IMPLEMENTATION_GUIDE.md](./NOTIFICATIONS_IMPLEMENTATION_GUIDE.md)
-- [TELEGRAM_NOTIFICATIONS_GUIDE.md](./TELEGRAM_NOTIFICATIONS_GUIDE.md)
+- [multi-channel-notifications-2.md](../../laravel/Modules/Notify/docs/notifications/multi-channel-notifications-2.md)
+- [notifications-implementation-guide-2.md](../../laravel/Modules/Notify/docs/notifications/notifications-implementation-guide-2.md)
+- [telegram-notifications-guide-2.md](../../laravel/Modules/Notify/docs/notifications/telegram-notifications-guide-2.md)

@@ -46,7 +46,7 @@ status: draft
 - [Claude Setup Guide](../../context.md)
 - [Workflow](../workflow.md)
 - [PHPStan Guide](../../../phpstan.md)
-- [Filament Guide](../filament.md)
+- [Filament Guide](../../../../../Activity/docs/filament-3.md)
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_jcbjWk

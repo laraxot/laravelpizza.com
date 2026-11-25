@@ -248,9 +248,9 @@ if ($country) {
 
 ## Related Documentation
 
-- [Translation File Management](translation-file-management.md)
-- [Filament Components](filament.md)
-- [Localization System](laravel-localization.md)
+- [Translation File Management](translation-file-management-2.md)
+- [Filament Components](filament-3.md)
+- [Localization System](laravel-localization-2.md)
 - [Static Text Translation](static-text-translation.md)
 
 ## External Resources

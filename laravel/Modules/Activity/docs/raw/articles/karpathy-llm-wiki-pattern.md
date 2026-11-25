@@ -67,7 +67,7 @@ docs/
 │   ├── papers/
 │   ├── code-examples/
 │   └── decisions/
-└── schema.md      # Rules for this module
+└── schema-3.md      # Rules for this module
 ```
 
 ## Tools

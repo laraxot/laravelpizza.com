@@ -49,12 +49,12 @@ A 3-6 mesi dal primo rilascio pubblico, il progetto ha successo se, insieme:
 
 - **Adozione reale**: almeno un meetup Laravel italiano usa la piattaforma per un evento reale end-to-end (pubblicazione evento → iscrizioni → partecipazione).
 - **Vetrina attiva**: il repository riceve interesse esterno misurabile — star, fork, o almeno una contribuzione/issue da un contributore non affiliato al team originale.
-- I requisiti funzionali v1 già tracciati in `.planning/REQUIREMENTS.md` (ADMN, EVNT, REGS, CMSP, LOCL, QUAL) sono completati e verificati.
+- I requisiti funzionali v1 già tracciati in `.planning/requirements-2.md` (ADMN, EVNT, REGS, CMSP, LOCL, QUAL) sono completati e verificati.
 - [ASSUMPTION] Qualità tecnica mantenuta: PHPStan livello 10, zero errori, e copertura test Pest come da obiettivo Track B in `.planning/PROJECT.md`, poiché la credibilità come vetrina dipende dal mantenimento di questi standard, non solo dal loro raggiungimento iniziale.
 
 ## Ambito
 
-**Dentro per la v1** (da `.planning/REQUIREMENTS.md`):
+**Dentro per la v1** (da `.planning/requirements-2.md`):
 - Admin Filament per eventi, venue, performer, sponsor, iscrizioni
 - Scoperta pubblica eventi (lista, dettaglio, filtro per città/data) senza autenticazione
 - Flusso di registrazione con conferma email e limite capienza
@@ -62,7 +62,7 @@ A 3-6 mesi dal primo rilascio pubblico, il progetto ha successo se, insieme:
 - Localizzazione IT/EN completa
 - Conformità: cookie consent, WCAG 2.1 AA, SEO/JSON-LD
 
-**Fuori scope per la v1** (esplicito, da `.planning/REQUIREMENTS.md`):
+**Fuori scope per la v1** (esplicito, da `.planning/requirements-2.md`):
 - Pagamenti/biglietti a pagamento (Stripe/Apple Pay) — rimandato a v2
 - Profili utente con storico partecipazioni, profili pubblici performer — rimandato a v2
 - Chat in tempo reale, app native, live streaming, OAuth esterno — esclusi esplicitamente

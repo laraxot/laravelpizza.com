@@ -52,7 +52,7 @@ Activity registra attivita', eventi e snapshot e offre risorse Filament e consul
 ## Riferimenti owner
 
 - [architecture](architecture.md)
-- [security](security.md)
+- [security](security-2.md)
 - [ActivityPolicy](../app/Models/Policies/ActivityPolicy.php)
 - [ActivityBasePolicy](../app/Models/Policies/ActivityBasePolicy.php)
 - [AuthorizeLogAccessAction](../app/Actions/Log/AuthorizeLogAccessAction.php)

@@ -34,7 +34,7 @@ governance: `Modules/Xot/docs/adr/0012-behavioral-contract-governance.md`.
 ## Stato di copertura
 
 Nessun test del modulo usa `->group('JOB-...')` (`rg "group\('JOB-" Modules/Job/tests` senza risultati): tutti gli
-invarianti sono «non coperti» in senso stretto. Dettagli e backlog in [INDEX.md](INDEX.md).
+invarianti sono «non coperti» in senso stretto. Dettagli e backlog in [index.md](index.md).
 =======
 =======
 >>>>>>> .merge_file_jjj0EC

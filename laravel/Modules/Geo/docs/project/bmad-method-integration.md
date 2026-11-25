@@ -256,7 +256,7 @@ npx bmad-method@next install
 
 ## Collegamenti
 
-- [AGENTS.md](../../AGENTS.md)
+- [AGENTS.md](../agents.md)
 - [GSD Methodology](./gsd-methodology.md)
 - [Laraxot Methodology](./laraxot-methodology.md)
 - [Project Context](_bmad-output/project-context.md)

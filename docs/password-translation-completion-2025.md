@@ -104,7 +104,7 @@ Durante l'audit delle traduzioni del modulo User, sono state identificate traduz
 ## Collegamenti
 
 - [Documentazione Modulo User](../readme.md)
-- [Best Practices Traduzioni](../../lang/docs/translation_standards.md)
+- [Best Practices Traduzioni](../../lang/docs/translation-standards-2.md)
 - [Sicurezza Password](../security/password_policies.md)
 
 ## Note per il Futuro

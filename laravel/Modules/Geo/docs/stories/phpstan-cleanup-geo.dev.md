@@ -71,7 +71,7 @@ Docs: `docs/services/geocoding.md`, `docs/json-database.md`, `docs/00-index.md`,
 
 ## Implementation Steps
 
-- [x] Letto contesto, chiamanti, doc (`json-database.md`, `services/geocoding.md`), storia git delle costanti
+- [x] Letto contesto, chiamanti, doc (`json-database-2.md`, `services/geocoding.md`), storia git delle costanti
 - [x] Creati `GeoApiEndpoints` e `GeoDataConfig`; alias tipizzati nelle classi che duplicavano gli URL
 - [x] `GeoData/*`, `GeoDataService`, `GeoDataValidator`, `ValidateGeoDataIntegrityAction` sulle fonti uniche
 - [x] Rimosse le `public const CACHE_KEY/CACHE_TTL` di `Get*Action` (nessun consumatore fuori da Geo; aggiornato

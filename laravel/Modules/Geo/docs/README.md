@@ -13,7 +13,7 @@ created: 2026-07-14
 updated: 2026-11-19
 ---
 
-<!-- Indice unico della documentazione del modulo Geo (issue #64): INDEX.md, 00-INDEX.md, 00-index.md e index.md sono stati rimossi. -->
+<!-- Indice unico della documentazione del modulo Geo (issue #64): index-2.md, 00-index-2.md, 00-index.md e index.md sono stati rimossi. -->
 
 ## Navigazione
 
@@ -23,7 +23,7 @@ updated: 2026-11-19
 - [Ricostruzione mappa Leaflet/Lit](./wiki/concepts/geo-map-lit-reconstruction-guide.md)
 - [Analisi dei modelli](./geo-models-domain-analysis.md)
 - [Registro decisioni](./decision-log.md)
-- [Mappa di migrazione della radice di docs/](./DOCS-MIGRATION-MAP.md) - proposta di riordino dei file in radice
+- [Mappa di migrazione della radice di docs/](./docs-migration-map.md) - proposta di riordino dei file in radice
 
 ### Asset front-end
 
@@ -47,7 +47,7 @@ updated: 2026-07-14
 updated: 2026-11-19
 ---
 
-<!-- Indice unico della documentazione del modulo Geo (issue #64): INDEX.md, 00-INDEX.md, 00-index.md e index.md sono stati rimossi. -->
+<!-- Indice unico della documentazione del modulo Geo (issue #64): index-2.md, 00-index-2.md, 00-index.md e index.md sono stati rimossi. -->
 =======
 <<<<<<< HEAD
 updated: 2026-07-14
@@ -62,7 +62,7 @@ updated: 2026-07-14
 updated: 2026-11-19
 ---
 
-<!-- Indice unico della documentazione del modulo Geo (issue #64): INDEX.md, 00-INDEX.md, 00-index.md e index.md sono stati rimossi. -->
+<!-- Indice unico della documentazione del modulo Geo (issue #64): index-2.md, 00-index-2.md, 00-index.md e index.md sono stati rimossi. -->
 =======
 <<<<<<< HEAD
 updated: 2026-07-14
@@ -77,7 +77,7 @@ updated: 2026-07-14
 updated: 2026-11-19
 ---
 
-<!-- Indice unico della documentazione del modulo Geo (issue #64): INDEX.md, 00-INDEX.md, 00-index.md e index.md sono stati rimossi. -->
+<!-- Indice unico della documentazione del modulo Geo (issue #64): index-2.md, 00-index-2.md, 00-index.md e index.md sono stati rimossi. -->
 =======
 <<<<<<< HEAD
 updated: 2026-07-14
@@ -92,7 +92,7 @@ updated: 2026-07-14
 updated: 2026-11-19
 ---
 
-<!-- Indice unico della documentazione del modulo Geo (issue #64): INDEX.md, 00-INDEX.md, 00-index.md e index.md sono stati rimossi. -->
+<!-- Indice unico della documentazione del modulo Geo (issue #64): index-2.md, 00-index-2.md, 00-index.md e index.md sono stati rimossi. -->
 
 ## Navigazione
 
@@ -102,7 +102,7 @@ updated: 2026-11-19
 - [Ricostruzione mappa Leaflet/Lit](./wiki/concepts/geo-map-lit-reconstruction-guide.md)
 - [Analisi dei modelli](./geo-models-domain-analysis.md)
 - [Registro decisioni](./decision-log.md)
-- [Mappa di migrazione della radice di docs/](./DOCS-MIGRATION-MAP.md) - proposta di riordino dei file in radice
+- [Mappa di migrazione della radice di docs/](./docs-migration-map.md) - proposta di riordino dei file in radice
 >>>>>>> .merge_file_Btl0kw
 
 ### Asset front-end
@@ -437,7 +437,7 @@ Geo module possiede TUTTE le concern geospaziali:
 - [Ricostruzione mappa Leaflet/Lit](./wiki/concepts/geo-map-lit-reconstruction-guide.md)
 - [Analisi dei modelli](./geo-models-domain-analysis.md)
 - [Registro decisioni](./decision-log.md)
-- [Mappa di migrazione della radice di docs/](./DOCS-MIGRATION-MAP.md) - proposta di riordino dei file in radice
+- [Mappa di migrazione della radice di docs/](./docs-migration-map.md) - proposta di riordino dei file in radice
 >>>>>>> .merge_file_GLRPMX
 
 ### Asset front-end
@@ -772,7 +772,7 @@ Geo module possiede TUTTE le concern geospaziali:
 - [Ricostruzione mappa Leaflet/Lit](./wiki/concepts/geo-map-lit-reconstruction-guide.md)
 - [Analisi dei modelli](./geo-models-domain-analysis.md)
 - [Registro decisioni](./decision-log.md)
-- [Mappa di migrazione della radice di docs/](./DOCS-MIGRATION-MAP.md) - proposta di riordino dei file in radice
+- [Mappa di migrazione della radice di docs/](./docs-migration-map.md) - proposta di riordino dei file in radice
 >>>>>>> .merge_file_mqvJGu
 
 ### Asset front-end
@@ -1107,7 +1107,7 @@ Geo module possiede TUTTE le concern geospaziali:
 - [Ricostruzione mappa Leaflet/Lit](./wiki/concepts/geo-map-lit-reconstruction-guide.md)
 - [Analisi dei modelli](./geo-models-domain-analysis.md)
 - [Registro decisioni](./decision-log.md)
-- [Mappa di migrazione della radice di docs/](./DOCS-MIGRATION-MAP.md) - proposta di riordino dei file in radice
+- [Mappa di migrazione della radice di docs/](./docs-migration-map.md) - proposta di riordino dei file in radice
 
 ### Asset front-end
 

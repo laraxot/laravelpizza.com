@@ -88,7 +88,7 @@ public function panel(Panel $panel): Panel
 ### Collegamenti
 
 - [Documentazione Root](../../../project_docs/filament_panel_provider_rules.md)
-- [Architettura Filament](../../../project_docs/FILAMENT_BEST_PRACTICES.md)
+- [Architettura Filament](filament-best-practices-2.md)
 - [Configurazione Moduli](../../../project_docs/MODULE_ARCHITECTURE.md)
 
 *Ultimo aggiornamento: 2025-01-06*
@@ -182,7 +182,7 @@ public function panel(Panel $panel): Panel
 ### Collegamenti
 
 - [Documentazione Root](../../../project_docs/filament_panel_provider_rules.md)
-- [Architettura Filament](../../../project_docs/FILAMENT_BEST_PRACTICES.md)
+- [Architettura Filament](filament-best-practices-2.md)
 - [Configurazione Moduli](../../../project_docs/MODULE_ARCHITECTURE.md)
 
 *Ultimo aggiornamento: 2025-01-06*

@@ -612,19 +612,19 @@ Before starting your subtask:
 <<<<<<< HEAD
 <<<<<<< .merge_file_PSsmZl
 | Master Index | 00-INDEX.md | laravel/Themes/Sixteen/docs/ | ✅ DONE |
-| Tool Docs | bashscripts/docs/html/INDEX.md | bashscripts/docs/html/ | ✅ DONE |
+| Tool Docs | bashscripts/docs/html/index-2.md | bashscripts/docs/html/ | ✅ DONE |
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 | Master Index | 00-INDEX.md | laravel/Themes/Sixteen/docs/ | ✅ DONE |
-| Tool Docs | bashscripts/docs/html/INDEX.md | bashscripts/docs/html/ | ✅ DONE |
+| Tool Docs | bashscripts/docs/html/index-2.md | bashscripts/docs/html/ | ✅ DONE |
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_y2bdPP
 =======
 | Master Index | 00-INDEX.md | laravel/Themes/Sixteen/docs/ | ✅ DONE |
-| Tool Docs | bashscripts/docs/html/INDEX.md | bashscripts/docs/html/ | ✅ DONE |
+| Tool Docs | bashscripts/docs/html/index-2.md | bashscripts/docs/html/ | ✅ DONE |
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_PSsmZl
 >>>>>>> laraxot/dev

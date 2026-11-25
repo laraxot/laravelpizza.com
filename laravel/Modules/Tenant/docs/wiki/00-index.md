@@ -41,7 +41,7 @@ related:
 
 ### Product & Strategy
 - **[PRD.md](../prd.md)** — Product requirements document
-- **[philosophy.md](../philosophy.md)** — Core principles
+- **[../philosophy-2.md](../philosophy.md)** — Core principles
 - **[README.md](./README.md)** — Module overview and local knowledge map
 
 ---

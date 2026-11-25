@@ -226,5 +226,5 @@ it('renders filament icon buttons for social links', function () {
 ## Collegamenti tra versioni di filament-components.md
 * [filament-components.md](laravel/modules/user/docs/best-practices/filament-components.md)
 * [filament-components.md](laravel/modules/cms/docs/best-practices/filament-components.md)
-* [filament-components.md](laravel/modules/cms/docs/filament-components.md)
+* [filament-components.md](laravel/Modules/Cms/docs/filament-components-2.md)
 * [filament-components.md](laravel/docs/rules/filament-components.md)

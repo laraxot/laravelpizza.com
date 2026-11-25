@@ -120,4 +120,4 @@ I form avanzati sono implementati utilizzando i componenti Filament:
 ## Collegamenti tra versioni di filament-integration.md
 * [filament-integration.md](laravel/modules/xot/docs/laraxot/filament-integration.md)
 * [filament-integration.md](laravel/modules/cms/docs/roadmap/features/filament-integration.md)
-* [filament-integration.md](laravel/modules/cms/docs/filament-integration.md)
+* [filament-integration.md](laravel/Modules/Cms/docs/filament-integration-2.md)

@@ -18,7 +18,7 @@ This directory contains consolidated and organized documentation for the Xot mod
 ## Key Documentation Files
 
 ### Core Standards
-- `CODE_QUALITY.md` - Code quality standards
+- `code-quality-2.md` - Code quality standards
 - `XOTBASE_EXTENSION_RULES.md` - Xot base class extension rules
 - `TRAIT_METHOD_SIGNATURE_RULES.md` - Trait method signature conventions
 - `SVG_ICON_STANDARDS.md` - SVG icon standards

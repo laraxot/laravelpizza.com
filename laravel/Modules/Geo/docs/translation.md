@@ -154,7 +154,7 @@ The comprehensive approach taken demonstrates:
 - [Widget Development Standards](../../User/docs/widgets)
 
 ### Project Level
-- [Translation Standards](translation-standards.md)
+- [Translation Standards](translation-standards-3.md)
 - [Code Quality Guidelines](code-quality-guidelines.md)
 - [Development Best Practices](development-best-practices.md)
 

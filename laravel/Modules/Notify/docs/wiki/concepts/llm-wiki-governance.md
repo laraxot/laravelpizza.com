@@ -32,7 +32,7 @@ This page defines how the Karpathy-style LLM wiki maps onto the Notify repositor
 
 - Raw corpus: `docs/` excluding `docs/wiki/**`
 - Compiled wiki: `docs/wiki/`
-- Schema: `AGENTS.md`, `CLAUDE.md`, `qwen.md`, `gemini.md`, and project docs governance
+- Schema: `AGENTS.md`, `CLAUDE.md`, `qwen-2.md`, `gemini-2.md`, and project docs governance
 
 ## Ingest
 

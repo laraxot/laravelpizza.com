@@ -1,9 +1,9 @@
-# Template Gestione Conflitti Git - git_subtree_error_resolution.md
+# Template Gestione Conflitti Git - git-subtree-error-resolution-2.md
 
-## File: bashscripts/git_subtree_error_resolution.md
+## File: bashscripts/git-subtree-error-resolution-2.md
 
 ### Analisi
-- **Tipo di Conflitto**: Merge conflict in git_subtree_error_resolution.md
+- **Tipo di Conflitto**: Merge conflict in git-subtree-error-resolution-2.md
 - **Posizione**: Multiple locations
 - **Impatto**: Documentazione della risoluzione degli errori Git Subtree
 
@@ -33,7 +33,7 @@
 4. Normalizzazione del file
 
 ## Risultati
-- File git_subtree_error_resolution.md corretto e funzionante
+- File git-subtree-error-resolution-2.md corretto e funzionante
 - Documentazione aggiornata e completa
 - Struttura Markdown valida
 

@@ -78,12 +78,12 @@ Partiti da un progetto con documentazione al 65% e implementazione al 60%, abbia
 4. project-completion-status.md
 5. excellence-year-note-snake.md
 6. final-summary.md
-7. WORK-COMPLETED-.md.md
+7. work-completed-4.md
 8. gap-analysis-implementation.md
 9. implementations-completed.md
 
 #### Guide Complete (5)
-10. Fixcity/docs/API.md
+10. Fixcity/docs/api-2.md
 11. Fixcity/docs/USER_GUIDE.md
 12. Fixcity/docs/ADMIN_GUIDE.md
 13. User/docs/2FA_GUIDE.md

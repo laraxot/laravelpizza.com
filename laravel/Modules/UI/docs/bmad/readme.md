@@ -118,7 +118,7 @@ resources/views/components/ui/
 
 - [Components Guide](components.md)
 - [TableLayoutEnum Guide](table-layout-enum-complete-guide.md)
-- [Filament Components](filament-components.md)
+- [Filament Components](filament-components-2.md)
 
 ## 🔗 Moduli Collegati
 
@@ -247,8 +247,8 @@ php artisan ui:test-components
 ### 🏗️ **Architettura**
 - [Components Guide](components.md) - Guida completa componenti
 - [Design System](design-system.md) - Sistema design modulare
-- [Architecture Rules](../archive/architecture_rules.md) - Regole architetturali
-- [Best Practices](best-practices.md) - Linee guida sviluppo
+- [Architecture Rules](../archive/architecture-rules-2.md) - Regole architetturali
+- [Best Practices](best-practices-3.md) - Linee guida sviluppo
 
 ### 🔗 **Collegamenti Moduli**
 - **[Xot Module](../Xot/docs/README.md)** - Framework core e convenzioni
@@ -264,7 +264,7 @@ php artisan ui:test-components
 - [Navigation Components](../archive/navigation-components.md) - Componenti navigazione
 
 ### 🎨 **Filament Integration**
-- [Filament Components](filament-components.md) - Componenti Filament
+- [Filament Components](filament-components-2.md) - Componenti Filament
 - [Widget System](widgets.md) - Sistema widget personalizzati
 - [TableLayoutEnum](table-layout-enum-complete-guide.md) - Guida completa enum layout
 - [File Upload Components](filament-fileupload.md) - Componenti upload file
@@ -564,9 +564,9 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 **🚀 Performance**: 97/100 score
 ## Collegamenti
 
-- [Documentazione Root](../../../docs/translation_standards_links.md)
+- [Documentazione Root](../../../docs/translation-standards-links-2.md)
 - [Regole Traduzioni](translation_rules.md)
-- [Best Practices Filament](filament_best_practices.md)
+- [Best Practices Filament](filament-best-practices-2.md)
 - [Componenti UI](components.md)
 - [TableLayoutEnum Analysis](../archive/table_layout_enum_analysis.md)
 - [TableLayoutEnum Usage](table-layout-enum-usage.md)

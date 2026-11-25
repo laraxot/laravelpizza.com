@@ -22,7 +22,7 @@ Creato documento completo con **12 passi sacri** da seguire quando ricevi un err
 3. **STUDIARE GIT HISTORY** 📜 - Forward-only
 4. **CAPIRE LO SCOPO** 🎯 - Business value
 5. **RAGIONARE** 🤔 - Pensa prima di agire
-6. **AGGIORNARE REGOLE** 📖 - qwen.md, memories
+6. **AGGIORNARE REGOLE** 📖 - qwen-2.md, memories
 7. **AGGIORNARE MEMORIES** 🧠 - Memoria a lungo termine
 8. **AGGIORNARE SKILLS** 🛠️ - Pattern e conoscenze
 9. **AGGIORNARE GUIDELINES** 📏 - Linee guida

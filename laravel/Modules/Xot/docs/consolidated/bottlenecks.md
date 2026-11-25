@@ -683,7 +683,7 @@ Implementando queste soluzioni, il modulo Xot potrà superare i principali colli
 
 ## Collegamenti
 - [Roadmap Principale](./roadmap.md)
-- [Best Practices Performance](./BEST-PRACTICES.md#performance)
+- [Best Practices Performance](../../../Activity/docs/best-practices-3.md#performance)
 - [Struttura Moduli](./MODULE_STRUCTURE.md)
 
 ## Collegamenti tra versioni di BOTTLENECKS.md

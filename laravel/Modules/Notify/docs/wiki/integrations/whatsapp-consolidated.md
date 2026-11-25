@@ -163,7 +163,7 @@ La logica di selezione del provider WhatsApp è implementata in `WhatsAppProvide
 
 ## whatsapp-channel-2
 
-*Consolidated from: `whatsapp-channel.md`*
+*Consolidated from: `whatsapp-channel-2.md`*
 
 title: "Implementazione Canale WhatsApp"
 type: concept
@@ -178,19 +178,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -543,7 +543,7 @@ class WhatsAppTest extends TestCase
 
 ## whatsapp-channel
 
-*Consolidated from: `whatsapp-channel.md`*
+*Consolidated from: `whatsapp-channel-2.md`*
 
 <<<<<<< HEAD
 
@@ -900,7 +900,7 @@ class WhatsAppTest extends TestCase
 
 ## whatsapp-integration-1
 
-*Consolidated from: `whatsapp-integration.md`*
+*Consolidated from: `whatsapp-integration-2.md`*
 
 <<<<<<< HEAD
 
@@ -1455,7 +1455,7 @@ Seguendo questa architettura, l'integrazione WhatsApp si inserisce perfettamente
 
 ## whatsapp-integration-2
 
-*Consolidated from: `whatsapp-integration.md`*
+*Consolidated from: `whatsapp-integration-2.md`*
 
 title: "Integrazione WhatsApp"
 type: concept
@@ -1470,19 +1470,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -2033,7 +2033,7 @@ Seguendo questa architettura, l'integrazione WhatsApp si inserisce perfettamente
 
 ## whatsapp-integration
 
-*Consolidated from: `whatsapp-integration.md`*
+*Consolidated from: `whatsapp-integration-2.md`*
 
 <<<<<<< HEAD
 
@@ -2587,7 +2587,7 @@ Seguendo questa architettura, l'integrazione WhatsApp si inserisce perfettamente
 
 ## whatsapp-sending-standard-1
 
-*Consolidated from: `whatsapp-sending-standard.md`*
+*Consolidated from: `whatsapp-sending-standard-2.md`*
 
 title: "Standard per Invio Messaggi WhatsApp nel Modulo Notify"
 type: rule
@@ -2602,19 +2602,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -2847,7 +2847,7 @@ $action->onQueue('whatsapp')->execute($data);
 
 ## whatsapp-sending-standard
 
-*Consolidated from: `whatsapp-sending-standard.md`*
+*Consolidated from: `whatsapp-sending-standard-2.md`*
 
 <<<<<<< HEAD
 
@@ -3130,7 +3130,7 @@ https://developers.facebook.com/docs/whatsapp/cloud-api/get-started
 
 ## whatsapp_channel
 
-*Consolidated from: `whatsapp_channel.md`*
+*Consolidated from: `whatsapp-channel-2.md`*
 
 <<<<<<< HEAD
 
@@ -3487,7 +3487,7 @@ class WhatsAppTest extends TestCase
 
 ## whatsapp_integration
 
-*Consolidated from: `whatsapp_integration.md`*
+*Consolidated from: `whatsapp-integration-2.md`*
 
 # Integrazione WhatsApp
 
@@ -4220,7 +4220,7 @@ Seguendo questa architettura, l'integrazione WhatsApp si inserisce perfettamente
 
 ## whatsapp_sending_standard
 
-*Consolidated from: `whatsapp_sending_standard.md`*
+*Consolidated from: `whatsapp-sending-standard-2.md`*
 
 <<<<<<< HEAD
 

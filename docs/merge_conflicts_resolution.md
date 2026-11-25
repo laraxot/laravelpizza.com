@@ -47,7 +47,7 @@ Strategia: DRY, KISS, analisi contestuale
 
 ### Configurazione e Risorse (6 file)
 - `README.md`
-- `docs/module_geo.md`
+- `docs/module-geo-2.md`
 - `lang/en/geo.php`
 - `resources/views/maps/farmshops/dist/js/app.js`
 - `resources/views/maps/farmshops/resources/css/style.default.css`

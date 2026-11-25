@@ -35,7 +35,7 @@ Consolidated from **14** individual files.
 
 ## path-and-interface-rules-1
 
-*Consolidated from: `path-and-interface-rules.md`*
+*Consolidated from: `path-and-interface-rules-2.md`*
 
 <<<<<<< HEAD
 
@@ -154,10 +154,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -257,7 +257,7 @@ Questa struttura garantisce:
 
 ## path-and-interface-rules
 
-*Consolidated from: `path-and-interface-rules.md`*
+*Consolidated from: `path-and-interface-rules-2.md`*
 
 <<<<<<< HEAD
 
@@ -655,7 +655,7 @@ Questa struttura garantisce:
 
 ## path-and-namespace-rules-1
 
-*Consolidated from: `path-and-namespace-rules.md`*
+*Consolidated from: `path-and-namespace-rules-2.md`*
 
 <<<<<<< HEAD
 
@@ -791,14 +791,14 @@ namespace Modules\Notify\Datas; // CORRETTO
 ## Collegamento alle Regole Generali
 
 Per le regole generali e condivise tra tutti i moduli, consulta anche:
-- [Regole generali per i namespace (Xot)](../../Xot/docs/NAMESPACE-RULES.md): linee guida ufficiali e motivazioni delle scelte di struttura dei namespace nei moduli Laraxot.
+- [Regole generali per i namespace (Xot)](../../namespace-rules-2.md): linee guida ufficiali e motivazioni delle scelte di struttura dei namespace nei moduli Laraxot.
 
 ## Collegamenti
 
-- [Regole Generali per i Namespace](/laravel/Modules/Xot/docs/NAMESPACE-RULES.md)
-- [Convenzioni di Codice](/laravel/Modules/Xot/docs/CODE-CONVENTIONS.md)
+- [Regole Generali per i Namespace](/laravel/Modules/Notify/docs/namespace-rules-2.md)
+- [Convenzioni di Codice](/laravel/Modules/User/docs/code-conventions-3.md)
 - [Struttura dei Moduli](/laravel/Modules/Xot/docs/MODULE-STRUCTURE.md)
-- [Collegamento Bidirezionale: Documentazione Root](../../../../../docs/links.md)
+- [Collegamento Bidirezionale: Documentazione Root](../../../../Gdpr/docs/links-2.md)
 
 ### Esempio 5: Console Command
 
@@ -840,10 +840,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -975,22 +975,22 @@ namespace Modules\Notify\Datas; // CORRETTO
 ## Collegamento alle Regole Generali
 
 Per le regole generali e condivise tra tutti i moduli, consulta anche:
-- [Regole generali per i namespace (Xot)](../../xot/docs/namespace-rules.md): linee guida ufficiali e motivazioni delle scelte di struttura dei namespace nei moduli Laraxot.
+- [Regole generali per i namespace (Xot)](../../namespace-rules-2.md): linee guida ufficiali e motivazioni delle scelte di struttura dei namespace nei moduli Laraxot.
 
 ## Collegamenti
 
-- [Regole Generali per i Namespace](/laravel/modules/xot/docs/namespace-rules.md)
-- [Convenzioni di Codice](/laravel/modules/xot/docs/code-conventions.md)
+- [Regole Generali per i Namespace](/laravel/Modules/Notify/docs/namespace-rules-2.md)
+- [Convenzioni di Codice](/laravel/Modules/User/docs/code-conventions-3.md)
 - [Struttura dei Moduli](/laravel/modules/xot/docs/module-structure.md)
-- [Regole generali per i namespace (Xot)](../../Xot/docs/NAMESPACE-RULES.md): linee guida ufficiali e motivazioni delle scelte di struttura dei namespace nei moduli Laraxot.
+- [Regole generali per i namespace (Xot)](../../namespace-rules-2.md): linee guida ufficiali e motivazioni delle scelte di struttura dei namespace nei moduli Laraxot.
 
 ## Collegamenti
 
-- [Regole Generali per i Namespace](/laravel/Modules/Xot/docs/NAMESPACE-RULES.md)
-- [Convenzioni di Codice](/laravel/Modules/Xot/docs/CODE-CONVENTIONS.md)
+- [Regole Generali per i Namespace](/laravel/Modules/Notify/docs/namespace-rules-2.md)
+- [Convenzioni di Codice](/laravel/Modules/User/docs/code-conventions-3.md)
 - [Struttura dei Moduli](/laravel/Modules/Xot/docs/MODULE-STRUCTURE.md)
-- [Collegamento Bidirezionale: Documentazione Root](../../../../docs/links.md)
-- [Collegamento Bidirezionale: Documentazione Root](../../../../../docs/links.md)
+- [Collegamento Bidirezionale: Documentazione Root](../../../../Gdpr/docs/links-2.md)
+- [Collegamento Bidirezionale: Documentazione Root](../../../../Gdpr/docs/links-2.md)
 
 ### Esempio 5: Console Command
 
@@ -1019,7 +1019,7 @@ namespace Modules\Notify\App\Console\Commands;
 
 ## path-and-namespace-rules
 
-*Consolidated from: `path-and-namespace-rules.md`*
+*Consolidated from: `path-and-namespace-rules-2.md`*
 
 <<<<<<< HEAD
 
@@ -1175,14 +1175,14 @@ namespace Modules\Notify\Datas; // CORRETTO
 ## Collegamento alle Regole Generali
 
 Per le regole generali e condivise tra tutti i moduli, consulta anche:
-- [Regole generali per i namespace (Xot)](../../Xot/docs/NAMESPACE-RULES.md): linee guida ufficiali e motivazioni delle scelte di struttura dei namespace nei moduli Laraxot.
+- [Regole generali per i namespace (Xot)](../../namespace-rules-2.md): linee guida ufficiali e motivazioni delle scelte di struttura dei namespace nei moduli Laraxot.
 
 ## Collegamenti
 
-- [Regole Generali per i Namespace](/laravel/Modules/Xot/docs/NAMESPACE-RULES.md)
-- [Convenzioni di Codice](/laravel/Modules/Xot/docs/CODE-CONVENTIONS.md)
+- [Regole Generali per i Namespace](/laravel/Modules/Notify/docs/namespace-rules-2.md)
+- [Convenzioni di Codice](/laravel/Modules/User/docs/code-conventions-3.md)
 - [Struttura dei Moduli](/laravel/Modules/Xot/docs/MODULE-STRUCTURE.md)
-- [Collegamento Bidirezionale: Documentazione Root](../../../../../docs/links.md)
+- [Collegamento Bidirezionale: Documentazione Root](../../../../Gdpr/docs/links-2.md)
 
 ### Esempio 5: Console Command
 
@@ -1336,14 +1336,14 @@ namespace Modules\Notify\Datas; // CORRETTO
 ## Collegamento alle Regole Generali
 
 Per le regole generali e condivise tra tutti i moduli, consulta anche:
-- [Regole generali per i namespace (Xot)](../../Xot/docs/NAMESPACE-RULES.md): linee guida ufficiali e motivazioni delle scelte di struttura dei namespace nei moduli Laraxot.
+- [Regole generali per i namespace (Xot)](../../namespace-rules-2.md): linee guida ufficiali e motivazioni delle scelte di struttura dei namespace nei moduli Laraxot.
 
 ## Collegamenti
 
-- [Regole Generali per i Namespace](/laravel/Modules/Xot/docs/NAMESPACE-RULES.md)
-- [Convenzioni di Codice](/laravel/Modules/Xot/docs/CODE-CONVENTIONS.md)
+- [Regole Generali per i Namespace](/laravel/Modules/Notify/docs/namespace-rules-2.md)
+- [Convenzioni di Codice](/laravel/Modules/User/docs/code-conventions-3.md)
 - [Struttura dei Moduli](/laravel/Modules/Xot/docs/MODULE-STRUCTURE.md)
-- [Collegamento Bidirezionale: Documentazione Root](../../../../../docs/links.md)
+- [Collegamento Bidirezionale: Documentazione Root](../../../../Gdpr/docs/links-2.md)
 
 ### Esempio 5: Console Command
 
@@ -1528,14 +1528,14 @@ namespace Modules\Notify\Datas; // CORRETTO
 ## Collegamento alle Regole Generali
 
 Per le regole generali e condivise tra tutti i moduli, consulta anche:
-- [Regole generali per i namespace (Xot)](../../xot/docs/namespace-rules.md): linee guida ufficiali e motivazioni delle scelte di struttura dei namespace nei moduli Laraxot.
+- [Regole generali per i namespace (Xot)](../../namespace-rules-2.md): linee guida ufficiali e motivazioni delle scelte di struttura dei namespace nei moduli Laraxot.
 
 ## Collegamenti
 
-- [Regole Generali per i Namespace](/laravel/modules/xot/docs/namespace-rules.md)
-- [Convenzioni di Codice](/laravel/modules/xot/docs/code-conventions.md)
+- [Regole Generali per i Namespace](/laravel/Modules/Notify/docs/namespace-rules-2.md)
+- [Convenzioni di Codice](/laravel/Modules/User/docs/code-conventions-3.md)
 - [Struttura dei Moduli](/laravel/modules/xot/docs/module-structure.md)
-- [Collegamento Bidirezionale: Documentazione Root](../../../../../docs/links.md)
+- [Collegamento Bidirezionale: Documentazione Root](../../../../Gdpr/docs/links-2.md)
 
 ### Esempio 5: Console Command
 
@@ -1688,14 +1688,14 @@ namespace Modules\Notify\Datas; // CORRETTO
 ## Collegamento alle Regole Generali
 
 Per le regole generali e condivise tra tutti i moduli, consulta anche:
-- [Regole generali per i namespace (Xot)](../../xot/docs/namespace-rules.md): linee guida ufficiali e motivazioni delle scelte di struttura dei namespace nei moduli Laraxot.
+- [Regole generali per i namespace (Xot)](../../namespace-rules-2.md): linee guida ufficiali e motivazioni delle scelte di struttura dei namespace nei moduli Laraxot.
 
 ## Collegamenti
 
-- [Regole Generali per i Namespace](/laravel/modules/xot/docs/namespace-rules.md)
-- [Convenzioni di Codice](/laravel/modules/xot/docs/code-conventions.md)
+- [Regole Generali per i Namespace](/laravel/Modules/Notify/docs/namespace-rules-2.md)
+- [Convenzioni di Codice](/laravel/Modules/User/docs/code-conventions-3.md)
 - [Struttura dei Moduli](/laravel/modules/xot/docs/module-structure.md)
-- [Collegamento Bidirezionale: Documentazione Root](../../../../../docs/links.md)
+- [Collegamento Bidirezionale: Documentazione Root](../../../../Gdpr/docs/links-2.md)
 
 ### Esempio 5: Console Command
 
@@ -1813,10 +1813,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -1995,7 +1995,7 @@ Questo significa che il namespace `Modules\Notify` mappa alla directory `app/` d
 
 ## path_and_interface_rules
 
-*Consolidated from: `path_and_interface_rules.md`*
+*Consolidated from: `path-and-interface-rules-2.md`*
 
 <<<<<<< HEAD
 
@@ -2100,7 +2100,7 @@ Questa struttura garantisce:
 
 ## path_and_namespace_rules
 
-*Consolidated from: `path_and_namespace_rules.md`*
+*Consolidated from: `path-and-namespace-rules-2.md`*
 
 <<<<<<< HEAD
 
@@ -2236,14 +2236,14 @@ namespace Modules\Notify\Datas; // CORRETTO
 ## Collegamento alle Regole Generali
 
 Per le regole generali e condivise tra tutti i moduli, consulta anche:
-- [Regole generali per i namespace (Xot)](../../Xot/docs/NAMESPACE-RULES.md): linee guida ufficiali e motivazioni delle scelte di struttura dei namespace nei moduli Laraxot.
+- [Regole generali per i namespace (Xot)](../../namespace-rules-2.md): linee guida ufficiali e motivazioni delle scelte di struttura dei namespace nei moduli Laraxot.
 
 ## Collegamenti
 
-- [Regole Generali per i Namespace](/laravel/Modules/Xot/docs/NAMESPACE-RULES.md)
-- [Convenzioni di Codice](/laravel/Modules/Xot/docs/CODE-CONVENTIONS.md)
+- [Regole Generali per i Namespace](/laravel/Modules/Notify/docs/namespace-rules-2.md)
+- [Convenzioni di Codice](/laravel/Modules/User/docs/code-conventions-3.md)
 - [Struttura dei Moduli](/laravel/Modules/Xot/docs/MODULE-STRUCTURE.md)
-- [Collegamento Bidirezionale: Documentazione Root](../../../../docs/links.md)
+- [Collegamento Bidirezionale: Documentazione Root](../../../../Gdpr/docs/links-2.md)
 
 ### Esempio 5: Console Command
 

@@ -70,5 +70,5 @@ real `UserContract.php` is untouched.
 - `Modules/User/docs/wiki/decisions/contracts-and-lang-backup-archival-2026-06-30.md`:
   prior session that first identified this file and intended (but never committed)
   an archive-as-`.bak` rename.
-- `Modules/Xot/docs/ponytail-audit-2026-07-02.md`, `Modules/Notify/docs/ponytail-audit-2026-07-02.md`:
+- `Modules/Xot/docs/ponytail-audit-2.md`, `Modules/Notify/docs/ponytail-audit-2.md`:
   sibling module findings from the same repo-wide audit pass.

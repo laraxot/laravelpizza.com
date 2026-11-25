@@ -27,11 +27,6 @@ related:
 ---
 
 
-<<<<<<< .merge_file_ceNk3T
-<<<<<<< .merge_file_1SdpQL
-=======
-=======
->>>>>>> .merge_file_r5F6wK
 ## Executive Summary
 
 The Media module successfully passes **PHPStan Level 10** with **0 errors** out of the box, demonstrating excellent type safety and code quality.
@@ -234,17 +229,6 @@ The **Media module** is in **excellent condition** with PHPStan Level 10 complia
 ---
 
 **Documentation**: Comprehensive (63 docs files)
-<<<<<<< HEAD
-<<<<<<< HEAD
-**Test Coverage**: Integration tests available
-=======
-=======
-=======
-<<<<<<< HEAD
-**Test Coverage**: Integration tests available
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 **Test Coverage**: Integration tests available
 
 ---
@@ -265,10 +249,6 @@ updated: 2026-09-26
 qmd: "quality analysis 2025 11 11"
 issues: []
 discussions: []
-<<<<<<< .merge_file_ceNk3T
->>>>>>> .merge_file_FpLEGa
-=======
->>>>>>> .merge_file_r5F6wK
 ## Executive Summary
 
 The Media module successfully passes **PHPStan Level 10** with **0 errors** out of the box, demonstrating excellent type safety and code quality.
@@ -472,18 +452,5 @@ The **Media module** is in **excellent condition** with PHPStan Level 10 complia
 
 **Next Review**: After high-priority refactoring (Q1 2025)
 **Documentation**: Comprehensive (63 docs files)
-<<<<<<< .merge_file_1SdpQL
 **Test Coverage**: Integration tests available
-=======
-**Test Coverage**: Integration tests available
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ceNk3T
->>>>>>> .merge_file_FpLEGa
-=======
->>>>>>> .merge_file_r5F6wK
+

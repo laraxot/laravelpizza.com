@@ -288,9 +288,9 @@ foreach ($records as $record) {
 ### Documentazione Interna
 - [Ptv - Complete PDF Email Guide](../../../Ptv/docs/pdf-email-attachments-complete-guide.md)
 - [Xot - PDF Generation Technical](../../../Xot/docs/actions/pdf-content-generation-technical.md)
-- [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/EMAIL_LAYOUTS_BEST_PRACTICES.md)
-- [SPATIE_MAIL_TEMPLATES_STRUCTURE.md](../mail-templates/SPATIE_MAIL_TEMPLATES_STRUCTURE.md)
-- [EMAIL_TROUBLESHOOTING.md](./EMAIL_TROUBLESHOOTING.md)
+- [email-layouts-best-practices-2.md](../../laravel/Modules/Notify/docs/mail-templates/email-layouts-best-practices-2.md)
+- [spatie-mail-templates-structure-2.md](../../laravel/Modules/Notify/docs/mail-templates/spatie-mail-templates-structure-2.md)
+- [email-troubleshooting-2.md](../../laravel/Modules/Notify/docs/email-sending/email-troubleshooting-2.md)
 
 ### File Correlati
 - `Modules/Notify/app/Emails/SpatieEmail.php` - Gestione allegati

@@ -320,7 +320,7 @@ Column (Filament - DO NOT REFERENCE)
 
 ## Riferimenti
 
-- [Laraxot Architectural Rules](../archive/architecture_rules.md)
+- [Laraxot Architectural Rules](../archive/architecture-rules-2.md)
 - [Never Use Label Rule](../archive/never_use_label_rule.md)
 - [XotBaseColumn](../../../../Xot/app/Filament/Tables/Columns/XotBaseColumn.php)
 - [Translation Pattern](../../translations/)

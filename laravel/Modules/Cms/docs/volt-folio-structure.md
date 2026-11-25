@@ -142,7 +142,7 @@ function login(): void {
 
 - [Folio ](./folio_overview.md)
 - [Volt Best Practices](./volt_best_practices.md)
-- [Autenticazione con Volt e Folio](../../User/docs/volt_folio_auth_implementation.md)
+- [Autenticazione con Volt e Folio](../../User/docs/volt-folio-auth-implementation-4.md)
 - [Layout Components](../components/layouts.md)
 # Volt con Folio: Struttura Corretta
 
@@ -277,5 +277,5 @@ function login(): void {
 
 - [Folio ](./folio_overview.md)
 - [Volt Best Practices](./volt_best_practices.md)
-- [Autenticazione con Volt e Folio](../../User/docs/volt_folio_auth_implementation.md)
+- [Autenticazione con Volt e Folio](../../User/docs/volt-folio-auth-implementation-4.md)
 - [Layout Components](../components/layouts.md)

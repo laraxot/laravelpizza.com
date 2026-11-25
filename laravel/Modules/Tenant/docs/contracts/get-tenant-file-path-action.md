@@ -1,5 +1,4 @@
 ---
-<<<<<<< .merge_file_JjkmVr
 title: "GetTenantFilePathAction — contratto"
 type: contract
 owner: Tenant
@@ -7,19 +6,10 @@ status: accepted
 updated: 2026-11-24
 action: "Modules\\Tenant\\Actions\\Config\\GetTenantFilePathAction"
 qmd: "GetTenantFilePathAction isolamento tenant path traversal config tenant database content"
-=======
-title: "Contratto — GetTenantFilePathAction"
-type: contract
-action: "Modules\Tenant\Actions\Config\GetTenantFilePathAction"
-tags: [contract, action, tenant, filesystem]
-created: 2026-11-24
-updated: 2026-11-24
->>>>>>> .merge_file_Bi4LlV
 ---
 
 # GetTenantFilePathAction
 
-<<<<<<< .merge_file_JjkmVr
 Calcola il percorso di un file di configurazione o contenuto del tenant corrente. È il punto di isolamento dei file tra tenant. Codice: `app/Actions/Config/GetTenantFilePathAction.php:12-68`.
 
 ## Input
@@ -50,39 +40,3 @@ Normalmente nessuno (calcolo di stringa). Solo con `runningUnitTests()` e prefis
 
 - Non verifica che il file esista né lo legge o scrive (fuori dalla copia di test).
 - Non valida il nome tenant: lo riceve da `GetTenantNameAction`.
-=======
-Sorgente: `app/Actions/Config/GetTenantFilePathAction.php`. Perché: [ADR tenant](../adr/tenant-name-from-reversed-host.md),
-[ADR contenuti nei test](../adr/tenant-json-content-isolated-in-tests.md).
-
-## Input
-
-- `$filename`: percorso relativo alla cartella del tenant (`database.php`, `database/content/pages.json`).
-
-## Output
-
-- Percorso assoluto con i separatori del sistema operativo.
-
-## Invarianti
-
-| ID | Regola | Group Pest |
-|---|---|---|
-| TENANT-FILE-PATH-INV-1 | Fuori dai test il percorso è `base_path('config/<tenant>/<filename>')`, tenant da `GetTenantNameAction`. | `TENANT-FILE-PATH-INV-1` |
-| TENANT-FILE-PATH-INV-2 | Percorso assoluto, segmento `..` o byte NUL = `InvalidArgumentException`, prima di leggere il tenant. | `TENANT-FILE-PATH-INV-2` |
-| TENANT-FILE-PATH-INV-3 | Nei test un nome sotto `database/content/` punta a `storage/framework/testing/tenant-content/<tenant>/...`, mai a `config/`. | `TENANT-FILE-PATH-INV-3` |
-
-## Effetti collaterali
-
-- Solo nei test e solo per `database/content/`: la prima volta per processo cancella e ricopia
-  `storage/framework/testing/tenant-content/<tenant>/database/content` dai JSON versionati; poi copia il file o la cartella
-  richiesta se manca.
-- Fuori dai test: nessuno.
-
-## Errori
-
-- `InvalidArgumentException('Tenant filename must be a relative path without traversal segments.')`.
-
-## Non fa
-
-- Non controlla che il file esista e non lo crea.
-- Non normalizza i symlink: lo fa `GetTenantNameAction` sul nome del tenant.
->>>>>>> .merge_file_Bi4LlV

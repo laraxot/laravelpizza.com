@@ -1,3 +1,8 @@
+---
+title: "Language switcher presentation contract"
+type: contract
+qmd: "language switcher presentation contract"
+---
 # Language switcher presentation contract
 
 ```yaml

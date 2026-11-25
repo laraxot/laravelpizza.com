@@ -107,8 +107,8 @@ php artisan user:balance {userId}
 
 - [Architettura](./architecture.md) - Panoramica dettagliata dell'architettura
 - [Guida allo Sviluppo](./development.md) - Come estendere il modulo
-- [API Reference](./api.md) - Documentazione delle API REST
-- [Sicurezza](./security.md) - Linee guida sulla sicurezza
+- [API Reference](../../../laravel/Modules/User/docs/api-2.md) - Documentazione delle API REST
+- [Sicurezza](../../../laravel/Modules/Geo/docs/root-md-files/security-2.md) - Linee guida sulla sicurezza
 - [Performance](./performance.md) - Ottimizzazioni e best practice
 
 ## 🤝 Contributi
@@ -205,7 +205,7 @@ class PredictionContract extends Model
 
 ## Collegamenti correlati
 - [Console Commands Prediction Market](./console_commands.md)
-- [Best Practice Prediction Market](./best_practices.md)
+- [Best Practice Prediction Market](../../../laravel/Modules/Activity/docs/best-practices-3.md)
 - [Architettura Prediction Market](./architecture.md)
 - [Eventi Prediction Market](./events.md)
 - [Implementazione Prediction Market](./implementation.md)

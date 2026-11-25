@@ -81,7 +81,7 @@ $opzione = Opzione::find(1);
 
 ## Documentazione Correlata
 
-- [Model Naming Convention](../../docs/model_naming_convention.md)
+- [Model Naming Convention](../../docs/model-naming-convention-2.md)
 - [.windsurf/rules/model-naming-singular.md](../../.windsurf/rules/model-naming-singular.md)
 - [.cursor/rules/model-naming-singular.md](../../.cursor/rules/model-naming-singular.md)
 - [Progressioni: Schede → Scheda](./rename-schede-to-scheda.md)

@@ -46,7 +46,7 @@ Non modificati (voci stale): `XotBaseResourceCoverageTest`, `SafeObjectEloquentC
 - [x] `SendMailByRecordActionTest`: classe nominata al posto dell'anonima annidata.
 - [x] Pulizie: docblock duplicati, `$inst = null` ridondante, argomento in piu' in `XotHundredPercentCoverageTest`.
 - [x] `php -l` sui file toccati; `phpstan analyse Modules` -> 0 errori in `Modules/Xot/{tests,helpers}`.
-- [x] Story, dev, `bmad/phpstan-status.md`, indice wiki.
+- [x] Story, dev, `../../../Lang/docs/wiki/integrations/phpstan-status-2.md`, indice wiki.
 
 ## Testing
 

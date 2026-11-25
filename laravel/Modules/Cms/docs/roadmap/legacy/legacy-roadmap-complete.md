@@ -410,7 +410,7 @@ La cartella `docs/` è ben organizzata con:
 ## 🔗 Collegamenti Utili
 
 ### Documentazione Correlata
-- [Roadmap Progetto](../../../../../../docs/roadmap_project.md)
+- [Roadmap Progetto](../../../../../../docs/roadmap-project-2.md)
 - [Modulo User](../../user/docs/roadmap_complete.md)
 <<<<<<< HEAD
 - [Modulo Media](../../../../Media/docs/README.md)

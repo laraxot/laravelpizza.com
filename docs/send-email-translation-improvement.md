@@ -279,15 +279,15 @@ php -l Modules/Notify/lang/it/send_email.php
 
 ### Documentazione Correlata
 - [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)- [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
-- [Best Practice Filament](../../../project_docs/FILAMENT-BEST-PRACTICES.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
+- [Best Practice Filament](../laravel/Modules/Xot/docs/consolidated/filament-best-practices-2.md)- [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
+- [Best Practice Filament](../laravel/Modules/Xot/docs/consolidated/filament-best-practices-2.md)
+- [Best Practice Filament](../laravel/Modules/Xot/docs/consolidated/filament-best-practices-2.md)
 - [Struttura Modulo Notify](./README.md)
 
 ### File Modificati
 - `laravel/Modules/Notify/lang/it/send_email.php` - File principale migliorato
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
 
 ## 📝 Note di Implementazione
 
@@ -563,17 +563,17 @@ php -l Modules/Notify/lang/it/send_email.php
 
 ### Documentazione Correlata
 - [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
+- [Best Practice Filament](../laravel/Modules/Xot/docs/consolidated/filament-best-practices-2.md)
 - [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
-- [Best Practice Filament](../../../project_docs/FILAMENT-BEST-PRACTICES.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)- [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
+- [Best Practice Filament](../laravel/Modules/Xot/docs/consolidated/filament-best-practices-2.md)
+- [Best Practice Filament](../laravel/Modules/Xot/docs/consolidated/filament-best-practices-2.md)- [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
 - [Struttura Modulo Notify](./README.md)
 
 ### File Modificati
 - `laravel/Modules/Notify/lang/it/send_email.php` - File principale migliorato
 - `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
 
 ## 📝 Note di Implementazione
 

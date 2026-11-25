@@ -1,7 +1,7 @@
 ---
 module: theme
 topic: phpstan-corrections-summary-1
-canonical: ../../../Themes/docs/shared-components/phpstan-corrections-summary-.md
+canonical: ../../../Themes/docs/shared-components/phpstan-corrections-summary-2.md
 related:
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
@@ -17,4 +17,4 @@ qmd: "phpstan corrections summary 1"
 >>>>>>> .merge_file_vMEN5R
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/phpstan-corrections-summary-.md
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-corrections-summary-2.md

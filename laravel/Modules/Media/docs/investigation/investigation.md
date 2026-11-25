@@ -2,7 +2,7 @@
 qmd: "media investigation investigation md"
 type: investigation
 title: "Investigation Media Optimization Workflow"
-links: {github_issue: #XXX}
+links: {github_issue: "#XXX"}
 ---
 # Investigation: Media Optimization Workflow
 

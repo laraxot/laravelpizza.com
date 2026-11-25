@@ -88,7 +88,7 @@ Fix root-cause:
 2. **Archeologia**: ripristinati verbatim da `8d7f3c1a` i 5 harness Xot
    (`ModuleBusinessCoverage`, `ModuleDeepCoverage`, `ModuleExecuteCoverage`,
    `ModuleRemainingCoverage`, `FilamentSchemaCoverage`) — cancellati → **394**
-   `class.notFound` fleet-wide (canon `phpstan-status.md`)
+   `class.notFound` fleet-wide (canon `phpstan-status-2.md`)
 3. Marker `app/**` a 0; class-load fatals 0
 
 Gate deep: `phpstan analyse Modules` → **`[OK] No errors` EXIT 0** (certify post-harness).

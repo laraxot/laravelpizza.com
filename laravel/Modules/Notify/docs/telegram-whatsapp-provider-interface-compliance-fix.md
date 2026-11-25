@@ -128,7 +128,7 @@ Twilio test.
 
 ## Related docs
 
-- `Modules/Notify/docs/telegram_provider_architecture.md` and
+- `Modules/Notify/docs/telegram-provider-architecture-2.md` and
   `Modules/Notify/docs/whatsapp-provider-architecture.md` describe an
   aspirational/example architecture (e.g. `SendBotTelegramAction`,
   `SendApiTelegramAction`) that does not match the actual driver class names

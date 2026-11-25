@@ -726,7 +726,7 @@ This keeps the HTTP surface in Folio (the correct location) while the business l
 ## Related
 
 - CLAUDE.md rule 1: "NEVER use traditional controllers or routes in web.php/api.php for front office"
-- `laravel/CLAUDE.md` rule 2: Architecture frontend: NO Controller, NO Routes in web.php
+- `laravel/Modules/Geo/docs/root-md-files/claude.md` rule 2: Architecture frontend: NO Controller, NO Routes in web.php
 - Folio routing docs: `Themes/Meetup/docs/folio-pages-json-only-rule.md`
 
 ---
@@ -850,19 +850,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -1252,19 +1252,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -1587,7 +1587,7 @@ L'utilizzo di Queueable Actions e componenti Blade di Filament garantisce:
 
 ## notification-behavior-1
 
-*Consolidated from: `notification-behavior.md`*
+*Consolidated from: `notification-behavior-2.md`*
 
 title: "Notification System Behavior"
 type: concept
@@ -1602,19 +1602,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -1702,14 +1702,14 @@ public function via($notifiable)
 
 - [Laravel Notification Channels](https://laravel.com/docs/notifications#specifying-delivery-channels)
 - [Laravel Notification Routing](https://laravel.com/docs/notifications#routing-notifications)
-- [Notification Best Practices](best-practices.md)
+- [Notification Best Practices](best-practices-3.md)
 - [Notification Best Practices](../../best-practices.md)
 
 ---
 
 ## notification-behavior
 
-*Consolidated from: `notification-behavior.md`*
+*Consolidated from: `notification-behavior-2.md`*
 
 <<<<<<< HEAD
 
@@ -1801,7 +1801,7 @@ public function via($notifiable)
 
 - [Laravel Notification Channels](https://laravel.com/docs/notifications#specifying-delivery-channels)
 - [Laravel Notification Routing](https://laravel.com/docs/notifications#routing-notifications)
-- [Notification Best Practices](best-practices.md)
+- [Notification Best Practices](best-practices-3.md)
 - [Notification Best Practices](../../best-practices.md)
 
 ---
@@ -1964,7 +1964,7 @@ After implementation, users can:
 
 ## notification-channels-implementation-1
 
-*Consolidated from: `notification-channels-implementation.md`*
+*Consolidated from: `notification-channels-implementation-2.md`*
 
 <<<<<<< HEAD
 
@@ -2126,17 +2126,17 @@ L'implementazione dei canali di notifica  segue un'architettura coerente e ben s
 ## Collegamenti a Documentazione Correlata
 - [Modulo di Notifica](./index.md)
 - [Panoramica dell'Architettura](./architecture.md)
-- [Modelli di Email](./EMAIL_TEMPLATES.md)
-- [Implementazione SMS](./SMS_IMPLEMENTATION.md)
-- [Modelli di Email](../../email_templates.md)
-- [Implementazione SMS](../../sms_implementation.md)
+- [Modelli di Email](../../email-templates-2.md)
+- [Implementazione SMS](../../sms-implementation-2.md)
+- [Modelli di Email](../../email-templates-2.md)
+- [Implementazione SMS](../../sms-implementation-2.md)
 - [Risoluzione dei Problemi](./TROUBLESHOOTING.md)
 
 ---
 
 ## notification-channels-implementation-2
 
-*Consolidated from: `notification-channels-implementation.md`*
+*Consolidated from: `notification-channels-implementation-2.md`*
 
 title: "Implementazione dei Canali di Notifica"
 type: concept
@@ -2151,19 +2151,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -2332,14 +2332,14 @@ L'implementazione dei canali di notifica  segue un'architettura coerente e ben s
 ## Collegamenti a Documentazione Correlata
 - [Modulo di Notifica](./index.md)
 - [Panoramica dell'Architettura](./architecture.md)
-- [Modelli di Email](./email-templates.md)
+- [Modelli di Email](../../email-templates-2.md)
 - [Modelli di Email](../../email-templates.md)
-- [Implementazione SMS](./sms-implementation.md)
+- [Implementazione SMS](../../sms-implementation-2.md)
 - [Risoluzione dei Problemi](./troubleshooting.md)
 - [Modulo di Notifica](./index.md)
 - [Panoramica dell'Architettura](./architecture.md)
-- [Modelli di Email](./email-templates.md)
-- [Implementazione SMS](./sms-implementation.md)
+- [Modelli di Email](../../email-templates-2.md)
+- [Implementazione SMS](../../sms-implementation-2.md)
 - [Modelli di Email](../../email-templates.md)
 - [Implementazione SMS](../../sms-implementation.md)
 - [Risoluzione dei Problemi](./troubleshooting.md)
@@ -2347,7 +2347,7 @@ L'implementazione dei canali di notifica  segue un'architettura coerente e ben s
 
 ## notification-channels-implementation
 
-*Consolidated from: `notification-channels-implementation.md`*
+*Consolidated from: `notification-channels-implementation-2.md`*
 
 <<<<<<< HEAD
 
@@ -2521,10 +2521,10 @@ L'implementazione dei canali di notifica  segue un'architettura coerente e ben s
 ## Collegamenti a Documentazione Correlata
 - [Modulo di Notifica](./index.md)
 - [Panoramica dell'Architettura](./architecture.md)
-- [Modelli di Email](./email_templates.md)
-- [Implementazione SMS](./sms_implementation.md)
-- [Modelli di Email](../../email_templates.md)
-- [Implementazione SMS](../../sms_implementation.md)
+- [Modelli di Email](../../email-templates-2.md)
+- [Implementazione SMS](../../sms-implementation-2.md)
+- [Modelli di Email](../../email-templates-2.md)
+- [Implementazione SMS](../../sms-implementation-2.md)
 - [Risoluzione dei Problemi](./troubleshooting.md)
 
 <<<<<<< HEAD
@@ -2542,7 +2542,7 @@ L'implementazione dei canali di notifica  segue un'architettura coerente e ben s
 
 ## notification-errors-1
 
-*Consolidated from: `notification-errors.md`*
+*Consolidated from: `notification-errors-2.md`*
 
 title: "Errori Comuni nelle Notifiche"
 type: concept
@@ -2557,19 +2557,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -2744,7 +2744,7 @@ class YourNotification extends Notification
 
 ## notification-errors
 
-*Consolidated from: `notification-errors.md`*
+*Consolidated from: `notification-errors-2.md`*
 
 <<<<<<< HEAD
 
@@ -3012,7 +3012,7 @@ Vedi: [Actions Calling Actions Pattern](../../actions-calling-actions-pattern.md
 
 ## notification-providers-guide-1
 
-*Consolidated from: `notification-providers-guide.md`*
+*Consolidated from: `notification-providers-guide-2.md`*
 
 <<<<<<< HEAD
 
@@ -3156,18 +3156,18 @@ Quando si implementa un nuovo provider (es. WhatsApp, Push, ecc.):
 5. **Documentazione**: Mantenere aggiornata la documentazione con nuovi provider
 
 Per implementazioni specifiche, vedere i documenti:
-- [PROVIDER_ACTIONS_ARCHITECTURE.md](./PROVIDER_ACTIONS_ARCHITECTURE.md)
-- [SMS_ACTIONS_PATTERN.md](./SMS_ACTIONS_PATTERN.md)
-- [WHATSAPP_PROVIDER_ARCHITECTURE.md](./WHATSAPP_PROVIDER_ARCHITECTURE.md)
-- [PROVIDER_ACTIONS_ARCHITECTURE.md](../../provider_actions_architecture.md)
-- [SMS_ACTIONS_PATTERN.md](../../sms_actions_pattern.md)
-- [WHATSAPP_PROVIDER_ARCHITECTURE.md](../../whatsapp_provider_architecture.md)
+- [provider-actions-architecture-2.md](../../provider-actions-architecture-2.md)
+- [sms-actions-pattern-2.md](../../sms-actions-pattern-2.md)
+- [whatsapp-provider-architecture-2.md](../../whatsapp-provider-architecture-2.md)
+- [provider-actions-architecture-2.md](../../provider-actions-architecture-2.md)
+- [sms-actions-pattern-2.md](../../sms-actions-pattern-2.md)
+- [whatsapp-provider-architecture-2.md](../../whatsapp-provider-architecture-2.md)
 
 ---
 
 ## notification-providers-guide-2
 
-*Consolidated from: `notification-providers-guide.md`*
+*Consolidated from: `notification-providers-guide-2.md`*
 
 title: "Guida Completa ai Provider di Notifiche"
 type: guide
@@ -3182,19 +3182,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -3334,33 +3334,33 @@ Quando si implementa un nuovo provider (es. WhatsApp, Push, ecc.):
 5. **Documentazione**: Mantenere aggiornata la documentazione con nuovi provider
 
 Per implementazioni specifiche, vedere i documenti:
-- [PROVIDER_ACTIONS_architecture.md](./provider-actions-architecture.md)
-- [SMS_ACTIONS_PATTERN.md](./sms-actions-pattern.md)
-- [WHATSAPP_PROVIDER_architecture.md](./whatsapp-provider-architecture.md)
+- [provider-actions-architecture-2.md](../../provider-actions-architecture-2.md)
+- [sms-actions-pattern-2.md](../../sms-actions-pattern-2.md)
+- [whatsapp-provider-architecture-2.md](../../whatsapp-provider-architecture-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
-- [PROVIDER_ACTIONS_architecture.md](./provider-actions-architecture.md)
-- [SMS_ACTIONS_PATTERN.md](./sms-actions-pattern.md)
-- [WHATSAPP_PROVIDER_architecture.md](./whatsapp-provider-architecture.md)
-- [PROVIDER_ACTIONS_architecture.md](../../provider-actions-architecture.md)
-- [SMS_ACTIONS_PATTERN.md](../../sms-actions-pattern.md)
-- [WHATSAPP_PROVIDER_architecture.md](../../whatsapp-provider-architecture.md)
+- [provider-actions-architecture-2.md](../../provider-actions-architecture-2.md)
+- [sms-actions-pattern-2.md](../../sms-actions-pattern-2.md)
+- [whatsapp-provider-architecture-2.md](../../whatsapp-provider-architecture-2.md)
+- [provider-actions-architecture-2.md](../../provider-actions-architecture.md)
+- [sms-actions-pattern-2.md](../../sms-actions-pattern.md)
+- [whatsapp-provider-architecture-2.md](../../whatsapp-provider-architecture.md)
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [PROVIDER_ACTIONS_architecture.md](../../provider-actions-architecture.md)
-- [SMS_ACTIONS_PATTERN.md](../../sms-actions-pattern.md)
-- [WHATSAPP_PROVIDER_architecture.md](../../whatsapp-provider-architecture.md)
+- [provider-actions-architecture-2.md](../../provider-actions-architecture.md)
+- [sms-actions-pattern-2.md](../../sms-actions-pattern.md)
+- [whatsapp-provider-architecture-2.md](../../whatsapp-provider-architecture.md)
 
 ---
 
 ## notification-providers-guide
 
-*Consolidated from: `notification-providers-guide.md`*
+*Consolidated from: `notification-providers-guide-2.md`*
 
 <<<<<<< HEAD
 
@@ -3505,12 +3505,12 @@ Quando si implementa un nuovo provider (es. WhatsApp, Push, ecc.):
 5. **Documentazione**: Mantenere aggiornata la documentazione con nuovi provider
 
 Per implementazioni specifiche, vedere i documenti:
-- [PROVIDER_ACTIONS_ARCHITECTURE.md](./PROVIDER_ACTIONS_ARCHITECTURE.md)
-- [SMS_ACTIONS_PATTERN.md](./SMS_ACTIONS_PATTERN.md)
-- [WHATSAPP_PROVIDER_ARCHITECTURE.md](./WHATSAPP_PROVIDER_ARCHITECTURE.md)
-- [PROVIDER_ACTIONS_ARCHITECTURE.md](../../provider_actions_architecture.md)
-- [SMS_ACTIONS_PATTERN.md](../../sms_actions_pattern.md)
-- [WHATSAPP_PROVIDER_ARCHITECTURE.md](../../whatsapp_provider_architecture.md)
+- [provider-actions-architecture-2.md](../../provider-actions-architecture-2.md)
+- [sms-actions-pattern-2.md](../../sms-actions-pattern-2.md)
+- [whatsapp-provider-architecture-2.md](../../whatsapp-provider-architecture-2.md)
+- [provider-actions-architecture-2.md](../../provider-actions-architecture-2.md)
+- [sms-actions-pattern-2.md](../../sms-actions-pattern-2.md)
+- [whatsapp-provider-architecture-2.md](../../whatsapp-provider-architecture-2.md)
 
 ---
 
@@ -3661,12 +3661,12 @@ Quando si implementa un nuovo provider (es. WhatsApp, Push, ecc.):
 5. **Documentazione**: Mantenere aggiornata la documentazione con nuovi provider
 
 Per implementazioni specifiche, vedere i documenti:
-- [PROVIDER_ACTIONS_ARCHITECTURE.md](./provider_actions_architecture.md)
-- [SMS_ACTIONS_PATTERN.md](./sms_actions_pattern.md)
-- [WHATSAPP_PROVIDER_ARCHITECTURE.md](./whatsapp_provider_architecture.md)
-- [PROVIDER_ACTIONS_ARCHITECTURE.md](../../provider_actions_architecture.md)
-- [SMS_ACTIONS_PATTERN.md](../../sms_actions_pattern.md)
-- [WHATSAPP_PROVIDER_ARCHITECTURE.md](../../whatsapp_provider_architecture.md)
+- [provider-actions-architecture-2.md](../../provider-actions-architecture-2.md)
+- [sms-actions-pattern-2.md](../../sms-actions-pattern-2.md)
+- [whatsapp-provider-architecture-2.md](../../whatsapp-provider-architecture-2.md)
+- [provider-actions-architecture-2.md](../../provider-actions-architecture-2.md)
+- [sms-actions-pattern-2.md](../../sms-actions-pattern-2.md)
+- [whatsapp-provider-architecture-2.md](../../whatsapp-provider-architecture-2.md)
 
 ---
 
@@ -3689,7 +3689,7 @@ Per implementazioni specifiche, vedere i documenti:
 
 ## notification_behavior
 
-*Consolidated from: `notification_behavior.md`*
+*Consolidated from: `notification-behavior-2.md`*
 
 <<<<<<< HEAD
 
@@ -3781,14 +3781,14 @@ public function via($notifiable)
 
 - [Laravel Notification Channels](https://laravel.com/docs/notifications#specifying-delivery-channels)
 - [Laravel Notification Routing](https://laravel.com/docs/notifications#routing-notifications)
-- [Notification Best Practices](best-practices.md)
+- [Notification Best Practices](best-practices-3.md)
 - [Notification Best Practices](../../best-practices.md)
 
 ---
 
 ## notification_channels_implementation
 
-*Consolidated from: `notification_channels_implementation.md`*
+*Consolidated from: `notification-channels-implementation-2.md`*
 
 # Implementazione dei Canali di Notifica
 
@@ -3977,10 +3977,10 @@ L'implementazione dei canali di notifica  segue un'architettura coerente e ben s
 ## Collegamenti a Documentazione Correlata
 - [Modulo di Notifica](./index.md)
 - [Panoramica dell'Architettura](./architecture.md)
-- [Modelli di Email](./EMAIL_TEMPLATES.md)
-- [Implementazione SMS](./SMS_IMPLEMENTATION.md)
-- [Modelli di Email](../../email_templates.md)
-- [Implementazione SMS](../../sms_implementation.md)
+- [Modelli di Email](../../email-templates-2.md)
+- [Implementazione SMS](../../sms-implementation-2.md)
+- [Modelli di Email](../../email-templates-2.md)
+- [Implementazione SMS](../../sms-implementation-2.md)
 - [Risoluzione dei Problemi](./TROUBLESHOOTING.md)
 
 <<<<<<< HEAD
@@ -3998,7 +3998,7 @@ L'implementazione dei canali di notifica  segue un'architettura coerente e ben s
 
 ## notification_errors
 
-*Consolidated from: `notification_errors.md`*
+*Consolidated from: `notification-errors-2.md`*
 
 <<<<<<< HEAD
 
@@ -4177,7 +4177,7 @@ class YourNotification extends Notification
 
 ## notification_providers_guide
 
-*Consolidated from: `notification_providers_guide.md`*
+*Consolidated from: `notification-providers-guide-2.md`*
 
 # Guida Completa ai Provider di Notifiche
 
@@ -4350,12 +4350,12 @@ Quando si implementa un nuovo provider (es. WhatsApp, Push, ecc.):
 5. **Documentazione**: Mantenere aggiornata la documentazione con nuovi provider
 
 Per implementazioni specifiche, vedere i documenti:
-- [PROVIDER_ACTIONS_ARCHITECTURE.md](./PROVIDER_ACTIONS_ARCHITECTURE.md)
-- [SMS_ACTIONS_PATTERN.md](./SMS_ACTIONS_PATTERN.md)
-- [WHATSAPP_PROVIDER_ARCHITECTURE.md](./WHATSAPP_PROVIDER_ARCHITECTURE.md)
-- [PROVIDER_ACTIONS_ARCHITECTURE.md](../../provider_actions_architecture.md)
-- [SMS_ACTIONS_PATTERN.md](../../sms_actions_pattern.md)
-- [WHATSAPP_PROVIDER_ARCHITECTURE.md](../../whatsapp_provider_architecture.md)
+- [provider-actions-architecture-2.md](../../provider-actions-architecture-2.md)
+- [sms-actions-pattern-2.md](../../sms-actions-pattern-2.md)
+- [whatsapp-provider-architecture-2.md](../../whatsapp-provider-architecture-2.md)
+- [provider-actions-architecture-2.md](../../provider-actions-architecture-2.md)
+- [sms-actions-pattern-2.md](../../sms-actions-pattern-2.md)
+- [whatsapp-provider-architecture-2.md](../../whatsapp-provider-architecture-2.md)
 
 ---
 
@@ -4507,7 +4507,7 @@ return [
 - Errori e retry
 
 ## Collegamenti
-- [Documentazione API](./api.md)
+- [Documentazione API](../../../../User/docs/api-2.md)
 - [Template Email](./templates.md)
 - [Template Email](../../templates.md)
 - [Guida Contribuzione](./CONTRIBUTING.md)
@@ -4809,7 +4809,7 @@ La sistemazione del file `send_email.php` ha risolto problemi critici e implemen
 
 ## notify-translation-guide-1
 
-*Consolidated from: `notify-translation-guide.md`*
+*Consolidated from: `notify-translation-guide-2.md`*
 
 <<<<<<< HEAD
 
@@ -4962,7 +4962,7 @@ return [
 
 ## Eccezione alle Convenzioni Generali
 
-È importante notare che questa struttura rappresenta un'eccezione documentata alle convenzioni generali di <nome progetto>. Mentre le convenzioni generali (descritte in `Modules/Lang/docs/TRANSLATION_KEYS_RULES.md`) prevedono una struttura gerarchica espansa senza chiavi come `.navigation`, il modulo Notify utilizza intenzionalmente questa struttura specifica.
+È importante notare che questa struttura rappresenta un'eccezione documentata alle convenzioni generali di <nome progetto>. Mentre le convenzioni generali (descritte in `Modules/Lang/docs/translation-keys-rules-2.md`) prevedono una struttura gerarchica espansa senza chiavi come `.navigation`, il modulo Notify utilizza intenzionalmente questa struttura specifica.
 
 ### Motivazione dell'Eccezione
 
@@ -4991,22 +4991,22 @@ Questo comando verificherà che tutte le chiavi di traduzione necessarie siano p
 
 ## Collegamenti Correlati
 
-- [Convenzioni di Traduzione nel Modulo Notify](./TRANSLATION_CONVENTIONS.md)
-- [Chiarimento sulle Convenzioni di Traduzione](./TRANSLATION_CONVENTIONS_CLARIFICATION.md)
-- [Regole Generali per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
-- [Best Practices per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
-- [Standard per le Traduzioni ](./TRANSLATION_STANDARDS.md)
-- [Convenzioni di Traduzione nel Modulo Notify](../../translation_conventions.md)
-- [Chiarimento sulle Convenzioni di Traduzione](../../translation_conventions_clarification.md)
-- [Regole Generali per le Chiavi di Traduzione](../../../../Lang/docs/translation_keys_rules.md)
-- [Best Practices per le Chiavi di Traduzione](../../../../Lang/docs/translation_keys_best_practices.md)
-- [Standard per le Traduzioni ](../../translation_standards.md)
+- [Convenzioni di Traduzione nel Modulo Notify](../../translation-conventions-2.md)
+- [Chiarimento sulle Convenzioni di Traduzione](../../translation-conventions-clarification-2.md)
+- [Regole Generali per le Chiavi di Traduzione](../../../../Lang/docs/translation-keys-rules-3.md)
+- [Best Practices per le Chiavi di Traduzione](../../../../Lang/docs/translation-keys-best-practices-2.md)
+- [Standard per le Traduzioni ](../../../../Lang/docs/translation-standards-2.md)
+- [Convenzioni di Traduzione nel Modulo Notify](../../translation-conventions-2.md)
+- [Chiarimento sulle Convenzioni di Traduzione](../../translation-conventions-clarification-2.md)
+- [Regole Generali per le Chiavi di Traduzione](../../../../Lang/docs/translation-keys-rules-2.md)
+- [Best Practices per le Chiavi di Traduzione](../../../../Lang/docs/translation-keys-best-practices-2.md)
+- [Standard per le Traduzioni ](../../translation-standards-2.md)
 
 ---
 
 ## notify-translation-guide-2
 
-*Consolidated from: `notify-translation-guide.md`*
+*Consolidated from: `notify-translation-guide-2.md`*
 
 title: "Guida alle Traduzioni nel Modulo Notify"
 type: guide
@@ -5021,19 +5021,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -5182,7 +5182,7 @@ return [
 
 ## Eccezione alle Convenzioni Generali
 
-È importante notare che questa struttura rappresenta un'eccezione documentata alle convenzioni generali di App. Mentre le convenzioni generali (descritte in `Modules/Lang/docs/TRANSLATION_KEYS_RULES.md`) prevedono una struttura gerarchica espansa senza chiavi come `.navigation`, il modulo Notify utilizza intenzionalmente questa struttura specifica.
+È importante notare che questa struttura rappresenta un'eccezione documentata alle convenzioni generali di App. Mentre le convenzioni generali (descritte in `Modules/Lang/docs/translation-keys-rules-2.md`) prevedono una struttura gerarchica espansa senza chiavi come `.navigation`, il modulo Notify utilizza intenzionalmente questa struttura specifica.
 
 ### Motivazione dell'Eccezione
 
@@ -5211,24 +5211,24 @@ Questo comando verificherà che tutte le chiavi di traduzione necessarie siano p
 
 ## Collegamenti Correlati
 
-- [Convenzioni di Traduzione nel Modulo Notify](./translation-conventions.md)
-- [Chiarimento sulle Convenzioni di Traduzione](./translation-conventions-clarification.md)
-- [Regole Generali per le Chiavi di Traduzione](../../lang/docs/translation-keys-rules.md)
-- [Best Practices per le Chiavi di Traduzione](../../lang/docs/translation-keys-best-practices.md)
-- [Standard per le Traduzioni ](./translation-standards.md)
-- [Convenzioni di Traduzione nel Modulo Notify](./translation-conventions.md)
-- [Chiarimento sulle Convenzioni di Traduzione](./translation-conventions-clarification.md)
-- [Regole Generali per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
-- [Best Practices per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
-- [Standard per le Traduzioni ](./translation-standards.md)
-- [Regole Generali per le Chiavi di Traduzione](../../../../Lang/docs/translation_keys_rules.md)
-- [Best Practices per le Chiavi di Traduzione](../../../../Lang/docs/translation_keys_best_practices.md)
+- [Convenzioni di Traduzione nel Modulo Notify](../../translation-conventions-2.md)
+- [Chiarimento sulle Convenzioni di Traduzione](../../translation-conventions-clarification-2.md)
+- [Regole Generali per le Chiavi di Traduzione](../../../../Lang/docs/translation-keys-rules-3.md)
+- [Best Practices per le Chiavi di Traduzione](../../../../Lang/docs/translation-keys-best-practices-3.md)
+- [Standard per le Traduzioni ](../../../../Lang/docs/translation-standards-3.md)
+- [Convenzioni di Traduzione nel Modulo Notify](../../translation-conventions-2.md)
+- [Chiarimento sulle Convenzioni di Traduzione](../../translation-conventions-clarification-2.md)
+- [Regole Generali per le Chiavi di Traduzione](../../../../Lang/docs/translation-keys-rules-3.md)
+- [Best Practices per le Chiavi di Traduzione](../../../../Lang/docs/translation-keys-best-practices-2.md)
+- [Standard per le Traduzioni ](../../../../Lang/docs/translation-standards-2.md)
+- [Regole Generali per le Chiavi di Traduzione](../../../../Lang/docs/translation-keys-rules-2.md)
+- [Best Practices per le Chiavi di Traduzione](../../../../Lang/docs/translation-keys-best-practices-2.md)
 - [Standard per le Traduzioni ](../../translation-standards.md)
 ---
 
 ## notify-translation-guide
 
-*Consolidated from: `notify-translation-guide.md`*
+*Consolidated from: `notify-translation-guide-2.md`*
 
 <<<<<<< HEAD
 
@@ -5382,8 +5382,8 @@ return [
 
 ## Eccezione alle Convenzioni Generali
 
-È importante notare che questa struttura rappresenta un'eccezione documentata alle convenzioni generali di . Mentre le convenzioni generali (descritte in `Modules/Lang/docs/TRANSLATION_KEYS_RULES.md`) prevedono una struttura gerarchica espansa senza chiavi come `.navigation`, il modulo Notify utilizza intenzionalmente questa struttura specifica.
-È importante notare che questa struttura rappresenta un'eccezione documentata alle convenzioni generali di <nome progetto>. Mentre le convenzioni generali (descritte in `Modules/Lang/docs/TRANSLATION_KEYS_RULES.md`) prevedono una struttura gerarchica espansa senza chiavi come `.navigation`, il modulo Notify utilizza intenzionalmente questa struttura specifica.
+È importante notare che questa struttura rappresenta un'eccezione documentata alle convenzioni generali di . Mentre le convenzioni generali (descritte in `Modules/Lang/docs/translation-keys-rules-2.md`) prevedono una struttura gerarchica espansa senza chiavi come `.navigation`, il modulo Notify utilizza intenzionalmente questa struttura specifica.
+È importante notare che questa struttura rappresenta un'eccezione documentata alle convenzioni generali di <nome progetto>. Mentre le convenzioni generali (descritte in `Modules/Lang/docs/translation-keys-rules-2.md`) prevedono una struttura gerarchica espansa senza chiavi come `.navigation`, il modulo Notify utilizza intenzionalmente questa struttura specifica.
 
 ### Motivazione dell'Eccezione
 
@@ -5412,16 +5412,16 @@ Questo comando verificherà che tutte le chiavi di traduzione necessarie siano p
 
 ## Collegamenti Correlati
 
-- [Convenzioni di Traduzione nel Modulo Notify](./TRANSLATION_CONVENTIONS.md)
-- [Chiarimento sulle Convenzioni di Traduzione](./TRANSLATION_CONVENTIONS_CLARIFICATION.md)
-- [Regole Generali per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
-- [Best Practices per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
-- [Standard per le Traduzioni ](./TRANSLATION_STANDARDS.md)
-- [Convenzioni di Traduzione nel Modulo Notify](../../translation_conventions.md)
-- [Chiarimento sulle Convenzioni di Traduzione](../../translation_conventions_clarification.md)
-- [Regole Generali per le Chiavi di Traduzione](../../../../Lang/docs/translation_keys_rules.md)
-- [Best Practices per le Chiavi di Traduzione](../../../../Lang/docs/translation_keys_best_practices.md)
-- [Standard per le Traduzioni ](../../translation_standards.md)
+- [Convenzioni di Traduzione nel Modulo Notify](../../translation-conventions-2.md)
+- [Chiarimento sulle Convenzioni di Traduzione](../../translation-conventions-clarification-2.md)
+- [Regole Generali per le Chiavi di Traduzione](../../../../Lang/docs/translation-keys-rules-3.md)
+- [Best Practices per le Chiavi di Traduzione](../../../../Lang/docs/translation-keys-best-practices-2.md)
+- [Standard per le Traduzioni ](../../../../Lang/docs/translation-standards-2.md)
+- [Convenzioni di Traduzione nel Modulo Notify](../../translation-conventions-2.md)
+- [Chiarimento sulle Convenzioni di Traduzione](../../translation-conventions-clarification-2.md)
+- [Regole Generali per le Chiavi di Traduzione](../../../../Lang/docs/translation-keys-rules-2.md)
+- [Best Practices per le Chiavi di Traduzione](../../../../Lang/docs/translation-keys-best-practices-2.md)
+- [Standard per le Traduzioni ](../../translation-standards-2.md)
 
 ---
 
@@ -5581,8 +5581,8 @@ return [
 
 ## Eccezione alle Convenzioni Generali
 
-È importante notare che questa struttura rappresenta un'eccezione documentata alle convenzioni generali di . Mentre le convenzioni generali (descritte in `Modules/Lang/docs/TRANSLATION_KEYS_RULES.md`) prevedono una struttura gerarchica espansa senza chiavi come `.navigation`, il modulo Notify utilizza intenzionalmente questa struttura specifica.
-È importante notare che questa struttura rappresenta un'eccezione documentata alle convenzioni generali di <nome progetto>. Mentre le convenzioni generali (descritte in `Modules/Lang/docs/TRANSLATION_KEYS_RULES.md`) prevedono una struttura gerarchica espansa senza chiavi come `.navigation`, il modulo Notify utilizza intenzionalmente questa struttura specifica.
+È importante notare che questa struttura rappresenta un'eccezione documentata alle convenzioni generali di . Mentre le convenzioni generali (descritte in `Modules/Lang/docs/translation-keys-rules-2.md`) prevedono una struttura gerarchica espansa senza chiavi come `.navigation`, il modulo Notify utilizza intenzionalmente questa struttura specifica.
+È importante notare che questa struttura rappresenta un'eccezione documentata alle convenzioni generali di <nome progetto>. Mentre le convenzioni generali (descritte in `Modules/Lang/docs/translation-keys-rules-2.md`) prevedono una struttura gerarchica espansa senza chiavi come `.navigation`, il modulo Notify utilizza intenzionalmente questa struttura specifica.
 
 ### Motivazione dell'Eccezione
 
@@ -5611,22 +5611,22 @@ Questo comando verificherà che tutte le chiavi di traduzione necessarie siano p
 
 ## Collegamenti Correlati
 
-- [Convenzioni di Traduzione nel Modulo Notify](./translation_conventions.md)
-- [Chiarimento sulle Convenzioni di Traduzione](./translation_conventions_clarification.md)
-- [Regole Generali per le Chiavi di Traduzione](../../lang/docs/translation_keys_rules.md)
-- [Best Practices per le Chiavi di Traduzione](../../lang/docs/translation-keys-best-practices.md)
-- [Standard per le Traduzioni ](./translation_standards.md)
-- [Convenzioni di Traduzione nel Modulo Notify](../../translation_conventions.md)
-- [Chiarimento sulle Convenzioni di Traduzione](../../translation_conventions_clarification.md)
-- [Regole Generali per le Chiavi di Traduzione](../../../../Lang/docs/translation_keys_rules.md)
+- [Convenzioni di Traduzione nel Modulo Notify](../../translation-conventions-2.md)
+- [Chiarimento sulle Convenzioni di Traduzione](../../translation-conventions-clarification-2.md)
+- [Regole Generali per le Chiavi di Traduzione](../../lang/docs/translation-keys-rules-2.md)
+- [Best Practices per le Chiavi di Traduzione](../../../../Lang/docs/translation-keys-best-practices-3.md)
+- [Standard per le Traduzioni ](../../../../Lang/docs/translation-standards-3.md)
+- [Convenzioni di Traduzione nel Modulo Notify](../../translation-conventions-2.md)
+- [Chiarimento sulle Convenzioni di Traduzione](../../translation-conventions-clarification-2.md)
+- [Regole Generali per le Chiavi di Traduzione](../../../../Lang/docs/translation-keys-rules-2.md)
 - [Best Practices per le Chiavi di Traduzione](../../../../Lang/docs/translation-keys-best-practices.md)
-- [Standard per le Traduzioni ](../../translation_standards.md)
+- [Standard per le Traduzioni ](../../translation-standards-2.md)
 
 ---
 
 ## notify_translation_guide
 
-*Consolidated from: `notify_translation_guide.md`*
+*Consolidated from: `notify-translation-guide-2.md`*
 
 <<<<<<< HEAD
 
@@ -5780,8 +5780,8 @@ return [
 
 ## Eccezione alle Convenzioni Generali
 
-È importante notare che questa struttura rappresenta un'eccezione documentata alle convenzioni generali di <nome progetto>. Mentre le convenzioni generali (descritte in `Modules/Lang/docs/TRANSLATION_KEYS_RULES.md`) prevedono una struttura gerarchica espansa senza chiavi come `.navigation`, il modulo Notify utilizza intenzionalmente questa struttura specifica.
-È importante notare che questa struttura rappresenta un'eccezione documentata alle convenzioni generali di SaluteOra. Mentre le convenzioni generali (descritte in `Modules/Lang/docs/TRANSLATION_KEYS_RULES.md`) prevedono una struttura gerarchica espansa senza chiavi come `.navigation`, il modulo Notify utilizza intenzionalmente questa struttura specifica.
+È importante notare che questa struttura rappresenta un'eccezione documentata alle convenzioni generali di <nome progetto>. Mentre le convenzioni generali (descritte in `Modules/Lang/docs/translation-keys-rules-2.md`) prevedono una struttura gerarchica espansa senza chiavi come `.navigation`, il modulo Notify utilizza intenzionalmente questa struttura specifica.
+È importante notare che questa struttura rappresenta un'eccezione documentata alle convenzioni generali di SaluteOra. Mentre le convenzioni generali (descritte in `Modules/Lang/docs/translation-keys-rules-2.md`) prevedono una struttura gerarchica espansa senza chiavi come `.navigation`, il modulo Notify utilizza intenzionalmente questa struttura specifica.
 
 ### Motivazione dell'Eccezione
 
@@ -5810,16 +5810,16 @@ Questo comando verificherà che tutte le chiavi di traduzione necessarie siano p
 
 ## Collegamenti Correlati
 
-- [Convenzioni di Traduzione nel Modulo Notify](./TRANSLATION_CONVENTIONS.md)
-- [Chiarimento sulle Convenzioni di Traduzione](./TRANSLATION_CONVENTIONS_CLARIFICATION.md)
-- [Regole Generali per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
-- [Best Practices per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
-- [Standard per le Traduzioni ](./TRANSLATION_STANDARDS.md)
-- [Convenzioni di Traduzione nel Modulo Notify](../../translation_conventions.md)
-- [Chiarimento sulle Convenzioni di Traduzione](../../translation_conventions_clarification.md)
-- [Regole Generali per le Chiavi di Traduzione](../../../../Lang/docs/translation_keys_rules.md)
-- [Best Practices per le Chiavi di Traduzione](../../../../Lang/docs/translation_keys_best_practices.md)
-- [Standard per le Traduzioni ](../../translation_standards.md)
+- [Convenzioni di Traduzione nel Modulo Notify](../../translation-conventions-2.md)
+- [Chiarimento sulle Convenzioni di Traduzione](../../translation-conventions-clarification-2.md)
+- [Regole Generali per le Chiavi di Traduzione](../../../../Lang/docs/translation-keys-rules-3.md)
+- [Best Practices per le Chiavi di Traduzione](../../../../Lang/docs/translation-keys-best-practices-2.md)
+- [Standard per le Traduzioni ](../../../../Lang/docs/translation-standards-2.md)
+- [Convenzioni di Traduzione nel Modulo Notify](../../translation-conventions-2.md)
+- [Chiarimento sulle Convenzioni di Traduzione](../../translation-conventions-clarification-2.md)
+- [Regole Generali per le Chiavi di Traduzione](../../../../Lang/docs/translation-keys-rules-2.md)
+- [Best Practices per le Chiavi di Traduzione](../../../../Lang/docs/translation-keys-best-practices-2.md)
+- [Standard per le Traduzioni ](../../translation-standards-2.md)
 
 ---
 

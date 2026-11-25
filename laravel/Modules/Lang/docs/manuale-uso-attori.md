@@ -1,6 +1,7 @@
 ---
 title: "Lang — manuale d'uso per attori"
 type: manual
+qmd: "manuale uso attori lang duso"
 ---
 
 # Scopo

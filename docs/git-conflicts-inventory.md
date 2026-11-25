@@ -35,7 +35,7 @@
 - `docs/testing.md`
 - `docs/testing/real-data-vs-mock-testing-strategy.md`
 - `docs/prompts.md`
-- `docs/conflict_resolution_report.md`
+- `docs/conflict-resolution-report-3.md`
 - `docs/view-composer-loop-infinite-fix.md`
 - `docs/development-guidelines.md`
 - `docs/filament/resources/architecture/forbidden-methods.md`
@@ -43,7 +43,7 @@
 - `docs/code-quality.md`
 - `docs/README.md`
 - `docs/filament-best-practices.md`
-- `docs/namespace_conventions.md`
+- `docs/namespace-conventions-2.md`
 - `docs/filament-resource-rules.md`
 - `docs/providers/xotbaseserviceprovider.md`
 - `docs/index.md`

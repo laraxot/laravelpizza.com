@@ -372,7 +372,7 @@ return [
 1. **[00-INDEX.md](laravel/Themes/Sixteen/docs/00-index.md)** - Master index (sei qui, ma online)
 2. **[PHASE-1-STRATEGY.md](laravel/Themes/Sixteen/docs/phase-1-strategy.md)** - Strategia completa (22k chars)
 3. **[GSD-PHASE-1-EXECUTION.md](laravel/Themes/Sixteen/docs/gsd-phase-1-execution.md)** - Piano esecuzione (19k chars)
-4. **[bashscripts/docs/html/INDEX.md](bashscripts/docs/html/index.md)** - Documentazione strumenti
+4. **[bashscripts/docs/html/index-2.md](bashscripts/docs/html/index.md)** - Documentazione strumenti
 1. **[00-index.md](laravel/Themes/Sixteen/docs/00-index.md)** - Master index (sei qui, ma online)
 2. **[PHASE-1-STRATEGY.md](laravel/Themes/Sixteen/docs/phase-1-strategy.md)** - Strategia completa (22k chars)
 3. **[GSD-PHASE-1-EXECUTION.md](laravel/Themes/Sixteen/docs/gsd-phase-1-execution.md)** - Piano esecuzione (19k chars)

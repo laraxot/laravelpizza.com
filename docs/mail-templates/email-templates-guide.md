@@ -196,7 +196,7 @@ class SendAppointmentConfirmationAction
 
 ## File Correlati
 
-- [HTML_EMAIL_COMPATIBILITY.md](./html_email_compatibility.md) - Guide sulla compatibilità cross-client
+- [html-email-compatibility-2.md](./html_email_compatibility.md) - Guide sulla compatibilità cross-client
 - [EMAIL_BEST_PRACTICES.md](./email_best_practices.md) - Best practices per email transazionali
-- [RESPONSIVE_EMAIL_TEMPLATES.md](../responsive_email_templates.md) - Guide dettagliate sul design responsive
-- [MAILPACE_TEMPLATES_INTEGRATION.md](./mailpace_templates_integration.md) - Integrazione con template esterni
+- [responsive-email-templates-2.md](../responsive_email_templates.md) - Guide dettagliate sul design responsive
+- [mailpace-templates-integration-2.md](./mailpace_templates_integration.md) - Integrazione con template esterni

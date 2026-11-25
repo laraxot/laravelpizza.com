@@ -338,7 +338,7 @@ grep -r "function.*\\\Modules\\\.*\\\Models\\\User" --include="*.php" ./
 ### **Documentazione Core**
 - [XotData API Reference](xotdata-api.md)
 - [UserContract Specification](contracts/user-contract.md)
-- [Best Practices](best-practices.md)
+- [Best Practices](best-practices-3.md)
 - [Module Architecture](module-architecture.md)
 
 ### **Esempi Implementazione**
@@ -347,7 +347,7 @@ grep -r "function.*\\\Modules\\\.*\\\Models\\\User" --include="*.php" ./
 - [IsTenant Trait](../../../User/app/Models/Traits/IsTenant.php)
 
 ### **Documentazione Moduli**
-- [Cms Architecture](../../Cms/project_docs/architecture-xotdata-pattern.md)
+- [Cms Architecture](../../../Cms/docs/architecture-xotdata-pattern-2.md)
 - [User Module Traits](../../User/project_docs/traits_complete_guide.md)
 - [Testing Strategy](../../<nome progetto>/project_docs/testing/real-data-testing-strategy.md)
 

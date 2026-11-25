@@ -122,10 +122,10 @@ Schema::create('addresses', function (Blueprint $table) {
 =======
 >>>>>>> .merge_file_uKxxaH
 <<<<<<< HEAD
-- [Entità Geografiche](./geo_entities.md)
+- [Entità Geografiche](./geo-entities-2.md)
 =======
 <<<<<<< HEAD
-- [Entità Geografiche](./geo_entities.md)
+- [Entità Geografiche](./geo-entities-2.md)
 =======
 - [Entità Geografiche](geo-entities.md)
 >>>>>>> laraxot/dev

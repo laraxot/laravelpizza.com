@@ -33,11 +33,11 @@ issues: []
 discussions: []
 ---
 
-# qwen.md Split Index
+# qwen-2.md Split Index
 
-> Documentazione qwen.md spezzata in file più piccoli.
+> Documentazione qwen-2.md spezzata in file più piccoli.
 
-## 📚 File da qwen.md
+## 📚 File da qwen-2.md
 
 | File | Contenuto | Righe |
 |------|-----------|-------|
@@ -52,7 +52,7 @@ discussions: []
 <<<<<<< HEAD
 <<<<<<< .merge_file_UurqPW
 <<<<<<< .merge_file_Sfcu84
-- [QWEN.md originale](../../qwen.md)
+- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -60,28 +60,28 @@ discussions: []
 >>>>>>> .merge_file_NyU0uG
 =======
 >>>>>>> .merge_file_KYRZAu
-- [qwen.md originale](../../qwen.md)
+- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
 =======
 <<<<<<< HEAD
-- [QWEN.md originale](../../qwen.md)
+- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
 =======
-- [qwen.md originale](../../qwen.md)
+- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_UurqPW
 <<<<<<< .merge_file_Sfcu84
 =======
-- [QWEN.md originale](../../qwen.md)
+- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_NyU0uG
 =======
 >>>>>>> .merge_file_KYRZAu
-- [Index principale](./index.md)
+- [Index principale](../../../Lang/docs/wiki/integrations/_da-riconciliare/index-3.md)
 
 ## Note
 
-- qwen.md è il file più grande (890 righe)
+- qwen-2.md è il file più grande (890 righe)
 - È stato diviso per argomento
 - Contiene molte memorie importanti

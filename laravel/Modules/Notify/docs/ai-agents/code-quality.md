@@ -74,7 +74,7 @@ bash laravel/tools/phpmd.sh laravel text phpmd.xml --exclude vendor,node_modules
 
 **Di ritorno:**
 <<<<<<< HEAD
-- → [CLAUDE.md - Code Quality](../../CLAUDE.md)
+- → [CLAUDE.md - Code Quality](../../../Geo/docs/root-md-files/claude.md)
 - → [AGENTS.md - Quality Checks](../../AGENTS.md#quality-checks-obbligatori-dopo-ogni-modifica)
 - → [AGENTS.md - Quality Checks](../../AGENTS.md#quality-checks-obbligatori-dopo-ogni-modifica)
 =======
@@ -82,33 +82,33 @@ bash laravel/tools/phpmd.sh laravel text phpmd.xml --exclude vendor,node_modules
 <<<<<<< .merge_file_Xzi0MZ
 <<<<<<< .merge_file_VCKi9U
 <<<<<<< HEAD
-- → [CLAUDE.md - Code Quality](../../CLAUDE.md)
+- → [CLAUDE.md - Code Quality](../../../Geo/docs/root-md-files/claude.md)
 - → [AGENTS.md - Quality Checks](../../AGENTS.md#quality-checks-obbligatori-dopo-ogni-modifica)
 - → [AGENTS.md - Quality Checks](../../AGENTS.md#quality-checks-obbligatori-dopo-ogni-modifica)
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_YEtcIZ
-- → [CLAUDE.md - Code Quality](../../claude.md)
+- → [CLAUDE.md - Code Quality](../../../Geo/docs/root-md-files/claude.md)
 - → [AGENTS.md - Quality Checks](../../AGENTS.md#quality-checks-obbligatori-dopo-ogni-modifica)
 - → [agents.md - Quality Checks](../../agents.md#quality-checks-obbligatori-dopo-ogni-modifica)
 =======
-- → [CLAUDE.md - Code Quality](../../CLAUDE.md)
+- → [CLAUDE.md - Code Quality](../../../Geo/docs/root-md-files/claude.md)
 - → [AGENTS.md - Quality Checks](../../AGENTS.md#quality-checks-obbligatori-dopo-ogni-modifica)
 - → [AGENTS.md - Quality Checks](../../AGENTS.md#quality-checks-obbligatori-dopo-ogni-modifica)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_Xzi0MZ
 =======
-- → [CLAUDE.md - Code Quality](../../claude.md)
+- → [CLAUDE.md - Code Quality](../../../Geo/docs/root-md-files/claude.md)
 - → [AGENTS.md - Quality Checks](../../AGENTS.md#quality-checks-obbligatori-dopo-ogni-modifica)
 - → [agents.md - Quality Checks](../../agents.md#quality-checks-obbligatori-dopo-ogni-modifica)
 =======
-- → [CLAUDE.md - Code Quality](../../claude.md)
+- → [CLAUDE.md - Code Quality](../../../Geo/docs/root-md-files/claude.md)
 - → [AGENTS.md - Quality Checks](../../AGENTS.md#quality-checks-obbligatori-dopo-ogni-modifica)
 - → [agents.md - Quality Checks](../../agents.md#quality-checks-obbligatori-dopo-ogni-modifica)
 =======
-- → [CLAUDE.md - Code Quality](../../CLAUDE.md)
+- → [CLAUDE.md - Code Quality](../../../Geo/docs/root-md-files/claude.md)
 - → [AGENTS.md - Quality Checks](../../AGENTS.md#quality-checks-obbligatori-dopo-ogni-modifica)
 - → [AGENTS.md - Quality Checks](../../AGENTS.md#quality-checks-obbligatori-dopo-ogni-modifica)
 >>>>>>> .merge_file_uGDWF2

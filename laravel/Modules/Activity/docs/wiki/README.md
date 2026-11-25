@@ -88,7 +88,7 @@ Pagine brevi e riusabili (concetti, regole, memorie) che completano le story. Mi
 <<<<<<< .merge_file_7d0skJ
 | `rules/` | 4 | [rules/INDEX.md](./rules/INDEX.md) |
 | `memories/` | 4 | [memories/INDEX.md](./memories/INDEX.md) |
-| `skills/` | 2 | [skills/INDEX.md](skills/index.md) |
+| `skills/` | 2 | [skills/index-3.md](skills/index.md) |
 =======
 | `rules/` | 4 | [rules/index.md](./rules/index.md) |
 | `memories/` | 4 | [memories/index.md](./memories/index.md) |

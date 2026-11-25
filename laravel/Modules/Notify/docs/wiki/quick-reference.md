@@ -235,13 +235,13 @@ Templates available:
 
 - [Complete Integration Guide](wiki/README.md)
 <<<<<<< HEAD
-- [Agent Instructions](wiki/AGENTS.md)
+- [Agent Instructions](wiki/agents-2.md)
 - [Wiki Overview](wiki/overview.md)
 - [Obsidian Setup](.obsidian/readme.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-- [Agent Instructions](wiki/AGENTS.md)
+- [Agent Instructions](wiki/agents-2.md)
 - [Wiki Overview](wiki/overview.md)
 - [Obsidian Setup](.obsidian/readme.md)
 =======
@@ -250,7 +250,7 @@ Templates available:
 - [Wiki Overview](wiki/overview.md)
 - [Obsidian Setup](.obsidian/README.md)
 =======
-- [Agent Instructions](wiki/AGENTS.md)
+- [Agent Instructions](wiki/agents-2.md)
 - [Wiki Overview](wiki/overview.md)
 - [Obsidian Setup](.obsidian/readme.md)
 >>>>>>> laraxot/dev

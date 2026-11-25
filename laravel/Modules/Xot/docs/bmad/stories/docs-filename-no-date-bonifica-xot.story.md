@@ -50,7 +50,7 @@ gia' incluso in quel conteggio o e' nuovo (creato dopo).
 - `docs/git-push-resolution-2026-07-28.md`
 - `docs/REFACTOR-panelmixin-2026-07-07.md`
 - `docs/lessons-learned-2025-08-25.md`
-- `docs/ponytail-audit-2026-07-02.md`
+- `docs/ponytail-audit-2.md`
 - `docs/QA-VERIFICATION-2026-06-30.md`
 - `docs/brainstorm-testcase-hierarchy-xotbase-2026-06-10.md`
 - `docs/phpstan-progress-report-2025-10-13.md`
@@ -63,7 +63,7 @@ gia' incluso in quel conteggio o e' nuovo (creato dopo).
 - `docs/consolidated/lessons-learned-2025-08-25.md` (duplicato di sopra)
 - `docs/consolidated/git-conflicts-resolution-2025-01-06.md` (duplicato di sopra)
 - `docs/wiki/redundancy-audit-2026-05-26.md`
-- `docs/wiki/troubleshooting/git-merge-conflict-inventory-2026-04-28.md`
+- `docs/wiki/troubleshooting/git-merge-conflict-inventory-2.md`
 - `docs/wiki/quality-analysis/phpstan-2026-05-13.md`
 - `docs/raw/notes/composer-root-skeleton-comparison-2026-06-30{,-dup}.md`
 - `docs/raw/notes/composer-root-skeleton-fixcity-comparison-2026-06-30{,-dup}.md`

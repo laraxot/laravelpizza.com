@@ -239,7 +239,7 @@ Remove exclusions progressively:
 - [Theme One Documentation](docs/theme-one.md) ✅ *Complete*
 
 ### Analysis Reports
-- [PHPStan Analysis Results](docs/phpstan-analysis-summary.md)
+- [PHPStan Analysis Results](../../../../Xot/docs/consolidated/phpstan/phpstan-analysis-summary-2.md)
 - [Dependency Graph](docs/module-dependencies.md)
 - [Critical Issues Tracker](docs/critical-issues.md)
 

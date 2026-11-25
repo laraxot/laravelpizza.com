@@ -161,7 +161,7 @@ Tracked in: `docs/form-column-parity.md`
 
 ---
 
-## Regole operative (migrate da `PHILOSOPHY.md` in root, 2026-09-24)
+## Regole operative (migrate da `../philosophy-2.md` in root, 2026-09-24)
 
 > Questo blocco stava nella root del modulo, dove sono ammessi solo README,
 > CHANGELOG, LICENSE, AGENTS e CLAUDE. Il contenuto non era duplicato qui

@@ -274,7 +274,7 @@ discussions: []
 **What does NOT belong here:**
 - Actual API keys or secrets (NEVER write these)
 - Internal architecture (that's architecture.md)
-- Code patterns (that's PATTERNS.md)
+- Code patterns (that's patterns-2.md)
 - Technology choices (that's STACK.md)
 - Performance issues (that's CONCERNS.md)
 

@@ -242,8 +242,8 @@ Questo documento definisce le best practices per la creazione di template HTML p
 ## Collegamenti Correlati
 
 - [Documentazione MailPace](https://github.com/mailpace/templates)
-- [Struttura Template](./mail_templates_structure.md)
-- [Template Base](./base_templates.md)
+- [Struttura Template](./mail-templates-structure-2.md)
+- [Template Base](./base-templates-2.md)
 
 ## Supporto
 

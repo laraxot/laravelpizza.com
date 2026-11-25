@@ -23,11 +23,11 @@ discussions: https://github.com/laraxot/module_ui_fila5/discussions
 ## 🎯 **Lettura Essenziale**
 1. [README.md](./README.md) - Design System e overview componenti.
 2. [roadmap.md](../roadmap.md) - Evoluzione 2026: Tailwind v4 e Flux UI integration.
-3. [philosophy.md](./philosophy.md) - "La Bellezza è Funzionale": filosofia del design in Laraxot.
+3. [../philosophy-2.md](../philosophy-2.md) - "La Bellezza è Funzionale": filosofia del design in Laraxot.
 
 ## 🏗️ **Core Design System**
 - 🎨 **[Layouts & Themes](./layouts-and-themes.md)** - Gestione dei temi per tenant e dark mode.
-- 📐 **[Architecture Rules](./architecture.md)** - Regole per la creazione di nuovi componenti UI.
+- 📐 **[Architecture Rules](../architecture-2.md)** - Regole per la creazione di nuovi componenti UI.
 - 🖋️ **[Icon System](../icons/icon-system.md)** - Integrazione di Blade Icons e set personalizzati.
 
 ## 🧱 **Componenti & Widget**

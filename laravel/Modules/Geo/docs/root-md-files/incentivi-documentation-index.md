@@ -26,7 +26,7 @@
 ### Per **Test/QA**
 1. Leggi: `/laravel/Modules/Incentivi/docs/test-plan.md` - Piano test
 2. Esplora: `/laravel/Modules/Incentivi/tests/`
-3. Consulta: `/laravel/Modules/Incentivi/docs/phpstan-report.md` - Code quality
+3. Consulta: `/laravel/Modules/Geo/docs/raw/history/phpstan-report-2.md` - Code quality
 
 ---
 
@@ -172,7 +172,7 @@ Contenuto: Guida ai documenti e quick reference
 | File | Scopo |
 |------|-------|
 | analysis.md | Analisi del modulo |
-| phpstan-report.md | Report code quality level 9 |
+| phpstan-report-2.md | Report code quality level 9 |
 | phpmd-report.txt | Report PHP Mess Detector |
 | conflicts.md | Conflitti noti |
 

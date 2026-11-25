@@ -133,7 +133,7 @@ laravel/Themes/Sixteen/docs/
 <<<<<<< .merge_file_PaES7o
 <<<<<<< .merge_file_3berrg
 >>>>>>> laraxot/dev
-├── INDEX.md                                     ✨ NEW (theme index)
+├── index-2.md                                     ✨ NEW (theme index)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -148,7 +148,7 @@ laravel/Themes/Sixteen/docs/
 ├── index.md                                     ✨ NEW (theme index)
 =======
 <<<<<<< HEAD
-├── INDEX.md                                     ✨ NEW (theme index)
+├── index-2.md                                     ✨ NEW (theme index)
 =======
 ├── index.md                                     ✨ NEW (theme index)
 >>>>>>> laraxot/dev
@@ -160,7 +160,7 @@ laravel/Themes/Sixteen/docs/
 <<<<<<< .merge_file_3berrg
 >>>>>>> laraxot/dev
 =======
-├── INDEX.md                                     ✨ NEW (theme index)
+├── index-2.md                                     ✨ NEW (theme index)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
@@ -195,7 +195,7 @@ bashscripts/docs/
 <<<<<<< .merge_file_PaES7o
 <<<<<<< .merge_file_3berrg
 >>>>>>> laraxot/dev
-├── INDEX.md                                     ✨ NEW (tools reference)
+├── index-2.md                                     ✨ NEW (tools reference)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -210,7 +210,7 @@ bashscripts/docs/
 ├── index.md                                     ✨ NEW (tools reference)
 =======
 <<<<<<< HEAD
-├── INDEX.md                                     ✨ NEW (tools reference)
+├── index-2.md                                     ✨ NEW (tools reference)
 =======
 ├── index.md                                     ✨ NEW (tools reference)
 >>>>>>> laraxot/dev
@@ -222,7 +222,7 @@ bashscripts/docs/
 <<<<<<< .merge_file_3berrg
 >>>>>>> laraxot/dev
 =======
-├── INDEX.md                                     ✨ NEW (tools reference)
+├── index-2.md                                     ✨ NEW (tools reference)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
@@ -265,7 +265,7 @@ laravel/Themes/Sixteen/docs/pages/segnalazioni-elenco/
 ### Project Root Documentation
 ```
 Project Root/
-├── DESIGN-CONVERSION-ROADMAP.md                ✨ NEW (executive summary)
+├── design-conversion-roadmap-2.md                ✨ NEW (executive summary)
 ├── FILES-CREATED-SESSION-007.md                ✨ NEW (this file)
 └── [existing files unchanged]
 ```
@@ -324,7 +324,7 @@ Project Root/
 
 ### Most Important Files (Must Read)
 
-1. **DESIGN-CONVERSION-ROADMAP.md** (Project Root)
+1. **design-conversion-roadmap-2.md** (Project Root)
    - Executive summary for all stakeholders
    - Phase breakdown (1-3) with timelines
    - Start here if new to the project
@@ -336,7 +336,7 @@ Project Root/
 <<<<<<< .merge_file_PaES7o
 <<<<<<< .merge_file_3berrg
 >>>>>>> laraxot/dev
-2. **laravel/Themes/Sixteen/docs/INDEX.md**
+2. **laravel/Themes/Sixteen/docs/index-2.md**
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -351,7 +351,7 @@ Project Root/
 2. **laravel/Themes/Sixteen/docs/index.md**
 =======
 <<<<<<< HEAD
-2. **laravel/Themes/Sixteen/docs/INDEX.md**
+2. **laravel/Themes/Sixteen/docs/index-2.md**
 =======
 2. **laravel/Themes/Sixteen/docs/index.md**
 >>>>>>> laraxot/dev
@@ -363,7 +363,7 @@ Project Root/
 <<<<<<< .merge_file_3berrg
 >>>>>>> laraxot/dev
 =======
-2. **laravel/Themes/Sixteen/docs/INDEX.md**
+2. **laravel/Themes/Sixteen/docs/index-2.md**
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
@@ -415,12 +415,12 @@ Project Root/
 =======
 >>>>>>> .merge_file_WkEi1k
 >>>>>>> laraxot/dev
-- Read: DESIGN-CONVERSION-ROADMAP.md
+- Read: design-conversion-roadmap-2.md
 =======
 <<<<<<< HEAD
 - read: design-conversion-roadmap.md
 =======
-- Read: DESIGN-CONVERSION-ROADMAP.md
+- Read: design-conversion-roadmap-2.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< HEAD
@@ -467,7 +467,7 @@ Project Root/
 =======
 >>>>>>> .merge_file_WkEi1k
 >>>>>>> laraxot/dev
-- Reference: bashscripts/docs/INDEX.md (for tools)
+- Reference: bashscripts/docs/index-2.md (for tools)
 =======
 - Reference: bashscripts/docs/index.md (for tools)
 >>>>>>> laraxot/dev
@@ -479,7 +479,7 @@ Project Root/
 <<<<<<< .merge_file_3berrg
 >>>>>>> laraxot/dev
 =======
-- Reference: bashscripts/docs/INDEX.md (for tools)
+- Reference: bashscripts/docs/index-2.md (for tools)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
@@ -523,7 +523,7 @@ COMPLETE-VISUAL-PARITY-REPORT.md
     ↓ (analyzed to create)
 PRIORITY-MATRIX.json
     ↓ (used for)
-DESIGN-CONVERSION-ROADMAP.md
+design-conversion-roadmap-2.md
     ↓ (communicates)
 GitHub Issues (created by script)
 ```
@@ -612,7 +612,7 @@ diff <(cat laravel/Themes/Sixteen/docs/visual-parity-data.json) <(previous.json)
 - batch-visual-assessment-parallel.mjs (reusable)
 - page-detailed-analysis.mjs (reusable)
 - PRIORITY-MATRIX.json (reference)
-- DESIGN-CONVERSION-ROADMAP.md (historical)
+- design-conversion-roadmap-2.md (historical)
 - Per-page DETAILED-ANALYSIS.md (proof of work)
 
 ### Update Regularly

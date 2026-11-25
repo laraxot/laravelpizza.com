@@ -28,7 +28,7 @@ Il provider `XotBaseServiceProvider` rappresenta la base architetturale per tutt
 
 ## Backlink
 - [Torna a README.md del modulo Xot](../readme.md)
-- [Collegamento a docs/links.md della root](../../../../docs/links.md)
+- [Collegamento a docs/links.md della root](../../laravel/Modules/Gdpr/docs/links-2.md)
 
 ## Utilizzo di GetModulePathByGeneratorAction
 

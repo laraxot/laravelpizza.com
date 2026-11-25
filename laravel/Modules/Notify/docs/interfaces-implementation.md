@@ -116,9 +116,9 @@ Se si verifica l'errore `Interface "Modules\Notify\Contracts\SMS\SmsActionContra
 
 ## Collegamenti Correlati
 
-- [Convenzioni di Naming per le Interfacce](./interface_naming_convention.md)
-- [Chiarimento sulla Struttura delle Interfacce](./interface_structure_clarification.md)
-- [Architettura dei Contratti](./contracts_architecture.md)
+- [Convenzioni di Naming per le Interfacce](./interface-naming-convention-2.md)
+- [Chiarimento sulla Struttura delle Interfacce](./interface-structure-clarification-2.md)
+- [Architettura dei Contratti](./contracts-architecture-2.md)
 # Guida all'Implementazione delle Interfacce nel Modulo Notify
 
 ## Struttura delle Interfacce
@@ -214,6 +214,6 @@ Se si verifica l'errore `Interface "Modules\Notify\Contracts\SMS\SmsActionContra
 
 ## Collegamenti Correlati
 
-- [Convenzioni di Naming per le Interfacce](./interface_naming_convention.md)
-- [Chiarimento sulla Struttura delle Interfacce](./interface_structure_clarification.md)
-- [Architettura dei Contratti](./contracts_architecture.md)
+- [Convenzioni di Naming per le Interfacce](./interface-naming-convention-2.md)
+- [Chiarimento sulla Struttura delle Interfacce](./interface-structure-clarification-2.md)
+- [Architettura dei Contratti](./contracts-architecture-2.md)

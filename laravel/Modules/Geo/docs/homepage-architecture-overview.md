@@ -175,5 +175,5 @@ GET / → Folio → index.blade.php
 - [Modulo <nome progetto>](laravel/modules/<nome progetto>/docs/homepage-architecture.md)
 - [Modulo CMS](laravel/modules/cms/docs/filament-blocks-system.md)
 - [Modulo UI](laravel/modules/ui/docs/blocks-system.md)
-- [Tema One](laravel/themes/one/docs/homepage-structure.md)
+- [Tema One](laravel/Modules/Cms/docs/homepage-structure-2.md)
 

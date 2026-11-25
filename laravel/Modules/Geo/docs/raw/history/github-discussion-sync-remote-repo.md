@@ -98,7 +98,7 @@ bash bashscripts/git/subtrees/sync_remote_repo.sh --dry-run
 |----------|------|
 | **Script Documentation** | `bashscripts/docs/git/SYNC_REMOTE_REPO_SCRIPT.md` |
 | **Skill** | `.agents/skills/sync-remote-repo/SKILL.md` |
-| **Agent Teams** | `docs/agent_teams.md` |
+| **Agent Teams** | `docs/agent-teams-2.md` |
 
 ### 4. GitHub Integration
 
@@ -258,7 +258,7 @@ Same action items as Gemini.
 - **Workflow**: `.github/workflows/sync-remote-repo.yml`
 - **Docs**: `bashscripts/docs/git/SYNC_REMOTE_REPO_SCRIPT.md`
 - **Skill**: `.agents/skills/sync-remote-repo/SKILL.md`
-- **Teams**: `docs/agent_teams.md`
+- **Teams**: `docs/agent-teams-2.md`
 
 ---
 

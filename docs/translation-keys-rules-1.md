@@ -3,8 +3,8 @@
 ## Collegamenti correlati
 - [Documentazione centrale](./README.md)
 - [Collegamenti documentazione](./collegamenti-documentazione.md)
-- [Implementazione Auth Pages](../../User/docs/AUTH_PAGES_IMPLEMENTATION.md)
-- [Regole Traduzioni User](../../User/docs/TRANSLATION_KEYS_RULES.md)
+- [Implementazione Auth Pages](../laravel/Modules/User/docs/auth-pages-implementation-3.md)
+- [Regole Traduzioni User](../laravel/Modules/User/docs/translation-keys-rules-2.md)
 - [Documentazione Lang](./README.md)
 
 ## Regole Fondamentali per le Traduzioni
@@ -213,5 +213,5 @@ Seguire queste regole per le chiavi di traduzione è fondamentale per garantire 
 ## [2024-07-07] Nota storica: correzione massiva Notify
 
 - Sono state applicate correzioni strutturali alle traduzioni del modulo Notify per allineamento a queste regole.
-- Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../Notify/docs/TRANSLATION_KEYS_RULES.md) per dettagli, esempi e best practice specifiche.
+- Vedi anche: [translation-keys-rules-3.md](../laravel/Modules/Lang/docs/translation-keys-rules-3.md) per dettagli, esempi e best practice specifiche.
 - Ogni nuova regola o convenzione va riportata sia qui che nella documentazione del modulo coinvolto.

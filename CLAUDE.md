@@ -179,7 +179,7 @@ See: `laravel/Modules/Xot/docs/laraxot-migration-philosophy-summary.md`
 
 **All .md files MUST be lowercase with hyphens, except:**
 - `README.md` (allowed)
-- `CHANGELOG.md` (allowed)
+- `changelog.md` (allowed)
 
 **Correct:**
 ```
@@ -457,7 +457,7 @@ Each module and theme has a `docs/` directory containing:
 
 **Key docs to reference:**
 - `Modules/Xot/docs/xotbase-extension-rules.md` - XotBase patterns
-- `Modules/Xot/docs/code_quality.md` - Quality standards
+- `Modules/Xot/docs/code-quality-2.md` - Quality standards
 - `Modules/Meetup/docs/architecture-reference.md` - Front office architecture
 - `Modules/Cms/docs/content-blocks-system.md` - CMS block system
 - `.cursor/rules/` - 400+ specific coding rules

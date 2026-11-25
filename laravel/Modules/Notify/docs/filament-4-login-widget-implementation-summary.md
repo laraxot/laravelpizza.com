@@ -265,7 +265,7 @@ TextInput::make('email') // Label da user::fields.email.label
 ### Interna
 - [Filament 4 Login Widget Implementation](../laravel/Themes/Sixteen/docs/filament-4-login-widget-implementation.md)
 - [Filament 4 Widget Rendering Guide](../laravel/Modules/User/docs/filament-4-widget-rendering-guide.md)
-- [Auth Widget Rules](../laravel/Modules/User/docs/auth_widget_rules.md)
+- [Auth Widget Rules](../laravel/Modules/User/docs/auth-widget-rules-2.md)
 - [Laraxot Architecture Rules](../laravel/Modules/Xot/docs/laraxot-architecture-rules.md)
 
 ### Esterna

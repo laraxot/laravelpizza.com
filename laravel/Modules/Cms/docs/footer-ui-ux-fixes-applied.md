@@ -9,7 +9,7 @@ issues: []
 discussions: []
 module: theme
 topic: footer-ui-ux-fixes-applied
-canonical: ../../../Themes/docs/shared-components/footer-ui-ux-fixes-applied-.md
+canonical: ../../../Themes/docs/shared-components/footer-ui-ux-fixes-applied-2.md
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/footer-ui-ux-fixes-applied-.md
+See canonical documentation: ../../../Themes/docs/shared-components/footer-ui-ux-fixes-applied-2.md

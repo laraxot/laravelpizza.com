@@ -247,7 +247,7 @@ Falso (scartato): “il widget evita il round-trip Livewire”. Falso: il widget
 (`CanBeLazy` incluso). Il guadagno è il contratto panel, non i millisecondi.
 
 Falso (scartato, 2026-08-25): “oggi `/admin` è rotto”. Le viste chrome sono già su `user::`
-([filament_errors.md](../filament_errors.md)). L’urgenza è la **classe di difetto**, non il 500 attuale.
+([filament-errors-3.md](../filament-errors-2.md)). L’urgenza è la **classe di difetto**, non il 500 attuale.
 
 ## Perché è urgente
 

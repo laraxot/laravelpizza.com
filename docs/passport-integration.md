@@ -494,7 +494,7 @@ $ ./vendor/bin/phpstan analyse Modules --memory-limit=-1
 ### Documentazione Correlata
 - [FILOSOFIA_MODULO_USER.md](./filosofia_modulo_user.md) - Filosofia generale
 - [README.md](./readme.md) - Overview modulo
-- [BUSINESS_LOGIC_DEEP_DIVE.md](./business_logic_deep_dive.md) - Business logic completa
+- [business-logic-deep-dive-3.md](./business_logic_deep_dive.md) - Business logic completa
 
 ### Documentazione Esterna
 - [Laravel Passport Official](https://laravel.com/docs/passport)

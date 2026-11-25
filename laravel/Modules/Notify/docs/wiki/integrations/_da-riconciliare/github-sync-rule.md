@@ -83,7 +83,7 @@ echo "Synced .github with bashscripts/ai/.github on $(date)" >> bashscripts/ai/.
 | Source | Destination | Purpose |
 |--------|-------------|---------|
 | `.github/workflows/*.yml` | `bashscripts/ai/.github/workflows/` | All workflows |
-| `.github/CONTRIBUTING.md` | `bashscripts/ai/.github/` | Contribution guide |
+| `.github/contributing-2.md` | `bashscripts/ai/.github/` | Contribution guide |
 | `.github/pull_request_template.md` | `bashscripts/ai/.github/` | PR template |
 | `.github/dependabot.yml` | `bashscripts/ai/.github/` | Dependabot config |
 | `.github/SECURITY.md` | `bashscripts/ai/.github/` | Security policy |

@@ -101,7 +101,7 @@ Once authenticated, you can ask Claude Code to:
 
 Recommended notebooks to create:
 
-1. **Notify Architecture** - AGENTS.md, docs/architecture/*
+1. **Notify Architecture** - agents-2.md, docs/architecture/*
 2. **Notify Modules** - laravel/Modules/*/docs/README.md
 3. **Notify API** - API documentation, Swagger specs
 "NotebookLM: What's in my <nome progetto> Research notebook?"
@@ -112,7 +112,7 @@ Recommended notebooks to create:
 
 Recommended notebooks to create:
 
-1. **<nome progetto> Architecture** - AGENTS.md, docs/architecture/*
+1. **<nome progetto> Architecture** - agents-2.md, docs/architecture/*
 2. **<nome progetto> Modules** - laravel/Modules/*/docs/README.md
 3. **<nome progetto> API** - API documentation, Swagger specs
 

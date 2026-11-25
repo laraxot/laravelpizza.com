@@ -265,5 +265,5 @@ grep -n "Attribute.*string" Modules/*/Models/*.php | grep -v "SafeStringCastActi
 
 - [Root PHPStan Rules](../../../../docs/project/phpstan_rules.md)
 - [Geo Module Structure](./structure.md)
-- [Class Not Found Errors](./class_not_found_errors.md)
+- [Class Not Found Errors](./class-not-found-errors-2.md)
 

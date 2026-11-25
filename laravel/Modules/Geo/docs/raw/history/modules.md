@@ -398,10 +398,10 @@ Ogni modulo ha documentazione completa nella propria cartella `docs/`:
 laravel/Modules/{ModuleName}/docs/
 ├── README.md              # Panoramica modulo
 ├── architecture.md        # Architettura specifica
-├── api.md                # API endpoints
+├── api-2.md                # API endpoints
 ├── models.md             # Documentazione models
 ├── actions.md            # Documentazione actions
-├── filament.md           # Risorse Filament
+├── filament-3.md           # Risorse Filament
 └── examples.md           # Esempi utilizzo
 ```
 
@@ -465,7 +465,7 @@ Modules\Gdpr\Filament\Resources\ConsentResource
 ## 📖 Risorse Aggiuntive
 
 - [Architettura](architecture.md)
-- [Regole Laraxot](laraxot-rules.md)
+- [Regole Laraxot](laraxot-rules-2.md)
 - [Setup](setup.md)
 - [Sviluppo](development.md)
 - [Qualità Codice](code-quality.md)

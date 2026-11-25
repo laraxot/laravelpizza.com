@@ -94,5 +94,5 @@ This keeps the HTTP surface in Folio (the correct location) while the business l
 ## Related
 
 - CLAUDE.md rule 1: "NEVER use traditional controllers or routes in web.php/api.php for front office"
-- `laravel/CLAUDE.md` rule 2: Architecture frontend — NO Controller, NO Routes in web.php
+- `laravel/Modules/Geo/docs/root-md-files/claude.md` rule 2: Architecture frontend — NO Controller, NO Routes in web.php
 - Folio routing docs: `Themes/Meetup/docs/folio-pages-json-only-rule.md`

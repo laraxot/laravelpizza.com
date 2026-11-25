@@ -205,11 +205,11 @@ cd /var/www/_bases/base_<nome progetto>_fila4_mono/laravel/Modules/User
 - [Regole Qualità Codice](../../code-quality.md)
 =======
 <<<<<<< HEAD
-- [Analisi Completa](./MODEL_INHERITANCE_ANALYSIS.md)
+- [Analisi Completa](./model-inheritance-analysis-3.md)
 - [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
 =======
 <<<<<<< HEAD
-- [Analisi Completa](./MODEL_INHERITANCE_ANALYSIS.md)
+- [Analisi Completa](./model-inheritance-analysis-3.md)
 - [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
 =======
 - [Analisi Completa](./model-inheritance-analysis.md)

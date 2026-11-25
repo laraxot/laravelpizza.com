@@ -2,7 +2,7 @@
 
 ## Collegamenti correlati
 - [README modulo UI](/laravel/modules/ui/docs/readme.md)
-- [Utilizzo Componenti Filament](/laravel/modules/ui/docs/filament_components_usage.md)
+- [Utilizzo Componenti Filament](/laravel/modules/ui/docs/filament-components-usage-2.md)
 - [Architettura Modulare](/docs/architettura-modulare.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 

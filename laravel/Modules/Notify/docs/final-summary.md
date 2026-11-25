@@ -147,10 +147,10 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-6. ✅ **WORK-COMPLETED-.md.md** - Riepilogo tecnico aggiornamenti
+6. ✅ **work-completed-4.md** - Riepilogo tecnico aggiornamenti
 
 ### 🎫 Modulo Fixcity (4)
-7. ✅ **API.md** - REST API completa (15+ endpoints, auth, examples)
+7. ✅ **api-2.md** - REST API completa (15+ endpoints, auth, examples)
 8. ✅ **USER_GUIDE.md** - Guida cittadini (15 sezioni, FAQ, best practices)
 9. ✅ **ADMIN_GUIDE.md** - Guida amministratori (18 sezioni, troubleshooting)
 10. ✅ **ROADMAP_2025.md** - Aggiornata timeline Q4 2025-Q2 2026
@@ -283,7 +283,7 @@ base_ptv_fila5/
 >>>>>>> laraxot/dev
 │   ├── project-completion-status.md    ✅ Tracking progetto
 │   ├── final-summary.md                ✅ Questo file
-│   └── WORK-COMPLETED-.md.md    ✅ Riepilogo tecnico
+│   └── work-completed-4.md    ✅ Riepilogo tecnico
 │
 ├── 📁 project_docs/
 │   ├── documentation-status.md         ✅ Stato docs
@@ -294,7 +294,7 @@ base_ptv_fila5/
     ├── Modules/Fixcity/docs/           ✅ 90% COMPLETO
     │   ├── README.md                   ✅ Completo
     │   ├── ROADMAP_2025.md             ✅ Aggiornato
-    │   ├── API.md                      ✅ NEW - Completo
+    │   ├── api-2.md                      ✅ NEW - Completo
     │   ├── USER_GUIDE.md               ✅ NEW - 15 sezioni
     │   ├── ADMIN_GUIDE.md              ✅ NEW - 18 sezioni
     │   └── [Altri docs tecnici]        ✅ Esistenti
@@ -304,7 +304,7 @@ base_ptv_fila5/
     │   ├── roadmap.md                  ✅ Aggiornato
     │   ├── 2FA_GUIDE.md                ✅ NEW - Implementazione completa
     │   ├── SSO_GUIDE.md                ✅ NEW - SAML + OIDC
-    │   └── API.md                      📋 TODO
+    │   └── api-2.md                      📋 TODO
     │
     ├── Modules/UI/docs/                🚧 70% COMPLETO
     │   ├── README.md                   ✅ Completo
@@ -313,7 +313,7 @@ base_ptv_fila5/
     │
     ├── Modules/Geo/docs/               🚧 75% COMPLETO
     │   ├── README.md                   ✅ Completo
-    │   ├── API.md                      📋 TODO
+    │   ├── api-2.md                      📋 TODO
     │   └── MAP_INTEGRATION.md          📋 TODO
     │
     └── Themes/Sixteen/docs/            🚧 78% COMPLETO
@@ -357,7 +357,7 @@ base_ptv_fila5/
   - Testing
 
 ### API Documentation (1)
-- ✅ **API.md** (Fixcity) - REST API completa
+- ✅ **api-2.md** (Fixcity) - REST API completa
   - 15+ endpoints documentati
   - Authentication (Sanctum)
   - Rate limiting
@@ -397,15 +397,15 @@ base_ptv_fila5/
 
 ### Immediate (Questa Settimana)
 1. **UI Module** - COMPONENT_API.md, EXAMPLES.md
-2. **Geo Module** - API.md, MAP_INTEGRATION.md, GEOCODING.md
+2. **Geo Module** - api-2.md, MAP_INTEGRATION.md, GEOCODING.md
 3. **Sixteen Theme** - COMPONENT_DOCS.md, AGID_CHECKLIST.md
-4. **User Module** - API.md (Authentication endpoints)
+4. **User Module** - api-2.md (Authentication endpoints)
 
 ### Short Term (Prossime 2 Settimane)
 5. **Media Module** - UPLOAD_GUIDE.md, CDN_INTEGRATION.md
 6. **Notify Module** - CHANNELS.md, TEMPLATES.md, REALTIME.md
-7. **Comment Module** - API.md, MODERATION.md
-8. **Rating Module** - API.md, TYPES.md
+7. **Comment Module** - api-2.md, MODERATION.md
+8. **Rating Module** - api-2.md, TYPES.md
 
 ### Medium Term (Prossimo Mese)
 9. **Activity Module** - EVENT_TRACKING.md, ANALYTICS.md
@@ -456,7 +456,7 @@ base_ptv_fila5/
 - **Support**: support@ptv.it
 
 ### Per API Developers
-- **API Documentation**: [API.md](./laravel/Modules/Fixcity/docs/API.md)
+- **API Documentation**: [api-2.md](./laravel/Modules/Fixcity/docs/api-2.md)
 - **2FA Guide**: [2FA_GUIDE.md](./laravel/Modules/User/docs/2FA_GUIDE.md)
 - **SSO Guide**: [SSO_GUIDE.md](./laravel/Modules/User/docs/SSO_GUIDE.md)
 
@@ -532,7 +532,7 @@ Il progetto FixCity ha raggiunto un livello di documentazione e organizzazione e
 - [x] project-completion-status.md creato
 
 ### Modulo Fixcity
-- [x] API.md creato
+- [x] api-2.md creato
 - [x] USER_GUIDE.md creato
 - [x] ADMIN_GUIDE.md creato
 - [x] ROADMAP_2025.md aggiornato
@@ -541,7 +541,7 @@ Il progetto FixCity ha raggiunto un livello di documentazione e organizzazione e
 - [x] 2FA_GUIDE.md creato
 - [x] SSO_GUIDE.md creato
 - [x] roadmap.md aggiornato
-- [ ] API.md da creare
+- [ ] api-2.md da creare
 
 ### Tema Sixteen
 - [x] ROADMAP_2025.md aggiornato

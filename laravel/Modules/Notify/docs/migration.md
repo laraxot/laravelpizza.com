@@ -221,21 +221,21 @@ return new class () extends XotBaseMigration {
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_CNrYNY
-- [Documentazione XotBaseMigration](../../xot/docs/rules/laraxot-rules.md)
+- [Documentazione XotBaseMigration](../../Geo/docs/rules/laraxot-rules-2.md)
 =======
 - [Documentazione XotBaseMigration](../../Xot/docs/rules/laraxot-rules.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_JRdjWf
 =======
-- [Documentazione XotBaseMigration](../../xot/docs/rules/laraxot-rules.md)
+- [Documentazione XotBaseMigration](../../Geo/docs/rules/laraxot-rules-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_CNrYNY
 - [Standard Migrazioni](../../../../docs/regole/standard_migrazioni.md)
 - [Best Practices Database](../../../../docs/best-practices/database.md)
-- [Gestione Errori](./error_handling.md)
+- [Gestione Errori](../../User/docs/error-handling-2.md)
 
 ## Supporto
 

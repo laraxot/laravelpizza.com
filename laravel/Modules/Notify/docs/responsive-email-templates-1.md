@@ -194,7 +194,7 @@ I template nella directory `mail-layouts` supportano variabili Blade:
 
 ## Riferimenti e Approfondimenti
 
-- [Guida ai Layout Email](./MAIL_LAYOUTS_GUIDE.md)
-- [Email Best Practices](./mail-templates/EMAIL_BEST_PRACTICES.md)
-- [HTML Email Compatibility](./mail-templates/HTML_EMAIL_COMPATIBILITY.md)
-- [MailPace Integration](./mail-templates/MAILPACE_TEMPLATES_INTEGRATION.md)
+- [Guida ai Layout Email](mail-layouts-guide-2.md)
+- [Email Best Practices](mail-templates/email-best-practices-2.md)
+- [HTML Email Compatibility](mail-templates/html-email-compatibility-2.md)
+- [MailPace Integration](mail-templates/mailpace-templates-integration-2.md)

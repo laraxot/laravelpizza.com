@@ -53,7 +53,7 @@ related:
 (esclusi vendor/node_modules/graphify-out) trova marker di merge **committati
 e non testuali per caso**, non toccati dalle pulizie sopra:
 
-- `docs/wiki/AGENTS.md` — **20 blocchi** `<<<<<<<`/`=======`/`>>>>>>>`
+- `../../wiki/agents-2.md` — **20 blocchi** `<<<<<<<`/`=======`/`>>>>>>>`
   (conflitti annidati HEAD/HEAD su commit `3096f6ae` "sync dal prototipo
   canonico" vs `a988596b` "first"), righe 141-435+.
 - `docs/wiki/session-summary.md` — 1 blocco, marker da merge a 3 vie
@@ -94,7 +94,7 @@ esistente copre `docs/wiki/`.
 
 ## Continuazione — priorità
 
-1. **`docs/wiki/AGENTS.md` + `docs/wiki/session-summary.md`** — risolvere i
+1. **`../../wiki/agents-2.md` + `docs/wiki/session-summary.md`** — risolvere i
    marker committati (20+1 blocchi). Verificare prima con `git log -S` quale
    lato (`3096f6ae` vs `a988596b`, oppure i due `.merge_file_*`) è quello
    corretto prima di tagliare — non assumere "tieni HEAD" per default su

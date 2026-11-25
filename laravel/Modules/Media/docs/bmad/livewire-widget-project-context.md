@@ -4,6 +4,7 @@ type: constitution
 module: Media
 related:
   - ./livewire-inventory.md
+qmd: "livewire widget project context media clip"
 ---
 
 # Context Media

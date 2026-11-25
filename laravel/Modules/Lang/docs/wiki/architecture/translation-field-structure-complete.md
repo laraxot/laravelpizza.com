@@ -322,10 +322,10 @@ return [
 ## Collegamenti Bidirezionali
 
 - [<nome progetto> Translation Audit](../Modules/<nome progetto>/docs/translation_audit_city_fields.md)
-- [User Module Translation Rules](../Modules/User/docs/widget-translation-rules.md)
+- [User Module Translation Rules](../../../../User/docs/widget-translation-rules-2.md)
 - [<nome progetto> Translation Audit](../modules/<nome progetto>/docs/translation_audit_city_fields.md)
-- [User Module Translation Rules](../modules/user/docs/widget-translation-rules.md)
-- [Translation Syntax Fixes](translation_syntax_fixes.md)
+- [User Module Translation Rules](../../../../User/docs/widget-translation-rules-2.md)
+- [Translation Syntax Fixes](translation-syntax-fixes-2.md)
 - [Windsurf Translation Rules](../.windsurf/rules/translation-complete-structure.mdc)
 
 ## Implementazione

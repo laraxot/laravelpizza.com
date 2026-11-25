@@ -1,0 +1,15 @@
+---
+title: "product roadmap"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-11-23
+qmd: "product roadmap"
+issues: []
+discussions: []
+module: theme
+topic: product_roadmap
+canonical: ../../../Themes/docs/shared-components/product-roadmap-3.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/product-roadmap-3.md

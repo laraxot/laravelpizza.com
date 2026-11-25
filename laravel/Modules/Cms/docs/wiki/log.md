@@ -12,7 +12,7 @@ discussions: []
 - 2026-06-10: folio-filesystem-routing-no-web-php + troubleshooting folio-route-not-found
 ## [2026-06-05] docs | Folio routing — mount() tipizzato + @volt statico
 
-- `folio_routing_system.md`: `mount(string $container0, string $slug0 = '')`; anti-pattern senza `request()->route()`
+- `folio-routing-system-2.md`: `mount(string $container0, string $slug0 = '')`; anti-pattern senza `request()->route()`
 - Shell: [concepts/folio-page-shell-pattern.md](concepts/folio-page-shell-pattern.md)
 
 ## [2026-06-05] docs | HackerNoon harness — tips 001-022 in wiki locale
@@ -25,14 +25,14 @@ discussions: []
 ## [2026-06-05] architecture | Folio page shell — mount + x-page + volt statico
 
 - Nuovo: [folio-page-shell-pattern.md](concepts/folio-page-shell-pattern.md)
-- Aggiornato: `folio_routing_system.md` — no `@volt($pageSlug)`, es. `container1.index`
+- Aggiornato: `folio-routing-system-2.md` — no `@volt($pageSlug)`, es. `container1.index`
 
 ## [2026-05-26] docs | ridondanza ThemeComposer — copia fuori da PSR-4
 
 - **Codice**: `app/View/Composers/ThemeComposer.php` (autoload) vs `resources/views/Composers/ThemeComposer.php` (fantasma quasi gemello) — vedere **[`docs/redundancy-report.md`](../redundancy-report.md)** §5 e hub Xot [`audit-profondo-ridondanze-holistic.md`](../../../Xot/docs/wiki/redundancy/audit-profondo-ridondanze-holistic.md) § analisi nominale.
 
-## [2026-04-21] fix | merge conflict code-quality-analysis.md
-- Rimossa copia integrale duplicata introdotta dal merge (blocco `--- Merged from code-quality-analysis-2025-11-24.md ---`).
+## [2026-04-21] fix | merge conflict code-quality-analysis-3.md
+- Rimossa copia integrale duplicata introdotta dal merge (blocco `--- Merged from code-quality-analysis-3.md ---`).
 - Preservata unica riga aggiuntiva utile: `**Status:** ❌ CRITICAL - Requires Immediate Fixes`.
 - File: `laravel/Modules/Cms/docs/code-quality-analysis.md`.
 

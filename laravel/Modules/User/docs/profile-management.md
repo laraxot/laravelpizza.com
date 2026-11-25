@@ -135,6 +135,6 @@ This document outlines the best practices for managing user profiles within a La
 >>>>>>> laraxot/dev
 - [BaseUser Model](./baseuser.md)
 >>>>>>> .merge_file_0EDPtp
-- [Authentication Pages Implementation](./auth_pages_implementation.md)
-- [Routing Best Practices](./routing_best_practices.md)
-- [Session Management](./session_management.md)
+- [Authentication Pages Implementation](./auth-pages-implementation-3.md)
+- [Routing Best Practices](./routing-best-practices-2.md)
+- [Session Management](./session-management-3.md)

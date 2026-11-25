@@ -23,8 +23,8 @@ Questo documento fornisce linee guida generali per lo sviluppo e la qualità del
 ## Correzioni Implementate
 
 ### Moduli Corretti
-- [FormBuilder FieldOption Model](../FormBuilder/project_docs/phpstan-corrections.md)
-- [Lang Console Commands](../Lang/project_docs/phpstan-corrections.md)
+- [FormBuilder FieldOption Model](../../../Geo/docs/development/phpstan-corrections-2.md)
+- [Lang Console Commands](../../../Geo/docs/development/phpstan-corrections-2.md)
 
 ## Principi di Correzione
 
@@ -45,8 +45,8 @@ Questo documento fornisce linee guida generali per lo sviluppo e la qualità del
 
 ## Collegamenti Correlati
 
-- [FormBuilder PHPStan Corrections](../FormBuilder/project_docs/phpstan-corrections.md)
-- [Lang PHPStan Corrections](../Lang/project_docs/phpstan-corrections.md)
+- [FormBuilder PHPStan Corrections](../../../Geo/docs/development/phpstan-corrections-2.md)
+- [Lang PHPStan Corrections](../../../Geo/docs/development/phpstan-corrections-2.md)
 - [Xot Architecture](./architecture.md)
 
 ## Note per Sviluppo Futuro

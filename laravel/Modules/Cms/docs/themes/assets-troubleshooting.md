@@ -43,14 +43,14 @@ Questo errore è uno dei più comuni nella gestione dei temi. Per la risoluzione
 ## Collegamenti Rilevanti
 
 <<<<<<< HEAD
-- [Processo di Build dei Temi](theme-build-process.md)
+- [Processo di Build dei Temi](theme-build-process-2.md)
 - [Compilazione dei Temi](theme_compilation.md)
 =======
 <<<<<<< .merge_file_5gOiOu
 - [Processo di Build dei Temi](../theme-build-process.md)
 - [Compilazione dei Temi](../theme-compilation.md)
 =======
-- [Processo di Build dei Temi](theme-build-process.md)
+- [Processo di Build dei Temi](theme-build-process-2.md)
 - [Compilazione dei Temi](theme_compilation.md)
 >>>>>>> .merge_file_g28oZb
 >>>>>>> laraxot/dev

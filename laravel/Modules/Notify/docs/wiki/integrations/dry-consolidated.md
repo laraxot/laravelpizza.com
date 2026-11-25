@@ -314,10 +314,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -341,10 +341,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -444,7 +444,7 @@ abstract class BaseModel extends XotBaseModel implements HasMedia
 
 ## dry-kiss-analysis-master
 
-*Consolidated from: `dry-kiss-analysis-master.md`*
+*Consolidated from: `dry-kiss-analysis-master-2.md`*
 
 title: "🐄✨ DRY & KISS MASTER ANALYSIS - PROGETTO COMPLETO ✨🐄"
 type: concept
@@ -458,10 +458,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -1123,7 +1123,7 @@ Themes/
 
 ```
 docs/
-├── dry-kiss-analysis-master.md (questo file)
+├── dry-kiss-analysis-master-2.md (questo file)
 ├── analisi-metodi-duplicati-master-1.md
 ├── analisi-metodi-duplicati-index.md
 ├── implementazione-refactoring-basemodel.md
@@ -2216,10 +2216,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 

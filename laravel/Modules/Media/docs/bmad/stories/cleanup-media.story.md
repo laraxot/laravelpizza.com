@@ -1,37 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_oeMUsm
 ---
 title: "Story: Cleanup Media Module"
-qmd: "media bmad stories cleanup media story md"
-type: note
-tags: [documentation]
+type: story
+qmd: "cleanup media story"
 ---
-
-<<<<<<< .merge_file_CPsY5x
-<<<<<<< .merge_file_5eOzBH
-=======
-=======
->>>>>>> .merge_file_vJKYu1
-=======
->>>>>>> .merge_file_4xGazI
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_CPsY5x
->>>>>>> .merge_file_pM6Ads
-=======
->>>>>>> .merge_file_vJKYu1
 # Story: Cleanup Media Module
 
 ## BMAD Method Applied
@@ -48,5 +19,5 @@ tags: [documentation]
 
 ## References
 - Media/docs/architecture.md
-- Media/docs/INDEX.md
+- Media/docs/index-2.md
 - Media/Assets pipeline configuration

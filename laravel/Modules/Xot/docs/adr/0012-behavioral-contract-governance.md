@@ -59,7 +59,7 @@ gruppi Pest omonimi**, perché conserva l'ownership del modulo e rende la catena
 - Il docblock dell'Action contiene sia il riferimento editoriale
   `@see docs/contracts/<file>.md` sia il marker machine-readable
   `@contract docs/contracts/<file>.md`; entrambi puntano al contratto owner-local.
-- `docs/contracts/INDEX.md` è il registro operativo: elenca contratto, owner,
+- `docs/contracts/index.md` è il registro operativo: elenca contratto, owner,
   invarianti e comando Pest. `README.md` resta l'indice storico richiesto dai test
   di package e non viene sostituito.
 - Un contratto aggiornato e il test che ne prova le invarianti cambiano insieme. Un

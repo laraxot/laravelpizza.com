@@ -200,7 +200,7 @@ app/Filament/
 **Regola:** Tutti i file in lowercase con hyphens
 **Esempi:**
 - ✅ `user-authentication.md`
-- ✅ `filament-resources.md`
+- ✅ `filament-resources-3.md`
 - ✅ `model-relationships.md`
 - ❌ `User_Authentication.md`
 - ❌ `FilamentResources.md`

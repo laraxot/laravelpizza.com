@@ -172,7 +172,7 @@ class DashboardSettingsPolicy
 - wizard personalizzati
 
 ## collegamento ad altre documentazioni
-- [pattern di estensione filament](../xot/docs/filament_extension_pattern.md)
+- [pattern di estensione filament](../xot/docs/filament-extension-pattern-2.md)
 - [best practices filament](../<nome progetto>/docs/filament-best-practices.md)
 
 ## ATTENZIONE: errori critici da evitare

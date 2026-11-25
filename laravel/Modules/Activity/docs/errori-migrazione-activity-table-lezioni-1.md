@@ -166,7 +166,7 @@ Questa lezione è ora memorizzata permanentemente per:
 ## 🔗 **Collegamenti Documentazione**
 
 ### Documentazione Aggiornata
-- [Regole Migrazioni Laraxot](../../Xot/docs/migration_rules.md)
+- [Regole Migrazioni Laraxot](../../Xot/docs/migration-rules-2.md)
 - [Polimorfismo UUID](../../Xot/docs/polymorphic_uuid_support.md)
 - [Principi Architetturali](../../../docs/architectural_principles.md)
 

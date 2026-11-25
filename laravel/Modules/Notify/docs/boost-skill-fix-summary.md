@@ -48,7 +48,7 @@ The Notify module couldn't:
 
 ## Solution Applied
 
-See `/docs/BOOST_SKILL_SOLUTION_PLAN.md` for complete solution details.
+See `/boost-skill-solution-plan-2.md` for complete solution details.
 
 ## Dependencies Restored
 
@@ -68,8 +68,8 @@ Critical dependencies for Notify module:
 
 ## Related Documentation
 
-- `/docs/BOOST_SKILL_INSTALLATION_ERROR.md` - Issue analysis
-- `/docs/BOOST_SKILL_SOLUTION_PLAN.md` - Solution plan
+- `/boost-skill-installation-error-2.md` - Issue analysis
+- `/boost-skill-solution-plan-2.md` - Solution plan
 
 ## Lessons Learned
 

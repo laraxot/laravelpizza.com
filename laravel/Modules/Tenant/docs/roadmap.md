@@ -231,7 +231,7 @@ Tenant Module
 
 ---
 
-<!-- Contenuto unito da roadmap-.md (rimozione date dai nomi file, issue #64) -->
+<!-- Contenuto unito da roadmap-3.md (rimozione date dai nomi file, issue #64) -->
 
 # Tenant Module Roadmap 2026
 

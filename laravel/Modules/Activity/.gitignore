@@ -202,6 +202,8 @@ graphify-out
 Activity/
 tests/coverage-*.*
 tests/graphify-out/
+# coverage: il file XML da ~5 MB gonfiava la storia (la riga `tests/coverage.xml/` sopra vale solo per cartelle)
+tests/coverage.xml
 
 # screenshot di comparazione visiva (artefatti locali)
 docs/project/visual-comparison/

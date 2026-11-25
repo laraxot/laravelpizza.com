@@ -91,9 +91,9 @@ Verificare che:
 
 ## Collegamenti
 - [Notify Module Documentation](README.md)
-- [SMS Implementation Guide](sms_implementation.md)
-- [Mail Templates Structure](mail_templates_structure.md)
-- [Translation Standards](translation_standards.md)
+- [SMS Implementation Guide](sms-implementation-2.md)
+- [Mail Templates Structure](mail-templates-structure-2.md)
+- [Translation Standards](translation-standards-2.md)
 - [Root Conflict Resolution Guidelines](../../../../docs/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
@@ -165,9 +165,9 @@ Verificare che:
 
 ## Collegamenti
 - [Notify Module Documentation](README.md)
-- [SMS Implementation Guide](sms_implementation.md)
-- [Mail Templates Structure](mail_templates_structure.md)
-- [Translation Standards](translation_standards.md)
+- [SMS Implementation Guide](sms-implementation-2.md)
+- [Mail Templates Structure](mail-templates-structure-2.md)
+- [Translation Standards](translation-standards-2.md)
 - [Root Conflict Resolution Guidelines](../../../../docs/project/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*

@@ -54,7 +54,7 @@ Modificati (diff reale):
 - [x] Variabili morte / assegnazioni sovrascritte: 15 file.
 - [x] `GetTreeOptionsByModelClassAction`: `Assert` runtime al posto di `@var`+ignore.
 - [x] `php -l` sui 32 file con diff.
-- [x] Story, dev, aggiornamento `bmad/phpstan-status.md` e indice wiki.
+- [x] Story, dev, aggiornamento `../../../Lang/docs/wiki/integrations/phpstan-status-2.md` e indice wiki.
 
 ## Testing
 

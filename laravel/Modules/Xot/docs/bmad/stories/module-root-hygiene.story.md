@@ -130,7 +130,7 @@ Richiesta: "laravel/Modules/test/ non deve esistere, capisci da solo il perche'"
 Perche': ogni cartella in `Modules/` e' trattata come modulo da nwidart, dal merge dei
 `composer.json`, da PHPStan (`paths: Modules/`) e da ogni script `for m in Modules/*`. La causa:
 `IndennitaResponsabilita\Actions\UpdateModuleDocumentation` faceva `mkdir` ricorsivo su qualunque
-nome, e gli sweep di copertura la chiamavano con `'test'` (file `Modules/test/docs/changelog.md`,
+nome, e gli sweep di copertura la chiamavano con `'test'` (file `Modules/UI/docs/changelog.md`,
 gia' committato nel repo root il 2026-09-02, `107f5184fc`). Fix di un'altra sessione (12:28):
 `resolveModulePath()` accetta solo nome alfanumerico con `module.json`; test
 `UpdateModuleDocumentationValidationTest` 4 passed (6 assertions).

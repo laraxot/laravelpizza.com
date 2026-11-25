@@ -157,8 +157,8 @@ Alpine.data('navigation', () => ({
 ```
 
 ## Links
-- [Documentazione Filament Forms](../../../../../docs/filament-forms.md)
-- [Gestione Contenuti](../../../../../docs/content-management.md)
+- [Documentazione Filament Forms](../../laravel/Modules/Cms/docs/filament-forms-2.md)
+- [Gestione Contenuti](../../laravel/Modules/Cms/docs/content-management-2.md)
 - [Best Practices UI](../../../../../docs/ui-best-practices.md)
 - [Sistema di Blocchi (root)](../../../../../docs/blocks-system.md)
 - [Collegamenti alla documentazione principale](../../../../../docs/collegamenti-documentazione.md)

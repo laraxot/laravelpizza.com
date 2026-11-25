@@ -56,7 +56,7 @@ status: draft
 **Precedente:** [INDEX](index.md) | **Successivo:** [Module Architecture](module-architecture.md)
 
 **Di ritorno:**
-- [CLAUDE.md](../../CLAUDE.md)
+- [CLAUDE.md](../../../Geo/docs/root-md-files/claude.md)
 - [AGENTS.md](../../AGENTS.md)
 - [CLAUDE.md](../claude.md)
 - [AGENTS.md](../agents.md)

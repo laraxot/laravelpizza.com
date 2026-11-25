@@ -48,7 +48,7 @@ Scan `./vendor/bin/phpstan analyse Modules/<Name>/` su monorepo `provtv/base_ptv
 
 ## Risposta — Cursor Composer — 2026-05-21
 
-Creati inventario wiki + issue meta GitHub [#136](https://github.com/provtv/base_ptv_fila5_mono/issues/136). Activity a 0 errori (vedi `phpstan-fixes-activity.md`). Notify: rimossi marker merge in 3 `*Table.php` (prerequisito bootstrap).
+Creati inventario wiki + issue meta GitHub [#136](https://github.com/provtv/base_ptv_fila5_mono/issues/136). Activity a 0 errori (vedi `phpstan-fixes-activity-2.md`). Notify: rimossi marker merge in 3 `*Table.php` (prerequisito bootstrap).
 
 ## Risposta — Cursor Composer — 2026-05-21 (git branch)
 

@@ -9,7 +9,7 @@ issues: []
 discussions: []
 module: theme
 topic: footer-error-resolution
-canonical: ../../../Themes/docs/shared-components/footer-error-resolution-.md
+canonical: ../../../Themes/docs/shared-components/footer-error-resolution-2.md
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/footer-error-resolution-.md
+See canonical documentation: ../../../Themes/docs/shared-components/footer-error-resolution-2.md

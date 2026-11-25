@@ -1,3 +1,8 @@
+---
+title: "Story: Cleanup Media Module"
+type: story
+qmd: "cleanup media 22 story"
+---
 # Story: Cleanup Media Module
 
 ## BMAD Method Applied
@@ -14,5 +19,5 @@
 
 ## References
 - Media/docs/architecture.md
-- Media/docs/INDEX.md
+- Media/docs/index-2.md
 - Media/Assets pipeline configuration

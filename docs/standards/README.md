@@ -102,7 +102,7 @@ Questi standard si applicano a tutti i moduli del progetto e devono essere segui
 - [Gestione campi e migrazioni con STI (README Patient)](../../../patient/docs/readme.md)
 - [DoctorResource: Step Informazioni Personali (Patient)](../../../patient/docs/filament/resources/doctor-resource.md)
 - [Struttura progetto e STI (Patient)](../../../patient/docs/architecture/struttura-progetto.md)
-- [Migrazioni e database (Patient)](../../../patient/docs/database/migrations.md)
+- [Migrazioni e database (Patient)](../../laravel/Modules/Lang/docs/migrations-3.md)
 
 ## Regola generale
 

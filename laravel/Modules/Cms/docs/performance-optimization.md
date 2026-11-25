@@ -122,8 +122,8 @@ context-mode ctx-stats
 - [QMD Setup](./qmd-setup.md)
 =======
 <<<<<<< HEAD
-- [On-Demand Pattern](./ON-DEMAND-PATTERN.md)
-- [QMD Setup](./QMD-SETUP.md)
+- [On-Demand Pattern](./on-demand-pattern-2.md)
+- [QMD Setup](./qmd-setup-2.md)
 =======
 - [On-Demand Pattern](./on-demand-pattern.md)
 - [QMD Setup](./qmd-setup.md)

@@ -178,7 +178,7 @@ Criteri usati: (1) chi non è amministratore non deve poter inserire o far girar
 
 ### P1-4 — Documentazione che contraddice il codice
 
-- `docs/architecture.md` (`status: superseded`, `superseded_by: bmad/architecture.md`) ma `docs/bmad/architecture.md` **non esisteva**, e `docs/bmad/architecture/job-module.md` rimandava indietro a `docs/architecture.md`: riferimento circolare. Ora [architecture.md](../architecture.md) è la SSoT.
+- `docs/architecture.md` (`status: superseded`, `superseded_by: bmad/architecture.md`) ma `docs/bmad/architecture.md` **non esisteva**, e `docs/bmad/architecture/job-module.md` rimandava indietro a `docs/architecture.md`: riferimento circolare. Ora [../../architecture-2.md](../architecture.md) è la SSoT.
 - `docs/bmad/purpose.md` era troncato a metà frase (14 righe); `epics.md`, `decision-log.md`, `brainstorming.md` mancavano. Sistemati in questo giro.
 - `livewire-inventory.md`/story 12.1: vedi P1-1.
 

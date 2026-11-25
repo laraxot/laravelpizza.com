@@ -60,7 +60,7 @@ Canon: questa story (kebab, **senza data nel filename**). Il file datato `cleanu
 1. [x] `git status` su tutti i 18 nested repo.
 2. [x] Zero marker line-start in PHP/lang/README/contributing/CHANGELOG **non-docs** (verificato post-fix).
 3. [x] Notify `SendNetfunSMSAction`: niente marker; log solo su failure; token redacted; `isSuccessfulResponse` (HTTP 200 ≠ ok).
-4. [x] UI root senza `ARCHITECTURE.md`/`TESTING.md`/`PHILOSOPHY.md` (SSoT `docs/architecture.md`).
+4. [x] UI root senza `ARCHITECTURE.md`/`TESTING.md`/`philosophy-3.md` (SSoT `docs/architecture.md`).
 5. [x] User root senza `Application/` (PSR-4 è `app/`); Xot senza `Tests/` (duplicato identico di `tests/`) e senza `tests/pest.php` (collision con `Pest.php`).
 6. [x] PHPStan max: Notify+User+UI+Media = 0. Rating/IR/Xot/Ptv errori = WIP altri claim, non questo.
 7. [ ] Commit: **non richiesto** dall'utente — deferred.

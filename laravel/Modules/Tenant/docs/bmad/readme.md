@@ -16,10 +16,7 @@ dependencies: ["Xot", "User"]
 extends: []
 extended_by: 0
 documentation_date: "2026-05-27"
-<<<<<<< .merge_file_4s3MX9
 qmd: "tenant multitenancy"
-=======
->>>>>>> .merge_file_8pUyaU
 ---
 type: concept
 tags: [docs, tenant, bmad]

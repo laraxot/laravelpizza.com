@@ -39,7 +39,7 @@ Following DRY (Don't Repeat Yourself) and KISS (Keep It Simple, Stupid) principl
 ### Quality (`docs/quality/`)
 - `code-quality.md` - PHPStan, PHPMD, PHP Insights
 - `testing.md` - Testing strategies and patterns
-- `documentation.md` - Documentation standards and policies
+- `documentation-2.md` - Documentation standards and policies
 
 ### Patterns (`docs/patterns/`)
 - `design-patterns.md` - Repository, Service, Action, DTO patterns
@@ -64,7 +64,7 @@ Following DRY (Don't Repeat Yourself) and KISS (Keep It Simple, Stupid) principl
 - `claude/eloquent-properties.md` → `framework/eloquent-properties.md`
 - `claude/schemaless-attributes.md` → `framework/schemaless-attributes.md`
 - `claude/code-quality.md` → `quality/code-quality.md`
-- `claude/documentation-policy.md` → `quality/documentation.md`
+- `claude/documentation-policy.md` → `../../../../Activity/docs/documentation-2.md`
 
 ### Files to Review/Complete
 - Testing documentation needs expansion

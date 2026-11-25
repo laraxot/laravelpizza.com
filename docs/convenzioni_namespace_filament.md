@@ -93,7 +93,7 @@ Section::make('Anteprima')
 ### Moduli Correlati
 - [Lang - Filament Translations](../../lang/project_docs/filament-translations.md) - Traduzioni in Filament
 - [UI - Form Filament Widgets](../../ui/project_docs/form_filament_widgets.md) - Widget per form Filament
-- [User - Filament Best Practices](../../user/project_docs/filament_best_practices.md) - Best practices per Filament
+- [User - Filament Best Practices](../../user/project_docs/filament-best-practices-2.md) - Best practices per Filament
 
 ### Documentazione Interna
 - [README del modulo Cms](./readme.md) - Indice principale del modulo Cms

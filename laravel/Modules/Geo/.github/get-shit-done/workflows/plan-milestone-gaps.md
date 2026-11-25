@@ -38,7 +38,7 @@ No audit gaps found. Run `/gsd-audit-milestone` first.
 
 ## 2. Prioritize Gaps
 
-Group gaps by priority from REQUIREMENTS.md:
+Group gaps by priority from requirements-2.md:
 
 | Priority | Action |
 |----------|--------|
@@ -142,7 +142,7 @@ Add new phases to current milestone:
 ...
 ```
 
-## 7. Update REQUIREMENTS.md Traceability Table (REQUIRED)
+## 7. Update requirements-2.md Traceability Table (REQUIRED)
 
 For each REQ-ID assigned to a gap closure phase:
 - Update the Phase column to reflect the new gap closure phase
@@ -150,11 +150,11 @@ For each REQ-ID assigned to a gap closure phase:
 
 Reset checked-off requirements the audit found unsatisfied:
 - Change `[x]` → `[ ]` for any requirement marked unsatisfied in the audit
-- Update coverage count at top of REQUIREMENTS.md
+- Update coverage count at top of requirements-2.md
 
 ```bash
 # Verify traceability table reflects gap closure assignments
-grep -c "Pending" .planning/REQUIREMENTS.md
+grep -c "Pending" .planning/requirements-2.md
 ```
 
 ## 8. Create Phase Directories
@@ -166,7 +166,7 @@ mkdir -p ".planning/phases/{NN}-{name}"
 ## 9. Commit Roadmap and Requirements Update
 
 ```bash
-node .github/get-shit-done/bin/gsd-tools.cjs commit "docs(roadmap): add gap closure phases {N}-{M}" --files .planning/roadmap.md .planning/REQUIREMENTS.md
+node .github/get-shit-done/bin/gsd-tools.cjs commit "docs(roadmap): add gap closure phases {N}-{M}" --files .planning/roadmap.md .planning/requirements-2.md
 ```
 
 ## 10. Offer Next Steps
@@ -284,10 +284,10 @@ becomes:
 - [ ] Gaps grouped into logical phases
 - [ ] User confirmed phase plan
 - [ ] roadmap.md updated with new phases
-- [ ] REQUIREMENTS.md traceability table updated with gap closure phase assignments
+- [ ] requirements-2.md traceability table updated with gap closure phase assignments
 - [ ] Unsatisfied requirement checkboxes reset (`[x]` → `[ ]`)
-- [ ] Coverage count updated in REQUIREMENTS.md
+- [ ] Coverage count updated in requirements-2.md
 - [ ] Phase directories created
-- [ ] Changes committed (includes REQUIREMENTS.md)
+- [ ] Changes committed (includes requirements-2.md)
 - [ ] User knows to run `/gsd-plan-phase` next
 </success_criteria>

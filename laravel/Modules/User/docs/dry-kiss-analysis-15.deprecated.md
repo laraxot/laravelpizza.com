@@ -17,4 +17,4 @@ related:
   - "./actions-path-convention.md"
 ---
 
-> Questo file è stato rinominato in [dry-kiss-analysis-.deprecated.md](dry-kiss-analysis-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+> Questo file è stato rinominato in [dry-kiss-analysis-2.deprecated.md](dry-kiss-analysis-2.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.

@@ -244,7 +244,7 @@ Every NotebookLM answer ends with: **"Is that ALL you need to know?"**
 Create these NotebookLM notebooks:
 
 ### 1. Laraxot Framework Docs
-- **Upload**: Laraxot documentation, AGENTS.md, .windsurfrules
+- **Upload**: Laraxot documentation, agents-2.md, .windsurfrules
 - **Topics**: laravel, architecture, modules, filament, xot
 - **Use**: Technical research, implementation verification
 
@@ -269,7 +269,7 @@ Create these NotebookLM notebooks:
 
 ### Created
 1. ✅ `docs/project/notebooklm-integration.md` - Complete integration guide
-2. ✅ `docs/NOTEBOOKLM_INSTALLATION_SUMMARY.md` - This summary
+2. ✅ `../../../notebooklm-installation-summary-2.md` - This summary
 
 ### Updated
 1. ✅ `.windsurfrules` - Added AI Tools Integration section

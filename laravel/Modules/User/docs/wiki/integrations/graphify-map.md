@@ -784,8 +784,8 @@ graphify query "User module memory usage"
 - **Laravel Passport:** `https://laravel.com/docs/11.x/passport`
 - **Socialite:** `https://laravel.com/docs/11.x/socialite`
 - **Module Architecture:** `../architecture.md`
-- **DATABASE Schema:** `../database-schema.md`
-- **BUSINESS Logic:** `../BUSINESS_LOGIC_DEEP_DIVE.md`
+- **DATABASE Schema:** `../../database-schema-2.md`
+- **BUSINESS Logic:** `../business-logic-deep-dive-3.md`
 
 ---
 

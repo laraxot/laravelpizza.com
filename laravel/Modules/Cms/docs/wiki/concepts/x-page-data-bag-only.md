@@ -56,6 +56,6 @@ $this->data = [
 - ADR progetto: [cms-x-page-opaque-data-bag.md](../../../../../../docs/wiki/decisions/cms-x-page-opaque-data-bag.md)
 - [page-context-data-bag.md](../../components/page-context-data-bag.md)
 - [page-component-data-contract.md](../../components/page-component-data-contract.md)
-- [folio_routing_system.md](../../folio_routing_system.md)
+- [folio-routing-system-2.md](../../folio-routing-system-2.md)
 - STORY-136 · [#243](https://github.com/laraxot/base_fixcity_fila5/issues/243)
 - Rule: `.cursor/rules/cms-x-page-data-bag-only.mdc`

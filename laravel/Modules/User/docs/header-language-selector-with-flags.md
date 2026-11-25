@@ -23,8 +23,8 @@ related:
 ## Collegamenti correlati
 - [README modulo User](./README.md)
 - [Convenzioni Path](./path-conventions-user.md)
-- [Best Practices Chiavi di Traduzione](/laravel/Modules/Lang/docs/translation_keys_best_practices.md)
-- [Implementazione Header](/laravel/modules/user/docs/header_language_avatar-implementation.md)
+- [Best Practices Chiavi di Traduzione](/laravel/Modules/Lang/docs/translation-keys-best-practices-2.md)
+- [Implementazione Header](/laravel/Modules/User/docs/header-language-avatar-implementation-4.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
 ## Panoramica
@@ -207,8 +207,8 @@ return [
 ## Collegamenti correlati
 - [README modulo User](./README.md)
 - [Convenzioni Path](./path-conventions-user.md)
-- [Best Practices Chiavi di Traduzione](/laravel/Modules/Lang/docs/translation_keys_best_practices.md)
-- [Implementazione Header](/laravel/modules/user/docs/header_language_avatar-implementation.md)
+- [Best Practices Chiavi di Traduzione](/laravel/Modules/Lang/docs/translation-keys-best-practices-2.md)
+- [Implementazione Header](/laravel/Modules/User/docs/header-language-avatar-implementation-4.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
 ## Panoramica

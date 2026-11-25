@@ -266,12 +266,12 @@ class TeamRoleManagerTest extends TestCase
 =======
 >>>>>>> .merge_file_A2lM8V
 <<<<<<< HEAD
-- [Error Handling](./error-handling.md)
+- [Error Handling](../../../../User/docs/error-handling-2.md)
 =======
 <<<<<<< .merge_file_vPftgW
 - Error Handling
 =======
-- [Error Handling](./error-handling.md)
+- [Error Handling](../../../../User/docs/error-handling-2.md)
 >>>>>>> .merge_file_Z0X8nu
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_igba1p

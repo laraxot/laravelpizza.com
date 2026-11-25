@@ -24,7 +24,7 @@ The EditUserWidget development and localization has been successfully completed 
 ### 4. Documentation ✅
 - **Main Documentation**: `edit-user-widget.md` - Comprehensive widget guide
 - **Translation Guidelines**: `translation-guidelines.md` - Translation implementation rules
-- **Implementation Rules**: `widget-translation-rules.md` - Project-wide widget standards
+- **Implementation Rules**: `widget-translation-rules-2.md` - Project-wide widget standards
 - **Summary Document**: This file documenting completion status
 ## Technical Implementation Details
 ### Widget Architecture
@@ -141,13 +141,13 @@ The implementation serves as a reference pattern for future widget development i
 - `Modules/User/docs/widget-translation-rules.md`
 - `Modules/User/docs/widgets/implementation-summary.md` (this file)
 ### Related Documentation
-- `Modules/User/docs/widgets_structure.md`
+- `Modules/User/docs/widgets-structure-2.md`
 - `Modules/Xot/docs/filament-widgets.md`
 - `Modules/Xot/docs/translations.md`
 - `Modules/User/project_docs/widgets/edit-user-widget.md`
 - `Modules/User/project_docs/widgets/translation-guidelines.md`
-- `Modules/User/project_docs/widget-translation-rules.md`
+- `Modules/User/docs/widget-translation-rules-2.md`
 - `Modules/User/project_docs/widgets/implementation-summary.md` (this file)
-- `Modules/User/project_docs/widgets_structure.md`
+- `Modules/User/project_docs/widgets-structure-2.md`
 - `Modules/Xot/project_docs/filament-widgets.md`
 - `Modules/Xot/project_docs/translations.md`

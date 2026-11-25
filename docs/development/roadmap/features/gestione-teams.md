@@ -242,7 +242,7 @@ class TeamRoleManagerTest extends TestCase
 ## Link Correlati
 - [Performance Optimization](./performance-optimization.md)
 - [Multi-tenancy](./multi-tenancy.md)
-- [Error Handling](./error-handling.md)
+- [Error Handling](../../../../laravel/Modules/User/docs/error-handling-2.md)
 
 ## Note e Considerazioni
 - Validare input utente

@@ -1670,7 +1670,7 @@ Tasks:
 - CLAUDE.md (AI assistant instructions)
 - PROJECT_ROADMAP.md (high-level vision)
 - README.md (basic setup)
-- This document (ARCHITECTURE_ANALYSIS.md)
+- This document (architecture-analysis-3.md)
 
 ⚠️ Needs Improvement:
 - API documentation (OpenAPI spec)
@@ -1687,7 +1687,7 @@ Tasks:
    - Database schema diagrams
    - Workflow state machine diagram
 
-2. API.md
+2. api-2.md
    - REST API endpoints
    - Authentication
    - Request/response examples
@@ -1699,7 +1699,7 @@ Tasks:
    - Configuration guide
    - Troubleshooting
 
-4. CONTRIBUTING.md
+4. contributing-2.md
    - Development setup
    - Coding standards
    - Testing requirements

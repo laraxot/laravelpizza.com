@@ -268,8 +268,8 @@ jobs:
         run: |
           echo "Updating global changelog with module releases..."
           
-          # Add to global CHANGELOG.md
-          cat >> CHANGELOG.md << EOF
+          # Add to global changelog.md
+          cat >> changelog.md << EOF
           
           ## 📦 Module Releases - $(date +%Y-%m-%d)
           
@@ -279,11 +279,11 @@ jobs:
           # List all released modules
           IFS=' ' read -ra MODULE_ARRAY <<< "${{ needs.detect-changes.outputs.modules }}"
           for module in "${MODULE_ARRAY[@]}"; do
-            echo " - **$module**: Latest version released" >> CHANGELOG.md
+            echo " - **$module**: Latest version released" >> changelog.md
           done
           
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add CHANGELOG.md
+          git add changelog.md
           git commit -m "docs: update global changelog with module releases [skip ci]" || true
           git push

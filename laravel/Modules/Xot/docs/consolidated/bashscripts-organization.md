@@ -50,7 +50,7 @@ bashscripts/
 - `check_before_phpstan.sh` - Controlli pre-analisi
 
 #### 7. **quality-assurance/** - Qualità del Codice
-- `code_quality.md` - Documentazione qualità
+- `code-quality-2.md` - Documentazione qualità
 - `fix_errors.sh` - Correzione errori automatica
 
 #### 8. **translations/** - Gestione Traduzioni
@@ -189,7 +189,7 @@ bashscripts/
 - `check_before_phpstan.sh` - Controlli pre-analisi
 
 #### 7. **quality-assurance/** - Qualità del Codice
-- `code_quality.md` - Documentazione qualità
+- `code-quality-2.md` - Documentazione qualità
 - `fix_errors.sh` - Correzione errori automatica
 
 #### 8. **translations/** - Gestione Traduzioni

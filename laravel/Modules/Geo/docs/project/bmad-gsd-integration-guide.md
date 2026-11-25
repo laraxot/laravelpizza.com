@@ -113,7 +113,7 @@ Configurazione principale che definisce:
 ### 2. `bmad-gsd-helper.sh`
 Script di supporto per eseguire comuni operazioni combinate.
 
-### 3. `.planning/STATE.md`
+### 3. `.planning/state-2.md`
 Aggiornato per includere stato BMAD.
 
 ## Best Practices
@@ -208,4 +208,4 @@ bmad-qa-generate-e2e-tests --focus auth
 
 - [GSD Methodology](./gsd-methodology.md)
 - [BMAD Documentation](https://docs.bmad-method.org/)
-- [Agent Skills](../../AGENTS.md#bmad-skills)
+- [Agent Skills](../agents.md#bmad-skills)

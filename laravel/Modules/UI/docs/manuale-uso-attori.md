@@ -1,11 +1,3 @@
-<<<<<<< .merge_file_g2nXvs
----
-title: "Manuale d'uso per attori — UI"
-type: note
-qmd: "manuale uso attori duso"
----
-=======
->>>>>>> .merge_file_4B4JFi
 # Manuale d'uso per attori — UI
 
 ## Scopo e perimetro

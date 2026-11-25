@@ -52,7 +52,7 @@ Convenzioni per i form schema in Filament.
 - Proprietà di navigazione
 - Esempi completi
 
-### best-practices.md
+### best-practices-3.md
 Best practices generali per Filament.
 
 **Argomenti:**
@@ -117,14 +117,14 @@ Widget personalizzati in Filament.
 
 - [Resource Rules](./resource-rules.md)
 - [Form Schema Conventions](./form-schema-conventions.md)
-- [Best Practices](./best-practices.md)
+- [Best Practices](../../../../../Activity/docs/best-practices-3.md)
 - [Form Components](./form-components.md)
 - [Form Validation](./form-validation.md)
 - [Translations](./translations.md)
 - [Actions](./actions.md)
 - [Widgets](./widgets.md)
 - [PHPStan](../phpstan/)
-- [Troubleshooting Filament](../../troubleshooting/errors/filament-errors.md)
+- [Troubleshooting Filament](../../../../../Activity/docs/filament-errors-3.md)
 
 ---
 

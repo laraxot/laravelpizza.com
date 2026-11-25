@@ -148,7 +148,7 @@ Tutte le traduzioni seguono la struttura espansa:
 ## Collegamenti
 
 - [Laraxot Translation Philosophy](../../xot/docs/translation-philosophy.md)
-- [Translation Standards](../../xot/docs/translation-standards.md)
+- [Translation Standards](../../Lang/docs/translation-standards-3.md)
 - [UI Module Documentation](../readme.md)
 
 - [UI Module Documentation](../README.md)

@@ -82,10 +82,10 @@ Modules\Notify\Models\NotificationTemplateVersion
 ## Risorse
 
 - [PHPStan Config](./phpstan/) - Type checking configuration
-- [On-Demand Pattern](./on-demand-pattern.md): Pattern per caricamento efficiente
-- [QMD Setup](./qmd-setup.md): Configurazione ricerca locale
-- [Performance](./performance-optimization.md): Metriche e best practice
-- [Project Structure](./project-structure.md): Directory layout
+- [On-Demand Pattern](../../../User/docs/on-demand-pattern-2.md): Pattern per caricamento efficiente
+- [QMD Setup](../../../User/docs/qmd-setup-2.md): Configurazione ricerca locale
+- [Performance](../../../User/docs/performance-optimization-2.md): Metriche e best practice
+- [Project Structure](../../../User/docs/project-structure-2.md): Directory layout
 
 ---
 
@@ -160,24 +160,24 @@ Supporta template dinamici, allegati binari, multi-canale e integrazione complet
 ### Guide Complete
 
 #### Email System
-- **[Email Attachments Usage](../email-sending/attachments_usage.md)** ⭐  
+- **[Email Attachments Usage](../email-sending/attachments-usage-2.md)** ⭐  
   Guida completa agli allegati email (path e binary data)
 
 - **[Spatie Mail Templates Deep Dive](../spatie-database-mail-templates-deep-dive.md)**  
   Sistema template email database
 
-- **[Email Layouts Best Practices](../mail-templates/email_layouts_best_practices.md)**  
+- **[Email Layouts Best Practices](../mail-templates/email-layouts-best-practices-2.md)**  
   Best practices layout email
 
 #### Notifications
-- **[Notifications Implementation Guide](../notifications/notifications_implementation_guide.md)**  
+- **[Notifications Implementation Guide](../notifications/notifications-implementation-guide-2.md)**  
   Come implementare notifiche custom
 
 - **[RecordNotification Usage](../notifications/record-notification.md)**  
   Notifiche basate su record Eloquent
 
 #### SMS & WhatsApp
-- **[WhatsApp Provider Architecture](../whatsapp_provider_architecture.md)**  
+- **[WhatsApp Provider Architecture](../whatsapp-provider-architecture-2.md)**  
   Architettura provider WhatsApp
 
 ---
@@ -214,7 +214,7 @@ Modules/Notify/
 └── docs/                                 # Documentazione
     ├── README.md                         ⭐ QUESTO FILE
     ├── email-sending/
-    │   └── attachments_usage.md
+    │   └── attachments-usage-2.md
     └── notifications/
         └── record-notification.md
 ```
@@ -380,12 +380,12 @@ Notification::route('mail', 'to@example.com')->notify($notify);
 ### Documentazione Interna
 
 #### Email System
-- [Email Layouts Best Practices](../mail-templates/email_layouts_best_practices.md)
-- [Spatie Mail Templates Structure](../mail-templates/spatie_mail_templates_structure.md)
-- [Email Troubleshooting](../email-sending/email_troubleshooting.md)
+- [Email Layouts Best Practices](../mail-templates/email-layouts-best-practices-2.md)
+- [Spatie Mail Templates Structure](../mail-templates/spatie-mail-templates-structure-2.md)
+- [Email Troubleshooting](../email-sending/email-troubleshooting-2.md)
 
 #### Notifications
-- [Notifications Implementation Guide](../notifications/notifications_implementation_guide.md)
+- [Notifications Implementation Guide](../notifications/notifications-implementation-guide-2.md)
 - [Notification Management Business Logic](./notifications/notification-management-business-logic.md)
 
 ---

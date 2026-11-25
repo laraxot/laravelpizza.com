@@ -114,7 +114,7 @@ This document provides metadata for Cursor about the integration of `mcamara/lar
   ```
 - Consulta anche:
   - [translation-keys-best-practices.md](../translation-keys-best-practices.md)
-  - [translation_keys_rules.md](../translation_keys_rules.md)
+  - [translation-keys-rules-3.md](translation-keys-rules-3.md)
   - [filament-translations.md](../filament-translations.md)
   - [docs <nome progetto>](../../../<nome progetto>/docs/translations.md)
 ## Modifiche Suggerite

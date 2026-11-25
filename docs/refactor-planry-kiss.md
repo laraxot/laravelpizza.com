@@ -31,7 +31,7 @@ Identificare e unificare file con contenuto identico o sovrapposto:
 - `improved-email-templates.md` + `improved_email_templates.md` → Integrato in `email-templates.md`
 
 #### Gruppo "Best Practices"
-- `best-practices.md` + `best_practices.md` → `best-practices.md`
+- `best-practices.md` + `best-practices-3.md` → `best-practices.md`
 - File specifici integrati in sezioni tematiche
 
 ### Fase 2: Struttura Organizzata

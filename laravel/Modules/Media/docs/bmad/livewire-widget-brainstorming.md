@@ -4,6 +4,7 @@ type: brainstorming
 module: Media
 related:
   - ./livewire-inventory.md
+qmd: "livewire widget brainstorming media"
 ---
 
 # Brainstorming

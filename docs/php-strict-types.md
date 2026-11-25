@@ -47,7 +47,7 @@ This document provides guidelines for using strict typing in PHP within a Larave
 - Update this document if new strict typing features or practices are introduced in PHP.
 
 ## Links to Related Documentation
-- [Code Quality](./code_quality.md)
+- [Code Quality](./code-quality-2.md)
 - [PHPStan Implementation Guide](./phpstan-implementation-guide.md)
 - [Naming Conventions](./naming-conventions.md)
 - [Service Provider Best Practices](./service-provider-best-practices.md)

@@ -395,7 +395,7 @@ Result: {"totals":{"errors":0,"file_errors":0}}
 ## 📚 GUIDA RAPIDA ALLA DOCUMENTAZIONE
 
 ### 🌟 START HERE
-**[→ ANALISI COMPLETA](./analisi-completa.md)** - Executive Summary del progetto
+**[→ ANALISI COMPLETA](../../../analisi-completa-3.md)** - Executive Summary del progetto
 
 ### 🗺️ ROADMAP
 <<<<<<< HEAD
@@ -690,7 +690,7 @@ php artisan queue:work --queue=high,notifications,default
 =======
 >>>>>>> .merge_file_n8tfQu
 >>>>>>> laraxot/dev
-- [← Analisi Completa](./analisi-completa.md)
+- [← Analisi Completa](../../../analisi-completa-3.md)
 
 ---
 
@@ -875,11 +875,11 @@ Result: {"totals":{"errors":0,"file_errors":0}}
 ✅ **Root Docs** (9):
 1. PROGETTO-COMPLETATO-100-PERCENTO.md (questo!)
 2. COMPLETAMENTO-PROGETTO.md
-3. ANALISI-COMPLETA.md
+3. analisi-completa-3.md
 4. LEGGI-QUI-DOMANI.md
 5. roadmap-master-index.md
 6. project-analysis-and-roadmap.md
-7. phpstan/session-summary.md
+7. ../../session-summary-2.md
 8. phpstan/final-report-session.md
 9. phpstan/filament-v4-fixes-session.md
 
@@ -1049,7 +1049,7 @@ Result: {"totals":{"errors":0,"file_errors":0}}
 ## 📚 GUIDA RAPIDA ALLA DOCUMENTAZIONE
 
 ### 🌟 START HERE
-**[→ ANALISI COMPLETA](./ANALISI-COMPLETA.md)** - Executive Summary del progetto
+**[→ ANALISI COMPLETA](../../../analisi-completa-3.md)** - Executive Summary del progetto
 
 ### 🗺️ ROADMAP
 <<<<<<< HEAD
@@ -1112,7 +1112,7 @@ Result: {"totals":{"errors":0,"file_errors":0}}
 >>>>>>> laraxot/dev
 
 ### 📊 TECHNICAL
-**[→ Session Summary](./phpstan/session-summary.md)** - Dettagli tecnici sessione
+**[→ Session Summary](../../session-summary-2.md)** - Dettagli tecnici sessione
 
 ### 🎯 MODULES (Dettagli per ogni modulo)
 
@@ -1364,7 +1364,7 @@ php artisan queue:work --queue=high,notifications,default
 >>>>>>> .merge_file_n8tfQu
 >>>>>>> laraxot/dev
 - [← Master Roadmap](../../../roadmap-master-index.md)
-- [← Analisi Completa](./ANALISI-COMPLETA.md)
+- [← Analisi Completa](../../../analisi-completa-3.md)
 - [← Master Roadmap](../../../roadmap-master-index.md)
 - [← Analisi Completa](../../../analisi-completa-ottobre-data.md)
 <<<<<<< HEAD

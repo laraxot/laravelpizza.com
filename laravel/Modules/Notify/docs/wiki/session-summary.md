@@ -8,14 +8,14 @@ qmd: "session-summary llm wiki integration - session summary"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./AGENTS.md"
+  - "./agents-2.md"
   - "./bmad-method.md"
   - "./index.md"
   - "./log.md"
-  - "./notify-conflict-check-.md"
+  - "./notify-conflict-check-2.md"
   - "./notify-conflict-check-1.md"
   - "./notify-conflict-check.md"
-  - "./notify-restore-.md"
+  - "./notify-restore-2.md"
 ---
 
 # LLM Wiki Integration - Session Summary
@@ -41,7 +41,7 @@ Created complete wiki structure in `./docs/wiki/`:
 ```
 docs/wiki/
 ├── README.md                 # Complete integration guide
-├── AGENTS.md                 # Schema file for LLM agents (16KB)
+├── agents-2.md                 # Schema file for LLM agents (16KB)
 ├── quick-reference.md        # Quick daily reference
 ├── overview.md               # High-level synthesis
 ├── index.md                  # Content catalog
@@ -69,7 +69,7 @@ docs/wiki/
     └── _archive/
 ```
 
-### 3. ✅ Agent Instructions (AGENTS.md)
+### 3. ✅ Agent Instructions (agents-2.md)
 
 Created comprehensive 16KB schema file with:
 
@@ -127,11 +127,11 @@ Created `bashscripts/ai/init-llm-wiki.sh`:
 - Usage: `bashscripts/ai/init-llm-wiki.sh {module|theme} {Name}`
 - Example: `bashscripts/ai/init-llm-wiki.sh module App`
 - Creates complete directory structure with templates
-- Generates module-specific AGENTS.md
+- Generates module-specific agents-2.md
 
 ### 8. ✅ Documentation Updates
 
-- **qwen.md**: Added LLM Wiki rules to memories
+- **qwen-2.md**: Added LLM Wiki rules to memories
 - **Modules**: Created wiki structure in all modules (already existed from previous session)
 - **Themes**: Created wiki structure in all themes (already existed from previous session)
 
@@ -155,7 +155,7 @@ commit a21032a60: docs: integrate Karpathy LLM Wiki pattern
 |-------|----------|---------|----------|
 | **raw/** | `docs/raw/` | Immutable sources | ❌ NEVER |
 | **wiki/** | `docs/wiki/` | LLM-generated knowledge | ✅ YES |
-| **schema** | `docs/wiki/AGENTS.md` | Agent instructions | ✅ YES |
+| **schema** | `docs/wiki/agents-2.md` | Agent instructions | ✅ YES |
 
 ### Module Wiki
 
@@ -163,7 +163,7 @@ commit a21032a60: docs: integrate Karpathy LLM Wiki pattern
 |-------|----------|---------|
 | **raw/** | `Modules/{Name}/docs/llm-wiki/raw/` | Module sources | ❌ NEVER |
 | **wiki/** | `Modules/{Name}/docs/llm-wiki/` | Module knowledge | ✅ YES |
-| **schema** | `Modules/{Name}/docs/llm-wiki/AGENTS.md` | Module agent rules | ✅ YES |
+| **schema** | `Modules/{Name}/docs/llm-wiki/agents-2.md` | Module agent rules | ✅ YES |
 
 ## Workflows
 
@@ -256,7 +256,7 @@ commit a21032a60: docs: integrate Karpathy LLM Wiki pattern
 ### Project Root (docs/)
 
 - ✅ `docs/wiki/README.md` - Integration guide
-- ✅ `docs/wiki/AGENTS.md` - Agent instructions (16KB)
+- ✅ `docs/wiki/agents-2.md` - Agent instructions (16KB)
 - ✅ `docs/wiki/quick-reference.md` - Quick reference
 - ✅ `docs/wiki/overview.md` - High-level synthesis
 - ✅ `docs/wiki/index.md` - Content catalog
@@ -284,7 +284,7 @@ commit a21032a60: docs: integrate Karpathy LLM Wiki pattern
 
 ### Configuration
 
-- ✅ `qwen.md` - Updated with LLM Wiki rules
+- ✅ `qwen-2.md` - Updated with LLM Wiki rules
 
 ## Tools Installed
 
@@ -297,7 +297,7 @@ commit a21032a60: docs: integrate Karpathy LLM Wiki pattern
 
 - [Karpathy's Original Gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
 - [Complete Integration Guide](docs/wiki/README.md)
-- [Agent Instructions](docs/wiki/AGENTS.md)
+- [Agent Instructions](docs/wiki/agents-2.md)
 - [Quick Reference](docs/wiki/quick-reference.md)
 - [Module Wiki Guide](Modules/Xot/docs/llm-wiki-integration.md)
 - [Obsidian Setup](docs/.obsidian/README.md)
@@ -320,7 +320,7 @@ commit a21032a60: docs: integrate Karpathy LLM Wiki pattern
 
 ---
 
-<!-- Merged from SESSION-SUMMARY.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from session-summary-2.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
 # LLM Wiki Integration - Session Summary
@@ -346,7 +346,7 @@ Created complete wiki structure in `./docs/wiki/`:
 ```
 docs/wiki/
 ├── README.md                 # Complete integration guide
-├── AGENTS.md                 # Schema file for LLM agents (16KB)
+├── agents-2.md                 # Schema file for LLM agents (16KB)
 ├── quick-reference.md        # Quick daily reference
 ├── overview.md               # High-level synthesis
 ├── index.md                  # Content catalog
@@ -374,7 +374,7 @@ docs/wiki/
     └── _archive/
 ```
 
-### 3. ✅ Agent Instructions (AGENTS.md)
+### 3. ✅ Agent Instructions (agents-2.md)
 
 Created comprehensive 16KB schema file with:
 
@@ -432,11 +432,11 @@ Created `bashscripts/ai/init-llm-wiki.sh`:
 - Usage: `bashscripts/ai/init-llm-wiki.sh {module|theme} {Name}`
 - Example: `bashscripts/ai/init-llm-wiki.sh module Fixcity`
 - Creates complete directory structure with templates
-- Generates module-specific AGENTS.md
+- Generates module-specific agents-2.md
 
 ### 8. ✅ Documentation Updates
 
-- **qwen.md**: Added LLM Wiki rules to memories
+- **qwen-2.md**: Added LLM Wiki rules to memories
 - **Modules**: Created wiki structure in all modules (already existed from previous session)
 - **Themes**: Created wiki structure in all themes (already existed from previous session)
 
@@ -460,7 +460,7 @@ commit a21032a60: docs: integrate Karpathy LLM Wiki pattern
 |-------|----------|---------|----------|
 | **raw/** | `docs/raw/` | Immutable sources | ❌ NEVER |
 | **wiki/** | `docs/wiki/` | LLM-generated knowledge | ✅ YES |
-| **schema** | `docs/wiki/AGENTS.md` | Agent instructions | ✅ YES |
+| **schema** | `docs/wiki/agents-2.md` | Agent instructions | ✅ YES |
 
 ### Module Wiki
 
@@ -468,7 +468,7 @@ commit a21032a60: docs: integrate Karpathy LLM Wiki pattern
 |-------|----------|---------|
 | **raw/** | `Modules/{Name}/docs/llm-wiki/raw/` | Module sources | ❌ NEVER |
 | **wiki/** | `Modules/{Name}/docs/llm-wiki/` | Module knowledge | ✅ YES |
-| **schema** | `Modules/{Name}/docs/llm-wiki/AGENTS.md` | Module agent rules | ✅ YES |
+| **schema** | `Modules/{Name}/docs/llm-wiki/agents-2.md` | Module agent rules | ✅ YES |
 
 ## Workflows
 
@@ -561,7 +561,7 @@ commit a21032a60: docs: integrate Karpathy LLM Wiki pattern
 ### Project Root (docs/)
 
 - ✅ `docs/wiki/README.md` - Integration guide
-- ✅ `docs/wiki/AGENTS.md` - Agent instructions (16KB)
+- ✅ `docs/wiki/agents-2.md` - Agent instructions (16KB)
 - ✅ `docs/wiki/quick-reference.md` - Quick reference
 - ✅ `docs/wiki/overview.md` - High-level synthesis
 - ✅ `docs/wiki/index.md` - Content catalog
@@ -589,7 +589,7 @@ commit a21032a60: docs: integrate Karpathy LLM Wiki pattern
 
 ### Configuration
 
-- ✅ `qwen.md` - Updated with LLM Wiki rules
+- ✅ `qwen-2.md` - Updated with LLM Wiki rules
 
 ## Tools Installed
 
@@ -602,7 +602,7 @@ commit a21032a60: docs: integrate Karpathy LLM Wiki pattern
 
 - [Karpathy's Original Gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
 - [Complete Integration Guide](docs/wiki/README.md)
-- [Agent Instructions](docs/wiki/AGENTS.md)
+- [Agent Instructions](docs/wiki/agents-2.md)
 - [Quick Reference](docs/wiki/quick-reference.md)
 - [Module Wiki Guide](Modules/Xot/docs/llm-wiki-integration.md)
 - [Obsidian Setup](docs/.obsidian/README.md)

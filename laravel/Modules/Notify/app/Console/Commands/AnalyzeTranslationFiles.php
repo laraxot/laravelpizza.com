@@ -215,7 +215,7 @@ class AnalyzeTranslationFiles extends Command
         $this->line('1. Standardize the navigation structure across all files');
         $this->line('2. Ensure all functional files (send_*) have consistent key structure');
         $this->line('3. Ensure all resource files have consistent key structure');
-        $this->line('4. Document the standardized structure in NOTIFY_TRANSLATION_GUIDE.md');
+        $this->line('4. Document the standardized structure in notify-translation-guide-2.md');
     }
 
     /**

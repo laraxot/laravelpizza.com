@@ -7,7 +7,7 @@ superseded_by: related dated original under docs/
 updated: 2026-11-17
 ---
 
-<!-- recovery from broken basename `citizen-auth-flow-contract-.md` after docs-guardian mass rename -->
+<!-- recovery from broken basename `citizen-auth-flow-contract-2.md` after docs-guardian mass rename -->
 
 Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file evita nomi `*-.md`.
 
@@ -15,7 +15,7 @@ Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file
 
 ---
 
-<!-- Contenuto unito da citizen-auth-flow-contract-.md (rimozione date dai nomi file, issue #64) -->
+<!-- Contenuto unito da citizen-auth-flow-contract-2.md (rimozione date dai nomi file, issue #64) -->
 
 Vedi [citizen-auth-flow-contract.md](./citizen-auth-flow-contract.md).
 

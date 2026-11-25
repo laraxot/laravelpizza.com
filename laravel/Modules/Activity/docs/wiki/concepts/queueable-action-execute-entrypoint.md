@@ -11,8 +11,8 @@ issues:
 discussions:
   - "https://github.com/laraxot/base_fixcity_fila5/discussions/273"
 related:
-  - ../../../../docs/QUEUEABLE-ACTION-RULE.md
-  - ../../../Xot/docs/queueable-actions.md
+  - ../../../../docs/queueable-action-rule.md
+  - ../../../../Notify/docs/queueable-actions-2.md
   - ./activity-domain-focus.md
   - ../../../../../../docs/wiki/rules/no-services-rule.md
 ---
@@ -85,8 +85,8 @@ app(ActivityLogger::class)->recordSubject(...);
 
 ## Riferimenti progetto
 
-- [QUEUEABLE-ACTION-RULE](../../../../docs/QUEUEABLE-ACTION-RULE.md) — regola moduli
-- [Xot queueable-actions](../../../Xot/docs/queueable-actions.md) — pattern DI + queue
+- [QUEUEABLE-ACTION-RULE](../../../../docs/queueable-action-rule.md) — regola moduli
+- [Xot queueable-actions](../../../../Notify/docs/queueable-actions-2.md) — pattern DI + queue
 - [no-services-rule](../../../../../../docs/wiki/rules/no-services-rule.md) — vietati Services
 
 ## Backlink

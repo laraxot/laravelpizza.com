@@ -442,8 +442,8 @@ trans('<nome progetto>::segnalazione.heading.title.label')
 
 ## 🔗 Related Documentation
 
-- [Translation Conventions](./translation-conventions.md)
-- [Blade Architecture](../laravel/CLAUDE.md#blade-components)
+- [Translation Conventions](../../../translation-conventions-2.md)
+- [Blade Architecture](../../../../../Geo/docs/root-md-files/claude.md#blade-components)
 - [Agnostic Scripts](./agnostic-documentation-rule.md)
 <<<<<<< HEAD
 - [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
@@ -458,7 +458,7 @@ trans('<nome progetto>::segnalazione.heading.title.label')
 =======
 >>>>>>> .merge_file_9QAssa
 <<<<<<< .merge_file_f0djDb
-- [Multi-Agent Coordination](./multi-agent-coordination-rules.md)
+- [Multi-Agent Coordination](../../../multi-agent-coordination-rules-2.md)
 =======
 - [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
 <<<<<<< .merge_file_cQCVLr

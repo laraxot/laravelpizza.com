@@ -145,6 +145,6 @@ export function validateForm(data) {
    - Testare gli input
 
 ## Collegamenti tra versioni di SECURITY.md
-* [SECURITY.md](laravel/modules/gdpr/docs/packages/SECURITY.md)
-* [SECURITY.md](laravel/modules/cms/docs/frontoffice/SECURITY.md)
-* [SECURITY.md](laravel/themes/one/docs/SECURITY.md)
+* [SECURITY.md](laravel/Modules/Geo/docs/root-md-files/security-2.md)
+* [SECURITY.md](laravel/Modules/Geo/docs/root-md-files/security-2.md)
+* [SECURITY.md](laravel/Modules/Geo/docs/root-md-files/security-2.md)

@@ -50,19 +50,19 @@ discussions: []
 
 ### Core Documentation
 
-1. **[DOCUMENTATION_GOVERNANCE.md](docs/documentation_governance.md)**
+1. **[documentation-governance-2.md](docs/documentation-governance-2.md)**
    - Comprehensive governance framework
    - Standards for all documentation
    - Quality metrics and KPIs
    - Maintenance workflows
 
-2. **[MASTER_DOCUMENTATION_INDEX.md](docs/master_documentation_index.md)**
+2. **[master-documentation-index-2.md](docs/master-documentation-index-2.md)**
    - Central navigation hub
    - Links to all module docs
    - Links to all theme docs
    - Categorized by topic
 
-3. **[DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md](docs/documentation_analysis_and_improvement_plan.md)**
+3. **[documentation-analysis-and-improvement-plan-2.md](docs/documentation-analysis-and-improvement-plan-2.md)**
    - Detailed analysis of current state
    - Identified issues across 3,646 files
    - Implementation plan with timelines
@@ -301,9 +301,9 @@ grep -r "Last Updated" laravel/Modules/*/docs/ --include="*.md" | wc -l
 ## 📚 Resources
 
 ### Documentation
-- [Governance Framework](docs/documentation_governance.md)
-- [Master Index](docs/master_documentation_index.md)
-- [Improvement Plan](docs/documentation_analysis_and_improvement_plan.md)
+- [Governance Framework](docs/documentation-governance-2.md)
+- [Master Index](docs/master-documentation-index-2.md)
+- [Improvement Plan](docs/documentation-analysis-and-improvement-plan-2.md)
 
 ### Rules
 - [AGENTS.md](agents.md) - Full standards
@@ -355,10 +355,10 @@ grep -r "Last Updated" laravel/Modules/*/docs/ --include="*.md" | wc -l
 grep -r "Last Updated" laravel/Themes/*/docs/ --include="*.md" | wc -l
 
 # Governance doc exists: ✅
-ls docs/DOCUMENTATION_GOVERNANCE.md
+ls documentation-governance-2.md
 
 # Master index exists: ✅
-ls docs/MASTER_DOCUMENTATION_INDEX.md
+ls master-documentation-index-2.md
 
 # Skill created: ✅
 ls laravel/.github/skills/documentation-management/SKILL.md

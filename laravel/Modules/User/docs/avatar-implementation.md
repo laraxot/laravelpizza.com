@@ -22,7 +22,7 @@ related:
 
 ## Collegamenti correlati
 - [README modulo User](./readme.md)
-- [Implementazione Header con Selettore Lingua](/laravel/modules/user/docs/header-language-selector-with-flags.md)
+- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header-language-selector-with-flags-3.md)
 - [README modulo User](./README.md)
 - [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header-language-selector-with-flags.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
@@ -144,7 +144,7 @@ Il sistema di avatar può essere esteso in futuro per includere:
 
 ## Collegamenti correlati
 - [README modulo User](./readme.md)
-- [Implementazione Header con Selettore Lingua](/laravel/modules/user/docs/header-language-selector-with-flags.md)
+- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header-language-selector-with-flags-3.md)
 - [README modulo User](./README.md)
 - [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header-language-selector-with-flags.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)

@@ -257,5 +257,5 @@ L'implementazione di questi miglioramenti rispetta le convenzioni del progetto A
 ## Riferimenti
 
 - [Documentazione Filament Forms](https://filamentphp.com/docs/forms/fields/text-input)
-- [Implementazione Modello con Slug](./model_slug_implementation.md)
-- [Implementazione Risorsa con Slug](./resource_slug_implementation.md)
+- [Implementazione Modello con Slug](./model-slug-implementation-2.md)
+- [Implementazione Risorsa con Slug](./resource-slug-implementation-2.md)

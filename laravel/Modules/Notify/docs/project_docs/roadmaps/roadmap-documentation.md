@@ -380,15 +380,15 @@ paths:
 
 ### Modulo Xot (Framework Base)
 - [x] **README.md**: Panoramica e installazione
-- [x] **API.md**: Documentazione API completa
+- [x] **api-2.md**: Documentazione API completa
 - [x] **Examples.md**: Esempi di utilizzo
-- [x] **Changelog.md**: Log delle modifiche
+- [x] **changelog.md**: Log delle modifiche
 - [ ] **Migration.md**: Guide di migrazione
 - [ ] **Troubleshooting.md**: Risoluzione problemi
 
 ### Modulo User (Gestione Utenti)
 - [x] **README.md**: Panoramica e funzionalità
-- [x] **API.md**: API per gestione utenti
+- [x] **api-2.md**: API per gestione utenti
 - [x] **Authentication.md**: Sistema autenticazione
 - [x] **Authorization.md**: Sistema autorizzazione
 - [ ] **Profiles.md**: Gestione profili
@@ -397,10 +397,10 @@ paths:
 ### Modulo Fixcity (Core Business)
 ### Modulo App (Core Business)
 - [x] **README.md**: Panoramica sistema ticket
-- [x] **API.md**: API per gestione ticket
+- [x] **api-2.md**: API per gestione ticket
 - [x] **Workflow.md**: Flusso di lavoro ticket
 - [x] **Models.md**: Documentazione modelli
-- [ ] **Filament.md**: Integrazione Filament
+- [ ] **filament-3.md**: Integrazione Filament
 - [ ] **Notifications.md**: Sistema notifiche
 
 ### Modulo UI (Componenti)
@@ -413,7 +413,7 @@ paths:
 
 ### Modulo Geo (Geolocalizzazione)
 - [ ] **README.md**: Panoramica geolocalizzazione
-- [ ] **API.md**: API geografiche
+- [ ] **api-2.md**: API geografiche
 - [ ] **Maps.md**: Integrazione mappe
 - [ ] **Geocoding.md**: Geocoding e reverse
 - [ ] **Zones.md**: Gestione zone
@@ -421,11 +421,11 @@ paths:
 
 ### Modulo Media (Gestione File)
 - [ ] **README.md**: Panoramica gestione media
-- [ ] **API.md**: API per upload/download
+- [ ] **api-2.md**: API per upload/download
 - [ ] **Storage.md**: Configurazione storage
 - [ ] **Processing.md**: Elaborazione file
 - [ ] **CDN.md**: Integrazione CDN
-- [ ] **Security.md**: Sicurezza file
+- [ ] **security-2.md**: Sicurezza file
 
 ### Modulo Notify (Notifiche)
 - [ ] **README.md**: Sistema notifiche
@@ -437,7 +437,7 @@ paths:
 
 ### Modulo Comment (Commenti)
 - [ ] **README.md**: Sistema commenti
-- [ ] **API.md**: API commenti
+- [ ] **api-2.md**: API commenti
 - [ ] **Moderation.md**: Moderazione commenti
 - [ ] **Threading.md**: Threading commenti
 - [ ] **Notifications.md**: Notifiche commenti
@@ -445,7 +445,7 @@ paths:
 
 ### Modulo Rating (Valutazioni)
 - [ ] **README.md**: Sistema rating
-- [ ] **API.md**: API valutazioni
+- [ ] **api-2.md**: API valutazioni
 - [ ] **Types.md**: Tipi di valutazione
 - [ ] **Analytics.md**: Analytics rating
 - [ ] **Moderation.md**: Moderazione rating
@@ -453,7 +453,7 @@ paths:
 
 ### Modulo Activity (Audit Trail)
 - [ ] **README.md**: Sistema audit trail
-- [ ] **API.md**: API attività
+- [ ] **api-2.md**: API attività
 - [ ] **Events.md**: Eventi tracciati
 - [ ] **Logging.md**: Sistema logging
 - [ ] **Analytics.md**: Analytics attività
@@ -461,7 +461,7 @@ paths:
 
 ### Modulo Blog (Content Management)
 - [ ] **README.md**: Sistema blog
-- [ ] **API.md**: API contenuti
+- [ ] **api-2.md**: API contenuti
 - [ ] **Editor.md**: Editor contenuti
 - [ ] **SEO.md**: Ottimizzazione SEO
 - [ ] **Categories.md**: Gestione categorie
@@ -469,7 +469,7 @@ paths:
 
 ### Modulo Cms (Content Management)
 - [ ] **README.md**: Sistema CMS
-- [ ] **API.md**: API contenuti
+- [ ] **api-2.md**: API contenuti
 - [ ] **Pages.md**: Gestione pagine
 - [ ] **Blocks.md**: Blocchi contenuto
 - [ ] **Templates.md**: Template pagine
@@ -477,7 +477,7 @@ paths:
 
 ### Modulo Gdpr (Compliance)
 - [ ] **README.md**: Compliance GDPR
-- [ ] **API.md**: API privacy
+- [ ] **api-2.md**: API privacy
 - [ ] **Consent.md**: Gestione consensi
 - [ ] **Data.md**: Gestione dati personali
 - [ ] **Export.md**: Export dati utente
@@ -485,7 +485,7 @@ paths:
 
 ### Modulo Tenant (Multi-tenancy)
 - [ ] **README.md**: Sistema multi-tenant
-- [ ] **API.md**: API tenant
+- [ ] **api-2.md**: API tenant
 - [ ] **Isolation.md**: Isolamento tenant
 - [ ] **Configuration.md**: Configurazione tenant
 - [ ] **Billing.md**: Billing per tenant
@@ -493,7 +493,7 @@ paths:
 
 ### Modulo Seo (Ottimizzazione)
 - [ ] **README.md**: Ottimizzazione SEO
-- [ ] **API.md**: API SEO
+- [ ] **api-2.md**: API SEO
 - [ ] **Meta.md**: Meta tags
 - [ ] **Sitemap.md**: Sitemap XML
 - [ ] **Analytics.md**: Analytics SEO
@@ -501,7 +501,7 @@ paths:
 
 ### Modulo Job (Gestione Job)
 - [ ] **README.md**: Sistema job
-- [ ] **API.md**: API job
+- [ ] **api-2.md**: API job
 - [ ] **Queue.md**: Sistema code
 - [ ] **Scheduling.md**: Job scheduling
 - [ ] **Monitoring.md**: Monitoraggio job
@@ -509,7 +509,7 @@ paths:
 
 ### Modulo AI (Intelligenza Artificiale)
 - [ ] **README.md**: Sistema AI
-- [ ] **API.md**: API AI
+- [ ] **api-2.md**: API AI
 - [ ] **Models.md**: Modelli ML
 - [ ] **Training.md**: Training modelli
 - [ ] **Inference.md**: Inferenza

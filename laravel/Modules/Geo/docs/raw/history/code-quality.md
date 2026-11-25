@@ -77,7 +77,7 @@ Esegue controlli preliminari prima dell'analisi con PHPStan.
    - DEVE essere in maiuscolo
    - È il file principale di documentazione di ogni directory
    - Segue la convenzione storica Unix/GitHub
-   - Esempio: `README.md`, `README.it.md`, `README.es.md`
+   - Esempio: `README.md`, `readme-2.it.md`, `readme-2.es.md`
 
 2. **Altri File Markdown**
    - DEVONO essere in lowercase
@@ -730,7 +730,7 @@ Prima di ogni commit:
 
 ## 📚 Risorse Aggiuntive
 
-- [Regole Laraxot](laraxot-rules.md)
+- [Regole Laraxot](laraxot-rules-2.md)
 - [Sviluppo](development.md)
 - [Architettura](architecture.md)
 - [Testing Best Practices](https://pestphp.com/docs/plugins/laravel)

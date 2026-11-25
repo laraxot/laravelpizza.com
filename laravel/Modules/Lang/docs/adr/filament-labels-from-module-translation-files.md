@@ -11,6 +11,7 @@ related:
   - ../../app/Providers/LangServiceProvider.php
   - ../contracts/auto-label-action.md
   - ../../tests/Feature/AutoLabelActionContractTest.php
+qmd: "filament labels from translation files etichette"
 ---
 
 # ADR: le etichette Filament vengono dai file di lingua del modulo, applicate a tutti i componenti

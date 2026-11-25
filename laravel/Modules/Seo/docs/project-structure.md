@@ -36,9 +36,9 @@ status: active
 │   │   └── *.md
 │   ├── decisions/                # Architecture decision records
 │   └── troubleshooting/          # Bug fixes, error resolutions
-├── ON-DEMAND-PATTERN.md          # 🌟 QUESTO FILE — Pattern on-demand
-├── QMD-SETUP.md                  # Configurazione QMD
-├── PERFORMANCE-OPTIMIZATION.md    # Metriche e best practice
+├── on-demand-pattern-2.md          # 🌟 QUESTO FILE — Pattern on-demand
+├── qmd-setup-2.md                  # Configurazione QMD
+├── performance-optimization-2.md    # Metriche e best practice
 ├── ARCHITECTURE.md               # (opzionale) Architettura modulo
 └── README.md                     # (opzionale) Overview modulo
 \`\`\`
@@ -51,7 +51,7 @@ status: active
 | `wiki/log.md` | Storico attività (ingest/query/lint) |
 | `wiki/rules/` | Regole + trigger map locale |
 | `wiki/concepts/` | Concetti specifici del modulo |
-| `ON-DEMAND-PATTERN.md` | **Leggi prima** — pattern da seguire |
+| `on-demand-pattern-2.md` | **Leggi prima** — pattern da seguire |
 
 ## Convenzioni
 
@@ -111,7 +111,7 @@ graph TD
 mkdir -p docs/wiki/{rules,skills,commands,memories,concepts,entities,decisions,troubleshooting}
 
 # 2. Crea INDEX files (già creati)
-cp docs/wiki/rules/INDEX.md docs/wiki/rules/
+cp wiki/rules/index-2.md docs/wiki/rules/
 # ... etc
 
 # 3. Aggiungi a QMD collection (opzionale, già incluso global)

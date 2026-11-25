@@ -345,7 +345,7 @@ return [
 
 ## Riferimenti
 
-- [Responsive Email Templates](./RESPONSIVE_EMAIL_TEMPLATES.md)
+- [Responsive Email Templates](../laravel/Modules/Notify/docs/responsive-email-templates-2.md)
 - [Email Best Practices](./mail-templates/EMAIL_BEST_PRACTICES.md)
-- [HTML Email Compatibility](./mail-templates/HTML_EMAIL_COMPATIBILITY.md)
-- [Spatie Email Integration](./SPATIE_EMAIL_USAGE_GUIDE.md)
+- [HTML Email Compatibility](../laravel/Modules/Notify/docs/mail-templates/html-email-compatibility-2.md)
+- [Spatie Email Integration](../laravel/Modules/Notify/docs/spatie-email-usage-guide-2.md)

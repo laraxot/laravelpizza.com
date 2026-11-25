@@ -201,7 +201,7 @@ cat > "$DOCS_ROOT/index.md" << 'EOF'
 
 ### Sviluppo
 - [Getting Started](development/getting-started.md)
-- [Coding Standards](development/coding-standards.md)
+- [Coding Standards](../../development/coding-standards-2.md)
 - [Testing](development/testing.md)
 
 ### Moduli
@@ -216,9 +216,9 @@ cat > "$DOCS_ROOT/index.md" << 'EOF'
 - [Deployment](guides/deployment.md)
 
 ### Reference
-- [API](reference/api.md)
+- [API](../../../../User/docs/api-2.md)
 - [Database](reference/database.md)
-- [Comandi](reference/commands.md)
+- [Comandi](../../gsd/commands-2.md)
 
 ---
 *Documentazione consolidata secondo principi DRY + KISS*

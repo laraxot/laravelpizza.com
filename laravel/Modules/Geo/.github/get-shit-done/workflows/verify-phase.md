@@ -47,11 +47,11 @@ Extract from init JSON: `phase_dir`, `phase_number`, `phase_name`, `has_plans`, 
 Then load phase details and list plans/summaries:
 ```bash
 node .github/get-shit-done/bin/gsd-tools.cjs roadmap get-phase "${phase_number}"
-grep -E "^| ${phase_number}" .planning/REQUIREMENTS.md 2>/dev/null
-ls "$phase_dir"/*-SUMMARY.md "$phase_dir"/*-PLAN.md 2>/dev/null
+grep -E "^| ${phase_number}" .planning/requirements-2.md 2>/dev/null
+ls "$phase_dir"/*-summary-2.md "$phase_dir"/*-plan-2.md 2>/dev/null
 ```
 
-Extract **phase goal** from roadmap.md (the outcome to verify, not tasks) and **requirements** from REQUIREMENTS.md if it exists.
+Extract **phase goal** from roadmap.md (the outcome to verify, not tasks) and **requirements** from requirements-2.md if it exists.
 </step>
 
 <step name="establish_must_haves">
@@ -60,7 +60,7 @@ Extract **phase goal** from roadmap.md (the outcome to verify, not tasks) and **
 Use gsd-tools to extract must_haves from each PLAN:
 
 ```bash
-for plan in "$PHASE_DIR"/*-PLAN.md; do
+for plan in "$PHASE_DIR"/*-plan-2.md; do
   MUST_HAVES=$(node .github/get-shit-done/bin/gsd-tools.cjs frontmatter get "$plan" --field must_haves)
   echo "=== $plan ===" && echo "$MUST_HAVES"
 done
@@ -110,7 +110,7 @@ For each truth: identify supporting artifacts → check artifact status → chec
 Use gsd-tools for artifact verification against must_haves in each PLAN:
 
 ```bash
-for plan in "$PHASE_DIR"/*-PLAN.md; do
+for plan in "$PHASE_DIR"/*-plan-2.md; do
   ARTIFACT_RESULT=$(node .github/get-shit-done/bin/gsd-tools.cjs verify artifacts "$plan")
   echo "=== $plan ===" && echo "$ARTIFACT_RESULT"
 done
@@ -142,7 +142,7 @@ WIRED = imported AND used. ORPHANED = exists but not imported/used.
 Use gsd-tools for key link verification against must_haves in each PLAN:
 
 ```bash
-for plan in "$PHASE_DIR"/*-PLAN.md; do
+for plan in "$PHASE_DIR"/*-plan-2.md; do
   LINKS_RESULT=$(node .github/get-shit-done/bin/gsd-tools.cjs verify key-links "$plan")
   echo "=== $plan ===" && echo "$LINKS_RESULT"
 done
@@ -168,16 +168,16 @@ Record status and evidence for each key link.
 </step>
 
 <step name="verify_requirements">
-If REQUIREMENTS.md exists:
+If requirements-2.md exists:
 ```bash
-grep -E "Phase ${PHASE_NUM}" .planning/REQUIREMENTS.md 2>/dev/null
+grep -E "Phase ${PHASE_NUM}" .planning/requirements-2.md 2>/dev/null
 ```
 
 For each requirement: parse description → identify supporting truths/artifacts → status: ✓ SATISFIED / ✗ BLOCKED / ? NEEDS HUMAN.
 </step>
 
 <step name="scan_antipatterns">
-Extract files modified in this phase from summary.md, scan each:
+Extract files modified in this phase from summary-2.md, scan each:
 
 | Pattern | Search | Severity |
 |---------|--------|----------|

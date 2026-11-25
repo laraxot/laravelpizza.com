@@ -14,7 +14,7 @@ Il file presentava numerosi conflitti git non risolti, in particolare tra le bra
 
 ## Decisione
 - Uniformare tutte le assegnazioni usando `setAttribute` e la verifica con `array_key_exists`, per garantire compatibilità e robustezza.
-- Mantenere la coerenza con le best practice già documentate in `CONFLITTI_MERGE_RISOLTI.md` e `PHPSTAN-FIXES-SUMMARY.md`.
+- Mantenere la coerenza con le best practice già documentate in `CONFLITTI_MERGE_RISOLTI.md` e `phpstan-fixes-summary-5.md`.
 
 ## Prossimi passi
 1. Applicare la correzione nel trait.

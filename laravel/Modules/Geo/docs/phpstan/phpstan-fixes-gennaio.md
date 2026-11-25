@@ -402,10 +402,10 @@ cd /var/www/html/_bases/base_<nome progetto>/laravel
 =======
 >>>>>>> .merge_file_3ZL0pT
 <<<<<<< HEAD
-- [Geographic Data Handling](../geo_entities.md)
+- [Geographic Data Handling](../geo-entities-2.md)
 =======
 <<<<<<< HEAD
-- [Geographic Data Handling](../geo_entities.md)
+- [Geographic Data Handling](../geo-entities-2.md)
 =======
 - [Geographic Data Handling](../geo-entities.md)
 >>>>>>> laraxot/dev
@@ -421,7 +421,7 @@ cd /var/www/html/_bases/base_<nome progetto>/laravel
 =======
 >>>>>>> .merge_file_3ZL0pT
 - [PHPStan Level 9 Guide](../../../docs/phpstan-level9-guide.md)
-- [Filament Best Practices](../filament/filament-best-practices.md)
+- [Filament Best Practices](../../../Xot/docs/consolidated/filament-best-practices-2.md)
 
 ---
 

@@ -130,13 +130,13 @@ FixCity è la piattaforma enterprise leader per la gestione delle segnalazioni u
 
 ### 📚 Documentazione Strategica (5 documenti)
 1. ✅ **DOCUMENTATION_STATUS.md** - Monitoraggio completo stato docs
-2. ✅ **DOCUMENTATION_INDEX.md** - Indice navigabile 400+ pagine
-3. ✅ **QUICK_START.md** - Onboarding sviluppatori < 30 minuti
-4. ✅ **PROJECT_COMPLETION_STATUS.md** - Tracking avanzamento
+2. ✅ **documentation-index.md** - Indice navigabile 400+ pagine
+3. ✅ **quick-start-2.md** - Onboarding sviluppatori < 30 minuti
+4. ✅ **project-completion-status-2.md** - Tracking avanzamento
 5. ✅ **EXCELLENCE_2025.md** - Questo documento
 
 ### 🎫 Modulo Fixcity - ECCELLENZA (90%)
-- ✅ **API.md** - REST API completa con 15+ endpoints
+- ✅ **api-2.md** - REST API completa con 15+ endpoints
 - ✅ **USER_GUIDE.md** - Guida cittadini 15 sezioni
 - ✅ **ADMIN_GUIDE.md** - Guida admin 18 sezioni
 - ✅ **ROADMAP_2025.md** - Timeline dettagliata Q4 2025-Q2 2026
@@ -178,7 +178,7 @@ FixCity è la piattaforma enterprise leader per la gestione delle segnalazioni u
 =======
 >>>>>>> .merge_file_yOIyN1
 >>>>>>> laraxot/dev
-- 📋 **API.md** - Authentication API (TODO)
+- 📋 **api-2.md** - Authentication API (TODO)
 
 ### 🎨 Tema Sixteen - ECCELLENZA (78%)
 - ✅ **ROADMAP_2025.md** - Timeline aggiornata
@@ -539,9 +539,9 @@ FixCity è orgogliosamente open source:
 ## 📚 RISORSE
 
 ### Documentazione
-- **[DOCUMENTATION_INDEX.md](./documentation_index.md)** - Indice completo
-- **[QUICK_START.md](./quick_start.md)** - Guida rapida
-- **[PROJECT_COMPLETION_STATUS.md](./project_completion_status.md)** - Status
+- **[documentation-index.md](./documentation-index-2.md)** - Indice completo
+- **[quick-start-2.md](./quick-start-2.md)** - Guida rapida
+- **[project-completion-status-2.md](./project-completion-status-2.md)** - Status
 
 ### Moduli Principali
 - **[Fixcity Docs](./laravel/Modules/Fixcity/docs/)** - Core business
@@ -567,7 +567,7 @@ FixCity è orgogliosamente open source:
 >>>>>>> .merge_file_ErtsMS
 =======
 >>>>>>> .merge_file_yOIyN1
-- **[Fixcity API](./laravel/Modules/Fixcity/docs/API.md)** - REST API
+- **[Fixcity API](./laravel/Modules/Fixcity/docs/api-2.md)** - REST API
 - **[User 2FA](./laravel/Modules/User/docs/2FA_GUIDE.md)** - 2FA Guide
 - **[User SSO](./laravel/Modules/User/docs/SSO_GUIDE.md)** - SSO Guide
 =======
@@ -576,7 +576,7 @@ FixCity è orgogliosamente open source:
 - **[User 2FA](./laravel/Modules/User/docs/2fa_guide.md)** - 2FA Guide
 - **[User SSO](./laravel/Modules/User/docs/sso_guide.md)** - SSO Guide
 =======
-- **[Fixcity API](./laravel/Modules/Fixcity/docs/API.md)** - REST API
+- **[Fixcity API](./laravel/Modules/Fixcity/docs/api-2.md)** - REST API
 - **[User 2FA](./laravel/Modules/User/docs/2FA_GUIDE.md)** - 2FA Guide
 - **[User SSO](./laravel/Modules/User/docs/SSO_GUIDE.md)** - SSO Guide
 >>>>>>> laraxot/dev

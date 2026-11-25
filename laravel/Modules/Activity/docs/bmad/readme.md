@@ -232,18 +232,18 @@ php artisan activity:test-events
 ### 🏗️ **Architettura**
 - [Event Sourcing](event-sourcing.md) - Sistema event sourcing completo
 - [Activity Logging](structure.md) - Architettura logging attività
-- [Filament Integration](filament.md) - Integrazione dashboard Filament
-- [Advanced Patterns](advanced_event_sourcing_patterns.md) - Pattern avanzati
+- [Filament Integration](../filament-3.md) - Integrazione dashboard Filament
+- [Advanced Patterns](advanced-event-sourcing-patterns-3.md) - Pattern avanzati
 
 ### 📊 **Analytics & Monitoring**
-- [Activity Dashboard](filament-resources.md) - Dashboard analytics attività
-- [Event Analytics](event-sourcing-examples.md) - Analytics eventi
+- [Activity Dashboard](filament-resources-3.md) - Dashboard analytics attività
+- [Event Analytics](event-sourcing-examples-2.md) - Analytics eventi
 - [Performance Monitoring](bottlenecks.md) - Monitoraggio performance
 - [Security Compliance](translations.md) - Conformità sicurezza
 
 ### 🔧 **Development**
 - [PHPStan Fixes](phpstan/README.md) - Log completo correzioni PHPStan
-- [Event Sourcing Examples](event_sourcing_examples.md) - Esempi event sourcing
+- [Event Sourcing Examples](event-sourcing-examples-2.md) - Esempi event sourcing
 - [Testing Structure](testing-structure-login-analysis.md) - Struttura testing
 
 ## 🎨 **Componenti Filament**
@@ -398,7 +398,7 @@ php artisan activity:cleanup --older-than=90
 # Verificare widget Filament
 php artisan activity:test-dashboard
 ```
-**Soluzione**: Consulta [Filament Integration](filament.md)
+**Soluzione**: Consulta [Filament Integration](../filament-3.md)
 
 ## 🤝 **Contributing**
 
@@ -583,7 +583,7 @@ Elimina un'attività (soft delete).
 
 - [Architettura](./architecture.md)
 - [API Documentation](./api.md)
-- [Filament Resources](./filament-resources.md)
+- [Filament Resources](../filament-resources-3.md)
 - [Testing](./testing.md)
 - [Deployment](./deployment.md)
 

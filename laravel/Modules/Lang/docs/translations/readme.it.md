@@ -21,7 +21,7 @@ related:
   <a href="https://phpstan.org/"><img src="https://img.shields.io/badge/PHPStan-Level%209-blue?style=flat-square&logo=php" alt="PHPStan Level"/></a>
   <a href="https://filamentphp.com/"><img src="https://img.shields.io/badge/Filament-Admin-green?style=flat-square&logo=laravel" alt="Filament"/></a>
   <a href="../README.md"><img src="https://img.shields.io/badge/🇬🇧-Read%20in%20English-blue?style=flat-square" alt="English"/></a>
-  <a href="README.es.md"><img src="https://img.shields.io/badge/🇪🇸-Leer%20en%20Espa%C3%B1ol-yellow?style=flat-square" alt="Español"/></a>
+  <a href="readme-3.es.md"><img src="https://img.shields.io/badge/🇪🇸-Leer%20en%20Espa%C3%B1ol-yellow?style=flat-square" alt="Español"/></a>
 </div>
 
 ---
@@ -78,11 +78,11 @@ related:
 ## 📚 Documentazione
 
 - [Indice del Progetto](../index.md)
-- [Workflow PHPStan](../phpstan_workflow.md)
+- [Workflow PHPStan](../phpstan-workflow-2.md)
 - [Panoramica dei Moduli](../modules.md)
 - [Architettura](../architecture.md)
 - [Indice del Progetto](../index.md)
-- [Workflow PHPStan](../PHPSTAN_WORKFLOW.md)
+- [Workflow PHPStan](../../../Xot/docs/consolidated/phpstan/phpstan-workflow-2.md)
 - [Panoramica dei Moduli](../MODULES.md)
 - [Architettura](architecture.md)
 
@@ -111,7 +111,7 @@ Questo progetto è open-source e disponibile sotto la [Licenza MIT](../../LICENS
   <a href="https://phpstan.org/"><img src="https://img.shields.io/badge/PHPStan-Level%209-blue?style=flat-square&logo=php" alt="PHPStan Level"/></a>
   <a href="https://filamentphp.com/"><img src="https://img.shields.io/badge/Filament-Admin-green?style=flat-square&logo=laravel" alt="Filament"/></a>
   <a href="../README.md"><img src="https://img.shields.io/badge/🇬🇧-Read%20in%20English-blue?style=flat-square" alt="English"/></a>
-  <a href="README.es.md"><img src="https://img.shields.io/badge/🇪🇸-Leer%20en%20Espa%C3%B1ol-yellow?style=flat-square" alt="Español"/></a>
+  <a href="readme-3.es.md"><img src="https://img.shields.io/badge/🇪🇸-Leer%20en%20Espa%C3%B1ol-yellow?style=flat-square" alt="Español"/></a>
 </div>
 
 ---
@@ -168,11 +168,11 @@ Questo progetto è open-source e disponibile sotto la [Licenza MIT](../../LICENS
 ## 📚 Documentazione
 
 - [Indice del Progetto](../index.md)
-- [Workflow PHPStan](../phpstan_workflow.md)
+- [Workflow PHPStan](../phpstan-workflow-2.md)
 - [Panoramica dei Moduli](../modules.md)
 - [Architettura](../architecture.md)
 - [Indice del Progetto](../index.md)
-- [Workflow PHPStan](../PHPSTAN_WORKFLOW.md)
+- [Workflow PHPStan](../../../Xot/docs/consolidated/phpstan/phpstan-workflow-2.md)
 - [Panoramica dei Moduli](../MODULES.md)
 - [Architettura](architecture.md)
 

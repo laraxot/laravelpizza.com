@@ -4,7 +4,7 @@
 Pulire la cartella docs del modulo Tenant rimuovendo file vuoti, duplicati e disorganizzati.
 
 ## 🚨 Problemi Identificati
-- Molti file con dimensione 1 byte (es. `api-integration.md`, `best-practices.md`).
+- Molti file con dimensione 1 byte (es. `api-integration.md`, `best-practices-3.md`).
 - File duplicati (`module-tenant-1.md` vs `module-tenant.md`).
 - Documentazione mista tra inglese e italiano senza criteri chiari.
 

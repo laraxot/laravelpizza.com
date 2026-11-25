@@ -200,12 +200,12 @@ L'errore PHPStan è stato risolto con successo! Ecco le modifiche implementate:
 =======
 >>>>>>> .merge_file_rax25j
 <<<<<<< HEAD
-- [Geo Module PHPStan Fixes](./phpstan-fixes-gennaio-2025.md)
+- [Geo Module PHPStan Fixes](./phpstan-fixes-gennaio-2.md)
 =======
 <<<<<<< HEAD
 - [Geo Module PHPStan Fixes](./phpstan-fixes-gennaio.md)
 =======
-- [Geo Module PHPStan Fixes](./phpstan-fixes-gennaio-2025.md)
+- [Geo Module PHPStan Fixes](./phpstan-fixes-gennaio-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_0zb7WG

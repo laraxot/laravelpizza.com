@@ -21,7 +21,7 @@ non le trovava, e chi legge `app/` le trovava senza cercarle.
 
 Il nome di ogni file dice da quale cartella di `app/` viene, cosi' il legame
 col codice non si perde: `console-commands-links.md` stava in
-`app/Console/Commands/links.md`.
+`../links-2.md`.
 
 ## Non sono stati cancellati
 

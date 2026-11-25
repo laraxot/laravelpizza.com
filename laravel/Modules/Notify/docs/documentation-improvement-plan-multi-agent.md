@@ -104,7 +104,7 @@ Transform documentation from **chaotic but comprehensive** to **organized, gover
 ### How to Join
 
 1. **Read this document** thoroughly
-2. **Check coordination log**: `bashscripts/docs/git/sync_remote_repo_coordination.md`
+2. **Check coordination log**: `bashscripts/docs/git/sync-remote-repo-coordination-2.md`
 3. **Pick a task** from the backlog below
 4. **Add your agent ID** to the team list
 5. **Create lock file** (optional, for exclusive work):
@@ -269,11 +269,11 @@ grep -r "Ultimo aggiornamento" docs/ --include="*.md"
 - [ ] `drytraitmethods.md` → `dry-trait-methods.md`
 - [ ] `readme-analisi-duplicati.md` → `readme-analisi-duplicati.md`
 - [ ] `analisi-metodi-duplicati-master.md` → `analisi-metodi-duplicati-master.md`
-- [ ] `DOCUMENTATION-IMPROVEMENT-SUMMARY-.md.md` → `documentation-improvement-summary.md`
+- [ ] `documentation-improvement-summary-4.md` → `documentation-improvement-summary.md`
 - [ ] `PHPSTAN-GLOBAL-SUMMARY-.md.md` → `phpstan-global-summary.md`
-- [ ] `GITHUB-ISSUES-RECOMMENDATIONS-.md.md` → `github-issues-recommendations.md`
-- [ ] `SYSTEM-ADMIN-SUMMARY-.md.md` → `system-admin-summary.md`
-- [ ] `LOGGING-OPTIMIZATION-SUMMARY-.md.md` → `logging-optimization-summary.md`
+- [ ] `github-issues-recommendations-4.md` → `github-issues-recommendations.md`
+- [ ] `system-admin-summary-4.md` → `system-admin-summary.md`
+- [ ] `logging-optimization-summary-4.md` → `logging-optimization-summary.md`
 
 **Remove dates from filenames**:
 - [ ] All files with `YYYY-MM-DD` pattern
@@ -285,7 +285,7 @@ grep -r "Ultimo aggiornamento" docs/ --include="*.md"
 **Agent**: TBD
 
 **Update**:
-- [ ] `MASTER_documentation-index.md` - Add new sections, remove broken links
+- [ ] `master-documentation-index-2.md` - Add new sections, remove broken links
 - [ ] `README.md` - Point to master index
 - [ ] `project_docs/README.md` - Organize by topic
 - [ ] `phpstan/README.md` - Link to archived sessions
@@ -329,7 +329,7 @@ grep -r "Ultimo aggiornamento" docs/ --include="*.md"
 
 **Merge**:
 - [ ] All completion certificates → single `status/COMPLETION_CERTIFICATE.md`
-- [ ] All refactoring reports → single `refactoring/summary.md`
+- [ ] All refactoring reports → single `bugs/summary-2.md`
 - [ ] Italian reports → translate or archive
 
 **Organize**:
@@ -487,7 +487,7 @@ grep -r "Ultimo aggiornamento" docs/ --include="*.md"
 
 1. **GitHub Issues**: Track individual tasks
 2. **GitHub Discussions**: General coordination
-3. **Coordination Log**: `bashscripts/docs/git/sync_remote_repo_coordination.md`
+3. **Coordination Log**: `bashscripts/docs/git/sync-remote-repo-coordination-2.md`
 4. **This Document**: Master plan tracking
 
 ### Lock File Protocol
@@ -519,9 +519,9 @@ rm docs/DOCUMENTATION_IMPROVEMENT_PLAN.md.lock
 
 ## 🔗 Related Documentation
 
-- **Master Index**: `MASTER_documentation-index.md`
+- **Master Index**: `master-documentation-index-2.md`
 - **Governance**: `documentation-governance.md`
-- **Coordination**: `bashscripts/docs/git/sync_remote_repo_coordination.md`
+- **Coordination**: `bashscripts/docs/git/sync-remote-repo-coordination-2.md`
 - **Analysis Report**: `docs/documentation-analysis-and-improvement-plan.md`
 
 ---

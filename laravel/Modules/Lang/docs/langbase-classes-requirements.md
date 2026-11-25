@@ -339,15 +339,15 @@ $value = $model->field;  // Ritorna traduzione 'en' se esiste, altrimenti fallba
 
 ### Documentazione Interna
 - [Notify Integration](../../Notify/docs/spatie-translatable-integration.md)
-- [Xot Filament Best Practices](../../Xot/docs/filament-best-practices.md)
+- [Xot Filament Best Practices](../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Notify Integration](../../notify/docs/spatie-translatable-integration.md)
-- [Xot Filament Best Practices](../../xot/docs/filament-best-practices.md)
+- [Xot Filament Best Practices](../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Notify Integration](../../notify/docs/spatie-translatable-integration.md)
 
 - [Notify Integration](../../Notify/docs/spatie-translatable-integration.md)
-- [Xot Filament Best Practices](../../xot/docs/filament-best-practices.md)
+- [Xot Filament Best Practices](../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Notify Integration](../../Notify/docs/spatie-translatable-integration.md)
-- [Xot Filament Best Practices](../../xot/docs/filament-best-practices.md)
+- [Xot Filament Best Practices](../../Xot/docs/consolidated/filament-best-practices-2.md)
 
 ---
 

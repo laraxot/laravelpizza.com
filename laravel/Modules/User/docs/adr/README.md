@@ -20,7 +20,7 @@ Scrivere un ADR solo per una scelta difficile da invertire, sorprendente o fonda
 
 Le decisioni vanno verificate contro codice e test correnti. Una modifica sostanziale crea un nuovo ADR e collega il precedente come `superseded` o `deprecated`.
 
-Il nome del file e' l'argomento in kebab-case, senza date ne' numeri (la data sta nella frontmatter). Questo README e' l'indice della cartella: ogni ADR compare qui come `[titolo](file.md)`; la tabella con lo stato di ciascuno e' in [INDEX.md](INDEX.md).
+Il nome del file e' l'argomento in kebab-case, senza date ne' numeri (la data sta nella frontmatter). Questo README e' l'indice della cartella: ogni ADR compare qui come `[titolo](file.md)`; la tabella con lo stato di ciascuno e' in [index.md](index.md).
 
 Regola canonica del formato: [action-behavioral-contract](../../../Xot/docs/rules/action-behavioral-contract.md); standard condivisi: [Xot ADR](../../../Xot/docs/adr/README.md).
 
@@ -76,8 +76,8 @@ Almeno un ADR per pacchetto e' "sostanziale": ha anche `## Driver` e `## Conferm
 
 - [contracts-and-lang-backup-archival](../wiki/decisions/contracts-and-lang-backup-archival.md)
 - [contracts-and-lang-backup-archival.deprecated](../wiki/decisions/contracts-and-lang-backup-archival.deprecated.md)
-- [contracts-and-lang-backup-archival-](../wiki/decisions/contracts-and-lang-backup-archival-.md)
-- [contracts-and-lang-backup-archival-.deprecated](../wiki/decisions/contracts-and-lang-backup-archival-.deprecated.md)
+- [contracts-and-lang-backup-archival-](../wiki/decisions/contracts-and-lang-backup-archival-2.md)
+- [contracts-and-lang-backup-archival-.deprecated](../wiki/decisions/contracts-and-lang-backup-archival-2.deprecated.md)
 - [contracts-and-lang-backup-archival-30](../wiki/decisions/contracts-and-lang-backup-archival-30.md)
 - [contracts-and-lang-backup-archival-30.deprecated](../wiki/decisions/contracts-and-lang-backup-archival-30.deprecated.md)
 - [archiviazione orfani (ponytail audit)](../wiki/decisions/contracts-and-lang-backup-archival-archiviazione-orfani-ponytail-audit.md)

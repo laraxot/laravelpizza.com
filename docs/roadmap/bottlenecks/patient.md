@@ -224,7 +224,7 @@
 ## Collegamenti
 - [Performance Guidelines](../../performance/guidelines.md)
 - [Integration Standards](../../integration/standards.md)
-- [Testing Best Practices](../../testing/best-practices.md)
+- [Testing Best Practices](../../../laravel/Modules/Activity/docs/best-practices-3.md)
 ## Collegamenti tra versioni di patient.md
 * [patient.md](docs/moduli/patient.md)
 * [patient.md](docs/roadmap/moduli/patient.md)

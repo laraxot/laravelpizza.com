@@ -45,7 +45,7 @@ condivisi dei pannelli Filament. Nessuna logica di dominio: solo presentazione.
   `@phpstan-var view-string` sul ramo true e un narrowing non dimostrato —
   da confermare con PHPStan a load rientrato. Non toccato per lock implicito.
 - `docs/bmad/` con duplicati case-differenti (`00-INDEX.md`/`00-index.md`,
-  `advanced-form-components.md`/`advanced_form_components.md`,
+  `advanced-form-components-2.md`/`advanced-form-components-2.md`,
   `readme.md`/`readme-en.md`/`README.md`): merge differito, stesso motivo
   dello story Sigma `web-service-docs-reorg-20260930` (link a rischio).
 - PHPStan full-module non eseguito: 3 job killati dal load (avg >100,

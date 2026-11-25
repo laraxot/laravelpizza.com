@@ -141,32 +141,10 @@ protected function getFormSchema(): array
 
 ## 🔗 **Collegamenti Documentazione**
 
-<<<<<<< .merge_file_LI2CgG
-<<<<<<< .merge_file_HASpfp
-- [Media Module README](../readme.md)
-=======
-=======
->>>>>>> .merge_file_dKtGPl
-<<<<<<< HEAD
-- [Media Module README](../README.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [Media Module README](../readme.md)
-=======
-- [Media Module README](../README.md)
->>>>>>> laraxot/dev
-=======
-- [Media Module README](../README.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_LI2CgG
->>>>>>> .merge_file_cM6J43
-=======
->>>>>>> .merge_file_dKtGPl
-- [Filament Best Practices](../../../../docs/filament-best-practices.md)
+- [Media Module README](../../README.md)
+- [Filament Best Practices](../../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Translation Rules](../../../../docs/translation-rules.md)
-- [PHPStan Guidelines](../../../../docs/phpstan-guidelines.md)
+- [PHPStan Guidelines](../../../Xot/docs/consolidated/phpstan/phpstan-guidelines-2.md)
 
 ## 📊 **Metriche Miglioramento**
 

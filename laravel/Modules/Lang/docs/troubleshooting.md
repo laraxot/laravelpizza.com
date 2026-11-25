@@ -375,11 +375,11 @@ php artisan lang:reset --force
 
 ### **1. Documentazione**
 - [README.md](README.md) - Documentazione principale
-- [best_practices.md](best_practices.md) - Best practices
+- [best-practices-3.md](best-practices-3.md) - Best practices
 - [README.md](README.md) - Documentazione principale
-- [best_practices.md](best_practices.md) - Best practices
+- [best-practices-3.md](best-practices-3.md) - Best practices
 - [README.md](README.md) - Documentazione principale
-- [best_practices.md](best_practices.md) - Best practices
+- [best-practices-3.md](best-practices-3.md) - Best practices
 - [config/lang.php](../config/lang.php) - Configurazione
 
 ### **2. Comandi Utili**

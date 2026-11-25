@@ -10,6 +10,7 @@ related:
   - ../../app/Filament/Forms/Components/CameraPhotoUpload.php
   - ../../resources/js/camera-image.js
   - ../stories/media-mobile-camera-upload.story.md
+qmd: "camera photo browser resize opt foto"
 ---
 
 # ADR: le foto da fotocamera si riducono nel browser, con un campo dedicato e non per tutti i FileUpload

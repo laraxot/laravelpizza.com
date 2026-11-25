@@ -2,7 +2,7 @@
 
 > **🎯 Single Source of Truth**: Questo documento centralizza TUTTA la documentazione migrazioni del progetto
 >
-> **🔗 Riferimenti**: [database-guidelines.md](database-guidelines.md) | [best-practices.md](best-practices.md)
+> **🔗 Riferimenti**: [database-guidelines.md](database-guidelines.md) | [best-practices-3.md](best-practices-3.md)
 
 ## 🚨 STOP DUPLICAZIONE!
 
@@ -12,9 +12,9 @@ Questo documento sostituisce e consolida **26+ file migrazioni duplicati** trova
 
 ### ❌ File da NON Creare Più
 - `migrations.md` in qualsiasi modulo
-- `migration-guide.md` duplicati
-- `migration_best_practices.md` sparsi
-- `migration_rules.md` in ogni modulo
+- `migration-guide-2.md` duplicati
+- `migration-best-practices-3.md` sparsi
+- `migration-rules-2.md` in ogni modulo
 - Qualsiasi documentazione migrazioni specifica di modulo
 
 ### ✅ Unica Fonte di Verità
@@ -425,21 +425,21 @@ rm Modules/Cms/project_docs/migration.md
 rm Modules/Gdpr/project_docs/migrations.md
 
 # Geo
-rm Modules/Geo/project_docs/migration-guide.md
-rm Modules/Geo/project_docs/migration-naming-pattern.md
-rm Modules/Geo/project_docs/migration_guide.md
-rm Modules/Geo/project_docs/migration_naming_pattern.md
+rm Modules/Geo/docs/migration-guide-2.md
+rm Modules/Geo/docs/migration-naming-pattern-2.md
+rm Modules/Geo/docs/migration-guide-2.md
+rm Modules/Geo/docs/migration-naming-pattern-2.md
 
 # Lang
-rm Modules/Lang/project_docs/migration_best_practices.md
-rm Modules/Lang/project_docs/migration_corrections_summary.md
-rm Modules/Lang/project_docs/migration_patterns.md
+rm Modules/Lang/docs/migration-best-practices-3.md
+rm Modules/Lang/docs/migration-corrections-summary-2.md
+rm Modules/Lang/docs/migration-patterns-2.md
 
 # Notify
-rm Modules/Notify/project_docs/migration_changes.md
-rm Modules/Notify/project_docs/migration_rules.md
+rm Modules/Notify/docs/migration-changes-2.md
+rm Modules/Notify/docs/migration-rules-2.md
 rm Modules/Notify/project_docs/migrations.md
-rm Modules/Notify/project_docs/migrations_changelog.md
+rm Modules/Notify/docs/migrations-changelog-2.md
 
 # <nome progetto>
 rm Modules/<nome progetto>/project_docs/database/migrations.md
@@ -469,7 +469,7 @@ rm Modules/<nome progetto>/project_docs/database/migrations.md
 
 **🎯 Obiettivo**: Da 26+ file duplicati a 1 file centralizzato
 **📈 Beneficio**: 96% riduzione duplicazioni, manutenzione semplificata
-**🔗 Vedi anche**: [database-guidelines.md](database-guidelines.md) | [best-practices.md](best-practices.md)
+**🔗 Vedi anche**: [database-guidelines.md](database-guidelines.md) | [best-practices-3.md](best-practices-3.md)
 
 **Aggiornato**: 2025-08-07
 **Categoria**: database

@@ -10,14 +10,14 @@ issues:
 discussions:
 related:
 <<<<<<< HEAD
-  - "./AGENTS.md"
+  - "./agents-2.md"
 =======
 <<<<<<< HEAD
   - "./agents.md"
 <<<<<<< .merge_file_2RBtzJ
 =======
 =======
-  - "./AGENTS.md"
+  - "./agents-2.md"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_VNy3bD

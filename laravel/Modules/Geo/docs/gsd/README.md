@@ -131,10 +131,10 @@ $gsd-help
 │  │    → Cattura decisioni implementative → CONTEXT.md      │ │
 │  │                                                         │ │
 │  │  /gsd:plan-phase [N]                                    │ │
-│  │    → Research + Plan + Verify → plan.md                 │ │
+│  │    → Research + Plan + Verify → plan-2.md                 │ │
 │  │                                                         │ │
 │  │  /gsd:execute-phase [N]                                 │ │
-│  │    → Esecuzione a wave → Commit atomici → summary.md    │ │
+│  │    → Esecuzione a wave → Commit atomici → summary-2.md    │ │
 │  │                                                         │ │
 │  │  /gsd:verify-work [N]                                   │ │
 │  │    → User acceptance testing → UAT.md                   │ │
@@ -163,9 +163,9 @@ $gsd-help
 
 **File creati**:
 - `PROJECT.md` — Vision del progetto
-- `REQUIREMENTS.md` — Requirements scoped con traceability
+- `requirements-2.md` — Requirements scoped con traceability
 - `roadmap.md` — Fasi mappate ai requirements
-- `STATE.md` — Documento living per decisioni e blockers
+- `state-2.md` — Documento living per decisioni e blockers
 - `.planning/research/` — Research findings
 
 **Pro tip**: Preparati con descrizione dettagliata:
@@ -344,13 +344,13 @@ GSD usa structured files per context engineering:
 | File | Purpose | Always Loaded |
 |------|---------|---------------|
 | **PROJECT.md** | Project vision | ✅ |
-| **REQUIREMENTS.md** | Scoped v1/v2 requirements | ✅ |
+| **requirements-2.md** | Scoped v1/v2 requirements | ✅ |
 | **roadmap.md** | Where you're going, what's done | ✅ |
-| **STATE.md** | Decisions, blockers, memory | ✅ |
+| **state-2.md** | Decisions, blockers, memory | ✅ |
 | **research/** | Ecosystem knowledge | Per-phase |
 | **CONTEXT.md** | Implementation decisions | Per-phase |
-| **plan.md** | Atomic task with XML structure | Per-task |
-| **summary.md** | What happened, committed to history | Per-task |
+| **plan-2.md** | Atomic task with XML structure | Per-task |
+| **summary-2.md** | What happened, committed to history | Per-task |
 | **VERIFICATION.md** | Verification results | Per-phase |
 | **UAT.md** | User acceptance testing | Per-phase |
 | **todos/** | Captured ideas for later | ✅ |
@@ -361,22 +361,22 @@ GSD usa structured files per context engineering:
 .planning/
 ├── config.json              # Project configuration
 ├── PROJECT.md               # Project vision
-├── REQUIREMENTS.md          # Scoped requirements (v1/v2)
+├── requirements-2.md          # Scoped requirements (v1/v2)
 ├── roadmap.md               # Phase roadmap with completion status
-├── STATE.md                 # Decisions, blockers, memory
+├── state-2.md                 # Decisions, blockers, memory
 ├── research/                # Domain research per phase
-│   └── {phase_num}-RESEARCH.md
+│   └── {phase_num}-research-2.md
 ├── {phase_num}-CONTEXT.md   # Implementation decisions
-├── {phase_num}-{N}-PLAN.md  # Atomic task plans (XML)
-├── {phase_num}-{N}-SUMMARY.md # Execution results
+├── {phase_num}-{N}-plan-2.md  # Atomic task plans (XML)
+├── {phase_num}-{N}-summary-2.md # Execution results
 ├── {phase_num}-VERIFICATION.md # Phase verification
 ├── {phase_num}-UAT.md       # User acceptance testing
 ├── todos/                   # Captured ideas
 │   └── pending.md
 └── quick/                   # Quick mode tasks
     └── 001-task-name/
-        ├── plan.md
-        └── summary.md
+        ├── plan-2.md
+        └── summary-2.md
 ```
 
 ---
@@ -433,8 +433,8 @@ Per task ad-hoc che non need full planning:
 ```
 
 **Output**:
-- `.planning/quick/001-add-dark-mode-toggle/plan.md`
-- `.planning/quick/001-add-dark-mode-toggle/summary.md`
+- `../laravel-13-upgrade/plan-2.md`
+- `../../../Notify/docs/bugs/summary-2.md`
 
 ---
 
@@ -555,22 +555,22 @@ bmad-laravel-module-dev --module=Scheda
 │     ↓                                               │
 │  2. Discuss Phase                                   │
 │     ↓                                               │
-│  3. Plan Phase (plan.md)                            │
+│  3. Plan Phase (plan-2.md)                            │
 │     ↓                                               │
 │  4. Execute (Wave Execution)                        │
 │     ↓                                               │
 │  5. Verify (UAT + Debug)                            │
 │     ↓                                               │
-│  6. Complete Milestone (STATE.md)                   │
+│  6. Complete Milestone (state-2.md)                   │
 └─────────────────────────────────────────────────────┘
 
 KEY FILES:
 - PROJECT.md    → Vision
-- REQUIREMENTS.md → Scope
+- requirements-2.md → Scope
 - roadmap.md    → Direction
-- STATE.md      → Memory
-- plan.md       → Tasks
-- summary.md    → History
+- state-2.md      → Memory
+- plan-2.md       → Tasks
+- summary-2.md    → History
 
 QUICK MODE:
 /gsd:quick [--discuss] [--research] [--full]

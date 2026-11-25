@@ -5,7 +5,7 @@ module: Media
 status: approved
 track: livewire-to-filament-widget
 related:
-  - ./LIVEWIRE-WIDGET-CONVERSION.md
+  - ./livewire-widget-conversion-2.md
   - ./livewire-widget-architecture.md
   - ./livewire-widget-brainstorming.md
   - ./livewire-widget-decision-log.md
@@ -16,13 +16,14 @@ related:
   - ./livewire-widget-tech-spec.md
   - ./livewire-widget-ux.md
   - ../stories/12.1.media-clip-not-widget.story.md
+qmd: "livewire inventory inventario httplivewire filament widget"
 ---
 
 # Inventario: Livewire HTTP → Filament widget, modulo Media
 
 **Solo documentazione. Nessun PHP convertito, nessun widget creato.**
 
-Questo file è la fonte canonica per il modulo Media sulla campagna di conversione Livewire → Filament widget. Sostituisce nei contenuti tecnici `LIVEWIRE-WIDGET-CONVERSION.md` (2026-08-25), la cui proposta di conversione era basata su un'ipotesi non verificata; quel file resta in linea come puntatore superseded, non va cancellato.
+Questo file è la fonte canonica per il modulo Media sulla campagna di conversione Livewire → Filament widget. Sostituisce nei contenuti tecnici `livewire-widget-conversion-2.md` (2026-08-25), la cui proposta di conversione era basata su un'ipotesi non verificata; quel file resta in linea come puntatore superseded, non va cancellato.
 
 Una sessione concorrente ha scritto in parallelo, lo stesso giorno (21/09/2026), un pacchetto di stub BMAD (`livewire-widget-*.md`) e la story `12.1.media-clip-not-widget.story.md`, arrivando allo stesso verdetto di merito (Clip non è candidato a widget). Questo documento ne verifica ogni affermazione contro il codice reale, aggiunge le citazioni file:riga mancanti e corregge un'imprecisione (si veda "Correzione rispetto ai documenti paralleli" più sotto), invece di duplicare l'inventario.
 
@@ -91,7 +92,7 @@ Non esiste una directory `Modules/Media/app/Filament/Widgets` autonoma: gli unic
 
 ## Perché non si crea un widget nuovo
 
-Costruire un `ClipWidget` (o `MediaVideoWidget`, come proponeva `LIVEWIRE-WIDGET-CONVERSION.md`) per un componente che non risulta montato da nessuna parte del codice sarebbe scrivere codice nuovo per rimpiazzare codice morto, cioè introdurre superficie senza rimuoverne — l'opposto dell'obiettivo della campagna (ridurre gli alias Livewire nel chrome Filament). Se in futuro emergesse un uso reale di `Clip` in front-office (es. via un tema non ancora ispezionato o un piano di rilascio non ancora mergiato), la story corretta sarebbe comunque valutare quell'uso concreto, non anticipare un widget dashboard che oggi non ha nessun consumatore.
+Costruire un `ClipWidget` (o `MediaVideoWidget`, come proponeva `livewire-widget-conversion-2.md`) per un componente che non risulta montato da nessuna parte del codice sarebbe scrivere codice nuovo per rimpiazzare codice morto, cioè introdurre superficie senza rimuoverne — l'opposto dell'obiettivo della campagna (ridurre gli alias Livewire nel chrome Filament). Se in futuro emergesse un uso reale di `Clip` in front-office (es. via un tema non ancora ispezionato o un piano di rilascio non ancora mergiato), la story corretta sarebbe comunque valutare quell'uso concreto, non anticipare un widget dashboard che oggi non ha nessun consumatore.
 
 ## Story collegate
 
@@ -101,7 +102,7 @@ Costruire un `ClipWidget` (o `MediaVideoWidget`, come proponeva `LIVEWIRE-WIDGET
 
 Scritti dalla sessione concorrente in parallelo a questa verifica. Non contengono errori di merito (il verdetto coincide), ma sono stub telegrafici senza citazioni: restano come satelliti, questo file è la fonte canonica per chi deve verificare un'affermazione.
 
-- [LIVEWIRE-WIDGET-CONVERSION.md](./LIVEWIRE-WIDGET-CONVERSION.md) — versione precedente (2026-08-25), marcata superseded in questa sessione perché proponeva la conversione senza aver verificato il montaggio.
+- [livewire-widget-conversion-2.md](./livewire-widget-conversion-2.md) — versione precedente (2026-08-25), marcata superseded in questa sessione perché proponeva la conversione senza aver verificato il montaggio.
 - livewire-widget-architecture.md, livewire-widget-brainstorming.md, livewire-widget-decision-log.md, livewire-widget-epics.md, livewire-widget-prd.md, livewire-widget-product-brief.md, livewire-widget-project-context.md, livewire-widget-tech-spec.md, livewire-widget-ux.md — satelliti allineati nella revisione del 21/09/2026 alla diagnosi corretta ("orfano puro", non "FO in uso"), con puntatore a questo file per le citazioni file:riga.
 
 ## Riverifica del 21/09/2026 — `Clip` rimosso

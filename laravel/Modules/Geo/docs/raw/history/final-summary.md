@@ -176,7 +176,7 @@ CAST(JSON_UNQUOTE(JSON_EXTRACT(extra_attributes, '$.anno')) AS SIGNED) = ?
 ### Start Points
 
 - 🎯 [START-HERE.md](docs/START-HERE.md) - Entry for all roles
-- 🗺️ [MASTER-INDEX.md](docs/MASTER-INDEX.md) - Complete map
+- 🗺️ [master-index-2.md](docs/master-index-2.md) - Complete map
 - ✅ [ANALYSIS-COMPLETE.md](docs/ANALYSIS-COMPLETE.md)
 
 ### Module Docs
@@ -187,7 +187,7 @@ CAST(JSON_UNQUOTE(JSON_EXTRACT(extra_attributes, '$.anno')) AS SIGNED) = ?
 - [Analysis Summary](laravel/Modules/IndennitaResponsabilita/docs/analysis-summary.md)
 - [Refactoring Plan](laravel/Modules/IndennitaResponsabilita/docs/refactoring-action-plan.md) - 18 tasks
 - [Best Practices](laravel/Modules/IndennitaResponsabilita/docs/best-practices.md)
-- [Code Quality Analysis](laravel/Modules/IndennitaResponsabilita/docs/code-quality-analysis.md)
+- [Code Quality Analysis](laravel/Modules/Activity/docs/code-quality-analysis-3.md)
 - [Trait Responsibility](laravel/Modules/IndennitaResponsabilita/docs/trait-responsibility-violation.md)
 - [Why getRatings Should Move](laravel/Modules/IndennitaResponsabilita/docs/why-getratings-should-move.md)
 

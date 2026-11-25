@@ -47,11 +47,11 @@ This document provides guidelines for using strict typing in PHP within a Larave
 - Update this document if new strict typing features or practices are introduced in PHP.
 
 ## Links to Related Documentation
-- [Code Quality](./CODE_QUALITY.md)
-- [PHPStan Implementation Guide](./PHPSTAN-IMPLEMENTATION-GUIDE.md)
+- [Code Quality](./code-quality-2.md)
+- [PHPStan Implementation Guide](phpstan/phpstan-implementation-guide-2.md)
 - [Naming Conventions](./NAMING-CONVENTIONS.md)
 - [Service Provider Best Practices](./SERVICE-PROVIDER-BEST-PRACTICES.md)
-- [Filament Best Practices](./FILAMENT-BEST-PRACTICES.md)
+- [Filament Best Practices](filament-best-practices-2.md)
 # PHP Strict Types in Laravel Modules
 
 ## Overview
@@ -101,8 +101,8 @@ This document provides guidelines for using strict typing in PHP within a Larave
 - Update this document if new strict typing features or practices are introduced in PHP.
 
 ## Links to Related Documentation
-- [Code Quality](./CODE_QUALITY.md)
-- [PHPStan Implementation Guide](./PHPSTAN-IMPLEMENTATION-GUIDE.md)
+- [Code Quality](./code-quality-2.md)
+- [PHPStan Implementation Guide](phpstan/phpstan-implementation-guide-2.md)
 - [Naming Conventions](./NAMING-CONVENTIONS.md)
 - [Service Provider Best Practices](./SERVICE-PROVIDER-BEST-PRACTICES.md)
-- [Filament Best Practices](./FILAMENT-BEST-PRACTICES.md)
+- [Filament Best Practices](filament-best-practices-2.md)

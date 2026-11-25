@@ -11,10 +11,7 @@ created: 2026-11-18
 updated: 2026-11-18
 tags: [parcheggio, debito-tecnico]
 description: "File con estensione finta spostati fuori da app/ in UI, con il motivo per ciascuna famiglia."
-<<<<<<< .merge_file_RMgpzl
 qmd: "parcheggiati"
-=======
->>>>>>> .merge_file_detua2
 ---
 
 # File parcheggiati — UI

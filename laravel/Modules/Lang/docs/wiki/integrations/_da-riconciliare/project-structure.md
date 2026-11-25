@@ -37,13 +37,13 @@ tags: [structure, architecture, module]
 │   │   └── *.md
 │   ├── decisions/                # Architecture decision records
 │   └── troubleshooting/          # Bug fixes, error resolutions
-├── ON-DEMAND-PATTERN.md          # 🌟 QUESTO FILE — Pattern on-demand
-├── QMD-SETUP.md                  # Configurazione QMD
-├── PERFORMANCE-OPTIMIZATION.md    # Metriche e best practice
+├── on-demand-pattern-3.md          # 🌟 QUESTO FILE — Pattern on-demand
+├── qmd-setup-3.md                  # Configurazione QMD
+├── performance-optimization-3.md    # Metriche e best practice
 ├── ARCHITECTURE.md               # (opzionale) Architettura modulo
 
 ├── on-demand-pattern.md          # 🌟 QUESTO FILE — Pattern on-demand
-├── qmd-setup.md                  # Configurazione QMD
+├── qmd-setup-3.md                  # Configurazione QMD
 ├── performance-optimization.md    # Metriche e best practice
 ├── architecture.md               # (opzionale) Architettura modulo
 └── README.md                     # (opzionale) Overview modulo
@@ -57,7 +57,7 @@ tags: [structure, architecture, module]
 | `wiki/log.md` | Storico attività (ingest/query/lint) |
 | `wiki/rules/` | Regole + trigger map locale |
 | `wiki/concepts/` | Concetti specifici del modulo |
-| `ON-DEMAND-PATTERN.md` | **Leggi prima** — pattern da seguire |
+| `on-demand-pattern-3.md` | **Leggi prima** — pattern da seguire |
 
 | `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
 

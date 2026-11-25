@@ -149,6 +149,6 @@ L'implementazione dei canali di notifica  segue un'architettura coerente e ben s
 ## Collegamenti a Documentazione Correlata
 - [Modulo di Notifica](./INDEX.md)
 - [Panoramica dell'Architettura](./ARCHITECTURE.md)
-- [Modelli di Email](./EMAIL_TEMPLATES.md)
-- [Implementazione SMS](./SMS_IMPLEMENTATION.md)
+- [Modelli di Email](../laravel/Modules/Notify/docs/email-templates-2.md)
+- [Implementazione SMS](../laravel/Modules/Notify/docs/sms-implementation-2.md)
 - [Risoluzione dei Problemi](./TROUBLESHOOTING.md)

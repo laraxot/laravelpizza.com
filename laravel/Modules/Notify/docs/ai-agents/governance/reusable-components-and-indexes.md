@@ -55,7 +55,7 @@ Ogni fix o nuova feature deve preferire componenti riusabili, documentazione can
 =======
 - modulo e tema aggiornano i rispettivi `docs/00-index.md` quando si tocca il loro perimetro
 >>>>>>> .merge_file_1Ln5kJ
-- `AGENTS.md`, `CLAUDE.md`, `qwen.md` devono puntare a documenti canonici, non duplicarne il contenuto
+- `AGENTS.md`, `CLAUDE.md`, `qwen-2.md` devono puntare a documenti canonici, non duplicarne il contenuto
 
 ## Anti pattern
 

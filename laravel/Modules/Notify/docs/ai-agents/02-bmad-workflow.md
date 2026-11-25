@@ -51,7 +51,7 @@ discussions: []
 =======
 >>>>>>> .merge_file_yix7VP
 **Part of**: [00-INDEX.md](00-index.md) — AI Agents Coordination  
-**Related**: [01-GSD-WORKFLOW.md](01-gsd-workflow.md) — GSD Method
+**Related**: [01-gsd-workflow-2.md](01-gsd-workflow.md) — GSD Method
 
 ## 📋 Overview
 
@@ -203,7 +203,7 @@ Agents discuss together and reach consensus.
 <<<<<<< HEAD
 <<<<<<< .merge_file_lPHAi5
 <<<<<<< .merge_file_L5NTxF
-- ✅ document decisions in state.md
+- ✅ document decisions in state-2.md
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -211,18 +211,18 @@ Agents discuss together and reach consensus.
 >>>>>>> .merge_file_4gv8oO
 =======
 >>>>>>> .merge_file_yix7VP
-- ✅ Document decisions in STATE.md
+- ✅ Document decisions in state-2.md
 =======
 <<<<<<< HEAD
-- ✅ document decisions in state.md
+- ✅ document decisions in state-2.md
 =======
-- ✅ Document decisions in STATE.md
+- ✅ Document decisions in state-2.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_lPHAi5
 <<<<<<< .merge_file_L5NTxF
 =======
-- ✅ document decisions in state.md
+- ✅ document decisions in state-2.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======

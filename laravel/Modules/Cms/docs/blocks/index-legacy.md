@@ -18,7 +18,7 @@ related:
   - ../index.md
 =======
 <<<<<<< HEAD
-  - ../INDEX.md
+  - ../index-2.md
 =======
   - ../index.md
 >>>>>>> laraxot/dev

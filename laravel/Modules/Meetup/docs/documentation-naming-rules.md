@@ -5,12 +5,12 @@
 ### ❌ COSA NON FARE MAI
 - ❌ **NON** usare caratteri MAIUSCOLI nei nomi file .md
 - ❌ **NON** creare nuove cartelle docs - usare quelle esistenti
-- ❌ **NON** mettere file .md fuori dalle cartelle docs (eccetto README.md e CHANGELOG.md)
+- ❌ **NON** mettere file .md fuori dalle cartelle docs (eccetto README.md e changelog.md)
 
 ### ✅ COSA FARE SEMPRE
 - ✅ Usare **solo lowercase** per nomi file .md
 - ✅ Usare **hyphens** invece di underscores: `file-name.md` non `file_name.md`
-- ✅ **SOLO** README.md e CHANGELOG.md possono avere maiuscole
+- ✅ **SOLO** README.md e changelog.md possono avere maiuscole
 - ✅ Tutti gli altri file .md devono essere in **lowercase**
 - ✅ Usare cartelle docs esistenti, NON crearne di nuove
 
@@ -20,7 +20,7 @@
 ```
 Modules/Meetup/docs/
 ├── README.md                    # ✅ Permesso - maiuscole OK
-├── CHANGELOG.md                # ✅ Permesso - maiuscole OK
+├── changelog.md                # ✅ Permesso - maiuscole OK
 ├── project-purpose.md          # ✅ lowercase
 ├── implementation-plan.md      # ✅ lowercase
 ├── folio-volt-architecture.md  # ✅ lowercase + hyphens
@@ -32,7 +32,7 @@ Modules/Meetup/docs/
 ```
 Modules/Meetup/docs/
 ├── PROJECT-PURPOSE.md          # ❌ MAIUSCOLE non permesse
-├── Implementation-Plan.md      # ❌ Maiuscole miste
+├── implementation-plan-2.md      # ❌ Maiuscole miste
 ├── folio_volt_architecture.md  # ❌ underscores invece di hyphens
 ├── SEO-Marketing-Plan.md       # ❌ MAIUSCOLE non permesse
 └── MonetizationStrategy.md     # ❌ CamelCase non permesso
@@ -42,7 +42,7 @@ Modules/Meetup/docs/
 
 ### Permessi
 - **README.md** - In qualsiasi directory (root progetto, moduli, tema, ecc.)
-- **CHANGELOG.md** - In root moduli
+- **changelog.md** - In root moduli
 - **LICENSE.md** - In root progetto
 - **CONTRIBUTING.md** - In root progetto
 
@@ -160,8 +160,8 @@ docs/
 
 ## Regole da Ricordare Sempre
 
-1. ❌ **NO** maiuscole in nomi file .md (eccetto README.md e CHANGELOG.md)
-2. ❌ **NO** file .md fuori docs/ (eccetto README.md e CHANGELOG.md)
+1. ❌ **NO** maiuscole in nomi file .md (eccetto README.md e changelog.md)
+2. ❌ **NO** file .md fuori docs/ (eccetto README.md e changelog.md)
 3. ❌ **NO** nuove cartelle docs - usare quelle esistenti
 4. ✅ **SI** lowercase + hyphens per tutti i file .md
 5. ✅ **SI** organizzazione logica dentro docs/

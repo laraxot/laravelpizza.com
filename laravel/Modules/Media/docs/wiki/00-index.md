@@ -17,20 +17,20 @@ related:
 ## 🎯 **Lettura Essenziale**
 1. [README.md](README.md) - Panoramica completa, Upload e Processing.
 2. [roadmap.md](./roadmap.md) - Obiettivi di trasformazione e AI 2026.
-3. [philosophy.md](./philosophy.md) - "Il file come entità": la nostra visione del media.
+3. [philosophy-3.md](../../../Lang/docs/philosophy-3.md) - "Il file come entità": la nostra visione del media.
 
 ## 🎞️ **Video & Image Processing**
 - 🎥 **[FFmpeg Integration](./ffmpeg-integration.md)** - Guida alla gestione video e codec.
-- 🖼️ **[Image Optimization](./file-management-architecture.md)** - Architettura di trasformazione immagini.
+- 🖼️ **[Image Optimization](../file-management-architecture-2.md)** - Architettura di trasformazione immagini.
 - 🔄 **[Auto Conversions](./conversione-media.md)** - Logic per preview e watermark.
 
 ## ☁️ **Cloud & Storage**
-- ☁️ **[S3 Integration](./s3test-corrections.md)** - Guida alla configurazione AWS S3/Minio.
+- ☁️ **[S3 Integration](../s3test-corrections-2.md)** - Guida alla configurazione AWS S3/Minio.
 - 📁 **[File Management](./file-management.md)** - Organizzazione directory e disk strategy.
 - 📄 **[Responsive Images](./webm.md)** - Gestione formati moderni (WebP, AVIF).
 
 ## 🎨 **Filament & UI**
-- 🖼️ **[Media Library](./filament.md)** - La libreria media in Filament.
+- 🖼️ **[Media Library](../../../Activity/docs/filament-3.md)** - La libreria media in Filament.
 - 🛠️ **[Table Actions](./filament-table-actions.md)** - Azioni di massa su file e directory.
 
 ## 🧪 **Qualità e Sviluppo**
@@ -70,21 +70,21 @@ related:
 | File | Scopo |
 |------|-------|
 | PRD.md | Product Requirements |
-| product_roadmap.md | Roadmap |
-| product_strategy.md | Strategy |
-| product_launch_plan.md | Launch Plan |
+| product-roadmap-2.md | Roadmap |
+| product-strategy-2.md | Strategy |
+| product-launch-plan-2.md | Launch Plan |
 
 ### Development
 | File | Scopo |
 |------|-------|
-| gsd_workflow.md | GSD Workflow |
-| sprint_planning.md | Sprint Planning |
-| user_research.md | User Research |
+| gsd-workflow-3.md | GSD Workflow |
+| sprint-planning-2.md | Sprint Planning |
+| user-research-2.md | User Research |
 
 ## 🔗 Riferimenti
 
 - [Xot Module](../Xot/docs/00-index.md) - Base classes
-- [AGENTS.md](../../../../AGENTS.md) - Project guidelines
+- [agents-2.md](../../../../agents-2.md) - Project guidelines
 
 ---
 

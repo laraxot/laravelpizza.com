@@ -6,10 +6,7 @@ module: "Tenant"
 tags: [docs, tenant, bmad]
 created: 2026-10-06
 updated: 2026-10-06
-<<<<<<< .merge_file_fcFMA4
 qmd: "case variant collisions casevariantcollisionsmd"
-=======
->>>>>>> .merge_file_PvG4Vm
 ---
 
 # Collisioni di nome per sola differenza di maiuscole

@@ -20,7 +20,7 @@
   - `conflicts/README.md`
   - `git-management/README.md`
   - `fix_merge_conflicts_docs.md`
-  - `scripts/git/git_subtree_error_resolution.md`
+  - `scripts/git/git-subtree-error-resolution-2.md`
   - `pdf/test_info2.md`
 
 ### Moduli Laravel

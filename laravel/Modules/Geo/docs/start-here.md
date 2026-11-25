@@ -88,7 +88,7 @@ discussions: []
 | Document | Topic | Time | Priority |
 |----------|-------|------|----------|
 | [Root README](./README.md) | Navigation hub | 10 min | 🔴 |
-| [Master Index](./MASTER-INDEX.md) | Complete map | 5 min | 🔴 |
+| [Master Index](./master-index-2.md) | Complete map | 5 min | 🔴 |
 | [Claude Architecture](./claude/architecture-rules.md) | Core rules | 15 min | 🔴 |
 | [Analysis Complete](./ANALYSIS-COMPLETE.md) | Recent work | 5 min | 🟡 |
 
@@ -209,7 +209,7 @@ class MyPage extends Modules\Xot\Filament\Pages\XotBasePage { }
 
 | Category | Link |
 |----------|------|
-| **Master Index** | [Complete Map](./MASTER-INDEX.md) |
+| **Master Index** | [Complete Map](./master-index-2.md) |
 | **Analysis** | [Complete 2025](./ANALYSIS-COMPLETE.md) |
 | **Claude AI** | [Guidelines](./claude/README.md) |
 | **Architecture** | [Rules](./claude/architecture-rules.md) |
@@ -229,7 +229,7 @@ cd /var/www/_bases/base_ptvx_fila5_mono/laravel
 php artisan test --coverage
 
 # View Docs
-cat docs/MASTER-INDEX.md
+cat docs/master-index-2.md
 cat README-ANALYSIS.md
 ```
 
@@ -237,7 +237,7 @@ cat README-ANALYSIS.md
 
 ## 💡 Pro Tips
 
-1. **Use Master Index**: All docs are linked from [MASTER-INDEX.md](./MASTER-INDEX.md)
+1. **Use Master Index**: All docs are linked from [master-index-2.md](./master-index-2.md)
 2. **Check Analysis First**: [ANALYSIS-COMPLETE.md](./ANALYSIS-COMPLETE.md) has the summary
 3. **Follow Action Plan**: [Refactoring Plan](../laravel/Modules/IndennitaResponsabilita/docs/refactoring-action-plan.md) has step-by-step tasks
 4. **PHPStan is King**: Always run Level 10 before commit

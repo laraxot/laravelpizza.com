@@ -11,7 +11,7 @@ discussions: []
 
 # Requirements Template
 
-Template for `.planning/REQUIREMENTS.md` — checkable requirements that define "done."
+Template for `.planning/requirements-2.md` — checkable requirements that define "done."
 
 <template>
 

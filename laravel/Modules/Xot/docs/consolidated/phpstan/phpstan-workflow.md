@@ -185,18 +185,18 @@ Il progetto utilizza un'architettura modulare con Laravel Modules:
      - .cursor/rules per Cursor AI
      - .windsurfrules per Windsurf
    - Mantenere coerenza tra le diverse documentazioni
-## Collegamenti tra versioni di PHPSTAN_WORKFLOW.md
-* [PHPSTAN_WORKFLOW.md](../../../Xot/project_docs/phpstan/PHPSTAN_WORKFLOW.md)
-* [PHPSTAN_WORKFLOW.md](../../../Xot/project_docs/PHPSTAN_WORKFLOW.md)
+## Collegamenti tra versioni di phpstan-workflow-2.md
+* [phpstan-workflow-2.md](phpstan-workflow-2.md)
+* [phpstan-workflow-2.md](phpstan-workflow-2.md)
 
-## Collegamenti tra versioni di phpstan_workflow.md
+## Collegamenti tra versioni di phpstan-workflow-2.md
 ### Versione HEAD
 
-* [phpstan_workflow.md](phpstan/phpstan_workflow.md)
+* [phpstan-workflow-2.md](phpstan/phpstan-workflow-2.md)
 
 ### Versione Incoming
 
-* [phpstan_workflow.md](../phpstan_workflow.md)
+* [phpstan-workflow-2.md](../phpstan-workflow-2.md)
 
 ---
 
@@ -371,17 +371,17 @@ class MyModel extends BaseModel
      - .cursor/rules per Cursor AI
      - .windsurfrules per Windsurf
    - Mantenere coerenza tra le diverse documentazioni
-## Collegamenti tra versioni di PHPSTAN_WORKFLOW.md
-* [PHPSTAN_WORKFLOW.md](../../../Xot/project_docs/phpstan/PHPSTAN_WORKFLOW.md)
-* [PHPSTAN_WORKFLOW.md](../../../Xot/project_docs/PHPSTAN_WORKFLOW.md)
+## Collegamenti tra versioni di phpstan-workflow-2.md
+* [phpstan-workflow-2.md](phpstan-workflow-2.md)
+* [phpstan-workflow-2.md](phpstan-workflow-2.md)
 
-## Collegamenti tra versioni di phpstan_workflow.md
+## Collegamenti tra versioni di phpstan-workflow-2.md
 ### Versione HEAD
 
-* [phpstan_workflow.md](phpstan/phpstan_workflow.md)
+* [phpstan-workflow-2.md](phpstan/phpstan-workflow-2.md)
 
 ### Versione Incoming
 
-* [phpstan_workflow.md](../phpstan_workflow.md)
+* [phpstan-workflow-2.md](../phpstan-workflow-2.md)
 
 ---

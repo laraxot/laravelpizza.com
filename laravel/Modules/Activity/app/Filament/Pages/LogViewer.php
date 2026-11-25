@@ -31,8 +31,6 @@ use Modules\Xot\Filament\Pages\XotBasePage;
  * Download: Action Filament + {@see DownloadLogFileAction} (BinaryFileResponse).
  * Nei progetti FO con Cms resta anche la pagina Folio `pages/api/log-download` (FolioVolt);
  * in PTVX Cms e' assente: non si monta Folio da Activity ne' da App FolioServiceProvider.
- *
- * @see Modules/Activity/docs/log-viewer.md
  */
 class LogViewer extends XotBasePage
 {

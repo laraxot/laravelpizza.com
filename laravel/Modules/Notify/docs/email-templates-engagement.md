@@ -246,9 +246,9 @@ Questo documento definisce le best practices per la creazione di template email 
 
 ## Collegamenti Correlati
 
-- [Struttura Template](./mail_templates_structure.md)
-- [Best Practices HTML](./email_html_best_practices.md)
-- [Template Base](./base_templates.md)
+- [Struttura Template](./mail-templates-structure-2.md)
+- [Best Practices HTML](./email-html-best-practices-2.md)
+- [Template Base](./base-templates-2.md)
 
 ## Supporto
 

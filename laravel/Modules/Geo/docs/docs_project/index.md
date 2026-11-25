@@ -16,7 +16,7 @@ discussions: []
 ### Documentazione Consolidata
 - [**Business Logic Consolidata**](business-logic-consolidated.md) - Analisi completa della business logic del sistema sanitario
 - [**Factory e Seeder Consolidati**](factory-seeder-consolidated.md) - Stato completo di factory e seeder per tutti i moduli
-- [**Business Logic Analysis**](business-logic-analysis.md) - Analisi dettagliata della business logic
+- [**Business Logic Analysis**](business-logic-analysis-3.md) - Analisi dettagliata della business logic
 - [**Laraxot Architecture Principles**](laraxot-architecture-principles.md) - Principi architetturali del framework
 
 ### Analisi Moduli

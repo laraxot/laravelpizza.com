@@ -131,7 +131,7 @@ Per qualsiasi modulo (es. **Sigma**):
 1. **Leggi prima la documentazione del modulo**:
    - `Modules/Sigma/docs/README.md`
    - `Modules/Sigma/docs/architecture.md`
-   - eventuali `business-logic*.md` o `summary.md`
+   - eventuali `business-logic*.md` o `summary-2.md`
 
 2. **Scopri chi lo usa**:
    - Cerca `Modules\Sigma` nel codice per capire da quali moduli è chiamato.
@@ -150,7 +150,7 @@ Per qualsiasi modulo (es. **Sigma**):
 
 ## 6. Ruolo di CLAUDE.md
 
-Il file `laravel/CLAUDE.md` ora è solo un **wrapper leggero** che punta alla documentazione ufficiale (questo file e i doc di modulo).
+Il file `laravel/Modules/Geo/docs/root-md-files/claude.md` ora è solo un **wrapper leggero** che punta alla documentazione ufficiale (questo file e i doc di modulo).
 
 Quando devi capire le regole del progetto:
 
@@ -221,7 +221,7 @@ Per ogni intervento (codice o doc):
 ## Gestione Documentazione
 ### Struttura Docs
 - /docs
-  - project_notes.md - Note tecniche e best practices
+  - project-notes-2.md - Note tecniche e best practices
   - assistant.md - Documentazione dell'assistente
   - getting-started/ - Guide di installazione e setup
 

@@ -39,8 +39,8 @@ qmd: "consolidation analysis   activity module activity"
 ```
 laravel/Modules/Activity/
 ├── docs/
-│   ├── CONSOLIDATION_ANALYSIS.md (this file)
-│   ├── CRITICAL_MIGRATION_CONSTRAINTS.md ← rename for clarity
+│   ├── consolidation-analysis-2.md (this file)
+│   ├── critical-migration-constraints-2.md ← rename for clarity
 │   └── ... (other Activity docs)
 ├── app/
 ├── config/
@@ -53,7 +53,7 @@ laravel/Modules/Activity/
 
 ## Index of Relocated Docs
 
-1. **critical-mai-fare-migrate-refresh.md** (rename to **CRITICAL_MIGRATION_CONSTRAINTS.md**):
+1. **critical-mai-fare-migrate-refresh.md** (rename to **critical-migration-constraints-2.md**):
    - Explicit list of forbidden commands
    - Why: Activity holds user behavioral data; refresh loses audit trail
    - Enforcement: Documented in Activity/docs and referenced in Activity README.md
@@ -66,7 +66,7 @@ laravel/Modules/Activity/
 ## Action Items
 
 - [ ] Move `critical-mai-fare-migrate-refresh.md` from root to `laravel/Modules/Activity/docs/`
-- [ ] Rename to `CRITICAL_MIGRATION_CONSTRAINTS.md` for clarity
+- [ ] Rename to `critical-migration-constraints-2.md` for clarity
 - [ ] Add reference in `laravel/Modules/Activity/README.md` with ⚠️ badge
 - [ ] Cross-link from Progressioni/docs (note shared constraint)
 - [ ] Commit as atomic: "docs(activity): consolidate critical migration constraints from root"
@@ -83,7 +83,7 @@ Activity module holds user behavioral audit data. Never run:
 - `php artisan migrate:fresh`
 - `php artisan migrate --force`
 
-Details: see `docs/CRITICAL_MIGRATION_CONSTRAINTS.md`
+Details: see `critical-migration-constraints-2.md`
 ```
 
 ## Reference

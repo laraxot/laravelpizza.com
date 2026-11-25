@@ -21,7 +21,7 @@ Errore vendor: finestra massima **131072** token sull’endpoint, richiesta **~7
 
 ## Fix strutturale verificato (2026-05-20)
 
-`laravel/AGENTS.md` (~2.5MB) e `laravel/CLAUDE.md` (~1.3MB) embeddavano tutto `.ai` → ~722k token in **text input**. Sostituiti con stub; backup `laravel/*.embedded-rules.FULL.md.bak` (gitignored). Gate: `laravel/AGENTS.md` e `laravel/CLAUDE.md` ≤50 righe in `verify-llm-wiki.sh`.
+`laravel/AGENTS.md` (~2.5MB) e `laravel/Modules/Geo/docs/root-md-files/claude.md` (~1.3MB) embeddavano tutto `.ai` → ~722k token in **text input**. Sostituiti con stub; backup `laravel/*.embedded-rules.FULL.md.bak` (gitignored). Gate: `laravel/AGENTS.md` e `laravel/Modules/Geo/docs/root-md-files/claude.md` ≤50 righe in `verify-llm-wiki.sh`.
 
 ## Ipotesi condivise (da validare)
 

@@ -110,15 +110,15 @@ Placeholder `{ModuleName}`/`<T>` in `docs1/2`, `test.md`, `coverage.md`,
   `filament-5-nested-resources.md`, `filament-rules.md`,
   `global-context.md`, `init.md`, `jpgraph-guide.md`, `llm-wiki.md`,
   `llm-wiki-full.md`, `manifest.md`, `mcp.md`(superseded, ok),
-  `module-analysis.md` (review), `passport.md`, `prompt-template.md`,
+  `module-analysis-3.md` (review), `passport.md`, `prompt-template.md`,
   `roadmap.md`, `sentry.md`, `spatie.md`, `theme.md`, `ui-ux.md`,
   `versioning.md`, `webmozarts-assert-rules.md`. L'indice non è completo
   vs la propria dichiarazione.
 - **14 link rotti** nei due indici, quasi tutti con nome underscore o
-  maiuscolo (`start_optimized.md`, `notify_module_context.md`,
+  maiuscolo (`start_optimized.md`, `notify-module-context.md`,
   `nested_resources_tenancy_charts.md`, `vite_asset_troubleshooting.md`,
-  `super_mucca.md`, `filament_class.md`, `phpstan_module.md`,
-  `jpgraph_tenancy_integration.md`, `notify_continuation.md`,
+  `super_mucca.md`, `filament-class.md`, `phpstan_module.md`,
+  `jpgraph_tenancy_integration.md`, `notify-continuation.md`,
   `97-YAML-FRONTMATTER-CONVENTION.md`, `BMAD_PROMPT.md`, `INDEX.md`,
   `llm-wiki.txt`, `studied/`): indizio di rename kebab-case non
   propagato agli indici.
@@ -131,7 +131,7 @@ Placeholder `{ModuleName}`/`<T>` in `docs1/2`, `test.md`, `coverage.md`,
   `<<<<<<<`/`>>>>>>>` non risolti (nessun merge in corso). Localizzati:
   `bashscripts/ai/wiki/rules/11-forms/` (20 file, **incluso
   `00-TRIGGER_MAP.md`**, il router delle regole), `.agents/` e
-  `bashscripts/ai/.agents/` (CLAUDE.md con 2 blocchi, INDEX.md,
+  `bashscripts/ai/.agents/` (CLAUDE.md con 2 blocchi, index-3.md,
   methodologies.md, git-workflow.md, ~40 file in docs/guidelines/
   memories/helpers/templates), `bashscripts/ai/wiki/rules/migrated-from-agents/`
   (2), `.ai/`, `.ai-context/`. I prompt in `bashscripts/docs/prompts/`
@@ -162,7 +162,7 @@ Placeholder `{ModuleName}`/`<T>` in `docs1/2`, `test.md`, `coverage.md`,
 ## 6. Memorie / standing order
 
 - `bashscripts/ai/wiki/memories/`: **687 file** (`.md`+`.mdc`).
-  `INDEX.md` ne referenzia solo 4: indice di fatto inutile, coerente
+  `index-3.md` ne referenzia solo 4: indice di fatto inutile, coerente
   con la regola on-demand (recupero via `qmd`) ma da segnalare.
 - Violazioni naming: file con data `2026-02-26-*` (5+), maiuscolo
   (`STANDING-ORDER-MAI-DIMENTICARE*.md`, `HASXOTTABLE-*.story.md`,
@@ -186,14 +186,14 @@ Placeholder `{ModuleName}`/`<T>` in `docs1/2`, `test.md`, `coverage.md`,
 
 1. **P0** — Risolvere i 106 file con marker di conflitto (partire da
    `bashscripts/ai/wiki/rules/11-forms/00-TRIGGER_MAP.md` e
-   `.agents/CLAUDE.md`): confronto dei due lati, mai scelta automatica.
+   `../../../../Geo/docs/root-md-files/claude.md`): confronto dei due lati, mai scelta automatica.
    Esiste già la procedura in `51-conflitti-git-current-change.md` e lo
    script `bashscripts/tools/check-conflict-markers.sh`.
 2. **P1** — Allineare `.cursor/rules/` root con le canoniche
    (`bashscripts/ai/.cursor/rules/` + `wiki/rules/`) o correggere i
    riferimenti in `AGENTS.md`/memorie: 102 memorie + standing order
    puntano a path ambigui.
-3. **P1** — Completare `prompts/index.md`: aggiungere le ~20 voci
+3. **P1** — Completare `../../../../Lang/docs/wiki/rules/index-3.md`: aggiungere le ~20 voci
    attive non coperte e correggere i 14 link rotti (rename underscore →
    kebab già avvenuto sui file, non propagato).
 4. **P2** — Consolidare i cluster duplicati: `02`/`04b` (0.89),

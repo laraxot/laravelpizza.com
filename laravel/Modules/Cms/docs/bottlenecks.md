@@ -944,7 +944,7 @@ Implementando queste soluzioni, il modulo Cms potrà superare i principali colli
 - [Roadmap Principale](./roadmap.md)
 - [Convenzioni Namespace Filament](./convenzioni-namespace-filament.md)
 - [Best Practices](../xot/docs/best-practices.md)
-- [Struttura Moduli](../xot/docs/module_structure.md)
+- [Struttura Moduli](../xot/docs/module-structure-2.md)
 
 ## Collegamenti tra versioni di BOTTLENECKS.md
 * [BOTTLENECKS.md](laravel/modules/xot/docs/bottlenecks.md)

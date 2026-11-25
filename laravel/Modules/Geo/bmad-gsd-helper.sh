@@ -154,8 +154,8 @@ show_status() {
     log_info "=== Status GSD + BMAD ==="
     echo ""
     echo "GSD Status:"
-    if [ -f ".planning/STATE.md" ]; then
-        echo "  Stato attuale: $(grep -E "^State:" .planning/STATE.md | head -1)"
+    if [ -f ".planning/state-2.md" ]; then
+        echo "  Stato attuale: $(grep -E "^State:" .planning/state-2.md | head -1)"
     fi
 
     echo ""

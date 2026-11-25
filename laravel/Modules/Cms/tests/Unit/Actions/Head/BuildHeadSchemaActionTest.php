@@ -124,6 +124,7 @@ test('the first breadcrumb falls back to the brand and an existing isPartOf is k
     Assert::assertSame(['@id' => 'https://other.test/#website'], schemaArray($schemas[0])['isPartOf']);
 });
 
+/** @see Modules/Cms/docs/bmad/head-component-adoption-plan.md */
 test('business data turn the home organization into a local business', function (): void {
     $schemas = (new BuildHeadSchemaAction)->execute(
         isHome: true,
@@ -162,6 +163,7 @@ test('business data turn the home organization into a local business', function 
     Assert::assertArrayNotHasKey('sameAs', $organization);
 });
 
+/** @see Modules/Cms/docs/bmad/head-component-adoption-plan.md */
 test('without business data the home organization stays a plain Organization', function (): void {
     $schemas = (new BuildHeadSchemaAction)->execute(
         isHome: true,

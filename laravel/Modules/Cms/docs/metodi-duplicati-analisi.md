@@ -9,7 +9,7 @@ issues: []
 discussions: []
 module: theme
 topic: METODI-DUPLICATI-ANALISI
-canonical: ../../../Themes/docs/shared-components/metodi_duplicati_analisi.md
+canonical: ../../../Themes/docs/shared-components/metodi-duplicati-analisi-4.md
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/metodi_duplicati_analisi.md
+See canonical documentation: ../../../Themes/docs/shared-components/metodi-duplicati-analisi-4.md

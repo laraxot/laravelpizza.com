@@ -17,18 +17,18 @@ related:
 
 ### Filament
 - [Risorse Filament](../../docs/filament-risorse.md)
-- [Personalizzazioni Avanzate](../../docs/filament-personalizzazioni-avanzate.md)
+- [Personalizzazioni Avanzate](../../../../Cms/docs/filament-personalizzazioni-avanzate-2.md)
 - [Gestione Contenuti](../../docs/gestione-contenuti-json.md)
 
 ### Struttura e Convenzioni
 - [Namespace Convention](../../docs/namespace-convention.md)
 - [Namespace Structure](../../docs/namespace-structure.md)
-- [Namespace Rules](../../docs/namespace-rules.md)
+- [Namespace Rules](../../../../Notify/docs/namespace-rules-2.md)
 
 ### Implementazione
 - [Standard Codice](../../docs/standard-codice.md)
 - [Traduzioni](../../docs/traduzioni.md)
-- [Componenti e Blocchi](../../docs/componenti-blocchi-contenuto.md)
+- [Componenti e Blocchi](../../../../Cms/docs/componenti-blocchi-contenuto-2.md)
 
 ## Best Practices
 

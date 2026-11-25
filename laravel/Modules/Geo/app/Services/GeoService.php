@@ -15,6 +15,8 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Class GeoService.
+ *
+ * @see Modules/Geo/docs/geo-sync-marker-repair.md
  */
 class GeoService
 {
@@ -34,7 +36,7 @@ class GeoService
     public static function getInstance(): self
     {
         if (! self::$_instance instanceof GeoService) {
-            self::$_instance = new self();
+            self::$_instance = new self;
         }
 
         return self::$_instance;

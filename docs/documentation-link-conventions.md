@@ -12,13 +12,13 @@ I collegamenti nei file di documentazione devono **sempre** utilizzare percorsi 
 ✅ **CORRETTO**:
 ```markdown
 [Regole Generali](../../Xot/project_docs/translations.md)
-[Best Practices](../TRANSLATION_KEYS_BEST_PRACTICES.md)
+[Best Practices](../laravel/Modules/Lang/docs/translation-keys-best-practices-3.md)
 ```
 
 ❌ **ERRATO**:
 ```markdown
 [Regole Generali](Modules/Xot/project_docs/translations.md)
-[Best Practices](Modules/Lang/project_docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+[Best Practices](Modules/Lang/docs/translation-keys-best-practices-3.md)
 ```
 
 ### 2. Navigazione Tra Cartelle
@@ -72,7 +72,7 @@ Prima di fare commit dei documenti:
 
 ### Da Modules/Lang/project_docs/ a Modules/Notify/project_docs/
 ```markdown
-[Convenzioni Notify](../../Notify/project_docs/TRANSLATION_CONVENTIONS.md)
+[Convenzioni Notify](../laravel/Modules/Notify/docs/translation-conventions-2.md)
 ```
 
 ### Da Modules/Lang/project_docs/ a docs/ nella root
@@ -82,7 +82,7 @@ Prima di fare commit dei documenti:
 
 ### Da Modules/Lang/project_docs/ a un altro file nella stessa cartella
 ```markdown
-[Best Practices](TRANSLATION_KEYS_BEST_PRACTICES.md)
+[Best Practices](translation-keys-best-practices-3.md)
 ```
 
 ## Vantaggi dei Percorsi Relativi
@@ -102,13 +102,13 @@ I collegamenti nei file di documentazione devono **sempre** utilizzare percorsi 
 ✅ **CORRETTO**:
 ```markdown
 [Regole Generali](../../Xot/docs/translations.md)
-[Best Practices](../TRANSLATION_KEYS_BEST_PRACTICES.md)
+[Best Practices](../laravel/Modules/Lang/docs/translation-keys-best-practices-3.md)
 ```
 
 ❌ **ERRATO**:
 ```markdown
 [Regole Generali](Modules/Xot/docs/translations.md)
-[Best Practices](Modules/Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+[Best Practices](Modules/Lang/docs/translation-keys-best-practices-2.md)
 ```
 
 ### 2. Navigazione Tra Cartelle
@@ -162,7 +162,7 @@ Prima di fare commit dei documenti:
 
 ### Da Modules/Lang/docs/ a Modules/Notify/docs/
 ```markdown
-[Convenzioni Notify](../../Notify/docs/TRANSLATION_CONVENTIONS.md)
+[Convenzioni Notify](../laravel/Modules/Notify/docs/translation-conventions-2.md)
 ```
 
 ### Da Modules/Lang/docs/ a docs/ nella root
@@ -172,7 +172,7 @@ Prima di fare commit dei documenti:
 
 ### Da Modules/Lang/docs/ a un altro file nella stessa cartella
 ```markdown
-[Best Practices](TRANSLATION_KEYS_BEST_PRACTICES.md)
+[Best Practices](translation-keys-best-practices-3.md)
 ```
 
 ## Vantaggi dei Percorsi Relativi

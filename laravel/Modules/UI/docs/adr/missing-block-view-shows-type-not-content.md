@@ -6,10 +6,7 @@ created: 2026-11-24
 updated: 2026-11-24
 module: UI
 tags: [adr, blocks, privacy, rendering, front-office]
-<<<<<<< .merge_file_6upgCM
 qmd: "missing block view shows type not"
-=======
->>>>>>> .merge_file_XudOCy
 ---
 
 # ADR: vista mancante = avviso senza dati del blocco

@@ -248,7 +248,7 @@ SHOW CREATE TABLE ratings;
 
 ### Analysis (Still Valid)
 - [docs/START-HERE.md](docs/START-HERE.md)
-- [docs/MASTER-INDEX.md](docs/MASTER-INDEX.md)
+- [docs/master-index-2.md](docs/master-index-2.md)
 - [IndennitaResponsabilita Analysis](laravel/Modules/IndennitaResponsabilita/docs/analysis-summary.md)
 - [Refactoring Plan](laravel/Modules/IndennitaResponsabilita/docs/refactoring-action-plan.md)
 

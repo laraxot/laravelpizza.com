@@ -13,6 +13,7 @@ swarm:
     - Lang
     - UI
   story: laravel/Modules/Xot/docs/bmad/stories/phpstan-modules-swarm-random-20261006.story.md
+qmd: "cluster3 phpstan swarm story lang 20261006"
 ---
 
 # Lang — swarm cluster3 PHPStan 2026-10-06

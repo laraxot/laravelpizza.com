@@ -9,7 +9,7 @@ issues: []
 discussions: []
 module: theme
 topic: script-placement-rules
-canonical: ../../../Themes/docs/shared-components/script_placement_rules.md
+canonical: ../../../Themes/docs/shared-components/script-placement-rules-3.md
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/script_placement_rules.md
+See canonical documentation: ../../../Themes/docs/shared-components/script-placement-rules-3.md

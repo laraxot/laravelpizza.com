@@ -13,9 +13,9 @@ Elenco dei duplicati case-insensitive nel modulo `Xot`:
 - `Modules/Xot/app/Actions/Filament`: `RegisterFilamentNavigationItem.fila2`, `registerfilamentnavigationitem.fila2`
 - `Modules/Xot/app/Providers`: `XotBaseContextServiceProvider.fila2`, `xotbasecontextserviceprovider.fila2`
 - `Modules/Xot/docs/best-practices`: `README.md`, `readme.md`
-- `Modules/Xot/docs/consolidated`: `CODE_QUALITY.md`, `code_quality.md`
+- `Modules/Xot/docs/consolidated`: `code-quality-2.md`, `code-quality-2.md`
 - `Modules/Xot/docs/filament`: `README.md`, `readme.md`
-- `Modules/Xot/docs/filament`: `infinite-loop-getStepByName-fix.md`, `infinite-loop-getstepbyname-fix.md`
+- `Modules/Xot/docs/filament`: `infinite-loop-getstepbyname-fix-2.md`, `infinite-loop-getstepbyname-fix-2.md`
 - `Modules/Xot/docs/standards`: `README.md`, `readme.md`
 - `Modules/Xot/docs/traits`: `RelationX.md`, `relationx.md`
 - `Modules/Xot/docs/troubleshooting`: `README.md`, `readme.md`

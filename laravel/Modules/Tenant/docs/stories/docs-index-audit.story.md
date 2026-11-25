@@ -21,7 +21,7 @@ indice organizzato per argomento (panoramica, architettura, config, filament, ap
 phpstan, conflitti/git, regole, roadmap, tasks, stories, wiki, llm-wiki, html2pdf, staging).
 
 Nessun file esistente e' stato rinominato o cancellato. 115 doppioni/varianti case-sensitive,
-typo o file superati (es. `API.md` vs `api.md`, `roadmap/` sequenza numerata vs nomi piatti,
+typo o file superati (es. `api-2.md` vs `api-2.md`, `roadmap/` sequenza numerata vs nomi piatti,
 `root-md-files/`/`root-txt-files/`/`raw/root-import/` come mirror ridondanti tra loro) sono
 raggruppati nella sezione "Storico / da consolidare" di `index.md` con nota sul file canonico,
 senza azione distruttiva in questo task.

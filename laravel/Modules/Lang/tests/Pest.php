@@ -7,6 +7,8 @@ use Modules\Lang\Actions\ReadTranslationFileAction;
 use Modules\Lang\Database\Factories\TranslationFactory;
 use Modules\Lang\Models\BaseModel;
 use Modules\Lang\Models\Translation;
+use Modules\Lang\Providers\LangServiceProvider;
+use Modules\Lang\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 use function Safe\file_put_contents;
@@ -61,9 +63,14 @@ function makeLangBaseModel(): BaseModel
     };
 }
 
-function makeLangServiceProvider(): Modules\Lang\Providers\LangServiceProvider
+/**
+ * Il provider Lang costruito dal TestCase del modulo, senza avviare l'intera applicazione.
+ *
+ * @see Modules/Lang/docs/testing.md
+ */
+function makeLangServiceProvider(): LangServiceProvider
 {
-    return Modules\Lang\Tests\TestCase::makeLangServiceProvider();
+    return TestCase::makeLangServiceProvider();
 }
 
 /** @return array<string, mixed> */

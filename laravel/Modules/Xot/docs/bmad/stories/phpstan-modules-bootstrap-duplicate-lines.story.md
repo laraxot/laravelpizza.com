@@ -46,7 +46,7 @@ al commit `3db6193228` con lint dei blob, i cluster lang / Xot test / Rating, e 
 Il commit `3db6193228` (messaggio ".", non un merge) ha riaggiunto righe gia' presenti. Verificato sui blob con
 `git show <commit>:<file> | php -l`: i 5 file passano a `69c5e4aaf0` e a `dc010170d4` e si rompono solo a `3db6193228`.
 Il merge `dc010170d4` era a posto sui marker, ma ha cancellato i duplicati `Filament/Resources/HasRatingResource/*` del
-modulo Rating (voluto: `docs/redundancy-report.md`, righe 25 e 67-70), lasciando test che li referenziavano.
+modulo Rating (voluto: `../../../../Geo/docs/redundancy-report-2.md`, righe 25 e 67-70), lasciando test che li referenziavano.
 
 ## Esito per cluster (ordine random: Rating, Xot, User)
 

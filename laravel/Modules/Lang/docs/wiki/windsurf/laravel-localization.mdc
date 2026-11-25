@@ -29,5 +29,5 @@ This document provides metadata for Windsurf about the integration of `mcamara/l
 
 ## Related Documentation
 
-- [Laravel Localization Complete Guide](../laravel-localization-complete.md)
-- [Translation Management Packages](../translation-management-packages.md)
+- [Laravel Localization Complete Guide](../../laravel-localization-complete-2.md)
+- [Translation Management Packages](../../translation-management-packages-2.md)

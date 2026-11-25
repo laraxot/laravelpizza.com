@@ -191,11 +191,11 @@ related:
 
 ## 4. Collegamenti correlati
 
-- [translations-faq.md](./translations-faq.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](translation-keys-best-practices.md)
+- [translations-faq-2.md](../../../translations-faq-2.md)
+- [translation-keys-best-practices-3.md](translation-keys-best-practices-3.md)
 ---
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](./TRANSLATION_KEYS_BEST_PRACTICES.md)
-- [translations-storage.md](./translations-storage.md)
+- [translation-keys-best-practices-3.md](../../../translation-keys-best-practices-3.md)
+- [translations-storage-2.md](../../../translations-storage-2.md)
 - [translation-process.md](./translation-process.md)
 - [README.md](./README.md)
 # Plurale/Singolare e Localizzazione Date/Valute
@@ -378,9 +378,9 @@ related:
 
 ## 4. Collegamenti correlati
 
-- [translations-faq.md](./translations-faq.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](translation-keys-best-practices.md)
-- [translations-storage.md](./translations-storage.md)
+- [translations-faq-2.md](../../../translations-faq-2.md)
+- [translation-keys-best-practices-3.md](translation-keys-best-practices-3.md)
+- [translations-storage-2.md](../../../translations-storage-2.md)
 - [translation-process.md](./translation-process.md)
 - [README.md](./README.md)
 - [README.md](./README.md)
@@ -388,7 +388,7 @@ related:
 - [README.md](./README.md)
 - [README.md](./README.md)
 ---
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](./TRANSLATION_KEYS_BEST_PRACTICES.md)
-- [translations-storage.md](./translations-storage.md)
+- [translation-keys-best-practices-3.md](../../../translation-keys-best-practices-3.md)
+- [translations-storage-2.md](../../../translations-storage-2.md)
 - [translation-process.md](./translation-process.md)
 - [README.md](./README.md)

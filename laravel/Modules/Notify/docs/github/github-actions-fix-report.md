@@ -156,7 +156,7 @@ ae920e7c Add AI lessons learned and GitHub Action setup guide
 | `.github/workflows/ci.yml` | Modified | Fix cache directory |
 | `laravel/Modules/Notify/composer.json` | Modified | Fix PSR-4 autoload |
 | `docs/github/DISCUSSION_AI_WORK_summary.md` | Created | Discussion draft |
-| `ai-agent-lessons-learned.md` | Created | Lessons learned |
+| `ai-agent-lessons-learned-2.md` | Created | Lessons learned |
 | `github-action-setup-required.md` | Created | Setup guide |
 | `docs/ai-rules-critical.md` | Created | AI rules |
 | `task-complete-git-pushed.md` | Created | Completion report |
@@ -233,7 +233,7 @@ ssh-keygen -t ed25519 -C "actions@github.com"
 
 | File | Purpose | Lines |
 |------|---------|-------|
-| **ai-agent-lessons-learned.md** | Honest failure report | 200+ |
+| **ai-agent-lessons-learned-2.md** | Honest failure report | 200+ |
 | **github-action-setup-required.md** | Setup guide for user | 100+ |
 | **docs/ai-rules-critical.md** | Critical AI rules | 300+ |
 | **task-complete-git-pushed.md** | Completion report | 200+ |

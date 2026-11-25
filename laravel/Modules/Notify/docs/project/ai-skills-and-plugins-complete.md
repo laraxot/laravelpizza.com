@@ -18,7 +18,7 @@ discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./2-1-1-plan.md"
   - "./2-1-context.md"
-  - "./AGENTS.md"
+  - "./agents-2.md"
   - "./ai-agent-lessons-learned.md"
   - "./commit-message.md"
   - "./configuration.md"
@@ -70,7 +70,7 @@ ls -la ~/.claude/skills/notebooklm/
 "Set up NotebookLM authentication"
 
 # 2. Crea notebook su notebooklm.google.com
-#    - Upload: AGENTS.md, docs/**/*.md, .planning/**/*.md
+#    - Upload: agents-2.md, docs/**/*.md, .planning/**/*.md
 #    - Share → Copy link
 
 # 3. Aggiungi a library
@@ -366,7 +366,7 @@ claude
 
 # 3. Create notebook
 #    - Go to notebooklm.google.com
-#    - Upload: AGENTS.md, docs/, .planning/
+#    - Upload: agents-2.md, docs/, .planning/
 #    - Share → Copy link
 
 # 4. Add to library

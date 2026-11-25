@@ -61,9 +61,9 @@ qmd search "<topic>"
 ./laravel/Modules/Seo/docs/
 └── wiki/                    # Knowledge base locale
     ├── rules/INDEX.md      # Indice rules modulo-specifiche
-    ├── skills/INDEX.md     # Indice skills modulo-specifiche
-    ├── commands/INDEX.md   # Indici commands
-    └── memories/INDEX.md   # Indice memories
+    ├── ../../Lang/docs/wiki/index-3.md     # Indice skills modulo-specifiche
+    ├── ../../Lang/docs/wiki/index-3.md   # Indici commands
+    └── ../../Lang/docs/wiki/index-3.md   # Indice memories
 \`\`\`
 
 ## Quick Reference

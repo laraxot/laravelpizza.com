@@ -65,15 +65,15 @@ related:
 2. [**CONTRIBUTING.md**](../contributing.md) - How to contribute
 3. [**architecture.md**](./architecture.md) - System architecture
 3. [**architecture.md**](./architecture.md) - System architecture
-4. [**QUALITY_DASHBOARD.md**](./quality_dashboard.md) - Real-time metrics
+4. [**QUALITY_DASHBOARD.md**](./quality-dashboard-3.md) - Real-time metrics
 
 ### 📊 Reports & Analysis
 
-5. [**MISSION_ACCOMPLISHED.md**](./mission_accomplished.md) - ⭐ Mission completion
-6. [**PROJECT_COMPLETION_CERTIFICATE.md**](./project_completion_certificate.md) - Official certificate
+5. [**MISSION_ACCOMPLISHED.md**](./mission-accomplished-3.md) - ⭐ Mission completion
+6. [**PROJECT_COMPLETION_CERTIFICATE.md**](./project-completion-certificate-3.md) - Official certificate
 7. [**excellence-achievement-caps.md**](./excellence-achievement-caps.md) - Achievement report
-8. [**FINAL_REFACTORING_REPORT.md**](./final_refactoring_report.md) - Refactoring summary
-9. [**COMPLETE_REFACTORING_ANALYSIS.md**](./complete_refactoring_analysis.md) - Detailed analysis
+8. [**FINAL_REFACTORING_REPORT.md**](./final-refactoring-report-3.md) - Refactoring summary
+9. [**COMPLETE_REFACTORING_ANALYSIS.md**](./complete-refactoring-analysis-3.md) - Detailed analysis
 
 ---
 
@@ -221,12 +221,12 @@ Each module has a `docs/` directory containing:
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_fmAaca
-- [Code Quality Analysis](../Themes/Sixteen/docs/code_quality_analysis.md)
+- [Code Quality Analysis](../../../Activity/docs/code-quality-analysis-3.md)
 - [README](../Themes/Sixteen/docs/README.md)
 - [Roadmap 2025](../Themes/Sixteen/docs/roadmap_2025.md)
 
 ### TwentyOne Theme
-- [Code Quality Analysis](../Themes/TwentyOne/docs/code_quality_analysis.md)
+- [Code Quality Analysis](../../../Activity/docs/code-quality-analysis-3.md)
 <<<<<<< .merge_file_uxZbEm
 <<<<<<< HEAD
 =======
@@ -237,12 +237,12 @@ Each module has a `docs/` directory containing:
 =======
 >>>>>>> .merge_file_fmAaca
 >>>>>>> laraxot/dev
-- [Code Quality Analysis](../Themes/Sixteen/docs/CODE_QUALITY_ANALYSIS.md)
+- [Code Quality Analysis](../../../Activity/docs/code-quality-analysis-3.md)
 - [README](../Themes/Sixteen/docs/README.md)
 - [Roadmap 2025](../Themes/Sixteen/docs/ROADMAP_2025.md)
 
 ### TwentyOne Theme
-- [Code Quality Analysis](../Themes/TwentyOne/docs/CODE_QUALITY_ANALYSIS.md)
+- [Code Quality Analysis](../../../Activity/docs/code-quality-analysis-3.md)
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_uxZbEm
@@ -307,20 +307,20 @@ Each module has a `docs/` directory containing:
 - architecture.md
 =======
 <<<<<<< HEAD
-- contributing.md
+- ../contributing-2.md
 =======
 - CONTRIBUTING.md
 - architecture.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
-- contributing.md
+- ../contributing-2.md
 =======
 - CONTRIBUTING.md
 - architecture.md
 =======
 <<<<<<< HEAD
-- contributing.md
+- ../contributing-2.md
 =======
 - CONTRIBUTING.md
 - architecture.md
@@ -344,18 +344,18 @@ Each module has a `docs/` directory containing:
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_fmAaca
-- mission_accomplished.md
-- project_completion_certificate.md
+- mission-accomplished-3.md
+- project-completion-certificate-3.md
 - excellence-achievement-caps.md
-- quality_dashboard.md
+- quality-dashboard-3.md
 ### For Quality Team
-- quality_dashboard.md
+- quality-dashboard-3.md
 - Cyclomatic Complexity Reports
-- final_refactoring_report.md
-- complete_refactoring_analysis.md
+- final-refactoring-report-3.md
+- complete-refactoring-analysis-3.md
 ### For New Contributors
 - README.md
-- contributing.md
+- ../contributing-2.md
 <<<<<<< .merge_file_uxZbEm
 <<<<<<< HEAD
 =======
@@ -440,7 +440,7 @@ Each module has a `docs/` directory containing:
 **Quality & Metrics:**
 <<<<<<< HEAD
 <<<<<<< .merge_file_uxZbEm
-- quality_dashboard.md
+- quality-dashboard-3.md
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -449,14 +449,14 @@ Each module has a `docs/` directory containing:
 - QUALITY_DASHBOARD.md
 =======
 <<<<<<< HEAD
-- quality_dashboard.md
+- quality-dashboard-3.md
 =======
 - QUALITY_DASHBOARD.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_uxZbEm
 =======
-- quality_dashboard.md
+- quality-dashboard-3.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
@@ -467,8 +467,8 @@ Each module has a `docs/` directory containing:
 **Refactoring:**
 <<<<<<< HEAD
 <<<<<<< .merge_file_uxZbEm
-- final_refactoring_report.md
-- complete_refactoring_analysis.md
+- final-refactoring-report-3.md
+- complete-refactoring-analysis-3.md
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -476,23 +476,23 @@ Each module has a `docs/` directory containing:
 - COMPLETE_REFACTORING_ANALYSIS.md
 =======
 <<<<<<< HEAD
-- final_refactoring_report.md
-- complete_refactoring_analysis.md
+- final-refactoring-report-3.md
+- complete-refactoring-analysis-3.md
 =======
 - FINAL_REFACTORING_REPORT.md
 - COMPLETE_REFACTORING_ANALYSIS.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
-- final_refactoring_report.md
-- complete_refactoring_analysis.md
+- final-refactoring-report-3.md
+- complete-refactoring-analysis-3.md
 =======
 - FINAL_REFACTORING_REPORT.md
 - COMPLETE_REFACTORING_ANALYSIS.md
 =======
 <<<<<<< HEAD
-- final_refactoring_report.md
-- complete_refactoring_analysis.md
+- final-refactoring-report-3.md
+- complete-refactoring-analysis-3.md
 =======
 - FINAL_REFACTORING_REPORT.md
 - COMPLETE_REFACTORING_ANALYSIS.md
@@ -512,18 +512,18 @@ Each module has a `docs/` directory containing:
 - CONTRIBUTING.md
 =======
 <<<<<<< HEAD
-- contributing.md
+- ../contributing-2.md
 =======
 - CONTRIBUTING.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
-- contributing.md
+- ../contributing-2.md
 =======
 - CONTRIBUTING.md
 =======
 <<<<<<< HEAD
-- contributing.md
+- ../contributing-2.md
 =======
 - CONTRIBUTING.md
 >>>>>>> .merge_file_fmAaca
@@ -628,18 +628,18 @@ All documents include:
 - Follow CONTRIBUTING.md
 =======
 <<<<<<< HEAD
-- follow contributing.md
+- follow ../contributing-2.md
 =======
 - Follow CONTRIBUTING.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
-- follow contributing.md
+- follow ../contributing-2.md
 =======
 - Follow CONTRIBUTING.md
 =======
 <<<<<<< HEAD
-- follow contributing.md
+- follow ../contributing-2.md
 =======
 - Follow CONTRIBUTING.md
 >>>>>>> .merge_file_fmAaca
@@ -683,13 +683,13 @@ All documents include:
 =======
 >>>>>>> .merge_file_fmAaca
 - ✅ created index.md
-- ✅ completed mission_accomplished.md
-- ✅ finalized project_completion_certificate.md
+- ✅ completed mission-accomplished-3.md
+- ✅ finalized project-completion-certificate-3.md
 - ✅ Updated all module reports
 - ✅ enhanced readme.md
 ### 2025-09-30
 - ✅ created architecture.md
-- ✅ created quality_dashboard.md
+- ✅ created quality-dashboard-3.md
 - ✅ created excellence-achievement-caps.md
 <<<<<<< .merge_file_uxZbEm
 <<<<<<< HEAD

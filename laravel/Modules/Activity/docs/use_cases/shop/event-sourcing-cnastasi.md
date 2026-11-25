@@ -65,7 +65,7 @@ Il repository include comandi da console personalizzati per interagire con il si
 - **`product:register <name> <quantity> <price>`**: Registra una nuova tipologia di prodotto nel magazzino.
 - **`product:replenish <productId> <quantity>`**: Aggiunge nuovi prodotti al magazzino.
 
-**Lezione Appresa**: Questi comandi dimostrano come l'Event Sourcing possa essere integrato con l'interfaccia a riga di comando di Laravel per eseguire operazioni di business. Nel nostro caso d'uso `Shop`, possiamo creare comandi simili per gestire carrelli (`cart:add-item`, `cart:checkout`) e ordini, come già documentato in `console_commands.md`.
+**Lezione Appresa**: Questi comandi dimostrano come l'Event Sourcing possa essere integrato con l'interfaccia a riga di comando di Laravel per eseguire operazioni di business. Nel nostro caso d'uso `Shop`, possiamo creare comandi simili per gestire carrelli (`cart:add-item`, `cart:checkout`) e ordini, come già documentato in `console-commands-3.md`.
 
 ## Principi di Event Sourcing Applicati
 

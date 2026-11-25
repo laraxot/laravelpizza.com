@@ -47,9 +47,9 @@ This document serves as the central index for the Notify module, providing guida
 
 ## Links to Related Documentation
 - [Architecture Overview](./ARCHITECTURE.md)
-- [Notification Channels Implementation](./NOTIFICATION_CHANNELS_IMPLEMENTATION.md)
-- [Email Templates](./EMAIL_TEMPLATES.md)
-- [SMS Implementation](./SMS_IMPLEMENTATION.md)
+- [Notification Channels Implementation](../laravel/Modules/Notify/docs/notification-channels-implementation-2.md)
+- [Email Templates](../laravel/Modules/Notify/docs/email-templates-2.md)
+- [SMS Implementation](../laravel/Modules/Notify/docs/sms-implementation-2.md)
 - [Troubleshooting](./TROUBLESHOOTING.md)
 # Indice della Documentazione - Modulo Notify
 
@@ -69,7 +69,7 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 ## Collegamenti Correlati
 - [Documentazione Generale <nome progetto>](../../../../docs/README.md)
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
-- [Standard di Documentazione](../../../../docs/DOCUMENTATION_STANDARDS.md)
+- [Standard di Documentazione](../laravel/Modules/User/docs/documentation-standards-2.md)
 - [Modulo Xot](../../Xot/docs/README.md)
 - [Modulo Lang](../../Lang/docs/README.md)
 - [Modulo UI](../../UI/docs/README.md)
@@ -77,7 +77,7 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 
 ### Architettura e Struttura
 - [README](./README.md) - Panoramica generale del modulo
-- [Architettura](./ARCHITECTURE.md) - Architettura generale del modulo
+- [Architettura](./architecture-2.md) - Architettura generale del modulo
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
 - [Modelli](./models.md) - Documentazione dei modelli Eloquent
 - [Eventi](./events.md) - Eventi e listeners
@@ -85,35 +85,35 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 ### Sistema Email
 - [Sistema Email Database](./database-mail-system.md) - Sistema di gestione delle email basato su database
 - [Code Email](./database_mail_queue.md) - Sistema di code per l'invio di email
-- [Template Email](./EMAIL_TEMPLATES.md) - Struttura e utilizzo dei template email
+- [Template Email](../laravel/Modules/Notify/docs/email-templates-2.md) - Struttura e utilizzo dei template email
 - [Best Practices Email](./EMAIL_BEST_PRACTICES.md) - Linee guida per le email
-- [Template Responsivi](./RESPONSIVE_EMAIL_TEMPLATES.md) - Implementazione di template email responsivi
+- [Template Responsivi](../laravel/Modules/Notify/docs/responsive-email-templates-2.md) - Implementazione di template email responsivi
 
 ### Canali di Notifica
-- [Implementazione Canali](./NOTIFICATION_CHANNELS_IMPLEMENTATION.md) - Implementazione dei canali di notifica
-- [SMS](./SMS_IMPLEMENTATION.md) - Implementazione del canale SMS
-- [WhatsApp](./WHATSAPP_CHANNEL.md) - Implementazione del canale WhatsApp
-- [Telegram](./TELEGRAM_CHANNEL.md) - Implementazione del canale Telegram
+- [Implementazione Canali](../laravel/Modules/Notify/docs/notification-channels-implementation-2.md) - Implementazione dei canali di notifica
+- [SMS](../laravel/Modules/Notify/docs/sms-implementation-2.md) - Implementazione del canale SMS
+- [WhatsApp](../laravel/Modules/Notify/docs/whatsapp-channel-2.md) - Implementazione del canale WhatsApp
+- [Telegram](../laravel/Modules/Notify/docs/telegram-channel-2.md) - Implementazione del canale Telegram
 
 ### Filament UI
 - [Risorse Filament](./filament-resources.md) - Componenti Filament Resources
 - [Pagine Filament](./filament-pages.md) - Componenti Filament Pages
-- [Convenzioni Filament](./FILAMENT_EXTENSION_PATTERN.md) - Pattern di estensione per Filament
+- [Convenzioni Filament](../laravel/Modules/Notify/docs/filament-extension-pattern-2.md) - Pattern di estensione per Filament
 
 ### Configurazione
-- [Struttura Config](./CONFIG_STRUCTURE.md) - Struttura dei file di configurazione
-- [Configurazione SMS](./SMS_CONFIG_STRUCTURE.md) - Struttura della configurazione SMS
-- [Principi di Configurazione](./CONFIGURATIONS_USAGE_PRINCIPLES.md) - Principi per l'utilizzo delle configurazioni
+- [Struttura Config](../laravel/Modules/Notify/docs/config-structure-2.md) - Struttura dei file di configurazione
+- [Configurazione SMS](../laravel/Modules/Notify/docs/sms-config-structure-2.md) - Struttura della configurazione SMS
+- [Principi di Configurazione](../laravel/Modules/Notify/docs/configurations-usage-principles-2.md) - Principi per l'utilizzo delle configurazioni
 
 ### Pattern e Architettura
-- [Pattern Factory](./FACTORY_PATTERN_ANALYSIS.md) - Analisi del pattern Factory
-- [Risoluzione Dinamica delle Classi](./DYNAMIC_CLASS_RESOLUTION.md) - Pattern di risoluzione dinamica delle classi
+- [Pattern Factory](../laravel/Modules/Notify/docs/factory-pattern-analysis-2.md) - Analisi del pattern Factory
+- [Risoluzione Dinamica delle Classi](../laravel/Modules/Notify/docs/dynamic-class-resolution-2.md) - Pattern di risoluzione dinamica delle classi
 - [Queueable Actions](./queueable-action.md) - Utilizzo di Spatie Queueable Actions
 
 ### Standard e Traduzioni
 - [Convenzioni di Naming](./NAMING_CONVENTIONS.md) - Standard per i nomi di file e classi
 - [Traduzioni](./translations.md) - Sistema di traduzioni
-- [Standard Traduzioni](./TRANSLATION_STANDARDS.md) - Standard per le chiavi di traduzione
+- [Standard Traduzioni](../laravel/Modules/Lang/docs/translation-standards-3.md) - Standard per le chiavi di traduzione
 
 ### Testing e Qualità
 - [PHPStan Level 10](./phpstan-level10-analysis.md) - Analisi e correzioni per PHPStan Level 10
@@ -157,7 +157,7 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 
 ### Mail Templates
 - [Index](./mail-templates/INDEX.md) - Indice della documentazione sui template email
-- [Implementazione Slug](./mail-templates/MAIL_TEMPLATE_SLUG_IMPLEMENTATION.md) - Implementazione del campo slug
+- [Implementazione Slug](../laravel/Modules/Notify/docs/mail-template-slug-implementation-2.md) - Implementazione del campo slug
 
 ### Notifications
 - [Index](./notifications/INDEX.md) - Indice della documentazione sulle notifiche
@@ -183,7 +183,7 @@ Questa documentazione viene aggiornata regolarmente. Prima di apportare modifich
   - `database_mail_system.md` - Puliti conflitti nelle sezioni bash e riferimenti
   - `database_mail.md` - Risolti conflitti nei template e riferimenti esterni
 - Il file `lang/it/notify_theme.php` è stato risolto manualmente mantenendo PSR-12, strict_types, array short syntax e solo chiavi effettive, come richiesto dagli standard PHPStan livello 10
-- Il file `NOTIFICATION_CHANNELS_IMPLEMENTATION.md` è stato risolto manualmente mantenendo la versione più aggiornata e coerente con le best practice architetturali del modulo Notify
+- Il file `notification-channels-implementation-2.md` è stato risolto manualmente mantenendo la versione più aggiornata e coerente con le best practice architetturali del modulo Notify
 - **Filosofia di risoluzione**: Approccio olistico con analisi manuale approfondita, mantenimento integrità architetturale, documentazione bidirezionale aggiornata
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".

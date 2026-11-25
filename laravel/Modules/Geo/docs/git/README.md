@@ -100,7 +100,7 @@ git/
 ### .gitignore-template
 Template per la configurazione di `.gitignore` per i moduli Laravel. Contiene le regole standard per escludere file e directory non necessari nel repository.
 
-### GITIGNORE-README.md
+### gitignore-readme-2.md
 Documentazione dettagliata sulle regole di `.gitignore` e sulla loro gestione nei moduli.
 
 ### update-gitignore.sh

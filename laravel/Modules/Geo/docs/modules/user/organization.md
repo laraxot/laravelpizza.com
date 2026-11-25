@@ -61,8 +61,8 @@ docs/modules/user/
 #### Autenticazione
 | Argomento | File Originale | Nuovo Percorso |
 |-----------|---------------|----------------|
-| Login Widget | `auth-login-implementation.md` | `authentication/login.md` |
-| Logout System | `logout-implementation-best-practices.md` | `authentication/logout.md` |
+| Login Widget | `auth-login-implementation-4.md` | `authentication/login.md` |
+| Logout System | `logout-implementation-best-practices-3.md` | `authentication/logout.md` |
 | 2FA | `2fa-guide.md` | `authentication/2fa.md` |
 | Password Reset | `password-translation-completion.md` | `authentication/password-reset.md` |
 
@@ -77,15 +77,15 @@ docs/modules/user/
 | Argomento | File Originale | Nuovo Percorso |
 |-----------|---------------|----------------|
 | User CRUD | `user-management.md` | `user-management/crud.md` |
-| Profile Management | `profile-management.md` | `user-management/profile.md` |
-| Avatar System | `avatar-implementation.md` | `user-management/avatar.md` |
+| Profile Management | `profile-management-3.md` | `user-management/profile.md` |
+| Avatar System | `avatar-implementation-3.md` | `user-management/avatar.md` |
 
 #### Team Management
 | Argomento | File Originale | Nuovo Percorso |
 |-----------|---------------|----------------|
 | HasTeams Trait | `traits-complete-guide.md` | `team-management/trait.md` |
 | Team Relations | `relazioni-utenti-team.mdc` | `team-management/relations.md` |
-| Team CRUD | `team-bindings-fix.md` | `team-management/crud.md` |
+| Team CRUD | `team-bindings-fix-2.md` | `team-management/crud.md` |
 
 ---
 

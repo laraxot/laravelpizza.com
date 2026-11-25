@@ -176,7 +176,7 @@ The FixCity platform has extensive documentation across modules and themes, but 
 
 ❌ **Problems**:
 - 101 temporal strings
-- Duplicate files: `CODE_QUALITY_analysis.md` + `code_quality_analysis.md`
+- Duplicate files: `code-quality-analysis-3.md` + `code-quality-analysis-3.md`
 - Mixed naming conventions
 
 ---
@@ -299,8 +299,8 @@ find laravel/Modules/*/docs/ -name "*.md" -exec sed -i.bak \
 - Merge unique content
 
 **Sixteen Theme**:
-- Keep: `CODE_QUALITY_analysis.md`
-- Remove: `code_quality_analysis.md`
+- Keep: `code-quality-analysis-3.md`
+- Remove: `code-quality-analysis-3.md`
 - Merge unique content
 
 #### Day 5-7: Naming Standardization

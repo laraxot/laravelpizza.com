@@ -330,18 +330,18 @@ mount(function() {
 - [Core](../../xot/docs/core.md)
 - [Servizi](../../xot/docs/services.md)
 - [Traits](../../xot/docs/traits.md)
-- [Best Practices](../../xot/docs/best-practices.md)
+- [Best Practices](../../laravel/Modules/Activity/docs/best-practices-3.md)
 
 ### Modulo Cms
 - [Frontend](../../cms/docs/frontend.md)
 - [Temi](../../cms/docs/themes.md)
 - [Contenuti](../../cms/docs/content.md)
-- [Convenzioni Filament](../../cms/docs/convenzioni-namespace-filament.md)
+- [Convenzioni Filament](../../laravel/Modules/Cms/docs/convenzioni-namespace-filament-2.md)
 
 ### Modulo Lang
 - [Traduzioni](../../lang/docs/translations.md)
 - [Localizzazione](../../lang/docs/localization.md)
-- [API Traduzioni](../../lang/docs/api.md)
+- [API Traduzioni](../../laravel/Modules/User/docs/api-2.md)
 
 ### Modulo User
 - [Autenticazione](../../user/docs/auth.md)
@@ -380,8 +380,8 @@ mount(function() {
 
 ### Modulo Gdpr
 - [Privacy](../../gdpr/docs/privacy.md)
-- [Consensi](../../gdpr/docs/consents.md)
-- [Sicurezza](../../gdpr/docs/security.md)
+- [Consensi](../../laravel/Modules/Gdpr/docs/consents-2.md)
+- [Sicurezza](../../laravel/Modules/Geo/docs/root-md-files/security-2.md)
 
 ### Modulo Job
 - [Jobs](../../job/docs/jobs.md)

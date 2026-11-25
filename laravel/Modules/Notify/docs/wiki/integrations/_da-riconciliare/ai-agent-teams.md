@@ -119,7 +119,7 @@ Multiple AI agents (Qwen, Claude, Cursor, etc.) are working on the same <nome pr
 
 **Current Tasks**:
 - ✅ Update `bashscripts/docs/ai/` with sync rules
-- ✅ Update AGENTS.md with commit/push rules
+- ✅ Update agents-2.md with commit/push rules
 - ✅ Update .windsurfrules
 - ⏳ Sync `.github/` with `bashscripts/ai/.github/`
 
@@ -238,7 +238,7 @@ git push origin dev
 ### 5. **Document Everything**
 - Scripts → `bashscripts/docs/`
 - Workflows → `.github/` AND `bashscripts/ai/.github/`
-- Rules → `AGENTS.md`, `.windsurfrules`
+- Rules → `agents-2.md`, `.windsurfrules`
 
 ---
 

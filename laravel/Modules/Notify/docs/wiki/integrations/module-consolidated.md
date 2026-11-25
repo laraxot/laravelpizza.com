@@ -303,7 +303,7 @@ Il modulo Notify è il sistema di gestione notifiche e comunicazioni riutilizzab
 
 ## module-analysis
 
-*Consolidated from: `module-analysis.md`*
+*Consolidated from: `module-analysis-3.md`*
 
 <<<<<<< HEAD
 
@@ -422,19 +422,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -482,7 +482,7 @@ Notify Fila5 Documentation
 │   │   └── BMAD-WORKFLOW-COMPLETE.md
 │   │
 │   └── Design Comuni Italia Project:
-│       ├── design_comuni_index.md - Index for all Design Comuni docs
+│       ├── design-comuni-index-3.md - Index for all Design Comuni docs
 │       ├── design-comuni-prd.md - Product Requirements Document
 │       ├── design-comuni-architecture.md - Architecture Design
 │       ├── design-comuni-ui-spec.md - UI Specification
@@ -530,7 +530,7 @@ Notify Fila5 Documentation
 ├── 📁 Planning (.planning/)
 │   ├── project.md - Project overview and history
 │   ├── roadmap.md - 12-week implementation plan (6 phases)
-│   ├── state.md - Current state tracking
+│   ├── state-2.md - Current state tracking
 │   └── research/
 │       └── design-comuni-pages.md - Complete page analysis (674 lines)
 │
@@ -602,8 +602,8 @@ Notify Fila5 Documentation
 | Module | Files | Index | Key Topics |
 |--------|-------|-------|------------|
 | **Blog** | XXX | [index.md](Modules/Blog/docs/README.md) | Articles, categories |
-| **Geo** | XXX | [index.md](Modules/Geo/docs/README.md) | Maps, locations |
-| **Media** | XXX | [index.md](Modules/Media/docs/README.md) | Files, uploads |
+| **Geo** | XXX | [index-2.md](Modules/Geo/docs/README.md) | Maps, locations |
+| **Media** | XXX | [index-2.md](Modules/Media/docs/README.md) | Files, uploads |
 | **Notify** | XXX | [index.md](Modules/Notify/docs/README.md) | Notifications |
 | **Comment** | XXX | [index.md](Modules/Comment/docs/README.md) | Comments, reactions |
 | **Rating** | XXX | [index.md](Modules/Rating/docs/README.md) | Reviews, ratings |
@@ -613,12 +613,12 @@ Notify Fila5 Documentation
 | Module | Files | Index | Key Topics |
 |--------|-------|-------|------------|
 | **Activity** | XXX | [index.md](Modules/Activity/docs/README.md) | Logging, audit |
-| **Gdpr** | XXX | [index.md](Modules/Gdpr/docs/README.md) | Privacy, consents |
-| **Lang** | XXX | [index.md](Modules/Lang/docs/README.md) | Translations |
+| **Gdpr** | XXX | [index-3.md](Modules/Gdpr/docs/README.md) | Privacy, consents |
+| **Lang** | XXX | [index-3.md](Modules/Lang/docs/README.md) | Translations |
 | **Seo** | XXX | [index.md](Modules/Seo/docs/README.md) | Meta tags, sitemap |
 | **UI** | XXX | [index.md](Modules/UI/docs/README.md) | Components |
 | **AI** | XXX | [index.md](Modules/AI/docs/README.md) | ML integration |
-| **Job** | XXX | [index.md](Modules/Job/docs/README.md) | Jobs, schedules |
+| **Job** | XXX | [index-3.md](Modules/Job/docs/README.md) | Jobs, schedules |
 
 ---
 
@@ -687,7 +687,7 @@ Notify Fila5 Documentation
 
 | Document | File | Lines | Purpose |
 |----------|------|-------|---------|
-| **Index** | `_bmad-output/design_comuni_index.md` | 300+ | Central navigation for Design Comuni docs |
+| **Index** | `_bmad-output/design-comuni-index-3.md` | 300+ | Central navigation for Design Comuni docs |
 | **PRD** | `_bmad-output/design-comuni-prd.md` | 800+ | Product requirements (38 pages, WCAG 2.1 AA) |
 | **Architecture** | `_bmad-output/design-comuni-architecture.md` | 900+ | System architecture, data flow, security |
 | **UI Spec** | `_bmad-output/design-comuni-ui-spec.md` | 700+ | Component specs, design tokens, accessibility |
@@ -715,7 +715,7 @@ Notify Fila5 Documentation
 | **Sprint 6** | Week 11-12 | QA & Documentation | 9 |
 
 **Cross-References:**
-- → [Design Comuni Index](_bmad-output/design_comuni_index.md) - Central navigation
+- → [Design Comuni Index](_bmad-output/design-comuni-index-3.md) - Central navigation
 - → [PRD](_bmad-output/design-comuni-prd.md) - Requirements
 - → [Architecture](_bmad-output/design-comuni-architecture.md) - System design
 - → [UI Spec](_bmad-output/design-comuni-ui-spec.md) - Component specs

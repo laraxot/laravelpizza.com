@@ -11,6 +11,7 @@ related:
   - ../../app/Actions/Filament/AutoLabelAction.php
   - ../contracts/save-trans-action.md
   - ../../tests/Feature/SaveTransActionDefaultTest.php
+qmd: "missing translations written only local chiavi"
 ---
 
 # ADR: le chiavi di traduzione mancanti si scrivono nei file solo in ambiente locale

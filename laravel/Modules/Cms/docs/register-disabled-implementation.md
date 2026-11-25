@@ -176,8 +176,8 @@ Per aggiornamenti futuri:
 
 ## Collegamenti
 
-- [Sistema Content Blocks](./content_blocks_system.md)
-- [Architettura Content Blocks](./content_blocks_architecture.md)
+- [Sistema Content Blocks](./content-blocks-system-2.md)
+- [Architettura Content Blocks](./content-blocks-architecture-2.md)
 - [Documentazione Filament Builder](https://filamentphp.com/docs/3.x/forms/fields/builder)
 
 *Implementazione completata: gennaio 2025*

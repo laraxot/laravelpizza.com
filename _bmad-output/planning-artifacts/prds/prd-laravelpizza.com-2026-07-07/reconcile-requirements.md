@@ -1,23 +1,23 @@
-# Reconciliation: PRD FR-1..FR-21 vs .planning/REQUIREMENTS.md
+# Reconciliation: PRD FR-1..FR-21 vs .planning/requirements-2.md
 
-**Source input:** `.planning/REQUIREMENTS.md`
+**Source input:** `.planning/requirements-2.md`
 **Target:** `prd.md` (FR-1 – FR-21, §4, §5, §6)
 
 ## Coverage Matrix
 
-| REQUIREMENTS.md ID | PRD FR | Match | Notes |
+| requirements-2.md ID | PRD FR | Match | Notes |
 |---|---|---|---|
 | ADMN-01 | FR-1 | Faithful | Create/edit/delete Event, incl. venue/performers/sponsors/capacity |
 | ADMN-02 | FR-2 | Faithful | Manage Venues/Performers/Sponsors, association to Events |
 | ADMN-03 | FR-3 | Faithful | Dashboard with event/registration stats |
-| ADMN-04 | FR-4 | Altered (minor scope add) | Original: "manage registrations and attendee lists". PRD FR-4 adds "esportare" (export) capability not present in source requirement or its FR-001 reference. Not necessarily wrong, but it is an added capability not traceable to REQUIREMENTS.md — should be flagged as a PRD-introduced addition, not silently folded into ADMN-04. |
+| ADMN-04 | FR-4 | Altered (minor scope add) | Original: "manage registrations and attendee lists". PRD FR-4 adds "esportare" (export) capability not present in source requirement or its FR-001 reference. Not necessarily wrong, but it is an added capability not traceable to requirements-2.md — should be flagged as a PRD-introduced addition, not silently folded into ADMN-04. |
 | EVNT-01 | FR-5 | Faithful | Browse upcoming events, no auth |
 | EVNT-02 | FR-6 | Faithful | Past events list |
 | EVNT-03 | FR-7 | Faithful | Detail page with all metadata |
 | EVNT-04 | FR-8 | Faithful | Filter by city/date |
 | REGS-01 | FR-9 | Faithful | Register with valid email |
 | REGS-02 | FR-10 | Faithful | Immediate email confirmation |
-| REGS-03 | FR-11 | Faithful | Over-registration prevention; PRD correctly carries over the "already implemented" (✅) status matching the `[x]` checkbox in REQUIREMENTS.md |
+| REGS-03 | FR-11 | Faithful | Over-registration prevention; PRD correctly carries over the "already implemented" (✅) status matching the `[x]` checkbox in requirements-2.md |
 | CMSP-01 | FR-12 | Faithful | Pages rendered from JSON |
 | CMSP-02 | FR-13 | Faithful | Content blocks: text, images, event lists |
 | CMSP-03 | FR-14 | Faithful | Update via JSON, no deploy |
@@ -33,7 +33,7 @@
 
 ## v2 / Out-of-Scope Reconciliation
 
-| REQUIREMENTS.md item | PRD location | Match |
+| requirements-2.md item | PRD location | Match |
 |---|---|---|
 | PAYM-01 (Stripe/Apple Pay) | §5 Non-Goal, §6.2 Out of Scope | Faithful |
 | PAYM-02 (automated invoicing/receipts) | Not explicitly mentioned | **Gap** — PRD §6.2 only says "Pagamenti/biglietti a pagamento (Stripe/Apple Pay) — v2", which covers PAYM-01 but does not explicitly mention invoicing/receipt generation (PAYM-02). It's arguably implied as a sub-item of "payments," but it's not named, unlike COMM-01/02 which are both named individually. |
@@ -46,7 +46,7 @@
 
 ## Findings Summary
 
-1. **Minor scope addition, not a gap but a traceability issue**: FR-4 (ADMN-04) adds an "esportare" (export) capability for attendee lists that has no basis in REQUIREMENTS.md's ADMN-04 text or FR-001 reference. Should either be tagged `[ASSUMPTION]` in the PRD or removed to keep strict 1:1 traceability.
+1. **Minor scope addition, not a gap but a traceability issue**: FR-4 (ADMN-04) adds an "esportare" (export) capability for attendee lists that has no basis in requirements-2.md's ADMN-04 text or FR-001 reference. Should either be tagged `[ASSUMPTION]` in the PRD or removed to keep strict 1:1 traceability.
 2. **PAYM-02 (invoicing/receipts) not individually named** in PRD Non-Goals/Out-of-Scope — only the parent payments item (PAYM-01) is explicit. Low severity since it's a logical sub-component of "payments," but strict traceability would name it.
 3. No missing v1 requirement: all 21 items map 1:1 to FR-1..FR-21 with consistent meaning.
 4. No altered meaning detected beyond the FR-4 export addition noted above.
@@ -54,4 +54,4 @@
 
 ## Verdict
 
-The PRD's FR-1..FR-21 list is **substantively complete and faithful** to REQUIREMENTS.md. Two low-severity issues found: (a) an untraced scope addition in FR-4 (export capability), and (b) PAYM-02 not individually named in the Out-of-Scope section (only its parent PAYM-01 is named). No missing requirements, no altered core meanings, and all v2/out-of-scope items are otherwise correctly reflected.
+The PRD's FR-1..FR-21 list is **substantively complete and faithful** to requirements-2.md. Two low-severity issues found: (a) an untraced scope addition in FR-4 (export capability), and (b) PAYM-02 not individually named in the Out-of-Scope section (only its parent PAYM-01 is named). No missing requirements, no altered core meanings, and all v2/out-of-scope items are otherwise correctly reflected.

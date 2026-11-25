@@ -21,8 +21,8 @@ updated: 2026-11-23
 # Architecture Diagrams & Visual Reference
 
 **📍 Cross-References:**
-- [← Back to Master Index](master_documentation_index.md)
-- [Code Quality Analysis](CODE_QUALITY_ANALYSIS.md)
+- [← Back to Master Index](master-documentation-index-3.md)
+- [Code Quality Analysis](code-quality-analysis-3.md)
 - [Module Dependencies](#module-dependencies)
 - [Theme Architecture](#theme-architecture)
 - [Data Flow](#data-flow)
@@ -450,10 +450,10 @@ Modules/ModuleName/
 
 ## See Also
 
-- [→ Module Documentation Index](module_docs_index.md)
-- [→ Theme Documentation Index](themes_documentation_index.md)
+- [→ Module Documentation Index](module-docs-index-3.md)
+- [→ Theme Documentation Index](themes-documentation-index-3.md)
 - [→ Component Catalog](../laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md)
-- [→ Filament Integration Guide](../laravel/Themes/Sixteen/docs/filament-integration.md)
+- [→ Filament Integration Guide](../../../../../Lang/docs/filament-integration-3.md)
 - [→ Data Flow Analysis](COMPREHENSIVE_CODE_ANALYSIS.md#data-flow)
 
 ---

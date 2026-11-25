@@ -9,7 +9,7 @@ issues: []
 discussions: []
 module: theme
 topic: serializable-closure-error-resolution
-canonical: ../../../Themes/docs/shared-components/serializable-closure-error-resolution-.md
+canonical: ../../../Themes/docs/shared-components/serializable-closure-error-resolution-2.md
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/serializable-closure-error-resolution-.md
+See canonical documentation: ../../../Themes/docs/shared-components/serializable-closure-error-resolution-2.md

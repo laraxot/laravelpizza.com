@@ -39,8 +39,8 @@ Queste differenze guidano l'implementazione Folio+Volt: la homepage del tenant L
 2. ❌ **NON** scrivere rotte in `web.php` o `api.php`
 3. ❌ **NON** usare Livewire class components
 4. ❌ **NON** creare nuove cartelle docs
-5. ❌ **NON** usare maiuscole in nomi file .md (eccetto README.md e CHANGELOG.md)
-6. ❌ **NON** mettere file .md fuori cartelle docs (eccetto README.md e CHANGELOG.md)
+5. ❌ **NON** usare maiuscole in nomi file .md (eccetto README.md e changelog.md)
+6. ❌ **NON** mettere file .md fuori cartelle docs (eccetto README.md e changelog.md)
 
 ### ✅ COSA FARE SEMPRE
 1. ✅ Usare **Folio** per tutte le rotte frontend
@@ -221,7 +221,7 @@ $events = computed(function () {
 5. ✅ `implementation-summary.md` - Questo riassunto
 
 ### Regole Documentazione
-- ✅ Tutti i file .md in **lowercase** (eccetto README.md e CHANGELOG.md)
+- ✅ Tutti i file .md in **lowercase** (eccetto README.md e changelog.md)
 - ✅ Usare **hyphens** invece di underscores
 - ✅ File .md solo dentro cartelle `docs/`
 - ✅ Usare cartelle docs **esistenti**
@@ -262,5 +262,5 @@ $events = computed(function () {
 2. ✅ Folio + Volt per tutto il frontend
 3. ✅ Filament SOLO per admin panel
 4. ✅ DRY + KISS + SOLID + Robust + Laraxot
-5. ✅ Nomi file .md in lowercase (eccetto README.md e CHANGELOG.md)
+5. ✅ Nomi file .md in lowercase (eccetto README.md e changelog.md)
 6. ✅ Usare cartelle docs esistenti, NON crearne di nuove

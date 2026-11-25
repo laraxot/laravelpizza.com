@@ -33,7 +33,7 @@ related:
   ```
 - Consulta anche:
   - [translation-keys-best-practices.md](../translation-keys-best-practices.md)
-  - [translation_keys_rules.md](../translation_keys_rules.md)
+  - [translation-keys-rules-3.md](translation-keys-rules-3.md)
   - [docs Modulo Generico](../../<nome modulo>/docs/translations.md)
 
 ## Struttura Corretta per le Traduzioni
@@ -102,11 +102,11 @@ TextInput::make('title')
 
 ## Collegamenti Bidirezionali
 
-- [Convenzioni Namespace Filament](../../Cms/project_docs/convenzioni-namespace-filament.md) - Regole per i namespace e componenti Filament
+- [Convenzioni Namespace Filament](../../Cms/docs/convenzioni-namespace-filament-2.md) - Regole per i namespace e componenti Filament
 - [Regole Generali](../../Xot/project_docs/README.md) - Best practice e linee guida generali
-- [Convenzioni Namespace Filament](../../Cms/project_docs/convenzioni-namespace-filament.md) - Regole per i namespace e componenti Filament
+- [Convenzioni Namespace Filament](../../Cms/docs/convenzioni-namespace-filament-2.md) - Regole per i namespace e componenti Filament
 - [Regole Generali](../../Xot/project_docs/README.md) - Best practice e linee guida generali
-- [Convenzioni Namespace Filament](../../Cms/project_docs/convenzioni-namespace-filament.md) - Regole per i namespace e componenti Filament
+- [Convenzioni Namespace Filament](../../Cms/docs/convenzioni-namespace-filament-2.md) - Regole per i namespace e componenti Filament
 - [Regole Generali](../../Xot/project_docs/README.md) - Best practice e linee guida generali
 
 ---
@@ -155,7 +155,7 @@ Tutte le label, placeholder, messaggi e azioni relativi a disponibilità e appun
   ```
 - Consulta anche:
   - [translation-keys-best-practices.md](../translation-keys-best-practices.md)
-  - [translation_keys_rules.md](../translation_keys_rules.md)
+  - [translation-keys-rules-3.md](translation-keys-rules-3.md)
   - [docs <nome progetto>](../../<nome progetto>/docs/translations.md)
 
 ## Struttura Corretta per le Traduzioni

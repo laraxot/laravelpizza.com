@@ -243,7 +243,7 @@ status: draft
 ## 📚 DOCUMENTAZIONE CORRELATA
 
 ### Session Reports
-- [📊 Session Summary 2025-10-01](./phpstan/session-summary.md)
+- [📊 Session Summary 2025-10-01](wiki/session-summary-2.md)
 - [📝 Final Report 2025-10-01](./phpstan/final-report-session.md)
 - [🛠️ Fixes Session](./phpstan/filament-v4-fixes-session.md)
 

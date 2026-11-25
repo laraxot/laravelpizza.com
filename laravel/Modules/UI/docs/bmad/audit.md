@@ -4,57 +4,12 @@ type: audit
 status: review
 updated: 2026-11-16
 module: UI
-<<<<<<< .merge_file_554y8h
 qmd: "audit BMAD UI sintesi source-first qualità finding P0 P1 PHPStan Pest"
-=======
-<<<<<<< HEAD
-qmd: "audit BMAD UI sintesi source-first qualità finding P0 P1 PHPStan Pest"
-=======
-<<<<<<< .merge_file_xDMrhL
-qmd: "audit BMAD UI sintesi finding P0 P1 PHPStan Pest"
-=======
-qmd: "audit BMAD UI sintesi source-first qualità finding P0 P1 PHPStan Pest"
->>>>>>> .merge_file_4zU0nw
->>>>>>> laraxot/dev
->>>>>>> .merge_file_4ISu7V
 ---
 
 # Audit BMAD — UI
 
-<<<<<<< .merge_file_554y8h
 SSoT dettagliata: [audits/ui-audit.md](./audits/ui-audit.md) · scopo: [purpose.md](./purpose.md)
-=======
-<<<<<<< HEAD
-SSoT dettagliata: [audits/ui-audit.md](./audits/ui-audit.md) · scopo: [purpose.md](./purpose.md)
-=======
-<<<<<<< .merge_file_xDMrhL
-SSoT dettagliata: [audits/ui-audit.md](./audits/ui-audit.md)
-
-## Sintesi (2026-11-16)
-
-| Metrica | Valore |
-|---|---:|
-| PHP `app/` | 133 |
-| Test | 87 |
-| Resources | 0 |
-| Actions | 6 |
-| Services | 5 |
-| Policy `return true` | 2 |
-| Marker | 0 |
-
-## Lo scopo in una frase **UI e' il vocabolario visivo condiviso: fa si' che la stessa cosa abbia lo stesso aspetto e lo stesso comportamento in tutti i moduli, senza che nessuno debba
-
-## Gate
-
-- PHPStan modulo / `Modules`: 0 errori (verifica 2026-11-16).
-- Pest: da eseguire in ambiente testing non produttivo.
-- Security/runtime: story figlie su finding P0/P1 dell'audit dettagliato.
-SSoT dettagliata: [audits/ui-audit.md](./audits/ui-audit.md) · scopo: [purpose.md](../wiki/purpose.md)
-=======
-SSoT dettagliata: [audits/ui-audit.md](./audits/ui-audit.md) · scopo: [purpose.md](./purpose.md)
->>>>>>> .merge_file_4zU0nw
->>>>>>> laraxot/dev
->>>>>>> .merge_file_4ISu7V
 
 **In una frase:** UI è il vocabolario visivo condiviso (componenti, widget, colonne, layout tabella): fa sì che la stessa cosa abbia lo stesso aspetto e lo stesso comportamento in tutti i moduli che lo consumano.
 

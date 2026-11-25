@@ -226,8 +226,8 @@ Errore: Proprietà mancanti nel template
 
 ## Collegamenti
 - [Filament Builder Documentation](https://filamentphp.com/docs/3.x/forms/fields/builder)
-- [Architettura Content Blocks](./content_blocks_architecture.md)
-- [Implementazione Register Disabled](./register_disabled_implementation.md)
+- [Architettura Content Blocks](./content-blocks-architecture-2.md)
+- [Implementazione Register Disabled](./register-disabled-implementation-2.md)
 - [BlockData Implementation](../app/Datas/BlockData.php)
 - [Page Model](../app/Models/Page.php)
 - [Theme Components](../../../Themes/One/resources/views/components/blocks/)

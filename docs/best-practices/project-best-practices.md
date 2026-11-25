@@ -112,7 +112,7 @@ architecture-overview.md
 # ❌ SBAGLIATO
 MY_DOCUMENT.md              # UPPERCASE
 my_document.md              # underscore
-analysis-2025-11-04.md      # date in name (use CHANGELOG.md)
+analysis-2025-11-04.md      # date in name (use changelog.md)
 ```
 
 ### 8. DRY Principle
@@ -352,7 +352,7 @@ git push origin feature-branch
 - [ ] README del modulo aggiornato
 - [ ] Tests scritti (coverage >80%)
 - [ ] Se nuovo pattern: documento in `docs/`
-- [ ] Se API: aggiornare `api.md`
+- [ ] Se API: aggiornare `api-2.md`
 
 ### Per Bug Fix
 - [ ] Se merge conflict: documentare pattern

@@ -46,18 +46,18 @@ status: draft
 |-----------|--------------|----|----|
 | BMad Agents | [AGENTS.md](../../../AGENTS.md) | 32 files | [agents/index.md](agents/index.md) + [tasks/index.md](tasks/index.md) |
 | Claude/Laravel Boost | [CLAUDE.md](../../claude.md) | 21 files | [claude/index.md](claude/index.md) |
-| Gemini | [gemini.md](../../../laravel/gemini.md) | 14 files | [gemini/index.md](gemini/index.md) |
+| Gemini | [gemini-2.md](../../wiki/integrations/_da-riconciliare/gemini-2.md) | 14 files | [gemini/index.md](gemini/index.md) |
 | BMad Agents | [AGENTS.md](../../../AGENTS.md) | 32 files | [agents/index.md](agents/index.md) + [tasks/index.md](tasks/index.md) |
 | Claude/Laravel Boost | [CLAUDE.md](../../claude.md) | 21 files | [claude/index.md](claude/index.md) |
-| Gemini | [gemini.md](../../../laravel/gemini.md) | 14 files | [gemini/index.md](gemini/index.md) |
-| Qwen | [qwen.md](../../../qwen.md) | 1 file (no split needed) |: |
+| Gemini | [gemini-2.md](../../wiki/integrations/_da-riconciliare/gemini-2.md) | 14 files | [gemini/index.md](gemini/index.md) |
+| Qwen | [qwen-2.md](../../wiki/integrations/_da-riconciliare/qwen-2.md) | 1 file (no split needed) |: |
 | BMad Agents | [AGENTS.md](../../agents.md) | 32 files | [agents/index.md](agents/index.md) + [tasks/index.md](tasks/index.md) |
 | Claude/Laravel Boost | [CLAUDE.md](../../claude.md) | 21 files | [claude/index.md](claude/index.md) |
-| Gemini | [gemini.md](../../../../../gemini.md) | 14 files | [gemini/index.md](gemini/index.md) |
+| Gemini | [gemini-2.md](../../wiki/integrations/_da-riconciliare/gemini-2.md) | 14 files | [gemini/index.md](gemini/index.md) |
 | BMad Agents | [AGENTS.md](../../agents.md) | 32 files | [agents/index.md](agents/index.md) + [tasks/index.md](tasks/index.md) |
 | Claude/Laravel Boost | [CLAUDE.md](../../claude.md) | 21 files | [claude/index.md](claude/index.md) |
-| Gemini | [gemini.md](../../../../../gemini.md) | 14 files | [gemini/index.md](gemini/index.md) |
-| Qwen | [qwen.md](../../qwen.md) | 1 file (no split needed) |: |
+| Gemini | [gemini-2.md](../../wiki/integrations/_da-riconciliare/gemini-2.md) | 14 files | [gemini/index.md](gemini/index.md) |
+| Qwen | [qwen-2.md](../../qwen.md) | 1 file (no split needed) |: |
 
 **Total**: 68 split files across 4 assistants
 
@@ -100,7 +100,7 @@ status: draft
 │   ├── foundation-rules.md
 │   ├── ... (11 more)
 └── qwen/                       ← Qwen rules (no split needed)
-    └── (referenced from ../../../qwen.md)
+    └── (referenced from ../../wiki/integrations/_da-riconciliare/qwen-2.md)
 ```
 
 ---
@@ -110,7 +110,7 @@ status: draft
 The original files were very large:
 - **AGENTS.md**: 5,349 lines → 32 focused files
 - **CLAUDE.md**: 833 lines → 21 focused files
-- **gemini.md**: 581 lines → 14 focused files
+- **gemini-2.md**: 581 lines → 14 focused files
 
 Splitting improves:
 - **Readability**: Each file focuses on one topic
@@ -171,8 +171,8 @@ Every split file contains links back to:
 ### Changelog
 | Date | Change | Author |
 |------|--------|--------|
-| 2026-04-11 | Initial split of AGENTS.md, CLAUDE.md, gemini.md | Qwen |
-| 2026-04-11 | Initial split of AGENTS.md, CLAUDE.md, gemini.md | Qwen |
+| 2026-04-11 | Initial split of AGENTS.md, CLAUDE.md, gemini-2.md | Qwen |
+| 2026-04-11 | Initial split of AGENTS.md, CLAUDE.md, gemini-2.md | Qwen |
 
 ---
 

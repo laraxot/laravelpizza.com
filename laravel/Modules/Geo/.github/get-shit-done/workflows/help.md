@@ -53,9 +53,9 @@ Creates all `.planning/` artifacts:
 - `PROJECT.md` — vision and requirements
 - `config.json` — workflow mode (interactive/yolo)
 - `research/` — domain research (if selected)
-- `REQUIREMENTS.md` — scoped requirements with REQ-IDs
+- `requirements-2.md` — scoped requirements with REQ-IDs
 - `roadmap.md` — phases mapped to requirements
-- `STATE.md` — project memory
+- `state-2.md` — project memory
 
 Usage: `/gsd-new-project`
 
@@ -84,7 +84,7 @@ Usage: `/gsd-discuss-phase 2`
 Comprehensive ecosystem research for niche/complex domains.
 
 - Discovers standard stack, architecture patterns, pitfalls
-- Creates research.md with "how experts build this" knowledge
+- Creates research-2.md with "how experts build this" knowledge
 - Use for 3D, games, audio, shaders, ML, and other specialized domains
 - Goes beyond "which library" to ecosystem knowledge
 
@@ -110,7 +110,7 @@ Create detailed execution plan for a specific phase.
 Usage: `/gsd-plan-phase 1`
 Result: Creates `.planning/phases/01-foundation/01-01-PLAN.md`
 
-**PRD Express Path:** Pass `--prd path/to/requirements.md` to skip discuss-phase entirely. Your PRD becomes locked decisions in CONTEXT.md. Useful when you already have clear acceptance criteria.
+**PRD Express Path:** Pass `--prd ../../../../Notify/docs/project/requirements-2.md` to skip discuss-phase entirely. Your PRD becomes locked decisions in CONTEXT.md. Useful when you already have clear acceptance criteria.
 
 ### Execution
 
@@ -120,7 +120,7 @@ Execute all plans in a phase.
 - Groups plans by wave (from frontmatter), executes waves sequentially
 - Plans within each wave run in parallel via Task tool
 - Verifies phase goal after all plans complete
-- Updates REQUIREMENTS.md, roadmap.md, STATE.md
+- Updates requirements-2.md, roadmap.md, state-2.md
 
 Usage: `/gsd-execute-phase 5`
 
@@ -132,12 +132,12 @@ Execute small, ad-hoc tasks with GSD guarantees but skip optional agents.
 Quick mode uses the same system with a shorter path:
 - Spawns planner + executor (skips researcher, checker, verifier)
 - Quick tasks live in `.planning/quick/` separate from planned phases
-- Updates STATE.md tracking (not roadmap.md)
+- Updates state-2.md tracking (not roadmap.md)
 
 Use when you know exactly what to do and the task is small enough to not need research or verification.
 
 Usage: `/gsd-quick`
-Result: Creates `.planning/quick/NNN-slug/plan.md`, `.planning/quick/NNN-slug/summary.md`
+Result: Creates `../../../docs/laravel-13-upgrade/plan-2.md`, `../../../../Notify/docs/bugs/summary-2.md`
 
 ### Roadmap Management
 
@@ -214,7 +214,7 @@ Usage: `/gsd-progress`
 **`/gsd-resume-work`**
 Resume work from previous session with full context restoration.
 
-- Reads STATE.md for project context
+- Reads state-2.md for project context
 - Shows current position and recent progress
 - Offers next actions based on project state
 
@@ -224,7 +224,7 @@ Usage: `/gsd-resume-work`
 Create context handoff when pausing work mid-phase.
 
 - Creates .continue-here file with current state
-- Updates STATE.md session continuity section
+- Updates state-2.md session continuity section
 - Captures in-progress work context
 
 Usage: `/gsd-pause-work`
@@ -252,7 +252,7 @@ Capture idea or task as todo from current conversation.
 - Creates structured todo file in `.planning/todos/pending/`
 - Infers area from file paths for grouping
 - Checks for duplicates before creating
-- Updates STATE.md todo count
+- Updates state-2.md todo count
 
 Usage: `/gsd-add-todo` (infers from conversation)
 Usage: `/gsd-add-todo Add auth token refresh`
@@ -274,7 +274,7 @@ Usage: `/gsd-check-todos api`
 **`/gsd-verify-work [phase]`**
 Validate built features through conversational UAT.
 
-- Extracts testable deliverables from summary.md files
+- Extracts testable deliverables from summary-2.md files
 - Presents tests one at a time (yes/no responses)
 - Automatically diagnoses failures and creates fix plans
 - Ready for re-execution if issues found
@@ -363,7 +363,7 @@ Usage: `/gsd-join-discord`
 .planning/
 ├── PROJECT.md            # Project vision
 ├── roadmap.md            # Current phase breakdown
-├── STATE.md              # Project memory & context
+├── state-2.md              # Project memory & context
 ├── RETROSPECTIVE.md      # Living retrospective (updated per milestone)
 ├── config.json           # Workflow mode & gates
 ├── todos/                # Captured ideas and tasks
@@ -494,7 +494,7 @@ Example config:
 ## Getting Help
 
 - Read `.planning/PROJECT.md` for project vision
-- Read `.planning/STATE.md` for current context
+- Read `.planning/state-2.md` for current context
 - Check `.planning/roadmap.md` for phase status
 - Run `/gsd-progress` to check where you're up to
 </reference>

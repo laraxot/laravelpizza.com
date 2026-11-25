@@ -11,7 +11,7 @@ discussions: []
 
 # State Template
 
-Template for `.planning/STATE.md` — the project's living memory.
+Template for `.planning/state-2.md` — the project's living memory.
 
 ---
 
@@ -94,7 +94,7 @@ Resume file: [Path to .continue-here*.md if exists, otherwise "None"]
 
 <purpose>
 
-STATE.md is the project's short-term memory spanning all phases and sessions.
+state-2.md is the project's short-term memory spanning all phases and sessions.
 
 **Problem it solves:** Information is captured in summaries, issues, and decisions but not systematically consumed. Sessions start without context.
 
@@ -184,7 +184,7 @@ Enables instant resumption:
 
 <size_constraint>
 
-Keep STATE.md under 100 lines.
+Keep state-2.md under 100 lines.
 
 It's a DIGEST, not an archive. If accumulated context grows too large:
 - Keep only 3-5 recent decisions in summary (full log in PROJECT.md)

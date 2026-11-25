@@ -14,7 +14,7 @@ use Modules\Xot\Filament\Widgets\XotBaseSchemaWidget;
  * Questo widget fornisce un form per la selezione della località utilizzando
  * il form LocationForm.
  *
- * @see \Modules\Geo\docs\json-database.md
+ * @see \Modules\Geo\docs\json-database-2.md
  */
 class LocationWidget extends XotBaseSchemaWidget
 {

@@ -616,7 +616,7 @@ La connection `user` gestisce queste tabelle principali:
 - [DRY-KISS Analysis](../../../xot/docs/models/dry-kiss-analysis.md) - Analisi duplicazioni
 - [XotBaseModel](../../../Xot/app/Models/XotBaseModel.php) - Base class livello 1
 - [BaseModel](../../app/Models/BaseModel.php) - Base class User module
-- [CLAUDE.md](../../../../claude.md) - Convenzioni progetto
+- [CLAUDE.md](../../laravel/Modules/Geo/docs/root-md-files/claude.md) - Convenzioni progetto
 
 ## Changelog
 

@@ -16,7 +16,7 @@ Generated on: Wed Apr 22 14:04:36 CEST 2026
 ## Affected Files
 
 * ./Modules/Geo/docs/wiki/README.md
-* ./Modules/Geo/docs/wiki/AGENTS.md
+* ./Modules/Geo/docs/wiki/agents-2.md
 * ./Modules/Geo/docs/merge-conflicts-list.md
 * ./Modules/docs/docs/wiki/log.md
 * ./Modules/docs/docs/wiki/README.md
@@ -49,7 +49,7 @@ Generated on: Wed Apr 22 14:04:36 CEST 2026
 * ./Modules/Notify/docs/ai-agents/git-error-path-does-not-have-our-version.md
 * ./Modules/Notify/docs/wiki/index.md
 * ./Modules/Notify/docs/merge-conflicts-list.md
-* ./Modules/Notify/docs/correzioni-phpstan-completate_3.md
+* ./Modules/Notify/docs/correzioni-phpstan-completate-3-2.md
 * ./Modules/Notify/docs/project_docs/riepilogo-risoluzione-conflitti-2025-09-30.md
 * ./Modules/Notify/.planning/debug/knowledge-base.md
 * ./Modules/Notify/.planning/debug/resolved/sqlite-model-contract-fix.md

@@ -125,7 +125,7 @@ files:
 </step>
 
 <step name="update_state">
-If `.planning/STATE.md` exists:
+If `.planning/state-2.md` exists:
 
 1. Use `todo_count` from init context (or re-run `init todos` if count changed)
 2. Update "### Pending Todos" under "## Accumulated Context"
@@ -135,7 +135,7 @@ If `.planning/STATE.md` exists:
 Commit the todo and any updated state:
 
 ```bash
-node .github/get-shit-done/bin/gsd-tools.cjs commit "docs: capture todo - [title]" --files .planning/todos/pending/[filename] .planning/STATE.md
+node .github/get-shit-done/bin/gsd-tools.cjs commit "docs: capture todo - [title]" --files .planning/todos/pending/[filename] .planning/state-2.md
 ```
 
 Tool respects `commit_docs` config and gitignore automatically.
@@ -169,6 +169,6 @@ Would you like to:
 - [ ] Problem section has enough context for future Claude
 - [ ] No duplicates (checked and resolved)
 - [ ] Area consistent with existing todos
-- [ ] STATE.md updated if exists
+- [ ] state-2.md updated if exists
 - [ ] Todo and state committed to git
 </success_criteria>

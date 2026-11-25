@@ -50,9 +50,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # 🔍 Analisi Rendering LoginWidget - Docs.Italia.it Style
@@ -484,9 +484,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # 🔍 Analisi Rendering LoginWidget - Docs.Italia.it Style
@@ -918,9 +918,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # 🔍 Analisi Rendering LoginWidget - Docs.Italia.it Style
@@ -1352,9 +1352,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # 🔍 Analisi Rendering LoginWidget - Docs.Italia.it Style
@@ -1786,9 +1786,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # 🔍 Analisi Rendering LoginWidget - Docs.Italia.it Style
@@ -2220,9 +2220,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 - [User Module Widget Structure](../Modules/User/docs/widgets-structure-user.md)
@@ -2250,7 +2250,7 @@ See canonical documentation: ../../../Themes/docs/shared-components/widget-trans
 
 ## widget-translation-rules
 
-*Consolidated from: `widget-translation-rules.md`*
+*Consolidated from: `widget-translation-rules-2.md`*
 
 module: theme
 topic: widget-translation-rules
@@ -2261,9 +2261,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/widget-translation-rules-Modules.md
@@ -2288,9 +2288,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Widget Translation Rules - <nome progetto> Project
@@ -3075,7 +3075,7 @@ return [
 
 ## widget_translation_rules
 
-*Consolidated from: `widget_translation_rules.md`*
+*Consolidated from: `widget-translation-rules-2.md`*
 
 
 ## Core Principles
@@ -3261,7 +3261,7 @@ protected static string $view = 'user::widgets.edit-user';
 
 ## Related Documentation
 
-- [User Module Widget Structure](../Modules/User/docs/widgets_structure.md)
+- [User Module Widget Structure](../Modules/User/docs/widgets-structure-2.md)
 - [EditUserWidget Documentation](../Modules/User/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../Modules/User/docs/widgets/translation-guidelines.md)
 - [Filament Widget Conventions](../Modules/Xot/docs/filament-widgets.md)
@@ -3280,29 +3280,29 @@ All widget development should follow these rules to maintain consistency and qua
 
 ## widgets-structure
 
-*Consolidated from: `widgets-structure.md`*
+*Consolidated from: `widgets-structure-2.md`*
 
 module: theme
 topic: widgets-structure
-canonical: ../../../Themes/docs/shared-components/widgets-structure.md
+canonical: ../../widgets-structure-2.md
 related:
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/widgets-structure.md
+See canonical documentation: ../../widgets-structure-2.md
 
 ---
 
 ## widgets_structure
 
-*Consolidated from: `widgets_structure.md`*
+*Consolidated from: `widgets-structure-2.md`*
 
 
 ## Overview

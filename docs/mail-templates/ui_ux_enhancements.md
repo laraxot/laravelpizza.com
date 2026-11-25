@@ -234,5 +234,5 @@ L'implementazione di questi miglioramenti rispetta le convenzioni del progetto L
 ## Riferimenti
 
 - [Documentazione Filament Forms](https://filamentphp.com/docs/forms/fields/text-input)
-- [Implementazione Modello con Slug](./MODEL_SLUG_IMPLEMENTATION.md)
-- [Implementazione Risorsa con Slug](./RESOURCE_SLUG_IMPLEMENTATION.md)
+- [Implementazione Modello con Slug](../../laravel/Modules/Notify/docs/mail-templates/model-slug-implementation-2.md)
+- [Implementazione Risorsa con Slug](../../laravel/Modules/Notify/docs/mail-templates/resource-slug-implementation-2.md)

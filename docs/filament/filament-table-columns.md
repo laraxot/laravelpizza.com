@@ -15,7 +15,7 @@ Questa pagina raccoglie la regola e i collegamenti per l’adozione del metodo `
 ## Collegamenti Specifici
 - [Regola Generale - Modulo Xot](../laravel/modules/xot/docs/filament_table_columns.md)
 - [Regola e Applicazione - Modulo Performance](../laravel/modules/performance/docs/filament-resources.md)
-- [Esempio e Applicazione - Modulo User](../laravel/modules/user/docs/filament/filament_table_columns.md)
+- [Esempio e Applicazione - Modulo User](../laravel/modules/user/docs/filament/filament-table-columns-2.md)
 
 **Nota:** Nei moduli Laraxot, le pagine tabellari devono estendere `Modules\Xot\Filament\Resources\Pages\XotBaseListRecords` e non la classe base Filament.
 

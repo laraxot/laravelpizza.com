@@ -93,7 +93,7 @@ Analizzato lo scopo del progetto, identificate le features mancanti e implementa
 12. ✅ **final-summary.md**
 
 ### 📖 Guide Complete (3 - da sessione precedente)
-13. ✅ **Fixcity/docs/API.md**
+13. ✅ **Fixcity/docs/api-2.md**
 14. ✅ **Fixcity/docs/USER_GUIDE.md**
 15. ✅ **Fixcity/docs/ADMIN_GUIDE.md**
 
@@ -103,7 +103,7 @@ Analizzato lo scopo del progetto, identificate le features mancanti e implementa
 
 ### 🗺️ Roadmap (3 - da sessione precedente)
 18. ✅ **roadmap-status-summary.md**
-19. ✅ **Fixcity/ROADMAP_2025.md**
+19. ✅ **../../User/docs/roadmap-3.md**
 20. ✅ **User/roadmap.md**
 
 ---
@@ -419,7 +419,7 @@ Modules/Fixcity/
 │       ├── TicketResource.php               ✅ NEW
 │       └── TicketCollection.php             ✅ NEW
 └── docs/
-    ├── API.md                               ✅ EXISTING
+    ├── api-2.md                               ✅ EXISTING
     ├── USER_GUIDE.md                        ✅ EXISTING
     └── ADMIN_GUIDE.md                       ✅ EXISTING
 ```

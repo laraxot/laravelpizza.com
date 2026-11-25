@@ -88,7 +88,7 @@ Contratto per modelli che hanno profili.
 
 ## Collegamenti
 - [Policy PHPStan Errors](../User/project_docs/policy-phpstan-errors.md)
-- [Root PHPStan Errors](../../project_docs/troubleshooting/phpstan-errors.md)
+- [Root PHPStan Errors](../../../Geo/docs/raw/history/phpstan-errors-2.md)
 - [Spatie Permission Documentation](https://spatie.be/project_docs/laravel-permission)
 
 *Ultimo aggiornamento: 2025-01-06*

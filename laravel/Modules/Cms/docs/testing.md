@@ -51,6 +51,21 @@ applicazione) e con `--test-directory` raddoppia il binding (`TestCaseAlreadyInU
   `loadHomepageJsonForBlocksArchitectureTest()`. Story [ROOT-17.10](../../../../docs/stories/17-10-helper-e-blocchi-persi-nella-bonifica.md).
 - Prima di rimuovere un helper: `grep -rn '\bnomeHelper(' Modules --include='*.php'`.
 
+## Marker di sync nei test e nelle Blade
+
+`merge_remote_repo_2.sh` (merge di `laraxot/dev` + `commit -am .`) ha lasciato marker annidati in sette file del
+modulo: `components/{head,foot}.blade.php`, `tests/TestCase.php` e quattro test. Criterio: vince la versione che
+rispecchia il codice di produzione, non il lato del diff. Le due Blade sono la coda e la testa di **ogni** pagina
+pubblica, quindi la loro forma e' fissata dai contratti qui sotto (eseguiti con
+`./vendor/bin/pest Modules/Cms/tests/Unit/Views/FilamentLayoutDirectivesTest.php`):
+
+- `head`: `@filamentStyles` solo dentro `@if ($panelAssets)`, poi `@vite([$stylesheet], ...)` (il foglio e' una prop
+  di `View\Components\Head`, non un percorso fisso), poi `@stack('head')` e `@stack('styles')`;
+- `foot`: `@livewire('notifications')` e `@filamentScripts` dentro `@if ($panelAssets)`, poi `@vite` del tema.
+
+Una Blade con direttive duplicate o fuori dall'`@if` rompe il contratto senza errori a runtime: la pagina si
+carica con CSS/JS doppi. Dettaglio per file in [19.1.cms-sync-marker-repair](./stories/19.1.cms-sync-marker-repair.story.md).
+
 ## Writing Tests
 
 ### Authentication Tests

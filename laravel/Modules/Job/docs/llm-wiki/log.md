@@ -27,7 +27,7 @@ issues: []
 discussions: []
 ## [2026-04-15] maintenance | Initial wiki setup
 - Created: llm-wiki/ directory structure
-- Created: AGENTS.md (agent instructions)
+- Created: agents.md (agent instructions)
 - Created: index.md (content catalog)
 - Created: log.md (this file)
 - Directories initialized:

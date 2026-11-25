@@ -45,4 +45,4 @@ Sono stati rilevati conflitti Git non risolti nel file `app/Filament/Resources/U
 ---
 
 **Vedi anche:**
-- [module_user.md](module_user.md)
+- [module-user-2.md](module-user-2.md)

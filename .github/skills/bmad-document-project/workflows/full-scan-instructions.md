@@ -221,7 +221,7 @@ Does this look correct? [y/n/edit]
 - CONTRIBUTING.md, CONTRIBUTING.rst
 - ARCHITECTURE.md, ARCHITECTURE.txt, docs/architecture/
 - DEPLOYMENT.md, DEPLOY.md, docs/deployment/
-- API.md, docs/api/
+- api-2.md, docs/api/
 - Any files in docs/, documentation/, .github/ folders
 </action>
 

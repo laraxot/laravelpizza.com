@@ -198,7 +198,7 @@ public function __construct(string $output)
 
 - [README.md Modulo Job](./README.md)
 - [Queue Management](./queue/README.md)
-- [Best Practices](./best-practices.md)
+- [Best Practices](../../Activity/docs/best-practices-3.md)
 
 ### **Risorse Esterne**
 - [Laravel Notifications](https://laravel.com/docs/notifications)

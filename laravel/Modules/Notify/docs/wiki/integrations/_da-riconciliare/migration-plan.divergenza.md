@@ -18,12 +18,12 @@ updated: 2026-11-23
 >>>>>>> .merge_file_jxdP21
 ---
 
-# Divergenza: `MIGRATION_PLAN.md`
+# Divergenza: `migration-plan.md`
 
-Questo file veniva da `docs/wiki/integrations/modules/notify/MIGRATION_PLAN.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+Questo file veniva da `docs/wiki/integrations/modules/notify/migration-plan.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
 
-- versione del modulo: `laravel/Modules/Notify/docs/MIGRATION_PLAN.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/MIGRATION_PLAN.md`
+- versione del modulo: `laravel/Modules/Notify/docs/migration-plan.md`
+- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/migration-plan.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 

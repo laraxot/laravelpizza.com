@@ -285,7 +285,7 @@ Questa è stata la **quinta implementazione** della giornata!
 
 ### Modulo User
 - [User Module README](../Modules/User/docs/README.md)
-- [Roles & Permissions](../Modules/User/docs/roles-permissions.md)
+- [Roles & Permissions](../../User/docs/roles-permissions-2.md)
 - [BaseUser Model](../Modules/User/docs/models/baseuser.md)
 
 ### Altri Fix del Giorno

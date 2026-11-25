@@ -65,8 +65,8 @@ class LoginWidget extends XotBaseWidget
 - Ciclo di vita differente: Livewire puro vs Filament Widgets.
 - Alcune funzionalità (es. `render()`) non sono necessarie nel widget.
 ## Collegamenti
-- [WIDGETS_STRUCTURE.md](../widgets_structure.md) — Regole di struttura per i widget Filament nel modulo User.
-- [filament_best_practices.md](filament_best_practices.md) — Best practices per risorse e widget Filament.
+- [widgets-structure-2.md](../widgets_structure.md) — Regole di struttura per i widget Filament nel modulo User.
+- [filament-best-practices-2.md](filament-best-practices-2.md) — Best practices per risorse e widget Filament.
 - [login-improvements.md](../../../themes/twentyone/project_docs/login-improvements.md) — Analisi e miglioramenti della pagina di login nel tema TwentyOne.
 - [login-improvements.md](../../../themes/twentyone/docs/login-improvements.md) — Analisi e miglioramenti della pagina di login nel tema TwentyOne.
 # Conversione Livewire Auth/Login a Filament LoginWidget
@@ -160,6 +160,6 @@ class LoginWidget extends XotBaseWidget
 - Alcune funzionalità (es. `render()`) non sono necessarie nel widget.
 
 ## Collegamenti
-- [WIDGETS_STRUCTURE.md](../widgets_structure.md) — Regole di struttura per i widget Filament nel modulo User.
-- [filament_best_practices.md](filament_best_practices.md) — Best practices per risorse e widget Filament.
+- [widgets-structure-2.md](../widgets_structure.md) — Regole di struttura per i widget Filament nel modulo User.
+- [filament-best-practices-2.md](filament-best-practices-2.md) — Best practices per risorse e widget Filament.
 - [login-improvements.md](../../../themes/twentyone/docs/login-improvements.md) — Analisi e miglioramenti della pagina di login nel tema TwentyOne.

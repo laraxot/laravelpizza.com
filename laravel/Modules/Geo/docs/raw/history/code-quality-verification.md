@@ -287,7 +287,7 @@ laravel/Modules/
 ├── IndennitaResponsabilita/docs/
 │   ├── README.md (Updated)
 │   ├── analysis-summary.md
-│   ├── code-quality-analysis.md
+│   ├── code-quality-analysis-3.md
 │   ├── refactoring-action-plan.md
 │   ├── best-practices.md
 │   ├── trait-responsibility-violation.md
@@ -414,7 +414,7 @@ laravel/Themes/
 - [Schemaless Final Guide](./claude/schemaless-attributes-final.md)
 
 ### For Quality
-- [Code Quality Analysis](../laravel/Modules/IndennitaResponsabilita/docs/code-quality-analysis.md)
+- [Code Quality Analysis](../../../../Activity/docs/code-quality-analysis-3.md)
 - [Analysis Summary](../laravel/Modules/IndennitaResponsabilita/docs/analysis-summary.md)
 
 ---

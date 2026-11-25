@@ -702,11 +702,11 @@ Themes/
 ```
 docs/
 ├── dry-kiss-analysis-master.md (questo file)
-├── analisi-metodi-duplicati-MASTER.md
+├── analisi-metodi-duplicati-master-2.md
 ├── analisi-metodi-duplicati-INDEX.md
 ├── implementazione-refactoring-basemodel.md
-├── REFACTORING_COMPLETATO.md
-├── IMPLEMENTAZIONE_COMPLETA_FINALE.md
+├── refactoring-completato-2.md
+├── implementazione-completa-finale-2.md
 └── README_REFACTORING.md
 ```
 

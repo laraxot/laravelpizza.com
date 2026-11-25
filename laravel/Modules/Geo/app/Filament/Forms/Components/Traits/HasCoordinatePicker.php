@@ -18,6 +18,8 @@ use Modules\Geo\Filament\Forms\Components\CoordinatePickerHelpers;
  *
  * Always `use` CoordinatePickerHelpers: an unqualified call resolves under
  * Traits\ and becomes class.notFound (× every consumer component).
+ *
+ * @see Modules/Geo/docs/geo-sync-marker-repair.md
  */
 trait HasCoordinatePicker
 {

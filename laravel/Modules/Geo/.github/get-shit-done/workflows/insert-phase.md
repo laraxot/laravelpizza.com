@@ -73,9 +73,9 @@ Extract from result: `phase_number`, `after_phase`, `name`, `slug`, `directory`.
 </step>
 
 <step name="update_project_state">
-Update STATE.md to reflect the inserted phase:
+Update state-2.md to reflect the inserted phase:
 
-1. Read `.planning/STATE.md`
+1. Read `.planning/state-2.md`
 2. Under "## Accumulated Context" → "### Roadmap Evolution" add entry:
    ```
    - Phase {decimal_phase} inserted after Phase {after_phase}: {description} (URGENT)
@@ -95,7 +95,7 @@ Phase {decimal_phase} inserted after Phase {after_phase}:
 - Marker: (INSERTED) - indicates urgent work
 
 Roadmap updated: .planning/roadmap.md
-Project state updated: .planning/STATE.md
+Project state updated: .planning/state-2.md
 
 ---
 
@@ -143,6 +143,6 @@ Phase insertion is complete when:
 - [ ] `gsd-tools phase insert` executed successfully
 - [ ] Phase directory created
 - [ ] Roadmap updated with new phase entry (includes "(INSERTED)" marker)
-- [ ] STATE.md updated with roadmap evolution note
+- [ ] state-2.md updated with roadmap evolution note
 - [ ] User informed of next steps and dependency implications
 </success_criteria>

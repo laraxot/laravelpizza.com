@@ -85,7 +85,7 @@ Themes/ThemeName/
 - `00-index.md` (numeric prefix for ordering)
 - `README.md` (standard)
 - `CHANGELOG.md` (standard)
-- `best-practices.md` (descriptive, lowercase)
+- `best-practices-3.md` (descriptive, lowercase)
 
 ❌ **WRONG**:
 - `UserAuthentication.md` (PascalCase)
@@ -141,7 +141,7 @@ Gennaio 2025
 This guide covers user authentication implementation.
 
 ## Related
-- [Session Management](session-management.md)
+- [Session Management](session-management-3.md)
 - [Password Reset](password-reset.md)
 
 ---
@@ -444,9 +444,9 @@ jobs:
 
 ## 📚 Related Documents
 
-- [AGENTS.md](../../../agents.md) - Agent guidelines
+- [agents-2.md](../../../agents.md) - Agent guidelines
 - [.windsurfrules](../../../.windsurfrules) - IDE rules
-- [DOCUMENTATION_INDEX.md](../../../docs/DOCUMENTATION_INDEX.md) - Master index
+- [documentation-index.md](../../../docs/documentation-index.md) - Master index
 
 ---
 

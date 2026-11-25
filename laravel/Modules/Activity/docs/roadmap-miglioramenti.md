@@ -64,7 +64,7 @@ strato racconta una sessione diversa che non ha letto lo strato sotto:
 - 6 varianti di `phpstan-fixes*.md`, altre 6 di `phpstan-analysis*.md`
 - 4 varianti di `business-logic-analysis*.md` (compreso uno SCREAMING_CASE)
 <<<<<<< HEAD
-- `roadmap.md`, `roadmap-.md`, `roadmap-2025.md`, `roadmap-and-issues.md`,
+- `roadmap.md`, `roadmap-3.md`, `roadmap-2025.md`, `roadmap-and-issues.md`,
 <<<<<<< .merge_file_8bj6r4
 <<<<<<< .merge_file_NFMHS4
 <<<<<<< .merge_file_1F4jVM
@@ -89,7 +89,7 @@ strato racconta una sessione diversa che non ha letto lo strato sotto:
   `roadmap-archive-1.md`, `roadmap-vision.md` — sei roadmap per un modulo,
   nessuna delle quali probabilmente letta prima di scriverne una nuova
 - `README.md`, `readme.md`, `README.md.update`, `readme.md.update`,
-  `readme_update.md`, `readme-update.md` — sei README, contando le
+  `readme-update-3.md`, `readme-update.md` — sei README, contando le
   differenze di case e underscore come se fossero contenuto
 - `test02.md`, `test03.md`, `test04.md`, `test2222.md`, `test444.md` — file
   di prova mai ripuliti, ancora versionati
@@ -114,13 +114,13 @@ strato racconta una sessione diversa che non ha letto lo strato sotto:
 - `roadmap.md`, `roadmap.md`, `roadmap.md`, `roadmap-and-issues.md`,
   `roadmap-archive-1.md`, `roadmap-vision.md`: sei roadmap per un modulo,
 =======
-- `roadmap.md`, `roadmap-.md`, `roadmap-2025.md`, `roadmap-and-issues.md`,
+- `roadmap.md`, `roadmap-3.md`, `roadmap-2025.md`, `roadmap-and-issues.md`,
   `roadmap-archive.md`, `roadmap-vision.md`: sei roadmap per un modulo,
 >>>>>>> .merge_file_SFvhbL
   nessuna delle quali probabilmente letta prima di scriverne una nuova
 - `README.md`, `README.md`, `README.md.update`, `README.md.update`,
 >>>>>>> laraxot/dev
-  `readme_update.md`, `readme-update.md`: sei README, contando le
+  `readme-update-3.md`, `readme-update.md`: sei README, contando le
   differenze di case e underscore come se fossero contenuto
 - `test02.md`, `test03.md`, `test04.md`, `test2222.md`, `test444.md`: file
   di prova mai ripuliti, ancora versionati

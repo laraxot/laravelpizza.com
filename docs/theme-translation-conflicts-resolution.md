@@ -395,7 +395,7 @@ php artisan lang:missing --locale=it,en,de
 ### Collegamenti Interni
 - [User States](user_states.mdc)
 - [Moderation Strategy](user_moderation_strategy.md)
-- [Filament Best Practices](filament_best_practices.md)
+- [Filament Best Practices](filament-best-practices-2.md)
 
 ### Collegamenti Esterni
 - [Translation Standards](../../../project_docs/translation-standards.md)

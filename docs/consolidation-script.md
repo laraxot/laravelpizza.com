@@ -8,7 +8,7 @@ Questi file sono vuoti (0 bytes) e possono essere eliminati:
 cd laravel/Modules/UI/docs
 
 # File vuoti con underscore
-rm -f advanced_form_components.md
+rm -f advanced-form-components-2.md
 rm -f blade_data_handling.md
 rm -f naming_conventions.md
 rm -f phpstan_fixes_2025.md
@@ -20,19 +20,19 @@ Questi file hanno versioni con trattini che devono essere mantenute:
 
 ```bash
 # Advanced Form Components
-rm -f advanced_form_components.md
+rm -f advanced-form-components-2.md
 
 # Blade Components
 rm -f blade_data_handling.md
 
 # Filament Components
-rm -f filament_4x_upgrade.md
-rm -f filament_4x_upgrade_report.md
-rm -f filament_blade_components_usage.md
+rm -f filament-4x-upgrade-2.md
+rm -f filament-4x-upgrade-report-2.md
+rm -f filament-blade-components-usage-2.md
 rm -f filament_components.md
 rm -f filament_components_errors.md
 rm -f filament_components_location_studio.md
-rm -f filament_components_usage.md
+rm -f filament-components-usage-2.md
 rm -f filament_fileupload.md
 rm -f filament_fileupload_components.md
 rm -f filament_error_fileupload_buttonlabel.md
@@ -58,7 +58,7 @@ rm -f naming_rules.md
 # PHPStan
 rm -f phpstan_fixes_2025.md
 rm -f phpstan_corrections_summary.md
-rm -f phpstan_radio_badge_fix.md
+rm -f phpstan-radio-badge-fix-2.md
 
 # VSCode
 rm -f vscode_filament_extension.md
@@ -69,10 +69,10 @@ rm -f algolia_docsearch.md
 rm -f architecture_rules.md
 rm -f auth_pages.md
 rm -f base_components.md
-rm -f best_practices.md
+rm -f best-practices-3.md
 rm -f blocks_system.md
 rm -f chart_components.md
-rm -f components_guide.md
+rm -f components-guide-2.md
 rm -f cms_link.md
 rm -f cms_themes_link.md
 ```

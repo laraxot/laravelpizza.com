@@ -178,7 +178,7 @@ Ogni azione di autenticazione deve:
 
 ## Collegamenti
 
-- [Documentazione Volt](./volt_logout.md)
-- [Best Practices Routing](./routing_best_practices.md)
-- [Struttura Directory](./directory_structure_checklist.md)
-- [Gestione Errori](./error_handling.md) 
+- [Documentazione Volt](../../laravel/Modules/User/docs/volt-logout-3.md)
+- [Best Practices Routing](../../laravel/Modules/User/docs/routing-best-practices-2.md)
+- [Struttura Directory](../../laravel/Modules/User/docs/directory-structure-checklist-3.md)
+- [Gestione Errori](../../laravel/Modules/User/docs/error-handling-2.md) 

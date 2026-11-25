@@ -38,7 +38,7 @@ Le Commands progettuali vivono qui, nel wiki del Module **Seo**, e vengono caric
 
 - La sorgente di verita' per le Commands e' sempre il wiki locale
 - Non embeddare Commands nei prompt di avvio
-- Per Commands globali, consulta il [wiki root](../../docs/wiki/commands/INDEX.md) _(target mancante, verificato 2026-10-08)_
+- Per Commands globali, consulta il [wiki root](../../docs/wiki/commands/index-2.md) _(target mancante, verificato 2026-10-08)_
 
 ## Aggiungere una Nuova COMMANDS
 

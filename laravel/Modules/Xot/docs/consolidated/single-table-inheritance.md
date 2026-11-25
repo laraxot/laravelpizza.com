@@ -78,4 +78,4 @@
 
 - [Modelli Patient](../Patient/project_docs/models.md)
 - [Best Practices Modelli](./models.md)
-- [Convenzioni di Codice](./coding-standards.md)
+- [Convenzioni di Codice](../../../Geo/docs/development/coding-standards-2.md)

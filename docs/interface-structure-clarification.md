@@ -33,10 +33,10 @@ final class SendNetfunSMSAction implements SmsActionContract
 
 Si noti che esiste una discrepanza nella documentazione del progetto:
 
-1. **PATH_AND_INTERFACE_RULES.md** indica che le interfacce dovrebbero essere nella directory principale `Contracts` e non in sottodirectory.
-2. **SMS_ACTIONS.md** indica che le interfacce SMS sono definite in `app/Contracts/SMS/`.
+1. **path-and-interface-rules-2.md** indica che le interfacce dovrebbero essere nella directory principale `Contracts` e non in sottodirectory.
+2. **sms-actions-2.md** indica che le interfacce SMS sono definite in `app/Contracts/SMS/`.
 
-**La struttura corretta e funzionante è quella indicata in SMS_ACTIONS.md**, con le interfacce SMS posizionate nella sottodirectory `Contracts/SMS/`.
+**La struttura corretta e funzionante è quella indicata in sms-actions-2.md**, con le interfacce SMS posizionate nella sottodirectory `Contracts/SMS/`.
 
 ## Convenzioni di Naming
 
@@ -89,10 +89,10 @@ final class SendNetfunSMSAction implements SmsActionContract
 
 Si noti che esiste una discrepanza nella documentazione del progetto:
 
-1. **PATH_AND_INTERFACE_RULES.md** indica che le interfacce dovrebbero essere nella directory principale `Contracts` e non in sottodirectory.
-2. **SMS_ACTIONS.md** indica che le interfacce SMS sono definite in `app/Contracts/SMS/`.
+1. **path-and-interface-rules-2.md** indica che le interfacce dovrebbero essere nella directory principale `Contracts` e non in sottodirectory.
+2. **sms-actions-2.md** indica che le interfacce SMS sono definite in `app/Contracts/SMS/`.
 
-**La struttura corretta e funzionante è quella indicata in SMS_ACTIONS.md**, con le interfacce SMS posizionate nella sottodirectory `Contracts/SMS/`.
+**La struttura corretta e funzionante è quella indicata in sms-actions-2.md**, con le interfacce SMS posizionate nella sottodirectory `Contracts/SMS/`.
 
 ## Convenzioni di Naming
 

@@ -3,8 +3,8 @@
 ## Collegamenti correlati
 - [README modulo User](./readme.md)
 - [Convenzioni Path](./path_conventions.md)
-- [Best Practices Chiavi di Traduzione](/laravel/modules/lang/docs/translation_keys_best_practices.md)
-- [Implementazione Header](/laravel/modules/user/docs/header_language_avatar_implementation.md)
+- [Best Practices Chiavi di Traduzione](/laravel/modules/lang/docs/translation-keys-best-practices-2.md)
+- [Implementazione Header](/laravel/modules/user/docs/header-language-avatar-implementation-4.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
 ## Panoramica

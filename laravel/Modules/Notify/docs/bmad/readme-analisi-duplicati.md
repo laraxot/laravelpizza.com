@@ -25,24 +25,24 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
+  - "../wiki/integrations/_da-riconciliare/absolute-completion-100.md"
 <<<<<<< .merge_file_OVC0W9
 <<<<<<< .merge_file_LFX8m6
-  - "./acronym-naming-conventions.md"
+  - "../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
+  - "../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
 =======
-  - "./acronym-naming-conventions.md"
+  - "../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
 >>>>>>> .merge_file_YTd8TC
 =======
-  - "./acronym-naming-conventions.md"
+  - "../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
 >>>>>>> .merge_file_T20z5z
-  - "./acronym-naming-conventions.md"
+  - "../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

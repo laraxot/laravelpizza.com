@@ -133,6 +133,6 @@ find Modules/*/lang/ -name "*.php" -exec sed -i 's/<nome progetto>\.com/{{app_do
 ## Collegamenti
 
 - [module_reusability_guidelines.md](module_reusability_guidelines.md)
-- [Modules/Notify/docs/reusability_guidelines.md](../laravel/modules/notify/docs/reusability_guidelines.md)
+- [Modules/Notify/docs/reusability-guidelines-2.md](../laravel/modules/notify/docs/reusability-guidelines-2.md)
 - [.cursor/rules/module_reusability_critical.md](../.cursor/rules/module_reusability_critical.md)
 

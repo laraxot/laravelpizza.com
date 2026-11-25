@@ -13,9 +13,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../actions-path-convention-2.md"
 ---
 
 # Filament Resources Coverage Analysis - Modulo User
@@ -225,6 +225,6 @@ Questi modelli sono pivot tables e NON devono avere Resources standalone:
 
 ## Collegamenti
 
-- [Filament Resources Organization](./filament-resources-organization.md)
-- [Filament Best Practices](./filament-best-practices.md)
+- [Filament Resources Organization](../filament-resources-organization-2.md)
+- [Filament Best Practices](../../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Filosofia Modulo User](./filosofia-modulo-user.md)

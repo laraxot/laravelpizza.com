@@ -13,7 +13,7 @@ discussions: []
 
 **Fase BMAD**: Documentazione / manutenzione (docs-only, nessuna modifica a codice applicativo).
 
-**Contesto**: `Modules/Gdpr/docs/` ha accumulato ~130 file `.md` tra import grezzi (`raw/root-import/`), copie root (`root-md-files/`), roadmap frammentate (`roadmap/` e `development/roadmap/`) e indici concorrenti (`index.md`, `index.md`, `00-index.md`, `00-index.md`).
+**Contesto**: `Modules/Gdpr/docs/` ha accumulato ~130 file `.md` tra import grezzi (`raw/root-import/`), copie root (`root-md-files/`), roadmap frammentate (`roadmap/` e `development/roadmap/`) e indici concorrenti (`index-2.md`, `index-2.md`, `00-index-2.md`, `00-index-2.md`).
 
 **Azione**: aggiornato `docs/index.md` come indice unico organizzato per argomento (panoramica, conformità/consensi, pacchetti, html2pdf, qualità/performance, roadmap, task, wiki interno, raw import). Nessun file `.md` esistente è stato rinominato o cancellato.
 

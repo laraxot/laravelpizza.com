@@ -73,7 +73,7 @@ echo $tenants->count(); // ✅ Output: 1
 ## Riferimenti
 
 - [Customer User Fix Summary](../../<nome progetto>/docs/customer_user_fix_summary.md)
-- [Cross Database Relations](../../user/docs/cross_database_relations_issue.md)
+- [Cross Database Relations](../../user/docs/cross-database-relations-issue-3.md)
 - [Multi-Tenant Architecture](../architecture/multi_tenant_design.md)
 
 ## Note per Manutenzione Futura
@@ -161,7 +161,7 @@ echo $tenants->count(); // ✅ Output: 1
 ## Riferimenti
 
 - [Customer User Fix Summary](../filament/relationx-sqlite-cross-database-fix.md)
-- [Cross Database Relations](../../user/docs/cross_database_relations_issue.md)
+- [Cross Database Relations](../../user/docs/cross-database-relations-issue-3.md)
 - [Multi-Tenant Architecture](../architecture/multi_tenant_design.md)
 
 ## Note per Manutenzione Futura

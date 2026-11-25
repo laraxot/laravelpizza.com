@@ -207,7 +207,7 @@ Tutte le traduzioni seguono ora la struttura espansa completa:
 ## Collegamenti
 
 - [Filosofia Traduzioni Laraxot](../../xot/docs/translation-philosophy.md)
-- [Standard Traduzioni](../../xot/docs/translation-standards.md)
+- [Standard Traduzioni](../../Lang/docs/translation-standards-3.md)
 - [Documentazione Modulo User](./README.md)
 
 ## Note Tecniche

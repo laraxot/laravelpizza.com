@@ -28,22 +28,22 @@ discussions: https://github.com/laraxot/module_ai_fila5/discussions
 ### Product
 | File | Scopo |
 |---|---|
-| [PRD.md](./PRD.md) | Product requirements |
-| [PRODUCT_ROADMAP.md](./PRODUCT_ROADMAP.md) | Roadmap |
-| [PRODUCT_STRATEGY.md](./PRODUCT_STRATEGY.md) | Strategy |
-| [PRODUCT_LAUNCH_PLAN.md](./PRODUCT_LAUNCH_PLAN.md) | Launch plan |
+| [prd-2.md](./prd-2.md) | Product requirements |
+| [product-roadmap-2.md](./product-roadmap-2.md) | Roadmap |
+| [product-strategy-2.md](./product-strategy-2.md) | Strategy |
+| [product-launch-plan-2.md](./product-launch-plan-2.md) | Launch plan |
 
 ### Development
 | File | Scopo |
 |---|---|
-| [GSD_WORKFLOW.md](./GSD_WORKFLOW.md) | Workflow GSD locale al modulo |
-| [SPRINT_PLANNING.md](./SPRINT_PLANNING.md) | Sprint planning |
-| [USER_RESEARCH.md](./USER_RESEARCH.md) | User research |
+| [gsd-workflow-2.md](./gsd-workflow-2.md) | Workflow GSD locale al modulo |
+| [sprint-planning-2.md](./sprint-planning-2.md) | Sprint planning |
+| [user-research-2.md](./user-research-2.md) | User research |
 
 ## Riferimenti canonici esterni al modulo
 
 - [Ralph + GSD + BMAD orchestration](../../../../bashscripts/ai/.agents/docs/architecture/ralph-gsd-bmad-orchestration.md)
-- [AI agents docs index](../../../../bashscripts/ai/.agents/docs/00-INDEX.md)
+- [AI agents docs index](../../../../bashscripts/ai/.agents/docs/00-index-2.md)
 - [AGENTS.md](../../../../AGENTS.md)
 
 ## Nota anti-ridondanza

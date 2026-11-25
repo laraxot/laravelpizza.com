@@ -15,6 +15,9 @@ use function Laravel\Folio\{middleware, name};
 middleware(['guest', 'throttle:6,1']);
 name('password.request');
 
+/**
+ * @see Themes/Meetup/docs/authentication-ui-ux.md
+ */
 new class extends Component
 {
     #[Validate('required|email')]
@@ -22,6 +25,9 @@ new class extends Component
 
     public ?string $emailSentMessage = null;
 
+    /**
+     * @see Themes/Meetup/docs/authentication-ui-ux.md
+     */
     public function sendResetPasswordLink(): void
     {
         $this->validate();

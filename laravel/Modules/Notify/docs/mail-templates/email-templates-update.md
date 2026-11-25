@@ -115,30 +115,30 @@ I modelli base si trovano in:
 <<<<<<< HEAD
 <<<<<<< .merge_file_Bezunr
 - [Email Templates Structure](./email_templates_structure.md)
-- [Responsive Email Design](./responsive_email_templates.md)
+- [Responsive Email Design](../responsive-email-templates-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_0LQELm
 - [Email Templates Structure](./EMAIL_TEMPLATES_STRUCTURE.md)
-- [Responsive Email Design](./RESPONSIVE_EMAIL_TEMPLATES.md)
+- [Responsive Email Design](../responsive-email-templates-2.md)
 =======
 <<<<<<< HEAD
 - [Email Templates Structure](./email_templates_structure.md)
-- [Responsive Email Design](./responsive_email_templates.md)
+- [Responsive Email Design](../responsive-email-templates-2.md)
 =======
 - [Email Templates Structure](./EMAIL_TEMPLATES_STRUCTURE.md)
-- [Responsive Email Design](./RESPONSIVE_EMAIL_TEMPLATES.md)
+- [Responsive Email Design](../responsive-email-templates-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_Bezunr
 =======
 - [Email Templates Structure](./email_templates_structure.md)
-- [Responsive Email Design](./responsive_email_templates.md)
+- [Responsive Email Design](../responsive-email-templates-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_0LQELm
-- [Email HTML Best Practices](../email_html_best_practices.md)
-- [Email Templates Implementation](../email_templates.md)
+- [Email HTML Best Practices](../email-html-best-practices-2.md)
+- [Email Templates Implementation](../email-templates-2.md)

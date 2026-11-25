@@ -35,8 +35,8 @@ return new class extends XotBaseMigration
 ```
 
 ## Related Documentation
-- [User Module Database Errors](../../user/project_docs/database_errors.md)
+- [User Module Database Errors](../../laravel/Modules/User/docs/database-errors-2.md)
 - [Xot Base Classes](../xot_base_classes.md)
-- [Code Quality](../code_quality.md)
+- [Code Quality](../code-quality-2.md)
 - [Root Documentation](../../../../project_docs/collegamenti-documentazione.md)
 - [Database Guidelines](../database_guidelines.md)

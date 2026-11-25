@@ -9,7 +9,7 @@ updated: 2026-11-17
 tags: [phpstan, geo, phpstan-ignore, traits, bmad]
 related:
   - ./phpstan-cleanup-geo.story.md
-  - ./01.Geo-phpstan-fix.story.md
+  - ./01.geo-phpstan-fix.story.md
 ---
 
 # [STORY] Geo: rimozione delle annotazioni @phpstan-ignore

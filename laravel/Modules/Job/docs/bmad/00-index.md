@@ -12,7 +12,7 @@ qmd: "indice BMAD Job audit purpose piano stories"
 - [Purpose](./purpose.md)
 - [Audit](./audit.md)
 - [Audit dettagliato](./audits/job-audit.md)
-- [Architettura](./architecture.md)
+- [Architettura](../architecture-2.md)
 - [Decision log](./decision-log.md)
 - [Epics](./epics.md)
 - [Brainstorming](./brainstorming.md)

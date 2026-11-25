@@ -38,7 +38,7 @@ Run /gsd-new-project to start a new project.
 
 Exit.
 
-If missing STATE.md: suggest `/gsd-new-project`.
+If missing state-2.md: suggest `/gsd-new-project`.
 
 **If roadmap.md missing but PROJECT.md exists:**
 
@@ -77,7 +77,7 @@ Use this instead of manually reading/parsing roadmap.md.
 <step name="recent">
 **Gather recent work context:**
 
-- Find the 2-3 most recent summary.md files
+- Find the 2-3 most recent summary-2.md files
 - Use `summary-extract` for efficient parsing:
   ```bash
   node .github/get-shit-done/bin/gsd-tools.cjs summary-extract <path> --fields one_liner
@@ -148,8 +148,8 @@ CONTEXT: [✓ if has_context | - if not]
 List files in the current phase directory:
 
 ```bash
-ls -1 .planning/phases/[current-phase-dir]/*-PLAN.md 2>/dev/null | wc -l
-ls -1 .planning/phases/[current-phase-dir]/*-SUMMARY.md 2>/dev/null | wc -l
+ls -1 .planning/phases/[current-phase-dir]/*-plan-2.md 2>/dev/null | wc -l
+ls -1 .planning/phases/[current-phase-dir]/*-summary-2.md 2>/dev/null | wc -l
 ls -1 .planning/phases/[current-phase-dir]/*-UAT.md 2>/dev/null | wc -l
 ```
 
@@ -188,7 +188,7 @@ issues: []
 discussions: []
 **Route A: Unexecuted plan exists**
 
-Find the first plan.md without matching summary.md.
+Find the first plan-2.md without matching summary.md.
 Read its `<objective>` section.
 
 ```
@@ -196,7 +196,7 @@ Read its `<objective>` section.
 
 ## ▶ Next Up
 
-**{phase}-{plan}: [Plan Name]** — [objective summary from plan.md]
+**{phase}-{plan}: [Plan Name]** — [objective summary from plan-2.md]
 
 `/gsd-execute-phase {phase}`
 

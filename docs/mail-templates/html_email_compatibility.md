@@ -128,7 +128,7 @@ I template nella directory `mail-layouts` seguono queste linee guida di compatib
 
 ## Riferimenti
 
-- [Guida ai Layout Email](../MAIL_LAYOUTS_GUIDE.md)
-- [Integrazione MailPace](./MAILPACE_TEMPLATES_INTEGRATION.md)
+- [Guida ai Layout Email](../../laravel/Modules/Notify/docs/mail-layouts-guide-2.md)
+- [Integrazione MailPace](../../laravel/Modules/Notify/docs/mail-templates/mailpace-templates-integration-2.md)
 - [Campaign Monitor Guide](https://www.campaignmonitor.com/css/)
 - [Email Client Market Share](https://emailclientmarketshare.com/)

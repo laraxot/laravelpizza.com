@@ -457,19 +457,19 @@ Typography:
 | File | Purpose | View |
 |------|---------|------|
 <<<<<<< HEAD
-| `guides/getting-started.md` | Theme setup | [View](GETTING-STARTED.md) |
+| `guides/getting-started.md` | Theme setup | [View](getting-started-2.md) |
 =======
 <<<<<<< HEAD
 <<<<<<< .merge_file_UrxtUW
 <<<<<<< HEAD
-| `guides/getting-started.md` | Theme setup | [View](GETTING-STARTED.md) |
+| `guides/getting-started.md` | Theme setup | [View](getting-started-2.md) |
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_t8tqVs
 | `guides/getting-started.md` | Theme setup | [View](getting-started.md) |
 =======
-| `guides/getting-started.md` | Theme setup | [View](GETTING-STARTED.md) |
+| `guides/getting-started.md` | Theme setup | [View](getting-started-2.md) |
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_UrxtUW
@@ -595,32 +595,32 @@ public_html/assets/
 <<<<<<< HEAD
 <<<<<<< .merge_file_UrxtUW
 - **Code Quality:** [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
-- **Framework Rules:** [../laravel/CLAUDE.md](../laravel/claude.md)
+- **Framework Rules:** [../../Geo/docs/root-md-files/claude.md](../laravel/claude.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_t8tqVs
 - **Code Quality:** [CODE_QUALITY_STANDARDS.md](CODE_QUALITY_STANDARDS.md)
-- **Framework Rules:** [../laravel/CLAUDE.md](../laravel/CLAUDE.md)
+- **Framework Rules:** [../../Geo/docs/root-md-files/claude.md](../../Geo/docs/root-md-files/claude.md)
 =======
 <<<<<<< HEAD
 - **Code Quality:** [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
-- **Framework Rules:** [../laravel/CLAUDE.md](../laravel/claude.md)
+- **Framework Rules:** [../../Geo/docs/root-md-files/claude.md](../laravel/claude.md)
 =======
 - **Code Quality:** [CODE_QUALITY_STANDARDS.md](CODE_QUALITY_STANDARDS.md)
-- **Framework Rules:** [../laravel/CLAUDE.md](../laravel/CLAUDE.md)
+- **Framework Rules:** [../../Geo/docs/root-md-files/claude.md](../../Geo/docs/root-md-files/claude.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_UrxtUW
 =======
 - **Code Quality:** [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
-- **Framework Rules:** [../laravel/CLAUDE.md](../laravel/claude.md)
+- **Framework Rules:** [../../Geo/docs/root-md-files/claude.md](../laravel/claude.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_t8tqVs
-- **Framework Rules:** [../laravel/CLAUDE.md](../../../claude.md)
+- **Framework Rules:** [../../Geo/docs/root-md-files/claude.md](../../../claude.md)
 
 ---
 

@@ -8,7 +8,7 @@ Il modulo Gdpr presenta **duplicazioni massive** con 50+ file di documentazione 
 
 #### Violazioni DRY Critiche:
 - **File duplicati sistematici**: Ogni file ha versioni dash e underscore
-- **Cookie consent files**: `cookie-consent.md` + `cookie_consent.md` contengono solo 5 URLs
+- **Cookie consent files**: `cookie-consent.md` + `cookie-consent-3.md` contengono solo 5 URLs
 - **Conflict resolution**: Multiple file su stessi git conflicts
 - **MCP recommendations**: Stesse raccomandazioni ripetute ovunque
 
@@ -55,7 +55,7 @@ docs/
 #### Prima:
 ```
 cookie-consent.md (5 URLs)
-cookie_consent.md (5 URLs duplicate)
+cookie-consent-3.md (5 URLs duplicate)
 privacy-policy.md (scattered info)
 data-protection.md (overlapping content)
 ```
@@ -195,7 +195,7 @@ cp -r docs docs.backup.gdpr
 
 # Eliminare duplicati
 find docs -name "*_*.md" -delete
-rm cookie_consent.md privacy_policy.md data_protection.md
+rm cookie-consent-3.md privacy_policy.md data_protection.md
 # [Lista completa files da eliminare]
 ```
 

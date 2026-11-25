@@ -23,7 +23,7 @@ Il bottone **Cambia layout** sulle liste `HasXotTable` non alternava lista/grigl
 |----------|-----------|
 | [UI bugfix](../laravel/Modules/UI/docs/bugfix-table-layout-toggle-not-working.md) | Causa, contratto, verifica |
 | [Xot contratto](../laravel/Modules/Xot/docs/filament/table-layout-toggle-contract.md) | Responsabilità moduli |
-| [UI action](../laravel/Modules/UI/docs/actions/table-layout-toggle.md) | Utilizzo azione |
+| [UI action](../../../UI/docs/actions/table-layout-toggle-2.md) | Utilizzo azione |
 
 ## Codice toccato
 

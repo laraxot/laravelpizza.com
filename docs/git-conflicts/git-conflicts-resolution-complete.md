@@ -124,7 +124,7 @@ cd laravel
 ### File Creati/Aggiornati
 1. `conflict-resolution-docs/git-conflicts-list.md` - Lista completa dei conflitti
 2. `conflict-resolution-docs/place-resolution.md` - Esempio di risoluzione dettagliata
-3. `laravel/Modules/Geo/docs/merge_conflicts_analysis.md` - Analisi dei conflitti
+3. `laravel/Modules/Geo/docs/merge-conflicts-analysis-2.md` - Analisi dei conflitti
 4. `conflict-resolution-docs/git-conflicts-resolution-complete.md` - Questo documento
 
 ### Collegamenti Bidirezionali

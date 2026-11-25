@@ -192,7 +192,7 @@ discussions: []
 
 **Template:**
 - Purpose: Reusable document structures
-- Examples: PROJECT.md, plan.md templates
+- Examples: PROJECT.md, plan-2.md templates
 - Pattern: Markdown files with substitution variables
 
 ## Entry Points

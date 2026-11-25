@@ -200,7 +200,7 @@ discussions: []
 ### Essential Reading
 
 1. **[START-HERE.md](docs/START-HERE.md)** - Entry point
-2. **[MASTER-INDEX.md](docs/MASTER-INDEX.md)** - Complete map
+2. **[master-index-2.md](docs/master-index-2.md)** - Complete map
 3. **[CORRECT-SCHEMALESS-SOLUTION.md](docs/CORRECT-SCHEMALESS-SOLUTION.md)** - Critical
 4. **[APOLOGY-AND-CORRECT-SOLUTION.txt](APOLOGY-AND-CORRECT-SOLUTION.txt)** - Lesson
 

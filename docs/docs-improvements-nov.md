@@ -20,7 +20,7 @@ Migliorare la qualità e la manutenibilità della documentazione seguendo i prin
 ```
 MODULE_CONFIGURATION_BEST_PRACTICES.md
 COMMON_ANTI_PATTERNS.md
-best_practices.md
+best-practices-3.md
 readme.md
 ```
 
@@ -59,8 +59,8 @@ phpstan-level10-success-nov2025.md         (attuale)
 **Regola**: Un argomento = un file (DRY principle)
 
 **Duplicati eliminati**:
-- `architecture_violations_and_fixes.md` → già esisteva versione con trattino
-- `best_practices.md` (underscore) → già esisteva `best-practices.md`
+- `architecture-violations-and-fixes-2.md` → già esisteva versione con trattino
+- `best-practices-3.md` (underscore) → già esisteva `best-practices.md`
 - `filament_4x_compatibility.md` → già esisteva `filament-4x-compatibility.md`
 - `phpstan-fixes.md` (corrotto con Git conflict markers)
 
@@ -282,7 +282,7 @@ Migliorare la qualità e la manutenibilità della documentazione seguendo i prin
 ```
 MODULE_CONFIGURATION_BEST_PRACTICES.md
 COMMON_ANTI_PATTERNS.md
-best_practices.md
+best-practices-3.md
 readme.md
 ```
 
@@ -321,8 +321,8 @@ phpstan-level10-success-nov2025.md         (attuale)
 **Regola**: Un argomento = un file (DRY principle)
 
 **Duplicati eliminati**:
-- `architecture_violations_and_fixes.md` → già esisteva versione con trattino
-- `best_practices.md` (underscore) → già esisteva `best-practices.md`
+- `architecture-violations-and-fixes-2.md` → già esisteva versione con trattino
+- `best-practices-3.md` (underscore) → già esisteva `best-practices.md`
 - `filament_4x_compatibility.md` → già esisteva `filament-4x-compatibility.md`
 - `phpstan-fixes.md` (corrotto con Git conflict markers)
 

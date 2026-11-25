@@ -79,7 +79,7 @@ Gestisce tutto ciò che riguarda la geolocalizzazione: geocoding multi-provider 
 
 ## 🔗 Riferimenti
 
-- [AGENTS.md](../../../../AGENTS.md) - Project guidelines
+- [agents.md](../../../../agents.md) - Project guidelines
 
 ## 🔗 **Moduli Correlati**
 - [Xot](../../Xot/docs/README.md) - Core framework e Base Models.

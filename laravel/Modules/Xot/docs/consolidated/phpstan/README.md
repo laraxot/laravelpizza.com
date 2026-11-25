@@ -7,17 +7,17 @@ This directory contains comprehensive documentation for PHPStan analysis, error 
 
 ### Core Documents
 
-1. **`phpstan_analysis_summary.md`**
+1. **`phpstan-analysis-summary-2.md`**
    - Comprehensive analysis of current PHPStan errors
    - Error statistics by module and category
    - Recommended solutions and patterns
 
-2. **`phpstan_error_patterns.md`**
+2. **`phpstan-error-patterns-2.md`**
    - Detailed patterns of common PHPStan errors
    - Specific solutions for each error type
    - Code examples and best practices
 
-3. **`phpstan_guidelines.md`**
+3. **`phpstan-guidelines-2.md`**
    - Coding standards and best practices
    - Configuration guidelines
    - Dependency management strategies
@@ -158,7 +158,7 @@ jobs:
 - [PHPStan Official Documentation](https://phpstan.org/)
 - [Larastan Documentation](https://github.com/larastan/larastan)
 - [Module Development Guidelines](../module_development.md)
-- [Coding Standards](../coding_standards.md)
+- [Coding Standards](../coding-standards-2.md)
 
 ## Contributing
 

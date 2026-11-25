@@ -20,7 +20,7 @@ estimated_effort: "1.25 dev-day"
 blocked_by: []
 related:
   - "lang-translation-loading-fix.story.md"
-  - "../conflict_resolution_autolabelaction.md"
+  - "../conflict-resolution-autolabelaction-3.md"
   - "../docs/performance-optimization.md"
 owned_scope:
   - laravel/Modules/Lang/app/Actions/Filament/AutoLabelAction.php
@@ -78,7 +78,7 @@ Field::configureUsing()
 - Architettura: `Modules/Xot/app/Actions/CreateTranslateKeyAction.php` (pattern condiviso)
 - Related to: `lang-translation-loading-fix.story.md`
 - Pattern: `QueueableAction` in `bashscripts/ai/wiki/rules/no-services-rule.md`
-- Documentazione: `conflict_resolution_autolabelaction.md` (analisi esistente)
+- Documentazione: `conflict-resolution-autolabelaction-2.md` (analisi esistente)
 
 ## Creazione (CREATE)
 

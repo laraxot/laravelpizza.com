@@ -69,7 +69,7 @@ Configuration tools operate project-wide. Module-level overrides:
 
 ```
 docs/
-├── MODULE_STRUCTURE.md      # This file
+├── module-structure-2.md      # This file
 ├── CHANNELS.md              # Custom notification channels
 ├── QUICKSTART.md            # Usage examples
 └── DECISIONS.md             # Why we chose X over Y

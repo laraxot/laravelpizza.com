@@ -90,7 +90,7 @@ Ogni documento deve essere:
 # Hero Block
 
 **Posizione**: CMS → Blocks → Content Blocks
-**Genitore**: [Content Blocks System](../content-blocks-system.md)
+**Genitore**: [Content Blocks System](../../Cms/docs/content-blocks-system-2.md)
 **Figli**: [Hero Block Test](../../tests/blocks/hero-block.md)
 **Correlati**: [BlockData Class](../../datas/BlockData.md)
 ```
@@ -146,7 +146,7 @@ La documentazione è progettata per **AI agents multipli**:
 
 ```
 livello-0/ (Root)
-└── docs/MASTER_documentation-index.md
+└── master-documentation-index-2.md
 
 livello-1/ (Module)
 └── Modules/Cms/docs/00-index.md
@@ -395,7 +395,7 @@ python scripts/run.py ask_question.py \
 
 - [Documentation Governance](../../docs/documentation-governance.md)
 - [Multi-Agent Collaboration](../../docs/multi-agent-collaboration.md)
-- [Filament Blocks System](../blocks/content-blocks-system.md)
+- [Filament Blocks System](../../Cms/docs/content-blocks-system-2.md)
 - [OpenViking Global Context](../../bashscripts/ai/openviking.md)
 
 ---

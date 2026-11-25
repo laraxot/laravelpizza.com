@@ -8,10 +8,7 @@ module: UI
 tags: [adr, blocks, filament, builder, convention]
 related:
   - ../contracts/get-all-blocks-action.md
-<<<<<<< .merge_file_IRS2bW
 qmd: "block discovery by filament blocks folder"
-=======
->>>>>>> .merge_file_rYr2xP
 ---
 
 # ADR: scoperta dei blocchi per cartella e nome di classe

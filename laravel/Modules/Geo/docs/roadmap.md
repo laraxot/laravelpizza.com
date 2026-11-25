@@ -84,7 +84,7 @@ discussions: []
 <<<<<<< .merge_file_OZaCgO
 <<<<<<< .merge_file_g0KtlH
 <<<<<<< .merge_file_o1Pgor
-- [phpstan-errors-roadmap-2026-01-12.md](phpstan-errors-roadmap-2026-01-12.md)
+- [phpstan-errors-roadmap-3.md](phpstan-errors-roadmap-3.md)
 =======
 =======
 >>>>>>> .merge_file_sYdudn
@@ -93,12 +93,12 @@ discussions: []
 =======
 >>>>>>> .merge_file_IxHIUy
 <<<<<<< HEAD
-- [phpstan-errors-roadmap-2026-01-12.md](phpstan-errors-roadmap-2026-01-12.md)
+- [phpstan-errors-roadmap-3.md](phpstan-errors-roadmap-3.md)
 =======
 <<<<<<< HEAD
-- [phpstan-errors-roadmap-2026-01-12.md](phpstan-errors-roadmap-2026-01-12.md)
+- [phpstan-errors-roadmap-3.md](phpstan-errors-roadmap-3.md)
 =======
-- [phpstan-errors-roadmap-2026-01-12.md](phpstan-errors-roadmap.md)
+- [phpstan-errors-roadmap-3.md](phpstan-errors-roadmap.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_p5Vy63

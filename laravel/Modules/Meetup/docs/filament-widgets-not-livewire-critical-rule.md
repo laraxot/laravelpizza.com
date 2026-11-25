@@ -66,5 +66,5 @@ class EventDetailWidget extends XotBaseWidget
 
 - [Filament Widgets NOT Livewire Critical Rule](../../themes/meetup/docs/filament-widgets-not-livewire-critical-rule.md)
 - [Livewire to Filament Widget Migration](../user/docs/livewire-to-filament-widget-migration.md)
-- [Auth Widget Rules](../user/docs/auth-widget-rules.md)
+- [Auth Widget Rules](../../User/docs/auth-widget-rules-2.md)
 - [AGENTS.md](../../../agents.md) - Sezione "CRITICAL RULE: Always Use Filament Widgets"

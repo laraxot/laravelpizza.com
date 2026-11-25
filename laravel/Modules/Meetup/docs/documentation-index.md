@@ -18,7 +18,7 @@ Questo documento fornisce un indice completo di tutta la documentazione del prog
 - ✅ `README.md` - Panoramica modulo (4KB)
 - ✅ `INSTALLATION.md` - Guida installazione completa (8KB)
 - ✅ `FEATURES.md` - Requirements funzionali MVP (13KB)
-- ✅ `DATABASE_SCHEMA.md` - Schema database pizze (16KB)
+- ✅ `database-schema-2.md` - Schema database pizze (16KB)
 - ✅ `EVENTS_SYSTEM.md` - Sistema eventi completo (20KB)
 - ✅ `DESIGN_SYSTEM.md` - Design system e Tailwind (13KB)
 - ✅ `HTML_STATIC_VERSION.md` - Documentazione HTML statico (10KB)
@@ -41,7 +41,7 @@ Questo documento fornisce un indice completo di tutta la documentazione del prog
 #### API & Integration
 - ✅ `api-endpoints.md` - Endpoint API (13KB)
 - ✅ `api_endpoints.md` - Documentazione API (12KB) *[Duplicato?]*
-- ✅ `implementation_plan.md` - Piano implementazione eventi (10KB)
+- ✅ `implementation-plan-2.md` - Piano implementazione eventi (10KB)
 - ✅ `implementation-guide.md` - Guida implementazione (19KB)
 
 #### Configuration & Setup
@@ -91,7 +91,7 @@ Questo documento fornisce un indice completo di tutta la documentazione del prog
    - Code review process
    - **Posizione:** `/Modules/Meetup/docs/`
 
-3. **`CHANGELOG.md`** ❌
+3. **`changelog.md`** ❌
    - Versioning
    - Release notes
    - Breaking changes
@@ -135,7 +135,7 @@ Questo documento fornisce un indice completo di tutta la documentazione del prog
    - Best practices
    - **Posizione:** `/Modules/Meetup/docs/`
 
-9. **`FILAMENT_RESOURCES.md`** ❌
+9. **`filament-resources-3.md`** ❌
    - Resources Filament spiegati
    - Customizzazioni disponibili
    - Widgets e stats
@@ -263,7 +263,7 @@ Questo documento fornisce un indice completo di tutta la documentazione del prog
 
 ### 🟢 Priorità Bassa (Nice to Have)
 
-26. **`PERFORMANCE_OPTIMIZATION.md`** ❌
+26. **`performance-optimization.md`** ❌
     - Performance tips
     - Database query optimization
     - N+1 problems
@@ -324,7 +324,7 @@ Modules/Meetup/docs/
 ├── QUICKSTART.md                      ❌ Missing (HIGH)
 ├── INSTALLATION.md                    ✅ Exists
 ├── CONTRIBUTING.md                    ❌ Missing (HIGH)
-├── CHANGELOG.md                       ❌ Missing (HIGH)
+├── changelog.md                       ❌ Missing (HIGH)
 ├── TROUBLESHOOTING.md                 ❌ Missing (HIGH)
 ├── GLOSSARY.md                        ❌ Missing (LOW)
 ├── FAQ.md                             ❌ Missing (LOW)
@@ -336,8 +336,8 @@ Modules/Meetup/docs/
 │   └── business-logic.md              ✅ Exists
 │
 ├── database/
-│   ├── schema.md                      ✅ (DATABASE_SCHEMA.md)
-│   ├── migrations.md                  ❌ Missing (HIGH)
+│   ├── schema-3.md                      ✅ (database-schema-2.md)
+│   ├── migrations-3.md                  ❌ Missing (HIGH)
 │   └── seeding.md                     ❌ Missing (MED)
 │
 ├── features/
@@ -368,7 +368,7 @@ Modules/Meetup/docs/
 │   └── forms.md                       ❌ Missing (MED)
 │
 ├── admin/
-│   ├── filament.md                    ❌ Missing (HIGH)
+│   ├── filament-3.md                    ❌ Missing (HIGH)
 │   ├── resources.md                   ❌ Missing (HIGH)
 │   ├── widgets.md                     ❌ Missing (MED)
 │   └── permissions.md                 ❌ Missing (HIGH)
@@ -388,7 +388,7 @@ Modules/Meetup/docs/
 ├── security/
 │   ├── overview.md                    ✅ (security_features.md)
 │   ├── policies.md                    ❌ Missing (HIGH)
-│   └── best-practices.md              ❌ Missing (MED)
+│   └── best-practices-3.md              ❌ Missing (MED)
 │
 └── examples/
     ├── common-tasks.md                ❌ Missing (MED)
@@ -428,7 +428,7 @@ Themes/Meetup/docs/
 3. ✅ **MIGRATIONS_GUIDE.md** - Guida migrations
 4. ✅ **MODELS_REFERENCE.md** - Reference models
 5. ✅ **ACTIONS_REFERENCE.md** - Reference actions
-6. ✅ **FILAMENT_RESOURCES.md** - Admin panel
+6. ✅ **filament-resources-3.md** - Admin panel
 7. ✅ **PAYMENT_INTEGRATION.md** - Payments setup
 8. ✅ **THEME_DEVELOPMENT.md** - Tema development
 9. ✅ **COMPONENTS_LIBRARY.md** - UI components
@@ -449,7 +449,7 @@ Themes/Meetup/docs/
 ### Fase 3: Documentazione Completamento (Sprint 3)
 **Priorità:** BASSA - Nice to have
 
-19. ✅ **CHANGELOG.md** - Release notes
+19. ✅ **changelog.md** - Release notes
 20. ✅ **PERFORMANCE_OPTIMIZATION.md** - Performance
 21. ✅ **MONITORING_LOGGING.md** - Monitoring
 22. ✅ **DOCKER_SETUP.md** - Docker config
@@ -486,7 +486,7 @@ Themes/Meetup/docs/
 3. Creare `MODELS_REFERENCE.md` con tutti i models
 
 ### Questa Settimana
-4. Creare `FILAMENT_RESOURCES.md` per admin panel
+4. Creare `filament-resources-3.md` per admin panel
 5. Creare `THEME_DEVELOPMENT.md` per tema
 6. Creare `COMPONENTS_LIBRARY.md` con UI components
 

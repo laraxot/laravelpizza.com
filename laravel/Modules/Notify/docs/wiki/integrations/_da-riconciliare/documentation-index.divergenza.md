@@ -18,12 +18,12 @@ updated: 2026-11-23
 >>>>>>> .merge_file_B9DJtg
 ---
 
-# Divergenza: `DOCUMENTATION_INDEX.md`
+# Divergenza: `documentation-index.md`
 
-Questo file veniva da `docs/wiki/integrations/modules/notify/DOCUMENTATION_INDEX.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+Questo file veniva da `docs/wiki/integrations/modules/notify/documentation-index.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
 
-- versione del modulo: `laravel/Modules/Notify/docs/DOCUMENTATION_INDEX.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/DOCUMENTATION_INDEX.md`
+- versione del modulo: `laravel/Modules/Notify/docs/documentation-index.md`
+- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/documentation-index.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 

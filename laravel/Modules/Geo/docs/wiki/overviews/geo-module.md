@@ -158,7 +158,7 @@ Region (20) → Province (110) → City/Comune (8000+) → Cap → Address
 
 - `architecture.md` — BaseModel philosophy, nullableUuidMorphs, connessione geo
 - `business-logic-overview.md` — gerarchia italiana, geocoding, calcoli distanza
-- `address-implementation.md` — schema completo Address, codice migrazioni
+- `address-implementation-2.md` — schema completo Address, codice migrazioni
 - `address-item-enum-guide.md` — enum per tipi address item
-- `place-address-schemaorg.md` — mapping schema.org
-- `filament_integration.md` — componenti Filament del modulo
+- `place-address-schemaorg-2.md` — mapping schema.org
+- `filament-integration-3.md` — componenti Filament del modulo

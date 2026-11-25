@@ -125,10 +125,10 @@ php artisan lang:check
 ## Documentazione Aggiornata
 
 ### Modulo Geo
-- [Conflict Resolution](laravel/Modules/Geo/project_docs/conflict-resolution.md)
+- [Conflict Resolution](laravel/Modules/Geo/docs/conflict-resolution-2.md)
 
 ### Modulo User
-- [Theme Translation Conflicts](laravel/Modules/User/project_docs/theme-translation-conflicts-resolution.md)
+- [Theme Translation Conflicts](laravel/Modules/User/docs/theme-translation-conflicts-resolution-2.md)
 
 ### Modulo Xot
 - [Git Conflicts Resolution](laravel/Modules/Xot/project_docs/git-conflicts-resolution-2025-01-06.md)
@@ -186,12 +186,12 @@ php artisan lang:check
 ## Collegamenti Correlati
 
 ### Documentazione Moduli
-- [Geo Conflict Resolution](laravel/Modules/Geo/project_docs/conflict-resolution.md)
-- [User Theme Conflicts](laravel/Modules/User/project_docs/theme-translation-conflicts-resolution.md)
+- [Geo Conflict Resolution](laravel/Modules/Geo/docs/conflict-resolution-2.md)
+- [User Theme Conflicts](laravel/Modules/User/docs/theme-translation-conflicts-resolution-2.md)
 
 ### Documentazione Generale
-- [Translation Standards](../../project_docs/translation-standards.md)
-- [PHPStan Guidelines](../../project_docs/phpstan_usage.md)
+- [Translation Standards](../../../Lang/docs/translation-standards-3.md)
+- [PHPStan Guidelines](../../../Geo/docs/raw/history/phpstan-usage-2.md)
 - [Git Best Practices](../../project_docs/git-best-practices.md)
 
 ---

@@ -575,7 +575,7 @@ $table->foreignIdFor(\Modules\{ModuleName}\Models\{RelatedModel}::class);
 docs/
 ├── README.md                    # ✅ Può avere maiuscole
 ├── architecture-overview.md     # ✅ Minuscolo
-├── coding-standards.md          # ✅ Minuscolo
+├── coding-standards-2.md          # ✅ Minuscolo
 └── modules/
     ├── {modulename}/
     │   └── implementation.md    # ✅ Minuscolo
@@ -831,9 +831,9 @@ protected function casts(): array
 
 ### 13.1 Documentazione Correlata
 - [Architecture Overview](../../docs/architecture-overview.md)
-- [Coding Standards](../../docs/coding-standards.md)
+- [Coding Standards](../development/coding-standards-2.md)
 - [Testing Guidelines](../../docs/testing-guidelines.md)
-- [Filament Best Practices](../../docs/filament-best-practices.md)
+- [Filament Best Practices](../../../Xot/docs/consolidated/filament-best-practices-2.md)
 
 ### 13.2 Moduli Principali
 - [Xot Module](../../../Xot/docs/README.md)

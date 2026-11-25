@@ -185,7 +185,7 @@ Manutenzione Stradale • Illuminazione • Rifiuti • Verde Pubblico • Fogna
 | **Xot** | 9 | Type safety, contracts | 2.5h |
 | **User** | 95 | Property access, types | 6h |
 
-**Dettagli**: [Session Summary](./phpstan/session-summary.md)
+**Dettagli**: [Session Summary](wiki/session-summary-2.md)
 
 ---
 
@@ -424,7 +424,7 @@ Manutenzione Stradale • Illuminazione • Rifiuti • Verde Pubblico • Fogna
 ### 📊 Reports & Analysis
 - **[Master Roadmap Index](./roadmap-master-index.md)** ⭐ START HERE
 - **[Project Analysis & Roadmap](./project-analysis-and-roadmap.md)** ⭐ BUSINESS VIEW
-- **[Session Summary 2025-10-01](./phpstan/session-summary.md)** ⭐ TECHNICAL
+- **[Session Summary 2025-10-01](wiki/session-summary-2.md)** ⭐ TECHNICAL
 - **[Final Report 2025-10-01](./phpstan/final-report-session.md)**
 - **[Questo Documento](./analisi-completa-progetto-fixcity.md)** ⭐ EXECUTIVE
 

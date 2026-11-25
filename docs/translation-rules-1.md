@@ -140,7 +140,7 @@ return [
 
 ## Link alla documentazione correlata
 
-- [Errori comuni nei file di traduzione](/laravel/modules/lang/docs/errori_comuni_traduzione.md)
+- [Errori comuni nei file di traduzione](/laravel/modules/lang/docs/errori-comuni-traduzione-2.md)
 - [Convenzioni di documentazione](/laravel/modules/xot/docs/documentation_conventions.md)
 - [Documentazione principale sulle traduzioni](/docs/translation_rules.md)
 

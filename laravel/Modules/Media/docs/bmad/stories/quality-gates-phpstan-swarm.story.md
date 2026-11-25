@@ -1,33 +1,6 @@
 ---
-<<<<<<< .merge_file_KcR3w3
-<<<<<<< .merge_file_LG35MD
 qmd: "media bmad stories quality gates phpstan swarm story md"
-=======
-=======
->>>>>>> .merge_file_g0BzyZ
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_4iFgAE
 qmd: "media bmad stories quality gates phpstan swarm story md"
-=======
->>>>>>> .merge_file_3PvcCd
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_KcR3w3
->>>>>>> .merge_file_YUxPho
-=======
->>>>>>> .merge_file_g0BzyZ
 id: quality-gates-phpstan-swarm-2026-09-23
 slug: media-phpstan-swarm-2026-09-23-verify-clean
 title: "PHPStan swarm 2026-09-23: verifica Modules/Media, 0 errori confermati"
@@ -41,9 +14,10 @@ updated: 2026-09-23
 tags: [bmad, story, phpstan, quality-gate, media, phpstan-swarm]
 related:
   - ./cleanup-media-2026-09-22.story.md
-  - ../../stories/01.Media-phpstan-fix.story.md
+  - ../../stories/01.media-phpstan-fix.story.md
   - ../../stories/media-phpstan-swarm-2026-09-15-pest-uses-group.story.md
   - ../../stories/media-quality-gate-2026-09-04.story.md
+qmd: "quality gates phpstan swarm story 20260923"
 ---
 
 # PHPStan swarm 2026-09-23: verifica Modules/Media
@@ -125,3 +99,4 @@ Nessun pattern nuovo da segnalare: run di verifica pulita, coerente con le
 tre story precedenti che avevano gia' azzerato gli errori. Utile solo come
 conferma di non-regressione a distanza di ~2-8 settimane dalle fix
 originali, con dataset di riferimento per un futuro controllo di deriva.
+

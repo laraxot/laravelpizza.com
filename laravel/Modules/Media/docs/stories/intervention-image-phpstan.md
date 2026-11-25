@@ -5,7 +5,7 @@ status: done
 module: Media
 qmd: "phpstan intervention image media merge strip metadata class.notFound"
 related:
-  - ./01.Media-phpstan-fix.story.md
+  - ./01.media-phpstan-fix.story.md
   - ./media-quality-gate-2026-09-04.story.md
   - ../philosophy.md
   - ../00-index.md

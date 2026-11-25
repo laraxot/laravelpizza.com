@@ -33,17 +33,6 @@ Models: 4 (`app/Models/*.php`, incluso `BaseModel`) | Resources: 3 | Services: 0
 ## 🚀 PIANO
 Resources refactoring (2 giorni)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-**Status:** 🟢 BUONO
-=======
-=======
-=======
-<<<<<<< HEAD
-**Status:** 🟢 BUONO
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 **Status:** 🟢 BUONO
 
 ---
@@ -76,10 +65,4 @@ abstract class BaseModel extends XotBaseModel
 
 ---
 [DRY/KISS Global](../../../docs/dry_kiss_analysis_2025-10-15.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
+

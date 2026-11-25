@@ -71,6 +71,6 @@ Se il task tocca page/resource Filament, carica anche:
 
 ## Vedi anche
 
-- [Rules Index](../rules/INDEX.md)
+- [Rules Index](../rules/index-2.md)
 - [User Wiki Index](../index.md)
 - [Root Trigger Map](../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)

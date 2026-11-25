@@ -31,7 +31,7 @@ If the prompt contains a `<files_to_read>` block, you MUST use the `Read` tool t
 - Validate 100% requirement coverage (no orphans)
 - Apply goal-backward thinking at phase level
 - Create success criteria (2-5 observable behaviors per phase)
-- Initialize STATE.md (project memory)
+- Initialize state-2.md (project memory)
 - Return structured draft for user approval
 </role>
 
@@ -127,7 +127,7 @@ For each requirement mapped to this phase:
 
 **Step 4: Resolve Gaps**
 Success criterion with no supporting requirement:
-- Add requirement to REQUIREMENTS.md, OR
+- Add requirement to requirements-2.md, OR
 - Mark criterion as out of scope for this phase
 
 Requirement that supports no criterion:
@@ -272,14 +272,14 @@ Mapped: 12/12 ✓
 Options:
 1. Create Phase 6: Notifications
 2. Add to existing Phase 5
-3. Defer to v2 (update REQUIREMENTS.md)
+3. Defer to v2 (update requirements-2.md)
 ```
 
 **Do not proceed until coverage = 100%.**
 
 ## Traceability Update
 
-After roadmap creation, REQUIREMENTS.md gets updated with phase mappings:
+After roadmap creation, requirements-2.md gets updated with phase mappings:
 
 ```markdown
 ## Traceability
@@ -339,7 +339,7 @@ After roadmap creation, REQUIREMENTS.md gets updated with phase mappings:
 
 Reference full template: `.github/get-shit-done/templates/roadmap.md`
 
-## STATE.md Structure
+## state-2.md Structure
 
 Use template from `.github/get-shit-done/templates/state.md`.
 
@@ -400,15 +400,15 @@ Approve roadmap or provide feedback for revision.
 
 Orchestrator provides:
 - PROJECT.md content (core value, constraints)
-- REQUIREMENTS.md content (v1 requirements with REQ-IDs)
-- research/summary.md content (if exists - phase suggestions)
+- requirements-2.md content (v1 requirements with REQ-IDs)
+- ../../../Notify/docs/bugs/summary-2.md content (if exists - phase suggestions)
 - config.json (depth setting)
 
 Parse and confirm understanding before proceeding.
 
 ## Step 2: Extract Requirements
 
-Parse REQUIREMENTS.md:
+Parse requirements-2.md:
 - Count total v1 requirements
 - Extract categories (AUTH, CONTENT, etc.)
 - Build requirement list with IDs
@@ -425,7 +425,7 @@ Total v1: 11 requirements
 
 ## Step 3: Load Research Context (if exists)
 
-If research/summary.md provided:
+If ../../../Notify/docs/bugs/summary-2.md provided:
 - Extract suggested phase structure from "Implications for Roadmap"
 - Note research flags (which phases need deeper research)
 - Use as input, not mandate
@@ -462,9 +462,9 @@ If gaps found, include in draft for user decision.
 
 1. **Write roadmap.md** using output format
 
-2. **Write STATE.md** using output format
+2. **Write state-2.md** using output format
 
-3. **Update REQUIREMENTS.md traceability section**
+3. **Update requirements-2.md traceability section**
 
 Files on disk = context preserved. User can review actual files.
 
@@ -493,10 +493,10 @@ When files are written and returning to orchestrator:
 
 **Files written:**
 - .planning/roadmap.md
-- .planning/STATE.md
+- .planning/state-2.md
 
 **Updated:**
-- .planning/REQUIREMENTS.md (traceability section)
+- .planning/requirements-2.md (traceability section)
 
 ### Summary
 
@@ -523,7 +523,7 @@ When files are written and returning to orchestrator:
 
 User can review actual files:
 - `cat .planning/roadmap.md`
-- `cat .planning/STATE.md`
+- `cat .planning/state-2.md`
 
 {If gaps found during creation:}
 
@@ -547,8 +547,8 @@ After incorporating user feedback and updating files:
 
 **Files updated:**
 - .planning/roadmap.md
-- .planning/STATE.md (if needed)
-- .planning/REQUIREMENTS.md (if traceability changed)
+- .planning/state-2.md (if needed)
+- .planning/requirements-2.md (if traceability changed)
 
 ### Updated Summary
 
@@ -633,8 +633,8 @@ Roadmap is complete when:
 - [ ] Success criteria cross-checked against requirements (gaps resolved)
 - [ ] 100% requirement coverage validated (no orphans)
 - [ ] roadmap.md structure complete
-- [ ] STATE.md structure complete
-- [ ] REQUIREMENTS.md traceability update prepared
+- [ ] state-2.md structure complete
+- [ ] requirements-2.md traceability update prepared
 - [ ] Draft presented for user approval
 - [ ] User feedback incorporated (if any)
 - [ ] Files written (after approval)

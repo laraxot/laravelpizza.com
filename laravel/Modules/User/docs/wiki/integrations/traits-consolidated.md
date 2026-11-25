@@ -43,9 +43,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/traits-complete-guide.md
@@ -70,9 +70,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Analisi Corretta del Trait HasTeams - Filosofia Laraxot
@@ -616,23 +616,23 @@ trait HasTeams
 
 ## traits-hasteams-analisi-corretta
 
-*Consolidated from: `traits-hasteams-analisi-corretta.md`*
+*Consolidated from: `traits-hasteams-analisi-corretta-4.md`*
 
 module: theme
 topic: traits-hasteams-analisi-corretta
-canonical: ../../../Themes/docs/shared-components/traits-hasteams-analisi-corretta.md
+canonical: ../../traits-hasteams-analisi-corretta-4.md
 related:
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/traits-hasteams-analisi-corretta.md
+See canonical documentation: ../../traits-hasteams-analisi-corretta-4.md
 
 ---
 
@@ -654,9 +654,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Analisi Corretta del Trait HasTeams - Filosofia Laraxot
@@ -1211,9 +1211,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Analisi Corretta del Trait HasTeams - Filosofia Laraxot
@@ -1764,9 +1764,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/traits-hasteams-analysis-corrected.md
@@ -1786,9 +1786,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/traits-hasteams-analysis-corretta.md
@@ -1813,9 +1813,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # User Module Traits
@@ -2217,7 +2217,7 @@ trait HasTeams
 
 ## Backlink e Riferimenti
 
-- [jetstream_vs_laraxot_philosophy.md](jetstream_vs_laraxot_philosophy.md)
+- [jetstream-vs-laraxot-philosophy-2.md](jetstream-vs-laraxot-philosophy-2.md)
 - [/.cursor/rules/hasteams_jetstream_philosophy.mdc](../../.cursor/rules/hasteams_jetstream_philosophy.mdc)
 - [/.windsurf/rules/hasteams_jetstream_philosophy.mdc](../../.windsurf/rules/hasteams_jetstream_philosophy.mdc)
 - [Modules/Xot/docs/RELATION_X_USAGE.md](../Xot/docs/RELATION_X_USAGE.md)
@@ -2290,7 +2290,7 @@ SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key
 
 ## traits_hasteams_analisi_corretta
 
-*Consolidated from: `traits_hasteams_analisi_corretta.md`*
+*Consolidated from: `traits-hasteams-analisi-corretta-4.md`*
 
 
 ## Comprensione della Filosofia `belongsToManyX`
@@ -2820,7 +2820,7 @@ trait HasTeams
 
 - [docs/USER_MODULE.md](../../../docs/USER_MODULE.md)
 - [Modules/User/docs/traits.md](traits.md)  
-- [docs/phpstan_fixes.md](../../../docs/phpstan_fixes.md)
+- [docs/phpstan-fixes-5.md](../../../docs/phpstan_fixes.md)
 - [Modules/Xot/docs/RELATION_X.md](../../Xot/docs/RELATION_X.md)
 
 *Ultimo aggiornamento: gennaio 2025* 

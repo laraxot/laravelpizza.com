@@ -311,7 +311,7 @@ Per evitare scope creep, questi elementi restano **esplicitamente fuori** dalla 
 
  4. **Manutenzione della documentazione**
     - Perplessità: molti file in `docs/` rischiano di diventare incoerenti.
-    - Come affrontarlo: usare `DOCUMENTATION-INDEX.md` e `scopo-progetto.md` come fonti principali, aggiornandole ogni volta che cambia il perimetro.
+    - Come affrontarlo: usare `documentation-index-2.md` e `scopo-progetto.md` come fonti principali, aggiornandole ogni volta che cambia il perimetro.
 
  5. **Complessità della community chat**
     - Perplessità: una chat realtime completa (canali, notifiche, moderazione) può assorbire molto tempo.

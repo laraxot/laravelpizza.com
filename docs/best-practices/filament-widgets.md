@@ -107,18 +107,18 @@ use Filament\Widgets\Concerns\CanPoll;
 - [Widget Filament](../../../xot/docs/filament/widgets/xot-base-widget.md) - Documentazione su XotBaseWidget
 - [Polling nei Widget](../../../xot/docs/filament/widgets/filament_widgets_polling.md) - Implementazione del polling
 ### Moduli Correlati
-- [Cms - Convenzioni Namespace Filament](../../../cms/docs/convenzioni-namespace-filament.md) - Convenzioni per i namespace Filament
-- [Lang - Filament Translations](../../../lang/docs/filament-translations.md) - Traduzioni in Filament
+- [Cms - Convenzioni Namespace Filament](../../laravel/Modules/Cms/docs/convenzioni-namespace-filament-2.md) - Convenzioni per i namespace Filament
+- [Lang - Filament Translations](../../laravel/Modules/Lang/docs/filament-translations-2.md) - Traduzioni in Filament
 - [UI - Form Filament Widgets](../../../ui/docs/form_filament_widgets.md) - Widget per form Filament
 - [README.md](../../../xot/project_docs/readme.md) - Indice principale della documentazione
 - [Widget Filament](../../../xot/project_docs/filament/widgets/xot-base-widget.md) - Documentazione su XotBaseWidget
 - [Polling nei Widget](../../../xot/project_docs/filament/widgets/filament_widgets_polling.md) - Implementazione del polling
-- [Cms - Convenzioni Namespace Filament](../../../cms/project_docs/convenzioni-namespace-filament.md) - Convenzioni per i namespace Filament
-- [Lang - Filament Translations](../../../lang/project_docs/filament-translations.md) - Traduzioni in Filament
+- [Cms - Convenzioni Namespace Filament](../../laravel/Modules/Cms/docs/convenzioni-namespace-filament-2.md) - Convenzioni per i namespace Filament
+- [Lang - Filament Translations](../../laravel/Modules/Lang/docs/filament-translations-2.md) - Traduzioni in Filament
 - [UI - Form Filament Widgets](../../../ui/project_docs/form_filament_widgets.md) - Widget per form Filament
 ### Documentazione Interna
 - [README del modulo User](../readme.md) - Indice principale del modulo User
-- [Filament Best Practices](../filament_best_practices.md) - Best practices generali per Filament
+- [Filament Best Practices](../filament-best-practices-2.md) - Best practices generali per Filament
 ## Risorse Utili
 - [Documentazione Filament](https://filamentphp.com/docs)
 - [Laravel Blade](https://laravel.com/docs/blade)

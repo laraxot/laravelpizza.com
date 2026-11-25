@@ -51,7 +51,7 @@ discussions: []
 =======
 >>>>>>> .merge_file_tu15mB
 **Part of**: [00-INDEX.md](00-index.md) — AI Agents Coordination  
-**Related**: [04-FILAMENT-PHILOSOPHY.md](04-filament-philosophy.md) — Filament Widgets
+**Related**: [04-filament-philosophy-2.md](04-filament-philosophy.md) — Filament Widgets
 
 ## 🔴 Fundamental Rules
 ### 1. **NO Themes/*/Http/Livewire/**
@@ -135,10 +135,10 @@ laravel/docs/
 ✅ CORRECT
 docs/                          # Only CROSS-MODULE documents
   ├── ARCHITECTURE_ZEN.md
-  └── multi_agent_coordination.md
+  └── multi-agent-coordination-2.md
 
 Modules/Predict/docs/          # Predict-specific docs
-  ├── PHILOSOPHY.md
+  ├── philosophy-3.md
   ├── WIDGETS.md
   └── SEEDERS.md
 
@@ -273,7 +273,7 @@ Modules/Predict/
 │   ├── Filament/
 │   └── Actions/
 ├── docs/              ← Treasure map of Predict
-│   ├── PHILOSOPHY.md
+│   ├── philosophy-3.md
 │   ├── WIDGETS.md
 │   └── SEEDERS.md
 └── database/

@@ -7,7 +7,7 @@ Questo documento identifica e propone ottimizzazioni per il modulo UI seguendo i
 
 ### 1. Duplicazione Documentazione Componenti
 - **File duplicati con naming inconsistente:**
-  - `navigation-components.md` vs `navigation_components.md`
+  - `navigation-components.md` vs `navigation-components-2.md`
   - `table_components.md` vs `table_layout_enum_analysis.md`
   - `form_components.md` vs `form_filament_widgets.md`
 

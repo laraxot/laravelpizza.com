@@ -18,7 +18,7 @@ High-risk findings:
 - Duplicate FQCN `Modules\Cms\View\Composers\ThemeComposer` in `app/View/Composers/ThemeComposer.php` and `resources/views/Composers/ThemeComposer.php`.
 - Docs/source Blade files are mirrored under `app/docs/source/...` and `docs/source/...`.
 - Footer and header components are duplicated between `components/...` and `components/blocks/...`.
-- Docs contain case-only duplicates: `index.md`/`index.md`, `PRD.md`/`prd.md`, `metodi_duplicati_analisi.md` variants, and more.
+- Docs contain case-only duplicates: `index.md`/`index.md`, `prd-2.md`/`prd.md`, `metodi-duplicati-analisi-4.md` variants, and more.
 
 Risk:
 - A PHP class under `resources/views` is structurally suspicious and can be included by mistake.

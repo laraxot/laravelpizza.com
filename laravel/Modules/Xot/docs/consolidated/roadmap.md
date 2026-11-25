@@ -41,7 +41,7 @@
 - [x] Collegamenti bidirezionali
 - [ ] Completamento esempi
 - [ ] Testi in italiano
-  - [Dettagli e Passi](./roadmap/project_docs/status.md)
+  - [Dettagli e Passi](../../../Geo/docs/laravel-13-upgrade/status-2.md)
 
 ### 6. Testing (65%)
 - [x] Setup base
@@ -49,13 +49,13 @@
 - [ ] Test unitari
 - [ ] Test di integrazione
 - [ ] Coverage report
-  - [Dettagli e Passi](./roadmap/testing/status.md)
+  - [Dettagli e Passi](../../../Geo/docs/laravel-13-upgrade/status-2.md)
 
 ### Core Framework [90%]
 - [✓] Base Classes [100%](roadmap/base-classes.md)
 - [✓] Service Providers [100%](roadmap/service-providers.md)
 - [✓] Traits [95%](roadmap/traits.md)
-- [-] Documentation [65%](roadmap/documentation.md)
+- [-] Documentation [65%](../../../Activity/docs/documentation-2.md)
 
 ### Routing & Controllers [85%]
 - [✓] Folio Integration [100%](roadmap/folio-integration.md)
@@ -64,7 +64,7 @@
 
 ### Models & Database [80%]
 - [✓] Base Models [100%](roadmap/base-models.md)
-- [-] Migrations [75%](roadmap/migrations.md)
+- [-] Migrations [75%](../../../Lang/docs/migrations-3.md)
 - [-] Seeders [65%](roadmap/seeders.md)
 
 ### Filament Integration [70%]
@@ -242,7 +242,7 @@
 
 ### Collegamenti Interni
 - [Architettura](./structure.md)
-- [Best Practices](./BEST-PRACTICES.md)
+- [Best Practices](../../../Activity/docs/best-practices-3.md)
 - [Testing](./testing-best-practices.md)
 
 ## Prossimi Passi
@@ -419,7 +419,7 @@
 
 ### Collegamenti Interni
 - [Bottlenecks](bottlenecks.md)
-- [Best Practices](BEST-PRACTICES.md)
+- [Best Practices](best-practices-3.md)
 - [Testing](testing.md)
 
 ### Versione HEAD

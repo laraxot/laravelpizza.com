@@ -114,7 +114,7 @@ Modules/User/
 ### 📖 **Guide Principali**
 - **[2FA Implementation](./2fa-guide.md)** - Autenticazione a due fattori
 - **[Traits Guide](./traits/traits-complete-guide.md)** - HasTeams, HasTenants
-- **[Filament Integration](./filament/filament-best-practices.md)** - Best practices UI
+- **[Filament Integration](../../../../Xot/docs/consolidated/filament-best-practices-2.md)** - Best practices UI
 
 ### 🛠️ **Troubleshooting**
 - **[Login Issues](./troubleshooting-login-component.md)** - Problemi autenticazione
@@ -124,7 +124,7 @@ Modules/User/
 ### 🧪 **Qualità & Testing**
 - **[Testing Structure](./testing-structure.md)** - Organizzazione test
 - **[Performance Analysis](./performance/performance-issues.md)** - Ottimizzazioni
-- **[Code Quality](./code-quality-analysis.md)** - Analisi qualità
+- **[Code Quality](../../../../Activity/docs/code-quality-analysis-3.md)** - Analisi qualità
 
 ---
 

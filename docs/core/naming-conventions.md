@@ -18,7 +18,7 @@
 ```
 ✅ CORRETTO                    ❌ ERRATO
 user-guide.md                 UserGuide.md
-filament-resources.md         FilamentResources.md
+filament-resources-3.md         FilamentResources.md
 phpstan-configuration.md      PHPStanConfiguration.md
 naming-conventions.md         naming_conventions.md
 ```
@@ -314,7 +314,7 @@ parameters:
 ## 🔗 Collegamenti
 
 - [Architettura Modulo Xot](architecture.md)
-- [Best Practices Sistema](../../../docs/core/best-practices.md)
+- [Best Practices Sistema](../../laravel/Modules/Activity/docs/best-practices-3.md)
 - [Convenzioni Sistema](../../../docs/core/conventions.md)
 - [PHPStan Guide](../development/phpstan-guide.md)
 

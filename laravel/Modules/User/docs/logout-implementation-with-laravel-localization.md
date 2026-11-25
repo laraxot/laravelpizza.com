@@ -11,19 +11,19 @@ qmd: "logout implementation with laravel localization"
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
-- [Best Practices Componenti di Autenticazione](./auth_components_best_practices.md)
-- [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/laravel_localization_usage.md)
+- [Best Practices Componenti di Autenticazione](./auth-components-best-practices-4.md)
+- [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/laravel-localization-usage-2.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
-- [Regole Traduzioni](/laravel/Modules/Lang/docs/translation_keys_rules.md)
+- [Regole Traduzioni](/laravel/Modules/Lang/docs/translation-keys-rules-2.md)
 # Implementazione del Logout con LaravelLocalization
 
 ## Collegamenti correlati
 - [README modulo User](./readme.md)
-- [Best Practices Componenti di Autenticazione](./auth_components_best_practices.md)
-- [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/laravel_localization_usage.md)
+- [Best Practices Componenti di Autenticazione](./auth-components-best-practices-4.md)
+- [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/laravel-localization-usage-2.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
-- [Regole Traduzioni](/laravel/Modules/Lang/docs/translation_keys_rules.md)
-- [Componenti Filament](/docs/rules/filament-components.md)
+- [Regole Traduzioni](/laravel/Modules/Lang/docs/translation-keys-rules-2.md)
+- [Componenti Filament](/../../Cms/docs/filament-components-2.md)
 
 ## Panoramica
 

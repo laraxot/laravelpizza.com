@@ -113,7 +113,7 @@ SE TUTTE LE RISPOSTE SONO SÌ → PROCED
 
 ```bash
 # Aggiorna le tue conoscenze:
-# - qwen.md (regole personali)
+# - qwen-2.md (regole personali)
 # - docs/rules/ (regole progetto)
 # - docs/best-practices/ (linee guida)
 
@@ -121,7 +121,7 @@ SE TUTTE LE RISPOSTE SONO SÌ → PROCED
 echo "
 ## Regola Appresa: <data>
 <descrizione regola>
-" >> qwen.md
+" >> qwen-2.md
 ```
 
 ---
@@ -130,12 +130,12 @@ echo "
 
 ```bash
 # Memoria a lungo termine:
-# - ~/.qwen/qwen.md (globale)
-# - qwen.md (progetto)
+# - ~/../../../../Notify/docs/wiki/integrations/_da-riconciliare/qwen-2.md (globale)
+# - qwen-2.md (progetto)
 # - _bmad/_memory/ (BMAD)
 
 # Esempio:
-cat >> ~/.qwen/qwen.md << 'EOF'
+cat >> ~/../../../../Notify/docs/wiki/integrations/_da-riconciliare/qwen-2.md << 'EOF'
 ## Error Correction Workflow
 Quando ricevo errore:
 1. Studio docs

@@ -2,10 +2,7 @@
 title: agent edit discipline — puntatore
 type: reference
 updated: 2026-05-19
-<<<<<<< .merge_file_qqAFmO
 qmd: "agent edit discipline puntatore"
-=======
->>>>>>> .merge_file_zeONde
 ---
 tags: [docs, tenant, bmad]
 

@@ -430,4 +430,4 @@ User::withoutGlobalScopes()->all();  // Requires permission
 - [Architecture Overview](./architecture.md)
 - [Setup & Configuration](./SETUP.md)
 - [Troubleshooting](troubleshooting.md)
-- [Best Practices](./best_practices.md)
+- [Best Practices](../../Activity/docs/best-practices-3.md)

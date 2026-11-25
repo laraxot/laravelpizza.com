@@ -635,7 +635,7 @@ Dopo l'installazione:
 1. [Configurazione Moduli](modules.md)
 2. [Sviluppo](development.md)
 3. [Qualità Codice](code-quality.md)
-4. [Regole Laraxot](laraxot-rules.md)
+4. [Regole Laraxot](laraxot-rules-2.md)
 
 ---
 

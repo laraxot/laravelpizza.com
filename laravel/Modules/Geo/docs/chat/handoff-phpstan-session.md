@@ -58,7 +58,7 @@ discussions: []
 **Commit:** ce9b4a8eb  
 **Coordinator:** Haiku (claude-haiku-4-5-20251001)
 
-## Versione unita da `handoff-phpstan-session-2026-06-16.md` (2026-06-16)
+## Versione unita da `handoff-phpstan-session-2.md` (2026-06-16)
 
 # Handoff: PHPStan Complete Session (2026-06-16)
 

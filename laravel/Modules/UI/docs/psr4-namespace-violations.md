@@ -402,7 +402,7 @@ composer dump-autoload = Manifestation of Truth
 - [Wikimedia Composer Merge Plugin](https://github.com/wikimedia/composer-merge-plugin)
 
 **Documentazione Interna**:
-- [../../../../docs/modules-index.md](../../../../docs/modules-index.md) - Module Index
+- [../../Geo/docs/raw/history/modules-index-2.md](../../Geo/docs/raw/history/modules-index-2.md) - Module Index
 - [../../Xot/docs/README.md](../../xot/docs/readme.md) - XotBase Pattern
 - [./README.md](./readme.md) - UI Module Overview
 

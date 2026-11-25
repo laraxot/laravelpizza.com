@@ -114,7 +114,7 @@ scope disgiunti + lock).
   detection), non marker risolti. Alias/redirect system gia' sano.
 - Residui noti della story `prompts-audit.story.md` (nomi underscore/
   maiuscoli, `START1.md`, `README_phpstan1.md`, copie divergenti
-  `docs1-4`, `global_context.md`) appartengono alla story
+  `docs1-4`, `global-context.md`) appartengono alla story
   `docs-prompts-reorganization` in review con agente attivo sui file
   (mtime < 2h): non toccati per non collidere.
 - Docs moduli/temi: story `docs-prompts-reorganization` copre gia'

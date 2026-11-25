@@ -55,7 +55,7 @@ Se l'Action non scrive dati né chiama servizi esterni, non è necessaria la ref
 
 ## Conferma
 
-`Modules/Xot/tests/Unit/Docs/ActionContractsAreCompleteTest.php` cerca `@contract docs/contracts/<file>.md` nel docblock di ogni Action che ha un contratto. Stato misurato il 2026-11-24: in `Modules/Xot/app/Actions` nessuna delle 238 Action contiene il marker `@contract` (`rg -c "@contract" app/Actions` vuoto): il test non fallisce perché Xot non ha contratti di Action, quindi la regola è oggi non applicata in Xot ed è debito dichiarato (vedi «Backlog contract» in [contracts/INDEX.md](../contracts/INDEX.md)).
+`Modules/Xot/tests/Unit/Docs/ActionContractsAreCompleteTest.php` cerca `@contract docs/contracts/<file>.md` nel docblock di ogni Action che ha un contratto. Stato misurato il 2026-11-24: in `Modules/Xot/app/Actions` nessuna delle 238 Action contiene il marker `@contract` (`rg -c "@contract" app/Actions` vuoto): il test non fallisce perché Xot non ha contratti di Action, quindi la regola è oggi non applicata in Xot ed è debito dichiarato (vedi «Backlog contract» in [contracts/index.md](../contracts/index.md)).
 
 Il file `00011-contract-docblock-reference.md` è superseded da questo.
 

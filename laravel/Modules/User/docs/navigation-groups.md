@@ -83,4 +83,4 @@ grep -rn "'group' => \[" -A 1 laravel/Modules/User/lang/it/ | grep "'name'" | so
 - [translation-key-prototype.md](./translation-key-prototype.md)
 - [translation-best-practices.md](./translation-best-practices.md)
 - [navigation-structure.md](./navigation-structure.md)
-- Regola condivisa: `docs/wiki/rules/translation-standards.md`
+- Regola condivisa: `../../Lang/docs/translation-standards-3.md`

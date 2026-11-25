@@ -11,7 +11,7 @@ discussions: []
 
 # Research Template
 
-Template for `.planning/phases/XX-name/{phase_num}-RESEARCH.md` - comprehensive ecosystem research before planning.
+Template for `.planning/phases/XX-name/{phase_num}-research-2.md` - comprehensive ecosystem research before planning.
 
 **Purpose:** Document what Claude needs to know to implement a phase well - not just "which library" but "how do experts build this."
 
@@ -559,13 +559,13 @@ function useVehicleControls(rigidBodyRef) {
 - Sources: Mark confidence levels honestly
 
 **Integration with planning:**
-- research.md loaded as @context reference in plan.md
+- research.md loaded as @context reference in plan-2.md
 - Standard stack informs library choices
 - Don't hand-roll prevents custom solutions
 - Pitfalls inform verification criteria
 - Code examples can be referenced in task actions
 
 **After creation:**
-- File lives in phase directory: `.planning/phases/XX-name/{phase_num}-RESEARCH.md`
+- File lives in phase directory: `.planning/phases/XX-name/{phase_num}-research-2.md`
 - Referenced during planning workflow
 - plan-phase loads it automatically when present

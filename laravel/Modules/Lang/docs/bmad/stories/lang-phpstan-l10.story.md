@@ -9,6 +9,7 @@ phase: quality-gates
 priority: P1
 related:
   - cluster3-phpstan-swarm.story.md
+qmd: "lang phpstan l10 story level fixes"
 ---
 
 # Lang — PHPStan Level 10 fixes (2026-10-06)

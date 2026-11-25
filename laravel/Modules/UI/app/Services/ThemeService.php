@@ -10,7 +10,6 @@ namespace Modules\UI\Services;
  * Residuo on-disk (no-delete senza autorizzazione). Vedi debt.php #247.
  *
  * @deprecated Empty stub; do not use.
- *
  * @see Modules/UI/docs/wiki/concepts/ui-services-support-to-actions.md
  */
 final class ThemeService {}

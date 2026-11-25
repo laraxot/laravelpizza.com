@@ -17,14 +17,9 @@ related:
 
 # UI Services/Support → Actions/Adapters mapping
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ## Riepilogo conversione
 
 Tutti i file in `app/Services/` e `app/Support/` del modulo UI sono stati convertiti o rimossi.
-=======
-=======
->>>>>>> laraxot/dev
 ## Boy scout 2026-11-23
 
 I cinque `app/Services/*.php` sono riapparsi da merge: ridotti a stub `@deprecated`
@@ -34,10 +29,6 @@ SUPERSEDED (no-delete senza auth). Zero caller, zero binding. Canonici invariati
 ## Riepilogo conversione
 
 Logica migrata ad Actions/Adapters; i file `app/Services/` possono restare stub SUPERSEDED.
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
 
 Revisione 2026-07-13 (reconciliation pass): gli stub `ComponentAction`, `ThemeAction` e
 `UIAction` creati dalla prima migrazione sono stati **eliminati**, non mantenuti. Motivo:

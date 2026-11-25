@@ -19,7 +19,7 @@ related:
   - "./docs/architecture.md"
   - "./docs/bmad/livewire-inventory.md"
   - "./docs/stories/12.1.retire-job-http-livewire.story.md"
-  - "./docs/stories/02.Job-merge-conflict-resolution.story.md"
+  - "./docs/stories/02.job-merge-conflict-resolution.story.md"
 sources: []
 ---
 
@@ -78,7 +78,7 @@ php -d memory_limit=2G ./vendor/bin/phpstan analyse Modules/Job
 ```
 
 Ultimo esito noto: PHPStan su `Modules/Job` exit 0 dopo la risoluzione dei marker
-di merge (story [02.Job-merge-conflict-resolution](./docs/stories/02.Job-merge-conflict-resolution.story.md)).
+di merge (story [02.Job-merge-conflict-resolution](./docs/stories/02.job-merge-conflict-resolution.story.md)).
 
 ## Storico
 

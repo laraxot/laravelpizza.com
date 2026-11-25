@@ -84,7 +84,7 @@ Consolidated from **50** individual files.
 
 ## analisi-completa-
 
-*Consolidated from: `analisi-completa-.md`*
+*Consolidated from: `analisi-completa-2.md`*
 
 title: "ANALISI-COMPLETA-2025-10-01.deprecated"
 type: concept
@@ -98,19 +98,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -137,26 +137,26 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
-> Questo file è stato rinominato in [analisi-completa.md](../../analisi-completa.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+> Questo file è stato rinominato in [analisi-completa-3.md](../../analisi-completa.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 
 ---
 
@@ -177,19 +177,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -473,7 +473,7 @@ class Template extends Model
 
 ## analisi-completa-3
 
-*Consolidated from: `analisi-completa.md`*
+*Consolidated from: `analisi-completa-3.md`*
 
 title: "📊 ANALISI COMPLETA PROGETTO NOTIFY"
 title: "📊 ANALISI COMPLETA PROGETTO <nome progetto>"
@@ -490,19 +490,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -950,7 +950,7 @@ Manutenzione Stradale • Illuminazione • Rifiuti • Verde Pubblico • Fogna
 >>>>>>> laraxot/dev
 - **[Session Summary 2025-10-01](./phpstan/session-summary-.md.md)** ⭐ TECHNICAL
 - **[Final Report 2025-10-01](./phpstan/final-report-session-.md.md)**
-- **[Questo Documento](./analisi-completa.md)** ⭐ EXECUTIVE
+- **[Questo Documento](../../analisi-completa-3.md)** ⭐ EXECUTIVE
 
 ### 🎯 Module Roadmaps (Dettagliate)
 - [Xot - Core Framework](../Modules/Xot/docs/roadmap-and-issues.md) - 9 errori, 2.5h fix
@@ -1055,7 +1055,7 @@ Manutenzione Stradale • Illuminazione • Rifiuti • Verde Pubblico • Fogna
 
 ## analisi-completa
 
-*Consolidated from: `analisi-completa.md`*
+*Consolidated from: `analisi-completa-3.md`*
 
 <<<<<<< HEAD
 
@@ -1358,19 +1358,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -2447,19 +2447,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -3784,19 +3784,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -5830,19 +5830,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -6541,7 +6541,7 @@ class TemplateTestPage extends Page
 
 ## analisi-dettagliata-4
 
-*Consolidated from: `analisi-dettagliata-4.md`*
+*Consolidated from: `analisi-dettagliata-4-2.md`*
 *Consolidated from: `analisi-dettagliata-integrazione-filament.md`*
 
 <<<<<<< HEAD
@@ -7260,19 +7260,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -8945,19 +8945,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -10236,19 +10236,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -11579,19 +11579,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -12074,19 +12074,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -12712,7 +12712,7 @@ class TemplatePreview extends Component
 
 ## analisi-dettagliata
 
-*Consolidated from: `analisi-dettagliata.md`*
+*Consolidated from: `analisi-dettagliata-9.md`*
 
 <<<<<<< HEAD
 
@@ -13543,7 +13543,7 @@ class TemplatePreview extends Component
 >>>>>>> laraxot/dev
 📊 **Dati:** 8 proprietà duplicate, 70 LOC, 86% riduzione  
 🎯 **Priorità:** MEDIA - Gestisce temi  
-📝 **Alternative:** [metodi_duplicati_analisi.md](../Modules/Cms/docs/metodi_duplicati_analisi.md)
+📝 **Alternative:** [metodi-duplicati-analisi-4.md](../Modules/Cms/docs/metodi-duplicati-analisi-4.md)
 
 ---
 
@@ -13554,14 +13554,14 @@ class TemplatePreview extends Component
 📊 **Dati:** 8 proprietà duplicate, 70 LOC, 85% riduzione  
 🎯 **Priorità:** BASSA - Semplice  
 ✅ **Candidato:** Primo per migration test  
-📝 **Alternative:** [metodi_duplicati_analisi.md](../Modules/Activity/docs/metodi_duplicati_analisi.md)
+📝 **Alternative:** [metodi-duplicati-analisi-4.md](../Modules/Activity/docs/metodi-duplicati-analisi-2.md)
 
 #### Comment (Commenti)
 📄 **File:** (da creare)  
 📊 **Dati:** 7 proprietà duplicate, 65 LOC, 80% riduzione  
 🎯 **Priorità:** BASSA - Più semplice  
 ✅ **Candidato:** PRIMO per migration (meno rischi)  
-📝 **Alternative:** [metodi_duplicati_analisi.md](../Modules/Comment/docs/metodi_duplicati_analisi.md)
+📝 **Alternative:** [metodi-duplicati-analisi-2.md](../Modules/Comment/docs/metodi-duplicati-analisi-2.md)
 
 #### Blog (Blog Engine)
 📄 **File:** (da creare)  
@@ -13574,7 +13574,7 @@ class TemplatePreview extends Component
 📄 **File:** (da creare)  
 📊 **Dati:** TBD  
 🎯 **Priorità:** BASSA  
-📝 **Alternative:** [metodi_duplicati_analisi.md](../Modules/AI/docs/metodi_duplicati_analisi.md)
+📝 **Alternative:** [metodi_duplicati_analisi.md](../Modules/AI/docs/metodi-duplicati-analisi-3.md)
 
 ---
 
@@ -15062,19 +15062,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -15220,20 +15220,20 @@ related:
 📊 **Dati:** 7 proprietà duplicate, 65 LOC, 80% riduzione  
 🎯 **Priorità:** BASSA - Più semplice  
 ✅ **Candidato:** PRIMO per migration (meno rischi)  
-📝 **Alternative:** [metodi-duplicati-analisi-1.md](../Modules/Comment/docs/metodi-duplicati-analisi.md)
+📝 **Alternative:** [metodi-duplicati-analisi-1.md](../../../../Activity/docs/metodi-duplicati-analisi-2.md)
 
 #### Blog (Blog Engine)
 📄 **File:** (da creare)  
 📊 **Dati:** 8 proprietà duplicate, 76 LOC, 85% riduzione  
 🎯 **Priorità:** MEDIA  
 ⚠️ **Note:** Usa InteractsWithMedia trait  
-📝 **Alternative:** [metodi-duplicati-analisi-1.md](../Modules/Blog/docs/metodi-duplicati-analisi.md)
+📝 **Alternative:** [metodi-duplicati-analisi-1.md](../../../../Activity/docs/metodi-duplicati-analisi-3.md)
 
 #### AI (Artificial Intelligence)
 📄 **File:** (da creare)  
 📊 **Dati:** TBD  
 🎯 **Priorità:** BASSA  
-📝 **Alternative:** [metodi-duplicati-analisi-1.md](../Modules/AI/docs/metodi-duplicati-analisi.md)
+📝 **Alternative:** [metodi-duplicati-analisi-1.md](../../../../Activity/docs/metodi-duplicati-analisi-3.md)
 
 ---
 
@@ -15511,19 +15511,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -16732,19 +16732,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -18466,7 +18466,7 @@ class TemplatePreview extends Component
 
 ## analisi_completa
 
-*Consolidated from: `analisi_completa.md`*
+*Consolidated from: `analisi-completa-3.md`*
 
 <<<<<<< HEAD
 
@@ -18754,7 +18754,7 @@ class Template extends Model
 
 ## analisi_dettagliata
 
-*Consolidated from: `analisi_dettagliata.md`*
+*Consolidated from: `analisi-dettagliata-9.md`*
 
 <<<<<<< HEAD
 

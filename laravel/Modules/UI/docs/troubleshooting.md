@@ -9,19 +9,8 @@ updated: "2026-07-28"
 related:
   - ./README.md
   - ./PATTERNS.md
-<<<<<<< HEAD
-<<<<<<< HEAD
+  - ./INDEX.md
   - ./index.md
-=======
-  - ./INDEX.md
-
-- ./index.md
->>>>>>> laraxot/dev
-=======
-  - ./INDEX.md
-
-- ./index.md
->>>>>>> laraxot/dev
 ---
 
 # UI — Troubleshooting Guide
@@ -740,19 +729,8 @@ Se il troubleshooting non risolve:
    ```
 
 5. **Consulta documentation**:
-<<<<<<< HEAD
-<<<<<<< HEAD
-   - [INDEX](./index.md) — Complete file listing
-=======
    - [INDEX](./INDEX.md) — Complete file listing
-
-- [INDEX](./index.md) — Complete file listing
->>>>>>> laraxot/dev
-=======
-   - [INDEX](./INDEX.md) — Complete file listing
-
-- [INDEX](./index.md) — Complete file listing
->>>>>>> laraxot/dev
+   - [index](./index.md) — Complete file listing
    - [PATTERNS](patterns.md) — Architectural decisions
    - [architecture/component-registration](./architecture/component-registration.md) — Component setup
 

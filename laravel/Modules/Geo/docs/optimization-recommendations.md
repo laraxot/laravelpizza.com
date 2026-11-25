@@ -63,7 +63,7 @@ Il modello `Address` è stato riveduto seguendo i principi di design ottimali e 
 
 #### File Prioritari da Aggiornare
 1. `docs/models/address-revised.md`
-2. `docs/modelli_factory_seeder_analisi.md`
+2. `docs/modelli-factory-seeder-analisi-2.md`
 3. `docs/sushi-to-jsons-analysis.md`
 4. Tutti i file con path `/var/www/html/<directory progetto>/`
 

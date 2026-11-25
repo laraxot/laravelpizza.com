@@ -25,21 +25,21 @@ I collegamenti nei file di documentazione devono **sempre** utilizzare percorsi 
 ✅ **CORRETTO**:
 ```markdown
 [Regole Generali](../../Xot/project_docs/translations.md)
-[Best Practices](../TRANSLATION_KEYS_BEST_PRACTICES.md)
+[Best Practices](translation-keys-best-practices-2.md)
 [Regole Generali](../../Xot/project_docs/translations.md)
-[Best Practices](../TRANSLATION_KEYS_BEST_PRACTICES.md)
+[Best Practices](translation-keys-best-practices-2.md)
 [Regole Generali](../../Xot/project_docs/translations.md)
-[Best Practices](../TRANSLATION_KEYS_BEST_PRACTICES.md)
+[Best Practices](translation-keys-best-practices-2.md)
 ```
 
 ❌ **ERRATO**:
 ```markdown
 [Regole Generali](Modules/Xot/project_docs/translations.md)
-[Best Practices](Modules/Lang/project_docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+[Best Practices](Modules/Lang/docs/translation-keys-best-practices-2.md)
 [Regole Generali](Modules/Xot/project_docs/translations.md)
-[Best Practices](Modules/Lang/project_docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+[Best Practices](Modules/Lang/docs/translation-keys-best-practices-2.md)
 [Regole Generali](Modules/Xot/project_docs/translations.md)
-[Best Practices](Modules/Lang/project_docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+[Best Practices](Modules/Lang/docs/translation-keys-best-practices-2.md)
 ```
 
 ### 2. Navigazione Tra Cartelle
@@ -99,9 +99,9 @@ Prima di fare commit dei documenti:
 
 ### Da Modules/Lang/project_docs/ a Modules/Notify/project_docs/
 ```markdown
-[Convenzioni Notify](../../Notify/project_docs/TRANSLATION_CONVENTIONS.md)
-[Convenzioni Notify](../../Notify/project_docs/TRANSLATION_CONVENTIONS.md)
-[Convenzioni Notify](../../Notify/project_docs/TRANSLATION_CONVENTIONS.md)
+[Convenzioni Notify](../../Notify/docs/translation-conventions-2.md)
+[Convenzioni Notify](../../Notify/docs/translation-conventions-2.md)
+[Convenzioni Notify](../../Notify/docs/translation-conventions-2.md)
 ```
 
 ### Da Modules/Lang/project_docs/ a docs/ nella root
@@ -135,21 +135,21 @@ I collegamenti nei file di documentazione devono **sempre** utilizzare percorsi 
 ✅ **CORRETTO**:
 ```markdown
 [Regole Generali](../../Xot/docs/translations.md)
-[Best Practices](../TRANSLATION_KEYS_BEST_PRACTICES.md)
+[Best Practices](translation-keys-best-practices-2.md)
 [Regole Generali](../../Xot/docs/translations.md)
-[Best Practices](../TRANSLATION_KEYS_BEST_PRACTICES.md)
+[Best Practices](translation-keys-best-practices-2.md)
 [Regole Generali](../../Xot/docs/translations.md)
-[Best Practices](../TRANSLATION_KEYS_BEST_PRACTICES.md)
+[Best Practices](translation-keys-best-practices-2.md)
 ```
 
 ❌ **ERRATO**:
 ```markdown
 [Regole Generali](Modules/Xot/docs/translations.md)
-[Best Practices](Modules/Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+[Best Practices](Modules/Lang/docs/translation-keys-best-practices-2.md)
 [Regole Generali](Modules/Xot/docs/translations.md)
-[Best Practices](Modules/Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+[Best Practices](Modules/Lang/docs/translation-keys-best-practices-2.md)
 [Regole Generali](Modules/Xot/docs/translations.md)
-[Best Practices](Modules/Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+[Best Practices](Modules/Lang/docs/translation-keys-best-practices-2.md)
 ```
 
 ### 2. Navigazione Tra Cartelle
@@ -209,9 +209,9 @@ Prima di fare commit dei documenti:
 
 ### Da Modules/Lang/docs/ a Modules/Notify/docs/
 ```markdown
-[Convenzioni Notify](translation_conventions.md)
-[Convenzioni Notify](translation_conventions.md)
-[Convenzioni Notify](translation_conventions.md)
+[Convenzioni Notify](translation-conventions-2.md)
+[Convenzioni Notify](translation-conventions-2.md)
+[Convenzioni Notify](translation-conventions-2.md)
 ```
 
 ### Da Modules/Lang/docs/ a docs/ nella root

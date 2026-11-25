@@ -37,78 +37,78 @@ Documentation for `notify` module categorized as **integrations**.
 
 - [`-repos.md`](./-repos.md)
 - [`-todo.md`](./-todo.md)
-- [`.md`](./.md)
+- [`.md`](../../../../../Activity/docs/untitled-2.md)
 - [`00-index.md`](./00-index.md)
 - [`00-index-1.md`](./00-index.md)
 - [`00-index-1.md`](../../../00-index-documentation.md)
 - [`00-index-2.md`](./00-index-2.md)
 - [`00-index.md`](./00-index.md)
-- [`ABSOLUTE_COMPLETION_100.md`](./absolute_completion_100.md)
+- [`absolute-completion-100.md`](absolute-completion-100.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
-- [`AGENTS.md`](./agents.md)
+- [`agents-2.md`](./agents.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-- [`AGENTS.md`](./AGENTS.md)
+- [`agents-2.md`](./agents-2.md)
 =======
 <<<<<<< HEAD
-- [`AGENTS.md`](./agents.md)
+- [`agents-2.md`](./agents.md)
 =======
-- [`AGENTS.md`](./AGENTS.md)
+- [`agents-2.md`](./agents-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
-- [`AGENTS.md`](./agents.md)
+- [`agents-2.md`](./agents.md)
 =======
-- [`AGENTS.md`](./AGENTS.md)
+- [`agents-2.md`](./agents-2.md)
 =======
 <<<<<<< HEAD
-- [`AGENTS.md`](./agents.md)
+- [`agents-2.md`](./agents.md)
 =======
-- [`AGENTS.md`](./AGENTS.md)
+- [`agents-2.md`](./agents-2.md)
 >>>>>>> .merge_file_X4e09n
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`AGNOSTIC_DOCUMENTATION_RULE.md`](./agnostic_documentation_rule.md)
-- [`AI_AGENT_TEAMS.md`](./ai_agent_teams.md)
-- [`AI_RULES_CRITICAL.md`](./ai_rules_critical.md)
-- [`AI_SKILLS_MASTER_INDEX.md`](./ai_skills_master_index.md)
-- [`ALLINEAMENTO_BOOTSTRAP_ITALIA.md`](./allineamento_bootstrap_italia.md)
-- [`ANALISI_METODI_DUPLICATI_MASTER.md`](./analisi_metodi_duplicati_master.md)
+- [`agnostic-documentation-rule.md`](./agnostic-documentation-rule-3.md)
+- [`AI_AGENT_TEAMS.md`](./ai-agent-teams-3.md)
+- [`AI_RULES_CRITICAL.md`](./ai-rules-critical-3.md)
+- [`AI_SKILLS_MASTER_INDEX.md`](./ai-skills-master-index-3.md)
+- [`ALLINEAMENTO_BOOTSTRAP_ITALIA.md`](./allineamento-bootstrap-italia-3.md)
+- [`ANALISI_METODI_DUPLICATI_MASTER.md`](./analisi-metodi-duplicati-master-3.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
-- [`API.md`](./api.md)
+- [`api-2.md`](../../../../../User/docs/api-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-- [`API.md`](./API.md)
+- [`api-2.md`](./api-2.md)
 =======
 <<<<<<< HEAD
-- [`API.md`](./api.md)
+- [`api-2.md`](../../../../../User/docs/api-2.md)
 =======
-- [`API.md`](./API.md)
+- [`api-2.md`](./api-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
-- [`API.md`](./api.md)
+- [`api-2.md`](../../../../../User/docs/api-2.md)
 =======
-- [`API.md`](./API.md)
+- [`api-2.md`](./api-2.md)
 =======
 <<<<<<< HEAD
-- [`API.md`](./api.md)
+- [`api-2.md`](../../../../../User/docs/api-2.md)
 =======
-- [`API.md`](./API.md)
+- [`api-2.md`](./api-2.md)
 >>>>>>> .merge_file_X4e09n
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [`architecture-diagrams.md`](./architecture-diagrams.md)
 - [`architecture.md`](./architecture.md)
-- [`ARCHITECTURE_ANALYSIS.md`](./architecture_analysis.md)
-- [`BASHSCRIPTS_GITIGNORE_WORKAROUND.md`](./bashscripts_gitignore_workaround.md)
-- [`BOOST_SKILL_INSTALLATION_ERROR.md`](./boost_skill_installation_error.md)
-- [`BOOST_SKILL_INSTALLATION_SUCCESS.md`](./boost_skill_installation_success.md)
-- [`BOOST_SKILL_SOLUTION_PLAN.md`](./boost_skill_solution_plan.md)
+- [`architecture-analysis-3.md`](./architecture-analysis-4.md)
+- [`BASHSCRIPTS_GITIGNORE_WORKAROUND.md`](./bashscripts-gitignore-workaround-3.md)
+- [`BOOST_SKILL_INSTALLATION_ERROR.md`](./boost-skill-installation-error-3.md)
+- [`BOOST_SKILL_INSTALLATION_SUCCESS.md`](./boost-skill-installation-success-3.md)
+- [`BOOST_SKILL_SOLUTION_PLAN.md`](./boost-skill-solution-plan-3.md)
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -121,14 +121,14 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`CLAUDE.md`](./claude.md)
-- [`COMMUNICATION_SYSTEMS_ARCHITECTURE.md`](./communication-systems-architecture.md)
-- [`COMMUNICATION_SYSTEMS_ARCHITECTURE.md`](../../../communication-systems-architecture.md)
-- [`COMPLETE_SUCCESS.md`](./complete_success.md)
-- [`COMPOSER_MODULES_ARCHITECTURE.md`](./composer_modules_architecture.md)
-- [`COMPOSER_STRATEGY.md`](./composer_strategy.md)
-- [`CONFERMA_CLASSI_BOOTSTRAP.md`](./conferma_classi_bootstrap.md)
-- [`CONTRIBUTING.md`](./contributing.md)
+- [`CLAUDE.md`](../../../../../Geo/docs/root-md-files/claude.md)
+- [`communication-systems-architecture-2.md`](../../../communication-systems-architecture-2.md)
+- [`communication-systems-architecture-2.md`](../../../communication-systems-architecture.md)
+- [`COMPLETE_SUCCESS.md`](./complete-success-3.md)
+- [`composer-modules-architecture-2.md`](./composer-modules-architecture-2.md)
+- [`COMPOSER_STRATEGY.md`](./composer-strategy-3.md)
+- [`CONFERMA_CLASSI_BOOTSTRAP.md`](./conferma-classi-bootstrap-3.md)
+- [`contributing-2.md`](./contributing.md)
 <<<<<<< .merge_file_VkYtaf
 <<<<<<< HEAD
 =======
@@ -141,13 +141,13 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_X4e09n
 - [`CLAUDE.md`](./CLAUDE.md)
-- [`COMMUNICATION_SYSTEMS_ARCHITECTURE.md`](./communication-systems-architecture.md)
-- [`COMMUNICATION_SYSTEMS_ARCHITECTURE.md`](../../../communication-systems-architecture.md)
-- [`COMPLETE_SUCCESS.md`](./complete_success.md)
-- [`COMPOSER_MODULES_ARCHITECTURE.md`](./COMPOSER_MODULES_ARCHITECTURE.md)
-- [`COMPOSER_STRATEGY.md`](./composer_strategy.md)
-- [`CONFERMA_CLASSI_BOOTSTRAP.md`](./conferma_classi_bootstrap.md)
-- [`CONTRIBUTING.md`](./CONTRIBUTING.md)
+- [`communication-systems-architecture-2.md`](../../../communication-systems-architecture-2.md)
+- [`communication-systems-architecture-2.md`](../../../communication-systems-architecture.md)
+- [`COMPLETE_SUCCESS.md`](./complete-success-3.md)
+- [`composer-modules-architecture-2.md`](../../../composer-modules-architecture-2.md)
+- [`COMPOSER_STRATEGY.md`](./composer-strategy-3.md)
+- [`CONFERMA_CLASSI_BOOTSTRAP.md`](./conferma-classi-bootstrap-3.md)
+- [`contributing-2.md`](./contributing-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_VkYtaf
@@ -160,39 +160,39 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_X4e09n
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`CORREZIONI_PHPSTAN_COMPLETATE.md`](./correzioni-phpstan-completate.md)
-- [`CORREZIONI_PHPSTAN_COMPLETATE.md`](../../../correzioni-phpstan-completate.md)
-- [`CSS_ARCHITECTURE.md`](./css_architecture.md)
-- [`database-schema.md`](./database-schema.md)
-- [`DECISIONE_BASEMODEL_REFACTORING.md`](./decisione_basemodel_refactoring.md)
-- [`DESIGN_COMUNI_INTEGRATION_COMPLETE.md`](./design_comuni_integration_complete.md)
+- [`correzioni-phpstan-completate-4.md`](../../../correzioni-phpstan-completate-4.md)
+- [`correzioni-phpstan-completate-4.md`](../../../correzioni-phpstan-completate.md)
+- [`CSS_ARCHITECTURE.md`](./css-architecture-3.md)
+- [`database-schema-2.md`](../../../../../User/docs/database-schema-2.md)
+- [`DECISIONE_BASEMODEL_REFACTORING.md`](./decisione-basemodel-refactoring-3.md)
+- [`DESIGN_COMUNI_INTEGRATION_COMPLETE.md`](./design-comuni-integration-complete-3.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
-- [`DESIGN_COMUNI_TAILWIND.md`](./design_comuni_tailwind.md)
+- [`design-comuni-tailwind-2.md`](./design-comuni-tailwind-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_X4e09n
-- [`DESIGN_COMUNI_TAILWIND.md`](./DESIGN_COMUNI_TAILWIND.md)
+- [`design-comuni-tailwind-2.md`](../../../design-comuni-tailwind-2.md)
 =======
 <<<<<<< HEAD
-- [`DESIGN_COMUNI_TAILWIND.md`](./design_comuni_tailwind.md)
+- [`design-comuni-tailwind-2.md`](./design-comuni-tailwind-2.md)
 =======
-- [`DESIGN_COMUNI_TAILWIND.md`](./DESIGN_COMUNI_TAILWIND.md)
+- [`design-comuni-tailwind-2.md`](../../../design-comuni-tailwind-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
 =======
-- [`DESIGN_COMUNI_TAILWIND.md`](./design_comuni_tailwind.md)
+- [`design-comuni-tailwind-2.md`](./design-comuni-tailwind-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`DOCS_MONITORING_SYSTEM.md`](./docs_monitoring_system.md)
-- [`DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md`](./documentation_analysis_and_improvement_plan.md)
-- [`DOCUMENTATION_ECOSYSTEM.md`](./documentation_ecosystem.md)
-- [`DOCUMENTATION_GOVERNANCE.md`](./documentation_governance.md)
+- [`DOCS_MONITORING_SYSTEM.md`](./docs-monitoring-system-3.md)
+- [`DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md`](./documentation-analysis-and-improvement-plan-3.md)
+- [`DOCUMENTATION_ECOSYSTEM.md`](./documentation-ecosystem-3.md)
+- [`DOCUMENTATION_GOVERNANCE.md`](./documentation-governance-3.md)
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -205,22 +205,22 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`DOCUMENTATION_IMPROVEMENT_PLAN_MULTI_AGENT.md`](./documentation_improvement_plan_multi_agent.md)
-- [`DOCUMENTATION_INDEX.md`](./documentation_index.md)
-- [`DOCUMENTATION_SYSTEM_UPDATE_COMPLETE.md`](./documentation_system_update_complete.md)
+- [`documentation-improvement-plan-multi-agent-2.md`](./documentation-improvement-plan-multi-agent-2.md)
+- [`documentation-index.md`](./documentation-index-3.md)
+- [`documentation-system-update-complete-3.md`](./documentation-system-update-complete-4.md)
 - [`dry-kiss-analysis-master.md`](./dry-kiss-analysis-master.md)
 - [`DryTraitMethods.md`](./drytraitmethods.md)
-- [`FARMSHOPS_INTEGRATION_COMPLETE.md`](./farmshops_integration_complete.md)
-- [`FILAMENT_4_LOGIN_WIDGET_IMPLEMENTATION_SUMMARY.md`](./filament_4_login_widget_implementation_summary.md)
-- [`FILAMENT_5_OFFICIAL_POLICY.md`](./filament_5_official_policy.md)
-- [`FILAMENT_5_UPGRADE_COMPLETE.md`](./filament_5_upgrade_complete.md)
-- [`FILAMENT_VERSION_POLICY.md`](./filament_version_policy.md)
+- [`FARMSHOPS_INTEGRATION_COMPLETE.md`](./farmshops-integration-complete-3.md)
+- [`filament-4-login-widget-implementation-summary-2.md`](./filament-4-login-widget-implementation-summary-2.md)
+- [`filament-5-official-policy-2.md`](./filament-5-official-policy-2.md)
+- [`FILAMENT_5_UPGRADE_COMPLETE.md`](./filament-5-upgrade-complete-3.md)
+- [`FILAMENT_VERSION_POLICY.md`](./filament-version-policy-3.md)
 - [`FILES-CREATED-SESSION-007.md`](../../../raw/root-import/files-created-session-007.md)
 - [`FILES-CREATED-SESSION-REPLIKATE.md`](./files-created-session-replikate.md)
-- [`FINAL_SUMMARY.md`](./final_summary.md)
-- [`FIX_COLORI_HEADER_FOOTER.md`](./fix_colori_header_footer.md)
-- [`FIX_TESTS_HOMEPAGE.md`](./fix_tests_homepage.md)
-- [`FOLIO_ROUTING_FIX.md`](./folio_routing_fix.md)
+- [`FINAL_SUMMARY.md`](./final-summary-3.md)
+- [`FIX_COLORI_HEADER_FOOTER.md`](./fix-colori-header-footer-3.md)
+- [`FIX_TESTS_HOMEPAGE.md`](./fix-tests-homepage-3.md)
+- [`folio-routing-fix-2.md`](./folio-routing-fix-2.md)
 <<<<<<< .merge_file_VkYtaf
 <<<<<<< HEAD
 =======
@@ -231,22 +231,22 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 >>>>>>> .merge_file_X4e09n
 >>>>>>> laraxot/dev
-- [`DOCUMENTATION_IMPROVEMENT_PLAN_MULTI_AGENT.md`](./DOCUMENTATION_IMPROVEMENT_PLAN_MULTI_AGENT.md)
-- [`DOCUMENTATION_INDEX.md`](./documentation_index.md)
-- [`DOCUMENTATION_SYSTEM_UPDATE_COMPLETE.md`](./documentation_system_update_complete.md)
+- [`documentation-improvement-plan-multi-agent-2.md`](../../../documentation-improvement-plan-multi-agent-2.md)
+- [`documentation-index.md`](./documentation-index-3.md)
+- [`documentation-system-update-complete-3.md`](./documentation-system-update-complete-4.md)
 - [`dry-kiss-analysis-master.md`](./dry-kiss-analysis-master.md)
 - [`DryTraitMethods.md`](./DryTraitMethods.md)
-- [`FARMSHOPS_INTEGRATION_COMPLETE.md`](./farmshops_integration_complete.md)
-- [`FILAMENT_4_LOGIN_WIDGET_IMPLEMENTATION_SUMMARY.md`](./FILAMENT_4_LOGIN_WIDGET_IMPLEMENTATION_SUMMARY.md)
-- [`FILAMENT_5_OFFICIAL_POLICY.md`](./FILAMENT_5_OFFICIAL_POLICY.md)
-- [`FILAMENT_5_UPGRADE_COMPLETE.md`](./filament_5_upgrade_complete.md)
-- [`FILAMENT_VERSION_POLICY.md`](./filament_version_policy.md)
+- [`FARMSHOPS_INTEGRATION_COMPLETE.md`](./farmshops-integration-complete-3.md)
+- [`filament-4-login-widget-implementation-summary-2.md`](../../../filament-4-login-widget-implementation-summary-2.md)
+- [`filament-5-official-policy-2.md`](../../../filament-5-official-policy-2.md)
+- [`FILAMENT_5_UPGRADE_COMPLETE.md`](./filament-5-upgrade-complete-3.md)
+- [`FILAMENT_VERSION_POLICY.md`](./filament-version-policy-3.md)
 - [`FILES-CREATED-SESSION-007.md`](../../../raw/root-import/files-created-session-007.md)
 - [`FILES-CREATED-SESSION-REPLIKATE.md`](./FILES-CREATED-SESSION-REPLIKATE.md)
-- [`FINAL_SUMMARY.md`](./final_summary.md)
-- [`FIX_COLORI_HEADER_FOOTER.md`](./fix_colori_header_footer.md)
-- [`FIX_TESTS_HOMEPAGE.md`](./fix_tests_homepage.md)
-- [`FOLIO_ROUTING_FIX.md`](./FOLIO_ROUTING_FIX.md)
+- [`FINAL_SUMMARY.md`](./final-summary-3.md)
+- [`FIX_COLORI_HEADER_FOOTER.md`](./fix-colori-header-footer-3.md)
+- [`FIX_TESTS_HOMEPAGE.md`](./fix-tests-homepage-3.md)
+- [`folio-routing-fix-2.md`](../../../folio-routing-fix-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_VkYtaf
@@ -259,48 +259,48 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_X4e09n
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`GAP_ANALYSIS_IMPLEMENTATION.md`](./gap_analysis_implementation.md)
+- [`GAP_ANALYSIS_IMPLEMENTATION.md`](./gap-analysis-implementation-3.md)
 - [`gemini.md`](./gemini.md)
-- [`GITHUB_ACTIONS_STATUS.md`](./github_actions_status.md)
-- [`GITHUB_SYNC_RULE.md`](./github_sync_rule.md)
+- [`GITHUB_ACTIONS_STATUS.md`](./github-actions-status-3.md)
+- [`GITHUB_SYNC_RULE.md`](./github-sync-rule-3.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
-- [`GIT_COMMIT_PUSH_RULE.md`](./git_commit_push_rule.md)
+- [`git-commit-push-rule-2.md`](./git-commit-push-rule-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_X4e09n
-- [`GIT_COMMIT_PUSH_RULE.md`](./GIT_COMMIT_PUSH_RULE.md)
+- [`git-commit-push-rule-2.md`](../../../git-commit-push-rule-2.md)
 =======
 <<<<<<< HEAD
-- [`GIT_COMMIT_PUSH_RULE.md`](./git_commit_push_rule.md)
+- [`git-commit-push-rule-2.md`](./git-commit-push-rule-2.md)
 =======
-- [`GIT_COMMIT_PUSH_RULE.md`](./GIT_COMMIT_PUSH_RULE.md)
+- [`git-commit-push-rule-2.md`](../../../git-commit-push-rule-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
 =======
-- [`GIT_COMMIT_PUSH_RULE.md`](./git_commit_push_rule.md)
+- [`git-commit-push-rule-2.md`](./git-commit-push-rule-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`HEADER_FIX_ANALYSIS.md`](./header_fix_analysis.md)
-- [`HEADER_FIX_COMPLETE.md`](./header_fix_complete.md)
-- [`HTML_PARITY_RULES.md`](./html_parity_rules.md)
-- [`IMMEDIATE_ACTION_PLAN_30_DAYS.md`](./immediate_action_plan_30_days.md)
-- [`IMPLEMENTATIONS_COMPLETED.md`](./implementations_completed.md)
-- [`IMPLEMENTATION_SUMMARY.md`](./implementation_summary.md)
-- [`IMPLEMENTAZIONE_COMPLETA_FINALE.md`](./implementazione_completa_finale.md)
+- [`HEADER_FIX_ANALYSIS.md`](./header-fix-analysis-3.md)
+- [`HEADER_FIX_COMPLETE.md`](./header-fix-complete-3.md)
+- [`HTML_PARITY_RULES.md`](./html-parity-rules-3.md)
+- [`IMMEDIATE_ACTION_PLAN_30_DAYS.md`](./immediate-action-plan-30-days-3.md)
+- [`IMPLEMENTATIONS_COMPLETED.md`](./implementations-completed-3.md)
+- [`IMPLEMENTATION_SUMMARY.md`](./implementation-summary-3.md)
+- [`IMPLEMENTAZIONE_COMPLETA_FINALE.md`](./implementazione-completa-finale-3.md)
 - [`index.md`](./index.md)
-- [`INSTALLAZIONE_STRUMENTI.md`](./installazione_strumenti.md)
+- [`INSTALLAZIONE_STRUMENTI.md`](./installazione-strumenti-3.md)
 - [`LEGGI-QUI-DOMANI.md`](./leggi-qui-domani.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
-- [`LOGGING_BEST_PRACTICES.md`](./logging_best_practices.md)
-- [`LOGIN_PAGE_STATUS.md`](./login_page_status.md)
-- [`LOGIN_PAGE_TRANSLATION_FIX.md`](./login_page_translation_fix.md)
+- [`logging-best-practices-2.md`](./logging-best-practices-2.md)
+- [`LOGIN_PAGE_STATUS.md`](./login-page-status-3.md)
+- [`login-page-translation-fix-2.md`](./login-page-translation-fix-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -308,9 +308,9 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_X4e09n
 =======
 <<<<<<< HEAD
-- [`LOGGING_BEST_PRACTICES.md`](./logging_best_practices.md)
-- [`LOGIN_PAGE_STATUS.md`](./login_page_status.md)
-- [`LOGIN_PAGE_TRANSLATION_FIX.md`](./login_page_translation_fix.md)
+- [`logging-best-practices-2.md`](./logging-best-practices-2.md)
+- [`LOGIN_PAGE_STATUS.md`](./login-page-status-3.md)
+- [`login-page-translation-fix-2.md`](./login-page-translation-fix-2.md)
 =======
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
@@ -318,9 +318,9 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 >>>>>>> .merge_file_X4e09n
 - [`LEGGI-QUI-DOMANI.md`](./leggi-qui-domani.md)
-- [`LOGGING_BEST_PRACTICES.md`](./LOGGING_BEST_PRACTICES.md)
-- [`LOGIN_PAGE_STATUS.md`](./login_page_status.md)
-- [`LOGIN_PAGE_TRANSLATION_FIX.md`](./LOGIN_PAGE_TRANSLATION_FIX.md)
+- [`logging-best-practices-2.md`](../../../logging-best-practices-2.md)
+- [`LOGIN_PAGE_STATUS.md`](./login-page-status-3.md)
+- [`login-page-translation-fix-2.md`](../../../login-page-translation-fix-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_VkYtaf
@@ -329,35 +329,35 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
-- [`LOGGING_BEST_PRACTICES.md`](./logging_best_practices.md)
-- [`LOGIN_PAGE_STATUS.md`](./login_page_status.md)
-- [`LOGIN_PAGE_TRANSLATION_FIX.md`](./login_page_translation_fix.md)
+- [`logging-best-practices-2.md`](./logging-best-practices-2.md)
+- [`LOGIN_PAGE_STATUS.md`](./login-page-status-3.md)
+- [`login-page-translation-fix-2.md`](./login-page-translation-fix-2.md)
 =======
 >>>>>>> .merge_file_X4e09n
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`LOGIN_TIMEOUT_ISSUE.md`](./login_timeout_issue.md)
-- [`MASTER_DOCUMENTATION_INDEX.md`](./master_documentation_index.md)
-- [`MASTER_IMPLEMENTATION_PLAN.md`](./master_implementation_plan.md)
-- [`MASTER_PLAN.md`](./master_plan.md)
-- [`MCP_SERVERS.md`](./mcp_servers.md)
-- [`metodi_duplicati_analisi.md`](./metodi_duplicati_analisi.md)
+- [`LOGIN_TIMEOUT_ISSUE.md`](./login-timeout-issue-3.md)
+- [`MASTER_DOCUMENTATION_INDEX.md`](./master-documentation-index-3.md)
+- [`MASTER_IMPLEMENTATION_PLAN.md`](./master-implementation-plan-3.md)
+- [`MASTER_PLAN.md`](./master-plan-3.md)
+- [`MCP_SERVERS.md`](./mcp-servers-3.md)
+- [`metodi-duplicati-analisi-2.md`](./metodi-duplicati-analisi-2.md)
 <<<<<<< .merge_file_VkYtaf
 <<<<<<< HEAD
-- [`metodi_duplicati_analisi.md`](./metodi_duplicati_analisi.md)
+- [`metodi-duplicati-analisi-2.md`](./metodi-duplicati-analisi-2.md)
 =======
 <<<<<<< HEAD
-- [`metodi_duplicati_analisi.md`](./metodi_duplicati_analisi.md)
+- [`metodi-duplicati-analisi-2.md`](./metodi-duplicati-analisi-2.md)
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
-- [`metodi_duplicati_analisi.md`](./metodi_duplicati_analisi.md)
+- [`metodi-duplicati-analisi-2.md`](./metodi-duplicati-analisi-2.md)
 >>>>>>> .merge_file_X4e09n
-- [`METODI_DUPLICATI_ANALISI_GLOBALE.md`](./metodi_duplicati_analisi_globale.md)
-- [`MIGRATION_PLAN.md`](./migration_plan.md)
-- [`MISSIONE_SUPER_MUCCA_COMPLETATA.md`](./missione_super_mucca_completata.md)
-- [`MODULE_DOCS_INDEX.md`](./module_docs_index.md)
+- [`METODI_DUPLICATI_ANALISI_GLOBALE.md`](./metodi-duplicati-analisi-globale-3.md)
+- [`migration-plan.md`](./migration-plan-3.md)
+- [`MISSIONE_SUPER_MUCCA_COMPLETATA.md`](./missione-super-mucca-completata-3.md)
+- [`MODULE_DOCS_INDEX.md`](./module-docs-index-3.md)
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -371,16 +371,16 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 >>>>>>> .merge_file_X4e09n
 - [`MODULE_STRUCTURE.md`](./module_structure.md)
-- [`MULTI_AGENT_COLLABORATION.md`](./multi_agent_collaboration.md)
-- [`MULTI_AGENT_COLLABORATION_GUIDE.md`](./multi_agent_collaboration_guide.md)
-- [`MULTI_AGENT_COORDINATION_RULES.md`](./multi_agent_coordination_rules.md)
-- [`NOTEBOOKLM_INSTALLATION_SUMMARY.md`](./notebooklm_installation_summary.md)
-- [`NOTEBOOKLM_INTEGRATION.md`](./notebooklm_integration.md)
-- [`OLLAMA_OPTIMIZATION_GUIDE.md`](./ollama_optimization_guide.md)
+- [`multi-agent-collaboration-2.md`](./multi-agent-collaboration-2.md)
+- [`multi-agent-collaboration-guide-2.md`](./multi-agent-collaboration-guide-2.md)
+- [`multi-agent-coordination-rules-2.md`](./multi-agent-coordination-rules-2.md)
+- [`NOTEBOOKLM_INSTALLATION_SUMMARY.md`](./notebooklm-installation-summary-3.md)
+- [`NOTEBOOKLM_INTEGRATION.md`](./notebooklm-integration-3.md)
+- [`ollama-optimization-guide-2.md`](./ollama-optimization-guide-2.md)
 - [`on-demand-pattern.md`](./on-demand-pattern.md)
-- [`OPENVIKING_BMAD_GSD_RALPH_COMPLETE.md`](./openviking_bmad_gsd_ralph_complete.md)
-- [`PAGINE_CREATE.md`](./pagine_create.md)
-- [`PATTERNS.md`](./patterns.md)
+- [`OPENVIKING_BMAD_GSD_RALPH_COMPLETE.md`](./openviking-bmad-gsd-ralph-complete-3.md)
+- [`PAGINE_CREATE.md`](./pagine-create-3.md)
+- [`patterns-2.md`](./patterns.md)
 <<<<<<< .merge_file_VkYtaf
 <<<<<<< HEAD
 =======
@@ -392,16 +392,16 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_X4e09n
 >>>>>>> laraxot/dev
 - [`MODULE_STRUCTURE.md`](./MODULE_STRUCTURE.md)
-- [`MULTI_AGENT_COLLABORATION.md`](./MULTI_AGENT_COLLABORATION.md)
-- [`MULTI_AGENT_COLLABORATION_GUIDE.md`](./MULTI_AGENT_COLLABORATION_GUIDE.md)
-- [`MULTI_AGENT_COORDINATION_RULES.md`](./MULTI_AGENT_COORDINATION_RULES.md)
-- [`NOTEBOOKLM_INSTALLATION_SUMMARY.md`](./notebooklm_installation_summary.md)
-- [`NOTEBOOKLM_INTEGRATION.md`](./notebooklm_integration.md)
-- [`OLLAMA_OPTIMIZATION_GUIDE.md`](./OLLAMA_OPTIMIZATION_GUIDE.md)
+- [`multi-agent-collaboration-2.md`](../../../multi-agent-collaboration-2.md)
+- [`multi-agent-collaboration-guide-2.md`](../../../multi-agent-collaboration-guide-2.md)
+- [`multi-agent-coordination-rules-2.md`](../../../multi-agent-coordination-rules-2.md)
+- [`NOTEBOOKLM_INSTALLATION_SUMMARY.md`](./notebooklm-installation-summary-3.md)
+- [`NOTEBOOKLM_INTEGRATION.md`](./notebooklm-integration-3.md)
+- [`ollama-optimization-guide-2.md`](../../../ollama-optimization-guide-2.md)
 - [`on-demand-pattern.md`](./on-demand-pattern.md)
-- [`OPENVIKING_BMAD_GSD_RALPH_COMPLETE.md`](./openviking_bmad_gsd_ralph_complete.md)
-- [`PAGINE_CREATE.md`](./pagine_create.md)
-- [`PATTERNS.md`](./PATTERNS.md)
+- [`OPENVIKING_BMAD_GSD_RALPH_COMPLETE.md`](./openviking-bmad-gsd-ralph-complete-3.md)
+- [`PAGINE_CREATE.md`](./pagine-create-3.md)
+- [`patterns-2.md`](./patterns-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_VkYtaf
@@ -414,8 +414,8 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_X4e09n
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`PERFECTION_ACHIEVED.md`](./perfection_achieved.md)
-- [`PERFECTION_PLAN.md`](./perfection_plan.md)
+- [`PERFECTION_ACHIEVED.md`](./perfection-achieved-3.md)
+- [`PERFECTION_PLAN.md`](./perfection-plan-3.md)
 - [`performance-optimization.md`](./performance-optimization.md)
 - [`PHASE-1-EXECUTION-DASHBOARD.md`](./phase-1-execution-dashboard.md)
 - [`PHASE-1-RESEARCH-COMPLETE.md`](./phase-1-research-complete.md)
@@ -427,8 +427,8 @@ Documentation for `notify` module categorized as **integrations**.
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_X4e09n
-- [`PHPSTAN_FIX_COORDINATION.md`](./PHPSTAN_FIX_COORDINATION.md)
-- [`PHPSTAN_L10.md`](../../../PHPSTAN_L10.md)
+- [`phpstan-fix-coordination.md`](phpstan-fix-coordination.md)
+- [`phpstan-l10-2.md`](../../../../../Lang/docs/wiki/integrations/phpstan-l10-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
@@ -437,24 +437,24 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`PHPSTAN_FIX_COORDINATION.md`](./phpstan_fix_coordination.md)
-- [`PHPSTAN_L10.md`](../../../phpstan_l10.md)
-- [`PRODUCT_LAUNCH_PLAN.md`](./product_launch_plan.md)
-- [`PRODUCT_STRATEGY.md`](./product_strategy.md)
+- [`phpstan-fix-coordination.md`](phpstan-fix-coordination.md)
+- [`phpstan-l10-2.md`](../../../phpstan-l10-3.md)
+- [`product-launch-plan-2.md`](./product_launch_plan.md)
+- [`product-strategy-2.md`](./product_strategy.md)
 - [`PROGETTO-COMPLETATO-100-PERCENTO.md`](./progetto-completato-100-percento.md)
 - [`PROJECT-STRUCTURE.md`](./project-structure.md)
 - [`PROJECT.md`](./project.md)
 <<<<<<< .merge_file_VkYtaf
 <<<<<<< HEAD
-- [`PHPSTAN_FIX_COORDINATION.md`](./PHPSTAN_FIX_COORDINATION.md)
-- [`PHPSTAN_L10.md`](../../../PHPSTAN_L10.md)
+- [`phpstan-fix-coordination.md`](phpstan-fix-coordination.md)
+- [`phpstan-l10-2.md`](../../../../../Lang/docs/wiki/integrations/phpstan-l10-2.md)
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_X4e09n
 =======
-- [`PHPSTAN_FIX_COORDINATION.md`](./PHPSTAN_FIX_COORDINATION.md)
-- [`PHPSTAN_L10.md`](../../../PHPSTAN_L10.md)
+- [`phpstan-fix-coordination.md`](phpstan-fix-coordination.md)
+- [`phpstan-l10-2.md`](../../../../../Lang/docs/wiki/integrations/phpstan-l10-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
@@ -473,28 +473,28 @@ Documentation for `notify` module categorized as **integrations**.
 - [`phpstan_fixes.md`](./phpstan_fixes.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
-- [`PHPSTAN_FIX_COORDINATION.md`](./phpstan_fix_coordination.md)
-- [`PHPSTAN_L10.md`](../../../phpstan_l10.md)
+- [`phpstan-fix-coordination.md`](phpstan-fix-coordination.md)
+- [`phpstan-l10-2.md`](../../../phpstan-l10-3.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_X4e09n
-- [`PHPSTAN_FIX_COORDINATION.md`](./PHPSTAN_FIX_COORDINATION.md)
-- [`PHPSTAN_L10.md`](../../../PHPSTAN_L10.md)
+- [`phpstan-fix-coordination.md`](phpstan-fix-coordination.md)
+- [`phpstan-l10-2.md`](../../../../../Lang/docs/wiki/integrations/phpstan-l10-2.md)
 =======
 <<<<<<< HEAD
-- [`PHPSTAN_FIX_COORDINATION.md`](./phpstan_fix_coordination.md)
-- [`PHPSTAN_L10.md`](../../../phpstan_l10.md)
+- [`phpstan-fix-coordination.md`](phpstan-fix-coordination.md)
+- [`phpstan-l10-2.md`](../../../phpstan-l10-3.md)
 =======
-- [`PHPSTAN_FIX_COORDINATION.md`](./PHPSTAN_FIX_COORDINATION.md)
-- [`PHPSTAN_L10.md`](../../../PHPSTAN_L10.md)
+- [`phpstan-fix-coordination.md`](phpstan-fix-coordination.md)
+- [`phpstan-l10-2.md`](../../../../../Lang/docs/wiki/integrations/phpstan-l10-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
 =======
-- [`PHPSTAN_FIX_COORDINATION.md`](./phpstan_fix_coordination.md)
-- [`PHPSTAN_L10.md`](../../../phpstan_l10.md)
+- [`phpstan-fix-coordination.md`](phpstan-fix-coordination.md)
+- [`phpstan-l10-2.md`](../../../phpstan-l10-3.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
@@ -504,15 +504,15 @@ Documentation for `notify` module categorized as **integrations**.
 - [`PROGETTO-COMPLETATO-100-PERCENTO.md`](./progetto-completato-100-percento.md)
 - [`project-structure.md`](./project-structure.md)
 - [`PROJECT.md`](./project.md)
-- [`PROJECT_COMPLETION_STATUS.md`](./project_completion_status.md)
-- [`PROJECT_OVERVIEW.md`](./project_overview.md)
-- [`PROJECT_STATUS.md`](./project_status.md)
-- [`qmd-setup.md`](./qmd-setup.md)
+- [`PROJECT_COMPLETION_STATUS.md`](./project-completion-status-3.md)
+- [`PROJECT_OVERVIEW.md`](./project-overview-3.md)
+- [`PROJECT_STATUS.md`](./project-status-3.md)
+- [`qmd-setup-3.md`](../../../../../Lang/docs/qmd-setup-3.md)
 - [`quick-start.md`](./quick-start.md)
-- [`QUICK_START.md`](./quick_start.md)
+- [`QUICK_START.md`](./quick-start-3.md)
 - [`qwen.md`](./qwen.md)
-- [`RALPH_LOOP_EXECUTION.md`](./ralph_loop_execution.md)
-- [`README-PHASE-1-EXECUTION.md`](./readme-phase-1-execution.md)
+- [`RALPH_LOOP_EXECUTION.md`](./ralph-loop-execution-3.md)
+- [`readme-phase-1-execution-2.md`](./readme-phase-1-execution.md)
 <<<<<<< .merge_file_VkYtaf
 <<<<<<< HEAD
 =======
@@ -521,10 +521,10 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 >>>>>>> .merge_file_X4e09n
 - [`quick-start.md`](./quick-start.md)
-- [`QUICK_START.md`](./quick_start.md)
+- [`QUICK_START.md`](./quick-start-3.md)
 - [`qwen.md`](./qwen.md)
-- [`RALPH_LOOP_EXECUTION.md`](./ralph_loop_execution.md)
-- [`README-PHASE-1-EXECUTION.md`](./readme-phase-1-execution.md)
+- [`RALPH_LOOP_EXECUTION.md`](./ralph-loop-execution-3.md)
+- [`readme-phase-1-execution-2.md`](./readme-phase-1-execution.md)
 <<<<<<< .merge_file_VkYtaf
 <<<<<<< HEAD
 =======
@@ -533,10 +533,10 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`README_ANALISI_DUPLICATI.md`](./readme_analisi_duplicati.md)
+- [`README_ANALISI_DUPLICATI.md`](./readme-analisi-duplicati-3.md)
 - [`redundancy_analysis.md`](./redundancy_analysis.md)
-- [`REFACTORING_BASEMODEL_ANALISI.md`](./refactoring_basemodel_analisi.md)
-- [`REFACTORING_COMPLETATO.md`](./refactoring_completato.md)
+- [`REFACTORING_BASEMODEL_ANALISI.md`](./refactoring-basemodel-analisi-3.md)
+- [`REFACTORING_COMPLETATO.md`](./refactoring-completato-3.md)
 - [`REPLIKATE-PHASE-1-COMPLETE.md`](./replikate-phase-1-complete.md)
 - [`SESSION-007-SUMMARY.md`](./session-007-summary.md)
 <<<<<<< HEAD
@@ -551,22 +551,22 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`SESSIONE_100_PERCENT.md`](./sessione_100_percent.md)
-- [`SESSIONE_ANALISI_HOMEPAGE.md`](./sessione_analisi_homepage.md)
-- [`SESSIONE_COMPLETA.md`](./sessione_completa.md)
-- [`SESSIONE_FIX_COMPLETATA.md`](./sessione_fix_completata.md)
+- [`SESSIONE_100_PERCENT.md`](./sessione-100-percent-3.md)
+- [`SESSIONE_ANALISI_HOMEPAGE.md`](./sessione-analisi-homepage-3.md)
+- [`SESSIONE_COMPLETA.md`](./sessione-completa-3.md)
+- [`sessione-fix-completata-2.md`](./sessione-fix-completata-2.md)
 - [`sprint_planning.md`](./sprint_planning.md)
-- [`START-HERE-REPLIKATE-PHASE2.md`](./start-here-replikate-phase2.md)
-- [`SUPERMEMORY_QUICKSTART.md`](./supermemory_quickstart.md)
-- [`SUPER_MUCCA_COMPLETION.md`](./super_mucca_completion.md)
-- [`SUPER_MUCCA_DOCS_ANALYSIS.md`](./super_mucca_docs_analysis.md)
-- [`SUPER_MUCCA_FINAL_SUMMARY.md`](./super_mucca_final_summary.md)
-- [`SUPER_MUCCA_LOGIN_COMPLETED.md`](./super_mucca_login_completed.md)
-- [`sync_remote_repo_test_plan.md`](./sync_remote_repo_test_plan.md)
-- [`SYNC_TEST_RESULTS.md`](./sync_test_results.md)
-- [`TAILWIND_APPLY_BOOTSTRAP_ITALIA.md`](./tailwind_apply_bootstrap_italia.md)
-- [`TAILWIND_CONVERSION_COMPLETE.md`](./tailwind_conversion_complete.md)
-- [`TAILWIND_CSS_MIGRATION_COMPLETE.md`](./tailwind_css_migration_complete.md)
+- [`start-here-replikate-phase2-2.md`](./start-here-replikate-phase2.md)
+- [`supermemory-quickstart-3.md`](./supermemory-quickstart-4.md)
+- [`super-mucca-completion-2.md`](./super-mucca-completion-2.md)
+- [`SUPER_MUCCA_DOCS_ANALYSIS.md`](./super-mucca-docs-analysis-3.md)
+- [`SUPER_MUCCA_FINAL_SUMMARY.md`](./super-mucca-final-summary-3.md)
+- [`super-mucca-login-completed-2.md`](./super-mucca-login-completed-2.md)
+- [`sync-remote-repo-test-plan-3.md`](./sync-remote-repo-test-plan-3.md)
+- [`sync-test-results-2.md`](./sync-test-results-2.md)
+- [`tailwind-apply-bootstrap-italia-2.md`](./tailwind-apply-bootstrap-italia-2.md)
+- [`TAILWIND_CONVERSION_COMPLETE.md`](./tailwind-conversion-complete-3.md)
+- [`tailwind-css-migration-complete-2.md`](./tailwind-css-migration-complete-2.md)
 <<<<<<< .merge_file_VkYtaf
 <<<<<<< HEAD
 =======
@@ -579,23 +579,23 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 - [`REPLIKATE-PHASE-1-COMPLETE.md`](./replikate-phase-1-complete.md)
 - [`SESSION-007-SUMMARY.md`](./session-007-summary.md)
-- [`SESSIONE_100_PERCENT.md`](./sessione_100_percent.md)
-- [`SESSIONE_ANALISI_HOMEPAGE.md`](./sessione_analisi_homepage.md)
-- [`SESSIONE_COMPLETA.md`](./sessione_completa.md)
-- [`SESSIONE_FIX_COMPLETATA.md`](./SESSIONE_FIX_COMPLETATA.md)
+- [`SESSIONE_100_PERCENT.md`](./sessione-100-percent-3.md)
+- [`SESSIONE_ANALISI_HOMEPAGE.md`](./sessione-analisi-homepage-3.md)
+- [`SESSIONE_COMPLETA.md`](./sessione-completa-3.md)
+- [`sessione-fix-completata-2.md`](../../../sessione-fix-completata-2.md)
 - [`sprint_planning.md`](./sprint_planning.md)
-- [`START-HERE-REPLIKATE-PHASE2.md`](./start-here-replikate-phase2.md)
-- [`START-HERE-REPLIKATE-PHASE2.md`](./start-here-replikate-phase2.md)
-- [`SUPERMEMORY_QUICKSTART.md`](./supermemory_quickstart.md)
-- [`SUPER_MUCCA_COMPLETION.md`](./SUPER_MUCCA_COMPLETION.md)
-- [`SUPER_MUCCA_DOCS_ANALYSIS.md`](./super_mucca_docs_analysis.md)
-- [`SUPER_MUCCA_FINAL_SUMMARY.md`](./super_mucca_final_summary.md)
-- [`SUPER_MUCCA_LOGIN_COMPLETED.md`](./SUPER_MUCCA_LOGIN_COMPLETED.md)
-- [`sync_remote_repo_test_plan.md`](./sync_remote_repo_test_plan.md)
-- [`SYNC_TEST_RESULTS.md`](./SYNC_TEST_RESULTS.md)
-- [`TAILWIND_APPLY_BOOTSTRAP_ITALIA.md`](./TAILWIND_APPLY_BOOTSTRAP_ITALIA.md)
-- [`TAILWIND_CONVERSION_COMPLETE.md`](./tailwind_conversion_complete.md)
-- [`TAILWIND_CSS_MIGRATION_COMPLETE.md`](./TAILWIND_CSS_MIGRATION_COMPLETE.md)
+- [`start-here-replikate-phase2-2.md`](./start-here-replikate-phase2.md)
+- [`start-here-replikate-phase2-2.md`](./start-here-replikate-phase2.md)
+- [`supermemory-quickstart-3.md`](./supermemory-quickstart-4.md)
+- [`super-mucca-completion-2.md`](../../../super-mucca-completion-2.md)
+- [`SUPER_MUCCA_DOCS_ANALYSIS.md`](./super-mucca-docs-analysis-3.md)
+- [`SUPER_MUCCA_FINAL_SUMMARY.md`](./super-mucca-final-summary-3.md)
+- [`super-mucca-login-completed-2.md`](../../../super-mucca-login-completed-2.md)
+- [`sync-remote-repo-test-plan-3.md`](./sync-remote-repo-test-plan-3.md)
+- [`sync-test-results-2.md`](../../../sync-test-results-2.md)
+- [`tailwind-apply-bootstrap-italia-2.md`](../../../tailwind-apply-bootstrap-italia-2.md)
+- [`TAILWIND_CONVERSION_COMPLETE.md`](./tailwind-conversion-complete-3.md)
+- [`tailwind-css-migration-complete-2.md`](../../../tailwind-css-migration-complete-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_VkYtaf
@@ -609,9 +609,9 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [`testing.md`](./testing.md)
-- [`THEMES_DOCUMENTATION_INDEX.md`](./themes_documentation_index.md)
-- [`THEME_ARCHITECTURE.md`](./theme_architecture.md)
-- [`THEME_SYSTEM_DYNAMIC.md`](./theme_system_dynamic.md)
+- [`THEMES_DOCUMENTATION_INDEX.md`](./themes-documentation-index-3.md)
+- [`THEME_ARCHITECTURE.md`](./theme-architecture-3.md)
+- [`THEME_SYSTEM_DYNAMIC.md`](./theme-system-dynamic-3.md)
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -625,12 +625,12 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 >>>>>>> .merge_file_X4e09n
 - [`TOKEN-OPTIMIZATION-STRATEGY.md`](./token-optimization-strategy.md)
-- [`UI_UX_PRO_MAX_SKILLS_INTEGRATION.md`](./ui_ux_pro_max_skills_integration.md)
+- [`UI_UX_PRO_MAX_SKILLS_INTEGRATION.md`](./ui-ux-pro-max-skills-integration-3.md)
 - [`user_research.md`](./user_research.md)
-- [`VERIFICA_HOMEPAGE.md`](./verifica_homepage.md)
+- [`VERIFICA_HOMEPAGE.md`](./verifica-homepage-3.md)
 - [`XotBasePivot-Executive-Summary.md`](./xotbasepivot-executive-summary.md)
-- [`ZEN_OF_APP.md`](./zen_of_app.md)
-- [`ZEN_OF_DOCUMENTATION.md`](./zen_of_documentation.md)
+- [`zen-of-app-2.md`](./zen-of-app-2.md)
+- [`ZEN_OF_DOCUMENTATION.md`](./zen-of-documentation-3.md)
 - [`ZEN_OF_<nome progetto>.md`](./zen_of_<nome progetto>.md)
 <<<<<<< .merge_file_VkYtaf
 <<<<<<< HEAD
@@ -643,12 +643,12 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_X4e09n
 >>>>>>> laraxot/dev
 - [`TOKEN-OPTIMIZATION-STRATEGY.md`](./TOKEN-OPTIMIZATION-STRATEGY.md)
-- [`UI_UX_PRO_MAX_SKILLS_INTEGRATION.md`](./ui_ux_pro_max_skills_integration.md)
+- [`UI_UX_PRO_MAX_SKILLS_INTEGRATION.md`](./ui-ux-pro-max-skills-integration-3.md)
 - [`user_research.md`](./user_research.md)
-- [`VERIFICA_HOMEPAGE.md`](./verifica_homepage.md)
+- [`VERIFICA_HOMEPAGE.md`](./verifica-homepage-3.md)
 - [`XotBasePivot-Executive-Summary.md`](./XotBasePivot-Executive-Summary.md)
-- [`ZEN_OF_APP.md`](./ZEN_OF_APP.md)
-- [`ZEN_OF_DOCUMENTATION.md`](./zen_of_documentation.md)
+- [`zen-of-app-2.md`](../../../zen-of-app-2.md)
+- [`ZEN_OF_DOCUMENTATION.md`](./zen-of-documentation-3.md)
 - [`ZEN_OF_<nome progetto>.md`](./ZEN_OF_<nome progetto>.md)
 <<<<<<< HEAD
 =======
@@ -673,9 +673,9 @@ Documentation for `notify` module categorized as **integrations**.
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 - [`acronym-naming-conventions.md`](./acronym-naming-conventions.md)
-- [`acronym_naming_conventions.md`](./acronym_naming_conventions.md)
+- [`acronym-naming-conventions-2.md`](../../../acronym-naming-conventions-2.md)
 - [`action-plan-immediate.md`](./action-plan-immediate.md)
-- [`action_plan_immediate.md`](./action_plan_immediate.md)
+- [`action-plan-immediate-2.md`](./action-plan-immediate-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_VkYtaf
@@ -692,9 +692,9 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
 =======
-- [`acronym_naming_conventions.md`](./acronym_naming_conventions.md)
+- [`acronym-naming-conventions-2.md`](../../../acronym-naming-conventions-2.md)
 - [`action-plan-immediate.md`](./action-plan-immediate.md)
-- [`action_plan_immediate.md`](./action_plan_immediate.md)
+- [`action-plan-immediate-2.md`](./action-plan-immediate-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
@@ -706,7 +706,7 @@ Documentation for `notify` module categorized as **integrations**.
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
 - [`agent-edit-discipline.md`](./agent-edit-discipline.md)
-- [`AGENTS.md`](./agents.md)
+- [`agents-2.md`](./agents.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -715,7 +715,7 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 <<<<<<< HEAD
 - [`agent-edit-discipline.md`](./agent-edit-discipline.md)
-- [`AGENTS.md`](./agents.md)
+- [`agents-2.md`](./agents.md)
 =======
 >>>>>>> laraxot/dev
 - [`actions-calling-actions.md`](../../../actions-calling-actions.md)
@@ -724,17 +724,17 @@ Documentation for `notify` module categorized as **integrations**.
 - [`agent-confidence-protocol.md`](../../../agent-confidence-protocol.md)
 <<<<<<< HEAD
 - [`agent-edit-discipline.md`](./agent-edit-discipline.md)
-- [`AGENTS.md`](./AGENTS.md)
+- [`agents-2.md`](./agents-2.md)
 =======
 >>>>>>> .merge_file_junMiY
 - [`agent-edit-discipline.md`](./agent-edit-discipline.md)
-- [`AGENTS.md`](./AGENTS.md)
+- [`agents-2.md`](./agents-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
 =======
 - [`agent-edit-discipline.md`](./agent-edit-discipline.md)
-- [`AGENTS.md`](./agents.md)
+- [`agents-2.md`](./agents.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
@@ -754,14 +754,14 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 >>>>>>> .merge_file_X4e09n
 <<<<<<< .merge_file_EZjoNq
-- [`analisi-completa-.md`](./analisi-completa-.md)
+- [`analisi-completa-2.md`](./analisi-completa-2.md)
 =======
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`analisi-completa-.md`](../../../analisi-completa-.md)
+- [`analisi-completa-2.md`](../../../analisi-completa-2.md)
 - [`ai-methodologies.md`](../../../ai-methodologies.md)
 - [`ai-rules-critical.md`](./ai-rules-critical.md)
 - [`ai-skills-master-index.md`](./ai-skills-master-index.md)
@@ -769,67 +769,67 @@ Documentation for `notify` module categorized as **integrations**.
 <<<<<<< HEAD
 - [`analisi-completa-1.md`](./analisi-completa-1.md)
 - [`analisi-completa-2.md`](./analisi-completa-2.md)
-- [`analisi-completa.md`](./analisi-completa.md)
+- [`analisi-completa-3.md`](../../../analisi-completa-3.md)
 =======
-- [`analisi-completa-.md`](../../../analisi-completa-.md)
+- [`analisi-completa-2.md`](../../../analisi-completa-2.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
 - [`analisi-completa-1.md`](./analisi-completa-1.md)
 - [`analisi-completa-2.md`](./analisi-completa-2.md)
-- [`analisi-completa.md`](./analisi-completa.md)
+- [`analisi-completa-3.md`](../../../analisi-completa-3.md)
 =======
 >>>>>>> .merge_file_junMiY
 - [`analisi-completa-1.md`](./analisi-completa-1.md)
 - [`analisi-completa-2.md`](./analisi-completa-2.md)
-- [`analisi-completa.md`](./analisi-completa.md)
+- [`analisi-completa-3.md`](../../../analisi-completa-3.md)
 <<<<<<< .merge_file_EZjoNq
 >>>>>>> laraxot/dev
 =======
 - [`analisi-completa-1.md`](./analisi-completa-1.md)
 - [`analisi-completa-2.md`](./analisi-completa-2.md)
-- [`analisi-completa.md`](./analisi-completa.md)
+- [`analisi-completa-3.md`](../../../analisi-completa-3.md)
 =======
 >>>>>>> .merge_file_junMiY
 - [`analisi-completa-1.md`](./analisi-completa-1.md)
 - [`analisi-completa-2.md`](./analisi-completa-2.md)
-- [`analisi-completa.md`](./analisi-completa.md)
+- [`analisi-completa-3.md`](../../../analisi-completa-3.md)
 <<<<<<< .merge_file_EZjoNq
 >>>>>>> .merge_file_X4e09n
 - [`analisi-dettagliata-1-1.md`](./analisi-dettagliata-1-1.md)
-- [`analisi-dettagliata-1.md`](./analisi-dettagliata-1.md)
+- [`analisi-dettagliata-1-2.md`](../../../analisi-dettagliata-1-2.md)
 - [`analisi-dettagliata-2-1.md`](./analisi-dettagliata-2-1.md)
-- [`analisi-dettagliata-2.md`](./analisi-dettagliata-2.md)
+- [`analisi-dettagliata-2-2.md`](../../../analisi-dettagliata-2-2.md)
 - [`analisi-dettagliata-3-1.md`](./analisi-dettagliata-3-1.md)
-- [`analisi-dettagliata-3.md`](./analisi-dettagliata-3.md)
+- [`analisi-dettagliata-3-2.md`](../../../analisi-dettagliata-3-2.md)
 - [`analisi-dettagliata-4-1.md`](./analisi-dettagliata-4-1.md)
 - [`analisi-dettagliata-4-2.md`](./analisi-dettagliata-4-2.md)
-- [`analisi-dettagliata-4.md`](./analisi-dettagliata-4.md)
+- [`analisi-dettagliata-4-2.md`](../../../analisi-dettagliata-4-2.md)
 - [`analisi-dettagliata-5-1.md`](./analisi-dettagliata-5-1.md)
-- [`analisi-dettagliata-5.md`](./analisi-dettagliata-5.md)
+- [`analisi-dettagliata-5-2.md`](../../../analisi-dettagliata-5-2.md)
 - [`analisi-dettagliata-6-1.md`](./analisi-dettagliata-6-1.md)
-- [`analisi-dettagliata-6.md`](./analisi-dettagliata-6.md)
+- [`analisi-dettagliata-6-2.md`](../../../analisi-dettagliata-6-2.md)
 - [`analisi-dettagliata-7-1.md`](./analisi-dettagliata-7-1.md)
-- [`analisi-dettagliata-7.md`](./analisi-dettagliata-7.md)
+- [`analisi-dettagliata-7-2.md`](../../../analisi-dettagliata-7-2.md)
 - [`analisi-dettagliata-8-1.md`](./analisi-dettagliata-8-1.md)
-- [`analisi-dettagliata-8.md`](./analisi-dettagliata-8.md)
+- [`analisi-dettagliata-8-2.md`](../../../analisi-dettagliata-8-2.md)
 - [`analisi-dettagliata-9.md`](./analisi-dettagliata-9.md)
 <<<<<<< .merge_file_VkYtaf
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
-- [`analisi-completa.md`](./analisi-completa.md)
+- [`analisi-completa-3.md`](../../../analisi-completa-3.md)
 =======
-- [`analisi-completa-.md`](../../../analisi-completa-.md)
+- [`analisi-completa-2.md`](../../../analisi-completa-2.md)
 - [`analisi-completa-1.md`](./analisi-completa-1.md)
 - [`analisi-completa-2.md`](./analisi-completa-2.md)
-- [`analisi-completa.md`](./analisi-completa.md)
+- [`analisi-completa-3.md`](../../../analisi-completa-3.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 =======
 >>>>>>> laraxot/dev
-- [`analisi-completa.md`](./analisi-completa.md)
+- [`analisi-completa-3.md`](../../../analisi-completa-3.md)
 >>>>>>> .merge_file_X4e09n
 - [`analisi-dettagliata-modulo-notify-parte-architettura.md`](../../../bmad/architecture/analisi-dettagliata-modulo-notify-parte-architettura.md)
 - [`analisi-dettagliata-architettura-struttura.md`](../../../analisi-dettagliata-architettura-struttura.md)
@@ -842,10 +842,10 @@ Documentation for `notify` module categorized as **integrations**.
 <<<<<<< .merge_file_VkYtaf
 <<<<<<< HEAD
 =======
-- [`analisi-dettagliata-4.md`](./analisi-dettagliata-4.md)
+- [`analisi-dettagliata-4-2.md`](../../../analisi-dettagliata-4-2.md)
 >>>>>>> laraxot/dev
 =======
-- [`analisi-dettagliata-4.md`](./analisi-dettagliata-4.md)
+- [`analisi-dettagliata-4-2.md`](../../../analisi-dettagliata-4-2.md)
 >>>>>>> .merge_file_X4e09n
 - [`analisi-dettagliata-modulo-notify-parte-testing.md`](../../../bmad/architecture/analisi-dettagliata-modulo-notify-parte-testing.md)
 - [`analisi-dettagliata-testing-parte.md`](../../../analisi-dettagliata-testing-parte.md)
@@ -858,7 +858,7 @@ Documentation for `notify` module categorized as **integrations**.
 - [`analisi-dettagliata-modulo-notify.md`](../../../bmad/architecture/analisi-dettagliata-modulo-notify.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
-- [`analisi-dettagliata.md`](./analisi-dettagliata.md)
+- [`analisi-dettagliata-9.md`](../../../analisi-dettagliata-9.md)
 - [`analisi-metodi-duplicati-index.md`](./analisi-metodi-duplicati-index.md)
 - [`analisi-metodi-duplicati-master.md`](./analisi-metodi-duplicati-master.md)
 - [`analisi-metodi-duplicati.md`](../../../analisi-metodi-duplicati.md)
@@ -873,7 +873,7 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 <<<<<<< HEAD
 >>>>>>> .merge_file_X4e09n
-- [`analisi-dettagliata.md`](./analisi-dettagliata.md)
+- [`analisi-dettagliata-9.md`](../../../analisi-dettagliata-9.md)
 - [`analisi-metodi-duplicati-INDEX.md`](./analisi-metodi-duplicati-index.md)
 - [`analisi-metodi-duplicati-MASTER.md`](./analisi-metodi-duplicati-master.md)
 - [`analisi-metodi-duplicati-index.md`](./analisi-metodi-duplicati-index.md)
@@ -885,7 +885,7 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 >>>>>>> .merge_file_junMiY
 >>>>>>> laraxot/dev
-- [`analisi-dettagliata.md`](./analisi-dettagliata.md)
+- [`analisi-dettagliata-9.md`](../../../analisi-dettagliata-9.md)
 - [`analisi-metodi-duplicati-INDEX.md`](./analisi-metodi-duplicati-INDEX.md)
 - [`analisi-metodi-duplicati-MASTER.md`](./analisi-metodi-duplicati-master.md)
 - [`analisi-metodi-duplicati-index.md`](./analisi-metodi-duplicati-index.md)
@@ -901,16 +901,16 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_X4e09n
 - [`analisi-miglioramenti-1.md`](./analisi-miglioramenti-1.md)
 - [`analisi-miglioramenti.md`](./analisi-miglioramenti.md)
-- [`analisi_completa.md`](./analisi-completa.md)
-- [`analisi_dettagliata.md`](./analisi-dettagliata.md)
-- [`analisi_dettagliata_1.md`](./analisi-dettagliata-1.md)
-- [`analisi_dettagliata_2.md`](./analisi-dettagliata-2.md)
-- [`analisi_dettagliata_3.md`](./analisi-dettagliata-3.md)
-- [`analisi_dettagliata_4.md`](./analisi-dettagliata-4.md)
-- [`analisi_dettagliata_5.md`](./analisi-dettagliata-5.md)
-- [`analisi_dettagliata_6.md`](./analisi-dettagliata-6.md)
-- [`analisi_dettagliata_7.md`](./analisi-dettagliata-7.md)
-- [`analisi_dettagliata_8.md`](./analisi-dettagliata-8.md)
+- [`analisi-completa-3.md`](../../../analisi-completa-3.md)
+- [`analisi-dettagliata-9.md`](../../../analisi-dettagliata-9.md)
+- [`analisi-dettagliata-1-2.md`](../../../analisi-dettagliata-1-2.md)
+- [`analisi-dettagliata-2-2.md`](../../../analisi-dettagliata-2-2.md)
+- [`analisi-dettagliata-3-2.md`](../../../analisi-dettagliata-3-2.md)
+- [`analisi-dettagliata-4-2.md`](../../../analisi-dettagliata-4-2.md)
+- [`analisi-dettagliata-5-2.md`](../../../analisi-dettagliata-5-2.md)
+- [`analisi-dettagliata-6-2.md`](../../../analisi-dettagliata-6-2.md)
+- [`analisi-dettagliata-7-2.md`](../../../analisi-dettagliata-7-2.md)
+- [`analisi-dettagliata-8-2.md`](../../../analisi-dettagliata-8-2.md)
 - [`analisiettagliata-2.md`](./analisiettagliata-2.md)
 - [`analisiettagliata-3.md`](./analisiettagliata-3.md)
 - [`analisiettagliata-4.md`](./analisiettagliata-4.md)
@@ -987,8 +987,8 @@ Documentation for `notify` module categorized as **integrations**.
 - [`analisi-metodi-duplicati.md`](../../../analisi-metodi-duplicati.md)
 - [`analisi-miglioramenti-modulo-notify.md`](../../../analisi-miglioramenti-modulo-notify.md)
 - [`analisi-miglioramenti.md`](./analisi-miglioramenti.md)
-- [`analisi_completa.md`](./analisi-completa.md)
-- [`analisi_dettagliata.md`](./analisi-dettagliata.md)
+- [`analisi-completa-3.md`](../../../analisi-completa-3.md)
+- [`analisi-dettagliata-9.md`](../../../analisi-dettagliata-9.md)
 <<<<<<< .merge_file_VkYtaf
 >>>>>>> laraxot/dev
 =======
@@ -996,7 +996,7 @@ Documentation for `notify` module categorized as **integrations**.
 - [`analisi_dettagliata-architettura-struttura.md`](../../../analisi-dettagliata-architettura-struttura.md)
 - [`analisi_dettagliata-modelli-relazioni.md`](../../../analisi-dettagliata-modelli-relazioni.md)
 - [`analisi_dettagliata-servizi-core.md`](../../../analisi-dettagliata-servizi-core.md)
-- [`analisi_dettagliata-integrazione-filament.md`](./analisi-dettagliata-4.md)
+- [`analisi_dettagliata-integrazione-filament.md`](../../../analisi-dettagliata-4-2.md)
 - [`analisi_dettagliata-testing-parte.md`](../../../analisi-dettagliata-testing-parte.md)
 - [`analisi_dettagliata-monitoraggio-analytics.md`](../../../analisi-dettagliata-monitoraggio-analytics.md)
 - [`analisi_dettagliata-manutenzione-backup.md`](../../../analisi-dettagliata-manutenzione-backup.md)
@@ -1079,17 +1079,17 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_X4e09n
 - [`appointment-field-namings.md`](./appointment-field-namings.md)
-- [`appointment-notifications.md`](./appointment-notifications.md)
-- [`appointment-notifications.md`](./appointment-notifications.md)
-- [`appointment-notifications.md`](./appointment-notifications.md)
+- [`appointment-notifications-2.md`](../../../appointment-notifications-2.md)
+- [`appointment-notifications-2.md`](../../../appointment-notifications-2.md)
+- [`appointment-notifications-2.md`](../../../appointment-notifications-2.md)
 <<<<<<< HEAD
 =======
 =======
 - [`appointment-field-namings.md`](./appointment-field-namings.md)
-- [`appointment-notifications.md`](./appointment-notifications.md)
+- [`appointment-notifications-2.md`](../../../appointment-notifications-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`appointment_notifications.md`](./appointment_notifications.md)
+- [`appointment-notifications-2.md`](../../../appointment-notifications-2.md)
 - [`approfondimento-completo-tailwind.md`](../../../approfondimento-completo-tailwind.md)
 - [`approfondimento-completo.md`](./approfondimento-completo.md)
 - [`approfondimento-tailwind.md`](./approfondimento-tailwind.md)
@@ -1109,32 +1109,32 @@ Documentation for `notify` module categorized as **integrations**.
 - [`architecturals.md`](./architecturals.md)
 >>>>>>> .merge_file_X4e09n
 - [`base-model-1.md`](./base-model-1.md)
-- [`base-model.md`](./base-model.md)
-- [`base_model.md`](./base_model.md)
+- [`base-model-2.md`](../../../base-model-2.md)
+- [`base-model-2.md`](../../../base-model-2.md)
 - [`basemodel.md`](./basemodel.md)
 <<<<<<< HEAD
-- [`baseuser-dry-violation-.md`](../../../baseuser-dry-violation-.md)
+- [`baseuser-dry-violation-2.md`](../../../baseuser-dry-violation-2.md)
 - [`baseuser-dry-violation-1.md`](./baseuser-dry-violation-1.md)
 - [`baseuser-dry-violation.md`](./baseuser-dry-violation.md)
 - [`baseuser-dry-violation.md`](./baseuser-dry-violation.md)
 =======
-- [`baseuser-dry-violation-.md`](./baseuser-dry-violation-.md)
+- [`baseuser-dry-violation-2.md`](./baseuser-dry-violation-2.md)
 - [`baseuser-dry-violation-1.md`](./baseuser-dry-violation-1.md)
 =======
 >>>>>>> laraxot/dev
 - [`architecturals.md`](../../../architecturals.md)
-- [`base-model.md`](./base-model.md)
-- [`base-model.md`](./base-model.md)
+- [`base-model-2.md`](../../../base-model-2.md)
+- [`base-model-2.md`](../../../base-model-2.md)
 <<<<<<< .merge_file_VkYtaf
 =======
 - [`architecturals.md`](../../../architecturals.md)
-- [`base-model.md`](./base-model.md)
+- [`base-model-2.md`](../../../base-model-2.md)
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`base_model.md`](./base_model.md)
+- [`base-model-2.md`](../../../base-model-2.md)
 - [`basemodel.md`](./basemodel.md)
-- [`baseuser-dry-violation-.md`](../../../baseuser-dry-violation-.md)
+- [`baseuser-dry-violation-2.md`](../../../baseuser-dry-violation-2.md)
 - [`baseuser-dry-violation.md`](./baseuser-dry-violation.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
@@ -1151,13 +1151,13 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`baseuser-refactoring-completed-.md`](../../../baseuser-refactoring-completed-.md)
+- [`baseuser-refactoring-completed-.md`](../../../baseuser-refactoring-completed-2.md)
 - [`baseuser-refactoring-completed-1.md`](./baseuser-refactoring-completed-1.md)
 - [`baseuser-refactoring-completed.md`](./baseuser-refactoring-completed.md)
 - [`bashscripts-gitignore-workaround.md`](./bashscripts-gitignore-workaround.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
-- [`best-practices-1.md`](./best-practices-1.md)
+- [`best-practices-1-2.md`](../../../../../UI/docs/best-practices-1-2.md)
 - [`best-practices-implementazione.md`](../../../best-practices-implementazione.md)
 =======
 <<<<<<< HEAD
@@ -1167,7 +1167,7 @@ Documentation for `notify` module categorized as **integrations**.
 - [`best-practices-implementazione.md`](../../../best-practices-implementazione.md)
 =======
 <<<<<<< .merge_file_EZjoNq
-- [`best-practices-1.md`](./best-practices-1.md)
+- [`best-practices-1-2.md`](../../../../../UI/docs/best-practices-1-2.md)
 =======
 - [`best-practices-implementazione.md`](../../../best-practices-implementazione.md)
 >>>>>>> .merge_file_junMiY
@@ -1179,10 +1179,10 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`best-practices.md`](./best-practices.md)
+- [`best-practices-3.md`](../../../../../Activity/docs/best-practices-3.md)
 - [`binary-assets.md`](../../../binary-assets.md)
 - [`bmad-gsd-ralph-integration.md`](./bmad-gsd-ralph-integration.md)
-- [`boost-skill-fix-summary.md`](../../../boost-skill-fix-summary.md)
+- [`boost-skill-fix-summary-3.md`](../../../boost-skill-fix-summary.md)
 - [`boost-skill-installation-error.md`](./boost-skill-installation-error.md)
 - [`boost-skill-installation-success.md`](./boost-skill-installation-success.md)
 - [`boost-skill-solution-plan.md`](./boost-skill-solution-plan.md)
@@ -1204,19 +1204,19 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_X4e09n
 - [`case-sensitivity.md`](../../../case-sensitivity.md)
 - [`cases.md`](../../../cases.md)
-- [`channel-vs-dto-provider-selection.md`](./channel-vs-dto-provider-selection.md)
+- [`channel-vs-dto-provider-selection-2.md`](../../../channel-vs-dto-provider-selection-2.md)
 - [`channel-vsto-provider-selection.md`](../../../channel-vsto-provider-selection.md)
-- [`channel_vs_dto_provider_selection.md`](./channel-vs-dto-provider-selection.md)
+- [`channel-vs-dto-provider-selection-2.md`](../../../channel-vs-dto-provider-selection-2.md)
 - [`chaos-readiness.md`](../../../chaos-readiness.md)
-- [`class-inheritance-best-practices.md`](./class-inheritance-best-practices.md)
-- [`class-inheritance-principles.md`](./class-inheritance-principles.md)
-- [`class_inheritance_best_practices.md`](./class_inheritance_best_practices.md)
-- [`class_inheritance_principles.md`](./class_inheritance_principles.md)
-- [`claude.md`](./claude.md)
-- [`code-fixes-.md`](../../../code-fixes-.md)
+- [`class-inheritance-best-practices-2.md`](../../../class-inheritance-best-practices-2.md)
+- [`class-inheritance-principles-2.md`](../../../class-inheritance-principles-2.md)
+- [`class-inheritance-best-practices-2.md`](../../../class-inheritance-best-practices-2.md)
+- [`class-inheritance-principles-2.md`](../../../class-inheritance-principles-2.md)
+- [`claude.md`](../../../../../Geo/docs/root-md-files/claude.md)
+- [`code-fixes-2.md`](../../../code-fixes-2.md)
 - [`code-fixes.md`](./code-fixes.md)
 - [`codebase-overview.md`](../../../codebase-overview.md)
-- [`codebrisk-tools-analysis.md`](./codebrisk-tools-analysis.md)
+- [`codebrisk-tools-analysis-2.md`](../../../codebrisk-tools-analysis-2.md)
 <<<<<<< .merge_file_VkYtaf
 <<<<<<< HEAD
 =======
@@ -1231,9 +1231,9 @@ Documentation for `notify` module categorized as **integrations**.
 - [`case-sensitivity.md`](./case-sensitivity.md)
 - [`cases.md`](./cases.md)
 - [`channel-vs-dto-provider-selection-1.md`](./channel-vs-dto-provider-selection-1.md)
-- [`channel-vs-dto-provider-selection.md`](./channel-vs-dto-provider-selection.md)
+- [`channel-vs-dto-provider-selection-2.md`](../../../channel-vs-dto-provider-selection-2.md)
 - [`channel-vsto-provider-selection.md`](../../../channel-vsto-provider-selection.md)
-- [`channel_vs_dto_provider_selection.md`](./channel-vs-dto-provider-selection.md)
+- [`channel-vs-dto-provider-selection-2.md`](../../../channel-vs-dto-provider-selection-2.md)
 - [`chaos-readiness.md`](./chaos-readiness.md)
 - [`class-inheritance-best-practices-1.md`](./class-inheritance-best-practices-1.md)
 - [`class-inheritance-best-practices-2.md`](./class-inheritance-best-practices-2.md)
@@ -1249,10 +1249,10 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_X4e09n
 - [`case-sensitivity.md`](../../../case-sensitivity.md)
 - [`cases.md`](../../../cases.md)
-- [`channel-vs-dto-provider-selection.md`](./channel-vs-dto-provider-selection.md)
-- [`channel-vs-dto-provider-selection.md`](./channel-vs-dto-provider-selection.md)
+- [`channel-vs-dto-provider-selection-2.md`](../../../channel-vs-dto-provider-selection-2.md)
+- [`channel-vs-dto-provider-selection-2.md`](../../../channel-vs-dto-provider-selection-2.md)
 - [`channel-vsto-provider-selection.md`](../../../channel-vsto-provider-selection.md)
-- [`channel_vs_dto_provider_selection.md`](./channel-vs-dto-provider-selection.md)
+- [`channel-vs-dto-provider-selection-2.md`](../../../channel-vs-dto-provider-selection-2.md)
 - [`chaos-readiness.md`](../../../chaos-readiness.md)
 <<<<<<< HEAD
 =======
@@ -1266,39 +1266,39 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_junMiY
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_X4e09n
-- [`class-inheritance-best-practices.md`](./class-inheritance-best-practices.md)
-- [`class-inheritance-best-practices.md`](./class-inheritance-best-practices.md)
-- [`class-inheritance-best-practices.md`](./class-inheritance-best-practices.md)
-- [`class-inheritance-principles.md`](./class-inheritance-principles.md)
-- [`class-inheritance-principles.md`](./class-inheritance-principles.md)
-- [`class-inheritance-principles.md`](./class-inheritance-principles.md)
-- [`class_inheritance_best_practices.md`](./class_inheritance_best_practices.md)
-- [`class_inheritance_principles.md`](./class_inheritance_principles.md)
+- [`class-inheritance-best-practices-2.md`](../../../class-inheritance-best-practices-2.md)
+- [`class-inheritance-best-practices-2.md`](../../../class-inheritance-best-practices-2.md)
+- [`class-inheritance-best-practices-2.md`](../../../class-inheritance-best-practices-2.md)
+- [`class-inheritance-principles-2.md`](../../../class-inheritance-principles-2.md)
+- [`class-inheritance-principles-2.md`](../../../class-inheritance-principles-2.md)
+- [`class-inheritance-principles-2.md`](../../../class-inheritance-principles-2.md)
+- [`class-inheritance-best-practices-2.md`](../../../class-inheritance-best-practices-2.md)
+- [`class-inheritance-principles-2.md`](../../../class-inheritance-principles-2.md)
 - [`CLAUDE.md`](./CLAUDE.md)
-- [`code-fixes-.md`](../../../code-fixes-.md)
+- [`code-fixes-2.md`](../../../code-fixes-2.md)
 - [`code-fixes.md`](./code-fixes.md)
 <<<<<<< HEAD
 - [`codebase-overview.md`](../../../codebase-overview.md)
 <<<<<<< .merge_file_VkYtaf
 - [`codebrisk-tools-analysis-1.md`](./codebrisk-tools-analysis-1.md)
-- [`codebrisk-tools-analysis.md`](./codebrisk-tools-analysis.md)
-- [`codebrisk-tools-analysis.md`](./codebrisk-tools-analysis.md)
+- [`codebrisk-tools-analysis-2.md`](../../../codebrisk-tools-analysis-2.md)
+- [`codebrisk-tools-analysis-2.md`](../../../codebrisk-tools-analysis-2.md)
 =======
 <<<<<<< HEAD
 - [`codebase-overview.md`](../../../codebase-overview.md)
 =======
 >>>>>>> .merge_file_X4e09n
-- [`codebrisk-tools-analysis.md`](./codebrisk-tools-analysis.md)
-- [`codebrisk-tools-analysis.md`](./codebrisk-tools-analysis.md)
+- [`codebrisk-tools-analysis-2.md`](../../../codebrisk-tools-analysis-2.md)
+- [`codebrisk-tools-analysis-2.md`](../../../codebrisk-tools-analysis-2.md)
 =======
 <<<<<<< .merge_file_EZjoNq
 - [`codebase-overview.md`](./codebase-overview.md)
 - [`codebrisk-tools-analysis-1.md`](./codebrisk-tools-analysis-1.md)
 =======
 - [`codebase-overview.md`](../../../codebase-overview.md)
-- [`codebrisk-tools-analysis.md`](./codebrisk-tools-analysis.md)
+- [`codebrisk-tools-analysis-2.md`](../../../codebrisk-tools-analysis-2.md)
 >>>>>>> .merge_file_junMiY
-- [`codebrisk-tools-analysis.md`](./codebrisk-tools-analysis.md)
+- [`codebrisk-tools-analysis-2.md`](../../../codebrisk-tools-analysis-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
@@ -1308,11 +1308,11 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 >>>>>>> .merge_file_X4e09n
 - [`codebrisk-tools.md`](../../../codebrisk-tools.md)
-- [`codebrisk_tools_analysis.md`](./codebrisk-tools-analysis.md)
+- [`codebrisk-tools-analysis-2.md`](../../../codebrisk-tools-analysis-2.md)
 - [`codees.md`](../../../codees.md)
 - [`collegamenti.md`](./collegamenti.md)
 <<<<<<< HEAD
-- [`completamento-progetto-.md`](../../../completamento-progetto-.md)
+- [`completamento-progetto-2.md`](../../../completamento-progetto-2.md)
 <<<<<<< .merge_file_VkYtaf
 - [`completamento-progetto-1.md`](./completamento-progetto-1.md)
 - [`completamento-progetto.md`](./completamento-progetto.md)
@@ -1320,23 +1320,23 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-- [`completamento-progetto-.md`](../../../completamento-progetto-.md)
+- [`completamento-progetto-2.md`](../../../completamento-progetto-2.md)
 =======
 >>>>>>> .merge_file_X4e09n
 - [`completamento-progetto.md`](./completamento-progetto.md)
 =======
 <<<<<<< .merge_file_EZjoNq
-- [`completamento-progetto-.md`](./completamento-progetto-.md)
+- [`completamento-progetto-2.md`](./completamento-progetto-2.md)
 - [`completamento-progetto-1.md`](./completamento-progetto-1.md)
 =======
-- [`completamento-progetto-.md`](../../../completamento-progetto-.md)
+- [`completamento-progetto-2.md`](../../../completamento-progetto-2.md)
 - [`completamento-progetto.md`](./completamento-progetto.md)
 >>>>>>> .merge_file_junMiY
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
 - [`completamento-progetto.md`](./completamento-progetto.md)
 =======
-- [`completamento-progetto-.md`](../../../completamento-progetto-.md)
+- [`completamento-progetto-2.md`](../../../completamento-progetto-2.md)
 =======
 >>>>>>> .merge_file_X4e09n
 - [`completamento-progetto.md`](./completamento-progetto.md)
@@ -1368,7 +1368,7 @@ Documentation for `notify` module categorized as **integrations**.
 - [`analisi-dettagliata-modulo-notify-parte-manutenzione.md`](../../../bmad/architecture/analisi-dettagliata-modulo-notify-parte-manutenzione.md)
 - [`analisi-dettagliata-modulo-notify-parte-note.md`](../../../bmad/architecture/analisi-dettagliata-modulo-notify-parte-note.md)
 - [`analisi-dettagliata-modulo-notify.md`](../../../bmad/architecture/analisi-dettagliata-modulo-notify.md)
-- [`analisi-dettagliata.md`](../../../analisi-dettagliata.md)
+- [`analisi-dettagliata-9.md`](../../../analisi-dettagliata.md)
 - [`analisi-metodi-duplicati-INDEX.md`](./analisi-metodi-duplicati-index.md)
 - [`analisi-metodi-duplicati-MASTER.md`](./analisi-metodi-duplicati-master.md)
 <<<<<<< HEAD
@@ -1404,7 +1404,7 @@ Documentation for `notify` module categorized as **integrations**.
 - [`analisi-dettagliata-modulo-notify-parte-manutenzione.md`](../../../bmad/architecture/analisi-dettagliata-modulo-notify-parte-manutenzione.md)
 - [`analisi-dettagliata-modulo-notify-parte-note.md`](../../../bmad/architecture/analisi-dettagliata-modulo-notify-parte-note.md)
 - [`analisi-dettagliata-modulo-notify.md`](../../../bmad/architecture/analisi-dettagliata-modulo-notify.md)
-- [`analisi-dettagliata.md`](../../../analisi-dettagliata.md)
+- [`analisi-dettagliata-9.md`](../../../analisi-dettagliata.md)
 - [`analisi-metodi-duplicati-INDEX.md`](./analisi-metodi-duplicati-index.md)
 - [`analisi-metodi-duplicati-MASTER.md`](./analisi-metodi-duplicati-master.md)
 - [`analisi-metodi-duplicati-index.md`](./analisi-metodi-duplicati-index.md)
@@ -1434,7 +1434,7 @@ Documentation for `notify` module categorized as **integrations**.
 - [`analisi-dettagliata-modulo-notify-parte-note.md`](../../../bmad/architecture/analisi-dettagliata-modulo-notify-parte-note.md)
 - [`analisi-dettagliata-modulo-notify-parte-note.md`](../../../bmad/architecture/analisi-dettagliata-modulo-notify-parte-note.md)
 - [`analisi-dettagliata-modulo-notify.md`](../../../bmad/architecture/analisi-dettagliata-modulo-notify.md)
-- [`analisi-dettagliata.md`](../../../analisi-dettagliata.md)
+- [`analisi-dettagliata-9.md`](../../../analisi-dettagliata.md)
 - [`analisi-metodi-duplicati-INDEX.md`](./analisi-metodi-duplicati-INDEX.md)
 - [`analisi-metodi-duplicati-MASTER.md`](./analisi-metodi-duplicati-master.md)
 - [`analisi-metodi-duplicati-index.md`](./analisi-metodi-duplicati-index.md)
@@ -1453,8 +1453,8 @@ Documentation for `notify` module categorized as **integrations**.
 - [`analisi-metodi-duplicati.md`](../../../analisi-metodi-duplicati.md)
 - [`analisi-miglioramenti-modulo-notify.md`](../../../analisi-miglioramenti-modulo-notify.md)
 - [`analisi-miglioramenti.md`](../../../analisi-miglioramenti.md)
-- [`analisi_completa.md`](./analisi-completa.md)
-- [`analisi_dettagliata.md`](../../../analisi-dettagliata.md)
+- [`analisi-completa-3.md`](../../../analisi-completa-3.md)
+- [`analisi-dettagliata-9.md`](../../../analisi-dettagliata.md)
 - [`analisi_dettagliata-architettura-struttura.md`](../../../analisi-dettagliata-architettura-struttura.md)
 - [`analisi_dettagliata-modelli-relazioni.md`](../../../bmad/architecture/analisi-dettagliata-modulo-notify-parte-modelli.md)
 - [`analisi_dettagliata-modulo-notify-parte-servizi.md`](../../../bmad/architecture/analisi-dettagliata-modulo-notify-parte-servizi.md)
@@ -1507,41 +1507,41 @@ Documentation for `notify` module categorized as **integrations**.
 - [`analysisettagliata-analisi-dettagliata-modulo-notify.md`](../../../analysisettagliata-analisi-dettagliata-modulo-notify.md)
 - [`analysisettagliata.md`](../../../analysisettagliata.md)
 - [`appointment-field-namings.md`](./appointment-field-namings.md)
-- [`appointment-notifications.md`](../../../appointment-notifications.md)
+- [`appointment-notifications-2.md`](../../../appointment-notifications.md)
 <<<<<<< HEAD
 =======
-- [`appointment-notifications.md`](./appointment-notifications.md)
-- [`appointment-notifications.md`](../../../appointment-notifications.md)
+- [`appointment-notifications-2.md`](../../../appointment-notifications-2.md)
+- [`appointment-notifications-2.md`](../../../appointment-notifications.md)
 >>>>>>> laraxot/dev
-- [`appointment_notifications.md`](../../../appointment_notifications.md)
+- [`appointment-notifications-2.md`](../../../appointment-notifications-2.md)
 - [`approfondimento-completo-tailwind.md`](../../../approfondimento-completo-tailwind.md)
 - [`approfondimento-completo.md`](../../../approfondimento-completo.md)
 - [`approfondimento-tailwind.md`](../../../approfondimento-tailwind.md)
 - [`architecturals.md`](../../../architecturals.md)
 <<<<<<< HEAD
 =======
-- [`base-model.md`](./base-model.md)
+- [`base-model-2.md`](../../../base-model-2.md)
 >>>>>>> laraxot/dev
-- [`base-model.md`](../../../base-model.md)
-- [`base_model.md`](../../../base_model.md)
+- [`base-model-2.md`](../../../base-model.md)
+- [`base-model-2.md`](../../../base-model-2.md)
 - [`basemodel.md`](../../../basemodel.md)
-- [`baseuser-dry-violation-.md`](../../../baseuser-dry-violation-.md)
+- [`baseuser-dry-violation-2.md`](../../../baseuser-dry-violation-2.md)
 <<<<<<< HEAD
 - [`baseuser-dry-violation.md`](../../../baseuser-dry-violation.md)
-- [`baseuser-refactoring-completed-.md`](../../../baseuser-refactoring-completed-.md)
+- [`baseuser-refactoring-completed-.md`](../../../baseuser-refactoring-completed-2.md)
 =======
 - [`baseuser-dry-violation.md`](./baseuser-dry-violation.md)
 - [`baseuser-dry-violation.md`](../../../baseuser-dry-violation.md)
-- [`baseuser-refactoring-completed-.md`](../../../baseuser-refactoring-completed-.md)
+- [`baseuser-refactoring-completed-.md`](../../../baseuser-refactoring-completed-2.md)
 - [`baseuser-refactoring-completed.md`](./baseuser-refactoring-completed.md)
 >>>>>>> laraxot/dev
 - [`baseuser-refactoring-completed.md`](../../../baseuser-refactoring-completed.md)
 - [`bashscripts-gitignore-workaround.md`](./bashscripts-gitignore-workaround.md)
 - [`best-practices-implementazione.md`](../../../best-practices-implementazione.md)
-- [`best-practices.md`](../../../best-practices.md)
+- [`best-practices-3.md`](../../../best-practices.md)
 - [`binary-assets.md`](../../../binary-assets.md)
 - [`bmad-gsd-ralph-integration.md`](./bmad-gsd-ralph-integration.md)
-- [`boost-skill-fix-summary.md`](../../../boost-skill-fix-summary.md)
+- [`boost-skill-fix-summary-3.md`](../../../boost-skill-fix-summary.md)
 - [`boost-skill-installation-error.md`](./boost-skill-installation-error.md)
 - [`boost-skill-installation-success.md`](./boost-skill-installation-success.md)
 - [`boost-skill-solution-plan.md`](./boost-skill-solution-plan.md)
@@ -1553,29 +1553,29 @@ Documentation for `notify` module categorized as **integrations**.
 - [`cases.md`](../../../cases.md)
 <<<<<<< HEAD
 =======
-- [`channel-vs-dto-provider-selection.md`](./channel-vs-dto-provider-selection.md)
+- [`channel-vs-dto-provider-selection-2.md`](../../../channel-vs-dto-provider-selection-2.md)
 >>>>>>> laraxot/dev
-- [`channel-vs-dto-provider-selection.md`](../../../channel-vs-dto-provider-selection.md)
+- [`channel-vs-dto-provider-selection-2.md`](../../../channel-vs-dto-provider-selection.md)
 - [`channel-vsto-provider-selection.md`](../../../channel-vsto-provider-selection.md)
-- [`channel_vs_dto_provider_selection.md`](../../../channel-vs-dto-provider-selection.md)
+- [`channel-vs-dto-provider-selection-2.md`](../../../channel-vs-dto-provider-selection.md)
 - [`chaos-readiness.md`](../../../chaos-readiness.md)
-- [`class-inheritance-best-practices.md`](../../../class-inheritance-best-practices.md)
+- [`class-inheritance-best-practices-2.md`](../../../class-inheritance-best-practices.md)
 <<<<<<< HEAD
-- [`class-inheritance-principles.md`](../../../class-inheritance-principles.md)
-- [`class_inheritance_best_practices.md`](../../../class_inheritance_best_practices.md)
-- [`class_inheritance_principles.md`](../../../class_inheritance_principles.md)
+- [`class-inheritance-principles-2.md`](../../../class-inheritance-principles.md)
+- [`class-inheritance-best-practices-2.md`](../../../class-inheritance-best-practices-2.md)
+- [`class-inheritance-principles-2.md`](../../../class-inheritance-principles-2.md)
 - [`CLAUDE.md`](./CLAUDE.md)
-- [`code-fixes-.md`](../../../code-fixes-.md)
+- [`code-fixes-2.md`](../../../code-fixes-2.md)
 - [`code-fixes.md`](../../../code-fixes.md)
 - [`codebase-overview.md`](../../../codebase-overview.md)
 =======
-- [`class-inheritance-best-practices.md`](./class-inheritance-best-practices.md)
-- [`class-inheritance-best-practices.md`](../../../class-inheritance-best-practices.md)
-- [`class-inheritance-principles.md`](../../../class-inheritance-principles.md)
-- [`class-inheritance-principles.md`](./class-inheritance-principles.md)
-- [`class-inheritance-principles.md`](../../../class-inheritance-principles.md)
-- [`class_inheritance_best_practices.md`](../../../class_inheritance_best_practices.md)
-- [`class_inheritance_principles.md`](../../../class_inheritance_principles.md)
+- [`class-inheritance-best-practices-2.md`](../../../class-inheritance-best-practices-2.md)
+- [`class-inheritance-best-practices-2.md`](../../../class-inheritance-best-practices.md)
+- [`class-inheritance-principles-2.md`](../../../class-inheritance-principles.md)
+- [`class-inheritance-principles-2.md`](../../../class-inheritance-principles-2.md)
+- [`class-inheritance-principles-2.md`](../../../class-inheritance-principles.md)
+- [`class-inheritance-best-practices-2.md`](../../../class-inheritance-best-practices-2.md)
+- [`class-inheritance-principles-2.md`](../../../class-inheritance-principles-2.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
 <<<<<<< HEAD
@@ -1584,28 +1584,28 @@ Documentation for `notify` module categorized as **integrations**.
 - [`CLAUDE.md`](./CLAUDE.md)
 =======
 <<<<<<< HEAD
-- [`CLAUDE.md`](./claude.md)
+- [`CLAUDE.md`](../../../../../Geo/docs/root-md-files/claude.md)
 =======
 - [`CLAUDE.md`](./CLAUDE.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
 =======
-- [`CLAUDE.md`](./claude.md)
+- [`CLAUDE.md`](../../../../../Geo/docs/root-md-files/claude.md)
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`code-fixes-.md`](../../../code-fixes-.md)
+- [`code-fixes-2.md`](../../../code-fixes-2.md)
 - [`code-fixes.md`](../../../code-fixes.md)
 - [`codebase-overview.md`](../../../codebase-overview.md)
-- [`codebrisk-tools-analysis.md`](./codebrisk-tools-analysis.md)
+- [`codebrisk-tools-analysis-2.md`](../../../codebrisk-tools-analysis-2.md)
 >>>>>>> laraxot/dev
-- [`codebrisk-tools-analysis.md`](../../../codebrisk-tools-analysis.md)
+- [`codebrisk-tools-analysis-2.md`](../../../codebrisk-tools-analysis.md)
 - [`codebrisk-tools.md`](../../../codebrisk-tools.md)
-- [`codebrisk_tools_analysis.md`](../../../codebrisk-tools-analysis.md)
+- [`codebrisk-tools-analysis-2.md`](../../../codebrisk-tools-analysis.md)
 - [`codees.md`](../../../codees.md)
 - [`collegamenti.md`](../../../collegamenti.md)
-- [`completamento-progetto-.md`](../../../completamento-progetto-.md)
+- [`completamento-progetto-2.md`](../../../completamento-progetto-2.md)
 - [`completamento-progetto.md`](./completamento-progetto.md)
 <<<<<<< HEAD
 =======
@@ -1636,36 +1636,36 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_X4e09n
 - [`config-structure.md`](./config-structure.md)
-- [`config_structure.md`](./config_structure.md)
+- [`config-structure-2.md`](../../../config-structure-2.md)
 - [`configuration.md`](./configuration.md)
-- [`configurations-usage-principles.md`](./configurations-usage-principles.md)
-- [`configurations-usage-principles.md`](./configurations-usage-principles.md)
-- [`configurations_usage_principles.md`](./configurations-usage-principles.md)
-- [`conflict-resolution-recordnotification.md`](./conflict-resolution-recordnotification.md)
-- [`conflict-resolution-recordnotification.md`](./conflict-resolution-recordnotification.md)
-- [`conflict-resolution-sendsmspage.md`](./conflict-resolution-sendsmspage.md)
-- [`conflict-resolution-sendsmspage.md`](./conflict-resolution-sendsmspage.md)
-- [`conflict-resolution-smschannel.md`](./conflict-resolution-smschannel.md)
-- [`conflict-resolution-smschannel.md`](./conflict-resolution-smschannel.md)
-- [`conflict-resolution-smsdriverenum.md`](./conflict-resolution-smsdriverenum.md)
+- [`configurations-usage-principles-2.md`](../../../configurations-usage-principles-2.md)
+- [`configurations-usage-principles-2.md`](../../../configurations-usage-principles-2.md)
+- [`configurations-usage-principles-2.md`](../../../configurations-usage-principles-2.md)
+- [`conflict-resolution-recordnotification-2.md`](../../../conflict-resolution-recordnotification-2.md)
+- [`conflict-resolution-recordnotification-2.md`](../../../conflict-resolution-recordnotification-2.md)
+- [`conflict-resolution-sendsmspage-2.md`](../../../conflict-resolution-sendsmspage-2.md)
+- [`conflict-resolution-sendsmspage-2.md`](../../../conflict-resolution-sendsmspage-2.md)
+- [`conflict-resolution-smschannel-2.md`](../../../conflict-resolution-smschannel-2.md)
+- [`conflict-resolution-smschannel-2.md`](../../../conflict-resolution-smschannel-2.md)
+- [`conflict-resolution-smsdriverenum-2.md`](../../../conflict-resolution-smsdriverenum-2.md)
 <<<<<<< HEAD
 =======
 =======
-- [`config_structure.md`](./config_structure.md)
+- [`config-structure-2.md`](../../../config-structure-2.md)
 - [`configuration.md`](./configuration.md)
-- [`configurations-usage-principles.md`](./configurations-usage-principles.md)
-- [`configurations_usage_principles.md`](./configurations-usage-principles.md)
-- [`conflict-resolution-recordnotification.md`](./conflict-resolution-recordnotification.md)
-- [`conflict-resolution-sendsmspage.md`](./conflict-resolution-sendsmspage.md)
-- [`conflict-resolution-smschannel.md`](./conflict-resolution-smschannel.md)
+- [`configurations-usage-principles-2.md`](../../../configurations-usage-principles-2.md)
+- [`configurations-usage-principles-2.md`](../../../configurations-usage-principles-2.md)
+- [`conflict-resolution-recordnotification-2.md`](../../../conflict-resolution-recordnotification-2.md)
+- [`conflict-resolution-sendsmspage-2.md`](../../../conflict-resolution-sendsmspage-2.md)
+- [`conflict-resolution-smschannel-2.md`](../../../conflict-resolution-smschannel-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`conflict-resolution-smsdriverenum.md`](./conflict-resolution-smsdriverenum.md)
-- [`conflict-resolution.md`](../../../conflict-resolution.md)
-- [`conflict_resolution_recordnotification.md`](./conflict_resolution_recordnotification.md)
-- [`conflict_resolution_sendsmspage.md`](./conflict_resolution_sendsmspage.md)
-- [`conflict_resolution_smschannel.md`](./conflict_resolution_smschannel.md)
-- [`conflict_resolution_smsdriverenum.md`](./conflict_resolution_smsdriverenum.md)
+- [`conflict-resolution-smsdriverenum-2.md`](../../../conflict-resolution-smsdriverenum-2.md)
+- [`conflict-resolution-2.md`](../../../conflict-resolution.md)
+- [`conflict-resolution-recordnotification-2.md`](../../../conflict-resolution-recordnotification-2.md)
+- [`conflict-resolution-sendsmspage-2.md`](../../../conflict-resolution-sendsmspage-2.md)
+- [`conflict-resolution-smschannel-2.md`](../../../conflict-resolution-smschannel-2.md)
+- [`conflict-resolution-smsdriverenum-2.md`](../../../conflict-resolution-smsdriverenum-2.md)
 - [`conflicts-analysis.md`](../../../conflicts-analysis.md)
 - [`conflicts.md`](../../../conflicts.md)
 - [`conflitti-git.md`](./conflitti-git.md)
@@ -1694,12 +1694,12 @@ Documentation for `notify` module categorized as **integrations**.
 - [`coverage.md`](./coverage.md)
 - [`current-work-status.md`](./current-work-status.md)
 - [`current-work.md`](../../../current-work.md)
-- [`current_work_status.md`](./current_work_status.md)
+- [`current-work-status-2.md`](../../../current-work-status-2.md)
 - [`cyclomatic-complexity-summary.md`](./cyclomatic-complexity-summary.md)
 - [`cyclomatic-complexity.md`](../../../cyclomatic-complexity.md)
-- [`database-mail.md`](./database-mail.md)
-- [`database-mail-enhancement.md`](./database-mail-enhancement.md)
-- [`database-mail-queue.md`](./database-mail-queue.md)
+- [`database-mail-2.md`](../../../database-mail-2.md)
+- [`database-mail-enhancement-2.md`](../../../database-mail-enhancement-2.md)
+- [`database-mail-queue-2.md`](../../../database-mail-queue-2.md)
 <<<<<<< .merge_file_VkYtaf
 <<<<<<< HEAD
 =======
@@ -1710,17 +1710,17 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 >>>>>>> .merge_file_X4e09n
 >>>>>>> laraxot/dev
-- [`CONTRIBUTING.md`](./CONTRIBUTING.md)
+- [`contributing-2.md`](./contributing-2.md)
 - [`coverage.md`](./coverage.md)
 - [`current-work-status.md`](./current-work-status.md)
 - [`current-work-status.md`](./current-work-status.md)
 - [`current-work-status.md`](./current-work-status.md)
 - [`current-work.md`](../../../current-work.md)
-- [`current_work_status.md`](./current_work_status.md)
+- [`current-work-status-2.md`](../../../current-work-status-2.md)
 - [`cyclomatic-complexity-summary.md`](./cyclomatic-complexity-summary.md)
 <<<<<<< HEAD
 - [`cyclomatic-complexity.md`](../../../cyclomatic-complexity.md)
-- [`database-mail.md`](./database-mail.md)
+- [`database-mail-2.md`](../../../database-mail-2.md)
 <<<<<<< .merge_file_VkYtaf
 - [`database-mail-1.md`](./database-mail-1.md)
 - [`database-mail-2.md`](./database-mail-2.md)
@@ -1728,10 +1728,10 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 <<<<<<< HEAD
 - [`cyclomatic-complexity.md`](../../../cyclomatic-complexity.md)
-- [`database-mail.md`](./database-mail.md)
+- [`database-mail-2.md`](../../../database-mail-2.md)
 =======
 >>>>>>> .merge_file_X4e09n
-- [`database-mail.md`](./database-mail.md)
+- [`database-mail-2.md`](../../../database-mail-2.md)
 =======
 <<<<<<< .merge_file_EZjoNq
 - [`cyclomatic-complexity.md`](./cyclomatic-complexity.md)
@@ -1740,21 +1740,21 @@ Documentation for `notify` module categorized as **integrations**.
 - [`database-mail-enhancement-1.md`](./database-mail-enhancement-1.md)
 =======
 - [`cyclomatic-complexity.md`](../../../cyclomatic-complexity.md)
-- [`database-mail.md`](./database-mail.md)
-- [`database-mail.md`](./database-mail.md)
+- [`database-mail-2.md`](../../../database-mail-2.md)
+- [`database-mail-2.md`](../../../database-mail-2.md)
 >>>>>>> .merge_file_junMiY
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`database-mail-enhancement.md`](./database-mail-enhancement.md)
-- [`database-mail-enhancement.md`](./database-mail-enhancement.md)
-- [`database-mail-queue.md`](./database-mail-queue.md)
-- [`database-mail-queue.md`](./database-mail-queue.md)
-- [`database-mail-queue.md`](./database-mail-queue.md)
-- [`database-mail-system.md`](./database-mail-system.md)
-- [`database-mail-system.md`](./database-mail-system.md)
+- [`database-mail-enhancement-2.md`](../../../database-mail-enhancement-2.md)
+- [`database-mail-enhancement-2.md`](../../../database-mail-enhancement-2.md)
+- [`database-mail-queue-2.md`](../../../database-mail-queue-2.md)
+- [`database-mail-queue-2.md`](../../../database-mail-queue-2.md)
+- [`database-mail-queue-2.md`](../../../database-mail-queue-2.md)
+- [`database-mail-system-2.md`](../../../database-mail-system-2.md)
+- [`database-mail-system-2.md`](../../../database-mail-system-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_VkYtaf
@@ -1767,12 +1767,12 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_X4e09n
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`database-mail-system.md`](./database-mail-system.md)
-- [`database-mail.md`](./database-mail.md)
-- [`database_mail.md`](./database_mail.md)
-- [`database_mail_enhancement.md`](./database-mail-enhancement.md)
-- [`database_mail_queue.md`](./database_mail_queue.md)
-- [`database_mail_system.md`](./database_mail_system.md)
+- [`database-mail-system-2.md`](../../../database-mail-system-2.md)
+- [`database-mail-2.md`](../../../database-mail-2.md)
+- [`database-mail-2.md`](../../../database-mail-2.md)
+- [`database-mail-enhancement-2.md`](../../../database-mail-enhancement-2.md)
+- [`database-mail-queue-2.md`](../../../database-mail-queue-2.md)
+- [`database-mail-system-2.md`](../../../database-mail-system-2.md)
 - [`decision-log-removal-seasonal-action.md`](./decision-log-removal-seasonal-action.md)
 - [`decisione-basemodel-refactoring.md`](./decisione-basemodel-refactoring.md)
 - [`dependencies.md`](../../../dependencies.md)
@@ -1782,22 +1782,22 @@ Documentation for `notify` module categorized as **integrations**.
 - [`docs-archive-policy.md`](../../../docs-archive-policy.md)
 - [`docs-health.md`](../../../docs-health.md)
 - [`docs-monitoring-system.md`](./docs-monitoring-system.md)
-- [`doctor-emails.md`](./doctor-emails.md)
+- [`doctor-emails-2.md`](../../../doctor-emails-2.md)
 <<<<<<< HEAD
-- [`doctor-emails.md`](./doctor-emails.md)
+- [`doctor-emails-2.md`](../../../doctor-emails-2.md)
 =======
 <<<<<<< HEAD
-- [`doctor-emails.md`](./doctor-emails.md)
+- [`doctor-emails-2.md`](../../../doctor-emails-2.md)
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`doctor_emails.md`](./doctor-emails.md)
+- [`doctor-emails-2.md`](../../../doctor-emails-2.md)
 - [`documentation-analysis-and-improvement-plan.md`](./documentation-analysis-and-improvement-plan.md)
 - [`documentation-ecosystem.md`](./documentation-ecosystem.md)
 - [`documentation-governance.md`](./documentation-governance.md)
 <<<<<<< HEAD
-- [`documentation-improvement-plan-multi-agent.md`](../../../documentation-improvement-plan-multi-agent.md)
-- [`documentation-improvement-summary-.md`](../../../documentation-improvement-summary-.md)
+- [`documentation-improvement-plan-multi-agent-2.md`](../../../documentation-improvement-plan-multi-agent.md)
+- [`documentation-improvement-summary-2.md`](../../../documentation-improvement-summary-2.md)
 <<<<<<< .merge_file_VkYtaf
 - [`documentation-improvement-summary-1.md`](./documentation-improvement-summary-1.md)
 - [`documentation-improvement-summary.md`](./documentation-improvement-summary.md)
@@ -1805,27 +1805,27 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-- [`documentation-improvement-plan-multi-agent.md`](../../../documentation-improvement-plan-multi-agent.md)
-- [`documentation-improvement-summary-.md`](../../../documentation-improvement-summary-.md)
+- [`documentation-improvement-plan-multi-agent-2.md`](../../../documentation-improvement-plan-multi-agent.md)
+- [`documentation-improvement-summary-2.md`](../../../documentation-improvement-summary-2.md)
 =======
 >>>>>>> .merge_file_X4e09n
 - [`documentation-improvement-summary.md`](./documentation-improvement-summary.md)
 =======
 <<<<<<< .merge_file_EZjoNq
-- [`documentation-improvement-plan-multi-agent.md`](./documentation-improvement-plan-multi-agent.md)
-- [`documentation-improvement-summary-.md`](./documentation-improvement-summary-.md)
+- [`documentation-improvement-plan-multi-agent-2.md`](../../../documentation-improvement-plan-multi-agent-2.md)
+- [`documentation-improvement-summary-2.md`](./documentation-improvement-summary-2.md)
 - [`documentation-improvement-summary-1.md`](./documentation-improvement-summary-1.md)
 =======
-- [`documentation-improvement-plan-multi-agent.md`](../../../documentation-improvement-plan-multi-agent.md)
-- [`documentation-improvement-summary-.md`](../../../documentation-improvement-summary-.md)
+- [`documentation-improvement-plan-multi-agent-2.md`](../../../documentation-improvement-plan-multi-agent.md)
+- [`documentation-improvement-summary-2.md`](../../../documentation-improvement-summary-2.md)
 <<<<<<< .merge_file_VkYtaf
 - [`documentation-improvement-summary.md`](./documentation-improvement-summary.md)
 >>>>>>> .merge_file_junMiY
 >>>>>>> laraxot/dev
 - [`documentation-improvement-summary.md`](./documentation-improvement-summary.md)
 =======
-- [`documentation-improvement-plan-multi-agent.md`](../../../documentation-improvement-plan-multi-agent.md)
-- [`documentation-improvement-summary-.md`](../../../documentation-improvement-summary-.md)
+- [`documentation-improvement-plan-multi-agent-2.md`](../../../documentation-improvement-plan-multi-agent.md)
+- [`documentation-improvement-summary-2.md`](../../../documentation-improvement-summary-2.md)
 =======
 - [`documentation-improvement-summary.md`](./documentation-improvement-summary.md)
 >>>>>>> .merge_file_junMiY
@@ -1857,11 +1857,11 @@ Documentation for `notify` module categorized as **integrations**.
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
 - [`dry-violation.md`](../../../dry-violation.md)
-- [`configurations-usage-principles.md`](../../../configurations-usage-principles.md)
-- [`configurations_usage_principles.md`](../../../configurations-usage-principles.md)
-- [`conflict-resolution-recordnotification.md`](../../../conflict-resolution-recordnotification.md)
-- [`conflict-resolution-sendsmspage.md`](../../../conflict-resolution-sendsmspage.md)
-- [`conflict-resolution-smschannel.md`](../../../conflict-resolution-smschannel.md)
+- [`configurations-usage-principles-2.md`](../../../configurations-usage-principles.md)
+- [`configurations-usage-principles-2.md`](../../../configurations-usage-principles.md)
+- [`conflict-resolution-recordnotification-2.md`](../../../conflict-resolution-recordnotification.md)
+- [`conflict-resolution-sendsmspage-2.md`](../../../conflict-resolution-sendsmspage.md)
+- [`conflict-resolution-smschannel-2.md`](../../../conflict-resolution-smschannel.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1878,22 +1878,22 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 >>>>>>> .merge_file_X4e09n
 - [`dry-violation.md`](../../../dry-violation.md)
-- [`configurations-usage-principles.md`](../../../configurations-usage-principles.md)
-- [`configurations_usage_principles.md`](../../../configurations-usage-principles.md)
-- [`conflict-resolution-recordnotification.md`](./conflict-resolution-recordnotification.md)
-- [`conflict-resolution-recordnotification.md`](../../../conflict-resolution-recordnotification.md)
-- [`conflict-resolution-sendsmspage.md`](./conflict-resolution-sendsmspage.md)
-- [`conflict-resolution-sendsmspage.md`](../../../conflict-resolution-sendsmspage.md)
-- [`conflict-resolution-smschannel.md`](./conflict-resolution-smschannel.md)
-- [`conflict-resolution-smschannel.md`](../../../conflict-resolution-smschannel.md)
-- [`conflict-resolution-smsdriverenum.md`](./conflict-resolution-smsdriverenum.md)
+- [`configurations-usage-principles-2.md`](../../../configurations-usage-principles.md)
+- [`configurations-usage-principles-2.md`](../../../configurations-usage-principles.md)
+- [`conflict-resolution-recordnotification-2.md`](../../../conflict-resolution-recordnotification-2.md)
+- [`conflict-resolution-recordnotification-2.md`](../../../conflict-resolution-recordnotification.md)
+- [`conflict-resolution-sendsmspage-2.md`](../../../conflict-resolution-sendsmspage-2.md)
+- [`conflict-resolution-sendsmspage-2.md`](../../../conflict-resolution-sendsmspage.md)
+- [`conflict-resolution-smschannel-2.md`](../../../conflict-resolution-smschannel-2.md)
+- [`conflict-resolution-smschannel-2.md`](../../../conflict-resolution-smschannel.md)
+- [`conflict-resolution-smsdriverenum-2.md`](../../../conflict-resolution-smsdriverenum-2.md)
 >>>>>>> laraxot/dev
-- [`conflict-resolution-smsdriverenum.md`](../../../conflict-resolution-smsdriverenum.md)
-- [`conflict-resolution.md`](../../../conflict-resolution.md)
-- [`conflict_resolution_recordnotification.md`](../../../conflict_resolution_recordnotification.md)
-- [`conflict_resolution_sendsmspage.md`](../../../conflict_resolution_sendsmspage.md)
-- [`conflict_resolution_smschannel.md`](../../../conflict_resolution_smschannel.md)
-- [`conflict_resolution_smsdriverenum.md`](../../../conflict_resolution_smsdriverenum.md)
+- [`conflict-resolution-smsdriverenum-2.md`](../../../conflict-resolution-smsdriverenum.md)
+- [`conflict-resolution-2.md`](../../../conflict-resolution.md)
+- [`conflict-resolution-recordnotification-2.md`](../../../conflict-resolution-recordnotification-2.md)
+- [`conflict-resolution-sendsmspage-2.md`](../../../conflict-resolution-sendsmspage-2.md)
+- [`conflict-resolution-smschannel-2.md`](../../../conflict-resolution-smschannel-2.md)
+- [`conflict-resolution-smsdriverenum-2.md`](../../../conflict-resolution-smsdriverenum-2.md)
 - [`conflicts-analysis.md`](../../../conflicts-analysis.md)
 - [`conflicts.md`](../../../conflicts.md)
 - [`conflitti-git.md`](../../../conflitti-git.md)
@@ -1908,7 +1908,7 @@ Documentation for `notify` module categorized as **integrations**.
 - [`contracts.md`](../../../contracts.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
-- [`CONTRIBUTING.md`](./contributing.md)
+- [`contributing-2.md`](./contributing.md)
 - [`coverage.md`](./coverage.md)
 - [`current-work-status.md`](../../../current-work-status.md)
 =======
@@ -1916,17 +1916,17 @@ Documentation for `notify` module categorized as **integrations**.
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_X4e09n
-- [`CONTRIBUTING.md`](./CONTRIBUTING.md)
+- [`contributing-2.md`](./contributing-2.md)
 =======
 <<<<<<< HEAD
-- [`CONTRIBUTING.md`](./contributing.md)
+- [`contributing-2.md`](./contributing.md)
 =======
-- [`CONTRIBUTING.md`](./CONTRIBUTING.md)
+- [`contributing-2.md`](./contributing-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
 =======
-- [`CONTRIBUTING.md`](./contributing.md)
+- [`contributing-2.md`](./contributing.md)
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
@@ -1936,32 +1936,32 @@ Documentation for `notify` module categorized as **integrations**.
 - [`current-work-status.md`](../../../current-work-status.md)
 >>>>>>> laraxot/dev
 - [`current-work.md`](../../../current-work.md)
-- [`current_work_status.md`](./current_work_status.md)
+- [`current-work-status-2.md`](../../../current-work-status-2.md)
 - [`cyclomatic-complexity-summary.md`](./cyclomatic-complexity-summary.md)
 - [`cyclomatic-complexity.md`](../../../cyclomatic-complexity.md)
 - [`database-mail-deprecated.md`](../../../database-mail-deprecated.md)
 <<<<<<< HEAD
-- [`database-mail.md`](../../../database-mail.md)
-- [`database-mail-enhancement.md`](../../../database-mail-enhancement.md)
+- [`database-mail-2.md`](../../../database-mail.md)
+- [`database-mail-enhancement-2.md`](../../../database-mail-enhancement.md)
 - [`database-mail-queue-deprecated.md`](../../../database-mail-queue-deprecated.md)
-- [`database-mail-queue.md`](../../../database-mail-queue.md)
-- [`database-mail-system.md`](../../../database-mail-system.md)
+- [`database-mail-queue-2.md`](../../../database-mail-queue.md)
+- [`database-mail-system-2.md`](../../../database-mail-system.md)
 =======
-- [`database-mail.md`](./database-mail.md)
-- [`database-mail-enhancement.md`](./database-mail-enhancement.md)
-- [`database-mail-enhancement.md`](../../../database-mail-enhancement.md)
+- [`database-mail-2.md`](../../../database-mail-2.md)
+- [`database-mail-enhancement-2.md`](../../../database-mail-enhancement-2.md)
+- [`database-mail-enhancement-2.md`](../../../database-mail-enhancement.md)
 - [`database-mail-queue-deprecated.md`](../../../database-mail-queue-deprecated.md)
-- [`database-mail-queue.md`](./database-mail-queue.md)
-- [`database-mail-queue.md`](../../../database-mail-queue.md)
-- [`database-mail-system.md`](../../../database-mail-system.md)
-- [`database-mail-system.md`](./database-mail-system.md)
-- [`database-mail-system.md`](../../../database-mail-system.md)
-- [`database-mail.md`](../../../database-mail.md)
+- [`database-mail-queue-2.md`](../../../database-mail-queue-2.md)
+- [`database-mail-queue-2.md`](../../../database-mail-queue.md)
+- [`database-mail-system-2.md`](../../../database-mail-system.md)
+- [`database-mail-system-2.md`](../../../database-mail-system-2.md)
+- [`database-mail-system-2.md`](../../../database-mail-system.md)
+- [`database-mail-2.md`](../../../database-mail.md)
 >>>>>>> laraxot/dev
-- [`database_mail.md`](../../../database_mail.md)
-- [`database_mail_enhancement.md`](../../../database-mail-enhancement.md)
-- [`database_mail_queue.md`](../../../database_mail_queue.md)
-- [`database_mail_system.md`](../../../database_mail_system.md)
+- [`database-mail-2.md`](../../../database-mail-2.md)
+- [`database-mail-enhancement-2.md`](../../../database-mail-enhancement.md)
+- [`database-mail-queue-2.md`](../../../database-mail-queue-2.md)
+- [`database-mail-system-2.md`](../../../database-mail-system-2.md)
 - [`decision-log-removal-seasonal-action.md`](../../../decision-log-removal-seasonal-action.md)
 - [`decisione-basemodel-refactoring.md`](./decisione-basemodel-refactoring.md)
 - [`dependencies.md`](../../../dependencies.md)
@@ -1973,15 +1973,15 @@ Documentation for `notify` module categorized as **integrations**.
 - [`docs-monitoring-system.md`](./docs-monitoring-system.md)
 <<<<<<< HEAD
 =======
-- [`doctor-emails.md`](./doctor-emails.md)
+- [`doctor-emails-2.md`](../../../doctor-emails-2.md)
 >>>>>>> laraxot/dev
-- [`doctor-emails.md`](../../../doctor-emails.md)
-- [`doctor_emails.md`](../../../doctor-emails.md)
+- [`doctor-emails-2.md`](../../../doctor-emails.md)
+- [`doctor-emails-2.md`](../../../doctor-emails.md)
 - [`documentation-analysis-and-improvement-plan.md`](./documentation-analysis-and-improvement-plan.md)
 - [`documentation-ecosystem.md`](./documentation-ecosystem.md)
 - [`documentation-governance.md`](./documentation-governance.md)
-- [`documentation-improvement-plan-multi-agent.md`](../../../documentation-improvement-plan-multi-agent.md)
-- [`documentation-improvement-summary-.md`](../../../documentation-improvement-summary-.md)
+- [`documentation-improvement-plan-multi-agent-2.md`](../../../documentation-improvement-plan-multi-agent.md)
+- [`documentation-improvement-summary-2.md`](../../../documentation-improvement-summary-2.md)
 <<<<<<< HEAD
 =======
 - [`documentation-improvement-summary.md`](./documentation-improvement-summary.md)
@@ -1991,7 +1991,7 @@ Documentation for `notify` module categorized as **integrations**.
 - [`documentation-system-update-complete.md`](./documentation-system-update-complete.md)
 - [`dor-emails.md`](../../../dor-emails.md)
 - [`dry-composition.md`](../../../dry-composition.md)
-- [`dry-kiss-analysis-.md`](../../../dry-kiss-analysis-.md)
+- [`dry-kiss-analysis-.md`](../../../dry-kiss-analysis-2.md)
 - [`dry-kiss-analysis-modulo-user.md`](./dry-kiss-analysis-modulo-user.md)
 <<<<<<< HEAD
 - [`dry-kiss-analysis.md`](../../../dry-kiss-analysis.md)
@@ -2022,22 +2022,22 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_X4e09n
 - [`drytraitmethods.md`](./drytraitmethods.md)
-- [`dto-structure-conventions.md`](./dto-structure-conventions.md)
-- [`dto-structure-conventions.md`](./dto-structure-conventions.md)
-- [`dto-structure-rules.md`](./dto-structure-rules.md)
-- [`dto-structure-rules.md`](./dto-structure-rules.md)
+- [`dto-structure-conventions-2.md`](../../../dto-structure-conventions-2.md)
+- [`dto-structure-conventions-2.md`](../../../dto-structure-conventions-2.md)
+- [`dto-structure-rules-2.md`](../../../dto-structure-rules-2.md)
+- [`dto-structure-rules-2.md`](../../../dto-structure-rules-2.md)
 <<<<<<< HEAD
 - [`dto-structure.md`](../../../dto-structure.md)
 <<<<<<< .merge_file_VkYtaf
 - [`dto-vs-factory-analysis-1.md`](./dto-vs-factory-analysis-1.md)
-- [`dto-vs-factory-analysis.md`](./dto-vs-factory-analysis.md)
-- [`dto-vs-factory-analysis.md`](./dto-vs-factory-analysis.md)
+- [`dto-vs-factory-analysis-2.md`](../../../dto-vs-factory-analysis-2.md)
+- [`dto-vs-factory-analysis-2.md`](../../../dto-vs-factory-analysis-2.md)
 =======
 <<<<<<< HEAD
 - [`dto-structure.md`](../../../dto-structure.md)
 =======
 >>>>>>> .merge_file_X4e09n
-- [`dto-vs-factory-analysis.md`](./dto-vs-factory-analysis.md)
+- [`dto-vs-factory-analysis-2.md`](../../../dto-vs-factory-analysis-2.md)
 =======
 <<<<<<< .merge_file_EZjoNq
 - [`dto-structure.md`](./dto-structure.md)
@@ -2045,28 +2045,28 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 - [`dto-structure.md`](../../../dto-structure.md)
 <<<<<<< .merge_file_VkYtaf
-- [`dto-vs-factory-analysis.md`](./dto-vs-factory-analysis.md)
+- [`dto-vs-factory-analysis-2.md`](../../../dto-vs-factory-analysis-2.md)
 >>>>>>> .merge_file_junMiY
 >>>>>>> laraxot/dev
-- [`dto-vs-factory-analysis.md`](./dto-vs-factory-analysis.md)
+- [`dto-vs-factory-analysis-2.md`](../../../dto-vs-factory-analysis-2.md)
 =======
 - [`drytraitmethods.md`](./drytraitmethods.md)
-- [`dto-structure-conventions.md`](./dto-structure-conventions.md)
-- [`dto-structure-rules.md`](./dto-structure-rules.md)
+- [`dto-structure-conventions-2.md`](../../../dto-structure-conventions-2.md)
+- [`dto-structure-rules-2.md`](../../../dto-structure-rules-2.md)
 - [`dto-structure.md`](../../../dto-structure.md)
-- [`dto-vs-factory-analysis.md`](./dto-vs-factory-analysis.md)
+- [`dto-vs-factory-analysis-2.md`](../../../dto-vs-factory-analysis-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
-- [`dto-vs-factory-analysis.md`](./dto-vs-factory-analysis.md)
+- [`dto-vs-factory-analysis-2.md`](../../../dto-vs-factory-analysis-2.md)
 >>>>>>> .merge_file_junMiY
 >>>>>>> laraxot/dev
-- [`dto-vs-factory-analysis.md`](./dto-vs-factory-analysis.md)
+- [`dto-vs-factory-analysis-2.md`](../../../dto-vs-factory-analysis-2.md)
 >>>>>>> .merge_file_X4e09n
 - [`dto-vs-factory.md`](../../../dto-vs-factory.md)
-- [`dto_structure_conventions.md`](./dto_structure_conventions.md)
-- [`dto_structure_rules.md`](./dto-structure-rules.md)
-- [`dto_vs_factory_analysis.md`](./dto-vs-factory-analysis.md)
+- [`dto-structure-conventions-2.md`](../../../dto-structure-conventions-2.md)
+- [`dto-structure-rules-2.md`](../../../dto-structure-rules-2.md)
+- [`dto-vs-factory-analysis-2.md`](../../../dto-vs-factory-analysis-2.md)
 - [`dynamic-class-resolution.md`](./dynamic-class-resolution.md)
 <<<<<<< HEAD
 - [`dynamic-class-resolution.md`](./dynamic-class-resolution.md)
@@ -2078,40 +2078,40 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`dynamic_class_resolution.md`](./dynamic_class_resolution.md)
+- [`dynamic-class-resolution-2.md`](../../../dynamic-class-resolution-2.md)
 - [`editor-visuale.md`](./editor-visuale.md)
 - [`eloquent-properties-best-practices.md`](./eloquent-properties-best-practices.md)
-- [`email-analytics.md`](./email-analytics.md)
+- [`email-analytics-2.md`](../../../email-analytics-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
-- [`email-analytics.md`](./email-analytics.md)
-- [`email-backup.md`](./email-backup.md)
-- [`email-backup.md`](./email-backup.md)
-- [`email-backup.md`](./email-backup.md)
+- [`email-analytics-2.md`](../../../email-analytics-2.md)
+- [`email-backup-2.md`](../../../email-backup-2.md)
+- [`email-backup-2.md`](../../../email-backup-2.md)
+- [`email-backup-2.md`](../../../email-backup-2.md)
 - [`email-best-practices.md`](./email-best-practices.md)
 - [`email-best-practices.md`](./email-best-practices.md)
-- [`email-cache.md`](./email-cache.md)
-- [`email-cache.md`](./email-cache.md)
-- [`email-html-best-practices.md`](./email-html-best-practices.md)
+- [`email-cache-2.md`](../../../email-cache-2.md)
+- [`email-cache-2.md`](../../../email-cache-2.md)
+- [`email-html-best-practices-2.md`](../../../email-html-best-practices-2.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
-- [`email-html-best-practices.md`](./email-html-best-practices.md)
+- [`email-html-best-practices-2.md`](../../../email-html-best-practices-2.md)
 - [`email-integration.md`](../../../email-integration.md)
 - [`email-logs-1.md`](./email-logs-1.md)
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_X4e09n
-- [`email-html-best-practices.md`](./email-html-best-practices.md)
+- [`email-html-best-practices-2.md`](../../../email-html-best-practices-2.md)
 - [`email-integration.md`](../../../email-integration.md)
 =======
 <<<<<<< .merge_file_EZjoNq
 - [`email-integration.md`](./email-integration.md)
 - [`email-logs-1.md`](./email-logs-1.md)
 =======
-- [`email-html-best-practices.md`](./email-html-best-practices.md)
+- [`email-html-best-practices-2.md`](../../../email-html-best-practices-2.md)
 - [`email-integration.md`](../../../email-integration.md)
 >>>>>>> .merge_file_junMiY
 >>>>>>> laraxot/dev
@@ -2119,14 +2119,14 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`email-logs.md`](./email-logs.md)
-- [`email-logs.md`](./email-logs.md)
-- [`email-monitoring.md`](./email-monitoring.md)
-- [`email-monitoring.md`](./email-monitoring.md)
-- [`email-notifications.md`](./email-notifications.md)
-- [`email-notifications.md`](./email-notifications.md)
-- [`email-plugins-analysis.md`](./email-plugins-analysis.md)
-- [`email-plugins-analysis.md`](./email-plugins-analysis.md)
+- [`email-logs-2.md`](../../../email-logs-2.md)
+- [`email-logs-2.md`](../../../email-logs-2.md)
+- [`email-monitoring-2.md`](../../../email-monitoring-2.md)
+- [`email-monitoring-2.md`](../../../email-monitoring-2.md)
+- [`email-notifications-2.md`](../../../email-notifications-2.md)
+- [`email-notifications-2.md`](../../../email-notifications-2.md)
+- [`email-plugins-analysis-2.md`](../../../email-plugins-analysis-2.md)
+- [`email-plugins-analysis-2.md`](../../../email-plugins-analysis-2.md)
 <<<<<<< HEAD
 - [`email-plugins.md`](../../../email-plugins.md)
 <<<<<<< .merge_file_VkYtaf
@@ -2148,45 +2148,45 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`email-queue.md`](./email-queue.md)
-- [`email-queue.md`](./email-queue.md)
-- [`email-sending-troubleshooting.md`](./email-sending-troubleshooting.md)
-- [`email-sending-troubleshooting.md`](./email-sending-troubleshooting.md)
-- [`email-translations.md`](./email-translations.md)
-- [`email-translations.md`](./email-translations.md)
-- [`email-wysiwyg-editor.md`](./email-wysiwyg-editor.md)
+- [`email-queue-2.md`](../../../email-queue-2.md)
+- [`email-queue-2.md`](../../../email-queue-2.md)
+- [`email-sending-troubleshooting-2.md`](../../../email-sending-troubleshooting-2.md)
+- [`email-sending-troubleshooting-2.md`](../../../email-sending-troubleshooting-2.md)
+- [`email-translations-2.md`](../../../email-translations-2.md)
+- [`email-translations-2.md`](../../../email-translations-2.md)
+- [`email-wysiwyg-editor-2.md`](../../../email-wysiwyg-editor-2.md)
 <<<<<<< HEAD
 =======
 =======
-- [`email-backup.md`](./email-backup.md)
+- [`email-backup-2.md`](../../../email-backup-2.md)
 - [`email-best-practices.md`](./email-best-practices.md)
-- [`email-cache.md`](./email-cache.md)
-- [`email-html-best-practices.md`](./email-html-best-practices.md)
+- [`email-cache-2.md`](../../../email-cache-2.md)
+- [`email-html-best-practices-2.md`](../../../email-html-best-practices-2.md)
 - [`email-integration.md`](../../../email-integration.md)
-- [`email-logs.md`](./email-logs.md)
-- [`email-monitoring.md`](./email-monitoring.md)
-- [`email-notifications.md`](./email-notifications.md)
-- [`email-plugins-analysis.md`](./email-plugins-analysis.md)
+- [`email-logs-2.md`](../../../email-logs-2.md)
+- [`email-monitoring-2.md`](../../../email-monitoring-2.md)
+- [`email-notifications-2.md`](../../../email-notifications-2.md)
+- [`email-plugins-analysis-2.md`](../../../email-plugins-analysis-2.md)
 - [`email-plugins.md`](../../../email-plugins.md)
-- [`email-queue.md`](./email-queue.md)
-- [`email-sending-troubleshooting.md`](./email-sending-troubleshooting.md)
-- [`email-translations.md`](./email-translations.md)
+- [`email-queue-2.md`](../../../email-queue-2.md)
+- [`email-sending-troubleshooting-2.md`](../../../email-sending-troubleshooting-2.md)
+- [`email-translations-2.md`](../../../email-translations-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`email-wysiwyg-editor.md`](./email-wysiwyg-editor.md)
-- [`email_analytics.md`](./email-analytics.md)
-- [`email_backup.md`](./email_backup.md)
+- [`email-wysiwyg-editor-2.md`](../../../email-wysiwyg-editor-2.md)
+- [`email-analytics-2.md`](../../../email-analytics-2.md)
+- [`email-backup-2.md`](../../../email-backup-2.md)
 - [`email_best_practices.md`](./email-best-practices.md)
-- [`email_cache.md`](./email_cache.md)
-- [`email_html_best_practices.md`](./email-html-best-practices.md)
-- [`email_logs.md`](./email_logs.md)
-- [`email_monitoring.md`](./email_monitoring.md)
-- [`email_notifications.md`](./email_notifications.md)
-- [`email_plugins_analysis.md`](./email_plugins_analysis.md)
-- [`email_queue.md`](./email_queue.md)
-- [`email_sending_troubleshooting.md`](./email_sending_troubleshooting.md)
-- [`email_translations.md`](./email_translations.md)
-- [`email_wysiwyg_editor.md`](./email-wysiwyg-editor.md)
+- [`email-cache-2.md`](../../../email-cache-2.md)
+- [`email-html-best-practices-2.md`](../../../email-html-best-practices-2.md)
+- [`email-logs-2.md`](../../../email-logs-2.md)
+- [`email-monitoring-2.md`](../../../email-monitoring-2.md)
+- [`email-notifications-2.md`](../../../email-notifications-2.md)
+- [`email-plugins-analysis-2.md`](../../../email-plugins-analysis-2.md)
+- [`email-queue-2.md`](../../../email-queue-2.md)
+- [`email-sending-troubleshooting-2.md`](../../../email-sending-troubleshooting-2.md)
+- [`email-translations-2.md`](../../../email-translations-2.md)
+- [`email-wysiwyg-editor-2.md`](../../../email-wysiwyg-editor-2.md)
 - [`enum-config-usage.md`](./enum-config-usage.md)
 <<<<<<< HEAD
 =======
@@ -2194,22 +2194,22 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 - [`enum-config-usage.md`](./enum-config-usage.md)
 - [`enum-config-usage.md`](./enum-config-usage.md)
-- [`enum_config_usage.md`](./enum_config_usage.md)
-- [`error-mailer.md`](./error-mailer.md)
-- [`error-mailer.md`](./error-mailer.md)
-- [`error_mailer.md`](./error_mailer.md)
-- [`errori-azione-netfun.md`](./errori-azione-netfun.md)
-- [`errori-azione-netfun.md`](./errori-azione-netfun.md)
+- [`enum-config-usage-2.md`](../../../enum-config-usage-2.md)
+- [`error-mailer-2.md`](../../../error-mailer-2.md)
+- [`error-mailer-2.md`](../../../error-mailer-2.md)
+- [`error-mailer-2.md`](../../../error-mailer-2.md)
+- [`errori-azione-netfun-2.md`](../../../errori-azione-netfun-2.md)
+- [`errori-azione-netfun-2.md`](../../../errori-azione-netfun-2.md)
 <<<<<<< HEAD
 =======
 =======
-- [`enum_config_usage.md`](./enum_config_usage.md)
-- [`error-mailer.md`](./error-mailer.md)
-- [`error_mailer.md`](./error_mailer.md)
-- [`errori-azione-netfun.md`](./errori-azione-netfun.md)
+- [`enum-config-usage-2.md`](../../../enum-config-usage-2.md)
+- [`error-mailer-2.md`](../../../error-mailer-2.md)
+- [`error-mailer-2.md`](../../../error-mailer-2.md)
+- [`errori-azione-netfun-2.md`](../../../errori-azione-netfun-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`errori_azione_netfun.md`](./errori-azione-netfun.md)
+- [`errori-azione-netfun-2.md`](../../../errori-azione-netfun-2.md)
 - [`events.md`](./events.md)
 - [`excellence.md`](./excellence.md)
 - [`factory-advantages.md`](./factory-advantages.md)
@@ -2237,100 +2237,100 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_X4e09n
 - [`file-naming.md`](../../../file-naming.md)
 - [`dto-structure.md`](../../../dto-structure.md)
-- [`dto-vs-factory-analysis.md`](./dto-vs-factory-analysis.md)
+- [`dto-vs-factory-analysis-2.md`](../../../dto-vs-factory-analysis-2.md)
 >>>>>>> laraxot/dev
-- [`dto-vs-factory-analysis.md`](../../../dto-vs-factory-analysis.md)
+- [`dto-vs-factory-analysis-2.md`](../../../dto-vs-factory-analysis.md)
 - [`dto-vs-factory.md`](../../../dto-vs-factory.md)
-- [`dto_structure_conventions.md`](../../../dto_structure_conventions.md)
-- [`dto_structure_rules.md`](./dto-structure-rules.md)
-- [`dto_vs_factory_analysis.md`](../../../dto-vs-factory-analysis.md)
+- [`dto-structure-conventions-2.md`](../../../dto-structure-conventions-2.md)
+- [`dto-structure-rules-2.md`](../../../dto-structure-rules-2.md)
+- [`dto-vs-factory-analysis-2.md`](../../../dto-vs-factory-analysis.md)
 - [`dynamic-class-resolution.md`](../../../dynamic-class-resolution.md)
 <<<<<<< HEAD
-- [`dynamic_class_resolution.md`](./dynamic_class_resolution.md)
+- [`dynamic-class-resolution-2.md`](../../../dynamic-class-resolution-2.md)
 - [`editor-visuale.md`](../../../editor-visuale.md)
 - [`eloquent-properties-best-practices.md`](../../../eloquent-properties-best-practices.md)
-- [`email-analytics.md`](../../../email-analytics.md)
-- [`email-backup.md`](../../../email-backup.md)
+- [`email-analytics-2.md`](../../../email-analytics.md)
+- [`email-backup-2.md`](../../../email-backup.md)
 - [`email-best-practices.md`](./email-best-practices.md)
-- [`email-cache.md`](../../../email-cache.md)
-- [`email-html-best-practices.md`](../../../email-html-best-practices.md)
+- [`email-cache-2.md`](../../../email-cache.md)
+- [`email-html-best-practices-2.md`](../../../email-html-best-practices.md)
 - [`email-integration.md`](../../../email-integration.md)
-- [`email-logs.md`](../../../email-logs.md)
-- [`email-monitoring.md`](../../../email-monitoring.md)
-- [`email-notifications.md`](../../../email-notifications.md)
-- [`email-plugins-analysis.md`](../../../email-plugins-analysis.md)
+- [`email-logs-2.md`](../../../email-logs.md)
+- [`email-monitoring-2.md`](../../../email-monitoring.md)
+- [`email-notifications-2.md`](../../../email-notifications.md)
+- [`email-plugins-analysis-2.md`](../../../email-plugins-analysis.md)
 - [`email-plugins.md`](../../../email-plugins.md)
-- [`email-queue.md`](../../../email-queue.md)
-- [`email-sending-troubleshooting.md`](../../../email-sending-troubleshooting.md)
-- [`email-translations.md`](../../../email-translations.md)
+- [`email-queue-2.md`](../../../email-queue.md)
+- [`email-sending-troubleshooting-2.md`](../../../email-sending-troubleshooting.md)
+- [`email-translations-2.md`](../../../email-translations.md)
 =======
 - [`dynamic-class-resolution.md`](./dynamic-class-resolution.md)
 - [`dynamic-class-resolution.md`](../../../dynamic-class-resolution.md)
-- [`dynamic_class_resolution.md`](./dynamic_class_resolution.md)
+- [`dynamic-class-resolution-2.md`](../../../dynamic-class-resolution-2.md)
 - [`editor-visuale.md`](../../../editor-visuale.md)
 - [`eloquent-properties-best-practices.md`](../../../eloquent-properties-best-practices.md)
-- [`email-analytics.md`](./email-analytics.md)
-- [`email-analytics.md`](../../../email-analytics.md)
-- [`email-backup.md`](../../../email-backup.md)
-- [`email-backup.md`](./email-backup.md)
-- [`email-backup.md`](../../../email-backup.md)
+- [`email-analytics-2.md`](../../../email-analytics-2.md)
+- [`email-analytics-2.md`](../../../email-analytics.md)
+- [`email-backup-2.md`](../../../email-backup.md)
+- [`email-backup-2.md`](../../../email-backup-2.md)
+- [`email-backup-2.md`](../../../email-backup.md)
 - [`email-best-practices.md`](./email-best-practices.md)
 <<<<<<< HEAD
 - [`email-best-practices.md`](./email-best-practices.md)
 =======
 >>>>>>> laraxot/dev
-- [`email-cache.md`](./email-cache.md)
-- [`email-cache.md`](../../../email-cache.md)
-- [`email-html-best-practices.md`](./email-html-best-practices.md)
-- [`email-html-best-practices.md`](../../../email-html-best-practices.md)
+- [`email-cache-2.md`](../../../email-cache-2.md)
+- [`email-cache-2.md`](../../../email-cache.md)
+- [`email-html-best-practices-2.md`](../../../email-html-best-practices-2.md)
+- [`email-html-best-practices-2.md`](../../../email-html-best-practices.md)
 - [`email-integration.md`](../../../email-integration.md)
-- [`email-logs.md`](./email-logs.md)
-- [`email-logs.md`](../../../email-logs.md)
-- [`email-monitoring.md`](./email-monitoring.md)
-- [`email-monitoring.md`](../../../email-monitoring.md)
-- [`email-notifications.md`](./email-notifications.md)
-- [`email-notifications.md`](../../../email-notifications.md)
-- [`email-plugins-analysis.md`](./email-plugins-analysis.md)
-- [`email-plugins-analysis.md`](../../../email-plugins-analysis.md)
+- [`email-logs-2.md`](../../../email-logs-2.md)
+- [`email-logs-2.md`](../../../email-logs.md)
+- [`email-monitoring-2.md`](../../../email-monitoring-2.md)
+- [`email-monitoring-2.md`](../../../email-monitoring.md)
+- [`email-notifications-2.md`](../../../email-notifications-2.md)
+- [`email-notifications-2.md`](../../../email-notifications.md)
+- [`email-plugins-analysis-2.md`](../../../email-plugins-analysis-2.md)
+- [`email-plugins-analysis-2.md`](../../../email-plugins-analysis.md)
 - [`email-plugins.md`](../../../email-plugins.md)
-- [`email-queue.md`](./email-queue.md)
-- [`email-queue.md`](../../../email-queue.md)
-- [`email-sending-troubleshooting.md`](./email-sending-troubleshooting.md)
-- [`email-sending-troubleshooting.md`](../../../email-sending-troubleshooting.md)
-- [`email-translations.md`](./email-translations.md)
-- [`email-translations.md`](../../../email-translations.md)
-- [`email-wysiwyg-editor.md`](./email-wysiwyg-editor.md)
+- [`email-queue-2.md`](../../../email-queue-2.md)
+- [`email-queue-2.md`](../../../email-queue.md)
+- [`email-sending-troubleshooting-2.md`](../../../email-sending-troubleshooting-2.md)
+- [`email-sending-troubleshooting-2.md`](../../../email-sending-troubleshooting.md)
+- [`email-translations-2.md`](../../../email-translations-2.md)
+- [`email-translations-2.md`](../../../email-translations.md)
+- [`email-wysiwyg-editor-2.md`](../../../email-wysiwyg-editor-2.md)
 >>>>>>> laraxot/dev
-- [`email-wysiwyg-editor.md`](../../../email-wysiwyg-editor.md)
-- [`email_analytics.md`](../../../email-analytics.md)
-- [`email_backup.md`](../../../email_backup.md)
+- [`email-wysiwyg-editor-2.md`](../../../email-wysiwyg-editor.md)
+- [`email-analytics-2.md`](../../../email-analytics.md)
+- [`email-backup-2.md`](../../../email-backup-2.md)
 - [`email_best_practices.md`](./email-best-practices.md)
-- [`email_cache.md`](../../../email_cache.md)
-- [`email_html_best_practices.md`](../../../email-html-best-practices.md)
-- [`email_logs.md`](../../../email_logs.md)
-- [`email_monitoring.md`](../../../email_monitoring.md)
-- [`email_notifications.md`](../../../email_notifications.md)
-- [`email_plugins_analysis.md`](../../../email_plugins_analysis.md)
-- [`email_queue.md`](../../../email_queue.md)
-- [`email_sending_troubleshooting.md`](../../../email_sending_troubleshooting.md)
-- [`email_translations.md`](../../../email_translations.md)
-- [`email_wysiwyg_editor.md`](../../../email-wysiwyg-editor.md)
+- [`email-cache-2.md`](../../../email-cache-2.md)
+- [`email-html-best-practices-2.md`](../../../email-html-best-practices.md)
+- [`email-logs-2.md`](../../../email-logs-2.md)
+- [`email-monitoring-2.md`](../../../email-monitoring-2.md)
+- [`email-notifications-2.md`](../../../email-notifications-2.md)
+- [`email-plugins-analysis-2.md`](../../../email-plugins-analysis-2.md)
+- [`email-queue-2.md`](../../../email-queue-2.md)
+- [`email-sending-troubleshooting-2.md`](../../../email-sending-troubleshooting-2.md)
+- [`email-translations-2.md`](../../../email-translations-2.md)
+- [`email-wysiwyg-editor-2.md`](../../../email-wysiwyg-editor.md)
 - [`enum-config-usage.md`](../../../enum-config-usage.md)
 <<<<<<< HEAD
-- [`enum_config_usage.md`](./enum_config_usage.md)
-- [`error-mailer.md`](../../../error-mailer.md)
-- [`error_mailer.md`](../../../error_mailer.md)
+- [`enum-config-usage-2.md`](../../../enum-config-usage-2.md)
+- [`error-mailer-2.md`](../../../error-mailer.md)
+- [`error-mailer-2.md`](../../../error-mailer-2.md)
 =======
 - [`enum-config-usage.md`](./enum-config-usage.md)
 - [`enum-config-usage.md`](../../../enum-config-usage.md)
-- [`enum_config_usage.md`](./enum_config_usage.md)
-- [`error-mailer.md`](./error-mailer.md)
-- [`error-mailer.md`](../../../error-mailer.md)
-- [`error_mailer.md`](../../../error_mailer.md)
-- [`errori-azione-netfun.md`](./errori-azione-netfun.md)
+- [`enum-config-usage-2.md`](../../../enum-config-usage-2.md)
+- [`error-mailer-2.md`](../../../error-mailer-2.md)
+- [`error-mailer-2.md`](../../../error-mailer.md)
+- [`error-mailer-2.md`](../../../error-mailer-2.md)
+- [`errori-azione-netfun-2.md`](../../../errori-azione-netfun-2.md)
 >>>>>>> laraxot/dev
-- [`errori-azione-netfun.md`](../../../errori-azione-netfun.md)
-- [`errori_azione_netfun.md`](../../../errori-azione-netfun.md)
+- [`errori-azione-netfun-2.md`](../../../errori-azione-netfun.md)
+- [`errori-azione-netfun-2.md`](../../../errori-azione-netfun.md)
 - [`events.md`](../../../events.md)
 - [`excellence.md`](./excellence.md)
 - [`factory-advantages.md`](./factory-advantages.md)
@@ -2359,10 +2359,10 @@ Documentation for `notify` module categorized as **integrations**.
 - [`final-summary.md`](./final-summary.md)
 - [`firebase.md`](./firebase.md)
 - [`fix-colori-header-footer.md`](./fix-colori-header-footer.md)
-- [`folio-routing-fix.md`](../../../folio-routing-fix.md)
+- [`folio-routing-fix-2.md`](../../../folio-routing-fix.md)
 - [`folio-volt-best-practices.md`](./folio-volt-best-practices.md)
 - [`form-schema-conventions.md`](./form-schema-conventions.md)
-- [`folio-routing-fix.md`](../../../folio-routing-fix.md)
+- [`folio-routing-fix-2.md`](../../../folio-routing-fix.md)
 - [`folio-volt-best-practices.md`](../../../folio-volt-best-practices.md)
 - [`form-schema-conventions.md`](../../../form-schema-conventions.md)
 - [`form-schema-conventions.md`](./form-schema-conventions.md)
@@ -2374,10 +2374,10 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`form_schema_conventions.md`](./form_schema_conventions.md)
+- [`form-schema-conventions-2.md`](../../../form-schema-conventions-2.md)
 - [`gap-analysis-implementation.md`](./gap-analysis-implementation.md)
 - [`gemini.md`](./gemini.md)
-- [`git-commit-push-rule.md`](../../../git-commit-push-rule.md)
+- [`git-commit-push-rule-2.md`](../../../git-commit-push-rule.md)
 - [`git-conflicts-inventory.md`](../../../git-conflicts-inventory.md)
 - [`git-conflicts-resolution-summary.md`](./git-conflicts-resolution-summary.md)
 - [`git-conflicts-resolution-sumy.md`](../../../git-conflicts-resolution-sumy.md)
@@ -2390,35 +2390,35 @@ Documentation for `notify` module categorized as **integrations**.
 - [`gits-resolution.md`](../../../gits-resolution.md)
 <<<<<<< .merge_file_VkYtaf
 - [`grapesjs-enhancement-1.md`](./grapesjs-enhancement-1.md)
-- [`grapesjs-enhancement.md`](./grapesjs-enhancement.md)
-- [`grapesjs-enhancement.md`](./grapesjs-enhancement.md)
+- [`grapesjs-enhancement-2.md`](../../../grapesjs-enhancement-2.md)
+- [`grapesjs-enhancement-2.md`](../../../grapesjs-enhancement-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 - [`gits-resolution.md`](../../../gits-resolution.md)
 =======
 >>>>>>> .merge_file_X4e09n
-- [`grapesjs-enhancement.md`](./grapesjs-enhancement.md)
+- [`grapesjs-enhancement-2.md`](../../../grapesjs-enhancement-2.md)
 =======
 <<<<<<< .merge_file_EZjoNq
 - [`gits-resolution.md`](./gits-resolution.md)
 - [`grapesjs-enhancement-1.md`](./grapesjs-enhancement-1.md)
 =======
 - [`gits-resolution.md`](../../../gits-resolution.md)
-- [`grapesjs-enhancement.md`](./grapesjs-enhancement.md)
+- [`grapesjs-enhancement-2.md`](../../../grapesjs-enhancement-2.md)
 >>>>>>> .merge_file_junMiY
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
-- [`grapesjs-enhancement.md`](./grapesjs-enhancement.md)
+- [`grapesjs-enhancement-2.md`](../../../grapesjs-enhancement-2.md)
 =======
 - [`gits-resolution.md`](../../../gits-resolution.md)
 =======
 >>>>>>> .merge_file_X4e09n
-- [`grapesjs-enhancement.md`](./grapesjs-enhancement.md)
+- [`grapesjs-enhancement-2.md`](../../../grapesjs-enhancement-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [`grapesjs.md`](./grapesjs.md)
-- [`grapesjs_enhancement.md`](./grapesjs_enhancement.md)
+- [`grapesjs-enhancement-2.md`](../../../grapesjs-enhancement-2.md)
 - [`graphify-map.md`](../../../graphify-map.md)
 - [`guida-migrazione-step-by-step.md`](./guida-migrazione-step-by-step.md)
 - [`header-fix-analysis.md`](./header-fix-analysis.md)
@@ -2431,7 +2431,7 @@ Documentation for `notify` module categorized as **integrations**.
 <<<<<<< HEAD
 - [`implementation-guide.md`](./implementation-guide.md)
 - [`implementation-pratica.md`](./implementation-pratica.md)
-- [`implementation-summary-.md`](../../../implementation-summary-.md)
+- [`implementation-summary-2.md`](../../../implementation-summary-2.md)
 - [`implementation-summary-1.md`](./implementation-summary-1.md)
 - [`implementation-summary-2.md`](./implementation-summary-2.md)
 - [`implementation-summary.md`](./implementation-summary.md)
@@ -2441,16 +2441,16 @@ Documentation for `notify` module categorized as **integrations**.
 - [`implementation-guide.md`](./implementation-guide.md)
 - [`implementation-pratica.md`](./implementation-pratica.md)
 <<<<<<< HEAD
-- [`implementation-summary-.md`](../../../implementation-summary-.md)
+- [`implementation-summary-2.md`](../../../implementation-summary-2.md)
 - [`implementation-summary.md`](./implementation-summary.md)
 - [`implementation-summary-gennaio.md`](./implementation-summary-gennaio.md)
 =======
 <<<<<<< .merge_file_EZjoNq
-- [`implementation-summary-.md`](./implementation-summary-.md)
+- [`implementation-summary-2.md`](./implementation-summary-2.md)
 - [`implementation-summary-1.md`](./implementation-summary-1.md)
 - [`implementation-summary-2.md`](./implementation-summary-2.md)
 =======
-- [`implementation-summary-.md`](../../../implementation-summary-.md)
+- [`implementation-summary-2.md`](../../../implementation-summary-2.md)
 <<<<<<< .merge_file_VkYtaf
 - [`implementation-summary.md`](./implementation-summary.md)
 - [`implementation-summary-gennaio.md`](./implementation-summary-gennaio.md)
@@ -2458,7 +2458,7 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 =======
 - [`implementation-pratica.md`](./implementation-pratica.md)
-- [`implementation-summary-.md`](../../../implementation-summary-.md)
+- [`implementation-summary-2.md`](../../../implementation-summary-2.md)
 - [`implementation-summary.md`](./implementation-summary.md)
 - [`implementation-summary-gennaio.md`](./implementation-summary-gennaio.md)
 >>>>>>> laraxot/dev
@@ -2473,16 +2473,16 @@ Documentation for `notify` module categorized as **integrations**.
 - [`implementation_guide.md`](./implementation-guide.md)
 - [`implementations-completed.md`](./implementations-completed.md)
 - [`implementazione-completa-finale.md`](./implementazione-completa-finale.md)
-- [`implementazione-pratica.md`](./implementazione-pratica.md)
+- [`implementazione-pratica-2.md`](../../../implementazione-pratica-2.md)
 <<<<<<< HEAD
-- [`implementazione-pratica.md`](../../../implementazione-pratica.md)
+- [`implementazione-pratica-2.md`](../../../implementazione-pratica.md)
 - [`implementazione-refactoring-basemodel.md`](./implementazione-refactoring-basemodel.md)
-- [`implementazione_pratica.md`](../../../implementazione-pratica.md)
+- [`implementazione-pratica-2.md`](../../../implementazione-pratica.md)
 =======
 <<<<<<< HEAD
-- [`implementazione-pratica.md`](./implementazione-pratica.md)
+- [`implementazione-pratica-2.md`](../../../implementazione-pratica-2.md)
 - [`implementazione-refactoring-basemodel.md`](./implementazione-refactoring-basemodel.md)
-- [`implementazione_pratica.md`](./implementazione-pratica.md)
+- [`implementazione-pratica-2.md`](../../../implementazione-pratica-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_EZjoNq
@@ -2493,14 +2493,14 @@ Documentation for `notify` module categorized as **integrations**.
 <<<<<<< .merge_file_VkYtaf
 =======
 - [`implementazione-refactoring-basemodel.md`](./implementazione-refactoring-basemodel.md)
-- [`implementazione_pratica.md`](./implementazione-pratica.md)
+- [`implementazione-pratica-2.md`](../../../implementazione-pratica-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
 - [`improvements.md`](../../../improvements.md)
 - [`index-1.md`](./index.md)
-- [`git-commit-push-rule.md`](../../../git-commit-push-rule.md)
+- [`git-commit-push-rule-2.md`](../../../git-commit-push-rule.md)
 - [`git-conflicts-inventory.md`](../../../git-conflicts-inventory.md)
 - [`git-conflicts-resolution-summary.md`](../../../git-conflicts-resolution-summary.md)
 - [`git-conflicts-resolution-sumy.md`](../../../git-conflicts-resolution-sumy.md)
@@ -2512,11 +2512,11 @@ Documentation for `notify` module categorized as **integrations**.
 - [`gits-resolution.md`](../../../gits-resolution.md)
 <<<<<<< HEAD
 =======
-- [`grapesjs-enhancement.md`](./grapesjs-enhancement.md)
+- [`grapesjs-enhancement-2.md`](../../../grapesjs-enhancement-2.md)
 >>>>>>> laraxot/dev
-- [`grapesjs-enhancement.md`](../../../grapesjs-enhancement.md)
+- [`grapesjs-enhancement-2.md`](../../../grapesjs-enhancement.md)
 - [`grapesjs.md`](../../../grapesjs.md)
-- [`grapesjs_enhancement.md`](../../../grapesjs_enhancement.md)
+- [`grapesjs-enhancement-2.md`](../../../grapesjs-enhancement-2.md)
 - [`graphify-map.md`](../../../graphify-map.md)
 - [`guida-migrazione-step-by-step.md`](../../../guida-migrazione-step-by-step.md)
 - [`header-fix-analysis.md`](./header-fix-analysis.md)
@@ -2528,7 +2528,7 @@ Documentation for `notify` module categorized as **integrations**.
 - [`implementation-guide-gdpr-consent.md`](./implementation-guide-gdpr-consent.md)
 - [`implementation-guide.md`](../../../implementation-guide.md)
 - [`implementation-pratica.md`](../../../implementation-pratica.md)
-- [`implementation-summary-.md`](../../../implementation-summary-.md)
+- [`implementation-summary-2.md`](../../../implementation-summary-2.md)
 - [`implementation-summary.md`](./implementation-summary.md)
 - [`implementation-summary-gennaio.md`](./implementation-summary-gennaio.md)
 <<<<<<< HEAD
@@ -2541,13 +2541,13 @@ Documentation for `notify` module categorized as **integrations**.
 - [`implementazione-completa-finale.md`](./implementazione-completa-finale.md)
 <<<<<<< HEAD
 - [`index-conflict.md`](./index-conflict.md)
-- [`inheritance-conventions.md`](./inheritance-conventions.md)
-- [`inheritance-conventions.md`](./inheritance-conventions.md)
+- [`inheritance-conventions-2.md`](../../../inheritance-conventions-2.md)
+- [`inheritance-conventions-2.md`](../../../inheritance-conventions-2.md)
 =======
-- [`implementazione-pratica.md`](./implementazione-pratica.md)
-- [`implementazione-pratica.md`](../../../implementazione-pratica.md)
+- [`implementazione-pratica-2.md`](../../../implementazione-pratica-2.md)
+- [`implementazione-pratica-2.md`](../../../implementazione-pratica.md)
 - [`implementazione-refactoring-basemodel.md`](./implementazione-refactoring-basemodel.md)
-- [`implementazione_pratica.md`](../../../implementazione-pratica.md)
+- [`implementazione-pratica-2.md`](../../../implementazione-pratica.md)
 - [`improvements.md`](../../../improvements.md)
 - [`index-1.md`](../../../index-notify-module.md)
 <<<<<<< HEAD
@@ -2559,70 +2559,70 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_junMiY
 >>>>>>> laraxot/dev
 - [`index-conflict.md`](./index-conflict.md)
-- [`inheritance-conventions.md`](./inheritance-conventions.md)
-- [`inheritance-conventions.md`](./inheritance-conventions.md)
+- [`inheritance-conventions-2.md`](../../../inheritance-conventions-2.md)
+- [`inheritance-conventions-2.md`](../../../inheritance-conventions-2.md)
 =======
 - [`index-conflict.md`](./index-conflict.md)
-- [`inheritance-conventions.md`](./inheritance-conventions.md)
+- [`inheritance-conventions-2.md`](../../../inheritance-conventions-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`inheritance_conventions.md`](./inheritance-conventions.md)
+- [`inheritance-conventions-2.md`](../../../inheritance-conventions-2.md)
 - [`installazione-strumenti.md`](./installazione-strumenti.md)
 - [`integrazioni.md`](./integrazioni.md)
-- [`interface-naming-convention.md`](./interface-naming-convention.md)
+- [`interface-naming-convention-2.md`](../../../interface-naming-convention-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
-- [`interface-naming-convention.md`](./interface-naming-convention.md)
-- [`interface-naming-convention.md`](./interface-naming-convention.md)
-- [`interface-structure-clarification.md`](./interface-structure-clarification.md)
-- [`interface-structure-clarification.md`](./interface-structure-clarification.md)
+- [`interface-naming-convention-2.md`](../../../interface-naming-convention-2.md)
+- [`interface-naming-convention-2.md`](../../../interface-naming-convention-2.md)
+- [`interface-structure-clarification-2.md`](../../../interface-structure-clarification-2.md)
+- [`interface-structure-clarification-2.md`](../../../interface-structure-clarification-2.md)
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`interface-structure-clarification.md`](./interface-structure-clarification.md)
-- [`interface_naming_convention.md`](./interface_naming_convention.md)
-- [`interface_structure_clarification.md`](./interface_structure_clarification.md)
-- [`interfaces-implementation-guide.md`](./interfaces-implementation-guide.md)
+- [`interface-structure-clarification-2.md`](../../../interface-structure-clarification-2.md)
+- [`interface-naming-convention-2.md`](../../../interface-naming-convention-2.md)
+- [`interface-structure-clarification-2.md`](../../../interface-structure-clarification-2.md)
+- [`interfaces-implementation-guide-2.md`](../../../interfaces-implementation-guide-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
-- [`interfaces-implementation-guide.md`](./interfaces-implementation-guide.md)
-- [`interfaces-implementation-guide.md`](./interfaces-implementation-guide.md)
+- [`interfaces-implementation-guide-2.md`](../../../interfaces-implementation-guide-2.md)
+- [`interfaces-implementation-guide-2.md`](../../../interfaces-implementation-guide-2.md)
 - [`interfaces-implementation.md`](../../../interfaces-implementation.md)
-- [`interfaces_implementation_guide.md`](./interfaces_implementation_guide.md)
+- [`interfaces-implementation-guide-2.md`](../../../interfaces-implementation-guide-2.md)
 <<<<<<< HEAD
 - [`ision-log-removal-seasonal-action.md`](../../../ision-log-removal-seasonal-action.md)
 <<<<<<< .merge_file_VkYtaf
 - [`json-best-practices-1.md`](./json-best-practices-1.md)
-- [`json-best-practices.md`](./json-best-practices.md)
+- [`json-best-practices-2.md`](../../../json-best-practices-2.md)
 =======
 <<<<<<< HEAD
 - [`ision-log-removal-seasonal-action.md`](../../../ision-log-removal-seasonal-action.md)
 =======
 >>>>>>> .merge_file_X4e09n
-- [`json-best-practices.md`](./json-best-practices.md)
+- [`json-best-practices-2.md`](../../../json-best-practices-2.md)
 =======
 <<<<<<< .merge_file_EZjoNq
 - [`ision-log-removal-seasonal-action.md`](./ision-log-removal-seasonal-action.md)
 - [`json-best-practices-1.md`](./json-best-practices-1.md)
 =======
 - [`ision-log-removal-seasonal-action.md`](../../../ision-log-removal-seasonal-action.md)
-- [`json-best-practices.md`](./json-best-practices.md)
+- [`json-best-practices-2.md`](../../../json-best-practices-2.md)
 >>>>>>> .merge_file_junMiY
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`json-best-practices.md`](./json-best-practices.md)
-- [`json_best_practices.md`](./json_best_practices.md)
+- [`json-best-practices-2.md`](../../../json-best-practices-2.md)
+- [`json-best-practices-2.md`](../../../json-best-practices-2.md)
 - [`kdown-linking-conventions.md`](./kdown-linking-conventions.md)
-- [`lang-link-1.md`](./lang-link-1.md)
+- [`lang-link-1-2.md`](../../../../../UI/docs/lang-link-1-2.md)
 - [`lang-link.md`](./lang-link.md)
 - [`lang_link.md`](./lang-link.md)
 <<<<<<< HEAD
@@ -2654,10 +2654,10 @@ Documentation for `notify` module categorized as **integrations**.
 - [`laravel-path-conventions.md`](./laravel-path-conventions.md)
 =======
 - [`interfaces-implementation.md`](../../../interfaces-implementation.md)
-- [`interfaces_implementation_guide.md`](./interfaces_implementation_guide.md)
+- [`interfaces-implementation-guide-2.md`](../../../interfaces-implementation-guide-2.md)
 - [`ision-log-removal-seasonal-action.md`](../../../ision-log-removal-seasonal-action.md)
-- [`json-best-practices.md`](./json-best-practices.md)
-- [`json_best_practices.md`](./json_best_practices.md)
+- [`json-best-practices-2.md`](../../../json-best-practices-2.md)
+- [`json-best-practices-2.md`](../../../json-best-practices-2.md)
 - [`kdown-linking-conventions.md`](./kdown-linking-conventions.md)
 - [`lang-link.md`](./lang-link.md)
 - [`lang_link.md`](./lang-link.md)
@@ -2667,11 +2667,11 @@ Documentation for `notify` module categorized as **integrations**.
 - [`laravel-path-conventions.md`](./laravel-path-conventions.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`laravel_path_conventions.md`](./laravel_path_conventions.md)
+- [`laravel-path-conventions-2.md`](../../../laravel-path-conventions-2.md)
 - [`launch-plan.md`](../../../launch-plan.md)
 - [`launch.md`](./launch.md)
 - [`leggi-qui-domani.md`](./leggi-qui-domani.md)
-- [`links.md`](./links.md)
+- [`links-2.md`](../../../../../Gdpr/docs/links-2.md)
 - [`locations-standards.md`](./locations-standards.md)
 <<<<<<< HEAD
 =======
@@ -2679,9 +2679,9 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 - [`locations-standards.md`](./locations-standards.md)
 - [`locations-standards.md`](./locations-standards.md)
-- [`locations_standards.md`](./locations_standards.md)
+- [`locations-standards-2.md`](../../../locations-standards-2.md)
 - [`log.md`](./log.md)
-- [`logging-best-practices.md`](./logging-best-practices.md)
+- [`logging-best-practices-2.md`](../../../logging-best-practices-2.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
 =======
@@ -2689,7 +2689,7 @@ Documentation for `notify` module categorized as **integrations**.
 <<<<<<< .merge_file_EZjoNq
 >>>>>>> .merge_file_X4e09n
 - [`logging-optimization-plan.md`](./logging-optimization-plan.md)
-- [`logging-optimization-summary-.md`](./logging-optimization-summary-.md)
+- [`logging-optimization-summary-2.md`](./logging-optimization-summary-2.md)
 - [`logging-optimization-summary-1.md`](./logging-optimization-summary-1.md)
 =======
 <<<<<<< .merge_file_VkYtaf
@@ -2697,16 +2697,16 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 <<<<<<< .merge_file_EZjoNq
 - [`logging-optimization-plan.md`](./logging-optimization-plan.md)
-- [`logging-optimization-summary-.md`](./logging-optimization-summary-.md)
+- [`logging-optimization-summary-2.md`](./logging-optimization-summary-2.md)
 - [`logging-optimization-summary-1.md`](./logging-optimization-summary-1.md)
 =======
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
 >>>>>>> laraxot/dev
-- [`logging-best-practices.md`](./logging-best-practices.md)
+- [`logging-best-practices-2.md`](../../../logging-best-practices-2.md)
 - [`logging-optimization-plan.md`](../../../logging-optimization-plan.md)
-- [`logging-optimization-summary-.md`](../../../logging-optimization-summary-.md)
+- [`logging-optimization-summary-2.md`](../../../logging-optimization-summary-2.md)
 <<<<<<< .merge_file_VkYtaf
 - [`logging-optimization-summary.md`](./logging-optimization-summary.md)
 <<<<<<< HEAD
@@ -2722,78 +2722,78 @@ Documentation for `notify` module categorized as **integrations**.
 <<<<<<< .merge_file_VkYtaf
 - [`logging-optimization-summary.md`](./logging-optimization-summary.md)
 =======
-- [`locations_standards.md`](./locations_standards.md)
+- [`locations-standards-2.md`](../../../locations-standards-2.md)
 - [`log.md`](./log.md)
-- [`logging-best-practices.md`](./logging-best-practices.md)
+- [`logging-best-practices-2.md`](../../../logging-best-practices-2.md)
 - [`logging-optimization-plan.md`](../../../logging-optimization-plan.md)
-- [`logging-optimization-summary-.md`](../../../logging-optimization-summary-.md)
+- [`logging-optimization-summary-2.md`](../../../logging-optimization-summary-2.md)
 =======
 >>>>>>> .merge_file_X4e09n
 - [`logging-optimization-summary.md`](./logging-optimization-summary.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [`login-page-status.md`](./login-page-status.md)
-- [`login-page-translation-fix.md`](../../../login-page-translation-fix.md)
+- [`login-page-translation-fix-2.md`](../../../login-page-translation-fix.md)
 - [`login.md`](./login.md)
-- [`mail-layouts.md`](./mail-layouts.md)
-- [`mail-layouts-guide.md`](./mail-layouts-guide.md)
+- [`mail-layouts-2.md`](../../../mail-layouts-2.md)
+- [`mail-layouts-guide-2.md`](../../../mail-layouts-guide-2.md)
 <<<<<<< HEAD
-- [`mail-layouts-guide.md`](./mail-layouts-guide.md)
-- [`mail-layouts-guide.md`](./mail-layouts-guide.md)
+- [`mail-layouts-guide-2.md`](../../../mail-layouts-guide-2.md)
+- [`mail-layouts-guide-2.md`](../../../mail-layouts-guide-2.md)
 =======
 <<<<<<< HEAD
-- [`mail-layouts-guide.md`](./mail-layouts-guide.md)
-- [`mail-layouts-guide.md`](./mail-layouts-guide.md)
+- [`mail-layouts-guide-2.md`](../../../mail-layouts-guide-2.md)
+- [`mail-layouts-guide-2.md`](../../../mail-layouts-guide-2.md)
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [`mail-layouts-theme-integration.md`](./mail-layouts-theme-integration.md)
-- [`mail-layouts.md`](./mail-layouts.md)
-- [`mail_layouts.md`](./mail-layouts.md)
-- [`mail_layouts_guide.md`](./mail_layouts_guide.md)
+- [`mail-layouts-2.md`](../../../mail-layouts-2.md)
+- [`mail-layouts-2.md`](../../../mail-layouts-2.md)
+- [`mail-layouts-guide-2.md`](../../../mail-layouts-guide-2.md)
 - [`maintenance.md`](./maintenance.md)
 - [`markdown-linking-conventions.md`](./markdown-linking-conventions.md)
 - [`integrazioni.md`](../../../integrazioni.md)
 - [`interface-naming-convention-deprecated.md`](../../../interface-naming-convention-deprecated.md)
-- [`interface-naming-convention.md`](./interface-naming-convention.md)
-- [`interface-naming-convention.md`](../../../interface-naming-convention.md)
-- [`interface-structure-clarification.md`](../../../interface-structure-clarification.md)
-- [`interface-structure-clarification.md`](./interface-structure-clarification.md)
+- [`interface-naming-convention-2.md`](../../../interface-naming-convention-2.md)
+- [`interface-naming-convention-2.md`](../../../interface-naming-convention.md)
+- [`interface-structure-clarification-2.md`](../../../interface-structure-clarification.md)
+- [`interface-structure-clarification-2.md`](../../../interface-structure-clarification-2.md)
 <<<<<<< HEAD
-- [`interface-structure-clarification.md`](./interface-structure-clarification.md)
+- [`interface-structure-clarification-2.md`](../../../interface-structure-clarification-2.md)
 =======
 <<<<<<< HEAD
-- [`interface-structure-clarification.md`](./interface-structure-clarification.md)
+- [`interface-structure-clarification-2.md`](../../../interface-structure-clarification-2.md)
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`interface_naming_convention.md`](../../../interface_naming_convention.md)
-- [`interface_structure_clarification.md`](../../../interface_structure_clarification.md)
-- [`interfaces-implementation-guide.md`](../../../interfaces-implementation-guide.md)
-- [`interfaces-implementation-guide.md`](./interfaces-implementation-guide.md)
-- [`interfaces-implementation-guide.md`](../../../interfaces-implementation-guide.md)
+- [`interface-naming-convention-2.md`](../../../interface-naming-convention-2.md)
+- [`interface-structure-clarification-2.md`](../../../interface-structure-clarification-2.md)
+- [`interfaces-implementation-guide-2.md`](../../../interfaces-implementation-guide.md)
+- [`interfaces-implementation-guide-2.md`](../../../interfaces-implementation-guide-2.md)
+- [`interfaces-implementation-guide-2.md`](../../../interfaces-implementation-guide.md)
 - [`interfaces-implementation.md`](../../../interfaces-implementation.md)
-- [`interfaces_implementation_guide.md`](../../../interfaces_implementation_guide.md)
+- [`interfaces-implementation-guide-2.md`](../../../interfaces-implementation-guide-2.md)
 - [`ision-log-removal-seasonal-action.md`](../../../ision-log-removal-seasonal-action.md)
-- [`json-best-practices.md`](./json-best-practices.md)
-- [`json-best-practices.md`](../../../json-best-practices.md)
-- [`json_best_practices.md`](../../../json_best_practices.md)
+- [`json-best-practices-2.md`](../../../json-best-practices-2.md)
+- [`json-best-practices-2.md`](../../../json-best-practices.md)
+- [`json-best-practices-2.md`](../../../json-best-practices-2.md)
 - [`kdown-linking-conventions.md`](./kdown-linking-conventions.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
 - [`lang-link.md`](./lang-link.md)
-- [`lang-link-1.md`](./lang-link-1.md)
+- [`lang-link-1-2.md`](../../../../../UI/docs/lang-link-1-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_X4e09n
-- [`lang-link-1.md`](./lang-link-1.md)
+- [`lang-link-1-2.md`](../../../../../UI/docs/lang-link-1-2.md)
 =======
 <<<<<<< HEAD
 - [`lang-link.md`](./lang-link.md)
 =======
-- [`lang-link-1.md`](./lang-link-1.md)
+- [`lang-link-1-2.md`](../../../../../UI/docs/lang-link-1-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
@@ -2816,33 +2816,33 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`laravel_path_conventions.md`](./laravel_path_conventions.md)
+- [`laravel-path-conventions-2.md`](../../../laravel-path-conventions-2.md)
 - [`launch-plan.md`](../../../launch-plan.md)
 - [`launch.md`](./launch.md)
 - [`leggi-qui-domani.md`](./leggi-qui-domani.md)
-- [`links.md`](./links.md)
+- [`links-2.md`](../../../../../Gdpr/docs/links-2.md)
 - [`locations-standards.md`](../../../locations-standards.md)
 - [`locations-standards.md`](./locations-standards.md)
 - [`locations-standards.md`](../../../locations-standards.md)
-- [`locations_standards.md`](./locations_standards.md)
+- [`locations-standards-2.md`](../../../locations-standards-2.md)
 - [`log.md`](./log.md)
-- [`logging-best-practices.md`](./logging-best-practices.md)
-- [`logging-best-practices.md`](../../../logging-best-practices.md)
+- [`logging-best-practices-2.md`](../../../logging-best-practices-2.md)
+- [`logging-best-practices-2.md`](../../../logging-best-practices.md)
 - [`logging-optimization-plan.md`](../../../logging-optimization-plan.md)
-- [`logging-optimization-summary-.md`](../../../logging-optimization-summary-.md)
+- [`logging-optimization-summary-2.md`](../../../logging-optimization-summary-2.md)
 - [`logging-optimization-summary.md`](./logging-optimization-summary.md)
 - [`logging-optimization-summary.md`](../../../logging-optimization-summary.md)
 - [`login-page-status.md`](./login-page-status.md)
-- [`login-page-translation-fix.md`](../../../login-page-translation-fix.md)
+- [`login-page-translation-fix-2.md`](../../../login-page-translation-fix.md)
 - [`login.md`](./login.md)
-- [`mail-layouts.md`](./mail-layouts.md)
-- [`mail-layouts-guide.md`](../../../mail-layouts-guide.md)
-- [`mail-layouts-guide.md`](./mail-layouts-guide.md)
-- [`mail-layouts-guide.md`](../../../mail-layouts-guide.md)
+- [`mail-layouts-2.md`](../../../mail-layouts-2.md)
+- [`mail-layouts-guide-2.md`](../../../mail-layouts-guide.md)
+- [`mail-layouts-guide-2.md`](../../../mail-layouts-guide-2.md)
+- [`mail-layouts-guide-2.md`](../../../mail-layouts-guide.md)
 - [`mail-layouts-theme-integration.md`](../../../mail-layouts-theme-integration.md)
-- [`mail-layouts.md`](../../../mail-layouts.md)
-- [`mail_layouts.md`](../../../mail-layouts.md)
-- [`mail_layouts_guide.md`](../../../mail_layouts_guide.md)
+- [`mail-layouts-2.md`](../../../mail-layouts.md)
+- [`mail-layouts-2.md`](../../../mail-layouts.md)
+- [`mail-layouts-guide-2.md`](../../../mail-layouts-guide-2.md)
 - [`maintenance.md`](../../../maintenance.md)
 - [`markdown-linking-conventions.md`](../../../markdown-linking-conventions.md)
 - [`markdown-linking-conventions.md`](./markdown-linking-conventions.md)
@@ -2854,7 +2854,7 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`markdown_linking_conventions.md`](./markdown_linking_conventions.md)
+- [`markdown-linking-conventions-2.md`](../../../markdown-linking-conventions-2.md)
 - [`master-documentation-index.md`](./master-documentation-index.md)
 - [`master-implementation-plan.md`](./master-implementation-plan.md)
 - [`master-plan.md`](./master-plan.md)
@@ -2890,26 +2890,26 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 - [`metodi-duplicati-analisi-globale.md`](./metodi-duplicati-analisi-globale.md)
 - [`metodi-duplicati-analisi.md`](./metodi-duplicati-analisi.md)
-- [`metodi_duplicati_analisi.md`](./metodi_duplicati_analisi.md)
+- [`metodi-duplicati-analisi-2.md`](./metodi-duplicati-analisi-2.md)
 - [`metodiuplicati-analisi.md`](./metodiuplicati-analisi.md)
 - [`missing-features-analysis.md`](./missing-features-analysis.md)
 - [`missing-features.md`](./missing-features.md)
 - [`missione-super-mucca-completata.md`](./missione-super-mucca-completata.md)
 - [`mixed-type-ultima-spiaggia.md`](./mixed-type-ultima-spiaggia.md)
-- [`model-changes.md`](./model-changes.md)
+- [`model-changes-2.md`](../../../model-changes-2.md)
 <<<<<<< HEAD
-- [`model-changes.md`](./model-changes.md)
+- [`model-changes-2.md`](../../../model-changes-2.md)
 <<<<<<< .merge_file_VkYtaf
 =======
 <<<<<<< HEAD
-- [`model-changes.md`](./model-changes.md)
+- [`model-changes-2.md`](../../../model-changes-2.md)
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
 - [`model-factory-seeder.md`](../../../model-factory-seeder.md)
-- [`model_changes.md`](./model_changes.md)
+- [`model-changes-2.md`](../../../model-changes-2.md)
 - [`modelli-factory-seeder-analisi-1.md`](./modelli-factory-seeder-analisi.md)
 - [`modelli-factory-seeder-analisi.md`](./modelli-factory-seeder-analisi.md)
 <<<<<<< HEAD
@@ -2927,48 +2927,48 @@ Documentation for `notify` module categorized as **integrations**.
 - [`modern-emailesigns.md`](../../../modern-emailesigns.md)
 - [`modularity-hardcoded-names.md`](./modularity-hardcoded-names.md)
 - [`module-analysis-complete.md`](./module-analysis-complete.md)
-- [`module-analysis.md`](./module-analysis.md)
+- [`module-analysis-3.md`](../../../../../Activity/docs/module-analysis-3.md)
 - [`module-docs-index.md`](./module-docs-index.md)
 - [`module-notify-root-symlink.md`](../../../module-notify-root-symlink.md)
 - [`module-notify.md`](./module-notify.md)
 - [`module.md`](../../../module.md)
 - [`monitoring.md`](../../../monitoring.md)
-- [`multi-agent-collaboration-guide.md`](../../../multi-agent-collaboration-guide.md)
-- [`multi-agent-collaboration.md`](../../../multi-agent-collaboration.md)
-- [`multi-agent-coordination-rules.md`](../../../multi-agent-coordination-rules.md)
+- [`multi-agent-collaboration-guide-2.md`](../../../multi-agent-collaboration-guide.md)
+- [`multi-agent-collaboration-2.md`](../../../multi-agent-collaboration.md)
+- [`multi-agent-coordination-rules-2.md`](../../../multi-agent-coordination-rules.md)
 - [`multi-org-sync-laraxot-provtv.md`](./multi-org-sync-laraxot-provtv.md)
 - [`mustache-variables.md`](./mustache-variables.md)
-- [`namespace-rules.md`](./namespace-rules.md)
+- [`namespace-rules-2.md`](../../../namespace-rules-2.md)
 <<<<<<< HEAD
-- [`namespace-rules.md`](../../../namespace-rules.md)
+- [`namespace-rules-2.md`](../../../namespace-rules.md)
 - [`namespace.md`](../../../namespace.md)
-- [`namespace_rules.md`](../../../namespace_rules.md)
-- [`naming-conventions-1.md`](./naming-conventions-1.md)
+- [`namespace-rules-2.md`](../../../namespace-rules-2.md)
+- [`naming-conventions-1-2.md`](../../../../../UI/docs/naming-conventions-1-2.md)
 - [`naming-conventions-2.md`](./naming-conventions-2.md)
 =======
 <<<<<<< HEAD
-- [`namespace-rules.md`](./namespace-rules.md)
+- [`namespace-rules-2.md`](../../../namespace-rules-2.md)
 - [`namespace.md`](../../../namespace.md)
-- [`namespace_rules.md`](./namespace_rules.md)
+- [`namespace-rules-2.md`](../../../namespace-rules-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_EZjoNq
-- [`naming-conventions-1.md`](./naming-conventions-1.md)
+- [`naming-conventions-1-2.md`](../../../../../UI/docs/naming-conventions-1-2.md)
 - [`naming-conventions-2.md`](./naming-conventions-2.md)
 =======
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
 =======
 - [`namespace.md`](../../../namespace.md)
-- [`namespace_rules.md`](./namespace_rules.md)
+- [`namespace-rules-2.md`](../../../namespace-rules-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
 - [`naming-conventions.md`](./naming-conventions.md)
-- [`model-changes.md`](../../../model-changes.md)
+- [`model-changes-2.md`](../../../model-changes.md)
 - [`model-factory-seeder.md`](../../../model-factory-seeder.md)
-- [`model_changes.md`](../../../model_changes.md)
+- [`model-changes-2.md`](../../../model-changes-2.md)
 - [`modelli-factory-seeder-analisi-1.md`](../../../modelli-factory-seeder-analisi.md)
 - [`modelli-factory-seeder-analisi-saluteora-module.md`](./modelli-factory-seeder-analisi-saluteora-module.md)
 - [`modelli-factory-seeder-analisi.md`](../../../modelli-factory-seeder-analisi.md)
@@ -2979,23 +2979,23 @@ Documentation for `notify` module categorized as **integrations**.
 - [`modern-emailesigns.md`](../../../modern-emailesigns.md)
 - [`modularity-hardcoded-names.md`](../../../modularity-hardcoded-names.md)
 - [`module-analysis-complete.md`](../../../module-analysis-complete.md)
-- [`module-analysis.md`](../../../module-analysis.md)
+- [`module-analysis-3.md`](../../../module-analysis.md)
 - [`module-docs-index.md`](./module-docs-index.md)
 - [`module-notify-root-symlink.md`](../../../module-notify-root-symlink.md)
 - [`module-notify.md`](../../../module-notify.md)
 - [`module.md`](../../../module.md)
 - [`monitoring.md`](../../../monitoring.md)
-- [`multi-agent-collaboration-guide.md`](../../../multi-agent-collaboration-guide.md)
-- [`multi-agent-collaboration.md`](../../../multi-agent-collaboration.md)
-- [`multi-agent-coordination-rules.md`](../../../multi-agent-coordination-rules.md)
+- [`multi-agent-collaboration-guide-2.md`](../../../multi-agent-collaboration-guide.md)
+- [`multi-agent-collaboration-2.md`](../../../multi-agent-collaboration.md)
+- [`multi-agent-coordination-rules-2.md`](../../../multi-agent-coordination-rules.md)
 - [`multi-org-sync-laraxot-provtv.md`](./multi-org-sync-laraxot-provtv.md)
 - [`mustache-variables.md`](../../../mustache-variables.md)
 <<<<<<< HEAD
 =======
-- [`namespace-rules.md`](./namespace-rules.md)
-- [`namespace-rules.md`](../../../namespace-rules.md)
+- [`namespace-rules-2.md`](../../../namespace-rules-2.md)
+- [`namespace-rules-2.md`](../../../namespace-rules.md)
 - [`namespace.md`](../../../namespace.md)
-- [`namespace_rules.md`](../../../namespace_rules.md)
+- [`namespace-rules-2.md`](../../../namespace-rules-2.md)
 - [`naming-conventions.md`](../../../naming-conventions.md)
 - [`naming-conventions.md`](./naming-conventions.md)
 <<<<<<< HEAD
@@ -3013,11 +3013,11 @@ Documentation for `notify` module categorized as **integrations**.
 - [`naming-conventions.md`](./naming-conventions.md)
 - [`naming_conventions.md`](./naming_conventions.md)
 - [`nested-resources.md`](./nested-resources.md)
-- [`netfun-action-errors.md`](./netfun-action-errors.md)
-- [`netfun-action-errors.md`](./netfun-action-errors.md)
-- [`netfun-action-updates.md`](./netfun-action-updates.md)
-- [`netfun-action-updates.md`](./netfun-action-updates.md)
-- [`netfun-action-updates.md`](./netfun-action-updates.md)
+- [`netfun-action-errors-2.md`](../../../netfun-action-errors-2.md)
+- [`netfun-action-errors-2.md`](../../../netfun-action-errors-2.md)
+- [`netfun-action-updates-2.md`](../../../netfun-action-updates-2.md)
+- [`netfun-action-updates-2.md`](../../../netfun-action-updates-2.md)
+- [`netfun-action-updates-2.md`](../../../netfun-action-updates-2.md)
 <<<<<<< HEAD
 - [`netfun-actions.md`](../../../netfun-actions.md)
 <<<<<<< .merge_file_VkYtaf
@@ -3041,31 +3041,31 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`netfun-channel.md`](./netfun-channel.md)
-- [`netfun-channel.md`](./netfun-channel.md)
-- [`netfun-channel.md`](./netfun-channel.md)
-- [`netfun-config-requirements.md`](./netfun-config-requirements.md)
-- [`netfun-config-requirements.md`](./netfun-config-requirements.md)
-- [`netfun-examples.md`](./netfun-examples.md)
-- [`netfun-examples.md`](./netfun-examples.md)
+- [`netfun-channel-2.md`](../../../netfun-channel-2.md)
+- [`netfun-channel-2.md`](../../../netfun-channel-2.md)
+- [`netfun-channel-2.md`](../../../netfun-channel-2.md)
+- [`netfun-config-requirements-2.md`](../../../netfun-config-requirements-2.md)
+- [`netfun-config-requirements-2.md`](../../../netfun-config-requirements-2.md)
+- [`netfun-examples-2.md`](../../../netfun-examples-2.md)
+- [`netfun-examples-2.md`](../../../netfun-examples-2.md)
 <<<<<<< HEAD
 =======
 =======
 - [`naming_conventions.md`](./naming_conventions.md)
 - [`nested-resources.md`](./nested-resources.md)
-- [`netfun-action-errors.md`](./netfun-action-errors.md)
-- [`netfun-action-updates.md`](./netfun-action-updates.md)
+- [`netfun-action-errors-2.md`](../../../netfun-action-errors-2.md)
+- [`netfun-action-updates-2.md`](../../../netfun-action-updates-2.md)
 - [`netfun-actions.md`](../../../netfun-actions.md)
-- [`netfun-channel.md`](./netfun-channel.md)
-- [`netfun-config-requirements.md`](./netfun-config-requirements.md)
+- [`netfun-channel-2.md`](../../../netfun-channel-2.md)
+- [`netfun-config-requirements-2.md`](../../../netfun-config-requirements-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`netfun-examples.md`](./netfun-examples.md)
-- [`netfun_action_errors.md`](./netfun_action_errors.md)
-- [`netfun_action_updates.md`](./netfun_action_updates.md)
-- [`netfun_channel.md`](./netfun_channel.md)
-- [`netfun_config_requirements.md`](./netfun_config_requirements.md)
-- [`netfun_examples.md`](./netfun_examples.md)
+- [`netfun-examples-2.md`](../../../netfun-examples-2.md)
+- [`netfun-action-errors-2.md`](../../../netfun-action-errors-2.md)
+- [`netfun-action-updates-2.md`](../../../netfun-action-updates-2.md)
+- [`netfun-channel-2.md`](../../../netfun-channel-2.md)
+- [`netfun-config-requirements-2.md`](../../../netfun-config-requirements-2.md)
+- [`netfun-examples-2.md`](../../../netfun-examples-2.md)
 - [`netfunchannel-conflict-resolution.md`](../../../netfunchannel-conflict-resolution.md)
 - [`no-ai-tool-scaffold-dirs.md`](../../../no-ai-tool-scaffold-dirs.md)
 - [`no-hardcoded-language-religion.md`](../../../no-hardcoded-language-religion.md)
@@ -3076,52 +3076,52 @@ Documentation for `notify` module categorized as **integrations**.
 - [`notebooklm-installation-summary.md`](./notebooklm-installation-summary.md)
 - [`notebooklm-integration.md`](./notebooklm-integration.md)
 - [`notes.md`](./notes.md)
-- [`notification-behavior.md`](./notification-behavior.md)
+- [`notification-behavior-2.md`](../../../notification-behavior-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
-- [`notification-behavior.md`](./notification-behavior.md)
+- [`notification-behavior-2.md`](../../../notification-behavior-2.md)
 - [`notification-bulk-action-implementation.md`](./notification-bulk-action-implementation.md)
-- [`notification-channels-implementation.md`](./notification-channels-implementation.md)
-- [`notification-channels-implementation.md`](./notification-channels-implementation.md)
-- [`notification-channels-implementation.md`](./notification-channels-implementation.md)
-- [`notification-errors.md`](./notification-errors.md)
-- [`notification-errors.md`](./notification-errors.md)
+- [`notification-channels-implementation-2.md`](../../../notification-channels-implementation-2.md)
+- [`notification-channels-implementation-2.md`](../../../notification-channels-implementation-2.md)
+- [`notification-channels-implementation-2.md`](../../../notification-channels-implementation-2.md)
+- [`notification-errors-2.md`](../../../notification-errors-2.md)
+- [`notification-errors-2.md`](../../../notification-errors-2.md)
 - [`notification-implementation.md`](./notification-implementation.md)
-- [`notification-providers-guide.md`](./notification-providers-guide.md)
-- [`notification-providers-guide.md`](./notification-providers-guide.md)
-- [`notification-providers-guide.md`](./notification-providers-guide.md)
+- [`notification-providers-guide-2.md`](../../../notification-providers-guide-2.md)
+- [`notification-providers-guide-2.md`](../../../notification-providers-guide-2.md)
+- [`notification-providers-guide-2.md`](../../../notification-providers-guide-2.md)
 <<<<<<< .merge_file_VkYtaf
 <<<<<<< HEAD
 =======
 =======
 - [`notification-bulk-action-implementation.md`](./notification-bulk-action-implementation.md)
-- [`notification-channels-implementation.md`](./notification-channels-implementation.md)
-- [`notification-errors.md`](./notification-errors.md)
+- [`notification-channels-implementation-2.md`](../../../notification-channels-implementation-2.md)
+- [`notification-errors-2.md`](../../../notification-errors-2.md)
 - [`notification-implementation.md`](./notification-implementation.md)
-- [`notification-providers-guide.md`](./notification-providers-guide.md)
+- [`notification-providers-guide-2.md`](../../../notification-providers-guide-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
 - [`notification-providers.md`](../../../notification-providers.md)
 - [`notification-system.md`](../../../notification-system.md)
-- [`notification_behavior.md`](./notification-behavior.md)
-- [`notification_channels_implementation.md`](./notification_channels_implementation.md)
-- [`notification_errors.md`](./notification-errors.md)
-- [`notification_providers_guide.md`](./notification_providers_guide.md)
+- [`notification-behavior-2.md`](../../../notification-behavior-2.md)
+- [`notification-channels-implementation-2.md`](../../../notification-channels-implementation-2.md)
+- [`notification-errors-2.md`](../../../notification-errors-2.md)
+- [`notification-providers-guide-2.md`](../../../notification-providers-guide-2.md)
 - [`notifications-system.md`](./notifications-system.md)
 - [`notifications.md`](./notifications.md)
 - [`notify-send-email-translations-improvements.md`](./notify-send-email-translations-improvements.md)
-- [`notify-translation-guide.md`](./notify-translation-guide.md)
+- [`notify-translation-guide-2.md`](../../../notify-translation-guide-2.md)
 <<<<<<< HEAD
-- [`notify-translation-guide.md`](./notify-translation-guide.md)
-- [`notify-translation-guide.md`](./notify-translation-guide.md)
+- [`notify-translation-guide-2.md`](../../../notify-translation-guide-2.md)
+- [`notify-translation-guide-2.md`](../../../notify-translation-guide-2.md)
 =======
 <<<<<<< HEAD
-- [`notify-translation-guide.md`](./notify-translation-guide.md)
-- [`notify-translation-guide.md`](./notify-translation-guide.md)
+- [`notify-translation-guide-2.md`](../../../notify-translation-guide-2.md)
+- [`notify-translation-guide-2.md`](../../../notify-translation-guide-2.md)
 <<<<<<< .merge_file_VkYtaf
 =======
 >>>>>>> laraxot/dev
@@ -3129,8 +3129,8 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 >>>>>>> .merge_file_X4e09n
 - [`notify-translation.md`](../../../notify-translation.md)
-- [`notify_translation_guide.md`](./notify_translation_guide.md)
-- [`ollama-optimization-guide.md`](../../../ollama-optimization-guide.md)
+- [`notify-translation-guide-2.md`](../../../notify-translation-guide-2.md)
+- [`ollama-optimization-guide-2.md`](../../../ollama-optimization-guide.md)
 - [`openviking-bmad-gsd-ralph-complete.md`](./openviking-bmad-gsd-ralph-complete.md)
 - [`openviking-integration.md`](./openviking-integration.md)
 - [`optimization-analysis.md`](./optimization-analysis.md)
@@ -3139,13 +3139,13 @@ Documentation for `notify` module categorized as **integrations**.
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 - [`optimization-analysis.md`](./optimization-analysis.md)
-- [`optimization-recommendations-1.md`](./optimization-recommendations.md)
+- [`optimization-recommendations-1-2.md`](./optimization-recommendations.md)
 - [`optimization-recommendations.md`](./optimization-recommendations.md)
 - [`optimization-recommendations.md`](./optimization-recommendations.md)
 <<<<<<< HEAD
 =======
 =======
-- [`optimization-recommendations-1.md`](./optimization-recommendations.md)
+- [`optimization-recommendations-1-2.md`](./optimization-recommendations.md)
 - [`optimization-recommendations.md`](./optimization-recommendations.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -3156,7 +3156,7 @@ Documentation for `notify` module categorized as **integrations**.
 - [`overview-extended.md`](../../../overview-extended.md)
 - [`packages.md`](./packages.md)
 - [`pagine-create.md`](./pagine-create.md)
-- [`path-and-interface-rules.md`](./path-and-interface-rules.md)
+- [`path-and-interface-rules-2.md`](../../../path-and-interface-rules-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_VkYtaf
@@ -3171,7 +3171,7 @@ Documentation for `notify` module categorized as **integrations**.
 - [`path-and-interface.md`](./path-and-interface.md)
 - [`path-and-namespace-rules-1.md`](./path-and-namespace-rules-1.md)
 - [`path-and-namespace-rules-2.md`](./path-and-namespace-rules-2.md)
-- [`path-and-namespace-rules.md`](./path-and-namespace-rules.md)
+- [`path-and-namespace-rules-2.md`](../../../path-and-namespace-rules-2.md)
 - [`path-and-namespace.md`](./path-and-namespace.md)
 - [`path-conventions-1.md`](./path-conventions-1.md)
 - [`path-conventions-2.md`](./path-conventions-2.md)
@@ -3185,12 +3185,12 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_X4e09n
-- [`path-and-interface-rules.md`](./path-and-interface-rules.md)
-- [`path-and-interface-rules.md`](./path-and-interface-rules.md)
+- [`path-and-interface-rules-2.md`](../../../path-and-interface-rules-2.md)
+- [`path-and-interface-rules-2.md`](../../../path-and-interface-rules-2.md)
 - [`path-and-interface.md`](../../../path-and-interface.md)
-- [`path-and-namespace-rules.md`](./path-and-namespace-rules.md)
-- [`path-and-namespace-rules.md`](./path-and-namespace-rules.md)
-- [`path-and-namespace-rules.md`](./path-and-namespace-rules.md)
+- [`path-and-namespace-rules-2.md`](../../../path-and-namespace-rules-2.md)
+- [`path-and-namespace-rules-2.md`](../../../path-and-namespace-rules-2.md)
+- [`path-and-namespace-rules-2.md`](../../../path-and-namespace-rules-2.md)
 - [`path-and-namespace.md`](../../../path-and-namespace.md)
 - [`path-conventions-1.md`](./path-conventions.md)
 - [`path-conventions.md`](./path-conventions.md)
@@ -3210,33 +3210,33 @@ Documentation for `notify` module categorized as **integrations**.
 - [`path-conventions.md`](./path-conventions.md)
 =======
 - [`path-and-interface.md`](../../../path-and-interface.md)
-- [`path-and-namespace-rules.md`](./path-and-namespace-rules.md)
+- [`path-and-namespace-rules-2.md`](../../../path-and-namespace-rules-2.md)
 - [`path-and-namespace.md`](../../../path-and-namespace.md)
 - [`path-conventions-1.md`](./path-conventions.md)
 - [`path-conventions.md`](./path-conventions.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`path_and_interface_rules.md`](./path_and_interface_rules.md)
-- [`path_and_namespace_rules.md`](./path_and_namespace_rules.md)
+- [`path-and-interface-rules-2.md`](../../../path-and-interface-rules-2.md)
+- [`path-and-namespace-rules-2.md`](../../../path-and-namespace-rules-2.md)
 - [`path_conventions.md`](./path_conventions.md)
-- [`netfun-action-errors.md`](../../../netfun-action-errors.md)
-- [`netfun-action-updates.md`](../../../netfun-action-updates.md)
-- [`netfun-action-updates.md`](./netfun-action-updates.md)
-- [`netfun-action-updates.md`](../../../netfun-action-updates.md)
+- [`netfun-action-errors-2.md`](../../../netfun-action-errors.md)
+- [`netfun-action-updates-2.md`](../../../netfun-action-updates.md)
+- [`netfun-action-updates-2.md`](../../../netfun-action-updates-2.md)
+- [`netfun-action-updates-2.md`](../../../netfun-action-updates.md)
 - [`netfun-actions.md`](../../../netfun-actions.md)
-- [`netfun-channel.md`](../../../netfun-channel.md)
-- [`netfun-channel.md`](./netfun-channel.md)
-- [`netfun-channel.md`](../../../netfun-channel.md)
-- [`netfun-config-requirements.md`](./netfun-config-requirements.md)
-- [`netfun-config-requirements.md`](../../../netfun-config-requirements.md)
-- [`netfun-examples.md`](../../../netfun-examples.md)
-- [`netfun-examples.md`](./netfun-examples.md)
-- [`netfun-examples.md`](../../../netfun-examples.md)
-- [`netfun_action_errors.md`](../../../netfun_action_errors.md)
-- [`netfun_action_updates.md`](../../../netfun_action_updates.md)
-- [`netfun_channel.md`](../../../netfun_channel.md)
-- [`netfun_config_requirements.md`](../../../netfun_config_requirements.md)
-- [`netfun_examples.md`](../../../netfun_examples.md)
+- [`netfun-channel-2.md`](../../../netfun-channel.md)
+- [`netfun-channel-2.md`](../../../netfun-channel-2.md)
+- [`netfun-channel-2.md`](../../../netfun-channel.md)
+- [`netfun-config-requirements-2.md`](../../../netfun-config-requirements-2.md)
+- [`netfun-config-requirements-2.md`](../../../netfun-config-requirements.md)
+- [`netfun-examples-2.md`](../../../netfun-examples.md)
+- [`netfun-examples-2.md`](../../../netfun-examples-2.md)
+- [`netfun-examples-2.md`](../../../netfun-examples.md)
+- [`netfun-action-errors-2.md`](../../../netfun-action-errors-2.md)
+- [`netfun-action-updates-2.md`](../../../netfun-action-updates-2.md)
+- [`netfun-channel-2.md`](../../../netfun-channel-2.md)
+- [`netfun-config-requirements-2.md`](../../../netfun-config-requirements-2.md)
+- [`netfun-examples-2.md`](../../../netfun-examples-2.md)
 - [`netfunchannel-conflict-resolution.md`](../../../netfunchannel-conflict-resolution.md)
 - [`no-ai-tool-scaffold-dirs.md`](../../../no-ai-tool-scaffold-dirs.md)
 - [`no-hardcoded-language-religion.md`](../../../no-hardcoded-language-religion.md)
@@ -3247,61 +3247,61 @@ Documentation for `notify` module categorized as **integrations**.
 - [`notebooklm-installation-summary.md`](./notebooklm-installation-summary.md)
 - [`notebooklm-integration.md`](./notebooklm-integration.md)
 - [`notes.md`](../../../notes.md)
-- [`notification-behavior.md`](./notification-behavior.md)
-- [`notification-behavior.md`](../../../notification-behavior.md)
+- [`notification-behavior-2.md`](../../../notification-behavior-2.md)
+- [`notification-behavior-2.md`](../../../notification-behavior.md)
 - [`notification-bulk-action-implementation.md`](../../../notification-bulk-action-implementation.md)
-- [`notification-channels-implementation.md`](../../../notification-channels-implementation.md)
-- [`notification-channels-implementation.md`](./notification-channels-implementation.md)
-- [`notification-channels-implementation.md`](../../../notification-channels-implementation.md)
-- [`notification-errors.md`](./notification-errors.md)
-- [`notification-errors.md`](../../../notification-errors.md)
+- [`notification-channels-implementation-2.md`](../../../notification-channels-implementation.md)
+- [`notification-channels-implementation-2.md`](../../../notification-channels-implementation-2.md)
+- [`notification-channels-implementation-2.md`](../../../notification-channels-implementation.md)
+- [`notification-errors-2.md`](../../../notification-errors-2.md)
+- [`notification-errors-2.md`](../../../notification-errors.md)
 - [`notification-implementation.md`](../../../notification-implementation.md)
-- [`notification-providers-guide.md`](../../../notification-providers-guide.md)
-- [`notification-providers-guide.md`](./notification-providers-guide.md)
-- [`notification-providers-guide.md`](../../../notification-providers-guide.md)
+- [`notification-providers-guide-2.md`](../../../notification-providers-guide.md)
+- [`notification-providers-guide-2.md`](../../../notification-providers-guide-2.md)
+- [`notification-providers-guide-2.md`](../../../notification-providers-guide.md)
 - [`notification-providers.md`](../../../notification-providers.md)
 - [`notification-system.md`](../../../notification-system.md)
-- [`notification_behavior.md`](../../../notification-behavior.md)
-- [`notification_channels_implementation.md`](../../../notification_channels_implementation.md)
-- [`notification_errors.md`](../../../notification-errors.md)
-- [`notification_providers_guide.md`](../../../notification_providers_guide.md)
+- [`notification-behavior-2.md`](../../../notification-behavior.md)
+- [`notification-channels-implementation-2.md`](../../../notification-channels-implementation-2.md)
+- [`notification-errors-2.md`](../../../notification-errors.md)
+- [`notification-providers-guide-2.md`](../../../notification-providers-guide-2.md)
 - [`notifications-system.md`](../../../notifications-system.md)
 - [`notifications.md`](./notifications.md)
 - [`notify-send-email-translations-improvements.md`](../../../notify-send-email-translations-improvements.md)
-- [`notify-translation-guide.md`](../../../notify-translation-guide.md)
-- [`notify-translation-guide.md`](./notify-translation-guide.md)
-- [`notify-translation-guide.md`](../../../notify-translation-guide.md)
+- [`notify-translation-guide-2.md`](../../../notify-translation-guide.md)
+- [`notify-translation-guide-2.md`](../../../notify-translation-guide-2.md)
+- [`notify-translation-guide-2.md`](../../../notify-translation-guide.md)
 - [`notify-translation.md`](../../../notify-translation.md)
-- [`notify_translation_guide.md`](../../../notify_translation_guide.md)
-- [`ollama-optimization-guide.md`](../../../ollama-optimization-guide.md)
+- [`notify-translation-guide-2.md`](../../../notify-translation-guide-2.md)
+- [`ollama-optimization-guide-2.md`](../../../ollama-optimization-guide.md)
 - [`openviking-bmad-gsd-ralph-complete.md`](./openviking-bmad-gsd-ralph-complete.md)
 - [`openviking-integration.md`](./openviking-integration.md)
 - [`optimization-analysis-user-module-documentation.md`](./optimization-analysis-user-module-documentation.md)
 - [`optimization-analysis.md`](../../../optimization-analysis.md)
-- [`optimization-recommendations-1.md`](../../../optimization-recommendations.md)
+- [`optimization-recommendations-1-2.md`](../../../optimization-recommendations.md)
 - [`optimization-recommendations-ultimo-aggiornamento.md`](./optimization-recommendations-ultimo-aggiornamento.md)
 - [`optimization-recommendations.md`](../../../optimization-recommendations.md)
 - [`optimization.md`](./optimization.md)
-- [`optimization_analysis.md`](../../../optimization_analysis.md)
-- [`optimization_recommendations.md`](../../../optimization_recommendations.md)
+- [`optimization_analysis.md`](../../../optimization-analysis-2.md)
+- [`optimization_recommendations.md`](../../../optimization-recommendations-2.md)
 - [`ottimizzazioni-correzioni.md`](../../../ottimizzazioni-correzioni.md)
 - [`overview-extended.md`](../../../overview-extended.md)
 - [`packages.md`](../../../packages.md)
 - [`pagine-create.md`](./pagine-create.md)
-- [`path-and-interface-rules.md`](../../../path-and-interface-rules.md)
-- [`path-and-interface-rules.md`](./path-and-interface-rules.md)
-- [`path-and-interface-rules.md`](../../../path-and-interface-rules.md)
+- [`path-and-interface-rules-2.md`](../../../path-and-interface-rules.md)
+- [`path-and-interface-rules-2.md`](../../../path-and-interface-rules-2.md)
+- [`path-and-interface-rules-2.md`](../../../path-and-interface-rules.md)
 - [`path-and-interface.md`](../../../path-and-interface.md)
-- [`path-and-namespace-rules.md`](../../../path-and-namespace-rules.md)
-- [`path-and-namespace-rules.md`](./path-and-namespace-rules.md)
-- [`path-and-namespace-rules.md`](../../../path-and-namespace-rules.md)
+- [`path-and-namespace-rules-2.md`](../../../path-and-namespace-rules.md)
+- [`path-and-namespace-rules-2.md`](../../../path-and-namespace-rules-2.md)
+- [`path-and-namespace-rules-2.md`](../../../path-and-namespace-rules.md)
 - [`path-and-namespace.md`](../../../path-and-namespace.md)
 - [`path-conventions-1.md`](../../../path-conventions.md)
 - [`path-conventions-user.md`](./path-conventions-user.md)
 - [`path-conventions.md`](./path-conventions.md)
-- [`path_and_interface_rules.md`](../../../path_and_interface_rules.md)
-- [`path_and_namespace_rules.md`](../../../path_and_namespace_rules.md)
-- [`path_conventions.md`](../../../path_conventions.md)
+- [`path-and-interface-rules-2.md`](../../../path-and-interface-rules-2.md)
+- [`path-and-namespace-rules-2.md`](../../../path-and-namespace-rules-2.md)
+- [`path_conventions.md`](../../../path-conventions-2.md)
 - [`perfection-achieved.md`](./perfection-achieved.md)
 - [`perfection-plan.md`](./perfection-plan.md)
 <<<<<<< HEAD
@@ -3338,9 +3338,9 @@ Documentation for `notify` module categorized as **integrations**.
 - [`performance_optimization.md`](./performance_optimization.md)
 - [`phase-1-execution-dashboard.md`](./phase-1-execution-dashboard.md)
 - [`phase-1-research-complete.md`](./phase-1-research-complete.md)
-- [`philosophy.md`](./philosophy.md)
+- [`philosophy-3.md`](../../../../../Lang/docs/philosophy-3.md)
 - [`phpinsights-phar-build.md`](../../../phpinsights-phar-build.md)
-- [`plan.md`](./plan.md)
+- [`plan-2.md`](../../../../../Geo/docs/laravel-13-upgrade/plan-2.md)
 - [`prd.md`](./prd.md)
 - [`product-launch-plan.md`](./product-launch-plan-1.md)
 - [`product-launch-plan.md`](./product-launch-plan.md)
@@ -3363,12 +3363,12 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 >>>>>>> .merge_file_X4e09n
 - [`product-requirements.md`](../../../product-requirements.md)
-- [`performance_optimization.md`](../../../performance_optimization.md)
+- [`performance_optimization.md`](../../../performance-optimization-2.md)
 - [`phase-1-execution-dashboard.md`](./phase-1-execution-dashboard.md)
 - [`phase-1-research-complete.md`](./phase-1-research-complete.md)
-- [`philosophy.md`](./philosophy.md)
+- [`philosophy-3.md`](../../../../../Lang/docs/philosophy-3.md)
 - [`phpinsights-phar-build.md`](../../../phpinsights-phar-build.md)
-- [`plan.md`](../../../plan.md)
+- [`plan-2.md`](../../../plan.md)
 - [`prd.md`](./prd.md)
 - [`product-launch-plan-documentation-themes.md`](./product-launch-plan-documentation-themes.md)
 - [`product-launch-plan.md`](../../../product-launch-plan.md)
@@ -3406,20 +3406,20 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`provider_contracts_naming.md`](./provider_contracts_naming.md)
+- [`provider-contracts-naming-2.md`](../../../provider-contracts-naming-2.md)
 - [`psr4-namespace-fix.md`](./psr4-namespace-fix.md)
 - [`psr4-namespace-warnings.md`](./psr4-namespace-warnings.md)
 - [`psr4-namespace.md`](../../../psr4-namespace.md)
 - [`push-notifications.md`](../../../push-notifications.md)
-- [`qmd-setup.md`](./qmd-setup.md)
+- [`qmd-setup-3.md`](../../../../../Lang/docs/qmd-setup-3.md)
 - [`quality-improvements.md`](./quality-improvements.md)
 <<<<<<< HEAD
 - [`quality-tools-setup.md`](../../../quality-tools-setup.md)
 <<<<<<< .merge_file_VkYtaf
 - [`queueable-action-1.md`](./queueable-action-1.md)
-- [`queueable-action.md`](./queueable-action.md)
-- [`queueable-action.md`](./queueable-action.md)
-- [`queueable-actions.md`](./queueable-actions.md)
+- [`queueable-action-2.md`](../../../queueable-action-2.md)
+- [`queueable-action-2.md`](../../../queueable-action-2.md)
+- [`queueable-actions-2.md`](../../../queueable-actions-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3434,40 +3434,40 @@ Documentation for `notify` module categorized as **integrations**.
 - [`quality-tools-setup.md`](../../../quality-tools-setup.md)
 >>>>>>> .merge_file_junMiY
 >>>>>>> laraxot/dev
-- [`queueable-action.md`](./queueable-action.md)
-- [`queueable-action.md`](./queueable-action.md)
-- [`queueable-actions.md`](./queueable-actions.md)
+- [`queueable-action-2.md`](../../../queueable-action-2.md)
+- [`queueable-action-2.md`](../../../queueable-action-2.md)
+- [`queueable-actions-2.md`](../../../queueable-actions-2.md)
 =======
 - [`quality-tools-setup.md`](../../../quality-tools-setup.md)
-- [`queueable-action.md`](./queueable-action.md)
+- [`queueable-action-2.md`](../../../queueable-action-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`queueable-actions.md`](./queueable-actions.md)
-- [`queueable_action.md`](./queueable-action.md)
+- [`queueable-actions-2.md`](../../../queueable-actions-2.md)
+- [`queueable-action-2.md`](../../../queueable-action-2.md)
 - [`provider-contracts-naming.md`](../../../provider-contracts-naming.md)
 - [`provider-contracts-naming.md`](./provider-contracts-naming.md)
 - [`provider-contracts-naming.md`](../../../provider-contracts-naming.md)
-- [`provider_contracts_naming.md`](./provider_contracts_naming.md)
+- [`provider-contracts-naming-2.md`](../../../provider-contracts-naming-2.md)
 - [`psr4-namespace-fix.md`](../../../psr4-namespace-fix.md)
 - [`psr4-namespace-warnings.md`](../../../psr4-namespace-warnings.md)
 - [`psr4-namespace.md`](../../../psr4-namespace.md)
 - [`push-notifications.md`](../../../push-notifications.md)
-- [`qmd-setup.md`](./qmd-setup.md)
+- [`qmd-setup-3.md`](../../../../../Lang/docs/qmd-setup-3.md)
 - [`quality-improvements.md`](../../../quality-improvements.md)
 - [`quality-tools-setup.md`](../../../quality-tools-setup.md)
-- [`queueable-action.md`](./queueable-action.md)
-- [`queueable-action.md`](../../../queueable-action.md)
-- [`queueable-actions.md`](./queueable-actions.md)
+- [`queueable-action-2.md`](../../../queueable-action-2.md)
+- [`queueable-action-2.md`](../../../queueable-action.md)
+- [`queueable-actions-2.md`](../../../queueable-actions-2.md)
 <<<<<<< HEAD
-- [`queueable-actions.md`](./queueable-actions.md)
+- [`queueable-actions-2.md`](../../../queueable-actions-2.md)
 =======
 <<<<<<< HEAD
-- [`queueable-actions.md`](./queueable-actions.md)
+- [`queueable-actions-2.md`](../../../queueable-actions-2.md)
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`queueable_action.md`](../../../queueable-action.md)
-- [`queueable_actions.md`](./queueable-actions.md)
+- [`queueable-action-2.md`](../../../queueable-action.md)
+- [`queueable-actions-2.md`](../../../queueable-actions-2.md)
 - [`quick-start.md`](./quick-start.md)
 - [`qwen.md`](./qwen.md)
 - [`ralph-loop-execution.md`](./ralph-loop-execution.md)
@@ -3535,92 +3535,92 @@ Documentation for `notify` module categorized as **integrations**.
 - [`reusable-form-components.md`](../../../reusable-form-components.md)
 - [`rules-index.md`](../../../rules-index.md)
 - [`rules.md`](../../../rules.md)
-- [`schema-conventions.md`](./schema-conventions.md)
+- [`schema-conventions-2.md`](../../../schema-conventions-2.md)
 <<<<<<< HEAD
-- [`schema-conventions.md`](./schema-conventions.md)
+- [`schema-conventions-2.md`](../../../schema-conventions-2.md)
 =======
 <<<<<<< HEAD
-- [`schema-conventions.md`](./schema-conventions.md)
+- [`schema-conventions-2.md`](../../../schema-conventions-2.md)
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`schema_conventions.md`](./schema-conventions.md)
+- [`schema-conventions-2.md`](../../../schema-conventions-2.md)
 - [`schemas-unified-religion.md`](./schemas-unified-religion.md)
 - [`seasonal-email-system-implementation.md`](./seasonal-email-system-implementation.md)
 - [`seasonal-email-system-recommendations.md`](./seasonal-email-system-recommendations.md)
-- [`seasonal-email-zen.md`](./seasonal-email-zen.md)
+- [`seasonal-email-zen-2.md`](../../../seasonal-email-zen-2.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-- [`seasonal-email-zen.md`](./seasonal-email-zen.md)
-- [`seasonal_email_zen.md`](./seasonal-email-zen.md)
+- [`seasonal-email-zen-2.md`](../../../seasonal-email-zen-2.md)
+- [`seasonal-email-zen-2.md`](../../../seasonal-email-zen-2.md)
 - [`second-brain.md`](../../../second-brain.md)
-- [`security-analysis.md`](./security-analysis.md)
+- [`security-analysis-2.md`](../../../security-analysis-2.md)
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`seasonal_email_zen.md`](./seasonal-email-zen.md)
+- [`seasonal-email-zen-2.md`](../../../seasonal-email-zen-2.md)
 - [`second-brain.md`](../../../second-brain.md)
-- [`security-analysis.md`](./security-analysis.md)
-- [`SECURITY.md`](./security.md)
-- [`security_analysis.md`](./security-analysis.md)
-- [`send-email-fix.md`](./send-email-fix.md)
-- [`send-email-translation-fix.md`](./send-email-translation-fix.md)
+- [`security-analysis-2.md`](../../../security-analysis-2.md)
+- [`SECURITY.md`](../../../../../Geo/docs/root-md-files/security-2.md)
+- [`security-analysis-2.md`](../../../security-analysis-2.md)
+- [`send-email-fix-2.md`](../../../send-email-fix-2.md)
+- [`send-email-translation-fix-2.md`](../../../send-email-translation-fix-2.md)
 <<<<<<< HEAD
-- [`seasonal-email-zen.md`](./seasonal-email-zen.md)
-- [`seasonal_email_zen.md`](./seasonal-email-zen.md)
+- [`seasonal-email-zen-2.md`](../../../seasonal-email-zen-2.md)
+- [`seasonal-email-zen-2.md`](../../../seasonal-email-zen-2.md)
 - [`second-brain.md`](../../../second-brain.md)
 - [`security-analysis-1.md`](./security-analysis-1.md)
-- [`security-analysis.md`](./security-analysis.md)
+- [`security-analysis-2.md`](../../../security-analysis-2.md)
 =======
 <<<<<<< HEAD
 =======
-- [`seasonal-email-zen.md`](./seasonal-email-zen.md)
-- [`seasonal_email_zen.md`](./seasonal-email-zen.md)
+- [`seasonal-email-zen-2.md`](../../../seasonal-email-zen-2.md)
+- [`seasonal-email-zen-2.md`](../../../seasonal-email-zen-2.md)
 =======
-- [`seasonal-email-zen.md`](./seasonal-email-zen.md)
-- [`seasonal_email_zen.md`](./seasonal-email-zen.md)
+- [`seasonal-email-zen-2.md`](../../../seasonal-email-zen-2.md)
+- [`seasonal-email-zen-2.md`](../../../seasonal-email-zen-2.md)
 - [`second-brain.md`](../../../second-brain.md)
-- [`security-analysis.md`](./security-analysis.md)
+- [`security-analysis-2.md`](../../../security-analysis-2.md)
 =======
 <<<<<<< HEAD
-- [`seasonal_email_zen.md`](./seasonal-email-zen.md)
+- [`seasonal-email-zen-2.md`](../../../seasonal-email-zen-2.md)
 - [`second-brain.md`](../../../second-brain.md)
-- [`security-analysis.md`](./security-analysis.md)
-- [`SECURITY.md`](./security.md)
-- [`security_analysis.md`](./security-analysis.md)
-- [`send-email-fix.md`](./send-email-fix.md)
-- [`send-email-translation-fix.md`](./send-email-translation-fix.md)
+- [`security-analysis-2.md`](../../../security-analysis-2.md)
+- [`SECURITY.md`](../../../../../Geo/docs/root-md-files/security-2.md)
+- [`security-analysis-2.md`](../../../security-analysis-2.md)
+- [`send-email-fix-2.md`](../../../send-email-fix-2.md)
+- [`send-email-translation-fix-2.md`](../../../send-email-translation-fix-2.md)
 =======
-- [`seasonal-email-zen.md`](./seasonal-email-zen.md)
-- [`seasonal_email_zen.md`](./seasonal-email-zen.md)
+- [`seasonal-email-zen-2.md`](../../../seasonal-email-zen-2.md)
+- [`seasonal-email-zen-2.md`](../../../seasonal-email-zen-2.md)
 >>>>>>> .merge_file_X4e09n
 <<<<<<< .merge_file_EZjoNq
 - [`second-brain.md`](./second-brain.md)
 - [`security-analysis-1.md`](./security-analysis-1.md)
 =======
 - [`second-brain.md`](../../../second-brain.md)
-- [`security-analysis.md`](./security-analysis.md)
+- [`security-analysis-2.md`](../../../security-analysis-2.md)
 >>>>>>> .merge_file_junMiY
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`security-analysis.md`](./security-analysis.md)
+- [`security-analysis-2.md`](../../../security-analysis-2.md)
 - [`SECURITY.md`](./SECURITY.md)
-- [`security_analysis.md`](./security-analysis.md)
-- [`send-email-fix.md`](./send-email-fix.md)
-- [`send-email-fix.md`](./send-email-fix.md)
-- [`send-email-translation-fix.md`](./send-email-translation-fix.md)
-- [`send-email-translation-fix.md`](./send-email-translation-fix.md)
-- [`send-email-translation-fix.md`](./send-email-translation-fix.md)
-- [`send-email-translation-improvement.md`](./send-email-translation-improvement.md)
-- [`send-email-translation-improvement.md`](./send-email-translation-improvement.md)
+- [`security-analysis-2.md`](../../../security-analysis-2.md)
+- [`send-email-fix-2.md`](../../../send-email-fix-2.md)
+- [`send-email-fix-2.md`](../../../send-email-fix-2.md)
+- [`send-email-translation-fix-2.md`](../../../send-email-translation-fix-2.md)
+- [`send-email-translation-fix-2.md`](../../../send-email-translation-fix-2.md)
+- [`send-email-translation-fix-2.md`](../../../send-email-translation-fix-2.md)
+- [`send-email-translation-improvement-2.md`](../../../send-email-translation-improvement-2.md)
+- [`send-email-translation-improvement-2.md`](../../../send-email-translation-improvement-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_VkYtaf
@@ -3633,43 +3633,43 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_X4e09n
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`send-email-translation-improvement.md`](./send-email-translation-improvement.md)
+- [`send-email-translation-improvement-2.md`](../../../send-email-translation-improvement-2.md)
 - [`send-email-translation.md`](../../../send-email-translation.md)
 - [`send-email.md`](../../../send-email.md)
 - [`send-notification-bulk-action.md`](./send-notification-bulk-action.md)
 - [`send-push-notification-conflict-resolution.md`](./send-push-notification-conflict-resolution.md)
 - [`send-push-notification-resolution.md`](../../../send-push-notification-resolution.md)
 - [`send-record-notification-action-refactoring.md`](./send-record-notification-action-refactoring.md)
-- [`send_email_fix.md`](./send_email_fix.md)
-- [`send_email_translation_fix.md`](./send_email_translation_fix.md)
-- [`send_email_translation_improvement.md`](./send_email_translation_improvement.md)
-- [`sendemail-troubleshooting.md`](./sendemail-troubleshooting.md)
+- [`send-email-fix-2.md`](../../../send-email-fix-2.md)
+- [`send-email-translation-fix-2.md`](../../../send-email-translation-fix-2.md)
+- [`send-email-translation-improvement-2.md`](../../../send-email-translation-improvement-2.md)
+- [`sendemail-troubleshooting-2.md`](../../../sendemail-troubleshooting-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
-- [`sendemail-troubleshooting.md`](./sendemail-troubleshooting.md)
-- [`sendemail_troubleshooting.md`](./sendemail-troubleshooting.md)
-- [`service-provider.md`](./service-provider.md)
-- [`service-provider-xotbase.md`](./service-provider-xotbase.md)
-- [`service-provider-xotbase.md`](./service-provider-xotbase.md)
+- [`sendemail-troubleshooting-2.md`](../../../sendemail-troubleshooting-2.md)
+- [`sendemail-troubleshooting-2.md`](../../../sendemail-troubleshooting-2.md)
+- [`service-provider-2.md`](../../../service-provider-2.md)
+- [`service-provider-xotbase-2.md`](../../../service-provider-xotbase-2.md)
+- [`service-provider-xotbase-2.md`](../../../service-provider-xotbase-2.md)
 <<<<<<< HEAD
 =======
 =======
-- [`sendemail_troubleshooting.md`](./sendemail-troubleshooting.md)
-- [`service-provider.md`](./service-provider.md)
-- [`service-provider-xotbase.md`](./service-provider-xotbase.md)
+- [`sendemail-troubleshooting-2.md`](../../../sendemail-troubleshooting-2.md)
+- [`service-provider-2.md`](../../../service-provider-2.md)
+- [`service-provider-xotbase-2.md`](../../../service-provider-xotbase-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`service-provider.md`](./service-provider.md)
-- [`service_provider.md`](./service_provider.md)
-- [`service_provider_xotbase.md`](./service_provider_xotbase.md)
+- [`service-provider-2.md`](../../../service-provider-2.md)
+- [`service-provider-2.md`](../../../service-provider-2.md)
+- [`service-provider-xotbase-2.md`](../../../service-provider-xotbase-2.md)
 - [`services.md`](./services.md)
-- [`seasonal-email-zen.md`](../../../seasonal-email-zen.md)
-- [`seasonal_email_zen.md`](../../../seasonal-email-zen.md)
+- [`seasonal-email-zen-2.md`](../../../seasonal-email-zen.md)
+- [`seasonal-email-zen-2.md`](../../../seasonal-email-zen.md)
 - [`second-brain.md`](../../../second-brain.md)
-- [`security-analysis.md`](./security-analysis.md)
-- [`security-analysis.md`](../../../security-analysis.md)
+- [`security-analysis-2.md`](../../../security-analysis-2.md)
+- [`security-analysis-2.md`](../../../security-analysis.md)
 <<<<<<< HEAD
 - [`SECURITY.md`](./SECURITY.md)
 =======
@@ -3681,68 +3681,68 @@ Documentation for `notify` module categorized as **integrations**.
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_X4e09n
-- [`SECURITY.md`](./security.md)
+- [`SECURITY.md`](../../../../../Geo/docs/root-md-files/security-2.md)
 =======
 - [`SECURITY.md`](./SECURITY.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
 =======
-- [`SECURITY.md`](./security.md)
+- [`SECURITY.md`](../../../../../Geo/docs/root-md-files/security-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`security_analysis.md`](../../../security-analysis.md)
-- [`send-email-fix.md`](./send-email-fix.md)
-- [`send-email-fix.md`](../../../send-email-fix.md)
-- [`send-email-translation-fix.md`](../../../send-email-translation-fix.md)
-- [`send-email-translation-fix.md`](./send-email-translation-fix.md)
-- [`send-email-translation-fix.md`](../../../send-email-translation-fix.md)
-- [`send-email-translation-improvement.md`](../../../send-email-translation-improvement.md)
-- [`send-email-translation-improvement.md`](./send-email-translation-improvement.md)
-- [`send-email-translation-improvement.md`](../../../send-email-translation-improvement.md)
+- [`security-analysis-2.md`](../../../security-analysis.md)
+- [`send-email-fix-2.md`](../../../send-email-fix-2.md)
+- [`send-email-fix-2.md`](../../../send-email-fix.md)
+- [`send-email-translation-fix-2.md`](../../../send-email-translation-fix.md)
+- [`send-email-translation-fix-2.md`](../../../send-email-translation-fix-2.md)
+- [`send-email-translation-fix-2.md`](../../../send-email-translation-fix.md)
+- [`send-email-translation-improvement-2.md`](../../../send-email-translation-improvement.md)
+- [`send-email-translation-improvement-2.md`](../../../send-email-translation-improvement-2.md)
+- [`send-email-translation-improvement-2.md`](../../../send-email-translation-improvement.md)
 - [`send-email-translation.md`](../../../send-email-translation.md)
 - [`send-email.md`](../../../send-email.md)
 - [`send-notification-bulk-action.md`](./send-notification-bulk-action.md)
 - [`send-push-notification-conflict-resolution.md`](../../../send-push-notification-conflict-resolution.md)
 - [`send-push-notification-resolution.md`](../../../send-push-notification-resolution.md)
 - [`send-record-notification-action-refactoring.md`](./send-record-notification-action-refactoring.md)
-- [`send_email_fix.md`](../../../send_email_fix.md)
-- [`send_email_translation_fix.md`](../../../send_email_translation_fix.md)
-- [`send_email_translation_improvement.md`](../../../send_email_translation_improvement.md)
-- [`sendemail-troubleshooting.md`](./sendemail-troubleshooting.md)
-- [`sendemail-troubleshooting.md`](../../../sendemail-troubleshooting.md)
-- [`sendemail_troubleshooting.md`](../../../sendemail-troubleshooting.md)
-- [`service-provider.md`](./service-provider.md)
-- [`service-provider-xotbase.md`](./service-provider-xotbase.md)
-- [`service-provider-xotbase.md`](../../../service-provider-xotbase.md)
-- [`service-provider.md`](../../../service-provider.md)
-- [`service_provider.md`](../../../service_provider.md)
-- [`service_provider_xotbase.md`](../../../service_provider_xotbase.md)
+- [`send-email-fix-2.md`](../../../send-email-fix-2.md)
+- [`send-email-translation-fix-2.md`](../../../send-email-translation-fix-2.md)
+- [`send-email-translation-improvement-2.md`](../../../send-email-translation-improvement-2.md)
+- [`sendemail-troubleshooting-2.md`](../../../sendemail-troubleshooting-2.md)
+- [`sendemail-troubleshooting-2.md`](../../../sendemail-troubleshooting.md)
+- [`sendemail-troubleshooting-2.md`](../../../sendemail-troubleshooting.md)
+- [`service-provider-2.md`](../../../service-provider-2.md)
+- [`service-provider-xotbase-2.md`](../../../service-provider-xotbase-2.md)
+- [`service-provider-xotbase-2.md`](../../../service-provider-xotbase.md)
+- [`service-provider-2.md`](../../../service-provider.md)
+- [`service-provider-2.md`](../../../service-provider-2.md)
+- [`service-provider-xotbase-2.md`](../../../service-provider-xotbase-2.md)
 - [`services.md`](../../../services.md)
 - [`session-007-summary.md`](./session-007-summary.md)
 - [`sessione-100-percent.md`](./sessione-100-percent.md)
 - [`sessione-analisi-homepage.md`](./sessione-analisi-homepage.md)
 - [`sessione-completa.md`](./sessione-completa.md)
 <<<<<<< HEAD
-- [`sessione-fix-completata.md`](../../../sessione-fix-completata.md)
+- [`sessione-fix-completata-2.md`](../../../sessione-fix-completata.md)
 <<<<<<< .merge_file_VkYtaf
 - [`sessione-super-mucca-1.md`](./sessione-super-mucca-1.md)
 - [`sessione-super-mucca.md`](./sessione-super-mucca.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-- [`sessione-fix-completata.md`](../../../sessione-fix-completata.md)
+- [`sessione-fix-completata-2.md`](../../../sessione-fix-completata.md)
 =======
 >>>>>>> .merge_file_X4e09n
 - [`sessione-super-mucca.md`](./sessione-super-mucca.md)
 =======
 <<<<<<< .merge_file_EZjoNq
-- [`sessione-fix-completata.md`](./sessione-fix-completata.md)
+- [`sessione-fix-completata-2.md`](../../../sessione-fix-completata-2.md)
 - [`sessione-super-mucca-1.md`](./sessione-super-mucca-1.md)
 =======
-- [`sessione-fix-completata.md`](../../../sessione-fix-completata.md)
+- [`sessione-fix-completata-2.md`](../../../sessione-fix-completata.md)
 - [`sessione-super-mucca.md`](./sessione-super-mucca.md)
 >>>>>>> .merge_file_junMiY
 >>>>>>> laraxot/dev
@@ -3753,14 +3753,14 @@ Documentation for `notify` module categorized as **integrations**.
 - [`sessione-super-mucca.md`](./sessione-super-mucca.md)
 - [`sessionesuper-mucca.md`](../../../sessionesuper-mucca.md)
 - [`sistema-notifiche.md`](./sistema-notifiche.md)
-- [`slug-solutions-analysis.md`](./slug-solutions-analysis.md)
-- [`slug-solutions-analysis.md`](./slug-solutions-analysis.md)
+- [`slug-solutions-analysis-2.md`](../../../slug-solutions-analysis-2.md)
+- [`slug-solutions-analysis-2.md`](../../../slug-solutions-analysis-2.md)
 - [`slug-solutions.md`](../../../slug-solutions.md)
-- [`slug_solutions_analysis.md`](./slug-solutions-analysis.md)
-- [`sms-action-factory-analysis.md`](./sms-action-factory-analysis.md)
-- [`sms-action-factory-analysis.md`](./sms-action-factory-analysis.md)
-- [`sms-action-factory-resolution.md`](./sms-action-factory-resolution.md)
-- [`sms-action-factory-resolution.md`](./sms-action-factory-resolution.md)
+- [`slug-solutions-analysis-2.md`](../../../slug-solutions-analysis-2.md)
+- [`sms-action-factory-analysis-2.md`](../../../sms-action-factory-analysis-2.md)
+- [`sms-action-factory-analysis-2.md`](../../../sms-action-factory-analysis-2.md)
+- [`sms-action-factory-resolution-2.md`](../../../sms-action-factory-resolution-2.md)
+- [`sms-action-factory-resolution-2.md`](../../../sms-action-factory-resolution-2.md)
 <<<<<<< HEAD
 - [`sms-action-factory.md`](../../../sms-action-factory.md)
 <<<<<<< .merge_file_VkYtaf
@@ -3784,16 +3784,16 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`sms-actions.md`](./sms-actions.md)
-- [`sms-actions.md`](./sms-actions.md)
-- [`sms-actions.md`](./sms-actions.md)
-- [`sms-best-practices.md`](./sms-best-practices.md)
-- [`sms-best-practices.md`](./sms-best-practices.md)
-- [`sms-channel-action-resolution.md`](./sms-channel-action-resolution.md)
-- [`sms-channel-action-resolution.md`](./sms-channel-action-resolution.md)
-- [`sms-config-structure.md`](./sms-config-structure.md)
-- [`sms-config-structure.md`](./sms-config-structure.md)
-- [`sms-config-structure.md`](./sms-config-structure.md)
+- [`sms-actions-2.md`](../../../sms-actions-2.md)
+- [`sms-actions-2.md`](../../../sms-actions-2.md)
+- [`sms-actions-2.md`](../../../sms-actions-2.md)
+- [`sms-best-practices-2.md`](../../../sms-best-practices-2.md)
+- [`sms-best-practices-2.md`](../../../sms-best-practices-2.md)
+- [`sms-channel-action-resolution-2.md`](../../../sms-channel-action-resolution-2.md)
+- [`sms-channel-action-resolution-2.md`](../../../sms-channel-action-resolution-2.md)
+- [`sms-config-structure-2.md`](../../../sms-config-structure-2.md)
+- [`sms-config-structure-2.md`](../../../sms-config-structure-2.md)
+- [`sms-config-structure-2.md`](../../../sms-config-structure-2.md)
 <<<<<<< HEAD
 - [`sms-configuration-access.md`](../../../sms-configuration-access.md)
 <<<<<<< .merge_file_VkYtaf
@@ -3817,15 +3817,15 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`sms-driver-enum-translations.md`](./sms-driver-enum-translations.md)
-- [`sms-driver-enum-translations.md`](./sms-driver-enum-translations.md)
-- [`sms-driver-enum-translations.md`](./sms-driver-enum-translations.md)
-- [`sms-driver-selection-analysis.md`](./sms-driver-selection-analysis.md)
-- [`sms-driver-selection-analysis.md`](./sms-driver-selection-analysis.md)
-- [`sms-driver-selection-specific-analysis.md`](./sms-driver-selection-specific-analysis.md)
-- [`sms-driver-selection-specific-analysis.md`](./sms-driver-selection-specific-analysis.md)
-- [`sms-factor-data-implementation.md`](./sms-factor-data-implementation.md)
-- [`sms-factor-data-implementation.md`](./sms-factor-data-implementation.md)
+- [`sms-driver-enum-translations-2.md`](../../../sms-driver-enum-translations-2.md)
+- [`sms-driver-enum-translations-2.md`](../../../sms-driver-enum-translations-2.md)
+- [`sms-driver-enum-translations-2.md`](../../../sms-driver-enum-translations-2.md)
+- [`sms-driver-selection-analysis-2.md`](../../../sms-driver-selection-analysis-2.md)
+- [`sms-driver-selection-analysis-2.md`](../../../sms-driver-selection-analysis-2.md)
+- [`sms-driver-selection-specific-analysis-2.md`](../../../sms-driver-selection-specific-analysis-2.md)
+- [`sms-driver-selection-specific-analysis-2.md`](../../../sms-driver-selection-specific-analysis-2.md)
+- [`sms-factor-data-implementation-2.md`](../../../sms-factor-data-implementation-2.md)
+- [`sms-factor-data-implementation-2.md`](../../../sms-factor-data-implementation-2.md)
 <<<<<<< HEAD
 - [`sms-factorata-implementation.md`](../../../sms-factorata-implementation.md)
 <<<<<<< .merge_file_VkYtaf
@@ -3847,82 +3847,82 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`sms-global-vs-specific-params.md`](./sms-global-vs-specific-params.md)
-- [`sms-global-vs-specific-params.md`](./sms-global-vs-specific-params.md)
-- [`sms-implementation.md`](./sms-implementation.md)
-- [`sms-implementation.md`](./sms-implementation.md)
+- [`sms-global-vs-specific-params-2.md`](../../../sms-global-vs-specific-params-2.md)
+- [`sms-global-vs-specific-params-2.md`](../../../sms-global-vs-specific-params-2.md)
+- [`sms-implementation-2.md`](../../../sms-implementation-2.md)
+- [`sms-implementation-2.md`](../../../sms-implementation-2.md)
 - [`sms-integration.md`](./sms-integration.md)
-- [`sms-netfun-channel.md`](./sms-netfun-channel.md)
-- [`sms-netfun-channel.md`](./sms-netfun-channel.md)
-- [`sms-netfun-channel.md`](./sms-netfun-channel.md)
+- [`sms-netfun-channel-2.md`](../../../sms-netfun-channel-2.md)
+- [`sms-netfun-channel-2.md`](../../../sms-netfun-channel-2.md)
+- [`sms-netfun-channel-2.md`](../../../sms-netfun-channel-2.md)
 - [`sms-provider-configuration.md`](./sms-provider-configuration.md)
 - [`sms-provider-configuration.md`](./sms-provider-configuration.md)
-- [`sms-provider-configuration-best-practices.md`](./sms-provider-configuration-best-practices.md)
-- [`sms-provider-configuration-best-practices.md`](./sms-provider-configuration-best-practices.md)
-- [`sms-provider-configuration-best-practices.md`](./sms-provider-configuration-best-practices.md)
+- [`sms-provider-configuration-best-practices-2.md`](../../../sms-provider-configuration-best-practices-2.md)
+- [`sms-provider-configuration-best-practices-2.md`](../../../sms-provider-configuration-best-practices-2.md)
+- [`sms-provider-configuration-best-practices-2.md`](../../../sms-provider-configuration-best-practices-2.md)
 - [`sms-provider-configuration.md`](./sms-provider-configuration.md)
-- [`sms-troubleshooting.md`](./sms-troubleshooting.md)
-- [`sms-troubleshooting.md`](./sms-troubleshooting.md)
-- [`sms-troubleshooting.md`](./sms-troubleshooting.md)
+- [`sms-troubleshooting-2.md`](../../../sms-troubleshooting-2.md)
+- [`sms-troubleshooting-2.md`](../../../sms-troubleshooting-2.md)
+- [`sms-troubleshooting-2.md`](../../../sms-troubleshooting-2.md)
 <<<<<<< HEAD
 =======
 =======
-- [`sessione-fix-completata.md`](../../../sessione-fix-completata.md)
+- [`sessione-fix-completata-2.md`](../../../sessione-fix-completata.md)
 - [`sessione-super-mucca.md`](./sessione-super-mucca.md)
 - [`sessionesuper-mucca.md`](../../../sessionesuper-mucca.md)
 - [`sistema-notifiche.md`](./sistema-notifiche.md)
-- [`slug-solutions-analysis.md`](./slug-solutions-analysis.md)
+- [`slug-solutions-analysis-2.md`](../../../slug-solutions-analysis-2.md)
 - [`slug-solutions.md`](../../../slug-solutions.md)
-- [`slug_solutions_analysis.md`](./slug-solutions-analysis.md)
-- [`sms-action-factory-analysis.md`](./sms-action-factory-analysis.md)
-- [`sms-action-factory-resolution.md`](./sms-action-factory-resolution.md)
+- [`slug-solutions-analysis-2.md`](../../../slug-solutions-analysis-2.md)
+- [`sms-action-factory-analysis-2.md`](../../../sms-action-factory-analysis-2.md)
+- [`sms-action-factory-resolution-2.md`](../../../sms-action-factory-resolution-2.md)
 - [`sms-action-factory.md`](../../../sms-action-factory.md)
-- [`sms-actions.md`](./sms-actions.md)
-- [`sms-best-practices.md`](./sms-best-practices.md)
-- [`sms-channel-action-resolution.md`](./sms-channel-action-resolution.md)
-- [`sms-config-structure.md`](./sms-config-structure.md)
+- [`sms-actions-2.md`](../../../sms-actions-2.md)
+- [`sms-best-practices-2.md`](../../../sms-best-practices-2.md)
+- [`sms-channel-action-resolution-2.md`](../../../sms-channel-action-resolution-2.md)
+- [`sms-config-structure-2.md`](../../../sms-config-structure-2.md)
 - [`sms-configuration-access.md`](../../../sms-configuration-access.md)
-- [`sms-driver-enum-translations.md`](./sms-driver-enum-translations.md)
-- [`sms-driver-selection-analysis.md`](./sms-driver-selection-analysis.md)
-- [`sms-driver-selection-specific-analysis.md`](./sms-driver-selection-specific-analysis.md)
-- [`sms-factor-data-implementation.md`](./sms-factor-data-implementation.md)
+- [`sms-driver-enum-translations-2.md`](../../../sms-driver-enum-translations-2.md)
+- [`sms-driver-selection-analysis-2.md`](../../../sms-driver-selection-analysis-2.md)
+- [`sms-driver-selection-specific-analysis-2.md`](../../../sms-driver-selection-specific-analysis-2.md)
+- [`sms-factor-data-implementation-2.md`](../../../sms-factor-data-implementation-2.md)
 - [`sms-factorata-implementation.md`](../../../sms-factorata-implementation.md)
-- [`sms-global-vs-specific-params.md`](./sms-global-vs-specific-params.md)
-- [`sms-implementation.md`](./sms-implementation.md)
+- [`sms-global-vs-specific-params-2.md`](../../../sms-global-vs-specific-params-2.md)
+- [`sms-implementation-2.md`](../../../sms-implementation-2.md)
 - [`sms-integration.md`](./sms-integration.md)
-- [`sms-netfun-channel.md`](./sms-netfun-channel.md)
+- [`sms-netfun-channel-2.md`](../../../sms-netfun-channel-2.md)
 - [`sms-provider-configuration.md`](./sms-provider-configuration.md)
-- [`sms-provider-configuration-best-practices.md`](./sms-provider-configuration-best-practices.md)
+- [`sms-provider-configuration-best-practices-2.md`](../../../sms-provider-configuration-best-practices-2.md)
 - [`sms-provider-configuration.md`](./sms-provider-configuration.md)
-- [`sms-troubleshooting.md`](./sms-troubleshooting.md)
+- [`sms-troubleshooting-2.md`](../../../sms-troubleshooting-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [`sms.md`](./sms.md)
-- [`sms_action_factory_analysis.md`](./sms-action-factory-analysis.md)
-- [`sms_action_factory_resolution.md`](./sms-action-factory-resolution.md)
-- [`sms_actions.md`](./sms_actions.md)
-- [`sms_best_practices.md`](./sms-best-practices.md)
-- [`sms_channel_action_resolution.md`](./sms-channel-action-resolution.md)
-- [`sms_config_structure.md`](./sms_config_structure.md)
-- [`sms_driver_enum_translations.md`](./sms_driver_enum_translations.md)
-- [`sms_driver_selection_analysis.md`](./sms-driver-selection-analysis.md)
-- [`sms_driver_selection_specific_analysis.md`](./sms-driver-selection-specific-analysis.md)
-- [`sms_factor_data_implementation.md`](./sms_factor_data_implementation.md)
-- [`sms_global_vs_specific_params.md`](./sms_global_vs_specific_params.md)
-- [`sms_implementation.md`](./sms_implementation.md)
-- [`sms_netfun_channel.md`](./sms_netfun_channel.md)
+- [`sms-action-factory-analysis-2.md`](../../../sms-action-factory-analysis-2.md)
+- [`sms-action-factory-resolution-2.md`](../../../sms-action-factory-resolution-2.md)
+- [`sms-actions-2.md`](../../../sms-actions-2.md)
+- [`sms-best-practices-2.md`](../../../sms-best-practices-2.md)
+- [`sms-channel-action-resolution-2.md`](../../../sms-channel-action-resolution-2.md)
+- [`sms-config-structure-2.md`](../../../sms-config-structure-2.md)
+- [`sms-driver-enum-translations-2.md`](../../../sms-driver-enum-translations-2.md)
+- [`sms-driver-selection-analysis-2.md`](../../../sms-driver-selection-analysis-2.md)
+- [`sms-driver-selection-specific-analysis-2.md`](../../../sms-driver-selection-specific-analysis-2.md)
+- [`sms-factor-data-implementation-2.md`](../../../sms-factor-data-implementation-2.md)
+- [`sms-global-vs-specific-params-2.md`](../../../sms-global-vs-specific-params-2.md)
+- [`sms-implementation-2.md`](../../../sms-implementation-2.md)
+- [`sms-netfun-channel-2.md`](../../../sms-netfun-channel-2.md)
 - [`sms_provider_configuration.md`](./sms_provider_configuration.md)
-- [`sms_provider_configuration_best_practices.md`](./sms_provider_configuration_best_practices.md)
-- [`sms_troubleshooting.md`](./sms_troubleshooting.md)
+- [`sms-provider-configuration-best-practices-2.md`](../../../sms-provider-configuration-best-practices-2.md)
+- [`sms-troubleshooting-2.md`](../../../sms-troubleshooting-2.md)
 <<<<<<< HEAD
 - [`smsriver-enum-translations.md`](../../../smsriver-enum-translations.md)
 - [`smsriver-selection-specific.md`](../../../smsriver-selection-specific.md)
 - [`smsriver-selection.md`](../../../smsriver-selection.md)
 <<<<<<< .merge_file_VkYtaf
 - [`spatie-email-slug-proposal-1.md`](./spatie-email-slug-proposal-1.md)
-- [`spatie-email-slug-proposal.md`](./spatie-email-slug-proposal.md)
-- [`spatie-email-slug-proposal.md`](./spatie-email-slug-proposal.md)
-- [`spatie-email-usage-guide.md`](./spatie-email-usage-guide.md)
+- [`spatie-email-slug-proposal-2.md`](../../../spatie-email-slug-proposal-2.md)
+- [`spatie-email-slug-proposal-2.md`](../../../spatie-email-slug-proposal-2.md)
+- [`spatie-email-usage-guide-2.md`](../../../spatie-email-usage-guide-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3943,35 +3943,35 @@ Documentation for `notify` module categorized as **integrations**.
 - [`smsriver-selection.md`](../../../smsriver-selection.md)
 >>>>>>> .merge_file_junMiY
 >>>>>>> laraxot/dev
-- [`spatie-email-slug-proposal.md`](./spatie-email-slug-proposal.md)
-- [`spatie-email-slug-proposal.md`](./spatie-email-slug-proposal.md)
-- [`spatie-email-usage-guide.md`](./spatie-email-usage-guide.md)
+- [`spatie-email-slug-proposal-2.md`](../../../spatie-email-slug-proposal-2.md)
+- [`spatie-email-slug-proposal-2.md`](../../../spatie-email-slug-proposal-2.md)
+- [`spatie-email-usage-guide-2.md`](../../../spatie-email-usage-guide-2.md)
 =======
 - [`smsriver-enum-translations.md`](../../../smsriver-enum-translations.md)
 - [`smsriver-selection-specific.md`](../../../smsriver-selection-specific.md)
 - [`smsriver-selection.md`](../../../smsriver-selection.md)
-- [`spatie-email-slug-proposal.md`](./spatie-email-slug-proposal.md)
+- [`spatie-email-slug-proposal-2.md`](../../../spatie-email-slug-proposal-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`spatie-email-usage-guide.md`](./spatie-email-usage-guide.md)
+- [`spatie-email-usage-guide-2.md`](../../../spatie-email-usage-guide-2.md)
 - [`spatie-email-usage.md`](../../../spatie-email-usage.md)
 - [`spatie-translatable-integration.md`](./spatie-translatable-integration.md)
-- [`spatie_email_slug_proposal.md`](./spatie-email-slug-proposal.md)
-- [`spatie_email_usage_guide.md`](./spatie-email-usage-guide.md)
+- [`spatie-email-slug-proposal-2.md`](../../../spatie-email-slug-proposal-2.md)
+- [`spatie-email-usage-guide-2.md`](../../../spatie-email-usage-guide-2.md)
 - [`sprint-planning.md`](./sprint-planning.md)
 <<<<<<< HEAD
 - [`sprint-planning.md`](../../../sprint-planning.md)
 - [`sprint.md`](./sprint.md)
-- [`standardized-sms-config-structure.md`](./standardized-sms-config-structure.md)
-- [`standardized_sms_config_structure.md`](../../../standardized_sms_config_structure.md)
+- [`standardized-sms-config-structure-2.md`](../../../standardized-sms-config-structure-2.md)
+- [`standardized-sms-config-structure-2.md`](../../../standardized-sms-config-structure-2.md)
 - [`start-here-replikate-phase2.md`](./start-here-replikate-phase2.md)
 =======
 <<<<<<< HEAD
 - [`sprint-planning.md`](./sprint-planning.md)
 - [`sprint.md`](./sprint.md)
-- [`standardized-sms-config-structure.md`](./standardized-sms-config-structure.md)
-- [`standardized-sms-config-structure.md`](./standardized-sms-config-structure.md)
-- [`standardized_sms_config_structure.md`](./standardized_sms_config_structure.md)
+- [`standardized-sms-config-structure-2.md`](../../../standardized-sms-config-structure-2.md)
+- [`standardized-sms-config-structure-2.md`](../../../standardized-sms-config-structure-2.md)
+- [`standardized-sms-config-structure-2.md`](../../../standardized-sms-config-structure-2.md)
 - [`start-here-replikate-phase2.md`](./start-here-replikate-phase2.md)
 <<<<<<< HEAD
 =======
@@ -3984,144 +3984,144 @@ Documentation for `notify` module categorized as **integrations**.
 - [`structure-standards-2.md`](./structure-standards-2.md)
 - [`structure-standards.md`](./structure-standards.md)
 - [`structure.md`](./structure.md)
-- [`structure_standards.md`](./structure_standards.md)
+- [`structure-standards-2.md`](../../../structure-standards-2.md)
 <<<<<<< .merge_file_VkYtaf
 <<<<<<< HEAD
-- [`super-admin-setup-fix-.md`](../../../super-admin-setup-fix-.md)
+- [`super-admin-setup-fix-2.md`](../../../super-admin-setup-fix-2.md)
 - [`super-admin-setup-fix-1.md`](./super-admin-setup-fix-1.md)
-- [`sessione-fix-completata.md`](../../../sessione-fix-completata.md)
+- [`sessione-fix-completata-2.md`](../../../sessione-fix-completata.md)
 - [`sessione-super-mucca.md`](../../../sessione-super-mucca.md)
 - [`sessionesuper-mucca.md`](../../../sessionesuper-mucca.md)
 - [`sistema-notifiche.md`](../../../sistema-notifiche.md)
-- [`slug-solutions-analysis.md`](../../../slug-solutions-analysis.md)
+- [`slug-solutions-analysis-2.md`](../../../slug-solutions-analysis.md)
 - [`slug-solutions.md`](../../../slug-solutions.md)
-- [`slug_solutions_analysis.md`](../../../slug-solutions-analysis.md)
-- [`sms-action-factory-analysis.md`](../../../sms-action-factory-analysis.md)
-- [`sms-action-factory-resolution.md`](../../../sms-action-factory-resolution.md)
+- [`slug-solutions-analysis-2.md`](../../../slug-solutions-analysis.md)
+- [`sms-action-factory-analysis-2.md`](../../../sms-action-factory-analysis.md)
+- [`sms-action-factory-resolution-2.md`](../../../sms-action-factory-resolution.md)
 - [`sms-action-factory.md`](../../../sms-action-factory.md)
-- [`sms-actions.md`](../../../sms-actions.md)
-- [`sms-best-practices.md`](../../../sms-best-practices.md)
-- [`sms-channel-action-resolution.md`](../../../sms-channel-action-resolution.md)
+- [`sms-actions-2.md`](../../../sms-actions.md)
+- [`sms-best-practices-2.md`](../../../sms-best-practices.md)
+- [`sms-channel-action-resolution-2.md`](../../../sms-channel-action-resolution.md)
 - [`sms-config-structure-struttura-configurazione.md`](../../../sms-config-structure-struttura-configurazione.md)
-- [`sms-config-structure.md`](./sms-config-structure.md)
+- [`sms-config-structure-2.md`](../../../sms-config-structure-2.md)
 - [`sms-configuration-access.md`](../../../sms-configuration-access.md)
-- [`sms-driver-enum-translations.md`](../../../sms-driver-enum-translations.md)
-- [`sms-driver-selection-analysis.md`](../../../sms-driver-selection-analysis.md)
-- [`sms-driver-selection-specific-analysis.md`](../../../sms-driver-selection-specific-analysis.md)
-- [`sms-factor-data-implementation.md`](../../../sms-factor-data-implementation.md)
+- [`sms-driver-enum-translations-2.md`](../../../sms-driver-enum-translations.md)
+- [`sms-driver-selection-analysis-2.md`](../../../sms-driver-selection-analysis.md)
+- [`sms-driver-selection-specific-analysis-2.md`](../../../sms-driver-selection-specific-analysis.md)
+- [`sms-factor-data-implementation-2.md`](../../../sms-factor-data-implementation.md)
 - [`sms-factorata-implementation.md`](../../../sms-factorata-implementation.md)
-- [`sms-global-vs-specific-params.md`](../../../sms-global-vs-specific-params.md)
-- [`sms-implementation.md`](../../../sms-implementation.md)
+- [`sms-global-vs-specific-params-2.md`](../../../sms-global-vs-specific-params.md)
+- [`sms-implementation-2.md`](../../../sms-implementation.md)
 - [`sms-integration.md`](./sms-integration.md)
 - [`sms-netfun-channel-integrazione-laravel.md`](../../../sms-netfun-channel-integrazione-laravel.md)
-- [`sms-netfun-channel.md`](../../../sms-netfun-channel.md)
+- [`sms-netfun-channel-2.md`](../../../sms-netfun-channel.md)
 - [`sms-provider-configuration.md`](./sms-provider-configuration.md)
-- [`sms-provider-configuration-best-practices.md`](../../../sms-provider-configuration-best-practices.md)
+- [`sms-provider-configuration-best-practices-2.md`](../../../sms-provider-configuration-best-practices.md)
 =======
 =======
 >>>>>>> .merge_file_X4e09n
-- [`super-admin-setup-fix-.md`](./super-admin-setup-fix-.md)
+- [`super-admin-setup-fix-2.md`](./super-admin-setup-fix-2.md)
 - [`super-admin-setup-fix-1.md`](./super-admin-setup-fix-1.md)
 =======
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
 =======
 - [`sprint.md`](./sprint.md)
-- [`standardized-sms-config-structure.md`](./standardized-sms-config-structure.md)
-- [`standardized_sms_config_structure.md`](./standardized_sms_config_structure.md)
+- [`standardized-sms-config-structure-2.md`](../../../standardized-sms-config-structure-2.md)
+- [`standardized-sms-config-structure-2.md`](../../../standardized-sms-config-structure-2.md)
 - [`start-here-replikate-phase2.md`](./start-here-replikate-phase2.md)
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
 - [`structure-standards.md`](./structure-standards.md)
-- [`sessione-fix-completata.md`](../../../sessione-fix-completata.md)
+- [`sessione-fix-completata-2.md`](../../../sessione-fix-completata.md)
 - [`sessione-super-mucca.md`](./sessione-super-mucca.md)
 - [`sessione-super-mucca.md`](../../../sessione-super-mucca.md)
 - [`sessionesuper-mucca.md`](../../../sessionesuper-mucca.md)
 - [`sistema-notifiche.md`](../../../sistema-notifiche.md)
-- [`slug-solutions-analysis.md`](./slug-solutions-analysis.md)
-- [`slug-solutions-analysis.md`](../../../slug-solutions-analysis.md)
+- [`slug-solutions-analysis-2.md`](../../../slug-solutions-analysis-2.md)
+- [`slug-solutions-analysis-2.md`](../../../slug-solutions-analysis.md)
 - [`slug-solutions.md`](../../../slug-solutions.md)
-- [`slug_solutions_analysis.md`](../../../slug-solutions-analysis.md)
-- [`sms-action-factory-analysis.md`](./sms-action-factory-analysis.md)
-- [`sms-action-factory-analysis.md`](../../../sms-action-factory-analysis.md)
-- [`sms-action-factory-resolution.md`](./sms-action-factory-resolution.md)
-- [`sms-action-factory-resolution.md`](../../../sms-action-factory-resolution.md)
+- [`slug-solutions-analysis-2.md`](../../../slug-solutions-analysis.md)
+- [`sms-action-factory-analysis-2.md`](../../../sms-action-factory-analysis-2.md)
+- [`sms-action-factory-analysis-2.md`](../../../sms-action-factory-analysis.md)
+- [`sms-action-factory-resolution-2.md`](../../../sms-action-factory-resolution-2.md)
+- [`sms-action-factory-resolution-2.md`](../../../sms-action-factory-resolution.md)
 - [`sms-action-factory.md`](../../../sms-action-factory.md)
-- [`sms-actions.md`](../../../sms-actions.md)
-- [`sms-actions.md`](./sms-actions.md)
-- [`sms-actions.md`](../../../sms-actions.md)
-- [`sms-best-practices.md`](./sms-best-practices.md)
-- [`sms-best-practices.md`](../../../sms-best-practices.md)
-- [`sms-channel-action-resolution.md`](./sms-channel-action-resolution.md)
-- [`sms-channel-action-resolution.md`](../../../sms-channel-action-resolution.md)
+- [`sms-actions-2.md`](../../../sms-actions.md)
+- [`sms-actions-2.md`](../../../sms-actions-2.md)
+- [`sms-actions-2.md`](../../../sms-actions.md)
+- [`sms-best-practices-2.md`](../../../sms-best-practices-2.md)
+- [`sms-best-practices-2.md`](../../../sms-best-practices.md)
+- [`sms-channel-action-resolution-2.md`](../../../sms-channel-action-resolution-2.md)
+- [`sms-channel-action-resolution-2.md`](../../../sms-channel-action-resolution.md)
 - [`sms-config-structure-struttura-configurazione.md`](../../../sms-config-structure-struttura-configurazione.md)
-- [`sms-config-structure.md`](./sms-config-structure.md)
+- [`sms-config-structure-2.md`](../../../sms-config-structure-2.md)
 <<<<<<< HEAD
-- [`sms-config-structure.md`](./sms-config-structure.md)
+- [`sms-config-structure-2.md`](../../../sms-config-structure-2.md)
 =======
 >>>>>>> laraxot/dev
 - [`sms-configuration-access.md`](../../../sms-configuration-access.md)
-- [`sms-driver-enum-translations.md`](../../../sms-driver-enum-translations.md)
-- [`sms-driver-enum-translations.md`](./sms-driver-enum-translations.md)
-- [`sms-driver-enum-translations.md`](../../../sms-driver-enum-translations.md)
-- [`sms-driver-selection-analysis.md`](./sms-driver-selection-analysis.md)
-- [`sms-driver-selection-analysis.md`](../../../sms-driver-selection-analysis.md)
-- [`sms-driver-selection-specific-analysis.md`](./sms-driver-selection-specific-analysis.md)
-- [`sms-driver-selection-specific-analysis.md`](../../../sms-driver-selection-specific-analysis.md)
-- [`sms-factor-data-implementation.md`](./sms-factor-data-implementation.md)
-- [`sms-factor-data-implementation.md`](../../../sms-factor-data-implementation.md)
+- [`sms-driver-enum-translations-2.md`](../../../sms-driver-enum-translations.md)
+- [`sms-driver-enum-translations-2.md`](../../../sms-driver-enum-translations-2.md)
+- [`sms-driver-enum-translations-2.md`](../../../sms-driver-enum-translations.md)
+- [`sms-driver-selection-analysis-2.md`](../../../sms-driver-selection-analysis-2.md)
+- [`sms-driver-selection-analysis-2.md`](../../../sms-driver-selection-analysis.md)
+- [`sms-driver-selection-specific-analysis-2.md`](../../../sms-driver-selection-specific-analysis-2.md)
+- [`sms-driver-selection-specific-analysis-2.md`](../../../sms-driver-selection-specific-analysis.md)
+- [`sms-factor-data-implementation-2.md`](../../../sms-factor-data-implementation-2.md)
+- [`sms-factor-data-implementation-2.md`](../../../sms-factor-data-implementation.md)
 - [`sms-factorata-implementation.md`](../../../sms-factorata-implementation.md)
-- [`sms-global-vs-specific-params.md`](./sms-global-vs-specific-params.md)
-- [`sms-global-vs-specific-params.md`](../../../sms-global-vs-specific-params.md)
-- [`sms-implementation.md`](./sms-implementation.md)
-- [`sms-implementation.md`](../../../sms-implementation.md)
+- [`sms-global-vs-specific-params-2.md`](../../../sms-global-vs-specific-params-2.md)
+- [`sms-global-vs-specific-params-2.md`](../../../sms-global-vs-specific-params.md)
+- [`sms-implementation-2.md`](../../../sms-implementation-2.md)
+- [`sms-implementation-2.md`](../../../sms-implementation.md)
 - [`sms-integration.md`](./sms-integration.md)
 - [`sms-netfun-channel-integrazione-laravel.md`](../../../sms-netfun-channel-integrazione-laravel.md)
-- [`sms-netfun-channel.md`](./sms-netfun-channel.md)
-- [`sms-netfun-channel.md`](../../../sms-netfun-channel.md)
+- [`sms-netfun-channel-2.md`](../../../sms-netfun-channel-2.md)
+- [`sms-netfun-channel-2.md`](../../../sms-netfun-channel.md)
 - [`sms-provider-configuration.md`](../../../sms-provider-configuration-deprecated.md)
 - [`sms-provider-configuration.md`](./sms-provider-configuration.md)
-- [`sms-provider-configuration-best-practices.md`](../../../sms-provider-configuration-best-practices.md)
-- [`sms-provider-configuration-best-practices.md`](./sms-provider-configuration-best-practices.md)
-- [`sms-provider-configuration-best-practices.md`](../../../sms-provider-configuration-best-practices.md)
+- [`sms-provider-configuration-best-practices-2.md`](../../../sms-provider-configuration-best-practices.md)
+- [`sms-provider-configuration-best-practices-2.md`](../../../sms-provider-configuration-best-practices-2.md)
+- [`sms-provider-configuration-best-practices-2.md`](../../../sms-provider-configuration-best-practices.md)
 - [`sms-provider-configuration.md`](./sms-provider-configuration.md)
-- [`sms-troubleshooting.md`](../../../sms-troubleshooting.md)
-- [`sms-troubleshooting.md`](./sms-troubleshooting.md)
+- [`sms-troubleshooting-2.md`](../../../sms-troubleshooting.md)
+- [`sms-troubleshooting-2.md`](../../../sms-troubleshooting-2.md)
 >>>>>>> laraxot/dev
-- [`sms-troubleshooting.md`](../../../sms-troubleshooting.md)
+- [`sms-troubleshooting-2.md`](../../../sms-troubleshooting.md)
 - [`sms.md`](./sms.md)
-- [`sms_action_factory_analysis.md`](../../../sms-action-factory-analysis.md)
-- [`sms_action_factory_resolution.md`](../../../sms-action-factory-resolution.md)
-- [`sms_actions.md`](../../../sms_actions.md)
-- [`sms_best_practices.md`](../../../sms-best-practices.md)
-- [`sms_channel_action_resolution.md`](../../../sms-channel-action-resolution.md)
-- [`sms_config_structure.md`](../../../sms_config_structure.md)
-- [`sms_driver_enum_translations.md`](../../../sms_driver_enum_translations.md)
-- [`sms_driver_selection_analysis.md`](../../../sms-driver-selection-analysis.md)
-- [`sms_driver_selection_specific_analysis.md`](../../../sms-driver-selection-specific-analysis.md)
-- [`sms_factor_data_implementation.md`](../../../sms_factor_data_implementation.md)
-- [`sms_global_vs_specific_params.md`](../../../sms_global_vs_specific_params.md)
-- [`sms_implementation.md`](../../../sms_implementation.md)
-- [`sms_netfun_channel.md`](../../../sms_netfun_channel.md)
+- [`sms-action-factory-analysis-2.md`](../../../sms-action-factory-analysis.md)
+- [`sms-action-factory-resolution-2.md`](../../../sms-action-factory-resolution.md)
+- [`sms-actions-2.md`](../../../sms-actions-2.md)
+- [`sms-best-practices-2.md`](../../../sms-best-practices.md)
+- [`sms-channel-action-resolution-2.md`](../../../sms-channel-action-resolution.md)
+- [`sms-config-structure-2.md`](../../../sms-config-structure-2.md)
+- [`sms-driver-enum-translations-2.md`](../../../sms-driver-enum-translations-2.md)
+- [`sms-driver-selection-analysis-2.md`](../../../sms-driver-selection-analysis.md)
+- [`sms-driver-selection-specific-analysis-2.md`](../../../sms-driver-selection-specific-analysis.md)
+- [`sms-factor-data-implementation-2.md`](../../../sms-factor-data-implementation-2.md)
+- [`sms-global-vs-specific-params-2.md`](../../../sms-global-vs-specific-params-2.md)
+- [`sms-implementation-2.md`](../../../sms-implementation-2.md)
+- [`sms-netfun-channel-2.md`](../../../sms-netfun-channel-2.md)
 - [`sms_provider_configuration.md`](./sms_provider_configuration.md)
-- [`sms_provider_configuration_best_practices.md`](../../../sms_provider_configuration_best_practices.md)
-- [`sms_troubleshooting.md`](../../../sms_troubleshooting.md)
+- [`sms-provider-configuration-best-practices-2.md`](../../../sms-provider-configuration-best-practices-2.md)
+- [`sms-troubleshooting-2.md`](../../../sms-troubleshooting-2.md)
 - [`smsriver-enum-translations.md`](../../../smsriver-enum-translations.md)
 - [`smsriver-selection-specific.md`](../../../smsriver-selection-specific.md)
 - [`smsriver-selection.md`](../../../smsriver-selection.md)
 <<<<<<< HEAD
-- [`spatie-email-slug-proposal.md`](../../../spatie-email-slug-proposal.md)
+- [`spatie-email-slug-proposal-2.md`](../../../spatie-email-slug-proposal.md)
 =======
-- [`spatie-email-slug-proposal.md`](./spatie-email-slug-proposal.md)
-- [`spatie-email-slug-proposal.md`](../../../spatie-email-slug-proposal.md)
-- [`spatie-email-usage-guide.md`](./spatie-email-usage-guide.md)
+- [`spatie-email-slug-proposal-2.md`](../../../spatie-email-slug-proposal-2.md)
+- [`spatie-email-slug-proposal-2.md`](../../../spatie-email-slug-proposal.md)
+- [`spatie-email-usage-guide-2.md`](../../../spatie-email-usage-guide-2.md)
 >>>>>>> laraxot/dev
-- [`spatie-email-usage-guide.md`](../../../spatie-email-usage-guide.md)
+- [`spatie-email-usage-guide-2.md`](../../../spatie-email-usage-guide.md)
 - [`spatie-email-usage.md`](../../../spatie-email-usage.md)
 - [`spatie-translatable-integration.md`](../../../spatie-translatable-integration.md)
-- [`spatie_email_slug_proposal.md`](../../../spatie-email-slug-proposal.md)
-- [`spatie_email_usage_guide.md`](../../../spatie-email-usage-guide.md)
+- [`spatie-email-slug-proposal-2.md`](../../../spatie-email-slug-proposal.md)
+- [`spatie-email-usage-guide-2.md`](../../../spatie-email-usage-guide.md)
 - [`sprint-planning-documentation-themes.md`](./sprint-planning-documentation-themes.md)
 <<<<<<< HEAD
 - [`super-admin-setup-fix.md`](./super-admin-setup-fix.md)
@@ -4129,12 +4129,12 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 - [`sprint-planning.md`](../../../sprint-planning.md)
 - [`sprint.md`](./sprint.md)
-- [`standardized-sms-config-structure.md`](./standardized-sms-config-structure.md)
+- [`standardized-sms-config-structure-2.md`](../../../standardized-sms-config-structure-2.md)
 <<<<<<< HEAD
-- [`standardized-sms-config-structure.md`](./standardized-sms-config-structure.md)
+- [`standardized-sms-config-structure-2.md`](../../../standardized-sms-config-structure-2.md)
 =======
 >>>>>>> laraxot/dev
-- [`standardized_sms_config_structure.md`](../../../standardized_sms_config_structure.md)
+- [`standardized-sms-config-structure-2.md`](../../../standardized-sms-config-structure-2.md)
 - [`start-here-replikate-phase2.md`](./start-here-replikate-phase2.md)
 - [`structure-standards.md`](../../../structure-standards.md)
 - [`structure-standards.md`](./structure-standards.md)
@@ -4143,8 +4143,8 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 >>>>>>> laraxot/dev
 - [`structure.md`](./structure.md)
-- [`structure_standards.md`](./structure_standards.md)
-- [`super-admin-setup-fix-.md`](../../../super-admin-setup-fix-.md)
+- [`structure-standards-2.md`](../../../structure-standards-2.md)
+- [`super-admin-setup-fix-2.md`](../../../super-admin-setup-fix-2.md)
 - [`super-admin-setup-fix.md`](./super-admin-setup-fix.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
@@ -4161,10 +4161,10 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`super-mucca-completion.md`](../../../super-mucca-completion.md)
+- [`super-mucca-completion-2.md`](../../../super-mucca-completion.md)
 - [`super-mucca-docs-analysis.md`](./super-mucca-docs-analysis.md)
 - [`super-mucca-final-summary.md`](./super-mucca-final-summary.md)
-- [`super-mucca-login-completed.md`](../../../super-mucca-login-completed.md)
+- [`super-mucca-login-completed-2.md`](../../../super-mucca-login-completed.md)
 - [`supermemory-quickstart.md`](./supermemory-quickstart.md)
 - [`superpowers.md`](./superpowers.md)
 - [`support-to-actions-philosophy.md`](./support-to-actions-philosophy.md)
@@ -4179,10 +4179,10 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 <<<<<<< .merge_file_EZjoNq
 >>>>>>> .merge_file_X4e09n
-- [`system-admin-summary-.md`](./system-admin-summary-.md)
+- [`system-admin-summary-2.md`](./system-admin-summary-2.md)
 - [`system-admin-summary-1.md`](./system-admin-summary-1.md)
 - [`system-admin-summary.md`](./system-admin-summary.md)
-- [`tailwind-apply-bootstrap-italia.md`](./tailwind-apply-bootstrap-italia.md)
+- [`tailwind-apply-bootstrap-italia-2.md`](../../../tailwind-apply-bootstrap-italia-2.md)
 - [`tailwind-best-practices-1.md`](./tailwind-best-practices-1.md)
 - [`tailwind-best-practices-2.md`](./tailwind-best-practices-2.md)
 <<<<<<< .merge_file_VkYtaf
@@ -4195,10 +4195,10 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_X4e09n
-- [`system-admin-summary-.md`](../../../system-admin-summary-.md)
+- [`system-admin-summary-2.md`](../../../system-admin-summary-2.md)
 - [`system-admin-summary.md`](./system-admin-summary.md)
 - [`system-admin-summary.md`](./system-admin-summary.md)
-- [`tailwind-apply-bootstrap-italia.md`](../../../tailwind-apply-bootstrap-italia.md)
+- [`tailwind-apply-bootstrap-italia-2.md`](../../../tailwind-apply-bootstrap-italia.md)
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_VkYtaf
@@ -4211,148 +4211,148 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_junMiY
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_X4e09n
-- [`tailwind-best-practices.md`](./tailwind-best-practices.md)
-- [`tailwind-best-practices.md`](./tailwind-best-practices.md)
-- [`tailwind-best-practices.md`](./tailwind-best-practices.md)
-- [`tailwind-blade-components.md`](./tailwind-blade-components.md)
+- [`tailwind-best-practices-2.md`](../../../tailwind-best-practices-2.md)
+- [`tailwind-best-practices-2.md`](../../../tailwind-best-practices-2.md)
+- [`tailwind-best-practices-2.md`](../../../tailwind-best-practices-2.md)
+- [`tailwind-blade-components-2.md`](../../../tailwind-blade-components-2.md)
 <<<<<<< HEAD
 =======
 =======
-- [`system-admin-summary-.md`](../../../system-admin-summary-.md)
+- [`system-admin-summary-2.md`](../../../system-admin-summary-2.md)
 - [`system-admin-summary.md`](./system-admin-summary.md)
-- [`tailwind-apply-bootstrap-italia.md`](../../../tailwind-apply-bootstrap-italia.md)
-- [`tailwind-best-practices.md`](./tailwind-best-practices.md)
+- [`tailwind-apply-bootstrap-italia-2.md`](../../../tailwind-apply-bootstrap-italia.md)
+- [`tailwind-best-practices-2.md`](../../../tailwind-best-practices-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`tailwind-blade-components.md`](./tailwind-blade-components.md)
+- [`tailwind-blade-components-2.md`](../../../tailwind-blade-components-2.md)
 - [`tailwind-components.md`](./tailwind-components.md)
 - [`tailwind-conversion-complete.md`](./tailwind-conversion-complete.md)
-- [`tailwind-css-webcrunch.md`](./tailwind-css-webcrunch.md)
-- [`tailwind-css-webcrunch-approfondimento.md`](./tailwind-css-webcrunch-approfondimento.md)
+- [`tailwind-css-webcrunch-2.md`](../../../tailwind-css-webcrunch-2.md)
+- [`tailwind-css-webcrunch-approfondimento-2.md`](../../../tailwind-css-webcrunch-approfondimento-2.md)
 <<<<<<< HEAD
-- [`tailwind-css-webcrunch-approfondimento.md`](./tailwind-css-webcrunch-approfondimento.md)
+- [`tailwind-css-webcrunch-approfondimento-2.md`](../../../tailwind-css-webcrunch-approfondimento-2.md)
 =======
 <<<<<<< HEAD
-- [`tailwind-css-webcrunch-approfondimento.md`](./tailwind-css-webcrunch-approfondimento.md)
+- [`tailwind-css-webcrunch-approfondimento-2.md`](../../../tailwind-css-webcrunch-approfondimento-2.md)
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`tailwind-css-webcrunch.md`](./tailwind-css-webcrunch.md)
+- [`tailwind-css-webcrunch-2.md`](../../../tailwind-css-webcrunch-2.md)
 - [`tailwind-email-system.md`](./tailwind-email-system.md)
 - [`tailwind-forms.md`](./tailwind-forms.md)
-- [`tailwind-implementation.md`](./tailwind-implementation.md)
+- [`tailwind-implementation-2.md`](../../../tailwind-implementation-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
-- [`tailwind-implementation.md`](./tailwind-implementation.md)
-- [`tailwind-implementation.md`](./tailwind-implementation.md)
+- [`tailwind-implementation-2.md`](../../../tailwind-implementation-2.md)
+- [`tailwind-implementation-2.md`](../../../tailwind-implementation-2.md)
 - [`tailwind-layouts.md`](./tailwind-layouts.md)
 - [`tailwind-notifications.md`](./tailwind-notifications.md)
-- [`tailwind-plugin-guide.md`](./tailwind-plugin-guide.md)
-- [`tailwind-plugin-guide.md`](./tailwind-plugin-guide.md)
+- [`tailwind-plugin-guide-2.md`](../../../tailwind-plugin-guide-2.md)
+- [`tailwind-plugin-guide-2.md`](../../../tailwind-plugin-guide-2.md)
 <<<<<<< .merge_file_VkYtaf
 <<<<<<< HEAD
 =======
 =======
 - [`tailwind-layouts.md`](./tailwind-layouts.md)
 - [`tailwind-notifications.md`](./tailwind-notifications.md)
-- [`tailwind-plugin-guide.md`](./tailwind-plugin-guide.md)
+- [`tailwind-plugin-guide-2.md`](../../../tailwind-plugin-guide-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
 - [`tailwind-plugin.md`](../../../tailwind-plugin.md)
-- [`tailwind_best_practices.md`](./tailwind_best_practices.md)
-- [`tailwind_blade_components.md`](./tailwind_blade_components.md)
-- [`tailwind_css_webcrunch.md`](./tailwind-css-webcrunch.md)
-- [`tailwind_css_webcrunch_approfondimento.md`](./tailwind_css_webcrunch_approfondimento.md)
-- [`tailwind_implementation.md`](./tailwind_implementation.md)
-- [`tailwind_plugin_guide.md`](./tailwind_plugin_guide.md)
-- [`telegram-channel.md`](./telegram-channel.md)
+- [`tailwind-best-practices-2.md`](../../../tailwind-best-practices-2.md)
+- [`tailwind-blade-components-2.md`](../../../tailwind-blade-components-2.md)
+- [`tailwind-css-webcrunch-2.md`](../../../tailwind-css-webcrunch-2.md)
+- [`tailwind-css-webcrunch-approfondimento-2.md`](../../../tailwind-css-webcrunch-approfondimento-2.md)
+- [`tailwind-implementation-2.md`](../../../tailwind-implementation-2.md)
+- [`tailwind-plugin-guide-2.md`](../../../tailwind-plugin-guide-2.md)
+- [`telegram-channel-2.md`](../../../telegram-channel-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
-- [`telegram-channel.md`](./telegram-channel.md)
-- [`telegram-channel.md`](./telegram-channel.md)
-- [`telegram-integration.md`](./telegram-integration.md)
-- [`telegram-integration.md`](./telegram-integration.md)
-- [`telegram-integration.md`](./telegram-integration.md)
-- [`telegram-sending-standard.md`](./telegram-sending-standard.md)
+- [`telegram-channel-2.md`](../../../telegram-channel-2.md)
+- [`telegram-channel-2.md`](../../../telegram-channel-2.md)
+- [`telegram-integration-2.md`](../../../telegram-integration-2.md)
+- [`telegram-integration-2.md`](../../../telegram-integration-2.md)
+- [`telegram-integration-2.md`](../../../telegram-integration-2.md)
+- [`telegram-sending-standard-2.md`](../../../telegram-sending-standard-2.md)
 <<<<<<< HEAD
 =======
 =======
-- [`telegram-integration.md`](./telegram-integration.md)
+- [`telegram-integration-2.md`](../../../telegram-integration-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`telegram-sending-standard.md`](./telegram-sending-standard.md)
+- [`telegram-sending-standard-2.md`](../../../telegram-sending-standard-2.md)
 - [`telegram-whatsapp-provider-interface-compliance-fix.md`](../../../telegram-whatsapp-provider-interface-compliance-fix.md)
 - [`telegram.md`](./telegram.md)
-- [`telegram_channel.md`](./telegram-channel.md)
-- [`telegram_integration.md`](./telegram_integration.md)
-- [`telegram_sending_standard.md`](./telegram-sending-standard.md)
-- [`super-admin-setup-fix-.md`](../../../super-admin-setup-fix-.md)
+- [`telegram-channel-2.md`](../../../telegram-channel-2.md)
+- [`telegram-integration-2.md`](../../../telegram-integration-2.md)
+- [`telegram-sending-standard-2.md`](../../../telegram-sending-standard-2.md)
+- [`super-admin-setup-fix-2.md`](../../../super-admin-setup-fix-2.md)
 - [`super-admin-setup-fix.md`](./super-admin-setup-fix.md)
 - [`super-admin-setup-fix.md`](../../../super-admin-setup-fix.md)
-- [`super-mucca-completion.md`](../../../super-mucca-completion.md)
+- [`super-mucca-completion-2.md`](../../../super-mucca-completion.md)
 - [`super-mucca-docs-analysis.md`](./super-mucca-docs-analysis.md)
 - [`super-mucca-final-summary.md`](./super-mucca-final-summary.md)
-- [`super-mucca-login-completed.md`](../../../super-mucca-login-completed.md)
+- [`super-mucca-login-completed-2.md`](../../../super-mucca-login-completed.md)
 - [`supermemory-quickstart.md`](./supermemory-quickstart.md)
 - [`superpowers.md`](./superpowers.md)
 - [`support-to-actions-philosophy.md`](./support-to-actions-philosophy.md)
-- [`system-admin-summary-.md`](../../../system-admin-summary-.md)
+- [`system-admin-summary-2.md`](../../../system-admin-summary-2.md)
 - [`system-admin-summary.md`](./system-admin-summary.md)
 - [`system-admin-summary.md`](../../../system-admin-summary.md)
-- [`tailwind-apply-bootstrap-italia.md`](../../../tailwind-apply-bootstrap-italia.md)
-- [`tailwind-best-practices.md`](../../../tailwind-best-practices.md)
-- [`tailwind-best-practices.md`](./tailwind-best-practices.md)
-- [`tailwind-best-practices.md`](../../../tailwind-best-practices.md)
-- [`tailwind-blade-components.md`](./tailwind-blade-components.md)
-- [`tailwind-blade-components.md`](../../../tailwind-blade-components.md)
+- [`tailwind-apply-bootstrap-italia-2.md`](../../../tailwind-apply-bootstrap-italia.md)
+- [`tailwind-best-practices-2.md`](../../../tailwind-best-practices.md)
+- [`tailwind-best-practices-2.md`](../../../tailwind-best-practices-2.md)
+- [`tailwind-best-practices-2.md`](../../../tailwind-best-practices.md)
+- [`tailwind-blade-components-2.md`](../../../tailwind-blade-components-2.md)
+- [`tailwind-blade-components-2.md`](../../../tailwind-blade-components.md)
 - [`tailwind-components.md`](../../../tailwind-components.md)
 - [`tailwind-conversion-complete.md`](./tailwind-conversion-complete.md)
-- [`tailwind-css-webcrunch.md`](./tailwind-css-webcrunch.md)
-- [`tailwind-css-webcrunch-approfondimento.md`](./tailwind-css-webcrunch-approfondimento.md)
-- [`tailwind-css-webcrunch-approfondimento.md`](../../../tailwind-css-webcrunch-approfondimento.md)
-- [`tailwind-css-webcrunch.md`](../../../tailwind-css-webcrunch.md)
+- [`tailwind-css-webcrunch-2.md`](../../../tailwind-css-webcrunch-2.md)
+- [`tailwind-css-webcrunch-approfondimento-2.md`](../../../tailwind-css-webcrunch-approfondimento-2.md)
+- [`tailwind-css-webcrunch-approfondimento-2.md`](../../../tailwind-css-webcrunch-approfondimento.md)
+- [`tailwind-css-webcrunch-2.md`](../../../tailwind-css-webcrunch.md)
 - [`tailwind-email-system.md`](../../../tailwind-email-system.md)
 - [`tailwind-forms.md`](../../../tailwind-forms.md)
-- [`tailwind-implementation.md`](../../../tailwind-implementation.md)
-- [`tailwind-implementation.md`](./tailwind-implementation.md)
-- [`tailwind-implementation.md`](../../../tailwind-implementation.md)
+- [`tailwind-implementation-2.md`](../../../tailwind-implementation.md)
+- [`tailwind-implementation-2.md`](../../../tailwind-implementation-2.md)
+- [`tailwind-implementation-2.md`](../../../tailwind-implementation.md)
 - [`tailwind-layouts.md`](../../../tailwind-layouts.md)
 - [`tailwind-notifications.md`](../../../tailwind-notifications.md)
-- [`tailwind-plugin-guide.md`](./tailwind-plugin-guide.md)
-- [`tailwind-plugin-guide.md`](../../../tailwind-plugin-guide.md)
+- [`tailwind-plugin-guide-2.md`](../../../tailwind-plugin-guide-2.md)
+- [`tailwind-plugin-guide-2.md`](../../../tailwind-plugin-guide.md)
 - [`tailwind-plugin.md`](../../../tailwind-plugin.md)
-- [`tailwind_best_practices.md`](../../../tailwind_best_practices.md)
-- [`tailwind_blade_components.md`](../../../tailwind_blade_components.md)
-- [`tailwind_css_webcrunch.md`](../../../tailwind-css-webcrunch.md)
-- [`tailwind_css_webcrunch_approfondimento.md`](../../../tailwind_css_webcrunch_approfondimento.md)
-- [`tailwind_implementation.md`](../../../tailwind_implementation.md)
-- [`tailwind_plugin_guide.md`](../../../tailwind_plugin_guide.md)
-- [`telegram-channel.md`](../../../telegram-channel.md)
-- [`telegram-channel.md`](./telegram-channel.md)
-- [`telegram-channel.md`](../../../telegram-channel.md)
-- [`telegram-integration.md`](../../../telegram-integration.md)
-- [`telegram-integration.md`](./telegram-integration.md)
+- [`tailwind-best-practices-2.md`](../../../tailwind-best-practices-2.md)
+- [`tailwind-blade-components-2.md`](../../../tailwind-blade-components-2.md)
+- [`tailwind-css-webcrunch-2.md`](../../../tailwind-css-webcrunch.md)
+- [`tailwind-css-webcrunch-approfondimento-2.md`](../../../tailwind-css-webcrunch-approfondimento-2.md)
+- [`tailwind-implementation-2.md`](../../../tailwind-implementation-2.md)
+- [`tailwind-plugin-guide-2.md`](../../../tailwind-plugin-guide-2.md)
+- [`telegram-channel-2.md`](../../../telegram-channel.md)
+- [`telegram-channel-2.md`](../../../telegram-channel-2.md)
+- [`telegram-channel-2.md`](../../../telegram-channel.md)
+- [`telegram-integration-2.md`](../../../telegram-integration.md)
+- [`telegram-integration-2.md`](../../../telegram-integration-2.md)
 <<<<<<< HEAD
-- [`telegram-integration.md`](./telegram-integration.md)
+- [`telegram-integration-2.md`](../../../telegram-integration-2.md)
 =======
 <<<<<<< HEAD
-- [`telegram-integration.md`](./telegram-integration.md)
+- [`telegram-integration-2.md`](../../../telegram-integration-2.md)
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`telegram-sending-standard.md`](./telegram-sending-standard.md)
-- [`telegram-sending-standard.md`](../../../telegram-sending-standard.md)
+- [`telegram-sending-standard-2.md`](../../../telegram-sending-standard-2.md)
+- [`telegram-sending-standard-2.md`](../../../telegram-sending-standard.md)
 - [`telegram-whatsapp-provider-interface-compliance-fix.md`](../../../telegram-whatsapp-provider-interface-compliance-fix.md)
 - [`telegram.md`](./telegram.md)
-- [`telegram_channel.md`](../../../telegram-channel.md)
-- [`telegram_integration.md`](../../../telegram_integration.md)
-- [`telegram_sending_standard.md`](../../../telegram-sending-standard.md)
+- [`telegram-channel-2.md`](../../../telegram-channel.md)
+- [`telegram-integration-2.md`](../../../telegram-integration-2.md)
+- [`telegram-sending-standard-2.md`](../../../telegram-sending-standard.md)
 - [`theme-system-dynamic.md`](./theme-system-dynamic.md)
 - [`themes-documentation-index.md`](./themes-documentation-index.md)
 - [`todo.md`](./todo.md)
@@ -4360,21 +4360,21 @@ Documentation for `notify` module categorized as **integrations**.
 - [`token-optimization.md`](./token-optimization.md)
 - [`trans-choice-dry-religion.md`](./trans-choice-dry-religion.md)
 <<<<<<< HEAD
-- [`transaction-removal-fix-.md`](../../../transaction-removal-fix-.md)
+- [`transaction-removal-fix-2.md`](../../../transaction-removal-fix-2.md)
 <<<<<<< .merge_file_VkYtaf
 - [`transaction-removal-fix-1.md`](./transaction-removal-fix-1.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-- [`transaction-removal-fix-.md`](../../../transaction-removal-fix-.md)
+- [`transaction-removal-fix-2.md`](../../../transaction-removal-fix-2.md)
 =======
 >>>>>>> .merge_file_X4e09n
 =======
 <<<<<<< .merge_file_EZjoNq
-- [`transaction-removal-fix-.md`](./transaction-removal-fix-.md)
+- [`transaction-removal-fix-2.md`](./transaction-removal-fix-2.md)
 - [`transaction-removal-fix-1.md`](./transaction-removal-fix-1.md)
 =======
-- [`transaction-removal-fix-.md`](../../../transaction-removal-fix-.md)
+- [`transaction-removal-fix-2.md`](../../../transaction-removal-fix-2.md)
 >>>>>>> .merge_file_junMiY
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
@@ -4383,16 +4383,16 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_X4e09n
 - [`transaction-removal-fix.md`](./transaction-removal-fix.md)
 - [`transaction-removal-fix.md`](./transaction-removal-fix.md)
-- [`translation-cleanup-plan.md`](./translation-cleanup-plan.md)
-- [`translation-cleanup-plan.md`](./translation-cleanup-plan.md)
-- [`translation-cleanup-plan.md`](./translation-cleanup-plan.md)
-- [`translation-conventions.md`](./translation-conventions.md)
-- [`translation-conventions.md`](./translation-conventions.md)
-- [`translation-conventions-clarification.md`](./translation-conventions-clarification.md)
-- [`translation-conventions-clarification.md`](./translation-conventions-clarification.md)
-- [`translation-conventions-clarification.md`](./translation-conventions-clarification.md)
-- [`translation-conventions.md`](./translation-conventions.md)
-- [`translation-file-correction-guide.md`](./translation-file-correction-guide.md)
+- [`translation-cleanup-plan-2.md`](../../../translation-cleanup-plan-2.md)
+- [`translation-cleanup-plan-2.md`](../../../translation-cleanup-plan-2.md)
+- [`translation-cleanup-plan-2.md`](../../../translation-cleanup-plan-2.md)
+- [`translation-conventions-2.md`](../../../translation-conventions-2.md)
+- [`translation-conventions-2.md`](../../../translation-conventions-2.md)
+- [`translation-conventions-clarification-2.md`](../../../translation-conventions-clarification-2.md)
+- [`translation-conventions-clarification-2.md`](../../../translation-conventions-clarification-2.md)
+- [`translation-conventions-clarification-2.md`](../../../translation-conventions-clarification-2.md)
+- [`translation-conventions-2.md`](../../../translation-conventions-2.md)
+- [`translation-file-correction-guide-2.md`](../../../translation-file-correction-guide-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_VkYtaf
@@ -4405,10 +4405,10 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_X4e09n
 - [`translation-file-correction.md`](./translation-file-correction.md)
 - [`translation-file-naming-rules-1.md`](./translation-file-naming-rules-1.md)
-- [`translation-file-naming-rules.md`](./translation-file-naming-rules.md)
+- [`translation-file-naming-rules-2.md`](../../../translation-file-naming-rules-2.md)
 - [`translation-file-naming.md`](./translation-file-naming.md)
 - [`translation-file-structure-guide-1.md`](./translation-file-structure-guide-1.md)
-- [`translation-file-structure-guide.md`](./translation-file-structure-guide.md)
+- [`translation-file-structure-guide-2.md`](../../../translation-file-structure-guide-2.md)
 - [`translation-file-structure.md`](./translation-file-structure.md)
 - [`translation-implementation-plan-1.md`](./translation-implementation-plan-1.md)
 - [`translation-implementation-plan-2.md`](./translation-implementation-plan-2.md)
@@ -4422,14 +4422,14 @@ Documentation for `notify` module categorized as **integrations**.
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_X4e09n
-- [`translation-file-correction-guide.md`](./translation-file-correction-guide.md)
-- [`translation-file-correction-guide.md`](./translation-file-correction-guide.md)
+- [`translation-file-correction-guide-2.md`](../../../translation-file-correction-guide-2.md)
+- [`translation-file-correction-guide-2.md`](../../../translation-file-correction-guide-2.md)
 - [`translation-file-correction.md`](../../../translation-file-correction.md)
-- [`translation-file-naming-rules.md`](./translation-file-naming-rules.md)
-- [`translation-file-naming-rules.md`](./translation-file-naming-rules.md)
+- [`translation-file-naming-rules-2.md`](../../../translation-file-naming-rules-2.md)
+- [`translation-file-naming-rules-2.md`](../../../translation-file-naming-rules-2.md)
 - [`translation-file-naming.md`](../../../translation-file-naming.md)
-- [`translation-file-structure-guide.md`](./translation-file-structure-guide.md)
-- [`translation-file-structure-guide.md`](./translation-file-structure-guide.md)
+- [`translation-file-structure-guide-2.md`](../../../translation-file-structure-guide-2.md)
+- [`translation-file-structure-guide-2.md`](../../../translation-file-structure-guide-2.md)
 - [`translation-file-structure.md`](../../../translation-file-structure.md)
 <<<<<<< HEAD
 =======
@@ -4443,13 +4443,13 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_junMiY
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_X4e09n
-- [`translation-implementation-plan.md`](./translation-implementation-plan.md)
-- [`translation-implementation-plan.md`](./translation-implementation-plan.md)
-- [`translation-implementation-plan.md`](./translation-implementation-plan.md)
-- [`translation-keys-best-practices.md`](./translation-keys-best-practices.md)
-- [`translation-keys-best-practices.md`](./translation-keys-best-practices.md)
-- [`translation-keys-rules.md`](./translation-keys-rules.md)
-- [`translation-keys-rules.md`](./translation-keys-rules.md)
+- [`translation-implementation-plan-2.md`](../../../translation-implementation-plan-2.md)
+- [`translation-implementation-plan-2.md`](../../../translation-implementation-plan-2.md)
+- [`translation-implementation-plan-2.md`](../../../translation-implementation-plan-2.md)
+- [`translation-keys-best-practices-3.md`](../../../../../Lang/docs/translation-keys-best-practices-3.md)
+- [`translation-keys-best-practices-3.md`](../../../../../Lang/docs/translation-keys-best-practices-3.md)
+- [`translation-keys-rules-3.md`](../../../../../Lang/docs/translation-keys-rules-3.md)
+- [`translation-keys-rules-3.md`](../../../../../Lang/docs/translation-keys-rules-3.md)
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_VkYtaf
@@ -4477,10 +4477,10 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 - [`translation-keys.md`](../../../translation-keys.md)
 - [`translation-namespace-religion.md`](../../../translation-namespace-religion.md)
-- [`translation-standards.md`](./translation-standards.md)
-- [`translation-standards.md`](./translation-standards.md)
-- [`translation-standards-progress.md`](./translation-standards-progress.md)
-- [`translation-standards-progress.md`](./translation-standards-progress.md)
+- [`translation-standards-3.md`](../../../../../Lang/docs/translation-standards-3.md)
+- [`translation-standards-3.md`](../../../../../Lang/docs/translation-standards-3.md)
+- [`translation-standards-progress-2.md`](../../../translation-standards-progress-2.md)
+- [`translation-standards-progress-2.md`](../../../translation-standards-progress-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_VkYtaf
@@ -4489,52 +4489,52 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_junMiY
 >>>>>>> laraxot/dev
 =======
-- [`transaction-removal-fix-.md`](../../../transaction-removal-fix-.md)
+- [`transaction-removal-fix-2.md`](../../../transaction-removal-fix-2.md)
 - [`transaction-removal-fix.md`](./transaction-removal-fix.md)
-- [`translation-cleanup-plan.md`](./translation-cleanup-plan.md)
-- [`translation-conventions.md`](./translation-conventions.md)
-- [`translation-conventions-clarification.md`](./translation-conventions-clarification.md)
-- [`translation-conventions.md`](./translation-conventions.md)
-- [`translation-file-correction-guide.md`](./translation-file-correction-guide.md)
+- [`translation-cleanup-plan-2.md`](../../../translation-cleanup-plan-2.md)
+- [`translation-conventions-2.md`](../../../translation-conventions-2.md)
+- [`translation-conventions-clarification-2.md`](../../../translation-conventions-clarification-2.md)
+- [`translation-conventions-2.md`](../../../translation-conventions-2.md)
+- [`translation-file-correction-guide-2.md`](../../../translation-file-correction-guide-2.md)
 - [`translation-file-correction.md`](../../../translation-file-correction.md)
-- [`translation-file-naming-rules.md`](./translation-file-naming-rules.md)
+- [`translation-file-naming-rules-2.md`](../../../translation-file-naming-rules-2.md)
 - [`translation-file-naming.md`](../../../translation-file-naming.md)
-- [`translation-file-structure-guide.md`](./translation-file-structure-guide.md)
+- [`translation-file-structure-guide-2.md`](../../../translation-file-structure-guide-2.md)
 - [`translation-file-structure.md`](../../../translation-file-structure.md)
-- [`translation-implementation-plan.md`](./translation-implementation-plan.md)
-- [`translation-keys-best-practices.md`](./translation-keys-best-practices.md)
-- [`translation-keys-rules.md`](./translation-keys-rules.md)
+- [`translation-implementation-plan-2.md`](../../../translation-implementation-plan-2.md)
+- [`translation-keys-best-practices-3.md`](../../../../../Lang/docs/translation-keys-best-practices-3.md)
+- [`translation-keys-rules-3.md`](../../../../../Lang/docs/translation-keys-rules-3.md)
 - [`translation-keys.md`](../../../translation-keys.md)
 - [`translation-namespace-religion.md`](../../../translation-namespace-religion.md)
-- [`translation-standards.md`](./translation-standards.md)
+- [`translation-standards-3.md`](../../../../../Lang/docs/translation-standards-3.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_junMiY
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_X4e09n
-- [`translation-standards-progress.md`](./translation-standards-progress.md)
-- [`translation-standards.md`](./translation-standards.md)
-- [`translation_cleanup_plan.md`](./translation_cleanup_plan.md)
-- [`translation_conventions.md`](./translation_conventions.md)
-- [`translation_conventions_clarification.md`](./translation_conventions_clarification.md)
-- [`translation_file_correction_guide.md`](./translation_file_correction_guide.md)
-- [`translation_file_naming_rules.md`](./translation-file-naming-rules.md)
-- [`translation_file_structure_guide.md`](./translation-file-structure-guide.md)
-- [`translation_implementation_plan.md`](./translation_implementation_plan.md)
-- [`translation_keys_best_practices.md`](./translation-keys-best-practices.md)
-- [`translation_keys_rules.md`](./translation_keys_rules.md)
-- [`translation_standards.md`](./translation_standards.md)
-- [`translation_standards_progress.md`](./translation_standards_progress.md)
-- [`translations-implementation-status.md`](./translations-implementation-status.md)
+- [`translation-standards-progress-2.md`](../../../translation-standards-progress-2.md)
+- [`translation-standards-3.md`](../../../../../Lang/docs/translation-standards-3.md)
+- [`translation-cleanup-plan-2.md`](../../../translation-cleanup-plan-2.md)
+- [`translation-conventions-2.md`](../../../translation-conventions-2.md)
+- [`translation-conventions-clarification-2.md`](../../../translation-conventions-clarification-2.md)
+- [`translation-file-correction-guide-2.md`](../../../translation-file-correction-guide-2.md)
+- [`translation-file-naming-rules-2.md`](../../../translation-file-naming-rules-2.md)
+- [`translation-file-structure-guide-2.md`](../../../translation-file-structure-guide-2.md)
+- [`translation-implementation-plan-2.md`](../../../translation-implementation-plan-2.md)
+- [`translation-keys-best-practices-3.md`](../../../../../Lang/docs/translation-keys-best-practices-3.md)
+- [`translation-keys-rules-3.md`](../../../../../Lang/docs/translation-keys-rules-3.md)
+- [`translation-standards-3.md`](../../../../../Lang/docs/translation-standards-3.md)
+- [`translation-standards-progress-2.md`](../../../translation-standards-progress-2.md)
+- [`translations-implementation-status-2.md`](../../../translations-implementation-status-2.md)
 <<<<<<< HEAD
-- [`translations-implementation-status.md`](./translations-implementation-status.md)
-- [`translations-implementation-status.md`](./translations-implementation-status.md)
+- [`translations-implementation-status-2.md`](../../../translations-implementation-status-2.md)
+- [`translations-implementation-status-2.md`](../../../translations-implementation-status-2.md)
 <<<<<<< .merge_file_VkYtaf
 =======
 <<<<<<< HEAD
-- [`translations-implementation-status.md`](./translations-implementation-status.md)
-- [`translations-implementation-status.md`](./translations-implementation-status.md)
+- [`translations-implementation-status-2.md`](../../../translations-implementation-status-2.md)
+- [`translations-implementation-status-2.md`](../../../translations-implementation-status-2.md)
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -4542,7 +4542,7 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_X4e09n
 - [`translations-implementation.md`](../../../translations-implementation.md)
 - [`translations.md`](./translations.md)
-- [`translations_implementation_status.md`](./translations_implementation_status.md)
+- [`translations-implementation-status-2.md`](../../../translations-implementation-status-2.md)
 - [`troubleshooting.md`](./troubleshooting.md)
 - [`tutorials.md`](../../../tutorials.md)
 - [`ui-ux-pro-max-skills-integration.md`](./ui-ux-pro-max-skills-integration.md)
@@ -4560,21 +4560,21 @@ Documentation for `notify` module categorized as **integrations**.
 - [`verification.md`](../../../verification.md)
 - [`vhost-configuration.md`](./vhost-configuration.md)
 <<<<<<< HEAD
-- [`view-cache-components-fix-.md`](../../../view-cache-components-fix-.md)
+- [`view-cache-components-fix-2.md`](../../../view-cache-components-fix-2.md)
 <<<<<<< .merge_file_VkYtaf
 - [`view-cache-components-fix-1.md`](./view-cache-components-fix-1.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-- [`view-cache-components-fix-.md`](../../../view-cache-components-fix-.md)
+- [`view-cache-components-fix-2.md`](../../../view-cache-components-fix-2.md)
 =======
 >>>>>>> .merge_file_X4e09n
 =======
 <<<<<<< .merge_file_EZjoNq
-- [`view-cache-components-fix-.md`](./view-cache-components-fix-.md)
+- [`view-cache-components-fix-2.md`](./view-cache-components-fix-2.md)
 - [`view-cache-components-fix-1.md`](./view-cache-components-fix-1.md)
 =======
-- [`view-cache-components-fix-.md`](../../../view-cache-components-fix-.md)
+- [`view-cache-components-fix-2.md`](../../../view-cache-components-fix-2.md)
 >>>>>>> .merge_file_junMiY
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
@@ -4583,9 +4583,9 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_X4e09n
 - [`view-cache-components-fix.md`](./view-cache-components-fix.md)
 - [`view-cache-components-fix.md`](./view-cache-components-fix.md)
-- [`webcrunch-tailwind-collection.md`](./webcrunch-tailwind-collection.md)
-- [`webcrunch-tailwind-collection.md`](./webcrunch-tailwind-collection.md)
-- [`webcrunch_tailwind_collection.md`](./webcrunch-tailwind-collection.md)
+- [`webcrunch-tailwind-collection-2.md`](../../../webcrunch-tailwind-collection-2.md)
+- [`webcrunch-tailwind-collection-2.md`](../../../webcrunch-tailwind-collection-2.md)
+- [`webcrunch-tailwind-collection-2.md`](../../../webcrunch-tailwind-collection-2.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
 - [`whatsapp-channel-1.md`](./whatsapp-channel-1.md)
@@ -4608,45 +4608,45 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`whatsapp-channel.md`](./whatsapp-channel.md)
-- [`whatsapp-channel.md`](./whatsapp-channel.md)
-- [`whatsapp-integration.md`](./whatsapp-integration.md)
-- [`whatsapp-integration.md`](./whatsapp-integration.md)
-- [`whatsapp-integration.md`](./whatsapp-integration.md)
-- [`whatsapp-sending-standard.md`](./whatsapp-sending-standard.md)
+- [`whatsapp-channel-2.md`](../../../whatsapp-channel-2.md)
+- [`whatsapp-channel-2.md`](../../../whatsapp-channel-2.md)
+- [`whatsapp-integration-2.md`](../../../whatsapp-integration-2.md)
+- [`whatsapp-integration-2.md`](../../../whatsapp-integration-2.md)
+- [`whatsapp-integration-2.md`](../../../whatsapp-integration-2.md)
+- [`whatsapp-sending-standard-2.md`](../../../whatsapp-sending-standard-2.md)
 <<<<<<< HEAD
 =======
 =======
-- [`view-cache-components-fix-.md`](../../../view-cache-components-fix-.md)
+- [`view-cache-components-fix-2.md`](../../../view-cache-components-fix-2.md)
 - [`view-cache-components-fix.md`](./view-cache-components-fix.md)
-- [`webcrunch-tailwind-collection.md`](./webcrunch-tailwind-collection.md)
-- [`webcrunch_tailwind_collection.md`](./webcrunch-tailwind-collection.md)
+- [`webcrunch-tailwind-collection-2.md`](../../../webcrunch-tailwind-collection-2.md)
+- [`webcrunch-tailwind-collection-2.md`](../../../webcrunch-tailwind-collection-2.md)
 - [`whatsapp-channel-implementazione-canale.md`](../../../whatsapp-channel-implementazione-canale.md)
-- [`whatsapp-channel.md`](./whatsapp-channel.md)
-- [`whatsapp-integration.md`](./whatsapp-integration.md)
+- [`whatsapp-channel-2.md`](../../../whatsapp-channel-2.md)
+- [`whatsapp-integration-2.md`](../../../whatsapp-integration-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`whatsapp-sending-standard.md`](./whatsapp-sending-standard.md)
+- [`whatsapp-sending-standard-2.md`](../../../whatsapp-sending-standard-2.md)
 - [`whatsapp.md`](./whatsapp.md)
-- [`whatsapp_channel.md`](./whatsapp_channel.md)
-- [`whatsapp_integration.md`](./whatsapp_integration.md)
-- [`whatsapp_sending_standard.md`](./whatsapp_sending_standard.md)
+- [`whatsapp-channel-2.md`](../../../whatsapp-channel-2.md)
+- [`whatsapp-integration-2.md`](../../../whatsapp-integration-2.md)
+- [`whatsapp-sending-standard-2.md`](../../../whatsapp-sending-standard-2.md)
 <<<<<<< HEAD
-- [`work-completed-.md`](../../../work-completed-.md)
+- [`work-completed-2.md`](../../../work-completed-2.md)
 <<<<<<< .merge_file_VkYtaf
 - [`work-completed-1.md`](./work-completed-1.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-- [`work-completed-.md`](../../../work-completed-.md)
+- [`work-completed-2.md`](../../../work-completed-2.md)
 =======
 >>>>>>> .merge_file_X4e09n
 =======
 <<<<<<< .merge_file_EZjoNq
-- [`work-completed-.md`](./work-completed-.md)
+- [`work-completed-2.md`](./work-completed-2.md)
 - [`work-completed-1.md`](./work-completed-1.md)
 =======
-- [`work-completed-.md`](../../../work-completed-.md)
+- [`work-completed-2.md`](../../../work-completed-2.md)
 >>>>>>> .merge_file_junMiY
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
@@ -4655,44 +4655,44 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_X4e09n
 - [`work-completed.md`](./work-completed.md)
 - [`work-completed.md`](./work-completed.md)
-- [`xot-base-classes-analysis.md`](./xot-base-classes-analysis.md)
-- [`xot-base-classes-analysis.md`](./xot-base-classes-analysis.md)
-- [`xot-base-classes-checklist.md`](./xot-base-classes-checklist.md)
-- [`xot-base-classes-checklist.md`](./xot-base-classes-checklist.md)
-- [`xot-base-classes-convention.md`](./xot-base-classes-convention.md)
+- [`xot-base-classes-analysis-2.md`](../../../xot-base-classes-analysis-2.md)
+- [`xot-base-classes-analysis-2.md`](../../../xot-base-classes-analysis-2.md)
+- [`xot-base-classes-checklist-2.md`](../../../xot-base-classes-checklist-2.md)
+- [`xot-base-classes-checklist-2.md`](../../../xot-base-classes-checklist-2.md)
+- [`xot-base-classes-convention-2.md`](../../../xot-base-classes-convention-2.md)
 <<<<<<< HEAD
 =======
 =======
-- [`work-completed-.md`](../../../work-completed-.md)
+- [`work-completed-2.md`](../../../work-completed-2.md)
 - [`work-completed.md`](./work-completed.md)
-- [`xot-base-classes-analysis.md`](./xot-base-classes-analysis.md)
-- [`xot-base-classes-checklist.md`](./xot-base-classes-checklist.md)
+- [`xot-base-classes-analysis-2.md`](../../../xot-base-classes-analysis-2.md)
+- [`xot-base-classes-checklist-2.md`](../../../xot-base-classes-checklist-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [`xot-base-classes-convention.md`](./xot-base-classes-convention.md)
+- [`xot-base-classes-convention-2.md`](../../../xot-base-classes-convention-2.md)
 - [`xot-base-classes.md`](../../../xot-base-classes.md)
-- [`xot_base_classes_analysis.md`](./xot-base-classes-analysis.md)
-- [`xot_base_classes_checklist.md`](./xot-base-classes-checklist.md)
-- [`xot_base_classes_convention.md`](./xot-base-classes-convention.md)
+- [`xot-base-classes-analysis-2.md`](../../../xot-base-classes-analysis-2.md)
+- [`xot-base-classes-checklist-2.md`](../../../xot-base-classes-checklist-2.md)
+- [`xot-base-classes-convention-2.md`](../../../xot-base-classes-convention-2.md)
 - [`xotbasepivot-executive-summary.md`](./xotbasepivot-executive-summary.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
-- [`zen-of-app.md`](../../../zen-of-app.md)
-- [`transaction-removal-fix-.md`](../../../transaction-removal-fix-.md)
+- [`zen-of-app-2.md`](../../../zen-of-app.md)
+- [`transaction-removal-fix-2.md`](../../../transaction-removal-fix-2.md)
 - [`transaction-removal-fix.md`](../../../transaction-removal-fix.md)
-- [`translation-cleanup-plan.md`](../../../translation-cleanup-plan.md)
-- [`translation-conventions.md`](../../../translation-conventions.md)
-- [`translation-conventions-clarification.md`](../../../translation-conventions-clarification.md)
+- [`translation-cleanup-plan-2.md`](../../../translation-cleanup-plan.md)
+- [`translation-conventions-2.md`](../../../translation-conventions.md)
+- [`translation-conventions-clarification-2.md`](../../../translation-conventions-clarification.md)
 - [`translation-file-correction-guide-deprecated.md`](../../../translation-file-correction-guide-deprecated.md)
-- [`translation-file-correction-guide.md`](../../../translation-file-correction-guide.md)
+- [`translation-file-correction-guide-2.md`](../../../translation-file-correction-guide.md)
 - [`translation-file-correction.md`](../../../translation-file-correction.md)
-- [`translation-file-naming-rules.md`](../../../translation-file-naming-rules.md)
+- [`translation-file-naming-rules-2.md`](../../../translation-file-naming-rules.md)
 - [`translation-file-naming.md`](../../../translation-file-naming.md)
-- [`translation-file-structure-guide.md`](./translation-file-structure-guide.md)
+- [`translation-file-structure-guide-2.md`](../../../translation-file-structure-guide-2.md)
 - [`translation-file-structure.md`](../../../translation-file-structure.md)
 - [`translation-implementation-plan-deprecated.md`](../../../translation-implementation-plan-deprecated.md)
-- [`translation-implementation-plan.md`](../../../translation-implementation-plan.md)
-- [`translation-keys-best-practices.md`](../../../translation-keys-best-practices.md)
+- [`translation-implementation-plan-2.md`](../../../translation-implementation-plan.md)
+- [`translation-keys-best-practices-3.md`](../../../translation-keys-best-practices.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4700,7 +4700,7 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> .merge_file_X4e09n
 =======
 <<<<<<< .merge_file_EZjoNq
-- [`zen-of-app.md`](./zen-of-app.md)
+- [`zen-of-app-2.md`](../../../zen-of-app-2.md)
 =======
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_VkYtaf
@@ -4708,75 +4708,75 @@ Documentation for `notify` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_X4e09n
-- [`zen-of-app.md`](../../../zen-of-app.md)
-- [`transaction-removal-fix-.md`](../../../transaction-removal-fix-.md)
+- [`zen-of-app-2.md`](../../../zen-of-app.md)
+- [`transaction-removal-fix-2.md`](../../../transaction-removal-fix-2.md)
 - [`transaction-removal-fix.md`](./transaction-removal-fix.md)
 - [`transaction-removal-fix.md`](../../../transaction-removal-fix.md)
-- [`translation-cleanup-plan.md`](../../../translation-cleanup-plan.md)
-- [`translation-cleanup-plan.md`](./translation-cleanup-plan.md)
-- [`translation-cleanup-plan.md`](../../../translation-cleanup-plan.md)
-- [`translation-conventions.md`](../../../translation-conventions.md)
-- [`translation-conventions.md`](./translation-conventions.md)
-- [`translation-conventions-clarification.md`](../../../translation-conventions-clarification.md)
-- [`translation-conventions-clarification.md`](./translation-conventions-clarification.md)
+- [`translation-cleanup-plan-2.md`](../../../translation-cleanup-plan.md)
+- [`translation-cleanup-plan-2.md`](../../../translation-cleanup-plan-2.md)
+- [`translation-cleanup-plan-2.md`](../../../translation-cleanup-plan.md)
+- [`translation-conventions-2.md`](../../../translation-conventions.md)
+- [`translation-conventions-2.md`](../../../translation-conventions-2.md)
+- [`translation-conventions-clarification-2.md`](../../../translation-conventions-clarification.md)
+- [`translation-conventions-clarification-2.md`](../../../translation-conventions-clarification-2.md)
 <<<<<<< HEAD
-- [`translation-conventions-clarification.md`](./translation-conventions-clarification.md)
+- [`translation-conventions-clarification-2.md`](../../../translation-conventions-clarification-2.md)
 =======
 >>>>>>> laraxot/dev
-- [`translation-conventions.md`](./translation-conventions.md)
+- [`translation-conventions-2.md`](../../../translation-conventions-2.md)
 - [`translation-file-correction-guide-deprecated.md`](../../../translation-file-correction-guide-deprecated.md)
-- [`translation-file-correction-guide.md`](./translation-file-correction-guide.md)
-- [`translation-file-correction-guide.md`](../../../translation-file-correction-guide.md)
+- [`translation-file-correction-guide-2.md`](../../../translation-file-correction-guide-2.md)
+- [`translation-file-correction-guide-2.md`](../../../translation-file-correction-guide.md)
 - [`translation-file-correction.md`](../../../translation-file-correction.md)
-- [`translation-file-naming-rules.md`](./translation-file-naming-rules.md)
-- [`translation-file-naming-rules.md`](../../../translation-file-naming-rules.md)
+- [`translation-file-naming-rules-2.md`](../../../translation-file-naming-rules-2.md)
+- [`translation-file-naming-rules-2.md`](../../../translation-file-naming-rules.md)
 - [`translation-file-naming.md`](../../../translation-file-naming.md)
-- [`translation-file-structure-guide.md`](./translation-file-structure-guide.md)
+- [`translation-file-structure-guide-2.md`](../../../translation-file-structure-guide-2.md)
 <<<<<<< HEAD
-- [`translation-file-structure-guide.md`](./translation-file-structure-guide.md)
+- [`translation-file-structure-guide-2.md`](../../../translation-file-structure-guide-2.md)
 =======
 >>>>>>> laraxot/dev
 - [`translation-file-structure.md`](../../../translation-file-structure.md)
 - [`translation-implementation-plan-deprecated.md`](../../../translation-implementation-plan-deprecated.md)
-- [`translation-implementation-plan.md`](./translation-implementation-plan.md)
-- [`translation-implementation-plan.md`](../../../translation-implementation-plan.md)
-- [`translation-keys-best-practices.md`](./translation-keys-best-practices.md)
-- [`translation-keys-best-practices.md`](../../../translation-keys-best-practices.md)
-- [`translation-keys-rules.md`](./translation-keys-rules.md)
+- [`translation-implementation-plan-2.md`](../../../translation-implementation-plan-2.md)
+- [`translation-implementation-plan-2.md`](../../../translation-implementation-plan.md)
+- [`translation-keys-best-practices-3.md`](../../../../../Lang/docs/translation-keys-best-practices-3.md)
+- [`translation-keys-best-practices-3.md`](../../../translation-keys-best-practices.md)
+- [`translation-keys-rules-3.md`](../../../../../Lang/docs/translation-keys-rules-3.md)
 >>>>>>> laraxot/dev
-- [`translation-keys-rules.md`](../../../translation-keys-rules.md)
+- [`translation-keys-rules-3.md`](../../../translation-keys-rules.md)
 - [`translation-keys.md`](../../../translation-keys.md)
 - [`translation-namespace-religion.md`](../../../translation-namespace-religion.md)
-- [`translation-standards.md`](../../../translation-standards.md)
+- [`translation-standards-3.md`](../../../translation-standards.md)
 <<<<<<< HEAD
-- [`translation-standards-progress.md`](../../../translation-standards-progress.md)
+- [`translation-standards-progress-2.md`](../../../translation-standards-progress.md)
 =======
-- [`translation-standards.md`](./translation-standards.md)
-- [`translation-standards-progress.md`](../../../translation-standards-progress.md)
-- [`translation-standards-progress.md`](./translation-standards-progress.md)
-- [`translation-standards-progress.md`](../../../translation-standards-progress.md)
-- [`translation-standards.md`](../../../translation-standards.md)
+- [`translation-standards-3.md`](../../../../../Lang/docs/translation-standards-3.md)
+- [`translation-standards-progress-2.md`](../../../translation-standards-progress.md)
+- [`translation-standards-progress-2.md`](../../../translation-standards-progress-2.md)
+- [`translation-standards-progress-2.md`](../../../translation-standards-progress.md)
+- [`translation-standards-3.md`](../../../translation-standards.md)
 >>>>>>> laraxot/dev
-- [`translation_cleanup_plan.md`](../../../translation_cleanup_plan.md)
-- [`translation_conventions.md`](../../../translation_conventions.md)
-- [`translation_conventions_clarification.md`](../../../translation_conventions_clarification.md)
-- [`translation_file_correction_guide.md`](../../../translation_file_correction_guide.md)
-- [`translation_file_naming_rules.md`](../../../translation-file-naming-rules.md)
-- [`translation_file_structure_guide.md`](./translation-file-structure-guide.md)
-- [`translation_implementation_plan.md`](../../../translation_implementation_plan.md)
-- [`translation_keys_best_practices.md`](../../../translation-keys-best-practices.md)
-- [`translation_keys_rules.md`](../../../translation_keys_rules.md)
-- [`translation_standards.md`](../../../translation_standards.md)
-- [`translation_standards_progress.md`](../../../translation_standards_progress.md)
-- [`translations-implementation-status.md`](../../../translations-implementation-status.md)
+- [`translation-cleanup-plan-2.md`](../../../translation-cleanup-plan-2.md)
+- [`translation-conventions-2.md`](../../../translation-conventions-2.md)
+- [`translation-conventions-clarification-2.md`](../../../translation-conventions-clarification-2.md)
+- [`translation-file-correction-guide-2.md`](../../../translation-file-correction-guide-2.md)
+- [`translation-file-naming-rules-2.md`](../../../translation-file-naming-rules.md)
+- [`translation-file-structure-guide-2.md`](../../../translation-file-structure-guide-2.md)
+- [`translation-implementation-plan-2.md`](../../../translation-implementation-plan-2.md)
+- [`translation-keys-best-practices-3.md`](../../../translation-keys-best-practices.md)
+- [`translation-keys-rules-3.md`](../../../translation-keys-rules-2.md)
+- [`translation-standards-3.md`](../../../translation-standards-2.md)
+- [`translation-standards-progress-2.md`](../../../translation-standards-progress-2.md)
+- [`translations-implementation-status-2.md`](../../../translations-implementation-status.md)
 <<<<<<< HEAD
 =======
-- [`translations-implementation-status.md`](./translations-implementation-status.md)
-- [`translations-implementation-status.md`](../../../translations-implementation-status.md)
+- [`translations-implementation-status-2.md`](../../../translations-implementation-status-2.md)
+- [`translations-implementation-status-2.md`](../../../translations-implementation-status.md)
 >>>>>>> laraxot/dev
 - [`translations-implementation.md`](../../../translations-implementation.md)
 - [`translations.md`](../../../translations.md)
-- [`translations_implementation_status.md`](../../../translations_implementation_status.md)
+- [`translations-implementation-status-2.md`](../../../translations-implementation-status-2.md)
 - [`troubleshooting.md`](./troubleshooting.md)
 - [`tutorials.md`](../../../tutorials.md)
 - [`ui-ux-pro-max-skills-integration.md`](./ui-ux-pro-max-skills-integration.md)
@@ -4786,60 +4786,60 @@ Documentation for `notify` module categorized as **integrations**.
 - [`verifica-homepage.md`](./verifica-homepage.md)
 - [`verification.md`](../../../verification.md)
 - [`vhost-configuration.md`](./vhost-configuration.md)
-- [`view-cache-components-fix-.md`](../../../view-cache-components-fix-.md)
+- [`view-cache-components-fix-2.md`](../../../view-cache-components-fix-2.md)
 <<<<<<< HEAD
 - [`view-cache-components-fix.md`](../../../view-cache-components-fix.md)
 =======
 - [`view-cache-components-fix.md`](./view-cache-components-fix.md)
 - [`view-cache-components-fix.md`](../../../view-cache-components-fix.md)
-- [`webcrunch-tailwind-collection.md`](./webcrunch-tailwind-collection.md)
+- [`webcrunch-tailwind-collection-2.md`](../../../webcrunch-tailwind-collection-2.md)
 >>>>>>> laraxot/dev
-- [`webcrunch-tailwind-collection.md`](../../../webcrunch-tailwind-collection.md)
-- [`webcrunch_tailwind_collection.md`](../../../webcrunch-tailwind-collection.md)
+- [`webcrunch-tailwind-collection-2.md`](../../../webcrunch-tailwind-collection.md)
+- [`webcrunch-tailwind-collection-2.md`](../../../webcrunch-tailwind-collection.md)
 - [`whatsapp-channel-implementazione-canale.md`](../../../whatsapp-channel-implementazione-canale.md)
-- [`whatsapp-channel.md`](./whatsapp-channel.md)
+- [`whatsapp-channel-2.md`](../../../whatsapp-channel-2.md)
 <<<<<<< HEAD
-- [`whatsapp-integration.md`](../../../whatsapp-integration.md)
+- [`whatsapp-integration-2.md`](../../../whatsapp-integration.md)
 =======
 <<<<<<< HEAD
-- [`whatsapp-channel.md`](./whatsapp-channel.md)
-- [`whatsapp-integration.md`](../../../whatsapp-integration.md)
-- [`whatsapp-integration.md`](./whatsapp-integration.md)
-- [`whatsapp-integration.md`](./whatsapp-integration.md)
+- [`whatsapp-channel-2.md`](../../../whatsapp-channel-2.md)
+- [`whatsapp-integration-2.md`](../../../whatsapp-integration.md)
+- [`whatsapp-integration-2.md`](../../../whatsapp-integration-2.md)
+- [`whatsapp-integration-2.md`](../../../whatsapp-integration-2.md)
 =======
-- [`whatsapp-integration.md`](../../../whatsapp-integration.md)
-- [`whatsapp-integration.md`](./whatsapp-integration.md)
+- [`whatsapp-integration-2.md`](../../../whatsapp-integration.md)
+- [`whatsapp-integration-2.md`](../../../whatsapp-integration-2.md)
 >>>>>>> laraxot/dev
-- [`whatsapp-sending-standard.md`](./whatsapp-sending-standard.md)
+- [`whatsapp-sending-standard-2.md`](../../../whatsapp-sending-standard-2.md)
 >>>>>>> laraxot/dev
-- [`whatsapp-sending-standard.md`](../../../whatsapp-sending-standard.md)
+- [`whatsapp-sending-standard-2.md`](../../../whatsapp-sending-standard.md)
 - [`whatsapp.md`](./whatsapp.md)
-- [`whatsapp_channel.md`](../../../whatsapp_channel.md)
-- [`whatsapp_integration.md`](../../../whatsapp_integration.md)
-- [`whatsapp_sending_standard.md`](../../../whatsapp_sending_standard.md)
-- [`work-completed-.md`](../../../work-completed-.md)
+- [`whatsapp-channel-2.md`](../../../whatsapp-channel-2.md)
+- [`whatsapp-integration-2.md`](../../../whatsapp-integration-2.md)
+- [`whatsapp-sending-standard-2.md`](../../../whatsapp-sending-standard-2.md)
+- [`work-completed-2.md`](../../../work-completed-2.md)
 <<<<<<< HEAD
 - [`work-completed.md`](../../../work-completed.md)
-- [`xot-base-classes-analysis.md`](../../../xot-base-classes-analysis.md)
-- [`xot-base-classes-checklist.md`](../../../xot-base-classes-checklist.md)
+- [`xot-base-classes-analysis-2.md`](../../../xot-base-classes-analysis.md)
+- [`xot-base-classes-checklist-2.md`](../../../xot-base-classes-checklist.md)
 =======
 - [`work-completed.md`](./work-completed.md)
 - [`work-completed.md`](../../../work-completed.md)
-- [`xot-base-classes-analysis.md`](./xot-base-classes-analysis.md)
-- [`xot-base-classes-analysis.md`](../../../xot-base-classes-analysis.md)
-- [`xot-base-classes-checklist.md`](./xot-base-classes-checklist.md)
-- [`xot-base-classes-checklist.md`](../../../xot-base-classes-checklist.md)
-- [`xot-base-classes-convention.md`](./xot-base-classes-convention.md)
+- [`xot-base-classes-analysis-2.md`](../../../xot-base-classes-analysis-2.md)
+- [`xot-base-classes-analysis-2.md`](../../../xot-base-classes-analysis.md)
+- [`xot-base-classes-checklist-2.md`](../../../xot-base-classes-checklist-2.md)
+- [`xot-base-classes-checklist-2.md`](../../../xot-base-classes-checklist.md)
+- [`xot-base-classes-convention-2.md`](../../../xot-base-classes-convention-2.md)
 >>>>>>> laraxot/dev
-- [`xot-base-classes-convention.md`](../../../xot-base-classes-convention.md)
+- [`xot-base-classes-convention-2.md`](../../../xot-base-classes-convention.md)
 - [`xot-base-classes.md`](../../../xot-base-classes.md)
-- [`xot_base_classes_analysis.md`](../../../xot-base-classes-analysis.md)
-- [`xot_base_classes_checklist.md`](../../../xot-base-classes-checklist.md)
-- [`xot_base_classes_convention.md`](../../../xot-base-classes-convention.md)
+- [`xot-base-classes-analysis-2.md`](../../../xot-base-classes-analysis.md)
+- [`xot-base-classes-checklist-2.md`](../../../xot-base-classes-checklist.md)
+- [`xot-base-classes-convention-2.md`](../../../xot-base-classes-convention.md)
 - [`xotbasepivot-executive-summary.md`](./xotbasepivot-executive-summary.md)
 <<<<<<< HEAD
 =======
-- [`zen-of-app.md`](../../../zen-of-app.md)
+- [`zen-of-app-2.md`](../../../zen-of-app.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_VkYtaf
 <<<<<<< HEAD

@@ -98,7 +98,7 @@ patient::images/logo-horizontal.svg -> /Modules/Patient/resources/images/logo-ho
 - [Documentazione Media](../../media/docs/assets.md)
 - [Documentazione Temi](../../cms/docs/theming.md)
 - [Standard Interfaccia](../../../docs/standards/interface_guidelines.md)
-- [Best Practices](../../../docs/standards/best_practices.md)
+- [Best Practices](../laravel/Modules/Activity/docs/best-practices-3.md)
 
 # Configurazione Basata sul Dominio
 

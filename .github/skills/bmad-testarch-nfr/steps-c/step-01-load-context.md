@@ -72,7 +72,7 @@ From `{knowledgeIndex}` load:
 - `ci-burn-in.md`
 - `test-quality.md`
 - `playwright-config.md`
-- `error-handling.md`
+- `error-handling-2.md`
 
 **Playwright CLI (if `tea_browser_automation` is "cli" or "auto"):**
 

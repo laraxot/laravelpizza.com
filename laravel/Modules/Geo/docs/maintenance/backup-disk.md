@@ -62,6 +62,6 @@ backup_disk() {
 
 ## Vedi Anche
 - [Documentazione Principale](../../docs/index.md) - Indice della documentazione
-- [Best Practices](best-practices.md) - Linee guida e best practices
+- [Best Practices](best-practices-3.md) - Linee guida e best practices
 - [Testing](testing.md) - Documentazione dei test
 - [Convenzioni di Naming](../../docs/standards/file_naming_conventions.md) - Standard per la nomenclatura dei file

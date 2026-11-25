@@ -16,7 +16,7 @@ updated: 2026-11-23
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_MA0C2r
 related:
-  - "../../../Media/docs/html2pdf/SECURITY.md"
+  - "../../../Geo/docs/root-md-files/security-2.md"
 status: draft
 ---
 

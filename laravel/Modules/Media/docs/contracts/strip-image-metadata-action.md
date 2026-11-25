@@ -1,6 +1,4 @@
 ---
-<<<<<<< .merge_file_kytR3e
-<<<<<<< .merge_file_v9weBI
 title: "StripImageMetadataAction — contratto"
 type: contract
 owner: Media
@@ -10,25 +8,16 @@ tags: [contract, action, media, immagini, exif, gps, privacy]
 created: 2026-11-24
 updated: 2026-11-24
 qmd: "contract StripImageMetadataAction media exif gps privacy immagine MEDIA-STRIP-INV"
-=======
-=======
->>>>>>> .merge_file_fdxWca
 title: "Contratto — StripImageMetadataAction"
 type: contract
 action: "Modules\Media\Actions\Image\StripImageMetadataAction"
 tags: [contract, action, media, privacy, exif, gps]
 created: 2026-11-24
 updated: 2026-11-24
-<<<<<<< .merge_file_kytR3e
->>>>>>> .merge_file_E0ZtWJ
-=======
->>>>>>> .merge_file_fdxWca
 ---
 
 # StripImageMetadataAction
 
-<<<<<<< .merge_file_kytR3e
-<<<<<<< .merge_file_v9weBI
 Riscrive l'originale JPEG o PNG di un media senza metadati (EXIF, posizione GPS, fotocamera, XMP, chunk di testo).
 Contratto di comportamento (regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`).
 Sorgente: `app/Actions/Image/StripImageMetadataAction.php`. Perche': [ADR](../adr/strip-image-metadata-server-side.md).
@@ -40,9 +29,6 @@ Sorgente: `app/Actions/Image/StripImageMetadataAction.php`. Perche': [ADR](../ad
 ## Input
 
 - `Spatie\MediaLibrary\MediaCollections\Models\Media $media` gia' salvato, con il file sul suo `disk`: usa `mime_type`, `disk`, `getPathRelativeToRoot()`.
-=======
-=======
->>>>>>> .merge_file_fdxWca
 Contratto di comportamento (regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`).
 Sorgente: `app/Actions/Image/StripImageMetadataAction.php`. Perche': [ADR](../adr/strip-image-metadata-server-side.md).
 Nessun chiamante in questo repo: la usa il modulo del progetto ospite dopo il salvataggio di una foto allegata (vedi `../stories/media-mobile-camera-upload.story.md`).
@@ -50,10 +36,6 @@ Nessun chiamante in questo repo: la usa il modulo del progetto ospite dopo il sa
 ## Input
 
 - Un `Spatie\MediaLibrary\MediaCollections\Models\Media` gia' salvato, con il file sul suo `disk`.
-<<<<<<< .merge_file_kytR3e
->>>>>>> .merge_file_E0ZtWJ
-=======
->>>>>>> .merge_file_fdxWca
 
 ## Output
 
@@ -85,3 +67,4 @@ Nessun chiamante in questo repo: la usa il modulo del progetto ospite dopo il sa
 - Non converte formati (HEIC, WEBP restano come sono: il mime non e' gestito).
 - Non conserva una copia dell'originale con i metadati: la posizione e' persa per sempre, ed e' voluto.
 - JPEG ri-codificato a qualita' 90: non e' una copia lossless.
+

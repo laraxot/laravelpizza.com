@@ -57,7 +57,7 @@ discussions: []
 >>>>>>> .merge_file_376A3L
 =======
 >>>>>>> .merge_file_1jMlqk
-- [Documentazione User](../../user/project_docs/header_language_avatar_implementation.md)
+- [Documentazione User](../../user/project_docs/header-language-avatar-implementation-2.md)
 - [Documentazione Sezioni](./sections_structure.md)
 - [Collegamenti Documentazione](/project_docs/collegamenti-documentazione.md)
 

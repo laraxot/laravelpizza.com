@@ -190,7 +190,7 @@ Il modulo Xot è il modulo core e potrebbe non necessitare di una dashboard trad
 ## Documentazione Correlata
 
 - [XotBasePanelProvider](./xotbasepanelprovider.md) - Configurazione panel provider
-- [Filament Integration](./filament_integration.md) - Integrazione generale Filament
+- [Filament Integration](../../laravel/Modules/Lang/docs/filament-integration-3.md) - Integrazione generale Filament
 - [Best Practices](./best-practices.md) - Best practices generali
 
 ## Collegamenti

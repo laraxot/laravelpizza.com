@@ -70,7 +70,7 @@ Supporta template dinamici, allegati binari, multi-canale e integrazione complet
 ### Guide Complete
 
 #### Email System
-- **[Email Attachments Usage](./email-sending/attachments_usage.md)** ⭐  
+- **[Email Attachments Usage](./email-sending/attachments-usage-2.md)** ⭐  
   Guida completa agli allegati email (path e binary data)
 
 - **[Spatie Mail Templates Deep Dive](./spatie-database-mail-templates-deep-dive.md)**  
@@ -81,36 +81,36 @@ Supporta template dinamici, allegati binari, multi-canale e integrazione complet
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_C8392X
-- **[Email Layouts Best Practices](mail-templates/email_layouts_best_practices.md)**  
-- **[Email Layouts Best Practices](./mail-templates/email_layouts_best_practices.md)**  
+- **[Email Layouts Best Practices](mail-templates/email-layouts-best-practices-2.md)**  
+- **[Email Layouts Best Practices](./mail-templates/email-layouts-best-practices-2.md)**  
 =======
 <<<<<<< .merge_file_S1yKcA
-- **[Email Layouts Best Practices](./mail-templates/EMAIL_LAYOUTS_BEST_PRACTICES.md)**  
+- **[Email Layouts Best Practices](mail-templates/email-layouts-best-practices-2.md)**  
 =======
-- **[Email Layouts Best Practices](mail-templates/email_layouts_best_practices.md)**  
+- **[Email Layouts Best Practices](mail-templates/email-layouts-best-practices-2.md)**  
 <<<<<<< .merge_file_s0g8pg
-- **[Email Layouts Best Practices](./mail-templates/email_layouts_best_practices.md)**  
+- **[Email Layouts Best Practices](./mail-templates/email-layouts-best-practices-2.md)**  
 >>>>>>> .merge_file_3naZmG
 >>>>>>> laraxot/dev
 =======
-- **[Email Layouts Best Practices](mail-templates/email_layouts_best_practices.md)**  
-- **[Email Layouts Best Practices](./mail-templates/email_layouts_best_practices.md)**  
+- **[Email Layouts Best Practices](mail-templates/email-layouts-best-practices-2.md)**  
+- **[Email Layouts Best Practices](./mail-templates/email-layouts-best-practices-2.md)**  
 =======
-- **[Email Layouts Best Practices](./mail-templates/email_layouts_best_practices.md)**  
+- **[Email Layouts Best Practices](./mail-templates/email-layouts-best-practices-2.md)**  
 >>>>>>> .merge_file_3naZmG
 >>>>>>> .merge_file_C8392X
 >>>>>>> laraxot/dev
   Best practices layout email
 
 #### Notifications
-- **[Notifications Implementation Guide](./notifications/notifications_implementation_guide.md)**  
+- **[Notifications Implementation Guide](./notifications/notifications-implementation-guide-2.md)**  
   Come implementare notifiche custom
 
 - **[RecordNotification Usage](./notifications/record-notification.md)**  
   Notifiche basate su record Eloquent
 
 #### SMS & WhatsApp
-- **[WhatsApp Provider Architecture](./whatsapp_provider_architecture.md)**  
+- **[WhatsApp Provider Architecture](./whatsapp-provider-architecture-2.md)**  
   Architettura provider WhatsApp
 
 ---
@@ -147,7 +147,7 @@ Modules/Notify/
 └── docs/                                 # Documentazione
     ├── README.md                         ⭐ QUESTO FILE
     ├── email-sending/
-    │   └── attachments_usage.md
+    │   └── attachments-usage-2.md
     └── notifications/
         └── record-notification.md
 ```
@@ -316,9 +316,9 @@ Notification::route('mail', 'to@example.com')->notify($notify);
 #### Email System
 <<<<<<< HEAD
 <<<<<<< .merge_file_s0g8pg
-- [Email Layouts Best Practices](./mail-templates/email_layouts_best_practices.md)
-- [Spatie Mail Templates Structure](./mail-templates/spatie_mail_templates_structure.md)
-- [Email Troubleshooting](./email-sending/email_troubleshooting.md)
+- [Email Layouts Best Practices](./mail-templates/email-layouts-best-practices-2.md)
+- [Spatie Mail Templates Structure](./mail-templates/spatie-mail-templates-structure-2.md)
+- [Email Troubleshooting](./email-sending/email-troubleshooting-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -326,9 +326,9 @@ Notification::route('mail', 'to@example.com')->notify($notify);
 >>>>>>> .merge_file_C8392X
 =======
 <<<<<<< .merge_file_S1yKcA
-- [Email Layouts Best Practices](./mail-templates/EMAIL_LAYOUTS_BEST_PRACTICES.md)
-- [Spatie Mail Templates Structure](./mail-templates/SPATIE_MAIL_TEMPLATES_STRUCTURE.md)
-- [Email Troubleshooting](./email-sending/EMAIL_TROUBLESHOOTING.md)
+- [Email Layouts Best Practices](mail-templates/email-layouts-best-practices-2.md)
+- [Spatie Mail Templates Structure](mail-templates/spatie-mail-templates-structure-2.md)
+- [Email Troubleshooting](email-sending/email-troubleshooting-2.md)
 =======
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_s0g8pg
@@ -336,12 +336,12 @@ Notification::route('mail', 'to@example.com')->notify($notify);
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_C8392X
-- [Email Layouts Best Practices](mail-templates/email_layouts_best_practices.md)
-- [Spatie Mail Templates Structure](mail-templates/spatie_mail_templates_structure.md)
-- [Email Troubleshooting](email-sending/email_troubleshooting.md)
-- [Email Layouts Best Practices](./mail-templates/email_layouts_best_practices.md)
-- [Spatie Mail Templates Structure](./mail-templates/spatie_mail_templates_structure.md)
-- [Email Troubleshooting](./email-sending/email_troubleshooting.md)
+- [Email Layouts Best Practices](mail-templates/email-layouts-best-practices-2.md)
+- [Spatie Mail Templates Structure](mail-templates/spatie-mail-templates-structure-2.md)
+- [Email Troubleshooting](email-sending/email-troubleshooting-2.md)
+- [Email Layouts Best Practices](./mail-templates/email-layouts-best-practices-2.md)
+- [Spatie Mail Templates Structure](./mail-templates/spatie-mail-templates-structure-2.md)
+- [Email Troubleshooting](./email-sending/email-troubleshooting-2.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_s0g8pg
 <<<<<<< HEAD
@@ -358,7 +358,7 @@ Notification::route('mail', 'to@example.com')->notify($notify);
 >>>>>>> .merge_file_C8392X
 
 #### Notifications
-- [Notifications Implementation Guide](./notifications/notifications_implementation_guide.md)
+- [Notifications Implementation Guide](./notifications/notifications-implementation-guide-2.md)
 - [Notification Management Business Logic](./notifications/notification-management-business-logic.md)
 
 ---

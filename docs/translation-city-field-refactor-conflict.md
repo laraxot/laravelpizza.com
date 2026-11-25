@@ -159,7 +159,7 @@ Tutti i file corretti mantengono:
 
 - [Struttura Completa Campi Traduzione](../../../docs/translation-field-structure-complete.md)
 - [<main module> Translation Audit](../../<main module>/docs/translation_audit_city_fields.md)
-- [Translation Syntax Fixes](../../../docs/translation_syntax_fixes.md)
+- [Translation Syntax Fixes](../../../docs/translation-syntax-fixes-2.md)
 - [User Module Widget Translation Rules](widget-translation-rules.md)
 
 ## Prevenzione Futura

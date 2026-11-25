@@ -10,7 +10,7 @@ discussions: []
 ---
 
 <purpose>
-Execute small, ad-hoc tasks with GSD guarantees (atomic commits, STATE.md tracking). Quick mode spawns gsd-planner (quick mode) + gsd-executor(s), tracks tasks in `.planning/quick/`, and updates STATE.md's "Quick Tasks Completed" table.
+Execute small, ad-hoc tasks with GSD guarantees (atomic commits, state-2.md tracking). Quick mode spawns gsd-planner (quick mode) + gsd-executor(s), tracks tasks in `.planning/quick/`, and updates state-2.md's "Quick Tasks Completed" table.
 
 With `--full` flag: enables plan-checking (max 2 iterations) and post-execution verification for quality guarantees without full milestone ceremony.
 </purpose>
@@ -116,7 +116,7 @@ Task(
 **Description:** ${DESCRIPTION}
 
 <files_to_read>
-- .planning/STATE.md (Project State)
+- .planning/state-2.md (Project State)
 - ./CLAUDE.md (if exists — follow project-specific guidelines)
 </files_to_read>
 
@@ -134,7 +134,7 @@ ${FULL_MODE ? '- Each task MUST have `files`, `action`, `verify`, `done` fields'
 </constraints>
 
 <output>
-Write plan to: ${QUICK_DIR}/${next_num}-PLAN.md
+Write plan to: ${QUICK_DIR}/${next_num}-plan-2.md
 Return: ## PLANNING COMPLETE with plan path
 </output>
 ",
@@ -145,11 +145,11 @@ Return: ## PLANNING COMPLETE with plan path
 ```
 
 After planner returns:
-1. Verify plan exists at `${QUICK_DIR}/${next_num}-PLAN.md`
+1. Verify plan exists at `${QUICK_DIR}/${next_num}-plan-2.md`
 2. Extract plan count (typically 1 for quick tasks)
-3. Report: "Plan created: ${QUICK_DIR}/${next_num}-PLAN.md"
+3. Report: "Plan created: ${QUICK_DIR}/${next_num}-plan-2.md"
 
-If plan not found, error: "Planner failed to create ${next_num}-PLAN.md"
+If plan not found, error: "Planner failed to create ${next_num}-plan-2.md"
 
 ---
 
@@ -174,7 +174,7 @@ Checker prompt:
 **Task Description:** ${DESCRIPTION}
 
 <files_to_read>
-- ${QUICK_DIR}/${next_num}-PLAN.md (Plan to verify)
+- ${QUICK_DIR}/${next_num}-plan-2.md (Plan to verify)
 </files_to_read>
 
 **Scope:** This is a quick task, not a full phase. Skip checks that require a ROADMAP phase goal.
@@ -225,7 +225,7 @@ Revision prompt:
 **Mode:** quick-full (revision)
 
 <files_to_read>
-- ${QUICK_DIR}/${next_num}-PLAN.md (Existing plan)
+- ${QUICK_DIR}/${next_num}-plan-2.md (Existing plan)
 </files_to_read>
 
 **Checker issues:** ${structured_issues_from_checker}
@@ -268,8 +268,8 @@ Task(
 Execute quick task ${next_num}.
 
 <files_to_read>
-- ${QUICK_DIR}/${next_num}-PLAN.md (Plan)
-- .planning/STATE.md (Project state)
+- ${QUICK_DIR}/${next_num}-plan-2.md (Plan)
+- .planning/state-2.md (Project state)
 - ./CLAUDE.md (Project instructions, if exists)
 - .agents/skills/ (Project skills, if exists — list skills, read SKILL.md for each, follow relevant rules during implementation)
 </files_to_read>
@@ -277,7 +277,7 @@ Execute quick task ${next_num}.
 <constraints>
 - Execute all tasks in the plan
 - Commit each task atomically
-- Create summary at: ${QUICK_DIR}/${next_num}-SUMMARY.md
+- Create summary at: ${QUICK_DIR}/${next_num}-summary-2.md
 - Do NOT update roadmap.md (quick tasks are separate from planned phases)
 </constraints>
 ",
@@ -288,13 +288,13 @@ Execute quick task ${next_num}.
 ```
 
 After executor returns:
-1. Verify summary exists at `${QUICK_DIR}/${next_num}-SUMMARY.md`
+1. Verify summary exists at `${QUICK_DIR}/${next_num}-summary-2.md`
 2. Extract commit hash from executor output
 3. Report completion status
 
 **Known Claude Code bug (classifyHandoffIfNeeded):** If executor reports "failed" with error `classifyHandoffIfNeeded is not defined`, this is a Claude Code runtime bug — not a real failure. Check if summary file exists and git log shows commits. If so, treat as successful.
 
-If summary not found, error: "Executor failed to create ${next_num}-SUMMARY.md"
+If summary not found, error: "Executor failed to create ${next_num}-summary-2.md"
 
 Note: For quick tasks producing multiple plans (rare), spawn executors in parallel waves per execute-phase patterns.
 
@@ -320,7 +320,7 @@ Task directory: ${QUICK_DIR}
 Task goal: ${DESCRIPTION}
 
 <files_to_read>
-- ${QUICK_DIR}/${next_num}-PLAN.md (Plan)
+- ${QUICK_DIR}/${next_num}-plan-2.md (Plan)
 </files_to_read>
 
 Check must_haves against actual codebase. Create VERIFICATION.md at ${QUICK_DIR}/${next_num}-VERIFICATION.md.",
@@ -345,13 +345,13 @@ Store as `$VERIFICATION_STATUS`.
 
 ---
 
-**Step 7: Update STATE.md**
+**Step 7: Update state-2.md**
 
-Update STATE.md with quick task completion record.
+Update state-2.md with quick task completion record.
 
 **7a. Check if "Quick Tasks Completed" section exists:**
 
-Read STATE.md and check for `### Quick Tasks Completed` section.
+Read state-2.md and check for `### Quick Tasks Completed` section.
 
 **7b. If section doesn't exist, create it:**
 
@@ -405,9 +405,9 @@ Use Edit tool to make these changes atomically
 Stage and commit quick task artifacts:
 
 Build file list:
-- `${QUICK_DIR}/${next_num}-PLAN.md`
-- `${QUICK_DIR}/${next_num}-SUMMARY.md`
-- `.planning/STATE.md`
+- `${QUICK_DIR}/${next_num}-plan-2.md`
+- `${QUICK_DIR}/${next_num}-summary-2.md`
+- `.planning/state-2.md`
 - If `$FULL_MODE` and verification file exists: `${QUICK_DIR}/${next_num}-VERIFICATION.md`
 
 ```bash
@@ -429,7 +429,7 @@ GSD > QUICK TASK COMPLETE (FULL MODE)
 
 Quick Task ${next_num}: ${DESCRIPTION}
 
-Summary: ${QUICK_DIR}/${next_num}-SUMMARY.md
+Summary: ${QUICK_DIR}/${next_num}-summary-2.md
 Verification: ${QUICK_DIR}/${next_num}-VERIFICATION.md (${VERIFICATION_STATUS})
 Commit: ${commit_hash}
 
@@ -446,7 +446,7 @@ GSD > QUICK TASK COMPLETE
 
 Quick Task ${next_num}: ${DESCRIPTION}
 
-Summary: ${QUICK_DIR}/${next_num}-SUMMARY.md
+Summary: ${QUICK_DIR}/${next_num}-summary-2.md
 Commit: ${commit_hash}
 
 ---
@@ -463,10 +463,10 @@ Ready for next task: /gsd-quick
 - [ ] Slug generated (lowercase, hyphens, max 40 chars)
 - [ ] Next number calculated (001, 002, 003...)
 - [ ] Directory created at `.planning/quick/NNN-slug/`
-- [ ] `${next_num}-PLAN.md` created by planner
+- [ ] `${next_num}-plan-2.md` created by planner
 - [ ] (--full) Plan checker validates plan, revision loop capped at 2
-- [ ] `${next_num}-SUMMARY.md` created by executor
+- [ ] `${next_num}-summary-2.md` created by executor
 - [ ] (--full) `${next_num}-VERIFICATION.md` created by verifier
-- [ ] STATE.md updated with quick task row (Status column when --full)
+- [ ] state-2.md updated with quick task row (Status column when --full)
 - [ ] Artifacts committed
 </success_criteria>

@@ -123,9 +123,9 @@ ls -la .qwen
 ls -la laravel/.qwen
 
 # Test file access from all paths
-cat .qwen/qwen.md
-cat laravel/.qwen/qwen.md
-cat bashscripts/ai/.qwen/qwen.md
+cat ../../../../Notify/docs/wiki/integrations/_da-riconciliare/qwen-2.md
+cat laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/qwen-2.md
+cat ../../../../Notify/docs/wiki/integrations/_da-riconciliare/qwen-2.md
 # All should show the same content
 
 # Find broken symlinks
@@ -141,7 +141,7 @@ find . -type l -exec test ! -e {} \; -print
 |----------|------|
 | **Full Rule** | `bashscripts/docs/AI_AGENT_JUNCTION_RULE.md` |
 | **Implementation Report** | `bashscripts/docs/AI_AGENT_JUNCTION_REPORT.md` |
-| **File Location Rules** | `docs/file_location_rules.md` |
+| **File Location Rules** | `docs/file-location-rules-2.md` |
 | **Agent Memory** | `AGENT_MEMORY.md` |
 
 ---

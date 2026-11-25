@@ -79,7 +79,7 @@ discussions: []
 <<<<<<< .merge_file_rtRBrO
 <<<<<<< .merge_file_YoDrtI
 <<<<<<< .merge_file_lJCIlF
-- [module_geo.md](module-geo.md)
+- [module-geo-2.md](module-geo.md)
 =======
 =======
 >>>>>>> .merge_file_Fy7BPo
@@ -88,12 +88,12 @@ discussions: []
 =======
 >>>>>>> .merge_file_4YK1UC
 <<<<<<< HEAD
-- [module_geo.md](module_geo.md)
+- [module-geo-2.md](module-geo-2.md)
 =======
 <<<<<<< HEAD
-- [module_geo.md](module_geo.md)
+- [module-geo-2.md](module-geo-2.md)
 =======
-- [module_geo.md](module-geo.md)
+- [module-geo-2.md](module-geo.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_YtXdMf

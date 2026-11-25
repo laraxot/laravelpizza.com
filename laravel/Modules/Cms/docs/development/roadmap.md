@@ -297,7 +297,7 @@ discussions: []
 
 ### Collegamenti Interni
 - [Bottlenecks](bottlenecks.md)
-- [Best Practices](best-practices.md)
+- [Best Practices](best-practices-3.md)
 ## Note
 - Le percentuali sono aggiornate mensilmente
 - I dettagli specifici sono disponibili nelle sottocartelle

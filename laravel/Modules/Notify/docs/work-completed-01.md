@@ -65,7 +65,7 @@ portandole allo stato attuale (Q4 2025) e allineandole con i progressi effettivi
 
 ### 2. 📝 Aggiornamento Roadmap Principali
 
-#### ROADMAP_STATUS_SUMMARY.md
+#### roadmap-status-summary-2.md
 - ✅ Aggiornata data a 2025-10-01
 - ✅ Aggiornato status generale: Fase 1 completata, Fase 2 in corso
 - ✅ Aggiunte metriche: Test Coverage 65%, Production Status: STAGING READY
@@ -73,7 +73,7 @@ portandole allo stato attuale (Q4 2025) e allineandole con i progressi effettivi
 - ✅ Aggiornata sezione progressi chiave
 - ✅ Aggiornato footer con Current Sprint: Q4 2025 - Feature Expansion
 
-**File**: `/ROADMAP_STATUS_SUMMARY.md`
+**File**: `/roadmap-status-summary-2.md`
 
 ---
 
@@ -92,7 +92,7 @@ portandole allo stato attuale (Q4 2025) e allineandole con i progressi effettivi
 
 ---
 
-#### DOCUMENTATION_INDEX.md
+#### documentation-index.md
 **Contenuto**:
 - ✅ Indice completo di tutta la documentazione progetto
 - ✅ Sezioni per ogni modulo con link a docs
@@ -104,11 +104,11 @@ portandole allo stato attuale (Q4 2025) e allineandole con i progressi effettivi
 - ✅ Metriche di successo
 - ✅ Link utili e contatti
 
-**File**: `/DOCUMENTATION_INDEX.md`
+**File**: `/documentation-index.md`
 
 ---
 
-#### QUICK_START.md
+#### quick-start-2.md
 **Contenuto**:
 - ✅ Guida rapida per sviluppatori
 - ✅ Prerequisiti e setup iniziale
@@ -124,7 +124,7 @@ portandole allo stato attuale (Q4 2025) e allineandole con i progressi effettivi
 - ✅ Troubleshooting
 - ✅ Link utili
 
-**File**: `/QUICK_START.md`
+**File**: `/quick-start-2.md`
 
 ---
 
@@ -150,20 +150,20 @@ portandole allo stato attuale (Q4 2025) e allineandole con i progressi effettivi
 ### 5. 👥 Aggiornamento Roadmap Modulo User
 
 <<<<<<< HEAD
-**File**: `/laravel/Modules/User/docs/ROADMAP.md`
+**File**: `/laravel/Modules/User/docs/roadmap-2.md`
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 **File**: `/laravel/Modules/User/docs/roadmap.md`
 =======
 <<<<<<< HEAD
-**File**: `/laravel/Modules/User/docs/ROADMAP.md`
+**File**: `/laravel/Modules/User/docs/roadmap-2.md`
 =======
 **File**: `/laravel/Modules/User/docs/roadmap.md`
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
-**File**: `/laravel/Modules/User/docs/ROADMAP.md`
+**File**: `/laravel/Modules/User/docs/roadmap-2.md`
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
@@ -211,8 +211,8 @@ portandole allo stato attuale (Q4 2025) e allineandole con i progressi effettivi
 
 ### Documenti Creati
 - ✅ DOCUMENTATION_STATUS.md (65% coverage documentazione)
-- ✅ DOCUMENTATION_INDEX.md (indice completo)
-- ✅ QUICK_START.md (guida sviluppatori)
+- ✅ documentation-index.md (indice completo)
+- ✅ quick-start-2.md (guida sviluppatori)
 - ✅ WORK_COMPLETED_2025-10-01.md (questo documento)
 
 ### Coverage Documentazione
@@ -271,30 +271,30 @@ portandole allo stato attuale (Q4 2025) e allineandole con i progressi effettivi
 ## 🔗 DOCUMENTI PRINCIPALI
 
 ### Roadmap
-- **[ROADMAP_STATUS_SUMMARY.md](./roadmap_status_summary.md)** - Status generale
+- **[roadmap-status-summary-2.md](./roadmap-status-summary-2.md)** - Status generale
 <<<<<<< HEAD
-- **[MASTER_ROADMAP.md](./laravel/master_roadmap.md)** - Roadmap strategica 18 mesi
+- **[master-roadmap-2.md](./laravel/master-roadmap-2.md)** - Roadmap strategica 18 mesi
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-- **[MASTER_ROADMAP.md](./laravel/MASTER_ROADMAP.md)** - Roadmap strategica 18 mesi
+- **[master-roadmap-2.md](master-roadmap-2.md)** - Roadmap strategica 18 mesi
 =======
 <<<<<<< HEAD
-- **[MASTER_ROADMAP.md](./laravel/master_roadmap.md)** - Roadmap strategica 18 mesi
+- **[master-roadmap-2.md](./laravel/master-roadmap-2.md)** - Roadmap strategica 18 mesi
 =======
-- **[MASTER_ROADMAP.md](./laravel/MASTER_ROADMAP.md)** - Roadmap strategica 18 mesi
+- **[master-roadmap-2.md](master-roadmap-2.md)** - Roadmap strategica 18 mesi
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
-- **[MASTER_ROADMAP.md](./laravel/master_roadmap.md)** - Roadmap strategica 18 mesi
+- **[master-roadmap-2.md](./laravel/master-roadmap-2.md)** - Roadmap strategica 18 mesi
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - **[roadmap-master.md](./project_docs/roadmaps/roadmap-master.md)** - Consolidamento moduli
 
 ### Documentazione
-- **[DOCUMENTATION_INDEX.md](./documentation_index.md)** - Indice completo
-- **[DOCUMENTATION_STATUS.md](./project_docs/documentation_status.md)** - Stato documentazione
-- **[QUICK_START.md](./quick_start.md)** - Guida rapida sviluppatori
+- **[documentation-index.md](./documentation-index-2.md)** - Indice completo
+- **[DOCUMENTATION_STATUS.md](./project_docs/documentation-status-3.md)** - Stato documentazione
+- **[quick-start-2.md](./quick-start-2.md)** - Guida rapida sviluppatori
 
 ### Moduli Principali
 <<<<<<< HEAD
@@ -303,32 +303,32 @@ portandole allo stato attuale (Q4 2025) e allineandole con i progressi effettivi
 <<<<<<< HEAD
 - **[Fixcity ROADMAP_2025.md](./laravel/Modules/Fixcity/docs/ROADMAP_2025.md)**
 - **[User roadmap.md](./laravel/Modules/User/docs/roadmap.md)**
-- **[Sixteen ROADMAP_2025.md](./laravel/Themes/Sixteen/docs/ROADMAP_2025.md)**
+- **[Sixteen roadmap-3.md](../../User/docs/roadmap-3.md)**
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- **[Fixcity ROADMAP_2025.md](./laravel/Modules/Fixcity/docs/roadmap_2025.md)**
+- **[Fixcity roadmap-3.md](../../User/docs/roadmap-3.md)**
 - **[User ROADMAP.md](./laravel/Modules/User/docs/roadmap.md)**
-- **[DOCUMENTATION_INDEX.md](./documentation_index.md)** - Indice completo
-- **[DOCUMENTATION_STATUS.md](./project_docs/documentation_status.md)** - Stato documentazione
-- **[QUICK_START.md](./quick_start.md)** - Guida rapida sviluppatori
+- **[documentation-index.md](./documentation-index-2.md)** - Indice completo
+- **[DOCUMENTATION_STATUS.md](./project_docs/documentation-status-3.md)** - Stato documentazione
+- **[quick-start-2.md](./quick-start-2.md)** - Guida rapida sviluppatori
 
 ### Moduli Principali
-- **[Fixcity ROADMAP_2025.md](./laravel/Modules/Fixcity/docs/roadmap_2025.md)**
+- **[Fixcity roadmap-3.md](../../User/docs/roadmap-3.md)**
 - **[User roadmap.md](./laravel/Modules/User/docs/roadmap.md)**
-- **[Sixteen ROADMAP_2025.md](./laravel/Themes/Sixteen/docs/roadmap_2025.md)**
+- **[Sixteen roadmap-3.md](../../User/docs/roadmap-3.md)**
 <<<<<<< HEAD
-- **[Fixcity ROADMAP_2025.md](./laravel/Modules/Fixcity/docs/ROADMAP_2025.md)**
+- **[Fixcity roadmap-3.md](../../User/docs/roadmap-3.md)**
 - **[User roadmap.md](./laravel/Modules/User/docs/roadmap.md)**
-- **[Sixteen ROADMAP_2025.md](./laravel/Themes/Sixteen/docs/ROADMAP_2025.md)**
+- **[Sixteen roadmap-3.md](../../User/docs/roadmap-3.md)**
 =======
 <<<<<<< HEAD
 =======
-- **[Fixcity ROADMAP_2025.md](./laravel/Modules/Fixcity/docs/ROADMAP_2025.md)**
+- **[Fixcity roadmap-3.md](../../User/docs/roadmap-3.md)**
 - **[User roadmap.md](./laravel/Modules/User/docs/roadmap.md)**
-- **[Sixteen ROADMAP_2025.md](./laravel/Themes/Sixteen/docs/ROADMAP_2025.md)**
+- **[Sixteen roadmap-3.md](../../User/docs/roadmap-3.md)**
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
@@ -345,7 +345,7 @@ portandole allo stato attuale (Q4 2025) e allineandole con i progressi effettivi
 - [x] Identificate aree da aggiornare
 
 ### Aggiornamenti
-- [x] ROADMAP_STATUS_SUMMARY.md aggiornato
+- [x] roadmap-status-summary-2.md aggiornato
 - [x] Fixcity ROADMAP_2025.md aggiornato
 <<<<<<< HEAD
 - [x] User roadmap.md aggiornato
@@ -368,8 +368,8 @@ portandole allo stato attuale (Q4 2025) e allineandole con i progressi effettivi
 
 ### Nuovi Documenti
 - [x] DOCUMENTATION_STATUS.md creato
-- [x] DOCUMENTATION_INDEX.md creato
-- [x] QUICK_START.md creato
+- [x] documentation-index.md creato
+- [x] quick-start-2.md creato
 - [x] WORK_COMPLETED_2025-10-01.md creato
 
 ### Qualità

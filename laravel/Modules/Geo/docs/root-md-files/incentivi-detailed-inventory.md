@@ -329,7 +329,7 @@ Factory per ogni modello per testing e fake data generation.
 | troubleshooting.md | MD | Guida troubleshooting |
 | module-icons.md | MD | Elenco icone |
 | manage-related-records-translations.md | MD | Gestione traduzioni |
-| phpstan-report.md | MD | Report PHPStan (Level 9) |
+| phpstan-report-2.md | MD | Report PHPStan (Level 9) |
 | phpstan-report.txt | TXT | Report PHPStan alternativo |
 | phpmd-report.txt | TXT | Report PHPMD |
 | phpstan_report.txt | TXT | Report PHPStan v3 |
@@ -357,7 +357,7 @@ Factory per ogni modello per testing e fake data generation.
 | laravel.md | Integrazione Laravel |
 | advanced.md | Funzioni avanzate |
 | styling.md | Styling CSS |
-| SECURITY.md | Considerazioni security |
+| security-2.md | Considerazioni security |
 
 ### Sottodirectory: models/
 | File | Descrizione |

@@ -139,4 +139,4 @@ php artisan vendor:publish --tag=laravel-translations
 Poi modificare i file in `lang/vendor/{package}/{locale}/`.
 
 ## Console Commands
-- **Console Commands**: Non registrarli mai manualmente, sono autoregistrati da XotBaseServiceProvider ([vedi](./lang-service-provider.md), [filosofia](./PHILOSOPHY.md))
+- **Console Commands**: Non registrarli mai manualmente, sono autoregistrati da XotBaseServiceProvider ([vedi](../../../lang-service-provider-2.md), [filosofia](../../../philosophy-3.md))

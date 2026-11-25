@@ -196,7 +196,7 @@ sessions:
         auth_security:
           - email-auth.md
           - auth-session.md
-          - error-handling.md
+          - error-handling-2.md
     online_references:
       - "https://bmad-code-org.github.io/bmad-method-test-architecture-enterprise/reference/knowledge-base/"
       - "https://github.com/bmad-code-org/bmad-method-test-architecture-enterprise/tree/main/src/testarch/knowledge"

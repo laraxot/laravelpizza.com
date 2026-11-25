@@ -143,8 +143,8 @@ Review Filament 5 upgrade guide:
 
 ### 4. Update Documentation
 
-- [x] COMPOSER_UPDATE_REPORT.md
-- [x] COMPOSER_MODULES_ARCHITECTURE.md
+- [x] composer-update-report-2.md
+- [x] composer-modules-architecture-2.md
 - [x] FILAMENT_5_UPGRADE_COMPLETE.md (this file)
 
 ---

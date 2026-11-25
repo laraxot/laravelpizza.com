@@ -13,7 +13,7 @@ related:
 ---
 # Modulo Media
 
-> **Collegamento globale:** Per le strategie generali e le best practices sulla risoluzione dei conflitti git, vedi [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).
+> **Collegamento globale:** Per le strategie generali e le best practices sulla risoluzione dei conflitti git, vedi [docs/git-conflict-resolution-3.md](../../../../../docs/git-conflict-resolution-3.md).
 
 ## Informazioni Generali
 - **Nome**: `laraxot/module_media_fila5`
@@ -50,7 +50,7 @@ Sono stati risolti importanti conflitti di merge in diversi file critici del mod
 
 La risoluzione ha puntato a mantenere la coerenza del codice, evitando duplicazioni e garantendo il corretto funzionamento delle funzionalità di gestione media e del sistema di registrazione componenti.
 
-Per maggiori dettagli, consultare la [documentazione locale sulla risoluzione dei conflitti](./conflitti_merge_risolti.md) e la [documentazione globale](../../../../../docs/git_conflict_resolution.md).
+Per maggiori dettagli, consultare la [documentazione locale sulla risoluzione dei conflitti](./conflitti_merge_risolti.md) e la [documentazione globale](../../../../../docs/git-conflict-resolution-3.md).
 
 ## Dipendenze
 ### Pacchetti Required
@@ -136,4 +136,4 @@ Le modifiche vengono tracciate nel repository GitHub.
 
 ---
 
-> **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).
+> **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git-conflict-resolution-3.md](../../../../../docs/git-conflict-resolution-3.md).

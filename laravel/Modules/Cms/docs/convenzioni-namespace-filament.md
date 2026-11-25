@@ -157,13 +157,13 @@ Section::make('Anteprima')
 - [README.md](../../xot/project_docs/README.md) - Indice principale della documentazione
 - [Struttura dei Moduli](../../xot/project_docs/module_structure.md) - Struttura standard dei moduli
 - [Case Sensitivity delle Directory](../../xot/project_docs/directory-case-sensitivity.md) - Regole per la case sensitivity
-- [Regole per i Namespace](../../xot/project_docs/namespace-rules.md) - Convenzioni per i namespace
+- [Regole per i Namespace](../../Notify/docs/namespace-rules-2.md) - Convenzioni per i namespace
 =======
 <<<<<<< HEAD
 - [README.md](../../xot/project_docs/readme.md) - Indice principale della documentazione
 - [Struttura dei Moduli](../../xot/project_docs/module_structure.md) - Struttura standard dei moduli
 - [Case Sensitivity delle Directory](../../xot/project_docs/directory-case-sensitivity.md) - Regole per la case sensitivity
-- [Regole per i Namespace](../../xot/project_docs/namespace-rules.md) - Convenzioni per i namespace
+- [Regole per i Namespace](../../Notify/docs/namespace-rules-2.md) - Convenzioni per i namespace
 =======
 <<<<<<< .merge_file_nammGU
 - [README.md](../../Xot/docs/README.md) - Indice principale della documentazione
@@ -172,7 +172,7 @@ Section::make('Anteprima')
 >>>>>>> .merge_file_SYrrp5
 - [Struttura dei Moduli](../../xot/project_docs/module_structure.md) - Struttura standard dei moduli
 - [Case Sensitivity delle Directory](../../Xot/docs/directory-case-sensitivity.md) - Regole per la case sensitivity
-- [Regole per i Namespace](../../Xot/docs/namespace-rules.md) - Convenzioni per i namespace
+- [Regole per i Namespace](../../Notify/docs/namespace-rules-2.md) - Convenzioni per i namespace
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 
@@ -183,16 +183,16 @@ Section::make('Anteprima')
 
 ### Moduli Correlati
 <<<<<<< HEAD
-- [Lang - Filament Translations](../../lang/project_docs/filament-translations.md) - Traduzioni in Filament
+- [Lang - Filament Translations](../../Lang/docs/filament-translations-2.md) - Traduzioni in Filament
 =======
 <<<<<<< HEAD
-- [Lang - Filament Translations](../../lang/project_docs/filament-translations.md) - Traduzioni in Filament
+- [Lang - Filament Translations](../../Lang/docs/filament-translations-2.md) - Traduzioni in Filament
 =======
 - [Lang - Filament Translations](../../Lang/docs/filament-translations.md) - Traduzioni in Filament
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [UI - Form Filament Widgets](../../ui/project_docs/form_filament_widgets.md) - Widget per form Filament
-- [User - Filament Best Practices](../../user/project_docs/filament_best_practices.md) - Best practices per Filament
+- [User - Filament Best Practices](../../user/project_docs/filament-best-practices-2.md) - Best practices per Filament
 
 ### Documentazione Interna
 - [README del modulo Cms](./README.md) - Indice principale del modulo Cms

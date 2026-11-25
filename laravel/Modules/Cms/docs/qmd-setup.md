@@ -95,7 +95,7 @@ graph TD
 - [On-Demand Pattern](./on-demand-pattern.md)
 =======
 <<<<<<< HEAD
-- [On-Demand Pattern](./ON-DEMAND-PATTERN.md)
+- [On-Demand Pattern](./on-demand-pattern-2.md)
 =======
 - [On-Demand Pattern](./on-demand-pattern.md)
 >>>>>>> laraxot/dev

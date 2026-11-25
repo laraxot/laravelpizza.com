@@ -144,7 +144,7 @@ if (!$region || !is_array($region) || !isset($region['provinces'])) {
 ### **Documentazione Correlata**
 - [README.md Modulo Geo](./README.md)
 - [Architecture Overview](./architecture.md)
-- [Best Practices](./best-practices.md)
+- [Best Practices](../../../Activity/docs/best-practices-3.md)
 
 ### **Risorse Esterne**
 - [Laravel Collections](https://laravel.com/docs/collections)

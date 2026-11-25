@@ -24,7 +24,7 @@ Concetti specifici del modulo Notify. Carica on-demand via `qmd search` o consul
 ## Schema notifications (2026-06-10)
 
 - [notifications-database-contract.md](notifications-database-contract.md) — owner migrazione, `XotBaseMigration`, conn `user` via `User\Models\Notification`
-- [../migrations/notifications_table.md](../migrations/notifications_table.md) — file `2026_06_10_133000_create_notifications_table.php`
+- [../migrations/notifications-table-2.md](../migrations/notifications-table-2.md) — file `2026_06_10_133000_create_notifications_table.php`
 ## Database notifications (boundary Notify/User)
 
 - [notifications-database-contract](notifications-database-contract.md) — schema owner Notify

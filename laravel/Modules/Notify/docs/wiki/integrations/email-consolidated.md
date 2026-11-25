@@ -89,10 +89,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -536,9 +536,9 @@ class MailTrackingService
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Analytics](https://github.com/spatie/laravel-analytics)
@@ -548,7 +548,7 @@ class MailTrackingService
 
 ## email-analytics
 
-*Consolidated from: `email-analytics.md`*
+*Consolidated from: `email-analytics-2.md`*
 
 <<<<<<< HEAD
 
@@ -999,9 +999,9 @@ class MailTrackingService
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Analytics](https://github.com/spatie/laravel-analytics)
@@ -1651,9 +1651,9 @@ class MailBackupDebugger
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Storage](https://laravel.com/docs/storage)
@@ -2095,10 +2095,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -2731,9 +2731,9 @@ class MailBackupDebugger
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Storage](https://laravel.com/project_docs/storage)
@@ -2743,7 +2743,7 @@ class MailBackupDebugger
 
 ## email-backup
 
-*Consolidated from: `email-backup.md`*
+*Consolidated from: `email-backup-2.md`*
 
 <<<<<<< HEAD
 
@@ -3383,9 +3383,9 @@ class MailBackupDebugger
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Storage](https://laravel.com/docs/storage)
@@ -3409,10 +3409,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -3487,10 +3487,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -3965,9 +3965,9 @@ class MailCacheDebugger
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Cache](https://laravel.com/project_docs/cache)
@@ -3977,7 +3977,7 @@ class MailCacheDebugger
 
 ## email-cache
 
-*Consolidated from: `email-cache.md`*
+*Consolidated from: `email-cache-2.md`*
 
 <<<<<<< HEAD
 
@@ -4459,9 +4459,9 @@ class MailCacheDebugger
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Cache](https://laravel.com/project_docs/cache)
@@ -4489,10 +4489,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -4715,10 +4715,10 @@ Questo documento definisce le best practices per la creazione di template HTML p
 ## Collegamenti Correlati
 
 - [Documentazione MailPace](https://github.com/mailpace/templates)
-- [Struttura Template](./mail-templates-structure.md)
-- [Template Base](./base-templates.md)
+- [Struttura Template](../../mail-templates-structure-2.md)
+- [Template Base](../../base-templates-2.md)
 - [Struttura Template](./mail-templates-structure-1.md)
-- [Template Base](./base-templates.md)
+- [Template Base](../../base-templates-2.md)
 
 ## Supporto
 
@@ -4730,7 +4730,7 @@ Per supporto tecnico:
 
 ## email-html-best-practices
 
-*Consolidated from: `email-html-best-practices.md`*
+*Consolidated from: `email-html-best-practices-2.md`*
 
 <<<<<<< HEAD
 
@@ -4960,8 +4960,8 @@ Questo documento definisce le best practices per la creazione di template HTML p
 ## Collegamenti Correlati
 
 - [Documentazione MailPace](https://github.com/mailpace/templates)
-- [Struttura Template](./MAIL_TEMPLATES_STRUCTURE.md)
-- [Template Base](./BASE_TEMPLATES.md)
+- [Struttura Template](../../mail-templates-structure-2.md)
+- [Template Base](../../base-templates-2.md)
 
 ## Supporto
 
@@ -5005,10 +5005,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -5517,9 +5517,9 @@ class MailLogDebugger
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Logging](https://laravel.com/project_docs/logging)
@@ -5529,7 +5529,7 @@ class MailLogDebugger
 
 ## email-logs
 
-*Consolidated from: `email-logs.md`*
+*Consolidated from: `email-logs-2.md`*
 
 <<<<<<< HEAD
 
@@ -6045,9 +6045,9 @@ class MailLogDebugger
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Logging](https://laravel.com/project_docs/logging)
@@ -6075,10 +6075,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -6894,9 +6894,9 @@ class MailMonitoringDebugger
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Cache](https://laravel.com/project_docs/cache)
@@ -6907,7 +6907,7 @@ class MailMonitoringDebugger
 
 ## email-monitoring
 
-*Consolidated from: `email-monitoring.md`*
+*Consolidated from: `email-monitoring-2.md`*
 
 <<<<<<< HEAD
 
@@ -7730,9 +7730,9 @@ class MailMonitoringDebugger
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Cache](https://laravel.com/project_docs/cache)
@@ -7762,10 +7762,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -8129,9 +8129,9 @@ class NotificationDebugger
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Notifications](https://laravel.com/project_docs/notifications)
@@ -8141,7 +8141,7 @@ class NotificationDebugger
 
 ## email-notifications
 
-*Consolidated from: `email-notifications.md`*
+*Consolidated from: `email-notifications-2.md`*
 
 <<<<<<< HEAD
 
@@ -8512,9 +8512,9 @@ class NotificationDebugger
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Notifications](https://laravel.com/project_docs/notifications)
@@ -8542,10 +8542,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -8814,9 +8814,9 @@ class MailAnalytics
    - [ ] Integrazioni
 
 ## Collegamenti
-- [Database Mail System](database-mail-system.md)
-- [Mail Queue](database-mail-queue.md)
-- [Testing](database-mail-system-tests.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Mail Queue](database-mail-queue-2.md)
+- [Testing](database-mail-system-tests-2.md)
 
 ## Vedi Anche
 - [Filament Documentation](https://filamentphp.com/docs)
@@ -8826,7 +8826,7 @@ class MailAnalytics
 
 ## email-plugins-analysis
 
-*Consolidated from: `email-plugins-analysis.md`*
+*Consolidated from: `email-plugins-analysis-2.md`*
 
 <<<<<<< HEAD
 
@@ -9102,9 +9102,9 @@ class MailAnalytics
    - [ ] Integrazioni
 
 ## Collegamenti
-- [Database Mail System](database-mail-system.md)
-- [Mail Queue](database-mail-queue.md)
-- [Testing](database-mail-system-tests.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Mail Queue](database-mail-queue-2.md)
+- [Testing](database-mail-system-tests-2.md)
 
 ## Vedi Anche
 - [Filament Documentation](https://filamentphp.com/docs)
@@ -9391,9 +9391,9 @@ class MailAnalytics
    - [ ] Integrazioni
 
 ## Collegamenti
-- [Database Mail System](database-mail-system.md)
-- [Mail Queue](database-mail-queue.md)
-- [Testing](database-mail-system-tests.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Mail Queue](database-mail-queue-2.md)
+- [Testing](database-mail-system-tests-2.md)
 
 ## Vedi Anche
 - [Filament Documentation](https://filamentphp.com/docs)
@@ -9418,10 +9418,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -9822,9 +9822,9 @@ class MailQueueManager
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Queue](https://laravel.com/project_docs/queues)
@@ -9834,7 +9834,7 @@ class MailQueueManager
 
 ## email-queue
 
-*Consolidated from: `email-queue.md`*
+*Consolidated from: `email-queue-2.md`*
 
 <<<<<<< HEAD
 
@@ -10242,9 +10242,9 @@ class MailQueueManager
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Queue](https://laravel.com/project_docs/queues)
@@ -10650,9 +10650,9 @@ class MailQueueManager
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Queue](https://laravel.com/project_docs/queues)
@@ -10677,10 +10677,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -10888,7 +10888,7 @@ Un esempio completo di implementazione è disponibile in `TestSmtpPage.php`. Si 
 
 ## email-sending-troubleshooting
 
-*Consolidated from: `email-sending-troubleshooting.md`*
+*Consolidated from: `email-sending-troubleshooting-2.md`*
 
 <<<<<<< HEAD
 
@@ -11109,10 +11109,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -11492,9 +11492,9 @@ class TranslationValidator
    - Monitora uso
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Localization](https://laravel.com/project_docs/localization)
@@ -11504,7 +11504,7 @@ class TranslationValidator
 
 ## email-translations
 
-*Consolidated from: `email-translations.md`*
+*Consolidated from: `email-translations-2.md`*
 
 <<<<<<< HEAD
 
@@ -11891,9 +11891,9 @@ class TranslationValidator
    - Monitora uso
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Localization](https://laravel.com/project_docs/localization)
@@ -11918,10 +11918,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -12352,9 +12352,9 @@ class TemplateValidator
    - Ottimizza storage
 
 ## Collegamenti
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
-- [Mail Queue](database-mail-queue.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
+- [Mail Queue](database-mail-queue-2.md)
 
 ## Vedi Anche
 - [TinyMCE Documentation](https://www.tiny.cloud/docs)
@@ -12364,7 +12364,7 @@ class TemplateValidator
 
 ## email-wysiwyg-editor
 
-*Consolidated from: `email-wysiwyg-editor.md`*
+*Consolidated from: `email-wysiwyg-editor-2.md`*
 
 <<<<<<< HEAD
 
@@ -12802,9 +12802,9 @@ class TemplateValidator
    - Ottimizza storage
 
 ## Collegamenti
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
-- [Mail Queue](database-mail-queue.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
+- [Mail Queue](database-mail-queue-2.md)
 
 ## Vedi Anche
 - [TinyMCE Documentation](https://www.tiny.cloud/docs)
@@ -12814,7 +12814,7 @@ class TemplateValidator
 
 ## email_analytics
 
-*Consolidated from: `email_analytics.md`*
+*Consolidated from: `email-analytics-2.md`*
 
 <<<<<<< HEAD
 
@@ -13265,9 +13265,9 @@ class MailTrackingService
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Analytics](https://github.com/spatie/laravel-analytics)
@@ -13277,7 +13277,7 @@ class MailTrackingService
 
 ## email_backup
 
-*Consolidated from: `email_backup.md`*
+*Consolidated from: `email-backup-2.md`*
 
 <<<<<<< HEAD
 
@@ -13917,9 +13917,9 @@ class MailBackupDebugger
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Storage](https://laravel.com/project_docs/storage)
@@ -13963,7 +13963,7 @@ class MailBackupDebugger
 
 ## email_cache
 
-*Consolidated from: `email_cache.md`*
+*Consolidated from: `email-cache-2.md`*
 
 <<<<<<< HEAD
 
@@ -14445,9 +14445,9 @@ class MailCacheDebugger
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Cache](https://laravel.com/project_docs/cache)
@@ -14457,7 +14457,7 @@ class MailCacheDebugger
 
 ## email_html_best_practices
 
-*Consolidated from: `email_html_best_practices.md`*
+*Consolidated from: `email-html-best-practices-2.md`*
 
 <<<<<<< HEAD
 
@@ -14687,8 +14687,8 @@ Questo documento definisce le best practices per la creazione di template HTML p
 ## Collegamenti Correlati
 
 - [Documentazione MailPace](https://github.com/mailpace/templates)
-- [Struttura Template](./MAIL_TEMPLATES_STRUCTURE.md)
-- [Template Base](./BASE_TEMPLATES.md)
+- [Struttura Template](../../mail-templates-structure-2.md)
+- [Template Base](../../base-templates-2.md)
 
 ## Supporto
 
@@ -14701,7 +14701,7 @@ Per supporto tecnico:
 
 ## email_logs
 
-*Consolidated from: `email_logs.md`*
+*Consolidated from: `email-logs-2.md`*
 
 <<<<<<< HEAD
 
@@ -15217,9 +15217,9 @@ class MailLogDebugger
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Logging](https://laravel.com/project_docs/logging)
@@ -15229,7 +15229,7 @@ class MailLogDebugger
 
 ## email_monitoring
 
-*Consolidated from: `email_monitoring.md`*
+*Consolidated from: `email-monitoring-2.md`*
 
 <<<<<<< HEAD
 
@@ -16052,9 +16052,9 @@ class MailMonitoringDebugger
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Cache](https://laravel.com/project_docs/cache)
@@ -16065,7 +16065,7 @@ class MailMonitoringDebugger
 
 ## email_notifications
 
-*Consolidated from: `email_notifications.md`*
+*Consolidated from: `email-notifications-2.md`*
 
 <<<<<<< HEAD
 
@@ -16436,9 +16436,9 @@ class NotificationDebugger
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Notifications](https://laravel.com/project_docs/notifications)
@@ -16448,7 +16448,7 @@ class NotificationDebugger
 
 ## email_plugins_analysis
 
-*Consolidated from: `email_plugins_analysis.md`*
+*Consolidated from: `email-plugins-analysis-2.md`*
 
 <<<<<<< HEAD
 
@@ -16724,9 +16724,9 @@ class MailAnalytics
    - [ ] Integrazioni
 
 ## Collegamenti
-- [Database Mail System](database-mail-system.md)
-- [Mail Queue](database-mail-queue.md)
-- [Testing](database-mail-system-tests.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Mail Queue](database-mail-queue-2.md)
+- [Testing](database-mail-system-tests-2.md)
 
 ## Vedi Anche
 - [Filament Documentation](https://filamentphp.com/docs)
@@ -16736,7 +16736,7 @@ class MailAnalytics
 
 ## email_queue
 
-*Consolidated from: `email_queue.md`*
+*Consolidated from: `email-queue-2.md`*
 
 <<<<<<< HEAD
 
@@ -17144,9 +17144,9 @@ class MailQueueManager
 ```
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Queue](https://laravel.com/project_docs/queues)
@@ -17156,7 +17156,7 @@ class MailQueueManager
 
 ## email_sending_troubleshooting
 
-*Consolidated from: `email_sending_troubleshooting.md`*
+*Consolidated from: `email-sending-troubleshooting-2.md`*
 
 <<<<<<< HEAD
 
@@ -17364,7 +17364,7 @@ Un esempio completo di implementazione è disponibile in `TestSmtpPage.php`. Si 
 
 ## email_translations
 
-*Consolidated from: `email_translations.md`*
+*Consolidated from: `email-translations-2.md`*
 
 <<<<<<< HEAD
 
@@ -17751,9 +17751,9 @@ class TranslationValidator
    - Monitora uso
 
 ## Collegamenti
-- [Editor WYSIWYG](email-wysiwyg-editor.md)
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
+- [Editor WYSIWYG](email-wysiwyg-editor-2.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
 
 ## Vedi Anche
 - [Laravel Localization](https://laravel.com/project_docs/localization)
@@ -17763,7 +17763,7 @@ class TranslationValidator
 
 ## email_wysiwyg_editor
 
-*Consolidated from: `email_wysiwyg_editor.md`*
+*Consolidated from: `email-wysiwyg-editor-2.md`*
 
 <<<<<<< HEAD
 
@@ -18201,9 +18201,9 @@ class TemplateValidator
    - Ottimizza storage
 
 ## Collegamenti
-- [Database Mail System](database-mail-system.md)
-- [Email Plugins Analysis](email-plugins-analysis.md)
-- [Mail Queue](database-mail-queue.md)
+- [Database Mail System](database-mail-system-2.md)
+- [Email Plugins Analysis](email-plugins-analysis-2.md)
+- [Mail Queue](database-mail-queue-2.md)
 
 ## Vedi Anche
 - [TinyMCE Documentation](https://www.tiny.cloud/docs)

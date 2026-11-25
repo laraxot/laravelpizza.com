@@ -39,5 +39,5 @@ discussions: []
 
 ## References
 - Notify/docs/architecture.md
-- Notify/docs/INDEX.md
+- Notify/docs/index-2.md
 - Notify/notification agents

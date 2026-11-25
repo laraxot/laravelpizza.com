@@ -64,19 +64,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -202,7 +202,7 @@ The <nome progetto> platform has extensive documentation across modules and them
 
 ❌ **Problems**:
 - 101 temporal strings
-- Duplicate files: `CODE_QUALITY_analysis.md` + `code_quality_analysis.md`
+- Duplicate files: `code-quality-analysis-3.md` + `code-quality-analysis-3.md`
 - Mixed naming conventions
 
 ---
@@ -304,8 +304,8 @@ find laravel/Modules/*/docs/ -name "*.md" -exec sed -i.bak \
 - Merge unique content
 
 **Sixteen Theme**:
-- Keep: `CODE_QUALITY_analysis.md`
-- Remove: `code_quality_analysis.md`
+- Keep: `code-quality-analysis-3.md`
+- Remove: `code-quality-analysis-3.md`
 - Merge unique content
 
 #### Day 5-7: Naming Standardization
@@ -543,19 +543,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -638,7 +638,7 @@ related:
 │    └─ All 19 modules with relationships         │
 │                                                 │
 │  ▶ Theme Master Index                           │
-│    docs/THEMES_documentation-index.md           │
+│    ../../themes-documentation-index-2.md           │
 │    └─ Sixteen + TwentyOne documentation        │
 │                                                 │
 │  ▶ General Master Index                         │
@@ -811,8 +811,8 @@ Xot (Core) ◄──────────────────────
 
 | I Need... | Start Here | Then Go To | Then Go To |
 |-----------|-----------|-----------|-----------|
-| Quick start | [Copilot Inst.](../../.github/copilot-instructions.md) | [Architecture](architecture-diagrams.md) | Your task |
-| Quick start | [Copilot Inst.](../../../.github/copilot-instructions.md) | [Architecture](architecture-diagrams.md) | Your task |
+| Quick start | [Copilot Inst.](../../.github/copilot-instructions.md) | [Architecture](architecture-diagrams-2.md) | Your task |
+| Quick start | [Copilot Inst.](../../../.github/copilot-instructions.md) | [Architecture](architecture-diagrams-2.md) | Your task |
 | Module overview | [Module Index](module-docs-index.md) | `Modules/{Name}/docs/00-index-1.md` | Details |
 <<<<<<< HEAD
 | Theme overview | [Theme Index](themes_documentation-index.md) | `Themes/{Name}/docs/00-index-1.md` | Details |
@@ -842,28 +842,28 @@ Xot (Core) ◄──────────────────────
 | Send notifications | [Notify Docs](../laravel/Modules/Notify/docs/) | [Channels](../laravel/Modules/Notify/docs/guides/) | Examples |
 | Track changes | [Activity Docs](../laravel/Modules/Activity/docs/) | [Audit Trail](../laravel/Modules/Activity/docs/guides/) | Examples |
 <<<<<<< HEAD
-| Code standards | [CLAUDE.md](../laravel/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
-| Code standards | [CLAUDE.md](../laravel/claude.md) | [Copilot Inst.](../../../.github/copilot-instructions.md) | Review |
+| Code standards | [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
+| Code standards | [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../../.github/copilot-instructions.md) | Review |
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-| Code standards | [CLAUDE.md](../laravel/CLAUDE.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
-| Code standards | [CLAUDE.md](../laravel/CLAUDE.md) | [Copilot Inst.](../../../.github/copilot-instructions.md) | Review |
+| Code standards | [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
+| Code standards | [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../../.github/copilot-instructions.md) | Review |
 =======
 <<<<<<< HEAD
-| Code standards | [CLAUDE.md](../laravel/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
-| Code standards | [CLAUDE.md](../laravel/claude.md) | [Copilot Inst.](../../../.github/copilot-instructions.md) | Review |
+| Code standards | [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
+| Code standards | [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../../.github/copilot-instructions.md) | Review |
 =======
-| Code standards | [CLAUDE.md](../laravel/CLAUDE.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
-| Code standards | [CLAUDE.md](../laravel/CLAUDE.md) | [Copilot Inst.](../../../.github/copilot-instructions.md) | Review |
+| Code standards | [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
+| Code standards | [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../../.github/copilot-instructions.md) | Review |
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
-| Code standards | [CLAUDE.md](../laravel/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
-| Code standards | [CLAUDE.md](../laravel/claude.md) | [Copilot Inst.](../../../.github/copilot-instructions.md) | Review |
+| Code standards | [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
+| Code standards | [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../../.github/copilot-instructions.md) | Review |
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-| Architecture | [Architecture](architecture-diagrams.md) | [Design Comuni](../laravel/Themes/Sixteen/docs/design-comuni/) | Deep dive |
+| Architecture | [Architecture](architecture-diagrams-2.md) | [Design Comuni](../laravel/Themes/Sixteen/docs/design-comuni/) | Deep dive |
 
 ---
 
@@ -912,7 +912,7 @@ Implement ✅
 Task Definition
   │
   ▼
-Check Architecture (architecture-diagrams.md)
+Check Architecture (architecture-diagrams-2.md)
   │ (What modules needed?)
   │
   ▼
@@ -951,7 +951,7 @@ Deploy ✅
 
 ```
 docs/
-├── architecture-diagrams.md        ← System diagrams
+├── architecture-diagrams-2.md        ← System diagrams
 ├── module-docs-index.md            ← Module hub (THIS FILE)
 ├── THEMES_documentation-index.md   ← Theme hub
 ├── documentation-ecosystem.md      ← You are here
@@ -989,7 +989,7 @@ laravel/Modules/
 │   └── reference/
 │
 ├── Cms/docs/
-│   ├── 00-index.md
+│   ├── 00-index-2.md
 │   ├── architecture/
 │   ├── guides/
 │   └── reference/
@@ -1002,7 +1002,7 @@ laravel/Modules/
 ```
 laravel/Themes/
 ├── Sixteen/docs/
-│   ├── 00-index.md
+│   ├── 00-index-2.md
 │   ├── architecture/
 │   ├── design-comuni/
 │   ├── components/
@@ -1011,7 +1011,7 @@ laravel/Themes/
 │   └── screenshots/
 │
 └── TwentyOne/docs/
-    ├── 00-index.md
+    ├── 00-index-2.md
     └── (similar structure)
 ```
 
@@ -1023,33 +1023,33 @@ laravel/Themes/
 
 **I want to learn about:**
 
-- **System Architecture** → [architecture-diagrams.md](architecture-diagrams.md)
+- **System Architecture** → [architecture-diagrams-2.md](architecture-diagrams-2.md)
 - **Module Development** → [module-docs-index.md](module-docs-index.md)
 <<<<<<< HEAD
 - **Theme Development** → [THEMES_documentation-index.md](themes_documentation-index.md)
 - **Code Quality** → [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
-- **Framework Rules** → [laravel/CLAUDE.md](../laravel/claude.md)
+- **Framework Rules** → [laravel/Modules/Geo/docs/root-md-files/claude.md](../../../../Geo/docs/root-md-files/claude.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 - **Theme Development** → [THEMES_documentation-index.md](THEMES_documentation-index.md)
 - **Code Quality** → [CODE_QUALITY_STANDARDS.md](CODE_QUALITY_STANDARDS.md)
-- **Framework Rules** → [laravel/CLAUDE.md](../laravel/CLAUDE.md)
+- **Framework Rules** → [laravel/Modules/Geo/docs/root-md-files/claude.md](../../../../Geo/docs/root-md-files/claude.md)
 =======
 <<<<<<< HEAD
 - **Theme Development** → [THEMES_documentation-index.md](themes_documentation-index.md)
 - **Code Quality** → [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
-- **Framework Rules** → [laravel/CLAUDE.md](../laravel/claude.md)
+- **Framework Rules** → [laravel/Modules/Geo/docs/root-md-files/claude.md](../../../../Geo/docs/root-md-files/claude.md)
 =======
 - **Theme Development** → [THEMES_documentation-index.md](THEMES_documentation-index.md)
 - **Code Quality** → [CODE_QUALITY_STANDARDS.md](CODE_QUALITY_STANDARDS.md)
-- **Framework Rules** → [laravel/CLAUDE.md](../laravel/CLAUDE.md)
+- **Framework Rules** → [laravel/Modules/Geo/docs/root-md-files/claude.md](../../../../Geo/docs/root-md-files/claude.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 - **Theme Development** → [THEMES_documentation-index.md](themes_documentation-index.md)
 - **Code Quality** → [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
-- **Framework Rules** → [laravel/CLAUDE.md](../laravel/claude.md)
+- **Framework Rules** → [laravel/Modules/Geo/docs/root-md-files/claude.md](../../../../Geo/docs/root-md-files/claude.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - **Copilot Usage** → [.github/copilot-instructions.md](../../.github/copilot-instructions.md)
@@ -1135,7 +1135,7 @@ Total Documentation Files: 7,137+
 Master Indexes:
 ├─ module-docs-index.md (Module hub)
 ├─ THEMES_documentation-index.md (Theme hub)
-├─ architecture-diagrams.md (System overview)
+├─ architecture-diagrams-2.md (System overview)
 ├─ docs/00-index.md (Root index)
 ├─ docs/00-index-documentation.md (Root index)
 └─ documentation-ecosystem.md (You are here)
@@ -1156,7 +1156,7 @@ Connected Via:
 
 1. Start: [Copilot Instructions](../../.github/copilot-instructions.md)
 1. Start: [Copilot Instructions](../../../.github/copilot-instructions.md)
-2. Understand: [Architecture Diagrams](architecture-diagrams.md)
+2. Understand: [Architecture Diagrams](architecture-diagrams-2.md)
 <<<<<<< HEAD
 3. Explore: [Module Index](module-docs-index.md) or [Theme Index](themes_documentation-index.md)
 =======
@@ -1180,7 +1180,7 @@ Connected Via:
 
 ### For Architects
 
-1. Start: [Architecture Diagrams](architecture-diagrams.md)
+1. Start: [Architecture Diagrams](architecture-diagrams-2.md)
 2. Understand: [Module Relationships](module-docs-index.md#cross-module-communication)
 3. Design: Using module/theme structure
 <<<<<<< HEAD
@@ -1259,19 +1259,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -1345,7 +1345,7 @@ Themes/ThemeName/
 - `00-index.md` (numeric prefix for ordering)
 - `README.md` (standard)
 - `CHANGELOG.md` (standard)
-- `best-practices.md` (descriptive, lowercase)
+- `best-practices-3.md` (descriptive, lowercase)
 
 ❌ **WRONG**:
 - `UserAuthentication.md` (PascalCase)
@@ -1401,7 +1401,7 @@ Gennaio 2025
 This guide covers user authentication implementation.
 
 ## Related
-- [Session Management](session-management.md)
+- [Session Management](session-management-3.md)
 - [Password Reset](password-reset.md)
 
 ---
@@ -1736,7 +1736,7 @@ jobs:
 
 ## documentation-improvement-plan-multi-agent
 
-*Consolidated from: `documentation-improvement-plan-multi-agent.md`*
+*Consolidated from: `documentation-improvement-plan-multi-agent-2.md`*
 
 title: "Documentation Improvement Plan - Multi-Agent Edition"
 type: concept
@@ -1751,19 +1751,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -1825,7 +1825,7 @@ Transform documentation from **chaotic but comprehensive** to **organized, gover
 ### How to Join
 
 1. **Read this document** thoroughly
-2. **Check coordination log**: `bashscripts/docs/git/sync_remote_repo_coordination.md`
+2. **Check coordination log**: `bashscripts/docs/git/sync-remote-repo-coordination-2.md`
 3. **Pick a task** from the backlog below
 4. **Add your agent ID** to the team list
 5. **Create lock file** (optional, for exclusive work):
@@ -1882,7 +1882,7 @@ grep -r "Ultimo aggiornamento" docs/ --include="*.md"
 **Agent**: TBD
 
 **Keep**:
-- [ ] `master-roadmap.md` (current platform roadmap)
+- [ ] `master-roadmap-2.md` (current platform roadmap)
 - [ ] `project_docs/roadmaps/roadmap-master.md` (detailed technical)
 - [ ] `project_docs/roadmaps/roadmap-documentation.md` (this doc)
 
@@ -1904,9 +1904,9 @@ grep -r "Ultimo aggiornamento" docs/ --include="*.md"
 >>>>>>> laraxot/dev
 - [ ] `project-roadmap.md`
 - [ ] `roadmap.md`
-- [ ] `roadmap-project.md`
-- [ ] `roadmap-status-summary.md`
-- [ ] `roadmap-update-plan.md`
+- [ ] `roadmap-project-2.md`
+- [ ] `roadmap-status-summary-2.md`
+- [ ] `roadmap-update-plan-2.md`
 - [ ] `project_docs/roadmap.md`
 - [ ] `project_docs/roadmaps/roadmap-business.md`
 - [ ] `project_docs/roadmaps/roadmap-quality.md`
@@ -1928,10 +1928,10 @@ grep -r "Ultimo aggiornamento" docs/ --include="*.md"
 - [ ] `absolute-completion-100.md`
 - [ ] `absolute-completion-completamento-assoluto.md`
 - [ ] `perfection-achieved.md`
-- [ ] `project-completion-report.md`
+- [ ] `project-completion-report-2.md`
 - [ ] `project-completion-status.md`
-- [ ] `ultimate-completion-report.md`
-- [ ] `super-mucca-completion.md`
+- [ ] `ultimate-completion-report-2.md`
+- [ ] `super-mucca-completion-2.md`
 - [ ] `project_docs/project-completion-certificate.md`
 - [ ] (4+ more in `project_docs/roadmaps/`)
 
@@ -1977,9 +1977,9 @@ grep -r "Ultimo aggiornamento" docs/ --include="*.md"
 - [ ] `boost-skill-installation-error.md`
 - [ ] `boost-skill-installation-success.md`
 - [ ] `boost-skill-solution-plan.md`
-- [ ] `folio-routing-fix.md`
+- [ ] `folio-routing-fix-2.md`
 - [ ] `login-page-status.md`
-- [ ] `login-page-translation-fix.md`
+- [ ] `login-page-translation-fix-2.md`
 - [ ] `login-timeout-issue.md`
 
 **To `project_docs/status/`**:
@@ -2004,11 +2004,11 @@ grep -r "Ultimo aggiornamento" docs/ --include="*.md"
 - [ ] `drytraitmethods.md` → `dry-trait-methods.md`
 - [ ] `readme-analisi-duplicati.md` → `readme-analisi-duplicati.md`
 - [ ] `analisi-metodi-duplicati-master.md` → `analisi-metodi-duplicati-master.md`
-- [ ] `DOCUMENTATION-IMPROVEMENT-SUMMARY-.md.md` → `documentation-improvement-summary.md`
+- [ ] `documentation-improvement-summary-4.md` → `documentation-improvement-summary.md`
 - [ ] `PHPSTAN-GLOBAL-SUMMARY-.md.md` → `phpstan-global-summary.md`
-- [ ] `GITHUB-ISSUES-RECOMMENDATIONS-.md.md` → `github-issues-recommendations.md`
-- [ ] `SYSTEM-ADMIN-SUMMARY-.md.md` → `system-admin-summary.md`
-- [ ] `LOGGING-OPTIMIZATION-SUMMARY-.md.md` → `logging-optimization-summary.md`
+- [ ] `github-issues-recommendations-4.md` → `github-issues-recommendations.md`
+- [ ] `system-admin-summary-4.md` → `system-admin-summary.md`
+- [ ] `logging-optimization-summary-4.md` → `logging-optimization-summary.md`
 
 **Remove dates from filenames**:
 - [ ] All files with `YYYY-MM-DD` pattern
@@ -2045,7 +2045,7 @@ grep -r "Ultimo aggiornamento" docs/ --include="*.md"
 - [ ] `phpstan/README.md`
 - [ ] `phpstan/livello-10.md`
 - [ ] `phpstan/error-patterns.md`
-- [ ] `phpstan/best-practices.md`
+- [ ] `../../../../Activity/docs/best-practices-3.md`
 
 **Archive** (session reports):
 - [ ] Move all session reports to `archive/phpstan/sessions/`
@@ -2064,7 +2064,7 @@ grep -r "Ultimo aggiornamento" docs/ --include="*.md"
 
 **Merge**:
 - [ ] All completion certificates → single `status/COMPLETION_CERTIFICATE.md`
-- [ ] All refactoring reports → single `refactoring/summary.md`
+- [ ] All refactoring reports → single `../../bugs/summary-2.md`
 - [ ] Italian reports → translate or archive
 
 **Organize**:
@@ -2222,7 +2222,7 @@ grep -r "Ultimo aggiornamento" docs/ --include="*.md"
 
 1. **GitHub Issues**: Track individual tasks
 2. **GitHub Discussions**: General coordination
-3. **Coordination Log**: `bashscripts/docs/git/sync_remote_repo_coordination.md`
+3. **Coordination Log**: `bashscripts/docs/git/sync-remote-repo-coordination-2.md`
 4. **This Document**: Master plan tracking
 
 ### Lock File Protocol
@@ -2256,7 +2256,7 @@ rm docs/DOCUMENTATION_IMPROVEMENT_PLAN.md.lock
 
 - **Master Index**: `MASTER_documentation-index.md`
 - **Governance**: `documentation-governance.md`
-- **Coordination**: `bashscripts/docs/git/sync_remote_repo_coordination.md`
+- **Coordination**: `bashscripts/docs/git/sync-remote-repo-coordination-2.md`
 - **Analysis Report**: `docs/documentation-analysis-and-improvement-plan.md`
 
 ---
@@ -2306,7 +2306,7 @@ rm docs/DOCUMENTATION_IMPROVEMENT_PLAN.md.lock
 
 ## documentation-improvement-summary-
 
-*Consolidated from: `documentation-improvement-summary-.md`*
+*Consolidated from: `documentation-improvement-summary-2.md`*
 
 title: "DOCUMENTATION_IMPROVEMENT_SUMMARY_2026-03-13.deprecated"
 type: concept
@@ -2320,19 +2320,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -2360,19 +2360,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -2428,20 +2428,20 @@ Successfully implemented a comprehensive documentation governance framework and 
    - Maintenance workflows
 
 <<<<<<< HEAD
-2. **[MASTER_documentation-index.md](docs/master_documentation-index.md)**
+2. **[MASTER_documentation-index.md](../../master-documentation-index-2.md)**
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-2. **[MASTER_documentation-index.md](docs/MASTER_documentation-index.md)**
+2. **[MASTER_documentation-index.md](../../master-documentation-index-2.md)**
 =======
 <<<<<<< HEAD
-2. **[MASTER_documentation-index.md](docs/master_documentation-index.md)**
+2. **[MASTER_documentation-index.md](../../master-documentation-index-2.md)**
 =======
-2. **[MASTER_documentation-index.md](docs/MASTER_documentation-index.md)**
+2. **[MASTER_documentation-index.md](../../master-documentation-index-2.md)**
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
-2. **[MASTER_documentation-index.md](docs/master_documentation-index.md)**
+2. **[MASTER_documentation-index.md](../../master-documentation-index-2.md)**
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
    - Central navigation hub
@@ -2727,10 +2727,10 @@ grep -r "Last Updated" laravel/Modules/*/docs/ --include="*.md" | wc -l
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [Master Index](docs/master_documentation-index.md)
+- [Master Index](../../master-documentation-index-2.md)
 - [Improvement Plan](docs/documentation-analysis-and-improvement-plan.md)
 - [Governance Framework](../../documentation-governance.md)
-- [Master Index](docs/master_documentation-index.md)
+- [Master Index](../../master-documentation-index-2.md)
 - [Improvement Plan](../../documentation-analysis-and-improvement-plan.md)
 
 ### Rules
@@ -2745,10 +2745,10 @@ grep -r "Last Updated" laravel/Modules/*/docs/ --include="*.md" | wc -l
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [Master Index](docs/MASTER_documentation-index.md)
+- [Master Index](../../master-documentation-index-2.md)
 - [Improvement Plan](docs/documentation-analysis-and-improvement-plan.md)
 - [Governance Framework](../../documentation-governance.md)
-- [Master Index](docs/MASTER_documentation-index.md)
+- [Master Index](../../master-documentation-index-2.md)
 - [Improvement Plan](../../documentation-analysis-and-improvement-plan.md)
 
 ### Rules
@@ -2813,7 +2813,7 @@ grep -r "Last Updated" laravel/Themes/*/docs/ --include="*.md" | wc -l
 ls docs/documentation-governance.md
 
 # Master index exists: ✅
-ls docs/MASTER_documentation-index.md
+ls ../../master-documentation-index-2.md
 
 # Skill created: ✅
 ls laravel/.github/skills/documentation-management/SKILL.md
@@ -2848,19 +2848,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -2891,19 +2891,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -2952,14 +2952,14 @@ related:
 - [Quick Start](./quick-start.md) - Guida avvio rapido
 <<<<<<< HEAD
 <<<<<<< HEAD
-- [Contributing](./contributing.md) - Come contribuire
+- [Contributing](../../contributing-2.md) - Come contribuire
 =======
 - [Roadmap](./master-roadmap-historic.md) - Piano sviluppo 2025
 =======
 <<<<<<< HEAD
 - [Contributing](./CONTRIBUTING.md) - Come contribuire
 =======
-- [Contributing](./contributing.md) - Come contribuire
+- [Contributing](../../contributing-2.md) - Come contribuire
 =======
 <<<<<<< .merge_file_e9BxUo
 - [Roadmap](./master-roadmap-historic.md) - Piano sviluppo 2025
@@ -2978,7 +2978,7 @@ related:
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
-- [Contributing](./contributing.md) - Come contribuire
+- [Contributing](../../contributing-2.md) - Come contribuire
 >>>>>>> laraxot/dev
 - [Troubleshooting](./troubleshooting/README.md) - Risoluzione problemi
 
@@ -2998,7 +2998,7 @@ related:
 - [Database Schema](../schema.md) - Schema database
 =======
 <<<<<<< .merge_file_e9BxUo
-- [Database Schema](./database/schema.md) - Schema database
+- [Database Schema](../../../../Lang/docs/wiki/schema-3.md) - Schema database
 =======
 - [Database Schema](../schema.md) - Schema database
 - [Database Schema](../schema.md) - Schema database
@@ -3012,7 +3012,7 @@ related:
 - [Security](./security/README.md) - Sicurezza e conformità
 
 ### Best Practices
-- [Coding Standards](./standards/coding-standards.md) - Standard codifica
+- [Coding Standards](../../../../Geo/docs/development/coding-standards-2.md) - Standard codifica
 - [PHPStan Guidelines](./phpstan/README.md) - Analisi statica
 - [Testing Standards](./testing/README.md) - Standard testing
 - [Translation Guidelines](./translations/README.md) - Gestione traduzioni
@@ -3199,7 +3199,7 @@ related:
 - [Laravel Best Practices](../../html2pdf/laravel.md) - Best practices Laravel
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [Filament Guidelines](./standards/filament.md) - Linee guida Filament
+- [Filament Guidelines](../../../../Activity/docs/filament-3.md) - Linee guida Filament
 - [Blade Components](./standards/blade.md) - Componenti Blade
 
 ### Quality Assurance
@@ -3328,13 +3328,13 @@ related:
 - [Changelog](./CHANGELOG.md) - Storico modifiche
 =======
 <<<<<<< HEAD
-- [Changelog](./changelog.md) - Storico modifiche
+- [Changelog](../../../../UI/docs/changelog.md) - Storico modifiche
 =======
 - [Changelog](./CHANGELOG.md) - Storico modifiche
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
-- [Changelog](./changelog.md) - Storico modifiche
+- [Changelog](../../../../UI/docs/changelog.md) - Storico modifiche
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [Versioning Strategy](./versioning.md) - Strategia versioning
@@ -3355,7 +3355,7 @@ related:
 - [Code of Conduct](./CODE_OF_CONDUCT.md) - Codice condotta
 =======
 <<<<<<< HEAD
-- [How to Contribute](./contributing.md) - Come contribuire
+- [How to Contribute](../../contributing-2.md) - Come contribuire
 - [Code of Conduct](./code_of_conduct.md) - Codice condotta
 =======
 - [How to Contribute](./CONTRIBUTING.md) - Come contribuire
@@ -3363,7 +3363,7 @@ related:
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
-- [How to Contribute](./contributing.md) - Come contribuire
+- [How to Contribute](../../contributing-2.md) - Come contribuire
 - [Code of Conduct](./code_of_conduct.md) - Codice condotta
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -3432,19 +3432,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

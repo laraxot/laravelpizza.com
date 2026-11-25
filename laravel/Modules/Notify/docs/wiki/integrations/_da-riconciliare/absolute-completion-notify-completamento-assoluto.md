@@ -52,7 +52,7 @@ Partiti da un progetto con documentazione al 65% e implementazione al 60%, abbia
 
 #### Documentazione Strategica (9)
 1. DOCUMENTATION_STATUS.md
-2. DOCUMENTATION_INDEX.md
+2. documentation-index.md
 3. QUICK_START.md
 4. PROJECT_COMPLETION_STATUS.md
 5. EXCELLENCE_2025.md
@@ -62,10 +62,10 @@ Partiti da un progetto con documentazione al 65% e implementazione al 60%, abbia
 9. IMPLEMENTATIONS_COMPLETED.md
 
 #### Guide Complete (5)
-10. App/docs/API.md
+10. App/docs/api-2.md
 11. App/docs/USER_GUIDE.md
 12. App/docs/ADMIN_GUIDE.md
-10. <nome progetto>/docs/API.md
+10. <nome progetto>/docs/api-2.md
 11. <nome progetto>/docs/USER_GUIDE.md
 12. <nome progetto>/docs/ADMIN_GUIDE.md
 13. User/docs/2FA_GUIDE.md
@@ -91,9 +91,9 @@ Partiti da un progetto con documentazione al 65% e implementazione al 60%, abbia
 27. manifest.json (già presente)
 
 #### Reports (5)
-28. SUPER_MUCCA_COMPLETION.md
-29. ULTIMATE_COMPLETION_REPORT.md
-30. ABSOLUTE_COMPLETION_100.md (questo)
+28. super-mucca-completion-2.md
+29. ultimate-completion-report-2.md
+30. absolute-completion-100.md (questo)
 31. Roadmap aggiornate (3)
 
 ---

@@ -126,8 +126,8 @@ Usage: `bash sync_remote_repo.sh [--org=laraxot] [--dry-run]`
    ```
 
 2. **Read Coordination Docs**
-   - `docs/multi_agent_coordination.md`
-   - `docs/agent_teams.md`
+   - `docs/multi-agent-coordination-2.md`
+   - `docs/agent-teams-2.md`
 
 3. **Check for Conflicts**
    ```bash
@@ -198,7 +198,7 @@ Usage: `bash sync_remote_repo.sh [--org=laraxot] [--dry-run]`
 |-----|------|--------|
 | `SYNC_REMOTE_REPO_SCRIPT.md` | Subtree Sync | ✅ Done |
 | `script-location-rule.md` | Documentation | ✅ Done |
-| `file_location_rules.md` | Documentation | ✅ Done |
+| `file-location-rules-2.md` | Documentation | ✅ Done |
 
 ---
 
@@ -354,7 +354,7 @@ Usage: `bash sync_remote_repo.sh [--org=laraxot] [--dry-run]`
 
 | Document | Path |
 |----------|------|
-| **Multi-Agent Coordination** | `docs/multi_agent_coordination.md` |
+| **Multi-Agent Coordination** | `docs/multi-agent-coordination-2.md` |
 | **Script Location Rule** | `bashscripts/docs/script-location-rule.md` |
 | **Commit & Push Rule** | `bashscripts/docs/COMMIT_AND_PUSH_RULE.md` |
 | **AI Agent Junction** | `bashscripts/docs/AI_AGENT_JUNCTION_RULE.md` |

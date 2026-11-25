@@ -61,7 +61,7 @@ qmd: "Notify adr architecture decision records madr formato"
 <<<<<<< HEAD
 Il **perche'** delle scelte di Notify: una decisione per file, con le alternative scartate. Il nome del file e' l'argomento in
 kebab-case, senza date ne' numeri (la data sta nella frontmatter). Formato e regole: `Modules/Xot/docs/rules/action-behavioral-contract.md`
-e [ADR di Xot](../../../Xot/docs/adr/README.md). Elenco con stato: [INDEX.md](INDEX.md).
+e [ADR di Xot](../../../Xot/docs/adr/README.md). Elenco con stato: [index.md](index.md).
 =======
 <<<<<<< HEAD
 Il **perche'** delle scelte di Notify: una decisione per file, con le alternative scartate. Il nome del file e' l'argomento, senza
@@ -186,7 +186,7 @@ Pro, contro, debito che resta, cosa misurare. Chi cambia la decisione scrive un 
 ## Decisioni precedenti (formato libero, non ancora ADR)
 
 - [notification-logs-migration-consolidation](../wiki/decisions/notification-logs-migration-consolidation.md)
-- [sms-actions-consolidation-](../wiki/decisions/sms-actions-consolidation-.md)
+- [sms-actions-consolidation-](../wiki/decisions/sms-actions-consolidation-2.md)
 - [sms-actions-consolidation](../wiki/decisions/sms-actions-consolidation.md)
 =======
 =======
@@ -219,7 +219,7 @@ Un ADR "sostanziale" aggiunge `## Driver della decisione` e `## Conferma` (come 
 
 - [Consolidamento migrazioni notification_logs](../wiki/decisions/notification-logs-migration-consolidation.md) — lo schema del modello `NotificationLog` vince sulle due migrazioni duplicate
 - [Consolidamento delle Action SMS](../wiki/decisions/sms-actions-consolidation.md) — nota deprecata.
-- [Consolidamento delle Action SMS (copia con trattino finale)](../wiki/decisions/sms-actions-consolidation-.md) — nota deprecata.
+- [Consolidamento delle Action SMS (copia con trattino finale)](../wiki/decisions/sms-actions-consolidation-2.md) — nota deprecata.
 =======
 =======
 >>>>>>> .merge_file_aWzh4C
@@ -231,7 +231,7 @@ Un ADR "sostanziale" aggiunge `## Driver della decisione` e `## Conferma` (come 
 
 - [Consolidamento migrazioni notification_logs](../wiki/decisions/notification-logs-migration-consolidation.md) — lo schema del modello `NotificationLog` vince sulle due migrazioni duplicate.
 - [Consolidamento delle Action SMS](../wiki/decisions/sms-actions-consolidation.md) — nota deprecata.
-- [Consolidamento delle Action SMS (copia con trattino finale)](../wiki/decisions/sms-actions-consolidation-.md) — nota deprecata.
+- [Consolidamento delle Action SMS (copia con trattino finale)](../wiki/decisions/sms-actions-consolidation-2.md) — nota deprecata.
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
@@ -266,7 +266,7 @@ Chi cambia una decisione scrive un nuovo ADR e segna il precedente `superseded b
 - [notify-config-is-centralized](notify-config-is-centralized.md)
 - [notify-owns-delivery-contract](notify-owns-delivery-contract.md) (stato `proposed`)
 
-Elenco con stato: [INDEX.md](INDEX.md).
+Elenco con stato: [index.md](index.md).
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======

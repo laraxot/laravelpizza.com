@@ -76,20 +76,20 @@ related:
 
 **Example 1: User Module - 5 duplicates**
 ```
-KEEP: /var/www/_bases/base_ptv_fila5/laravel/Modules/User/docs/volt-errors.md
-DELETE: /var/www/_bases/base_ptv_fila5/laravel/Modules/User/docs/volt_errors.md
+KEEP: /../../User/docs/volt-errors-2.md
+DELETE: /var/www/_bases/base_ptv_fila5/laravel/Modules/User/docs/volt-errors-2.md
 DELETE: /var/www/_bases/base_ptv_fila5/laravel/Modules/User/docs/volts.md
-DELETE: /var/www/_bases/base_ptv_fila5/laravel/Modules/User/docs/archive/historical/volt-errors.md
-DELETE: /var/www/_bases/base_ptv_fila5/laravel/Modules/User/docs/archive/volt_errors.md
+DELETE: /../../User/docs/volt-errors-2.md
+DELETE: /var/www/_bases/base_ptv_fila5/laravel/Modules/User/docs/archive/volt-errors-2.md
 ```
 **Hash:** `00a518f226eb2ad83aeb1528ac1202db`
 
 **Example 2: Xot Module - 4 duplicates**
 ```
-KEEP: /var/www/_bases/base_fixcity_fila5/laravel/Modules/Xot/docs/archive/historical/general-rules.md
+KEEP: /../../Geo/docs/conventions/general-rules-2.md
 DELETE: /var/www/_bases/base_fixcity_fila5/laravel/Modules/Xot/docs/archive/historical/general-rules-1.md
 DELETE: /var/www/_bases/base_fixcity_fila5/laravel/Modules/Xot/docs/archive/general-rules-1.md
-KEEP: /var/www/_bases/base_ptv_fila5/laravel/Modules/Xot/docs/archive/historical/general-rules.md
+KEEP: /../../Geo/docs/conventions/general-rules-2.md
 DELETE: /var/www/_bases/base_ptv_fila5/laravel/Modules/Xot/docs/archive/historical/general-rules-1.md
 DELETE: /var/www/_bases/base_ptv_fila5/laravel/Modules/Xot/docs/archive/general-rules-1.md
 ```
@@ -98,11 +98,11 @@ DELETE: /var/www/_bases/base_ptv_fila5/laravel/Modules/Xot/docs/archive/general-
 **Example 3: CMS Module - 8 duplicates**
 ```
 KEEP: /var/www/_bases/base_ptv_fila5/laravel/Modules/Cms/docs/migrations/theme-content-to-page-component.md
-DELETE: /var/www/_bases/base_ptv_fila5/laravel/Modules/Cms/docs/migrations/02-theme-content-to-page-component.md
-DELETE: /var/www/_bases/base_ptv_fila5/laravel/Modules/Cms/docs/migrations/02_theme_content_to_page_component.md
+DELETE: /../../Cms/docs/migrations/02-theme-content-to-page-component-2.md
+DELETE: /var/www/_bases/base_ptv_fila5/laravel/Modules/Cms/docs/migrations/02-theme-content-to-page-component-2.md
 DELETE: /var/www/_bases/base_ptv_fila5/laravel/Modules/Cms/docs/migrations/archive/theme-content-to-page-component.md
 DELETE: /var/www/_bases/base_ptv_fila5/laravel/Modules/Cms/docs/migrations/archive/02-theme-content-to-page-component.md
-DELETE: /var/www/_bases/base_ptv_fila5/laravel/Modules/Cms/docs/migrations/archive/02_theme_content_to_page_component.md
+DELETE: /var/www/_bases/base_ptv_fila5/laravel/Modules/Cms/docs/migrations/archive/02-theme-content-to-page-component-2.md
 ```
 **Hash:** `010ec58cafd3ef4bf79c91566188ca13`
 
@@ -206,13 +206,13 @@ docs/roadmap/
 
 | File | Lines | Recommendation |
 |------|-------|----------------|
-| `User/docs/coverage-full.md` | 11,055 | Split by test category |
+| `../../Geo/docs/coverage-full-2.md` | 11,055 | Split by test category |
 | `Xot/docs/consolidated/laraxot.md` | 8,831 | Split by topic |
 | `Xot/docs/archive/laraxot.md` | 8,831 | **DELETE** (duplicate) |
 | `Xot/docs/archive/historical/laraxot.md` | 8,831 | **DELETE** (duplicate) |
-| `Activity/docs/coverage-full.md` | 2,930 | Split by component |
+| `../../Geo/docs/coverage-full-2.md` | 2,930 | Split by component |
 | `UI/docs/metodi-duplicati-analisi.md` | 2,148 | Split by pattern type |
-| `Geo/docs/coverage-full.md` | 2,048 | Split by entity |
+| `../../Geo/docs/coverage-full-2.md` | 2,048 | Split by entity |
 
 ### 3.2 Overly Complex Directory Structures
 
@@ -295,7 +295,7 @@ docs/master/
 ├── conflict-resolution-master.md (SSOT for conflicts)
 ├── volt-integration-guide.md (SSOT for Volt patterns)
 ├── translation-system-guide.md (SSOT for i18n)
-├── filament-best-practices.md (SSOT for Filament)
+├── filament-best-practices-2.md (SSOT for Filament)
 └── testing-master-guide.md (SSOT for testing)
 ```
 
@@ -311,11 +311,11 @@ docs/master/
 ### 5.1 Inconsistent Naming Conventions
 
 **Observed patterns:**
-- `snake_case.md` (e.g., `phpstan-fixes-2.md`)
+- `snake_case.md` (e.g., `phpstan-fixes-2-2.md`)
 - `kebab-case.md` (e.g., `phpstan-fixes.md`)
 - `PascalCase.md` (e.g., `PHPStanFixes.md`)
 - `UPPERCASE.md` (e.g., `README.md`)
-- Mixed with suffixes: `phpstan-fixes-.md`, `phpstan-fixes-1.md`
+- Mixed with suffixes: `phpstan-fixes-.md`, `phpstan-fixes-1-2.md`
 
 **Recommended Standard:**
 - Lowercase kebab-case: `topic-subtopic.md`
@@ -326,7 +326,7 @@ docs/master/
 
 **Examples:**
 - `phpstan-analysis-.md.md`
-- `documentation-improvement-summary-.md.md`
+- `documentation-improvement-summary-4.md`
 - `bugfix-report-2025-01-14.md`
 
 **Problem:** Dates in filenames become stale immediately.
@@ -418,7 +418,7 @@ DELETE: laravel/Modules/Cms/docs/**/*-.md (trailing hyphen files)
 **User Module (1,000+ files):**
 ```
 DELETE: laravel/Modules/User/docs/archive/**/*.md
-DELETE: Duplicate naming variants (volt_errors.md → volt-errors.md)
+DELETE: Duplicate naming variants (volt-errors-2.md → volt-errors-2.md)
 ```
 
 ### 7.2 Files to MERGE
@@ -528,8 +528,8 @@ reason: Consolidated into master guide
 | Hash | Count | Example Files |
 |------|-------|---------------|
 | `010ec58cafd3ef4bf79c91566188ca13` | 8 | `theme-content-to-page-component.md` (variants) |
-| `00a518f226eb2ad83aeb1528ac1202db` | 5 | `volt-errors.md` (variants) |
-| `00730f253d3c86417e551745a1b50ad0` | 3 | `general-rules.md` (variants) |
+| `00a518f226eb2ad83aeb1528ac1202db` | 5 | `volt-errors-2.md` (variants) |
+| `00730f253d3c86417e551745a1b50ad0` | 3 | `general-rules-2.md` (variants) |
 | `002d300923a731b62e21f412d6e77d9c` | 2 | `psr4-compliance.md` (variants) |
 | `003d91aedb4a9416c2696dfdfd5a0180` | 2 | `user-module-quality.md` (variants) |
 

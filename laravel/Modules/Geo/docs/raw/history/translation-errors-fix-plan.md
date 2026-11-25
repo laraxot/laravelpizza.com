@@ -207,7 +207,7 @@ discussions: []
 ### Per Ogni File
 
 1. **STUDIARE** contesto d'uso (Filament Resource? Page? Widget?)
-2. **LEGGERE** documentazione translation-standards.md
+2. **LEGGERE** documentazione translation-standards-3.md
 3. **CORREGGERE** struttura completa
 4. **VERIFICARE** tutte le lingue (it/en/de)
 5. **TESTARE** in UI Filament

@@ -98,7 +98,7 @@ cd laravel && ./vendor/bin/phpstan analyse Modules
 =======
 >>>>>>> .merge_file_i4QNAU
 
-## Versione unita da `handoff-phpstan-modules-zero-2026-07-07.md` (2026-07-07)
+## Versione unita da `handoff-phpstan-modules-zero-2.md` (2026-07-07)
 
 # Handoff — PHPStan Modules zero errori
 

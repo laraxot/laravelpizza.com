@@ -296,7 +296,7 @@ $gdprTests = [
 
 ### Primary Documentation
 - [SaluteOra Factory Implementation](../laravel/Modules/SaluteOra/docs/factories/UserFactory-implementation-final.md)
-- [User Module Integration](user_factory_advanced_integration.md)
+- [User Module Integration](user-factory-advanced-integration-4.md)
 - [Advanced Analysis](../laravel/Modules/SaluteOra/docs/factories/UserFactory-advanced-improvements-analysis.md)
 
 ### Technical References

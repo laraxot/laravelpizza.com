@@ -196,15 +196,15 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 ## Collegamenti
 
 ### Documentazione Correlata
-- [Geo JSON Model](./geo_json_model.md)
-- [Comune Unificazione](./comune_unificazione_analisi.md)
-- [Consolidamento Modelli](./consolidamento_modelli_geografici.md)
+- [Geo JSON Model](../geo-json-model-2.md)
+- [Comune Unificazione](../comune-unificazione-analisi-2.md)
+- [Consolidamento Modelli](../consolidamento-modelli-geografici-2.md)
 - [Cache Strategy](./cache_strategy.md)
 
 ### Moduli Collegati
 - [<main module> Module](../../<main module>/docs/modelli_factory_seeder_analisi.md)
-- [User Module](../../../User/docs/modelli_factory_seeder_analisi.md)
-- [Cms Module](../../../Cms/docs/modelli_factory_seeder_analisi.md)
+- [User Module](../../../User/docs/modelli-factory-seeder-analisi-3.md)
+- [Cms Module](../../../Cms/docs/modelli-factory-seeder-analisi-2.md)
 
 ### Risorse Esterne
 - [ISTAT Comuni](https://www.istat.it/it/archivio/6789)

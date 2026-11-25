@@ -313,7 +313,7 @@ Ridondanza **runtime** (non solo documentazione): più file `Schema::create` per
 | `profiles` | User, Blog | 4+2 migration | Owner **User**; Blog solo FK/relazione |
 | `mail_templates` | Notify | 7 migration `000000`–`000007` | Tenere una |
 | `consents` | Gdpr | `000001`, `000002`, `000005` | Consolidare |
-| `activity` | Activity | 5 file | Vedi anche `Activity/docs/errori_migrazione_activity_table_lezioni.md` |
+| `activity` | Activity | 5 file | Vedi anche `Activity/docs/errori-migrazione-activity-table-lezioni-2.md` |
 | `cache` | Xot | `2023_09_04_000000` e `125039` | Eliminare duplicato |
 | `notification_logs` | Notify | `2025_03_31` e `2025_07_01` | Una definizione |
 | `ratings` | Rating | `2023` e `2026_03_12` | Evoluzione in alter, non secondo create |

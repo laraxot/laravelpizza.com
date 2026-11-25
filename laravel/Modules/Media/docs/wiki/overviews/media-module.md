@@ -8,8 +8,8 @@ discussions: []
 type: overview
 module: Media
 sources:
-  - ../../../philosophy.md
-  - ../../../file-management-architecture.md
+  - ../../../../Lang/docs/philosophy-3.md
+  - ../../file-management-architecture-2.md
   - ../../../business-logic-overview.md
   - ../../../configuration.md
 confidence: high
@@ -154,8 +154,8 @@ class Ticket extends XotBaseModel implements HasMedia {
 
 ## Raw Sources Prioritari
 
-- `philosophy.md` — design principles, zen, domain-driven approach
-- `file-management-architecture.md` — multi-layer stack, TemporaryUpload, S3
+- `philosophy-3.md` — design principles, zen, domain-driven approach
+- `file-management-architecture-2.md` — multi-layer stack, TemporaryUpload, S3
 - `business-logic-overview.md` — logica upload, processing, access control
 - `configuration.md` — disk, S3, conversioni
 - `ffmpeg.md` — video encoding, pattern FFmpeg

@@ -59,7 +59,7 @@ related:
 ## Documentazione Aggiornata
 
 ### Documenti Creati/Aggiornati:
-1. **errori_comuni_traduzione.md** - Aggiornato con nuovi pattern di errore
+1. **errori-comuni-traduzione-3.md** - Aggiornato con nuovi pattern di errore
 2. **correzioni_errori_sintassi_2025.md** - Riepilogo dettagliato delle correzioni
 3. **traduzioni_navigation_2025.md** - Audit delle traduzioni con pattern ".navigation"
 4. **traduzioni_mancanti_appointment_2025.md** - Analisi e soluzione traduzioni appointment
@@ -135,7 +135,7 @@ php artisan tinker
 ## Collegamenti Correlati
 
 ### Documentazione Modulo Lang:
-- [Errori Comuni Traduzione](errori_comuni_traduzione.md)
+- [Errori Comuni Traduzione](errori-comuni-traduzione-3.md)
 - [Correzioni Errori Sintassi 2025](correzioni_errori_sintassi_2025.md)
 - [Traduzioni Navigation 2025](traduzioni_navigation_2025.md)
 

@@ -24,7 +24,7 @@ Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).
 
 ---
 
-## Contenuto assorbito da `zen.DIVERGENZA.md`
+## Contenuto assorbito da `zen-2.divergenza.md`
 
 # Divergenza: `zen-of-ptv.md`
 

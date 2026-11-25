@@ -93,15 +93,15 @@ Partiti da un progetto con documentazione al 65% e implementazione al 60%, abbia
 4. project-completion-status.md
 5. excellence-year-note-snake.md
 6. final-summary.md
-7. WORK-COMPLETED-.md.md
+7. work-completed-4.md
 8. gap-analysis-implementation.md
 9. implementations-completed.md
 
 #### Guide Complete (5)
-10. App/docs/API.md
+10. App/docs/api-2.md
 11. App/docs/USER_GUIDE.md
 12. App/docs/ADMIN_GUIDE.md
-10. <nome progetto>/docs/API.md
+10. <nome progetto>/docs/api-2.md
 11. <nome progetto>/docs/USER_GUIDE.md
 12. <nome progetto>/docs/ADMIN_GUIDE.md
 13. User/docs/2FA_GUIDE.md
@@ -127,8 +127,8 @@ Partiti da un progetto con documentazione al 65% e implementazione al 60%, abbia
 27. manifest.json (già presente)
 
 #### Reports (5)
-28. super-mucca-completion.md
-29. ultimate-completion-report.md
+28. super-mucca-completion-2.md
+29. ultimate-completion-report-2.md
 30. absolute-completion-notify-completamento-assoluto.md (questo)
 31. Roadmap aggiornate (3)
 

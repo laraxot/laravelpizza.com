@@ -147,8 +147,8 @@ Components/ → components/
 ## Collegamenti
 
 - [Regole di Traduzione](../translation-rules.md)
-- [Standard di Documentazione](../documentation-standards.md)
-- [Best Practice Filament](../filament-best-practices.md)
+- [Standard di Documentazione](../../User/docs/documentation-standards-2.md)
+- [Best Practice Filament](../../Xot/docs/consolidated/filament-best-practices-2.md)
 
 ---
 

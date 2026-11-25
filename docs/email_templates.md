@@ -311,7 +311,7 @@ php artisan tinker
 
 ### **Documentazione Tecnica**
 - [Documentazione Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
-- [Gestione Traduzioni](../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+- [Gestione Traduzioni](../laravel/Modules/Lang/docs/translation-keys-best-practices-3.md)
 - [Configurazione Email](../../../../docs/email-configuration.md)
 - [SaluteOra: Missing Mail Template Error](../../SaluteOra/project_docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
 - [Configurazione Email](../../../../docs/email-configuration.md)- [SaluteOra: Missing Mail Template Error](../../SaluteOra/project_docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
@@ -320,14 +320,14 @@ php artisan tinker
 
 ### **Documentazione Tecnica**
 - [Documentazione Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
-- [Gestione Traduzioni](../Lang/project_docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+- [Gestione Traduzioni](../laravel/Modules/Lang/docs/translation-keys-best-practices-3.md)
 - [Configurazione Email](../../../project_docs/email-configuration.md)
 - [Documentazione Traduzioni](./translations.md)
-- [Proposta Slug Template](./EMAIL_TEMPLATE_SLUG_PROPOSAL.md)
+- [Proposta Slug Template](../laravel/Modules/Notify/docs/email-template-slug-proposal-2.md)
 - [Notify Module Index](./INDEX.md)
-- [Architecture Overview](./ARCHITECTURE.md)
-- [Notification Channels Implementation](./NOTIFICATION_CHANNELS_IMPLEMENTATION.md)
-- [SMS Implementation](./SMS_IMPLEMENTATION.md)
+- [Architecture Overview](../laravel/Modules/Lang/docs/architecture-3.md)
+- [Notification Channels Implementation](../laravel/Modules/Notify/docs/notification-channels-implementation-2.md)
+- [SMS Implementation](../laravel/Modules/Notify/docs/sms-implementation-2.md)
 - [Troubleshooting](./TROUBLESHOOTING.md)
 
 ---

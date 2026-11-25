@@ -9,7 +9,7 @@ issues: []
 discussions: []
 module: theme
 topic: advanced-features-backup
-canonical: ../../../Themes/docs/shared-components/advanced_features.md
+canonical: ../../../Themes/docs/shared-components/advanced-features-3.md
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/advanced_features.md
+See canonical documentation: ../../../Themes/docs/shared-components/advanced-features-3.md

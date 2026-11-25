@@ -156,7 +156,7 @@ php artisan list | grep boost
 - `/docs/boost-skill-solution-plan.md` - Solution plan
 
 ### Module Documentation
-Created BOOST_SKILL_FIX_summary.md in:
+Created boost-skill-fix-summary-3.md in:
 - `Modules/Xot/docs/`
 - `Modules/User/docs/`
 - `Modules/AI/docs/`

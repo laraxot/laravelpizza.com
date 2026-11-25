@@ -1,9 +1,7 @@
 ---
-title: "ADR — La visibilità dei media segue il record owner"
-type: decision
 status: accepted
 module: Media
-updated: 2026-11-24
+qmd: "media visibility follows owner visibilità segue"
 ---
 
 # La visibilità dei media segue il record owner
@@ -32,11 +30,3 @@ Gli allegati rispettano il contesto applicativo; ogni integrazione deve verifica
 ## Conferma
 
 Verificare policy del record owner e test di upload e visibilità.
-
-## Verifica
-
-- `Modules/Media/app/Actions/SaveAttachmentsAction.php`: salva gli allegati sul record ospitante (`HasMedia`), non su un
-  dominio Media autonomo.
-- `Modules/Media/tests/Unit/MediaPolicyBehaviorTest.php`: le policy `Media` e `TemporaryUpload` decidono per permessi
-  espliciti, con bypass solo per `super-admin`.
-- Non esiste un test che provi la visibilità ereditata dal record owner (ownership, MIME, dimensione): da scrivere.

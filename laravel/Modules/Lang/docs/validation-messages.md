@@ -163,7 +163,7 @@ class StoreOrderRequest extends FormRequest
 ## 9. Collegamenti correlati
 
 - [translations-faq.md](./translations-faq.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](translation-keys-best-practices.md)
+- [translation-keys-best-practices-2.md](translation-keys-best-practices.md)
 - [translations-storage.md](./translations-storage.md)
 - [translation-process.md](./translation-process.md)
 - [README.md](./README.md)
@@ -319,7 +319,7 @@ class StoreOrderRequest extends FormRequest
 ## 9. Collegamenti correlati
 
 - [translations-faq.md](./translations-faq.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](translation-keys-best-practices.md)
+- [translation-keys-best-practices-2.md](translation-keys-best-practices.md)
 - [translations-storage.md](./translations-storage.md)
 - [translation-process.md](./translation-process.md)
 - [README.md](./README.md)

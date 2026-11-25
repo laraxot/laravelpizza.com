@@ -118,7 +118,7 @@ return new class extends XotBaseMigration
 - **Memoria storica**: rollback della regola il 2025-05-15, documentato in Performance/project_docs/organizzativa-models.md e qui. Precedente regola (2025-05-14) annullata per esigenze di override e compatibilità.
 - Ogni violazione va documentata e corretta anche nella root docs.
 - Vedi dettaglio e memoria storica in [Modules/Performance/project_docs/organizzativa-models.md](../../Performance/project_docs/organizzativa-models.md#organizzativatotvalutatoreid-regola-di-estensione)
-- [docs/links.md root](../../../project_docs/links.md)
+- [docs/links.md root](../../laravel/Modules/Gdpr/docs/links-2.md)
 
 > ⚠️ **Warning**: Estendere Xot\BaseModel può causare override indesiderati, perdita di flessibilità e problemi di compatibilità con logiche locali. Seguire sempre la regola sopra per tutti i modelli di totali/aggregati in Performance.
 

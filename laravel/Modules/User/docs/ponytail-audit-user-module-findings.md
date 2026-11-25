@@ -143,12 +143,12 @@ real `UserContract.php` is untouched.
   prior session that first identified this file and intended (but never committed)
   an archive-as-`.bak` rename.
 <<<<<<< HEAD
-- `Modules/Xot/docs/ponytail-audit-2026-07-02.md`, `Modules/Notify/docs/ponytail-audit-2026-07-02.md`:
+- `Modules/Xot/docs/ponytail-audit-2.md`, `Modules/Notify/docs/ponytail-audit-2.md`:
 =======
 <<<<<<< .merge_file_3oJRH7
 - `Modules/Xot/docs/ponytail-audit-user-module-findings.md`, `Modules/Notify/docs/ponytail-audit-user-module-findings.md`:
 =======
-- `Modules/Xot/docs/ponytail-audit-2026-07-02.md`, `Modules/Notify/docs/ponytail-audit-2026-07-02.md`:
+- `Modules/Xot/docs/ponytail-audit-2.md`, `Modules/Notify/docs/ponytail-audit-2.md`:
 >>>>>>> .merge_file_B3Fqns
 >>>>>>> laraxot/dev
   sibling module findings from the same repo-wide audit pass.

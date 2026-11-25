@@ -79,11 +79,11 @@ Potrebbero esserci altri modelli nel modulo Notify che utilizzano ancora la sint
 1. [Documentazione Laravel Translatable](../lang/docs/translatable/index.md)
 2. [Gestione Traduzioni Mancanti](../lang/docs/translatable/gestione-traduzioni-mancanti.md)
 3. [Implementazione nel Progetto](../lang/docs/translatable/implementazione-nel-progetto.md)
-4. [Best Practices](../lang/docs/translatable/best-practices.md)
+4. [Best Practices](../../../Activity/docs/best-practices-3.md)
 1. [Documentazione Laravel Translatable](modules/lang/docs/translatable/index.md)
 2. [Gestione Traduzioni Mancanti](modules/lang/docs/translatable/gestione-traduzioni-mancanti.md)
 3. [Implementazione nel Progetto](modules/lang/docs/translatable/implementazione-nel-progetto.md)
-4. [Best Practices](modules/lang/docs/translatable/best-practices.md)
+4. [Best Practices](../../../Activity/docs/best-practices-3.md)
 
 ## Timeline
 

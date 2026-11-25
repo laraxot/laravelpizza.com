@@ -76,7 +76,7 @@ bashscripts/documentation/
 ├── validators/                         # Validatori qualità
 │   └── validate-docs.php              # Validatore completo documentazione
 ├── templates/                          # Template riutilizzabili (DRY)
-│   ├── base_readme_template.md        # Template README base
+│   ├── base-readme-template-3.md        # Template README base
 │   ├── getting_started_template.md    # Template getting started
 │   ├── configuration_template.md      # Template configurazione
 │   └── api_reference_template.md      # Template API reference
@@ -487,7 +487,7 @@ Creazione template personalizzati per esigenze specifiche:
 
 ```bash
 # Crea nuovo template
-cp templates/base_readme_template.md templates/custom_auth_template.md
+cp templates/base-readme-template-3.md templates/custom_auth_template.md
 
 # Configura utilizzo
 # config/structure.php:
@@ -578,7 +578,7 @@ class CustomModuleGenerator extends BaseDocumentationGenerator
 ### **Framework Resources**
 - [**LARAXOT Framework**](../../../../docs) - Documentazione framework principale
 - [**Module Standards**](../../laravel/docs/module-standards.md) - Standard sviluppo moduli
-- [**Best Practices**](../../laravel/docs/best-practices.md) - Best practices architetturali
+- [**Best Practices**](../../../Activity/docs/best-practices-3.md) - Best practices architetturali
 
 ### **External Resources**
 - [**Markdown Guide**](https://www.markdownguide.org/) - Sintassi Markdown

@@ -103,9 +103,9 @@ describe('ActivityLogger Adapter validation', function (): void {
 describe('ActivityRecorder Adapter', function (): void {
     test('record delega a RecordSubjectActivityAction', function (): void {
         $mock = Mockery::mock(RecordSubjectActivityAction::class);
-        mockeryExpect($mock->shouldReceive('execute'))
+        TestCase::mockeryExpect($mock->shouldReceive('execute'))
             ->once()
-            ->with(User::class, 42, 'updated', ['name' => 'x'], null);
+            ->with(User::class, 42, 'updated', ['name' => 'x']);
         app()->instance(RecordSubjectActivityAction::class, $mock);
 
         (new ActivityRecorder)->record(User::class, 42, 'updated', ['name' => 'x']);
@@ -114,7 +114,7 @@ describe('ActivityRecorder Adapter', function (): void {
 
     test('getLog delega a GetSubjectActivityLogAction', function (): void {
         $mock = Mockery::mock(GetSubjectActivityLogAction::class);
-        mockeryExpect($mock->shouldReceive('execute'))
+        TestCase::mockeryExpect($mock->shouldReceive('execute'))
             ->once()
             ->with(User::class, 7)
             ->andReturn([['id' => 1]]);

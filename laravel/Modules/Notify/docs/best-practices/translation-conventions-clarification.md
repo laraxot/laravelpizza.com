@@ -37,7 +37,7 @@ related:
 
  sono state identificate convenzioni contrastanti per le traduzioni:
 
-### Convenzioni Generali (Modules/Lang/docs/TRANSLATION_KEYS_RULES.md)
+### Convenzioni Generali (Modules/Lang/docs/translation-keys-rules-2.md)
 
 ```php
 // Struttura gerarchica espansa
@@ -53,7 +53,7 @@ related:
 // Esempio: user::auth.login.button.label
 ```
 
-### Convenzioni Specifiche del Modulo Notify (Modules/Notify/docs/TRANSLATION_CONVENTIONS.md)
+### Convenzioni Specifiche del Modulo Notify (Modules/Notify/docs/translation-conventions-2.md)
 
 ```php
 // Struttura con chiave 'navigation'
@@ -120,7 +120,7 @@ Il file `send_whats_app.php` e altri file simili nel modulo Notify seguono corre
 
 ## Riferimenti
 
-- [Convenzioni Generali di Traduzione](../../lang/docs/translation_keys_rules.md)
-- [Convenzioni Specifiche del Modulo Notify](./translation_conventions.md)
-- [Regole per le Chiavi di Traduzione](../../lang/docs/translation_keys_best_practices.md)
-- [Regole per le Chiavi di Traduzione](../../lang/docs/translation-keys-best-practices.md)
+- [Convenzioni Generali di Traduzione](../../lang/docs/translation-keys-rules-2.md)
+- [Convenzioni Specifiche del Modulo Notify](../translation-conventions-2.md)
+- [Regole per le Chiavi di Traduzione](../../lang/docs/translation-keys-best-practices-2.md)
+- [Regole per le Chiavi di Traduzione](../../../Lang/docs/translation-keys-best-practices-3.md)

@@ -300,7 +300,7 @@ return [
 
 ## 🔗 Collegamenti
 
-- [Best Practices Sistema](../../../../docs/core/best-practices.md)
+- [Best Practices Sistema](../../../Activity/docs/best-practices-3.md)
 - [Convenzioni Sistema](../../../../docs/core/conventions.md)
 - [Template Modulo](../../../../docs/templates/module-template.md)
 - [PHPStan Guide](../development/phpstan-guide.md)

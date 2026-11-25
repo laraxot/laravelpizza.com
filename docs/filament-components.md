@@ -91,9 +91,9 @@ DatePicker::make('field_name')
 2. Usa l'autocompletamento dell'IDE per verificare i metodi disponibili
 3. Mantieni consistenza nei nomi dei metodi in tutto il progetto
 4. Aggiorna questa documentazione quando trovi nuovi metodi o pattern utili
-## Collegamenti tra versioni di FILAMENT_COMPONENTS.md
-* [FILAMENT_COMPONENTS.md](../../../xot/docs/filament_components.md)
-* [FILAMENT_COMPONENTS.md](../../../../themes/one/docs/filament_components.md)
+## Collegamenti tra versioni di filament-components-2.md
+* [filament-components-2.md](../../../xot/docs/filament-components-2.md)
+* [filament-components-2.md](../../../../themes/one/docs/filament-components-2.md)
 
 ## Correzione e regole per XotBaseManageRelatedRecords
 

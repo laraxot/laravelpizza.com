@@ -14,7 +14,7 @@
 ## Esempi e Fix
 - [Fix Traduzioni Performance](laravel/Modules/Performance/docs/organizzativa-migration-errors.md)
 - [Fix Traduzioni Xot Base](laravel/Modules/Xot/docs/xot_base_translation_fix.md)
-- [Fix Traduzioni Notify Send Email](laravel/Modules/Notify/docs/send_email_translation_fix.md)
+- [Fix Traduzioni Notify Send Email](laravel/Modules/Notify/docs/send-email-translation-fix-2.md)
 - [Fix Traduzioni UI Opening Hours](laravel/Modules/UI/docs/opening_hours_translation_fix.md)
 
 ## Traduzioni Temi
@@ -38,7 +38,7 @@
 
 ## Collegamenti Correlati
 - [Convenzioni Laraxot](laraxot_conventions.md)
-- [Best Practices Filament](filament_best_practices.md)
+- [Best Practices Filament](filament-best-practices-2.md)
 - [PHPStan Fixes](phpstan_fixes.md)
 
 *
@@ -50,17 +50,17 @@ Stiamo standardizzando i file di traduzione nel modulo Notify che presentano pro
 
 ## Documentazione nel Modulo Notify
 
-- [Progresso della Standardizzazione](../../Notify/docs/TRANSLATION_STANDARDS_PROGRESS.md)
-- [Regole di Naming per i File di Traduzione](../../Notify/docs/TRANSLATION_FILE_NAMING_RULES.md)
-- [Guida alla Struttura dei File di Traduzione](../../Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md)
-- [Convenzioni di Traduzione nel Modulo Notify](../../Notify/docs/TRANSLATION_CONVENTIONS.md)
-- [Guida alla Correzione dei File di Traduzione](../../Notify/docs/TRANSLATION_FILE_CORRECTION_GUIDE.md)
+- [Progresso della Standardizzazione](../laravel/Modules/Notify/docs/translation-standards-progress-2.md)
+- [Regole di Naming per i File di Traduzione](../laravel/Modules/Notify/docs/translation-file-naming-rules-2.md)
+- [Guida alla Struttura dei File di Traduzione](../laravel/Modules/Notify/docs/translation-file-structure-guide-2.md)
+- [Convenzioni di Traduzione nel Modulo Notify](../laravel/Modules/Notify/docs/translation-conventions-2.md)
+- [Guida alla Correzione dei File di Traduzione](../laravel/Modules/Notify/docs/translation-file-correction-guide-2.md)
 
 ## Documentazione nel Modulo Lang
 
-- [Regole Generali per le Traduzioni](TRANSLATION_KEYS_RULES.md)
-- [Best Practices per le Traduzioni](TRANSLATION_KEYS_BEST_PRACTICES.md)
-- [Standardizzazione Traduzioni Modulo Notify](TRANSLATION_NOTIFY_CONVERSION.md)
+- [Regole Generali per le Traduzioni](translation-keys-rules-2.md)
+- [Best Practices per le Traduzioni](translation-keys-best-practices-2.md)
+- [Standardizzazione Traduzioni Modulo Notify](translation-notify-conversion-2.md)
 
 ## Riepilogo dei Problemi
 

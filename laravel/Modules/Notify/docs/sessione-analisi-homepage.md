@@ -240,32 +240,32 @@ Themes/Sixteen/resources/views/
 <<<<<<< HEAD
 <<<<<<< .merge_file_ntuAVg
 - [Analisi Visiva](screenshots/homepage/analisi-visiva.md)
-- [Screenshot Analysis](docs/screenshots/homepage/screenshot_analysis.md)
+- [Screenshot Analysis](docs/screenshots/homepage/screenshot-analysis-3.md)
 - [Fix Plan](screenshots/homepage/fix-plan.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_ftyFFE
-- [Analisi Visiva](screenshots/homepage/ANALISI-VISIVA.md)
+- [Analisi Visiva](screenshots/homepage/analisi-visiva-2.md)
 - [Screenshot Analysis](docs/screenshots/homepage/SCREENSHOT_analysis.md)
 =======
 <<<<<<< HEAD
 - [Analisi Visiva](screenshots/homepage/analisi-visiva.md)
-- [Screenshot Analysis](docs/screenshots/homepage/screenshot_analysis.md)
+- [Screenshot Analysis](docs/screenshots/homepage/screenshot-analysis-3.md)
 <<<<<<< .merge_file_ntuAVg
 - [Fix Plan](screenshots/homepage/fix-plan.md)
 =======
-- [Analisi Visiva](screenshots/homepage/ANALISI-VISIVA.md)
+- [Analisi Visiva](screenshots/homepage/analisi-visiva-2.md)
 - [Screenshot Analysis](docs/screenshots/homepage/SCREENSHOT_analysis.md)
 <<<<<<< .merge_file_VTNllA
 - [Fix Plan](docs/screenshots/homepage/fix-plan.md)
 =======
 >>>>>>> laraxot/dev
-- [Fix Plan](screenshots/homepage/FIX-PLAN.md)
-- [Analisi Visiva](screenshots/homepage/ANALISI-VISIVA.md)
+- [Fix Plan](screenshots/homepage/fix-plan-2.md)
+- [Analisi Visiva](screenshots/homepage/analisi-visiva-2.md)
 - [Screenshot Analysis](docs/screenshots/homepage/SCREENSHOT_analysis.md)
-- [Fix Plan](screenshots/homepage/FIX-PLAN.md)
+- [Fix Plan](screenshots/homepage/fix-plan-2.md)
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_Zixt3N
@@ -273,21 +273,21 @@ Themes/Sixteen/resources/views/
 >>>>>>> laraxot/dev
 =======
 - [Analisi Visiva](screenshots/homepage/analisi-visiva.md)
-- [Screenshot Analysis](docs/screenshots/homepage/screenshot_analysis.md)
+- [Screenshot Analysis](docs/screenshots/homepage/screenshot-analysis-3.md)
 - [Fix Plan](screenshots/homepage/fix-plan.md)
 =======
 - [Fix Plan](screenshots/homepage/fix-plan.md)
 =======
-- [Analisi Visiva](screenshots/homepage/ANALISI-VISIVA.md)
+- [Analisi Visiva](screenshots/homepage/analisi-visiva-2.md)
 - [Screenshot Analysis](docs/screenshots/homepage/SCREENSHOT_analysis.md)
 <<<<<<< .merge_file_VTNllA
 - [Fix Plan](docs/screenshots/homepage/fix-plan.md)
 =======
 >>>>>>> laraxot/dev
-- [Fix Plan](screenshots/homepage/FIX-PLAN.md)
-- [Analisi Visiva](screenshots/homepage/ANALISI-VISIVA.md)
+- [Fix Plan](screenshots/homepage/fix-plan-2.md)
+- [Analisi Visiva](screenshots/homepage/analisi-visiva-2.md)
 - [Screenshot Analysis](docs/screenshots/homepage/SCREENSHOT_analysis.md)
-- [Fix Plan](screenshots/homepage/FIX-PLAN.md)
+- [Fix Plan](screenshots/homepage/fix-plan-2.md)
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_Zixt3N

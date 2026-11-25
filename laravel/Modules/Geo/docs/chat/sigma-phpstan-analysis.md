@@ -79,7 +79,7 @@ issues: []
 discussions: []
 **Nota:** PHPStan non riesce a procedere fino al completamento di questo errore interno.
 
-## Versione unita da `sigma-phpstan-analysis-2026-06-15.md` (2026-06-15)
+## Versione unita da `sigma-phpstan-analysis-2.md` (2026-06-15)
 
 # Analisi PHPStan Modulo Sigma — 2026-06-15
 

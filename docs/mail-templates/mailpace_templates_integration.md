@@ -95,5 +95,5 @@ $mailTemplate->send($user->email, [
 
 - [Documentazione Maizzle](https://maizzle.com/docs/)
 - [Repository MailPace Templates](https://github.com/mailpace/templates)
-- [Guida Spatie Email](../SPATIE_EMAIL_USAGE_GUIDE.md)
-- [Implementazione Slug Field](./SLUG_FIELD_IMPLEMENTATION.md)
+- [Guida Spatie Email](../../laravel/Modules/Notify/docs/spatie-email-usage-guide-2.md)
+- [Implementazione Slug Field](../../laravel/Modules/Notify/docs/mail-templates/slug-field-implementation-2.md)

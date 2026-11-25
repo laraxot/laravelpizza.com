@@ -223,8 +223,8 @@ php artisan view:clear
 
 - [Documentazione Laravel Translations](https://laravel.com/project_docs/localization)
 - [Filament Form Components](https://filamentphp.com/project_docs/forms)
-- [Best Practices Filament](../project_docs/filament-best-practices.md)
-- [Schema Conventions](../project_docs/schema-conventions.md)
+- [Best Practices Filament](../../laravel/Modules/Xot/docs/consolidated/filament-best-practices-2.md)
+- [Schema Conventions](../../laravel/Modules/Notify/docs/schema-conventions-2.md)
 # Sistema di Traduzione
 
 ## Regola Fondamentale: NO ->label()
@@ -449,5 +449,5 @@ php artisan view:clear
 
 - [Documentazione Laravel Translations](https://laravel.com/project_docs/localization)
 - [Filament Form Components](https://filamentphp.com/project_docs/forms)
-- [Best Practices Filament](../project_docs/filament-best-practices.md)
-- [Schema Conventions](../project_docs/schema-conventions.md)
+- [Best Practices Filament](../../laravel/Modules/Xot/docs/consolidated/filament-best-practices-2.md)
+- [Schema Conventions](../../laravel/Modules/Notify/docs/schema-conventions-2.md)

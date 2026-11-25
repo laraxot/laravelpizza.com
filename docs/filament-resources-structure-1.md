@@ -51,7 +51,7 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 ```
 
 ## Documentazione Correlata
-- [Documentazione CMS Module](../laravel/modules/cms/docs/filament-resources.md)
+- [Documentazione CMS Module](../laravel/Modules/Cms/docs/filament-resources-2.md)
 - [Documentazione Xot Module](../laravel/modules/xot/docs/filament-resources.md)
 
 ## Best Practices

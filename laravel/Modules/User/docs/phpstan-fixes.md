@@ -666,7 +666,7 @@ public string $currentState = 'default';
 ## Collegamenti
 
 - [Filament Class Extension Rules](../../xot/docs/filament-class-extension-rules.md)
-- [PHPStan Usage](../../xot/docs/phpstan-usage.md)
+- [PHPStan Usage](../../Geo/docs/raw/history/phpstan-usage-2.md)
 - [XotBaseResource Documentation](../../xot/docs/filament/xot-base-resource.md)
 
 # PHPStan Fixes - Modulo User
@@ -1039,7 +1039,7 @@ Esistono decine di `phpstan*.md` storici in questa cartella (UPPERCASE, date nei
 
 ---
 
-<!-- Contenuto unito da phpstan-fixes-.md (rimozione date dai nomi file, issue #64) -->
+<!-- Contenuto unito da phpstan-fixes-3.md (rimozione date dai nomi file, issue #64) -->
 
 # User Module - PHPStan Fixes Session 2025-10-01
 
@@ -1519,7 +1519,7 @@ public function canAccessTenant(\Illuminate\Database\Eloquent\Model $tenant): bo
 
 ---
 
-<!-- Contenuto unito da phpstan-fixes-gennaio-2025.md (rimozione date dai nomi file, issue #64) -->
+<!-- Contenuto unito da phpstan-fixes-gennaio-4.md (rimozione date dai nomi file, issue #64) -->
 
 - [README.md Modulo User](./README.md)
 - [Authentication Guide](./authentication.md)
@@ -1544,7 +1544,7 @@ public function canAccessTenant(\Illuminate\Database\Eloquent\Model $tenant): bo
 ---
 module: theme
 topic: phpstan-fixes-gennaio-2025
-canonical: ../../../Themes/docs/shared-components/phpstan-fixes-gennaio-2025.md
+canonical: ../../../Themes/docs/shared-components/phpstan-fixes-gennaio-4.md
 related:
   - "./00-index-1.md"
   - "./00-index.md"
@@ -1556,7 +1556,7 @@ related:
   - "./actions-path-convention.md"
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/phpstan-fixes-gennaio-2025.md
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-fixes-gennaio-4.md
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_rTtu9D

@@ -400,8 +400,8 @@ Restituisce il testo di aiuto tradotto per il layout.
 
 - [TransTrait Documentation](../../xot/docs/filament/trans-trait.md)
 - [UI Module Architecture](architecture_rules.md)
-- [Filament Best Practices](../../../docs/filament_best_practices.md)
-- [Translation Standards](../../../docs/translation_standards.md)
+- [Filament Best Practices](../../../docs/filament-best-practices-2.md)
+- [Translation Standards](../../../docs/translation-standards-2.md)
 - [Table Components](table-components.md)
 
 ---

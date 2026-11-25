@@ -52,7 +52,7 @@ namespace Modules\YourModule\App\Filament\Resources; // ❌ Wrong (contains App)
 ## 📞 Emergency Help
 
 1. Check: `/Modules/Xot/docs/XOTBASE_EXTENSION_RULES.md`
-2. Check: `/Modules/Xot/docs/filament_extension_pattern.md`
+2. Check: `/Modules/Xot/docs/filament-extension-pattern-2.md`
 3. Run: `php artisan optimize:clear && ./vendor/bin/phpstan analyse`
 
 ---

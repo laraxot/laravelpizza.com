@@ -136,7 +136,7 @@ The <nome progetto> platform has extensive documentation across modules and them
 
 ❌ **Problems**:
 - 101 temporal strings
-- Duplicate files: `CODE_QUALITY_ANALYSIS.md` + `code_quality_analysis.md`
+- Duplicate files: `code-quality-analysis-3.md` + `code-quality-analysis-3.md`
 - Mixed naming conventions
 
 ---
@@ -175,7 +175,7 @@ The <nome progetto> platform has extensive documentation across modules and them
 
 3. **Update Governance**
    - Finalize documentation governance
-   - Add to AGENTS.md
+   - Add to agents-2.md
    - Add to .windsurfrules
 
 ### Priority 3: Medium (Week 4)
@@ -222,8 +222,8 @@ find laravel/Modules/*/docs/ -name "*.md" -exec sed -i.bak \
 - Merge unique content
 
 **Sixteen Theme**:
-- Keep: `CODE_QUALITY_ANALYSIS.md`
-- Remove: `code_quality_analysis.md`
+- Keep: `code-quality-analysis-3.md`
+- Remove: `code-quality-analysis-3.md`
 - Merge unique content
 
 #### Day 5-7: Naming Standardization
@@ -263,7 +263,7 @@ done
 
 #### Day 15-16: Update Rules
 
-1. Update AGENTS.md
+1. Update agents-2.md
 2. Update .windsurfrules
 3. Create skills
 
@@ -412,8 +412,8 @@ echo "  snake_case: $(find laravel/Modules/*/docs/ -name '*_*.md' | wc -l)"
 
 ## 📚 Related Documents
 
-- [DOCUMENTATION_GOVERNANCE.md](documentation_governance.md) - Governance framework
-- [AGENTS.md](../../../agents.md) - Agent guidelines
+- [DOCUMENTATION_GOVERNANCE.md](documentation-governance-3.md) - Governance framework
+- [agents-2.md](../../../agents.md) - Agent guidelines
 - [.windsurfrules](../../../.windsurfrules) - IDE rules
 
 ---

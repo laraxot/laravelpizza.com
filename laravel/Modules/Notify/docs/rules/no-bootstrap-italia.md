@@ -57,4 +57,4 @@ The project's core purpose is to **replicate Bootstrap Italia's visual design us
 - See: `docs/html-structure-comparison.md` for project bridge docs
 - See: `bashscripts/docs/html/html-structure-compare.md` for comparison tool docs
 - See: `laravel/Themes/Sixteen/docs/architecture/README.md` for theme architecture
-- See: `qwen.md` for project memories and conventions
+- See: `qwen-2.md` for project memories and conventions

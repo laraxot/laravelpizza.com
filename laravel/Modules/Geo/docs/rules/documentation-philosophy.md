@@ -54,7 +54,7 @@ Modules/ModuleName/docs/
 ├── CHANGELOG.md                 # Temporal tracking
 ├── business-logic.md            # WHY & business rules
 ├── architecture-overview.md     # HOW it's structured
-├── best-practices.md            # Patterns & anti-patterns
+├── best-practices-3.md            # Patterns & anti-patterns
 ├── troubleshooting.md           # Common issues
 ├── quick-start.md               # Fast onboarding
 └── [specific-topics].md         # As needed
@@ -132,7 +132,7 @@ La soluzione implementata...
 
 **Purpose**: Guide developers on correct patterns
 
-**Example**: `best-practices.md`
+**Example**: `best-practices-3.md`
 ```markdown
 ## Pattern X
 ✅ DO: This way (why: business reason)

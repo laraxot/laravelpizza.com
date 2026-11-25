@@ -44,7 +44,7 @@ Particolarmente comuni nel progetto, riguardano l'implementazione corretta dei n
 - Tutti i file sono stati mantenuti nella versione<!-- REVISIONE MANUALE: File aggiornato per chiarezza e tracciabilità. Vedi anche [README globale](/docs/README.md) e gli altri file di risoluzione conflitti. -->
 
 [Backlink: Documentazione Globale](/docs/README.md)
-[Backlink: scripts_conflict_resolution.md](scripts_conflict_resolution.md)
+[Backlink: scripts-conflict-resolution-2.md](scripts-conflict-resolution-2.md)
 [Backlink: fix_all_git_conflicts.md](fix_all_git_conflicts.md)
  (corrente)
 - I namespace sono stati mantenuti corretti secondo la struttura del modulo

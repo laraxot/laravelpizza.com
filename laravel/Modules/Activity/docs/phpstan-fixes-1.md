@@ -81,7 +81,7 @@ Il modulo Activity dimostra un'eccellente qualità del codice, raggiungendo il l
 
 ## Collegamenti tra versioni di phpstan_fixes.md
 * [phpstan_fixes.md](laravel/Modules/Xot/docs/phpstan_fixes.md)
-* [phpstan_fixes.md](laravel/Modules/User/docs/phpstan_fixes.md)
+* [phpstan-fixes-5.md](laravel/Modules/User/docs/phpstan-fixes-5.md)
 * [phpstan_fixes.md](laravel/Modules/User/docs/fixes/phpstan_fixes.md)
 * [phpstan_fixes.md](laravel/Modules/Activity/docs/phpstan_fixes.md)
 ---

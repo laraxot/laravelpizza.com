@@ -22,9 +22,9 @@ related:
 
 ---
 
-<!-- Contenuto unito da ponytail-audit-.md (rimozione date dai nomi file, issue #64) -->
+<!-- Contenuto unito da ponytail-audit-2.md (rimozione date dai nomi file, issue #64) -->
 
-<!-- recovery from broken basename `ponytail-audit-.md` after docs-guardian mass rename -->
+<!-- recovery from broken basename `ponytail-audit-2.md` after docs-guardian mass rename -->
 
 Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file evita nomi `*-.md`.
 
@@ -98,5 +98,5 @@ real `UserContract.php` is untouched.
 - `Modules/User/docs/wiki/decisions/contracts-and-lang-backup-archival-2026-06-30.md`:
   prior session that first identified this file and intended (but never committed)
   an archive-as-`.bak` rename.
-- `Modules/Xot/docs/ponytail-audit-2026-07-02.md`, `Modules/Notify/docs/ponytail-audit-2026-07-02.md`:
+- `Modules/Xot/docs/ponytail-audit-2.md`, `Modules/Notify/docs/ponytail-audit-2.md`:
   sibling module findings from the same repo-wide audit pass.

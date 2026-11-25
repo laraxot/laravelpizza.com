@@ -241,5 +241,5 @@ composer go
 
 - [PTVX Root Documentation](../../docs/README.md)
 - [Filament 5 Upgrade Guide](../../docs/filament-5-upgrade.md)
-- [Coding Standards](../../docs/coding-standards.md)
+- [Coding Standards](../../development/coding-standards-2.md)
 - [Module Development](../../docs/module-development.md)

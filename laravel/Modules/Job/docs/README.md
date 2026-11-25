@@ -11,7 +11,7 @@ discussions: []
 related:
   - "../README.md"
   - "./00-index.md"
-  - "./stories/02.Job-merge-conflict-resolution.story.md"
+  - "./stories/02.job-merge-conflict-resolution.story.md"
 ---
 
 # Job docs
@@ -85,7 +85,7 @@ questo file, non esistono nel modulo.
 
 ## Stories
 
-- [02 Job - risoluzione marker di merge (2026-10)](./stories/02.Job-merge-conflict-resolution.story.md)
+- [02 Job - risoluzione marker di merge (2026-10)](./stories/02.job-merge-conflict-resolution.story.md)
 - [2026-10-06 PHPStan cleanup - Job](./stories/2026-10-06-phpstan-cleanup-job.story.md) | [dev](./stories/2026-10-06-phpstan-cleanup-job.dev.md)
 
 ## Stato dell'organizzazione della cartella

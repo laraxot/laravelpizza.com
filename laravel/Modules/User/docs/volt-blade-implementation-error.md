@@ -10,7 +10,7 @@ qmd: "volt blade implementation error analisi dellerrore"
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
-- [Convenzioni Path](./path_conventions.md)
+- [Convenzioni Path](./path-conventions-2.md)
 - [Best Practices Volt e Folio](../../Xot/docs/VOLT_FOLIO_BEST_PRACTICES.md)
 
 ## Identificazione dell'Errore
@@ -98,7 +98,7 @@ Come correttamente indicato, per i form è preferibile utilizzare un widget Fila
 3. **Manutenibilità**: Sfrutta le funzionalità di Filament per la validazione e la gestione degli errori
 4. **Coerenza**: Mantiene uno stile coerente con il resto dell'applicazione
 
-Questo approccio sarà documentato in dettaglio nel file `VOLT_BLADE_IMPLEMENTATION.md`.
+Questo approccio sarà documentato in dettaglio nel file `volt-blade-implementation-4.md`.
 ---
 module: theme
 topic: volt-blade-implementation-error

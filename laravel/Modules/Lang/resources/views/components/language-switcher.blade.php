@@ -6,6 +6,7 @@ declare(strict_types=1);
     @var string $current_locale
     @var \Illuminate\Support\Collection $available_locales
     Each locale contains its URL resolved by LanguageSwitcherWidget.
+    @see Modules/Lang/docs/contracts/language-switcher-component.md
 --}}
 <li class="language-switcher-container">
         <details class="dropdown">

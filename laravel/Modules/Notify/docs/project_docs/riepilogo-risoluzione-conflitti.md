@@ -31,25 +31,25 @@ related:
   - "./agid-implementation-guide.md"
 <<<<<<< HEAD
 <<<<<<< .merge_file_thGOgp
-  - "./ARCHITECTURE.md"
+  - "./architecture-2.md"
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
   - "./architecture.md"
 =======
 <<<<<<< HEAD
-  - "./ARCHITECTURE.md"
+  - "./architecture-2.md"
 =======
   - "./architecture.md"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
-  - "./ARCHITECTURE.md"
+  - "./architecture-2.md"
 =======
   - "./architecture.md"
 =======
 <<<<<<< HEAD
-  - "./ARCHITECTURE.md"
+  - "./architecture-2.md"
 =======
   - "./architecture.md"
 >>>>>>> .merge_file_UuuCas
@@ -57,7 +57,7 @@ related:
 >>>>>>> laraxot/dev
   - "./complete-refactoring-analysis.md"
   - "./documentation-status.md"
-  - "./final-implementation-report-.md"
+  - "./final-implementation-report-4.md"
   - "./final-implementation-report-1.md"
   - "./final-implementation-report.md"
 ---

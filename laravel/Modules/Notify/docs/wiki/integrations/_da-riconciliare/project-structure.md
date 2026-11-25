@@ -89,7 +89,7 @@ related:
 │   ├── decisions/                # Architecture decision records
 │   └── troubleshooting/          # Bug fixes, error resolutions
 ├── on-demand-pattern.md          # 🌟 QUESTO FILE — Pattern on-demand
-├── qmd-setup.md                  # Configurazione QMD
+├── qmd-setup-3.md                  # Configurazione QMD
 ├── performance-optimization-1.md    # Metriche e best practice
 ├── architecture.md               # (opzionale) Architettura modulo
 └── README.md                     # (opzionale) Overview modulo
@@ -298,9 +298,9 @@ tags: [structure, architecture, module]
 >>>>>>> .merge_file_J6Av0c
 >>>>>>> laraxot/dev
 ├── ON-DEMAND-PATTERN.md          # 🌟 QUESTO FILE — Pattern on-demand
-├── QMD-SETUP.md                  # Configurazione QMD
+├── qmd-setup-3.md                  # Configurazione QMD
 ├── PERFORMANCE-OPTIMIZATION.md    # Metriche e best practice
-├── ARCHITECTURE.md               # (opzionale) Architettura modulo
+├── architecture-2.md               # (opzionale) Architettura modulo
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_PMWvsb
@@ -318,7 +318,7 @@ tags: [structure, architecture, module]
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 ├── on-demand-pattern.md          # 🌟 QUESTO FILE — Pattern on-demand
-├── qmd-setup.md                  # Configurazione QMD
+├── qmd-setup-3.md                  # Configurazione QMD
 ├── performance-optimization.md    # Metriche e best practice
 ├── architecture.md               # (opzionale) Architettura modulo
 └── README.md                     # (opzionale) Overview modulo

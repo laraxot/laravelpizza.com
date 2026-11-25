@@ -467,6 +467,6 @@ Log::info('SMS sent', [
 
 ## Collegamenti alla Documentazione Correlata
 
-- [MULTI_CHANNEL_NOTIFICATIONS.md](./multi_channel_notifications.md)
-- [NOTIFICATIONS_IMPLEMENTATION_GUIDE.md](./notifications_implementation_guide.md)
-- [TELEGRAM_NOTIFICATIONS_GUIDE.md](./telegram_notifications_guide.md)
+- [multi-channel-notifications-2.md](./multi_channel_notifications.md)
+- [notifications-implementation-guide-2.md](./notifications_implementation_guide.md)
+- [telegram-notifications-guide-2.md](./telegram_notifications_guide.md)

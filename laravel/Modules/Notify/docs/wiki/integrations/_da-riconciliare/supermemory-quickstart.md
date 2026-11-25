@@ -46,7 +46,7 @@ status: draft
 SuperMemory is the long-term and short-term memory and context infrastructure for AI agents. It provides persistent memory across conversations, semantic search, and knowledge graph capabilities.
 
 **Master MCP Docs**: [Project MCP Servers](../../../docs/MCP_SERVERS.md)
-**Master MCP Docs**: [Project MCP Servers](../../../mcp_servers.md)
+**Master MCP Docs**: [Project MCP Servers](../../../mcp-servers-3.md)
 
 ## Quick Start
 
@@ -91,7 +91,7 @@ supermemory profile --tag <nome progetto> --query "project preferences"
 
 | Command | Description | Example |
 |---------|-------------|---------|
-| `add` | Ingest content and extract memories | `supermemory add --tag laraxot --file docs/MCP_SERVERS.md` |
+| `add` | Ingest content and extract memories | `supermemory add --tag laraxot --file ../../../mcp-servers-2.md` |
 | `search` | Search memories semantically | `supermemory search "ticket workflow" --tag laraxot` |
 | `remember` | Store a specific memory | `supermemory remember "All models extend XotBaseModel" --tag laraxot` |
 | `forget` | Remove a specific memory | `supermemory forget <memory-id>` |
@@ -101,7 +101,7 @@ supermemory profile --tag <nome progetto> --query "project preferences"
 | `docs` | Manage documents | `supermemory docs list` |
 
 ## Notify Use Cases
-| `add` | Ingest content and extract memories | `supermemory add --tag <nome progetto> --file docs/MCP_SERVERS.md` |
+| `add` | Ingest content and extract memories | `supermemory add --tag <nome progetto> --file ../../../mcp-servers-2.md` |
 | `search` | Search memories semantically | `supermemory search "ticket workflow" --tag <nome progetto>` |
 | `remember` | Store a specific memory | `supermemory remember "All models extend XotBaseModel" --tag <nome progetto>` |
 | `forget` | Remove a specific memory | `supermemory forget <memory-id>` |
@@ -203,8 +203,8 @@ supermemory search "file upload Livewire" --tag <nome progetto>
 ### After Completion
 ```bash
 # Store completed work summary
-supermemory add --tag laraxot --file path/to/session-summary.md
-supermemory add --tag <nome progetto> --file path/to/session-summary.md
+supermemory add --tag laraxot --file ../../session-summary-2.md
+supermemory add --tag <nome progetto> --file ../../session-summary-2.md
 
 # Update project context if needed
 supermemory update <context-memory-id> --content "Updated architecture..."
@@ -294,7 +294,7 @@ supermemory init --api-key YOUR_KEY --container-tag <nome progetto> --scope proj
 ## Related Documentation
 
 - **Master MCP Docs**: [Project MCP Servers](../../../docs/MCP_SERVERS.md)
-- **Master MCP Docs**: [Project MCP Servers](../../../mcp_servers.md)
+- **Master MCP Docs**: [Project MCP Servers](../../../mcp-servers-3.md)
 - **Xot Module MCP**: [Xot MCP Guide](../../Modules/Xot/docs/MCP_SERVERS.md)
 - **Theme MCP**: [Sixteen Theme MCP](../../Themes/Sixteen/docs/mcp-servers.md)
 - **SuperMemory Skill**: [.qwen/skills/supermemory/](.qwen/skills/supermemory/)

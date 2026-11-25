@@ -22,7 +22,7 @@ Spawned by:
 - `/gsd-plan-phase --gaps` orchestrator (gap closure from verification failures)
 - `/gsd-plan-phase` in revision mode (updating plans based on checker feedback)
 
-Your job: Produce plan.md files that Claude executors can implement without interpretation. Plans are prompts, not documents that become prompts.
+Your job: Produce plan-2.md files that Claude executors can implement without interpretation. Plans are prompts, not documents that become prompts.
 
 **CRITICAL: Mandatory Initial Read**
 If the prompt contains a `<files_to_read>` block, you MUST use the `Read` tool to load every file listed there before performing any other actions. This is your primary context.
@@ -92,7 +92,7 @@ Planning for ONE person (the user) and ONE implementer (Claude).
 
 ## Plans Are Prompts
 
-plan.md IS the prompt (not a document that becomes one). Contains:
+plan-2.md IS the prompt (not a document that becomes one). Contains:
 - Objective (what and why)
 - Context (@file references)
 - Tasks (with verification criteria)
@@ -381,7 +381,7 @@ Derive plans from actual work. Depth determines compression tolerance, not a tar
 
 <plan_format>
 
-## plan.md Structure
+## plan-2.md Structure
 
 ```markdown
 ---
@@ -416,7 +416,7 @@ Output: [Artifacts created]
 <context>
 @.planning/PROJECT.md
 @.planning/roadmap.md
-@.planning/STATE.md
+@.planning/state-2.md
 
 # Only reference prior plan SUMMARYs if genuinely needed
 @path/to/relevant/source.ts
@@ -443,7 +443,7 @@ Output: [Artifacts created]
 </success_criteria>
 
 <output>
-After completion, create `.planning/phases/XX-name/{phase}-{plan}-SUMMARY.md`
+After completion, create `.planning/phases/XX-name/{phase}-{plan}-summary-2.md`
 </output>
 ```
 
@@ -833,7 +833,7 @@ grep -l "status: diagnosed" "$phase_dir"/*-UAT.md 2>/dev/null
 </task>
 ```
 
-**7. Write plan.md files:**
+**7. Write plan-2.md files:**
 
 ```yaml
 ---
@@ -861,7 +861,7 @@ Triggered when orchestrator provides `<revision_context>` with checker issues. N
 ### Step 1: Load Existing Plans
 
 ```bash
-cat .planning/phases/$PHASE-*/$PHASE-*-PLAN.md
+cat .planning/phases/$PHASE-*/$PHASE-*-plan-2.md
 ```
 
 Build mental model of current plan structure, existing tasks, must_haves.
@@ -909,7 +909,7 @@ Group by plan, dimension, severity.
 ### Step 6: Commit
 
 ```bash
-node .github/get-shit-done/bin/gsd-tools.cjs commit "fix($PHASE): revise plans based on checker feedback" --files .planning/phases/$PHASE-*/$PHASE-*-PLAN.md
+node .github/get-shit-done/bin/gsd-tools.cjs commit "fix($PHASE): revise plans based on checker feedback" --files .planning/phases/$PHASE-*/$PHASE-*-plan-2.md
 ```
 
 ### Step 7: Return Revision Summary
@@ -953,12 +953,12 @@ INIT=$(node .github/get-shit-done/bin/gsd-tools.cjs init plan-phase "${PHASE}")
 
 Extract from init JSON: `planner_model`, `researcher_model`, `checker_model`, `commit_docs`, `research_enabled`, `phase_dir`, `phase_number`, `has_research`, `has_context`.
 
-Also read STATE.md for position, decisions, blockers:
+Also read state-2.md for position, decisions, blockers:
 ```bash
-cat .planning/STATE.md 2>/dev/null
+cat .planning/state-2.md 2>/dev/null
 ```
 
-If STATE.md missing but .planning/ exists, offer to reconstruct or continue without.
+If state-2.md missing but .planning/ exists, offer to reconstruct or continue without.
 </step>
 
 <step name="load_codebase_context">
@@ -990,7 +990,7 @@ ls .planning/phases/
 
 If multiple phases available, ask which to plan. If obvious (first incomplete), proceed.
 
-Read existing plan.md or DISCOVERY.md in phase directory.
+Read existing plan-2.md or DISCOVERY.md in phase directory.
 
 **If `--gaps` flag:** Switch to gap_closure_mode.
 </step>
@@ -1019,7 +1019,7 @@ Select top 2-4 phases. Skip phases with no relevance signal.
 
 **Step 3 — Read full SUMMARYs for selected phases:**
 ```bash
-cat .planning/phases/{selected-phase}/*-SUMMARY.md
+cat .planning/phases/{selected-phase}/*-summary-2.md
 ```
 
 From full SUMMARYs extract:
@@ -1035,7 +1035,7 @@ For phases not selected, retain from digest:
 - `decisions`: Constraints on approach
 - `patterns`: Conventions to follow
 
-**From STATE.md:** Decisions → constrain approach. Pending todos → candidates.
+**From state-2.md:** Decisions → constrain approach. Pending todos → candidates.
 
 **From RETROSPECTIVE.md (if exists):**
 ```bash
@@ -1053,13 +1053,13 @@ Use `phase_dir` from init context (already loaded in load_project_state).
 
 ```bash
 cat "$phase_dir"/*-CONTEXT.md 2>/dev/null   # From /gsd-discuss-phase
-cat "$phase_dir"/*-RESEARCH.md 2>/dev/null   # From /gsd-research-phase
+cat "$phase_dir"/*-research-2.md 2>/dev/null   # From /gsd-research-phase
 cat "$phase_dir"/*-DISCOVERY.md 2>/dev/null  # From mandatory discovery
 ```
 
 **If CONTEXT.md exists (has_context=true from init):** Honor user's vision, prioritize essential features, respect boundaries. Locked decisions — do not revisit.
 
-**If research.md exists (has_research=true from init):** Use standard_stack, architecture_patterns, dont_hand_roll, common_pitfalls.
+**If research-2.md exists (has_research=true from init):** Use standard_stack, architecture_patterns, dont_hand_roll, common_pitfalls.
 </step>
 
 <step name="break_into_tasks">
@@ -1123,13 +1123,13 @@ Use template structure for each plan.md.
 
 **ALWAYS use the Write tool to create files** — never use `Bash(cat << 'EOF')` or heredoc commands for file creation.
 
-Write to `.planning/phases/XX-name/{phase}-{NN}-PLAN.md`
+Write to `.planning/phases/XX-name/{phase}-{NN}-plan-2.md`
 
 Include all frontmatter fields.
 </step>
 
 <step name="validate_plan">
-Validate each created plan.md using gsd-tools:
+Validate each created plan-2.md using gsd-tools:
 
 ```bash
 VALID=$(node .github/get-shit-done/bin/gsd-tools.cjs frontmatter validate "$PLAN_PATH" --schema plan)
@@ -1164,7 +1164,7 @@ Update roadmap.md to finalize phase placeholders:
 3. Update placeholders:
 
 **Goal** (only if placeholder):
-- `[To be planned]` → derive from CONTEXT.md > research.md > phase description
+- `[To be planned]` → derive from CONTEXT.md > research-2.md > phase description
 - If Goal already has real content → leave it
 
 **Plans** (always update):
@@ -1182,7 +1182,7 @@ Plans:
 
 <step name="git_commit">
 ```bash
-node .github/get-shit-done/bin/gsd-tools.cjs commit "docs($PHASE): create phase plan" --files .planning/phases/$PHASE-*/$PHASE-*-PLAN.md .planning/roadmap.md
+node .github/get-shit-done/bin/gsd-tools.cjs commit "docs($PHASE): create phase plan" --files .planning/phases/$PHASE-*/$PHASE-*-plan-2.md .planning/roadmap.md
 ```
 </step>
 
@@ -1253,7 +1253,7 @@ Follow templates in checkpoints and revision_mode sections respectively.
 ## Standard Mode
 
 Phase planning complete when:
-- [ ] STATE.md read, project history absorbed
+- [ ] state-2.md read, project history absorbed
 - [ ] Mandatory discovery completed (Level 0-3)
 - [ ] Prior decisions, issues, concerns synthesized
 - [ ] Dependency graph built (needs/creates for each task)

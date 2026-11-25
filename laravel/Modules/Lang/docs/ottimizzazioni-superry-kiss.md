@@ -153,7 +153,7 @@ app/
 **Regola:** Tutti i file in lowercase con hyphens
 **Esempi:**
 - ✅ `language-management.md`
-- ✅ `filament-resources.md`
+- ✅ `filament-resources-3.md`
 - ✅ `translation-system.md`
 - ❌ `Language_Management.md`
 - ❌ `FilamentResources.md`
@@ -320,7 +320,7 @@ class Language extends Model
 ## 🔗 Collegamenti
 
 - [Documentazione Core](../../../../docs/core/)
-- [Best Practices Filament](../../../../docs/core/filament-best-practices.md)
+- [Best Practices Filament](../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Convenzioni Sistema](../../../../docs/core/conventions.md)
 - [Template Modulo](../../../../docs/templates/module-template.md)
 

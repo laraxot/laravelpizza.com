@@ -1,7 +1,7 @@
 ---
 module: theme
 topic: translation-city-field-refactor-2
-canonical: ../../../Themes/docs/shared-components/translation-city-field-refactor-.md
+canonical: ../../../Themes/docs/shared-components/translation-city-field-refactor-4.md
 related:
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
@@ -17,4 +17,4 @@ qmd: "translation city field refactor 2"
 >>>>>>> .merge_file_PBbmhP
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/translation-city-field-refactor-.md
+See canonical documentation: ../../../Themes/docs/shared-components/translation-city-field-refactor-4.md

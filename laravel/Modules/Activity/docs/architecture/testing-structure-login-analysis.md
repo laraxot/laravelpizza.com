@@ -148,17 +148,17 @@ function createTestUser(array $attributes = []): UserContract
 ## 🔗 **Collegamenti Documentazione**
 
 ### **Pattern Architetturali**
-- [laravel/Modules/Cms/docs/architecture-xotdata-pattern.md](../laravel/modules/cms/docs/architecture-xotdata-pattern.md)
-- [laravel/Modules/Xot/docs/architecture-violations-and-fixes.md](../laravel/modules/xot/docs/architecture-violations-and-fixes.md)
+- [laravel/Modules/Cms/docs/architecture-xotdata-pattern.md](../../../Cms/docs/architecture-xotdata-pattern-2.md)
+- [laravel/Modules/Xot/docs/consolidated/architecture-violations-and-fixes-2.md](../../../Xot/docs/consolidated/architecture-violations-and-fixes-2.md)
 
 ### **Sistema Folio/Volt**
-- [laravel/Themes/One/docs/folio-pages.md](../laravel/themes/one/docs/folio-pages.md)
+- [laravel/Modules/Cms/docs/folio-pages-2.md](../../../Cms/docs/folio-pages-2.md)
 - [laravel/Themes/One/docs/routing_with_folio_volt.md](../laravel/themes/one/docs/routing_with_folio_volt.md)
-- [laravel/Modules/Cms/docs/architecture-xotdata-pattern.md](../laravel/Modules/Cms/docs/architecture-xotdata-pattern.md)
-- [laravel/Modules/Xot/docs/architecture-violations-and-fixes.md](../laravel/Modules/Xot/docs/architecture-violations-and-fixes.md)
+- [laravel/Modules/Cms/docs/architecture-xotdata-pattern.md](../../../Cms/docs/architecture-xotdata-pattern-2.md)
+- [laravel/Modules/Xot/docs/consolidated/architecture-violations-and-fixes-2.md](../../../Xot/docs/consolidated/architecture-violations-and-fixes-2.md)
 
 ### **Sistema Folio/Volt**
-- [laravel/Themes/One/docs/folio-pages.md](../laravel/Themes/One/docs/folio-pages.md)
+- [laravel/Modules/Cms/docs/folio-pages-2.md](../../../Cms/docs/folio-pages-2.md)
 - [laravel/Themes/One/docs/routing_with_folio_volt.md](../laravel/Themes/One/docs/routing_with_folio_volt.md)
 
 ### **Test Esistenti di Riferimento**

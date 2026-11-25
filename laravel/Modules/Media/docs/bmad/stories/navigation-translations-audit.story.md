@@ -14,6 +14,7 @@ related:
   - ../../../../../docs/wiki/i18n/navigation-translations-inventory-2026-09-29.md
 issues: []
 discussions: []
+qmd: "navigation translations audit story traduzioni media"
 ---
 
 # Audit traduzioni `.navigation` — modulo Media

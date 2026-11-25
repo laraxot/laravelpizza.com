@@ -102,8 +102,8 @@ class NotifyServiceProvider extends XotBaseServiceProvider
 - [Struttura dei Moduli](../../../project_docs/architecture/modules.md)
 
 ### Collegamenti ai Moduli
-- [Notify ServiceProvider](../../Notify/project_docs/service-provider.md)
-- [User ServiceProvider](../../User/project_docs/service-provider.md)
+- [Notify ServiceProvider](../../../Notify/docs/service-provider-2.md)
+- [User ServiceProvider](../../../Notify/docs/service-provider-2.md)
 
 ## Note Importanti
 

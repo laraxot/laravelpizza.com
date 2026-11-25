@@ -23,8 +23,8 @@ status: draft
 
 ## Panoramica
 
-Questo documento descrive i conflitti Git risolti nel modulo User e le decisioni architetturali prese durante il processo di risoluzione. Il documento segue i principi descritti nella [Filosofia della Documentazione](/var/www/html/_bases/base_predict_fila5_mono/docs/DOCUMENTATION_PHILOSOPHY.md) e nelle [Linee Guida per la Risoluzione dei Conflitti](/var/www/html/_bases/base_predict_fila5_mono/docs/CONFLICT_RESOLUTION.md).
-Questo documento descrive i conflitti Git risolti nel modulo User e le decisioni architetturali prese durante il processo di risoluzione. Il documento segue i principi descritti nella [Filosofia della Documentazione](/var/www/html/_bases/base_<nome progetto>_fila5_mono/docs/documentation_philosophy.md) e nelle [Linee Guida per la Risoluzione dei Conflitti](/var/www/html/_bases/base_<nome progetto>_fila5_mono/docs/conflict_resolution.md).
+Questo documento descrive i conflitti Git risolti nel modulo User e le decisioni architetturali prese durante il processo di risoluzione. Il documento segue i principi descritti nella [Filosofia della Documentazione](/var/www/html/_bases/base_predict_fila5_mono/docs/DOCUMENTATION_PHILOSOPHY.md) e nelle [Linee Guida per la Risoluzione dei Conflitti](/../../Geo/docs/conflict-resolution-2.md).
+Questo documento descrive i conflitti Git risolti nel modulo User e le decisioni architetturali prese durante il processo di risoluzione. Il documento segue i principi descritti nella [Filosofia della Documentazione](/var/www/html/_bases/base_<nome progetto>_fila5_mono/docs/documentation_philosophy.md) e nelle [Linee Guida per la Risoluzione dei Conflitti](/var/www/html/_bases/base_<nome progetto>_fila5_mono/docs/conflict-resolution-2.md).
 
 ## Conflitti Risolti
 
@@ -61,8 +61,8 @@ Abbiamo adottato la struttura migliorata della versione aurmich/dev, ma con le s
 - Mantenimento dei componenti Filament per coerenza con le best practices del progetto
 
 #### Motivazione
-Questa soluzione allinea il widget alle [best practices di Filament](/var/www/html/_bases/base_predict_fila5_mono/laravel/Modules/User/docs/FILAMENT_BEST_PRACTICES.md) e alle [regole di traduzione](/var/www/html/_bases/base_predict_fila5_mono/docs/TRANSLATIONS_RULES.md) del progetto.
-Questa soluzione allinea il widget alle [best practices di Filament](/var/www/html/_bases/base_<nome progetto>_fila5_mono/laravel/modules/user/docs/filament_best_practices.md) e alle [regole di traduzione](/var/www/html/_bases/base_<nome progetto>_fila5_mono/docs/translations_rules.md) del progetto.
+Questa soluzione allinea il widget alle [best practices di Filament](/../../Xot/docs/consolidated/filament-best-practices-2.md) e alle [regole di traduzione](/var/www/html/_bases/base_predict_fila5_mono/docs/TRANSLATIONS_RULES.md) del progetto.
+Questa soluzione allinea il widget alle [best practices di Filament](/var/www/html/_bases/base_<nome progetto>_fila5_mono/laravel/modules/user/docs/filament-best-practices-2.md) e alle [regole di traduzione](/var/www/html/_bases/base_<nome progetto>_fila5_mono/docs/translations_rules.md) del progetto.
 
 ### 3. Dichiarazione strict_types
 
@@ -87,15 +87,15 @@ Le modifiche apportate garantiscono:
 ## Collegamenti alla Documentazione
 
 - [Filosofia della Documentazione](/var/www/html/_bases/base_predict_fila5_mono/docs/DOCUMENTATION_PHILOSOPHY.md)
-- [Risoluzione dei Conflitti](/var/www/html/_bases/base_predict_fila5_mono/docs/CONFLICT_RESOLUTION.md)
-- [Best Practices Filament](/var/www/html/_bases/base_predict_fila5_mono/laravel/Modules/User/docs/FILAMENT_BEST_PRACTICES.md)
+- [Risoluzione dei Conflitti](/../../Geo/docs/conflict-resolution-2.md)
+- [Best Practices Filament](/../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Regole di Traduzione](/var/www/html/_bases/base_predict_fila5_mono/docs/TRANSLATIONS_RULES.md)
 - [PHPStan Livello 9](/var/www/html/_bases/base_predict_fila5_mono/docs/phpstan/PHPSTAN_LIVELLO9_LINEE_GUIDA.md)
-- [Implementazione Login](/var/www/html/_bases/base_predict_fila5_mono/laravel/Modules/User/docs/AUTH_LOGIN_IMPLEMENTATION.md)
-- [Implementazione Logout](/var/www/html/_bases/base_predict_fila5_mono/laravel/Modules/User/docs/AUTH_LOGOUT_IMPLEMENTATION.md)
+- [Implementazione Login](/auth-login-implementation-4.md)
+- [Implementazione Logout](/auth-logout-implementation-4.md)
 - [Filosofia della Documentazione](/var/www/html/_bases/base_<nome progetto>_fila5_mono/docs/documentation_philosophy.md)
-- [Risoluzione dei Conflitti](/var/www/html/_bases/base_<nome progetto>_fila5_mono/docs/conflict_resolution.md)
-- [Best Practices Filament](/var/www/html/_bases/base_<nome progetto>_fila5_mono/laravel/modules/user/docs/filament_best_practices.md)
+- [Risoluzione dei Conflitti](/var/www/html/_bases/base_<nome progetto>_fila5_mono/docs/conflict-resolution-2.md)
+- [Best Practices Filament](/var/www/html/_bases/base_<nome progetto>_fila5_mono/laravel/modules/user/docs/filament-best-practices-2.md)
 - [Regole di Traduzione](/var/www/html/_bases/base_<nome progetto>_fila5_mono/docs/translations_rules.md)
 - [PHPStan Livello 9](/var/www/html/_bases/base_<nome progetto>_fila5_mono/docs/phpstan/phpstan_livello9_linee_guida.md)
 - [Implementazione Login](/var/www/html/_bases/base_<nome progetto>_fila5_mono/laravel/modules/user/docs/auth-login-implementation.md)

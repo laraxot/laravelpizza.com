@@ -25,7 +25,7 @@ discussions: []
 
 # Documentation standards
 
-> Source: [IFLOW.md](../../bashscripts/ai/IFLOW.md) | [CLAUDE.md](../../CLAUDE.md)
+> Source: [IFLOW.md](../../bashscripts/ai/IFLOW.md) | [CLAUDE.md](../../../Geo/docs/root-md-files/claude.md)
 > Back: [index](index.md)
 
 ## File naming conventions (CRITICAL)

@@ -1,7 +1,7 @@
 ---
 module: theme
 topic: phpstan-furious-debate-1
-canonical: ../../../Themes/docs/shared-components/phpstan-furious-debate-.md
+canonical: ../../../Themes/docs/shared-components/phpstan-furious-debate-2.md
 related:
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
@@ -17,4 +17,4 @@ qmd: "phpstan furious debate 1"
 >>>>>>> .merge_file_1aYWIc
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/phpstan-furious-debate-.md
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-furious-debate-2.md

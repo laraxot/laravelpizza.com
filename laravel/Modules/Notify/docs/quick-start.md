@@ -497,7 +497,7 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 - **README.md**: Panoramica modulo
 - **ROADMAP_2025.md**: Roadmap dettagliata
 - **structure.md**: Struttura file
-- **technical.md**: Dettagli tecnici
+- **technical-2.md**: Dettagli tecnici
 
 **Esempio**: [Fixcity Module Docs](./laravel/Modules/Fixcity/docs/)
 

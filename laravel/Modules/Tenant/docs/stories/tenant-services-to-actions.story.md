@@ -11,7 +11,7 @@ status: done
 created: 2026-09-04
 updated: 2026-09-04
 owned_scope:
-  - "laravel/Modules/Tenant/app/Services/**" (deleted entirely)
+  - "laravel/Modules/Tenant/app/Services/** (deleted entirely)"
   - "laravel/Modules/Tenant/tests/Unit/TenantCoverageBoostTest.php"
   - "laravel/Modules/Tenant/tests/Unit/TenantStatementCoverageTest.php"
   - "laravel/Modules/Tenant/tests/Unit/TenantGapsCoverageTest.php"

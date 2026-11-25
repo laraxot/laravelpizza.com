@@ -195,12 +195,12 @@
 - [Job](../job/docs/readme.md) - Jobs
 - [Chart](../chart/docs/readme.md) - Grafici
 
-## Collegamenti tra versioni di LINKS.md
-* [LINKS.md](../../../xot/docs/links.md)
-* [LINKS.md](../../../user/docs/links.md)
-* [LINKS.md](../../../ui/docs/links.md)
-* [LINKS.md](../../../cms/docs/links.md)
-* [LINKS.md](../../../../themes/one/docs/links.md)
+## Collegamenti tra versioni di links-2.md
+* [links-2.md](../../../xot/docs/links.md)
+* [links-2.md](../../../user/docs/links.md)
+* [links-2.md](../../../ui/docs/links.md)
+* [links-2.md](../../../cms/docs/links.md)
+* [links-2.md](../../../../themes/one/docs/links.md)
 
 ## Collegamenti tra versioni di links.md
 * [links.md](../../gdpr/docs/links.md)

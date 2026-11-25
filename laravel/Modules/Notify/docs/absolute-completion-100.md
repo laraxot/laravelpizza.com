@@ -79,17 +79,17 @@ Partiti da un progetto con documentazione al 65% e implementazione al 60%, abbia
 
 #### Documentazione Strategica (9)
 1. DOCUMENTATION_STATUS.md
-2. DOCUMENTATION_INDEX.md
-3. QUICK_START.md
-4. PROJECT_COMPLETION_STATUS.md
+2. documentation-index.md
+3. quick-start-2.md
+4. project-completion-status-2.md
 5. EXCELLENCE_2025.md
-6. FINAL_SUMMARY.md
+6. final-summary-2.md
 7. WORK_COMPLETED_2025-10-01.md
-8. GAP_ANALYSIS_IMPLEMENTATION.md
-9. IMPLEMENTATIONS_COMPLETED.md
+8. gap-analysis-implementation-2.md
+9. implementations-completed-2.md
 
 #### Guide Complete (5)
-10. Fixcity/docs/API.md
+10. Fixcity/docs/api-2.md
 11. Fixcity/docs/USER_GUIDE.md
 12. Fixcity/docs/ADMIN_GUIDE.md
 13. User/docs/2FA_GUIDE.md
@@ -115,9 +115,9 @@ Partiti da un progetto con documentazione al 65% e implementazione al 60%, abbia
 27. manifest.json (già presente)
 
 #### Reports (5)
-28. SUPER_MUCCA_COMPLETION.md
-29. ULTIMATE_COMPLETION_REPORT.md
-30. ABSOLUTE_COMPLETION_100.md (questo)
+28. super-mucca-completion-2.md
+29. ultimate-completion-report-2.md
+30. absolute-completion-100.md (questo)
 31. Roadmap aggiornate (3)
 
 ---

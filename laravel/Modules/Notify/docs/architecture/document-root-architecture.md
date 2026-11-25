@@ -209,4 +209,4 @@ However, instead of moving, the project now uses the **custom Application class*
 
 - Laravel Documentation: [Directory Structure](https://laravel.com/docs/structure)
 - Laraxot Installation: `laravel/Modules/Xot/docs/install/install-from-zero.md`
-- UI Module: `laravel/Modules/UI/docs/public-resources-management.md`
+- UI Module: `laravel/Modules/UI/docs/archive/public-resources-management-2.md`

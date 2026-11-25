@@ -5,6 +5,7 @@ module: Media
 related:
   - ../stories/12.1.media-clip-not-widget.story.md
   - ./livewire-inventory.md
+qmd: "livewire widget epics media"
 ---
 
 # Epic 12

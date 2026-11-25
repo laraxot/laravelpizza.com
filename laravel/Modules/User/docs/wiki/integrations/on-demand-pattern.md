@@ -61,9 +61,9 @@ qmd search "<topic>"
 ./laravel/Modules/User/docs/
 └── wiki/                    # Knowledge base locale
     ├── rules/index.md      # Indice rules modulo-specifiche
-    ├── skills/index.md     # Indice skills modulo-specifiche
-    ├── commands/index.md   # Indici commands
-    └── memories/index.md   # Indice memories
+    ├── ../../../../Lang/docs/wiki/index-3.md     # Indice skills modulo-specifiche
+    ├── ../../../../Lang/docs/wiki/index-3.md   # Indici commands
+    └── ../../../../Lang/docs/wiki/index-3.md   # Indice memories
 \`\`\`
 
 ## Quick Reference
@@ -78,13 +78,13 @@ qmd search "<topic>"
 ## Regole Critiche per Module
 
 <<<<<<< .merge_file_6f5vBB
-1. **Nessun bootstrap pesante** — Non elencare rules in agents.md o CLAUDE.md
+1. **Nessun bootstrap pesante** — Non elencare rules in agents-3.md o CLAUDE.md
 =======
 <<<<<<< HEAD
 1. **Nessun bootstrap pesante** — Non elencare rules in AGENTS.md o CLAUDE.md
 =======
 <<<<<<< HEAD
-1. **Nessun bootstrap pesante** — Non elencare rules in agents.md o CLAUDE.md
+1. **Nessun bootstrap pesante** — Non elencare rules in agents-3.md o CLAUDE.md
 =======
 1. **Nessun bootstrap pesante** — Non elencare rules in AGENTS.md o CLAUDE.md
 >>>>>>> laraxot/dev

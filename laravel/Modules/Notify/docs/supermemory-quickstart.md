@@ -223,8 +223,8 @@ supermemory search "file upload Livewire" --tag fixcity
 ### After Completion
 ```bash
 # Store completed work summary
-supermemory add --tag fixcity --file path/to/session-summary.md
-supermemory add --tag ptv --file path/to/session-summary.md
+supermemory add --tag fixcity --file wiki/session-summary-2.md
+supermemory add --tag ptv --file wiki/session-summary-2.md
 
 # Update project context if needed
 supermemory update <context-memory-id> --content "Updated architecture..."

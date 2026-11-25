@@ -6,7 +6,7 @@ This document defines how BMAD Method and GSD workflows coexist and complement e
 
 | System | Status | Location |
 |--------|--------|----------|
-| GSD | Active | `.planning/` (PROJECT.md, ROADMAP.md, STATE.md, REQUIREMENTS.md, phases/) |
+| GSD | Active | `.planning/` (PROJECT.md, ROADMAP.md, state-2.md, requirements-2.md, phases/) |
 | BMAD | Installed | `_bmad/` (bmm, gds, cis, wds, tea modules) |
 | BMAD-GSD Integration | Active | `_bmad/gds/` (GSD-specific BMAD workflows) |
 
@@ -17,7 +17,7 @@ This document defines how BMAD Method and GSD workflows coexist and complement e
 | GSD Phase | BMAD Phase | Notes |
 |-----------|------------|-------|
 | Analysis | 1-Analysis | GSD uses internal research, BMAD uses bmad-* research skills |
-| Planning | 2-Planning | GSD creates REQUIREMENTS.md, BMAD creates PRD |
+| Planning | 2-Planning | GSD creates requirements-2.md, BMAD creates PRD |
 | Solutioning | 3-Solutioning | GSD builds phases directly, BMAD creates Architecture + Epics |
 | Implementation | 4-Implementation | Both converge on story/phase execution |
 
@@ -26,7 +26,7 @@ This document defines how BMAD Method and GSD workflows coexist and complement e
 | GSD Artifact | BMAD Artifact | Location |
 |---------------|---------------|----------|
 | `.planning/PROJECT.md` | Product Brief | `.agents/` or `_bmad/` |
-| `.planning/REQUIREMENTS.md` | PRD | `.agents/` or `_bmad/` |
+| `.planning/requirements-2.md` | PRD | `.agents/` or `_bmad/` |
 | `.planning/ROADMAP.md` | Epics + Stories | GSD native |
 | `.planning/phases/` | Sprint Planning | `_bmad/bmm/workflows/4-implementation/` |
 | - | Architecture | `_bmad/bmm/workflows/3-solutioning/bmad-create-architecture/` |
@@ -46,7 +46,7 @@ This document defines how BMAD Method and GSD workflows coexist and complement e
 
 | GSD | BMAD | Usage |
 |-----|------|-------|
-| `/gsd-new-project` creates REQUIREMENTS.md | bmad-create-prd | Requirements document |
+| `/gsd-new-project` creates requirements-2.md | bmad-create-prd | Requirements document |
 | - | bmad-create-architecture | Architecture document |
 | - | bmad-create-epics-and-stories | Epic/story breakdown |
 | `/gsd-plan-phase` | bmad-sprint-planning | Sprint initialization |

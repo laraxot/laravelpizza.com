@@ -20,7 +20,7 @@ estimated_effort: "0.5 dev-day"
 blocked_by: []
 related:
   - "../epics/lang-epics-and-stories.md"
-  - "../conflict_resolution_autolabelaction.md"
+  - "../conflict-resolution-autolabelaction-3.md"
   - "../../../User/lang/it/user/validation.php"
   - "../../../User/lang/lang/it/validation.php"
 owned_scope:
@@ -71,7 +71,7 @@ Il secondo argomento di `array_replace_recursive` è un `int` invece di un `arra
 ## Connessione (CONNECT)
 
 - Related to: `lang-services-to-actions.story.md` (pattern QueueableAction)
-- Related to: `translation_completeness_audit.md` (integrità file lingue)
+- Related to: `translation-completeness-audit-2.md` (integrità file lingue)
 - Regola `no-services-rule` in `bashscripts/ai/wiki/rules/no-services-rule.md`
 - BMAD v6.3: Analysis → Planning → Solutioning → Implementation
 

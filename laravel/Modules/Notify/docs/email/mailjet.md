@@ -21,7 +21,7 @@ updated: 2026-11-23
 >>>>>>> .merge_file_sWGeFj
 related:
   - ./email-setup.md
-  - ./DELIVERABILITY-INDEX.md
+  - ./deliverability-index.md
   - ./best-practices.md
 qmd: "mailjet sinch email transazionali send api v3.1 webhook event api sandbox spf dkim dmarc gdpr ue laravel mailer symfony mailjet-mailer"
 ---

@@ -33,11 +33,11 @@ pubblica usata dagli altri moduli.
 e 11 storie `bmad/stories/*-.story.md` (trattino finale residuo di una bonifica precedente) → `*.story.md`.
 
 **Duplicati rimossi** (contenuto già presente nel file canonico, differenze solo di frontmatter):
-12 storie `bmad/stories/*-2026MMDD*.story.md`, `docs-100-fleet-merge-.story.md` e
-`phpstan-analyse-modules-.story.md` (sottoinsiemi della versione canonica), 2 memorie
+12 storie `bmad/stories/*-2026MMDD*.story.md`, `docs-100-fleet-merge-2.story.md` e
+`phpstan-analyse-modules-2.story.md` (sottoinsiemi della versione canonica), 2 memorie
 `wiki/memories/*-20260928.md`, 7 copie esatte con residuo di data (`*-24`, `*-25`, `09-*`,
-`stories/13-dcp-45-*`), file vuoti `index.md` e `migration-standards.md` (link ripuntati a
-`migrations-consolidated.md`), `INDEX.md` (variante di maiuscole, contenuto confluito in README).
+`stories/13-dcp-45-*`), file vuoti `index-3.md` e `migration-standards.md` (link ripuntati a
+`migrations-consolidated.md`), `index-3.md` (variante di maiuscole, contenuto confluito in README).
 
 **Frontmatter**: 6 storie avevano un secondo blocco `---title: "Xot - …"` mai chiuso; fuso nel primo.
 
@@ -55,9 +55,9 @@ Test: `tests/Unit/Actions/File/AssetActionsTest.php` +2 casi (asset di tema, ass
 - **`AssetAction`, ripiego `resources/`**: restituisce `assets/<modulo>/…` anche se il file sta solo in
   `resources/`, ma il symlink punta a `public/` → URL 404 in produzione. Cambiarlo in un'eccezione è un
   cambio di comportamento per tutti i moduli: serve prima un inventario degli asset solo-`resources/`.
-- **Link esterni a Xot rotti dalle rinomine**: `Activity/docs/index.md` → `Xot/docs/index.md` (era vuoto);
+- **Link esterni a Xot rotti dalle rinomine**: `Activity/docs/index.md` → `../../../Activity/docs/index-2.md` (era vuoto);
   Notify/UI/User `code-redundancy-*.md` → `redundancy-audit-2026-05-26.md`; Gdpr/Tenant/Media/Seo/
-  `Themes/Sixteen` → `git-merge-conflict-inventory-2026-04-28.md`; Notify/Lang/Tenant/Media → storie
+  `Themes/Sixteen` → `git-merge-conflict-inventory-2.md`; Notify/Lang/Tenant/Media → storie
   `module-bmad-audit-20260928`. Fuori perimetro: da correggere dagli agenti dei rispettivi moduli.
 - **Classi base `XotBase*`, `XotData`, service provider**: nessuna modifica (firme usate ovunque).
 - **`docs/-integration/`**: file che iniziano con `-` (`--tips.md`…), residuo di un prefisso rimosso;
@@ -71,4 +71,4 @@ Test: `tests/Unit/Actions/File/AssetActionsTest.php` +2 casi (asset di tema, ass
 - Correggere i link esterni elencati sopra.
 - Decidere sul ripiego `resources/` di `AssetAction` (test + inventario).
 - Classificare `consolidated/`, `parcheggio/`, `-integration/` e le coppie `snake_case`/`kebab-case`
-  in radice `docs/` (es. `code-quality.md` / `code_quality.md`).
+  in radice `docs/` (es. `code-quality.md` / `code-quality-2.md`).

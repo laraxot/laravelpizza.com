@@ -152,7 +152,7 @@ Prima di scrivere, questo file (nella sua versione precedente) e diversi satelli
 - `livewire-widget-decision-log.md` — aggiunta una voce che registra la correzione con data.
 - `../stories/12.1.retire-ui-http-livewire.story.md` — titolo e Acceptance Criteria includevano il ritiro di `Toast`; corretti per limitare lo scope a `DarkModeSwitcher`.
 
-`livewire-widget-conversion.md` (rinominato da `LIVEWIRE-WIDGET-CONVERSION.md` da una sessione concorrente su questo stesso modulo) era già marcato `status: superseded-stale` con puntatore a questo file: non necessita ulteriori modifiche, ma la sua diagnosi di fondo (niente `ThemeToggleWidget`/`ToastNotificationWidget` nuovi, perché un gemello Filament di `DarkModeSwitcher` esiste già) resta corretta e concorde con quanto verificato qui.
+`livewire-widget-conversion.md` (rinominato da `livewire-widget-conversion-2.md` da una sessione concorrente su questo stesso modulo) era già marcato `status: superseded-stale` con puntatore a questo file: non necessita ulteriori modifiche, ma la sua diagnosi di fondo (niente `ThemeToggleWidget`/`ToastNotificationWidget` nuovi, perché un gemello Filament di `DarkModeSwitcher` esiste già) resta corretta e concorde con quanto verificato qui.
 
 `livewire-widget-prd.md` (FR-UI-002: "HTTP Toast assente se nessun chiamante") non necessita correzioni: è formulato come condizione, e la condizione ("nessun chiamante") qui risulta verificata come falsa, quindi il requisito semplicemente non si applica — non prescrive comunque il ritiro.
 

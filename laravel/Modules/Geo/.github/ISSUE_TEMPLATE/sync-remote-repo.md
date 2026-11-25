@@ -72,7 +72,7 @@ bash bashscripts/git/subtrees/sync_remote_repo.sh --org=laraxot --dry-run
 
 - [ ] `bashscripts/docs/git/SYNC_REMOTE_REPO_SCRIPT.md`
 - [ ] `.agents/skills/sync-remote-repo/SKILL.md`
-- [ ] `docs/agent_teams.md`
+- [ ] `docs/agent-teams-2.md`
 
 ### Notes
 

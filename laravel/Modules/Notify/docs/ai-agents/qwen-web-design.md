@@ -170,7 +170,7 @@ discussions: []
 <<<<<<< HEAD
 <<<<<<< .merge_file_Uqo8JI
 <<<<<<< .merge_file_jENU3G
-- [QWEN.md originale](../../qwen.md)
+- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -178,22 +178,22 @@ discussions: []
 >>>>>>> .merge_file_x2YkbG
 =======
 >>>>>>> .merge_file_vVFEHV
-- [qwen.md originale](../../qwen.md)
+- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
 =======
 <<<<<<< HEAD
-- [QWEN.md originale](../../qwen.md)
+- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
 =======
-- [qwen.md originale](../../qwen.md)
+- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_Uqo8JI
 <<<<<<< .merge_file_jENU3G
 =======
-- [QWEN.md originale](../../qwen.md)
+- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_x2YkbG
 =======
 >>>>>>> .merge_file_vVFEHV
-- [Index principale](./index.md)
+- [Index principale](../../../Lang/docs/wiki/integrations/_da-riconciliare/index-3.md)

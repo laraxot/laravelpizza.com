@@ -8,7 +8,7 @@ qmd: "index user module wiki index"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./AGENTS.md"
+  - "./agents-2.md"
   - "./log.md"
 ---
 

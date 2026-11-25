@@ -59,9 +59,9 @@ Seeders for geographical data are provided to populate the database with initial
 4. Keep all geographical business logic within this module
 
 ## Related Documentation
-- [Geo Module API Reference](./api.md)
+- [Geo Module API Reference](../../User/docs/api-2.md)
 - [Data Models](./models.md)
-- [Migrations](./migrations.md)
+- [Migrations](../../Lang/docs/migrations-3.md)
 
 ## Separazione regione e provincia negli indirizzi italiani
 
@@ -94,7 +94,7 @@ Per tutti gli indirizzi italiani è obbligatorio:
 - **Sempre** estendere BaseModel.
 - **Aggiornare la documentazione e Xot/docs in caso di modifica della policy.
 
-> Vedi anche: Xot/docs/standards/coding-standards.md, Xot/docs/filosofia.md, Xot/docs/zen.md
+> Vedi anche: development/coding-standards-2.md, Xot/docs/filosofia.md, Xot/docs/zen.md
 
 ## Perché usare nullableUuidMorphs('model') invece di nullableMorphs('addressable')?
 
@@ -143,4 +143,4 @@ discussions: []
 
 ---
 
-> Vedi anche: Xot/docs/standards/coding-standards.md, Xot/docs/filosofia.md, Xot/docs/zen.md
+> Vedi anche: development/coding-standards-2.md, Xot/docs/filosofia.md, Xot/docs/zen.md

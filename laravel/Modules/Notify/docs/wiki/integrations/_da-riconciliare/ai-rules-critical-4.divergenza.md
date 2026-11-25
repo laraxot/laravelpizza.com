@@ -1,0 +1,30 @@
+---
+qmd: "ai rules critical.divergenza"
+issues: []
+discussions: []
+title: "Divergenza da riconciliare: AI_RULES_CRITICAL.md"
+module: Notify
+type: note
+tags: [xot-5.39, riconciliazione, docs-ownership]
+created: 2026-08-24
+<<<<<<< .merge_file_2DXiKc
+updated: 2026-11-23
+=======
+<<<<<<< HEAD
+updated: 2026-08-24
+=======
+updated: 2026-11-23
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_GpO6tL
+---
+
+# Divergenza: `AI_RULES_CRITICAL.md`
+
+Questo file veniva da `docs/wiki/integrations/modules/notify/AI_RULES_CRITICAL.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+
+- versione del modulo: `laravel/Modules/Notify/docs/ai-rules-critical-2.md`
+- versione recuperata: `laravel/Modules/Notify/docs/ai-rules-critical-2.md`
+
+Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
+
+Vedi [XOT-5.39](../../../stories/5.39.wiki-integrations-ownership.story.md).

@@ -119,6 +119,6 @@ protected string $view = 'ui::filament.tables.columns.icon';
 
 ## Riferimenti
 
-- [Laraxot Architectural Rules](../archive/architecture_rules.md)
+- [Laraxot Architectural Rules](../archive/architecture-rules-2.md)
 - [XotBaseIconColumn](../../../../Xot/app/Filament/Tables/Columns/XotBaseIconColumn.php)
 - [Blade Best Practices](https://laravel.com/docs/blade)

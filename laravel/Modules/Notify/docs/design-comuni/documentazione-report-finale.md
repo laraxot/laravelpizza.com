@@ -142,11 +142,11 @@ docs/design-comuni/master-index.md
 │   └─→ screenshots/ (146 files)
 │
 ├─→ laravel/Modules/Cms/docs/
-│   ├─→ 00-index.md
+│   ├─→ 00-index-2.md
 │   └─→ design-comuni-faq.md
 │
 ├─→ laravel/Modules/UI/docs/
-│   ├─→ 00-index.md
+│   ├─→ 00-index-2.md
 │   └─→ design-comuni-faq-components.md
 │
 └─→ bashscripts/
@@ -269,8 +269,8 @@ docs/design-comuni/master-index.md
 
 ### Per AI Agents
 
-1. **Mappare**: [Cms Index](../laravel/Modules/Cms/docs/00-index.md)
-2. **Blocchi**: [Cms Content Blocks](../laravel/Modules/Cms/docs/content-blocks-system.md)
+1. **Mappare**: [Cms Index](../../../Cms/docs/00-index-2.md)
+2. **Blocchi**: [Cms Content Blocks](../../../Cms/docs/content-blocks-system-2.md)
 3. **UI**: [UI Blocks System](../laravel/Modules/UI/docs/blocks-system.md)
 4. **Test**: [Screenshot Script](../bashscripts/design-comuni/capture-faq-screenshots.js)
 

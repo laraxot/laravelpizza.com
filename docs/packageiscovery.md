@@ -550,4 +550,4 @@ In this codebase with 80+ packages and 17 modules, package discovery is not just
 **Related Documentation**:
 - [Service Provider Architecture](./service-provider-architecture.md)
 - [Module System](./packages.md)
-- [XotBase Pattern](../../CLAUDE.md#xotbase-pattern)
+- [XotBase Pattern](../laravel/Modules/Geo/docs/root-md-files/claude.md#xotbase-pattern)

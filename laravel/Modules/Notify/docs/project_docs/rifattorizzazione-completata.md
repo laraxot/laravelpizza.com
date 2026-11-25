@@ -94,7 +94,7 @@ docs/
 
 ### File
 - ✅ `resource-rules.md` (minuscolo con trattini)
-- ✅ `form-schema-conventions.md` (minuscolo con trattini)
+- ✅ `form-schema-conventions-2.md` (minuscolo con trattini)
 - ✅ `migration-standards.md` (minuscolo con trattini)
 - ✅ `README.md` (MAIUSCOLO per i file README)
 

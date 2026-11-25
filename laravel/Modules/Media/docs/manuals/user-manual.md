@@ -4,6 +4,7 @@ type: user-manual
 status: active
 module: Media
 updated: 2026-11-23
+qmd: "user manual manuale utente media"
 ---
 
 # Manuale utente Media

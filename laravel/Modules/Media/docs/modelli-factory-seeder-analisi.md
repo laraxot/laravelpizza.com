@@ -214,10 +214,10 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 ### Moduli Collegati
 - Modulo sanitario legacy - Documenti medici
 ---
-- [SaluteOra Module](../../SaluteOra/docs/modelli_factory_seeder_analisi.md) - Documenti medici
-- [User Module](../../User/docs/modelli_factory_seeder_analisi.md) - Avatar e documenti utente
-- [Cms Module](../../Cms/docs/modelli_factory_seeder_analisi.md) - Contenuti multimediali
-- [Notify Module](../../Notify/docs/modelli_factory_seeder_analisi.md) - Allegati notifiche
+- [SaluteOra Module](../../SaluteOra/docs/modelli-factory-seeder-analisi-2.md) - Documenti medici
+- [User Module](../../User/docs/modelli-factory-seeder-analisi-3.md) - Avatar e documenti utente
+- [Cms Module](../../Cms/docs/modelli-factory-seeder-analisi-2.md) - Contenuti multimediali
+- [Notify Module](../../Notify/docs/modelli-factory-seeder-analisi-2.md) - Allegati notifiche
 
 ### Librerie e Servizi
 - [Intervention Image](http://image.intervention.io/) - Image processing

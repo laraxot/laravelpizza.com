@@ -191,6 +191,6 @@ Per problemi o miglioramenti, controlla:
 
 ## Collegamenti Utili
 
-- [Documentazione Git Conflicts](../docs/git_conflicts_resolution.md)
+- [Documentazione Git Conflicts](../docs/git-conflicts-resolution-6.md)
 - [Script Documentation](../docs/fix_all_git_conflicts.md)
-- [Best Practices Git](../docs/git_scripts.md)
+- [Best Practices Git](../docs/git-scripts-2.md)

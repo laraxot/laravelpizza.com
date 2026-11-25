@@ -1998,4 +1998,4 @@ The UI module is a **well-architected, feature-rich Filament customization layer
 
 ## Contenuto unito da `architecture.md`
 
-See canonical documentation: ../../../Themes/docs/shared-components/ARCHITECTURE.md
+See canonical documentation: ../../../Themes/docs/shared-components/architecture-2.md

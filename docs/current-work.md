@@ -21,14 +21,14 @@ Durante il lavoro di oggi sono state identificate due problematiche principali n
 
 ### 1. Per le Interfacce
 
-- Creato il documento `INTERFACES_IMPLEMENTATION_GUIDE.md` che fornisce una guida completa all'implementazione delle interfacce nel modulo Notify
+- Creato il documento `interfaces-implementation-guide-2.md` che fornisce una guida completa all'implementazione delle interfacce nel modulo Notify
 - Chiarito che l'implementazione attuale con interfacce in sottodirectory è corretta e deve essere mantenuta
 - Documentato il processo di risoluzione dei problemi comuni relativi alle interfacce
 
 ### 2. Per le Traduzioni
 
-- Creato il documento `TRANSLATION_CONVENTIONS_CLARIFICATION.md` che spiega la discrepanza tra le convenzioni generali e quelle specifiche del modulo Notify
-- Creato il documento `TRANSLATIONS_IMPLEMENTATION_STATUS.md` che fornisce una panoramica completa dello stato attuale dell'implementazione delle traduzioni
+- Creato il documento `translation-conventions-clarification-2.md` che spiega la discrepanza tra le convenzioni generali e quelle specifiche del modulo Notify
+- Creato il documento `translations-implementation-status-2.md` che fornisce una panoramica completa dello stato attuale dell'implementazione delle traduzioni
 - Aggiornate le regole in `.windsurf/rules/translation-conventions-notify.md` e `.cursor/rules/translation-conventions-notify.md`
 
 ## Prossimi Passi
@@ -51,12 +51,12 @@ Durante il lavoro di oggi sono state identificate due problematiche principali n
 ## Documentazione Creata/Aggiornata
 
 ### Interfacce
-- `./INTERFACES_IMPLEMENTATION_GUIDE.md`
-- `./INTERFACE_STRUCTURE_CLARIFICATION.md`
+- `../laravel/Modules/Notify/docs/interfaces-implementation-guide-2.md`
+- `../laravel/Modules/Notify/docs/interface-structure-clarification-2.md`
 
 ### Traduzioni
-- `./TRANSLATION_CONVENTIONS_CLARIFICATION.md`
-- `./TRANSLATIONS_IMPLEMENTATION_STATUS.md`
+- `../laravel/Modules/Notify/docs/translation-conventions-clarification-2.md`
+- `../laravel/Modules/Notify/docs/translations-implementation-status-2.md`
 - `../../../.windsurf/rules/translation-conventions-notify.md`
 - `../../../.cursor/rules/translation-conventions-notify.md`
 
@@ -88,14 +88,14 @@ Durante il lavoro di oggi sono state identificate due problematiche principali n
 
 ### 1. Per le Interfacce
 
-- Creato il documento `INTERFACES_IMPLEMENTATION_GUIDE.md` che fornisce una guida completa all'implementazione delle interfacce nel modulo Notify
+- Creato il documento `interfaces-implementation-guide-2.md` che fornisce una guida completa all'implementazione delle interfacce nel modulo Notify
 - Chiarito che l'implementazione attuale con interfacce in sottodirectory è corretta e deve essere mantenuta
 - Documentato il processo di risoluzione dei problemi comuni relativi alle interfacce
 
 ### 2. Per le Traduzioni
 
-- Creato il documento `TRANSLATION_CONVENTIONS_CLARIFICATION.md` che spiega la discrepanza tra le convenzioni generali e quelle specifiche del modulo Notify
-- Creato il documento `TRANSLATIONS_IMPLEMENTATION_STATUS.md` che fornisce una panoramica completa dello stato attuale dell'implementazione delle traduzioni
+- Creato il documento `translation-conventions-clarification-2.md` che spiega la discrepanza tra le convenzioni generali e quelle specifiche del modulo Notify
+- Creato il documento `translations-implementation-status-2.md` che fornisce una panoramica completa dello stato attuale dell'implementazione delle traduzioni
 - Aggiornate le regole in `.windsurf/rules/translation-conventions-notify.md` e `.cursor/rules/translation-conventions-notify.md`
 
 ## Prossimi Passi
@@ -118,12 +118,12 @@ Durante il lavoro di oggi sono state identificate due problematiche principali n
 ## Documentazione Creata/Aggiornata
 
 ### Interfacce
-- `./INTERFACES_IMPLEMENTATION_GUIDE.md`
-- `./INTERFACE_STRUCTURE_CLARIFICATION.md`
+- `../laravel/Modules/Notify/docs/interfaces-implementation-guide-2.md`
+- `../laravel/Modules/Notify/docs/interface-structure-clarification-2.md`
 
 ### Traduzioni
-- `./TRANSLATION_CONVENTIONS_CLARIFICATION.md`
-- `./TRANSLATIONS_IMPLEMENTATION_STATUS.md`
+- `../laravel/Modules/Notify/docs/translation-conventions-clarification-2.md`
+- `../laravel/Modules/Notify/docs/translations-implementation-status-2.md`
 - `../../../.windsurf/rules/translation-conventions-notify.md`
 - `../../../.cursor/rules/translation-conventions-notify.md`
 

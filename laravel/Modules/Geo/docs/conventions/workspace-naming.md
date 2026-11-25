@@ -192,7 +192,7 @@ ls -la _*.code-workspace
 
 - [Project Structure](../../docs/project/structure.md)
 - [Coding Standards](../../docs/project/coding-standards.md)
-- [AGENTS.md](../../AGENTS.md)
+- [agents-2.md](../../agents-2.md)
 
 ### VS Code Documentation
 

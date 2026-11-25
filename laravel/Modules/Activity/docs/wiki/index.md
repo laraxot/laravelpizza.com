@@ -93,7 +93,7 @@ _No entities tracked yet._
 <<<<<<< .merge_file_TVBeIz
 <<<<<<< .merge_file_imDhTN
 - [rules-index](./rules/INDEX.md) — entrypoint locale per regole ricorrenti del modulo
-- [skills-index](./skills/INDEX.md) — skill on-demand, incluse skill condivise Xot
+- [skills-index](skills/index-3.md) — skill on-demand, incluse skill condivise Xot
 =======
 =======
 >>>>>>> .merge_file_6AHns7
@@ -108,7 +108,7 @@ _No entities tracked yet._
 =======
 <<<<<<< HEAD
 - [rules-index](./rules/INDEX.md) — entrypoint locale per regole ricorrenti del modulo
-- [skills-index](./skills/INDEX.md) — skill on-demand, incluse skill condivise Xot
+- [skills-index](skills/index-3.md) — skill on-demand, incluse skill condivise Xot
 =======
 - [rules-index](./rules/index.md) — entrypoint locale per regole ricorrenti del modulo
 - [skills-index](./skills/index.md) — skill on-demand, incluse skill condivise Xot

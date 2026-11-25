@@ -168,7 +168,7 @@ if (!$result->isValid()) {
 
 - [Installazione](installation.md)
 - [Architettura](architecture.md)
-- [API](api.md)
+- [API](api-2.md)
 - [Cache](cache.md)
 
 ## Collegamenti tra versioni di configuration.md

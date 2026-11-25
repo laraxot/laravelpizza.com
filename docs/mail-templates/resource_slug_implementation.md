@@ -163,8 +163,8 @@ return [
 
 ## Riferimenti
 
-- [Implementazione del Modello](./MODEL_SLUG_IMPLEMENTATION.md)
-- [Struttura della Migrazione](./MIGRATION_STRUCTURE.md)
-- [Guida alla Migrazione](../MAIL_TEMPLATE_MIGRATION_GUIDE.md)
+- [Implementazione del Modello](../../laravel/Modules/Notify/docs/mail-templates/model-slug-implementation-2.md)
+- [Struttura della Migrazione](../../laravel/Modules/Notify/docs/mail-templates/migration-structure-2.md)
+- [Guida alla Migrazione](../../laravel/Modules/Notify/docs/mail-template-migration-guide-2.md)
 - [Convenzioni Filament](../../../../../docs/FILAMENT_CONVENTIONS.md)
 - [Regole per Filament](../../../../../docs/FILAMENT_RULES.md)

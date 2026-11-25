@@ -21,7 +21,7 @@ This document defines the mandatory code quality standards for Laraxot projects.
 ### 1. Strict Typing and PHPStan Level 9+
 - **ALWAYS** use `declare(strict_types=1);` at the beginning of every PHP file
 - **MINIMUM** PHPStan level 9 for all new code
-- **NEVER** use `mixed` types unless absolutely necessary
+- **NEVER** use `mixed` types unless absolutely necessary: only as a last resort, in the two cases allowed by [ADR 0015](adr/0015-mixed-solo-come-ultima-spiaggia.md) (inherited parameter signature, untrusted external input narrowed immediately)
 - **ALWAYS** provide explicit return types and parameter types
 
 ```php
@@ -293,7 +293,7 @@ unset($translations['existing_key']); // MAI!
 - [xot-base-classes.md](archive/xot-base-classes.md)
 - [filament-resource-rules.md](./filament-resource-rules.md)
 - [migrations-consolidated.md](./migrations-consolidated.md)
-- [phpstan-implementation-guide.md](archive/old_tasks/phpstan-implementation-guide.md)
+- [phpstan-implementation-guide-2.md](consolidated/phpstan/phpstan-implementation-guide-2.md)
 - [translations-best-practices.md](./translations-best-practices.md)
 - [namespace-conventions.md](./namespace-conventions.md)
 
@@ -362,12 +362,12 @@ This document outlines the best practices for maintaining high code quality with
 
 ## Links to Related Documentation
 - [Xot Base Classes](../Xot/project_docs/XOT_BASE_CLASSES.md)
-- [Filament Extension Pattern](../../Notify/project_docs/FILAMENT_EXTENSION_PATTERN.md)
-- [Filament Extension Pattern Analysis](../../Notify/project_docs/FILAMENT_EXTENSION_PATTERN_ANALYSIS.md)
+- [Filament Extension Pattern](../../Notify/docs/filament-extension-pattern-2.md)
+- [Filament Extension Pattern Analysis](../../Notify/docs/filament-extension-pattern-analysis-2.md)
 - [Patient Module - Namespace Conventions](../../Patient/project_docs/NAMESPACE_CONVENTIONS.md)
 - [Patient Module - Validation Errors](../../Patient/project_docs/VALIDATION_ERRORS.md)
 - [PHP Strict Types](php-strict-types.md)
-- [PHPStan Implementation Guide](archive/old_tasks/phpstan-implementation-guide.md)
+- [PHPStan Implementation Guide](consolidated/phpstan/phpstan-implementation-guide-2.md)
 - [Naming Conventions](naming-conventions.md)
 - [Service Provider Best Practices](service-provider-best-practices.md)
-- [Filament Best Practices](filament-best-practices.md)
+- [Filament Best Practices](filament-best-practices-2.md)

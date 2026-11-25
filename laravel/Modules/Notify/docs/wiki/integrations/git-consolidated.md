@@ -31,7 +31,7 @@ Consolidated from **10** individual files.
 
 ## git-commit-push-rule
 
-*Consolidated from: `git-commit-push-rule.md`*
+*Consolidated from: `git-commit-push-rule-2.md`*
 
 title: "Git Commit & Push Workflow - AI Agent Rules"
 type: rule
@@ -45,10 +45,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -461,8 +461,8 @@ git push
 ### Documentazione
 - `docs/README.md` - Documentazione principale
 - `docs/architecture.md` - Architettura del sistema notifiche
-- `docs/notification_channels_implementation.md` - Implementazione canali
-- `docs/email_templates.md` - Template email
+- `docs/notification-channels-implementation-2.md` - Implementazione canali
+- `docs/email-templates-2.md` - Template email
 
 ## Modifiche Applicate
 
@@ -507,8 +507,8 @@ Tutti i file risolti rispettano:
 
 - [Documentazione Root Notify](../../../docs/modules/notify.md)
 - [Architecture Documentation](./architecture.md)
-- [Email Templates](./email_templates.md)
-- [Notification Channels](./notification_channels_implementation.md)
+- [Email Templates](../../email-templates-2.md)
+- [Notification Channels](../../notification-channels-implementation-2.md)
 
 ---
 *Aggiornato automaticamente dopo risoluzione conflitti Git*
@@ -531,10 +531,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -605,7 +605,7 @@ Tutti i file risolti rispettano:
 
 - [Documentazione Root Notify](../../../docs/modules/notify.md)
 - [Architecture Documentation](./architecture.md)
-- [Email Templates](./email-templates.md)
+- [Email Templates](../../email-templates-2.md)
 - [Notification Channels](./notification-channels-implementation-2.md)
 
 ---
@@ -1124,10 +1124,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -1274,10 +1274,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -1485,8 +1485,8 @@ ls -la bashscripts/ai/.github/workflows/
 ### Documentazione
 - `docs/README.md` - Documentazione principale
 - `docs/architecture.md` - Architettura del sistema notifiche
-- `docs/notification_channels_implementation.md` - Implementazione canali
-- `docs/email_templates.md` - Template email
+- `docs/notification-channels-implementation-2.md` - Implementazione canali
+- `docs/email-templates-2.md` - Template email
 
 ## Modifiche Applicate
 
@@ -1531,8 +1531,8 @@ Tutti i file risolti rispettano:
 
 - [Documentazione Root Notify](../../../../docs/modules/notify.md)
 - [Architecture Documentation](./architecture.md)
-- [Email Templates](./email_templates.md)
-- [Notification Channels](./notification_channels_implementation.md)
+- [Email Templates](../../email-templates-2.md)
+- [Notification Channels](../../notification-channels-implementation-2.md)
 
 ---
 *Aggiornato automaticamente dopo risoluzione conflitti Git*

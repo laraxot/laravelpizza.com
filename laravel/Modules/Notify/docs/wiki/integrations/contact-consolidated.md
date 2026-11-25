@@ -1863,7 +1863,7 @@ private function formatContacts(Client $record): string
 ### Pattern Corretti
 - [App ContactsColumn](../../laraxot/docs/contacts-column-implementation-complete.md)
 - [TechPlanner ContactsColumn](../../techplanner/docs/contacts-column-implementation-complete.md)
-- [Filament Best Practices](../../../../docs/filament-best-practices.md)
+- [Filament Best Practices](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
 
 ## AZIONI CORRETTIVE
 

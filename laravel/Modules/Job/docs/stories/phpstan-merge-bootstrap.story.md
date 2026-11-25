@@ -7,8 +7,8 @@ priority: high
 tags: [phpstan, merge, conflict-resolution, bootstrap, job]
 qmd: "job phpstan merge bootstrap conflict markers Status livewire schedule"
 related:
-  - "./02.Job-merge-conflict-resolution.story.md"
-  - "./01.Job-phpstan-fix.story.md"
+  - "./02.job-merge-conflict-resolution.story.md"
+  - "./01.job-phpstan-fix.story.md"
   - "./12.1.retire-job-http-livewire.story.md"
   - "../../../TechPlanner/docs/stories/phpstan-merge-bootstrap.story.md"
 ---
@@ -19,7 +19,7 @@ related:
 
 Chiudere i residui di marker merge nei PHP Job che bloccavano il bootstrap qualità
 (PHPStan / lint) dopo collisioni forward-only. Story canonica per questo batch;
-storico ampio già in [02.Job-merge-conflict-resolution.story.md](./02.Job-merge-conflict-resolution.story.md).
+storico ampio già in [02.job-merge-conflict-resolution.story.md](./02.job-merge-conflict-resolution.story.md).
 
 ## Perimetro risolto
 

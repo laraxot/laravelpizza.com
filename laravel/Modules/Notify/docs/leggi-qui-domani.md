@@ -147,7 +147,7 @@ cd /var/www/_bases/base_fixcity_fila5/laravel
 ## 📂 DOCUMENTI IMPORTANTI DA LEGGERE
 
 ### Prima di Iniziare (5 minuti)
-1. **[Session Summary](./phpstan/session-summary.md)** - Recap ieri
+1. **[Session Summary](wiki/session-summary-2.md)** - Recap ieri
 
 ### Durante il Lavoro (reference)
 2. **[Xot Roadmap](../Modules/Xot/docs/roadmap-and-issues.md)** - Errori dettagliati Xot

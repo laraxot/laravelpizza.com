@@ -188,8 +188,8 @@ Lanciare le invarianti coperte: `vendor/bin/pest Modules/Cms/tests/<file> --grou
 
 ## Indici e template
 
-- [INDEX.md](INDEX.md) — inventario machine-readable dei contratti Cms (elenca solo i tre contratti di risoluzione e middleware, non le Action di salvataggio config).
-- [_template.md](_template.md) — template minimo `type: contract` con `action: <FQCN>` e le sei sezioni.
+- [index.md](index.md) — inventario machine-readable dei contratti Cms (elenca solo i tre contratti di risoluzione e middleware, non le Action di salvataggio config).
+- [template.md](template.md) — template minimo `type: contract` con `action: <FQCN>` e le sei sezioni.
 <<<<<<< .merge_file_6WgKws
 <<<<<<< .merge_file_pgIabO
 <<<<<<< .merge_file_FWVAV2

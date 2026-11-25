@@ -487,16 +487,8 @@ tests/Unit
 
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/docs/structure.md)
-<<<<<<< .merge_file_o7UoE3
-<<<<<<< .merge_file_4b4TZp
 * [structure.md](../../../gdpr/docs/structure.md)
 * [structure.md](../../../notify/docs/structure.md)
-=======
-=======
->>>>>>> .merge_file_ate8uJ
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 * [structure.md](../../../gdpr/docs/structure.md)
 * [structure.md](../../../notify/docs/structure.md)
 * [structure.md](../../../xot/docs/structure.md)
@@ -512,11 +504,8 @@ tests/Unit
 * [structure.md](../../../cms/docs/structure.md)
 * [structure.md](../../../cms/docs/themes/structure.md)
 * [structure.md](../../../cms/docs/components/structure.md)
-=======
->>>>>>> laraxot/dev
 * [structure.md](../../../Gdpr/docs/structure.md)
 * [structure.md](../../../Notify/docs/structure.md)
->>>>>>> .merge_file_2Z5jxo
 * [structure.md](../../../xot/docs/structure.md)
 * [structure.md](../../../xot/docs/base/structure.md)
 * [structure.md](../../../xot/docs/config/structure.md)
@@ -528,20 +517,8 @@ tests/Unit
 * [structure.md](../../../tenant/docs/structure.md)
 * [structure.md](../../../activity/docs/structure.md)
 * [structure.md](../../../cms/docs/structure.md)
-<<<<<<< .merge_file_4b4TZp
 * [structure.md](../../../cms/docs/themes/structure.md)
 * [structure.md](../../../cms/docs/components/structure.md)
-=======
-* [structure.md](../../../Cms/docs/themes/structure.md)
-* [structure.md](../../../Cms/docs/components/structure.md)
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_o7UoE3
->>>>>>> .merge_file_2Z5jxo
-=======
->>>>>>> .merge_file_ate8uJ
 * [structure.md](../../../Gdpr/docs/structure.md)
 * [structure.md](../../../Notify/docs/structure.md)
 * [structure.md](../../../Xot/docs/structure.md)
@@ -562,5 +539,5 @@ tests/Unit
 
 - Tutti i comandi console sono autoregistrati tramite la struttura di XotBaseServiceProvider.
 - Non aggiungere mai manualmente $this->commands([...]) nei provider.
-- Perché? Vedi [lang-service-provider.md](./lang-service-provider.md) e [PHILOSOPHY.md](./PHILOSOPHY.md)
-- Perché? Vedi [lang-service-provider.md](./lang-service-provider.md) e [PHILOSOPHY.md](./philosophy.md)
+- Perché? Vedi [lang-service-provider-3.md](../lang-service-provider-3.md) e [philosophy-3.md](../philosophy-3.md)
+- Perché? Vedi [lang-service-provider-3.md](../lang-service-provider-3.md) e [philosophy-3.md](../philosophy-3.md)

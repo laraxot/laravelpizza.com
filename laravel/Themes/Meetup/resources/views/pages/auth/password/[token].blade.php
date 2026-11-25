@@ -20,6 +20,9 @@ use function Laravel\Folio\{middleware, name};
 middleware(['guest']);
 name('password.reset');
 
+/**
+ * @see Themes/Meetup/docs/authentication-ui-ux.md
+ */
 new class extends Component
 {
     #[Validate('required')]

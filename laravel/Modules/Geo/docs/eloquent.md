@@ -9,7 +9,7 @@ issues: []
 discussions: []
 module: theme
 topic: eloquent
-canonical: ../../../Themes/docs/shared-components/--eloquent.md
+canonical: ../../../Themes/docs/shared-components/eloquent-2.md
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/--eloquent.md
+See canonical documentation: ../../../Themes/docs/shared-components/eloquent-2.md

@@ -195,6 +195,6 @@ try {
 
 - [Documentazione Root](../../../../docs/README.md)
 - [Documentazione Modulo Notify](./README.md)
-- [Documentazione Template Email](./email_templates.md)
-- [Guida all'utilizzo di SpatieEmail](./spatie_email_usage_guide.md)
+- [Documentazione Template Email](./email-templates-2.md)
+- [Guida all'utilizzo di SpatieEmail](./spatie-email-usage-guide-2.md)
 - [Documentazione Filament Resources](./filament-resources.md)

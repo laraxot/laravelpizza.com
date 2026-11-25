@@ -165,5 +165,5 @@ class MioRelatedRelationManager extends XotBaseRelationManager
 -   **Coerenza**: Mantieni la coerenza con le altre implementazioni di Filament nel progetto.
 
 ---
-*Vedi anche: [Regole Generali Filament nel Modulo Xot](./filament_best_practices.md)* (Assumendo che esista o verrà creato un file del genere)
+*Vedi anche: [Regole Generali Filament nel Modulo Xot](./filament-best-practices-2.md)* (Assumendo che esista o verrà creato un file del genere)
 *Vedi anche: [Documentazione Ufficiale Filament](https://filamentphp.com/docs/3.x/relations/overview)* (Per concetti base di Filament)

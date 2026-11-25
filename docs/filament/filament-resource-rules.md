@@ -184,4 +184,4 @@ class DoctorResource extends XotBaseResource
 
 - [Filament Form Builder](/project_docs/filament-form-builder.md)
 - [Gestione delle Traduzioni](/project_docs/translation-management.md)
-- [Estensione delle Classi Filament](/project_docs/filament-extension-pattern.md)
+- [Estensione delle Classi Filament](/../../laravel/Modules/Notify/docs/filament-extension-pattern-2.md)

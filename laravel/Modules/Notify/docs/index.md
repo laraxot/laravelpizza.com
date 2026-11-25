@@ -84,9 +84,9 @@ This document serves as the central index for the Notify module, providing guida
 
 ## Links to Related Documentation
 - [Architecture Overview](./architecture.md)
-- [Notification Channels Implementation](./notification_channels_implementation.md)
-- [Email Templates](./email_templates.md)
-- [SMS Implementation](./sms_implementation.md)
+- [Notification Channels Implementation](./notification-channels-implementation-2.md)
+- [Email Templates](./email-templates-2.md)
+- [SMS Implementation](./sms-implementation-2.md)
 - [Troubleshooting](./troubleshooting.md)
 # Indice della Documentazione - Modulo Notify
 
@@ -110,7 +110,7 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 <<<<<<< HEAD
 <<<<<<< .merge_file_bQM8Ha
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
-- [Standard di Documentazione](../../../../docs/documentation_standards.md)
+- [Standard di Documentazione](../../../../docs/documentation-standards-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -119,7 +119,7 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 =======
 <<<<<<< HEAD
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
-- [Standard di Documentazione](../../../../docs/documentation_standards.md)
+- [Standard di Documentazione](../../../../docs/documentation-standards-2.md)
 =======
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_bQM8Ha
@@ -130,7 +130,7 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - [Documentazione Generale SaluteOra](../../../../docs/README.md)
 - [Documentazione Generale SaluteOra](../../../../docs/README.md)
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
-- [Standard di Documentazione](../../../../docs/DOCUMENTATION_STANDARDS.md)
+- [Standard di Documentazione](../../User/docs/documentation-standards-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_bQM8Ha
@@ -140,7 +140,7 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 >>>>>>> laraxot/dev
 =======
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
-- [Standard di Documentazione](../../../../docs/documentation_standards.md)
+- [Standard di Documentazione](../../../../docs/documentation-standards-2.md)
 =======
 >>>>>>> .merge_file_Wr1dJu
 >>>>>>> laraxot/dev
@@ -180,36 +180,36 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 
 ### Sistema Email
 - [Sistema Email Database](./database-mail-system.md) - Sistema di gestione delle email basato su database
-- [Code Email](./database_mail_queue.md) - Sistema di code per l'invio di email
-- [Template Email](./email_templates.md) - Struttura e utilizzo dei template email
-- [Best Practices Email](./email_best_practices.md) - Linee guida per le email
-- [Template Responsivi](./responsive_email_templates.md) - Implementazione di template email responsivi
+- [Code Email](./database-mail-queue-2.md) - Sistema di code per l'invio di email
+- [Template Email](./email-templates-2.md) - Struttura e utilizzo dei template email
+- [Best Practices Email](./email-best-practices-2.md) - Linee guida per le email
+- [Template Responsivi](./responsive-email-templates-2.md) - Implementazione di template email responsivi
 
 ### Canali di Notifica
-- [Implementazione Canali](./notification_channels_implementation.md) - Implementazione dei canali di notifica
-- [SMS](./sms_implementation.md) - Implementazione del canale SMS
-- [WhatsApp](./whatsapp_channel.md) - Implementazione del canale WhatsApp
-- [Telegram](./telegram_channel.md) - Implementazione del canale Telegram
+- [Implementazione Canali](./notification-channels-implementation-2.md) - Implementazione dei canali di notifica
+- [SMS](./sms-implementation-2.md) - Implementazione del canale SMS
+- [WhatsApp](./whatsapp-channel-2.md) - Implementazione del canale WhatsApp
+- [Telegram](./telegram-channel-2.md) - Implementazione del canale Telegram
 
 ### Filament UI
 - [Risorse Filament](./filament-resources.md) - Componenti Filament Resources
 - [Pagine Filament](./filament-pages.md) - Componenti Filament Pages
-- [Convenzioni Filament](./filament_extension_pattern.md) - Pattern di estensione per Filament
+- [Convenzioni Filament](./filament-extension-pattern-2.md) - Pattern di estensione per Filament
 
 ### Configurazione
-- [Struttura Config](./config_structure.md) - Struttura dei file di configurazione
-- [Configurazione SMS](./sms_config_structure.md) - Struttura della configurazione SMS
-- [Principi di Configurazione](./configurations_usage_principles.md) - Principi per l'utilizzo delle configurazioni
+- [Struttura Config](./config-structure-2.md) - Struttura dei file di configurazione
+- [Configurazione SMS](./sms-config-structure-2.md) - Struttura della configurazione SMS
+- [Principi di Configurazione](./configurations-usage-principles-2.md) - Principi per l'utilizzo delle configurazioni
 
 ### Pattern e Architettura
-- [Pattern Factory](./factory_pattern_analysis.md) - Analisi del pattern Factory
-- [Risoluzione Dinamica delle Classi](./dynamic_class_resolution.md) - Pattern di risoluzione dinamica delle classi
+- [Pattern Factory](./factory-pattern-analysis-2.md) - Analisi del pattern Factory
+- [Risoluzione Dinamica delle Classi](./dynamic-class-resolution-2.md) - Pattern di risoluzione dinamica delle classi
 - [Queueable Actions](./queueable-action.md) - Utilizzo di Spatie Queueable Actions
 
 ### Standard e Traduzioni
-- [Convenzioni di Naming](./naming_conventions.md) - Standard per i nomi di file e classi
+- [Convenzioni di Naming](./naming-conventions-2.md) - Standard per i nomi di file e classi
 - [Traduzioni](./translations.md) - Sistema di traduzioni
-- [Standard Traduzioni](./translation_standards.md) - Standard per le chiavi di traduzione
+- [Standard Traduzioni](./translation-standards-2.md) - Standard per le chiavi di traduzione
 
 ### Testing e Qualità
 <<<<<<< HEAD
@@ -299,23 +299,23 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 - [Index](./mail-templates/index.md) - Indice della documentazione sui template email
 <<<<<<< HEAD
 <<<<<<< .merge_file_bQM8Ha
-- [Implementazione Slug](./mail-templates/mail_template_slug_implementation.md) - Implementazione del campo slug
+- [Implementazione Slug](./mail-templates/mail-template-slug-implementation-2.md) - Implementazione del campo slug
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_Wr1dJu
-- [Implementazione Slug](./mail-templates/MAIL_TEMPLATE_SLUG_IMPLEMENTATION.md) - Implementazione del campo slug
+- [Implementazione Slug](mail-template-slug-implementation-2.md) - Implementazione del campo slug
 =======
 <<<<<<< HEAD
-- [Implementazione Slug](./mail-templates/mail_template_slug_implementation.md) - Implementazione del campo slug
+- [Implementazione Slug](./mail-templates/mail-template-slug-implementation-2.md) - Implementazione del campo slug
 =======
-- [Implementazione Slug](./mail-templates/MAIL_TEMPLATE_SLUG_IMPLEMENTATION.md) - Implementazione del campo slug
+- [Implementazione Slug](mail-template-slug-implementation-2.md) - Implementazione del campo slug
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_bQM8Ha
 =======
-- [Implementazione Slug](./mail-templates/mail_template_slug_implementation.md) - Implementazione del campo slug
+- [Implementazione Slug](./mail-templates/mail-template-slug-implementation-2.md) - Implementazione del campo slug
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
@@ -326,9 +326,9 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 
 ## Collegamenti alla Documentazione Correlata
 - [Panoramica Architettura](./architecture.md)
-- [Implementazione Canali Notifica](./notification_channels_implementation.md)
-- [Template Email](./email_templates.md)
-- [Implementazione SMS](./sms_implementation.md)
+- [Implementazione Canali Notifica](./notification-channels-implementation-2.md)
+- [Template Email](./email-templates-2.md)
+- [Implementazione SMS](./sms-implementation-2.md)
 - [Troubleshooting](./troubleshooting.md)
 
 ## Note sulla Manutenzione
@@ -341,7 +341,7 @@ Ultimo aggiornamento: 14 Maggio 2025
 
 ## Risoluzione conflitti e standard
 - Il file `lang/it/notify_theme.php` è stato risolto manualmente mantenendo PSR-12, strict_types, array short syntax e solo chiavi effettive, come richiesto dagli standard PHPStan livello 10.
-- Il file `NOTIFICATION_CHANNELS_IMPLEMENTATION.md` è stato risolto manualmente mantenendo la versione più aggiornata e coerente con le best practice architetturali del modulo Notify.
+- Il file `notification-channels-implementation-2.md` è stato risolto manualmente mantenendo la versione più aggiornata e coerente con le best practice architetturali del modulo Notify.
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 ## Note sulla Manutenzione
@@ -359,18 +359,18 @@ Questa documentazione viene aggiornata regolarmente. Prima di apportare modifich
 ## Risoluzione Conflitti e Standard
 - **Gennaio 2025**: Risoluzione sistematica di tutti i conflitti Git nei file di documentazione:
   - `index.md` - Unificato contenuto italiano e inglese mantenendo struttura completa
-  - `database_mail_queue.md` - Rimossi marcatori conflitto, aggiornati path di sistema
-  - `database_mail_system.md` - Puliti conflitti nelle sezioni bash e riferimenti
-  - `database_mail.md` - Risolti conflitti nei template e riferimenti esterni
+  - `database-mail-queue-2.md` - Rimossi marcatori conflitto, aggiornati path di sistema
+  - `database-mail-system-2.md` - Puliti conflitti nelle sezioni bash e riferimenti
+  - `database-mail-2.md` - Risolti conflitti nei template e riferimenti esterni
 - Il file `lang/it/notify_theme.php` è stato risolto manualmente mantenendo PSR-12, strict_types, array short syntax e solo chiavi effettive, come richiesto dagli standard PHPStan livello 10
-- Il file `NOTIFICATION_CHANNELS_IMPLEMENTATION.md` è stato risolto manualmente mantenendo la versione più aggiornata e coerente con le best practice architetturali del modulo Notify
+- Il file `notification-channels-implementation-2.md` è stato risolto manualmente mantenendo la versione più aggiornata e coerente con le best practice architetturali del modulo Notify
 - **Filosofia di risoluzione**: Approccio olistico con analisi manuale approfondita, mantenimento integrità architetturale, documentazione bidirezionale aggiornata
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 Ultimo aggiornamento: 14 Maggio 2025
 
 ## Risoluzione conflitti e standard
 - Il file `lang/it/notify_theme.php` è stato risolto manualmente mantenendo PSR-12, strict_types, array short syntax e solo chiavi effettive, come richiesto dagli standard PHPStan livello 10.
-- Il file `NOTIFICATION_CHANNELS_IMPLEMENTATION.md` è stato risolto manualmente mantenendo la versione più aggiornata e coerente con le best practice architetturali del modulo Notify.
+- Il file `notification-channels-implementation-2.md` è stato risolto manualmente mantenendo la versione più aggiornata e coerente con le best practice architetturali del modulo Notify.
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 <<<<<<< HEAD

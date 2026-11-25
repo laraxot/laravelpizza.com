@@ -11,10 +11,10 @@
 Questo documento sostituisce e consolida **26+ file migrazioni duplicati** trovati in tutti i moduli.
 
 ### ❌ File da NON Creare Più
-- `migrations.md` in qualsiasi modulo
-- `migration-guide.md` duplicati
-- `migration_best_practices.md` sparsi
-- `migration_rules.md` in ogni modulo
+- `migrations-3.md` in qualsiasi modulo
+- `migration-guide-2.md` duplicati
+- `migration-best-practices-3.md` sparsi
+- `migration-rules-2.md` in ogni modulo
 - Qualsiasi documentazione migrazioni specifica di modulo
 
 ### ✅ Unica Fonte di Verità
@@ -416,33 +416,33 @@ Tutti questi file sono DUPLICATI e vanno eliminati:
 
 ```bash
 # Activity
-rm Modules/Activity/project_docs/database/migrations.md
+rm Modules/Lang/docs/migrations-3.md
 
 # Cms
 rm Modules/Cms/project_docs/migration.md
 
 # Gdpr
-rm Modules/Gdpr/project_docs/migrations.md
+rm Modules/Lang/docs/migrations-3.md
 
 # Geo
-rm Modules/Geo/project_docs/migration-guide.md
-rm Modules/Geo/project_docs/migration-naming-pattern.md
-rm Modules/Geo/project_docs/migration_guide.md
-rm Modules/Geo/project_docs/migration_naming_pattern.md
+rm Modules/Geo/docs/migration-guide-2.md
+rm Modules/Geo/docs/migration-naming-pattern-2.md
+rm Modules/Geo/docs/migration-guide-2.md
+rm Modules/Geo/docs/migration-naming-pattern-2.md
 
 # Lang
-rm Modules/Lang/project_docs/migration_best_practices.md
-rm Modules/Lang/project_docs/migration_corrections_summary.md
-rm Modules/Lang/project_docs/migration_patterns.md
+rm Modules/Lang/docs/migration-best-practices-3.md
+rm Modules/Lang/docs/migration-corrections-summary-2.md
+rm Modules/Lang/docs/migration-patterns-2.md
 
 # Notify
-rm Modules/Notify/project_docs/migration_changes.md
-rm Modules/Notify/project_docs/migration_rules.md
-rm Modules/Notify/project_docs/migrations.md
-rm Modules/Notify/project_docs/migrations_changelog.md
+rm Modules/Notify/docs/migration-changes-2.md
+rm Modules/Notify/docs/migration-rules-2.md
+rm Modules/Lang/docs/migrations-3.md
+rm Modules/Notify/docs/migrations-changelog-2.md
 
 # SaluteMo
-rm Modules/SaluteMo/project_docs/database/migrations.md
+rm Modules/Lang/docs/migrations-3.md
 
 # E tutti gli altri file duplicati...
 ```

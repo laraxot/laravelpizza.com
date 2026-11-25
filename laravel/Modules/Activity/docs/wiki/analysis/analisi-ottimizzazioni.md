@@ -37,7 +37,7 @@ il modulo **activity** è un sistema avanzato di audit trail e event sourcing ch
 ```
 event-sourcing.md / event_sourcing.md
 advanced-event-sourcing-patterns.md / advanced_event_sourcing_patterns.md
-filament-errors.md / filament_errors.md
+filament-errors-3.md / filament-errors-3.md
 phpstan-fixes.md / phpstan_fixes.md
 ```
 
@@ -151,7 +151,7 @@ docs/
 ├── api/                        # documentazione api
 │   ├── activity-logging.md     # logging attività
 │   ├── event-sourcing.md       # event sourcing
-│   └── filament-integration.md # integrazione filament
+│   └── filament-integration-3.md # integrazione filament
 ├── examples/                   # esempi pratici
 │   ├── bank-scenario.md        # scenario bancario
 │   ├── ecommerce-scenario.md   # scenario e-commerce

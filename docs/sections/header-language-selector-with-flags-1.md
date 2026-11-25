@@ -2,9 +2,9 @@
 
 ## Collegamenti correlati
 - [README modulo Cms](../readme.md)
-- [Documentazione User](/laravel/modules/user/docs/header_language_selector_with_flags.md)
+- [Documentazione User](/laravel/modules/user/docs/header-language-selector-with-flags-3.md)
 - [Documentazione Sezioni](./sections_structure.md)
-- [Best Practices Chiavi di Traduzione](/laravel/modules/lang/docs/translation_keys_best_practices.md)
+- [Best Practices Chiavi di Traduzione](/laravel/modules/lang/docs/translation-keys-best-practices-2.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
 ## Panoramica

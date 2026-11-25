@@ -57,8 +57,8 @@ discussions: []
 ### Correzioni Implementate
 
 1. **Documentazione Standard**
-   - Creato `Modules/Notify/docs/TRANSLATION_FILE_NAMING_RULES.md`
-   - Creato `Modules/Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md`
+   - Creato `Modules/Notify/docs/translation-file-naming-rules-2.md`
+   - Creato `Modules/Notify/docs/translation-file-structure-guide-2.md`
 
 2. **File Corretti**
    - Creato `Modules/Notify/lang/it/send_whatsapp.php` con struttura corretta
@@ -67,14 +67,14 @@ discussions: []
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
-   - Creato `Modules/Notify/docs/TRANSLATION_FILE_NAMING_RULES.md`
-   - Creato `Modules/Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md`
+   - Creato `Modules/Notify/docs/translation-file-naming-rules-2.md`
+   - Creato `Modules/Notify/docs/translation-file-structure-guide-2.md`
 
 2. **File Corretti**
    - Creato `Modules/Notify/lang/it/send_whatsapp.php` con struttura corretta
    - Aggiornato `Modules/Notify/lang/it/send_netfun_sms.php` con struttura completa
-   - Creato `Modules/Notify/docs/TRANSLATION_FILE_NAMING_RULES.md`
-   - Creato `Modules/Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md`
+   - Creato `Modules/Notify/docs/translation-file-naming-rules-2.md`
+   - Creato `Modules/Notify/docs/translation-file-structure-guide-2.md`
 
 2. **File Corretti**
    - Creato `Modules/Notify/lang/it/send_whatsapp.php` con struttura corretta
@@ -121,13 +121,13 @@ discussions: []
 ## Documentazione di Riferimento
 
 1. **Standard di Traduzione**
-   - [Regole Generali per le Traduzioni](../../Lang/docs/translation_keys_rules.md)
-   - [Best Practices per le Traduzioni](../../Lang/docs/translation_keys_best_practices.md)
+   - [Regole Generali per le Traduzioni](../../Lang/docs/translation-keys-rules-2.md)
+   - [Best Practices per le Traduzioni](../../Lang/docs/translation-keys-best-practices-2.md)
 
 2. **Guide Specifiche per Notify**
-   - [Convenzioni di Traduzione nel Modulo Notify](./translation_conventions.md)
-   - [Regole di Naming per i File di Traduzione](./translation_file_naming_rules.md)
-   - [Guida alla Struttura dei File di Traduzione](./translation_file_structure_guide.md)
+   - [Convenzioni di Traduzione nel Modulo Notify](./translation-conventions-2.md)
+   - [Regole di Naming per i File di Traduzione](./translation-file-naming-rules-2.md)
+   - [Guida alla Struttura dei File di Traduzione](./translation-file-structure-guide-2.md)
 
 ## Appendice: Elenco Completo dei File Non Conformi
 
@@ -199,8 +199,8 @@ Modules/Notify/lang/it/create_mail_template.php
 ### Correzioni Implementate
 
 1. **Documentazione Standard**
-   - Creato `Modules/Notify/docs/TRANSLATION_FILE_NAMING_RULES.md`
-   - Creato `Modules/Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md`
+   - Creato `Modules/Notify/docs/translation-file-naming-rules-2.md`
+   - Creato `Modules/Notify/docs/translation-file-structure-guide-2.md`
 
 2. **File Corretti**
    - Creato `Modules/Notify/lang/it/send_whatsapp.php` con struttura corretta
@@ -221,13 +221,13 @@ Modules/Notify/lang/it/create_mail_template.php
 ## Documentazione di Riferimento
 
 1. **Standard di Traduzione**
-   - [Regole Generali per le Traduzioni](../../Lang/docs/translation_keys_rules.md)
-   - [Best Practices per le Traduzioni](../../Lang/docs/translation_keys_best_practices.md)
+   - [Regole Generali per le Traduzioni](../../Lang/docs/translation-keys-rules-2.md)
+   - [Best Practices per le Traduzioni](../../Lang/docs/translation-keys-best-practices-2.md)
 
 2. **Guide Specifiche per Notify**
-   - [Convenzioni di Traduzione nel Modulo Notify](./translation_conventions.md)
-   - [Regole di Naming per i File di Traduzione](./translation_file_naming_rules.md)
-   - [Guida alla Struttura dei File di Traduzione](./translation_file_structure_guide.md)
+   - [Convenzioni di Traduzione nel Modulo Notify](./translation-conventions-2.md)
+   - [Regole di Naming per i File di Traduzione](./translation-file-naming-rules-2.md)
+   - [Guida alla Struttura dei File di Traduzione](./translation-file-structure-guide-2.md)
 
 ## Appendice: Elenco Completo dei File Non Conformi
 

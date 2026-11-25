@@ -38,4 +38,4 @@ related:
   - "./action-plan-immediate.md"
 ---
 
-Redundancy analysis available: docs/analysis/redundancies/summary.md
+Redundancy analysis available: bugs/summary-2.md

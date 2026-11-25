@@ -71,11 +71,11 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
 3. ✅ **quick-start.md** - Guida rapida sviluppatori con regole Laraxot
 4. ✅ **project-completion-status.md** - Tracking avanzamento progetto
 5. ✅ **excellence-year-note-snake.md** - Visione eccellenza e obiettivi
-6. ✅ **WORK-COMPLETED-.md.md** - Riepilogo tecnico aggiornamenti
+6. ✅ **work-completed-4.md** - Riepilogo tecnico aggiornamenti
 
 ### 🎫 Modulo App (4)
 ### 🎫 Modulo <nome progetto> (4)
-7. ✅ **API.md** - REST API completa (15+ endpoints, auth, examples)
+7. ✅ **api-2.md** - REST API completa (15+ endpoints, auth, examples)
 8. ✅ **USER_GUIDE.md** - Guida cittadini (15 sezioni, FAQ, best practices)
 9. ✅ **ADMIN_GUIDE.md** - Guida amministratori (18 sezioni, troubleshooting)
 10. ✅ **ROADMAP_2025.md** - Aggiornata timeline Q4 2025-Q2 2026
@@ -158,11 +158,11 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
 ├── 📊 ROOT LEVEL (11 docs strategici)
 │   ├── documentation-index.md          ✅ Indice generale
 │   ├── quick-start.md                  ✅ Guida rapida
-│   ├── roadmap-status-summary.md       ✅ Status master
+│   ├── roadmap-status-summary-2.md       ✅ Status master
 │   ├── excellence-year-note-snake.md              ✅ Visione eccellenza
 │   ├── project-completion-status.md    ✅ Tracking progetto
 │   ├── final-summary.md                ✅ Questo file
-│   └── WORK-COMPLETED-.md.md    ✅ Riepilogo tecnico
+│   └── work-completed-4.md    ✅ Riepilogo tecnico
 │
 ├── 📁 project_docs/
 │   ├── documentation-status.md         ✅ Stato docs
@@ -174,7 +174,7 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
     ├── Modules/<nome progetto>/docs/           ✅ 90% COMPLETO
     │   ├── README.md                   ✅ Completo
     │   ├── ROADMAP_2025.md             ✅ Aggiornato
-    │   ├── API.md                      ✅ NEW - Completo
+    │   ├── api-2.md                      ✅ NEW - Completo
     │   ├── USER_GUIDE.md               ✅ NEW - 15 sezioni
     │   ├── ADMIN_GUIDE.md              ✅ NEW - 18 sezioni
     │   └── [Altri docs tecnici]        ✅ Esistenti
@@ -184,7 +184,7 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
     │   ├── roadmap.md                  ✅ Aggiornato
     │   ├── 2FA_GUIDE.md                ✅ NEW - Implementazione completa
     │   ├── SSO_GUIDE.md                ✅ NEW - SAML + OIDC
-    │   └── API.md                      📋 TODO
+    │   └── api-2.md                      📋 TODO
     │
     ├── Modules/UI/docs/                🚧 70% COMPLETO
     │   ├── README.md                   ✅ Completo
@@ -193,7 +193,7 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
     │
     ├── Modules/Geo/docs/               🚧 75% COMPLETO
     │   ├── README.md                   ✅ Completo
-    │   ├── API.md                      📋 TODO
+    │   ├── api-2.md                      📋 TODO
     │   └── MAP_INTEGRATION.md          📋 TODO
     │
     └── Themes/Sixteen/docs/            🚧 78% COMPLETO
@@ -239,8 +239,8 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
   - Testing
 
 ### API Documentation (1)
-- ✅ **API.md** (App) - REST API completa
-- ✅ **API.md** (<nome progetto>) - REST API completa
+- ✅ **api-2.md** (App) - REST API completa
+- ✅ **api-2.md** (<nome progetto>) - REST API completa
   - 15+ endpoints documentati
   - Authentication (Sanctum)
   - Rate limiting
@@ -248,7 +248,7 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
   - Error handling
 
 ### Roadmap (4 aggiornate)
-- ✅ **roadmap-status-summary.md** - Master status
+- ✅ **roadmap-status-summary-2.md** - Master status
 - ✅ **App/ROADMAP_2025.md** - Timeline Q4 2025-Q2 2026
 - ✅ **<nome progetto>/ROADMAP_2025.md** - Timeline Q4 2025-Q2 2026
 - ✅ **User/roadmap.md** - Timeline Q4 2025-Q1 2026
@@ -281,15 +281,15 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
 
 ### Immediate (Questa Settimana)
 1. **UI Module** - COMPONENT_API.md, EXAMPLES.md
-2. **Geo Module** - API.md, MAP_INTEGRATION.md, GEOCODING.md
+2. **Geo Module** - api-2.md, MAP_INTEGRATION.md, GEOCODING.md
 3. **Sixteen Theme** - COMPONENT_DOCS.md, AGID_CHECKLIST.md
-4. **User Module** - API.md (Authentication endpoints)
+4. **User Module** - api-2.md (Authentication endpoints)
 
 ### Short Term (Prossime 2 Settimane)
 5. **Media Module** - UPLOAD_GUIDE.md, CDN_INTEGRATION.md
 6. **Notify Module** - CHANNELS.md, TEMPLATES.md, REALTIME.md
-7. **Comment Module** - API.md, MODERATION.md
-8. **Rating Module** - API.md, TYPES.md
+7. **Comment Module** - api-2.md, MODERATION.md
+8. **Rating Module** - api-2.md, TYPES.md
 
 ### Medium Term (Prossimo Mese)
 9. **Activity Module** - EVENT_TRACKING.md, ANALYTICS.md
@@ -338,7 +338,7 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
 - **Support**: support@laraxot.it
 
 ### Per API Developers
-- **API Documentation**: [API.md](./laravel/Modules/App/docs/API.md)
+- **API Documentation**: [api-2.md](./laravel/Modules/App/docs/api-2.md)
 - **Slack**: #<nome progetto>-dev
 
 ### Per Utenti
@@ -347,7 +347,7 @@ di eccellenza 2025 per la gestione delle segnalazioni urbane in Italia.
 - **Support**: support@<nome progetto>.it
 
 ### Per API Developers
-- **API Documentation**: [API.md](./laravel/Modules/<nome progetto>/docs/API.md)
+- **API Documentation**: [api-2.md](./laravel/Modules/<nome progetto>/docs/api-2.md)
 - **2FA Guide**: [2FA_GUIDE.md](./laravel/Modules/User/docs/2FA_GUIDE.md)
 - **SSO Guide**: [SSO_GUIDE.md](./laravel/Modules/User/docs/SSO_GUIDE.md)
 
@@ -372,7 +372,7 @@ Il progetto <nome progetto> ha raggiunto un livello di documentazione e organizz
 ## 📋 CHECKLIST FINALE
 
 ### Documentazione Strategica
-- [x] roadmap-status-summary.md aggiornato
+- [x] roadmap-status-summary-2.md aggiornato
 - [x] documentation-status.md creato
 - [x] documentation-index.md creato
 - [x] quick-start.md creato
@@ -381,7 +381,7 @@ Il progetto <nome progetto> ha raggiunto un livello di documentazione e organizz
 
 ### Modulo App
 ### Modulo <nome progetto>
-- [x] API.md creato
+- [x] api-2.md creato
 - [x] USER_GUIDE.md creato
 - [x] ADMIN_GUIDE.md creato
 - [x] ROADMAP_2025.md aggiornato
@@ -390,7 +390,7 @@ Il progetto <nome progetto> ha raggiunto un livello di documentazione e organizz
 - [x] 2FA_GUIDE.md creato
 - [x] SSO_GUIDE.md creato
 - [x] roadmap.md aggiornato
-- [ ] API.md da creare
+- [ ] api-2.md da creare
 
 ### Tema Sixteen
 - [x] ROADMAP_2025.md aggiornato

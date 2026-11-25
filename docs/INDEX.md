@@ -49,10 +49,10 @@ This document serves as the central index for the User module, providing guidanc
 - [Composer Dependencies](./composer-dependencies.md) - Dipendenze OAuth/login in Modules/User/composer.json (mai nel root)
 - [Auth Social Login Translations](./auth-social-login-translations.md) - Traduzioni e UI pulsanti social (Google, GitHub, Microsoft)
 - [BaseUser Model](./BaseUser.md)
-- [Authentication Pages Implementation](./AUTH_PAGES_IMPLEMENTATION.md)
-- [Profile Management](./PROFILE_MANAGEMENT.md)
-- [Routing Best Practices](./ROUTING_BEST_PRACTICES.md)
-- [Session Management](./SESSION_MANAGEMENT.md)
+- [Authentication Pages Implementation](../laravel/Modules/User/docs/auth-pages-implementation-3.md)
+- [Profile Management](../laravel/Modules/User/docs/profile-management-3.md)
+- [Routing Best Practices](../laravel/Modules/User/docs/routing-best-practices-2.md)
+- [Session Management](../laravel/Modules/User/docs/session-management-3.md)
 
 ## Sottocartelle
 
@@ -62,7 +62,7 @@ This document serves as the central index for the User module, providing guidanc
 
 ### Folio e Blade
 - [Documentazione Blade](./blade/INDEX.md) - Documentazione sui template Blade
-- [Componenti](./components/INDEX.md) - Documentazione sui componenti
+- [Componenti](./components/index-2.md) - Documentazione sui componenti
 
 ## Roadmap e Sviluppo Futuro
 - [Roadmap](./roadmap.md) - Piano di sviluppo futuro del modulo User

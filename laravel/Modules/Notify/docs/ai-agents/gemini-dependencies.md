@@ -116,7 +116,7 @@ composer run go
 <<<<<<< HEAD
 <<<<<<< .merge_file_JYM6mF
 <<<<<<< .merge_file_owG9Lw
-- [GEMINI.md originale](../../gemini.md)
+- [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -124,22 +124,22 @@ composer run go
 >>>>>>> .merge_file_NLHTWu
 =======
 >>>>>>> .merge_file_leqbA6
-- [gemini.md originale](../../gemini.md)
+- [gemini-2.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 =======
 <<<<<<< HEAD
-- [GEMINI.md originale](../../gemini.md)
+- [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 =======
-- [gemini.md originale](../../gemini.md)
+- [gemini-2.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_JYM6mF
 <<<<<<< .merge_file_owG9Lw
 =======
-- [GEMINI.md originale](../../gemini.md)
+- [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_NLHTWu
 =======
 >>>>>>> .merge_file_leqbA6
-- [Index principale](./index.md)
+- [Index principale](../../../Lang/docs/wiki/integrations/_da-riconciliare/index-3.md)

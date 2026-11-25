@@ -27,7 +27,7 @@ Regola operativa multi-agent: ogni file con marker `<<<<<<<` va preso in carico 
 - [ ] `laravel/Modules/Notify/docs/wiki/index.md`
 - [ ] `laravel/Modules/Geo/docs/wiki/index.md`
 - [ ] `laravel/Modules/Geo/docs/wiki/log.md`
-- [ ] `laravel/Modules/Geo/docs/wiki/AGENTS.md`
+- [ ] `laravel/Modules/Geo/docs/wiki/agents-2.md`
 - [ ] `laravel/Modules/Fixcity/docs/wiki/index.md`
 - [ ] `laravel/Modules/Fixcity/docs/wiki/log.md`
 
@@ -79,9 +79,9 @@ Regola operativa multi-agent: ogni file con marker `<<<<<<<` va preso in carico 
 - [ ] `docs/wiki/log.md`
 - [ ] `docs/raw/README.md`
 - [ ] `docs/wiki/concepts/no-docs-archive-rule.md`
-- [ ] `docs/correzioni-phpstan-completate_3.md`
+- [ ] `docs/correzioni-phpstan-completate-3-2.md`
 - [ ] `memory/MEMORY.md`
-- [ ] `laravel/Modules/Notify/docs/correzioni-phpstan-completate_3.md`
+- [ ] `laravel/Modules/Notify/docs/correzioni-phpstan-completate-3-2.md`
 - [ ] `_bmad/bmm/4-implementation/bmad-create-story/stories/1-1-segnalazione-ui-ux-improvement.md`
 
 ## Docs modulo

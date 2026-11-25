@@ -15,7 +15,7 @@ updated: 2026-09-24
 
 # Contributing to Gdpr
 
-Migrato da `CONTRIBUTING.md` in root (2026-09-24).
+Migrato da `contributing-2.md` in root (2026-09-24).
 
 ## Development
 

@@ -130,9 +130,9 @@ function validate_input() {
 ## COLLEGAMENTI ALLA DOCUMENTAZIONE PRINCIPALE
 
 - [Filosofia della Documentazione](/var/www/html/_bases/base_<nome progetto>_fila5_mono/docs/DOCUMENTATION_PHILOSOPHY.md) - Principi fondamentali di documentazione
-- [Patterns](/var/www/html/_bases/base_<nome progetto>_fila5_mono/docs/PATTERNS.md) - Pattern di progettazione adottati nel progetto
-- [Risoluzione Manuale dei Conflitti](/var/www/html/_bases/base_<nome progetto>_fila5_mono/docs/CONFLICT_RESOLUTION.md) - Principi generali per la risoluzione dei conflitti
-- [Risoluzione Conflitti negli Script Bash](/var/www/html/_bases/base_<nome progetto>_fila5_mono/bashscripts/docs/CONFLICT_RESOLUTION_BASH.md) - Linee guida specifiche per gli script bash
+- [Patterns](/var/www/html/_bases/base_<nome progetto>_fila5_mono/docs/patterns-2.md) - Pattern di progettazione adottati nel progetto
+- [Risoluzione Manuale dei Conflitti](/var/www/html/_bases/base_<nome progetto>../../conflict-resolution-2.md) - Principi generali per la risoluzione dei conflitti
+- [Risoluzione Conflitti negli Script Bash](/var/www/html/_bases/base_<nome progetto>../../utils/conflict-resolution-bash-2.md) - Linee guida specifiche per gli script bash
 
 ---
 

@@ -12,7 +12,7 @@ discussions: []
 # Ponytail-audit 2026-07-02: Media module findings
 
 Source: repo-wide ponytail-audit pattern (same pass as Xot and Notify module findings, see
-`Modules/Xot/docs/ponytail-audit-2026-07-02.md` and `Modules/Notify/docs/ponytail-audit-2026-07-02.md`).
+`Modules/Xot/docs/ponytail-audit-2.md` and `Modules/Notify/docs/ponytail-audit-2.md`).
 
 ## Finding
 
@@ -50,5 +50,5 @@ left in place as a minimal-diff choice).
 
 ## Related
 
-- Same audit pass as `Modules/Xot/docs/ponytail-audit-2026-07-02.md` (19 similar single-implementer
-  Contracts identified in Xot, issue #102) and `Modules/Notify/docs/ponytail-audit-2026-07-02.md`.
+- Same audit pass as `Modules/Xot/docs/ponytail-audit-2.md` (19 similar single-implementer
+  Contracts identified in Xot, issue #102) and `Modules/Notify/docs/ponytail-audit-2.md`.

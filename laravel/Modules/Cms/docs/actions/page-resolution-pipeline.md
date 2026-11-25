@@ -84,6 +84,6 @@ multilingua.
 ## Note architetturali
 
 - Tutte le Action seguono il pattern `Spatie\QueueableAction`: unico entrypoint
-  `execute()`, nessun repository — vedi [queueable-actions.md](../queueable-actions.md).
+  `execute()`, nessun repository — vedi [queueable-actions-2.md](../queueable-actions.md).
 - Nessuna di queste Action tocca `web.php`: sono chiamate dalle Folio page del tema
   attivo (`Themes/*/resources/views/pages/...`) o da componenti Blade.

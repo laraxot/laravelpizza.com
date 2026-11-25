@@ -18,12 +18,12 @@ updated: 2026-11-23
 >>>>>>> .merge_file_J6P1ST
 ---
 
-# Divergenza: `ARCHITECTURE_ANALYSIS.md`
+# Divergenza: `architecture-analysis-3.md`
 
-Questo file veniva da `docs/wiki/integrations/modules/notify/ARCHITECTURE_ANALYSIS.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+Questo file veniva da `docs/wiki/integrations/modules/notify/architecture-analysis-3.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
 
-- versione del modulo: `laravel/Modules/Notify/docs/ARCHITECTURE_ANALYSIS.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/ARCHITECTURE_ANALYSIS.md`
+- versione del modulo: `laravel/Modules/Notify/docs/architecture-analysis-2.md`
+- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/architecture-analysis-3.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 

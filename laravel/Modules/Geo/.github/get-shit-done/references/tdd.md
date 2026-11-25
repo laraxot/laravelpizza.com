@@ -95,7 +95,7 @@ Output: [Working, tested feature]
 </success_criteria>
 
 <output>
-After completion, create summary.md with:
+After completion, create summary-2.md with:
 - RED: What test was written, why it failed
 - GREEN: What implementation made it pass
 - REFACTOR: What cleanup was done (if any)

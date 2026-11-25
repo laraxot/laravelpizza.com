@@ -51,9 +51,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/model-classification-Modules.md
@@ -78,9 +78,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Analisi Ereditarietà Modelli - Modulo User
@@ -266,9 +266,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Analisi Ereditarietà Modelli - Modulo User
@@ -454,9 +454,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Analisi Ereditarietà Modelli - Modulo User
@@ -642,9 +642,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Analisi Ereditarietà Modelli - Modulo User
@@ -830,9 +830,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Correzioni Ereditarietà Modelli - Modulo User
@@ -1050,9 +1050,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Correzioni Ereditarietà Modelli - Modulo User
@@ -1286,9 +1286,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 - [Analisi Completa](./model-inheritance-analysis.md)
@@ -1318,9 +1318,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/model-inheritance-fixes.md
@@ -1345,9 +1345,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Regole di Ereditarietà dei Modelli - Modulo User
@@ -1636,9 +1636,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Analisi Ereditarietà Modelli - Modulo User
@@ -1824,9 +1824,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Correzioni Ereditarietà Modelli - Modulo User
@@ -2584,7 +2584,7 @@ Dopo le modifiche, eseguire:
 
 ## model_inheritance_fixes
 
-*Consolidated from: `model_inheritance_fixes.md`*
+*Consolidated from: `model-inheritance-fixes-4.md`*
 
 
 ## Data Implementazione
@@ -2791,13 +2791,13 @@ cd /var/www/_bases/base_<nome progetto>_fila4_mono/laravel/Modules/User
 ## Collegamenti
 
 <<<<<<< HEAD
-- [Analisi Completa](./MODEL_INHERITANCE_ANALYSIS.md)
+- [Analisi Completa](./model-inheritance-analysis-3.md)
 - [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
 <<<<<<< .merge_file_Edg1kc
 =======
 =======
 <<<<<<< HEAD
-- [Analisi Completa](./MODEL_INHERITANCE_ANALYSIS.md)
+- [Analisi Completa](./model-inheritance-analysis-3.md)
 - [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
 =======
 - [Analisi Completa](./model-inheritance-analysis.md)
@@ -2824,9 +2824,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/modelli-factory-seeder-analisi-Modules.md
@@ -3022,7 +3022,7 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 ### Moduli Collegati
 - [SaluteOra Module](../../SaluteOra/docs/modelli_factory_seeder_analisi.md)
 - [Tenant Module](../../Tenant/docs/modelli_factory_seeder_analisi.md)
-- [Notify Module](../../../../Notify/docs/modelli_factory_seeder_analisi.md)
+- [Notify Module](../../../../Notify/docs/modelli-factory-seeder-analisi-2.md)
 
 *Ultimo aggiornamento: Gennaio 2025*
 *Analisi completa di 35+ modelli attivi, sistema completo authentication/authorization*
@@ -3047,9 +3047,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Models Analysis - User Module
@@ -3128,9 +3128,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/models-analysis.md

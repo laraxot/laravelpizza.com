@@ -45,7 +45,7 @@
 
 ## Collegamenti
 - [Roadmap Principale](../../roadmap.md)
-- [Best Practices Sicurezza](../../BEST-PRACTICES.md#security)
+- [Best Practices Sicurezza](../../../laravel/Modules/Activity/docs/best-practices-3.md#security)
 - [Linee Guida Sicurezza](../../security/guidelines.md)
 ## Collegamenti tra versioni di status.md
 * [status.md](../../../xot/docs/roadmap/docs/status.md)

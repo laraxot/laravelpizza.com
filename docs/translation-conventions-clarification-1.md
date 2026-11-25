@@ -4,7 +4,7 @@
 
  sono state identificate convenzioni contrastanti per le traduzioni:
 
-### Convenzioni Generali (Modules/Lang/docs/TRANSLATION_KEYS_RULES.md)
+### Convenzioni Generali (Modules/Lang/docs/translation-keys-rules-2.md)
 
 ```php
 // Struttura gerarchica espansa
@@ -20,7 +20,7 @@
 // Esempio: user::auth.login.button.label
 ```
 
-### Convenzioni Specifiche del Modulo Notify (Modules/Notify/docs/TRANSLATION_CONVENTIONS.md)
+### Convenzioni Specifiche del Modulo Notify (Modules/Notify/docs/translation-conventions-2.md)
 
 ```php
 // Struttura con chiave 'navigation'
@@ -85,6 +85,6 @@ Il file `send_whats_app.php` e altri file simili nel modulo Notify seguono corre
 
 ## Riferimenti
 
-- [Convenzioni Generali di Traduzione](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
-- [Convenzioni Specifiche del Modulo Notify](./TRANSLATION_CONVENTIONS.md)
-- [Regole per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+- [Convenzioni Generali di Traduzione](../laravel/Modules/Lang/docs/translation-keys-rules-3.md)
+- [Convenzioni Specifiche del Modulo Notify](../laravel/Modules/Notify/docs/translation-conventions-2.md)
+- [Regole per le Chiavi di Traduzione](../laravel/Modules/Lang/docs/translation-keys-best-practices-2.md)

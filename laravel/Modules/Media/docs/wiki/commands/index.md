@@ -1,3 +1,8 @@
+---
+title: "Media Module - commands Index"
+type: note
+qmd: "media commands"
+---
 # Media Module - commands Index
 
 ## Purpose

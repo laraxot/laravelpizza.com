@@ -152,7 +152,7 @@ discussions: []
 .github/get-shit-done/
 ├── workflows/           # 33 workflow automatizzati
 ├── agents/              # Agenti AI (gsd-*.agent.md)
-├── templates/           # Template (project.md, state.md)
+├── templates/           # Template (project.md, state-2.md)
 └── bin/                 # Strumenti CLI
 ```
 
@@ -181,7 +181,7 @@ docs/project/
 - [ ] **1. Leggi Documentazione Esistente**
   - [ ] `docs/project/` per architettura
   - [ ] `.agents/docs/` per regole AI
-  - [ ] `qwen.md`, `AGENTS.md` per contesto
+  - [ ] `qwen-2.md`, `agents-2.md` per contesto
 
 - [ ] **2. Apri GitHub Issue**
   - [ ] Descrivi problema/feature
@@ -288,8 +288,8 @@ jobs:
 ### Documentazione Interna
 - `docs/project/gsd-and-bmad-workflow.md`
 - `docs/project/gsd-agent-coordination.md`
-- `AGENTS.md`
-- `qwen.md`
+- `agents-2.md`
+- `qwen-2.md`
 
 ### Risorse Esterne
 - [GSD GitHub](https://github.com/gsd-build/get-shit-done)

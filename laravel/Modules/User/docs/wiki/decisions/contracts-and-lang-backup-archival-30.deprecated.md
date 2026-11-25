@@ -10,4 +10,4 @@ related:
   - "./contracts-and-lang-backup-archival.md"
 ---
 
-> Questo file è stato rinominato in [contracts-and-lang-backup-archival-.deprecated.md](contracts-and-lang-backup-archival-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+> Questo file è stato rinominato in [contracts-and-lang-backup-archival-2.deprecated.md](contracts-and-lang-backup-archival-2.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.

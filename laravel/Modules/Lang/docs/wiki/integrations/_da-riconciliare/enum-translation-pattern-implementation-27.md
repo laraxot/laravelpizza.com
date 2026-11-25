@@ -68,7 +68,7 @@ public function getLabel(): string
 
 ### 2. Documentazione Root
 - **`docs/enum-translation-pattern.md`** - Guida completa per enum translation pattern
-- **`docs/indice_documentazione.md`** - Aggiornato con nuovo collegamento
+- **`docs/indice-documentazione-2.md`** - Aggiornato con nuovo collegamento
 
 ### 3. Documentazione Modulo UI
 - **`laravel/Modules/UI/docs/table-layout-enum-complete-guide.md`** - Aggiornato con best practices

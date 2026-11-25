@@ -2,7 +2,7 @@
 
 ## Collegamenti correlati
 - [README modulo Cms](./readme.md)
-- [Documentazione User](../../user/docs/header_language_avatar_implementation.md)
+- [Documentazione User](../../user/docs/header-language-avatar-implementation-4.md)
 - [Documentazione Sezioni](./sections_structure.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 

@@ -263,7 +263,7 @@ Durante lo sviluppo sono stati configurati i seguenti MCP servers in `.cursor/mc
 - 📄 [README.md](../../themes/meetup/resources/html/readme.md) - Guida completa HTML
 - 📄 [DESIGN_SYSTEM.md](./design_system.md) - Sistema design completo
 - 📄 [FEATURES.md](./features.md) - Requirements funzionali
-- 📄 [DATABASE_SCHEMA.md](./database_schema.md) - Schema database
+- 📄 [database-schema-2.md](../laravel/Modules/User/docs/database-schema-2.md) - Schema database
 - 📄 [INSTALLATION.md](./installation.md) - Installazione modulo
 
 ## 🎨 Design Decisions

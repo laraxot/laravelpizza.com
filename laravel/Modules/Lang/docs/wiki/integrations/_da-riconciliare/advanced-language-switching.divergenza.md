@@ -14,8 +14,8 @@ updated: 2026-08-24
 
 Questo file veniva da `docs/wiki/integrations/modules/lang/advanced_language_switching.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
 
-- versione del modulo: `laravel/Modules/Lang/docs/advanced_language_switching.md`
-- versione recuperata: `laravel/Modules/Lang/docs/wiki/integrations/_da-riconciliare/advanced_language_switching.md`
+- versione del modulo: `laravel/Modules/Lang/docs/advanced-language-switching-2.md`
+- versione recuperata: `laravel/Modules/Lang/docs/wiki/integrations/_da-riconciliare/advanced-language-switching-2.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 

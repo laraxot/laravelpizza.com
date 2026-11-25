@@ -2,26 +2,14 @@
 title: "Indice BMAD — UI"
 type: index
 status: active
-updated: 2026-11-16
+updated: 2026-11-24
 module: UI
-qmd: "indice BMAD UI audit purpose piano stories"
+qmd: "indice BMAD UI audit purpose piano stories phpstan canoni"
 ---
 
 # Indice BMAD — UI
 
-<<<<<<< .merge_file_pH6KSr
 - [Purpose](./purpose.md)
-=======
-<<<<<<< HEAD
-- [Purpose](./purpose.md)
-=======
-<<<<<<< HEAD
-- [Purpose](./purpose.md)
-=======
-- [Purpose](../wiki/purpose.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> .merge_file_ntzvGb
 - [Audit](./audit.md)
 - [Audit dettagliato](./audits/ui-audit.md)
 - [Piano di miglioramento](./piano-miglioramento.md)
@@ -31,3 +19,4 @@ qmd: "indice BMAD UI audit purpose piano stories"
 - [Story audit modulo](./stories/module-bmad-audit.story.md)
 - [ECC](../ecc/00-index.md)
 - [Purpose root](../purpose.md)
+- Qualità PHPStan (SSoT root docs): [phpstan-corrections.md](../phpstan-corrections.md), [phpstan-fixes.md](../phpstan-fixes.md) — snapshot month = stub/`*-historical`

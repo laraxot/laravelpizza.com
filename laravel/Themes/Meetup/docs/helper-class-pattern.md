@@ -94,4 +94,4 @@ Vedi: `Themes/Meetup/resources/views/components/blocks/events/detail.blade.php`
 ## Collegamenti
 
 - [Volt Class Pattern](./volt-class-pattern.md)
-- [Folio Routing](./folio_routing_system.md)
+- [Folio Routing](../../../Modules/Cms/docs/folio-routing-system-2.md)

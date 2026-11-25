@@ -828,7 +828,7 @@ Implementando queste soluzioni, il modulo Media potrà superare i principali col
 - [Roadmap Principale](./roadmap.md)
 - [Sintesi Colli di Bottiglia](../../../docs/performance_bottlenecks.md)
 - [Best Practices](../xot/docs/best-practices.md)
-- [Struttura Moduli](../xot/docs/module_structure.md)
+- [Struttura Moduli](../xot/docs/module-structure-2.md)
 
 ## Collegamenti tra versioni di BOTTLENECKS.md
 * [BOTTLENECKS.md](../../../xot/docs/bottlenecks.md)

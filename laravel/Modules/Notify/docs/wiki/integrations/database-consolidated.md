@@ -50,7 +50,7 @@ This file is deprecated.
 
 Use:
 
-- [database-mail](./database-mail.md)
+- [database-mail](../../database-mail-2.md)
 
 ---
 
@@ -70,10 +70,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -88,13 +88,13 @@ Il file `routes/web.php` del modulo Notify **deve rimanere vuoto**.
 
 **Vedi anche:**
 - [structure.md](structure.md#regola-sulle-rotte)
-- [grapesjs-filament.md](grapesjs-filament.md#regola-sulle-rotte)
+- [grapesjs-filament-2.md](grapesjs-filament-2.md#regola-sulle-rotte)
 
 ---
 
 ## Collegamenti correlati
 - [Regola sulle rotte vuote in structure.md](structure.md#regola-sulle-rotte)
-- [Regola sulle rotte vuote in grapesjs-filament.md](grapesjs-filament.md#regola-sulle-rotte)
+- [Regola sulle rotte vuote in grapesjs-filament-2.md](grapesjs-filament-2.md#regola-sulle-rotte)
 
 ## Panoramica
 
@@ -533,10 +533,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -640,7 +640,7 @@ testable class SendEmailTemplateAction {
 
 ## database-mail-enhancement
 
-*Consolidated from: `database-mail-enhancement.md`*
+*Consolidated from: `database-mail-enhancement-2.md`*
 
 <<<<<<< HEAD
 
@@ -762,7 +762,7 @@ This file is deprecated.
 
 Use:
 
-- [database-mail-queue](./database-mail-queue.md)
+- [database-mail-queue](../../database-mail-queue-2.md)
 
 ---
 
@@ -782,10 +782,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -1193,7 +1193,7 @@ php artisan queue:restart
 ```
 
 ## Collegamenti
-- [Database Mail System](database-mail-system.md)
+- [Database Mail System](database-mail-system-2.md)
 - [Mail Templates](database-mail-templates.md)
 - [Queue Configuration](../../../../docs/queue-configuration.md)
 
@@ -1205,7 +1205,7 @@ php artisan queue:restart
 
 ## database-mail-queue
 
-*Consolidated from: `database-mail-queue.md`*
+*Consolidated from: `database-mail-queue-2.md`*
 
 <<<<<<< HEAD
 
@@ -1588,7 +1588,7 @@ php artisan queue:restart
 ```
 
 ## Collegamenti
-- [Database Mail System](database-mail-system.md)
+- [Database Mail System](database-mail-system-2.md)
 - [Mail Templates](database-mail-templates.md)
 - [Queue Configuration](../../../../docs/queue-configuration.md)
 
@@ -1975,7 +1975,7 @@ php artisan queue:restart
 ```
 
 ## Collegamenti
-- [Database Mail System](database-mail-system.md)
+- [Database Mail System](database-mail-system-2.md)
 - [Mail Templates](database-mail-templates.md)
 - [Queue Configuration](../../../../docs/queue-configuration.md)
 
@@ -2380,7 +2380,7 @@ php artisan notify:mail-template:test
 
 ## Collegamenti
 - [Notify Module](../README.md)
-- [Email Templates](email-templates.md)
+- [Email Templates](email-templates-2.md)
 - [Mail Queue](mail-queue.md)
 
 ## Vedi Anche
@@ -2790,10 +2790,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -3109,7 +3109,7 @@ php artisan notify:mail-template:test
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [Email Templates](email-templates.md)
+- [Email Templates](email-templates-2.md)
 - [Mail Queue](mail-queue.md)
 
 ## Vedi Anche
@@ -3120,7 +3120,7 @@ php artisan notify:mail-template:test
 
 ## database-mail-system
 
-*Consolidated from: `database-mail-system.md`*
+*Consolidated from: `database-mail-system-2.md`*
 
 <<<<<<< HEAD
 
@@ -3433,7 +3433,7 @@ php artisan notify:mail-template:test
 
 ## Collegamenti
 - [Notify Module](../README.md)
-- [Email Templates](email-templates.md)
+- [Email Templates](email-templates-2.md)
 - [Mail Queue](mail-queue.md)
 
 ## Vedi Anche
@@ -3445,7 +3445,7 @@ php artisan notify:mail-template:test
 
 ## database-mail
 
-*Consolidated from: `database-mail.md`*
+*Consolidated from: `database-mail-2.md`*
 
 <<<<<<< HEAD
 
@@ -3464,13 +3464,13 @@ Il file `routes/web.php` del modulo Notify **deve rimanere vuoto**.
 
 **Vedi anche:**
 - [structure.md](structure.md#regola-sulle-rotte)
-- [grapesjs-filament.md](grapesjs-filament.md#regola-sulle-rotte)
+- [grapesjs-filament-2.md](grapesjs-filament-2.md#regola-sulle-rotte)
 
 ---
 
 ## Collegamenti correlati
 - [Regola sulle rotte vuote in structure.md](structure.md#regola-sulle-rotte)
-- [Regola sulle rotte vuote in grapesjs-filament.md](grapesjs-filament.md#regola-sulle-rotte)
+- [Regola sulle rotte vuote in grapesjs-filament-2.md](grapesjs-filament-2.md#regola-sulle-rotte)
 
 ## Panoramica
 
@@ -3896,7 +3896,7 @@ Cordiali saluti,<br>
 
 ## database_mail
 
-*Consolidated from: `database_mail.md`*
+*Consolidated from: `database-mail-2.md`*
 
 <<<<<<< HEAD
 
@@ -3915,13 +3915,13 @@ Il file `routes/web.php` del modulo Notify **deve rimanere vuoto**.
 
 **Vedi anche:**
 - [structure.md](structure.md#regola-sulle-rotte)
-- [grapesjs-filament.md](grapesjs-filament.md#regola-sulle-rotte)
+- [grapesjs-filament-2.md](grapesjs-filament-2.md#regola-sulle-rotte)
 
 ---
 
 ## Collegamenti correlati
 - [Regola sulle rotte vuote in structure.md](structure.md#regola-sulle-rotte)
-- [Regola sulle rotte vuote in grapesjs-filament.md](grapesjs-filament.md#regola-sulle-rotte)
+- [Regola sulle rotte vuote in grapesjs-filament-2.md](grapesjs-filament-2.md#regola-sulle-rotte)
 
 ## Panoramica
 
@@ -4346,7 +4346,7 @@ Cordiali saluti,<br>
 
 ## database_mail_enhancement
 
-*Consolidated from: `database_mail_enhancement.md`*
+*Consolidated from: `database-mail-enhancement-2.md`*
 
 <<<<<<< HEAD
 
@@ -4454,7 +4454,7 @@ testable class SendEmailTemplateAction {
 
 ## database_mail_queue
 
-*Consolidated from: `database_mail_queue.md`*
+*Consolidated from: `database-mail-queue-2.md`*
 
 <<<<<<< HEAD
 
@@ -4866,7 +4866,7 @@ php artisan queue:restart
 ```
 
 ## Collegamenti
-- [Database Mail System](database-mail-system.md)
+- [Database Mail System](database-mail-system-2.md)
 - [Mail Templates](database-mail-templates.md)
 - [Queue Configuration](../../../docs/queue-configuration.md)
 
@@ -4879,7 +4879,7 @@ php artisan queue:restart
 
 ## database_mail_system
 
-*Consolidated from: `database_mail_system.md`*
+*Consolidated from: `database-mail-system-2.md`*
 
 <<<<<<< HEAD
 
@@ -5191,7 +5191,7 @@ php artisan notify:mail-template:test
 
 ## Collegamenti
 - [Notify Module](../README.md)
-- [Email Templates](email-templates.md)
+- [Email Templates](email-templates-2.md)
 - [Mail Queue](mail-queue.md)
 
 ## Vedi Anche

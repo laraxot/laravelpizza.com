@@ -190,12 +190,12 @@ Durante l'audit delle traduzioni, sono state identificate numerose traduzioni ch
 ## Documentazione Aggiornata
 
 ### Moduli con Documentazione Aggiornata
-1. **Lang Module**: `laravel/Modules/Lang/docs/translation_errors_correction_2025.md`
+1. **Lang Module**: `laravel/Modules/Lang/docs/translation-errors-correction-3.md`
 2. **<nome progetto> Module**: `laravel/Modules/<nome progetto>/docs/translation_refactor_summary_2025.md`
 
 ### Collegamenti Bidirezionali
-- [Root Docs: Translation Standards](../../docs/translation_standards.md)
-- [Lang Module: Translation Best Practices](translation_best_practices.md)
+- [Root Docs: Translation Standards](../../docs/translation-standards-2.md)
+- [Lang Module: Translation Best Practices](translation-best-practices-2.md)
 - [<nome progetto> Module: Translation Guidelines](../<nome progetto>/docs/translation_guidelines.md)
 
 ## Riepilogo Statistiche

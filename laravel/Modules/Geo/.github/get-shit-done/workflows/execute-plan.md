@@ -10,11 +10,11 @@ discussions: []
 ---
 
 <purpose>
-Execute a phase prompt (plan.md) and create the outcome summary (summary.md).
+Execute a phase prompt (plan-2.md) and create the outcome summary (summary-2.md).
 </purpose>
 
 <required_reading>
-Read STATE.md before any operation to load project context.
+Read state-2.md before any operation to load project context.
 Read config.json for planning behavior settings.
 
 @.github/get-shit-done/references/git-integration.md
@@ -37,8 +37,8 @@ If `.planning/` missing: error.
 <step name="identify_plan">
 ```bash
 # Use plans/summaries from INIT JSON, or list files
-ls .planning/phases/XX-name/*-PLAN.md 2>/dev/null | sort
-ls .planning/phases/XX-name/*-SUMMARY.md 2>/dev/null | sort
+ls .planning/phases/XX-name/*-plan-2.md 2>/dev/null | sort
+ls .planning/phases/XX-name/*-summary-2.md 2>/dev/null | sort
 ```
 
 Find first PLAN without matching SUMMARY. Decimal phases supported (`01.1-hotfix/`):
@@ -49,7 +49,7 @@ PHASE=$(echo "$PLAN_PATH" | grep -oE '[0-9]+(\.[0-9]+)?-[0-9]+')
 ```
 
 <if mode="yolo">
-Auto-approve: `⚡ Execute {phase}-{plan}-PLAN.md [Plan X of Y for Phase Z]` → parse_segments.
+Auto-approve: `⚡ Execute {phase}-{plan}-plan-2.md [Plan X of Y for Phase Z]` → parse_segments.
 </if>
 
 <if mode="interactive" OR="custom with gates.execute_next_plan true">
@@ -66,7 +66,7 @@ PLAN_START_EPOCH=$(date +%s)
 
 <step name="parse_segments">
 ```bash
-grep -n "type=\"checkpoint" .planning/phases/XX-name/{phase}-{plan}-PLAN.md
+grep -n "type=\"checkpoint" .planning/phases/XX-name/{phase}-{plan}-plan-2.md
 ```
 
 **Routing by checkpoint type:**
@@ -112,7 +112,7 @@ Pattern B only (verify-only checkpoints). Skip for A/C.
 2. Per segment:
    - Subagent route: spawn gsd-executor for assigned tasks only. Prompt: task range, plan path, read full plan for context, execute assigned tasks, track deviations, NO SUMMARY/commit. Track via agent protocol.
    - Main route: execute tasks using standard flow (step name="execute")
-3. After ALL segments: aggregate files/deviations/decisions → create summary.md → commit → self-check:
+3. After ALL segments: aggregate files/deviations/decisions → create summary-2.md → commit → self-check:
    - Verify key-files.created exist on disk with `[ -f ]`
    - Check `git log --oneline --all --grep="{phase}-{plan}"` returns ≥1 commit
    - Append `## Self-Check: PASSED` or `## Self-Check: FAILED` to SUMMARY
@@ -126,7 +126,7 @@ Pattern B only (verify-only checkpoints). Skip for A/C.
 
 <step name="load_prompt">
 ```bash
-cat .planning/phases/XX-name/{phase}-{plan}-PLAN.md
+cat .planning/phases/XX-name/{phase}-{plan}-plan-2.md
 ```
 This IS the execution instructions. Follow exactly. If plan references CONTEXT.md: honor user's vision throughout.
 
@@ -320,16 +320,16 @@ fi
 
 <step name="generate_user_setup">
 ```bash
-grep -A 50 "^user_setup:" .planning/phases/XX-name/{phase}-{plan}-PLAN.md | head -50
+grep -A 50 "^user_setup:" .planning/phases/XX-name/{phase}-{plan}-plan-2.md | head -50
 ```
 
 If user_setup exists: create `{phase}-USER-SETUP.md` using template `.github/get-shit-done/templates/user-setup.md`. Per service: env vars table, account setup checklist, dashboard config, local dev notes, verification commands. Status "Incomplete". Set `USER_SETUP_CREATED=true`. If empty/missing: skip.
 </step>
 
 <step name="create_summary">
-Create `{phase}-{plan}-SUMMARY.md` at `.planning/phases/XX-name/`. Use `.github/get-shit-done/templates/summary.md`.
+Create `{phase}-{plan}-summary-2.md` at `.planning/phases/XX-name/`. Use `.github/get-shit-done/templates/summary.md`.
 
-**Frontmatter:** phase, plan, subsystem, tags | requires/provides/affects | tech-stack.added/patterns | key-files.created/modified | key-decisions | requirements-completed (**MUST** copy `requirements` array from plan.md frontmatter verbatim) | duration ($DURATION), completed ($PLAN_END_TIME date).
+**Frontmatter:** phase, plan, subsystem, tags | requires/provides/affects | tech-stack.added/patterns | key-files.created/modified | key-decisions | requirements-completed (**MUST** copy `requirements` array from plan-2.md frontmatter verbatim) | duration ($DURATION), completed ($PLAN_END_TIME date).
 
 Title: `# Phase [X] Plan [Y]: [Name] Summary`
 
@@ -341,7 +341,7 @@ Next: more plans → "Ready for {next-plan}" | last → "Phase complete, ready f
 </step>
 
 <step name="update_current_position">
-Update STATE.md using gsd-tools:
+Update state-2.md using gsd-tools:
 
 ```bash
 # Advance plan counter (handles last-plan edge case)
@@ -358,7 +358,7 @@ node .github/get-shit-done/bin/gsd-tools.cjs state record-metric \
 </step>
 
 <step name="extract_decisions_and_issues">
-From SUMMARY: Extract decisions and add to STATE.md:
+From SUMMARY: Extract decisions and add to state-2.md:
 
 ```bash
 # Add each decision from SUMMARY key-decisions
@@ -376,11 +376,11 @@ Update session info using gsd-tools:
 
 ```bash
 node .github/get-shit-done/bin/gsd-tools.cjs state record-session \
-  --stopped-at "Completed ${PHASE}-${PLAN}-PLAN.md" \
+  --stopped-at "Completed ${PHASE}-${PLAN}-plan-2.md" \
   --resume-file "None"
 ```
 
-Keep STATE.md under 150 lines.
+Keep state-2.md under 150 lines.
 </step>
 
 <step name="issues_review_gate">
@@ -395,7 +395,7 @@ Counts PLAN vs SUMMARY files on disk. Updates progress table row with correct co
 </step>
 
 <step name="update_requirements">
-Mark completed requirements from the plan.md frontmatter `requirements:` field:
+Mark completed requirements from the plan-2.md frontmatter `requirements:` field:
 
 ```bash
 node .github/get-shit-done/bin/gsd-tools.cjs requirements mark-complete ${REQ_IDS}
@@ -408,7 +408,7 @@ Extract requirement IDs from the plan's frontmatter (e.g., `requirements: [AUTH-
 Task code already committed per-task. Commit plan metadata:
 
 ```bash
-node .github/get-shit-done/bin/gsd-tools.cjs commit "docs({phase}-{plan}): complete [plan-name] plan" --files .planning/phases/XX-name/{phase}-{plan}-SUMMARY.md .planning/STATE.md .planning/roadmap.md .planning/REQUIREMENTS.md
+node .github/get-shit-done/bin/gsd-tools.cjs commit "docs({phase}-{plan}): complete [plan-name] plan" --files .planning/phases/XX-name/{phase}-{plan}-summary-2.md .planning/state-2.md .planning/roadmap.md .planning/requirements-2.md
 ```
 </step>
 
@@ -431,8 +431,8 @@ node .github/get-shit-done/bin/gsd-tools.cjs commit "" --files .planning/codebas
 If `USER_SETUP_CREATED=true`: display `⚠️ USER SETUP REQUIRED` with path + env/config tasks at TOP.
 
 ```bash
-ls -1 .planning/phases/[current-phase-dir]/*-PLAN.md 2>/dev/null | wc -l
-ls -1 .planning/phases/[current-phase-dir]/*-SUMMARY.md 2>/dev/null | wc -l
+ls -1 .planning/phases/[current-phase-dir]/*-plan-2.md 2>/dev/null | wc -l
+ls -1 .planning/phases/[current-phase-dir]/*-summary-2.md 2>/dev/null | wc -l
 ```
 
 | Condition | Route | Action |
@@ -448,11 +448,11 @@ All routes: `/clear` first for fresh context.
 
 <success_criteria>
 
-- All tasks from plan.md completed
+- All tasks from plan-2.md completed
 - All verifications pass
 - USER-SETUP.md generated if user_setup in frontmatter
-- summary.md created with substantive content
-- STATE.md updated (position, decisions, issues, session)
+- summary-2.md created with substantive content
+- state-2.md updated (position, decisions, issues, session)
 - roadmap.md updated
 - If codebase map exists: map updated with execution changes (or skipped if no significant changes)
 - If USER-SETUP.md created: prominently surfaced in completion output

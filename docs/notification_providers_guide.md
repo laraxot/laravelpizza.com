@@ -131,6 +131,6 @@ Quando si implementa un nuovo provider (es. WhatsApp, Push, ecc.):
 5. **Documentazione**: Mantenere aggiornata la documentazione con nuovi provider
 
 Per implementazioni specifiche, vedere i documenti:
-- [PROVIDER_ACTIONS_ARCHITECTURE.md](./provider_actions_architecture.md)
-- [SMS_ACTIONS_PATTERN.md](./sms_actions_pattern.md)
-- [WHATSAPP_PROVIDER_ARCHITECTURE.md](./whatsapp_provider_architecture.md)
+- [provider-actions-architecture-2.md](./provider_actions_architecture.md)
+- [sms-actions-pattern-2.md](./sms_actions_pattern.md)
+- [whatsapp-provider-architecture-2.md](./whatsapp_provider_architecture.md)

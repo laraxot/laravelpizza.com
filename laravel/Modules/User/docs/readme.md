@@ -1098,8 +1098,8 @@ See [ROADMAP.md](./roadmap.md) for details.
 ### Project Documentation
 - [CLAUDE.md](../../../CLAUDE.md) - Project architecture
 - [Security Guidelines](../../../../docs/security.md)
-- [CLAUDE.md](../../../claude.md) - Project architecture
-- [Security Guidelines](../../../../docs/SECURITY.md)
+- [CLAUDE.md](../../Geo/docs/root-md-files/claude.md) - Project architecture
+- [Security Guidelines](../../Geo/docs/root-md-files/security-2.md)
 
 ### External Resources
 - [Laravel Authentication](https://laravel.com/docs/12.x/authentication)

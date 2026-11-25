@@ -77,7 +77,7 @@ Rilevato con `laravel/tools/phpmd.sh` e il ruleset di progetto (`laravel/phpmd-r
 ## Collegamenti
 
 - [Index Documentation](./index.md)
-- [Best Practices](./best_practices.md)
+- [Best Practices](../../../../../Activity/docs/best-practices-3.md)
 - [Troubleshooting](troubleshooting.md)
 
 *Ultimo aggiornamento: 2025-01-06*

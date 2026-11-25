@@ -11,7 +11,7 @@ discussions: []
 
 > **Revisione manuale:** File rivisto per eliminare duplicazioni, conflitti e marker. Strutturato per massima chiarezza, con esempi pratici e riferimenti architetturali.
 
-> **Backlink:** [README globale](./README.md) · [scripts_conflict_resolution.md](./scripts_conflict_resolution.md) · [GitHub Actions](./github-actions.md)
+> **Backlink:** [README globale](./README.md) · [scripts-conflict-resolution-2.md](./scripts-conflict-resolution-2.md) · [GitHub Actions](./github-actions.md)
 
 ---
 
@@ -50,12 +50,12 @@ Funzione centralizzata (in `custom.sh`) per impostare:
 - Validare i log e aggiornare `gitmodules.ini`
 
 ## Risoluzione conflitti
-- In caso di merge, usare script di backup e seguire la strategia documentata in [scripts_conflict_resolution.md](./scripts_conflict_resolution.md)
+- In caso di merge, usare script di backup e seguire la strategia documentata in [scripts-conflict-resolution-2.md](./scripts-conflict-resolution-2.md)
 
 ## Collegamenti
 - [README globale](./README.md)
-- [scripts_conflict_resolution.md](./scripts_conflict_resolution.md)
-- [git_subtree_conflicts.md](./git_subtree_conflicts.md)
+- [scripts-conflict-resolution-2.md](./scripts-conflict-resolution-2.md)
+- [git-subtree-conflicts-2.md](./git-subtree-conflicts-2.md)
 - [GitHub Actions](./github-actions.md)
 
 ---

@@ -234,7 +234,7 @@ php artisan test --filter=[TestName]
 
 #### 5. Documentazione
 - [ ] README.md aggiornato
-- [ ] API.md se ha API
+- [ ] api-2.md se ha API
 - [ ] GUIDE.md se necessario
 - [ ] Esempi codice
 

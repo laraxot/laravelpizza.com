@@ -17,4 +17,4 @@ related:
   - "./spatie-permission-team-model-not-configured.md"
 ---
 
-> Questo file è stato rinominato in [phpstan-widget-property-types-.deprecated.md](phpstan-widget-property-types-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+> Questo file è stato rinominato in [phpstan-widget-property-types-2.deprecated.md](phpstan-widget-property-types-2.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.

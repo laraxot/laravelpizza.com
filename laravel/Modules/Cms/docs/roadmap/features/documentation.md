@@ -104,9 +104,9 @@ La documentazione dettagliata degli endpoint, esempi e Swagger/OpenAPI sono in f
 
 ## Collegamenti
 - [Roadmap Principale](../../roadmap.md)
-- [Content Management](./content-management.md)
+- [Content Management](../../content-management-2.md)
 - [Frontend Integration](./frontend-integration.md)
-- [Filament Integration](./filament-integration.md)
+- [Filament Integration](../../../../Lang/docs/filament-integration-3.md)
 
 ## Collegamenti tra versioni di documentation.md
 * [documentation.md](docs/rules/documentation.md)

@@ -8,7 +8,7 @@ Questo documento identifica e propone ottimizzazioni per il modulo Xot seguendo 
 ### 1. Duplicazione Documentazione
 - **File duplicati con naming inconsistente:**
   - `naming_conventions.md` vs `naming-conventions-uppercase.md`
-  - `code-quality.md` vs `code_quality.md`
+  - `code-quality.md` vs `code-quality-2.md`
   - `filament-best-practices.md` vs `filament-best-practices-uppercase.md`
 
 - **Contenuto duplicato:**

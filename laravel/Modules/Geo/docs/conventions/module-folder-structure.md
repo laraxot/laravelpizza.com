@@ -371,7 +371,7 @@ laravel/Modules/Gdpr/
 
 - [Workspace Naming Convention](conventions/workspace-naming.md)
 - [Project Structure](../../docs/project/structure.md)
-- [AGENTS.md](../../AGENTS.md)
+- [agents-2.md](../../agents-2.md)
 
 ### Laravel Documentation
 

@@ -160,7 +160,7 @@ Tenant/
 │   ├── index.md             # Documentation index
 │   ├── README.md            # This file
 │   ├── architecture.md      # Detailed architecture
-│   ├── PATTERNS.md          # Design patterns
+│   ├── patterns-2.md          # Design patterns
 │   └── TROUBLESHOOTING.md   # Common issues
 └── composer.json
 ```
@@ -199,7 +199,7 @@ Tenant/
 
 ## API Reference
 
-See [API Documentation](API.md) for detailed model signatures, methods, and service interfaces.
+See [API Documentation](api-2.md) for detailed model signatures, methods, and service interfaces.
 
 ---
 
@@ -309,7 +309,7 @@ See [Troubleshooting Guide](TROUBLESHOOTING.md) for detailed information on:
 
 ### Design Patterns
 
-See [Patterns Documentation](PATTERNS.md) for:
+See [Patterns Documentation](patterns-2.md) for:
 - Tenant isolation pattern
 - Database strategy selection
 - Middleware scoping pattern
@@ -323,7 +323,7 @@ See [Patterns Documentation](PATTERNS.md) for:
 To contribute to the Tenant module:
 
 1. Read [Architecture](architecture.md) for design principles
-2. Follow patterns in [Patterns](PATTERNS.md)
+2. Follow patterns in [Patterns](patterns-2.md)
 3. Add troubleshooting entries for known issues
 4. Keep isolation constraints in mind
 5. Document complex business logic
@@ -332,4 +332,4 @@ See [Contributing Guide](../../docs/wiki/how-to/CONTRIBUTING.md) for details.
 
 ---
 
-Navigation: [Project Home](../../docs/index.md) | [Modules](../../docs/modules/README.md) | [Documentation Index](index.md)
+Navigation: [Project Home](../Lang/docs/wiki/index-3.md) | [Modules](../../docs/modules/README.md) | [Documentation Index](index-3.md)

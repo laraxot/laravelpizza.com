@@ -217,7 +217,7 @@ namespace::context.collection.element.type
 <<<<<<< HEAD
 <<<<<<< .merge_file_RezUiZ
 <<<<<<< .merge_file_hIwmfd
-- [QWEN.md originale](../../qwen.md)
+- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -225,22 +225,22 @@ namespace::context.collection.element.type
 >>>>>>> .merge_file_xgPLru
 =======
 >>>>>>> .merge_file_HZfmWH
-- [qwen.md originale](../../qwen.md)
+- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
 =======
 <<<<<<< HEAD
-- [QWEN.md originale](../../qwen.md)
+- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
 =======
-- [qwen.md originale](../../qwen.md)
+- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_RezUiZ
 <<<<<<< .merge_file_hIwmfd
 =======
-- [QWEN.md originale](../../qwen.md)
+- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_xgPLru
 =======
 >>>>>>> .merge_file_HZfmWH
-- [Index principale](./index.md)
+- [Index principale](../../../Lang/docs/wiki/integrations/_da-riconciliare/index-3.md)

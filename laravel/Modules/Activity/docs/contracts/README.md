@@ -65,9 +65,9 @@ Standard: `Modules/Xot/docs/contracts/contract-authoring-standard.md`; governanc
 - [resolve-log-file-path-action.md](resolve-log-file-path-action.md) (`ACT-LOGPATH-INV-1..4`)
 - [authorize-log-access-action.md](authorize-log-access-action.md) (`ACT-LOGAUTH-INV-1..2`)
 - [activity-maintenance-action.md](activity-maintenance-action.md) (`ACT-CLEAN-INV-1..2`)
-- `_template.md`: modello per i nuovi contract.
+- `template-2.md`: modello per i nuovi contract.
 
-Copertura e backlog: [INDEX.md](INDEX.md).
+Copertura e backlog: [index-2.md](index-2.md).
 =======
 =======
 >>>>>>> .merge_file_MeOvX4
@@ -156,8 +156,8 @@ Formato (sei sezioni, tabella invarianti con ID, `@contract` nel docblock):
 
 ## Indici e template
 
-- [INDEX.md](INDEX.md) — inventario machine-readable del modulo (la sua tabella oggi dichiara «nessun contratto»: vale l'elenco qui sopra).
-- [_template.md](_template.md) — template minimo `type: contract` con `action: <FQCN>` e le sei sezioni.
+- [index-2.md](index-2.md) — inventario machine-readable del modulo (la sua tabella oggi dichiara «nessun contratto»: vale l'elenco qui sopra).
+- [template-2.md](template-2.md) — template minimo `type: contract` con `action: <FQCN>` e le sei sezioni.
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_ROo8BI
 <<<<<<< .merge_file_BmCgAN

@@ -111,12 +111,12 @@ bashscripts/quality-assurance/check.sh
 ```
 # ❌ NEVER
 Analysis.md  # Date in name
-CODE_QUALITY.md         # Uppercase
+code-quality-2.md         # Uppercase
 MyDocument.md           # PascalCase
 
 # ✅ ALWAYS
 code-analysis.md        # kebab-case
-best-practices.md       # no dates
+best-practices-3.md       # no dates
 troubleshooting.md      # lowercase
 
 # EXCEPTIONS

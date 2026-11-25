@@ -108,7 +108,7 @@ discussions: []
 
 ## Collegamenti Correlati
 
-- [Regole Migrazioni](./migration_rules.md)
-- [Documentazione Template](./email_templates.md)
+- [Regole Migrazioni](./migration-rules-2.md)
+- [Documentazione Template](./email-templates-2.md)
 - [Best Practices Database](../../../../docs/best-practices/database.md)
-- [Proposta Slug Template](./email_template_slug_proposal.md) 
+- [Proposta Slug Template](./email-template-slug-proposal-2.md) 

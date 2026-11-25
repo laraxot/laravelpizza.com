@@ -10,6 +10,7 @@ references:
   - ../architecture/module-boundary.md
   - ../brainstorming/module-opportunities.md
   - ../epics/module-roadmap.md
+qmd: "bmad audit lang baseline analisi completa"
 ---
 # Story — Lang: baseline BMAD
 

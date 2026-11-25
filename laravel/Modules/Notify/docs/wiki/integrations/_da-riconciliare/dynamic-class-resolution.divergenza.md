@@ -18,12 +18,12 @@ updated: 2026-11-23
 >>>>>>> .merge_file_5q5oBM
 ---
 
-# Divergenza: `dynamic_class_resolution.md`
+# Divergenza: `dynamic-class-resolution-2.md`
 
-Questo file veniva da `docs/wiki/integrations/modules/notify/dynamic_class_resolution.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+Questo file veniva da `../../../dynamic-class-resolution-2.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
 
-- versione del modulo: `laravel/Modules/Notify/docs/dynamic_class_resolution.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/dynamic_class_resolution.md`
+- versione del modulo: `laravel/Modules/Notify/docs/dynamic-class-resolution-2.md`
+- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/dynamic-class-resolution-2.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 

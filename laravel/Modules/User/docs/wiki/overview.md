@@ -6,14 +6,14 @@ created: "2026-04-15T08:28:51Z"
 updated: "2026-04-15T08:28:51Z"
 related:
 <<<<<<< HEAD
-  - "./AGENTS.md"
+  - "./agents-2.md"
 =======
 <<<<<<< HEAD
   - "./agents.md"
 <<<<<<< .merge_file_snqlmd
 =======
 =======
-  - "./AGENTS.md"
+  - "./agents-2.md"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_uQangC

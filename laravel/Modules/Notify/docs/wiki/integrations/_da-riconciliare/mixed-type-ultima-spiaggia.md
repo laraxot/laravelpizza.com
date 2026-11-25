@@ -51,23 +51,23 @@ updated: 2026-11-23
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-- [AGENTS.md](../AGENTS.md)
+- [agents-2.md](../agents-2.md)
 =======
 <<<<<<< HEAD
 - [agents.md](../agents.md)
 =======
-- [AGENTS.md](../AGENTS.md)
+- [agents-2.md](../agents-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 - [agents.md](../agents.md)
 =======
-- [AGENTS.md](../AGENTS.md)
+- [agents-2.md](../agents-2.md)
 =======
 <<<<<<< HEAD
 - [agents.md](../agents.md)
 =======
-- [AGENTS.md](../AGENTS.md)
+- [agents-2.md](../agents-2.md)
 >>>>>>> .merge_file_NMAMg9
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

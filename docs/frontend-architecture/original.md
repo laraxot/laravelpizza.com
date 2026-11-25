@@ -63,4 +63,4 @@ La homepage del sito è costruita utilizzando un sistema di componenti modulare 
 
 ## Collegamenti
 - [Componenti UI](../ui/docs/components.md)
-- [Documentazione Core](../xot/docs/documentation.md)
+- [Documentazione Core](../../laravel/Modules/Activity/docs/documentation-2.md)

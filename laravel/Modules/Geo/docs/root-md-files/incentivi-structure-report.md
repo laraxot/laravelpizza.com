@@ -250,7 +250,7 @@ laravel/Modules/Incentivi/
 - **analysis.md** - Analisi del modulo
 - **models/domain-model.md** - Domain model diagram
 - **conflicts.md** - Conflitti noti
-- **phpstan-report.md** - Rapporto PHPStan (level 9)
+- **phpstan-report-2.md** - Rapporto PHPStan (level 9)
 - **phpmd-report.txt** - Rapporto PHPMD
 
 #### 🛠️ Documentazione Specifiche:
@@ -265,7 +265,7 @@ laravel/Modules/Incentivi/
   - laravel.md
   - advanced.md
   - styling.md
-  - SECURITY.md
+  - security-2.md
 
 #### 📝 Altre Documentazioni:
 - **module-icons.md** - Icone del modulo

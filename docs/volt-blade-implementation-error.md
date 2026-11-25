@@ -90,7 +90,7 @@ Come correttamente indicato, per i form è preferibile utilizzare un widget Fila
 3. **Manutenibilità**: Sfrutta le funzionalità di Filament per la validazione e la gestione degli errori
 4. **Coerenza**: Mantiene uno stile coerente con il resto dell'applicazione
 
-Questo approccio sarà documentato in dettaglio nel file `VOLT_BLADE_IMPLEMENTATION.md`.
+Questo approccio sarà documentato in dettaglio nel file `volt-blade-implementation-4.md`.
 # Analisi dell'Errore di Implementazione Volt/Blade
 
 ## Collegamenti correlati
@@ -183,4 +183,4 @@ Come correttamente indicato, per i form è preferibile utilizzare un widget Fila
 3. **Manutenibilità**: Sfrutta le funzionalità di Filament per la validazione e la gestione degli errori
 4. **Coerenza**: Mantiene uno stile coerente con il resto dell'applicazione
 
-Questo approccio sarà documentato in dettaglio nel file `VOLT_BLADE_IMPLEMENTATION.md`.
+Questo approccio sarà documentato in dettaglio nel file `volt-blade-implementation-4.md`.

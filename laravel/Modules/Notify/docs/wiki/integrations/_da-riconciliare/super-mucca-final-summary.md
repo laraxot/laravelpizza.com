@@ -40,7 +40,7 @@ updated: 2026-11-23
 - **3,023 file** documentazione totali
 - **56 README.md** identificati
 
-**Report Generato**: `docs/SUPER_MUCCA_DOCS_ANALYSIS.md`
+**Report Generato**: `../../../super-mucca-docs-analysis-2.md`
 
 ---
 
@@ -72,7 +72,7 @@ updated: 2026-11-23
 
 ### ✅ 4. Indice Generale Documentazione
 
-**File Creato**: `docs/DOCUMENTATION_INDEX.md`
+**File Creato**: `docs/documentation-index.md`
 
 **Contenuti**:
 - Quick access links tutti moduli
@@ -85,7 +85,7 @@ updated: 2026-11-23
 
 ### ✅ 5. Analisi LoginWidget Filament 4
 
-**File Creato**: `laravel/Modules/User/docs/WIDGET_RENDERING_ANALYSIS.md`
+**File Creato**: `laravel/Modules/User/docs/widget-rendering-analysis-3.md`
 
 **Contenuti Analizzati**:
 
@@ -209,13 +209,13 @@ class LoginWidget extends XotBaseWidget
 
 ### Nuovi File
 
-1. `docs/SUPER_MUCCA_DOCS_ANALYSIS.md` - Report analisi completa
-2. `docs/DOCUMENTATION_INDEX.md` - Indice generale
-3. `docs/SUPER_MUCCA_FINAL_SUMMARY.md` - Questo file
+1. `../../../super-mucca-docs-analysis-2.md` - Report analisi completa
+2. `docs/documentation-index.md` - Indice generale
+3. `../../../super-mucca-final-summary-2.md` - Questo file
 4. `laravel/Modules/Comment/docs/README.md` - Doc Comment module
 5. `laravel/Modules/Seo/docs/README.md` - Doc SEO module
 6. `laravel/Themes/One/docs/README.md` - Doc Theme One
-7. `laravel/Modules/User/docs/WIDGET_RENDERING_ANALYSIS.md` - Analisi LoginWidget
+7. `laravel/Modules/User/docs/widget-rendering-analysis-3.md` - Analisi LoginWidget
 
 ### File Corretti
 

@@ -54,7 +54,7 @@ Il sistema:
 3. **Requisiti** — Estrae cosa è v1, v2 e fuori scope
 4. **Roadmap** — Crea fasi mappate ai requisiti
 
-**File generati** (in questo repo): `.planning/PROJECT.md`, `.planning/REQUIREMENTS.md`, `.planning/roadmap.md`, `.planning/STATE.md`, `.planning/research/`
+**File generati** (in questo repo): `.planning/PROJECT.md`, `.planning/requirements-2.md`, `.planning/roadmap.md`, `.planning/state-2.md`, `.planning/research/`
 
 ### Step 2: Discuss Phase (`/gsd:discuss-phase N`)
 
@@ -73,7 +73,7 @@ Cattura le preferenze dell'utente prima della pianificazione:
 
 Ogni piano è abbastanza piccolo da eseguire in un context window fresco.
 
-**File generati**: `.planning/phases/{phase_num}-RESEARCH.md`, `.planning/phases/{phase_num}-{N}-PLAN.md`
+**File generati**: `.planning/phases/{phase_num}-research-2.md`, `.planning/phases/{phase_num}-{N}-plan-2.md`
 
 ### Step 4: Execute Phase (`/gsd:execute-phase N`)
 
@@ -82,7 +82,7 @@ Ogni piano è abbastanza piccolo da eseguire in un context window fresco.
 3. **Commit per task** — Ogni task ottiene il suo commit atomico
 4. **Verifica contro obiettivi** — Controlla che il codice rispetti le promesse
 
-**File generati**: `.planning/phases/{phase_num}-{N}-SUMMARY.md`, `.planning/phases/{phase_num}-VERIFICATION.md`
+**File generati**: `.planning/phases/{phase_num}-{N}-summary-2.md`, `.planning/phases/{phase_num}-VERIFICATION.md`
 
 ### Step 5: Verify Work (`/gsd:verify-work N`)
 
@@ -157,9 +157,9 @@ WAVE 1 (parallel)     WAVE 2 (parallel)     WAVE 3
 | GSD Concept | Laraxot Equivalent |
 |------------|-------------------|
 | `PROJECT.md` | `.planning/PROJECT.md` |
-| `REQUIREMENTS.md` | `.planning/REQUIREMENTS.md` |
+| `requirements-2.md` | `.planning/requirements-2.md` |
 | `roadmap.md` | `.planning/roadmap.md` |
-| `STATE.md` | `.planning/STATE.md` |
+| `state-2.md` | `.planning/state-2.md` |
 | Research | `.planning/research/` |
 | Phase plans | `.planning/phases/` |
 | Quick tasks | `.planning/quick/` |
@@ -274,7 +274,7 @@ Usalo quando ti serve la suite completa “da tool”, non solo i template.
 ## Collegamenti (interni)
 
 - [GSD templates](../../.gsd/README.md)
-- [AGENTS.md](../../AGENTS.md)
+- [AGENTS.md](../agents.md)
 
 ---
 
@@ -307,8 +307,8 @@ Usalo quando ti serve la suite completa “da tool”, non solo i template.
 
 ## Collegamenti
 
-- [AGENTS.md](../../AGENTS.md)
+- [AGENTS.md](../agents.md)
 - [BMAD Integration](./bmad-method-integration.md)
 - [Laraxot Methodology](./laraxot-methodology.md)
-- [.planning/STATE.md](../../.planning/STATE.md)
+- [.planning/state-2.md](../../.planning/state-2.md)
 - [.planning/config.json](../../.planning/config.json)

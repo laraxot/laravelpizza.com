@@ -17,7 +17,7 @@ Lo script `git_push_subtree_org.sh` gestisce il push di sottocartelle verso repo
 
 ## Collegamenti
 - [Documentazione Git Subtree](git-subtree-conflicts.md)
-- [Script Git](git_scripts.md)
+- [Script Git](git-scripts-2.md)
 - [Risoluzione Conflitti](../../docs/risoluzione_conflitti_git.md)
 
 ## Funzionalità Principali

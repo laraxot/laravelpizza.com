@@ -9,7 +9,7 @@ issues: []
 discussions: []
 module: theme
 topic: project
-canonical: ../../../Themes/docs/shared-components/PROJECT.md
+canonical: ../../../Themes/docs/shared-components/project-2.md
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/PROJECT.md
+See canonical documentation: ../../../Themes/docs/shared-components/project-2.md

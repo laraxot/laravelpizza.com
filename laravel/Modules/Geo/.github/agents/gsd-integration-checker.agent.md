@@ -75,7 +75,7 @@ For each phase, extract what it provides and what it should consume.
 
 ```bash
 # Key exports from each phase
-for summary in .planning/phases/*/*-SUMMARY.md; do
+for summary in .planning/phases/*/*-summary-2.md; do
   echo "=== $summary ==="
   grep -A 10 "Key Files\|Exports\|Provides" "$summary" 2>/dev/null
 done

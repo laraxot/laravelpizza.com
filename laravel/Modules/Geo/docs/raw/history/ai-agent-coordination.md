@@ -708,7 +708,7 @@ Se uno script diventa produzione:
 - [Laravel module skill](../_bmad/core/skills/bmad-laravel-module-dev.md)
 - [Filament page skill](../_bmad/core/skills/bmad-filament-page-dev.md)
 - [AGENTS.md](../AGENTS.md)
-- [qwen.md](../qwen.md)
+- [qwen-2.md](../../../../Notify/docs/wiki/integrations/_da-riconciliare/qwen-2.md)
 - [Bashscripts Philosophy](bashscripts-philosophy.md) ⭐ **NUOVO**
 
 ### BMAD Resources

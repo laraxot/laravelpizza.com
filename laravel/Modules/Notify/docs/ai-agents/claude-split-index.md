@@ -39,7 +39,7 @@ discussions: []
 
 ## 🔗 Collegamento all'Originale
 
-- [CLAUDE.md originale](../../CLAUDE.md) - File completo (deprecated)
+- [CLAUDE.md originale](../../../Geo/docs/root-md-files/claude.md) - File completo (deprecated)
 - [Index principale](./index.md)
 
 ## Modifiche Migliorative

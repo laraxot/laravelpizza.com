@@ -5,7 +5,7 @@ Questa cartella contiene la documentazione relativa alla gestione dei contenuti.
 ## File Contenuti
 
 - `management.md` - Gestione dei contenuti
-- `page-management.md` - Gestione delle pagine
+- `page-management-2.md` - Gestione delle pagine
 - `media.md` - Gestione dei media
 - `seo.md` - Ottimizzazione per i motori di ricerca
 

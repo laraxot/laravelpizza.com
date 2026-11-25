@@ -14,9 +14,9 @@ Il modulo Activity gestisce il sistema di event sourcing e tracciamento delle at
 
 ### Problemi Identificati
 1. **Duplicazioni critiche**:
-   - `event_sourcing.md` vs `event-sourcing.md` vs `event_sourcing_introduction.md`
-   - `filament_errors.md` vs `filament-errors.md`
-   - `mcp_server_recommended.md` vs `mcp-server-recommended.md`
+   - `event_sourcing.md` vs `event-sourcing.md` vs `event-sourcing-introduction-3.md`
+   - `filament-errors-3.md` vs `filament-errors.md`
+   - `mcp-server-recommended-3.md` vs `mcp-server-recommended.md`
 2. **File di test temporanei**: 10+ file `.txt` nella root del modulo
 3. **Configurazioni PHPStan duplicate**: 5 file di configurazione diversi
 4. **Documentazione frammentata**: 30+ file sparsi senza struttura logica
@@ -30,11 +30,11 @@ Il modulo Activity gestisce il sistema di event sourcing e tracciamento delle at
 docs/
 ├── event_sourcing.md                    # ❌ Duplicato
 ├── event-sourcing.md                    # ❌ Duplicato
-├── event_sourcing_introduction.md       # ❌ Duplicato
+├── event-sourcing-introduction-3.md       # ❌ Duplicato
 ├── event-sourcing-introduction.md       # ❌ Duplicato
-├── filament_errors.md                   # ❌ Duplicato
+├── filament-errors-3.md                   # ❌ Duplicato
 ├── filament-errors.md                   # ❌ Duplicato
-├── mcp_server_recommended.md            # ❌ Duplicato
+├── mcp-server-recommended-3.md            # ❌ Duplicato
 ├── mcp-server-recommended.md            # ❌ Duplicato
 └── ... (30+ file frammentati)
 

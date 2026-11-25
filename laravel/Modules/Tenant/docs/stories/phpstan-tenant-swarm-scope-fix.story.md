@@ -19,7 +19,7 @@ owned_scope:
   - "laravel/Modules/Tenant/tests/TestCase.php"
   - "laravel/Modules/Tenant/tests/Integration/Traits/SushiToJsonTraitIntegrationTest.php"
 related:
-  - "01.Tenant-phpstan-fix.story.md"
+  - "01.tenant-phpstan-fix.story.md"
   - "tenant-mixed-type-reduction.story.md"
   - "7.2.phpstan-test-harness-contracts.story.md"
 ---

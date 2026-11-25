@@ -28,7 +28,7 @@ Welcome to the central knowledge base for the **PTVX** project. This wiki is aut
 - [BaseModel Pattern](../../laravel/Modules/Xot/docs/wiki/BaseModel.md): The sacred inheritance chain.
 - [Actions Over Services](concepts/actions-over-services.md): Preferred business logic pattern.
 - [Database guidelines](rules/database-guidelines.md): Managing connections across modules.
-- [Translation standards](rules/translation-standards.md): Automatic localization rules.
+- [Translation standards](../../../Lang/docs/translation-standards-3.md): Automatic localization rules.
 
 ## Core Patterns
 

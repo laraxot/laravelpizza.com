@@ -33,11 +33,11 @@ issues: []
 discussions: []
 ---
 
-# gemini.md Split Index
+# gemini-2.md Split Index
 
-> Documentazione gemini.md spezzata in file più piccoli.
+> Documentazione gemini-2.md spezzata in file più piccoli.
 
-## 📚 File da gemini.md
+## 📚 File da gemini-2.md
 
 | File | Contenuto |
 |------|-----------|
@@ -52,7 +52,7 @@ discussions: []
 <<<<<<< HEAD
 <<<<<<< .merge_file_vpwbl7
 <<<<<<< .merge_file_iuCoUf
-- [GEMINI.md originale](../../gemini.md)
+- [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -60,22 +60,22 @@ discussions: []
 >>>>>>> .merge_file_R300rw
 =======
 >>>>>>> .merge_file_SuuFrq
-- [gemini.md originale](../../gemini.md)
+- [gemini-2.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 =======
 <<<<<<< HEAD
-- [GEMINI.md originale](../../gemini.md)
+- [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 =======
-- [gemini.md originale](../../gemini.md)
+- [gemini-2.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_vpwbl7
 <<<<<<< .merge_file_iuCoUf
 =======
-- [GEMINI.md originale](../../gemini.md)
+- [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_R300rw
 =======
 >>>>>>> .merge_file_SuuFrq
-- [Index principale](./index.md)
+- [Index principale](../../../Lang/docs/wiki/integrations/_da-riconciliare/index-3.md)

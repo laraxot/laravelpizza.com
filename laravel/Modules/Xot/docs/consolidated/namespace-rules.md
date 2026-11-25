@@ -19,7 +19,7 @@
 - Evitare l'uso di proprietà deprecate come `protected $casts` nei modelli: preferire override tramite metodo `casts()`.
 - Per esempi specifici, vedere la documentazione nei singoli moduli:
   - [Patient: Regole Modelli](../../Patient/project_docs/models.md)
-  - [Notify Namespace Rules](../../Notify/project_docs/NAMESPACE_RULES.md)
+  - [Notify Namespace Rules](../../../Notify/docs/namespace-rules-2.md)
 
 ## Collegamenti
 - [Regole Namespace Moduli - Root Docs](../../../project_docs/namespace-moduli.md)

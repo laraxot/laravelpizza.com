@@ -617,7 +617,7 @@ Located in `bashscripts/`:
 - [Architecture Overview](./architecture-overview.md) - Complete system architecture
 - [Module Structure](./architecture/module-structure.md) - Directory and file organization
 - [Design Patterns](./architecture/design-patterns.md) - Patterns used in Xot
-- [Database Schema](./architecture/database-schema.md) - Base database structure
+- [Database Schema](../../../User/docs/database-schema-2.md) - Base database structure
 
 ### Core Components
 - [XotBase Classes](./architecture/xotbase-classes.md) - Complete XotBase* class reference
@@ -633,7 +633,7 @@ Located in `bashscripts/`:
 - [Contributing Guidelines](./development/contributing.md) - How to contribute
 
 ### Best Practices
-- [PHPStan Level 10 Compliance](./phpstan-workflow.md) - Achieving PHPStan compliance
+- [PHPStan Level 10 Compliance](../consolidated/phpstan/phpstan-workflow-2.md) - Achieving PHPStan compliance
 - [Type Safety Guidelines](./development/type-safety.md) - Type hint best practices
 - [Naming Conventions](../naming_conventions_docs.md) - File and class naming
 - [Testing Guidelines](../archive/testing-strategy.md) - How to write tests
@@ -641,7 +641,7 @@ Located in `bashscripts/`:
 ### Quality & Tools
 - [Code Quality Tools](./code-quality-tools.md) - PHPStan, Pint, PHPInsights
 - [Automation Scripts](./bashscripts/README.md) - Available automation scripts
-- [PHPStan Patterns](./phpstan-pattern-soluzioni.md) - Common PHPStan solutions
+- [PHPStan Patterns](../consolidated/phpstan/phpstan-pattern-soluzioni-2.md) - Common PHPStan solutions
 
 ### Migration & Upgrade
 - [Filament 4 Migration](../archive/filament-4-migration-guide.md) - Upgrading to Filament 4
@@ -703,7 +703,7 @@ See [ROADMAP.md](roadmap.md) for details.
 - [Geo Module](../../../Geo/docs/README.md) - Geographic data services
 
 ### Project Documentation
-- [CLAUDE.md](../../../../CLAUDE.md) - Project architecture and development rules
+- [CLAUDE.md](../../../Geo/docs/root-md-files/claude.md) - Project architecture and development rules
 - [Project README](../../../README.md) - Main project documentation
 
 ### External Resources

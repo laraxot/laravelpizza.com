@@ -210,7 +210,7 @@ find . -name "*.md" -exec sed -i 's/Laravel 11/Laravel 12/g' {} \;
 2. **README.md** (moduli principali)
 3. **performance-issues.md** (Fixcity, User)
 4. **phpstan-fixes-report.md** (Fixcity, User)
-5. **filament_4x_upgrade_report.md** (tutti i moduli)
+5. **filament-4x-upgrade-report-2.md** (tutti i moduli)
 
 ### ⚡ **High Priority**
 1. **API Documentation** (Fixcity, User, Geo)

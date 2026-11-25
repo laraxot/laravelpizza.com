@@ -225,7 +225,7 @@ Generate complete Product Brief document using template.
 - `README.md`
 - `guide.md`
 - `notes.md`
-- `documentation.md`
+- `documentation-2.md`
 
 **Why bad:** Ambiguous, unmaintainable, confusing
 
@@ -445,7 +445,7 @@ Before marking documentation "complete":
 - **Product Brief Workflow:** `../../workflows/wds-1-project-brief/project-brief/`
 - **File Naming Conventions:** `../../workflows/00-system/FILE-NAMING-CONVENTIONS.md`
 - **Project Outline Template:** Created during Phase 1 Step 1
-- **Documentation Standards:** `../../../bmm/data/documentation-standards.md`
+- **Documentation Standards:** `../../../../../laravel/Modules/User/docs/documentation-standards-2.md`
 
 ---
 

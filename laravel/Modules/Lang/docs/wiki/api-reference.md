@@ -838,13 +838,13 @@ public function get(string $key, array $replace = [], ?string $locale = null): s
 
 ### **1. Documentazione**
 - [README.md](README.md) - Documentazione principale
-- [best_practices.md](best_practices.md) - Best practices
+- [best-practices-3.md](best-practices-3.md) - Best practices
 - [TROUBLESHOOTING.md](troubleshooting.md) - Troubleshooting
 - [README.md](README.md) - Documentazione principale
-- [best_practices.md](best_practices.md) - Best practices
+- [best-practices-3.md](best-practices-3.md) - Best practices
 - [TROUBLESHOOTING.md](troubleshooting.md) - Troubleshooting
 - [README.md](README.md) - Documentazione principale
-- [best_practices.md](best_practices.md) - Best practices
+- [best-practices-3.md](best-practices-3.md) - Best practices
 - [TROUBLESHOOTING.md](troubleshooting.md) - Troubleshooting
 - [config/lang.php](../config/lang.php) - Configurazione
 

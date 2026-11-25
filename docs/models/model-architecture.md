@@ -775,7 +775,7 @@ it('tracks who created the record', function () {
 - [XotBasePivot.php](../../app/Models/XotBasePivot.php) - Base class per pivot tables
 - [XotBaseMorphPivot.php](../../app/Models/XotBaseMorphPivot.php) - Base class per morph pivots
 - [DRY-KISS-ANALYSIS.md](./dry-kiss-analysis.md) - Analisi duplicazioni e proposte miglioramento
-- [CLAUDE.md](../../../claude.md) - Convenzioni generali del progetto
+- [CLAUDE.md](../../laravel/Modules/Geo/docs/root-md-files/claude.md) - Convenzioni generali del progetto
 
 ---
 
@@ -1577,7 +1577,7 @@ it('tracks who created the record', function () {
 - [XotBasePivot.php](../../app/Models/XotBasePivot.php) - Base class per pivot tables
 - [XotBaseMorphPivot.php](../../app/Models/XotBaseMorphPivot.php) - Base class per morph pivots
 - [DRY-KISS-ANALYSIS.md](./dry-kiss-analysis.md) - Analisi duplicazioni e proposte miglioramento
-- [CLAUDE.md](../../../claude.md) - Convenzioni generali del progetto
+- [CLAUDE.md](../../laravel/Modules/Geo/docs/root-md-files/claude.md) - Convenzioni generali del progetto
 
 ---
 

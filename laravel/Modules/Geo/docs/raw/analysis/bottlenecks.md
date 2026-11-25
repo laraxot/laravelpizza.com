@@ -192,9 +192,9 @@ discussions: []
 - [bottlenecks Modulo Lang](../../Lang/docs/bottlenecks.md)
 
 ### Collegamenti Interni
-- [Backup Testing](./testing.md#backup)
-- [Security Testing](./testing.md#security)
-- [Performance Testing](./testing.md#performance) 
+- [Backup Testing](../../../../User/docs/testing-2.md#backup)
+- [Security Testing](../../../../User/docs/testing-2.md#security)
+- [Performance Testing](../../../../User/docs/testing-2.md#performance) 
 ## Collegamenti tra versioni di bottlenecks.md
 * [bottlenecks.md](../../laravel/Modules/Chart/docs/bottlenecks.md)
 * [bottlenecks.md](../../laravel/Modules/Chart/docs/performance/bottlenecks.md)

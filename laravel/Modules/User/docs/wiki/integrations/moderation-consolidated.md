@@ -41,9 +41,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 # Azioni di Moderazione (Action class)
 
@@ -107,9 +107,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 # Contratti e Interfacce per la Moderazione Utenti
 
@@ -146,7 +146,7 @@ interface ModeratableUser
 
 ## moderation-doctor
 
-*Consolidated from: `moderation-doctor.md`*
+*Consolidated from: `moderation-doctor-2.md`*
 
 title: "Moderazione Dentista dal Modulo User"
 type: concept
@@ -162,9 +162,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Moderazione Dentista dal Modulo User
@@ -269,9 +269,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 # Notifiche Moderazione
 
@@ -320,29 +320,29 @@ class UserApprovedNotification extends Notification
 
 ## moderation-wizard-generic
 
-*Consolidated from: `moderation-wizard-generic.md`*
+*Consolidated from: `moderation-wizard-generic-2.md`*
 
 module: theme
 topic: moderation-wizard-generic
-canonical: ../../../Themes/docs/shared-components/moderation-wizard-generic.md
+canonical: ../../moderation-wizard-generic-2.md
 related:
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/moderation-wizard-generic.md
+See canonical documentation: ../../moderation-wizard-generic-2.md
 
 ---
 
 ## moderation_doctor
 
-*Consolidated from: `moderation_doctor.md`*
+*Consolidated from: `moderation-doctor-2.md`*
 
 
 ## Premessa
@@ -434,7 +434,7 @@ class DoctorPolicy {
 
 ## moderation_wizard_generic
 
-*Consolidated from: `moderation_wizard_generic.md`*
+*Consolidated from: `moderation-wizard-generic-2.md`*
 
 
 ## Premessa
@@ -539,9 +539,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Moderazione Dentista dal Modulo User

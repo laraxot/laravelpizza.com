@@ -190,8 +190,8 @@ Prima di modificare la configurazione SMS, verificare che:
 
 ## Riferimenti
 
-- [Struttura Standardizzata della Configurazione SMS](./standardized_sms_config_structure.md)
-- [Configurazione Netfun](./netfun_config_requirements.md)
+- [Struttura Standardizzata della Configurazione SMS](./standardized-sms-config-structure-2.md)
+- [Configurazione Netfun](./netfun-config-requirements-2.md)
 - [Laravel Configuration Best Practices](https://laravel.com/docs/configuration)
 <<<<<<< HEAD
 =======

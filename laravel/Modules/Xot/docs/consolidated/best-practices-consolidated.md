@@ -2,7 +2,7 @@
 
 > **🎯 Single Source of Truth**: Questo documento centralizza TUTTE le best practices del progetto
 >
-> **🔗 Riferimenti**: [coding-standards.md](coding-standards.md) | [phpstan-consolidated.md](phpstan-consolidated.md)
+> **🔗 Riferimenti**: [coding-standards-2.md](coding-standards-2.md) | [phpstan-consolidated.md](phpstan-consolidated.md)
 
 ## 🚨 STOP DUPLICAZIONE!
 

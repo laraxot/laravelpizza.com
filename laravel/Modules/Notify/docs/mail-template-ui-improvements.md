@@ -178,7 +178,7 @@ Section::make('Informazioni Template')
 
 - [Documentazione Filament](https://filamentphp.com/docs)
 - [Best Practices UI/UX](./best-practices.md)
-- [Componenti Filament](./filament_components.md)
+- [Componenti Filament](../../Cms/docs/filament-components-2.md)
 
 ## Note Importanti
 

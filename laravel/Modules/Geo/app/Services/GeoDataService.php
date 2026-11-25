@@ -16,7 +16,8 @@ use function Safe\json_decode;
  * Questo servizio fornisce metodi per accedere e manipolare i dati geografici
  * memorizzati nel file JSON.
  *
- * @see \Modules\Geo\docs\json-database.md
+ * @see Modules/Geo/docs/json-database.md
+ * @see Modules/Geo/docs/geo-sync-marker-repair.md
  */
 class GeoDataService
 {
@@ -51,7 +52,7 @@ class GeoDataService
      */
     public function __construct()
     {
-        $this->validator = new GeoDataValidator();
+        $this->validator = new GeoDataValidator;
     }
 
     /**
@@ -74,7 +75,7 @@ class GeoDataService
     /**
      * Ottiene le province di una regione.
      *
-     * @param string $regionCode Codice della regione
+     * @param  string  $regionCode  Codice della regione
      * @return Collection<int, array{name: string, code: string}>
      */
     public function getProvinces(string $regionCode): Collection
@@ -88,7 +89,7 @@ class GeoDataService
 
             if (! $region || ! \is_array($region) || ! isset($region['provinces']) || ! \is_array($region['provinces'])) {
                 /** @var Collection<int, array{name: string, code: string}> $empty */
-                $empty = new Collection();
+                $empty = new Collection;
 
                 return $empty;
             }
@@ -121,7 +122,7 @@ class GeoDataService
     /**
      * Ottiene le città di una provincia come mappa codice => nome.
      *
-     * @param string $provinceCode Codice della provincia
+     * @param  string  $provinceCode  Codice della provincia
      * @return Collection<string, string>
      */
     public function getCities(string $provinceCode): Collection
@@ -194,7 +195,7 @@ class GeoDataService
             : [])->firstWhere('code', $provinceCode);
 
         if (! $province || ! \is_array($province) || ! isset($province['cities']) || ! \is_array($province['cities'])) {
-            return new Collection();
+            return new Collection;
         }
 
         /** @var array<int, array<string, mixed>> $cities */

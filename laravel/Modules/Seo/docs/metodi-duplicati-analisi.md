@@ -9,11 +9,11 @@ issues: []
 discussions: []
 module: theme
 topic: METODI-DUPLICATI-ANALISI
-canonical: ../../../Themes/docs/shared-components/METODI_DUPLICATI_ANALISI.md  # target mancante, verificato 2026-10-08
+canonical: ../../../Themes/docs/shared-components/metodi-duplicati-analisi-3.md  # target mancante, verificato 2026-10-08
 status: stub
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/METODI_DUPLICATI_ANALISI.md
+See canonical documentation: ../../../Themes/docs/shared-components/metodi-duplicati-analisi-3.md
 ---
 # 🐄⚡ ANALISI METODI DUPLICATI - SUPER MUCCA EDITION
 

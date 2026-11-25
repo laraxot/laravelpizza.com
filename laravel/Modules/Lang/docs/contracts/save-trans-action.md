@@ -1,13 +1,6 @@
 ---
 title: "Contratto — SaveTransAction"
 type: contract
-<<<<<<< .merge_file_ZG6Rpy
-<<<<<<< .merge_file_QbWbb9
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_XlMSL3
-=======
->>>>>>> .merge_file_qFStrE
 action: "Modules\Lang\Actions\SaveTransAction"
 tags: [contract, action, translations, lang-files]
 created: 2026-11-24
@@ -17,30 +10,15 @@ related:
   - ../../app/Actions/SaveTransAction.php
   - ../../tests/Feature/SaveTransActionDefaultTest.php
   - ../../tests/Feature/SaveTransActionRespectsSwitchTest.php
-<<<<<<< .merge_file_ZG6Rpy
-<<<<<<< .merge_file_QbWbb9
-=======
 owner: Lang
 status: accepted
 updated: 2026-11-24
 action: "Modules\\Lang\\Actions\\SaveTransAction"
 qmd: "SaveTransAction salva chiave traduzione file lingua save_missing_translations isLocal persist pannello Lang LANG-SAVE"
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_XlMSL3
-=======
->>>>>>> .merge_file_qFStrE
 ---
 
 # SaveTransAction
 
-<<<<<<< .merge_file_ZG6Rpy
-<<<<<<< .merge_file_QbWbb9
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_XlMSL3
-=======
->>>>>>> .merge_file_qFStrE
 Scrive una chiave di traduzione nel file PHP di lingua del modulo. Due ingressi con regole diverse:
 
 - `execute()`: la chiamano `AutoLabelAction` quando un'etichetta manca; scrive solo se l'interruttore lo permette.
@@ -61,20 +39,12 @@ Test: `cd laravel && vendor/bin/pest Modules/Lang/tests/Feature/SaveTransActionD
 
 Il file è risolto da `GetTransPathAction`: `<cartella lang del modulo>/<locale corrente>/<file>.php`.
 Interruttore: `Config::get('lang.save_missing_translations', app()->isLocal())`.
-<<<<<<< .merge_file_ZG6Rpy
-<<<<<<< .merge_file_QbWbb9
-=======
 Scrive una chiave di traduzione nel file di lingua del modulo. Codice: `app/Actions/SaveTransAction.php:14-93`. Due ingressi: `execute` (filtrato) e `persist` (pubblico, non filtrato).
 
 ## Input
 
 - `string $key`: `<modulo>::<gruppo>.<voce>...`.
 - `int|string|array|Htmlable|null $data`: valore da scrivere.
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_XlMSL3
-=======
->>>>>>> .merge_file_qFStrE
 
 ## Output
 
@@ -82,13 +52,6 @@ Scrive una chiave di traduzione nel file di lingua del modulo. Codice: `app/Acti
 
 ## Invarianti
 
-<<<<<<< .merge_file_ZG6Rpy
-<<<<<<< .merge_file_QbWbb9
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_XlMSL3
-=======
->>>>>>> .merge_file_qFStrE
 | ID | Regola | Group Pest |
 |---|---|---|
 | LANG-SAVETRANS-INV-1 | Senza configurazione esplicita `execute()` non scrive fuori da `APP_ENV=local`: né in produzione, né in staging, né sotto test. | `LANG-SAVETRANS-INV-1` |
@@ -116,9 +79,6 @@ Scrive una chiave di traduzione nel file di lingua del modulo. Codice: `app/Acti
   registrato: `registerTranslator()` è commentato in `LangServiceProvider::boot()`).
 - Non fa backup, non valida la sintassi PHP e non svuota la cache delle traduzioni.
 - Non scrive nei file di altre lingue: solo quella corrente (`app()->getLocale()`).
-<<<<<<< .merge_file_ZG6Rpy
-<<<<<<< .merge_file_QbWbb9
-=======
 | ID | Regola | Test |
 |---|---|---|
 | `LANG-SAVE-INV-1` | `execute` non scrive se `Config::get('lang.save_missing_translations', app()->isLocal())` non e' `true`. Default: solo ambiente `local`. | `tests/Feature/SaveTransActionDefaultTest.php:57-99`; `tests/Feature/SaveTransActionRespectsSwitchTest.php:20,33`. |
@@ -143,8 +103,3 @@ Nota su INV-1: `Modules/Lang/config/lang.php:211` contiene `save_missing_transla
 
 - Non valida la chiave.
 - Chiamanti verificati: `Filament/Resources/TranslationFileResource/Pages/EditTranslationFile.php`, `Xot/app/Filament/Traits/TransFuncTrait.php`, `Xot/app/Filament/Traits/NavigationLabelTrait.php`, `Ptv/app/Filament/Resources/BaseSchedaResource.php`, `Performance/app/Filament/Resources/IndividualeResource.php`, e `Actions/Filament/AutoLabelAction.php`.
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_XlMSL3
-=======
->>>>>>> .merge_file_qFStrE

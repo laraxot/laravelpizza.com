@@ -73,7 +73,7 @@ Su filesystem case-insensitive (Windows, macOS default), file con nomi che diffe
 - roadmap.md (maiuscolo - convenzione universale)
 - CHANGELOG.md (maiuscolo - convenzione universale)
 - LICENSE.md (maiuscolo - convenzione universale)
-- CONTRIBUTING.md (maiuscolo - convenzione universale)
+- contributing-2.md (maiuscolo - convenzione universale)
 - SECURITY.md (maiuscolo - convenzione universale)
 
 - Tutti gli altri: kebab-case minuscolo

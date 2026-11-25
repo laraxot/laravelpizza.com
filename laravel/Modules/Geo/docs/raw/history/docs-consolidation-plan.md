@@ -56,18 +56,18 @@ enum-translation-pattern.md
 #### 2. UPPERCASE Files (241 files, excluding README.md)
 **Anti-pattern**: Inconsistent naming conventions
 ```
-business_logic_analysis.md
-QUERY_OPTIMIZATION_ANALYSIS.md
+business-logic-analysis-3.md
+query-optimization-analysis-3.md
 XOTBASE_EXTENSION_RULES.md
-FILAMENT_RESOURCE_GUIDELINES.md
+filament-resource-guidelines-3.md
 ```
 
 **Solution**: Lowercase with hyphens (kebab-case)
 ```
-business-logic-analysis.md
-query-optimization-analysis.md
+business-logic-analysis-3.md
+query-optimization-analysis-3.md
 xotbase-extension-rules.md
-filament-resource-guidelines.md
+filament-resource-guidelines-3.md
 ```
 
 ---
@@ -84,7 +84,7 @@ Modules/ModuleName/
     ├── architecture.md       # Technical architecture
     ├── business-logic.md     # Business rules and processes
     ├── configuration.md      # Setup and configuration
-    ├── api.md               # API documentation (if applicable)
+    ├── api-2.md               # API documentation (if applicable)
     ├── testing.md           # Testing guidelines
     └── troubleshooting.md   # Common issues and solutions
 ```
@@ -104,7 +104,7 @@ Modules/ModuleName/
   ├── README.md                    # Overview and quick start
   ├── architecture.md              # Translation system architecture
   ├── configuration.md             # Setup and configuration
-  ├── api.md                       # Public API reference
+  ├── api-2.md                       # Public API reference
   ├── strategies.md                # Translation strategies
   ├── mcamara-integration.md       # MCamara integration guide
   ├── troubleshooting.md           # Common issues
@@ -119,7 +119,7 @@ Modules/ModuleName/
   ├── README.md                    # Core framework overview
   ├── architecture.md              # Laraxot architecture rules
   ├── xotbase-classes.md           # XotBase* class reference
-  ├── filament-integration.md      # Filament v4 patterns
+  ├── filament-integration-3.md      # Filament v4 patterns
   ├── code-quality.md              # PHPStan, Pint guidelines
   ├── best-practices.md            # Development patterns
   ├── service-providers.md         # Service provider architecture
@@ -151,9 +151,9 @@ Modules/ModuleName/
   ├── README.md                    # User management overview
   ├── architecture.md              # Multi-type auth architecture
   ├── business-logic.md            # Authentication rules
-  ├── roles-permissions.md         # RBAC configuration
+  ├── roles-permissions-2.md         # RBAC configuration
   ├── multi-tenancy.md             # Tenant management
-  ├── api.md                       # Authentication API
+  ├── api-2.md                       # Authentication API
   ├── testing.md                   # Auth testing patterns
   └── troubleshooting.md           # Common issues
   ```
@@ -196,14 +196,14 @@ Other modules link: "See Xot/docs/code-quality.md"
 
 **Filament Guidelines** (Found in 5+ modules)
 ```
-Activity/docs/filament-resource-guidelines.md
-Activity/docs/FILAMENT_RESOURCE_GUIDELINES.md
+../../../../Activity/docs/filament-resource-guidelines-2.md
+Activity/docs/filament-resource-guidelines-3.md
 Xot/docs/FILAMENT_4_LARAXOT_RULES.md
 ```
 
 **Solution**: Single source in Xot module
 ```
-Xot/docs/filament-integration.md
+../../../../Lang/docs/filament-integration-3.md
   ↓
 Other modules reference via link
 ```
@@ -230,9 +230,9 @@ docs/event-sourcing-examples.md
 docs/event-sourcing-examples-duplicate.md
 docs/event-sourcing-introduction.md
 docs/advanced-event-sourcing-patterns-duplicate.md
-docs/advanced_event_sourcing_patterns.md
+docs/advanced-event-sourcing-patterns-2.md
 docs/guides/event-sourcing.md
-docs/guides/event_sourcing.md
+docs/guides/event-sourcing-2.md
 ```
 
 **Solution**: Consolidate to single file
@@ -268,8 +268,8 @@ mv translation-refactor-complete-summary.md translation-refactor-summary.md
 **Files with UPPERCASE** (241 files):
 ```bash
 # Example conversions
-mv business_logic_analysis.md business-logic-analysis.md
-mv QUERY_OPTIMIZATION_ANALYSIS.md query-optimization-analysis.md
+mv business-logic-analysis-3.md business-logic-analysis-3.md
+mv query-optimization-analysis-3.md query-optimization-analysis-3.md
 mv XOTBASE_EXTENSION_RULES.md xotbase-extension-rules.md
 ```
 
@@ -419,22 +419,22 @@ Modules/Xot/docs/phpstan-level-10-dry-kiss-analysis.md
 
 ### UPPERCASE Files (241 total - top priority samples)
 ```
-Modules/Activity/docs/business_logic_analysis.md
-Modules/Activity/docs/CODE_QUALITY_ANALYSIS.md
-Modules/Activity/docs/FILAMENT_RESOURCE_GUIDELINES.md
-Modules/Activity/docs/QUERY_OPTIMIZATION_ANALYSIS.md
+Modules/Activity/docs/business-logic-analysis-2.md
+Modules/Activity/docs/code-quality-analysis-2.md
+Modules/Activity/docs/filament-resource-guidelines-3.md
+Modules/Activity/docs/query-optimization-analysis-3.md
 Modules/Lang/docs/LOCALE_MANAGEMENT.md
 Modules/Lang/docs/MCAMARA_IMPLEMENTATION_GUIDE.md
 Modules/Lang/docs/QUICK_REFERENCE.md
 Modules/Lang/docs/TRANSLATION_PROCESS.md
 Modules/Lang/docs/TRANSLATION_STRATEGIES.md
-Modules/Notify/docs/COMMUNICATION_SYSTEMS_ARCHITECTURE.md
-Modules/Notify/docs/CORREZIONI_PHPSTAN_COMPLETATE.md
-Modules/User/docs/business_logic_analysis.md
-Modules/User/docs/BUSINESS_LOGIC_DEEP_DIVE.md
-Modules/User/docs/CODE_QUALITY_ANALYSIS.md
-Modules/User/docs/MODEL_INHERITANCE_ANALYSIS.md
-Modules/User/docs/QUERY_OPTIMIZATION_ANALYSIS.md
+Modules/Notify/docs/communication-systems-architecture-2.md
+Modules/Notify/docs/correzioni-phpstan-completate-4.md
+Modules/User/docs/business-logic-analysis-6.md
+Modules/User/docs/business-logic-deep-dive-3.md
+Modules/Activity/docs/code-quality-analysis-3.md
+Modules/User/docs/model-inheritance-analysis-3.md
+Modules/User/docs/query-optimization-analysis-3.md
 Modules/Xot/docs/CODE_QUALITY_STANDARDS.md
 Modules/Xot/docs/COMMON_ANTI_PATTERNS.md
 Modules/Xot/docs/COMPREHENSIVE_CODE_ANALYSIS.md

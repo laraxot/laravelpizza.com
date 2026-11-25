@@ -17,4 +17,4 @@ related:
   - "./actions-path-convention.md"
 ---
 
-> Questo file è stato rinominato in [copilot-redundancy-audit-.deprecated.md](copilot-redundancy-audit-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+> Questo file è stato rinominato in [copilot-redundancy-audit-2.deprecated.md](copilot-redundancy-audit-2.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.

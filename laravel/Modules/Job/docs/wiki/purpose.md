@@ -98,4 +98,4 @@ questo lavoro gira due volte.
 ## Collegamenti
 
 - `laravel/Modules/Notify/docs/purpose.md` — per notificare i fallimenti
-- `docs/wiki/rules/queueable-actions.md` — Action accodabili
+- `../../../Notify/docs/queueable-actions-2.md` — Action accodabili

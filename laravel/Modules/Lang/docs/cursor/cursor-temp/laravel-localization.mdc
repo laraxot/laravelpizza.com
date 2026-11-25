@@ -32,7 +32,7 @@ This document provides metadata for Cursor about the integration of `mcamara/lar
   ],
   ```
 - Consulta anche:
-  - [translation_keys_best_practices.md](../translation_keys_best_practices.md)
-  - [translation_keys_rules.md](../translation_keys_rules.md)
-  - [filament-translations.md](../filament-translations.md)
+  - [translation-keys-best-practices-3.md](../../translation-keys-best-practices-3.md)
+  - [translation-keys-rules-3.md](../../translation-keys-rules-3.md)
+  - [filament-translations-2.md](../../filament-translations-2.md)
   - [docs <nome progetto>](../../../<nome progetto>/docs/translations.md)

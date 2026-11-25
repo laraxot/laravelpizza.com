@@ -76,5 +76,5 @@ Builder::make('content')
 
 - [Documentazione Filament Forms](../filament-forms.md)
 - [Gestione Contenuti](../content.md)
-- [Best Practices UI](../ui/best-practices.md)
+- [Best Practices UI](../../../Activity/docs/best-practices-3.md)
 - [Accessibilità](../ui/accessibility.md)

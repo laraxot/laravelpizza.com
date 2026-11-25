@@ -11,10 +11,7 @@ created: 2026-11-18
 updated: 2026-11-18
 tags: [parcheggio, debito-tecnico]
 description: "File con estensione finta spostati fuori da app/ in Tenant, con il motivo per ciascuna famiglia."
-<<<<<<< .merge_file_fptVLN
 qmd: "parcheggiati tenant"
-=======
->>>>>>> .merge_file_tS8vym
 ---
 
 # File parcheggiati — Tenant

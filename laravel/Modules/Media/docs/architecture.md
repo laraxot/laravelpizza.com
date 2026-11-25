@@ -5,6 +5,7 @@ type: architecture
 tags: [architecture, structure]
 created: 2026-07-14
 updated: 2026-08-04
+qmd: "architecture architettura media"
 ---
 
 # Architettura Modulo Media
@@ -141,8 +142,6 @@ Il modulo utilizza l'inversion of control tramite:
 
 ---
 
-<<<<<<< .merge_file_lZLQoG
-<<<<<<< .merge_file_CPl2ik
 <!-- Merged from ARCHITECTURE.md, which collided with this file on case-insensitive filesystems. -->
 
 ## Media Module — Architecture (testo unito da ARCHITECTURE.md)
@@ -150,22 +149,7 @@ Il modulo utilizza l'inversion of control tramite:
 > Attenzione: questa sezione cita classi che nel codice non esistono (`UploadMediaAction`, `ProcessMediaAction`,
 > `DeleteMediaAction`, `MediaCollections`, `MediaItem`, `CollectionResource`). L'architettura verificata sul codice sta in
 > [bmad/architecture.md](bmad/architecture.md).
-=======
-=======
->>>>>>> .merge_file_9Gq6Yu
-<<<<<<< HEAD
-<!-- Merged from architecture.md, which collided with this file on case-insensitive filesystems. -->
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 <!-- Merged from ARCHITECTURE.md, which collided with this file on case-insensitive filesystems. -->
-=======
-<!-- Merged from architecture.md, which collided with this file on case-insensitive filesystems. -->
->>>>>>> laraxot/dev
-=======
-<!-- Merged from architecture.md, which collided with this file on case-insensitive filesystems. -->
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ---
 title: "Architecture: Media Module"
@@ -175,10 +159,6 @@ created: 2026-08-04
 updated: 2026-08-04
 ---
 # Media Module — Architecture
-<<<<<<< .merge_file_lZLQoG
->>>>>>> .merge_file_S4PrFD
-=======
->>>>>>> .merge_file_9Gq6Yu
 
 ## Purpose
 Media module provides file handling, storage, and processing infrastructure for the Laraxot ecosystem. Manages uploads, transformations, and media metadata.
@@ -216,3 +196,4 @@ Media module provides file handling, storage, and processing infrastructure for 
 ## Quality Gates
 - **PHPStan L10**: Pending verification
 - **Storage**: Tested with local/S3 drivers
+

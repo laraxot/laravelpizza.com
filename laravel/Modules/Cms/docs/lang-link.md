@@ -17,7 +17,7 @@ Consulta la documentazione delle traduzioni:
 - [Introduzione alle Traduzioni](../../lang/project_docs/introduction.md)
 - [Struttura delle Traduzioni](../../lang/project_docs/structure.md)
 - [Gestione dei File di Lingua](../../lang/project_docs/module_lang.md)
-- [Traduzioni in Filament](../../lang/project_docs/filament-translations.md) - **IMPORTANTE**: Regole per l'uso delle traduzioni nei componenti Filament
+- [Traduzioni in Filament](../../Lang/docs/filament-translations-2.md) - **IMPORTANTE**: Regole per l'uso delle traduzioni nei componenti Filament
 
 ## Collegamento Bidirezionale
 

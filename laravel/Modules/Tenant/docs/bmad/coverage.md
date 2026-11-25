@@ -23,7 +23,7 @@ This module has comprehensive test coverage with various test types implemented.
 ## Coverage Statistics
 ## Status
 
-**2026-09-06**: philosophy.md created. PHPStan analyzed (OK). Pest suite (TBD). Coverage target: +5% per module.
+**2026-09-06**: ../philosophy-2.md created. PHPStan analyzed (OK). Pest suite (TBD). Coverage target: +5% per module.
 
 ### 2026-09-06 (sessione claude sonnet 5 — `phpstan-tenant-fix.md`)
 

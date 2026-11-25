@@ -14,16 +14,16 @@ sources: []
 
 ## Scopo
 
-Più temi e un modulo duplicano lo **stesso file** `docs/REDUNDANCY_ANALYSIS.md` con una sola riga che punta a `docs/analysis/redundancies/summary.md` (path **non presente** nel tree attuale del repo o non versionato qui). È **ridondanza documentale**: stesso messaggio ripetuto senza contenuto operativo locale.
+Più temi e un modulo duplicano lo **stesso file** `../../redundancy-analysis.md` con una sola riga che punta a `../../../../../Modules/Notify/docs/bugs/summary-2.md` (path **non presente** nel tree attuale del repo o non versionato qui). È **ridondanza documentale**: stesso messaggio ripetuto senza contenuto operativo locale.
 
 File osservati (stesso testo sostanzialmente):
 
-- `laravel/Themes/Meetup/docs/REDUNDANCY_ANALYSIS.md`
-- `laravel/Themes/TwentyOne/docs/REDUNDANCY_ANALYSIS.md`
-- `laravel/Themes/Barthelemy/docs/REDUNDANCY_ANALYSIS.md`
-- `laravel/Modules/Sixteen/docs/REDUNDANCY_ANALYSIS.md`
-- `laravel/Modules/UI/docs/REDUNDANCY_ANALYSIS.md`
-- analogamente `laravel/Themes/Sixteen/docs/REDUNDANCY_ANALYSIS.md` (punto ingresso pubblico tema principale FixCity).
+- `laravel/Themes/Meetup/docs/redundancy-analysis.md`
+- `laravel/Themes/Meetup/docs/redundancy-analysis.md`
+- `laravel/Themes/Meetup/docs/redundancy-analysis.md`
+- `laravel/Themes/Meetup/docs/redundancy-analysis.md`
+- `laravel/Themes/Meetup/docs/redundancy-analysis.md`
+- analogamente `laravel/Themes/Meetup/docs/redundancy-analysis.md` (punto ingresso pubblico tema principale FixCity).
 
 ## Direzione tecnica canonica
 
@@ -33,5 +33,5 @@ File osservati (stesso testo sostanzialmente):
 ## Tracker
 
 - Issue GitHub: [#90 — Code redundancy audit](https://github.com/laraxot/base_fixcity_fila5/issues/90)
-- Consolidare questo stub sostituendolo con un link alla summary reale quando `docs/analysis/redundancies/summary.md` esiste, oppure deprecare il file verso wiki `docs/wiki/concepts/code-redundancy-audit.md`.
+- Consolidare questo stub sostituendolo con un link alla summary reale quando `../../../../../Modules/Notify/docs/bugs/summary-2.md` esiste, oppure deprecare il file verso wiki `docs/wiki/concepts/code-redundancy-audit.md`.
 

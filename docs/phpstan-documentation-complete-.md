@@ -218,7 +218,7 @@ Modules/
 ## Related Documentation
 
 - [XotBase Extension Rules](xotbase-extension-rules.md)
-- [Code Quality Standards](code_quality.md)
+- [Code Quality Standards](code-quality-2.md)
 - [Provider Patterns](provider-documentation-index.md)
 
 ---

@@ -1,17 +1,3 @@
-<<<<<<< .merge_file_bonKty
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_NT8khB
-# Glossario di dominio UI
-
-<!-- Le parole del dominio e dove stanno nel codice. Topology di AGENTS.md punta qui.
-     Un termine per riga; se glossario e codice non coincidono, vale il codice e si corregge il glossario. -->
-
-| Termine | Significato | Nel codice |
-|---|---|---|
-<<<<<<< .merge_file_bonKty
-| <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
-=======
 ---
 title: "Glossario di dominio UI"
 type: glossary
@@ -42,7 +28,3 @@ Se glossario e codice divergono vale il codice. Percorsi relativi a `laravel/Mod
 | Orari di apertura | Regola di validazione del formato degli orari di apertura. | `app/Rules/OpeningHoursRule.php` |
 | Icone disponibili | Elenco delle icone Blade registrate, per i selettori. | `app/Actions/Icon/GetAllIconsAction.php` |
 | Componenti di interfaccia | Componenti Blade condivisi: Logo, Navbar, Sidebar, DarkModeSwitcher, Svg. | `app/View/Components/` |
->>>>>>> laraxot/dev
-=======
-| <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
->>>>>>> .merge_file_NT8khB

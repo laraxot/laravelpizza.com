@@ -122,5 +122,5 @@ Modules/{ModuleName}/
 ## 🔗 Link
 
 - [Indice CLAUDE](./claude-split-index.md)
-- [CLAUDE.md originale](../../CLAUDE.md)
+- [CLAUDE.md originale](../../../Geo/docs/root-md-files/claude.md)
 - [Index principale](./index.md)

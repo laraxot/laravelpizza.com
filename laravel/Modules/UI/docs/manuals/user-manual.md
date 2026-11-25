@@ -4,10 +4,7 @@ type: user-manual
 status: active
 module: UI
 updated: 2026-11-23
-<<<<<<< .merge_file_gN18ib
 qmd: "user manual manuale utente"
-=======
->>>>>>> .merge_file_HHgEuc
 ---
 
 # Manuale utente UI

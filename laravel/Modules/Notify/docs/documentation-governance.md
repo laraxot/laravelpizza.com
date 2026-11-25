@@ -172,7 +172,7 @@ Gennaio 2025
 This guide covers user authentication implementation.
 
 ## Related
-- [Session Management](session-management.md)
+- [Session Management](session-management-3.md)
 - [Password Reset](password-reset.md)
 
 ---

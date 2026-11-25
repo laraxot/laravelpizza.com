@@ -230,7 +230,7 @@ new class extends Component {
 **Struttura**:
 ```
 docs/                              # Root (SSOT)
-├── MASTER_documentation-index.md
+├── master-documentation-index-2.md
 ├── zen-of-documentation.md
 ├── architecture/
 ├── guides/
@@ -595,8 +595,8 @@ new class extends Component {
 **Struttura**:
 ```
 docs/                              # Root (SSOT)
-├── MASTER_DOCUMENTATION_INDEX.md
-├── ZEN_OF_DOCUMENTATION.md
+├── master-documentation-index-2.md
+├── zen-of-documentation-2.md
 ├── architecture/
 ├── guides/
 └── conventions/

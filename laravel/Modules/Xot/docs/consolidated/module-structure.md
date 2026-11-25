@@ -37,7 +37,7 @@ ModuleName/
 - [README](../README.md) - Panoramica del modulo Xot
 - [Convenzioni di Naming](./naming-conventions.md) - Regole di naming
 - [Case Sensitivity](./DIRECTORY-CASE-SENSITIVITY.md) - Regole per la case sensitivity
-- [Namespace Rules](./NAMESPACE-RULES.md) - Regole per i namespace
+- [Namespace Rules](../../../Notify/docs/namespace-rules-2.md) - Regole per i namespace
 
 ### Moduli Collegati
 - [UI](../UI/project_docs/README.md) - Componenti di interfaccia
@@ -181,7 +181,7 @@ User/
 │   └── seeders/
 ├── docs/
 │   ├── README.md
-│   └── api.md
+│   └── api-2.md
 ├── resources/
 │   ├── views/
 │   │   ├── pages/
@@ -210,12 +210,12 @@ User/
 - [Frontend](../Cms/project_docs/frontend.md)
 - [Temi](../Cms/project_docs/themes.md)
 - [Contenuti](../Cms/project_docs/content.md)
-- [Convenzioni Filament](../Cms/project_docs/convenzioni-namespace-filament.md)
+- [Convenzioni Filament](../../../Cms/docs/convenzioni-namespace-filament-2.md)
 
 ### Modulo Lang
 - [Traduzioni](../Lang/project_docs/translations.md)
 - [Localizzazione](../Lang/project_docs/localization.md)
-- [API Traduzioni](../Lang/project_docs/api.md)
+- [API Traduzioni](../../../User/docs/api-2.md)
 
 ### Modulo User
 - [Autenticazione](../User/project_docs/auth.md)
@@ -254,8 +254,8 @@ User/
 
 ### Modulo Gdpr
 - [Privacy](../Gdpr/project_docs/privacy.md)
-- [Consensi](../Gdpr/project_docs/consents.md)
-- [Sicurezza](../Gdpr/project_docs/security.md)
+- [Consensi](../../../Gdpr/docs/consents-2.md)
+- [Sicurezza](../../../Geo/docs/root-md-files/security-2.md)
 
 ### Modulo Job
 - [Jobs](../Job/project_docs/jobs.md)

@@ -187,7 +187,7 @@ The following modules have documentation folders that need updates:
 
 ### Documentation Structure
 Each module's docs folder will receive:
-1. `BOOST_SKILL_FIX_summary.md` - Summary of the fix
+1. `boost-skill-fix-summary-2.md` - Summary of the fix
 2. `DEPENDENCIES_MANAGEMENT.md` - Best practices for dependency management
 
 ## Risk Assessment

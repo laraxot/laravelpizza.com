@@ -53,8 +53,8 @@ docs/
 ├── reference/
 │   ├── api_endpoints.md
 │   ├── configuration.md
-│   ├── database_schema.md
-│   └── best_practices.md
+│   ├── database-schema-2.md
+│   └── best-practices-3.md
 ├── components/
 │   ├── authentication_components.md
 │   ├── filament_components.md
@@ -62,7 +62,7 @@ docs/
 ├── troubleshooting/
 │   ├── common_errors.md
 │   ├── filament_errors.md
-│   └── phpstan_errors.md
+│   └── phpstan-errors-2.md
 └── integrations/
     ├── spatie_permissions.md
     ├── socialite_integration.md

@@ -168,8 +168,8 @@ $retryDelay = $config['drivers'][$driver]['retry_delay'] ?? $config['retry']['de
 
 ## Collegamenti
 
-- [Configurazione Netfun](./netfun_config_requirements.md)
-- [Provider SMS Supportati](./notifications/sms_provider_configuration.md)
+- [Configurazione Netfun](./netfun-config-requirements-2.md)
+- [Provider SMS Supportati](./notifications/sms-provider-configuration-2.md)
 <<<<<<< .merge_file_OVpr2W
 <<<<<<< HEAD
 =======

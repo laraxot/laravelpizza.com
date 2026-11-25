@@ -56,7 +56,7 @@ Ho completato l'analisi sistematica di **tutti i moduli** del progetto <nome pro
 ## 📋 DOCUMENTAZIONE CREATA
 
 ### 🎯 Per Ogni Modulo
-Creato file `optimization_recommendations.md` in ogni modulo con:
+Creato file `optimization-recommendations-2.md` in ogni modulo con:
 
 #### Struttura Standardizzata
 1. **🎯 Stato Attuale**: Punti forza e problemi critici
@@ -92,22 +92,22 @@ Creato file `optimization_recommendations.md` in ogni modulo con:
 
 1. **Xot PathHelper** (2 ore)
    - Problema: Path hardcoded bloccano framework
-   - Soluzione: [Xot optimization_recommendations.md](../laravel/modules/xot/docs/optimization_recommendations.md)
+   - Soluzione: [Xot optimization-recommendations-2.md](../laravel/modules/xot/docs/optimization-recommendations-2.md)
 
 2. **Notify Riusabilità** (2 giorni)
    - Problema: 336 occorrenze bloccano notifiche
-   - Soluzione: [Notify optimization_recommendations.md](../../Notify/docs/optimization_recommendations.md)
+   - Soluzione: [Notify optimization-recommendations-2.md](../../Notify/docs/optimization-recommendations-2.md)
 
 ### 🟡 ALTA (Settimana 2)
 **Obiettivo**: Moduli core riutilizzabili
 
 3. **User Restructuring** (1 giorno)
    - Problema: README gigantesco + hardcoding
-   - Soluzione: [User optimization_recommendations.md](../../User/docs/optimization_recommendations.md)
+   - Soluzione: [User optimization-recommendations-2.md](../../User/docs/optimization-recommendations-3.md)
 
 4. **Cms Generalization** (1 giorno)
    - Problema: Content troppo specifico
-   - Soluzione: [Cms optimization_recommendations.md](../../Cms/docs/optimization_recommendations.md)
+   - Soluzione: [Cms optimization-recommendations-2.md](../../Cms/docs/optimization-recommendations-2.md)
 
 ### 🟢 NORMALE (Settimana 3)
 **Obiettivo**: Ottimizzazioni performance e DX
@@ -184,7 +184,7 @@ Creato file `optimization_recommendations.md` in ogni modulo con:
 ### Per gli Sviluppatori
 1. **Leggere** linee guida riusabilità
 2. **Iniziare** da Xot PathHelper (2 ore)
-3. **Seguire** optimization_recommendations.md per ogni modulo
+3. **Seguire** optimization-recommendations-2.md per ogni modulo
 4. **Verificare** con script check ad ogni step
 
 ---
@@ -201,7 +201,7 @@ discussions: []
 
 Per domande sull'implementazione delle raccomandazioni:
 
-1. **Consultare** file `optimization_recommendations.md` del modulo specifico
+1. **Consultare** file `optimization-recommendations-2.md` del modulo specifico
 2. **Utilizzare** script `check_module_reusability.sh` per verifica
 3. **Seguire** linee guida in `module_reusability_guidelines.md`
 

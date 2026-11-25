@@ -428,7 +428,7 @@ canonical: ../../../Themes/docs/shared-components/roadmap--Modules.md
 
 See canonical documentation: ../../../Themes/docs/shared-components/roadmap--Modules.md
 - [phpstan-override-fix-roadmap.md](phpstan-override-fix-roadmap.md)
-- [phpstan-roadmap.md](phpstan-roadmap.md) (✅ Completed)
+- [phpstan-roadmap-2.md](phpstan-roadmap-2.md) (✅ Completed)
 - [roadmap/00-index.md](roadmap/00-index.md)
 - [roadmap/00-overview.md](roadmap/00-overview.md)
 - [roadmap/01-current-state.md](roadmap/01-current-state.md)

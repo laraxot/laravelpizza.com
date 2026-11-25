@@ -532,7 +532,7 @@ $panel->tenantMiddleware([
 
 - [Filament 5.x Nested Resources Complete Guide](filament-5-nested-resources-complete-guide.md)
 - [Filament Nesting Best Practices](../filament-nesting-best-practices.md)
-- [User Module Tenancy Documentation](../../user/docs/traits/has-tenants.md)
+- [User Module Tenancy Documentation](../../laravel/Modules/Geo/docs/traits/has-tenants-2.md)
 - [Tenant Module Documentation](../../tenant/docs/readme.md)
 - [XotBasePanelProvider Documentation](../filament-integration.md)
 

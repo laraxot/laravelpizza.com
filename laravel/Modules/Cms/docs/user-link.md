@@ -33,7 +33,7 @@ Per dettagli specifici, consulta:
 ## Collegamenti Bidirezionali
 
 - [Convenzioni di Namespace nel modulo User](../../user/project_docs/namespace-conventions.md)
-- [Best Practices Filament nel modulo User](../../user/project_docs/filament_best_practices.md)
+- [Best Practices Filament nel modulo User](../../user/project_docs/filament-best-practices-2.md)
 
 ---
 

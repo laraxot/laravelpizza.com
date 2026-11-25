@@ -32,7 +32,7 @@ Il pattern originale di Karpathy usa tre cartelle distinte alla root del progett
 project/
 ├── raw/     # fonti immutabili
 ├── wiki/    # conoscenza compilata dall'LLM
-└── schema/  # CLAUDE.md / AGENTS.md
+└── schema/  # CLAUDE.md / agents-2.md
 ```
 
 Nel nostro caso, ogni modulo e tema ha già una cartella `docs/`. Il mapping naturale è:
@@ -98,7 +98,7 @@ Se serve una sintesi, va in `docs/wiki/`, non nella fonte.
 ### Lint — pulizia periodica
 
 Controlla:
-- Pagine `wiki/` senza backlink da `index.md`
+- Pagine `wiki/` senza backlink da `index-3.md`
 - File duplicati con contenuto sovrapposto in `docs/`
 - Pagine wiki con affermazioni superate da fonti più recenti
 - Gap informativi: aree del modulo non ancora documentate nel wiki

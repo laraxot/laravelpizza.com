@@ -86,7 +86,7 @@ function userResourceFormFindByName(array $components, string $name): Field|Entr
         }
 
         $found = userResourceFormFindByName(userResourceFormChildren($component), $name);
-        if (null !== $found) {
+        if ($found !== null) {
             return $found;
         }
     }

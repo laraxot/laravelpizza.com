@@ -67,7 +67,7 @@
 # Eliminati sistematicamente
 - migrations.md (tutti i moduli)
 - migration-guide.md (tutti i moduli)
-- migration_best_practices.md (tutti i moduli)
+- migration-best-practices-2.md (tutti i moduli)
 - migration_rules.md (tutti i moduli)
 ```
 

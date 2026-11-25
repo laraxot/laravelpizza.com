@@ -22,10 +22,7 @@ related:
   - ../../../../Xot/app/Traits/EnumTrait.php
   - ../../lang/it/table_layout_enum.php
   - ../../tests/Unit/Enums/TableLayoutEnumTest.php
-<<<<<<< .merge_file_YEHCFU
 qmd: "story ui table layout enum translations"
-=======
->>>>>>> .merge_file_8w029C
 ---
 
 # Problema

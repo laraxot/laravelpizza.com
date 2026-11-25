@@ -31,7 +31,7 @@ For strict coding standards, Filament extension rules, and PHPStan guidelines, p
 
 -   [Super Cow Methodology](../../xot/docs/super_cow_methodology.md)
 -   [PHP Quality Guide](../../xot/docs/php_quality_guide.md)
--   [Filament Extension Rules](../../xot/docs/filament_extension_rules.md)
+-   [Filament Extension Rules](../../xot/docs/filament-extension-rules-2.md)
 
 **Key Principles:**
 1.  **DRY & KISS**: Don't repeat yourself, keep it simple.
@@ -80,9 +80,9 @@ This document outlines the architectural design of the Notify module, focusing o
 
 ## Links to Related Documentation
 - [Notify Module Index](./index.md)
-- [Notification Channels Implementation](./notification_channels_implementation.md)
-- [Email Templates](./email_templates.md)
-- [SMS Implementation](./sms_implementation.md)
+- [Notification Channels Implementation](./notification-channels-implementation-2.md)
+- [Email Templates](./email-templates-2.md)
+- [SMS Implementation](./sms-implementation-2.md)
 - [Troubleshooting](./troubleshooting.md)
 <<<<<<< .merge_file_uryXfY
 <<<<<<< .merge_file_y9fp2p

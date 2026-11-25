@@ -651,7 +651,7 @@ config when setting `setlocale()`.
 
 ## laravel-localization-complete
 
-*Consolidated from: `laravel-localization-complete.md`*
+*Consolidated from: `laravel-localization-complete-2.md`*
 
 title: "Guida Completa a Laravel Localization"
 module: "Lang"
@@ -1206,14 +1206,14 @@ php artisan route:trans:list it # List routes for locale
 ## Related Docs
 
 - [Skill: laravel-localization](../../../../.agent/skills/laravel-localization/skill.md)
-- [Filament Integration](./filament-integration.md)
-- [Philosophy](./philosophy.md)
+- [Filament Integration](../../filament-integration-3.md)
+- [Philosophy](../../philosophy-3.md)
 
 ---
 
 ## laravel-localization-folio-integration
 
-*Consolidated from: `laravel-localization-folio-integration.md`*
+*Consolidated from: `laravel-localization-folio-integration-2.md`*
 
 title: "Integration of Mcamara Laravel Localization with Laravel Folio"
 module: "Lang"
@@ -1609,7 +1609,7 @@ Integrating `mcamara/laravel-localization` with `laravel/folio` requires careful
 
 ## laravel-localization-folio
 
-*Consolidated from: `laravel-localization-folio.md`*
+*Consolidated from: `laravel-localization-folio-2.md`*
 
 title: "Integrazione tra mcamara/laravel-localization e Laravel Folio"
 module: "Lang"
@@ -1762,11 +1762,11 @@ Se la localizzazione dei path è fondamentale, valuta se usare ancora le rotte c
 - [Documentazione ufficiale mcamara/laravel-localization](https://github.com/mcamara/laravel-localization)
 - [Documentazione Laravel Folio](https://laravel.com/project_docs/12.x/folio)
 - [Esempio di mapping rotte](https://github.com/mcamara/laravel-localization#translated-routes)
-- [FAQ e problemi comuni](Modules/Lang/project_docs/translations-faq.md)
+- [FAQ e problemi comuni](Modules/Lang/docs/translations-faq-2.md)
 - [Guida language switcher](Modules/Lang/project_docs/README.md)
-- [FAQ e problemi comuni](Modules/Lang/project_docs/translations-faq.md)
+- [FAQ e problemi comuni](Modules/Lang/docs/translations-faq-2.md)
 - [Guida language switcher](Modules/Lang/project_docs/README.md)
-- [FAQ e problemi comuni](Modules/Lang/project_docs/translations-faq.md)
+- [FAQ e problemi comuni](Modules/Lang/docs/translations-faq-2.md)
 - [Guida language switcher](Modules/Lang/project_docs/README.md)
 
 ---
@@ -1936,7 +1936,7 @@ Se la localizzazione dei path è fondamentale, valuta se usare ancora le rotte c
 
 ## laravel-localization-implementation
 
-*Consolidated from: `laravel-localization-implementation.md`*
+*Consolidated from: `laravel-localization-implementation-2.md`*
 
 title: "Implementazione della Localizzazione"
 module: "Lang"
@@ -1953,8 +1953,8 @@ related:
 ## Collegamenti correlati
 - [Documentazione centrale](/docs/README.md)
 - [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
-- [Regole Traduzioni Lang](/laravel/Modules/Lang/docs/translation_keys_rules.md)
-- [Componenti SVG Bandiere](/laravel/Modules/UI/docs/FLAGS_COMPONENTS.md)
+- [Regole Traduzioni Lang](/laravel/Modules/Lang/docs/translation-keys-rules-2.md)
+- [Componenti SVG Bandiere](/laravel/Modules/UI/docs/archive/flags-components-2.md)
 - [Implementazione Header](/laravel/Themes/One/docs/sections/HEADER_LANGUAGE_USER_DROPDOWN.md)
 
 ## Panoramica
@@ -2112,8 +2112,8 @@ Seguendo queste linee guida, è possibile implementare correttamente la localizz
 ## Collegamenti correlati
 - [Documentazione centrale](/docs/README.md)
 - [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
-- [Regole Traduzioni Lang](/laravel/Modules/Lang/docs/translation_keys_rules.md)
-- [Componenti SVG Bandiere](/laravel/Modules/UI/docs/FLAGS_COMPONENTS.md)
+- [Regole Traduzioni Lang](/laravel/Modules/Lang/docs/translation-keys-rules-2.md)
+- [Componenti SVG Bandiere](/laravel/Modules/UI/docs/archive/flags-components-2.md)
 - [Implementazione Header](/laravel/Themes/One/docs/sections/HEADER_LANGUAGE_USER_DROPDOWN.md)
 
 ## Panoramica
@@ -2275,7 +2275,7 @@ Seguendo queste linee guida, è possibile implementare correttamente la localizz
 
 ## laravel-localization-integration
 
-*Consolidated from: `laravel-localization-integration.md`*
+*Consolidated from: `laravel-localization-integration-2.md`*
 
 title: "Integrazione avanzata: mcamara/laravel-localization + Laravel Folio"
 module: "Lang"
@@ -2411,7 +2411,7 @@ class Article extends Model implements \Mcamara\LaravelLocalization\Interfaces\L
 - Versiona sempre i file `lang/{locale}/routes.php` e aggiorna la documentazione ad ogni nuova pagina Folio
 - Usa sempre i metodi di LaravelLocalization per link e redirect nei Blade
 - Testa la localizzazione sia per le route che per i contenuti delle pagine Folio
-- Documenta la strategia in `/Modules/Lang/project_docs/laravel-localization-integration.md` e linka dal README
+- Documenta la strategia in `/Modules/Lang/docs/laravel-localization-integration-2.md` e linka dal README
 - Per la cache delle route, usa sempre `php artisan route:trans:cache`
 
 ---
@@ -2422,7 +2422,7 @@ class Article extends Model implements \Mcamara\LaravelLocalization\Interfaces\L
 - Crea/aggiorna i file `lang/{locale}/routes.php` per tutte le lingue supportate
 - Nei Blade Folio, sostituisci tutti i link hardcoded con i metodi di LaravelLocalization
 - Se usi parametri dinamici multilingua, aggiorna i model per supportare `LocalizedUrlRoutable`
-- Documenta la strategia in `/Modules/Lang/project_docs/laravel-localization-integration.md` e linka dal README
+- Documenta la strategia in `/Modules/Lang/docs/laravel-localization-integration-2.md` e linka dal README
 
 ---
 
@@ -2604,7 +2604,7 @@ class Article extends Model implements \Mcamara\LaravelLocalization\Interfaces\L
 
 ## laravel-localization-livewire-volt
 
-*Consolidated from: `laravel-localization-livewire-volt.md`*
+*Consolidated from: `laravel-localization-livewire-volt-2.md`*
 
 title: "Integrazione di mcamara/laravel-localization con Livewire Volt"
 module: "Lang"
@@ -2721,7 +2721,7 @@ Se usi Folio, assicurati che anche le pagine Volt siano registrate nel gruppo lo
 - [ ] Tutti i testi nei componenti Volt sono tradotti con `__()` o `@lang`.
 - [ ] Tutti i link e redirect usano nomi di rotte localizzate.
 - [ ] Se necessario, i path delle rotte Volt sono tradotti tramite mapping.
-- [ ] Documenta ogni eccezione o workaround in `/Modules/Lang/project_docs/laravel-localization-livewire-volt.md`.
+- [ ] Documenta ogni eccezione o workaround in `/Modules/Lang/docs/laravel-localization-livewire-volt-2.md`.
 
 ---
 
@@ -2743,7 +2743,7 @@ Se usi Folio, assicurati che anche le pagine Volt siano registrate nel gruppo lo
 - **Componenti Volt**:
   Verifica che tutti i testi siano tradotti e che i redirect usino le rotte localizzate.
 - **Documentazione**:
-  Aggiorna sempre `/Modules/Lang/project_docs/laravel-localization-livewire-volt.md` ogni volta che cambi la struttura delle rotte o dei componenti Volt.
+  Aggiorna sempre `/Modules/Lang/docs/laravel-localization-livewire-volt-2.md` ogni volta che cambi la struttura delle rotte o dei componenti Volt.
 
 ---
 
@@ -3297,7 +3297,7 @@ Same issue - localize POST URLs to prevent redirects that change locale.
 
 ## laravel-localization-usage
 
-*Consolidated from: `laravel-localization-usage.md`*
+*Consolidated from: `laravel-localization-usage-2.md`*
 
 title: "Utilizzo di mcamara/laravel-localization"
 module: "Lang"
@@ -3313,16 +3313,16 @@ related:
 
 ## Collegamenti correlati
 - [README modulo Lang](./README.md)
-- [Best Practices Chiavi di Traduzione](translation-keys-best-practices.md)
-- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header_language_selector_with_flags.md)
+- [Best Practices Chiavi di Traduzione](translation-keys-best-practices-3.md)
+- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header-language-selector-with-flags-3.md)
 - [README modulo Lang](./README.md)
-- [Best Practices Chiavi di Traduzione](translation-keys-best-practices.md)
-- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header_language_selector_with_flags.md)
+- [Best Practices Chiavi di Traduzione](translation-keys-best-practices-3.md)
+- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header-language-selector-with-flags-3.md)
 - [README modulo Lang](./README.md)
-- [Best Practices Chiavi di Traduzione](translation-keys-best-practices.md)
-- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/HEADER_LANGUAGE_SELECTOR_WITH_FLAGS.md)
+- [Best Practices Chiavi di Traduzione](translation-keys-best-practices-3.md)
+- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header-language-selector-with-flags-3.md)
 
-- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header_language_selector_with_flags.md)
+- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header-language-selector-with-flags-3.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
 ## Panoramica
@@ -3555,16 +3555,16 @@ Questi middleware sono già configurati  e non è necessario modificarli.
 
 ## Collegamenti correlati
 - [README modulo Lang](./README.md)
-- [Best Practices Chiavi di Traduzione](translation-keys-best-practices.md)
-- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header_language_selector_with_flags.md)
+- [Best Practices Chiavi di Traduzione](translation-keys-best-practices-3.md)
+- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header-language-selector-with-flags-3.md)
 - [README modulo Lang](./README.md)
-- [Best Practices Chiavi di Traduzione](translation-keys-best-practices.md)
-- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header_language_selector_with_flags.md)
+- [Best Practices Chiavi di Traduzione](translation-keys-best-practices-3.md)
+- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header-language-selector-with-flags-3.md)
 - [README modulo Lang](./README.md)
-- [Best Practices Chiavi di Traduzione](translation-keys-best-practices.md)
-- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/HEADER_LANGUAGE_SELECTOR_WITH_FLAGS.md)
+- [Best Practices Chiavi di Traduzione](translation-keys-best-practices-3.md)
+- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header-language-selector-with-flags-3.md)
 
-- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header_language_selector_with_flags.md)
+- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header-language-selector-with-flags-3.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
 ## Panoramica
@@ -3802,7 +3802,7 @@ Questi middleware sono già configurati  e non è necessario modificarli.
 
 ## laravel-localization
 
-*Consolidated from: `laravel-localization.md`*
+*Consolidated from: `laravel-localization-2.md`*
 
 title: "Laravel Localization"
 module: "Lang"
@@ -3916,9 +3916,9 @@ This document provides metadata for Cursor about the integration of `mcamara/lar
   ],
   ```
 - Consulta anche:
-  - [translation-keys-best-practices.md](../translation-keys-best-practices.md)
-  - [translation_keys_rules.md](../translation_keys_rules.md)
-  - [filament-translations.md](../filament-translations.md)
+  - [translation-keys-best-practices-3.md](../../translation-keys-best-practices-3.md)
+  - [translation-keys-rules-3.md](../../translation-keys-rules-3.md)
+  - [filament-translations-2.md](../../filament-translations-2.md)
   - [docs <nome progetto>](../../../<nome progetto>/docs/translations.md)
 ## Modifiche Suggerite
 
@@ -3970,7 +3970,7 @@ L'implementazione di `mcamara/laravel-localization` nel progetto `<nome progetto
 
 ## laravel_localization
 
-*Consolidated from: `laravel_localization.md`*
+*Consolidated from: `laravel-localization-2.md`*
 
 title: "Laravel Localization"
 module: "Lang"
@@ -4021,7 +4021,7 @@ L'implementazione di `mcamara/laravel-localization` nel progetto `<nome progetto
 
 ## laravel_localization_complete
 
-*Consolidated from: `laravel_localization_complete.md`*
+*Consolidated from: `laravel-localization-complete-2.md`*
 
 title: "Guida Completa a Laravel Localization"
 module: "Lang"
@@ -4236,7 +4236,7 @@ Il pacchetto `mcamara/laravel-localization` offre un controllo versatile sulla l
 
 ## laravel_localization_folio
 
-*Consolidated from: `laravel_localization_folio.md`*
+*Consolidated from: `laravel-localization-folio-2.md`*
 
 title: "Integrazione tra mcamara/laravel-localization e Laravel Folio"
 module: "Lang"
@@ -4400,7 +4400,7 @@ Se la localizzazione dei path è fondamentale, valuta se usare ancora le rotte c
 
 ## laravel_localization_folio_integration
 
-*Consolidated from: `laravel_localization_folio_integration.md`*
+*Consolidated from: `laravel-localization-folio-integration-2.md`*
 
 title: "Integration of Mcamara Laravel Localization with Laravel Folio"
 module: "Lang"
@@ -4605,7 +4605,7 @@ Integrating `mcamara/laravel-localization` with `laravel/folio` requires careful
 
 ## laravel_localization_implementation
 
-*Consolidated from: `laravel_localization_implementation.md`*
+*Consolidated from: `laravel-localization-implementation-2.md`*
 
 title: "Implementazione della Localizzazione "
 module: "Lang"
@@ -4622,8 +4622,8 @@ related:
 ## Collegamenti correlati
 - [Documentazione centrale](/docs/README.md)
 - [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
-- [Regole Traduzioni Lang](/laravel/Modules/Lang/docs/translation_keys_rules.md)
-- [Componenti SVG Bandiere](/laravel/Modules/UI/docs/FLAGS_COMPONENTS.md)
+- [Regole Traduzioni Lang](/laravel/Modules/Lang/docs/translation-keys-rules-2.md)
+- [Componenti SVG Bandiere](/laravel/Modules/UI/docs/archive/flags-components-2.md)
 - [Implementazione Header](/laravel/Themes/One/docs/sections/HEADER_LANGUAGE_USER_DROPDOWN.md)
 
 ## Panoramica
@@ -4781,7 +4781,7 @@ Seguendo queste linee guida, è possibile implementare correttamente la localizz
 
 ## laravel_localization_integration
 
-*Consolidated from: `laravel_localization_integration.md`*
+*Consolidated from: `laravel-localization-integration-2.md`*
 
 title: "Integrazione avanzata: mcamara/laravel-localization + Laravel Folio"
 module: "Lang"
@@ -4954,7 +4954,7 @@ class Article extends Model implements \Mcamara\LaravelLocalization\Interfaces\L
 
 ## laravel_localization_livewire_volt
 
-*Consolidated from: `laravel_localization_livewire_volt.md`*
+*Consolidated from: `laravel-localization-livewire-volt-2.md`*
 
 title: "Integrazione di mcamara/laravel-localization con Livewire Volt"
 module: "Lang"
@@ -5105,7 +5105,7 @@ Vedi file `.cursor/rules/laravel-localization-livewire-volt.mdc` e `.windsurf/ru
 
 ## laravel_localization_usage
 
-*Consolidated from: `laravel_localization_usage.md`*
+*Consolidated from: `laravel-localization-usage-2.md`*
 
 title: "Utilizzo di mcamara/laravel-localization "
 module: "Lang"
@@ -5121,10 +5121,10 @@ related:
 
 ## Collegamenti correlati
 - [README modulo Lang](./README.md)
-- [Best Practices Chiavi di Traduzione](translation-keys-best-practices.md)
-- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/HEADER_LANGUAGE_SELECTOR_WITH_FLAGS.md)
+- [Best Practices Chiavi di Traduzione](translation-keys-best-practices-3.md)
+- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header-language-selector-with-flags-3.md)
 
-- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header_language_selector_with_flags.md)
+- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/header-language-selector-with-flags-3.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
 ## Panoramica

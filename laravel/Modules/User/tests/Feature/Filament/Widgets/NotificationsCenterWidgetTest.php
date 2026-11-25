@@ -17,7 +17,7 @@ it('redirects guests from notifiche page', function (): void {
 });
 
 it('uses notifications center widget view', function (): void {
-    $widget = new NotificationsCenterWidget();
+    $widget = new NotificationsCenterWidget;
     $reflection = new ReflectionClass($widget);
     $property = $reflection->getProperty('view');
     $property->setAccessible(true);

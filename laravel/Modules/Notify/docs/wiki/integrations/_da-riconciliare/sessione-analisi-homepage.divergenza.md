@@ -14,8 +14,8 @@ updated: 2026-11-23
 
 Questo file veniva da `docs/wiki/integrations/modules/notify/SESSIONE_ANALISI_HOMEPAGE.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
 
-- versione del modulo: `laravel/Modules/Notify/docs/SESSIONE_ANALISI_HOMEPAGE.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/SESSIONE_ANALISI_HOMEPAGE.md`
+- versione del modulo: `laravel/Modules/Notify/docs/sessione-analisi-homepage-2.md`
+- versione recuperata: `laravel/Modules/Notify/docs/sessione-analisi-homepage-2.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 

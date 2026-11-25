@@ -127,7 +127,7 @@ tests/
 - [Pest Coverage](https://pestphp.com/docs/test-coverage)
 - [Laravel Testing](https://laravel.com/docs/12.x/testing)
 - [testing-errors-fixes](testing-errors-fixes.md) - Errori risolti e correzioni
-- [testing-rules](testing-rules.md)
+- [testing-rules](testing-rules-2.md)
 - [testing-strategy-implementation](testing-strategy-implementation.md)
 - [testing-testcase-database-connection-fix](testing-testcase-database-connection-fix.md)
 - [testing-testcase-database-connection-fix](testing-testcase-database-connection-fix.md)

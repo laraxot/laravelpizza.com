@@ -72,8 +72,8 @@ echo ""
 find "$DOCS_DIR" -maxdepth 1 -name "*.md" -type f | while read file; do
     base=$(basename "$file")
     
-    # Skip README.md e CHANGELOG.md
-    if [[ "$base" == "README.md" ]] || [[ "$base" == "CHANGELOG.md" ]]; then
+    # Skip README.md e changelog.md
+    if [[ "$base" == "README.md" ]] || [[ "$base" == "changelog.md" ]]; then
         continue
     fi
     

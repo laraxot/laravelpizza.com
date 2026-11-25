@@ -248,9 +248,9 @@ In caso di problemi critici:
 ## Documentazione Correlata
 
 ### Root Documentation
-- `../architecture/filament-integration.md`
+- `../../../../Lang/docs/filament-integration-3.md`
 - `../development/upgrade-procedures.md`
-- `../best-practices/coding-standards.md`
+- `../../development/coding-standards-2.md`
 
 ### Module Documentation
 - `../laravel/Modules/Xot/docs/filament-4-changes.md`

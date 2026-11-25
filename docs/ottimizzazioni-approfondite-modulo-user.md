@@ -83,7 +83,7 @@ git_conflict_resolution.md → git-conflict-resolution.md
 volt_folio_logout_error.md → volt-folio-logout-error.md
 user_factory_integration.md → user-factory-integration.md
 phpstan_level9.md → phpstan-level9.md
-filament_best_practices.md → filament-best-practices.md
+filament-best-practices-2.md → filament-best-practices.md
 ```
 
 ### 3. Consolidamento Contenuto
@@ -188,7 +188,7 @@ rm git_conflict_resolution.md
 rm volt_folio_logout_error.md
 rm user_factory_integration.md
 rm phpstan_level9.md
-rm filament_best_practices.md
+rm filament-best-practices-2.md
 
 # Rinominare file con convenzioni corrette
 for file in *; do

@@ -78,7 +78,7 @@ Il modulo segue una chiara distinzione tra organizzazione fisica e logica:
   Modules/Notify/config/notification.php   <-- Configurazione canali e opzioni
   ```
 
-La documentazione completa sulla struttura dei moduli è disponibile in `docs/directory_structure.md`.
+La documentazione completa sulla struttura dei moduli è disponibile in `docs/directory-structure-2.md`.
 
 ## Risoluzione dei problemi comuni
 

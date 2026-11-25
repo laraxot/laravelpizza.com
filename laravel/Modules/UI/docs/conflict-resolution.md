@@ -16,9 +16,9 @@ tags: [documentation]
 - app/View/Components/Render/Block.php
 
 ## Documentation Files
-- docs/algolia_docsearch.md
+- docs/algolia-docsearch-2.md
 - docs/architecture.md
-- docs/best_practices.md
+- ../../Activity/docs/best-practices-3.md
 - docs/blade_data_handling.md
 - docs/blocks_system.md
 - docs/bugfix-table-layout-action.md
@@ -30,10 +30,10 @@ tags: [documentation]
 - docs/conflict_resolution_tablelayoutenum.md
 - docs/conflict_resolution_translation_files.md
 - docs/convenzioni_naming_campi.md
-- docs/custom_404_page.md
-- docs/customizing_your_site.md
+- docs/custom-404-page-2.md
+- docs/customizing-your-site-2.md
 - docs/design_system.md
-- docs/filament_components.md
+- docs/filament-components-2.md
 - docs/filament_components_errors.md
 - docs/filament_components_location_studio.md
 - docs/filament_error_fileupload_buttonlabel.md
@@ -49,13 +49,13 @@ tags: [documentation]
 - docs/iconstatesplitcolumn_implementation.md
 - docs/lang_link.md
 - docs/layouts_and_themes.md
-- docs/naming_conventions.md
+- docs/naming-conventions-2.md
 - docs/naming_rules.md
 - docs/nestedset-migration-best-practices.md
 - docs/never_use_label_rule.md
 - docs/optimization_recommendations.md
 - docs/phpstan-corrections-gennaio.md
-- docs/phpstan_radio_badge_fix.md
+- docs/phpstan-radio-badge-fix-2.md
 - docs/roadmap.md
 - docs/selectstatecolumn_confirmation_modal.md
 - docs/spatie_media_library_migration.md

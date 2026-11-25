@@ -223,7 +223,7 @@ $consent->delete();
 
 - [README.md](./README.md) - Overview modulo
 - [implementation-guide.md](./implementation-guide.md) - Guida implementazione
-- [api.md](./api.md) - API reference
+- [api-2.md](../../User/docs/api-2.md) - API reference
 - [testing.md](./testing.md) - Testing guide
 
 ### Best Practices

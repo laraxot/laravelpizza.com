@@ -19,27 +19,27 @@ The `laravel/Modules/Geo/docs` directory contains over 200 files in its root, ex
 
 ### 1. Snake-case vs. Kebab-case Duplicates
 Many files exist with both naming conventions and nearly identical content:
-- `address_autocomplete.md` vs `address-autocomplete.md`
-- `address_implementation.md` vs `address-implementation.md`
-- `address_migration_guide.md` vs `address-migration.md` / `address_migration.md`
-- `address_model_italian.md` vs `address-model-italian.md`
-- `address_relationships.md` vs `address-relationships.md`
+- `address-autocomplete-2.md` vs `address-autocomplete-2.md`
+- `address-implementation-2.md` vs `address-implementation-2.md`
+- `address-migration-guide-2.md` vs `address-migration.md` / `address_migration.md`
+- `address-model-italian-2.md` vs `address-model-italian-2.md`
+- `address-relationships-2.md` vs `address-relationships-2.md`
 
 ### 2. Fragmentation by Detail
 Topics are split into too many small files that should be consolidated:
-- **Address Resource**: `address-resource.md`, `address-resource.md`, `address-resource-analysis.md`, `address-resource-improvements.md`, `address-resource-summary.md`, `address-resource-sumy.md`, `addressresource.md`, etc.
-- **Address Resource**: `address-resource.md`, `address-resource-1.md`, `address-resource-analysis.md`, `address-resource-improvements.md`, `address-resource-summary.md`, `address-resource-sumy.md`, `addressresource.md`, etc.
-- **Comune Model**: `comune_model.md`, `comune-model.md`, `comune_sushi_analisi.md`, `comune_sushi_conversion.md`, `comune_sushi_implementation.md`, `comune-sushi-analysis.md`, etc.
+- **Address Resource**: `address-resource-2.md`, `address-resource-2.md`, `address-resource-analysis.md`, `address-resource-improvements.md`, `address-resource-summary.md`, `address-resource-sumy.md`, `addressresource.md`, etc.
+- **Address Resource**: `address-resource-2.md`, `address-resource-1.md`, `address-resource-analysis.md`, `address-resource-improvements.md`, `address-resource-summary.md`, `address-resource-sumy.md`, `addressresource.md`, etc.
+- **Comune Model**: `comune-model-2.md`, `comune-model-2.md`, `comune-sushi-analisi-2.md`, `comune-sushi-conversion-2.md`, `comune-sushi-implementation-2.md`, `comune-sushi-analysis.md`, etc.
 
 ### 3. Duplicate Analysis and Summaries
 Multiple files exist for "Implementation Summary" and "Consolidated Business Logic":
-- `implementation_summary.md`, `implementation-summary.md`, `implementation-summary-1.md`, `implementation-sumy.md`
-- `business-logic-analysis.md`, `business-logic-consolidated.md`, `business-logic-overview.md`
+- `implementation_summary.md`, `implementation-summary.md`, `implementation-summary-1.md`, `implementation-sumy-2.md`
+- `business-logic-analysis-3.md`, `business-logic-consolidated.md`, `business-logic-overview.md`
 
 ### 4. Placeholder and Empty Files
-- `sushi_command.md` (1 byte)
-- `tomtom_com.md` / `tomtom_com.txt` (0 bytes)
-- `qmd-setup.md` (0 bytes)
+- `sushi-command-2.md` (1 byte)
+- `tomtom-com-2.md` / `tomtom_com.txt` (0 bytes)
+- `qmd-setup-3.md` (0 bytes)
 
 ## Recommended Actions
 

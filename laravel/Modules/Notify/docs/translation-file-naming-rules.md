@@ -53,6 +53,6 @@ Se si identifica un file con naming non conforme:
 3. Rimuovere il file con naming errato
 
 ## Riferimenti
-- [Regole Generali per le Traduzioni](../../Lang/docs/translation_keys_rules.md)
-- [Best Practices per le Traduzioni](../../Lang/docs/translation_keys_best_practices.md)
-- [Convenzioni di Traduzione nel Modulo Notify](./translation_conventions.md)
+- [Regole Generali per le Traduzioni](../../Lang/docs/translation-keys-rules-2.md)
+- [Best Practices per le Traduzioni](../../Lang/docs/translation-keys-best-practices-2.md)
+- [Convenzioni di Traduzione nel Modulo Notify](./translation-conventions-2.md)

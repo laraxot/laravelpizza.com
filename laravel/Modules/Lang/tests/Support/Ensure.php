@@ -9,6 +9,8 @@ use Throwable;
 
 /**
  * PHPStan-safe assertion chain for Pest tests (avoids Pest\Mixins\Expectation @internal).
+ *
+ * @see Modules/Lang/docs/testing.md
  */
 final class Ensure
 {
@@ -71,6 +73,8 @@ final class Ensure
     }
 
     /**
+     * @see Modules/Lang/docs/testing.md
+     *
      * @param  list<int|string>  $keys
      */
     public function toHaveKeys(array $keys): self
@@ -97,6 +101,8 @@ final class Ensure
     }
 
     /**
+     * @see Modules/Lang/docs/testing.md
+     *
      * @param  callable(): mixed  $callback
      * @param  class-string<Throwable>  $exception
      */

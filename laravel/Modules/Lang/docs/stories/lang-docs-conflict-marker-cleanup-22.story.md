@@ -43,7 +43,7 @@ Dei restanti 8 file: 6 a struttura piatta (un blocco per conflitto), 2
   generico DEV; `docs-archive-policy.md` → fusa la versione DEV (piu'
   aggiornata) con la frase aggiuntiva di HEAD, corretti 2 link rotti verso
   `bashscripts/ai/wiki/` (verificati via `find`, puntavano a `docs/wiki/`
-  inesistente); `wiki/INDEX.md` (2 blocchi) → tenuta denominazione generica
+  inesistente); `../wiki/index-3.md` (2 blocchi) → tenuta denominazione generica
   "laraxot" invece del nome di progetto ospite hardcoded "base_fixcity_fila5"
   (Lang e' condiviso fra piu' progetti, `git remote -v`: `laraxot` +
   `provtv`), corretto lo slug rotto "progetto corrente" (spazio letterale)

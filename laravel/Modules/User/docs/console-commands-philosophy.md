@@ -226,7 +226,7 @@ foreach ($types as $key => $type) {
 - [.cursor/rules/console-commands-philosophy.mdc](../../../.cursor/rules/console-commands-philosophy.mdc)
 - [.windsurf/rules/console-commands-philosophy.mdc](../../../.windsurf/rules/console-commands-philosophy.mdc)
 - [README.md](README.md)
-- [.cursor/rules/console_commands_philosophy.mdc](../../../.cursor/rules/console_commands_philosophy.mdc)
-- [.windsurf/rules/console_commands_philosophy.mdc](../../../.windsurf/rules/console_commands_philosophy.mdc)
+- [.cursor/rules/console-commands-philosophy-3.mdc](../../../.cursor/rules/console-commands-philosophy-3.mdc)
+- [.windsurf/rules/console-commands-philosophy-3.mdc](../../../.windsurf/rules/console-commands-philosophy-3.mdc)
 
 *Ultimo aggiornamento: giugno 2025 - Standard estratto dal capolavoro ChangeTypeCommand.php*

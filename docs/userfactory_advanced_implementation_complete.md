@@ -288,7 +288,7 @@ $gdprTests = [
 
 ### Primary Documentation
 - [ModuloEsempio Factory Implementation](../laravel/modules/modulo/docs/factories/userfactory-implementation-final.md)
-- [User Module Integration](../laravel/modules/user/docs/user_factory_advanced_integration.md)
+- [User Module Integration](../laravel/modules/user/docs/user-factory-advanced-integration-4.md)
 - [Advanced Analysis](../laravel/modules/modulo/docs/factories/userfactory-advanced-improvements-analysis.md)
 
 ### Technical References

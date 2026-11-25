@@ -447,7 +447,7 @@ Update documentation when you:
 Modules/Meetup/docs/
 ├── README.md                 # Update for major changes
 ├── FEATURES.md               # Add new features here
-├── DATABASE_SCHEMA.md        # Update schema changes
+├── database-schema-2.md        # Update schema changes
 ├── MODELS_REFERENCE.md       # Document new models
 ├── API_ENDPOINTS.md          # API changes
 └── CHANGELOG.md              # Add to changelog

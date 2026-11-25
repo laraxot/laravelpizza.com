@@ -403,7 +403,7 @@ return [
 ### Regole Fondamentali
 - [Filament Class Rules](./../../.cursor/rules/filament-custom-actions.mdc)
 - [XotBase Architecture](./xotbase-architecture.md)
-- [Translation System](./translation-system.md)
+- [Translation System](../../laravel/Modules/Lang/docs/translation-system-2.md)
 
 ### Classi Base Disponibili
 - [XotBaseAction](../app/Filament/Actions/XotBaseAction.php)

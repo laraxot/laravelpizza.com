@@ -9,11 +9,11 @@ issues: []
 discussions: []
 module: theme
 topic: mcp-server-consigliati
-canonical: ../../../Themes/docs/shared-components/MCP_SERVER_CONSIGLIATI.md  # target mancante, verificato 2026-10-08
+canonical: ../../../Themes/docs/shared-components/mcp-server-consigliati-2.md  # target mancante, verificato 2026-10-08
 status: stub
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/MCP_SERVER_CONSIGLIATI.md
+See canonical documentation: ../../../Themes/docs/shared-components/mcp-server-consigliati-2.md
 ---
 # Server MCP consigliati per il modulo Seo
 

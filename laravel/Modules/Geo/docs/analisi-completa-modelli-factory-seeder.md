@@ -288,8 +288,8 @@ Tutti i modelli BaseModel, BasePivot, BaseUser, etc. sono classi astratte utiliz
 ## Collegamenti Documentazione
 
 ### Documentazione Moduli
-- [<nome progetto> Analysis](../laravel/modules/<nome progetto>/docs/modelli_factory_seeder_analisi.md)
-- [User Analysis](../../User/docs/modelli_factory_seeder_analisi.md)
+- [<nome progetto> Analysis](../laravel/modules/<nome progetto>/docs/modelli-factory-seeder-analisi-2.md)
+- [User Analysis](../../User/docs/modelli-factory-seeder-analisi-3.md)
 <<<<<<< .merge_file_MR49CU
 <<<<<<< .merge_file_Pdp5Ts
 <<<<<<< .merge_file_rPjvRC
@@ -303,10 +303,10 @@ Tutti i modelli BaseModel, BasePivot, BaseUser, etc. sono classi astratte utiliz
 =======
 >>>>>>> .merge_file_m4OZ4J
 <<<<<<< HEAD
-- [Geo Analysis](modelli_factory_seeder_analisi.md)
+- [Geo Analysis](modelli-factory-seeder-analisi-2.md)
 =======
 <<<<<<< HEAD
-- [Geo Analysis](modelli_factory_seeder_analisi.md)
+- [Geo Analysis](modelli-factory-seeder-analisi-2.md)
 =======
 - [Geo Analysis](modelli-factory-seeder-analisi.md)
 >>>>>>> laraxot/dev
@@ -321,10 +321,10 @@ Tutti i modelli BaseModel, BasePivot, BaseUser, etc. sono classi astratte utiliz
 >>>>>>> .merge_file_5xqkUv
 =======
 >>>>>>> .merge_file_m4OZ4J
-- [Media Analysis](../../Media/docs/modelli_factory_seeder_analisi.md)
-- [Notify Analysis](../../Notify/docs/modelli_factory_seeder_analisi.md)
-- [Job Analysis](../../Job/docs/modelli_factory_seeder_analisi.md)
-- [Altri Moduli Analysis](../../Activity/docs/modelli_factory_seeder_analisi.md)
+- [Media Analysis](../../Media/docs/modelli-factory-seeder-analisi-2.md)
+- [Notify Analysis](../../Notify/docs/modelli-factory-seeder-analisi-2.md)
+- [Job Analysis](../../Job/docs/modelli-factory-seeder-analisi-2.md)
+- [Altri Moduli Analysis](../../Activity/docs/modelli-factory-seeder-analisi-2.md)
 
 ### Documentazione Tecnica
 - [Factory Patterns](./factory_patterns.md)

@@ -58,7 +58,7 @@ updated: 2026-11-23
 ## Completed Work (Phase 1)
 
 ### ✅ 1. Governance Document Created
-**File**: `laravel/Modules/docs/AGNOSTIC_DOCUMENTATION_RULE.md`
+**File**: `laravel/Modules/docs/agnostic-documentation-rule.md`
 
 Defines:
 - Core principle: All module/theme docs must be project-agnostic
@@ -390,9 +390,9 @@ git revert <commit-hash>
 ## Resources
 
 ### Created Files
-- `laravel/Modules/docs/AGNOSTIC_DOCUMENTATION_RULE.md` - Governance rule
+- `laravel/Modules/docs/agnostic-documentation-rule.md` - Governance rule
 - `bashscripts/fix-docs-agnostic.sh` - Automation script
-- `laravel/Modules/docs/MIGRATION_PLAN.md` - This document
+- `laravel/Modules/docs/migration-plan.md` - This document
 
 ### Modified Files
 - `laravel/Modules/Cms/docs/pages-content-blocks.md` - Example conversion

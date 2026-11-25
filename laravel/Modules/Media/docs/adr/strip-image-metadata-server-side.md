@@ -10,6 +10,7 @@ related:
   - ../../app/Actions/Image/StripImageMetadataAction.php
   - ../contracts/strip-image-metadata-action.md
   - ../stories/media-mobile-camera-upload.story.md
+qmd: "strip image metadata server side metadati"
 ---
 
 # ADR: i metadati delle foto si tolgono sul server ri-codificando con GD

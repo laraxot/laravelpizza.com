@@ -779,4 +779,4 @@ updated: 2026-09-26
 qmd: "03 utilizzo"
 issues: []
 discussions: []
-Continua con la sezione [Integrazione con i Moduli](04_integrazione_moduli.md) per imparare come integrare i server MCP con i moduli Laravel.
+Continua con la sezione [Integrazione con i Moduli](04-integrazione-moduli-2.md) per imparare come integrare i server MCP con i moduli Laravel.

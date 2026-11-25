@@ -52,7 +52,7 @@ Su filesystem case-insensitive (Windows, macOS default), file con nomi che diffe
 ```
 ✅ CORRETTO:
 - README.md (maiuscolo - convenzione universale)
-- ROADMAP.md (maiuscolo - convenzione universale)
+- roadmap-2.md (maiuscolo - convenzione universale)
 - CHANGELOG.md (maiuscolo - convenzione universale)
 - LICENSE.md (maiuscolo - convenzione universale)
 - CONTRIBUTING.md (maiuscolo - convenzione universale)
@@ -104,7 +104,7 @@ find Modules -type f \( -name "*.php" -o -name "*.md" \) -exec bash -c '
 1. **README.md vs readme.md** → Elimina `readme.md`
 2. **Activity.php vs activity.php** → Elimina `activity.php`
 3. **ListRecords.md vs listrecords.md** → Elimina `listrecords.md`
-4. **ROADMAP.md vs roadmap.md** → Elimina `roadmap.md` (tranne se contiene info diverse)
+4. **roadmap-2.md vs roadmap.md** → Elimina `roadmap.md` (tranne se contiene info diverse)
 
 ### Eccezioni
 

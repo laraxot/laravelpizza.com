@@ -59,7 +59,7 @@ Notify Fila5 Documentation
 │   │   └── BMAD-WORKFLOW-COMPLETE.md
 │   │
 │   └── Design Comuni Italia Project:
-│       ├── design_comuni_index.md - Index for all Design Comuni docs
+│       ├── design-comuni-index-3.md - Index for all Design Comuni docs
 │       ├── design-comuni-prd.md - Product Requirements Document
 │       ├── design-comuni-architecture.md - Architecture Design
 │       ├── design-comuni-ui-spec.md - UI Specification
@@ -107,7 +107,7 @@ Notify Fila5 Documentation
 ├── 📁 Planning (.planning/)
 │   ├── PROJECT.md - Project overview and history
 │   ├── roadmap.md - 12-week implementation plan (6 phases)
-│   ├── STATE.md - Current state tracking
+│   ├── state-2.md - Current state tracking
 │   └── research/
 │       └── design-comuni-pages.md - Complete page analysis (674 lines)
 │
@@ -264,7 +264,7 @@ Notify Fila5 Documentation
 
 | Document | File | Lines | Purpose |
 |----------|------|-------|---------|
-| **Index** | `_bmad-output/design_comuni_index.md` | 300+ | Central navigation for Design Comuni docs |
+| **Index** | `_bmad-output/design-comuni-index-3.md` | 300+ | Central navigation for Design Comuni docs |
 | **PRD** | `_bmad-output/design-comuni-prd.md` | 800+ | Product requirements (38 pages, WCAG 2.1 AA) |
 | **Architecture** | `_bmad-output/design-comuni-architecture.md` | 900+ | System architecture, data flow, security |
 | **UI Spec** | `_bmad-output/design-comuni-ui-spec.md` | 700+ | Component specs, design tokens, accessibility |
@@ -292,7 +292,7 @@ Notify Fila5 Documentation
 | **Sprint 6** | Week 11-12 | QA & Documentation | 9 |
 
 **Cross-References:**
-- → [Design Comuni Index](_bmad-output/design_comuni_index.md) - Central navigation
+- → [Design Comuni Index](_bmad-output/design-comuni-index-3.md) - Central navigation
 - → [PRD](_bmad-output/design-comuni-prd.md) - Requirements
 - → [Architecture](_bmad-output/design-comuni-architecture.md) - System design
 - → [UI Spec](_bmad-output/design-comuni-ui-spec.md) - Component specs

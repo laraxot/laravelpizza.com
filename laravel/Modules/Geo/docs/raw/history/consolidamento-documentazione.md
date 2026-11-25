@@ -104,7 +104,7 @@ Consolidare, organizzare e aggiornare sistematicamente la documentazione del pro
 2. Creare documentazione essenziale:
    - `architecture.md` - Architettura e decisioni
    - `business-logic.md` - Dominio e logica
-   - `api.md` - Interfacce pubbliche
+   - `api-2.md` - Interfacce pubbliche
    - `testing.md` - Strategie di test
 3. Archiviare documentazione obsoleta
 4. Collegamenti bidirezionali con root e altri moduli

@@ -234,5 +234,5 @@ public function tableUpdate(\Closure $next, ?string $table = null): void
 
 ## Collegamenti
 - [Documentazione XotBaseMigration](../xot/docs/xotbasemigration.md)
-- [Best Practices Migrazioni](./migration_best_practices.md)
-- [Gestione Errori](./error_handling.md)
+- [Best Practices Migrazioni](../../../Lang/docs/migration-best-practices-3.md)
+- [Gestione Errori](../../../User/docs/error-handling-2.md)

@@ -323,6 +323,6 @@ class TelegramNotificationTest extends TestCase
 
 ## Collegamenti alla Documentazione Correlata
 
-- [MULTI_CHANNEL_NOTIFICATIONS.md](./multi_channel_notifications.md)
-- [NOTIFICATIONS_IMPLEMENTATION_GUIDE.md](./notifications_implementation_guide.md)
-- [SMS_PROVIDER_CONFIGURATION.md](./sms_provider_configuration.md)
+- [multi-channel-notifications-2.md](./multi-channel-notifications-2.md)
+- [notifications-implementation-guide-2.md](./notifications-implementation-guide-2.md)
+- [sms-provider-configuration-2.md](./sms-provider-configuration-2.md)

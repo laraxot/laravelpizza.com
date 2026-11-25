@@ -21,7 +21,7 @@ related:
   <a href="https://phpstan.org/"><img src="https://img.shields.io/badge/PHPStan-Level%209-blue?style=flat-square&logo=php" alt="PHPStan Level"/></a>
   <a href="https://filamentphp.com/"><img src="https://img.shields.io/badge/Filament-Admin-green?style=flat-square&logo=laravel" alt="Filament"/></a>
   <a href="../README.md"><img src="https://img.shields.io/badge/🇬🇧-Read%20in%20English-blue?style=flat-square" alt="English"/></a>
-  <a href="README.it.md"><img src="https://img.shields.io/badge/🇮🇹-Leggi%20in%20Italiano-green?style=flat-square" alt="Italiano"/></a>
+  <a href="readme-3.it.md"><img src="https://img.shields.io/badge/🇮🇹-Leggi%20in%20Italiano-green?style=flat-square" alt="Italiano"/></a>
 </div>
 
 ---
@@ -78,7 +78,7 @@ related:
 ## 📚 Documentación
 
 - [Índice del Proyecto](../index.md)
-- [Workflow PHPStan](../PHPSTAN_WORKFLOW.md)
+- [Workflow PHPStan](../../../Xot/docs/consolidated/phpstan/phpstan-workflow-2.md)
 - [Panorama de los Módulos](../MODULES.md)
 - [Arquitectura](architecture.md)
 

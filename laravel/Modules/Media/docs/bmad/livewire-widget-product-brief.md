@@ -4,6 +4,7 @@ type: product-brief
 module: Media
 related:
   - ./livewire-inventory.md
+qmd: "livewire widget product brief media"
 ---
 
 # Brief

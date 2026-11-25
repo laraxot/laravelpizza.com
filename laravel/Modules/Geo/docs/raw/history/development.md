@@ -524,7 +524,7 @@ Ogni modulo deve avere:
 Modules/{ModuleName}/docs/
 ├── README.md              # Overview
 ├── architecture.md        # Technical details
-├── api.md                # API documentation
+├── api-2.md                # API documentation
 ├── examples.md           # Usage examples
 └── CHANGELOG.md          # Version history
 ```
@@ -690,7 +690,7 @@ Prima di creare PR:
 
 ### Internal
 - [Architettura](architecture.md)
-- [Regole Laraxot](laraxot-rules.md)
+- [Regole Laraxot](laraxot-rules-2.md)
 - [Qualità Codice](code-quality.md)
 
 ### External

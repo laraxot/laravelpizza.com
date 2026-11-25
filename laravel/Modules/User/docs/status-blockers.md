@@ -234,9 +234,9 @@ This constraint is well-applied for git operations but creates a hard ceiling wh
 
 ---
 
-<!-- Contenuto unito da status-blockers-.md (rimozione date dai nomi file, issue #64) -->
+<!-- Contenuto unito da status-blockers-2.md (rimozione date dai nomi file, issue #64) -->
 
-<!-- recovery from broken basename `status-blockers-.md` after docs-guardian mass rename -->
+<!-- recovery from broken basename `status-blockers-2.md` after docs-guardian mass rename -->
 
 Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file evita nomi `*-.md`.
 

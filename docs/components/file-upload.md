@@ -2,7 +2,7 @@
 
 ## Collegamenti Bidirezionali
 - [Errori Comuni FileUpload](../filament-components-errors.md#1-fileupload-uso-errato-di-prefixicon)
-- [Best Practices UI](../../best-practices.md)
+- [Best Practices UI](../../laravel/Modules/Activity/docs/best-practices-3.md)
 - [Implementazione Corretta](../../examples/correct-implementation.md)
 
 ## Metodi Supportati

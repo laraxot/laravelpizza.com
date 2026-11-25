@@ -14,7 +14,7 @@ Questo documento descrive i file con conflitti git identificati nel progetto e l
 - [Documentazione dettagliata del modulo Tenant](../../tenant/docs/risoluzione_conflitti.md)
 
 ### Modulo Job
-- [Documentazione dettagliata del modulo Job](../../job/docs/conflict_resolution.md)
+- [Documentazione dettagliata del modulo Job](../../job/docs/conflict-resolution-2.md)
 
 ## File con Conflitti
 
@@ -52,10 +52,10 @@ Questo documento descrive i file con conflitti git identificati nel progetto e l
    - Tipo: Conflitto nei pattern di esclusione Git
    - Posizione: `Modules/Job/.gitignore`
    - Status: ✅ Risolto
-   - Soluzione: [Dettagli](../../Job/docs/conflict_resolution.md#1-gitignore)
+   - Soluzione: [Dettagli](../../Job/docs/conflict-resolution-2.md#1-gitignore)
 
 ### Report di Intervento
-- [Report Risoluzione Conflitti](logs/conflict_resolution_report.md) - Dettaglio completo delle risoluzioni effettuate
+- [Report Risoluzione Conflitti](../../laravel/Modules/User/docs/conflict-resolution-report-3.md) - Dettaglio completo delle risoluzioni effettuate
 
 ## Procedure di Test e Validazione
 
@@ -96,6 +96,6 @@ I file modificati sono stati documentati sia nel loro specifico modulo che in qu
 
 ## Collegamenti Bidirezionali
 
-- [PHPStan Report](../../media/docs/phpstan_report.md)
+- [PHPStan Report](../../media/docs/phpstan-report-2.md)
 - [Test Report](test_report.md)
-- [Documentazione Conflitti Job](../../job/docs/conflict_resolution.md)
+- [Documentazione Conflitti Job](../../job/docs/conflict-resolution-2.md)

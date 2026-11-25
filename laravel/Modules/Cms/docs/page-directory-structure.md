@@ -60,5 +60,5 @@ Questi alberi rompono DRY, aumentano il debito di routing e duplicano la respons
 
 - [README.md](./README.md)
 - [cms-driven-pages-system.md](./cms-driven-pages-system.md)
-- [folio_routing_system.md](./folio_routing_system.md)
+- [folio-routing-system-2.md](./folio-routing-system-2.md)
 - [../../Themes/Sixteen/docs/page-directory-structure.md](../../../Themes/Sixteen/docs/page-directory-structure.md)

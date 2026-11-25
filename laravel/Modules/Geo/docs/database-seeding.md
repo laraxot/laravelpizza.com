@@ -274,14 +274,14 @@ php bashscripts/database/seeding/<nome progetto>-1000-records.php
 >>>>>>> .merge_file_VzQbjF
 <<<<<<< HEAD
 - [README BashScripts](../bashscripts/README.md)
-- [Quick Start Seeding](../bashscripts/database/seeding/quick_start.md)
+- [Quick Start Seeding](../bashscripts/database/seeding/quick-start-2.md)
 =======
 <<<<<<< .merge_file_owK2Z5
 - [README BashScripts](../bashscripts/readme.md)
 - [Quick Start Seeding](database/seeding/quick-start.md)
 =======
 - [README BashScripts](../bashscripts/README.md)
-- [Quick Start Seeding](../bashscripts/database/seeding/quick_start.md)
+- [Quick Start Seeding](../bashscripts/database/seeding/quick-start-2.md)
 >>>>>>> .merge_file_cvFYDO
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_ZYeoeh

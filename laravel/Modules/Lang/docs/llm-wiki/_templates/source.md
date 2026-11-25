@@ -10,6 +10,7 @@ created: {{date}}
 updated: {{date}}
 tags: [article, paper, documentation]
 related: []
+status: draft
 ---
 
 # {{title}}

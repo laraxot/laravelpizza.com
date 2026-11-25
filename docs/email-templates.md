@@ -310,7 +310,7 @@ php artisan tinker
 
 ### **Documentazione Tecnica**
 - [Documentazione Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
-- [Gestione Traduzioni](../lang/docs/translation_keys_best_practices.md)
+- [Gestione Traduzioni](../lang/docs/translation-keys-best-practices-2.md)
 - [Configurazione Email](../../../../docs/email-configuration.md)
 - [Laraxot: Missing Mail Template Error](../../ptvx/project_docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
 - [Configurazione Email](../../../../docs/email-configuration.md)- [Laraxot: Missing Mail Template Error](../../ptvx/project_docs/errori/missing-mail-template-spatiemail.md) - **URGENT**

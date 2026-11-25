@@ -69,9 +69,9 @@ Extract from result: `phase_number`, `padded`, `name`, `slug`, `directory`.
 </step>
 
 <step name="update_project_state">
-Update STATE.md to reflect the new phase:
+Update state-2.md to reflect the new phase:
 
-1. Read `.planning/STATE.md`
+1. Read `.planning/state-2.md`
 2. Under "## Accumulated Context" → "### Roadmap Evolution" add entry:
    ```
    - Phase {N} added: {description}
@@ -125,6 +125,6 @@ discussions: []
 - [ ] `gsd-tools phase add` executed successfully
 - [ ] Phase directory created
 - [ ] Roadmap updated with new phase entry
-- [ ] STATE.md updated with roadmap evolution note
+- [ ] state-2.md updated with roadmap evolution note
 - [ ] User informed of next steps
 </success_criteria>

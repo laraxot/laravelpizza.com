@@ -51,7 +51,7 @@ Per la regola universale sui prompt condivisi (come quelli in bashscripts/prompt
 - [Regola Universale per i Prompt](./PROMPT_RULES.md)
 
 ## Collegamenti
-- [Documentazione Generale](./documentation.md)
+- [Documentazione Generale](../../../Activity/docs/documentation-2.md)
 - [Regole del Progetto](./rules.md)
 - [Miglioramenti al Prompt docs.txt](./prompt_docs_improvements.md)
 

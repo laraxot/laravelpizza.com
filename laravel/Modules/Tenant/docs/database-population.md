@@ -311,7 +311,7 @@ private function generateRealisticDomain(string $tenantName, string $sector): st
 
 - [README Modulo Tenant](README.md)
 - [Multi-Tenancy Architecture](./multi-tenancy.md)
-- [Database Schema](./database-schema.md)
+- [Database Schema](../../User/docs/database-schema-2.md)
 - [Testing Guidelines](./testing.md)
 
 ---

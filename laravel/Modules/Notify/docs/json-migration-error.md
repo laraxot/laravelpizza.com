@@ -173,27 +173,27 @@ if ($validRecords !== $totalRecords) {
 
 ## Collegamenti Correlati
 
-- [Documentazione Migrazioni](./migration_rules.md)
-- [Best Practices JSON](./json_best_practices.md)
+- [Documentazione Migrazioni](./migration-rules-2.md)
+- [Best Practices JSON](./json-best-practices-2.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_BY4UpY
-- [Gestione Errori](./error_handling.md)
+- [Gestione Errori](../../User/docs/error-handling-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_XdpcxJ
-- [Gestione Errori](./ERROR_HANDLING.md)
+- [Gestione Errori](../../User/docs/error-handling-2.md)
 =======
 <<<<<<< HEAD
-- [Gestione Errori](./error_handling.md)
+- [Gestione Errori](../../User/docs/error-handling-2.md)
 =======
-- [Gestione Errori](./ERROR_HANDLING.md)
+- [Gestione Errori](../../User/docs/error-handling-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_BY4UpY
 =======
-- [Gestione Errori](./error_handling.md)
+- [Gestione Errori](../../User/docs/error-handling-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======

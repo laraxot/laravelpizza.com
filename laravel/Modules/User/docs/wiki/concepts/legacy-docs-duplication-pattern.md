@@ -51,5 +51,5 @@ Quando tocchi legacy per un refactor:
 
 ## Aggiorna anche
 
-Ridondanza **Filament/oauth** codice nel modulo è trattata in [`../redundancy-report.md`](../../redundancy-report.md) (sezione Oauth).
+Ridondanza **Filament/oauth** codice nel modulo è trattata in [`../../../../Geo/docs/redundancy-report-2.md`](../../redundancy-report.md) (sezione Oauth).
 

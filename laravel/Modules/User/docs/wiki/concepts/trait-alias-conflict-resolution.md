@@ -79,5 +79,5 @@ php -r "require 'vendor/autoload.php'; class_exists(Modules\User\Models\BaseUser
 
 ## Collegamenti
 
-- [phpstan-relationship-fix.md](../../phpstan-relationship-fix.md)
+- [phpstan-relationship-fix-2.md](../../phpstan-relationship-fix.md)
 - [phpstan-level10.md](../../phpstan-level10.md)

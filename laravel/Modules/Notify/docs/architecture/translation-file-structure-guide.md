@@ -181,17 +181,17 @@ return [
 ```
 
 ## Riferimenti
-- [Regole di Naming per i File di Traduzione](./TRANSLATION_FILE_NAMING_RULES.md)
-- [Regole Generali per le Traduzioni](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
+- [Regole di Naming per i File di Traduzione](../translation-file-naming-rules-2.md)
+- [Regole Generali per le Traduzioni](../../../Lang/docs/translation-keys-rules-3.md)
 <<<<<<< HEAD
-- [Regole di Naming per i File di Traduzione](./TRANSLATION_FILE_NAMING_RULES.md)
-- [Regole Generali per le Traduzioni](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
+- [Regole di Naming per i File di Traduzione](../translation-file-naming-rules-2.md)
+- [Regole Generali per le Traduzioni](../../../Lang/docs/translation-keys-rules-2.md)
 <<<<<<< .merge_file_7wKaWe
 <<<<<<< .merge_file_dUcx65
 =======
 <<<<<<< HEAD
-- [Regole di Naming per i File di Traduzione](./TRANSLATION_FILE_NAMING_RULES.md)
-- [Regole Generali per le Traduzioni](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
+- [Regole di Naming per i File di Traduzione](../translation-file-naming-rules-2.md)
+- [Regole Generali per le Traduzioni](../../../Lang/docs/translation-keys-rules-2.md)
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

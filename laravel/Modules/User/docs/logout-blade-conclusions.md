@@ -7,11 +7,11 @@ qmd: "logout blade conclusions conclusioni raccomandazioni logoutbladephp"
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
-- [Volt Folio Logout](./volt_folio_logout.md)
-- [Auth Pages Implementation](./auth_pages_implementation.md)
-- [Logout Blade Implementation](./logout_blade_implementation.md)
-- [Logout Blade Analysis](./logout_blade_analysis.md)
-- [Convenzioni Path](./path_conventions.md)
+- [Volt Folio Logout](./volt-folio-logout-3.md)
+- [Auth Pages Implementation](./auth-pages-implementation-3.md)
+- [Logout Blade Implementation](./logout-blade-implementation-3.md)
+- [Logout Blade Analysis](./logout-blade-analysis-4.md)
+- [Convenzioni Path](./path-conventions-2.md)
 
 ## Sintesi dell'Analisi
 

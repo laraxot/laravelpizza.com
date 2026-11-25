@@ -9,6 +9,7 @@ status: accepted
 related:
   - ../../app/Actions/Upload/GetEffectiveUploadLimitAction.php
   - ../../app/Filament/Pages/SettingPage.php
+qmd: "effective upload limit web request limite"
 ---
 
 # ADR: il limite di upload annunciato e' il minimo tra PHP, Livewire e campo, letto nella richiesta web

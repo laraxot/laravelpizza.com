@@ -128,7 +128,7 @@ Tutti i test corretti seguono questo principio:
 
 ## 🔗 Collegamenti
 
-- [Testing Rules](../testing-rules.md)
+- [Testing Rules](../../User/docs/testing-rules-2.md)
 - [Activity TestCase Fix](../../Activity/docs/testing-testcase-database-connection-fix.md)
 - [Geo TestCase Fix](../../Geo/docs/testing-testcase-database-connection-fix.md)
 - [Media TestCase Fix](../../Media/docs/testing-testcase-database-connection-fix.md)

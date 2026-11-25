@@ -29,24 +29,24 @@ updated: 2026-11-23
 ### ❌ ERRATO: Percorsi Assoluti
 
 ```markdown
-[Convenzioni di Naming per le Interfacce]([project-root]/laravel/Modules/Notify/docs/INTERFACE_NAMING_CONVENTION.md)
-[Chiarimento sulla Struttura delle Interfacce]([project-root]/laravel/Modules/Notify/docs/INTERFACE_STRUCTURE_CLARIFICATION.md)
-[Architettura dei Contratti]([project-root]/laravel/Modules/Notify/docs/CONTRACTS_ARCHITECTURE.md)
+[Convenzioni di Naming per le Interfacce]([project-root]/laravel/Modules/Notify/docs/interface-naming-convention-2.md)
+[Chiarimento sulla Struttura delle Interfacce]([project-root]/laravel/Modules/Notify/docs/interface-structure-clarification-2.md)
+[Architettura dei Contratti]([project-root]/laravel/Modules/Notify/docs/contracts-architecture-2.md)
 ```
 
 ### ✅ CORRETTO: Percorsi Relativi
 
 ```markdown
-[Convenzioni di Naming per le Interfacce](./INTERFACE_NAMING_CONVENTION.md)
-[Chiarimento sulla Struttura delle Interfacce](./INTERFACE_STRUCTURE_CLARIFICATION.md)
-[Architettura dei Contratti](./CONTRACTS_ARCHITECTURE.md)
+[Convenzioni di Naming per le Interfacce](../../../interface-naming-convention-2.md)
+[Chiarimento sulla Struttura delle Interfacce](../../../interface-structure-clarification-2.md)
+[Architettura dei Contratti](../../../contracts-architecture-2.md)
 ```
 
 Per collegamenti a documenti in altre directory:
 
 ```markdown
-[Regole Generali per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
-[Best Practices per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+[Regole Generali per le Chiavi di Traduzione](../../../../../Lang/docs/translation-keys-rules-3.md)
+[Best Practices per le Chiavi di Traduzione](../../../../../Lang/docs/translation-keys-best-practices-2.md)
 ```
 
 ## Motivazione

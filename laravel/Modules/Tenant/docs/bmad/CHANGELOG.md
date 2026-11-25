@@ -6,10 +6,7 @@ module: "Tenant"
 tags: [docs, tenant, bmad]
 created: 2026-10-06
 updated: 2026-10-06
-<<<<<<< .merge_file_T4umWs
 qmd: "changelog changelogmd"
-=======
->>>>>>> .merge_file_xFz06u
 ---
 
 # Changelog

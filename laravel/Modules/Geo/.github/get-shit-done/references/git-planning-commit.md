@@ -18,7 +18,7 @@ Commit planning artifacts using the gsd-tools CLI, which automatically checks `c
 Always use `gsd-tools.cjs commit` for `.planning/` files — it handles `commit_docs` and gitignore checks automatically:
 
 ```bash
-node .github/get-shit-done/bin/gsd-tools.cjs commit "docs({scope}): {description}" --files .planning/STATE.md .planning/roadmap.md
+node .github/get-shit-done/bin/gsd-tools.cjs commit "docs({scope}): {description}" --files .planning/state-2.md .planning/roadmap.md
 ```
 
 The CLI will return `skipped` (with reason) if `commit_docs` is `false` or `.planning/` is gitignored. No manual conditional checks needed.

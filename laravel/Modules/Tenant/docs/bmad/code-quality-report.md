@@ -6,10 +6,7 @@ module: "Tenant"
 tags: [docs, tenant, bmad]
 created: 2026-10-06
 updated: 2026-10-06
-<<<<<<< .merge_file_6GoF9j
 qmd: "code quality report codequalityreportmd"
-=======
->>>>>>> .merge_file_KscMbq
 ---
 
 # Code quality — modulo Tenant

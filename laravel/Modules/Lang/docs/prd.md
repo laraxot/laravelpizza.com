@@ -256,11 +256,11 @@ The Lang module provides a structured framework for managing lang operations wit
 | Module | Self-contained Laravel module following Laraxot conventions |
 
 ### Related Documents
-- [Architecture](ARCHITECTURE.md)
+- [Architecture](architecture-3.md)
 ---
-- [Architecture](ARCHITECTURE.md)
+- [Architecture](architecture-3.md)
 ---
-- [Architecture](ARCHITECTURE.md)
+- [Architecture](architecture-3.md)
 - [Technical Specification](TECH_SPEC.md)
 
 - [Architecture](architecture.md)

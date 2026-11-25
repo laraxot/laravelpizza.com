@@ -40,7 +40,7 @@ related:
 | File | Purpose | Lines |
 |------|---------|-------|
 | `sync-remote-repo-guide.md` | Comprehensive guide for CLI + CI usage | ~450 |
-| `sync_remote_repo_coordination.md` | Multi-agent coordination log | ~300 |
+| `sync-remote-repo-coordination-2.md` | Multi-agent coordination log | ~300 |
 | `GITHUB_WIKI_SYNC.md` | GitHub Wiki synchronization guide | ~200 |
 | `README.md` | Index for git docs folder | ~350 |
 
@@ -85,7 +85,7 @@ bashscripts/git/subtrees/sync_remote_repo.sh laraxot
 
 ### 2. Multi-Agent Coordination
 
-**Coordination Log** (`sync_remote_repo_coordination.md`):
+**Coordination Log** (`sync-remote-repo-coordination-2.md`):
 - Entry template for agent work tracking
 - Lock file protocol for exclusive work
 - Agent teams structure
@@ -127,7 +127,7 @@ bashscripts/git/subtrees/sync_remote_repo.sh laraxot
 bashscripts/docs/git/
 ├── README.md                          # Index for git docs
 ├── sync-remote-repo-guide.md          # Comprehensive guide
-├── sync_remote_repo_coordination.md   # Coordination log
+├── sync-remote-repo-coordination-2.md   # Coordination log
 ├── GITHUB_WIKI_SYNC.md                # Wiki sync guide
 └── subtrees/                          # Subtree scripts folder
 
@@ -210,7 +210,7 @@ All documents are cross-referenced:
 **Status**: ✅ Completed  
 **Changes**:
 - Created sync-remote-repo-guide.md (comprehensive guide)
-- Created sync_remote_repo_coordination.md (coordination log)
+- Created sync-remote-repo-coordination-2.md (coordination log)
 - Created GITHUB_WIKI_SYNC.md (wiki sync guide)
 - Created README.md (docs index)
 - Created GitHub Issue/Discussion templates
@@ -282,7 +282,7 @@ All documents are cross-referenced:
 
 **To Join**: Add your agent ID to coordination log  
 **Teams**: Choose from Script Core, CI/CD, Documentation, Testing  
-**Process**: Follow coordination guidelines in sync_remote_repo_coordination.md
+**Process**: Follow coordination guidelines in sync-remote-repo-coordination-2.md
 
 ---
 
@@ -291,7 +291,7 @@ All documents are cross-referenced:
 When reviewing this work:
 
 - [ ] Read sync-remote-repo-guide.md
-- [ ] Read sync_remote_repo_coordination.md
+- [ ] Read sync-remote-repo-coordination-2.md
 - [ ] Test CLI mode locally
 - [ ] Test CI mode (trigger workflow)
 - [ ] Add your agent ID to coordination log
@@ -327,7 +327,7 @@ When reviewing this work:
 ## 🔗 Quick Links
 
 - **Main Guide**: `bashscripts/docs/git/sync-remote-repo-guide.md`
-- **Coordination Log**: `bashscripts/docs/git/sync_remote_repo_coordination.md`
+- **Coordination Log**: `bashscripts/docs/git/sync-remote-repo-coordination-2.md`
 - **Docs Index**: `bashscripts/docs/git/README.md`
 - **Wiki Sync**: `bashscripts/docs/git/GITHUB_WIKI_SYNC.md`
 - **Issue Template**: `.github/ISSUE_TEMPLATE/sync-remote-repo.md`
@@ -352,4 +352,4 @@ This documentation is successful if:
 **Date**: 2026-03-13  
 **Status**: ✅ Complete  
 **Next Review**: As needed by agent teams  
-**Coordination**: See sync_remote_repo_coordination.md
+**Coordination**: See sync-remote-repo-coordination-2.md

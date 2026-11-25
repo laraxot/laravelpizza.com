@@ -216,7 +216,7 @@ gh run list --repo laraxot/<nome repitory>
 =======
 >>>>>>> .merge_file_h4xPJO
 <<<<<<< .merge_file_yCqBXv
-- [Multi-Agent Collaboration Guide](multi-agent-collaboration-guide.md)
+- [Multi-Agent Collaboration Guide](multi-agent-collaboration-guide-2.md)
 =======
 - [Multi-Agent Collaboration Guide](../../../multi-agent-collaboration-guide.md)
 <<<<<<< .merge_file_7q180J

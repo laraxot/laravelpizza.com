@@ -64,9 +64,9 @@ return [
 ```
 
 ### Riferimenti
-- [TRANSLATION_KEYS_RULES.md](../../lang/docs/translation_keys_rules.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../lang/docs/translation_keys_best_practices.md) 
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../lang/docs/translation-keys-best-practices.md) 
-- [TRANSLATION_KEYS_RULES.md](../../Lang/docs/translation_keys_rules.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../Lang/docs/translation_keys_best_practices.md) 
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](../../Lang/docs/translation-keys-best-practices.md) 
+- [translation-keys-rules-2.md](../../lang/docs/translation-keys-rules-2.md)
+- [translation-keys-best-practices-2.md](../../lang/docs/translation-keys-best-practices-2.md) 
+- [translation-keys-best-practices-2.md](../../Lang/docs/translation-keys-best-practices-2.md) 
+- [translation-keys-rules-2.md](../../Lang/docs/translation-keys-rules-2.md)
+- [translation-keys-best-practices-2.md](../../Lang/docs/translation-keys-best-practices-2.md) 
+- [translation-keys-best-practices-2.md](../../Lang/docs/translation-keys-best-practices.md) 

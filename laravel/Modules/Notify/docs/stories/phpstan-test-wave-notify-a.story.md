@@ -86,4 +86,4 @@ Nessun test e' stato neutralizzato con `->skip()`: la forma allineata dell'8 ott
 ## Note di processo
 
 - Una modifica a `tests/TestCase.php` (aggiunta di `notifyThemeForThemeable`) e' stata scritta subito dopo la mia precedente scrittura dello stesso file, quando il gate dei 120 secondi dava SKIP per il mio stesso mtime: nessuna scrittura altrui rilevata, file riletto e verificato prima e dopo.
-- Docs aggiornate: vedi `00-INDEX.md` (link a questa story), `sms-driver-enum-translations.md` (nota sullo stato reale), `filament.md` (chiamata `handle()`).
+- Docs aggiornate: vedi `00-INDEX.md` (link a questa story), `sms-driver-enum-translations-2.md` (nota sullo stato reale), `filament-3.md` (chiamata `handle()`).

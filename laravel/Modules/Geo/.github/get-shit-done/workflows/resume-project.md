@@ -37,20 +37,20 @@ INIT=$(node .github/get-shit-done/bin/gsd-tools.cjs init resume)
 Parse JSON for: `state_exists`, `roadmap_exists`, `project_exists`, `planning_exists`, `has_interrupted_agent`, `interrupted_agent_id`, `commit_docs`.
 
 **If `state_exists` is true:** Proceed to load_state
-**If `state_exists` is false but `roadmap_exists` or `project_exists` is true:** Offer to reconstruct STATE.md
+**If `state_exists` is false but `roadmap_exists` or `project_exists` is true:** Offer to reconstruct state-2.md
 **If `planning_exists` is false:** This is a new project - route to /gsd-new-project
 </step>
 
 <step name="load_state">
 
-Read and parse STATE.md, then PROJECT.md:
+Read and parse state-2.md, then PROJECT.md:
 
 ```bash
-cat .planning/STATE.md
+cat .planning/state-2.md
 cat .planning/PROJECT.md
 ```
 
-**From STATE.md extract:**
+**From state-2.md extract:**
 
 - **Project Reference**: Core value and current focus
 - **Current Position**: Phase X of Y, Plan A of B, Status
@@ -77,7 +77,7 @@ Look for incomplete work that needs attention:
 ls .planning/phases/*/.continue-here*.md 2>/dev/null
 
 # Check for plans without summaries (incomplete execution)
-for plan in .planning/phases/*/*-PLAN.md; do
+for plan in .planning/phases/*/*-plan-2.md; do
   summary="${plan/PLAN/SUMMARY}"
   [ ! -f "$summary" ] && echo "Incomplete: $plan"
 done 2>/dev/null
@@ -224,7 +224,7 @@ Based on user selection, route to appropriate workflow:
 
   ## ▶ Next Up
 
-  **{phase}-{plan}: [Plan Name]** — [objective from plan.md]
+  **{phase}-{plan}: [Plan Name]** — [objective from plan-2.md]
 
   `/gsd-execute-phase {phase}`
 
@@ -261,7 +261,7 @@ Based on user selection, route to appropriate workflow:
 <step name="update_session">
 Before proceeding to routed workflow, update session continuity:
 
-Update STATE.md:
+Update state-2.md:
 
 ```markdown
 ## Session Continuity
@@ -277,21 +277,21 @@ This ensures if session ends unexpectedly, next resume knows the state.
 </process>
 
 <reconstruction>
-If STATE.md is missing but other artifacts exist:
+If state-2.md is missing but other artifacts exist:
 
-"STATE.md missing. Reconstructing from artifacts..."
+"state-2.md missing. Reconstructing from artifacts..."
 
 1. Read PROJECT.md → Extract "What This Is" and Core Value
 2. Read roadmap.md → Determine phases, find current position
-3. Scan \*-SUMMARY.md files → Extract decisions, concerns
+3. Scan \*-summary-2.md files → Extract decisions, concerns
 4. Count pending todos in .planning/todos/pending/
 5. Check for .continue-here files → Session continuity
 
-Reconstruct and write STATE.md, then proceed normally.
+Reconstruct and write state-2.md, then proceed normally.
 
 This handles cases where:
 
-- Project predates STATE.md introduction
+- Project predates state-2.md introduction
 - File was accidentally deleted
 - Cloning repo without full .planning/ state
   </reconstruction>
@@ -308,7 +308,7 @@ If user says "continue" or "go":
 <success_criteria>
 Resume is complete when:
 
-- [ ] STATE.md loaded (or reconstructed)
+- [ ] state-2.md loaded (or reconstructed)
 - [ ] Incomplete work detected and flagged
 - [ ] Clear status presented to user
 - [ ] Contextual next actions offered

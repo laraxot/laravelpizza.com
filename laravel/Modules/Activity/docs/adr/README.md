@@ -64,7 +64,7 @@ Chi cambia una decisione scrive un nuovo ADR e segna il precedente `superseded b
 
 - [activity-audit-is-append-oriented](activity-audit-is-append-oriented.md)
 
-Elenco con stato: [INDEX.md](INDEX.md).
+Elenco con stato: [index-2.md](index-2.md).
 =======
 =======
 >>>>>>> .merge_file_sdNCPs

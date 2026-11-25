@@ -149,7 +149,7 @@ $retryDelay = $config['drivers'][$driver]['retry_delay'] ?? $config['retry']['de
 
 ## Collegamenti
 
-- [Configurazione Netfun](./NETFUN_CONFIG_REQUIREMENTS.md)
+- [Configurazione Netfun](../laravel/Modules/Notify/docs/netfun-config-requirements-2.md)
 - [Provider SMS Supportati](./notifications/SMS_PROVIDER_CONFIGURATION.md)
 
 ---

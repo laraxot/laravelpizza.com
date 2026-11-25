@@ -79,7 +79,7 @@ This document catalogs all files containing merge conflict markers found through
 8. `docs/testing.md`
 9. `docs/testing/real-data-vs-mock-testing-strategy.md`
 10. `docs/prompts.md`
-11. `docs/conflict_resolution_report.md`
+11. `docs/conflict-resolution-report-3.md`
 12. `docs/view-composer-loop-infinite-fix.md`
 13. `docs/development-guidelines.md`
 14. `docs/filament/resources/architecture/forbidden-methods.md`
@@ -87,7 +87,7 @@ This document catalogs all files containing merge conflict markers found through
 16. `docs/code-quality.md`
 17. `docs/README.md`
 18. `docs/filament-best-practices.md`
-19. `docs/namespace_conventions.md`
+19. `docs/namespace-conventions-2.md`
 20. `docs/filament-resource-rules.md`
 21. `docs/providers/xotbaseserviceprovider.md`
 22. `docs/index.md`

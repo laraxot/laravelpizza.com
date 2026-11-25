@@ -13,9 +13,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../actions-path-convention-2.md"
 ---
 
 # User Module - Authentication & Authorization
@@ -1022,17 +1022,17 @@ test('user can switch teams', function () {
 - [Two-Factor Auth](./auth/2fa.md) - 2FA implementation
 
 ### Authorization
-- [Roles & Permissions](./authorization/roles-permissions.md) - RBAC guide
+- [Roles & Permissions](../roles-permissions-2.md) - RBAC guide
 - [Policies](./authorization/policies.md) - Policy-based authorization
 - [Permission Checking](./authorization/checking.md) - How to check permissions
 
 ### Development
 - [Creating User Types](./development/user-types.md) - STI implementation
 - [Custom Authentication](./development/custom-auth.md) - Custom auth methods
-- [API Integration](./development/api.md) - API usage guide
+- [API Integration](../api-2.md) - API usage guide
 
 ### Security
-- [Security Best Practices](./security/best-practices.md) - Security guidelines
+- [Security Best Practices](../../../Activity/docs/best-practices-3.md) - Security guidelines
 - [Password Policies](./security/passwords.md) - Password requirements
 - [Audit Logging](./security/audit-log.md) - Security audit trail
 
@@ -1088,7 +1088,7 @@ See [ROADMAP.md](./roadmap.md) for details.
 - [Tenant Module](../../../Tenant/docs/README.md) - Enhanced tenancy
 
 ### Project Documentation
-- [CLAUDE.md](../../../../CLAUDE.md) - Project architecture
+- [CLAUDE.md](../../../Geo/docs/root-md-files/claude.md) - Project architecture
 - [Security Guidelines](../../../../../docs/security.md)
 
 ### External Resources

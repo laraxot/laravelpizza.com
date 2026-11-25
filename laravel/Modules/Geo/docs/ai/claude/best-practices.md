@@ -96,7 +96,7 @@ Fix this error
 **✅ BUONO**:
 ```
 @laravel/Modules/Xot/docs/filament-class-extension-rules.md
-@laravel/Modules/User/docs/filament-resources.md
+@laravel/Modules/Activity/docs/filament-resources-3.md
 
 Crea un nuovo Resource per il modello Project seguendo:
 - Pattern documentato in filament-class-extension-rules.md

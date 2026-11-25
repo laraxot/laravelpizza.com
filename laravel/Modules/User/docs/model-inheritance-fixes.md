@@ -192,8 +192,8 @@ cd /var/www/_bases/base_<nome progetto>_fila4_mono/laravel/Modules/User
 
 ## Collegamenti
 
-- [Analisi Completa](./model_inheritance_analysis.md)
-- [Analisi Completa](./model_inheritance_analysis.md)
+- [Analisi Completa](./model-inheritance-analysis-4.md)
+- [Analisi Completa](./model-inheritance-analysis-4.md)
 - [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
 - [BaseModel](../app/Models/BaseModel.php)
 - [BasePivot](../app/Models/BasePivot.php)
@@ -387,7 +387,7 @@ cd Modules/User
 
 ## Collegamenti
 
-- [Analisi Completa](./model_inheritance_analysis.md)
+- [Analisi Completa](./model-inheritance-analysis-4.md)
 - [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
 - [BaseModel](../app/Models/BaseModel.php)
 - [BasePivot](../app/Models/BasePivot.php)
@@ -581,7 +581,7 @@ cd Modules/User
 
 ## Collegamenti
 
-- [Analisi Completa](./model_inheritance_analysis.md)
+- [Analisi Completa](./model-inheritance-analysis-4.md)
 - [Regole Qualità Codice](../../../.windsurf/rules/code-quality.md)
 - [BaseModel](../app/Models/BaseModel.php)
 - [BasePivot](../app/Models/BasePivot.php)

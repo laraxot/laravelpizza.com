@@ -28,7 +28,7 @@ i confini di dominio.
    non sono di User.
 6. Il nome `@volt` di una pagina FO è univoco. Il fragment è `md5(nome)` ed è
    condiviso da ogni blade che lo ripete: un prototipo non può chiamarsi
-   `auth.login` o `auth.register`. Vedi [volt-errors.md](../volt-errors.md).
+   `auth.login` o `auth.register`. Vedi [volt-errors-2.md](../volt-errors.md).
 
 ## Resource / widget
 

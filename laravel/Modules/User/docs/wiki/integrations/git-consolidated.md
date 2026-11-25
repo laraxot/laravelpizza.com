@@ -46,7 +46,7 @@ Consolidated from **21** individual files.
 
 ## git-conflict-resolution
 
-*Consolidated from: `git-conflict-resolution.md`*
+*Consolidated from: `git-conflict-resolution-3.md`*
 
 title: "Gestione Avanzata dei Conflitti Git"
 type: concept
@@ -62,9 +62,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Gestione Avanzata dei Conflitti Git
@@ -301,9 +301,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Risoluzione conflitti Git: PHPDoc modelli User
@@ -331,14 +331,14 @@ Conflitti Git nei blocchi PHPDoc di 25+ modelli del modulo User, causati da merg
 
 ## Riferimenti
 
-- [conflict_resolution_report](conflict-resolution-report.md)
+- [conflict_resolution_report](conflict-resolution-report-3.md)
 - [rules-index](rules-index.md)
 
 ---
 
 ## git-conflicts-resolution-.deprecated
 
-*Consolidated from: `git-conflicts-resolution-.deprecated.md`*
+*Consolidated from: `git-conflicts-resolution-2.deprecated.md`*
 
 title: "Risoluzione Conflitti Git - Modulo User (2025-01-27)"
 type: concept
@@ -354,9 +354,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Risoluzione Conflitti Git - Modulo User (2025-01-27)
@@ -657,7 +657,7 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 
 ### **Documentazione Aggiornata:**
 - [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
+- [widget-translation-rules-2.md](../../widget-translation-rules-2.md) - Pattern traduzioni
 - [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
 - [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
@@ -690,9 +690,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Risoluzione Conflitti Git - Modulo User (2025-01-27)
@@ -706,9 +706,9 @@ Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i fi
 ## Collegamenti correlati
 <<<<<<< HEAD
 =======
-- [Indice documentazione User](/laravel/modules/user/docs/index.md)
+- [Indice documentazione User](/laravel/Modules/User/docs/index-3.md)
 - [README User](/laravel/modules/user/docs/readme.md)
-- [Auth Components Best Practices](/laravel/modules/user/docs/auth-components-best-practices.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices-4.md)
 - [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/modules/user/docs/baseuser.md)
 <<<<<<< .merge_file_qYIMyW
@@ -1007,7 +1007,7 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 
 ### **Documentazione Aggiornata:**
 - [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
+- [widget-translation-rules-2.md](../../widget-translation-rules-2.md) - Pattern traduzioni
 - [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
 - [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
@@ -1030,9 +1030,9 @@ Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i fi
 ## Collegamenti correlati
 <<<<<<< HEAD
 =======
-- [Indice documentazione User](/laravel/modules/user/docs/index.md)
+- [Indice documentazione User](/laravel/Modules/User/docs/index-3.md)
 - [README User](/laravel/modules/user/docs/readme.md)
-- [Auth Components Best Practices](/laravel/modules/user/docs/auth-components-best-practices.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices-4.md)
 - [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/modules/user/docs/baseuser.md)
 <<<<<<< .merge_file_qYIMyW
@@ -1331,7 +1331,7 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 
 ### **Documentazione Aggiornata:**
 - [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
+- [widget-translation-rules-2.md](../../widget-translation-rules-2.md) - Pattern traduzioni
 - [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
 - [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
@@ -1364,9 +1364,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Risoluzione Conflitti Git - Modulo User (2025-01-27)
@@ -1380,9 +1380,9 @@ Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i fi
 ## Collegamenti correlati
 <<<<<<< HEAD
 =======
-- [Indice documentazione User](/laravel/modules/user/docs/index.md)
+- [Indice documentazione User](/laravel/Modules/User/docs/index-3.md)
 - [README User](/laravel/modules/user/docs/readme.md)
-- [Auth Components Best Practices](/laravel/modules/user/docs/auth-components-best-practices.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices-4.md)
 - [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/modules/user/docs/baseuser.md)
 <<<<<<< .merge_file_qYIMyW
@@ -1678,7 +1678,7 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 
 ### **Documentazione Aggiornata:**
 - [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
+- [widget-translation-rules-2.md](../../widget-translation-rules-2.md) - Pattern traduzioni
 - [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
 - [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
@@ -1710,9 +1710,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 > Questo file è stato rinominato in [git-conflicts-resolution-4.md](git-conflicts-resolution-4.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
@@ -1737,9 +1737,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Risoluzione Conflitti Git - Modulo User (2025-01-27)
@@ -1753,9 +1753,9 @@ Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i fi
 ## Collegamenti correlati
 <<<<<<< HEAD
 =======
-- [Indice documentazione User](/laravel/modules/user/docs/index.md)
+- [Indice documentazione User](/laravel/Modules/User/docs/index-3.md)
 - [README User](/laravel/modules/user/docs/readme.md)
-- [Auth Components Best Practices](/laravel/modules/user/docs/auth-components-best-practices.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices-4.md)
 - [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/modules/user/docs/baseuser.md)
 <<<<<<< .merge_file_qYIMyW
@@ -2051,7 +2051,7 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 
 ### **Documentazione Aggiornata:**
 - [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
+- [widget-translation-rules-2.md](../../widget-translation-rules-2.md) - Pattern traduzioni
 - [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
 - [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
@@ -2084,9 +2084,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Risoluzione Conflitti Git - Modulo User (2025-01-27)
@@ -2100,9 +2100,9 @@ Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i fi
 ## Collegamenti correlati
 <<<<<<< HEAD
 =======
-- [Indice documentazione User](/laravel/modules/user/docs/index.md)
+- [Indice documentazione User](/laravel/Modules/User/docs/index-3.md)
 - [README User](/laravel/modules/user/docs/readme.md)
-- [Auth Components Best Practices](/laravel/modules/user/docs/auth-components-best-practices.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices-4.md)
 - [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/modules/user/docs/baseuser.md)
 <<<<<<< .merge_file_qYIMyW
@@ -2398,7 +2398,7 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 
 ### **Documentazione Aggiornata:**
 - [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
+- [widget-translation-rules-2.md](../../widget-translation-rules-2.md) - Pattern traduzioni
 - [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
 - [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
@@ -2430,9 +2430,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Risoluzione Conflitti Git - Modulo User (2025-01-27)
@@ -2446,9 +2446,9 @@ Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i fi
 ## Collegamenti correlati
 <<<<<<< HEAD
 =======
-- [Indice documentazione User](/laravel/modules/user/docs/index.md)
+- [Indice documentazione User](/laravel/Modules/User/docs/index-3.md)
 - [README User](/laravel/modules/user/docs/readme.md)
-- [Auth Components Best Practices](/laravel/modules/user/docs/auth-components-best-practices.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices-4.md)
 - [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/modules/user/docs/baseuser.md)
 <<<<<<< .merge_file_qYIMyW
@@ -2747,7 +2747,7 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 
 ### **Documentazione Aggiornata:**
 - [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
+- [widget-translation-rules-2.md](../../widget-translation-rules-2.md) - Pattern traduzioni
 - [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
 - [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
@@ -2780,9 +2780,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Risoluzione Conflitti Git - Modulo User (2025-01-27)
@@ -2796,9 +2796,9 @@ Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i fi
 ## Collegamenti correlati
 <<<<<<< HEAD
 =======
-- [Indice documentazione User](/laravel/modules/user/docs/index.md)
+- [Indice documentazione User](/laravel/Modules/User/docs/index-3.md)
 - [README User](/laravel/modules/user/docs/readme.md)
-- [Auth Components Best Practices](/laravel/modules/user/docs/auth-components-best-practices.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices-4.md)
 - [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/modules/user/docs/baseuser.md)
 >>>>>>> laraxot/dev
@@ -3104,7 +3104,7 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 
 ### **Documentazione Aggiornata:**
 - [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
+- [widget-translation-rules-2.md](../../widget-translation-rules-2.md) - Pattern traduzioni
 - [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
 - [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
@@ -3139,9 +3139,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Risoluzione Conflitti Git - Modulo User (2025-01-27)
@@ -3155,9 +3155,9 @@ Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i fi
 ## Collegamenti correlati
 <<<<<<< HEAD
 =======
-- [Indice documentazione User](/laravel/modules/user/docs/index.md)
+- [Indice documentazione User](/laravel/Modules/User/docs/index-3.md)
 - [README User](/laravel/modules/user/docs/readme.md)
-- [Auth Components Best Practices](/laravel/modules/user/docs/auth-components-best-practices.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices-4.md)
 - [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/modules/user/docs/baseuser.md)
 <<<<<<< .merge_file_qYIMyW
@@ -3453,7 +3453,7 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 
 ### **Documentazione Aggiornata:**
 - [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
+- [widget-translation-rules-2.md](../../widget-translation-rules-2.md) - Pattern traduzioni
 - [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
 - [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
@@ -3486,9 +3486,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Risoluzione Conflitti Git - Modulo User
@@ -3596,7 +3596,7 @@ Funzionalità team includono:
 
 - [Documentazione Root User](../../../../docs/project/modules/user.md)
 - [BaseUser Documentation](./baseuser.md)
-- [Registration Widget](./registration-widget.md)
+- [Registration Widget](../../registration-widget-2.md)
 - [PHPStan Fixes](./phpstan-fixes.md)
 
 ---
@@ -3621,12 +3621,12 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
-> Questo file è stato rinominato in [git-conflicts-resolution-.deprecated.md](git-conflicts-resolution-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+> Questo file è stato rinominato in [git-conflicts-resolution-2.deprecated.md](git-conflicts-resolution-2.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 
 ---
 
@@ -3648,9 +3648,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Risoluzione Conflitti Git - Modulo User (2025-01-27)
@@ -3664,7 +3664,7 @@ Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i fi
 ## Collegamenti correlati
 - [Indice documentazione User](/laravel/modules/user/project_docs/index.md)
 - [README User](/laravel/modules/user/project_docs/README.md)
-- [Auth Components Best Practices](/laravel/modules/user/project_docs/auth-components-best-practices.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices-4.md)
 - [Filament Widgets Structure](/laravel/modules/user/project_docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/modules/user/project_docs/baseuser.md)
 
@@ -3951,7 +3951,7 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 
 ### **Documentazione Aggiornata:**
 - [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
+- [widget-translation-rules-2.md](../../widget-translation-rules-2.md) - Pattern traduzioni
 - [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
 - [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
@@ -3978,9 +3978,9 @@ Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i fi
 ## Collegamenti correlati
 <<<<<<< HEAD
 =======
-- [Indice documentazione User](/laravel/modules/user/docs/index.md)
+- [Indice documentazione User](/laravel/Modules/User/docs/index-3.md)
 - [README User](/laravel/modules/user/docs/readme.md)
-- [Auth Components Best Practices](/laravel/modules/user/docs/auth-components-best-practices.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices-4.md)
 - [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/modules/user/docs/baseuser.md)
 <<<<<<< .merge_file_qYIMyW
@@ -3992,9 +3992,9 @@ Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i fi
 - [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices.md)
 - [Filament Widgets Structure](/laravel/Modules/User/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/Modules/User/docs/baseuser.md)
-- [Indice documentazione User](/laravel/Modules/User/project_docs/index.md)
+- [Indice documentazione User](/laravel/Modules/User/docs/index-3.md)
 - [README User](/laravel/Modules/User/project_docs/README.md)
-- [Auth Components Best Practices](/laravel/Modules/User/project_docs/auth-components-best-practices.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices-4.md)
 - [Filament Widgets Structure](/laravel/Modules/User/project_docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/Modules/User/project_docs/BaseUser.md)
 
@@ -4281,7 +4281,7 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 
 ### **Documentazione Aggiornata:**
 - [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
+- [widget-translation-rules-2.md](../../widget-translation-rules-2.md) - Pattern traduzioni
 - [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
 - [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
@@ -4313,9 +4313,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Fix: path does not have our version (rebase/merge)
@@ -4434,9 +4434,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 #!/bin/sh
@@ -4474,9 +4474,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Gestione Avanzata dei Conflitti Git
@@ -4697,7 +4697,7 @@ git config --global alias.theirs '!f() { git checkout --theirs "$@" && git add "
 
 ## git_conflict_resolution
 
-*Consolidated from: `git_conflict_resolution.md`*
+*Consolidated from: `git-conflict-resolution-3.md`*
 
 
 ## Overview
@@ -4737,8 +4737,8 @@ Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i fi
 ## Collegamenti correlati
 - [Indice documentazione User](/laravel/Modules/User/docs/index.md)
 - [README User](/laravel/Modules/User/docs/README.md)
-- [Auth Components Best Practices](/laravel/Modules/User/docs/auth_components_best_practices.md)
-- [Filament Widgets Structure](/laravel/Modules/User/docs/widgets_structure.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices-4.md)
+- [Filament Widgets Structure](/laravel/Modules/User/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/Modules/User/docs/baseuser.md)
 
 ## File Risolti
@@ -5023,10 +5023,10 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 - **Tipizzazione**: PHPDoc rigorosi per conformità PHPStan
 
 ### **Documentazione Aggiornata:**
-- [widgets_structure.md](./widgets_structure.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
+- [widgets-structure-2.md](../../widgets-structure-2.md) - Regole per widget structure
+- [widget-translation-rules-2.md](../../widget-translation-rules-2.md) - Pattern traduzioni
 - [path_conventions.md](./path_conventions.md) - Convenzioni percorsi
-- [volt_blade_implementation.md](./volt_blade_implementation.md) - View patterns
+- [volt-blade-implementation-4.md](../../volt-blade-implementation-4.md) - View patterns
 
 ### **Post-Risoluzione TODO:**
 - [ ] Verificare funzionamento widget in contesto Filament panel
@@ -5057,9 +5057,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Risoluzione Conflitti Git - Modulo User ([DATE])
@@ -5073,9 +5073,9 @@ Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i fi
 ## Collegamenti correlati
 <<<<<<< HEAD
 =======
-- [Indice documentazione User](/laravel/modules/user/docs/index.md)
+- [Indice documentazione User](/laravel/Modules/User/docs/index-3.md)
 - [README User](/laravel/modules/user/docs/readme.md)
-- [Auth Components Best Practices](/laravel/modules/user/docs/auth-components-best-practices.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices-4.md)
 - [Filament Widgets Structure](/laravel/modules/user/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/modules/user/docs/baseuser.md)
 <<<<<<< .merge_file_qYIMyW
@@ -5374,7 +5374,7 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 
 ### **Documentazione Aggiornata:**
 - [widgets-structure-2.md](./widgets-structure-user.md) - Regole per widget structure
-- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
+- [widget-translation-rules-2.md](../../widget-translation-rules-2.md) - Pattern traduzioni
 - [path-conventions-2.md](./path-conventions-user.md) - Convenzioni percorsi
 - [volt-blade-implementation-3.md](./volt-blade-implementation-3.md) - View patterns
 
@@ -5402,9 +5402,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/gits-resolution-06cb77.md

@@ -169,7 +169,7 @@ contenere segreti e deve registrare davvero gli eventi che dichiara di registrar
 - **Duplicati.** `app/Contracts/ActivityRecorderContract.php` e `app/Models/Contracts/ActivityRecorderContract.php` (stesso nome, due namespace); `app/Adapters/ActivityLogger.php` (134 righe) vs `app/Actions/ActivityLogger.php` (287 righe); l'intero set `Adapters/*` + `LogModel*Action` + `LogUser*Action` non ha caller di produzione.
 - **`TestModel` in produzione.** `app/Models/TestModel.php` + `database/migrations/2026_03_05_000001_create_test_models_table.php` creano `test_models` nel DB reale.
 - **Migrazioni.** 5 file `*_create_activity_table.php` + `2026_02_13_171410_fix_causer_id_to_uuid.php` nonostante il contratto in `2026_06_10_141000_create_activity_table.php:9-13` ("UNICA migrazione"); `database/migrations/_bak/` contiene 7 file, uno con `dropColumn('attribute_changes')` (`_bak/2026_07_01_000000_update_activity_log_schema.php:36`). Mai cancellare migrazioni già applicate: verificare la tabella `migrations` prima di consolidare.
-- **Igiene.** `documentation.md`, `filament.md`, `test.md`, `test02.md`, `test03.md`, `test04.md`, `test2222.md`, `test444.md` e 4 `*.code-workspace` alla root del modulo; `docs/` con 331/782 file senza frontmatter e 17 nomi non conformi.
+- **Igiene.** `../../documentation-3.md`, `../../filament-3.md`, `test.md`, `test02.md`, `test03.md`, `test04.md`, `test2222.md`, `test444.md` e 4 `*.code-workspace` alla root del modulo; `docs/` con 331/782 file senza frontmatter e 17 nomi non conformi.
 - **`@phpstan-ignore trait.unused`** senza motivazione (`Traits/HasSnapshots.php:7`).
 
 ## Verificato e non è un finding

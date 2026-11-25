@@ -87,5 +87,5 @@ Di seguito la classifica dei metodi più frequenti (solo quelli con più di una 
   3. **Implementare** un piccolo script di linting che evidenzi override non documentati di metodi del nucleo.
 
 ## Allegati
-- `docs/duplicate_methods_report.md` (questo file)
+- `../../Activity/docs/duplicate-methods-report-3.md` (questo file)
 - Script di ricerca (`find_duplicate_methods.sh`) disponibile in `bashscripts/` per replicare l’analisi.

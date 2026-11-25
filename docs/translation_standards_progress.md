@@ -24,8 +24,8 @@
 ### Correzioni Implementate
 
 1. **Documentazione Standard**
-   - Creato `/var/www/html/ptvx/laravel/Modules/Notify/docs/TRANSLATION_FILE_NAMING_RULES.md`
-   - Creato `/var/www/html/ptvx/laravel/Modules/Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md`
+   - Creato `/../laravel/Modules/Notify/docs/translation-file-naming-rules-2.md`
+   - Creato `/../laravel/Modules/Notify/docs/translation-file-structure-guide-2.md`
 
 2. **File Corretti**
    - Creato `/var/www/html/ptvx/laravel/Modules/Notify/lang/it/send_whatsapp.php` con struttura corretta
@@ -46,8 +46,8 @@
 ## Documentazione di Riferimento
 
 1. **Standard di Traduzione**
-   - [Regole Generali per le Traduzioni](../../lang/docs/translation_keys_rules.md)
-   - [Best Practices per le Traduzioni](../../lang/docs/translation_keys_best_practices.md)
+   - [Regole Generali per le Traduzioni](../../lang/docs/translation-keys-rules-2.md)
+   - [Best Practices per le Traduzioni](../../lang/docs/translation-keys-best-practices-2.md)
 
 2. **Guide Specifiche per Notify**
    - [Convenzioni di Traduzione nel Modulo Notify](./translation_conventions.md)

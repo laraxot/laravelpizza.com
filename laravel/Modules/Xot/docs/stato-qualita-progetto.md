@@ -161,7 +161,7 @@ trasforma cinque documenti in cinque garanzie.
 `Modules/Xot/docs/` contiene 2688 file. Tra questi convivono
 `00-index.md`, `00-index.md`, `00-index-v2.md`, `00-master-index.md`,
 `00-MASTER-INDEX.md`, e cinque roadmap PHPStan distinte
-(`phpstan-roadmap.md`, `phpstan-roadmap-completo.md`, `phpstan-fix-roadmap.md`,
+(`phpstan-roadmap-2.md`, `phpstan-roadmap-completo.md`, `phpstan-fix-roadmap.md`,
 `phpstan-errors-resolution-roadmap.md`,
 `phpstan-xotbasewidget-view-string-fix-roadmap.md`) piu' quattro varianti di
 `product-roadmap`.

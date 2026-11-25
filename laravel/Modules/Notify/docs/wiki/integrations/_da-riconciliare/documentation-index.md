@@ -49,13 +49,13 @@ status: draft
 
 ### Documentazione Principale
 - [README Principale](./README.md) - Panoramica progetto completa
-- [Analisi Super Mucca](./super_mucca_docs_analysis.md) - Report qualità documentazione
-- [Architecture](./architecture_analysis.md) - Analisi architetturale
+- [Analisi Super Mucca](./super-mucca-docs-analysis-3.md) - Report qualità documentazione
+- [Architecture](./architecture-analysis-4.md) - Analisi architetturale
 - [Roadmap](./MASTER_ROADMAP_2025.md) - Piano sviluppo 2025
 
 ### Guide Rapide
-- [Quick Start](./quick_start.md) - Guida avvio rapido
-- [Contributing](./CONTRIBUTING.md) - Come contribuire
+- [Quick Start](./quick-start-3.md) - Guida avvio rapido
+- [Contributing](./contributing-2.md) - Come contribuire
 - [Troubleshooting](./troubleshooting/README.md) - Risoluzione problemi
 
 ---
@@ -77,7 +77,7 @@ status: draft
 =======
 >>>>>>> .merge_file_S68HLd
 <<<<<<< .merge_file_BMN64h
-- [Database Schema](./database/schema.md) - Schema database
+- [Database Schema](../../../../../Lang/docs/wiki/schema-3.md) - Schema database
 =======
 - [Database Schema](../../schema.md) - Schema database
 - [Database Schema](../../schema.md) - Schema database
@@ -94,7 +94,7 @@ status: draft
 - [Security](./security/README.md) - Sicurezza e conformità
 
 ### Best Practices
-- [Coding Standards](./standards/coding-standards.md) - Standard codifica
+- [Coding Standards](../../../../../Geo/docs/development/coding-standards-2.md) - Standard codifica
 - [PHPStan Guidelines](./phpstan/README.md) - Analisi statica
 - [Testing Standards](./testing/README.md) - Standard testing
 - [Translation Guidelines](./translations/README.md) - Gestione traduzioni
@@ -293,7 +293,7 @@ status: draft
 >>>>>>> .merge_file_vDpII0
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_S68HLd
-- [Filament Guidelines](./standards/filament.md) - Linee guida Filament
+- [Filament Guidelines](../../../../../Activity/docs/filament-3.md) - Linee guida Filament
 - [Blade Components](./standards/blade.md) - Componenti Blade
 
 ### Quality Assurance
@@ -443,7 +443,7 @@ status: draft
 ## 🤝 Contributing
 
 ### Contribution Guidelines
-- [How to Contribute](./CONTRIBUTING.md) - Come contribuire
+- [How to Contribute](./contributing-2.md) - Come contribuire
 - [Code of Conduct](./CODE_OF_CONDUCT.md) - Codice condotta
 - [Pull Request Template](./.github/pull_request_template.md) - Template PR
 

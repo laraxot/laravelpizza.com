@@ -63,5 +63,5 @@ Nei componenti Filament:
 ## Vedi anche
 
 - [laravel12-lang-path-rule](../concepts/laravel12-lang-path-rule.md)
-- [schema-conventions](../../../../../docs/wiki/rules/schema-conventions.md)
+- [schema-conventions](../../../../Notify/docs/schema-conventions-2.md)
 - [filament-rules-summary](../../../../../docs/wiki/rules/filament-rules-summary.md)

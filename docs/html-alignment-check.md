@@ -5,7 +5,7 @@
 ## Contesto
 L'HTML statico in `resources/html/` deve essere allineato con:
 - Business logic documentata in `Modules/Meetup/docs/business-logic.md`
-- Database schema in `Modules/Meetup/docs/DATABASE-SCHEMA.md`
+- Database schema in `Modules/Meetup/docs/database-schema-2.md`
 - Analisi reale sito in `Modules/Meetup/docs/real-website-analysis.md`
 
 ## Verifica Correzioni Utente

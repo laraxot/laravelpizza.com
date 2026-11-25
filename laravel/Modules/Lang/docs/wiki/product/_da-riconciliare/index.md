@@ -18,7 +18,7 @@ Documentation for `lang` module categorized as **product**.
 
 ## Files
 
-- [`INDEX.md`](./index.md)
+- [`index-3.md`](./index.md)
 
 - [`index.md`](./index.md)
 - [`product-strategy.md`](./product-strategy.md)

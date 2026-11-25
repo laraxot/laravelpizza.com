@@ -5,6 +5,7 @@ status: ready-for-dev
 links:
   github_issue: 0
   module: Media
+qmd: "media bmad setup story"
 ---
 
 # Media Module BMAD Setup

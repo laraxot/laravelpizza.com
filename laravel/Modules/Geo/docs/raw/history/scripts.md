@@ -985,7 +985,7 @@ MODULE=$1
 cd "$(dirname "$0")/../../laravel"
 
 DOCS_DIR="Modules/$MODULE/docs"
-ROADMAP_FILE="$DOCS_DIR/phpstan-roadmap.md"
+ROADMAP_FILE="$../../../../User/docs/phpstan-roadmap-2.md"
 
 mkdir -p "$DOCS_DIR"
 

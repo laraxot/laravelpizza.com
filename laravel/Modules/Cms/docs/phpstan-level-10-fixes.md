@@ -497,7 +497,7 @@ Update CLAUDE.md with:
 ## Related Files
 
 - **PHPStan Config**: `./laravel/phpstan.neon`
-- **Project Standards**: `./laravel/CLAUDE.md`
+- **Project Standards**: `../../Geo/docs/root-md-files/claude.md`
 - **Base Model Architecture**: `Modules/Xot/docs/models/MODEL_ARCHITECTURE.md`
 
 ---

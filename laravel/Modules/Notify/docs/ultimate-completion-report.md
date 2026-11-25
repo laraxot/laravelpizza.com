@@ -186,7 +186,7 @@ base_ptv_fila5/
 >>>>>>> laraxot/dev
 │   ├── project-completion-status.md    ✅ Tracking
 │   ├── final-summary.md                ✅ Summary sessione 1
-│   ├── WORK-COMPLETED-.md.md    ✅ Riepilogo tecnico
+│   ├── work-completed-4.md    ✅ Riepilogo tecnico
 │   ├── gap-analysis-implementation.md  ✅ Gap analysis
 │   ├── implementations-completed.md    ✅ Implementazioni
 │   ├── super-mucca-completion.md       ✅ Super Mucca mode
@@ -209,7 +209,7 @@ base_ptv_fila5/
 │   ├── routes/
 │   │   └── api.php                     ✅ API routes
 │   └── docs/
-│       ├── API.md                      ✅ API docs
+│       ├── api-2.md                      ✅ API docs
 │       ├── USER_GUIDE.md               ✅ User guide
 │       ├── ADMIN_GUIDE.md              ✅ Admin guide
 │       └── ROADMAP_2025.md             ✅ Roadmap

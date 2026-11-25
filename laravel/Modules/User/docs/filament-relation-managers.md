@@ -113,11 +113,11 @@ use Filament\Tables\Columns\TextColumn;
 ## Riferimenti
 - [Documentazione Filament RelationManager](https://filamentphp.com/project_docs/tables#relation-managers)
 - [XotBaseRelationManager](../xot/project_docs/filament-relation-managers.md)
-- [Sistema di Traduzione](../xot/project_docs/translation-system.md)
+- [Sistema di Traduzione](../../Lang/docs/translation-system-2.md)
 - [Best Practices Filament](../xot/project_docs/filament-best-practices.md)
 - [Documentazione Filament RelationManager](https://filamentphp.com/docs/tables#relation-managers)
 - [XotBaseRelationManager](../xot/docs/filament-relation-managers.md)
-- [Sistema di Traduzione](../xot/docs/translation-system.md)
+- [Sistema di Traduzione](../../Lang/docs/translation-system-2.md)
 - [Best Practices Filament](../xot/docs/filament-best-practices.md)
 # Filament Relation Managers nel Modulo User
 
@@ -293,5 +293,5 @@ class TeamsRelationManager extends XotBaseRelationManager
 
 - [Documentazione Filament RelationManager](https://filamentphp.com/docs/tables#relation-managers)
 - [XotBaseRelationManager](../xot/docs/filament-relation-managers.md)
-- [Sistema di Traduzione](../xot/docs/translation-system.md)
+- [Sistema di Traduzione](../../Lang/docs/translation-system-2.md)
 - [Best Practices Filament](../xot/docs/filament-best-practices.md)

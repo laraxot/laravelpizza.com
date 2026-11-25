@@ -26,7 +26,7 @@ Your files feed the roadmap:
 
 | File | How Roadmap Uses It |
 |------|---------------------|
-| `summary.md` | Phase structure recommendations, ordering rationale |
+| `summary-2.md` | Phase structure recommendations, ordering rationale |
 | `STACK.md` | Technology decisions for the project |
 | `FEATURES.md` | What to build in each phase |
 | `architecture.md` | System structure, component boundaries |
@@ -181,7 +181,7 @@ Never present LOW confidence findings as authoritative.
 
 All files → `.planning/research/`
 
-## summary.md
+## summary-2.md
 
 ```markdown
 # Research Summary: [Project Name]
@@ -528,7 +528,7 @@ Run pre-submission checklist (see verification_protocol).
 ## Step 5: Write Output Files
 
 In `.planning/research/`:
-1. **summary.md** — Always
+1. **summary-2.md** — Always
 2. **STACK.md** — Always
 3. **FEATURES.md** — Always
 4. **architecture.md** — If patterns discovered
@@ -561,7 +561,7 @@ In `.planning/research/`:
 
 | File | Purpose |
 |------|---------|
-| .planning/research/summary.md | Executive summary with roadmap implications |
+| ../../../Notify/docs/bugs/summary-2.md | Executive summary with roadmap implications |
 | .planning/research/STACK.md | Technology recommendations |
 | .planning/research/FEATURES.md | Feature landscape |
 | .planning/research/architecture.md | Architecture patterns |
@@ -621,7 +621,7 @@ Research is complete when:
 - [ ] Source hierarchy followed (Context7 → Official → WebSearch)
 - [ ] All findings have confidence levels
 - [ ] Output files created in `.planning/research/`
-- [ ] summary.md includes roadmap implications
+- [ ] summary-2.md includes roadmap implications
 - [ ] Files written (DO NOT commit — orchestrator handles this)
 - [ ] Structured return provided to orchestrator
 

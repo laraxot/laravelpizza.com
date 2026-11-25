@@ -421,16 +421,16 @@ Typography:
 | File | Purpose | View |
 |------|---------|------|
 <<<<<<< HEAD
-| `guides/getting-started.md` | Theme setup | [View](../../../GETTING-STARTED.md) |
+| `guides/getting-started.md` | Theme setup | [View](../../../getting-started-2.md) |
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-| `guides/getting-started.md` | Theme setup | [View](../../../GETTING-STARTED.md) |
+| `guides/getting-started.md` | Theme setup | [View](../../../getting-started-2.md) |
 =======
 <<<<<<< HEAD
 | `guides/getting-started.md` | Theme setup | [View](../../../getting-started.md) |
 =======
-| `guides/getting-started.md` | Theme setup | [View](../../../GETTING-STARTED.md) |
+| `guides/getting-started.md` | Theme setup | [View](../../../getting-started-2.md) |
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
@@ -553,24 +553,24 @@ public_html/assets/
 - **Master Index:** [00-index-1.md](../../../00-index-documentation.md)
 <<<<<<< HEAD
 - **Code Quality:** [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
-- **Framework Rules:** [../laravel/CLAUDE.md](../laravel/claude.md)
+- **Framework Rules:** [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 - **Code Quality:** [CODE_QUALITY_STANDARDS.md](CODE_QUALITY_STANDARDS.md)
-- **Framework Rules:** [../laravel/CLAUDE.md](../laravel/CLAUDE.md)
+- **Framework Rules:** [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md)
 =======
 <<<<<<< HEAD
 - **Code Quality:** [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
-- **Framework Rules:** [../laravel/CLAUDE.md](../laravel/claude.md)
+- **Framework Rules:** [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md)
 =======
 - **Code Quality:** [CODE_QUALITY_STANDARDS.md](CODE_QUALITY_STANDARDS.md)
-- **Framework Rules:** [../laravel/CLAUDE.md](../laravel/CLAUDE.md)
+- **Framework Rules:** [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 - **Code Quality:** [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
-- **Framework Rules:** [../laravel/CLAUDE.md](../laravel/claude.md)
+- **Framework Rules:** [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 

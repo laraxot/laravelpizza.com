@@ -195,7 +195,7 @@ Before committing documentation changes, verify:
 
 ## Related Documents
 
-- [Documentation Standards](../../../docs/documentation_standards.md)
+- [Documentation Standards](../../../docs/documentation-standards-2.md)
 - [Module Development Guidelines](./module-development.md)
 - [Naming Conventions](./naming-conventions.md)
 
@@ -215,7 +215,7 @@ Modules/
 │       ├── README.md              # Generic CMS module docs
 │       ├── pages-content-blocks.md  # No "Notify" references
 │       ├── pages-content-blocks.md  # No "<nome progetto>" references
-│       └── content-management.md  # Project-agnostic
+│       └── content-management-2.md  # Project-agnostic
 └── User/
     └── docs/
         └── README.md              # Generic user management docs

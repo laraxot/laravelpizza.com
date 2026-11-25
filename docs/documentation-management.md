@@ -9,7 +9,7 @@ base_predict_fila3_mono/
 ├── docs/                           # Documentazione globale del progetto
 │   ├── ARCHITECTURE.md            # Architettura generale
 │   ├── MODULES.md                 # Panoramica dei moduli
-│   ├── PHPSTAN_WORKFLOW.md        # Workflow analisi PHPStan
+│   ├── phpstan-workflow-2.md        # Workflow analisi PHPStan
 │   └── ...
 ├── Modules/
 │   ├── ModuleA/

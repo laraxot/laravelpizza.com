@@ -20525,7 +20525,7 @@
             "homepage": "https://github.com/ergebnis/agent-detector",
             "support": {
                 "issues": "https://github.com/ergebnis/agent-detector/issues",
-                "security": "https://github.com/ergebnis/agent-detector/blob/main/.github/SECURITY.md",
+                "security": "https://Modules/Geo/docs/root-md-files/security-2.md",
                 "source": "https://github.com/ergebnis/agent-detector"
             },
             "time": "2026-11-24T09:23:24+00:00"

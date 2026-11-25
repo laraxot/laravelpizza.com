@@ -159,7 +159,7 @@ Tutti i file corretti mantengono:
 
 - [Struttura Completa Campi Traduzione](../../../project_docs/translation-field-structure-complete.md)
 - [<nome progetto> Translation Audit](../../<nome progetto>/project_docs/translation_audit_city_fields.md)
-- [Translation Syntax Fixes](../../../project_docs/translation_syntax_fixes.md)
+- [Translation Syntax Fixes](../../../project_docs/translation-syntax-fixes-2.md)
 - [User Module Widget Translation Rules](widget-translation-rules.md)
 
 ## Prevenzione Futura
@@ -345,7 +345,7 @@ Tutti i file corretti mantengono:
 
 - [Struttura Completa Campi Traduzione](../../../docs/translation-field-structure-complete.md)
 - [Laraxot Translation Audit](../../modulo/docs/translation_audit_city_fields.md)
-- [Translation Syntax Fixes](../../../docs/translation_syntax_fixes.md)
+- [Translation Syntax Fixes](../../../docs/translation-syntax-fixes-2.md)
 - [User Module Widget Translation Rules](widget-translation-rules.md)
 
 ## Prevenzione Futura
@@ -532,7 +532,7 @@ Tutti i file corretti mantengono:
 
 - [Struttura Completa Campi Traduzione](../../../docs/translation-field-structure-complete.md)
 - [Laraxot Translation Audit](../../Laraxot/docs/translation_audit_city_fields.md)
-- [Translation Syntax Fixes](../../../docs/translation_syntax_fixes.md)
+- [Translation Syntax Fixes](../../../docs/translation-syntax-fixes-2.md)
 - [User Module Widget Translation Rules](widget-translation-rules.md)
 
 ## Prevenzione Futura

@@ -790,6 +790,6 @@ TELEGRAM_BOT_TOKEN=12345:ABC...
 
 ## Collegamenti alla Documentazione Correlata
 
-- [NOTIFICATIONS_IMPLEMENTATION_GUIDE.md](./NOTIFICATIONS_IMPLEMENTATION_GUIDE.md)
+- [notifications-implementation-guide-2.md](../../laravel/Modules/Notify/docs/notifications/notifications-implementation-guide-2.md)
 - [SMS_PROVIDER_CONFIGURATION.md](./SMS_PROVIDER_CONFIGURATION.md)
-- [TELEGRAM_NOTIFICATIONS_GUIDE.md](./TELEGRAM_NOTIFICATIONS_GUIDE.md)
+- [telegram-notifications-guide-2.md](../../laravel/Modules/Notify/docs/notifications/telegram-notifications-guide-2.md)

@@ -13,7 +13,7 @@ Modules/NomeModulo/
 ├── docs/                  # Documentazione ufficiale in formato Markdown
 │   ├── README.md          # Panoramica e punto d'ingresso
 │   ├── module_nome.md     # Descrizione dettagliata del modulo
-│   ├── BEST-PRACTICES.md  # Best practices specifiche del modulo
+│   ├── best-practices-3.md  # Best practices specifiche del modulo
 │   ├── MODELS.md          # Documentazione dei modelli
 │   ├── ...                # Altri documenti specifici
 │   └── assets/            # Immagini, diagrammi e altri assets
@@ -28,7 +28,7 @@ Modules/NomeModulo/
 
 Per garantire coerenza e facilità di navigazione:
 
-- File principali: utilizzare MAIUSCOLE con trattini (es. `BEST-PRACTICES.md`)
+- File principali: utilizzare MAIUSCOLE con trattini (es. `best-practices-3.md`)
 - File secondari: utilizzare lowercase con trattini (es. `getting-started.md`)
 - File di appunti: utilizzare lowercase con underscore (es. `api_notes.txt`)
 - File specifici del modulo: prefix `module_` seguito dal nome del modulo in minuscolo (es. `module_brain.md`)
@@ -163,7 +163,7 @@ $modelli = NomeModello::attivi()->get();
 ```
 ```
 
-### 3. SERVICE-PROVIDER.md
+### 3. service-provider-2.md
 
 La documentazione dei service provider dovrebbe includere:
 
@@ -188,8 +188,8 @@ La documentazione delle traduzioni dovrebbe includere:
 La documentazione dovrebbe essere aggiornata contemporaneamente alle modifiche del codice correlato. In particolare:
 
 - Quando si crea o si modifica un modello, aggiornare `MODELS.md`
-- Quando si aggiungono nuovi provider, aggiornare `SERVICE-PROVIDER.md`
-- Quando si modificano le convenzioni, aggiornare `BEST-PRACTICES.md`
+- Quando si aggiungono nuovi provider, aggiornare `service-provider-2.md`
+- Quando si modificano le convenzioni, aggiornare `best-practices-3.md`
 
 ### 2. Generazione Automatica
 
@@ -299,7 +299,7 @@ Modules/NomeModulo/
 ├── docs/                  # Documentazione ufficiale in formato Markdown
 │   ├── README.md          # Panoramica e punto d'ingresso
 │   ├── module_nome.md     # Descrizione dettagliata del modulo
-│   ├── BEST-PRACTICES.md  # Best practices specifiche del modulo
+│   ├── best-practices-3.md  # Best practices specifiche del modulo
 │   ├── MODELS.md          # Documentazione dei modelli
 │   ├── ...                # Altri documenti specifici
 │   └── assets/            # Immagini, diagrammi e altri assets
@@ -314,7 +314,7 @@ Modules/NomeModulo/
 
 Per garantire coerenza e facilità di navigazione:
 
-- File principali: utilizzare MAIUSCOLE con trattini (es. `BEST-PRACTICES.md`)
+- File principali: utilizzare MAIUSCOLE con trattini (es. `best-practices-3.md`)
 - File secondari: utilizzare lowercase con trattini (es. `getting-started.md`)
 - File di appunti: utilizzare lowercase con underscore (es. `api_notes.txt`)
 - File specifici del modulo: prefix `module_` seguito dal nome del modulo in minuscolo (es. `module_brain.md`)
@@ -446,7 +446,7 @@ $modelli = NomeModello::attivi()->get();
 ```
 ```
 
-### 3. SERVICE-PROVIDER.md
+### 3. service-provider-2.md
 
 La documentazione dei service provider dovrebbe includere:
 
@@ -471,8 +471,8 @@ La documentazione delle traduzioni dovrebbe includere:
 La documentazione dovrebbe essere aggiornata contemporaneamente alle modifiche del codice correlato. In particolare:
 
 - Quando si crea o si modifica un modello, aggiornare `MODELS.md`
-- Quando si aggiungono nuovi provider, aggiornare `SERVICE-PROVIDER.md`
-- Quando si modificano le convenzioni, aggiornare `BEST-PRACTICES.md`
+- Quando si aggiungono nuovi provider, aggiornare `service-provider-2.md`
+- Quando si modificano le convenzioni, aggiornare `best-practices-3.md`
 
 ### 2. Generazione Automatica
 

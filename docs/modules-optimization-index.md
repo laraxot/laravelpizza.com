@@ -20,19 +20,19 @@
 **Azione**: Refactoring PathHelper con configurazioni dinamiche
 **Tempo**: 2 ore | **Impatto**: Sblocca riusabilità framework
 
-#### [Modulo Notify](../laravel/modules/notify/docs/optimization_recommendations.md)
+#### [Modulo Notify](../laravel/Modules/Notify/docs/optimization-recommendations-2.md)
 **Problema**: 336 occorrenze hardcoded + 150+ file docs frammentati
 **Azione**: Correzione test + consolidamento documentazione
 **Tempo**: 2 giorni | **Impatto**: Sistema notifiche riutilizzabile
 
 ### 🟡 PRIORITÀ ALTA
 
-#### [Modulo User](../laravel/modules/user/docs/optimization_recommendations.md)
+#### [Modulo User](../laravel/Modules/User/docs/optimization-recommendations-3.md)
 **Problema**: README gigantesco (955 righe) + 141 occorrenze hardcoded
 **Azione**: Ristrutturazione completa + rimozione hardcoding
 **Tempo**: 1 giorno | **Impatto**: Modulo auth riutilizzabile
 
-#### [Modulo Cms](../laravel/modules/cms/docs/optimization_recommendations.md)
+#### [Modulo Cms](../laravel/Modules/Cms/docs/optimization-recommendations-2.md)
 **Problema**: 194 occorrenze hardcoded + content troppo specifico
 **Azione**: Generalizzazione content + organizzazione docs
 **Tempo**: 1 giorno | **Impatto**: CMS riutilizzabile per qualsiasi business
@@ -50,7 +50,7 @@
 **Azione**: Documentation update + performance optimization
 **Tempo**: 4 ore | **Impatto**: Migliora manutenibilità
 
-#### [Modulo Geo](../laravel/modules/geo/docs/optimization_recommendations.md)
+#### [Modulo Geo](../laravel/Modules/Geo/docs/optimization-recommendations-2.md)
 **Stato**: Funzionalità complete con Google API
 **Azione**: Generalizzazione docs + Google API caching
 **Tempo**: 3 ore | **Impatto**: Modulo geo riutilizzabile
@@ -130,7 +130,7 @@ cp -r laravel/Modules/*/docs laravel/Modules-docs-backup-$(date +%Y%m%d)
 # Vedere: laravel/Modules/Xot/docs/optimization_recommendations.md
 
 # 2. Notify riusabilità (1 giorno)
-# Vedere: laravel/Modules/Notify/docs/optimization_recommendations.md
+# Vedere: laravel/Modules/Notify/docs/optimization-recommendations-2.md
 
 # 3. Verifica progresso
 ./bashscripts/check_module_reusability.sh

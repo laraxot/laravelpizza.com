@@ -39,7 +39,7 @@ Vietato spostare, rinominare o cancellare file e lanciare `dups --fix`.
 - Collegamenti a file rinominati (`*-2026-03-10.md` senza data), a `todo.md` (stub il cui canonico `Themes/docs/shared-components/todo.md` non esiste).
 
 **Ingressi.** Il canonico per contratto e' `00-INDEX.md`. `00-index.md` era una copia byte per byte (collisione di maiuscole), `00-index.md` una
-variante; `INDEX.md` (6915 righe) e `index.md` (3419) sono elenchi generati dell'albero, come `archive/index.md`, `_archive/INDEX.md` e i due di
+variante; `INDEX.md` (6915 righe) e `index.md` (3419) sono elenchi generati dell'albero, come `archive/index.md`, `_archive/index.md` e i due di
 `wiki/integrations/_da-riconciliare/`.
 
 **Link non risolti.** Misura con `--busy-minutes 0`: 14194 eventi in 1740 file (con il filtro di default il tool ne mostra 11, perche' salta

@@ -57,14 +57,14 @@ Tool: `bashscripts/tools/resolve-merge-markers.sh`.
 | `git status --porcelain` post-apply | 13 |
 
 Dettaglio:
-- Script: `docs/wiki/AGENTS.md`, `docs/wiki/session-summary.md` ← `13ced713` (commits_reverted=1).
+- Script: `../../wiki/agents-2.md`, `docs/wiki/session-summary.md` ← `13ced713` (commits_reverted=1).
 - Extra: 11 file con separatore `=======` orfano (cleanup parziale precedente:
   i marker `<<<`/`>>>` erano già stati rimossi, residuando il separatore tra le
   due alternative). Non rilevati dal grep candidati dello script; trovati in
   verifica con detection estesa (`=`, `|` inclusi). Tutti ripristinati dal
   blob pulito `604a432b` (commits_reverted=1 ciascuno):
   `docs/phpstan-fixes.md`, `docs/correzioni-phpstan-completate-3.md`,
-  `docs/archive/email-backup.md`, `docs/reports/{FINAL_DOCUMENTATION_REPORT,
+  `../../email-backup-2.md`, `docs/reports/{FINAL_DOCUMENTATION_REPORT,
   FINAL_SUCCESS_REPORT, DOCUMENTATION_UPDATE_COMPLETE,
   DOCUMENT_ROOT_UPDATE_SUMMARY, THEME_UPDATE_FINAL_REPORT,
   MULTI_AGENT_FINAL_REPORT, TRANSLATION_AUDIT_SUMMARY,

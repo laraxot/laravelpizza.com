@@ -84,6 +84,6 @@ I modelli base si trovano in:
 ## Documentazione Correlata
 
 - [Email Templates Structure](./email_templates_structure.md)
-- [Responsive Email Design](./responsive_email_templates.md)
+- [Responsive Email Design](../../laravel/Modules/Notify/docs/responsive-email-templates-2.md)
 - [Email HTML Best Practices](../email_html_best_practices.md)
 - [Email Templates Implementation](../email_templates.md)

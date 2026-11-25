@@ -67,22 +67,22 @@ docs/
 ├── guides/
 │   ├── authentication.md
 │   ├── user_management.md
-│   ├── filament_integration.md
+│   ├── filament-integration-3.md
 │   ├── phpstan_implementation.md
 │   └── moderation_system.md
 ├── reference/
 │   ├── api_endpoints.md
 │   ├── configuration.md
-│   ├── database_schema.md
-│   └── best_practices.md
+│   ├── database-schema-2.md
+│   └── best-practices-3.md
 ├── components/
 │   ├── authentication_components.md
-│   ├── filament_components.md
+│   ├── filament-components-2.md
 │   └── livewire_components.md
 ├── troubleshooting/
 │   ├── common_errors.md
 │   ├── filament-errors.md
-│   └── phpstan_errors.md
+│   └── phpstan-errors-2.md
 └── integrations/
     ├── spatie-permissions-2.md
     ├── socialite_integration.md

@@ -112,7 +112,7 @@ $this->loadTranslationsFrom($path, 'sixteen');
 
 ### 1. File da Studiare SEMPRE
 - `laravel/Modules/Cms/app/Providers/CmsServiceProvider.php`
-- `laravel/Modules/User/docs/auth_widgets_view_namespaces.md`
+- `laravel/Modules/User/docs/auth-widgets-view-namespaces-2.md`
 - `laravel/Modules/Xot/docs/xotbasethemeserviceprovider.md`
 
 ### 2. Pattern da Riconoscere

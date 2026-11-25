@@ -506,7 +506,7 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 - **README.md**: Panoramica modulo
 - **ROADMAP_2025.md**: Roadmap dettagliata
 - **structure.md**: Struttura file
-- **technical.md**: Dettagli tecnici
+- **technical-2.md**: Dettagli tecnici
 
 **Esempio**: [<nome progetto> Module Docs](./laravel/Modules/<nome progetto>/docs/)
 
@@ -551,14 +551,14 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 =======
 <<<<<<< .merge_file_U85485
 >>>>>>> laraxot/dev
-- **[Roadmap Status](./roadmap-status-summary.md)**
+- **[Roadmap Status](../../../roadmap-status-summary-2.md)**
 - **[Documentation Status](./project_docs/documentation-status.md)**
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_ihyH3q
-- **[Roadmap Status](./roadmap-status-summary.md)**
+- **[Roadmap Status](../../../roadmap-status-summary-2.md)**
 - **[Documentation Status](./project_docs/documentation-status.md)**
 =======
 >>>>>>> laraxot/dev
@@ -574,7 +574,7 @@ Ogni modulo ha la sua documentazione in `Modules/ModuleName/docs/`:
 =======
 =======
 <<<<<<< .merge_file_ihyH3q
-- **[Roadmap Status](./roadmap-status-summary.md)**
+- **[Roadmap Status](../../../roadmap-status-summary-2.md)**
 - **[Documentation Status](./project_docs/documentation-status.md)**
 =======
 >>>>>>> laraxot/dev

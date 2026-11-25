@@ -13,7 +13,7 @@ Questo documento sostituisce e consolida **26+ file migrazioni duplicati** trova
 ### ❌ File da NON Creare Più
 - `migrations.md` in qualsiasi modulo
 - `migration-guide.md` duplicati
-- `migration_best_practices.md` sparsi
+- `migration-best-practices-3.md` sparsi
 - `migration_rules.md` in ogni modulo
 - Qualsiasi documentazione migrazioni specifica di modulo
 
@@ -427,19 +427,19 @@ rm Modules/Gdpr/docs/migrations.md
 # Geo
 rm Modules/Geo/docs/migration-guide.md
 rm Modules/Geo/docs/migration-naming-pattern.md
-rm Modules/Geo/docs/migration_guide.md
-rm Modules/Geo/docs/migration_naming_pattern.md
+rm Modules/Geo/docs/migration-guide-2.md
+rm Modules/Geo/docs/migration-naming-pattern-2.md
 
 # Lang
-rm Modules/Lang/docs/migration_best_practices.md
-rm Modules/Lang/docs/migration_corrections_summary.md
-rm Modules/Lang/docs/migration_patterns.md
+rm Modules/Lang/docs/migration-best-practices-2.md
+rm Modules/Lang/docs/migration-corrections-summary-2.md
+rm Modules/Lang/docs/migration-patterns-2.md
 
 # Notify
-rm Modules/Notify/docs/migration_changes.md
-rm Modules/Notify/docs/migration_rules.md
+rm Modules/Notify/docs/migration-changes-2.md
+rm Modules/Notify/docs/migration-rules-2.md
 rm Modules/Notify/docs/migrations.md
-rm Modules/Notify/docs/migrations_changelog.md
+rm Modules/Notify/docs/migrations-changelog-2.md
 
 # <nome progetto>
 rm Modules/<nome progetto>/docs/database/migrations.md
@@ -458,9 +458,9 @@ rm Modules/Geo/project_docs/migration_guide.md
 rm Modules/Geo/project_docs/migration_naming_pattern.md
 
 # Lang
-rm Modules/Lang/project_docs/migration_best_practices.md
-rm Modules/Lang/project_docs/migration_corrections_summary.md
-rm Modules/Lang/project_docs/migration_patterns.md
+rm Modules/Lang/docs/migration-best-practices-3.md
+rm Modules/Lang/docs/migration-corrections-summary-2.md
+rm Modules/Lang/docs/migration-patterns-2.md
 
 # Notify
 rm Modules/Notify/project_docs/migration_changes.md

@@ -46,7 +46,7 @@ discussions: []
 ## Format Rules
 
 1. **Always show what it is** — name + description, never just a command path
-2. **Pull context from source** — roadmap.md for phases, plan.md `<objective>` for plans
+2. **Pull context from source** — roadmap.md for phases, plan-2.md `<objective>` for plans
 3. **Command in inline code** — backticks, easy to copy-paste, renders as clickable link
 4. **`/clear` explanation** — always include, keeps it concise but explains why
 5. **"Also available" not "Other options"** — sounds more app-like
@@ -213,7 +213,7 @@ Plans:
 - [ ] 02-03: Add refresh token rotation
 ```
 
-Or from plan.md `<objective>`:
+Or from plan-2.md `<objective>`:
 
 ```xml
 <objective>

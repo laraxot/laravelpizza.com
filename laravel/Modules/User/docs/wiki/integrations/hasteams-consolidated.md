@@ -48,9 +48,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Choice of currentTeam() Method in HasTeams Trait
@@ -86,7 +86,7 @@ This decision ensures the codebase remains maintainable, scalable, and consisten
 
 ## hasteams-currentteam-method-choice
 
-*Consolidated from: `hasteams-currentteam-method-choice.md`*
+*Consolidated from: `hasteams-currentteam-method-choice-4.md`*
 
 title: "Choice of currentTeam() Method in HasTeams Trait"
 type: concept
@@ -102,9 +102,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Choice of currentTeam() Method in HasTeams Trait
@@ -170,7 +170,7 @@ This decision ensures the codebase remains maintainable, scalable, and consisten
 
 ## hasteams-trait-analysis
 
-*Consolidated from: `hasteams-trait-analysis.md`*
+*Consolidated from: `hasteams-trait-analysis-2.md`*
 
 title: "HasTeams Trait Analysis"
 type: concept
@@ -186,9 +186,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # HasTeams Trait Analysis
@@ -249,9 +249,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # HasTeams Trait - Filosofia Laraxot e Strategia di Correzione Completa
@@ -566,7 +566,7 @@ Il trait `HasTeams` ora è:
 
 ## hasteams-trait-filosofia-e-correzione-completa
 
-*Consolidated from: `hasteams-trait-filosofia-e-correzione-completa.md`*
+*Consolidated from: `hasteams-trait-filosofia-e-correzione-completa-4.md`*
 
 title: "HasTeams Trait - Filosofia Laraxot e Strategia di Correzione Completa"
 type: concept
@@ -582,9 +582,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # HasTeams Trait - Filosofia Laraxot e Strategia di Correzione Completa
@@ -911,9 +911,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # HasTeams Trait Analysis
@@ -974,9 +974,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Analisi metodi duplicati in HasTeams (trait)
@@ -1076,7 +1076,7 @@ Per la motivazione dettagliata, vedi la sezione dedicata in [Team.md](./Models/T
 
 ## hasteams_currentteam_method_choice
 
-*Consolidated from: `hasteams_currentteam_method_choice.md`*
+*Consolidated from: `hasteams-currentteam-method-choice-4.md`*
 
 
 ## Analysis and Decision
@@ -1111,7 +1111,7 @@ This decision ensures the codebase remains maintainable, scalable, and consisten
 
 ## hasteams_trait_analysis
 
-*Consolidated from: `hasteams_trait_analysis.md`*
+*Consolidated from: `hasteams-trait-analysis-2.md`*
 
 
 ## Overview
@@ -1154,7 +1154,7 @@ After reviewing the duplicate methods in the `HasTeams` trait, the recommendatio
 
 ## hasteams_trait_filosofia_e_correzione_completa
 
-*Consolidated from: `hasteams_trait_filosofia_e_correzione_completa.md`*
+*Consolidated from: `hasteams-trait-filosofia-e-correzione-completa-4.md`*
 
 
 ## 🧠 LA FILOSOFIA LARAXOT: Perché `belongsToManyX` invece di `belongsToMany`
@@ -1433,7 +1433,7 @@ Il trait `HasTeams` ora è:
 ### **📚 Documentazione Root**
 - [docs/laraxot_conventions.md](../../../docs/laraxot_conventions.md) - Convenzioni Laraxot generali
 - [docs/USER_MODULE.md](../../../docs/USER_MODULE.md) - Documentazione generale modulo User
-- [docs/phpstan_fixes.md](../../../docs/phpstan_fixes.md) - Guide PHPStan
+- [docs/phpstan_fixes.md](../../../docs/phpstan-fixes-5.md) - Guide PHPStan
 - [docs/TRAIT_BEST_PRACTICES.md](../../../docs/TRAIT_BEST_PRACTICES.md) - Best practices per trait
 
 ### **📁 Documentazione Modulo User**

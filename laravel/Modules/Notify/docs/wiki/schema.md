@@ -11,10 +11,10 @@ discussions: []
 
 # LLM Wiki Schema — FixCity
 
-Questo file è il "AGENTS.md" della wiki: istruzioni per l'LLM su come mantenere la wiki.
+Questo file è il "agents-2.md" della wiki: istruzioni per l'LLM su come mantenere la wiki.
 # LLM Wiki Schema — Notify
 
-Questo file è il "AGENTS.md" della wiki: istruzioni per l'LLM su come mantenere la wiki.
+Questo file è il "agents-2.md" della wiki: istruzioni per l'LLM su come mantenere la wiki.
 
 <<<<<<< HEAD
 =======
@@ -170,7 +170,7 @@ Per wiki di **modulo** (`Modules/<Name>/docs/wiki/`):
 | `index.md`        | Indice del modulo                           |
 | `overview.md`     | Panoramica, scopo, dipendenze               |
 | `architecture.md` | Struttura interna, pattern usati            |
-| `api.md`          | Interfacce pubbliche (Actions, Models, API) |
+| `api-2.md`          | Interfacce pubbliche (Actions, Models, API) |
 | `guides/`         | How-to specifici del modulo                 |
 | `log.md`          | Log append-only del modulo                  |
 

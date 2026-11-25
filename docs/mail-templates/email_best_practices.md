@@ -114,7 +114,7 @@ $mailTemplate->send($user->email, [
 
 ## Riferimenti
 
-- [Guida Layout Email](../MAIL_LAYOUTS_GUIDE.md)
-- [Integrazione MailPace](./MAILPACE_TEMPLATES_INTEGRATION.md)
-- [HTML Email Compatibility](./HTML_EMAIL_COMPATIBILITY.md)
-- [Spatie Email Usage Guide](../SPATIE_EMAIL_USAGE_GUIDE.md)
+- [Guida Layout Email](../../laravel/Modules/Notify/docs/mail-layouts-guide-2.md)
+- [Integrazione MailPace](../../laravel/Modules/Notify/docs/mail-templates/mailpace-templates-integration-2.md)
+- [HTML Email Compatibility](../../laravel/Modules/Notify/docs/mail-templates/html-email-compatibility-2.md)
+- [Spatie Email Usage Guide](../../laravel/Modules/Notify/docs/spatie-email-usage-guide-2.md)

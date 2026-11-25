@@ -42,31 +42,31 @@ related:
 ### ❌ ERRATO: Percorsi Assoluti
 
 ```markdown
-[Convenzioni di Naming per le Interfacce](modules/notify/docs/interface_naming_convention.md)
-[Chiarimento sulla Struttura delle Interfacce](modules/notify/docs/interface_structure_clarification.md)
-[Architettura dei Contratti](modules/notify/docs/contracts_architecture.md)
-[Convenzioni di Naming per le Interfacce](modules/notify/docs/interface_naming_convention.md)
-[Chiarimento sulla Struttura delle Interfacce](modules/notify/docs/interface_structure_clarification.md)
-[Architettura dei Contratti](modules/notify/docs/contracts_architecture.md)
-[Convenzioni di Naming per le Interfacce](modules/notify/docs/interface_naming_convention.md)
-[Chiarimento sulla Struttura delle Interfacce](modules/notify/docs/interface_structure_clarification.md)
-[Architettura dei Contratti](modules/notify/docs/contracts_architecture.md)
+[Convenzioni di Naming per le Interfacce](modules/notify/docs/interface-naming-convention-2.md)
+[Chiarimento sulla Struttura delle Interfacce](modules/notify/docs/interface-structure-clarification-2.md)
+[Architettura dei Contratti](modules/notify/docs/contracts-architecture-2.md)
+[Convenzioni di Naming per le Interfacce](modules/notify/docs/interface-naming-convention-2.md)
+[Chiarimento sulla Struttura delle Interfacce](modules/notify/docs/interface-structure-clarification-2.md)
+[Architettura dei Contratti](modules/notify/docs/contracts-architecture-2.md)
+[Convenzioni di Naming per le Interfacce](modules/notify/docs/interface-naming-convention-2.md)
+[Chiarimento sulla Struttura delle Interfacce](modules/notify/docs/interface-structure-clarification-2.md)
+[Architettura dei Contratti](modules/notify/docs/contracts-architecture-2.md)
 ```
 
 ### ✅ CORRETTO: Percorsi Relativi
 
 ```markdown
-[Convenzioni di Naming per le Interfacce](./interface_naming_convention.md)
-[Chiarimento sulla Struttura delle Interfacce](./interface_structure_clarification.md)
-[Architettura dei Contratti](./contracts_architecture.md)
+[Convenzioni di Naming per le Interfacce](../interface-naming-convention-2.md)
+[Chiarimento sulla Struttura delle Interfacce](../interface-structure-clarification-2.md)
+[Architettura dei Contratti](../contracts-architecture-2.md)
 ```
 
 Per collegamenti a documenti in altre directory:
 
 ```markdown
-[Regole Generali per le Chiavi di Traduzione](../../lang/docs/translation_keys_rules.md)
-[Best Practices per le Chiavi di Traduzione](../../lang/docs/translation_keys_best_practices.md)
-[Best Practices per le Chiavi di Traduzione](../../lang/docs/translation-keys-best-practices.md)
+[Regole Generali per le Chiavi di Traduzione](../../lang/docs/translation-keys-rules-2.md)
+[Best Practices per le Chiavi di Traduzione](../../lang/docs/translation-keys-best-practices-2.md)
+[Best Practices per le Chiavi di Traduzione](../../../Lang/docs/translation-keys-best-practices-3.md)
 ```
 
 ## Motivazione

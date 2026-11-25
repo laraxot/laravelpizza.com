@@ -71,7 +71,7 @@ discussions: []
 
 1. **Agente prende modulo** → Scrive il suo ID/nome accanto
 2. **Avvia PHPStan** → Legge errori e crea issue su GitHub se necessario
-3. **Documenta wiki** → Aggiorna `docs/wiki/modules/<NOME>/phpstan-status.md`
+3. **Documenta wiki** → Aggiorna `docs/wiki/modules/<NOME>/phpstan-status-2.md`
 4. **Completa** → Scrive risultati in sezione Results
 5. **Prossimo modulo** → Prossimo agente legge lista e prende uno DISPONIBILE
 
@@ -172,7 +172,7 @@ discussions: []
 - Serial validation in progress (due to parallel memory issues)
 - Commit: ce9b4a8eb
 
-## Versione unita da `swarm-phpstan-random-2026-06-16.md` (2026-06-16)
+## Versione unita da `swarm-phpstan-random-2.md` (2026-06-16)
 
 # Swarm PHPStan Random Analysis — 2026-06-16
 
@@ -236,7 +236,7 @@ discussions: []
 
 1. **Agente prende modulo** → Scrive il suo ID/nome accanto
 2. **Avvia PHPStan** → Legge errori e crea issue su GitHub se necessario
-3. **Documenta wiki** → Aggiorna `docs/wiki/modules/<NOME>/phpstan-status.md`
+3. **Documenta wiki** → Aggiorna `docs/wiki/modules/<NOME>/phpstan-status-2.md`
 4. **Completa** → Scrive risultati in sezione Results
 5. **Prossimo modulo** → Prossimo agente legge lista e prende uno DISPONIBILE
 

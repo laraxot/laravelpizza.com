@@ -75,7 +75,7 @@ status: draft
 - [Architecture Overview](./architecture/README.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_yJcofu
-- [Getting Started](./GETTING_STARTED.md)
+- [Getting Started](./getting-started-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -83,19 +83,19 @@ status: draft
 >>>>>>> .merge_file_V4WWbZ
 =======
 <<<<<<< .merge_file_sgGvbU
-- [Getting Started](./GETTING_STARTED.md)
+- [Getting Started](./getting-started-2.md)
 =======
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_yJcofu
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_V4WWbZ
-- [Getting Started](../../../GETTING_STARTED.md)
+- [Getting Started](../../../getting-started-2.md)
 3. [Multi-Agent Collaboration](../../../multi-agent-collaboration.md) - Come lavorare con AI agents
 
 ### Per Sviluppatori
 - [Architecture Overview](./architecture/README.md)
-- [Getting Started](../../../GETTING_STARTED.md)
+- [Getting Started](../../../getting-started-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_yJcofu
@@ -104,7 +104,7 @@ status: draft
 >>>>>>> .merge_file_rGUzFu
 >>>>>>> laraxot/dev
 =======
-- [Getting Started](../../../GETTING_STARTED.md)
+- [Getting Started](../../../getting-started-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
@@ -128,7 +128,7 @@ status: draft
 =======
 >>>>>>> .merge_file_V4WWbZ
 <<<<<<< .merge_file_sgGvbU
-- [Agent Coordination](./multi-agent-collaboration.md)
+- [Agent Coordination](../../../multi-agent-collaboration-2.md)
 =======
 - [Agent Coordination](../../../multi-agent-collaboration.md)
 - [Agent Coordination](../../../multi-agent-collaboration.md)
@@ -179,7 +179,7 @@ status: draft
 =======
 >>>>>>> .merge_file_V4WWbZ
 <<<<<<< .merge_file_sgGvbU
-- [Multi-Agent Guide](./multi-agent-collaboration.md)
+- [Multi-Agent Guide](../../../multi-agent-collaboration-2.md)
 =======
 - [Multi-Agent Guide](../../../multi-agent-collaboration.md)
 <<<<<<< .merge_file_yJcofu
@@ -335,7 +335,7 @@ openviking get-context --query="documentation"
 ### BMAD Threads
 - **Thread Principale**: `_bmad/threads/zen-documentation.md`
 - **PRD**: `_bmad/prd/documentation-system.md`
-- **Architecture**: `_bmad/architecture/documentation.md`
+- **Architecture**: `../../../../../Activity/docs/documentation-2.md`
 
 ### GSD Phases
 - **Phase 1**: `.planning/phases/01-doc-audit/`

@@ -158,6 +158,6 @@ public function toMail(object $notifiable): \Illuminate\Mail\Mailable
 
 ## Collegamenti alla Documentazione Correlata
 
-- [ATTACHMENTS_USAGE.md](../email-sending/ATTACHMENTS_USAGE.md)
-- [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/EMAIL_LAYOUTS_BEST_PRACTICES.md)
-- [EMAIL_TROUBLESHOOTING.md](../email-sending/EMAIL_TROUBLESHOOTING.md)
+- [attachments-usage-2.md](../../laravel/Modules/Notify/docs/email-sending/attachments-usage-2.md)
+- [email-layouts-best-practices-2.md](../../laravel/Modules/Notify/docs/mail-templates/email-layouts-best-practices-2.md)
+- [email-troubleshooting-2.md](../../laravel/Modules/Notify/docs/email-sending/email-troubleshooting-2.md)

@@ -44,7 +44,7 @@ related:
 
 ### 4. Wiki Indici Locali
 
-Ogni modulo ha i propri `rules/skills/commands/memories/INDEX.md`:
+Ogni modulo ha i propri `rules/skills/commands/memories/index-2.md`:
 
 Ogni modulo ha i propri `rules/skills/commands/memories/index.md`:
 - Ricerca più rapida (scope limitato)

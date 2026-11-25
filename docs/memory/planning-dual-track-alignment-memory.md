@@ -8,7 +8,7 @@
 
 Allineamento operativo in modalita dual-track:
 
-- Track A: requisiti prodotto (`.planning/REQUIREMENTS.md`)
+- Track A: requisiti prodotto (`.planning/requirements-2.md`)
 - Track B: coverage/type coverage (`.planning/ROADMAP.md` + issue coverage)
 
 ## Motivazione
@@ -19,7 +19,7 @@ Evitare conflitto tra roadmap prodotto e roadmap quality-only, mantenendo tracci
 
 - `PROJECT.md` aggiornato come single source of truth a livello programma.
 - `ROADMAP.md` mantiene le fasi coverage ma sotto governance dual-track.
-- `REQUIREMENTS.md` resta sorgente per requisiti prodotto v1/v2.
+- `requirements-2.md` resta sorgente per requisiti prodotto v1/v2.
 - Policy coverage ufficiale consolidata in `docs/testing/coverage-100-plan.md`.
 
 ## Governance collegata

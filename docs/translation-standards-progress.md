@@ -29,20 +29,20 @@
 ### Correzioni Implementate
 
 1. **Documentazione Standard**
-   - Creato `Modules/Notify/docs/TRANSLATION_FILE_NAMING_RULES.md`
-   - Creato `Modules/Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md`
+   - Creato `Modules/Notify/docs/translation-file-naming-rules-2.md`
+   - Creato `Modules/Notify/docs/translation-file-structure-guide-2.md`
 
 2. **File Corretti**
    - Creato `Modules/Notify/lang/it/send_whatsapp.php` con struttura corretta
    - Aggiornato `Modules/Notify/lang/it/send_netfun_sms.php` con struttura completa
-   - Creato `Modules/Notify/docs/TRANSLATION_FILE_NAMING_RULES.md`
-   - Creato `Modules/Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md`
+   - Creato `Modules/Notify/docs/translation-file-naming-rules-2.md`
+   - Creato `Modules/Notify/docs/translation-file-structure-guide-2.md`
 
 2. **File Corretti**
    - Creato `Modules/Notify/lang/it/send_whatsapp.php` con struttura corretta
    - Aggiornato `Modules/Notify/lang/it/send_netfun_sms.php` con struttura completa
-   - Creato `Modules/Notify/docs/TRANSLATION_FILE_NAMING_RULES.md`
-   - Creato `Modules/Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md`
+   - Creato `Modules/Notify/docs/translation-file-naming-rules-2.md`
+   - Creato `Modules/Notify/docs/translation-file-structure-guide-2.md`
 
 2. **File Corretti**
    - Creato `Modules/Notify/lang/it/send_whatsapp.php` con struttura corretta
@@ -75,13 +75,13 @@
 ## Documentazione di Riferimento
 
 1. **Standard di Traduzione**
-   - [Regole Generali per le Traduzioni](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
-   - [Best Practices per le Traduzioni](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+   - [Regole Generali per le Traduzioni](../laravel/Modules/Lang/docs/translation-keys-rules-3.md)
+   - [Best Practices per le Traduzioni](../laravel/Modules/Lang/docs/translation-keys-best-practices-2.md)
 
 2. **Guide Specifiche per Notify**
-   - [Convenzioni di Traduzione nel Modulo Notify](./TRANSLATION_CONVENTIONS.md)
-   - [Regole di Naming per i File di Traduzione](./TRANSLATION_FILE_NAMING_RULES.md)
-   - [Guida alla Struttura dei File di Traduzione](./TRANSLATION_FILE_STRUCTURE_GUIDE.md)
+   - [Convenzioni di Traduzione nel Modulo Notify](../laravel/Modules/Notify/docs/translation-conventions-2.md)
+   - [Regole di Naming per i File di Traduzione](../laravel/Modules/Notify/docs/translation-file-naming-rules-2.md)
+   - [Guida alla Struttura dei File di Traduzione](../laravel/Modules/Notify/docs/translation-file-structure-guide-2.md)
 
 ## Appendice: Elenco Completo dei File Non Conformi
 
@@ -153,8 +153,8 @@ Modules/Notify/lang/it/create_mail_template.php
 ### Correzioni Implementate
 
 1. **Documentazione Standard**
-   - Creato `Modules/Notify/docs/TRANSLATION_FILE_NAMING_RULES.md`
-   - Creato `Modules/Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md`
+   - Creato `Modules/Notify/docs/translation-file-naming-rules-2.md`
+   - Creato `Modules/Notify/docs/translation-file-structure-guide-2.md`
 
 2. **File Corretti**
    - Creato `Modules/Notify/lang/it/send_whatsapp.php` con struttura corretta
@@ -175,13 +175,13 @@ Modules/Notify/lang/it/create_mail_template.php
 ## Documentazione di Riferimento
 
 1. **Standard di Traduzione**
-   - [Regole Generali per le Traduzioni](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
-   - [Best Practices per le Traduzioni](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+   - [Regole Generali per le Traduzioni](../laravel/Modules/Lang/docs/translation-keys-rules-3.md)
+   - [Best Practices per le Traduzioni](../laravel/Modules/Lang/docs/translation-keys-best-practices-2.md)
 
 2. **Guide Specifiche per Notify**
-   - [Convenzioni di Traduzione nel Modulo Notify](./TRANSLATION_CONVENTIONS.md)
-   - [Regole di Naming per i File di Traduzione](./TRANSLATION_FILE_NAMING_RULES.md)
-   - [Guida alla Struttura dei File di Traduzione](./TRANSLATION_FILE_STRUCTURE_GUIDE.md)
+   - [Convenzioni di Traduzione nel Modulo Notify](../laravel/Modules/Notify/docs/translation-conventions-2.md)
+   - [Regole di Naming per i File di Traduzione](../laravel/Modules/Notify/docs/translation-file-naming-rules-2.md)
+   - [Guida alla Struttura dei File di Traduzione](../laravel/Modules/Notify/docs/translation-file-structure-guide-2.md)
 
 ## Appendice: Elenco Completo dei File Non Conformi
 

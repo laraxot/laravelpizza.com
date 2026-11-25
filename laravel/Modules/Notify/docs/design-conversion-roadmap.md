@@ -190,25 +190,25 @@ laravel/Themes/Sixteen/docs/
 <<<<<<< HEAD
 <<<<<<< .merge_file_gecNqH
 <<<<<<< .merge_file_0I0M5U
-├── INDEX.md                                    # Main index
+├── index-2.md                                    # Main index
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 ├── index.md                                    # Main index
 =======
 <<<<<<< HEAD
-├── INDEX.md                                    # Main index
+├── index-2.md                                    # Main index
 =======
 ├── index.md                                    # Main index
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
-├── INDEX.md                                    # Main index
+├── index-2.md                                    # Main index
 =======
 ├── index.md                                    # Main index
 =======
 <<<<<<< HEAD
-├── INDEX.md                                    # Main index
+├── index-2.md                                    # Main index
 =======
 ├── index.md                                    # Main index
 >>>>>>> .merge_file_aJ4oCZ
@@ -216,7 +216,7 @@ laravel/Themes/Sixteen/docs/
 ├── index.md                                    # Main index
 =======
 <<<<<<< HEAD
-├── INDEX.md                                    # Main index
+├── index-2.md                                    # Main index
 =======
 ├── index.md                                    # Main index
 >>>>>>> .merge_file_waHzXm

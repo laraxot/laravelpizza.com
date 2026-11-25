@@ -39,7 +39,7 @@ Nell'ordine: verifica hash, logout della sessione (guard), DELETE dell'utente (`
 
 ## Non fa
 
-- Non registra l'errore catturato: viola la regola "mai silenziare errori" di `security.md`.
+- Non registra l'errore catturato: viola la regola "mai silenziare errori" di `security-2.md`.
 - Se il delete fallisce, il logout è già avvenuto (riga 37 prima di riga 38): l'utente resta disconnesso ma non cancellato.
 - I messaggi restituiti sono fissi in inglese e non passano dalle traduzioni.
 - Non gestisce cascate su altri dati: non verificato in questo passo.

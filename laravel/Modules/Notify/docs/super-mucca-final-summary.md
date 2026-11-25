@@ -238,7 +238,7 @@ class LoginWidget extends XotBaseWidget
 
 1. `docs/super-mucca-docs-analysis.md` - Report analisi completa
 2. `docs/documentation-index.md` - Indice generale
-3. `docs/SUPER_MUCCA_final-summary.md` - Questo file
+3. `super-mucca-final-summary-2.md` - Questo file
 4. `laravel/Modules/Comment/docs/README.md` - Doc Comment module
 5. `laravel/Modules/Seo/docs/README.md` - Doc SEO module
 6. `laravel/Themes/One/docs/README.md` - Doc Theme One

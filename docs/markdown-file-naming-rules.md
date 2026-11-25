@@ -74,7 +74,7 @@ find docs/ -name "*.md" -not -name "README.md" -not -name "CHANGELOG.md" | grep 
 # Rename examples:
 mv docs/ProjectPurpose.md docs/project-purpose.md
 mv docs/COMPLETION_PLAN.md docs/completion-plan.md
-mv docs/Next_Steps.md docs/next-steps.md
+mv ../laravel/Modules/AI/docs/next-steps-2.md ../laravel/Modules/AI/docs/next-steps-2.md
 ```
 
 ---

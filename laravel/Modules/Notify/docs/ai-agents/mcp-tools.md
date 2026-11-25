@@ -44,6 +44,6 @@ La configurazione MCP si trova in:
 ## 🔗 Link
 
 **Di ritorno:**
-- → [CLAUDE.md - MCP Tools Section](../../CLAUDE.md)
+- → [CLAUDE.md - MCP Tools Section](../../../Geo/docs/root-md-files/claude.md)
 - → [mcp.md](mcp.md)
 - → [INDEX](index.md)

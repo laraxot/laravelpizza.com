@@ -16,20 +16,20 @@ Generated on: Wed Apr 22 14:04:36 CEST 2026
 ## Affected Files
 
 * ./Modules/Geo/docs/wiki/README.md
-* ./Modules/Geo/docs/wiki/AGENTS.md
+* ./Modules/Geo/docs/wiki/agents-2.md
 * ./Modules/Geo/docs/merge-conflicts-list.md
 * ./Modules/docs/docs/wiki/log.md
 * ./Modules/docs/docs/wiki/README.md
-* ./Modules/docs/docs/wiki/index.md
+* ../../../Lang/docs/wiki/index-3.md
 * ./Modules/docs/docs/merge-conflicts-list.md
 * ./Modules/docs/merge-conflict-task-list.md
 * ./Modules/docs/merge-conflict-marker-task-list.md
 * ./Modules/Seo/docs/wiki/README.md
 * ./Modules/Seo/docs/merge-conflicts-list.md
-* ./Modules/Cms/docs/wiki/_archive/filament-4x-compatibility.md
+* ../filament-4x-compatibility-2.md
 * ./Modules/Cms/docs/wiki/README.md
 * ./Modules/Cms/docs/phpstan-scripts-roadmap.md
-* ./Modules/Cms/docs/roadmap.md
+* ../../../Seo/docs/roadmap-2.md
 * ./Modules/Cms/docs/roadmap/legacy/legacy-roadmap-x.md
 * ./Modules/Cms/docs/roadmap/legacy/legacy-roadmap-3.md
 * ./Modules/Cms/docs/quality-status-11.md
@@ -49,7 +49,7 @@ Generated on: Wed Apr 22 14:04:36 CEST 2026
 * ./Modules/Notify/docs/ai-agents/git-error-path-does-not-have-our-version.md
 * ./Modules/Notify/docs/wiki/index.md
 * ./Modules/Notify/docs/merge-conflicts-list.md
-* ./Modules/Notify/docs/correzioni-phpstan-completate_3.md
+* ./Modules/Notify/docs/correzioni-phpstan-completate-3-2.md
 * ./Modules/Notify/docs/project_docs/riepilogo-risoluzione-conflitti-2025-09-30.md
 * ./Modules/Notify/.planning/debug/knowledge-base.md
 * ./Modules/Notify/.planning/debug/resolved/sqlite-model-contract-fix.md

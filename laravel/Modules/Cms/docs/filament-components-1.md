@@ -31,7 +31,7 @@ discussions: []
 
 # Utilizzo dei Componenti Filament in il progetto
 > **Collegamenti correlati**
-> - [FILAMENT_COMPONENTS.md tema One](../../../../themes/one/docs/filament_components.md)
+> - [filament-components-2.md tema One](../../../../themes/one/docs/filament-components-2.md)
 
 # Utilizzo dei Componenti Filament
 
@@ -42,7 +42,7 @@ In il progetto, **privilegiare sempre i componenti Blade nativi di Filament** ri
 > ⚠️ **Collegamenti alla documentazione correlata**:
 > - [Indice generale dei collegamenti](../../../../../docs/collegamenti-documentazione.md)
 > - [Documentazione principale](../../../../../docs/rules/filament-components.md)
-> - [Documentazione nel tema](../../../../themes/one/docs/filament_components.md)
+> - [Documentazione nel tema](../../../../themes/one/docs/filament-components-2.md)
 
 ## Motivazione
 
@@ -202,5 +202,5 @@ Filament offre una vasta gamma di componenti Blade riutilizzabili. Di seguito i 
 ## Collegamenti tra versioni di filament-components.md
 * [filament-components.md](laravel/modules/user/docs/best-practices/filament-components.md)
 * [filament-components.md](laravel/modules/cms/docs/best-practices/filament-components.md)
-* [filament-components.md](laravel/modules/cms/docs/filament-components.md)
+* [filament-components.md](laravel/Modules/Cms/docs/filament-components-2.md)
 * [filament-components.md](laravel/docs/rules/filament-components.md)

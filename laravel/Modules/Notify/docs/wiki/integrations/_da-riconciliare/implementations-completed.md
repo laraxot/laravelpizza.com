@@ -67,17 +67,17 @@ Analizzato lo scopo del progetto, identificate le features mancanti e implementa
 
 ### 📚 Documentazione Strategica (6 - da sessione precedente)
 7. ✅ **DOCUMENTATION_STATUS.md**
-8. ✅ **DOCUMENTATION_INDEX.md**
+8. ✅ **documentation-index.md**
 9. ✅ **QUICK_START.md**
 10. ✅ **PROJECT_COMPLETION_STATUS.md**
 11. ✅ **EXCELLENCE_2025.md**
 12. ✅ **FINAL_SUMMARY.md**
 
 ### 📖 Guide Complete (3 - da sessione precedente)
-13. ✅ **App/docs/API.md**
+13. ✅ **App/docs/api-2.md**
 14. ✅ **App/docs/USER_GUIDE.md**
 15. ✅ **App/docs/ADMIN_GUIDE.md**
-13. ✅ **<nome progetto>/docs/API.md**
+13. ✅ **<nome progetto>/docs/api-2.md**
 14. ✅ **<nome progetto>/docs/USER_GUIDE.md**
 15. ✅ **<nome progetto>/docs/ADMIN_GUIDE.md**
 
@@ -86,9 +86,9 @@ Analizzato lo scopo del progetto, identificate le features mancanti e implementa
 17. ✅ **User/docs/SSO_GUIDE.md**
 
 ### 🗺️ Roadmap (3 - da sessione precedente)
-18. ✅ **ROADMAP_STATUS_SUMMARY.md**
-19. ✅ **App/ROADMAP_2025.md**
-19. ✅ **<nome progetto>/ROADMAP_2025.md**
+18. ✅ **roadmap-status-summary-2.md**
+19. ✅ **../../../../../User/docs/roadmap-3.md**
+19. ✅ **<nome progetto>/roadmap-3.md**
 20. ✅ **User/roadmap.md**
 
 ---
@@ -413,7 +413,7 @@ Modules/<nome progetto>/
 │       ├── TicketResource.php               ✅ NEW
 │       └── TicketCollection.php             ✅ NEW
 └── docs/
-    ├── API.md                               ✅ EXISTING
+    ├── api-2.md                               ✅ EXISTING
     ├── USER_GUIDE.md                        ✅ EXISTING
     └── ADMIN_GUIDE.md                       ✅ EXISTING
 ```
@@ -423,7 +423,7 @@ Modules/<nome progetto>/
 /
 ├── GAP_ANALYSIS_IMPLEMENTATION.md           ✅ NEW
 ├── IMPLEMENTATIONS_COMPLETED.md             ✅ NEW (questo file)
-├── DOCUMENTATION_INDEX.md                   ✅ EXISTING
+├── documentation-index.md                   ✅ EXISTING
 ├── QUICK_START.md                           ✅ EXISTING
 ├── EXCELLENCE_2025.md                       ✅ EXISTING
 └── FINAL_SUMMARY.md                         ✅ EXISTING
@@ -450,9 +450,9 @@ Modules/<nome progetto>/
 ## 📞 SUPPORT & RESOURCES
 
 ### Documentation
-- **[GAP_ANALYSIS_IMPLEMENTATION.md](./gap_analysis_implementation.md)** - Piano completo
-- **[DOCUMENTATION_INDEX.md](./documentation_index.md)** - Indice generale
-- **[QUICK_START.md](./quick_start.md)** - Guida sviluppatori
+- **[GAP_ANALYSIS_IMPLEMENTATION.md](./gap-analysis-implementation-3.md)** - Piano completo
+- **[documentation-index.md](./documentation-index-3.md)** - Indice generale
+- **[QUICK_START.md](./quick-start-3.md)** - Guida sviluppatori
 
 ### Implementation
 - **[GeocodeTicketAddressJob.php](./laravel/Modules/App/Jobs/GeocodeTicketAddressJob.php)**

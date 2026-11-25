@@ -31,10 +31,10 @@ La documentazione del frontend deve essere sempre inserita nella cartella `docs`
 La documentazione generica deve essere sempre inserita nella cartella `docs` del modulo `Xot`.
 
 ### Collocazione della documentazione dei componenti UI
-La documentazione dei componenti UI deve essere sempre inserita nella cartella `docs` del modulo `UI`. Vedi [ui-link.md](../UI/project_docs/README.md) per i dettagli.
+La documentazione dei componenti UI deve essere sempre inserita nella cartella `docs` del modulo `UI`. Vedi [ui-link-2.md](../UI/project_docs/README.md) per i dettagli.
 
 ## Collegamenti Bidirezionali
-- [Documentazione Generale](./documentation.md)
+- [Documentazione Generale](../../../Activity/docs/documentation-2.md)
 - [Regole del Progetto](./rules.md)
 - [Struttura dei Prompt](./prompts.md)
 - [Collegamenti al Modulo Cms](./cms-link.md)

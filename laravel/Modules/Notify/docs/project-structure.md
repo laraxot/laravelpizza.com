@@ -89,8 +89,8 @@ tags: [structure, architecture, module]
 >>>>>>> .merge_file_zlZcvR
 >>>>>>> laraxot/dev
 ├── ON-DEMAND-PATTERN.md          # 🌟 QUESTO FILE — Pattern on-demand
-├── QMD-SETUP.md                  # Configurazione QMD
-├── PERFORMANCE-OPTIMIZATION.md    # Metriche e best practice
+├── qmd-setup-3.md                  # Configurazione QMD
+├── performance-optimization-2.md    # Metriche e best practice
 ├── ARCHITECTURE.md               # (opzionale) Architettura modulo
 <<<<<<< HEAD
 <<<<<<< .merge_file_rKiznc

@@ -44,7 +44,7 @@ Consolidated from **22** individual files.
 
 ## translation-best-practices
 
-*Consolidated from: `translation-best-practices.md`*
+*Consolidated from: `translation-best-practices-2.md`*
 
 title: "Best Practices per le Traduzioni"
 type: concept
@@ -60,9 +60,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Best Practices per le Traduzioni
@@ -216,7 +216,7 @@ Seguire queste best practices aiuta a mantenere un sistema di traduzioni efficie
 
 ## translation-city-field-refactor-.deprecated
 
-*Consolidated from: `translation-city-field-refactor-.deprecated.md`*
+*Consolidated from: `translation-city-field-refactor-2.deprecated.md`*
 
 title: "Refactor Completo Campi "Città" - Modulo User"
 type: concept
@@ -232,9 +232,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Refactor Completo Campi "Città" - Modulo User
@@ -398,8 +398,8 @@ Tutti i file corretti mantengono:
 
 - [Struttura Completa Campi Traduzione](../../../docs/translation-field-structure-complete.md)
 - [SaluteOra Translation Audit](../../SaluteOra/docs/translation_audit_city_fields.md)
-- [Translation Syntax Fixes](../../../docs/translation_syntax_fixes.md)
-- [User Module Widget Translation Rules](widget-translation-rules.md)
+- [Translation Syntax Fixes](../../../docs/translation-syntax-fixes-2.md)
+- [User Module Widget Translation Rules](widget-translation-rules-2.md)
 
 ## Prevenzione Futura
 
@@ -440,9 +440,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Refactor Completo Campi "Città" - Modulo User
@@ -606,8 +606,8 @@ Tutti i file corretti mantengono:
 
 - [Struttura Completa Campi Traduzione](../../../../docs/translation-field-structure-complete.md)
 - [<nome progetto> Translation Audit](../../<nome progetto>/docs/translation_audit_city_fields.md)
-- [Translation Syntax Fixes](../../../../docs/translation_syntax_fixes.md)
-- [User Module Widget Translation Rules](widget-translation-rules.md)
+- [Translation Syntax Fixes](../../../../docs/translation-syntax-fixes-2.md)
+- [User Module Widget Translation Rules](widget-translation-rules-2.md)
 
 ## Prevenzione Futura
 
@@ -647,9 +647,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 > Questo file è stato rinominato in [translation-city-field-refactor-3.md](translation-city-field-refactor-3.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
@@ -669,9 +669,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/translation-city-field-refactor-conflict.md
@@ -695,12 +695,12 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
-> Questo file è stato rinominato in [translation-city-field-refactor-.deprecated.md](translation-city-field-refactor-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+> Questo file è stato rinominato in [translation-city-field-refactor-2.deprecated.md](translation-city-field-refactor-2.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 
 ---
 
@@ -717,9 +717,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/translation-city-field-refactor.md
@@ -744,9 +744,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Translation Conflict Resolution Prototype
@@ -796,9 +796,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Understanding Translation Structure in Laraxot Framework
@@ -837,9 +837,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/translation-fixes.md
@@ -848,7 +848,7 @@ See canonical documentation: ../../../Themes/docs/shared-components/translation-
 
 ## translation-key-prototype
 
-*Consolidated from: `translation-key-prototype.md`*
+*Consolidated from: `translation-key-prototype-2.md`*
 
 title: "Translation Key Prototype"
 type: concept
@@ -864,9 +864,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 Translation key prototype
@@ -892,7 +892,7 @@ Follow-ups:
 
 ## translation-keys-rules
 
-*Consolidated from: `translation-keys-rules.md`*
+*Consolidated from: `translation-keys-rules-3.md`*
 
 title: "Regole per le Chiavi di Traduzione"
 type: rule
@@ -908,9 +908,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Regole per le Chiavi di Traduzione
@@ -1027,12 +1027,12 @@ return [
 
 ## Collegamenti Correlati
 
-- [Best Practices per le Traduzioni](TRANSLATION_BEST_PRACTICES.md)
+- [Best Practices per le Traduzioni](translation-best-practices-2.md)
 - [Struttura del Modulo](MODULE_STRUCTURE.md)
-- [Convenzioni di Codice](CODE_CONVENTIONS.md)
-- [Best Practices per le Traduzioni](translation-best-practices.md)
+- [Convenzioni di Codice](code-conventions-3.md)
+- [Best Practices per le Traduzioni](translation-best-practices-2.md)
 - [Struttura del Modulo](module-structure-user.md)
-- [Convenzioni di Codice](code-conventions.md)
+- [Convenzioni di Codice](code-conventions-3.md)
 ---
 
 ## translation-keys
@@ -1041,19 +1041,19 @@ return [
 
 module: theme
 topic: translation-keys
-canonical: ../../../Themes/docs/shared-components/translation-keys-rules.md
+canonical: ../../../../Lang/docs/translation-keys-rules-3.md
 related:
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/translation-keys-rules.md
+See canonical documentation: ../../../../Lang/docs/translation-keys-rules-3.md
 
 ---
 
@@ -1075,9 +1075,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Translation Maintenance Log - User Module
@@ -1250,9 +1250,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/translation-conflict-resolution-prototype.md
@@ -1261,29 +1261,29 @@ See canonical documentation: ../../../Themes/docs/shared-components/translation-
 
 ## translation-syntax-fixes-
 
-*Consolidated from: `translation-syntax-fixes-.md`*
+*Consolidated from: `translation-syntax-fixes-2.md`*
 
 module: theme
 topic: translation-syntax-fixes-
-canonical: ../../../Themes/docs/shared-components/translation-syntax-fixes.md
+canonical: ../../../../Lang/docs/translation-syntax-fixes-2.md
 related:
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/translation-syntax-fixes.md
+See canonical documentation: ../../../../Lang/docs/translation-syntax-fixes-2.md
 
 ---
 
 ## translation-syntax-fixes
 
-*Consolidated from: `translation-syntax-fixes.md`*
+*Consolidated from: `translation-syntax-fixes-2.md`*
 
 title: "Correzioni Errori di Sintassi nei File di Traduzione - 2025"
 type: concept
@@ -1299,9 +1299,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Correzioni Errori di Sintassi nei File di Traduzione - 2025
@@ -1453,9 +1453,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Correzioni Errori di Sintassi nei File di Traduzione - 2025
@@ -1590,7 +1590,7 @@ find Modules/User/lang -name "*.php" -exec php -l {} \;
 
 ## translation_best_practices
 
-*Consolidated from: `translation_best_practices.md`*
+*Consolidated from: `translation-best-practices-2.md`*
 
 
 ## Principi Generali
@@ -1741,7 +1741,7 @@ Seguire queste best practices aiuta a mantenere un sistema di traduzioni efficie
 
 ## translation_keys_rules
 
-*Consolidated from: `translation_keys_rules.md`*
+*Consolidated from: `translation-keys-rules-3.md`*
 
 
 ## Principi Fondamentali
@@ -1856,9 +1856,9 @@ return [
 
 ## Collegamenti Correlati
 
-- [Best Practices per le Traduzioni](TRANSLATION_BEST_PRACTICES.md)
+- [Best Practices per le Traduzioni](translation-best-practices-2.md)
 - [Struttura del Modulo](MODULE_STRUCTURE.md)
-- [Convenzioni di Codice](CODE_CONVENTIONS.md)
+- [Convenzioni di Codice](code-conventions-3.md)
 
 ---
 
@@ -1880,9 +1880,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Correzioni File di Traduzione User Module
@@ -1999,9 +1999,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/translations.md

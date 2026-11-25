@@ -183,5 +183,5 @@ class LogoutPage
 
 ### Link Correlati
 - [Documentazione Volt](https://livewire.laravel.com/docs/volt)
-- [Best Practices Filament](../filament_best_practices.md)
+- [Best Practices Filament](../filament-best-practices-2.md)
 - [Routing Best Practices](../routing_best_practices.md) 

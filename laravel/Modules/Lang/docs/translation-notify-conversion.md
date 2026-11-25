@@ -36,15 +36,15 @@ Durante l'analisi del codice è emerso che numerosi file di traduzione nel modul
 ## Standardizzazione Implementata
 
 ### Documenti di Riferimento
-- [Regole di Naming per i File di Traduzione](translation-file-naming-rules.md)
-- [Guida alla Struttura dei File di Traduzione](translation-file-structure-guide.md)
-- [Progresso della Standardizzazione](translation_standards_progress.md)
-- [Regole di Naming per i File di Traduzione](translation-file-naming-rules.md)
-- [Guida alla Struttura dei File di Traduzione](translation-file-structure-guide.md)
-- [Progresso della Standardizzazione](translation_standards_progress.md)
-- [Regole di Naming per i File di Traduzione](translation-file-naming-rules.md)
-- [Guida alla Struttura dei File di Traduzione](translation-file-structure-guide.md)
-- [Progresso della Standardizzazione](translation_standards_progress.md)
+- [Regole di Naming per i File di Traduzione](translation-file-naming-rules-2.md)
+- [Guida alla Struttura dei File di Traduzione](translation-file-structure-guide-2.md)
+- [Progresso della Standardizzazione](translation-standards-progress-2.md)
+- [Regole di Naming per i File di Traduzione](translation-file-naming-rules-2.md)
+- [Guida alla Struttura dei File di Traduzione](translation-file-structure-guide-2.md)
+- [Progresso della Standardizzazione](translation-standards-progress-2.md)
+- [Regole di Naming per i File di Traduzione](translation-file-naming-rules-2.md)
+- [Guida alla Struttura dei File di Traduzione](translation-file-structure-guide-2.md)
+- [Progresso della Standardizzazione](translation-standards-progress-2.md)
 
 ### Struttura Standard Richiesta
 
@@ -119,15 +119,15 @@ La corretta implementazione degli standard di traduzione garantisce:
 
 ## Collegamenti alla Documentazione
 
-- [Regole Generali per le Traduzioni](translation_keys_rules.md)
+- [Regole Generali per le Traduzioni](translation-keys-rules-3.md)
 - [Best Practices per le Traduzioni](translation-keys-best-practices.md)
-- [Convenzioni di Traduzione nel Modulo Notify](translation_conventions.md)
-- [Regole Generali per le Traduzioni](translation_keys_rules.md)
+- [Convenzioni di Traduzione nel Modulo Notify](translation-conventions-2.md)
+- [Regole Generali per le Traduzioni](translation-keys-rules-3.md)
 - [Best Practices per le Traduzioni](translation-keys-best-practices.md)
-- [Convenzioni di Traduzione nel Modulo Notify](translation_conventions.md)
-- [Regole Generali per le Traduzioni](translation_keys_rules.md)
+- [Convenzioni di Traduzione nel Modulo Notify](translation-conventions-2.md)
+- [Regole Generali per le Traduzioni](translation-keys-rules-3.md)
 - [Best Practices per le Traduzioni](translation-keys-best-practices.md)
-- [Convenzioni di Traduzione nel Modulo Notify](translation_conventions.md)
+- [Convenzioni di Traduzione nel Modulo Notify](translation-conventions-2.md)
 # Standardizzazione Traduzioni Modulo Notify
 
 ## Panoramica delle Problematiche
@@ -153,15 +153,15 @@ Durante l'analisi del codice è emerso che numerosi file di traduzione nel modul
 ## Standardizzazione Implementata
 
 ### Documenti di Riferimento
-- [Regole di Naming per i File di Traduzione](translation-file-naming-rules.md)
-- [Guida alla Struttura dei File di Traduzione](translation-file-structure-guide.md)
-- [Progresso della Standardizzazione](translation_standards_progress.md)
-- [Regole di Naming per i File di Traduzione](translation-file-naming-rules.md)
-- [Guida alla Struttura dei File di Traduzione](translation-file-structure-guide.md)
-- [Progresso della Standardizzazione](translation_standards_progress.md)
-- [Regole di Naming per i File di Traduzione](translation-file-naming-rules.md)
-- [Guida alla Struttura dei File di Traduzione](translation-file-structure-guide.md)
-- [Progresso della Standardizzazione](translation_standards_progress.md)
+- [Regole di Naming per i File di Traduzione](translation-file-naming-rules-2.md)
+- [Guida alla Struttura dei File di Traduzione](translation-file-structure-guide-2.md)
+- [Progresso della Standardizzazione](translation-standards-progress-2.md)
+- [Regole di Naming per i File di Traduzione](translation-file-naming-rules-2.md)
+- [Guida alla Struttura dei File di Traduzione](translation-file-structure-guide-2.md)
+- [Progresso della Standardizzazione](translation-standards-progress-2.md)
+- [Regole di Naming per i File di Traduzione](translation-file-naming-rules-2.md)
+- [Guida alla Struttura dei File di Traduzione](translation-file-structure-guide-2.md)
+- [Progresso della Standardizzazione](translation-standards-progress-2.md)
 
 ### Struttura Standard Richiesta
 
@@ -236,12 +236,12 @@ La corretta implementazione degli standard di traduzione garantisce:
 
 ## Collegamenti alla Documentazione
 
-- [Regole Generali per le Traduzioni](translation_keys_rules.md)
+- [Regole Generali per le Traduzioni](translation-keys-rules-3.md)
 - [Best Practices per le Traduzioni](translation-keys-best-practices.md)
-- [Convenzioni di Traduzione nel Modulo Notify](translation_conventions.md)
-- [Regole Generali per le Traduzioni](translation_keys_rules.md)
+- [Convenzioni di Traduzione nel Modulo Notify](translation-conventions-2.md)
+- [Regole Generali per le Traduzioni](translation-keys-rules-3.md)
 - [Best Practices per le Traduzioni](translation-keys-best-practices.md)
-- [Convenzioni di Traduzione nel Modulo Notify](translation_conventions.md)
-- [Regole Generali per le Traduzioni](translation_keys_rules.md)
+- [Convenzioni di Traduzione nel Modulo Notify](translation-conventions-2.md)
+- [Regole Generali per le Traduzioni](translation-keys-rules-3.md)
 - [Best Practices per le Traduzioni](translation-keys-best-practices.md)
-- [Convenzioni di Traduzione nel Modulo Notify](translation_conventions.md)
+- [Convenzioni di Traduzione nel Modulo Notify](translation-conventions-2.md)

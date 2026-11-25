@@ -171,7 +171,7 @@ Select::make('cap')
 ### 5. Collegamenti utili
 
 - [Squire PHP](https://github.com/squirephp/squire)
-- Geo/module_geo.md
+- Geo/module-geo-2.md
 - Xot/module-structure.md
 - <main module>/project_docs/geo-integration.md
 
@@ -251,7 +251,7 @@ class Comune extends GeoJsonModel
 ```
 
 - Tutti i filtri e le select dinamiche ora usano solo il modello Comune.
-- Vedi anche [geo_entities.md](./geo_entities.md) per motivazione e percentuali di adozione.
+- Vedi anche [geo-entities-2.md](./geo-entities-2.md) per motivazione e percentuali di adozione.
 
 ## Analisi: Comune come modello Sushi
 
@@ -370,7 +370,7 @@ discussions: []
 =======
 <<<<<<< HEAD
 >>>>>>> .merge_file_YP31pr
-- Vedi anche [geo_entities.md](./geo_entities.md) per motivazione e percentuali di adozione.
+- Vedi anche [geo-entities-2.md](./geo-entities-2.md) per motivazione e percentuali di adozione.
 
 ## Approfondimento: Sushi (calebporzio/sushi) per modelli geografici
 
@@ -447,7 +447,7 @@ class ComuneSushi extends Model
 - [Sito ufficiale Sushi](https://usesushi.dev/)
 - [GitHub Sushi](https://github.com/calebporzio/sushi)
 - [Esempi avanzati](https://jasonlbeggs.com/blog/laravel-sushi)
-- [geo_entities.md](./geo_entities.md)
+- [geo-entities-2.md](./geo-entities-2.md)
 
 ---
 
@@ -486,7 +486,7 @@ class ComuneSushi extends Model
 
 ---
 
-- Vedi anche [geo_entities.md](./geo_entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
+- Vedi anche [geo-entities-2.md](./geo-entities-2.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
 
 ## Approccio avanzato: SushiToJsons (CRUD, multi-tenant, Eloquent + JSON)
 
@@ -570,7 +570,7 @@ trait SushiToJsons
 
 ---
 
-- Vedi anche [geo_entities.md](./geo_entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
+- Vedi anche [geo-entities-2.md](./geo-entities-2.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
 <<<<<<< .merge_file_0KeXXL
 <<<<<<< .merge_file_iJs8ex
 <<<<<<< .merge_file_uKrua6

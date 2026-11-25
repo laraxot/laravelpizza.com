@@ -121,7 +121,7 @@ projects: ["Design Comuni Replication"]
 - [ ] `laravel/Themes/Sixteen/docs/design-comuni/HTML_REPLICATION_GUIDE.md`
 - [ ] `laravel/Themes/Sixteen/docs/design-comuni/BLOCKS_CATALOG.md`
 - [ ] `laravel/Themes/Sixteen/docs/design-comuni/SCREENSHOTS/` (analisi)
-- [ ] `laravel/Modules/Cms/docs/page_component_architecture.md`
+- [ ] `laravel/Modules/Cms/docs/page-component-architecture-3.md`
 - [ ] `laravel/Modules/Cms/docs/JSON_CONTENT_BLOCKS.md`
 - [ ] `docs/project/DESIGN_COMUNI_REPLICATION_STATUS.md`
 

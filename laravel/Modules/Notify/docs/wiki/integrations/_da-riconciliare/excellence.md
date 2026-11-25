@@ -78,7 +78,7 @@ Notify è la piattaforma enterprise leader per la gestione delle segnalazioni ur
 
 ### 🎫 Modulo App - ECCELLENZA (90%)
 ### 🎫 Modulo <nome progetto> - ECCELLENZA (90%)
-- ✅ **API.md** - REST API completa con 15+ endpoints
+- ✅ **api-2.md** - REST API completa con 15+ endpoints
 - ✅ **USER_GUIDE.md** - Guida cittadini 15 sezioni
 - ✅ **ADMIN_GUIDE.md** - Guida admin 18 sezioni
 - ✅ **ROADMAP_2025.md** - Timeline dettagliata Q4 2025-Q2 2026
@@ -88,7 +88,7 @@ Notify è la piattaforma enterprise leader per la gestione delle segnalazioni ur
 - ✅ **2FA_GUIDE.md** - Implementazione 2FA completa (NEW)
 - ✅ **SSO_GUIDE.md** - SAML 2.0 + OIDC completo (NEW)
 - ✅ **roadmap.md** - Timeline Q4 2025-Q1 2026
-- 📋 **API.md** - Authentication API (TODO)
+- 📋 **api-2.md** - Authentication API (TODO)
 
 ### 🎨 Tema Sixteen - ECCELLENZA (78%)
 - ✅ **ROADMAP_2025.md** - Timeline aggiornata
@@ -476,8 +476,8 @@ Notify è orgogliosamente open source:
 - **[Sixteen Docs](./laravel/Themes/Sixteen/docs/)** - Frontend theme
 
 ### API
-- **[App API](./laravel/Modules/App/docs/API.md)** - REST API
-- **[<nome progetto> API](./laravel/Modules/<nome progetto>/docs/API.md)** - REST API
+- **[App API](./laravel/Modules/App/docs/api-2.md)** - REST API
+- **[<nome progetto> API](./laravel/Modules/<nome progetto>/docs/api-2.md)** - REST API
 - **[User 2FA](./laravel/Modules/User/docs/2FA_GUIDE.md)** - 2FA Guide
 - **[User SSO](./laravel/Modules/User/docs/SSO_GUIDE.md)** - SSO Guide
 

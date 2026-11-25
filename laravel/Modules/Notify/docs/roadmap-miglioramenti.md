@@ -67,7 +67,7 @@ diretta, senza bisogno di aprirli: nella sola root di `docs/` convivono
 >>>>>>> .merge_file_St7fUQ
 indici per un unico modulo, nessuno dei quattro probabilmente aggiornato
 dopo la nascita degli altri tre. E poi `absolute-completion.md` insieme ad
-`ABSOLUTE_COMPLETION_100.md`: un modulo che si certifica "completo al 100%"
+`absolute-completion-100.md`: un modulo che si certifica "completo al 100%"
 due volte, con due grafie diverse, è un modulo che non si fida di sé stesso
 abbastanza da cancellare il primo certificato quando scrive il secondo.
 

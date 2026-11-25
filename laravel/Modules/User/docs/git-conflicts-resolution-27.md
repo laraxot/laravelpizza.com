@@ -18,8 +18,8 @@ Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i fi
 ## Collegamenti correlati
 - [Indice documentazione User](/laravel/Modules/User/docs/index.md)
 - [README User](/laravel/Modules/User/docs/README.md)
-- [Auth Components Best Practices](/laravel/Modules/User/docs/auth_components_best_practices.md)
-- [Filament Widgets Structure](/laravel/Modules/User/docs/widgets_structure.md)
+- [Auth Components Best Practices](/laravel/Modules/User/docs/auth-components-best-practices-4.md)
+- [Filament Widgets Structure](/laravel/Modules/User/docs/widgets-structure-2.md)
 - [BaseUser Documentation](/laravel/Modules/User/docs/baseuser.md)
 
 ## File Risolti
@@ -304,10 +304,10 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 - **Tipizzazione**: PHPDoc rigorosi per conformità PHPStan
 
 ### **Documentazione Aggiornata:**
-- [widgets_structure.md](./widgets_structure.md) - Regole per widget structure
+- [widgets-structure-2.md](./widgets-structure-2.md) - Regole per widget structure
 - [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
-- [path_conventions.md](./path_conventions.md) - Convenzioni percorsi
-- [volt_blade_implementation.md](./volt_blade_implementation.md) - View patterns
+- [path-conventions-2.md](./path-conventions-2.md) - Convenzioni percorsi
+- [volt-blade-implementation-4.md](./volt-blade-implementation-4.md) - View patterns
 
 ### **Post-Risoluzione TODO:**
 - [ ] Verificare funzionamento widget in contesto Filament panel

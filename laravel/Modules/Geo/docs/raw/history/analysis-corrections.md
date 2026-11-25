@@ -108,7 +108,7 @@ public function scopeWithExtraAttributes(
 
 ### IndennitaResponsabilita Module (5 docs)
 
-1. **[Code Quality Analysis](../laravel/Modules/IndennitaResponsabilita/docs/code-quality-analysis.md)** (~800 lines)
+1. **[Code Quality Analysis](../../../../Activity/docs/code-quality-analysis-3.md)** (~800 lines)
    - 37 violations identified
    - Detailed analysis per file
    - Solutions for each issue
@@ -293,7 +293,7 @@ public function scopeWithExtraAttributes(
 
 ### Module Analysis
 - [IndennitaResponsabilita Analysis Summary](../laravel/Modules/IndennitaResponsabilita/docs/analysis-summary.md)
-- [IndennitaResponsabilita Code Quality](../laravel/Modules/IndennitaResponsabilita/docs/code-quality-analysis.md)
+- [IndennitaResponsabilita Code Quality](../../../../Activity/docs/code-quality-analysis-3.md)
 - [Rating Module README](../laravel/Modules/Rating/docs/README.md)
 
 ### Critical Topics
@@ -392,7 +392,7 @@ laravel/Modules/
 ├── IndennitaResponsabilita/docs/
 │   ├── README.md (Updated)
 │   ├── analysis-summary.md (Summary)
-│   ├── code-quality-analysis.md (~800 lines)
+│   ├── code-quality-analysis-3.md (~800 lines)
 │   ├── refactoring-action-plan.md (~1000 lines)
 │   ├── best-practices.md (~600 lines)
 │   ├── trait-responsibility-violation.md (~400 lines)

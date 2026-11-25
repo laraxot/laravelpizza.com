@@ -92,7 +92,7 @@ Indexes should be shallow and forecastable.
 
 When an agent needs context, read in this order:
 
-1. `AGENTS.md`
+1. `agents-2.md`
 2. relevant root index in `docs/`, `laravel/Modules/docs/`, `laravel/Themes/docs/`, or `bashscripts/docs/`
 3. the target module or theme `README.md`
 4. the specific topic file

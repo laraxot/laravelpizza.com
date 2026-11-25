@@ -14,8 +14,8 @@ updated: 2026-08-24
 
 Questo file veniva da `docs/wiki/integrations/modules/lang/modelli_factory_seeder_analisi.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
 
-- versione del modulo: `laravel/Modules/Lang/docs/modelli_factory_seeder_analisi.md`
-- versione recuperata: `laravel/Modules/Lang/docs/wiki/integrations/_da-riconciliare/modelli_factory_seeder_analisi.md`
+- versione del modulo: `laravel/Modules/Lang/docs/modelli-factory-seeder-analisi-2.md`
+- versione recuperata: `laravel/Modules/Lang/docs/wiki/integrations/_da-riconciliare/modelli-factory-seeder-analisi-2.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 

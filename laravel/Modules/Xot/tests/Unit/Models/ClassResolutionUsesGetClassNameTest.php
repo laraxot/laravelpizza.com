@@ -19,7 +19,7 @@ uses(TestCase::class);
  *
  * Perche' una guardia e non una regola scritta: la regola c'era, ed era scritta due
  * volte — in `Xot/docs/wiki/concepts/xotbasemodel-get-class-name.md` e in
- * `Ptv/docs/dynamic-class-resolution-pattern.md`. Il secondo pero' chiamava la forma
+ * `../../../../Notify/docs/dynamic-class-resolution-pattern-2.md`. Il secondo pero' chiamava la forma
  * a mano «pattern legacy ancora valido dove gia' presente», e da li' si e' propagata:
  * il 2026-09-09 era in quattro punti di Ptv e in `HasRatingsTrait::resolveRatingClass()`.
  *

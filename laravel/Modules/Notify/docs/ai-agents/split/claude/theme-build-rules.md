@@ -132,5 +132,5 @@ This is a fundamental rule that must NEVER be forgotten when working with themes
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md): Original source
+- ← [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md): Original source
 

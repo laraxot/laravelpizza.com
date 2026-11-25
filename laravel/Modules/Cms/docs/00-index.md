@@ -67,7 +67,7 @@ Il modulo Cms gestisce contenuti, composizione pagina e rendering CMS-driven dei
 
 ## 📚 Design Comuni - Index Completo
 
-- **[design_comuni_index.md](./design_comuni_index.md)** - **INDEX COMPLETO** con tutti i link bidirezionali
+- **[design-comuni-index-3.md](./design-comuni-index-3.md)** - **INDEX COMPLETO** con tutti i link bidirezionali
 
 ## Active design-comuni references
 
@@ -80,14 +80,14 @@ Il modulo Cms gestisce contenuti, composizione pagina e rendering CMS-driven dei
 - [design-comuni-batch-audit.md](./design-comuni-batch-audit.md) - Audit batch pagine
 - [design-comuni-batch-parity.md](./design-comuni-batch-parity.md) - Verifica parity
 - [architecture/homepage-structure.md](./architecture/homepage-structure.md) - Flusso runtime aggiornato della homepage di test
-- [page_component_architecture.md](./page_component_architecture.md) - Architettura generale componenti pagina
+- [page-component-architecture-3.md](./page-component-architecture-3.md) - Architettura generale componenti pagina
 
 ## Theme cross links
 
 - [../../../Themes/Sixteen/docs/00-index.md](../../../Themes/Sixteen/docs/00-index.md) - Indice docs del tema
 - [../../../Themes/Sixteen/docs/design-comuni/00-index.md](../../../Themes/Sixteen/docs/design-comuni/00-index.md) - Workspace attivo parity homepage
 - [../../../Themes/Sixteen/docs/design-comuni/ALL_PAGES_ANALYSIS.md](../../../Themes/Sixteen/docs/design-comuni/ALL_PAGES_ANALYSIS.md) - Analisi 54 pagine
-- [../../../Themes/Sixteen/docs/design-comuni/PROGRESS_REPORT.md](../../../Themes/Sixteen/docs/design-comuni/PROGRESS_REPORT.md) - Report progresso
+- [../../Notify/docs/progress-report-2.md](../../Notify/docs/progress-report-2.md) - Report progresso
 - [../../../docs/design-comuni/MASTER_INDEX.md](../../../../docs/design-comuni/MASTER_INDEX.md) - Master Index globale
 
 ## Runtime architecture

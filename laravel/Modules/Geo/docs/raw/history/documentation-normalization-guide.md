@@ -239,20 +239,20 @@ Riferimento a testing.md
 - `phpstan-fixes.md`
 - `phpstan-fixes-archive-1.md`
 - `phpstan-fixes.md`
-- `phpstan_fixes.md`
+- `phpstan-fixes-2.md`
 
 **Dopo:**
 - `phpstan-compliance.md` (consolidato, focus su regole e pattern)
 
 ### Esempio 2: File Traduzioni
 **Prima:**
-- `translation-system.md`
-- `translation_system.md`
+- `translation-system-2.md`
+- `translation-system-2.md`
 - `translations-system.md`
-- `TRANSLATION_SYSTEM.md`
+- `translation-system-2.md`
 
 **Dopo:**
-- `translation-system.md` (unico file, normalizzato)
+- `translation-system-2.md` (unico file, normalizzato)
 
 ## Metriche di Successo
 

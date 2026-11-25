@@ -4,6 +4,7 @@ type: decision-log
 module: Media
 related:
   - ./livewire-inventory.md
+qmd: "livewire widget decision log media"
 ---
 
 # Decision log

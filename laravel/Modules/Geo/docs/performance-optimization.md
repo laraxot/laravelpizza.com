@@ -21,7 +21,7 @@ related:
 **Dopo**: Carico solo what's needed (~2K startup)
 
 \`\`\`diff
-- 150+ rules embeddate in AGENTS.md
+- 150+ rules embeddate in agents.md
 + 0 rules embeddate — tutte on-demand
 \`\`\`
 
@@ -122,8 +122,8 @@ context-mode ctx-stats
 - [QMD Setup](./qmd-setup.md)
 =======
 <<<<<<< HEAD
-- [On-Demand Pattern](./ON-DEMAND-PATTERN.md)
-- [QMD Setup](./QMD-SETUP.md)
+- [On-Demand Pattern](./on-demand-pattern-2.md)
+- [QMD Setup](./qmd-setup-2.md)
 =======
 - [On-Demand Pattern](./on-demand-pattern.md)
 - [QMD Setup](./qmd-setup.md)

@@ -103,7 +103,7 @@ public function scopeWithExtraAttributes(
 
 #### Module Documentation: IndennitaResponsabilita (8 docs)
 
-1. **[Code Quality Analysis](laravel/Modules/IndennitaResponsabilita/docs/code-quality-analysis.md)** (~800 lines)
+1. **[Code Quality Analysis](laravel/Modules/Activity/docs/code-quality-analysis-3.md)** (~800 lines)
    - 37 violations detailed with examples
    - Solutions for each
    - Impact analysis
@@ -173,7 +173,7 @@ public function scopeWithExtraAttributes(
    - Complete navigation hub
    - Updated with all new links
 
-2. **[Master Index 2025](docs/MASTER-INDEX.md)** (~300 lines)
+2. **[Master Index 2025](docs/master-index-2.md)** (~300 lines)
    - Master navigation
    - Documentation tree
    - Quick reference
@@ -262,7 +262,7 @@ public function scopeWithExtraAttributes(
 
 ### For Long Term
 
-4. **[Master Index](docs/MASTER-INDEX.md)** - Navigation hub
+4. **[Master Index](docs/master-index-2.md)** - Navigation hub
 5. **[Analysis Summary](laravel/Modules/IndennitaResponsabilita/docs/analysis-summary.md)** - Complete overview
 6. **[Trait Consolidation](laravel/Modules/Rating/docs/trait-consolidation-plan.md)** - DRY fix plan
 
@@ -365,7 +365,7 @@ public function scopeWithExtraAttributes(
 
 ### Master Navigation
 
-- **[Master Index](docs/MASTER-INDEX.md)** - Complete documentation map
+- **[Master Index](docs/master-index-2.md)** - Complete documentation map
 - **[Analysis Complete](docs/ANALYSIS-COMPLETE.md)** - This analysis summary
 - **[Root README](docs/README.md)** - Project documentation hub
 
@@ -444,7 +444,7 @@ public function scopeWithExtraAttributes(
 | Priority | Document | Purpose |
 |----------|----------|---------|
 | 🔴 | [START-HERE](docs/START-HERE.md) | Entry point for everyone |
-| 🔴 | [Master Index](docs/MASTER-INDEX.md) | Find any documentation |
+| 🔴 | [Master Index](docs/master-index-2.md) | Find any documentation |
 | 🔴 | [Analysis Complete](docs/ANALYSIS-COMPLETE.md) | Understand this analysis |
 | 🟡 | [Refactoring Plan](laravel/Modules/IndennitaResponsabilita/docs/refactoring-action-plan.md) | Execute refactoring |
 | 🟡 | [Best Practices](laravel/Modules/IndennitaResponsabilita/docs/best-practices.md) | Code correctly |
@@ -583,7 +583,7 @@ This is **exactly** the kind of feedback that makes code better!
 ## 📞 Support
 
 **Questions?**
-- Check [Master Index](docs/MASTER-INDEX.md) first
+- Check [Master Index](docs/master-index-2.md) first
 - Then [START-HERE](docs/START-HERE.md)
 - Still stuck? Slack #dev-help
 

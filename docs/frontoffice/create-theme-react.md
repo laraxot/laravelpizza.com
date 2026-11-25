@@ -260,4 +260,4 @@ npm run preview
 Se preferisci utilizzare un altro approccio, puoi consultare le guide per:
 - [Creazione di un tema con Volt, Folio e Filament](create_theme_volt_folio_filament.md)
 - [Creazione di un tema con Vue.js](create_theme_vue.md)
-- [Creazione di un tema con Laravel](create_theme.md)
+- [Creazione di un tema con Laravel](create-theme-2.md)

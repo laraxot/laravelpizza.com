@@ -325,12 +325,12 @@ php artisan test --testsuite=Lang
 
 - [**Documentazione Core Sistema**](../../../docs/core/)
 - [**PHPStan Guide**](../../../docs/core/phpstan-guide.md)
-- [**Filament Best Practices**](../../../docs/core/filament-best-practices.md)
+- [**Filament Best Practices**](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [**Convenzioni Sistema**](../../../docs/core/conventions.md)
 - [**Template Moduli**](../../../docs/templates/)
 - [**Documentazione Core Sistema**](../../docs/core/)
 - [**PHPStan Guide**](../../docs/core/phpstan-guide.md)
-- [**Filament Best Practices**](../../docs/core/filament-best-practices.md)
+- [**Filament Best Practices**](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [**Convenzioni Sistema**](../../docs/core/conventions.md)
 - [**Template Moduli**](../../docs/templates/)
 
@@ -418,7 +418,7 @@ docs/
 ├── configuration.md (configurazione completa)
 ├── usage-guide.md (utilizzo base)
 ├── translation-management.md (gestione traduzioni)
-├── best-practices.md (best practices)
+├── best-practices-3.md (best practices)
 ├── advanced-features.md (features avanzate)
 ├── api-reference.md (documentazione API)
 └── troubleshooting.md (risoluzione problemi)
@@ -456,7 +456,7 @@ php artisan lang:install
 - [Configuration](configuration.md)
 - [Usage Guide](usage-guide.md)
 - [Translation Management](translation-management.md)
-- [Best Practices](best-practices.md)
+- [Best Practices](best-practices-3.md)
 - [API Reference](api-reference.md)
 
 ## Support
@@ -778,8 +778,8 @@ app/
 **Regola:** Tutti i file in lowercase con hyphens
 **Esempi:**
 - ✅ `language-management.md`
-- ✅ `filament-resources.md`
-- ✅ `translation-system.md`
+- ✅ `filament-resources-3.md`
+- ✅ `translation-system-2.md`
 - ❌ `Language_Management.md`
 - ❌ `FilamentResources.md`
 
@@ -945,11 +945,11 @@ class Language extends Model
 ## 🔗 Collegamenti
 
 - [Documentazione Core](../../../../docs/core/)
-- [Best Practices Filament](../../../../docs/core/filament-best-practices.md)
+- [Best Practices Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Convenzioni Sistema](../../../../docs/core/conventions.md)
 - [Template Modulo](../../../../docs/templates/module-template.md)
 - [Documentazione Core](../../../docs/core/)
-- [Best Practices Filament](../../../docs/core/filament-best-practices.md)
+- [Best Practices Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Convenzioni Sistema](../../../docs/core/conventions.md)
 - [Template Modulo](../../../docs/templates/module-template.md)
 
@@ -1122,8 +1122,8 @@ app/
 **Regola:** Tutti i file in lowercase con hyphens
 **Esempi:**
 - ✅ `language-management.md`
-- ✅ `filament-resources.md`
-- ✅ `translation-system.md`
+- ✅ `filament-resources-3.md`
+- ✅ `translation-system-2.md`
 - ❌ `Language_Management.md`
 - ❌ `FilamentResources.md`
 
@@ -1289,7 +1289,7 @@ class Language extends Model
 ## 🔗 Collegamenti
 
 - [Documentazione Core](../../../../docs/core/)
-- [Best Practices Filament](../../../../docs/core/filament-best-practices.md)
+- [Best Practices Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Convenzioni Sistema](../../../../docs/core/conventions.md)
 - [Template Modulo](../../../../docs/templates/module-template.md)
 

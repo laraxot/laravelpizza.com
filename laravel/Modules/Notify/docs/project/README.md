@@ -74,11 +74,11 @@ This directory contains project-wide configuration and setup documentation for t
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_7byXVg
-| [`AGENTS.md`](agents.md) | AI agents configuration | AI |
-| [`AI_AGENT_LESSONS_LEARNED.md`](ai_agent_lessons_learned.md) | AI agent learnings | AI |
-| [`AI_SKILLS_AND_PLUGINS_COMPLETE.md`](ai_skills_and_plugins_complete.md) | AI skills setup | AI |
-| [`COMMIT_MESSAGE.md`](commit_message.md) | Commit message guidelines | Git |
-| [`VITE_FIX_AND_EXECUTION_PLAN.md`](vite_fix_and_execution_plan.md) | Vite build fixes | Build |
+| [`agents-2.md`](agents.md) | AI agents configuration | AI |
+| [`ai-agent-lessons-learned-2.md`](ai-agent-lessons-learned-2.md) | AI agent learnings | AI |
+| [`ai-skills-and-plugins-complete-2.md`](ai-skills-and-plugins-complete-2.md) | AI skills setup | AI |
+| [`commit-message-2.md`](commit-message-2.md) | Commit message guidelines | Git |
+| [`vite-fix-and-execution-plan-2.md`](vite_fix_and_execution_plan.md) | Vite build fixes | Build |
 <<<<<<< .merge_file_8gFSEy
 <<<<<<< HEAD
 =======
@@ -89,11 +89,11 @@ This directory contains project-wide configuration and setup documentation for t
 =======
 >>>>>>> .merge_file_7byXVg
 >>>>>>> laraxot/dev
-| [`AGENTS.md`](AGENTS.md) | AI agents configuration | AI |
-| [`AI_AGENT_LESSONS_LEARNED.md`](AI_AGENT_LESSONS_LEARNED.md) | AI agent learnings | AI |
-| [`AI_SKILLS_AND_PLUGINS_COMPLETE.md`](AI_SKILLS_AND_PLUGINS_COMPLETE.md) | AI skills setup | AI |
-| [`COMMIT_MESSAGE.md`](COMMIT_MESSAGE.md) | Commit message guidelines | Git |
-| [`VITE_FIX_AND_EXECUTION_PLAN.md`](VITE_FIX_AND_EXECUTION_PLAN.md) | Vite build fixes | Build |
+| [`agents-2.md`](agents-2.md) | AI agents configuration | AI |
+| [`ai-agent-lessons-learned-2.md`](ai-agent-lessons-learned-2.md) | AI agent learnings | AI |
+| [`ai-skills-and-plugins-complete-2.md`](ai-skills-and-plugins-complete-2.md) | AI skills setup | AI |
+| [`commit-message-2.md`](commit-message-2.md) | Commit message guidelines | Git |
+| [`vite-fix-and-execution-plan-2.md`](vite-fix-and-execution-plan-2.md) | Vite build fixes | Build |
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_8gFSEy
@@ -117,12 +117,12 @@ This directory contains project-wide configuration and setup documentation for t
 
 | File | Description | Category |
 |------|-------------|----------|
-| [`2-1-1-PLAN.md`](2-1-1-plan.md) | Sprint planning | Planning |
-| [`2-1-CONTEXT.md`](2-1-context.md) | Project context | Planning |
-| [`PROJECT.md`](project.md) | Project overview | Planning |
-| [`REQUIREMENTS.md`](requirements.md) | Requirements | Planning |
+| [`2-1-1-plan-2.md`](2-1-1-plan.md) | Sprint planning | Planning |
+| [`2-1-context-2.md`](2-1-context.md) | Project context | Planning |
+| [`project-2.md`](project.md) | Project overview | Planning |
+| [`requirements-2.md`](requirements.md) | Requirements | Planning |
 | [`roadmap.md`](roadmap.md) | Project roadmap | Planning |
-| [`STATE.md`](state.md) | Current state | Planning |
+| [`state-2.md`](state.md) | Current state | Planning |
 
 ### Philosophy
 
@@ -164,27 +164,27 @@ This directory contains project-wide configuration and setup documentation for t
 |------|-------------|----------|
 <<<<<<< HEAD
 <<<<<<< .merge_file_8gFSEy
-| [`NOTEBOOKLM_SETUP_COMPLETE.md`](notebooklm_setup_complete.md) | NotebookLM setup | AI |
+| [`notebooklm-setup-complete-2.md`](notebooklm-setup-complete-2.md) | NotebookLM setup | AI |
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-| [`NOTEBOOKLM_SETUP_COMPLETE.md`](NOTEBOOKLM_SETUP_COMPLETE.md) | NotebookLM setup | AI |
+| [`notebooklm-setup-complete-2.md`](notebooklm-setup-complete-2.md) | NotebookLM setup | AI |
 =======
 <<<<<<< HEAD
-| [`NOTEBOOKLM_SETUP_COMPLETE.md`](notebooklm_setup_complete.md) | NotebookLM setup | AI |
+| [`notebooklm-setup-complete-2.md`](notebooklm-setup-complete-2.md) | NotebookLM setup | AI |
 =======
-| [`NOTEBOOKLM_SETUP_COMPLETE.md`](NOTEBOOKLM_SETUP_COMPLETE.md) | NotebookLM setup | AI |
+| [`notebooklm-setup-complete-2.md`](notebooklm-setup-complete-2.md) | NotebookLM setup | AI |
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
-| [`NOTEBOOKLM_SETUP_COMPLETE.md`](notebooklm_setup_complete.md) | NotebookLM setup | AI |
+| [`notebooklm-setup-complete-2.md`](notebooklm-setup-complete-2.md) | NotebookLM setup | AI |
 =======
-| [`NOTEBOOKLM_SETUP_COMPLETE.md`](NOTEBOOKLM_SETUP_COMPLETE.md) | NotebookLM setup | AI |
+| [`notebooklm-setup-complete-2.md`](notebooklm-setup-complete-2.md) | NotebookLM setup | AI |
 =======
 <<<<<<< HEAD
-| [`NOTEBOOKLM_SETUP_COMPLETE.md`](notebooklm_setup_complete.md) | NotebookLM setup | AI |
+| [`notebooklm-setup-complete-2.md`](notebooklm-setup-complete-2.md) | NotebookLM setup | AI |
 =======
-| [`NOTEBOOKLM_SETUP_COMPLETE.md`](NOTEBOOKLM_SETUP_COMPLETE.md) | NotebookLM setup | AI |
+| [`notebooklm-setup-complete-2.md`](notebooklm-setup-complete-2.md) | NotebookLM setup | AI |
 >>>>>>> .merge_file_7byXVg
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -260,10 +260,10 @@ echo "127.0.0.1 laraxot.local" | sudo tee -a /etc/hosts
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_7byXVg
-- [`AGENTS.md`](agents.md)
-- [`AI_AGENT_LESSONS_LEARNED.md`](ai_agent_lessons_learned.md)
-- [`AI_SKILLS_AND_PLUGINS_COMPLETE.md`](ai_skills_and_plugins_complete.md)
-- [`NOTEBOOKLM_SETUP_COMPLETE.md`](notebooklm_setup_complete.md)
+- [`agents-2.md`](agents.md)
+- [`ai-agent-lessons-learned-2.md`](ai-agent-lessons-learned-2.md)
+- [`ai-skills-and-plugins-complete-2.md`](ai-skills-and-plugins-complete-2.md)
+- [`notebooklm-setup-complete-2.md`](notebooklm-setup-complete-2.md)
 <<<<<<< .merge_file_8gFSEy
 <<<<<<< HEAD
 =======
@@ -274,10 +274,10 @@ echo "127.0.0.1 laraxot.local" | sudo tee -a /etc/hosts
 =======
 >>>>>>> .merge_file_7byXVg
 >>>>>>> laraxot/dev
-- [`AGENTS.md`](AGENTS.md)
-- [`AI_AGENT_LESSONS_LEARNED.md`](AI_AGENT_LESSONS_LEARNED.md)
-- [`AI_SKILLS_AND_PLUGINS_COMPLETE.md`](AI_SKILLS_AND_PLUGINS_COMPLETE.md)
-- [`NOTEBOOKLM_SETUP_COMPLETE.md`](NOTEBOOKLM_SETUP_COMPLETE.md)
+- [`agents-2.md`](agents-2.md)
+- [`ai-agent-lessons-learned-2.md`](ai-agent-lessons-learned-2.md)
+- [`ai-skills-and-plugins-complete-2.md`](ai-skills-and-plugins-complete-2.md)
+- [`notebooklm-setup-complete-2.md`](notebooklm-setup-complete-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_8gFSEy
@@ -297,12 +297,12 @@ echo "127.0.0.1 laraxot.local" | sudo tee -a /etc/hosts
 - [`kilo-configuration.md`](kilo-configuration.md)
 
 **Planning:**
-- [`PROJECT.md`](project.md)
-- [`REQUIREMENTS.md`](requirements.md)
+- [`project-2.md`](project.md)
+- [`requirements-2.md`](requirements.md)
 - [`roadmap.md`](roadmap.md)
-- [`STATE.md`](state.md)
-- [`2-1-1-PLAN.md`](2-1-1-plan.md)
-- [`2-1-CONTEXT.md`](2-1-context.md)
+- [`state-2.md`](state.md)
+- [`2-1-1-plan-2.md`](2-1-1-plan.md)
+- [`2-1-context-2.md`](2-1-context.md)
 
 **Development:**
 <<<<<<< HEAD
@@ -317,8 +317,8 @@ echo "127.0.0.1 laraxot.local" | sudo tee -a /etc/hosts
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_7byXVg
-- [`COMMIT_MESSAGE.md`](commit_message.md)
-- [`VITE_FIX_AND_EXECUTION_PLAN.md`](vite_fix_and_execution_plan.md)
+- [`commit-message-2.md`](commit-message-2.md)
+- [`vite-fix-and-execution-plan-2.md`](vite_fix_and_execution_plan.md)
 
 **Philosophy:**
 - [`philosophy.md`](philosophy.md)
@@ -334,8 +334,8 @@ echo "127.0.0.1 laraxot.local" | sudo tee -a /etc/hosts
 =======
 >>>>>>> .merge_file_7byXVg
 >>>>>>> laraxot/dev
-- [`COMMIT_MESSAGE.md`](COMMIT_MESSAGE.md)
-- [`VITE_FIX_AND_EXECUTION_PLAN.md`](VITE_FIX_AND_EXECUTION_PLAN.md)
+- [`commit-message-2.md`](commit-message-2.md)
+- [`vite-fix-and-execution-plan-2.md`](vite-fix-and-execution-plan-2.md)
 
 **Philosophy:**
 - [`philosophy.md`](philosophy.md)
@@ -364,29 +364,29 @@ echo "127.0.0.1 laraxot.local" | sudo tee -a /etc/hosts
 2. Add to this index under appropriate category
 3. Update main index: [`../index.md`](../index.md)
 <<<<<<< HEAD
-4. Update modules index: [`../../Modules/docs/DOCUMENTATION_INDEX.md`](../../Modules/docs/DOCUMENTATION_INDEX.md)
-5. Update themes index: [`../../Themes/docs/DOCUMENTATION_INDEX.md`](../../Themes/docs/DOCUMENTATION_INDEX.md)
+4. Update modules index: [`../../Modules/docs/documentation-index.md`](../../Modules/docs/documentation-index.md)
+5. Update themes index: [`../../../docs/documentation-index.md`](../../../docs/documentation-index.md)
 =======
 <<<<<<< HEAD
 <<<<<<< .merge_file_8gFSEy
 <<<<<<< HEAD
-4. Update modules index: [`../../Modules/docs/DOCUMENTATION_INDEX.md`](../../Modules/docs/DOCUMENTATION_INDEX.md)
-5. Update themes index: [`../../Themes/docs/DOCUMENTATION_INDEX.md`](../../Themes/docs/DOCUMENTATION_INDEX.md)
+4. Update modules index: [`../../Modules/docs/documentation-index.md`](../../Modules/docs/documentation-index.md)
+5. Update themes index: [`../../../docs/documentation-index.md`](../../../docs/documentation-index.md)
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_7byXVg
-4. Update modules index: [`../../Modules/docs/DOCUMENTATION_INDEX.md`](../../Modules/docs/documentation_index.md)
-5. Update themes index: [`../../Themes/docs/DOCUMENTATION_INDEX.md`](../../Themes/docs/documentation_index.md)
+4. Update modules index: [`../../Modules/docs/documentation-index.md`](../../Modules/docs/documentation-index-2.md)
+5. Update themes index: [`../../../docs/documentation-index.md`](../../Themes/docs/documentation-index-2.md)
 =======
-4. Update modules index: [`../../Modules/docs/DOCUMENTATION_INDEX.md`](../../Modules/docs/DOCUMENTATION_INDEX.md)
-5. Update themes index: [`../../Themes/docs/DOCUMENTATION_INDEX.md`](../../Themes/docs/DOCUMENTATION_INDEX.md)
+4. Update modules index: [`../../Modules/docs/documentation-index.md`](../../Modules/docs/documentation-index.md)
+5. Update themes index: [`../../../docs/documentation-index.md`](../../../docs/documentation-index.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_8gFSEy
 =======
-4. Update modules index: [`../../Modules/docs/DOCUMENTATION_INDEX.md`](../../Modules/docs/documentation_index.md)
-5. Update themes index: [`../../Themes/docs/DOCUMENTATION_INDEX.md`](../../Themes/docs/documentation_index.md)
+4. Update modules index: [`../../Modules/docs/documentation-index.md`](../../Modules/docs/documentation-index-2.md)
+5. Update themes index: [`../../../docs/documentation-index.md`](../../Themes/docs/documentation-index-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======

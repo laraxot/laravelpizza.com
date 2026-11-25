@@ -97,7 +97,7 @@ Dovrebbe mostrare la versione di Laravel installata (Laravel 12.x).
 Dopo l'installazione iniziale, procedere con:
 
 1. [Installazione Moduli](./ordine-implementazione.md) - Seguire l'ordine corretto di installazione dei moduli
-2. [Configurazione Filament](../04-tecnico/filament.md) - Configurare il pannello di amministrazione
+2. [Configurazione Filament](../../laravel/Modules/Activity/docs/filament-3.md) - Configurare il pannello di amministrazione
 3. [Configurazione Tema](../07-frontend/temi.md) - Installare e configurare il tema ThemeOne
 
 ## Collegamenti tra versioni di installazione-iniziale.md

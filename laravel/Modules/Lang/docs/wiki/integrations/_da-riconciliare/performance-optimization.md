@@ -23,7 +23,7 @@ related:
 **Dopo**: Carico solo what's needed (~2K startup)
 
 \`\`\`diff
-- 150+ rules embeddate in agents.md
+- 150+ rules embeddate in agents-3.md
 
 - 150+ rules embeddate in AGENTS.md
 + 0 rules embeddate — tutte on-demand
@@ -122,7 +122,7 @@ context-mode ctx-stats
 
 - [Global Performance Guide](../../docs/wiki/concepts/performance-optimization.md)
 - [On-Demand Pattern](./on-demand-pattern.md)
-- [QMD Setup](./qmd-setup.md)
+- [QMD Setup](../../../qmd-setup-3.md)
 
 ---
 *Status: Ottimizzato | Token risparmiati: ~48K per session*

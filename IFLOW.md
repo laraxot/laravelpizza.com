@@ -133,7 +133,7 @@ regole, bugfix, decisioni architetturali, analisi delle pagine, tutto passa da l
 
 ### Workflow Critico
 - **MAI** creare file .md in posizioni sbagliate - devono essere SOLO dentro cartelle `docs/` esistenti
-- **MAI** usare maiuscole nei nomi dei file .md (tranne README.md e CHANGELOG.md)
+- **MAI** usare maiuscole nei nomi dei file .md (tranne README.md e changelog.md)
 - **SEMPRE** usare PHPStan Level 10 dopo aver modificato un file
 - **SEMPRE** eseguire PHPMD e PHPInsights per qualità codice
 - **MAI** usare `property_exists()` su modelli Eloquent
@@ -290,7 +290,7 @@ Ogni contributo che:
 
 ### Documentazione
 - **SOLO** file `.md` dentro cartelle `docs` esistenti
-- **MAIUSCOLE** vietate nei nomi (tranne `README.md` e `CHANGELOG.md`)
+- **MAIUSCOLE** vietate nei nomi (tranne `README.md` e `changelog.md`)
 - **PRIMA** del codice: aggiornare docs
 - **DOPO** il codice: verificare e migliorare docs
 

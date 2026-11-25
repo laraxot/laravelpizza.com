@@ -135,7 +135,7 @@ openviking add --type=project \
 # 4. Store phase decisions
 openviking add --type=phase \
   --title="Phase 1: Foundation" \
-  --file=".planning/phases/001/plan.md"
+  --file="../../../../../Geo/docs/laravel-13-upgrade/plan-2.md"
 
 # 5. Execute and verify
 /gsd-execute-phase 1
@@ -222,7 +222,7 @@ openviking add --type=adr --file="_bmad/bmm/3-solutioning/architecture.md"
 /gsd-plan-phase 1
 
 # Store in OpenViking
-openviking add --type=phase-plan --file=".planning/phases/001/plan.md"
+openviking add --type=phase-plan --file="../../../../../Geo/docs/laravel-13-upgrade/plan-2.md"
 
 # PHASE 3: Implementation (Ralph Loop for autonomous work)
 # Convert BMAD PRD to Ralph format

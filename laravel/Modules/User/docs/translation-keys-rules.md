@@ -132,9 +132,9 @@ return [
 
 ## Collegamenti Correlati
 
-- [Best Practices per le Traduzioni](translation_best_practices.md)
-- [Struttura del Modulo](module_structure.md)
-- [Convenzioni di Codice](code_conventions.md)
+- [Best Practices per le Traduzioni](translation-best-practices-2.md)
+- [Struttura del Modulo](module-structure-2.md)
+- [Convenzioni di Codice](code-conventions-3.md)
 - [Best Practices per le Traduzioni](translation-best-practices.md)
 - [Struttura del Modulo](module-structure-user.md)
 - [Convenzioni di Codice](code-conventions.md)

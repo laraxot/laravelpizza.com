@@ -72,11 +72,11 @@ status: draft
 - ✅ **documentation-status.md** - Stato completo documentazione
 - ✅ **documentation-index.md** - Indice generale completo
 - ✅ **quick-start.md** - Guida rapida sviluppatori
-- ✅ **WORK-COMPLETED-.md.md** - Riepilogo aggiornamenti
+- ✅ **work-completed-4.md** - Riepilogo aggiornamenti
 
 ### 🎫 Modulo Fixcity (85% → 90%)
 - ✅ **ROADMAP_2025.md** - Aggiornato timeline Q4 2025-Q2 2026
-- ✅ **API.md** - Documentazione API completa (NEW)
+- ✅ **api-2.md** - Documentazione API completa (NEW)
 - ✅ **USER_GUIDE.md** - Guida utente cittadini completa (NEW)
 - ✅ **ADMIN_GUIDE.md** - Guida amministratori completa (NEW)
 
@@ -123,7 +123,7 @@ status: draft
 #### Modulo User
 - [ ] **2FA_GUIDE.md** - Guida implementazione 2FA
 - [ ] **SSO_GUIDE.md** - Guida integrazione SSO
-- [ ] **API.md** - Documentazione API authentication
+- [ ] **api-2.md** - Documentazione API authentication
 
 #### Modulo UI
 - [ ] **COMPONENT_API.md** - API reference componenti
@@ -131,7 +131,7 @@ status: draft
 - [ ] Aggiornare **README.md**
 
 #### Modulo Geo
-- [ ] **API.md** - Documentazione API geolocalizzazione
+- [ ] **api-2.md** - Documentazione API geolocalizzazione
 - [ ] **MAP_INTEGRATION.md** - Guida integrazione mappe
 - [ ] **GEOCODING.md** - Guida geocoding
 
@@ -144,7 +144,7 @@ status: draft
 
 #### Altri Moduli
 - [ ] Completare README.md di tutti i moduli
-- [ ] Creare API.md per moduli mancanti
+- [ ] Creare api-2.md per moduli mancanti
 - [ ] Aggiornare tutte le ROADMAP_2025.md
 
 ---
@@ -212,11 +212,11 @@ status: draft
 1. **documentation-status.md** - Stato documentazione completo
 2. **documentation-index.md** - Indice generale navigabile
 3. **quick-start.md** - Guida rapida sviluppatori
-4. **WORK-COMPLETED-.md.md** - Riepilogo aggiornamenti
+4. **work-completed-4.md** - Riepilogo aggiornamenti
 5. **project-completion-status.md** - Questo documento
 
 ### Modulo Fixcity (3 documenti)
-1. **API.md** - Documentazione API RESTful completa
+1. **api-2.md** - Documentazione API RESTful completa
 2. **USER_GUIDE.md** - Guida utente cittadini (15 sezioni)
 3. **ADMIN_GUIDE.md** - Guida amministratori (18 sezioni)
 
@@ -249,7 +249,7 @@ base_ptv_fila5/
     │   ├── Fixcity/docs/
     │   │   ├── README.md           # ✅ Completo
     │   │   ├── ROADMAP_2025.md     # ✅ Aggiornato
-    │   │   ├── API.md              # ✅ NEW
+    │   │   ├── api-2.md              # ✅ NEW
     │   │   ├── USER_GUIDE.md       # ✅ NEW
     │   │   └── ADMIN_GUIDE.md      # ✅ NEW
     │   │
@@ -258,7 +258,7 @@ base_ptv_fila5/
     │   │   ├── roadmap.md          # ✅ Aggiornato
     │   │   ├── 2FA_GUIDE.md        # 📋 TODO
     │   │   ├── SSO_GUIDE.md        # 📋 TODO
-    │   │   └── API.md              # 📋 TODO
+    │   │   └── api-2.md              # 📋 TODO
     │   │
     │   ├── UI/docs/
     │   │   ├── README.md           # 🚧 Da aggiornare
@@ -332,7 +332,7 @@ Tutti i nuovi sviluppi devono seguire le regole Laraxot:
 Prima di considerare un modulo "completo":
 - ✅ README.md aggiornato
 - ✅ ROADMAP_2025.md aggiornata
-- ✅ API.md se ha API
+- ✅ api-2.md se ha API
 - ✅ Almeno una guida utente/admin
 - ✅ PHPStan Level 9 - 0 errori
 - ✅ Test coverage > 60%

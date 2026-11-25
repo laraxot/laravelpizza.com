@@ -51,7 +51,7 @@ discussions: []
 =======
 >>>>>>> .merge_file_nZ8zBD
 **Part of**: [00-INDEX.md](00-index.md) — AI Agents Coordination  
-**Related**: [06-CINEMATIC-EFFECTS.md](06-cinematic-effects.md) — Full guide
+**Related**: [06-cinematic-effects-2.md](06-cinematic-effects.md) — Full guide
 
 ## 📋 Quick Reference
 ### CSS-only Particles (Recommended)

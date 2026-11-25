@@ -346,9 +346,9 @@ $share = SharingService::create($media, [
 ## Collegamenti Documentation
 
 ### Internal Links
-- `../CloudStorage/docs/MODULE_ANALYSIS.md` - Cloud storage integration
-- `../User/docs/MODULE_ANALYSIS.md` - User media permissions
-- `../Tenant/docs/MODULE_ANALYSIS.md` - Multi-tenant media
+- `module-analysis-2.md` - Cloud storage integration
+- `module-analysis-2.md` - User media permissions
+- `module-analysis-2.md` - Multi-tenant media
 - `./media-optimization-guide.md` - Performance tuning
 
 ### External References

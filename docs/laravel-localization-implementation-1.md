@@ -3,8 +3,8 @@
 ## Collegamenti correlati
 - [Documentazione centrale](/docs/README.md)
 - [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
-- [Regole Traduzioni Lang](/laravel/Modules/Lang/docs/TRANSLATION_KEYS_RULES.md)
-- [Componenti SVG Bandiere](/laravel/Modules/UI/docs/FLAGS_COMPONENTS.md)
+- [Regole Traduzioni Lang](/laravel/Modules/Lang/docs/translation-keys-rules-2.md)
+- [Componenti SVG Bandiere](/laravel/Modules/UI/docs/archive/flags-components-2.md)
 - [Implementazione Header](/laravel/Themes/One/docs/sections/HEADER_LANGUAGE_USER_DROPDOWN.md)
 
 ## Panoramica

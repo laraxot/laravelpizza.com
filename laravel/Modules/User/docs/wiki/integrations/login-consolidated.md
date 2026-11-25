@@ -50,9 +50,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Risoluzione Problema Login - Report Finale (Aggiornato)
@@ -106,7 +106,7 @@ Dopo un'analisi approfondita su oltre 120 widget nel progetto, è emerso che def
 
 ## login-widget-analysis
 
-*Consolidated from: `login-widget-analysis.md`*
+*Consolidated from: `login-widget-analysis-2.md`*
 
 title: "Analisi Dettagliata di LoginWidget"
 type: concept
@@ -122,9 +122,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Analisi Dettagliata di LoginWidget
@@ -197,10 +197,10 @@ related:
 8. Utilizzare `Notification::make()->danger()` per messaggi utente-friendly.
 
 ## Collegamenti
-- [WIDGETS_STRUCTURE.md](../../widgets_structure.md) — Regole di struttura per widget Filament nel modulo User.
-- [WIDGETS_STRUCTURE.md](../../widgets-structure-user.md) — Regole di struttura per widget Filament nel modulo User.
-- [filament_best_practices.md](filament_best_practices.md) — Best practices per risorse Filament.
-- [login-widget-conversion.md](login-widget-conversion.md) — Conversione del componente Livewire a LoginWidget.
+- [widgets-structure-2.md](../../widgets-structure-2.md) — Regole di struttura per widget Filament nel modulo User.
+- [widgets-structure-2.md](../../widgets-structure-user.md) — Regole di struttura per widget Filament nel modulo User.
+- [filament-best-practices-2.md](filament-best-practices-2.md) — Best practices per risorse Filament.
+- [login-widget-conversion-3.md](login-widget-conversion-3.md) — Conversione del componente Livewire a LoginWidget.
 # Analisi Dettagliata di LoginWidget
 
 **File**: `Modules/User/app/Filament/Widgets/LoginWidget.php`
@@ -271,31 +271,31 @@ related:
 8. Utilizzare `Notification::make()->danger()` per messaggi utente-friendly.
 
 ## Collegamenti
-- [WIDGETS_STRUCTURE.md](../../widgets_structure.md) — Regole di struttura per widget Filament nel modulo User.
-- [WIDGETS_STRUCTURE.md](../../widgets-structure-user.md) — Regole di struttura per widget Filament nel modulo User.
-- [filament_best_practices.md](filament_best_practices.md) — Best practices per risorse Filament.
-- [login-widget-conversion.md](login-widget-conversion.md) — Conversione del componente Livewire a LoginWidget.
+- [widgets-structure-2.md](../../widgets-structure-2.md) — Regole di struttura per widget Filament nel modulo User.
+- [widgets-structure-2.md](../../widgets-structure-user.md) — Regole di struttura per widget Filament nel modulo User.
+- [filament-best-practices-2.md](filament-best-practices-2.md) — Best practices per risorse Filament.
+- [login-widget-conversion-3.md](login-widget-conversion-3.md) — Conversione del componente Livewire a LoginWidget.
 ---
 
 ## login-widget-conversion
 
-*Consolidated from: `login-widget-conversion.md`*
+*Consolidated from: `login-widget-conversion-3.md`*
 
 module: theme
 topic: login-widget-conversion
-canonical: ../../../Themes/docs/shared-components/login-widget-conversion.md
+canonical: ../../login-widget-conversion-3.md
 related:
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/login-widget-conversion.md
+See canonical documentation: ../../login-widget-conversion-3.md
 
 ---
 
@@ -317,9 +317,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # LoginWidget Form Data Binding Fix
@@ -505,9 +505,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/login-widget-livewire-binding-fix.md
@@ -532,9 +532,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # LoginWidget Livewire wire:model Binding Fix
@@ -651,9 +651,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/login-widget-translation-audit.md
@@ -666,25 +666,25 @@ See canonical documentation: ../../../Themes/docs/shared-components/login-widget
 
 module: theme
 topic: login-widget
-canonical: ../../../Themes/docs/shared-components/login-widget-analysis.md
+canonical: ../../login-widget-analysis-2.md
 related:
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/login-widget-analysis.md
+See canonical documentation: ../../login-widget-analysis-2.md
 
 ---
 
 ## login_widget_analysis
 
-*Consolidated from: `login_widget_analysis.md`*
+*Consolidated from: `login-widget-analysis-2.md`*
 
 
 **File**: `Modules/User/app/Filament/Widgets/LoginWidget.php`  
@@ -755,15 +755,15 @@ See canonical documentation: ../../../Themes/docs/shared-components/login-widget
 8. Utilizzare `Notification::make()->danger()` per messaggi utente-friendly.
 
 ## Collegamenti
-- [WIDGETS_STRUCTURE.md](../../widgets_structure.md) — Regole di struttura per widget Filament nel modulo User.
-- [filament_best_practices.md](filament_best_practices.md) — Best practices per risorse Filament.
-- [login-widget-conversion.md](login-widget-conversion.md) — Conversione del componente Livewire a LoginWidget.
+- [widgets-structure-2.md](../../widgets-structure-2.md) — Regole di struttura per widget Filament nel modulo User.
+- [filament-best-practices-2.md](filament-best-practices-2.md) — Best practices per risorse Filament.
+- [login-widget-conversion-3.md](login-widget-conversion-3.md) — Conversione del componente Livewire a LoginWidget.
 
 ---
 
 ## login_widget_conversion
 
-*Consolidated from: `login_widget_conversion.md`*
+*Consolidated from: `login-widget-conversion-3.md`*
 
 
 ## Analisi del componente Livewire
@@ -855,8 +855,8 @@ class LoginWidget extends XotBaseWidget
 - Alcune funzionalità (es. `render()`) non sono necessarie nel widget.
 
 ## Collegamenti
-- [WIDGETS_STRUCTURE.md](../../widgets_structure.md) — Regole di struttura per i widget Filament nel modulo User.
-- [filament_best_practices.md](filament_best_practices.md) — Best practices per risorse e widget Filament.
+- [widgets-structure-2.md](../../widgets-structure-2.md) — Regole di struttura per i widget Filament nel modulo User.
+- [filament-best-practices-2.md](filament-best-practices-2.md) — Best practices per risorse e widget Filament.
 - [login-improvements.md](../../../../../Themes/TwentyOne/docs/login-improvements.md) — Analisi e miglioramenti della pagina di login nel tema TwentyOne.
 
 ---
@@ -879,9 +879,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Analisi Errore LoginWidget: Problema Logico e Soluzione
@@ -1079,9 +1079,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/loginwidget-error-analysis.md

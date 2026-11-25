@@ -25,7 +25,7 @@ Documentazione completa dell'analisi e correzione di tutti gli errori PHPStan ne
 ### 1. Modulo Cms
 - **File modificati**: 4
 - **Errori risolti**: 8
-- **Documentazione**: [Cms PHPStan Fixes](../laravel/Modules/Cms/docs/phpstan-fixes-gennaio-2025.md)
+- **Documentazione**: [Cms PHPStan Fixes](../laravel/Modules/Cms/docs/phpstan-fixes-gennaio-2.md)
 
 **Principali correzioni**:
 - Controlli `is_object()` per metodi dinamici
@@ -54,7 +54,7 @@ Documentazione completa dell'analisi e correzione di tutti gli errori PHPStan ne
 ### 4. Modulo User
 - **File modificati**: 3
 - **Errori risolti**: 8
-- **Documentazione**: [User PHPStan Fixes](../laravel/Modules/User/docs/phpstan-fixes-gennaio-2025.md)
+- **Documentazione**: [User PHPStan Fixes](../laravel/Modules/User/docs/phpstan-fixes-gennaio-4.md)
 
 **Principali correzioni**:
 - Controlli `property_exists()` e `method_exists()`

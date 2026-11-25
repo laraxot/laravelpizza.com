@@ -57,7 +57,7 @@ discussions: []
 >>>>>>> .merge_file_po0aqV
 =======
 >>>>>>> .merge_file_STn3Aa
-- [Documentazione User](../../../User/docs/header_language_avatar_implementation.md)
+- [Documentazione User](../../../User/docs/header-language-avatar-implementation-4.md)
 - [Documentazione Sezioni](./sections_structure.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 

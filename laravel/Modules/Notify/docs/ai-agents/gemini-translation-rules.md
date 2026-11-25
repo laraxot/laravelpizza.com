@@ -136,7 +136,7 @@ namespace::context.collection.element.type
 <<<<<<< .merge_file_dnRB4n
 <<<<<<< .merge_file_BAGdGc
 - [translation-management skill available](../../.opencode/skills/translation-management/skill.md)
-- [GEMINI.md originale](../../gemini.md)
+- [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -145,25 +145,25 @@ namespace::context.collection.element.type
 =======
 >>>>>>> .merge_file_p8E4xP
 - [translation-management skill available](../../.opencode/skills/translation-management/SKILL.md)
-- [gemini.md originale](../../gemini.md)
+- [gemini-2.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 =======
 <<<<<<< HEAD
 - [translation-management skill available](../../.opencode/skills/translation-management/skill.md)
-- [GEMINI.md originale](../../gemini.md)
+- [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 =======
 - [translation-management skill available](../../.opencode/skills/translation-management/SKILL.md)
-- [gemini.md originale](../../gemini.md)
+- [gemini-2.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_dnRB4n
 <<<<<<< .merge_file_BAGdGc
 =======
 - [translation-management skill available](../../.opencode/skills/translation-management/skill.md)
-- [GEMINI.md originale](../../gemini.md)
+- [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_vVXgqz
 =======
 >>>>>>> .merge_file_p8E4xP
-- [Index principale](./index.md)
+- [Index principale](../../../Lang/docs/wiki/integrations/_da-riconciliare/index-3.md)

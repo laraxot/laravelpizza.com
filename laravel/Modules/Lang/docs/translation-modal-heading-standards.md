@@ -123,7 +123,7 @@ Questa regola si applica a:
 
 - [Regole Traduzioni <nome progetto>](translation-helper-text-standards.md)
 - [Standard Helper Text](translation-helper-text-standards.md)
-- [Convenzioni Filament](filament-best-practices.md)
+- [Convenzioni Filament](filament-best-practices-2.md)
 
 *Ultimo aggiornamento: 2025-01-06*
 *Ultimo aggiornamento: 2025-01-06*

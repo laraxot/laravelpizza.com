@@ -79,7 +79,7 @@ If no matches were found for either sharded or whole patterns:
 List all loaded content variables with file counts. Example:
 
 ```
-OK Loaded {prd_content} from 5 sharded files: prd/index.md, prd/requirements.md, ...
+OK Loaded {prd_content} from 5 sharded files: prd/index.md, ../../../laravel/Modules/Notify/docs/project/requirements-2.md, ...
 OK Loaded {architecture_content} from 1 file: Architecture.md
 OK Loaded {epics_content} from selective load: epics/epic-3.md
 -- No ux_design files found

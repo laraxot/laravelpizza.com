@@ -13,7 +13,7 @@ discussions: []
 
 ## ✅ Task Completato
 
-**Obiettivo**: Migliorare `/var/www/html/ptvx/laravel/CLAUDE.md` applicando principi DRY + KISS e spezzarlo in documenti modulari.
+**Obiettivo**: Migliorare `/../../root-md-files/claude.md` applicando principi DRY + KISS e spezzarlo in documenti modulari.
 
 ## 🏗️ Struttura Creata
 

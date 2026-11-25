@@ -4,6 +4,7 @@ type: ux-design
 module: Media
 related:
   - ./livewire-inventory.md
+qmd: "livewire widget ux media"
 ---
 
 # UX

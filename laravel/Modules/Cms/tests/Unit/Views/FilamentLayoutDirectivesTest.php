@@ -8,6 +8,7 @@ declare(strict_types=1);
  *
  * Le direttive stanno dentro `@if ($panelAssets)`: un sito pubblico senza componenti Filament
  * le spegne con `:panel-assets="false"` (meno CSS/JS su telefono). L'ordine resta quello di Filament.
+ * Test puro sul testo delle Blade: non avvia l'applicazione Laravel (nessun `uses(TestCase::class)`).
  *
  * @see https://filamentphp.com/docs/5.x/introduction/installation#configuring-your-layout
  * @see Modules/Cms/docs/bmad/filament-layout-styles-scripts.md

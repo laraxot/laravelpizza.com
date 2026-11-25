@@ -9,7 +9,7 @@ issues: []
 discussions: []
 module: theme
 topic: technical
-canonical: ../../../Themes/docs/shared-components/TECHNICAL.md
+canonical: ../../../Themes/docs/shared-components/technical-2.md
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/TECHNICAL.md
+See canonical documentation: ../../../Themes/docs/shared-components/technical-2.md

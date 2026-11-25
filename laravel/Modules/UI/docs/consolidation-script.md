@@ -18,19 +18,7 @@ cd laravel/Modules/UI/docs
 rm -f advanced_form_components.md
 rm -f blade_data_handling.md
 rm -f naming_conventions.md
-<<<<<<< .merge_file_qnj05y
 rm -f phpstan_fixes_2025.md
-=======
-<<<<<<< HEAD
-rm -f phpstan_fixes_2025.md
-=======
-<<<<<<< HEAD
-rm -f phpstan_fixes_2025.md
-=======
-rm -f phpstan_fixes.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> .merge_file_PYlEWC
 ```
 
 ## File Duplicati da Eliminare
@@ -75,19 +63,7 @@ rm -f naming_conventions.md
 rm -f naming_rules.md
 
 # PHPStan
-<<<<<<< .merge_file_qnj05y
 rm -f phpstan_fixes_2025.md
-=======
-<<<<<<< HEAD
-rm -f phpstan_fixes_2025.md
-=======
-<<<<<<< HEAD
-rm -f phpstan_fixes_2025.md
-=======
-rm -f phpstan_fixes.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> .merge_file_PYlEWC
 rm -f phpstan_corrections_summary.md
 rm -f phpstan_radio_badge_fix.md
 
@@ -100,7 +76,7 @@ rm -f algolia_docsearch.md
 rm -f architecture_rules.md
 rm -f auth_pages.md
 rm -f base_components.md
-rm -f best_practices.md
+rm -f best-practices-3.md
 rm -f blocks_system.md
 rm -f chart_components.md
 rm -f components_guide.md
@@ -118,29 +94,12 @@ mv dry-kiss-analysis-[DATE].md archive/dry-kiss-analysis.md 2>/dev/null
 mv phpstan-level-10-cleanup-[DATE].md archive/phpstan-level-10-cleanup.md 2>/dev/null
 
 # Consolidare file PHPStan con date
-<<<<<<< .merge_file_qnj05y
 # phpstan-fixes-correzioni-gennaio.md → consolidare in phpstan-compliance.md
-=======
-<<<<<<< HEAD
-# phpstan-fixes-correzioni-gennaio.md → consolidare in phpstan-compliance.md
-=======
-<<<<<<< .merge_file_9lnIqJ
-# phpstan-fixes.md → consolidare in phpstan-compliance.md
-=======
-# phpstan-fixes-correzioni-gennaio.md → consolidare in phpstan-compliance.md
->>>>>>> .merge_file_qU9FsV
->>>>>>> laraxot/dev
->>>>>>> .merge_file_PYlEWC
 ```
 
 ## File con Maiuscole da Rinominare
 
 ```bash
-<<<<<<< .merge_file_qnj05y
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_PYlEWC
 # Verificare se METODI_DUPLICATI_ANALISI.md è diverso da metodi-duplicati-analisi.md
 # Se sono identici, eliminare quello con maiuscole
 if [ -f "METODI_DUPLICATI_ANALISI.md" ]; then
@@ -150,10 +109,6 @@ if [ -f "METODI_DUPLICATI_ANALISI.md" ]; then
         # Se diversi, rinominare quello con maiuscole
         mv METODI_DUPLICATI_ANALISI.md metodi-duplicati-analisi-uppercase.md
 
-<<<<<<< .merge_file_qnj05y
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_PYlEWC
 # Verificare se metodi_duplicati_analisi.md è diverso da metodi-duplicati-analisi.md
 # Se sono identici, eliminare quello con maiuscole
 if [ -f "metodi_duplicati_analisi.md" ]; then

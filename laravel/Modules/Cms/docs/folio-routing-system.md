@@ -15,7 +15,7 @@ discussions: []
 - [Indice documentazione CMS](/laravel/modules/cms/project_docs/index.md)
 - [Gestione Route Folio](/laravel/modules/cms/project_docs/gestione-route-folio.md)
 - [Frontoffice Flow](/laravel/modules/cms/project_docs/frontoffice-flow.md)
-- [Volt Folio Structure](/laravel/modules/cms/project_docs/volt_folio_structure.md)
+- [Volt Folio Structure](/laravel/modules/cms/project_docs/volt-folio-structure-2.md)
 - [Documentazione generale progetto](/project_docs/README.md)
 
 ## Panoramica

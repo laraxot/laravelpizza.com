@@ -14,7 +14,7 @@ Allineamenti locali eseguiti:
 - `docs/rules/php-post-edit-quality-gate-rule.md`
 - `docs/memory/php-quality-gate-memory.md`
 - `docs/skills/php-quality-gate-skill.md`
-- aggiornati anche `pre-edit-docs-first-*`, `testing-standards.md`, `phpstan-workflow.md`
+- aggiornati anche `pre-edit-docs-first-*`, `testing-standards.md`, `phpstan-workflow-2.md`
 - aggiornati gli indici docs di `Modules/Xot` e `Themes/Meetup`
 
 Questa regola va ora considerata parte del workflow standard di chiusura task.

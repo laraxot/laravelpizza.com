@@ -36,10 +36,10 @@ discussions: []
 - [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
 - [Documentazione sezioni](/docs/sections.md)
 - [Sezioni CMS](/laravel/Modules/Cms/docs/sections.md)
-- [Sezioni Tema One](/laravel/themes/one/docs/sections/header_language_user_dropdown.md)
-- [Implementazione Logout](/laravel/Modules/User/docs/logout_blade_implementation.md)
-- [Analisi Errore Logout](/laravel/Modules/User/docs/logout_blade_error_analysis.md)
-- [Errore Eventi Logout](/laravel/Modules/User/docs/logout_event_error.md)
+- [Sezioni Tema One](/laravel/themes/one/docs/sections/header-language-user-dropdown-3.md)
+- [Implementazione Logout](/laravel/Modules/User/docs/logout-blade-implementation-3.md)
+- [Analisi Errore Logout](/laravel/Modules/User/docs/logout-blade-error-analysis-2.md)
+- [Errore Eventi Logout](/laravel/Modules/User/docs/logout-event-error-3.md)
 
 ## Panoramica
 
@@ -281,7 +281,7 @@ Dove:
 - `flags` è la sottodirectory all'interno della cartella `svg`
 - `it`, `gb`, `fr` sono i codici ISO dei paesi
 
-Per maggiori dettagli, consultare la [documentazione sui componenti SVG delle bandiere](/laravel/modules/ui/docs/flags_components.md).
+Per maggiori dettagli, consultare la [documentazione sui componenti SVG delle bandiere](/laravel/modules/ui/docs/flags-components-2.md).
 
 ## Considerazioni Tecniche
 
@@ -293,19 +293,19 @@ Il componente Dropdown Utente deve essere compatibile con il sistema di gestione
 <<<<<<< .merge_file_GvehPI
 <<<<<<< .merge_file_URlabm
 <<<<<<< .merge_file_cOGCai
-2. Il file `logout.blade.php` deve gestire correttamente gli eventi di logout come descritto in [LOGOUT_EVENT_ERROR.md](/laravel/Modules/User/docs/logout_event_error.md)
+2. Il file `logout.blade.php` deve gestire correttamente gli eventi di logout come descritto in [logout-event-error-3.md](/laravel/Modules/User/docs/logout-event-error-3.md)
 =======
 =======
 >>>>>>> .merge_file_UrqJgY
 =======
 >>>>>>> .merge_file_Rdg07O
 <<<<<<< HEAD
-2. Il file `logout.blade.php` deve gestire correttamente gli eventi di logout come descritto in [LOGOUT_EVENT_ERROR.md](/laravel/Modules/User/docs/logout_event_error.md)
+2. Il file `logout.blade.php` deve gestire correttamente gli eventi di logout come descritto in [logout-event-error-3.md](/laravel/Modules/User/docs/logout-event-error-3.md)
 =======
 <<<<<<< HEAD
-2. Il file `logout.blade.php` deve gestire correttamente gli eventi di logout come descritto in [LOGOUT_EVENT_ERROR.md](/laravel/modules/user/docs/logout_event_error.md)
+2. Il file `logout.blade.php` deve gestire correttamente gli eventi di logout come descritto in [logout-event-error-3.md](/laravel/modules/user/docs/logout-event-error-3.md)
 =======
-2. Il file `logout.blade.php` deve gestire correttamente gli eventi di logout come descritto in [LOGOUT_EVENT_ERROR.md](/laravel/Modules/User/docs/logout_event_error.md)
+2. Il file `logout.blade.php` deve gestire correttamente gli eventi di logout come descritto in [logout-event-error-3.md](/laravel/Modules/User/docs/logout-event-error-3.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_GvehPI
@@ -333,4 +333,4 @@ L'implementazione del selettore di lingua e del dropdown utente nell'header migl
 
 Questa implementazione segue le convenzioni standard per la gestione dei contenuti statici e l'integrazione con i sistemi di autenticazione e localizzazione.
 
-Per i dettagli specifici sull'implementazione nel tema One, consultare la [documentazione del tema](/laravel/themes/one/docs/sections/header_language_user_dropdown.md).
+Per i dettagli specifici sull'implementazione nel tema One, consultare la [documentazione del tema](/laravel/themes/one/docs/sections/header-language-user-dropdown-3.md).

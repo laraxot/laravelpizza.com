@@ -1,43 +1,5 @@
 ---
 title: "Module BMAD audit — UI"
-<<<<<<< .merge_file_21BwHb
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_1uIwKE
->>>>>>> .merge_file_BDD2T4
-status: review
-updated: 2026-11-16
-module: UI
-bmad: true
-qmd: "story BMAD audit modulo UI inventario gate"
----
-
-# Story: audit BMAD del modulo UI
-
-## Acceptance
-
-- [x] Inventario source-first (2026-11-16).
-- [x] Audit + piano in `docs/bmad/`.
-- [x] Pack ECC in `docs/ecc/`.
-- [ ] Pest modulo eseguito in ambiente testing stabile.
-- [ ] Finding P0/P1 chiusi con regressione.
-
-## Riferimenti
-
-- [audit](../audit.md)
-- [piano](../piano-miglioramento.md)
-- [ECC](../../ecc/ui-ecc-audit.md)
-
-## Esito
-
-Baseline audit aggiornata. PHPStan tree `Modules` a 0. Pest e chiusura P0/P1 aperti.
-<<<<<<< .merge_file_21BwHb
-=======
-=======
->>>>>>> .merge_file_seJgFH
->>>>>>> laraxot/dev
->>>>>>> .merge_file_BDD2T4
 type: story
 status: review
 updated: 2026-11-16
@@ -72,38 +34,3 @@ Rendere verificabile lo stato di UI: vocabolario visivo condiviso (componenti, w
 ## Esito (2026-11-16)
 
 Baseline aggiornata, nessun codice applicativo modificato. Fix e Pest restano aperti (gate DB test).
-<<<<<<< .merge_file_21BwHb
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_1uIwKE
->>>>>>> .merge_file_BDD2T4
-
----
-
-## Contenuto unito da `module-bmad-audit.story.md`
-
-# Story — UI: baseline BMAD
-
-Come manutentore del modulo UI, voglio una baseline BMAD verificabile, così da poter pianificare lavoro senza confondere ipotesi, WIP e comportamento osservato.
-
-## Acceptance criteria
-
-- [ ] Confermare API pubblica e confini con riferimenti a codice reale.
-- [ ] Inventariare i flussi critici e collegarli a test Pest.
-- [ ] Misurare PHPStan/Pest nel contesto stabile del modulo.
-- [ ] Registrare dipendenze, rischi e decisioni nel modulo.
-- [ ] Aggiornare lo stato reale in `docs/sprint-status.yaml`.
-
-## Task
-
-- [ ] Revisione architettura.
-- [ ] Brainstorming con stakeholder.
-- [ ] Decomposizione epic in story più piccole.
-- [ ] Quality gate e second-brain write-back.
-<<<<<<< .merge_file_21BwHb
-=======
-=======
->>>>>>> .merge_file_seJgFH
->>>>>>> laraxot/dev
->>>>>>> .merge_file_BDD2T4

@@ -24,7 +24,7 @@ related:
 - [README modulo User](./README.md)
 - [README modulo User](./readme.md)
 - [Best Practices Componenti di Autenticazione](./auth-components-best-practices.md)
-- [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/laravel_localization_usage.md)
+- [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/laravel-localization-usage-2.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 - [Regole Traduzioni](/laravel/modules/lang/docs/translation-keys-rules-2.md)
 status: draft
@@ -32,9 +32,9 @@ status: draft
 
 ---
 
-- [Utilizzo di Laravel Localization](/laravel/modules/lang/docs/laravel_localization_usage.md)
-- [Regole Traduzioni](/laravel/modules/lang/docs/translation-keys-rules.md)
-- [Componenti Filament](/docs/rules/filament-components.md)
+- [Utilizzo di Laravel Localization](/laravel/modules/lang/docs/laravel-localization-usage-2.md)
+- [Regole Traduzioni](/laravel/Modules/Lang/docs/translation-keys-rules-2.md)
+- [Componenti Filament](/../../Cms/docs/filament-components-2.md)
 
 ## Panoramica
 

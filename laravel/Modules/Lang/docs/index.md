@@ -10,7 +10,17 @@ updated: 2026-07-14
 qmd: "filament4 migration"
 related:
   - "./italian-text-refined-audit-report.md"
+status: draft
 ---
+updated: 2026-10-14
+qmd: "filament4 migration"
+related:
+  - "./italian-text-refined-audit-report.md"
+status: superseded
+superseded_by: 00-INDEX.md
+---
+
+> Superseded dal 2026-10-20: l'indice canonico e' [00-INDEX.md](./00-INDEX.md). Contenuto conservato per storia.
 # 📚 **Indice Documentazione Modulo Lang - Laraxot**
 
 ## 🎯 **Panoramica**
@@ -27,183 +37,62 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 3. [EXAMPLES.md](examples.md) - Esempi pratici e casi d'uso
 
 ### **Per Amministratori**
-1. [best_practices.md](best_practices.md) - Best practices e linee guida
-<<<<<<< HEAD
-<<<<<<< .merge_file_XQJefR
-<<<<<<< .merge_file_3TzivT
-<<<<<<< HEAD
-2. [TROUBLESHOOTING.md](troubleshooting.md) - Guida troubleshooting
-=======
-<<<<<<< HEAD
-2. [troubleshooting.md](troubleshooting.md) - Guida troubleshooting
-=======
-2. [TROUBLESHOOTING.md](troubleshooting.md) - Guida troubleshooting
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-2. [troubleshooting.md](troubleshooting.md) - Guida troubleshooting
-=======
-=======
->>>>>>> .merge_file_5pTv9W
-2. [TROUBLESHOOTING.md](troubleshooting.md) - Guida troubleshooting
-=======
-<<<<<<< HEAD
-2. [troubleshooting.md](troubleshooting.md) - Guida troubleshooting
-=======
-2. [TROUBLESHOOTING.md](troubleshooting.md) - Guida troubleshooting
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_XQJefR
->>>>>>> .merge_file_VAt2al
-=======
->>>>>>> .merge_file_5pTv9W
->>>>>>> laraxot/dev
-3. [config/lang.php](../config/lang.php) - Configurazione e ottimizzazioni
-
-### **Per Integratori**
-1. [API_REFERENCE.md](api_reference.md) - Riferimento API completo
-2. [EXAMPLES.md](examples.md) - Esempi di integrazione
-<<<<<<< HEAD
-<<<<<<< .merge_file_XQJefR
-<<<<<<< .merge_file_3TzivT
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_VAt2al
-=======
->>>>>>> .merge_file_5pTv9W
-=======
-3. [BEST_PRACTICES.md](best_practices.md) - Pattern di implementazione
-
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_XQJefR
-<<<<<<< .merge_file_3TzivT
-=======
-3. [BEST_PRACTICES.md](best_practices.md) - Pattern di implementazione
-
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_VAt2al
-=======
->>>>>>> .merge_file_5pTv9W
-3. [best_practices.md](best_practices.md) - Pattern di implementazione
-1. [README.md](README.md) - Documentazione principale e panoramica
-2. [config/lang.php](../config/lang.php) - Configurazione centralizzata
-3. [EXAMPLES.md](examples.md) - Esempi pratici e casi d'uso
-
-### **Per Amministratori**
-<<<<<<< HEAD
-<<<<<<< .merge_file_XQJefR
-<<<<<<< .merge_file_3TzivT
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_VAt2al
-=======
-1. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Best practices e linee guida
-
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_3TzivT
-=======
->>>>>>> .merge_file_5pTv9W
-=======
-1. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Best practices e linee guida
-
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_XQJefR
-=======
->>>>>>> .merge_file_VAt2al
-=======
->>>>>>> .merge_file_5pTv9W
-1. [best_practices.md](best_practices.md) - Best practices e linee guida
+1. [best-practices-3.md](best-practices-3.md) - Best practices e linee guida
+1. [best-practices-3.md](best-practices.md) - Best practices e linee guida
 2. [TROUBLESHOOTING.md](troubleshooting.md) - Guida troubleshooting
 3. [config/lang.php](../config/lang.php) - Configurazione e ottimizzazioni
 
 ### **Per Integratori**
 1. [API_REFERENCE.md](api_reference.md) - Riferimento API completo
 2. [EXAMPLES.md](examples.md) - Esempi di integrazione
-<<<<<<< HEAD
-<<<<<<< .merge_file_XQJefR
-<<<<<<< .merge_file_3TzivT
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_VAt2al
-=======
->>>>>>> .merge_file_5pTv9W
-=======
-3. [BEST_PRACTICES.md](best_practices.md) - Pattern di implementazione
-
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_XQJefR
-<<<<<<< .merge_file_3TzivT
-=======
-3. [BEST_PRACTICES.md](best_practices.md) - Pattern di implementazione
-
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_VAt2al
-=======
->>>>>>> .merge_file_5pTv9W
-3. [best_practices.md](best_practices.md) - Pattern di implementazione
+3. [best-practices-3.md](best-practices-3.md) - Pattern di implementazione
+1. [API_REFERENCE.md](api-reference.md) - Riferimento API completo
+2. [EXAMPLES.md](examples.md) - Esempi di integrazione
+3. [best-practices-3.md](best-practices.md) - Pattern di implementazione
 1. [README.md](README.md) - Documentazione principale e panoramica
 2. [config/lang.php](../config/lang.php) - Configurazione centralizzata
 3. [EXAMPLES.md](examples.md) - Esempi pratici e casi d'uso
 
 ### **Per Amministratori**
-<<<<<<< HEAD
-<<<<<<< .merge_file_XQJefR
-<<<<<<< .merge_file_3TzivT
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_VAt2al
-=======
-1. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Best practices e linee guida
+1. [best-practices-3.md](best-practices-3.md) - Best practices e linee guida
+1. [best-practices-3.md](best-practices.md) - Best practices e linee guida
+2. [TROUBLESHOOTING.md](troubleshooting.md) - Guida troubleshooting
+3. [config/lang.php](../config/lang.php) - Configurazione e ottimizzazioni
 
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_3TzivT
-=======
->>>>>>> .merge_file_5pTv9W
-=======
-1. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Best practices e linee guida
+### **Per Integratori**
+1. [API_REFERENCE.md](api_reference.md) - Riferimento API completo
+2. [EXAMPLES.md](examples.md) - Esempi di integrazione
+3. [best-practices-3.md](best-practices-3.md) - Pattern di implementazione
+1. [API_REFERENCE.md](api-reference.md) - Riferimento API completo
+2. [EXAMPLES.md](examples.md) - Esempi di integrazione
+3. [best-practices-3.md](best-practices.md) - Pattern di implementazione
+1. [README.md](README.md) - Documentazione principale e panoramica
+2. [config/lang.php](../config/lang.php) - Configurazione centralizzata
+3. [EXAMPLES.md](examples.md) - Esempi pratici e casi d'uso
 
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_XQJefR
-=======
->>>>>>> .merge_file_VAt2al
-=======
->>>>>>> .merge_file_5pTv9W
-1. [best_practices.md](best_practices.md) - Best practices e linee guida
+### **Per Amministratori**
+1. [best-practices-3.md](best-practices-3.md) - Best practices e linee guida
+1. [best-practices-3.md](best-practices.md) - Best practices e linee guida
 2. [TROUBLESHOOTING.md](troubleshooting.md) - Guida troubleshooting
 3. [config/lang.php](../config/lang.php) - Configurazione e ottimizzazioni
 
 ### **Per Integratori**
 1. [API_REFERENCE.md](API_REFERENCE.md) - Riferimento API completo
 2. [EXAMPLES.md](examples.md) - Esempi di integrazione
-<<<<<<< HEAD
-<<<<<<< .merge_file_XQJefR
-<<<<<<< .merge_file_3TzivT
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_5pTv9W
-=======
-3. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Pattern di implementazione
-
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_XQJefR
-=======
->>>>>>> .merge_file_VAt2al
-=======
-3. [BEST_PRACTICES.md](BEST_PRACTICES.md) - Pattern di implementazione
-
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_5pTv9W
-3. [best_practices.md](best_practices.md) - Pattern di implementazione
+3. [best-practices-3.md](best-practices-3.md) - Pattern di implementazione
+1. [API_REFERENCE.md](api-reference.md) - Riferimento API completo
+2. [EXAMPLES.md](examples.md) - Esempi di integrazione
+3. [best-practices-3.md](best-practices.md) - Pattern di implementazione
 
 ---
 
 ## 📖 **Documentazione per Argomento**
 
 ### **🏗️ Architettura e Design**
-- **Principi Fondamentali**: [best_practices.md](best_practices.md#principi-architetturali)
+- **Principi Fondamentali**: [best-practices-3.md](best-practices-3.md#principi-architetturali)
 - **Struttura Modulo**: [README.md](README.md#architettura)
+- **Principi Fondamentali**: [best-practices-3.md](best-practices.md)
+- **Struttura Modulo**: [README.md](README.md)
 - **Configurazione**: [config/lang.php](../config/lang.php)
 
 ### **🔧 Implementazione e Sviluppo**
@@ -218,89 +107,65 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 - **Componenti Automatici**: [EXAMPLES.md](examples.md#integrazione-filament)
 - **Actions Personalizzate**: [EXAMPLES.md](examples.md#actions-personalizzate)
 - **Resources**: [EXAMPLES.md](examples.md#resource-base)
-- **Best Practices**: [best_practices.md](best_practices.md#integrazione-filament)
+- **Best Practices**: [best-practices-3.md](best-practices-3.md#integrazione-filament)
 
 ### **📁 Struttura File Traduzioni**
-- **Organizzazione**: [best_practices.md](best_practices.md#struttura-file-traduzioni)
-- **Convenzioni**: [best_practices.md](best_practices.md#convenzioni-naming)
+- **Organizzazione**: [best-practices-3.md](best-practices-3.md#struttura-file-traduzioni)
+- **Convenzioni**: [best-practices-3.md](best-practices-3.md#convenzioni-naming)
 - **Esempi Completi**: [EXAMPLES.md](examples.md#struttura-file-traduzioni)
-- **Validazione**: [best_practices.md](best_practices.md#validazione-e-controlli)
+- **Validazione**: [best-practices-3.md](best-practices-3.md#validazione-e-controlli)
 
 ### **🔒 Sicurezza e Validazione**
-<<<<<<< HEAD
-<<<<<<< .merge_file_XQJefR
-<<<<<<< .merge_file_3TzivT
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_VAt2al
-=======
->>>>>>> .merge_file_5pTv9W
-=======
-- **Validazione File**: [BEST_PRACTICES.md](BEST_PRACTICES.md#sicurezza-e-validazione)
+- **Validazione File**: [best-practices-3.md](best-practices-3.md#sicurezza-e-validazione)
+- **Best Practices**: [best-practices-3.md](best-practices.md)
 
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_XQJefR
-<<<<<<< .merge_file_3TzivT
-=======
-- **Validazione File**: [BEST_PRACTICES.md](BEST_PRACTICES.md#sicurezza-e-validazione)
+### **📁 Struttura File Traduzioni**
+- **Organizzazione**: [best-practices-3.md](best-practices.md)
+- **Convenzioni**: [best-practices-3.md](best-practices.md)
+- **Esempi Completi**: [EXAMPLES.md](examples.md#struttura-file-traduzioni)
+- **Validazione**: [best-practices-3.md](best-practices.md)
 
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_VAt2al
-=======
->>>>>>> .merge_file_5pTv9W
-- **Validazione File**: [best_practices.md](best_practices.md#sicurezza-e-validazione)
+### **🔒 Sicurezza e Validazione**
+- **Validazione File**: [best-practices-3.md](best-practices.md)
 - **Controlli Integrità**: [TROUBLESHOOTING.md](troubleshooting.md#problemi-di-sicurezza)
 - **Rate Limiting**: [TROUBLESHOOTING.md](troubleshooting.md#rate-limiting)
 
 ### **🚀 Performance e Ottimizzazione**
-<<<<<<< HEAD
-<<<<<<< .merge_file_XQJefR
-<<<<<<< .merge_file_3TzivT
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_VAt2al
-=======
-=======
->>>>>>> .merge_file_5pTv9W
-- **Cache Strategy**: [BEST_PRACTICES.md](BEST_PRACTICES.md#performance-e-ottimizzazione)
-- **Lazy Loading**: [BEST_PRACTICES.md](BEST_PRACTICES.md#lazy-loading)
-- **Memory Management**: [BEST_PRACTICES.md](BEST_PRACTICES.md#memory-management)
-
-<<<<<<< .merge_file_XQJefR
-<<<<<<< .merge_file_3TzivT
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_VAt2al
-=======
->>>>>>> .merge_file_5pTv9W
->>>>>>> laraxot/dev
-- **Cache Strategy**: [best_practices.md](best_practices.md#performance-e-ottimizzazione)
-- **Lazy Loading**: [best_practices.md](best_practices.md#lazy-loading)
-- **Memory Management**: [best_practices.md](best_practices.md#memory-management)
+- **Cache Strategy**: [best-practices-3.md](best-practices-3.md#performance-e-ottimizzazione)
+- **Lazy Loading**: [best-practices-3.md](best-practices-3.md#lazy-loading)
+- **Memory Management**: [best-practices-3.md](best-practices-3.md#memory-management)
+- **Cache Strategy**: [best-practices-3.md](best-practices.md)
+- **Lazy Loading**: [best-practices-3.md](best-practices.md)
+- **Memory Management**: [best-practices-3.md](best-practices.md)
 - **Benchmark**: [TROUBLESHOOTING.md](troubleshooting.md#metriche-performance)
 
 ### **🧪 Testing e Qualità**
 - **Test Unitari**: [EXAMPLES.md](examples.md#testing)
 - **Test Feature**: [EXAMPLES.md](examples.md#test-feature)
-- **PHPStan Compliance**: [best_practices.md](best_practices.md#testing-e-qualità)
-- **Validazione Automatica**: [best_practices.md](best_practices.md#validazione-automatica)
+- **PHPStan Compliance**: [best-practices-3.md](best-practices-3.md#testing-e-qualità)
+- **Validazione Automatica**: [best-practices-3.md](best-practices-3.md#validazione-automatica)
 
 ### **🔄 Manutenzione e Aggiornamenti**
-- **Versioning**: [best_practices.md](best_practices.md#versioning-traduzioni)
-- **Migrazione**: [best_practices.md](best_practices.md#migrazione-versioni)
-- **Rollback**: [best_practices.md](best_practices.md#rollback-e-recovery)
+- **Versioning**: [best-practices-3.md](best-practices-3.md#versioning-traduzioni)
+- **Migrazione**: [best-practices-3.md](best-practices-3.md#migrazione-versioni)
+- **Rollback**: [best-practices-3.md](best-practices-3.md#rollback-e-recovery)
 - **Backup**: [TROUBLESHOOTING.md](troubleshooting.md#emergenze-e-rollback)
 - **Repository Composer Path**: [bugfix/composer-path-repository-priority.md](bugfix/composer-path-repository-priority.md)
 - **Repository Composer Path**: [bugfix/composer-path-repository-priority.md](bugfix/composer-path-repository-priority.md)
 - **Repository Composer Path**: [bugfix/composer-path-repository-priority.md](bugfix/composer-path-repository-priority.md)
 - **Repository Composer Path**: [bugfix/composer-path-repository-priority.md](bugfix/composer-path-repository-priority.md)
+- **PHPStan Compliance**: [best-practices-3.md](best-practices.md)
+- **Validazione Automatica**: [best-practices-3.md](best-practices.md)
+
+### **🔄 Manutenzione e Aggiornamenti**
+- **Versioning**: [best-practices-3.md](best-practices.md)
+- **Migrazione**: [best-practices-3.md](best-practices.md)
+- **Rollback**: [best-practices-3.md](best-practices.md)
+- **Backup**: [TROUBLESHOOTING.md](troubleshooting.md#emergenze-e-rollback)
+- **Repository Composer Path**: [bugfix/composer-path-repository-priority.md](bugfix/composer-path-repository-priority.md) _(target mancante, verificato 2026-10-14)_
+- **Repository Composer Path**: [bugfix/composer-path-repository-priority.md](bugfix/composer-path-repository-priority.md) _(target mancante, verificato 2026-10-14)_
+- **Repository Composer Path**: [bugfix/composer-path-repository-priority.md](bugfix/composer-path-repository-priority.md) _(target mancante, verificato 2026-10-14)_
+- **Repository Composer Path**: [bugfix/composer-path-repository-priority.md](bugfix/composer-path-repository-priority.md) _(target mancante, verificato 2026-10-14)_
 
 ---
 
@@ -333,35 +198,20 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 - Validazione e controllo qualità
 
 **Documenti da Leggere**
-1. [best_practices.md](best_practices.md) - Tutte le sezioni
+1. [best-practices-3.md](best-practices-3.md) - Tutte le sezioni
 2. [EXAMPLES.md](examples.md) - Integrazione Filament e Testing
 3. [TROUBLESHOOTING.md](troubleshooting.md) - Problemi comuni
-<<<<<<< HEAD
-<<<<<<< .merge_file_XQJefR
-<<<<<<< .merge_file_3TzivT
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_VAt2al
-=======
->>>>>>> .merge_file_5pTv9W
-=======
-1. [BEST_PRACTICES.md](best_practices.md) - Tutte le sezioni
-
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_XQJefR
-<<<<<<< .merge_file_3TzivT
-=======
-1. [BEST_PRACTICES.md](best_practices.md) - Tutte le sezioni
-
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_VAt2al
-=======
->>>>>>> .merge_file_5pTv9W
-1. [best_practices.md](best_practices.md) - Tutte le sezioni
+1. [best-practices-3.md](best-practices-3.md) - Tutte le sezioni
 2. [EXAMPLES.md](examples.md) - Integrazione Filament e Testing
 3. [TROUBLESHOOTING.md](troubleshooting.md) - Problemi comuni
-1. [best_practices.md](best_practices.md) - Tutte le sezioni
+1. [best-practices-3.md](best-practices-3.md) - Tutte le sezioni
+1. [best-practices-3.md](best-practices.md) - Tutte le sezioni
+2. [EXAMPLES.md](examples.md) - Integrazione Filament e Testing
+3. [TROUBLESHOOTING.md](troubleshooting.md) - Problemi comuni
+1. [best-practices-3.md](best-practices.md) - Tutte le sezioni
+2. [EXAMPLES.md](examples.md) - Integrazione Filament e Testing
+3. [TROUBLESHOOTING.md](troubleshooting.md) - Problemi comuni
+1. [best-practices-3.md](best-practices.md) - Tutte le sezioni
 2. [EXAMPLES.md](examples.md) - Integrazione Filament e Testing
 3. [TROUBLESHOOTING.md](troubleshooting.md) - Problemi comuni
 
@@ -378,35 +228,21 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 
 **Documenti da Leggere**
 1. [API_REFERENCE.md](API_REFERENCE.md) - Tutte le sezioni
-2. [best_practices.md](best_practices.md) - Pattern avanzati
+2. [best-practices-3.md](best-practices-3.md) - Pattern avanzati
 3. [TROUBLESHOOTING.md](troubleshooting.md) - Problemi complessi
 1. [API_REFERENCE.md](api_reference.md) - Tutte le sezioni
-2. [best_practices.md](best_practices.md) - Pattern avanzati
+2. [best-practices-3.md](best-practices-3.md) - Pattern avanzati
 3. [TROUBLESHOOTING.md](troubleshooting.md) - Problemi complessi
 1. [API_REFERENCE.md](api_reference.md) - Tutte le sezioni
-<<<<<<< HEAD
-<<<<<<< .merge_file_XQJefR
-<<<<<<< .merge_file_3TzivT
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_VAt2al
-=======
->>>>>>> .merge_file_5pTv9W
-=======
-2. [BEST_PRACTICES.md](best_practices.md) - Pattern avanzati
-
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_XQJefR
-<<<<<<< .merge_file_3TzivT
-=======
-2. [BEST_PRACTICES.md](best_practices.md) - Pattern avanzati
-
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_VAt2al
-=======
->>>>>>> .merge_file_5pTv9W
-2. [best_practices.md](best_practices.md) - Pattern avanzati
+2. [best-practices-3.md](best-practices-3.md) - Pattern avanzati
+1. [API_REFERENCE.md](api-reference.md) - Tutte le sezioni
+2. [best-practices-3.md](best-practices.md) - Pattern avanzati
+3. [TROUBLESHOOTING.md](troubleshooting.md) - Problemi complessi
+1. [API_REFERENCE.md](api-reference.md) - Tutte le sezioni
+2. [best-practices-3.md](best-practices.md) - Pattern avanzati
+3. [TROUBLESHOOTING.md](troubleshooting.md) - Problemi complessi
+1. [API_REFERENCE.md](api-reference.md) - Tutte le sezioni
+2. [best-practices-3.md](best-practices.md) - Pattern avanzati
 3. [TROUBLESHOOTING.md](troubleshooting.md) - Problemi complessi
 
 **Obiettivi**
@@ -419,23 +255,8 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 ## 🔍 **Ricerca per Parole Chiave**
 
 ### **Localizzazione**
-<<<<<<< HEAD
-<<<<<<< .merge_file_XQJefR
-<<<<<<< .merge_file_3TzivT
-<<<<<<< HEAD
-=======
-- **File PHP**: [BEST_PRACTICES.md](BEST_PRACTICES.md#sintassi-file-php)
-
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_VAt2al
-=======
->>>>>>> .merge_file_5pTv9W
-=======
-- **File PHP**: [BEST_PRACTICES.md](BEST_PRACTICES.md#sintassi-file-php)
-
->>>>>>> laraxot/dev
-- **File PHP**: [best_practices.md](best_practices.md#sintassi-file-php)
+- **File PHP**: [best-practices-3.md](best-practices-3.md#sintassi-file-php)
+- **File PHP**: [best-practices-3.md](best-practices.md)
 - **File JSON**: [README.md](README.md#file-php-vs-json)
 - **Fallback**: [TROUBLESHOOTING.md](troubleshooting.md#fallback-traduzioni)
 - **Pluralizzazione**: [EXAMPLES.md](examples.md#gestione-pluralizzazione)
@@ -444,78 +265,38 @@ Questo indice fornisce una mappa completa della documentazione del modulo Lang, 
 - **Componenti**: [EXAMPLES.md](examples.md#componenti-automatici)
 - **Actions**: [EXAMPLES.md](examples.md#actions-personalizzate)
 - **Resources**: [EXAMPLES.md](examples.md#resource-base)
-<<<<<<< HEAD
-<<<<<<< .merge_file_XQJefR
-<<<<<<< .merge_file_3TzivT
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_VAt2al
-=======
-=======
->>>>>>> .merge_file_5pTv9W
-- **Integrazione**: [BEST_PRACTICES.md](BEST_PRACTICES.md#integrazione-filament)
+- **Integrazione**: [best-practices-3.md](best-practices-3.md#integrazione-filament)
 
 ### **Performance**
-- **Cache**: [BEST_PRACTICES.md](BEST_PRACTICES.md#cache-strategy)
-- **Lazy Loading**: [BEST_PRACTICES.md](BEST_PRACTICES.md#lazy-loading)
-- **Memory**: [BEST_PRACTICES.md](BEST_PRACTICES.md#memory-management)
+- **Cache**: [best-practices-3.md](best-practices-3.md#cache-strategy)
+- **Lazy Loading**: [best-practices-3.md](best-practices-3.md#lazy-loading)
+- **Memory**: [best-practices-3.md](best-practices-3.md#memory-management)
 - **Benchmark**: [TROUBLESHOOTING.md](troubleshooting.md#benchmark-completo)
 
 ### **Validazione**
-- **Sintassi**: [BEST_PRACTICES.md](BEST_PRACTICES.md#sintassi-valida)
-- **Struttura**: [BEST_PRACTICES.md](BEST_PRACTICES.md#struttura-gerarchica)
-
-<<<<<<< .merge_file_XQJefR
-<<<<<<< .merge_file_3TzivT
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_VAt2al
-=======
->>>>>>> .merge_file_5pTv9W
->>>>>>> laraxot/dev
-- **Integrazione**: [best_practices.md](best_practices.md#integrazione-filament)
+- **Sintassi**: [best-practices-3.md](best-practices-3.md#sintassi-valida)
+- **Struttura**: [best-practices-3.md](best-practices-3.md#struttura-gerarchica)
+- **Integrazione**: [best-practices-3.md](best-practices.md)
 
 ### **Performance**
-- **Cache**: [best_practices.md](best_practices.md#cache-strategy)
-- **Lazy Loading**: [best_practices.md](best_practices.md#lazy-loading)
-- **Memory**: [best_practices.md](best_practices.md#memory-management)
+- **Cache**: [best-practices-3.md](best-practices.md)
+- **Lazy Loading**: [best-practices-3.md](best-practices.md)
+- **Memory**: [best-practices-3.md](best-practices.md)
 - **Benchmark**: [TROUBLESHOOTING.md](troubleshooting.md#benchmark-completo)
 
 ### **Validazione**
-- **Sintassi**: [best_practices.md](best_practices.md#sintassi-valida)
-- **Struttura**: [best_practices.md](best_practices.md#struttura-gerarchica)
+- **Sintassi**: [best-practices-3.md](best-practices.md)
+- **Struttura**: [best-practices-3.md](best-practices.md)
 - **Auto-fix**: [TROUBLESHOOTING.md](troubleshooting.md#fix-automatici)
 - **Report**: [TROUBLESHOOTING.md](troubleshooting.md#report-qualità)
 
 ### **Testing**
 - **Unit Test**: [EXAMPLES.md](examples.md#test-unitari)
 - **Feature Test**: [EXAMPLES.md](examples.md#test-feature)
-<<<<<<< HEAD
-<<<<<<< .merge_file_XQJefR
-<<<<<<< .merge_file_3TzivT
-<<<<<<< HEAD
-=======
-- **PHPStan**: [BEST_PRACTICES.md](BEST_PRACTICES.md#phpstan-compliance)
-- **Validazione**: [BEST_PRACTICES.md](BEST_PRACTICES.md#validazione-automatica)
-
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_VAt2al
-=======
->>>>>>> .merge_file_5pTv9W
-=======
-- **PHPStan**: [BEST_PRACTICES.md](BEST_PRACTICES.md#phpstan-compliance)
-- **Validazione**: [BEST_PRACTICES.md](BEST_PRACTICES.md#validazione-automatica)
-
->>>>>>> laraxot/dev
-- **PHPStan**: [best_practices.md](best_practices.md#phpstan-compliance)
-- **Validazione**: [best_practices.md](best_practices.md#validazione-automatica)
+- **PHPStan**: [best-practices-3.md](best-practices-3.md#phpstan-compliance)
+- **Validazione**: [best-practices-3.md](best-practices-3.md#validazione-automatica)
+- **PHPStan**: [best-practices-3.md](best-practices.md)
+- **Validazione**: [best-practices-3.md](best-practices.md)
 
 ---
 
@@ -606,7 +387,8 @@ php artisan lang:debug [--log-missing] [--log-performance]
 ### **Strumenti e Risorse**
 - [Laravel IDE Helper](https://github.com/barryvdh/laravel-ide-helper) - Autocompletamento IDE
 - [ide-helper-sushi-pattern](./ide-helper-sushi-pattern.md) - TranslationFile + analisi statica (wave 2026-07-15)
-- [Xot — ide-helper-philosophy](../Xot/docs/ide-helper-philosophy.md) - Filosofia globale PHPDoc model
+- [Xot: ide-helper-philosophy](../Xot/docs/ide-helper-philosophy.md) - Filosofia globale PHPDoc model
+- [Xot: ide-helper-philosophy](../Xot/docs/ide-helper-philosophy.md) _(target mancante, verificato 2026-10-14)_ - Filosofia globale PHPDoc model
 - [Laravel Debugbar](https://github.com/barryvdh/laravel-debugbar) - Debug e profiling
 - [Laravel Telescope](https://laravel.com/project_docs/telescope) - Monitoring applicazione
 

@@ -4,6 +4,7 @@ type: pointer
 module: Media
 related:
   - ./livewire-inventory.md
+qmd: "livewire widget conversion conversione media"
 ---
 
 # Media — canone

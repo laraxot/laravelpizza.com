@@ -113,7 +113,7 @@ posto del salvataggio mai scritto, quindi non sono stati solo tolti (sarebbe rim
   `Clusters/Passport/Resources/OauthAuthCodeResource/Pages/` (config tool in namespace applicativo).
 - Artefatti di lavoro in `app/Filament`/`app/Http/Livewire`/`resources/views`:
   `.wip`, `.no`, `.test`, `.corrected`, `@components.json` (alias morti, vedi 10.3/10.4).
-- `app/Filament/Widgets/Auth/BaseAuthWidget.php.no`, `links.md`, `LogoutWidget.php.corrected`.
+- `app/Filament/Widgets/Auth/BaseAuthWidget.php.no`, `links-2.md`, `LogoutWidget.php.corrected`.
 
 - (1) Rimuovere tutti i residui sopra (i file `.wip/.no/.test` attivi sono già re-connaturati
   in test; `_components.json` è cache alias morta). **Scelto.**

@@ -431,7 +431,7 @@ Questa è la **terza implementazione** della giornata:
 
 ### Modulo User
 - [Setup Super Admin - Guida Dettagliata](../Modules/User/docs/setup-super-admin.md)
-- [Roles & Permissions](../Modules/User/docs/roles-permissions.md)
+- [Roles & Permissions](../../User/docs/roles-permissions-2.md)
 - [User Module README](../Modules/User/docs/README.md)
 
 ### Root Progetto

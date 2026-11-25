@@ -1,6 +1,6 @@
 # Utilizzo dei Componenti Filament in il progetto
 > **Collegamenti correlati**
-> - [FILAMENT_COMPONENTS.md tema One](../../../../themes/one/project_docs/filament_components.md)
+> - [filament-components-2.md tema One](../../../../themes/one/project_docs/filament_components.md)
 
 # Utilizzo dei Componenti Filament 
 

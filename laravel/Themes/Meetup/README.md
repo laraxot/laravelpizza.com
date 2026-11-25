@@ -167,13 +167,13 @@ Vedi [Configurazione MCP UI/UX](../../modules/meetup/docs/ui-ux-mcp-configuratio
 - Documenta componenti custom
 - Segui pattern mobile-first
 
-Vedi [Best Practices Tailwind](../../modules/meetup/docs/tailwind-best-practices.md).
+Vedi [Best Practices Tailwind](../../Modules/Notify/docs/tailwind-best-practices-2.md).
 
 ## 🔗 Collegamenti
 
 - [Documentazione Modulo Meetup](../../modules/meetup/docs/readme.md)
 - [Configurazione UI/UX MCP](../../modules/meetup/docs/ui-ux-mcp-configuration.md)
-- [Best Practices Tailwind](../../modules/meetup/docs/tailwind-best-practices.md)
+- [Best Practices Tailwind](../../Modules/Notify/docs/tailwind-best-practices-2.md)
 - [README HTML](./resources/html/readme.md)
 
 ## 📝 Note

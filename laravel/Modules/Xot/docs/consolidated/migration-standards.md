@@ -26,7 +26,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /**
  * Migrazione per [scopo della migrazione].
  *
- * @see docs/standards/migrations.md
+ * @see ../../../Lang/docs/migrations-3.md
  */
 return new class extends XotBaseMigration
 {
@@ -136,9 +136,9 @@ if (! $this->hasIndex('nome_indice')) {
 
 Ogni modulo può avere best practices specifiche per le migrazioni. Consultare la documentazione del modulo per ulteriori dettagli:
 
-- [Best Practices per le Migrazioni nel Modulo Patient](/laravel/Modules/Patient/project_docs/MIGRATION_BEST_PRACTICES.md)
-- [Best Practices per le Migrazioni nel Modulo Tenant](/laravel/Modules/Tenant/project_docs/MIGRATION_BEST_PRACTICES.md)
-- [Best Practices per le Migrazioni nel Modulo User](/laravel/Modules/User/project_docs/MIGRATION_BEST_PRACTICES.md)
+- [Best Practices per le Migrazioni nel Modulo Patient](/laravel/Modules/Lang/docs/migration-best-practices-3.md)
+- [Best Practices per le Migrazioni nel Modulo Tenant](/laravel/Modules/Lang/docs/migration-best-practices-3.md)
+- [Best Practices per le Migrazioni nel Modulo User](/laravel/Modules/Lang/docs/migration-best-practices-3.md)
 
 ## Errori Comuni e Come Evitarli
 

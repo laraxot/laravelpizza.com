@@ -42,9 +42,9 @@ Suggested cleanup order:
 
 ---
 
-<!-- Contenuto unito da redundancy-audit-.md (rimozione date dai nomi file, issue #64) -->
+<!-- Contenuto unito da redundancy-audit-2.md (rimozione date dai nomi file, issue #64) -->
 
-<!-- recovery from broken basename `redundancy-audit-.md` after docs-guardian mass rename -->
+<!-- recovery from broken basename `redundancy-audit-2.md` after docs-guardian mass rename -->
 
 Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file evita nomi `*-.md`.
 
@@ -61,7 +61,7 @@ High-risk findings:
 - Duplicate factory path: `Database/factories/DeviceProfileFactory.php` and `database/factories/DeviceProfileFactory.php`.
 - Several migrations are byte-identical or near-identical with different timestamps, including teams, devices, team_user, tenant_user, roles, permissions, and model_has_roles.
 - UI components are byte-identical to `Modules/UI`, including button, modal, input, checkbox, badge, link, nav-link, text-link, placeholder, layout, and marketing components.
-- Docs include case-only duplicates such as `QUERY_OPTIMIZATION_ANALYSIS.md` and `query_optimization_analysis.md`.
+- Docs include case-only duplicates such as `query-optimization-analysis-3.md` and `query-optimization-analysis-3.md`.
 
 Risk:
 - Duplicate FQCN can break Composer autoload determinism.

@@ -47,7 +47,7 @@ Audit showed 443+ orphan .md files in `/laravel/Modules/Notify/docs/` (root leve
 
 ### Phase 1: Duplicate & Stub Removal
 - Removed 19 files (304 → 285)
-  - Exact duplicates: DIAMOND_COVERAGE_REPORT.md, README-PHASE-1-EXECUTION.md, README_ANALISI_DUPLICATI.md
+  - Exact duplicates: DIAMOND_COVERAGE_REPORT.md, readme-phase-1-execution-2.md, README_ANALISI_DUPLICATI.md
   - Stub files: .md, -repos.md, -todo.md
   - Versioned duplicates: analisi-completa-1/2, phpstan-analysis variants
   - Backups: INDEX.md.bak

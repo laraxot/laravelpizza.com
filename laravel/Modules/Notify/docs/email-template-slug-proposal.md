@@ -270,11 +270,11 @@ MailTemplate::all()->each(function ($template) {
 
 ## Collegamenti Correlati
 
-- [Documentazione Email Template](./email_templates.md)
+- [Documentazione Email Template](./email-templates-2.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_lBSwp9
 <<<<<<< .merge_file_dCIv25
-- [Gestione Traduzioni](../Lang/docs/translation_keys_best_practices.md)
+- [Gestione Traduzioni](../Lang/docs/translation-keys-best-practices-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -282,18 +282,18 @@ MailTemplate::all()->each(function ($template) {
 >>>>>>> .merge_file_3fDKJ7
 =======
 >>>>>>> .merge_file_9FiRi4
-- [Gestione Traduzioni](../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+- [Gestione Traduzioni](../../Lang/docs/translation-keys-best-practices-2.md)
 =======
 <<<<<<< HEAD
-- [Gestione Traduzioni](../Lang/docs/translation_keys_best_practices.md)
+- [Gestione Traduzioni](../Lang/docs/translation-keys-best-practices-2.md)
 =======
-- [Gestione Traduzioni](../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+- [Gestione Traduzioni](../../Lang/docs/translation-keys-best-practices-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_lBSwp9
 <<<<<<< .merge_file_dCIv25
 =======
-- [Gestione Traduzioni](../Lang/docs/translation_keys_best_practices.md)
+- [Gestione Traduzioni](../Lang/docs/translation-keys-best-practices-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======

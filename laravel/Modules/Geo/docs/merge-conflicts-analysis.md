@@ -128,10 +128,10 @@ Questo documento elenca tutti i file che contengono conflitti di merge  nel modu
 =======
 >>>>>>> .merge_file_j9jo47
 <<<<<<< HEAD
-- [Documentazione Modulo Geo](module_geo.md)
+- [Documentazione Modulo Geo](module-geo-2.md)
 =======
 <<<<<<< HEAD
-- [Documentazione Modulo Geo](module_geo.md)
+- [Documentazione Modulo Geo](module-geo-2.md)
 =======
 - [Documentazione Modulo Geo](module-geo.md)
 >>>>>>> laraxot/dev
@@ -147,7 +147,7 @@ Questo documento elenca tutti i file che contengono conflitti di merge  nel modu
 =======
 >>>>>>> .merge_file_j9jo47
 - [Convenzioni Laraxot](../../../../docs/project/laraxot_conventions.md)
-- [Regole PHPStan](phpstan_fixes.md)
+- [Regole PHPStan](phpstan-fixes-6.md)
 
 ---
 

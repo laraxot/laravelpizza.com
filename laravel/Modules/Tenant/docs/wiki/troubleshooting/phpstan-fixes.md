@@ -6,10 +6,7 @@ confidence: verified
 created: 2026-05-06
 updated: 2026-05-06
 tags: [phpstan, tenant, trait, sushi]
-<<<<<<< .merge_file_pvRtpK
 qmd: "phpstan fixes 20260506"
-=======
->>>>>>> .merge_file_6zlRho
 ---
 
 # PHPStan Fixes - 2026-05-06

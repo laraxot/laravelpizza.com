@@ -26,37 +26,37 @@ discussions: []
 
 ### 🔴 PRIORITÀ CRITICA
 
-#### [Modulo Xot](../laravel/modules/xot/docs/optimization_recommendations.md)
+#### [Modulo Xot](../laravel/modules/xot/docs/optimization-recommendations-2.md)
 **Problema**: PathHelper hardcoded compromette framework base
 **Azione**: Refactoring PathHelper con configurazioni dinamiche
 **Tempo**: 2 ore | **Impatto**: Sblocca riusabilità framework
 
-#### [Modulo Notify](../../Notify/docs/optimization_recommendations.md)
+#### [Modulo Notify](../../Notify/docs/optimization-recommendations-2.md)
 **Problema**: 336 occorrenze hardcoded + 150+ file docs frammentati
 **Azione**: Correzione test + consolidamento documentazione
 **Tempo**: 2 giorni | **Impatto**: Sistema notifiche riutilizzabile
 
 ### 🟡 PRIORITÀ ALTA
 
-#### [Modulo User](../../User/docs/optimization_recommendations.md)
+#### [Modulo User](../../User/docs/optimization-recommendations-3.md)
 **Problema**: README gigantesco (955 righe) + 141 occorrenze hardcoded
 **Azione**: Ristrutturazione completa + rimozione hardcoding
 **Tempo**: 1 giorno | **Impatto**: Modulo auth riutilizzabile
 
-#### [Modulo Cms](../../Cms/docs/optimization_recommendations.md)
+#### [Modulo Cms](../../Cms/docs/optimization-recommendations-2.md)
 **Problema**: 194 occorrenze hardcoded + content troppo specifico
 **Azione**: Generalizzazione content + organizzazione docs
 **Tempo**: 1 giorno | **Impatto**: CMS riutilizzabile per qualsiasi business
 
 ### 🟢 PRIORITÀ NORMALE
 
-#### [Modulo UI](../laravel/modules/ui/docs/optimization_recommendations.md)
+#### [Modulo UI](../laravel/modules/ui/docs/optimization-recommendations-2.md)
 **Stato**: Già eccellente (PHPStan Level 9, 50+ componenti)
 **Azione**: Solo path generalization + README optimization
 **Tempo**: 1 ora | **Impatto**: Mantenimento eccellenza
 
-#### [Modulo <nome progetto>](../laravel/modules/<nome progetto>/docs/optimization_recommendations.md)
-#### [Modulo <nome progetto>](../laravel/modules/<nome progetto>/docs/optimization_recommendations.md)
+#### [Modulo <nome progetto>](../laravel/modules/<nome progetto>/docs/optimization-recommendations-2.md)
+#### [Modulo <nome progetto>](../laravel/modules/<nome progetto>/docs/optimization-recommendations-2.md)
 **Stato**: Funzionalmente completo e robusto
 **Azione**: Documentation update + performance optimization
 **Tempo**: 4 ore | **Impatto**: Migliora manutenibilità
@@ -74,10 +74,10 @@ discussions: []
 =======
 >>>>>>> .merge_file_9ZwI1p
 <<<<<<< HEAD
-#### [Modulo Geo](optimization_recommendations.md)
+#### [Modulo Geo](optimization-recommendations-2.md)
 =======
 <<<<<<< HEAD
-#### [Modulo Geo](optimization_recommendations.md)
+#### [Modulo Geo](optimization-recommendations-2.md)
 =======
 #### [Modulo Geo](optimization-recommendations.md)
 >>>>>>> laraxot/dev
@@ -96,8 +96,8 @@ discussions: []
 **Azione**: Generalizzazione docs + Google API caching
 **Tempo**: 3 ore | **Impatto**: Modulo geo riutilizzabile
 
-#### [Modulo <nome modulo>](../laravel/modules/<nome modulo>/docs/optimization_recommendations.md)
-#### [Modulo <nome progetto>](../laravel/modules/<nome progetto>/docs/optimization_recommendations.md)
+#### [Modulo <nome modulo>](../laravel/modules/<nome modulo>/docs/optimization-recommendations-2.md)
+#### [Modulo <nome progetto>](../laravel/modules/<nome progetto>/docs/optimization-recommendations-2.md)
 **Stato**: Buona specializzazione mobile
 **Azione**: Documentation enhancement + mobile testing
 **Tempo**: 6 ore | **Impatto**: Migliora esperienza mobile
@@ -168,10 +168,10 @@ cp -r laravel/Modules/*/docs laravel/Modules-docs-backup-$(date +%Y%m%d)
 ### Implementazione Priorità Critica
 ```bash
 # 1. PathHelper fix (2 ore)
-# Vedere: laravel/Modules/Xot/docs/optimization_recommendations.md
+# Vedere: laravel/Modules/Xot/docs/optimization-recommendations-2.md
 
 # 2. Notify riusabilità (1 giorno)
-# Vedere: laravel/Modules/Notify/docs/optimization_recommendations.md
+# Vedere: laravel/Modules/Notify/docs/optimization-recommendations-2.md
 
 # 3. Verifica progresso
 ./bashscripts/check_module_reusability.sh

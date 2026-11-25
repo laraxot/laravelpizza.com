@@ -28,7 +28,7 @@ discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./2-1-1-plan.md"
   - "./2-1-context.md"
-  - "./AGENTS.md"
+  - "./agents-2.md"
   - "./ai-agent-lessons-learned.md"
   - "./ai-skills-and-plugins-complete.md"
   - "./commit-message.md"
@@ -341,14 +341,14 @@ laravel/Themes/Sixteen/docs/
 docs/project/
 ├── module-docs-index.md              ← Master index
 ├── theme-detection-system.md         ← Theme detection
-└── DESIGN_COMUNI_BMAD_master-plan.md ← This file
+└── design-comuni-bmad-master-plan-2.md ← This file
 ```
 
 ### BMad Docs
 
 ```
 _bmad-output/
-├── design_comuni_index.md            ← BMad index
+├── design-comuni-index-3.md            ← BMad index
 ├── design-comuni-prd.md              ← PRD
 ├── design-comuni-architecture.md     ← Architecture
 ├── design-comuni-ui-spec.md          ← UI Spec

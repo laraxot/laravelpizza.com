@@ -179,7 +179,7 @@ get-shit-done/
 **get-shit-done/templates/**
 - Purpose: Document templates for .planning/ files
 - Contains: Template definitions with frontmatter
-- Key files: project.md, roadmap.md, plan.md, summary.md
+- Key files: project.md, roadmap.md, plan-2.md, summary-2.md
 - Subdirectories: codebase/ (new - for stack/architecture/structure templates)
 
 **get-shit-done/workflows/**

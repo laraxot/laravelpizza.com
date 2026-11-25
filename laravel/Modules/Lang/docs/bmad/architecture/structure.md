@@ -520,5 +520,5 @@ tests/Unit
 
 - Tutti i comandi console sono autoregistrati tramite la struttura di XotBaseServiceProvider.
 - Non aggiungere mai manualmente $this->commands([...]) nei provider.
-- Perché? Vedi [lang-service-provider.md](./lang-service-provider.md) e [PHILOSOPHY.md](./PHILOSOPHY.md)
-- Perché? Vedi [lang-service-provider.md](./lang-service-provider.md) e [PHILOSOPHY.md](./philosophy.md)
+- Perché? Vedi [lang-service-provider-2.md](../../lang-service-provider-2.md) e [philosophy-2.md](./philosophy-2.md)
+- Perché? Vedi [lang-service-provider-2.md](../../lang-service-provider-2.md) e [philosophy-3.md](../../philosophy-3.md)

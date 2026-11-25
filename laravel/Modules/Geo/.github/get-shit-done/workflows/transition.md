@@ -13,11 +13,11 @@ discussions: []
 
 **Read these files NOW:**
 
-1. `.planning/STATE.md`
+1. `.planning/state-2.md`
 2. `.planning/PROJECT.md`
 3. `.planning/roadmap.md`
-4. Current phase's plan files (`*-PLAN.md`)
-5. Current phase's summary files (`*-SUMMARY.md`)
+4. Current phase's plan files (`*-plan-2.md`)
+5. Current phase's summary files (`*-summary-2.md`)
 
 </required_reading>
 
@@ -36,7 +36,7 @@ Mark current phase complete and advance to next. This is the natural point where
 Before transition, read project state:
 
 ```bash
-cat .planning/STATE.md 2>/dev/null
+cat .planning/state-2.md 2>/dev/null
 cat .planning/PROJECT.md 2>/dev/null
 ```
 
@@ -50,8 +50,8 @@ Note accumulated context that may need updating after transition.
 Check current phase has all plan summaries:
 
 ```bash
-ls .planning/phases/XX-current/*-PLAN.md 2>/dev/null | sort
-ls .planning/phases/XX-current/*-SUMMARY.md 2>/dev/null | sort
+ls .planning/phases/XX-current/*-plan-2.md 2>/dev/null | sort
+ls .planning/phases/XX-current/*-summary-2.md 2>/dev/null | sort
 ```
 
 **Verification logic:**
@@ -131,7 +131,7 @@ If found, delete them — phase is complete, handoffs are stale.
 
 <step name="update_roadmap_and_state">
 
-**Delegate roadmap.md and STATE.md updates to gsd-tools:**
+**Delegate roadmap.md and state-2.md updates to gsd-tools:**
 
 ```bash
 TRANSITION=$(node .github/get-shit-done/bin/gsd-tools.cjs phase complete "${current_phase}")
@@ -141,7 +141,7 @@ The CLI handles:
 - Marking the phase checkbox as `[x]` complete with today's date
 - Updating plan count to final (e.g., "3/3 plans complete")
 - Updating the Progress table (Status → Complete, adding date)
-- Advancing STATE.md to next phase (Current Phase, Status → Ready to plan, Current Plan → Not started)
+- Advancing state-2.md to next phase (Current Phase, Status → Ready to plan, Current Plan → Not started)
 - Detecting if this is the last phase in the milestone
 
 Extract from result: `completed_phase`, `plans_executed`, `next_phase`, `next_phase_name`, `is_last_phase`.
@@ -162,7 +162,7 @@ Evolve PROJECT.md to reflect learnings from completed phase.
 **Read phase summaries:**
 
 ```bash
-cat .planning/phases/XX-current/*-SUMMARY.md
+cat .planning/phases/XX-current/*-summary-2.md
 ```
 
 **Assess requirement changes:**
@@ -180,7 +180,7 @@ cat .planning/phases/XX-current/*-SUMMARY.md
    - Add to Active: `- [ ] [New requirement]`
 
 4. **Decisions to log?**
-   - Extract decisions from summary.md files
+   - Extract decisions from summary-2.md files
    - Add to Key Decisions table with outcome if known
 
 5. **"What This Is" still accurate?**
@@ -254,13 +254,13 @@ After (Phase 2 shipped JWT auth, discovered rate limiting needed):
 
 **Note:** Basic position updates (Current Phase, Status, Current Plan, Last Activity) were already handled by `gsd-tools phase complete` in the update_roadmap_and_state step.
 
-Verify the updates are correct by reading STATE.md. If the progress bar needs updating, use:
+Verify the updates are correct by reading state-2.md. If the progress bar needs updating, use:
 
 ```bash
 PROGRESS=$(node .github/get-shit-done/bin/gsd-tools.cjs progress bar --raw)
 ```
 
-Update the progress bar line in STATE.md with the result.
+Update the progress bar line in state-2.md with the result.
 
 **Step complete when:**
 
@@ -273,7 +273,7 @@ Update the progress bar line in STATE.md with the result.
 
 <step name="update_project_reference">
 
-Update Project Reference section in STATE.md.
+Update Project Reference section in state-2.md.
 
 ```markdown
 ## Project Reference
@@ -290,7 +290,7 @@ Update the date and current focus to reflect the transition.
 
 <step name="review_accumulated_context">
 
-Review and update Accumulated Context section in STATE.md.
+Review and update Accumulated Context section in state-2.md.
 
 **Decisions:**
 
@@ -334,7 +334,7 @@ After (if database indexing was addressed in Phase 2):
 
 <step name="update_session_continuity_after_transition">
 
-Update Session Continuity section in STATE.md to reflect transition completion.
+Update Session Continuity section in state-2.md to reflect transition completion.
 
 **Format:**
 
@@ -556,7 +556,7 @@ Transition is complete when:
 - [ ] Any stale handoffs deleted
 - [ ] roadmap.md updated with completion status and plan count
 - [ ] PROJECT.md evolved (requirements, decisions, description if needed)
-- [ ] STATE.md updated (position, project reference, context, session)
+- [ ] state-2.md updated (position, project reference, context, session)
 - [ ] Progress table updated
 - [ ] User knows next steps
 

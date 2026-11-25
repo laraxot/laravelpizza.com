@@ -54,7 +54,7 @@ File markdown generati dall'LLM - summary, entity pages, concept pages, comparis
 
 ```
 docs/wiki/
-├── index.md           # Catalogo di tutto
+├── index-3.md           # Catalogo di tutto
 ├── log.md             # Registro append-only
 ├── concepts/          # Pagine concetto
 ├── entities/          # Pagine entità (modelli, servizi)
@@ -68,7 +68,7 @@ Documento che istruisce l'LLM su come è strutturata la wiki, convenzioni, e wor
 
 ## File Speciali
 
-### index.md - Catalogo Contenuto
+### index-3.md - Catalogo Contenuto
 
 ```markdown
 # Wiki Index
@@ -146,7 +146,7 @@ Per ogni modulo/tema:
 │   ├── articles/
 │   └── notes/
 └── docs/wiki/              # Wiki (LLM owned)
-    ├── index.md
+    ├── index-3.md
     ├── log.md
     ├── schema.md           # Istruzioni per LLM
     ├── concepts/

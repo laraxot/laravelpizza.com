@@ -225,12 +225,12 @@ LIMIT 10
 >>>>>>> .merge_file_kbhXma
 =======
 >>>>>>> .merge_file_M4ho6d
-- [Agent Instructions](../wiki/AGENTS.md)
+- [Agent Instructions](../wiki/agents-2.md)
 =======
 <<<<<<< HEAD
 - [Agent Instructions](../wiki/agents.md)
 =======
-- [Agent Instructions](../wiki/AGENTS.md)
+- [Agent Instructions](../wiki/agents-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_S5u4Bj

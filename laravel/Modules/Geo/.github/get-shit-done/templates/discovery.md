@@ -142,7 +142,7 @@ Create `.planning/phases/XX-name/DISCOVERY.md`:
 - Quality checklist items completed
 - Clear primary recommendation
 - Low-confidence findings marked with validation checkpoints
-- Ready to inform plan.md creation
+- Ready to inform plan-2.md creation
 </success_criteria>
 
 <guidelines>

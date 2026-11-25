@@ -43,7 +43,7 @@ Dei restanti 8 file: 6 a struttura piatta (un blocco per conflitto), 2
   generico DEV; `docs-archive-policy.md` → fusa la versione DEV (piu'
   aggiornata) con la frase aggiuntiva di HEAD, corretti 2 link rotti verso
   `bashscripts/ai/wiki/` (verificati via `find`, puntavano a `docs/wiki/`
-  inesistente); `wiki/index.md` (2 blocchi) → tenuta denominazione generica
+  inesistente); `../wiki/index-3.md` (2 blocchi) → tenuta denominazione generica
   "laraxot" invece del nome di progetto ospite hardcoded "base_fixcity_fila5"
   (Lang e' condiviso fra piu' progetti, `git remote -v`: `laraxot` +
   `provtv`), corretto lo slug rotto "progetto corrente" (spazio letterale)
@@ -74,7 +74,7 @@ Commit: `7402d521`.
 Nuova ondata di marker annidati (`.merge_file_*`) in `Modules/Lang/docs`:
 45 file risolti (innermost-first; HEAD preferito; no `->label()` hardcoded
 come vincolo di dominio Lang). Dedup chirurgica su
-`translation-keys-rules.md` / `index.md` post-merge.
+`translation-keys-rules-2.md` / `index-2.md` post-merge.
 
 Verifica: `/bin/grep -rIln '^<<<<<<< \|^>>>>>>> \|^=\{7\}$' laravel/Modules/Lang/docs` → vuoto.
 Status: done.

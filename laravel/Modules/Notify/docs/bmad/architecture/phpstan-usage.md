@@ -11,10 +11,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
+  - "../../wiki/integrations/_da-riconciliare/absolute-completion-100.md"
   - "./acronym-naming-conventions-1.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -98,7 +98,7 @@ Il modulo segue una chiara distinzione tra organizzazione fisica e logica:
   Modules/Notify/config/notification.php   <-- Configurazione canali e opzioni
   ```
 
-La documentazione completa sulla struttura dei moduli è disponibile in `docs/directory_structure.md`.
+La documentazione completa sulla struttura dei moduli è disponibile in `docs/directory-structure-2.md`.
 
 ## Risoluzione dei problemi comuni
 

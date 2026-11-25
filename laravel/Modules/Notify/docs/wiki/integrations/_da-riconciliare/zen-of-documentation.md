@@ -115,7 +115,7 @@ Ogni documento deve essere:
 # Hero Block
 
 **Posizione**: CMS → Blocks → Content Blocks
-**Genitore**: [Content Blocks System](../content-blocks-system.md)
+**Genitore**: [Content Blocks System](../../../../../Cms/docs/content-blocks-system-2.md)
 **Figli**: [Hero Block Test](../../tests/blocks/hero-block.md)
 **Correlati**: [BlockData Class](../../datas/BlockData.md)
 ```
@@ -171,13 +171,13 @@ La documentazione è progettata per **AI agents multipli**:
 
 ```
 livello-0/ (Root)
-└── docs/MASTER_documentation-index.md
+└── ../../../master-documentation-index-2.md
 
 livello-1/ (Module)
 └── Modules/Cms/docs/00-index.md
 
 livello-2/ (Category)
-└── Modules/Cms/docs/blocks/00-index.md
+└── Modules/Cms/docs/00-index-2.md
 
 livello-3/ (Specific)
 └── Modules/Cms/docs/blocks/hero-block.md
@@ -185,7 +185,7 @@ livello-3/ (Specific)
 
 ### Regole di Indicizzazione
 
-1. **Ogni livello ha UN indice** → `00-index.md`
+1. **Ogni livello ha UN indice** → `00-index-2.md`
 2. **L'indice punta ai figli** → Lista completa
 3. **I figli puntano al genitore** → Breadcrumb
 4. **Cross-reference laterali** → Documenti correlati
@@ -432,7 +432,7 @@ python scripts/run.py ask_question.py \
 - [Multi-Agent Collaboration](../../../multi-agent-collaboration.md)
 =======
 <<<<<<< .merge_file_SRoiY0
-- [Multi-Agent Collaboration](../../docs/multi-agent-collaboration.md)
+- [Multi-Agent Collaboration](../../../multi-agent-collaboration-2.md)
 =======
 - [Multi-Agent Collaboration](../../../multi-agent-collaboration.md)
 - [Documentation Governance](../../../documentation-governance.md)
@@ -445,7 +445,7 @@ python scripts/run.py ask_question.py \
 - [Multi-Agent Collaboration](../../../multi-agent-collaboration.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [Filament Blocks System](../blocks/content-blocks-system.md)
+- [Filament Blocks System](../../../../../Cms/docs/content-blocks-system-2.md)
 - [OpenViking Global Context](../../bashscripts/ai/openviking.md)
 
 ---

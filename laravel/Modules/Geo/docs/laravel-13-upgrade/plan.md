@@ -12,7 +12,7 @@ discussions: []
 # Plan: Laravel 13 Upgrade
 
 ## Phase 1: Global Documentation
-- Create a master upgrade guide in `docs/laravel-13-upgrade/upgrade_guide.md`.
+- Create a master upgrade guide in `docs/laravel-13-upgrade/upgrade-guide-3.md`.
 - Document the R-R-S-U sequence for each module.
 
 ## Phase 2: Root Configuration Update

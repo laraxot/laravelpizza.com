@@ -385,7 +385,7 @@ Consulta questi moduli come riferimento:
 ### Theme One (Completo)
 
 - [PRD](laravel/Themes/One/docs/prd.md)
-- [Roadmap](laravel/Themes/One/docs/roadmap.md)
+- [Roadmap](laravel/Modules/Notify/docs/project/roadmap-2.md)
 - [Strategy](laravel/Themes/One/docs/product-strategy.md)
 - [Launch Plan](laravel/Themes/One/docs/product-launch-plan.md)
 - [User Research](laravel/Themes/One/docs/user-research.md)

@@ -133,7 +133,7 @@ return [
 ## Documentazione Aggiornata
 
 - [Chart Module - Translation Syntax Errors](../../laravel/modules/chart/project_docs/translation_syntax_errors.md)
-- [Translation Best Practices](translation-best-practices.md)
+- [Translation Best Practices](translation-best-practices-2.md)
 - [PHPStan Configuration](phpstan-configuration.md)
 
 ## Checklist di Verifica
@@ -295,7 +295,7 @@ return [
 ## Documentazione Aggiornata
 
 - [Chart Module - Translation Syntax Errors](../../laravel/modules/chart/docs/translation_syntax_errors.md)
-- [Translation Best Practices](translation-best-practices.md)
+- [Translation Best Practices](translation-best-practices-2.md)
 - [PHPStan Configuration](phpstan-configuration.md)
 
 ## Checklist di Verifica

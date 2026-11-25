@@ -88,9 +88,9 @@ related:
 8. Utilizzare `Notification::make()->danger()` per messaggi utente-friendly.
 
 ## Collegamenti
-- [WIDGETS_STRUCTURE.md](../WIDGETS_STRUCTURE.md) — Regole di struttura per widget Filament nel modulo User.
-- [WIDGETS_STRUCTURE.md](../widgets-structure-2.md) — Regole di struttura per widget Filament nel modulo User.
-- [filament_best_practices.md](filament_best_practices.md) — Best practices per risorse Filament.
+- [widgets-structure-2.md](widgets-structure-2.md) — Regole di struttura per widget Filament nel modulo User.
+- [widgets-structure-2.md](../widgets-structure-2.md) — Regole di struttura per widget Filament nel modulo User.
+- [filament-best-practices-2.md](filament-best-practices-2.md) — Best practices per risorse Filament.
 - [login-widget-conversion.md](login-widget-conversion.md) — Conversione del componente Livewire a LoginWidget.
 # Analisi Dettagliata di LoginWidget
 
@@ -162,7 +162,7 @@ related:
 8. Utilizzare `Notification::make()->danger()` per messaggi utente-friendly.
 
 ## Collegamenti
-- [WIDGETS_STRUCTURE.md](../WIDGETS_STRUCTURE.md) — Regole di struttura per widget Filament nel modulo User.
-- [WIDGETS_STRUCTURE.md](../widgets-structure-2.md) — Regole di struttura per widget Filament nel modulo User.
-- [filament_best_practices.md](filament_best_practices.md) — Best practices per risorse Filament.
+- [widgets-structure-2.md](widgets-structure-2.md) — Regole di struttura per widget Filament nel modulo User.
+- [widgets-structure-2.md](../widgets-structure-2.md) — Regole di struttura per widget Filament nel modulo User.
+- [filament-best-practices-2.md](filament-best-practices-2.md) — Best practices per risorse Filament.
 - [login-widget-conversion.md](login-widget-conversion.md) — Conversione del componente Livewire a LoginWidget.

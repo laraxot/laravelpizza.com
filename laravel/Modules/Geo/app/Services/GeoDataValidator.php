@@ -12,7 +12,8 @@ use Illuminate\Support\Facades\Validator;
  * Questo servizio fornisce metodi per validare la struttura e l'integrità
  * dei dati geografici nel file JSON.
  *
- * @see \Modules\Geo\docs\json-database.md
+ * @see Modules/Geo/docs/json-database.md
+ * @see Modules/Geo/docs/geo-sync-marker-repair.md
  */
 class GeoDataValidator
 {

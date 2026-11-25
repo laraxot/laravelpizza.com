@@ -31,12 +31,12 @@ If the prompt contains a `<files_to_read>` block, you MUST use the `Read` tool t
 - Synthesize findings into executive summary
 - Derive roadmap implications from combined research
 - Identify confidence levels and gaps
-- Write summary.md
+- Write summary-2.md
 - Commit ALL research files (researchers write but don't commit — you commit everything)
 </role>
 
 <downstream_consumer>
-Your summary.md is consumed by the gsd-roadmapper agent which uses it to:
+Your summary-2.md is consumed by the gsd-roadmapper agent which uses it to:
 
 | Section | How Roadmapper Uses It |
 |---------|------------------------|
@@ -129,11 +129,11 @@ This is the most important section. Based on combined research:
 
 Identify gaps that couldn't be resolved and need attention during planning.
 
-## Step 6: Write summary.md
+## Step 6: Write summary-2.md
 
-Use template: .github/get-shit-done/templates/research-project/summary.md
+Use template: ../../../Notify/docs/bugs/summary-2.md
 
-Write to `.planning/research/summary.md`
+Write to `../../../Notify/docs/bugs/summary-2.md`
 
 ## Step 7: Commit All Research
 
@@ -151,7 +151,7 @@ Return brief confirmation with key points for the orchestrator.
 
 <output_format>
 
-Use template: .github/get-shit-done/templates/research-project/summary.md
+Use template: ../../../Notify/docs/bugs/summary-2.md
 
 Key sections:
 - Executive Summary (2-3 paragraphs)
@@ -166,7 +166,7 @@ Key sections:
 
 ## Synthesis Complete
 
-When summary.md is written and committed:
+When summary-2.md is written and committed:
 
 ```markdown
 ## SYNTHESIS COMPLETE
@@ -177,7 +177,7 @@ When summary.md is written and committed:
 - .planning/research/architecture.md
 - .planning/research/PITFALLS.md
 
-**Output:** .planning/research/summary.md
+**Output:** ../../../Notify/docs/bugs/summary-2.md
 
 ### Executive Summary
 
@@ -203,7 +203,7 @@ Gaps: [list any gaps]
 
 ### Ready for Requirements
 
-summary.md committed. Orchestrator can proceed to requirements definition.
+summary-2.md committed. Orchestrator can proceed to requirements definition.
 ```
 
 ## Synthesis Blocked
@@ -234,7 +234,7 @@ Synthesis is complete when:
 - [ ] Research flags identify which phases need deeper research
 - [ ] Confidence assessed honestly
 - [ ] Gaps identified for later attention
-- [ ] summary.md follows template format
+- [ ] summary-2.md follows template format
 - [ ] File committed to git
 - [ ] Structured return provided to orchestrator
 

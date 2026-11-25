@@ -20,14 +20,14 @@
 **File eliminati:**
 ```bash
 # Eliminati sistematicamente
-- phpstan-fixes.md (tutti i moduli)
-- phpstan_fixes.md (tutti i moduli)
-- phpstan-usage.md (tutti i moduli)
-- phpstan_usage.md (tutti i moduli)
+- phpstan-fixes-5.md (tutti i moduli)
+- phpstan-fixes-5.md (tutti i moduli)
+- phpstan-usage-2.md (tutti i moduli)
+- phpstan-usage-2.md (tutti i moduli)
 - phpstan-level*-fixes.md (tutti i moduli)
 - phpstan_level*.md (tutti i moduli)
-- phpstan-corrections.md (tutti i moduli)
-- phpstan-incremental.md (tutti i moduli)
+- phpstan-corrections-2.md (tutti i moduli)
+- phpstan-incremental-2.md (tutti i moduli)
 ```
 
 ### Traduzioni: Da 107+ file a 1 file
@@ -46,8 +46,8 @@
 # Eliminati sistematicamente
 - translations.md (tutti i moduli)
 - translation-rules.md (tutti i moduli)
-- translation_standards.md (tutti i moduli)
-- translation_best_practices.md (tutti i moduli)
+- translation-standards-3.md (tutti i moduli)
+- translation-best-practices-2.md (tutti i moduli)
 - translation_quality_standards.md (tutti i moduli)
 ```
 
@@ -65,10 +65,10 @@
 **File eliminati:**
 ```bash
 # Eliminati sistematicamente
-- migrations.md (tutti i moduli)
-- migration-guide.md (tutti i moduli)
-- migration_best_practices.md (tutti i moduli)
-- migration_rules.md (tutti i moduli)
+- migrations-3.md (tutti i moduli)
+- migration-guide-2.md (tutti i moduli)
+- migration-best-practices-3.md (tutti i moduli)
+- migration-rules-2.md (tutti i moduli)
 ```
 
 ## 📊 Statistiche Refactor
@@ -140,7 +140,7 @@
 ```
 /laravel/Modules/{Module}/project_docs/
 ├── README.md                        # Overview modulo
-├── api.md                          # API specifiche modulo
+├── api-2.md                          # API specifiche modulo
 └── features/                       # Funzionalità specifiche
 ```
 

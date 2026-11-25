@@ -32,4 +32,4 @@ Questa scelta garantisce:
 ## Backlink
 - [docs/links.md](../../../../docs/links.md)
 - [docs/MODULE_NAMESPACE_RULES.md](./module_namespace_rules.md)
-- [docs/BEST-PRACTICES.md](./best-practices.md)
+- [../laravel/Modules/Activity/docs/best-practices-3.md](./best-practices.md)

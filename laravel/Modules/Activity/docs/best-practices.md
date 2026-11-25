@@ -40,7 +40,7 @@ qmd: "best practices   activity activity"
 <<<<<<< .merge_file_cbiSJ4
 <<<<<<< .merge_file_bosp9k
 <<<<<<< .merge_file_4aV1tF
-See canonical documentation: ../../../Themes/docs/shared-components/best_practices.md
+See canonical documentation: best-practices-3.md
 =======
 =======
 >>>>>>> .merge_file_YudubE
@@ -94,17 +94,17 @@ See canonical documentation: ../../../Themes/docs/shared-components/best_practic
 ---
 module: theme
 topic: best-practices
-canonical: ../../../Themes/docs/shared-components/BEST_PRACTICES.md
+canonical: ../../../Themes/docs/shared-components/best-practices-2.md
 ---
 
 =======
 <<<<<<< .merge_file_6yH1xN
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-See canonical documentation: ../../../Themes/docs/shared-components/BEST_PRACTICES.md
+See canonical documentation: ../../../Themes/docs/shared-components/best-practices-2.md
 =======
 =======
-See canonical documentation: ../../../Themes/docs/shared-components/best_practices.md
+See canonical documentation: best-practices-3.md
 <<<<<<< HEAD
 >>>>>>> .merge_file_jtJt7D
 =======

@@ -204,7 +204,7 @@ laravel/Modules/Incentivi/
 │   ├── 📄 troubleshooting.md
 │   ├── 📄 module-icons.md
 │   ├── 📄 manage-related-records-translations.md
-│   ├── 📄 phpstan-report.md
+│   ├── 📄 phpstan-report-2.md
 │   ├── 📄 phpstan-report.txt
 │   ├── 📄 phpmd-report.txt
 │   ├── 📄 phpstan_report.txt
@@ -226,7 +226,7 @@ laravel/Modules/Incentivi/
 │   │   ├── 📄 laravel.md
 │   │   ├── 📄 advanced.md
 │   │   ├── 📄 styling.md
-│   │   └── 📄 SECURITY.md
+│   │   └── 📄 security-2.md
 │   │
 │   └── 📁 models/
 │       └── 📄 domain-model.md

@@ -4,7 +4,7 @@
 
 ### Regole fondamentali
 1. **Nomi file in minuscolo**: Tutti i file nelle cartelle `docs` DEVONO avere nomi in minuscolo
-   - ❌ ERRATO: `phpstan_fixes.md`, `SERVICE_PROVIDER.md`
+   - ❌ ERRATO: `phpstan_fixes.md`, `service-provider-2.md`
    - ✅ CORRETTO: `phpstan_fixes.md`, `service_provider.md`
 
 2. **Unica eccezione**: L'unico file che può contenere maiuscole è `README.md`
@@ -101,7 +101,7 @@ Utilizzare script nella cartella `bashscripts` per automatizzare le verifiche e 
 ## Collegamenti a documentazione correlata
 
 - [Documentazione generale](../../../docs/documentation_rules.md)
-- [Convenzioni di naming in generale](../../../docs/naming_conventions.md)
-- [Regole per ServiceProvider](../../indennitacondizionilavoro/docs/service_provider.md)
+- [Convenzioni di naming in generale](../../../docs/naming-conventions-2.md)
+- [Regole per ServiceProvider](../../indennitacondizionilavoro/docs/service-provider-2.md)
 - [Regole per file di traduzione](../../../.cursor/rules/translation_files_rules.mdc)
 

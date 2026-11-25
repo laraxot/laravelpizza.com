@@ -163,7 +163,7 @@ Related:
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-- [Project Wiki Agent Instructions](../../docs/wiki/AGENTS.md)
+- [Project Wiki Agent Instructions](../../../Lang/docs/wiki/agents-3.md)
 =======
 - [Project Wiki Agent Instructions](agents.md)
 >>>>>>> laraxot/dev

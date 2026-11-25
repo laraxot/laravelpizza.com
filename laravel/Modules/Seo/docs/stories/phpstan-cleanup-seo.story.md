@@ -37,8 +37,5 @@ Le asserzioni del test sono invariate.
 - Issue: TODO (gh non installato su questa macchina)
 - Discussion: TODO
 
-<<<<<<< .merge_file_IaQZqZ
 Dev story: [phpstan-cleanup-seo.dev.md](./phpstan-cleanup-seo.dev.md)
-=======
-Dev story: [2026-10-06-phpstan-cleanup-seo.dev.md](./phpstan-cleanup-seo.dev.md)
->>>>>>> .merge_file_VWEU4e
+

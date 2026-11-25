@@ -127,12 +127,12 @@ Per istruzioni dettagliate, vedere [Getting Started](development/getting-started
 
 ## Roadmap
 
-Per la roadmap dettagliata, vedere [Project Roadmap](introduction/project_roadmap.md).
+Per la roadmap dettagliata, vedere [Project Roadmap](introduction/project-roadmap-2.md).
 
 ## Contribuire
 
 Per contribuire al progetto:
-1. Leggere le [convenzioni](conventions/general_rules.md)
+1. Leggere le [convenzioni](conventions/general-rules-2.md)
 2. Seguire il [workflow di sviluppo](development/workflow.md)
 3. Aprire una pull request
 4. Attendere la code review

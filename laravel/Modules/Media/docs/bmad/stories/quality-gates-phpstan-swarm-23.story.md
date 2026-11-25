@@ -12,9 +12,10 @@ updated: 2026-09-23
 tags: [bmad, story, phpstan, quality-gate, media, phpstan-swarm]
 related:
   - ./cleanup-media-2026-09-22.story.md
-  - ../../stories/01.Media-phpstan-fix.story.md
+  - ../../stories/01.media-phpstan-fix.story.md
   - ../../stories/media-phpstan-swarm-2026-09-15-pest-uses-group.story.md
   - ../../stories/media-quality-gate-2026-09-04.story.md
+qmd: "quality gates phpstan swarm 23 story"
 ---
 
 # PHPStan swarm 2026-09-23: verifica Modules/Media

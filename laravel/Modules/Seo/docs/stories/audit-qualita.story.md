@@ -46,7 +46,7 @@ senza cambiare il comportamento pubblico (`/sitemap.xml`, `/robots.txt`, `seo:ro
 - Indice unico: [index.md](../index.md). Rimossi `00-INDEX.md`, `00-index.md`, `INDEX.md` (gia' `superseded`).
 - `README.md` (concatenazione `stale` di due README) riscritto come presentazione breve e corretta del modulo.
 - 12 file con data nel nome: rinominati (data in `created:`) o uniti/rimossi se doppioni; 15 file vuoti (solo frontmatter o segnaposto) rimossi; 2 duplicati esatti rimossi; link aggiornati.
-- `services-to-adapters-conversion.md` e `PHILOSOPHY.md` allineati allo stato reale (facade -> `MetatagFacadeAdapter`).
+- `services-to-adapters-conversion.md` e `philosophy-3.md` allineati allo stato reale (facade -> `MetatagFacadeAdapter`).
 
 ## Verifica
 
@@ -57,4 +57,4 @@ senza cambiare il comportamento pubblico (`/sitemap.xml`, `/robots.txt`, `seo:ro
 
 - `Modules/Xot/routes/web_seo.php` e `routes/seo.php` dichiarano anch'esse `/sitemap.xml`: verificare quale rotta vince e togliere il doppione (modulo Xot).
 - `docs/docs_master_index.md` e `Modules/Notify/docs/ai-agents/project-docs-index.md` puntano ancora agli indici rimossi.
-- Le voci di `index.md` che puntavano a file vuoti rimossi sono rimaste come testo semplice: da potare alla prossima revisione.
+- Le voci di `index-2.md` che puntavano a file vuoti rimossi sono rimaste come testo semplice: da potare alla prossima revisione.

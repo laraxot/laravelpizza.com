@@ -603,6 +603,6 @@ Per-tenant configuration files override system defaults, enabling customization 
 - [API Reference](./api.md)
 - [Setup Guide](./SETUP.md)
 - [Troubleshooting](troubleshooting.md)
-- [Best Practices](./best_practices.md)
+- [Best Practices](../../Activity/docs/best-practices-3.md)
 - Module Tests: `tests/Feature/TenantBusinessLogicTest.php`, `tests/Unit/Actions/`
 ---

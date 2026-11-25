@@ -38,7 +38,7 @@ Following user's directive:
 - Healthcare application
 - Doctor/patient portal
 
-**Source**: `laravel/CLAUDE.md` lines 11-28
+**Source**: `laravel/Modules/Geo/docs/root-md-files/claude.md` lines 11-28
 
 ### 2. Routes Don't Exist
 
@@ -129,7 +129,7 @@ Same applies here:
 
 ## References
 
-- `laravel/CLAUDE.md` - Project purpose and domain
+- `laravel/Modules/Geo/docs/root-md-files/claude.md` - Project purpose and domain
 - `laravel/docs/testing-session-summary-[DATE].md` - Testing philosophy
 - `Modules/Job/docs/schedule-test-wrong-schema.md` - Precedent for deleting wrong tests
 - `Modules/Xot/docs/testing-philosophy-unified.md` - "Delete fiction" principle

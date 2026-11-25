@@ -521,4 +521,4 @@ updated: 2026-09-26
 qmd: "configurazione"
 issues: []
 discussions: []
-Continua con la sezione [Utilizzo](03_utilizzo.md) per imparare come utilizzare i server MCP nel tuo progetto Laravel.
+Continua con la sezione [Utilizzo](03-utilizzo-2.md) per imparare come utilizzare i server MCP nel tuo progetto Laravel.

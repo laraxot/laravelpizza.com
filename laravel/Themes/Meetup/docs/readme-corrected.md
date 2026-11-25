@@ -49,7 +49,7 @@ Il sito laravelpizza.com è il **reference design corretto** perché:
 ### Documenti Errati (parlano di ordinazione pizze)
 1. ❌ `real-website-analysis.md` - Analizza come sistema ordinazione (SBAGLIATO)
 2. ❌ `business-logic.md` - Logica business per ordinazione (SBAGLIATO)
-3. ❌ `database-schema.md` - Schema per ordinazione (SBAGLIATO)
+3. ❌ `database-schema-2.md` - Schema per ordinazione (SBAGLIATO)
 4. ❌ `models-architecture.md` - Modelli Pizza, Order, OrderItem (SBAGLIATO)
 5. ❌ `services-guide.md` - PizzaService, OrderService, CartService (SBAGLIATO)
 

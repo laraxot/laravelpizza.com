@@ -51,7 +51,7 @@ discussions: []
 =======
 >>>>>>> .merge_file_sEt5HI
 **Part of**: [00-INDEX.md](00-index.md) — AI Agents Coordination  
-**Related**: [03-ARCHITECTURE-ZEN.md](03-architecture-zen.md) — Architecture
+**Related**: [03-architecture-zen-2.md](03-architecture-zen.md) — Architecture
 
 ## 🔍 Mandatory Checklist (Before Commit)
 ### 1. Routing Multilingual

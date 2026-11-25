@@ -10,7 +10,7 @@
       "newRel": "laravel/Modules/Activity/docs/phpstan-analysis-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/Activity/docs/roadmap-2025.md",
+      "oldRel": "laravel/Modules/Activity/docs/roadmap-3.md",
       "newRel": "laravel/Modules/Activity/docs/roadmap-archive-1.md"
     },
     {
@@ -26,11 +26,11 @@
       "newRel": "laravel/Modules/Activity/test-archive-2.md"
     },
     {
-      "oldRel": "laravel/Modules/Job/docs/phpstan-fixes-gennaio-.md",
+      "oldRel": "laravel/Modules/Job/docs/phpstan-fixes-gennaio-3.md",
       "newRel": "laravel/Modules/Job/docs/phpstan-fixes-gennaio-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/Job/docs/phpstan-fixes-gennaio-2025.md",
+      "oldRel": "laravel/Modules/Job/docs/phpstan-fixes-gennaio-2.md",
       "newRel": "laravel/Modules/Job/docs/phpstan-fixes-archive-1.md"
     },
     {
@@ -42,7 +42,7 @@
       "newRel": "laravel/Modules/Job/docs/phpstan-fixes-archive-2.md"
     },
     {
-      "oldRel": "laravel/Modules/Job/docs/roadmap-2025.md",
+      "oldRel": "laravel/Modules/Job/docs/roadmap-3.md",
       "newRel": "laravel/Modules/Job/docs/roadmap-archive-1.md"
     },
     {
@@ -50,23 +50,23 @@
       "newRel": "laravel/Modules/Lang/docs/legacy/lang-service-translation-updates.md"
     },
     {
-      "oldRel": "laravel/Modules/Lang/docs/legacy/translation-errors-correction-2025.md",
-      "newRel": "laravel/Modules/Lang/docs/legacy/translation-errors-correction.md"
+      "oldRel": "laravel/Modules/Lang/docs/legacy/translation-errors-correction-3.md",
+      "newRel": "laravel/Modules/Lang/docs/translation-errors-correction-4.md"
     },
     {
-      "oldRel": "laravel/Modules/Lang/docs/legacy/translation_audit_completion_2025.md",
-      "newRel": "laravel/Modules/Lang/docs/legacy/translation-audit-completion.md"
+      "oldRel": "laravel/Modules/Lang/docs/translation-audit-completion-3.md",
+      "newRel": "laravel/Modules/Lang/docs/translation-audit-completion-4.md"
     },
     {
-      "oldRel": "laravel/Modules/Lang/docs/legacy/translation_errors_correction_2025.md",
+      "oldRel": "laravel/Modules/Lang/docs/translation-errors-correction-3.md",
       "newRel": "laravel/Modules/Lang/docs/legacy/translation-errors-correction-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/Lang/docs/translation-audit-completion-2025.md",
+      "oldRel": "laravel/Modules/Lang/docs/translation-audit-completion-3.md",
       "newRel": "laravel/Modules/Lang/docs/translation-audit-completion-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/Lang/docs/translation-errors-correction-2025.md",
+      "oldRel": "laravel/Modules/Lang/docs/translation-errors-correction-3.md",
       "newRel": "laravel/Modules/Lang/docs/translation-errors-correction-archive-1.md"
     },
     {
@@ -75,7 +75,7 @@
     },
     {
       "oldRel": "laravel/Modules/Notify/docs/archive/historical/phpstan-fixes-gennaio-2025.md",
-      "newRel": "laravel/Modules/Notify/docs/archive/historical/phpstan-fixes.md"
+      "newRel": "laravel/Modules/Lang/docs/phpstan-fixes-2.md"
     },
     {
       "oldRel": "laravel/Modules/Notify/docs/archive/historical/roadmap-2025.md",
@@ -83,26 +83,26 @@
     },
     {
       "oldRel": "laravel/Modules/Notify/docs/legacy/historical/phpstan-fixes-gennaio-2025.md",
-      "newRel": "laravel/Modules/Notify/docs/legacy/historical/phpstan-fixes.md"
+      "newRel": "laravel/Modules/Lang/docs/phpstan-fixes-2.md"
     },
     {
       "oldRel": "laravel/Modules/Notify/docs/legacy/historical/roadmap-2025.md",
       "newRel": "laravel/Modules/Notify/docs/legacy/historical/roadmap.md"
     },
     {
-      "oldRel": "laravel/Modules/Notify/docs/phpstan-fixes-gennaio-.md",
+      "oldRel": "laravel/Modules/Notify/docs/phpstan-fixes-gennaio-3.md",
       "newRel": "laravel/Modules/Notify/docs/phpstan-fixes-gennaio-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/Tenant/docs/phpstan-fixes-gennaio-.md",
+      "oldRel": "laravel/Modules/Tenant/docs/phpstan-fixes-gennaio-3.md",
       "newRel": "laravel/Modules/Tenant/docs/phpstan-fixes-gennaio-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/Tenant/docs/phpstan-fixes-gennaio-2025.md",
+      "oldRel": "laravel/Modules/Tenant/docs/phpstan-fixes-gennaio-2.md",
       "newRel": "laravel/Modules/Tenant/docs/phpstan-fixes-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/Tenant/docs/roadmap-2025.md",
+      "oldRel": "laravel/Modules/Tenant/docs/roadmap-3.md",
       "newRel": "laravel/Modules/Tenant/docs/roadmap-archive-1.md"
     },
     {
@@ -122,19 +122,19 @@
       "newRel": "laravel/Modules/UI/docs/phpstan-corrections-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/UI/docs/phpstan-corrections-january-.md",
+      "oldRel": "laravel/Modules/UI/docs/phpstan-corrections-january-2.md",
       "newRel": "laravel/Modules/UI/docs/phpstan-corrections-january-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/UI/docs/phpstan-fixes-2025.md",
+      "oldRel": "laravel/Modules/UI/docs/phpstan-fixes-4.md",
       "newRel": "laravel/Modules/UI/docs/phpstan-fixes-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/UI/docs/phpstan-fixes-gennaio-.md",
+      "oldRel": "laravel/Modules/UI/docs/phpstan-fixes-gennaio-3.md",
       "newRel": "laravel/Modules/UI/docs/phpstan-fixes-gennaio-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/UI/docs/phpstan-fixes-gennaio-2025.md",
+      "oldRel": "laravel/Modules/UI/docs/phpstan-fixes-gennaio-2.md",
       "newRel": "laravel/Modules/UI/docs/phpstan-fixes-archive-2.md"
     },
     {
@@ -158,11 +158,11 @@
       "newRel": "laravel/Modules/UI/docs/phpstan-fixes-archive-4.md"
     },
     {
-      "oldRel": "laravel/Modules/UI/docs/phpstan_fixes_2025.md",
+      "oldRel": "laravel/Modules/User/docs/phpstan-fixes-4.md",
       "newRel": "laravel/Modules/UI/docs/phpstan-fixes-archive-5.md"
     },
     {
-      "oldRel": "laravel/Modules/UI/docs/roadmap-2025.md",
+      "oldRel": "laravel/Modules/UI/docs/roadmap-3.md",
       "newRel": "laravel/Modules/UI/docs/roadmap-archive-1.md"
     },
     {
@@ -178,11 +178,11 @@
       "newRel": "laravel/Modules/User/docs/archive/dry-kiss-analysis-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/User/docs/archive/git-conflicts-resolution-2025-01-27.md",
+      "oldRel": "laravel/Modules/User/docs/archive/git-conflicts-resolution-5.md",
       "newRel": "laravel/Modules/User/docs/archive/git-conflicts-resolution-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/User/docs/archive/git_conflicts_resolution_2025_01_27.md",
+      "oldRel": "laravel/Modules/User/docs/git-conflicts-resolution-5.md",
       "newRel": "laravel/Modules/User/docs/archive/git-conflicts-resolution-archive-2.md"
     },
     {
@@ -202,7 +202,7 @@
       "newRel": "laravel/Modules/User/docs/archive/historical/phpstan-fixes-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/User/docs/archive/historical/phpstan-fixes-2025.md",
+      "oldRel": "laravel/Modules/User/docs/archive/historical/phpstan-fixes-4.md",
       "newRel": "laravel/Modules/User/docs/archive/historical/phpstan-fixes-archive-2.md"
     },
     {
@@ -210,7 +210,7 @@
       "newRel": "laravel/Modules/User/docs/archive/historical/phpstan-fixes-complete.md"
     },
     {
-      "oldRel": "laravel/Modules/User/docs/archive/historical/phpstan-fixes-gennaio-2025.md",
+      "oldRel": "laravel/Modules/User/docs/archive/historical/phpstan-fixes-gennaio-4.md",
       "newRel": "laravel/Modules/User/docs/archive/historical/phpstan-fixes-archive-3.md"
     },
     {
@@ -218,7 +218,7 @@
       "newRel": "laravel/Modules/User/docs/archive/historical/redundancy-fixes-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/User/docs/archive/historical/roadmap-2025.md",
+      "oldRel": "laravel/Modules/User/docs/archive/historical/roadmap-3.md",
       "newRel": "laravel/Modules/User/docs/archive/historical/roadmap.md"
     },
     {
@@ -226,20 +226,20 @@
       "newRel": "laravel/Modules/User/docs/archive/historical/translation-city-field-refactor-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/User/docs/archive/historical/translation-syntax-fixes-2025.md",
+      "oldRel": "laravel/Modules/User/docs/archive/historical/translation-syntax-fixes-3.md",
       "newRel": "laravel/Modules/User/docs/archive/historical/translation-syntax-fixes-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/User/docs/archive/old_tasks/phpstan-fixes-2025.md",
+      "oldRel": "laravel/Modules/User/docs/archive/old_tasks/phpstan-fixes-4.md",
       "newRel": "laravel/Modules/User/docs/archive/old_tasks/phpstan-fixes-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/User/docs/archive/old_tasks/phpstan-fixes-gennaio-2025.md",
+      "oldRel": "laravel/Modules/User/docs/archive/old_tasks/phpstan-fixes-gennaio-4.md",
       "newRel": "laravel/Modules/User/docs/archive/old_tasks/phpstan-fixes-archive-2.md"
     },
     {
       "oldRel": "laravel/Modules/User/docs/archive/password_translation_completion_2025.md",
-      "newRel": "laravel/Modules/User/docs/archive/password-translation-completion.md"
+      "newRel": "laravel/Modules/User/docs/password-translation-completion-3.md"
     },
     {
       "oldRel": "laravel/Modules/User/docs/archive/phpstan-dry-kiss-improvements-2025-10-17.md",
@@ -250,12 +250,12 @@
       "newRel": "laravel/Modules/User/docs/archive/phpstan-fixes-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/User/docs/archive/phpstan_fixes_2025.md",
+      "oldRel": "laravel/Modules/User/docs/phpstan-fixes-4.md",
       "newRel": "laravel/Modules/User/docs/archive/phpstan-fixes-archive-2.md"
     },
     {
       "oldRel": "laravel/Modules/User/docs/archive/quality-status-2025-11.md",
-      "newRel": "laravel/Modules/User/docs/archive/quality-status.md"
+      "newRel": "laravel/Modules/User/docs/quality-status-3.md"
     },
     {
       "oldRel": "laravel/Modules/User/docs/archive/translation-city-field-refactor-2025-08-08.md",
@@ -278,11 +278,11 @@
       "newRel": "laravel/Modules/User/docs/legacy/dry-kiss-analysis-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/User/docs/legacy/git-conflicts-resolution-2025-01-27.md",
+      "oldRel": "laravel/Modules/User/docs/legacy/git-conflicts-resolution-5.md",
       "newRel": "laravel/Modules/User/docs/legacy/git-conflicts-resolution-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/User/docs/legacy/git_conflicts_resolution_2025_01_27.md",
+      "oldRel": "laravel/Modules/User/docs/git-conflicts-resolution-5.md",
       "newRel": "laravel/Modules/User/docs/legacy/git-conflicts-resolution-archive-2.md"
     },
     {
@@ -302,7 +302,7 @@
       "newRel": "laravel/Modules/User/docs/legacy/historical/phpstan-fixes-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/User/docs/legacy/historical/phpstan-fixes-2025.md",
+      "oldRel": "laravel/Modules/User/docs/legacy/historical/phpstan-fixes-4.md",
       "newRel": "laravel/Modules/User/docs/legacy/historical/phpstan-fixes-archive-2.md"
     },
     {
@@ -310,7 +310,7 @@
       "newRel": "laravel/Modules/User/docs/legacy/historical/phpstan-fixes-complete.md"
     },
     {
-      "oldRel": "laravel/Modules/User/docs/legacy/historical/phpstan-fixes-gennaio-2025.md",
+      "oldRel": "laravel/Modules/User/docs/legacy/historical/phpstan-fixes-gennaio-4.md",
       "newRel": "laravel/Modules/User/docs/legacy/historical/phpstan-fixes-archive-3.md"
     },
     {
@@ -318,7 +318,7 @@
       "newRel": "laravel/Modules/User/docs/legacy/historical/redundancy-fixes-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/User/docs/legacy/historical/roadmap-2025.md",
+      "oldRel": "laravel/Modules/User/docs/legacy/historical/roadmap-3.md",
       "newRel": "laravel/Modules/User/docs/legacy/historical/roadmap.md"
     },
     {
@@ -326,20 +326,20 @@
       "newRel": "laravel/Modules/User/docs/legacy/historical/translation-city-field-refactor-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/User/docs/legacy/historical/translation-syntax-fixes-2025.md",
+      "oldRel": "laravel/Modules/User/docs/legacy/historical/translation-syntax-fixes-3.md",
       "newRel": "laravel/Modules/User/docs/legacy/historical/translation-syntax-fixes-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/User/docs/legacy/old_tasks/phpstan-fixes-2025.md",
+      "oldRel": "laravel/Modules/User/docs/legacy/old_tasks/phpstan-fixes-4.md",
       "newRel": "laravel/Modules/User/docs/legacy/old_tasks/phpstan-fixes-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/User/docs/legacy/old_tasks/phpstan-fixes-gennaio-2025.md",
+      "oldRel": "laravel/Modules/User/docs/legacy/old_tasks/phpstan-fixes-gennaio-4.md",
       "newRel": "laravel/Modules/User/docs/legacy/old_tasks/phpstan-fixes-archive-2.md"
     },
     {
       "oldRel": "laravel/Modules/User/docs/legacy/password_translation_completion_2025.md",
-      "newRel": "laravel/Modules/User/docs/legacy/password-translation-completion.md"
+      "newRel": "laravel/Modules/User/docs/password-translation-completion-3.md"
     },
     {
       "oldRel": "laravel/Modules/User/docs/legacy/phpstan-dry-kiss-improvements-2025-10-17.md",
@@ -350,12 +350,12 @@
       "newRel": "laravel/Modules/User/docs/legacy/phpstan-fixes-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/User/docs/legacy/phpstan_fixes_2025.md",
+      "oldRel": "laravel/Modules/User/docs/phpstan-fixes-4.md",
       "newRel": "laravel/Modules/User/docs/legacy/phpstan-fixes-archive-2.md"
     },
     {
       "oldRel": "laravel/Modules/User/docs/legacy/quality-status-2025-11.md",
-      "newRel": "laravel/Modules/User/docs/legacy/quality-status.md"
+      "newRel": "laravel/Modules/User/docs/quality-status-3.md"
     },
     {
       "oldRel": "laravel/Modules/User/docs/legacy/translation-city-field-refactor-2025-08-08.md",
@@ -370,19 +370,19 @@
       "newRel": "laravel/Modules/User/docs/password-translation-completion.md"
     },
     {
-      "oldRel": "laravel/Modules/User/docs/phpstan-fixes-gennaio-2025.md",
+      "oldRel": "laravel/Modules/User/docs/phpstan-fixes-gennaio-4.md",
       "newRel": "laravel/Modules/User/docs/phpstan-fixes-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/User/docs/phpstan_fixes_2025.md",
+      "oldRel": "laravel/Modules/User/docs/phpstan-fixes-4.md",
       "newRel": "laravel/Modules/User/docs/phpstan-fixes-archive-2.md"
     },
     {
-      "oldRel": "laravel/Modules/User/docs/roadmap-2025.md",
+      "oldRel": "laravel/Modules/User/docs/roadmap-3.md",
       "newRel": "laravel/Modules/User/docs/roadmap-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/User/docs/translation-syntax-fixes-2025.md",
+      "oldRel": "laravel/Modules/User/docs/translation-syntax-fixes-3.md",
       "newRel": "laravel/Modules/User/docs/translation-syntax-fixes.md"
     },
     {
@@ -422,7 +422,7 @@
       "newRel": "laravel/Modules/Xot/docs/phpstan-corrections-archive-1.md"
     },
     {
-      "oldRel": "laravel/Modules/Xot/docs/phpstan-fixes-gennaio-.md",
+      "oldRel": "laravel/Modules/Xot/docs/phpstan-fixes-gennaio-3.md",
       "newRel": "laravel/Modules/Xot/docs/phpstan-fixes-gennaio-archive-1.md"
     },
     {

@@ -9,4 +9,4 @@ issues: []
 discussions: []
 ---
 
-Redundancy analysis available: docs/analysis/redundancies/summary.md
+Redundancy analysis available: ../../Notify/docs/bugs/summary-2.md

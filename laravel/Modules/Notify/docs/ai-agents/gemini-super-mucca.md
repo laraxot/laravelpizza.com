@@ -160,7 +160,7 @@ Prima di toccare **qualsiasi** codice, devi comprendere:
 <<<<<<< HEAD
 <<<<<<< .merge_file_r4ipvS
 <<<<<<< .merge_file_ymYfxM
-- [GEMINI.md originale](../../gemini.md)
+- [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -168,22 +168,22 @@ Prima di toccare **qualsiasi** codice, devi comprendere:
 >>>>>>> .merge_file_uJcYvl
 =======
 >>>>>>> .merge_file_gP6axP
-- [gemini.md originale](../../gemini.md)
+- [gemini-2.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 =======
 <<<<<<< HEAD
-- [GEMINI.md originale](../../gemini.md)
+- [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 =======
-- [gemini.md originale](../../gemini.md)
+- [gemini-2.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_r4ipvS
 <<<<<<< .merge_file_ymYfxM
 =======
-- [GEMINI.md originale](../../gemini.md)
+- [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_uJcYvl
 =======
 >>>>>>> .merge_file_gP6axP
-- [Index principale](./index.md)
+- [Index principale](../../../Lang/docs/wiki/integrations/_da-riconciliare/index-3.md)

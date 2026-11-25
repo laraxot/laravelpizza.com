@@ -12,11 +12,11 @@ discussions: []
 # Phase Prompt Template
 
 > **Note:** Planning methodology is in `agents/gsd-planner.md`.
-> This template defines the plan.md output format that the agent produces.
+> This template defines the plan-2.md output format that the agent produces.
 
-Template for `.planning/phases/XX-name/{phase}-{plan}-PLAN.md` - executable phase plans optimized for parallel execution.
+Template for `.planning/phases/XX-name/{phase}-{plan}-plan-2.md` - executable phase plans optimized for parallel execution.
 
-**Naming:** Use `{phase}-{plan}-PLAN.md` format (e.g., `01-02-PLAN.md` for Phase 1, Plan 2)
+**Naming:** Use `{phase}-{plan}-plan-2.md` format (e.g., `01-02-PLAN.md` for Phase 1, Plan 2)
 
 ---
 
@@ -66,7 +66,7 @@ Output: [What artifacts will be created]
 <context>
 @.planning/PROJECT.md
 @.planning/roadmap.md
-@.planning/STATE.md
+@.planning/state-2.md
 
 # Only reference prior plan SUMMARYs if genuinely needed:
 # - This plan uses types/exports from prior plan
@@ -132,7 +132,7 @@ Before declaring plan complete:
   </success_criteria>
 
 <output>
-After completion, create `.planning/phases/XX-name/{phase}-{plan}-SUMMARY.md`
+After completion, create `.planning/phases/XX-name/{phase}-{plan}-summary-2.md`
 </output>
 ```
 
@@ -229,7 +229,7 @@ Wave 3 runs after Waves 1 and 2. Pauses at checkpoint, orchestrator presents to 
 <context>
 @.planning/PROJECT.md
 @.planning/roadmap.md
-@.planning/STATE.md
+@.planning/state-2.md
 
 # Only include SUMMARY refs if genuinely needed:
 # - This plan imports types from prior plan
@@ -336,7 +336,7 @@ Output: User model, API endpoints, and UI components.
 <context>
 @.planning/PROJECT.md
 @.planning/roadmap.md
-@.planning/STATE.md
+@.planning/state-2.md
 </context>
 
 <tasks>
@@ -579,7 +579,7 @@ Task completion ≠ Goal achievement. A task "create chat component" can complet
 **Verification flow:**
 
 1. Plan-phase derives must_haves from phase goal (goal-backward)
-2. Must_haves written to plan.md frontmatter
+2. Must_haves written to plan-2.md frontmatter
 3. Execute-phase runs all plans
 4. Verification subagent checks must_haves against codebase
 5. Gaps found → fix plans created → execute → re-verify

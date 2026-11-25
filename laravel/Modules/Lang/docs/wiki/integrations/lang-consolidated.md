@@ -67,21 +67,21 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 
 > Aggiorna entrambi i riferimenti se aggiungi nuove chiavi di traduzione o modifichi la struttura.
 
-## Collegamenti tra versioni di lang-link.md
-* [lang-link.md](laravel/Modules/Chart/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Reporting/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Gdpr/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Notify/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Xot/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Dental/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/User/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/UI/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Job/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Media/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Tenant/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Activity/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Patient/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Cms/docs/lang-link.md)
+## Collegamenti tra versioni di lang-link-2.md
+* [lang-link-2.md](laravel/Modules/Lang/docs/lang-link-2.md)
+* [lang-link-2.md](laravel/Modules/Lang/docs/lang-link-2.md)
+* [lang-link-2.md](laravel/Modules/Gdpr/docs/lang-link.md)
+* [lang-link-3.md](laravel/Modules/Notify/docs/lang-link.md)
+* [lang-link-3.md](laravel/Modules/Lang/docs/lang-link-3.md)
+* [lang-link-3.md](laravel/Modules/Lang/docs/lang-link-3.md)
+* [lang-link-3.md](laravel/Modules/User/docs/lang-link.md)
+* [lang-link-3.md](laravel/Modules/Lang/docs/lang-link-3.md)
+* [lang-link-3.md](laravel/Modules/Job/docs/lang-link.md)
+* [lang-link-3.md](laravel/Modules/Media/docs/lang-link.md)
+* [lang-link-3.md](laravel/Modules/Lang/docs/lang-link-3.md)
+* [lang-link-3.md](laravel/Modules/Activity/docs/lang-link.md)
+* [lang-link-3.md](laravel/Modules/Activity/docs/lang-link-3.md)
+* [lang-link-3.md](laravel/Modules/Cms/docs/lang-link.md)
 # Collegamento alle Traduzioni del Modulo Chart
 
 Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../../Lang/docs/).
@@ -103,31 +103,31 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 
 > Aggiorna entrambi i riferimenti se aggiungi nuove chiavi di traduzione o modifichi la struttura.
 
-## Collegamenti tra versioni di lang-link.md
-* [lang-link.md](laravel/Modules/Chart/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Reporting/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Gdpr/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Notify/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Xot/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Dental/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/User/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/UI/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Job/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Media/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Tenant/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Activity/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Patient/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Cms/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Cms/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Cms/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Cms/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Cms/docs/lang-link.md)
+## Collegamenti tra versioni di lang-link-2.md
+* [lang-link-2.md](laravel/Modules/Lang/docs/lang-link-2.md)
+* [lang-link-2.md](laravel/Modules/Lang/docs/lang-link-2.md)
+* [lang-link-2.md](laravel/Modules/Gdpr/docs/lang-link.md)
+* [lang-link-3.md](laravel/Modules/Notify/docs/lang-link.md)
+* [lang-link-3.md](laravel/Modules/Lang/docs/lang-link-3.md)
+* [lang-link-3.md](laravel/Modules/Lang/docs/lang-link-3.md)
+* [lang-link-3.md](laravel/Modules/User/docs/lang-link.md)
+* [lang-link-3.md](laravel/Modules/Lang/docs/lang-link-3.md)
+* [lang-link-3.md](laravel/Modules/Job/docs/lang-link.md)
+* [lang-link-3.md](laravel/Modules/Media/docs/lang-link.md)
+* [lang-link-3.md](laravel/Modules/Lang/docs/lang-link-3.md)
+* [lang-link-3.md](laravel/Modules/Activity/docs/lang-link.md)
+* [lang-link-3.md](laravel/Modules/Activity/docs/lang-link-3.md)
+* [lang-link-3.md](laravel/Modules/Cms/docs/lang-link.md)
+* [lang-link-3.md](laravel/Modules/Cms/docs/lang-link.md)
+* [lang-link-3.md](laravel/Modules/Cms/docs/lang-link.md)
+* [lang-link-3.md](laravel/Modules/Cms/docs/lang-link.md)
+* [lang-link-3.md](laravel/Modules/Cms/docs/lang-link.md)
 
 ---
 
 ## lang-service-helper-text-fix
 
-*Consolidated from: `lang-service-helper-text-fix.md`*
+*Consolidated from: `lang-service-helper-text-fix-2.md`*
 
 title: "Lang Service Helper Text Fix"
 module: "Lang"
@@ -185,9 +185,9 @@ Il LangServiceProvider è un componente fondamentale di <nome progetto> che gest
 
 La documentazione completa del LangServiceProvider è disponibile nel modulo Lang:
 
-- [Analisi e Proposte di Miglioramento](../laravel/Modules/Lang/docs/lang-service-provider.md)
-- [Analisi e Proposte di Miglioramento](../laravel/modules/lang/docs/lang-service-provider.md)
-- [Analisi e Proposte di Miglioramento](../laravel/modules/lang/docs/lang-service-provider.md)
+- [Analisi e Proposte di Miglioramento](../../lang-service-provider-2.md)
+- [Analisi e Proposte di Miglioramento](../../lang-service-provider-2.md)
+- [Analisi e Proposte di Miglioramento](../../lang-service-provider-2.md)
 
 ## Caratteristiche Principali
 
@@ -226,7 +226,7 @@ TextInput::make('name')
 
 ## lang-service-provider-improvements
 
-*Consolidated from: `lang-service-provider-improvements.md`*
+*Consolidated from: `lang-service-provider-improvements-2.md`*
 
 title: "Miglioramenti LangServiceProvider"
 module: "Lang"
@@ -426,7 +426,7 @@ class TranslationMissing
 - [Documentazione Traduzioni](../README.md)
 - [Documentazione Traduzioni](README.md)
 - [Guida Implementazione](./implementation-guide.md)
-- [Best Practices](./best-practices.md)
+- [Best Practices](../../../../Activity/docs/best-practices-3.md)
 
 ## Note Tecniche
 - Utilizzare Redis per il caching
@@ -604,7 +604,7 @@ class TranslationMissing
 ## Collegamenti
 - [Documentazione Traduzioni](../README.md)
 - [Guida Implementazione](./implementation-guide.md)
-- [Best Practices](./best-practices.md)
+- [Best Practices](../../../../Activity/docs/best-practices-3.md)
 
 ## Note Tecniche
 - Utilizzare Redis per il caching
@@ -618,7 +618,7 @@ class TranslationMissing
 
 ## lang-service-provider
 
-*Consolidated from: `lang-service-provider.md`*
+*Consolidated from: `lang-service-provider-2.md`*
 
 title: "LangServiceProvider: Analisi e Proposte di Miglioramento"
 module: "Lang"
@@ -1293,13 +1293,13 @@ Nel campo `value`, il valore di `helper_text` era uguale alla chiave del padre (
 ## Collegamenti
 
 ### Documentazione Correlata
-- [Translation Standards](translation-standards.md)
+- [Translation Standards](translation-standards-3.md)
 - [Helper Text Rules](translation-helper-text-standards.md)
-- [Lang Service Provider](lang-service-provider.md)
+- [Lang Service Provider](lang-service-provider-2.md)
 
 ### Regole Applicate
 - [Regola Helper Text Critica](../../../docs/translation-helper-text-critical-rule.md)
-- [Struttura Espansa Traduzioni](struttura-traduzioni.md)
+- [Struttura Espansa Traduzioni](struttura-traduzioni-2.md)
 - [Convenzioni Multi-Lingua](../../../../docs/multi-language-conventions.md)
 
 ## Note Implementative
@@ -1470,13 +1470,13 @@ Nel campo `value`, il valore di `helper_text` era uguale alla chiave del padre (
 ## Collegamenti
 
 ### Documentazione Correlata
-- [Translation Standards](translation-standards.md)
+- [Translation Standards](translation-standards-3.md)
 - [Helper Text Rules](translation-helper-text-standards.md)
-- [Lang Service Provider](lang-service-provider.md)
+- [Lang Service Provider](lang-service-provider-2.md)
 
 ### Regole Applicate
 - [Regola Helper Text Critica](../../docs/translation-helper-text-critical-rule.md)
-- [Struttura Espansa Traduzioni](struttura-traduzioni.md)
+- [Struttura Espansa Traduzioni](struttura-traduzioni-2.md)
 - [Convenzioni Multi-Lingua](../../../docs/multi-language-conventions.md)
 
 ## Note Implementative
@@ -1546,28 +1546,28 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 
 > Aggiorna entrambi i riferimenti se aggiungi nuove chiavi di traduzione o modifichi la struttura.
 
-## Collegamenti tra versioni di lang-link.md
-* [lang-link.md](laravel/Modules/Chart/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Reporting/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Gdpr/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Notify/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Xot/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Dental/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/User/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/UI/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Job/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Media/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Tenant/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Activity/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Patient/docs/lang-link.md)
-* [lang-link.md](laravel/Modules/Cms/docs/lang-link.md)
+## Collegamenti tra versioni di lang-link-2.md
+* [lang-link-2.md](laravel/Modules/Lang/docs/lang-link-2.md)
+* [lang-link-2.md](laravel/Modules/Lang/docs/lang-link-2.md)
+* [lang-link-2.md](laravel/Modules/Gdpr/docs/lang-link.md)
+* [lang-link-3.md](laravel/Modules/Notify/docs/lang-link.md)
+* [lang-link-3.md](laravel/Modules/Lang/docs/lang-link-3.md)
+* [lang-link-3.md](laravel/Modules/Lang/docs/lang-link-3.md)
+* [lang-link-3.md](laravel/Modules/User/docs/lang-link.md)
+* [lang-link-3.md](laravel/Modules/Lang/docs/lang-link-3.md)
+* [lang-link-3.md](laravel/Modules/Job/docs/lang-link.md)
+* [lang-link-3.md](laravel/Modules/Media/docs/lang-link.md)
+* [lang-link-3.md](laravel/Modules/Lang/docs/lang-link-3.md)
+* [lang-link-3.md](laravel/Modules/Activity/docs/lang-link.md)
+* [lang-link-3.md](laravel/Modules/Activity/docs/lang-link-3.md)
+* [lang-link-3.md](laravel/Modules/Cms/docs/lang-link.md)
 
 
 ---
 
 ## lang_service_helper_text_fix
 
-*Consolidated from: `lang_service_helper_text_fix.md`*
+*Consolidated from: `lang-service-helper-text-fix-2.md`*
 
 title: "Lang Service Helper Text Fix"
 module: "Lang"
@@ -1584,7 +1584,7 @@ related:
 
 ## lang_service_provider
 
-*Consolidated from: `lang_service_provider.md`*
+*Consolidated from: `lang-service-provider-2.md`*
 
 title: "LangServiceProvider: Analisi e Proposte di Miglioramento"
 module: "Lang"
@@ -1855,7 +1855,7 @@ Il `
 
 ## lang_service_provider_improvements
 
-*Consolidated from: `lang_service_provider_improvements.md`*
+*Consolidated from: `lang-service-provider-improvements-2.md`*
 
 title: "Miglioramenti LangServiceProvider"
 module: "Lang"
@@ -2037,7 +2037,7 @@ class TranslationMissing
 ## Collegamenti
 - [Documentazione Traduzioni](../README.md)
 - [Guida Implementazione](./implementation-guide.md)
-- [Best Practices](./best-practices.md)
+- [Best Practices](../../../../Activity/docs/best-practices-3.md)
 
 ## Note Tecniche
 - Utilizzare Redis per il caching
@@ -2387,11 +2387,11 @@ $value = $model->field;  // Ritorna traduzione 'en' se esiste, altrimenti fallba
 
 ### Documentazione Interna
 - [Notify Integration](../../Notify/docs/spatie-translatable-integration.md)
-- [Xot Filament Best Practices](../../Xot/docs/filament-best-practices.md)
+- [Xot Filament Best Practices](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Notify Integration](../../notify/docs/spatie-translatable-integration.md)
-- [Xot Filament Best Practices](../../xot/docs/filament-best-practices.md)
+- [Xot Filament Best Practices](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Notify Integration](../../notify/docs/spatie-translatable-integration.md)
-- [Xot Filament Best Practices](../../xot/docs/filament-best-practices.md)
+- [Xot Filament Best Practices](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
 
 ---
 

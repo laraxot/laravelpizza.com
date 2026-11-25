@@ -73,56 +73,12 @@ Consolidare la documentazione rimuovendo duplicati e file obsoleti, mantenendo u
 - ✅ `file-naming-rules.md` → Mantenere
 
 ### 6. PHPStan Documentation
-<<<<<<< HEAD
-<<<<<<< .merge_file_lo08cP
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_jNp9H7
 - ❌ `phpstan_fixes_2025.md` → Eliminare (duplicato)
-=======
-<<<<<<< HEAD
-- ❌ `phpstan_fixes_2025.md` → Eliminare (duplicato)
-=======
-- ❌ `phpstan_fixes.md` → Eliminare (duplicato)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_lo08cP
-=======
-- ❌ `phpstan_fixes_2025.md` → Eliminare (duplicato)
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_jNp9H7
 - ❌ `phpstan_fixes_gennaio_2025.md` → Eliminare (duplicato)
 - ❌ `phpstan_corrections_summary.md` → Eliminare (duplicato)
 - ❌ `phpstan_radio_badge_fix.md` → Eliminare (duplicato)
 - ✅ `phpstan-compliance.md` → Mantenere (documento principale)
-<<<<<<< HEAD
-<<<<<<< .merge_file_lo08cP
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_jNp9H7
 - ✅ `phpstan-fixes-.md` → Mantenere (se contiene info aggiuntive)
-=======
-<<<<<<< HEAD
-- ✅ `phpstan-fixes-2025.md` → Mantenere (se contiene info aggiuntive)
-
-- ✅ `phpstan-fixes-.md` → Mantenere (se contiene info aggiuntive)
-=======
-<<<<<<< .merge_file_2yxYy5
-- ✅ `phpstan-fixes.md` → Mantenere (se contiene info aggiuntive)
-=======
-- ✅ `phpstan-fixes-.md` → Mantenere (se contiene info aggiuntive)
->>>>>>> .merge_file_0qkdhX
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_lo08cP
-=======
-- ✅ `phpstan-fixes-2025.md` → Mantenere (se contiene info aggiuntive)
-
-- ✅ `phpstan-fixes-.md` → Mantenere (se contiene info aggiuntive)
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_jNp9H7
 - ✅ `phpstan-corrections-summary.md` → Mantenere
 - ✅ `phpstan-corrections.md` → Mantenere
 - ✅ `phpstan-fixes.md` → Mantenere
@@ -150,8 +106,8 @@ Consolidare la documentazione rimuovendo duplicati e file obsoleti, mantenendo u
 - ❌ `base_components.md` → Eliminare
 - ✅ `base-components.md` → Mantenere
 
-- ❌ `best_practices.md` → Eliminare
-- ✅ `best-practices.md` → Mantenere
+- ❌ `best-practices-3.md` → Eliminare
+- ✅ `best-practices-3.md` → Mantenere
 
 - ❌ `blocks_system.md` → Eliminare
 - ✅ `blocks-system.md` → Mantenere
@@ -173,49 +129,10 @@ Consolidare la documentazione rimuovendo duplicati e file obsoleti, mantenendo u
 
 1. `dry-kiss-analysis-[DATE].md` → `archive/dry-kiss-analysis.md`
 2. `phpstan-level-10-cleanup-[DATE].md` → `archive/phpstan-level-10-cleanup.md`
-<<<<<<< HEAD
-<<<<<<< .merge_file_lo08cP
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-=======
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
->>>>>>> .merge_file_jNp9H7
 3. `phpstan-fixes-correzioni-gennaio.md` → Consolidare in `phpstan-compliance.md`
 
 ## File con Maiuscole (da Rinominare)
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_lo08cP
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_jNp9H7
-=======
-1. `METODI_DUPLICATI_ANALISI.md` → `metodi-duplicati-analisi.md` (già esiste `metodi-duplicati-analisi.md`)
-
-=======
-<<<<<<< .merge_file_2yxYy5
-3. `phpstan-fixes.md` → Consolidare in `phpstan-compliance.md`
-=======
-3. `phpstan-fixes-correzioni-gennaio.md` → Consolidare in `phpstan-compliance.md`
->>>>>>> .merge_file_0qkdhX
-
-## File con Maiuscole (da Rinominare)
-
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_lo08cP
-=======
-1. `METODI_DUPLICATI_ANALISI.md` → `metodi-duplicati-analisi.md` (già esiste `metodi-duplicati-analisi.md`)
-
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_jNp9H7
 1. `metodi_duplicati_analisi.md` → `metodi-duplicati-analisi.md` (già esiste `metodi-duplicati-analisi.md`)
 
 ## Processo di Consolidamento

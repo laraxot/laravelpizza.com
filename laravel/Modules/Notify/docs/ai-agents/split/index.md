@@ -47,13 +47,13 @@ This directory contains split documentation files for AI assistants used in the 
 
 **Original Files** (kept for backward compatibility):
 - [`AGENTS.md`](../../../../AGENTS.md): 5349 lines, comprehensive BMad agents + tasks
-- [`docs/CLAUDE.md`](../../../../docs/CLAUDE.md): 833 lines, Laravel Boost guidelines
-- [`qwen.md`](../../../../qwen.md): 47 lines, Qwen output language rules
-- [`laravel/gemini.md`](../../../../laravel/gemini.md): 581 lines, Gemini-specific rules
-- [`AGENTS.md`](../../../../../AGENTS.md): 5349 lines, comprehensive BMad agents + tasks
-- [`docs/CLAUDE.md`](../../claude.md): 833 lines, Laravel Boost guidelines
-- [`qwen.md`](../../../../qwen.md): 47 lines, Qwen output language rules
-- [`laravel/gemini.md`](../../../../../gemini.md): 581 lines, Gemini-specific rules
+- [`../../../../Geo/docs/root-md-files/claude.md`](../../../../Geo/docs/root-md-files/claude.md): 833 lines, Laravel Boost guidelines
+- [`qwen-2.md`](../../wiki/integrations/_da-riconciliare/qwen-2.md): 47 lines, Qwen output language rules
+- [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../wiki/integrations/_da-riconciliare/gemini-2.md): 581 lines, Gemini-specific rules
+- [`AGENTS.md`](../../../../Lang/docs/wiki/agents-3.md): 5349 lines, comprehensive BMad agents + tasks
+- [`../../../../Geo/docs/root-md-files/claude.md`](../../claude.md): 833 lines, Laravel Boost guidelines
+- [`qwen-2.md`](../../wiki/integrations/_da-riconciliare/qwen-2.md): 47 lines, Qwen output language rules
+- [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../wiki/integrations/_da-riconciliare/gemini-2.md): 581 lines, Gemini-specific rules
 
 ---
 
@@ -110,8 +110,8 @@ This directory contains split documentation files for AI assistants used in the 
 
 ## Laravel Boost (CLAUDE.md)
 
-Split from [`docs/CLAUDE.md`](../../../../docs/CLAUDE.md):
-Split from [`docs/CLAUDE.md`](../../claude.md):
+Split from [`../../../../Geo/docs/root-md-files/claude.md`](../../../../Geo/docs/root-md-files/claude.md):
+Split from [`../../../../Geo/docs/root-md-files/claude.md`](../../claude.md):
 
 | Section | File | Lines |
 |---------|----|----|
@@ -133,8 +133,8 @@ Split from [`docs/CLAUDE.md`](../../claude.md):
 
 ## Gemini Rules
 
-Split from [`laravel/gemini.md`](../../../../laravel/gemini.md):
-Split from [`laravel/gemini.md`](../../../../../gemini.md):
+Split from [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../wiki/integrations/_da-riconciliare/gemini-2.md):
+Split from [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../wiki/integrations/_da-riconciliare/gemini-2.md):
 
 | Section | File | Lines |
 |---------|----|----|
@@ -151,7 +151,7 @@ Split from [`laravel/gemini.md`](../../../../../gemini.md):
 
 | File | Lines | Notes |
 |----|----|----|
-| [qwen.md](../../../../qwen.md) | 47 | Too small to split: kept as single file |
+| [qwen-2.md](../../wiki/integrations/_da-riconciliare/qwen-2.md) | 47 | Too small to split: kept as single file |
 
 ---
 
@@ -170,14 +170,14 @@ Split from [`laravel/gemini.md`](../../../../../gemini.md):
 ### Bidirectional Links
 - ← Back to [Project Root](../../)
 - ← Back to [Docs Index](../../docs/README.md)
-- ← Back to [AGENTS.md](../../../../AGENTS.md) (original)
+- ← Back to [agents-2.md](../../../../agents-2.md) (original)
 <<<<<<< .merge_file_YGu3YJ
 <<<<<<< .merge_file_xCeLtZ
 <<<<<<< HEAD
-- ← Back to [AGENTS.md](../../../../AGENTS.md) (original)
+- ← Back to [agents-2.md](../../../../agents-2.md) (original)
 =======
 <<<<<<< HEAD
-- ← Back to [AGENTS.md](../../../../AGENTS.md) (original)
+- ← Back to [agents-2.md](../../../../agents-2.md) (original)
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -187,8 +187,8 @@ Split from [`laravel/gemini.md`](../../../../../gemini.md):
 =======
 - ← Back to [AGENTS.md](../../../../AGENTS.md) (original)
 >>>>>>> .merge_file_cKZnkE
-- ← Back to [CLAUDE.md](../../../../docs/CLAUDE.md) (original)
-- ← Back to [gemini.md](../../../../laravel/gemini.md) (original)
+- ← Back to [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) (original)
+- ← Back to [gemini-2.md](../../wiki/integrations/_da-riconciliare/gemini-2.md) (original)
 - ← Back to [Docs Index](../../README.md)
 - ← Back to [AGENTS.md](../../../../../AGENTS.md) (original)
 <<<<<<< .merge_file_YGu3YJ
@@ -208,8 +208,8 @@ Split from [`laravel/gemini.md`](../../../../../gemini.md):
 - ← Back to [AGENTS.md](../../../../../AGENTS.md) (original)
 >>>>>>> .merge_file_cKZnkE
 - ← Back to [CLAUDE.md](../../claude.md) (original)
-- ← Back to [gemini.md](../../../../../gemini.md) (original)
-- ← Back to [qwen.md](../../../../qwen.md) (original)
+- ← Back to [gemini-2.md](../../wiki/integrations/_da-riconciliare/gemini-2.md) (original)
+- ← Back to [qwen-2.md](../../wiki/integrations/_da-riconciliare/qwen-2.md) (original)
 
 ---
 
@@ -232,5 +232,5 @@ Split from [`laravel/gemini.md`](../../../../../gemini.md):
 ### Changelog
 | Date | Change | Author |
 |------|--------|--------|
-| 2026-04-11 | Initial split of AGENTS.md, CLAUDE.md, gemini.md | Qwen |
-| 2026-04-11 | Initial split of AGENTS.md, CLAUDE.md, gemini.md | Qwen |
+| 2026-04-11 | Initial split of AGENTS.md, CLAUDE.md, gemini-2.md | Qwen |
+| 2026-04-11 | Initial split of AGENTS.md, CLAUDE.md, gemini-2.md | Qwen |

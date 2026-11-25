@@ -232,9 +232,9 @@ $avgTime = $jobMonitor->getAverageProcessingTime();
 =======
 >>>>>>> .merge_file_Qhh4a5
 =======
-- [Xot Module](../xot/docs/index.md) - Core base classes
-- [Activity Module](../activity/docs/index.md) - Activity logging
-- [Notify Module](../notify/docs/index.md) - Notification system
+- [Xot Module](../../Xot/docs/index.md) - Core base classes
+- [Activity Module](../../Activity/docs/index-2.md) - Activity logging
+- [Notify Module](../../Notify/docs/index-2.md) - Notification system
 - [User Module](../user/docs/README.md) - User authentication and management
 >>>>>>> .merge_file_2Syf5q
 <<<<<<< .merge_file_vAets9

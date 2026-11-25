@@ -1,7 +1,7 @@
 ---
 module: theme
 topic: MCP_SERVER_RECOMMENDED
-canonical: ../../../Themes/docs/shared-components/MCP-SERVER-RECOMMENDED.md
+canonical: mcp-server-recommended-2.md
 title: "MCP Server Consigliati per il Modulo Activity"
 type: note
 status: stub
@@ -10,7 +10,7 @@ tags: [docs, activity]
 qmd: "mcp server consigliati per il modulo activity activity"
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/MCP-SERVER-RECOMMENDED.md
+See canonical documentation: mcp-server-recommended-2.md
 title: "MCP Server Consigliati per il Modulo Activity"
 type: note
 status: stub
@@ -19,7 +19,7 @@ tags: [docs, activity]
 qmd: "mcp server consigliati per il modulo activity activity"
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/MCP-SERVER-RECOMMENDED.md
+See canonical documentation: mcp-server-recommended-2.md
 
 
 # MCP Server Consigliati per il Modulo Activity

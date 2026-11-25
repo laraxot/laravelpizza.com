@@ -34,7 +34,7 @@ Il modello `PageContent` è stato rinominato in `Section` per riflettere meglio 
 ### Files Rinominati
 - `PageContent.php` → `Section.php`
 - `PageContentResource.php` → `SectionResource.php`
-- `page-content-management.md` → `section-management.md`
+- `page-content-management-2.md` → `section-management-2.md`
 
 ### Namespace Aggiornati
 ```php

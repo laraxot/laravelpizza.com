@@ -143,7 +143,7 @@ test('any user type can login successfully', function (): void {
 
 ## 📖 **Collegamenti**
 
-- [XotData Architecture](../../modules/xot/docs/best-practices.md)
+- [XotData Architecture](../../../Activity/docs/best-practices-3.md)
 - [UserContract Interface](../../Modules/Xot/Contracts/UserContract.php)
 - [Modular Testing Guide](../../../docs/testing/modular-independence.md)
 

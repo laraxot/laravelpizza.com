@@ -200,9 +200,9 @@ Commits to push: 5 total
 
 ---
 
-<!-- Contenuto unito da git-push-lfs-issue-.md (rimozione date dai nomi file, issue #64) -->
+<!-- Contenuto unito da git-push-lfs-issue-2.md (rimozione date dai nomi file, issue #64) -->
 
-<!-- recovery from broken basename `git-push-lfs-issue-.md` after docs-guardian mass rename -->
+<!-- recovery from broken basename `git-push-lfs-issue-2.md` after docs-guardian mass rename -->
 
 Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file evita nomi `*-.md`.
 

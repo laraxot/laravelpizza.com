@@ -184,7 +184,7 @@ Alcune eccezioni sono pragmaticamente accettabili:
 <<<<<<< HEAD
 <<<<<<< .merge_file_aWmhwg
 <<<<<<< .merge_file_vJ8Mkq
-- [GEMINI.md originale](../../gemini.md)
+- [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -192,22 +192,22 @@ Alcune eccezioni sono pragmaticamente accettabili:
 >>>>>>> .merge_file_TzCmAK
 =======
 >>>>>>> .merge_file_deBKnz
-- [gemini.md originale](../../gemini.md)
+- [gemini-2.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 =======
 <<<<<<< HEAD
-- [GEMINI.md originale](../../gemini.md)
+- [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 =======
-- [gemini.md originale](../../gemini.md)
+- [gemini-2.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_aWmhwg
 <<<<<<< .merge_file_vJ8Mkq
 =======
-- [GEMINI.md originale](../../gemini.md)
+- [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_TzCmAK
 =======
 >>>>>>> .merge_file_deBKnz
-- [Index principale](./index.md)
+- [Index principale](../../../Lang/docs/wiki/integrations/_da-riconciliare/index-3.md)

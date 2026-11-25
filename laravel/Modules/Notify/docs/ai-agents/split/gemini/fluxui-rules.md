@@ -52,7 +52,7 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [GEMINI Index](index.md) — All Gemini guidelines
 - ← [Main AI Docs Index](../index.md) — Master index
-- ← [../../../../laravel/gemini.md](../../../../laravel/../../../../laravel/gemini.md) — Original source
+- ← [../../../wiki/integrations/_da-riconciliare/gemini-2.md](../../../wiki/integrations/_da-riconciliare/gemini-2.md) — Original source
 
 <<<<<<< HEAD
 =======

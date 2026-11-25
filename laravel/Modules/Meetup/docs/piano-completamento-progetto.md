@@ -752,8 +752,8 @@ Completare la piattaforma Laravel Pizza Meetups con:
   - Assets build
 
 #### 10.3 Changelog
-- [ ] **CHANGELOG.md**
-  - File: `CHANGELOG.md`
+- [ ] **changelog.md**
+  - File: `changelog.md`
   - Versioni e modifiche
   - Breaking changes
 

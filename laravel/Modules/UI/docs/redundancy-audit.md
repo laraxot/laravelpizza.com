@@ -15,7 +15,7 @@ High-risk findings:
 - Config files exist in both `Config/` and `config/`, including `config.php`, `laravel-localization.php`, and `laravellocalization.php`.
 - Many UI components are byte-identical with `Modules/User`, including `button`, `modal`, `input`, `checkbox`, `badge`, `link`, `nav-link`, `text-link`, `placeholder`, and marketing/layout components.
 - Block stats are duplicated under both `archived/` and `superseded/`.
-- Docs have case-only duplicates such as `ARCHITECTURE.md` and `architecture.md`, plus duplicate index variants.
+- Docs have case-only duplicates such as `architecture-2.md` and `architecture.md`, plus duplicate index variants.
 
 - Docs have case-only duplicates such as `architecture.md` and `architecture.md`, plus duplicate index variants.
 

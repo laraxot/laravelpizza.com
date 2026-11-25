@@ -15,14 +15,14 @@
 - ❌ **NON** scrivere rotte in `web.php` o `api.php`
 - ❌ **NON** usare Livewire class components
 - ❌ **NON** creare nuove cartelle docs - usare quelle esistenti
-- ❌ **NON** usare nomi file .md con maiuscole (eccetto README.md e CHANGELOG.md)
+- ❌ **NON** usare nomi file .md con maiuscole (eccetto README.md e changelog.md)
 
 #### ✅ COSA FARE SEMPRE
 - ✅ Usare **Folio** per tutte le rotte frontend
 - ✅ Usare **Volt** per tutti i componenti reattivi
 - ✅ Usare **Filament** solo per admin panel
 - ✅ Seguire principi **DRY + KISS + SOLID + Robust + Laraxot**
-- ✅ Usare nomi file .md in lowercase (solo README.md e CHANGELOG.md possono avere maiuscole)
+- ✅ Usare nomi file .md in lowercase (solo README.md e changelog.md possono avere maiuscole)
 
 ## Implementazione Pratica
 
@@ -345,5 +345,5 @@ VOLT_PATH=resources/views/livewire
 2. ✅ Folio + Volt per tutto il frontend
 3. ✅ Filament SOLO per admin panel
 4. ✅ DRY + KISS + SOLID + Robust + Laraxot
-5. ✅ Nomi file .md in lowercase (eccetto README.md e CHANGELOG.md)
+5. ✅ Nomi file .md in lowercase (eccetto README.md e changelog.md)
 6. ✅ Usare cartelle docs esistenti, NON crearne di nuove

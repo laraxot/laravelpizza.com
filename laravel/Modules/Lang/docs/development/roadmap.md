@@ -36,8 +36,8 @@ related:
 - [x] Basic templates
 - [x] API endpoints
 - [x] Cache system
-- [x] Compliance con la filosofia Xot: **nessuna registrazione manuale dei comandi console** nei provider (vedi [lang-service-provider.md](./lang-service-provider.md), [PHILOSOPHY.md](./PHILOSOPHY.md))
-- [x] Compliance con la filosofia Xot: **nessuna registrazione manuale dei comandi console** nei provider (vedi [lang-service-provider.md](./lang-service-provider.md), [PHILOSOPHY.md](./philosophy.md))
+- [x] Compliance con la filosofia Xot: **nessuna registrazione manuale dei comandi console** nei provider (vedi [lang-service-provider-2.md](../lang-service-provider-2.md), [philosophy-3.md](../philosophy-3.md))
+- [x] Compliance con la filosofia Xot: **nessuna registrazione manuale dei comandi console** nei provider (vedi [lang-service-provider-2.md](../lang-service-provider-2.md), [philosophy-3.md](../philosophy-3.md))
 
 ### In Progress (50%)
 - [ ] Performance optimization
@@ -127,7 +127,7 @@ related:
 ### Utente
 - [Translation Guide](roadmap/translation_guide.md)
 - [Admin Guide](roadmap/admin_guide.md)
-- [Best Practices](roadmap/best_practices.md)
+- [Best Practices](../../../Activity/docs/best-practices-3.md)
 - [Troubleshooting](roadmap/troubleshooting.md)
 
 ## Next Steps
@@ -342,8 +342,8 @@ Secondo le "Regole Windsurf per base_<nome progetto>_fila5_mono", gli obiettivi 
 
 ### Collegamenti Interni
 - [Bottlenecks](bottlenecks.md)
-- [Best Practices](BEST-PRACTICES.md)
-- [Best Practices](best-practices.md)
+- [Best Practices](best-practices-3.md)
+- [Best Practices](best-practices-3.md)
 - [Testing](testing.md)
 
 ### Versione HEAD

@@ -4,15 +4,7 @@ type: audit
 status: review
 updated: 2026-11-16
 module: Tenant
-<<<<<<< .merge_file_WoNYqp
 qmd: "audit approfondito Tenant risoluzione tenant Host header TrustHosts policy bypass tenant admin DatabaseConfig password sushi PHPStan Pest"
-=======
-<<<<<<< .merge_file_RDwQrY
-qmd: "audit approfondito Tenant risoluzione tenant Host header TrustHosts policy bypass tenant admin DatabaseConfig password sushi PHPStan Pest"
-=======
-qmd: "audit approfondito Tenant inventario risoluzione tenant Host header TrustHosts policy bypass tenant admin DatabaseConfig password sushi Filament Actions PHPStan Pest"
->>>>>>> .merge_file_JaXCLH
->>>>>>> .merge_file_oQZpo7
 ---
 
 # Audit approfondito — Tenant
@@ -126,7 +118,7 @@ Nessuno confermato.
 | TEN-P2-02 | `handleJsonDeleting` fa `unlink()` (`Safe\unlink`) senza controllare l'esistenza: se il file JSON manca, la cancellazione del record lancia. Il file JSON **è** il dato. | [SushiToJsons.php:262](../../../app/Models/Traits/SushiToJsons.php) |
 | TEN-P2-03 | Codice di test in namespace di produzione: `TestSushiModel` (`app/Models`), `TestCommand` (`tenant:test`) e il residuo `TestCommand.php.test`; trait con `@phpstan-ignore trait.unused` ([SushiToCsv.php:17-19](../../../app/Models/Traits/SushiToCsv.php), [SushiToPhpArray.php:16](../../../app/Models/Traits/SushiToPhpArray.php)). |
 | TEN-P2-04 | `TenantSetting`/`TenantSubscription`: `tenant_id` stringa senza FK, nessuna policy, **nessun global scope**: l'isolamento a livello riga non è automatico e il test `keeps rows separable without global scope` ([MultiTenantScopeTest.php](../../../tests/Feature/MultiTenantScopeTest.php)) fissa proprio che una query senza filtro restituisce le righe di entrambi i tenant. La prima analisi lo classificava P0; qui è P2 perché latente (nessuna Resource né query applicativa li legge). Oggi l'isolamento reale fra enti è quello per percorso (`GetTenantFilePathAction`, `config/<tenant>/`), non row-level. | [TenantSetting.php:41](../../../app/Models/TenantSetting.php), [TenantSubscription.php:41](../../../app/Models/TenantSubscription.php) |
-| TEN-P2-05 | Docs con collisione di maiuscole (18 coppie): `bmad/architecture.md`/`ARCHITECTURE.md`, `bmad/api.md`/`API.md`, `bmad/changelog.md`/`CHANGELOG.md`, `bmad/readme.md`/`README.md`, `index.md`/`INDEX.md` in 7 cartelle; si rompono su filesystem case-insensitive. Più `README.en.md`, `readme-en.md`, `readme.en.md`, `readme.it.md`. |
+| TEN-P2-05 | Docs con collisione di maiuscole (18 coppie): `bmad/architecture.md`/`ARCHITECTURE.md`, `bmad/api.md`/`API.md`, `bmad/changelog.md`/`CHANGELOG.md`, `bmad/readme.md`/`README.md`, `index.md`/`INDEX.md` in 7 cartelle; si rompono su filesystem case-insensitive. Più `README.en.md`, `readme-en.md`, `readme.en.md`, `readme-3.it.md`. |
 | TEN-P2-06 | Docs: 40 file citano `TenantService::` (classe inesistente: la regola vive in [GetTenantFilePathAction](../../../app/Actions/Config/GetTenantFilePathAction.php)); purpose "52 file"; `epics.md`/`decision-log.md` erano template; `architecture.md` uno stub; story con data nel nome `module-bmad-audit-20260928.story.md` accanto a `module-bmad-audit.story.md` (stesso argomento). |
 | TEN-P2-07 | 10 file di test "coverage" (`TenantCoverageBoostTest`, `TenantGapsCoverageTest`, `TenantStatementCoverageTest`, …) accanto a test di regola reali. |
 | TEN-P2-08 | `Tenant` ([Tenant.php:68](../../../app/Models/Tenant.php)) e la sua factory esistono ma nessuna migration del repo crea `tenants` (`rg "create('tenants'"` su `Modules/*/database` e `laravel/database`: 0); le 3 migration del modulo coprono solo settings, subscriptions, database_configs. Chi la crea? Domanda aperta in [brainstorming.md](../brainstorming.md). Anche `brainstorming.md` citava `ConfigResolverRegistry`, `StandardConfigResolver` e `app/Services/TenantService.php` (0 occorrenze fuori docs: `app/Services` non esiste). |

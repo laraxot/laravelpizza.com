@@ -244,7 +244,7 @@ php artisan test --filter=AutoAssignTicketJobTest
 
 ### Documentation
 ✅ **README.md** - Per ogni modulo  
-✅ **API.md** - Se ha API  
+✅ **api-2.md** - Se ha API  
 ✅ **GUIDE.md** - Se necessario  
 ✅ **Examples** - Codice funzionante  
 ✅ **Comments** - Inline quando serve  

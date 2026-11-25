@@ -74,7 +74,7 @@ This guide establishes the strict rules for writing prompts for the Meetup theme
 - ✅ Updates to `docs/` folders are MANDATORY
 - ✅ Study docs BEFORE making changes
 - ✅ Update docs AFTER making changes
-- ✅ Use lowercase filenames (except `README.md`, `CHANGELOG.md`)
+- ✅ Use lowercase filenames (except `README.md`, `changelog.md`)
 
 ### File Modification Rules (NEW 2026-02-09)
 - ✅ Before modifying ANY file, create `.lock` file with same name

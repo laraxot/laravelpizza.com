@@ -195,7 +195,7 @@ Lo script `bashscripts/create_svg_structure.sh` è stato utilizzato per creare a
 
 - [Struttura Moduli](../architecture/modules/)
 - [Componenti UI](./ui-components.md)
-- [Best Practices Filament](../filament/best-practices.md)
+- [Best Practices Filament](../../../../../Activity/docs/best-practices-3.md)
 - [Script di Automazione](../../bashscripts/create_svg_structure.sh)
 <<<<<<< HEAD
 =======

@@ -41,7 +41,7 @@ cd laravel
 ## Collegamenti alla Documentazione
 
 - [CONFLITTI_MERGE_RISOLTI.md](CONFLITTI_MERGE_RISOLTI.md): Documentazione dei conflitti risolti nel modulo UI.
-- [actions/table_layout_toggle.md](actions/table_layout_toggle.md): Documentazione dell'azione TableLayoutToggle.
+- [actions/table-layout-toggle-2.md](actions/table-layout-toggle-2.md): Documentazione dell'azione TableLayoutToggle.
 - [components.md](components.md): Documentazione dei componenti UI, incluso AddressField.
 
 ## Collegamenti Principali

@@ -139,7 +139,7 @@ Modules/<nome progetto>/Actions/Patient/Calendar/FetchEventsAction.php
 ```
 
 ## Collegamenti
-- Vedi anche: `naming-conventions.md`, `directory-structure.md`, `best-practices.md`
+- Vedi anche: `naming-conventions.md`, `directory-structure-2.md`, `best-practices-3.md`
 - Aggiornare sempre la documentazione dei moduli e Xot in caso di modifica della struttura.
 
 ## Actions Queueable

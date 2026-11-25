@@ -190,7 +190,7 @@ sync_templates() {
     log_info "Synchronizing documentation templates..."
     
     local template_files=(
-        "base_README_template.md"
+        "base-readme-template-2.md"
         "getting_started_template.md"
         "configuration_template.md"
         "api_reference_template.md"

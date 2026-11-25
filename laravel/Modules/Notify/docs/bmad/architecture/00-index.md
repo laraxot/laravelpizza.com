@@ -38,21 +38,21 @@ created: 2026-11-23
 ## 🎯 **Lettura Essenziale**
 1. [README.md](./readme.md) - Panoramica completa e Quick Start.
 2. [roadmap.md](../../roadmap.md) - Evoluzione 2026: Multi-channel API e AI Templates.
-3. [philosophy.md](../../philosophy.md) - "Essere Connessi": filosofia delle notifiche in tempo reale.
+3. [philosophy-3.md](../../philosophy.md) - "Essere Connessi": filosofia delle notifiche in tempo reale.
 
 ## 🏗️ **Architettura & Canali**
 <<<<<<< .merge_file_BIF7rL
 =======
-- 📧 **[Email System](./email-templates.md)** - Gestione template dinamici e stagionali (Spatie integration).
-- 💬 **[SMS & WhatsApp](./whatsapp-integration.md)** - Integrazione con NetFun e altri provider.
+- 📧 **[Email System](../../email-templates-2.md)** - Gestione template dinamici e stagionali (Spatie integration).
+- 💬 **[SMS & WhatsApp](../../whatsapp-integration-2.md)** - Integrazione con NetFun e altri provider.
 - 🚀 **[Bulk Notifications](./send-notification-bulk-action.md)** - Azioni massive per migliaia di utenti.
-- 🧱 **[Base Templates](./base-templates.md)** - Struttura HTML responsive per messaggi transazionali.
+- 🧱 **[Base Templates](../../base-templates-2.md)** - Struttura HTML responsive per messaggi transazionali.
 
 ## ⚙️ **Configurazione Avanzata**
 - 📦 **[Composer Dependencies](../../composer-dependencies.md)** - Firebase, FCM, Telegram: package nel modulo Notify, mai nel root.
 - 📦 **[Riferimento pacchetti](../../../../docs/composer-packages-reference.md)** | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md) - AWS, Telegram, Postmark, Spatie mail templates
-- 🛠️ **[Channel Provider](./provider-actions-architecture.md)** - Come estendere il modulo con nuovi driver.
-- 🏷️ **[Acronym Naming](./acronym-naming-conventions.md)** - Standard per la denominazione dei driver e canali.
+- 🛠️ **[Channel Provider](../../provider-actions-architecture-2.md)** - Come estendere il modulo con nuovi driver.
+- 🏷️ **[Acronym Naming](../../acronym-naming-conventions-2.md)** - Standard per la denominazione dei driver e canali.
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_xgceWH
@@ -105,8 +105,8 @@ created: 2026-11-23
 - 🧾 **[SMS Actions consolidation decision](../../wiki/decisions/sms-actions-consolidation.md)** - Cosa è stato consolidato in `.bak`, cosa resta attivo (netfun/smsfactor raggiungibili da Filament `SendSmsPage`) e perché.
 
 ## 🧹 **Manutenzione**
-- 🗑️ **[Cleanup Plan](./translation-cleanup-plan.md)** - Rimozione dei 500+ file obsoleti accumulati.
-- 🛡️ **[Security Analysis](./security-analysis.md)** - Protezione dei webhook dei provider (es. WhatsApp).
+- 🗑️ **[Cleanup Plan](../../translation-cleanup-plan-2.md)** - Rimozione dei 500+ file obsoleti accumulati.
+- 🛡️ **[Security Analysis](../../security-analysis-2.md)** - Protezione dei webhook dei provider (es. WhatsApp).
 
 ## 🔗 **Moduli Correlati**
 - [Xot](../../xot/docs/readme.md) - Dispatcher centrale.

@@ -101,7 +101,7 @@ Verificare che:
 ## Collegamenti
 - [Notify Module Documentation](README.md)
 - [RecordNotification Implementation](notifications/record_notification.md)
-- [SpatieEmail Integration](spatie_email_usage_guide.md)
+- [SpatieEmail Integration](spatie-email-usage-guide-2.md)
 - [SpatieEmail Integration](spatie-email-usage-guide.md)
 - [Root Conflict Resolution Guidelines](../../../../docs/conflict-resolution-guidelines.md)
 
@@ -184,7 +184,7 @@ Verificare che:
 ## Collegamenti
 - [Notify Module Documentation](README.md)
 - [RecordNotification Implementation](notifications/record_notification.md)
-- [SpatieEmail Integration](spatie_email_usage_guide.md)
+- [SpatieEmail Integration](spatie-email-usage-guide-2.md)
 - [SpatieEmail Integration](spatie-email-usage-guide.md)
 - [Root Conflict Resolution Guidelines](../../../../docs/project/conflict-resolution-guidelines.md)
 

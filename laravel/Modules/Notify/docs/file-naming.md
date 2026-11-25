@@ -100,7 +100,7 @@ Su filesystem case-insensitive (Windows, macOS default), file con nomi che diffe
 >>>>>>> .merge_file_936axB
 >>>>>>> laraxot/dev
 - LICENSE.md (maiuscolo - convenzione universale)
-- CONTRIBUTING.md (maiuscolo - convenzione universale)
+- contributing-2.md (maiuscolo - convenzione universale)
 - SECURITY.md (maiuscolo - convenzione universale)
 
 - Tutti gli altri: kebab-case minuscolo

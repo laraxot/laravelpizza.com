@@ -131,7 +131,7 @@ protected function getFormSchema(): array
 - [Media Module README](../readme.md)
 - [Filament Best Practices](../../../../../docs/filament-best-practices.md)
 - [Translation Rules](../../../../../docs/translation-rules.md)
-- [PHPStan Guidelines](../../../../../docs/phpstan-guidelines.md)
+- [PHPStan Guidelines](../../laravel/Modules/Xot/docs/consolidated/phpstan/phpstan-guidelines-2.md)
 
 ## 📊 **Metriche Miglioramento**
 

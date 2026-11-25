@@ -4,7 +4,7 @@
 Riorganizzare la mastodontica cartella docs del modulo User (550+ file) che contiene anni di analisi sovrapposte.
 
 ## 🚨 Problemi Identificati
-- Ripetizioni infinite di analisi (es. `logout-blade-analysis-1.md`, `logout-blade-analysis.md`, `logout-blade-corrected-analysis.md`).
+- Ripetizioni infinite di analisi (es. `logout-blade-analysis-1.md`, `logout-blade-analysis-4.md`, `logout-blade-corrected-analysis-4.md`).
 - File duplicati per conflitti Git non risolti (`dry-kiss-analysis-conflict-018b09.md`).
 - File temporanei e log di coverage enormi (`coverage_full.txt` da 600kb).
 

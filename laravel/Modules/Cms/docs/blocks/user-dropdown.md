@@ -209,7 +209,7 @@ Questa soluzione sfrutta il componente dropdown di Filament, mantiene la coerenz
 
 ## Collegamenti
 - [Documentazione Filament Blade Components](./filament-blade-components.md)
-- [Best Practices UI/UX](./guida-implementazione-ux.md)
+- [Best Practices UI/UX](../guida-implementazione-ux-2.md)
 - [Documentazione Accessibilità](./accessibility.md)
 - [Modulo UI - Filament Blade Components](/var/www/html/<directory progetto>/laravel/modules/ui/docs/filament/resources.md)
 - [Documentazione Blocchi Navigation](./navigation.md)

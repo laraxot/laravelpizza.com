@@ -70,7 +70,7 @@ storica; entrambi i parent del merge contenevano gli stessi marker committati.
 | File | Blocco | Decisione | Motivo |
 |---|---|---|---|
 | `docs/wiki/integrations/_da-riconciliare/file-naming.md` | 1 (frontmatter) | union | `type: rule` da theirs (il doc è normativo — "Regola Fondamentale", convenzioni, checklist — e `rule` è un tipo già usato in `docs/wiki/rules/`); `tags`/`qmd` ours (italiano = lingua del doc, già superset semantico di `[migration, filament]`; dedup migrazione/migration) |
-| `docs/wiki/integrations/_da-riconciliare/pluralization-and-localization.md` | 1 | ours | path kebab-case `translation-keys-best-practices.md` vs `./TRANSLATION_KEYS_BEST_PRACTICES.md`: vince kebab (convenzione repo, ~150 vs ~51 occorrenze) |
+| `docs/wiki/integrations/_da-riconciliare/pluralization-and-localization.md` | 1 | ours | path kebab-case `translation-keys-best-practices-3.md` vs `../../translation-keys-best-practices-3.md`: vince kebab (convenzione repo, ~150 vs ~51 occorrenze) |
 | `docs/wiki/integrations/_da-riconciliare/pluralization-and-localization.md` | 2 | union | link kebab da ours + lista theirs deduplicata: ours aveva 5 righe `README.md` duplicate (garbage); risultato = 4 link unici |
 | `docs/wiki/integrations/_da-riconciliare/validation-messages.md` | 1 | ours | come pluralization blocco 1: vince path kebab-case |
 | `docs/wiki/integrations/_da-riconciliare/validation-messages.md` | 2 | union | come pluralization blocco 2: kebab ours + lista deduplicata (5×README → 1) |
@@ -109,22 +109,13 @@ vuoto/minore; **nessun** `require …/Xot/routes/empty.php`):
 
 `php -l` OK su tutti. `Modules/Lang/app` + `routes` = zero marker.
 
-<<<<<<< .merge_file_Wu4e4D
-<<<<<<< .merge_file_eMHYXg
 ## Claim (2026-11-24) — PHPStan bootstrap blockers
 
 | Claim | Evidence |
 |---|---|
 | Marker merge in Actions/routes/lang/`language-switcher`/tests SaveTrans+Pest ripuliti: routes restano vuoti (no `Xot/routes/empty.php`), switcher usa `$locale['url']` da widget, group test HEAD conservati | `rg '^<<<<<<<'` su quei path → 0; `php -l` OK; `./vendor/bin/phpstan analyse Modules --memory-limit=2G` → `[OK] No errors` |
-=======
-=======
->>>>>>> .merge_file_vXy0Bx
 Residui **fuori scope boot** (tests/views): `tests/**`, `resources/views/components/language-switcher.blade.php`.
 
 Verifica `php artisan about --only=environment`: fallisce ancora per problemi
 vendor/moduli (`HasCustomRelations` / `spatie/laravel-data`), non per
 syntax/marker Lang.
-<<<<<<< .merge_file_Wu4e4D
->>>>>>> .merge_file_Tcm8qW
-=======
->>>>>>> .merge_file_vXy0Bx

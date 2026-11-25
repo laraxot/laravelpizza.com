@@ -249,8 +249,8 @@ Same as above.
 
 ### Files Created
 
-- `docs/sync_remote_repo_test_plan.md` - Test plan
-- `docs/sync_remote_repo_test_report.md` - This report
+- `docs/sync-remote-repo-test-plan-2.md` - Test plan
+- `docs/sync-remote-repo-test-report-2.md` - This report
 - `.github/ISSUE_TEMPLATE/sync-remote-repo.md` - Issue template
 - `.github/ISSUE_TEMPLATE/agent-coordination.md` - Coordination template
 

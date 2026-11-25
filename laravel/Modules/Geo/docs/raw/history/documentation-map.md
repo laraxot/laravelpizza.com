@@ -43,7 +43,7 @@ discussions: []
    │   ├── README.md (Updated with analysis links)
    │   ├── quick-start.md ⭐ Fast onboarding
    │   ├── analysis-summary-2025.md ⭐ Executive summary
-   │   ├── code-quality-analysis.md (~800 lines)
+   │   ├── code-quality-analysis-3.md (~800 lines)
    │   ├── refactoring-action-plan.md (~1000 lines, 18 tasks)
    │   ├── best-practices.md (~600 lines)
    │   ├── trait-responsibility-violation.md (~400 lines)

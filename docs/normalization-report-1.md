@@ -66,7 +66,7 @@
 
 ### Modulo Lang
 - `riepilogo-correzioni-traduzioni-2025.md` (verificare se esiste `riepilogo-correzioni-traduzioni.md`)
-- `translation-errors-correction-2025.md` (verificare duplicati)
+- `translation-errors-correction-3.md` (verificare duplicati)
 
 ### Modulo Xot
 - File in cartella `archive/` (valutare se mantenere date per storico)

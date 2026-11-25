@@ -449,12 +449,12 @@ public function handle(Invoice $invoice): void
 ## References
 
 - [Laravel Queues Documentation](https://laravel.com/docs/queues)
-- [Queue Best Practices](./best-practices.md)
+- [Queue Best Practices](../../Activity/docs/best-practices-3.md)
 - [Troubleshooting Guide](./job-module-troubleshooting-guide.md)
 - [Job Monitor Filament Resource](./COMPONENTS.md#filament-resources)
 
 ---
 
-**Document:** PATTERNS.md  
+**Document:** patterns-2.md  
 **Version:** 1.0  
 **Status:** Active (2026-07-28)

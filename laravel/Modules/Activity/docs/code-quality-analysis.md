@@ -372,8 +372,8 @@ public function getActivities(array $filters = []): Collection
 <<<<<<< .merge_file_UYDGwn
 <<<<<<< .merge_file_g390c1
 <<<<<<< .merge_file_BYx55N
-- [ACTIVITY_LOG_OPTIMIZATION.md](./performance/ACTIVITY_LOG_OPTIMIZATION.md)
-- [QUERY_OPTIMIZATION_ANALYSIS.md](./QUERY_OPTIMIZATION_ANALYSIS.md)
+- [ACTIVITY_LOG_OPTIMIZATION.md](performance/activity-log-optimization-2.md)
+- [query-optimization-analysis-3.md](./query-optimization-analysis-3.md)
 =======
 =======
 >>>>>>> .merge_file_JTRwwK
@@ -382,20 +382,20 @@ public function getActivities(array $filters = []): Collection
 =======
 >>>>>>> .merge_file_OibCpf
 <<<<<<< HEAD
-- [ACTIVITY_LOG_OPTIMIZATION.md](./performance/activity_log_optimization.md)
-- [QUERY_OPTIMIZATION_ANALYSIS.md](./query_optimization_analysis.md)
+- [ACTIVITY_LOG_OPTIMIZATION.md](./performance/activity-log-optimization-2.md)
+- [query-optimization-analysis-3.md](query-optimization-analysis-3.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-- [ACTIVITY_LOG_OPTIMIZATION.md](./performance/ACTIVITY_LOG_OPTIMIZATION.md)
-- [QUERY_OPTIMIZATION_ANALYSIS.md](./QUERY_OPTIMIZATION_ANALYSIS.md)
+- [ACTIVITY_LOG_OPTIMIZATION.md](performance/activity-log-optimization-2.md)
+- [query-optimization-analysis-3.md](./query-optimization-analysis-3.md)
 =======
-- [ACTIVITY_LOG_OPTIMIZATION.md](./performance/activity_log_optimization.md)
-- [QUERY_OPTIMIZATION_ANALYSIS.md](./query_optimization_analysis.md)
+- [ACTIVITY_LOG_OPTIMIZATION.md](./performance/activity-log-optimization-2.md)
+- [query-optimization-analysis-3.md](query-optimization-analysis-3.md)
 >>>>>>> laraxot/dev
 =======
-- [ACTIVITY_LOG_OPTIMIZATION.md](./performance/activity_log_optimization.md)
-- [QUERY_OPTIMIZATION_ANALYSIS.md](./query_optimization_analysis.md)
+- [ACTIVITY_LOG_OPTIMIZATION.md](./performance/activity-log-optimization-2.md)
+- [query-optimization-analysis-3.md](query-optimization-analysis-3.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_9G04WH
@@ -851,15 +851,15 @@ $defaultRecordsPerPageSelectOption → $defaultPerPageOption
 
 ## 📚 Related Documentation
 
-- [ACTIVITY_LOG_OPTIMIZATION.md](./performance/activity_log_optimization.md)
-- [QUERY_OPTIMIZATION_ANALYSIS.md](./query_optimization_analysis.md)
+- [ACTIVITY_LOG_OPTIMIZATION.md](./performance/activity-log-optimization-2.md)
+- [query-optimization-analysis-3.md](query-optimization-analysis-3.md)
 - [bottlenecks.md](./bottlenecks.md)
 
 This analysis provides a comprehensive roadmap for improving code quality in the Activity module while maintaining data integrity and performance.
 
 
-- [ACTIVITY_LOG_OPTIMIZATION.md](./performance/activity_log_optimization.md)
-- [QUERY_OPTIMIZATION_ANALYSIS.md](./query_optimization_analysis.md)
+- [ACTIVITY_LOG_OPTIMIZATION.md](./performance/activity-log-optimization-2.md)
+- [query-optimization-analysis-3.md](query-optimization-analysis-3.md)
 - [bottlenecks.md](./bottlenecks.md)
 
 This analysis provides a comprehensive roadmap for improving code quality in the Activity module while maintaining data integrity and performance.

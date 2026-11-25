@@ -82,4 +82,4 @@ L'implementazione concreta (`MetatagData`, model, adapter) dichiara `implements 
 ## Canon
 
 - [contract-suffix-no-interfaces-folder.md](../../../../../../docs/wiki/memories/contract-suffix-no-interfaces-folder.md)
-- Notify: [provider-contracts-naming.md](../../../../Notify/docs/provider-contracts-naming.md)
+- Notify: [provider-contracts-naming-2.md](../../../../Notify/docs/provider-contracts-naming.md)

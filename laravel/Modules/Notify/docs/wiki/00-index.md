@@ -49,19 +49,19 @@ created: 2026-11-23
 ## 🎯 **Lettura Essenziale**
 1. [README.md](./README.md) - Panoramica completa e Quick Start.
 2. [roadmap.md](./roadmap.md) - Evoluzione 2026: Multi-channel API e AI Templates.
-3. [philosophy.md](./philosophy.md) - "Essere Connessi": filosofia delle notifiche in tempo reale.
+3. [philosophy-3.md](../../../Lang/docs/philosophy-3.md) - "Essere Connessi": filosofia delle notifiche in tempo reale.
 
 ## 🏗️ **Architettura & Canali**
-- 📧 **[Email System](./email-templates.md)** - Gestione template dinamici e stagionali (Spatie integration).
-- 💬 **[SMS & WhatsApp](./whatsapp-integration.md)** - Integrazione con NetFun e altri provider.
+- 📧 **[Email System](../email-templates-2.md)** - Gestione template dinamici e stagionali (Spatie integration).
+- 💬 **[SMS & WhatsApp](../whatsapp-integration-2.md)** - Integrazione con NetFun e altri provider.
 - 🚀 **[Bulk Notifications](./send-notification-bulk-action.md)** - Azioni massive per migliaia di utenti.
-- 🧱 **[Base Templates](./base-templates.md)** - Struttura HTML responsive per messaggi transazionali.
+- 🧱 **[Base Templates](../base-templates-2.md)** - Struttura HTML responsive per messaggi transazionali.
 
 ## ⚙️ **Configurazione Avanzata**
 - 📦 **[Composer Dependencies](../composer-dependencies.md)** - Firebase, FCM, Telegram: package nel modulo Notify, mai nel root.
 - 📦 **[Riferimento pacchetti](../../../../docs/composer-packages-reference.md)** | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md) - AWS, Telegram, Postmark, Spatie mail templates
-- 🛠️ **[Channel Provider](./provider-actions-architecture.md)** - Come estendere il modulo con nuovi driver.
-- 🏷️ **[Acronym Naming](./acronym-naming-conventions.md)** - Standard per la denominazione dei driver e canali.
+- 🛠️ **[Channel Provider](../provider-actions-architecture-2.md)** - Come estendere il modulo con nuovi driver.
+- 🏷️ **[Acronym Naming](../acronym-naming-conventions-2.md)** - Standard per la denominazione dei driver e canali.
 <<<<<<< HEAD
 <<<<<<< .merge_file_yB5WGx
 <<<<<<< HEAD
@@ -94,7 +94,7 @@ created: 2026-11-23
 >>>>>>> laraxot/dev
 - 🔄 **[Queue Management](../monitoring.md)** - Monitoraggio delle code e dei fallback.
 - 📧 **[Email System](../email-templates.md)** - Gestione template dinamici e stagionali (Spatie integration).
-- 💬 **[SMS & WhatsApp](./whatsapp-integration.md)** - Integrazione con NetFun e altri provider.
+- 💬 **[SMS & WhatsApp](../whatsapp-integration-2.md)** - Integrazione con NetFun e altri provider.
 - 🚀 **[Bulk Notifications](./send-notification-bulk-action.md)** - Azioni massive per migliaia di utenti.
 - 🧱 **[Base Templates](../base-templates.md)** - Struttura HTML responsive per messaggi transazionali.
 
@@ -102,7 +102,7 @@ created: 2026-11-23
 - 📦 **[Composer Dependencies](../composer-dependencies.md)** - Firebase, FCM, Telegram: package nel modulo Notify, mai nel root.
 - 📦 **[Riferimento pacchetti](../../../../docs/composer-packages-reference.md)** | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md) - AWS, Telegram, Postmark, Spatie mail templates
 - 🛠️ **[Channel Provider](../provider-actions-architecture.md)** - Come estendere il modulo con nuovi driver.
-- 🏷️ **[Acronym Naming](./acronym-naming-conventions.md)** - Standard per la denominazione dei driver e canali.
+- 🏷️ **[Acronym Naming](../acronym-naming-conventions-2.md)** - Standard per la denominazione dei driver e canali.
 - 🔄 **[Queue Management](../monitoring.md)** - Monitoraggio delle code e dei fallback.
 
 ## 🧪 **Qualità e Sviluppo**
@@ -114,12 +114,12 @@ created: 2026-11-23
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_bYszQ2
-- ✅ **[PHPStan Analysis](../PHPSTAN-FIXES.md)** - Report di conformità Level 10.
+- ✅ **[PHPStan Analysis](../phpstan-fixes.md)** - Report di conformità Level 10.
 =======
 <<<<<<< HEAD
 - ✅ **[PHPStan Analysis](../phpstan-fixes.md)** - Report di conformità Level 10.
 =======
-- ✅ **[PHPStan Analysis](../PHPSTAN-FIXES.md)** - Report di conformità Level 10.
+- ✅ **[PHPStan Analysis](../phpstan-fixes.md)** - Report di conformità Level 10.
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_yB5WGx
@@ -187,8 +187,8 @@ created: 2026-11-23
 >>>>>>> laraxot/dev
 
 ## 🧹 **Manutenzione**
-- 🗑️ **[Cleanup Plan](./translation-cleanup-plan.md)** - Rimozione dei 500+ file obsoleti accumulati.
-- 🛡️ **[Security Analysis](./security-analysis.md)** - Protezione dei webhook dei provider (es. WhatsApp).
+- 🗑️ **[Cleanup Plan](../translation-cleanup-plan-2.md)** - Rimozione dei 500+ file obsoleti accumulati.
+- 🛡️ **[Security Analysis](../security-analysis-2.md)** - Protezione dei webhook dei provider (es. WhatsApp).
 
 ## 🔗 **Moduli Correlati**
 - [Xot](../../xot/docs/README.md) - Dispatcher centrale.

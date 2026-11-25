@@ -114,7 +114,7 @@ Il modulo Xot è il modulo foundation del progetto, contenente classi base, serv
    ./vendor/bin/phpinsights analyse Modules/Xot --no-interaction
    ```
 3. **Issue Documentation**
-   - Create `PHPMD_ANALYSIS.md`
+   - Create `phpmd-analysis-2.md`
    - Track all findings
    - Prioritize by severity
 
@@ -207,11 +207,11 @@ Il modulo Xot è il modulo foundation del progetto, contenente classi base, serv
 
 ## 📚 Documentation Files to Create
 
-1. **`PHPMD_ANALYSIS.md`** - Detailed PHPMD findings
+1. **`phpmd-analysis-2.md`** - Detailed PHPMD findings
 2. **`ARCHITECTURE.md`** - Module architecture documentation
 3. **`PERFORMANCE_ANALYSIS.md`** - Performance metrics and optimization
 4. **`API_REFERENCE.md`** - Complete API documentation
-5. **`BEST_PRACTICES.md`** - Usage guidelines and patterns
+5. **`best-practices-2.md`** - Usage guidelines and patterns
 
 **Status**: Analysis Complete
 
@@ -420,7 +420,7 @@ Il modulo Xot è il modulo foundation del progetto, contenente classi base, serv
    ./vendor/bin/phpinsights analyse Modules/Xot --no-interaction
    ```
 3. **Issue Documentation**
-   - Create `PHPMD_ANALYSIS.md`
+   - Create `phpmd-analysis-2.md`
    - Track all findings
    - Prioritize by severity
 
@@ -513,11 +513,11 @@ Il modulo Xot è il modulo foundation del progetto, contenente classi base, serv
 
 ## 📚 Documentation Files to Create
 
-1. **`PHPMD_ANALYSIS.md`** - Detailed PHPMD findings
+1. **`phpmd-analysis-2.md`** - Detailed PHPMD findings
 2. **`ARCHITECTURE.md`** - Module architecture documentation
 3. **`PERFORMANCE_ANALYSIS.md`** - Performance metrics and optimization
 4. **`API_REFERENCE.md`** - Complete API documentation
-5. **`BEST_PRACTICES.md`** - Usage guidelines and patterns
+5. **`best-practices-2.md`** - Usage guidelines and patterns
 
 ---
 

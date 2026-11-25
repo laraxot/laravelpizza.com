@@ -112,7 +112,7 @@ consolidate_files() {
 consolidate_files "architecture" "architecture.md" "$PROJECT_ROOT"
 consolidate_files "installation" "installation.md" "$PROJECT_ROOT"
 consolidate_files "configuration" "configuration.md" "$PROJECT_ROOT"
-consolidate_files "migration" "migrations.md" "$PROJECT_ROOT"
+consolidate_files "migration" "migrations-3.md" "$PROJECT_ROOT"
 consolidate_files "translation" "translations.md" "$PROJECT_ROOT"
 consolidate_files "testing" "testing.md" "$PROJECT_ROOT"
 

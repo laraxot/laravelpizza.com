@@ -17,4 +17,4 @@ related:
   - "./actions-path-convention.md"
 ---
 
-> Questo file è stato rinominato in [git-conflicts-resolution-.deprecated.md](git-conflicts-resolution-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+> Questo file è stato rinominato in [git-conflicts-resolution-2.deprecated.md](git-conflicts-resolution-2.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.

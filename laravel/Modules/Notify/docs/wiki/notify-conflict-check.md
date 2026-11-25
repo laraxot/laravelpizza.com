@@ -9,13 +9,13 @@ updated: 2026-11-23
 qmd: "notify-conflict-check-2026-04-21 deprecated"
 status: deprecated
 related:
-  - "./AGENTS.md"
+  - "./agents-2.md"
   - "./bmad-method.md"
   - "./index.md"
   - "./log.md"
-  - "./notify-conflict-check-.md"
+  - "./notify-conflict-check-2.md"
   - "./notify-conflict-check-1.md"
-  - "./notify-restore-.md"
+  - "./notify-restore-2.md"
   - "./notify-restore-1.md"
 ---
 

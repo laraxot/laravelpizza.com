@@ -188,7 +188,7 @@ Ogni pagina supporta sezioni CMS dinamiche:
 
 ## Riferimenti
 
-- [Documentazione Icone UI](Modules/UI/docs/BRANDS_ICONS.md)
+- [Documentazione Icone UI](Modules/UI/docs/brands-icons-2.md)
 - [GSD Workflow](.cursor/get-shit-done/)
 - [Ralph Loop](.qwen/skills/ralph-loop/)
 - [Laravel Folio](https://laravel.com/docs/folio)

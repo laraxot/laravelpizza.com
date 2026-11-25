@@ -371,23 +371,23 @@ return array(
 - [Regole Traduzioni](../../docs/translation-standards.md)
 - [Regole Traduzioni](../../docs/translation-standards.md)
 - [Regole Traduzioni](../../docs/translation-standards.md)
-- [Best Practices Filament](../../docs/FILAMENT-BEST-PRACTICES.md)
+- [Best Practices Filament](../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Convenzioni Laraxot](../../docs/laraxot_conventions.md)
-- [Best Practices Filament](../../docs/FILAMENT-BEST-PRACTICES.md)
+- [Best Practices Filament](../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Convenzioni Laraxot](../../docs/laraxot_conventions.md)
 
 ---
 
 **Ultimo aggiornamento**: 2025-01-06
 - [Regole Traduzioni](../../../docs/translation-standards.md)
-- [Best Practices Filament](../../../docs/FILAMENT-BEST-PRACTICES.md)
+- [Best Practices Filament](../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Convenzioni Laraxot](../../../docs/laraxot_conventions.md)
 
 ---
 
 **Ultimo aggiornamento**: 2025-01-06
 - [Regole Traduzioni](../../../docs/translation-standards.md)
-- [Best Practices Filament](../../../docs/FILAMENT-BEST-PRACTICES.md)
+- [Best Practices Filament](../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Convenzioni Laraxot](../../../docs/laraxot_conventions.md)
 
 ---
@@ -757,14 +757,14 @@ return array(
 - [Regole Traduzioni](../../docs/translation-standards.md)
 - [Regole Traduzioni](../../docs/translation-standards.md)
 - [Regole Traduzioni](../../docs/translation-standards.md)
-- [Best Practices Filament](../../docs/FILAMENT-BEST-PRACTICES.md)
+- [Best Practices Filament](../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Convenzioni Laraxot](../../docs/laraxot_conventions.md)
 
 ---
 
 **Ultimo aggiornamento**: 2025-01-06
 - [Regole Traduzioni](../../../docs/translation-standards.md)
-- [Best Practices Filament](../../../docs/FILAMENT-BEST-PRACTICES.md)
+- [Best Practices Filament](../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Convenzioni Laraxot](../../../docs/laraxot_conventions.md)
 
 ---
@@ -777,14 +777,14 @@ return array(
 **Status**: In corso
 **Ultimo aggiornamento**: [DATE]
 **Status**: In corso
-- [Best Practices Filament](../../docs/FILAMENT-BEST-PRACTICES.md)
+- [Best Practices Filament](../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Convenzioni Laraxot](../../docs/laraxot_conventions.md)
 
 ---
 
 **Ultimo aggiornamento**: 2025-01-06
 - [Regole Traduzioni](../../../docs/translation-standards.md)
-- [Best Practices Filament](../../../docs/FILAMENT-BEST-PRACTICES.md)
+- [Best Practices Filament](../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Convenzioni Laraxot](../../../docs/laraxot_conventions.md)
 
 ---

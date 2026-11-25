@@ -28,12 +28,12 @@
 - [Job](../Job/project_docs/README.md) - Jobs
 - [Chart](../Chart/project_docs/README.md) - Grafici
 
-## Collegamenti tra versioni di LINKS.md
-* [LINKS.md](../../../Xot/project_docs/LINKS.md)
-* [LINKS.md](../../../User/project_docs/LINKS.md)
-* [LINKS.md](../../../UI/project_docs/LINKS.md)
-* [LINKS.md](../../../Cms/project_docs/LINKS.md)
-* [LINKS.md](../../../../Themes/One/project_docs/LINKS.md)
+## Collegamenti tra versioni di links-2.md
+* [links-2.md](../../../Gdpr/docs/links-2.md)
+* [links-2.md](../../../Gdpr/docs/links-2.md)
+* [links-2.md](../../../Gdpr/docs/links-2.md)
+* [links-2.md](../../../Gdpr/docs/links-2.md)
+* [links-2.md](../../../Gdpr/docs/links-2.md)
 
 ## Collegamenti tra versioni di links.md
 * [links.md](../../Gdpr/project_docs/links.md)

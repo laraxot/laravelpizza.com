@@ -24,11 +24,11 @@ related:
 - [Documentazione centrale](/docs/README.md)
 - [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
 - [Regole Traduzioni](/laravel/modules/lang/docs/translation-keys-rules-2.md)
-- [Implementazione Auth Pages](/laravel/modules/user/docs/auth-pages-implementation.md)
+- [Implementazione Auth Pages](/laravel/Modules/User/docs/auth-pages-implementation-3.md)
 - [Volt Folio Auth](/laravel/modules/user/docs/volt-folio-auth-implementation-3.md)
 - [Implementazione Auth Pages](/laravel/Modules/User/docs/auth-pages-implementation.md)
 - [Volt Folio Auth](/laravel/Modules/User/docs/volt-folio-auth-implementation-3.md)
-- [Componenti Filament](/docs/rules/filament-components.md)
+- [Componenti Filament](/../../Cms/docs/filament-components-2.md)
 
 ## Analisi e Miglioramenti della Pagina di Login
 
@@ -227,11 +227,11 @@ Seguendo queste linee guida, è possibile implementare pagine di autenticazione 
 - [Documentazione centrale](/docs/README.md)
 - [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
 - [Regole Traduzioni](/laravel/modules/lang/docs/translation-keys-rules-2.md)
-- [Implementazione Auth Pages](/laravel/modules/user/docs/auth-pages-implementation.md)
+- [Implementazione Auth Pages](/laravel/Modules/User/docs/auth-pages-implementation-3.md)
 - [Volt Folio Auth](/laravel/modules/user/docs/volt-folio-auth-implementation-3.md)
 - [Implementazione Auth Pages](/laravel/Modules/User/docs/auth-pages-implementation.md)
 - [Volt Folio Auth](/laravel/Modules/User/docs/volt-folio-auth-implementation-3.md)
-- [Componenti Filament](/docs/rules/filament-components.md)
+- [Componenti Filament](/../../Cms/docs/filament-components-2.md)
 
 ## Analisi e Miglioramenti della Pagina di Login
 

@@ -52,7 +52,7 @@ La comunicazione tra agenti avviene **esclusivamente** tramite:
 
 ## Backlink
 
-- [.windsurf/rules/multi-agent-collaboration.md](../../.windsurf/rules/multi-agent-collaboration.md)
+- [../../laravel/Modules/Notify/docs/multi-agent-collaboration-2.md](../../laravel/Modules/Notify/docs/multi-agent-collaboration-2.md)
 - [AGENTS.md](../../AGENTS.md)
 
 ## Ultimo aggiornamento

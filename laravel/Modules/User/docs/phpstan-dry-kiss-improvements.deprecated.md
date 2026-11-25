@@ -18,15 +18,15 @@ related:
 ---
 
 <<<<<<< .merge_file_GNNSlD
-> Questo file è stato rinominato in [phpstan-dry-kiss-improvements-.deprecated.md](phpstan-dry-kiss-improvements-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+> Questo file è stato rinominato in [phpstan-dry-kiss-improvements-2.deprecated.md](phpstan-dry-kiss-improvements-2.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 =======
 <<<<<<< HEAD
-> Questo file è stato rinominato in [phpstan-dry-kiss-improvements-.deprecated.md](phpstan-dry-kiss-improvements-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+> Questo file è stato rinominato in [phpstan-dry-kiss-improvements-2.deprecated.md](phpstan-dry-kiss-improvements-2.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 =======
 <<<<<<< HEAD
-> Questo file è stato rinominato in [phpstan-dry-kiss-improvements-.deprecated.md](phpstan-dry-kiss-improvements-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+> Questo file è stato rinominato in [phpstan-dry-kiss-improvements-2.deprecated.md](phpstan-dry-kiss-improvements-2.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 =======
-> Questo file è stato rinominato in [phpstan-dry-kiss-improvements-.deprecated.md](./phpstan-dry-kiss-improvements.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+> Questo file è stato rinominato in [phpstan-dry-kiss-improvements-2.deprecated.md](./phpstan-dry-kiss-improvements.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_kppBLS

@@ -33,7 +33,7 @@ Per dettagli specifici, consulta:
 ## Collegamenti Bidirezionali
 
 - [Convenzioni di Namespace nel modulo User](../../User/docs/namespace-conventions.md)
-- [Best Practices Filament nel modulo User](../../user/docs/filament_best_practices.md)
+- [Best Practices Filament nel modulo User](../../user/docs/filament-best-practices-2.md)
 
 ---
 
@@ -52,5 +52,5 @@ Quando aggiungi nuovi componenti Filament, assicurati di:
 3. Mantenere aggiornata la documentazione in entrambi i moduli
 
 ## Collegamenti tra versioni di user-link.md
-* [user-link.md](laravel/modules/lang/docs/user-link.md)
-* [user-link.md](laravel/modules/cms/docs/user-link.md)
+* [user-link.md](laravel/Modules/Lang/docs/user-link-2.md)
+* [user-link.md](laravel/Modules/Cms/docs/user-link-2.md)

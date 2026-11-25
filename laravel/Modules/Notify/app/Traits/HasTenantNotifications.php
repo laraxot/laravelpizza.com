@@ -8,15 +8,23 @@ use Filament\Facades\Filament;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Modules\Notify\Models\Notification;
 use Modules\Notify\Models\NotificationLog;
+use Modules\Notify\Models\TenantNotifiable;
 use Webmozart\Assert\Assert;
 
 /**
- * Trait HasTenantNotifications.
+ * Notifiche tenant-aware: morph verso NotificationLog, scope `forTenant`, boot tenant_id.
  *
- * Fornisce funzionalità per la gestione delle notifiche per tenant.
+ * Consumer di dominio: {@see TenantNotifiable}
+ * e {@see Notification}. Non combinare con `Notifiable`
+ * (collisione su `notifications()` / `unreadNotifications()`).
  *
- * Usato da test/unit helpers (es. NotifyTenantDummyModel); non ignorare trait.unused.
+ * Richiede che il modello ospite esponga la colonna `tenant_id`.
+ *
+ * @property string|null $tenant_id
+ *
+ * @see Modules/Notify/docs/contracts/has-tenant-notifications.md
  */
 trait HasTenantNotifications
 {
@@ -106,7 +114,7 @@ trait HasTenantNotifications
     /**
      * Relazione morph verso NotificationLog filtrata per tenant corrente.
      *
-     * @return MorphMany<NotificationLog, static>
+     * @return MorphMany<NotificationLog, $this>
      */
     protected function tenantNotificationLogs(): MorphMany
     {

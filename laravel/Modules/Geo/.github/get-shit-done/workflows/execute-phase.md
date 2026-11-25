@@ -18,7 +18,7 @@ Orchestrator coordinates, not executes. Each subagent loads the full execute-pla
 </core_principle>
 
 <required_reading>
-Read STATE.md before any operation to load project context.
+Read state-2.md before any operation to load project context.
 </required_reading>
 
 <process>
@@ -117,7 +117,7 @@ Execute each wave in sequence. Within a wave: parallel if `PARALLELIZATION=true`
      prompt="
        <objective>
        Execute plan {plan_number} of phase {phase_number}-{phase_name}.
-       Commit each task atomically. Create summary.md. Update STATE.md and roadmap.md.
+       Commit each task atomically. Create summary.md. Update state-2.md and roadmap.md.
        </objective>
 
        <execution_context>
@@ -130,7 +130,7 @@ Execute each wave in sequence. Within a wave: parallel if `PARALLELIZATION=true`
        <files_to_read>
        Read these files at execution start using the Read tool:
        - {phase_dir}/{plan_file} (Plan)
-       - .planning/STATE.md (State)
+       - .planning/state-2.md (State)
        - .planning/config.json (Config, if exists)
        - ./CLAUDE.md (Project instructions, if exists — follow project-specific guidelines and coding conventions)
        - .agents/skills/ (Project skills, if exists — list skills, read SKILL.md for each, follow relevant rules during implementation)
@@ -139,8 +139,8 @@ Execute each wave in sequence. Within a wave: parallel if `PARALLELIZATION=true`
        <success_criteria>
        - [ ] All tasks executed
        - [ ] Each task committed individually
-       - [ ] summary.md created in plan directory
-       - [ ] STATE.md updated with position and decisions
+       - [ ] summary-2.md created in plan directory
+       - [ ] state-2.md updated with position and decisions
        - [ ] roadmap.md updated with plan progress (via `roadmap update-plan-progress`)
        </success_criteria>
      "
@@ -151,7 +151,7 @@ Execute each wave in sequence. Within a wave: parallel if `PARALLELIZATION=true`
 
 4. **Report completion — spot-check claims first:**
 
-   For each summary.md:
+   For each summary-2.md:
    - Verify first 2 files from `key-files.created` exist on disk
    - Check `git log --oneline --all --grep="{phase}-{plan}"` returns ≥1 commit
    - Check for `## Self-Check: FAILED` marker
@@ -164,7 +164,7 @@ Execute each wave in sequence. Within a wave: parallel if `PARALLELIZATION=true`
    ## Wave {N} Complete
 
    **{Plan ID}: {Plan Name}**
-   {What was built — from summary.md}
+   {What was built — from summary-2.md}
    {Notable deviations, if any}
 
    {If more waves: what this enables for next wave}
@@ -176,7 +176,7 @@ Execute each wave in sequence. Within a wave: parallel if `PARALLELIZATION=true`
 
 5. **Handle failures:**
 
-   **Known Claude Code bug (classifyHandoffIfNeeded):** If an agent reports "failed" with error containing `classifyHandoffIfNeeded is not defined`, this is a Claude Code runtime bug — not a GSD or agent issue. The error fires in the completion handler AFTER all tool calls finish. In this case: run the same spot-checks as step 4 (summary.md exists, git commits present, no Self-Check: FAILED). If spot-checks PASS → treat as **successful**. If spot-checks FAIL → treat as real failure below.
+   **Known Claude Code bug (classifyHandoffIfNeeded):** If an agent reports "failed" with error containing `classifyHandoffIfNeeded is not defined`, this is a Claude Code runtime bug — not a GSD or agent issue. The error fires in the completion handler AFTER all tool calls finish. In this case: run the same spot-checks as step 4 (summary-2.md exists, git commits present, no Self-Check: FAILED). If spot-checks PASS → treat as **successful**. If spot-checks FAIL → treat as real failure below.
 
    For real failures: report which plan failed → ask "Continue?" or "Stop?" → if continue, dependent plans may also fail. If stop, partial completion report.
 
@@ -244,8 +244,8 @@ After all waves:
 | 2 | plan-04 | ✓ Complete |
 
 ### Plan Details
-1. **03-01**: [one-liner from summary.md]
-2. **03-02**: [one-liner from summary.md]
+1. **03-01**: [one-liner from summary-2.md]
+2. **03-02**: [one-liner from summary-2.md]
 
 ### Issues Encountered
 [Aggregate from SUMMARYs, or "None"]
@@ -312,7 +312,7 @@ Phase directory: {phase_dir}
 Phase goal: {goal from roadmap.md}
 Phase requirement IDs: {phase_req_ids}
 Check must_haves against actual codebase.
-Cross-reference requirement IDs from PLAN frontmatter against REQUIREMENTS.md — every ID MUST be accounted for.
+Cross-reference requirement IDs from PLAN frontmatter against requirements-2.md — every ID MUST be accounted for.
 Create VERIFICATION.md.",
   subagent_type="gsd-verifier",
   model="{verifier_model}"
@@ -384,13 +384,13 @@ The CLI handles:
 - Marking phase checkbox `[x]` with completion date
 - Updating Progress table (Status → Complete, date)
 - Updating plan count to final
-- Advancing STATE.md to next phase
-- Updating REQUIREMENTS.md traceability
+- Advancing state-2.md to next phase
+- Updating requirements-2.md traceability
 
 Extract from result: `next_phase`, `next_phase_name`, `is_last_phase`.
 
 ```bash
-node .github/get-shit-done/bin/gsd-tools.cjs commit "docs(phase-{X}): complete phase execution" --files .planning/roadmap.md .planning/STATE.md .planning/REQUIREMENTS.md {phase_dir}/*-VERIFICATION.md
+node .github/get-shit-done/bin/gsd-tools.cjs commit "docs(phase-{X}): complete phase execution" --files .planning/roadmap.md .planning/state-2.md .planning/requirements-2.md {phase_dir}/*-VERIFICATION.md
 ```
 </step>
 
@@ -455,14 +455,14 @@ Orchestrator: ~10-15% context. Subagents: fresh 200k each. No polling (Task bloc
 
 <failure_handling>
 - **classifyHandoffIfNeeded false failure:** Agent reports "failed" but error is `classifyHandoffIfNeeded is not defined` → Claude Code bug, not GSD. Spot-check (SUMMARY exists, commits present) → if pass, treat as success
-- **Agent fails mid-plan:** Missing summary.md → report, ask user how to proceed
+- **Agent fails mid-plan:** Missing summary-2.md → report, ask user how to proceed
 - **Dependency chain breaks:** Wave 1 fails → Wave 2 dependents likely fail → user chooses attempt or skip
 - **All agents in wave fail:** Systemic issue → stop, report for investigation
-- **Checkpoint unresolvable:** "Skip this plan?" or "Abort phase execution?" → record partial progress in STATE.md
+- **Checkpoint unresolvable:** "Skip this plan?" or "Abort phase execution?" → record partial progress in state-2.md
 </failure_handling>
 
 <resumption>
 Re-run `/gsd-execute-phase {phase}` → discover_plans finds completed SUMMARYs → skips them → resumes from first incomplete plan → continues wave execution.
 
-STATE.md tracks: last completed plan, current wave, pending checkpoints.
+state-2.md tracks: last completed plan, current wave, pending checkpoints.
 </resumption>

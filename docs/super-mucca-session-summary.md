@@ -158,10 +158,10 @@ laravel/docs/phpstan-zero-errors-achievement-2025-12-18.md
 **Files with Underscores** (8 files):
 - `architecture_xotdata_pattern.md` → `architecture-xotdata-pattern.md`
 - `filament_v4_upgrade.md` → `filament-v4-upgrade.md`
-- `filament_v4_icon_size_fix.md` → `filament-v4-icon-size-fix.md`
-- `advanced_event_sourcing_patterns.md` → `advanced-event-sourcing-patterns.md`
+- `filament-v4-icon-size-fix-2.md` → `filament-v4-icon-size-fix.md`
+- `advanced-event-sourcing-patterns-2.md` → `advanced-event-sourcing-patterns.md`
 - `volt_introduction.md` → `volt-introduction.md`
-- `filament_forms.md` → `filament-forms.md`
+- `filament-forms-2.md` → `filament-forms.md`
 - `filament_components.md` → `filament-components.md`
 - `custom_404_page.md` → `custom-404-page.md`
 

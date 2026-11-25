@@ -38,8 +38,8 @@ discussions: []
 ### Documentazione
 - `docs/README.md` - Documentazione principale
 - `docs/architecture.md` - Architettura del sistema notifiche
-- `docs/notification_channels_implementation.md` - Implementazione canali
-- `docs/email_templates.md` - Template email
+- `docs/notification-channels-implementation-2.md` - Implementazione canali
+- `docs/email-templates-2.md` - Template email
 
 ## Modifiche Applicate
 
@@ -84,8 +84,8 @@ Tutti i file risolti rispettano:
 
 - [Documentazione Root Notify](../../../../docs/modules/notify.md)
 - [Architecture Documentation](./architecture.md)
-- [Email Templates](./email_templates.md)
-- [Notification Channels](./notification_channels_implementation.md)
+- [Email Templates](./email-templates-2.md)
+- [Notification Channels](./notification-channels-implementation-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD

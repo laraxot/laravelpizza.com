@@ -48,7 +48,7 @@ Per ogni modulo:
 ### Fase 3: Themes consolidamento
 - [ ] Themes/One/Three/Zero: stessa struttura normale
 - [ ] Consolidamento orphan files (se presenti)
-- [ ] README.md + wiki/index.md
+- [ ] README.md + ../../../../Lang/docs/wiki/index-3.md
 
 ### Fase 4: Verifica finale
 - [ ] git status clean (no untracked, no modifications se non intenzionali)

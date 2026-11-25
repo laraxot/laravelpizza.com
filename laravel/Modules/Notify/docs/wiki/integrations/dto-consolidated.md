@@ -46,10 +46,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -221,7 +221,7 @@ Prima di creare un nuovo DTO, verificare che:
 
 ## dto-structure-conventions
 
-*Consolidated from: `dto-structure-conventions.md`*
+*Consolidated from: `dto-structure-conventions-2.md`*
 
 <<<<<<< HEAD
 
@@ -411,10 +411,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -539,7 +539,7 @@ related:
 
 ## dto-structure-rules
 
-*Consolidated from: `dto-structure-rules.md`*
+*Consolidated from: `dto-structure-rules-2.md`*
 
 <<<<<<< HEAD
 
@@ -811,10 +811,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -1006,7 +1006,7 @@ Basandoci sull'analisi percentuale:
 
 ## dto-vs-factory-analysis
 
-*Consolidated from: `dto-vs-factory-analysis.md`*
+*Consolidated from: `dto-vs-factory-analysis-2.md`*
 
 <<<<<<< HEAD
 
@@ -1398,7 +1398,7 @@ Basandoci sull'analisi percentuale:
 
 ## dto_structure_conventions
 
-*Consolidated from: `dto_structure_conventions.md`*
+*Consolidated from: `dto-structure-conventions-2.md`*
 
 <<<<<<< HEAD
 
@@ -1574,7 +1574,7 @@ Prima di creare un nuovo DTO, verificare che:
 
 ## dto_structure_rules
 
-*Consolidated from: `dto_structure_rules.md`*
+*Consolidated from: `dto-structure-rules-2.md`*
 
 <<<<<<< HEAD
 
@@ -1703,7 +1703,7 @@ Prima di creare un nuovo DTO, verificare che:
 
 ## dto_vs_factory_analysis
 
-*Consolidated from: `dto_vs_factory_analysis.md`*
+*Consolidated from: `dto-vs-factory-analysis-2.md`*
 
 <<<<<<< HEAD
 

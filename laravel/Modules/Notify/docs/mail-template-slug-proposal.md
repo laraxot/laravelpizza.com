@@ -54,8 +54,8 @@ discussions: []
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_xzzcpE
-- [Guida all'utilizzo di SpatieEmail](./spatie_email_usage_guide.md)
-- [Documentazione Template Email](./email_templates.md)
+- [Guida all'utilizzo di SpatieEmail](./spatie-email-usage-guide-2.md)
+- [Documentazione Template Email](./email-templates-2.md)
 - [Documentazione Root](../../../../../docs/collegamenti-documentazione.md)
 
 ## Panoramica

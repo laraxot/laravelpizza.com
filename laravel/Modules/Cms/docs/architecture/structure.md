@@ -145,9 +145,9 @@ Modules/Cms/
 =======
 >>>>>>> .merge_file_p9hm7q
 - [Architettura](architecture.md) - Architettura del sistema CMS
-- [Struttura Moduli Laravel](struttura-moduli-laravel.md) - Struttura standard dei moduli Laravel
+- [Struttura Moduli Laravel](struttura-moduli-laravel-2.md) - Struttura standard dei moduli Laravel
 - [Namespace Moduli](namespace-moduli-laravel-<nome progetto>.md) - Convenzioni di namespace
-- [Struttura Route e Viste](struttura-route-e-viste.md) - Organizzazione di route e viste
+- [Struttura Route e Viste](struttura-route-e-viste-2.md) - Organizzazione di route e viste
 
 ## Vedi Anche
 - [Modulo Xot](../../../Xot/docs/README.md) - Struttura base dei moduli

@@ -724,7 +724,7 @@ Use template: .github/get-shit-done/templates/research-project/PITFALLS.md
 ", subagent_type="general-purpose", model="{researcher_model}", description="Pitfalls research")
 ```
 
-After all 4 agents complete, spawn synthesizer to create summary.md:
+After all 4 agents complete, spawn synthesizer to create summary-2.md:
 
 ```
 Task(prompt="
@@ -740,8 +740,8 @@ Synthesize research outputs into summary.md.
 </files_to_read>
 
 <output>
-Write to: .planning/research/summary.md
-Use template: .github/get-shit-done/templates/research-project/summary.md
+Write to: ../../../../Notify/docs/bugs/summary-2.md
+Use template: ../../../../Notify/docs/bugs/summary-2.md
 Commit after writing.
 </output>
 ", subagent_type="gsd-research-synthesizer", model="{synthesizer_model}", description="Synthesize research")
@@ -755,9 +755,9 @@ Display research complete banner and key findings:
 
 ## Key Findings
 
-**Stack:** [from summary.md]
-**Table Stakes:** [from summary.md]
-**Watch Out For:** [from summary.md]
+**Stack:** [from summary-2.md]
+**Table Stakes:** [from summary-2.md]
+**Watch Out For:** [from summary-2.md]
 
 Files: `.planning/research/`
 ```
@@ -789,7 +789,7 @@ Read PROJECT.md and extract:
 - Skip per-category AskUserQuestion loops
 - Skip "Any additions?" question
 - Skip requirements approval gate
-- Generate REQUIREMENTS.md and commit directly
+- Generate requirements-2.md and commit directly
 
 **Present features by category (interactive mode only):**
 
@@ -856,9 +856,9 @@ Use AskUserQuestion:
 
 Cross-check requirements against Core Value from PROJECT.md. If gaps detected, surface them.
 
-**Generate REQUIREMENTS.md:**
+**Generate requirements-2.md:**
 
-Create `.planning/REQUIREMENTS.md` with:
+Create `.planning/requirements-2.md` with:
 - v1 Requirements grouped by category (checkboxes, REQ-IDs)
 - v2 Requirements (deferred)
 - Out of Scope (explicit exclusions with reasoning)
@@ -906,7 +906,7 @@ If "adjust": Return to scoping.
 **Commit requirements:**
 
 ```bash
-node .github/get-shit-done/bin/gsd-tools.cjs commit "docs: define v1 requirements" --files .planning/REQUIREMENTS.md
+node .github/get-shit-done/bin/gsd-tools.cjs commit "docs: define v1 requirements" --files .planning/requirements-2.md
 ```
 
 ## 8. Create Roadmap
@@ -928,8 +928,8 @@ Task(prompt="
 
 <files_to_read>
 - .planning/PROJECT.md (Project context)
-- .planning/REQUIREMENTS.md (v1 Requirements)
-- .planning/research/summary.md (Research findings - if exists)
+- .planning/requirements-2.md (v1 Requirements)
+- ../../../../Notify/docs/bugs/summary-2.md (Research findings - if exists)
 - .planning/config.json (Depth and mode settings)
 </files_to_read>
 
@@ -941,7 +941,7 @@ Create roadmap:
 2. Map every v1 requirement to exactly one phase
 3. Derive 2-5 success criteria per phase (observable user behaviors)
 4. Validate 100% coverage
-5. Write files immediately (roadmap.md, STATE.md, update REQUIREMENTS.md traceability)
+5. Write files immediately (roadmap.md, state-2.md, update requirements-2.md traceability)
 6. Return ROADMAP CREATED with summary
 
 Write files first, then return. This ensures artifacts persist even if context is lost.
@@ -1036,7 +1036,7 @@ Use AskUserQuestion:
 **Commit roadmap (after approval or auto mode):**
 
 ```bash
-node .github/get-shit-done/bin/gsd-tools.cjs commit "docs: create roadmap ([N] phases)" --files .planning/roadmap.md .planning/STATE.md .planning/REQUIREMENTS.md
+node .github/get-shit-done/bin/gsd-tools.cjs commit "docs: create roadmap ([N] phases)" --files .planning/roadmap.md .planning/state-2.md .planning/requirements-2.md
 ```
 
 ## 9. Done
@@ -1055,7 +1055,7 @@ Present completion summary:
 | Project        | `.planning/PROJECT.md`      |
 | Config         | `.planning/config.json`     |
 | Research       | `.planning/research/`       |
-| Requirements   | `.planning/REQUIREMENTS.md` |
+| Requirements   | `.planning/requirements-2.md` |
 | Roadmap        | `.planning/roadmap.md`      |
 
 **[N] phases** | **[X] requirements** | Ready to build ✓
@@ -1103,10 +1103,10 @@ Exit skill and invoke SlashCommand("/gsd-discuss-phase 1 --auto")
   - `FEATURES.md`
   - `architecture.md`
   - `PITFALLS.md`
-  - `summary.md`
-- `.planning/REQUIREMENTS.md`
+  - `summary-2.md`
+- `.planning/requirements-2.md`
 - `.planning/roadmap.md`
-- `.planning/STATE.md`
+- `.planning/state-2.md`
 
 </output>
 
@@ -1121,13 +1121,13 @@ Exit skill and invoke SlashCommand("/gsd-discuss-phase 1 --auto")
 - [ ] Research completed (if selected) — 4 parallel agents spawned → **committed**
 - [ ] Requirements gathered (from research or conversation)
 - [ ] User scoped each category (v1/v2/out of scope)
-- [ ] REQUIREMENTS.md created with REQ-IDs → **committed**
+- [ ] requirements-2.md created with REQ-IDs → **committed**
 - [ ] gsd-roadmapper spawned with context
 - [ ] Roadmap files written immediately (not draft)
 - [ ] User feedback incorporated (if any)
 - [ ] roadmap.md created with phases, requirement mappings, success criteria
-- [ ] STATE.md initialized
-- [ ] REQUIREMENTS.md traceability updated
+- [ ] state-2.md initialized
+- [ ] requirements-2.md traceability updated
 - [ ] User knows next step is `/gsd-discuss-phase 1`
 
 **Atomic commits:** Each phase commits its artifacts immediately. If context is lost, artifacts persist.

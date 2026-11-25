@@ -256,7 +256,7 @@ chown -R zorin:zorin .qwen/
 
 ### Documenti Correlati
 
-- [AGENTS.md](../../AGENTS.md)
+- [AGENTS.md](../agents.md)
 - [AI Agent Coordination](../../docs/ai-agent-coordination.md)
 - [Skills Configuration Report](../../docs/reports/skills-configuration-report.md)
 

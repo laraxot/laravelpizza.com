@@ -1,7 +1,7 @@
 # Risoluzione Conflitti
 
 ## Best Practices
-Per le best practices complete, consultare il file [best_practices.md](conflicts/best_practices.md).
+Per le best practices complete, consultare il file [best-practices-3.md](../laravel/Modules/Activity/docs/best-practices-3.md).
 
 ## Casi Risolti Recentemente
 
@@ -52,7 +52,7 @@ Per le best practices complete, consultare il file [best_practices.md](conflicts
 
 ## Collegamenti Correlati
 
-- [Best Practices](conflicts/best_practices.md)
+- [Best Practices](../laravel/Modules/Activity/docs/best-practices-3.md)
 - [PHPStan Livello 10](phpstan_livello10_linee_guida.md)
 - [Struttura Moduli](module-structure.md)
 - [Risoluzione Conflitti Merge](risoluzione_conflitti_merge.md)

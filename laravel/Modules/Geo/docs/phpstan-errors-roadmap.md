@@ -463,7 +463,7 @@ Assert::string($config);      // now string
 
 **Revisione**: Required after all fixes implemented
 
-## Versione unita da `phpstan-errors-roadmap-2026-01-12.md` (2026-01-12)
+## Versione unita da `phpstan-errors-roadmap-3.md` (2026-01-12)
 
 # PHPStan Level Max Errors Roadmap - Geo Module
 

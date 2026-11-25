@@ -131,4 +131,4 @@ Sitemap::addUrl('/pagina', [
 - `configuration.md` — struttura, dipendenze, namespace
 - `sitemap.md` — generazione sitemap, artisan commands
 - `structure.md` — directory structure
-- `filament.md` — integrazione pannello admin
+- `filament-3.md` — integrazione pannello admin

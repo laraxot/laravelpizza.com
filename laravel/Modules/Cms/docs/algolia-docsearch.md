@@ -90,10 +90,10 @@ For more details, visit the [official Algolia DocSearch documentation.](https://
 
 ## Collegamenti tra versioni di algolia-docsearch.md
 * [algolia-docsearch.md](laravel/modules/chart/docs/algolia-docsearch.md)
-* [algolia-docsearch.md](laravel/modules/gdpr/docs/algolia-docsearch.md)
+* [algolia-docsearch.md](laravel/Modules/Gdpr/docs/algolia-docsearch-2.md)
 * [algolia-docsearch.md](laravel/modules/xot/docs/algolia-docsearch.md)
 * [algolia-docsearch.md](laravel/modules/ui/docs/algolia-docsearch.md)
-* [algolia-docsearch.md](laravel/modules/cms/docs/algolia-docsearch.md)
+* [algolia-docsearch.md](laravel/Modules/Cms/docs/algolia-docsearch-2.md)
 =======
 >>>>>>> laraxot/dev
 title: "algolia docsearch"
@@ -187,10 +187,10 @@ For more details, visit the [official Algolia DocSearch documentation.](https://
 
 ## Collegamenti tra versioni di algolia-docsearch.md
 * [algolia-docsearch.md](laravel/modules/chart/docs/algolia-docsearch.md)
-* [algolia-docsearch.md](laravel/modules/gdpr/docs/algolia-docsearch.md)
+* [algolia-docsearch.md](laravel/Modules/Gdpr/docs/algolia-docsearch-2.md)
 * [algolia-docsearch.md](laravel/modules/xot/docs/algolia-docsearch.md)
 * [algolia-docsearch.md](laravel/modules/ui/docs/algolia-docsearch.md)
-* [algolia-docsearch.md](laravel/modules/cms/docs/algolia-docsearch.md)
+* [algolia-docsearch.md](laravel/Modules/Cms/docs/algolia-docsearch-2.md)
 =======
 >>>>>>> .merge_file_ZhrlEN
 =======

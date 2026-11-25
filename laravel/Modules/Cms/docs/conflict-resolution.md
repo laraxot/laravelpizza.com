@@ -21,7 +21,7 @@ discussions: []
 
 ## Documentation Files
 - docs/nestedset-migration-best-practices.md
-- docs/web_design_rules.md
+- docs/web-design-rules-2.md
 
 ## Backlinks
 - [Root conflict resolution report](../../../../docs/conflict-resolution-report.md)

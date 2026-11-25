@@ -1,13 +1,5 @@
 ---
-<<<<<<< .merge_file_7ZikOq
 title: "ECC — indice operativo Tenant"
-=======
-<<<<<<< .merge_file_fKZkuc
-title: "ECC — indice operativo Tenant"
-=======
-title: "Indice ECC — Tenant"
->>>>>>> .merge_file_UzZmVW
->>>>>>> .merge_file_jOfLHD
 type: index
 status: in-progress
 updated: 2026-11-16

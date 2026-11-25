@@ -16,24 +16,9 @@ related:
 Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../../Lang/docs/).
 
 Consulta la documentazione delle traduzioni:
-<<<<<<< HEAD
 - [Introduzione alle Traduzioni](../../Lang/docs/introduction.md)
 - [Struttura delle Traduzioni](../../Lang/docs/structure.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [Introduzione alle Traduzioni](../../lang/docs/introduction.md)
-- [Struttura delle Traduzioni](../../lang/docs/structure.md)
-=======
-- [Introduzione alle Traduzioni](../../Lang/docs/introduction.md)
-- [Struttura delle Traduzioni](../../Lang/docs/structure.md)
->>>>>>> laraxot/dev
-=======
-- [Introduzione alle Traduzioni](../../Lang/docs/introduction.md)
-- [Struttura delle Traduzioni](../../Lang/docs/structure.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-- [Gestione dei File di Lingua](../../lang/docs/module_lang.md)
+- [Gestione dei File di Lingua](../../Lang/docs/module_lang.md)
 
 ## Collegamento Bidirezionale
 
@@ -56,3 +41,4 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 * [lang-link.md](../../../activity/docs/lang-link.md)
 * [lang-link.md](../../../patient/docs/lang-link.md)
 * [lang-link.md](../../../cms/docs/lang-link.md)
+

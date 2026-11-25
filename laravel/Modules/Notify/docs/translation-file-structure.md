@@ -177,27 +177,27 @@ return [
 ```
 
 ## Riferimenti
-- [Regole di Naming per i File di Traduzione](./translation_file_naming_rules.md)
+- [Regole di Naming per i File di Traduzione](./translation-file-naming-rules-2.md)
 - [Regole di Naming per i File di Traduzione](./translation-file-naming-rules.md)
 <<<<<<< HEAD
-- [Regole Generali per le Traduzioni](../../Lang/docs/translation_keys_rules.md)
+- [Regole Generali per le Traduzioni](../../Lang/docs/translation-keys-rules-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< .merge_file_Suaru1
 <<<<<<< HEAD
-- [Regole Generali per le Traduzioni](../../Lang/docs/translation_keys_rules.md)
+- [Regole Generali per le Traduzioni](../../Lang/docs/translation-keys-rules-2.md)
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_BNEeQ9
-- [Regole Generali per le Traduzioni](../../lang/docs/translation_keys_rules.md)
+- [Regole Generali per le Traduzioni](../../lang/docs/translation-keys-rules-2.md)
 =======
-- [Regole Generali per le Traduzioni](../../Lang/docs/translation_keys_rules.md)
+- [Regole Generali per le Traduzioni](../../Lang/docs/translation-keys-rules-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_Suaru1
 =======
-- [Regole Generali per le Traduzioni](../../lang/docs/translation_keys_rules.md)
+- [Regole Generali per le Traduzioni](../../lang/docs/translation-keys-rules-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======

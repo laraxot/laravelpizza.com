@@ -64,9 +64,9 @@ Il primo caso viola `property.defaultValue`, il secondo puo' violare `view-strin
 
 ---
 
-<!-- Contenuto unito da phpstan-widget-property-types-.md (rimozione date dai nomi file, issue #64) -->
+<!-- Contenuto unito da phpstan-widget-property-types-2.md (rimozione date dai nomi file, issue #64) -->
 
-<!-- recovery from broken basename `phpstan-widget-property-types-.md` after docs-guardian mass rename -->
+<!-- recovery from broken basename `phpstan-widget-property-types-2.md` after docs-guardian mass rename -->
 
 Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file evita nomi `*-.md`.
 

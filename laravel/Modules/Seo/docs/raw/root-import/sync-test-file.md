@@ -31,7 +31,7 @@ issues: []
 discussions: []
 ## Istruzioni per Verifica
 
-1. ✅ Questo file è stato creato in: `laravel/Modules/Seo/SYNC_TEST_FILE.md`
+1. ✅ Questo file è stato creato in: `laravel/Modules/Seo/sync-test-file-2.md`
 2. 🔄 Eseguire: `bashscripts/git/subtrees/sync_remote_repo.sh laraxot`
 3. 📂 Controllare su GitHub: https://github.com/laraxot/module_seo_fila5
 4. ✅ Verificare che il file appaia nel remote repo

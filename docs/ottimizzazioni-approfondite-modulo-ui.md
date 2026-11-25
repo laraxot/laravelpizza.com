@@ -79,7 +79,7 @@ app/
 **File da rinominare:**
 ```bash
 # Esempi di rinominazione
-navigation_components.md → navigation-components.md
+navigation-components-2.md → navigation-components.md
 table_components.md → table-components.md
 form_components.md → form-components.md
 phpstan_analysis.md → phpstan-analysis.md
@@ -179,7 +179,7 @@ fi
 ```bash
 # Eliminare file duplicati
 cd docs/
-rm navigation_components.md
+rm navigation-components-2.md
 rm table_components.md
 rm form_components.md
 rm phpstan_analysis.md

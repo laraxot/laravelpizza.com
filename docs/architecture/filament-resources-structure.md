@@ -51,8 +51,8 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 ```
 
 ## Documentazione Correlata
-- [Documentazione CMS Module](../laravel/modules/cms/docs/filament-resources.md)
-- [Documentazione Xot Module](../laravel/modules/xot/docs/filament-resources.md)
+- [Documentazione CMS Module](../../laravel/Modules/Activity/docs/filament-resources-3.md)
+- [Documentazione Xot Module](../../laravel/Modules/Activity/docs/filament-resources-3.md)
 
 ## Best Practices
 1. **Namespace**
@@ -78,7 +78,7 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 ## Links
 - [Documentazione Filament](https://filamentphp.com/)
 - [Laravel Modules](module-structure.md)
-- [Best Practices](best-practices.md)
+- [Best Practices](best-practices-3.md)
 
 ## Note
 Questa documentazione è collegata bidirezionalmente con la documentazione specifica dei moduli. Per dettagli su resources specifiche, consultare la documentazione del modulo corrispondente.

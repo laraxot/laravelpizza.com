@@ -1,7 +1,7 @@
 ---
 issues: []
 discussions: []
-title: "Tenant — mai Filament\*, sempre XotBase*"
+title: "Tenant — mai Filament\\*, sempre XotBase*"
 type: concept
 module: Tenant
 tags: [tenant, filament, xotbase, architecture]

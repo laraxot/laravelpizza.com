@@ -142,7 +142,7 @@ protected static string $view = 'user::widgets.edit-user';
 - Check responsive design and accessibility
 - Validate form submission and error handling
 ## Related Documentation
-- [User Module Widget Structure](../modules/user/project_docs/widgets_structure.md)
+- [User Module Widget Structure](../modules/user/project_docs/widgets-structure-2.md)
 - [EditUserWidget Documentation](../modules/user/project_docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../modules/user/project_docs/widgets/translation-guidelines.md)
 <<<<<<< HEAD
@@ -150,7 +150,7 @@ protected static string $view = 'user::widgets.edit-user';
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 - [Filament Widget Conventions](../modules/xot/project_docs/filament-widgets.md)
-- [User Module Widget Structure](../modules/user/docs/widgets_structure.md)
+- [User Module Widget Structure](../modules/user/docs/widgets-structure-2.md)
 - [EditUserWidget Documentation](../modules/user/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../modules/user/docs/widgets/translation-guidelines.md)
 - [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
@@ -161,7 +161,7 @@ protected static string $view = 'user::widgets.edit-user';
 =======
 =======
 - [Filament Widget Conventions](best-practices/filament-widgets.md)
-- [User Module Widget Structure](../modules/user/docs/widgets_structure.md)
+- [User Module Widget Structure](../modules/user/docs/widgets-structure-2.md)
 - [EditUserWidget Documentation](../modules/user/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../modules/user/docs/widgets/translation-guidelines.md)
 - [Filament Widget Conventions](best-practices/filament-widgets.md)
@@ -360,7 +360,7 @@ protected static string $view = 'user::widgets.edit-user';
 
 ## Related Documentation
 
-- [User Module Widget Structure](../Modules/User/docs/widgets_structure.md)
+- [User Module Widget Structure](../Modules/User/docs/widgets-structure-2.md)
 - [EditUserWidget Documentation](../Modules/User/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../Modules/User/docs/widgets/translation-guidelines.md)
 <<<<<<< HEAD

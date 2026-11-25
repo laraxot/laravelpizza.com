@@ -20,7 +20,7 @@ Findings:
 - Heavy docs duplication: locale management, quick reference, translation strategies/process, implementation guide, and archive/historical copies.
 - `docs/archive` and `docs/translations/archive` duplicate active translation docs.
 - Migration directory case-only duplicate: `database/Migrations` vs `database/migrations`.
-- Docs index variants include `INDEX.md`/`index.md` and `00-INDEX.md`/`00-index.md`.
+- Docs index variants include `index-3.md`/`index.md` and `00-INDEX.md`/`00-index.md`.
 
 Risk:
 - Lang is foundational; stale translation rules can propagate wrong patterns across modules.

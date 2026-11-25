@@ -113,7 +113,7 @@ Trasformato FixCity da progetto con documentazione parziale a piattaforma enterp
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 6. final-summary.md
-7. WORK-COMPLETED-.md.md
+7. work-completed-4.md
 8. gap-analysis-implementation.md
 9. implementations-completed.md
 10. super-mucca-completion.md
@@ -125,7 +125,7 @@ Trasformato FixCity da progetto con documentazione parziale a piattaforma enterp
 15. perfection-achieved.md
 
 ### 📖 Guide Complete (7)
-16. Fixcity/docs/API.md
+16. Fixcity/docs/api-2.md
 17. Fixcity/docs/USER_GUIDE.md
 18. Fixcity/docs/ADMIN_GUIDE.md
 19. User/docs/2FA_GUIDE.md

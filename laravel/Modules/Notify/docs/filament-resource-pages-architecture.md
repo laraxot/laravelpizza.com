@@ -134,8 +134,8 @@ find Modules -type f -name "*.php" -path "*/Filament/Resources/*/Pages/*" -exec 
 ## Riferimenti
 
 - [Filament Resources Documentation](https://filamentphp.com/docs/3.x/panels/resources/getting-started)
-- [ XotBase Architecture](./filament_xot_architecture.md)
-- [<nome progetto> XotBase Architecture](./filament_xot_architecture.md)
+- [ XotBase Architecture](./filament-xot-architecture-2.md)
+- [<nome progetto> XotBase Architecture](./filament-xot-architecture-2.md)
 - [Pattern Architetturali in Laravel](https://laravel.com/docs/architecture)
 # Architettura delle Pagine di Risorse Filament
 
@@ -252,5 +252,5 @@ find Modules -type f -name "*.php" -path "*/Filament/Resources/*/Pages/*" -exec 
 ## Riferimenti
 
 - [Filament Resources Documentation](https://filamentphp.com/docs/3.x/panels/resources/getting-started)
-- [<main module> XotBase Architecture](./filament_xot_architecture.md)
+- [<main module> XotBase Architecture](./filament-xot-architecture-2.md)
 - [Pattern Architetturali in Laravel](https://laravel.com/docs/architecture)

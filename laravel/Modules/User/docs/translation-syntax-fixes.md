@@ -150,6 +150,6 @@ find Modules/User/lang -name "*.php" -exec php -l {} \;
 
 ---
 
-<!-- Contenuto unito da translation-syntax-fixes-2025.md (rimozione date dai nomi file, issue #64) -->
+<!-- Contenuto unito da translation-syntax-fixes-3.md (rimozione date dai nomi file, issue #64) -->
 
-See canonical documentation: ../../../Themes/docs/shared-components/translation-syntax-fixes-2025.md
+See canonical documentation: ../../../Themes/docs/shared-components/translation-syntax-fixes-3.md

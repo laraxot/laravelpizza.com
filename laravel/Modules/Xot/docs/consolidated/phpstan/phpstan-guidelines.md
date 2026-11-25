@@ -271,9 +271,9 @@ Modules/
 ```
 docs/
   phpstan/
-    phpstan_analysis_summary.md    # Overall analysis
-    phpstan_error_patterns.md      # Common errors and solutions
-    phpstan_guidelines.md          # This document
+    phpstan-analysis-summary-2.md    # Overall analysis
+    phpstan-error-patterns-2.md      # Common errors and solutions
+    phpstan-guidelines-2.md          # This document
     module_specific/
       blog_phpstan_issues.md       # Module-specific issues
 ```
@@ -618,9 +618,9 @@ Modules/
 ```
 docs/
   phpstan/
-    phpstan_analysis_summary.md    # Overall analysis
-    phpstan_error_patterns.md      # Common errors and solutions
-    phpstan_guidelines.md          # This document
+    phpstan-analysis-summary-2.md    # Overall analysis
+    phpstan-error-patterns-2.md      # Common errors and solutions
+    phpstan-guidelines-2.md          # This document
     module_specific/
       blog_phpstan_issues.md       # Module-specific issues
 ```

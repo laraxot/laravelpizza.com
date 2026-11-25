@@ -45,10 +45,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -1334,7 +1334,7 @@ class TemplateControllerTest extends TestCase
 
 ## implementation-summary-
 
-*Consolidated from: `implementation-summary-.md`*
+*Consolidated from: `implementation-summary-2.md`*
 
 title: "IMPLEMENTATION_SUMMARY_2025-01-27.deprecated"
 type: concept
@@ -1347,10 +1347,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -1373,10 +1373,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -1400,10 +1400,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -1649,9 +1649,9 @@ protected function getTableQuery(): Builder|Relation|null
 ## 📚 DOCUMENTATION UPDATED
 
 1. ✅ `Modules/App/docs/roadmap.md` - Progress tracking
-2. ✅ `IMPLEMENTATION-SUMMARY-.md.md` - This file
+2. ✅ `implementation-summary-5.md` - This file
 3. 🔄 `Modules/App/docs/performance-issues.md` - Needs update with results
-4. 🔄 `master-roadmap.md` - Needs sync with App progress
+4. 🔄 `master-roadmap-2.md` - Needs sync with App progress
 
 ---
 
@@ -1687,10 +1687,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -2450,10 +2450,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -2513,10 +2513,10 @@ Analizzato lo scopo del progetto, identificate le features mancanti e implementa
 12. ✅ **final-summary.md**
 
 ### 📖 Guide Complete (3 - da sessione precedente)
-13. ✅ **App/docs/API.md**
+13. ✅ **App/docs/api-2.md**
 14. ✅ **App/docs/USER_GUIDE.md**
 15. ✅ **App/docs/ADMIN_GUIDE.md**
-13. ✅ **<nome progetto>/docs/API.md**
+13. ✅ **<nome progetto>/docs/api-2.md**
 14. ✅ **<nome progetto>/docs/USER_GUIDE.md**
 15. ✅ **<nome progetto>/docs/ADMIN_GUIDE.md**
 
@@ -2525,9 +2525,9 @@ Analizzato lo scopo del progetto, identificate le features mancanti e implementa
 17. ✅ **User/docs/SSO_GUIDE.md**
 
 ### 🗺️ Roadmap (3 - da sessione precedente)
-18. ✅ **roadmap-status-summary.md**
-19. ✅ **App/ROADMAP_2025.md**
-19. ✅ **<nome progetto>/ROADMAP_2025.md**
+18. ✅ **roadmap-status-summary-2.md**
+19. ✅ **../../../../User/docs/roadmap-3.md**
+19. ✅ **<nome progetto>/roadmap-3.md**
 20. ✅ **User/roadmap.md**
 
 ---
@@ -2852,7 +2852,7 @@ Modules/<nome progetto>/
 │       ├── TicketResource.php               ✅ NEW
 │       └── TicketCollection.php             ✅ NEW
 └── docs/
-    ├── API.md                               ✅ EXISTING
+    ├── api-2.md                               ✅ EXISTING
     ├── USER_GUIDE.md                        ✅ EXISTING
     └── ADMIN_GUIDE.md                       ✅ EXISTING
 ```

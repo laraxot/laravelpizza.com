@@ -159,9 +159,9 @@ return [
 
 ## Riferimenti
 
-- [Regole di Naming per i File di Traduzione](./TRANSLATION_FILE_NAMING_RULES.md)
-- [Guida alla Struttura dei File di Traduzione](./TRANSLATION_FILE_STRUCTURE_GUIDE.md)
-- [Progresso della Standardizzazione](./TRANSLATION_STANDARDS_PROGRESS.md)
+- [Regole di Naming per i File di Traduzione](../laravel/Modules/Notify/docs/translation-file-naming-rules-2.md)
+- [Guida alla Struttura dei File di Traduzione](../laravel/Modules/Notify/docs/translation-file-structure-guide-2.md)
+- [Progresso della Standardizzazione](../laravel/Modules/Notify/docs/translation-standards-progress-2.md)
 # Guida alla Correzione dei File di Traduzione
 
 ## Procedura Sistematica per la Standardizzazione
@@ -311,6 +311,6 @@ declare(strict_types=1);
 
 ## Riferimenti
 
-- [Regole di Naming per i File di Traduzione](./TRANSLATION_FILE_NAMING_RULES.md)
-- [Guida alla Struttura dei File di Traduzione](./TRANSLATION_FILE_STRUCTURE_GUIDE.md)
-- [Progresso della Standardizzazione](./TRANSLATION_STANDARDS_PROGRESS.md)
+- [Regole di Naming per i File di Traduzione](../laravel/Modules/Notify/docs/translation-file-naming-rules-2.md)
+- [Guida alla Struttura dei File di Traduzione](../laravel/Modules/Notify/docs/translation-file-structure-guide-2.md)
+- [Progresso della Standardizzazione](../laravel/Modules/Notify/docs/translation-standards-progress-2.md)

@@ -13,7 +13,7 @@ Pulire l'immensa quantità di file spazzatura (560+ file) nella cartella docs de
 
 ## 🚨 Problemi Identificati
 - File di ridenominazione accumulati (`module_notify_root_symlink.md~...`).
-- Analisi dettagliate ripetute 8 volte (`analisi-dettagliata-8.md`).
+- Analisi dettagliate ripetute 8 volte (`analisi-dettagliata-8-2.md`).
 - Changelog duplicati (`CHANGELOG.MD` vs `CHANGELOG.md`).
 
 ## ✅ Checklist

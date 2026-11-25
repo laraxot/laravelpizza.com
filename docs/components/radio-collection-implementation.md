@@ -222,7 +222,7 @@ RadioCollection::make('studio_id')
 ## Related Documentation
 
 - [UI Module Overview](../ui.md)
-- [Filament Form Components](../filament/filament_components_usage.md)
+- [Filament Form Components](../filament/filament-components-usage-2.md)
 - [Radio Collection Philosophy](./radio-collection-philosophy.md)
 
 ## Change Log

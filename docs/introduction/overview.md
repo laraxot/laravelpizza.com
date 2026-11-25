@@ -121,7 +121,7 @@ Per la roadmap dettagliata, vedere [Project Roadmap](introduction/project-roadma
 ## Contribuire
 
 Per contribuire al progetto:
-1. Leggere le [convenzioni](conventions/general-rules.md)
+1. Leggere le [convenzioni](../../laravel/Modules/Geo/docs/conventions/general-rules-2.md)
 2. Seguire il [workflow di sviluppo](development/workflow.md)
 3. Aprire una pull request
 4. Attendere la code review

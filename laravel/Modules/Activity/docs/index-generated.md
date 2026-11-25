@@ -23,17 +23,17 @@ Strategic, foundational, and consolidated documentation at module level:
 
 **Core Documentation** (Key files)
   - [architecture.md](architecture.md): System architecture and design patterns
-  - [API.md](api.md): API reference and endpoints
+  - [api-2.md](api.md): API reference and endpoints
   - [database-schema.md](database-schema.md): Database schema definitions
   - [quick-start.md](quick-start.md): Quick start guide
-  - [PATTERNS.md](patterns.md): Design patterns and implementation guides
+  - [patterns-2.md](patterns.md): Design patterns and implementation guides
   - [testing.md](testing.md): Testing strategy and guidelines
 
 **Planning & Strategy** (Key documents)
   - [README.md](README.md)
-  - [product_strategy.md](product_strategy.md)
+  - [product-strategy-3.md](product-strategy-3.md)
   - [roadmap.md](roadmap.md)
-  - [sprint_planning.md](sprint_planning.md)
+  - [sprint-planning-3.md](sprint-planning-3.md)
 
 **Additional Root Files**
   - and 278+ more documentation files (configuration, guides, analysis, audits, quality reports)
@@ -236,10 +236,10 @@ Testing strategies and guidelines:
 |------|------|----------|
 <<<<<<< .merge_file_2AwHso
 =======
-| 2026-07-28 | [PATTERNS.md](patterns.md) | root |
+| 2026-07-28 | [patterns-2.md](patterns.md) | root |
 | 2026-07-28 | [testing.md](testing.md) | root |
 | 2026-07-28 | [database-schema.md](database-schema.md) | root |
-| 2026-07-28 | [API.md](api.md) | root |
+| 2026-07-28 | [api-2.md](api.md) | root |
 | 2026-07-28 | [quick-start.md](quick-start.md) | root |
 | 2026-07-28 | [architecture.md](architecture.md) | root |
 | 2026-07-28 | [archive/index.md](archive/index.md) | archive |

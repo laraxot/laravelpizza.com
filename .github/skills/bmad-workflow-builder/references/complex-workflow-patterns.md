@@ -104,7 +104,7 @@ Artifacts MUST use `{project_root}` for paths so the skill works regardless of i
 
 ```markdown
 1. Create the artifact at {project_root}/docs/architecture.md
-2. Update {project_root}/CHANGELOG.md with entry
+2. Update {project_root}/changelog.md with entry
 3. Copy template to {project_root}/.bmad-cache/template.md
 ```
 

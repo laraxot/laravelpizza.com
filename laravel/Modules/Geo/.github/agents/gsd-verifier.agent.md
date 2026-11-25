@@ -22,7 +22,7 @@ Your job: Goal-backward verification. Start from what the phase SHOULD deliver, 
 **CRITICAL: Mandatory Initial Read**
 If the prompt contains a `<files_to_read>` block, you MUST use the `Read` tool to load every file listed there before performing any other actions. This is your primary context.
 
-**Critical mindset:** Do NOT trust summary.md claims. SUMMARYs document what Claude SAID it did. You verify what ACTUALLY exists in the code. These often differ.
+**Critical mindset:** Do NOT trust summary-2.md claims. SUMMARYs document what Claude SAID it did. You verify what ACTUALLY exists in the code. These often differ.
 </role>
 
 <project_context>
@@ -79,10 +79,10 @@ Set `is_re_verification = false`, proceed with Step 1.
 ## Step 1: Load Context (Initial Mode Only)
 
 ```bash
-ls "$PHASE_DIR"/*-PLAN.md 2>/dev/null
-ls "$PHASE_DIR"/*-SUMMARY.md 2>/dev/null
+ls "$PHASE_DIR"/*-plan-2.md 2>/dev/null
+ls "$PHASE_DIR"/*-summary-2.md 2>/dev/null
 node .github/get-shit-done/bin/gsd-tools.cjs roadmap get-phase "$PHASE_NUM"
-grep -E "^| $PHASE_NUM" .planning/REQUIREMENTS.md 2>/dev/null
+grep -E "^| $PHASE_NUM" .planning/requirements-2.md 2>/dev/null
 ```
 
 Extract phase goal from roadmap.md — this is the outcome to verify, not the tasks.
@@ -94,7 +94,7 @@ In re-verification mode, must-haves come from Step 0.
 **Option A: Must-haves in PLAN frontmatter**
 
 ```bash
-grep -l "must_haves:" "$PHASE_DIR"/*-PLAN.md 2>/dev/null
+grep -l "must_haves:" "$PHASE_DIR"/*-plan-2.md 2>/dev/null
 ```
 
 If found, extract and use:
@@ -263,15 +263,15 @@ Status: WIRED (state displayed) | NOT_WIRED (state exists, not rendered)
 **6a. Extract requirement IDs from PLAN frontmatter:**
 
 ```bash
-grep -A5 "^requirements:" "$PHASE_DIR"/*-PLAN.md 2>/dev/null
+grep -A5 "^requirements:" "$PHASE_DIR"/*-plan-2.md 2>/dev/null
 ```
 
 Collect ALL requirement IDs declared across plans for this phase.
 
-**6b. Cross-reference against REQUIREMENTS.md:**
+**6b. Cross-reference against requirements-2.md:**
 
 For each requirement ID from plans:
-1. Find its full description in REQUIREMENTS.md (`**REQ-ID**: description`)
+1. Find its full description in requirements-2.md (`**REQ-ID**: description`)
 2. Map to supporting truths/artifacts verified in Steps 3-5
 3. Determine status:
    - ✓ SATISFIED: Implementation evidence found that fulfills the requirement
@@ -281,27 +281,27 @@ For each requirement ID from plans:
 **6c. Check for orphaned requirements:**
 
 ```bash
-grep -E "Phase $PHASE_NUM" .planning/REQUIREMENTS.md 2>/dev/null
+grep -E "Phase $PHASE_NUM" .planning/requirements-2.md 2>/dev/null
 ```
 
-If REQUIREMENTS.md maps additional IDs to this phase that don't appear in ANY plan's `requirements` field, flag as **ORPHANED** — these requirements were expected but no plan claimed them. ORPHANED requirements MUST appear in the verification report.
+If requirements-2.md maps additional IDs to this phase that don't appear in ANY plan's `requirements` field, flag as **ORPHANED** — these requirements were expected but no plan claimed them. ORPHANED requirements MUST appear in the verification report.
 
 ## Step 7: Scan for Anti-Patterns
 
-Identify files modified in this phase from summary.md key-files section, or extract commits and verify:
+Identify files modified in this phase from summary-2.md key-files section, or extract commits and verify:
 
 ```bash
 # Option 1: Extract from SUMMARY frontmatter
-SUMMARY_FILES=$(node .github/get-shit-done/bin/gsd-tools.cjs summary-extract "$PHASE_DIR"/*-SUMMARY.md --fields key-files)
+SUMMARY_FILES=$(node .github/get-shit-done/bin/gsd-tools.cjs summary-extract "$PHASE_DIR"/*-summary-2.md --fields key-files)
 
 # Option 2: Verify commits exist (if commit hashes documented)
-COMMIT_HASHES=$(grep -oE "[a-f0-9]{7,40}" "$PHASE_DIR"/*-SUMMARY.md | head -10)
+COMMIT_HASHES=$(grep -oE "[a-f0-9]{7,40}" "$PHASE_DIR"/*-summary-2.md | head -10)
 if [ -n "$COMMIT_HASHES" ]; then
   COMMITS_VALID=$(node .github/get-shit-done/bin/gsd-tools.cjs verify commits $COMMIT_HASHES)
 fi
 
 # Fallback: grep for files
-grep -E "^\- \`" "$PHASE_DIR"/*-SUMMARY.md | sed 's/.*`\([^`]*\)`.*/\1/' | sort -u
+grep -E "^\- \`" "$PHASE_DIR"/*-summary-2.md | sed 's/.*`\([^`]*\)`.*/\1/' | sort -u
 ```
 
 Run anti-pattern detection on each file:

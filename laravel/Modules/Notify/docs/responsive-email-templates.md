@@ -224,10 +224,10 @@ I template nella directory `mail-layouts` supportano variabili Blade:
 =======
 >>>>>>> .merge_file_VukbsN
 <<<<<<< .merge_file_d0wxSz
-- [Guida ai Layout Email](./MAIL_LAYOUTS_GUIDE.md)
-- [Email Best Practices](./mail-templates/EMAIL_BEST_PRACTICES.md)
-- [HTML Email Compatibility](./mail-templates/HTML_EMAIL_COMPATIBILITY.md)
-- [MailPace Integration](./mail-templates/MAILPACE_TEMPLATES_INTEGRATION.md)
+- [Guida ai Layout Email](mail-layouts-guide-2.md)
+- [Email Best Practices](mail-templates/email-best-practices-2.md)
+- [HTML Email Compatibility](mail-templates/html-email-compatibility-2.md)
+- [MailPace Integration](mail-templates/mailpace-templates-integration-2.md)
 =======
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_2qLO1r
@@ -235,18 +235,18 @@ I template nella directory `mail-layouts` supportano variabili Blade:
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_VukbsN
-- [Guida ai Layout Email](./mail_layouts_guide.md)
-- [Email Best Practices](./mail-templates/email_best_practices.md)
-- [HTML Email Compatibility](mail-templates/html_email_compatibility.md)
-- [MailPace Integration](mail-templates/mailpace_templates_integration.md)
+- [Guida ai Layout Email](./mail-layouts-guide-2.md)
+- [Email Best Practices](./mail-templates/email-best-practices-2.md)
+- [HTML Email Compatibility](mail-templates/html-email-compatibility-2.md)
+- [MailPace Integration](mail-templates/mailpace-templates-integration-2.md)
 <<<<<<< .merge_file_2qLO1r
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_VukbsN
-- [Guida ai Layout Email](./mail_layouts_guide.md)
-- [Email Best Practices](./mail-templates/email_best_practices.md)
-- [HTML Email Compatibility](./mail-templates/html_email_compatibility.md)
-- [MailPace Integration](./mail-templates/mailpace_templates_integration.md)
+- [Guida ai Layout Email](./mail-layouts-guide-2.md)
+- [Email Best Practices](./mail-templates/email-best-practices-2.md)
+- [HTML Email Compatibility](./mail-templates/html-email-compatibility-2.md)
+- [MailPace Integration](./mail-templates/mailpace-templates-integration-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_2qLO1r
@@ -456,10 +456,10 @@ I template nella directory `mail-layouts` supportano variabili Blade:
 =======
 >>>>>>> .merge_file_VukbsN
 <<<<<<< .merge_file_d0wxSz
-- [Guida ai Layout Email](./MAIL_LAYOUTS_GUIDE.md)
-- [Email Best Practices](./mail-templates/EMAIL_BEST_PRACTICES.md)
-- [HTML Email Compatibility](./mail-templates/HTML_EMAIL_COMPATIBILITY.md)
-- [MailPace Integration](./mail-templates/MAILPACE_TEMPLATES_INTEGRATION.md)
+- [Guida ai Layout Email](mail-layouts-guide-2.md)
+- [Email Best Practices](mail-templates/email-best-practices-2.md)
+- [HTML Email Compatibility](mail-templates/html-email-compatibility-2.md)
+- [MailPace Integration](mail-templates/mailpace-templates-integration-2.md)
 =======
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_2qLO1r
@@ -467,18 +467,18 @@ I template nella directory `mail-layouts` supportano variabili Blade:
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_VukbsN
-- [Guida ai Layout Email](./mail_layouts_guide.md)
-- [Email Best Practices](./mail-templates/email_best_practices.md)
-- [HTML Email Compatibility](mail-templates/html_email_compatibility.md)
-- [MailPace Integration](mail-templates/mailpace_templates_integration.md)
+- [Guida ai Layout Email](./mail-layouts-guide-2.md)
+- [Email Best Practices](./mail-templates/email-best-practices-2.md)
+- [HTML Email Compatibility](mail-templates/html-email-compatibility-2.md)
+- [MailPace Integration](mail-templates/mailpace-templates-integration-2.md)
 <<<<<<< .merge_file_2qLO1r
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_VukbsN
-- [Guida ai Layout Email](./mail_layouts_guide.md)
-- [Email Best Practices](./mail-templates/email_best_practices.md)
-- [HTML Email Compatibility](./mail-templates/html_email_compatibility.md)
-- [MailPace Integration](./mail-templates/mailpace_templates_integration.md)
+- [Guida ai Layout Email](./mail-layouts-guide-2.md)
+- [Email Best Practices](./mail-templates/email-best-practices-2.md)
+- [HTML Email Compatibility](./mail-templates/html-email-compatibility-2.md)
+- [MailPace Integration](./mail-templates/mailpace-templates-integration-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_2qLO1r

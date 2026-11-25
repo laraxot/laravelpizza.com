@@ -273,15 +273,15 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 
 ### Documentazione Correlata
 - [Notification System](./notification_system.md)
-- [Email Templates](./email_templates.md)
+- [Email Templates](./email-templates-2.md)
 - [Multi-Channel Delivery](./multi_channel_delivery.md)
 - [Template Versioning](./template_versioning.md)
 
 ### Moduli Collegati
-- [ Module](../../<nome modulo>/docs/modelli_factory_seeder_analisi.md) - Notifiche mediche
-- [User Module](../../User/docs/modelli_factory_seeder_analisi.md) - Notifiche utente
-- [Media Module](../../Media/docs/modelli_factory_seeder_analisi.md) - Allegati notifiche
-- [Lang Module](../../Lang/docs/modelli_factory_seeder_analisi.md) - Localizzazione
+- [ Module](../../<nome modulo>/docs/modelli-factory-seeder-analisi-2.md) - Notifiche mediche
+- [User Module](../../User/docs/modelli-factory-seeder-analisi-3.md) - Notifiche utente
+- [Media Module](../../Media/docs/modelli-factory-seeder-analisi-2.md) - Allegati notifiche
+- [Lang Module](../../Lang/docs/modelli-factory-seeder-analisi-2.md) - Localizzazione
 
 ### Servizi Esterni
 - [Mailgun](https://www.mailgun.com/) - Email delivery service
@@ -549,23 +549,23 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 
 ### Documentazione Correlata
 - [Notification System](./notification_system.md)
-- [Email Templates](./email_templates.md)
+- [Email Templates](./email-templates-2.md)
 - [Multi-Channel Delivery](./multi_channel_delivery.md)
 - [Template Versioning](./template_versioning.md)
 
 ### Moduli Collegati
-- [<nome progetto> Module](../../<nome progetto>/docs/modelli_factory_seeder_analisi.md) - Notifiche mediche
+- [<nome progetto> Module](../../<nome progetto>/docs/modelli-factory-seeder-analisi-2.md) - Notifiche mediche
 <<<<<<< HEAD
-- [<nome progetto> Module](../../<nome progetto>/docs/modelli_factory_seeder_analisi.md) - Notifiche mediche
+- [<nome progetto> Module](../../<nome progetto>/docs/modelli-factory-seeder-analisi-2.md) - Notifiche mediche
 =======
 <<<<<<< HEAD
-- [<nome progetto> Module](../../<nome progetto>/docs/modelli_factory_seeder_analisi.md) - Notifiche mediche
+- [<nome progetto> Module](../../<nome progetto>/docs/modelli-factory-seeder-analisi-2.md) - Notifiche mediche
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [User Module](../../User/docs/modelli_factory_seeder_analisi.md) - Notifiche utente
-- [Media Module](../../Media/docs/modelli_factory_seeder_analisi.md) - Allegati notifiche
-- [Lang Module](../../Lang/docs/modelli_factory_seeder_analisi.md) - Localizzazione
+- [User Module](../../User/docs/modelli-factory-seeder-analisi-3.md) - Notifiche utente
+- [Media Module](../../Media/docs/modelli-factory-seeder-analisi-2.md) - Allegati notifiche
+- [Lang Module](../../Lang/docs/modelli-factory-seeder-analisi-2.md) - Localizzazione
 
 ### Servizi Esterni
 - [Mailgun](https://www.mailgun.com/) - Email delivery service

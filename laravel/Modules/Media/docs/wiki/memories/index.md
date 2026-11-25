@@ -1,3 +1,8 @@
+---
+title: "Media Module - memories Index"
+type: note
+qmd: "media memories"
+---
 # Media Module - memories Index
 
 ## Purpose

@@ -82,7 +82,7 @@ fi
 # 4. Aggiorna il file QUICK_START.md per riflettere i nuovi percorsi
 if [ -f "${BASHSCRIPTS_DIR}/database/seeding/QUICK_START.md" ]; then
     echo "📝 Aggiornamento QUICK_START.md..."
-    cat > "${BASHSCRIPTS_DIR}/database/seeding/QUICK_START.md" << 'EOF'
+    cat > "${BASHSCRIPTS_DIR}/../database/seeding/quick-start-2.md" << 'EOF'
 # Quick Start per Script di Seeding Database
 
 ## Panoramica

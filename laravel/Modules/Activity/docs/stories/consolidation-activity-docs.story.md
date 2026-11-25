@@ -26,7 +26,7 @@ Activity module `docs/` contained 155 .md files with:
 - 41 orphaned files in root directory
 - 5+ duplicate event-sourcing pattern files
 - 3 variant index files (`00-index.md`, `00-index-1.md`, `00-index.md`)
-- 2 API documentation files (`api.md`, `API.md`)
+- 2 API documentation files (`api-2.md`, `api-2.md`)
 - Scattered coverage, analysis, and feature docs
 - Unclear categorization and file relationships
 
@@ -48,7 +48,7 @@ Result: Difficult to navigate, maintain, and locate canonical documentation.
 
 #### Consolidated & Deduplicated (4 files)
 - **event-sourcing patterns**: 5 variants → 1 canonical file
-- **API documentation**: 2 files → 1 canonical (API.md)
+- **API documentation**: 2 files → 1 canonical (api-2.md)
 - **Index files**: 3 variants → 1 canonical (00-index.md)
 - **README updates**: 5 old variants → archived
 
@@ -61,7 +61,7 @@ Result: Difficult to navigate, maintain, and locate canonical documentation.
 
 5 canonical files remain in `docs/`:
 - ✓ `README.md` (644 lines) — Module overview
-- ✓ `API.md` (30 lines) — Public API documentation
+- ✓ `api-2.md` (30 lines) — Public API documentation
 - ✓ `architecture.md` (269 lines) — Architecture overview
 - ✓ `00-index.md` (69 lines) — Index
 - ✓ `purpose.md` (98 lines) — Module purpose statement
@@ -71,8 +71,8 @@ Result: Difficult to navigate, maintain, and locate canonical documentation.
 ```
 Activity/docs/
   README.md               (main overview)
-  API.md                  (public APIs)
-  architecture.md         (architecture)
+  api-2.md                  (public APIs)
+  architecture-2.md         (architecture)
   00-index.md             (index)
   purpose.md              (module purpose)
   
@@ -111,7 +111,7 @@ Activity/docs/
 - None (lazy approach: move, don't modify)
 
 ### Deleted
-- `api.md` (duplicate, kept API.md)
+- `api-2.md` (duplicate, kept api-2.md)
 - `00-index.md` (duplicate, kept 00-index.md)
 - `00-index-1.md` (duplicate, kept 00-index.md)
 - `architecture.md` (duplicate, kept architecture.md)
@@ -144,7 +144,7 @@ Activity/docs/
 
 1. **Review consolidated canonical files**
    - [ ] README.md — does it reflect new structure?
-   - [ ] API.md — complete coverage?
+   - [ ] api-2.md — complete coverage?
    - [ ] architecture.md — current?
 
 2. **Consider promoting wiki files** — if any should be back at root

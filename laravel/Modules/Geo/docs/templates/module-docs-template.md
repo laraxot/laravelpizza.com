@@ -75,7 +75,7 @@ After every change:
 
 - [GSD Methodology](../../docs/project/gsd-methodology.md)
 - [Laraxot Conventions](../../docs/laraxot-conventions.md)
-- [AGENTS.md](../../AGENTS.md)
+- [agents-2.md](../../agents-2.md)
 
 ## Roadmap
 

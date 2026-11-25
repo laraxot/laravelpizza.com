@@ -1,12 +1,12 @@
 # Risoluzione Conflitti
 
 ## Best Practices
-Per le best practices complete, consultare il file [best_practices.md](conflicts/best_practices.md).
+Per le best practices complete, consultare il file [best-practices-3.md](../../../Activity/docs/best-practices-3.md).
 
 ## Casi Risolti Recentemente
 
 ### 1. Namespace e Convenzioni
-- [Convenzioni Namespace](NAMESPACE-CONVENTIONS.md)
+- [Convenzioni Namespace](namespace-conventions-2.md)
 - Risoluzione conflitti nelle convenzioni di namespace
 - Mantenimento della compatibilità con PHPStan
 
@@ -22,7 +22,7 @@ Per le best practices complete, consultare il file [best_practices.md](conflicts
   - Documentazione delle decisioni prese
 
 ### 3. Autenticazione e UI
-- [Componenti Filament](../../Themes/One/project_docs/FILAMENT_COMPONENTS.md)
+- [Componenti Filament](../../../Cms/docs/filament-components-2.md)
 - [Registrazione Utenti](../../Themes/One/project_docs/AUTH.md)
   - Implementazione completa sistema registrazione
   - Gestione tipi utente dinamica
@@ -52,7 +52,7 @@ Per le best practices complete, consultare il file [best_practices.md](conflicts
 
 ## Collegamenti Correlati
 
-- [Best Practices](conflicts/best_practices.md)
+- [Best Practices](../../../Activity/docs/best-practices-3.md)
 - [PHPStan Livello 10](phpstan_livello10_linee_guida.md)
 - [Struttura Moduli](module-structure.md)
 - [Risoluzione Conflitti Merge](risoluzione_conflitti_merge.md)
@@ -106,7 +106,7 @@ Per le best practices complete, consultare il file [best_practices.md](conflicts
 ## Collegamenti Esterni
 
 - [Documentazione generale sulla risoluzione dei conflitti git](../../../project_docs/risoluzione_conflitti_git.md)
-- [Report completo di intervento](../../../project_docs/logs/conflict_resolution_report.md)
+- [Report completo di intervento](../../../User/docs/conflict-resolution-report-3.md)
 - [Dettagli risoluzione ModelWithPosContract](./conflicts/model_with_pos_contract_resolution.md)
 
 ## XotBaseMainPanelProvider.php
@@ -231,5 +231,5 @@ aurmich/dev
 b6f667c (.)
 * [Risoluzione Conflitti Xot](../../../Xot/project_docs/risoluzione_conflitti.md)
 * [Risoluzione Conflitti Tenant](../../../Tenant/project_docs/risoluzione_conflitti.md)
-* [Linee Guida Principali Risoluzione Conflitti](../../../../project_docs/conflict_resolution.md)
+* [Linee Guida Principali Risoluzione Conflitti](../../../Geo/docs/conflict-resolution-2.md)
 fc83074 (.)

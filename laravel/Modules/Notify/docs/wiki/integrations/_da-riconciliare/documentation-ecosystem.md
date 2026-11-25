@@ -100,15 +100,15 @@ updated: 2026-11-23
 │    └─ Visual system overview                    │
 │                                                 │
 │  ▶ Module Master Index                          │
-│    docs/MODULE_DOCS_INDEX.md                    │
+│    ../../../module-docs-index-2.md                    │
 │    └─ All 19 modules with relationships         │
 │                                                 │
 │  ▶ Theme Master Index                           │
-│    docs/THEMES_DOCUMENTATION_INDEX.md           │
+│    ../../../themes-documentation-index-2.md           │
 │    └─ Sixteen + TwentyOne documentation        │
 │                                                 │
 │  ▶ General Master Index                         │
-│    docs/MODULE_DOCS_INDEX.md                    │
+│    ../../../module-docs-index-2.md                    │
 │    └─ Central hub (7,137+ files indexed)        │
 │                                                 │
 └─────────────────────────────────────────────────┘
@@ -278,8 +278,8 @@ Xot (Core) ◄──────────────────────
 | I Need... | Start Here | Then Go To | Then Go To |
 |-----------|-----------|-----------|-----------|
 | Quick start | [Copilot Inst.](../../.github/copilot-instructions.md) | [Architecture](architecture-diagrams.md) | Your task |
-| Module overview | [Module Index](module_docs_index.md) | `Modules/{Name}/docs/00-index.md` | Details |
-| Theme overview | [Theme Index](themes_documentation_index.md) | `Themes/{Name}/docs/00-index.md` | Details |
+| Module overview | [Module Index](module-docs-index-3.md) | `Modules/{Name}/docs/00-index.md` | Details |
+| Theme overview | [Theme Index](themes-documentation-index-3.md) | `Themes/{Name}/docs/00-index.md` | Details |
 <<<<<<< HEAD
 <<<<<<< .merge_file_gVEnEH
 =======
@@ -297,8 +297,8 @@ Xot (Core) ◄──────────────────────
 <<<<<<< HEAD
 >>>>>>> .merge_file_5airfc
 | Quick start | [Copilot Inst.](../../.github/copilot-instructions.md) | [Architecture](architecture-diagrams.md) | Your task |
-| Module overview | [Module Index](module_docs_index.md) | `Modules/{Name}/docs/00-index.md` | Details |
-| Theme overview | [Theme Index](themes_documentation_index.md) | `Themes/{Name}/docs/00-index.md` | Details |
+| Module overview | [Module Index](module-docs-index-3.md) | `Modules/{Name}/docs/00-index.md` | Details |
+| Theme overview | [Theme Index](themes-documentation-index-3.md) | `Themes/{Name}/docs/00-index.md` | Details |
 | Create content | [Cms Docs](../laravel/Modules/Cms/docs/) | [Block Catalog](../laravel/Themes/Sixteen/docs/component_catalog.md) | Examples |
 <<<<<<< .merge_file_gVEnEH
 <<<<<<< HEAD
@@ -324,23 +324,23 @@ Xot (Core) ◄──────────────────────
 | Track changes | [Activity Docs](../laravel/Modules/Activity/docs/) | [Audit Trail](../laravel/Modules/Activity/docs/guides/) | Examples |
 <<<<<<< HEAD
 <<<<<<< .merge_file_gVEnEH
-| Code standards | [CLAUDE.md](../laravel/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
+| Code standards | [CLAUDE.md](../../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_5airfc
-| Code standards | [CLAUDE.md](../laravel/CLAUDE.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
+| Code standards | [CLAUDE.md](../../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
 =======
 <<<<<<< HEAD
-| Code standards | [CLAUDE.md](../laravel/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
+| Code standards | [CLAUDE.md](../../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
 =======
-| Code standards | [CLAUDE.md](../laravel/CLAUDE.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
+| Code standards | [CLAUDE.md](../../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_gVEnEH
 =======
-| Code standards | [CLAUDE.md](../laravel/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
+| Code standards | [CLAUDE.md](../../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
@@ -450,13 +450,13 @@ docs/
 ```
 .github/
 ├── copilot-instructions.md         ← Copilot guide
-├── CONTRIBUTING.md
+├── contributing-2.md
 ├── README.md
 └── skills/                         (GSD skills)
 
 laravel/
 ├── CLAUDE.md                       ← Framework rules (38.7 KB)
-├── AGENTS.md
+├── agents-2.md
 └── .windsurfrules                 ← Windsurf rules
 ```
 
@@ -471,7 +471,7 @@ laravel/Modules/
 │   └── reference/
 │
 ├── Cms/docs/
-│   ├── 00-index.md
+│   ├── 00-index-2.md
 │   ├── architecture/
 │   ├── guides/
 │   └── reference/
@@ -484,7 +484,7 @@ laravel/Modules/
 ```
 laravel/Themes/
 ├── Sixteen/docs/
-│   ├── 00-index.md
+│   ├── 00-index-2.md
 │   ├── architecture/
 │   ├── design-comuni/
 │   ├── components/
@@ -493,7 +493,7 @@ laravel/Themes/
 │   └── screenshots/
 │
 └── TwentyOne/docs/
-    ├── 00-index.md
+    ├── 00-index-2.md
     └── (similar structure)
 ```
 
@@ -506,32 +506,32 @@ laravel/Themes/
 **I want to learn about:**
 
 - **System Architecture** → [architecture-diagrams.md](architecture-diagrams.md)
-- **Module Development** → [MODULE_DOCS_INDEX.md](module_docs_index.md)
-- **Theme Development** → [THEMES_DOCUMENTATION_INDEX.md](themes_documentation_index.md)
+- **Module Development** → [MODULE_DOCS_INDEX.md](module-docs-index-3.md)
+- **Theme Development** → [THEMES_DOCUMENTATION_INDEX.md](themes-documentation-index-3.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_gVEnEH
 - **Code Quality** → [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
-- **Framework Rules** → [laravel/CLAUDE.md](../laravel/claude.md)
+- **Framework Rules** → [laravel/Modules/Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_5airfc
 - **Code Quality** → [CODE_QUALITY_STANDARDS.md](CODE_QUALITY_STANDARDS.md)
-- **Framework Rules** → [laravel/CLAUDE.md](../laravel/CLAUDE.md)
+- **Framework Rules** → [laravel/Modules/Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md)
 =======
 <<<<<<< HEAD
 - **Code Quality** → [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
-- **Framework Rules** → [laravel/CLAUDE.md](../laravel/claude.md)
+- **Framework Rules** → [laravel/Modules/Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md)
 =======
 - **Code Quality** → [CODE_QUALITY_STANDARDS.md](CODE_QUALITY_STANDARDS.md)
-- **Framework Rules** → [laravel/CLAUDE.md](../laravel/CLAUDE.md)
+- **Framework Rules** → [laravel/Modules/Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_gVEnEH
 =======
 - **Code Quality** → [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
-- **Framework Rules** → [laravel/CLAUDE.md](../laravel/claude.md)
+- **Framework Rules** → [laravel/Modules/Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
@@ -638,11 +638,11 @@ Connected Via:
 
 1. Start: [Copilot Instructions](../../.github/copilot-instructions.md)
 2. Understand: [Architecture Diagrams](architecture-diagrams.md)
-3. Explore: [Module Index](module_docs_index.md) or [Theme Index](themes_documentation_index.md)
+3. Explore: [Module Index](module-docs-index-3.md) or [Theme Index](themes-documentation-index-3.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_gVEnEH
 2. Understand: [Architecture Diagrams](architecture-diagrams.md)
-3. Explore: [Module Index](module_docs_index.md) or [Theme Index](themes_documentation_index.md)
+3. Explore: [Module Index](module-docs-index-3.md) or [Theme Index](themes-documentation-index-3.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -650,12 +650,12 @@ Connected Via:
 >>>>>>> .merge_file_5airfc
 =======
 2. Understand: [Architecture Diagrams](architecture-diagrams.md)
-3. Explore: [Module Index](module_docs_index.md) or [Theme Index](themes_documentation_index.md)
+3. Explore: [Module Index](module-docs-index-3.md) or [Theme Index](themes-documentation-index-3.md)
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_gVEnEH
 =======
 2. Understand: [Architecture Diagrams](architecture-diagrams.md)
-3. Explore: [Module Index](module_docs_index.md) or [Theme Index](themes_documentation_index.md)
+3. Explore: [Module Index](module-docs-index-3.md) or [Theme Index](themes-documentation-index-3.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
@@ -667,7 +667,7 @@ Connected Via:
 ### For Architects
 
 1. Start: [Architecture Diagrams](architecture-diagrams.md)
-2. Understand: [Module Relationships](module_docs_index.md#cross-module-communication)
+2. Understand: [Module Relationships](module-docs-index-3.md#cross-module-communication)
 3. Design: Using module/theme structure
 <<<<<<< HEAD
 <<<<<<< .merge_file_gVEnEH

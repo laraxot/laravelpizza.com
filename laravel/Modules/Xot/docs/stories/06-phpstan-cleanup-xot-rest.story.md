@@ -55,7 +55,7 @@ Nessuna costante di insieme di valori nel perimetro (solo file di test/helper): 
 - [x] Nessun `@phpstan-ignore*`, `@var` bugiardo, cast per zittire, `assert` finti; nessun file cancellato/spostato/rinominato.
 - [x] Ogni test segnaposto ora asserisce il comportamento del suo titolo.
 - [x] Firme degli stub Pest invariate; nessun nuovo errore in altri moduli dovuto a `PestStubs.php`.
-- [x] Dev-story con lezioni imparate; `bmad/phpstan-status.md` e indice wiki aggiornati.
+- [x] Dev-story con lezioni imparate; `../../../Lang/docs/wiki/integrations/phpstan-status-2.md` e indice wiki aggiornati.
 - [ ] Pest non eseguito: `laravel/.env.testing` usa MySQL con `APP_ENV=local` (vedi dev-story, elenco dei test da rilanciare su sqlite).
 
 ## GitHub

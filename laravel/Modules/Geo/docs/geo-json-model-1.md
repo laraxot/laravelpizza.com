@@ -151,7 +151,7 @@ Select::make('cap')
 ### 5. Collegamenti utili
 
 - [Squire PHP](https://github.com/squirephp/squire)
-- Geo/module_geo.md
+- Geo/module-geo-2.md
 - Xot/module-structure.md
 - <main module>/project_docs/geo-integration.md
 
@@ -235,7 +235,7 @@ class Comune extends GeoJsonModel
 <<<<<<< .merge_file_u7fRoe
 <<<<<<< .merge_file_CSyUzY
 <<<<<<< .merge_file_f4MTKk
-- Vedi anche [geo_entities.md](geo-entities.md) per motivazione e percentuali di adozione.
+- Vedi anche [geo-entities-2.md](geo-entities.md) per motivazione e percentuali di adozione.
 =======
 =======
 >>>>>>> .merge_file_XPiePX
@@ -244,12 +244,12 @@ class Comune extends GeoJsonModel
 =======
 >>>>>>> .merge_file_R2icqz
 <<<<<<< HEAD
-- Vedi anche [geo_entities.md](./geo_entities.md) per motivazione e percentuali di adozione.
+- Vedi anche [geo-entities-2.md](./geo-entities-2.md) per motivazione e percentuali di adozione.
 =======
 <<<<<<< HEAD
-- Vedi anche [geo_entities.md](./geo_entities.md) per motivazione e percentuali di adozione.
+- Vedi anche [geo-entities-2.md](./geo-entities-2.md) per motivazione e percentuali di adozione.
 =======
-- Vedi anche [geo_entities.md](geo-entities.md) per motivazione e percentuali di adozione.
+- Vedi anche [geo-entities-2.md](geo-entities.md) per motivazione e percentuali di adozione.
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_uxgmnl
@@ -344,7 +344,7 @@ discussions: []
 <<<<<<< .merge_file_u7fRoe
 <<<<<<< .merge_file_CSyUzY
 <<<<<<< .merge_file_f4MTKk
-- Vedi anche [geo_entities.md](geo-entities.md) per motivazione e percentuali di adozione.
+- Vedi anche [geo-entities-2.md](geo-entities.md) per motivazione e percentuali di adozione.
 =======
 =======
 >>>>>>> .merge_file_XPiePX
@@ -353,12 +353,12 @@ discussions: []
 =======
 >>>>>>> .merge_file_R2icqz
 <<<<<<< HEAD
-- Vedi anche [geo_entities.md](./geo_entities.md) per motivazione e percentuali di adozione.
+- Vedi anche [geo-entities-2.md](./geo-entities-2.md) per motivazione e percentuali di adozione.
 =======
 <<<<<<< HEAD
-- Vedi anche [geo_entities.md](./geo_entities.md) per motivazione e percentuali di adozione.
+- Vedi anche [geo-entities-2.md](./geo-entities-2.md) per motivazione e percentuali di adozione.
 =======
-- Vedi anche [geo_entities.md](geo-entities.md) per motivazione e percentuali di adozione.
+- Vedi anche [geo-entities-2.md](geo-entities.md) per motivazione e percentuali di adozione.
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_uxgmnl
@@ -451,7 +451,7 @@ class ComuneSushi extends Model
 <<<<<<< .merge_file_u7fRoe
 <<<<<<< .merge_file_CSyUzY
 <<<<<<< .merge_file_f4MTKk
-- [geo_entities.md](geo-entities.md)
+- [geo-entities-2.md](geo-entities.md)
 =======
 =======
 >>>>>>> .merge_file_XPiePX
@@ -460,12 +460,12 @@ class ComuneSushi extends Model
 =======
 >>>>>>> .merge_file_R2icqz
 <<<<<<< HEAD
-- [geo_entities.md](./geo_entities.md)
+- [geo-entities-2.md](./geo-entities-2.md)
 =======
 <<<<<<< HEAD
-- [geo_entities.md](./geo_entities.md)
+- [geo-entities-2.md](./geo-entities-2.md)
 =======
-- [geo_entities.md](geo-entities.md)
+- [geo-entities-2.md](geo-entities.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_uxgmnl
@@ -520,7 +520,7 @@ class ComuneSushi extends Model
 <<<<<<< .merge_file_u7fRoe
 <<<<<<< .merge_file_CSyUzY
 <<<<<<< .merge_file_f4MTKk
-- Vedi anche [geo_entities.md](geo-entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
+- Vedi anche [geo-entities-2.md](geo-entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
 =======
 =======
 >>>>>>> .merge_file_XPiePX
@@ -529,12 +529,12 @@ class ComuneSushi extends Model
 =======
 >>>>>>> .merge_file_R2icqz
 <<<<<<< HEAD
-- Vedi anche [geo_entities.md](./geo_entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
+- Vedi anche [geo-entities-2.md](./geo-entities-2.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
 =======
 <<<<<<< HEAD
-- Vedi anche [geo_entities.md](./geo_entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
+- Vedi anche [geo-entities-2.md](./geo-entities-2.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
 =======
-- Vedi anche [geo_entities.md](geo-entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
+- Vedi anche [geo-entities-2.md](geo-entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_uxgmnl
@@ -634,7 +634,7 @@ trait SushiToJsons
 <<<<<<< .merge_file_u7fRoe
 <<<<<<< .merge_file_CSyUzY
 <<<<<<< .merge_file_f4MTKk
-- Vedi anche [geo_entities.md](geo-entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
+- Vedi anche [geo-entities-2.md](geo-entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
 =======
 =======
 >>>>>>> .merge_file_XPiePX
@@ -643,12 +643,12 @@ trait SushiToJsons
 =======
 >>>>>>> .merge_file_R2icqz
 <<<<<<< HEAD
-- Vedi anche [geo_entities.md](./geo_entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
+- Vedi anche [geo-entities-2.md](./geo-entities-2.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
 =======
 <<<<<<< HEAD
-- Vedi anche [geo_entities.md](./geo_entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
+- Vedi anche [geo-entities-2.md](./geo-entities-2.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
 =======
-- Vedi anche [geo_entities.md](geo-entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
+- Vedi anche [geo-entities-2.md](geo-entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_uxgmnl

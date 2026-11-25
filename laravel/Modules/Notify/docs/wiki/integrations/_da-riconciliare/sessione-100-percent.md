@@ -150,16 +150,16 @@ updated: 2026-11-23
 ## 📚 Documentazione Completa
 
 ### Root Docs
-- `docs/SESSIONE_ANALISI_HOMEPAGE.md`
-- `docs/SESSIONE_FIX_COMPLETATA.md`
-- `docs/RALPH_LOOP_EXECUTION.md`
-- `docs/CSS_ARCHITECTURE.md`
-- `docs/CONFERMA_CLASSI_BOOTSTRAP.md`
+- `../../../sessione-analisi-homepage-2.md`
+- `../../../sessione-fix-completata-2.md`
+- `../../../ralph-loop-execution-2.md`
+- `../../../css-architecture-2.md`
+- `../../../conferma-classi-bootstrap-2.md`
 
 ### Screenshots Analysis
-- `docs/screenshots/homepage/analisi_visiva.md`
-- `docs/screenshots/homepage/screenshot_analysis.md`
-- `docs/screenshots/homepage/fix_plan.md`
+- `docs/screenshots/homepage/analisi-visiva-3.md`
+- `docs/screenshots/homepage/screenshot-analysis-3.md`
+- `docs/screenshots/homepage/fix-plan-3.md`
 
 ### Moduli & Temi
 - `laravel/Themes/Sixteen/docs/screenshots/homepage/` (3 file)

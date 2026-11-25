@@ -214,6 +214,6 @@ L'implementazione dovrebbe seguire le convenzioni del progetto, con particolare 
 
 - [Repository GitHub del Pacchetto](https://github.com/camya/filament-title-with-slug)
 - [Documentazione Filament](https://filamentphp.com/docs)
-- [Implementazione Modello con Slug](./MODEL_SLUG_IMPLEMENTATION.md)
-- [Implementazione Risorsa con Slug](./RESOURCE_SLUG_IMPLEMENTATION.md)
-- [Miglioramenti UI/UX](./UI_UX_ENHANCEMENTS.md)
+- [Implementazione Modello con Slug](../../laravel/Modules/Notify/docs/mail-templates/model-slug-implementation-2.md)
+- [Implementazione Risorsa con Slug](../../laravel/Modules/Notify/docs/mail-templates/resource-slug-implementation-2.md)
+- [Miglioramenti UI/UX](../../laravel/Modules/Notify/docs/mail-templates/ui-ux-enhancements-2.md)

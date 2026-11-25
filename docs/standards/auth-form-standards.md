@@ -210,7 +210,7 @@
    - Sanitizzazione input
 
 ## Collegamenti
-- [Form Standards](./form_standards.md)
+- [Form Standards](./form-standards-2.md)
 - [UI Standards](./ui-standards.md)
 - [Accessibility](./accessibility.md)
 # Standard Form di Autenticazione
@@ -425,6 +425,6 @@
    - Sanitizzazione input
 
 ## Collegamenti
-- [Form Standards](./form_standards.md)
+- [Form Standards](./form-standards-2.md)
 - [UI Standards](./ui-standards.md)
 - [Accessibility](./accessibility.md)

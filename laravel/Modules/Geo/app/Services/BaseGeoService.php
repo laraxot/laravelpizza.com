@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\RateLimiter;
 
 /**
  * Classe base per i servizi geografici.
+ *
+ * @see Modules/Geo/docs/geo-sync-marker-repair.md
  */
 abstract class BaseGeoService
 {
@@ -40,11 +42,10 @@ abstract class BaseGeoService
     /**
      * Esegue una richiesta HTTP con rate limiting, cache e retry.
      *
-     * @param string               $method   Metodo HTTP (GET, POST, etc.)
-     * @param string               $url      URL della richiesta
-     * @param array<string, mixed> $params   Parametri della richiesta
-     * @param bool                 $useCache Se utilizzare la cache
-     *
+     * @param  string  $method  Metodo HTTP (GET, POST, etc.)
+     * @param  string  $url  URL della richiesta
+     * @param  array<string, mixed>  $params  Parametri della richiesta
+     * @param  bool  $useCache  Se utilizzare la cache
      * @return array<string, mixed>
      *
      * @throws \RuntimeException Se la richiesta fallisce

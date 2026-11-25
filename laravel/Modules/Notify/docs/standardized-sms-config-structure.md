@@ -176,8 +176,8 @@ $debug = $config['drivers'][$driver]['debug'] ?? $config['debug'];
 
 ## Collegamenti
 
-- [Configurazione Netfun](./netfun_config_requirements.md)
-- [Provider SMS Supportati](./notifications/sms_provider_configuration.md)
+- [Configurazione Netfun](./netfun-config-requirements-2.md)
+- [Provider SMS Supportati](./notifications/sms-provider-configuration-2.md)
 
 ---
 

@@ -152,10 +152,10 @@ GET /it/tests/amministrazione → tests.view (slug=amministrazione)
 
 ## 📚 Documentazione
 
-- `docs/INSTALLAZIONE_STRUMENTI.md`
-- `docs/ALLINEAMENTO_BOOTSTRAP_ITALIA.md`
-- `docs/FIX_TESTS_HOMEPAGE.md`
-- `docs/VERIFICA_HOMEPAGE.md`
+- `../../../installazione-strumenti-2.md`
+- `../../../allineamento-bootstrap-italia-2.md`
+- `../../../fix-tests-homepage-2.md`
+- `../../../verifica-homepage-2.md`
 
 ---
 

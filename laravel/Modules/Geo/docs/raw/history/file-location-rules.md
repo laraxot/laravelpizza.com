@@ -40,7 +40,7 @@ Only these files are allowed in the project root:
 | **README** | `README.md` | Project documentation |
 | **Workspace Files** | `*_ptvx_fila5.code-workspace` | Project-level VSCode workspace |
 | **Package Files** | `composer.json`, `package.json` | Dependencies (if monorepo root) |
-| **License** | `LICENSE`, `LICENSE.md` | Licensing |
+| **License** | `LICENSE`, `license-2.md` | Licensing |
 
 ### ❌ Files NOT Allowed in Root
 
@@ -60,14 +60,14 @@ Only these files are allowed in the project root:
 
 ### All `.md` Files Go in `docs/`
 
-**Exception**: `README.md`, `CHANGELOG.md`, `LICENSE.md` can be in root.
+**Exception**: `README.md`, `CHANGELOG.md`, `license-2.md` can be in root.
 
 | Type | Wrong | Correct |
 |------|-------|---------|
 | Discussion | `workspace-discussion.md` ❌ | `docs/workspace-discussion.md` ✅ |
 | Report | `report.md` ❌ | `docs/reports/report.md` ✅ |
 | Guide | `guide.md` ❌ | `docs/guide.md` ✅ |
-| Plan | `plan.md` ❌ | `docs/plan.md` ✅ |
+| Plan | `plan-2.md` ❌ | `docs/plan.md` ✅ |
 
 ### Module Documentation
 
@@ -249,7 +249,7 @@ When you create a file:
 - [Workspace Naming](docs/conventions/workspace-naming.md)
 - [Backup Files Cleanup](laravel/Modules/Xot/docs/backup-copy-files-cleanup-rule.md)
 - [Module Directory Structure](laravel/Modules/Xot/docs/module-directory-structure-rule.md)
-- [Multi-Agent Coordination](docs/multi_agent_coordination.md)
+- [Multi-Agent Coordination](docs/multi-agent-coordination-2.md)
 
 ---
 

@@ -201,12 +201,12 @@ Modules/Xot/tests/Feature/fixstructuretest.pest.php
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_osVn43
-- [../quality/phpstan-fixes.md](../PHPSTAN-FIXES.md)
+- [../quality/phpstan-fixes.md](../phpstan-fixes.md)
 =======
 <<<<<<< HEAD
 - [../quality/phpstan-fixes.md](../phpstan-fixes.md)
 =======
-- [../quality/phpstan-fixes.md](../PHPSTAN-FIXES.md)
+- [../quality/phpstan-fixes.md](../phpstan-fixes.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_gHmfY6

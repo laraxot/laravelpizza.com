@@ -11,7 +11,7 @@ discussions: []
 
 <purpose>
 Execute discovery at the appropriate depth level.
-Produces DISCOVERY.md (for Level 2-3) that informs plan.md creation.
+Produces DISCOVERY.md (for Level 2-3) that informs plan-2.md creation.
 
 Called from plan-phase.md's mandatory_discovery step with a depth parameter.
 
@@ -286,7 +286,7 @@ NOTE: DISCOVERY.md is NOT committed separately. It will be committed with phase 
 - WebSearch findings cross-verified
 - DISCOVERY.md created with recommendation
 - Confidence level MEDIUM or higher
-- Ready to inform plan.md creation
+- Ready to inform plan-2.md creation
 
 **Level 3 (Deep Dive):**
 - Discovery scope defined
@@ -296,5 +296,5 @@ NOTE: DISCOVERY.md is NOT committed separately. It will be committed with phase 
 - Quality report with source attribution
 - If LOW confidence findings → validation checkpoints defined
 - Confidence gate passed
-- Ready to inform plan.md creation
+- Ready to inform plan-2.md creation
 </success_criteria>

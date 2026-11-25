@@ -24,7 +24,7 @@ Find current phase directory from most recently modified files:
 
 ```bash
 # Find most recent phase directory with work
-ls -lt .planning/phases/*/plan.md 2>/dev/null | head -1 | grep -oP 'phases/\K[^/]+'
+ls -lt .planning/phases/*/plan-2.md 2>/dev/null | head -1 | grep -oP 'phases/\K[^/]+'
 ```
 
 If no active phase detected, ask user which phase they're pausing work on.

@@ -85,7 +85,7 @@ body:
 
         A test file was created to verify sync:
 
-        **File**: `laravel/Modules/Seo/SYNC_TEST_FILE.md`
+        **File**: `laravel/Modules/Seo/sync-test-file-2.md`
 
         **Content**:
         ```markdown
@@ -103,7 +103,7 @@ body:
 
         ## Next Steps
 
-        1. **Verify on GitHub**: Check if SYNC_TEST_FILE.md appears in https://github.com/laraxot/module_seo_fila5
+        1. **Verify on GitHub**: Check if sync-test-file-2.md appears in https://github.com/laraxot/module_seo_fila5
         2. **Test GitHub Actions**: Trigger workflow to automate sync
         3. **Test Reverse Sync**: Create file in remote repo, sync back to main
         4. **Multi-Agent Coordination**: Other agents should verify and extend testing
@@ -120,18 +120,18 @@ body:
         - **Documentation Team**: Created comprehensive docs ✅
 
         **For Other Agents**:
-        - See coordination log: `bashscripts/docs/git/sync_remote_repo_coordination.md`
-        - Add your tests to: `docs/github/sync_remote_repo_test_plan.md`
+        - See coordination log: `bashscripts/docs/git/sync-remote-repo-coordination-2.md`
+        - Add your tests to: `docs/github/sync-remote-repo-test-plan-3.md`
         - Use lock file protocol for exclusive work
 
         ---
 
         ## Related Resources
 
-        - **Test Plan**: `docs/github/sync_remote_repo_test_plan.md`
+        - **Test Plan**: `docs/github/sync-remote-repo-test-plan-3.md`
         - **Script**: `bashscripts/git/subtrees/sync_remote_repo.sh`
         - **Workflow**: `.github/workflows/sync-remote-repo.yml`
-        - **Coordination Log**: `bashscripts/docs/git/sync_remote_repo_coordination.md`
+        - **Coordination Log**: `bashscripts/docs/git/sync-remote-repo-coordination-2.md`
         - **Troubleshooting**: `bashscripts/docs/git/TROUBLESHOOTING.md`
 
         ---

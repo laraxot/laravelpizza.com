@@ -27,7 +27,7 @@ Consolidated from **6** individual files.
 
 ## baseuser-dry-violation-
 
-*Consolidated from: `baseuser-dry-violation-.md`*
+*Consolidated from: `baseuser-dry-violation-2.md`*
 
 title: "baseuser-dry-violation-2025-10-15.deprecated"
 type: concept
@@ -40,10 +40,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -67,10 +67,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -397,11 +397,11 @@ test('hasRole con pipe syntax', function () {
 ### Modulo User
 - [Analisi Completa DRY Violation](../Modules/User/docs/baseuser-dry-violation-analysis.md)
 - [BaseUser Model](../Modules/User/docs/models/baseuser.md)
-- [Roles & Permissions](../Modules/User/docs/roles-permissions.md)
+- [Roles & Permissions](../../../../User/docs/roles-permissions-2.md)
 
 ### Root Progetto
 - [DRY Violations Analysis](./dry-violations-analysis.md)
-- [Code Quality](./code-quality-analysis.md)
+- [Code Quality](../../../../Activity/docs/code-quality-analysis-3.md)
 - [Super Admin Setup](./super-admin-setup-fix.md)
 
 ### Spatie Documentation
@@ -482,10 +482,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -508,14 +508,14 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
-> Questo file è stato rinominato in [baseuser-refactoring-completed-.deprecated.md](baseuser-refactoring-completed-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+> Questo file è stato rinominato in [baseuser-refactoring-completed-2.deprecated.md](baseuser-refactoring-completed-2.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 
 ---
 
@@ -535,10 +535,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -804,7 +804,7 @@ Questa è stata la **quinta implementazione** della giornata!
 
 ### Modulo User
 - [User Module README](../Modules/User/docs/README.md)
-- [Roles & Permissions](../Modules/User/docs/roles-permissions.md)
+- [Roles & Permissions](../../../../User/docs/roles-permissions-2.md)
 - [BaseUser Model](../Modules/User/docs/models/baseuser.md)
 
 ### Altri Fix del Giorno
@@ -952,10 +952,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 

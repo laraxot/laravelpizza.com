@@ -31,6 +31,6 @@ Non include più mutator/accessor JSON legacy (`setAddressAttribute`, `getLatitu
 ## Collegamenti
 
 - [models/address.md](../models/address.md)
-- [has-address-trait.md](../has-address-trait.md)
+- [has-address-trait-2.md](../has-address-trait.md)
 - [geo-models-domain-analysis.md](../geo-models-domain-analysis.md)
 - [no-phpstan-probe-policy.md](../no-phpstan-probe-policy.md)

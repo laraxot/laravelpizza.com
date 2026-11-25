@@ -8,6 +8,7 @@ updated: 2026-10-06
 tags: [phpstan, lang, enum, safe, typeCoverage, bmad]
 related:
   - ./2026-10-06-phpstan-cleanup-lang.story.md
+qmd: "06 phpstan cleanup lang dev"
 ---
 
 # [DEV] PHPStan cleanup modulo Lang
@@ -33,7 +34,7 @@ related:
 - `laravel/Modules/Lang/app/Enums/TranslationStatusEnum.php` (nuovo, `enum ...: int`)
 - `laravel/Modules/Lang/app/Models/Post.php`, `database/seeders/LanguageLineSeeder.php`,
   `database/seeders/TranslationSeeder.php` (costanti tipizzate `const array`, come in `HEAD`)
-- Docs: `docs/README.md`, `docs/wiki/INDEX.md`, questa coppia di story.
+- Docs: `docs/README.md`, `../wiki/index-3.md`, questa coppia di story.
 
 - Docs: `docs/README.md`, `docs/wiki/index.md`, questa coppia di story.
 

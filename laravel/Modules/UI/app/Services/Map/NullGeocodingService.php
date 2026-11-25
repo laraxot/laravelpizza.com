@@ -13,7 +13,6 @@ use Modules\UI\Adapters\Map\NullGeocodingServiceAdapter;
  * Residuo on-disk (no-delete senza autorizzazione). Vedi debt.php #247.
  *
  * @deprecated Use NullGeocodingServiceAdapter instead.
- *
  * @see Modules/UI/docs/wiki/concepts/ui-services-support-to-actions.md
  */
 final class NullGeocodingService {}

@@ -140,7 +140,7 @@ return [
 
 ## Eccezione alle Convenzioni Generali
 
-È importante notare che questa struttura rappresenta un'eccezione documentata alle convenzioni generali di <nome progetto>. Mentre le convenzioni generali (descritte in `Modules/Lang/docs/TRANSLATION_KEYS_RULES.md`) prevedono una struttura gerarchica espansa senza chiavi come `.navigation`, il modulo Notify utilizza intenzionalmente questa struttura specifica.
+È importante notare che questa struttura rappresenta un'eccezione documentata alle convenzioni generali di <nome progetto>. Mentre le convenzioni generali (descritte in `Modules/Lang/docs/translation-keys-rules-2.md`) prevedono una struttura gerarchica espansa senza chiavi come `.navigation`, il modulo Notify utilizza intenzionalmente questa struttura specifica.
 
 ### Motivazione dell'Eccezione
 
@@ -169,8 +169,8 @@ Questo comando verificherà che tutte le chiavi di traduzione necessarie siano p
 
 ## Collegamenti Correlati
 
-- [Convenzioni di Traduzione nel Modulo Notify](./TRANSLATION_CONVENTIONS.md)
-- [Chiarimento sulle Convenzioni di Traduzione](./TRANSLATION_CONVENTIONS_CLARIFICATION.md)
-- [Regole Generali per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
-- [Best Practices per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
-- [Standard per le Traduzioni ](./TRANSLATION_STANDARDS.md)
+- [Convenzioni di Traduzione nel Modulo Notify](../laravel/Modules/Notify/docs/translation-conventions-2.md)
+- [Chiarimento sulle Convenzioni di Traduzione](../laravel/Modules/Notify/docs/translation-conventions-clarification-2.md)
+- [Regole Generali per le Chiavi di Traduzione](../laravel/Modules/Lang/docs/translation-keys-rules-3.md)
+- [Best Practices per le Chiavi di Traduzione](../laravel/Modules/Lang/docs/translation-keys-best-practices-2.md)
+- [Standard per le Traduzioni ](../laravel/Modules/Lang/docs/translation-standards-2.md)

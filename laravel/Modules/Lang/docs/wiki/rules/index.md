@@ -22,7 +22,7 @@ discussions:
 - [translation-key-governance](./translation-key-governance.md) — ownership delle chiavi, struttura semantica e divieto di `->label()`/stringhe inline
 - [translation-factory-auto-increment-id](./translation-factory-auto-increment-id.md) — factory Lang: non impostare `id` manuale su colonne auto-increment
 - [laravel12-lang-path-rule](../concepts/laravel12-lang-path-rule.md) — il path canonico resta `lang/` e non `resources/lang/`
-- [schema-conventions](../../../../../docs/wiki/rules/schema-conventions.md) — convenzioni globali per label e traduzioni gestite da `LangServiceProvider`
+- [schema-conventions](../../../../Notify/docs/schema-conventions-2.md) — convenzioni globali per label e traduzioni gestite da `LangServiceProvider`
 - [filament-rules-summary](../../../../../docs/wiki/rules/filament-rules-summary.md) — guardrail Filament che impattano anche il modulo Lang
 
 ## Usage

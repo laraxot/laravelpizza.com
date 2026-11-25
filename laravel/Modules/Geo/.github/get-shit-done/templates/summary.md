@@ -11,7 +11,7 @@ discussions: []
 
 # Summary Template
 
-Template for `.planning/phases/XX-name/{phase}-{plan}-SUMMARY.md` - phase completion documentation.
+Template for `.planning/phases/XX-name/{phase}-{plan}-summary-2.md` - phase completion documentation.
 
 ---
 
@@ -260,8 +260,8 @@ The one-liner should tell someone what actually shipped.
 
 **Decisions section:**
 - Key decisions made during execution with rationale
-- Extracted to STATE.md accumulated context
+- Extracted to state-2.md accumulated context
 - Use "None - followed plan as specified" if no deviations
 
-**After creation:** STATE.md updated with position, decisions, issues.
+**After creation:** state-2.md updated with position, decisions, issues.
 </guidelines>

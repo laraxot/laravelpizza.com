@@ -54,12 +54,12 @@ This document outlines the best practices for maintaining high code quality with
 
 ## Links to Related Documentation
 - [Xot Base Classes](../xot/project_docs/xot_base_classes.md)
-- [Filament Extension Pattern](../../notify/project_docs/filament_extension_pattern.md)
-- [Filament Extension Pattern Analysis](../../notify/project_docs/filament_extension_pattern_analysis.md)
+- [Filament Extension Pattern](../../laravel/Modules/Notify/docs/filament-extension-pattern-2.md)
+- [Filament Extension Pattern Analysis](../../laravel/Modules/Notify/docs/filament-extension-pattern-analysis-2.md)
 - [Patient Module - Namespace Conventions](../../patient/project_docs/namespace_conventions.md)
 - [Patient Module - Validation Errors](../../patient/project_docs/validation_errors.md)
 - [PHP Strict Types](./php-strict-types.md)
-- [PHPStan Implementation Guide](./phpstan-implementation-guide.md)
+- [PHPStan Implementation Guide](../../laravel/Modules/Xot/docs/consolidated/phpstan/phpstan-implementation-guide-2.md)
 - [Naming Conventions](./naming-conventions.md)
 - [Service Provider Best Practices](./service-provider-best-practices.md)
 - [Filament Best Practices](./filament-best-practices.md)

@@ -74,7 +74,7 @@ discussions: []
    - Milestone tracking
    - Quick commands
 
-3. **README-PHASE-1-EXECUTION.md** (entry point for all team members)
+3. **readme-phase-1-execution-2.md** (entry point for all team members)
    - Quick orientation
    - Role-based guides (Executor #1, Researcher, Executor #2)
    - Document navigation
@@ -143,7 +143,7 @@ discussions: []
 Root Directory:
 ├─ PHASE-1-RESEARCH-COMPLETE.md        (Italian summary)
 ├─ PHASE-1-EXECUTION-DASHBOARD.md      (coordination board)
-├─ README-PHASE-1-EXECUTION.md         (entry point)
+├─ readme-phase-1-execution-2.md         (entry point)
 └─ SESSION-007-SUMMARY.md              (this file)
 
 laravel/Themes/Sixteen/docs/:
@@ -281,7 +281,7 @@ Total Characters: ~63,000
 - GSD-PHASE-1-EXECUTION.md (19,499 chars)
 <<<<<<< HEAD
 <<<<<<< .merge_file_ebpgai
-- bashscripts/docs/html/INDEX.md (8,531 chars)
+- bashscripts/docs/html/index-2.md (8,531 chars)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -290,14 +290,14 @@ Total Characters: ~63,000
 - bashscripts/docs/html/index.md (8,531 chars)
 =======
 <<<<<<< HEAD
-- bashscripts/docs/html/INDEX.md (8,531 chars)
+- bashscripts/docs/html/index-2.md (8,531 chars)
 =======
 - bashscripts/docs/html/index.md (8,531 chars)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_ebpgai
 =======
-- bashscripts/docs/html/INDEX.md (8,531 chars)
+- bashscripts/docs/html/index-2.md (8,531 chars)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
@@ -341,7 +341,7 @@ Additional Characters: ~110,000
 - PHASE-1-RESEARCH-COMPLETE.md
 - PHASE-1-EXECUTION-STATUS.md
 - PHASE-1-EXECUTION-DASHBOARD.md
-- README-PHASE-1-EXECUTION.md
+- readme-phase-1-execution-2.md
 - SESSION-007-SUMMARY.md
 - SUBTASK-2-ANALYSIS-WORKFLOW.md
 - EXECUTOR-2-SUBTASKS-3-4.md
@@ -494,7 +494,7 @@ Must achieve ALL criteria:
 ### Status Update Locations
 1. PHASE-1-EXECUTION-STATUS.md (primary)
 2. PHASE-1-EXECUTION-DASHBOARD.md (detailed)
-3. README-PHASE-1-EXECUTION.md (for new arrivals)
+3. readme-phase-1-execution-2.md (for new arrivals)
 4. SQL todos table (tracking)
 
 ---
@@ -524,7 +524,7 @@ Must achieve ALL criteria:
 ## 🔗 IMPORTANT LINKS
 
 **Quick Navigation**:
-- README-PHASE-1-EXECUTION.md (START HERE for all)
+- readme-phase-1-execution-2.md (START HERE for all)
 - PHASE-1-EXECUTION-DASHBOARD.md (coordination board)
 - PHASE-1-EXECUTION-STATUS.md (progress tracking)
 

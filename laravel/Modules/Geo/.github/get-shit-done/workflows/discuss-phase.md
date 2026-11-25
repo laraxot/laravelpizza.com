@@ -441,7 +441,7 @@ Confirm: "Committed: docs(${padded_phase}): capture phase context"
 </step>
 
 <step name="update_state">
-Update STATE.md with session info:
+Update state-2.md with session info:
 
 ```bash
 node .github/get-shit-done/bin/gsd-tools.cjs state record-session \
@@ -449,10 +449,10 @@ node .github/get-shit-done/bin/gsd-tools.cjs state record-session \
   --resume-file "${phase_dir}/${padded_phase}-CONTEXT.md"
 ```
 
-Commit STATE.md:
+Commit state-2.md:
 
 ```bash
-node .github/get-shit-done/bin/gsd-tools.cjs commit "docs(state): record phase ${PHASE} context session" --files .planning/STATE.md
+node .github/get-shit-done/bin/gsd-tools.cjs commit "docs(state): record phase ${PHASE} context session" --files .planning/state-2.md
 ```
 </step>
 
@@ -556,6 +556,6 @@ Route to `confirm_creation` step (existing behavior — show manual next steps).
 - Scope creep redirected to deferred ideas
 - CONTEXT.md captures actual decisions, not vague vision
 - Deferred ideas preserved for future phases
-- STATE.md updated with session info
+- state-2.md updated with session info
 - User knows next steps
 </success_criteria>

@@ -517,9 +517,9 @@ Ogni documento deve includere:
 ```markdown
 ## Collegamenti Correlati
 - [Architecture Overview](../../docs/architecture-overview.md)
-- [Coding Standards](../../docs/coding-standards.md)
+- [Coding Standards](../development/coding-standards-2.md)
 - [Testing Guidelines](../../docs/testing-guidelines.md)
-- [Filament Best Practices](../../docs/filament-best-practices.md)
+- [Filament Best Practices](../../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Translation Rules](../../docs/translation-rules.md)
 - [Frontend Guidelines](../../docs/frontend-guidelines.md)
 ```
@@ -588,9 +588,9 @@ find docs/ -name "*" | grep '[A-Z]' | grep -v "README.md"
 
 ## Documentazione Correlata
 - [Architecture Overview](../../docs/architecture-overview.md)
-- [Coding Standards](../../docs/coding-standards.md)
+- [Coding Standards](../development/coding-standards-2.md)
 - [Testing Guidelines](../../docs/testing-guidelines.md)
-- [Filament Best Practices](../../docs/filament-best-practices.md)
+- [Filament Best Practices](../../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Translation Rules](../../docs/translation-rules.md)
 - [Frontend Guidelines](../../docs/frontend-guidelines.md)
 <<<<<<< .merge_file_0QKbLC

@@ -51,7 +51,7 @@ discussions: []
 =======
 >>>>>>> .merge_file_HryMrd
 **Part of**: [00-INDEX.md](00-index.md) — AI Agents Coordination  
-**Related**: [02-BMAD-WORKFLOW.md](02-bmad-workflow.md) — BMAD Method
+**Related**: [02-bmad-workflow-2.md](02-bmad-workflow.md) — BMAD Method
 
 ## 📋 Overview
 
@@ -223,11 +223,11 @@ GSD maintains these files always loaded in context:
 |------|---------|
 | `PROJECT.md` | Project vision |
 | `research/` | Ecosystem knowledge |
-| `REQUIREMENTS.md` | Scoped requirements v1/v2 |
+| `requirements-2.md` | Scoped requirements v1/v2 |
 | `roadmap.md` | Where you're going |
-| `STATE.md` | Decisions, blockers, memory |
-| `plan.md` | Atomic task with XML structure |
-| `summary.md` | What happened, commit history |
+| `state-2.md` | Decisions, blockers, memory |
+| `plan-2.md` | Atomic task with XML structure |
+| `summary-2.md` | What happened, commit history |
 
 ---
 
@@ -252,7 +252,7 @@ GSD maintains these files always loaded in context:
 - ✅ Use `/gsd:discuss-phase` before planning
 - ✅ Verify with `/gsd:verify-work` before shipping
 - ✅ Create atomic commits per task
-- ✅ Update STATE.md after each session
+- ✅ Update state-2.md after each session
 
 ### DON'T
 - ❌ Skip discussion phase

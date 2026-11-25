@@ -495,7 +495,7 @@ git merge --no-ff wiki-experiments  # Preserve experiment history
 - [ ] Frontmatter schema is valid
 - [ ] Filename is lowercase-kebab-case.md
 - [ ] Page has at least 1 outgoing link
-- [ ] Index.md is updated (if new page)
+- [ ] index-2.md is updated (if new page)
 - [ ] Log.md is updated (if ingestion)
 - [ ] No content duplication (DRY)
 - [ ] Commit message follows format: `docs: {action} {description}`
@@ -505,7 +505,7 @@ git merge --no-ff wiki-experiments  # Preserve experiment history
 - [ ] All concepts extracted from source
 - [ ] Source summary created in wiki/sources/
 - [ ] Cross-references added to existing pages
-- [ ] Index.md updated
+- [ ] index-2.md updated
 - [ ] Log.md updated
 - [ ] Changes committed and pushed
 
@@ -567,7 +567,7 @@ Logarithmic Market Scoring Rule (LMSR) is the core pricing mechanism...
 - [[concepts/normalisation-patterns]]
 ```
 
-### Example: Index.md Entry
+### Example: index-2.md Entry
 
 ```markdown
 # Wiki Index
@@ -628,5 +628,5 @@ Logarithmic Market Scoring Rule (LMSR) is the core pricing mechanism...
 
 - [Token Efficiency Religion](../token-efficiency-religion.md)
 - [Documentation Standards](../rules/docs-standards.md)
-- [Multi-Agent Collaboration](../multi_agent_collaboration.md)
+- [Multi-Agent Collaboration](../multi-agent-collaboration-2.md)
 - [Karpathy's Original Gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)

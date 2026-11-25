@@ -38,7 +38,7 @@ task, sessioni concorrenti sullo stesso repo)**:
 4. Metodo esplicito `hasPermissionToOrCreate()` che delega a un `ensurePermissionExists()` separato, che a sua
    volta passava per una Queueable Action (`EnsurePermissionExistsAction`) per rispettare il binding config
    `permission.models.permission`. Implementata, poi semplificata: l'indirezione via Action non aggiungeva
-   nulla (il progetto estende gia' i modelli Spatie direttamente, vedi `.claude/CLAUDE.md`).
+   nulla (il progetto estende gia' i modelli Spatie direttamente, vedi `../../../Geo/docs/root-md-files/claude.md`).
 5. **Scelta finale**: un solo metodo pubblico in `HasSpatiePermission`, nessun override di `hasPermissionTo()`:
    ```php
    public function hasPermissionToOrCreate(string $permission, ?string $guardName = null): bool

@@ -34,7 +34,7 @@ This report verifies the compliance of Bulk Actions with strict Filament extensi
 -   **Inheritance**: Now extends `Modules\Xot\Filament\Tables\Actions\XotBaseBulkAction` (was `Filament\Actions\BulkAction`).
 -   **Method Conflict**: Renamed internal notification methods to `dispatchSuccessNotification` / `dispatchErrorNotification` to avoid conflict with public `Action::sendSuccessNotification`.
 -   **Strict Typing**: Verified array return types and absence of `mixed`.
--   **Documentation**: Created `FILAMENT_EXTENSION_RULES.md` in `Modules/Geo/docs` and `Modules/Notify/docs`.
+-   **Documentation**: Created `filament-extension-rules-2.md` in `Modules/Geo/docs` and `Modules/Notify/docs`.
 
 ### ✅ SendRecordsNotificationBulkAction (Modules/Notify)
 -   **Inheritance**: Already compliant (`XotBaseBulkAction`).

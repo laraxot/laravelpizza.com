@@ -54,7 +54,7 @@ toccare il codice applicativo (fuori scope).
    `docs/wiki/redundancy/oauth-dual-resource-trees.md` e nella story
    `12.4.oauth-dup-resources-ssot` (status: backlog) — non duplicato, solo
    confermato e collegato dal nuovo documento canonico.
-5. **`BMAD-SESSION.md` e `BMAD-SECOND-BRAIN.md`**: letti, **non toccati**.
+5. **`bmad-session-2.md` e `bmad-second-brain-2.md`**: letti, **non toccati**.
    Sono log di sessione su un tema completamente diverso (fix PHPStan per
    `UserContract`/`Profile`/`XotData` nel repo `base_restaurant_fila5`,
    2026-09-04) e non hanno nessuna sovrapposizione con il tema passport/oauth
@@ -88,7 +88,7 @@ toccare il codice applicativo (fuori scope).
   stub che puntano al canonico.
 - [x] Nessun contenuto sostanziale perso (recuperato anche il contenuto
   corrotto da un dedup precedente, via git history).
-- [x] `BMAD-SESSION.md`/`BMAD-SECOND-BRAIN.md` valutati e lasciati intatti
+- [x] `bmad-session-2.md`/`bmad-second-brain-2.md` valutati e lasciati intatti
   (tema distinto).
 - [x] Story BMAD di consolidamento documentata.
 - [ ] Remediation codice (dual-resource-tree) — intenzionalmente non eseguita,

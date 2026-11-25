@@ -149,12 +149,12 @@ Related:
 ## Related Documentation
 
 - [Project Wiki Integration](../../docs/wiki/README.md)
-- [Project Wiki Agent Instructions](../../docs/wiki/AGENTS.md)
+- [Project Wiki Agent Instructions](../../docs/wiki/agents-2.md)
 - [Module Documentation](../README.md)
 
 ---
 
-<!-- Merged from AGENTS.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from agents-2.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
 title: "Agent instructions"
@@ -307,5 +307,5 @@ Related:
 ## Related Documentation
 
 - [Project Wiki Integration](../../docs/wiki/README.md)
-- [Project Wiki Agent Instructions](../../docs/wiki/AGENTS.md)
+- [Project Wiki Agent Instructions](../../docs/wiki/agents-2.md)
 - [Module Documentation](../README.md)

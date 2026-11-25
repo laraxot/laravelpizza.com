@@ -54,17 +54,17 @@ discussions: []
 - **TUTTI i file e sottocartelle in docs/ devono essere in minuscolo**
 - **UNICA ECCEZIONE: README.md può avere maiuscole**
 - Usare sempre trattini (`-`) invece di underscore (`_`)
-- Nomi descrittivi e concisi (es: `filament-best-practices.md`)
+- Nomi descrittivi e concisi (es: `filament-best-practices-2.md`)
 
 **Esempi**:
 ```
 ✅ CORRETTO:
-- filament-best-practices.md
+- filament-best-practices-2.md
 - user-authentication.md
 - database-migrations.md
 
 ❌ ERRATO:
-- Filament_Best_Practices.md
+- filament-best-practices-2.md
 - user_authentication.md
 - DatabaseMigrations.md
 ```
@@ -88,13 +88,13 @@ discussions: []
 **Esempi di percorsi**:
 ```markdown
 # Da Modules/User/docs/authentication.md
-- [Coding Standards](../../../../docs/coding-standards.md)
+- [Coding Standards](../development/coding-standards-2.md)
 - [Xot Module](../../Xot/docs/README.md)
 - [UI Components](../../UI/docs/components.md)
 
 # Da docs/README.md
 - [User Authentication](./laravel/Modules/User/docs/authentication.md)
-- [Filament Best Practices](./laravel/Modules/Xot/docs/filament-best-practices.md)
+- [Filament Best Practices](../../../Xot/docs/consolidated/filament-best-practices-2.md)
 ```
 
 ### 2.3 Tag e Categorizzazione
@@ -428,11 +428,11 @@ Ogni documento deve avere collegamenti ai documenti correlati:
 
 ## Collegamenti Correlati
 - [Architecture Overview](../../../../docs/architecture-overview.md)
-- [Coding Standards](../../../../docs/coding-standards.md)
+- [Coding Standards](../development/coding-standards-2.md)
 - [Xot Module](../../Xot/docs/README.md)
 - [User Module](../../User/docs/authentication.md)
 - [UI Components](../../UI/docs/components.md)
-- [Filament Best Practices](../../Xot/docs/filament-best-practices.md)
+- [Filament Best Practices](../../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Testing Guidelines](../../../../docs/testing-guidelines.md)
 - [Documentation Rules](../../../../docs/documentation-rules.md)
 

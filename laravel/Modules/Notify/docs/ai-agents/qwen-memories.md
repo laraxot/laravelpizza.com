@@ -282,7 +282,7 @@ Usare `cinematic-particles` per background hero:
 <<<<<<< HEAD
 <<<<<<< .merge_file_JNaB4t
 <<<<<<< .merge_file_iQMkPB
-- [QWEN.md originale](../../qwen.md)
+- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -290,22 +290,22 @@ Usare `cinematic-particles` per background hero:
 >>>>>>> .merge_file_uM4HBs
 =======
 >>>>>>> .merge_file_XBLjka
-- [qwen.md originale](../../qwen.md)
+- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
 =======
 <<<<<<< HEAD
-- [QWEN.md originale](../../qwen.md)
+- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
 =======
-- [qwen.md originale](../../qwen.md)
+- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_JNaB4t
 <<<<<<< .merge_file_iQMkPB
 =======
-- [QWEN.md originale](../../qwen.md)
+- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_uM4HBs
 =======
 >>>>>>> .merge_file_XBLjka
-- [Index principale](./index.md)
+- [Index principale](../../../Lang/docs/wiki/integrations/_da-riconciliare/index-3.md)

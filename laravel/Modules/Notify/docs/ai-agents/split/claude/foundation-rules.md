@@ -27,8 +27,8 @@ status: draft
 # claudeMd
 Codebase and user instructions are shown below. Be sure to adhere to these instructions. IMPORTANT: These instructions OVERRIDE any default behavior and you MUST follow them exactly as written.
 
-Contents of /var/www/html/_bases/base_fixcity_fila5/laravel/../../../../docs/CLAUDE.md (project instructions, checked into the codebase):
-Contents of /var/www/html/_bases/base_ptvx_fila5/laravel/../../../../docs/CLAUDE.md (project instructions, checked into the codebase):
+Contents of /../../../../../Geo/docs/root-md-files/claude.md (project instructions, checked into the codebase):
+Contents of /../../../../../Geo/docs/root-md-files/claude.md (project instructions, checked into the codebase):
 
 <laravel-boost-guidelines>
 === foundation rules ===
@@ -103,5 +103,5 @@ This application is a Laravel application and its main Laravel ecosystems packag
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md): Original source
+- ← [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md): Original source
 

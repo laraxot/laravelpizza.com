@@ -76,7 +76,7 @@ IMPATTO: -70% manutenibilità, +60% confusione
 ```
 ❌ DUPLICAZIONI CRITICHE:
 ├── phpstan-fixes-historical-alias.md (4.4KB)
-├── phpstan_generic_types.md (3.1KB)
+├── phpstan-generic-types-2.md (3.1KB)
 ├── phpstan_level10_fixes.md (7.8KB)
 ├── phpstan_level9_fixes.md (1.1KB)
 ├── phpstan.md (1.3KB)

@@ -22,8 +22,8 @@ updated: 2026-11-23
 
 Questo file veniva da `docs/wiki/integrations/modules/notify/IMPLEMENTATION_SUMMARY.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
 
-- versione del modulo: `laravel/Modules/Notify/docs/IMPLEMENTATION_SUMMARY.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/IMPLEMENTATION_SUMMARY.md`
+- versione del modulo: `laravel/Modules/Notify/docs/implementation-summary-4.md`
+- versione recuperata: `laravel/Modules/Notify/docs/implementation-summary-4.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 

@@ -9,7 +9,7 @@ La regola di coordinamento via GitHub Issues e Discussions e' stata formalizzata
 
 ## Artefatti creati
 
-- `.windsurf/rules/multi-agent-collaboration.md` - Regola Windsurf
+- `../../laravel/Modules/Notify/docs/multi-agent-collaboration-2.md` - Regola Windsurf
 - `docs/rules/multi-agent-collaboration-rule.md` - Documentazione regola
 - `AGENTS.md` - Sezione "Comunicazione Multi-Agente" aggiunta
 
@@ -35,5 +35,5 @@ La regola di coordinamento via GitHub Issues e Discussions e' stata formalizzata
 ## Backlink
 
 - [docs/rules/multi-agent-collaboration-rule.md](../rules/multi-agent-collaboration-rule.md)
-- [.windsurf/rules/multi-agent-collaboration.md](../../.windsurf/rules/multi-agent-collaboration.md)
+- [../../laravel/Modules/Notify/docs/multi-agent-collaboration-2.md](../../laravel/Modules/Notify/docs/multi-agent-collaboration-2.md)
 - [AGENTS.md](../../AGENTS.md)

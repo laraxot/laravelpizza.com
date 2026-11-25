@@ -66,7 +66,7 @@ git_maintenance
 
 ## Principio DRY (Don't Repeat Yourself)
 
-**IMPORTANTE**: Quando si utilizza `source ./bashscripts/lib/custom.sh`, NON ridefinire MAI le funzioni già presenti in questa libreria. Per maggiori dettagli, consultare la [documentazione sul principio DRY negli script Bash](/var/www/html/_bases/base_<nome progetto>_fila5_mono/bashscripts/docs/NO_DUPLICATE_FUNCTIONS_IN_SOURCED_SCRIPTS.md).
+**IMPORTANTE**: Quando si utilizza `source ./bashscripts/lib/custom.sh`, NON ridefinire MAI le funzioni già presenti in questa libreria. Per maggiori dettagli, consultare la [documentazione sul principio DRY negli script Bash](/var/www/html/_bases/base_<nome progetto>../raw/history/no-duplicate-functions-in-sourced-scripts-2.md).
 
 ## Contribuire
 

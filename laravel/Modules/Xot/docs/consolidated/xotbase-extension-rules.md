@@ -169,7 +169,7 @@ public function getFormSchema(): array // Must be public
 
 ## 📚 Related Documentation
 
-- [Filament Extension Pattern](../filament_extension_pattern.md)
+- [Filament Extension Pattern](../../../Notify/docs/filament-extension-pattern-2.md)
 - [XotBaseWidget Documentation](./filament/widgets/xot-base-widget.md)
 - [Namespace Rules](../namespace-rules.md)
 - [Architecture Best Practices](../architecture-best-practices.md)
@@ -378,7 +378,7 @@ jobs:
 ## 📚 Documentazione Correlata
 
 - [Architecture Best Practices](./architecture_best_practices.md)
-- [Filament Integration Guide](./filament_integration.md)
+- [Filament Integration Guide](../../../Lang/docs/filament-integration-3.md)
 - [Module Development Standards](./module_development_standards.md)
 
 ## ⚠️ Nota Importante
@@ -561,7 +561,7 @@ public function getFormSchema(): array // Must be public
 
 ## 📚 Related Documentation
 
-- [Filament Extension Pattern](../filament_extension_pattern.md)
+- [Filament Extension Pattern](../../../Notify/docs/filament-extension-pattern-2.md)
 - [XotBaseWidget Documentation](./filament/widgets/xot-base-widget.md)
 - [Namespace Rules](../namespace-rules.md)
 - [Architecture Best Practices](../architecture-best-practices.md)

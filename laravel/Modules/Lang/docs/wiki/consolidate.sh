@@ -32,13 +32,13 @@ for file in \
   advanced_language_switching.md \
   automatic_translations.md \
   cms_link.md \
-  docs_naming_convention_fix.md \
+  docs-naming-convention-fix-2.md \
   documentation_link_conventions.md \
-  errori_comuni_traduzione.md \
+  errori-comuni-traduzione-2.md \
   lang_link.md \
-  lang_service_helper_text_fix.md \
-  laravel_localization.md \
-  working_with_locales.md; do
+  lang-service-helper-text-fix-2.md \
+  laravel-localization-2.md \
+  working-with-locales-2.md; do
   [ -f "$file" ] && rm -v "$file"
 done
 
@@ -60,10 +60,10 @@ echo
 # 2. Delete obsolete files (Italian corrections, analysis)
 echo "[3/9] Deleting obsolete files..."
 for file in \
-  correzioni-errori-sintassi-.md \
-  correzioni-errori-sintassi.md \
+  correzioni-errori-sintassi-2.md \
+  correzioni-errori-sintassi-3.md \
   correzioni-navigation.md \
-  correzioni_errori_sintassi.md \
+  correzioni-errori-sintassi-3.md \
   correzionii-sintassi.md \
   metodi-duplicati-analisi.md \
   metodi_duplicati_analisi.md \
@@ -71,16 +71,16 @@ for file in \
   tradizioni-navigation-.md \
   tradizioni-navigation.md \
   traduzioni.md \
-  traduzioni-navigation-.md \
-  traduzioni-navigation.md \
-  traduzioni_navigation.md \
+  traduzioni-navigation-2.md \
+  traduzioni-navigation-3.md \
+  traduzioni-navigation-3.md \
   traduzioni_navugation.md \
-  struttura-traduzioni.md \
+  struttura-traduzioni-2.md \
   struttura-translations.md \
-  struttura_traduzioni.md \
+  struttura-traduzioni-2.md \
   translationes.md \
   translationness.md \
-  correzioni_errori_sintassi.md \
+  correzioni-errori-sintassi-3.md \
   analysis-results.md \
   bottlenecks.md \
   cyclomatic-complexity.md \
@@ -96,7 +96,7 @@ echo
 
 # 3. Delete index duplicates
 echo "[4/9] Consolidating index files..."
-for file in 00-INDEX.md 00-index.md INDEX.md; do
+for file in 00-INDEX.md 00-index.md index-3.md; do
   [ -f "$file" ] && rm -v "$file"
 done
 echo "✓ Index duplicates removed (README.md is canonical)"
@@ -111,10 +111,10 @@ echo
 # 5. Move strategy/research files
 echo "[6/9] Moving strategy/research files to wiki/..."
 for file in \
-  PRODUCT_LAUNCH_PLAN.md \
+  product-launch-plan-2.md \
   TRANSLATION_STRATEGIES.md \
-  USER_RESEARCH.md \
-  SPRINT_PLANNING.md; do
+  user-research-2.md \
+  sprint-planning-2.md; do
   [ -f "$file" ] && mv -v "$file" wiki/strategies/ || true
 done
 
@@ -126,12 +126,12 @@ echo
 # 6. Move how-to guides
 echo "[7/9] Moving how-to guides to wiki/how-to/..."
 for file in \
-  QMD-SETUP.md \
+  qmd-setup-3.md \
   QUICK_REFERENCE.md \
-  best-practices.md \
+  best-practices-3.md \
   laravel-localization-reference.md \
-  laravel_localization_complete.md \
-  localizing_dates_and_currencies.md \
+  laravel-localization-complete-2.md \
+  localizing-dates-and-currencies-2.md \
   pluralization_and_localization.md; do
   [ -f "$file" ] && mv -v "$file" wiki/how-to/ || true
 done
@@ -179,7 +179,7 @@ find wiki -type f | sort
 
 echo
 echo "Next steps:"
-echo "1. Manually consolidate PHPSTAN files (PHPSTAN-FIXES.md → PHPSTAN_L10.md)"
+echo "1. Manually consolidate PHPSTAN files (PHPSTAN-FIXES.md → phpstan-l10-2.md)"
 echo "2. Consolidate translation files (manual merge of 65 → 4 canonical)"
 echo "3. Verify with: find . -type f | wc -l"
 echo "4. Commit: git commit -m 'chore: Lang docs consolidation phase 2d complete'"

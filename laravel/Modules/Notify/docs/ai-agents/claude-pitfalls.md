@@ -166,6 +166,6 @@ niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../larave
 
 - [Indice CLAUDE](./claude-split-index.md)
 - [critical-rules.md](./critical-rules.md)
-- [CLAUDE.md originale](../../CLAUDE.md)
+- [CLAUDE.md originale](../../../Geo/docs/root-md-files/claude.md)
 - [CLAUDE.md originale](../claude.md)
 - [Index principale](./index.md)

@@ -88,7 +88,7 @@ Notify Fila5 Documentation (7,299 files)
 <nome progetto> Fila5 Documentation (7,299 files)
 │
 ├── 📄 Master Index
-│   └── docs/MODULE_DOCS_INDEX.md (THIS FILE)
+│   └── ../../../module-docs-index-2.md (THIS FILE)
 │
 ├── 📁 BMad Output (9 files)
 │   ├── _bmad-output/index.md
@@ -211,7 +211,7 @@ Notify Fila5 Documentation (7,299 files)
 
 | File | Purpose | Lines |
 |------|---------|-------|
-| `docs/MODULE_DOCS_INDEX.md` | Master documentation index | 400+ |
+| `../../../module-docs-index-2.md` | Master documentation index | 400+ |
 | `Themes/Sixteen/docs/layout-architecture-map.md` | Layout navigation map | 350+ |
 | `Themes/Sixteen/docs/layout-fix-complete-bmad.md` | Layout fix summary | 400+ |
 | `Themes/Sixteen/docs/VITE_MANIFEST_FIX_COMPLETE.md` | Vite build fix | 300+ |
@@ -470,8 +470,8 @@ Start at theme index:
 
 ### Finding Documentation
 
-1. **Start Here:** [docs/MODULE_DOCS_INDEX.md](docs/MODULE_DOCS_INDEX.md)
-1. **Start Here:** [docs/MODULE_DOCS_INDEX.md](../../../module_docs_index.md)
+1. **Start Here:** [../../../module-docs-index-2.md](../../../module-docs-index-2.md)
+1. **Start Here:** [../../../module-docs-index-2.md](../../../module-docs-index-3.md)
 2. **Navigate to:** Module or theme category
 3. **Use Search:** Ctrl+F for keywords
 4. **Follow Links:** Cross-references guide you
@@ -495,8 +495,8 @@ Start at theme index:
 
 ## 📋 Related Documents
 
-- [Master Index](docs/MODULE_DOCS_INDEX.md) - Central navigation
-- [Master Index](../../../module_docs_index.md) - Central navigation
+- [Master Index](../../../module-docs-index-2.md) - Central navigation
+- [Master Index](../../../module-docs-index-3.md) - Central navigation
 - [BMad Workflow](_bmad-output/BMAD-WORKFLOW-COMPLETE.md) - BMad summary
 - [Layout Architecture](Themes/Sixteen/docs/layout-architecture.md) - Theme layouts
 - [Vite Manifest Fix](Themes/Sixteen/docs/VITE_MANIFEST_FIX_COMPLETE.md) - Build fix

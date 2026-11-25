@@ -74,7 +74,7 @@ public function execute(
 - [TransArrayAction.php](../../app/Actions/TransArrayAction.php)
 - [PHPStan Fixes](./phpstan-fixes.md)
 
-- [PHPStan Fixes](./PHPSTAN-FIXES.md)
+- [PHPStan Fixes](phpstan-fixes-2.md)
 - [Translation Actions](./translation-actions.md)
 
 ## Note per il Futuro

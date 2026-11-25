@@ -49,31 +49,8 @@ superseded_by: performance-optimization.md
 
 ### 4. Wiki Indici Locali
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_r11ZGs
-<<<<<<< .merge_file_xJY8s7
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_JycDmV
-=======
->>>>>>> .merge_file_d3DWm5
 Ogni modulo ha i propri `rules/skills/commands/memories/index.md`:
-=======
-<<<<<<< HEAD
-Ogni modulo ha i propri `rules/skills/commands/memories/INDEX.md`:
-=======
-Ogni modulo ha i propri `rules/skills/commands/memories/index.md`:
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_r11ZGs
-<<<<<<< .merge_file_xJY8s7
-=======
-Ogni modulo ha i propri `rules/skills/commands/memories/INDEX.md`:
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_JycDmV
-=======
->>>>>>> .merge_file_d3DWm5
+Ogni modulo ha i propri `index-3.md`:
 - Ricerca più rapida (scope limitato)
 - Context rilevante per il modulo
 - Non mischia contenuti eterogenei

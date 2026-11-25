@@ -391,7 +391,7 @@ TASK: "Add a new content block"
     ▼
   .github/copilot-instructions.md
     ▼
-  docs/THEMES_documentation-index.md
+  themes-documentation-index-2.md
     ▼
   laravel/Themes/Sixteen/docs/00-index-1.md
     ▼
@@ -437,7 +437,7 @@ TASK: "Understand system architecture"
     ▼
   docs/module-docs-index.md
     ▼
-  docs/THEMES_documentation-index.md
+  themes-documentation-index-2.md
     ▼
   Select module/theme details
     ▼
@@ -520,7 +520,7 @@ Memory Server
 | `.github/copilot-instructions.md` | Copilot guide | 12 KB | 409 |
 | `docs/architecture-diagrams.md` | System diagrams | 12.5 KB | 500+ |
 | `docs/module-docs-index.md` | Module hub | 25 KB | 800+ |
-| `docs/THEMES_documentation-index.md` | Theme hub | 12.5 KB | 500+ |
+| `themes-documentation-index-2.md` | Theme hub | 12.5 KB | 500+ |
 | `docs/documentation-ecosystem.md` | Complete map | 17 KB | 650+ |
 | `docs/visual-analysis-report.md` | This file | 15 KB | 500+ |
 

@@ -4,6 +4,7 @@ type: prd
 module: Media
 related:
   - ./livewire-inventory.md
+qmd: "livewire widget prd media"
 ---
 
 # PRD Media

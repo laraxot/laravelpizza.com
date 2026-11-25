@@ -22,7 +22,7 @@ Questo documento descrive i conflitti di merge Git risolti nel modulo Media e fo
 Per una panoramica generale sulla risoluzione dei conflitti Git nel progetto, consultare:
 
 - [Risoluzione Conflitti Git](../../../../../docs/risoluzione_conflitti_git.md)
-- [Report completo di intervento](../../../../../docs/logs/conflict_resolution_report.md)
+- [Report completo di intervento](../../User/docs/conflict-resolution-report-3.md)
 - [Gestione Git con Script Bash](../../../../../docs/bashscripts/gestione_git.md)
 
 ## Collegamenti alle Risoluzioni Specifiche

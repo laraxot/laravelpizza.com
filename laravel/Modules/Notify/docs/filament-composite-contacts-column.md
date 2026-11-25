@@ -230,9 +230,9 @@ Questo pattern può essere applicato a:
 ## Documentazione Correlata
 
 ### Modulo Notify
-- [Filament Resources](filament_resources.md)
-- [Translation Standards](translation_standards.md)
-- [Best Practices](best_practices.md)
+- [Filament Resources](filament-resources-2.md)
+- [Translation Standards](translation-standards-2.md)
+- [Best Practices](best-practices-3.md)
 
 ### Root Documentation
 - [Filament Table Columns Best Practices](../../../../docs/filament-table-columns-best-practices.md)

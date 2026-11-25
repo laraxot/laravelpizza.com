@@ -7,6 +7,7 @@ status: done
 created: 2026-10-06
 updated: 2026-10-06
 tags: [phpstan, cleanup, bmad, media]
+qmd: "06 phpstan cleanup media dev"
 ---
 
 # [DEV] PHPStan cleanup — Media

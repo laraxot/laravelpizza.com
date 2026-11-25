@@ -139,8 +139,8 @@ Modules/ModuleName/
 **Markdown**: lowercase with hyphens
 ```
 ✅ database-naming.md
-✅ getting-started.md
-✅ best-practices.md
+✅ ../getting-started.md
+✅ best-practices-3.md
 ❌ DatabaseNaming.md
 ❌ database_naming.md
 ❌ DATABASE-NAMING.md

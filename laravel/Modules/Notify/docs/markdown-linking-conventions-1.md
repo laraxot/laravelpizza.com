@@ -20,24 +20,24 @@ discussions: []
 ### ❌ ERRATO: Percorsi Assoluti
 
 ```markdown
-[Convenzioni di Naming per le Interfacce](Modules/Notify/docs/INTERFACE_NAMING_CONVENTION.md)
-[Chiarimento sulla Struttura delle Interfacce](Modules/Notify/docs/INTERFACE_STRUCTURE_CLARIFICATION.md)
-[Architettura dei Contratti](Modules/Notify/docs/CONTRACTS_ARCHITECTURE.md)
+[Convenzioni di Naming per le Interfacce](Modules/Notify/docs/interface-naming-convention-2.md)
+[Chiarimento sulla Struttura delle Interfacce](Modules/Notify/docs/interface-structure-clarification-2.md)
+[Architettura dei Contratti](Modules/Notify/docs/contracts-architecture-2.md)
 ```
 
 ### ✅ CORRETTO: Percorsi Relativi
 
 ```markdown
-[Convenzioni di Naming per le Interfacce](./INTERFACE_NAMING_CONVENTION.md)
-[Chiarimento sulla Struttura delle Interfacce](./INTERFACE_STRUCTURE_CLARIFICATION.md)
-[Architettura dei Contratti](./CONTRACTS_ARCHITECTURE.md)
+[Convenzioni di Naming per le Interfacce](interface-naming-convention-2.md)
+[Chiarimento sulla Struttura delle Interfacce](interface-structure-clarification-2.md)
+[Architettura dei Contratti](contracts-architecture-2.md)
 ```
 
 Per collegamenti a documenti in altre directory:
 
 ```markdown
-[Regole Generali per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
-[Best Practices per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+[Regole Generali per le Chiavi di Traduzione](../../Lang/docs/translation-keys-rules-2.md)
+[Best Practices per le Chiavi di Traduzione](../../Lang/docs/translation-keys-best-practices-2.md)
 ```
 
 ## Motivazione

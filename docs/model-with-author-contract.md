@@ -23,7 +23,7 @@ interface ModelWithAuthorContract extends ModelContract
 
 ## Fix/Modifiche recenti
 - [[DATE]] Correzione conflitti git, uniformazione tipizzazione, aggiunta firme metodi autore/editor, aggiornamento PHPDoc e struttura secondo convenzioni Laraxot/<nome progetto>.
-- Link bidirezionale: [Vai a PHPSTAN-FIXES-SUMMARY.md](../../../docs/phpstan-fixes-summary.md)
+- Link bidirezionale: [Vai a phpstan-fixes-summary-5.md](../../../docs/phpstan-fixes-summary.md)
 
 ## Collegamenti
 - [ModelContract](model-contract.md)

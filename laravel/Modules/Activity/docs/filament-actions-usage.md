@@ -391,13 +391,13 @@ class ListMyModelActivities extends ListLogActivities
 
 ### Regole e Convenzioni
 - [Filament Custom Actions Rules](../../../.cursor/rules/filament-custom-actions.mdc)
-- [Translation Best Practices](../../xot/docs/translation-best-practices.md)
+- [Translation Best Practices](../../User/docs/translation-best-practices-2.md)
 - [Service Provider Architecture](../../xot/docs/service-provider-architecture.md)
 
 ### Moduli Correlati
 - [IndennitaResponsabilita - Activity Log Integration](../../indennitaresponsabilita/docs/activity-log-integration.md)
 - [Xot - Filament Base Components](../../xot/docs/filament/README.md)
-- [Translation Best Practices](../../Xot/docs/translation-best-practices.md)
+- [Translation Best Practices](../../User/docs/translation-best-practices-2.md)
 - [Service Provider Architecture](../../Xot/docs/service-provider-architecture.md)
 
 ### Moduli Correlati

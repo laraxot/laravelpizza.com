@@ -4,7 +4,7 @@ Questa cartella contiene gli standard di codice e le convenzioni utilizzate nel 
 
 ## File Contenuti
 
-- `coding-standards.md` - Standard di codice generali
+- `coding-standards-2.md` - Standard di codice generali
 - `phpstan-rules.md` - Regole PHPStan specifiche
 - `testing-standards.md` - Standard per i test
 
@@ -104,7 +104,7 @@ Questi standard si applicano a tutti i moduli del progetto e devono essere segui
 - [Gestione campi e migrazioni con STI (README Patient)](../../../Patient/project_docs/README.md)
 - [DoctorResource: Step Informazioni Personali (Patient)](../../../Patient/project_docs/filament/resources/doctor-resource.md)
 - [Struttura progetto e STI (Patient)](../../../Patient/project_docs/architecture/struttura-progetto.md)
-- [Migrazioni e database (Patient)](../../../Patient/project_docs/database/migrations.md)
+- [Migrazioni e database (Patient)](../../../../Lang/docs/migrations-3.md)
 
 ## Regola generale
 

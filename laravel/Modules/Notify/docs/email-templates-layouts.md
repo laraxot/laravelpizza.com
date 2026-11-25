@@ -126,7 +126,7 @@ MailTemplate::create([
 ## Collegamenti Bidirezionali
 
 ### Documentazione Correlata
-- **Tema One**: `/Themes/One/docs/email_templates.md`
+- **Tema One**: `/Themes/One/docs/email-templates-2.md`
 - **Modulo Notify**: Questo documento
 - **SpatieEmail**: `docs/spatie-email/`
 - **Mail Templates**: `docs/mail-templates/`

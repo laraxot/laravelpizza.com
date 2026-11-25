@@ -22,8 +22,8 @@ Indice organizzato per argomento di tutti i file `.md` sotto `Modules/Gdpr/docs/
 ## Conformità GDPR e consensi
 
 - [consents.md](consents.md) — gestione consensi
-- [cookie_consent.md](cookie_consent.md) — cookie consent (modulo)
-- [google_analytics.md](google_analytics.md) — integrazione Google Analytics
+- [cookie-consent-3.md](cookie-consent-3.md) — cookie consent (modulo)
+- [google-analytics-2.md](google-analytics-2.md) — integrazione Google Analytics
 - [cloudflare.md](cloudflare.md) — integrazione Cloudflare/Turnstile
 - [links.md](links.md) — collegamenti e riferimenti esterni
 - [repo.md](repo.md) — note sul repository
@@ -42,7 +42,7 @@ Indice organizzato per argomento di tutti i file `.md` sotto `Modules/Gdpr/docs/
 - [packages/permissions.md](packages/permissions.md)
 - [packages/privacy.md](packages/privacy.md)
 - [packages/privacy-policy.md](packages/privacy-policy.md)
-- [packages/SECURITY.md](packages/security.md)
+- [../../Geo/docs/root-md-files/security-2.md](packages/security.md)
 
 ## Generazione PDF (html2pdf/)
 
@@ -50,7 +50,7 @@ Indice organizzato per argomento di tutti i file `.md` sotto `Modules/Gdpr/docs/
 - [html2pdf/usage.md](html2pdf/usage.md)
 - [html2pdf/advanced.md](html2pdf/advanced.md)
 - [html2pdf/laravel.md](html2pdf/laravel.md)
-- [html2pdf/SECURITY.md](html2pdf/security.md)
+- [../../Geo/docs/root-md-files/security-2.md](html2pdf/security.md)
 - [html2pdf/styling.md](html2pdf/styling.md)
 
 ## Qualità del codice e performance
@@ -87,7 +87,7 @@ Indice organizzato per argomento di tutti i file `.md` sotto `Modules/Gdpr/docs/
 - [roadmap/log-attivita.md](roadmap/log-attivita.md)
 - [roadmap/roadmap.md](roadmap/roadmap.md)
 - [roadmap/roadmap-q4.md](roadmap/roadmap-q4.md)
-- [roadmap/-q4-roadmap.md](roadmap/-q4-roadmap.md)
+- [roadmap/q4-roadmap-2.md](roadmap/q4-roadmap-2.md)
 - [roadmap/legacy-roadmap.md](roadmap/legacy-roadmap.md)
 
 Nota: `roadmap/` e `development/roadmap/` contengono coppie con lo stesso nome (`backup-dati.md`, `cookie-consent.md`, `log-attivita.md`) e più varianti di "roadmap" (`roadmap.md`, `roadmap-q4.md`, `-q4-roadmap.md`, `legacy-roadmap.md`, `overview.md`, `index.md`, `README.md`). Vedi sezione "Storico / da consolidare".
@@ -119,13 +119,13 @@ Nota: `roadmap/` e `development/roadmap/` contengono coppie con lo stesso nome (
 - [wiki/schema.md](wiki/schema.md)
 - [wiki/log.md](wiki/log.md)
 - [wiki/bmad-method.md](wiki/bmad-method.md)
-- [wiki/AGENTS.md](wiki/AGENTS.md)
+- [wiki/agents-2.md](wiki/agents-2.md)
 - [wiki/commands/index.md](wiki/commands/index.md)
 - [wiki/rules/index.md](wiki/rules/index.md)
 - [wiki/skills/index.md](wiki/skills/index.md)
 - [wiki/memories/index.md](wiki/memories/index.md)
 - [wiki/troubleshooting/git-merge-conflict-inventory.md](wiki/troubleshooting/git-merge-conflict-inventory.md)
-- [wiki/troubleshooting/git-merge-conflict-inventory-2026-04-28.md](wiki/troubleshooting/git-merge-conflict-inventory.md)
+- [wiki/troubleshooting/git-merge-conflict-inventory-2.md](wiki/troubleshooting/git-merge-conflict-inventory.md)
 - [wiki/_templates/concept.md](wiki/_templates/concept.md)
 - [wiki/_templates/entity.md](wiki/_templates/entity.md)
 - [wiki/_templates/source.md](wiki/_templates/source.md)
@@ -146,7 +146,7 @@ Nota: `roadmap/` e `development/roadmap/` contengono coppie con lo stesso nome (
 
 ### Agenti LLM (llm-wiki/)
 
-- [llm-wiki/AGENTS.md](llm-wiki/AGENTS.md)
+- [llm-wiki/agents-2.md](llm-wiki/agents-2.md)
 
 ## Import grezzi (raw/)
 
@@ -172,17 +172,17 @@ I file seguenti sono duplicati o quasi-duplicati individuati durante l'audit. No
 - **`CHANGELOG.md` vs `CHANGELOG.md`**: contenuto identico. `CHANGELOG.md` è il nome canonico (maiuscolo, per standard `module-docs`).
 - **`cloudflare.md` / `cloudflare.txt` / `root-md-files/cloudflare.md` / `raw/root-import/cloudflare.md` / `raw/root-import/cloudflare-1.md`**: stesso argomento, versioni diverse (root `cloudflare.md` ha front-matter che rimanda al canonico in `Themes/docs/shared-components/cloudflare.md`; `root-md-files/cloudflare.md` contiene solo link grezzi).
 - **`consents.md` / `consents.txt` / `root-md-files/consents.md` / `raw/root-import/consents.md` / `raw/root-import/consents-1.md`**: stesso argomento in più formati/import.
-- **`cookie_consent.md` / `cookie_consent.txt` / `root-md-files/cookie-consent.md` / `raw/root-import/cookie-consent.md` / `raw/root-import/cookie-consent-1.md` / `_integration/cookie-consent.md` / `packages/cookie-consent.md` / `roadmap/cookie-consent.md` / `development/roadmap/cookie-consent.md`**: argomento "cookie consent" frammentato su 9 file in 6 directory diverse.
+- **`cookie-consent-3.md` / `cookie_consent.txt` / `root-md-files/cookie-consent.md` / `raw/root-import/cookie-consent.md` / `raw/root-import/cookie-consent-1.md` / `_integration/cookie-consent.md` / `packages/cookie-consent.md` / `roadmap/cookie-consent.md` / `development/roadmap/cookie-consent.md`**: argomento "cookie consent" frammentato su 9 file in 6 directory diverse.
 - **`filament.md` / `filament.txt` / `root-md-files/filament.md` / `raw/root-import/filament.md` / `raw/root-import/filament-1.md`**: stesso argomento.
-- **`google_analytics.md` / `google_analytics.txt` / `root-md-files/google-analytics.md` / `raw/root-import/google-analytics.md` / `raw/root-import/google-analytics-1.md`**: stesso argomento.
+- **`google-analytics-2.md` / `google_analytics.txt` / `root-md-files/google-analytics.md` / `raw/root-import/google-analytics.md` / `raw/root-import/google-analytics-1.md`**: stesso argomento.
 - **`links.md` / `links.txt` / `root-md-files/links.md` / `raw/root-import/links.md` / `raw/root-import/links-1.md`**: stesso argomento.
 - **`repo.md` / `repo.txt` / `root-md-files/repo.md` / `raw/root-import/repo.md` / `raw/root-import/repo-1.md`**: stesso argomento.
 - **`phpmd-report.md` / `phpmd-report.txt`**: stesso report in due formati.
 - **`phpstan-report.md` / `phpstan-report.txt`**: stesso report in due formati.
 - **`code-quality-report.md` vs `code-quality-improvement-report.md`**: possibile sovrapposizione di ambito, da verificare.
-- **Roadmap frammentata**: `roadmap/backup-dati.md` vs `development/roadmap/backup-dati.md`; `roadmap/cookie-consent.md` vs `development/roadmap/cookie-consent.md`; `roadmap/log-attivita.md` vs `development/roadmap/log-attivita.md`; inoltre `roadmap/roadmap.md`, `roadmap/roadmap-q4.md`, `roadmap/-q4-roadmap.md` e `roadmap/legacy-roadmap.md` sembrano variazioni/superseded dello stesso tema roadmap trimestrale.
+- **Roadmap frammentata**: `roadmap/backup-dati.md` vs `development/roadmap/backup-dati.md`; `roadmap/cookie-consent.md` vs `development/roadmap/cookie-consent.md`; `roadmap/log-attivita.md` vs `development/roadmap/log-attivita.md`; inoltre `roadmap/roadmap.md`, `roadmap/roadmap-q4.md`, `roadmap/q4-roadmap-2.md` e `roadmap/legacy-roadmap.md` sembrano variazioni/superseded dello stesso tema roadmap trimestrale.
 - **Indici `index.md` / `index.md` duplicati per-cartella** (stesso contenuto, stessa dimensione, entrambi presenti sul filesystem case-sensitive): `wiki/commands/`, `wiki/concepts/`, `wiki/rules/`, `wiki/skills/`, `wiki/memories/`. Il nome canonico minuscolo è `index.md`.
-- **Agenti duplicati**: [wiki/AGENTS.md](wiki/AGENTS.md), [llm-wiki/AGENTS.md](llm-wiki/AGENTS.md), [llm-wiki/AGENTS.md](llm-wiki/AGENTS.md) trattano lo stesso argomento in tre file/varianti di maiuscole.
+- **Agenti duplicati**: [wiki/agents-2.md](wiki/agents-2.md), [llm-wiki/agents-2.md](llm-wiki/agents-2.md), [llm-wiki/agents-2.md](llm-wiki/agents-2.md) trattano lo stesso argomento in tre file/varianti di maiuscole.
 - **`raw/root-import/*.md` vs le sue varianti `*-1.md`**: file duplicati byte-per-byte (stesso import eseguito due volte), elencati sopra.
 
 ## Fuori ambito indice (non `.md`)

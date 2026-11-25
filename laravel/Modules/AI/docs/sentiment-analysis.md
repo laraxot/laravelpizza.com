@@ -10,7 +10,7 @@ issues: []
 discussions: []
 related:
   - ./stories/services-to-actions-ai.story.md
-  - ./PHILOSOPHY.md
+  - ./philosophy-2.md
 ---
 
 # Analisi del sentiment: le Action e basta

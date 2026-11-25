@@ -79,7 +79,7 @@ I file di traduzione nel modulo Lang devono seguire una struttura precisa dei pe
 ## Collegamenti alla documentazione correlata
 
 - [Regole generali per i file di traduzione](/laravel/modules/xot/docs/translation_rules.md)
-- [Errori comuni nei file di traduzione](/laravel/modules/lang/docs/errori_comuni_traduzione.md)
+- [Errori comuni nei file di traduzione](/laravel/modules/lang/docs/errori-comuni-traduzione-2.md)
 - [Documentazione principale sulle traduzioni](/docs/translation_rules.md)
 
 *

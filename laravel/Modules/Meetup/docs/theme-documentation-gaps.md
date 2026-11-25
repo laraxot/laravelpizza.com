@@ -65,7 +65,7 @@ Themes/{Theme}/docs/
 ├── integration.md          # Backend integration patterns
 ├── mcp.md                  # MCP integration details
 ├── performance.md          # Optimization strategies
-├── security.md             # Security considerations
+├── security-2.md             # Security considerations
 └── troubleshooting.md      # Common issues and solutions
 ```
 

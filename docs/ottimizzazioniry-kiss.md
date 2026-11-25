@@ -8,7 +8,7 @@
 ```
 ❌ PRIMA (duplicazioni):
 - architecture_best_practices.md + architecture-best-practices.md
-- best_practices.md + best-practices.md
+- best-practices-3.md + best-practices.md
 - actions-pattern.md + actions-standardization.md
 - directory_structure_guide.md + directory-structure-guide.md
 - naming_conventions.md + naming-conventions.md
@@ -28,8 +28,8 @@
 #### 2. Documentazione PHPStan Frammentata
 ```
 ❌ PRIMA (16 file separati):
-phpstan_fixes.md, phpstan_fixes_2025.md, phpstan_level7_guide.md,
-phpstan_level9_guide.md, phpstan_workflow.md, phpstan_usage_guide.md, etc.
+phpstan_fixes.md, phpstan_fixes_2025.md, phpstan-level7-guide-2.md,
+phpstan-level9-guide-2.md, phpstan-workflow-2.md, phpstan-usage-guide-2.md, etc.
 
 ✅ DOPO (struttura consolidata):
 phpstan/

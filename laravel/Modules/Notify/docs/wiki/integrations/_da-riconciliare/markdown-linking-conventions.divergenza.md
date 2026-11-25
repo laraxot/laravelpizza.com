@@ -18,12 +18,12 @@ updated: 2026-11-23
 >>>>>>> .merge_file_ogy0X4
 ---
 
-# Divergenza: `markdown_linking_conventions.md`
+# Divergenza: `markdown-linking-conventions-2.md`
 
-Questo file veniva da `docs/wiki/integrations/modules/notify/markdown_linking_conventions.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+Questo file veniva da `../../../markdown-linking-conventions-2.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
 
-- versione del modulo: `laravel/Modules/Notify/docs/markdown_linking_conventions.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/markdown_linking_conventions.md`
+- versione del modulo: `laravel/Modules/Notify/docs/markdown-linking-conventions-2.md`
+- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/markdown-linking-conventions-2.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 

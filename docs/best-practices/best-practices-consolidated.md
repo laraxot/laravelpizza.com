@@ -2,7 +2,7 @@
 
 > **🎯 Single Source of Truth**: Questo documento centralizza TUTTE le best practices del progetto
 >
-> **🔗 Riferimenti**: [coding-standards.md](coding-standards.md) | [phpstan-consolidated.md](phpstan-consolidated.md)
+> **🔗 Riferimenti**: [coding-standards-2.md](coding-standards-2.md) | [phpstan-consolidated.md](phpstan-consolidated.md)
 
 ## 🚨 STOP DUPLICAZIONE!
 
@@ -891,8 +891,8 @@ php artisan view:clear
 ## Collegamenti
 
 - [PHPStan Guide](phpstan-consolidated.md)
-- [Translation Guide](translation-system.md)
-- [Filament Guide](filament.md)
+- [Translation Guide](translation-system-2.md)
+- [Filament Guide](filament-3.md)
 - [Testing Guide](testing-consolidated.md)
 
 ---

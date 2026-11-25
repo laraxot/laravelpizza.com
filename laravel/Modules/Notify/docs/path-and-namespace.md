@@ -178,7 +178,7 @@ Per le regole generali e condivise tra tutti i moduli, consulta anche:
 ## Collegamenti
 
 - [Regole Generali per i Namespace](/laravel/modules/xot/docs/namespace-rules.md)
-- [Convenzioni di Codice](/laravel/modules/xot/docs/code-conventions.md)
+- [Convenzioni di Codice](/laravel/Modules/User/docs/code-conventions-3.md)
 - [Struttura dei Moduli](/laravel/modules/xot/docs/module-structure.md)
 - [Collegamento Bidirezionale: Documentazione Root](../../../../../docs/links.md)
 
@@ -350,7 +350,7 @@ Per le regole generali e condivise tra tutti i moduli, consulta anche:
 ## Collegamenti
 
 - [Regole Generali per i Namespace](/laravel/modules/xot/docs/namespace-rules.md)
-- [Convenzioni di Codice](/laravel/modules/xot/docs/code-conventions.md)
+- [Convenzioni di Codice](/laravel/Modules/User/docs/code-conventions-3.md)
 - [Struttura dei Moduli](/laravel/modules/xot/docs/module-structure.md)
 - [Collegamento Bidirezionale: Documentazione Root](../../../../../docs/links.md)
 

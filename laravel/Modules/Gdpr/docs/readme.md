@@ -55,8 +55,8 @@ Gdpr/
 - [Contributing](./contributing.md) — Workflow di sviluppo e checklist
 - [Testing](./testing.md) — Linee guida e comandi di test
 - Link di ricerca (ex root): [cloudflare](./cloudflare.md), [consents](./consents.md), [cookie-consent](./cookie-consent.md), [filament](./filament.md), [google-analytics](./google-analytics.md), [links](./links.md), [repo](./repo.md)
-- [On-Demand Pattern](./ON-DEMAND-PATTERN.md) — Pattern per caricamento efficiente
-- [QMD Setup](./QMD-SETUP.md) — Configurazione ricerca locale
-- [Performance](./PERFORMANCE-OPTIMIZATION.md) — Metriche e best practice
-- [Project Structure](./PROJECT-STRUCTURE.md) — Directory layout
-- [Project Structure](./PROJECT-STRUCTURE.md) — Directory layout
+- [On-Demand Pattern](./on-demand-pattern.md) — Pattern per caricamento efficiente
+- [QMD Setup](./qmd-setup.md) — Configurazione ricerca locale
+- [Performance](./performance-optimization.md) — Metriche e best practice
+- [Project Structure](./project-structure.md) — Directory layout
+- [Project Structure](./project-structure.md) — Directory layout

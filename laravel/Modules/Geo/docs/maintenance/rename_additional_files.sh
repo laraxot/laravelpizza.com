@@ -4,17 +4,17 @@
 
 # Array dei file da rinominare
 files=(
-  "/var/www/html/YOUR_PROJECT/laravel/Modules/Activity/CHANGELOG.md"
+  "/../../../UI/docs/changelog.md"
   "/var/www/html/base_project/laravel/Modules/Chart/.github/CONTRIBUTING.md"
   "/var/www/html/base_project/laravel/Modules/Notify/app/Datas/NetfunSMSMessage.php"
-  "/var/www/html/base_project/laravel/Modules/Xot/CHANGELOG.md"
+  "/../../../UI/docs/changelog.md"
   "/var/www/html/base_project/laravel/Themes/One/docs/ASSETS.md"
   "/var/www/html/base_project/laravel/Themes/One/docs/AUTH.md"
   "/var/www/html/base_project/laravel/Themes/One/docs/BUILD_ERRORS.md"
   "/var/www/html/base_project/laravel/Themes/One/docs/COMPONENTS.md"
-  "/var/www/html/base_project/laravel/Themes/One/docs/FILAMENT_COMPONENTS.md"
+  "/../../../Cms/docs/filament-components-2.md"
   "/var/www/html/base_project/laravel/Themes/One/docs/JSON_CONTENT.md"
-  "/var/www/html/base_project/laravel/Themes/One/docs/LINKS.md"
+  "/../../../Gdpr/docs/links-2.md"
   "/var/www/html/base_project/laravel/Themes/One/docs/THEME.md"
 )
 

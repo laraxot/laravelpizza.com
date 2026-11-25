@@ -22,17 +22,17 @@ Indice per argomento di tutti i file `.md` sotto `Themes/Meetup/docs/`. Punto di
 ## Concetti e pattern architetturali
 
 - [concepts/xotbase-never-extend-filament.md](./concepts/xotbase-never-extend-filament.md) — mai estendere `Filament*`, sempre `XotBase*`
-- [wiki/concepts/INDEX.md](./wiki/concepts/INDEX.md) — indice concetti wiki
+- [wiki/concepts/index.md](wiki/concepts/index.md) — indice concetti wiki
 - [wiki/concepts/second-brain-local-discipline.md](./wiki/concepts/second-brain-local-discipline.md) — disciplina second brain locale (stub tema)
 - [wiki/concepts/visual-testing-playwright-puppeteer.md](./wiki/concepts/visual-testing-playwright-puppeteer.md) — visual testing con Playwright/Puppeteer
-- [wiki/concepts/cross-theme-redundancy-doc-stub.md](./wiki/concepts/cross-theme-redundancy-doc-stub.md) — analisi del pattern di stub `REDUNDANCY_ANALYSIS.md` duplicato tra piu' temi/moduli
+- [wiki/concepts/cross-theme-redundancy-doc-stub.md](./wiki/concepts/cross-theme-redundancy-doc-stub.md) — analisi del pattern di stub `redundancy-analysis.md` duplicato tra piu' temi/moduli
 
 ## Wiki on-demand — sezioni
 
-- [wiki/commands/INDEX.md](./wiki/commands/INDEX.md)
-- [wiki/memories/INDEX.md](./wiki/memories/INDEX.md)
-- [wiki/rules/INDEX.md](./wiki/rules/INDEX.md)
-- [wiki/skills/INDEX.md](./wiki/skills/INDEX.md)
+- [wiki/commands/index.md](wiki/commands/index.md)
+- [wiki/memories/index.md](wiki/memories/index.md)
+- [wiki/rules/index.md](wiki/rules/index.md)
+- [wiki/skills/index.md](wiki/skills/index.md)
 - [wiki/log.md](./wiki/log.md) — log cronologico aggiornamenti wiki
 
 ## Template wiki
@@ -49,7 +49,7 @@ Indice per argomento di tutti i file `.md` sotto `Themes/Meetup/docs/`. Punto di
 
 ## LLM wiki / agent instructions
 
-- [llm-wiki/AGENTS.md](./llm-wiki/AGENTS.md) — istruzioni agent per la wiki LLM del tema
+- [llm-wiki/agents.md](llm-wiki/agents.md) — istruzioni agent per la wiki LLM del tema
 
 ## Note raw
 
@@ -60,10 +60,10 @@ Indice per argomento di tutti i file `.md` sotto `Themes/Meetup/docs/`. Punto di
 File non cancellati ma superati, duplicati o con puntatore a documentazione canonica non presente nel repo. Da consolidare in un secondo momento, non toccare senza decisione esplicita.
 
 - [code-quality-report.md](./code-quality-report.md) — versione precedente/piu' sintetica, stessa data di [code-quality-improvement-report.md](./code-quality-improvement-report.md); quest'ultimo e' piu' completo e collegato a STORY-001
-- [REDUNDANCY_ANALYSIS.md](./REDUNDANCY_ANALYSIS.md) — stub con canonical `../../docs/shared-components/REDUNDANCY_ANALYSIS.md` non presente nel repo; vedi analisi in [wiki/concepts/cross-theme-redundancy-doc-stub.md](./wiki/concepts/cross-theme-redundancy-doc-stub.md)
+- [redundancy-analysis.md](./redundancy-analysis.md) — stub con canonical `../../docs/shared-components/redundancy-analysis.md` non presente nel repo; vedi analisi in [wiki/concepts/cross-theme-redundancy-doc-stub.md](./wiki/concepts/cross-theme-redundancy-doc-stub.md)
 - [codex-error-fix.md](./codex-error-fix.md) — stub con canonical `../../docs/shared-components/codex-error-fix.md` non presente nel repo
 - [merge-conflicts-list.md](./merge-conflicts-list.md) — stub con canonical `../../docs/shared-components/merge-conflicts-list.md` non presente nel repo
-- [ON-DEMAND-PATTERN.md](./ON-DEMAND-PATTERN.md) — stub con canonical `../../docs/ON-DEMAND-PATTERN.md` (a livello Themes/) non presente nel repo
-- [PERFORMANCE-OPTIMIZATION.md](./PERFORMANCE-OPTIMIZATION.md) — stub con canonical `../../docs/PERFORMANCE-OPTIMIZATION.md` non presente nel repo
+- [on-demand-pattern.md](./on-demand-pattern.md) — stub con canonical `../../docs/on-demand-pattern.md` (a livello Themes/) non presente nel repo
+- [performance-optimization.md](./performance-optimization.md) — stub con canonical `../../docs/performance-optimization.md` non presente nel repo
 - [project-structure.md](./project-structure.md) — stub con canonical `../../docs/project-structure.md` non presente nel repo
-- [QMD-SETUP.md](./QMD-SETUP.md) — stub con canonical `../../docs/QMD-SETUP.md` non presente nel repo
+- [qmd-setup.md](./qmd-setup.md) — stub con canonical `../../docs/qmd-setup.md` non presente nel repo

@@ -56,19 +56,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -325,19 +325,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -528,29 +528,29 @@ Themes/Sixteen/resources/views/
 ### Documentazione
 <<<<<<< HEAD
 - [Analisi Visiva](../../screenshots/homepage/analisi-visiva.md)
-- [Screenshot Analysis](docs/screenshots/homepage/screenshot_analysis.md)
+- [Screenshot Analysis](docs/screenshots/homepage/screenshot-analysis-3.md)
 - [Fix Plan](../../screenshots/homepage/fix-plan.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-- [Analisi Visiva](../../screenshots/homepage/ANALISI-VISIVA.md)
+- [Analisi Visiva](../../screenshots/homepage/analisi-visiva-2.md)
 - [Screenshot Analysis](docs/screenshots/homepage/SCREENSHOT_analysis.md)
 =======
 <<<<<<< HEAD
 - [Analisi Visiva](../../screenshots/homepage/analisi-visiva.md)
-- [Screenshot Analysis](docs/screenshots/homepage/screenshot_analysis.md)
+- [Screenshot Analysis](docs/screenshots/homepage/screenshot-analysis-3.md)
 - [Fix Plan](../../screenshots/homepage/fix-plan.md)
 =======
-- [Analisi Visiva](../../screenshots/homepage/ANALISI-VISIVA.md)
+- [Analisi Visiva](../../screenshots/homepage/analisi-visiva-2.md)
 - [Screenshot Analysis](docs/screenshots/homepage/SCREENSHOT_analysis.md)
 <<<<<<< .merge_file_guls4i
 - [Fix Plan](docs/screenshots/homepage/fix-plan.md)
 =======
 >>>>>>> laraxot/dev
-- [Fix Plan](../../screenshots/homepage/FIX-PLAN.md)
-- [Analisi Visiva](../../screenshots/homepage/ANALISI-VISIVA.md)
+- [Fix Plan](../../screenshots/homepage/fix-plan-2.md)
+- [Analisi Visiva](../../screenshots/homepage/analisi-visiva-2.md)
 - [Screenshot Analysis](docs/screenshots/homepage/SCREENSHOT_analysis.md)
-- [Fix Plan](../../screenshots/homepage/FIX-PLAN.md)
+- [Fix Plan](../../screenshots/homepage/fix-plan-2.md)
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_VI8aQQ
@@ -558,7 +558,7 @@ Themes/Sixteen/resources/views/
 >>>>>>> laraxot/dev
 =======
 - [Analisi Visiva](../../screenshots/homepage/analisi-visiva.md)
-- [Screenshot Analysis](docs/screenshots/homepage/screenshot_analysis.md)
+- [Screenshot Analysis](docs/screenshots/homepage/screenshot-analysis-3.md)
 - [Fix Plan](../../screenshots/homepage/fix-plan.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -609,19 +609,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -786,7 +786,7 @@ GET /it/tests/amministrazione → tests.view (slug=amministrazione)
 
 ## sessione-fix-completata
 
-*Consolidated from: `sessione-fix-completata.md`*
+*Consolidated from: `sessione-fix-completata-2.md`*
 
 title: "✅ Sessione Completata - Fix Homepage Bootstrap Italia"
 type: concept
@@ -801,19 +801,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -1023,19 +1023,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -1539,19 +1539,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

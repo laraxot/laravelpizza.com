@@ -90,7 +90,7 @@ Le applicazioni SaaS moderne hanno bisogno di multi-tenancy per servire più cli
 ## Indice della documentazione
 
 Questo README e' l'**unico indice** della cartella `docs/` (rimossi `index.md`, `INDEX.md`, `00-index.md`,
-`index-generated.md`: duplicati o generati).
+`index-generated-3.md`: duplicati o generati).
 
 - [Scopo del modulo](./purpose.md)
 - [BMAD](./bmad/00-index.md) · [Audit](./bmad/audit.md) · [Piano di miglioramento](./bmad/piano-miglioramento.md)

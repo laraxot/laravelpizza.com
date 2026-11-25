@@ -22,7 +22,7 @@ attribute-title.md
 attribute-transition.md
 attribute-url.md
 attribute-validate.md
-best-practices.md
+best-practices-3.md
 blade-components.md
 bundling.md
 component-hooks.md
@@ -59,7 +59,7 @@ properties.md
 quickstart.md
 redirecting.md
 rules
-security.md
+security-2.md
 session-properties.md
 styles.md
 synthesizers.md

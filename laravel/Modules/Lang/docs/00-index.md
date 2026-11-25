@@ -59,10 +59,10 @@ related:
 ### Product
 | File | Scopo |
 |------|-------|
-| PRD.md | Product Requirements |
-| PRODUCT_ROADMAP.md | Roadmap |
-| PRODUCT_STRATEGY.md | Strategy |
-| PRODUCT_LAUNCH_PLAN.md | Launch Plan |
+| prd-3.md | Product Requirements |
+| product-roadmap-2.md | Roadmap |
+| product-strategy-2.md | Strategy |
+| product-launch-plan-2.md | Launch Plan |
 
 | product_roadmap.md | Roadmap |
 | product_strategy.md | Strategy |
@@ -71,11 +71,11 @@ related:
 ### Development
 | File | Scopo |
 |------|-------|
-| GSD_WORKFLOW.md | GSD Workflow |
-| SPRINT_PLANNING.md | Sprint Planning |
-| USER_RESEARCH.md | User Research |
+| gsd-workflow-2.md | GSD Workflow |
+| sprint-planning-2.md | Sprint Planning |
+| user-research-2.md | User Research |
 
-| gsd_workflow.md | GSD Workflow |
+| gsd-workflow-3.md | GSD Workflow |
 | sprint_planning.md | Sprint Planning |
 | user_research.md | User Research |
 

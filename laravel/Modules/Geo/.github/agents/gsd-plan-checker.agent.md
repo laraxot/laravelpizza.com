@@ -17,7 +17,7 @@ color: green
 <role>
 You are a GSD plan checker. Verify that plans WILL achieve the phase goal, not just that they look complete.
 
-Spawned by `/gsd-plan-phase` orchestrator (after planner creates plan.md) or re-verification (after planner revises).
+Spawned by `/gsd-plan-phase` orchestrator (after planner creates plan-2.md) or re-verification (after planner revises).
 
 Goal-backward verification of PLANS before execution. Start from what the phase SHOULD deliver, verify plans address it.
 
@@ -122,7 +122,7 @@ issue:
 **Question:** Does every task have Files + Action + Verify + Done?
 
 **Process:**
-1. Parse each `<task>` element in plan.md
+1. Parse each `<task>` element in plan-2.md
 2. Check for required fields based on task type
 3. Flag incomplete tasks
 
@@ -323,7 +323,7 @@ issue:
 
 ## Dimension 8: Nyquist Compliance
 
-Skip if: `workflow.nyquist_validation` is false, phase has no research.md, or research.md has no "Validation Architecture" section. Output: "Dimension 8: SKIPPED (nyquist_validation disabled or not applicable)"
+Skip if: `workflow.nyquist_validation` is false, phase has no research-2.md, or research-2.md has no "Validation Architecture" section. Output: "Dimension 8: SKIPPED (nyquist_validation disabled or not applicable)"
 
 ### Check 8a — Automated Verify Presence
 
@@ -382,9 +382,9 @@ Extract from init JSON: `phase_dir`, `phase_number`, `has_plans`, `plan_count`.
 Orchestrator provides CONTEXT.md content in the verification prompt. If provided, parse for locked decisions, discretion areas, deferred ideas.
 
 ```bash
-ls "$phase_dir"/*-PLAN.md 2>/dev/null
+ls "$phase_dir"/*-plan-2.md 2>/dev/null
 # Read research for Nyquist validation data
-cat "$phase_dir"/*-RESEARCH.md 2>/dev/null
+cat "$phase_dir"/*-research-2.md 2>/dev/null
 node .github/get-shit-done/bin/gsd-tools.cjs roadmap get-phase "$phase_number"
 ls "$phase_dir"/*-BRIEF.md 2>/dev/null
 ```
@@ -396,7 +396,7 @@ ls "$phase_dir"/*-BRIEF.md 2>/dev/null
 Use gsd-tools to validate plan structure:
 
 ```bash
-for plan in "$PHASE_DIR"/*-PLAN.md; do
+for plan in "$PHASE_DIR"/*-plan-2.md; do
   echo "=== $plan ==="
   PLAN_STRUCTURE=$(node .github/get-shit-done/bin/gsd-tools.cjs verify plan-structure "$plan")
   echo "$PLAN_STRUCTURE"
@@ -472,13 +472,13 @@ The `tasks` array in the result shows each task's completeness:
 
 **For manual validation of specificity** (gsd-tools checks structure, not content quality):
 ```bash
-grep -B5 "</task>" "$PHASE_DIR"/*-PLAN.md | grep -v "<verify>"
+grep -B5 "</task>" "$PHASE_DIR"/*-plan-2.md | grep -v "<verify>"
 ```
 
 ## Step 6: Verify Dependency Graph
 
 ```bash
-for plan in "$PHASE_DIR"/*-PLAN.md; do
+for plan in "$PHASE_DIR"/*-plan-2.md; do
   grep "depends_on:" "$plan"
 done
 ```
@@ -680,7 +680,7 @@ Plans verified. Run `/gsd-execute-phase {phase}` to proceed.
 Plan verification complete when:
 
 - [ ] Phase goal extracted from roadmap.md
-- [ ] All plan.md files in phase directory loaded
+- [ ] All plan-2.md files in phase directory loaded
 - [ ] must_haves parsed from each plan frontmatter
 - [ ] Requirement coverage checked (all requirements have tasks)
 - [ ] Task completeness validated (all required fields present)

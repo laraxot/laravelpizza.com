@@ -14,19 +14,7 @@ qmd: "audit UI design system vocabolario visivo dashboard fake data test modelli
 UI è il **vocabolario visivo condiviso**: la stessa cosa ha lo stesso aspetto e comportamento
 in tutti i moduli (colonne, widget, layout tabella, blocchi, icone). Non ha dominio HR e non
 ha Resource proprie: è una libreria consumata da Xot, User, Incentivi, Indennita*
-<<<<<<< .merge_file_AQrA1E
-([purpose.md](../purpose.md)). Il rischio qui è la **deriva**: componenti demo, dati finti e
-=======
-<<<<<<< HEAD
-([purpose.md](../purpose.md)). Il rischio qui è la **deriva**: componenti demo, dati finti e
-=======
-<<<<<<< HEAD
-([purpose.md](../purpose.md)). Il rischio qui è la **deriva**: componenti demo, dati finti e
-=======
 ([purpose.md](../../wiki/purpose.md)). Il rischio qui è la **deriva**: componenti demo, dati finti e
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> .merge_file_BgS702
 stringhe letterali che si propagano a tutti i consumatori.
 
 ## Metodo

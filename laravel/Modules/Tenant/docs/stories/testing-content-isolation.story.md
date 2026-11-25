@@ -1,10 +1,7 @@
 ---
 title: "Isolamento dei contenuti tenant nei test"
 status: active
-<<<<<<< .merge_file_rJTeij
 qmd: "testing content isolation story isolamento contenuti"
-=======
->>>>>>> .merge_file_PbPLAz
 ---
 
 # Isolamento dei contenuti tenant nei test

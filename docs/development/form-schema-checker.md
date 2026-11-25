@@ -37,6 +37,6 @@ Lo script produce:
 - Gestione appropriata dei valori di ritorno nullable
 
 ## Collegamenti Correlati
-- [Filament Best Practices](../filament_best_practices.md)
+- [Filament Best Practices](../filament-best-practices-2.md)
 - [XotBaseResource Documentation](../architecture/xot_base_resource.md)
 - [PHPStan Configuration](../phpstan-usage.md)

@@ -401,7 +401,7 @@ README.md
 CHANGELOG.md
 
 # ❌ SBAGLIATO
-Business-Logic-Analysis.md           # Maiuscole
+business-logic-analysis-3.md           # Maiuscole
 phpstan-fixes-[DATE].md         # Date
 GUIDE.md                             # Maiuscolo (non README/CHANGELOG)
 ```

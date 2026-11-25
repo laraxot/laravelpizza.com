@@ -2,7 +2,8 @@
 title: "ADR — mixed solo come ultima spiaggia"
 type: decision
 module: Xot
-status: accepted
+status: superseded by 0015-mixed-solo-come-ultima-spiaggia.md
+superseded_by: 0015-mixed-solo-come-ultima-spiaggia.md
 tags: [adr, phpstan, typing, mixed]
 created: 2026-11-24
 updated: 2026-11-24

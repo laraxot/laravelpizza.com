@@ -91,7 +91,7 @@ Lead: sessione Claude principale. Lo swarm MCP (`swarm_init`, `claims_*`) non e'
 <<<<<<< .merge_file_p0tJX9
 <<<<<<< .merge_file_VPKEP0
 <<<<<<< .merge_file_5Qd2jl
-| P4-DOCS-GEO | `Modules/Geo/docs/**` (non `stories/2026-10-14-dcp-152*`) | chiuso 06:4x, 85 tool | `docs/DOCS-MIGRATION-MAP.md` (622 righe, stato proposto, nulla spostato), `index.md` unico (00-INDEX/00-index superseded), concepts 148/148 elencati, 340 link riparati (lead: 479 link nuovi tutti esistenti, 265/317 sostituzioni sono solo maiuscole), 8 affermazioni false corrette (lead: `import 'leaflet.heat'` r.18 di `geo-map-lit.js` confermato). AVVISO: `wiki/.gitignore` ignora `concepts/` (147 file tracciati con force-add): `git add -f` per i nuovi |
+| P4-DOCS-GEO | `Modules/Geo/docs/**` (non `stories/2026-10-14-dcp-152*`) | chiuso 06:4x, 85 tool | `docs/docs-migration-map.md` (622 righe, stato proposto, nulla spostato), `index.md` unico (00-INDEX/00-index superseded), concepts 148/148 elencati, 340 link riparati (lead: 479 link nuovi tutti esistenti, 265/317 sostituzioni sono solo maiuscole), 8 affermazioni false corrette (lead: `import 'leaflet.heat'` r.18 di `geo-map-lit.js` confermato). AVVISO: `wiki/.gitignore` ignora `concepts/` (147 file tracciati con force-add): `git add -f` per i nuovi |
 =======
 =======
 >>>>>>> .merge_file_Y6X1Fj
@@ -100,12 +100,12 @@ Lead: sessione Claude principale. Lo swarm MCP (`swarm_init`, `claims_*`) non e'
 =======
 >>>>>>> .merge_file_i3A5Mv
 <<<<<<< HEAD
-| P4-DOCS-GEO | `Modules/Geo/docs/**` (non `stories/2026-10-14-dcp-152*`) | chiuso 06:4x, 85 tool | `docs/DOCS-MIGRATION-MAP.md` (622 righe, stato proposto, nulla spostato), `index.md` unico (00-INDEX/00-index superseded), concepts 148/148 elencati, 340 link riparati (lead: 479 link nuovi tutti esistenti, 265/317 sostituzioni sono solo maiuscole), 8 affermazioni false corrette (lead: `import 'leaflet.heat'` r.18 di `geo-map-lit.js` confermato). AVVISO: `wiki/.gitignore` ignora `concepts/` (147 file tracciati con force-add): `git add -f` per i nuovi |
+| P4-DOCS-GEO | `Modules/Geo/docs/**` (non `stories/2026-10-14-dcp-152*`) | chiuso 06:4x, 85 tool | `docs/docs-migration-map.md` (622 righe, stato proposto, nulla spostato), `index.md` unico (00-INDEX/00-index superseded), concepts 148/148 elencati, 340 link riparati (lead: 479 link nuovi tutti esistenti, 265/317 sostituzioni sono solo maiuscole), 8 affermazioni false corrette (lead: `import 'leaflet.heat'` r.18 di `geo-map-lit.js` confermato). AVVISO: `wiki/.gitignore` ignora `concepts/` (147 file tracciati con force-add): `git add -f` per i nuovi |
 =======
 <<<<<<< .merge_file_YQ5LU6
-| P4-DOCS-GEO | `Modules/Geo/docs/**` (non `stories/2026-10-14-dcp-152*`) | chiuso 06:4x, 85 tool | `docs/DOCS-MIGRATION-MAP.md` (622 righe, stato proposto, nulla spostato), `INDEX.md` unico (00-INDEX/00-index superseded), concepts 148/148 elencati, 340 link riparati (lead: 479 link nuovi tutti esistenti, 265/317 sostituzioni sono solo maiuscole), 8 affermazioni false corrette (lead: `import 'leaflet.heat'` r.18 di `geo-map-lit.js` confermato). AVVISO: `wiki/.gitignore` ignora `concepts/` (147 file tracciati con force-add): `git add -f` per i nuovi |
+| P4-DOCS-GEO | `Modules/Geo/docs/**` (non `stories/2026-10-14-dcp-152*`) | chiuso 06:4x, 85 tool | `docs/docs-migration-map.md` (622 righe, stato proposto, nulla spostato), `index-2.md` unico (00-INDEX/00-index superseded), concepts 148/148 elencati, 340 link riparati (lead: 479 link nuovi tutti esistenti, 265/317 sostituzioni sono solo maiuscole), 8 affermazioni false corrette (lead: `import 'leaflet.heat'` r.18 di `geo-map-lit.js` confermato). AVVISO: `wiki/.gitignore` ignora `concepts/` (147 file tracciati con force-add): `git add -f` per i nuovi |
 =======
-| P4-DOCS-GEO | `Modules/Geo/docs/**` (non `stories/2026-10-14-dcp-152*`) | chiuso 06:4x, 85 tool | `docs/DOCS-MIGRATION-MAP.md` (622 righe, stato proposto, nulla spostato), `index.md` unico (00-INDEX/00-index superseded), concepts 148/148 elencati, 340 link riparati (lead: 479 link nuovi tutti esistenti, 265/317 sostituzioni sono solo maiuscole), 8 affermazioni false corrette (lead: `import 'leaflet.heat'` r.18 di `geo-map-lit.js` confermato). AVVISO: `wiki/.gitignore` ignora `concepts/` (147 file tracciati con force-add): `git add -f` per i nuovi |
+| P4-DOCS-GEO | `Modules/Geo/docs/**` (non `stories/2026-10-14-dcp-152*`) | chiuso 06:4x, 85 tool | `docs/docs-migration-map.md` (622 righe, stato proposto, nulla spostato), `index.md` unico (00-INDEX/00-index superseded), concepts 148/148 elencati, 340 link riparati (lead: 479 link nuovi tutti esistenti, 265/317 sostituzioni sono solo maiuscole), 8 affermazioni false corrette (lead: `import 'leaflet.heat'` r.18 di `geo-map-lit.js` confermato). AVVISO: `wiki/.gitignore` ignora `concepts/` (147 file tracciati con force-add): `git add -f` per i nuovi |
 >>>>>>> .merge_file_8O2KTF
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_E7vC0K

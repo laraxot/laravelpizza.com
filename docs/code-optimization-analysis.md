@@ -37,11 +37,11 @@ docs/
 │   └── utility_components.md
 ├── integration/
 │   ├── filament_integration.md
-│   ├── livewire_integration.md
+│   ├── livewire-integration-2.md
 │   ├── laravel_integration.md
 │   └── third_party_integration.md
 ├── best_practices/
-│   ├── coding_standards.md
+│   ├── coding-standards-2.md
 │   ├── performance_optimization.md
 │   ├── security_best_practices.md
 │   └── testing_strategies.md
@@ -57,7 +57,7 @@ docs/
 │   └── debugging_guide.md
 └── reference/
     ├── configuration_reference.md
-    ├── database_schema.md
+    ├── database-schema-2.md
     ├── command_reference.md
     └── cheat_sheet.md
 ```

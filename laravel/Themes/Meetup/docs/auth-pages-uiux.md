@@ -118,4 +118,4 @@ Themes/Meetup/resources/views/pages/auth/
 ## Related Docs
 - [WCAG Guidelines](./wcag.md)
 - [SEO Guidelines](./seo.md)
-- [GDPR Compliance](./gdpr-compliance.md)
+- [GDPR Compliance](../../../Modules/User/docs/gdpr-compliance-2.md)

@@ -480,3 +480,4 @@ tests/graphify-out/
 # screenshot di comparazione visiva (artefatti locali)
 docs/project/visual-comparison/
 docs/visual-comparison/
+ruvector.db

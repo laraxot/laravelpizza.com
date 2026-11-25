@@ -129,11 +129,11 @@ I CSS sono definiti inline all'interno di ciascun layout per massimizzare la com
 
 ## Integrazione con MailPace
 
-I layout attuali sono compatibili con l'approccio utilizzato da [mailpace/templates](https://github.com/mailpace/templates). Vedere [MAILPACE_TEMPLATES_INTEGRATION.md](./mail-templates/mailpace_templates_integration.md) per dettagli sull'integrazione.
+I layout attuali sono compatibili con l'approccio utilizzato da [mailpace/templates](https://github.com/mailpace/templates). Vedere [mailpace-templates-integration-2.md](./mail-templates/mailpace-templates-integration-2.md) per dettagli sull'integrazione.
 
 ## Riferimenti
 
 - [Laravel Mail Documentation](https://laravel.com/docs/mail)
 - [Spatie Email Documentation](./spatie_email_usage_guide.md)
-- [Email Best Practices](./mail-templates/email_best_practices.md)
-- [HTML Email Compatibility Guide](./mail-templates/html_email_compatibility.md)
+- [Email Best Practices](./mail-templates/email-best-practices-2.md)
+- [HTML Email Compatibility Guide](./mail-templates/html-email-compatibility-2.md)

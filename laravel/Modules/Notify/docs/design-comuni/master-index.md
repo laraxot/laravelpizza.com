@@ -65,37 +65,37 @@ Replicazione delle 38 pagine statiche del progetto [Design Comuni Italia](https:
 | **Screenshots All Pages** | [screenshots/all-pages/](../laravel/Themes/Sixteen/docs/design-comuni/screenshots/all-pages/) | Screenshots tutte 54 pagine |
 | **All Pages Analysis** | [ALL_PAGES_analysis.md](../laravel/Themes/Sixteen/docs/design-comuni/ALL_PAGES_analysis.md) | Analisi completa 54 pagine |
 <<<<<<< HEAD
-| **Progress Report** | [progress-report.md](../progress-report.md) | Report progresso aggiornato |
+| **Progress Report** | [progress-report-2.md](../progress-report.md) | Report progresso aggiornato |
 <<<<<<< .merge_file_jWJ4it
 <<<<<<< .merge_file_M1Odfn
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-| **Progress Report** | [progress-report.md](../progress-report.md) | Report progresso aggiornato |
+| **Progress Report** | [progress-report-2.md](../progress-report.md) | Report progresso aggiornato |
 =======
 >>>>>>> .merge_file_ACQbra
 =======
 >>>>>>> .merge_file_uJUQwZ
-| **Progress Report** | [progress-report.md](../progress-report.md) | Report progresso aggiornato |
+| **Progress Report** | [progress-report-2.md](../progress-report.md) | Report progresso aggiornato |
 =======
 <<<<<<< .merge_file_i3LdqE
-| **Progress Report** | [progress-report.md](../laravel/Themes/Sixteen/docs/design-comuni/progress-report.md) | Report progresso aggiornato |
+| **Progress Report** | [progress-report-2.md](../progress-report-2.md) | Report progresso aggiornato |
 =======
 <<<<<<< .merge_file_jWJ4it
 <<<<<<< .merge_file_M1Odfn
-| **Progress Report** | [progress-report.md](../progress-report.md) | Report progresso aggiornato |
-| **Progress Report** | [progress-report.md](../progress-report.md) | Report progresso aggiornato |
+| **Progress Report** | [progress-report-2.md](../progress-report.md) | Report progresso aggiornato |
+| **Progress Report** | [progress-report-2.md](../progress-report.md) | Report progresso aggiornato |
 >>>>>>> .merge_file_KZ5Whe
 >>>>>>> laraxot/dev
 =======
-| **Progress Report** | [progress-report.md](../laravel/Themes/Sixteen/docs/design-comuni/progress-report.md) | Report progresso aggiornato |
+| **Progress Report** | [progress-report-2.md](../progress-report-2.md) | Report progresso aggiornato |
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
 =======
 >>>>>>> .merge_file_uJUQwZ
-| **Progress Report** | [progress-report.md](../progress-report.md) | Report progresso aggiornato |
-| **Progress Report** | [progress-report.md](../progress-report.md) | Report progresso aggiornato |
+| **Progress Report** | [progress-report-2.md](../progress-report.md) | Report progresso aggiornato |
+| **Progress Report** | [progress-report-2.md](../progress-report.md) | Report progresso aggiornato |
 >>>>>>> .merge_file_KZ5Whe
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_jWJ4it
@@ -135,12 +135,12 @@ Replicazione delle 38 pagine statiche del progetto [Design Comuni Italia](https:
 
 | Documento | File | Descrizione |
 |-----------|------|-------------|
-| **Cms Design Comuni Index** | [DESIGN_COMUNI_INDEX.md](../laravel/Modules/Cms/docs/DESIGN_COMUNI_INDEX.md) | **INDEX COMPLETO** modulo Cms |
+| **Cms Design Comuni Index** | [design-comuni-index-2.md](../laravel/Modules/Cms/docs/design-comuni-index-2.md) | **INDEX COMPLETO** modulo Cms |
 | **FAQ Architecture** | [design-comuni-faq.md](../laravel/Modules/Cms/docs/design-comuni-faq.md) | Architettura pagina FAQ |
 | **Homepage Analysis** | [design-comuni-homepage.md](../laravel/Modules/Cms/docs/design-comuni-homepage.md) | Analisi homepage |
 | **Argomenti** | [design-comuni-argomenti.md](../laravel/Modules/Cms/docs/design-comuni-argomenti.md) | Pagina argomenti |
 | **Risultati Ricerca** | [design-comuni-risultati-ricerca.md](../laravel/Modules/Cms/docs/design-comuni-risultati-ricerca.md) | Pagina ricerca |
-| **Index Modulo** | [00-index.md](../laravel/Modules/Cms/docs/00-index.md) | Indice completo modulo Cms |
+| **Index Modulo** | [00-index-2.md](../../../Cms/docs/00-index-2.md) | Indice completo modulo Cms |
 
 ### 🧩 Modulo UI
 
@@ -264,7 +264,7 @@ Ogni documento contiene:
 ### Per AI Agents
 
 1. **Mappare codebase**: [Index Modulo Cms](../laravel/Modules/Cms/docs/00-index.md)
-2. **Capire blocchi**: [Content Blocks System](../laravel/Modules/Cms/docs/content-blocks-system.md)
+2. **Capire blocchi**: [Content Blocks System](../../../Cms/docs/content-blocks-system-2.md)
 3. **Vedere componenti UI**: [Blocks System UI](../laravel/Modules/UI/docs/blocks-system.md)
 4. **Eseguire tests**: [Screenshot Script](../bashscripts/design-comuni/capture-faq-screenshots.js)
 
@@ -287,11 +287,11 @@ Master Index (questo file - docs/design-comuni/master-index.md)
 │  └─ screenshots/ (146 files)
 │
 ├─ Modulo Cms (laravel/Modules/Cms/docs/)
-│  ├─ 00-index.md (indice modulo)
+│  ├─ 00-index-2.md (indice modulo)
 │  └─ design-comuni-faq.md (doc FAQ)
 │
 ├─ Modulo UI (laravel/Modules/UI/docs/)
-│  ├─ 00-index.md (indice modulo)
+│  ├─ 00-index-2.md (indice modulo)
 │  └─ design-comuni-faq-components.md (doc componenti)
 │
 └─ Bash Scripts (bashscripts/)

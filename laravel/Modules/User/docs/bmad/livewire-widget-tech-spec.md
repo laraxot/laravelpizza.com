@@ -87,10 +87,10 @@ Verify HTTP: cancellare. Se FO serve verify, è pagina tema/Volt: fuori da quest
 
 ## Errori noti da non ripetere
 
-- Namespace `filament-jet::` — [filament_errors.md](../filament_errors.md).
+- Namespace `filament-jet::` — [filament-errors-3.md](../filament-errors-2.md).
 - `canView(): false` globale che spegne anche l’hook — usare `$isDiscovered`.
 
-- Namespace `filament-jet::`: [filament_errors.md](../filament_errors.md).
+- Namespace `filament-jet::`: [filament-errors-3.md](../filament-errors-2.md).
 - `canView(): false` globale che spegne anche l’hook: usare `$isDiscovered`.
 - Registrare chrome widget in `->widgets()`.
 

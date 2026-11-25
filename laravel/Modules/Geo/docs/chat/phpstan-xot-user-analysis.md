@@ -46,7 +46,7 @@ issues: []
 discussions: []
 *Analisi: 2026-06-15 · Memory: 2GB · Tempo: ~2min per modulo*
 
-## Versione unita da `phpstan-xot-user-analysis-2026-06-15.md` (2026-06-15)
+## Versione unita da `phpstan-xot-user-analysis-2.md` (2026-06-15)
 
 # PHPStan Analysis: Xot + User — 2026-06-15
 

@@ -97,7 +97,7 @@ class User extends Illuminate\Database\Eloquent\Model
 
 **Di ritorno:**
 <<<<<<< HEAD
-- [CLAUDE.md - Architecture Section](../../CLAUDE.md)
+- [CLAUDE.md - Architecture Section](../../../Geo/docs/root-md-files/claude.md)
 - [AGENTS.md - Module Architecture Section](../../AGENTS.md)
 - [AGENTS.md - Module Architecture Section](../../AGENTS.md)
 =======
@@ -105,32 +105,32 @@ class User extends Illuminate\Database\Eloquent\Model
 <<<<<<< .merge_file_vicUNJ
 <<<<<<< .merge_file_xMSx8Y
 <<<<<<< HEAD
-- [CLAUDE.md - Architecture Section](../../CLAUDE.md)
+- [CLAUDE.md - Architecture Section](../../../Geo/docs/root-md-files/claude.md)
 - [AGENTS.md - Module Architecture Section](../../AGENTS.md)
 - [AGENTS.md - Module Architecture Section](../../AGENTS.md)
 =======
 <<<<<<< HEAD
-- [CLAUDE.md - Architecture Section](../../claude.md)
+- [CLAUDE.md - Architecture Section](../../../Geo/docs/root-md-files/claude.md)
 - [AGENTS.md - Module Architecture Section](../../agents.md)
 - [agents.md - Module Architecture Section](../../agents.md)
 =======
-- [CLAUDE.md - Architecture Section](../../CLAUDE.md)
+- [CLAUDE.md - Architecture Section](../../../Geo/docs/root-md-files/claude.md)
 - [AGENTS.md - Module Architecture Section](../../AGENTS.md)
 - [AGENTS.md - Module Architecture Section](../../AGENTS.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
-- [CLAUDE.md - Architecture Section](../../claude.md)
+- [CLAUDE.md - Architecture Section](../../../Geo/docs/root-md-files/claude.md)
 - [AGENTS.md - Module Architecture Section](../../agents.md)
 - [agents.md - Module Architecture Section](../../agents.md)
 =======
 =======
 >>>>>>> .merge_file_9piTkn
-- [CLAUDE.md - Architecture Section](../../claude.md)
+- [CLAUDE.md - Architecture Section](../../../Geo/docs/root-md-files/claude.md)
 - [AGENTS.md - Module Architecture Section](../../agents.md)
 - [agents.md - Module Architecture Section](../../agents.md)
 =======
-- [CLAUDE.md - Architecture Section](../../CLAUDE.md)
+- [CLAUDE.md - Architecture Section](../../../Geo/docs/root-md-files/claude.md)
 - [AGENTS.md - Module Architecture Section](../../AGENTS.md)
 - [AGENTS.md - Module Architecture Section](../../AGENTS.md)
 <<<<<<< .merge_file_vicUNJ

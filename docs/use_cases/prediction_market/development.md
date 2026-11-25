@@ -330,7 +330,7 @@ Configura strumenti di monitoraggio come:
 - Segui lo [PSR-12](https://www.php-fig.org/psr/psr-12/)
 - Scrivi test per il nuovo codice
 - Documenta le nuove funzionalità
-- Aggiorna il CHANGELOG.md
+- Aggiorna il changelog.md
 
 ## 📚 Risorse Aggiuntive
 

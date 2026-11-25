@@ -45,26 +45,26 @@ discussions: []
 
 ### 1. DELETE DUPLICATES (Kebab vs Snake Case) — ~30 files
 
-Keep kebab-case (e.g., `translation-system.md`); delete snake_case (`translation_system.md`).
+Keep kebab-case (e.g., `translation-system.md`); delete snake_case (`translation-system-3.md`).
 
 **Delete:**
 ```
-advanced_language_switching.md
-automatic_translations.md
-cms_link.md
+advanced-language-switching-3.md
+automatic-translations-3.md
+cms-link-3.md
 conflict_resolution_*.md (all snake_case variants)
-docs_naming_convention_fix.md
-documentation_link_conventions.md
-errori_comuni_traduzione.md
-lang_link.md
-lang_service_helper_text_fix.md
-lang_service_provider.md (if duplicate)
-lang_service_provider_improvements.md
-laravel_localization.md
+docs-naming-convention-fix-3.md
+documentation-link-conventions-3.md
+errori-comuni-traduzione-3.md
+lang-link-3.md
+lang-service-helper-text-fix-3.md
+lang-service-provider-3.md (if duplicate)
+lang-service-provider-improvements-3.md
+laravel-localization-3.md
 translation_*.md (all snake_case)
 translating_*.md (all snake_case)
 validation_*.md (all snake_case)
-working_with_locales.md
+working-with-locales-3.md
 ```
 
 ### 2. DELETE OBSOLETE FILES — ~20 files
@@ -130,8 +130,8 @@ Merge: `translating-plural-singular-forms.md`
 
 ### 6. CONSOLIDATE PHPSTAN (3 → 2)
 
-- **PHPSTAN_L10.md** — Merge PHPSTAN-FIXES.md + PHPSTAN_STATUS.md into this
-- Delete: `PHPSTAN-FIXES.md`, `PHPSTAN_STATUS.md`
+- **phpstan-l10-2.md** — Merge phpstan-fixes-2.md + phpstan-status-2.md into this
+- Delete: `phpstan-fixes-2.md`, `phpstan-status-2.md`
 
 ### 7. MOVE TO WIKI/ SUBDIRECTORIES — ~40 files
 
@@ -152,9 +152,9 @@ mv qmd-setup.md wiki/how-to/
 mv QUICK_REFERENCE.md wiki/how-to/
 mv best-practices.md wiki/how-to/
 mv laravel-localization-reference.md wiki/how-to/
-mv laravel_localization_complete.md wiki/how-to/
-mv localizing_dates_and_currencies.md wiki/how-to/
-mv pluralization_and_localization.md wiki/how-to/
+mv laravel-localization-complete-3.md wiki/how-to/
+mv localizing-dates-and-currencies-3.md wiki/how-to/
+mv pluralization-and-localization-3.md wiki/how-to/
 mv working-with-locales.md wiki/how-to/
 
 # Move technical overviews
@@ -176,8 +176,8 @@ mv MCAMARA_IMPLEMENTATION_GUIDE.md wiki/overviews/
 ```
 laravel/Modules/Lang/docs/
 ├── README.md                         # Entry point (anchor for all docs)
-├── PHPSTAN_L10.md                   # Technical status & fixes
-├── MIGRATIONS.md                    # Schema/migrations
+├── phpstan-l10-2.md                   # Technical status & fixes
+├── migrations-3.md                    # Schema/migrations
 ├── product_strategy.md              # Product vision (optional: move to wiki/)
 ├── LOCALE_MANAGEMENT.md             # Locale management basics
 │
@@ -224,19 +224,19 @@ cd laravel/Modules/Lang/docs
 
 # 1. Delete duplicates (snake_case)
 rm -f \
-  advanced_language_switching.md \
-  automatic_translations.md \
-  cms_link.md \
-  docs_naming_convention_fix.md \
-  documentation_link_conventions.md \
-  errori_comuni_traduzione.md \
+  advanced-language-switching-3.md \
+  automatic-translations-3.md \
+  cms-link-3.md \
+  docs-naming-convention-fix-3.md \
+  documentation-link-conventions-3.md \
+  errori-comuni-traduzione-3.md \
   lang-link.md \
-  lang_service_helper_text_fix.md \
-  laravel_localization.md \
+  lang-service-helper-text-fix-3.md \
+  laravel-localization-3.md \
   translation_*.md \
   translating_*.md \
   validation_*.md \
-  working_with_locales.md
+  working-with-locales-3.md
 
 # 2. Delete obsolete Italian/analysis
 rm -f \
@@ -263,7 +263,7 @@ rm -f \
 rm -f conflict_resolution_*.md
 
 # 4. Delete lang_service_provider variants (keep lang-service-provider.md)
-rm -f lang_service_provider.md lang_service_provider_improvements.md
+rm -f lang-service-provider-3.md lang-service-provider-improvements-3.md
 
 # 5. Create wiki subdirectories
 mkdir -p wiki/strategies wiki/how-to wiki/overviews wiki/rules
@@ -280,9 +280,9 @@ mv qmd-setup.md wiki/how-to/ 2>/dev/null || true
 mv QUICK_REFERENCE.md wiki/how-to/ 2>/dev/null || true
 mv best-practices.md wiki/how-to/ 2>/dev/null || true
 mv laravel-localization-reference.md wiki/how-to/ 2>/dev/null || true
-mv laravel_localization_complete.md wiki/how-to/ 2>/dev/null || true
-mv localizing_dates_and_currencies.md wiki/how-to/ 2>/dev/null || true
-mv pluralization_and_localization.md wiki/how-to/ 2>/dev/null || true
+mv laravel-localization-complete-3.md wiki/how-to/ 2>/dev/null || true
+mv localizing-dates-and-currencies-3.md wiki/how-to/ 2>/dev/null || true
+mv pluralization-and-localization-3.md wiki/how-to/ 2>/dev/null || true
 mv working-with-locales.md wiki/how-to/ 2>/dev/null || true
 
 # 8. Move technical overviews
@@ -297,7 +297,7 @@ mv MCAMARA_IMPLEMENTATION_GUIDE.md wiki/overviews/ 2>/dev/null || true
 mv on-demand-pattern.md wiki/rules/ 2>/dev/null || true
 
 # 10. Merge PHPSTAN files (manual step — see section below)
-# (Requires reading PHPSTAN-FIXES.md + PHPSTAN_STATUS.md into PHPSTAN_L10.md)
+# (Requires reading phpstan-fixes-2.md + phpstan-status-2.md into phpstan-l10-2.md)
 ```
 
 ### Verify Results
@@ -322,13 +322,13 @@ done | sort -rn
 
 ### Merge PHPSTAN Files
 
-1. **Read PHPSTAN-FIXES.md and PHPSTAN_STATUS.md** for key content
-2. **Append key sections to PHPSTAN_L10.md**:
-   - Status summary from PHPSTAN_STATUS.md
-   - Fix strategies from PHPSTAN-FIXES.md
+1. **Read phpstan-fixes-2.md and phpstan-status-2.md** for key content
+2. **Append key sections to phpstan-l10-2.md**:
+   - Status summary from phpstan-status-2.md
+   - Fix strategies from phpstan-fixes-2.md
 3. **Delete the two source files**:
    ```bash
-   rm PHPSTAN-FIXES.md PHPSTAN_STATUS.md
+   rm phpstan-fixes-2.md phpstan-status-2.md
    ```
 
 ### Consolidate Translation Files

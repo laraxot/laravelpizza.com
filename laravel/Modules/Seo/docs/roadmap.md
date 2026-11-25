@@ -392,7 +392,7 @@ Seo Module
 ### Utente
 - [SEO Guide](roadmap/seo_guide.md) _(target mancante, verificato 2026-10-08)_
 - [Admin Guide](roadmap/admin_guide.md) _(target mancante, verificato 2026-10-08)_
-- [Best Practices](roadmap/best_practices.md) _(target mancante, verificato 2026-10-08)_
+- [Best Practices](../../Activity/docs/best-practices-3.md) _(target mancante, verificato 2026-10-08)_
 - [Troubleshooting](roadmap/troubleshooting.md) _(target mancante, verificato 2026-10-08)_
 
 ## Next Steps

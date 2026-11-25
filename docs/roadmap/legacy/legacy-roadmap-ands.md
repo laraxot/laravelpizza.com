@@ -323,10 +323,10 @@ function xot_config(string $key): mixed
 ## 🔗 Collegamenti
 
 - [← Xot Module README](./readme.md)
-- [← Best Practices](./best-practices.md)
+- [← Best Practices](../../../laravel/Modules/Activity/docs/best-practices-3.md)
 - [← Troubleshooting](./troubleshooting.md)
 - [← Project Roadmap](../../../../../../docs/project-analysis-and-roadmap.md)
-- [← Root Documentation](../../../../../../docs/index.md)
+- [← Root Documentation](../../../laravel/Modules/Activity/docs/index-3.md)
 
 ---
 

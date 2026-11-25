@@ -4,7 +4,7 @@ title: "html2pdf security — puntatore"
 type: reference
 updated: 2026-05-21
 related:
-  - "../../../Media/docs/html2pdf/SECURITY.md"
+  - "../../../Geo/docs/root-md-files/security-2.md"
 ---
 
 # Html2Pdf — security

@@ -111,7 +111,7 @@ Questo documento fornisce linee guida per la gestione delle sessioni utente all'
 =======
 <<<<<<< HEAD
 - [Tema One Documentation](../../themes/one/docs/readme.md) 
-- [Indice del Modulo Utente](./INDEX.md)
+- [Indice del Modulo Utente](./index-3.md)
 - [Tema One Documentation](../../themes/one/docs/README.md) 
 >>>>>>> .merge_file_e9pmC1
 - [Indice del Modulo Utente](./index.md)
@@ -145,9 +145,9 @@ Questo documento fornisce linee guida per la gestione delle sessioni utente all'
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_e9pmC1
 - [Modello BaseUser](./baseuser.md)
-- [Implementazione delle Pagine di Autenticazione](./auth_pages_implementation.md)
-- [Gestione del Profilo](./profile_management.md)
-- [Best Practices per il Routing](./routing_best_practices.md)
+- [Implementazione delle Pagine di Autenticazione](./auth-pages-implementation-3.md)
+- [Gestione del Profilo](./profile-management-3.md)
+- [Best Practices per il Routing](./routing-best-practices-2.md)
 - [Best Practices di Sicurezza](./SECURITY_BEST_PRACTICES.md)
-- [Documentazione Volt](./volt_blade_implementation.md)
+- [Documentazione Volt](./volt-blade-implementation-4.md)
 - [Tema One Documentation](../../Themes/One/docs/README.md) 

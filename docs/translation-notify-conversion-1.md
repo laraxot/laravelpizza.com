@@ -23,9 +23,9 @@ Durante l'analisi del codice è emerso che numerosi file di traduzione nel modul
 ## Standardizzazione Implementata
 
 ### Documenti di Riferimento
-- [Regole di Naming per i File di Traduzione](../../Notify/docs/TRANSLATION_FILE_NAMING_RULES.md)
-- [Guida alla Struttura dei File di Traduzione](../../Notify/docs/TRANSLATION_FILE_STRUCTURE_GUIDE.md)
-- [Progresso della Standardizzazione](../../Notify/docs/TRANSLATION_STANDARDS_PROGRESS.md)
+- [Regole di Naming per i File di Traduzione](../laravel/Modules/Notify/docs/translation-file-naming-rules-2.md)
+- [Guida alla Struttura dei File di Traduzione](../laravel/Modules/Notify/docs/translation-file-structure-guide-2.md)
+- [Progresso della Standardizzazione](../laravel/Modules/Notify/docs/translation-standards-progress-2.md)
 
 ### Struttura Standard Richiesta
 
@@ -100,6 +100,6 @@ La corretta implementazione degli standard di traduzione garantisce:
 
 ## Collegamenti alla Documentazione
 
-- [Regole Generali per le Traduzioni](./TRANSLATION_KEYS_RULES.md)
-- [Best Practices per le Traduzioni](./TRANSLATION_KEYS_BEST_PRACTICES.md)
-- [Convenzioni di Traduzione nel Modulo Notify](../../Notify/docs/TRANSLATION_CONVENTIONS.md)
+- [Regole Generali per le Traduzioni](../laravel/Modules/Lang/docs/translation-keys-rules-3.md)
+- [Best Practices per le Traduzioni](../laravel/Modules/Lang/docs/translation-keys-best-practices-3.md)
+- [Convenzioni di Traduzione nel Modulo Notify](../laravel/Modules/Notify/docs/translation-conventions-2.md)

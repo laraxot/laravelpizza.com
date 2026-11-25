@@ -146,7 +146,7 @@ Use AskUserQuestion:
 ```bash
 mv ".planning/todos/pending/[filename]" ".planning/todos/done/"
 ```
-Update STATE.md todo count. Present problem/solution context. Begin work or ask how to proceed.
+Update state-2.md todo count. Present problem/solution context. Begin work or ask how to proceed.
 
 **Add to phase plan:**
 Note todo reference in phase planning notes. Keep in pending. Return to list or exit.
@@ -165,7 +165,7 @@ Return to list_todos step.
 <step name="update_state">
 After any action that changes todo count:
 
-Re-run `init todos` to get updated count, then update STATE.md "### Pending Todos" section if exists.
+Re-run `init todos` to get updated count, then update state-2.md "### Pending Todos" section if exists.
 </step>
 
 <step name="git_commit">
@@ -173,7 +173,7 @@ If todo was moved to done/, commit the change:
 
 ```bash
 git rm --cached .planning/todos/pending/[filename] 2>/dev/null || true
-node .github/get-shit-done/bin/gsd-tools.cjs commit "docs: start work on todo - [title]" --files .planning/todos/done/[filename] .planning/STATE.md
+node .github/get-shit-done/bin/gsd-tools.cjs commit "docs: start work on todo - [title]" --files .planning/todos/done/[filename] .planning/state-2.md
 ```
 
 Tool respects `commit_docs` config and gitignore automatically.
@@ -190,6 +190,6 @@ Confirm: "Committed: docs: start work on todo - [title]"
 - [ ] Roadmap context checked for phase match
 - [ ] Appropriate actions offered
 - [ ] Selected action executed
-- [ ] STATE.md updated if todo count changed
+- [ ] state-2.md updated if todo count changed
 - [ ] Changes committed to git (if todo moved to done/)
 </success_criteria>

@@ -36,7 +36,7 @@ Consolidated from **14** individual files.
 
 ## code-conventions
 
-*Consolidated from: `code-conventions.md`*
+*Consolidated from: `code-conventions-3.md`*
 
 title: "Code Conventions"
 type: concept
@@ -52,9 +52,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
  
@@ -62,7 +62,7 @@ related:
 
 ## code-optimization-analysis
 
-*Consolidated from: `code-optimization-analysis.md`*
+*Consolidated from: `code-optimization-analysis-2.md`*
 
 title: "user module code and documentation optimization analysis"
 type: concept
@@ -78,9 +78,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # user module code and documentation optimization analysis
@@ -113,14 +113,14 @@ docs/
 │   └── troubleshooting.md
 ├── user_management/
 │   ├── crud_operations.md
-│   ├── profile-management.md
+│   ├── profile-management-3.md
 │   ├── role_permissions.md
 │   └── team_management.md
 ├── filament_integration/
 │   ├── resources.md
 │   ├── widgets.md
 │   ├── relation_managers.md
-│   └── best_practices.md
+│   └── best-practices-3.md
 ├── integrations/
 │   ├── socialite.md
 │   ├── passport.md
@@ -132,8 +132,8 @@ docs/
 │   └── webhook_api.md
 ├── reference/
 │   ├── configuration.md
-│   ├── database_schema.md
-│   ├── commands.md
+│   ├── database-schema-2.md
+│   ├── commands-2.md
 │   └── events.md
 └── best_practices/
     ├── SECURITY.md
@@ -270,9 +270,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # user module code and documentation optimization analysis
@@ -305,14 +305,14 @@ docs/
 │   └── troubleshooting.md
 ├── user_management/
 │   ├── crud_operations.md
-│   ├── profile-management.md
+│   ├── profile-management-3.md
 │   ├── role_permissions.md
 │   └── team_management.md
 ├── filament_integration/
 │   ├── resources.md
 │   ├── widgets.md
 │   ├── relation_managers.md
-│   └── best_practices.md
+│   └── best-practices-3.md
 ├── integrations/
 │   ├── socialite.md
 │   ├── passport.md
@@ -324,8 +324,8 @@ docs/
 │   └── webhook_api.md
 ├── reference/
 │   ├── configuration.md
-│   ├── database_schema.md
-│   ├── commands.md
+│   ├── database-schema-2.md
+│   ├── commands-2.md
 │   └── events.md
 └── best_practices/
     ├── SECURITY.md
@@ -462,9 +462,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Code Quality Analysis - User Module
@@ -799,9 +799,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Code Quality Analysis - User Module
@@ -1136,9 +1136,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Code Quality Analysis - User Module
@@ -1473,9 +1473,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Code Quality Analysis - User Module
@@ -1810,9 +1810,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # 🔍 Code Quality Tools - Modulo User
@@ -2040,9 +2040,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Code Quality Analysis - User Module
@@ -2361,14 +2361,14 @@ This analysis provides a comprehensive roadmap for improving code quality in the
 
 ## code_conventions
 
-*Consolidated from: `code_conventions.md`*
+*Consolidated from: `code-conventions-3.md`*
 
 
 ---
 
 ## code_optimization_analysis
 
-*Consolidated from: `code_optimization_analysis.md`*
+*Consolidated from: `code-optimization-analysis-2.md`*
 
 
 ## comprehensive analysis
@@ -2399,14 +2399,14 @@ docs/
 │   └── troubleshooting.md
 ├── user_management/
 │   ├── crud_operations.md
-│   ├── profile_management.md
+│   ├── profile-management-3.md
 │   ├── role_permissions.md
 │   └── team_management.md
 ├── filament_integration/
 │   ├── resources.md
 │   ├── widgets.md
 │   ├── relation_managers.md
-│   └── best_practices.md
+│   └── best-practices-3.md
 ├── integrations/
 │   ├── socialite.md
 │   ├── passport.md
@@ -2418,8 +2418,8 @@ docs/
 │   └── webhook_api.md
 ├── reference/
 │   ├── configuration.md
-│   ├── database_schema.md
-│   ├── commands.md
+│   ├── database-schema-2.md
+│   ├── commands-2.md
 │   └── events.md
 └── best_practices/
     ├── SECURITY.md
@@ -2540,7 +2540,7 @@ this optimization will create a more secure, maintainable, and performant user a
 
 ## code_quality_analysis
 
-*Consolidated from: `code_quality_analysis.md`*
+*Consolidated from: `code-quality-analysis-3.md`*
 
 
 ## 🚨 Critical Issues Identified
@@ -2847,7 +2847,7 @@ public function getTableColumns(): array
 
 ## 📚 Related Documentation
 
-- [authentication_performance_optimization.md](./performance/authentication_performance_optimization.md)
+- [authentication_performance_optimization.md](./performance/authentication-performance-optimization-4.md)
 - [optimization-analysis.md](./optimization-analysis.md)
 - [phpstan-compliance.md](./phpstan-compliance.md)
 
@@ -2873,7 +2873,7 @@ related:
   - architecture.md
   - index.md
   - module.md
-  - philosophy.md
+  - ../../philosophy-2.md
   - README.md
 tags: [codebase, architecture, user, documentation]
 qmd: "user codebase architecture actions models tests documentation boundaries"
@@ -2922,7 +2922,7 @@ I conteggi sono una fotografia del repository, non obiettivi architetturali. Pri
 - [architecture](./architecture.md)
 - [index](./index.md)
 - [module](./module.md)
-- [philosophy](./philosophy.md)
+- [philosophy](../../philosophy-2.md)
 - [README](./readme.md)
 
 ---
@@ -2940,9 +2940,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/codex-error-fix.md

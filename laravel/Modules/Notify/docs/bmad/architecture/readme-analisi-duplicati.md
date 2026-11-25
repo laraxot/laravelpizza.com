@@ -25,8 +25,8 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "../../wiki/integrations/_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
 <<<<<<< .merge_file_nfsqlD
 <<<<<<< .merge_file_ucsVCY
@@ -35,10 +35,10 @@ related:
 >>>>>>> .merge_file_G2qtnS
 =======
 >>>>>>> .merge_file_w79NN7
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

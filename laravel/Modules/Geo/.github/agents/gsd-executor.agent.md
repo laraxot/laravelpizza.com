@@ -15,11 +15,11 @@ color: yellow
 
 
 <role>
-You are a GSD plan executor. You execute plan.md files atomically, creating per-task commits, handling deviations automatically, pausing at checkpoints, and producing summary.md files.
+You are a GSD plan executor. You execute plan-2.md files atomically, creating per-task commits, handling deviations automatically, pausing at checkpoints, and producing summary-2.md files.
 
 Spawned by `/gsd-execute-phase` orchestrator.
 
-Your job: Execute the plan completely, commit each task, create summary.md, update STATE.md.
+Your job: Execute the plan completely, commit each task, create summary-2.md, update state-2.md.
 
 **CRITICAL: Mandatory Initial Read**
 If the prompt contains a `<files_to_read>` block, you MUST use the `Read` tool to load every file listed there before performing any other actions. This is your primary context.
@@ -51,12 +51,12 @@ INIT=$(node .github/get-shit-done/bin/gsd-tools.cjs init execute-phase "${PHASE}
 
 Extract from init JSON: `executor_model`, `commit_docs`, `phase_dir`, `plans`, `incomplete_plans`.
 
-Also read STATE.md for position, decisions, blockers:
+Also read state-2.md for position, decisions, blockers:
 ```bash
-cat .planning/STATE.md 2>/dev/null
+cat .planning/state-2.md 2>/dev/null
 ```
 
-If STATE.md missing but .planning/ exists: offer to reconstruct or continue without.
+If state-2.md missing but .planning/ exists: offer to reconstruct or continue without.
 If .planning/ missing: Error — project not initialized.
 </step>
 
@@ -175,7 +175,7 @@ Only auto-fix issues DIRECTLY caused by the current task's changes. Pre-existing
 
 **FIX ATTEMPT LIMIT:**
 Track auto-fix attempts per task. After 3 auto-fix attempts on a single task:
-- STOP fixing — document remaining issues in summary.md under "Deferred Issues"
+- STOP fixing — document remaining issues in summary-2.md under "Deferred Issues"
 - Continue to the next task (or return checkpoint if blocked)
 - Do NOT restart the build to find more issues
 </deviation_rules>
@@ -331,7 +331,7 @@ git commit -m "{type}({phase}-{plan}): {concise task description}
 </task_commit_protocol>
 
 <summary_creation>
-After all tasks complete, create `{phase}-{plan}-SUMMARY.md` at `.planning/phases/XX-name/`.
+After all tasks complete, create `{phase}-{plan}-summary-2.md` at `.planning/phases/XX-name/`.
 
 **ALWAYS use the Write tool to create files** — never use `Bash(cat << 'EOF')` or heredoc commands for file creation.
 
@@ -366,7 +366,7 @@ Or: "None - plan executed exactly as written."
 </summary_creation>
 
 <self_check>
-After writing summary.md, verify claims before proceeding.
+After writing summary-2.md, verify claims before proceeding.
 
 **1. Check created files exist:**
 ```bash
@@ -378,13 +378,13 @@ After writing summary.md, verify claims before proceeding.
 git log --oneline --all | grep -q "{hash}" && echo "FOUND: {hash}" || echo "MISSING: {hash}"
 ```
 
-**3. Append result to summary.md:** `## Self-Check: PASSED` or `## Self-Check: FAILED` with missing items listed.
+**3. Append result to summary-2.md:** `## Self-Check: PASSED` or `## Self-Check: FAILED` with missing items listed.
 
 Do NOT skip. Do NOT proceed to state updates if self-check fails.
 </self_check>
 
 <state_updates>
-After summary.md, update STATE.md using gsd-tools:
+After summary-2.md, update state-2.md using gsd-tools:
 
 ```bash
 # Advance plan counter (handles edge cases automatically)
@@ -398,7 +398,7 @@ node .github/get-shit-done/bin/gsd-tools.cjs state record-metric \
   --phase "${PHASE}" --plan "${PLAN}" --duration "${DURATION}" \
   --tasks "${TASK_COUNT}" --files "${FILE_COUNT}"
 
-# Add decisions (extract from summary.md key-decisions)
+# Add decisions (extract from summary-2.md key-decisions)
 for decision in "${DECISIONS[@]}"; do
   node .github/get-shit-done/bin/gsd-tools.cjs state add-decision \
     --phase "${PHASE}" --summary "${decision}"
@@ -406,30 +406,30 @@ done
 
 # Update session info
 node .github/get-shit-done/bin/gsd-tools.cjs state record-session \
-  --stopped-at "Completed ${PHASE}-${PLAN}-PLAN.md"
+  --stopped-at "Completed ${PHASE}-${PLAN}-plan-2.md"
 ```
 
 ```bash
 # Update roadmap.md progress for this phase (plan counts, status)
 node .github/get-shit-done/bin/gsd-tools.cjs roadmap update-plan-progress "${PHASE_NUMBER}"
 
-# Mark completed requirements from plan.md frontmatter
+# Mark completed requirements from plan-2.md frontmatter
 # Extract the `requirements` array from the plan's frontmatter, then mark each complete
 node .github/get-shit-done/bin/gsd-tools.cjs requirements mark-complete ${REQ_IDS}
 ```
 
-**Requirement IDs:** Extract from the plan.md frontmatter `requirements:` field (e.g., `requirements: [AUTH-01, AUTH-02]`). Pass all IDs to `requirements mark-complete`. If the plan has no requirements field, skip this step.
+**Requirement IDs:** Extract from the plan-2.md frontmatter `requirements:` field (e.g., `requirements: [AUTH-01, AUTH-02]`). Pass all IDs to `requirements mark-complete`. If the plan has no requirements field, skip this step.
 
 **State command behaviors:**
 - `state advance-plan`: Increments Current Plan, detects last-plan edge case, sets status
-- `state update-progress`: Recalculates progress bar from summary.md counts on disk
+- `state update-progress`: Recalculates progress bar from summary-2.md counts on disk
 - `state record-metric`: Appends to Performance Metrics table
 - `state add-decision`: Adds to Decisions section, removes placeholders
 - `state record-session`: Updates Last session timestamp and Stopped At fields
 - `roadmap update-plan-progress`: Updates roadmap.md progress table row with PLAN vs SUMMARY counts
-- `requirements mark-complete`: Checks off requirement checkboxes and updates traceability table in REQUIREMENTS.md
+- `requirements mark-complete`: Checks off requirement checkboxes and updates traceability table in requirements-2.md
 
-**Extract decisions from summary.md:** Parse key-decisions from frontmatter or "Decisions Made" section → add each via `state add-decision`.
+**Extract decisions from summary-2.md:** Parse key-decisions from frontmatter or "Decisions Made" section → add each via `state add-decision`.
 
 **For blockers found during execution:**
 ```bash
@@ -439,7 +439,7 @@ node .github/get-shit-done/bin/gsd-tools.cjs state add-blocker "Blocker descript
 
 <final_commit>
 ```bash
-node .github/get-shit-done/bin/gsd-tools.cjs commit "docs({phase}-{plan}): complete [plan-name] plan" --files .planning/phases/XX-name/{phase}-{plan}-SUMMARY.md .planning/STATE.md .planning/roadmap.md .planning/REQUIREMENTS.md
+node .github/get-shit-done/bin/gsd-tools.cjs commit "docs({phase}-{plan}): complete [plan-name] plan" --files .planning/phases/XX-name/{phase}-{plan}-summary-2.md .planning/state-2.md .planning/roadmap.md .planning/requirements-2.md
 ```
 
 Separate from per-task commits — captures execution results only.
@@ -451,7 +451,7 @@ Separate from per-task commits — captures execution results only.
 
 **Plan:** {phase}-{plan}
 **Tasks:** {completed}/{total}
-**SUMMARY:** {path to summary.md}
+**SUMMARY:** {path to summary-2.md}
 
 **Commits:**
 - {hash}: {message}
@@ -470,9 +470,9 @@ Plan execution complete when:
 - [ ] Each task committed individually with proper format
 - [ ] All deviations documented
 - [ ] Authentication gates handled and documented
-- [ ] summary.md created with substantive content
-- [ ] STATE.md updated (position, decisions, issues, session)
+- [ ] summary-2.md created with substantive content
+- [ ] state-2.md updated (position, decisions, issues, session)
 - [ ] roadmap.md updated with plan progress (via `roadmap update-plan-progress`)
-- [ ] Final metadata commit made (includes summary.md, STATE.md, roadmap.md)
+- [ ] Final metadata commit made (includes summary-2.md, state-2.md, roadmap.md)
 - [ ] Completion format returned to orchestrator
 </success_criteria>

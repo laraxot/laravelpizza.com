@@ -19,7 +19,7 @@ Le cartelle `docs` contenevano file e sottocartelle con caratteri maiuscoli, vio
 - ✅ `php-strict-types.md` → `php-strict-types.md`
 - ✅ `testing_best_practices.md` → `testing-best-practices-uppercase.md`
 - ✅ `filament-best-practices.md` → `filament-best-practices-uppercase.md`
-- ✅ `filament/infinite-loop-getStepByName-fix.md` → `filament/infinite-loop-getstepbyname-fix.md`
+- ✅ `../laravel/Modules/Xot/docs/consolidated/filament/infinite-loop-getstepbyname-fix-2.md` → `filament/infinite-loop-getstepbyname-fix.md`
 
 ### Modulo Geo
 - ✅ `MCP_SERVER_RECOMMENDED.md` → `mcp-server-recommended-uppercase.md`
@@ -98,7 +98,7 @@ Le cartelle `docs` contenevano file e sottocartelle con caratteri maiuscoli, vio
 - ✅ `php-strict-types.md` → `php-strict-types.md`
 - ✅ `testing_best_practices.md` → `testing-best-practices-uppercase.md`
 - ✅ `filament-best-practices.md` → `filament-best-practices-uppercase.md`
-- ✅ `filament/infinite-loop-getStepByName-fix.md` → `filament/infinite-loop-getstepbyname-fix.md`
+- ✅ `../laravel/Modules/Xot/docs/consolidated/filament/infinite-loop-getstepbyname-fix-2.md` → `filament/infinite-loop-getstepbyname-fix.md`
 
 ### Modulo Geo
 - ✅ `MCP_SERVER_RECOMMENDED.md` → `mcp_server_recommended.md`

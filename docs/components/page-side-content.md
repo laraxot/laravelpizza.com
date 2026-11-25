@@ -152,7 +152,7 @@ Per i contenuti che cambiano frequentemente, è possibile disabilitare la cache:
 <x-page side="content" slug="articles" />
 ```
 
-Per una guida completa alla migrazione, consultare il documento [Migrazione da $_theme->showPageContent() a <x-page> Component](../migrations/02_theme_content_to_page_component.md).
+Per una guida completa alla migrazione, consultare il documento [Migrazione da $_theme->showPageContent() a <x-page> Component](../migrations/02-theme-content-to-page-component-2.md).
 
 ## Implementazione Interna
 
@@ -190,6 +190,6 @@ Il componente `<x-page>` con il parametro `side` rappresenta un significativo mi
 
 ## Riferimenti
 
-- [Migrazione da $_theme->showPageContent() a <x-page> Component](../migrations/02_theme_content_to_page_component.md)
+- [Migrazione da $_theme->showPageContent() a <x-page> Component](../migrations/02-theme-content-to-page-component-2.md)
 - [Componente Page Show](page-show.md)
 - [Best Practices per il Rendering delle Pagine](../best-practices/page-rendering.md)

@@ -5,6 +5,7 @@ status: accepted
 created: 2026-11-23
 updated: 2026-11-23
 module: Lang
+qmd: "0001 cambio lingua url localizzato"
 ---
 
 # ADR: cambio lingua con URL localizzato

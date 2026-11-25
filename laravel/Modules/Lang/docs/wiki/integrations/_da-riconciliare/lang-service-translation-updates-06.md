@@ -129,13 +129,13 @@ Nel campo `value`, il valore di `helper_text` era uguale alla chiave del padre (
 ## Collegamenti
 
 ### Documentazione Correlata
-- [Translation Standards](translation-standards.md)
+- [Translation Standards](translation-standards-3.md)
 - [Helper Text Rules](translation-helper-text-standards.md)
-- [Lang Service Provider](lang-service-provider.md)
+- [Lang Service Provider](lang-service-provider-2.md)
 
 ### Regole Applicate
 - [Regola Helper Text Critica](../../docs/translation-helper-text-critical-rule.md)
-- [Struttura Espansa Traduzioni](struttura-traduzioni.md)
+- [Struttura Espansa Traduzioni](struttura-traduzioni-2.md)
 - [Convenzioni Multi-Lingua](../../../docs/multi-language-conventions.md)
 
 ## Note Implementative

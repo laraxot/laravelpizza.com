@@ -120,7 +120,7 @@ $attachments = [
 ## Collegamenti Correlati
 
 - [Documentazione MailPace](https://github.com/mailpace/templates)
-- [Best Practices Email HTML](./email_html_best_practices.md)
+- [Best Practices Email HTML](../../laravel/Modules/Notify/docs/email-html-best-practices-2.md)
 - [Guida Testing](./email_testing.md)
 
 ## Supporto

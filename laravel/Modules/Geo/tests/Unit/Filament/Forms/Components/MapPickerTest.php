@@ -170,6 +170,7 @@ test('MapPicker reverseGeocode returns structured address', function (): void {
 
     Assert::assertIsArray($result);
     Assert::assertSame('Via Roma, Milano, Italia', $result['display_name']);
+    Assert::assertSame(['road' => 'Via Roma'], $result['address']);
 });
 
 test('MapPicker reverseGeocode returns null on failure', function (): void {

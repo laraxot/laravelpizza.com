@@ -121,7 +121,7 @@ laravel/Themes/Sixteen/docs/pages/segnalazioni-elenco/
 ### Project Root Documentation
 ```
 Project Root/
-├── DESIGN-CONVERSION-ROADMAP.md                ✨ NEW (executive summary)
+├── design-conversion-roadmap-2.md                ✨ NEW (executive summary)
 ├── FILES-CREATED-SESSION-007.md                ✨ NEW (this file)
 └── [existing files unchanged]
 ```
@@ -180,7 +180,7 @@ Project Root/
 
 ### Most Important Files (Must Read)
 
-1. **DESIGN-CONVERSION-ROADMAP.md** (Project Root)
+1. **design-conversion-roadmap-2.md** (Project Root)
    - Executive summary for all stakeholders
    - Phase breakdown (1-3) with timelines
    - Start here if new to the project
@@ -207,7 +207,7 @@ Project Root/
 ### Usage Recommendations
 
 **For Project Managers**:
-- Read: DESIGN-CONVERSION-ROADMAP.md
+- Read: design-conversion-roadmap-2.md
 - Reference: PRIORITY-MATRIX.json (for timeline/effort)
 
 **For Developers**:
@@ -244,7 +244,7 @@ COMPLETE-VISUAL-PARITY-REPORT.md
     ↓ (analyzed to create)
 PRIORITY-MATRIX.json
     ↓ (used for)
-DESIGN-CONVERSION-ROADMAP.md
+design-conversion-roadmap-2.md
     ↓ (communicates)
 GitHub Issues (created by script)
 ```
@@ -333,7 +333,7 @@ diff <(cat laravel/Themes/Sixteen/docs/visual-parity-data.json) <(previous.json)
 - batch-visual-assessment-parallel.mjs (reusable)
 - page-detailed-analysis.mjs (reusable)
 - PRIORITY-MATRIX.json (reference)
-- DESIGN-CONVERSION-ROADMAP.md (historical)
+- design-conversion-roadmap-2.md (historical)
 - Per-page DETAILED-ANALYSIS.md (proof of work)
 
 ### Update Regularly

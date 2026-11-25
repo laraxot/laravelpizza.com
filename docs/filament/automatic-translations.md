@@ -45,7 +45,7 @@ patient::doctor.fields.first_name.label
 
 - [Documentazione Completa sulle Traduzioni Automatiche](../../lang/docs/automatic-translations.md)
 - [Best Practices per i Componenti Filament](./component-methods-compatibility.md)
-- [Convenzioni di Traduzione](../../lang/docs/translation-conventions.md)
+- [Convenzioni di Traduzione](../../laravel/Modules/Notify/docs/translation-conventions-2.md)
 
 ## Collegamenti tra versioni di automatic-translations.md
 * [automatic-translations.md](../../../lang/docs/automatic-translations.md)

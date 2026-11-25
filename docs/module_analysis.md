@@ -325,9 +325,9 @@ $contained = SpatialQueryService::withinPolygon($polygon);
 ## Collegamenti Documentation
 
 ### Internal Links
-- `../Limesurvey/docs/MODULE_ANALYSIS.md` - Survey location analytics
-- `../Chart/docs/MODULE_ANALYSIS.md` - Geographic visualization
-- `../User/docs/MODULE_ANALYSIS.md` - User location preferences
+- `../laravel/Modules/Activity/docs/module-analysis-3.md` - Survey location analytics
+- `../laravel/Modules/Activity/docs/module-analysis-3.md` - Geographic visualization
+- `../laravel/Modules/Activity/docs/module-analysis-3.md` - User location preferences
 - `./spatial-query-guide.md` - GIS operations
 
 ### External References

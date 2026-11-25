@@ -33,7 +33,7 @@ Consolidated from **11** individual files.
 
 ## xot-base-classes-analysis-1
 
-*Consolidated from: `xot-base-classes-analysis.md`*
+*Consolidated from: `xot-base-classes-analysis-2.md`*
 
 title: "Analisi: Utilizzo delle Classi Base Xot"
 type: concept
@@ -48,19 +48,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -228,7 +228,7 @@ Questa convenzione dovrebbe essere seguita rigorosamente in tutto il progetto pe
 
 ## xot-base-classes-analysis
 
-*Consolidated from: `xot-base-classes-analysis.md`*
+*Consolidated from: `xot-base-classes-analysis-2.md`*
 
 <<<<<<< HEAD
 
@@ -397,7 +397,7 @@ Questa convenzione dovrebbe essere seguita rigorosamente in tutto il progetto pe
 
 ## xot-base-classes-checklist-1
 
-*Consolidated from: `xot-base-classes-checklist.md`*
+*Consolidated from: `xot-base-classes-checklist-2.md`*
 
 title: "Checklist: Verifica Classi Base Xot"
 type: concept
@@ -412,19 +412,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -515,7 +515,7 @@ Per correggere automaticamente i file che non seguono queste convenzioni:
 
 ## xot-base-classes-checklist
 
-*Consolidated from: `xot-base-classes-checklist.md`*
+*Consolidated from: `xot-base-classes-checklist-2.md`*
 
 <<<<<<< HEAD
 
@@ -607,7 +607,7 @@ Per correggere automaticamente i file che non seguono queste convenzioni:
 
 ## xot-base-classes-convention-1
 
-*Consolidated from: `xot-base-classes-convention.md`*
+*Consolidated from: `xot-base-classes-convention-2.md`*
 
 title: "Convenzioni per le Classi Base Xot"
 type: concept
@@ -622,19 +622,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -739,7 +739,7 @@ class SendSMSPage extends XotBasePage implements HasForms  // Estensione corrett
 
 ## xot-base-classes-convention
 
-*Consolidated from: `xot-base-classes-convention.md`*
+*Consolidated from: `xot-base-classes-convention-2.md`*
 
 <<<<<<< HEAD
 
@@ -1018,7 +1018,7 @@ Questa convenzione dovrebbe essere seguita rigorosamente in tutto il progetto pe
 
 ## xot_base_classes_analysis
 
-*Consolidated from: `xot_base_classes_analysis.md`*
+*Consolidated from: `xot-base-classes-analysis-2.md`*
 
 <<<<<<< HEAD
 
@@ -1187,7 +1187,7 @@ Questa convenzione dovrebbe essere seguita rigorosamente in tutto il progetto pe
 
 ## xot_base_classes_checklist
 
-*Consolidated from: `xot_base_classes_checklist.md`*
+*Consolidated from: `xot-base-classes-checklist-2.md`*
 
 <<<<<<< HEAD
 
@@ -1279,7 +1279,7 @@ Per correggere automaticamente i file che non seguono queste convenzioni:
 
 ## xot_base_classes_convention
 
-*Consolidated from: `xot_base_classes_convention.md`*
+*Consolidated from: `xot-base-classes-convention-2.md`*
 
 <<<<<<< HEAD
 
@@ -1400,19 +1400,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

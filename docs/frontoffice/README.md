@@ -8,7 +8,7 @@ Questa cartella contiene la documentazione relativa al frontoffice del sito.
 - `homepage.md` - Gestione della homepage
 - `homepage-content.md` - Contenuti della homepage
 - `homepage-errors.md` - Errori comuni della homepage
-- `homepage-structure.md` - Struttura della homepage
+- `homepage-structure-2.md` - Struttura della homepage
 
 ## Note
 

@@ -124,7 +124,7 @@ If you think a rule is wrong:
 - `architecture.md` — component organization and Filament patterns
 - `testing.md` — component testing strategies
 
-- `ARCHITECTURE.md` — component organization and Filament patterns
+- `architecture-2.md` — component organization and Filament patterns
 - `TESTING.md` — component testing strategies
 
 - `architecture.md` — component organization and Filament patterns

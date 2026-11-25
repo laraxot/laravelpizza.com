@@ -49,7 +49,7 @@ Consolidated from **28** individual files.
 
 ## tailwind-apply-bootstrap-italia
 
-*Consolidated from: `tailwind-apply-bootstrap-italia.md`*
+*Consolidated from: `tailwind-apply-bootstrap-italia-2.md`*
 
 title: "✅ Tailwind @apply per Bootstrap Italia - Completato"
 type: concept
@@ -63,10 +63,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -624,10 +624,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -953,7 +953,7 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 ## tailwind-best-practices
 
-*Consolidated from: `tailwind-best-practices.md`*
+*Consolidated from: `tailwind-best-practices-2.md`*
 
 <<<<<<< HEAD
 
@@ -1291,10 +1291,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -1465,7 +1465,7 @@ document.querySelectorAll('.group').forEach(card => {
 
 ## tailwind-blade-components
 
-*Consolidated from: `tailwind-blade-components.md`*
+*Consolidated from: `tailwind-blade-components-2.md`*
 
 <<<<<<< HEAD
 
@@ -1972,10 +1972,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -2234,10 +2234,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -2327,10 +2327,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -2442,7 +2442,7 @@ Tailwind CSS è un framework CSS utility-first che permette di costruire interfa
 
 ## tailwind-css-webcrunch-approfondimento
 
-*Consolidated from: `tailwind-css-webcrunch-approfondimento.md`*
+*Consolidated from: `tailwind-css-webcrunch-approfondimento-2.md`*
 
 <<<<<<< HEAD
 
@@ -2559,7 +2559,7 @@ Tailwind CSS è un framework CSS utility-first che permette di costruire interfa
 
 ## tailwind-css-webcrunch
 
-*Consolidated from: `tailwind-css-webcrunch.md`*
+*Consolidated from: `tailwind-css-webcrunch-2.md`*
 
 <<<<<<< HEAD
 
@@ -3666,10 +3666,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -4014,7 +4014,7 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 ## tailwind-implementation
 
-*Consolidated from: `tailwind-implementation.md`*
+*Consolidated from: `tailwind-implementation-2.md`*
 
 <<<<<<< HEAD
 
@@ -4963,10 +4963,10 @@ related:
   - "./00-index-1.md"
   - "./00-index-2.md"
   - "./00-index.md"
-  - "./absolute-completion-100.md"
-  - "./acronym-naming-conventions.md"
+  - "_da-riconciliare/absolute-completion-100.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
 ---
 
@@ -5066,7 +5066,7 @@ module.exports = {
 
 ## tailwind-plugin-guide
 
-*Consolidated from: `tailwind-plugin-guide.md`*
+*Consolidated from: `tailwind-plugin-guide-2.md`*
 
 <<<<<<< HEAD
 
@@ -5276,7 +5276,7 @@ module.exports = {
 
 ## tailwind_best_practices
 
-*Consolidated from: `tailwind_best_practices.md`*
+*Consolidated from: `tailwind-best-practices-2.md`*
 
 <<<<<<< HEAD
 
@@ -5601,7 +5601,7 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 ## tailwind_blade_components
 
-*Consolidated from: `tailwind_blade_components.md`*
+*Consolidated from: `tailwind-blade-components-2.md`*
 
 <<<<<<< HEAD
 
@@ -5776,7 +5776,7 @@ document.querySelectorAll('.group').forEach(card => {
 
 ## tailwind_css_webcrunch
 
-*Consolidated from: `tailwind_css_webcrunch.md`*
+*Consolidated from: `tailwind-css-webcrunch-2.md`*
 
 <<<<<<< HEAD
 
@@ -5856,7 +5856,7 @@ La collezione "Tailwind CSS" di Webcrunch raccoglie tutorial, guide pratiche e a
 
 ## tailwind_css_webcrunch_approfondimento
 
-*Consolidated from: `tailwind_css_webcrunch_approfondimento.md`*
+*Consolidated from: `tailwind-css-webcrunch-approfondimento-2.md`*
 
 <<<<<<< HEAD
 
@@ -5972,7 +5972,7 @@ Tailwind CSS è un framework CSS utility-first che permette di costruire interfa
 
 ## tailwind_implementation
 
-*Consolidated from: `tailwind_implementation.md`*
+*Consolidated from: `tailwind-implementation-2.md`*
 
 <<<<<<< HEAD
 
@@ -6316,7 +6316,7 @@ Per una lista completa di tutti i collegamenti tra i README.md, consultare il fi
 
 ## tailwind_plugin_guide
 
-*Consolidated from: `tailwind_plugin_guide.md`*
+*Consolidated from: `tailwind-plugin-guide-2.md`*
 
 <<<<<<< HEAD
 

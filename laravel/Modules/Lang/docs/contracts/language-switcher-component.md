@@ -5,6 +5,7 @@ owner: Lang
 status: accepted
 updated: 2026-11-23
 contract: Modules\\Lang\\View\\Components\\LanguageSwitcher
+qmd: "language switcher component contratto componente"
 ---
 
 # Contratto del componente language switcher

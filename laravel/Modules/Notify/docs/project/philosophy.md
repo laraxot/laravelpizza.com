@@ -156,8 +156,8 @@ issues: []
 discussions: []
 ## Riferimenti
 
-- [PROJECT.md](./project.md) - Visione e obiettivi
-- [AGENTS.md](./AGENTS.md) - Regole per agenti AI
+- [project-2.md](./project.md) - Visione e obiettivi
+- [agents-2.md](./agents-2.md) - Regole per agenti AI
 - [docs/](../docs/) - Documentazione completa
 <<<<<<< .merge_file_Bey26y
 <<<<<<< HEAD

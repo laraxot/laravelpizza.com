@@ -347,7 +347,7 @@ Each of the 18 modules has its own documentation:
 - **[Xot Module](../laravel/Modules/Xot/docs/)** - Framework base & utilities
 - **[User Module](../laravel/Modules/User/docs/product-roadmap.md)** - Auth, profiles, roles
 - **[UI Module](../laravel/Modules/UI/docs/)** - Components, themes
-- **[Geo Module](../laravel/Modules/Geo/docs/PROJECT.md)** - Geolocation, maps
+- **[Geo Module](../laravel/Modules/Geo/docs/project-2.md)** - Geolocation, maps
 - **[Lang Module](../laravel/Modules/Lang/docs/)** - Internationalization
 - **[Media Module](../laravel/Modules/Media/docs/)** - File management
 - **[Notify Module](../laravel/Modules/Notify/docs/)** - Notifications
@@ -385,7 +385,7 @@ docs/
     └── roadmaps/
         ├── ANALYSIS.md - Consolidation analysis
         ├── MANIFEST.md - Archive inventory
-        ├── MIGRATION_GUIDE.md - Old path references
+        ├── migration-guide-2.md - Old path references
         └── v*/ - Historical versions
 ```
 
@@ -412,7 +412,7 @@ laravel/Themes/Sixteen/docs/
 
 ## 📦 Archived Roadmap Files
 
-All old roadmap files have been archived to preserve history. See **[MIGRATION_GUIDE.md](./archive/roadmaps/MIGRATION_GUIDE.md)** for complete mapping.
+All old roadmap files have been archived to preserve history. See **[migration-guide-2.md](../../Geo/docs/migration-guide-2.md)** for complete mapping.
 
 **Key Archived Locations**:
 - `/docs/archive/roadmaps/legacy-master-roadmaps/` - Old MASTER_ROADMAP variants
@@ -430,8 +430,8 @@ All old roadmap files have been archived to preserve history. See **[MIGRATION_G
 | **Product Manager** | [Phase Overview](#current-phase-phase-11) |
 | **Developer** | [Module Roadmaps](#-module-specific-roadmaps) |
 | **DevOps** | [Infrastructure Guide](../docs/deployment/) |
-| **Contributor** | [Contributing Guide](../CONTRIBUTING.md) |
-| **Archivist** | [Migration Guide](./archive/roadmaps/MIGRATION_GUIDE.md) |
+| **Contributor** | [Contributing Guide](../contributing-2.md) |
+| **Archivist** | [Migration Guide](../../Geo/docs/migration-guide-2.md) |
 
 ---
 
@@ -461,7 +461,7 @@ Sep 2024          Q4 2025          Q1 2026          Q2 2026          2027+
    - 🟡 Create TIMELINE.md
 
 2. **Phase 11 Wave 3**: Cross-linking setup
-   - [ ] Create MIGRATION_GUIDE.md for old paths
+   - [ ] Create migration-guide-2.md for old paths
    - [ ] Create archive MANIFEST.md
    - [ ] Verify all internal links
 
@@ -491,7 +491,7 @@ Sep 2024          Q4 2025          Q1 2026          Q2 2026          2027+
 ## 📞 Getting Help
 
 - **Questions about phases?** → Check [roadmap.md](./roadmap.md)
-- **Can't find a document?** → See [MIGRATION_GUIDE.md](./archive/roadmaps/MIGRATION_GUIDE.md)
+- **Can't find a document?** → See [migration-guide-2.md](../../Geo/docs/migration-guide-2.md)
 - **Module specific?** → See [Module-Specific Roadmaps](#-module-specific-roadmaps)
 - **Need history?** → Check [Archive Manifest](./archive/roadmaps/MANIFEST.md)
 

@@ -17,12 +17,12 @@ Secondo le regole di organizzazione della documentazione:
 
 ## Convenzioni e Regole
 
-- [Convenzioni Namespace Filament](../../Cms/project_docs/convenzioni-namespace-filament.md) - Regole per i namespace Filament
+- [Convenzioni Namespace Filament](../../../Cms/docs/convenzioni-namespace-filament-2.md) - Regole per i namespace Filament
 - [Gestione Blocchi](../../Cms/project_docs/blocks.md) - Documentazione sui blocchi di contenuto
 
 ## Collegamento Bidirezionale
 
-Questo documento è collegato bidirezionalmente con [xot-link.md](../../Cms/project_docs/xot-link.md) nel modulo Cms.
+Questo documento è collegato bidirezionalmente con [xot-link-2.md](../../../Cms/docs/xot-link-2.md) nel modulo Cms.
 
 > Aggiorna entrambi i riferimenti se modifichi la struttura della documentazione o aggiungi nuove sezioni.
 

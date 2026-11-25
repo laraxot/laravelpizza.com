@@ -167,7 +167,7 @@ public static function getFormSchema(): array
 
 ### 1. Pacchetto TitleWithSlugInput
 
-Come documentato in [TITLE_WITH_SLUG_COMPONENT.md](./TITLE_WITH_SLUG_COMPONENT.md), il pacchetto `filament-title-with-slug` offre funzionalità simili con un'interfaccia più ricca. Tuttavia, l'approccio presentato qui può essere implementato senza dipendenze aggiuntive.
+Come documentato in [title-with-slug-component-2.md](../../laravel/Modules/Notify/docs/mail-templates/title-with-slug-component-2.md), il pacchetto `filament-title-with-slug` offre funzionalità simili con un'interfaccia più ricca. Tuttavia, l'approccio presentato qui può essere implementato senza dipendenze aggiuntive.
 
 ### 2. Reindirizzamenti Automatici
 
@@ -187,6 +187,6 @@ Per il modulo Notify di Laraxot, questa soluzione rappresenta un equilibrio otti
 
 - [Articolo Laravel News](https://laravel-news.com/generating-slugs-from-a-title-in-filament)
 - [Documentazione Filament Forms](https://filamentphp.com/docs/3.x/forms/advanced)
-- [Implementazione Modello con Slug](./MODEL_SLUG_IMPLEMENTATION.md)
-- [Componente TitleWithSlug](./TITLE_WITH_SLUG_COMPONENT.md)
-- [Miglioramenti UI/UX per Slug](./UI_UX_ENHANCEMENTS.md)
+- [Implementazione Modello con Slug](../../laravel/Modules/Notify/docs/mail-templates/model-slug-implementation-2.md)
+- [Componente TitleWithSlug](../../laravel/Modules/Notify/docs/mail-templates/title-with-slug-component-2.md)
+- [Miglioramenti UI/UX per Slug](../../laravel/Modules/Notify/docs/mail-templates/ui-ux-enhancements-2.md)

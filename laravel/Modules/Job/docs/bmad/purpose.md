@@ -8,7 +8,7 @@ qmd: "purpose bmad Job scopo code import export fallimenti scheduler perché esi
 related:
   - ../purpose.md
   - ./audits/job-audit.md
-  - ./architecture.md
+  - ../architecture-2.md
   - ./epics.md
 ---
 
@@ -43,4 +43,4 @@ Un lavoro asincrono che fallisce in silenzio è peggio di uno mai partito: chi l
 
 ## Riferimenti
 
-[Audit](./audit.md) · [Architettura](./architecture.md) · [Decision log](./decision-log.md) · [Epics](./epics.md)
+[Audit](./audit.md) · [Architettura](../architecture-2.md) · [Decision log](./decision-log.md) · [Epics](./epics.md)

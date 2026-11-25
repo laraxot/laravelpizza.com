@@ -109,7 +109,7 @@ status: draft
 ### Riferimenti
 - [Regole Globali Progetto](./README.md)
 - [Convenzioni Naming](./guides/naming-conventions.md)
-- [Best Practices DRY + KISS](./guides/best-practices.md)
+- [Best Practices DRY + KISS](../../../Activity/docs/best-practices-3.md)
 - [Best Practices DRY + KISS](../best-practices.md)
 
 ## Prossimi Passi

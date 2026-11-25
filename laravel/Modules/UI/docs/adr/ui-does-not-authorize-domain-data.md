@@ -5,11 +5,8 @@ status: proposed
 created: 2026-11-23
 updated: 2026-11-24
 decision-makers: UI module owner
-<<<<<<< .merge_file_4gDUEe
 date: 2026-11-23
 qmd: "ui does not authorize domain data"
-=======
->>>>>>> .merge_file_B6ldSk
 ---
 
 # UI è il layer condiviso e non possiede il dominio Geo

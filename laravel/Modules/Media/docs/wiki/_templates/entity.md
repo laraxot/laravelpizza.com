@@ -6,8 +6,8 @@ title: "Entity Name"
 type: entity
 sources: ["raw/articles/source-filename.md"]
 confidence: high
-created: {{date}}
-updated: {{date}}
+created: "{{date}}"
+updated: "{{date}}"
 tags: [person, organization, module]
 related: []
 ---

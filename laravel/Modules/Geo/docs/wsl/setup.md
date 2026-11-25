@@ -934,7 +934,7 @@ sudo tail -f /var/log/apache2/error.log
 - [Filament PHP Documentation](https://filamentphp.com/docs)
 - [Laravel Filament Cookbook](https://filamentphp.com/cookbook)
 - [Laravel Directory Structure](https://laravel.com/docs/12.x/structure)
-- [Riferimenti struttura cartelle il progetto](/var/www/html/<nome progetto>/docs/standards/directory_structure.md)
+- [Riferimenti struttura cartelle il progetto](/var/www/html/<nome progetto>/docs/standards/directory-structure-2.md)
 
 ### Strumenti di Sviluppo
 - [Visual Studio Code](https://code.visualstudio.com/docs)

@@ -27,4 +27,4 @@ Stub **puntatore**: disciplina e link esterni curati stanno nella wiki di proget
 - **Filament (stack attuale): v5** — non v4. Policy: [../../../../docs/wiki/memories/filament-version-policy.md](../../../../docs/wiki/memories/filament-version-policy.md) · Xot: [../../Xot/docs/filament-5-laraxot-rules.md](../../Xot/docs/filament-5-laraxot-rules.md)
 - **PHPStan modulo:** 0 errori (2026-05-21) — [phpstan-fixes.md](phpstan-fixes.md)
 
-- **PHPStan modulo:** 0 errori (2026-05-21) — [phpstan-fixes.md](PHPSTAN-FIXES.md)
+- **PHPStan modulo:** 0 errori (2026-05-21) — [phpstan-fixes.md](phpstan-fixes-2.md)

@@ -239,21 +239,21 @@ return [
 - [Mailpace Templates](https://github.com/mailpace/templates)
 <<<<<<< HEAD
 <<<<<<< .merge_file_5zZeST
-- [Email Best Practices](./EMAIL_BEST_PRACTICES.md)
+- [Email Best Practices](email-best-practices-2.md)
 - [Template Management](./template-management.md) 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< .merge_file_HdUiMQ
-- [Email Best Practices](./EMAIL_BEST_PRACTICES.md)
+- [Email Best Practices](email-best-practices-2.md)
 - [Template Management](./template-management.md) 
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [Email Best Practices](./email_best_practices.md)
+- [Email Best Practices](./email-best-practices-2.md)
 - [Template Management](../template-management.md) 
-- [Email Best Practices](./email_best_practices.md)
+- [Email Best Practices](./email-best-practices-2.md)
 - [Template Management](../template-management.md) 
 <<<<<<< HEAD
 =======
@@ -262,19 +262,19 @@ return [
 >>>>>>> .merge_file_x2xSU5
 >>>>>>> laraxot/dev
 =======
-- [Email Best Practices](./email_best_practices.md)
+- [Email Best Practices](./email-best-practices-2.md)
 - [Template Management](../template-management.md) 
 >>>>>>> laraxot/dev
 =======
 =======
 <<<<<<< .merge_file_HdUiMQ
-- [Email Best Practices](./EMAIL_BEST_PRACTICES.md)
+- [Email Best Practices](email-best-practices-2.md)
 - [Template Management](./template-management.md) 
 =======
 >>>>>>> laraxot/dev
-- [Email Best Practices](./email_best_practices.md)
+- [Email Best Practices](./email-best-practices-2.md)
 - [Template Management](../template-management.md) 
-- [Email Best Practices](./email_best_practices.md)
+- [Email Best Practices](./email-best-practices-2.md)
 - [Template Management](../template-management.md) 
 <<<<<<< HEAD
 =======

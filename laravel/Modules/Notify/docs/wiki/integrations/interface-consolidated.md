@@ -64,7 +64,7 @@ Consolidated from **13** individual files.
 
 ## interface-naming-convention-1
 
-*Consolidated from: `interface-naming-convention.md`*
+*Consolidated from: `interface-naming-convention-2.md`*
 *Consolidated from: `interface-naming-convention-deprecated.md`*
 
 <<<<<<< HEAD
@@ -82,14 +82,14 @@ This file is deprecated.
 
 Use:
 
-- [interface-naming-convention](./interface-naming-convention.md)
+- [interface-naming-convention](../../interface-naming-convention-2.md)
 - [interface-naming-convention](../../interface-naming-convention.md)
 
 ---
 
 ## interface-naming-convention-2
 
-*Consolidated from: `interface-naming-convention.md`*
+*Consolidated from: `interface-naming-convention-2.md`*
 
 title: "Convenzione di Naming per le Interfacce"
 type: concept
@@ -104,19 +104,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -196,7 +196,7 @@ grep -r "interface.*Contract" --include="*.php" /var/www/html/_bases/<nome repos
 
 ## interface-naming-convention
 
-*Consolidated from: `interface-naming-convention.md`*
+*Consolidated from: `interface-naming-convention-2.md`*
 
 <<<<<<< HEAD
 
@@ -421,7 +421,7 @@ grep -r "interface.*Contract" --include="*.php" Modules
 
 ## interface-structure-clarification-1
 
-*Consolidated from: `interface-structure-clarification.md`*
+*Consolidated from: `interface-structure-clarification-2.md`*
 
 <<<<<<< HEAD
 
@@ -465,10 +465,10 @@ final class SendNetfunSMSAction implements SmsActionContract
 
 Si noti che esiste una discrepanza nella documentazione del progetto:
 
-1. **PATH_AND_INTERFACE_RULES.md** indica che le interfacce dovrebbero essere nella directory principale `Contracts` e non in sottodirectory.
-2. **SMS_ACTIONS.md** indica che le interfacce SMS sono definite in `app/Contracts/SMS/`.
+1. **path-and-interface-rules-2.md** indica che le interfacce dovrebbero essere nella directory principale `Contracts` e non in sottodirectory.
+2. **sms-actions-2.md** indica che le interfacce SMS sono definite in `app/Contracts/SMS/`.
 
-**La struttura corretta e funzionante è quella indicata in SMS_ACTIONS.md**, con le interfacce SMS posizionate nella sottodirectory `Contracts/SMS/`.
+**La struttura corretta e funzionante è quella indicata in sms-actions-2.md**, con le interfacce SMS posizionate nella sottodirectory `Contracts/SMS/`.
 
 ## Convenzioni di Naming
 
@@ -493,7 +493,7 @@ if (!($instance instanceof SmsActionContract)) {
 
 ## interface-structure-clarification-2
 
-*Consolidated from: `interface-structure-clarification.md`*
+*Consolidated from: `interface-structure-clarification-2.md`*
 
 title: "Chiarimento sulla Struttura delle Interfacce"
 type: concept
@@ -508,19 +508,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -560,10 +560,10 @@ final class SendNetfunSMSAction implements SmsActionContract
 
 Si noti che esiste una discrepanza nella documentazione del progetto:
 
-1. **PATH_AND_INTERFACE_RULES.md** indica che le interfacce dovrebbero essere nella directory principale `Contracts` e non in sottodirectory.
-2. **SMS_ACTIONS.md** indica che le interfacce SMS sono definite in `app/Contracts/SMS/`.
+1. **path-and-interface-rules-2.md** indica che le interfacce dovrebbero essere nella directory principale `Contracts` e non in sottodirectory.
+2. **sms-actions-2.md** indica che le interfacce SMS sono definite in `app/Contracts/SMS/`.
 
-**La struttura corretta e funzionante è quella indicata in SMS_ACTIONS.md**, con le interfacce SMS posizionate nella sottodirectory `Contracts/SMS/`.
+**La struttura corretta e funzionante è quella indicata in sms-actions-2.md**, con le interfacce SMS posizionate nella sottodirectory `Contracts/SMS/`.
 
 ## Convenzioni di Naming
 
@@ -587,7 +587,7 @@ if (!($instance instanceof SmsActionContract)) {
 
 ## interface-structure-clarification
 
-*Consolidated from: `interface-structure-clarification.md`*
+*Consolidated from: `interface-structure-clarification-2.md`*
 
 <<<<<<< HEAD
 
@@ -631,10 +631,10 @@ final class SendNetfunSMSAction implements SmsActionContract
 
 Si noti che esiste una discrepanza nella documentazione del progetto:
 
-1. **PATH_AND_INTERFACE_RULES.md** indica che le interfacce dovrebbero essere nella directory principale `Contracts` e non in sottodirectory.
-2. **SMS_ACTIONS.md** indica che le interfacce SMS sono definite in `app/Contracts/SMS/`.
+1. **path-and-interface-rules-2.md** indica che le interfacce dovrebbero essere nella directory principale `Contracts` e non in sottodirectory.
+2. **sms-actions-2.md** indica che le interfacce SMS sono definite in `app/Contracts/SMS/`.
 
-**La struttura corretta e funzionante è quella indicata in SMS_ACTIONS.md**, con le interfacce SMS posizionate nella sottodirectory `Contracts/SMS/`.
+**La struttura corretta e funzionante è quella indicata in sms-actions-2.md**, con le interfacce SMS posizionate nella sottodirectory `Contracts/SMS/`.
 
 ## Convenzioni di Naming
 
@@ -687,10 +687,10 @@ final class SendNetfunSMSAction implements SmsActionContract
 
 Si noti che esiste una discrepanza nella documentazione del progetto:
 
-1. **PATH_AND_INTERFACE_RULES.md** indica che le interfacce dovrebbero essere nella directory principale `Contracts` e non in sottodirectory.
-2. **SMS_ACTIONS.md** indica che le interfacce SMS sono definite in `app/Contracts/SMS/`.
+1. **path-and-interface-rules-2.md** indica che le interfacce dovrebbero essere nella directory principale `Contracts` e non in sottodirectory.
+2. **sms-actions-2.md** indica che le interfacce SMS sono definite in `app/Contracts/SMS/`.
 
-**La struttura corretta e funzionante è quella indicata in SMS_ACTIONS.md**, con le interfacce SMS posizionate nella sottodirectory `Contracts/SMS/`.
+**La struttura corretta e funzionante è quella indicata in sms-actions-2.md**, con le interfacce SMS posizionate nella sottodirectory `Contracts/SMS/`.
 
 ## Convenzioni di Naming
 
@@ -715,7 +715,7 @@ if (!($instance instanceof SmsActionContract)) {
 
 ## interface_naming_convention
 
-*Consolidated from: `interface_naming_convention.md`*
+*Consolidated from: `interface-naming-convention-2.md`*
 
 # Convenzione di Naming per le Interfacce
 ## Regola Fondamentale
@@ -833,7 +833,7 @@ grep -r "interface.*Contract" --include="*.php" /var/www/html/_bases/base_techpl
 
 ## interface_structure_clarification
 
-*Consolidated from: `interface_structure_clarification.md`*
+*Consolidated from: `interface-structure-clarification-2.md`*
 
 <<<<<<< HEAD
 
@@ -878,10 +878,10 @@ final class SendNetfunSMSAction implements SmsActionContract
 
 Si noti che esiste una discrepanza nella documentazione del progetto:
 
-1. **PATH_AND_INTERFACE_RULES.md** indica che le interfacce dovrebbero essere nella directory principale `Contracts` e non in sottodirectory.
-2. **SMS_ACTIONS.md** indica che le interfacce SMS sono definite in `app/Contracts/SMS/`.
+1. **path-and-interface-rules-2.md** indica che le interfacce dovrebbero essere nella directory principale `Contracts` e non in sottodirectory.
+2. **sms-actions-2.md** indica che le interfacce SMS sono definite in `app/Contracts/SMS/`.
 
-**La struttura corretta e funzionante è quella indicata in SMS_ACTIONS.md**, con le interfacce SMS posizionate nella sottodirectory `Contracts/SMS/`.
+**La struttura corretta e funzionante è quella indicata in sms-actions-2.md**, con le interfacce SMS posizionate nella sottodirectory `Contracts/SMS/`.
 
 ## Convenzioni di Naming
 
@@ -906,7 +906,7 @@ if (!($instance instanceof SmsActionContract)) {
 
 ## interfaces-implementation-guide-1
 
-*Consolidated from: `interfaces-implementation-guide.md`*
+*Consolidated from: `interfaces-implementation-guide-2.md`*
 
 <<<<<<< HEAD
 
@@ -1012,18 +1012,18 @@ Se si verifica l'errore `Interface "Modules\Notify\Contracts\SMS\SmsActionContra
 
 ## Collegamenti Correlati
 
-- [Convenzioni di Naming per le Interfacce](./INTERFACE_NAMING_CONVENTION.md)
-- [Chiarimento sulla Struttura delle Interfacce](./INTERFACE_STRUCTURE_CLARIFICATION.md)
-- [Architettura dei Contratti](./CONTRACTS_ARCHITECTURE.md)
-- [Convenzioni di Naming per le Interfacce](../../interface_naming_convention.md)
-- [Chiarimento sulla Struttura delle Interfacce](../../interface_structure_clarification.md)
-- [Architettura dei Contratti](../../contracts_architecture.md)
+- [Convenzioni di Naming per le Interfacce](../../interface-naming-convention-2.md)
+- [Chiarimento sulla Struttura delle Interfacce](../../interface-structure-clarification-2.md)
+- [Architettura dei Contratti](../../contracts-architecture-2.md)
+- [Convenzioni di Naming per le Interfacce](../../interface-naming-convention-2.md)
+- [Chiarimento sulla Struttura delle Interfacce](../../interface-structure-clarification-2.md)
+- [Architettura dei Contratti](../../contracts-architecture-2.md)
 
 ---
 
 ## interfaces-implementation-guide-2
 
-*Consolidated from: `interfaces-implementation-guide.md`*
+*Consolidated from: `interfaces-implementation-guide-2.md`*
 
 title: "Guida all'Implementazione delle Interfacce nel Modulo Notify"
 type: guide
@@ -1038,19 +1038,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -1152,18 +1152,18 @@ Se si verifica l'errore `Interface "Modules\Notify\Contracts\SMS\SmsActionContra
 
 ## Collegamenti Correlati
 
-- [Convenzioni di Naming per le Interfacce](./interface-naming-convention.md)
-- [Chiarimento sulla Struttura delle Interfacce](./interface-structure-clarification.md)
-- [Architettura dei Contratti](./contracts-architecture.md)
+- [Convenzioni di Naming per le Interfacce](../../interface-naming-convention-2.md)
+- [Chiarimento sulla Struttura delle Interfacce](../../interface-structure-clarification-2.md)
+- [Architettura dei Contratti](../../contracts-architecture-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
-- [Convenzioni di Naming per le Interfacce](./interface-naming-convention.md)
-- [Chiarimento sulla Struttura delle Interfacce](./interface-structure-clarification.md)
-- [Architettura dei Contratti](./contracts-architecture.md)
+- [Convenzioni di Naming per le Interfacce](../../interface-naming-convention-2.md)
+- [Chiarimento sulla Struttura delle Interfacce](../../interface-structure-clarification-2.md)
+- [Architettura dei Contratti](../../contracts-architecture-2.md)
 - [Convenzioni di Naming per le Interfacce](../../interface-naming-convention.md)
-- [Chiarimento sulla Struttura delle Interfacce](./interface-structure-clarification.md)
+- [Chiarimento sulla Struttura delle Interfacce](../../interface-structure-clarification-2.md)
 - [Architettura dei Contratti](../../contracts-architecture.md)
 <<<<<<< HEAD
 =======
@@ -1171,13 +1171,13 @@ Se si verifica l'errore `Interface "Modules\Notify\Contracts\SMS\SmsActionContra
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [Convenzioni di Naming per le Interfacce](../../interface-naming-convention.md)
-- [Chiarimento sulla Struttura delle Interfacce](./interface-structure-clarification.md)
+- [Chiarimento sulla Struttura delle Interfacce](../../interface-structure-clarification-2.md)
 - [Architettura dei Contratti](../../contracts-architecture.md)
 ---
 
 ## interfaces-implementation-guide
 
-*Consolidated from: `interfaces-implementation-guide.md`*
+*Consolidated from: `interfaces-implementation-guide-2.md`*
 
 <<<<<<< HEAD
 
@@ -1283,12 +1283,12 @@ Se si verifica l'errore `Interface "Modules\Notify\Contracts\SMS\SmsActionContra
 
 ## Collegamenti Correlati
 
-- [Convenzioni di Naming per le Interfacce](./INTERFACE_NAMING_CONVENTION.md)
-- [Chiarimento sulla Struttura delle Interfacce](./INTERFACE_STRUCTURE_CLARIFICATION.md)
-- [Architettura dei Contratti](./CONTRACTS_ARCHITECTURE.md)
-- [Convenzioni di Naming per le Interfacce](../../interface_naming_convention.md)
-- [Chiarimento sulla Struttura delle Interfacce](../../interface_structure_clarification.md)
-- [Architettura dei Contratti](../../contracts_architecture.md)
+- [Convenzioni di Naming per le Interfacce](../../interface-naming-convention-2.md)
+- [Chiarimento sulla Struttura delle Interfacce](../../interface-structure-clarification-2.md)
+- [Architettura dei Contratti](../../contracts-architecture-2.md)
+- [Convenzioni di Naming per le Interfacce](../../interface-naming-convention-2.md)
+- [Chiarimento sulla Struttura delle Interfacce](../../interface-structure-clarification-2.md)
+- [Architettura dei Contratti](../../contracts-architecture-2.md)
 # Guida all'Implementazione delle Interfacce nel Modulo Notify
 
 ## Struttura delle Interfacce
@@ -1384,12 +1384,12 @@ Se si verifica l'errore `Interface "Modules\Notify\Contracts\SMS\SmsActionContra
 
 ## Collegamenti Correlati
 
-- [Convenzioni di Naming per le Interfacce](./INTERFACE_NAMING_CONVENTION.md)
-- [Chiarimento sulla Struttura delle Interfacce](./INTERFACE_STRUCTURE_CLARIFICATION.md)
-- [Architettura dei Contratti](./CONTRACTS_ARCHITECTURE.md)
-- [Convenzioni di Naming per le Interfacce](../../interface_naming_convention.md)
-- [Chiarimento sulla Struttura delle Interfacce](../../interface_structure_clarification.md)
-- [Architettura dei Contratti](../../contracts_architecture.md)
+- [Convenzioni di Naming per le Interfacce](../../interface-naming-convention-2.md)
+- [Chiarimento sulla Struttura delle Interfacce](../../interface-structure-clarification-2.md)
+- [Architettura dei Contratti](../../contracts-architecture-2.md)
+- [Convenzioni di Naming per le Interfacce](../../interface-naming-convention-2.md)
+- [Chiarimento sulla Struttura delle Interfacce](../../interface-structure-clarification-2.md)
+- [Architettura dei Contratti](../../contracts-architecture-2.md)
 
 ---
 
@@ -1501,12 +1501,12 @@ Se si verifica l'errore `Interface "Modules\Notify\Contracts\SMS\SmsActionContra
 
 ## Collegamenti Correlati
 
-- [Convenzioni di Naming per le Interfacce](./interface_naming_convention.md)
-- [Chiarimento sulla Struttura delle Interfacce](./interface_structure_clarification.md)
-- [Architettura dei Contratti](./contracts_architecture.md)
-- [Convenzioni di Naming per le Interfacce](../../interface_naming_convention.md)
-- [Chiarimento sulla Struttura delle Interfacce](../../interface_structure_clarification.md)
-- [Architettura dei Contratti](../../contracts_architecture.md)
+- [Convenzioni di Naming per le Interfacce](../../interface-naming-convention-2.md)
+- [Chiarimento sulla Struttura delle Interfacce](../../interface-structure-clarification-2.md)
+- [Architettura dei Contratti](../../contracts-architecture-2.md)
+- [Convenzioni di Naming per le Interfacce](../../interface-naming-convention-2.md)
+- [Chiarimento sulla Struttura delle Interfacce](../../interface-structure-clarification-2.md)
+- [Architettura dei Contratti](../../contracts-architecture-2.md)
 # Guida all'Implementazione delle Interfacce nel Modulo Notify
 
 ## Struttura delle Interfacce
@@ -1602,18 +1602,18 @@ Se si verifica l'errore `Interface "Modules\Notify\Contracts\SMS\SmsActionContra
 
 ## Collegamenti Correlati
 
-- [Convenzioni di Naming per le Interfacce](./interface_naming_convention.md)
-- [Chiarimento sulla Struttura delle Interfacce](./interface_structure_clarification.md)
-- [Architettura dei Contratti](./contracts_architecture.md)
-- [Convenzioni di Naming per le Interfacce](../../interface_naming_convention.md)
-- [Chiarimento sulla Struttura delle Interfacce](../../interface_structure_clarification.md)
-- [Architettura dei Contratti](../../contracts_architecture.md)
+- [Convenzioni di Naming per le Interfacce](../../interface-naming-convention-2.md)
+- [Chiarimento sulla Struttura delle Interfacce](../../interface-structure-clarification-2.md)
+- [Architettura dei Contratti](../../contracts-architecture-2.md)
+- [Convenzioni di Naming per le Interfacce](../../interface-naming-convention-2.md)
+- [Chiarimento sulla Struttura delle Interfacce](../../interface-structure-clarification-2.md)
+- [Architettura dei Contratti](../../contracts-architecture-2.md)
 
 ---
 
 ## interfaces_implementation_guide
 
-*Consolidated from: `interfaces_implementation_guide.md`*
+*Consolidated from: `interfaces-implementation-guide-2.md`*
 
 <<<<<<< HEAD
 
@@ -1721,12 +1721,12 @@ Se si verifica l'errore `Interface "Modules\Notify\Contracts\SMS\SmsActionContra
 
 ## Collegamenti Correlati
 
-- [Convenzioni di Naming per le Interfacce](./INTERFACE_NAMING_CONVENTION.md)
-- [Chiarimento sulla Struttura delle Interfacce](./INTERFACE_STRUCTURE_CLARIFICATION.md)
-- [Architettura dei Contratti](./CONTRACTS_ARCHITECTURE.md)
-- [Convenzioni di Naming per le Interfacce](../../interface_naming_convention.md)
-- [Chiarimento sulla Struttura delle Interfacce](../../interface_structure_clarification.md)
-- [Architettura dei Contratti](../../contracts_architecture.md)
+- [Convenzioni di Naming per le Interfacce](../../interface-naming-convention-2.md)
+- [Chiarimento sulla Struttura delle Interfacce](../../interface-structure-clarification-2.md)
+- [Architettura dei Contratti](../../contracts-architecture-2.md)
+- [Convenzioni di Naming per le Interfacce](../../interface-naming-convention-2.md)
+- [Chiarimento sulla Struttura delle Interfacce](../../interface-structure-clarification-2.md)
+- [Architettura dei Contratti](../../contracts-architecture-2.md)
 
 ---
 

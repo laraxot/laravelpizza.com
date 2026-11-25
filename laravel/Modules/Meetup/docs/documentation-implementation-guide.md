@@ -25,7 +25,7 @@ Each module should have the following documentation files:
 - `architecture.md` - Architectural decisions and patterns
 - `models.md` - Model relationships and usage
 - `actions.md` - Action patterns and business logic
-- `security.md` - Security considerations and implementation
+- `security-2.md` - Security considerations and implementation
 
 ### Advanced Files
 - `testing.md` - Testing strategies and approaches

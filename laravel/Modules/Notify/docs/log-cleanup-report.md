@@ -161,7 +161,7 @@ time curl http://localhost:8000/api/endpoint
 
 - [Logging Best Practices](./logging-best-practices.md)
 - [Performance Optimization Guide](./performance-optimization.md)
-- [CRITICAL: Logging Performance Impact](../.windsurf/rules/logging-performance.md)
+- [CRITICAL: Logging Performance Impact](../../User/docs/logging-performance-2.md)
 
 ## Status
 

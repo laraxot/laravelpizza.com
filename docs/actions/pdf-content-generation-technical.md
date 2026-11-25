@@ -502,7 +502,7 @@ try {
 
 ### Documentazione Correlata
 - [Ptv - SendMailByRecord Complete Guide](../../../ptv/docs/pdf-email-attachments-complete-guide.md)
-- [Notify - Email Attachments](../../../notify/docs/email-sending/attachments_usage.md)
+- [Notify - Email Attachments](../../../notify/docs/email-sending/attachments-usage-2.md)
 - [Xot - View Conventions](../conventions/view-naming.md)
 
 ### File Correlati

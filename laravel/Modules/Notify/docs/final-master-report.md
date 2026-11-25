@@ -146,7 +146,7 @@ status: draft
 >>>>>>> .merge_file_hnDHuF
 >>>>>>> laraxot/dev
 6. final-summary.md
-7. WORK-COMPLETED-.md.md
+7. work-completed-4.md
 8. gap-analysis-implementation.md
 9. implementations-completed.md
 10. super-mucca-completion.md
@@ -155,7 +155,7 @@ status: draft
 12. absolute-completion-completamento-assoluto.md
 
 ### 📖 Guide Complete (5)
-13. Fixcity/docs/API.md
+13. Fixcity/docs/api-2.md
 14. Fixcity/docs/USER_GUIDE.md
 15. Fixcity/docs/ADMIN_GUIDE.md
 16. User/docs/2FA_GUIDE.md
@@ -423,7 +423,7 @@ base_ptv_fila5/
 │   ├── routes/
 │   │   └── api.php                          ✅
 │   └── docs/
-│       ├── API.md                           ✅
+│       ├── api-2.md                           ✅
 │       ├── USER_GUIDE.md                    ✅
 │       └── ADMIN_GUIDE.md                   ✅
 │

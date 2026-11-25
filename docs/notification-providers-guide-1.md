@@ -131,6 +131,6 @@ Quando si implementa un nuovo provider (es. WhatsApp, Push, ecc.):
 5. **Documentazione**: Mantenere aggiornata la documentazione con nuovi provider
 
 Per implementazioni specifiche, vedere i documenti:
-- [PROVIDER_ACTIONS_ARCHITECTURE.md](./PROVIDER_ACTIONS_ARCHITECTURE.md)
-- [SMS_ACTIONS_PATTERN.md](./SMS_ACTIONS_PATTERN.md)
-- [WHATSAPP_PROVIDER_ARCHITECTURE.md](./WHATSAPP_PROVIDER_ARCHITECTURE.md)
+- [provider-actions-architecture-2.md](../laravel/Modules/Notify/docs/provider-actions-architecture-2.md)
+- [sms-actions-pattern-2.md](../laravel/Modules/Notify/docs/sms-actions-pattern-2.md)
+- [whatsapp-provider-architecture-2.md](../laravel/Modules/Notify/docs/whatsapp-provider-architecture-2.md)

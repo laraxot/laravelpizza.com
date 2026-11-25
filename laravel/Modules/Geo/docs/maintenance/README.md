@@ -39,7 +39,7 @@ Gestisce gli aggiornamenti con:
 - Verifica compatibilità
 
 ### 4. Git Maintenance
-Vedi [Git Scripts](../git/git_scripts.md) per:
+Vedi [Git Scripts](../git/git-scripts-2.md) per:
 - Sincronizzazione Subtrees (`sync_remote_repo.sh`)
 - Backup e Restore
 - Automazione CI/GitHub Actions

@@ -1,6 +1,4 @@
 ---
-<<<<<<< .merge_file_OXrnIQ
-<<<<<<< .merge_file_fMWnY7
 title: "SaveAttachmentsAction — contratto"
 type: contract
 owner: Media
@@ -10,30 +8,17 @@ tags: [contract, action, media, allegati]
 created: 2026-11-24
 updated: 2026-11-24
 qmd: "SaveAttachmentsAction salva allegati media library addMedia record update percorso relativo disco"
-=======
-=======
->>>>>>> .merge_file_QVTMs6
 title: "Contratto — SaveAttachmentsAction"
 type: contract
 action: "Modules\Media\Actions\SaveAttachmentsAction"
 tags: [contract, action, media, allegati]
 created: 2026-11-24
 updated: 2026-11-24
-<<<<<<< .merge_file_OXrnIQ
->>>>>>> .merge_file_kP5Jnu
-=======
->>>>>>> .merge_file_QVTMs6
 ---
 
 # SaveAttachmentsAction
 
-<<<<<<< .merge_file_OXrnIQ
-<<<<<<< .merge_file_fMWnY7
 Importa in media library gli allegati caricati su un disco temporaneo e salva sul record il percorso relativo di ciascun media.
-=======
->>>>>>> .merge_file_kP5Jnu
-=======
->>>>>>> .merge_file_QVTMs6
 Contratto di comportamento (regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`).
 Sorgente: `app/Actions/SaveAttachmentsAction.php`.
 
@@ -73,15 +58,7 @@ Sorgente: `app/Actions/SaveAttachmentsAction.php`.
 - Non valida mime ne' dimensione (lo fanno il campo Filament e la configurazione di Media).
 - Non toglie metadati Exif (vedi `StripImageMetadataAction`).
 - Non e' transazionale: niente rollback dei media gia' aggiunti se un allegato successivo fallisce.
-<<<<<<< .merge_file_OXrnIQ
-<<<<<<< .merge_file_fMWnY7
-=======
 
 Debito: `tests/Unit/Actions/SaveAttachmentsActionTest.php` oggi fallisce in 6 casi su 7 (mock di `update()` su
 un'interfaccia `HasMedia` che non lo dichiara): nessuna invariante e' coperta finche' il test non usa un modello vero.
->>>>>>> .merge_file_kP5Jnu
-=======
 
-Debito: `tests/Unit/Actions/SaveAttachmentsActionTest.php` oggi fallisce in 6 casi su 7 (mock di `update()` su
-un'interfaccia `HasMedia` che non lo dichiara): nessuna invariante e' coperta finche' il test non usa un modello vero.
->>>>>>> .merge_file_QVTMs6

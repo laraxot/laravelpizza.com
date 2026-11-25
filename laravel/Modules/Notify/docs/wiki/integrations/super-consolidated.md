@@ -49,7 +49,7 @@ Consolidated from **9** individual files.
 
 ## super-admin-setup-fix-
 
-*Consolidated from: `super-admin-setup-fix-.md`*
+*Consolidated from: `super-admin-setup-fix-2.md`*
 
 title: "super-admin-setup-fix-2025-10-15.deprecated"
 type: concept
@@ -63,19 +63,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -103,19 +103,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -493,7 +493,7 @@ Questa è la **terza implementazione** della giornata:
 
 ### Modulo User
 - [Setup Super Admin - Guida Dettagliata](../Modules/User/docs/setup-super-admin.md)
-- [Roles & Permissions](../Modules/User/docs/roles-permissions.md)
+- [Roles & Permissions](../../../../User/docs/roles-permissions-2.md)
 - [User Module README](../Modules/User/docs/README.md)
 
 ### Root Progetto
@@ -640,19 +640,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -666,7 +666,7 @@ related:
 
 ## super-mucca-completion
 
-*Consolidated from: `super-mucca-completion.md`*
+*Consolidated from: `super-mucca-completion-2.md`*
 
 title: "🐄⚡ SUPER MUCCA MODE - COMPLETAMENTO TOTALE"
 type: concept
@@ -681,19 +681,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -807,19 +807,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -970,10 +970,10 @@ touch laravel/Modules/Seo/docs/README.md
 
 1. README.md (56 occorrenze)
 2. structure.md (34 occorrenze)
-3. links.md (32 occorrenze)
+3. links-2.md (32 occorrenze)
 4. roadmap.md (31 occorrenze)
-5. best-practices.md (24 occorrenze)
-6. filament.md (22 occorrenze)
+5. best-practices-3.md (24 occorrenze)
+6. filament-3.md (22 occorrenze)
 7. phpstan-fixes.md (17 occorrenze)
 
 ---
@@ -1062,19 +1062,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -1282,7 +1282,7 @@ class LoginWidget extends XotBaseWidget
 
 1. `docs/super-mucca-docs-analysis.md` - Report analisi completa
 2. `docs/documentation-index.md` - Indice generale
-3. `docs/SUPER_MUCCA_final-summary.md` - Questo file
+3. `../../super-mucca-final-summary-2.md` - Questo file
 4. `laravel/Modules/Comment/docs/README.md` - Doc Comment module
 5. `laravel/Modules/Seo/docs/README.md` - Doc SEO module
 6. `laravel/Themes/One/docs/README.md` - Doc Theme One
@@ -1465,7 +1465,7 @@ Con questi miglioramenti, la documentazione raggiungerà **livello ECCELLENTE**.
 
 ## super-mucca-login-completed
 
-*Consolidated from: `super-mucca-login-completed.md`*
+*Consolidated from: `super-mucca-login-completed-2.md`*
 
 title: "🐄 SUPER MUCCA - LOGIN PAGE COMPLETATA!"
 type: concept
@@ -1480,19 +1480,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -1846,8 +1846,8 @@ Premi **CTRL+F5** (hard refresh) per svuotare cache browser
 3. **documentation-index.md** - Indice navigazione completa
 4. **login-timeout-issue.md** - Diagnosi problema timeout
 5. **login-page-status.md** - Status tecnico pagina
-6. **login-page-translation-fix.md** - Fix traduzioni
-7. **super-mucca-login-completed.md** - Questo file
+6. **login-page-translation-fix-2.md** - Fix traduzioni
+7. **super-mucca-login-completed-2.md** - Questo file
 
 ### Documentazione Moduli
 8. **User/docs/WIDGET_RENDERING_analysis.md** - Analisi architettura widget
@@ -2087,19 +2087,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -2279,8 +2279,8 @@ supermemory search "file upload Livewire" --tag <nome progetto>
 ### After Completion
 ```bash
 # Store completed work summary
-supermemory add --tag laraxot --file path/to/session-summary.md
-supermemory add --tag <nome progetto> --file path/to/session-summary.md
+supermemory add --tag laraxot --file ../session-summary-2.md
+supermemory add --tag <nome progetto> --file ../session-summary-2.md
 
 # Update project context if needed
 supermemory update <context-memory-id> --content "Updated architecture..."

@@ -65,15 +65,15 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 - [README modulo User](./readme.md)
 - [Convenzioni Path](./path-conventions.md)
 - [Best Practices Volt e Folio](../../Xot/docs/VOLT_FOLIO_BEST_PRACTICES.md)
-- [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error.md)
+- [Analisi dell'Errore di Implementazione](../../volt-blade-implementation-error-4.md)
 
 ## Introduzione
 
@@ -352,7 +352,7 @@ L'utilizzo di widget Filament per l'implementazione dei form  offre un approccio
 ## Collegamenti Correlati
 - [Documentazione Filament Widgets](https://filamentphp.com/docs/3.x/panels/widgets)
 - [Best Practices di Sicurezza](./SECURITY_BEST_PRACTICES.md)
-- [Gestione Sessione](./session-management.md)
+- [Gestione Sessione](../../session-management-3.md)
 - [Tema One Documentation](../../Themes/One/docs/README.md) 
 ---
 module: theme
@@ -381,9 +381,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 - [README modulo User](./readme.md)
@@ -475,7 +475,7 @@ Come correttamente indicato, per i form è preferibile utilizzare un widget Fila
 3. **Manutenibilità**: Sfrutta le funzionalità di Filament per la validazione e la gestione degli errori
 4. **Coerenza**: Mantiene uno stile coerente con il resto dell'applicazione
 
-Questo approccio sarà documentato in dettaglio nel file `VOLT_BLADE_IMPLEMENTATION.md`.
+Questo approccio sarà documentato in dettaglio nel file `volt-blade-implementation-4.md`.
 ---
 module: theme
 topic: volt_blade_implementation_error
@@ -487,29 +487,29 @@ See canonical documentation: ../../../Themes/docs/shared-components/volt-blade-i
 
 ## volt-blade-implementation-error
 
-*Consolidated from: `volt-blade-implementation-error.md`*
+*Consolidated from: `volt-blade-implementation-error-4.md`*
 
 module: theme
 topic: volt-blade-implementation-error
-canonical: ../../../Themes/docs/shared-components/volt-blade-implementation-error.md
+canonical: ../../volt-blade-implementation-error-4.md
 related:
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/volt-blade-implementation-error.md
+See canonical documentation: ../../volt-blade-implementation-error-4.md
 
 ---
 
 ## volt-blade-implementation
 
-*Consolidated from: `volt-blade-implementation.md`*
+*Consolidated from: `volt-blade-implementation-4.md`*
 
 title: "Implementazione dei Form con Widget Filament"
 type: concept
@@ -525,9 +525,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Implementazione dei Form con Widget Filament
@@ -815,7 +815,7 @@ L'utilizzo di widget Filament per l'implementazione dei form  offre un approccio
 ## Collegamenti Correlati
 - [Documentazione Filament Widgets](https://filamentphp.com/docs/3.x/panels/widgets)
 - [Best Practices di Sicurezza](./security_best_practices.md)
-- [Gestione Sessione](./session-management.md)
+- [Gestione Sessione](../../session-management-3.md)
 - [Tema One Documentation](../../themes/one/docs/README.md)
 # Implementazione dei Form con Widget Filament
 
@@ -1102,14 +1102,14 @@ L'utilizzo di widget Filament per l'implementazione dei form  offre un approccio
 ## Collegamenti Correlati
 - [Documentazione Filament Widgets](https://filamentphp.com/docs/3.x/panels/widgets)
 - [Best Practices di Sicurezza](./security_best_practices.md)
-- [Gestione Sessione](./session-management.md)
+- [Gestione Sessione](../../session-management-3.md)
 - [Tema One Documentation](../../themes/one/docs/README.md)
 
 ---
 
 ## volt-errors
 
-*Consolidated from: `volt-errors.md`*
+*Consolidated from: `volt-errors-2.md`*
 
 title: "Errori Comuni in Volt e Soluzioni"
 type: concept
@@ -1125,9 +1125,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Errori Comuni in Volt e Soluzioni
@@ -1315,14 +1315,14 @@ class LogoutPage
 
 ### Link Correlati
 - [Documentazione Volt](https://livewire.laravel.com/docs/volt)
-- [Best Practices Filament](../filament_best_practices.md)
-- [Routing Best Practices](../../routing_best_practices.md) 
+- [Best Practices Filament](../filament-best-practices-2.md)
+- [Routing Best Practices](../../routing-best-practices-2.md) 
 - [Routing Best Practices](../../routing-best-practices.md) 
 ---
 
 ## volt-folio-error
 
-*Consolidated from: `volt-folio-error.md`*
+*Consolidated from: `volt-folio-error-2.md`*
 
 title: "Errore VoltDirectiveMissingException in Folio"
 type: concept
@@ -1338,9 +1338,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Errore VoltDirectiveMissingException in Folio
@@ -1399,32 +1399,32 @@ The [@volt] directive is required when using Volt anonymous components in Folio 
 ## Collegamenti
 - [Documentazione Volt](https://livewire.laravel.com/docs/volt)
 - [Documentazione Folio](https://laravel.com/docs/folio)
-- [Best Practices Routing](./routing-best-practices.md) 
+- [Best Practices Routing](../../routing-best-practices-2.md) 
 <<<<<<< .merge_file_QRt0T0
 =======
-- [Best Practices Routing](./routing-best-practices.md) 
+- [Best Practices Routing](../../routing-best-practices-2.md) 
 >>>>>>> .merge_file_uRRoaw
 ---
 
 ## volt-folio-logout-debug
 
-*Consolidated from: `volt-folio-logout-debug.md`*
+*Consolidated from: `volt-folio-logout-debug-2.md`*
 
 module: theme
 topic: volt-folio-logout-debug
-canonical: ../../../Themes/docs/shared-components/volt-folio-logout-debug.md
+canonical: ../../volt-folio-logout-debug-2.md
 related:
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/volt-folio-logout-debug.md
+See canonical documentation: ../../volt-folio-logout-debug-2.md
 
 ---
 
@@ -1446,14 +1446,14 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
-- [Best Practices Folio](./routing-best-practices.md)
+- [Best Practices Folio](../../routing-best-practices-2.md)
 - [Best Practices Volt](./VOLT_BEST_PRACTICES.md)
-- [Gestione Sessione](./session-management.md) 
+- [Gestione Sessione](../../session-management-3.md) 
 ---
 module: theme
 topic: volt_folio_logout_error
@@ -1465,29 +1465,29 @@ See canonical documentation: ../../../Themes/docs/shared-components/volt-folio-l
 
 ## volt-folio-logout-error
 
-*Consolidated from: `volt-folio-logout-error.md`*
+*Consolidated from: `volt-folio-logout-error-2.md`*
 
 module: theme
 topic: volt-folio-logout-error
-canonical: ../../../Themes/docs/shared-components/volt-folio-logout-error.md
+canonical: ../../volt-folio-logout-error-2.md
 related:
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/volt-folio-logout-error.md
+See canonical documentation: ../../volt-folio-logout-error-2.md
 
 ---
 
 ## volt-folio-logout
 
-*Consolidated from: `volt-folio-logout.md`*
+*Consolidated from: `volt-folio-logout-3.md`*
 
 title: "Implementazione Corretta del Logout con Volt e Folio"
 type: concept
@@ -1503,9 +1503,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Implementazione Corretta del Logout con Volt e Folio
@@ -1897,9 +1897,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Debug: Perché logout.blade.php non funziona (Volt + Folio)
@@ -2069,9 +2069,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Errore VoltDirectiveMissingException in Folio
@@ -2130,73 +2130,73 @@ The [@volt] directive is required when using Volt anonymous components in Folio 
 ## Collegamenti
 - [Documentazione Volt](https://livewire.laravel.com/docs/volt)
 - [Documentazione Folio](https://laravel.com/docs/folio)
-- [Best Practices Routing](./routing-best-practices.md) 
+- [Best Practices Routing](../../routing-best-practices-2.md) 
 
 ---
 
 ## volt-logout-action
 
-*Consolidated from: `volt-logout-action.md`*
+*Consolidated from: `volt-logout-action-2.md`*
 
 module: theme
 topic: volt-logout-action
-canonical: ../../../Themes/docs/shared-components/volt-logout-action.md
+canonical: ../../volt-logout-action-2.md
 related:
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/volt-logout-action.md
+See canonical documentation: ../../volt-logout-action-2.md
 
 ---
 
 ## volt-logout
 
-*Consolidated from: `volt-logout.md`*
+*Consolidated from: `volt-logout-3.md`*
 
 module: theme
 topic: volt-logout
-canonical: ../../../Themes/docs/shared-components/volt-logout.md
+canonical: ../../volt-logout-3.md
 related:
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/volt-logout.md
+See canonical documentation: ../../volt-logout-3.md
 
 ---
 
 ## volt-missing-directive
 
-*Consolidated from: `volt-missing-directive.md`*
+*Consolidated from: `volt-missing-directive-2.md`*
 
 module: theme
 topic: volt-missing-directive
-canonical: ../../../Themes/docs/shared-components/volt-missing-directive.md
+canonical: ../../volt-missing-directive-2.md
 related:
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/volt-missing-directive.md
+See canonical documentation: ../../volt-missing-directive-2.md
 
 ---
 
@@ -2218,9 +2218,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
 # Errore VoltDirectiveMissingException
@@ -2260,14 +2260,14 @@ php artisan view:clear && php artisan route:clear
 
 ## volt_blade_implementation
 
-*Consolidated from: `volt_blade_implementation.md`*
+*Consolidated from: `volt-blade-implementation-4.md`*
 
 
 ## Collegamenti correlati
 - [README modulo User](./readme.md)
 - [Convenzioni Path](./PATH_CONVENTIONS.md)
 - [Best Practices Volt e Folio](../../Xot/docs/VOLT_FOLIO_BEST_PRACTICES.md)
-- [Analisi dell'Errore di Implementazione](./VOLT_BLADE_IMPLEMENTATION_ERROR.md)
+- [Analisi dell'Errore di Implementazione](../../volt-blade-implementation-error-4.md)
 
 ## Introduzione
 
@@ -2546,14 +2546,14 @@ L'utilizzo di widget Filament per l'implementazione dei form  offre un approccio
 ## Collegamenti Correlati
 - [Documentazione Filament Widgets](https://filamentphp.com/docs/3.x/panels/widgets)
 - [Best Practices di Sicurezza](./SECURITY_BEST_PRACTICES.md)
-- [Gestione Sessione](./SESSION_MANAGEMENT.md)
+- [Gestione Sessione](../../session-management-3.md)
 - [Tema One Documentation](../../Themes/One/docs/README.md) 
 
 ---
 
 ## volt_blade_implementation_error
 
-*Consolidated from: `volt_blade_implementation_error.md`*
+*Consolidated from: `volt-blade-implementation-error-4.md`*
 
 
 ## Collegamenti correlati
@@ -2646,13 +2646,13 @@ Come correttamente indicato, per i form è preferibile utilizzare un widget Fila
 3. **Manutenibilità**: Sfrutta le funzionalità di Filament per la validazione e la gestione degli errori
 4. **Coerenza**: Mantiene uno stile coerente con il resto dell'applicazione
 
-Questo approccio sarà documentato in dettaglio nel file `VOLT_BLADE_IMPLEMENTATION.md`.
+Questo approccio sarà documentato in dettaglio nel file `volt-blade-implementation-4.md`.
 
 ---
 
 ## volt_errors
 
-*Consolidated from: `volt_errors.md`*
+*Consolidated from: `volt-errors-2.md`*
 
 
 ## VoltDirectiveMissingException
@@ -2838,14 +2838,14 @@ class LogoutPage
 
 ### Link Correlati
 - [Documentazione Volt](https://livewire.laravel.com/docs/volt)
-- [Best Practices Filament](../filament_best_practices.md)
-- [Routing Best Practices](../../routing_best_practices.md) 
+- [Best Practices Filament](../filament-best-practices-2.md)
+- [Routing Best Practices](../../routing-best-practices-2.md) 
 
 ---
 
 ## volt_folio_error
 
-*Consolidated from: `volt_folio_error.md`*
+*Consolidated from: `volt-folio-error-2.md`*
 
 
 ## Il Problema
@@ -2902,19 +2902,19 @@ The [@volt] directive is required when using Volt anonymous components in Folio 
 ## Collegamenti
 - [Documentazione Volt](https://livewire.laravel.com/docs/volt)
 - [Documentazione Folio](https://laravel.com/docs/folio)
-- [Best Practices Routing](./ROUTING_BEST_PRACTICES.md) 
+- [Best Practices Routing](../../routing-best-practices-2.md) 
 
 ---
 
 ## volt_folio_logout
 
-*Consolidated from: `volt_folio_logout.md`*
+*Consolidated from: `volt-folio-logout-3.md`*
 
 
 ## Collegamenti correlati
 - [README modulo User](./readme.md)
 - [Convenzioni Path](./PATH_CONVENTIONS.md)
-- [Analisi Logout Blade](./LOGOUT_BLADE_ANALYSIS.md)
+- [Analisi Logout Blade](../../logout-blade-analysis-4.md)
 - [Best Practices Volt e Folio](../../Xot/docs/VOLT_FOLIO_BEST_PRACTICES.md)
 
 ## Panoramica
@@ -3098,7 +3098,7 @@ Seguire l'approccio Folio con Volt è raccomandato per la gestione del logout . 
 
 ## volt_folio_logout_debug
 
-*Consolidated from: `volt_folio_logout_debug.md`*
+*Consolidated from: `volt-folio-logout-debug-2.md`*
 
 
 ## Analisi del problema
@@ -3177,7 +3177,7 @@ Se vuoi mostrare una conferma, usa un pulsante con `wire:click="logout"` che ric
 
 ## volt_folio_logout_error
 
-*Consolidated from: `volt_folio_logout_error.md`*
+*Consolidated from: `volt-folio-logout-error-2.md`*
 
 
 ## Il Problema
@@ -3294,15 +3294,15 @@ final class LogoutAction
    - Evitare JavaScript per operazioni critiche
 
 ## Collegamenti
-- [Best Practices Folio](./ROUTING_BEST_PRACTICES.md)
+- [Best Practices Folio](../../routing-best-practices-2.md)
 - [Best Practices Volt](./VOLT_BEST_PRACTICES.md)
-- [Gestione Sessione](./SESSION_MANAGEMENT.md) 
+- [Gestione Sessione](../../session-management-3.md) 
 
 ---
 
 ## volt_logout
 
-*Consolidated from: `volt_logout.md`*
+*Consolidated from: `volt-logout-3.md`*
 
 
 ## Il Problema
@@ -3521,14 +3521,14 @@ public function test_logout_clears_session()
 ## Collegamenti
 
 - [Documentazione Volt](https://livewire.laravel.com/docs/volt)
-- [Best Practices Filament](./FILAMENT_BEST_PRACTICES.md)
-- [Routing Best Practices](./ROUTING_BEST_PRACTICES.md) 
+- [Best Practices Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Routing Best Practices](../../routing-best-practices-2.md) 
 
 ---
 
 ## volt_logout_action
 
-*Consolidated from: `volt_logout_action.md`*
+*Consolidated from: `volt-logout-action-2.md`*
 
 
 ## Contesto
@@ -3598,7 +3598,7 @@ Volt scoprirà automaticamente la rotta `logout` grazie all’Attribute.
 
 ## volt_missing_directive
 
-*Consolidated from: `volt_missing_directive.md`*
+*Consolidated from: `volt-missing-directive-2.md`*
 
 
 ## Descrizione
@@ -3640,19 +3640,19 @@ php artisan view:clear && php artisan route:clear
 
 module: theme
 topic: volts
-canonical: ../../../Themes/docs/shared-components/volt-errors.md
+canonical: ../../volt-errors-2.md
 related:
   - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../../actions-path-convention-2.md"
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/volt-errors.md
+See canonical documentation: ../../volt-errors-2.md
 
 ---
 

@@ -36,7 +36,7 @@ superseded_by: bmad-session.md
 ## Verify
 - `Profile::firstOrCreate()` → `id` UUID generato (len=36) ✅
 - PHPStan: `class.notFound` ridotti (test `User` importato)
-- DOC: `Modules/User/docs/BMAD-SECOND-BRAIN.md` creato
+- DOC: `Modules/User/docs/bmad-second-brain-2.md` creato
 
 ## Learn
 - Non estendere `Filament` diretto → `XotBase` / `LangBase`

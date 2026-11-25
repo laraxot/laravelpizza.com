@@ -116,7 +116,7 @@ Set session-07-advanced `status: 'in-progress'` (only first time).
 
 - email-auth.md - Magic link extraction
 - auth-session.md - Token persistence
-- error-handling.md - Exception handling
+- error-handling-2.md - Exception handling
 
 **GitHub Repository:** <https://github.com/bmad-code-org/bmad-method-test-architecture-enterprise/tree/main/src/testarch/knowledge>
 

@@ -63,7 +63,7 @@ modulo prima di committare, per escludere autoload cache stantio.
 ## Follow-up non in scope (annotato, non eseguito)
 
 `Modules/Job/docs/` ha ~5 varianti quasi duplicate di indice
-(`00-index.md`, `00-index.md`, `index.md`, `INDEX_GENERATED.md`,
-`index-generated.md`, `index.md`, `index_generated.md`, `rules-index.md`):
+(`00-index.md`, `00-index.md`, `index-2.md`, `index-generated-2.md`,
+`index-generated-2.md`, `index-2.md`, `index-generated-2.md`, `rules-index.md`):
 candidato per una story di consolidamento dedicata (pattern già visto in
 `docs-index-audit.story.md`, 2026-09-03).

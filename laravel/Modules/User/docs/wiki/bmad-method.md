@@ -4,14 +4,14 @@ topic: bmad-method
 canonical: ../../../../Themes/docs/shared-components/bmad-method.md
 related:
 <<<<<<< HEAD
-  - "./AGENTS.md"
+  - "./agents-2.md"
 =======
 <<<<<<< HEAD
   - "./agents.md"
 <<<<<<< .merge_file_1ha4NS
 =======
 =======
-  - "./AGENTS.md"
+  - "./agents-2.md"
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_FP0r67

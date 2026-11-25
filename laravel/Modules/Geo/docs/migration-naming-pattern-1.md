@@ -91,4 +91,4 @@ $this->tableUpdate(
 
 - [XotBaseMigration](../../../Xot/database/migrations/XotBaseMigration.php)
 - [Documentazione Laravel sulle Migrazioni](https://laravel.com/project_docs/migrations)
-- [Xot Module Documentation Standards](../../../xot/project_docs/documentation-standards.md)
+- [Xot Module Documentation Standards](../../User/docs/documentation-standards-2.md)

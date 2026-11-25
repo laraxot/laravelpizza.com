@@ -29,5 +29,5 @@ This document provides metadata for Cursor about the integration of `mcamara/lar
 
 ## Related Documentation
 
-- [Laravel Localization Complete Guide](../laravel-localization-complete.md)
-- [Translation Management Packages](../translation-management-packages.md)
+- [Laravel Localization Complete Guide](../../laravel-localization-complete-2.md)
+- [Translation Management Packages](../../translation-management-packages-2.md)

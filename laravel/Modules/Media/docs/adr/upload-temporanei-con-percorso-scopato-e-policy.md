@@ -5,6 +5,7 @@ status: accepted
 created: 2026-11-23
 updated: 2026-11-23
 module: Media
+qmd: "upload temporanei percorso scopato policy scoping"
 ---
 
 # ADR: upload temporanei con percorso scoped e policy

@@ -374,12 +374,12 @@ GSD directories:
 
 ### Master Hubs (Start Here)
 - **Architecture Diagrams**: `docs/architecture-diagrams.md` (system overview, ASCII diagrams)
-- **Module Master Index**: `docs/MODULE_DOCS_INDEX.md` (all 19 modules + relationships)
-- **Theme Master Index**: `docs/THEMES_DOCUMENTATION_INDEX.md` (Sixteen, TwentyOne + integration)
-- **Documentation Ecosystem**: `docs/DOCUMENTATION_ECOSYSTEM.md` (complete navigation map)
+- **Module Master Index**: `../docs/module-docs-index-2.md` (all 19 modules + relationships)
+- **Theme Master Index**: `../docs/themes-documentation-index-2.md` (Sixteen, TwentyOne + integration)
+- **Documentation Ecosystem**: `../docs/documentation-ecosystem-2.md` (complete navigation map)
 
 ### Framework & Standards
-- **Framework Rules**: `laravel/CLAUDE.md` (comprehensive Laraxot guidelines, 38.7 KB)
+- **Framework Rules**: `laravel/Modules/Geo/docs/root-md-files/claude.md` (comprehensive Laraxot guidelines, 38.7 KB)
 - **Code Quality**: `docs/CODE_QUALITY_STANDARDS.md` (standards & best practices)
 - **Issue Tracking**: `.github/README.md` (Design Comuni project tracking)
 
@@ -428,7 +428,7 @@ This project supports **simultaneous work by multiple AI agents**. When working:
 ## 📞 When Stuck
 
 1. Check `.github/README.md` for issue tracking guidelines
-2. Review `laravel/CLAUDE.md` for detailed framework rules
+2. Review `laravel/Modules/Geo/docs/root-md-files/claude.md` for detailed framework rules
 3. Check module-specific docs in `Modules/*/docs/`
 4. Run `./vendor/bin/phpstan analyse` to catch type issues early
 5. Check GitHub discussions for architecture decisions (ADRs)

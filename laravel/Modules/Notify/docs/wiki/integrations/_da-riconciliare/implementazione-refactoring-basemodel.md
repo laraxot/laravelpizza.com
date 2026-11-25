@@ -347,7 +347,7 @@ abstract class BaseModel extends EloquentModel
 ## 📚 DOCUMENTAZIONE AGGIORNATA
 
 ### Documenti Creati
-1. ✅ `docs/analisi-metodi-duplicati-MASTER.md` - Guida completa
+1. ✅ `../../../analisi-metodi-duplicati-master-2.md` - Guida completa
 2. ✅ `docs/analisi-metodi-duplicati-INDEX.md` - Indice navigabile
 3. ✅ `docs/implementazione-refactoring-basemodel.md` - Questo file
 
@@ -531,7 +531,7 @@ Activity, Blog, Cms, <nome progetto>, Geo, Job, Lang, Media, Notify, User
 - 4 moduli erano già ottimizzati (UI, Comment, Gdpr, Rating)
 
 📚 DOCUMENTAZIONE:
-docs/analisi-metodi-duplicati-MASTER.md
+../../../analisi-metodi-duplicati-master-2.md
 docs/implementazione-refactoring-basemodel.md
 
 🚀 PROSSIMI STEP:

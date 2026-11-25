@@ -336,7 +336,7 @@ grep -r "function.*\\\Modules\\\.*\\\Models\\\User" --include="*.php" ./
 
 ### **Documentazione Moduli**
 - [Cms Architecture](../../cms/docs/architecture-xotdata-pattern.md)
-- [User Module Traits](../../user/docs/traits_complete_guide.md)
+- [User Module Traits](../../user/docs/traits-complete-guide-3.md)
 - [Testing Strategy](../../<nome progetto>/docs/testing/real-data-testing-strategy.md)
 
 ---

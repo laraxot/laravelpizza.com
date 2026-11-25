@@ -153,6 +153,6 @@ public static function form(Form $form): Form
    - Documentare il trattamento dei dati personali
 
 ## Collegamenti
-- [Database Schema Guidelines](../database/schema.md)
+- [Database Schema Guidelines](../../laravel/Modules/Lang/docs/wiki/schema-3.md)
 - [Internationalization Guide](../i18n/guide.md)
 - [GDPR Compliance](../gdpr/compliance.md)

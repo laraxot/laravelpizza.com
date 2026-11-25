@@ -5,6 +5,7 @@ module: Media
 related:
   - ./livewire-inventory.md
   - ./livewire-widget-prd.md
+qmd: "livewire widget tech spec media"
 ---
 
 # Tech spec Media

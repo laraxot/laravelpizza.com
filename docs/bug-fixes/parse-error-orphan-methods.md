@@ -128,7 +128,7 @@ protected function orphanMethod(): array
 
 ## Collegamenti
 - [Widget Auth Best Practices](../filament/widgets/registration-widget.md)
-- [Git Conflicts Resolution](../git-conflicts-resolution-2025-01-27.md)
+- [Git Conflicts Resolution](../git-conflicts-resolution-5.md)
 - [Bug Fix Guidelines](../../../../project_docs/bug-fixing-guidelines.md)
 
 ## Status

@@ -36,5 +36,5 @@ Il modulo implementa diverse risorse Filament per la gestione delle performance:
 
 - [Convenzioni di Namespace](../xot/docs/namespace-conventions.md)
 - [Convenzioni di Naming](../xot/docs/naming-conventions.md)
-- [Guide PHPStan Livello 9](../xot/docs/phpstan-level9-guide.md)
-- [QueueableActions](../xot/docs/queueable-actions.md)
+- [Guide PHPStan Livello 9](../../laravel/Modules/Xot/docs/consolidated/phpstan/phpstan-level9-guide-2.md)
+- [QueueableActions](../../laravel/Modules/Notify/docs/queueable-actions-2.md)

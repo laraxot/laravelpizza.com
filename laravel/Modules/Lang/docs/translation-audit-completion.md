@@ -142,12 +142,12 @@ Durante l'audit delle traduzioni del progetto <nome progetto>, sono state identi
 ## Documentazione Aggiornata
 
 ### Moduli con Documentazione Aggiornata
-1. **Lang Module**: `laravel/Modules/Lang/docs/translation_errors_correction_2025.md`
+1. **Lang Module**: `laravel/Modules/Lang/docs/translation-errors-correction-3.md`
 2. **<nome progetto> Module**: `laravel/Modules/<nome progetto>/docs/translation_refactor_summary_2025.md`
 
 ### Collegamenti Bidirezionali Creati
-- [Root Docs: Translation Standards](translation_standards.md)
-- [Lang Module: Translation Best Practices](../laravel/Modules/Lang/docs/translation_best_practices.md)
+- [Root Docs: Translation Standards](translation-standards-3.md)
+- [Lang Module: Translation Best Practices](../laravel/Modules/Lang/docs/translation-best-practices-2.md)
 - [<nome progetto> Module: Translation Guidelines](../laravel/Modules/<nome progetto>/docs/translation_guidelines.md)
 
 ## Prevenzione Errori Futuri
@@ -326,12 +326,12 @@ Durante l'audit delle traduzioni del progetto <nome progetto>, sono state identi
 ## Documentazione Aggiornata
 
 ### Moduli con Documentazione Aggiornata
-1. **Lang Module**: `laravel/Modules/Lang/docs/translation_errors_correction_2025.md`
+1. **Lang Module**: `laravel/Modules/Lang/docs/translation-errors-correction-3.md`
 2. **<nome progetto> Module**: `laravel/Modules/<nome progetto>/docs/translation_refactor_summary_2025.md`
 
 ### Collegamenti Bidirezionali Creati
-- [Root Docs: Translation Standards](translation_standards.md)
-- [Lang Module: Translation Best Practices](../laravel/Modules/Lang/docs/translation_best_practices.md)
+- [Root Docs: Translation Standards](translation-standards-3.md)
+- [Lang Module: Translation Best Practices](../laravel/Modules/Lang/docs/translation-best-practices-2.md)
 - [<nome progetto> Module: Translation Guidelines](../laravel/Modules/<nome progetto>/docs/translation_guidelines.md)
 
 ## Prevenzione Errori Futuri

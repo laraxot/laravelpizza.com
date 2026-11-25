@@ -1,7 +1,7 @@
 ---
 module: theme
 topic: REDUNDANCY_ANALYSIS
-canonical: ../../../Themes/docs/shared-components/redundancy_analysis.md
+canonical: redundancy-analysis-3.md
 title: "redundancy analysis"
 type: note
 status: stub
@@ -10,4 +10,4 @@ tags: [docs, activity]
 qmd: "redundancy analysis activity"
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/redundancy_analysis.md
+See canonical documentation: redundancy-analysis-3.md

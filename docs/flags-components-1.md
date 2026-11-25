@@ -5,8 +5,8 @@
 - [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
 - [Documentazione UI](/laravel/modules/ui/docs/readme.md)
 - [Documentazione sezioni](/docs/sections.md)
-- [Header: Lingua e Utente](/laravel/themes/one/docs/sections/header_language_user_dropdown.md)
-- [Implementazione CMS](/laravel/modules/cms/docs/sections/header_language_user_dropdown.md)
+- [Header: Lingua e Utente](/laravel/themes/one/docs/sections/header-language-user-dropdown-3.md)
+- [Implementazione CMS](/laravel/modules/cms/docs/sections/header-language-user-dropdown-3.md)
 
 ## Panoramica
 

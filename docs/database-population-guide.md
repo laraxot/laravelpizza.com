@@ -326,7 +326,7 @@ php artisan tinker
 - [<nome progetto> Module Database Population](../laravel/modules/<nome progetto>/docs/database-population.md)
 - [Tenant Module Database Population](../laravel/modules/tenant/docs/database-population.md)
 - [Factory Best Practices](../laravel/modules/<nome progetto>/docs/factory-best-practices.md)
-- [Testing Guidelines](../laravel/modules/user/docs/testing.md)
+- [Testing Guidelines](../laravel/Modules/User/docs/testing-2.md)
 
 ---
 

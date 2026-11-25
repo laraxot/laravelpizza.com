@@ -279,18 +279,18 @@ Questi pattern rappresentano le soluzioni standard da adottare in tutto il modul
 1. Applicare sistematicamente questi pattern a tutto il codice del modulo Xot
 2. Estendere questi pattern ad altri moduli del progetto
 3. Aggiornare regolarmente questo documento con nuovi pattern identificati
-## Collegamenti tra versioni di PHPSTAN_PATTERN_SOLUZIONI.md
-* [PHPSTAN_PATTERN_SOLUZIONI.md](../../../Xot/project_docs/phpstan/PHPSTAN_PATTERN_SOLUZIONI.md)
-* [PHPSTAN_PATTERN_SOLUZIONI.md](../../../Xot/project_docs/PHPSTAN_PATTERN_SOLUZIONI.md)
+## Collegamenti tra versioni di phpstan-pattern-soluzioni-2.md
+* [phpstan-pattern-soluzioni-2.md](phpstan-pattern-soluzioni-2.md)
+* [phpstan-pattern-soluzioni-2.md](phpstan-pattern-soluzioni-2.md)
 
-## Collegamenti tra versioni di phpstan_pattern_soluzioni.md
+## Collegamenti tra versioni di phpstan-pattern-soluzioni-2.md
 ### Versione HEAD
 
-* [phpstan_pattern_soluzioni.md](phpstan/phpstan_pattern_soluzioni.md)
+* [phpstan-pattern-soluzioni-2.md](phpstan/phpstan-pattern-soluzioni-2.md)
 
 ### Versione Incoming
 
-* [phpstan_pattern_soluzioni.md](../phpstan_pattern_soluzioni.md)
+* [phpstan-pattern-soluzioni-2.md](../phpstan-pattern-soluzioni-2.md)
 
 ---
 
@@ -578,17 +578,17 @@ Questi pattern rappresentano le soluzioni standard da adottare in tutto il modul
 1. Applicare sistematicamente questi pattern a tutto il codice del modulo Xot
 2. Estendere questi pattern ad altri moduli del progetto
 3. Aggiornare regolarmente questo documento con nuovi pattern identificati
-## Collegamenti tra versioni di PHPSTAN_PATTERN_SOLUZIONI.md
-* [PHPSTAN_PATTERN_SOLUZIONI.md](../../../Xot/project_docs/phpstan/PHPSTAN_PATTERN_SOLUZIONI.md)
-* [PHPSTAN_PATTERN_SOLUZIONI.md](../../../Xot/project_docs/PHPSTAN_PATTERN_SOLUZIONI.md)
+## Collegamenti tra versioni di phpstan-pattern-soluzioni-2.md
+* [phpstan-pattern-soluzioni-2.md](phpstan-pattern-soluzioni-2.md)
+* [phpstan-pattern-soluzioni-2.md](phpstan-pattern-soluzioni-2.md)
 
-## Collegamenti tra versioni di phpstan_pattern_soluzioni.md
+## Collegamenti tra versioni di phpstan-pattern-soluzioni-2.md
 ### Versione HEAD
 
-* [phpstan_pattern_soluzioni.md](phpstan/phpstan_pattern_soluzioni.md)
+* [phpstan-pattern-soluzioni-2.md](phpstan/phpstan-pattern-soluzioni-2.md)
 
 ### Versione Incoming
 
-* [phpstan_pattern_soluzioni.md](../phpstan_pattern_soluzioni.md)
+* [phpstan-pattern-soluzioni-2.md](../phpstan-pattern-soluzioni-2.md)
 
 ---

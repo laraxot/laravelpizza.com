@@ -5,7 +5,6 @@
 > `npm run build` il sito vede già la build. Le istruzioni di copia qui sotto sono storiche. Regola e motivi:
 > [public-html-symlink-assets.md](/laravel/Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md).
 
-<<<<<<< .merge_file_6bzDyc
 ## PostCSS: nessun plugin (Tailwind v4 e' in `@tailwindcss/vite`)
 
 `postcss.config.js` esporta `{ plugins: {} }` di proposito. Tailwind v4 e' gia' eseguito da `@tailwindcss/vite`
@@ -23,8 +22,6 @@
 Se un giorno serve un plugin PostCSS, aggiungi la dipendenza a `package.json`, il file del plugin al repo del tema e rifai un
 `npm ci && npm run build` pulito prima di fare il commit.
 
-=======
->>>>>>> .merge_file_6TyOln
 ## Data
 [DATE]
 

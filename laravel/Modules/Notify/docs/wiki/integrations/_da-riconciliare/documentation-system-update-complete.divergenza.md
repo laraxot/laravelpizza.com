@@ -18,12 +18,12 @@ updated: 2026-11-23
 >>>>>>> .merge_file_pFg3jx
 ---
 
-# Divergenza: `DOCUMENTATION_SYSTEM_UPDATE_COMPLETE.md`
+# Divergenza: `documentation-system-update-complete-3.md`
 
-Questo file veniva da `docs/wiki/integrations/modules/notify/DOCUMENTATION_SYSTEM_UPDATE_COMPLETE.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+Questo file veniva da `docs/wiki/integrations/modules/notify/documentation-system-update-complete-3.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
 
-- versione del modulo: `laravel/Modules/Notify/docs/DOCUMENTATION_SYSTEM_UPDATE_COMPLETE.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/DOCUMENTATION_SYSTEM_UPDATE_COMPLETE.md`
+- versione del modulo: `laravel/Modules/Notify/docs/documentation-system-update-complete-2.md`
+- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/documentation-system-update-complete-3.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 

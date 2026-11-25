@@ -59,9 +59,9 @@ tipo `#[\Override]` senza parent). Non è stato necessario alcun fix di
 codice.
 
 Questo conferma quanto già documentato in
-`docs/wiki/integrations/PHPSTAN_L10.md` (verificato l'ultima volta il
+`../../wiki/integrations/phpstan-l10.md` (verificato l'ultima volta il
 2026-08-02, stato "complete", 0 errori) e in
-`docs/wiki/integrations/PHPSTAN_STATUS.md`: il modulo Lang resta pulito a
+`../../wiki/integrations/phpstan-status.md`: il modulo Lang resta pulito a
 distanza di quasi due mesi, nessuna regressione introdotta da merge/commit
 successivi.
 
@@ -89,6 +89,6 @@ al primo lancio — nessun fix da riverificare.
 Pattern riutilizzabile: quando uno swarm phpstan su un modulo produce
 `[OK] No errors` al primo lancio, conviene verificare se esiste già una
 story/doc precedente che attesta lo stesso stato (qui
-`PHPSTAN_L10.md`, 2026-08-02) prima di aprire una nuova storia da zero:
+`phpstan-l10-2.md`, 2026-08-02) prima di aprire una nuova storia da zero:
 in questo caso la nuova story serve solo a marcare la data di
 riconferma e il contesto (run di swarm), non a documentare un fix.

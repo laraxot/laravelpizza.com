@@ -39,16 +39,16 @@ Related entry points: [README.md](./README.md) (module overview), [docs/wiki/ind
 
 ## Architecture and conventions
 
-- [project-structure.md](./project-structure.md) — directory/wiki structure and conventions (canonical; see duplicate `PROJECT-STRUCTURE.md` below)
+- [project-structure.md](./project-structure.md) — directory/wiki structure and conventions (canonical; see duplicate `project-structure-2.md` below)
 - [contracts-naming.md](./contracts-naming.md)
 - [concepts/xotbase-never-extend-filament.md](./concepts/xotbase-never-extend-filament.md)
 - [services-to-adapters-conversion.md](./services-to-adapters-conversion.md)
 - [dependencies.md](./dependencies.md)
 - [dependency-intelligence.md](./dependency-intelligence.md)
-- [on-demand-pattern.md](./on-demand-pattern.md) — canonical (see duplicate `ON-DEMAND-PATTERN.md` below)
-- [performance-optimization.md](./performance-optimization.md) — canonical (see duplicate `PERFORMANCE-OPTIMIZATION.md` below)
+- [on-demand-pattern.md](./on-demand-pattern.md) — canonical (see duplicate `on-demand-pattern-2.md` below)
+- [performance-optimization.md](./performance-optimization.md) — canonical (see duplicate `performance-optimization-2.md` below)
 - [no-ai-tool-scaffold-dirs.md](./no-ai-tool-scaffold-dirs.md)
-- [PHILOSOPHY.md](./PHILOSOPHY.md) - long philosophy document (stale: cites files that do not exist); [philosophy.md](./philosophy.md) is a different, short introduction
+- [philosophy-2.md](./philosophy-2.md) - long philosophy document (stale: cites files that do not exist); [philosophy.md](./philosophy.md) is a different, short introduction
 
 ## SEO features
 
@@ -81,19 +81,19 @@ Related entry points: [README.md](./README.md) (module overview), [docs/wiki/ind
 
 ## Product, planning and roadmap
 
-- [prd.md](./prd.md) — canonical (see duplicate `PRD.md` below)
-- [product-strategy.md](./product-strategy.md) — "Seo - Product Strategy" (distinct from `product_strategy.md` below)
-- [product_strategy.md](./product_strategy.md) — "Seo Module - Product Strategy", canonical (see duplicate `PRODUCT_STRATEGY.md` below)
+- [prd.md](./prd.md) — canonical (see duplicate `prd-2.md` below)
+- [product-strategy.md](./product-strategy.md) — "Seo - Product Strategy" (distinct from `product-strategy-3.md` below)
+- [product-strategy-3.md](./product-strategy-3.md) — "Seo Module - Product Strategy", canonical (see duplicate `product-strategy-2.md` below)
 - [strategy.md](./strategy.md) — "Product Strategy Doc" (distinct third document)
 - [research.md](./research.md)
-- [user_research.md](./user_research.md) — canonical (see duplicate `USER_RESEARCH.md` below)
-- [sprint.md](./sprint.md) — "Sprint Planning Meeting" (distinct from `sprint_planning.md`)
-- [sprint_planning.md](./sprint_planning.md) — canonical (see duplicate `SPRINT_PLANNING.md` below)
+- [user-research-3.md](./user-research-3.md) — canonical (see duplicate `user-research-2.md` below)
+- [sprint.md](./sprint.md) — "Sprint Planning Meeting" (distinct from `sprint-planning-3.md`)
+- [sprint-planning-3.md](./sprint-planning-3.md) — canonical (see duplicate `sprint-planning-2.md` below)
 - [task-implementazione-base.md](./task-implementazione-base.md)
 - [launch.md](./launch.md)
-- [product_launch_plan.md](./product_launch_plan.md) — canonical (see duplicate `PRODUCT_LAUNCH_PLAN.md` below)
-- [product_roadmap.md](./product_roadmap.md) — canonical (see duplicate `PRODUCT_ROADMAP.md` below)
-- [roadmap.md](./roadmap.md) — canonical top-level roadmap (vedi il duplicato `ROADMAP.md` sotto; le copie `roadmap-2025.md`, `ROADMAP-2025.md`, `ROADMAP_2025.md` sono state fuse qui il 2026-11-19)
+- [product-launch-plan-3.md](./product-launch-plan-3.md) — canonical (see duplicate `product-launch-plan-2.md` below)
+- [product-roadmap-3.md](./product-roadmap-3.md) — canonical (see duplicate `product-roadmap-2.md` below)
+- [roadmap.md](./roadmap.md) — canonical top-level roadmap (vedi il duplicato `roadmap-2.md` sotto; le copie `roadmap-2025.md`, `ROADMAP-2025.md`, `ROADMAP_2025.md` sono state fuse qui il 2026-11-19)
 
 ### Roadmap directory (`docs/roadmap/`)
 
@@ -102,7 +102,7 @@ Related entry points: [README.md](./README.md) (module overview), [docs/wiki/ind
 - [roadmap/phases.md](./roadmap/phases.md)
 - [roadmap/quality.md](./roadmap/quality.md)
 - [roadmap/vision.md](./roadmap/vision.md)
-- [roadmap/00-index.md](./roadmap/00-index.md) — canonical (see duplicate `roadmap/00-INDEX.md` below)
+- [roadmap/00-index.md](./roadmap/00-index.md) — canonical (see duplicate `roadmap/00-index-2.md` below)
 - roadmap/00-overview.md
 - [roadmap/01-current-state.md](./roadmap/01-current-state.md)
 - roadmap/01-now.md
@@ -117,27 +117,19 @@ Related entry points: [README.md](./README.md) (module overview), [docs/wiki/ind
 ## Tooling, MCP and setup
 
 - [mcp-configuration.md](./mcp-configuration.md)
-- [qmd-setup.md](./qmd-setup.md) — canonical (see duplicate `QMD-SETUP.md` below)
-- [mcp_server_consigliati.md](./mcp_server_consigliati.md) — canonical IT variant (see duplicate `MCP_SERVER_CONSIGLIATI.md` below)
-- [mcp_server_recommended.md](./mcp_server_recommended.md) — canonical EN variant (see duplicate `MCP_SERVER_RECOMMENDED.md` below)
+- [qmd-setup.md](./qmd-setup.md) — canonical (see duplicate `qmd-setup-2.md` below)
+- [mcp-server-consigliati-3.md](./mcp-server-consigliati-3.md) — canonical IT variant (see duplicate `mcp-server-consigliati-2.md` below)
+- [mcp-server-recommended-3.md](./mcp-server-recommended-3.md) — canonical EN variant (see duplicate `mcp-server-recommended-2.md` below)
 - `root-file-policy.md` - file assente al 2026-10-08 (link rimosso; esiste solo nel tema Meetup)
 - `root-files-hygiene.md` - file assente al 2026-10-08 (link rimosso)
 - [links.md](./links.md) — raw link dump (SEO packages/tutorials)
-<<<<<<< .merge_file_RdukKM
 - [action-sentinel-main-to-module.md](action-sentinel-main-to-module.md) — canonical (see lowercase-timestamp duplicate below)
-=======
-<<<<<<< .merge_file_SWXaKn
-- [action-sentinel-main-to-module.md](action-sentinel-main-to-module.md) — canonical (see lowercase-timestamp duplicate below)
-=======
-- [action-sentinel-main-to-module.md](./action-sentinel-main-to-module.md) — sentinel del 2026-03-13T13:20:07Z (le due copie con timestamp nel nome sono state fuse qui)
->>>>>>> .merge_file_HDtJIC
->>>>>>> .merge_file_C67HNb
 
 ## Fixes, conflicts and incident reports
 
 - [conflict-resolution.md](./conflict-resolution.md)
 - [boost-skill-fix-summary.md](./boost-skill-fix-summary.md)
-- [redundancy-audit.md](./redundancy-audit.md) - audit del 2026-05-21 (ex `redundancy-audit.md`), distinct from the `redundancy_analysis.md`/`REDUNDANCY_ANALYSIS.md` stub pair (see Storico)
+- [redundancy-audit.md](./redundancy-audit.md) - audit del 2026-05-21 (ex `redundancy-audit.md`), distinct from the `redundancy-analysis-2.md`/`redundancy-analysis.md` stub pair (see Storico)
 - [wiki/troubleshooting/git-merge-conflict-inventory.md](./wiki/troubleshooting/git-merge-conflict-inventory.md) (ex `...-2026-04-28.md`)
 
 ## Wiki / second brain (`docs/wiki/`)
@@ -148,30 +140,30 @@ Related entry points: [README.md](./README.md) (module overview), [docs/wiki/ind
 - [wiki/module-purpose.md](./wiki/module-purpose.md) - module purpose (BMAD, 2026-10-06)
 - [wiki/readme.md](./wiki/readme.md) - lowercase copy of `wiki/README.md`, superseded
 - [wiki/log.md](./wiki/log.md) — append-only activity log
-- [wiki/agents.md](./wiki/agents.md) — canonical (see duplicate `wiki/AGENTS.md` below)
+- [wiki/agents.md](./wiki/agents.md) — canonical (see duplicate `wiki/agents-2.md` below)
 - [wiki/overviews/seo-module.md](./wiki/overviews/seo-module.md)
 - [wiki/concepts/composer-go-quality-gates.md](./wiki/concepts/composer-go-quality-gates.md)
 - [wiki/concepts/composer-root-minimal-nwidart.md](./wiki/concepts/composer-root-minimal-nwidart.md)
-- [wiki/concepts/index.md](./wiki/concepts/index.md) — canonical (see duplicate `wiki/concepts/INDEX.md` below)
+- [wiki/concepts/index.md](./wiki/concepts/index.md) — canonical (see duplicate `wiki/concepts/index-2.md` below)
 - [wiki/concepts/metatag-data-contract.md](./wiki/concepts/metatag-data-contract.md)
 - [wiki/concepts/no-app-support-queueable-actions.md](./wiki/concepts/no-app-support-queueable-actions.md)
 - [wiki/concepts/phpstan-compliance.md](./wiki/concepts/phpstan-compliance.md)
 - [wiki/concepts/ponytail-audit.md](./wiki/concepts/ponytail-audit.md)
 - [wiki/concepts/second-brain-local-discipline.md](./wiki/concepts/second-brain-local-discipline.md)
 - [wiki/concepts/testing.md](./wiki/concepts/testing.md)
-- [wiki/rules/index.md](./wiki/rules/index.md) — canonical (see duplicate `wiki/rules/INDEX.md` below)
+- [wiki/rules/index.md](./wiki/rules/index.md) — canonical (see duplicate `wiki/rules/index-2.md` below)
 - [wiki/rules/module-contracts-naming-placement.md](./wiki/rules/module-contracts-naming-placement.md) — "Rule: suffisso Contract e collocazione contratti modulo" (distinct from the skills/ file with the same basename)
-- [wiki/skills/index.md](./wiki/skills/index.md) — canonical (see duplicate `wiki/skills/INDEX.md` below)
+- [wiki/skills/index.md](./wiki/skills/index.md) — canonical (see duplicate `wiki/skills/index-2.md` below)
 - [wiki/skills/module-contracts-naming-placement.md](./wiki/skills/module-contracts-naming-placement.md) — "Skill: contratti modulo — Contract suffix e placement" (distinct content, same basename as the rules/ file above; not a duplicate, just a naming collision across subfolders)
-- [wiki/commands/index.md](./wiki/commands/index.md) — canonical (see duplicate `wiki/commands/INDEX.md` below)
-- [wiki/memories/index.md](./wiki/memories/index.md) — canonical (see duplicate `wiki/memories/INDEX.md` below)
+- [wiki/commands/index.md](./wiki/commands/index.md) — canonical (see duplicate `wiki/commands/index-2.md` below)
+- [wiki/memories/index.md](./wiki/memories/index.md) — canonical (see duplicate `wiki/memories/index-2.md` below)
 
 ## LLM wiki — legacy second brain (`docs/llm-wiki/`)
 
 Predates `docs/wiki/`; mostly empty catalogs today. Kept as-is, not merged.
 
 - [llm-wiki/index.md](./llm-wiki/index.md)
-- [llm-wiki/agents.md](./llm-wiki/agents.md) — canonical (see duplicate `llm-wiki/AGENTS.md` below)
+- [llm-wiki/agents.md](./llm-wiki/agents.md) — canonical (see duplicate `llm-wiki/agents-2.md` below)
 - [llm-wiki/log.md](./llm-wiki/log.md)
 - [llm-wiki/_templates/concept.md](./llm-wiki/_templates/concept.md)
 - [llm-wiki/_templates/entity.md](./llm-wiki/_templates/entity.md)
@@ -194,24 +186,10 @@ La directory `root-md-files/` non esiste piu' al 2026-10-08. Il changelog archiv
 ## BMAD, stories and decision records
 
 - [stories/docs-index-audit.story.md](./stories/docs-index-audit.story.md) - first documentation-index audit (2026-09-26)
-<<<<<<< .merge_file_RdukKM
 - [stories/phpstan-cleanup-seo.story.md](stories/phpstan-cleanup-seo.story.md) and [.dev.md](stories/phpstan-cleanup-seo.dev.md) - PHPStan cleanup
-- [stories/phpstan-Seo-fix.md](./stories/phpstan-Seo-fix.md) - earlier PHPStan fix note
+- [stories/phpstan-seo-fix.md](./stories/phpstan-seo-fix.md) - earlier PHPStan fix note
 - [stories/docs-organization-pilot.story.md](stories/docs-organization-pilot.story.md) - this reorganization pilot (frontmatter, links, superseded markers)
 - [stories/services-to-actions-seo.story.md](stories/services-to-actions-seo.story.md) - Services to Actions (removal of `MetatagService`); the docs that cite `app/Services/MetatagService.php` become stale after it
-=======
-<<<<<<< .merge_file_SWXaKn
-- [stories/phpstan-cleanup-seo.story.md](stories/phpstan-cleanup-seo.story.md) and [.dev.md](stories/phpstan-cleanup-seo.dev.md) - PHPStan cleanup
-- [stories/phpstan-Seo-fix.md](./stories/phpstan-Seo-fix.md) - earlier PHPStan fix note
-- [stories/docs-organization-pilot.story.md](stories/docs-organization-pilot.story.md) - this reorganization pilot (frontmatter, links, superseded markers)
-- [stories/services-to-actions-seo.story.md](stories/services-to-actions-seo.story.md) - Services to Actions (removal of `MetatagService`); the docs that cite `app/Services/MetatagService.php` become stale after it
-=======
-- [stories/2026-10-06-phpstan-cleanup-seo.story.md](./stories/phpstan-cleanup-seo.story.md) and [.dev.md](./stories/phpstan-cleanup-seo.dev.md) - PHPStan cleanup
-- [stories/phpstan-Seo-fix.md](./stories/phpstan-Seo-fix.md) - earlier PHPStan fix note
-- [stories/2026-10-08-docs-organization-pilot.story.md](./stories/docs-organization-pilot.story.md) - this reorganization pilot (frontmatter, links, superseded markers)
-- [stories/2026-10-08-services-to-actions-seo.story.md](./stories/services-to-actions-seo.story.md) - Services to Actions (removal of `MetatagService`); the docs that cite `app/Services/MetatagService.php` become stale after it
->>>>>>> .merge_file_HDtJIC
->>>>>>> .merge_file_C67HNb
 - [bmad/README.md](./bmad/README.md), [bmad/bmad-dossier.md](./bmad/bmad-dossier.md), [bmad/status.md](./bmad/status.md) - BMAD dossier
 - [decision-log.md](./decision-log.md) - decision log (empty template, `draft`)
 - [investigation/investigation.md](./investigation/investigation.md) - Schema.org auto-generation investigation (placeholder, `draft`)
@@ -232,39 +210,27 @@ Nothing below was deleted, renamed, or moved. From 2026-10-08 every copy listed 
 | Topic | Files | Note |
 |---|---|---|
 | Top-level index (pre-audit) | [`00-index.md`](./00-index.md), [`00-INDEX.md`](./00-INDEX.md) | Near-identical (1 link differs: `README.md` vs `readme.md`); superseded by this `index.md` (`status: superseded`), kept for history |
-| On-demand pattern | [`ON-DEMAND-PATTERN.md`](./ON-DEMAND-PATTERN.md) | Byte-identical to `on-demand-pattern.md` |
-| Performance optimization | [`PERFORMANCE-OPTIMIZATION.md`](./PERFORMANCE-OPTIMIZATION.md) | Byte-identical to `performance-optimization.md` |
-| PRD | [`PRD.md`](./PRD.md) | Byte-identical to `prd.md` |
-| Project structure | [`PROJECT-STRUCTURE.md`](./PROJECT-STRUCTURE.md) | Byte-identical to `project-structure.md` |
-| QMD setup | [`QMD-SETUP.md`](./QMD-SETUP.md) | Byte-identical to `qmd-setup.md` |
-| Product launch plan | [`PRODUCT_LAUNCH_PLAN.md`](./PRODUCT_LAUNCH_PLAN.md) | Byte-identical to `product_launch_plan.md` |
-| Product roadmap | [`PRODUCT_ROADMAP.md`](./PRODUCT_ROADMAP.md) | Byte-identical to `product_roadmap.md` |
-| Product strategy | [`PRODUCT_STRATEGY.md`](./PRODUCT_STRATEGY.md) | Byte-identical to `product_strategy.md` |
-| Sprint planning | [`SPRINT_PLANNING.md`](./SPRINT_PLANNING.md) | Byte-identical to `sprint_planning.md` |
-| User research | [`USER_RESEARCH.md`](./USER_RESEARCH.md) | Byte-identical to `user_research.md` |
-<<<<<<< .merge_file_RdukKM
-| Roadmap 2025 (top-level) | [`ROADMAP.md`](./ROADMAP.md), [`roadmap-2025.md`](./roadmap-2025.md), [`ROADMAP-2025.md`](ROADMAP_2025.md), [`ROADMAP_2025.md`](./ROADMAP_2025.md) | All near-identical to `roadmap.md` (only a trailing "Last Updated" line differs). Dal 2026-10-08 `ROADMAP-2025.md` e `ROADMAP_2025.md` sono `superseded_by: roadmap-2025.md` (identici nel corpo); `ROADMAP.md` non e' un duplicato esatto e resta `active` |
-| Roadmap sub-index | [`roadmap/00-INDEX.md`](./roadmap/00-INDEX.md) | Byte-identical to `roadmap/00-index.md` |
-| Action sentinel log | [`action-sentinel-main-to-module-20260313t132007z.md`](action-sentinel-main-to-module.md) | Byte-identical to the uppercase-`T` filename, only timestamp casing differs |
-=======
-<<<<<<< .merge_file_SWXaKn
-| Roadmap 2025 (top-level) | [`ROADMAP.md`](./ROADMAP.md), [`roadmap-2025.md`](./roadmap-2025.md), [`ROADMAP-2025.md`](ROADMAP_2025.md), [`ROADMAP_2025.md`](./ROADMAP_2025.md) | All near-identical to `roadmap.md` (only a trailing "Last Updated" line differs). Dal 2026-10-08 `ROADMAP-2025.md` e `ROADMAP_2025.md` sono `superseded_by: roadmap-2025.md` (identici nel corpo); `ROADMAP.md` non e' un duplicato esatto e resta `active` |
-| Roadmap sub-index | [`roadmap/00-INDEX.md`](./roadmap/00-INDEX.md) | Byte-identical to `roadmap/00-index.md` |
-| Action sentinel log | [`action-sentinel-main-to-module-20260313t132007z.md`](action-sentinel-main-to-module.md) | Byte-identical to the uppercase-`T` filename, only timestamp casing differs |
-=======
-| Roadmap (top-level) | [`ROADMAP.md`](./ROADMAP.md) | Quasi identico a `roadmap.md` (differisce solo la riga finale "Last Updated"), resta `active`. Le copie con l'anno nel nome (`roadmap-2025.md`, `ROADMAP-2025.md`, `ROADMAP_2025.md`) sono state fuse in `roadmap.md` il 2026-11-19 |
-| Roadmap sub-index | [`roadmap/00-INDEX.md`](./roadmap/00-INDEX.md) | Byte-identical to `roadmap/00-index.md` |
->>>>>>> .merge_file_HDtJIC
->>>>>>> .merge_file_C67HNb
-| MCP server consigliati (IT) | [`MCP_SERVER_CONSIGLIATI.md`](./MCP_SERVER_CONSIGLIATI.md) | Byte-identical to `mcp_server_consigliati.md` |
-| MCP server recommended (EN) | [`MCP_SERVER_RECOMMENDED.md`](./MCP_SERVER_RECOMMENDED.md) | Byte-identical to `mcp_server_recommended.md` |
-| Wiki agents | [`wiki/AGENTS.md`](./wiki/AGENTS.md) | Byte-identical to `wiki/agents.md` (both contain an unrendered `{{TYPE^}}` template placeholder) |
-| LLM-wiki agents | [`llm-wiki/AGENTS.md`](./llm-wiki/AGENTS.md) | Byte-identical to `llm-wiki/agents.md` |
-| Wiki commands index | [`wiki/commands/INDEX.md`](./wiki/commands/INDEX.md) | Byte-identical to `wiki/commands/index.md` |
-| Wiki concepts index | [`wiki/concepts/INDEX.md`](./wiki/concepts/INDEX.md) | Byte-identical to `wiki/concepts/index.md` |
-| Wiki memories index | [`wiki/memories/INDEX.md`](./wiki/memories/INDEX.md) | Byte-identical to `wiki/memories/index.md` |
-| Wiki rules index | [`wiki/rules/INDEX.md`](./wiki/rules/INDEX.md) | Byte-identical to `wiki/rules/index.md` |
-| Wiki skills index | [`wiki/skills/INDEX.md`](./wiki/skills/INDEX.md) | Byte-identical to `wiki/skills/index.md` |
+| On-demand pattern | [`on-demand-pattern-2.md`](./on-demand-pattern-2.md) | Byte-identical to `on-demand-pattern.md` |
+| Performance optimization | [`performance-optimization-2.md`](./performance-optimization-2.md) | Byte-identical to `performance-optimization.md` |
+| PRD | [`prd-2.md`](./prd-2.md) | Byte-identical to `prd.md` |
+| Project structure | [`project-structure-2.md`](./project-structure-2.md) | Byte-identical to `project-structure.md` |
+| QMD setup | [`qmd-setup-2.md`](./qmd-setup-2.md) | Byte-identical to `qmd-setup.md` |
+| Product launch plan | [`product-launch-plan-2.md`](./product-launch-plan-2.md) | Byte-identical to `product-launch-plan-3.md` |
+| Product roadmap | [`product-roadmap-2.md`](./product-roadmap-2.md) | Byte-identical to `product-roadmap-3.md` |
+| Product strategy | [`product-strategy-2.md`](./product-strategy-2.md) | Byte-identical to `product-strategy-3.md` |
+| Sprint planning | [`sprint-planning-2.md`](./sprint-planning-2.md) | Byte-identical to `sprint-planning-3.md` |
+| User research | [`user-research-2.md`](./user-research-2.md) | Byte-identical to `user-research-3.md` |
+| Roadmap (top-level) | [`roadmap-2.md`](./roadmap-2.md) | Quasi identico a `roadmap.md` (differisce solo la riga finale "Last Updated"), resta `active`. Le copie con l'anno nel nome (`roadmap-2025.md`, `ROADMAP-2025.md`, `ROADMAP_2025.md`) sono state fuse in `roadmap.md` il 2026-11-19 |
+| Roadmap sub-index | [`roadmap/00-index-2.md`](./roadmap/00-index-2.md) | Byte-identical to `roadmap/00-index.md` |
+| MCP server consigliati (IT) | [`mcp-server-consigliati-2.md`](./mcp-server-consigliati-2.md) | Byte-identical to `mcp-server-consigliati-3.md` |
+| MCP server recommended (EN) | [`mcp-server-recommended-2.md`](./mcp-server-recommended-2.md) | Byte-identical to `mcp-server-recommended-3.md` |
+| Wiki agents | [`wiki/agents-2.md`](wiki/agents-2.md) | Byte-identical to `wiki/agents.md` (both contain an unrendered `{{TYPE^}}` template placeholder) |
+| LLM-wiki agents | [`llm-wiki/agents-2.md`](llm-wiki/agents-2.md) | Byte-identical to `llm-wiki/agents.md` |
+| Wiki commands index | [`wiki/commands/index-2.md`](wiki/commands/index-2.md) | Byte-identical to `wiki/commands/index.md` |
+| Wiki concepts index | [`wiki/concepts/index-2.md`](wiki/concepts/index-2.md) | Byte-identical to `wiki/concepts/index.md` |
+| Wiki memories index | [`wiki/memories/index-2.md`](wiki/memories/index-2.md) | Byte-identical to `wiki/memories/index.md` |
+| Wiki rules index | [`wiki/rules/index-2.md`](wiki/rules/index-2.md) | Byte-identical to `wiki/rules/index.md` |
+| Wiki skills index | [`wiki/skills/index-2.md`](wiki/skills/index-2.md) | Byte-identical to `wiki/skills/index.md` |
 | Docs root index placeholder | [`INDEX.md`](./INDEX.md) | Thin placeholder, superseded by this `index.md` since 2026-10-08, kept for reference |
 
 ### B. Stub pointers to Themes shared docs (`module: theme` frontmatter — not Seo-specific content)
@@ -280,14 +246,14 @@ These files only contain a `canonical: ../../../Themes/docs/shared-components/..
 - [merge-conflict-files-list.md](./merge-conflict-files-list.md)
 - [merge-conflicts-list.md](./merge-conflicts-list.md) — points to a different canonical topic than the file above; not a duplicate of it
 - [metodi-duplicati-analisi.md](./metodi-duplicati-analisi.md)
-- [metodi_duplicati_analisi.md](./metodi_duplicati_analisi.md)
-- [METODI-DUPLICATI-ANALISI.md](./METODI-DUPLICATI-ANALISI.md)
-- [METODI_DUPLICATI_ANALISI.md](./METODI_DUPLICATI_ANALISI.md)
+- [metodi-duplicati-analisi-4.md](./metodi-duplicati-analisi-4.md)
+- [metodi-duplicati-analisi-2.md](./metodi-duplicati-analisi-2.md)
+- [metodi-duplicati-analisi-3.md](./metodi-duplicati-analisi-3.md)
 - [phpstan.md](./phpstan.md)
 - [product-launch-plan.md](./product-launch-plan.md)
 - [product-roadmap.md](./product-roadmap.md)
-- [redundancy_analysis.md](./redundancy_analysis.md)
-- [REDUNDANCY_ANALYSIS.md](./REDUNDANCY_ANALYSIS.md)
+- [redundancy-analysis-2.md](./redundancy-analysis-2.md)
+- [redundancy-analysis.md](./redundancy-analysis.md)
 - [roadmap/current-state.md](./roadmap/current-state.md)
 - [roadmap/goals.md](./roadmap/goals.md)
 - [roadmap/index.md](./roadmap/index.md)
@@ -311,43 +277,26 @@ These files only contain a `canonical: ../../../Themes/docs/shared-components/..
 Residue from doc-sync tooling tests. No informational content.
 
 - [sync-test-file.md](./sync-test-file.md)
-- [sync_test_file.md](./sync_test_file.md)
-- [SYNC_TEST_FILE.md](./SYNC_TEST_FILE.md)
-<<<<<<< .merge_file_RdukKM
-=======
-<<<<<<< .merge_file_SWXaKn
->>>>>>> .merge_file_C67HNb
-- test_2025_03_24.md
+- [sync-test-file-3.md](./sync-test-file-3.md)
+- [sync-test-file-2.md](./sync-test-file-2.md)
+- test-3.md
 - test_2025_03_24_bb.md
 - test-bb.md
 - test.md
-<<<<<<< .merge_file_RdukKM
-=======
-=======
 - [test.md](./test.md)
 - [test-bb.md](./test-bb.md)
->>>>>>> .merge_file_HDtJIC
->>>>>>> .merge_file_C67HNb
 - [raw/root-import/sync-test-file.md](./raw/root-import/sync-test-file.md)
 - [raw/root-import/sync-test-file-1.md](./raw/root-import/sync-test-file-1.md)
 - [raw/root-import/sync-test-file-2.md](./raw/root-import/sync-test-file-2.md)
 - [raw/root-import/sync-test-file-3.md](./raw/root-import/sync-test-file-3.md)
-<<<<<<< .merge_file_RdukKM
-=======
-<<<<<<< .merge_file_SWXaKn
->>>>>>> .merge_file_C67HNb
 - raw/root-import/test.md
 - raw/root-import/test-1.md
 - raw/root-import/test-bb.md
 - raw/root-import/test-bb-1.md
 - raw/root-import/test-2025-03-24.md
 - raw/root-import/test-2025-03-24-bb.md
-<<<<<<< .merge_file_RdukKM
-=======
-=======
 - [raw/root-import/test.md](./raw/root-import/test.md)
 - [raw/root-import/test-1.md](./raw/root-import/test-1.md)
 - [raw/root-import/test-bb.md](./raw/root-import/test-bb.md)
 - [raw/root-import/test-bb-1.md](./raw/root-import/test-bb-1.md)
->>>>>>> .merge_file_HDtJIC
->>>>>>> .merge_file_C67HNb
+

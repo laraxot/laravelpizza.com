@@ -10,12 +10,12 @@ created: 2026-08-24
 updated: 2026-08-24
 ---
 
-# Divergenza: `working_with_locales.md`
+# Divergenza: `working-with-locales-2.md`
 
-Questo file veniva da `docs/wiki/integrations/modules/lang/working_with_locales.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+Questo file veniva da `../../../working-with-locales-2.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
 
-- versione del modulo: `laravel/Modules/Lang/docs/working_with_locales.md`
-- versione recuperata: `laravel/Modules/Lang/docs/wiki/integrations/_da-riconciliare/working_with_locales.md`
+- versione del modulo: `laravel/Modules/Lang/docs/working-with-locales-2.md`
+- versione recuperata: `laravel/Modules/Lang/docs/wiki/integrations/_da-riconciliare/working-with-locales-2.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 

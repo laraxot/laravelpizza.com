@@ -137,15 +137,15 @@ Tutti i modelli attivi hanno le factory corrispondenti.
 
 ### Documentazione Correlata
 - [CMS Architecture](./cms_architecture.md)
-- [Page Management](./page_management.md)
+- [Page Management](./page-management-2.md)
 - [Menu System](./menu_system.md)
 - [SEO Optimization](./seo_optimization.md)
 
 ### Moduli Collegati
-- [SaluteOra Module](../../saluteora/docs/modelli_factory_seeder_analisi.md) - Contenuti medici
-- [User Module](../../User/docs/modelli_factory_seeder_analisi.md) - Pagine utente
-- [Lang Module](../../Lang/docs/modelli_factory_seeder_analisi.md) - Contenuti multilingua
-- [Media Module](../../Media/docs/modelli_factory_seeder_analisi.md) - Media contenuti
+- [SaluteOra Module](../../saluteora/docs/modelli-factory-seeder-analisi-2.md) - Contenuti medici
+- [User Module](../../User/docs/modelli-factory-seeder-analisi-3.md) - Pagine utente
+- [Lang Module](../../Lang/docs/modelli-factory-seeder-analisi-2.md) - Contenuti multilingua
+- [Media Module](../../Media/docs/modelli-factory-seeder-analisi-2.md) - Media contenuti
 
 *Ultimo aggiornamento: Gennaio 2025*
 *Analisi completa di 9 modelli, sistema CMS completo*

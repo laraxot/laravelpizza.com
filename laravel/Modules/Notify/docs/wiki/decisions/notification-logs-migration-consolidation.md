@@ -16,7 +16,7 @@ qmd: "NotificationLog notification_logs migration consolidation XotBaseMigration
 issues: []
 discussions: []
 related:
-  - ../migrations/notifications_table.md
+  - ../migrations/notifications-table-2.md
 ---
 
 # Consolidamento migrazioni `notification_logs`

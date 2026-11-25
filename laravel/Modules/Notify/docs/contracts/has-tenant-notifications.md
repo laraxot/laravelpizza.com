@@ -23,8 +23,14 @@ Same for `Builder<$this>` on `scopeForTenant`.
 
 ## Consumers
 
-- `Modules\Notify\Models\Notification`
-- `Modules\Notify\Models\TenantNotifiable`
+- `Modules\Notify\Models\Notification` — record di dominio Notify (UUID, canali, status)
+- `Modules\Notify\Models\TenantNotifiable` — host minimo multi-tenant (fillable `tenant_id`)
+
+I test usano dummy (`NotifyTenantDummyModel`): non bastano per PHPStan perche'
+`tests/` e' escluso dal gate. I consumer di produzione devono restare cablati.
 
 Do not combine this trait with `Notifiable` on the same class (method name collision
 on `notifications()` / `unreadNotifications()`).
+
+Vedi anche [generic-notification-traits.md](./generic-notification-traits.md) per
+rate-limit/tracking su `GenericNotification`.

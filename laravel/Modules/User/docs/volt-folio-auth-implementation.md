@@ -10,9 +10,9 @@ qmd: "volt folio auth implementation implementazione corretta"
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
-- [Convenzioni Path](./path_conventions.md)
-- [Volt Errors](./volt_errors.md)
-- [Volt Folio Logout](./volt_folio_logout.md)
+- [Convenzioni Path](./path-conventions-2.md)
+- [Volt Errors](./volt-errors-2.md)
+- [Volt Folio Logout](./volt-folio-logout-3.md)
 
 ## Introduzione
 

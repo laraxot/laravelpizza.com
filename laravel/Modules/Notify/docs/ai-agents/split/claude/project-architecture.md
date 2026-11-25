@@ -199,7 +199,7 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [CLAUDE Index](index.md) — All Laravel Boost guidelines
 - ← [Main AI Docs Index](../index.md) — Master index
-- ← [../../../../docs/CLAUDE.md](../../../../docs/../../../../docs/CLAUDE.md) — Original source
+- ← [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md) — Original source
 
 <<<<<<< HEAD
 =======

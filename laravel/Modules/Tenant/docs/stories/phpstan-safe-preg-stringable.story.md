@@ -9,10 +9,7 @@ related:
   - "../../../Xot/docs/stories/phpstan-safe-preg-stringable.story.md"
 created: 2026-11-12
 updated: 2026-11-12
-<<<<<<< .merge_file_LJolIk
 qmd: "phpstan safe preg stringable story safepregreplace"
-=======
->>>>>>> .merge_file_jKH1Cs
 ---
 
 # PHPStan: Safe\preg_replace e stringhe

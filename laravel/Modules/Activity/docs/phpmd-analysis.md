@@ -494,7 +494,7 @@ return $alternative;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-3. `docs/ARCHITECTURE.md` - Document coupling reduction strategies
+3. `architecture-3.md` - Document coupling reduction strategies
 
 ### Quality Gates:
 

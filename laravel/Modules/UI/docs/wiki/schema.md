@@ -21,7 +21,7 @@ docs/
 │   ├── index.md           # Catalogo
 │   ├── log.md             # Registro
 │   ├── schema.md          # Questo file
-│   ├── SCHEMA.md          # Questo file
+│   ├── schema-2.md          # Questo file
 
 │   ├── schema.md          # Questo file
 │   ├── schema.md          # Questo file
@@ -43,7 +43,7 @@ docs/
 
 ---
 
-## Contenuto assorbito da `SCHEMA.md`
+## Contenuto assorbito da `schema-2.md`
 
 ## Contenuto assorbito da `schema.md`
 

@@ -145,8 +145,8 @@ BRANCH="${3:-main}"  # Usa il terzo parametro se fornito, altrimenti "main"
 
 ## Collegamenti utili
 
-- [Risoluzione Manuale dei Conflitti](../conflict_resolution.md) - Principi generali per la risoluzione dei conflitti
-- [Principio DRY negli Script Bash](NO_DUPLICATE_FUNCTIONS_IN_SOURCED_SCRIPTS.md) - Linee guida per evitare la duplicazione di codice
+- [Risoluzione Manuale dei Conflitti](../conflict-resolution-2.md) - Principi generali per la risoluzione dei conflitti
+- [Principio DRY negli Script Bash](no-duplicate-functions-in-sourced-scripts-2.md) - Linee guida per evitare la duplicazione di codice
 - [Filosofia della Documentazione](../../docs/DOCUMENTATION_PHILOSOPHY.md) - Principi fondamentali di documentazione
 
 ---

@@ -63,7 +63,7 @@ Se esegui `migrate --force` in produzione:
 <<<<<<< .merge_file_TzeDVu
 <<<<<<< .merge_file_3SnNmz
 - [Forward-Only Philosophy](../claude/project-rules-summary.md)
-- [QWEN.md](qwen.md) - Sezione 7: Database SACRO
+- [qwen-2.md](qwen.md) - Sezione 7: Database SACRO
 =======
 =======
 >>>>>>> .merge_file_xNxe7s
@@ -77,7 +77,7 @@ Se esegui `migrate --force` in produzione:
 =======
 <<<<<<< .merge_file_0fOKfh
 - [Forward-Only Philosophy](../claude/project-rules-summary.md)
-- [QWEN.md](qwen.md) - Sezione 7: Database SACRO
+- [qwen-2.md](qwen.md) - Sezione 7: Database SACRO
 =======
 - [Forward-Only Philosophy](docs/claude/project-rules-summary.md)
 - [qwen.md](qwen.md) - Sezione 7: Database SACRO

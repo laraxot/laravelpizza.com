@@ -12,7 +12,7 @@ tags: [migration, xotbase, temporary-uploads, technical-debt]
 related:
   - ../../../../../../bashscripts/ai/.agents/rules/migration-xot-base-standard.md
   - ../../../../../../bashscripts/ai/.agents/rules/migration-naming-standard.md
-  - ../../MIGRATIONS.md
+  - ../../../../Lang/docs/migrations-3.md
 ---
 
 # TemporaryUpload: consolidated into a single create migration
@@ -60,7 +60,7 @@ column additions must live inside the model's single `create_<table>_table.php`)
 
 One migration per model restored: `TemporaryUpload` →
 `2023_01_01_000000_create_temporary_uploads_table.php` only. See
-[MIGRATIONS.md](../../migrations.md) for the module's migration parity table.
+[migrations-3.md](../../migrations.md) for the module's migration parity table.
 
 - `phpstan analyse Modules/Media` → 0 errors (174 files).
 - `phpmd` on the migration file → no violations.

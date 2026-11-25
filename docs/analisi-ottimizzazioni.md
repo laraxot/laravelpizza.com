@@ -17,7 +17,7 @@ il modulo **xot** è il CUORE del sistema laraxot - fornisce tutte le basi archi
 # esempi duplicazione critica:
 actions-pattern.md / actions_pattern.md
 architecture-best-practices.md / architecture_best_practices.md
-filament-best-practices.md / filament_best_practices.md
+filament-best-practices.md / filament-best-practices-2.md
 phpstan-fixes.md / phpstan_fixes.md
 
 # git artifacts non puliti:
@@ -203,7 +203,7 @@ phpstan-content:
   target: "development/phpstan-guide.md"
   sources: [
     "phpstan-fixes.md", "phpstan_fixes.md",
-    "phpstan-level9-guide.md", "phpstan_level9_guide.md",
+    "phpstan-level9-guide.md", "phpstan-level9-guide-2.md",
     "phpstan-common-exceptions.md"
   ]
 
@@ -211,7 +211,7 @@ filament-content:
   target: "filament/resources-guide.md"
   sources: [
     "filament-resources.md", "filament_resources.md",
-    "filament-best-practices.md", "filament_best_practices.md"
+    "filament-best-practices.md", "filament-best-practices-2.md"
   ]
 
 architecture-content:

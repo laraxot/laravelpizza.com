@@ -40,7 +40,7 @@ Questo documento guida l'approccio completo alla scrittura e manutenzione della 
 ```
 Modules/{ModuleName}/docs/
 ├── architecture-reference.md          # Architettura del modulo
-├── best-practices.md                # Best practices specifiche
+├── best-practices-3.md                # Best practices specifiche
 ├── troubleshooting.md               # Problemi comuni e soluzioni
 ├── workflow.md                     # Flussi di lavoro
 └── patterns/                       # Pattern riutilizzabili

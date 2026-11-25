@@ -152,7 +152,7 @@ php artisan tinker
 ### 🔌 **API Integration**
 - [Google Maps](here.md) - Integrazione Google Maps API
 - [Mapbox](mapbox.md) - Integrazione Mapbox API
-- [Here.com](here_com.md) - Integrazione Here API
+- [Here.com](here-com-2.md) - Integrazione Here API
 
 ### 🎨 **Filament Components**
 - [Filament Integration](filament-integration.md) - Componenti Filament per modulo Geo
@@ -165,7 +165,7 @@ php artisan tinker
 - [Migration Guide](migration-guide.md) - Guida migrazione database
 
 ### 🔧 **Development**
-- [PHPStan Fixes](phpstan/phpstan-fixes-gennaio-2025.md) - Log completo correzioni PHPStan
+- [PHPStan Fixes](phpstan/phpstan-fixes-gennaio-2.md) - Log completo correzioni PHPStan
 - [Translation Fixes](address-translation-fixes.md) - Correzioni traduzioni address
 - [Best Practices](best-practices.md) - Linee guida sviluppo
 
@@ -265,7 +265,7 @@ public function getComuniByRegione(string $regione): Collection
 # Se hai problemi con template types Collection
 ./vendor/bin/phpstan analyze Modules/Geo/app/Services/GeoDataService.php --level=9
 ```
-**Soluzione**: Consulta [PHPStan Collection Types Guide](phpstan/phpstan-fixes-gennaio-2025.md)
+**Soluzione**: Consulta [PHPStan Collection Types Guide](phpstan/phpstan-fixes-gennaio-2.md)
 
 #### ⚡ **API Rate Limits**
 ```php
@@ -542,7 +542,7 @@ __('geo::validation.postal_code.required');
 ## 🤝 **Contribuire**
 
 ### **Guidelines**
-1. Segui le [Coding Standards](coding-standards.md)
+1. Segui le [Coding Standards](coding-standards-2.md)
 2. Scrivi test per nuove funzionalità
 3. Aggiorna la documentazione
 4. Usa conventional commits

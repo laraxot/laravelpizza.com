@@ -110,7 +110,7 @@ Successfully implemented a comprehensive documentation governance framework and 
 <<<<<<< HEAD
 <<<<<<< .merge_file_ePovvu
 <<<<<<< .merge_file_I6F9H0
-1. **[DOCUMENTATION_GOVERNANCE.md](docs/documentation_governance.md)**
+1. **[documentation-governance-2.md](docs/documentation-governance-2.md)**
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -118,18 +118,18 @@ Successfully implemented a comprehensive documentation governance framework and 
 >>>>>>> .merge_file_iulWdo
 =======
 >>>>>>> .merge_file_nlvMTr
-1. **[DOCUMENTATION_GOVERNANCE.md](docs/DOCUMENTATION_GOVERNANCE.md)**
+1. **[documentation-governance-2.md](documentation-governance-2.md)**
 =======
 <<<<<<< HEAD
-1. **[DOCUMENTATION_GOVERNANCE.md](docs/documentation_governance.md)**
+1. **[documentation-governance-2.md](docs/documentation-governance-2.md)**
 =======
-1. **[DOCUMENTATION_GOVERNANCE.md](docs/DOCUMENTATION_GOVERNANCE.md)**
+1. **[documentation-governance-2.md](documentation-governance-2.md)**
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_ePovvu
 <<<<<<< .merge_file_I6F9H0
 =======
-1. **[DOCUMENTATION_GOVERNANCE.md](docs/documentation_governance.md)**
+1. **[documentation-governance-2.md](docs/documentation-governance-2.md)**
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
@@ -144,7 +144,7 @@ Successfully implemented a comprehensive documentation governance framework and 
 <<<<<<< HEAD
 <<<<<<< .merge_file_ePovvu
 <<<<<<< .merge_file_I6F9H0
-2. **[MASTER_DOCUMENTATION_INDEX.md](docs/master_documentation_index.md)**
+2. **[master-documentation-index-2.md](docs/master-documentation-index-2.md)**
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -152,18 +152,18 @@ Successfully implemented a comprehensive documentation governance framework and 
 >>>>>>> .merge_file_iulWdo
 =======
 >>>>>>> .merge_file_nlvMTr
-2. **[MASTER_DOCUMENTATION_INDEX.md](docs/MASTER_DOCUMENTATION_INDEX.md)**
+2. **[master-documentation-index-2.md](master-documentation-index-2.md)**
 =======
 <<<<<<< HEAD
-2. **[MASTER_DOCUMENTATION_INDEX.md](docs/master_documentation_index.md)**
+2. **[master-documentation-index-2.md](docs/master-documentation-index-2.md)**
 =======
-2. **[MASTER_DOCUMENTATION_INDEX.md](docs/MASTER_DOCUMENTATION_INDEX.md)**
+2. **[master-documentation-index-2.md](master-documentation-index-2.md)**
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_ePovvu
 <<<<<<< .merge_file_I6F9H0
 =======
-2. **[MASTER_DOCUMENTATION_INDEX.md](docs/master_documentation_index.md)**
+2. **[master-documentation-index-2.md](docs/master-documentation-index-2.md)**
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
@@ -178,7 +178,7 @@ Successfully implemented a comprehensive documentation governance framework and 
 <<<<<<< HEAD
 <<<<<<< .merge_file_ePovvu
 <<<<<<< .merge_file_I6F9H0
-3. **[DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md](docs/documentation_analysis_and_improvement_plan.md)**
+3. **[documentation-analysis-and-improvement-plan-2.md](docs/documentation-analysis-and-improvement-plan-2.md)**
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -186,18 +186,18 @@ Successfully implemented a comprehensive documentation governance framework and 
 >>>>>>> .merge_file_iulWdo
 =======
 >>>>>>> .merge_file_nlvMTr
-3. **[DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md](docs/DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md)**
+3. **[documentation-analysis-and-improvement-plan-2.md](documentation-analysis-and-improvement-plan-2.md)**
 =======
 <<<<<<< HEAD
-3. **[DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md](docs/documentation_analysis_and_improvement_plan.md)**
+3. **[documentation-analysis-and-improvement-plan-2.md](docs/documentation-analysis-and-improvement-plan-2.md)**
 =======
-3. **[DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md](docs/DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md)**
+3. **[documentation-analysis-and-improvement-plan-2.md](documentation-analysis-and-improvement-plan-2.md)**
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_ePovvu
 <<<<<<< .merge_file_I6F9H0
 =======
-3. **[DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md](docs/documentation_analysis_and_improvement_plan.md)**
+3. **[documentation-analysis-and-improvement-plan-2.md](docs/documentation-analysis-and-improvement-plan-2.md)**
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
@@ -512,9 +512,9 @@ grep -r "Last Updated" laravel/Modules/*/docs/ --include="*.md" | wc -l
 >>>>>>> .merge_file_iulWdo
 =======
 >>>>>>> .merge_file_nlvMTr
-- [Governance Framework](docs/documentation_governance.md)
-- [Master Index](docs/master_documentation_index.md)
-- [Improvement Plan](docs/documentation_analysis_and_improvement_plan.md)
+- [Governance Framework](docs/documentation-governance-2.md)
+- [Master Index](docs/master-documentation-index-2.md)
+- [Improvement Plan](docs/documentation-analysis-and-improvement-plan-2.md)
 
 ### Rules
 - [AGENTS.md](agents.md) - Full standards
@@ -534,9 +534,9 @@ grep -r "Last Updated" laravel/Modules/*/docs/ --include="*.md" | wc -l
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_nlvMTr
-- [Governance Framework](docs/DOCUMENTATION_GOVERNANCE.md)
-- [Master Index](docs/MASTER_DOCUMENTATION_INDEX.md)
-- [Improvement Plan](docs/DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md)
+- [Governance Framework](documentation-governance-2.md)
+- [Master Index](master-documentation-index-2.md)
+- [Improvement Plan](documentation-analysis-and-improvement-plan-2.md)
 
 ### Rules
 - [AGENTS.md](agents.md) - Full standards
@@ -632,10 +632,10 @@ grep -r "Last Updated" laravel/Modules/*/docs/ --include="*.md" | wc -l
 grep -r "Last Updated" laravel/Themes/*/docs/ --include="*.md" | wc -l
 
 # Governance doc exists: ✅
-ls docs/DOCUMENTATION_GOVERNANCE.md
+ls documentation-governance-2.md
 
 # Master index exists: ✅
-ls docs/MASTER_DOCUMENTATION_INDEX.md
+ls master-documentation-index-2.md
 
 # Skill created: ✅
 ls laravel/.github/skills/documentation-management/SKILL.md

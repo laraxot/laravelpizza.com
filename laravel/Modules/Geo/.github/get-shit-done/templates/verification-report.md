@@ -138,7 +138,7 @@ None — all verifiable items checked programmatically.
 
 {If gaps found, generate fix plan recommendations:}
 
-### {phase}-{next}-PLAN.md: {Fix Name}
+### {phase}-{next}-plan-2.md: {Fix Name}
 
 **Objective:** {What this fixes}
 
@@ -151,7 +151,7 @@ None — all verifiable items checked programmatically.
 
 ---
 
-### {phase}-{next+1}-PLAN.md: {Fix Name}
+### {phase}-{next+1}-plan-2.md: {Fix Name}
 
 **Objective:** {What this fixes}
 
@@ -166,7 +166,7 @@ None — all verifiable items checked programmatically.
 ## Verification Metadata
 
 **Verification approach:** Goal-backward (derived from phase goal)
-**Must-haves source:** {plan.md frontmatter | derived from roadmap.md goal}
+**Must-haves source:** {plan-2.md frontmatter | derived from roadmap.md goal}
 **Automated checks:** {N} passed, {M} failed
 **Human checks required:** {N}
 **Total verification time:** {duration}

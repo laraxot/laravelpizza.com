@@ -11,7 +11,7 @@ discussions: []
 
 <purpose>
 
-Start a new milestone cycle for an existing project. Loads project context, gathers milestone goals (from MILESTONE-CONTEXT.md or conversation), updates PROJECT.md and STATE.md, optionally runs parallel research, defines scoped requirements with REQ-IDs, spawns the roadmapper to create phased execution plan, and commits all artifacts. Brownfield equivalent of new-project.
+Start a new milestone cycle for an existing project. Loads project context, gathers milestone goals (from MILESTONE-CONTEXT.md or conversation), updates PROJECT.md and state-2.md, optionally runs parallel research, defines scoped requirements with REQ-IDs, spawns the roadmapper to create phased execution plan, and commits all artifacts. Brownfield equivalent of new-project.
 
 </purpose>
 
@@ -27,7 +27,7 @@ Read all files referenced by the invoking prompt's execution_context before star
 
 - Read PROJECT.md (existing project, validated requirements, decisions)
 - Read MILESTONES.md (what shipped previously)
-- Read STATE.md (pending todos, blockers)
+- Read state-2.md (pending todos, blockers)
 - Check for MILESTONE-CONTEXT.md (from /gsd-discuss-milestone)
 
 ## 2. Gather Milestone Goals
@@ -64,7 +64,7 @@ Add/update:
 
 Update Active requirements section and "Last updated" footer.
 
-## 5. Update STATE.md
+## 5. Update state-2.md
 
 ```markdown
 ## Current Position
@@ -82,7 +82,7 @@ Keep Accumulated Context section from previous milestone.
 Delete MILESTONE-CONTEXT.md if exists (consumed).
 
 ```bash
-node .github/get-shit-done/bin/gsd-tools.cjs commit "docs: start milestone v[X.Y] [Name]" --files .planning/PROJECT.md .planning/STATE.md
+node .github/get-shit-done/bin/gsd-tools.cjs commit "docs: start milestone v[X.Y] [Name]" --files .planning/PROJECT.md .planning/state-2.md
 ```
 
 ## 7. Load Context and Resolve Models
@@ -177,21 +177,21 @@ Synthesize research outputs into summary.md.
 - .planning/research/PITFALLS.md
 </files_to_read>
 
-Write to: .planning/research/summary.md
-Use template: .github/get-shit-done/templates/research-project/summary.md
+Write to: ../../../../Notify/docs/bugs/summary-2.md
+Use template: ../../../../Notify/docs/bugs/summary-2.md
 Commit after writing.
 ", subagent_type="gsd-research-synthesizer", model="{synthesizer_model}", description="Synthesize research")
 ```
 
-Display key findings from summary.md:
+Display key findings from summary-2.md:
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
  GSD ► RESEARCH COMPLETE ✓
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-**Stack additions:** [from summary.md]
-**Feature table stakes:** [from summary.md]
-**Watch Out For:** [from summary.md]
+**Stack additions:** [from summary-2.md]
+**Feature table stakes:** [from summary-2.md]
+**Watch Out For:** [from summary-2.md]
 ```
 
 **If "Skip research":** Continue to Step 9.
@@ -229,7 +229,7 @@ Track: Selected → this milestone. Unselected table stakes → future. Unselect
 - "No, research covered it" — Proceed
 - "Yes, let me add some" — Capture additions
 
-**Generate REQUIREMENTS.md:**
+**Generate requirements-2.md:**
 - v1 Requirements grouped by category (checkboxes, REQ-IDs)
 - Future Requirements (deferred)
 - Out of Scope (explicit exclusions with reasoning)
@@ -264,7 +264,7 @@ If "adjust": Return to scoping.
 
 **Commit requirements:**
 ```bash
-node .github/get-shit-done/bin/gsd-tools.cjs commit "docs: define milestone v[X.Y] requirements" --files .planning/REQUIREMENTS.md
+node .github/get-shit-done/bin/gsd-tools.cjs commit "docs: define milestone v[X.Y] requirements" --files .planning/requirements-2.md
 ```
 
 ## 10. Create Roadmap
@@ -284,8 +284,8 @@ Task(prompt="
 <planning_context>
 <files_to_read>
 - .planning/PROJECT.md
-- .planning/REQUIREMENTS.md
-- .planning/research/summary.md (if exists)
+- .planning/requirements-2.md
+- ../../../../Notify/docs/bugs/summary-2.md (if exists)
 - .planning/config.json
 - .planning/MILESTONES.md
 </files_to_read>
@@ -298,7 +298,7 @@ Create roadmap for milestone v[X.Y]:
 3. Map every requirement to exactly one phase
 4. Derive 2-5 success criteria per phase (observable user behaviors)
 5. Validate 100% coverage
-6. Write files immediately (roadmap.md, STATE.md, update REQUIREMENTS.md traceability)
+6. Write files immediately (roadmap.md, state-2.md, update requirements-2.md traceability)
 7. Return ROADMAP CREATED with summary
 
 Write files first, then return.
@@ -341,7 +341,7 @@ Success criteria:
 
 **Commit roadmap** (after approval):
 ```bash
-node .github/get-shit-done/bin/gsd-tools.cjs commit "docs: create milestone v[X.Y] roadmap ([N] phases)" --files .planning/roadmap.md .planning/STATE.md .planning/REQUIREMENTS.md
+node .github/get-shit-done/bin/gsd-tools.cjs commit "docs: create milestone v[X.Y] roadmap ([N] phases)" --files .planning/roadmap.md .planning/state-2.md .planning/requirements-2.md
 ```
 
 ## 11. Done
@@ -357,7 +357,7 @@ node .github/get-shit-done/bin/gsd-tools.cjs commit "docs: create milestone v[X.
 |----------------|-----------------------------|
 | Project        | `.planning/PROJECT.md`      |
 | Research       | `.planning/research/`       |
-| Requirements   | `.planning/REQUIREMENTS.md` |
+| Requirements   | `.planning/requirements-2.md` |
 | Roadmap        | `.planning/roadmap.md`      |
 
 **[N] phases** | **[X] requirements** | Ready to build ✓
@@ -377,11 +377,11 @@ Also: `/gsd-plan-phase [N]` — skip discussion, plan directly
 
 <success_criteria>
 - [ ] PROJECT.md updated with Current Milestone section
-- [ ] STATE.md reset for new milestone
+- [ ] state-2.md reset for new milestone
 - [ ] MILESTONE-CONTEXT.md consumed and deleted (if existed)
 - [ ] Research completed (if selected) — 4 parallel agents, milestone-aware
 - [ ] Requirements gathered and scoped per category
-- [ ] REQUIREMENTS.md created with REQ-IDs
+- [ ] requirements-2.md created with REQ-IDs
 - [ ] gsd-roadmapper spawned with phase numbering context
 - [ ] Roadmap files written immediately (not draft)
 - [ ] User feedback incorporated (if any)

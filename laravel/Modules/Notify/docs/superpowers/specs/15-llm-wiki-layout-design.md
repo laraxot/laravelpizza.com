@@ -34,23 +34,23 @@ discussions: []
 ## Goal
 <<<<<<< HEAD
 <<<<<<< .merge_file_NBJLM2
-Create a single source of truth for the large AI‑agent markdown files (`GEMINI.md`, `CLAUDE.md`, `QWEN.md`) and ensure every module and theme in the repository has a `docs/wiki/` (and accompanying `llm‑wiki` assets) while avoiding duplicated content.
+Create a single source of truth for the large AI‑agent markdown files (`GEMINI.md`, `CLAUDE.md`, `qwen-2.md`) and ensure every module and theme in the repository has a `docs/wiki/` (and accompanying `llm‑wiki` assets) while avoiding duplicated content.
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_g1rfN6
-Create a single source of truth for the large AI‑agent markdown files (`gemini.md`, `CLAUDE.md`, `qwen.md`) and ensure every module and theme in the repository has a `docs/wiki/` (and accompanying `llm‑wiki` assets) while avoiding duplicated content.
+Create a single source of truth for the large AI‑agent markdown files (`gemini-2.md`, `CLAUDE.md`, `qwen-2.md`) and ensure every module and theme in the repository has a `docs/wiki/` (and accompanying `llm‑wiki` assets) while avoiding duplicated content.
 =======
 <<<<<<< HEAD
-Create a single source of truth for the large AI‑agent markdown files (`GEMINI.md`, `CLAUDE.md`, `QWEN.md`) and ensure every module and theme in the repository has a `docs/wiki/` (and accompanying `llm‑wiki` assets) while avoiding duplicated content.
+Create a single source of truth for the large AI‑agent markdown files (`GEMINI.md`, `CLAUDE.md`, `qwen-2.md`) and ensure every module and theme in the repository has a `docs/wiki/` (and accompanying `llm‑wiki` assets) while avoiding duplicated content.
 =======
-Create a single source of truth for the large AI‑agent markdown files (`gemini.md`, `CLAUDE.md`, `qwen.md`) and ensure every module and theme in the repository has a `docs/wiki/` (and accompanying `llm‑wiki` assets) while avoiding duplicated content.
+Create a single source of truth for the large AI‑agent markdown files (`gemini-2.md`, `CLAUDE.md`, `qwen-2.md`) and ensure every module and theme in the repository has a `docs/wiki/` (and accompanying `llm‑wiki` assets) while avoiding duplicated content.
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_NBJLM2
 =======
-Create a single source of truth for the large AI‑agent markdown files (`GEMINI.md`, `CLAUDE.md`, `QWEN.md`) and ensure every module and theme in the repository has a `docs/wiki/` (and accompanying `llm‑wiki` assets) while avoiding duplicated content.
+Create a single source of truth for the large AI‑agent markdown files (`GEMINI.md`, `CLAUDE.md`, `qwen-2.md`) and ensure every module and theme in the repository has a `docs/wiki/` (and accompanying `llm‑wiki` assets) while avoiding duplicated content.
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======
@@ -110,23 +110,23 @@ The bullet should be placed under the **“leggi prima”** section or a dedicat
 2. Add the three stub `README.md` files under `gemini/`, `claude/`, `qwen/`.
 <<<<<<< HEAD
 <<<<<<< .merge_file_NBJLM2
-3. Remove the now‑redundant large `GEMINI.md`, `CLAUDE.md`, `QWEN.md` files (or replace them with a one‑line redirect to the stub README).
+3. Remove the now‑redundant large `GEMINI.md`, `CLAUDE.md`, `qwen-2.md` files (or replace them with a one‑line redirect to the stub README).
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_g1rfN6
-3. Remove the now‑redundant large `gemini.md`, `CLAUDE.md`, `qwen.md` files (or replace them with a one‑line redirect to the stub README).
+3. Remove the now‑redundant large `gemini-2.md`, `CLAUDE.md`, `qwen-2.md` files (or replace them with a one‑line redirect to the stub README).
 =======
 <<<<<<< HEAD
-3. Remove the now‑redundant large `GEMINI.md`, `CLAUDE.md`, `QWEN.md` files (or replace them with a one‑line redirect to the stub README).
+3. Remove the now‑redundant large `GEMINI.md`, `CLAUDE.md`, `qwen-2.md` files (or replace them with a one‑line redirect to the stub README).
 =======
-3. Remove the now‑redundant large `gemini.md`, `CLAUDE.md`, `qwen.md` files (or replace them with a one‑line redirect to the stub README).
+3. Remove the now‑redundant large `gemini-2.md`, `CLAUDE.md`, `qwen-2.md` files (or replace them with a one‑line redirect to the stub README).
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_NBJLM2
 =======
-3. Remove the now‑redundant large `GEMINI.md`, `CLAUDE.md`, `QWEN.md` files (or replace them with a one‑line redirect to the stub README).
+3. Remove the now‑redundant large `GEMINI.md`, `CLAUDE.md`, `qwen-2.md` files (or replace them with a one‑line redirect to the stub README).
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======

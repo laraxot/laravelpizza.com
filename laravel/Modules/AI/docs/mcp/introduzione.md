@@ -97,4 +97,4 @@ updated: 2026-09-26
 qmd: "introduzione"
 issues: []
 discussions: []
-Continua con la sezione [Installazione](01_installazione.md) per iniziare a configurare i server MCP per il tuo progetto Laravel.
+Continua con la sezione [Installazione](01-installazione-2.md) per iniziare a configurare i server MCP per il tuo progetto Laravel.

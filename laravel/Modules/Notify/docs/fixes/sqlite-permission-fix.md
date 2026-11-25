@@ -238,7 +238,7 @@ bash bashscripts/fix-permissions.sh
 | **Vite Fix** | `vite-fix-and-execution-plan.md` |
 | **Improvement Plan** | `.planning/improvements/FIXCITY_IT_IMPROVEMENT_PLAN.md` |
 | **Execution Plan** | `.planning/improvements/EXECUTION_PLAN.md` |
-| **Start Here** | `fixcity-improvement-start-here.md` |
+| **Start Here** | `fixcity-improvement-start-here-2.md` |
 
 ---
 

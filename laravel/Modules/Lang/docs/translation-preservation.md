@@ -156,7 +156,7 @@ Ogni correzione terminologica deve essere documentata:
 
 ## Collegamenti
 
-- [Best Practice Traduzioni](translation-best-practices.md)
+- [Best Practice Traduzioni](translation-best-practices-2.md)
 - [Terminologia Medica](medical-terminology.md)
 - [Standard Localizzazione](localization-standards.md)
 

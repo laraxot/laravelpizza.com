@@ -4,6 +4,7 @@ date: 2026-10-06
 status: completed
 owner: Claude Haiku 4.5
 epic: module-bmad-audit
+qmd: "consolidation 06 story lang organization"
 ---
 
 # Lang Module Docs Consolidation (2026-10-06)
@@ -27,9 +28,9 @@ Eliminate duplicates, apply BMAD structure, zero orphans.
 | `automatic_translations.md` | Underscore variant | `automatic-translations.md` |
 | `cms_link.md` | Underscore variant | `cms-link.md` |
 | `changelog.md` | Root CHANGELOG.md is canonical | Removed both |
-| `wiki/commands/INDEX.md` | Uppercase duplicate | `wiki/commands/index.md` |
-| `wiki/concepts/INDEX.md` | Uppercase duplicate | `wiki/concepts/index.md` |
-| `wiki/memories/INDEX.md` | Uppercase duplicate | `wiki/memories/index.md` |
+| `wiki/commands/INDEX.md` | Uppercase duplicate | `../../wiki/commands/index-3.md` |
+| `../../wiki/commands/index-3.md` | Uppercase duplicate | `../../wiki/commands/index-3.md` |
+| `../../wiki/commands/index-3.md` | Uppercase duplicate | `wiki/memories/index.md` |
 | `wiki/rules/INDEX.md` | Uppercase duplicate | `wiki/rules/index.md` |
 | `wiki/skills/INDEX.md` | Uppercase duplicate | `wiki/skills/index.md` |
 | `wiki/product/_da-riconciliare/INDEX.md` | Uppercase duplicate | lowercase |
@@ -50,7 +51,7 @@ Eliminate duplicates, apply BMAD structure, zero orphans.
 - **Language Patterns & How-To Guides** (8 files) → `wiki/how-to/`
   - advanced-language-switching.md
   - automatic-translations.md
-  - best-practices.md
+  - best-practices-3.md
   - composer-merge-plugin.md
   - autoregistration-commands.md
   - build-publish.yml.md
@@ -86,7 +87,7 @@ Eliminate duplicates, apply BMAD structure, zero orphans.
   - business-logic-overview.md → `wiki/overviews/`
 
 ### Rules Applied
-1. **Lowercase filenames**: Standardized all index files to lowercase `index.md`
+1. **Lowercase filenames**: Standardized all index files to lowercase `index-3.md`
 2. **Dash convention**: Unified spacing in filenames (no underscores vs dashes)
 3. **BMAD structure**:
    - Architecture → `bmad/architecture/`

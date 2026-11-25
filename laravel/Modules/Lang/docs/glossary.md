@@ -1,21 +1,3 @@
-<<<<<<< .merge_file_JD7HAR
-<<<<<<< .merge_file_SbQnln
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_LECYvR
-=======
->>>>>>> .merge_file_XbEy19
-# Glossario di dominio Lang
-
-<!-- Le parole del dominio e dove stanno nel codice. Topology di AGENTS.md punta qui.
-     Un termine per riga; se glossario e codice non coincidono, vale il codice e si corregge il glossario. -->
-
-| Termine | Significato | Nel codice |
-|---|---|---|
-<<<<<<< .merge_file_JD7HAR
-<<<<<<< .merge_file_SbQnln
-| <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
-=======
 ---
 title: "Glossario di dominio Lang"
 type: glossary
@@ -45,10 +27,3 @@ Se glossario e codice divergono vale il codice. Percorsi relativi a `laravel/Mod
 | Language switcher | Selettore di lingua come normale link a URL localizzato. | `app/View/Components/LanguageSwitcher.php`, `app/Filament/Widgets/LanguageSwitcherWidget.php` |
 | Campo multilingua | Cast Eloquent per attributi con valori per lingua. | `app/Casts/LangField.php`, `app/Models/TranslatableModel.php` |
 | Riga di lingua | Modello della tabella delle traduzioni a database. | `app/Models/LanguageLine.php`, `app/Models/Translation.php` |
->>>>>>> laraxot/dev
-=======
-| <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
->>>>>>> .merge_file_LECYvR
-=======
-| <!-- termine --> | <!-- cosa vuol dire per il business, con unità e stati se servono --> | <!-- classe, colonna, rotta --> |
->>>>>>> .merge_file_XbEy19

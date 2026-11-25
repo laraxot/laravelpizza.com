@@ -12,5 +12,5 @@ Fase BMAD: implementazione documentale (docs-only), nessun codice applicativo to
 
 - Audit di tutti i 28 file `.md` sotto `Themes/Meetup/docs/` (find ricorsivo), nessun file esistente rinominato/cancellato.
 - Creato `docs/index.md`: indice per argomento (overview, concetti, wiki on-demand, template, qualita'/audit, LLM wiki, raw, storico).
-- Individuati 8 file duplicati/stub con canonical dangling, raggruppati in "Storico / da consolidare" senza cancellarli: `code-quality-report.md`, `REDUNDANCY_ANALYSIS.md`, `codex-error-fix.md`, `merge-conflicts-list.md`, `ON-DEMAND-PATTERN.md`, `PERFORMANCE-OPTIMIZATION.md`, `project-structure.md`, `QMD-SETUP.md`.
+- Individuati 8 file duplicati/stub con canonical dangling, raggruppati in "Storico / da consolidare" senza cancellarli: `code-quality-report.md`, `redundancy-analysis.md`, `codex-error-fix.md`, `merge-conflicts-list.md`, `ON-DEMAND-PATTERN.md`, `PERFORMANCE-OPTIMIZATION.md`, `project-structure.md`, `qmd-setup-3.md`.
 - Verifica reale: contenuto di `docs/index.md` copre tutti i file trovati da `find docs -type f`; nessun link rotto verso file interni al tema.

@@ -215,23 +215,23 @@ return new class () extends XotBaseMigration {
 - [Best Practices Database](../../../docs/best-practices/database.md)
 <<<<<<< HEAD
 <<<<<<< .merge_file_HbV8Mt
-- [Gestione Errori](./error_handling.md)
+- [Gestione Errori](../../User/docs/error-handling-2.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> .merge_file_bspyig
-- [Gestione Errori](./ERROR_HANDLING.md)
+- [Gestione Errori](../../User/docs/error-handling-2.md)
 =======
 <<<<<<< HEAD
-- [Gestione Errori](./error_handling.md)
+- [Gestione Errori](../../User/docs/error-handling-2.md)
 =======
-- [Gestione Errori](./ERROR_HANDLING.md)
+- [Gestione Errori](../../User/docs/error-handling-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_HbV8Mt
 =======
-- [Gestione Errori](./error_handling.md)
+- [Gestione Errori](../../User/docs/error-handling-2.md)
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======

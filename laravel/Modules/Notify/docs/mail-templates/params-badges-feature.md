@@ -181,10 +181,10 @@ Badge: [user_name] [reset_link] [expiry_time]
 
 ## Collegamenti
 
-- [Implementation Notes](./implementation_notes.md#visualizzazione-parametri-come-badge)
+- [Implementation Notes](./implementation-notes-2.md#visualizzazione-parametri-come-badge)
 - [Mail Templates Index](./index.md)
-- [Filament UI Enhancements](./filament_ui_enhancements.md)
-- [Email Templates Guide](./email_templates_guide.md)
+- [Filament UI Enhancements](./filament-ui-enhancements-2.md)
+- [Email Templates Guide](./email-templates-guide-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD

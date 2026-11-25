@@ -14,6 +14,8 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Servizio per le interazioni con l'API di Google Maps.
+ *
+ * @see Modules/Geo/docs/geo-sync-marker-repair.md
  */
 class GoogleMapsService
 {
@@ -45,11 +47,10 @@ class GoogleMapsService
     /**
      * Esegue una richiesta HTTP con rate limiting, cache e retry.
      *
-     * @param string               $method   Metodo HTTP (GET, POST, etc.)
-     * @param string               $url      URL della richiesta
-     * @param array<string, mixed> $params   Parametri della richiesta
-     * @param bool                 $useCache Se utilizzare la cache
-     *
+     * @param  string  $method  Metodo HTTP (GET, POST, etc.)
+     * @param  string  $url  URL della richiesta
+     * @param  array<string, mixed>  $params  Parametri della richiesta
+     * @param  bool  $useCache  Se utilizzare la cache
      * @return array<string, mixed>
      *
      * @throws \RuntimeException Se la richiesta fallisce
@@ -169,9 +170,8 @@ class GoogleMapsService
     /**
      * Calcola la matrice delle distanze.
      *
-     * @param array<string> $origins      Punti di origine (formato: "lat,lng|lat,lng|...")
-     * @param array<string> $destinations Punti di destinazione (formato: "lat,lng|lat,lng|...")
-     *
+     * @param  array<string>  $origins  Punti di origine (formato: "lat,lng|lat,lng|...")
+     * @param  array<string>  $destinations  Punti di destinazione (formato: "lat,lng|lat,lng|...")
      * @return array<string, mixed>
      *
      * @throws GoogleMapsApiException Se la richiesta fallisce

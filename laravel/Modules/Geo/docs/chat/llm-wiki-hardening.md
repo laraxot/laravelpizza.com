@@ -47,7 +47,7 @@ Quality bar for agents:
 
 ## Update: Chiusura #122 / #123 (2026-05-20)
 
-- Wikilink batch su cluster canonico second-brain + `ProjectHome.md`.
+- Wikilink batch su cluster canonico second-brain + `projecthome-2.md`.
 - Gate 23/23 dopo rimozione `bashscripts/ai/.agents/node_modules`.
 - Issue chiuse con `gh issue close` — follow-up opzionale: `qmd embed`, template `_templates/` wikilink.
 

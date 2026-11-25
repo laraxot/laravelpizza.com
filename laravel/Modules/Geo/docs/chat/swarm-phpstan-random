@@ -52,7 +52,7 @@
 
 1. **Agente prende modulo** → Scrive il suo ID/nome accanto
 2. **Avvia PHPStan** → Legge errori e crea issue su GitHub se necessario
-3. **Documenta wiki** → Aggiorna `docs/wiki/modules/<NOME>/phpstan-status.md`
+3. **Documenta wiki** → Aggiorna `docs/wiki/modules/<NOME>/phpstan-status-2.md`
 4. **Completa** → Scrive risultati in sezione Results
 5. **Prossimo modulo** → Prossimo agente legge lista e prende uno DISPONIBILE
 

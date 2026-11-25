@@ -62,5 +62,5 @@ cd laravel
 vendor/bin/pest --group=<SCOPE>-INV-1
 ```
 
-Il contratto va registrato in `docs/contracts/INDEX.md` e aggiornato insieme al
+Il contratto va registrato in `docs/contracts/index.md` e aggiornato insieme al
 test quando cambia il comportamento.

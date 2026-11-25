@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests;
 
-use Illuminate\Database\DatabaseManager;
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Facades\Filament;
@@ -15,6 +14,7 @@ use Filament\Schemas\Schema as FilamentSchema;
 use Filament\Widgets\Widget;
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Console\Kernel;
+use Illuminate\Database\DatabaseManager;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -49,6 +49,8 @@ use function Safe\json_encode;
  * All module connections are mapped by TenantServiceProvider.
  * Migrations must be run ONCE externally: php artisan migrate --env=testing
  * DatabaseTransactions handles rollback between tests.
+ *
+ * @see Modules/User/docs/sync-marker-repair-php-lang-tests.md perche' `$connectionsToTransact` non elenca connessioni di progetto
  *
  * @property User|null $user
  * @property User|null $owner
@@ -109,6 +111,8 @@ abstract class TestCase extends XotBaseTestCase
      * Va fatto prima di aprire le transazioni: in MySQL ogni DDL fa commit implicito.
      *
      * Nessun tipo di ritorno nativo: il metodo del trait non lo dichiara.
+     *
+     * @see Modules/User/docs/sync-marker-repair-php-lang-tests.md
      *
      * @return void
      */

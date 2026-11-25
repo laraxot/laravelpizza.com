@@ -118,5 +118,5 @@ public function boot()
 
 ## Collegamenti
 - [Documentazione Blocchi](../readme.md)
-- [Best Practices CMS](../../best-practices.md)
+- [Best Practices CMS](../../../../laravel/Modules/Activity/docs/best-practices-3.md)
 - [Guida Componenti](../../components.md)

@@ -167,7 +167,7 @@ topic: parse-error-orphan-methods
 canonical: ../../../../Themes/docs/shared-components/parse-error-orphan-methods.md
 related:
   - "./make-filament-user-crash-loop.md"
-  - "./parse-error-orphan-methods-.md"
+  - "./parse-error-orphan-methods-4.md"
   - "./parse-error-orphan-methods.md"
   - "./parse-error-orphan-methods.md"
   - "./parse-error-orphan-methods-2.md"

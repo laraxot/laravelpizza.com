@@ -65,7 +65,7 @@ Errors: N | Warnings: N | Info: N
 ## Repairs Performed
 
 - ✓ config.json: Created with defaults
-- ✓ STATE.md: Regenerated from roadmap
+- ✓ state-2.md: Regenerated from roadmap
 ```
 
 **If errors exist:**
@@ -83,7 +83,7 @@ Errors: N | Warnings: N | Info: N
 ```
 ## Warnings
 
-- [W001] STATE.md references phase 5, but only phases 1-3 exist
+- [W001] state-2.md references phase 5, but only phases 1-3 exist
   Fix: Run /gsd-health --repair to regenerate
 
 - [W005] Phase directory "1-setup" doesn't follow NN-name format
@@ -94,7 +94,7 @@ Errors: N | Warnings: N | Info: N
 ```
 ## Info
 
-- [I001] 02-implementation/02-01-PLAN.md has no summary.md
+- [I001] 02-implementation/02-01-PLAN.md has no summary-2.md
   Note: May be in progress
 ```
 
@@ -146,10 +146,10 @@ Report final status.
 | E001 | error | .planning/ directory not found | No |
 | E002 | error | PROJECT.md not found | No |
 | E003 | error | roadmap.md not found | No |
-| E004 | error | STATE.md not found | Yes |
+| E004 | error | state-2.md not found | Yes |
 | E005 | error | config.json parse error | Yes |
 | W001 | warning | PROJECT.md missing required section | No |
-| W002 | warning | STATE.md references invalid phase | Yes |
+| W002 | warning | state-2.md references invalid phase | Yes |
 | W003 | warning | config.json not found | Yes |
 | W004 | warning | config.json invalid field value | No |
 | W005 | warning | Phase directory naming mismatch | No |
@@ -165,7 +165,7 @@ Report final status.
 |--------|--------|------|
 | createConfig | Create config.json with defaults | None |
 | resetConfig | Delete + recreate config.json | Loses custom settings |
-| regenerateState | Create STATE.md from ROADMAP structure | Loses session history |
+| regenerateState | Create state-2.md from ROADMAP structure | Loses session history |
 
 **Not repairable (too risky):**
 - PROJECT.md, roadmap.md content

@@ -10,6 +10,7 @@ created: {{date}}
 updated: {{date}}
 tags: [person, organization, module]
 related: []
+status: draft
 ---
 
 # {{title}}

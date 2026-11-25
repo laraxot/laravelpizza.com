@@ -217,7 +217,7 @@ class CreateMyRecord extends LangBaseCreateRecord {
 
 ## Collegamenti
 
-- [Pattern di Estensione Filament](filament_extension_pattern.md)
+- [Pattern di Estensione Filament](filament-extension-pattern-2.md)
 - [XotBaseResource](xotbaseresource.md)
 - [Regole Risorse Filament](filament_resource_rules.md)
 
@@ -248,7 +248,7 @@ grep -r "use HasTranslations" Modules/*/app/Models/
 
 ### Documentazione Aggiornata
 - ✅ [hastranslations_rule.md](hastranslations_rule.md) - File dedicato alla regola
-- ✅ [filament_extension_pattern.md](filament_extension_pattern.md) - Pattern aggiornato
+- ✅ [filament-extension-pattern-2.md](filament-extension-pattern-2.md) - Pattern aggiornato
 - ✅ `.cursor/rules/` - Regole IDE aggiornate
 - ✅ `.windsurf/rules/` - Regole IDE aggiornate
 

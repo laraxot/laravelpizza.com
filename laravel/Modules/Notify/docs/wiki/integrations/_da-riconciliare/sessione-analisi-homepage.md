@@ -24,7 +24,7 @@ updated: 2026-11-23
 ### Documentazione Creata
 
 #### 1. Analisi Visiva
-**File**: `docs/screenshots/homepage/analisi_visiva.md`
+**File**: `docs/screenshots/homepage/analisi-visiva-3.md`
 
 **Contenuto**:
 - Confronto dettagliato sezione per sezione
@@ -45,7 +45,7 @@ updated: 2026-11-23
 ---
 
 #### 2. Screenshot Analysis
-**File**: `docs/screenshots/homepage/screenshot_analysis.md`
+**File**: `docs/screenshots/homepage/screenshot-analysis-3.md`
 
 **Contenuto**:
 - Descrizione dettagliata layout Bootstrap Italia
@@ -65,7 +65,7 @@ updated: 2026-11-23
 ---
 
 #### 3. Fix Plan
-**File**: `docs/screenshots/homepage/fix_plan.md`
+**File**: `docs/screenshots/homepage/fix-plan-3.md`
 
 **Contenuto**:
 - Piano esecutivo 3 settimane
@@ -91,25 +91,25 @@ La documentazione è stata copiata in:
 1. **Root Docs**
    ```
    docs/screenshots/homepage/
-   ├── analisi_visiva.md
-   ├── screenshot_analysis.md
-   └── fix_plan.md
+   ├── analisi-visiva-3.md
+   ├── screenshot-analysis-3.md
+   └── fix-plan-3.md
    ```
 
 2. **Theme Docs (Sixteen)**
    ```
    laravel/Themes/Sixteen/docs/screenshots/homepage/
-   ├── analisi_visiva.md
-   ├── screenshot_analysis.md
-   └── fix_plan.md
+   ├── analisi-visiva-3.md
+   ├── screenshot-analysis-3.md
+   └── fix-plan-3.md
    ```
 
 3. **Module Docs (Cms)**
    ```
    laravel/Modules/Cms/docs/screenshots/homepage/
-   ├── analisi_visiva.md
-   ├── screenshot_analysis.md
-   └── fix_plan.md
+   ├── analisi-visiva-3.md
+   ├── screenshot-analysis-3.md
+   └── fix-plan-3.md
    ```
 
 4. **OpenViking Context**
@@ -192,9 +192,9 @@ Themes/Sixteen/resources/views/
 ## 📚 Risorse
 
 ### Documentazione
-- [Analisi Visiva](docs/screenshots/homepage/analisi_visiva.md)
-- [Screenshot Analysis](docs/screenshots/homepage/screenshot_analysis.md)
-- [Fix Plan](docs/screenshots/homepage/fix_plan.md)
+- [Analisi Visiva](docs/screenshots/homepage/analisi-visiva-3.md)
+- [Screenshot Analysis](docs/screenshots/homepage/screenshot-analysis-3.md)
+- [Fix Plan](docs/screenshots/homepage/fix-plan-3.md)
 - [OpenViking Context](.openvikings/homepage_alignment_context.md)
 
 ### Link Esterni

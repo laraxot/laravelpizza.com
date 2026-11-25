@@ -17,15 +17,15 @@ related:
 ## 🎯 **Lettura Essenziale**
 1. [README.md](README.md) - Panoramica completa, Multi-Queue e Scheduling.
 2. [roadmap.md](./roadmap.md) - Visione evolutiva e obiettivi 2026.
-3. [philosophy.md](./philosophy.md) - La gestione "Zen" dei flussi asincroni.
+3. [philosophy-3.md](../../../Lang/docs/philosophy-3.md) - La gestione "Zen" dei flussi asincroni.
 
 ## 🏗️ **Core Logic & Services**
-- ⚡ **[Queue Management](./queueable-action.md)** - Guida alla gestione delle code e dei worker.
+- ⚡ **[Queue Management](../../../Notify/docs/queueable-action-2.md)** - Guida alla gestione delle code e dei worker.
 - 🕒 **[Scheduling System](./schedule.md)** - Configurazione di cron job e task pianificati.
 - 🧬 **[Batch Processing](./analysis.md)** - Elaborazione massiva di job concatenati.
 
 ## 📊 **Monitoring & Reports**
-- 📈 **[Job Monitor UI](./filament.md)** - Dashboard di monitoraggio in Filament.
+- 📈 **[Job Monitor UI](../../../Activity/docs/filament-3.md)** - Dashboard di monitoraggio in Filament.
 - 📄 **[PDF Reports](./job-reports.md)** - Generazione di log e statistiche in PDF (HTML2PDF).
 - 🔗 **[Soketi & Socket.io](./soketi.md)** - Real-time monitoring tramite websocket.
 

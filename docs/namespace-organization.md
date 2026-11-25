@@ -63,6 +63,6 @@ Questo errore indica che un metodo è stato erroneamente definito come statico q
 
 ## Collegamenti
 
-- [Documentazione Filament](modules/xot/project_docs/filament/filament_best_practices.md)
+- [Documentazione Filament](modules/xot/project_docs/filament/filament-best-practices-2.md)
 - [XotBasePage](modules/xot/project_docs/filament/pages/xotbasepage.md)
 - [Linee Guida per l'Ereditarietà](modules/xot/project_docs/filament/filament_inheritance_guidelines.md)

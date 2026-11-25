@@ -54,7 +54,7 @@ Consolidated from **20** individual files.
 
 ## send-email-fix-1
 
-*Consolidated from: `send-email-fix.md`*
+*Consolidated from: `send-email-fix-2.md`*
 
 title: "Guida alla Correzione di SendEmail.php"
 type: concept
@@ -69,19 +69,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -324,7 +324,7 @@ class SmtpData extends Data
 
 ## send-email-fix
 
-*Consolidated from: `send-email-fix.md`*
+*Consolidated from: `send-email-fix-2.md`*
 
 <<<<<<< HEAD
 
@@ -574,8 +574,8 @@ class SmtpData extends Data
 
 ## send-email-translation-fix-1
 
-*Consolidated from: `send-email-translation-fix.md`*
-*Consolidated from: `send-email-translation-fix.md`*
+*Consolidated from: `send-email-translation-fix-2.md`*
+*Consolidated from: `send-email-translation-fix-2.md`*
 
 <<<<<<< HEAD
 
@@ -713,163 +713,163 @@ Ogni campo ora ha la struttura espansa completa:
 
 ## Collegamenti
 
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../project_docs/translation_standards_links.md)
-- [Best Practices Filament](../../docs/filament_translation_best_practices.md)- [Documentazione Root](../project_docs/translation_standards_links.md)
-- [Documentazione Root](../project_docs/translation_standards_links.md)
+- [Documentazione Root](../../../../Lang/docs/translation-standards-links-2.md)
+- [Best Practices Filament](../../docs/filament_translation_best_practices.md)- [Documentazione Root](../../../../Lang/docs/translation-standards-links-2.md)
+- [Documentazione Root](../../../../Lang/docs/translation-standards-links-2.md)
 - [Regole Helper Text](../project_docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../project_docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
 <<<<<<< HEAD
@@ -877,9 +877,9 @@ Ogni campo ora ha la struttura espansa completa:
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [Documentazione Root](../project_docs/translation_standards_links.md)
-- [Best Practices Filament](../../docs/filament_translation_best_practices.md)- [Documentazione Root](../project_docs/translation_standards_links.md)
-- [Documentazione Root](../project_docs/translation_standards_links.md)
+- [Documentazione Root](../../../../Lang/docs/translation-standards-links-2.md)
+- [Best Practices Filament](../../docs/filament_translation_best_practices.md)- [Documentazione Root](../../../../Lang/docs/translation-standards-links-2.md)
+- [Documentazione Root](../../../../Lang/docs/translation-standards-links-2.md)
 - [Regole Helper Text](../project_docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../project_docs/filament_translation_best_practices.md)
 
@@ -909,7 +909,7 @@ Ogni campo ora ha la struttura espansa completa:
 
 ## send-email-translation-fix-2
 
-*Consolidated from: `send-email-translation-fix.md`*
+*Consolidated from: `send-email-translation-fix-2.md`*
 
 title: "Fix Traduzioni File send_email.php - Modulo Notify"
 type: concept
@@ -924,19 +924,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -1070,11 +1070,11 @@ Ogni campo ora ha la struttura espansa completa:
 
 ## Collegamenti
 
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../project_docs/translation_standards_links.md)
-- [Best Practices Filament](../../docs/filament_translation_best_practices.md)- [Documentazione Root](../project_docs/translation_standards_links.md)
+- [Documentazione Root](../../../../Lang/docs/translation-standards-links-2.md)
+- [Best Practices Filament](../../docs/filament_translation_best_practices.md)- [Documentazione Root](../../../../Lang/docs/translation-standards-links-2.md)
 - [Regole Helper Text](../project_docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../project_docs/filament_translation_best_practices.md)
 
@@ -1104,7 +1104,7 @@ Ogni campo ora ha la struttura espansa completa:
 
 ## send-email-translation-fix
 
-*Consolidated from: `send-email-translation-fix.md`*
+*Consolidated from: `send-email-translation-fix-2.md`*
 
 <<<<<<< HEAD
 
@@ -1242,14 +1242,14 @@ Ogni campo ora ha la struttura espansa completa:
 
 ## Collegamenti
 
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
-- [Best Practices Filament](../../docs/filament_translation_best_practices.md)- [Documentazione Root](../project_docs/translation_standards_links.md)
+- [Best Practices Filament](../../docs/filament_translation_best_practices.md)- [Documentazione Root](../../../../Lang/docs/translation-standards-links-2.md)
 - [Regole Helper Text](../project_docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../project_docs/filament_translation_best_practices.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../project_docs/translation_standards_links.md)
-- [Best Practices Filament](../../docs/filament_translation_best_practices.md)- [Documentazione Root](../project_docs/translation_standards_links.md)
+- [Documentazione Root](../../../../Lang/docs/translation-standards-links-2.md)
+- [Best Practices Filament](../../docs/filament_translation_best_practices.md)- [Documentazione Root](../../../../Lang/docs/translation-standards-links-2.md)
 - [Regole Helper Text](../project_docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../project_docs/filament_translation_best_practices.md)
 
@@ -1279,7 +1279,7 @@ Ogni campo ora ha la struttura espansa completa:
 
 ## send-email-translation-improvement-1
 
-*Consolidated from: `send-email-translation-improvement.md`*
+*Consolidated from: `send-email-translation-improvement-2.md`*
 
 <<<<<<< HEAD
 
@@ -1568,492 +1568,492 @@ php -l Modules/Notify/lang/it/send_email.php
 ## 🔗 Collegamenti
 
 ### Documentazione Correlata
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
 - [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/project/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
-- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/project/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/project/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/project/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-- [Best Practice Filament](../../../../docs/project/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/project/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
 - [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/project/FILAMENT-BEST-PRACTICES.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
-- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/project/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/project/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/project/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/project/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/project/FILAMENT-BEST-PRACTICES.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
 - [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/project/FILAMENT-BEST-PRACTICES.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Regole Traduzioni Laraxot](../../translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Struttura Modulo Notify](./README.md)
 
 ### File Modificati
 - `laravel/Modules/Notify/lang/it/send_email.php` - File principale migliorato
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
 <<<<<<< HEAD
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
 >>>>>>> laraxot/dev
 =======
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
 <<<<<<< HEAD
 =======
 =======
@@ -2084,7 +2084,7 @@ php -l Modules/Notify/lang/it/send_email.php
 
 ## send-email-translation-improvement-2
 
-*Consolidated from: `send-email-translation-improvement.md`*
+*Consolidated from: `send-email-translation-improvement-2.md`*
 
 title: "Miglioramento File Traduzione send_email.php"
 type: concept
@@ -2099,19 +2099,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -2398,24 +2398,24 @@ php -l Modules/Notify/lang/it/send_email.php
 ## 🔗 Collegamenti
 
 ### Documentazione Correlata
-- [Best Practice Filament](../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
-- [Best Practice Filament](../../../docs/FILAMENT-BEST-PRACTICES.md)- [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
-- [Best Practice Filament](../../../project_docs/FILAMENT-BEST-PRACTICES.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Struttura Modulo Notify](./README.md)
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
 - [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/project/FILAMENT-BEST-PRACTICES.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Struttura Modulo Notify](./README.md)
 
 ### File Modificati
 - `laravel/Modules/Notify/lang/it/send_email.php` - File principale migliorato
 - `laravel/Modules/Notify/docs/send-email-translation-improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send-email-translation-improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send-email-translation-improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement.md` - Questa documentazione- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
 
 ## 📝 Note di Implementazione
 
@@ -2441,7 +2441,7 @@ php -l Modules/Notify/lang/it/send_email.php
 
 ## send-email-translation-improvement
 
-*Consolidated from: `send-email-translation-improvement.md`*
+*Consolidated from: `send-email-translation-improvement-2.md`*
 
 <<<<<<< HEAD
 
@@ -2730,17 +2730,17 @@ php -l Modules/Notify/lang/it/send_email.php
 ## 🔗 Collegamenti
 
 ### Documentazione Correlata
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
 - [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/project/FILAMENT-BEST-PRACTICES.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Struttura Modulo Notify](./README.md)
 
 ### File Modificati
 - `laravel/Modules/Notify/lang/it/send_email.php` - File principale migliorato
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
 
 ## 📝 Note di Implementazione
 
@@ -3013,19 +3013,19 @@ php -l Modules/Notify/lang/it/send_email.php
 ## 🔗 Collegamenti
 
 ### Documentazione Correlata
-- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
 - [Regole Traduzioni Laraxot](../../translation-standards.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
-- [Best Practice Filament](../../../../docs/project/FILAMENT-BEST-PRACTICES.md)
-- [Best Practice Filament](../../../../docs/FILAMENT-BEST-PRACTICES.md)- [Regole Traduzioni Laraxot](../../../../docs/project/translation-standards.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
 - [Struttura Modulo Notify](./README.md)
 
 ### File Modificati
 - `laravel/Modules/Notify/lang/it/send_email.php` - File principale migliorato
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
 
 ## 📝 Note di Implementazione
 
@@ -3190,9 +3190,9 @@ Ogni campo ora ha la struttura espansa completa:
 
 ## Collegamenti
 
-- [Documentazione Root](../../docs/translation_standards_links.md)
+- [Documentazione Root](../../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../../docs/translation-helper-text-standards.md)
-- [Best Practices Filament](../../docs/filament_translation_best_practices.md)- [Documentazione Root](../project_docs/translation_standards_links.md)
+- [Best Practices Filament](../../docs/filament_translation_best_practices.md)- [Documentazione Root](../../../../Lang/docs/translation-standards-links-2.md)
 - [Regole Helper Text](../project_docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../project_docs/filament_translation_best_practices.md)
 - [Best Practices Filament](../../docs/filament_translation_best_practices.md)
@@ -4005,7 +4005,7 @@ The `sendWhatsApp()` method was slightly different but still shared the core not
 
 ## send_email_fix
 
-*Consolidated from: `send_email_fix.md`*
+*Consolidated from: `send-email-fix-2.md`*
 
 <<<<<<< HEAD
 
@@ -4252,7 +4252,7 @@ class SmtpData extends Data
 
 ## send_email_translation_fix
 
-*Consolidated from: `send_email_translation_fix.md`*
+*Consolidated from: `send-email-translation-fix-2.md`*
 
 <<<<<<< HEAD
 
@@ -4390,11 +4390,11 @@ Ogni campo ora ha la struttura espansa completa:
 
 ## Collegamenti
 
-- [Documentazione Root](../docs/translation_standards_links.md)
+- [Documentazione Root](../docs/translation-standards-links-2.md)
 - [Regole Helper Text](../docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../docs/filament_translation_best_practices.md)
-- [Documentazione Root](../project_docs/translation_standards_links.md)
-- [Best Practices Filament](../docs/filament_translation_best_practices.md)- [Documentazione Root](../project_docs/translation_standards_links.md)
+- [Documentazione Root](../../../../Lang/docs/translation-standards-links-2.md)
+- [Best Practices Filament](../docs/filament_translation_best_practices.md)- [Documentazione Root](../../../../Lang/docs/translation-standards-links-2.md)
 - [Regole Helper Text](../project_docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../project_docs/filament_translation_best_practices.md)
 
@@ -4425,7 +4425,7 @@ Ogni campo ora ha la struttura espansa completa:
 
 ## send_email_translation_improvement
 
-*Consolidated from: `send_email_translation_improvement.md`*
+*Consolidated from: `send-email-translation-improvement-2.md`*
 
 <<<<<<< HEAD
 
@@ -4727,17 +4727,17 @@ php -l Modules/Notify/lang/it/send_email.php
 
 ### Documentazione Correlata
 - [Regole Traduzioni Laraxot](../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
-- [Best Practice Filament](../../../docs/FILAMENT-BEST-PRACTICES.md)- [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
-- [Best Practice Filament](../../../project_docs/FILAMENT-BEST-PRACTICES.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
+- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)- [Regole Traduzioni Laraxot](../../../../Lang/docs/translation-standards-3.md)
+- [Best Practice Filament](../../../../Xot/docs/consolidated/filament-best-practices-2.md)
 - [Struttura Modulo Notify](./README.md)
 
 ### File Modificati
 - `laravel/Modules/Notify/lang/it/send_email.php` - File principale migliorato
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
-- `laravel/Modules/Notify/docs/send_email_translation_improvement.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send_email_translation_improvement.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
+- `laravel/Modules/Notify/docs/send-email-translation-improvement-2.md` - Questa documentazione- `laravel/Modules/Notify/project_docs/send-email-translation-improvement-2.md` - Questa documentazione
 
 ## 📝 Note di Implementazione
 
@@ -4766,7 +4766,7 @@ php -l Modules/Notify/lang/it/send_email.php
 
 ## sendemail-troubleshooting-1
 
-*Consolidated from: `sendemail-troubleshooting.md`*
+*Consolidated from: `sendemail-troubleshooting-2.md`*
 
 title: "Troubleshooting SendEmail"
 type: concept
@@ -4781,19 +4781,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -4999,7 +4999,7 @@ php artisan email:test
 
 ## sendemail-troubleshooting
 
-*Consolidated from: `sendemail-troubleshooting.md`*
+*Consolidated from: `sendemail-troubleshooting-2.md`*
 
 <<<<<<< HEAD
 
@@ -5209,7 +5209,7 @@ php artisan email:test
 
 ## sendemail_troubleshooting
 
-*Consolidated from: `sendemail_troubleshooting.md`*
+*Consolidated from: `sendemail-troubleshooting-2.md`*
 
 <<<<<<< HEAD
 

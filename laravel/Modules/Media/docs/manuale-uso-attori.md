@@ -2,6 +2,7 @@
 title: "Manuale d'uso per attori - Media"
 module: Media
 type: manuale-uso
+qmd: "manuale uso attori duso media"
 ---
 
 # Modulo Media

@@ -54,7 +54,7 @@ Consolidated from **20** individual files.
 
 ## netfun-action-errors-1
 
-*Consolidated from: `netfun-action-errors.md`*
+*Consolidated from: `netfun-action-errors-2.md`*
 
 title: "Errori in SendNetfunSMSAction e Correzioni"
 type: concept
@@ -69,19 +69,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -286,7 +286,7 @@ Queste correzioni garantiscono che l'azione funzioni correttamente con la config
 
 ## netfun-action-errors
 
-*Consolidated from: `netfun-action-errors.md`*
+*Consolidated from: `netfun-action-errors-2.md`*
 
 <<<<<<< HEAD
 
@@ -496,7 +496,7 @@ Queste correzioni garantiscono che l'azione funzioni correttamente con la config
 
 ## netfun-action-updates-1
 
-*Consolidated from: `netfun-action-updates.md`*
+*Consolidated from: `netfun-action-updates-2.md`*
 
 <<<<<<< HEAD
 
@@ -832,7 +832,7 @@ Questi miglioramenti garantiscono:
 
 ## netfun-action-updates-2
 
-*Consolidated from: `netfun-action-updates.md`*
+*Consolidated from: `netfun-action-updates-2.md`*
 
 title: "Aggiornamenti a SendNetfunSMSAction"
 type: concept
@@ -847,19 +847,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -1190,7 +1190,7 @@ Questi miglioramenti garantiscono:
 
 ## netfun-action-updates
 
-*Consolidated from: `netfun-action-updates.md`*
+*Consolidated from: `netfun-action-updates-2.md`*
 
 <<<<<<< HEAD
 
@@ -1734,7 +1734,7 @@ Queste correzioni garantiscono che l'azione funzioni correttamente con la config
 
 ## netfun-channel-1
 
-*Consolidated from: `netfun-channel.md`*
+*Consolidated from: `netfun-channel-2.md`*
 
 <<<<<<< HEAD
 
@@ -2435,7 +2435,7 @@ Log::info('SMS inviato', [
 
 ## netfun-channel-2
 
-*Consolidated from: `netfun-channel.md`*
+*Consolidated from: `netfun-channel-2.md`*
 
 title: "Implementazione Canale Netfun"
 type: concept
@@ -2450,19 +2450,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -3159,7 +3159,7 @@ Log::info('SMS inviato', [
 
 ## netfun-channel
 
-*Consolidated from: `netfun-channel.md`*
+*Consolidated from: `netfun-channel-2.md`*
 
 <<<<<<< HEAD
 
@@ -3861,7 +3861,7 @@ Log::info('SMS inviato', [
 
 ## netfun-config-requirements-1
 
-*Consolidated from: `netfun-config-requirements.md`*
+*Consolidated from: `netfun-config-requirements-2.md`*
 
 title: "Requisiti di Configurazione per Netfun SMS"
 type: concept
@@ -3876,19 +3876,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -3909,7 +3909,7 @@ Aggiungi la seguente sezione nel file `config/sms.php`:
 
 ## Introduzione
 
-Questo documento descrive i requisiti di configurazione per l'integrazione con il provider SMS Netfun nel modulo Notify, seguendo la [struttura standardizzata della configurazione SMS](./standardized-sms-config-structure.md).
+Questo documento descrive i requisiti di configurazione per l'integrazione con il provider SMS Netfun nel modulo Notify, seguendo la [struttura standardizzata della configurazione SMS](../../standardized-sms-config-structure-2.md).
 
 ## Struttura di Configurazione
 
@@ -3978,15 +3978,15 @@ NETFUN_API_URL=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 
 ## Documentazione Correlata
 
-- [Struttura Standardizzata della Configurazione SMS](./standardized-sms-config-structure.md)
-- [Canale SMS Netfun](./sms-netfun-channel.md)
+- [Struttura Standardizzata della Configurazione SMS](../../standardized-sms-config-structure-2.md)
+- [Canale SMS Netfun](../../sms-netfun-channel-2.md)
 <<<<<<< HEAD
-- [Struttura Standardizzata della Configurazione SMS](./standardized-sms-config-structure.md)
-- [Canale SMS Netfun](./sms-netfun-channel.md)
+- [Struttura Standardizzata della Configurazione SMS](../../standardized-sms-config-structure-2.md)
+- [Canale SMS Netfun](../../sms-netfun-channel-2.md)
 =======
 <<<<<<< HEAD
-- [Struttura Standardizzata della Configurazione SMS](./standardized-sms-config-structure.md)
-- [Canale SMS Netfun](./sms-netfun-channel.md)
+- [Struttura Standardizzata della Configurazione SMS](../../standardized-sms-config-structure-2.md)
+- [Canale SMS Netfun](../../sms-netfun-channel-2.md)
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -4044,17 +4044,17 @@ NETFUN_ENDPOINT=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 
 ## Collegamenti
 
-- [Documentazione Completa Netfun Channel](./sms-netfun-channel.md)
-- [Esempi di Utilizzo Netfun](./netfun-examples.md)
+- [Documentazione Completa Netfun Channel](../../sms-netfun-channel-2.md)
+- [Esempi di Utilizzo Netfun](../../netfun-examples-2.md)
 <<<<<<< HEAD
-- [Documentazione Completa Netfun Channel](./sms-netfun-channel.md)
-- [Esempi di Utilizzo Netfun](./netfun-examples.md)
+- [Documentazione Completa Netfun Channel](../../sms-netfun-channel-2.md)
+- [Esempi di Utilizzo Netfun](../../netfun-examples-2.md)
 - [Risoluzione Conflitti Netfun](../../netfunchannel-conflict-resolution.md)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-- [Documentazione Completa Netfun Channel](./sms-netfun-channel.md)
-- [Esempi di Utilizzo Netfun](./netfun-examples.md)
+- [Documentazione Completa Netfun Channel](../../sms-netfun-channel-2.md)
+- [Esempi di Utilizzo Netfun](../../netfun-examples-2.md)
 - [Risoluzione Conflitti Netfun](../../netfunchannel-conflict-resolution.md)
 =======
 <<<<<<< .merge_file_woKPNf
@@ -4062,8 +4062,8 @@ NETFUN_ENDPOINT=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 - [Esempi di Utilizzo Netfun](./netfun-examples-2.md)
 - [Risoluzione Conflitti Netfun](./netfunchannel-conflict-resolution.md)
 =======
-- [Documentazione Completa Netfun Channel](./sms-netfun-channel.md)
-- [Esempi di Utilizzo Netfun](./netfun-examples.md)
+- [Documentazione Completa Netfun Channel](../../sms-netfun-channel-2.md)
+- [Esempi di Utilizzo Netfun](../../netfun-examples-2.md)
 - [Risoluzione Conflitti Netfun](../../netfunchannel-conflict-resolution.md)
 >>>>>>> .merge_file_y9MOzY
 >>>>>>> laraxot/dev
@@ -4079,7 +4079,7 @@ NETFUN_ENDPOINT=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 
 ## netfun-config-requirements
 
-*Consolidated from: `netfun-config-requirements.md`*
+*Consolidated from: `netfun-config-requirements-2.md`*
 
 <<<<<<< HEAD
 
@@ -4104,8 +4104,8 @@ Aggiungi la seguente sezione nel file `config/sms.php`:
 
 ## Introduzione
 
-Questo documento descrive i requisiti di configurazione per l'integrazione con il provider SMS Netfun nel modulo Notify, seguendo la [struttura standardizzata della configurazione SMS](./standardized_sms_config_structure.md).
-Questo documento descrive i requisiti di configurazione per l'integrazione con il provider SMS Netfun nel modulo Notify, seguendo la [struttura standardizzata della configurazione SMS](../../standardized_sms_config_structure.md).
+Questo documento descrive i requisiti di configurazione per l'integrazione con il provider SMS Netfun nel modulo Notify, seguendo la [struttura standardizzata della configurazione SMS](../../standardized-sms-config-structure-2.md).
+Questo documento descrive i requisiti di configurazione per l'integrazione con il provider SMS Netfun nel modulo Notify, seguendo la [struttura standardizzata della configurazione SMS](../../standardized-sms-config-structure-2.md).
 
 ## Struttura di Configurazione
 
@@ -4174,10 +4174,10 @@ NETFUN_API_URL=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 
 ## Documentazione Correlata
 
-- [Struttura Standardizzata della Configurazione SMS](./standardized_sms_config_structure.md)
-- [Canale SMS Netfun](./sms_netfun_channel.md)
-- [Struttura Standardizzata della Configurazione SMS](../../standardized_sms_config_structure.md)
-- [Canale SMS Netfun](../../sms_netfun_channel.md)
+- [Struttura Standardizzata della Configurazione SMS](../../standardized-sms-config-structure-2.md)
+- [Canale SMS Netfun](../../sms-netfun-channel-2.md)
+- [Struttura Standardizzata della Configurazione SMS](../../standardized-sms-config-structure-2.md)
+- [Canale SMS Netfun](../../sms-netfun-channel-2.md)
 
 ## Supporto
 
@@ -4232,10 +4232,10 @@ NETFUN_ENDPOINT=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 
 ## Collegamenti
 
-- [Documentazione Completa Netfun Channel](./sms_netfun_channel.md)
-- [Esempi di Utilizzo Netfun](./netfun_examples.md)
-- [Documentazione Completa Netfun Channel](../../sms_netfun_channel.md)
-- [Esempi di Utilizzo Netfun](../../netfun_examples.md)
+- [Documentazione Completa Netfun Channel](../../sms-netfun-channel-2.md)
+- [Esempi di Utilizzo Netfun](../../netfun-examples-2.md)
+- [Documentazione Completa Netfun Channel](../../sms-netfun-channel-2.md)
+- [Esempi di Utilizzo Netfun](../../netfun-examples-2.md)
 - [Risoluzione Conflitti Netfun](./netfunchannel_conflict_resolution.md)
 
 ---
@@ -4246,7 +4246,7 @@ NETFUN_ENDPOINT=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 
 ## netfun-examples-1
 
-*Consolidated from: `netfun-examples.md`*
+*Consolidated from: `netfun-examples-2.md`*
 
 <<<<<<< HEAD
 
@@ -5188,7 +5188,7 @@ class NetfunNotificationIntegrationTest extends TestCase
 
 ## netfun-examples-2
 
-*Consolidated from: `netfun-examples.md`*
+*Consolidated from: `netfun-examples-2.md`*
 
 title: "Netfun Examples"
 type: concept
@@ -5203,19 +5203,19 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
   - "./00-index-documentation.md"
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 <<<<<<< HEAD
-  - "./acronym-naming-conventions.md"
-  - "./acronym-naming-conventions.md"
+  - "../../acronym-naming-conventions-2.md"
+  - "../../acronym-naming-conventions-2.md"
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -5914,7 +5914,7 @@ This document provides examples for Netfun integration.
 
 ## netfun-examples
 
-*Consolidated from: `netfun-examples.md`*
+*Consolidated from: `netfun-examples-2.md`*
 
 <<<<<<< HEAD
 
@@ -6856,7 +6856,7 @@ class NetfunNotificationIntegrationTest extends TestCase
 
 ## netfun_action_errors
 
-*Consolidated from: `netfun_action_errors.md`*
+*Consolidated from: `netfun-action-errors-2.md`*
 
 <<<<<<< HEAD
 
@@ -7066,7 +7066,7 @@ Queste correzioni garantiscono che l'azione funzioni correttamente con la config
 
 ## netfun_action_updates
 
-*Consolidated from: `netfun_action_updates.md`*
+*Consolidated from: `netfun-action-updates-2.md`*
 
 <<<<<<< HEAD
 
@@ -7391,7 +7391,7 @@ Questi miglioramenti garantiscono:
 
 ## netfun_channel
 
-*Consolidated from: `netfun_channel.md`*
+*Consolidated from: `netfun-channel-2.md`*
 
 <<<<<<< HEAD
 
@@ -8087,7 +8087,7 @@ Log::info('SMS inviato', [
 
 ## netfun_config_requirements
 
-*Consolidated from: `netfun_config_requirements.md`*
+*Consolidated from: `netfun-config-requirements-2.md`*
 
 <<<<<<< HEAD
 
@@ -8112,8 +8112,8 @@ Aggiungi la seguente sezione nel file `config/sms.php`:
 
 ## Introduzione
 
-Questo documento descrive i requisiti di configurazione per l'integrazione con il provider SMS Netfun nel modulo Notify, seguendo la [struttura standardizzata della configurazione SMS](./STANDARDIZED_SMS_CONFIG_STRUCTURE.md).
-Questo documento descrive i requisiti di configurazione per l'integrazione con il provider SMS Netfun nel modulo Notify, seguendo la [struttura standardizzata della configurazione SMS](../../standardized_sms_config_structure.md).
+Questo documento descrive i requisiti di configurazione per l'integrazione con il provider SMS Netfun nel modulo Notify, seguendo la [struttura standardizzata della configurazione SMS](../../standardized-sms-config-structure-2.md).
+Questo documento descrive i requisiti di configurazione per l'integrazione con il provider SMS Netfun nel modulo Notify, seguendo la [struttura standardizzata della configurazione SMS](../../standardized-sms-config-structure-2.md).
 
 ## Struttura di Configurazione
 
@@ -8182,10 +8182,10 @@ NETFUN_API_URL=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 
 ## Documentazione Correlata
 
-- [Struttura Standardizzata della Configurazione SMS](./STANDARDIZED_SMS_CONFIG_STRUCTURE.md)
-- [Canale SMS Netfun](./SMS_NETFUN_CHANNEL.md)
-- [Struttura Standardizzata della Configurazione SMS](../../standardized_sms_config_structure.md)
-- [Canale SMS Netfun](../../sms_netfun_channel.md)
+- [Struttura Standardizzata della Configurazione SMS](../../standardized-sms-config-structure-2.md)
+- [Canale SMS Netfun](../../sms-netfun-channel-2.md)
+- [Struttura Standardizzata della Configurazione SMS](../../standardized-sms-config-structure-2.md)
+- [Canale SMS Netfun](../../sms-netfun-channel-2.md)
 
 ## Supporto
 
@@ -8240,10 +8240,10 @@ NETFUN_ENDPOINT=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 
 ## Collegamenti
 
-- [Documentazione Completa Netfun Channel](./SMS_NETFUN_CHANNEL.md)
-- [Esempi di Utilizzo Netfun](./NETFUN_EXAMPLES.md)
-- [Documentazione Completa Netfun Channel](../../sms_netfun_channel.md)
-- [Esempi di Utilizzo Netfun](../../netfun_examples.md)
+- [Documentazione Completa Netfun Channel](../../sms-netfun-channel-2.md)
+- [Esempi di Utilizzo Netfun](../../netfun-examples-2.md)
+- [Documentazione Completa Netfun Channel](../../sms-netfun-channel-2.md)
+- [Esempi di Utilizzo Netfun](../../netfun-examples-2.md)
 - [Risoluzione Conflitti Netfun](./netfunchannel_conflict_resolution.md)
 
 ---
@@ -8254,7 +8254,7 @@ NETFUN_ENDPOINT=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 
 ## netfun_examples
 
-*Consolidated from: `netfun_examples.md`*
+*Consolidated from: `netfun-examples-2.md`*
 
 <<<<<<< HEAD
 

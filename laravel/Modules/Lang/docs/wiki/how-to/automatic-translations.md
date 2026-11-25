@@ -121,15 +121,15 @@ Per gli step dei wizard, la chiave di traduzione segue un formato leggermente di
 
 ## Collegamenti Bidirezionali
 - [LangServiceProvider](/var/www/html/base_<nome progetto>/laravel/Modules/Lang/app/Providers/LangServiceProvider.php)
-- [Convenzioni di Traduzione](/var/www/html/base_<nome progetto>/laravel/modules/lang/docs/translation-conventions.md)
-- [Best Practices Filament](/var/www/html/base_<nome progetto>/laravel/modules/xot/docs/filament-best-practices.md)
+- [Convenzioni di Traduzione](/var/www/html/base_<nome progetto>/laravel/Modules/Notify/docs/translation-conventions-2.md)
+- [Best Practices Filament](/var/www/html/base_<nome progetto>/laravel/Modules/Xot/docs/consolidated/filament-best-practices-2.md)
 
 ## Collegamenti tra versioni di automatic-translations.md
 * [automatic-translations.md](../../ui/docs/filament/automatic-translations.md)
 
 - [LangServiceProvider](Modules/Lang/app/Providers/LangServiceProvider.php)
-- [Convenzioni di Traduzione](Modules/Lang/project_docs/translation-conventions.md)
-- [Best Practices Filament](Modules/Xot/project_docs/filament-best-practices.md)
+- [Convenzioni di Traduzione](Modules/Notify/docs/translation-conventions-2.md)
+- [Best Practices Filament](Modules/Xot/docs/consolidated/filament-best-practices-2.md)
 
 ## Collegamenti tra versioni di automatic-translations.md
 * [automatic-translations.md](../../UI/project_docs/filament/automatic-translations.md)
@@ -245,8 +245,8 @@ Per gli step dei wizard, la chiave di traduzione segue un formato leggermente di
 
 ## Collegamenti Bidirezionali
 - [LangServiceProvider](Modules/Lang/app/Providers/LangServiceProvider.php)
-- [Convenzioni di Traduzione](Modules/Lang/docs/translation-conventions.md)
-- [Best Practices Filament](Modules/Xot/docs/filament-best-practices.md)
+- [Convenzioni di Traduzione](Modules/Notify/docs/translation-conventions-2.md)
+- [Best Practices Filament](Modules/Xot/docs/consolidated/filament-best-practices-2.md)
 
 ## Collegamenti tra versioni di automatic-translations.md
 * [automatic-translations.md](../../UI/docs/filament/automatic-translations.md)

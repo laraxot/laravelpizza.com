@@ -197,7 +197,7 @@ Themes/Sixteen/resources/views/pages/
 ## 📚 Documentazione Creata
 
 1. **`docs/pagine-create.md`** - Elenco completo pagine
-2. **`Modules/UI/docs/BRANDS_ICONS.md`** - Guida icone UI brands
+2. **`Modules/UI/docs/brands-icons-2.md`** - Guida icone UI brands
 3. **`docs/report-finale.md`** - Questo documento
 
 ---

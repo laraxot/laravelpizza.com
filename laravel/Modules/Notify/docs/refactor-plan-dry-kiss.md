@@ -23,7 +23,7 @@ discussions: []
 La cartella `docs/` del modulo Notify viola massivamente i principi DRY/KISS:
 
 ### Violazioni DRY (Don't Repeat Yourself)
-- **File duplicati**: `analisi-completa.md` e `analisi_completa.md`
+- **File duplicati**: `analisi-completa.md` e `analisi-completa-3.md`
 - **Contenuto ripetuto**: 8+ file `analisi-dettagliata-X.md` con contenuti sovrapposti
 - **Naming inconsistente**: Mix di trattini e underscore per stesso contenuto
 - **Documentazione frammentata**: Informazioni sparse in decine di file
@@ -40,17 +40,17 @@ La cartella `docs/` del modulo Notify viola massivamente i principi DRY/KISS:
 Identificare e unificare file con contenuto identico o sovrapposto:
 
 #### Gruppo "Analisi"
-- `analisi-completa.md` + `analisi_completa.md` → `analysis-complete.md`
+- `analisi-completa.md` + `analisi-completa-3.md` → `analysis-complete.md`
 - `analisi-dettagliata-[1-8].md` + `analisi_dettagliata_[1-8].md` → `analysis-detailed.md`
 - `analisi-miglioramenti.md` + `analisi_miglioramenti.md` → `improvements-analysis.md`
 
 #### Gruppo "Email Templates"
 - `email-templates-*.md` → `email-templates.md` (consolidato)
-- `mail-templates.md` + `mail_templates.md` → `mail-templates.md`
-- `improved-email-templates.md` + `improved_email_templates.md` → Integrato in `email-templates.md`
+- `mail-templates.md` + `mail-templates-2.md` → `mail-templates.md`
+- `improved-email-templates.md` + `improved-email-templates-2.md` → Integrato in `email-templates.md`
 
 #### Gruppo "Best Practices"
-- `best-practices.md` + `best_practices.md` → `best-practices.md`
+- `best-practices.md` + `best-practices-3.md` → `best-practices.md`
 - File specifici integrati in sezioni tematiche
 
 ### Fase 2: Struttura Organizzata
@@ -89,7 +89,7 @@ docs/
 Applicare convenzioni consistenti:
 
 #### Regole Naming
-- **Kebab-case**: `email-templates.md` (non `email_templates.md`)
+- **Kebab-case**: `email-templates.md` (non `email-templates-2.md`)
 - **Inglese**: Nomi file in inglese per coerenza progetto
 - **Descrittivi**: Nomi che indicano chiaramente il contenuto
 - **Gerarchici**: Struttura cartelle logica
@@ -97,7 +97,7 @@ Applicare convenzioni consistenti:
 #### Esempi Trasformazioni
 - `analisi-dettagliata-1.md` → `architecture/detailed-analysis.md`
 - `email-templates-spatie.md` → `integrations/spatie-email.md`
-- `sms_netfun_channel.md` → `sms/netfun-provider.md`
+- `sms-netfun-channel-2.md` → `sms/netfun-provider.md`
 
 ### Fase 4: Collegamenti Bidirezionali
 Creare sistema di navigazione coerente:

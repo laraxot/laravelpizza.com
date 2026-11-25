@@ -50,7 +50,7 @@ Esempio `testing.md` (contenuti diversi, nome ambiguo):
 - `docs/bugs/legacy/testing.md`, `docs/bugs/archive/testing.md`, `docs/bugs/testing.md`
 =======
 <<<<<<< HEAD
-- `docs/bugs/legacy/testing.md`, `docs/bugs/archive/testing.md`, `docs/bugs/TESTING.md`
+- `docs/bugs/legacy/testing.md`, `docs/bugs/archive/testing.md`, `docs/bugs/testing-2.md`
 =======
 - `docs/bugs/legacy/testing.md`, `docs/bugs/archive/testing.md`, `docs/bugs/testing.md`
 >>>>>>> laraxot/dev

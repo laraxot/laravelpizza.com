@@ -34,7 +34,7 @@ automatiche.
   IndennitaResponsabilita, Pdnd e Progressioni e in circa 40 prompt: nessun
   marker viene rimosso senza confronto dei due lati.
 - I tre file BMAD di Pdnd (`setup-guide.md`, `brainstorming.md`,
-  `quick-reference.md`) sono stati ricomposti da un subagent con lock e
+  `quick-reference-2.md`) sono stati ricomposti da un subagent con lock e
   `git diff --check` verde.
 - La scansione iniziale rilevava marker nel perimetro docs e prompt; i prompt
   hanno ora zero blocchi audit bloccanti. I marker nei moduli restano tranche

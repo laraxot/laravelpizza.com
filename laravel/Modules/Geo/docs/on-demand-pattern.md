@@ -77,7 +77,7 @@ qmd search "<topic>"
 
 ## Regole Critiche per Module
 
-1. **Nessun bootstrap pesante** — Non elencare rules in AGENTS.md o CLAUDE.md
+1. **Nessun bootstrap pesante** — Non elencare rules in agents.md o CLAUDE.md
 2. **Carica only what you need** — Ogni task carica max 3-5 file
 3. **Mantieni la wiki aggiornata** — Dopo ogni task, aggiorna ./laravel/Modules/Geo/docs/wiki/log.md
 4. **Rispetta la trigger map** — Se esiste, usala; altrimenti usa qmd search

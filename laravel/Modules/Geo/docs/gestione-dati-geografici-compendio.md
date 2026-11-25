@@ -184,7 +184,7 @@ Per facilitare la navigazione nella documentazione esistente, ecco una mappa org
 <<<<<<< .merge_file_1J7d0O
 <<<<<<< .merge_file_YEv9hs
 <<<<<<< .merge_file_YSGQAM
-- [module_geo.md](module-geo.md) - Panoramica del modulo Geo
+- [module-geo-2.md](module-geo.md) - Panoramica del modulo Geo
 =======
 =======
 >>>>>>> .merge_file_QgJDRl
@@ -193,12 +193,12 @@ Per facilitare la navigazione nella documentazione esistente, ecco una mappa org
 =======
 >>>>>>> .merge_file_LZaLd3
 <<<<<<< HEAD
-- [module_geo.md](module_geo.md) - Panoramica del modulo Geo
+- [module-geo-2.md](module-geo-2.md) - Panoramica del modulo Geo
 =======
 <<<<<<< HEAD
-- [module_geo.md](module_geo.md) - Panoramica del modulo Geo
+- [module-geo-2.md](module-geo-2.md) - Panoramica del modulo Geo
 =======
-- [module_geo.md](module-geo.md) - Panoramica del modulo Geo
+- [module-geo-2.md](module-geo.md) - Panoramica del modulo Geo
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 <<<<<<< .merge_file_ZThv8b

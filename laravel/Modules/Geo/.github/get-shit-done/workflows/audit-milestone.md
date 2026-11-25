@@ -42,7 +42,7 @@ node .github/get-shit-done/bin/gsd-tools.cjs phases list
 - Parse version from arguments or detect current from roadmap.md
 - Identify all phase directories in scope
 - Extract milestone definition of done from roadmap.md
-- Extract requirements mapped to this milestone from REQUIREMENTS.md
+- Extract requirements mapped to this milestone from requirements-2.md
 
 ## 2. Read All Phase Verifications
 
@@ -68,7 +68,7 @@ If a phase is missing VERIFICATION.md, flag it as "unverified phase" — this is
 
 With phase context collected:
 
-Extract `MILESTONE_REQ_IDS` from REQUIREMENTS.md traceability table — all REQ-IDs assigned to phases in this milestone.
+Extract `MILESTONE_REQ_IDS` from requirements-2.md traceability table — all REQ-IDs assigned to phases in this milestone.
 
 ```
 Task(
@@ -99,7 +99,7 @@ Combine:
 
 MUST cross-reference three independent sources for each requirement:
 
-### 5a. Parse REQUIREMENTS.md Traceability Table
+### 5a. Parse requirements-2.md Traceability Table
 
 Extract all REQ-IDs mapped to milestone phases from the traceability table:
 - Requirement ID, description, assigned phase, current status, checked-off state (`[x]` vs `[ ]`)
@@ -110,11 +110,11 @@ For each phase's VERIFICATION.md, extract the expanded requirements table:
 - Requirement | Source Plan | Description | Status | Evidence
 - Map each entry back to its REQ-ID
 
-### 5c. Extract summary.md Frontmatter Cross-Check
+### 5c. Extract summary-2.md Frontmatter Cross-Check
 
-For each phase's summary.md, extract `requirements-completed` from YAML frontmatter:
+For each phase's summary-2.md, extract `requirements-completed` from YAML frontmatter:
 ```bash
-for summary in .planning/phases/*-*/*-SUMMARY.md; do
+for summary in .planning/phases/*-*/*-summary-2.md; do
   node .github/get-shit-done/bin/gsd-tools.cjs summary-extract "$summary" --fields requirements_completed | jq -r '.requirements_completed'
 done
 ```
@@ -123,7 +123,7 @@ done
 
 For each REQ-ID, determine status using all three sources:
 
-| VERIFICATION.md Status | SUMMARY Frontmatter | REQUIREMENTS.md | → Final Status |
+| VERIFICATION.md Status | SUMMARY Frontmatter | requirements-2.md | → Final Status |
 |------------------------|---------------------|-----------------|----------------|
 | passed                 | listed              | `[x]`           | **satisfied**  |
 | passed                 | listed              | `[ ]`           | **satisfied** (update checkbox) |
@@ -136,7 +136,7 @@ For each REQ-ID, determine status using all three sources:
 
 **REQUIRED:** Any `unsatisfied` requirement MUST force `gaps_found` status on the milestone audit.
 
-**Orphan detection:** Requirements present in REQUIREMENTS.md traceability table but absent from ALL phase VERIFICATION.md files MUST be flagged as orphaned. Orphaned requirements are treated as `unsatisfied` — they were assigned but never verified by any phase.
+**Orphan detection:** Requirements present in requirements-2.md traceability table but absent from ALL phase VERIFICATION.md files MUST be flagged as orphaned. Orphaned requirements are treated as `unsatisfied` — they were assigned but never verified by any phase.
 
 ## 6. Aggregate into v{version}-MILESTONE-AUDIT.md
 
@@ -304,8 +304,8 @@ All requirements met. No critical blockers. Accumulated tech debt needs review.
 <success_criteria>
 - [ ] Milestone scope identified
 - [ ] All phase VERIFICATION.md files read
-- [ ] summary.md `requirements-completed` frontmatter extracted for each phase
-- [ ] REQUIREMENTS.md traceability table parsed for all milestone REQ-IDs
+- [ ] summary-2.md `requirements-completed` frontmatter extracted for each phase
+- [ ] requirements-2.md traceability table parsed for all milestone REQ-IDs
 - [ ] 3-source cross-reference completed (VERIFICATION + SUMMARY + traceability)
 - [ ] Orphaned requirements detected (in traceability but absent from all VERIFICATIONs)
 - [ ] Tech debt and deferred gaps aggregated

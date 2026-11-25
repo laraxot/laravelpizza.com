@@ -17,7 +17,7 @@ Questo documento descrive gli strumenti e le procedure per la risoluzione dei co
 
 ## Collegamenti
 - [Documentazione Git](../../docs/git.md)
-- [Script Git](git_scripts.md)
+- [Script Git](git-scripts-2.md)
 - [Best Practices Git](git_best_practices.md)
 
 ## Script di Risoluzione

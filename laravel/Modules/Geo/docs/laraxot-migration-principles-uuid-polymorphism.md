@@ -232,7 +232,7 @@ $table->index(['morphable_id', 'morphable_type']); // Performance
 ## 🔗 **Collegamenti e Risorse**
 
 ### **Documentazione Correlata**
-- [Regole Migrazioni Base](../../xot/docs/migration_rules.md)
+- [Regole Migrazioni Base](../../xot/docs/migration-rules-2.md)
 - [UUID Implementation](../../user/docs/uuid_implementation.md)
 - [Polymorphic Relationships](../../xot/docs/polymorphic_relationships.md)
 - [System Architecture](../system_architecture.md)

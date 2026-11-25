@@ -696,7 +696,7 @@ See [ROADMAP.md](./roadmap.md) for details.
 - [Geo Module](../geo/docs/readme.md) - Geographic data services
 
 ### Project Documentation
-- [CLAUDE.md](../../../claude.md) - Project architecture and development rules
+- [CLAUDE.md](../laravel/Modules/Geo/docs/root-md-files/claude.md) - Project architecture and development rules
 - [Project README](../../../readme.md) - Main project documentation
 
 ### External Resources

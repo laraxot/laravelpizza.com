@@ -179,6 +179,6 @@ public function toMail(object $notifiable): \Illuminate\Mail\Mailable
 
 ## Collegamenti alla Documentazione Correlata
 
-- [ATTACHMENTS_USAGE.md](../email-sending/attachments_usage.md)
-- [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/email_layouts_best_practices.md)
-- [EMAIL_TROUBLESHOOTING.md](../email-sending/email_troubleshooting.md)
+- [attachments-usage-2.md](../email-sending/attachments-usage-2.md)
+- [email-layouts-best-practices-2.md](../mail-templates/email-layouts-best-practices-2.md)
+- [email-troubleshooting-2.md](../email-sending/email-troubleshooting-2.md)

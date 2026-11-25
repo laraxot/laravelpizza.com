@@ -203,6 +203,6 @@ class LogoutPage
 
 ### Link Correlati
 - [Documentazione Volt](https://livewire.laravel.com/docs/volt)
-- [Best Practices Filament](../filament_best_practices.md)
-- [Routing Best Practices](../ROUTING_BEST_PRACTICES.md) 
+- [Best Practices Filament](../filament-best-practices-2.md)
+- [Routing Best Practices](routing-best-practices-2.md) 
 - [Routing Best Practices](../routing-best-practices-2.md) 

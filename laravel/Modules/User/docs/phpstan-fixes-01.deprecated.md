@@ -17,4 +17,4 @@ related:
   - "./actions-path-convention.md"
 ---
 
-> Questo file è stato rinominato in [phpstan-fixes-.deprecated.md](phpstan-fixes-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+> Questo file è stato rinominato in [phpstan-fixes-2.deprecated.md](phpstan-fixes-2.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.

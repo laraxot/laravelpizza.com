@@ -23,7 +23,7 @@ discussions: []
 
 ### Fondamenti
 - **[Architecture Overview](./architecture/)** - Architettura generale del sistema
-- **[Directory Structure](./directory-structure.md)** - Struttura cartelle e organizzazione
+- **[Directory Structure](raw/history/directory-structure-2.md)** - Struttura cartelle e organizzazione
 - **[Module System](./development/module-development.md)** - Sistema modulare
 - **[Dependency Management](./dependencies.md)** - Gestione dipendenze
 
@@ -85,7 +85,7 @@ discussions: []
 
 ### Sicurezza Dati
 - **[Security Best Practices](./SECURITY.md)** - Sicurezza applicazione
-- **[GDPR Compliance](./gdpr-compliance.md)** - Conformità GDPR
+- **[GDPR Compliance](../../User/docs/gdpr-compliance-2.md)** - Conformità GDPR
 - **[Audit Log](../../Activity/docs/README.md)** - Logging attività
 
 ## 🧪 Testing
@@ -127,7 +127,7 @@ discussions: []
 - **[Database Optimization](./performance/database.md)** - Ottimizzazione DB
 
 ### Monitoring
-- **[Metrics Dashboard](./metrics-dashboard.md)** - Dashboard metriche
+- **[Metrics Dashboard](../../User/docs/metrics-dashboard-2.md)** - Dashboard metriche
 - **[Performance Monitoring](./performance/monitoring.md)** - Monitoraggio performance
 
 ## 🌐 Internazionalizzazione

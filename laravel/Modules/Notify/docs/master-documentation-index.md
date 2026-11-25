@@ -72,7 +72,7 @@ status: draft
 
 ### Per Sviluppatori
 - [Architecture Overview](./architecture/README.md)
-- [Getting Started](./GETTING_STARTED.md)
+- [Getting Started](./getting-started-2.md)
 - [Coding Standards](./conventions/README.md)
 
 ### Per AI Agents
@@ -257,7 +257,7 @@ openviking get-context --query="documentation"
 ### BMAD Threads
 - **Thread Principale**: `_bmad/threads/zen-documentation.md`
 - **PRD**: `_bmad/prd/documentation-system.md`
-- **Architecture**: `_bmad/architecture/documentation.md`
+- **Architecture**: `../../Activity/docs/documentation-2.md`
 
 ### GSD Phases
 - **Phase 1**: `.planning/phases/01-doc-audit/`

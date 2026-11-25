@@ -184,7 +184,7 @@ Quando PHPStan analizza un modulo grande (Gdpr: 15K+ LoC), ha bisogno di respiro
 - **BMAD-METHOD Docs**: [../wiki/rules/bmad-method-integration.md](../wiki/rules/bmad-method-integration.md)
 - **GitHub Issue Template**: [../wiki/_templates/phpstan-module-github-issue.md](../wiki/_templates/phpstan-module-github-issue.md)
 - **PHPStan Prompt (Skills)**: `bashscripts/tools/prompts/phpstan_module.txt`
-- **Laravel CLAUDE.md (On-Demand Pattern)**: [../../laravel/CLAUDE.md](../../../../claude.md)
+- **Laravel CLAUDE.md (On-Demand Pattern)**: [../root-md-files/claude.md](../root-md-files/claude.md)
 
 ---
 

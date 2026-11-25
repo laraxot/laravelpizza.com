@@ -187,7 +187,7 @@ For existing codebases:
 
 <state_reference>
 
-STATE.md references PROJECT.md:
+state-2.md references PROJECT.md:
 
 ```markdown
 ## Project Reference

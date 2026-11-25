@@ -404,7 +404,7 @@ php artisan list 2>&1 | grep "does not comply"
 
 **Start Here:**
 - [Xot README](./Modules/Xot/docs/README.md) - Entry point
-- [Index Navigazione](./Modules/Xot/docs/index.md) - Guida 2,560 docs
+- [Index Navigazione](../../../../Xot/docs/index.md) - Guida 2,560 docs
 - [Essential Reading](./Modules/Xot/docs/essential-reading.md) - Top 10 docs
 
 **Latest Fixes:**

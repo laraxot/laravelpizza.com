@@ -271,7 +271,7 @@ Consultare il [CHANGELOG](CHANGELOG.md) per informazioni sulle modifiche recenti
 
 ## Licenza
 
-Questo modulo è rilasciato sotto la [MIT License](LICENSE.md).
+Questo modulo è rilasciato sotto la [MIT License](license-2.md).
 
 ## Autori e Contributori
 

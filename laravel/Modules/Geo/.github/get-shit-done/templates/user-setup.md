@@ -82,9 +82,9 @@ Expected results:
 
 Generate `{phase}-USER-SETUP.md` when plan frontmatter contains `user_setup` field.
 
-**Trigger:** `user_setup` exists in plan.md frontmatter and has items.
+**Trigger:** `user_setup` exists in plan-2.md frontmatter and has items.
 
-**Location:** Same directory as plan.md and summary.md.
+**Location:** Same directory as plan-2.md and summary.md.
 
 **Timing:** Generated during execute-plan.md after tasks complete, before summary.md creation.
 
@@ -92,7 +92,7 @@ Generate `{phase}-USER-SETUP.md` when plan frontmatter contains `user_setup` fie
 
 ## Frontmatter Schema
 
-In plan.md, `user_setup` declares human-required configuration:
+In plan-2.md, `user_setup` declares human-required configuration:
 
 ```yaml
 user_setup:

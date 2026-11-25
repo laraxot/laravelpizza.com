@@ -77,7 +77,7 @@ governance: `Modules/Xot/docs/adr/0012-behavioral-contract-governance.md`.
 Un contratto descrive una singola operazione pubblica con effetti collaterali, chiamate esterne o invarianti di dominio. Documenta il comportamento osservabile, inclusi errori e non-goals, senza trasformare ogni metodo interno in un contratto.
 
 Ogni invariante ha un ID stabile; il test Pest corrispondente usa lo stesso ID come group. Le Action usano
-`NOTIFY-<OPERAZIONE>-INV-<N>`; il formato breve `NOTIFY-INV-N` resta nella tabella di [INDEX](INDEX.md). La classe
+`NOTIFY-<OPERAZIONE>-INV-<N>`; il formato breve `NOTIFY-INV-N` resta nella tabella di [INDEX](index.md). La classe
 implementatrice deve contenere `@contract docs/contracts/<file>.md`; contratto, codice e test cambiano nello stesso commit.
 
 Cosa promettono le Action di Notify che parlano con l'esterno o scrivono dati: i due webhook dei fornitori email (esiti Mailjet,
@@ -162,8 +162,8 @@ contratto nello stesso commit.
 
 ## Indice e template
 
-- [INDEX](INDEX.md) — tabella operativa operazione, contratto, classe, invarianti; copertura e backlog.
-- [Template di contratto](_template.md) — scheletro con le sei sezioni e la tabella degli invarianti, da copiare per una nuova Action.
+- [INDEX](index.md) — tabella operativa operazione, contratto, classe, invarianti; copertura e backlog.
+- [Template di contratto](template.md) — scheletro con le sei sezioni e la tabella degli invarianti, da copiare per una nuova Action.
 =======
 =======
 >>>>>>> .merge_file_zsWbN0
@@ -174,8 +174,8 @@ contratto nello stesso commit.
 
 ## Indice e template
 
-- [INDEX](INDEX.md) — tabella operativa operazione, contratto, classe, invarianti; oggi censisce solo `modelwithstatuscontract.md`.
-- [Template di contratto](_template.md) — scheletro con le sei sezioni e la tabella degli invarianti, da copiare per una nuova Action.
+- [INDEX](index.md) — tabella operativa operazione, contratto, classe, invarianti; oggi censisce solo `modelwithstatuscontract.md`.
+- [Template di contratto](template.md) — scheletro con le sei sezioni e la tabella degli invarianti, da copiare per una nuova Action.
 <<<<<<< HEAD
 >>>>>>> laraxot/dev
 =======
@@ -196,9 +196,9 @@ Standard: `Modules/Xot/docs/contracts/contract-authoring-standard.md`; governanc
 
 - [send-notification-action.md](send-notification-action.md) (`NOTIFY-SEND-INV-1..5`)
 - [modelwithstatuscontract.md](modelwithstatuscontract.md): nota legacy (`type: note`, `status: draft`) che rimanda a `Modules/Xot/app/Contracts/ModelWithStatusContract.php`; non e' un contract di Action e non segue il formato a sei sezioni.
-- `_template.md`: modello per i nuovi contract.
+- `template.md`: modello per i nuovi contract.
 
-Copertura e backlog: [INDEX.md](INDEX.md).
+Copertura e backlog: [index.md](index.md).
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 =======

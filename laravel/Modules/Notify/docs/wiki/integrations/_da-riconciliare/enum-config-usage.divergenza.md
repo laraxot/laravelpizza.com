@@ -18,12 +18,12 @@ updated: 2026-11-23
 >>>>>>> .merge_file_O6nDmp
 ---
 
-# Divergenza: `enum_config_usage.md`
+# Divergenza: `enum-config-usage-2.md`
 
-Questo file veniva da `docs/wiki/integrations/modules/notify/enum_config_usage.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
+Questo file veniva da `../../../enum-config-usage-2.md`, cancellato dal working tree senza migrazione. Il modulo ha gia' un file con lo stesso nome, ma con **corpo diverso**:
 
-- versione del modulo: `laravel/Modules/Notify/docs/enum_config_usage.md`
-- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/enum_config_usage.md`
+- versione del modulo: `laravel/Modules/Notify/docs/enum-config-usage-2.md`
+- versione recuperata: `laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/enum-config-usage-2.md`
 
 Vanno confrontate e fuse a mano. Quando la fusione e' fatta, questo file e la nota vanno rimossi.
 

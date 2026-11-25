@@ -139,7 +139,7 @@ I test girano (`XDEBUG_MODE=off ./vendor/bin/pest --no-coverage Modules/Tenant/t
 
 ### Duplicati segnalati, non toccati
 
-- Indici: `00-index.md`, `00-index.md`, `index.md`, `index.md`; generati: `INDEX_GENERATED.md`, `index-generated.md`, `index_generated.md`.
+- Indici: `00-index.md`, `00-index.md`, `index.md`, `index.md`; generati: `index-generated-3.md`, `index-generated-3.md`, `index-generated-3.md`.
 - Nomi troncati o con variante: `arr-first-vs-collect-first-decision.md` / `...-ision.md`, `runninginconsole-check-decision.md` / `...-ision.md`, `runninginconsole-check-removal-summary.md` / `...-sumy.md`.
-- Conflitti: `conflict-resolution.md`, `conflict-resolution-fixes.md`, `conflict_resolution_fixes.md`, `conflict-resolutiones.md`.
-- `confidence-guidelines.md` / `confidence_guidelines.md`.
+- Conflitti: `conflict-resolution-2.md`, `conflict-resolution-fixes-2.md`, `conflict-resolution-fixes-2.md`, `conflict-resolutiones.md`.
+- `confidence-guidelines-3.md` / `confidence-guidelines-3.md`.

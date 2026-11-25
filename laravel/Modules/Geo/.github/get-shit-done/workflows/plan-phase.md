@@ -10,7 +10,7 @@ discussions: []
 ---
 
 <purpose>
-Create executable phase prompts (plan.md files) for a roadmap phase with integrated research and verification. Default flow: Research (if needed) -> Plan -> Verify -> Done. Orchestrates gsd-phase-researcher, gsd-planner, and gsd-plan-checker agents with a revision loop (max 3 iterations).
+Create executable phase prompts (plan-2.md files) for a roadmap phase with integrated research and verification. Default flow: Research (if needed) -> Plan -> Verify -> Done. Orchestrates gsd-phase-researcher, gsd-planner, and gsd-plan-checker agents with a revision loop (max 3 iterations).
 </purpose>
 
 <required_reading>
@@ -180,7 +180,7 @@ If "Run discuss-phase first": Display `/gsd-discuss-phase {X}` and exit workflow
 
 **If `has_research` is true (from init) AND no `--research` flag:** Use existing, skip to step 6.
 
-**If research.md missing OR `--research` flag:**
+**If research-2.md missing OR `--research` flag:**
 
 Display banner:
 ```
@@ -220,7 +220,7 @@ Answer: "What do I need to know to PLAN this phase well?"
 </additional_context>
 
 <output>
-Write to: {phase_dir}/{phase_num}-RESEARCH.md
+Write to: {phase_dir}/{phase_num}-research-2.md
 </output>
 ```
 
@@ -242,10 +242,10 @@ Task(
 
 **Skip if:** `nyquist_validation_enabled` is false from INIT JSON.
 
-After researcher completes, check if research.md contains a Validation Architecture section:
+After researcher completes, check if research-2.md contains a Validation Architecture section:
 
 ```bash
-grep -l "## Validation Architecture" "${PHASE_DIR}"/*-RESEARCH.md 2>/dev/null
+grep -l "## Validation Architecture" "${PHASE_DIR}"/*-research-2.md 2>/dev/null
 ```
 
 **If found:**
@@ -266,7 +266,7 @@ node .github/get-shit-done/bin/gsd-tools.cjs commit-docs "docs(phase-${PHASE}): 
 ## 6. Check Existing Plans
 
 ```bash
-ls "${PHASE_DIR}"/*-PLAN.md 2>/dev/null
+ls "${PHASE_DIR}"/*-plan-2.md 2>/dev/null
 ```
 
 **If exists:** Offer: 1) Add more plans, 2) View existing, 3) Replan from scratch.
@@ -328,7 +328,7 @@ Output consumed by /gsd-execute-phase. Plans need:
 </downstream_consumer>
 
 <quality_gate>
-- [ ] plan.md files created in phase directory
+- [ ] plan-2.md files created in phase directory
 - [ ] Each plan has valid frontmatter
 - [ ] Tasks are specific and actionable
 - [ ] Dependencies correctly identified
@@ -371,7 +371,7 @@ Checker prompt:
 **Phase Goal:** {goal from ROADMAP}
 
 <files_to_read>
-- {PHASE_DIR}/*-PLAN.md (Plans to verify)
+- {PHASE_DIR}/*-plan-2.md (Plans to verify)
 - {roadmap_path} (Roadmap)
 - {requirements_path} (Requirements)
 - {context_path} (USER DECISIONS from /gsd-discuss-phase)
@@ -420,7 +420,7 @@ Revision prompt:
 **Mode:** revision
 
 <files_to_read>
-- {PHASE_DIR}/*-PLAN.md (Existing plans)
+- {PHASE_DIR}/*-plan-2.md (Existing plans)
 - {context_path} (USER DECISIONS from /gsd-discuss-phase)
 </files_to_read>
 
@@ -565,7 +565,7 @@ Verification: {Passed | Passed with override | Skipped}
 ───────────────────────────────────────────────────────────────
 
 **Also available:**
-- cat .planning/phases/{phase-dir}/*-PLAN.md — review plans
+- cat .planning/phases/{phase-dir}/*-plan-2.md — review plans
 - /gsd-plan-phase {X} --research — re-research first
 
 ───────────────────────────────────────────────────────────────
@@ -579,7 +579,7 @@ Verification: {Passed | Passed with override | Skipped}
 - [ ] Research completed (unless --skip-research or --gaps or exists)
 - [ ] gsd-phase-researcher spawned with CONTEXT.md
 - [ ] Existing plans checked
-- [ ] gsd-planner spawned with CONTEXT.md + research.md
+- [ ] gsd-planner spawned with CONTEXT.md + research-2.md
 - [ ] Plans created (PLANNING COMPLETE or CHECKPOINT handled)
 - [ ] gsd-plan-checker spawned with CONTEXT.md
 - [ ] Verification passed OR user override OR max iterations with user decision

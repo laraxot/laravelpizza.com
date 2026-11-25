@@ -9,7 +9,7 @@ issues: []
 discussions: []
 module: theme
 topic: product-roadmap
-canonical: ../../../Themes/docs/shared-components/product_roadmap.md
+canonical: ../../../Themes/docs/shared-components/product-roadmap-3.md
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/product_roadmap.md
+See canonical documentation: ../../../Themes/docs/shared-components/product-roadmap-3.md

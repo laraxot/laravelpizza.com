@@ -14,7 +14,7 @@ Consolidare la documentazione rimuovendo duplicati e file obsoleti, mantenendo u
 ## File Duplicati da Consolidare
 
 ### 1. Advanced Form Components
-- ❌ `advanced_form_components.md` → Eliminare
+- ❌ `advanced-form-components-2.md` → Eliminare
 - ✅ `advanced-form-components.md` → Mantenere
 
 ### 2. Blade Components
@@ -24,18 +24,18 @@ Consolidare la documentazione rimuovendo duplicati e file obsoleti, mantenendo u
 - ✅ `blade-icons.md` → Mantenere
 
 ### 3. Filament Components
-- ❌ `filament_4x_upgrade.md` → Eliminare
-- ❌ `filament_4x_upgrade_report.md` → Eliminare
+- ❌ `filament-4x-upgrade-2.md` → Eliminare
+- ❌ `filament-4x-upgrade-report-2.md` → Eliminare
 - ✅ `filament-4x-upgrade.md` → Mantenere
 - ✅ `filament-4x-upgrade-report.md` → Mantenere
 
-- ❌ `filament_blade_components_usage.md` → Eliminare
+- ❌ `filament-blade-components-usage-2.md` → Eliminare
 - ✅ `filament-blade-components-usage.md` → Mantenere
 
 - ❌ `filament_components.md` → Eliminare
 - ❌ `filament_components_errors.md` → Eliminare
 - ❌ `filament_components_location_studio.md` → Eliminare
-- ❌ `filament_components_usage.md` → Eliminare
+- ❌ `filament-components-usage-2.md` → Eliminare
 - ✅ `filament-components.md` → Mantenere
 - ✅ `filament-components-errors.md` → Mantenere
 - ✅ `filament-components-location-studio.md` → Mantenere
@@ -69,7 +69,7 @@ Consolidare la documentazione rimuovendo duplicati e file obsoleti, mantenendo u
 - ❌ `phpstan_fixes_2025.md` → Eliminare (duplicato)
 - ❌ `phpstan_fixes_gennaio_2025.md` → Eliminare (duplicato)
 - ❌ `phpstan_corrections_summary.md` → Eliminare (duplicato)
-- ❌ `phpstan_radio_badge_fix.md` → Eliminare (duplicato)
+- ❌ `phpstan-radio-badge-fix-2.md` → Eliminare (duplicato)
 - ✅ `phpstan-compliance.md` → Mantenere (documento principale)
 - ✅ `phpstan-fixes-2025.md` → Mantenere (se contiene info aggiuntive)
 - ✅ `phpstan-corrections-summary.md` → Mantenere
@@ -99,7 +99,7 @@ Consolidare la documentazione rimuovendo duplicati e file obsoleti, mantenendo u
 - ❌ `base_components.md` → Eliminare
 - ✅ `base-components.md` → Mantenere
 
-- ❌ `best_practices.md` → Eliminare
+- ❌ `best-practices-3.md` → Eliminare
 - ✅ `best-practices.md` → Mantenere
 
 - ❌ `blocks_system.md` → Eliminare
@@ -109,7 +109,7 @@ Consolidare la documentazione rimuovendo duplicati e file obsoleti, mantenendo u
 - ❌ `chart_components.md` → Eliminare
 - ✅ `chart-components.md` → Mantenere
 
-- ❌ `components_guide.md` → Eliminare
+- ❌ `components-guide-2.md` → Eliminare
 - ✅ `components-guide.md` → Mantenere
 - ✅ `components.md` → Mantenere
 

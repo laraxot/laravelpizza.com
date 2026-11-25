@@ -150,7 +150,7 @@ class StoreOrderRequest extends FormRequest
 ## 9. Collegamenti correlati
 
 - [translations-faq.md](./translations-faq.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](./TRANSLATION_KEYS_BEST_PRACTICES.md)
+- [translation-keys-best-practices-3.md](../laravel/Modules/Lang/docs/translation-keys-best-practices-3.md)
 - [translations-storage.md](./translations-storage.md)
 - [translation-process.md](./translation-process.md)
 - [README.md](./README.md)

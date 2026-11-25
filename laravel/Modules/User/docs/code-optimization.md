@@ -55,7 +55,7 @@ docs/
 │   ├── resources.md
 │   ├── widgets.md
 │   ├── relation_managers.md
-│   └── best_practices.md
+│   └── best-practices-3.md
 ├── integrations/
 │   ├── socialite.md
 │   ├── passport.md
@@ -67,8 +67,8 @@ docs/
 │   └── webhook_api.md
 ├── reference/
 │   ├── configuration.md
-│   ├── database_schema.md
-│   ├── commands.md
+│   ├── database-schema-2.md
+│   ├── commands-2.md
 │   └── events.md
 └── best_practices/
     ├── SECURITY.md

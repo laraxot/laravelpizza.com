@@ -73,7 +73,7 @@ Gli altri file di `resources/js` restano: sono importati da `bootstrap.js`/compo
   convertirli richiede di toccare le Action che li usano e i test.
 - `DataTransferObjects\LocationDTO` e `Datas\LocationDTO` convivono: va tenuta solo la Data.
 - `docs/` ha ancora alberi estranei al modulo (`docs/gdpr/docs/html2pdf`, `docs/performance/Performance/...`) e
-  centinaia di file in radice (vedi `DOCS-MIGRATION-MAP.md`).
+  centinaia di file in radice (vedi `docs-migration-map.md`).
 - Link esterni allo scope ancora rivolti agli indici rimossi: `docs/docs_master_index.md`,
   `Modules/Notify/docs/ai-agents/project-docs-index.md`; due link della story `map-controls-i18n-it-en-de-es`
   puntano a story datate di User e Sixteen.

@@ -259,7 +259,7 @@ test('service provider extends ServiceProvider', function () {
 ## References
 
 - Initial analysis: `laravel/docs/test-failures-analysis-2026-01-09.md`
-- CLAUDE.md rules: `/var/www/_bases/base_laravelpizza/CLAUDE.md`
+- CLAUDE.md rules: `/../laravel/Modules/Geo/docs/root-md-files/claude.md`
 - ServiceProvider rules: `Modules/Xot/docs/serviceprovider-minimal-structure.md`
 
 ---

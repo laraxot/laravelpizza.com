@@ -50,7 +50,7 @@ Ogni agente prende un file, lo risolve semanticamente (non meccanicamente), e sp
 - [ ] `laravel/Modules/Gdpr/docs/wiki/README.md`
 
 ### Modules/Geo
-- [ ] `laravel/Modules/Geo/docs/wiki/AGENTS.md`
+- [ ] `laravel/Modules/Geo/docs/wiki/agents-2.md`
 - [ ] `laravel/Modules/Geo/docs/wiki/README.md`
 - [ ] `laravel/Modules/Geo/docs/wiki/log.md`
 

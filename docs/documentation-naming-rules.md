@@ -32,7 +32,7 @@ Modules/Meetup/docs/
 ```
 Modules/Meetup/docs/
 ├── PROJECT-PURPOSE.md          # ❌ MAIUSCOLE non permesse
-├── Implementation-Plan.md      # ❌ Maiuscole miste
+├── implementation-plan-2.md      # ❌ Maiuscole miste
 ├── folio_volt_architecture.md  # ❌ underscores invece di hyphens
 ├── SEO-Marketing-Plan.md       # ❌ MAIUSCOLE non permesse
 └── MonetizationStrategy.md     # ❌ CamelCase non permesso

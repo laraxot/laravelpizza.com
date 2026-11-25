@@ -40,7 +40,7 @@ Chi cambia una decisione scrive un nuovo ADR e segna il precedente `superseded b
 - [0001-controlli-operativi-solo-super-admin-e-whitelist](0001-controlli-operativi-solo-super-admin-e-whitelist.md)
 - [job-operations-are-whitelisted](job-operations-are-whitelisted.md): stessa decisione del precedente in forma breve; overlap da consolidare (non marcato superseded da questa sessione).
 
-Elenco con stato: [INDEX.md](INDEX.md).
+Elenco con stato: [index.md](index.md).
 =======
 =======
 >>>>>>> .merge_file_V0uNZu

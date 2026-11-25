@@ -135,5 +135,5 @@ class DoctorResource extends XotBaseResource
 ## Collegamenti Correlati
 
 - [Documentazione Filament Forms](https://filamentphp.com/docs/3.x/forms/layout/wizard)
-- [Best Practices Forms](../forms/best-practices.md)
+- [Best Practices Forms](../../laravel/Modules/Activity/docs/best-practices-3.md)
 - [Clean Code Guidelines](../../../docs/clean-code.md)

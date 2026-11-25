@@ -24,6 +24,6 @@ CI enforcement:
 - La pipeline GitHub Actions verifica PR e commit; se non trovata una issue, creerà una issue automaticamente e commenterà la PR richiedendo aggiornamento.
 
 Agents:
-- Tutti gli agenti AI devono rispettare agents_policy.md; le violazioni saranno bloccate dalla CI.
+- Tutti gli agenti AI devono rispettare agents-policy-2.md; le violazioni saranno bloccate dalla CI.
 
 If you are an integrator: run `git config core.hooksPath .githooks` once after cloning to enable local checks.

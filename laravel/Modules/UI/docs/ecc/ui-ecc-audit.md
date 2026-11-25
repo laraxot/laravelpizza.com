@@ -4,55 +4,13 @@ type: ecc-audit
 status: review
 updated: 2026-11-16
 module: UI
-<<<<<<< HEAD
-<<<<<<< .merge_file_HiRwrg
-<<<<<<< HEAD
 qmd: "ECC audit UI verification security testing laravel security-review clean-code laravel-verification verification-loop tdd-workflow"
-=======
-qmd: "ECC audit UI security-review clean-code laravel-verification verification-loop tdd-workflow"
->>>>>>> laraxot/dev
-=======
-qmd: "ECC audit UI verification security testing laravel security-review clean-code laravel-verification verification-loop tdd-workflow"
-=======
-qmd: "ECC audit UI verification security testing laravel security-review clean-code laravel-verification verification-loop tdd-workflow"
-=======
-<<<<<<< .merge_file_y0J7no
-qmd: "ECC audit UI security-review clean-code laravel-verification verification-loop tdd-workflow"
-=======
-qmd: "ECC audit UI verification security testing laravel security-review clean-code laravel-verification verification-loop tdd-workflow"
->>>>>>> .merge_file_pkov2C
->>>>>>> .merge_file_sNe2Po
->>>>>>> laraxot/dev
 ---
 
 # ECC audit operativo — UI
 
 ## Contratto PTVX
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_HiRwrg
-=======
-=======
-<<<<<<< .merge_file_y0J7no
->>>>>>> .merge_file_sNe2Po
-ECC non sostituisce AGENTS.md/BMAD. Ogni finding: story BMAD, lock, fix causa,
-PHPStan + Pest, aggiornamento docs/QMD.
-
-## Checklist
-
-- [ ] `clean-code`: DRY/KISS, Actions su Services, niente wrapper inutili
-- [ ] `security-review`: policy, mass assignment, export, log, privacy, tenant
-- [ ] `laravel-verification`: route, config, migration additive, container
-- [ ] `verification-loop`: PHPStan level max + Pest mirato
-- [ ] `tdd-workflow`: regressione sui finding P0
-- [ ] `documentation-sync`: story + indici + qmd
-- [ ] `context-engineering`: QMD/graphify prima; registrare il perché dopo
-=======
-<<<<<<< .merge_file_HiRwrg
-=======
->>>>>>> .merge_file_pkov2C
->>>>>>> .merge_file_sNe2Po
->>>>>>> laraxot/dev
 ECC non sostituisce `AGENTS.md`/BMAD: ogni finding diventa story in [epics.md](../bmad/epics.md), con lock,
 fix alla causa, PHPStan + Pest, aggiornamento docs/QMD. Le abilità ECC sono scelte on-demand
 (`ecc-ptvx-workflow`); qui è registrato **l'esito**, non la checklist vuota.
@@ -67,66 +25,12 @@ fix alla causa, PHPStan + Pest, aggiornamento docs/QMD. Le abilità ECC sono sce
 | `verification-loop` (PHPStan max + Pest) | PHPStan ok, Pest skip | PHPStan 0 errori; Pest: skip documentato: DB di test `10.100.200.53:3306` irraggiungibile (TCP chiuso) e `Xot/tests/Support/TestDatabaseGuard.php:63` rifiuta DB non `*_test`; i test con DB restano appesi al connect MySQL (timeout 150 s osservato). Nessun test contro il MySQL locale (dati sacri). |
 | `tdd-workflow` (regressione sui P0) | aperto | regressione da scrivere su `UiBasePolicy::before` (utente estraneo → null) |
 | `documentation-sync` | fatto | pack aggiornato: [audit](../bmad/audits/ui-audit.md), [epics](../bmad/epics.md), [decision-log](../bmad/decision-log.md) |
-<<<<<<< HEAD
-<<<<<<< .merge_file_HiRwrg
-<<<<<<< HEAD
 | `context-engineering` | fatto | source-first; il perché in [purpose](../bmad/purpose.md) |
-=======
-| `context-engineering` | fatto | source-first; il perché in [purpose](../wiki/purpose.md) |
->>>>>>> laraxot/dev
-=======
-| `context-engineering` | fatto | source-first; il perché in [purpose](../bmad/purpose.md) |
-=======
-| `context-engineering` | fatto | source-first; il perché in [purpose](../bmad/purpose.md) |
-=======
-<<<<<<< .merge_file_y0J7no
-| `context-engineering` | fatto | source-first; il perché in [purpose](../wiki/purpose.md) |
-=======
-| `context-engineering` | fatto | source-first; il perché in [purpose](../bmad/purpose.md) |
->>>>>>> .merge_file_pkov2C
->>>>>>> .merge_file_sNe2Po
->>>>>>> laraxot/dev
 
 ## Input misurato (2026-11-16)
 
 | Voce | N |
 |---|---:|
-<<<<<<< HEAD
-<<<<<<< .merge_file_HiRwrg
-=======
-=======
-<<<<<<< .merge_file_y0J7no
->>>>>>> .merge_file_sNe2Po
-| app PHP | 133 |
-| test | 87 |
-| resources | 0 |
-| actions | 6 |
-| services | 5 |
-| policies (files approx) | 2 |
-
-## Gate osservati
-
-- PHPStan `Modules` (2026-11-16): 0 errori
-- Pest: pending (ambiente testing)
-
-## Anti-pattern vietati
-
-- baseline/`@phpstan-ignore` senza motivazione
-- test svuotati per silenziare errori
-- migrate:fresh / RefreshDatabase / --force
-- docs con date nel nome file
-- comportamento o screenshot inventati
-
-## Riferimenti
-
-- [00-index](./00-index.md)
-- [BMAD audit](../bmad/audit.md)
-=======
-<<<<<<< .merge_file_HiRwrg
-=======
->>>>>>> .merge_file_pkov2C
->>>>>>> .merge_file_sNe2Po
->>>>>>> laraxot/dev
 | PHP `app/` | 133 |
 | Test PHP | 87 |
 | Models | 4 |

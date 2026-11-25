@@ -89,7 +89,7 @@ SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/job-au
 
 - PHPStan `Modules/Job`: **0 errori**.
 - Pest: **parziale** — 17 pass (`JobStatusAuthorizationTest`); suite completa non eseguita (macchina con load ≈ 50).
-- Gap-fill BMAD completato: [purpose](./purpose.md), [architecture](./architecture.md), [decision-log](./decision-log.md), [epics](./epics.md), [brainstorming](./brainstorming.md).
+- Gap-fill BMAD completato: [purpose](./purpose.md), [architecture](../architecture-2.md), [decision-log](./decision-log.md), [epics](./epics.md), [brainstorming](./brainstorming.md).
 
 ## Riferimenti
 

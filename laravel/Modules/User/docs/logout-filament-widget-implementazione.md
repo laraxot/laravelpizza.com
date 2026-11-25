@@ -248,7 +248,7 @@ FilamentView::registerRenderHook(
 
 ## Alternativa: Logout Immediato
 
-Se non è necessaria una conferma per il logout, è preferibile utilizzare l'approccio "Folio con PHP puro" come descritto in [LOGOUT_BLADE_IMPLEMENTATION.md](logout-blade-implementation-2.md), che esegue il logout immediatamente senza richiedere conferma.
+Se non è necessaria una conferma per il logout, è preferibile utilizzare l'approccio "Folio con PHP puro" come descritto in [logout-blade-implementation-3.md](logout-blade-implementation-2.md), che esegue il logout immediatamente senza richiedere conferma.
 
 ## Conclusione
 

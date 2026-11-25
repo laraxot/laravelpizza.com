@@ -13,14 +13,14 @@ Questa documentazione è stata creata per risolvere i problemi comuni relativi a
 ## 📚 Documenti Creati
 
 ### 1. **Troubleshooting Completo** 
-📄 `fullcalendar-scheduler-license-troubleshooting.md`
+📄 `fullcalendar-scheduler-license-troubleshooting-3.md`
 - **400+ righe** di documentazione dettagliata
 - Copertura completa di tutti i problemi noti
 - Soluzioni specifiche per Laravel/Filament
 - Best practices per ambiente sanitario SaluteOra
 
 ### 2. **Riferimento Rapido**
-📄 `fullcalendar-scheduler-quick-reference.md`
+📄 `fullcalendar-scheduler-quick-reference-4.md`
 - **200+ righe** di soluzioni immediate
 - Fix rapidi per errori comuni
 - Checklist di verifica
@@ -241,9 +241,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
+  - "../actions-path-convention-2.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+  - "../actions-path-convention-2.md"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/readme-fullcalendar-scheduler.md

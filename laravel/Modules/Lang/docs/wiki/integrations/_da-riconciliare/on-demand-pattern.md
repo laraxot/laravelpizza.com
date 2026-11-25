@@ -78,7 +78,7 @@ qmd search "<topic>"
 
 ## Regole Critiche per Module
 
-1. **Nessun bootstrap pesante** — Non elencare rules in agents.md o CLAUDE.md
+1. **Nessun bootstrap pesante** — Non elencare rules in agents-3.md o CLAUDE.md
 
 1. **Nessun bootstrap pesante** — Non elencare rules in AGENTS.md o CLAUDE.md
 2. **Carica only what you need** — Ogni task carica max 3-5 file

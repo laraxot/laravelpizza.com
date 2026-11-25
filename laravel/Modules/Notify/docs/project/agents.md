@@ -19,7 +19,7 @@ related:
   - ./coding-agent-manifests.md
 ---
 
-# FixCity Platform - AGENTS.md
+# FixCity Platform - agents-2.md
 
 This file contains comprehensive guidelines and commands for AI agents working on the FixCity Laravel application.
 
@@ -132,7 +132,7 @@ This file contains comprehensive guidelines and commands for AI agents working o
   - `GITHUB_TOKEN`: Automatico (opzionale, fallback)
 - **Subtrees Synced**: 18+ (bashscripts, modules, etc.)
 - **Docs**: `bashscripts/docs/git/sync-remote-repo-guide.md`
-- **Coordination**: `bashscripts/docs/git/sync_remote_repo_coordination.md`
+- **Coordination**: `bashscripts/docs/git/sync-remote-repo-coordination-2.md`
 
 #### Sync Subtrees Workflow
 
@@ -178,7 +178,7 @@ bashscripts/git/subtrees/sync_remote_repo.sh laraxot
 **CRITICAL**: Multiple AI agents may work on this script simultaneously.
 
 **BEFORE Making Changes**:
-1. Read coordination log: `bashscripts/docs/git/sync_remote_repo_coordination.md`
+1. Read coordination log: `bashscripts/docs/git/sync-remote-repo-coordination-2.md`
 2. Check GitHub Issues: `gh issue list --repo laraxot/bashscripts_fila5`
 3. Add your entry to coordination log
 4. Create feature branch (never work on `dev` directly)
@@ -197,10 +197,10 @@ bashscripts/git/subtrees/sync_remote_repo.sh laraxot
 **Lock File Protocol**:
 ```bash
 # Create lock (exclusive work)
-echo "Agent-XYZ-$(date -I)" > bashscripts/docs/git/sync_remote_repo_coordination.md.lock
+echo "Agent-XYZ-$(date -I)" > bashscripts/docs/git/sync-remote-repo-coordination-2.md.lock
 
 # Remove lock
-rm bashscripts/docs/git/sync_remote_repo_coordination.md.lock
+rm bashscripts/docs/git/sync-remote-repo-coordination-2.md.lock
 ```
 
 **Agent Teams**:
@@ -209,7 +209,7 @@ rm bashscripts/docs/git/sync_remote_repo_coordination.md.lock
 - **Documentation**: Guides, examples
 - **Testing**: Validation, edge cases
 
-**See**: `bashscripts/docs/git/sync_remote_repo_coordination.md` for complete coordination guidelines
+**See**: `bashscripts/docs/git/sync-remote-repo-coordination-2.md` for complete coordination guidelines
 
 ## 🚀 BUILD/LINT/TEST COMMANDS
 
@@ -1488,7 +1488,7 @@ When creating or modifying features:
 1. **Update module README**: Describe the feature and usage
 2. **Create/update roadmap**: Track progress and future work
 3. **Document error fixes**: Record how PHPStan errors were resolved
-4. **Update AGENTS.md**: Add new patterns and best practices
+4. **Update agents-2.md**: Add new patterns and best practices
 5. **Create examples**: Show correct usage patterns
 
 ---
@@ -1682,7 +1682,7 @@ gh run list --limit 10
 
 - **Scripts**: `bashscripts/docs/[category]/[script].md`
 - **Workflows**: `.github/` AND `bashscripts/ai/.github/`
-- **Rules**: `AGENTS.md`, `.windsurfrules`
+- **Rules**: `agents-2.md`, `.windsurfrules`
 - **Memories**: Save for future reference
 
 **Why**: Other agents (and future you) need to understand your work.
@@ -1700,9 +1700,9 @@ gh run list --limit 10
 
 ### Resources
 
-- **[docs/MULTI_AGENT_COLLABORATION.md](docs/MULTI_AGENT_COLLABORATION.md)** - Complete guide
+- **[../multi-agent-collaboration-2.md](../multi-agent-collaboration-2.md)** - Complete guide
 - **[Issue #12](https://github.com/laraxot/base_fixcity_fila5/issues/12)** - AI Agent Collaboration
-- **[docs/AI_AGENT_TEAMS.md](docs/AI_AGENT_TEAMS.md)** - Team organization
+- **[../ai-agent-teams-2.md](../ai-agent-teams-2.md)** - Team organization
 
 ### Success Story: 2026-03-13 Sync Fix
 
@@ -1792,13 +1792,13 @@ git push origin dev
 - Other AI agents can't see unpushed changes
 - Working code ≠ saved code until pushed
 
-**REFERENCE**: [Git Commit & Push Rule](docs/GIT_COMMIT_PUSH_RULE.md)
+**REFERENCE**: [Git Commit & Push Rule](../git-commit-push-rule-2.md)
 
 ### Documentation Resources
 
-- [Master Documentation Index](docs/MASTER_DOCUMENTATION_INDEX.md)
-- [Documentation Governance](docs/DOCUMENTATION_GOVERNANCE.md)
-- [Documentation Improvement Plan](docs/DOCUMENTATION_ANALYSIS_AND_IMPROVEMENT_PLAN.md)
+- [Master Documentation Index](../master-documentation-index-2.md)
+- [Documentation Governance](../documentation-governance-2.md)
+- [Documentation Improvement Plan](../documentation-analysis-and-improvement-plan-2.md)
 
 ---
 

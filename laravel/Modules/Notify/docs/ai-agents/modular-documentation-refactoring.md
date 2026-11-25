@@ -52,9 +52,9 @@ Organizzare la documentazione AI agents in file modulari più piccoli e gestibil
 ### Prima (File Grandi)
 ```
 AGENTS.md      - 104 righe  ❌ Troppo grande
-qwen.md        - 890 righe  ❌ Enorme
+qwen-2.md        - 890 righe  ❌ Enorme
 CLAUDE.md      - 592 righe  ❌ Difficile da navigare
-gemini.md      - 369 righe  ❌ Contenuti mischiati
+gemini-2.md      - 369 righe  ❌ Contenuti mischiati
 IFLOW.md       - 312 righe  ❌ Duplicazioni
 ────────────────────────────────────────────
 TOTALE:        2,267 righe  ❌ Difficile da mantenere
@@ -159,7 +159,7 @@ TOTALE: ~2,500 righe  ✅ Organizzate, navigabili, mantenibili
 =======
 - [AGENTS.md](../../AGENTS.md) - File originale compatto
 >>>>>>> .merge_file_3UxZn9
-- [qwen.md](../../qwen.md) - Contesto Qwen Code
+- [qwen-2.md](../wiki/integrations/_da-riconciliare/qwen-2.md) - Contesto Qwen Code
 ```
 
 ### Cross-Link tra Moduli
@@ -241,10 +241,10 @@ TOTALE: ~2,500 righe  ✅ Organizzate, navigabili, mantenibili
 - `Themes/*/docs/` - Documentazione tema
 
 ### File Originali (Compatti)
-- `AGENTS.md` - Link a tutti i moduli
-- `qwen.md` - Contesto Qwen Code
+- `agents-2.md` - Link a tutti i moduli
+- `qwen-2.md` - Contesto Qwen Code
 - `CLAUDE.md` - Claude-specific patterns
-- `gemini.md` - Gemini-specific patterns
+- `gemini-2.md` - Gemini-specific patterns
 - `IFLOW.md` - iFlow-specific patterns
 
 ---

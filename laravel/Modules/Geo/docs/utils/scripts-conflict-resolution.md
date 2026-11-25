@@ -152,7 +152,7 @@ Dopo la risoluzione dei conflitti, verranno eseguite le seguenti verifiche:
 
 - [Documentazione Generale sulla Risoluzione dei Conflitti](scripts-conflict-resolution.md)
 - [Linee Guida per la Scrittura di Script Bash](git-scripts.md)
-- [Principio DRY negli Script Bash](no-duplicate-functions-in-sourced-scripts.md)
+- [Principio DRY negli Script Bash](no-duplicate-functions-in-sourced-scripts-2.md)
 - [Risoluzione dei Conflitti Bash](conflict-resolution-bash.md)
 
 ## Risoluzioni recenti (Aprile 2025)

@@ -154,7 +154,7 @@
 
 ### Collegamenti Interni
 - [Bottlenecks](bottlenecks.md)
-- [Best Practices](best-practices.md)
+- [Best Practices](best-practices-3.md)
 - [Testing](testing.md)
 
 ### Versione HEAD
@@ -163,7 +163,7 @@
 ### Versione Incoming
 
 - [Documentazione Autenticazione](./authentication.md) - Guida all'autenticazione
-- [Documentazione API](./api.md) - Guida alle API
+- [Documentazione API](../../laravel/Modules/User/docs/api-2.md) - Guida alle API
 - [Integrazione Social](./social-auth.md) - Guida all'integrazione social
 2. Implementazione SSO
 3. Nuove integrazioni social

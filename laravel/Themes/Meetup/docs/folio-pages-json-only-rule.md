@@ -90,7 +90,7 @@ name('contact');
 
 ## Riferimenti
 
-- [Content Blocks System](../../modules/cms/docs/content-blocks-system.md)
+- [Content Blocks System](../../../Modules/Cms/docs/content-blocks-system-2.md)
 - [Folio Routing Plan](../../modules/meetup/docs/folio-routing-plan.md)
 - [Architettura Frontoffice](../../modules/meetup/docs/architecture-reference.md)
 

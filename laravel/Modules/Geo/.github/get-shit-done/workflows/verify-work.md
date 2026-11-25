@@ -94,14 +94,14 @@ Continue to `create_uat_file`.
 Use `phase_dir` from init (or run init if not already done).
 
 ```bash
-ls "$phase_dir"/*-SUMMARY.md 2>/dev/null
+ls "$phase_dir"/*-summary-2.md 2>/dev/null
 ```
 
-Read each summary.md to extract testable deliverables.
+Read each summary-2.md to extract testable deliverables.
 </step>
 
 <step name="extract_tests">
-**Extract testable deliverables from summary.md:**
+**Extract testable deliverables from summary-2.md:**
 
 Parse for:
 1. **Accomplishments** - Features/functionality added
@@ -143,7 +143,7 @@ issues: []
 discussions: []
 status: testing
 phase: XX-name
-source: [list of summary.md files]
+source: [list of summary-2.md files]
 started: [ISO timestamp]
 updated: [ISO timestamp]
 ---
@@ -385,7 +385,7 @@ Task(
 
 <files_to_read>
 - {phase_dir}/{phase_num}-UAT.md (UAT with diagnoses)
-- .planning/STATE.md (Project State)
+- .planning/state-2.md (Project State)
 - .planning/roadmap.md (Roadmap)
 </files_to_read>
 
@@ -432,7 +432,7 @@ Task(
 **Phase Goal:** Close diagnosed gaps from UAT
 
 <files_to_read>
-- {phase_dir}/*-PLAN.md (Plans to verify)
+- {phase_dir}/*-plan-2.md (Plans to verify)
 </files_to_read>
 
 </verification_context>
@@ -472,7 +472,7 @@ Task(
 **Mode:** revision
 
 <files_to_read>
-- {phase_dir}/*-PLAN.md (Existing plans)
+- {phase_dir}/*-plan-2.md (Existing plans)
 </files_to_read>
 
 **Checker issues:**
@@ -481,7 +481,7 @@ Task(
 </revision_context>
 
 <instructions>
-Read existing plan.md files. Make targeted updates to address checker issues.
+Read existing plan-2.md files. Make targeted updates to address checker issues.
 Do NOT replan from scratch unless issues are fundamental.
 </instructions>
 """,
@@ -573,7 +573,7 @@ Default to **major** if unclear. User can correct if needed.
 </severity_inference>
 
 <success_criteria>
-- [ ] UAT file created with all tests from summary.md
+- [ ] UAT file created with all tests from summary-2.md
 - [ ] Tests presented one at a time with expected behavior
 - [ ] User responses processed as pass/issue/skip
 - [ ] Severity inferred from description (never asked)

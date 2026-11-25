@@ -252,7 +252,7 @@ class DashboardTest extends TestCase
 ## Documentazione Correlata
 
 - [XotBasePanelProvider](../laravel/modules/xot/docs/filament/xotbasepanelprovider.md) - Configurazione panel provider
-- [Filament Integration](../laravel/modules/xot/docs/filament/filament_integration.md) - Integrazione generale Filament
+- [Filament Integration](../../laravel/Modules/Lang/docs/filament-integration-3.md) - Integrazione generale Filament
 - [Best Practices](../laravel/modules/xot/docs/best-practices.md) - Best practices generali
 
 ## Collegamenti

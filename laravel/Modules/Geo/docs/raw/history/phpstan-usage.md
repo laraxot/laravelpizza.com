@@ -90,7 +90,7 @@ Il modulo Rating è progettato secondo una separazione chiara tra:
    Modules/Rating/resources/views/
    ```
 
-Per dettagli completi, consulta `docs/directory_structure.md`.
+Per dettagli completi, consulta `docs/directory-structure-2.md`.
 ## Architettura del Modulo Notify
 
 Il modulo Notify implementa un sistema di notifiche multicanale che richiede un'attenta organizzazione strutturale per garantire l'affidabilità dell'analisi statica.
@@ -127,7 +127,7 @@ Il modulo segue una chiara distinzione tra organizzazione fisica e logica:
   Modules/Notify/config/notification.php   <-- Configurazione canali e opzioni
   ```
 
-La documentazione completa sulla struttura dei moduli è disponibile in `docs/directory_structure.md`.
+La documentazione completa sulla struttura dei moduli è disponibile in `docs/directory-structure-2.md`.
 
 ## Risoluzione dei problemi comuni
 
