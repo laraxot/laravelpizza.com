@@ -18,7 +18,7 @@ Non stiamo solo replicando - stiamo **ELEVANDO** il sito originale per renderlo:
 - 💥 **PIÙ ENGAGING** - Animazioni fluide e interazioni wow-factor
 - 🔥 **PIÙ VIRALE** - Progettato per essere condiviso e diventare virale
 
-**Obiettivo**: Prendere laravelpizza.com e renderlo **straordinario** - il genere di sito che fa dire "WOW!" e che viene condiviso spontaneamente.
+**Obiettivo**: Prendere laravelpizza.com e renderlo **straordinario** - il genere di sito che fa dire "WOW!" e che viene condiviso spontaneamente attraverso i social.
 
 ---
 
