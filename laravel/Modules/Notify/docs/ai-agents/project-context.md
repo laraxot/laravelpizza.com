@@ -3,21 +3,7 @@ title: "project context"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_80fscd
-<<<<<<< .merge_file_OMz1x4
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_t7JdH1
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_80fscd
->>>>>>> .merge_file_2KNNFd
-=======
->>>>>>> .merge_file_t7JdH1
 qmd: "project context"
 issues: []
 discussions: []

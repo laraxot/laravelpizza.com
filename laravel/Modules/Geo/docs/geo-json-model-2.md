@@ -231,37 +231,9 @@ class Comune extends GeoJsonModel
 ```
 
 - Tutti i filtri e le select dinamiche ora usano solo il modello Comune.
-<<<<<<< .merge_file_ehhwXO
-<<<<<<< .merge_file_Xok9GF
-<<<<<<< .merge_file_TCeylA
-<<<<<<< .merge_file_ZN5XwD
 - Vedi anche [geo-entities-2.md](geo-entities.md) per motivazione e percentuali di adozione.
-=======
-=======
->>>>>>> .merge_file_nswC7s
-=======
->>>>>>> .merge_file_wnDq9d
-=======
->>>>>>> .merge_file_DIBZLa
-<<<<<<< HEAD
 - Vedi anche [geo-entities-2.md](./geo-entities-2.md) per motivazione e percentuali di adozione.
-=======
-<<<<<<< HEAD
-- Vedi anche [geo-entities-2.md](./geo-entities-2.md) per motivazione e percentuali di adozione.
-=======
 - Vedi anche [geo-entities-2.md](geo-entities.md) per motivazione e percentuali di adozione.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ehhwXO
-<<<<<<< .merge_file_Xok9GF
-<<<<<<< .merge_file_TCeylA
->>>>>>> .merge_file_JBHY8i
-=======
->>>>>>> .merge_file_nswC7s
-=======
->>>>>>> .merge_file_wnDq9d
-=======
->>>>>>> .merge_file_DIBZLa
 
 ## Analisi: Comune come modello Sushi
 
@@ -340,37 +312,9 @@ updated: 2026-09-26
 qmd: "geo json model"
 issues: []
 discussions: []
-<<<<<<< .merge_file_ehhwXO
-<<<<<<< .merge_file_Xok9GF
-<<<<<<< .merge_file_TCeylA
-<<<<<<< .merge_file_ZN5XwD
 - Vedi anche [geo-entities-2.md](geo-entities.md) per motivazione e percentuali di adozione.
-=======
-=======
->>>>>>> .merge_file_nswC7s
-=======
->>>>>>> .merge_file_wnDq9d
-=======
->>>>>>> .merge_file_DIBZLa
-<<<<<<< HEAD
 - Vedi anche [geo-entities-2.md](./geo-entities-2.md) per motivazione e percentuali di adozione.
-=======
-<<<<<<< HEAD
-- Vedi anche [geo-entities-2.md](./geo-entities-2.md) per motivazione e percentuali di adozione.
-=======
 - Vedi anche [geo-entities-2.md](geo-entities.md) per motivazione e percentuali di adozione.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ehhwXO
-<<<<<<< .merge_file_Xok9GF
-<<<<<<< .merge_file_TCeylA
->>>>>>> .merge_file_JBHY8i
-=======
->>>>>>> .merge_file_nswC7s
-=======
->>>>>>> .merge_file_wnDq9d
-=======
->>>>>>> .merge_file_DIBZLa
 
 ## Approfondimento: Sushi (calebporzio/sushi) per modelli geografici
 
@@ -447,37 +391,9 @@ class ComuneSushi extends Model
 - [Sito ufficiale Sushi](https://usesushi.dev/)
 - [GitHub Sushi](https://github.com/calebporzio/sushi)
 - [Esempi avanzati](https://jasonlbeggs.com/blog/laravel-sushi)
-<<<<<<< .merge_file_ehhwXO
-<<<<<<< .merge_file_Xok9GF
-<<<<<<< .merge_file_TCeylA
-<<<<<<< .merge_file_ZN5XwD
 - [geo-entities-2.md](geo-entities.md)
-=======
-=======
->>>>>>> .merge_file_nswC7s
-=======
->>>>>>> .merge_file_wnDq9d
-=======
->>>>>>> .merge_file_DIBZLa
-<<<<<<< HEAD
 - [geo-entities-2.md](./geo-entities-2.md)
-=======
-<<<<<<< HEAD
-- [geo-entities-2.md](./geo-entities-2.md)
-=======
 - [geo-entities-2.md](geo-entities.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ehhwXO
-<<<<<<< .merge_file_Xok9GF
-<<<<<<< .merge_file_TCeylA
->>>>>>> .merge_file_JBHY8i
-=======
->>>>>>> .merge_file_nswC7s
-=======
->>>>>>> .merge_file_wnDq9d
-=======
->>>>>>> .merge_file_DIBZLa
 
 ---
 
@@ -516,37 +432,9 @@ class ComuneSushi extends Model
 
 ---
 
-<<<<<<< .merge_file_ehhwXO
-<<<<<<< .merge_file_Xok9GF
-<<<<<<< .merge_file_TCeylA
-<<<<<<< .merge_file_ZN5XwD
 - Vedi anche [geo-entities-2.md](geo-entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
-=======
-=======
->>>>>>> .merge_file_nswC7s
-=======
->>>>>>> .merge_file_wnDq9d
-=======
->>>>>>> .merge_file_DIBZLa
-<<<<<<< HEAD
 - Vedi anche [geo-entities-2.md](./geo-entities-2.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
-=======
-<<<<<<< HEAD
-- Vedi anche [geo-entities-2.md](./geo-entities-2.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
-=======
 - Vedi anche [geo-entities-2.md](geo-entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ehhwXO
-<<<<<<< .merge_file_Xok9GF
-<<<<<<< .merge_file_TCeylA
->>>>>>> .merge_file_JBHY8i
-=======
->>>>>>> .merge_file_nswC7s
-=======
->>>>>>> .merge_file_wnDq9d
-=======
->>>>>>> .merge_file_DIBZLa
 
 ## Approccio avanzato: SushiToJsons (CRUD, multi-tenant, Eloquent + JSON)
 
@@ -630,34 +518,6 @@ trait SushiToJsons
 
 ---
 
-<<<<<<< .merge_file_ehhwXO
-<<<<<<< .merge_file_Xok9GF
-<<<<<<< .merge_file_TCeylA
-<<<<<<< .merge_file_ZN5XwD
 - Vedi anche [geo-entities-2.md](geo-entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
-=======
-=======
->>>>>>> .merge_file_nswC7s
-=======
->>>>>>> .merge_file_wnDq9d
-=======
->>>>>>> .merge_file_DIBZLa
-<<<<<<< HEAD
 - Vedi anche [geo-entities-2.md](./geo-entities-2.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
-=======
-<<<<<<< HEAD
-- Vedi anche [geo-entities-2.md](./geo-entities-2.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
-=======
 - Vedi anche [geo-entities-2.md](geo-entities.md) e [squire-integration.md](./squire-integration.md) per altri confronti e strategie.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ehhwXO
-<<<<<<< .merge_file_Xok9GF
-<<<<<<< .merge_file_TCeylA
->>>>>>> .merge_file_JBHY8i
-=======
->>>>>>> .merge_file_nswC7s
-=======
->>>>>>> .merge_file_wnDq9d
-=======
->>>>>>> .merge_file_DIBZLa

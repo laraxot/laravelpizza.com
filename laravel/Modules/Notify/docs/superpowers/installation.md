@@ -3,15 +3,7 @@ title: "installation"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_zteqQi
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_ZQUfLn
 qmd: "installation"
 issues: []
 discussions: []
@@ -24,10 +16,6 @@ discussions: []
 > **Platform**: Cursor  
 > **Version**: v5.0.6
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "installation"
@@ -55,15 +43,10 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 📋 Prerequisites
 ### Required
 ### Recommended
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🚀 Installation Steps
 
 ### Step 1: Open Cursor

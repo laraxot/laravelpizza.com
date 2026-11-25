@@ -4,10 +4,7 @@ type: index
 tags: [concepts, User]
 created: 2026-05-11
 updated: 2026-08-19
-<<<<<<< .merge_file_CK6gqS
 qmd: "concepts user"
-=======
->>>>>>> .merge_file_LFo0ZZ
 ---
 
 # concepts Index — User
@@ -25,11 +22,9 @@ Concetti specifici del modulo User. Carica on-demand via `qmd search` o consulta
 
 ## Filament auth FO
 
-<<<<<<< .merge_file_CK6gqS
 - [filament-widget-no-validate-form](../../llm-wiki/concepts/filament-widget-no-validate-form.md) — validazione solo in `UserForm`; submit = `getState()`, no `validateForm()`
 - [filament-widget-linear-crud-model-create](filament-widget-linear-crud-model-create.md) — `getUserClass()::create($data)`, no Action banale
 - [filament-widget-resource-form-delegation](filament-widget-resource-form-delegation.md) — widget → `UserForm::get*FormSchema()`
-=======
 - [filament-widget-no-validate-form](filament-widget-no-validate-form.md) — validazione solo in `UserForm`; submit = `getState()`, no `validateForm()`
 - [filament-widget-linear-crud-model-create](filament-widget-linear-crud-model-create.md) — `getUserClass()::create($data)`, no Action banale
 - [filament-widget-resource-form-delegation](filament-widget-resource-form-delegation.md) — widget → `UserForm::get*FormSchema()`
@@ -38,7 +33,6 @@ Concetti specifici del modulo User. Carica on-demand via `qmd search` o consulta
 - [filament-widget-linear-crud-model-create](filament-widget-linear-crud-model-create.md): `getUserClass()::create($data)`, no Action banale
 - [filament-widget-resource-form-delegation](filament-widget-resource-form-delegation.md): widget → `UserForm::get*FormSchema()`
 
->>>>>>> .merge_file_LFo0ZZ
 
 ## Testing
 

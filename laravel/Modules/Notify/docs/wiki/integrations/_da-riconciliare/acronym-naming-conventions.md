@@ -7,23 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_Ox8wkL
-=======
-<<<<<<< .merge_file_uXCq9U
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_ZZywH8
-=======
->>>>>>> .merge_file_cxHWUM
->>>>>>> laraxot/dev
 ---
 
 # Convenzioni di Naming per Acronimi 

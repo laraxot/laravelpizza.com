@@ -3,15 +3,7 @@ title: "bmad orchestrator"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_OoEBwk
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_BrmhEO
 qmd: "bmad orchestrator"
 issues: []
 discussions: []
@@ -161,10 +153,6 @@ dependencies:
     - workflow-management.md
 ```
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -183,9 +171,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../AGENTS.md](../../../../../../../../AGENTS.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

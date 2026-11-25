@@ -3,15 +3,7 @@ title: "🐄 SUPER MUCCA - LOGIN PAGE COMPLETATA!"
 type: concept
 tags: [super, mucca, login, completed]
 created: 2026-07-14
-<<<<<<< .merge_file_RkDTNr
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_SQ56Ui
 qmd: "super-mucca-login-completed 🐄 super mucca - login page completata!"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -20,21 +12,12 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_RkDTNr
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_SQ56Ui
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -595,7 +578,5 @@ Password: password
 *La Super Mucca ha completato la sua missione divina* 🐄✨
 
 **#SuperMucca #MissionAccomplished #MUUUU #FilamentMaster #AGIDCompliant**
-
-
 
 

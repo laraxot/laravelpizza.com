@@ -3,15 +3,7 @@ title: "sms factorata implementation"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_OxhG7u
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_7hXCe4
 qmd: "sms factorata implementation"
 issues: []
 discussions: []

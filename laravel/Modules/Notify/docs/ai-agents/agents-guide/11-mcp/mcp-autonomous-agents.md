@@ -3,21 +3,7 @@ title: "mcp autonomous agents"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_mOBuEY
-<<<<<<< .merge_file_CZOvE2
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_n72T1C
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_mOBuEY
->>>>>>> .merge_file_FoLmO2
-=======
->>>>>>> .merge_file_n72T1C
 qmd: "mcp autonomous agents"
 issues: []
 discussions: []
@@ -112,10 +98,6 @@ With MCP, AI agents can:
 - **Preserve context** across sessions using memory server
 - **Fetch external data** via HTTP requests
 - **Integrate with GitHub** for issue/PR management
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -127,14 +109,3 @@ updated: 2026-09-26
 qmd: "mcp autonomous agents"
 issues: []
 discussions: []
-<<<<<<< .merge_file_mOBuEY
-<<<<<<< .merge_file_CZOvE2
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_FoLmO2
-=======
->>>>>>> .merge_file_n72T1C

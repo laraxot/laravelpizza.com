@@ -3,15 +3,7 @@ title: "philosophy"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Bey26y
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_TsNPy0
 qmd: "philosophy"
 issues: []
 discussions: []
@@ -140,10 +132,6 @@ Notify è più di un progetto software. È un esperimento sociale tecnologico ch
 
 > *"La città perfetta non esiste, ma il viaggio verso di essa sì."*
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "philosophy"
@@ -159,12 +147,4 @@ discussions: []
 - [project-2.md](./project.md) - Visione e obiettivi
 - [agents-2.md](./agents-2.md) - Regole per agenti AI
 - [docs/](../docs/) - Documentazione completa
-<<<<<<< .merge_file_Bey26y
-<<<<<<< HEAD
-=======
-=======
 ## Riferimenti
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_TsNPy0

@@ -14,14 +14,7 @@ related:
   - "../../integrations/_da-riconciliare/absolute-completion-100.md"
   - "../../../acronym-naming-conventions-2.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

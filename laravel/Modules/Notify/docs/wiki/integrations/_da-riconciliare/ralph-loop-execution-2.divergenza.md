@@ -7,23 +7,7 @@ module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_JR2OiO
-=======
-<<<<<<< .merge_file_8SHXf9
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_SfqNvx
-=======
->>>>>>> .merge_file_HgYJdR
->>>>>>> laraxot/dev
 ---
 
 # Divergenza: `RALPH_LOOP_EXECUTION.md`

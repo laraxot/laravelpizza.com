@@ -15,10 +15,7 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
-<<<<<<< .merge_file_bxd18Z
 qmd: "socialite architecture analysis oauth integration without"
-=======
->>>>>>> .merge_file_urcgw3
 ---
 
 # Socialite Architecture Analysis

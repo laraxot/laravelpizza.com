@@ -3,31 +3,7 @@ title: "filament pages convention"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_uSypPr
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_gkosGr
-<<<<<<< .merge_file_uAYi19
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_JXEeZe
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_hLky0K
-=======
-<<<<<<< .merge_file_gkosGr
->>>>>>> .merge_file_kJk79N
-=======
->>>>>>> .merge_file_JXEeZe
->>>>>>> laraxot/dev
 qmd: "filament pages convention"
 issues: []
 discussions: []

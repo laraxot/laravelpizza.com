@@ -7,23 +7,7 @@ module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_rJaa3K
-=======
-<<<<<<< .merge_file_yQ2ozm
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_iicvvV
-=======
->>>>>>> .merge_file_yKLvgT
->>>>>>> laraxot/dev
 ---
 
 # Divergenza: `agents-2.md`

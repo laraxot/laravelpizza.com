@@ -4,21 +4,7 @@ type: report
 tags: [code-quality, phpstan, pest, maintainability]
 module: "Notify"
 created: 2026-07-17
-<<<<<<< .merge_file_qldejK
-<<<<<<< .merge_file_BdH9WN
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_J2ixJB
-<<<<<<< HEAD
-updated: 2026-07-17
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_qldejK
->>>>>>> .merge_file_VWLFp4
-=======
->>>>>>> .merge_file_J2ixJB
 qmd: "code quality baseline PHPStan Pest strict types Laraxot Notify"
 story: STORY-001
 issues:

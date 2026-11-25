@@ -3,31 +3,7 @@ title: "form schema conventions"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_WfUJb7
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_2YC584
-<<<<<<< .merge_file_b9Km93
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_DM7TvF
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_Keb8sc
-=======
-<<<<<<< .merge_file_2YC584
->>>>>>> .merge_file_rHTIjK
-=======
->>>>>>> .merge_file_DM7TvF
->>>>>>> laraxot/dev
 qmd: "form schema conventions"
 issues: []
 discussions: []

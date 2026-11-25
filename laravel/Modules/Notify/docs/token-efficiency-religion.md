@@ -3,15 +3,7 @@ title: "token efficiency religion"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_LRk2RC
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_BdCU6L
 qmd: "token efficiency religion"
 issues: []
 discussions: []
@@ -34,10 +26,6 @@ discussions: []
 **Category**: AI Efficiency / System / Religion  
 **Audience**: All AI agents + developers
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "token efficiency religion"
@@ -57,13 +45,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## LA REGOLA AUREA
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Perche (Filosofia Profonda)
 
 ### 1. Costo Reale

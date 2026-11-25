@@ -3,21 +3,7 @@ title: "boost integration"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_j6Qgsr
-<<<<<<< .merge_file_86M6dT
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_JwRNoE
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_j6Qgsr
->>>>>>> .merge_file_DY7zbv
-=======
->>>>>>> .merge_file_JwRNoE
 qmd: "boost integration"
 issues: []
 discussions: []
@@ -162,10 +148,6 @@ When encountering errors:
 
 Laravel Boost is currently in beta and receives frequent updates. Always leverage the MCP tools for the most accurate, up-to-date Laravel development assistance.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -185,9 +167,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../wiki/integrations/_da-riconciliare/gemini-2.md](../../../wiki/integrations/_da-riconciliare/gemini-2.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

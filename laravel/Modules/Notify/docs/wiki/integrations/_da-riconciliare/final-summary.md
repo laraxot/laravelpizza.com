@@ -1,28 +1,10 @@
 ---
 title: "📊 NOTIFY - RIEPILOGO FINALE COMPLETAMENTO"
-<<<<<<< .merge_file_Psy3w9
 type: concept
 tags: [final, summary]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "final-summary 📊 laraxot - riepilogo finale completamento"
-=======
-<<<<<<< HEAD
-title: "📊 <nome progetto> - RIEPILOGO FINALE COMPLETAMENTO"
-type: concept
-tags: [final, summary]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "final-summary 📊 laraxot - riepilogo finale completamento"
-qmd: "final-summary 📊 <nome progetto> - riepilogo finale completamento"
-=======
-type: concept
-tags: [final, summary]
-created: 2026-07-14
-updated: 2026-11-23
-qmd: "final-summary 📊 laraxot - riepilogo finale completamento"
->>>>>>> laraxot/dev
->>>>>>> .merge_file_dNQFB4
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
@@ -32,17 +14,8 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< .merge_file_Psy3w9
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_dNQFB4
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

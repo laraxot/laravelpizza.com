@@ -3,21 +3,7 @@ title: "duplicate methods report"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Mf9ETy
-<<<<<<< .merge_file_TxiAZa
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_bvRPQo
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Mf9ETy
->>>>>>> .merge_file_6YbS7U
-=======
->>>>>>> .merge_file_bvRPQo
 qmd: "duplicate methods report"
 issues: []
 discussions: []

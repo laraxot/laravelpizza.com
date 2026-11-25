@@ -3,31 +3,7 @@ title: "conflict resolution smschannel"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_4NOpWg
-<<<<<<< .merge_file_NdaN6l
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_CX0wIT
-=======
->>>>>>> .merge_file_wQ19HJ
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_4NOpWg
-<<<<<<< .merge_file_NdaN6l
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_CX0wIT
-=======
->>>>>>> .merge_file_wQ19HJ
 qmd: "conflict resolution smschannel"
 issues: []
 discussions: []
@@ -85,35 +61,11 @@ return $action->execute($smsData);
 - Solo miglioramento della leggibilità del codice
 
 ## Collegamenti
-<<<<<<< HEAD
 - [Notify Module Documentation](README.md)
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_4NOpWg
-<<<<<<< .merge_file_NdaN6l
-<<<<<<< HEAD
 - [Notify Module Documentation](README.md)
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_CX0wIT
-=======
->>>>>>> .merge_file_wQ19HJ
 - [Notify Module Documentation](readme.md)
-=======
 - [Notify Module Documentation](README.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_4NOpWg
-<<<<<<< .merge_file_NdaN6l
-=======
 - [Notify Module Documentation](readme.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_CX0wIT
-=======
->>>>>>> .merge_file_wQ19HJ
 - [SMS Channel Architecture](sms-channel-action-resolution-2.md)
 - [Root Conflict Resolution Guidelines](../../../../docs/project/conflict-resolution-guidelines.md)
 

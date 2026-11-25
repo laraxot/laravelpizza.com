@@ -3,21 +3,7 @@ title: "analysis improvements"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_988sRb
-<<<<<<< .merge_file_XOeNiI
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_DdNGbj
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_988sRb
->>>>>>> .merge_file_2Bzsj4
-=======
->>>>>>> .merge_file_DdNGbj
 qmd: "analysis improvements"
 issues: []
 discussions: []

@@ -4,21 +4,7 @@ type: concept
 tags: [notify, docs, architecture, queueable, action, pattern]
 module: Notify
 created: 2026-07-20
-<<<<<<< .merge_file_uSh9Bu
-<<<<<<< .merge_file_F0gp6E
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_IYRcBB
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_uSh9Bu
->>>>>>> .merge_file_GsRH9g
-=======
->>>>>>> .merge_file_IYRcBB
 qmd: "notify documentazione architecture queueable action pattern queueableaction pattern guide frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"

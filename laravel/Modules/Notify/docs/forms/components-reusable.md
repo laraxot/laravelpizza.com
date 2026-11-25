@@ -3,47 +3,7 @@ title: "components reusable"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< .merge_file_GcWXdN
-=======
-<<<<<<< .merge_file_xDKdNx
-<<<<<<< .merge_file_T8mctv
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_lkfRfg
-=======
->>>>>>> .merge_file_6SAudX
-=======
->>>>>>> .merge_file_FC1bEm
->>>>>>> laraxot/dev
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-<<<<<<< .merge_file_GcWXdN
-=======
-<<<<<<< .merge_file_xDKdNx
-<<<<<<< .merge_file_T8mctv
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_lkfRfg
-=======
->>>>>>> .merge_file_6SAudX
-=======
->>>>>>> .merge_file_FC1bEm
->>>>>>> laraxot/dev
 qmd: "components reusable"
 issues: []
 discussions: []
@@ -340,58 +300,16 @@ Lo schema deve sempre avere chiavi string per conformità Filament:
 
 - [Filament Form Components](https://filamentphp.com/docs/forms/fields) - Documentazione ufficiale Filament
 - [SendRecordsNotificationBulkAction](./../refactoring/send-notification-bulk-action.md) - Refactoring completo
-<<<<<<< HEAD
 - [ChannelEnum](../enums/channel-enum.md) - Smart Enum per canali notifica
 - [ChannelEnum](../enums/channel-enum.md) - Smart Enum per canali notifica
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_GcWXdN
-=======
-<<<<<<< .merge_file_xDKdNx
-<<<<<<< .merge_file_T8mctv
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [ChannelEnum](../enums/channel-enum.md) - Smart Enum per canali notifica
 - [ChannelEnum](../enums/channel-enum.md) - Smart Enum per canali notifica
-=======
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_lkfRfg
-=======
->>>>>>> .merge_file_6SAudX
-=======
->>>>>>> .merge_file_FC1bEm
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_1Pj9ba
 - [ChannelEnum](./enums/channel-enum.md) - Smart Enum per canali notifica
-=======
 - [ChannelEnum](../enums/channel-enum.md) - Smart Enum per canali notifica
-<<<<<<< HEAD
-<<<<<<< .merge_file_GcWXdN
-=======
-<<<<<<< .merge_file_xDKdNx
-<<<<<<< .merge_file_T8mctv
->>>>>>> laraxot/dev
 - [ChannelEnum](../enums/channel-enum.md) - Smart Enum per canali notifica
->>>>>>> .merge_file_gpA1xx
->>>>>>> laraxot/dev
-=======
 - [ChannelEnum](../enums/channel-enum.md) - Smart Enum per canali notifica
->>>>>>> laraxot/dev
-=======
 - [ChannelEnum](../enums/channel-enum.md) - Smart Enum per canali notifica
->>>>>>> .merge_file_gpA1xx
-<<<<<<< HEAD
->>>>>>> .merge_file_lkfRfg
-=======
->>>>>>> .merge_file_6SAudX
-=======
 - [ChannelEnum](../enums/channel-enum.md) - Smart Enum per canali notifica
->>>>>>> .merge_file_gpA1xx
->>>>>>> .merge_file_FC1bEm
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [MailTemplate Model](./../models.md) - Modello template email
 
 ## 🎯 Best Practice per Futuri Componenti

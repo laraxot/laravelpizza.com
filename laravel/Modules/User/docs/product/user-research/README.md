@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_kHTVrE
 ---
 title: "User Module - User Research"
 type: note
 qmd: "user research"
 ---
-=======
->>>>>>> .merge_file_KnNzga
 # User Module - User Research
 
 ## Research Overview

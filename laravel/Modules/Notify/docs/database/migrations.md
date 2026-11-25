@@ -3,21 +3,7 @@ title: "migrations"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_1QgcBC
-<<<<<<< .merge_file_TnXGjV
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_KYB93G
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_1QgcBC
->>>>>>> .merge_file_pmoN8H
-=======
->>>>>>> .merge_file_KYB93G
 qmd: "migrations"
 issues: []
 discussions: []

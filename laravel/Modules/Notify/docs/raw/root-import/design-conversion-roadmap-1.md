@@ -3,15 +3,7 @@ title: "design conversion roadmap 1"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_yM9SRQ
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_fr9GZh
 qmd: "design conversion roadmap 1"
 issues: []
 discussions: []
@@ -29,10 +21,6 @@ discussions: []
 **Last Updated**: 2026-04-03
 **Target**: Make all 54 test pages visually identical to Design Comuni reference using Tailwind CSS + Alpine.js
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "design conversion roadmap 1"
@@ -67,15 +55,10 @@ discussions: []
 - **Total**: 3-4 weeks (with parallel teams)
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## 📊 Executive Summary
 ### Current State
 ### Key Metrics
 ### Time Estimate
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## 🎯 Phase Breakdown
 
@@ -384,11 +367,3 @@ node bashscripts/github/create-design-issues.mjs
 ```
 
 Then pick issue #1 and get coding! 🚀
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

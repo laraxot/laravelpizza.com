@@ -3,25 +3,7 @@ title: "record notification constructor slug"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_36rWXs
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_wBcwRn
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_36rWXs
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_wBcwRn
 qmd: "record notification constructor slug"
 issues: []
 discussions: []
@@ -270,34 +252,15 @@ $notification = new RecordNotification($record, 'welcome');
 - [RECORD_NOTIFICATION_ZEN_CONSTRUCTOR.md](./record_notification_zen_constructor.md) - Filosofia Zen per costruttore
 - [RecordNotification Zen Delegation](./record-notification-zen-delegation.md) - **✅ Pattern attuale**: Delega completa a SpatieEmail
 - [record-notification.md](../notifications/record-notification.md) - Documentazione completa RecordNotification
-<<<<<<< HEAD
 - [send-record-notification-action.md](send-record-notification-action.md) - Documentazione SendRecordNotificationAction
 - [send-record-notification-action.md](send-record-notification-action.md) - Documentazione SendRecordNotificationAction
-=======
-<<<<<<< .merge_file_36rWXs
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [send-record-notification-action.md](send-record-notification-action.md) - Documentazione SendRecordNotificationAction
 - [send-record-notification-action.md](send-record-notification-action.md) - Documentazione SendRecordNotificationAction
-=======
-=======
->>>>>>> .merge_file_wBcwRn
-<<<<<<< .merge_file_OI2iME
 - [send-record-notification-action.md](../actions/send-record-notification-action.md) - Documentazione SendRecordNotificationAction
-=======
 - [send-record-notification-action.md](send-record-notification-action.md) - Documentazione SendRecordNotificationAction
-<<<<<<< .merge_file_36rWXs
 - [send-record-notification-action.md](send-record-notification-action.md) - Documentazione SendRecordNotificationAction
->>>>>>> .merge_file_MCjIyO
->>>>>>> laraxot/dev
-=======
 - [send-record-notification-action.md](send-record-notification-action.md) - Documentazione SendRecordNotificationAction
->>>>>>> laraxot/dev
-=======
 - [send-record-notification-action.md](send-record-notification-action.md) - Documentazione SendRecordNotificationAction
->>>>>>> .merge_file_MCjIyO
->>>>>>> .merge_file_wBcwRn
->>>>>>> laraxot/dev
 
 ## ⚠️ Nota Importante
 

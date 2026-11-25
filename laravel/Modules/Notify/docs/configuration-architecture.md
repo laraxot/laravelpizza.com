@@ -3,21 +3,7 @@ title: "configuration architecture"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_lySFdU
-<<<<<<< .merge_file_Hqusq7
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_wvsoKq
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_lySFdU
->>>>>>> .merge_file_CYn4Fm
-=======
->>>>>>> .merge_file_wvsoKq
 qmd: "configuration architecture"
 issues: []
 discussions: []

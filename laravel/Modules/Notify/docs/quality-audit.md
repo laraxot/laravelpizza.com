@@ -6,15 +6,7 @@ discussions: []
 title: "Audit di qualita: modulo Notify"
 type: report
 module: Notify
-<<<<<<< .merge_file_iT2woc
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-01
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_Idw6Lq
 qmd: "audit qualita notify phpstan phpmd phpinsights pest coverage soppressioni collisioni case"
 ---
 

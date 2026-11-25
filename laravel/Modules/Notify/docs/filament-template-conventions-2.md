@@ -3,31 +3,7 @@ title: "filament template conventions"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_P8zDyG
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_DRLW1O
-<<<<<<< .merge_file_ztwPQd
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_x3rLYu
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_qsNKyU
-=======
-<<<<<<< .merge_file_DRLW1O
->>>>>>> .merge_file_yolUvR
-=======
->>>>>>> .merge_file_x3rLYu
->>>>>>> laraxot/dev
 qmd: "filament template conventions"
 issues: []
 discussions: []

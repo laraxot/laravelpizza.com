@@ -3,25 +3,7 @@ title: "record notification"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_HD1Wb1
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_igZ6L7
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_HD1Wb1
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_igZ6L7
 qmd: "record notification"
 issues: []
 discussions: []
@@ -220,34 +202,15 @@ SpatieEmail (Specialized Agent)
 
 *   [`ChannelEnum` Documentation](../enums/channel-enum.md)
 *   [`SpatieEmail` Documentation](../emails/spatie-email.md)
-<<<<<<< HEAD
 *   [`SendRecordNotificationAction` Documentation](../refactoring/send-record-notification-action.md)
 *   [`SendRecordNotificationAction` Documentation](../refactoring/send-record-notification-action.md)
-=======
-<<<<<<< .merge_file_HD1Wb1
-<<<<<<< HEAD
-<<<<<<< HEAD
 *   [`SendRecordNotificationAction` Documentation](../refactoring/send-record-notification-action.md)
 *   [`SendRecordNotificationAction` Documentation](../refactoring/send-record-notification-action.md)
-=======
-=======
->>>>>>> .merge_file_igZ6L7
-<<<<<<< .merge_file_7sDwWs
 *   [`SendRecordNotificationAction` Documentation](../actions/send-record-notification-action.md)
-=======
 *   [`SendRecordNotificationAction` Documentation](../refactoring/send-record-notification-action.md)
-<<<<<<< .merge_file_HD1Wb1
 *   [`SendRecordNotificationAction` Documentation](../refactoring/send-record-notification-action.md)
->>>>>>> .merge_file_b5bmNA
->>>>>>> laraxot/dev
-=======
 *   [`SendRecordNotificationAction` Documentation](../refactoring/send-record-notification-action.md)
->>>>>>> laraxot/dev
-=======
 *   [`SendRecordNotificationAction` Documentation](../refactoring/send-record-notification-action.md)
->>>>>>> .merge_file_b5bmNA
->>>>>>> .merge_file_igZ6L7
->>>>>>> laraxot/dev
 *   [`SmsChannel` Documentation](./channels/sms-channel.md) - Note: Uses `Modules\Notify\Channels\SmsChannel` (expects `SmsData`)
 *   [`SmsData` Documentation](../datas/sms-data.md)
 *   [Zen Delegation Strategy](../refactoring/record-notification-zen-delegation.md)

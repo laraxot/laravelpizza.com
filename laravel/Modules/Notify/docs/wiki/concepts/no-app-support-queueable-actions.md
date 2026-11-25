@@ -3,15 +3,7 @@ title: "no app/Support — business logic in QueueableAction"
 type: concept
 tags: [notify, actions, queueable-action, support, refactor, push, mail]
 created: 2026-07-12
-<<<<<<< .merge_file_sAC1Sr
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-10-08
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_aIb9RJ
 qmd: "Notify module no app Support QueueableAction push mail Mailtrap"
 issues:
 discussions:

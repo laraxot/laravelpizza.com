@@ -2,32 +2,10 @@
 title: "ECC audit operativo — Notify"
 type: ecc-audit
 status: review
-<<<<<<< .merge_file_VgYdMt
-<<<<<<< .merge_file_jtTiZU
-=======
-=======
->>>>>>> .merge_file_rvKNr6
-<<<<<<< HEAD
-updated: 2026-11-16
-module: Notify
-qmd: "ECC audit Notify security-review laravel-verification verification-loop webhook policy NotificationLog"
-=======
-<<<<<<< .merge_file_VgYdMt
->>>>>>> .merge_file_JcCJkP
-=======
->>>>>>> .merge_file_rvKNr6
 updated: 2026-11-23
 module: Notify
 qmd: "ECC audit Notify security-review laravel-verification verification-loop webhook policy NotificationLog"
 created: 2026-11-23
-<<<<<<< .merge_file_VgYdMt
-<<<<<<< .merge_file_jtTiZU
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_JcCJkP
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_rvKNr6
 ---
 
 # ECC audit operativo — Notify

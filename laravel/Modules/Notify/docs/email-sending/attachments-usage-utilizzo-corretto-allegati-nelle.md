@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 ---
 title: "Utilizzo Corretto degli Allegati nelle Email Spatie"
 type: note
 qmd: "attachments usage utilizzo corretto allegati nelle"
 ---
-=======
->>>>>>> laraxot/dev
 # Utilizzo Corretto degli Allegati nelle Email Spatie
 
 Questa documentazione descrive come utilizzare correttamente il metodo `addAttachments()` nella classe `SpatieEmail` del modulo Notify.

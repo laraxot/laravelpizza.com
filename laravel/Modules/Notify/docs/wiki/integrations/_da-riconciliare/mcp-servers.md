@@ -3,35 +3,13 @@ title: "MCP Servers - Master Index"
 type: concept
 tags: [mcp, servers]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_PmZssV
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_Bo6Stj
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_PmZssV
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_Bo6Stj
 qmd: "mcp-servers mcp servers - master index"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
   - "./00-index.md"
   - "./00-index-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
   - "./00-index.md"
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
@@ -42,16 +20,11 @@ related:
   - "../../../acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
-<<<<<<< HEAD
-=======
-=======
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
   - "../../../00-index-documentation.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "../../../acronym-naming-conventions.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 status: draft
 ---
@@ -186,34 +159,15 @@ MCP (Model Context Protocol) servers provide AI assistants with persistent memor
   - `qmd update` - Re-index collections
   - `qmd embed` - Generate vector embeddings
 - **MCP**: `qmd mcp` (stdio transport)
-<<<<<<< HEAD
 - **Docs**: [qmd-local-docs-search.md](../../../project/qmd-local-docs-search.md)
 - **Docs**: [qmd-local-docs-search.md](../../../project/qmd-local-docs-search.md)
-=======
-<<<<<<< .merge_file_PmZssV
-<<<<<<< HEAD
-<<<<<<< HEAD
 - **Docs**: [qmd-local-docs-search.md](../../../project/qmd-local-docs-search.md)
 - **Docs**: [qmd-local-docs-search.md](../../../project/qmd-local-docs-search.md)
-=======
-=======
->>>>>>> .merge_file_Bo6Stj
-<<<<<<< .merge_file_H7459E
 - **Docs**: [qmd-local-docs-search.md](./project/qmd-local-docs-search.md)
-=======
 - **Docs**: [qmd-local-docs-search.md](../../../project/qmd-local-docs-search.md)
-<<<<<<< .merge_file_PmZssV
 - **Docs**: [qmd-local-docs-search.md](../../../project/qmd-local-docs-search.md)
->>>>>>> .merge_file_fLLYfv
->>>>>>> laraxot/dev
-=======
 - **Docs**: [qmd-local-docs-search.md](../../../project/qmd-local-docs-search.md)
->>>>>>> laraxot/dev
-=======
 - **Docs**: [qmd-local-docs-search.md](../../../project/qmd-local-docs-search.md)
->>>>>>> .merge_file_fLLYfv
->>>>>>> .merge_file_Bo6Stj
->>>>>>> laraxot/dev
 
 ## Configuration
 

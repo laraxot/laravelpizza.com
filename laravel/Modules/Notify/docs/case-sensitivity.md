@@ -7,21 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< .merge_file_tRgPmA
-<<<<<<< .merge_file_EZ72Sl
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_053bGe
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_tRgPmA
->>>>>>> .merge_file_OqQTxB
-=======
->>>>>>> .merge_file_053bGe
 ---
 
 # Case Sensitivity Rules - Notify Module

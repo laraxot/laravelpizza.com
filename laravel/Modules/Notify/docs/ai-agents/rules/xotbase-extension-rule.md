@@ -3,21 +3,7 @@ title: "xotbase extension rule"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_wYOxeh
-<<<<<<< .merge_file_x2ZMq9
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_jyf1sM
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_wYOxeh
->>>>>>> .merge_file_v3dDKq
-=======
->>>>>>> .merge_file_jyf1sM
 qmd: "xotbase extension rule"
 issues: []
 discussions: []
@@ -30,10 +16,6 @@ discussions: []
 **Status**: ✅ PHILOSOPHY DEFINED  
 **Priority**: BLOCKER
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "xotbase extension rule"
@@ -60,13 +42,8 @@ class OutcomesTableWidget extends FilamentTableWidget
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 The Rule
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🧠 The WHY (5 Levels of Understanding)
 
 ### Level 1: Blind Obedience ❌

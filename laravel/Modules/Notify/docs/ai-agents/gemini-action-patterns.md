@@ -3,31 +3,7 @@ title: "gemini action patterns"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_aWmhwg
-<<<<<<< .merge_file_vJ8Mkq
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_TzCmAK
-=======
->>>>>>> .merge_file_deBKnz
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_aWmhwg
-<<<<<<< .merge_file_vJ8Mkq
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_TzCmAK
-=======
->>>>>>> .merge_file_deBKnz
 qmd: "gemini action patterns"
 issues: []
 discussions: []
@@ -37,10 +13,6 @@ discussions: []
 
 Action Execution Rules - Spatie Queueable Actions.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "gemini action patterns"
@@ -74,16 +46,11 @@ app(CreatePersonalAccessClientAction::class)->execute($data);
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## Regola 1: Il Metodo Pubblico è SEMPRE `execute()`
 ### ❌ SBAGLIATO
 ### ✅ CORRETTO
 ### Perché?
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Regola 2: Mai Dependency Injection Pesante
 
 ### ❌ SBAGLIATO
@@ -181,33 +148,9 @@ Alcune eccezioni sono pragmaticamente accettabili:
 
 - [Indice GEMINI](./gemini-split-index.md)
 - [queueable-actions.md](./queueable-actions.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_aWmhwg
-<<<<<<< .merge_file_vJ8Mkq
 - [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_TzCmAK
-=======
->>>>>>> .merge_file_deBKnz
 - [gemini-2.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
-=======
-<<<<<<< HEAD
 - [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
-=======
 - [gemini-2.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_aWmhwg
-<<<<<<< .merge_file_vJ8Mkq
-=======
 - [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_TzCmAK
-=======
->>>>>>> .merge_file_deBKnz
 - [Index principale](../../../Lang/docs/wiki/integrations/_da-riconciliare/index-3.md)

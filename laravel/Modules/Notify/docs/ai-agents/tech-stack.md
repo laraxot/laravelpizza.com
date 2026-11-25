@@ -3,21 +3,7 @@ title: "tech stack"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_rgvxHf
-<<<<<<< .merge_file_NQq5Sd
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_HZi31l
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_rgvxHf
->>>>>>> .merge_file_ttyTaH
-=======
->>>>>>> .merge_file_HZi31l
 qmd: "tech stack"
 issues: []
 discussions: []

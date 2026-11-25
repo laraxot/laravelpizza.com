@@ -3,21 +3,7 @@ title: "code style guidelines"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_UzSN0J
-<<<<<<< .merge_file_KBGe2r
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_7gMjSA
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_UzSN0J
->>>>>>> .merge_file_4iAARn
-=======
->>>>>>> .merge_file_7gMjSA
 qmd: "code style guidelines"
 issues: []
 discussions: []
@@ -87,10 +73,6 @@ protected function casts(): array
 - Throw in constructors only if critical
 - Catch specific exceptions
 - Never suppress errors with `@`
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -102,14 +84,3 @@ updated: 2026-09-26
 qmd: "code style guidelines"
 issues: []
 discussions: []
-<<<<<<< .merge_file_UzSN0J
-<<<<<<< .merge_file_KBGe2r
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_4iAARn
-=======
->>>>>>> .merge_file_7gMjSA

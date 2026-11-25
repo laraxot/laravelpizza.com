@@ -5,10 +5,7 @@ status: active
 module: Notify
 updated: 2026-11-23
 created: 2026-11-23
-<<<<<<< HEAD
 qmd: "user manual manuale utente notify"
-=======
->>>>>>> laraxot/dev
 ---
 
 # Manuale utente Notify

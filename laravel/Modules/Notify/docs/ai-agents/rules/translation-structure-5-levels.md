@@ -3,21 +3,7 @@ title: "translation structure 5 levels"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_PHl4bz
-<<<<<<< .merge_file_NkzDbT
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_fW3kx0
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_PHl4bz
->>>>>>> .merge_file_I2FMZv
-=======
->>>>>>> .merge_file_fW3kx0
 qmd: "translation structure 5 levels"
 issues: []
 discussions: []
@@ -30,10 +16,6 @@ discussions: []
 **Status**: ✅ CRITICAL RULE  
 **Priority**: BLOCKER
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "translation structure 5 levels"
@@ -64,13 +46,8 @@ __('forecast::messages.success')          // ❌ SOLO 2 livelli!
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 The Rule
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 📚 Translation Structure
 
 ### Level 1: Namespace
@@ -311,23 +288,11 @@ __('forecast::fields.outcome.title.label')  // aggiunto .label
 ## 🔗 Related Documentation
 
 ### AI Agents Docs
-<<<<<<< .merge_file_PHl4bz
-<<<<<<< .merge_file_NkzDbT
-=======
 - **[Rules Index](00-index.md)** - All rules
->>>>>>> .merge_file_I2FMZv
 - **[Rules Index](00-index.md)** - All rules
-<<<<<<< HEAD
 - **[Rules Index](00-index.md)** - All rules
-=======
-<<<<<<< HEAD
-=======
 - **[Rules Index](00-index.md)** - All rules
->>>>>>> .merge_file_fW3kx0
 - **[Rules Index](00-index.md)** - All rules
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - **[Multi-Outcome Universal](multi-outcome-universal.md)** - Core principle
 - **[Use Models Not DB::Table](use-models-not-db-table.md)** - Model usage
 

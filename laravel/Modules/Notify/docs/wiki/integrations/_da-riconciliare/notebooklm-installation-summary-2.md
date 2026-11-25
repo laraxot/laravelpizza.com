@@ -7,25 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_qTyX6x
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_XLMi6r
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_qTyX6x
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_XLMi6r
 ---
 
 # NotebookLM Skill - Installation & Integration Summary
@@ -56,29 +38,11 @@ ls -la ~/.claude/skills/notebooklm/
 # - scripts/ (automation scripts)
 # - data/ (authentication + library)
 # - requirements.txt
-<<<<<<< HEAD
 # - README.md, CHANGELOG.md, LICENSE
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_qTyX6x
-<<<<<<< HEAD
 # - README.md, CHANGELOG.md, LICENSE
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_XLMi6r
 # - README.md, changelog.md, LICENSE
-=======
 # - README.md, CHANGELOG.md, LICENSE
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_qTyX6x
-=======
 # - README.md, changelog.md, LICENSE
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_XLMi6r
 ```
 
 ## What is NotebookLM Skill?
@@ -276,29 +240,9 @@ Every NotebookLM answer ends with: **"Is that ALL you need to know?"**
 Create these NotebookLM notebooks:
 
 ### 1. Laraxot Framework Docs
-<<<<<<< HEAD
-<<<<<<< .merge_file_qTyX6x
 - **Upload**: Laraxot documentation, agents.md, .windsurfrules
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_XLMi6r
 - **Upload**: Laraxot documentation, agents-2.md, .windsurfrules
-=======
-<<<<<<< HEAD
 - **Upload**: Laraxot documentation, agents.md, .windsurfrules
-=======
-- **Upload**: Laraxot documentation, agents-2.md, .windsurfrules
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_qTyX6x
-=======
-- **Upload**: Laraxot documentation, agents.md, .windsurfrules
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_XLMi6r
 - **Topics**: laravel, architecture, modules, filament, xot
 - **Use**: Technical research, implementation verification
 

@@ -4,21 +4,7 @@ type: analysis
 status: active
 module: Notify
 created: 2026-11-18
-<<<<<<< .merge_file_OwSZoO
-<<<<<<< .merge_file_GfKsTo
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_sWGeFj
-<<<<<<< HEAD
-updated: 2026-11-18
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_OwSZoO
->>>>>>> .merge_file_0EzQij
-=======
->>>>>>> .merge_file_sWGeFj
 related:
   - ./email-setup.md
   - ./deliverability-index.md

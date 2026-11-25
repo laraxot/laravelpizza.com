@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_6ME5hY
 ---
 title: "User Module — Analyst Report"
 type: report
 qmd: "analyst report user"
 ---
-=======
->>>>>>> .merge_file_ejMWat
 # User Module — Analyst Report
 
 **Date**: 2026-07-09  

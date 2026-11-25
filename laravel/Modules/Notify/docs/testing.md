@@ -3,15 +3,7 @@ title: "testing"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ujerLF
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_IlR7wG
 qmd: "testing"
 issues: []
 discussions: []
@@ -521,10 +513,6 @@ Remember: Good tests are the foundation of reliable software development.
 
 <!-- Merged from testing.md, which collided with this file on case-insensitive filesystems. -->
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 title: "Notify Module Testing"
 type: guide
@@ -532,11 +520,6 @@ tags: [notify, testing, pest]
 created: 2026-07-28
 ---
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 # Notify Module: Testing
 
 ```php

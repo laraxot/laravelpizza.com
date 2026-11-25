@@ -3,15 +3,7 @@ title: "refactor plan dry kiss"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_jkil5P
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_UmG5kO
 qmd: "refactor plan dry kiss"
 issues: []
 discussions: []
@@ -162,10 +154,6 @@ Creare sistema di navigazione coerente:
 - Navigazione intuitiva
 - Documentazione completa e aggiornata
 - Onboarding sviluppatori semplificato
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -181,8 +169,3 @@ discussions: []
 **Priorità**: Alta  
 **Responsabile**: Sistema automatico  
 **Deadline**: Immediata
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

@@ -3,15 +3,7 @@ title: "filament v4 migration"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_88mqlP
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_oFGina
 qmd: "filament v4 migration"
 issues: []
 discussions: []
@@ -223,10 +215,6 @@ view:cache compila
 - [Filament v4 Upgrade Guide](https://filamentphp.com/docs/4.x/upgrade-guide)
 - [Filament v4 Actions Documentation](https://filamentphp.com/docs/4.x/actions/overview)
 - [Filament v4 Forms Documentation](https://filamentphp.com/docs/4.x/forms/getting-started)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -243,8 +231,3 @@ discussions: []
 **Files modificati**: 4
 **Errori risolti**: 2 (form.actions, form component)
 **Status**: ✅ Completo
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

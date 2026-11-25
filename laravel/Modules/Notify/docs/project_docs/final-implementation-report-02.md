@@ -3,15 +3,7 @@ title: "final implementation report 2025 10 02"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_3LezuJ
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_wFgXiu
 qmd: "final implementation report 2025 10 02"
 issues: []
 discussions: []
@@ -23,13 +15,6 @@ discussions: []
 **Status**: **COMPLETATO & TESTATO** ✅  
 **Server**: Running without errors
 
-<<<<<<< .merge_file_3LezuJ
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_wFgXiu
 ---
 
 title: "final implementation report 2025 10 02"
@@ -51,16 +36,8 @@ discussions: []
 
 ---
 
-<<<<<<< .merge_file_3LezuJ
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 Obiettivo Raggiunto
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_wFgXiu
 ## 📦 File Implementati (28 file)
 
 ### Models (2)

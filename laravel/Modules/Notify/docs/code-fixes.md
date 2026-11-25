@@ -3,21 +3,7 @@ title: "code fixes"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_WYdfG4
-<<<<<<< .merge_file_At9CrD
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_vukQWM
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_WYdfG4
->>>>>>> .merge_file_CDyjcQ
-=======
->>>>>>> .merge_file_vukQWM
 qmd: "code fixes"
 issues: []
 discussions: []
@@ -29,10 +15,6 @@ discussions: []
 > **PHPStan Level:** Target 10
 > **Status:** Major Syntax Fixes Completed
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "code fixes"
@@ -49,13 +31,8 @@ Complete overhaul of the Notify module addressing **41 files with critical PHP s
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## Executive Summary
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Problems Identified
 
 ### Root Cause Analysis

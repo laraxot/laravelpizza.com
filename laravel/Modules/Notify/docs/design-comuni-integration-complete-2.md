@@ -3,21 +3,7 @@ title: "DESIGN COMUNI INTEGRATION COMPLETE"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_St3EXk
-<<<<<<< .merge_file_3Dr3Op
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_PU2Lmn
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_St3EXk
->>>>>>> .merge_file_MRc2Ai
-=======
->>>>>>> .merge_file_PU2Lmn
 qmd: "DESIGN COMUNI INTEGRATION COMPLETE"
 issues: []
 discussions: []
@@ -30,10 +16,6 @@ discussions: []
 **Live**: https://italia.github.io/design-comuni-pagine-statiche  
 **Status**: ✅ INTEGRATION COMPLETE  
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "DESIGN COMUNI INTEGRATION COMPLETE"
@@ -50,13 +32,8 @@ Analizzato il design system ufficiale dei comuni italiani e integrato i suoi pat
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 OBIETTIVO RAGGIUNTO
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 📊 ANALISI DESIGN COMUNI
 
 ### Progetto

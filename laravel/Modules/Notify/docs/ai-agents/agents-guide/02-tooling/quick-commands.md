@@ -3,21 +3,7 @@ title: "quick commands"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_5OQ3mH
-<<<<<<< .merge_file_LZDgXs
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_ilo6tF
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_5OQ3mH
->>>>>>> .merge_file_fpMaQJ
-=======
->>>>>>> .merge_file_ilo6tF
 qmd: "quick commands"
 issues: []
 discussions: []
@@ -64,10 +50,6 @@ npm run dev && npm run build
 composer go
 ```
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 title: "quick commands"
 type: note
@@ -77,15 +59,4 @@ updated: 2026-09-26
 qmd: "quick commands"
 issues: []
 discussions: []
-<<<<<<< .merge_file_5OQ3mH
-<<<<<<< .merge_file_LZDgXs
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_fpMaQJ
-=======
->>>>>>> .merge_file_ilo6tF
 [Back to index](../index.md)

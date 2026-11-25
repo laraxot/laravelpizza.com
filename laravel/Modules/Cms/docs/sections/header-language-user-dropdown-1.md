@@ -3,27 +3,7 @@ title: "header language user dropdown 1"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_GvehPI
-<<<<<<< .merge_file_URlabm
-<<<<<<< .merge_file_cOGCai
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_UrqJgY
-=======
->>>>>>> .merge_file_Rdg07O
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_GvehPI
-<<<<<<< .merge_file_URlabm
->>>>>>> .merge_file_myR8Pr
-=======
->>>>>>> .merge_file_UrqJgY
-=======
->>>>>>> .merge_file_Rdg07O
 qmd: "header language user dropdown 1"
 issues: []
 discussions: []
@@ -290,31 +270,9 @@ Per maggiori dettagli, consultare la [documentazione sui componenti SVG delle ba
 Il componente Dropdown Utente deve essere compatibile con il sistema di gestione della sessione di Laravel:
 
 1. Il link di logout deve inviare una richiesta GET al percorso `/logout`
-<<<<<<< .merge_file_GvehPI
-<<<<<<< .merge_file_URlabm
-<<<<<<< .merge_file_cOGCai
 2. Il file `logout.blade.php` deve gestire correttamente gli eventi di logout come descritto in [logout-event-error-3.md](/laravel/Modules/User/docs/logout-event-error-3.md)
-=======
-=======
->>>>>>> .merge_file_UrqJgY
-=======
->>>>>>> .merge_file_Rdg07O
-<<<<<<< HEAD
-2. Il file `logout.blade.php` deve gestire correttamente gli eventi di logout come descritto in [logout-event-error-3.md](/laravel/Modules/User/docs/logout-event-error-3.md)
-=======
-<<<<<<< HEAD
 2. Il file `logout.blade.php` deve gestire correttamente gli eventi di logout come descritto in [logout-event-error-3.md](/laravel/modules/user/docs/logout-event-error-3.md)
-=======
 2. Il file `logout.blade.php` deve gestire correttamente gli eventi di logout come descritto in [logout-event-error-3.md](/laravel/Modules/User/docs/logout-event-error-3.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_GvehPI
-<<<<<<< .merge_file_URlabm
->>>>>>> .merge_file_myR8Pr
-=======
->>>>>>> .merge_file_UrqJgY
-=======
->>>>>>> .merge_file_Rdg07O
 
 ### Sicurezza
 

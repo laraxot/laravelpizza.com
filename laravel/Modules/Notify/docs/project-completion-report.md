@@ -3,27 +3,8 @@ title: "Report di Completamento Progetto Fixcity"
 type: concept
 tags: [project, completion, report]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_jhPDbC
-=======
-<<<<<<< .merge_file_kwMlxD
->>>>>>> laraxot/dev
 updated: 2026-11-23
 qmd: "project-completion-report report di completamento progetto fixcity"
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-qmd: "project-completion-report report di completamento progetto fixcity"
-qmd: "project-completion-report report di completamento progetto ptv"
-=======
-updated: 2026-11-23
-qmd: "project-completion-report report di completamento progetto fixcity"
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_BWWKr9
-=======
->>>>>>> .merge_file_iGpb9Q
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
@@ -31,29 +12,12 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< HEAD
-<<<<<<< .merge_file_jhPDbC
-=======
-<<<<<<< .merge_file_kwMlxD
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
->>>>>>> .merge_file_BWWKr9
-=======
->>>>>>> .merge_file_iGpb9Q
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -346,10 +310,5 @@ MIT License - Vedi file LICENSE per dettagli.
 **Data Completamento**: 2024-01-15  
 **Versione**: 1.0.0  
 **Status**: ✅ COMPLETATO
-
-
-
-
-
 
 

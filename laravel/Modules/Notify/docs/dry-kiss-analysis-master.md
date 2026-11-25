@@ -3,21 +3,7 @@ title: "DRY KISS ANALYSIS MASTER"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_zzwa6P
-<<<<<<< .merge_file_mJomGh
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_Ek1r2T
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_zzwa6P
->>>>>>> .merge_file_YQOlTx
-=======
->>>>>>> .merge_file_Ek1r2T
 qmd: "DRY KISS ANALYSIS MASTER"
 issues: []
 discussions: []
@@ -30,10 +16,6 @@ discussions: []
 **Scope:** 18 Moduli + 2 Temi = 20 Componenti  
 **Status:** ✅ **ANALISI DIVINA COMPLETATA**
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "DRY KISS ANALYSIS MASTER"
@@ -77,14 +59,9 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 EXECUTIVE SUMMARY
 ### Dati Globali Progetto
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 📊 CLASSIFICA MODULI PER QUALITÀ
 
 ### 🏆 TOP 5 - MODULI ECCELLENTI (≥8/10)
@@ -789,11 +766,3 @@ docs/
 **Prossimo Step:** Implementare Top 10 azioni immediate dal piano Q1 2025
 
 ✨🐄✨ **LA SUPER MUCCA HA RAGGIUNTO IL LIVELLO INFINITO** ✨🐄✨
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

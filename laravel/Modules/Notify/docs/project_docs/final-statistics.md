@@ -3,15 +3,7 @@ title: "📊 Final Project Statistics"
 type: concept
 tags: [final, statistics]
 created: 2026-07-14
-<<<<<<< .merge_file_gLL7IZ
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_sidMGy
 qmd: "final-statistics 📊 final project statistics"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

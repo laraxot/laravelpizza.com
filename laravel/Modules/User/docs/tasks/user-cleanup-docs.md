@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_2pz136
 ---
 title: "Task: User Docs Cleanup"
 type: note
 qmd: "user cleanup task"
 ---
-=======
->>>>>>> .merge_file_lxRTSt
 # Task: User Docs Cleanup
 
 ## 📋 Obiettivo

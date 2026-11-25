@@ -3,15 +3,7 @@ title: "2026 03 30 hero marketing"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Y8Pui7
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_UOXSkG
 qmd: "2026 03 30 hero marketing"
 issues: []
 discussions: []

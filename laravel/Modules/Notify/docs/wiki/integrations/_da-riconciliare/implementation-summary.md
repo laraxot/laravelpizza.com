@@ -7,15 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< .merge_file_WahbaD
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_PmPJw7
 ---
 
 # Riepilogo Implementazione Design Comuni
@@ -241,10 +233,5 @@ L'implementazione del design system per i comuni italiani è stata completata co
 6. **Personalizzazione**: Facile adattamento alle esigenze specifiche
 
 Il progetto è ora pronto per il deployment e l'utilizzo in produzione, con un sistema completo e professionale per la gestione delle segnalazioni comunali.
-
-
-
-
-
 
 

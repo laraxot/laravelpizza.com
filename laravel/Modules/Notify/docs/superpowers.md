@@ -3,15 +3,7 @@ title: "superpowers"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_C95Zz5
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_oXvbcK
 qmd: "superpowers"
 issues: []
 discussions: []
@@ -25,10 +17,6 @@ discussions: []
 **License**: MIT  
 **Status**: ✅ Installed
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "superpowers"
@@ -51,13 +39,8 @@ Superpowers è un framework di skill componibili per coding agent (OpenCode, Cla
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## Cosa è
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Installazione
 
 ### File: `opencode.json`

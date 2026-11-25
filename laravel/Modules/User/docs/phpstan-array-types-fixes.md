@@ -21,10 +21,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_S8YlRC
 qmd: "phpstan array types fixes"
-=======
->>>>>>> .merge_file_3iCmv1
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-array-types-fixes-Modules.md

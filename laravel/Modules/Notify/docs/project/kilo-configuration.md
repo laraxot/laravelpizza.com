@@ -3,15 +3,7 @@ title: "kilo configuration"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_8DtDvI
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_Qy2PHX
 qmd: "kilo configuration"
 issues: []
 discussions: []
@@ -377,13 +369,6 @@ kilo chat --model "google/gemini-2.5-pro"
 - [BMAD Integration](docs/project/bmad-gsd-ralph-integration.md)
 - [NotebookLM Integration](docs/project/notebooklm-integration.md)
 - [OpenViking Integration](docs/openviking-integration.md)
-<<<<<<< .merge_file_8DtDvI
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_Qy2PHX
 
 ---
 
@@ -398,8 +383,3 @@ discussions: []
 **Last Updated**: 2026-03-30  
 **Configuration Version**: 1.0.0  
 **Status**: ✅ Active
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

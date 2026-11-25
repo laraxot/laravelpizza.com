@@ -11,10 +11,7 @@ related:
   - ./4.29.notify-services-to-actions.story.md
   - ./2026-10-06-phpstan-cleanup-notify.dev.md
   - ../wiki/concepts/services-to-actions-migration.md
-<<<<<<< HEAD
 qmd: "phpstan notify push delivery story copie"
-=======
->>>>>>> laraxot/dev
 ---
 
 # [STORY] PHPStan Notify push delivery

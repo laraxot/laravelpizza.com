@@ -7,10 +7,7 @@ scope: documentation
 bmad_version: 1.0
 updated: 2026-11-23
 created: 2026-11-23
-<<<<<<< HEAD
 qmd: "notification preview fix notify document"
-=======
->>>>>>> laraxot/dev
 ---
 
 # Notifica — Fix Blade preview (scopo: anteprima mail notifica)

@@ -6,33 +6,7 @@ discussions: []
 title: handoff sessione Job Lang merge PHPStan
 type: chat
 tags: [handoff, job, lang, phpstan, merge-conflicts, confidence]
-<<<<<<< .merge_file_VOMEME
-<<<<<<< .merge_file_60tSzs
-<<<<<<< .merge_file_JAKGRt
-<<<<<<< .merge_file_0YQLbn
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_TJ0l7k
-=======
->>>>>>> .merge_file_KhhxPf
-=======
->>>>>>> .merge_file_UeY2Ge
-<<<<<<< HEAD
-updated: 2026-05-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_VOMEME
-<<<<<<< .merge_file_60tSzs
-<<<<<<< .merge_file_JAKGRt
->>>>>>> .merge_file_SdbmNU
-=======
->>>>>>> .merge_file_TJ0l7k
-=======
->>>>>>> .merge_file_KhhxPf
-=======
->>>>>>> .merge_file_UeY2Ge
 related:
   - ../wiki/how-to/git-merge-marker-sweep.md
   - ../wiki/memories/phpstan-modules-inventory.md
@@ -53,15 +27,8 @@ related:
 
 | Verifica | Esito |
 |----------|--------|
-<<<<<<< HEAD
-| `git grep '^<<<<<<< '` su mono (ultimo sweep) | **0** marker; ultimo fix **Notify** 2026-05-26 (svg + tabelle) |
-=======
-<<<<<<< HEAD
 | `git grep '^CONFLICT_START '` su mono (ultimo sweep) | **0** marker; ultimo fix **Notify** 2026-05-26 (svg + tabelle) |
-=======
 | `git grep '^<<<<<<< '` su mono (ultimo sweep) | **0** marker; ultimo fix **Notify** 2026-05-26 (svg + tabelle) |
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 | `phpstan analyse Modules/Job` da `laravel/` | **OK** (305 file) |
 | `phpstan analyse Modules/Lang` | **8 errori** — chiavi duplicate in 2 file lang IT |
 | `php -l` Job policies / tabelle toccate | OK |
@@ -76,15 +43,8 @@ related:
 
 1. **Lang PHPStan:** `lang/it/locale_switcher_refresh.php`, `lang/it/translation_editor.php` — rimuovere chiavi duplicate (`label`, `plural_label`, `navigation`, `actions`).
 2. **Job ridondanza:** `JobBatchesTable` vs `JobBatchsTable`; policy boilerplate — issue discussione sul repo da `git remote -v` in `Modules/Job` (#13 se già creata).
-<<<<<<< HEAD
-3. **Sweep residuo:** `git grep '^<<<<<<< '` su `*.md` / altri moduli (lista in `merge-conflicts-list.md` template).
-=======
-<<<<<<< HEAD
 3. **Sweep residuo:** `git grep '^CONFLICT_START '` su `*.md` / altri moduli (lista in `merge-conflicts-list.md` template).
-=======
 3. **Sweep residuo:** `git grep '^<<<<<<< '` su `*.md` / altri moduli (lista in `merge-conflicts-list.md` template).
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 4. **Sync modulo:** dopo fix, portare commit da mono al repo indicato da `git remote -v` nel modulo (mai `git checkout` di vecchie versioni per “ripristinare”).
 5. **Notify bootstrap globale:** fatal storico `EditMailTemplate::$resource` protected vs `LangBaseEditRecord` — può bloccare `phpstan` su path ampi se non isolato per modulo.
 
@@ -92,15 +52,8 @@ related:
 
 ```bash
 cd laravel
-<<<<<<< HEAD
-git grep -n '^<<<<<<< ' -- '*.php' '*.blade.php'
-=======
-<<<<<<< HEAD
 git grep -n '^CONFLICT_START ' -- '*.php' '*.blade.php'
-=======
 git grep -n '^<<<<<<< ' -- '*.php' '*.blade.php'
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ./vendor/bin/phpstan analyse Modules/Job --memory-limit=2G
 ./vendor/bin/phpstan analyse Modules/Lang --memory-limit=2G
 cd Modules/Job && git remote -v   # issue / PR modulo

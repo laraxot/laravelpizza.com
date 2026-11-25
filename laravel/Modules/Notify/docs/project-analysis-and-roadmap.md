@@ -3,23 +3,7 @@ title: "project analysis and roadmap"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_Hu9Va2
-=======
-<<<<<<< .merge_file_VG3KRF
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_wyyR0d
-=======
->>>>>>> .merge_file_nzBrxR
->>>>>>> laraxot/dev
 qmd: "project analysis and roadmap"
 issues: []
 discussions: []
@@ -533,6 +517,5 @@ Moduli Supporto:
 **Documento creato**: 1 Ottobre 2025
 **Prossimo review**: 1 Novembre 2025
 **Maintainer**: [Team FixCity]
-
 
 

@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_79UVIF
 ---
 title: "Task 001: Implement User Management and Authentication System"
 type: note
 qmd: "001 user management system task implement"
 ---
-=======
->>>>>>> .merge_file_AQsJCL
 # Task 001: Implement User Management and Authentication System
 
 ## Description

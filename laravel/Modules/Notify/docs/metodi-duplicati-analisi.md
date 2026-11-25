@@ -3,15 +3,7 @@ title: "metodi duplicati analisi"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_wInzBT
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_w3ViT1
 qmd: "metodi duplicati analisi"
 issues: []
 discussions: []
@@ -25,10 +17,6 @@ discussions: []
 **Versione**: 2.0 ULTIMATE  
 **Confidenza**: 99.9% (Dati Reali dal Codice)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "metodi duplicati analisi"
@@ -58,14 +46,9 @@ Analisi **REALE e APPROFONDITA** di **18 moduli** + **2 temi** del framework Lar
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 Executive Summary
 ### Dati Chiave (VERIFICATI)
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 📊 ANALISI QUANTITATIVA REALE
 
 ### BaseModel - Confronto Reale

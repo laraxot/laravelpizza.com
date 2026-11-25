@@ -7,19 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ---
 
 # telegram — Consolidated Documentation
@@ -39,24 +27,8 @@ Consolidated from **13** individual files.
 - [Telegram/WhatsApp provider action interface compliance fix](#telegram-whatsapp-provider-interface-compliance-fix)
 - [https://dev.to/millykhamroev/laravel-package-to-integrate-telegram-bot-api-3l6e](#telegram)
 - [Implementazione Canale Telegram](#telegram_channel)
-<<<<<<< HEAD
 - [telegram integration](#telegram_integration)
 - [<<<<<<< HEAD](#telegram_integration)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [<<<<<<< HEAD](#telegram_integration)
-=======
-<<<<<<< HEAD
-- [telegram integration](#telegram_integration)
-=======
-- [<<<<<<< HEAD](#telegram_integration)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- [telegram integration](#telegram_integration)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Standard per Invio Messaggi Telegram nel Modulo Notify](#telegram_sending_standard)
 
 ---
@@ -65,17 +37,6 @@ Consolidated from **13** individual files.
 
 *Consolidated from: `telegram-channel-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 1. Struttura Base
 
 ### 1.1 Data Transfer Objects
@@ -513,10 +474,6 @@ class TelegramTest extends TestCase
 - [Laravel Testing](https://laravel.com/docs/testing)
 - [Laravel Logging](https://laravel.com/docs/logging)
 - [Laravel Cache](https://laravel.com/docs/cache)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 - [Laravel Cache](https://laravel.com/docs/cache)
 - [Laravel Cache](https://laravel.com/docs/cache)
 - [Laravel Cache](https://laravel.com/docs/cache)
@@ -603,11 +560,6 @@ class TelegramTest extends TestCase
 - [Laravel Cache](https://laravel.com/docs/cache)
 - [Laravel Cache](https://laravel.com/docs/cache)
 - [Laravel Cache](https://laravel.com/docs/cache)
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ---
 
@@ -1073,14 +1025,7 @@ class TelegramTest extends TestCase
 - [Laravel Testing](https://laravel.com/docs/testing)
 - [Laravel Logging](https://laravel.com/docs/logging)
 - [Laravel Cache](https://laravel.com/docs/cache) 
-<<<<<<< HEAD
 - [Laravel Cache](https://laravel.com/docs/cache) 
-=======
-<<<<<<< HEAD
-- [Laravel Cache](https://laravel.com/docs/cache) 
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ---
 
@@ -1088,17 +1033,6 @@ class TelegramTest extends TestCase
 
 *Consolidated from: `telegram-channel-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 1. Struttura Base
 
 ### 1.1 Data Transfer Objects
@@ -1536,14 +1470,7 @@ class TelegramTest extends TestCase
 - [Laravel Testing](https://laravel.com/docs/testing)
 - [Laravel Logging](https://laravel.com/docs/logging)
 - [Laravel Cache](https://laravel.com/docs/cache) 
-<<<<<<< HEAD
 - [Laravel Cache](https://laravel.com/docs/cache) 
-=======
-<<<<<<< HEAD
-- [Laravel Cache](https://laravel.com/docs/cache) 
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ---
 
@@ -1551,17 +1478,6 @@ class TelegramTest extends TestCase
 
 *Consolidated from: `telegram-integration-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 Questo documento descrive l'architettura e l'implementazione dell'integrazione Telegram nel progetto <nome progetto>, seguendo gli stessi pattern di design utilizzati per SMS, Email e WhatsApp.
 
 ## Architettura
@@ -1946,17 +1862,6 @@ TELEGRAM_PARSE_MODE=HTML
 
 *Consolidated from: `telegram-integration-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 Questo documento descrive l'architettura e l'implementazione dell'integrazione Telegram nel progetto , seguendo gli stessi pattern di design utilizzati per SMS, Email e WhatsApp.
 Questo documento descrive l'architettura e l'implementazione dell'integrazione Telegram nel progetto <nome progetto>, seguendo gli stessi pattern di design utilizzati per SMS, Email e WhatsApp.
 
@@ -2376,17 +2281,6 @@ $action->onQueue('telegram')->execute($data);
 
 *Consolidated from: `telegram-sending-standard-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Introduzione
 Questa guida definisce lo standard per l'invio di messaggi Telegram all'interno del modulo Notify, seguendo la stessa architettura modulare, configurazione e best practice già adottate per email, SMS e WhatsApp. L'obiettivo è garantire coerenza, riusabilità e facilità di manutenzione, indipendentemente dal provider utilizzato (Bot API ufficiale, pacchetti community, ecc.).
 
@@ -2602,17 +2496,6 @@ $action->onQueue('telegram')->execute($data);
 
 *Consolidated from: `telegram-whatsapp-provider-interface-compliance-fix.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Summary
 
 A codebase audit (ponytail-audit) found two related problems in the Telegram
@@ -2738,26 +2621,9 @@ Twilio test.
 
 *Consolidated from: `telegram.md`*
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 https://medium.com/modulr/send-telegram-notifications-with-laravel-9-342cc87b406
 
-
-<<<<<<< HEAD
-=======
-=======
-https://medium.com/modulr/send-telegram-notifications-with-laravel-9-342cc87b406
-
->>>>>>> laraxot/dev
-=======
-https://medium.com/modulr/send-telegram-notifications-with-laravel-9-342cc87b406
-
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 Add telegram service into config/service.php file.
 
 # config/services.php
@@ -2766,17 +2632,6 @@ Add telegram service into config/service.php file.
     'token' => env('TELEGRAM_BOT_TOKEN', 'YOUR BOT TOKEN HERE')
 ],
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 --- TUTORIAL ---
 https://abstractentropy.com/laravel-notifications-telegram-bot/
 
@@ -2786,17 +2641,6 @@ https://abstractentropy.com/laravel-notifications-telegram-bot/
 
 *Consolidated from: `telegram-channel-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 1. Struttura Base
 
 ### 1.1 Data Transfer Objects
@@ -3234,14 +3078,7 @@ class TelegramTest extends TestCase
 - [Laravel Testing](https://laravel.com/docs/testing)
 - [Laravel Logging](https://laravel.com/docs/logging)
 - [Laravel Cache](https://laravel.com/docs/cache) 
-<<<<<<< HEAD
 - [Laravel Cache](https://laravel.com/docs/cache) 
-=======
-<<<<<<< HEAD
-- [Laravel Cache](https://laravel.com/docs/cache) 
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ---
 
@@ -3431,17 +3268,6 @@ TELEGRAM_PARSE_MODE=HTML
 
 *Consolidated from: `telegram-sending-standard-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Introduzione
 Questa guida definisce lo standard per l'invio di messaggi Telegram all'interno del modulo Notify, seguendo la stessa architettura modulare, configurazione e best practice già adottate per email, SMS e WhatsApp. L'obiettivo è garantire coerenza, riusabilità e facilità di manutenzione, indipendentemente dal provider utilizzato (Bot API ufficiale, pacchetti community, ecc.).
 

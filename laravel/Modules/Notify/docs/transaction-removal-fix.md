@@ -1,46 +1,12 @@
 ---
-<<<<<<< HEAD
-<<<<<<< .merge_file_YoQgqq
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_VERSe8
 issues: []
 discussions: []
 title: "transaction-removal-fix-2025-10-15"
 type: concept
-tags: [deprecated]
+tags: [deprecated, documentation]
 created: 2026-07-14
-<<<<<<< HEAD
 updated: 2026-11-23
 qmd: "transaction-removal-fix-2025-10-15 deprecated"
-=======
-updated: 2026-07-14
-qmd: "transaction-removal-fix-2025-10-15 deprecated"
-=======
-<<<<<<< .merge_file_YoQgqq
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_VERSe8
-title: "transaction removal fix 2025 10"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-11-23
-qmd: "transaction removal fix 2025 10"
-issues: []
-discussions: []
-<<<<<<< .merge_file_YoQgqq
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_VERSe8
->>>>>>> laraxot/dev
 status: deprecated
 related:
   - "./00-index-1.md"
@@ -49,18 +15,6 @@ related:
   - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_YoQgqq
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_VERSe8
   - "./action-plan-immediate.md"
 ---
 
@@ -346,30 +300,8 @@ Il progetto è ora pronto per migrazioni pulite e deploy production-ready! 🚀
 2. 💡 Archiviazione file `.old` dopo 6 mesi
 3. 💡 Documentazione pattern architetturali emersi
 
-<<<<<<< .merge_file_YoQgqq
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_VERSe8
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
 
 > Questo file è stato rinominato in [transaction-removal-fix.md](transaction-removal-fix.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_YoQgqq
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_VERSe8
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

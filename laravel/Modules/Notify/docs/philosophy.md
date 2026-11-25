@@ -1,21 +1,5 @@
 ---
-<<<<<<< HEAD
-<<<<<<< .merge_file_MklQuY
-=======
-<<<<<<< .merge_file_hlZ5tF
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_PnRaUH
-=======
->>>>>>> .merge_file_kcIYqA
->>>>>>> laraxot/dev
 qmd: "PHILOSOPHY"
 issues: []
 discussions: []

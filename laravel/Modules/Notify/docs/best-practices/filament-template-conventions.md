@@ -4,21 +4,7 @@ type: concept
 tags: [notify, docs, best-practices, filament, template, conventions]
 module: Notify
 created: 2026-07-20
-<<<<<<< .merge_file_jipdqy
-<<<<<<< .merge_file_EWTTta
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_qNc2vr
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_jipdqy
->>>>>>> .merge_file_8idgKq
-=======
->>>>>>> .merge_file_qNc2vr
 qmd: "notify documentazione best practices filament template conventions convenzioni per template blade di filament frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"

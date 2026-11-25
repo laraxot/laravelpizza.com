@@ -3,21 +3,7 @@ title: "fluxui rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Zj0Lel
-<<<<<<< .merge_file_0Waelu
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_CjYYMB
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Zj0Lel
->>>>>>> .merge_file_r7zE7w
-=======
->>>>>>> .merge_file_CjYYMB
 qmd: "fluxui rules"
 issues: []
 discussions: []
@@ -31,10 +17,6 @@ discussions: []
 - Use `<flux:*>` components when available; they are the recommended way to build Livewire interfaces.
 - IMPORTANT: Activate `fluxui-development` when working with Flux UI components.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -54,9 +36,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../wiki/integrations/_da-riconciliare/gemini-2.md](../../../wiki/integrations/_da-riconciliare/gemini-2.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

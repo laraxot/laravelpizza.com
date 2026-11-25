@@ -3,21 +3,7 @@ title: "decision log removal seasonal action"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_S4e660
-<<<<<<< .merge_file_m4VNeU
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_mSWEjV
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_S4e660
->>>>>>> .merge_file_NHaoBy
-=======
->>>>>>> .merge_file_mSWEjV
 qmd: "decision log removal seasonal action"
 issues: []
 discussions: []

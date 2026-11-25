@@ -3,15 +3,7 @@ title: "leggi qui domani"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_7GdXqq
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_PI8hAQ
 qmd: "leggi qui domani"
 issues: []
 discussions: []
@@ -273,6 +265,5 @@ Ricorda: **Qualità del codice = Qualità del servizio ai cittadini** 🏙️
 **Goal**: 100% PHPStan Compliance
 
 **Let's do this! 🚀**
-
 
 

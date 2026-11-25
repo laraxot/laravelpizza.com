@@ -3,15 +3,7 @@ title: "channel enum implementation complete"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_uN16CN
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_5WQWNV
 qmd: "channel enum implementation complete"
 issues: []
 discussions: []
@@ -171,10 +163,6 @@ The `transClass()` method automatically resolves to `notify::channel_enum.{value
 - Consider creating a base interface for all notification-related enums
 - Document the Smart Enum pattern for team reference
 - Add translations for other languages (en, de) if needed
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -187,11 +175,3 @@ qmd: "channel enum implementation complete"
 issues: []
 discussions: []
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
-<<<<<<< .merge_file_uN16CN
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_5WQWNV

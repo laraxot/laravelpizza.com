@@ -1,21 +1,7 @@
 ---
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_udegDW
-<<<<<<< .merge_file_iulmEg
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_Q42XLC
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_udegDW
->>>>>>> .merge_file_jmXz5D
-=======
->>>>>>> .merge_file_Q42XLC
 qmd: "git status fleet merge markers notify.story"
 issues: []
 discussions: []

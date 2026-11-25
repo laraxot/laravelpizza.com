@@ -3,21 +3,7 @@ title: "qualita codice"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_xJHdT7
-<<<<<<< .merge_file_LGXAkJ
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_kkmWRF
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_xJHdT7
->>>>>>> .merge_file_wZpnhQ
-=======
->>>>>>> .merge_file_kkmWRF
 qmd: "qualita codice"
 issues: []
 discussions: []

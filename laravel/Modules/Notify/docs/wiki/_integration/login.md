@@ -5,23 +5,9 @@ status: active
 module: Notify
 scope: documentation
 bmad_version: 1.0
-<<<<<<< HEAD
 updated: 2026-11-23
 created: 2026-11-23
 qmd: "login notify document"
-=======
-<<<<<<< .merge_file_DwDJTV
-updated: 2026-11-23
-created: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-10-06
-=======
-updated: 2026-11-23
-created: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_teq8Pw
->>>>>>> laraxot/dev
 ---
 
 # login

@@ -3,23 +3,7 @@ title: "Agnostic Documentation Rule"
 type: rule
 tags: [agnostic, documentation, rule]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_SOFrkk
-=======
-<<<<<<< .merge_file_XXO0ht
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_dQwH4d
-=======
->>>>>>> .merge_file_Yrev0N
->>>>>>> laraxot/dev
 qmd: "agnostic-documentation-rule agnostic documentation rule"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -30,25 +14,8 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
-<<<<<<< .merge_file_SOFrkk
-=======
-<<<<<<< .merge_file_XXO0ht
->>>>>>> laraxot/dev
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_dQwH4d
-=======
->>>>>>> .merge_file_Yrev0N
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

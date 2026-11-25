@@ -7,15 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< .merge_file_ClMmli
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_xSpI03
 ---
 
 # 📚 DOCS MONITORING SYSTEM - Sistema di Monitoraggio Documentazione
@@ -286,11 +278,5 @@ find . -name "*.md" -exec sed -i 's/Laravel 11/Laravel 12/g' {} \;
 ---
 
 *Questo sistema di monitoraggio garantisce che tutta la documentazione rimanga sempre aggiornata e coerente con lo stato attuale del progetto.*
-
-
-
-
-
-
 
 

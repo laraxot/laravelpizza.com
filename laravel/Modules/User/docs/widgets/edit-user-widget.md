@@ -143,24 +143,10 @@ All widget text follows the expanded translation structure:
 ## Related Documentation
 * [User Module Widget Structure](../widgets-structure-user.md)
 * [Widget Translation Guidelines](./translation-guidelines.md)
-<<<<<<< .merge_file_fSNKwI
-* [Filament Widget Conventions](../best-practices/filament-widgets.md)
-* [Translation System Overview](../../xot/docs/translations.md)
-=======
-<<<<<<< HEAD
 * [Filament Widget Conventions](../../xot/docs/filament-widgets.md)
 * [Translation System Overview](../../xot/docs/translations.md)
 * [Filament Widget Conventions](../../xot/project_docs/filament-widgets.md)
-=======
-<<<<<<< HEAD
-* [Filament Widget Conventions](../../xot/docs/filament-widgets.md)
-* [Translation System Overview](../../xot/docs/translations.md)
-* [Filament Widget Conventions](../../xot/project_docs/filament-widgets.md)
-=======
 * [Filament Widget Conventions](../best-practices/filament-widgets.md)
 * [Translation System Overview](../../xot/docs/translations.md)
 * [Filament Widget Conventions](../best-practices/filament-widgets.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> .merge_file_pPMmyn
 * [Translation System Overview](../../xot/project_docs/translations.md)

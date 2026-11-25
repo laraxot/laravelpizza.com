@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_gpEk3F
 qmd: "teams relazione utentiteam tabella pivot doctorteam"
-=======
->>>>>>> .merge_file_tbGJia
 ---
 # Relazione utenti-team: tabella pivot `doctor_team`
 

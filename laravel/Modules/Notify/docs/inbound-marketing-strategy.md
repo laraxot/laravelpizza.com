@@ -3,15 +3,7 @@ title: "inbound marketing strategy"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_rw96UD
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_AYXZGt
 qmd: "inbound marketing strategy"
 issues: []
 discussions: []
@@ -22,10 +14,6 @@ discussions: []
 **Module**: Notify
 **Scope**: Strategia inbound marketing per lead generation
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "inbound marketing strategy"
@@ -42,13 +30,8 @@ Il sito target ha una base di inbound marketing decente con lead magnets e newsl
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 📋 Sommario Esecutivo
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🎯 Funnel di Conversione Inbound
 
 ### Stage 1: Attract (Attrazione)

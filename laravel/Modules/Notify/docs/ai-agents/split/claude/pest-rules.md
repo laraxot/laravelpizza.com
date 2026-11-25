@@ -3,21 +3,7 @@ title: "pest rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_KfUxal
-<<<<<<< .merge_file_oYEFE0
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_ymvXtC
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_KfUxal
->>>>>>> .merge_file_4nWRMs
-=======
->>>>>>> .merge_file_ymvXtC
 qmd: "pest rules"
 issues: []
 discussions: []
@@ -76,11 +62,6 @@ it('has emails', function (string $email) {
 ]);
 </code-snippet>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-
 
 ---
 
@@ -100,9 +81,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

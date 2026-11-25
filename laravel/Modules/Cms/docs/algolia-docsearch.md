@@ -1,15 +1,4 @@
 ---
-<<<<<<< .merge_file_P2EwO1
-<<<<<<< .merge_file_aSoOmI
-<<<<<<< .merge_file_P13CgD
-=======
-=======
->>>>>>> .merge_file_ZhrlEN
-=======
->>>>>>> .merge_file_0kMT2C
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 type: note
 tags: [documentation]
 created: 2026-09-26
@@ -94,10 +83,7 @@ For more details, visit the [official Algolia DocSearch documentation.](https://
 * [algolia-docsearch.md](laravel/modules/xot/docs/algolia-docsearch.md)
 * [algolia-docsearch.md](laravel/modules/ui/docs/algolia-docsearch.md)
 * [algolia-docsearch.md](laravel/Modules/Cms/docs/algolia-docsearch-2.md)
-=======
->>>>>>> laraxot/dev
 title: "algolia docsearch"
->>>>>>> .merge_file_LVwjK1
 type: note
 tags: [documentation]
 created: 2026-09-26
@@ -105,19 +91,14 @@ updated: 2026-11-23
 qmd: "algolia docsearch"
 issues: []
 discussions: []
-<<<<<<< .merge_file_P13CgD
 title: Algolia DocSearch
 description: Configure Algolia DocSearch with the Jigsaw docs starter template
 extends: _layouts.documentation
 section: content
 status: stub
-=======
 module: theme
 topic: algolia-docsearch
 canonical: ../../../Themes/docs/shared-components/algolia-docsearch-old.md
-<<<<<<< .merge_file_P2EwO1
-<<<<<<< .merge_file_aSoOmI
->>>>>>> .merge_file_LVwjK1
 ---
 
 # Algolia DocSearch {#algolia-docsearch}
@@ -191,14 +172,6 @@ For more details, visit the [official Algolia DocSearch documentation.](https://
 * [algolia-docsearch.md](laravel/modules/xot/docs/algolia-docsearch.md)
 * [algolia-docsearch.md](laravel/modules/ui/docs/algolia-docsearch.md)
 * [algolia-docsearch.md](laravel/Modules/Cms/docs/algolia-docsearch-2.md)
-=======
->>>>>>> .merge_file_ZhrlEN
-=======
->>>>>>> .merge_file_0kMT2C
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/algolia-docsearch-old.md
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

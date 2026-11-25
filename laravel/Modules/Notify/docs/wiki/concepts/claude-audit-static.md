@@ -4,15 +4,7 @@ type: concept
 module: Notify
 tags: [notify, quality, claude-audit, actions]
 created: 2026-07-09
-<<<<<<< .merge_file_hAX9tw
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-12
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_Knstzx
 qmd: "Notify claude-audit static 80 SendPushNotificationAction no app Support"
 issues:
 discussions:

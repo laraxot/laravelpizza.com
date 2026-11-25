@@ -429,12 +429,7 @@ Assert::string($config);      // now string
 - [PHPStan Level 10 Documentation](https://phpstan.org/blog/phpstan-1-0-0-released)
 - [Webmozart Assert](https://github.com/webmozart/assert)
 - [Laravel Collections Type Safety](https://laravel.com/docs/11.x/collections)
-<<<<<<< HEAD
 - [Compliance Status](./phpstan-compliance-status.md) (da aggiornare)
-=======
-<<<<<<< HEAD
-- [Compliance Status](./phpstan-compliance-status.md) (da aggiornare)
-=======
 - [Compliance Status](../phpstan-compliance-status.md) (da aggiornare)
 
 ---
@@ -892,8 +887,6 @@ Assert::string($config);      // now string
 - [Webmozart Assert](https://github.com/webmozart/assert)
 - [Laravel Collections Type Safety](https://laravel.com/docs/11.x/collections)
 - [Compliance Status](../phpstan-compliance-status.md) (da aggiornare)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ---
 

@@ -2,32 +2,10 @@
 title: "ECC — indice operativo Notify"
 type: index
 status: in-progress
-<<<<<<< .merge_file_iWBU7F
-<<<<<<< .merge_file_AZX5lM
-=======
-=======
->>>>>>> .merge_file_DntMHc
-<<<<<<< HEAD
-updated: 2026-11-16
-module: Notify
-qmd: "ECC indice Notify verification gates PHPStan Pest security-review"
-=======
-<<<<<<< .merge_file_iWBU7F
->>>>>>> .merge_file_TL5P2F
-=======
->>>>>>> .merge_file_DntMHc
 updated: 2026-11-23
 module: Notify
 qmd: "ECC indice Notify verification gates PHPStan Pest security-review"
 created: 2026-11-23
-<<<<<<< .merge_file_iWBU7F
-<<<<<<< .merge_file_AZX5lM
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_TL5P2F
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_DntMHc
 ---
 
 # ECC — modulo Notify

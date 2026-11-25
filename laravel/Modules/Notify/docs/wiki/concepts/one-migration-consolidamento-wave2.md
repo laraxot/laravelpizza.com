@@ -6,15 +6,7 @@ type: concept
 status: canonical
 module: Notify
 created: 2026-09-01
-<<<<<<< .merge_file_kuhlHk
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-10
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_QjW4us
 tags: [migrations, notify, one-migration-per-model, mail-templates]
 qmd: "notify mail_templates notifications one migration git delete sms_from bump timestamp owner"
 related:

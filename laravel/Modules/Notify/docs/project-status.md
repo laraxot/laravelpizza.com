@@ -3,27 +3,8 @@ title: "FixCity Platform - Project Status Report"
 type: concept
 tags: [project, status]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_JOpijc
-=======
-<<<<<<< .merge_file_0Pr70B
->>>>>>> laraxot/dev
 updated: 2026-11-23
 qmd: "project-status fixcity platform - project status report"
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-qmd: "project-status fixcity platform - project status report"
-qmd: "project-status ptv platform - project status report"
-=======
-updated: 2026-11-23
-qmd: "project-status fixcity platform - project status report"
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_h64D9A
-=======
->>>>>>> .merge_file_kJu2hy
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
@@ -31,29 +12,12 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< HEAD
-<<<<<<< .merge_file_JOpijc
-=======
-<<<<<<< .merge_file_0Pr70B
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
->>>>>>> .merge_file_h64D9A
-=======
->>>>>>> .merge_file_kJu2hy
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

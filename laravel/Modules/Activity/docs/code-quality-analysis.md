@@ -368,46 +368,12 @@ public function getActivities(array $filters = []): Collection
 
 ## 📚 Related Documentation
 
-<<<<<<< .merge_file_9G04WH
-<<<<<<< .merge_file_UYDGwn
-<<<<<<< .merge_file_g390c1
-<<<<<<< .merge_file_BYx55N
 - [ACTIVITY_LOG_OPTIMIZATION.md](performance/activity-log-optimization-2.md)
 - [query-optimization-analysis-3.md](./query-optimization-analysis-3.md)
-=======
-=======
->>>>>>> .merge_file_JTRwwK
-=======
->>>>>>> .merge_file_S9C3bq
-=======
->>>>>>> .merge_file_OibCpf
-<<<<<<< HEAD
-- [ACTIVITY_LOG_OPTIMIZATION.md](./performance/activity-log-optimization-2.md)
-- [query-optimization-analysis-3.md](query-optimization-analysis-3.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [ACTIVITY_LOG_OPTIMIZATION.md](performance/activity-log-optimization-2.md)
 - [query-optimization-analysis-3.md](./query-optimization-analysis-3.md)
-=======
 - [ACTIVITY_LOG_OPTIMIZATION.md](./performance/activity-log-optimization-2.md)
 - [query-optimization-analysis-3.md](query-optimization-analysis-3.md)
->>>>>>> laraxot/dev
-=======
-- [ACTIVITY_LOG_OPTIMIZATION.md](./performance/activity-log-optimization-2.md)
-- [query-optimization-analysis-3.md](query-optimization-analysis-3.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_9G04WH
-<<<<<<< .merge_file_UYDGwn
-<<<<<<< .merge_file_g390c1
->>>>>>> .merge_file_m9Mllm
-=======
->>>>>>> .merge_file_JTRwwK
-=======
->>>>>>> .merge_file_S9C3bq
-=======
->>>>>>> .merge_file_OibCpf
 - [bottlenecks.md](./bottlenecks.md)
 
 This analysis provides a comprehensive roadmap for improving code quality in the Activity module while maintaining data integrity and performance.
@@ -527,7 +493,6 @@ private function processActivityChunk($activities)
 public function searchActivities($searchTerm, $filters = [])
 {
     $cacheKey = "activity_search_" . md5($searchTerm . serialize($filters));
-    
     
     
     return Cache::remember($cacheKey, 300, function() use ($searchTerm, $filters) {

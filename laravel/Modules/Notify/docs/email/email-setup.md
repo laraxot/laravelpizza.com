@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 ---
 title: "Email Infrastructure Setup — FixCity / Laraxot"
 type: note
 qmd: "email setup infrastructure fixcity laraxot"
 ---
-=======
->>>>>>> laraxot/dev
 # Email Infrastructure Setup — FixCity / Laraxot
 
 **Data**: 2026-11-12  

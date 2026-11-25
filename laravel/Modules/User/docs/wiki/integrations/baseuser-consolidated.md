@@ -5,10 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_19KPj5
 qmd: "baseuser consolidated"
-=======
->>>>>>> .merge_file_k1rLXI
 ---
 
 # baseuser — Consolidated Documentation

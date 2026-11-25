@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_9BYP0p
 ---
 title: "Analisi Modelli, Factory e Seeder - Moduli Activity, Gdpr, Tenant, UI, <nome progetto>, Xot"
 type: analysis
 qmd: "modelli factory seeder analisi 1 moduli"
 ---
-=======
->>>>>>> .merge_file_O7cI6W
 # Analisi Modelli, Factory e Seeder - Moduli Activity, Gdpr, Tenant, UI, <nome progetto>, Xot
 
 ## Modulo Activity

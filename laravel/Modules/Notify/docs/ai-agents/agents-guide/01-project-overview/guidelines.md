@@ -3,21 +3,7 @@ title: "guidelines"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_m2AMqp
-<<<<<<< .merge_file_2XnkpP
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_elA3jb
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_m2AMqp
->>>>>>> .merge_file_uIszL0
-=======
->>>>>>> .merge_file_elA3jb
 qmd: "guidelines"
 issues: []
 discussions: []
@@ -39,10 +25,6 @@ discussions: []
 - **Commit/push are never automatic** - do them only after real end-to-end verification and after `phpstan`, `phpmd`, `phpinsights`, and tests have been run on the scope requested by the user.
 - If those quality gates were not run, say so explicitly and do not commit or push.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 title: "guidelines"
 type: note
@@ -52,15 +34,4 @@ updated: 2026-09-26
 qmd: "guidelines"
 issues: []
 discussions: []
-<<<<<<< .merge_file_m2AMqp
-<<<<<<< .merge_file_2XnkpP
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_uIszL0
-=======
->>>>>>> .merge_file_elA3jb
 [Back to index](../index.md) | [Overview](project-overview.md) | [Links](links.md)

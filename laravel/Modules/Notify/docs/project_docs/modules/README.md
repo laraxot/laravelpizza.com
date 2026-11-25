@@ -4,15 +4,7 @@ type: index
 tags: [notify, docs, project_docs, modules]
 module: Notify
 created: 2026-07-20
-<<<<<<< .merge_file_RrImPI
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_H3WfQB
 qmd: "notify documentazione project_docs modules readme documentazione moduli index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"

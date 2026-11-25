@@ -4,10 +4,7 @@ module: Notify
 type: manuale-uso
 created: 2026-11-23
 updated: 2026-11-23
-<<<<<<< HEAD
 qmd: "manuale uso attori duso notify"
-=======
->>>>>>> laraxot/dev
 ---
 
 # Modulo Notify

@@ -1,15 +1,4 @@
 ---
-<<<<<<< HEAD
-<<<<<<< .merge_file_OtT5Fv
-<<<<<<< .merge_file_xUVqSQ
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_zsWbN0
-=======
->>>>>>> .merge_file_HENWJw
-<<<<<<< HEAD
 title: "Contratti"
 type: index
 tags: [contracts, actions, interfaces]
@@ -21,57 +10,29 @@ updated: 2026-11-18
 
 Cosa promette la superficie pubblica di questo pacchetto: le Action che scrivono dati, chiamano servizi esterni o hanno
 effetti collaterali, e le interfacce (`app/Contracts`). Regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`.
-=======
-=======
->>>>>>> laraxot/dev
 title: "Contratti del modulo Notify"
 type: index
 tags: [contracts, actions, interfaces, notify]
 created: 2026-11-18
 updated: 2026-11-24
-<<<<<<< .merge_file_OtT5Fv
-<<<<<<< .merge_file_xUVqSQ
-=======
->>>>>>> laraxot/dev
 title: "Contratti del modulo Notify"
 type: index
 module: Notify
 status: active
-<<<<<<< HEAD
 tags: [contracts, actions, interfaces, notify]
 created: 2026-11-18
 updated: 2026-11-24
 qmd: "notify contracts readme azioni invarianti pest group notifiche invio"
-=======
-created: 2026-11-18
-updated: 2026-11-24
-qmd: "notify contracts readme azioni invarianti pest group notifiche invio"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zsWbN0
-=======
->>>>>>> .merge_file_HENWJw
 ---
 
 # Contratti del modulo Notify
 
-<<<<<<< .merge_file_OtT5Fv
-<<<<<<< .merge_file_xUVqSQ
-<<<<<<< HEAD
 Cosa promette la superficie pubblica di Notify: le Action che scrivono dati, chiamano servizi esterni o hanno effetti collaterali,
 e le interfacce (`app/Contracts`). Un contratto descrive il comportamento promesso da una Action che invia comunicazioni ai
 destinatari (dati personali: email, telefono) o scrive lo stato delle notifiche.
 Regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`; standard: `Modules/Xot/docs/contracts/contract-authoring-standard.md`;
 governance: `Modules/Xot/docs/adr/0012-behavioral-contract-governance.md`.
 
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zsWbN0
-=======
->>>>>>> .merge_file_HENWJw
 ## Metodo Harness
 
 Un contratto descrive una singola operazione pubblica con effetti collaterali, chiamate esterne o invarianti di dominio. Documenta il comportamento osservabile, inclusi errori e non-goals, senza trasformare ogni metodo interno in un contratto.
@@ -86,26 +47,7 @@ posta in arrivo) e l'invio multicanale da template. Con un group Pest si lancia
 
 Quando leggerli: prima di chiamare, modificare o imitare una di queste Action, e prima di aggiungere un fornitore o un canale.
 Le interfacce di `app/Contracts` (SMS, Telegram, WhatsApp, push) non hanno ancora un documento qui.
-<<<<<<< .merge_file_OtT5Fv
-<<<<<<< .merge_file_xUVqSQ
-<<<<<<< HEAD
-=======
-=======
->>>>>>> .merge_file_zsWbN0
-=======
->>>>>>> .merge_file_HENWJw
 Formato e regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`.
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_OtT5Fv
-<<<<<<< .merge_file_xUVqSQ
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zsWbN0
-=======
->>>>>>> .merge_file_HENWJw
 
 ## Contratto di comportamento di un'Action
 
@@ -121,31 +63,11 @@ Un file per Action, nome in kebab-case della classe (`create-ticket-action.md`),
 ## Non fa
 ```
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_OtT5Fv
-<<<<<<< .merge_file_xUVqSQ
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_zsWbN0
-=======
->>>>>>> .merge_file_HENWJw
-<<<<<<< HEAD
 Il docblock dell'Action rimanda al file con la riga `Contratto di comportamento: docs/contracts/<file>.md`.
 Chi cambia il comportamento aggiorna il contratto nello stesso commit.
 
 ## Contratti
 
-=======
-=======
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_OtT5Fv
-<<<<<<< .merge_file_xUVqSQ
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zsWbN0
-=======
->>>>>>> .merge_file_HENWJw
 Il docblock dell'Action rimanda al file con il marker `@contract docs/contracts/<file>.md`, quello verificato dai test; la
 riga legacy `Contratto di comportamento: docs/contracts/<file>.md` può restare. Chi cambia il comportamento aggiorna il
 contratto nello stesso commit.
@@ -154,9 +76,6 @@ contratto nello stesso commit.
 
 - [HandleMailjetEventsAction](handle-mailjet-events-action.md) — webhook degli esiti Mailjet → evento `MailDeliveryEventReceived`; 4 invarianti, tutte con group.
 - [ProcessInboundMailAction](process-inbound-mail-action.md) — webhook della posta in arrivo → `inbound_emails` + `.eml` su disco; 4 invarianti, 1 con group.
-<<<<<<< .merge_file_OtT5Fv
-<<<<<<< .merge_file_xUVqSQ
-<<<<<<< HEAD
 - [SendNotificationAction](send-notification-action.md) — invio da template su `mail`, `database`, `sms`; invarianti `NOTIFY-SEND-INV-<N>` nel contratto, debito dichiarato sui test.
 - [ModelWithStatusContract](modelwithstatuscontract.md) — rinvio all'interfaccia di Xot `Modules\Xot\Contracts\ModelWithStatusContract` (gestione degli stati via Spatie Model Status); nota legacy (`type: note`, `status: draft`), non è un contratto di comportamento di Notify e non segue il formato a sei sezioni.
 
@@ -164,11 +83,6 @@ contratto nello stesso commit.
 
 - [INDEX](index.md) — tabella operativa operazione, contratto, classe, invarianti; copertura e backlog.
 - [Template di contratto](template.md) — scheletro con le sei sezioni e la tabella degli invarianti, da copiare per una nuova Action.
-=======
-=======
->>>>>>> .merge_file_zsWbN0
-=======
->>>>>>> .merge_file_HENWJw
 - [SendNotificationAction](send-notification-action.md) — invio da template su `mail`, `database`, `sms`; 4 invarianti, debito (test da correggere).
 - [ModelWithStatusContract](modelwithstatuscontract.md) — rinvio all'interfaccia di Xot `Modules\Xot\Contracts\ModelWithStatusContract` (gestione degli stati via Spatie Model Status); non è un contratto di comportamento di Notify.
 
@@ -176,13 +90,6 @@ contratto nello stesso commit.
 
 - [INDEX](index.md) — tabella operativa operazione, contratto, classe, invarianti; oggi censisce solo `modelwithstatuscontract.md`.
 - [Template di contratto](template.md) — scheletro con le sei sezioni e la tabella degli invarianti, da copiare per una nuova Action.
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_OtT5Fv
-<<<<<<< .merge_file_xUVqSQ
-=======
 Un contract descrive il comportamento promesso da una Action che invia comunicazioni ai destinatari (dati personali: email, telefono) o scrive lo stato delle notifiche.
 Standard: `Modules/Xot/docs/contracts/contract-authoring-standard.md`; governance: `Modules/Xot/docs/adr/0012-behavioral-contract-governance.md`.
 
@@ -199,9 +106,3 @@ Standard: `Modules/Xot/docs/contracts/contract-authoring-standard.md`; governanc
 - `template.md`: modello per i nuovi contract.
 
 Copertura e backlog: [index.md](index.md).
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zsWbN0
-=======
->>>>>>> .merge_file_HENWJw

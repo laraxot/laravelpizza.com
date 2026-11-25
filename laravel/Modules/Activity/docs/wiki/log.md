@@ -92,31 +92,10 @@ discussions:
 
 ## [2026-10-14] docs | Ingressi di `docs/` riallineati al codice
 
-<<<<<<< .merge_file_sE4Dni
-<<<<<<< .merge_file_AMR4AG
-<<<<<<< .merge_file_bxyyOt
-<<<<<<< .merge_file_iasdMO
-=======
-=======
->>>>>>> .merge_file_dsy3B5
-=======
->>>>>>> .merge_file_nWce9z
-=======
->>>>>>> .merge_file_SsQ8NV
 - Riscritti con fatti verificati su `app/`, `routes/`, `config/`, `database/migrations`, `tests/`: [README.md](../README.md), `../00-index.md` (indice canonico: stato delle cartelle e famiglie della radice con conteggi), `../index.md` (solo inventario numerico), [README.md](./README.md) di questa wiki. Corretti i link di `index.md` della wiki e tolti da `../index.md` i 40 link a `tasks/` e `roadmap/tasks/` (file rimossi nel commit `7e00cedf` del 2026-10-08).
 - Marcati `stale` senza cambiare il contenuto: `../architecture.md` (Repositories, Services e Projections inesistenti), `../api-2.md` (firma `execute(array $data)` inesistente), `../README.md` (`ActivityStatsWidget` e `EventStore` inesistenti) e le copie di indice `../00-index.md`, `../00-index-documentation.md`, `00-index.md`, `00-index.md`, `00-index-documentation.md`, `index.md`.
 - Nel codice: `LoginListener::handle()` e' vuoto, nessuna rotta attiva, PHPStan su `Modules/Activity` esce con 0. Quattro migrazioni `create_activity_table` restano accanto a quella "unica" del 2026-06-10 (la voce del 2026-06-10 qui sotto cita `140000`, il file e' `141000`).
 - Nota 2026-10-23: `../00-index.md`, `../index.md` e `index.md` della wiki sono stati rimossi il 2026-10-22 (commit `7e2a1509`); restano citati qui come registro.
-<<<<<<< .merge_file_sE4Dni
-<<<<<<< .merge_file_AMR4AG
-<<<<<<< .merge_file_bxyyOt
->>>>>>> .merge_file_r8Du5e
-=======
->>>>>>> .merge_file_dsy3B5
-=======
->>>>>>> .merge_file_nWce9z
-=======
->>>>>>> .merge_file_SsQ8NV
 - Link non risolti sui file toccati e verifiche: [story](../stories/docs-ingressi-activity.story.md).
 
 ## [2026-06-13] phpstan | Gate chef — 7 file Actions → Assert

@@ -3,21 +3,7 @@ title: "contactcolumn anti patterns and errors"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_NVttuh
-<<<<<<< .merge_file_ejOXZI
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_T0zxaI
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_NVttuh
->>>>>>> .merge_file_0Nk0eH
-=======
->>>>>>> .merge_file_T0zxaI
 qmd: "contactcolumn anti patterns and errors"
 issues: []
 discussions: []
@@ -151,10 +137,6 @@ private function formatContacts(Client $record): string
 4. [ ] Refactoring ContactColumn.php con pattern corretto
 5. [ ] Testing della soluzione corretta
 6. [ ] Validazione conformità alle memorie
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -173,8 +155,3 @@ discussions: []
 
 *Ultimo aggiornamento: [DATE]*  
 *Errori identificati e documentati per prevenzione futura*
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

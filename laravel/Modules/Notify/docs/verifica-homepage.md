@@ -3,19 +3,8 @@ title: "📸 Verifica Visiva Homepage FixCity"
 type: concept
 tags: [verifica, homepage]
 created: 2026-07-14
-<<<<<<< .merge_file_51RgL0
 updated: 2026-11-23
 qmd: "verifica-homepage 📸 verifica visiva homepage fixcity"
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-qmd: "verifica-homepage 📸 verifica visiva homepage fixcity"
-qmd: "verifica-homepage 📸 verifica visiva homepage ptv"
-=======
-updated: 2026-11-23
-qmd: "verifica-homepage 📸 verifica visiva homepage fixcity"
->>>>>>> laraxot/dev
->>>>>>> .merge_file_K9nKww
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
@@ -23,21 +12,12 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_51RgL0
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_K9nKww
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

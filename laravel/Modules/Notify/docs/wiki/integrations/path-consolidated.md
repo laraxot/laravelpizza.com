@@ -37,14 +37,6 @@ Consolidated from **14** individual files.
 
 *Consolidated from: `path-and-interface-rules-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Principi Fondamentali
 
 1. **Regola Principale per le Interfacce**
@@ -259,14 +251,6 @@ Questa struttura garantisce:
 
 *Consolidated from: `path-and-interface-rules-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Principi Fondamentali
 
 1. **Regola Principale per le Interfacce**
@@ -458,14 +442,6 @@ Questa struttura garantisce:
 
 *Consolidated from: `path-and-interface.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Principi Fondamentali
 
 1. **Regola Principale per le Interfacce**
@@ -657,14 +633,6 @@ Questa struttura garantisce:
 
 *Consolidated from: `path-and-namespace-rules-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 > **ATTENZIONE:** In nessun caso il namespace deve contenere il segmento `App`, anche se il file si trova nella cartella `app/`. Questa è una regola fondamentale e ogni violazione può causare errori di autoloading, incompatibilità con PSR-4 e problemi di coerenza nel progetto. Consulta sempre questa sezione prima di creare nuovi file o correggere errori di namespace.
 
 ## Struttura Corretta dei Path
@@ -1021,14 +989,6 @@ namespace Modules\Notify\App\Console\Commands;
 
 *Consolidated from: `path-and-namespace-rules-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 > **ATTENZIONE:** In nessun caso il namespace deve contenere il segmento `App`, anche se il file si trova nella cartella `app/`. Questa è una regola fondamentale e ogni violazione può causare errori di autoloading, incompatibilità con PSR-4 e problemi di coerenza nel progetto. Consulta sempre questa sezione prima di creare nuovi file o correggere errori di namespace.
 
 ## Struttura Corretta dei Path
@@ -1374,14 +1334,6 @@ namespace Modules\Notify\App\Console\Commands;
 
 *Consolidated from: `path-and-namespace.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 > **ATTENZIONE:** In nessun caso il namespace deve contenere il segmento `App`, anche se il file si trova nella cartella `app/`. Questa è una regola fondamentale e ogni violazione può causare errori di autoloading, incompatibilità con PSR-4 e problemi di coerenza nel progetto. Consulta sempre questa sezione prima di creare nuovi file o correggere errori di namespace.
 
 ## Struttura Corretta dei Path
@@ -1718,28 +1670,10 @@ namespace Modules\Notify\App\Console\Commands;
 
 ---
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
----
-
 ## path-conventions-1
 
 *Consolidated from: `path-conventions-1.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Regole Fondamentali
 
 1. **Directory vs Namespace**
@@ -1829,14 +1763,6 @@ This document outlines the path and directory structure conventions for the Noti
 
 *Consolidated from: `path-conventions.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Regole Fondamentali
 
 1. **Directory vs Namespace**
@@ -1856,16 +1782,8 @@ This document outlines the path and directory structure conventions for the Noti
    - `Modules/Notify/App/Datas/` (ERRATO)
    - `Modules/Notify/app/` (CORRETTO)
    - `Modules/Notify/App/` (ERRATO)
-<<<<<<< HEAD
    - `Modules/Notify/app/` (CORRETTO)
    - `Modules/Notify/App/` (ERRATO)
-=======
-<<<<<<< HEAD
-   - `Modules/Notify/app/` (CORRETTO)
-   - `Modules/Notify/App/` (ERRATO)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 3. **Struttura Directory Actions**
    - `Modules/Notify/app/Actions/` (CORRETTO)
@@ -1874,16 +1792,8 @@ This document outlines the path and directory structure conventions for the Noti
 4. **Struttura Directory Datas**
    - `Modules/Notify/app/Datas/` (CORRETTO)
    - `Modules/Notify/App/Datas/` (ERRATO)
-<<<<<<< HEAD
    - `Modules/Notify/app/Datas/` (CORRETTO)
    - `Modules/Notify/App/Datas/` (ERRATO)
-=======
-<<<<<<< HEAD
-   - `Modules/Notify/app/Datas/` (CORRETTO)
-   - `Modules/Notify/App/Datas/` (ERRATO)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Namespace vs Directory
 
@@ -1899,19 +1809,10 @@ This document outlines the path and directory structure conventions for the Noti
 1. **Mai utilizzare la "A" maiuscola nel percorso fisico della directory app**
    - ✅ CORRETTO: `Modules/Notify/app/Actions/`
    - ❌ ERRATO: `Modules/Notify/App/Actions/`
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
    - ✅ CORRETTO: `Modules/Notify/app/Actions/`
    - ❌ ERRATO: `Modules/Notify/App/Actions/`
    - ✅ CORRETTO: `Modules/Notify/app/Actions/`
    - ❌ ERRATO: `Modules/Notify/App/Actions/`
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 2. **Mai aggiungere "App" nel namespace se non definito nel composer.json del modulo**
    - ✅ CORRETTO: `namespace Modules\Notify\Actions;`
@@ -1997,14 +1898,6 @@ Questo significa che il namespace `Modules\Notify` mappa alla directory `app/` d
 
 *Consolidated from: `path-and-interface-rules-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Principi Fondamentali
 
 1. **Regola Principale per le Interfacce**
@@ -2102,14 +1995,6 @@ Questa struttura garantisce:
 
 *Consolidated from: `path-and-namespace-rules-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 > **ATTENZIONE:** In nessun caso il namespace deve contenere il segmento `App`, anche se il file si trova nella cartella `app/`. Questa è una regola fondamentale e ogni violazione può causare errori di autoloading, incompatibilità con PSR-4 e problemi di coerenza nel progetto. Consulta sempre questa sezione prima di creare nuovi file o correggere errori di namespace.
 
 ## Struttura Corretta dei Path
@@ -2274,14 +2159,6 @@ namespace Modules\Notify\App\Console\Commands;
 
 *Consolidated from: `path_conventions.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Regole Fondamentali
 
 1. **Directory vs Namespace**

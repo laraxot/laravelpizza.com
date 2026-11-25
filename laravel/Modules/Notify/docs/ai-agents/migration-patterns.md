@@ -3,21 +3,7 @@ title: "migration patterns"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_9AAwsA
-<<<<<<< .merge_file_EpOsU1
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_HW44RM
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_9AAwsA
->>>>>>> .merge_file_I7AViK
-=======
->>>>>>> .merge_file_HW44RM
 qmd: "migration patterns"
 issues: []
 discussions: []

@@ -3,15 +3,7 @@ title: "FixCity Improvement Plan - OpenViking + BMAD + GSD + Ralph Loop"
 type: concept
 tags: [fixcity, improvement, plan]
 created: 2026-07-14
-<<<<<<< .merge_file_V3SdUQ
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_0PCSkY
 qmd: "fixcity-improvement-plan fixcity improvement plan - openviking + bmad + gsd + ralph loop"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

@@ -3,21 +3,7 @@ title: "email best practices"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_OGH4Cl
-<<<<<<< .merge_file_jzYPkK
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_yfmWds
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_OGH4Cl
->>>>>>> .merge_file_JQfPWh
-=======
->>>>>>> .merge_file_yfmWds
 qmd: "email best practices"
 issues: []
 discussions: []

@@ -3,25 +3,7 @@ title: "OpenViking + BMAD + GSD + Ralph Loop - Setup Complete Report"
 type: concept
 tags: [openviking, bmad, gsd, ralph]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_UcTniE
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_Sq7f2q
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_UcTniE
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_Sq7f2q
 qmd: "openviking-bmad-gsd-ralph-complete openviking + bmad + gsd + ralph loop - setup complete report"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -30,21 +12,12 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_UcTniE
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_Sq7f2q
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -410,40 +383,20 @@ cat AGENTS.md
 - [BMAD-GSD-Ralph Integration](./bmad-gsd-ralph-integration.md)
 - [Unified Workflow](./unified-ai-workflow.md)
 - [BMAD Workflow](laravel/Modules/Xot/docs/bmad-workflow-guide.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_UcTniE
 - [AGENTS.md](../agents.md)
 - [agents.md](../agents.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [AGENTS.md](../AGENTS.md)
-- [AGENTS.md](../AGENTS.md)
-=======
-<<<<<<< HEAD
 - [AGENTS.md](../agents.md)
 - [agents.md](../agents.md)
-=======
 - [AGENTS.md](../AGENTS.md)
 - [AGENTS.md](../AGENTS.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 - [AGENTS.md](../agents.md)
 - [agents.md](../agents.md)
-=======
 - [AGENTS.md](../AGENTS.md)
 - [AGENTS.md](../AGENTS.md)
-=======
-<<<<<<< HEAD
 - [AGENTS.md](../agents.md)
 - [agents.md](../agents.md)
-=======
 - [AGENTS.md](../AGENTS.md)
 - [AGENTS.md](../AGENTS.md)
->>>>>>> .merge_file_Sq7f2q
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ### Scripts
 - OpenViking Init: `bashscripts/ai/openviking-init.sh`

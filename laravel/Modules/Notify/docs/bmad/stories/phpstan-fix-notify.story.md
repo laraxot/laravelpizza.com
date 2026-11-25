@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 ---
 title: "Story: PHPStan fix Notify: NotificationsTable columns/filters"
 type: story
 qmd: "phpstan fix notify story notificationstable columnsfilters"
 ---
-=======
->>>>>>> laraxot/dev
 # Story: PHPStan fix Notify: NotificationsTable columns/filters
 
 ## Status

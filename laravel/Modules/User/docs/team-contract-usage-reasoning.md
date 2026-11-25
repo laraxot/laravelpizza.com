@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_jTrAlG
 ---
 title: "TeamContract Usage Reasoning"
 type: contract
 qmd: "team contract usage reasoning teamcontract"
 ---
-=======
->>>>>>> .merge_file_PiKZRE
 # TeamContract Usage Reasoning
 
 ## Overview

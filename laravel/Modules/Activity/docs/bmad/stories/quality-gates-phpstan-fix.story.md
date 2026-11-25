@@ -9,10 +9,7 @@ references:
   - ../../../Xot/docs/bmad/stories/5.227-phpstan-modules-verify-coordinated.story.md
   - ../../../../../../docs/sprint-status.yaml
   - ../../../../../../bashscripts/ai/wiki/memories/feedback-scan-committed-conflict-markers-first-on-bootstrap-crash.md
-<<<<<<< .merge_file_EVUXyE
 qmd: "quality gates phpstan fix story modules"
-=======
->>>>>>> .merge_file_ZxsgyL
 ---
 
 # Story — PHPStan fleet remediation

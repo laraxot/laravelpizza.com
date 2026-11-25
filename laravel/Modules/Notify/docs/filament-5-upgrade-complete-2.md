@@ -3,31 +3,7 @@ title: "filament 5 upgrade complete"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_5gtxCB
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_IQNk0N
-<<<<<<< .merge_file_dbcfBc
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_XNg2fB
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_7l0HC5
-=======
-<<<<<<< .merge_file_IQNk0N
->>>>>>> .merge_file_l7GojH
-=======
->>>>>>> .merge_file_XNg2fB
->>>>>>> laraxot/dev
 qmd: "filament 5 upgrade complete"
 issues: []
 discussions: []
@@ -38,10 +14,6 @@ discussions: []
 **Data**: 2026-03-30  
 **Status**: ✅ **SUCCESSFULLY UPGRADED**
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "filament 5 upgrade complete"
@@ -65,14 +37,9 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎉 Upgrade Completato
 ### Versioni Installate
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🔧 Modifiche Applicate
 
 ### 1. Root composer.json (MINIMALE)

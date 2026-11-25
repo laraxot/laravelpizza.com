@@ -3,21 +3,7 @@ title: "Notify Module Documentation"
 type: documentation
 tags: [module, documentation]
 created: 2026-06-05
-<<<<<<< .merge_file_vdSsdL
-<<<<<<< .merge_file_PeHR7r
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_UNrruH
-<<<<<<< HEAD
-updated: 2026-08-02
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_vdSsdL
->>>>>>> .merge_file_Q1anZd
-=======
->>>>>>> .merge_file_UNrruH
 status: draft
 qmd: "documentation notify"
 ---
@@ -91,10 +77,6 @@ Modules\Notify\Models\NotificationTemplateVersion
 
 <!-- Merged from readme.md, which collided with this file on case-insensitive filesystems. -->
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 title: "Modulo Notify - Documentazione"
 type: index
@@ -114,11 +96,6 @@ related:
   - integrations/readme.md
   - templates/readme.md
 ---
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 # Modulo Notify - Documentazione
 
 ## 📚 Overview

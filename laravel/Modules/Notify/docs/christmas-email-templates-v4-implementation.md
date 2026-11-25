@@ -3,21 +3,7 @@ title: "christmas email templates v4 implementation"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_AMnfje
-<<<<<<< .merge_file_pdAogQ
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_H5PxD0
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_AMnfje
->>>>>>> .merge_file_9CkFUZ
-=======
->>>>>>> .merge_file_H5PxD0
 qmd: "christmas email templates v4 implementation"
 issues: []
 discussions: []
@@ -29,10 +15,6 @@ discussions: []
 **Versione**: v4.0 - Luxury, Winter Wonderland & Elephant Mascot
 **Status**: ✅ Completato
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "christmas email templates v4 implementation"
@@ -55,14 +37,9 @@ Implementazione di 3 nuovi template email natalizi professionali e festivi per S
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 📋 Sommario Esecutivo
 ### Template Creati
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🎨 Template Dettagliati
 
 ### 1. christmas-luxury.html

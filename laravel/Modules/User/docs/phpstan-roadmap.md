@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_knaL4R
 ---
 title: "PHPStan Roadmap: User Module"
 type: note
 qmd: "phpstan roadmap user"
 ---
-=======
->>>>>>> .merge_file_aCPOID
 # PHPStan Roadmap: User Module
 
 **Date**: 2026-01-12

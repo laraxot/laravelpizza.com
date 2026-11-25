@@ -3,15 +3,7 @@ title: "homepage comparison"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_mNHybh
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_vJBCYZ
 qmd: "homepage comparison"
 issues: []
 discussions: []
@@ -196,10 +188,6 @@ cd laravel/Themes/Sixteen
 npm run build    # Build CSS/JS
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
 ```
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -213,11 +201,3 @@ issues: []
 discussions: []
 *Generated: 2026-04-07*
 *Last Updated: 2026-04-07*
-<<<<<<< .merge_file_mNHybh
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_vJBCYZ

@@ -3,21 +3,7 @@ title: "queue jobs"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_bbAHT2
-<<<<<<< .merge_file_sftvxZ
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_HRBBQF
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_bbAHT2
->>>>>>> .merge_file_E61nt0
-=======
->>>>>>> .merge_file_HRBBQF
 qmd: "queue jobs"
 issues: []
 discussions: []

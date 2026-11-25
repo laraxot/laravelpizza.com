@@ -3,15 +3,7 @@ title: "roadmap ands"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_tOyLs5
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_W7s0NS
 qmd: "roadmap ands"
 issues: []
 discussions: []
@@ -23,10 +15,6 @@ discussions: []
 **Data Analisi**: 1 Ottobre 2025  
 **Status PHPStan**: ✅ 0 errori (Level 10)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "roadmap ands"
@@ -52,14 +40,9 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 📊 STATO ATTUALE
 ### Completezza Funzionale: 70%
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 📬 CANALI SUPPORTATI
 
 ### ✅ Implementati
@@ -290,11 +273,3 @@ class TicketDigest extends Notification implements ShouldQueue
 **Status**: ✅ BUONO  
 **PHPStan**: ✅ 0 errori  
 **Focus**: Real-Time + Push + Preferences
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

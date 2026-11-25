@@ -3,31 +3,7 @@ title: "🎨 Fix Colori Header e Footer - Bootstrap Italia"
 type: concept
 tags: [fix, colori, header, footer]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_Kj71Za
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_wINXts
-<<<<<<< .merge_file_lSMpiP
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_J8ZFkF
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_dRWIL8
-=======
-<<<<<<< .merge_file_wINXts
->>>>>>> .merge_file_n4lTID
-=======
->>>>>>> .merge_file_J8ZFkF
->>>>>>> laraxot/dev
 qmd: "fix-colori-header-footer 🎨 fix colori header e footer - bootstrap italia"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -36,34 +12,14 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< HEAD
-<<<<<<< .merge_file_Kj71Za
-=======
-<<<<<<< .merge_file_wINXts
-<<<<<<< .merge_file_lSMpiP
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
->>>>>>> .merge_file_dRWIL8
-=======
->>>>>>> .merge_file_n4lTID
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_J8ZFkF
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

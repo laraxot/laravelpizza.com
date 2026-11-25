@@ -3,15 +3,7 @@ title: "readme en"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_gfjMj1
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_95UbxE
 qmd: "readme en"
 issues: []
 discussions: []
@@ -31,10 +23,6 @@ discussions: []
 
 > **Citizens know what happens to their report.** Email, templates, channels — enterprise notification orchestration.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "readme en"
@@ -74,16 +62,11 @@ Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filamen
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## Why it exists
 ## Superpowers
 ## Certifications
 ## Join the team
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Documentation
 
 | Language | Link |

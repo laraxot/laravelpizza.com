@@ -4,21 +4,7 @@ type: concept
 tags: [notify, docs, best-practices, kdown, linking, conventions]
 module: Notify
 created: 2026-07-20
-<<<<<<< .merge_file_GbKihB
-<<<<<<< .merge_file_YCixBZ
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_9sdKc3
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_GbKihB
->>>>>>> .merge_file_KsLwuw
-=======
->>>>>>> .merge_file_9sdKc3
 qmd: "notify documentazione best practices kdown linking conventions convenzioni per i collegamenti nei file markdown frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"

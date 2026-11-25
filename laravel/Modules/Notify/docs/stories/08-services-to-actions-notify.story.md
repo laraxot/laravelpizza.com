@@ -5,15 +5,7 @@ status: done
 priority: high
 module: Notify
 created: 2026-10-08
-<<<<<<< .merge_file_4DVNjv
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-10-08
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_8pqsHQ
 tags: [notify, services-to-actions, queueable-action, enum, push, dedup, swarm]
 related:
   - ./4.29.notify-services-to-actions.story.md
@@ -21,10 +13,7 @@ related:
   - ./2026-10-06-phpstan-cleanup-notify.dev.md
   - ../wiki/concepts/services-to-actions-migration.md
   - ../../../../../bmad-output/epic-code-standards-services-mixed-const.md
-<<<<<<< HEAD
 qmd: "08 services to actions notify story"
-=======
->>>>>>> laraxot/dev
 ---
 
 # [STORY] Notify: niente Services

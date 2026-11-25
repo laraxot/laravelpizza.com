@@ -3,21 +3,7 @@ title: "laravel core rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_BzLT7J
-<<<<<<< .merge_file_g52IT7
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_eLvraw
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_BzLT7J
->>>>>>> .merge_file_Wa8qsO
-=======
->>>>>>> .merge_file_eLvraw
 qmd: "laravel core rules"
 issues: []
 discussions: []
@@ -68,11 +54,6 @@ discussions: []
 ### Vite Error
 - If you receive an "Illuminate\Foundation\ViteException: Unable to locate file in Vite manifest" error, you can run `npm run build` or ask the user to run `npm run dev` or `composer run dev`.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-
 
 ---
 
@@ -92,9 +73,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

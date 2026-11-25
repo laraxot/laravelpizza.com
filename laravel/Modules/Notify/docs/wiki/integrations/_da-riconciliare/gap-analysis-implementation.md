@@ -1,28 +1,10 @@
 ---
 title: "🔍 NOTIFY - GAP ANALYSIS & IMPLEMENTATION PLAN"
-<<<<<<< .merge_file_yGigYg
 type: concept
 tags: [gap, analysis, implementation]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "gap-analysis-implementation 🔍 laraxot - gap analysis & implementation plan"
-=======
-<<<<<<< HEAD
-title: "🔍 <nome progetto> - GAP ANALYSIS & IMPLEMENTATION PLAN"
-type: concept
-tags: [gap, analysis, implementation]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "gap-analysis-implementation 🔍 laraxot - gap analysis & implementation plan"
-qmd: "gap-analysis-implementation 🔍 <nome progetto> - gap analysis & implementation plan"
-=======
-type: concept
-tags: [gap, analysis, implementation]
-created: 2026-07-14
-updated: 2026-11-23
-qmd: "gap-analysis-implementation 🔍 laraxot - gap analysis & implementation plan"
->>>>>>> laraxot/dev
->>>>>>> .merge_file_jSOvJQ
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
@@ -32,17 +14,8 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< .merge_file_yGigYg
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_jSOvJQ
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

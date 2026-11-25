@@ -3,21 +3,7 @@ title: "📚 DOCS MONITORING SYSTEM - Sistema di Monitoraggio Documentazione"
 type: concept
 tags: [docs, monitoring, system]
 created: 2026-07-14
-<<<<<<< .merge_file_P5qg17
-<<<<<<< .merge_file_SCPxZa
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_Ax4mnU
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_P5qg17
->>>>>>> .merge_file_zzpkxz
-=======
->>>>>>> .merge_file_Ax4mnU
 qmd: "docs-monitoring-system 📚 docs monitoring system - sistema di monitoraggio documentazione"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -26,26 +12,14 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_P5qg17
-<<<<<<< .merge_file_SCPxZa
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_zzpkxz
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_Ax4mnU
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -310,11 +284,5 @@ find . -name "*.md" -exec sed -i 's/Laravel 11/Laravel 12/g' {} \;
 ---
 
 *Questo sistema di monitoraggio garantisce che tutta la documentazione rimanga sempre aggiornata e coerente con lo stato attuale del progetto.*
-
-
-
-
-
-
 
 

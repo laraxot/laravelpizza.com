@@ -3,57 +3,13 @@ title: "Files Created in Session 007"
 type: concept
 tags: [files, created, session, 007]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< .merge_file_5VyuCi
-=======
-<<<<<<< .merge_file_jdWirI
-<<<<<<< .merge_file_28cDJL
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_Kwy68u
-=======
->>>>>>> .merge_file_EOzr92
-=======
->>>>>>> .merge_file_ylo2hU
->>>>>>> laraxot/dev
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-<<<<<<< .merge_file_5VyuCi
-=======
-<<<<<<< .merge_file_jdWirI
-<<<<<<< .merge_file_28cDJL
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_Kwy68u
-=======
->>>>>>> .merge_file_EOzr92
-=======
->>>>>>> .merge_file_ylo2hU
->>>>>>> laraxot/dev
 qmd: "files-created-session-007 files created in session 007"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./00-index.md"
   - "./00-index-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
   - "./00-index.md"
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
@@ -68,30 +24,11 @@ related:
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-<<<<<<< HEAD
-<<<<<<< .merge_file_5VyuCi
-=======
-<<<<<<< .merge_file_jdWirI
-<<<<<<< .merge_file_28cDJL
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-=======
-=======
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
   - "./00-index-documentation.md"
   - "./absolute-completion-completamento-assoluto.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_Kwy68u
-=======
->>>>>>> .merge_file_EOzr92
-=======
->>>>>>> .merge_file_ylo2hU
->>>>>>> laraxot/dev
 ---
 
 # Files Created in Session 007
@@ -268,87 +205,31 @@ Project Root/
 ### Usage Recommendations
 
 **For Project Managers**:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< .merge_file_5VyuCi
-=======
-<<<<<<< .merge_file_jdWirI
-<<<<<<< .merge_file_28cDJL
->>>>>>> laraxot/dev
 - read: design-conversion-roadmap.md
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_Kwy68u
-=======
->>>>>>> .merge_file_EOzr92
->>>>>>> laraxot/dev
 - Read: design-conversion-roadmap.md
-=======
-<<<<<<< HEAD
 - read: design-conversion-roadmap.md
-=======
 - Read: design-conversion-roadmap.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-<<<<<<< .merge_file_5VyuCi
-=======
 - read: design-conversion-roadmap.md
-=======
-<<<<<<< .merge_file_28cDJL
-=======
 - read: design-conversion-roadmap.md
-=======
 - Read: design-conversion-roadmap.md
-=======
-<<<<<<< HEAD
 - read: design-conversion-roadmap.md
-=======
 - Read: design-conversion-roadmap.md
->>>>>>> .merge_file_ylo2hU
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - Reference: PRIORITY-MATRIX.json (for timeline/effort)
 
 **For Developers**:
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_jdWirI
->>>>>>> laraxot/dev
-=======
 - Reference: PRIORITY-MATRIX.json (for timeline/effort)
 
 **For Developers**:
 - Read: laravel/Themes/Sixteen/docs/index.md
 - Reference: bashscripts/docs/index.md (for tools)
-<<<<<<< HEAD
->>>>>>> .merge_file_Kwy68u
-=======
->>>>>>> .merge_file_EOzr92
->>>>>>> laraxot/dev
 - Read: laravel/Themes/Sixteen/docs/index.md
 - Reference: bashscripts/docs/index.md (for tools)
-<<<<<<< HEAD
 - Read: laravel/Themes/Sixteen/docs/index.md
 - Reference: bashscripts/docs/index.md (for tools)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 - Read: laravel/Themes/Sixteen/docs/index.md
 - Reference: bashscripts/docs/index.md (for tools)
->>>>>>> .merge_file_ylo2hU
->>>>>>> laraxot/dev
 - Read: laravel/Themes/Sixteen/docs/index.md
 - Reference: bashscripts/docs/index.md (for tools)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - Analyze: pages/<page-name>/DETAILED-analysis.md (per page)
 
 **For DevOps/CI-CD**:

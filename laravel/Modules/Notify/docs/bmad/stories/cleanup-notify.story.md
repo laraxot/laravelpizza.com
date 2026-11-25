@@ -3,21 +3,7 @@ title: "cleanup notify 2026 09 22.story"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ZGkxna
-<<<<<<< .merge_file_4aorhg
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_jYOIWR
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ZGkxna
->>>>>>> .merge_file_prdwoH
-=======
->>>>>>> .merge_file_jYOIWR
 qmd: "cleanup notify 2026 09 22.story"
 issues: []
 discussions: []

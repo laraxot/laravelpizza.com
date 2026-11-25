@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_1woenR
 ---
 title: "Implementazione Corretta delle Pagine di Autenticazione con Volt e Folio"
 type: note
 qmd: "volt folio auth implementation implementazione corretta"
 ---
-=======
->>>>>>> .merge_file_I9Xl0F
 # Implementazione Corretta delle Pagine di Autenticazione con Volt e Folio
 
 ## Collegamenti correlati

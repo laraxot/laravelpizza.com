@@ -3,21 +3,7 @@ title: "design comuni theme audit"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_qLv8oM
-<<<<<<< .merge_file_Pqp1Q6
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_cHJxwQ
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_qLv8oM
->>>>>>> .merge_file_SqMCM3
-=======
->>>>>>> .merge_file_cHJxwQ
 qmd: "design comuni theme audit"
 issues: []
 discussions: []

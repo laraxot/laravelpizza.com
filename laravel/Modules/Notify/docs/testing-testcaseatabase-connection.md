@@ -3,25 +3,7 @@ title: "testing testcaseatabase connection"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_78Rfzl
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_6vO3JT
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_78Rfzl
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_6vO3JT
 qmd: "testing testcaseatabase connection"
 issues: []
 discussions: []
@@ -111,34 +93,12 @@ protected function setUp(): void
 ## 🔗 Collegamenti
 
 - [Testing Rules](testing-rules.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_78Rfzl
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_6vO3JT
 - [Activity TestCase Fix](../../activity/docs/testing-testcase-database-connection-fix.md)
 - [Geo TestCase Fix](../../geo/docs/testing-testcase-database-connection-fix.md)
 - [Media TestCase Fix](../../media/docs/testing-testcase-database-connection-fix.md)
 - [Activity TestCase Fix](../../Activity/docs/testing-testcase-database-connection-fix.md)
 - [Geo TestCase Fix](../../Geo/docs/testing-testcase-database-connection-fix.md)
 - [Media TestCase Fix](../../Media/docs/testing-testcase-database-connection-fix.md)
-<<<<<<< .merge_file_78Rfzl
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_6vO3JT
->>>>>>> laraxot/dev
 - [Activity TestCase Fix](../../Activity/docs/testing-testcase-database-connection-fix.md)
 - [Geo TestCase Fix](../../Geo/docs/testing-testcase-database-connection-fix.md)
 - [Media TestCase Fix](../../Media/docs/testing-testcase-database-connection-fix.md)
@@ -155,15 +115,3 @@ issues: []
 discussions: []
 **Status**: Completed
 **Risultato**: Test Notify ora configurano correttamente le connessioni database
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_78Rfzl
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_6vO3JT
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

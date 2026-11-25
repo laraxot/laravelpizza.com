@@ -3,36 +3,13 @@ title: "🏛️ FIXCITY - Civic Engagement Platform"
 type: concept
 tags: [project, overview]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_LSGRqP
-=======
-<<<<<<< .merge_file_qMvo2O
->>>>>>> laraxot/dev
 updated: 2026-11-23
 qmd: "project-overview 🏛️ fixcity - civic engagement platform"
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-qmd: "project-overview 🏛️ fixcity - civic engagement platform"
-qmd: "project-overview 🏛️ ptv - civic engagement platform"
-=======
-updated: 2026-11-23
-qmd: "project-overview 🏛️ fixcity - civic engagement platform"
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_UNnk3r
-=======
->>>>>>> .merge_file_IVMdpR
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./00-index.md"
   - "./00-index-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
   - "./00-index.md"
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
@@ -47,27 +24,11 @@ related:
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
-<<<<<<< HEAD
-<<<<<<< .merge_file_LSGRqP
-=======
-<<<<<<< .merge_file_qMvo2O
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-=======
-=======
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
   - "./00-index-documentation.md"
   - "./absolute-completion-completamento-assoluto.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_UNnk3r
-=======
->>>>>>> .merge_file_IVMdpR
->>>>>>> laraxot/dev
 ---
 
 # 🏛️ FIXCITY - Civic Engagement Platform

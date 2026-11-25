@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 ---
 title: "Correzioni PHPStan Completate - Modulo Notify"
 type: note
 qmd: "correzioni phpstan completate notify"
 ---
-=======
->>>>>>> laraxot/dev
 # Correzioni PHPStan Completate - Modulo Notify
 
 ## 1. Introduzione

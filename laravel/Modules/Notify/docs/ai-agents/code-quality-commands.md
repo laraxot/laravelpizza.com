@@ -3,21 +3,7 @@ title: "code quality commands"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_b3JFnl
-<<<<<<< .merge_file_2TH1sX
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_CNOwEM
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_b3JFnl
->>>>>>> .merge_file_1RhF0e
-=======
->>>>>>> .merge_file_CNOwEM
 qmd: "code quality commands"
 issues: []
 discussions: []

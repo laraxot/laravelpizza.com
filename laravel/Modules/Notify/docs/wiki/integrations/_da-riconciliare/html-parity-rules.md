@@ -3,35 +3,13 @@ title: "HTML Parity Analysis Rules"
 type: rule
 tags: [html, parity, rules]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_cQCVLr
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_9QAssa
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_cQCVLr
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_9QAssa
 qmd: "html-parity-rules html parity analysis rules"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
   - "./00-index.md"
   - "./00-index-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
   - "./00-index.md"
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
@@ -42,16 +20,11 @@ related:
   - "../../../acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
-<<<<<<< HEAD
-=======
-=======
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
   - "../../../00-index-documentation.md"
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "../../../acronym-naming-conventions.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 status: draft
 ---
@@ -445,34 +418,15 @@ trans('<nome progetto>::segnalazione.heading.title.label')
 - [Translation Conventions](../../../translation-conventions-2.md)
 - [Blade Architecture](../../../../../Geo/docs/root-md-files/claude.md#blade-components)
 - [Agnostic Scripts](./agnostic-documentation-rule.md)
-<<<<<<< HEAD
 - [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
 - [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
-=======
-<<<<<<< .merge_file_cQCVLr
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
 - [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
-=======
-=======
->>>>>>> .merge_file_9QAssa
-<<<<<<< .merge_file_f0djDb
 - [Multi-Agent Coordination](../../../multi-agent-coordination-rules-2.md)
-=======
 - [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
-<<<<<<< .merge_file_cQCVLr
 - [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
->>>>>>> .merge_file_dVyEHD
->>>>>>> laraxot/dev
-=======
 - [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
->>>>>>> laraxot/dev
-=======
 - [Multi-Agent Coordination](../../../multi-agent-coordination-rules.md)
->>>>>>> .merge_file_dVyEHD
->>>>>>> .merge_file_9QAssa
->>>>>>> laraxot/dev
 
 ---
 

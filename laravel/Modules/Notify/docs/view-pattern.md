@@ -3,25 +3,7 @@ title: "view pattern"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_zmMhxb
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_zsq6ho
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_zmMhxb
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zsq6ho
 qmd: "view pattern"
 issues: []
 discussions: []
@@ -75,37 +57,17 @@ return view((string) $view);
 ## Collegamenti
 
 - [phpstan_critical_rules](../.cursor/rules/phpstan_critical_rules.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_zmMhxb
 - [AGENTS.md](../agents.md)
 - [agents.md](../agents.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [AGENTS.md](../AGENTS.md)
-- [AGENTS.md](../AGENTS.md)
-=======
-<<<<<<< HEAD
 - [AGENTS.md](../agents.md)
 - [agents.md](../agents.md)
-=======
 - [AGENTS.md](../AGENTS.md)
 - [AGENTS.md](../AGENTS.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 - [AGENTS.md](../agents.md)
 - [agents.md](../agents.md)
-=======
 - [AGENTS.md](../AGENTS.md)
 - [AGENTS.md](../AGENTS.md)
-=======
-<<<<<<< HEAD
 - [AGENTS.md](../agents.md)
 - [agents.md](../agents.md)
-=======
 - [AGENTS.md](../AGENTS.md)
 - [AGENTS.md](../AGENTS.md)
->>>>>>> .merge_file_zsq6ho
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

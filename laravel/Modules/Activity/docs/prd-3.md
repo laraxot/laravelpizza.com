@@ -5,10 +5,7 @@ type: concept
 tags: [PRD, activity, audit, logging]
 created: 2026-08-04
 updated: 2026-08-04
-<<<<<<< .merge_file_Vgz5kW
 qmd: "prd product requirements document activity"
-=======
->>>>>>> .merge_file_e9ugCw
 ---
 # Product Requirements Document (PRD) - Activity Module
 

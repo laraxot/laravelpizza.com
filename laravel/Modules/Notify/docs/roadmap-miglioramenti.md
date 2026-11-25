@@ -3,25 +3,7 @@ title: "roadmap miglioramenti"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_1leLj8
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_St7fUQ
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_1leLj8
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_St7fUQ
 qmd: "roadmap miglioramenti"
 issues: []
 discussions: []
@@ -42,29 +24,11 @@ markdown in `docs/`**, contro 233 file PHP in `app/`. Un rapporto di quasi 20
 documenti per ogni file di codice. Questo non è un modulo ben documentato, è
 un modulo che ha smesso di distinguere fra scrivere e ricordare. Prova
 diretta, senza bisogno di aprirli: nella sola root di `docs/` convivono
-<<<<<<< HEAD
 `00-index.md`, `00-index-1.md`, `00-index-2.md` e `00-index.md` — quattro
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_1leLj8
-<<<<<<< HEAD
 `00-index.md`, `00-index-1.md`, `00-index-2.md` e `00-index.md` — quattro
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_St7fUQ
 `00-index.md`, `00-index-1.md`, `00-index-2.md` e `00-INDEX.md` — quattro
-=======
 `00-index.md`, `00-index-1.md`, `00-index-2.md` e `00-index.md` — quattro
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_1leLj8
-=======
 `00-index.md`, `00-index-1.md`, `00-index-2.md` e `00-INDEX.md` — quattro
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_St7fUQ
 indici per un unico modulo, nessuno dei quattro probabilmente aggiornato
 dopo la nascita degli altri tre. E poi `absolute-completion.md` insieme ad
 `absolute-completion-100.md`: un modulo che si certifica "completo al 100%"

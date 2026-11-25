@@ -4,21 +4,7 @@ type: index
 tags: [notify, docs, ai-agents, split]
 module: Notify
 created: 2026-07-20
-<<<<<<< .merge_file_YGu3YJ
-<<<<<<< .merge_file_xCeLtZ
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_cKZnkE
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_YGu3YJ
->>>>>>> .merge_file_rdSmFV
-=======
->>>>>>> .merge_file_cKZnkE
 qmd: "notify documentazione ai agents split index ai agents documentation index index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -171,42 +157,13 @@ Split from [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemi
 - ← Back to [Project Root](../../)
 - ← Back to [Docs Index](../../docs/README.md)
 - ← Back to [agents-2.md](../../../../agents-2.md) (original)
-<<<<<<< .merge_file_YGu3YJ
-<<<<<<< .merge_file_xCeLtZ
-<<<<<<< HEAD
 - ← Back to [agents-2.md](../../../../agents-2.md) (original)
-=======
-<<<<<<< HEAD
-- ← Back to [agents-2.md](../../../../agents-2.md) (original)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 - ← Back to [AGENTS.md](../../../../AGENTS.md) (original)
->>>>>>> .merge_file_rdSmFV
-=======
-- ← Back to [AGENTS.md](../../../../AGENTS.md) (original)
->>>>>>> .merge_file_cKZnkE
 - ← Back to [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) (original)
 - ← Back to [gemini-2.md](../../wiki/integrations/_da-riconciliare/gemini-2.md) (original)
 - ← Back to [Docs Index](../../README.md)
 - ← Back to [AGENTS.md](../../../../../AGENTS.md) (original)
-<<<<<<< .merge_file_YGu3YJ
-<<<<<<< .merge_file_xCeLtZ
-<<<<<<< HEAD
 - ← Back to [AGENTS.md](../../../../../AGENTS.md) (original)
-=======
-<<<<<<< HEAD
-- ← Back to [AGENTS.md](../../../../../AGENTS.md) (original)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- ← Back to [AGENTS.md](../../../../../AGENTS.md) (original)
->>>>>>> .merge_file_rdSmFV
-=======
-- ← Back to [AGENTS.md](../../../../../AGENTS.md) (original)
->>>>>>> .merge_file_cKZnkE
 - ← Back to [CLAUDE.md](../../claude.md) (original)
 - ← Back to [gemini-2.md](../../wiki/integrations/_da-riconciliare/gemini-2.md) (original)
 - ← Back to [qwen-2.md](../../wiki/integrations/_da-riconciliare/qwen-2.md) (original)

@@ -3,31 +3,7 @@ title: "fix tests homepage"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_0Wosv7
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_AWTme5
-<<<<<<< .merge_file_6Bv2IL
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_7qktuu
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_6XwATr
-=======
-<<<<<<< .merge_file_AWTme5
->>>>>>> .merge_file_o84SOu
-=======
->>>>>>> .merge_file_7qktuu
->>>>>>> laraxot/dev
 qmd: "fix tests homepage"
 issues: []
 discussions: []

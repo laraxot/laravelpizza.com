@@ -3,15 +3,7 @@ title: "xotbaseserviceprovider"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_8mXqe7
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_kwrNLX
 qmd: "xotbaseserviceprovider"
 issues: []
 discussions: []
@@ -153,10 +145,6 @@ public function boot(): void
 - [Laravel Module Development](https://nwidart.com/laravel-modules/v6/introduction) 
 ## Collegamenti tra versioni di xotbaseserviceprovider.md
 * [xotbaseserviceprovider.md](../../../xot/docs/providers/xotbaseserviceprovider.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 
 ---
@@ -169,11 +157,3 @@ updated: 2026-09-26
 qmd: "xotbaseserviceprovider"
 issues: []
 discussions: []
-<<<<<<< .merge_file_8mXqe7
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_kwrNLX

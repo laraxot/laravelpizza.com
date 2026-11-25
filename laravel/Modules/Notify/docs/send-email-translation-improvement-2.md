@@ -3,25 +3,7 @@ title: "send email translation improvement"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_A14Lof
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_tLjJ1x
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_A14Lof
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_tLjJ1x
 qmd: "send email translation improvement"
 issues: []
 discussions: []
@@ -339,21 +321,8 @@ php -l Modules/Notify/lang/it/send_email.php
 4. **Deployment**: Deploy in ambiente di sviluppo per testing
 
 ---
-<<<<<<< HEAD
-<<<<<<< .merge_file_A14Lof
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_tLjJ1x
 **Ultimo aggiornamento**: Gennaio 2025
 **Autore**: Sistema di miglioramento automatico
-=======
-<<<<<<< .merge_file_G1FBly
-<<<<<<< .merge_file_A14Lof
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_tLjJ1x
 
 title: "send email translation improvement"
 type: note
@@ -365,21 +334,7 @@ issues: []
 discussions: []
 **Ultimo aggiornamento**: Gennaio 2025  
 **Autore**: Sistema di miglioramento automatico  
-<<<<<<< .merge_file_A14Lof
-<<<<<<< HEAD
-=======
-=======
->>>>>>> .merge_file_tLjJ1x
-=======
 **Ultimo aggiornamento**: Gennaio 2025
 **Autore**: Sistema di miglioramento automatico
->>>>>>> .merge_file_0SD7go
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_A14Lof
-=======
 **Ultimo aggiornamento**: Gennaio 2025
 **Autore**: Sistema di miglioramento automatico
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_tLjJ1x

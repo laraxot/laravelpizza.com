@@ -3,21 +3,7 @@ title: "email wysiwyg editor tests"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_iFu1V7
-<<<<<<< .merge_file_LgzT9T
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_7J20ka
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_iFu1V7
->>>>>>> .merge_file_cPZRFs
-=======
->>>>>>> .merge_file_7J20ka
 qmd: "email wysiwyg editor tests"
 issues: []
 discussions: []

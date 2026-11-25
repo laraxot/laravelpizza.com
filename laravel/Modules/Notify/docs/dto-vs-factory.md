@@ -3,21 +3,7 @@ title: "dto vs factory"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_uoXAaM
-<<<<<<< .merge_file_3RkWbL
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_NGNrQa
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_uoXAaM
->>>>>>> .merge_file_GtPaaJ
-=======
->>>>>>> .merge_file_NGNrQa
 qmd: "dto vs factory"
 issues: []
 discussions: []

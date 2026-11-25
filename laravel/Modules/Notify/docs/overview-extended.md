@@ -7,25 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_s0g8pg
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_C8392X
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_s0g8pg
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_C8392X
 status: draft
 ---
 
@@ -76,30 +58,14 @@ Supporta template dinamici, allegati binari, multi-canale e integrazione complet
 - **[Spatie Mail Templates Deep Dive](./spatie-database-mail-templates-deep-dive.md)**  
   Sistema template email database
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_s0g8pg
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_C8392X
 - **[Email Layouts Best Practices](mail-templates/email-layouts-best-practices-2.md)**  
 - **[Email Layouts Best Practices](./mail-templates/email-layouts-best-practices-2.md)**  
-=======
-<<<<<<< .merge_file_S1yKcA
 - **[Email Layouts Best Practices](mail-templates/email-layouts-best-practices-2.md)**  
-=======
-- **[Email Layouts Best Practices](mail-templates/email-layouts-best-practices-2.md)**  
-<<<<<<< .merge_file_s0g8pg
-- **[Email Layouts Best Practices](./mail-templates/email-layouts-best-practices-2.md)**  
->>>>>>> .merge_file_3naZmG
->>>>>>> laraxot/dev
-=======
 - **[Email Layouts Best Practices](mail-templates/email-layouts-best-practices-2.md)**  
 - **[Email Layouts Best Practices](./mail-templates/email-layouts-best-practices-2.md)**  
-=======
+- **[Email Layouts Best Practices](mail-templates/email-layouts-best-practices-2.md)**  
 - **[Email Layouts Best Practices](./mail-templates/email-layouts-best-practices-2.md)**  
->>>>>>> .merge_file_3naZmG
->>>>>>> .merge_file_C8392X
->>>>>>> laraxot/dev
+- **[Email Layouts Best Practices](./mail-templates/email-layouts-best-practices-2.md)**  
   Best practices layout email
 
 #### Notifications
@@ -314,48 +280,18 @@ Notification::route('mail', 'to@example.com')->notify($notify);
 ### Documentazione Interna
 
 #### Email System
-<<<<<<< HEAD
-<<<<<<< .merge_file_s0g8pg
 - [Email Layouts Best Practices](./mail-templates/email-layouts-best-practices-2.md)
 - [Spatie Mail Templates Structure](./mail-templates/spatie-mail-templates-structure-2.md)
 - [Email Troubleshooting](./email-sending/email-troubleshooting-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_C8392X
-=======
-<<<<<<< .merge_file_S1yKcA
 - [Email Layouts Best Practices](mail-templates/email-layouts-best-practices-2.md)
 - [Spatie Mail Templates Structure](mail-templates/spatie-mail-templates-structure-2.md)
 - [Email Troubleshooting](email-sending/email-troubleshooting-2.md)
-=======
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_s0g8pg
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_C8392X
 - [Email Layouts Best Practices](mail-templates/email-layouts-best-practices-2.md)
 - [Spatie Mail Templates Structure](mail-templates/spatie-mail-templates-structure-2.md)
 - [Email Troubleshooting](email-sending/email-troubleshooting-2.md)
 - [Email Layouts Best Practices](./mail-templates/email-layouts-best-practices-2.md)
 - [Spatie Mail Templates Structure](./mail-templates/spatie-mail-templates-structure-2.md)
 - [Email Troubleshooting](./email-sending/email-troubleshooting-2.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_s0g8pg
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_3naZmG
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_3naZmG
->>>>>>> laraxot/dev
->>>>>>> .merge_file_C8392X
 
 #### Notifications
 - [Notifications Implementation Guide](./notifications/notifications-implementation-guide-2.md)

@@ -6,30 +6,8 @@ title: "Source Title"
 type: source
 sources: ["raw/articles/source-filename.md"]
 confidence: high
-<<<<<<< HEAD
 created: "{{date}}"
-updated: 2026-11-23
-=======
-created: {{date}}
-<<<<<<< HEAD
 updated: {{date}}
-=======
-<<<<<<< .merge_file_Y4uBD8
-<<<<<<< HEAD
-<<<<<<< HEAD
-updated: {{date}}
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_Ie3sAb
->>>>>>> laraxot/dev
 tags: [article, paper, documentation]
 related: []
 ---

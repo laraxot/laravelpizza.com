@@ -3,15 +3,7 @@ title: "results"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_9Hl2uJ
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_B8dm6d
 qmd: "results"
 issues: []
 discussions: []
@@ -60,10 +52,6 @@ npm run build    # ✓
 - Minor padding variations
 - Typography slightly different sizes
 - Structure is functionally identical
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -77,11 +65,3 @@ issues: []
 discussions: []
 *Last Updated: 2026-04-07*
 *Status: COMPLETED*
-<<<<<<< .merge_file_9Hl2uJ
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_B8dm6d

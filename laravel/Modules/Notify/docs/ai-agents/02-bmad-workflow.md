@@ -3,31 +3,7 @@ title: "02 BMAD Workflow"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_lPHAi5
-<<<<<<< .merge_file_L5NTxF
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_4gv8oO
-=======
->>>>>>> .merge_file_yix7VP
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_lPHAi5
-<<<<<<< .merge_file_L5NTxF
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_4gv8oO
-=======
->>>>>>> .merge_file_yix7VP
 qmd: "02 BMAD Workflow"
 issues: []
 discussions: []
@@ -35,40 +11,11 @@ discussions: []
 
 # 🎨 BMAD Workflow (Breakthrough Method for Agile AI-Driven Development)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_lPHAi5
-<<<<<<< .merge_file_L5NTxF
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_4gv8oO
-=======
->>>>>>> .merge_file_yix7VP
 **Part of**: [00-INDEX.md](00-index.md) — AI Agents Coordination  
 **Related**: [01-gsd-workflow-2.md](01-gsd-workflow.md) — GSD Method
 
 ## 📋 Overview
 
-<<<<<<< .merge_file_lPHAi5
-<<<<<<< .merge_file_L5NTxF
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_4gv8oO
-=======
-=======
->>>>>>> .merge_file_yix7VP
->>>>>>> laraxot/dev
 **Part of**: [00-index.md](00-index.md) — AI Agents Coordination  
 **Related**: [01-gsd-workflow.md](01-gsd-workflow.md) — GSD Method
 
@@ -93,21 +40,6 @@ BMAD is an AI-driven agile development framework with 12+ specialized agents.
 
 ---
 
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_lPHAi5
-<<<<<<< .merge_file_L5NTxF
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_4gv8oO
-=======
->>>>>>> .merge_file_yix7VP
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🔧 Installation
 
 ```bash
@@ -200,35 +132,11 @@ Agents discuss together and reach consensus.
 ### DO
 - ✅ Use specialized agents for their domain
 - ✅ Engage in structured discussions
-<<<<<<< HEAD
-<<<<<<< .merge_file_lPHAi5
-<<<<<<< .merge_file_L5NTxF
 - ✅ document decisions in state-2.md
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_4gv8oO
-=======
->>>>>>> .merge_file_yix7VP
 - ✅ Document decisions in state-2.md
-=======
-<<<<<<< HEAD
 - ✅ document decisions in state-2.md
-=======
 - ✅ Document decisions in state-2.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_lPHAi5
-<<<<<<< .merge_file_L5NTxF
-=======
 - ✅ document decisions in state-2.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_4gv8oO
-=======
->>>>>>> .merge_file_yix7VP
 - ✅ Update requirements as you learn
 
 ### DON'T

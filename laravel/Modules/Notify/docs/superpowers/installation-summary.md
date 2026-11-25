@@ -3,15 +3,7 @@ title: "🦸 Superpowers Installation Summary"
 type: concept
 tags: [installation, summary]
 created: 2026-07-14
-<<<<<<< .merge_file_NxeJ0S
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_80HjGq
 qmd: "installation-summary 🦸 superpowers installation summary"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -312,36 +304,16 @@ Agent: [Systematic debugging]
 - [Installation Guide](installation.md)
 - [Workflow Guide](docs/superpowers/workflow.md)
 - [Skills Reference](docs/superpowers/skills-reference.md)
-<<<<<<< .merge_file_NxeJ0S
-=======
 - [Quick Index](docs/superpowers/index.md)
->>>>>>> .merge_file_80HjGq
 - [Quick Index](docs/superpowers/index.md)
-<<<<<<< HEAD
 - [Quick Index](docs/superpowers/index.md)
-=======
-<<<<<<< HEAD
-- [Quick Index](docs/superpowers/index.md)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Main README](README.md)
 - [Installation Guide](installation.md)
 - [Workflow Guide](workflow.md)
 - [Skills Reference](skills-reference.md)
-<<<<<<< .merge_file_NxeJ0S
-=======
 - [Quick Index](index.md)
->>>>>>> .merge_file_80HjGq
 - [Quick Index](index.md)
-<<<<<<< HEAD
 - [Quick Index](index.md)
-=======
-<<<<<<< HEAD
-- [Quick Index](index.md)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Laravel Integration](laravel/Modules/docs/superpowers.md)
 
 ### External

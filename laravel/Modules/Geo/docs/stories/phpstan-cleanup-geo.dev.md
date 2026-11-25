@@ -8,36 +8,7 @@ updated: 2026-10-06
 tags: [phpstan, geo, constants, bmad]
 related:
   - ./phpstan-cleanup-geo.story.md
-<<<<<<< .merge_file_mraj0H
-<<<<<<< .merge_file_RgWadm
-<<<<<<< .merge_file_eA2G9I
-<<<<<<< .merge_file_yxFPwh
 date_originale_nome_file: 2026-10-06
-=======
-=======
->>>>>>> .merge_file_q4VftL
-=======
->>>>>>> .merge_file_XRmyNk
-=======
->>>>>>> .merge_file_RVHFJf
-<<<<<<< HEAD
-date_originale_nome_file: 2026-10-06
-=======
-<<<<<<< .merge_file_dgufWN
-=======
-date_originale_nome_file: 2026-10-06
->>>>>>> .merge_file_f3Ln2R
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_mraj0H
-<<<<<<< .merge_file_RgWadm
-<<<<<<< .merge_file_eA2G9I
->>>>>>> .merge_file_L69APF
-=======
->>>>>>> .merge_file_q4VftL
-=======
->>>>>>> .merge_file_XRmyNk
-=======
->>>>>>> .merge_file_RVHFJf
 ---
 
 # [DEV] PHPStan cleanup modulo Geo

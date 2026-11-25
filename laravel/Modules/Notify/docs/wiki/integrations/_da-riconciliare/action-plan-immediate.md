@@ -1,36 +1,10 @@
 ---
 title: "🎯 PIANO D'AZIONE IMMEDIATO - Notify Platform"
-<<<<<<< HEAD
-<<<<<<< .merge_file_McwKFb
-=======
-<<<<<<< .merge_file_ZeLCuK
->>>>>>> laraxot/dev
 type: concept
 tags: [action, plan, immediate]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "action-plan-immediate 🎯 piano d'azione immediato - laraxot platform"
-=======
-<<<<<<< HEAD
-title: "🎯 PIANO D'AZIONE IMMEDIATO - <nome progetto> Platform"
-type: concept
-tags: [action, plan, immediate]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "action-plan-immediate 🎯 piano d'azione immediato - laraxot platform"
-qmd: "action-plan-immediate 🎯 piano d'azione immediato - <nome progetto> platform"
-=======
-type: concept
-tags: [action, plan, immediate]
-created: 2026-07-14
-updated: 2026-11-23
-qmd: "action-plan-immediate 🎯 piano d'azione immediato - laraxot platform"
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_nwmxpR
-=======
->>>>>>> .merge_file_0zYCuu
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
@@ -40,26 +14,8 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
-<<<<<<< .merge_file_McwKFb
-=======
-<<<<<<< .merge_file_ZeLCuK
->>>>>>> laraxot/dev
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-  - "./acronym-naming-conventions.md"
-<<<<<<< HEAD
->>>>>>> .merge_file_nwmxpR
-=======
->>>>>>> .merge_file_0zYCuu
->>>>>>> laraxot/dev
   - "./actions-calling-actions-pattern.md"
 ---
 

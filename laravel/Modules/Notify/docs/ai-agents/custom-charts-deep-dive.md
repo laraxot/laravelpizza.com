@@ -3,15 +3,7 @@ title: "custom charts deep dive"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_pmCZrm
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_qMEDgN
 qmd: "custom charts deep dive"
 issues: []
 discussions: []

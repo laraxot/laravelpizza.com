@@ -3,15 +3,7 @@ title: "webcrunch tailwind collection"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_lT45yU
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_fPbH2h
 qmd: "webcrunch tailwind collection"
 issues: []
 discussions: []
@@ -31,10 +23,6 @@ Le guide trattate:
 6. Button Components in Tailwind
 7. Card Components in Tailwind
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 title: "webcrunch tailwind collection"
 type: note
@@ -65,12 +53,7 @@ URL: https://webcrunch.com/posts/tailwind-css-border-gradients
 **Utilizzo in Notify**: per evidenziare notifiche critiche con bordo a gradiente.
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## 1. Tailwind CSS Border Gradients Tutorial
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 2. Create a Responsive Tailwind Navbar with Dropdowns
 URL: https://webcrunch.com/posts/responsive-tailwind-navbar
 **Obiettivo**: navbar mobile-first con dropdown a comparsa.

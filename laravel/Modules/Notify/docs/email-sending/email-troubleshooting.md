@@ -3,21 +3,7 @@ title: "email troubleshooting"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Bvurz8
-<<<<<<< .merge_file_8SHX6s
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_1ienMt
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Bvurz8
->>>>>>> .merge_file_psVlWc
-=======
->>>>>>> .merge_file_1ienMt
 qmd: "email troubleshooting"
 issues: []
 discussions: []

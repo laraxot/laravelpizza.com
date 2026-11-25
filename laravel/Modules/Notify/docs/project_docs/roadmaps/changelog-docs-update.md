@@ -5,15 +5,7 @@ title: "CHANGELOG-docs-update-2025-10-01"
 type: concept
 tags: [deprecated]
 created: 2026-07-14
-<<<<<<< .merge_file_PS5RN1
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_RQI3B4
 qmd: "changelog-docs-update-2025-10-01 deprecated"
 status: deprecated
 related:

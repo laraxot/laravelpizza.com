@@ -3,21 +3,7 @@ title: "00 index"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_mQ6zxM
-<<<<<<< .merge_file_2C9atL
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_9op2fP
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_mQ6zxM
->>>>>>> .merge_file_t6idxu
-=======
->>>>>>> .merge_file_9op2fP
 qmd: "00 index"
 issues: []
 discussions: []
@@ -29,10 +15,6 @@ discussions: []
 **Last Updated**: 2026-03-26
 **Status**: ✅ Auto-generated
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "00 index"
@@ -53,13 +35,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 📊 Statistics
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 📁 Files in This Directory
 
 - [agents-gsd-bmad](agents-gsd-bmad.md)

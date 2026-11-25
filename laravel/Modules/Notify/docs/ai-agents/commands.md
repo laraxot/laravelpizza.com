@@ -3,21 +3,7 @@ title: "commands"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_aSoSk3
-<<<<<<< .merge_file_1aGu3S
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_WvnvX0
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_aSoSk3
->>>>>>> .merge_file_GNHn8h
-=======
->>>>>>> .merge_file_WvnvX0
 qmd: "commands"
 issues: []
 discussions: []

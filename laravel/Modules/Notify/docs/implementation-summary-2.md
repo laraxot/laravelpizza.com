@@ -3,15 +3,7 @@ title: "implementation summary 2025 01 27"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_96hOhJ
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_zCl83U
 qmd: "implementation summary 2025 01 27"
 issues: []
 discussions: []
@@ -21,13 +13,6 @@ discussions: []
 
 > **Sessione di implementazione priorità critiche Fixcity Module**
 
-<<<<<<< .merge_file_96hOhJ
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zCl83U
 ---
 
 title: "implementation summary 2025 01 27"
@@ -79,19 +64,11 @@ discussions: []
 7. ✅ Retry on failure
 
 ---
-<<<<<<< .merge_file_96hOhJ
-<<<<<<< HEAD
-=======
-=======
 ## ✅ COMPLETED TASKS
 ### 🎯 Task #1: GeocodeTicketAddressJob + Migration (CRITICAL)
 #### Implementation Details:
 #### Benefits:
 #### Test Coverage:
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zCl83U
 
 ### 🎯 Task #2: Eager Loading in ListTickets (CRITICAL)
 **Status**: ✅ COMPLETATO

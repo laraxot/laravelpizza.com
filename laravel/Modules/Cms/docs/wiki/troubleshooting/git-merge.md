@@ -3,27 +3,7 @@ title: "git merge"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_hUeKrK
-<<<<<<< .merge_file_jiujup
-<<<<<<< .merge_file_BW4GsC
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_DAFZTa
-=======
->>>>>>> .merge_file_z0ukME
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_hUeKrK
-<<<<<<< .merge_file_jiujup
->>>>>>> .merge_file_uQnNj7
-=======
->>>>>>> .merge_file_DAFZTa
-=======
->>>>>>> .merge_file_z0ukME
 qmd: "git merge"
 issues: []
 discussions: []
@@ -49,13 +29,6 @@ discussions: []
 
 ## Notes
 
-<<<<<<< HEAD
-- Inventory generated from `rg -l "^(<<<<<<<|=======|>>>>>>>)"`.
-=======
-<<<<<<< HEAD
 - Inventory generated from `rg -l "^(CONFLICT_START|-------|CONFLICT_END)"`.
-=======
 - Inventory generated from `rg -l "^(<<<<<<<|=======|>>>>>>>)"`.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - Use this list as a volatile coordination map; re-open each file before editing because other agents may resolve items in parallel.

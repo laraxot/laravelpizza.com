@@ -1,29 +1,5 @@
 ---
-<<<<<<< .merge_file_VJwg8r
-<<<<<<< .merge_file_Mv2Zna
-<<<<<<< .merge_file_ohyfSA
 title: "Activity — BMAD Method Integration"
-=======
-=======
->>>>>>> .merge_file_BX1pBv
-=======
->>>>>>> .merge_file_bpW8qq
-<<<<<<< HEAD
-title: "Activity: BMAD Method Integration"
-=======
-<<<<<<< HEAD
-title: "Activity — BMAD Method Integration"
-=======
-title: "Activity: BMAD Method Integration"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_VJwg8r
-<<<<<<< .merge_file_Mv2Zna
->>>>>>> .merge_file_Dh8IN0
-=======
->>>>>>> .merge_file_BX1pBv
-=======
->>>>>>> .merge_file_bpW8qq
 description: "BMAD workflow documentation per il modulo Activity"
 module: "Activity"
 alias: "activity"
@@ -41,34 +17,18 @@ extended_by: 40
 documentation_date: "2026-05-27"
 bmad_version: "6.2.0"
 bmad_track: "core-foundation"
-<<<<<<< .merge_file_VJwg8r
-<<<<<<< .merge_file_Mv2Zna
-<<<<<<< .merge_file_ohyfSA
 ---
 
 # Activity — BMAD Method Integration
 updated: 2026-10-07
 tags: [docs, activity, bmad]
 qmd: "activity   bmad method integration activity"
-=======
-=======
->>>>>>> .merge_file_BX1pBv
-=======
->>>>>>> .merge_file_bpW8qq
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 ---
 
 # Activity — BMAD Method Integration
 updated: 2026-10-07
 tags: [docs, activity, bmad]
 qmd: "activity   bmad method integration activity"
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 type: index
 updated: 2026-10-07
 tags: [docs, activity, bmad]
@@ -79,20 +39,6 @@ qmd: "activity   bmad method integration activity"
 
 ## Kit BMAD owner (canonico)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_VJwg8r
-<<<<<<< .merge_file_Mv2Zna
->>>>>>> .merge_file_Dh8IN0
-=======
->>>>>>> .merge_file_BX1pBv
-=======
->>>>>>> .merge_file_bpW8qq
 - [BMAD Planning](../bmad-planning.md)
 - [BMAD Brainstorming](../bmad-brainstorming.md)
 - [Filament blueprint](./filament-blueprint.md)

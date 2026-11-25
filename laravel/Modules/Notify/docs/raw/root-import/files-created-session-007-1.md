@@ -3,15 +3,7 @@ title: "files created session 007 1"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Lws2Uj
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_9OqgnY
 qmd: "files created session 007 1"
 issues: []
 discussions: []
@@ -29,10 +21,6 @@ discussions: []
 **Date**: 2026-04-03
 **Total Files**: 13+ (scripts, docs, analysis files)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "files created session 007 1"
@@ -61,13 +49,8 @@ bashscripts/
 **Total**: 4 analysis scripts + 1 GitHub integration script = **5 new executable scripts**
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## 📊 File Inventory
 ### Scripts (Executable)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ### Documentation (Theme Level)
 ```

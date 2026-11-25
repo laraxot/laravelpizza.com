@@ -3,31 +3,7 @@ title: "filament extension pattern analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_55Cygf
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_5L4DTY
-<<<<<<< .merge_file_xOIWNj
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_nmKNXy
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_WBs3zO
-=======
-<<<<<<< .merge_file_5L4DTY
->>>>>>> .merge_file_cqz0dI
-=======
->>>>>>> .merge_file_nmKNXy
->>>>>>> laraxot/dev
 qmd: "filament extension pattern analysis"
 issues: []
 discussions: []

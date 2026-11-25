@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_oz9o6I
 qmd: "phpstan fixes gennaiocomplete"
-=======
->>>>>>> .merge_file_ZIw1qT
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-fixes-gennaiocomplete.md

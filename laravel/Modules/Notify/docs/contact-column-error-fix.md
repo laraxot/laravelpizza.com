@@ -3,21 +3,7 @@ title: "contact column error fix"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_pvueci
-<<<<<<< .merge_file_aYm86g
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_zgSvEn
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_pvueci
->>>>>>> .merge_file_5DVAk1
-=======
->>>>>>> .merge_file_zgSvEn
 qmd: "contact column error fix"
 issues: []
 discussions: []

@@ -3,15 +3,7 @@ title: "module analysis complete"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_pGBo7m
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_vit14D
 qmd: "module analysis complete"
 issues: []
 discussions: []
@@ -271,10 +263,6 @@ Il modulo Notify è il sistema di gestione notifiche e comunicazioni riutilizzab
 - Riduzione bug in produzione
 - Accelerazione deployment
 - Miglioramento manutenibilità
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -291,8 +279,3 @@ discussions: []
 **Stato**: In Progress
 **Responsabile**: Team Sviluppo Laraxot
 **Prossima Revisione**: Gennaio 2025
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

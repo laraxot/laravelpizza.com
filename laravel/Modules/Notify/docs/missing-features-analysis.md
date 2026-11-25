@@ -3,15 +3,7 @@ title: "missing features analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_i0tsKf
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_7bkiXL
 qmd: "missing features analysis"
 issues: []
 discussions: []
@@ -252,13 +244,6 @@ Nessuna funzionalità critica mancante - il modulo Notify è ben implementato
 - [Modulo <nome progetto>](../<nome progetto>/docs/README.md)
 - [Modulo Limesurvey](../limesurvey/docs/README.md)
 - [Notify README](./README.md)
-<<<<<<< .merge_file_i0tsKf
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_7bkiXL
 
 ---
 
@@ -271,8 +256,3 @@ qmd: "missing features analysis"
 issues: []
 discussions: []
 **Prossima Revisione**: [DATE]
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

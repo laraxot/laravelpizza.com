@@ -3,25 +3,7 @@ title: "responsive email templates"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_2qLO1r
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_VukbsN
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_2qLO1r
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_VukbsN
 qmd: "responsive email templates"
 issues: []
 discussions: []
@@ -215,53 +197,18 @@ I template nella directory `mail-layouts` supportano variabili Blade:
 
 ## Riferimenti e Approfondimenti
 
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_2qLO1r
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> .merge_file_VukbsN
-<<<<<<< .merge_file_d0wxSz
 - [Guida ai Layout Email](mail-layouts-guide-2.md)
 - [Email Best Practices](mail-templates/email-best-practices-2.md)
 - [HTML Email Compatibility](mail-templates/html-email-compatibility-2.md)
 - [MailPace Integration](mail-templates/mailpace-templates-integration-2.md)
-=======
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_2qLO1r
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_VukbsN
 - [Guida ai Layout Email](./mail-layouts-guide-2.md)
 - [Email Best Practices](./mail-templates/email-best-practices-2.md)
 - [HTML Email Compatibility](mail-templates/html-email-compatibility-2.md)
 - [MailPace Integration](mail-templates/mailpace-templates-integration-2.md)
-<<<<<<< .merge_file_2qLO1r
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_VukbsN
 - [Guida ai Layout Email](./mail-layouts-guide-2.md)
 - [Email Best Practices](./mail-templates/email-best-practices-2.md)
 - [HTML Email Compatibility](./mail-templates/html-email-compatibility-2.md)
 - [MailPace Integration](./mail-templates/mailpace-templates-integration-2.md)
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_2qLO1r
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_K8JcYa
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_K8JcYa
->>>>>>> laraxot/dev
->>>>>>> .merge_file_VukbsN
 # Responsive Email Templates - Guida Completa
 
 ## Introduzione
@@ -447,50 +394,15 @@ I template nella directory `mail-layouts` supportano variabili Blade:
 
 ## Riferimenti e Approfondimenti
 
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_2qLO1r
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> .merge_file_VukbsN
-<<<<<<< .merge_file_d0wxSz
 - [Guida ai Layout Email](mail-layouts-guide-2.md)
 - [Email Best Practices](mail-templates/email-best-practices-2.md)
 - [HTML Email Compatibility](mail-templates/html-email-compatibility-2.md)
 - [MailPace Integration](mail-templates/mailpace-templates-integration-2.md)
-=======
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_2qLO1r
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_VukbsN
 - [Guida ai Layout Email](./mail-layouts-guide-2.md)
 - [Email Best Practices](./mail-templates/email-best-practices-2.md)
 - [HTML Email Compatibility](mail-templates/html-email-compatibility-2.md)
 - [MailPace Integration](mail-templates/mailpace-templates-integration-2.md)
-<<<<<<< .merge_file_2qLO1r
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_VukbsN
 - [Guida ai Layout Email](./mail-layouts-guide-2.md)
 - [Email Best Practices](./mail-templates/email-best-practices-2.md)
 - [HTML Email Compatibility](./mail-templates/html-email-compatibility-2.md)
 - [MailPace Integration](./mail-templates/mailpace-templates-integration-2.md)
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_2qLO1r
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_K8JcYa
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_K8JcYa
->>>>>>> laraxot/dev
->>>>>>> .merge_file_VukbsN

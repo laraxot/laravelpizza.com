@@ -3,25 +3,7 @@ title: "email templates update"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_Bezunr
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_0LQELm
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Bezunr
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_0LQELm
 qmd: "email templates update"
 issues: []
 discussions: []
@@ -112,33 +94,11 @@ I modelli base si trovano in:
 
 ## Documentazione Correlata
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_Bezunr
 - [Email Templates Structure](./email_templates_structure.md)
 - [Responsive Email Design](../responsive-email-templates-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_0LQELm
 - [Email Templates Structure](./EMAIL_TEMPLATES_STRUCTURE.md)
 - [Responsive Email Design](../responsive-email-templates-2.md)
-=======
-<<<<<<< HEAD
 - [Email Templates Structure](./email_templates_structure.md)
 - [Responsive Email Design](../responsive-email-templates-2.md)
-=======
-- [Email Templates Structure](./EMAIL_TEMPLATES_STRUCTURE.md)
-- [Responsive Email Design](../responsive-email-templates-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Bezunr
-=======
-- [Email Templates Structure](./email_templates_structure.md)
-- [Responsive Email Design](../responsive-email-templates-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_0LQELm
 - [Email HTML Best Practices](../email-html-best-practices-2.md)
 - [Email Templates Implementation](../email-templates-2.md)

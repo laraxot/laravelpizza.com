@@ -7,21 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< .merge_file_NWs1Da
-<<<<<<< .merge_file_AatSxr
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_wsCkx5
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_NWs1Da
->>>>>>> .merge_file_oazGVg
-=======
->>>>>>> .merge_file_wsCkx5
 ---
 
 # Docs Health - Notify

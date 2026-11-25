@@ -3,10 +3,7 @@ title: "User Module Quality Status"
 type: "quality-report"
 date: 2026-07-08
 version: 1.2
-<<<<<<< .merge_file_qggq6O
 qmd: "quality status user"
-=======
->>>>>>> .merge_file_d4yg9n
 ---
 
 # Modulo User — Stato Qualità
@@ -247,7 +244,6 @@ See canonical documentation: ../../../Themes/docs/shared-components/quality-stat
 <!-- recovery from broken basename `quality-status-.md.md` after docs-guardian mass rename -->
 
 Stub: il contenuto utile resta nei path datati ripristinati da HEAD. Questo file evita nomi `*-.md`.
-
 
 
 ---

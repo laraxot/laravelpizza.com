@@ -3,21 +3,7 @@ title: "00 index"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_hEBXQS
-<<<<<<< .merge_file_vHPbpo
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_1Yluur
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_hEBXQS
->>>>>>> .merge_file_dYXPfY
-=======
->>>>>>> .merge_file_1Yluur
 qmd: "00 index"
 issues: []
 discussions: []

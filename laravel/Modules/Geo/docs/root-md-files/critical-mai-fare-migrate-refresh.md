@@ -58,41 +58,12 @@ Se esegui `migrate --force` in produzione:
 
 ## Regole Correlate
 
-<<<<<<< .merge_file_c84ABB
-<<<<<<< .merge_file_SS3FA3
-<<<<<<< .merge_file_TzeDVu
-<<<<<<< .merge_file_3SnNmz
 - [Forward-Only Philosophy](../claude/project-rules-summary.md)
 - [qwen-2.md](qwen.md) - Sezione 7: Database SACRO
-=======
-=======
->>>>>>> .merge_file_xNxe7s
-=======
->>>>>>> .merge_file_vD0qXu
-=======
->>>>>>> .merge_file_idqGDu
-<<<<<<< HEAD
-- [Forward-Only Philosophy](docs/claude/project-rules-summary.md)
-- [qwen.md](qwen.md) - Sezione 7: Database SACRO
-=======
-<<<<<<< .merge_file_0fOKfh
 - [Forward-Only Philosophy](../claude/project-rules-summary.md)
 - [qwen-2.md](qwen.md) - Sezione 7: Database SACRO
-=======
 - [Forward-Only Philosophy](docs/claude/project-rules-summary.md)
 - [qwen.md](qwen.md) - Sezione 7: Database SACRO
->>>>>>> .merge_file_UZiUHv
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_c84ABB
-<<<<<<< .merge_file_SS3FA3
-<<<<<<< .merge_file_TzeDVu
->>>>>>> .merge_file_d2aWFB
-=======
->>>>>>> .merge_file_xNxe7s
-=======
->>>>>>> .merge_file_vD0qXu
-=======
->>>>>>> .merge_file_idqGDu
 - [AGENTS.md](AGENTS.md) - Regola Critica
 
 ---

@@ -7,19 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -70,16 +58,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -241,23 +221,8 @@ The <nome progetto> platform has extensive documentation across modules and them
 
 3. **Update Governance**
    - Finalize documentation governance
-<<<<<<< HEAD
-   - Add to AGENTS.md
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-   - Add to AGENTS.md
-=======
-<<<<<<< HEAD
    - add to agents.md
-=======
    - Add to AGENTS.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-   - add to agents.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
    - Add to .windsurfrules
 
 ### Priority 3: Medium (Week 4)
@@ -495,23 +460,8 @@ echo "  snake_case: $(find laravel/Modules/*/docs/ -name '*_*.md' | wc -l)"
 ## 📚 Related Documents
 
 - [documentation-governance.md](documentation-governance.md) - Governance framework
-<<<<<<< HEAD
-- [AGENTS.md](../../../AGENTS.md) - Agent guidelines
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [AGENTS.md](../../../AGENTS.md) - Agent guidelines
-=======
-<<<<<<< HEAD
 - [AGENTS.md](../../../agents.md) - Agent guidelines
-=======
 - [AGENTS.md](../../../AGENTS.md) - Agent guidelines
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- [AGENTS.md](../../../agents.md) - Agent guidelines
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [AGENTS.md](../../agents.md) - Agent guidelines
 - [.windsurfrules](../../../.windsurfrules) - IDE rules
 
@@ -549,16 +499,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -814,55 +756,17 @@ Xot (Core) ◄──────────────────────
 | Quick start | [Copilot Inst.](../../.github/copilot-instructions.md) | [Architecture](architecture-diagrams-2.md) | Your task |
 | Quick start | [Copilot Inst.](../../../.github/copilot-instructions.md) | [Architecture](architecture-diagrams-2.md) | Your task |
 | Module overview | [Module Index](module-docs-index.md) | `Modules/{Name}/docs/00-index-1.md` | Details |
-<<<<<<< HEAD
 | Theme overview | [Theme Index](themes_documentation-index.md) | `Themes/{Name}/docs/00-index-1.md` | Details |
 | Create content | [Cms Docs](../laravel/Modules/Cms/docs/) | [Block Catalog](../laravel/Themes/Sixteen/docs/component_catalog.md) | Examples |
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 | Theme overview | [Theme Index](THEMES_documentation-index.md) | `Themes/{Name}/docs/00-index-1.md` | Details |
 | Create content | [Cms Docs](../laravel/Modules/Cms/docs/) | [Block Catalog](../laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md) | Examples |
-=======
-<<<<<<< HEAD
-| Theme overview | [Theme Index](themes_documentation-index.md) | `Themes/{Name}/docs/00-index-1.md` | Details |
-| Create content | [Cms Docs](../laravel/Modules/Cms/docs/) | [Block Catalog](../laravel/Themes/Sixteen/docs/component_catalog.md) | Examples |
-=======
-| Theme overview | [Theme Index](THEMES_documentation-index.md) | `Themes/{Name}/docs/00-index-1.md` | Details |
-| Create content | [Cms Docs](../laravel/Modules/Cms/docs/) | [Block Catalog](../laravel/Themes/Sixteen/docs/COMPONENT_CATALOG.md) | Examples |
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-| Theme overview | [Theme Index](themes_documentation-index.md) | `Themes/{Name}/docs/00-index-1.md` | Details |
-| Create content | [Cms Docs](../laravel/Modules/Cms/docs/) | [Block Catalog](../laravel/Themes/Sixteen/docs/component_catalog.md) | Examples |
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 | Add component | [Component Guide](../laravel/Themes/Sixteen/docs/guides/adding-components.md) | [Layout Hierarchy](../laravel/Themes/Sixteen/docs/layout-hierarchy.md) | Code |
 | Authentication | [User Docs](../laravel/Modules/User/docs/) | [Auth Guide](../laravel/Modules/User/docs/guides/) | Examples |
 | Handle files | [Media Docs](../laravel/Modules/Media/docs/) | [File Upload](../laravel/Modules/Media/docs/guides/) | Examples |
 | Send notifications | [Notify Docs](../laravel/Modules/Notify/docs/) | [Channels](../laravel/Modules/Notify/docs/guides/) | Examples |
 | Track changes | [Activity Docs](../laravel/Modules/Activity/docs/) | [Audit Trail](../laravel/Modules/Activity/docs/guides/) | Examples |
-<<<<<<< HEAD
 | Code standards | [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
 | Code standards | [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../../.github/copilot-instructions.md) | Review |
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-| Code standards | [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
-| Code standards | [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../../.github/copilot-instructions.md) | Review |
-=======
-<<<<<<< HEAD
-| Code standards | [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
-| Code standards | [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../../.github/copilot-instructions.md) | Review |
-=======
-| Code standards | [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
-| Code standards | [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../../.github/copilot-instructions.md) | Review |
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-| Code standards | [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../.github/copilot-instructions.md) | Review |
-| Code standards | [CLAUDE.md](../../../../Geo/docs/root-md-files/claude.md) | [Copilot Inst.](../../../.github/copilot-instructions.md) | Review |
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 | Architecture | [Architecture](architecture-diagrams-2.md) | [Design Comuni](../laravel/Themes/Sixteen/docs/design-comuni/) | Deep dive |
 
 ---
@@ -1025,33 +929,12 @@ laravel/Themes/
 
 - **System Architecture** → [architecture-diagrams-2.md](architecture-diagrams-2.md)
 - **Module Development** → [module-docs-index.md](module-docs-index.md)
-<<<<<<< HEAD
 - **Theme Development** → [THEMES_documentation-index.md](themes_documentation-index.md)
 - **Code Quality** → [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
 - **Framework Rules** → [laravel/Modules/Geo/docs/root-md-files/claude.md](../../../../Geo/docs/root-md-files/claude.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 - **Theme Development** → [THEMES_documentation-index.md](THEMES_documentation-index.md)
 - **Code Quality** → [CODE_QUALITY_STANDARDS.md](CODE_QUALITY_STANDARDS.md)
 - **Framework Rules** → [laravel/Modules/Geo/docs/root-md-files/claude.md](../../../../Geo/docs/root-md-files/claude.md)
-=======
-<<<<<<< HEAD
-- **Theme Development** → [THEMES_documentation-index.md](themes_documentation-index.md)
-- **Code Quality** → [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
-- **Framework Rules** → [laravel/Modules/Geo/docs/root-md-files/claude.md](../../../../Geo/docs/root-md-files/claude.md)
-=======
-- **Theme Development** → [THEMES_documentation-index.md](THEMES_documentation-index.md)
-- **Code Quality** → [CODE_QUALITY_STANDARDS.md](CODE_QUALITY_STANDARDS.md)
-- **Framework Rules** → [laravel/Modules/Geo/docs/root-md-files/claude.md](../../../../Geo/docs/root-md-files/claude.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- **Theme Development** → [THEMES_documentation-index.md](themes_documentation-index.md)
-- **Code Quality** → [CODE_QUALITY_STANDARDS.md](code_quality_standards.md)
-- **Framework Rules** → [laravel/Modules/Geo/docs/root-md-files/claude.md](../../../../Geo/docs/root-md-files/claude.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - **Copilot Usage** → [.github/copilot-instructions.md](../../.github/copilot-instructions.md)
 - **Copilot Usage** → [.github/copilot-instructions.md](../../../.github/copilot-instructions.md)
 - **Design Comuni** → Search for `DESIGN_COMUNI_` files
@@ -1157,23 +1040,8 @@ Connected Via:
 1. Start: [Copilot Instructions](../../.github/copilot-instructions.md)
 1. Start: [Copilot Instructions](../../../.github/copilot-instructions.md)
 2. Understand: [Architecture Diagrams](architecture-diagrams-2.md)
-<<<<<<< HEAD
 3. Explore: [Module Index](module-docs-index.md) or [Theme Index](themes_documentation-index.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 3. Explore: [Module Index](module-docs-index.md) or [Theme Index](THEMES_documentation-index.md)
-=======
-<<<<<<< HEAD
-3. Explore: [Module Index](module-docs-index.md) or [Theme Index](themes_documentation-index.md)
-=======
-3. Explore: [Module Index](module-docs-index.md) or [Theme Index](THEMES_documentation-index.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-3. Explore: [Module Index](module-docs-index.md) or [Theme Index](themes_documentation-index.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 4. Deep Dive: Relevant module/theme 00-index.md
 5. Implement: Using guides and examples
 6. Validate: Against CLAUDE.md standards
@@ -1183,23 +1051,8 @@ Connected Via:
 1. Start: [Architecture Diagrams](architecture-diagrams-2.md)
 2. Understand: [Module Relationships](module-docs-index.md#cross-module-communication)
 3. Design: Using module/theme structure
-<<<<<<< HEAD
 4. Review: [Code Quality Standards](code_quality_standards.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 4. Review: [Code Quality Standards](CODE_QUALITY_STANDARDS.md)
-=======
-<<<<<<< HEAD
-4. Review: [Code Quality Standards](code_quality_standards.md)
-=======
-4. Review: [Code Quality Standards](CODE_QUALITY_STANDARDS.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-4. Review: [Code Quality Standards](code_quality_standards.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 5. Validate: Against framework rules in CLAUDE.md
 
 ### For New Project Members
@@ -1265,16 +1118,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -1704,23 +1549,8 @@ jobs:
 
 ## 📚 Related Documents
 
-<<<<<<< HEAD
-- [AGENTS.md](../../../AGENTS.md) - Agent guidelines
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [AGENTS.md](../../../AGENTS.md) - Agent guidelines
-=======
-<<<<<<< HEAD
 - [AGENTS.md](../../../agents.md) - Agent guidelines
-=======
 - [AGENTS.md](../../../AGENTS.md) - Agent guidelines
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- [AGENTS.md](../../../agents.md) - Agent guidelines
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [AGENTS.md](../../agents.md) - Agent guidelines
 - [.windsurfrules](../../../.windsurfrules) - IDE rules
 - [documentation-index.md](../../../docs/documentation-index.md) - Master index
@@ -1757,16 +1587,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -1887,21 +1709,9 @@ grep -r "Ultimo aggiornamento" docs/ --include="*.md"
 - [ ] `project_docs/roadmaps/roadmap-documentation.md` (this doc)
 
 **Archive** (move to `docs/archive/roadmaps/`):
-<<<<<<< HEAD
-<<<<<<< HEAD
+- [ ] `master-roadmap-historic.md`
 - [ ] `master-roadmap-2025.md`
 - [ ] `project-roadmap.md`
-=======
-<<<<<<< HEAD
-- [ ] `master-roadmap-historic.md`
-=======
-- [ ] `master-roadmap-2025.md`
-- [ ] `project-roadmap.md`
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- [ ] `master-roadmap-historic.md`
->>>>>>> laraxot/dev
 - [ ] `project-roadmap.md`
 - [ ] `roadmap.md`
 - [ ] `roadmap-project-2.md`
@@ -2326,16 +2136,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -2366,16 +2168,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -2427,23 +2221,7 @@ Successfully implemented a comprehensive documentation governance framework and 
    - Quality metrics and KPIs
    - Maintenance workflows
 
-<<<<<<< HEAD
 2. **[MASTER_documentation-index.md](../../master-documentation-index-2.md)**
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-2. **[MASTER_documentation-index.md](../../master-documentation-index-2.md)**
-=======
-<<<<<<< HEAD
-2. **[MASTER_documentation-index.md](../../master-documentation-index-2.md)**
-=======
-2. **[MASTER_documentation-index.md](../../master-documentation-index-2.md)**
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-2. **[MASTER_documentation-index.md](../../master-documentation-index-2.md)**
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
    - Central navigation hub
    - Links to all module docs
    - Links to all theme docs
@@ -2458,23 +2236,8 @@ Successfully implemented a comprehensive documentation governance framework and 
 
 ### Skills
 
-<<<<<<< HEAD
 4. **[laravel/.github/skills/documentation-management/SKILL.md](laravel/.github/skills/documentation-management/skill.md)**
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 4. **[laravel/.github/skills/documentation-management/SKILL.md](laravel/.github/skills/documentation-management/SKILL.md)**
-=======
-<<<<<<< HEAD
-4. **[laravel/.github/skills/documentation-management/SKILL.md](laravel/.github/skills/documentation-management/skill.md)**
-=======
-4. **[laravel/.github/skills/documentation-management/SKILL.md](laravel/.github/skills/documentation-management/SKILL.md)**
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-4. **[laravel/.github/skills/documentation-management/SKILL.md](laravel/.github/skills/documentation-management/skill.md)**
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
    - Documentation management skill
    - When to apply
    - Quality checks
@@ -2482,23 +2245,8 @@ Successfully implemented a comprehensive documentation governance framework and 
 
 ### Rules Updates
 
-<<<<<<< HEAD
-5. **[AGENTS.md](AGENTS.md)** - Updated
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-5. **[AGENTS.md](AGENTS.md)** - Updated
-=======
-<<<<<<< HEAD
 5. **[AGENTS.md](agents.md)** - Updated
-=======
 5. **[AGENTS.md](AGENTS.md)** - Updated
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-5. **[AGENTS.md](agents.md)** - Updated
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
    - Added documentation governance section
    - No temporal strings rule
    - File naming conventions
@@ -2718,15 +2466,6 @@ grep -r "Last Updated" laravel/Modules/*/docs/ --include="*.md" | wc -l
 
 ### Documentation
 - [Governance Framework](docs/documentation-governance.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Master Index](../../master-documentation-index-2.md)
 - [Improvement Plan](docs/documentation-analysis-and-improvement-plan.md)
 - [Governance Framework](../../documentation-governance.md)
@@ -2739,12 +2478,6 @@ grep -r "Last Updated" laravel/Modules/*/docs/ --include="*.md" | wc -l
 
 ### Skills
 - [Documentation Management](laravel/.github/skills/documentation-management/skill.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Master Index](../../master-documentation-index-2.md)
 - [Improvement Plan](docs/documentation-analysis-and-improvement-plan.md)
 - [Governance Framework](../../documentation-governance.md)
@@ -2757,15 +2490,6 @@ grep -r "Last Updated" laravel/Modules/*/docs/ --include="*.md" | wc -l
 
 ### Skills
 - [Documentation Management](laravel/.github/skills/documentation-management/SKILL.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ### GitHub
 - Issue #6: Governance Framework
@@ -2854,16 +2578,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -2897,16 +2613,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -2932,54 +2640,26 @@ related:
 - [README Principale](./README.md) - Panoramica progetto completa
 - [Analisi Super Mucca](./super-mucca-docs-analysis.md) - Report qualità documentazione
 - [Architecture](./architecture-analysis.md) - Analisi architetturale
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Roadmap](../../master-roadmap-2025.md) - Piano sviluppo 2025
-=======
-<<<<<<< HEAD
 - [Roadmap](../../master-roadmap-2025.md) - Piano sviluppo 2025
-=======
-<<<<<<< HEAD
 - [Roadmap](./master-roadmap-historic.md) - Piano sviluppo 2025
->>>>>>> laraxot/dev
-=======
 - [Roadmap](./master-roadmap-historic.md) - Piano sviluppo 2025
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Roadmap](../../master-roadmap-2025.md) - Piano sviluppo 2025
 
 ### Guide Rapide
 - [Quick Start](./quick-start.md) - Guida avvio rapido
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Contributing](../../contributing-2.md) - Come contribuire
-=======
 - [Roadmap](./master-roadmap-historic.md) - Piano sviluppo 2025
-=======
-<<<<<<< HEAD
 - [Contributing](./CONTRIBUTING.md) - Come contribuire
-=======
 - [Contributing](../../contributing-2.md) - Come contribuire
-=======
-<<<<<<< .merge_file_e9BxUo
 - [Roadmap](./master-roadmap-historic.md) - Piano sviluppo 2025
-=======
 - [Roadmap](../../master-roadmap-2025.md) - Piano sviluppo 2025
 - [Roadmap](../../master-roadmap-2025.md) - Piano sviluppo 2025
->>>>>>> .merge_file_lxcVFl
->>>>>>> laraxot/dev
 
 ### Guide Rapide
 - [Quick Start](./quick-start.md) - Guida avvio rapido
 - [Contributing](./CONTRIBUTING.md) - Come contribuire
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 - [Contributing](../../contributing-2.md) - Come contribuire
->>>>>>> laraxot/dev
 - [Troubleshooting](./troubleshooting/README.md) - Risoluzione problemi
 
 ---
@@ -2988,26 +2668,9 @@ related:
 
 ### Documentazione Architetturale
 - [Design Patterns](./architecture.md) - Pattern architetturali
-<<<<<<< HEAD
-- [Database Schema](../schema.md) - Schema database
-- [Database Schema](../schema.md) - Schema database
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [Database Schema](../schema.md) - Schema database
-- [Database Schema](../schema.md) - Schema database
-=======
-<<<<<<< .merge_file_e9BxUo
 - [Database Schema](../../../../Lang/docs/wiki/schema-3.md) - Schema database
-=======
 - [Database Schema](../schema.md) - Schema database
 - [Database Schema](../schema.md) - Schema database
->>>>>>> .merge_file_lxcVFl
->>>>>>> laraxot/dev
-=======
-- [Database Schema](../schema.md) - Schema database
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [API Documentation](./api/README.md) - Documentazione API
 - [Security](./security/README.md) - Sicurezza e conformità
 
@@ -3170,17 +2833,7 @@ related:
 
 ### Coding Guidelines
 - [PHP Standards](./standards/php.md) - Standard PHP (PSR-12)
-<<<<<<< HEAD
 - [Laravel Best Practices](./standards/laravel.md) - Best practices Laravel
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_e9BxUo
-- [Laravel Best Practices](./standards/laravel.md) - Best practices Laravel
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Laravel Best Practices](../../html2pdf/laravel.md) - Best practices Laravel
 - [Environment Setup](../../ai-agents/setup.md) - Configurazione ambiente
 - [Docker Setup](./development/docker.md) - Configurazione Docker
@@ -3189,41 +2842,14 @@ related:
 ### Coding Guidelines
 - [PHP Standards](./standards/php.md) - Standard PHP (PSR-12)
 - [Laravel Best Practices](../../html2pdf/laravel.md) - Best practices Laravel
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_lxcVFl
->>>>>>> laraxot/dev
-=======
-- [Laravel Best Practices](../../html2pdf/laravel.md) - Best practices Laravel
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Filament Guidelines](../../../../Activity/docs/filament-3.md) - Linee guida Filament
 - [Blade Components](./standards/blade.md) - Componenti Blade
 
 ### Quality Assurance
 - [PHPStan Configuration](./phpstan/README.md) - Analisi statica
-<<<<<<< HEAD
-- [Testing Strategy](../../strategy.md) - Strategia testing
-- [Testing Strategy](../../strategy.md) - Strategia testing
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [Testing Strategy](../../strategy.md) - Strategia testing
-- [Testing Strategy](../../strategy.md) - Strategia testing
-=======
-<<<<<<< .merge_file_e9BxUo
 - [Testing Strategy](./testing/strategy.md) - Strategia testing
-=======
 - [Testing Strategy](../../strategy.md) - Strategia testing
 - [Testing Strategy](../../strategy.md) - Strategia testing
->>>>>>> .merge_file_lxcVFl
->>>>>>> laraxot/dev
-=======
-- [Testing Strategy](../../strategy.md) - Strategia testing
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [CI/CD Pipeline](./ci-cd/README.md) - Continuous integration
 
 ---
@@ -3264,26 +2890,9 @@ related:
 - [Error Tracking](./monitoring/errors.md) - Tracking errori
 
 ### Analytics
-<<<<<<< HEAD
-- [Usage Analytics](../../html2pdf/usage.md) - Analisi utilizzo
-- [Usage Analytics](../../html2pdf/usage.md) - Analisi utilizzo
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [Usage Analytics](../../html2pdf/usage.md) - Analisi utilizzo
-- [Usage Analytics](../../html2pdf/usage.md) - Analisi utilizzo
-=======
-<<<<<<< .merge_file_e9BxUo
 - [Usage Analytics](./analytics/usage.md) - Analisi utilizzo
-=======
 - [Usage Analytics](../../html2pdf/usage.md) - Analisi utilizzo
 - [Usage Analytics](../../html2pdf/usage.md) - Analisi utilizzo
->>>>>>> .merge_file_lxcVFl
->>>>>>> laraxot/dev
-=======
-- [Usage Analytics](../../html2pdf/usage.md) - Analisi utilizzo
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Business Metrics](./analytics/business.md) - Metriche business
 
 ---
@@ -3291,26 +2900,9 @@ related:
 ## 🔒 Security
 
 ### Security Documentation
-<<<<<<< HEAD
-- [Security Guidelines](../../ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
-- [Security Guidelines](../../ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [Security Guidelines](../../ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
-- [Security Guidelines](../../ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
-=======
-<<<<<<< .merge_file_e9BxUo
 - [Security Guidelines](./security/guidelines.md) - Linee guida sicurezza
-=======
 - [Security Guidelines](../../ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
 - [Security Guidelines](../../ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
->>>>>>> .merge_file_lxcVFl
->>>>>>> laraxot/dev
-=======
-- [Security Guidelines](../../ai-agents/agents-guide/01-project-overview/guidelines.md) - Linee guida sicurezza
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [GDPR Compliance](./security/gdpr.md) - Conformità GDPR
 - [Authentication](./security/authentication.md) - Sistema autenticazione
 - [Authorization](./security/authorization.md) - Sistema autorizzazioni
@@ -3320,23 +2912,8 @@ related:
 ## 📝 Changelog & Versioning
 
 ### Version History
-<<<<<<< HEAD
-- [Changelog](./CHANGELOG.md) - Storico modifiche
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [Changelog](./CHANGELOG.md) - Storico modifiche
-=======
-<<<<<<< HEAD
 - [Changelog](../../../../UI/docs/changelog.md) - Storico modifiche
-=======
 - [Changelog](./CHANGELOG.md) - Storico modifiche
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- [Changelog](../../../../UI/docs/changelog.md) - Storico modifiche
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Versioning Strategy](./versioning.md) - Strategia versioning
 - [Migration Guides](./migrations/README.md) - Guide migrazione
 
@@ -3345,28 +2922,10 @@ related:
 ## 🤝 Contributing
 
 ### Contribution Guidelines
-<<<<<<< HEAD
-- [How to Contribute](./CONTRIBUTING.md) - Come contribuire
-- [Code of Conduct](./CODE_OF_CONDUCT.md) - Codice condotta
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [How to Contribute](./CONTRIBUTING.md) - Come contribuire
-- [Code of Conduct](./CODE_OF_CONDUCT.md) - Codice condotta
-=======
-<<<<<<< HEAD
 - [How to Contribute](../../contributing-2.md) - Come contribuire
 - [Code of Conduct](./code_of_conduct.md) - Codice condotta
-=======
 - [How to Contribute](./CONTRIBUTING.md) - Come contribuire
 - [Code of Conduct](./CODE_OF_CONDUCT.md) - Codice condotta
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- [How to Contribute](../../contributing-2.md) - Come contribuire
-- [Code of Conduct](./code_of_conduct.md) - Codice condotta
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Pull Request Template](./.github/pull_request_template.md) - Template PR
 
 ---
@@ -3438,16 +2997,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -3664,51 +3215,21 @@ export default defineConfig({
 **Why This is Correct:**
 
 1. **Build Target:** `./public` (local theme public folder)
-<<<<<<< HEAD
 2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 2. **Nessuna copia:** `public_html/themes/Sixteen` e' un symlink a `laravel/Themes/Sixteen/public`
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-2. **Nessuna copia:** `public_html/themes/Sixteen` e' un symlink a `laravel/Themes/Sixteen/public`
-=======
-<<<<<<< .merge_file_e9BxUo
 2. **Copy Step:** `symlink public_html/themes (npm run copy obsoleto)` copies to `../../public_html/themes/Sixteen/`
 2. **Nessuna copia:** `public_html/themes/Sixteen` e' un symlink a `laravel/Themes/Sixteen/public`
-=======
 2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
->>>>>>> .merge_file_lxcVFl
->>>>>>> laraxot/dev
-=======
-2. niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 3. **Manifest Location:** Both locations have manifest.json after build
 4. **Laravel Vite:** Reads from `public_html/themes/Sixteen/manifest.json`
 
 **Build Flow:**
 ```
-<<<<<<< HEAD
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
 resources/ → Vite Build → public/ ← symlink ← public_html/themes/Sixteen
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
-resources/ → Vite Build → public/ ← symlink ← public_html/themes/Sixteen
-=======
-<<<<<<< .merge_file_e9BxUo
 resources/ → Vite Build → public/ → symlink public_html/themes (npm run copy obsoleto) → public_html/themes/Sixteen/
 resources/ → Vite Build → public/ ← symlink ← public_html/themes/Sixteen
-=======
 niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
->>>>>>> .merge_file_lxcVFl
->>>>>>> laraxot/dev
-=======
-niente `npm run copy`: `public_html/themes/<Tema>` è un symlink a `../../laravel/Themes/<Tema>/public`
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ```
 
 ---
@@ -3901,33 +3422,12 @@ Start at theme index:
 
 - [Master Index](docs/module-docs-index.md) - Central navigation
 - [Master Index](../../module-docs-index.md) - Central navigation
-<<<<<<< HEAD
 - [BMad Workflow](_bmad-output/bmad-workflow-complete.md) - BMad summary
 - [Layout Architecture](Themes/Sixteen/docs/layout-architecture.md) - Theme layouts
 - [Vite Manifest Fix](Themes/Sixteen/docs/vite_manifest_fix_complete.md) - Build fix
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [BMad Workflow](_bmad-output/BMAD-WORKFLOW-COMPLETE.md) - BMad summary
 - [Layout Architecture](Themes/Sixteen/docs/layout-architecture.md) - Theme layouts
 - [Vite Manifest Fix](Themes/Sixteen/docs/VITE_MANIFEST_FIX_COMPLETE.md) - Build fix
-=======
-<<<<<<< HEAD
-- [BMad Workflow](_bmad-output/bmad-workflow-complete.md) - BMad summary
-- [Layout Architecture](Themes/Sixteen/docs/layout-architecture.md) - Theme layouts
-- [Vite Manifest Fix](Themes/Sixteen/docs/vite_manifest_fix_complete.md) - Build fix
-=======
-- [BMad Workflow](_bmad-output/BMAD-WORKFLOW-COMPLETE.md) - BMad summary
-- [Layout Architecture](Themes/Sixteen/docs/layout-architecture.md) - Theme layouts
-- [Vite Manifest Fix](Themes/Sixteen/docs/VITE_MANIFEST_FIX_COMPLETE.md) - Build fix
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- [BMad Workflow](_bmad-output/bmad-workflow-complete.md) - BMad summary
-- [Layout Architecture](Themes/Sixteen/docs/layout-architecture.md) - Theme layouts
-- [Vite Manifest Fix](Themes/Sixteen/docs/vite_manifest_fix_complete.md) - Build fix
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [PHPStan + Layout](Themes/Sixteen/docs/phpstan-layout-fix-complete.md) - Combined summary
 
 ---

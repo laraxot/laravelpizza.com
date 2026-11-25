@@ -3,15 +3,7 @@ title: "email templates guide"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Zp9baw
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_mAB9fX
 qmd: "email templates guide"
 issues: []
 discussions: []

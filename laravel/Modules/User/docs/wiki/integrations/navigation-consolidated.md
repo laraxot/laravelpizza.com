@@ -5,10 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_uY4icU
 qmd: "navigation consolidated"
-=======
->>>>>>> .merge_file_jV7Tzv
 ---
 
 # navigation — Consolidated Documentation

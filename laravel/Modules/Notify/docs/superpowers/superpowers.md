@@ -3,15 +3,7 @@ title: "superpowers"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_joLY4j
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_OV9vtC
 qmd: "superpowers"
 issues: []
 discussions: []
@@ -40,10 +32,6 @@ Il sistema impone metodologie rigorose:
 - **Subagent-driven development** - Agenti paralleli con revisione a 2 stadi
 - **Code review automatica** - Verifica rispetto al piano
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "superpowers"
@@ -96,17 +84,12 @@ Installing plugin "superpowers@superpowers-dev"...
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## Installazione Effettuata
 ### Metodo usato: Claude Code Plugin via Marketplace GitHub
 # 1. Aggiungere il marketplace di superpowers
 # 2. Installare il plugin
 ### File installati
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Skills Disponibili
 
 Il plugin installa 14 skills nella directory `/home/zorin/.claude/plugins/cache/superpowers-dev/superpowers/5.0.6/skills/`:

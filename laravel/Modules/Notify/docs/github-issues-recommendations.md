@@ -1,16 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_PK5z3d
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_t68fZi
 title: "github issues recommendations 2026 03"
 type: note
 tags: [documentation]
@@ -711,16 +699,6 @@ Discuss CI/CD pipeline improvements. Topics include:
 **Document Version**: 1.0
 **Last Updated**: 2026-03-02
 **Status**: Ready for Implementation
-<<<<<<< .merge_file_PK5z3d
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_t68fZi
->>>>>>> laraxot/dev
 issues: []
 discussions: []
 title: "GITHUB_ISSUES_RECOMMENDATIONS_2026-03-02"
@@ -742,15 +720,3 @@ related:
 ---
 
 > Questo file è stato rinominato in [github-issues-recommendations.md](github-issues-recommendations.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_PK5z3d
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_t68fZi
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

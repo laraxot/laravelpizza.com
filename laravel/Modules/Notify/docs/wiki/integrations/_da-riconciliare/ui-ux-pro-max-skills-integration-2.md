@@ -7,23 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_4Gd83s
-=======
-<<<<<<< .merge_file_L0k4uU
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_ucqqvE
-=======
->>>>>>> .merge_file_HnNJob
->>>>>>> laraxot/dev
 ---
 
 # 🎨 UI/UX Pro Max Skills - Integration Guide

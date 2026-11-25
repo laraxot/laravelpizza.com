@@ -3,31 +3,7 @@ title: "filament naming conventions"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_ZCiuzn
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_gJohs6
-<<<<<<< .merge_file_H4x6GC
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_hRatUo
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_S78VG3
-=======
-<<<<<<< .merge_file_gJohs6
->>>>>>> .merge_file_VweFWA
-=======
->>>>>>> .merge_file_hRatUo
->>>>>>> laraxot/dev
 qmd: "filament naming conventions"
 issues: []
 discussions: []

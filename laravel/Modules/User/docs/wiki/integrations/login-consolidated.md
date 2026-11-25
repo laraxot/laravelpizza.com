@@ -5,10 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_wTdWbj
 qmd: "login consolidated"
-=======
->>>>>>> .merge_file_dhfCO3
 ---
 
 # login — Consolidated Documentation
@@ -486,9 +483,6 @@ Tutti i widget Filament che estendono `XotBaseWidget` e usano `statePath('data')
 - [x] PHPStan Level 9 compliance
 - [x] PHPMD compliance
 - [x] Documentazione aggiornata
-
----
-
 
 ---
 

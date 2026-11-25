@@ -7,21 +7,7 @@ type: reference
 status: approved
 tags: [agents, confidence, verification]
 created: "2026-05-26"
-<<<<<<< .merge_file_PDrqFC
-<<<<<<< .merge_file_uW7yfi
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_e1sdFe
-<<<<<<< HEAD
-updated: "2026-05-26"
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_PDrqFC
->>>>>>> .merge_file_ryugfz
-=======
->>>>>>> .merge_file_e1sdFe
 related:
   - "../../../../docs/wiki/rules/agent-confidence-protocol.md"
 ---

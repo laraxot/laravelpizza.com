@@ -1,16 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_MAtoKU
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_7civPE
 title: "super mucca completion report 2025 10"
 type: note
 tags: [documentation]
@@ -561,16 +549,6 @@ discussions: []
 **Session End**: 2025-10-01T21:39:00+02:00  
 **Duration**: Full intensive session  
 **Result**: 🏆 EXCELLENCE ACHIEVED
-<<<<<<< .merge_file_MAtoKU
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_7civPE
->>>>>>> laraxot/dev
 issues: []
 discussions: []
 title: "SUPER_MUCCA_COMPLETION_REPORT_2025-10-01"
@@ -592,15 +570,3 @@ related:
 ---
 
 > Questo file è stato rinominato in [super-mucca-completion-report.md](super-mucca-completion-report.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_MAtoKU
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_7civPE
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

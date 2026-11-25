@@ -3,15 +3,7 @@ title: "structure standards"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ayBPBW
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_6O2cfq
 qmd: "structure standards"
 issues: []
 discussions: []
@@ -100,10 +92,6 @@ Tutte le classi nella cartella `app/Filament/Clusters/*/Pages` **devono terminar
 - In caso di refactoring, aggiornare sia il nome del file che della classe e tutti i riferimenti.
 - Non usare mai nomi generici o ambigui (es. `SendNetfunSMS`), ma sempre `SendNetfunSMSPage`.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "structure standards"
@@ -146,14 +134,9 @@ class MyPage extends \Filament\Pages\Page {}
 // ✅ CORRETTO
 class MyPage extends Modules\Xot\Filament\Pages\XotBasePage {}
 ```
-<<<<<<< HEAD
-=======
-=======
 ## Esempio
 # Regola di Estensione delle Pagine Filament
 ## Non estendere mai direttamente Filament\Pages\Page
 ### Motivazione
 ### Best Practice
 ### Esempio
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

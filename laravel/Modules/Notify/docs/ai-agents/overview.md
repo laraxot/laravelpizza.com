@@ -3,21 +3,7 @@ title: "overview"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_My8Eeb
-<<<<<<< .merge_file_kUvmER
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_WriPCC
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_My8Eeb
->>>>>>> .merge_file_wKeAFa
-=======
->>>>>>> .merge_file_WriPCC
 qmd: "overview"
 issues: []
 discussions: []

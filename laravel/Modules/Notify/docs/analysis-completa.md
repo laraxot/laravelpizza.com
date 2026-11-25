@@ -3,21 +3,7 @@ title: "analysis completa"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_P0Z1k7
-<<<<<<< .merge_file_BZthjZ
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_St5DUN
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_P0Z1k7
->>>>>>> .merge_file_byv5RP
-=======
->>>>>>> .merge_file_St5DUN
 qmd: "analysis completa"
 issues: []
 discussions: []

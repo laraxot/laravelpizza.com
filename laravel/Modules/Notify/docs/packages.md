@@ -3,15 +3,7 @@ title: "packages"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_4uRD4v
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_PMJFdJ
 qmd: "packages"
 issues: []
 discussions: []
@@ -73,14 +65,6 @@ discussions: []
 - [Integrazioni](packages/integrations.md) 
 ### Versione HEAD
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Collegamenti tra versioni di packages.md
 * [packages.md](../../../gdpr/docs/packages.md)
 * [packages.md](../../../notify/docs/packages.md)
@@ -92,10 +76,6 @@ discussions: []
 * [packages.md](../../../media/docs/packages.md)
 * [packages.md](../../../tenant/docs/packages.md)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ### Versione Incoming
 
@@ -110,12 +90,4 @@ updated: 2026-09-26
 qmd: "packages"
 issues: []
 discussions: []
-<<<<<<< .merge_file_4uRD4v
-<<<<<<< HEAD
-=======
-=======
 ### Versione Incoming
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_PMJFdJ

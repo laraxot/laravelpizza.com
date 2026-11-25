@@ -3,21 +3,7 @@ title: "openviking setup"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_plcoig
-<<<<<<< .merge_file_0fxSCU
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_1RN5mh
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_plcoig
->>>>>>> .merge_file_eK6ius
-=======
->>>>>>> .merge_file_1RN5mh
 qmd: "openviking setup"
 issues: []
 discussions: []

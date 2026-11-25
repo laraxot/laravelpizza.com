@@ -5,29 +5,10 @@ status: active
 module: Notify
 scope: documentation
 bmad_version: 1.0
-<<<<<<< .merge_file_0DZ3nB
-<<<<<<< .merge_file_BIF7rL
 updated: 2026-11-23
 tags: [docs, notify, bmad]
 qmd: "**indice documentazione modulo notify** notify"
 created: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_J6GEyE
-<<<<<<< HEAD
-updated: 2026-10-06
-tags: [docs, notify, bmad]
-qmd: "**indice documentazione modulo notify** notify"
-=======
-updated: 2026-11-23
-tags: [docs, notify, bmad]
-qmd: "**indice documentazione modulo notify** notify"
-created: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_0DZ3nB
->>>>>>> .merge_file_3NC4dy
-=======
->>>>>>> .merge_file_J6GEyE
 ---
 
 # 📚 **Indice Documentazione Modulo Notify**
@@ -41,8 +22,6 @@ created: 2026-11-23
 3. [philosophy-3.md](../../philosophy.md) - "Essere Connessi": filosofia delle notifiche in tempo reale.
 
 ## 🏗️ **Architettura & Canali**
-<<<<<<< .merge_file_BIF7rL
-=======
 - 📧 **[Email System](../../email-templates-2.md)** - Gestione template dinamici e stagionali (Spatie integration).
 - 💬 **[SMS & WhatsApp](../../whatsapp-integration-2.md)** - Integrazione con NetFun e altri provider.
 - 🚀 **[Bulk Notifications](./send-notification-bulk-action.md)** - Azioni massive per migliaia di utenti.
@@ -53,9 +32,6 @@ created: 2026-11-23
 - 📦 **[Riferimento pacchetti](../../../../docs/composer-packages-reference.md)** | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md) - AWS, Telegram, Postmark, Spatie mail templates
 - 🛠️ **[Channel Provider](../../provider-actions-architecture-2.md)** - Come estendere il modulo con nuovi driver.
 - 🏷️ **[Acronym Naming](../../acronym-naming-conventions-2.md)** - Standard per la denominazione dei driver e canali.
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_xgceWH
 - 🔄 **[Queue Management](./monitoring.md)** - Monitoraggio delle code e dei fallback.
 
 ## 🧪 **Qualità e Sviluppo**
@@ -63,13 +39,7 @@ created: 2026-11-23
 - 🚨 **[PHPStan Cluster 2026-03-10](./phpstan-cluster-2026-03-10.md)** - Modelli canonici mancanti per log/canali e impatto su factory/controller.
 - 🧭 **[No Orphan Http Controllers](./no-orphan-http-controllers.md)** - I controller web senza route o boundary chiaro non devono restare nel modulo.
 - 🚫 **[No NotificationTrackingController](./no-notification-tracking-controller.md)** - Il tracking notifiche non deve vivere in un controller HTTP legacy.
-=======
->>>>>>> laraxot/dev
 - 🔄 **[Queue Management](../../monitoring.md)** - Monitoraggio delle code e dei fallback.
-<<<<<<< .merge_file_0DZ3nB
->>>>>>> .merge_file_3NC4dy
-=======
->>>>>>> .merge_file_J6GEyE
 - 📧 **[Email System](../../email-templates.md)** - Gestione template dinamici e stagionali (Spatie integration).
 - 💬 **[SMS & WhatsApp](../../whatsapp-integration.md)** - Integrazione con NetFun e altri provider.
 - 🚀 **[Bulk Notifications](../../send-notification-bulk-action.md)** - Azioni massive per migliaia di utenti.
@@ -85,17 +55,8 @@ created: 2026-11-23
 ## 🧪 **Qualità e Sviluppo**
 - ✅ **[PHPStan Analysis](../../phpstan-fixes.md)** - Report di conformità Level 10.
 - 🚨 **[PHPStan Cluster 2026-03-10](../../phpstan-cluster.md)** - Modelli canonici mancanti per log/canali e impatto su factory/controller.
-<<<<<<< .merge_file_0DZ3nB
-<<<<<<< .merge_file_BIF7rL
-=======
-=======
->>>>>>> .merge_file_J6GEyE
 - 🧭 **[No Orphan Http Controllers](../../no-orphan-http-controllers.md)** - I controller web senza route o boundary chiaro non devono restare nel modulo.
 - 🚫 **[No NotificationTrackingController](../../no-notification-tracking-controller.md)** - Il tracking notifiche non deve vivere in un controller HTTP legacy.
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_5ZhVKt
->>>>>>> laraxot/dev
 - 🔬 **[Testing Guidelines](./testing.md)** - Mocking dei canali e verifica invio.
 - 📘 **[Docs-First Workflow](../../docs-first-workflow.md)** - Sequenza obbligatoria docs -> codice -> tracking GitHub.
 - 🧪 **PSR-4 Test Helpers** - Nei file Pest usare helper anonimi o support file dedicati; evitare classi top-level extra che rompono `composer dump-autoload`.
@@ -111,7 +72,6 @@ created: 2026-11-23
 ## 🔗 **Moduli Correlati**
 - [Xot](../../xot/docs/readme.md) - Dispatcher centrale.
 - [User](../../user/docs/readme.md) - Definizione dei destinatari e preferenze.
->>>>>>> .merge_file_3NC4dy
 - 🧭 **[No Orphan Http Controllers](../../no-orphan-http-controllers.md)** - I controller web senza route o boundary chiaro non devono restare nel modulo.
 - 🚫 **[No NotificationTrackingController](../../no-notification-tracking-controller.md)** - Il tracking notifiche non deve vivere in un controller HTTP legacy.
 - 🔬 **[Testing Guidelines](../../testing.md)** - Mocking dei canali e verifica invio.
@@ -135,24 +95,7 @@ created: 2026-11-23
 
 ## Dependency Intelligence
 
-<<<<<<< .merge_file_0DZ3nB
-<<<<<<< .merge_file_BIF7rL
 - [Dependency intelligence](../../dependency-intelligence.md)
-=======
-=======
->>>>>>> .merge_file_J6GEyE
-<<<<<<< HEAD
-- [Dependency intelligence](../../dependency-intelligence.md)
-- [Dependency intelligence](../../dependency-intelligence.md)
-=======
-<<<<<<< .merge_file_xgceWH
 - [Dependency intelligence](dependency-intelligence.md)
-=======
 - [Dependency intelligence](../../dependency-intelligence.md)
 - [Dependency intelligence](../../dependency-intelligence.md)
->>>>>>> .merge_file_5ZhVKt
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_0DZ3nB
->>>>>>> .merge_file_3NC4dy
-=======
->>>>>>> .merge_file_J6GEyE

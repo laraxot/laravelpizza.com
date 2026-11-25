@@ -4,21 +4,7 @@ type: concept
 tags: [notify, docs, best-practices, naming, conventions]
 module: Notify
 created: 2026-07-20
-<<<<<<< .merge_file_BvD5eI
-<<<<<<< .merge_file_Txf7Ts
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_VXQTuD
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_BvD5eI
->>>>>>> .merge_file_eNy8dz
-=======
->>>>>>> .merge_file_VXQTuD
 qmd: "notify documentazione best practices naming conventions convenzioni di naming frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -29,20 +15,8 @@ related:
   - ../architecture/README.md
   - ../conventions/README.md
   - ../rules/README.md
-<<<<<<< HEAD
   - ../README.md
-<<<<<<< .merge_file_BvD5eI
-<<<<<<< .merge_file_Txf7Ts
-=======
-<<<<<<< HEAD
   - ../README.md
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_eNy8dz
-=======
->>>>>>> .merge_file_VXQTuD
 ---
 # Convenzioni di Naming
 

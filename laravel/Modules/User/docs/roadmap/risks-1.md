@@ -11,10 +11,7 @@ related:
   - "./02-goals.md"
   - "./02-next.md"
   - "./03-later.md"
-<<<<<<< .merge_file_MGVRYn
 qmd: "risks 1"
-=======
->>>>>>> .merge_file_eLNJTU
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/05-risks-Modules.md

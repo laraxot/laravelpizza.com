@@ -3,21 +3,7 @@ title: "iflow contributing"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_KHEtah
-<<<<<<< .merge_file_VHJndB
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_dXCd6U
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_KHEtah
->>>>>>> .merge_file_qiw7uE
-=======
->>>>>>> .merge_file_dXCd6U
 qmd: "iflow contributing"
 issues: []
 discussions: []
@@ -33,10 +19,6 @@ discussions: []
 
 Come contribuire al progetto.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "iflow contributing"
@@ -53,13 +35,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🤝 Come Contribuire
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Se Am i l Frontend
 
 - Aiuta a rifinire il tema Meetup (`resources/css/app.css`, `resources/js/app.js`)

@@ -8,30 +8,13 @@ status: done
 track: quality/i18n
 priority: P2
 created: 2026-09-29
-<<<<<<< .merge_file_ExzaU9
-<<<<<<< .merge_file_oJeNqo
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_rYDQTC
-<<<<<<< HEAD
-updated: 2026-09-29
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ExzaU9
->>>>>>> .merge_file_xo7KaS
-=======
->>>>>>> .merge_file_rYDQTC
 related:
   - ../../../../../docs/wiki/i18n/navigation-translations-audit.md
   - ../../../../../docs/wiki/i18n/navigation-translations-inventory-2026-09-29.md
 issues: []
 discussions: []
-<<<<<<< HEAD
 qmd: "navigation translations audit story traduzioni notify"
-=======
->>>>>>> laraxot/dev
 ---
 
 # Audit traduzioni `.navigation` — modulo Notify

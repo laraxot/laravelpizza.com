@@ -4,31 +4,7 @@ type: index
 tags: [notify, docs]
 module: Notify
 created: 2026-07-20
-<<<<<<< HEAD
-<<<<<<< .merge_file_S5u4Bj
-<<<<<<< .merge_file_xNe7KN
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_kbhXma
-=======
->>>>>>> .merge_file_M4ho6d
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_S5u4Bj
-<<<<<<< .merge_file_xNe7KN
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_kbhXma
-=======
->>>>>>> .merge_file_M4ho6d
 qmd: "notify documentazione .obsidian readme obsidian setup guide index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -214,33 +190,9 @@ LIMIT 10
 ## Related Documentation
 
 - [LLM Wiki Integration Guide](../wiki/README.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_S5u4Bj
-<<<<<<< .merge_file_xNe7KN
 - [Agent Instructions](../wiki/agents.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_kbhXma
-=======
->>>>>>> .merge_file_M4ho6d
 - [Agent Instructions](../wiki/agents-2.md)
-=======
-<<<<<<< HEAD
 - [Agent Instructions](../wiki/agents.md)
-=======
 - [Agent Instructions](../wiki/agents-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_S5u4Bj
-<<<<<<< .merge_file_xNe7KN
-=======
 - [Agent Instructions](../wiki/agents.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_kbhXma
-=======
->>>>>>> .merge_file_M4ho6d
 - [Wiki Overview](../wiki/overview.md)

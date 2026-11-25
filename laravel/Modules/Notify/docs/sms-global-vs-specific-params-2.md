@@ -3,15 +3,7 @@ title: "sms global vs specific params"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_uOIG9s
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_OzYDuD
 qmd: "sms global vs specific params"
 issues: []
 discussions: []
@@ -193,10 +185,6 @@ Prima di modificare la configurazione SMS, verificare che:
 - [Struttura Standardizzata della Configurazione SMS](./standardized-sms-config-structure-2.md)
 - [Configurazione Netfun](./netfun-config-requirements-2.md)
 - [Laravel Configuration Best Practices](https://laravel.com/docs/configuration)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -209,8 +197,3 @@ qmd: "sms global vs specific params"
 issues: []
 discussions: []
 *Ultimo aggiornamento: 2025-05-12*
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

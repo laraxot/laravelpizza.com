@@ -3,21 +3,7 @@ title: "agents"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_g9CvtR
-<<<<<<< .merge_file_b92dtj
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_gY7nzE
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_g9CvtR
->>>>>>> .merge_file_Skq4o0
-=======
->>>>>>> .merge_file_gY7nzE
 qmd: "agents"
 issues: []
 discussions: []
@@ -86,10 +72,6 @@ docs/
 - **Query**: Chiedi → consulta wiki → rispondi con citazioni
 - **Lint**: Verifica consistenza e cross-references
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "agents"
@@ -112,12 +94,7 @@ discussions: []
 - [Task: nfr-assess](./.agents/docs/main-rules/task-nfr-assess.md)
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## Reusable Tasks
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 **See also:**
 - [CLAUDE.md](./claude.md)
 - [qwen.md](./qwen.md)
@@ -125,14 +102,6 @@ discussions: []
 
 *Ultimo aggiornamento: Aprile 2026*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 <claude-mem-context>
 # Memory Context
 
@@ -230,14 +199,6 @@ docs/
 
 *Ultimo aggiornamento: Aprile 2026*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 <claude-mem-context>
 # Memory Context
 

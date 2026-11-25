@@ -3,21 +3,7 @@ title: "architectural patterns"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_w02KiT
-<<<<<<< .merge_file_TiXBlP
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_HkJnHE
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_w02KiT
->>>>>>> .merge_file_mMaU9Y
-=======
->>>>>>> .merge_file_HkJnHE
 qmd: "architectural patterns"
 issues: []
 discussions: []

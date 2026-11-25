@@ -7,19 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 status: draft
 ---
 
@@ -72,24 +60,8 @@ Consolidated from **51** individual files.
 - [Piano di Implementazione per la Standardizzazione delle Traduzioni](#translation_implementation_plan)
 - [Best Practices per le Chiavi di Traduzione](#translation_keys_best_practices)
 - [---](#translation_keys_rules)
-<<<<<<< HEAD
 - [translation standards](#translation_standards)
 - [<<<<<<< HEAD](#translation_standards)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [<<<<<<< HEAD](#translation_standards)
-=======
-<<<<<<< HEAD
-- [translation standards](#translation_standards)
-=======
-- [<<<<<<< HEAD](#translation_standards)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-- [translation standards](#translation_standards)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Progresso Standardizzazione Traduzioni](#translation_standards_progress)
 - [Stato dell'Implementazione delle Traduzioni nel Modulo Notify](#translations-implementation-status-1)
 - [---](#translations-implementation-status-2)
@@ -104,17 +76,6 @@ Consolidated from **51** individual files.
 
 *Consolidated from: `translation-cleanup-plan-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 Questo documento descrive il piano di pulizia e standardizzazione delle traduzioni italiane nel modulo Notify di <nome progetto>.
 
 ## Analisi della Situazione Attuale
@@ -237,16 +198,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -259,17 +212,6 @@ Plan for cleaning up and standardizing translations across the module.
 
 *Consolidated from: `translation-cleanup-plan-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 Questo documento descrive il piano di pulizia e standardizzazione delle traduzioni italiane nel modulo Notify di App.
 
 ## Analisi della Situazione Attuale
@@ -378,17 +320,6 @@ L'implementazione di questo piano garantirà che le traduzioni nel modulo Notify
 
 *Consolidated from: `translation-conventions-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Regole Fondamentali
 - Le chiavi di traduzione devono essere in inglese, strutturate e gerarchiche (es. `notify.send_whatsapp.label`).
 - I valori devono essere localizzati in italiano naturale e descrittivo.
@@ -648,16 +579,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -670,17 +593,6 @@ Conventions for naming and structure of translation keys.
 
 *Consolidated from: `translation-conventions-clarification-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Identificazione di Convenzioni Contrastanti
 
  sono state identificate convenzioni contrastanti per le traduzioni:
@@ -798,16 +710,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -913,17 +817,6 @@ Il file `send_whats_app.php` e altri file simili nel modulo Notify seguono corre
 
 *Consolidated from: `translation-conventions-clarification-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Identificazione di Convenzioni Contrastanti
 
  sono state identificate convenzioni contrastanti per le traduzioni:
@@ -1117,17 +1010,6 @@ Il file `send_whats_app.php` e altri file simili nel modulo Notify seguono corre
 
 *Consolidated from: `translation-conventions-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Regole Fondamentali
 - Le chiavi di traduzione devono essere in inglese, strutturate e gerarchiche (es. `notify.send_whatsapp.label`).
 - I valori devono essere localizzati in italiano naturale e descrittivo.
@@ -1370,17 +1252,6 @@ La traduzione perfetta è quella che non si nota: è naturale, fluida, non distr
 *Consolidated from: `translation-file-correction-guide-2.md`*
 *Consolidated from: `translation-file-correction-guide-deprecated.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 This file is deprecated.
 
 Use:
@@ -1413,16 +1284,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -1590,21 +1453,12 @@ return [
 - [Regole di Naming per i File di Traduzione](../../translation-file-naming-rules-2.md)
 - [Guida alla Struttura dei File di Traduzione](../../translation-file-structure-guide-2.md)
 - [Progresso della Standardizzazione](../../translation-standards-progress-2.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 - [Regole di Naming per i File di Traduzione](../../translation-file-naming-rules-2.md)
 - [Guida alla Struttura dei File di Traduzione](../../translation-file-structure-guide-2.md)
 - [Progresso della Standardizzazione](../../translation-standards-progress-2.md)
 - [Regole di Naming per i File di Traduzione](../../translation-file-naming-rules.md)
 - [Guida alla Struttura dei File di Traduzione](../../translation-file-structure-guide-2.md)
 - [Progresso della Standardizzazione](../../translation-standards-progress.md)
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Regole di Naming per i File di Traduzione](../../translation-file-naming-rules.md)
 - [Guida alla Struttura dei File di Traduzione](../../translation-file-structure-guide-2.md)
 - [Progresso della Standardizzazione](../../translation-standards-progress.md)
@@ -1614,17 +1468,6 @@ return [
 
 *Consolidated from: `translation-file-correction-guide-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Procedura Sistematica per la Standardizzazione
 
 Questo documento fornisce una procedura dettagliata per correggere sistematicamente i file di traduzione nel modulo Notify che non rispettano gli standard di .
@@ -1939,17 +1782,6 @@ declare(strict_types=1);
 
 *Consolidated from: `translation-file-correction.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Procedura Sistematica per la Standardizzazione
 
 Questo documento fornisce una procedura dettagliata per correggere sistematicamente i file di traduzione nel modulo Notify che non rispettano gli standard di .
@@ -2283,16 +2115,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -2340,35 +2164,15 @@ Se si identifica un file con naming non conforme:
 - [Regole Generali per le Traduzioni](../../../../Lang/docs/translation-keys-rules-2.md)
 - [Best Practices per le Traduzioni](../../../../Lang/docs/translation-keys-best-practices-2.md)
 - [Convenzioni di Traduzione nel Modulo Notify](../../translation-conventions-2.md)
-<<<<<<< HEAD
 - [Regole Generali per le Traduzioni](../../../../Lang/docs/translation-keys-rules-2.md)
 - [Best Practices per le Traduzioni](../../../../Lang/docs/translation-keys-best-practices-2.md)
 - [Convenzioni di Traduzione nel Modulo Notify](../../translation-conventions-2.md)
-=======
-<<<<<<< HEAD
-- [Regole Generali per le Traduzioni](../../../../Lang/docs/translation-keys-rules-2.md)
-- [Best Practices per le Traduzioni](../../../../Lang/docs/translation-keys-best-practices-2.md)
-- [Convenzioni di Traduzione nel Modulo Notify](../../translation-conventions-2.md)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ---
 
 ## translation-file-naming-rules
 
 *Consolidated from: `translation-file-naming-rules-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Principi Fondamentali per il Naming dei File
 
 Le seguenti regole si applicano a tutti i file di traduzione nel modulo Notify:
@@ -2416,17 +2220,6 @@ Se si identifica un file con naming non conforme:
 
 *Consolidated from: `translation-file-naming.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Principi Fondamentali per il Naming dei File
 
 Le seguenti regole si applicano a tutti i file di traduzione nel modulo Notify:
@@ -2493,16 +2286,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -2658,19 +2443,10 @@ return [
 ## Riferimenti
 - [Regole di Naming per i File di Traduzione](../../translation-file-naming-rules-2.md)
 - [Regole Generali per le Traduzioni](../../../../Lang/docs/translation-keys-rules-3.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 - [Regole di Naming per i File di Traduzione](../../translation-file-naming-rules-2.md)
 - [Regole Generali per le Traduzioni](../../../../Lang/docs/translation-keys-rules-2.md)
 - [Regole di Naming per i File di Traduzione](../../translation-file-naming-rules.md)
 - [Regole Generali per le Traduzioni](../../../../Lang/docs/translation-keys-rules-2.md)
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Regole di Naming per i File di Traduzione](../../translation-file-naming-rules.md)
 - [Regole Generali per le Traduzioni](../../../../Lang/docs/translation-keys-rules-2.md)
 ---
@@ -2679,17 +2455,6 @@ return [
 
 *Consolidated from: `translation-file-structure-guide-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Struttura Standard Obbligatoria
 
 Ogni file di traduzione nel modulo Notify deve seguire questa struttura gerarchica standardizzata:
@@ -2849,17 +2614,6 @@ return [
 
 *Consolidated from: `translation-file-structure.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Struttura Standard Obbligatoria
 
 Ogni file di traduzione nel modulo Notify deve seguire questa struttura gerarchica standardizzata:
@@ -3020,17 +2774,6 @@ return [
 *Consolidated from: `translation-implementation-plan-2.md`*
 *Consolidated from: `translation-implementation-plan-deprecated.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 This file is deprecated.
 
 Use:
@@ -3063,16 +2806,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -3221,17 +2956,6 @@ L'implementazione di questo piano garantirà che le traduzioni nel modulo Notify
 
 *Consolidated from: `translation-implementation-plan-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 Questo documento descrive il piano di implementazione per standardizzare le traduzioni nel modulo Notify di .
 Questo documento descrive il piano di implementazione per standardizzare le traduzioni nel modulo Notify di <nome progetto>.
 
@@ -3526,16 +3250,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -3562,17 +3278,6 @@ La chiave di traduzione perfetta è quella che non si nota: è naturale, fluida,
 
 *Consolidated from: `translation-keys-best-practices-3.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Politica
 La politica del progetto è garantire inclusività, accessibilità e rispetto per tutte le culture e le diversità linguistiche. Ogni chiave di traduzione deve essere pensata per essere neutra, rispettosa e non discriminatoria.
 
@@ -3613,16 +3318,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -3675,52 +3372,23 @@ return [
 
 ### Riferimenti
 - [translation-keys-rules-3.md](../../../../Lang/docs/translation-keys-rules-3.md)
-<<<<<<< HEAD
 - [translation-keys-best-practices-2.md](../../../../Lang/docs/translation-keys-best-practices-2.md)
 - [translation-keys-rules-2.md](../../../../Lang/docs/translation-keys-rules-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_txTLIp
 - [translation-keys-best-practices-2.md](../../../../Lang/docs/translation-keys-best-practices-2.md) 
 - [translation-keys-rules-2.md](../../lang/docs/translation-keys-rules-1.md)
 - [translation-keys-best-practices-2.md](../../lang/docs/translation-keys-best-practices-1.md) 
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
 - [translation-keys-best-practices-2.md](../../../../Lang/docs/translation-keys-best-practices-2.md)
 - [translation-keys-rules-2.md](../../../../Lang/docs/translation-keys-rules-2.md)
 - [translation-keys-rules-2.md](../../../../Lang/docs/translation-keys-rules-2.md)
 - [translation-keys-best-practices-2.md](../../../../Lang/docs/translation-keys-best-practices-2.md)
 - [translation-keys-rules-2.md](../../../../Lang/docs/translation-keys-rules-2.md)
 - [translation-keys-best-practices-2.md](../../../../Lang/docs/translation-keys-best-practices-2.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_P3FLVm
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ---
 
 ## translation-keys-rules
 
 *Consolidated from: `translation-keys-rules-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## [2024-07-07] Aggiornamento regole e best practice traduzioni modulo Notify
 
 ### Errori riscontrati
@@ -3777,17 +3445,6 @@ return [
 
 *Consolidated from: `translation-keys.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## [[DATE]] Aggiornamento regole e best practice traduzioni modulo Notify
 
 ### Errori riscontrati
@@ -3844,17 +3501,6 @@ return [
 
 *Consolidated from: `translation-namespace-religion.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 **Status**: Active
 **Created**: 2026-04-14
 **Last Updated**: 2026-04-14
@@ -4179,26 +3825,9 @@ Amen.
 - [ticket.php (dominio corretto)](../../Modules/App/lang/it/ticket.php)
 - [ticket.php (dominio corretto)](../../Modules/<nome progetto>/lang/it/ticket.php)
 - [Laravel Localization](https://laravel.com/docs/localization)
-<<<<<<< HEAD
-- [No Hardcoded Language Religion](../../no-hardcoded-language-religion.md)
-- [No Hardcoded Language Religion](../../no-hardcoded-language-religion.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [No Hardcoded Language Religion](../../no-hardcoded-language-religion.md)
-- [No Hardcoded Language Religion](../../no-hardcoded-language-religion.md)
-=======
-<<<<<<< .merge_file_txTLIp
 - [No Hardcoded Language Religion](../../docs/no-hardcoded-language-religion.md)
-=======
 - [No Hardcoded Language Religion](../../no-hardcoded-language-religion.md)
 - [No Hardcoded Language Religion](../../no-hardcoded-language-religion.md)
->>>>>>> .merge_file_P3FLVm
->>>>>>> laraxot/dev
-=======
-- [No Hardcoded Language Religion](../../no-hardcoded-language-religion.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ---
 
@@ -4212,17 +3841,6 @@ Amen.
 
 *Consolidated from: `translation-standards-3.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 Questo documento definisce gli standard e le best practices per la gestione delle traduzioni all'interno dei moduli di <nome progetto>, con particolare attenzione al modulo Notify.
 
 ## Struttura delle Cartelle
@@ -4377,16 +3995,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -4527,17 +4137,6 @@ protected static ?string $navigationLabel = 'Invio SMS'; // Hardcoded
 
 *Consolidated from: `translation-standards-progress-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Stato Attuale - 12/05/2025
 
 ### Problemi Identificati
@@ -4649,16 +4248,8 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
-=======
-<<<<<<< HEAD
-  - "../../acronym-naming-conventions-2.md"
-  - "../../acronym-naming-conventions-2.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -4761,17 +4352,6 @@ related:
 
 *Consolidated from: `translation-standards-progress-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Stato Attuale - 12/05/2025
 
 ### Problemi Identificati
@@ -4791,20 +4371,11 @@ related:
    - `Modules/Notify/lang/it/edit_mail_template.php`
    - `Modules/Notify/lang/it/send_netfun_sms.php`
    - `Modules/Notify/lang/it/notification_template.php`
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
    - `Modules/Notify/lang/it/send_aws_email.php`
    - `Modules/Notify/lang/it/setting.php`
    - `Modules/Notify/lang/it/edit_mail_template.php`
    - `Modules/Notify/lang/it/send_netfun_sms.php`
    - `Modules/Notify/lang/it/notification_template.php`
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
    - E altri 15 file (elenco completo in appendice)
 
 ### Correzioni Implementate
@@ -4816,21 +4387,12 @@ related:
 2. **File Corretti**
    - Creato `Modules/Notify/lang/it/send_whatsapp.php` con struttura corretta
    - Aggiornato `Modules/Notify/lang/it/send_netfun_sms.php` con struttura completa
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
    - Creato `Modules/Notify/docs/translation-file-naming-rules-2.md`
    - Creato `Modules/Notify/docs/translation-file-structure-guide-2.md`
 
 2. **File Corretti**
    - Creato `Modules/Notify/lang/it/send_whatsapp.php` con struttura corretta
    - Aggiornato `Modules/Notify/lang/it/send_netfun_sms.php` con struttura completa
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
    - Rimosso il file con naming errato `send_whats_app.php`
 
 ### Prossime Correzioni da Implementare
@@ -4842,21 +4404,12 @@ related:
 
 2. **Verifiche da Eseguire**
    - Analisi della cartella `Modules/Notify/lang/en/` per identificare problemi simili
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
    - `Modules/Notify/lang/it/send_email.php`
    - `Modules/Notify/lang/it/send_sms.php`
    - `Modules/Notify/lang/it/send_telegram.php`
 
 2. **Verifiche da Eseguire**
    - Analisi della cartella `Modules/Notify/lang/en/` per identificare problemi simili
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
    - Controllo dei riferimenti nel codice che potrebbero puntare ai vecchi file
 
 ## Documentazione di Riferimento
@@ -5015,17 +4568,6 @@ Modules/Notify/lang/it/create_mail_template.php
 
 *Consolidated from: `translation-standards-3.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 Questo documento definisce gli standard e le best practices per la gestione delle traduzioni all'interno dei moduli di App, con particolare attenzione al modulo Notify.
 Questo documento definisce gli standard e le best practices per la gestione delle traduzioni all'interno dei moduli di <nome progetto>, con particolare attenzione al modulo Notify.
 
@@ -5162,17 +4704,6 @@ protected static ?string $navigationLabel = 'Invio SMS'; // Hardcoded
 
 *Consolidated from: `translation-cleanup-plan-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 Questo documento descrive il piano di pulizia e standardizzazione delle traduzioni italiane nel modulo Notify di <nome progetto>.
 
 ## Analisi della Situazione Attuale
@@ -5281,17 +4812,6 @@ L'implementazione di questo piano garantirà che le traduzioni nel modulo Notify
 
 *Consolidated from: `translation-conventions-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Regole Fondamentali
 - Le chiavi di traduzione devono essere in inglese, strutturate e gerarchiche (es. `notify.send_whatsapp.label`).
 - I valori devono essere localizzati in italiano naturale e descrittivo.
@@ -5533,17 +5053,6 @@ La traduzione perfetta è quella che non si nota: è naturale, fluida, non distr
 
 *Consolidated from: `translation-conventions-clarification-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Identificazione di Convenzioni Contrastanti
 
  sono state identificate convenzioni contrastanti per le traduzioni:
@@ -5644,17 +5153,6 @@ Il file `send_whats_app.php` e altri file simili nel modulo Notify seguono corre
 
 *Consolidated from: `translation-file-correction-guide-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Procedura Sistematica per la Standardizzazione
 
 Questo documento fornisce una procedura dettagliata per correggere sistematicamente i file di traduzione nel modulo Notify che non rispettano gli standard di <nome progetto>.
@@ -5839,17 +5337,6 @@ return [
 
 *Consolidated from: `translation-file-naming-rules-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Principi Fondamentali per il Naming dei File
 
 Le seguenti regole si applicano a tutti i file di traduzione nel modulo Notify:
@@ -5897,17 +5384,6 @@ Se si identifica un file con naming non conforme:
 
 *Consolidated from: `translation-file-structure-guide-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Struttura Standard Obbligatoria
 
 Ogni file di traduzione nel modulo Notify deve seguire questa struttura gerarchica standardizzata:
@@ -6067,17 +5543,6 @@ return [
 
 *Consolidated from: `translation-implementation-plan-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 Questo documento descrive il piano di implementazione per standardizzare le traduzioni nel modulo Notify di <nome progetto>.
 Questo documento descrive il piano di implementazione per standardizzare le traduzioni nel modulo Notify di SaluteOra.
 
@@ -6236,17 +5701,6 @@ L'implementazione di questo piano garantirà che le traduzioni nel modulo Notify
 
 *Consolidated from: `translation-keys-best-practices-3.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Politica
 La politica del progetto è garantire inclusività, accessibilità e rispetto per tutte le culture e le diversità linguistiche. Ogni chiave di traduzione deve essere pensata per essere neutra, rispettosa e non discriminatoria.
 
@@ -6268,17 +5722,6 @@ La chiave di traduzione perfetta è quella che non si nota: è naturale, fluida,
 
 *Consolidated from: `translation-keys-rules-3.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## [2024-07-07] Aggiornamento regole e best practice traduzioni modulo Notify
 
 ### Errori riscontrati
@@ -6479,17 +5922,6 @@ protected static ?string $navigationLabel = 'Invio SMS'; // Hardcoded
 
 *Consolidated from: `translation-standards-progress-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Stato Attuale - 12/05/2025
 
 ### Problemi Identificati
@@ -6619,17 +6051,6 @@ protected static ?string $navigationLabel = 'Invio SMS'; // Hardcoded
 
 *Consolidated from: `translations-implementation-status-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Panoramica
 
 Questo documento fornisce una panoramica completa dello stato attuale dell'implementazione delle traduzioni nel modulo Notify, identificando le convenzioni in uso, le discrepanze con le convenzioni generali di <nome progetto> e le azioni necessarie per garantire la coerenza.
@@ -6784,10 +6205,6 @@ related:
   - "./00-index.md"
   - "./absolute-completion-completamento-assoluto.md"
   - "../../acronym-naming-conventions-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
   - "../../acronym-naming-conventions-2.md"
   - "../../acronym-naming-conventions-2.md"
   - "./action-plan-immediate.md"
@@ -6804,29 +6221,13 @@ related:
 Current status of translation implementation across the module.
 ---
 
-<<<<<<< HEAD
-=======
-=======
   - "./action-plan-immediate.md"
 # Translations Implementation Status
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## translations-implementation-status
 
 *Consolidated from: `translations-implementation-status-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Panoramica
 
 Questo documento fornisce una panoramica completa dello stato attuale dell'implementazione delle traduzioni nel modulo Notify, identificando le convenzioni in uso, le discrepanze con le convenzioni generali di  e le azioni necessarie per garantire la coerenza.
@@ -6964,17 +6365,6 @@ Per garantire la coerenza futura, si raccomanda di:
 
 *Consolidated from: `translations-implementation.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Panoramica
 
 Questo documento fornisce una panoramica completa dello stato attuale dell'implementazione delle traduzioni nel modulo Notify, identificando le convenzioni in uso, le discrepanze con le convenzioni generali di  e le azioni necessarie per garantire la coerenza.
@@ -7112,17 +6502,6 @@ Per garantire la coerenza futura, si raccomanda di:
 
 *Consolidated from: `translations.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Panoramica
 
 Il modulo Notify utilizza file di traduzione per gestire tutti i testi dell'interfaccia utente. Questo approccio garantisce la coerenza e la manutenibilità delle traduzioni.
@@ -7266,17 +6645,6 @@ Notification::make()
 
 *Consolidated from: `translations-implementation-status-2.md`*
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Panoramica
 
 Questo documento fornisce una panoramica completa dello stato attuale dell'implementazione delle traduzioni nel modulo Notify, identificando le convenzioni in uso, le discrepanze con le convenzioni generali di <nome progetto> e le azioni necessarie per garantire la coerenza.

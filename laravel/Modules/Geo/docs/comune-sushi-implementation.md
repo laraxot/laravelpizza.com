@@ -3,30 +3,6 @@ title: "comune sushi implementation"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_YVrgpb
-<<<<<<< .merge_file_B904So
-<<<<<<< .merge_file_dSXpdI
-<<<<<<< .merge_file_9nMU8c
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_toR30O
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_3VxKMw
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_ha1mJt
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_vbfYKX
 updated: 2026-11-23
 qmd: "comune sushi implementation"
 issues: []
@@ -213,26 +189,6 @@ class Comune extends Model
 
 ## Regola: evitare trait inutili e non riusabili
 Non ha senso creare un trait come ComuneSushiTrait se viene usato solo in un modello. I trait vanno creati solo se riutilizzati in più classi. Se la logica è specifica di un solo modello, va implementata direttamente nella classe. Motivazione: semplicità, KISS, manutenibilità, evitare complessità inutile. Collegamento a docs/structure.md e best practices.
-<<<<<<< .merge_file_YVrgpb
-<<<<<<< .merge_file_B904So
-<<<<<<< .merge_file_dSXpdI
-<<<<<<< .merge_file_9nMU8c
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_toR30O
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_3VxKMw
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_ha1mJt
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_vbfYKX
 updated: 2026-09-26
 qmd: "comune sushi implementation"
 issues: []
@@ -243,28 +199,3 @@ canonical: ../../../Themes/docs/shared-components/comune-sushi-implementation-1.
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/comune-sushi-implementation-1.md
-<<<<<<< .merge_file_YVrgpb
-<<<<<<< .merge_file_B904So
-<<<<<<< .merge_file_dSXpdI
-<<<<<<< .merge_file_9nMU8c
-=======
-=======
->>>>>>> .merge_file_3VxKMw
-=======
->>>>>>> .merge_file_ha1mJt
-=======
->>>>>>> .merge_file_vbfYKX
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_YVrgpb
-<<<<<<< .merge_file_B904So
-<<<<<<< .merge_file_dSXpdI
->>>>>>> .merge_file_toR30O
-=======
->>>>>>> .merge_file_3VxKMw
-=======
->>>>>>> .merge_file_ha1mJt
-=======
->>>>>>> .merge_file_vbfYKX

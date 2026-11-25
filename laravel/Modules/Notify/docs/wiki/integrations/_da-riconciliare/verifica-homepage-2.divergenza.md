@@ -7,23 +7,7 @@ module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_lhAddA
-=======
-<<<<<<< .merge_file_7Jgz5s
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_sXUK06
-=======
->>>>>>> .merge_file_IySZ99
->>>>>>> laraxot/dev
 ---
 
 # Divergenza: `VERIFICA_HOMEPAGE.md`

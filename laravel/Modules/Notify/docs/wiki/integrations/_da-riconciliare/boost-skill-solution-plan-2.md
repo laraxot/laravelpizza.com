@@ -7,25 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_g7H0kP
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_V0NOBa
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_g7H0kP
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_V0NOBa
 ---
 
 # Boost Skill Installation - Solution Plan
@@ -167,29 +149,9 @@ The following modules have documentation folders that need updates:
 
 ### Documentation Structure
 Each module's docs folder will receive:
-<<<<<<< HEAD
-<<<<<<< .merge_file_g7H0kP
 1. `boost-skill-fix-summary-2.md` - Summary of the fix
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_V0NOBa
 1. `boost-skill-fix-summary-3.md` - Summary of the fix
-=======
-<<<<<<< HEAD
 1. `boost-skill-fix-summary-2.md` - Summary of the fix
-=======
-1. `boost-skill-fix-summary-3.md` - Summary of the fix
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_g7H0kP
-=======
-1. `boost-skill-fix-summary-2.md` - Summary of the fix
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_V0NOBa
 2. `DEPENDENCIES_MANAGEMENT.md` - Best practices for dependency management
 
 ## Risk Assessment

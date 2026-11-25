@@ -3,21 +3,7 @@ title: "semantic html css"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_g70KYa
-<<<<<<< .merge_file_2gzOO6
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_nEFzfp
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_g70KYa
->>>>>>> .merge_file_2uvUho
-=======
->>>>>>> .merge_file_nEFzfp
 qmd: "semantic html css"
 issues: []
 discussions: []
@@ -30,10 +16,6 @@ discussions: []
 **Status**: ✅ PRODUCTION READY  
 **Priority**: HIGH
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "semantic html css"
@@ -56,13 +38,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 Philosophy
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 📚 What are Semantic Elements?
 
 ### Definition

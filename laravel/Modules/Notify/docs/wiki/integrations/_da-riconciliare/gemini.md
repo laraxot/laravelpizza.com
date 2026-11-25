@@ -7,15 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< .merge_file_V44p1W
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_Hu5bgH
 ---
 
 # Gemini Rules (Modular)
@@ -44,10 +36,6 @@ Questa documentazione è stata divisa in moduli per una gestione più efficiente
 
 <!-- Merged from gemini.md, which collided with this file on case-insensitive filesystems. -->
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 title: "Gemini Rules (Modular)"
 type: concept
@@ -68,11 +56,6 @@ related:
   - "./action-plan-immediate.md"
 ---
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 # Gemini Rules (Modular)
 
 Questa documentazione è stata divisa in moduli per una gestione più efficiente del contesto.

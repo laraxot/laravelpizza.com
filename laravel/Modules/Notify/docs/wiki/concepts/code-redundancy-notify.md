@@ -7,33 +7,10 @@ module: Notify
 type: concept
 tags: [redundancy, notify, filament, templates]
 created: "2026-05-26"
-<<<<<<< HEAD
 updated: 2026-11-23
 related:
   - ../../../redundancy-audit.md
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_ZYaJ2W
-updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_9bT7e2
-updated: "2026-05-26"
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ZYaJ2W
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_9bT7e2
-related:
   - ../../../redundancy-audit-2.md
->>>>>>> laraxot/dev
   - ../../redundancy-audit-notify.md
   - ../../../../Xot/docs/wiki/concepts/code-redundancy-philosophy.md
   - ../../../../Xot/docs/wiki/redundancy-audit-2026-05-26.md
@@ -77,38 +54,17 @@ Nove file `*.php.up`: backup pre-migrazione Filament 3/5, **duplicano** classi e
 
 ## Audit precedente
 
-<<<<<<< HEAD
 - [redundancy-audit.md](../../redundancy-audit.md): fragment email case, config annidate.
 - [redundancy-audit.md](../../redundancy-audit-notify.md): fragment email case, config annidate.
-=======
-<<<<<<< HEAD
 - [redundancy-audit-2.md](../../redundancy-audit-2.md): fragment email case, config annidate.
 - [redundancy-audit-2.md](../../redundancy-audit-notify.md): fragment email case, config annidate.
-=======
-<<<<<<< .merge_file_ZYaJ2W
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [redundancy-audit-2.md](../../redundancy-audit-2.md): fragment email case, config annidate.
 - [redundancy-audit-2.md](../../redundancy-audit-notify.md): fragment email case, config annidate.
-=======
-=======
->>>>>>> .merge_file_9bT7e2
-<<<<<<< .merge_file_TdywiV
 - [redundancy-audit-2.md](../../../redundancy-audit-2.md) — fragment email case, config annidate.
-=======
 - [redundancy-audit-2.md](../../redundancy-audit-2.md): fragment email case, config annidate.
 - [redundancy-audit-2.md](../../redundancy-audit-notify.md): fragment email case, config annidate.
->>>>>>> .merge_file_OPOubQ
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ZYaJ2W
-=======
 - [redundancy-audit-2.md](../../redundancy-audit-2.md): fragment email case, config annidate.
 - [redundancy-audit-2.md](../../redundancy-audit-notify.md): fragment email case, config annidate.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_9bT7e2
->>>>>>> laraxot/dev
 
 ## Collegamenti
 

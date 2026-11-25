@@ -167,13 +167,6 @@ Seleziona il backup da ripristinare [1-3]: 1
 ## Vedi Anche
 - [Documentazione Principale](../../docs/index.md) - Indice della documentazione
 - [Best Practices](best-practices.md) - Linee guida e best practices
-<<<<<<< HEAD
 - [Testing](testing.md) - Documentazione dei test
-=======
-<<<<<<< HEAD
-- [Testing](testing.md) - Documentazione dei test
-=======
 - Testing - Documentazione dei test
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Convenzioni di Naming](../../docs/standards/file_naming_conventions.md) - Standard per la nomenclatura dei file

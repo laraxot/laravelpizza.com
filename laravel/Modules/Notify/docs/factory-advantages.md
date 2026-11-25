@@ -3,21 +3,7 @@ title: "factory advantages"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_pm40j9
-<<<<<<< .merge_file_Z5u29u
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_VxepVS
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_pm40j9
->>>>>>> .merge_file_fqK8w4
-=======
->>>>>>> .merge_file_VxepVS
 qmd: "factory advantages"
 issues: []
 discussions: []

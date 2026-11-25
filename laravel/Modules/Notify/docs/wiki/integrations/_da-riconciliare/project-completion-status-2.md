@@ -7,25 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_sTkexs
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_GihYzK
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_sTkexs
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_GihYzK
 ---
 
 # 🎯 NOTIFY - STATO COMPLETAMENTO PROGETTO
@@ -54,29 +36,9 @@ updated: 2026-11-23
 - ✅ **ADMIN_GUIDE.md** - Guida amministratori completa (NEW)
 
 ### 👥 Modulo User (90% → 92%)
-<<<<<<< HEAD
-<<<<<<< .merge_file_sTkexs
 - ✅ **ROADMAP.md** - Aggiornato Q4 2025-Q1 2026
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_GihYzK
 - ✅ **roadmap.md** - Aggiornato Q4 2025-Q1 2026
-=======
-<<<<<<< HEAD
 - ✅ **ROADMAP.md** - Aggiornato Q4 2025-Q1 2026
-=======
-- ✅ **roadmap.md** - Aggiornato Q4 2025-Q1 2026
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_sTkexs
-=======
-- ✅ **ROADMAP.md** - Aggiornato Q4 2025-Q1 2026
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_GihYzK
 
 ### 🎨 Tema Sixteen (75% → 78%)
 - ✅ **ROADMAP_2025.md** - Aggiornato Q4 2025-Q2 2026
@@ -141,31 +103,10 @@ updated: 2026-11-23
 #### Altri Moduli
 - [ ] Completare README.md di tutti i moduli
 - [ ] Creare api-2.md per moduli mancanti
-<<<<<<< HEAD
-<<<<<<< .merge_file_sTkexs
 - [ ] aggiornare tutte le roadmap_2025.md
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_GihYzK
 - [ ] Aggiornare tutte le ROADMAP_2025.md
 
-=======
-<<<<<<< HEAD
 - [ ] aggiornare tutte le roadmap_2025.md
-=======
-- [ ] Aggiornare tutte le ROADMAP_2025.md
-
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_sTkexs
-=======
-- [ ] aggiornare tutte le roadmap_2025.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_GihYzK
 ---
 
 ## 📈 METRICHE PROGETTO
@@ -209,29 +150,11 @@ updated: 2026-11-23
 ### Week 2
 - [ ] Completare docs modulo Geo
 - [ ] Completare docs tema Sixteen
-<<<<<<< HEAD
 - [ ] Aggiornare tutti i README.md
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_sTkexs
-<<<<<<< HEAD
 - [ ] Aggiornare tutti i README.md
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_GihYzK
 - [ ] aggiornare tutti i readme.md
-=======
 - [ ] Aggiornare tutti i README.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_sTkexs
-=======
 - [ ] aggiornare tutti i readme.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_GihYzK
 - [ ] Creare API docs moduli mancanti
 
 ### Week 3
@@ -267,29 +190,9 @@ updated: 2026-11-23
 1. **roadmap-status-summary-2.md** - Master roadmap
 2. **App/ROADMAP_2025.md** - Roadmap modulo
 2. **<nome progetto>/ROADMAP_2025.md** - Roadmap modulo
-<<<<<<< HEAD
-<<<<<<< .merge_file_sTkexs
 3. **User/ROADMAP.md** - Roadmap modulo
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_GihYzK
 3. **User/roadmap.md** - Roadmap modulo
-=======
-<<<<<<< HEAD
 3. **User/ROADMAP.md** - Roadmap modulo
-=======
-3. **User/roadmap.md** - Roadmap modulo
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_sTkexs
-=======
-3. **User/ROADMAP.md** - Roadmap modulo
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_GihYzK
 4. **Sixteen/ROADMAP_2025.md** - Roadmap tema
 
 **Totale**: 11 documenti creati/aggiornati
@@ -322,29 +225,9 @@ updated: 2026-11-23
     │   │
     │   ├── User/docs/
     │   │   ├── README.md           # ✅ Completo
-<<<<<<< HEAD
-<<<<<<< .merge_file_sTkexs
     │   │   ├── ROADMAP.md          # ✅ Aggiornato
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_GihYzK
     │   │   ├── roadmap.md          # ✅ Aggiornato
-=======
-<<<<<<< HEAD
     │   │   ├── ROADMAP.md          # ✅ Aggiornato
-=======
-    │   │   ├── roadmap.md          # ✅ Aggiornato
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_sTkexs
-=======
-    │   │   ├── ROADMAP.md          # ✅ Aggiornato
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_GihYzK
     │   │   ├── 2FA_GUIDE.md        # 📋 TODO
     │   │   ├── SSO_GUIDE.md        # 📋 TODO
     │   │   └── api-2.md              # 📋 TODO

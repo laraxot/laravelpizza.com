@@ -3,21 +3,7 @@ title: "email html best practices"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_VjW4oI
-<<<<<<< .merge_file_PrWrbM
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_vSdUCV
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_VjW4oI
->>>>>>> .merge_file_NeOEJu
-=======
->>>>>>> .merge_file_vSdUCV
 qmd: "email html best practices"
 issues: []
 discussions: []

@@ -1,28 +1,10 @@
 ---
 title: "🏆 NOTIFY - ECCELLENZA 2025"
-<<<<<<< .merge_file_yetVZc
 type: concept
 tags: [excellence, 2025]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "excellence-2025 🏆 laraxot - eccellenza 2025"
-=======
-<<<<<<< HEAD
-title: "🏆 <nome progetto> - ECCELLENZA 2025"
-type: concept
-tags: [excellence, 2025]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "excellence-2025 🏆 laraxot - eccellenza 2025"
-qmd: "excellence-2025 🏆 <nome progetto> - eccellenza 2025"
-=======
-type: concept
-tags: [excellence, 2025]
-created: 2026-07-14
-updated: 2026-11-23
-qmd: "excellence-2025 🏆 laraxot - eccellenza 2025"
->>>>>>> laraxot/dev
->>>>>>> .merge_file_GF7ujT
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
@@ -32,17 +14,8 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< .merge_file_yetVZc
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_GF7ujT
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

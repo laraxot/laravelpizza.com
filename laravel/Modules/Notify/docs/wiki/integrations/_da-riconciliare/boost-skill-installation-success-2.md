@@ -7,25 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_r4dqtb
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_DDEyxX
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_r4dqtb
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_DDEyxX
 ---
 
 # Boost Skill Installation - Success Report
@@ -148,29 +130,9 @@ php artisan list | grep boost
 - `/../../../boost-skill-solution-plan-2.md` - Solution plan
 
 ### Module Documentation
-<<<<<<< HEAD
-<<<<<<< .merge_file_r4dqtb
 Created boost-skill-fix-summary-2.md in:
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_DDEyxX
 Created boost-skill-fix-summary-3.md in:
-=======
-<<<<<<< HEAD
 Created boost-skill-fix-summary-2.md in:
-=======
-Created boost-skill-fix-summary-3.md in:
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_r4dqtb
-=======
-Created boost-skill-fix-summary-2.md in:
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_DDEyxX
 - `Modules/Xot/docs/`
 - `Modules/User/docs/`
 - `Modules/AI/docs/`

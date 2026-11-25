@@ -3,15 +3,7 @@ title: "test smtp page"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_tGBqQB
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_s9Uv0D
 qmd: "test smtp page"
 issues: []
 discussions: []
@@ -34,10 +26,6 @@ Inseriti le varie impostazioni, si potrà verificare il funzionamento di una det
 * [test-smtp-page.md](../../../Notify/project_docs/test-smtp-page.md)
 * [test-smtp-page.md](../../../Cms/project_docs/test-smtp-page.md)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ### Versione Incoming
 
@@ -53,14 +41,6 @@ updated: 2026-09-26
 qmd: "test smtp page"
 issues: []
 discussions: []
-<<<<<<< .merge_file_tGBqQB
-<<<<<<< HEAD
-=======
-=======
 ### Versione Incoming
 
 Inseriti le varie impostazioni, si potrà verificare il funzionamento di una determinata configurazione email.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_s9Uv0D

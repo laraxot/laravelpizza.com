@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_6M2sBR
 ---
 title: "Git Conflict Inventory"
 type: guide
 qmd: "git merge conflict inventory 28"
 ---
-=======
->>>>>>> .merge_file_rhPkTU
 # Git Conflict Inventory
 
 - Date: 2026-04-28

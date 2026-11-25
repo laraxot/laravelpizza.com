@@ -6,30 +6,8 @@ title: "Entity Name"
 type: entity
 sources: ["raw/articles/source-filename.md"]
 confidence: high
-<<<<<<< HEAD
 created: "{{date}}"
-updated: 2026-11-23
-=======
-created: {{date}}
-<<<<<<< HEAD
 updated: {{date}}
-=======
-<<<<<<< .merge_file_7bFeOU
-<<<<<<< HEAD
-<<<<<<< HEAD
-updated: {{date}}
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_vXi5fP
->>>>>>> laraxot/dev
 tags: [person, organization, module]
 related: []
 ---

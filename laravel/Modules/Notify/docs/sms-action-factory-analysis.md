@@ -3,15 +3,7 @@ title: "sms action factory analysis"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_feO3Tp
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_WYkj7l
 qmd: "sms action factory analysis"
 issues: []
 discussions: []

@@ -1,74 +1,15 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_s5oezw
-<<<<<<< .merge_file_9HD9oP
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_ErtsMS
-=======
->>>>>>> .merge_file_yOIyN1
->>>>>>> laraxot/dev
 ---
 title: "excellence year note"
-created: 2026-11-23
-updated: 2026-11-23
-<<<<<<< HEAD
-qmd: "excellence year note"
-=======
-<<<<<<< .merge_file_s5oezw
-<<<<<<< .merge_file_9HD9oP
-<<<<<<< HEAD
----title: "excellence 2025"
-type: note
-tags: [documentation]
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_ErtsMS
-=======
->>>>>>> .merge_file_yOIyN1
-=======
->>>>>>> laraxot/dev
----title: "excellence 2025"
-type: note
-tags: [documentation]
 created: 2026-09-26
-updated: 2026-09-26
-<<<<<<< .merge_file_s5oezw
-<<<<<<< .merge_file_9HD9oP
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_ErtsMS
-=======
->>>>>>> .merge_file_yOIyN1
-qmd: "excellence 2025"
+updated: 2026-11-23
+qmd: "excellence year note"
+---title: "excellence 2025"
+type: note
+tags: [documentation]
+---title: "excellence 2025"
 issues: []
 discussions: []
 superseded_by: excellence.md
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_s5oezw
-<<<<<<< .merge_file_9HD9oP
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_ErtsMS
-=======
->>>>>>> .merge_file_yOIyN1
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ---
 
 # 🏆 FIXCITY - ECCELLENZA 2025
@@ -77,20 +18,8 @@ superseded_by: excellence.md
 **Status**: 🚀 BEST IN CLASS  
 **Obiettivo**: Piattaforma #1 per gestione segnalazioni urbane in Italia  
 
-<<<<<<< HEAD
 ## 🎯 VISIONE
 
-=======
-<<<<<<< .merge_file_s5oezw
-<<<<<<< .merge_file_9HD9oP
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_ErtsMS
-=======
->>>>>>> .merge_file_yOIyN1
 ---
 
 title: "excellence 2025"
@@ -112,20 +41,8 @@ FixCity è la piattaforma enterprise leader per la gestione delle segnalazioni u
 
 ---
 
-<<<<<<< .merge_file_s5oezw
-<<<<<<< .merge_file_9HD9oP
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 VISIONE
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_ErtsMS
-=======
->>>>>>> .merge_file_yOIyN1
->>>>>>> laraxot/dev
 ## ✅ LAVORO COMPLETATO (2025-10-01)
 
 ### 📚 Documentazione Strategica (5 documenti)
@@ -145,39 +62,12 @@ FixCity è la piattaforma enterprise leader per la gestione delle segnalazioni u
 ### 👥 Modulo User - ECCELLENZA (92%)
 - ✅ **2FA_GUIDE.md** - Implementazione 2FA completa (NEW)
 - ✅ **SSO_GUIDE.md** - SAML 2.0 + OIDC completo (NEW)
-<<<<<<< HEAD
 - ✅ **ROADMAP.md** - Timeline Q4 2025-Q1 2026
-=======
-<<<<<<< HEAD
 - ✅ **roadmap.md** - Timeline Q4 2025-Q1 2026
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_s5oezw
-<<<<<<< .merge_file_9HD9oP
-<<<<<<< HEAD
 - ✅ **roadmap.md** - Timeline Q4 2025-Q1 2026
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_ErtsMS
-=======
->>>>>>> .merge_file_yOIyN1
 - ✅ **ROADMAP.md** - Timeline Q4 2025-Q1 2026
-=======
 - ✅ **roadmap.md** - Timeline Q4 2025-Q1 2026
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_s5oezw
-<<<<<<< .merge_file_9HD9oP
-=======
 - ✅ **ROADMAP.md** - Timeline Q4 2025-Q1 2026
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_ErtsMS
-=======
->>>>>>> .merge_file_yOIyN1
->>>>>>> laraxot/dev
 - 📋 **api-2.md** - Authentication API (TODO)
 
 ### 🎨 Tema Sixteen - ECCELLENZA (78%)
@@ -549,51 +439,24 @@ FixCity è orgogliosamente open source:
 - **[Sixteen Docs](./laravel/Themes/Sixteen/docs/)** - Frontend theme
 
 ### API
-<<<<<<< HEAD
 - **[Fixcity API](./laravel/Modules/Fixcity/docs/api.md)** - REST API
 - **[User 2FA](./laravel/Modules/User/docs/2fa_guide.md)** - 2FA Guide
 - **[User SSO](./laravel/Modules/User/docs/sso_guide.md)** - SSO Guide
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_s5oezw
-<<<<<<< .merge_file_9HD9oP
 - **[Fixcity API](./laravel/Modules/Fixcity/docs/api.md)** - REST API
 - **[User 2FA](./laravel/Modules/User/docs/2fa_guide.md)** - 2FA Guide
 - **[User SSO](./laravel/Modules/User/docs/sso_guide.md)** - SSO Guide
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_ErtsMS
-=======
->>>>>>> .merge_file_yOIyN1
 - **[Fixcity API](./laravel/Modules/Fixcity/docs/api-2.md)** - REST API
 - **[User 2FA](./laravel/Modules/User/docs/2FA_GUIDE.md)** - 2FA Guide
 - **[User SSO](./laravel/Modules/User/docs/SSO_GUIDE.md)** - SSO Guide
-=======
-<<<<<<< HEAD
 - **[Fixcity API](./laravel/Modules/Fixcity/docs/api.md)** - REST API
 - **[User 2FA](./laravel/Modules/User/docs/2fa_guide.md)** - 2FA Guide
 - **[User SSO](./laravel/Modules/User/docs/sso_guide.md)** - SSO Guide
-=======
 - **[Fixcity API](./laravel/Modules/Fixcity/docs/api-2.md)** - REST API
 - **[User 2FA](./laravel/Modules/User/docs/2FA_GUIDE.md)** - 2FA Guide
 - **[User SSO](./laravel/Modules/User/docs/SSO_GUIDE.md)** - SSO Guide
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_s5oezw
-<<<<<<< .merge_file_9HD9oP
-=======
 - **[Fixcity API](./laravel/Modules/Fixcity/docs/api.md)** - REST API
 - **[User 2FA](./laravel/Modules/User/docs/2fa_guide.md)** - 2FA Guide
 - **[User SSO](./laravel/Modules/User/docs/sso_guide.md)** - SSO Guide
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_ErtsMS
-=======
->>>>>>> .merge_file_yOIyN1
->>>>>>> laraxot/dev
 
 ---
 

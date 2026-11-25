@@ -3,21 +3,7 @@ title: "design comuni wizard parity"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_XacnoA
-<<<<<<< .merge_file_mKhQ0a
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_ynvuZk
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_XacnoA
->>>>>>> .merge_file_aVeJK4
-=======
->>>>>>> .merge_file_ynvuZk
 qmd: "design comuni wizard parity"
 issues: []
 discussions: []
@@ -32,10 +18,6 @@ discussions: []
 **Module**: Fixcity  
 **Theme**: Sixteen
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "design comuni wizard parity"
@@ -53,13 +35,8 @@ https://italia.github.io/design-comuni-pagine-statiche/sito/segnalazione-02-dati
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## Obiettivo
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Struttura Reference (Design Comuni)
 
 ```

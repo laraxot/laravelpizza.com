@@ -5,41 +5,7 @@ discussions: []
 title: "Project Structure — Module Notify"
 type: documentation
 created: 2026-05-11
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< .merge_file_rKiznc
-=======
-<<<<<<< .merge_file_QmwjZ8
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_k3sMYk
-=======
->>>>>>> .merge_file_zlZcvR
->>>>>>> laraxot/dev
-updated: 2026-05-11
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-<<<<<<< .merge_file_rKiznc
-=======
-<<<<<<< .merge_file_QmwjZ8
->>>>>>> laraxot/dev
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_k3sMYk
-=======
->>>>>>> .merge_file_zlZcvR
->>>>>>> laraxot/dev
 tags: [structure, architecture, module]
 ---
 
@@ -69,47 +35,10 @@ tags: [structure, architecture, module]
 │   │   └── *.md
 │   ├── decisions/                # Architecture decision records
 │   └── troubleshooting/          # Bug fixes, error resolutions
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_rKiznc
-=======
-<<<<<<< .merge_file_QmwjZ8
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_k3sMYk
-=======
->>>>>>> .merge_file_zlZcvR
->>>>>>> laraxot/dev
 ├── ON-DEMAND-PATTERN.md          # 🌟 QUESTO FILE — Pattern on-demand
 ├── qmd-setup-3.md                  # Configurazione QMD
 ├── performance-optimization-2.md    # Metriche e best practice
 ├── ARCHITECTURE.md               # (opzionale) Architettura modulo
-<<<<<<< HEAD
-<<<<<<< .merge_file_rKiznc
-=======
-<<<<<<< .merge_file_QmwjZ8
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_k3sMYk
-=======
->>>>>>> .merge_file_zlZcvR
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ├── on-demand-pattern.md          # 🌟 QUESTO FILE — Pattern on-demand
 ├── qmd-setup.md                  # Configurazione QMD
 ├── performance-optimization.md    # Metriche e best practice
@@ -125,99 +54,27 @@ tags: [structure, architecture, module]
 | `wiki/log.md` | Storico attività (ingest/query/lint) |
 | `wiki/rules/` | Regole + trigger map locale |
 | `wiki/concepts/` | Concetti specifici del modulo |
-<<<<<<< HEAD
 | `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< .merge_file_rKiznc
-=======
-<<<<<<< .merge_file_QmwjZ8
->>>>>>> laraxot/dev
-<<<<<<< HEAD
 | `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_k3sMYk
-=======
->>>>>>> .merge_file_zlZcvR
->>>>>>> laraxot/dev
 | `ON-DEMAND-PATTERN.md` | **Leggi prima** — pattern da seguire |
-=======
 | `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-<<<<<<< .merge_file_rKiznc
-=======
-<<<<<<< .merge_file_QmwjZ8
->>>>>>> laraxot/dev
-=======
 | `ON-DEMAND-PATTERN.md` | **Leggi prima** — pattern da seguire |
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_k3sMYk
-=======
->>>>>>> .merge_file_zlZcvR
->>>>>>> laraxot/dev
 
 ## Convenzioni
 
 ### Naming
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< .merge_file_rKiznc
-=======
-<<<<<<< .merge_file_QmwjZ8
->>>>>>> laraxot/dev
 - **filenames**: lowercase-kebab-case.md
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_k3sMYk
-=======
->>>>>>> .merge_file_zlZcvR
->>>>>>> laraxot/dev
 - **Filenames**: lowercase-kebab-case.md
-=======
-<<<<<<< HEAD
 - **filenames**: lowercase-kebab-case.md
-=======
 - **Filenames**: lowercase-kebab-case.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-<<<<<<< .merge_file_rKiznc
-=======
-<<<<<<< .merge_file_QmwjZ8
->>>>>>> laraxot/dev
-=======
 - **filenames**: lowercase-kebab-case.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_k3sMYk
-=======
->>>>>>> .merge_file_zlZcvR
->>>>>>> laraxot/dev
 - **Directories**: lowercase
 - **Titles**: Title Case
 
 ### Frontmatter Schema
 
 \`\`\`yaml
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 title: "Page Title"
 type: concept|entity|source|comparison|decision|troubleshooting
@@ -229,11 +86,6 @@ tags: [tag1, tag2]
 related:
   - ../concepts/related.md
 ---
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 \`\`\`
 
 ### Link Rules

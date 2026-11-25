@@ -3,21 +3,7 @@ title: "critical architecture rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_mORtV6
-<<<<<<< .merge_file_7H9odn
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_kDsW77
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_mORtV6
->>>>>>> .merge_file_pWnVHa
-=======
->>>>>>> .merge_file_kDsW77
 qmd: "critical architecture rules"
 issues: []
 discussions: []
@@ -408,10 +394,6 @@ LaravelLocalization::getLocalizedURL($locale, null, [], true)
 // WRONG
 url('/en/path')
 ```
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -423,14 +405,3 @@ updated: 2026-09-26
 qmd: "critical architecture rules"
 issues: []
 discussions: []
-<<<<<<< .merge_file_mORtV6
-<<<<<<< .merge_file_7H9odn
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_pWnVHa
-=======
->>>>>>> .merge_file_kDsW77

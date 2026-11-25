@@ -3,27 +3,8 @@ title: "🎯 FIXCITY - PERFECTION PLAN"
 type: concept
 tags: [perfection, plan]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_MCs6Sg
-=======
-<<<<<<< .merge_file_G9FjsU
->>>>>>> laraxot/dev
 updated: 2026-11-23
 qmd: "perfection-plan 🎯 fixcity - perfection plan"
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-qmd: "perfection-plan 🎯 fixcity - perfection plan"
-qmd: "perfection-plan 🎯 ptv - perfection plan"
-=======
-updated: 2026-11-23
-qmd: "perfection-plan 🎯 fixcity - perfection plan"
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_xkID8a
-=======
->>>>>>> .merge_file_o0Mv5N
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
@@ -31,29 +12,12 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< HEAD
-<<<<<<< .merge_file_MCs6Sg
-=======
-<<<<<<< .merge_file_G9FjsU
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
->>>>>>> .merge_file_xkID8a
-=======
->>>>>>> .merge_file_o0Mv5N
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

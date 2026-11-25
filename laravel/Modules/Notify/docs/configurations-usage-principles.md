@@ -3,21 +3,7 @@ title: "configurations usage principles"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_t0Cda4
-<<<<<<< .merge_file_WdWGIt
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_zinNKZ
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_t0Cda4
->>>>>>> .merge_file_c4Ak6D
-=======
->>>>>>> .merge_file_zinNKZ
 qmd: "configurations usage principles"
 issues: []
 discussions: []

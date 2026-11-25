@@ -1,21 +1,7 @@
 ---
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Jylgv0
-<<<<<<< .merge_file_EVodx7
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_BXDi5d
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Jylgv0
->>>>>>> .merge_file_90fqUV
-=======
->>>>>>> .merge_file_BXDi5d
 qmd: "livewire widget prd"
 issues: []
 discussions: []

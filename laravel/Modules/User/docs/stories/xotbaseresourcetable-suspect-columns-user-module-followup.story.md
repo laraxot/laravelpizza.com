@@ -6,10 +6,7 @@ epic: xotbaseresourcetable-model-property-and-column-audit
 created: '2026-09-11'
 updated: '2026-09-11'
 status: resolved
-<<<<<<< HEAD
-=======
 qmd: "xotbaseresourcetable suspect columns user followup story"
->>>>>>> laraxot/dev
 ---
 
 # Follow-up — colonne sospette e bug reale (modulo User)

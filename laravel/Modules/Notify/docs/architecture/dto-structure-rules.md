@@ -4,21 +4,7 @@ type: concept
 tags: [notify, docs, architecture, dto, structure, rules]
 module: Notify
 created: 2026-07-20
-<<<<<<< .merge_file_RXNiWv
-<<<<<<< .merge_file_on1DoS
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_7UDudW
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_RXNiWv
->>>>>>> .merge_file_Zc98Gc
-=======
->>>>>>> .merge_file_7UDudW
 qmd: "notify documentazione architecture dto structure rules regole per la struttura dei dto frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"

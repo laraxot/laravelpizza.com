@@ -4,25 +4,7 @@ type: index
 tags: [notify, docs, github]
 module: Notify
 created: 2026-07-20
-<<<<<<< HEAD
-<<<<<<< .merge_file_c6FV0Q
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_zmIsWq
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_c6FV0Q
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zmIsWq
 qmd: "notify documentazione github readme github issues & discussions - laraxot platform index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
@@ -95,51 +77,25 @@ Alcuni file di documentazione facevano riferimento a directory del database con 
 
 #### References
 - [Database Naming Convention](../conventions/database-naming.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_c6FV0Q
 - [AGENTS.md](../../agents.md)
 - [Database Naming Convention](../conventions/database-naming.md)
 - [AGENTS.md](../agents.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_zmIsWq
-=======
-<<<<<<< HEAD
 - [AGENTS.md](../../agents.md)
 - [Database Naming Convention](../conventions/database-naming.md)
 - [AGENTS.md](../agents.md)
-=======
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_c6FV0Q
->>>>>>> laraxot/dev
 - [AGENTS.md](../../AGENTS.md)
 - [AGENTS.md](../../AGENTS.md)
 - [Database Naming Convention](../conventions/database-naming.md)
 - [AGENTS.md](../agents.md)
 - [AGENTS.md](../agents.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 - [AGENTS.md](../../agents.md)
 - [Database Naming Convention](../conventions/database-naming.md)
 - [AGENTS.md](../agents.md)
-=======
 - [AGENTS.md](../../AGENTS.md)
 - [AGENTS.md](../../AGENTS.md)
 - [Database Naming Convention](../conventions/database-naming.md)
 - [AGENTS.md](../agents.md)
 - [AGENTS.md](../agents.md)
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_zmIsWq
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ---
 

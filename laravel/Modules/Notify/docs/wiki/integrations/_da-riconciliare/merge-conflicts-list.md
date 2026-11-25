@@ -7,25 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_0Z3vvd
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_O8keZg
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_0Z3vvd
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_O8keZg
 status: draft
 ---
 
@@ -52,29 +34,11 @@ cd laravel && git grep -n '^<<<<<<< ' -- Modules/Notify/
 
 ## Memoria
 
-<<<<<<< HEAD
 [`docs/wiki/memories/merge-collision-notify-lessons.md`](../../memories/merge-collision-notify-lessons.md)
 [`docs/wiki/memories/merge-collision-notify-lessons.md`](../../memories/merge-collision-notify-lessons.md)
-=======
-<<<<<<< .merge_file_0Z3vvd
-<<<<<<< HEAD
-<<<<<<< HEAD
 [`docs/wiki/memories/merge-collision-notify-lessons.md`](../../memories/merge-collision-notify-lessons.md)
 [`docs/wiki/memories/merge-collision-notify-lessons.md`](../../memories/merge-collision-notify-lessons.md)
-=======
-=======
->>>>>>> .merge_file_O8keZg
-<<<<<<< .merge_file_1UcBlF
 [`docs/wiki/memories/merge-collision-notify-lessons.md`](wiki/memories/merge-collision-notify-lessons.md)
-=======
 [`docs/wiki/memories/merge-collision-notify-lessons.md`](../../memories/merge-collision-notify-lessons.md)
 [`docs/wiki/memories/merge-collision-notify-lessons.md`](../../memories/merge-collision-notify-lessons.md)
->>>>>>> .merge_file_8XrHSI
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_0Z3vvd
-=======
 [`docs/wiki/memories/merge-collision-notify-lessons.md`](../../memories/merge-collision-notify-lessons.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_O8keZg

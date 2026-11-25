@@ -3,31 +3,7 @@ title: "gemini split index"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_vpwbl7
-<<<<<<< .merge_file_iuCoUf
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_R300rw
-=======
->>>>>>> .merge_file_SuuFrq
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_vpwbl7
-<<<<<<< .merge_file_iuCoUf
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_R300rw
-=======
->>>>>>> .merge_file_SuuFrq
 qmd: "gemini split index"
 issues: []
 discussions: []
@@ -49,33 +25,9 @@ discussions: []
 
 ## 🔗 Collegamento
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_vpwbl7
-<<<<<<< .merge_file_iuCoUf
 - [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_R300rw
-=======
->>>>>>> .merge_file_SuuFrq
 - [gemini-2.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
-=======
-<<<<<<< HEAD
 - [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
-=======
 - [gemini-2.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_vpwbl7
-<<<<<<< .merge_file_iuCoUf
-=======
 - [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_R300rw
-=======
->>>>>>> .merge_file_SuuFrq
 - [Index principale](../../../Lang/docs/wiki/integrations/_da-riconciliare/index-3.md)

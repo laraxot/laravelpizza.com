@@ -1,16 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_baOzlF
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_LSFPSp
 title: "final implementation report 2025 10"
 type: note
 tags: [documentation]
@@ -235,16 +223,6 @@ Steps:
 **Data**: 2025-10-02T20:48:00+02:00  
 **Tempo impiegato**: ~90 minuti di lavoro intensivo  
 **Status finale**: ✅ **SUCCESS - ZERO ERRORS**
-<<<<<<< .merge_file_baOzlF
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_LSFPSp
->>>>>>> laraxot/dev
 issues: []
 discussions: []
 title: "FINAL_IMPLEMENTATION_REPORT_2025-10-02"
@@ -266,15 +244,3 @@ related:
 ---
 
 > Questo file è stato rinominato in [final-implementation-report.md](final-implementation-report.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_baOzlF
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_LSFPSp
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

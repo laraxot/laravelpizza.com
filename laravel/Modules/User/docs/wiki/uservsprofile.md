@@ -2,10 +2,7 @@
 module: User
 concept: User vs Profile
 last_updated: 2026-04-15
-<<<<<<< .merge_file_O5ZORa
 qmd: "uservsprofile user profile models"
-=======
->>>>>>> .merge_file_dNOUZC
 ---
 
 # User vs Profile Models

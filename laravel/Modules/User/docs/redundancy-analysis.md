@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_30KeIf
 qmd: "redundancy analysis"
-=======
->>>>>>> .merge_file_wBceu9
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/redundancy-analysis.md

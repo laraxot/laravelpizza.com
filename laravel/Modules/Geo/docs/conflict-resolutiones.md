@@ -3,33 +3,7 @@ title: "conflict resolutiones"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_pRJ32e
-<<<<<<< .merge_file_I2ODaz
-<<<<<<< .merge_file_UOLG3N
-<<<<<<< .merge_file_h8v5RK
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_E54v87
-=======
->>>>>>> .merge_file_uZkw4Y
-=======
->>>>>>> .merge_file_gJU1q7
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_pRJ32e
-<<<<<<< .merge_file_I2ODaz
-<<<<<<< .merge_file_UOLG3N
->>>>>>> .merge_file_gXW0wd
-=======
->>>>>>> .merge_file_E54v87
-=======
->>>>>>> .merge_file_uZkw4Y
-=======
->>>>>>> .merge_file_gJU1q7
 qmd: "conflict resolutiones"
 issues: []
 discussions: []
@@ -71,15 +45,8 @@ use Filament\Tables\Table;
 
 ## Metodologia di Risoluzione
 1. **Identificazione**: Script automatico per trovare tutti i marker 
-<<<<<<< HEAD
-2. **Selezione**: Sempre "current change" (contenuto tra `=======` e `>>>>>>>`)
-=======
-<<<<<<< HEAD
 2. **Selezione**: Sempre "current change" (contenuto tra `-------` e `CONFLICT_END`)
-=======
 2. **Selezione**: Sempre "current change" (contenuto tra `=======` e `>>>>>>>`)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 3. **Backup**: Backup automatico prima delle modifiche
 4. **Verifica**: Controllo che non rimangano marker di conflitto
 

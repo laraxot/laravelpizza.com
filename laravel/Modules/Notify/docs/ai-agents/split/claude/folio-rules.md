@@ -3,21 +3,7 @@ title: "folio rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_xl4jNp
-<<<<<<< .merge_file_ao0Q2c
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_CMfPfT
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_xl4jNp
->>>>>>> .merge_file_kTzyUZ
-=======
->>>>>>> .merge_file_CMfPfT
 qmd: "folio rules"
 issues: []
 discussions: []
@@ -36,14 +22,6 @@ discussions: []
 ### New Pages & Routes
 - Always create new `folio` pages and routes using `artisan folio:page [name]` following existing naming conventions.
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 <code-snippet name="Example folio:page Commands for Automatic Routing" lang="shell">
     // Creates: resources/views/pages/products.blade.php → /products
     php artisan folio:page 'products'
@@ -52,47 +30,19 @@ discussions: []
     php artisan folio:page 'products/[id]'
 </code-snippet>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 - Add a 'name' to each new Folio page at the very top of the file so it has a named route available for other parts of the codebase to use.
 
-
-<<<<<<< HEAD
-=======
-=======
-- Add a 'name' to each new Folio page at the very top of the file so it has a named route available for other parts of the codebase to use.
-
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 <code-snippet name="Adding named route to Folio page" lang="php">
 use function Laravel\Folio\name;
 
 name('products.index');
 </code-snippet>
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ### Support & Documentation
 - Folio supports: middleware, serving pages from multiple paths, subdomain routing, named routes, nested routes, index routes, route parameters, and route model binding.
 - If available, use Boost's `search-docs` tool to use Folio to its full potential and help the user effectively.
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 <code-snippet name="Folio Middleware Example" lang="php">
 use function Laravel\Folio\{name, middleware};
 
@@ -100,11 +50,6 @@ name('admin.products');
 middleware(['auth', 'verified', 'can:manage-products']);
 ?>
 </code-snippet>
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 
 ---
@@ -125,9 +70,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

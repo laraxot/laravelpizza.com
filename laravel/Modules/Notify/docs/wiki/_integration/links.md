@@ -5,23 +5,9 @@ status: active
 module: Notify
 scope: documentation
 bmad_version: 1.0
-<<<<<<< HEAD
 updated: 2026-11-23
 created: 2026-11-23
 qmd: "links notify document"
-=======
-<<<<<<< .merge_file_NwbWmD
-updated: 2026-11-23
-created: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-10-06
-=======
-updated: 2026-11-23
-created: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_bEqLsL
->>>>>>> laraxot/dev
 ---
 
 # links

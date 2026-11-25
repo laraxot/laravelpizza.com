@@ -7,25 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_b69gth
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_Aa7ozH
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_b69gth
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_Aa7ozH
 ---
 
 # AI Agent Teams - Coordination Hub
@@ -95,29 +77,9 @@ Multiple AI agents (Qwen, Claude, Cursor, etc.) are working on the same <nome pr
 
 **Current Tasks**:
 - ✅ Update `bashscripts/docs/ai/` with sync rules
-<<<<<<< HEAD
-<<<<<<< .merge_file_b69gth
 - ✅ Update agents.md with commit/push rules
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_Aa7ozH
 - ✅ Update agents-2.md with commit/push rules
-=======
-<<<<<<< HEAD
 - ✅ Update agents.md with commit/push rules
-=======
-- ✅ Update agents-2.md with commit/push rules
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_b69gth
-=======
-- ✅ Update agents.md with commit/push rules
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_Aa7ozH
 - ✅ Update .windsurfrules
 - ⏳ Sync `.github/` with `bashscripts/ai/.github/`
 
@@ -281,29 +243,11 @@ git push origin dev
 - **Issue #12**: AI Agent Collaboration
 - **Issue #13**: Documentation Updates
 - **../../../sync-test-results-2.md**: Latest sync test results
-<<<<<<< HEAD
 - **docs/sync-remote-repo-test-plan-2.md**: Test plan
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_b69gth
-<<<<<<< HEAD
 - **docs/sync-remote-repo-test-plan-2.md**: Test plan
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_Aa7ozH
 - **../../../sync-remote-repo-test-plan-2.md**: Test plan
-=======
 - **docs/sync-remote-repo-test-plan-2.md**: Test plan
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_b69gth
-=======
 - **../../../sync-remote-repo-test-plan-2.md**: Test plan
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_Aa7ozH
 
 ---
 

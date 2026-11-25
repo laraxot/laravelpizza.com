@@ -2,33 +2,7 @@
 title: "Mappa di migrazione della radice di docs"
 type: migration-map
 status: proposed
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
-<<<<<<< .merge_file_QenpBT
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_duv0H4
-=======
->>>>>>> .merge_file_TAudM5
-=======
->>>>>>> .merge_file_xWuOAh
-<<<<<<< HEAD
-updated: 2026-10-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
->>>>>>> .merge_file_uZLUC9
-=======
->>>>>>> .merge_file_duv0H4
-=======
->>>>>>> .merge_file_TAudM5
-=======
->>>>>>> .merge_file_xWuOAh
 tags: [docs, migration-map, geo, p4-docs-geo]
 qmd: "geo docs migration map root cleanup"
 ---
@@ -39,74 +13,18 @@ Fase BMAD: documentazione/qualita. Questa mappa e una **proposta**: nessun file 
 
 File lungo per costruzione (una riga per ognuno dei 622 file della radice): e una tabella di dati, non prosa.
 
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
-<<<<<<< .merge_file_QenpBT
 Punto d ingresso: [index.md](./index.md). Registro decisioni: [decision-log.md](./decision-log.md).
-=======
-=======
->>>>>>> .merge_file_duv0H4
-=======
->>>>>>> .merge_file_TAudM5
-=======
->>>>>>> .merge_file_xWuOAh
-<<<<<<< HEAD
-Punto d ingresso: [index-2.md](./index-2.md). Registro decisioni: [decision-log.md](./decision-log.md).
-=======
-<<<<<<< HEAD
 Punto d ingresso: [index.md](./index.md). Registro decisioni: [decision-log.md](./decision-log.md).
-=======
 Punto d ingresso: [index-2.md](./index-2.md). Registro decisioni: [decision-log.md](./decision-log.md).
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
->>>>>>> .merge_file_uZLUC9
-=======
->>>>>>> .merge_file_duv0H4
-=======
->>>>>>> .merge_file_TAudM5
-=======
->>>>>>> .merge_file_xWuOAh
 
 ## Misura di partenza
 
 - File nella radice di `docs/` (misurati prima di creare questo file): **622**, di cui **575** `.md` e **47** non documentazione (configurazione, tooling, file senza estensione).
 - Copie byte-identiche (stesso md5) di un altro file della radice: **62** (in **62** gruppi). Per ciascun gruppo e indicato un canonico; le altre copie sono proposte per `wiki/_archive/duplicates/`.
 - Destinazioni gia occupate da un file con lo stesso nome: **78** (**59** identici, **19** diversi). Per i diversi lo spostamento sovrascriverebbe contenuto: la nota della riga lo segnala e serve un confronto.
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
-<<<<<<< .merge_file_QenpBT
 - Indici concorrenti nella radice: `index-2.md`, `00-index-2.md`, `00-index.md`, `index.md` (indice PTVX generico, non di Geo), `indice-documentazione.md`, `indice-documentazione-2.md`, `indiceocumentazione.md`, `documentation-index.md`, `rules-index.md`, `start-here.md`, `modules-optimization-index.md`, `testing-supreme-index.md`.
-=======
-=======
->>>>>>> .merge_file_duv0H4
-=======
->>>>>>> .merge_file_TAudM5
-=======
->>>>>>> .merge_file_xWuOAh
-<<<<<<< HEAD
-- Indici concorrenti nella radice: `index-2.md`, `00-index-2.md`, `00-index.md`, `index.md` (indice PTVX generico, non di Geo), `indice-documentazione.md`, `indice-documentazione-2.md`, `indiceocumentazione.md`, `documentation-index.md`, `rules-index.md`, `start-here.md`, `modules-optimization-index.md`, `testing-supreme-index.md`.
-=======
-<<<<<<< HEAD
 - Indici concorrenti nella radice: `index.md`, `00-index.md`, `00-index.md`, `index.md` (indice PTVX generico, non di Geo), `indice-documentazione.md`, `indice-documentazione-2.md`, `indiceocumentazione.md`, `documentation-index.md`, `rules-index.md`, `start-here.md`, `modules-optimization-index.md`, `testing-supreme-index.md`.
-=======
 - Indici concorrenti nella radice: `index-2.md`, `00-index-2.md`, `00-index.md`, `index.md` (indice PTVX generico, non di Geo), `indice-documentazione.md`, `indice-documentazione-2.md`, `indiceocumentazione.md`, `documentation-index.md`, `rules-index.md`, `start-here.md`, `modules-optimization-index.md`, `testing-supreme-index.md`.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
->>>>>>> .merge_file_uZLUC9
-=======
->>>>>>> .merge_file_duv0H4
-=======
->>>>>>> .merge_file_TAudM5
-=======
->>>>>>> .merge_file_xWuOAh
 - Link relativi (strumento `bashscripts/tools/docs/docs-organizer.py links`, escluse `raw/` e `stories/`): vedi `docs/decision-log.md`, voce del 2026-10-14, per i numeri prima e dopo.
 - Il filesystem di sviluppo distingue le maiuscole ma Windows/macOS no: molte coppie (`prd-2.md`/`prd.md`, `bad-practices-2.md`/`bad-practices-3.md`) collidono su un clone case-insensitive. Il file `case-conflicts.md` ne parla.
 
@@ -155,65 +73,13 @@ Motivo del gruppo: punti d ingresso e registri da tenere in radice. Stato: `prop
 |---|---|---|---|---|
 | `CHANGELOG.md` | `CHANGELOG.md` | Changelog | omonimo con contenuto diverso: `changelog.md`; link in ingresso: 0 | proposto |
 | `decision-log.md` | `decision-log.md` | Decision Log - Geo | link in ingresso: 2 | proposto |
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
-<<<<<<< .merge_file_QenpBT
 | `index-2.md` | `index-2.md` | Geo Module Documentation Index | omonimo con contenuto diverso: `index.md`; link in ingresso: 5 | proposto |
-=======
-=======
->>>>>>> .merge_file_duv0H4
-=======
->>>>>>> .merge_file_TAudM5
-=======
->>>>>>> .merge_file_xWuOAh
-<<<<<<< HEAD
-| `index-2.md` | `index-2.md` | Geo Module Documentation Index | omonimo con contenuto diverso: `index.md`; link in ingresso: 5 | proposto |
-=======
-<<<<<<< HEAD
 | `index.md` | `index.md` | Geo Module Documentation Index | omonimo con contenuto diverso: `index.md`; link in ingresso: 5 | proposto |
-=======
 | `index-2.md` | `index-2.md` | Geo Module Documentation Index | omonimo con contenuto diverso: `index.md`; link in ingresso: 5 | proposto |
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
->>>>>>> .merge_file_uZLUC9
-=======
->>>>>>> .merge_file_duv0H4
-=======
->>>>>>> .merge_file_TAudM5
-=======
->>>>>>> .merge_file_xWuOAh
 | `README.md` | `README.md` | Modulo Geo | link in ingresso: 43 | proposto |
 
 ## Gruppo A: Indici e navigazione (12)
 
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
-<<<<<<< .merge_file_QenpBT
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_uZLUC9
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_duv0H4
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_TAudM5
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_xWuOAh
 Motivo del gruppo: indice doppio: il punto d ingresso unico e index.md. Stato di tutte le righe: `proposto`.
 
 | Vecchio | Nuovo proposto | Scopo | Nota | Stato |
@@ -223,26 +89,6 @@ Motivo del gruppo: indice doppio: il punto d ingresso unico e index.md. Stato di
 | `docs-health.md` | `wiki/_archive/indexes/docs-health.md` | Docs Health - Geo | link in ingresso: 0 | proposto |
 | `documentation-index.md` | `wiki/_archive/indexes/documentation-index.md` | Indice della Documentazione del Modulo Geo | link in ingresso: 0 | proposto |
 | `index.md` | `wiki/_archive/indexes/index.md` | PTVX - Documentazione Completa | omonimo con contenuto diverso: `index.md`; link in ingresso: 1 | proposto |
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
-<<<<<<< .merge_file_QenpBT
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_uZLUC9
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_duv0H4
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_TAudM5
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_xWuOAh
 Motivo del gruppo: indice doppio: il punto d ingresso unico e index-2.md. Stato di tutte le righe: `proposto`.
 
 | Vecchio | Nuovo proposto | Scopo | Nota | Stato |
@@ -252,31 +98,6 @@ Motivo del gruppo: indice doppio: il punto d ingresso unico e index-2.md. Stato 
 | `docs-health.md` | `wiki/_archive/indexes/docs-health.md` | Docs Health - Geo | link in ingresso: 0 | proposto |
 | `documentation-index.md` | `wiki/_archive/indexes/documentation-index.md` | Indice della Documentazione del Modulo Geo | link in ingresso: 0 | proposto |
 | `index.md` | `wiki/_archive/indexes/index.md` | PTVX - Documentazione Completa | omonimo con contenuto diverso: `index-2.md`; link in ingresso: 1 | proposto |
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
-<<<<<<< .merge_file_QenpBT
-=======
-=======
->>>>>>> .merge_file_duv0H4
-=======
->>>>>>> .merge_file_TAudM5
-=======
->>>>>>> .merge_file_xWuOAh
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
->>>>>>> .merge_file_uZLUC9
-=======
->>>>>>> .merge_file_duv0H4
-=======
->>>>>>> .merge_file_TAudM5
-=======
->>>>>>> .merge_file_xWuOAh
 | `indice-documentazione.md` | `wiki/_archive/indexes/indice-documentazione.md` | Indice della Documentazione del Modulo Geo | canonico delle copie byte-identiche; link in ingresso: 0 | proposto |
 | `indice-documentazione-2.md` | `wiki/_archive/duplicates/indice-documentazione-2.md` | Indice della Documentazione del Modulo Geo | copia byte-identica di `indice-documentazione.md`; link in ingresso: 0 | proposto |
 | `indiceocumentazione.md` | `wiki/_archive/indexes/indiceocumentazione.md` | indiceocumentazione | stub (<200 caratteri); nome corrotto o sospetto; link in ingresso: 0 | proposto |
@@ -427,32 +248,8 @@ Motivo del gruppo: report puntuale di una sessione di correzione: obsoleto, stor
 | `phpstan-fixes-5.md` | `phpstan/phpstan-fixes-5.md` | Correzioni PHPStan Modulo Geo - 2025-01-27 | destinazione gia occupata da un file IDENTICO: la copia in radice e superflua; identico anche a `phpstan/phpstan-fixes-5.md`; omonimo con contenuto diverso: `phpstan-fixes.md`; link in ingresso: 0 | proposto |
 | `phpstan-fixes-2.md` | `phpstan/phpstan-fixes-2.md` | PHPStan Fixes for Geo Module | destinazione gia occupata da un file IDENTICO: la copia in radice e superflua; identico anche a `phpstan/phpstan-fixes-2.md`; link in ingresso: 0 | proposto |
 | `phpstan-fixes-3.md` | `phpstan/phpstan-fixes-3.md` | Correzioni PHPStan Modulo Geo - (DATE) | destinazione gia occupata da un file IDENTICO: la copia in radice e superflua; identico anche a `phpstan/phpstan-fixes-3.md`; link in ingresso: 0 | proposto |
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
-<<<<<<< .merge_file_QenpBT
 | `phpstan-fixes-gennaio.md` | `phpstan/phpstan-fixes-gennaio.md` | PHPStan Fixes - Modulo Geo - Gennaio 2025 | destinazione gia occupata da un file IDENTICO: la copia in radice e superflua; identico anche a `phpstan/phpstan-fixes-gennaio.md`; link in ingresso: 1 | proposto |
-=======
-=======
->>>>>>> .merge_file_duv0H4
-=======
->>>>>>> .merge_file_TAudM5
-=======
->>>>>>> .merge_file_xWuOAh
-<<<<<<< HEAD
-=======
 | `phpstan-fixes-gennaio.md` | `phpstan/phpstan-fixes-gennaio.md` | PHPStan Fixes - Modulo Geo - Gennaio 2025 | destinazione gia occupata da un file IDENTICO: la copia in radice e superflua; identico anche a `phpstan/phpstan-fixes-gennaio.md`; link in ingresso: 1 | proposto |
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
->>>>>>> .merge_file_uZLUC9
-=======
->>>>>>> .merge_file_duv0H4
-=======
->>>>>>> .merge_file_TAudM5
-=======
->>>>>>> .merge_file_xWuOAh
 | `phpstan-fixes-gennaio-2.md` | `phpstan/phpstan-fixes-gennaio-2.md` | PHPStan Fixes - Modulo Geo - Gennaio 2025 | destinazione gia occupata da un file IDENTICO: la copia in radice e superflua; identico anche a `phpstan/phpstan-fixes-gennaio-2.md`; link in ingresso: 1 | proposto |
 | `phpstan-fixes-gennaio.md` | `phpstan/phpstan-fixes-gennaio.md` | PHPStan Fixes - Modulo Geo - Gennaio 2025 | DESTINAZIONE GIA OCCUPATA da un file diverso: confrontare prima di spostare; link in ingresso: 0 | proposto |
 | `phpstan-fixes-january.md` | `phpstan/phpstan-fixes-january.md` | PHPStan Fixes - Modulo Geo - Gennaio 2025 | destinazione gia occupata da un file IDENTICO: la copia in radice e superflua; identico anche a `phpstan/phpstan-fixes-january.md`; link in ingresso: 0 | proposto |
@@ -671,32 +468,8 @@ Motivo del gruppo: modello dati geografico: casa naturale models/. Stato di tutt
 | `address-model-italian.md` | `models/address-model-italian.md` | Modello Address per Indirizzi Italiani | canonico delle copie byte-identiche; link in ingresso: 3 | proposto |
 | `address-relationships.md` | `models/address-relationships.md` | Relazioni del Modello Address | canonico delle copie byte-identiche; link in ingresso: 0 | proposto |
 | `address-translation-fixes-2.md` | `models/address-translation-fixes-2.md` | Correzioni Traduzioni Address - Gennaio 2025 | omonimo con contenuto diverso: `address-translation-fixes.md`; link in ingresso: 0 | proposto |
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
-<<<<<<< .merge_file_QenpBT
 | `address-translation-fixes.md` | `models/address-translation-fixes.md` | Correzioni Traduzioni Address - Gennaio 2025 | nome corrotto o sospetto; link in ingresso: 0 | proposto |
-=======
-=======
->>>>>>> .merge_file_duv0H4
-=======
->>>>>>> .merge_file_TAudM5
-=======
->>>>>>> .merge_file_xWuOAh
-<<<<<<< HEAD
-=======
 | `address-translation-fixes.md` | `models/address-translation-fixes.md` | Correzioni Traduzioni Address - Gennaio 2025 | nome corrotto o sospetto; link in ingresso: 0 | proposto |
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
->>>>>>> .merge_file_uZLUC9
-=======
->>>>>>> .merge_file_duv0H4
-=======
->>>>>>> .merge_file_TAudM5
-=======
->>>>>>> .merge_file_xWuOAh
 | `address-translation-fixes-1.md` | `models/address-translation-fixes-1.md` | Correzioni Traduzioni Address - Gennaio 2025 | nome corrotto o sospetto; link in ingresso: 0 | proposto |
 | `address-translation-fixes.md` | `models/address-translation-fixes.md` | Correzioni Traduzioni Address - Gennaio 2025 | omonimo con contenuto diverso: `address-translation-fixes-2.md`; link in ingresso: 1 | proposto |
 | `address-translationes.md` | `models/address-translationes.md` | Correzioni Traduzioni Address - Gennaio 2025 | nome corrotto o sospetto; link in ingresso: 0 | proposto |
@@ -737,32 +510,8 @@ Motivo del gruppo: modello dati geografico: casa naturale models/. Stato di tutt
 | `factory-creation-geo-module.md` | `models/factory-creation-geo-module.md` | Factory Creation - Geo Module | link in ingresso: 1 | proposto |
 | `factory-seeder-consolidated.md` | `models/factory-seeder-consolidated.md` | Factory e Seeder Consolidati - Progetto nome progetto | link in ingresso: 0 | proposto |
 | `geo-entities.md` | `wiki/_archive/duplicates/geo-entities.md` | Entità Geografiche | copia byte-identica di `geo-entities-2.md`; link in ingresso: 2 | proposto |
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
-<<<<<<< .merge_file_QenpBT
 | `geo-json-model.md` | `models/geo-json-model.md` | Modello GeoJsonModel (ispirato a Squire) per Laravel | nome corrotto o sospetto; link in ingresso: 0 | proposto |
-=======
-=======
->>>>>>> .merge_file_duv0H4
-=======
->>>>>>> .merge_file_TAudM5
-=======
->>>>>>> .merge_file_xWuOAh
-<<<<<<< HEAD
-=======
 | `geo-json-model.md` | `models/geo-json-model.md` | Modello GeoJsonModel (ispirato a Squire) per Laravel | nome corrotto o sospetto; link in ingresso: 0 | proposto |
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
->>>>>>> .merge_file_uZLUC9
-=======
->>>>>>> .merge_file_duv0H4
-=======
->>>>>>> .merge_file_TAudM5
-=======
->>>>>>> .merge_file_xWuOAh
 | `geo-json-model-1.md` | `models/geo-json-model-1.md` | Modello GeoJsonModel (ispirato a Squire) per Laravel | nome corrotto o sospetto; link in ingresso: 0 | proposto |
 | `geo-json-model.md` | `models/geo-json-model.md` | geo json model | stub (<200 caratteri); omonimo con contenuto diverso: `geo-json-model-2.md`; link in ingresso: 33 | proposto |
 | `geo-json-vs-sushi-comparison.md` | `models/geo-json-vs-sushi-comparison.md` | GeoJsonModel vs Laravel Sushi: Analisi e Confronto | canonico delle copie byte-identiche; link in ingresso: 9 | proposto |
@@ -854,32 +603,8 @@ Motivo del gruppo: componente/risorsa Filament, picker, mappa: casa naturale fil
 | `address-field.md` | `filament/address-field.md` | Address Field Component - Geolocalizzazione con Reverse Geocoding | link in ingresso: 1 | proposto |
 | `address-input-component.md` | `filament/address-input-component.md` | AddressInput Component - Filament Field con Geolocalizzazione | link in ingresso: 3 | proposto |
 | `address-input-implementation-summary.md` | `filament/address-input-implementation-summary.md` | AddressInput Component Implementation Summary | link in ingresso: 0 | proposto |
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
-<<<<<<< .merge_file_QenpBT
 | `address-resource.md` | `filament/address-resource.md` | Risorsa Filament per il Modello Address | nome corrotto o sospetto; link in ingresso: 0 | proposto |
-=======
-=======
->>>>>>> .merge_file_duv0H4
-=======
->>>>>>> .merge_file_TAudM5
-=======
->>>>>>> .merge_file_xWuOAh
-<<<<<<< HEAD
-=======
 | `address-resource.md` | `filament/address-resource.md` | Risorsa Filament per il Modello Address | nome corrotto o sospetto; link in ingresso: 0 | proposto |
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
->>>>>>> .merge_file_uZLUC9
-=======
->>>>>>> .merge_file_duv0H4
-=======
->>>>>>> .merge_file_TAudM5
-=======
->>>>>>> .merge_file_xWuOAh
 | `address-resource-1.md` | `filament/address-resource-1.md` | Risorsa Filament per il Modello Address | nome corrotto o sospetto; link in ingresso: 0 | proposto |
 | `address-resource-analysis.md` | `filament/address-resource-analysis.md` | Analisi AddressResource.php | omonimo con contenuto diverso: `addressresource-analysis.md`; link in ingresso: 0 | proposto |
 | `address-resource-improvements.md` | `filament/address-resource-improvements.md` | Suggerimenti di Miglioramento per AddressResource.php | omonimo con contenuto diverso: `addressresource-improvements.md`; link in ingresso: 0 | proposto |
@@ -1095,32 +820,8 @@ Motivo del gruppo: scratch di prova (file di test vuoti o quasi) o nome malforma
 |---|---|---|---|---|
 | `--eloquent.md` | `wiki/_archive/duplicates/eloquent-2.md` | eloquent | copia byte-identica di `eloquent-3.md`; nome corrotto o sospetto; link in ingresso: 0 | proposto |
 | `eloquent-3.md` | `_integration/eloquent-3.md` | eloquent | DESTINAZIONE GIA OCCUPATA da un file diverso: confrontare prima di spostare; canonico delle copie byte-identiche; nome corrotto o sospetto; link in ingresso: 3 | proposto |
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
-<<<<<<< .merge_file_QenpBT
 | `test.md` | `wiki/_archive/unclassified/test-27.md` | test 27 02 2024 | identico anche a `raw/root-import/test-27.md`; stub (<200 caratteri); link in ingresso: 0 | proposto |
-=======
-=======
->>>>>>> .merge_file_duv0H4
-=======
->>>>>>> .merge_file_TAudM5
-=======
->>>>>>> .merge_file_xWuOAh
-<<<<<<< HEAD
-=======
 | `test.md` | `wiki/_archive/unclassified/test-27.md` | test 27 02 2024 | identico anche a `raw/root-import/test-27.md`; stub (<200 caratteri); link in ingresso: 0 | proposto |
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
->>>>>>> .merge_file_uZLUC9
-=======
->>>>>>> .merge_file_duv0H4
-=======
->>>>>>> .merge_file_TAudM5
-=======
->>>>>>> .merge_file_xWuOAh
 | `test.md` | `wiki/_archive/unclassified/test-27-02.md` | test 27 02 2024 | identico anche a `raw/root-import/test-27-02.md`; stub (<200 caratteri); link in ingresso: 0 | proposto |
 | `test.md` | `wiki/_archive/unclassified/test.md` | test | identico anche a `raw/root-import/test.md`; stub (<200 caratteri); link in ingresso: 0 | proposto |
 | `test1.md` | `wiki/_archive/unclassified/test1.md` | test1 | identico anche a `raw/root-import/test1.md`; stub (<200 caratteri); link in ingresso: 0 | proposto |
@@ -1131,34 +832,6 @@ Motivo del gruppo: scratch di prova (file di test vuoti o quasi) o nome malforma
 1. Una persona approva i gruppi uno alla volta e cambia lo stato in `approvato` nella riga o nel `decision-log.md`.
 2. Per ogni gruppo approvato: `git mv` file per file (nessun comando che cancelli), poi `docs-organizer.py links ... --fix`.
 3. Rimisurare: `docs-organizer.py links laravel/Modules/Geo/docs` deve restituire zero eventi `fixed`; gli `unresolved` residui puntano a file inesistenti e vanno annotati (`--annotate`) o riscritti, mai inventando bersagli.
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
-<<<<<<< .merge_file_QenpBT
 4. Aggiornare `index.md` e `wiki/log.md` con la voce dello spostamento.
-=======
-=======
->>>>>>> .merge_file_duv0H4
-=======
->>>>>>> .merge_file_TAudM5
-=======
->>>>>>> .merge_file_xWuOAh
-<<<<<<< HEAD
-4. Aggiornare `index-2.md` e `wiki/log.md` con la voce dello spostamento.
-=======
-<<<<<<< HEAD
 4. Aggiornare `index.md` e `wiki/log.md` con la voce dello spostamento.
-=======
 4. Aggiornare `index-2.md` e `wiki/log.md` con la voce dello spostamento.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_C4l6Lz
-<<<<<<< .merge_file_hRnLO2
-<<<<<<< .merge_file_8IJsOk
->>>>>>> .merge_file_uZLUC9
-=======
->>>>>>> .merge_file_duv0H4
-=======
->>>>>>> .merge_file_TAudM5
-=======
->>>>>>> .merge_file_xWuOAh

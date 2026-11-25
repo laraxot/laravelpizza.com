@@ -3,21 +3,7 @@ title: "filament"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_vZZt2x
-<<<<<<< .merge_file_zQPts9
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_0MCPQ7
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_vZZt2x
->>>>>>> .merge_file_Cs6IMu
-=======
->>>>>>> .merge_file_0MCPQ7
 qmd: "filament"
 issues: []
 discussions: []

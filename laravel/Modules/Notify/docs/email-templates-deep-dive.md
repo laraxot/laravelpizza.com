@@ -3,21 +3,7 @@ title: "email templates deep dive"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_OvoBvz
-<<<<<<< .merge_file_fWmiKq
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_8qMC1s
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_OvoBvz
->>>>>>> .merge_file_ShkzCg
-=======
->>>>>>> .merge_file_8qMC1s
 qmd: "email templates deep dive"
 issues: []
 discussions: []
@@ -27,10 +13,6 @@ discussions: []
 
 Un'analisi dettagliata delle risorse, pacchetti, editor e tecniche per gestire i template email in Laravel.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 title: "email templates deep dive"
 type: note
@@ -71,14 +53,9 @@ public function build()
 ```
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## 1. Core Laravel Mail System
 ### 1.1 Blade Templates
 ### 1.2 Markdown Mailables
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 2. Pacchetti GitHub
 
 ### 2.1 simplepleb/laravel-email-templates

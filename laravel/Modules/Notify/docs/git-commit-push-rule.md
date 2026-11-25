@@ -3,31 +3,7 @@ title: "Git Commit & Push Workflow - AI Agent Rules"
 type: rule
 tags: [git, commit, push, rule]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_zn0VRM
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_eockdU
-<<<<<<< .merge_file_6AJEAi
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_0MUvr6
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_nj0dgU
-=======
-<<<<<<< .merge_file_eockdU
->>>>>>> .merge_file_Otj9A4
-=======
->>>>>>> .merge_file_0MUvr6
->>>>>>> laraxot/dev
 qmd: "git-commit-push-rule git commit & push workflow - ai agent rules"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -36,34 +12,14 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< HEAD
-<<<<<<< .merge_file_zn0VRM
-=======
-<<<<<<< .merge_file_eockdU
-<<<<<<< .merge_file_6AJEAi
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
->>>>>>> .merge_file_nj0dgU
-=======
->>>>>>> .merge_file_Otj9A4
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_0MUvr6
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

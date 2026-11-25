@@ -1,45 +1,10 @@
 ---
-<<<<<<< .merge_file_IZBXVH
-<<<<<<< .merge_file_76mqRh
-<<<<<<< .merge_file_9jyfkV
-=======
-=======
->>>>>>> .merge_file_3gWq0a
-=======
->>>>>>> .merge_file_eEwZgy
-<<<<<<< HEAD
 title: "Script Placement Rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-updated: 2026-09-26
-qmd: "Script Placement Rules"
-=======
-<<<<<<< .merge_file_IZBXVH
-<<<<<<< .merge_file_76mqRh
->>>>>>> .merge_file_xA6Jp9
-=======
->>>>>>> .merge_file_3gWq0a
-=======
->>>>>>> .merge_file_eEwZgy
-title: "script placement rules"
-type: note
-tags: [documentation]
-created: 2026-09-26
 updated: 2026-11-23
-qmd: "script placement rules"
-<<<<<<< .merge_file_IZBXVH
-<<<<<<< .merge_file_76mqRh
-<<<<<<< .merge_file_9jyfkV
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_xA6Jp9
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_3gWq0a
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_eEwZgy
+qmd: "Script Placement Rules"
 issues: []
 discussions: []
 ---

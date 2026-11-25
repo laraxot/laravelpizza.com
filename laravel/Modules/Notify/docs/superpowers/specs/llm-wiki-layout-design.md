@@ -3,25 +3,7 @@ title: "2026 04 15 llm wiki layout design"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_p7CMbb
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_FykMJ9
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_p7CMbb
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_FykMJ9
 qmd: "2026 04 15 llm wiki layout design"
 issues: []
 discussions: []
@@ -32,29 +14,9 @@ discussions: []
 **Date:** 2026‑04‑15
 
 ## Goal
-<<<<<<< HEAD
-<<<<<<< .merge_file_p7CMbb
 Create a single source of truth for the large AI‑agent markdown files (`GEMINI.md`, `CLAUDE.md`, `qwen-2.md`) and ensure every module and theme in the repository has a `docs/wiki/` (and accompanying `llm‑wiki` assets) while avoiding duplicated content.
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_FykMJ9
 Create a single source of truth for the large AI‑agent markdown files (`gemini-2.md`, `CLAUDE.md`, `qwen-2.md`) and ensure every module and theme in the repository has a `docs/wiki/` (and accompanying `llm‑wiki` assets) while avoiding duplicated content.
-=======
-<<<<<<< HEAD
 Create a single source of truth for the large AI‑agent markdown files (`GEMINI.md`, `CLAUDE.md`, `qwen-2.md`) and ensure every module and theme in the repository has a `docs/wiki/` (and accompanying `llm‑wiki` assets) while avoiding duplicated content.
-=======
-Create a single source of truth for the large AI‑agent markdown files (`gemini-2.md`, `CLAUDE.md`, `qwen-2.md`) and ensure every module and theme in the repository has a `docs/wiki/` (and accompanying `llm‑wiki` assets) while avoiding duplicated content.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_p7CMbb
-=======
-Create a single source of truth for the large AI‑agent markdown files (`GEMINI.md`, `CLAUDE.md`, `qwen-2.md`) and ensure every module and theme in the repository has a `docs/wiki/` (and accompanying `llm‑wiki` assets) while avoiding duplicated content.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_FykMJ9
 
 ## Architecture Overview
 ```
@@ -108,29 +70,9 @@ The bullet should be placed under the **“leggi prima”** section or a dedicat
 ## Migration Steps
 1. Create `./.agents/docs/ai-agents/shared/` and add the four SOLID markdown files.
 2. Add the three stub `README.md` files under `gemini/`, `claude/`, `qwen/`.
-<<<<<<< HEAD
-<<<<<<< .merge_file_p7CMbb
 3. Remove the now‑redundant large `GEMINI.md`, `CLAUDE.md`, `qwen-2.md` files (or replace them with a one‑line redirect to the stub README).
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_FykMJ9
 3. Remove the now‑redundant large `gemini-2.md`, `CLAUDE.md`, `qwen-2.md` files (or replace them with a one‑line redirect to the stub README).
-=======
-<<<<<<< HEAD
 3. Remove the now‑redundant large `GEMINI.md`, `CLAUDE.md`, `qwen-2.md` files (or replace them with a one‑line redirect to the stub README).
-=======
-3. Remove the now‑redundant large `gemini-2.md`, `CLAUDE.md`, `qwen-2.md` files (or replace them with a one‑line redirect to the stub README).
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_p7CMbb
-=======
-3. Remove the now‑redundant large `GEMINI.md`, `CLAUDE.md`, `qwen-2.md` files (or replace them with a one‑line redirect to the stub README).
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_FykMJ9
 4. Update `CLAUDE.md` with the LLM‑Wiki reminder bullet.
 5. Run `qmd embed` to index the new markdown files for the local search engine.
 
@@ -139,13 +81,6 @@ The bullet should be placed under the **“leggi prima”** section or a dedicat
 - All three agents render identical documentation when their stub README is opened.
 - The LLM‑Wiki reminder appears in `CLAUDE.md` and is visible in the project‑wide documentation index.
 - `qmd embed` runs without errors and the new docs are searchable.
-<<<<<<< .merge_file_p7CMbb
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_FykMJ9
 
 ---
 title: "2026 04 15 llm wiki layout design"
@@ -156,19 +91,5 @@ updated: 2026-09-26
 qmd: "2026 04 15 llm wiki layout design"
 issues: []
 discussions: []
-<<<<<<< HEAD
 *Spec written according to the Superpowers brainstorming workflow. Please review and approve before proceeding to implementation.*
-=======
-<<<<<<< .merge_file_p7CMbb
-<<<<<<< HEAD
 *Spec written according to the Superpowers brainstorming workflow. Please review and approve before proceeding to implementation.*
-=======
-*Spec written according to the Superpowers brainstorming workflow. Please review and approve before proceeding to implementation.*
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-*Spec written according to the Superpowers brainstorming workflow. Please review and approve before proceeding to implementation.*
->>>>>>> laraxot/dev
->>>>>>> .merge_file_FykMJ9

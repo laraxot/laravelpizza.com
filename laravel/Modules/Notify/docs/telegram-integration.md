@@ -3,15 +3,7 @@ title: "telegram integration"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Pqg8LE
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_5ECcnT
 qmd: "telegram integration"
 issues: []
 discussions: []

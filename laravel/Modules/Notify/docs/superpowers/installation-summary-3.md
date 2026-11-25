@@ -3,15 +3,7 @@ title: "installation summary"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_xXd3gf
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_znJGTp
 qmd: "installation summary"
 issues: []
 discussions: []
@@ -305,36 +297,16 @@ Agent: [Systematic debugging]
 - [Installation Guide](installation.md)
 - [Workflow Guide](docs/superpowers/workflow.md)
 - [Skills Reference](docs/superpowers/skills-reference.md)
-<<<<<<< .merge_file_xXd3gf
-=======
 - [Quick Index](docs/superpowers/index.md)
->>>>>>> .merge_file_znJGTp
 - [Quick Index](docs/superpowers/index.md)
-<<<<<<< HEAD
 - [Quick Index](docs/superpowers/index.md)
-=======
-<<<<<<< HEAD
-- [Quick Index](docs/superpowers/index.md)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Main README](README.md)
 - [Installation Guide](installation.md)
 - [Workflow Guide](workflow.md)
 - [Skills Reference](skills-reference.md)
-<<<<<<< .merge_file_xXd3gf
-=======
 - [Quick Index](index.md)
->>>>>>> .merge_file_znJGTp
 - [Quick Index](index.md)
-<<<<<<< HEAD
 - [Quick Index](index.md)
-=======
-<<<<<<< HEAD
-- [Quick Index](index.md)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [Laravel Integration](laravel/Modules/docs/superpowers.md)
 
 ### External

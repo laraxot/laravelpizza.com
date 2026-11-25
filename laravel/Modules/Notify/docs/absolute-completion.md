@@ -3,25 +3,8 @@ title: "🏆 FIXCITY - COMPLETAMENTO ASSOLUTO 100%"
 type: concept
 tags: [absolute, completion, 100]
 created: 2026-07-14
-<<<<<<< .merge_file_0oGYXG
-<<<<<<< .merge_file_8HcpC5
 updated: 2026-11-23
 qmd: "absolute-completion-100 🏆 fixcity - completamento assoluto 100%"
-=======
-=======
->>>>>>> .merge_file_qN8tu6
-<<<<<<< HEAD
-updated: 2026-07-14
-qmd: "absolute-completion-100 🏆 fixcity - completamento assoluto 100%"
-qmd: "absolute-completion-100 🏆 ptv - completamento assoluto 100%"
-=======
-updated: 2026-11-23
-qmd: "absolute-completion-100 🏆 fixcity - completamento assoluto 100%"
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_0oGYXG
->>>>>>> .merge_file_wU9N5Y
-=======
->>>>>>> .merge_file_qN8tu6
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
@@ -30,20 +13,8 @@ related:
   - "./00-index.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< .merge_file_0oGYXG
-<<<<<<< .merge_file_8HcpC5
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_wU9N5Y
-=======
->>>>>>> .merge_file_qN8tu6
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
   - "./actions-calling-actions-pattern.md"
 ---

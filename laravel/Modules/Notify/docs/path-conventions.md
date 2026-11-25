@@ -3,23 +3,7 @@ title: "path conventions"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_MHCqUf
-=======
-<<<<<<< .merge_file_u32FFp
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_o2ko1w
-=======
->>>>>>> .merge_file_B23l0P
->>>>>>> laraxot/dev
 qmd: "path conventions"
 issues: []
 discussions: []
@@ -46,16 +30,8 @@ discussions: []
    - `Modules/Notify/App/Datas/` (ERRATO)
    - `Modules/Notify/app/` (CORRETTO)
    - `Modules/Notify/App/` (ERRATO)
-<<<<<<< HEAD
    - `Modules/Notify/app/` (CORRETTO)
    - `Modules/Notify/App/` (ERRATO)
-=======
-<<<<<<< HEAD
-   - `Modules/Notify/app/` (CORRETTO)
-   - `Modules/Notify/App/` (ERRATO)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 3. **Struttura Directory Actions**
    - `Modules/Notify/app/Actions/` (CORRETTO)
@@ -64,16 +40,8 @@ discussions: []
 4. **Struttura Directory Datas**
    - `Modules/Notify/app/Datas/` (CORRETTO)
    - `Modules/Notify/App/Datas/` (ERRATO)
-<<<<<<< HEAD
    - `Modules/Notify/app/Datas/` (CORRETTO)
    - `Modules/Notify/App/Datas/` (ERRATO)
-=======
-<<<<<<< HEAD
-   - `Modules/Notify/app/Datas/` (CORRETTO)
-   - `Modules/Notify/App/Datas/` (ERRATO)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Namespace vs Directory
 
@@ -89,19 +57,10 @@ discussions: []
 1. **Mai utilizzare la "A" maiuscola nel percorso fisico della directory app**
    - ✅ CORRETTO: `Modules/Notify/app/Actions/`
    - ❌ ERRATO: `Modules/Notify/App/Actions/`
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
    - ✅ CORRETTO: `Modules/Notify/app/Actions/`
    - ❌ ERRATO: `Modules/Notify/App/Actions/`
    - ✅ CORRETTO: `Modules/Notify/app/Actions/`
    - ❌ ERRATO: `Modules/Notify/App/Actions/`
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 2. **Mai aggiungere "App" nel namespace se non definito nel composer.json del modulo**
    - ✅ CORRETTO: `namespace Modules\Notify\Actions;`

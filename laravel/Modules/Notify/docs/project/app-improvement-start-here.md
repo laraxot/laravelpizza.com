@@ -3,15 +3,7 @@ title: "✅ Notify Improvement Plan - START HERE"
 type: concept
 tags: [laraxot, improvement, start, here]
 created: 2026-07-14
-<<<<<<< .merge_file_wDTsX6
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_oIB0u0
 qmd: "laraxot-improvement-start-here ✅ laraxot improvement plan - start here"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

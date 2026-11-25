@@ -3,21 +3,7 @@ title: "composer update fixes"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_biKhno
-<<<<<<< .merge_file_s36eNq
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_zL7wfk
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_biKhno
->>>>>>> .merge_file_haXYoa
-=======
->>>>>>> .merge_file_zL7wfk
 qmd: "composer update fixes"
 issues: []
 discussions: []
@@ -56,10 +42,6 @@ $related_model = (new ReflectionClass($related))->getName();
 
 **File Modificato**: `Modules/Xot/helpers/Helper.php:727-728`
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "composer update fixes"
@@ -93,13 +75,8 @@ $notify = $recordNotification->mergeData($data);
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ### 2. Errore di Sintassi in SendSmsPage.php
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ### 3. Errore di Sintassi in SendSpatieEmailPage.php
 
 **File**: `Modules/Notify/app/Filament/Clusters/Test/Pages/SendSpatieEmailPage.php:120`

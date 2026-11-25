@@ -77,8 +77,8 @@ return [
         'photos' => [
             'driver' => 'ftp',
             'host' => 'ftpupload.net',
-            'username' => 'epiz_29396204',
-            'password' => 'tMY84nuxwMUD8',
+            'username' => env('PHOTOS_FTP_USERNAME'),
+            'password' => env('PHOTOS_FTP_PASSWORD'),
             'url' => 'http://xotimagetest.infinityfreeapp.com',
             // Optional FTP Settings...
             // 'port' => 21,

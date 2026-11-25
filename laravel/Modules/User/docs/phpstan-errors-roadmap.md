@@ -22,10 +22,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_MR1gMf
 qmd: "phpstan errors roadmap"
-=======
->>>>>>> .merge_file_39zvmp
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-errors-roadmap.md

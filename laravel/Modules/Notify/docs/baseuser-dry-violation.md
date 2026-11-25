@@ -1,55 +1,12 @@
 ---
-<<<<<<< HEAD
-<<<<<<< .merge_file_B5eCBq
-<<<<<<< .merge_file_9k1dbg
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_3z2QnL
-=======
->>>>>>> .merge_file_WEOykv
 issues: []
 discussions: []
 title: "baseuser-dry-violation-2025-10-15"
 type: concept
-tags: [deprecated]
+tags: [deprecated, documentation]
 created: 2026-07-14
-<<<<<<< HEAD
 updated: 2026-11-23
 qmd: "baseuser-dry-violation-2025-10-15 deprecated"
-=======
-updated: 2026-07-14
-qmd: "baseuser-dry-violation-2025-10-15 deprecated"
-=======
-<<<<<<< .merge_file_B5eCBq
-<<<<<<< .merge_file_9k1dbg
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_3z2QnL
-=======
->>>>>>> .merge_file_WEOykv
-title: "baseuser dry violation 2025 10"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-11-23
-qmd: "baseuser dry violation 2025 10"
-issues: []
-discussions: []
-<<<<<<< .merge_file_B5eCBq
-<<<<<<< .merge_file_9k1dbg
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_3z2QnL
-=======
->>>>>>> .merge_file_WEOykv
->>>>>>> laraxot/dev
 status: deprecated
 related:
   - "./00-index-1.md"
@@ -58,21 +15,6 @@ related:
   - "./absolute-completion-100.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_B5eCBq
-<<<<<<< .merge_file_9k1dbg
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_3z2QnL
-=======
->>>>>>> .merge_file_WEOykv
   - "./action-plan-immediate.md"
 ---
 
@@ -459,37 +401,8 @@ Il refactoring di `BaseUser` per rimuovere i metodi duplicati è:
 
 **Procedere con implementazione!** 🚀
 
-<<<<<<< .merge_file_B5eCBq
-<<<<<<< .merge_file_9k1dbg
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_3z2QnL
-=======
-=======
->>>>>>> .merge_file_WEOykv
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
 
 > Questo file è stato rinominato in [baseuser-dry-violation.md](baseuser-dry-violation.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_B5eCBq
-<<<<<<< .merge_file_9k1dbg
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_3z2QnL
-=======
->>>>>>> .merge_file_WEOykv
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

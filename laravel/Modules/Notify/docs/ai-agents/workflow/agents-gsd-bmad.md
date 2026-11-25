@@ -3,21 +3,7 @@ title: "agents gsd bmad"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_TztQoX
-<<<<<<< .merge_file_HD9eag
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_aTUB4u
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_TztQoX
->>>>>>> .merge_file_os6PxZ
-=======
->>>>>>> .merge_file_aTUB4u
 qmd: "agents gsd bmad"
 issues: []
 discussions: []
@@ -29,10 +15,6 @@ discussions: []
 **Ultimo Aggiornamento**: 2026-03-20  
 **Stato**: ✅ IMPLEMENTATO
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "agents gsd bmad"
@@ -93,9 +75,6 @@ discussions: []
 ```
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 GSD (Get Shit Done)
 ### Comandi Principali
 #### Inizializzazione
@@ -111,8 +90,6 @@ discussions: []
 # 4. Verifica
 # Output: docs/get-shit-done/phase-1-verification.md
 # 5. Completa
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## 🧠 BMAD (Build Measure Analyze Decide)
 

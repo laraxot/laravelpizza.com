@@ -3,31 +3,7 @@ title: "gemini super mucca"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_r4ipvS
-<<<<<<< .merge_file_ymYfxM
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_uJcYvl
-=======
->>>>>>> .merge_file_gP6axP
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_r4ipvS
-<<<<<<< .merge_file_ymYfxM
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_uJcYvl
-=======
->>>>>>> .merge_file_gP6axP
 qmd: "gemini super mucca"
 issues: []
 discussions: []
@@ -37,10 +13,6 @@ discussions: []
 
 > Metodologia "Super Mucca" - Laraxot Zen
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "gemini super mucca"
@@ -63,13 +35,8 @@ La metodologia "Super Mucca" si basa su tre pilastri:
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 Concetto Fondamentale
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 📊 Livelli di Confidenza
 
 ### Livello 3: Super Mucca (OBIETTIVO)
@@ -157,33 +124,9 @@ Prima di toccare **qualsiasi** codice, devi comprendere:
 
 - [Indice GEMINI](./gemini-split-index.md)
 - [memories.md](./memories.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_r4ipvS
-<<<<<<< .merge_file_ymYfxM
 - [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_uJcYvl
-=======
->>>>>>> .merge_file_gP6axP
 - [gemini-2.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
-=======
-<<<<<<< HEAD
 - [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
-=======
 - [gemini-2.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_r4ipvS
-<<<<<<< .merge_file_ymYfxM
-=======
 - [GEMINI.md originale](../wiki/integrations/_da-riconciliare/gemini-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_uJcYvl
-=======
->>>>>>> .merge_file_gP6axP
 - [Index principale](../../../Lang/docs/wiki/integrations/_da-riconciliare/index-3.md)

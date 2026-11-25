@@ -3,15 +3,7 @@ title: "netfun config requirements"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_N5ZWvI
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_lnWQde
 qmd: "netfun config requirements"
 issues: []
 discussions: []
@@ -109,10 +101,6 @@ NETFUN_API_URL=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 
 Per problemi di configurazione o domande sull'integrazione con Netfun, consultare la documentazione ufficiale di Netfun o contattare il team di supporto.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "netfun config requirements"
@@ -176,9 +164,6 @@ NETFUN_ENDPOINT=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 2. Esempio di .env
 # NETFUN_CALLBACK_URL=https://tuodominio.it/sms/callback
 ## 3. Descrizione Parametri
@@ -188,6 +173,4 @@ NETFUN_ENDPOINT=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 ## Checklist di Verifica
 ## Collegamenti
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 *Ultimo aggiornamento: [DATE]*

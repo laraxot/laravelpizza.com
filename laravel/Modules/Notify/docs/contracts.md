@@ -7,21 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< .merge_file_U3PHp3
-<<<<<<< .merge_file_pwOQyo
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_Ac56iE
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_U3PHp3
->>>>>>> .merge_file_9GfFoV
-=======
->>>>>>> .merge_file_Ac56iE
 ---
 
 # Contracts

@@ -3,21 +3,7 @@ title: "roadmap root symlink"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_adCpZS
-<<<<<<< .merge_file_U5ngtq
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_AT27p6
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_adCpZS
->>>>>>> .merge_file_U6aBVN
-=======
->>>>>>> .merge_file_AT27p6
 qmd: "roadmap root symlink"
 issues: []
 discussions: []

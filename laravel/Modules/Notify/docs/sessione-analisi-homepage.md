@@ -3,35 +3,13 @@ title: "✅ Sessione Completata - Homepage Analysis & Documentation"
 type: concept
 tags: [sessione, analisi, homepage]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_ntuAVg
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_ftyFFE
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ntuAVg
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_ftyFFE
 qmd: "sessione-analisi-homepage ✅ sessione completata - homepage analysis & documentation"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./00-index.md"
   - "./00-index-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
   - "./00-index.md"
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
@@ -42,15 +20,10 @@ related:
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions.md"
-<<<<<<< HEAD
-=======
-=======
   - "./absolute-completion.md"
   - "./acronym-naming-conventions.md"
   - "./00-index-documentation.md"
   - "./absolute-completion-completamento-assoluto.md"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 status: draft
 ---
@@ -237,63 +210,32 @@ Themes/Sixteen/resources/views/
 ## 📚 Risorse
 
 ### Documentazione
-<<<<<<< HEAD
-<<<<<<< .merge_file_ntuAVg
 - [Analisi Visiva](screenshots/homepage/analisi-visiva.md)
 - [Screenshot Analysis](docs/screenshots/homepage/screenshot-analysis-3.md)
 - [Fix Plan](screenshots/homepage/fix-plan.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_ftyFFE
 - [Analisi Visiva](screenshots/homepage/analisi-visiva-2.md)
 - [Screenshot Analysis](docs/screenshots/homepage/SCREENSHOT_analysis.md)
-=======
-<<<<<<< HEAD
 - [Analisi Visiva](screenshots/homepage/analisi-visiva.md)
 - [Screenshot Analysis](docs/screenshots/homepage/screenshot-analysis-3.md)
-<<<<<<< .merge_file_ntuAVg
 - [Fix Plan](screenshots/homepage/fix-plan.md)
-=======
 - [Analisi Visiva](screenshots/homepage/analisi-visiva-2.md)
 - [Screenshot Analysis](docs/screenshots/homepage/SCREENSHOT_analysis.md)
-<<<<<<< .merge_file_VTNllA
 - [Fix Plan](docs/screenshots/homepage/fix-plan.md)
-=======
->>>>>>> laraxot/dev
 - [Fix Plan](screenshots/homepage/fix-plan-2.md)
 - [Analisi Visiva](screenshots/homepage/analisi-visiva-2.md)
 - [Screenshot Analysis](docs/screenshots/homepage/SCREENSHOT_analysis.md)
 - [Fix Plan](screenshots/homepage/fix-plan-2.md)
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_Zixt3N
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 - [Analisi Visiva](screenshots/homepage/analisi-visiva.md)
 - [Screenshot Analysis](docs/screenshots/homepage/screenshot-analysis-3.md)
 - [Fix Plan](screenshots/homepage/fix-plan.md)
-=======
 - [Fix Plan](screenshots/homepage/fix-plan.md)
-=======
 - [Analisi Visiva](screenshots/homepage/analisi-visiva-2.md)
 - [Screenshot Analysis](docs/screenshots/homepage/SCREENSHOT_analysis.md)
-<<<<<<< .merge_file_VTNllA
 - [Fix Plan](docs/screenshots/homepage/fix-plan.md)
-=======
->>>>>>> laraxot/dev
 - [Fix Plan](screenshots/homepage/fix-plan-2.md)
 - [Analisi Visiva](screenshots/homepage/analisi-visiva-2.md)
 - [Screenshot Analysis](docs/screenshots/homepage/SCREENSHOT_analysis.md)
 - [Fix Plan](screenshots/homepage/fix-plan-2.md)
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_Zixt3N
->>>>>>> .merge_file_ftyFFE
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - [OpenViking Context](.openvikings/homepage_alignment_context.md)
 
 ### Link Esterni

@@ -14,15 +14,8 @@ related:
   - ./index-legacy-2.md
   - ../sections/index.md
   - ../README.md
-<<<<<<< HEAD
-  - ../index.md
-=======
-<<<<<<< HEAD
   - ../index-2.md
-=======
   - ../index.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - ../roadmap/README.md
 ---
 <!-- ponytail: variante legacy con contenuto duplicato/divergente dal canonico index.md, conservata per non perdere link storici. Consolidare manualmente e poi rimuovere. -->

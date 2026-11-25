@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 ---
 title: "Task 001: Implement Multi-Channel Notification System"
 type: note
 qmd: "001 notification system task implement multichannel"
 ---
-=======
->>>>>>> laraxot/dev
 # Task 001: Implement Multi-Channel Notification System
 
 ## Description

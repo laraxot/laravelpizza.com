@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_uFH3YE
 qmd: "repositories"
-=======
->>>>>>> .merge_file_UHF6uY
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/repositories.md

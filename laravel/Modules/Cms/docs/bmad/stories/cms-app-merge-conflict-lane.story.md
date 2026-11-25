@@ -28,9 +28,6 @@ Marker di merge in Cms rompono bootstrap PHPStan e la pipeline Folio+Volt+head/S
 
 18 file in scope risolti e staged; `php -l` ok; marker residui in `app/` = 0.
 
-<<<<<<< .merge_file_5chIlj
-<<<<<<< .merge_file_gggny8
-<<<<<<< .merge_file_yWdnpx
 ## Claims
 
 | Claim | Evidence |
@@ -48,12 +45,6 @@ Partenza: 216 file con marker nell'albero di lavoro (4 stragglers, 117 test, 95 
 - **Stragglers**: `.gitignore` (unione, `tests/coverage-*.*` una volta sola), `routes/api.php`, `head`/`foot.blade.php` (risolte in parallelo da un altro agente con lo stesso risultato: `panelAssets`, `@stack('styles')`).
 - **Finding**: `FolioVoltSoleOwnerTest` fallisce perché `laravel/app/Providers/FolioServiceProvider.php` è ancora tracciato (non registrato in `bootstrap/providers.php`): fuori da Cms, da togliere per l'ADR `folio-volt-sole-owner`. Nessun tema passa `:panel-assets="false"`. I link `canonical` di `redundancy-analysis.md` puntano a `Themes/docs/shared-components/`, che non esiste.
 
-=======
->>>>>>> .merge_file_zWWHqi
-=======
->>>>>>> .merge_file_Sqd5Kd
-=======
->>>>>>> .merge_file_nDId2l
 ## Gate facts (creazione)
 
 1. **Supersedes / duplicates**: non sostituisce `docs/stories/cms-merge-conflict-resolution.story.md` (docs-sweep storica, ancora con marker fuori scope); non duplica le story Folio locale auth. È il verbale operativo di **lane-cms** sul standing Xot.

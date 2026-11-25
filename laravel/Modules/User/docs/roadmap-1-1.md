@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_GT5VWK
 qmd: "roadmap 1"
-=======
->>>>>>> .merge_file_6LoCWW
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/roadmap.md

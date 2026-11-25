@@ -3,23 +3,7 @@ title: "path and namespace rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_qJ2bym
-=======
-<<<<<<< .merge_file_BnoY4V
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_0x8omB
-=======
->>>>>>> .merge_file_SLs6wU
->>>>>>> laraxot/dev
 qmd: "path and namespace rules"
 issues: []
 discussions: []
@@ -203,10 +187,6 @@ namespace Modules\Notify\App\Console\Commands;
 
 > **Nota:** Anche per i comandi console, il namespace non deve mai includere il segmento `App`.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "path and namespace rules"
@@ -376,9 +356,6 @@ namespace Modules\Notify\App\Console\Commands;
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 # Regole per Path e Namespace nel Modulo Notify
 ## Struttura Corretta dei Path
 ### ✅ Path Corretti
@@ -400,6 +377,4 @@ namespace Modules\Notify\App\Console\Commands;
 ## Collegamenti
 ### Esempio 5: Console Command
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 *Ultimo aggiornamento: 2025-05-12*

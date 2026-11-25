@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_lvPh2K
 ---
 title: "Analisi dell'Errore di Implementazione Volt/Blade"
 type: note
 qmd: "volt blade implementation error analisi dellerrore"
 ---
-=======
->>>>>>> .merge_file_7Ls347
 # Analisi dell'Errore di Implementazione Volt/Blade
 
 ## Collegamenti correlati

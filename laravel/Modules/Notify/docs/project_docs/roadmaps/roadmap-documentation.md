@@ -3,15 +3,7 @@ title: "roadmap documentation"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_kPv0yg
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_e9M1oy
 qmd: "roadmap documentation"
 issues: []
 discussions: []
@@ -633,10 +625,6 @@ paths:
 - [ ] Analisi competitor
 - [ ] Planning innovazioni
 - [ ] Budget e risorse
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -659,8 +647,3 @@ discussions: []
 **🔄 Ultimo Aggiornamento**: Gennaio 2025  
 **📊 Progresso**: 40% → 100% (Target Dicembre 2025)  
 **🎯 Prossimo Milestone**: Foundation Complete (Marzo 2025)
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

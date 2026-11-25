@@ -3,33 +3,7 @@ title: "scripts conflict resolution"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_DqAzKQ
-<<<<<<< .merge_file_EyUSUa
-<<<<<<< .merge_file_AKLxtX
-<<<<<<< .merge_file_VrpSj0
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_CPDbLL
-=======
->>>>>>> .merge_file_GpF0TJ
-=======
->>>>>>> .merge_file_6x3jsx
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_DqAzKQ
-<<<<<<< .merge_file_EyUSUa
-<<<<<<< .merge_file_AKLxtX
->>>>>>> .merge_file_IzhCOS
-=======
->>>>>>> .merge_file_CPDbLL
-=======
->>>>>>> .merge_file_GpF0TJ
-=======
->>>>>>> .merge_file_6x3jsx
 qmd: "scripts conflict resolution"
 issues: []
 discussions: []
@@ -372,28 +346,14 @@ Gli script possono essere migliorati e personalizzati. Per contribuire:
 ```bash
 #!/bin/bash
 
-<<<<<<< HEAD
-# =======================
-=======
-<<<<<<< HEAD
 # -----------------------
-=======
 # =======================
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 
 # Nome dello script
 
-<<<<<<< HEAD
-# =======================
-=======
-<<<<<<< HEAD
 # -----------------------
-=======
 # =======================
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 # Descrizione: Breve descrizione dello script
 
@@ -403,29 +363,15 @@ Gli script possono essere migliorati e personalizzati. Per contribuire:
 
 
 # Nome dello script
-<<<<<<< HEAD
-# =======================
-=======
-<<<<<<< HEAD
 # -----------------------
-=======
 # =======================
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 # Descrizione: Breve descrizione dello script
 # Utilizzo: ./path/to/script.sh [argomenti]
 # Autore: Nome dell'autore
 
 
-<<<<<<< HEAD
-# =======================
-=======
-<<<<<<< HEAD
 # -----------------------
-=======
 # =======================
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 # Dichiarazione delle costanti e variabili
 

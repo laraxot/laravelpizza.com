@@ -3,31 +3,7 @@ title: "DESIGN CONVERSION ROADMAP"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_gecNqH
-<<<<<<< .merge_file_0I0M5U
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_aJ4oCZ
-=======
->>>>>>> .merge_file_waHzXm
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_gecNqH
-<<<<<<< .merge_file_0I0M5U
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_aJ4oCZ
-=======
->>>>>>> .merge_file_waHzXm
 qmd: "DESIGN CONVERSION ROADMAP"
 issues: []
 discussions: []
@@ -45,10 +21,6 @@ discussions: []
 **Last Updated**: 2026-04-03
 **Target**: Make all 54 test pages visually identical to Design Comuni reference using Tailwind CSS + Alpine.js
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "DESIGN CONVERSION ROADMAP"
@@ -83,15 +55,10 @@ discussions: []
 - **Total**: 3-4 weeks (with parallel teams)
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## 📊 Executive Summary
 ### Current State
 ### Key Metrics
 ### Time Estimate
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## 🎯 Phase Breakdown
 
@@ -187,41 +154,16 @@ laravel/Themes/Sixteen/docs/pages/<page-name>/
 ### Theme-Level
 ```
 laravel/Themes/Sixteen/docs/
-<<<<<<< HEAD
-<<<<<<< .merge_file_gecNqH
-<<<<<<< .merge_file_0I0M5U
 ├── index-2.md                                    # Main index
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-├── index.md                                    # Main index
-=======
-<<<<<<< HEAD
 ├── index-2.md                                    # Main index
-=======
 ├── index.md                                    # Main index
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 ├── index-2.md                                    # Main index
-=======
 ├── index.md                                    # Main index
-=======
-<<<<<<< HEAD
 ├── index-2.md                                    # Main index
-=======
 ├── index.md                                    # Main index
->>>>>>> .merge_file_aJ4oCZ
-=======
 ├── index.md                                    # Main index
-=======
-<<<<<<< HEAD
 ├── index-2.md                                    # Main index
-=======
 ├── index.md                                    # Main index
->>>>>>> .merge_file_waHzXm
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ├── COMPLETE-VISUAL-PARITY-REPORT.md          # All 54 pages
 ├── PRIORITY-MATRIX.json                       # Workload planning
 ├── visual-parity-data.json                    # Machine-readable data
@@ -434,26 +376,5 @@ node bashscripts/github/create-design-issues.mjs
 ```
 
 Then pick issue #1 and get coding! 🚀
-<<<<<<< HEAD
-<<<<<<< .merge_file_gecNqH
-<<<<<<< .merge_file_0I0M5U
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_aJ4oCZ
-=======
-
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_waHzXm

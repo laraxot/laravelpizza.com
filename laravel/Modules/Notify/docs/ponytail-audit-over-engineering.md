@@ -3,23 +3,7 @@ title: "ponytail audit over engineering"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_y5IeJW
-=======
-<<<<<<< .merge_file_bBnY5x
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_bOls2g
-=======
->>>>>>> .merge_file_fIc33L
->>>>>>> laraxot/dev
 qmd: "ponytail audit over engineering"
 issues: []
 discussions: []

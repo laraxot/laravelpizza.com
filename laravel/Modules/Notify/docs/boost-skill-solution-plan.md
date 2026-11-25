@@ -3,21 +3,7 @@ title: "Boost Skill Installation - Solution Plan"
 type: concept
 tags: [boost, skill, solution, plan]
 created: 2026-07-14
-<<<<<<< .merge_file_Siae4W
-<<<<<<< .merge_file_SAtdzR
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_WOD7Ck
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Siae4W
->>>>>>> .merge_file_KbJTwD
-=======
->>>>>>> .merge_file_WOD7Ck
 qmd: "boost-skill-solution-plan boost skill installation - solution plan"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -26,26 +12,14 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< .merge_file_Siae4W
-<<<<<<< .merge_file_SAtdzR
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_KbJTwD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_WOD7Ck
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

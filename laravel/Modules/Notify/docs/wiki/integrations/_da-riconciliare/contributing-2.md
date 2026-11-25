@@ -7,15 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< .merge_file_q0j5AI
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_mwAE70
 ---
 
 # Contributing to Notify
@@ -367,10 +359,6 @@ By contributing, you agree that your contributions will be licensed under the sa
 
 <!-- Merged from contributing-2.md, which collided with this file on case-insensitive filesystems. -->
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 title: "Contributing to <nome progetto>"
 type: concept
@@ -391,11 +379,6 @@ related:
   - "./action-plan-immediate.md"
 ---
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 # Contributing to <nome progetto>
 
 First off, thank you for considering contributing to <nome progetto>! 🎉

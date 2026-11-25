@@ -1,34 +1,10 @@
 ---
 title: "🎯 NOTIFY - STATO COMPLETAMENTO PROGETTO"
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_lTv0rD
->>>>>>> laraxot/dev
 type: concept
 tags: [project, completion, status]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "project-completion-status 🎯 laraxot - stato completamento progetto"
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-title: "🎯 <nome progetto> - STATO COMPLETAMENTO PROGETTO"
-type: concept
-tags: [project, completion, status]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "project-completion-status 🎯 laraxot - stato completamento progetto"
-qmd: "project-completion-status 🎯 <nome progetto> - stato completamento progetto"
-=======
-type: concept
-tags: [project, completion, status]
-created: 2026-07-14
-updated: 2026-11-23
-qmd: "project-completion-status 🎯 laraxot - stato completamento progetto"
->>>>>>> laraxot/dev
->>>>>>> .merge_file_0euL9J
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
@@ -38,23 +14,8 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_lTv0rD
->>>>>>> laraxot/dev
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> .merge_file_0euL9J
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

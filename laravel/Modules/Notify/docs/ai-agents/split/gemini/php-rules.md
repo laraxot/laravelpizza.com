@@ -3,21 +3,7 @@ title: "php rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_2egniz
-<<<<<<< .merge_file_KGh6Sk
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_KUH8zs
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_2egniz
->>>>>>> .merge_file_V4Rn5H
-=======
->>>>>>> .merge_file_KUH8zs
 qmd: "php rules"
 issues: []
 discussions: []
@@ -60,10 +46,6 @@ protected function isAccessible(User $user, ?string $path = null): bool
 
 - Add useful array shape type definitions when appropriate.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -83,9 +65,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../wiki/integrations/_da-riconciliare/gemini-2.md](../../../wiki/integrations/_da-riconciliare/gemini-2.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

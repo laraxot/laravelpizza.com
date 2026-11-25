@@ -3,21 +3,7 @@ title: "workflow"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_UUvl93
-<<<<<<< .merge_file_2HARRq
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_i36tvJ
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_UUvl93
->>>>>>> .merge_file_B8i8j8
-=======
->>>>>>> .merge_file_i36tvJ
 qmd: "workflow"
 issues: []
 discussions: []

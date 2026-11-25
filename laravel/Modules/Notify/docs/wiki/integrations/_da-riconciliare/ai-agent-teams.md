@@ -3,23 +3,7 @@ title: "AI Agent Teams - Coordination Hub"
 type: concept
 tags: [agent, teams]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_fmqw9q
-=======
-<<<<<<< .merge_file_y9qBC8
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_AYxRi4
-=======
->>>>>>> .merge_file_yIio5J
->>>>>>> laraxot/dev
 qmd: "ai-agent-teams ai agent teams - coordination hub"
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
@@ -30,25 +14,8 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
-<<<<<<< .merge_file_fmqw9q
-=======
-<<<<<<< .merge_file_y9qBC8
->>>>>>> laraxot/dev
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_AYxRi4
-=======
->>>>>>> .merge_file_yIio5J
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

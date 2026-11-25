@@ -18,27 +18,9 @@ related:
 
 Cartella `docs/` del modulo Job: documentazione a livello modulo. Per la panoramica
 del modulo vedi il [README del modulo](../README.md); per la navigazione vedi
-<<<<<<< .merge_file_T9789E
-<<<<<<< .merge_file_hVHjBQ
-<<<<<<< .merge_file_QWWeV9
 l'[indice](00-index.md).
-=======
-=======
->>>>>>> .merge_file_A9ahV7
-=======
->>>>>>> .merge_file_sRFiXl
-<<<<<<< .merge_file_OsEwtW
 l'[indice](00-index.md).
-=======
 l'[indice](./00-index.md).
->>>>>>> .merge_file_x37Z3p
-<<<<<<< .merge_file_T9789E
-<<<<<<< .merge_file_hVHjBQ
->>>>>>> .merge_file_JnbJW6
-=======
->>>>>>> .merge_file_A9ahV7
-=======
->>>>>>> .merge_file_sRFiXl
 
 ## Panoramica
 

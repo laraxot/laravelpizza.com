@@ -3,21 +3,7 @@ title: "email queue"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_4faV7S
-<<<<<<< .merge_file_meqil0
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_q29M4q
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_4faV7S
->>>>>>> .merge_file_HnTmty
-=======
->>>>>>> .merge_file_q29M4q
 qmd: "email queue"
 issues: []
 discussions: []

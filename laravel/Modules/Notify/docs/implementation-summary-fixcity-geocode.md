@@ -3,15 +3,7 @@ title: "implementation summary fixcity geocode"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_K1tbcZ
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_2i4i31
 qmd: "implementation summary fixcity geocode"
 issues: []
 discussions: []
@@ -21,10 +13,6 @@ discussions: []
 
 > **Sessione di implementazione priorità critiche Fixcity Module**
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "implementation summary fixcity geocode"
@@ -76,16 +64,11 @@ discussions: []
 7. ✅ Retry on failure
 
 ---
-<<<<<<< HEAD
-=======
-=======
 ## ✅ COMPLETED TASKS
 ### 🎯 Task #1: GeocodeTicketAddressJob + Migration (CRITICAL)
 #### Implementation Details:
 #### Benefits:
 #### Test Coverage:
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ### 🎯 Task #2: Eager Loading in ListTickets (CRITICAL)
 **Status**: ✅ COMPLETATO

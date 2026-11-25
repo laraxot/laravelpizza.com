@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_ZMWvOG
 ---
 title: "Logout via Volt Action"
 type: note
 qmd: "volt logout action"
 ---
-=======
->>>>>>> .merge_file_3Q9r4e
 # Logout via Volt Action
 
 ## Contesto

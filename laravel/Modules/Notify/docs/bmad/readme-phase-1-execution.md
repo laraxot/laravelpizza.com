@@ -5,29 +5,9 @@ status: active
 module: Notify
 scope: documentation
 bmad_version: 1.0
-<<<<<<< HEAD
 updated: 2026-11-23
 created: 2026-11-23
 qmd: "phase 1 execution notify document"
-=======
-<<<<<<< .merge_file_CI0OiB
-<<<<<<< .merge_file_sx62g4
-updated: 2026-11-23
-created: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_7fEmN7
-<<<<<<< HEAD
-updated: 2026-10-06
-=======
-updated: 2026-11-23
-created: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_CI0OiB
->>>>>>> .merge_file_oSYurx
-=======
->>>>>>> .merge_file_7fEmN7
->>>>>>> laraxot/dev
 ---
 
 # 📖 README - PHASE 1 EXECUTION

@@ -3,15 +3,7 @@ title: "skills reference"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_D9HWWK
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_bmAE38
 qmd: "skills reference"
 issues: []
 discussions: []
@@ -23,10 +15,6 @@ discussions: []
 > **Status**: ✅ Active  
 > **Version**: v5.0.6
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "skills reference"
@@ -43,13 +31,8 @@ This document lists all available Superpowers skills with descriptions, triggers
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 📋 Overview
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🎨 Planning & Design Skills
 
 ### brainstorming

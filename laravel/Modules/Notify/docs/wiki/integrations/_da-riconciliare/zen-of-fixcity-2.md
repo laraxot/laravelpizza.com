@@ -7,23 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_tNcBUa
-=======
-<<<<<<< .merge_file_XkJ72B
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_oMBXtW
-=======
->>>>>>> .merge_file_EAJj09
->>>>>>> laraxot/dev
 ---
 
 # 🧘 Zen of <nome progetto> - Complete Philosophy

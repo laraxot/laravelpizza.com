@@ -3,21 +3,7 @@ title: "volt rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_QZoLhk
-<<<<<<< .merge_file_Ru2zVZ
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_UHiXnc
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_QZoLhk
->>>>>>> .merge_file_7sTyUT
-=======
->>>>>>> .merge_file_UHiXnc
 qmd: "volt rules"
 issues: []
 discussions: []
@@ -34,23 +20,10 @@ discussions: []
 )]))
 </code-snippet>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ### Volt Class Based Component Example
 To get started, define an anonymous class that extends Livewire\Volt\Component. Within the class, you may utilize all of the features of Livewire using traditional Livewire syntax:
 
-
-<<<<<<< HEAD
-=======
-=======
-### Volt Class Based Component Example
-To get started, define an anonymous class that extends Livewire\Volt\Component. Within the class, you may utilize all of the features of Livewire using traditional Livewire syntax:
-
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 <code-snippet name="Volt Class-based Volt Component Example" lang="php">
 use Livewire\Volt\Component;
 
@@ -69,14 +42,6 @@ new class extends Component {
 </div>
 </code-snippet>
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ### Testing Volt & Volt Components
 - Use the existing directory for tests if it already exists. Otherwise, fallback to `tests/Feature/Volt`.
 
@@ -91,14 +56,6 @@ test('counter increments', function () {
 });
 </code-snippet>
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 <code-snippet name="Volt Component Test Using Pest" lang="php">
 declare(strict_types=1);
 
@@ -120,21 +77,9 @@ test('product form creates product', function () {
 });
 </code-snippet>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ### Common Patterns
 
-
-<<<<<<< HEAD
-=======
-=======
-### Common Patterns
-
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 <code-snippet name="CRUD With Volt" lang="php">
 <?php
 
@@ -155,16 +100,6 @@ $delete = fn(Product $product) => $product->delete();
 <!-- HTML / UI Here -->
 </code-snippet>
 
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 <code-snippet name="Real-Time Search With Volt" lang="php">
     <flux:input
         wire:model.live.debounce.300ms="search"
@@ -172,27 +107,12 @@ $delete = fn(Product $product) => $product->delete();
     />
 </code-snippet>
 
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 <code-snippet name="Loading States With Volt" lang="php">
     <flux:button wire:click="save" wire:loading.attr="disabled">
         <span wire:loading.remove>Save</span>
         <span wire:loading>Saving...</span>
     </flux:button>
 </code-snippet>
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 
 ---
@@ -213,9 +133,4 @@ discussions: []
 - ← [Main AI Docs Index](../index.md) — Master index
 - ← [../../../../../Geo/docs/root-md-files/claude.md](../../../../../Geo/docs/root-md-files/claude.md) — Original source
 
-<<<<<<< HEAD
-=======
-=======
 ## Cross-References
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

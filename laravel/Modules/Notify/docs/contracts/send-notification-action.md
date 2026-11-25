@@ -1,51 +1,17 @@
 ---
-<<<<<<< .merge_file_Njp6qV
-<<<<<<< .merge_file_PEgnxv
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_pYHm0d
-=======
->>>>>>> .merge_file_VEF9Ki
 title: "Contratto — SendNotificationAction"
 type: contract
 action: "Modules\Notify\Actions\SendNotificationAction"
 tags: [contract, action, notify, template, multicanale]
 created: 2026-11-24
 updated: 2026-11-24
-<<<<<<< .merge_file_Njp6qV
-<<<<<<< .merge_file_PEgnxv
-=======
->>>>>>> laraxot/dev
-title: "SendNotificationAction — contratto"
-type: contract
 owner: Notify
 status: accepted
-updated: 2026-11-24
-action: "Modules\\Notify\\Actions\\SendNotificationAction"
 qmd: "contract SendNotificationAction notify invio notifica template canali mail sms database NOTIFY-SEND-INV"
-<<<<<<< HEAD
-tags: [contract, action, notify, template, multicanale]
-created: 2026-11-24
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_pYHm0d
-=======
->>>>>>> .merge_file_VEF9Ki
 ---
 
 # SendNotificationAction
 
-<<<<<<< .merge_file_Njp6qV
-<<<<<<< .merge_file_PEgnxv
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_pYHm0d
-=======
->>>>>>> .merge_file_VEF9Ki
 Contratto di comportamento (regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`).
 Sorgente: `app/Actions/SendNotificationAction.php`. Descrive il codice **com'è**, difetti compresi.
 
@@ -87,9 +53,6 @@ metodo restituisce `null`/`Notification`: sono rossi e vanno corretti prima di a
 - `notifiable_id` e `user_id` passano da `normalizeModelKey()`: una chiave UUID diventa `null` (difetto noto, da non imitare con utenti UUID).
 - Non ritenta e non mette in coda da sé (per la coda: `onQueue()` di QueueableAction).
 - Non sceglie il fornitore SMS né il mailer: usa i canali Laravel configurati.
-<<<<<<< .merge_file_Njp6qV
-<<<<<<< .merge_file_PEgnxv
-=======
 Invia una notifica a un destinatario partendo da un `NotificationTemplate` attivo, su uno o piu' canali (`mail`, `database`, `sms`).
 Raggiunta da `app/Actions/NotificationManager.php`. Decisione di fondo sul ruolo di Notify: [ADR notify-owns-delivery-contract](../adr/notify-owns-delivery-contract.md) (stato `proposed`).
 
@@ -137,8 +100,3 @@ Raggiunta da `app/Actions/NotificationManager.php`. Decisione di fondo sul ruolo
 - Non supporta `push`, `whatsapp`, `telegram`: un canale diverso da `mail`, `database`, `sms` fallisce con «Canale ... non supportato» (assorbito).
 - Non valida il formato di email o telefono.
 - Non controlla il consenso del destinatario.
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_pYHm0d
-=======
->>>>>>> .merge_file_VEF9Ki

@@ -3,33 +3,7 @@ title: "conflict resolution report"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_zt7kz9
-<<<<<<< .merge_file_3KfnKB
-<<<<<<< .merge_file_86jiZZ
-<<<<<<< .merge_file_VLeFmx
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_Cfek6F
-=======
->>>>>>> .merge_file_DlQvWY
-=======
->>>>>>> .merge_file_syhb4X
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_zt7kz9
-<<<<<<< .merge_file_3KfnKB
-<<<<<<< .merge_file_86jiZZ
->>>>>>> .merge_file_nb7wCa
-=======
->>>>>>> .merge_file_Cfek6F
-=======
->>>>>>> .merge_file_DlQvWY
-=======
->>>>>>> .merge_file_syhb4X
 qmd: "conflict resolution report"
 issues: []
 discussions: []
@@ -55,21 +29,12 @@ An AWK-based state machine strips all conflict markers while preserving the HEAD
 ```awk
 BEGIN { skip = 0 }
 {
-<<<<<<< HEAD
-    if (/^<<<<<<</) { next }
-    if (/^=======$/) { skip = 1; next }
-    if (/^>>>>>>>/) { skip = 0; next }
-=======
-<<<<<<< HEAD
     if (/^CONFLICT_START/) { next }
     if (/^-------$/) { skip = 1; next }
     if (/^CONFLICT_END/) { skip = 0; next }
-=======
     if (/^<<<<<<</) { next }
     if (/^=======$/) { skip = 1; next }
     if (/^>>>>>>>/) { skip = 0; next }
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
     if (!skip) print
 }
 ```
@@ -96,15 +61,8 @@ BEGIN { skip = 0 }
 ## Prevention
 
 - Always resolve conflicts immediately during merge/rebase — never stash on top of unresolved conflicts
-<<<<<<< HEAD
-- Run `grep -rn "^<<<<<<<" . --include='*.php' --include='*.json' --include='*.md'` before committing
-=======
-<<<<<<< HEAD
 - Run `grep -rn "^CONFLICT_START" . --include='*.php' --include='*.json' --include='*.md'` before committing
-=======
 - Run `grep -rn "^<<<<<<<" . --include='*.php' --include='*.json' --include='*.md'` before committing
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - Use `git rerere` to auto-remember conflict resolutions
 
 ## Per-Module Documentation

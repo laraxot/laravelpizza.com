@@ -3,21 +3,7 @@ title: "typescript"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_cn2SA9
-<<<<<<< .merge_file_mjMA95
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_ji4xBo
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_cn2SA9
->>>>>>> .merge_file_21uOaD
-=======
->>>>>>> .merge_file_ji4xBo
 qmd: "typescript"
 issues: []
 discussions: []

@@ -3,27 +3,7 @@ title: "structure"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_ywsEdL
-<<<<<<< .merge_file_V4wZP3
-<<<<<<< .merge_file_9PMEk8
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_3YLuFR
-=======
->>>>>>> .merge_file_p9hm7q
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ywsEdL
-<<<<<<< .merge_file_V4wZP3
->>>>>>> .merge_file_3dXyf4
-=======
->>>>>>> .merge_file_3YLuFR
-=======
->>>>>>> .merge_file_p9hm7q
 qmd: "structure"
 issues: []
 discussions: []
@@ -119,31 +99,9 @@ Modules/Cms/
 6. Aggiornare i riferimenti nelle routes
 
 ## Collegamenti Bidirezionali
-<<<<<<< .merge_file_ywsEdL
-<<<<<<< .merge_file_V4wZP3
-<<<<<<< .merge_file_9PMEk8
 - [README](README.md) - Documentazione principale del modulo
-=======
-=======
->>>>>>> .merge_file_3YLuFR
-=======
->>>>>>> .merge_file_p9hm7q
-<<<<<<< HEAD
-- [README](README.md) - Documentazione principale del modulo
-=======
-<<<<<<< HEAD
 - [README](readme.md) - Documentazione principale del modulo
-=======
 - [README](README.md) - Documentazione principale del modulo
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_ywsEdL
-<<<<<<< .merge_file_V4wZP3
->>>>>>> .merge_file_3dXyf4
-=======
->>>>>>> .merge_file_3YLuFR
-=======
->>>>>>> .merge_file_p9hm7q
 - [Architettura](architecture.md) - Architettura del sistema CMS
 - [Struttura Moduli Laravel](struttura-moduli-laravel-2.md) - Struttura standard dei moduli Laravel
 - [Namespace Moduli](namespace-moduli-laravel-<nome progetto>.md) - Convenzioni di namespace

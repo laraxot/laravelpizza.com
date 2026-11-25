@@ -7,19 +7,7 @@ module: Notify
 type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
-<<<<<<< HEAD
 updated: 2026-11-23
-=======
-<<<<<<< .merge_file_I3cx0A
-updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_ocF1FH
->>>>>>> laraxot/dev
 ---
 
 # Divergenza: `pagine-create.md`

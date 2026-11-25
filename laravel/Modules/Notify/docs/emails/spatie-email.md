@@ -3,21 +3,7 @@ title: "spatie email"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Uymjo3
-<<<<<<< .merge_file_R9WGwx
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_S6FEFx
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Uymjo3
->>>>>>> .merge_file_M6Y5IU
-=======
->>>>>>> .merge_file_S6FEFx
 qmd: "spatie email"
 issues: []
 discussions: []

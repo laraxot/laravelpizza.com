@@ -5,10 +5,7 @@ date: YYYY-MM-DD
 decision-makers:
 created: 2026-11-23
 updated: 2026-11-23
-<<<<<<< HEAD
 qmd: "0000 template"
-=======
->>>>>>> laraxot/dev
 ---
 
 <!-- MADR breve adattato al modulo. Scrivi un ADR solo per una decisione difficile da invertire, sorprendente e frutto di un trade-off reale. -->

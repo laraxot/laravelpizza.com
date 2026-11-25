@@ -3,21 +3,7 @@ title: "claude overview"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_osZbOE
-<<<<<<< .merge_file_eEeJxb
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_i3QGQM
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_osZbOE
->>>>>>> .merge_file_CiQ2Sf
-=======
->>>>>>> .merge_file_i3QGQM
 qmd: "claude overview"
 issues: []
 discussions: []
@@ -38,10 +24,6 @@ Panoramica del progetto LaravelPizza/Base Forecast Fila5.
 
 **NON** è un progetto e-commerce pizza - è una piattaforma per Laravel developer meetups e tech communities.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "claude overview"
@@ -68,13 +50,8 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## Stack Tecnologico
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Architettura
 
 ```

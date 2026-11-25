@@ -8,10 +8,7 @@ owner: module:User
 module: User
 related: [DCP-290, front-office-audit]
 tags: [auth, design-comuni, folio, volt, ui-ux]
-<<<<<<< .merge_file_kCXDpt
 qmd: "auth verify confirm design comuni shell"
-=======
->>>>>>> .merge_file_zNgPYZ
 ---
 
 # Auth verify e password/confirm: allineamento al guscio Design Comuni

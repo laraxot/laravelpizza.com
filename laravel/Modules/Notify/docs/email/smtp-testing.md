@@ -3,21 +3,7 @@ title: "smtp testing"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_SgG50u
-<<<<<<< .merge_file_twjxQb
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_YoY8bQ
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_SgG50u
->>>>>>> .merge_file_RDFt3Y
-=======
->>>>>>> .merge_file_YoY8bQ
 qmd: "smtp testing"
 issues: []
 discussions: []

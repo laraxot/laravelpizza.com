@@ -3,15 +3,7 @@ title: "grapesjs filament"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_qodMjI
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_Ri072c
 qmd: "grapesjs filament"
 issues: []
 discussions: []
@@ -30,10 +22,6 @@ Il file `routes/web.php` del modulo Notify **deve essere vuoto**.
 - [structure.md](structure.md#regola-sulle-rotte)
 - [database-mail.md](database-mail.md#regola-sulle-rotte)
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "grapesjs filament"
@@ -53,15 +41,10 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## Collegamenti correlati
 ## Cos'è
 [GrapesJS](https://grapesjs.com/) è un editor visuale drag-and-drop per HTML, pensato per la creazione di email, landing page e layout web. Il plugin [dotswan/filament-grapesjs-v3](https://github.com/dotswan/filament-grapesjs-v3) integra GrapesJS come campo custom in Filament, permettendo la modifica visuale di contenuti HTML direttamente dalle resource Filament.
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## Funzionalità principali del plugin
 - **Campo Filament custom** per editing HTML visuale (drag-and-drop)
 - Supporta la creazione/modifica di template email, landing page, blocchi HTML

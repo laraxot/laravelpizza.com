@@ -3,21 +3,7 @@ title: "claude"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_jCPgAo
-<<<<<<< .merge_file_2UhAmX
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_XJpg7K
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_jCPgAo
->>>>>>> .merge_file_hRJDOg
-=======
->>>>>>> .merge_file_XJpg7K
 qmd: "claude"
 issues: []
 discussions: []
@@ -26,16 +12,6 @@ discussions: []
 <!-- CLAUDE SPLIT STUB
 - Split index: .agents/docs/root-claude/index.md
 - AI docs index: .agents/docs/index.md
-<<<<<<< .merge_file_jCPgAo
-<<<<<<< .merge_file_2UhAmX
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_hRJDOg
-=======
->>>>>>> .merge_file_XJpg7K
 ---
 title: "claude root stub"
 type: concept
@@ -55,11 +31,6 @@ related:
   - "./acronym-naming-conventions.md"
   - "./action-plan-immediate.md"
 ---
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 <!-- CLAUDE SPLIT STUB
 - Split index: .agents/docs/root-claude/index.md
@@ -72,31 +43,19 @@ Questo file e' uno stub corto per ridurre token.
 
 ## leggi prima
 
-<<<<<<< .merge_file_jCPgAo
-<<<<<<< .merge_file_2UhAmX
-=======
 - [Root CLAUDE index](./.agents/docs/root-claude/index.md)
 - [AI docs index](./.agents/docs/index.md)
 - [Docs CLAUDE index](./.agents/docs/claude/index.md)
->>>>>>> .merge_file_hRJDOg
 - [Root CLAUDE index](./.agents/docs/root-claude/index.md)
 - [AI docs index](./.agents/docs/index.md)
 - [Docs CLAUDE index](./.agents/docs/claude/index.md)
-<<<<<<< HEAD
 - [Root CLAUDE index](./.agents/docs/root-claude/index.md)
 - [AI docs index](./.agents/docs/index.md)
 - [Docs CLAUDE index](./.agents/docs/claude/index.md)
-=======
-<<<<<<< HEAD
-=======
 - [Root CLAUDE index](./.agents/docs/root-claude/index.md)
 - [AI docs index](./.agents/docs/index.md)
 - [Docs CLAUDE index](./.agents/docs/claude/index.md)
->>>>>>> .merge_file_XJpg7K
 - [Root CLAUDE index](./.agents/docs/root-claude/index.md)
 - [AI docs index](./.agents/docs/index.md)
 - [Docs CLAUDE index](./.agents/docs/claude/index.md)
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - **LLM‑Wiki rule** – Every module and theme must contain a `docs/wiki/` directory (and the corresponding `llm‑wiki` scaffolding).

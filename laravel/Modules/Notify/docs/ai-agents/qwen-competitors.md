@@ -3,31 +3,7 @@ title: "qwen competitors"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_tUWZGH
-<<<<<<< .merge_file_jyvKia
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_R5HQEI
-=======
->>>>>>> .merge_file_GAbWj3
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_tUWZGH
-<<<<<<< .merge_file_jyvKia
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_R5HQEI
-=======
->>>>>>> .merge_file_GAbWj3
 qmd: "qwen competitors"
 issues: []
 discussions: []
@@ -38,10 +14,6 @@ discussions: []
 Analisi dei competitor di prediction market.
 Analisi dei competitor di forecast market.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "qwen competitors"
@@ -69,14 +41,9 @@ discussions: []
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 Competitor Analysis
 ### Polymarket (Leader)
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ### Kalshi
 
 | Feature | Presente |
@@ -134,33 +101,8 @@ discussions: []
 ## 🔗 Link
 
 - [Indice QWEN](./qwen-split-index.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_tUWZGH
-<<<<<<< .merge_file_jyvKia
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_R5HQEI
-=======
->>>>>>> .merge_file_GAbWj3
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
-=======
-<<<<<<< HEAD
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
-=======
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_tUWZGH
-<<<<<<< .merge_file_jyvKia
-=======
-- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_R5HQEI
-=======
->>>>>>> .merge_file_GAbWj3
 - [Index principale](../../../Lang/docs/wiki/integrations/_da-riconciliare/index-3.md)

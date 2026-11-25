@@ -3,21 +3,7 @@ title: "github issue 97 git error comment"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_3SfdEQ
-<<<<<<< .merge_file_YE0CQj
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_Ul02rx
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_3SfdEQ
->>>>>>> .merge_file_N9ndB2
-=======
->>>>>>> .merge_file_Ul02rx
 qmd: "github issue 97 git error comment"
 issues: []
 discussions: []
@@ -161,10 +147,6 @@ During work:
 - **Grand Total**: 10 files (3200+ lines)
 
 **Status**: ✅ **DOCUMENTATION EXCELLENCE ACHIEVED**
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -177,8 +159,3 @@ qmd: "github issue 97 git error comment"
 issues: []
 discussions: []
 Ready for tomorrow's real data testing! 🚀
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

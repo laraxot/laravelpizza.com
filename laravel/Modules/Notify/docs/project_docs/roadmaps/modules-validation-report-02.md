@@ -3,15 +3,7 @@ title: "modules validation report 2025 10 02"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_y4l6I5
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_gpLTVO
 qmd: "modules validation report 2025 10 02"
 issues: []
 discussions: []
@@ -24,13 +16,6 @@ discussions: []
 **Validation Level**: PHPStan Level 9 (Maximum)  
 **Status**: ✅ **ALL MODULES VALIDATED**
 
-<<<<<<< .merge_file_y4l6I5
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_gpLTVO
 ---
 
 title: "modules validation report 2025 10 02"
@@ -56,17 +41,9 @@ This report documents the comprehensive validation of multiple Laravel modules a
 
 ---
 
-<<<<<<< .merge_file_y4l6I5
-<<<<<<< HEAD
-=======
-=======
 ## 📊 Executive Summary
 ### Overall Results
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_gpLTVO
 ## 🎯 Module 1: Fixcity - Civic Reporting System
 
 ### Validation Results ✅

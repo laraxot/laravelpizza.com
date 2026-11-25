@@ -3,31 +3,7 @@ title: "qwen critical rules"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_RezUiZ
-<<<<<<< .merge_file_hIwmfd
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_xgPLru
-=======
->>>>>>> .merge_file_HZfmWH
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_RezUiZ
-<<<<<<< .merge_file_hIwmfd
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_xgPLru
-=======
->>>>>>> .merge_file_HZfmWH
 qmd: "qwen critical rules"
 issues: []
 discussions: []
@@ -38,10 +14,6 @@ discussions: []
 Regole critiche del progetto Base Predict.
 Regole critiche del progetto Base Forecast.
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "qwen critical rules"
@@ -107,17 +79,12 @@ ForecastController@index  ← FORBIDDEN!
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🔴 REGOLA 1: FILAMENT WIDGETS FOR LISTS
 ### Principio Core
 ### ❌ MAI Fare
 ### ✅ SEMPRE Fare
 ### Feature Automatiche
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🔴 REGOLA 2: COMPOSER DEPENDENCY ARCHITECTURE
 
 ### Root composer.json = SOLO Core Infrastructure
@@ -214,33 +181,8 @@ namespace::context.collection.element.type
 
 - [Indice QWEN](./qwen-split-index.md)
 - [critical-rules.md](./critical-rules.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_RezUiZ
-<<<<<<< .merge_file_hIwmfd
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_xgPLru
-=======
->>>>>>> .merge_file_HZfmWH
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
-=======
-<<<<<<< HEAD
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
-=======
 - [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_RezUiZ
-<<<<<<< .merge_file_hIwmfd
-=======
-- [qwen-2.md originale](../wiki/integrations/_da-riconciliare/qwen-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_xgPLru
-=======
->>>>>>> .merge_file_HZfmWH
 - [Index principale](../../../Lang/docs/wiki/integrations/_da-riconciliare/index-3.md)

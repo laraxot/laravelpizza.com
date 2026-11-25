@@ -1,28 +1,10 @@
 ---
 title: "✅ Header Notify Fixato - 100% Conforme Bootstrap Italia"
-<<<<<<< .merge_file_Axf2a5
 type: concept
 tags: [header, fix, complete]
 created: 2026-07-14
 updated: 2026-11-23
 qmd: "header-fix-complete ✅ header laraxot fixato - 100% conforme bootstrap italia"
-=======
-<<<<<<< HEAD
-title: "✅ Header <nome progetto> Fixato - 100% Conforme Bootstrap Italia"
-type: concept
-tags: [header, fix, complete]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "header-fix-complete ✅ header laraxot fixato - 100% conforme bootstrap italia"
-qmd: "header-fix-complete ✅ header <nome progetto> fixato - 100% conforme bootstrap italia"
-=======
-type: concept
-tags: [header, fix, complete]
-created: 2026-07-14
-updated: 2026-11-23
-qmd: "header-fix-complete ✅ header laraxot fixato - 100% conforme bootstrap italia"
->>>>>>> laraxot/dev
->>>>>>> .merge_file_EmSfKJ
 issues: ["https://github.com/provtv/<nome repository>/issues/124"]
 discussions: ["https://github.com/provtv/<nome repository>/discussions/1"]
 related:
@@ -32,17 +14,8 @@ related:
   - "./absolute-completion-notify-completamento-assoluto.md"
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< .merge_file_Axf2a5
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_EmSfKJ
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 

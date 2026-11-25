@@ -1,33 +1,10 @@
 ---
-<<<<<<< HEAD
-<<<<<<< .merge_file_wUVOop
-title: "architecture"
-=======
-<<<<<<< HEAD
 title: "Architecture"
-=======
-title: "architecture"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-title: "Architecture"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "Architecture"
-=======
-title: "architecture"
->>>>>>> .merge_file_zel3FC
 type: note
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-11-23
-qmd: "architecture"
-<<<<<<< .merge_file_wUVOop
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_zel3FC
+qmd: "Architecture"
 issues: []
 discussions: []
 ---
@@ -38,13 +15,6 @@ discussions: []
 **Date:** 2025-10-01  
 **Status:** Production Ready
 
-<<<<<<< .merge_file_wUVOop
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zel3FC
 ---
 
 title: "ARCHITECTURE"
@@ -92,17 +62,9 @@ discussions: []
 
 ---
 
-<<<<<<< .merge_file_wUVOop
-<<<<<<< HEAD
-=======
-=======
 ## 📐 System Architecture
 ### High-Level Overview
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_zel3FC
 ## 🏗️ Modular Architecture
 
 ### Module Structure

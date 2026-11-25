@@ -3,31 +3,7 @@ title: "🔧 Fix Routing Folio per Login Page"
 type: concept
 tags: [folio, routing, fix]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_reALBd
 updated: 2026-11-23
-=======
-=======
-<<<<<<< .merge_file_orZcRy
-<<<<<<< .merge_file_W9cmm2
-updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_wP8T0b
->>>>>>> laraxot/dev
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_Fo1POr
-=======
-<<<<<<< .merge_file_orZcRy
->>>>>>> .merge_file_iXqaSD
-=======
->>>>>>> .merge_file_wP8T0b
->>>>>>> laraxot/dev
 qmd: "folio-routing-fix 🔧 fix routing folio per login page"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -36,34 +12,14 @@ related:
   - "./00-index-2.md"
   - "./00-index.md"
   - "./absolute-completion-100.md"
-<<<<<<< HEAD
-<<<<<<< .merge_file_reALBd
-=======
-<<<<<<< .merge_file_orZcRy
-<<<<<<< .merge_file_W9cmm2
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
   - "./acronym-naming-conventions.md"
-=======
-<<<<<<< HEAD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
-<<<<<<< HEAD
->>>>>>> .merge_file_Fo1POr
-=======
->>>>>>> .merge_file_iXqaSD
-=======
   - "./acronym-naming-conventions.md"
   - "./acronym-naming-conventions-2.md"
->>>>>>> .merge_file_wP8T0b
->>>>>>> laraxot/dev
   - "./acronym-naming-conventions.md"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
   - "./action-plan-immediate.md"
 ---
 
@@ -203,7 +159,5 @@ Themes/Sixteen/resources/views/filament/widgets/auth/
 1. **File routing** → `Modules/{Module}/resources/views/pages/`
 2. **Template design** → `Themes/{Theme}/resources/views/pages/`  
 3. **Widget views** → `Themes/{Theme}/resources/views/filament/widgets/`
-
-
 
 

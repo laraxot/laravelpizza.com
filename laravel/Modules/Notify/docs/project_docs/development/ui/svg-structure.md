@@ -3,15 +3,7 @@ title: "svg structure"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_rxipbY
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_X7wHtG
 qmd: "svg structure"
 issues: []
 discussions: []
@@ -197,10 +189,6 @@ Lo script `bashscripts/create_svg_structure.sh` è stato utilizzato per creare a
 - [Componenti UI](./ui-components.md)
 - [Best Practices Filament](../../../../../Activity/docs/best-practices-3.md)
 - [Script di Automazione](../../bashscripts/create_svg_structure.sh)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -214,11 +202,3 @@ issues: []
 discussions: []
 *Struttura SVG creata: Agosto 2025*
 *Responsabile: DRY + KISS SVG Structure* 
-<<<<<<< .merge_file_rxipbY
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_X7wHtG

@@ -3,21 +3,7 @@ title: "basemodel"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_WlwyFd
-<<<<<<< .merge_file_p76QrC
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_Vkg9Ys
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_WlwyFd
->>>>>>> .merge_file_q44d3T
-=======
->>>>>>> .merge_file_Vkg9Ys
 qmd: "basemodel"
 issues: []
 discussions: []
@@ -50,10 +36,6 @@ class NotificationTemplate extends BaseModel {}
 - [../module_notify.md](../module_notify.md)
 - [../../Patient/docs/basemodel.md](../../patient/docs/basemodel.md)
 - Regola "evita override inutili" nei prompt e docs root.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 title: "basemodel"
@@ -65,8 +47,3 @@ qmd: "basemodel"
 issues: []
 discussions: []
 **Nota:** Se trovi un model che estende Model invece di BaseModel, correggi subito e segnala l’errore nella PR.
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

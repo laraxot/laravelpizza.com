@@ -3,15 +3,7 @@ title: "optimization"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_C3gFZt
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_rPMV8M
 qmd: "optimization"
 issues: []
 discussions: []
@@ -82,10 +74,6 @@ class NotificationTemplateCache
 - **Fase 2**: Bulk notification system
 - **Fase 3**: Template caching e optimization
 - **Fase 4**: Delivery tracking e analytics
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 title: "optimization"
@@ -98,8 +86,3 @@ issues: []
 discussions: []
 *Stato: 🟡 Funzionale ma Necessita Reliability Enhancement*
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

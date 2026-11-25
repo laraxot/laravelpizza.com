@@ -3,23 +3,7 @@ title: "PHASE 2 - EPIC 2.1 - TASK 1: Create /my-tickets Folio Page"
 type: concept
 tags: [plan]
 created: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_KLriSi
-=======
-<<<<<<< .merge_file_ClPoif
->>>>>>> laraxot/dev
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> .merge_file_QlEfid
-=======
->>>>>>> .merge_file_kGlnZb
->>>>>>> laraxot/dev
 qmd: "2-1-1-plan phase 2 - epic 2.1 - task 1: create /my-tickets folio page"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

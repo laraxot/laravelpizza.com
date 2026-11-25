@@ -1,43 +1,11 @@
 ---
 title: "📚 Documentation Index - FixCity Project"
-<<<<<<< .merge_file_uxZbEm
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_fmAaca
-title: "📚 Documentation Index - Notify Project"
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 type: index
 tags: [notify, docs, project_docs]
 module: Notify
 created: 2026-07-20
-<<<<<<< HEAD
-<<<<<<< .merge_file_uxZbEm
 updated: 2026-11-23
 qmd: "notify documentazione project_docs index 📚 documentation index - fixcity project index readme frontmatter qmd search"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_fmAaca
-updated: 2026-07-20
-qmd: "notify documentazione project_docs index 📚 documentation index - fixcity project index readme frontmatter qmd search"
-qmd: "notify documentazione project_docs index 📚 documentation index - laraxot project index readme frontmatter qmd search"
-=======
-updated: 2026-11-23
-qmd: "notify documentazione project_docs index 📚 documentation index - fixcity project index readme frontmatter qmd search"
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_uxZbEm
-=======
-updated: 2026-11-23
-qmd: "notify documentazione project_docs index 📚 documentation index - fixcity project index readme frontmatter qmd search"
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_fmAaca
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
 discussions:
@@ -209,52 +177,18 @@ Each module has a `docs/` directory containing:
 ## 🎨 Theme Documentation
 
 ### Sixteen Theme
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_uxZbEm
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_fmAaca
 - [Code Quality Analysis](../../../Activity/docs/code-quality-analysis-3.md)
 - [README](../Themes/Sixteen/docs/README.md)
 - [Roadmap 2025](../Themes/Sixteen/docs/roadmap_2025.md)
 
 ### TwentyOne Theme
 - [Code Quality Analysis](../../../Activity/docs/code-quality-analysis-3.md)
-<<<<<<< .merge_file_uxZbEm
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_fmAaca
->>>>>>> laraxot/dev
 - [Code Quality Analysis](../../../Activity/docs/code-quality-analysis-3.md)
 - [README](../Themes/Sixteen/docs/README.md)
 - [Roadmap 2025](../Themes/Sixteen/docs/ROADMAP_2025.md)
 
 ### TwentyOne Theme
 - [Code Quality Analysis](../../../Activity/docs/code-quality-analysis-3.md)
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_uxZbEm
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_fmAaca
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ---
 
@@ -300,50 +234,20 @@ Each module has a `docs/` directory containing:
 
 ### For Developers
 - README.md
-<<<<<<< HEAD
-<<<<<<< .merge_file_uxZbEm
-<<<<<<< HEAD
-- CONTRIBUTING.md
-- architecture.md
-=======
-<<<<<<< HEAD
 - ../contributing-2.md
-=======
 - CONTRIBUTING.md
 - architecture.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 - ../contributing-2.md
-=======
 - CONTRIBUTING.md
 - architecture.md
-=======
-<<<<<<< HEAD
 - ../contributing-2.md
-=======
 - CONTRIBUTING.md
 - architecture.md
->>>>>>> laraxot/dev
->>>>>>> .merge_file_fmAaca
->>>>>>> laraxot/dev
 - architecture.md
 - Module documentation
 - Refactoring reports
 
 ### For Management
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_uxZbEm
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_fmAaca
 - mission-accomplished-3.md
 - project-completion-certificate-3.md
 - excellence-achievement-caps.md
@@ -356,16 +260,6 @@ Each module has a `docs/` directory containing:
 ### For New Contributors
 - README.md
 - ../contributing-2.md
-<<<<<<< .merge_file_uxZbEm
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_fmAaca
->>>>>>> laraxot/dev
 - MISSION_ACCOMPLISHED.md
 - PROJECT_COMPLETION_CERTIFICATE.md
 - excellence-achievement-caps.md
@@ -380,18 +274,6 @@ Each module has a `docs/` directory containing:
 ### For New Contributors
 - README.md
 - CONTRIBUTING.md
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_uxZbEm
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_fmAaca
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - Module documentation
 - Code examples
 
@@ -421,114 +303,45 @@ Each module has a `docs/` directory containing:
 ### By Topic
 
 **Architecture & Design:**
-<<<<<<< .merge_file_uxZbEm
-=======
 - architecture.md
->>>>>>> .merge_file_fmAaca
 - architecture.md
-<<<<<<< HEAD
 - architecture.md
-=======
-<<<<<<< HEAD
-- architecture.md
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - Design patterns section
 - Module structure
 
 **Quality & Metrics:**
-<<<<<<< HEAD
-<<<<<<< .merge_file_uxZbEm
 - quality-dashboard-3.md
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_fmAaca
 - QUALITY_DASHBOARD.md
-=======
-<<<<<<< HEAD
 - quality-dashboard-3.md
-=======
-- QUALITY_DASHBOARD.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_uxZbEm
-=======
-- quality-dashboard-3.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_fmAaca
 - Cyclomatic complexity reports
 - Test coverage reports
 
 **Refactoring:**
-<<<<<<< HEAD
-<<<<<<< .merge_file_uxZbEm
 - final-refactoring-report-3.md
 - complete-refactoring-analysis-3.md
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- FINAL_REFACTORING_REPORT.md
-- COMPLETE_REFACTORING_ANALYSIS.md
-=======
-<<<<<<< HEAD
 - final-refactoring-report-3.md
 - complete-refactoring-analysis-3.md
-=======
 - FINAL_REFACTORING_REPORT.md
 - COMPLETE_REFACTORING_ANALYSIS.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 - final-refactoring-report-3.md
 - complete-refactoring-analysis-3.md
-=======
 - FINAL_REFACTORING_REPORT.md
 - COMPLETE_REFACTORING_ANALYSIS.md
-=======
-<<<<<<< HEAD
 - final-refactoring-report-3.md
 - complete-refactoring-analysis-3.md
-=======
 - FINAL_REFACTORING_REPORT.md
 - COMPLETE_REFACTORING_ANALYSIS.md
->>>>>>> .merge_file_fmAaca
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - Module-specific refactoring docs
 
 **Getting Started:**
 - README.md
-<<<<<<< HEAD
-<<<<<<< .merge_file_uxZbEm
 - CONTRIBUTING.md
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- CONTRIBUTING.md
-=======
-<<<<<<< HEAD
 - ../contributing-2.md
-=======
 - CONTRIBUTING.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 - ../contributing-2.md
-=======
 - CONTRIBUTING.md
-=======
-<<<<<<< HEAD
 - ../contributing-2.md
-=======
 - CONTRIBUTING.md
->>>>>>> .merge_file_fmAaca
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - Quick start guides
 
 **Testing:**
@@ -619,32 +432,13 @@ All documents include:
 - Outdated content
 
 ### Contributing to Docs
-<<<<<<< HEAD
-<<<<<<< .merge_file_uxZbEm
 - Follow CONTRIBUTING.md
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-- Follow CONTRIBUTING.md
-=======
-<<<<<<< HEAD
 - follow ../contributing-2.md
-=======
 - Follow CONTRIBUTING.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
 - follow ../contributing-2.md
-=======
 - Follow CONTRIBUTING.md
-=======
-<<<<<<< HEAD
 - follow ../contributing-2.md
-=======
 - Follow CONTRIBUTING.md
->>>>>>> .merge_file_fmAaca
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - Use proper format
 - Include examples
 - Update index
@@ -670,18 +464,6 @@ All documents include:
 ## 📅 Recent Updates
 
 ### 2025-10-01
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< .merge_file_uxZbEm
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_fmAaca
 - ✅ created index.md
 - ✅ completed mission-accomplished-3.md
 - ✅ finalized project-completion-certificate-3.md
@@ -691,16 +473,6 @@ All documents include:
 - ✅ created architecture.md
 - ✅ created quality-dashboard-3.md
 - ✅ created excellence-achievement-caps.md
-<<<<<<< .merge_file_uxZbEm
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_fmAaca
->>>>>>> laraxot/dev
 - ✅ Created index.md
 - ✅ Created index.md
 - ✅ Completed MISSION_ACCOMPLISHED.md
@@ -714,18 +486,6 @@ All documents include:
 - ✅ Created QUALITY_DASHBOARD.md
 - ✅ Created excellence-achievement-caps.md
 
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_uxZbEm
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
-=======
->>>>>>> .merge_file_fmAaca
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ---
 
 ## 🔮 Future Documentation

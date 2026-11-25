@@ -3,21 +3,7 @@ title: "email logs"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_IF1a7v
-<<<<<<< .merge_file_kJy4aV
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_5AK1rU
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_IF1a7v
->>>>>>> .merge_file_1skYYN
-=======
->>>>>>> .merge_file_5AK1rU
 qmd: "email logs"
 issues: []
 discussions: []

@@ -3,21 +3,7 @@ title: "use models not db table"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_3jDgvC
-<<<<<<< .merge_file_j5a2dx
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_ceOitE
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_3jDgvC
->>>>>>> .merge_file_bjb9ms
-=======
->>>>>>> .merge_file_ceOitE
 qmd: "use models not db table"
 issues: []
 discussions: []
@@ -30,10 +16,6 @@ discussions: []
 **Status**: ✅ CRITICAL RULE  
 **Priority**: BLOCKER
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 
 title: "use models not db table"
@@ -66,13 +48,8 @@ $betHistories = BetHistory::query()
 
 ---
 
-<<<<<<< HEAD
-=======
-=======
 ## 🎯 The Rule
 
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 ## 🧠 The WHY (5 Levels)
 
 ### Level 1: Type Safety ❌
@@ -224,23 +201,11 @@ Rating::query()->...
 ## 🔗 Related Documentation
 
 ### AI Agents Docs
-<<<<<<< .merge_file_3jDgvC
-<<<<<<< .merge_file_j5a2dx
-=======
 - **[Rules Index](00-index.md)** - All rules
->>>>>>> .merge_file_bjb9ms
 - **[Rules Index](00-index.md)** - All rules
-<<<<<<< HEAD
 - **[Rules Index](00-index.md)** - All rules
-=======
-<<<<<<< HEAD
-=======
 - **[Rules Index](00-index.md)** - All rules
->>>>>>> .merge_file_ceOitE
 - **[Rules Index](00-index.md)** - All rules
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 - **[XotBase Extension Rule](xotbase-extension-rule.md)** - XotBase philosophy
 - **[Reusable Components](../guidelines/reusable-components-philosophy.md)** - DRY+KISS
 

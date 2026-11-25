@@ -4,21 +4,7 @@ type: concept
 tags: [notify, docs, best-practices, form, schema, conventions]
 module: Notify
 created: 2026-07-20
-<<<<<<< .merge_file_3xbevT
-<<<<<<< .merge_file_8V3S4B
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_iKMB5x
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_3xbevT
->>>>>>> .merge_file_1msV9Y
-=======
->>>>>>> .merge_file_iKMB5x
 qmd: "notify documentazione best practices form schema conventions convenzioni per i form schema frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"

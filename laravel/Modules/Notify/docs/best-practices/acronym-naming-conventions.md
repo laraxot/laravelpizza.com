@@ -4,21 +4,7 @@ type: concept
 tags: [notify, docs, best-practices, acronym, naming, conventions]
 module: Notify
 created: 2026-07-20
-<<<<<<< .merge_file_uCrTML
-<<<<<<< .merge_file_uTRgua
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_uqZosv
-<<<<<<< HEAD
-updated: 2026-07-20
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_uCrTML
->>>>>>> .merge_file_TOLw9v
-=======
->>>>>>> .merge_file_uqZosv
 qmd: "notify documentazione best practices acronym naming conventions convenzioni di naming per acronimi frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"

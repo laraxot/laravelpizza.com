@@ -3,21 +3,7 @@ title: "working with claude"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_QmDEcZ
-<<<<<<< .merge_file_5HHQ2U
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_tzFSWF
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_QmDEcZ
->>>>>>> .merge_file_6wEkpj
-=======
->>>>>>> .merge_file_tzFSWF
 qmd: "working with claude"
 issues: []
 discussions: []

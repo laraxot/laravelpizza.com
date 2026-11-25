@@ -13,10 +13,7 @@ document_type: story
 category: bmad
 created: 2026-11-19
 updated: 2026-11-19
-<<<<<<< .merge_file_XRLmoj
 qmd: "phpstan log tests false positives story"
-=======
->>>>>>> .merge_file_KApdQJ
 ---
 
 # 227.1 Activity — 183 segnalazioni PHPStan, zero difetti

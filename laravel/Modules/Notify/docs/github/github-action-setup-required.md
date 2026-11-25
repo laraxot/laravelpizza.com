@@ -3,15 +3,7 @@ title: "🚨 IMPORTANT: GitHub Action Setup Required"
 type: concept
 tags: [github, action, setup, required]
 created: 2026-07-14
-<<<<<<< .merge_file_UMeF1i
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_eayKxy
 qmd: "github-action-setup-required 🚨 important: github action setup required"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]

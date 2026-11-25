@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_MvfSpE
 qmd: "spatie permissions 2"
-=======
->>>>>>> .merge_file_NLTXJ0
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/spatie_permissions.txt

@@ -3,21 +3,7 @@ title: "package risk matrix"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_PC4DFC
-<<<<<<< .merge_file_51WqUR
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_dBmGem
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_PC4DFC
->>>>>>> .merge_file_ZLNFEw
-=======
->>>>>>> .merge_file_dBmGem
 qmd: "package risk matrix"
 issues: []
 discussions: []

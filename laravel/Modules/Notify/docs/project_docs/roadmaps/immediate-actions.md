@@ -5,15 +5,7 @@ title: "immediate-actions-2025-01-27"
 type: concept
 tags: [deprecated]
 created: 2026-07-14
-<<<<<<< .merge_file_zZ57ab
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-14
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_k4h5Da
 qmd: "immediate-actions-2025-01-27 deprecated"
 status: deprecated
 related:

@@ -3,15 +3,7 @@ title: "Agent instructions"
 type: reference
 tags: [agents, coding-agent, llm-wiki]
 created: 2026-07-01
-<<<<<<< .merge_file_PaPfzG
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-07-01
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_qa4vlZ
 qmd: "istruzioni agenti LLM wiki modulo"
 issues: []
 discussions: []

@@ -3,15 +3,7 @@ title: "smsriver enum translations"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_tvd74S
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_I1RaS2
 qmd: "smsriver enum translations"
 issues: []
 discussions: []
@@ -203,10 +195,6 @@ php -l laravel/Modules/Notify/lang/de/sms_driver_enum.php
 - [Configurazione SMS](../config/sms.php)
 - [Documentazione Traduzioni](../../Lang/docs/)- [Documentazione Traduzioni](../../Lang/project_docs/)
 - [Documentazione Traduzioni](../../Lang/docs/)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -218,11 +206,3 @@ updated: 2026-09-26
 qmd: "smsriver enum translations"
 issues: []
 discussions: []
-<<<<<<< .merge_file_tvd74S
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_I1RaS2

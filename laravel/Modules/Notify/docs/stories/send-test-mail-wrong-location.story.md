@@ -9,10 +9,7 @@ module: Notify
 related: [modular-architecture, console-commands, production-hotfix]
 tags: [console, commands, architecture, production]
 updated: 2026-11-23
-<<<<<<< HEAD
 qmd: "send test mail wrong location story"
-=======
->>>>>>> laraxot/dev
 ---
 
 # SendTestMail in app/Console su produzione: causa e prevenzione

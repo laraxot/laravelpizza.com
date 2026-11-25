@@ -9,10 +9,7 @@ related:
   - "./duplicated-profile-form.md"
   - "./duplicated-users-relation-manager.md"
   - "./oauth-dual-resource-trees.md"
-<<<<<<< .merge_file_quNoEq
 qmd: "duplicated ratings relation manager ratingsrelationmanager occurrences"
-=======
->>>>>>> .merge_file_T6AMXL
 ---
 
 # Duplicated RatingsRelationManager

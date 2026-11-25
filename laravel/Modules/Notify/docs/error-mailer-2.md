@@ -3,21 +3,7 @@ title: "error mailer"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_zn7OJ0
-<<<<<<< .merge_file_S8LoW6
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_pikcWI
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_zn7OJ0
->>>>>>> .merge_file_3pyNX7
-=======
->>>>>>> .merge_file_pikcWI
 qmd: "error mailer"
 issues: []
 discussions: []

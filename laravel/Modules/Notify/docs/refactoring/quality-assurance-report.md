@@ -3,15 +3,7 @@ title: "quality assurance report"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_VXib6K
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_L2BaxW
 qmd: "quality assurance report"
 issues: []
 discussions: []
@@ -149,10 +141,6 @@ The refactoring of `SendRecordNotificationAction.php` successfully achieved:
 - **Enhanced adherence to DRY and KISS principles**
 
 All quality assurance checks passed, confirming the successful implementation of clean code principles.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -167,11 +155,3 @@ discussions: []
 **Verified by**: iFlow CLI  
 **Quality Status**: ✅ All gates passed  
 **Deployment Ready**: ✅ Approved
-<<<<<<< .merge_file_VXib6K
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_L2BaxW

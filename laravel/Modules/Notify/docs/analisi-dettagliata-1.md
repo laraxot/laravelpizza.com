@@ -3,21 +3,7 @@ title: "analisi dettagliata 1"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_Y7u4XS
-<<<<<<< .merge_file_PMjtHP
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_hjFXwz
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_Y7u4XS
->>>>>>> .merge_file_2LAuGD
-=======
->>>>>>> .merge_file_hjFXwz
 qmd: "analisi dettagliata 1"
 issues: []
 discussions: []

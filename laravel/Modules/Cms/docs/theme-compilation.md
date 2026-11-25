@@ -7,10 +7,7 @@ updated: 2026-09-26
 qmd: "theme compilation"
 issues: []
 discussions: []
-<<<<<<< HEAD
-=======
 status: draft
->>>>>>> laraxot/dev
 ---
 
 # Compilazione e Pubblicazione dei Temi
@@ -110,31 +107,9 @@ Per pubblicare il tema compilato, è necessario eseguire il seguente comando:
 
 ```bash
 cd /var/www/html/<nome progetto>/laravel/Themes/One
-<<<<<<< .merge_file_cwGEvy
-<<<<<<< .merge_file_9D3pfj
-<<<<<<< .merge_file_RqiqpY
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
-=======
-=======
->>>>>>> .merge_file_yY9Jgh
-=======
->>>>>>> .merge_file_yZT758
-<<<<<<< HEAD
 # niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
-<<<<<<< HEAD
-# niente npm run copy: public_html/themes/<Tema> è un symlink a ../../laravel/Themes/<Tema>/public
-=======
 # public_html/themes/<Tema> è un symlink a laravel/Themes/<Tema>/public: niente copia (Modules/Xot/docs/wiki/concepts/public-html-symlink-assets.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_cwGEvy
-<<<<<<< .merge_file_9D3pfj
->>>>>>> .merge_file_dm1q2t
-=======
->>>>>>> .merge_file_yY9Jgh
-=======
->>>>>>> .merge_file_yZT758
 ```
 
 Questo comando copia tutti i file dalla directory `resources/dist` alla directory pubblica `public_html/themes/One`:

@@ -3,31 +3,7 @@ title: "email templates"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< HEAD
-<<<<<<< .merge_file_QlSncU
-<<<<<<< .merge_file_OuxgAW
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_PgyHWd
-=======
->>>>>>> .merge_file_wCJV4J
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_QlSncU
-<<<<<<< .merge_file_OuxgAW
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_PgyHWd
-=======
->>>>>>> .merge_file_wCJV4J
 qmd: "email templates"
 issues: []
 discussions: []
@@ -346,35 +322,11 @@ php artisan tinker
 
 ### **Documentazione Tecnica**
 - [Documentazione Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
-<<<<<<< HEAD
-<<<<<<< .merge_file_QlSncU
-<<<<<<< .merge_file_OuxgAW
 - [Gestione Traduzioni](../Lang/docs/translation-keys-best-practices-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_PgyHWd
-=======
->>>>>>> .merge_file_wCJV4J
 - [Gestione Traduzioni](../../Lang/docs/translation-keys-best-practices-2.md)
-=======
-<<<<<<< HEAD
 - [Gestione Traduzioni](../Lang/docs/translation-keys-best-practices-2.md)
-=======
 - [Gestione Traduzioni](../../Lang/docs/translation-keys-best-practices-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_QlSncU
-<<<<<<< .merge_file_OuxgAW
-=======
 - [Gestione Traduzioni](../Lang/docs/translation-keys-best-practices-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_PgyHWd
-=======
->>>>>>> .merge_file_wCJV4J
 - [Configurazione Email](../../../docs/email-configuration.md)
 - [SaluteOra: Missing Mail Template Error](../../SaluteOra/project_docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
 - [Configurazione Email](../../../docs/email-configuration.md)- [SaluteOra: Missing Mail Template Error](../../SaluteOra/project_docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
@@ -383,35 +335,11 @@ php artisan tinker
 
 ### **Documentazione Tecnica**
 - [Documentazione Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
-<<<<<<< HEAD
-<<<<<<< .merge_file_QlSncU
-<<<<<<< .merge_file_OuxgAW
 - [Gestione Traduzioni](../Lang/project_docs/translation-keys-best-practices-2.md)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_PgyHWd
-=======
->>>>>>> .merge_file_wCJV4J
 - [Gestione Traduzioni](translation-keys-best-practices-2.md)
-=======
-<<<<<<< HEAD
 - [Gestione Traduzioni](../Lang/project_docs/translation-keys-best-practices-2.md)
-=======
 - [Gestione Traduzioni](translation-keys-best-practices-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_QlSncU
-<<<<<<< .merge_file_OuxgAW
-=======
 - [Gestione Traduzioni](../Lang/project_docs/translation-keys-best-practices-2.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_PgyHWd
-=======
->>>>>>> .merge_file_wCJV4J
 - [Configurazione Email](../../../project_docs/email-configuration.md)
 - [Documentazione Traduzioni](./translations.md)
 - [Proposta Slug Template](./email-template-slug-proposal-2.md)
@@ -420,10 +348,6 @@ php artisan tinker
 - [Notification Channels Implementation](./notification-channels-implementation-2.md)
 - [SMS Implementation](./sms-implementation-2.md)
 - [Troubleshooting](./troubleshooting.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -438,8 +362,3 @@ discussions: []
 **Ultimo aggiornamento**: 26 Giugno 2025  
 **Status**: Aggiornato per errore critico MissingMailTemplate  
 **Priorità**: URGENT - Fix sistema registrazione
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

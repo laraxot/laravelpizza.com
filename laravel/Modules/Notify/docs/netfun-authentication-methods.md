@@ -3,15 +3,7 @@ title: "netfun authentication methods"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_oSYqxJ
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_jvlDwB
 qmd: "netfun authentication methods"
 issues: []
 discussions: []
@@ -86,10 +78,6 @@ public function send($notifiable, Notification $notification)
 
 - [Documentazione Netfun SMS Channel](./sms-netfun-channel-2.md)
 - [Requisiti di Configurazione Netfun](./netfun-config-requirements-2.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 
 ---
 
@@ -102,8 +90,3 @@ qmd: "netfun authentication methods"
 issues: []
 discussions: []
 *Ultimo aggiornamento: [DATE]*
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

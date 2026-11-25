@@ -3,15 +3,7 @@ title: "services"
 type: note
 tags: [documentation, notify, debt]
 created: 2026-09-26
-<<<<<<< .merge_file_HDAipe
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-updated: 2026-11-17
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> .merge_file_awesjC
 qmd: "services"
 issues: []
 discussions: []

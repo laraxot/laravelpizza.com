@@ -3,21 +3,7 @@ title: "modules themes docs audit"
 type: note
 tags: [documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_dqf9UL
-<<<<<<< .merge_file_18lpcQ
 updated: 2026-11-23
-=======
-=======
->>>>>>> .merge_file_gXBDDh
-<<<<<<< HEAD
-updated: 2026-09-26
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_dqf9UL
->>>>>>> .merge_file_3NcIss
-=======
->>>>>>> .merge_file_gXBDDh
 qmd: "modules themes docs audit"
 issues: []
 discussions: []

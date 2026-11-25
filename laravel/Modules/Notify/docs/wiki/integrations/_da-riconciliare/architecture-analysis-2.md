@@ -7,25 +7,7 @@ module: notify
 type: integration
 tags: [integrations, modules, notify]
 created: 2026-08-24
-<<<<<<< HEAD
-<<<<<<< .merge_file_IYvcZo
 updated: 2026-11-23
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_6ES1SW
-updated: 2026-08-24
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_IYvcZo
-=======
-updated: 2026-11-23
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_6ES1SW
 ---
 
 # NOTIFY ARCHITECTURE DEEP DIVE ANALYSIS
@@ -1680,29 +1662,9 @@ Tasks:
 
 ### Recommended New Documentation
 ```
-<<<<<<< HEAD
-<<<<<<< .merge_file_IYvcZo
 1. architecture-2.md
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_6ES1SW
 1. architecture.md
-=======
-<<<<<<< HEAD
 1. architecture-2.md
-=======
-1. architecture.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_IYvcZo
-=======
-1. architecture-2.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_6ES1SW
    - System architecture diagrams
    - Module dependency graph
    - Database schema diagrams
