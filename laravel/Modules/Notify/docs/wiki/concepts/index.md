@@ -33,3 +33,6 @@ Concetti specifici del modulo Notify. Carica on-demand via `qmd search` o consul
 - [one-migration-consolidamento-wave2.md](one-migration-consolidamento-wave2.md) — owner-file `mail_templates` (`2026_09_10_150101`), procedura bump-timestamp, colonna `sms_from`
 - [mail-template-slug-prevent-overwrite.md](mail-template-slug-prevent-overwrite.md) — `getSlugOptions()->preventOverwrite()` obbligatorio: senza, `SpatieEmail::__construct()` (che fa `update(counter++)`) rigenera lo slug da `subject` e `findForMailable()` non trova più il template
 
+## Contenuto fuso da `index.md`
+
+- [../migrations/notifications-table-2.md](../migrations/notifications-table-2.md) — file `2026_06_10_133000_create_notifications_table.php`

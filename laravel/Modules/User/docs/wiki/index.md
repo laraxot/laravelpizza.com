@@ -9,6 +9,7 @@ qmd: "user module wiki index auth socialite permissions filament forms"
 issues:
 discussions:
 related:
+<<<<<<< .merge_file_3HTIOt
 <<<<<<< .merge_file_URlLxo
 <<<<<<< .merge_file_VJoH0q
 <<<<<<< HEAD
@@ -26,9 +27,10 @@ related:
 >>>>>>> .merge_file_USyn02
 =======
 >>>>>>> .merge_file_ekRVGj
+=======
+>>>>>>> .merge_file_ItHoLk
   - "./architecture.md"
   - "./auth-patterns.md"
-  - "./bmad-method.md"
   - "./context-compression.md"
   - "./log.md"
   - "./overview.md"
@@ -42,7 +44,7 @@ Indice operativo del wiki User.
 ## AI / second brain (root)
 
 - [ai-harness-user-discipline](./concepts/ai-harness-user-discipline.md)
-- [hackernoon-ai-coding-tips-fixcity-map](../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md) — tips 001–022
+- [hackernoon-ai-coding-tips-fixcity-map](../../../../../bashscripts/ai/wiki/concepts/agents-harness-tooling.md#hackernoon-ai-coding-tips-fixcity-map) — tips 001–022
 - [bmad/architecture](../../../../../docs/wiki/bmad/architecture.md) — pilastri schema/doc (ADR)
 - [architecture-module-directory-structure](../../../../../docs/wiki/bmad/architecture-module-directory-structure.md) — PHP solo in `app/`
 - [second-brain-local-discipline](./concepts/second-brain-local-discipline.md) — stub → canon Xot
@@ -63,9 +65,9 @@ Indice operativo del wiki User.
 
 ## Regole collegate
 
-- [forbidden-folders-rule](../../../../../docs/wiki/concepts/forbidden-folders.md): Vincoli strutturali strict.
+- [forbidden-folders-rule](../../../../../bashscripts/ai/wiki/concepts/modules-structure-rules.md#forbidden-folders): Vincoli strutturali strict.
 - [llm-wiki-standard](../../../../../docs/project/karpathy-llm-wiki-adoption.md): Mapping repository e ciclo di vita conoscenza.
-- [hackernoon-ai-coding-tips-fixcity-map](../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md): Mappa tips 001-022.
+- [hackernoon-ai-coding-tips-fixcity-map](../../../../../bashscripts/ai/wiki/concepts/agents-harness-tooling.md#hackernoon-ai-coding-tips-fixcity-map): Mappa tips 001-022.
 - [laravel-socialite](../../../../docs/wiki/concepts/laravel-socialite.md): OAuth social authentication.
 - [laravel-permission](../../../../docs/wiki/concepts/laravel-permission.md): RBAC Spatie Laravel Permission.
 

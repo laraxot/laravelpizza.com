@@ -27,7 +27,6 @@ test('ActivityServiceProvider has correct name', function (): void {
 test('ActivityServiceProvider registers migrations', function (): void {
     $provider = new ActivityServiceProvider(app());
     $provider->boot();
-
 });
 
 test('EventServiceProvider can be instantiated', function (): void {

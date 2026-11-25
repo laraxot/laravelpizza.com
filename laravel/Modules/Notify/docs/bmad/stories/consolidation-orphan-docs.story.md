@@ -137,3 +137,32 @@ Audit showed 443+ orphan .md files in `/laravel/Modules/Notify/docs/` (root leve
 - [Notify Module README](../README.md) - Main documentation index
 - [BMAD Method](https://github.com/Laraxot/app_ptvx_fila5/blob/dev/laravel/Modules/Xot/docs/wiki/bmad-method.md)
 - [BMAD Story Policy](../../../bashscripts/ai/wiki/rules/modular-bmad-story-policy.md)
+
+## Diario exact-dup 2026-11-25 (Notify-UI-Activity lane)
+
+- Exact sha256 non-stub: **0** (inventario 4 gruppi già stubbati); `*-2.md` = 274 near-name ≠ hash → **non** uniti.
+- Stub questa wave: **6** (cleanup-notify- + story `06-`/`08-` prefix + consolidation-orphan-docs-06); near-dup merge ref INDEX in canone cleanup-notify.
+- Counts: total md **2897→2498** (Δ −399 race esterna); non-stub **2871→2468**; stubs **26→30**.
+- theme/sixteen wiki vs theme: 5 near, 0 exact; xot-base* / PERFECT* non exact tra loro.
+
+## Tetto 500
+
+Le note non citate dallo sprint né dal PHP, fuori da ADR, contratti e `raw/`, sono in [archivio](../../archivio/index.md): 2171 file assorbiti, `docs/` da 2346 a 231 markdown. Testo integrale: `git show HEAD:<path>`.
+
+## Diario body-identical `*-N` 2026-11-25 (Notify-neardup wave)
+
+- Lock: `bashscripts/lock/docs-consolidate-Notify-neardup.lock` (docs-guardian).
+- Policy: stub **solo** exact sha256 **oppure** body-identical (hash body dopo strip YAML
+  frontmatter iniziale); cap 40; no delete; no PHP; no merge near-dup cieco.
+- Inventario: `*-N.md` = **384** (`*-2.md` = **202**); non-stub `*-N` = **382**.
+- Match basename canone (`foo-2.md` ↔ `foo.md`): exact sha **0**; body-identical **0**
+  (anche con normalizzazione `\r\n` / strip ripetuto FM / rstrip).
+- Cluster body-hash globale non-stub ≥2: solo `raw/root-import/test.md` ↔
+  `test01.md` (non pattern `*-N` con trattino → fuori scope).
+- Stub questa wave: **0** / 40.
+- Residui `*-2.md`: **201** non-stub near-dup hash-diversi (199 con canone stesso dir,
+  2 senza canone: `loc-struct-2.md`, `ref-struct-2.md`); 1 già stub
+  (`documentation-system-update-complete-2.md`).
+- Esempi near (sim≈1.0 sul prefisso, body ≠): `email-cache-2` (canone + footer link),
+  `email-logs-2`, `super-mucca-login-completed-2` (self-ref `-2` nel body),
+  `dry-kiss-analysis-master-2` (tree listing nome file).

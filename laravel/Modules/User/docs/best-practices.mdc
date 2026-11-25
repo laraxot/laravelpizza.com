@@ -59,7 +59,7 @@ public function addMember(Team $team, User $user)
 - [Linee guida Actions](mdc:actions.mdc)
 - [Linee guida Activitylog](mdc:activitylog.mdc)
 - [Testing](mdc:testing.md)
-- [Documentazione centrale](mdc:../../../../docs/index-3.md)
+- [Documentazione centrale](mdc:../../../../docs/INDEX.md)
 
 ## Migration modulari: path corretto obbligatorio
 
@@ -84,4 +84,4 @@ public function addMember(Team $team, User $user)
 
 - Tutte le migration devono essere nella cartella `database/migrations` del modulo di riferimento.
 - Mai mettere migration custom in `laravel/database/migrations`.
-- Vedi motivazione e checklist in [path-conventions-2.md](path-conventions-2.md).
+- Vedi motivazione e checklist in [PATH_CONVENTIONS.md](./PATH_CONVENTIONS.md).

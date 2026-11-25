@@ -18,7 +18,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Intervention v4 espone ImageManager tipizzato (decodePath/createImage/insert/save) senza
  * facade legacy v2.
  *
- * @see Modules/Media/docs/contracts/merge.md
+ * @see docs/contracts/merge.md
  *
  * @contract docs/contracts/merge.md
  */

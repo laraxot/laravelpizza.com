@@ -19,6 +19,7 @@ related:
 ---
 # BMad Agents Index
 
+<<<<<<< .merge_file_3ywxbW
 **Source**: [`../../../../AGENTS.md`](../../../../../../../../../../agents.md) (lines 40-904)  
 **Source**: [`../../../../agents.md`](../../../../../../../../../../agents.md) (lines 40-904)  
 **Source**: [`../../../../AGENTS.md`](../../../../../../../../../../agents.md) (lines 40-904)  
@@ -35,6 +36,10 @@ related:
 **Source**: [`../../../../agents.md`](../../../../../../../../../../agents.md) (lines 40-904)  
 **Source**: [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md) (lines 40-904)  
 **Source**: [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md) (lines 40-904)  
+=======
+**Source**: [`../../../../AGENTS.md`](../../../../../../../../../../agents.md) (lines 40-904)  
+**Source**: [`../../../../agents.md`](../../../../../../../../../../agents.md) (lines 40-904)  
+>>>>>>> .merge_file_fq8teV
 **Total Agents**: 10  
 **Last Updated**: 2026-04-11  
 
@@ -70,11 +75,15 @@ related:
 
 ### Bidirectional Links
 - ← Back to [Main AI Docs Index](../index.md)
+<<<<<<< .merge_file_3ywxbW
 - ← Back to [../../../../AGENTS.md](../../../../../../../../../../agents.md) (original source)
 - ← Back to [../../../../AGENTS.md](../../../../../../../../../../AGENTS.md) (original source)
 - ← Back to [../../../../AGENTS.md](../../../../../../../../../../agents.md) (original source)
 - ← Back to [../../../../AGENTS.md](../../../../../../../../../../AGENTS.md) (original source)
 - ← Back to [../../../../AGENTS.md](../../../../../../../../../../agents.md) (original source)
+=======
+- ← Back to [../../../../AGENTS.md](../../../../../../../../../../agents.md) (original source)
+>>>>>>> .merge_file_fq8teV
 - ← Back to [Project Docs](../../../docs/README.md)
 
 ---
@@ -88,6 +97,7 @@ To activate an agent, mention their ID or name in your request:
 
 For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../agents.md).
 For full agent definitions, see the original [`../../../../agents.md`](../../../../../../../../../../agents.md).
+<<<<<<< .merge_file_3ywxbW
 For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../agents.md).
 For full agent definitions, see the original [`../../../../agents.md`](../../../../../../../../../../agents.md).
 For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md).
@@ -102,8 +112,16 @@ For full agent definitions, see the original [`../../../../AGENTS.md`](../../../
 For full agent definitions, see the original [`../../../../agents.md`](../../../../../../../../../../agents.md).
 For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md).
 For full agent definitions, see the original [`../../../../AGENTS.md`](../../../../../../../../../../AGENTS.md).
+=======
+>>>>>>> .merge_file_fq8teV
 
 ---
 
 **Maintained By**: AI Agents + Development Team  
 **Last Sync**: 2026-04-11
+
+## Contenuto fuso da `index.md`
+
+  - ../../../notifications/README.md
+  - ../../../integrations/README.md
+  - ../../../templates/README.md

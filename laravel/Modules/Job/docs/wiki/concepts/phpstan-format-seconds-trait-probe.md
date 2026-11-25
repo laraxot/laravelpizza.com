@@ -7,7 +7,7 @@ created: 2026-07-01
 updated: 2026-07-01
 related:
   - ../../../Xot/docs/wiki/concepts/phpstan-trait-probes.md
-  - ../../../../docs/wiki/concepts/nwidart-module-skeleton-contract.md
+  - ../../../../../../bashscripts/ai/wiki/concepts/modules-structure-rules.md#nwidart-module-skeleton-contract
 qmd: "phpstan format seconds trait probe formatseconds"
 ---
 

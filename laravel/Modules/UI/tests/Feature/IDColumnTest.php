@@ -11,21 +11,20 @@ use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 describe('IDColumn — identificatore e target di ritorno della riga', function (): void {
-    it('rende un target HTML stabile senza anchor annidati', function (): void {
+    it('rende un link frammento same-page con id ancora stabile', function (): void {
         $html = IDColumn::renderAnchor(42)->toHtml();
 
         Assert::assertSame(
-            '<span id="record-42" class="scroll-mt-24">42</span>',
+            '<a id="record-42" href="#record-42" class="scroll-mt-24 fi-link text-primary-600 hover:underline" title="#record-42">42</a>',
             $html,
         );
-        Assert::assertStringNotContainsString('<a', $html);
     });
 
     it('rende valori testuali in modo sicuro nell attributo e nel testo', function (): void {
         $html = IDColumn::renderAnchor('a&b')->toHtml();
 
         Assert::assertSame(
-            '<span id="record-a&amp;b" class="scroll-mt-24">a&amp;b</span>',
+            '<a id="record-a&amp;b" href="#record-a&amp;b" class="scroll-mt-24 fi-link text-primary-600 hover:underline" title="#record-a&amp;b">a&amp;b</a>',
             $html,
         );
     });

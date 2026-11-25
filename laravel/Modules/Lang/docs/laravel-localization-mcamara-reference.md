@@ -1,101 +1,75 @@
 ---
-issues: []
-discussions: []
-title: "mcamara/laravel-localization — Riferimento per moduli e temi"
-module: "Lang"
-type: concept
-tags: [migration, filament, 4]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "migration filament 4"
+title: "Localizzazione degli URL con mcamara/laravel-localization"
+type: reference
+module: Lang
+updated: 2026-11-25
+qmd: "mcamara laravel-localization supportedLocales localizeUrl getLocalizedURL getCurrentLocale middleware locale prefisso url lingua"
 related:
-  - "./italian-text-refined-audit-report.md"
+  - ./folio-volt-localization.md
+  - ./language-switcher-and-flags.md
+  - ./adr/0001-cambio-lingua-con-url-localizzato.md
 ---
-# mcamara/laravel-localization — Riferimento per moduli e temi
+# Localizzazione degli URL con mcamara/laravel-localization
 
-## Scopo
-
-Questo documento riassume come il package [mcamara/laravel-localization](https://github.com/mcamara/laravel-localization) è usato nel progetto e come ogni modulo/tema può sfruttarlo.
-
-## Funzionalità principali
-
-- **Prefisso lingua in URL**: tutte le rotte pubbliche localizzate sono sotto `/{locale}/...` (es. `/it/`, `/en/events`).
-- **Redirect**: richiesta senza locale → redirect con locale (da session, cookie o Accept-Language).
-- **Helper**: generazione URL localizzati, locale corrente, lingue supportate, ordine lingue.
-- **Translated routes** (opzionale): segmenti URL tradotti per lingua (es. `/en/about`, `/es/acerca`) tramite `lang/{locale}/routes.php` e `transRoute()`.
-- **Route cache**: usare `php artisan route:trans:cache` e trait `LoadsTranslatedCachedRoutes`; non usare `route:cache` per le rotte localizzate.
+Riferimento unico per la lingua nell'URL. Il pacchetto e' una dipendenza di `Modules/Lang/composer.json`
+(`mcamara/laravel-localization`); le lingue del sito sono quelle di `laravellocalization.supportedLocales`, non quelle
+dell'editor delle traduzioni (vedi [translation-file-editor.md](translation-file-editor.md)).
 
 ## Configurazione
 
-- **File**: `config/laravellocalization.php`.
-- **supportedLocales**: array di lingue (es. `it`, `en`) con `name`, `script`, `native`, `regional`.
-- **hideDefaultLocaleInURL**: se true, la lingua di default non appare in URL.
-- **useAcceptLanguageHeader**: rilevamento lingua da browser.
-- **localesOrder**: ordine delle lingue (es. per lo switcher).
-- **httpMethodsIgnored**: metodi HTTP da non processare per redirect (es. POST, PUT, PATCH, DELETE).
+File `laravel/config/laravellocalization.php` (config di progetto, non del modulo). Valori al momento della scrittura:
 
-## Uso obbligatorio in Blade (tutti i moduli e temi)
+| Chiave | Valore | Effetto |
+|---|---|---|
+| `supportedLocales` | `it`, `en`, `de`, `fr`, `es`, `ru` (ognuna con `name`, `script`, `native`, `regional`) | unica fonte delle lingue del sito |
+| `localesOrder` | `it, en, de, fr, es, ru` | ordine nei selettori |
+| `hideDefaultLocaleInURL` | `false` | il prefisso c'e' sempre, anche per la lingua di default |
+| `useAcceptLanguageHeader` | `true` | la prima visita senza prefisso negozia la lingua con `Accept-Language` |
+| `urlsIgnored` | `/skipped` | percorsi che il pacchetto non tocca |
+| `httpMethodsIgnored` | `POST`, `PUT`, `PATCH`, `DELETE` | il redirect di localizzazione non scatta su questi metodi |
 
-### Link
+Una lingua nuova si aggiunge qui; widget, selettore e `ListLocaleOptionsAction` la leggono da questo array senza altre modifiche.
 
-- Usare **sempre** `LaravelLocalization::localizeUrl($path)` per link verso pagine localizzate (path senza prefisso lingua).
+## Middleware
 
-```blade
-<a href="{{ LaravelLocalization::localizeUrl('/') }}">Home</a>
-<a href="{{ LaravelLocalization::localizeUrl('/events') }}">Events</a>
-<a href="{{ LaravelLocalization::localizeUrl('/login') }}">Login</a>
-```
+`laravel/bootstrap/app.php` registra gli alias del pacchetto: `localize` (`LaravelLocalizationRoutes`), `localizationRedirect`
+(`LaravelLocalizationRedirectFilter`), `localeSessionRedirect`, `localeCookieRedirect`, `localeViewPath`. Inoltre
+`redirectGuestsTo` manda gli ospiti a `LaravelLocalization::localizeUrl('/auth/login')`.
 
-### Form
+Le pagine pubbliche (Folio) montano `LaravelLocalizationRoutes`, `LocaleSessionRedirect` e `LaravelLocalizationRedirectFilter`
+(non `LocaleCookieRedirect` ne' `LaravelLocalizationViewPath`): dettagli in [folio-volt-localization.md](folio-volt-localization.md).
 
-- L’**action** di form (login, register, submit) deve essere localizzata, altrimenti il redirect cambia POST in GET e la validazione usa il locale sbagliato.
+## Chi imposta la lingua della richiesta
 
-```blade
-<form action="{{ LaravelLocalization::localizeUrl('/login') }}" method="POST">
-```
+| Punto | Cosa fa |
+|---|---|
+| `Modules\Cms\Http\Middleware\SetFolioLocale` | pagine Folio: primo segmento dell'URL se supportato, altrimenti `users.lang` dell'utente se supportata, altrimenti `app.locale`; imposta sia `app()->setLocale()` sia `LaravelLocalization::setLocale()` |
+| `Modules\Lang\Providers\RouteServiceProvider::registerLang()` | se il primo segmento e' una lingua di `supportedLocales`, chiama `app()->setLocale()`; la lingua, quando c'e', e' sempre il primo segmento |
+| `Modules\Xot\Http\Middleware\SetPanelLocaleFromUserMiddleware` | pannelli Filament (URL senza prefisso): lingua salvata in `users.lang`, se supportata; anche per le richieste Livewire |
+| `Modules\Lang\Filament\Actions\LocaleSwitcherRefresh` | azione dell'editor: salva `locale` in sessione e chiama `App::setLocale()` |
+| `Modules\UI\Http\Middleware\SetLocale` | accetta solo `it`/`en` (lista fissa), salva in sessione; non e' il punto di riferimento per le lingue del sito |
 
-### Language selector
+Chiamare `app()->setLocale()` senza `LaravelLocalization::setLocale()` lascia `localizeUrl()`, `getLocalizedURL()` e `getCurrentLocale()`
+sulla lingua precedente: tutti i link finiscono sulla lingua di default.
 
-- Per mantenere la pagina corrente e solo cambiare lingua: **`LaravelLocalization::getLocalizedURL($localeCode, null, [], true)`** (il quarto parametro `true` forza il locale in URL anche se `hideDefaultLocaleInURL` è true).
-- Locale corrente: **`LaravelLocalization::getCurrentLocale()`**.
-- Elenco lingue: **`LaravelLocalization::getSupportedLocales()`** o **`getLocalesOrder()`**.
+## Regole d'uso
 
-## Come aiuta il modulo Lang
+1. **Link a pagine localizzate**: `LaravelLocalization::localizeUrl('/percorso')`, con il percorso senza prefisso. Mai costruire `'/'.$locale.'/...'` a mano.
+2. **Action dei form** (login, registrazione, submit): localizzate (`localizeUrl('/login')`). Una POST verso un URL senza prefisso viene reindirizzata e diventa GET.
+3. **Lingua corrente**: `LaravelLocalization::getCurrentLocale()`, non `app()->getLocale()`.
+4. **Selettore di lingua**: `LaravelLocalization::getLocalizedURL($code, null, [], true)`; il quarto argomento forza il prefisso anche quando `hideDefaultLocaleInURL` e' `true`.
+5. **Mai** una rotta o un controller solo per cambiare lingua: lo fa il widget (`LanguageSwitcherWidget`), che torna sulla stessa pagina nella lingua scelta.
+6. **Test**: `refreshApplicationWithLocale($locale)` e richieste con prefisso (`$this->get('/en/')`).
+7. **Cache delle rotte**: con le rotte tradotte del pacchetto la cache e' `php artisan route:trans:cache` (e `route:trans:clear`, `route:trans:list {locale}`), non `route:cache`; vale solo se si usano rotte tradotte con `LaravelLocalizationRoutes`.
 
-- Il modulo Lang **dipende** da mcamara/laravel-localization.
-- Fornisce componenti Livewire/Blade per lo switcher lingua e le traduzioni.
-- Tutte le view e i componenti che generano link devono usare gli helper sopra; non costruire URL a mano con `app()->getLocale()`.
+## Errori comuni
 
-## Come aiuta Cms (Folio + Volt)
-
-- **FolioVoltServiceProvider** legge `config('laravellocalization.supportedLocales')` e registra Folio con **`->uri($locale)`** per ogni lingua.
-- Middleware: **LocaleSessionRedirect**, **LaravelLocalizationRedirectFilter**; per ogni request viene impostato **`app()->setLocale($locale)`**.
-- Le pagine pubbliche sono quindi sempre sotto `/{locale}/...`. Qualsiasi link da componenti (header, footer, blocchi) deve usare **`LaravelLocalization::localizeUrl($path)`**.
-
-## Come aiuta Meetup (modulo e tema)
-
-- Link a eventi, community, sponsors, login, register: **`LaravelLocalization::localizeUrl('/events')`** ecc.
-- Header e footer: tutti i link già localizzati con `localizeUrl()`; language switcher con **getLocalizedURL($code, null, [], true)**.
-- Nuovi link aggiunti in futuro devono seguire lo stesso pattern.
-
-## Come aiuta User (auth)
-
-- Form di login, registrazione, logout: **action** localizzata (es. `LaravelLocalization::localizeUrl('/login')`, `localizeUrl('/logout')`).
-- Redirect dopo login/registrazione: verso URL localizzati.
-
-## Test
-
-- Nei test il package non conosce la rotta (bootstrap prima della request). Usare **refreshApplicationWithLocale($locale)**:
-  - **putenv(LaravelLocalization::ENV_ROUTE_KEY . '=' . $locale)** prima della request.
-  - **tearDown** (o afterEach) per pulire l’env.
-- Effettuare le request con prefisso locale (es. `$this->get('/en/')`).
-
-Vedi README del package per PHPUnit e Pest.
+- Link senza prefisso su una pagina che esiste solo sotto `/{lingua}`: 404 (le pagine Folio esistono solo con prefisso; il redirect da `/events` a `/it/events` lo fa Cms, vedi [folio-volt-localization.md](folio-volt-localization.md)).
+- Elenco delle lingue scritto a mano in un selettore: usare `supportedLocales`.
+- `config/laravellocalization.php` con una voce che non e' un array: `ThemeComposer::languages()` lancia `InvalidArgumentException` con il codice della lingua sbagliata.
 
 ## Riferimenti
 
-- [Regola progetto](../../../../.cursor/rules/laravel-localization-mcamara.mdc)
-- [Memoria](../../../../.cursor/memories/laravel-localization-mcamara.md)
-- [README mcamara/laravel-localization](https://github.com/mcamara/laravel-localization)
-- [Meetup localization standard](../../Meetup/docs/localization-standard.md)
-- [Themes/Meetup localization standard](../../../Themes/Meetup/docs/localization-standard.md)
+- Pacchetto: <https://github.com/mcamara/laravel-localization>
+- Routing delle pagine: [`Modules/Cms/docs/folio-routing-locale.md`](../../Cms/docs/folio-routing-locale.md)
+- Decisione: [ADR 0001](adr/0001-cambio-lingua-con-url-localizzato.md)

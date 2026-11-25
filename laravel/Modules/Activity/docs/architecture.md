@@ -1,260 +1,67 @@
 ---
-title: "Activity: architettura (diagramma non allineato al codice)"
-type: reference
-status: stale
+title: "Activity: architettura del modulo"
+type: architecture
+status: active
 module: Activity
-updated: 2026-10-14
-tags: [activity, architecture, stale]
-qmd: "activity architettura diagramma repositories services projections stale"
+created: 2026-11-25
+updated: 2026-11-25
+qmd: "activity architettura modelli actions adapters contracts provider pannello filament connessione activity UserContract policy"
+related:
+  - ./README.md
+  - ./actions.md
+  - ./database.md
 ---
 
-> Nota 2026-10-14 (docs-audit): il diagramma elenca Repositories, Services, Commands e Projections che non esistono in `app/` (cartelle reali: Actions, Adapters, Console, Contracts, Datas, Enums, Events, Exceptions, Filament, Http, Listeners, Models, Providers, Traits, View; `Support` assente, riverificato 2026-10-23). Il modulo non ha un layer Services (regola no-services). Fonte corretta: [README.md](./README.md) e [wiki/concepts/queueable-action-execute-entrypoint.md](./wiki/concepts/queueable-action-execute-entrypoint.md). Contenuto non riscritto, verificare prima di usarlo.
+# Activity: architettura
 
-# Architecture Documentation
-## Activity Module Architecture
+Fatti verificati sul codice il 2026-11-25. Dove una cosa non e' provata e' scritto "non verificato".
 
-### System Overview
+## Livelli
 
-The Activity module provides a comprehensive activity logging and event sourcing system for the Laraxot ecosystem. This document describes the module's architecture, components, and design patterns.
+| Livello | Dove | Cosa |
+|---|---|---|
+| Modelli | `app/Models` | `Activity` (estende `Spatie\Activitylog\Models\Activity`, connessione `activity`, tabella `activity_log`), `StoredEvent` (estende `EloquentStoredEvent`, `stored_events`), `Snapshot` (estende `EloquentSnapshot`, `snapshots`), `BaseModel` (astratto, su `XotBaseModel`), `TestModel` |
+| Logica | `app/Actions` (30 file) | Spatie Queueable Action; catalogo e contratti sintetici in [actions.md](./actions.md). Nessun `Service` |
+| DTO | `app/Datas` | Spatie Data: `ActivityConfigData`, `Log*Data` del log viewer |
+| Adapter e contratti | `app/Adapters`, `app/Contracts`, `app/Models/Contracts` | facciata di compatibilita' sopra le Action, vedi sotto |
+| Ingressi | `app/Listeners`, `Providers/EventServiceProvider.php` | solo `Login` e `Logout` di Laravel Auth |
+| Pannello | `app/Filament`, `Providers/Filament/AdminPanelProvider.php` | vedi [filament-admin.md](./filament-admin.md) |
+| Policy | `app/Models/Policies` | `ActivityPolicy`, `SnapshotPolicy`, `StoredEventPolicy` (per permesso) e `ActivityBasePolicy` (astratta) |
+| Trait | `app/Traits` | `ActivityScopes`, `HasEvents`, `HasSnapshots` |
+| Eccezioni, enum | `app/Exceptions`, `app/Enums` | `InvalidLogFileException`, `LogLevelEnum` (EMERGENCY ... DEBUG) |
 
-### Core Components
+Il modulo non ha `Http/Controllers` utili (solo `.gitkeep`), nessuna rotta attiva (`routes/web.php` e `routes/api.php` contengono solo commenti), nessun widget e nessuna cartella Livewire.
 
-Vedi [wiki/concepts/queueable-action-execute-entrypoint.md](wiki/concepts/queueable-action-execute-entrypoint.md) per la mappa Actions attuale (no Services layer).
+## Provider e dipendenze
 
-```
-Activity Module Architecture
-┌─────────────────────────────────────────────────────────────┐
-│                     Activity Module                          │
-├─────────────────────────────────────────────────────────────┤
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
-│  │   Models     │  │ Repositories │  │  Services    │       │
-│  │              │  │              │  │              │       │
-│  │ ActivityLog  │  │ ActivityRepo │  │ ActivitySvc  │       │
-│  │ StoredEvent  │  │ EventRepo    │  │ EventSvc     │       │
-│  │ Snapshot     │  │ SnapRepo     │  │ SnapSvc      │       │
-│  └──────────────┘  └──────────────┘  └──────────────┘       │
-├─────────────────────────────────────────────────────────────┤
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
-│  │   Events     │  │   Commands   │  │  Projections │       │
-│  │              │  │              │  │              │       │
-│  │ DomainEvent  │  │ CreateAct    │  │ ActivityView │       │
-│  │ StoredEvt    │  │ UpdateAct    │  │ EventView    │       │
-│  └──────────────┘  └──────────────┘  └──────────────┘       │
-├─────────────────────────────────────────────────────────────┤
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
-│  │   Policies   │  │   Actions    │  │   Pages      │       │
-│  │              │  │              │  │              │       │
-│  │ ActPolicy    │  │ LogAct       │  │ ActListPage  │       │
-│  │ EvtPolicy    │  │ RevAct       │  │ EvtListPage  │       │
-│  └──────────────┘  └──────────────┘  └──────────────┘       │
-└─────────────────────────────────────────────────────────────┘
-```
+- `Providers\ActivityServiceProvider` estende `XotBaseServiceProvider` (`$name = 'Activity'`). Nel `boot()` registra la config (`mergeConfigFrom` su `activity`) e i componenti Blade, poi chiama `ApplyActivityConfigAction`. **Non** monta Folio: il mount delle pagine e' del modulo che possiede Folio, vedi [la story](./bmad/stories/folio-routing-centralization.story.md).
+- `Providers\Filament\AdminPanelProvider` estende `XotBasePanelProvider` con `$module = 'Activity'`.
+- `module.json` richiede `Xot` e `User`. Pacchetti: `spatie/laravel-activitylog` 5.1.5, `spatie/laravel-event-sourcing` 7.15.3 (`laravel/composer.lock`), `spatie/laravel-queueable-action`, `spatie/laravel-schemaless-attributes`.
+- Le firme pubbliche accettano `Modules\Xot\Contracts\UserContract` e non la classe concreta `User`: servono a far funzionare gli utenti di un modulo User diverso, classe sorella e non sottoclasse.
 
-### Data Flow
+## Connessione `activity`
 
-## Quality Gates
-✅ PHPStan L10: Executed (2026-07-28)# Architecture Documentation
+I tre modelli dichiarano `$connection = 'activity'`. La connessione non e' scritta in `config/database.php`: la aggiunge `TenantServiceProvider::registerDB()` come copia della connessione di default (stesso database; vedi `laravel/CLAUDE.md`, "Database config Laravel 12"). `StoredEvent` e `Snapshot` in ambiente `testing` ripiegano sulla connessione di default (vedi [testing.md](./testing.md)).
 
-## Activity Module Architecture
+## Adapter e contratti duplicati
 
-### System Overview
+Esistono due livelli di facciata sopra le stesse Action, entrambi documentati qui perche' creano confusione:
 
-The Activity module provides a comprehensive activity logging and event sourcing system for the Laraxot ecosystem. This document describes the module's architecture, components, and design patterns.
+- `Actions\ActivityLogger` (scrive e interroga direttamente, ~290 righe) e `Adapters\ActivityLogger` (delega alle Action `Query/*` e `ActivityMaintenanceAction`). Stesso nome, due namespace, API quasi uguale (`log`, `created`, `updated`, `deleted`, `login`, `logout`, `custom`, `getUserActivities`, `getModelActivities`, `getByType`, `getRecent`, `cleanOld`, `getStatistics`).
+- Tre interfacce `ActivityRecorder*`: `Contracts\ActivityRecorderContract` e `Models\Contracts\ActivityRecorderContract` (stessa firma `record(string, int|string, string, array)` + `getLog`) e `Contracts\ActivityRecorderInterface` (con `int $modelId`). L'unica implementazione e' `Adapters\ActivityRecorder` (implementa `Contracts\ActivityRecorderContract` e delega a `RecordSubjectActivityAction` / `GetSubjectActivityLogAction`).
+- Fuori dal modulo non c'e' nessun chiamante di `Adapters\*`, `LogModel*Action` e `LogUser*Action` (cercato in `Modules/*/app`): i moduli vicini usano `activity()` di Spatie. Chi usa davvero le classi del modulo: `Gdpr\DeleteAccountAction` (modello `Activity`), `Meetup\Models\Event` (trait `HasEvents`, `HasSnapshots`, modelli `StoredEvent`, `Snapshot`), `User\Filament\Widgets\Auth\RegisterWidget` (`IsActivityLogSchemaWritableAction`).
 
-### Core Components
+Consolidare i duplicati e' debito aperto, vedi [roadmap.md](./roadmap.md).
 
-Vedi [wiki/concepts/queueable-action-execute-entrypoint.md](wiki/concepts/queueable-action-execute-entrypoint.md) per la mappa Actions attuale (no Services layer).
+## Policy e autorizzazione
 
-```
-Activity Module Architecture
-┌─────────────────────────────────────────────────────────────┐
-│                     Activity Module                          │
-├─────────────────────────────────────────────────────────────┤
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
-│  │   Models     │  │ Repositories │  │  Services    │       │
-│  │              │  │              │  │              │       │
-│  │ ActivityLog  │  │ ActivityRepo │  │ ActivitySvc  │       │
-│  │ StoredEvent  │  │ EventRepo    │  │ EventSvc     │       │
-│  │ Snapshot     │  │ SnapRepo     │  │ SnapSvc      │       │
-│  └──────────────┘  └──────────────┘  └──────────────┘       │
-├─────────────────────────────────────────────────────────────┤
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
-│  │   Events     │  │   Commands   │  │  Projections │       │
-│  │              │  │              │  │              │       │
-│  │ DomainEvent  │  │ CreateAct    │  │ ActivityView │       │
-│  │ StoredEvt    │  │ UpdateAct    │  │ EventView    │       │
-│  └──────────────┘  └──────────────┘  └──────────────┘       │
-├─────────────────────────────────────────────────────────────┤
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
-│  │   Policies   │  │   Actions    │  │   Pages      │       │
-│  │              │  │              │  │              │       │
-│  │ ActPolicy    │  │ LogAct       │  │ ActListPage  │       │
-│  │ EvtPolicy    │  │ RevAct       │  │ EvtListPage  │       │
-│  └──────────────┘  └──────────────┘  └──────────────┘       │
-└─────────────────────────────────────────────────────────────┘
-```
+- `ActivityPolicy`, `SnapshotPolicy`, `StoredEventPolicy` estendono `User\Models\Policies\UserBasePolicy` e rispondono per permesso Spatie: `activity.*`, `snapshot.*`, `stored_event.*` (`view`, `create`, `update`, `delete`, `restore`, `forceDelete`; `viewAny` solo in `ActivityPolicy`, e' commentato nelle altre due).
+- `ActivityBasePolicy::before()` darebbe bypass a `super-admin` e `activity::admin`, ma nessuna policy concreta la estende e `UserBasePolicy` non ha `before()`: il bypass `activity::admin` non e' applicato (non verificato a runtime).
+- Il log viewer ha una regola separata: [log-viewer.md](./log-viewer.md).
+- Matrice per attori: [manuale-uso-attori.md](./manuale-uso-attori.md).
 
-### Data Flow
+## Configurazione
 
-## Quality Gates
-✅ PHPStan L10: Executed (2026-07-28)
-# Architecture Documentation
-
-## Activity Module Architecture
-
-### System Overview
-
-The Activity module provides a comprehensive activity logging and event sourcing system for the Laraxot ecosystem. This document describes the module's architecture, components, and design patterns.
-
-### Core Components
-
-Vedi [wiki/concepts/queueable-action-execute-entrypoint.md](wiki/concepts/queueable-action-execute-entrypoint.md) per la mappa Actions attuale (no Services layer).
-
-```
-Activity Module Architecture
-┌─────────────────────────────────────────────────────────────┐
-│                     Activity Module                          │
-├─────────────────────────────────────────────────────────────┤
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
-│  │   Models     │  │ Repositories │  │  Services    │       │
-│  │              │  │              │  │              │       │
-│  │ ActivityLog  │  │ ActivityRepo │  │ ActivitySvc  │       │
-│  │ StoredEvent  │  │ EventRepo    │  │ EventSvc     │       │
-│  │ Snapshot     │  │ SnapRepo     │  │ SnapSvc      │       │
-│  └──────────────┘  └──────────────┘  └──────────────┘       │
-├─────────────────────────────────────────────────────────────┤
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
-│  │   Events     │  │   Commands   │  │  Projections │       │
-│  │              │  │              │  │              │       │
-│  │ DomainEvent  │  │ CreateAct    │  │ ActivityView │       │
-│  │ StoredEvt    │  │ UpdateAct    │  │ EventView    │       │
-│  └──────────────┘  └──────────────┘  └──────────────┘       │
-├─────────────────────────────────────────────────────────────┤
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
-│  │   Policies   │  │   Actions    │  │   Pages      │       │
-│  │              │  │              │  │              │       │
-│  │ ActPolicy    │  │ LogAct       │  │ ActListPage  │       │
-│  │ EvtPolicy    │  │ RevAct       │  │ EvtListPage  │       │
-│  └──────────────┘  └──────────────┘  └──────────────┘       │
-└─────────────────────────────────────────────────────────────┘
-```
-
-### Data Flow
-
-1. **Event Creation**: User actions trigger domain events
-2. **Event Storage**: Events persisted to `stored_events` table
-3. **Snapshot Creation**: Aggregates create snapshots for performance
-4. **Projection Update**: Read models updated via event handlers
-5. **Query Handling**: Projections queried for activity listings
-
-### Database Schema
-
-```sql
--- Activity Logs
-CREATE TABLE activity_log (
-    id BIGINT PRIMARY KEY,
-    log_name VARCHAR(255),
-    description TEXT,
-    subject_type VARCHAR(255),
-    subject_id BIGINT,
-    causer_type VARCHAR(255),
-    causer_id BIGINT,
-    properties JSON,
-    created_at TIMESTAMP,
-    updated_at TIMESTAMP
-);
-
--- Event Sourcing Tables
-CREATE TABLE stored_events (
-    id BIGINT PRIMARY KEY,
-    event_name VARCHAR(255),
-    aggregate_id VARCHAR(255),
-    aggregate_type VARCHAR(255),
-    event_data JSON,
-    created_at TIMESTAMP
-);
-
-CREATE TABLE snapshots (
-    id BIGINT PRIMARY KEY,
-    aggregate_id VARCHAR(255),
-    aggregate_type VARCHAR(255),
-    version INTEGER,
-    data JSON,
-    created_at TIMESTAMP
-);
-```
-
-### Design Patterns
-
-#### 1. Repository Pattern
-```php
-interface ActivityRepositoryInterface
-{
-    public function find(int $id): ?Activity;
-    public function findBySubject(string $type, int $id): Collection;
-    public function paginate(int $perPage): LengthAwarePaginator;
-}
-```
-
-#### 2. CQRS Pattern
-- **Command Side**: Handles mutations, validates business rules
-- **Query Side**: Optimized read models via projections
-
-#### 3. Event Sourcing
-```php
-class ActivityCreated extends ShouldBroadcast
-{
-    public function __construct(
-        public readonly string $activityType,
-        public readonly array $data
-    ) {}
-}
-```
-
-#### 4. Policy-Based Authorization
-```php
-class ActivityPolicy
-{
-    public function viewAny(User $user): bool
-    {
-        return $user->hasPermissionTo('activities.view');
-    }
-}
-```
-
-### Integration Points
-
-| Component | Integration | Purpose |
-|-----------|-------------|---------|
-| Xot | BaseRepository | Generic repository patterns |
-| User | UserModel | User activity tracking |
-| Filament | ActivityResource | Admin UI integration |
-| spatie/laravel-activitylog | Third-party | Alternative logging |
-| spatie/laravel-event-sourcing | Core dependency | Event sourcing engine |
-
-### Performance Considerations
-
-1. **Database Indexing**: Composite indexes on `subject_type`, `causer_type`
-2. **Caching**: Redis cache for activity counts (TTL: 5 minutes)
-3. **Pagination**: Cursor-based pagination for large datasets
-4. **Archiving**: Old events archived to separate table
-
-### Scaling Strategy
-
-- **Horizontal**: Read replicas for query-heavy operations
-- **Vertical**: Index optimization for write-heavy periods
-- **Event Sourcing**: Enables temporal querying and replay
-
-### Extension Points
-
-1. **Event Handlers**: Add custom handlers via service container
-2. **Projectors**: Create new projections for specialized views
-3. **Middleware**: Add activity logging middleware to routes
-4. **Custom Events**: Extend base event classes
-
-### Related Documentation
-
-- [Security](security.md)
-- [Quality](roadmap/quality.md)
-- [Performance](PERFORMANCE.md) _(target mancante, verificato 2026-10-14)_
-- [Testing](testing.md)
+- `config/config.php` (chiave `activity`): `name`, `description`, `icon`, `navigation` (`enabled`, `sort` 20), `routes`, `providers`.
+- Config Spatie nel progetto host: `laravel/config/activitylog.php` (`activity_model` = `Modules\Activity\Models\Activity`, `table_name` = `activity_log`) e `laravel/config/event-sourcing.php`; ogni tenant puo' avere i propri override in `config/local/<tenant>/{activitylog,event-sourcing}.php`.
+- Le impostazioni salvate dal tenant (pagina `SettingPage`) arrivano a `activitylog.*` tramite `ApplyActivityConfigAction`, vedi [activity-logging.md](./activity-logging.md).

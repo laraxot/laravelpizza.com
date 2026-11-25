@@ -265,7 +265,7 @@ We use GitHub Projects to track progress:
 **A**: Create a Discussion in the "Component Design" category. Propose the component, explain use cases, and get feedback.
 
 ### Q: Where do I document my work?
-**A**: Update the component catalog (`Themes/Sixteen/docs/COMPONENT_CATALOG.md`) and add bidirectional links to the [Master Index](../docs/module-docs-index-2.md).
+**A**: Update the component catalog (`Themes/Sixteen/docs/COMPONENT_CATALOG.md`) and add bidirectional links to the [Master Index](../docs/module_docs_index.md).
 
 ### Q: How do I run tests?
 **A**: See the [Team Guide](../laravel/Themes/Sixteen/docs/DESIGN_COMUNI_TEAM_GUIDE.md#testing) for test commands and examples.
@@ -352,7 +352,7 @@ Maintain professional communication at all times.
 
 - [Back to Project Summary](../laravel/Themes/Sixteen/docs/DESIGN_COMUNI_PROJECT_SUMMARY.md)
 - [Back to Team Guide](../laravel/Themes/Sixteen/docs/DESIGN_COMUNI_TEAM_GUIDE.md)
-- [Back to Master Index](../docs/module-docs-index-2.md)
+- [Back to Master Index](../docs/MODULE_DOCS_INDEX.md)
 - [View Roadmap](../.planning/ROADMAP.md)
-- [Back to Master Index](../docs/module-docs-index-2.md)
+- [Back to Master Index](../docs/module_docs_index.md)
 - [View Roadmap](../.planning/roadmap.md)

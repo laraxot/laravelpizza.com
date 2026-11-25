@@ -16,7 +16,7 @@ use Spatie\QueueableAction\QueueableAction;
 /**
  * Dati dell'utente autenticato (identità, ruolo, permessi, impostazioni del profilo).
  *
- * @see Modules/UI/docs/contracts/get-user-data-action.md
+ * @see docs/contracts/get-user-data-action.md
  *
  * @contract docs/contracts/get-user-data-action.md
  */

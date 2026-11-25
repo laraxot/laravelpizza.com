@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
   "private": true,
   "type": "module",
   "scripts": {
@@ -16,8 +12,6 @@
     "tailwindcss": "^4.0.0",
     "vite": "^7.0.0"
   }
-<<<<<<< HEAD
-=======
     "private": true,
     "scripts": {
         "dev": "vite",
@@ -39,7 +33,4 @@
         "tippy.js": "^6.3.7",
         "vite": "^6.4.3"
     }
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
 }

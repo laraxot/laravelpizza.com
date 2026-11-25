@@ -1,38 +1,38 @@
 ---
-status: proposed
+status: proposed            # proposed | accepted | rejected | deprecated | superseded by NNNN
 date: YYYY-MM-DD
 decision-makers:
-qmd: "0000 template titolo problema risolto soluzione"
+qmd: "0000 template adr MADR harness NNNN-slug"
 ---
 
-<!-- MADR breve adattato al modulo. Scrivi un ADR solo per una decisione difficile da invertire, sorprendente e frutto di un trade-off reale. -->
+<!-- File: docs/adr/NNNN-titolo-con-trattini.md · formato MADR breve (harness).
+     Il basename DEVE iniziare con NNNN- (es. 0001-...). Eccezioni: README.md, INDEX.md, 0000-template.md.
+     Scrivi un ADR solo se la decisione è difficile da invertire, sorprendente e frutto di un trade-off reale. -->
 
 # <!-- Titolo: il problema risolto e la soluzione scelta -->
 
 ## Context and Problem Statement
 
-<!-- Fatti verificabili e domanda decisionale. -->
+<!-- 2-3 frasi. Chiudi con la domanda a cui la decisione risponde. -->
 
 ## Decision Drivers
 
-- <!-- vincolo, rischio o obiettivo -->
+- <!-- forza o vincolo che pesa sulla scelta -->
 
 ## Considered Options
 
-- <!-- opzione seria 1 -->
-- <!-- opzione seria 2 -->
+- <!-- opzione 1 -->
+- <!-- opzione 2 -->
 
 ## Decision Outcome
 
-Scelta: **<!-- opzione -->**, perché <!-- driver -->.
+Scelta: **<!-- opzione -->**, perché <!-- driver che la giustifica -->.
 
 ### Consequences
 
-- Buono, perché <!-- effetto -->
-- Cattivo, perché <!-- costo o debito -->
+- Buono, perché <!-- … -->
+- Cattivo, perché <!-- … -->
 
 ### Confirmation
 
-<!-- Test Pest, PHPStan, guard source-level o review ripetibile. La presenza dell'ADR non prova l'implementazione. -->
-
-<!-- Collegare story BMAD owner-local; lock prima dell'edit; qmd update dopo. -->
+<!-- Come si controlla che il codice rispetti la decisione: un test, un controllo automatico, una voce di revisione. -->

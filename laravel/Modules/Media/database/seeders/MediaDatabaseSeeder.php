@@ -14,9 +14,7 @@ class MediaDatabaseSeeder extends Seeder
     public function run(): void
     {
         if ($this->command !== null) {
-
             $this->command->info('MediaDatabaseSeeder: entity seeders…');
-
         }
 
         $this->call([
@@ -26,9 +24,7 @@ class MediaDatabaseSeeder extends Seeder
         ]);
 
         if ($this->command !== null) {
-
             $this->command->info('MediaDatabaseSeeder: completato.');
-
         }
     }
 }

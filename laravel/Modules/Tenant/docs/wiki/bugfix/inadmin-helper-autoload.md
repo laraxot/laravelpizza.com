@@ -40,7 +40,7 @@ As a result, calling `inAdmin()` directly can break Composer automation.
 ## Files changed
 
 - `Modules/Tenant/app/Services/Config/Resolvers/MorphMapConfigResolver.php` - Replaced `getModuleModels()` with direct action call
-- `Modules/Tenant/app/Actions/Models/ResolveTenantModelClassAction.php` - Replaced `getModuleModels()` with direct action call
+- `Modules/Tenant/app/Actions/Models/GetTenantModelClassAction.php` - Replaced `getModuleModels()` with direct action call
 
 ## Solution Details
 

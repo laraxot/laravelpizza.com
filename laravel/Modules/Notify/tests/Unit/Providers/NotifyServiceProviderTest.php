@@ -7,11 +7,19 @@ namespace Modules\Notify\Tests\Unit\Providers;
 use Illuminate\Support\Facades\Mail;
 use Modules\Notify\Providers\NotifyServiceProvider;
 use Modules\Notify\Tests\TestCase;
+<<<<<<< HEAD
 use Modules\Tenant\Actions\Config\ResolveTenantConfigValueAction;
 
 uses(TestCase::class);
 test('notify service provider boot sets fallback recipient when configured', function () {
     app()->instance(ResolveTenantConfigValueAction::class, new class
+=======
+use Modules\Tenant\Actions\Config\GetTenantConfigValueAction;
+
+uses(TestCase::class);
+test('notify service provider boot sets fallback recipient when configured', function () {
+    app()->instance(GetTenantConfigValueAction::class, new class
+>>>>>>> laraxot/dev
     {
         /**
          * @param  string|int|array<string, mixed>|null  $default
@@ -30,7 +38,11 @@ test('notify service provider boot sets fallback recipient when configured', fun
 });
 
 test('notify service provider boot skips alwaysTo when fallback is missing', function () {
+<<<<<<< HEAD
     app()->instance(ResolveTenantConfigValueAction::class, new class
+=======
+    app()->instance(GetTenantConfigValueAction::class, new class
+>>>>>>> laraxot/dev
     {
         /**
          * @param  string|int|array<string, mixed>|null  $default

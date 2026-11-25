@@ -12,7 +12,7 @@ related:
   - ./model-policy-laravel-contract.md
   - ../../ponytail-audit-over-engineering.md
   - ../../../../../../docs/wiki/concepts/model-policy-laravel-contract.md
-  - ../../../../../../docs/wiki/concepts/sacred-artifacts-never-delete.md
+  - ../../../../../../bashscripts/ai/wiki/concepts/modules-structure-rules.md#sacred-artifacts-never-delete
 ---
 
 # Ripristino policy Job — incidente ponytail
@@ -42,6 +42,6 @@ Stato attuale: **16** file in `app/Models/Policies/` (15 modello + `JobBasePolic
 
 ## Prevenzione
 
-- Hub progetto: [sacred-artifacts-never-delete.md](../../../../../../docs/wiki/concepts/sacred-artifacts-never-delete.md)
+- Hub progetto: [modules-structure-rules.md#sacred-artifacts-never-delete](../../../../../../bashscripts/ai/wiki/concepts/modules-structure-rules.md#sacred-artifacts-never-delete)
 - Guard: `bash bashscripts/tools/guard-model-policy-delete.sh`
 - Finding J1 rimosso da [ponytail-audit-over-engineering.md](../../ponytail-audit-over-engineering.md)

@@ -1,0 +1,86 @@
+---
+qmd: "job sync marker repair story"
+issues: []
+discussions: []
+title: "Job: marcatori di conflitto committati dal sync in un test"
+type: story
+scope: module:Job
+module: Job
+story_id: "JOB-SYNC-MARKERS"
+slug: job-sync-marker-repair
+status: review
+created: 2026-11-24
+updated: 2026-11-24
+tags: [sync, git, conflitti, test]
+related:
+  - "../conflicts.md"
+  - "../../../Xot/docs/lessons/module-sync-merge-conflicts.md"
+---
+# Job: marcatori di conflitto committati dal sync in un test
+
+## Context and Problem Statement
+
+Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
+
+## Decision Drivers
+
+- Richiesta utente / acceptance criteria della story
+- Vincoli BMAD, second brain, Pest gate e dati sacri
+
+## Considered Options
+
+- Status quo (non fare)
+- Implementare come descritto nel Decision Outcome
+
+## Decision Outcome
+
+Scelta: **implementare**, perché i driver sopra.
+
+## Obiettivo
+
+`tests/Unit/Services/ScheduleServiceTest.php` conteneva marcatori annidati committati da `merge_remote_repo_2.sh` (PHP non valido: PHPStan non parte
+e Pest non carica il file).
+
+## Perimetro
+
+Solo `laravel/Modules/Job/tests/Unit/Services/ScheduleServiceTest.php`.
+
+## File, scopo e risoluzione
+
+| File | Scopo | Risoluzione | Righe scartate |
+|---|---|---|---|
+| `tests/Unit/Services/ScheduleServiceTest.php` | verifica per riflessione che `Modules\Job\Services\ScheduleService` abbia `getActives`, `clearCache`, `getFromCache` (privato), la proprieta' `model` e il namespace giusto | un blocco: i due lati sono lo stesso test, uno con `use Modules\Job\Tests\TestCase` + `uses(TestCase::class)`, l'altro con `uses(\Modules\Job\Tests\TestCase::class)`; tenuta la forma con l'import | `uses(\Modules\Job\Tests\TestCase::class);` (stesso effetto) |
+
+`ScheduleService` esiste ancora in `app/Services/ScheduleService.php`, quindi il test ha ancora un bersaglio. `docs/scopo.md` propone di riscriverlo sulle Action
+superstiti o cancellarlo: decisione a parte, non di questa story.
+
+## Nota di processo
+
+All'avvio della lane i marcatori risultavano gia' tolti nel working tree (file modificati tra le 20:59:21 e le 21:00:15 del 24/11/2026 da un'altra
+passata, prima di qualsiasi scrittura di questa lane; `git diff HEAD` mostrava solo cancellazioni, cioe' il primo lato di ogni blocco). Questa lane non ha
+sovrascritto quel lavoro: ha verificato **ogni file** contro lo scopo (chiamanti, test, contratto) e contro il riferimento buono (commit root `6e32612c`),
+poi ha completato cio' che mancava (docblock `@see` nel formato di progetto, documentazione, verifica). Backup dello stato di partenza
+prima delle scritture: archivio nello scratchpad della sessione (18 file). Lo stato con i marcatori resta leggibile con `git show 6291f121d:<percorso>`.
+
+## Verifica
+
+- `grep -rlE '^(<<<<<<<|>>>>>>>|=======$)' Modules/Job --include='*.php'`: 0 file (prima 1).
+- `php -l`: nessun errore. `pest Modules/Job/tests/Unit/Services/ScheduleServiceTest.php`: 7 test verdi.
+- Il file e' un test: nessuna classe o metodo di produzione toccato, quindi nessun `@see` richiesto dal controllo di `18-struttura-file-php.md`.
+
+## Residui fuori perimetro
+
+- `Modules/Job/docs/contracts/clear-schedule-cache-action.md`: `ActionContractsAreCompleteTest` segnala che il docblock di `ClearScheduleCacheAction`
+  non contiene `@contract docs/contracts/clear-schedule-cache-action.md`, e che altri contratti Job hanno sezioni doppie (docs).
+
+
+### Consequences
+
+- Buono, perché chiude il gap descritto nel Context
+- Cattivo, perché richiede write-back docs, lock e quality gate
+
+### Confirmation
+
+- `grep -rlE '^(<<<<<<<|>>>>>>>|=======$)' Modules/Job --include='*.php'`: 0 file (prima 1).
+- `php -l`: nessun errore. `pest Modules/Job/tests/Unit/Services/ScheduleServiceTest.php`: 7 test verdi.
+- Il file e' un test: nessuna classe o metodo di produzione toccato, quindi nessun `@see` richiesto dal controllo di `18-struttura-file-php.md`.

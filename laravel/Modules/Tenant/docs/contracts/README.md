@@ -4,6 +4,7 @@ type: index
 tags: [contracts, actions, interfaces]
 created: 2026-11-18
 updated: 2026-11-18
+qmd: "contratti tenant metodo harness contratto comportamento action input output invarianti effetti collaterali"
 ---
 
 # Contratti

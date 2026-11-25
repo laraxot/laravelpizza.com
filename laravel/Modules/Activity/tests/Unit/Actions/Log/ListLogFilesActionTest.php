@@ -4,8 +4,8 @@ declare(strict_types=1);
 use Illuminate\Support\Facades\File;
 use Modules\Activity\Actions\Log\ListLogFilesAction;
 use Modules\Activity\Datas\LogFileData;
-use Safe\Exceptions\FilesystemException;
 use Modules\Activity\Tests\TestCase;
+use Safe\Exceptions\FilesystemException;
 
 use function Safe\symlink;
 use function Safe\touch;

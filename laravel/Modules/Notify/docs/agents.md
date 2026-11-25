@@ -72,6 +72,7 @@ docs/
 - **Query**: Chiedi → consulta wiki → rispondi con citazioni
 - **Lint**: Verifica consistenza e cross-references
 
+<<<<<<< .merge_file_1RANWl
 ---
 
 title: "agents"
@@ -94,6 +95,8 @@ discussions: []
 - [Task: nfr-assess](./.agents/docs/main-rules/task-nfr-assess.md)
 
 ---
+=======
+>>>>>>> .merge_file_Ev2C5C
 ## Reusable Tasks
 **See also:**
 - [CLAUDE.md](./claude.md)

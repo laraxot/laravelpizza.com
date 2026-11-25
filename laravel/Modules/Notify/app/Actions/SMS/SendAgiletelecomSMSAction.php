@@ -10,6 +10,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Azione per l'invio di SMS tramite Agile Telecom.
+ *
+ * @see docs/contracts/send-agiletelecom-sms-action.md
+ *
+ * @contract docs/contracts/send-agiletelecom-sms-action.md
  */
 class SendAgiletelecomSMSAction implements SmsActionContract
 {

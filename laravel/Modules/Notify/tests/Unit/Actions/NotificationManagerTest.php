@@ -15,8 +15,6 @@ use Modules\Notify\Models\Notification;
 use Modules\Notify\Models\NotificationTemplate;
 use Modules\Notify\Tests\TestCase;
 
-use function Safe\class_parents;
-
 uses(TestCase::class);
 function actionsNotificationManagerActiveTemplate(string $code): NotificationTemplate
 {

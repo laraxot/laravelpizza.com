@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Media {{TYPE^}} LLM Wiki Agent Instructions"
 module: "Media"
 type: concept
@@ -147,12 +149,12 @@ Related:
 ## Related Documentation
 
 - [Project Wiki Integration](../../docs/wiki/README.md)
-- [Project Wiki Agent Instructions](../../docs/wiki/agents-2.md)
+- [Project Wiki Agent Instructions](agents.md)
 - [Module Documentation](../README.md)
 
 ---
 
-<!-- Merged from agents-2.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from AGENTS.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
 title: "Agent instructions"
@@ -305,5 +307,21 @@ Related:
 ## Related Documentation
 
 - [Project Wiki Integration](../../docs/wiki/README.md)
-- [Project Wiki Agent Instructions](../../docs/wiki/agents-2.md)
+- [Project Wiki Agent Instructions](agents.md)
+- [Module Documentation](../README.md)
+---
+- [Module Documentation](../README.md)
+
+## Contenuto fuso da `agents.md`
+
+- [Project Wiki Integration](../../docs/wiki/README.md)
+- [Project Wiki Agent Instructions](agents.md)
+- [Module Documentation](../README.md)
+
+<!-- Merged from agents-2.md, which collided with this file on case-insensitive filesystems. -->
+
+- [Project Wiki Integration](../../docs/wiki/README.md)
+- [Project Wiki Agent Instructions](agents.md)
+- [Module Documentation](../README.md)
+---
 - [Module Documentation](../README.md)

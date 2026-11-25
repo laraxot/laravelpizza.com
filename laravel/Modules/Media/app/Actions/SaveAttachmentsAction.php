@@ -16,7 +16,7 @@ use function Safe\unlink;
 /**
  * Copia gli allegati caricati nelle collezioni Media Library del record e ne salva i percorsi sul record.
  *
- * @see Modules/Media/docs/contracts/save-attachments-action.md
+ * @see docs/contracts/save-attachments-action.md
  *
  * @contract docs/contracts/save-attachments-action.md
  */

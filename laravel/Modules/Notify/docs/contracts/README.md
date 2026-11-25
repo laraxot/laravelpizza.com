@@ -1,4 +1,5 @@
 ---
+<<<<<<< .merge_file_OUEJOj
 title: "Contratti"
 type: index
 tags: [contracts, actions, interfaces]
@@ -15,6 +16,8 @@ type: index
 tags: [contracts, actions, interfaces, notify]
 created: 2026-11-18
 updated: 2026-11-24
+=======
+>>>>>>> .merge_file_nwMME2
 title: "Contratti del modulo Notify"
 type: index
 module: Notify
@@ -47,6 +50,10 @@ posta in arrivo) e l'invio multicanale da template. Con un group Pest si lancia
 
 Quando leggerli: prima di chiamare, modificare o imitare una di queste Action, e prima di aggiungere un fornitore o un canale.
 Le interfacce di `app/Contracts` (SMS, Telegram, WhatsApp, push) non hanno ancora un documento qui.
+<<<<<<< .merge_file_OUEJOj
+=======
+
+>>>>>>> .merge_file_nwMME2
 Formato e regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`.
 
 ## Contratto di comportamento di un'Action
@@ -63,11 +70,14 @@ Un file per Action, nome in kebab-case della classe (`create-ticket-action.md`),
 ## Non fa
 ```
 
+<<<<<<< .merge_file_OUEJOj
 Il docblock dell'Action rimanda al file con la riga `Contratto di comportamento: docs/contracts/<file>.md`.
 Chi cambia il comportamento aggiorna il contratto nello stesso commit.
 
 ## Contratti
 
+=======
+>>>>>>> .merge_file_nwMME2
 Il docblock dell'Action rimanda al file con il marker `@contract docs/contracts/<file>.md`, quello verificato dai test; la
 riga legacy `Contratto di comportamento: docs/contracts/<file>.md` può restare. Chi cambia il comportamento aggiorna il
 contratto nello stesso commit.
@@ -83,6 +93,7 @@ contratto nello stesso commit.
 
 - [INDEX](index.md) — tabella operativa operazione, contratto, classe, invarianti; copertura e backlog.
 - [Template di contratto](template.md) — scheletro con le sei sezioni e la tabella degli invarianti, da copiare per una nuova Action.
+<<<<<<< .merge_file_OUEJOj
 - [SendNotificationAction](send-notification-action.md) — invio da template su `mail`, `database`, `sms`; 4 invarianti, debito (test da correggere).
 - [ModelWithStatusContract](modelwithstatuscontract.md) — rinvio all'interfaccia di Xot `Modules\Xot\Contracts\ModelWithStatusContract` (gestione degli stati via Spatie Model Status); non è un contratto di comportamento di Notify.
 
@@ -90,6 +101,9 @@ contratto nello stesso commit.
 
 - [INDEX](index.md) — tabella operativa operazione, contratto, classe, invarianti; oggi censisce solo `modelwithstatuscontract.md`.
 - [Template di contratto](template.md) — scheletro con le sei sezioni e la tabella degli invarianti, da copiare per una nuova Action.
+=======
+
+>>>>>>> .merge_file_nwMME2
 Un contract descrive il comportamento promesso da una Action che invia comunicazioni ai destinatari (dati personali: email, telefono) o scrive lo stato delle notifiche.
 Standard: `Modules/Xot/docs/contracts/contract-authoring-standard.md`; governance: `Modules/Xot/docs/adr/0012-behavioral-contract-governance.md`.
 

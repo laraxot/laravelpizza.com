@@ -11,12 +11,10 @@ uses(TestCase::class);
 describe('EditUserWidget', function (): void {
     test('edit user widget can be instantiated', function (): void {
         new EditUserWidget;
-
     });
 
     test('edit user widget extends xot base widget', function (): void {
         Assert::assertSame(XotBaseSchemaWidget::class, get_parent_class(EditUserWidget::class));
-
     });
 
     test('edit user widget has type property', function (): void {

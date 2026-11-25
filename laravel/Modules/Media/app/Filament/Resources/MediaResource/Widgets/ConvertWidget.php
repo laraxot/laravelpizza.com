@@ -8,7 +8,7 @@ use FFMpeg\Format\Video\WebM;
 use Filament\Notifications\Notification;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use Modules\Media\Actions\Ffmpeg\ResolveMediaExporterAction;
+use Modules\Media\Actions\Ffmpeg\GetMediaExporterAction;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
@@ -72,7 +72,7 @@ class ConvertWidget extends XotBaseWidget
                 ->send();
         });
 
-        $formattedMedia = app(ResolveMediaExporterAction::class)->execute(
+        $formattedMedia = app(GetMediaExporterAction::class)->execute(
             $exportedMedia->toDisk($disk_mp4)
         )->inFormat($format);
         $formattedMedia->save($file_new);

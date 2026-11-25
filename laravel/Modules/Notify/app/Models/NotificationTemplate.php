@@ -11,12 +11,17 @@ use Modules\Notify\Actions\RenderNotificationTemplateStringAction;
 use Modules\Notify\Enums\NotificationTypeEnum;
 use Modules\Notify\Models\Traits\NotificationTemplateMutators;
 use Modules\Xot\Contracts\ProfileContract;
+use Modules\Xot\Models\Traits\HasCommonScopes;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Spatie\Translatable\HasTranslations;
 
 /**
  * Class NotificationTemplate.
+ *
+ * Gli scope comuni (active/inactive/...) arrivano da HasCommonScopes: niente copia inline.
+ *
+ * @see Modules/Notify/docs/analisi-metodi-duplicati-master.md
  *
  * @property string|null $name
  * @property string|null $code
@@ -56,6 +61,9 @@ use Spatie\Translatable\HasTranslations;
  */
 class NotificationTemplate extends BaseModel implements HasMedia
 {
+    /** @use HasCommonScopes<static> */
+    use HasCommonScopes;
+
     use HasTranslations;
     use NotificationTemplateMutators;
 

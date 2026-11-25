@@ -25,8 +25,8 @@ Invarianti senza un test individuato: `TENANT-NAME-INV-4`, `TENANT-SAVE-INV-4`.
 Action ad alto rischio senza contract (`laravel/Modules/Tenant/app/Actions/`):
 
 - `Json/CreateJsonFileByRecordAction.php`, `Json/UpdateJsonFileByRecordAction.php`, `Json/DeleteJsonFileByRecordAction.php` (scrivono e cancellano file di contenuto)
-- `Config/ResolveTenantConfigValueAction.php` (overlay della config; vedi ADR `tenant-config-is-resolved-by-action`)
-- `Models/ResolveTenantModelClassAction.php` (usa `SaveTenantConfigAction` e la morph map del tenant)
+- `Config/GetTenantConfigValueAction.php` (overlay della config; vedi ADR `tenant-config-is-resolved-by-action`)
+- `Models/GetTenantModelClassAction.php` (usa `SaveTenantConfigAction` e la morph map del tenant)
 - `Modules/GetTenantModulesAction.php`, `Config/GetTenantConfigPathAction.php`
 
 Totale Action in `app/Actions`: 19 file `.php`. Contract formali: 3.

@@ -12,6 +12,10 @@ use Webmozart\Assert\Assert;
 
 /**
  * Invia email raw via Mailtrap / driver SMTP configurato.
+ *
+ * @see docs/contracts/send-mailtrap-mail-action.md
+ *
+ * @contract docs/contracts/send-mailtrap-mail-action.md
  */
 class SendMailtrapMailAction
 {

@@ -177,6 +177,21 @@ identici al remoto; `commit-graph` rigenerato se `fsck` segnalava commit potati.
 
 Gate: `git fsck --connectivity-only` pulito su tutti; `git status` e HEAD invariati.
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+## Misura base_laravelpizza_fila5 (2026-11-25 16:30)
+
+Stesso obiettivo su questo clone (16 path in `gitmodules.ini`). Dettaglio in
+[0087-git-objects-slimming-independent-repos.story.md](0087-git-objects-slimming-independent-repos.story.md).
+
+Esito: **14/16 < 10000**. Bloccati: `Job` (`MERGE_HEAD`), `Notify` (`merge_remote_repo_2.sh` in corso, pack ~431 MB).
+Lezione: `gc --prune=now` a volte lascia pack con oggetti irraggiungibili (`prune-packable: 0`) → serve
+`repack -Ad` + `prune --expire=now`. Xot: tip remoto ≠ SHA locale → depth-1 via fetch fallisce; shallow locale su HEAD ok.
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 ## Correzione 2026-11-25 — `merge_remote_repo_2.sh` non e' deprecato
 
 L'utente usa `merge_remote_repo_2.sh` come strumento di sync principale e ha chiesto

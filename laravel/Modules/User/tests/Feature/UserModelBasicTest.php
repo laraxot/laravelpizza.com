@@ -14,7 +14,6 @@ describe('User Model Basic', function (): void {
     test('user model can be created', function (): void {
         /** @var TestCase $this */
         new User;
-
     });
 
     test('user model can access connection', function (): void {

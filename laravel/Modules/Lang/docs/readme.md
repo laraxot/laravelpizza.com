@@ -355,7 +355,7 @@ php -d memory_limit=-1 ./vendor/bin/phpstan analyse --level=max Modules/Lang
 ## Standard Rules & Workflow
 
 - [[BMAD Method](../../../../docs/wiki/concepts/bmad-method.md)]
-- [[Context Engineering](../../../../docs/wiki/concepts/context-engineering.md)]
+- [[Context Engineering](../../../../bashscripts/ai/wiki/concepts/context-token-optimization.md#context-engineering)]
 - [[LLM Wiki Governance](../../../../docs/wiki/concepts/llm-wiki-governance.md)]
 
 ---

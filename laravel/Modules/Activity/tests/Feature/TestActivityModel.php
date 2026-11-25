@@ -36,7 +36,7 @@ class TestActivityModel extends BaseModel
 
     protected $table = 'test_models';
 
-    /** @var list<string> */
+
     protected $fillable = ['name', 'value', 'uuid', 'published_at', 'created_by', 'updated_by', 'deleted_by'];
 
     /**

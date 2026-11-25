@@ -14,7 +14,6 @@ describe('User Model Simple', function (): void {
     test('user model can be instantiated', function (): void {
         /** @var TestCase $this */
         new User;
-
     });
 
     test('user model can access connection', function (): void {
@@ -34,6 +33,5 @@ describe('User Model Simple', function (): void {
             'lang' => 'it',
             'is_active' => true,
         ]);
-
     });
 });

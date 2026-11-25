@@ -15,7 +15,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
  * - mime_type: tipo MIME del file
  * - status: stato dell'upload (uploading, completed, failed)
  *
- * @see docs/database/migrations.md
+ * @see docs/migrations.md
  */
 return new class extends XotBaseMigration
 {

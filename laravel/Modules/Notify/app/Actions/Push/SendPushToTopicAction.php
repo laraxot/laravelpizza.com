@@ -17,6 +17,10 @@ use Webmozart\Assert\Assert;
 
 /**
  * Invia una notifica push a un topic su tutte le piattaforme supportate.
+ *
+ * @see docs/contracts/send-push-to-topic-action.md
+ *
+ * @contract docs/contracts/send-push-to-topic-action.md
  */
 class SendPushToTopicAction
 {

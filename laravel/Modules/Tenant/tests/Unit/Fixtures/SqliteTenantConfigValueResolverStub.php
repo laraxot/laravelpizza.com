@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\Tenant\Tests\Unit\Fixtures;
 
 /**
- * Sostituto di ResolveTenantConfigValueAction con configurazione sqlite fissa (classe con nome, non anonima).
+ * Sostituto di GetTenantConfigValueAction con configurazione sqlite fissa (classe con nome, non anonima).
  */
 final class SqliteTenantConfigValueResolverStub
 {

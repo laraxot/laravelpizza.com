@@ -69,7 +69,6 @@ it('password data get password rule works', function (): void {
     );
 
     Assert::assertNotEmpty($passwordData->getPasswordRule());
-
 });
 
 it('password data get helper text works', function (): void {

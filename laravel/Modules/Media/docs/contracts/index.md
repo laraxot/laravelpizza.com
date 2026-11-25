@@ -49,8 +49,8 @@ Comando per le invarianti coperte: `vendor/bin/pest Modules/Media/tests --group=
 | [get-video-screenshot-action](get-video-screenshot-action.md) | `Actions\Video\GetVideoScreenshotAction` | `GET-VIDEO-SCREENSHOT-INV-1` | non coperto |
 | [merge](merge.md) | `Actions\Image\Merge` | `MERGE-INV-1`..`3` | non coperto |
 | [parse-subtitle-xml-action](parse-subtitle-xml-action.md) | `Actions\Subtitle\ParseSubtitleXmlAction` | `PARSE-SUBTITLE-XML-INV-1`..`2` | non coperto |
-| [resolve-aws-s3-error-solution-action](resolve-aws-s3-error-solution-action.md) | `Actions\Diagnostic\Aws\ResolveAwsS3ErrorSolutionAction` | `RESOLVE-AWS-S3-ERROR-SOLUTION-INV-1`..`2` | non coperto |
-| [resolve-media-exporter-action](resolve-media-exporter-action.md) | `Actions\Ffmpeg\ResolveMediaExporterAction` | `RESOLVE-MEDIA-EXPORTER-INV-1`..`2` | non coperto |
+| [resolve-aws-s3-error-solution-action](get-aws-s3-error-solution-action.md) | `Actions\Diagnostic\Aws\GetAwsS3ErrorSolutionAction` | `RESOLVE-AWS-S3-ERROR-SOLUTION-INV-1`..`2` | non coperto |
+| [resolve-media-exporter-action](get-media-exporter-action.md) | `Actions\Ffmpeg\GetMediaExporterAction` | `RESOLVE-MEDIA-EXPORTER-INV-1`..`2` | non coperto |
 | [run-full-aws-diagnostic-action](run-full-aws-diagnostic-action.md) | `Actions\Diagnostic\Aws\RunFullAwsDiagnosticAction` | `RUN-FULL-AWS-DIAGNOSTIC-INV-1` | non coperto |
 | [run-s3-save-test-action](run-s3-save-test-action.md) | `Actions\Diagnostic\S3\RunS3SaveTestAction` | `RUN-S3-SAVE-TEST-INV-1`..`2` | non coperto |
 | [save-attachments-action](save-attachments-action.md) | `Actions\SaveAttachmentsAction` | `MEDIA-ATTACH-INV-1`..`4` | non coperto |
@@ -94,3 +94,6 @@ Elenco operativo dei contract comportamentali del modulo Media.
 
 (End of file - total 16 lines)
 
+## Contenuto fuso da `index.md`
+
+<!-- File: docs/contracts/INDEX.md · formato MADR breve. -->

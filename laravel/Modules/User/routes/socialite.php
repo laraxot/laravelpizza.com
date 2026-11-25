@@ -17,6 +17,5 @@ Route::prefix('{lang}')
                     '/auth/login/{provider}',
                     'RedirectToProviderController',
                 )->where('provider', 'google|microsoft|github')->name('oauth.redirect');
-
             });
     });

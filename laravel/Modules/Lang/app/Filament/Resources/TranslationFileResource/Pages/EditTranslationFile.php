@@ -7,7 +7,7 @@ namespace Modules\Lang\Filament\Resources\TranslationFileResource\Pages;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;
 use Illuminate\Contracts\Support\Htmlable;
-use Modules\Lang\Actions\ResolveTranslatableLocalesAction;
+use Modules\Lang\Actions\GetTranslatableLocalesAction;
 use Modules\Lang\Actions\SaveTransAction;
 use Modules\Lang\Filament\Actions\LocaleSwitcherRefresh;
 use Modules\Lang\Filament\Resources\TranslationFileResource;
@@ -22,7 +22,7 @@ class EditTranslationFile extends XotBaseEditRecord
      */
     public function getTranslatableLocales(): array
     {
-        return app(ResolveTranslatableLocalesAction::class)->execute();
+        return app(GetTranslatableLocalesAction::class)->execute();
     }
 
     /**

@@ -70,3 +70,27 @@ Fleet apply `docs-ceiling-100.py --all --apply` + Xot surgical cap.
 Tutti i 21 owner `docs/` ≤100 `.md` (Xot 99; Pdnd 70; Three 15; resto 100).
 Tool: `bashscripts/tools/docs/docs-ceiling-100.py`.
 Sprint: `Xot/docs-ceiling-100` → done.
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+## Misura base_laravelpizza_fila5 (2026-11-25 ~16:35)
+
+Ricrescita post-sync: User 2544, Notify 2456, Geo 2177, Cms 1027, UI 891 (17 owner OVER).
+
+Apply `docs-ceiling-100.py` con discovery REPO da cwd/`REPO_ROOT` (non da symlink bashscripts) + trim:
+
+tutti gli owner Modules+Themes di laravelpizza → **≤100** `.md`. Digests in `docs/digests/`.
+
+### Lezione symlink `bashscripts`
+
+`laravelpizza/bashscripts` → `base_ptvx_fila5/bashscripts`. `Path(__file__).resolve().parents[3]`
+applicava su ptvx. Fix: `REPO_ROOT` o discovery `gitmodules.ini`+`laravel/Modules` dalla cwd.
+=======
+>>>>>>> laraxot/dev
+
+## Misura live 2026-11-25 16:40 (laravelpizza)
+
+Gate docs: `docs-ceiling-guard.sh` → over_count=0.
+Gate git oggetti: tutti i path `gitmodules.ini` < 10000 (Notify incluso dopo sync).
+=======
+>>>>>>> laraxot/dev

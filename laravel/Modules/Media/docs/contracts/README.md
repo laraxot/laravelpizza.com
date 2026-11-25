@@ -42,7 +42,7 @@ Standard: [contract-authoring-standard](../../../Xot/docs/contracts/contract-aut
 ## Formato di un contratto di Action
 
 Un file per Action, nome in kebab-case della classe (`create-ticket-action.md`), frontmatter `type: contract` e
-`action: <FQCN>`, e queste sei sezioni nell'ordine (scheletro: [template.md](template.md)):
+`action: <FQCN>`, e queste sei sezioni nell'ordine (scheletro: [_template.md](template.md)):
 ## Metodo Harness
 
 Un contratto descrive una singola operazione pubblica con effetti collaterali, chiamate esterne o invarianti di dominio. Documenta il comportamento osservabile, inclusi errori e non-goals, senza trasformare ogni metodo interno in un contratto.
@@ -100,8 +100,8 @@ Chi cambia il comportamento aggiorna il contratto nello stesso commit.
 ## Interfacce
 
 - [PathGenerator e PathGeneratorContract](path-generator.md) — due interfacce identiche in `app/Contracts`, oggi non usate.
+
 ## Indice e template
 
 - [INDEX](index.md) — tabella operativa contratto, classe, invarianti e copertura Pest, per tutte le Action.
 - [Template di contratto](template.md) — scheletro con le sei sezioni e la tabella degli invarianti, da copiare per una nuova Action.
-

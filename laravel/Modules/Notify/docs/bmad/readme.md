@@ -58,7 +58,7 @@ Supporta template dinamici, allegati binari, multi-canale e integrazione complet
 ### Guide Complete
 
 #### Email System
-- **[Email Attachments Usage](./email-sending/attachments-usage-2.md)** ⭐  
+- **[Email Attachments Usage](./email-sending/attachments_usage.md)** ⭐  
   Guida completa agli allegati email (path e binary data)
 
 - **[Spatie Mail Templates Deep Dive](./spatie-database-mail-templates-deep-dive.md)**  
@@ -75,7 +75,7 @@ Supporta template dinamici, allegati binari, multi-canale e integrazione complet
   Notifiche basate su record Eloquent
 
 #### SMS & WhatsApp
-- **[WhatsApp Provider Architecture](../whatsapp-provider-architecture-2.md)**  
+- **[WhatsApp Provider Architecture](./whatsapp_provider_architecture.md)**  
   Architettura provider WhatsApp
 
 ---
@@ -278,12 +278,12 @@ Notification::route('mail', 'to@example.com')->notify($notify);
 ### Documentazione Interna
 
 #### Email System
-- [Email Layouts Best Practices](../mail-templates/email-layouts-best-practices-2.md)
-- [Spatie Mail Templates Structure](../mail-templates/spatie-mail-templates-structure-2.md)
-- [Email Troubleshooting](../email-sending/email-troubleshooting-2.md)
+- [Email Layouts Best Practices](./mail-templates/EMAIL_LAYOUTS_BEST_PRACTICES.md)
+- [Spatie Mail Templates Structure](./mail-templates/SPATIE_MAIL_TEMPLATES_STRUCTURE.md)
+- [Email Troubleshooting](./email-sending/EMAIL_TROUBLESHOOTING.md)
 
 #### Notifications
-- [Notifications Implementation Guide](./notifications/notifications-implementation-guide-2.md)
+- [Notifications Implementation Guide](./notifications/notifications_implementation_guide.md)
 - [Notification Management Business Logic](./notifications/notification-management-business-logic.md)
 
 ---

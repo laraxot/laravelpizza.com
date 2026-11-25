@@ -12,8 +12,8 @@ Stub **DRY**: policy nella wiki di progetto; discussioni GitHub issue [#124](htt
 ## Link operativi
 
 - Regola canonica: [../../../../docs/wiki/rules/validation-post-edit-rule.md](../../../../docs/wiki/rules/validation-post-edit-rule.md)
-- How-to issue ↔ wiki: [../../../../docs/wiki/how-to/github-issue-agent-discipline.md](../../../../docs/wiki/how-to/github-issue-agent-discipline.md)
-- Context overflow / Autocompact: [../../../../docs/wiki/how-to/autocompact-thrashing-recovery.md](../../../../docs/wiki/how-to/autocompact-thrashing-recovery.md)
-- Deduplica docs: [../../../../docs/wiki/how-to/module-docs-deduplication.md](../../../../docs/wiki/how-to/module-docs-deduplication.md)
+- How-to issue ↔ wiki: [../../../../../bashscripts/ai/wiki/how-to/git-github.md#github-issue-agent-discipline](../../../../../bashscripts/ai/wiki/how-to/git-github.md#github-issue-agent-discipline)
+- Context overflow / Autocompact: [../../../../../bashscripts/ai/wiki/how-to/agents-context-tooling.md#autocompact-thrashing-recovery](../../../../../bashscripts/ai/wiki/how-to/agents-context-tooling.md#autocompact-thrashing-recovery)
+- Deduplica docs: [../../../../../bashscripts/ai/wiki/how-to/modules-ops.md#module-docs-deduplication](../../../../../bashscripts/ai/wiki/how-to/modules-ops.md#module-docs-deduplication)
 - Prompt LLM: [../../../../bashscripts/tools/prompts/llm-wiki.txt](../../../../bashscripts/tools/prompts/llm-wiki.txt) §2.1
-- Autocompact thrashing (recovery): [../../../../docs/wiki/how-to/autocompact-thrashing-recovery.md](../../../../docs/wiki/how-to/autocompact-thrashing-recovery.md)
+- Autocompact thrashing (recovery): [../../../../../bashscripts/ai/wiki/how-to/agents-context-tooling.md#autocompact-thrashing-recovery](../../../../../bashscripts/ai/wiki/how-to/agents-context-tooling.md#autocompact-thrashing-recovery)

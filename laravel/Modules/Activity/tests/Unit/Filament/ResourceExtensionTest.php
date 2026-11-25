@@ -11,7 +11,7 @@ use Modules\Activity\Tests\TestCase;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 test('activity resources extend xot base resource', function () {
     $activityResource = new ReflectionClass(ActivityResource::class);

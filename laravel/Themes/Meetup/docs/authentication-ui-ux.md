@@ -1,172 +1,80 @@
-# Authentication UI/UX Best Practices
+---
+title: "Pagine di autenticazione: struttura, UX e regole"
+type: guide
+status: active
+theme: Meetup
+qmd: "authentication ui ux auth pages login register logout verify password reset confirm passworddata auth-card auth-field widget folio livewire volt seo localizzazione"
+---
 
-## Overview
+# Pagine di autenticazione
 
-This document outlines the UI/UX standards for authentication pages (login, register, password reset) in the Meetup theme.
+Questa pagina e' la fonte unica per le pagine `auth/*` del tema: dove stanno, chi contiene la logica, come devono comportarsi e quali errori sono gia' capitati. La pagina di registrazione ha una guida a parte: [register-page](register-page.md). I docblock `@see` delle pagine Blade `logout`, `password/reset` e `password/[token]` puntano qui.
 
-## Research Sources
+## Principio architetturale
 
-- [Authgear: Login & Signup UX 2025 Guide](https://www.authgear.com/post/login-signup-ux-guide)
-- [Eleken: Best Sign Up Flows 2026](https://www.eleken.co/blog-posts/sign-up-flow)
-- [Web.dev: Sign-in Form Best Practices](https://web.dev/articles/sign-in-form-best-practices)
-- [Web.dev: Sign-up Form Best Practices](https://web.dev/articles/sign-up-form-best-practices)
-- [Interaction Design Foundation: Login Screen Examples](https://www.interaction-design.org/literature/article/login-screen)
+Le pagine del tema sono solo cornice (layout, titolo, logo, testi tradotti): **la logica dei form sta nei widget Filament dei moduli** ([ADR](adr/auth-forms-are-module-widgets.md)). Il test `Themes/Meetup/tests/Unit/PagesAndAuthFormsContractTest.php` verifica che `auth/login.blade.php` contenga `Modules\User\Filament\Widgets\Auth\LoginWidget` e `auth/register.blade.php` `Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget`. Niente logica di business nelle Blade (Actions nei moduli).
 
-## Key Principles
+## Pagine (`resources/views/pages/auth/`)
 
-### 1. Simplicity and Friction Reduction
+| File | Nome rotta | Middleware | Note |
+|---|---|---|---|
+| `login.blade.php` | `login` | `guest` | cornice con logo `meetup-logo`, titolo `pub_theme::auth.login.*`, widget `LoginWidget`, link alla registrazione |
+| `register.blade.php` | `register` | `guest` | widget Gdpr `RegisterWidget` con i consensi; vedi [register-page](register-page.md) |
+| `logout.blade.php` | `auth.logout` | - | GET `/{locale}/auth/logout`, vedi sotto |
+| `verify.blade.php` | `verification.notice` | `auth`, `throttle:6,1` | avviso "verifica la tua email" con reinvio; frammento Volt `meetup.auth.verify` |
+| `password/reset.blade.php` | `password.request` | `guest`, `throttle:6,1` | password dimenticata |
+| `password/[token].blade.php` | `password.reset` | `guest` | nuova password dal link ricevuto |
+| `password/confirm.blade.php` | `password.confirm` | `auth` | riconferma della password prima di un'area protetta |
 
-- **Minimal fields**: Only ask for essential information
-- **Email-first**: Consider email-only signup with later verification
-- **Progressive disclosure**: Show additional fields only when needed
+`reset`, `[token]`, `confirm` e `verify` usano `<x-ui.auth-card :title :subtitle>` (scheda centrata con logo, `h1`, slot) e `<x-ui.auth-field>` per i campi; login e registrazione hanno un proprio layout con sfondo animato. URL sempre sotto il prefisso `/{locale}/auth/...`; gli alias `/{locale}/login` e `/{locale}/register` rimandano a `auth/login` e `auth/register` (`config/local/laravelpizza/seo.php`).
 
-### 2. Clear Visual Hierarchy
+Le Blade di auth non eseguono codice con effetti nel blocco PHP iniziale: la lingua la imposta il middleware `SetFolioLocale` (modulo Cms), perche' Folio esegue quel blocco anche solo per leggere `name()`/`middleware()` (es. generando `route('login')` da CLI) e un `setLocale` li' cambiava la lingua dell'intero processo. Guardia: `Modules/Meetup/tests/Unit/Architecture/FolioPagesWithoutSideEffectsTest.php`.
 
-- **Primary CTA**: Make the main action (login/register) prominent
-- **Secondary actions**: Password reset, resend verification - less prominent
-- **Social proof**: Trust badges, user count, testimonials
+## Logout (`auth.logout`)
 
-### 3. Error Handling
+`pages/auth/logout.blade.php` e' la pagina GET (link da email, bookmark). E' Folio + Volt con `@volt('auth.logout')` (senza la direttiva Volt risponde 500): mostra `pub_theme::auth.logout.in_progress` e con `wire:init="logout"` esegue `Modules\User\Http\Volt\LogoutAction` (la stessa della rotta POST) e reindirizza alla home della lingua corrente.
 
-- **Inline validation**: Show errors as user types, not after submit
-- **Clear messages**: Specific, actionable error text
-- **Recovery**: Show how to fix the issue
-
-### 4. Accessibility (WCAG 2.2 AAA)
-
-- **Contrast**: 4.5:1 minimum (7:1 for text)
-- **Touch targets**: Minimum 44×44px for mobile
-- **Keyboard navigation**: Logical tab order
-- **Screen readers**: Proper ARIA labels
-
-### 5. Trust and Security
-
-- **Password visibility toggle**: Allow users to see password
-- **Security indicators**: Show password strength
-- **Privacy signals**: GDPR compliance, trust badges
-
-## Design Patterns
-
-### Login Page
-
-```
-┌─────────────────────────────────────┐
-│           [Logo]                     │
-│                                     │
-│     Welcome Back!                   │
-│     Login to your account           │
-│                                     │
-│  ┌───────────────────────────────┐   │
-│  │ Email                        │   │
-│  └───────────────────────────────┘   │
-│                                     │
-│  ┌───────────────────────────────┐   │
-│  │ Password            [👁]     │   │
-│  └───────────────────────────────┘   │
-│                                     │
-│  [ ] Remember me    [Forgot?]      │
-│                                     │
-│  ┌───────────────────────────────┐   │
-│  │         Login                │   │
-│  └───────────────────────────────┘   │
-│                                     │
-│  ────────── or ──────────           │
-│                                     │
-│  [GitHub] [Google]                 │
-│                                     │
-│  Don't have an account? Register    │
-└─────────────────────────────────────┘
-```
-
-### Register Page
-
-```
-┌─────────────────────────────────────┐
-│           [Logo]                     │
-│                                     │
-│  Join the Pizza Revolution! 🍕       │
-│  Connect with 5,000+ developers      │
-│                                     │
-│  ┌─────────┐ ┌─────────┐           │
-│  │ Name    │ │ Surname │           │
-│  └─────────┘ └─────────┘           │
-│                                     │
-│  ┌───────────────────────────────┐   │
-│  │ Email                        │   │
-│  └───────────────────────────────┘   │
-│                                     │
-│  ┌───────────────────────────────┐   │
-│  │ Password            [👁]   │   │
-│  └───────────────────────────────┘   │
-│                                     │
-│  [██████░░░░] Medium strength       │
-│                                     │
-│  [ ] I accept Privacy & Terms      │
-│                                     │
-│  ┌───────────────────────────────┐   │
-│  │   Create My Account          │   │
-│  └───────────────────────────────┘   │
-│                                     │
-│  Already have an account? Login      │
-└─────────────────────────────────────┘
-```
-
-## Terminology
-
-- **Register** - Use "register" NOT "sign up" (more professional)
-- **Login** - Use "login" NOT "sign in"
-- **Create account** - Alternative CTA
-- **Email** - Not "e-mail" or "mail"
-
-## Localization
-
-All authentication pages must support 6 languages:
-- Italian (it) - Primary
-- English (en)
-- Spanish (es)
-- German (de)
-- French (fr)
-- Russian (ru)
-
-## Files Structure
-
-```
-Themes/Meetup/resources/views/pages/auth/
-├── login.blade.php        # Login page
-├── register.blade.php     # Registration page
-├── logout.blade.php       # Logout action
-├── verify.blade.php       # Email verification
-└── password/
-    ├── reset.blade.php    # Password reset request
-    ├── confirm.blade.php  # Password reset confirm
-    └── {token}.blade.php # Reset with token
-```
-
-## Pagina di logout (`auth.logout`)
-
-`pages/auth/logout.blade.php` e' la pagina GET `/{locale}/auth/logout` (link da email, bookmark). E' una Folio + Volt con `@volt('auth.logout')`
-(senza la direttiva Volt risponde 500) che mostra `pub_theme::auth.logout.in_progress` e, con `wire:init`, esegue
-`Modules\User\Http\Volt\LogoutAction` (la stessa della rotta POST) e reindirizza alla home della lingua corrente.
-
-- Nome rotta `auth.logout`: `logout` e' della rotta POST di `Modules/User/routes/web.php` usata dai form di navigazione.
-- Nessun `dd()` o debug nella pagina: la GET deve rendere 200 anche da ospite.
-- `in_progress` esiste in tutte le lingue del tema con auth (it, en, de, es, fr, ru).
+- Il nome `auth.logout` e' voluto: `logout` appartiene alla rotta POST di `Modules/User/routes/web.php` usata dai form di navigazione; due rotte con lo stesso nome renderebbero `route('logout')` dipendente dall'ordine di registrazione.
+- Nessun `dd()`/debug: la GET deve rendere 200 anche da ospite. Il form di logout del menu mobile fa POST a `route('logout')`.
 - Test di guardia: `Modules/Meetup/tests/Feature/Security/LogoutPageTest.php`.
 
-## Testing Checklist
+## Password: dimenticata, nuova, conferma
 
-- [ ] Form validation works correctly
-- [ ] Password strength indicator shows
-- [ ] Password visibility toggle works
-- [ ] Error messages are clear and localized
-- [ ] Mobile responsive design works
-- [ ] Keyboard navigation works
-- [ ] Screen reader compatible
-- [ ] Social login buttons work
-- [ ] GDPR consent checkboxes work
+- `password/reset` e `password/[token]` rispondono allo stesso modo se l'email esiste o no (nessuna enumerazione di utenti); dopo il reset l'utente entra e va in `xra.post_login_path` (`/events/my` in `config/local/laravelpizza/xra.php`).
+- Il link dell'email di reset (`BuildPasswordResetUrlAction`) usa la lingua della richiesta e aggiunge `?email=`.
+- Il broker usa la connessione `user` (tabella `password_resets` del modulo User).
+- I testi stanno in `Themes/Meetup/lang/{it,en,de,es,fr,ru}/auth.php` sotto `login.*`, `logout.*`, `password.request.*`, `password.reset.*`, `password.confirm.*`, `verify.*`. Un sync con il tema generico li aveva sostituiti con pagine senza `h1` e senza queste chiavi: la regola e' che i valori del progetto vincono, le chiavi generiche si mantengono (guardia `FrontOfficePrivacyAndSeoTest`, caso "forgot password").
+- Regole password (lunghezza, maiuscole/minuscole, lettere, numeri, simboli, non compromessa, test HaveIBeenPwned) sono centralizzate in `Modules\User\Datas\PasswordData` (default: `min 8`, `mixedCase`, `letters`, `numbers`, `symbols`, `uncompromised`; configurabili per tenant) e riusate dai widget con `PasswordData::make()->getPasswordFormComponents('password')`. Testi di aiuto e validazione vengono dai file di lingua del modulo User (`password.php`, `validation.php`), non dal tema. Cosi' ogni flusso di registrazione/cambio password ha le stesse regole.
 
-## Related Documentation
+## Regole UX e accessibilita'
 
-- [GDPR Compliance Guide](./gdpr-compliance-theme.md)
-- [WCAG Accessibility](./wcag.md)
-- [Clickbait Register Guide](./clickbait-register-implementation-guide.md)
+- Mobile-first: form a larghezza piena su telefono, bersagli tattili minimi 44x44 px, `h1` unico e nome accessibile sui link-logo (`aria-label`), SVG come file (`<x-filament::icon icon="meetup-logo">`, mai inline: [svg-icons-no-hardcoded-blade](svg-icons-no-hardcoded-blade.md)).
+- Etichette sopra i campi, errori sotto il campo, messaggi specifici e tradotti; toggle di visibilita' della password; ordine di tabulazione logico. Animazioni solo decorative e disattivabili con `prefers-reduced-motion` (niente lampeggi). Dettaglio: [accessibility](accessibility.md).
+- Terminologia: "Registrati / Crea il tuo account" e "Accedi", mai "Sign Up" in un'interfaccia italiana; tutti i testi in chiavi di traduzione `pub_theme::auth.*` (mai stringhe fisse: [localization-standard](localization-standard.md)); link e action localizzati con `LaravelLocalization::localizeUrl('/auth/...')`.
+- SEO: ogni pagina auth ha `title` e description propri (prop `:title`/`:description` di `<x-layouts.app>`, brand incluso, titolo <= 60 caratteri, descrizione <= 160); vedi [seo-structured-data](seo-structured-data.md).
+- Privacy: nessuna richiesta a terzi (niente Gravatar: `xra.gravatar = false`, iniziali in locale; niente CDN o Google Fonts), consensi GDPR nella registrazione: [gdpr-compliance](gdpr-compliance.md).
+- Gestione errori JS globale: `resources/js/app.js` registra `error` e `unhandledrejection` e mostra una notifica; i messaggi sono oggi stringhe italiane fisse (debito rispetto alla regola "niente testi fissi", vedi [roadmap](roadmap.md)).
+
+## Errori tipici
+
+| Sintomo | Causa | Fix |
+|---|---|---|
+| `/it/auth/password/confirm` in 500 dopo un sync dei moduli | il modulo User porta pagine Folio con gli stessi nomi Volt del tema (`auth.password.confirm`, `auth.verify`): Volt registra i frammenti per nome e il tema mostrava quello del modulo | i `@volt()` del tema gia' usati da un modulo hanno prefisso `meetup.`; guardia `UniqueVoltFragmentNamesTest` |
+| `/auth/logout` risponde 500 | manca `@volt('auth.logout')` | tenere la direttiva |
+| Rimandare la verifica email faceva partire l'evento `Verified` | invio e verifica confusi | `resend()` invia solo la notifica; se l'email e' gia' verificata si va a `xra.post_login_path` |
+| "Password dimenticata" in errore (connessione inesistente) | broker su `liveuser_general` | connessione `user` |
+| Link dell'email di reset sempre in italiano | URL costruito senza locale | `BuildPasswordResetUrlAction` |
+
+## Checklist
+
+- [ ] Form validati, errori chiari e tradotti
+- [ ] Layout corretto su telefono, navigazione da tastiera, screen reader (`npm run a11y`, [testing](testing.md))
+- [ ] Un solo `h1`, `title` e description propri
+- [ ] Testi in tutte le lingue con auth (it, en, de, es, fr, ru; `hi` e `zh` hanno solo `event.php`)
+- [ ] Consensi e regole password uguali a quelle della registrazione
+
+## Vedi anche
+
+- [register-page](register-page.md), [gdpr-compliance](gdpr-compliance.md)
+- [localization-standard](localization-standard.md), [language-switcher](language-switcher.md)
+- [adr/auth-forms-are-module-widgets](adr/auth-forms-are-module-widgets.md)

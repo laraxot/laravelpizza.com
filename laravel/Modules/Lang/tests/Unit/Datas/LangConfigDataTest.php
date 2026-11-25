@@ -3,8 +3,8 @@
 declare(strict_types=1);
 
 use Modules\Lang\Actions\ListLocaleOptionsAction;
-use Modules\Lang\Actions\ResolveDefaultTranslatableLocaleAction;
-use Modules\Lang\Actions\ResolveTranslatableLocalesAction;
+use Modules\Lang\Actions\GetDefaultTranslatableLocaleAction;
+use Modules\Lang\Actions\GetTranslatableLocalesAction;
 use Modules\Lang\Datas\LangConfigData;
 use Modules\Lang\Filament\Actions\LocaleSwitcherRefresh;
 use Modules\Lang\Filament\Pages\SettingPage;
@@ -69,13 +69,13 @@ test('a default language outside the chosen ones is ignored', function (): void 
         'supported_locales' => ['it', 'en'],
     ]);
 
-    expect(app(ResolveDefaultTranslatableLocaleAction::class)->execute('it'))->toBe('it');
+    expect(app(GetDefaultTranslatableLocaleAction::class)->execute('it'))->toBe('it');
 });
 
 test('an empty list of languages never reaches the editors', function (): void {
     FakeTenantLangConfig::bind(['supported_locales' => []]);
 
-    expect(app(ResolveTranslatableLocalesAction::class)->execute())->toBe(['it', 'en']);
+    expect(app(GetTranslatableLocalesAction::class)->execute())->toBe(['it', 'en']);
 });
 
 test('the language switcher offers the chosen languages and starts from the saved default', function (): void {

@@ -1,17 +1,11 @@
 ---
-title: "Activity Module LLM Wiki Agent Instructions======="
-type: note
-status: draft
-updated: 2026-10-08
-tags: [docs, activity, wiki]
-qmd: "activity module llm wiki agent instructions======= activity"
----
 title: "Agent instructions"
 type: reference
-tags: [agents, coding-agent, llm-wiki]
+status: draft
+tags: [agents, coding-agent, llm-wiki, docs, activity]
 created: 2026-07-01
-updated: 2026-07-01
-qmd: "istruzioni agenti LLM wiki modulo"
+updated: 2026-10-08
+qmd: "istruzioni agenti LLM wiki modulo activity"
 issues: []
 discussions: []
 related:
@@ -19,8 +13,6 @@ related:
 ---
 
 # Activity Module LLM Wiki Agent Instructions
-# Activity Module LLM Wiki Agent Instructions=======
-# Activity {{TYPE^}} LLM Wiki Agent Instructions
 
 > **Module/Theme:** Activity
 > **Scope:** Activity-specific knowledge only
@@ -158,9 +150,13 @@ Related:
 ## Related Documentation
 
 - [Project Wiki Integration](../../docs/wiki/README.md)
+<<<<<<< .merge_file_3tf5bL
 - [Project Wiki Agent Instructions](../../../Lang/docs/wiki/agents-3.md)
 - [Project Wiki Agent Instructions](agents.md)
 - [Module Documentation](../README.md)=======
 - [Module Documentation](../README.md)
 - [Module Documentation](../README.md)
+=======
+- [Project Wiki Agent Instructions](agents.md)
+>>>>>>> .merge_file_YIqzM1
 - [Module Documentation](../README.md)

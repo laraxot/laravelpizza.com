@@ -10,7 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
 /**
- * Riporta un record ai valori precedenti registrati in un'attivita' (properties.old).
+ * RestoreActivityAction: riporta un record ai valori precedenti registrati in un'attivita' (properties.old).
  *
  * @see docs/contracts/restore-activity-action.md
  *

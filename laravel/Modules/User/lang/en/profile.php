@@ -4,11 +4,7 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-<<<<<<< .merge_file_qILhim
-        'label' => 'Profile',
-=======
         'label' => 'Profiles',
->>>>>>> .merge_file_tzqnN0
         'plural' => 'Profiles',
         'group' => [
             'label' => 'User management',
@@ -92,8 +88,8 @@ return [
         'title' => 'Privacy policy',
         'description' => 'How we handle your personal data.',
     ],
-    'label' => 'Missing Label',
-    'plural_label' => 'Missing Plural label',
+    'label' => 'Profile',
+    'plural_label' => 'Profiles',
     'delete_account' => [
         'title' => 'Delete Account',
         'description' => 'Once your account is deleted, all of its resources and data will be permanently deleted. Before proceeding, please download any data you wish to retain.',
@@ -102,9 +98,5 @@ return [
         'delete' => 'Delete Account',
     ],
     'my_profile' => 'My Profile',
-<<<<<<< .merge_file_qILhim
-    'subheading' => 'Your personal details and password',
-=======
     'subheading' => 'Manage your personal details and security',
->>>>>>> .merge_file_tzqnN0
 ];

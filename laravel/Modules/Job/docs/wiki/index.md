@@ -11,7 +11,7 @@ issues:
 discussions:
   - "https://github.com/laraxot/base_fixcity_fila5/discussions/273"
 related:
-  - ../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
+  - ../../../../../bashscripts/ai/wiki/concepts/agents-harness-tooling.md#hackernoon-ai-coding-tips-fixcity-map
   - ../../../../docs/wiki/bmad/architecture.md
   - ../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md
   - ../../docs/wiki/concepts/ai-harness-module-discipline.md
@@ -20,7 +20,7 @@ related:
 # Job Module Wiki
 ## AI / second brain
 
-- [hackernoon-ai-coding-tips-fixcity-map](../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md)
+- [hackernoon-ai-coding-tips-fixcity-map](../../../../../bashscripts/ai/wiki/concepts/agents-harness-tooling.md#hackernoon-ai-coding-tips-fixcity-map)
 - [bmad/architecture](../../../../docs/wiki/bmad/architecture.md)
 - [frontmatter + GitHub](../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md)
 - [ai-harness-module-discipline](../../docs/wiki/concepts/ai-harness-module-discipline.md)

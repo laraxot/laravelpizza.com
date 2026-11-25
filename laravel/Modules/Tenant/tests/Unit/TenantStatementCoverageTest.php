@@ -13,12 +13,12 @@ use Mockery\MockInterface;
 use Modules\Tenant\Actions\Config\GetTenantConfigArrayAction;
 use Modules\Tenant\Actions\Config\GetTenantConfigNamesAction;
 use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
-use Modules\Tenant\Actions\Config\ResolveTenantConfigValueAction;
+use Modules\Tenant\Actions\Config\GetTenantConfigValueAction;
 use Modules\Tenant\Actions\Config\SaveTenantConfigAction;
 use Modules\Tenant\Actions\Domains\GetDomainsArrayAction;
 use Modules\Tenant\Actions\GetTenantNameAction;
-use Modules\Tenant\Actions\Models\ResolveTenantModelClassAction;
-use Modules\Tenant\Actions\Models\ResolveTenantModelInstanceAction;
+use Modules\Tenant\Actions\Models\GetTenantModelClassAction;
+use Modules\Tenant\Actions\Models\GetTenantModelInstanceAction;
 use Modules\Tenant\Actions\Modules\GetTenantModulesAction;
 use Modules\Tenant\Actions\Translations\TranslateTenantKeyAction;
 use Modules\Tenant\Filament\Resources\DomainResource\Schemas\DomainForm;
@@ -153,22 +153,22 @@ describe('Tenant statement coverage — actions', function (): void {
         Assert::assertSame([], app(GetTenantConfigArrayAction::class)->execute('odd'));
     });
 
-    test('ResolveTenantConfigValueAction rejects invalid value types', function (): void {
+    test('GetTenantConfigValueAction rejects invalid value types', function (): void {
         config(['app' => ['flag' => true]]);
         $this->mockAppService(GetTenantNameAction::class, static function (MockInterface $mock): void {
             $mock->allows(['execute' => 'localhost']);
         });
 
-        expect(fn (): float|int|string|array|null => app(ResolveTenantConfigValueAction::class)->execute('app.flag'))
+        expect(fn (): float|int|string|array|null => app(GetTenantConfigValueAction::class)->execute('app.flag'))
             ->toThrow(Exception::class);
     });
 
-    test('ResolveTenantModelInstanceAction instantiates the resolved model class', function (): void {
-        $this->mockAppService(ResolveTenantModelClassAction::class, static function (MockInterface $mock): void {
+    test('GetTenantModelInstanceAction instantiates the resolved model class', function (): void {
+        $this->mockAppService(GetTenantModelClassAction::class, static function (MockInterface $mock): void {
             $mock->allows(['execute' => Tenant::class]);
         });
 
-        $instance = app(ResolveTenantModelInstanceAction::class)->execute('tenant');
+        $instance = app(GetTenantModelInstanceAction::class)->execute('tenant');
         Assert::assertInstanceOf(Tenant::class, $instance);
     });
 
@@ -191,7 +191,6 @@ describe('Tenant statement coverage — models and policies', function (): void 
         $noSlug = new Tenant;
         $noSlug->name = 'Beta';
         Assert::assertSame('beta', $noSlug->slug);
-
     });
 
     test('TenantDomain TenantSetting TenantSubscription relation helpers', function (): void {
@@ -270,7 +269,7 @@ describe('Tenant statement coverage — TenantServiceProvider private paths', fu
         $load->setAccessible(true);
         $databaseConnections = config('database.connections');
         Assert::assertIsArray($databaseConnections);
-        $this->mockAppService(ResolveTenantConfigValueAction::class, static function (MockInterface $mock) use ($databaseDefault, $databaseConnections): void {
+        $this->mockAppService(GetTenantConfigValueAction::class, static function (MockInterface $mock) use ($databaseDefault, $databaseConnections): void {
             $mock->allows(['execute' => [
                 'default' => $databaseDefault,
                 'connections' => $databaseConnections,
@@ -300,14 +299,14 @@ describe('Tenant statement coverage — TenantServiceProvider private paths', fu
                 ['id' => 2],
             ]]);
         });
-        $this->mockAppService(ResolveTenantConfigValueAction::class, static function (MockInterface $mock): void {
+        $this->mockAppService(GetTenantConfigValueAction::class, static function (MockInterface $mock): void {
             $mock->shouldReceive('execute')->andReturn('ok');
         });
         $mergeConfigs->invoke($provider);
 
         $registerMorph = new ReflectionMethod($provider, 'registerMorphMap');
         $registerMorph->setAccessible(true);
-        $this->mockAppService(ResolveTenantConfigValueAction::class, static function (MockInterface $mock): void {
+        $this->mockAppService(GetTenantConfigValueAction::class, static function (MockInterface $mock): void {
             $mock->shouldReceive('execute')->with('morph_map')->andReturn('not-array');
         });
         $registerMorph->invoke($provider);

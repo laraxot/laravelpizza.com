@@ -14,7 +14,6 @@ use function Safe\file_get_contents;
 uses(TestCase::class);
 
 describe('Event', function () {
-
     it('uses Dispatchable trait', function () {
         $traits = class_uses(Event::class);
 

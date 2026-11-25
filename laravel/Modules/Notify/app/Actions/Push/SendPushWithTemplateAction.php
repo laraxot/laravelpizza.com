@@ -11,6 +11,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Invia una notifica push renderizzando un template predefinito.
+ *
+ * @see docs/contracts/send-push-with-template-action.md
+ *
+ * @contract docs/contracts/send-push-with-template-action.md
  */
 class SendPushWithTemplateAction
 {

@@ -1,282 +1,84 @@
 ---
-title: "json database"
-type: note
-tags: [documentation]
+title: "Dati geografici italiani: JSON come database, modelli Sushi e GeoJsonModel"
+type: reference
+status: active
+module: Geo
+tags: [geo, json, sushi, comuni, regioni, province, cap, geonames]
 created: 2026-09-26
-updated: 2026-09-26
-qmd: "json database"
-issues: []
-discussions: []
+updated: 2026-11-25
+qmd: "geo json database sushi comune region province locality geojsonmodel comuni-istat cap geonames seeders cache"
+related:
+  - ./architecture.md
+  - ./address.md
 ---
 
-# JSON come Database per Dati Geografici
+# Dati geografici italiani: JSON come database
 
-## Contesto
-Il file `resources/json/comuni.json` contiene i dati geografici italiani in formato JSON. Data la sua dimensione ridotta e la natura statica dei dati, è più efficiente utilizzarlo direttamente come fonte dati invece di creare tabelle nel database.
+Regioni, province, comuni e CAP sono dati semi-statici (circa 7.900 comuni): invece di tabelle e migrazioni il modulo li
+legge da file JSON in `resources/json/` e li espone come modelli Eloquent in sola lettura (Sushi) o come collezioni
+(`GeoJsonModel`). Questa pagina e' la fonte unica sull'argomento; sostituisce le decine di analisi "GeoJsonModel vs Sushi",
+"unificazione Comune", "compendio dati geografici" che erano in radice di `docs/` (originali nel backup
+`~/backups/laravelpizza-docs-md-before-cap100.tar.gz`, percorso `laravel/Modules/Geo/docs/`).
 
-## Vantaggi dell'approccio JSON
-1. **Semplicità**
-   - Nessuna migrazione del database
-   - Nessuna query SQL
-   - Dati sempre disponibili
+## File sorgente
 
-2. **Performance**
-   - Caricamento veloce
-   - Caching efficiente
-   - Nessun overhead di database
+| File | Contenuto |
+|---|---|
+| `resources/json/comuni-istat.json` | elenco ISTAT di 7.904 comuni. Voce: `nome`, `codice`, `zona{codice,nome}`, `regione{codice,nome}`, `provincia{codice,nome}`, `sigla`, `codiceCatastale`, `cap` (array), `popolazione` |
+| `resources/json/comuni.json` | campione di 4 comuni con campi piatti (`regione`, `provincia`, `sigla_provincia`, `cap`, `codice_catastale`, `lat`, `lng`, `altitudine`, `superficie`, `zona_altimetrica`) |
+| `resources/json/cluster-test-data.json` | dati di prova per il clustering della mappa |
 
-3. **Manutenibilità**
-   - Aggiornamento semplice del file JSON
-   - Versioning dei dati
-   - Backup facile
+`Actions/GeoData/GetItalianMunicipalitiesPathAction` risolve il percorso: usa `comuni-istat.json` se esiste, altrimenti
+`comuni.json`. `Region`, `Province` e `Locality` accettano sia `regione`/`provincia` come stringa sia come oggetto
+`{codice, nome}`.
 
-## Implementazione
+## Quale modello usare
 
-### 1. Struttura del JSON
-```json
-{
-    "regions": [
-        {
-            "name": "Lombardia",
-            "code": "LO",
-            "provinces": [
-                {
-                    "name": "Milano",
-                    "code": "MI",
-                    "cities": [
-                        {
-                            "name": "Milano",
-                            "code": "F205",
-                            "cap": "20100"
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-}
-```
+| Modello | Base | Sorgente | Note |
+|---|---|---|---|
+| `Region`, `Province`, `Locality` | `BaseModel` + `Sushi` | JSON del percorso sopra, righe uniche per codice | sola lettura, SQLite in memoria; `sushiShouldCache()` e' vero con cache su file che si rigenera quando cambia il JSON (senza, ogni richiesta rileggeva 1,9 MB e reinseriva le righe: salvare un indirizzo costava oltre 10 s). Espongono `getOptions(Get $get)` per i select Filament; `Locality` ha anche `getPostalCodeOptions()` |
+| `Comune` | `BaseModel` + trait `Modules\Tenant\Models\Traits\SushiToJson` | `config('geo.comuni_json_path')` oppure `resources/json/comuni.json` | modello Sushi con scrittura su JSON (create/update/delete riscrivono il file): nei test si punta `geo.comuni_json_path` a un fixture per non toccare il JSON versionato |
+| `ComuneJson` | `GeoJsonModel` | `resources/json/comuni.json` | collezioni statiche: `all`, `byRegion`, `byProvince`, `byCap`, `searchByName`, `allRegions`, `allProvinces`, `getProvincesByRegion`, `getCapsByCity`, `isValidCap`, `getGerarchia`, `getValidationRules`, `clearCache` |
+| `GeoJsonModel` | astratta | `static::$jsonFile` | `all()`, `where()`, cache per percorso (`geo_comuni_json_<md5>`); read-only, nessuna relazione Eloquent |
+| `State`, `County`, `GeoNamesCap` | `BaseModel` | tabelle `states`, `counties`, `geonames_cap` (migrazioni 2025-07-24) | dati su database, per codici postali GeoNames |
 
-### 2. Servizio di Accesso ai Dati
+Regola pratica: serve una relazione Eloquent o un filtro SQL → modelli Sushi; serve solo leggere e filtrare una
+collezione senza database → `ComuneJson`; serve scrivere comuni → `Comune`. I vecchi modelli `City` e `Cap` descritti nelle
+analisi precedenti non esistono piu': il comune e' `Comune`/`Locality`, il CAP e' il campo `cap`/`postal_code`.
+
+## Azioni di accesso alla gerarchia
+
+`Actions/GeoData/` sostituisce i vecchi `GeoDataService` e `GeoDataValidator` (restano in `app/Services/` per compatibilita',
+vedi [geo-sync-marker-repair.md](./geo-sync-marker-repair.md)):
+
+- `GetRegionsAction`, `GetProvincesAction($regionCode)`, `GetCitiesAction($provinceCode)`, `GetCapAction($provinceCode, $cityCode)`;
+- `LoadGeoDataAction`, `LoadGeoHierarchyAction` (`executeRegions|Provinces|Cities|Cap|ClearCache`);
+- `ValidateGeoDataAction`, `ValidateGeoDataIntegrityAction`, `CheckGeoDataIntegrityAction`, `ClearGeoDataCacheAction`.
+
+Le chiavi di cache sono in `Infrastructure/Config/GeoDataConfig` (`geo.regions`, `geo.provinces.%s`, `geo.cities.%s`,
+`geo.cap.%s.%s`, TTL 86.400 s). I select a cascata (regione → provincia → comune → CAP) usano `Region`/`Province`/`Locality`
+con `getOptions()`.
+
+## Migrazioni, factory e seeder
+
+- Migrazioni nel modulo: `place_types`, `places`, `locations`, `addresses`, `states`, `counties`, `geonames_cap` (tutte
+  `XotBaseMigration`). La migrazione `regions` e' disattivata (`.php,bak`): `Region` e' Sushi.
+- Una factory per ogni modello in `database/factories/` (13): `Address`, `Comune`, `CommuneJson` (per `ComuneJson`), `County`,
+  `GeoJsonModel`, `GeoNamesCap`, `Locality`, `Location`, `Place`, `PlaceType`, `Province`, `Region`, `State`.
+- `GeoDatabaseSeeder` chiama i seeder delle entita' (`Address`, `Comune`, `ComuneJson`, `County`, `GeoNamesCap`, `Locality`,
+  `Location`, `Place`, `PlaceType`, `Province`, `Region`, `State`). Aiuti: `GeoDataMigrator`, `GeoJsonDownloader`,
+  `GeoJsonExportSeeder`, `SushiSeeder`.
+- Comando `php artisan sushi:manage {refresh|clear|status}` gestisce il database SQLite di Sushi.
+
+Dati sacri: mai `migrate:fresh`, `migrate:refresh` o `--force` e mai `RefreshDatabase` (vedi [testing.md](./testing.md)).
+
+## Esempio
+
 ```php
-<?php
+use Modules\Geo\Models\ComuneJson;
+use Modules\Geo\Models\Province;
 
-declare(strict_types=1);
-
-namespace Modules\Geo\App\Services;
-
-use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\File;
-
-class GeoDataService
-{
-    private const CACHE_KEY = 'geo_data';
-    private const CACHE_TTL = 86400; // 24 ore
-
-    private array $data;
-
-    public function __construct()
-    {
-        $this->data = $this->loadData();
-    }
-
-    private function loadData(): array
-    {
-        return Cache::remember(self::CACHE_KEY, self::CACHE_TTL, function () {
-            $json = File::get(module_path('Geo', 'resources/json/comuni.json'));
-            return json_decode($json, true);
-        });
-    }
-
-    public function getRegions(): array
-    {
-        return collect($this->data['regions'])
-            ->map(fn ($region) => [
-                'id' => $region['code'],
-                'name' => $region['name']
-            ])
-            ->toArray();
-    }
-
-    public function getProvinces(string $regionCode): array
-    {
-        $region = collect($this->data['regions'])
-            ->firstWhere('code', $regionCode);
-
-        if (!$region) {
-            return [];
-        }
-
-        return collect($region['provinces'])
-            ->map(fn ($province) => [
-                'id' => $province['code'],
-                'name' => $province['name']
-            ])
-            ->toArray();
-    }
-
-    public function getCities(string $provinceCode): array
-    {
-        foreach ($this->data['regions'] as $region) {
-            foreach ($region['provinces'] as $province) {
-                if ($province['code'] === $provinceCode) {
-                    return collect($province['cities'])
-                        ->map(fn ($city) => [
-                            'id' => $city['code'],
-                            'name' => $city['name'],
-                            'cap' => $city['cap']
-                        ])
-                        ->toArray();
-                }
-            }
-        }
-
-        return [];
-    }
-
-    public function getCap(string $provinceCode, string $cityCode): ?string
-    {
-        $cities = $this->getCities($provinceCode);
-        
-        $city = collect($cities)
-            ->firstWhere('id', $cityCode);
-
-        return $city['cap'] ?? null;
-    }
-
-    public function clearCache(): void
-    {
-        Cache::forget(self::CACHE_KEY);
-    }
-}
+$milano = ComuneJson::searchByName('Milano', limit: 5);
+$capValido = ComuneJson::isValidCap('20100');
+$province = Province::query()->orderBy('name')->get();
 ```
-
-### 3. Utilizzo in Filament
-```php
-use Filament\Forms\Components\Select;
-use Filament\Forms\Get;
-use Filament\Forms\Set;
-use Modules\Geo\App\Services\GeoDataService;
-
-class LocationForm
-{
-    public static function getSchema(): array
-    {
-        $geoService = app(GeoDataService::class);
-
-        return [
-            'location' => Fieldset::make('location')
-                ->schema([
-                    'region' => Select::make('region')
-                        ->options(fn () => $geoService->getRegions())
-                        ->searchable()
-                        ->required()
-                        ->live()
-                        ->afterStateUpdated(fn (Set $set) => $set('province', null))
-                        ->selectablePlaceholder(false),
-
-                    'province' => Select::make('province')
-                        ->options(fn (Get $get) => 
-                            $geoService->getProvinces($get('region'))
-                        )
-                        ->searchable()
-                        ->required()
-                        ->live()
-                        ->afterStateUpdated(fn (Set $set) => $set('city', null))
-                        ->visible(fn (Get $get) => filled($get('region')))
-                        ->selectablePlaceholder(false),
-
-                    'city' => Select::make('city')
-                        ->options(fn (Get $get) => 
-                            $geoService->getCities($get('province'))
-                        )
-                        ->searchable()
-                        ->required()
-                        ->live()
-                        ->afterStateUpdated(fn (Set $set) => $set('cap', null))
-                        ->visible(fn (Get $get) => filled($get('province')))
-                        ->selectablePlaceholder(false),
-
-                    'cap' => Select::make('cap')
-                        ->options(fn (Get $get) => 
-                            collect($geoService->getCities($get('province')))
-                                ->firstWhere('id', $get('city'))['cap']
-                        )
-                        ->required()
-                        ->visible(fn (Get $get) => filled($get('city')))
-                        ->selectablePlaceholder(false),
-                ]),
-        ];
-    }
-}
-```
-
-## Best Practices
-
-1. **Performance**
-   - Cache del file JSON in memoria
-   - Caricamento lazy dei dati
-   - Ottimizzazione delle query
-
-2. **Manutenzione**
-   - Versioning del file JSON
-   - Validazione della struttura
-   - Backup automatico
-
-3. **Validazione**
-   - Schema JSON
-   - Integrità dei dati
-   - Gestione errori
-
-## Esempio di Validazione
-```php
-use Illuminate\Support\Facades\Validator;
-
-class GeoDataValidator
-{
-    public function validate(array $data): bool
-    {
-        $rules = [
-            'regions' => 'required|array',
-            'regions.*.name' => 'required|string',
-            'regions.*.code' => 'required|string|size:2',
-            'regions.*.provinces' => 'required|array',
-            'regions.*.provinces.*.name' => 'required|string',
-            'regions.*.provinces.*.code' => 'required|string|size:2',
-            'regions.*.provinces.*.cities' => 'required|array',
-            'regions.*.provinces.*.cities.*.name' => 'required|string',
-            'regions.*.provinces.*.cities.*.code' => 'required|string',
-            'regions.*.provinces.*.cities.*.cap' => 'required|string|size:5',
-        ];
-
-        $validator = Validator::make($data, $rules);
-
-        return !$validator->fails();
-    }
-}
-```
-
-## Note Aggiuntive
-
-1. **Vantaggi rispetto al Database**
-   - Nessuna migrazione
-   - Nessuna query SQL
-   - Dati sempre disponibili
-   - Backup semplice
-   - Versioning facile
-
-2. **Svantaggi**
-   - Dati in memoria
-   - Aggiornamento manuale
-   - Possibili problemi con file molto grandi
-
-3. **Alternative**
-   - Database SQLite
-   - File YAML
-   - API esterna
-
-## Collegamenti
-- [Documentazione Squire](../../geo/project_docs/squire-integration.md)
-- [Best Practices Filament](../../Xot/docs/consolidated/filament-best-practices-2.md)
-- [Clean Code](../../../../docs/project/clean-code.md) 

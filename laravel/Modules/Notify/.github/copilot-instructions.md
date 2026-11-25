@@ -374,9 +374,9 @@ GSD directories:
 
 ### Master Hubs (Start Here)
 - **Architecture Diagrams**: `docs/architecture-diagrams.md` (system overview, ASCII diagrams)
-- **Module Master Index**: `../docs/module-docs-index-2.md` (all 19 modules + relationships)
-- **Theme Master Index**: `../docs/themes-documentation-index-2.md` (Sixteen, TwentyOne + integration)
-- **Documentation Ecosystem**: `../docs/documentation-ecosystem-2.md` (complete navigation map)
+- **Module Master Index**: `docs/MODULE_DOCS_INDEX.md` (all 19 modules + relationships)
+- **Theme Master Index**: `docs/THEMES_DOCUMENTATION_INDEX.md` (Sixteen, TwentyOne + integration)
+- **Documentation Ecosystem**: `docs/DOCUMENTATION_ECOSYSTEM.md` (complete navigation map)
 
 ### Framework & Standards
 - **Framework Rules**: `laravel/Modules/Geo/docs/root-md-files/claude.md` (comprehensive Laraxot guidelines, 38.7 KB)

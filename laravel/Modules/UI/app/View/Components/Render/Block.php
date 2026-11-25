@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\View\Component;
 use Illuminate\View\View;
-use Modules\UI\Actions\Block\ResolveLocalizedBlockDataAction;
+use Modules\UI\Actions\Block\GetLocalizedBlockDataAction;
 use UnexpectedValueException;
 use Webmozart\Assert\Assert;
 
@@ -56,7 +56,7 @@ class Block extends Component
         }
         $rawData = $this->block['data'] ?? [];
         $viewParams = \is_array($rawData) ? $this->normalizeViewData($rawData) : [];
-        $viewParams = app(ResolveLocalizedBlockDataAction::class)->execute($viewParams);
+        $viewParams = app(GetLocalizedBlockDataAction::class)->execute($viewParams);
         $viewParams = $this->normalizeViewData($viewParams);
         Assert::string($view, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
 

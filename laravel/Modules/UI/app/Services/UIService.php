@@ -16,6 +16,4 @@ use Modules\Xot\Actions\File\AssetAction;
  * @deprecated Use AssetAction instead.
  * @see Modules/UI/docs/philosophy.md
  */
-final class UIService
-{
-}
+final class UIService {}

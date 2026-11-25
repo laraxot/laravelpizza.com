@@ -24,9 +24,15 @@ qmd search "Media <topic>" --limit 5
 
 ## Composer / nwidart
 
-- [composer-root-minimal-nwidart](concepts/composer-root-minimal-nwidart.md) — root skeleton nwidart (modello ptv)
+- [composer-root-minimal-nwidart](concepts/composer-root-minimal-nwidart.md) — root skeleton nwidart (modello laraxot)
 
----
+## Contenuto fuso da `index.md`
 
-
-<!-- Second copy merged from index.md (case-collision) removed: identical wiki index with duplicate -2 links. -->
+## Indices
+- [Rules](rules/index.md)
+- [Rules](rules/index.md)
+- [Rules](rules/index.md)
+- [Skills](skills/index.md)
+- [Commands](commands/index.md)
+- [Memories](memories/index.md)
+- [Concepts](concepts/index.md)

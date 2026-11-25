@@ -15,6 +15,7 @@ use function Safe\preg_replace_callback;
  *
  * Consumer di dominio: {@see GenericNotification}
  * (mail/HTML che devono strumentare aperture e click senza controller legacy).
+ * Usato anche da helper di test (es. NotifyTrackingDummy): non ignorare trait.unused.
  *
  * @see Modules/Notify/docs/contracts/has-notification-tracking.md
  */

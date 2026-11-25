@@ -14,4 +14,4 @@ Stato letto dalla frontmatter di ciascun file. Formato e regole: [README.md](REA
 
 | ADR | Stato | Titolo |
 |---|---|---|
-| [activity-audit-is-append-oriented](activity-audit-is-append-oriented.md) | accepted | L'audit delle attivita' e' append-oriented |
+| [activity-audit-is-append-oriented](0001-activity-audit-is-append-oriented.md) | accepted | L'audit delle attivita' e' append-oriented |

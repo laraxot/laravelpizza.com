@@ -28,13 +28,13 @@ docs/
 │   ├── brainstorming/          # Brainstorming artifacts
 │   ├── decision-log.md         # Decision history
 │   ├── bugfix/                 # Bug fixes & analysis
-│   ├── analysis-results.md     # Analysis findings
+│   ├── ../wiki/analysis-results.md     # Analysis findings
 │   ├── code-quality-report.md  # Quality gates
-│   ├── code-quality-improvement.md
+│   ├── code-quality-improvement-report.md
 │   ├── code-redundancy-audit.md
-│   ├── coverage-report.md
+│   ├── ../coverage.md
 │   ├── database-model-coverage.md
-│   └── bottlenecks.md
+│   └── ../wiki/bottlenecks.md
 ├── wiki/                        # Knowledge & patterns
 │   ├── how-to/                 # Implementation guides
 │   ├── reference/              # Language patterns & concepts

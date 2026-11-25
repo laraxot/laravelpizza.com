@@ -1,0 +1,93 @@
+---
+title: "7.5-create-json-max-oneliner.story.md"
+type: concept
+status: active
+module: "Tenant"
+tags: [docs, tenant, bmad]
+created: 2026-10-06
+updated: 2026-10-06
+qmd: "7 5 create json max oneliner"
+---
+<<<<<<< HEAD
+
+# Story 7.5 — CreateJsonFileByRecordAction: one-liner `$max`
+
+=======
+# Story 7.5 — CreateJsonFileByRecordAction: one-liner `$max`
+
+## Context and Problem Statement
+
+Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica a MADR).
+
+## Decision Drivers
+
+- Richiesta utente / acceptance criteria della story
+- Vincoli BMAD, second brain, Pest gate e dati sacri
+
+## Considered Options
+
+- Status quo (non fare)
+- Implementare come descritto nel Decision Outcome
+
+## Decision Outcome
+
+Scelta: **implementare**, perché i driver sopra.
+
+>>>>>>> laraxot/dev
+> Status: done — 2026-10-05. Solo verifica: la one-liner era già nel working tree.
+
+## Epic
+
+Tenant JSON-sync (SushiToJson): niente foreach prolissi dove basta un'espressione.
+
+## Contesto
+
+Su richiesta utente, il calcolo `max(id)+1` in
+`Modules/Tenant/app/Actions/Json/CreateJsonFileByRecordAction.php`
+torna alla forma compatta (niente `foreach` + `Assert::integer` riga per riga):
+
+```php
+$max = max(Arr::pluck($rows, $keyName) ?: [0]);
+```
+
+Rispetto alla forma storica `max(Arr::pluck(...))` il `?: [0]` evita
+`ValueError: max(): Argument #1 must be non-empty` alla prima riga
+(righe vuote → `newId = 1`). Docblock già aggiornato di conseguenza.
+
+## Acceptance criteria
+
+- [x] Niente `foreach` per il calcolo di `$max`
+- [x] Righe vuote → `newId = 1` (verificato: `empty=>1`, `full=>6`)
+- [x] `php -l` pulito
+
+## Note / follow-up (non bloccanti)
+
+- `use Webmozart\Assert\Assert;` è orfano nel file (pint `no_unused_imports`);
+  rimosso? NO — file sotto lock di altro agente (`phpstan-modules-fix`,
+  2026-10-05 09:17, coordinamento: nessun claim in
+  `docs/chat/multi-agent-standing-coordination.md`). Follow-up al rilascio lock.
+- Pest gate: nessun test copre l'action (`rg` zero match nei tests);
+  verifica via logica standalone + `php -l`. Skip documentato.
+- Readability (richiesta utente 2026-10-05): espandere righe 46-48 in 3 righe
+  leggibili (`$rows = array_values(...); $filename = getJsonFile; execute(...)`).
+  NON eseguita: file ancora sotto lock `phpstan-modules-fix` (09:17, age 32m
+  al ricontrollo). Nota: path reale `Actions/Json/` (un check precedente su
+  `Actions/` senza `Json/` puntava al path sbagliato). Retry al rilascio lock.
+
+## References
+
+- `laravel/Modules/Tenant/app/Actions/Json/CreateJsonFileByRecordAction.php:35`
+- TRIGGER_MAP: Action → `02-Laravel-Core`; QMD non interrogabile (timeout 120s, documentato)
+<<<<<<< HEAD
+=======
+
+
+### Consequences
+
+- Buono, perché chiude il gap descritto nel Context
+- Cattivo, perché richiede write-back docs, lock e quality gate
+
+### Confirmation
+
+Aggiungere prova ripetibile (Pest exit code + conteggio, PHPStan, o skip host documentato).
+>>>>>>> laraxot/dev

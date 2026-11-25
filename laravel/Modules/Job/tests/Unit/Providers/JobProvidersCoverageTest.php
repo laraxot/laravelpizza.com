@@ -120,7 +120,6 @@ describe('Job Providers Coverage', function () {
     });
 
     describe('AdminPanelProvider', function () {
-
         it('has module property', function () {
             $provider = new AdminPanelProvider(app());
             $reflection = new \ReflectionProperty(AdminPanelProvider::class, 'module');

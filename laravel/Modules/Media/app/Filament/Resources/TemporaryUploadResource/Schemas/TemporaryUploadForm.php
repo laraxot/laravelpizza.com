@@ -23,6 +23,5 @@ class TemporaryUploadForm extends XotBaseResourceForm
             'file_size' => TextInput::make('file_size')->numeric()->minValue(0),
             'status' => TextInput::make('status')->required()->maxLength(32),
         ];
-
     }
 }

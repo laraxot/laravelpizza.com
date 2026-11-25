@@ -46,14 +46,14 @@ final class UiCoverageMissHelpers
 
     public static function ensureCmsStub(): void
     {
-        $fqcn = 'Modules\\Cms\\Actions\\ResolveLocalizedBlockDataAction';
+        $fqcn = 'Modules\\Cms\\Actions\\GetLocalizedBlockDataAction';
         if (class_exists($fqcn, false)) {
             return;
         }
 
         eval(<<<'PHP'
 namespace Modules\Cms\Actions;
-class ResolveLocalizedBlockDataAction
+class GetLocalizedBlockDataAction
 {
     /** @var callable|null */
     public static $handler = null;

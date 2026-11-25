@@ -6,10 +6,16 @@ status: active
 created: 2026-11-18
 updated: 2026-11-24
 qmd: "activity contracts readme azioni invarianti pest group audit log"
+<<<<<<< .merge_file_vbb96H
+=======
+title: "Contratti"
+type: index
+>>>>>>> .merge_file_HS4hmu
 tags: [contracts, actions, interfaces]
 ---
 
 # Contratti
+<<<<<<< .merge_file_vbb96H
 title: "Contratti del modulo Activity"
 type: index
 tags: [contracts, actions, interfaces, activity, audit, log-viewer]
@@ -45,6 +51,8 @@ Leggili prima di chiamare, modificare o imitare una di queste Action. Le invaria
 
 Formato (sei sezioni, tabella invarianti con ID, `@contract` nel docblock):
 [action-behavioral-contract](../../../Xot/docs/rules/action-behavioral-contract.md).
+=======
+>>>>>>> .merge_file_HS4hmu
 
 ## Metodo Harness
 
@@ -70,6 +78,7 @@ Un file per Action, nome in kebab-case della classe (`create-ticket-action.md`),
 ```
 
 Il docblock dell'Action rimanda al file con la riga `Contratto di comportamento: docs/contracts/<file>.md`.
+<<<<<<< .merge_file_vbb96H
 Il docblock dell'Action rimanda al file con il marker `@contract docs/contracts/<file>.md`; la riga legacy
 `Contratto di comportamento: docs/contracts/<file>.md` può restare.
 Chi cambia il comportamento aggiorna il contratto nello stesso commit.
@@ -108,3 +117,8 @@ Formato (sei sezioni, tabella invarianti con ID, `@contract` nel docblock):
 
 - [index-2.md](index-2.md) — inventario machine-readable del modulo (la sua tabella oggi dichiara «nessun contratto»: vale l'elenco qui sopra).
 - [template-2.md](template-2.md) — template minimo `type: contract` con `action: <FQCN>` e le sei sezioni.
+=======
+Chi cambia il comportamento aggiorna il contratto nello stesso commit.
+
+## Contratti
+>>>>>>> .merge_file_HS4hmu

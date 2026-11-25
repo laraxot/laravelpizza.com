@@ -25,7 +25,7 @@ use Modules\User\Actions\Auth\BuildActiveUserProviderAction;
 use Modules\User\Actions\Auth\BuildApiLoginLimitAction;
 use Modules\User\Actions\Auth\BuildPasswordResetUrlAction;
 use Modules\User\Actions\Auth\EnsureResetPasswordMailTemplateAction;
-use Modules\User\Actions\Auth\ResolveNotifiableEmailAction;
+use Modules\User\Actions\Auth\GetNotifiableEmailAction;
 use Modules\User\Datas\PasswordData;
 use Modules\User\Models\BaseUser;
 use Modules\User\Models\Policies\UserPolicy;
@@ -79,7 +79,7 @@ class UserServiceProvider extends XotBaseServiceProvider
             // Il template `reset-password` non e' seminato: SpatieEmail lo creerebbe con il testo di registrazione (DCP-285, D-05).
             app(EnsureResetPasswordMailTemplateAction::class)->execute();
             $email = new SpatieEmail($notifiable, EnsureResetPasswordMailTemplateAction::SLUG);
-            $emailAddress = app(ResolveNotifiableEmailAction::class)->execute($notifiable);
+            $emailAddress = app(GetNotifiableEmailAction::class)->execute($notifiable);
             $email->mergeData([
                 'token' => $token,
                 // Radice da `app.url`, non dall'header Host della richiesta (SEC-007); email precompilata nella pagina.
@@ -122,7 +122,7 @@ class UserServiceProvider extends XotBaseServiceProvider
                 'verification_url' => $url,
             ]);
 
-            $emailAddress = app(ResolveNotifiableEmailAction::class)->execute($notifiable);
+            $emailAddress = app(GetNotifiableEmailAction::class)->execute($notifiable);
 
             if ($emailAddress !== null) {
                 $email->to($emailAddress);

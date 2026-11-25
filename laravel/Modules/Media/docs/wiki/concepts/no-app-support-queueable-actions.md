@@ -24,12 +24,12 @@ Nel modulo Media **non** esiste più `app/Support/`.
 | Legacy `app/Support/` | Action |
 |-----------------------|--------|
 | `TemporaryUploadPathGenerator` (`TemporaryUploadPathGeneratorContract`) | `GenerateTemporaryUploadPathAction` (`purpose`: `original`, `conversion`, `responsive`) |
-| `Ffmpeg/MediaExporterResolver` | `Ffmpeg/ResolveMediaExporterAction` (`from()` → `execute()`) |
+| `Ffmpeg/MediaExporterResolver` | `Ffmpeg/GetMediaExporterAction` (`from()` → `execute()`) |
 
 ## Note
 
 - Nessun consumer PHP attivo al momento della migrazione; path generator pronto per binding Spatie MediaLibrary.
-- `ResolveMediaExporterAction` normalizza il ritorno della fluent API FFmpeg.
+- `GetMediaExporterAction` normalizza il ritorno della fluent API FFmpeg.
 
 ## Collegamenti
 

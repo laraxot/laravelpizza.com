@@ -8,6 +8,11 @@ use Carbon\Carbon;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see docs/contracts/determine-seasonal-content-view-path-action.md
+ *
+ * @contract docs/contracts/determine-seasonal-content-view-path-action.md
+ */
 class DetermineSeasonalContentViewPathAction
 {
     use QueueableAction;

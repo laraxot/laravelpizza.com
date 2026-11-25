@@ -11,12 +11,10 @@ uses(TestCase::class);
 describe('LogoutWidget', function (): void {
     test('logout widget can be instantiated', function (): void {
         new LogoutWidget;
-
     });
 
     test('logout widget extends xot base widget', function (): void {
         Assert::assertSame(XotBaseSchemaWidget::class, get_parent_class(LogoutWidget::class));
-
     });
 
     test('logout widget has is logging out flag', function (): void {

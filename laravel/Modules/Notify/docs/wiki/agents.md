@@ -218,7 +218,7 @@ LLM Agent Actions:
    - Ingest/Query/Lint workflows
    - Tool chain (Obsidian, qmd, Marp)
 3. Create pages:
-   - wiki/concepts/llm-wiki-architecture.md
+   - wiki/concepts/second-brain-llm-wiki.md#llm-wiki-architecture
    - wiki/concepts/ingest-query-lint-workflows.md
    - wiki/entities/andrej-karpathy.md
    - wiki/sources/karpathy-llm-wiki.md
@@ -578,7 +578,7 @@ Logarithmic Market Scoring Rule (LMSR) is the core pricing mechanism...
 # Wiki Activity Log
 
 ## [2026-04-15] ingest | Karpathy LLM Wiki Article
-- Created: concepts/llm-wiki-architecture.md
+- Created: bashscripts/ai/wiki/concepts/second-brain-llm-wiki.md#llm-wiki-architecture
 - Created: entities/andrej-karpathy.md
 - Created: sources/karpathy-llm-wiki.md
 - Updated: index.md, log.md
@@ -602,5 +602,24 @@ Logarithmic Market Scoring Rule (LMSR) is the core pricing mechanism...
 
 - [Token Efficiency Religion](../token-efficiency-religion.md)
 - [Documentation Standards](../rules/docs-standards.md)
-- [Multi-Agent Collaboration](../multi-agent-collaboration-2.md)
+- [Multi-Agent Collaboration](../multi-agent-collaboration.md)
 - [Karpathy's Original Gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
+
+## Contenuto fuso da `agents.md`
+
+=======
+=======
+User: "How does LMSR work with forecast markets?"
+1. Search wiki/index.md for "LMSR", "forecast markets"
+   - wiki/concepts/forecast-market-design.md
+   - wiki/entities/forecast-module.md
+User: "ingest docs/raw/articles/laraxot-ticket-patterns.md into App wiki"
+2. Create/update pages in Modules/App/docs/llm-wiki/
+3. Update Modules/App/docs/llm-wiki/index.md
+4. Update Modules/App/docs/llm-wiki/log.md
+npm install -g qmd
+- [ ] Index.md is updated (if new page)
+- [ ] Index.md updated
+=======
+### Example: Index.md Entry
+=======

@@ -35,7 +35,7 @@ class NotifyServiceProvider extends XotBaseServiceProvider
         parent::boot();
         $this->registerMailjetTransport();
         // if (! app()->environment('production')) {
-        $mail = app(ResolveTenantConfigValueAction::class)->execute('mail');
+$mail = app(ResolveTenantConfigValueAction::class)->execute('mail');
         Assert::isArray($mail);
         $fallback_to = Arr::get($mail, 'fallback_to', null);
         if (is_string($fallback_to)) {

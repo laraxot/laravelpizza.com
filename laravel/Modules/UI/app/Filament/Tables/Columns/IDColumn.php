@@ -9,30 +9,32 @@ use Modules\Xot\Filament\Links\RecordAnchor;
 use Modules\Xot\Filament\Tables\Columns\XotBaseTextColumn;
 
 /**
- * Colonna id che funge anche da ancora della riga.
+ * Colonna id obbligatoria: PK + ancora #record-{id} (self-link) + copyable.
  *
- * La cella emette `id="record-{id}"`, quindi l'URL della lista con frammento
- * `#record-1875` porta il browser esattamente su quella riga. I link di ritorno
- * dall'edit lo appendono con {@see RecordAnchor::appendTo()}.
+ * Callers: ogni getTableColumns() / Table Filament; Sigma history via
+ * BaseSigmaHistoryScheda::withIdColumn(). Non usare TextColumn::make('id').
+ *
+ * Self-link `#record-{id}` + copyable sullo stato grezzo.
+ * Return edit: {@see RecordAnchor::appendTo()}.
+ *
+ * @see Modules/UI/docs/adr/0002-idcolumn-mandatory-on-tables.md
  */
 class IDColumn extends XotBaseTextColumn
 {
     public static function make(?string $name = null): static
     {
-        // Nessun label() fisso: lo risolve Column::configureUsing (LangServiceProvider), come per ogni TextColumn('id').
-        // Nessun searchable() forzato: la ricerca sull'id la sceglie il chiamante (LIKE su tutta la tabella, non e' gratis).
+        // Nessun label() fisso: LangServiceProvider via Column::configureUsing.
+        // searchable() opt-in del chiamante.
         return parent::make($name ?? 'id')
             ->sortable()
             ->html()
+            ->copyable()
             ->formatStateUsing(static fn (mixed $state): HtmlString => static::renderAnchor($state))
-            // Con copyable() Filament copia lo stato FORMATTATO: senza questo negli appunti finirebbe lo <span>.
             ->copyableState(static fn (mixed $state): string => is_scalar($state) ? (string) $state : '');
     }
 
     /**
-     * Ancora della riga con il valore dell'id come testo.
-     *
-     * `scroll-mt-24` tiene la riga sotto l'header sticky invece che nascosta dietro.
+     * Self-link ancora: testo = id, href = `#record-{id}`.
      */
     public static function renderAnchor(mixed $state): HtmlString
     {
@@ -44,10 +46,10 @@ class IDColumn extends XotBaseTextColumn
 
         $escaped = e($value);
         $anchor = e(RecordAnchor::id($value));
+        $fragment = e(RecordAnchor::fragment($value));
 
-        // Filament può già avvolgere la cella in un link di riga. Un secondo
-        // <a> qui produrrebbe anchor annidati non validi; il link nativo della
-        // riga resta l'affordance di navigazione, questo span è il target.
-        return new HtmlString('<span id="'.$anchor.'" class="scroll-mt-24">'.$escaped.'</span>');
+        return new HtmlString(
+            '<a id="'.$anchor.'" href="'.$fragment.'" class="scroll-mt-24 fi-link text-primary-600 hover:underline" title="'.$fragment.'">'.$escaped.'</a>'
+        );
     }
 }

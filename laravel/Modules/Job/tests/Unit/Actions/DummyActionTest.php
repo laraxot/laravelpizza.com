@@ -14,7 +14,6 @@ use function Safe\file_get_contents;
 uses(TestCase::class);
 
 describe('DummyAction', function (): void {
-
     test('has correct method signature', function (): void {
         $reflection = new \ReflectionClass(DummyAction::class);
         $method = $reflection->getMethod('execute');

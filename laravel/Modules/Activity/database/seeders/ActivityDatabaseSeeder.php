@@ -14,9 +14,7 @@ class ActivityDatabaseSeeder extends Seeder
     public function run(): void
     {
         if ($this->command !== null) {
-
             $this->command->info('ActivityDatabaseSeeder: entity seeders…');
-
         }
 
         $this->call([
@@ -26,9 +24,7 @@ class ActivityDatabaseSeeder extends Seeder
         ]);
 
         if ($this->command !== null) {
-
             $this->command->info('ActivityDatabaseSeeder: completato.');
-
         }
     }
 }

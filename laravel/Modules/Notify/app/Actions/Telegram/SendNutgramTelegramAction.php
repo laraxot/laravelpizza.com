@@ -16,6 +16,11 @@ use Spatie\QueueableAction\QueueableAction;
 use function Safe\json_decode;
 use function Safe\json_encode;
 
+/**
+ * @see docs/contracts/send-nutgram-telegram-action.md
+ *
+ * @contract docs/contracts/send-nutgram-telegram-action.md
+ */
 final class SendNutgramTelegramAction implements TelegramProviderActionInterface
 {
     use QueueableAction;

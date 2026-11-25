@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 use function Safe\file_get_contents;
 use function Safe\glob;
+use function Safe\preg_replace;
 
 /**
  * Behaviour: layout owner is UI (not Cms). Filament Styles/Scripts + bare notifications.
  * Existing UI tests: this file. UI layouts must not reference Cms (checked on the code, not on the folder,
  * so it holds in projects that do ship Modules/Cms).
  *
- * @see Modules/UI/docs/adr/optional-cms-delegation-for-block-data.md
+ * @see Modules/UI/docs/adr/0004-optional-cms-delegation-for-block-data.md
  * User: «@auth @livewire(notifications) @endauth e' sbagliato — solo @livewire(notifications)».
  * Docs: https://filamentphp.com/docs/5.x/introduction/installation#configuring-your-layout
  */
@@ -39,6 +40,11 @@ test('ui layouts do not depend on the cms module', function (): void {
     expect($layouts)->not->toBeEmpty();
 
     foreach ($layouts as $layout) {
+        expect($layout)->toBeString();
+        if (! is_string($layout)) {
+            continue;
+        }
+
         // I commenti Blade possono nominare cms::* per spiegare perche' non lo usano: contano solo i riferimenti reali.
         $code = (string) preg_replace('/\{\{--.*?--\}\}/s', '', (string) file_get_contents($layout));
 

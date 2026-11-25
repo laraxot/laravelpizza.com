@@ -13,7 +13,7 @@ use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 /**
  * @param  array<string, mixed>  $attributes
@@ -24,7 +24,6 @@ function createUser(array $attributes = []): User
 }
 
 test('Activity Lifecycle Actions', function () {
-
     test('can log model creation via LogModelCreatedAction', function () {
         $user = createUser(['name' => 'New User']);
         $action = new LogModelCreatedAction;

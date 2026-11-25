@@ -15,6 +15,11 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\json_decode;
 
+/**
+ * @see docs/contracts/send-360dialog-whatsapp-action.md
+ *
+ * @contract docs/contracts/send-360dialog-whatsapp-action.md
+ */
 final class Send360dialogWhatsAppAction implements WhatsAppProviderActionInterface
 {
     use QueueableAction;

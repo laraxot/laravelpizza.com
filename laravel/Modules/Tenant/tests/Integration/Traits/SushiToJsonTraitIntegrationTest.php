@@ -56,7 +56,6 @@ afterEach(function (): void {
     }
 
     // Mai deleteDirectory: e' la cartella database/content REALE del tenant (pagine e sezioni CMS).
-
 });
 
 describe('Sushi To Json Trait Integration', function (): void {

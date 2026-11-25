@@ -12,6 +12,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Invia email tramite engine Duocircle (WIP).
+ *
+ * @see docs/contracts/send-duocircle-mail-action.md
+ *
+ * @contract docs/contracts/send-duocircle-mail-action.md
  */
 class SendDuocircleMailAction
 {

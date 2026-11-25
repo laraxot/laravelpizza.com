@@ -16,6 +16,11 @@ use function Safe\file_put_contents;
 use function Safe\tempnam;
 use function Safe\unlink;
 
+/**
+ * @see docs/contracts/send-gammu-sms-action.md
+ *
+ * @contract docs/contracts/send-gammu-sms-action.md
+ */
 final class SendGammuSMSAction implements SmsActionContract
 {
     use QueueableAction;

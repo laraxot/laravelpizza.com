@@ -12,6 +12,10 @@ use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Programma l'invio futuro di una notifica push.
+ *
+ * @see docs/contracts/schedule-push-notification-action.md
+ *
+ * @contract docs/contracts/schedule-push-notification-action.md
  */
 class SchedulePushNotificationAction
 {

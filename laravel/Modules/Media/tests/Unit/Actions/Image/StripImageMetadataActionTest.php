@@ -10,6 +10,7 @@ use Modules\Media\Actions\Image\StripImageMetadataAction;
 use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
 use function Safe\file_put_contents;
 use function Safe\imagecolorat;
 use function Safe\imagecreatefromstring;

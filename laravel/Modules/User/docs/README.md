@@ -4,19 +4,20 @@ type: documentation
 tags: [module, documentation]
 created: 2026-06-05
 updated: 2026-11-19
+qmd: "documentazione completa indice overview funzionalità principali autenticazione autorizzazione modelli trait disponibili created updated hasteams hasroles hastenants"
 ---
 
 # Modulo User - Documentazione Completa
 
 ## Indice della documentazione
 
-Questo README e' l'**unico indice** della cartella `docs/` del modulo (i vecchi `index.md`, `index-3.md`,
+Questo README e' l'**unico indice** della cartella `docs/` del modulo (i vecchi `index.md`, `index.md`,
 `00-index.md` generati automaticamente sono stati rimossi: elencavano file duplicati o non piu' esistenti).
 
 | Area | Dove |
 |------|------|
 | Story BMAD del modulo | [stories/](./stories/) · [bmad/stories/](./bmad/stories/) |
-| Audit qualita' corrente | [stories/audit-qualita.story.md](./stories/audit-qualita.story.md) |
+| Audit qualita' corrente | [stories/audit-qualita.story.md](stories/0084-audit-qualita.story.md) |
 | Wiki (concetti, decisioni, troubleshooting) | [wiki/](./wiki/) |
 | Roadmap | [roadmap.md](./roadmap.md) |
 | Storico / documenti superati | [legacy/](./legacy/) |
@@ -84,7 +85,7 @@ In compliance with the [Global Rule](../../../../docs/wiki/rules/module-root-php
 | Ruolo | Path |
 |-------|------|
 | Procedura / saturazione host | [11-phpstan.md](../../../../bashscripts/docs/prompts/11-phpstan.md) |
-| Story zero errori User | [stories/phpstan-zero-errors-user.story.md](./stories/phpstan-zero-errors-user.story.md) |
+| Story zero errori User | [stories/phpstan-zero-errors-user.story.md](stories/0130-phpstan-zero-errors-user.story.md) |
 | Snapshot compliance | [phpstan-compliance.md](./phpstan-compliance.md) |
 | Decine di `phpstan-*.md` in docs/ | **storici** — non SSoT; non aggiungere file con date nel nome |
 
@@ -130,7 +131,7 @@ Rule: never commit files with conflict markers. Fix immediately when found.
 ## Standard Rules & Workflow
 
 - [[BMAD Method](../../../../docs/wiki/concepts/bmad-method.md)]
-- [[Context Engineering](../../../../docs/wiki/concepts/context-engineering.md)]
+- [[Context Engineering](../../../../bashscripts/ai/wiki/concepts/context-token-optimization.md#context-engineering)]
 - [[LLM Wiki Governance](../../../../docs/wiki/concepts/llm-wiki-governance.md)]
 
 ## Documentation
@@ -1234,8 +1235,8 @@ See [roadmap.md](./roadmap.md) for details.
 - [Tenant Module](../../Tenant/docs/README.md) - Enhanced tenancy
 
 ### Project Documentation
-- [CLAUDE.md](../../Geo/docs/root-md-files/claude.md) - Project architecture
-- [Security Guidelines](../../Geo/docs/root-md-files/security-2.md)
+- [CLAUDE.md](../../../claude.md) - Project architecture
+- [Security Guidelines](../../../../docs/SECURITY.md)
 
 ### External Resources
 - [Laravel Authentication](https://laravel.com/docs/12.x/authentication)
@@ -2329,8 +2330,8 @@ See [roadmap.md](./roadmap.md) for details.
 - [Tenant Module](../../Tenant/docs/README.md) - Enhanced tenancy
 
 ### Project Documentation
-- [CLAUDE.md](../../Geo/docs/root-md-files/claude.md) - Project architecture
-- [Security Guidelines](../../Geo/docs/root-md-files/security-2.md)
+- [CLAUDE.md](../../../claude.md) - Project architecture
+- [Security Guidelines](../../../../docs/SECURITY.md)
 
 ### External Resources
 - [Laravel Authentication](https://laravel.com/docs/12.x/authentication)

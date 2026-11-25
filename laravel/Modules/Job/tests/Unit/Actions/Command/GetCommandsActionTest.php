@@ -14,7 +14,6 @@ use function Safe\file_get_contents;
 uses(TestCase::class);
 
 describe('GetCommandsAction', function (): void {
-
     test('has correct method signature', function (): void {
         $reflection = new \ReflectionClass(GetCommandsAction::class);
         $method = $reflection->getMethod('execute');

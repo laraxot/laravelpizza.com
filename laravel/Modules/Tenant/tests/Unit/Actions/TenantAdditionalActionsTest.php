@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Tenant\Tests\Unit\Actions;
 
-use Modules\Tenant\Actions\Models\ResolveTenantModelInstanceAction;
+use Modules\Tenant\Actions\Models\GetTenantModelInstanceAction;
 use Modules\Tenant\Actions\Modules\GetTenantModulesAction;
 use Modules\Tenant\Actions\Translations\TranslateTenantKeyAction;
 use PHPUnit\Framework\Assert;
@@ -18,8 +18,8 @@ describe('Tenant Additional Actions Coverage', function (): void {
         Assert::assertInstanceOf(TranslateTenantKeyAction::class, app(TranslateTenantKeyAction::class));
     });
 
-    test('ResolveTenantModelInstanceAction is accessible', function (): void {
-        Assert::assertInstanceOf(ResolveTenantModelInstanceAction::class, app(ResolveTenantModelInstanceAction::class));
+    test('GetTenantModelInstanceAction is accessible', function (): void {
+        Assert::assertInstanceOf(GetTenantModelInstanceAction::class, app(GetTenantModelInstanceAction::class));
     });
 
     test('GetTenantModulesAction has execute method', function (): void {
@@ -30,7 +30,7 @@ describe('Tenant Additional Actions Coverage', function (): void {
         Assert::assertTrue(method_exists(app(TranslateTenantKeyAction::class), 'execute'));
     });
 
-    test('ResolveTenantModelInstanceAction has execute method', function (): void {
-        Assert::assertTrue(method_exists(app(ResolveTenantModelInstanceAction::class), 'execute'));
+    test('GetTenantModelInstanceAction has execute method', function (): void {
+        Assert::assertTrue(method_exists(app(GetTenantModelInstanceAction::class), 'execute'));
     });
 });

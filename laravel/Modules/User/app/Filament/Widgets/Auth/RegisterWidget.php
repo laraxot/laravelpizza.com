@@ -44,14 +44,14 @@ class RegisterWidget extends XotBaseSchemaWidget
     /**
      * @return class-string<UserForm>
      *
-     * @see ../../../../Xot/docs/bmad/livewire-widget-decision-log.md
+     * @see docs/bmad/livewire-widget-decision-log.md
      */
     protected static function formClass(): string
     {
         return UserForm::class;
     }
 
-    /** @see ../../../../Xot/docs/bmad/livewire-widget-decision-log.md */
+    /** @see docs/bmad/livewire-widget-decision-log.md */
     protected static function schemaMethod(): string
     {
         return 'getRegisterFormSchema';

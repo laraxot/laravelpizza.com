@@ -47,7 +47,6 @@ class MailTemplateLog extends BaseModel
 {
     use MailTemplateLogRelations;
 
-
     protected $fillable = [
         'template_id',
         'mailable_type',

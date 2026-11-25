@@ -109,7 +109,6 @@ describe('ActivityRecorder Adapter', function (): void {
         app()->instance(RecordSubjectActivityAction::class, $mock);
 
         (new ActivityRecorder)->record(User::class, 42, 'updated', ['name' => 'x']);
-
     });
 
     test('getLog delega a GetSubjectActivityLogAction', function (): void {

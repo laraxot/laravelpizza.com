@@ -394,7 +394,6 @@ describe('LangServiceProvider Maintenance', function () {
         $provider = TestCase::makeLangServiceProvider();
         $provider->boot();
         $provider->boot();
-
     });
 
     it('maintains state consistency', function () {

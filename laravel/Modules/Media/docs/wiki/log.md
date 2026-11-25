@@ -27,7 +27,7 @@ module: "Media"
 
 - Documentazione Html2Pdf completa solo in `docs/html2pdf/` (+ `README.md`).
 - Altri moduli: stub DRY verso Media. Campagna: `bashscripts/tools/dedup_module_docs.py`.
-- How-to: [module-docs-deduplication](../../../../../docs/wiki/how-to/module-docs-deduplication.md).
+- How-to: [module-docs-deduplication](../../../../../bashscripts/ai/wiki/how-to/modules-ops.md#module-docs-deduplication).
 
 ## [2026-05-11] Wiki Structure Created
 

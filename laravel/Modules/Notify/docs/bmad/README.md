@@ -3,7 +3,11 @@ title: "Notify Module Documentation"
 type: documentation
 tags: [module, documentation]
 created: 2026-06-05
+<<<<<<< .merge_file_l5cy2g
 updated: 2026-11-23
+=======
+updated: 2026-08-02
+>>>>>>> .merge_file_4iTy7U
 status: draft
 qmd: "documentation notify"
 ---
@@ -68,10 +72,10 @@ Modules\Notify\Models\NotificationTemplateVersion
 ## Risorse
 
 - [PHPStan Config](./phpstan/) - Type checking configuration
-- [On-Demand Pattern](../../../User/docs/on-demand-pattern-2.md): Pattern per caricamento efficiente
-- [QMD Setup](../../../User/docs/qmd-setup-2.md): Configurazione ricerca locale
-- [Performance](../../../User/docs/performance-optimization-2.md): Metriche e best practice
-- [Project Structure](../../../User/docs/project-structure-2.md): Directory layout
+- [On-Demand Pattern](./on-demand-pattern.md): Pattern per caricamento efficiente
+- [QMD Setup](./qmd-setup.md): Configurazione ricerca locale
+- [Performance](./performance-optimization.md): Metriche e best practice
+- [Project Structure](./project-structure.md): Directory layout
 
 ---
 
@@ -137,7 +141,7 @@ Supporta template dinamici, allegati binari, multi-canale e integrazione complet
 ### Guide Complete
 
 #### Email System
-- **[Email Attachments Usage](../email-sending/attachments-usage-2.md)** ⭐  
+- **[Email Attachments Usage](../email-sending/attachments-usage.md)** ⭐  
   Guida completa agli allegati email (path e binary data)
 
 - **[Spatie Mail Templates Deep Dive](../spatie-database-mail-templates-deep-dive.md)**  
@@ -334,7 +338,7 @@ Notification::route('mail', 'to@example.com')->notify($notify);
 **Versione**: 1.1  
 **Stato**: PSR-4 compliant, test business logic completati (95% copertura)  
 **Prossimi passi**: Completamento test modelli base  
-**Changelog**: [changelog.md](./CHANGELOG.MD)
+**Changelog**: [changelog.md](../CHANGELOG.md)
 
 ## 🔗 Collegamenti
 
@@ -357,12 +361,12 @@ Notification::route('mail', 'to@example.com')->notify($notify);
 ### Documentazione Interna
 
 #### Email System
-- [Email Layouts Best Practices](../mail-templates/email-layouts-best-practices-2.md)
-- [Spatie Mail Templates Structure](../mail-templates/spatie-mail-templates-structure-2.md)
-- [Email Troubleshooting](../email-sending/email-troubleshooting-2.md)
+- [Email Layouts Best Practices](../mail-templates/email-layouts-best-practices.md)
+- [Spatie Mail Templates Structure](../mail-templates/spatie-mail-templates-structure.md)
+- [Email Troubleshooting](../email-sending/email-troubleshooting.md)
 
 #### Notifications
-- [Notifications Implementation Guide](../notifications/notifications-implementation-guide-2.md)
+- [Notifications Implementation Guide](../notifications/notifications-implementation-guide.md)
 - [Notification Management Business Logic](./notifications/notification-management-business-logic.md)
 
 ---

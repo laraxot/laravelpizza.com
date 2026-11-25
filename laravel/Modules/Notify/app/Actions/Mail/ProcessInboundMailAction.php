@@ -43,6 +43,10 @@ use function Safe\preg_match;
  *     headers: array<array-key, mixed>|null,
  *     payload: array<array-key, mixed>|null
  * }
+ *
+ * @see docs/contracts/process-inbound-mail-action.md
+ *
+ * @contract docs/contracts/process-inbound-mail-action.md
  */
 class ProcessInboundMailAction
 {

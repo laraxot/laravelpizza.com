@@ -8,7 +8,7 @@ qmd: "log user activity log"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./agents-2.md"
+  - "./agents.md"
   - "./index.md"
 ---
 
@@ -22,7 +22,7 @@ related:
 
 ## [2026-04-15] maintenance | Initial wiki setup
 - Created: llm-wiki/ directory structure
-- Created: agents-2.md (agent instructions)
+- Created: agents.md (agent instructions)
 - Created: index.md (content catalog)
 - Created: log.md (this file)
 - Directories initialized:

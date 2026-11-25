@@ -30,8 +30,8 @@ Questa directory contiene la documentazione relativa all'implementazione delle e
 ## Riferimenti Esterni
 
 - [Documentazione Laravel Translatable](../lang/docs/translatable/index.md)
-- [Best Practices per Laravel Translatable](../../../Activity/docs/best-practices-3.md)
+- [Best Practices per Laravel Translatable](../../../Activity/docs/best-practices.md)
 - [Documentazione Laravel Translatable](modules/lang/docs/translatable/index.md)
-- [Best Practices per Laravel Translatable](../../../Activity/docs/best-practices-3.md)
+- [Best Practices per Laravel Translatable](../../../Activity/docs/best-practices.md)
 - [Documentazione Laravel Translatable](../lang/docs/translatable/index.md)
-- [Best Practices per Laravel Translatable](../../../Activity/docs/best-practices-3.md)
+- [Best Practices per Laravel Translatable](../lang/docs/translatable/best-practices.md)

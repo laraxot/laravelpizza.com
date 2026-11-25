@@ -21,7 +21,7 @@ use Modules\Xot\Filament\Tables\Columns\XotBaseTextColumn;
  * (28 campi); una tabella con 28 colonne per riga non è leggibile, quindi qui la
  * variabilità si sposta nello *stato* della cella — un riepilogo testuale — invece
  * che nello schema, come già per gli altri casi in
- * {@link ../../../../Ptv/docs/form-column-parity.md "Parità non significa clone", punto 3}.
+ * {@link docs/form-column-parity.md "Parità non significa clone", punto 3}.
  *
  * Usage:
  * ```php

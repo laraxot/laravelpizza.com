@@ -1,3 +1,8 @@
+---
+title: "Activity"
+qmd: "activity perché esiste superpoteri documentazione completa readme"
+---
+
 # Activity
 
 [![Module](https://img.shields.io/badge/Module-Activity-8B0000.svg)]()
@@ -260,7 +265,7 @@ php artisan activity:test-events
 - [Event Sourcing](event-sourcing.md) - Sistema event sourcing completo
 - [Activity Logging](structure.md) - Architettura logging attività
 - [Filament Integration](filament.md) - Integrazione dashboard Filament
-- [Advanced Patterns](advanced-event-sourcing-patterns-3.md) - Pattern avanzati
+- [Advanced Patterns](advanced-event-sourcing-patterns.md) - Pattern avanzati
 
 ### 📊 **Analytics & Monitoring**
 - [Activity Dashboard](filament-resources.md) - Dashboard analytics attività
@@ -270,7 +275,7 @@ php artisan activity:test-events
 
 ### 🔧 **Development**
 - [PHPStan Fixes](phpstan/README.md) - Log completo correzioni PHPStan
-- [Event Sourcing Examples](event-sourcing-examples-3.md) - Esempi event sourcing
+- [Event Sourcing Examples](event-sourcing-examples.md) - Esempi event sourcing
 - [Testing Structure](testing-structure-login-analysis.md) - Struttura testing
 
 ## 🎨 **Componenti Filament**
@@ -678,4 +683,4 @@ I test Pest non sono stati rieseguiti in questa sessione: non verificato che pas
 - `LoginListener` non registra nulla: gli accessi non finiscono nel log, solo le uscite.
 - In `database/migrations` restano altre quattro migrazioni `create_activity_table` (`2023_03_31_103350`, `2023_03_31_103351`, `2024_01_01_000001`, `2024_01_01_000002`) oltre a quella del 2026-06-10. Se siano innocue non e' verificato.
 - La connessione `activity` e' dichiarata nei modelli (`$connection = 'activity'`) ma non e' definita in `laravel/config/database.php`: dove venga creata non e' verificato.
-- Documenti che non descrivono il codice: [architecture-3.md](architecture-3.md) (Repositories, Services, Projections inesistenti), [api-2.md](./api.md) (firma `execute(array $data)` inesistente), [readme.md](./readme.md) (`ActivityStatsWidget`, `EventStore`, monitoraggio in tempo reale inesistenti). Sono marcati `stale`.
+- Documenti che non descrivono il codice: [ARCHITECTURE.md](architecture.md) (Repositories, Services, Projections inesistenti), [API.md](./api.md) (firma `execute(array $data)` inesistente), [readme.md](./readme.md) (`ActivityStatsWidget`, `EventStore`, monitoraggio in tempo reale inesistenti). Sono marcati `stale`.

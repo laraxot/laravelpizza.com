@@ -13,6 +13,6 @@ related:
 
 # context overflow prevention
 
-Stub **DRY** verso wiki modulo **Xot**. Policy: [docs-deduplication](../../../../../../docs/wiki/how-to/module-docs-deduplication.md).
+Stub **DRY** verso wiki modulo **Xot**. Policy: [docs-deduplication](../../../../../../bashscripts/ai/wiki/how-to/modules-ops.md#module-docs-deduplication).
 
 → [context-overflow-prevention.md](../../../../Xot/docs/wiki/concepts/context-overflow-prevention.md)

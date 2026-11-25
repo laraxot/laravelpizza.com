@@ -79,14 +79,6 @@ npm run build
 
 ### 8. Assets pubblici
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-Nessuna copia: gli asset sono serviti tramite symlink da `public_html/` (`php artisan xot:theme-link`): `npm run copy` non serve più.
-=======
->>>>>>> laraxot/dev
-=======
-Nessuna copia: gli asset sono serviti tramite symlink da `public_html/` (`php artisan xot:theme-link`): `npm run copy` non serve più.
->>>>>>> laraxot/dev
 Copia gli assets compilati nella directory pubblica:
 
 ```bash

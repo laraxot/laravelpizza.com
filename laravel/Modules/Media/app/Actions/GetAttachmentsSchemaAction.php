@@ -62,7 +62,6 @@ class GetAttachmentsSchemaAction
                     Assert::string($attachment, 'Attachment must be string');
                     $set($attachment, $sessionFiles);
                 });
-
         }
 
         return $form;

@@ -11,6 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
  * Rifiuta ogni comando Artisan che non sia identico a una voce dell'allowlist.
  *
  * @see docs/contracts/assert-allowed-artisan-command-action.md
+ *
  * @contract docs/contracts/assert-allowed-artisan-command-action.md
  */
 final class AssertAllowedArtisanCommandAction

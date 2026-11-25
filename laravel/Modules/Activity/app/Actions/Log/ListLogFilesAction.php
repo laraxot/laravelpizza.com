@@ -34,7 +34,7 @@ class ListLogFilesAction
     public function execute(?string $baseDirectory = null, int $limit = self::DEFAULT_LIMIT): array
     {
         try {
-            $base = app(ResolveLogDirectoryAction::class)->execute($baseDirectory);
+            $base = app(GetLogDirectoryAction::class)->execute($baseDirectory);
         } catch (InvalidLogFileException) {
             return [];
         }

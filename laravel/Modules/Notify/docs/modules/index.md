@@ -38,7 +38,7 @@ related:
 **Path**: `Modules/Fixcity/`  
 **Responsabilità**: Core della piattaforma di segnalazioni  
 **Status**: ✅ Attivo - Modulo principale  
-**Docs**: [📖 Fixcity Docs](../../../Gdpr/docs/links-2.md)
+**Docs**: [📖 Fixcity Docs](../../Modules/Fixcity/docs/links.md)
 
 - Gestione segnalazioni cittadini
 - Workflow amministrativo

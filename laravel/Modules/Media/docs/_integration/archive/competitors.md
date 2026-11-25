@@ -1,8 +1,0 @@
----
-module: theme
-topic: _competitors
-canonical: ../../../../../Themes/docs/shared-components/.gitkeep-Modules
-qmd: "competitors"
----
-
-See canonical documentation: ../../../../../Themes/docs/shared-components/.gitkeep-Modules

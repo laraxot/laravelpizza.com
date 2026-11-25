@@ -63,12 +63,5 @@ La cartella contiene un contratto per quasi ogni Action di `app/Actions`: qui so
 
 ## Indice e template
 
-<<<<<<< .merge_file_AqARh9
-- [INDEX](index.md) — registro operativo: contratti di autenticazione con ID degli invarianti, group Pest presenti, comando per eseguirli, e le classi di `app/Actions` ancora senza contratto.
+- [INDEX](index.md) — tabella operativa operazione, contratto, classe, invarianti; è un elenco precedente a questo README e alcuni suoi nomi di file e classi non coincidono con i contratti qui sopra.
 - [Template di contratto](template.md) — scheletro con le sei sezioni e la tabella degli invarianti, da copiare per una nuova Action.
-
-I file `*.md.bak` sono copie di lavoro, non contratti.
-=======
-- [INDEX](INDEX.md) — tabella operativa operazione, contratto, classe, invarianti; è un elenco precedente a questo README e alcuni suoi nomi di file e classi non coincidono con i contratti qui sopra.
-- [Template di contratto](_template.md) — scheletro con le sei sezioni e la tabella degli invarianti, da copiare per una nuova Action.
->>>>>>> .merge_file_MrgTaL

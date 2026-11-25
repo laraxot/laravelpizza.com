@@ -47,7 +47,6 @@ describe('LogoutListener behavior', function (): void {
 
         $listener = new LogoutListener(Request::create('/logout', 'POST'));
         $listener->handle(logoutEvent(null));
-
     });
 
     test('forgetRememberTokens no-ops for non UserContract', function (): void {

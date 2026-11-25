@@ -25,7 +25,6 @@ use Modules\Activity\Models\Activity;
 use Modules\Xot\Filament\Resources\Pages\XotBasePage;
 use Stringable;
 
-
 /**
  * Classe base per visualizzare lo storico delle attività di un record.
  *

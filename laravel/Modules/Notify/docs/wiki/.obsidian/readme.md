@@ -190,7 +190,10 @@ LIMIT 10
 ## Related Documentation
 
 - [LLM Wiki Integration Guide](../wiki/README.md)
+<<<<<<< .merge_file_8idPGC
 - [Agent Instructions](../wiki/agents.md)
 - [Agent Instructions](../wiki/AGENTS.md)
+=======
+>>>>>>> .merge_file_fYtGc7
 - [Agent Instructions](../wiki/agents.md)
 - [Wiki Overview](../wiki/overview.md)

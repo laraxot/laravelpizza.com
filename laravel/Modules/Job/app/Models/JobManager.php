@@ -55,9 +55,7 @@ use Override;
  * @property-read ProfileContract|null $creator
  * @property-read string $status
  * @property-read ProfileContract|null $updater
- *
  * @property-read ProfileContract|null $deleter
- *
  */
 class JobManager extends BaseModel
 {

@@ -8,8 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 
 final class ListLogActivitiesActionTestResource
 {
-   
-
     /**
      * @param  array<string, mixed>  $parameters
      */

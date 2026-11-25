@@ -1,48 +1,42 @@
 ---
-title: "Architecture Decision Records"
+title: "ADR — UI"
 type: index
-tags: [adr, decisioni]
-created: 2026-11-18
-updated: 2026-11-18
+owner: UI
+updated: 2026-11-25
+qmd: "UI ADR architecture decision record MADR harness NNNN-slug IDColumn"
 ---
 
-# Architecture Decision Records
+# ADR — UI
 
-## Metodo Harness
+Un ADR del modulo UI registra una scelta difficile da invertire, sorprendente o frutto di un trade-off reale sul layer di presentazione condiviso. Ogni affermazione ha un file di prova.
 
-Scrivere un ADR solo per una scelta difficile da invertire, sorprendente o fondata su un trade-off reale. Un ADR deve rendere leggibili contesto, driver, alternative, decisione, conseguenze e una conferma ripetibile; non è un diario né una spiegazione retroattiva inventata.
+## Naming (obbligatorio)
 
-Le decisioni vanno verificate contro codice e test correnti. Una modifica sostanziale crea un nuovo ADR e collega il precedente come superseded/deprecated.
+Il basename **DEVE** essere `NNNN-slug.md` (es. `0002-idcolumn-mandatory-on-tables.md`).
 
-Il **perche'** delle scelte di questo pacchetto: una decisione per file, con le alternative scartate.
-Il nome del file e' l'argomento, senza date ne' numeri (la data sta nella frontmatter).
+Eccezioni: `README.md`, `INDEX.md` / `index.md`, `0000-template.md`. Stub `superseded` senza numero sono ammessi solo come puntatori verso l'ADR `NNNN-` canonico.
 
-## Formato
+## Template MADR (harness)
 
-```markdown
----
-title: "ADR — <decisione in una riga>"
-type: decision
-status: accepted | superseded | deprecated
-created: AAAA-MM-GG
-updated: AAAA-MM-GG
-issues: []
----
+- Ufficiale: [laravelday-harness-workshop `0000-template.md`](https://raw.githubusercontent.com/robertogallea/laravelday-harness-workshop/refs/heads/main/docs/adr/0000-template.md)
+- Locale: [0000-template.md](0000-template.md)
+- Cross-modulo: [Xot 0000-template](../../../Xot/docs/adr/0000-template.md); standard: [Xot ADR](../../../Xot/docs/adr/README.md)
 
-# ADR: <decisione>
+## Formato sezioni (inglese, ordine fisso)
 
-## Contesto
-Fatti e vincoli che hanno reso necessaria la scelta (misure, norme, policy, incidenti).
+Frontmatter harness: `status`, `date`, `decision-makers` (+ `qmd` opzionale per il second brain).
 
-## Decisione
-Cosa si fa, in concreto, e dove sta nel codice.
+Sezioni:
 
-## Alternative scartate
-Ogni alternativa seria, con il motivo per cui non e' stata scelta.
+1. `## Context and Problem Statement`
+2. `## Decision Drivers`
+3. `## Considered Options`
+4. `## Decision Outcome`
+5. `### Consequences`
+6. `### Confirmation`
 
-## Conseguenze
-Pro, contro, debito che resta, cosa misurare. Chi cambia la decisione scrive un nuovo ADR e segna questo `superseded`.
-```
+## ADR presenti
 
-## Decisioni
+Elenco con stato: [index.md](index.md). Ultima decisione numerata: [0002-idcolumn-mandatory-on-tables](0002-idcolumn-mandatory-on-tables.md) (`IDColumn` prima colonna di ogni tabella Filament). Altre: [0005-ui-blocks-use-cms-localization](0005-ui-blocks-use-cms-localization.md); confine dominio in [0006-ui-does-not-authorize-domain-data](0006-ui-does-not-authorize-domain-data.md).
 
+Policy trasversale su dati sacri e test isolati: [0013-dati-sacri-migrazioni-e-test](../../../Xot/docs/adr/0013-dati-sacri-migrazioni-e-test.md).

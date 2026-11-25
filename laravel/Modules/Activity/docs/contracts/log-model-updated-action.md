@@ -1,18 +1,21 @@
 ---
-title: "Contratto — LogModelUpdatedAction"
+title: "Contratto: LogModelUpdatedAction"
 type: contract
 owner: Activity
 status: accepted
-updated: 2026-11-24
+updated: 2026-11-25
 action: "Modules\\Activity\\Actions\\LogModelUpdatedAction"
-qmd: "contract LogModelUpdatedAction activity evento updated modello old new changes getOriginal getChanges ACT-MUPDATE"
-tags: [contract, action, activity, gdpr]
-created: 2026-11-24
+qmd: "contract LogModelUpdatedAction activity evento updated modello old new changes redazione segreti"
+related:
+  - ../actions.md
+  - ../../app/Actions/LogModelUpdatedAction.php
+  - ../../tests/Unit/Actions/LogModelUpdatedActionTest.php
+  - ../../tests/Unit/Actions/LogModelActionsRedactSecretsTest.php
 ---
 
 # LogModelUpdatedAction
 
-Registra l'evento `updated` di un modello Eloquent con valori precedenti, nuovi e modificati.
+Registra l'evento `updated` di un modello Eloquent con valori precedenti, nuovi e modificati. Le sorelle `LogModelCreatedAction` e `LogModelDeletedAction` seguono la stessa regola sui segreti.
 
 ## Input
 
@@ -20,15 +23,15 @@ Registra l'evento `updated` di un modello Eloquent con valori precedenti, nuovi 
 
 ## Output
 
-- `Activity` con `event = 'updated'`, `description = '<Basename> updated'`, `properties = ['old' => getOriginal(), 'new' => getAttributes(), 'changes' => getChanges()]`.
+- `Activity` con `event = 'updated'`, `description = '<ClasseBase> updated'`, `properties = ['old' => ..., 'new' => ..., 'changes' => ...]` (da `getOriginal()`, `getAttributes()`, `getChanges()`).
 
 ## Invarianti
 
 | ID | Regola | Test |
 |---|---|---|
-| `ACT-MUPDATE-INV-1` | Senza modello lancia `InvalidArgumentException('A model is required')`. | Test: nessuno che asserisca il messaggio |
-| `ACT-MUPDATE-INV-2` | Il tipo è `updated`; `properties` ha le chiavi `old`, `new`, `changes`. | Test: nessuno sulle chiavi |
-| `ACT-MUPDATE-INV-3` | `changes` è quello che il modello espone al momento della chiamata: l'Action è valida se chiamata dopo il `save()`. | Test: nessuno |
+| ACT-MUPDATE-INV-1 | Senza modello lancia `InvalidArgumentException('A model is required')`. | nessuno che asserisca il messaggio |
+| ACT-MUPDATE-INV-2 | `old`, `new` e `changes` passano da `RedactModelAttributesAction`: mai `password`, `remember_token`, `two_factor_secret`, `two_factor_recovery_codes`. Vale anche per created e deleted. | `LogModelActionsRedactSecretsTest.php` |
+| ACT-MUPDATE-INV-3 | `changes` e' quello che il modello espone al momento della chiamata: l'Action e' valida se chiamata dopo il `save()`. | nessuno |
 
 ## Effetti collaterali
 
@@ -40,37 +43,5 @@ Registra l'evento `updated` di un modello Eloquent con valori precedenti, nuovi 
 
 ## Non fa
 
-- Non decide quando viene chiamata (chi la invoca, per esempio un observer, non è in questo contract).
-- Non redige `old` e `new`: contengono anche password o token se presenti nel modello (vedi `redact-model-attributes-action.md`).
-
-Registra nel log attività la modifica di un modello. Le sorelle `LogModelCreatedAction` e `LogModelDeletedAction` seguono
-la stessa regola sui segreti (stesso test, stesso group). Regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`.
-
-## Input
-
-- `Model $model` (costruttore o `execute()`); senza modello: `InvalidArgumentException`.
-- `?Model $user` (costruttore): il causer, facoltativo.
-
-## Output
-
-- L'`Activity` creata, evento `updated`, `properties` = `old`, `new`, `changes` del modello.
-
-## Invarianti
-
-| ID | Regola | Group Pest |
-|---|---|---|
-| ACTIVITY-MODEL-LOG-INV-1 | `properties` non contiene mai `password`, `remember_token`, `two_factor_secret`, `two_factor_recovery_codes` (passano da `RedactModelAttributesAction`); vale anche per created e deleted. | `ACTIVITY-MODEL-LOG-INV-1` |
-
-## Effetti collaterali
-
-- Una riga nella tabella delle attività (via `LogActivityAction`, connessione `activity`).
-
-## Errori
-
-- `InvalidArgumentException` se manca il modello.
-
-## Non fa
-
-- Non decide *quali* modelli loggare: lo fa chi la chiama (observer/listener).
-- Non toglie altri dati personali oltre ai segreti elencati (email, nome restano): se un modello ne ha di più sensibili,
-  si estende `RedactModelAttributesAction`, non si filtra qui.
+- Non decide quando viene chiamata ne' quali modelli loggare: lo fa chi la invoca (observer, listener).
+- Non toglie altri dati personali oltre ai segreti elencati (email e nome restano); per aggiungerne si estende `RedactModelAttributesAction`.

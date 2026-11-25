@@ -1,210 +1,186 @@
-# Auto-generated forbidden paths — do not edit manually
-# Reason: root cleanup policy (see docs/wiki/rules/root-cleanup-policy.md)
+# Deduplicated .gitignore - generated from original
 
+._*
+*~
+*~BASE
+*~head
+*~HEAD
+*~LOCAL
+*~REMOTE
+Activity
+Activity/
+activity_coverage.xml
+activity_test_data.json
+agentdb.rvf
+.agents
+.agents~HEAD
+app/storage/
+audit-coverage/
+*.backup
+*.backup_*
+*.backup-*
+*.backup.*
+*.bak
+*.bakcup
 bashscripts
 _bmad-output
-.circleci
-.claude-audit
-.devcontainer
-_docs
-docs/archive
-docs/archived
-docs/legacy
-docs/archive/
-docs/workbench
-.kilocode
-.kiro
-.ralph
-scripts
-test-results
-tests/.claude-audit
-# ==============================================
-# LARAXOT MODULE ACTIVITY - .GITIGNORE
-# Modulo Activity Laraxot - Template standardizzato
-# Ultimo aggiornamento: 2025-01-31
-# DEPENDENCIES & PACKAGES
-/vendor/
-/vendor
-/node_modules/
-/node_modules
-/docs/vendor/
-package-lock.json
-yarn.lock
-composer.lock
-yarn-error.log
-npm-debug.log
-# BUILD & COMPILED FILES
+bootstrap/compiled.php
 /build
 /build/
 build/
-dist/
-docs/cache/
-cache/
-# CACHE & TEMPORARY FILES
 *.cache
-*.lock
-*.phar
-*.jar
-*.tmp
-*.swp
-*.swo
-*.stackdump
-*:Zone.Identifier
-v8-compile-cache-*
-.php-cs-fixer.cache
-.phpunit.result.cache
-# LOG FILES
-*.log
-error_log
-npm-debug.log*
-yarn-error.log*
-lerna-debug.log*
-# LARAVEL SPECIFIC
-bootstrap/compiled.php
-app/storage/
-public/storage
-public/hot
-public_html/storage
-public_html/hot
-storage/*.key
+cache/
+.circleci
+.claude*
+.claude-audit
+.codex*
+composer.lock
+config/development.php
+config/local.php
+.cursor
+.cursor/
+/.cursor
+/.cursor/
+.cursor~*
+database/Factories_old/
+database/Migrations_old/
+database_old/
+database/Seeders_old/
+.devcontainer
+.devcontainer/
+dist/
+_docs
+_docs/
+.docs-archive/
+docs/_archive/
+docs/**/_archive/
+docs/**/archive/
+docs/archive
+docs/archive/
+docs/**/archived/
+docs/archived
+docs/archived/
+docs/**/archivio/
+docs/archivio/
+docs/**/*backup*/
+docs/**/backup/
+docs/backup/
+docs/**/backups/
+docs/backups/
+docs/cache/
+docs/graphify
+docs/**/historical/
+docs/historical/
+docs/legacy
+docs/legacy/
+docs/legacy/**
+docs/phpstan/
+docs/project/visual-comparison/
+/docs/vendor/
+docs/visual-comparison/
+docs/**/wiki-archive/
+docs/workbench
+.DS_Store
+.DS_Store?
+ehthumbs.db
 .env
 .env.*
 !.env.example
-# ENVIRONMENT & CONFIGURATION
-Homestead.yaml
-Homestead.json
-/.vagrant
-/.idea
-.phpintel
-.vscode/
-# GIT SPECIFIC
-.git-rewrite/
-.git-rewrite
+error_log
+*.fila2
 .git-blame-ignore-revs
-# SYSTEM FILES
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-*~
-# BACKUP FILES
+/.github/skills/
+.gitmodules
+.git-rewrite
+.git-rewrite/
+graphify-out
+graphify-out/
+Homestead.json
+Homestead.yaml
+/.idea
+*.jar
+.kilocode
+.kiro
+lang/lang/
+/laravel/
+laravel
+lerna-debug.log*
+*.lock
+*.log
+*.new
+/node_modules
+/node_modules/
+npm-debug.log
+npm-debug.log*
 *.old
 *.old1
 *.old2
-*.backup
-*.backup.*
-*.backup-*
-*.backup_*
-*.bak
-*.bakcup
-*.new
-# DEVELOPMENT TOOLS
-.windsurf/
-.cursor/
-.phpstorm.meta.php
-
-# DOCUMENTATION CACHE
-docs/phpstan/
-docs/legacy/
-docs/legacy/**
-
-# LANGUAGE FILES
-lang/lang/
-resources/lang/
-
-# OLD DIRECTORIES (LEGACY CLEANUP)
-resources/views/Components_old/
-database/Migrations_old/
-database/Seeders_old/
-database/Factories_old/
-database_old/
-# MODULE SPECIFIC - ACTIVITY
-# File di configurazione locale
-config/local.php
-config/development.php
-# Cache activity log
-storage/activity/
-storage/logs/
-# File di test activity
-activity_test_data.json
-test_activity_logs.sql
-# END OF ACTIVITY .GITIGNORE
-# File specifici del progetto
-*.fila2
-laravel
-public_html
-tests/coverage
-_docs/
-tests/coverage/
-tests/coverage.xml/
-activity_coverage.xml
-# -----------------------------------------------------------------------------
-# Copie residue da merge/rebase o editor (mai committare — es. `.agent~HEAD`, `*.md~head`)
-*~HEAD
-*~BASE
-*~LOCAL
-*~REMOTE
-*.orig
-*.rej
-*~head
-agentdb.rvf
-tests/AuditCoverage
-audit-coverage/
-# AI/TOOL SCAFFOLD — must never exist in module tree (see docs/wiki/rules/module-theme-root-cleanup.md)
-
-# Laraxot — IDE folders forbidden at module/theme root (see module-theme-root-hygiene)
-.devcontainer/
-tests/AuditCoverage/
-
-# Laraxot — quality tool configs forbidden in module/theme root (use laravel/phpinsights.php, laravel/rector.php)
-phpinsights.php
-rector.php
-# graphify-out: generated AST/knowledge graph — never commit (no git-lfs; rebuild with graphify update)
-graphify-out/
-.agents
-tools
-workbench
-.claude*
-.codex*
-.gitmodules
 .opencode
-.agents~HEAD
 .opencode~HEAD
-workbench/
-.cursor
-.windsurf
-.vscode
-
-# Laraxot — forbidden at module/theme root (rector.php, phpinsights.php, .cursor, .windsurf, .vscode)
-/rector.php
+*.orig
+package-lock.json
+*.phar
+.php-cs-fixer.cache
 /phpinsights.php
-/.cursor
-/.cursor/
-/.windsurf
-/.windsurf/
+phpinsights.php
+.phpintel
+.phpstorm.meta.php
+.phpunit.result.cache
+public/hot
+public_html
+public_html/hot
+public_html/storage
+public/storage
+.ralph
+/rector.php
+rector.php
+*.rej
+resources/lang
+resources/lang/
+resources/views/Components_old/
+scripts
+.Spotlight-V100
+*.stackdump
+storage/activity/
+storage/*.key
+storage/logs/
+*.swo
+*.swp
+test_activity_logs.sql
+test-results
+tests/activity_coverage.xml
+tests/AuditCoverage
+tests/AuditCoverage/
+tests/.claude-audit
+/tests/coverage/
+tests/coverage
+tests/coverage-*.*
+tests/coverage/
+/tests/*coverage*.xml
+/tests/coverage.xml/
+tests/coverage.xml
+tests/coverage.xml/
+tests/graphify-out/
+Thumbs.db
+*.tmp
+tools
+.Trashes
+v8-compile-cache-*
+/.vagrant
+/vendor
+/vendor/
+.vscode
+.vscode/
 /.vscode
 /.vscode/
-.cursor~*
+.windsurf
+.windsurf/
+/.windsurf
+/.windsurf/
 .windsurf~*
-tests/activity_coverage.xml
-
-# module-root-hygiene (story module-root-hygiene)
-/.github/skills/
-docs/graphify
-resources/lang
-Activity
-
-# Regole portate dal remoto laraxot/dev (sync del 24/11), unite alla base senza perdere nulla
-graphify-out
-Activity/
-tests/coverage-*.*
-tests/graphify-out/
-# coverage: il file XML da ~5 MB gonfiava la storia (la riga `tests/coverage.xml/` sopra vale solo per cartelle)
-tests/coverage.xml
-
-# screenshot di comparazione visiva (artefatti locali)
-docs/project/visual-comparison/
-docs/visual-comparison/
+workbench
+workbench/
+yarn-error.log
+yarn-error.log*
+yarn.lock
+*:Zone.Identifier

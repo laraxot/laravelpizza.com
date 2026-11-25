@@ -29,12 +29,12 @@ discussions: []
 
 ## Standards
 
-Vedi anche: [.agents/docs/critical-rules.md](../../../.agents/docs/critical-rules.md)
+Vedi anche: [bashscripts/ai/.agents/docs/architecture-rules.md#critical-rules](../../../.agents/docs/critical-rules.md)
 
 ## Collegamenti Correlati
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
-- [Standard di Documentazione](../../../../../docs/documentation-standards-2.md)
+- [Standard di Documentazione](../../../../../docs/documentation_standards.md)
 - [Modulo Xot](../../Xot/docs/README.md)
 - [Modulo Lang](../../Lang/docs/readme.md)
 - [Modulo UI](../../UI/docs/README.md)
@@ -57,30 +57,30 @@ Vedi anche: [.agents/docs/critical-rules.md](../../../.agents/docs/critical-rule
 - [Gestione Sottotitoli](./subtitle-management.md) - Elaborazione sottotitoli
 
 ### Filament UI
-- [Risorse Filament](../../Activity/docs/filament-resources-3.md) - Componenti Filament Resources
-- [Pagine Filament](../../Notify/docs/filament-pages-2.md) - Componenti Filament Pages
+- [Risorse Filament](./filament-resources.md) - Componenti Filament Resources
+- [Pagine Filament](./filament-pages.md) - Componenti Filament Pages
 - [Azioni Filament](./filament-actions.md) - Azioni personalizzate
-- [Convenzioni Filament](../../Notify/docs/filament-extension-pattern-2.md) - Pattern di estensione per Filament
+- [Convenzioni Filament](./filament_extension_pattern.md) - Pattern di estensione per Filament
 
 ### API e Integrazione
-- [API RESTful](../../User/docs/api-2.md) - API per la gestione media
+- [API RESTful](./api.md) - API per la gestione media
 - [Integrazione CDN](./cdn-integration.md) - Integrazione con Content Delivery Network
 - [Servizi Esterni](./external-services.md) - Integrazione con servizi esterni
 
 ### Configurazione
-- [Struttura Config](../../Notify/docs/config-structure-2.md) - Struttura dei file di configurazione
+- [Struttura Config](./config_structure.md) - Struttura dei file di configurazione
 - [Configurazione Upload](./upload-config.md) - Configurazione sistema upload
-- [Principi di Configurazione](../../Notify/docs/configurations-usage-principles-2.md) - Principi per l'utilizzo delle configurazioni
+- [Principi di Configurazione](./configurations_usage_principles.md) - Principi per l'utilizzo delle configurazioni
 
 ### Pattern e Architettura
-- [Pattern Factory](../../Notify/docs/factory-pattern-analysis-2.md) - Analisi del pattern Factory
-- [Risoluzione Dinamica delle Classi](../../Notify/docs/dynamic-class-resolution-2.md) - Pattern di risoluzione dinamica delle classi
-- [Queueable Actions](../../Notify/docs/queueable-action-2.md) - Utilizzo di Spatie Queueable Actions
+- [Pattern Factory](./factory_pattern_analysis.md) - Analisi del pattern Factory
+- [Risoluzione Dinamica delle Classi](./dynamic_class_resolution.md) - Pattern di risoluzione dinamica delle classi
+- [Queueable Actions](./queueable-action.md) - Utilizzo di Spatie Queueable Actions
 
 ### Standard e Traduzioni
 - [Convenzioni di Naming](./naming_conventions.md) - Standard per i nomi di file e classi
 - [Traduzioni](./translations.md) - Sistema di traduzioni
-- [Standard Traduzioni](../../Lang/docs/translation-standards-3.md) - Standard per le chiavi di traduzione
+- [Standard Traduzioni](./translation_standards.md) - Standard per le chiavi di traduzione
 
 ### Testing e Qualità
 - [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
@@ -167,12 +167,121 @@ Questa documentazione viene aggiornata regolarmente. Prima di apportare modifich
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
-## Approfondimenti puntuali
-
-Doc verificati e presenti in `docs/` (non un indice esaustivo):
-- Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-
 ---
+title: "index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "index"
+issues: []
+discussions: []
+# Indice della Documentazione - Modulo Media
 
-> Rimossi frammenti di merge residuali: una seconda copia "index" (case-collision) e una "Documentation Index" auto-generata con la mappa delle cartelle ripetuta e troncata. L'indice curato e aggiornato e' in [index-2.md](index-2.md) e [00-index.md](00-index.md).
+## Panoramica
+Questo documento serve come indice centrale per il modulo Media, fornendo una guida per la gestione dei contenuti multimediali all'interno di un'applicazione Laravel. Il modulo Media gestisce vari tipi di file multimediali come immagini, video, documenti e audio in modo modulare e riutilizzabile.
+
+## Principi Chiave
+1. **Modularità**: Il modulo Media è progettato per essere riutilizzabile in diversi progetti, mantenendo funzionalità generiche
+2. **Estensibilità**: Consente personalizzazione e aggiunta di nuovi tipi di media senza alterare il codice principale
+3. **Affidabilità**: Garantisce la gestione sicura e efficiente dei file multimediali attraverso gestione robusta degli errori e logging
+
+## Funzionalità Principali
+- **Gestione File Multi-formato**: Supporto per immagini, video, documenti e audio
+- **Upload Avanzato**: Funzionalità di drag-and-drop e upload multiplo
+- **Ottimizzazione Media**: Compressione e ottimizzazione automatica dei file
+- **Conversione Video**: Sistema di conversione video con supporto per diversi formati
+- **Streaming Video**: Funzionalità di streaming video ottimizzata
+- **Gestione Sottotitoli**: Supporto per sottotitoli e loro elaborazione
+- **Integrazione CDN**: Supporto per Content Delivery Network
+- **Watermark Automatico**: Applicazione automatica di watermark sui media
+
+## Collegamenti Correlati
+- [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
+- [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
+- [Standard di Documentazione](../../../../../docs/documentation_standards.md)
+- [Modulo Xot](../../Xot/docs/README.md)
+- [Modulo Lang](../../Lang/docs/readme.md)
+- [Modulo UI](../../UI/docs/README.md)
+
+## Categorie Principali
+
+### Architettura e Struttura
+- [README](README.md) - Panoramica generale del modulo
+- [Architettura](./architecture/README.md) - Architettura generale del modulo
+- [Struttura](./structure.md) - Struttura delle directory e dei componenti
+- [Modelli](./data-models.md) - Documentazione dei modelli Eloquent
+- [Eventi](./events.md) - Eventi e listeners
+
+### Gestione Media
+- [Funzionalità Core](./core-functionality.md) - Funzionalità principali del modulo
+- [Upload File](./file-upload.md) - Sistema di upload file
+- [Ottimizzazione](./optimization.md) - Tecniche di ottimizzazione media
+- [Conversione Video](./video-conversion.md) - Sistema di conversione video
+- [Streaming Video](./video-streaming.md) - Funzionalità di streaming
+- [Gestione Sottotitoli](./subtitle-management.md) - Elaborazione sottotitoli
+
+### Filament UI
+- [Risorse Filament](./filament-resources.md) - Componenti Filament Resources
+- [Pagine Filament](./filament-pages.md) - Componenti Filament Pages
+- [Azioni Filament](./filament-actions.md) - Azioni personalizzate
+- [Convenzioni Filament](./filament_extension_pattern.md) - Pattern di estensione per Filament
+
+### API e Integrazione
+- [API RESTful](./api.md) - API per la gestione media
+- [Integrazione CDN](./cdn-integration.md) - Integrazione con Content Delivery Network
+- [Servizi Esterni](./external-services.md) - Integrazione con servizi esterni
+
+### Configurazione
+- [Struttura Config](./config_structure.md) - Struttura dei file di configurazione
+- [Configurazione Upload](./upload-config.md) - Configurazione sistema upload
+- [Principi di Configurazione](./configurations_usage_principles.md) - Principi per l'utilizzo delle configurazioni
+
+### Pattern e Architettura
+- [Pattern Factory](./factory_pattern_analysis.md) - Analisi del pattern Factory
+- [Risoluzione Dinamica delle Classi](./dynamic_class_resolution.md) - Pattern di risoluzione dinamica delle classi
+- [Queueable Actions](./queueable-action.md) - Utilizzo di Spatie Queueable Actions
+
+### Standard e Traduzioni
+- [Convenzioni di Naming](./naming_conventions.md) - Standard per i nomi di file e classi
+- [Traduzioni](./translations.md) - Sistema di traduzioni
+- [Standard Traduzioni](./translation_standards.md) - Standard per le chiavi di traduzione
+
+### Testing e Qualità
+- [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
+- [Testing](./testing.md) - Strategie e approcci per il testing
+
+## Linee Guida per l'Implementazione
+
+### 1. Struttura del Modulo
+Il modulo Media segue una struttura standard con directory per modelli, servizi, provider e componenti Filament per garantire chiarezza e manutenibilità.
+
+<!-- Merged from index.md, which collided with this file on case-insensitive filesystems. -->
+
+# Documentation Index
+
+Modulo: Media
+
+## File disponibili
+
+<!-- auto-generato: elencare i file .md presenti -->
+---
+Doc verificati e presenti in `docs/` utili per approfondimenti puntuali (non un indice esaustivo):
+- [structure.md](./structure.md)
+- [data-models.md](./data-models.md)
+- [core-functionality.md](./core-functionality.md)
+- [file-management-architecture.md](./file-management-architecture.md)
+- [phpstan_level10_fixes.md](./phpstan_level10_fixes.md) / [phpstan-report.md](./phpstan-report.md)
+- [testing.md](./testing.md)
+- [troubleshooting.md](./troubleshooting.md)
+- [wiki/index.md](./wiki/index.md)
+
+## Contenuto fuso da `index.md`
+
+# Indice — Media
+
+- [Purpose](./purpose.md)
+- [BMAD](./bmad/00-index.md)
+- [ECC](./ecc/00-index.md)
+- [Audit](./bmad/audit.md)
+- [Piano di miglioramento](./bmad/piano-miglioramento.md)

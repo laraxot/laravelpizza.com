@@ -1,6 +1,6 @@
+# Deduplicated .gitignore - generated from original
 
 ._*
-# ==============================================
 *~BASE
 *~HEAD
 *~headagentdb.rvf
@@ -15,23 +15,20 @@ audit-coverage/
 *.backup_*
 *.backup-*
 *.backup.*
-# BACKUP FILES
 *.bak
 *.bakcup
 /bashscripts
 /_bmad
 bootstrap/compiled.php
 build/
-# BUILD & COMPILED FILES
 *.cache
 cache/
-# CACHE & TEMPORARY FILES
-# Cache traduzioni
+.claude/
 .claude-audit
+.claude-audit/
 composer.lock
 config/development.php
 config/local.php
-# Copie residue da merge/rebase o editor (mai committare — es. `.agent~HEAD`, `*.md~head`)
 .cursor/
 /.cursor
 /.cursor/
@@ -42,74 +39,76 @@ database/migrations/Migrations/
 database/Migrations_old/
 database_old/
 database/Seeders_old/
-# DEPENDENCIES & PACKAGES
 .devcontainer/
-# DEVELOPMENT TOOLS
 dist/
 _docs
 _docs/
 /_docs
 docs/**/*-[0-9].md
+.docs-archive/
 /docs/archive
 docs/_archive
 docs/_archive/
+docs/**/_archive/
+docs/**/archive/
 docs/archive
 docs/archive/
 docs/archive/**
+docs/**/archived/
+docs/archived/
+docs/**/archivio/
+docs/archivio/
+docs/**/*backup*/
+docs/**/backup/
+docs/backup/
+docs/**/backups/
+docs/backups/
 docs/cache/
+docs/graphify
+docs/**/historical/
+docs/historical/
 /docs/legacy
 docs/legacy
 docs/phpstan/
-# DOCUMENTATION CACHE
+docs/project/visual-comparison/
+docs/visual-comparison/
+docs/**/wiki-archive/
 .DS_Store
 .DS_Store?
 ehthumbs.db
-# END OF LANG .GITIGNORE
 .env
 .env.*
 !.env.example
-# ENVIRONMENT & CONFIGURATION
 error_log
 *.fila2
-# File configurazione locale
-# FILE SPECIFICI DEL PROGETTO
-# File temporanei di traduzione
-# File test traduzioni
 .git-blame-ignore-revs
+/.github/skills/
 .git-rewrite/
-# GIT SPECIFIC
+graphify-out/
 Homestead.json
 Homestead.yaml
 .idea/
 *.jar
+lang.code-workspace
 lang/drafts/
 lang/exports/
 lang/lang/
 lang/temp/
 lang_test_data.json
+/laravel/
 laravel
-# LARAVEL SPECIFIC
-# Laraxot — forbidden at module/theme root (rector.php, phpinsights.php, .cursor, .windsurf, .vscode)
-# Laraxot — IDE folders forbidden at module/theme root (see module-theme-root-hygiene)
-# LARAXOT MODULE LANG - .GITIGNORE
-# Laraxot — quality tool configs forbidden in module/theme root (use laravel/phpinsights.php, laravel/rector.php)
 legacy/
 lerna-debug.log*
-# Local vector DB (agent tooling)
 *.lock
 *.log
-# LOG FILES
-# MODULE ROOT FORBIDDEN DIRS
-# MODULE SPECIFIC - LANG
-# Modulo Lang Laraxot - Template standardizzato
 *.new
+/node_modules/
 node_modules/
 npm-debug.log
 npm-debug.log*
 *.old
 *.old1
 *.old2
-# OLD DIRECTORIES (LEGACY CLEANUP)
 *.orig
 package-lock.json
 packages/lara-zeus/
@@ -132,8 +131,8 @@ public/storage
 /rector.php
 rector.php
 *.rej
+resources/lang
 resources/views/Components_old/
-# Root quality tool configs forbidden in module root
 ruvector.db
 .Spotlight-V100
 *.stackdump
@@ -142,13 +141,17 @@ storage/lang/
 storage/translations/
 *.swo
 *.swp
-# SYSTEM FILES
+test-results/
 tests/AuditCoverage/
+/tests/coverage/
+tests/coverage-*.*
+/tests/*coverage*.xml
+/tests/coverage.xml/
+tests/graphify-out/
 test_translations.sql
 Thumbs.db
 *.tmp
 .Trashes
-# Ultimo aggiornamento: 2025-01-31
 v8-compile-cache-*
 .vagrant/
 vendor/
@@ -164,22 +167,3 @@ yarn-error.log
 yarn-error.log*
 yarn.lock
 *:Zone.Identifier
-# graphify-out: generated AST/knowledge graph — never commit (no git-lfs; rebuild with graphify update)
-graphify-out/
-.claude/
-.claude-audit/
-test-results/
-lang.code-workspace
-
-# module-root-hygiene (story module-root-hygiene)
-/.github/skills/
-docs/graphify
-resources/lang
-
-# Regole portate dal remoto laraxot/dev (sync del 24/11), unite alla base senza perdere nulla
-tests/coverage-*.*
-tests/graphify-out/
-
-# screenshot di comparazione visiva (artefatti locali)
-docs/project/visual-comparison/
-docs/visual-comparison/

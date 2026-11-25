@@ -28,7 +28,7 @@ Indice operativo del wiki Tenant.
 
 ## Regole collegate
 
-- [forbidden-folders-rule](../../../../docs/wiki/concepts/forbidden-folders.md): Vincoli strutturali strict.
+- [forbidden-folders-rule](../../../../../bashscripts/ai/wiki/concepts/modules-structure-rules.md#forbidden-folders): Vincoli strutturali strict.
 - [llm-wiki-standard](../../../../docs/project/karpathy-llm-wiki-adoption.md): Mapping repository e ciclo di vita conoscenza.
 - [laravel-multi-tenancy](../../../../docs/wiki/concepts/laravel-multi-tenancy.md): Multi-tenancy patterns.
 - [lowercase-tests-directory](./concepts/lowercase-tests-directory.md): solo `tests/`, mai `Tests/`.

@@ -1,7 +1,6 @@
 ---
 module: theme
 topic: index
-canonical: ../../../../Themes/docs/shared-components/00-index-Modules.md
 related:
   - "./00-index.md"
   - "./00-index.md"
@@ -12,6 +11,6 @@ related:
   - "./02-next.md"
   - "./03-later.md"
 qmd: "index"
+title: "index"
 ---
 
-See canonical documentation: ../../../../Themes/docs/shared-components/00-index-Modules.md

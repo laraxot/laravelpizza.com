@@ -431,18 +431,22 @@ return [
         ],
         'logout' => [
             'icon' => 'logout',
+            'label' => 'logout',
         ],
         'profile' => [
             'icon' => 'profile',
+            'label' => 'profile',
         ],
         'reorderRecords' => [
             'icon' => 'reorderRecords',
         ],
         'openColumnManager' => [
             'icon' => 'openColumnManager',
+            'label' => 'openColumnManager',
         ],
         'applyTableColumnManager' => [
             'icon' => 'applyTableColumnManager',
+            'label' => 'applyTableColumnManager',
         ],
         'resetFilters' => [
             'icon' => 'resetFilters',
@@ -468,6 +472,7 @@ return [
         ],
         'export_xls' => [
             'icon' => 'export_xls',
+            'label' => 'export_xls',
         ],
         'cancel' => [
             'icon' => 'cancel',
@@ -480,9 +485,11 @@ return [
         ],
         'resetColumnManager' => [
             'icon' => 'resetColumnManager',
+            'label' => 'resetColumnManager',
         ],
         'removeAllFilters' => [
             'icon' => 'removeAllFilters',
+            'label' => 'removeAllFilters',
         ],
     ],
     'messages' => [

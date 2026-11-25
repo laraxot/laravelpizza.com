@@ -28,7 +28,6 @@ describe('Oauth Client', function (): void {
     test('oauth client can be instantiated', function (): void {
         /** @var TestCase $this */
         new OauthClient;
-
     });
 
     test('oauth client has connection user', function (): void {

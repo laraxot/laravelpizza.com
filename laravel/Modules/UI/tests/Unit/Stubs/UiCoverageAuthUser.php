@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\UI\Tests\Unit\Stubs;
 
 use Illuminate\Support\Collection;
+use Modules\User\Models\Permission;
 use Modules\User\Models\User;
 
 /**
@@ -38,8 +39,13 @@ final class UiCoverageAuthUser extends User
         return collect(['admin']);
     }
 
+    /**
+     * Permessi in memoria vuoti: stub coverage senza DB.
+     *
+     * @return Collection<int, Permission>
+     */
     public function getAllPermissions(): Collection
     {
-        return collect();
+        return new Collection;
     }
 }

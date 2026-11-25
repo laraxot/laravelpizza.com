@@ -1,270 +1,60 @@
 ---
-title: "Analisi Errore Logout"
-type: concept
-tags: [logout]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "logout analisi errore logout"
-issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
-discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
-related:
-  - "./00-index-indice-documentazione-modulo-user.md"
-  - "./00-index.md"
-  - "./2fa-guide.md"
-  - "./2fa.md"
-  - "./accessor-delegation-pattern.md"
-  - "./actions-path-convention.md"
-  - "./actions-path-convention-convenzione-percorsi.md"
-  - "./actions-path-convention.md"
+title: "Logout del modulo User"
+type: guide
+module: User
+tags: [auth, logout, session, volt, livewire, filament]
+qmd: "user logout POST LogoutAction sessione invalidate widget conferma Volt Folio pagina logout"
 ---
 
-# Analisi Errore Logout
+# Logout
 
-## Problema Identificato
+Il logout e' una **azione POST protetta da CSRF**, non una pagina che "fa logout aprendola". Il motivo, emerso piu' volte in
+fase di sviluppo: il PHP dentro una pagina Folio/Volt aperta via GET viene solo renderizzato, non eseguito come azione
+Livewire, quindi la pagina mostrava "sei uscito" con l'utente ancora autenticato. Un logout deve inoltre cambiare stato solo
+con un metodo non idempotente.
 
-Il file `Themes/One/resources/views/pages/auth/logout.blade.php` presenta un errore fondamentale nella sua implementazione:
+Vedi anche [authentication-login.md](authentication-login.md) (login e sessione).
 
-1. **Errore di Sintassi**:
-   - Uso errato della direttiva `@volt` quando il file dovrebbe essere una semplice blade template
-   - Il file dovrebbe iniziare con `<?php` per la logica PHP
-   - La sintassi Volt non è appropriata per una pagina di logout statica
+## Percorso effettivo
 
-2. **Errore di Implementazione Widget**:
-   - Tentativo di sovrascrivere il metodo `form()` che è dichiarato come `final` in `XotBaseWidget`
-   - Implementazione errata dell'estensione del widget base
-   - Violazione del principio di ereditarietà
+| Elemento | Codice | Comportamento |
+|---|---|---|
+| Rotta | `routes/web.php` | `POST logout`, middleware `auth`, nome `logout` -> `Http\Volt\LogoutAction::__invoke` |
+| Azione | `Http/Volt/LogoutAction.php` | `Auth::logout()`, `session()->invalidate()`, `session()->regenerateToken()`, redirect a `/{locale}` |
+| Locale del redirect | `LogoutAction::localeFromReferer()` | `POST /logout` non ha prefisso lingua: la lingua si legge dal primo segmento del `Referer`, accettata solo se supportata (un Referer inventato non decide la destinazione); senza Referer si usa la lingua dell'app |
+| Evento | `Illuminate\Auth\Events\Logout` | gestito da `Listeners\LogoutListener`; `OtherDeviceLogout` da `OtherDeviceLogoutListener` (registrati in `EventServiceProvider`) |
+| API | `GET /v2/logout` (`auth:api`) | `Http\Controllers\Api\LogoutController` -> `Actions\Socialite\LogoutUserAction`: revoca (non cancella) access token e refresh token; risposta JSON con il solo `user_id` |
 
-3. **Problemi di Sicurezza**:
-   - Gestione manuale delle sessioni non necessaria
-   - Validazione CSRF implementata manualmente
-   - Rischio di vulnerabilità nella gestione delle sessioni
+La home del front office e' `/{locale}`: non esiste una rotta chiamata `home`. Per questo `Http\Controllers\Auth\LogoutController`
+(che reindirizza a `route('home')`) non e' instradato da nessuna rotta e non va usato come modello.
 
-## Soluzione Proposta
+## Widget di conferma (pannelli Filament)
 
-### 1. Implementazione Corretta del Widget
-```php
-<?php
+`Filament\Widgets\Auth\LogoutWidget` (estende `XotBaseSchemaWidget`, vista `user::filament.widgets.auth.logout`) mostra il
+messaggio e due azioni: **Logout** (danger) e **Annulla** (torna a `/{locale}`). La sequenza di `logout()`:
 
-namespace Modules\User\Filament\Widgets;
+1. `Event::dispatch('auth.logout.attempting', [$user])`
+2. `Auth::logout()`, `Session::invalidate()`, `Session::regenerateToken()`
+3. `Event::dispatch('auth.logout.successful')`
+4. `Log::debug('User logged out', ...)` con id utente e timestamp
+5. redirect localizzato con messaggio `user::auth.logout_success`
 
-use Filament\Widgets\Widget;
-use Modules\Xot\Filament\Widgets\XotBaseWidget;
+Senza utente autenticato registra un warning e non fa nulla. Esistono anche `Filament\Widgets\LogoutWidget` (variante per
+pannelli admin, stessa sequenza) e `AuthLogoutWidget`.
 
-class LogoutWidget extends XotBaseWidget
-{
-    protected static string $view = 'user::widgets.logout';
+## Regole che hanno evitato errori
 
-    protected function getViewData(): array
-    {
-        return [
-            'title' => __('Logout'),
-            'description' => __('Sei sicuro di voler uscire?'),
-        ];
-    }
+- **Namespace delle viste**: i widget del modulo usano `user::...` (es. `user::filament.widgets.auth.logout`); `pub_theme::`
+  e' solo per gli override del tema. Il tema puo' fornire la propria vista con lo stesso percorso.
+- **Niente `->label()`** nei componenti Filament dei widget: traduzioni automatiche da `user::auth` e `user::login_widget`
+  (vedi [translations.md](translations.md)).
+- **`form()` appartiene alla base Xot** (`XotBaseWidget`/`XotBaseSchemaWidget` lo costruiscono da `formClass()`): si personalizza
+  `getFormSchema()` o lo schema, non si riscrive `form()`.
+- **Localizzazione**: link e redirect passano da `LaravelLocalization`; mai URL costruiti a mano con il prefisso lingua.
+- **Rotte**: il front office non aggiunge controller o rotte custom in `web.php` per questo scopo; l'unica rotta di logout e'
+  quella POST del modulo.
 
-    public function logout()
-    {
-        auth()->logout();
-        session()->invalidate();
-        session()->regenerateToken();
+## Verifica
 
-        return redirect()->route('home');
-    }
-}
-```
-
-### 2. Template Widget
-```blade
-<x-filament::widget>
-    <x-filament::card>
-        <div class="p-4">
-            <h3 class="text-lg font-medium">
-                {{ $title }}
-            </h3>
-
-            <p class="mt-2 text-sm text-gray-600">
-                {{ $description }}
-            </p>
-
-            <div class="mt-4 flex space-x-4">
-                <x-filament::button
-                    wire:click="logout"
-                    color="danger">
-                    {{ __('Logout') }}
-                </x-filament::button>
-
-                <x-filament::button
-                    color="secondary"
-                    href="{{ route('home') }}">
-                    {{ __('Annulla') }}
-                </x-filament::button>
-            </div>
-        </div>
-    </x-filament::card>
-</x-filament::widget>
-```
-
-## Vantaggi della Nuova Implementazione
-
-1. **Correttezza Architetturale**:
-   - Rispetto dell'ereditarietà delle classi base
-   - Nessun tentativo di sovrascrivere metodi final
-   - Implementazione pulita del widget
-
-2. **Sicurezza**:
-   - Utilizzo delle funzioni native di Laravel per il logout
-   - Gestione sicura delle sessioni
-   - Protezione CSRF integrata
-
-3. **Manutenibilità**:
-   - Codice più pulito e standardizzato
-   - Facile da estendere e modificare
-   - Documentazione chiara
-
-## Note di Implementazione
-
-1. **Ereditarietà**:
-   - Rispettare i metodi final della classe base
-   - Utilizzare i metodi protetti per l'estensione
-   - Implementare correttamente l'interfaccia del widget
-
-2. **Gestione Sessione**:
-   - Utilizzare le funzioni native di Laravel
-   - Evitare la gestione manuale delle sessioni
-   - Sfruttare il sistema di autenticazione integrato
-
-3. **Routing**:
-   - Utilizzare le rotte di Filament
-   - Mantenere la coerenza con le altre rotte
-   - Implementare correttamente i redirect
-
-## Collegamenti Correlati
-- [Documentazione Filament Widgets](https://filamentphp.com/docs/3.x/panels/widgets)
-- [Best Practices di Sicurezza](./security_best_practices.md)
-- [Gestione Sessione](./session-management.md)
-- [Documentazione Blade](https://laravel.com/docs/10.x/blade)
-# Analisi Errore Logout
-
-## Problema Identificato
-
-Il file `Themes/One/resources/views/pages/auth/logout.blade.php` presenta un errore fondamentale nella sua implementazione:
-
-1. **Errore di Sintassi**:
-   - Uso errato della direttiva `@volt` quando il file dovrebbe essere una semplice blade template
-   - Il file dovrebbe iniziare con `<?php` per la logica PHP
-   - La sintassi Volt non è appropriata per una pagina di logout statica
-
-2. **Errore di Implementazione Widget**:
-   - Tentativo di sovrascrivere il metodo `form()` che è dichiarato come `final` in `XotBaseWidget`
-   - Implementazione errata dell'estensione del widget base
-   - Violazione del principio di ereditarietà
-
-3. **Problemi di Sicurezza**:
-   - Gestione manuale delle sessioni non necessaria
-   - Validazione CSRF implementata manualmente
-   - Rischio di vulnerabilità nella gestione delle sessioni
-
-## Soluzione Proposta
-
-### 1. Implementazione Corretta del Widget
-```php
-<?php
-
-namespace Modules\User\Filament\Widgets;
-
-use Filament\Widgets\Widget;
-use Modules\Xot\Filament\Widgets\XotBaseWidget;
-
-class LogoutWidget extends XotBaseWidget
-{
-    protected static string $view = 'user::widgets.logout';
-
-    protected function getViewData(): array
-    {
-        return [
-            'title' => __('Logout'),
-            'description' => __('Sei sicuro di voler uscire?'),
-        ];
-    }
-
-    public function logout()
-    {
-        auth()->logout();
-        session()->invalidate();
-        session()->regenerateToken();
-
-        return redirect()->route('home');
-    }
-}
-```
-
-### 2. Template Widget
-```blade
-<x-filament::widget>
-    <x-filament::card>
-        <div class="p-4">
-            <h3 class="text-lg font-medium">
-                {{ $title }}
-            </h3>
-
-            <p class="mt-2 text-sm text-gray-600">
-                {{ $description }}
-            </p>
-
-            <div class="mt-4 flex space-x-4">
-                <x-filament::button
-                    wire:click="logout"
-                    color="danger">
-                    {{ __('Logout') }}
-                </x-filament::button>
-
-                <x-filament::button
-                    color="secondary"
-                    href="{{ route('home') }}">
-                    {{ __('Annulla') }}
-                </x-filament::button>
-            </div>
-        </div>
-    </x-filament::card>
-</x-filament::widget>
-```
-
-## Vantaggi della Nuova Implementazione
-
-1. **Correttezza Architetturale**:
-   - Rispetto dell'ereditarietà delle classi base
-   - Nessun tentativo di sovrascrivere metodi final
-   - Implementazione pulita del widget
-
-2. **Sicurezza**:
-   - Utilizzo delle funzioni native di Laravel per il logout
-   - Gestione sicura delle sessioni
-   - Protezione CSRF integrata
-
-3. **Manutenibilità**:
-   - Codice più pulito e standardizzato
-   - Facile da estendere e modificare
-   - Documentazione chiara
-
-## Note di Implementazione
-
-1. **Ereditarietà**:
-   - Rispettare i metodi final della classe base
-   - Utilizzare i metodi protetti per l'estensione
-   - Implementare correttamente l'interfaccia del widget
-
-2. **Gestione Sessione**:
-   - Utilizzare le funzioni native di Laravel
-   - Evitare la gestione manuale delle sessioni
-   - Sfruttare il sistema di autenticazione integrato
-
-3. **Routing**:
-   - Utilizzare le rotte di Filament
-   - Mantenere la coerenza con le altre rotte
-   - Implementare correttamente i redirect
-
-## Collegamenti Correlati
-- [Documentazione Filament Widgets](https://filamentphp.com/docs/3.x/panels/widgets)
-- [Best Practices di Sicurezza](./security_best_practices.md)
-- [Gestione Sessione](./session-management.md)
-- [Documentazione Blade](https://laravel.com/docs/10.x/blade)
+- Il form di logout del tema deve inviare `POST` con `@csrf` a `route('logout')`.
+- Test collegati: `tests/Feature/Authentication/ApiLogoutControllerTest.php`, `tests/Unit/Listeners/LogoutListenerBehaviorTest.php`, `tests/Unit/Events/`.

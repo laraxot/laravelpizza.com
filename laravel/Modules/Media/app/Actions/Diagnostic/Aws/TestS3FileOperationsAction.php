@@ -55,7 +55,7 @@ class TestS3FileOperationsAction
                 'message' => 'S3 file operations error: '.$errorCode,
                 'details' => [
                     'Error' => $exception->getMessage(),
-                    'Solution' => app(ResolveAwsS3ErrorSolutionAction::class)->execute($errorCode),
+                    'Solution' => app(GetAwsS3ErrorSolutionAction::class)->execute($errorCode),
                 ],
             ];
         }

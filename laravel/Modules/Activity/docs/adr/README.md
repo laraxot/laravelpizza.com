@@ -6,7 +6,10 @@ status: active
 created: 2026-11-18
 updated: 2026-11-24
 qmd: "Activity adr architecture decision records madr formato"
+<<<<<<< .merge_file_gfZKWw
 tags: [adr, decisioni, activity]
+=======
+>>>>>>> .merge_file_jetQXS
 ---
 
 # ADR del modulo Activity
@@ -35,9 +38,15 @@ Chi cambia una decisione scrive un nuovo ADR e segna il precedente `superseded b
 
 ## ADR presenti
 
+<<<<<<< .merge_file_gfZKWw
 - [activity-audit-is-append-oriented](activity-audit-is-append-oriented.md)
 
 Elenco con stato: [index-2.md](index-2.md).
+=======
+- [activity-audit-is-append-oriented](0001-activity-audit-is-append-oriented.md)
+
+Elenco con stato: [INDEX.md](index.md).
+>>>>>>> .merge_file_jetQXS
 Il **perché** delle scelte di questo pacchetto: una decisione per file, con le alternative scartate. Oggi spiegano due
 forme di Activity che sembrano eccessive: i modelli su una connessione dedicata (`activity`) invece della default, e il
 visualizzatore dei log che fa passare ogni percorso scelto dall'utente da un solo risolutore.
@@ -59,6 +68,7 @@ status: accepted | superseded | deprecated
 created: AAAA-MM-GG
 updated: AAAA-MM-GG
 issues: []
+<<<<<<< .merge_file_gfZKWw
 Il **perche'** delle forme di Activity che sembrano eccessive: i modelli su una connessione dedicata (`activity`) invece
 della default, il visualizzatore dei log che fa passare ogni percorso scelto dall'utente da un solo risolutore, e la
 cronologia di audit che non si riscrive. Una decisione per file, con le alternative scartate; il nome del file e' l'argomento,
@@ -83,6 +93,8 @@ type: decision
 status: proposed | accepted | superseded | deprecated
 created: AAAA-MM-GG
 updated: AAAA-MM-GG
+=======
+>>>>>>> .merge_file_jetQXS
 ---
 
 # ADR: <decisione>
@@ -102,6 +114,7 @@ Pro, contro, debito che resta, cosa misurare. Chi cambia la decisione scrive un 
 
 ## Indice
 
+<<<<<<< .merge_file_gfZKWw
 Ogni alternativa seria, con il motivo per cui non e' stata scelta.
 
 ## Conseguenze
@@ -118,3 +131,7 @@ Un ADR "sostanziale" aggiunge `## Driver della decisione` e `## Conferma`.
 - [L'audit delle attivita' e' append-oriented](activity-audit-is-append-oriented.md) — la cronologia non si riscrive per correggere una visualizzazione; le viste la interpretano.
 - [I modelli di Activity usano la connessione 'activity'](activity-models-on-dedicated-connection.md) — log separabile in un altro database e rollback dei test coerente; debito: Spatie scrive sulla default.
 - [Visualizzatore dei log: un solo risolutore di percorsi](log-viewer-single-path-resolver.md) — `realpath` e solo `.log` dentro `storage/logs`, una regola di accesso, download a blocchi.
+=======
+- [I modelli di Activity usano la connessione 'activity'](0002-activity-models-on-dedicated-connection.md) — log separabile in un altro database e rollback dei test coerente; debito: Spatie scrive sulla default.
+- [Visualizzatore dei log: un solo risolutore di percorsi](0003-log-viewer-single-path-resolver.md) — `realpath` e solo `.log` dentro `storage/logs`, una regola di accesso, download a blocchi.
+>>>>>>> .merge_file_jetQXS

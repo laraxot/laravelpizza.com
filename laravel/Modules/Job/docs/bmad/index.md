@@ -9,7 +9,7 @@ qmd: "Job indice BMAD documentazione"
 
 ## Canonico
 
-- [Entry point audit 2026-11-16](./00-index.md): [purpose](./purpose.md), [architecture](../architecture-2.md), [decision-log](./decision-log.md), [epics](./epics.md), [brainstorming](./brainstorming.md), [audit](./audit.md), [piano](./piano-miglioramento.md), [story](./stories/module-bmad-audit.story.md)
+- [Entry point audit 2026-11-16](./00-index.md): [purpose](./purpose.md), [architecture](../architecture.md), [decision-log](./decision-log.md), [epics](./epics.md), [brainstorming](./brainstorming.md), [audit](./audit.md), [piano](./piano-miglioramento.md), [story](stories/0006-module-bmad-audit.story.md)
 - [README BMAD](./README.md)
 - [Architettura](./architecture/)
 - [Brainstorming](./brainstorming/)

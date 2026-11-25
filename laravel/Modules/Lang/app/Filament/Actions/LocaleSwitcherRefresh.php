@@ -7,8 +7,8 @@ namespace Modules\Lang\Filament\Actions;
 use Filament\Forms\Components\Select;
 use Illuminate\Support\Facades\App;
 use Modules\Lang\Actions\ListLocaleOptionsAction;
-use Modules\Lang\Actions\ResolveDefaultTranslatableLocaleAction;
-use Modules\Lang\Actions\ResolveTranslatableLocalesAction;
+use Modules\Lang\Actions\GetDefaultTranslatableLocaleAction;
+use Modules\Lang\Actions\GetTranslatableLocalesAction;
 use Modules\Xot\Filament\Actions\XotBaseAction;
 
 class LocaleSwitcherRefresh extends XotBaseAction
@@ -20,10 +20,10 @@ class LocaleSwitcherRefresh extends XotBaseAction
     protected function setUp(): void
     {
         parent::setUp();
-        $languageOptions = app(ListLocaleOptionsAction::class)->execute(app(ResolveTranslatableLocalesAction::class)->execute());
+        $languageOptions = app(ListLocaleOptionsAction::class)->execute(app(GetTranslatableLocalesAction::class)->execute());
         $lang = session()->get('locale');
         if (! is_string($lang)) {
-            $lang = app(ResolveDefaultTranslatableLocaleAction::class)->execute('it');
+            $lang = app(GetDefaultTranslatableLocaleAction::class)->execute('it');
         }
         app()->setLocale($lang);
         $this->lang = app()->getLocale();

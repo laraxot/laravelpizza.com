@@ -9,9 +9,9 @@ created: 2026-07-27
 updated: 2026-07-27
 qmd: "Tenant git remote module_tenant_fila5 base_project base_workorder collision grave"
 related:
-  - ../../../../../../docs/wiki/memories/module-github-remote-discipline.md
+  - ../../../../../../bashscripts/ai/wiki/memories/git-sync-fleet-remotes.md#module-github-remote-discipline
   - ../../../../../../docs/wiki/rules/multi-repo-modules-themes-map.md
-  - ../../../../../../docs/wiki/how-to/module-theme-github-issues.md
+  - ../../../../../../bashscripts/ai/wiki/how-to/git-github.md#module-theme-github-issues
   - ../../code-quality-improvement-report.md
 ---
 
@@ -49,6 +49,6 @@ Mai indovinare da nomi `base_*` del monorepo o di altri progetti.
 
 ## Canon cross-cutting
 
-- [module-github-remote-discipline](../../../../../../docs/wiki/memories/module-github-remote-discipline.md)
+- [module-github-remote-discipline](../../../../../../bashscripts/ai/wiki/memories/git-sync-fleet-remotes.md#module-github-remote-discipline)
 - [multi-repo-modules-themes-map](../../../../../../docs/wiki/rules/multi-repo-modules-themes-map.md)
-- skill [module-theme-git-remote-resolve](../../../../../../docs/wiki/skills/module-theme-git-remote-resolve.md)
+- skill [module-theme-git-remote-resolve](../../../../../../docs/wiki/skills/module.md#module-theme-git-remote-resolve)

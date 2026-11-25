@@ -6,7 +6,6 @@ namespace Modules\Notify\Tests;
 
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Modules\Xot\Tests\XotBaseTestCase;
 use Illuminate\Support\Facades\DB;
 use Mockery;
 use Mockery\Expectation;
@@ -16,6 +15,7 @@ use Modules\Notify\Models\NotifyTheme;
 use Modules\Notify\Models\NotifyThemeable;
 use Modules\Notify\Providers\NotifyServiceProvider;
 use Modules\Xot\Tests\XotBasePest;
+use Modules\Xot\Tests\XotBaseTestCase;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
 use ReflectionProperty;

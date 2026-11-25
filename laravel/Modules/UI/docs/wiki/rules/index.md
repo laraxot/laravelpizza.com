@@ -46,3 +46,8 @@ Le Rules progettuali vivono qui, nel wiki del Module **UI**, e vengono caricate 
 3. Aggiorna questo indice se la Rules e' ricorrente
 4. Committa: `docs: add rules <nome>`
 
+## Contenuto fuso (origine: INDEX)
+
+- La sorgente di verita' per le Rules e' sempre il wiki locale
+- Non embeddare Rules nei prompt di avvio
+- Per Rules globali, consulta il [wiki root](../../docs/wiki/rules/INDEX.md)

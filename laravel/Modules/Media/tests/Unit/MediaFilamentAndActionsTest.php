@@ -7,7 +7,7 @@ namespace Modules\Media\Tests\Unit;
 use Filament\Forms\Components\Field;
 use Filament\Tables\Columns\Column;
 use Mockery;
-use Modules\Media\Actions\Ffmpeg\ResolveMediaExporterAction;
+use Modules\Media\Actions\Ffmpeg\GetMediaExporterAction;
 use Modules\Media\Actions\GenerateTemporaryUploadPathAction;
 use Modules\Media\Filament\Resources\HasMediaResource\Schemas\HasMediaForm;
 use Modules\Media\Filament\Resources\HasMediaResource\Tables\HasMediasTable;
@@ -75,8 +75,8 @@ test('GenerateTemporaryUploadPathAction costruisce path distinti per purpose', f
     Assert::assertNotSame($original, $responsive);
 });
 
-test('ResolveMediaExporterAction accetta MediaExporter e rifiuta altri tipi', function (): void {
-    $action = new ResolveMediaExporterAction;
+test('GetMediaExporterAction accetta MediaExporter e rifiuta altri tipi', function (): void {
+    $action = new GetMediaExporterAction;
     $exporter = Mockery::mock(MediaExporter::class);
 
     Assert::assertSame($exporter, $action->execute($exporter));

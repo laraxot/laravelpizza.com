@@ -14,6 +14,11 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\json_decode;
 
+/**
+ * @see docs/contracts/send-twilio-whatsapp-action.md
+ *
+ * @contract docs/contracts/send-twilio-whatsapp-action.md
+ */
 final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
 {
     use QueueableAction;

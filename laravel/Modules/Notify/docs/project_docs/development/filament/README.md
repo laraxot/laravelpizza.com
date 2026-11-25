@@ -109,14 +109,14 @@ Widget personalizzati in Filament.
 
 - [Resource Rules](./resource-rules.md)
 - [Form Schema Conventions](./form-schema-conventions.md)
-- [Best Practices](../../../../../Activity/docs/best-practices-3.md)
+- [Best Practices](./best-practices.md)
 - [Form Components](./form-components.md)
 - [Form Validation](./form-validation.md)
 - [Translations](./translations.md)
 - [Actions](./actions.md)
 - [Widgets](./widgets.md)
 - [PHPStan](../phpstan/)
-- [Troubleshooting Filament](../../../../../Activity/docs/filament-errors-3.md)
+- [Troubleshooting Filament](../../../../../Activity/docs/filament-errors.md)
 
 ---
 

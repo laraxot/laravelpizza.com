@@ -8,7 +8,7 @@ use Aws\S3\S3Client;
 use Aws\Sts\StsClient;
 use Modules\Media\Actions\Diagnostic\Aws\CreateFilesystemS3ClientAction;
 use Modules\Media\Actions\Diagnostic\Aws\CreateFilesystemStsClientAction;
-use Modules\Media\Actions\Diagnostic\Aws\ResolveAwsS3ErrorSolutionAction;
+use Modules\Media\Actions\Diagnostic\Aws\GetAwsS3ErrorSolutionAction;
 use Modules\Media\Tests\TestCase;
 
 uses(TestCase::class)->group('no-media-db');
@@ -17,7 +17,7 @@ it('keeps diagnostic AWS actions queueable after semantic migration', function (
     foreach ([
         CreateFilesystemS3ClientAction::class,
         CreateFilesystemStsClientAction::class,
-        ResolveAwsS3ErrorSolutionAction::class,
+        GetAwsS3ErrorSolutionAction::class,
     ] as $action) {
         TestCase::assertMediaUsesQueueableAction($action);
         TestCase::assertMediaDeclaresStrictTypes($action);
@@ -30,7 +30,7 @@ it('keeps diagnostic AWS client factories returning their SDK clients', function
 });
 
 it('keeps AWS S3 error solution behavior', function (): void {
-    $action = new ResolveAwsS3ErrorSolutionAction;
+    $action = new GetAwsS3ErrorSolutionAction;
 
     expect($action->execute(null))->toBe('Unknown error - check AWS credentials and configuration');
     expect($action->execute('AccessDenied'))->toBe('Check IAM permissions for S3 access');

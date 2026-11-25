@@ -150,7 +150,6 @@ Related:
 ## Related Documentation
 
 - [Project Wiki Integration](../../docs/wiki/README.md)
-- [Project Wiki Agent Instructions](../../docs/wiki/agents-2.md)
 - [Module Documentation](../README.md)
 
 
@@ -296,5 +295,8 @@ Related:
 ## Related Documentation
 
 - [Project Wiki Integration](../../docs/wiki/README.md)
-- [Project Wiki Agent Instructions](../../docs/wiki/agents.md)
 - [Module Documentation](../README.md)
+
+## Contenuto fuso da `agents.md`
+
+## Contenuto assorbito da `agents.md`

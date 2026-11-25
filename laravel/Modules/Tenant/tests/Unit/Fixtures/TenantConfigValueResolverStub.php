@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\Tenant\Tests\Unit\Fixtures;
 
 /**
- * Sostituto di ResolveTenantConfigValueAction: restituisce la connessione di default e le connessioni
+ * Sostituto di GetTenantConfigValueAction: restituisce la connessione di default e le connessioni
  * date piu' la connessione utente `user_<default>` in memoria (classe con nome, non anonima).
  */
 final class TenantConfigValueResolverStub

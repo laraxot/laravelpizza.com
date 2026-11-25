@@ -1,3 +1,9 @@
+---
+title: "Lang ADR index"
+module: Lang
+qmd: "lang adr decisions authoring"
+---
+
 # Lang ADR index
 
 This is the machine-readable inventory of architecture decisions owned by the **Lang** module.
@@ -7,7 +13,7 @@ An ADR records a difficult-to-reverse or surprising choice with a real trade-off
 ## Decisions
 
 - [0001-cambio-lingua-con-url-localizzato](0001-cambio-lingua-con-url-localizzato.md)
-- [lang-owns-localization-data](lang-owns-localization-data.md)
+- [lang-owns-localization-data](0005-lang-owns-localization-data.md)
 
 ## Authoring
 
@@ -25,8 +31,8 @@ qmd: "Lang ADR INDEX stato decisioni"
 | ADR | Stato | Sintesi |
 |---|---|---|
 | [0001-cambio-lingua-con-url-localizzato](0001-cambio-lingua-con-url-localizzato.md) | accepted | Cambio lingua con URL localizzato |
-| [lang-owns-localization-data](lang-owns-localization-data.md) | accepted | Lang possiede i dati di localizzazione |
-| [language-switcher-standalone-view](language-switcher-standalone-view.md) | accepted | Vista language switcher standalone |
-| [filament-labels-are-autoconfigured-by-lang-provider](filament-labels-are-autoconfigured-by-lang-provider.md) | accepted | Le etichette Filament si configurano da LangServiceProvider |
+| [lang-owns-localization-data](0005-lang-owns-localization-data.md) | accepted | Lang possiede i dati di localizzazione |
+| [language-switcher-standalone-view](0006-language-switcher-standalone-view.md) | accepted | Vista language switcher standalone |
+| [filament-labels-are-autoconfigured-by-lang-provider](0003-filament-labels-are-autoconfigured-by-lang-provider.md) | accepted | Le etichette Filament si configurano da LangServiceProvider |
 
 Formato e regole: [README](README.md).

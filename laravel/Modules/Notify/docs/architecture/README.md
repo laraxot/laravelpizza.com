@@ -50,7 +50,6 @@ e
    - Success metrics
 
 3. **Documentazione Moduli Specifici:**
-   - **[User Module](../../Modules/User/docs/models/xotbasepivot-migration.md)** 🔴 Priorità ALTA
      - 7 Pivot concreti
      - 45 minuti effort
      - Permission system, Teams, Devices
@@ -110,7 +109,7 @@ e
 Leggere in ordine:
 1. [xotbasepivot-analysis.md](./xotbasepivot-analysis.md) - Capire il WHY
 2. [xotbasepivot-strategy.md](./xotbasepivot-strategy.md) - Capire il HOW
-3. [User/xotbasepivot-migration.md](../../Modules/User/docs/models/xotbasepivot-migration.md) - Vedere esempio pratico
+3. User/xotbasepivot-migration.md - Vedere esempio pratico
 
 ### 2. Team Alignment (30 min)
 

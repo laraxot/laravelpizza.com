@@ -15,7 +15,6 @@ related:
   - "./structure.md"
   - "./testing-structure.md"
   - "./user-gdpr-decoupling.md"
-  - "./user-gdpr-oupling.md"
 ---
 
 # User Module - Architecture Documentation

@@ -1,141 +1,81 @@
-# Dependencies and packages
-/vendor/
-/node_modules/
-/docs/vendor/
+# Deduplicated .gitignore - generated from original
 
-# Lock files and cache
-*.lock
-*.cache
-*.phar
-*.jar
-package-lock.json
-yarn-error.log
-npm-debug.log
-composer.lock
-.phpunit.result.cache
-.php-cs-fixer.cache
-
-# Log files
-*.log
-error_log
-
-# Build directories
-/build/
-/build
-build/
-
-# Laravel specific
-bootstrap/compiled.php
+*~BASE
+*~head
+*~HEAD
+*~LOCAL
+*~REMOTE
 app/storage/
-public/storage
-public/hot
-public_html/storage
-public_html/hot
-storage/*.key
-.env
-
-# Database directories
-database/Factories_
-database/Factories_old
-database/Migrations_old
-
-# Local configurations
-Homestead.yaml
-Homestead.json
-/.vagrant
-
-# IDE specific
-/.idea
-.phpintel
-
-# Git specific
-.git-blame-ignore-revs
-.git-rewrite/
-.git-rewrite
-
-# Temporary and system files
-*.tmp
-*.swp
-*.swo
-*.stackdump
-*.exe
-*:Zone.Identifier
-.DS_Store
-# Dependencies
-vendor/
-node_modules/
-package-lock.json
-
-# Build and compiled files
-/build
-docs/cache/
-cache/
-
-# Cache and temporary files
-*.cache
-*.lock
-*.phar
-*.log
-.php-cs-fixer.cache
-
-# Git related
-.git-rewrite/
-.git-blame-ignore-revs
-
-# Backup files
-*.old
-*.old1
 *.backup
 *.backup.*
 *.bak
-*.new
-
-# Documentation and cache
-docs/phpstan/
-docs/cache/
+bootstrap/compiled.php
+/build
+/build/
+build/
+*.cache
 cache/
-
-# Development tools
-.windsurf/
+composer.lock
 .cursor/
-
-# PHPStan documentation
-docs/phpstan/
-
-# Old directories
-resources/views/Components_old
-database/Migrations_old
-database/Seeders_old
+database/Factories_
 database/Factories_old
+database/Migrations_old
 database_old
-
-# Other
--e
-
-# 🚫 File specifici del progetto
-*.fila2
-laravel
-public_html
-lang/lang/
+database/Seeders_old
 _docs/
-_docs/
-
-# Second brain: no-docs-archive (wiki) — non tracciare albero legacy docs/archive/
 docs/archive/
-# Copie residue da merge/rebase o editor (mai committare — es. `.agent~HEAD`, `*.md~head`)
-*~HEAD
-*~BASE
-*~LOCAL
-*~REMOTE
-*.orig
-*.rej
-*~head
-tests/coverage-*.*
-docs/screenshots/
-
-# graphify lanciato su tests/ scrive tests/graphify-out/: output rigenerabile, mai committare
-tests/graphify-out/
-
-# screenshot di comparazione visiva (artefatti locali)
+docs/cache/
+docs/phpstan/
 docs/project/visual-comparison/
+docs/screenshots/
+/docs/vendor/
 docs/visual-comparison/
+.DS_Store
+-e
+.env
+error_log
+*.exe
+*.fila2
+.git-blame-ignore-revs
+.git-rewrite
+.git-rewrite/
+Homestead.json
+Homestead.yaml
+/.idea
+*.jar
+lang/lang/
+laravel
+*.lock
+*.log
+*.new
+/node_modules/
+node_modules/
+npm-debug.log
+*.old
+*.old1
+*.orig
+package-lock.json
+*.phar
+.php-cs-fixer.cache
+.phpintel
+.phpunit.result.cache
+public/hot
+public_html
+public_html/hot
+public_html/storage
+public/storage
+*.rej
+resources/views/Components_old
+*.stackdump
+storage/*.key
+*.swo
+*.swp
+tests/coverage-*.*
+tests/graphify-out/
+*.tmp
+/.vagrant
+/vendor/
+vendor/
+.windsurf/
+yarn-error.log
+*:Zone.Identifier

@@ -4,6 +4,7 @@ type: index
 tags: [adr, decisioni]
 created: 2026-11-18
 updated: 2026-11-18
+qmd: "architecture decision records tenant metodo harness formato adr decisione contesto alternative scartate"
 ---
 
 # Architecture Decision Records

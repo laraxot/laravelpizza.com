@@ -11,7 +11,10 @@ issues:
 discussions:
   - "https://github.com/laraxot/base_fixcity_fila5/discussions/273"
 related:
+<<<<<<< .merge_file_vsEWMc
   - ../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
+=======
+>>>>>>> .merge_file_TS3szX
   - ../../../../../docs/wiki/bmad/architecture.md
   - ../../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md
   - ../../docs/wiki/concepts/ai-harness-module-discipline.md
@@ -22,7 +25,7 @@ status: stale
 
 ## AI / second brain
 
-- [hackernoon-ai-coding-tips-fixcity-map](../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md)
+- [hackernoon-ai-coding-tips-fixcity-map](../../../../../bashscripts/ai/wiki/concepts/agents-harness-tooling.md#hackernoon-ai-coding-tips-fixcity-map)
 - [hackernoon-ai-coding-tips-laraxot-map](../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-laraxot-map.md)
 - [bmad/architecture](../../../../docs/wiki/bmad/architecture.md)
 - [frontmatter + GitHub](../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md)
@@ -80,7 +83,7 @@ QMD è configurato per ricerca locale su tutto il corpus markdown (14.177+ file 
 # Ricerca keyword (BM25, veloce ~30ms)
 ## AI / second brain
 
-- [hackernoon-ai-coding-tips-fixcity-map](../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md)
+- [hackernoon-ai-coding-tips-fixcity-map](../../../../../bashscripts/ai/wiki/concepts/agents-harness-tooling.md#hackernoon-ai-coding-tips-fixcity-map)
 - [hackernoon-ai-coding-tips-laraxot-map](../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-laraxot-map.md)
 - [bmad/architecture](../../../../docs/wiki/bmad/architecture.md)
 - [frontmatter + GitHub](../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md)
@@ -105,7 +108,7 @@ qmd update
 ## Concepts
 
 - [llm-wiki-governance](./concepts/llm-wiki-governance.md): repository mapping, ingest/query/lint, and source-of-truth rules
-- [phpstan-central-config-rule](./concepts/phpstan-central-config-rule.md): always run module PHPStan via `laravel/phpstan.neon`, never via module-local config
+- [phpstan-central-config-rule](../../../../../bashscripts/ai/wiki/concepts/quality-testing-verification.md#phpstan-central-config-rule): always run module PHPStan via `laravel/phpstan.neon`, never via module-local config
 
 ## Modules
 
@@ -148,7 +151,7 @@ Separate git repository with shell scripts and utilities:
 
 ## Karpathy LLM Wiki Standard
 
-- [forbidden-folders-rule](../../../../docs/wiki/concepts/forbidden-folders.md): Strict structural constraints.
+- [forbidden-folders-rule](../../../../../bashscripts/ai/wiki/concepts/modules-structure-rules.md#forbidden-folders): Strict structural constraints.
 - [llm-wiki-standard](../../../../docs/wiki/concepts/karpathy-wiki.md): Repository mapping and knowledge lifecycle.
 
 ## Sacred Hierarchy
@@ -169,9 +172,8 @@ Separate git repository with shell scripts and utilities:
 | [.gitkeep](./concepts/.gitkeep) | Concept | - | 2026-04-21 |
 | [llm-wiki-governance](./concepts/llm-wiki-governance.md) | Concept | - | 2026-04-21 |
 | [module-test-location-rule](./concepts/module-test-location-rule.md) | Concept | - | 2026-04-21 |
-| [phpstan-central-config-rule](./concepts/phpstan-central-config-rule.md) | Concept | - | 2026-04-21 |
+| [phpstan-central-config-rule](../../../../../bashscripts/ai/wiki/concepts/quality-testing-verification.md#phpstan-central-config-rule) | Concept | - | 2026-04-21 |
 | [xotbase-table-columns-enforcement](./concepts/xotbase-table-columns-enforcement.md) | Concept | 5 Table files populated — XotBaseResourceTable enforcement | 2026-05-07 |
-
 
 ---
 
@@ -261,7 +263,7 @@ qmd update
 ## Concepts
 
 - [llm-wiki-governance](./concepts/llm-wiki-governance.md): repository mapping, ingest/query/lint, and source-of-truth rules
-- [phpstan-central-config-rule](./concepts/phpstan-central-config-rule.md): always run module PHPStan via `laravel/phpstan.neon`, never via module-local config
+- [phpstan-central-config-rule](../../../../../bashscripts/ai/wiki/concepts/quality-testing-verification.md#phpstan-central-config-rule): always run module PHPStan via `laravel/phpstan.neon`, never via module-local config
 
 ## Modules
 
@@ -304,7 +306,7 @@ Separate git repository with shell scripts and utilities:
 
 ## Karpathy LLM Wiki Standard
 
-- [forbidden-folders-rule](../../../../docs/wiki/concepts/forbidden-folders.md): Strict structural constraints.
+- [forbidden-folders-rule](../../../../../bashscripts/ai/wiki/concepts/modules-structure-rules.md#forbidden-folders): Strict structural constraints.
 - [llm-wiki-standard](../../../../docs/wiki/concepts/karpathy-wiki.md): Repository mapping and knowledge lifecycle.
 
 ## Sacred Hierarchy
@@ -325,5 +327,16 @@ Separate git repository with shell scripts and utilities:
 | [.gitkeep](./concepts/.gitkeep) | Concept | - | 2026-04-21 |
 | [llm-wiki-governance](./concepts/llm-wiki-governance.md) | Concept | - | 2026-04-21 |
 | [module-test-location-rule](./concepts/module-test-location-rule.md) | Concept | - | 2026-04-21 |
-| [phpstan-central-config-rule](./concepts/phpstan-central-config-rule.md) | Concept | - | 2026-04-21 |
+| [phpstan-central-config-rule](../../../../../bashscripts/ai/wiki/concepts/quality-testing-verification.md#phpstan-central-config-rule) | Concept | - | 2026-04-21 |
 | [xotbase-table-columns-enforcement](./concepts/xotbase-table-columns-enforcement.md) | Concept | 5 Table files populated — XotBaseResourceTable enforcement | 2026-05-07 |
+
+## Contenuto fuso da `index.md`
+
+# Da popolare con thread reali di git@github.com:laraxot/module_notify_fila5.git
+# (repo owner del modulo, vedi `git remote -v`). Le due voci precedenti puntavano
+# a `laraxot/platform` (repo inesistente) e a `laraxot/base_fixcity_fila5`
+# (progetto diverso): entrambe vietate dalla regola wiki-markdown-frontmatter-mandatory.
+| `mod-quaeris` | `Modules/Quaeris/docs/` | 83 | Survey, questionari, report |
+qmd search "wizard questionario" -c mod-quaeris -n 5
+qmd vsearch "come creare un questionario" -c mod-quaeris
+| Quaeris, Geo, User, Media, Tenant, Activity, Notify, Job, Gdpr, Chart, CloudStorage, DbForge, Limesurvey | wiki/ presenti | pending |

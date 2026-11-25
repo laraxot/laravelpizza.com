@@ -6,13 +6,8 @@ return [
     'fields' => [
         'name' => [
             'label' => 'Nome visualizzato',
-<<<<<<< .merge_file_U9Cmve
-            'placeholder' => 'Inserisci il nome visualizzato',
-            'helper_text' => 'Il nome mostrato nel sito e nei pannelli.',
-=======
             'helper_text' => 'Il nome mostrato nel sito e nei pannelli.',
             'placeholder' => 'Inserisci il nome visualizzato',
->>>>>>> .merge_file_rPJG6W
             'description' => 'Nome visualizzato',
         ],
         'created_at' => [
@@ -61,13 +56,8 @@ return [
             'placeholder' => 'Incolla il token',
         ],
         'state' => [
-<<<<<<< .merge_file_U9Cmve
-            'label' => 'Stato',
-            'description' => 'Stato corrente',
-=======
             'description' => 'Stato corrente',
             'label' => 'Stato',
->>>>>>> .merge_file_rPJG6W
             'placeholder' => 'Seleziona lo stato',
             'helper_text' => 'Stato del record',
         ],

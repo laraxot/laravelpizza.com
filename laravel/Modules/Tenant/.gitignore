@@ -197,3 +197,36 @@ tests/graphify-out/
 # screenshot di comparazione visiva (artefatti locali)
 docs/project/visual-comparison/
 docs/visual-comparison/
+
+# fila5-guard: mai nel repo di un modulo/tema
+/laravel/
+graphify-out/
+/tests/coverage/
+/tests/coverage.xml/
+/tests/*coverage*.xml
+
+# Niente cartelle di backup/archivio in docs: lo storico e' git (ADR Xot 0041)
+docs/**/archivio/
+docs/**/archive/
+docs/**/_archive/
+docs/**/archived/
+docs/**/*backup*/
+docs/**/wiki-archive/
+docs/**/historical/
+
+# No docs archive folders — restore via Git only (Xot ADR 0041)
+docs/archivio/
+docs/**/archivio/
+docs/archive/
+docs/**/archive/
+docs/_archive/
+docs/**/_archive/
+docs/archived/
+docs/**/archived/
+docs/historical/
+docs/**/historical/
+docs/backup/
+docs/**/backup/
+docs/backups/
+docs/**/backups/
+.docs-archive/

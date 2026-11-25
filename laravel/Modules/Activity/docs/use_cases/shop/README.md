@@ -66,7 +66,7 @@ php artisan activity:shop:checkout cart_12345_xxx
 - Come estendere le proiezioni?
 
 ## Collegamenti correlati
-- [Console Commands Shop](console-commands-3.md)
+- [Console Commands Shop](console-commands.md)
 - [Best Practice Shop](./04-best-practice.md)
 - [Architettura Shop](./architettura.md)
 - [Eventi Shop](./events.md)

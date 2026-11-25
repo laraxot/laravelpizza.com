@@ -13,9 +13,9 @@ related:
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
-  - "../actions-path-convention-2.md"
+  - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
-  - "../actions-path-convention-2.md"
+  - "./actions-path-convention.md"
 ---
 
 # User Module - Authentication & Authorization
@@ -1022,7 +1022,7 @@ test('user can switch teams', function () {
 - [Two-Factor Auth](./auth/2fa.md) - 2FA implementation
 
 ### Authorization
-- [Roles & Permissions](../roles-permissions-2.md) - RBAC guide
+- [Roles & Permissions](./authorization/roles-permissions.md) - RBAC guide
 - [Policies](./authorization/policies.md) - Policy-based authorization
 - [Permission Checking](./authorization/checking.md) - How to check permissions
 
@@ -1088,7 +1088,7 @@ See [ROADMAP.md](./roadmap.md) for details.
 - [Tenant Module](../../../Tenant/docs/README.md) - Enhanced tenancy
 
 ### Project Documentation
-- [CLAUDE.md](../../../Geo/docs/root-md-files/claude.md) - Project architecture
+- [CLAUDE.md](../../../../CLAUDE.md) - Project architecture
 - [Security Guidelines](../../../../../docs/security.md)
 
 ### External Resources

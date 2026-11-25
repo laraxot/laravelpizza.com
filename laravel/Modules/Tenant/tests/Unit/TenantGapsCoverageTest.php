@@ -10,9 +10,9 @@ use Mockery;
 use Mockery\MockInterface;
 use Modules\Tenant\Actions\Config\FilterConfigStringKeysAction;
 use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
-use Modules\Tenant\Actions\Config\ResolveTenantConfigValueAction;
+use Modules\Tenant\Actions\Config\GetTenantConfigValueAction;
 use Modules\Tenant\Actions\GetTenantNameAction;
-use Modules\Tenant\Actions\Models\ResolveTenantModelClassAction;
+use Modules\Tenant\Actions\Models\GetTenantModelClassAction;
 use Modules\Tenant\Actions\Modules\GetTenantModulesAction;
 use Modules\Tenant\Actions\Translations\TranslateTenantKeyAction;
 use Modules\Tenant\Models\Tenant;
@@ -310,15 +310,15 @@ test('TenantServiceProvider load user connection and filter model classes', func
     Assert::assertIsArray($connections);
     $connections = app(FilterConfigStringKeysAction::class)->execute($connections);
 
-    app()->instance(ResolveTenantConfigValueAction::class, new TenantConfigValueResolverStub($default, $connections));
+    app()->instance(GetTenantConfigValueAction::class, new TenantConfigValueResolverStub($default, $connections));
 
     /** @var array<string, mixed> $data */
     $data = $load->invoke($provider, $default);
     Assert::assertArrayHasKey('connections', $data);
 
-    $filter = new ReflectionMethod(ResolveTenantModelClassAction::class, 'filterValidModelClasses');
+    $filter = new ReflectionMethod(GetTenantModelClassAction::class, 'filterValidModelClasses');
     $filter->setAccessible(true);
-    $action = new ResolveTenantModelClassAction;
+    $action = new GetTenantModelClassAction;
     /** @var array<string, class-string> $filtered */
     $filtered = $filter->invoke($action, [
         1 => Tenant::class,
@@ -345,21 +345,21 @@ test('final remaining statement branches', function (): void {
     Assert::assertSame('localhost', app(GetTenantNameAction::class)->execute());
     $this->setServerNameForTenantTest(null);
 
-    $this->mockAppService(ResolveTenantConfigValueAction::class, static function (MockInterface $mock): void {
+    $this->mockAppService(GetTenantConfigValueAction::class, static function (MockInterface $mock): void {
         $mock->shouldReceive('execute')->andReturn(99);
     });
-    expect(fn (): string => app(ResolveTenantModelClassAction::class)->execute('widget'))
+    expect(fn (): string => app(GetTenantModelClassAction::class)->execute('widget'))
         ->toThrow(Exception::class);
 
     Module::shouldReceive('allEnabled')->andReturn([new \stdClass]);
-    $getAll = new ReflectionMethod(ResolveTenantModelClassAction::class, 'getAllModulesModels');
+    $getAll = new ReflectionMethod(GetTenantModelClassAction::class, 'getAllModulesModels');
     $getAll->setAccessible(true);
-    Assert::assertSame([], $getAll->invoke(new ResolveTenantModelClassAction));
+    Assert::assertSame([], $getAll->invoke(new GetTenantModelClassAction));
 
     $provider = new TenantServiceProvider(app());
     $load = new ReflectionMethod($provider, 'loadTenantDatabaseConfig');
     $load->setAccessible(true);
-    app()->instance(ResolveTenantConfigValueAction::class, new SqliteTenantConfigValueResolverStub);
+    app()->instance(GetTenantConfigValueAction::class, new SqliteTenantConfigValueResolverStub);
     /** @var array<string, mixed> $data */
     $data = $load->invoke($provider, 'sqlite');
     Assert::assertIsArray($data);

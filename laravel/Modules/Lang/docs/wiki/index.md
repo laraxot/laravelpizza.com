@@ -51,3 +51,29 @@ qmd search "Lang <topic>" --limit 5
 ---
 
 Updated: 2026-06-12
+
+## Contenuto fuso (origine: INDEX)
+
+- "https://github.com/laraxot/base_fixcity_fila5/issues/272"
+discussions:
+  - "https://github.com/laraxot/base_fixcity_fila5/discussions/273"
+related:
+  - ../../../../../bashscripts/ai/wiki/concepts/agents-harness-tooling.md#hackernoon-ai-coding-tips-fixcity-map
+  - ../../../../docs/wiki/bmad/architecture.md
+  - ../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md
+  - ../../docs/wiki/concepts/ai-harness-module-discipline.md
+---
+
+- [hackernoon-ai-coding-tips-progetto corrente-map](../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-progetto corrente-map.md)
+---
+- [hackernoon-ai-coding-tips-fixcity-map](../../../../../bashscripts/ai/wiki/concepts/agents-harness-tooling.md#hackernoon-ai-coding-tips-fixcity-map)
+- [bmad/architecture](../../../../docs/wiki/bmad/architecture.md)
+- [frontmatter + GitHub](../../../../docs/wiki/rules/wiki-markdown-frontmatter-mandatory.md)
+- [ai-harness-module-discipline](../../docs/wiki/concepts/ai-harness-module-discipline.md)
+- [second-brain-local-discipline](./concepts/second-brain-local-discipline.md) → canon Xot
+
+- [Rules](rules/index.md)
+- [Skills](skills/index.md)
+- [Commands](commands/index.md)
+- [Memories](memories/index.md)
+- [Concepts](concepts/index.md)

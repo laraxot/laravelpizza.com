@@ -39,7 +39,6 @@ test('PermissionData can be instantiated', function () {
         'enable_wildcard_permission' => false,
         'cache' => PermissionCacheData::from(['enabled' => true, 'key' => 'spatie.permission.cache', 'expiration_time' => DateInterval::createFromDateString('24 hours'), 'store' => 'default']),
     ]));
-
 });
 
 test('PermissionModelsData can be instantiated', function () {
@@ -50,7 +49,6 @@ test('PermissionModelsData can be instantiated', function () {
         'permission' => 'Modules\User\Models\Permission',
         'role' => 'Modules\User\Models\Role',
     ]));
-
 });
 
 test('PermissionTableNamesData can be instantiated', function () {
@@ -67,7 +65,6 @@ test('PermissionTableNamesData can be instantiated', function () {
         'model_has_roles' => 'model_has_roles',
         'role_has_permissions' => 'role_has_permissions',
     ]));
-
 });
 
 test('PermissionColumnNamesData can be instantiated', function () {
@@ -76,7 +73,6 @@ test('PermissionColumnNamesData can be instantiated', function () {
     ]))->toEqual(PermissionColumnNamesData::from([
         'model_morph_key' => 'model_id',
     ]));
-
 });
 
 test('PermissionCacheData can be instantiated', function () {
@@ -89,7 +85,6 @@ test('PermissionCacheData can be instantiated', function () {
         'key' => 'spatie.permission.cache',
         'store' => 'default',
     ]));
-
 });
 
 test('DeviceData can be instantiated', function () {
@@ -102,7 +97,6 @@ test('DeviceData can be instantiated', function () {
         'name' => 'Test Device',
         'user_id' => 1,
     ]));
-
 });
 
 test('SocialProviderData can be instantiated', function () {
@@ -115,7 +109,6 @@ test('SocialProviderData can be instantiated', function () {
         'name' => 'google',
         'active' => true,
     ]));
-
 });
 
 test('FilamentUserData can be instantiated', function () {
@@ -126,7 +119,6 @@ test('FilamentUserData can be instantiated', function () {
         'id' => 1,
         'name' => 'Test User',
     ]));
-
 });
 
 test('SuperAdminData can be instantiated', function () {
@@ -137,7 +129,6 @@ test('SuperAdminData can be instantiated', function () {
         'id' => 1,
         'name' => 'Super Admin',
     ]));
-
 });
 
 test('FilamentShieldData can be instantiated', function () {
@@ -146,7 +137,6 @@ test('FilamentShieldData can be instantiated', function () {
     ]))->toEqual(FilamentShieldData::from([
         'enabled' => true,
     ]));
-
 });
 
 test('PasswordData can be instantiated', function () {
@@ -157,7 +147,6 @@ test('PasswordData can be instantiated', function () {
         'min' => 8,
         'max' => 100,
     ]));
-
 });
 
 test('ShieldResourceData can be instantiated', function () {
@@ -168,5 +157,4 @@ test('ShieldResourceData can be instantiated', function () {
         'name' => 'users',
         'enabled' => true,
     ]));
-
 });

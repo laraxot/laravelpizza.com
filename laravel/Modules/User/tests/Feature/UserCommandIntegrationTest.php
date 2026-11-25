@@ -28,7 +28,6 @@ describe('User Command Integration', function (): void {
 
     test('integrates with xot data system', function (): void {
         Assert::assertNotEmpty(XotData::make()->getUserClass());
-
     });
 
     test('validates command registration in service provider', function (): void {
@@ -128,7 +127,6 @@ describe('User Command Integration', function (): void {
 
     test('handles string manipulation correctly', function (): void {
         Assert::assertSame('TESTVALUE', strtoupper('TestValue'));
-
     });
 
     test('validates array operations', function (): void {

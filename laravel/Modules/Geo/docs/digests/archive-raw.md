@@ -1,0 +1,212 @@
+---
+title: "Digest raw"
+type: digest
+status: active
+qmd: "digest ceiling 100 archive-raw"
+---
+
+# Digest raw
+
+Sorgenti fuse da `raw/` (428 file):
+
+- `raw/README.md` — README
+- `raw/index.md` — Raw Sources — Geo
+- `raw/snapshot/README.md` — Script di Backup
+- `raw/errors/phpstan-xot-errors.md` — Errori PHPStan nel Modulo Xot
+- `raw/errors/url-not-found.md` — Url Not Found {#url-not-found}
+- `raw/errors/page-expired.md` — Page Expired 419 {#page-expired-419}
+- `raw/errors/common-errors.md` — Errori Comuni e Soluzioni
+- `raw/report/phpstan.md` — PHPStan Report (Level 10) - Run 1
+- `raw/history/workspace-implementation-report.md` — Workspace File Naming Convention - Implementation Report
+- `raw/history/components.md` — Componenti UI
+- `raw/history/dependencies.md` — dependencies
+- `raw/history/phpmd-results-104557.md` — Phpmd Results 20251119 104557
+- `raw/history/security.md` — security
+- `raw/history/restart-after-phpstan.md` — Guida al Riavvio del Sistema Dopo Validazione PHPStan
+- `raw/history/phpstan-level9-guide.md` — Guida alla Risoluzione degli Errori PHPStan Livello 9
+- `raw/history/no-duplicate-functions-in-sourced-scripts-2.md` — Principio DRY negli Script Bash: NO alla duplicazione di funzioni
+- `raw/history/data-queableactions.md` — Convenzioni per Data Objects e QueueableActions
+- `raw/history/link-performance-migration-errors.md` — link-performance-migration-errors
+- `raw/history/custom-relation.md` — Come funzionano le custom relations? {#custom-relation}
+- `raw/history/phpmd-summary-221520.md` — Phpmd Summary 20251118 221520
+- `raw/history/bmad-installation-report.md` — BMAD Method — Installation & Configuration Report
+- `raw/history/mutators-fix-plan.md` — 📋 Mutators Fix Plan - Progetto Completo
+- `raw/history/phpstan-filament-fixes.md` — Correzioni PHPStan per Risorse Filament nel Modulo Job
+- `raw/history/laraxot-framework.md` — Framework Laraxot
+- `raw/history/error-correction-workflow.md` — 🚨 ERROR CORRECTION WORKFLOW - Regola Sacra
+- `raw/history/modules.md` — Moduli PTVX
+- `raw/history/phpstan-report.md` — Report PHPStan - Modulo User
+- `raw/history/fix-compila-scheda-record-loss.md` — fix-compila-scheda-record-loss
+- `raw/history/eloquent-models-property-verification.md` — Verifica delle Proprietà nei Modelli Eloquent
+- `raw/history/ai-tools.md` — Approfondimenti per Strumenti AI
+- `raw/history/automatic-push.md` — Automatic Push {#automatic-push}
+- `raw/history/performance-optimization.md` — performance-optimization
+- `raw/history/customizing-your-site.md` — Customizing Your Site {#customizing}
+- `raw/history/views.md` — views
+- `raw/history/prime-directive.md` — PRIME DIRECTIVE - Regola Fondamentale del Progetto
+- `raw/history/sync-remote-repo-test-plan.md` — Sync Remote Repo Test Plan
+- `raw/history/sync-remote-repo-coordination-2.md` — Sync Remote Repo - AI Agent Coordination Hub
+- `raw/history/correct-schemaless-solution.md` — ✅ SOLUZIONE CORRETTA: Schemaless Attributes & MySQL Collation
+- `raw/history/infolist-compila-page-fix.md` — Filament v5 custom page infolist pattern (XotBasePage)
+- `raw/history/troubleshooting-ai.md` — Risoluzione dei Problemi Comuni con PTVX
+- `raw/history/filament-v4-migration-playbook.md` — 🚀 Filament v4 Migration Playbook - PTVX Complete Guide
+- `raw/history/code-quality-improvements.md` — Raccomandazioni per Incrementare Code Quality - Laraxot PTVX
+- `raw/history/phpstan-implementation-guide.md` — Guida Pratica all'Implementazione delle Soluzioni PHPStan
+- `raw/history/refactoring-plural-to-singular-2.md` — Refactoring Modelli Plurali → Singolari
+- `raw/history/agent-teams.md` — Agent Teams Coordination
+- `raw/history/case-sensitive-duplicates-cleanup.md` — File Duplicati Case-Sensitive - Rapporto di Pulizia
+- `raw/history/git-reset.md` — Git Reset
+- `raw/history/authorization.md` — authorization
+- `raw/history/phpstan-level10-fixes.md` — Correzioni PHPStan Livello 10 - Modulo Notify
+- `raw/history/ai-agent-coordination.md` — AI Agent Coordination Hub with BMAD-METHOD
+- `raw/history/refactor-radicale-completato.md` — refactor-radicale-completato
+- `raw/history/employee-timbrature-implementation.md` — Implementazione Sistema Timbrature - Modulo Employee
+- `raw/history/super-mucca-master-understanding.md` — Super Mucca - Master Understanding - PTVX Laraxot
+- `raw/history/analisi-miglioramento-prompt.md` — Analisi e Miglioramento del Sistema di Prompt
+- `raw/history/module-user-2.md` — Modulo User
+- `raw/history/services.md` — Servizi del Modulo Xot
+- `raw/history/navigation.md` — Navigation {#navigation}
+- `raw/history/solution-summary.md` — Soluzione Implementata: Errore Larazeus Bolt v3
+- `raw/history/prompt.md` — Prompt
+- `raw/history/laravel-boost-mcp-fix.md` — ✅ Laravel Boost MCP - Fix Completo
+- `raw/history/documentation-map.md` — Documentation Map
+- `raw/history/phpstan-usage.md` — Utilizzo di PHPStan nel Progetto PTVX
+- `raw/history/project-roadmap.md` — project-roadmap
+- `raw/history/phpstan-summary-215405.md` — Phpstan Summary 20251118 215405
+- `raw/history/filament-redirect-loop-fix.md` — filament-redirect-loop-fix
+- `raw/history/xotbase-corrections-summary.md` — Riepilogo Correzioni XotBase - Implementate
+- `raw/history/link-permessi-lang.md` — link-permessi-lang
+- `raw/history/workspace-discussion.md` — Workspace File Naming Convention - Coordination
+- `raw/history/model-naming-convention.md` — Naming Convention per Modelli in Laraxot PTVX
+- `raw/history/phpstan-level7-guide.md` — Guida alla Validazione con PHPStan Livello 7
+- `raw/history/routes.md` — routes
+- `raw/history/setup.md` — Setup e Configurazione PTVX
+- `raw/history/module-tenant.md` — Modulo Tenant
+- `raw/history/best-practices.md` — Best Practices UI
+- `raw/history/module-template.md` — module-template
+- `raw/history/schema.md` — ptvx-project Module Schema
+- `raw/history/laraxot.md` — Laravel XOT Architecture Documentation
+- `raw/history/phpstan-errors.md` — Analisi PHPStan - Modulo Performance
+- `raw/history/terms-conditions-2.md` — terms-conditions-2
+- `raw/history/phpstan-report-2.md` — Report PHPStan - Modulo User
+- `raw/history/agent-teams-2.md` — Agent Teams Coordination
+- `raw/history/phpstan-fixes-summary.md` — Riassunto delle Correzioni per PHPStan Livello 9
+- `raw/history/critical-model-naming-fix.md` — Correzione Critica: Naming Modelli in Inglese
+- `raw/history/composer.md` — Gestione Dipendenze Composer
+- `raw/history/git-subtree-error-resolution-2.md` — 🚀 Gestione Errori Git Subtree
+- `raw/history/module-xot.md` — Modulo Xot
+- `raw/history/executive-summary.md` — PTVX Project Executive Summary
+- `raw/history/filament-4-upgrade.md` — Guida Upgrade Filament 4.x - Laraxot/PTVX
+- `raw/history/replaces.md` — replaces
+- `raw/history/documentation-index.md` — PTVX Documentation Index
+- `raw/history/package.md` — Package utilizzati {#package-utilizzati}
+- `raw/history/events.md` — events
+- `raw/history/terms-conditions.md` — terms-conditions
+- `raw/history/altro.md` — altro md
+- `raw/history/database-migrations.md` — database-migrations
+- `raw/history/module-user.md` — module-user
+- `raw/history/phpstan-errors-2.md` — Phpstan Errors
+- `raw/history/phpmd-summary-104557.md` — Phpmd Summary 20251119 104557
+- `raw/history/apache-ollama-fix-2.md` — Apache & Ollama Fix Summary
+- `raw/history/phpstan-fixes-2.md` — Correzioni PHPStan per il Modulo User
+- `raw/history/analyze-modules.md` — Script analyze_modules.sh
+- `raw/history/model-schemaless-attributes.md` — Schemaless Attributes with `spatie/laravel-schemaless-attributes`
+- `raw/history/development.md` — Filosofia di Sviluppo
+- `raw/history/reactphp.md` — Gestione Processi ReactPHP
+- `raw/history/lavoro-completato.md` — 🎉 Lavoro Completato - 2025-11-04
+- `raw/history/getspecificrecord-pattern.md` — Pattern DRY+KISS: getSpecificRecord()
+- `raw/history/complete-work-with-corrections.md` — 🎉 LAVORO COMPLETO con Correzioni - 2025-01-02
+- `raw/history/mcp-implementation-correction-2.md` — MCP Implementation Correction
+- `raw/history/spatie-translatable.md` — Spatie Laravel Translatable - Guida Completa
+- `raw/history/algolia-docsearch.md` — Algolia DocSearch {#algolia-docsearch}
+- `raw/history/infolist-vs-form-pattern.md` — Pattern DRY+KISS: Infolist vs Form
+- `raw/history/riepilogo-ottimizzazioni-super-dry-kiss.md` — riepilogo-ottimizzazioni-super-dry-kiss
+- `raw/history/service.md` — Services
+- `raw/history/eav-system.md` — eav-system
+- `raw/history/readme-template.md` — Modulo [Nome Modulo]
+- `raw/history/password.md` — password
+- `raw/history/localization-guide.md` — Guida alla Localizzazione nel Framework Laraxot PTVX
+- `raw/history/docs-naming-violations.md` — Docs Naming Violations
+- `raw/history/xotbaseresource-critical-violations.md` — xotbaseresource-critical-violations
+- `raw/history/qmd-mcp-configuration.md` — QMD MCP Server Configuration Guide
+- `raw/history/model-naming-convention-2.md` — Naming Convention per Modelli in Laraxot PTVX
+- `raw/history/docs-uppercase-report.md` — Docs Uppercase Report
+- `raw/history/resource-page-separation.md` — Resource vs Page Classes - Critical Architectural Separation
+- `raw/history/model-fields-validation.md` — model-fields-validation
+- `raw/history/accessor-enlightenment-complete.md` — 🧘 Accessor/Mutator - Enlightenment Complete
+- `raw/history/performance-organizzativa-colonne.md` — performance-organizzativa-colonne
+- `raw/history/phpmd-summary-220855.md` — Phpmd Summary 20251118 220855
+- `raw/history/quick-start-product-docs-2.md` — Guida Rapida: Creare Documentazione Product per Moduli
+- `raw/history/noconsole.md` — Cartella NoConsole
+- `raw/history/module-notify.md` — Modulo Notify
+- `raw/history/artisan.md` — Gestione Comandi Artisan
+- `raw/history/installation.md` — Installazione {#installazione}
+- `raw/history/phpstan.md` — Esecuzione PHPStan
+- `raw/history/accessor-mutator-fix-summary.md` — 🔧 Accessor/Mutator Fix - Summary
+- `raw/history/project-roadmap-2.md` — Roadmap del Progetto
+- `raw/history/repositories.md` — repositories
+- `raw/history/orbit-sushi-to-json.md` — Invece di usare Orbit {#invece-di-usare-orbit}
+- `raw/history/user-invitation-2.md` — user-invitation-2
+- `raw/history/translations-best-practices.md` — Traduzioni: Best Practices in Laraxot
+- `raw/history/final-summary.md` — 🎉 FINAL SUMMARY - Complete Work 2025-01-02
+- `raw/history/packages.md` — packages
+- `raw/history/user-research.md` — User Research: PTVX Modular Framework
+- `raw/history/regole-ide-configurazione.md` — Regole per la Configurazione degli IDE
+- `raw/history/work-complete.md` — 🎉 WORK COMPLETE - Code Analysis & Documentation 2025-01-02
+- `raw/history/ottimizzazioni-sistema.md` — ottimizzazioni-sistema
+- `raw/history/ai-agent-junction-discussion-2.md` — AI Agent Directory Junction - Coordination
+- `raw/history/translation-errors-fix-plan.md` — 🔧 Translation Errors - Fix Plan
+- `raw/history/git-subtree-error-resolution.md` — 🚀 Gestione Errori Git Subtree
+- `raw/history/filament-resources-xotbase.md` — Filament Resources e XotBase nel Framework PTVX
+- `raw/history/nuovo-formato-prompt.md` — Nuovo Formato Proposto per il File di Prompt
+- `raw/history/modules-index.md` — Indice Documentazione Moduli
+- `raw/history/service-provider-framework.md` — Service Provider nel Framework PTVX
+- `raw/history/notifications.md` — notifications
+- `raw/history/bug-fixing-guide.md` — Guida Completa per Bug Fixing - Laraxot
+- `raw/history/analysis-corrections.md` — Analysis & Corrections Summary - 2025-01-02
+- `raw/history/bottlenecks-and-solutions.md` — bottlenecks-and-solutions
+- `raw/history/code-quality-verification.md` — Code Quality Verification - 2025-01-02
+- `raw/history/phpstan-usage-2.md` — Esecuzione Corretta di PHPStan in Laraxot PTVX
+- `raw/history/super-mucca-confidence-level-max.md` — Super Mucca Confidence Level Max
+- `raw/history/mcp-implementation-correction.md` — mcp-implementation-correction
+- `raw/history/lowercase-filename-duplicates.md` — Lowercase Filename Duplicates — Lista File da Rimuovere
+- `raw/history/phpstan-pattern-soluzioni.md` — Pattern e Soluzioni per PHPStan Livello 10 - Modulo Xot
+- `raw/history/namespace-verification-critical-error.md` — Analisi Errore Critico - Namespace Sbagliato
+- `raw/history/phpstan-level-9-compliance.md` — phpstan-level-9-compliance
+- `raw/history/agent-teams-workflow.md` — Agent Teams Workflow - PTVX Project
+- `raw/history/module-ui.md` — Modulo UI
+- `raw/history/final-complete.md` — 🎉 FINAL COMPLETE - All Work 2025-01-02
+- `raw/history/introduction.md` — Introducendo Lang {#introducendo-lang}
+- `raw/history/getting-started.md` — Getting Started {#getting-started}
+- `raw/history/performance-organizzativa-valutatore-id.md` — performance-organizzativa-valutatore-id
+- `raw/history/readme.it.md` — 🚀 Toolkit di Automazione Git
+- `raw/history/report.md` — Report Completo Sessione - 2 Dicembre 2025
+- `raw/history/sync-remote-repo-coordination.md` — Sync Remote Repo - AI Agent Coordination Hub
+- `raw/history/login-test-implementation-summary.md` — Login Test Implementation Summary - <nome progetto> Project
+- `raw/history/tdd-complete-guide.md` — TDD - Test-Driven Development Complete Guide
+- `raw/history/filament-table-actions.md` — Convenzioni per le Table Actions in Filament
+- `raw/history/modules-index-2.md` — Indice Documentazione Moduli
+- `raw/history/testing.md` — testing
+- `raw/history/directory-structure.md` — directory-structure
+- `raw/history/docs-update-complete.md` — 📚 Aggiornamento Documentazione Completo - 2 Dicembre 2025
+- `raw/history/cache-management.md` — cache-management
+- `raw/history/translation-fix-summary.md` — 📋 Translation Fix - Summary Completo
+- `raw/history/quick-start-product-docs.md` — Guida Rapida: Creare Documentazione Product per Moduli
+- `raw/history/documentation-improvements.md` — Miglioramenti Documentazione - Riepilogo
+- `raw/history/filament4-important.md` — ⚠️ CRITICO: Progetto utilizza Filament 4
+- `raw/history/composer-show.md` — Composer Show
+- `raw/history/directory-structure-2.md` — Struttura delle Directory nei Moduli Laraxot PTVX
+- `raw/history/custom-login-2.md` — custom-login-2
+- `raw/history/prompts-documentation-system.md` — Sistema di Prompt per la Documentazione
+- `raw/history/analyze-modules-2.md` — Script analyze_modules.sh
+- `raw/history/directory-structure-guide.md` — Guida alla Struttura Corretta delle Directory nei Moduli Laraxot PTVX
+- `raw/history/directory-autofix-tools.md` — Strumenti di Correzione Automatica della Struttura delle Directory
+- `raw/history/module-structure.md` — Struttura dei Moduli in PTVX
+- `raw/history/restructuring-summary.md` — 🎯 Ristrutturazione Completata: CLAUDE.md → Documentazione Modulare DRY + KISS
+- `raw/history/context-mode-guide.md` — Context-Mode: Context Compression Plugin
+- `raw/history/componenti-personalizzati.md` — Componenti Filament Personalizzati in Laraxot
+- `raw/history/docs-improvement-log.md` — Documentation Improvement Log
+- `raw/history/phpstan-generic-types.md` — Risoluzione degli Errori PHPStan Relativi ai Tipi Generici nelle Relazioni Eloquent
+- `raw/history/phpstan-errors-corrections.md` — Correzioni Errori PHPStan - Laraxot <nome progetto>
+- `raw/history/solutions.md` — Soluzioni Tecniche - Modulo Job
+- … +228 altri

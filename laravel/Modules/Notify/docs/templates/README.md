@@ -4,7 +4,11 @@ type: index
 tags: [notify, docs, templates]
 module: Notify
 created: 2026-07-20
+<<<<<<< .merge_file_TGDG74
 updated: 2026-11-23
+=======
+updated: 2026-07-20
+>>>>>>> .merge_file_PUmZij
 qmd: "notify documentazione templates readme template email index readme frontmatter qmd search"
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"

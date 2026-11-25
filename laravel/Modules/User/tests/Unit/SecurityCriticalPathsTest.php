@@ -22,6 +22,11 @@ test('admin panel requires admin or super-admin role', function (): void {
             return $this->superAdmin;
         }
 
+        public function isModuleAdmin(): bool
+        {
+            return false;
+        }
+
         /**
          * @param  array<int, string>|Collection<int, string>  $roles
          */
@@ -36,6 +41,33 @@ test('admin panel requires admin or super-admin role', function (): void {
     Assert::assertFalse($user->canAccessPanel($panel));
 
     $user->hasAdminRole = true;
+    Assert::assertTrue($user->canAccessPanel($panel));
+});
+
+test('admin panel lets in module admins without global admin role', function (): void {
+    $user = new class extends BaseUser
+    {
+        public bool $moduleAdmin = false;
+
+        /**
+         * @param  array<int, string>|Collection<int, string>  $roles
+         */
+        public function hasRole($roles, ?string $guard = null): bool
+        {
+            return false;
+        }
+
+        public function isModuleAdmin(): bool
+        {
+            return $this->moduleAdmin;
+        }
+    };
+
+    $panel = app(Panel::class)->id('admin');
+
+    Assert::assertFalse($user->canAccessPanel($panel));
+
+    $user->moduleAdmin = true;
     Assert::assertTrue($user->canAccessPanel($panel));
 });
 

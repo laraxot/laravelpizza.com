@@ -18,6 +18,10 @@ use function Safe\json_encode;
 
 /**
  * @property string $base_endpoint
+ *
+ * @see docs/contracts/esendex-send-action.md
+ *
+ * @contract docs/contracts/esendex-send-action.md
  */
 class EsendexSendAction
 {

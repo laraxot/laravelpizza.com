@@ -320,7 +320,23 @@ abstract class BaseUser extends Authenticatable implements FilamentUser, HasAuth
             return $this->hasRole(Str::contains($role, '::') ? [$role, $operatorRole] : $role);
         }
 
-        return $this->hasAnyRole(['super-admin', 'admin', 'restaurant::admin']);
+        if ($this->hasAnyRole(['super-admin', 'admin', 'restaurant::admin'])) {
+            return true;
+        }
+
+        // Il pannello `admin` e' anche il punto d'ingresso degli amministratori di modulo
+        // (`{modulo}::admin`, vedi assignModule()): da li' raggiungono i pannelli dei moduli
+        // che gestiscono. Senza questo ramo Filament li rifiuta con "I dati di accesso non
+        // sono corretti" anche con password giusta (regressione dal commit 244c5fcfb9).
+        return $this->isModuleAdmin();
+    }
+
+    /**
+     * Vero se l'utente amministra almeno un modulo (ruolo `{modulo}::admin`).
+     */
+    public function isModuleAdmin(): bool
+    {
+        return $this->roles()->where('name', 'like', '%::admin')->exists();
     }
 
     public function detach(Model $model): void

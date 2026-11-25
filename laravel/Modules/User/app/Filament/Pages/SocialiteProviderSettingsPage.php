@@ -4,7 +4,7 @@ declare(strict_types=1);
 // ⚠️ CRITICAL RULE: NEVER use ->label(), ->placeholder(), ->helperText()
 // Translations are handled automatically by LangServiceProvider via 5-level keys:
 // user::socialite.settings.form.{field}.{type}
-// See: .windsurf/rules/no-filament-labels.mdc
+// See: .windsurf/rules/translations.md
 
 namespace Modules\User\Filament\Pages;
 

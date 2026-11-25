@@ -6,6 +6,7 @@ return [
     'actions' => [
         'copy' => [
             'icon' => 'copy',
+            'label' => 'copy',
         ],
     ],
 ];

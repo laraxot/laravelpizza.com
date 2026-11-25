@@ -1,31 +1,22 @@
 ---
-title: "Contratti del modulo Lang"
+title: "Contratti"
 type: index
-tags: [contracts, actions, interfaces, lang, translations]
+tags: [contracts, actions, interfaces]
 created: 2026-11-18
-updated: 2026-11-24
+updated: 2026-11-18
+qmd: "contratti lang metodo harness contratto comportamento action input output invarianti effetti collaterali"
 ---
 
-# Contratti del modulo Lang
+# Contratti
 
 ## Metodo Harness
 
 Un contratto descrive una singola operazione pubblica con effetti collaterali, chiamate esterne o invarianti di dominio. Documenta il comportamento osservabile, inclusi errori e non-goals, senza trasformare ogni metodo interno in un contratto.
 
-Ogni invariante ha un ID stabile, nel formato `LANG-INV-N` o, per operazione, `LANG-<OPERAZIONE>-INV-<N>` (il language
-switcher usa `LANG-SWITCHER-NNN`); il test Pest corrispondente usa lo stesso ID come group. La classe implementatrice deve
-contenere `@contract docs/contracts/<file>.md`; contratto, codice e test cambiano nello stesso commit.
+Ogni invariante ha un ID stabile nel formato `LANG-INV-N`; il test Pest corrispondente usa lo stesso ID come group. La classe implementatrice deve contenere `@contract docs/contracts/<file>.md`; contratto, codice e test cambiano nello stesso commit.
 
-Cosa promettono le Action di Lang che **scrivono file di lingua** o decidono il testo di ogni componente Filament: sono
-le uniche del modulo che possono rompere la produzione (un file di lingua con errore di sintassi = 500 su ogni pagina che
-lo carica) o sporcare l'albero dei sorgenti. La superficie pubblica include anche il language switcher, che è un
-contratto di presentazione e non di Action.
-
-Leggili prima di chiamare o modificare una di queste Action. Le invarianti con group si verificano con
-`cd laravel && vendor/bin/pest Modules/Lang/tests --group=<ID>`; `—` è debito dichiarato.
-
-Formato (sei sezioni, tabella invarianti con ID, `@contract` nel docblock):
-[action-behavioral-contract](../../../Xot/docs/rules/action-behavioral-contract.md).
+Cosa promette la superficie pubblica di questo pacchetto: le Action che scrivono dati, chiamano servizi esterni o hanno
+effetti collaterali, e le interfacce (`app/Contracts`). Regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`.
 
 ## Contratto di comportamento di un'Action
 
@@ -41,25 +32,13 @@ Un file per Action, nome in kebab-case della classe (`create-ticket-action.md`),
 ## Non fa
 ```
 
-Il docblock dell'Action rimanda al file con il marker `@contract docs/contracts/<file>.md`, quello verificato dai test; la
-riga legacy `Contratto di comportamento: docs/contracts/<file>.md` può restare. Chi cambia il comportamento aggiorna il
-contratto nello stesso commit.
+Il docblock dell'Action rimanda al file con la riga `Contratto di comportamento: docs/contracts/<file>.md`.
+Chi cambia il comportamento aggiorna il contratto nello stesso commit.
 
-## Contratti delle Action
+## Contratti
 
-- [AutoLabelAction](auto-label-action.md) — etichette e testi di ogni componente Filament dal file di lingua del modulo chiamante; salva solo le etichette mancanti.
-- [SaveTransAction](save-trans-action.md) — scrive una chiave nel file di lingua: `execute()` solo dove l'interruttore lo permette, `persist()` sempre (pannello).
-- [CleanPlaceholderTranslationsAction](clean-placeholder-translations-action.md) — toglie dai file «solo dati» i segnaposto uguali al nome del campo; cancella i file `.php` senza nome.
+- [LanguageSwitcher component](language-switcher-component.md) — view Blade
+  stateless con URL preparati dal widget.
 
-## Language switcher
+- [Language switcher view data](language-switcher-view-data.md)
 
-Tre documenti sullo stesso componente (`LanguageSwitcher` e `LanguageSwitcherWidget`), con invarianti `LANG-SWITCHER-001..003`:
-
-- [LanguageSwitcher component](language-switcher-component.md) — view Blade stateless con URL preparati dal widget.
-- [Language switcher view data](language-switcher-view-data.md) — cosa restituisce `LanguageSwitcherWidget::getAvailableLocales()` (codice, nomi, bandiera, URL già localizzato) e che la vista non dipende da Livewire.
-- [Language switcher presentation contract](language-switcher.md) — in inglese: ogni lingua è un'ancora normale, link dall'URL localizzato del widget, lingua corrente con `aria-current="page"`.
-
-## Indice e template
-
-- [INDEX](index-2.md) — tabella operativa operazione, contratto, classe, invarianti; censisce solo i tre documenti del language switcher.
-- [Template di contratto](template-2.md) — scheletro con le sei sezioni e la tabella degli invarianti, da copiare per una nuova Action.

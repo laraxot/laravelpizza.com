@@ -1,0 +1,418 @@
+---
+title: "Digest archive"
+type: digest
+status: active
+qmd: "digest ceiling 100 archive-archive"
+---
+
+# Digest archive
+
+<<<<<<< .merge_file_3Ba0aZ
+Sorgenti fuse da `archive/` (430 file):
+
+- `archive/filament-4-widget-rendering-guide.md` — Guida Rendering Widget Filament 4 - Modulo User
+- `archive/filament4-migration.md` — 🔄 Migrazione da Filament 3 a Filament 4
+- `archive/git-conflicts-resolution-3.md` — Risoluzione Conflitti Git - Modulo User (2025-01-27)
+- `archive/translation-city-field-refactor.md` — Refactor Completo Campi "Città" - Modulo User
+- `archive/hasteams-trait-duplicate-methods-2.md` — Analisi metodi duplicati in HasTeams (trait)
+- `archive/git-conflicts-resolution-2.md` — Risoluzione Conflitti Git - Modulo User (2025-01-27)
+- `archive/phpstan-fixes-2.md` — User Module - PHPStan Fixes Session 2025-10-01
+- `archive/phpstan-fixes-3.md` — phpstan-fixes-3
+- `archive/user-factory-advanced-integration.md` — UserFactory Advanced Integration - Modulo User & SaluteOra
+- `archive/filament-4-actions-namespace.md` — Filament 4: Namespace Actions - Filosofia Laraxot
+- `archive/dry-kiss-analysis.md` — DRY & KISS Analysis - Modulo User
+- `archive/phpstan-dry-kiss-improvements.md` — PHPStan Level 10 + DRY/KISS Improvements - User Module
+- `archive/fullcalendar-scheduler-documentation-summary.md` — FullCalendar Scheduler - Documentazione Completa
+- `archive/baseuser-spatie-duplicates-analysis.md` — Analisi Metodi Duplicati in BaseUser.php
+- `archive/phpstan-fixes.md` — User Module - PHPStan Fixes Session 2025-10-01
+- `archive/baseuser-refactoring-completed.md` — baseuser refactoring completed
+- `archive/baseuser-refactoring.md` — BaseUser Refactoring - Completato
+- `archive/index.md` — User Module Documentation
+- `archive/phpstan-level-10-fixes.md` — PHPStan Level 10 Fixes - User Module
+- `archive/git-conflicts-resolution.md` — Risoluzione Conflitti Git - Modulo User (2025-01-27)
+- `archive/traits-complete-guide.md` — Guida Completa ai Trait del Modulo User - AGGIORNATO POST-IMPLEMENTAZIONE
+- `archive/migration-duplicate-resolution.md` — 📋 RISOLUZIONE COMPLETA DUPLICATI MIGRATION ROLES
+- `archive/filament-4-widget-rendering.md` — Guida Rendering Widget Filament 4 - Modulo User
+- `archive/hasteams-trait-duplicate-methods.md` — Analisi metodi duplicati in HasTeams (trait)
+- `archive/translation-city-field-refactor-2.md` — Refactor Completo Campi "Città" - Modulo User
+- `archive/old_tasks/phpstan-fixes-gennaiocomplete.md` — PHPStan Fixes Complete - Gennaio 2025
+- `archive/old_tasks/phpstan-corrections.md` — Correzioni PHPStan - Modulo User
+- `archive/old_tasks/phpstan-fixes-gennaio-complete.md` — PHPStan Fixes Complete - Gennaio 2025
+- `archive/old_tasks/phpstan-syntax-fixes.md` — PHPStan Syntax Fixes - Modulo User
+- `archive/old_tasks/translation-syntax-fixes.md` — Correzioni Errori di Sintassi nei File di Traduzione - 2025
+- `archive/old_tasks/phpstan-level10-user-fixes.md` — PHPStan Level 10 Fixes - User Module
+- `archive/old_tasks/phpstan-level10-fixes.md` — Correzioni PHPStan Livello 10 - Modulo User
+- `archive/old_tasks/phpstan-compliance-status.md` — PHPStan Level 10 Compliance Status
+- `archive/old_tasks/phpstan-relationship-fix.md` — Correzione PHPStan - Relationship Type Hints
+- `archive/old_tasks/password-translation-completion.md` — Completamento Traduzioni Password - 2025
+- `archive/old_tasks/phpstan-fixes-gennaio.md` — 🔧 PHPStan Fixes - Modulo User - Gennaio 2025
+- `archive/old_tasks/phpstan-analysis-user.md` — PHPStan Analysis - User Module
+- `archive/old_tasks/roadmap.md` — 👥 USER MODULE - ROADMAP 2025
+- `archive/old_tasks/phpstan-fixes-january.md` — 🔧 PHPStan Fixes - Modulo User - Gennaio 2025
+- `archive/old_tasks/phpstan-compliance.md` — PHPStan Compliance - User Module
+- `archive/old_tasks/phpstan-generic-types.md` — Risoluzione Problemi di Tipi Generici con PHPStan
+- `archive/old_tasks/phpstan-dry-kiss-improvements.md` — PHPStan Level 10 + DRY/KISS Improvements - User Module
+- `archive/old_tasks/phpstan-fixes.md` — Correzioni PHPStan Livello 7 - Modulo User
+- `archive/old_tasks/login-widget-translation-audit.md` — LoginWidget Translation Audit - Gennaio 2025
+- `archive/old_tasks/phpstan-array-types-fixes.md` — PHPStan Array Types Fixes - Modulo User
+- `archive/old_tasks/phpstan-level-10-fixes.md` — PHPStan Level 10 Fixes - User Module
+- `archive/old_tasks/phpstan-level9-fixes.md` — Correzione conflitto e miglioramento PHPStan livello 9 in Filament/Resources/UserResource.php
+- `archive/old_tasks/phpstan-fixes-january-complete.md` — PHPStan Fixes Complete - Gennaio 2025
+- `archive/historical/directory-structure-checklist.md` — Checklist per la Struttura delle Directory nei Moduli Windsurf/Xot
+- `archive/historical/path-conventions.md` — path-conventions
+- `archive/historical/phpstan-corrections-oauth-resources.md` — PHPStan Corrections - OAuth Resources
+- `archive/historical/phpstan-fixes-gennaiocomplete.md` — phpstan-fixes-gennaiocomplete
+- `archive/historical/quality-tooling.md` — quality-tooling
+- `archive/historical/sso-providers-implementation.md` — User Module - SSO Providers Implementation
+- `archive/historical/phpstan-corrections.md` — phpstan-corrections
+- `archive/historical/team-contract-usage-reasoning.md` — team-contract-usage-reasoning
+- `archive/historical/factory-lessons-learned.md` — Lezioni Apprese dall'Errore Gravissimo delle Factory
+- `archive/historical/roadmap-conflict.md` — 👥 USER MODULE - ROADMAP 2025
+- `archive/historical/filament-nesting-opportunities.md` — Filament 5.x Nested Resources - Opportunità di Applicazione
+- `archive/historical/readme-fullcalendar-scheduler.md` — readme-fullcalendar-scheduler
+- `archive/historical/filament-components-reference.md` — Riferimento Componenti Filament Verificati
+- `archive/historical/phpstan-error-roadmap.md` — phpstan-error-roadmap
+- `archive/historical/roles-permissions.md` — roles-permissions
+- `archive/historical/filament-4-widget-rendering-guide.md` — Guida Rendering Widget Filament 4 - Modulo User
+- `archive/historical/filament4-migration.md` — 🔄 Migrazione da Filament 3 a Filament 4
+- `archive/historical/mcp-integration.md` — Integrazione dei Server MCP con il Modulo User
+- `archive/historical/passport-cluster-proposal.md` — passport-cluster-proposal
+- `archive/historical/auth-widget-rules.md` — Regole per Widget di Autenticazione
+- `archive/historical/coverage.md` — Code Coverage: User
+- `archive/historical/xotbase-resource-getpages-automatic.md` — XotBaseResource getPages() Automatic: Filosofia DRY
+- `archive/historical/volt-folio-logout.md` — Implementazione Corretta del Logout con Volt e Folio
+- `archive/historical/registration-widget-update.md` — Aggiornamento relativo a DoctorResource.php
+- `archive/historical/roles-migration-philosophy-fix.md` — Fix della Migration Roles - Allineamento con la Filosofia Laraxot
+- `archive/historical/policies.md` — User Module Policies Documentation
+- `archive/historical/phpstan-resolution-debate.md` — phpstan-resolution-debate
+- `archive/historical/passport-cluster-implementation-status.md` — passport-cluster-implementation-status
+- `archive/historical/ottimizzazioni-approfondite-modulo-user.md` — ottimizzazioni-approfondite-modulo-user
+- `archive/historical/phpstan-fixes-gennaio-complete.md` — PHPStan Fixes Complete - Gennaio 2025
+- `archive/historical/phpstan-errors-resolution-roadmap.md` — PHPStan Level 10 Errors Resolution Roadmap - User Module
+- `archive/historical/livewire-filament-parameter-passing.md` — livewire-filament-parameter-passing
+- `archive/historical/logout-filament-widget.md` — Implementazione del Logout con Widget Filament
+- `archive/historical/resource-implementation-philosophy.md` — Internal Analysis: Approaches to Missing Filament Resources
+- `archive/historical/dry-kiss-improvements.md` — User Module - DRY + KISS Improvements
+- `archive/historical/console-commands-philosophy.md` — Filosofia dei Console Commands in Laraxot (Standard Supremo)
+- `archive/historical/routing-error-solution.md` — Soluzione Errori di Routing nel Frontoffice
+- `archive/historical/missing-filament-resources-analysis.md` — Missing Filament Resources Analysis - User Module
+- `archive/historical/logout-implementation-best-practices.md` — logout-implementation-best-practices
+- `archive/historical/passport-cluster-resources-pattern.md` — passport-cluster-resources-pattern
+- `archive/historical/phpstan-syntax-fixes.md` — PHPStan Syntax Fixes - Modulo User
+- `archive/historical/filament-auth-pages-exceptions.md` — Eccezioni Regola XotBase - Pagine Autenticazione
+- `archive/historical/livewire-form-statepath-issue.md` — livewire-form-statepath-issue
+- `archive/historical/translation-syntax-fixes.md` — Correzioni Errori di Sintassi nei File di Traduzione - 2025
+- `archive/historical/chartjs-datalabels-user-integration.md` — Chart.js Datalabels Plugin for User Module Charts
+- `archive/historical/quality-tools.md` — Quality Tools Usage (User)
+- `archive/historical/migration-dry-violations-report.md` — User Module Migration Policy - DRY Violations Report
+- `archive/historical/traits-hasteams-analysis-corretta.md` — Analisi Corretta del Trait HasTeams - Filosofia Laraxot
+- `archive/historical/resources-array-keys-philosophy.md` — resources-array-keys-philosophy
+- `archive/historical/filament-resources-organization.md` — Organization of Filament Resources
+- `archive/historical/filament-resources-philosophical-debate.md` — Filament Resources: Furious Philosophical Debate
+- `archive/historical/translation-fixes.md` — 2. Sintassi Array Inconsistente
+- `archive/historical/phpstan-level10-fixes.md` — Correzioni PHPStan Livello 10 - Modulo User
+- `archive/historical/nested-resources.md` — nested-resources
+- `archive/historical/modelli-factory-seeder-analisi.md` — modelli-factory-seeder-analisi
+- `archive/historical/troubleshooting-login-component.md` — Troubleshooting: Login Component Not Found
+- `archive/historical/phpstan-errors-philosophy.md` — phpstan-errors-philosophy
+- `archive/historical/guida-migrazione-step-by-step.md` — Guida Migrazione Step-by-Step: Modulo User - Filament 4
+- `archive/historical/translation-city-field-refactor.md` — translation-city-field-refactor
+- `archive/historical/logout-blade-structure.md` — logout-blade-structure
+- `archive/historical/phpstan-compliance-status.md` — PHPStan Level 10 Compliance Status
+- `archive/historical/logout-implementation-error.md` — logout-implementation-error
+- `archive/historical/ottimizzazioni-user.md` — ottimizzazioni-user
+- `archive/historical/fullcalendar-scheduler-quick-reference.md` — FullCalendar Scheduler - Riferimento Rapido
+- `archive/historical/auth-logout-blade.md` — Implementazione Corretta di logout.blade.php
+- `archive/historical/fullcalendar-scheduler-license-troubleshooting.md` — FullCalendar Scheduler License - Troubleshooting e Configurazione Avanzata
+- `archive/historical/git-conflicts-resolution-conflict-06cb77.md` — git-conflicts-resolution-conflict-06cb77
+- `archive/historical/dry-kiss-analysis-conflict-018b09.md` — DRY & KISS Analysis - Modulo User
+- `archive/historical/migration-consolidation-plan.md` — migration-consolidation-plan
+- `archive/historical/translation-maintenance-log.md` — Translation Maintenance Log - User Module
+- `archive/historical/passport-cluster-completion-status.md` — passport-cluster-completion-status
+- `archive/historical/logout-security.md` — Sicurezza nel Processo di Logout
+- `archive/historical/optimization-analysis.md` — Analisi di Ottimizzazione - Modulo User
+- `archive/historical/widgets-structure.md` — widgets-structure
+- `archive/historical/phpstan-relationship-fix.md` — Correzione PHPStan - Relationship Type Hints
+- `archive/historical/volt-logout.md` — volt-logout
+- `archive/historical/query-optimization-analysis.md` — User Module - Query Optimization Analysis
+- `archive/historical/dry-violation-fix.md` — Correzione Violazione DRY: safeStringCast
+- `archive/historical/user-management.md` — user-management
+- `archive/historical/ottimizzazioni-super-dry-kiss.md` — Ottimizzazioni Super DRY + KISS - Modulo User
+- `archive/historical/git-conflicts-resolution-summary.md` — Risoluzione Conflitti Git - Modulo User
+- `archive/historical/phpstan-fixes-conflict.md` — Correzioni PHPStan - Modulo User
+- `archive/historical/eloquent-properties-best-practices.md` — eloquent-properties-best-practices
+- `archive/historical/phpstan-fixes-passport.md` — PHPStan Fixes and Architectural Decisions for Passport/Socialite Configuration
+- `archive/historical/resource-translation-violation-critical-fix.md` — resource-translation-violation-critical-fix
+- `archive/historical/phpstan-philosophy-debate.md` — phpstan-philosophy-debate
+- `archive/historical/ottimizzazioni-dry-kiss.md` — ottimizzazioni-dry-kiss
+- `archive/historical/testing-phpstan-progress.md` — User Module - PHPStan Testing Progress
+- `archive/historical/auth-widgets-view-namespaces.md` — Widget di Autenticazione: Namespace delle View
+- `archive/historical/module-user.md` — module-user
+- `archive/historical/sushi-schema-fix.md` — sushi-schema-fix
+- `archive/historical/membership-uuid-fix.md` — membership-uuid-fix
+- `archive/historical/phpstan-fixes-2.md` — Correzioni PHPStan - Modulo User
+- `archive/historical/oauth-cluster-error-analysis.md` — oauth-cluster-error-analysis
+- `archive/historical/ottimizzazioni-correzioni.md` — ottimizzazioni-correzioni
+- `archive/historical/phpinsights-report.md` — phpinsights-report
+- `archive/historical/missing-factories-audit.md` — Factory Mancanti - Modulo User
+- `archive/historical/passport-cluster-implementation-completed.md` — passport-cluster-implementation-completed
+- `archive/historical/volt-folio-logout-debug.md` — volt-folio-logout-debug
+- `archive/historical/passport-filament-cluster-proposal.md` — Passport Filament Cluster Proposal - User Module
+- `archive/historical/phpstan-errors-roadmap.md` — phpstan-errors-roadmap
+- `archive/historical/baseuser-conflicts.md` — Risoluzione Conflitti in BaseUser.php
+- `archive/historical/conflict-resolution.md` — Git Conflict Resolution - Modulo User
+- `archive/historical/header-language-selector-with-flags.md` — Implementazione del Selettore di Lingua con Bandiere SVG
+- `archive/historical/model-classification.md` — model-classification
+- `archive/historical/implementation-summary.md` — Implementation Summary - User Module Type Safety Improvements
+- `archive/historical/phpstan-fixes-3.md` — Correzioni PHPStan - Modulo User
+- `archive/historical/phpstan-fix-roadmap.md` — phpstan-fix-roadmap
+- `archive/historical/quality-tools-report.md` — quality-tools-report
+- `archive/historical/password.md` — password
+- `archive/historical/header-language-avatar-implementation.md` — Implementazione del Selettore di Lingua e Avatar Utente nell'Header
+- `archive/historical/volt-folio-auth-implementation.md` — volt-folio-auth-implementation
+- `archive/historical/get-new-password-action-business-logic.md` — GetNewPasswordAction - Business Logic Analysis
+- `archive/historical/testing-rules.md` — testing-rules
+- `archive/historical/passport-cluster-work-completion.md` — Passport Cluster - Completamento Lavoro
+- `archive/historical/advanced-user-architecture.md` — Architettura Utente Avanzata basata sui Principi Filament
+- `archive/historical/volt-folio-logout-error.md` — volt-folio-logout-error
+- `archive/historical/avatar-implementation.md` — Implementazione degli Avatar
+- `archive/historical/migration-best-practices.md` — migration-best-practices
+- `archive/historical/filament-namespace-rules.md` — Regole per i Namespace Filament
+- `archive/historical/passport-complete-management-debate.md` — passport-complete-management-debate
+- `archive/historical/spatie-permissions-methods.md` — User Module - Spatie Permission Methods Reference
+- `archive/historical/doctor-registration-widget.md` — Widget di Registrazione del Dottore
+- `archive/historical/conflicts.md` — Risoluzione Conflitti - User
+- `archive/historical/actions-path-convention.md` — Convenzione dei Percorsi per le Actions
+- `archive/historical/phpstan.md` — Analisi PHPStan del Modulo User
+- `archive/historical/database-issues.md` — Database Issues in User Module
+- `archive/historical/database-population.md` — Popolamento Database - Modulo User
+- `archive/historical/repositories.md` — repositories
+- `archive/historical/logout-event-error.md` — Analisi dell'Errore negli Eventi di Logout
+- `archive/historical/volt-errors.md` — Errori Comuni in Volt e Soluzioni
+- `archive/historical/password-translation-completion.md` — Completamento Traduzioni Password - 2025
+- `archive/historical/readme-new.md` — User Module - Authentication & Authorization
+- `archive/historical/mcp-server-recommended.md` — MCP Server Consigliati per il Modulo User
+- `archive/historical/final-summary.md` — Final Summary - User Module Passport Integration & Architecture Refactoring
+- `archive/historical/packages.md` — packages
+- `archive/historical/login-widget-translation-audit-conflict.md` — LoginWidget Translation Audit - Gennaio 2025
+- `archive/historical/phpstan-complete-success.md` — phpstan-complete-success
+- `archive/historical/module-analysis-complete.md` — module-analysis-complete
+- `archive/historical/charts-implementation.md` — User Module - Charts Implementation
+- `archive/historical/user-factory-advanced-integration.md` — UserFactory Advanced Integration - Modulo User & <nome progetto>
+- `archive/historical/translation-keys-rules.md` — Regole per le Chiavi di Traduzione
+- `archive/historical/translation-fields-key-importance.md` — Understanding Translation Structure in Laraxot Framework
+- `archive/historical/factory-creation-status.md` — Factory Creation Status - User Module
+- `archive/historical/component-verification-rules.md` — Regole per la Verifica dei Componenti Blade
+- `archive/historical/hasteams-currentteam-method-choice.md` — Choice of currentTeam() Method in HasTeams Trait
+- `archive/historical/module-analysis.md` — User Module - Comprehensive Analysis
+- `archive/historical/spatie-permission-philosophy.md` — spatie-permission-philosophy
+- `archive/historical/membership-autoincrement-fix.md` — membership-autoincrement-fix
+- `archive/historical/login-issue-resolution-report.md` — login-issue-resolution-report
+- `archive/historical/moderation-doctor.md` — Moderazione Dentista dal Modulo User
+- `archive/historical/logout-page-implementation.md` — logout-page-implementation
+- … +230 altri
+=======
+Sorgenti fuse da `archive/` (241 file):
+
+- `archive/volt-folio-logout-debug.md` — Debug: Perché logout.blade.php non funziona (Volt + Folio)
+- `archive/registration-widget.md` — Registration Widget Documentation
+- `archive/volt-blade-implementation.md` — Implementazione dei Form con Widget Filament
+- `archive/volt-logout.md` — Implementazione del Logout con Volt
+- `archive/logout-blade-analysis.md` — Analisi del File logout.blade.php
+- `archive/volt-logout-action.md` — Logout via Volt Action
+- `archive/header-components.md` — Componenti Header
+- `archive/hasteams-trait-duplicate-methods.md` — Analisi metodi duplicati in HasTeams (trait)
+- `archive/logout-filament-widget.md` — Implementazione del Logout con Widget Filament
+- `archive/logout-blade-structure.md` — Struttura del Logout Blade nel Theme One
+- `archive/logout-blade-error-analysis.md` — Analisi Approfondita dell'Errore nell'Implementazione del Logout
+- `archive/traits-complete-guide.md` — Guida Completa ai Trait del Modulo User - AGGIORNATO POST-IMPLEMENTAZIONE
+- `archive/team-contract-usage-reasoning.md` — TeamContract Usage Reasoning
+- `archive/registration-widget-update.md` — Aggiornamento relativo a DoctorResource.php
+- `archive/testing-rules.md` — Testing Rules & Strategy
+- `archive/filament4-migration.md` — 🔄 Migrazione da Filament 3 a Filament 4
+- `archive/logout-page-fix.md` — Correzione Logout Page nel Theme TwentyOne
+- `archive/database-issues.md` — Database Issues in User Module
+- `archive/volt-folio-error.md` — Errore VoltDirectiveMissingException in Folio
+- `archive/userfactory-advanced-implementation-complete.md` — UserFactory Advanced Implementation - COMPLETE ✅
+- `archive/navigation-structure.md` — Struttura Navigazione
+- `archive/translation-city-field-refactor-08.md` — Refactor Completo Campi "Città" - Modulo User
+- `archive/logout-blade-implementation.md` — Implementazione Corretta di logout.blade.php
+- `archive/hasteams-trait-filosofia-e-correzione-completa.md` — HasTeams Trait - Filosofia Laraxot e Strategia di Correzione Completa
+- `archive/quality-status.md` — User Module - Quality Status (November 2025)
+- `archive/git-conflicts-resolution.md` — Alias (superseded)
+- `archive/volt-folio-auth-implementation.md` — Implementazione Corretta delle Pagine di Autenticazione con Volt e Folio
+- `archive/lang-link.md` — Collegamento alle Traduzioni del Modulo User
+- `archive/metrics-dashboard.md` — User Module Metrics Dashboard
+- `archive/filament-relation-managers.md` — Filament Relation Managers nel Modulo User
+- `archive/auth-pages-implementation.md` — Implementazione Corretta delle Pagine Auth
+- `archive/fullcalendar-scheduler-documentation-summary.md` — FullCalendar Scheduler - Documentazione Completa
+- `archive/spatie-permissions-methods.md` — User Module - Spatie Permission Methods Reference
+- `archive/traits-hasteams-analisi-corretta.md` — Analisi Corretta del Trait HasTeams - Filosofia Laraxot
+- `archive/migration-duplicate-resolution.md` — 📋 RISOLUZIONE COMPLETA DUPLICATI MIGRATION ROLES
+- `archive/widget-translation-rules.md` — Widget Translation Rules - SaluteOra Project
+- `archive/module-analysis.md` — Modulo User - Gestione Utenti e Autenticazione
+- `archive/avatar-implementation.md` — Implementazione degli Avatar
+- `archive/logout-security.md` — Sicurezza nel Processo di Logout
+- `archive/baseuser-refactoring-completed-15.md` — BaseUser Refactoring - Completato
+- `archive/user-factory-integration.md` — UserFactory Integration - Modulo User e SaluteOra
+- `archive/routing-best-practices.md` — Best Practices per il Routing in Architettura Volt + Folio + Filament
+- `archive/user-factory-advanced-integration.md` — UserFactory Advanced Integration - Modulo User & <nome progetto>
+- `archive/auth-blade-structure.md` — Struttura delle Blade di Autenticazione con Volt
+- `archive/logout-filament-widget-corrected.md` — Implementazione Corretta del Logout con Widget Filament
+- `archive/baseuser-refactoring.md` — BaseUser Refactoring - Completato
+- `archive/login-widget-conversion.md` — Conversione Livewire Auth/Login a Filament LoginWidget
+- `archive/phpstan-level-10-fixes.md` — PHPStan Level 10 Fixes - User Module
+- `archive/volt-folio-logout-error.md` — Errore nel Logout con Volt e Folio
+- `archive/roles-permissions.md` — Gestione coerente di roles, permissions e guard_name
+- `archive/volt-blade-implementation-error.md` — Analisi dell'Errore di Implementazione Volt/Blade
+- `archive/volt-missing-directive.md` — Errore VoltDirectiveMissingException
+- `archive/password-translation-completion.md` — Alias (superseded)
+- `archive/sso-providers-implementation.md` — User Module - SSO Providers Implementation
+- `archive/console-commands-philosophy.md` — Filosofia dei Console Commands in Laraxot (Standard Supremo)
+- `archive/baseuser-refactoring-completed.md` — baseuser refactoring completed
+- `archive/logout-page-implementation.md` — Implementazione della Pagina di Logout nel Tema One
+- `archive/cross-database-relations-issue.md` — Cross Database Relations Issue - belongsToManyX SQLite Problem
+- `archive/header-language-selector-with-flags.md` — Implementazione del Selettore di Lingua con Bandiere SVG
+- `archive/filament-namespace-rules.md` — Regole per i Namespace Filament
+- `archive/volt-errors.md` — Errori Comuni in Volt e Soluzioni
+- `archive/volt-folio-logout.md` — Implementazione Corretta del Logout con Volt e Folio
+- `archive/user-factory-complete-ecosystem-integration.md` — User Factory Complete Ecosystem Integration - FINAL DOCUMENTATION
+- `archive/logout-implementation-error.md` — Analisi dell'Errore nell'Implementazione del Logout
+- `archive/model-inheritance-analysis.md` — Analisi Ereditarietà Modelli - Modulo User
+- `archive/auth-login-implementation.md` — Implementazione Corretta della Pagina di Login
+- `archive/baseuser-spatie-duplicates-analysis.md` — Analisi Metodi Duplicati in BaseUser.php
+- `archive/actions-path-convention.md` — Convenzione dei Percorsi per le Actions
+- `archive/logout-error-analysis.md` — Analisi Errore Logout
+- `archive/auth-logout-blade.md` — Implementazione Corretta di logout.blade.php
+- `archive/auth-widget-rules.md` — Regole per Widget di Autenticazione
+- `archive/cms-link.md` — Collegamento al Modulo Cms
+- `archive/logout-blade-corrected-analysis.md` — Analisi Corretta del File logout.blade.php
+- `archive/model-inheritance-fixes.md` — Correzioni Ereditarietà Modelli - Modulo User
+- `archive/dry-kiss-analysis.md` — DRY & KISS Analysis - Modulo User
+- `archive/session-management.md` — Gestione delle Sessioni
+- `archive/error-handling.md` — Gestione degli Errori nelle Blade di Autenticazione
+- `archive/registration-widget-fileupload-fix.md` — RegistrationWidget FileUpload Fix
+- `archive/phpstan-fixes.md` — User Module - PHPStan Fixes Session 2025-10-01
+- `archive/login-widget-analysis.md` — Analisi Dettagliata di LoginWidget
+- `archive/business-logic-deep-dive.md` — User Module - Business Logic Deep Dive
+- `archive/moderation-wizard-generic.md` — Moderazione e Wizard di Registrazione Generici per User
+- `archive/git-conflicts-resolution-27.md` — Alias (superseded)
+- `archive/conflict-resolution-passwordresetwidget.md` — Risoluzione Conflitti PasswordResetWidget.php
+- `archive/filament-4-actions-namespace.md` — Filament 4: Namespace Actions - Filosofia Laraxot
+- `archive/database-errors.md` — Database Errors in User Module
+- `archive/phpstan-roadmap.md` — PHPStan Roadmap: User Module
+- `archive/phpstan-dry-kiss-improvements.md` — PHPStan Level 10 + DRY/KISS Improvements - User Module
+- `archive/readme-fullcalendar-scheduler.md` — FullCalendar Scheduler Documentation - README
+- `archive/logout-implementation-with-laravel-localization.md` — Implementazione del Logout con LaravelLocalization
+- `archive/logout-implementation-best-practices.md` — Best Practices per l'Implementazione del Logout
+- `archive/actions-structure.md` — Actions Structure
+- `archive/header-language-avatar-implementation.md` — Implementazione del Selettore di Lingua e Avatar Utente nell'Header
+- `archive/logout-analysis.md` — Analisi del File Logout.blade.php
+- `archive/code-quality-analysis.md` — Code Quality Analysis - User Module
+- `archive/namespace-conventions.md` — Convenzioni di Namespace nel Modulo User
+- `archive/translation-city-field-refactor.md` — Refactor Completo Campi "Città" - Modulo User
+- `archive/filament-4-widget-rendering.md` — Guida Rendering Widget Filament 4 - Modulo User
+- `archive/widget-rendering-analysis.md` — 🔍 Analisi Rendering LoginWidget - Docs.Italia.it Style
+- `archive/team-bindings-fix.md` — Fix Binding Team Models nel Modulo User
+- `archive/business-logic-analysis.md` — User Module - Business Logic Analysis
+- `archive/logout-blade-conclusions.md` — Conclusioni e Raccomandazioni per logout.blade.php
+- `archive/auth-components-best-practices.md` — Best Practices per i Componenti di Autenticazione
+- `archive/profile-management.md` — Profile Management in Laravel Modules
+- `archive/modelli-factory-seeder-analisi.md` — Analisi Modelli, Factory e Seeder - Modulo User
+- `archive/query-optimization-analysis.md` — User Module - Query Optimization Analysis
+- `archive/index.md` — Contenuto assorbito da `INDEX.md`
+- `archive/translation-keys-rules.md` — Regole per le Chiavi di Traduzione
+- `archive/translation-best-practices.md` — Best Practices per le Traduzioni
+- `archive/logout-event-error.md` — Analisi dell'Errore negli Eventi di Logout
+- `archive/filament-4-widget-rendering-guide.md` — Guida Rendering Widget Filament 4 - Modulo User
+- `archive/conflict-resolution-report.md` — Risoluzione dei Conflitti Git nel Modulo User
+- `archive/implementation-plan.md` — Piano di Implementazione Componenti Header
+- `archive/old_tasks/phpstan-analysis-user.md` — PHPStan Analysis - User Module
+- `archive/old_tasks/translation-syntax-fixes.md` — Correzioni Errori di Sintassi nei File di Traduzione - 2025
+- `archive/old_tasks/login-widget-translation-audit.md` — LoginWidget Translation Audit - Gennaio 2025
+- `archive/old_tasks/phpstan-array-types-fixes.md` — PHPStan Array Types Fixes - Modulo User
+- `archive/old_tasks/phpstan-fixes-gennaio.md` — 🔧 PHPStan Fixes - Modulo User - Gennaio 2025
+- `archive/old_tasks/phpstan-compliance-status.md` — PHPStan Level 10 Compliance Status
+- `archive/old_tasks/phpstan-fixes-gennaiocomplete.md` — PHPStan Fixes Complete - Gennaio 2025
+- `archive/old_tasks/phpstan-level9-fixes.md` — Correzione conflitto e miglioramento PHPStan livello 9 in Filament/Resources/UserResource.php
+- `archive/old_tasks/phpstan-fixes-january.md` — 🔧 PHPStan Fixes - Modulo User - Gennaio 2025
+- `archive/old_tasks/password-translation-completion.md` — Completamento Traduzioni Password - 2025
+- `archive/old_tasks/phpstan-compliance.md` — PHPStan Compliance - User Module
+- `archive/old_tasks/phpstan-corrections.md` — Correzioni PHPStan - Modulo User
+- `archive/old_tasks/phpstan-generic-types.md` — Risoluzione Problemi di Tipi Generici con PHPStan
+- `archive/old_tasks/phpstan-relationship-fix.md` — Correzione PHPStan - Relationship Type Hints
+- `archive/old_tasks/phpstan-fixes.md` — Correzioni PHPStan Livello 7 - Modulo User
+- `archive/old_tasks/phpstan-level10-user-fixes.md` — PHPStan Level 10 Fixes - User Module
+- `archive/old_tasks/phpstan-syntax-fixes.md` — PHPStan Syntax Fixes - Modulo User
+- `archive/old_tasks/phpstan-level10-fixes.md` — Correzioni PHPStan Livello 10 - Modulo User
+- `archive/historical/registration-widget.md` — Registration Widget Documentation
+- `archive/historical/volt-blade-implementation.md` — Implementazione dei Form con Widget Filament
+- `archive/historical/logout-filament-widget-implementazione.md` — Implementazione del Logout con Widget Filament
+- `archive/historical/auth-logout-implementation.md` — Implementazione del Logout
+- `archive/historical/hasteams-trait-duplicate-methods.md` — Analisi metodi duplicati in HasTeams (trait)
+- `archive/historical/fullcalendar-scheduler-quick-reference.md` — FullCalendar Scheduler - Riferimento Rapido
+- `archive/historical/logout-filament-widget.md` — Implementazione del Logout con Widget Filament
+- `archive/historical/translation-syntax-fixes.md` — Correzioni Errori di Sintassi nei File di Traduzione - 2025
+- `archive/historical/final-summary.md` — Final Summary - User Module Passport Integration & Architecture Refactoring
+- `archive/historical/structure.md` — Modulo User
+- `archive/historical/testing-structure.md` — Struttura dei Tests del Modulo User
+- `archive/historical/phpstan-furious-debate.md` — Il Grande Dibattito Furioso: PHPStan Level 10 - La Verità Assoluta
+- `archive/historical/roadmap-and-issues.md` — User Module - Roadmap, Issues & Optimization
+- `archive/historical/database-issues.md` — Database Issues in User Module
+- `archive/historical/factory-audit-lessons-learned.md` — Factory Audit Lessons Learned - User Module
+- `archive/historical/filament-auth-pages-exceptions.md` — Eccezioni Regola XotBase - Pagine Autenticazione
+- `archive/historical/hasteams-trait-filosofia-e-correzione-completa.md` — HasTeams Trait - Filosofia Laraxot e Strategia di Correzione Completa
+- `archive/historical/git-conflicts-resolution.md` — Alias (superseded)
+- `archive/historical/lang-link.md` — Collegamento alle Traduzioni del Modulo User
+- `archive/historical/architecture-rules.md` — Architectural Rules & Guidelines
+- `archive/historical/implementation-summary.md` — Implementation Summary - User Module Type Safety Improvements
+- `archive/historical/auth-pages-implementation.md` — Implementazione Corretta delle Pagine Auth
+- `archive/historical/fullcalendar-scheduler-documentation-summary.md` — FullCalendar Scheduler - Documentazione Completa
+- `archive/historical/spatie-permissions-methods.md` — User Module - Spatie Permission Methods Reference
+- `archive/historical/avatar-implementation.md` — Implementazione degli Avatar
+- `archive/historical/phpstan-errors-resolution-roadmap.md` — PHPStan Level 10 Errors Resolution Roadmap - User Module
+- `archive/historical/logout-security.md` — Sicurezza nel Processo di Logout
+- `archive/historical/missing-features-analysis.md` — Analisi Funzionalità Mancanti - Modulo User
+- `archive/historical/optimization-recommendations.md` — Raccomandazioni di Ottimizzazione - Modulo User
+- `archive/historical/factory-creation-status.md` — Factory Creation Status - User Module
+- `archive/historical/filament-filters-and-widgets.md` — Filament 4 — filtri pagina e widget (lezioni apprese)
+- `archive/historical/service-provider-architecture.md` — Service Provider Architecture - Module Pattern
+- `archive/historical/user-factory-integration.md` — UserFactory Integration - Modulo User e <nome progetto>
+- `archive/historical/user-factory-advanced-integration.md` — UserFactory Advanced Integration - Modulo User & <nome progetto>
+- `archive/historical/baseuser-dry-violation-analysis.md` — BaseUser - Analisi Violazione Principio DRY
+- `archive/historical/missing-factories-audit.md` — Factory Mancanti - Modulo User
+- `archive/historical/auth-blade-structure.md` — Struttura delle Blade di Autenticazione con Volt
+- `archive/historical/case-sensitivity-rules.md` — Case Sensitivity Rules - User Module
+- `archive/historical/hasteams-currentteam-method-choice.md` — Choice of currentTeam() Method in HasTeams Trait
+- `archive/historical/filament-nesting-opportunities.md` — Filament 5.x Nested Resources - Opportunità di Applicazione
+- `archive/historical/phpstan-fixes-roadmap.md` — PHPStan Level 10 Fixes Roadmap - Modulo User
+- `archive/historical/git-conflicts-resolution-conflict-06cb77.md` — Alias (superseded)
+- `archive/historical/logout-blade-error-analysis-analisi-approfondita-dell-errore.md` — Analisi Approfondita dell'Errore nell'Implementazione del Logout
+- `archive/historical/sso-providers-implementation.md` — User Module - SSO Providers Implementation
+- `archive/historical/doctor-registration-widget.md` — Widget di Registrazione del Dottore
+- `archive/historical/git-conflicts-resolution-conflict.md` — Alias (superseded)
+- `archive/historical/console-commands-philosophy.md` — Filosofia dei Console Commands in Laraxot (Standard Supremo)
+- `archive/historical/baseuser-refactoring-completed.md` — baseuser-refactoring-completed
+- `archive/historical/header-language-selector-with-flags.md` — Implementazione del Selettore di Lingua con Bandiere SVG
+- `archive/historical/migration-philosophy.md` — Laraxot Migration Philosophy
+- `archive/historical/xotbase-resource-getpages-automatic.md` — XotBaseResource getPages() Automatic: Filosofia DRY
+- `archive/historical/filament-namespace-rules.md` — Regole per i Namespace Filament
+- `archive/historical/volt-errors.md` — Errori Comuni in Volt e Soluzioni
+- `archive/historical/volt-folio-logout.md` — Implementazione Corretta del Logout con Volt e Folio
+- `archive/historical/model-inheritance-analysis.md` — Analisi Ereditarietà Modelli - Modulo User
+- `archive/historical/phpstan-compliance.md` — PHPStan Compliance - User Module
+- `archive/historical/auth-login-implementation.md` — Implementazione Corretta della Pagina di Login
+- `archive/historical/phpstan-fixes-3.md` — Correzioni PHPStan - Modulo User
+- `archive/historical/auth-logout-blade.md` — Implementazione Corretta di logout.blade.php
+- `archive/historical/phpstan-final-progress.md` — PHPStan Level 10 - Progresso Finale
+- `archive/historical/cms-link.md` — Collegamento al Modulo Cms
+- `archive/historical/coverage.md` — Code Coverage: User
+- `archive/historical/theme-translation-conflicts-resolution.md` — Risoluzione Conflitti Traduzioni Tema Two - Modulo User
+- `archive/historical/index-conflict.md` — User Module Documentation
+- `archive/historical/actions-structure-1.md` — Actions Structure
+- `archive/historical/migration-violations-analysis.md` — Migration Violations Analysis - User Module
+- `archive/historical/label-hardcoded-prevention.md` — Prevenzione ->label() Hardcoded - Modulo User
+- `archive/historical/teams-migration-laraxot-compliance.md` — Teams Migration - Laraxot Compliance Fix
+- `archive/historical/phpstan-relationship-fix.md` — Correzione PHPStan - Relationship Type Hints
+- … +41 altri
+>>>>>>> .merge_file_bfaXrm

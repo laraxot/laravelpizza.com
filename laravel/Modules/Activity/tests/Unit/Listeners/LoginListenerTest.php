@@ -11,7 +11,7 @@ use Modules\Activity\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
 
-uses(\Modules\Activity\Tests\TestCase::class);
+uses(TestCase::class);
 
 test('login listener is registered for login event', function () {
     $reflection = new ReflectionClass(EventServiceProvider::class);
@@ -25,20 +25,20 @@ test('login listener is registered for login event', function () {
 });
 
 test('login listener can be instantiated', function () {
-    $listener = new LoginListener();
+    $listener = new LoginListener;
 
     Assert::assertTrue((new ReflectionClass($listener))->hasMethod('handle'));
 });
 
 test('login listener has handle method', function () {
-    $listener = new LoginListener();
+    $listener = new LoginListener;
     $reflection = new ReflectionClass($listener);
 
     Assert::assertTrue($reflection->hasMethod('handle'));
 });
 
 test('login listener handle method is callable', function () {
-    $listener = new LoginListener();
+    $listener = new LoginListener;
 
     $listener->handle();
 });

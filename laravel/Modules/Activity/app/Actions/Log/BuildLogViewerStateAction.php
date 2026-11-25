@@ -53,7 +53,7 @@ class BuildLogViewerStateAction
 
         if ($file !== '') {
             try {
-                $resolved = app(ResolveLogFilePathAction::class)->execute($file);
+                $resolved = app(GetLogFilePathAction::class)->execute($file);
                 $tail = app(ReadLogTailAction::class)->execute($resolved->absolutePath, $this->windowBytes($window));
                 $filtered = app(FilterLogEntriesAction::class)->execute(
                     app(ParseLogEntriesAction::class)->execute($tail->content),

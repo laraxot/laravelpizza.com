@@ -95,7 +95,7 @@ related:
 
 #### `execute` / `from` — 2 classi · 11 righe · ~11 righe duplicate
 
-- `Media` · `ResolveMediaExporterAction::execute` · `Modules/Media/app/Actions/Ffmpeg/ResolveMediaExporterAction.php:15`
+- `Media` · `GetMediaExporterAction::execute` · `Modules/Media/app/Actions/Ffmpeg/GetMediaExporterAction.php:15`
 - `Media` · `MediaExporterResolver::from` · `Modules/Media/app/Support/Ffmpeg/MediaExporterResolver.php:19`
 
 #### `execute` / `getAwsConfig` — 2 classi · 9 righe · ~9 righe duplicate

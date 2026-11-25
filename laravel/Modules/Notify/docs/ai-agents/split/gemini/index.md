@@ -1,11 +1,15 @@
 ---
-title: "Gemini AI Guidelines (../../../wiki/integrations/_da-riconciliare/gemini-2.md) Index"
+title: "Gemini AI Guidelines (../../../../laravel/gemini.md) Index"
 type: index
 tags: [notify, docs, ai-agents, split, gemini]
 module: Notify
 created: 2026-07-20
 updated: 2026-11-23
+<<<<<<< .merge_file_SefcK0
 qmd: "notify documentazione ai agents split gemini index gemini ai guidelines (../../../wiki/integrations/_da-riconciliare/gemini-2.md) index index readme frontmatter qmd search"
+=======
+qmd: "notify documentazione ai agents split gemini index gemini ai guidelines (../../../../laravel/gemini.md) index index readme frontmatter qmd search"
+>>>>>>> .merge_file_0OTvli
 issues:
   - "https://github.com/laraxot/module_notify_fila5/issues/56"
 discussions:
@@ -17,6 +21,7 @@ related:
   - ../../../integrations/README.md
   - ../../../templates/README.md
 ---
+<<<<<<< .merge_file_SefcK0
 # Gemini AI Guidelines (../../../wiki/integrations/_da-riconciliare/gemini-2.md) Index
 
 **Source**: [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../../wiki/integrations/_da-riconciliare/gemini-2.md) (581 lines)  
@@ -29,6 +34,15 @@ related:
 **Source**: [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../../wiki/integrations/_da-riconciliare/gemini-2.md) (581 lines)  
 **Source**: [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../../wiki/integrations/_da-riconciliare/gemini-2.md) (581 lines)  
 **Source**: [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../../wiki/integrations/_da-riconciliare/gemini-2.md) (581 lines)  
+=======
+# Gemini AI Guidelines (../../../../laravel/gemini.md) Index
+
+**Source**: [`laravel/../../../../laravel/GEMINI.md`](../../../../../../laravel/../../../../laravel/gemini.md) (581 lines)  
+---
+# Gemini AI Guidelines (../../../../laravel/gemini.md) Index
+
+**Source**: [`laravel/../../../../laravel/GEMINI.md`](../../../../../../laravel/../../../../laravel/gemini.md) (581 lines)  
+>>>>>>> .merge_file_0OTvli
 **Split Into**: 13 focused files  
 **Last Updated**: 2026-04-11  
 
@@ -89,17 +103,21 @@ related:
 
 ### Bidirectional Links
 - ← Back to [Main AI Docs Index](../index.md)
-- ← Back to [../../../wiki/integrations/_da-riconciliare/gemini-2.md](../../../wiki/integrations/_da-riconciliare/gemini-2.md) (original source)
+- ← Back to [../../../../laravel/gemini.md](../../../../../../laravel/../../../../laravel/gemini.md) (original source)
 - ← Back to [Project Docs](../../../docs/README.md)
 
 ---
 
 ## Usage
 
+<<<<<<< .merge_file_SefcK0
 These guidelines are loaded by Gemini AI for Laravel development context. For manual reference, see the original [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../../wiki/integrations/_da-riconciliare/gemini-2.md).
 These guidelines are loaded by Gemini AI for Laravel development context. For manual reference, see the original [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../../wiki/integrations/_da-riconciliare/gemini-2.md).
 These guidelines are loaded by Gemini AI for Laravel development context. For manual reference, see the original [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../../wiki/integrations/_da-riconciliare/gemini-2.md).
 These guidelines are loaded by Gemini AI for Laravel development context. For manual reference, see the original [`laravel/Modules/Notify/docs/wiki/integrations/_da-riconciliare/gemini-2.md`](../../../wiki/integrations/_da-riconciliare/gemini-2.md).
+=======
+These guidelines are loaded by Gemini AI for Laravel development context. For manual reference, see the original [`laravel/../../../../laravel/GEMINI.md`](../../../../../../laravel/../../../../laravel/gemini.md).
+>>>>>>> .merge_file_0OTvli
 
 ---
 

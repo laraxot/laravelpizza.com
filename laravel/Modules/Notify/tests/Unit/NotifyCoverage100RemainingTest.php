@@ -64,7 +64,6 @@ describe('Notify coverage 100 — final sweep', function (): void {
         Assert::assertFalse($dummy->belongsToTenant('altro'));
 
         try {
-
             $query = NotifyTenantDummyModel::query();
             $scoped = $dummy->scopeForTenant($query, 'tenant-cov');
             Assert::assertSame($query, $scoped);

@@ -43,7 +43,7 @@ class TestS3ConnectionAction
                 'message' => $errorCode,
                 'details' => [
                     'Error' => $exception->getMessage(),
-                    'Solution' => app(ResolveAwsS3ErrorSolutionAction::class)->execute($errorCode),
+                    'Solution' => app(GetAwsS3ErrorSolutionAction::class)->execute($errorCode),
                 ],
             ];
         }

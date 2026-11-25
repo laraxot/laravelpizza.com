@@ -8,7 +8,7 @@ qmd: "index user module wiki index"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - "./agents-2.md"
+  - "./agents.md"
   - "./log.md"
 ---
 
@@ -57,7 +57,7 @@ _No troubleshooting pages created yet_
 ### Related Project Concepts
 
 - [Laraxot Architecture](../../docs/wiki/concepts/laraxot-architecture.md)
-- [Actions Over Services](../../../../../docs/wiki/concepts/actions-over-services.md)
+- [Actions Over Services](../../../../../docs/wiki/concepts/0017-actions-over-services.md)
 - [PHPStan Level 10](../../docs/wiki/concepts/phpstan-level10.md)
 
 ## Module's Role in Project

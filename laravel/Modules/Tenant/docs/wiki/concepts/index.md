@@ -29,4 +29,4 @@ Concetti specifici del modulo Tenant. Carica on-demand via `qmd search` o consul
 
 ## Regola progetto
 
-- [database-folder-lowercase-rule.md](../../../../../docs/wiki/concepts/database-folder-lowercase-rule.md)
+- [modules-structure-rules.md#database-folder-lowercase-rule](../../../../../../bashscripts/ai/wiki/concepts/modules-structure-rules.md#database-folder-lowercase-rule)

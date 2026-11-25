@@ -14,5 +14,5 @@ Stato letto dalla frontmatter di ciascun file. Formato e regole: [README.md](REA
 
 | ADR | Stato | Titolo |
 |---|---|---|
-| [notify-config-is-centralized](notify-config-is-centralized.md) | accepted | Configurazione Notify centralizzata |
-| [notify-owns-delivery-contract](notify-owns-delivery-contract.md) | proposed | Notify centralizza template e consegna delle notifiche |
+| [notify-config-is-centralized](0002-notify-config-is-centralized.md) | accepted | Configurazione Notify centralizzata |
+| [notify-owns-delivery-contract](0003-notify-owns-delivery-contract.md) | proposed | Notify centralizza template e consegna delle notifiche |

@@ -17,7 +17,6 @@ uses(TestCase::class);
 describe('LoginWidget', function (): void {
     test('login widget can be instantiated', function (): void {
         new LoginWidget;
-
     });
 
     test('login widget has correct form schema', function (): void {

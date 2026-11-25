@@ -77,6 +77,7 @@ Alcuni file di documentazione facevano riferimento a directory del database con 
 
 #### References
 - [Database Naming Convention](../conventions/database-naming.md)
+<<<<<<< .merge_file_K5syhW
 - [AGENTS.md](../../agents.md)
 - [Database Naming Convention](../conventions/database-naming.md)
 - [AGENTS.md](../agents.md)
@@ -96,6 +97,11 @@ Alcuni file di documentazione facevano riferimento a directory del database con 
 - [Database Naming Convention](../conventions/database-naming.md)
 - [AGENTS.md](../agents.md)
 - [AGENTS.md](../agents.md)
+=======
+- [AGENTS.md](../../agents.md)
+- [Database Naming Convention](../conventions/database-naming.md)
+- [AGENTS.md](../agents.md)
+>>>>>>> .merge_file_E0hLAL
 
 ---
 

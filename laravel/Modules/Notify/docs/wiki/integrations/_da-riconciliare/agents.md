@@ -89,7 +89,7 @@ docs/
 ---
 **See also:**
 - [CLAUDE.md](./CLAUDE.md)
-- [qwen-2.md](./qwen-2.md)
+- [qwen-2.md](qwen.md)
 - [gemini-2.md](./gemini-2.md)
 
 *Ultimo aggiornamento: Aprile 2026*

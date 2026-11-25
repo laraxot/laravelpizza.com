@@ -127,11 +127,11 @@ function userTestAuthDeviceData(): array
 describe('Authentication Business Logic', function () {
     describe('User Authentication Logic', function () {
         it('validates user account status', function () {
-<<<<<<< .merge_file_OjD8Ph
-            $user = (object) userTestAuthUserData();
-=======
+<<<<<<< .merge_file_VpuyDf
             $user = (object) $this->userData;
->>>>>>> .merge_file_wzQdYB
+=======
+            $user = (object) userTestAuthUserData();
+>>>>>>> .merge_file_CmTwK5
 
             // Business Logic: User must be active and verified
             Assert::assertTrue($user->is_active);

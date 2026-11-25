@@ -2,49 +2,28 @@
 
 declare(strict_types=1);
 
+namespace Modules\Activity\Tests\Unit\Listeners;
+
 use Illuminate\Auth\Events\Logout;
-use Illuminate\Support\Facades\Event;
 use Modules\Activity\Listeners\LogoutListener;
 use Modules\Activity\Tests\TestCase;
+use ReflectionMethod;
+use ReflectionNamedType;
 
 uses(TestCase::class);
 
-test('logout listener is registered for logout event', function () {
-    Event::fake();
-
-    Event::assertListening(
-        Logout::class,
-        LogoutListener::class
-    );
-})->skip('LogoutListener may not be registered in EventServiceProvider');
-
-test('logout listener can be instantiated', function () {
-    $listener = new LogoutListener;
-
-    expect($listener)->toBeInstanceOf(LogoutListener::class);
-});
-
-test('logout listener has handle method', function () {
-    $listener = new LogoutListener;
-    $reflection = new ReflectionClass($listener);
-
-    expect($reflection->hasMethod('handle'))->toBeTrue();
-});
-
-test('logout listener handle method accepts logout event', function () {
-    $listener = new LogoutListener;
-    $reflection = new ReflectionClass($listener);
-    $method = $reflection->getMethod('handle');
-    $parameters = $method->getParameters();
+/*
+ * Contratto di firma del listener: Laravel risolve il listener dall'evento tipizzato in handle().
+ * Il comportamento (ritorno anticipato senza utente, activity "logout") e' in
+ * LoginLogoutListenerBehaviorTest; esistenza classe/metodo in tests/Unit/LogoutListenerTest.
+ */
+test('logout listener handle accepts exactly one Logout event', function (): void {
+    $parameters = new ReflectionMethod(LogoutListener::class, 'handle')->getParameters();
 
     expect($parameters)->toHaveCount(1);
-    expect($parameters[0]->getType()?->getName())->toBe(Logout::class);
-});
 
-test('logout listener handles event without user gracefully', function () {
-    $event = new Logout('web', null);
+    $type = $parameters[0]->getType();
+    $typeName = $type instanceof ReflectionNamedType ? $type->getName() : null;
 
-    $listener = new LogoutListener;
-
-    expect(fn () => $listener->handle($event))->not->toThrow(Exception::class);
+    expect($typeName)->toBe(Logout::class);
 });

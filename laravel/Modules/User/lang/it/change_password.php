@@ -48,6 +48,9 @@ return [
             'helper_text' => 'Torna indietro senza salvare',
             'description' => 'Azione per annullare',
         ],
+        'submit' => [
+            'label' => 'submit',
+        ],
     ],
     'messages' => [
         'password_changed' => 'Password cambiata con successo',

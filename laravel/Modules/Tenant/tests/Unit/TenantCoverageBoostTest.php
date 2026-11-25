@@ -12,7 +12,7 @@ use Modules\Tenant\Actions\Config\GetTenantConfigArrayAction;
 use Modules\Tenant\Actions\Config\GetTenantConfigPathAction;
 use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
 use Modules\Tenant\Actions\Config\MergeRecursiveStringKeyConfigAction;
-use Modules\Tenant\Actions\Config\ResolveTenantConfigValueAction;
+use Modules\Tenant\Actions\Config\GetTenantConfigValueAction;
 use Modules\Tenant\Actions\Domains\GetDomainsArrayAction;
 use Modules\Tenant\Actions\GetTenantNameAction;
 use Modules\Tenant\Filament\Resources\DomainResource;
@@ -101,7 +101,7 @@ describe('Tenant coverage boost — tenant-aware Actions', function (): void {
             app(GetTenantFilePathAction::class)->execute('settings.json'),
         );
         Assert::assertSame('tenant.a.app', app(GetTenantConfigPathAction::class)->execute('app'));
-        Assert::assertSame('Tenant App', app(ResolveTenantConfigValueAction::class)->execute('app.name'));
+        Assert::assertSame('Tenant App', app(GetTenantConfigValueAction::class)->execute('app.name'));
     });
 });
 

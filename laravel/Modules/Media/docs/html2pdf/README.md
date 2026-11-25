@@ -26,4 +26,4 @@ Negli altri moduli `docs/html2pdf/*.md` sono **stub** che puntano qui.
 
 ## Manutenzione
 
-Aggiornare solo questi file; rieseguire dedup se compaiono nuove copie: [module-docs-deduplication](../../../../../docs/wiki/how-to/module-docs-deduplication.md).
+Aggiornare solo questi file; rieseguire dedup se compaiono nuove copie: [module-docs-deduplication](../../../../../bashscripts/ai/wiki/how-to/modules-ops.md#module-docs-deduplication).

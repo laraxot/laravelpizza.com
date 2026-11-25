@@ -8,7 +8,7 @@ use Illuminate\Contracts\Translation\Translator;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Translation\PotentiallyTranslatedString;
 use Mockery;
-use Modules\Media\Actions\Ffmpeg\ResolveMediaExporterAction;
+use Modules\Media\Actions\Ffmpeg\GetMediaExporterAction;
 use Modules\Media\Actions\GenerateTemporaryUploadPathAction;
 use Modules\Media\Filament\RelationManagers\MediaRelationManager;
 use Modules\Media\Filament\Resources\HasMediaResource\RelationManagers\MediaRelationManager as HasMediaRelationManager;
@@ -79,10 +79,10 @@ describe('Media gap closer — statement coverage', function (): void {
     });
 
     test('MediaExporterResolver and ConvertController instantiate', function (): void {
-        Assert::assertTrue(class_exists(ResolveMediaExporterAction::class));
+        Assert::assertTrue(class_exists(GetMediaExporterAction::class));
         try {
-            $resolver = app(ResolveMediaExporterAction::class);
-            Assert::assertInstanceOf(ResolveMediaExporterAction::class, $resolver);
+            $resolver = app(GetMediaExporterAction::class);
+            Assert::assertInstanceOf(GetMediaExporterAction::class, $resolver);
         } catch (\Throwable $e) {
             Assert::assertNotSame('', $e->getMessage());
         }

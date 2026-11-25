@@ -240,7 +240,7 @@ Priority: P1
 
 ### GSD Workflow
 - Issues link to `.planning/roadmap.md` phases
-- State tracked in `.planning/state-2.md`
+- State tracked in `.planning/STATE.md`
 - Progress tracked in `.planning/PROJECT.md`
 
 ### BMad Documentation

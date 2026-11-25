@@ -10,7 +10,7 @@ issues:
 discussions:
   - "https://github.com/laraxot/platform/discussions/273"
 related:
-  - ../../../../docs/wiki/concepts/no-app-support-monorepo-migration.md
+  - ../../../../../../bashscripts/ai/wiki/concepts/modules-structure-rules.md#no-app-support-monorepo-migration
   - config-merge-philosophy.md
 ---
 
@@ -29,13 +29,13 @@ related:
 |----------------------|--------|
 | `getName()` | `GetTenantNameAction` |
 | `filePath($f)` | `GetTenantFilePathAction` |
-| `config($k,$d)` | `ResolveTenantConfigValueAction` |
+| `config($k,$d)` | `GetTenantConfigValueAction` |
 | `getConfigPath($k)` | `GetTenantConfigPathAction` |
 | `getConfig($n)` | `GetTenantConfigArrayAction` |
 | `saveConfig($n,$d)` | `SaveTenantConfigAction` |
 | `getConfigNames()` | `GetTenantConfigNamesAction` |
-| `modelClass($n)` | `ResolveTenantModelClassAction` |
-| `model($n)` | `ResolveTenantModelInstanceAction` |
+| `modelClass($n)` | `GetTenantModelClassAction` |
+| `model($n)` | `GetTenantModelInstanceAction` |
 | `trans($k)` | `TranslateTenantKeyAction` |
 | `allModules()` | `GetTenantModulesAction` |
 
@@ -55,4 +55,4 @@ Config tenant e morph map devono ignorare chiavi non-string (PHPStan + merge sic
 
 ## Collegamenti
 
-- [no-app-support-monorepo-migration](../../../../docs/wiki/concepts/no-app-support-monorepo-migration.md)
+- [no-app-support-monorepo-migration](../../../../../../bashscripts/ai/wiki/concepts/modules-structure-rules.md#no-app-support-monorepo-migration)

@@ -146,13 +146,57 @@ poi il sync `merge_remote_repo_2.sh` delle 11:36 (commit `.`) ha committato e pu
 Attenzione: `MAX_GIT_OBJECTS` nello script resta 130000, quindi nessuna protezione automatica a 10000; Notify va rimisurato
 dopo i prossimi sync.
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+## Misura base_laravelpizza_fila5 (2026-11-25 ~16:30) — 16 path in `gitmodules.ini`
+
+Target: `< 10000` oggetti (`count + in-pack`). Tool: `slim-module-theme-git.sh --apply`, poi `gc --prune=now` / `repack -Ad`, depth-1 dove `HEAD == laraxot/dev`.
+
+| Path | Prima (MB/obj) | Dopo (MB/obj) | Causa dominante | Azione |
+|------|---------------:|--------------:|-----------------|--------|
+| bashscripts | 231 / 133872 | 23 / 6096 | prefetch+remote non-`dev` + blob `ai/.gemini` in **storia** | drop ref + repack |
+| Activity | 18 / 45163 | 3 / 914 | storia lunga (~7.9k commit) | depth-1 + drop commit-graph |
+| Cms | 13 / 27779 | 6 / 2682 | prefetch/remote | slim script |
+| Gdpr | 7 / 16828 | 2 / 1371 | storia lunga | depth-1 |
+| Geo | 30 / 21942 | 20 / 4668 | prefetch | slim script |
+| Lang | 13 / 36186 | 4 / 750 | prefetch+original irraggiungibili | slim + prune=now |
+| Media | 9 / 33013 | 3 / 1299 | `refs/original` (storia polluta unica) | drop original + prune (stash ok) |
+| Meetup | 5 / 1675 | 5 / 1675 | gia' ok | — |
+| Seo | 13 / 8352 | 1 / 638 | storia | depth-1 |
+| Tenant | 7 / 15016 | 2 / 1328 | storia | depth-1 |
+| UI | 36 / 66164 | 18 / 2997 | prefetch+original | slim script |
+| User | 51 / 112877 | 8 / 5413 | prefetch + storia | slim + depth-1 |
+| Xot | 30 / 107922 | 5 / 2240 | storia; tip remoto ≠ HEAD locale | shallow locale su HEAD |
+| Themes/Meetup | 63 / 3036 | 63 / 3036 | PDF manuale (~36 MB in HEAD) | lasciati (manuale) |
+| **Job** | 10 / 28751 | **bloccato** | `MERGE_HEAD` aperto | riprendere dopo merge |
+| **Notify** | 450 / ~9k→144k | **bloccato** | `merge_remote_repo_2.sh` attivo; storia polluta `laravel/`+`node_modules` | riprendere dopo sync |
+
+**HEAD oggi:** nessun `node_modules`/`vendor` tracciato. Residui da togliere in commit dedicati (non fatto qui): UI/Job `docs/graphify/**/graphify-out/**/cache`. Peso Themes/Meetup = PDF manuale (voluto).
+
+Gate: `fsck --connectivity-only` ok su tutti i 14 snelliti. Job/Notify non toccati.
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 ## Acceptance criteria
 
 - [x] Misura oggetti/dimensione per tutti i 23 path di `gitmodules.ini`
 - [x] Diagnosi cause con evidenze
 - [x] 15/23 repo < 10000 oggetti, `fsck` pulito, working tree e allineamento invariati, backup verificato
 - [x] 23/23 repo < 10000 (misura 2026-11-25 11:55; vedi "Esito finale")
+<<<<<<< HEAD
+<<<<<<< HEAD
+- [x] base_laravelpizza_fila5: 14/16 path < 10000 (2026-11-25 16:30); Job+Notify bloccati da merge/sync
 - [ ] Decisione utente su soglia `MAX_GIT_OBJECTS` (10000?) e sul prefetch di `git maintenance`
+- [ ] Job: chiudere merge, poi slim + depth-1
+- [ ] Notify: dopo fine `merge_remote_repo_2.sh`, depth-1 su HEAD (pack ~431 MB di storia polluta)
+=======
+- [ ] Decisione utente su soglia `MAX_GIT_OBJECTS` (10000?) e sul prefetch di `git maintenance`
+>>>>>>> laraxot/dev
+=======
+- [ ] Decisione utente su soglia `MAX_GIT_OBJECTS` (10000?) e sul prefetch di `git maintenance`
+>>>>>>> laraxot/dev
 
 ## Gate
 

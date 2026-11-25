@@ -31,4 +31,4 @@ La documentazione nuova va in `docs/bmad/`; le raccolte storiche restano referen
 
 ## Audit
 
-- [Audit approfondito 2026-11-16](./audits/notify-audit.md) · [ECC](../ecc/00-index.md) · [Story audit](./stories/module-bmad-audit.story.md)
+- [Audit approfondito 2026-11-16](./audits/notify-audit.md) · [ECC](../ecc/00-index.md) · [Story audit](stories/0012-module-bmad-audit.story.md)

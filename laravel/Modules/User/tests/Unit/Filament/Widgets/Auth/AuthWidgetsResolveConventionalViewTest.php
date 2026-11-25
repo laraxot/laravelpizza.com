@@ -16,7 +16,7 @@ uses(TestCase::class);
  * GetViewByClassAction dal nome della classe, prima nel tema (`pub_theme::`) e poi nel modulo.
  * Un `$view` scritto a mano verso un file che non esiste e' un View not found a runtime.
  *
- * Regola: bashscripts/ai/wiki/rules/filament-template-as-dress.md
+ * Regola: bashscripts/ai/wiki/rules/filament-general.md
  */
 
 dataset('widget auth e vista convenzionale', [

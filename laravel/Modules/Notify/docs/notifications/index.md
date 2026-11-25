@@ -22,6 +22,7 @@ status: draft
 
 ## Collegamenti Correlati
 - [Indice Documentazione Notify](../index.md)
+<<<<<<< .merge_file_pYw7Yy
 - [README Modulo Notify](../README.md)
 - [Documentazione Generale <nome progetto>](../../../../../../docs/README.md)
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
@@ -39,34 +40,28 @@ status: draft
 - [README Modulo Notify](../README.md)
 - [Documentazione Generale <nome progetto>](../../../../../../docs/README.md)
 - [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
+=======
+- [README Modulo Notify](../README.md)
+- [Documentazione Generale <nome progetto>](../../../../../../docs/README.md)
+>>>>>>> .merge_file_jc4VpQ
 - [Collegamenti Documentazione](../../../../../../docs/collegamenti-documentazione.md)
 
 ## Guida Implementazione
-- [Guida Implementazione Notifiche](./notifications-implementation-guide-2.md) - Guida generale all'implementazione delle notifiche
-- [Notifiche Multi-Canale](./multi-channel-notifications-2.md) - Implementazione di notifiche su più canali
-- [Errori Comuni da Evitare](./errori-comuni-da-evitare-2.md) - Problemi comuni e come evitarli
 
 ## Canali di Notifica
 
 ### SMS
-- [Implementazione SMS Dettagliata](./sms-implementation-details-2.md) - Dettagli implementativi per il canale SMS
-- [Configurazione Provider SMS](./sms-provider-configuration-2.md) - Configurazione dei provider SMS
-- [Implementazione Netfun SMS](./netfun-sms-implementation-2.md) - Implementazione specifica per il provider Netfun
 
 ### Telegram
-- [Guida Notifiche Telegram](./telegram-notifications-guide-2.md) - Implementazione delle notifiche Telegram
 
 ## Architettura e Pattern
-- [Factory Pattern per Provider](../factory-pattern-analysis-2.md) - Analisi del pattern Factory per i provider
-- [Provider vs DTO](../channel-vs-dto-provider-selection-2.md) - Selezione tra provider e DTO
 - [Factory Pattern per Provider](../factory-pattern-analysis.md) - Analisi del pattern Factory per i provider
 - [Provider vs DTO](../channel-vs-dto-provider-selection.md) - Selezione tra provider e DTO
-- [Architettura Provider](../provider-actions-architecture-2.md) - Architettura delle azioni provider
 
 ## Documentazione Correlata
 - [Implementazione SMS](../sms-implementation-2.md) - Panoramica dell'implementazione SMS
-- [Canale WhatsApp](../whatsapp-channel-2.md) - Documentazione del canale WhatsApp
-- [Canale Telegram](../telegram-channel-2.md) - Documentazione del canale Telegram
+- [Canale WhatsApp](../whatsapp-channel.md) - Documentazione del canale WhatsApp
+- [Canale Telegram](../telegram-channel.md) - Documentazione del canale Telegram
 
 ## Note Importanti
 - <nome progetto> utilizza il pattern Factory per la creazione delle azioni di invio messaggi
