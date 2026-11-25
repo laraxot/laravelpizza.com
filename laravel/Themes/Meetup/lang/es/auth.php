@@ -108,7 +108,7 @@ return [
     ],
     'login' => [
         'page_title' => 'Iniciar sesión',
-        'title' => '¡Bienvenido de nuevo a Laravel Pizza Meetups! 🍕',
+        'title' => '¡Bienvenido de nuevo a Laravel Pizza Meetups!',
         'subtitle' => 'Inicia sesión para apuntarte a los meetups y gestionar tus reservas.',
     ],
 ];

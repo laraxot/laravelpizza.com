@@ -1,3 +1,8 @@
+---
+title: "Rating Module"
+type: note
+qmd: "rating"
+---
 # Rating Module
 
 Sistema di valutazione e rating per la piattaforma con supporto per diverse entità e filtraggio avanzato.
@@ -156,11 +161,11 @@ $distribution = Rating::where('rateable_type', Product::class)
 
 ## Related Modules
 
-- [User Module](../User/docs/) - Autori rating
+- [User Module](../../User/docs/) - Autori rating
 - [Product Module](../Product/docs/) - Prodotti (se exists)
-- [Activity Module](../Activity/docs/) - Activity logging
-- [Notify Module](../Notify/docs/) - Notifiche rating
-- [Xot Module](../Xot/docs/) - Base classes
+- [Activity Module](../../Activity/docs/) - Activity logging
+- [Notify Module](../../Notify/docs/) - Notifiche rating
+- [Xot Module](../../Xot/docs/) - Base classes
 
 ## Troubleshooting
 
@@ -183,7 +188,7 @@ $distribution = Rating::where('rateable_type', Product::class)
 
 Vedi anche:
 - [README](README.md) - Panoramica
-- [PRD](PRD.md) - Product requirements
+- [PRD](bmad/prd.md) - Product requirements
 - [Architecture Rules](architecture-rules.md) - Regole architetturali
 - [Best Practices](best-practices.md) - Pattern consolidati
 - [PHPStan Fixes](phpstan-fixes.md) - Conformità statica
@@ -194,3 +199,28 @@ Vedi anche:
 **PHPStan Level**: Target Level 9  
 **Translation**: IT/EN ✅  
 **Last Updated**: 2026-05-13
+
+## Mappa delle cartelle
+
+Elenco generato dall'audit qualita' (issue #64): ogni cartella di `docs/` con il numero di file `.md`.
+Le cartelle di import grezzo (`raw/`, `root-*-files/`), immagini e log sono escluse.
+
+| Cartella | File .md |
+|---|---|
+| [`llm-wiki/`](llm-wiki/index.md) | 6 |
+| [`roadmap/`](roadmap/README.md) | 7 |
+| [`wiki/`](wiki/index.md) | 24 |
+
+## Contenuto fuso da `index.md`
+
+# Documentation Index
+
+Modulo: Rating
+
+## File disponibili
+
+<!-- auto-generato: elencare i file .md presenti -->
+
+## ⚠️ Architectural Rules
+
+- **[No Http Controllers — Folio + Actions + Filament](../../../../docs/wiki/rules/no-controllers-rule.md)** — Absolute rule: Rating module must NOT use Http\Controllers. Rating HTTP endpoints use Folio + Actions. Admin uses Filament.

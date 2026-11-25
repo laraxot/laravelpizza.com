@@ -1,14 +1,20 @@
 ---
-title: "censimento omonimi metodi — modulo Rating"
+tags: [documentation]
+created: 2026-09-26
+qmd: "method name homonyms"
+issues: []
+discussions: []
+title: "censimento omonimi metodi: modulo Rating"
 type: analysis
 module: Rating
 updated: 2026-06-15
 related:
   - ../../../../../../docs/wiki/method-name-homonym-census.md
   - ../../../../../../bashscripts/docs/method-homonym-census.json
+status: draft
 ---
 
-# Censimento omonimi metodi — Rating
+# Censimento omonimi metodi: Rating
 
 > **41** nomi metodo omonimi coinvolgono questo modulo (su 689 totali progetto).
 
@@ -25,11 +31,11 @@ related:
 
 ### `A_filament_framework` (22 metodi)
 
-Hook Filament/Laravel ripetuti — **non** debito. Elenco omesso.
+Hook Filament/Laravel ripetuti: **non** debito. Elenco omesso.
 
 ### `E_scheda_stack`
 
-#### `getActions` — 6 classi
+#### `getActions`: 6 classi
 
 - `Rating` · `EditRatingMorph` · `Modules/Rating/app/Filament/Resources/RatingMorphResource/Pages/EditRatingMorph.php`
 - `Rating` · `ListRatingMorphs` · `Modules/Rating/app/Filament/Resources/RatingMorphResource/Pages/ListRatingMorphs.php`
@@ -37,88 +43,88 @@ Hook Filament/Laravel ripetuti — **non** debito. Elenco omesso.
 
 ### `F_trait_name_collision`
 
-#### `ratings` — 3 classi
+#### `ratings`: 3 classi
 
 - `Rating` · `trait:HasRating` · `Modules/Rating/app/Models/Traits/HasRating.php`
 - `Rating` · `trait:HasRatingsTrait` · `Modules/Rating/app/Models/Traits/HasRatingsTrait.php`
 - `Rating` · `trait:RatingTrait` · `Modules/Rating/app/Models/Traits/RatingTrait.php`
 
-#### `getMyRatingAttribute` — 2 classi
+#### `getMyRatingAttribute`: 2 classi
 
 - `Rating` · `trait:HasRatingsTrait` · `Modules/Rating/app/Models/Traits/HasRatingsTrait.php`
 - `Rating` · `trait:RatingTrait` · `Modules/Rating/app/Models/Traits/RatingTrait.php`
 
-#### `getRatingsAvgAttribute` — 2 classi
+#### `getRatingsAvgAttribute`: 2 classi
 
 - `Rating` · `trait:HasRatingsTrait` · `Modules/Rating/app/Models/Traits/HasRatingsTrait.php`
 - `Rating` · `trait:RatingTrait` · `Modules/Rating/app/Models/Traits/RatingTrait.php`
 
-#### `getRatingsCountAttribute` — 2 classi
+#### `getRatingsCountAttribute`: 2 classi
 
 - `Rating` · `trait:HasRatingsTrait` · `Modules/Rating/app/Models/Traits/HasRatingsTrait.php`
 - `Rating` · `trait:RatingTrait` · `Modules/Rating/app/Models/Traits/RatingTrait.php`
 
-#### `myRatings` — 2 classi
+#### `myRatings`: 2 classi
 
 - `Rating` · `trait:HasRatingsTrait` · `Modules/Rating/app/Models/Traits/HasRatingsTrait.php`
 - `Rating` · `trait:RatingTrait` · `Modules/Rating/app/Models/Traits/RatingTrait.php`
 
-#### `ratingAvgHtml` — 2 classi
+#### `ratingAvgHtml`: 2 classi
 
 - `Rating` · `trait:HasRatingsTrait` · `Modules/Rating/app/Models/Traits/HasRatingsTrait.php`
 - `Rating` · `trait:RatingTrait` · `Modules/Rating/app/Models/Traits/RatingTrait.php`
 
-#### `ratingObjectives` — 2 classi
+#### `ratingObjectives`: 2 classi
 
 - `Rating` · `trait:HasRatingsTrait` · `Modules/Rating/app/Models/Traits/HasRatingsTrait.php`
 - `Rating` · `trait:RatingTrait` · `Modules/Rating/app/Models/Traits/RatingTrait.php`
 
-#### `scopeWithRating` — 2 classi
+#### `scopeWithRating`: 2 classi
 
 - `Rating` · `trait:HasRatingsTrait` · `Modules/Rating/app/Models/Traits/HasRatingsTrait.php`
 - `Rating` · `trait:RatingTrait` · `Modules/Rating/app/Models/Traits/RatingTrait.php`
 
-#### `setMyRatingAttribute` — 2 classi
+#### `setMyRatingAttribute`: 2 classi
 
 - `Rating` · `trait:HasRatingsTrait` · `Modules/Rating/app/Models/Traits/HasRatingsTrait.php`
 - `Rating` · `trait:RatingTrait` · `Modules/Rating/app/Models/Traits/RatingTrait.php`
 
 ### `H_cross_module_homonym`
 
-#### `fromArray` — 23 classi
+#### `fromArray`: 23 classi
 
 - `Rating` · `RatingData` · `Modules/Rating/app/Datas/RatingData.php`
 
-#### `user` — 9 classi
+#### `user`: 9 classi
 
 - `Rating` · `RatingMorph` · `Modules/Rating/app/Models/RatingMorph.php`
 
-#### `getSlugOptions` — 4 classi
+#### `getSlugOptions`: 4 classi
 
 - `Rating` · `BaseRating` · `Modules/Rating/app/Models/BaseRating.php`
 
-#### `getStats` — 4 classi
+#### `getStats`: 4 classi
 
 - `Rating` · `StatsOverview` · `Modules/Rating/app/Filament/Resources/HasRatingResource/Widgets/StatsOverview.php`
 - `Rating` · `StatsOverview` · `Modules/Rating/app/Filament/Widgets/StatsOverview.php`
 
-#### `profile` — 3 classi
+#### `profile`: 3 classi
 
 - `Rating` · `RatingMorph` · `Modules/Rating/app/Models/RatingMorph.php`
 
-#### `scopeWithExtraAttributes` — 3 classi
+#### `scopeWithExtraAttributes`: 3 classi
 
 - `Rating` · `BaseRating` · `Modules/Rating/app/Models/BaseRating.php`
 
-#### `configureEmailVerification` — 2 classi
+#### `configureEmailVerification`: 2 classi
 
 - `Rating` · `EventServiceProvider` · `Modules/Rating/app/Providers/EventServiceProvider.php`
 
-#### `model` — 2 classi
+#### `model`: 2 classi
 
 - `Rating` · `RatingMorph` · `Modules/Rating/app/Models/RatingMorph.php`
 
-#### `registerMediaConversions` — 2 classi
+#### `registerMediaConversions`: 2 classi
 
 - `Rating` · `BaseRating` · `Modules/Rating/app/Models/BaseRating.php`
 

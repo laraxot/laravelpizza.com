@@ -1,15 +1,24 @@
 ---
-title: "Agent instructions"
-type: reference
-tags: [agents, coding-agent, llm-wiki]
-created: 2026-07-01
-updated: 2026-07-01
-qmd: "istruzioni agenti LLM wiki modulo"
 issues: []
 discussions: []
+title: "Agent instructions (pointer)"
+type: reference
+tags: [agents, pointer]
+created: 2026-07-01
+updated: 2026-09-23
+qmd: "rating wiki agents pointer AGENTS canonical"
 related:
-  - ./coding-agent-manifests.md
+  - agents.md
+status: stub
 ---
+
+# Pointer: canonical agent instructions
+
+Il documento canonico è **[AGENTS.md](agents.md)** (bootstrap LLM wiki del modulo Rating).
+
+Non duplicare qui il corpo: aggiornare solo `agents.md`.
+
+## Contenuto fuso da `agents.md`
 
 # Rating {{TYPE^}} LLM Wiki Agent Instructions
 
@@ -149,5 +158,6 @@ Related:
 ## Related Documentation
 
 - [Project Wiki Integration](../../docs/wiki/README.md)
-- [Project Wiki Agent Instructions](../../docs/wiki/agents-2.md)
+- [Project Wiki Agent Instructions](agents.md)
+- [Module Rules Index](./rules/index.md)
 - [Module Documentation](../README.md)

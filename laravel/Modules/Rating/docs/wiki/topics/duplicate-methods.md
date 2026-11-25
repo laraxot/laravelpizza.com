@@ -15,6 +15,8 @@ _Fonte: `duplicate-methods-analysis.md`_
 
 # Analisi Metodi Duplicati - Modulo Rating
 
+> ⚠️ **Note**: Questo documento contiene riferimenti a moduli legacy (LegacyDomain) non più presenti nel progetto. Tali riferimenti sono conservati per storicità ma non influiscono sulla validità dell'analisi dei moduli attuali.
+
 **Data Generazione**: 2025-10-15 06:41:17
 **Totale Gruppi di Duplicati**: 
 
@@ -40,9 +42,6 @@ Questo documento identifica i metodi duplicati nel modulo **Rating** che potrebb
 **Trovato in  file22 file**:
 
 - `extends::user` - [Modules/Activity/app/Models/Activity.php:97](Modules/Activity/app/Models/Activity.php) (Modulo: Activity)
-- `Article::user` - [Modules/Blog/app/Models/Article.php:393](Modules/Blog/app/Models/Article.php) (Modulo: Blog)
-- `Comment::user` - [Modules/Blog/app/Models/Comment.php:102](Modules/Blog/app/Models/Comment.php) (Modulo: Blog)
-- `Activity::user` - [Modules/Fixcity/app/Models/Activity.php:58](Modules/Fixcity/app/Models/Activity.php) (Modulo: Fixcity)
 
 ## Report: Metodi con nome duplicato nei moduli e nei temi
 
@@ -77,13 +76,12 @@ Di seguito la classifica dei metodi più frequenti (solo quelli con più di una 
 | 463 | `execute` |
 | 320 | `down` |
 | 257 | `getFormSchema` |
-| 208 | `__construct` |
 
-## Metodi duplicati — Rating
+## Metodi duplicati: Rating
 
 _Fonte: `duplicate-methods.md`_
 
-# Metodi duplicati — Rating
+# Metodi duplicati: Rating
 
 Analisi sintetica dei metodi PHP con lo stesso nome all’interno di questo ambito.
 
@@ -112,4 +110,3 @@ Analisi sintetica dei metodi PHP con lo stesso nome all’interno di questo ambi
 | `getInfolistSchema` | 2 | possibile duplicazione |
 | `getLabel` | 2 | possibile duplicazione |
 | `getMyRatingAttribute` | 2 | possibile duplicazione |
-| `getPages` | 2 | possibile duplicazione |

@@ -5,8 +5,8 @@ declare(strict_types=1);
 return [
     'sections' => [
         'empty' => [
-            'label' => '',
-            'heading' => '',
+            'label' => 'empty',
+            'heading' => 'empty',
         ],
     ],
 ];

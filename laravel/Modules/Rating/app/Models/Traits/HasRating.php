@@ -4,22 +4,27 @@ declare(strict_types=1);
 
 namespace Modules\Rating\Models\Traits;
 
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphPivot;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Modules\Rating\Models\Rating;
 use Modules\Rating\Models\RatingMorph;
 
-/** @phpstan-ignore trait.unused (usato da moduli esterni; PHPStan sul solo modulo Rating non vede i consumer.) */
+/**
+ * @phpstan-require-extends Model
+ *
+ * @see Modules/Rating/docs/architecture.md
+ */
 trait HasRating
 {
-    /** @return MorphToMany<Rating, $this, RatingMorph, 'pivot'> */
+    /**
+     * @phpstan-return MorphToMany<Rating, $this, MorphPivot, 'pivot'>
+     *
+     * @see Modules/Rating/docs/architecture.md
+     */
     public function ratings(): MorphToMany
     {
-        $pivot = new RatingMorph;
-
-        return $this->morphToMany(Rating::class, 'model', $pivot->getTable())
-            ->using(RatingMorph::class)
-            ->withPivot($pivot->getFillable())
-            ->withTimestamps();
+        return $this->morphToManyX(Rating::class, 'model');
     }
 
     /** @return array<int, string> */
@@ -54,6 +59,8 @@ trait HasRating
 
     /**
      * @return array<int, non-empty-array<string, mixed>>
+     *
+     * @see Modules/Rating/docs/architecture.md
      */
     public function getArrayRatingsWithImage(): array
     {
@@ -66,7 +73,7 @@ trait HasRating
 
         /** @var array<int, non-empty-array<string, mixed>> $ratings_array */
         $ratings_array = [];
-        foreach ($ratings as $key => $rating) {
+        foreach ($ratings as $rating) {
             /** @var array<string, mixed> $rowData */
             $rowData = $rating->toArray();
             // Use in-memory SVG icons instead of fetching external images
@@ -81,9 +88,9 @@ trait HasRating
             $rowData['image'] = method_exists($rating, 'getFirstMediaUrl') ? $rating->getFirstMediaUrl('rating') : null;
 
             // Add SVG icon directly to the array
-            $rowData['svg_icon'] = $svgIcons[$key % count($svgIcons)];
+            $rowData['svg_icon'] = $svgIcons[count($ratings_array) % count($svgIcons)];
             $rowData['effect'] = false;
-            $ratings_array[$key] = $rowData;
+            $ratings_array[] = $rowData;
         }
 
         return $ratings_array;
@@ -91,7 +98,7 @@ trait HasRating
 
     public function getBettingUsers(): int
     {
-        return RatingMorph::where('model_id', $this->id)
+        return RatingMorph::where('model_id', $this->getKey())
             ->where('user_id', '!=', null)
             ->distinct('user_id')
             ->count('user_id');
@@ -102,15 +109,15 @@ trait HasRating
     {
         $ratings_options = $this->getOptionRatingsIdTitle();
         $result = [];
-        foreach ($ratings_options as $key => $value) {
-            $b = RatingMorph::where('model_id', $this->id)
+        foreach (array_keys($ratings_options) as $key) {
+            $b = RatingMorph::where('model_id', $this->getKey())
                 ->where('user_id', '!=', null)
                 ->count();
             if ($b === 0) {
                 $b = 1;
             }
 
-            $a = RatingMorph::where('model_id', $this->id)
+            $a = RatingMorph::where('model_id', $this->getKey())
                 ->where('user_id', '!=', null)
                 ->where('rating_id', $key)
                 ->count();
@@ -131,7 +138,7 @@ trait HasRating
             $total_volume = 1;
         }
 
-        foreach ($ratings_options as $key => $value) {
+        foreach (array_keys($ratings_options) as $key) {
             $volume = $this->getVolumeCredit(is_int($key) ? $key : (int) $key);
             $result[$key] = round($volume * 100 / $total_volume, 0);
         }
@@ -141,7 +148,7 @@ trait HasRating
 
     public function getVolumeCredit(?int $rating_id = null): float
     {
-        $query = RatingMorph::where('model_id', $this->id)
+        $query = RatingMorph::where('model_id', $this->getKey())
             ->where('user_id', '!=', null);
 
         if ($rating_id !== null) {

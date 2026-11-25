@@ -13,7 +13,7 @@ use Modules\Xot\Tests\XotBaseTestCase;
 /**
  * Base test case for Rating module.
  *
- * Uses shared sqlite from fixcity_data.sqlite (no migrate:fresh / RefreshDatabase).
+ * Uses shared sqlite from database.sqlite (no migrate:fresh / RefreshDatabase).
  */
 abstract class TestCase extends XotBaseTestCase
 {
@@ -33,11 +33,27 @@ abstract class TestCase extends XotBaseTestCase
         ];
     }
 
+    /**
+     * Lo sqlite condiviso (`database/database.sqlite`) non contiene per forza le tabelle
+     * del modulo: le migration non vengono lanciate dai test (mai `RefreshDatabase`).
+     * I test che toccano il DB vanno saltati, non falliti: è un blocco d'ambiente.
+     */
+    public static function ratingDbUnavailable(): bool
+    {
+        try {
+            DB::connection('rating')->getPdo();
+
+            return ! DB::connection('rating')->getSchemaBuilder()->hasTable('ratings');
+        } catch (\Throwable) {
+            return true;
+        }
+    }
+
     protected function setUp(): void
     {
         parent::setUp();
 
-        $database = database_path('fixcity_data.sqlite');
+        $database = self::sharedSqlitePath();
 
         /** @var array<string, array<string, mixed>> $connections */
         $connections = config('database.connections', []);

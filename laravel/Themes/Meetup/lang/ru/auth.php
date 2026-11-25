@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 return [
     'login' => [
-        'title' => 'С возвращением в Laravel Pizza Meetups! 🍕',
+        'title' => 'С возвращением в Laravel Pizza Meetups!',
         'subtitle' => 'Войдите, чтобы записываться на митапы и управлять регистрациями.',
         'page_title' => 'Вход',
     ],

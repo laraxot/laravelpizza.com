@@ -15,13 +15,10 @@ return [
         'plural' => [
             'label' => 'Rating',
         ],
-        'group' => [
-            'name' => [
-                'label' => 'Admin',
-            ],
-        ],
+        'group' => 'Opzioni di voto',
         'sort' => 33,
         'label' => 'Rating',
+        'icon' => 'heroicon-o-star',
     ],
     'fields' => [
         'brand' => [
@@ -32,6 +29,9 @@ return [
         ],
         'description' => [
             'label' => 'Descrizione',
+            'placeholder' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'serial_number' => [
             'label' => 'Numero di serie',
@@ -64,42 +64,92 @@ return [
             'label' => 'Nome',
         ],
         'is_disabled' => [
-            'label' => 'is_disabled',
+            'label' => 'Disattivato',
         ],
         'is_readonly' => [
-            'label' => 'is_readonly',
+            'label' => 'Sola lettura',
         ],
         '_tpl' => [
-            'label' => '_tpl',
+            'label' => ' tpl',
         ],
         'ratings' => [
-            'label' => 'ratings',
+            'label' => 'Opzioni',
+            'placeholder' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'id' => [
-            'label' => 'id',
+            'label' => 'ID',
+            'placeholder' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'title' => [
-            'label' => 'title',
+            'label' => 'Titolo',
+            'placeholder' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'color' => [
-            'label' => 'color',
+            'label' => 'Colore',
+            'placeholder' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'rating' => [
-            'label' => 'rating',
-            'description' => 'rating',
-            'helper_text' => 'rating',
+            'label' => 'Opzione',
+            'description' => '',
+            'helper_text' => '',
+            'placeholder' => '',
         ],
         'view' => [
-            'label' => 'view',
+            'label' => 'Vista',
+            'placeholder' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'anno' => [
-            'label' => 'anno',
+            'label' => 'Anno',
         ],
         'type' => [
-            'label' => 'type',
+            'label' => 'Tipo',
         ],
         'rule' => [
-            'label' => 'rule',
+            'label' => 'Regola',
+        ],
+        'disabled' => [
+            'label' => 'Disattivato',
+            'placeholder' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'slug' => [
+            'label' => 'Indirizzo (slug)',
+        ],
+        'order_column' => [
+            'label' => 'Ordine',
+        ],
+        'created_at' => [
+            'label' => 'Creato il',
+        ],
+        'updated_at' => [
+            'label' => 'Aggiornato il',
+        ],
+        'pivot' => [
+            'user' => [
+                'name' => [
+                    'label' => 'Nome',
+                ],
+            ],
+        ],
+        'value' => [
+            'label' => 'Valore',
+        ],
+        'is_winner' => [
+            'label' => 'Is winner',
+        ],
+        'reward' => [
+            'label' => 'Reward',
         ],
     ],
     'actions' => [
@@ -176,89 +226,89 @@ return [
             ],
         ],
         'delete' => [
-            'tooltip' => 'delete',
+            'tooltip' => '',
             'icon' => 'delete',
-            'label' => 'delete',
+            'label' => 'Elimina',
         ],
         'edit' => [
-            'tooltip' => 'edit',
+            'tooltip' => '',
             'icon' => 'edit',
-            'label' => 'edit',
+            'label' => 'Modifica',
         ],
         'create' => [
-            'label' => 'create',
+            'label' => 'Nuovo',
             'icon' => 'create',
-            'tooltip' => 'create',
+            'tooltip' => '',
         ],
         'layout' => [
-            'label' => 'layout',
+            'label' => 'Vista',
             'icon' => 'layout',
-            'tooltip' => 'layout',
+            'tooltip' => '',
         ],
         'view' => [
-            'label' => 'view',
+            'label' => 'Vista',
             'icon' => 'view',
-            'tooltip' => 'view',
+            'tooltip' => '',
         ],
         'logout' => [
-            'tooltip' => 'logout',
+            'tooltip' => '',
             'icon' => 'logout',
-            'label' => 'logout',
+            'label' => 'Esci',
         ],
         'cancel' => [
-            'tooltip' => 'cancel',
+            'tooltip' => '',
             'icon' => 'cancel',
-            'label' => 'cancel',
+            'label' => 'Annulla',
         ],
         'createAnother' => [
-            'tooltip' => 'createAnother',
+            'tooltip' => '',
             'icon' => 'createAnother',
-            'label' => 'createAnother',
+            'label' => 'Salva e crea un altro',
         ],
         'profile' => [
-            'tooltip' => 'profile',
+            'tooltip' => '',
             'icon' => 'profile',
-            'label' => 'profile',
+            'label' => 'Profile',
         ],
         'save' => [
-            'label' => 'save',
+            'label' => 'Salva',
             'icon' => 'save',
-            'tooltip' => 'save',
+            'tooltip' => '',
         ],
         'applyFilters' => [
-            'label' => 'applyFilters',
+            'label' => 'Applica filtri',
             'icon' => 'applyFilters',
-            'tooltip' => 'applyFilters',
+            'tooltip' => '',
         ],
         'openFilters' => [
-            'label' => 'openFilters',
+            'label' => 'Filtri',
             'icon' => 'openFilters',
-            'tooltip' => 'openFilters',
+            'tooltip' => '',
         ],
         'resetFilters' => [
-            'label' => 'resetFilters',
+            'label' => 'Azzera filtri',
             'icon' => 'resetFilters',
-            'tooltip' => 'resetFilters',
+            'tooltip' => '',
         ],
         'applyTableColumnManager' => [
-            'label' => 'applyTableColumnManager',
+            'label' => 'Applica colonne',
             'icon' => 'applyTableColumnManager',
-            'tooltip' => 'applyTableColumnManager',
+            'tooltip' => '',
         ],
         'openColumnManager' => [
-            'label' => 'openColumnManager',
+            'label' => 'Scegli colonne',
             'icon' => 'openColumnManager',
-            'tooltip' => 'openColumnManager',
+            'tooltip' => '',
         ],
         'resetColumnManager' => [
-            'label' => 'resetColumnManager',
+            'label' => 'Ripristina colonne',
             'icon' => 'resetColumnManager',
-            'tooltip' => 'resetColumnManager',
+            'tooltip' => '',
         ],
         'reorderRecords' => [
-            'label' => 'reorderRecords',
+            'label' => 'Riordina',
             'icon' => 'reorderRecords',
-            'tooltip' => 'reorderRecords',
+            'tooltip' => '',
         ],
     ],
     'widgets' => [

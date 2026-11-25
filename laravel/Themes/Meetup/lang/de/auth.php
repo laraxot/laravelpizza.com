@@ -108,7 +108,7 @@ return [
     ],
     'login' => [
         'page_title' => 'Anmelden',
-        'title' => 'Willkommen zurück bei Laravel Pizza Meetups! 🍕',
+        'title' => 'Willkommen zurück bei Laravel Pizza Meetups!',
         'subtitle' => 'Melde dich an, um an Meetups teilzunehmen und deine Anmeldungen zu verwalten.',
     ],
 ];

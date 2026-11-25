@@ -1,0 +1,34 @@
+import React from 'react'
+import { flushSync } from 'react-dom'
+import { createRoot } from 'react-dom/client'
+
+function {{ componentIdentifier }}(props) {
+    return (
+        <input
+            id={props.id}
+            type="text"
+            value={props.value ?? ''}
+            disabled={props.isDisabled}
+            readOnly={props.isReadOnly}
+            required={props.isRequired}
+            aria-invalid={props.isInvalid}
+            aria-describedby={props.ariaDescribedBy}
+            onChange={(event) => props.onChange(event.target.value)}
+            onBlur={props.onBlur}
+        />
+    )
+}
+
+export default function mount{{ componentName }}({ host, props: initialProps }) {
+    const root = createRoot(host)
+    const update = (props) => root.render(<{{ componentIdentifier }} {...props} />)
+
+    try {
+        flushSync(() => update(initialProps))
+    } catch (error) {
+        root.unmount()
+        throw error
+    }
+
+    return { update, destroy: () => root.unmount() }
+}

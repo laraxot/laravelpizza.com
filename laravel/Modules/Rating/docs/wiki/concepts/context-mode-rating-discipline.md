@@ -1,21 +1,41 @@
 ---
-title: "Rating Module — Context-Mode Discipline"
+qmd: "context mode rating discipline"
+issues: []
+discussions: []
+title: "Rating Module: Context-Mode Discipline"
 type: "rule"
 tags: [rating, context-mode, filament-zen]
 created: 2026-05-12
 updated: 2026-05-12
+status: draft
 ---
 
-# Rating Module — Context-Mode Discipline
+# Rating Module: Context-Mode Discipline
 
 > Rating module context-mode per Filament resource zen pattern.
 
-## File Wiki Limits — Max 100K
+## File Wiki Limits: Max 100K
 
 ```
 laravel/Modules/Rating/docs/wiki/
 ├── index.md                         # ≤30 righe
 ├── rules/index.md                   # ≤20 righe
+---
+---
+├── rules/index.md                   # ≤20 righe
+---
+├── rules/INDEX.md                   # ≤20 righe
+---
+├── rules/INDEX.md                   # ≤20 righe
+---
+---
+├── rules/INDEX.md                   # ≤20 righe
+---
+├── rules/INDEX.md                   # ≤20 righe
+---
+├── rules/INDEX.md                   # ≤20 righe
+---
+├── rules/INDEX.md                   # ≤20 righe
 └── concepts/
     └── filament-resource-zen-pattern.md  # ≤200 righe
 ```

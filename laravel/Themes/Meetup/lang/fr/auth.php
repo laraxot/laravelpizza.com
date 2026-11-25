@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 return [
     'login' => [
-        'title' => 'Bon retour sur Laravel Pizza Meetups ! 🍕',
+        'title' => 'Bon retour sur Laravel Pizza Meetups !',
         'subtitle' => 'Connectez-vous pour vous inscrire aux meetups et gérer vos réservations.',
         'page_title' => 'Se connecter',
     ],

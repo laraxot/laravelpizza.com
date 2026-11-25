@@ -329,5 +329,27 @@
         "table_schema": "laravelpizza_data",
         "updated_at": "2026-02-13T16:52:52.000000Z",
         "updated_by": "a1123aa9-ca87-4972-bd83-a8ce02868464"
+    },
+    {
+        "table_schema": "laravelpizza_data",
+        "model_class": "Modules\\Rating\\Models\\RatingMorph",
+        "table_name": "rating_morph",
+        "created_by": "01a214ae-27ac-76c4-8a1e-6970d52fad1a",
+        "updated_by": "01a214ae-27ac-76c4-8a1e-6970d52fad1a",
+        "id": "32",
+        "updated_at": "2026-11-25T21:51:21.000000Z",
+        "created_at": "2026-11-25T21:51:21.000000Z",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "laravelpizza_data",
+        "model_class": "Modules\\Rating\\Models\\Rating",
+        "table_name": "ratings",
+        "created_by": "01a214ae-27ac-76c4-8a1e-6970d52fad1a",
+        "updated_by": "01a214ae-27ac-76c4-8a1e-6970d52fad1a",
+        "id": "33",
+        "updated_at": "2026-11-25T21:51:21.000000Z",
+        "created_at": "2026-11-25T21:51:21.000000Z",
+        "table_rows": 0
     }
 ]

@@ -108,7 +108,7 @@ return [
     ],
     'login' => [
         'page_title' => 'Sign in',
-        'title' => 'Welcome back to Laravel Pizza Meetups! 🍕',
+        'title' => 'Welcome back to Laravel Pizza Meetups!',
         'subtitle' => 'Sign in to join meetups and manage your registrations.',
     ],
 ];

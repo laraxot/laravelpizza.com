@@ -1,4 +1,7 @@
 ---
+qmd: "filament resource zen pattern"
+issues: []
+discussions: []
 title: "Filament Resource Zen Pattern (Rating Module)"
 type: concept
 sources: []
@@ -10,6 +13,7 @@ related:
   - ../../Xot/docs/wiki/concepts/xotbase-resource-zen-pattern.md
   - ../../Xot/docs/wiki/concepts/xotbase-resourceform-zen-pattern.md
   - ../../Xot/docs/wiki/concepts/xotbase-resource-table-zen-pattern.md
+status: draft
 ---
 
 # Filament Resource Zen Pattern (Rating Module)

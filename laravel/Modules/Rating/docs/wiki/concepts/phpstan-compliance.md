@@ -3,8 +3,8 @@ title: "Rating Module - PHPStan Type Compliance"
 type: concept
 tags: [rating, phpstan, types, compliance, quality, static-analysis]
 created: 2026-06-10
-updated: 2026-06-18
-qmd: "rating module phpstan level max zero errors HasRating trait"
+updated: 2026-08-24
+qmd: "rating module phpstan level max zero errors HasRatingsTrait trait.unused isolation"
 related:
   - ../../../../Themes/Sixteen/docs/wiki/concepts/phpstan-compliance.md
   - ../../../../../docs/wiki/concepts/phpstan-level-max-compliance.md
@@ -14,15 +14,21 @@ related:
 
 ## Status
 
-✅ **COMPLIANT** — 0 errors in PHPStan level: max
+`analyse Modules/Rating` (story 4.26, 2026-08-24): **[OK] No errors**. Famiglia E
+chiusa con guardie/`Assert::` sugli host stub, non con cast. `HasLikes` tipizza
+`Like` perché la classe esiste nel tree (fixture FQCN). `phpstan.neon` intoccato.
+
+`analyse Modules` resta il gate canonico: sul sottoalbero `typeCoverage` può spegnersi.
+
+`HasRatingsTrait` può ancora dare `trait.unused` se l'analisi esclude gli stub:
+i consumer di produzione stanno in `Ptv\Models\BaseScheda`. Non aggiungere un `use` finto.
 
 ```
 Module:   Rating
-Path:     laravel/Modules/Rating/
-Status:   GREEN
-Errors:   0
-Level:    max
-Updated:  2026-06-18
+Status:   GREEN su analyse Modules/Rating (4.26)
+Pitfall:  trait.unused se manca l'host stub; typeCoverage solo sul tree Modules
+Level:    max da laravel/phpstan.neon
+Updated:  2026-08-24
 ```
 
 ## Module Structure
@@ -66,9 +72,8 @@ Rating/
 ### CI/CD Pipeline
 
 ```bash
-vendor/bin/phpstan analyse laravel/Modules/Rating \
-  --level=max \
-  --no-progress
+# cwd laravel/ — neon unico, niente --level
+./vendor/bin/phpstan analyse Modules --no-progress --memory-limit=-1
 ```
 
 ### Pre-commit Hook
@@ -76,7 +81,7 @@ vendor/bin/phpstan analyse laravel/Modules/Rating \
 ✅ Developers must pass before committing.
 
 ```bash
-vendor/bin/phpstan analyse laravel/Modules/Rating --level=max
+./vendor/bin/phpstan analyse Modules --no-progress --memory-limit=-1
 ```
 
 ## Type Coverage Summary
@@ -131,9 +136,13 @@ vendor/bin/pest laravel/Modules/Rating/tests --parallel
 **Last Updated**: 2026-06-18  
 **Status**: GREEN
 
-## Trait cleanup (2026-06-18)
+## Host di `HasRatingsTrait`
 
-Rimossi trait **non usati** in app (PHPStan `trait.unused`):
+Il trait è generico (`@template TModel of Model`). Ogni modello host deve dichiarare:
 
-- `HasLikes` — modello `Like` assente, zero consumer
-- `HasRatingsTrait` / `RatingTrait` — legacy duplicati; SSoT rating su modelli rateable = `HasRating` (+ probe `RatingPhpstanTraitProbe`)
+```php
+/** @use HasRatingsTrait<static> */
+use HasRatingsTrait;
+```
+
+SSoT: `Modules/Rating/app/Models/Traits/HasRatingsTrait.php`. Consumer attuali: modelli IndennitaResponsabilita (`IndennitaResponsabilita`, `LettF`, `LettI`).

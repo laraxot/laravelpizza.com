@@ -1,0 +1,26 @@
+import React from 'react'
+import { flushSync } from 'react-dom'
+import { createRoot } from 'react-dom/client'
+import type { JsWidgetProps, JsWidgetRenderer } from '@filament/widgets/js-widget'
+
+type Configuration = { heading?: string; description?: string }
+
+function {{ componentIdentifier }}({ configuration }: JsWidgetProps<Configuration>) {
+    return <><h2>{configuration.heading ?? 'Widget heading'}</h2><p>{configuration.description ?? 'Widget description'}</p></>
+}
+
+const mount{{ componentName }}: JsWidgetRenderer<Configuration> = ({ host, props: initialProps }) => {
+    const root = createRoot(host)
+    const update = (props: JsWidgetProps<Configuration>) => root.render(<{{ componentIdentifier }} {...props} />)
+
+    try {
+        flushSync(() => update(initialProps))
+    } catch (error) {
+        root.unmount()
+        throw error
+    }
+
+    return { update, destroy: () => root.unmount() }
+}
+
+export default mount{{ componentName }}

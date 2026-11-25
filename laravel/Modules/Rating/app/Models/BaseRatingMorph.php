@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Str;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
@@ -109,11 +110,27 @@ abstract class BaseRatingMorph extends BaseMorphPivot
     // -------- RELATIONSHIP -----------
 
     /**
-     * @return BelongsTo<Rating, $this>
+     * Il criterio sta nella tabella `ratings` dello stesso modulo (e connection) del pivot:
+     * `Modules\{Modulo}\Models\Rating` se esiste, altrimenti quello del modulo Rating. Prima
+     * puntava sempre a Rating\Models\Rating (connection `rating`): per Progressioni, IR, ICL, Ptv
+     * leggeva i criteri di un altro database.
+     *
+     * @return BelongsTo<BaseRating, $this>
      */
     public function rating(): BelongsTo
     {
-        return $this->belongsTo(Rating::class, 'rating_id');
+        return $this->belongsTo(static::getRatingClass(), 'rating_id');
+    }
+
+    /**
+     * @return class-string<BaseRating>
+     */
+    public static function getRatingClass(): string
+    {
+        $module = Str::before(Str::after(static::class, 'Modules\\'), '\\');
+        $class = 'Modules\\'.$module.'\\Models\\Rating';
+
+        return class_exists($class) && is_subclass_of($class, BaseRating::class) ? $class : Rating::class;
     }
 
     /**

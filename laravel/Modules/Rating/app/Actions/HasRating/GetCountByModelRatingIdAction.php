@@ -7,6 +7,11 @@ namespace Modules\Rating\Actions\HasRating;
 use Modules\Rating\Models\Contracts\HasRatingContract;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/get-count-by-model-rating-id-action.md
+ *
+ * @contract docs/contracts/get-count-by-model-rating-id-action.md
+ */
 class GetCountByModelRatingIdAction
 {
     use QueueableAction;

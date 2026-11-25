@@ -26,31 +26,12 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  *
  * @property SchemalessAttributes $extra_attributes
  * @property RuleEnum $rule
- * @property RuleEnum $rule
  *
  * @method static Builder|Rating newModelQuery()
  * @method static Builder|Rating newQuery()
  * @method static Builder|Rating query()
  * @method static Builder|Rating withExtraAttributes(array<string, mixed>|string $attributes = [], mixed $value = null)
  *
- * @property int $id
- * @property int $user_id
- * @property float $value
- * @property string|null $related_type
- * @property string|null $created_by
- * @property string|null $updated_by
- * @property string|null $deleted_by
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property int|null $post_id
- * @property string|null $title
- * @property string|null $color
- * @property string|null $icon
- * @property string|null $txt
- * @property bool|null $is_disabled
- * @property bool|null $is_readonly
- * @property int|null $order_column
- * @property Model|Eloquent $linkedTo
  * @property int $id
  * @property int $user_id
  * @property float $value
@@ -91,13 +72,12 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @property int|null $media_count
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- * @property int|null $media_count
- * @property ProfileContract|null $creator
- * @property ProfileContract|null $updater
  *
  * @method static RatingFactory factory($count = null, $state = [])
  *
  * @property ProfileContract|null $deleter
+ *
+ * @method static Builder<static>|Rating whereExtraAttributes($value)
  *
  * @mixin Eloquent
  */

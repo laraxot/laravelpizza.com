@@ -4,6 +4,7 @@ type: documentation
 tags: [module, documentation]
 created: 2026-06-05
 updated: 2026-06-05
+qmd: "rating"
 ---
 
 # Modulo Rating
@@ -31,14 +32,14 @@ Rating/
 
 ## Dipendenze
 
-- [Xot Base](../Xot/docs/)
-- [User Module](../User/docs/) (se usa autenticazione)
-- [Tenant Module](../Tenant/docs/) (se multi-tenant)
+- [Xot Base](../../Xot/docs/)
+- [User Module](../../User/docs/) (se usa autenticazione)
+- [Tenant Module](../../Tenant/docs/) (se multi-tenant)
 
 ## Collegamenti
 
 - [Documentazione Root](../../../docs/RATING_MODULE.md)
-- [Regole Architecture](../Xot/docs/architecture/)
+- [Regole Architecture](../../Xot/docs/architecture/)
 
 ## Backlinks
 
@@ -57,12 +58,12 @@ Rating/
 ## Standard Rules & Workflow
 
 - [[BMAD Method](../../../../docs/wiki/concepts/bmad-method.md)]
-- [[Context Engineering](../../../../docs/wiki/concepts/context-engineering.md)]
+- [[Context Engineering](../../../../bashscripts/ai/wiki/concepts/context-token-optimization.md#context-engineering)]
 - [[LLM Wiki Governance](../../../../docs/wiki/concepts/llm-wiki-governance.md)]
 
 ## Documentation
 
-- [On-Demand Pattern](./on-demand-pattern.md) — Pattern per caricamento efficiente
-- [QMD Setup](./qmd-setup.md) — Configurazione ricerca locale
-- [Performance](./performance-optimization.md) — Metriche e best practice
-- [Project Structure](./project-structure.md) — Directory layout
+- [On-Demand Pattern](./ON-DEMAND-PATTERN.md) — Pattern per caricamento efficiente
+- [QMD Setup](./QMD-SETUP.md) — Configurazione ricerca locale
+- [Performance](./PERFORMANCE-OPTIMIZATION.md) — Metriche e best practice
+- [Project Structure](./PROJECT-STRUCTURE.md) — Directory layout

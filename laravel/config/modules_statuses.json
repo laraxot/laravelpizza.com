@@ -12,5 +12,7 @@
     "Tenant": true,
     "UI": true,
     "User": true,
-    "Xot": true
+    "Xot": true,
+    "Rating": true,
+    "AI": true
 }

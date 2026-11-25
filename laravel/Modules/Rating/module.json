@@ -1,14 +1,17 @@
 {
     "name": "Rating",
     "alias": "rating",
-    "description": "",
+    "description": "Modulo per valutazioni e recensioni (rating) di entità del sistema, con gestione Filament e attributi schemaless",
     "keywords": [],
     "priority": 0,
+    "active": 1,
+    "order": 20,
     "providers": [
         "Modules\\Rating\\Providers\\RatingServiceProvider",
         "Modules\\Rating\\Providers\\Filament\\AdminPanelProvider"
     ],
-    "aliases": [],
+    "aliases": {},
     "files": [],
-    "requires": []
+    "requires": ["Xot", "Media"],
+    "phpVersion": "^8.3"
 }
