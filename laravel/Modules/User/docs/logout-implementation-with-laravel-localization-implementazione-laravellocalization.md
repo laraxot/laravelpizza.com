@@ -75,6 +75,12 @@ mount(function() {
         Auth::logout();
         session()->invalidate();
         session()->regenerateToken();
+
+        // Dispatch dell'evento dopo il logout
+        Event::dispatch('auth.logout.successful');
+    }
+
+    }
         
         // Dispatch dell'evento dopo il logout
         Event::dispatch('auth.logout.successful');

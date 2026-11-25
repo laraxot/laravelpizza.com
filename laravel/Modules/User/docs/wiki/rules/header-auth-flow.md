@@ -11,10 +11,14 @@ related:
   - "./navigation-properties.md"
   - "./no-filament-labels.md"
   - "./no-notifications-migration-in-user-module.md"
+<<<<<<< .merge_file_GpsHmH
 <<<<<<< .merge_file_DUMlDy
 qmd: "header auth flow"
 =======
 >>>>>>> .merge_file_Dbq24Q
+=======
+qmd: "header auth flow"
+>>>>>>> .merge_file_NJ2n8X
 ---
 
 ## Rule Overview

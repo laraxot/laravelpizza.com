@@ -17,7 +17,7 @@ uses(TestCase::class)->group('no-xot-db');
  * Un uses()->in() nel Pest.php di un modulo non gira col runner di root (i test restano senza applicazione) e con
  * --test-directory raddoppia il binding dei file (TestCaseAlreadyInUse). Il TestCase si lega in ogni file.
  *
- * @see Modules/Xot/docs/adr/pest-testcase-binding-per-file.md
+ * @see Modules/Xot/docs/adr/0034-pest-testcase-binding-per-file.md
  */
 it('keeps the TestCase binding out of every module and theme Pest.php', function (): void {
     $offenders = [];

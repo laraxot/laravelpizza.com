@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_YOImOQ
 qmd: "service provider warning"
-=======
->>>>>>> .merge_file_HB5sym
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/service-provider-warning.md

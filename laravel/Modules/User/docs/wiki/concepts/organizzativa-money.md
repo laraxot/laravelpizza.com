@@ -11,10 +11,14 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
+<<<<<<< .merge_file_KFiHWs
 <<<<<<< .merge_file_edoRxj
 qmd: "organizzativa money"
 =======
 >>>>>>> .merge_file_U3dqZ6
+=======
+qmd: "organizzativa money"
+>>>>>>> .merge_file_GFY4bC
 ---
 
 See canonical documentation: ../../../../../Themes/docs/shared-components/organizzativa-money-Modules.md

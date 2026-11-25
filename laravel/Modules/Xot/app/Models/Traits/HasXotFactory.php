@@ -23,7 +23,7 @@ use Modules\Xot\Actions\Factory\GetFactoryAction;
  * PHPStan: return is `Factory<static>` so `Model::factory()->create()` is typed.
  * Prefer this over per-test `ModelFactory::new()` when the trait contract holds.
  *
- * @see docs/wiki/second-brain/phpstan-journey.md (Model::factory → mixed)
+ * @see docs/wiki/analysis/modules/xot/phpstan-journey.md (Model::factory → mixed)
  * @see docs/wiki/patterns/phpstan-eloquent-typing-without-baseline.md
  *
  * @mixin Model

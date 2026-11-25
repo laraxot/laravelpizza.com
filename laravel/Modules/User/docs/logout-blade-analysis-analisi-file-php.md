@@ -23,6 +23,15 @@ status: draft
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
+- [Volt Folio Logout](./volt-folio-logout-panoramica.md)
+- [Auth Pages Implementation](./auth-pages-implementation.md)
+- [Logout Blade Implementation](./logout-blade-implementation-posizione-corretta.md)
+- [Convenzioni Path](./path-conventions-user.md)
+- [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error-identificazione-dell.md)
+
+## Panoramica
+
+Questo documento analizza l'implementazione attuale del file `logout.blade.php` situato in `Themes/One/resources/views/pages/auth/`, identifica problemi e propone miglioramenti in linea con le convenzioni di <nome progetto>.
 - [Volt Folio Logout](./volt-folio-logout-2.md)
 - [Auth Pages Implementation](./auth-pages-implementation.md)
 - [Logout Blade Implementation](./logout-blade-implementation-2.md)
@@ -419,6 +428,11 @@ new class extends Component {
         Auth::logout();
         session()->invalidate();
         session()->regenerateToken();
+
+        $locale = app()->getLocale();
+        return redirect()->to('/' . $locale);
+    }
+
         
         $locale = app()->getLocale();
         return redirect()->to('/' . $locale);

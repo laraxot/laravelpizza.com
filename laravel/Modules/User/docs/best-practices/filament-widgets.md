@@ -137,8 +137,13 @@ use Filament\Widgets\Concerns\CanPoll;
 - [Lang - Filament Translations](../../../Lang/docs/filament-translations-2.md) - Traduzioni in Filament
 - [UI - Form Filament Widgets](../../../ui/project_docs/form_filament_widgets.md) - Widget per form Filament
 ### Documentazione Interna
+<<<<<<< .merge_file_rJHmWo
 - [README del modulo User](../readme.md) - Indice principale del modulo User
 - [Filament Best Practices](../filament-best-practices-2.md) - Best practices generali per Filament
+=======
+- [README del modulo User](../README.md) - Indice principale del modulo User
+- [Filament Best Practices](../filament_best_practices.md) - Best practices generali per Filament
+>>>>>>> .merge_file_W7UKgK
 ## Risorse Utili
 - [Documentazione Filament](https://filamentphp.com/docs)
 - [Laravel Blade](https://laravel.com/docs/blade)

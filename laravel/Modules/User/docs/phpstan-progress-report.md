@@ -12,10 +12,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_Fv9UVL
 qmd: "phpstan progress report"
-=======
->>>>>>> .merge_file_fD6xlU
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-progress-report.md

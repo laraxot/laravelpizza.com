@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_gnYkkB
 ---
 title: "User Module - PHPStan Level 10 Fix Plan"
 type: note
 qmd: "phpstan fix plan user level"
 ---
-=======
->>>>>>> .merge_file_xWCJfJ
 # User Module - PHPStan Level 10 Fix Plan
 
 ## Analysis Date
@@ -638,6 +635,7 @@ This confirms that the project is using a version of Filament where Forms seem t
 ## Implementation
 - Search for `Grid.php`.
 - Update `OauthClientResource` imports.
+<<<<<<< .merge_file_iYQw6A
 <<<<<<< .merge_file_gnYkkB
 =======
 
@@ -697,3 +695,5 @@ related:
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-fix-plan-2.md
 >>>>>>> .merge_file_xWCJfJ
+=======
+>>>>>>> .merge_file_xACIQ5

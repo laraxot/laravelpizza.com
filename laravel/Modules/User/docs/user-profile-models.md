@@ -11,10 +11,14 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_5UJjF8
 <<<<<<< .merge_file_El3HhM
 qmd: "user profile models"
 =======
 >>>>>>> .merge_file_iHsiyU
+=======
+qmd: "user profile models"
+>>>>>>> .merge_file_TMpWT2
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/user-profile-models.md

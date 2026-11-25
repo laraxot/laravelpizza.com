@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_JbDYI1
 qmd: "placeholder"
-=======
->>>>>>> .merge_file_pH0N0g
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/placeholder.txt

@@ -1,4 +1,6 @@
 ---
+title: "Inventario piattaforma — Livewire HTTP → Filament widget"
+
 title: "Inventario piattaforma: Livewire HTTP → Filament widget"
 type: inventory
 module: User

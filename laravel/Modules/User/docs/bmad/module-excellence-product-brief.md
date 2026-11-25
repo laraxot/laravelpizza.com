@@ -1,4 +1,6 @@
 ---
+title: "Product brief — User module: percorso verso la perfezione assoluta"
+
 title: "Product brief: User module: percorso verso la perfezione assoluta"
 type: product-brief
 module: User

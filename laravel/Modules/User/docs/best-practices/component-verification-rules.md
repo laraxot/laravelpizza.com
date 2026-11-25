@@ -162,3 +162,5 @@ Prima di usare qualsiasi componente:
 - [Documentazione Filament Ufficiale](https://filamentphp.com/docs)
 - [Laravel Blade Components](https://laravel.com/docs/blade#components)
 - [Componenti UI del Progetto](../../../../Themes/Sixteen/resources/views/components/ui)
+- [Componenti UI del Progetto](../../../../Themes/Sixteen/resources/views/components/ui)
+- [Componenti UI del Progetto](../../../../Themes/Sixteen/resources/views/components/ui)

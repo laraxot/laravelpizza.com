@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+use Modules\User\Models\BaseTenant;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Filament\Models\Contracts\HasAvatar;
 use Modules\User\Contracts\TenantContract;
 use Modules\User\Models\Tenant;

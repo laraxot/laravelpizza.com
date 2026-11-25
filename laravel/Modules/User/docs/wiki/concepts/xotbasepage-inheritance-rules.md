@@ -15,10 +15,14 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
+<<<<<<< .merge_file_BW1GhR
 <<<<<<< .merge_file_pVrHNd
 qmd: "xotbasepage inheritance rules autotranslation transtrait"
 =======
 >>>>>>> .merge_file_qJOksY
+=======
+qmd: "xotbasepage inheritance rules autotranslation transtrait"
+>>>>>>> .merge_file_Ju2TFp
 ---
 
 # XotBasePage Inheritance Rules

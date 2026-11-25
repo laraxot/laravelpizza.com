@@ -14,10 +14,14 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_g41pdy
 <<<<<<< .merge_file_sPT8Av
 qmd: "testcase hasusertestcase property conflict fixed fatal"
 =======
 >>>>>>> .merge_file_fXrJwB
+=======
+qmd: "testcase hasusertestcase property conflict fixed fatal"
+>>>>>>> .merge_file_zzpH0r
 ---
 
 # Fatal error risolto: `TestCase` vs `HasUserTestCase` — conflitto proprietà `$user`

@@ -24,16 +24,4 @@ allineandomi alla regola piattaforma gia' applicata in Ptv.
 ## Riferimenti
 
 - [form-column-parity.md](../form-column-parity.md)
-<<<<<<< .merge_file_YMoqSp
 - [Ptv form-column-parity.md](../form-column-parity.md)
-=======
-<<<<<<< HEAD
-- [Ptv form-column-parity.md](../../Ptv/docs/form-column-parity.md)
-=======
-<<<<<<< HEAD
-- [Ptv form-column-parity.md](../../Ptv/docs/form-column-parity.md)
-=======
-- [Ptv form-column-parity.md](../form-column-parity.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> .merge_file_d66lXN

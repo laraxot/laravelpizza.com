@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_G0dElg
 qmd: "product strategy 1"
-=======
->>>>>>> .merge_file_Mk82l0
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/PRODUCT_STRATEGY-Modules.md

@@ -28,7 +28,7 @@ class GetYearOptionsAction
      */
     public function execute(string $class, array $fallback): array
     {
-        $config = app(ResolveModuleConfigDataAction::class)->execute($class);
+        $config = app(GetModuleConfigDataAction::class)->execute($class);
         if ($config instanceof YearsConfigContract) {
             return $config->getAnniOptions();
         }

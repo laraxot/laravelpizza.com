@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_akRMUD
 qmd: "passport"
-=======
->>>>>>> .merge_file_QA4ONn
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/passport-Modules.md

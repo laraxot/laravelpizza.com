@@ -18,10 +18,6 @@ related:
   - "./actions-path-convention.md"
 ---
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 # User Module - PHPStan Fixes Session 2025-10-01
 
 ## ⚠️ Stato: IN PROGRESS - 95 errori rimanenti
@@ -31,22 +27,13 @@ related:
 **Errori iniziali**: ~100+ (bloccavano analisi)
 **Errori attuali**: 95
 **Errori critici risolti**: 7 (syntax errors)
-<<<<<<< .merge_file_C95mek
 =======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> .merge_file_rTtu9D
 # Correzioni PHPStan — Modulo User
 
 ## Scopo
 
 Il modulo User gestisce autenticazione, ruoli, team, tenant e OAuth. Gli errori PHPStan qui non sono "tipi da zittire": indicano contratti Filament/Livewire/lang corrotti o test che non tipizzano la pagina sotto test.
-<<<<<<< .merge_file_C95mek
 =======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> .merge_file_rTtu9D
 
 ---
 
@@ -244,19 +231,8 @@ public function canAccessTenant(\Illuminate\Database\Eloquent\Model $tenant): bo
 
 ## 🔗 Collegamenti
 
-<<<<<<< .merge_file_C95mek
-- [← User Module README](./readme.md)
-=======
-<<<<<<< HEAD
 - [← User Module README](./README.md)
-=======
-<<<<<<< HEAD
 - [← User Module README](./readme.md)
-=======
-- [← User Module README](./README.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> .merge_file_rTtu9D
 - [← PHPStan Session Report](../../../../docs/phpstan/filament-v4-fixes-session.md)
 - [← Final Report](../../../../docs/phpstan/final-report-session-2025-10-01.md)
 - [← Root Documentation](../../../../docs/index.md)
@@ -975,10 +951,6 @@ Artisan::call('db:seed', ['--class' => UserSeeder::class, '--no-interaction' => 
 
 - `tests/Feature/DemoUserSeederTest.pest.php` — Feature test with Pest DSL
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ## Pattern: Pest with TestCase Context
 
 When Pest test closures need TestCase methods:
@@ -1002,17 +974,10 @@ it('test name', function (): void {
 
 - [Pest Scope Type Hints](../../docs/wiki/skills/pest-scope-type-hints.md)
 - [PHPStan Sacred Configuration](../../docs/wiki/rules/phpstan-neon-sacred.md)
-<<<<<<< .merge_file_C95mek
-- Story operativa: [phpstan-zero-errors-user.story.md](./stories/phpstan-zero-errors-user.story.md)
-- Gate: `cd laravel && ./vendor/bin/phpstan analyse Modules` (neon immutabile)
-- Prompt: [37-phpstan.md](../../../../bashscripts/docs/prompts/37-phpstan.md)
-=======
-<<<<<<< HEAD
-=======
-=======
 - Story operativa: [phpstan-zero-errors-user.story.md](./stories/phpstan-zero-errors-user.story.md)
 - Gate: `cd laravel && ./vendor/bin/phpstan analyse Modules` (neon immutabile)
 - Prompt: [11-phpstan.md](../../../../bashscripts/docs/prompts/11-phpstan.md)
+<<<<<<< .merge_file_AW3Jvz
 >>>>>>> .merge_file_rTtu9D
 
 ## Fix sessione ripresa (2026-11-17)
@@ -1560,3 +1525,5 @@ See canonical documentation: ../../../Themes/docs/shared-components/phpstan-fixe
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_rTtu9D
+=======
+>>>>>>> .merge_file_9NkxG2

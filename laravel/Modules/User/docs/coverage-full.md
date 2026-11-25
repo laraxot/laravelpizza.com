@@ -9,11 +9,16 @@ issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./00-index-indice-documentazione-modulo-user.md"
+
+  - "./00-index-indice-documentazione-modulo-user.md"
   - "./00-index.md"
   - "./2fa-guide.md"
   - "./2fa.md"
   - "./accessor-delegation-pattern.md"
   - "./actions-path-convention.md"
+  - "./actions-path-convention-convenzione-percorsi.md"
+  - "./actions-path-convention.md"
+
   - "./actions-path-convention-convenzione-percorsi.md"
 status: draft
 ---
@@ -434,9 +439,7 @@ status: draft
   ✓ Authentication Business Logic → Team Management Logic → it validate… 0.24s  
   ✓ Authentication Business Logic → Team Management Logic → it handles…  0.25s  
   ✓ Authentication Business Logic → Role-Based Access Control → it vali… 0.24s  
-  ✓ Authentication Business Logic → Role-Based Access Control → it vali… 0.24s  
   ✓ Authentication Business Logic → Role-Based Access Control → it hand… 0.25s  
-  ✓ Authentication Business Logic → Role-Based Access Control → it vali… 0.24s  
   ✓ Authentication Business Logic → OAuth Integration Logic → it valida… 0.23s  
   ✓ Authentication Business Logic → OAuth Integration Logic → it handle… 0.25s  
   ✓ Authentication Business Logic → OAuth Integration Logic → it valida… 0.24s  
@@ -447,6 +450,10 @@ status: draft
   ✓ Authentication Business Logic → Device Management Logic → it handle… 0.55s  
   ✓ Authentication Business Logic → Session Security Logic → it validat… 0.25s  
   ✓ Authentication Business Logic → Session Security Logic → it handles… 0.23s  
+
+   PASS  Modules\User\tests\Unit\ChangeTypeCommandTest
+  ✓ ChangeTypeCommand → it can be instantiated                           0.01s  
+
   ✓ Authentication Business Logic → Session Security Logic → it validat… 0.25s  
 
    PASS  Modules\User\tests\Unit\ChangeTypeCommandTest
@@ -516,9 +523,7 @@ status: draft
   ⨯ it handles edge cases
 
    FAIL  Modules\User\tests\Unit\HasTeamsTraitTest
-  ⨯ it correctly checks if user belongs to teams                         0.25s  
   ✓ it correctly checks if user belongs to specific team                 0.26s  
-  ✓ it correctly checks team ownership                                   0.25s  
   ✓ it uses belongs to many x for teams relationship                     0.24s  
   ⨯ it correctly manages current team                                    0.43s  
   ✓ it correctly identifies current team                                 0.40s  
@@ -1151,6 +1156,7 @@ Stack trace:
 #118 {main}
 
 Next Illuminate\View\ViewException: Vite manifest not found at: /var/www/_bases/base_app_fila5_mono/public_html/build/manifest.json (View: /var/www/_bases/base_app_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php) (View: /var/www/_bases/base_app_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php) in /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:946
+=======
 Stack trace:
 #0 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(58): Illuminate\View\Engines\CompilerEngine->handleViewException()
 #1 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(59): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->handleViewException()
@@ -2415,6 +2421,7 @@ Stack trace:
 #118 {main}
 
 Next Illuminate\View\ViewException: Vite manifest not found at: /var/www/_bases/base_app_fila5_mono/public_html/build/manifest.json (View: /var/www/_bases/base_app_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php) (View: /var/www/_bases/base_app_fila5_mono/laravel/Modules/UI/resources/views/components/layouts/main.blade.php) in /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:946
+=======
 Stack trace:
 #0 /var/www/_bases/base_app_fila5_mono/laravel/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(58): Illuminate\View\Engines\CompilerEngine->handleViewException()
 #1 /var/www/_bases/base_app_fila5_mono/laravel/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(59): Livewire\Mechanisms\ExtendBlade\ExtendedCompilerEngine->handleViewException()
@@ -8459,7 +8466,6 @@ Database connection [ptvx] not configured.
   -'4941682b-2346-3ece-a6b8-22aca55f29c4'
   +'0cac6ff4-e546-3f0e-85a8-77426ea68dec'
   
-
   at Modules/User/tests/Unit/Models/TenantTest.php:86
      82▕ 
      83▕     $foundTenant = Tenant::where('name', 'Unique Tenant Name')->first();
@@ -8484,7 +8490,6 @@ Database connection [ptvx] not configured.
   -'11de3251-6ed9-3753-8a34-b5862be43e57'
   +'a5ddcf4e-73ca-37a0-87c3-2bee656d1a2d'
   
-
   at Modules/User/tests/Unit/Models/TenantTest.php:95
      91▕ 
      92▕     $foundTenant = Tenant::where('slug', 'unique-tenant')->first();
@@ -8509,7 +8514,6 @@ Database connection [ptvx] not configured.
   -'b4d45187-8d0b-3d47-a3ac-014642971f02'
   +'146f7c32-24f5-3115-84bb-4461b80bdc1d'
   
-
   at Modules/User/tests/Unit/Models/TenantTest.php:104
     100▕ 
     101▕     $foundTenant = Tenant::where('domain', 'uniquetenant.com')->first();
@@ -8534,7 +8538,6 @@ Database connection [ptvx] not configured.
   -'427724c0-67d8-3f8c-97d1-df05b14f7cd9'
   +'385f0a0b-4cec-3fff-bc7e-b46e2600aaca'
   
-
   at Modules/User/tests/Unit/Models/TenantTest.php:113
     109▕ 
     110▕     $foundTenant = Tenant::where('database', 'unique_db')->first();

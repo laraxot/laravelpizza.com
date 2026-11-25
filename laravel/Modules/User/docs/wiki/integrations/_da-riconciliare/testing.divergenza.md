@@ -5,10 +5,14 @@ type: note
 tags: [xot-5.39, riconciliazione, docs-ownership]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_PO2BAT
 <<<<<<< .merge_file_aB4Xk5
 qmd: "testing divergenza riconciliare testingmd"
 =======
 >>>>>>> .merge_file_PhzobA
+=======
+qmd: "testing divergenza riconciliare testingmd"
+>>>>>>> .merge_file_0ApNTW
 ---
 
 # Divergenza: `testing.md`

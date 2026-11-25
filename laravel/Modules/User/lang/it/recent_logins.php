@@ -13,9 +13,9 @@ return [
     'fields' => [
         'authenticatable' => [
             'name' => [
-                'label' => 'Utente autenticato',
+                'label' => 'authenticatable.name',
             ],
-            'label' => 'Utente autenticato',
+            'label' => '',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -24,13 +24,19 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+<<<<<<< .merge_file_PYk99O
             'label' => 'Ora accesso',
         ],
         'ip_address' => [
+=======
+            'label' => 'login_at',
+        ],
+        'ip_address' => [
+            'label' => 'Indirizzo IP',
+>>>>>>> .merge_file_ucAOoc
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-            'label' => 'Indirizzo IP',
         ],
         'user_agent' => [
             'label' => 'Browser (user agent)',
@@ -64,15 +70,19 @@ return [
             'description' => '',
         ],
         'user' => [
+<<<<<<< .merge_file_PYk99O
+=======
+            'label' => 'Utente',
+>>>>>>> .merge_file_ucAOoc
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-            'label' => 'Utente',
         ],
     ],
     'actions' => [
         'reorderRecords' => [
             'icon' => 'reorderRecords',
+<<<<<<< .merge_file_PYk99O
             'label' => 'Riordina',
         ],
         'openColumnManager' => [
@@ -90,26 +100,45 @@ return [
         'applyFilters' => [
             'icon' => 'applyFilters',
             'label' => 'Applica filtri',
+=======
+            'label' => 'reorderRecords',
+        ],
+        'openColumnManager' => [
+            'icon' => 'openColumnManager',
+            'label' => 'openColumnManager',
+        ],
+        'applyTableColumnManager' => [
+            'icon' => 'applyTableColumnManager',
+            'label' => 'applyTableColumnManager',
+        ],
+        'resetFilters' => [
+            'icon' => 'resetFilters',
+            'label' => 'resetFilters',
+        ],
+        'applyFilters' => [
+            'icon' => 'applyFilters',
+            'label' => 'applyFilters',
+>>>>>>> .merge_file_ucAOoc
         ],
         'openFilters' => [
             'icon' => 'openFilters',
-            'label' => 'Apri filtri',
+            'label' => 'openFilters',
         ],
         'resetColumnManager' => [
             'icon' => 'resetColumnManager',
-            'label' => 'Reimposta colonne',
+            'label' => 'resetColumnManager',
         ],
         'delete' => [
             'icon' => 'delete',
-            'label' => 'Elimina',
+            'label' => 'delete',
         ],
         'layout' => [
             'icon' => 'layout',
-            'label' => 'Layout',
+            'label' => 'layout',
         ],
         'create' => [
             'icon' => 'create',
-            'label' => 'Crea',
+            'label' => 'create',
         ],
     ],
     'navigation' => [

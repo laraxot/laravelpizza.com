@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_NLhk4U
 <<<<<<< .merge_file_ty6JZ3
 ---
 title: "Task: Query Optimization User"
@@ -6,6 +7,8 @@ qmd: "query optimization user task"
 ---
 =======
 >>>>>>> .merge_file_UuT7E7
+=======
+>>>>>>> .merge_file_JRFO5z
 # Task: Query Optimization User
 
 **Modulo**: User  

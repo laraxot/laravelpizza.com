@@ -10,9 +10,9 @@ issues:
 discussions:
   - "https://github.com/laraxot/base_techplanner_fila5/discussions/12"
 related:
-  - ../../../../../../docs/wiki/concepts/git-forward-only-discipline.md
-  - ../../../../../../docs/wiki/concepts/git-forward-only-study-old-version.md
-  - ../../../../../../docs/wiki/memories/no-git-restore-study-improve.md
+  - ../../../../../../bashscripts/ai/wiki/concepts/git-discipline.md#git-forward-only-discipline
+  - ../../../../../../bashscripts/ai/wiki/concepts/git-discipline.md#git-forward-only-study-old-version
+  - ../../../../../../bashscripts/ai/wiki/memories/git-hygiene-incidents.md#no-git-restore-study-improve
 ---
 
 # NO git restore — studia vecchia versione (Xot)
@@ -29,5 +29,5 @@ Git solo avanti. File perso o rotto:
 
 ## Canon
 
-- Hub: [git-forward-only-discipline](../../../../../../docs/wiki/concepts/git-forward-only-discipline.md)
+- Hub: [git-forward-only-discipline](../../../../../../bashscripts/ai/wiki/concepts/git-discipline.md#git-forward-only-discipline)
 - Cursor: `.cursor/rules/git-forward-only.mdc` + `no-git-restore-forward-only.mdc` (**alwaysApply**)

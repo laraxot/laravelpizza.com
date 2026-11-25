@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_g2VZLI
 ---
 title: "FullCalendar Scheduler Documentation - README"
 type: note
 qmd: "fullcalendar scheduler"
 ---
-=======
->>>>>>> .merge_file_QV06eS
 # FullCalendar Scheduler Documentation - README
 
 ## 🎯 Obiettivo

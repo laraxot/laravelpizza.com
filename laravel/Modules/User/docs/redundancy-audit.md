@@ -13,10 +13,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_RbsDnZ
 qmd: "redundancy audit user 20260521"
-=======
->>>>>>> .merge_file_wQAoGS
 ---
 
 # User redundancy audit 2026-05-21

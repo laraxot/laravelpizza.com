@@ -18,7 +18,7 @@ require_once __DIR__.'/scope.php';
  *   che puo' solo scendere. Chi corregge una classe la toglie dalla lista; chi aggiunge una voce lo spiega nella PR.
  *   Il test «debt entries still exist» fa fallire le voci di classi cancellate o rinominate.
  *
- * ADR: Modules/Xot/docs/adr/architecture-tests-pest-arch.md. Rilancio: vendor/bin/pest --testsuite=Arch
+ * ADR: Modules/Xot/docs/adr/0020-architecture-tests-pest-arch.md. Rilancio: vendor/bin/pest --testsuite=Arch
  */
 
 /**

@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_FFiI1H
 <<<<<<< .merge_file_79UVIF
 ---
 title: "Task 001: Implement User Management and Authentication System"
@@ -6,6 +7,8 @@ qmd: "001 user management system task implement"
 ---
 =======
 >>>>>>> .merge_file_AQsJCL
+=======
+>>>>>>> .merge_file_noO5Di
 # Task 001: Implement User Management and Authentication System
 
 ## Description

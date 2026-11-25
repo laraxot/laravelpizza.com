@@ -1075,15 +1075,8 @@ See [CHANGELOG.md](./CHANGELOG.md) for full history.
 - Social login enhancements
 - Advanced audit reporting
 
-<<<<<<< .merge_file_mQ6gJ7
 See [roadmap.md](./roadmap.md) for details.
-=======
-<<<<<<< HEAD
 See [roadmap.md](./roadmap.md) for details.
-=======
-See [ROADMAP.md](./roadmap.md) for details.
->>>>>>> laraxot/dev
->>>>>>> .merge_file_SpkOR9
 
 ---
 

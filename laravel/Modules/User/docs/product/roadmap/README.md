@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_r3Hi8t
 ---
 title: "User Module - Product Roadmap"
 type: note
 qmd: "user product roadmap"
 ---
-=======
->>>>>>> .merge_file_QmztNy
 # User Module - Product Roadmap
 
 ## Overview

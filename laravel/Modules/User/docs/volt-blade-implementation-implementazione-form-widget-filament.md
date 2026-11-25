@@ -16,51 +16,15 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< HEAD
-<<<<<<< .merge_file_yZed7Q
-status: draft
-=======
-=======
-=======
-<<<<<<< .merge_file_DuX5ID
-status: draft
-=======
->>>>>>> .merge_file_Bog6RG
->>>>>>> .merge_file_uEnnpf
->>>>>>> laraxot/dev
 ---
 
 # Implementazione dei Form con Widget Filament
 
 ## Collegamenti correlati
-<<<<<<< HEAD
-- [README modulo User](./README.md)
-=======
-- [README modulo User](./readme.md)
->>>>>>> laraxot/dev
-- [Convenzioni Path](./path-conventions-user.md)
-- [Best Practices Volt e Folio](../../xot/docs/volt_folio_best_practices.md)
-- [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error-3.md)
-<<<<<<< .merge_file_yZed7Q
-=======
-=======
-<<<<<<< HEAD
 - [README modulo User](./readme.md)
 - [Convenzioni Path](./path-conventions-user.md)
 - [Best Practices Volt e Folio](../../xot/docs/volt_folio_best_practices.md)
 - [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error-3.md)
-=======
-- [README modulo User](./README.md)
-- [Convenzioni Path](./path-conventions-user.md)
-- [Best Practices Volt e Folio](../../xot/docs/volt_folio_best_practices.md)
-<<<<<<< .merge_file_DuX5ID
-- [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error-identificazione-dell.md)
-=======
-- [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error-3.md)
->>>>>>> .merge_file_Bog6RG
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> .merge_file_uEnnpf
 
 ## Introduzione
 
@@ -79,21 +43,7 @@ Per i form complessi , l'approccio raccomandato è utilizzare i widget Filament 
 ## Struttura delle Directory
 
 ```
-<<<<<<< HEAD
-<<<<<<< .merge_file_yZed7Q
-/var/www/html/<nome progetto>/laravel/
-=======
 /var/www/html/Quaeris/laravel/
-=======
-/var/www/html/Quaeris/laravel/
-=======
-<<<<<<< .merge_file_DuX5ID
-/var/www/html/<nome progetto>/laravel/
-=======
-/var/www/html/Quaeris/laravel/
->>>>>>> .merge_file_Bog6RG
->>>>>>> .merge_file_uEnnpf
->>>>>>> laraxot/dev
 ├── Modules/
 │   └── User/
 │       └── app/
@@ -128,29 +78,13 @@ Per i form complessi , l'approccio raccomandato è utilizzare i widget Filament 
 <div>
     <form wire:submit="login">
         {{ $this->form }}
-<<<<<<< HEAD
         
-=======
-<<<<<<< .merge_file_DuX5ID
-
-=======
-        
->>>>>>> .merge_file_Bog6RG
->>>>>>> laraxot/dev
         <div class="mt-4">
             <x-filament::button type="submit" class="w-full">
                 {{ __('auth.login.submit_button') }}
             </x-filament::button>
         </div>
-<<<<<<< HEAD
         
-=======
-<<<<<<< .merge_file_DuX5ID
-
-=======
-        
->>>>>>> .merge_file_Bog6RG
->>>>>>> laraxot/dev
         @if ($errors->any())
             <div class="mt-4 p-4 bg-red-50 text-red-700 rounded-lg">
                 <ul class="list-disc pl-5">
@@ -170,29 +104,13 @@ Per i form complessi , l'approccio raccomandato è utilizzare i widget Filament 
 <div>
     <form wire:submit="register">
         {{ $this->form }}
-<<<<<<< HEAD
         
-=======
-<<<<<<< .merge_file_DuX5ID
-
-=======
-        
->>>>>>> .merge_file_Bog6RG
->>>>>>> laraxot/dev
         <div class="mt-4">
             <x-filament::button type="submit" class="w-full">
                 {{ __('auth.register.submit_button') }}
             </x-filament::button>
         </div>
-<<<<<<< HEAD
         
-=======
-<<<<<<< .merge_file_DuX5ID
-
-=======
-        
->>>>>>> .merge_file_Bog6RG
->>>>>>> laraxot/dev
         @if ($errors->any())
             <div class="mt-4 p-4 bg-red-50 text-red-700 rounded-lg">
                 <ul class="list-disc pl-5">
@@ -243,34 +161,14 @@ class LoginFormWidget extends XotBaseWidget
     use InteractsWithForms;
 
     protected static string $view = 'user::livewire.widgets.login-form-widget';
-<<<<<<< HEAD
     
     public ?array $data = [];
     
-=======
-<<<<<<< .merge_file_DuX5ID
-
-    public ?array $data = [];
-
-=======
-    
-    public ?array $data = [];
-    
->>>>>>> .merge_file_Bog6RG
->>>>>>> laraxot/dev
     public function mount(): void
     {
         $this->form->fill();
     }
-<<<<<<< HEAD
     
-=======
-<<<<<<< .merge_file_DuX5ID
-
-=======
-    
->>>>>>> .merge_file_Bog6RG
->>>>>>> laraxot/dev
     public function form(\Filament\Schemas\Schema $form): \Filament\Schemas\Schema
     {
         return $form
@@ -285,29 +183,6 @@ class LoginFormWidget extends XotBaseWidget
             ])
             ->statePath('data');
     }
-<<<<<<< HEAD
-<<<<<<< .merge_file_yZed7Q
-=======
-=======
-<<<<<<< .merge_file_DuX5ID
->>>>>>> .merge_file_uEnnpf
-
-    public function login(): void
-    {
-        $data = $this->form->getState();
-
-        if (Auth::attempt([
-            'email' => $data['email'],
-            'password' => $data['password']
-        ], $data['remember'] ?? false)) {
-            session()->regenerate();
-
-            $locale = app()->getLocale();
-            redirect('/' . $locale . '/dashboard');
-        }
-
-=======
->>>>>>> laraxot/dev
     
     public function login(): void
     {
@@ -323,10 +198,6 @@ class LoginFormWidget extends XotBaseWidget
             redirect('/' . $locale . '/dashboard');
         }
         
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_Bog6RG
->>>>>>> laraxot/dev
         $this->addError('email', __('auth.failed'));
     }
 }
@@ -352,34 +223,14 @@ class RegisterFormWidget extends XotBaseWidget
     use InteractsWithForms;
 
     protected static string $view = 'user::livewire.widgets.register-form-widget';
-<<<<<<< HEAD
     
     public ?array $data = [];
     
-=======
-<<<<<<< .merge_file_DuX5ID
-
-    public ?array $data = [];
-
-=======
-    
-    public ?array $data = [];
-    
->>>>>>> .merge_file_Bog6RG
->>>>>>> laraxot/dev
     public function mount(): void
     {
         $this->form->fill();
     }
-<<<<<<< HEAD
     
-=======
-<<<<<<< .merge_file_DuX5ID
-
-=======
-    
->>>>>>> .merge_file_Bog6RG
->>>>>>> laraxot/dev
     public function form(\Filament\Schemas\Schema $form): \Filament\Schemas\Schema
     {
         return $form
@@ -403,49 +254,20 @@ class RegisterFormWidget extends XotBaseWidget
             ])
             ->statePath('data');
     }
-<<<<<<< HEAD
-<<<<<<< .merge_file_yZed7Q
-=======
-=======
-<<<<<<< .merge_file_DuX5ID
->>>>>>> .merge_file_uEnnpf
-
-    public function register(): void
-    {
-        $data = $this->form->getState();
-
-=======
->>>>>>> laraxot/dev
     
     public function register(): void
     {
         $data = $this->form->getState();
         
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_Bog6RG
->>>>>>> laraxot/dev
         $user = User::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
-<<<<<<< HEAD
         
         Auth::login($user);
         
-=======
-<<<<<<< .merge_file_DuX5ID
-
-        Auth::login($user);
-
-=======
-        
-        Auth::login($user);
-        
->>>>>>> .merge_file_Bog6RG
->>>>>>> laraxot/dev
         $locale = app()->getLocale();
         redirect('/' . $locale . '/dashboard');
     }
@@ -481,20 +303,5 @@ L'utilizzo di widget Filament per l'implementazione dei form  offre un approccio
 ## Collegamenti Correlati
 - [Documentazione Filament Widgets](https://filamentphp.com/docs/3.x/panels/widgets)
 - [Best Practices di Sicurezza](./security_best_practices.md)
-<<<<<<< .merge_file_yZed7Q
 - [Gestione Sessione](./session-management.md)
 - [Tema One Documentation](../../themes/one/docs/README.md) 
-=======
-<<<<<<< HEAD
-- [Gestione Sessione](./session-management.md)
-- [Tema One Documentation](../../themes/one/docs/README.md) 
-=======
-<<<<<<< .merge_file_DuX5ID
-- [Gestione Sessione](./session-management-gestione-sessioni.md)
-- [Tema One Documentation](../../themes/one/docs/readme.md)
-=======
-- [Gestione Sessione](./session-management.md)
-- [Tema One Documentation](../../themes/one/docs/README.md) 
->>>>>>> .merge_file_Bog6RG
->>>>>>> laraxot/dev
->>>>>>> .merge_file_uEnnpf

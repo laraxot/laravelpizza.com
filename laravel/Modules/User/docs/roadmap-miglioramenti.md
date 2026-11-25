@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_VV9NaM
 ---
 title: "User — cosa migliorerei se questo modulo fosse mio per un mese"
 type: note
 qmd: "roadmap miglioramenti user cosa migliorerei questo"
 ---
-=======
->>>>>>> .merge_file_YPEVjp
 # User — cosa migliorerei se questo modulo fosse mio per un mese
 
 > I numeri misurati sono in [`docs/cosa-migliorare.md`](cosa-migliorare.md),

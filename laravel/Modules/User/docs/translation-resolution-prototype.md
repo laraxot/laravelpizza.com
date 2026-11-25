@@ -11,10 +11,14 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_ezFpbW
 <<<<<<< .merge_file_Dl1Vf0
 qmd: "translation resolution prototype"
 =======
 >>>>>>> .merge_file_9c5QsB
+=======
+qmd: "translation resolution prototype"
+>>>>>>> .merge_file_wxT65x
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/translation-conflict-resolution-prototype.md

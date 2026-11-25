@@ -1,11 +1,17 @@
+<<<<<<< .merge_file_OMY7rN
 <<<<<<< .merge_file_6M2sBR
+=======
+>>>>>>> .merge_file_60dpYX
 ---
 title: "Git Conflict Inventory"
 type: guide
 qmd: "git merge conflict inventory 28"
 ---
+<<<<<<< .merge_file_OMY7rN
 =======
 >>>>>>> .merge_file_rhPkTU
+=======
+>>>>>>> .merge_file_60dpYX
 # Git Conflict Inventory
 
 - Date: 2026-04-28

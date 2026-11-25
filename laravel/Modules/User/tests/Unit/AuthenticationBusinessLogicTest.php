@@ -127,7 +127,11 @@ function userTestAuthDeviceData(): array
 describe('Authentication Business Logic', function () {
     describe('User Authentication Logic', function () {
         it('validates user account status', function () {
+<<<<<<< .merge_file_OjD8Ph
             $user = (object) userTestAuthUserData();
+=======
+            $user = (object) $this->userData;
+>>>>>>> .merge_file_wzQdYB
 
             // Business Logic: User must be active and verified
             Assert::assertTrue($user->is_active);
@@ -377,7 +381,6 @@ describe('Authentication Business Logic', function () {
             foreach ($requiredScopes as $scope) {
                 Assert::assertContains($scope, $oauth->scopes);
             }
-
         });
 
         it('handles OAuth provider fallbacks', function () {

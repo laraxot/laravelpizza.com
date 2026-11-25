@@ -11,10 +11,7 @@ related:
   - "./02-goals.md"
   - "./02-next.md"
   - "./03-later.md"
-<<<<<<< .merge_file_wB3vcr
 qmd: "workstreams"
-=======
->>>>>>> .merge_file_Twc51e
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/03-workstreams-Modules.md

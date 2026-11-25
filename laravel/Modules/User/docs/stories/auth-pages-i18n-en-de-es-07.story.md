@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_dbPv5q
 ---
 title: "Login e registrazione in inglese, tedesco e spagnolo"
 type: story
 qmd: "auth pages i18n en de es"
 ---
-=======
->>>>>>> .merge_file_uy1HMl
 # Login e registrazione in inglese, tedesco e spagnolo
 
 - Stato: done (2026-10-07), con aperti elencati sotto

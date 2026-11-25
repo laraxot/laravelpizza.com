@@ -159,7 +159,6 @@ PHP);
             Assert::assertFalse($xot->iAmSuperAdmin());
         } catch (\Throwable) {
         }
-
     });
 
     test('MetatagData rami brand colors social og twitter favicon', function (): void {

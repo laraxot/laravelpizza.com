@@ -2,9 +2,9 @@
 title: "ECC — indice operativo Xot"
 type: index
 status: review
-updated: 2026-11-24
+updated: 2026-11-25
 module: Xot
-qmd: "ECC indice Xot verification gates esito phpstan saturazione swarm"
+qmd: "ECC indice Xot verification gates esito phpstan saturazione swarm action naming"
 ---
 
 # ECC — modulo Xot
@@ -15,9 +15,9 @@ Collega le verifiche ECC al workflow PTVX (BMAD → lock → fix → PHPStan/Pes
 Ordine sintetico: [workflows.md](./workflows.md).
 
 Su worktree condiviso: prima di PHPStan rispettare saturazione HARD
-([37-phpstan](../../../../../bashscripts/docs/prompts/37-phpstan.md),
-[04-swarm-multi-agente](../../../../../bashscripts/docs/prompts/04-swarm-multi-agente.md),
-[memoria](../../../../../bashscripts/ai/wiki/memories/phpstan-host-saturation-max-three.md),
+([37-phpstan](../../../../../bashscripts/docs/prompts/quality-gates.md),
+[04-swarm-multi-agente](../../../../../bashscripts/docs/prompts/agent-workflow.md),
+[memoria](../../../../../bashscripts/ai/wiki/memories/phpstan-swarm-config.md#phpstan-host-saturation-max-three),
 [STOP thrashing](../../../../../docs/chat/STOP-phpstan-process-thrashing.md)).
 
 | Controllo | Stato | Evidenza |
@@ -27,6 +27,8 @@ Su worktree condiviso: prima di PHPStan rispettare saturazione HARD
 | Pest | skip documentato | DB di test configurato irraggiungibile + `TestDatabaseGuard` |
 | Security review | parziale | P2-X3 `HandleArtisanActRequestAction`; `--force` solo su SQLite di test e symlink opt-in |
 | Docs pack | aggiornato | audit, epics, decision-log, brainstorming, story |
+| Action naming `Resolve*` → `Get*` | verificato (2026-11-25) | ADR [0016](../adr/0016-action-names-get-not-resolve.md); Pest `NoResolveActionNamingTest`; `app/Actions` Modules senza `Resolve*Action.php` |
+| No docs archive folders | verificato (2026-11-25) | ADR [0041](../adr/0041-no-docs-archive-folders.md); root [0006](../../../../../docs/adr/0006-no-docs-archive-folders.md); Pest `NoDocsArchiveFoldersTest`; gitignore fleet |
 
 Dettaglio: [xot-ecc-audit.md](./xot-ecc-audit.md)
 

@@ -1,4 +1,6 @@
 ---
+title: "Project context — SuperAdmin widget"
+
 title: "Project context: SuperAdmin widget"
 type: constitution
 module: User

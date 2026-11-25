@@ -16,13 +16,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_0iL1aS
 status: draft
-=======
->>>>>>> .merge_file_SBkrEm
->>>>>>> laraxot/dev
 ---
 
 # Fix Binding Team Models nel Modulo User
@@ -132,15 +126,7 @@ public function teamUsers(): HasMany
 
 ### Funzionalità Ripristinate
 - ✅ Creazione e gestione team
-<<<<<<< HEAD
 - ✅ Inviti ai team  
-=======
-<<<<<<< .merge_file_0iL1aS
-- ✅ Inviti ai team
-=======
-- ✅ Inviti ai team  
->>>>>>> .merge_file_SBkrEm
->>>>>>> laraxot/dev
 - ✅ Relazioni User-Team
 - ✅ Controllo permessi team-based
 - ✅ Switch tra team multipli
@@ -200,18 +186,6 @@ $this->assertTrue($user->belongsToTeam($team));
 - [TeamUser Model](../app/Models/TeamUser.php)
 - [TeamInvitation Model](../app/Models/TeamInvitation.php)
 - [UserServiceProvider](../app/Providers/UserServiceProvider.php)
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_0iL1aS
-- [Critical Errors Documentation](../../<nome progetto>/docs/critical-errors-resolved.md)
-
----
-
-**Autore**: AI Assistant
-**Data**: Gennaio 2025
-**Versione**: 1.0
-=======
->>>>>>> laraxot/dev
 - [Critical Errors Documentation](../../Quaeris/docs/critical-errors-resolved.md)
 
 ---
@@ -219,7 +193,3 @@ $this->assertTrue($user->belongsToTeam($team));
 **Autore**: AI Assistant  
 **Data**: Gennaio 2025  
 **Versione**: 1.0  
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_SBkrEm
->>>>>>> laraxot/dev

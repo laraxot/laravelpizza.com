@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_fblM4H
 ---
 title: "Pagine auth e segnalazioni in tutte le lingue (it, en, de, es)"
 type: story
 qmd: "auth i18n all locales 07 story"
 ---
-=======
->>>>>>> .merge_file_asV9DD
 # Pagine auth e segnalazioni in tutte le lingue (it, en, de, es)
 
 - Stato: done (2026-10-07)

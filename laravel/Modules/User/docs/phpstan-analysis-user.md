@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_PbY7AM
 qmd: "phpstan analysis user"
-=======
->>>>>>> .merge_file_COIy5m
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-analysis-user.md

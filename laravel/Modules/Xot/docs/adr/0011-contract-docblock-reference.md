@@ -55,7 +55,7 @@ Se l'Action non scrive dati né chiama servizi esterni, non è necessaria la ref
 
 ## Conferma
 
-`Modules/Xot/tests/Unit/Docs/ActionContractsAreCompleteTest.php` cerca `@contract docs/contracts/<file>.md` nel docblock di ogni Action che ha un contratto. Stato misurato il 2026-11-24: in `Modules/Xot/app/Actions` nessuna delle 238 Action contiene il marker `@contract` (`rg -c "@contract" app/Actions` vuoto): il test non fallisce perché Xot non ha contratti di Action, quindi la regola è oggi non applicata in Xot ed è debito dichiarato (vedi «Backlog contract» in [contracts/index.md](../contracts/index.md)).
+`Modules/Xot/tests/Unit/Docs/ActionContractsAreCompleteTest.php` cerca `@contract docs/contracts/<file>.md` nel docblock di ogni Action che ha un contratto. Stato misurato il 2026-11-24: in `Modules/Xot/app/Actions` nessuna delle 238 Action contiene il marker `@contract` (`rg -c "@contract" app/Actions` vuoto): il test non fallisce perché Xot non ha contratti di Action, quindi la regola è oggi non applicata in Xot ed è debito dichiarato (vedi «Backlog contract» in [contracts/index.md](../contracts/INDEX.md)).
 
 Il file `00011-contract-docblock-reference.md` è superseded da questo.
 
@@ -63,6 +63,6 @@ Il file `00011-contract-docblock-reference.md` è superseded da questo.
 
 - `laravel/Modules/*/app/Actions/*.php` — tutte le Action del progetto
 - `docs/contracts/` — directory dei contratti comportamentali
-- `docs/wiki/rules/actions-over-services.md` — filosofia Actions vs Services
+- `docs/wiki/rules/0017-actions-over-services.md` — filosofia Actions vs Services
 - `laravel/Modules/Xot/tests/Unit/Docs/PackagesHaveContractsAndAdrTest.php` — test di conformità
 - `laravel/Modules/Xot/tests/Unit/Docs/ActionContractsAreCompleteTest.php` — test completamento contratti

@@ -1,11 +1,17 @@
+<<<<<<< .merge_file_VWnYrp
 <<<<<<< .merge_file_vNTMcn
+=======
+>>>>>>> .merge_file_6sSF1F
 ---
 title: "Fix Binding Team Models nel Modulo User"
 type: note
 qmd: "team bindings fix binding models user"
 ---
+<<<<<<< .merge_file_VWnYrp
 =======
 >>>>>>> .merge_file_JyJY7K
+=======
+>>>>>>> .merge_file_6sSF1F
 # Fix Binding Team Models nel Modulo User
 
 ## Panoramica

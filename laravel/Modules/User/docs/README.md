@@ -4,7 +4,6 @@ type: documentation
 tags: [module, documentation]
 created: 2026-06-05
 updated: 2026-11-19
-qmd: "user"
 ---
 
 # Modulo User - Documentazione Completa
@@ -90,6 +89,9 @@ In compliance with the [Global Rule](../../../../docs/wiki/rules/module-root-php
 | Decine di `phpstan-*.md` in docs/ | **storici** — non SSoT; non aggiungere file con date nel nome |
 
 Memoria: `php -d memory_limit=-1 ./vendor/bin/phpstan analyse [target] --memory-limit=-1` (da `laravel/`). Non lanciare `analyse Modules` se host saturo.
+### PHPStan Memory Management
+Per evitare crash dei parallel workers su analisi massive, usare sempre:
+`php -d memory_limit=-1 ./vendor/bin/phpstan analyse [target] --memory-limit=-1`
 
 ### Profiles migration governance (workorder)
 

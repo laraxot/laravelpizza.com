@@ -13,10 +13,14 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
+<<<<<<< .merge_file_pZWCAG
 <<<<<<< .merge_file_2HyOn7
 qmd: "socialite backoffice google setup"
 =======
 >>>>>>> .merge_file_QeDpq5
+=======
+qmd: "socialite backoffice google setup"
+>>>>>>> .merge_file_2HdjoY
 ---
 
 # socialite backoffice google setup

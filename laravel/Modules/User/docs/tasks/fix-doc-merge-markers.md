@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_e0MsTQ
 <<<<<<< .merge_file_08y4DL
 ---
 title: "Task: Fix Documentation Merge Markers (User Module)"
@@ -6,6 +7,8 @@ qmd: "fix merge markers task user"
 ---
 =======
 >>>>>>> .merge_file_NKngK8
+=======
+>>>>>>> .merge_file_RtW4pT
 # Task: Fix Documentation Merge Markers (User Module)
 
 ## 📋 Obiettivo

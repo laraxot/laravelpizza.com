@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_10Qrzz
 ---
 title: "User Module - Product Strategy Document"
 type: note
 qmd: "user product strategy document"
 ---
-=======
->>>>>>> .merge_file_s4EQDP
 # User Module - Product Strategy Document
 
 ## Document Information

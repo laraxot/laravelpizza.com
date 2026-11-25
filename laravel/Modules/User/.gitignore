@@ -47,6 +47,10 @@ docs/phpstan/
 # DEPENDENCIES & PACKAGES
 # ====
 vendor/
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 /vendor/
 node_modules/
 /node_modules/
@@ -55,22 +59,46 @@ package-lock.json
 yarn.lock
 yarn-error.log
 composer.lock
+<<<<<<< HEAD
+=======
+node_modules/
+/docs/vendor/
+yarn-error.log
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 
 # ====
 # BUILD & COMPILED FILES
 # ====
 /build
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 /build/
 build/
 dist/
 docs/cache/
 cache/*
+<<<<<<< HEAD
+=======
+build/
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 
 # ====
 # CACHE & TEMPORARY FILES
 # ====
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> laraxot/dev
 # Auto-generated forbidden paths — do not edit manually
 # Reason: root cleanup policy (see docs/wiki/rules/root-cleanup-policy.md)
 
@@ -90,10 +118,22 @@ docs/workbench
 scripts
 test-results
 tests/.claude-audit
+<<<<<<< HEAD
+=======
+# Auto-generated forbidden paths — do not edit manually
+# Reason: root cleanup policy (see docs/wiki/rules/root-cleanup-policy.md)
+
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 # ====
 # LARAXOT MODULE: USER — .gitignore
 # Grouped, deduped. See docs/wiki/rules/module-theme-root-cleanup.md
 # --- Dependencies & packages ---
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 /vendor/
 /node_modules/
 package-lock.json
@@ -106,6 +146,12 @@ bootstrap/compiled.php
 cache/*
 docs/cache/
 docs/phpstan/
+<<<<<<< HEAD
+=======
+# --- Build & compiled ---
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 # --- Cache & temporary ---
 *.cache
 *.lock
@@ -122,6 +168,15 @@ v8-compile-cache-*
 .phpunit.result.cache
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 # --- Logs ---
 *.log
 error_log
@@ -131,6 +186,13 @@ lerna-debug.log*
 # --- Laravel runtime ---
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> laraxot/dev
 # ====
 # LOG FILES
 # ====
@@ -140,13 +202,31 @@ npm-debug.log*
 npm-debug.log
 yarn-error.log*
 lerna-debug.log*
+<<<<<<< HEAD
+=======
+# ====
+# LOG FILES
+# ====
+npm-debug.log
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 
 # ====
 # LARAVEL SPECIFIC
 # ====
+<<<<<<< HEAD
+<<<<<<< HEAD
 bootstrap/compiled.php
 
 
+
+
+=======
+bootstrap/compiled.php
+
+
+>>>>>>> laraxot/dev
 # --- Logs ---
 *.log
 error_log
@@ -156,6 +236,19 @@ lerna-debug.log*
 # --- Laravel runtime ---
 
 
+<<<<<<< HEAD
+
+
+=======
+
+
+# --- Logs ---
+# --- Laravel runtime ---
+
+
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 app/storage/
 public/storage
 public/hot
@@ -164,6 +257,15 @@ public_html/hot
 storage/*.key
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 storage/framework/cache/
 storage/framework/sessions/
 storage/framework/views/
@@ -173,15 +275,32 @@ storage/framework/views/
 # --- Environment & IDE ---
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> laraxot/dev
 .env
 .env.*
 !.env.example
 
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 # ====
 # ENVIRONMENT & CONFIGURATION
 # ====
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> laraxot/dev
 storage/framework/cache/
 storage/framework/sessions/
 storage/framework/views/
@@ -191,6 +310,16 @@ storage/framework/views/
 # --- Environment & IDE ---
 
 
+<<<<<<< HEAD
+
+
+=======
+# --- Environment & IDE ---
+
+
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 Homestead.yaml
 Homestead.json
 /.vagrant
@@ -198,6 +327,15 @@ Homestead.json
 .phpintel
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 .phpstorm.meta.php
 .windsurf/
 .cursor/
@@ -215,18 +353,40 @@ Homestead.json
 # --- System files ---
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> laraxot/dev
 # ====
 # GIT SPECIFIC
 # ====
 .git-rewrite/
 .git-rewrite
 .git-blame-ignore-revs
+<<<<<<< HEAD
+=======
+# ====
+# GIT SPECIFIC
+# ====
+.git-rewrite
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 
 # ====
 # SYSTEM FILES
 # ====
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> laraxot/dev
 .phpstorm.meta.php
 .windsurf/
 .cursor/
@@ -244,6 +404,17 @@ Homestead.json
 # --- System files ---
 
 
+<<<<<<< HEAD
+
+
+=======
+# --- Git leftovers (merge/rebase/editor) ---
+# --- System files ---
+
+
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 .DS_Store
 .DS_Store?
 ._*
@@ -253,20 +424,51 @@ ehthumbs.db
 Thumbs.db
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 agentdb.rvf
 # --- Backup / old files ---
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 # ====
 # BACKUP FILES
 # ====
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> laraxot/dev
 agentdb.rvf
 # --- Backup / old files ---
 
 
+<<<<<<< HEAD
+
 agentdb.rvf
+=======
+# --- Backup / old files ---
+
+
+>>>>>>> laraxot/dev
+=======
+agentdb.rvf
+>>>>>>> laraxot/dev
 # --- Backup / old files ---
 
 *.old
@@ -276,6 +478,15 @@ agentdb.rvf
 *.backup.*
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 *.backup-*
 *.backup_*
 *.bak
@@ -314,11 +525,20 @@ resources/views/node_modules
 
 # Laraxot — IDE folders forbidden at module/theme root (see module-theme-root-hygiene)
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 .cursor/
 .devcontainer/
 .vscode/
 .windsurf/
 
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 .devcontainer/
 
 
@@ -328,6 +548,12 @@ rector.php
 tests/Unit/graphify-out/
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> laraxot/dev
 *.bak
 *.bakcup
 *.new
@@ -338,16 +564,36 @@ tests/Unit/graphify-out/
 .windsurf/
 .cursor/
 .phpstorm.meta.php
+<<<<<<< HEAD
+=======
+# ====
+# DEVELOPMENT TOOLS
+# ====
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 
 # ====
 # DOCUMENTATION CACHE
 # ====
+<<<<<<< HEAD
+<<<<<<< HEAD
 docs/phpstan/
 docs/cache/
+=======
+>>>>>>> laraxot/dev
+=======
+docs/phpstan/
+docs/cache/
+>>>>>>> laraxot/dev
 
 # ====
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ====
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 resources/views/Components_old/
 resources/views/Components_old
 database/Migrations_old/
@@ -358,12 +604,25 @@ database/Factories_old/
 database/Factories_old
 database/Factories_
 database_old/
+<<<<<<< HEAD
+=======
+resources/views/Components_old
+database/Migrations_old
+database/Seeders_old
+database/Factories_old
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 database_old
 
 # ====
 # MODULE SPECIFIC - USER
 # ====
 # File di configurazione locale
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 config/local.php
 config/development.php
 
@@ -375,17 +634,35 @@ storage/framework/views/
 # File di test temporanei
 test_users.json
 user_test_data.csv
+<<<<<<< HEAD
+=======
+
+# Cache autenticazione
+
+# File di test temporanei
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 
 # ====
 # END OF USER .GITIGNORE
 # ====
 
 # 🚫 File specifici del progetto
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 *.fila2
 laravel
 public_html
 
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> laraxot/dev
 *.backup-*
 *.backup_*
 *.bak
@@ -407,10 +684,23 @@ config/local.php
 config/development.php
 test_users.json
 user_test_data.csv
+<<<<<<< HEAD
+=======
+
+
+# --- Legacy directories (historic cleanup) ---
+# --- Project-specific (User) ---
+>>>>>>> laraxot/dev
+=======
+>>>>>>> laraxot/dev
 # AI/TOOL SCAFFOLD — must never exist in the module tree.
 # Generated by AI agents / external CI, never part of the module domain.
 # See docs/wiki/rules/module-theme-root-cleanup.md
 # Patterns cover both module root and nested occurrences (docs/**).
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 tests/AuditCoverage/
 docs/scripts/
 docs/bashscripts/
@@ -434,6 +724,17 @@ phpinsights.php
 rector.php
 tests/Unit/graphify-out/
 
+<<<<<<< HEAD
+=======
+docs/archive/
+
+# Laraxot — IDE folders forbidden at module/theme root (see module-theme-root-hygiene)
+
+# Laraxot — quality tool configs forbidden in module/theme root (use laravel/phpinsights.php, laravel/rector.php)
+>>>>>>> laraxot/dev
+
+=======
+>>>>>>> laraxot/dev
 
 docs/_archive
 # solo le cartelle maiuscole nella radice del modulo (story uppercase-root-dirs-database-application);
@@ -465,6 +766,10 @@ docs/graphify
 resources/lang
 .merge_file_*
 audit-coverage/
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 
 # Regole portate dal remoto laraxot/dev (sync del 24/11), unite alla base senza perdere nulla
 .agents/
@@ -474,10 +779,26 @@ audit-coverage/
 .php-cs-fixer.php
 docs/legacy/
 tests/coverage-*.*
+<<<<<<< HEAD
+=======
+=======
+
 # graphify lanciato su tests/ scrive tests/graphify-out/: output rigenerabile, mai committare
+>>>>>>> laraxot/dev
 tests/graphify-out/
 
 # screenshot di comparazione visiva (artefatti locali)
 docs/project/visual-comparison/
 docs/visual-comparison/
+=======
+# graphify lanciato su tests/ scrive tests/graphify-out/: output rigenerabile, mai committare
+tests/graphify-out/
+<<<<<<< .merge_file_Cfo0uy
+
+# screenshot di comparazione visiva (artefatti locali)
+docs/project/visual-comparison/
+docs/visual-comparison/
 ruvector.db
+=======
+>>>>>>> laraxot/dev
+>>>>>>> .merge_file_P1OL94

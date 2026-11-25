@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_yCZjZq
 qmd: "schema"
-=======
->>>>>>> .merge_file_5JcUdv
 ---
 
 # User Module Schema

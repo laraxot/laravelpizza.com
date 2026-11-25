@@ -11,10 +11,14 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_Ou4IwI
 <<<<<<< .merge_file_Tg7krP
 qmd: "widgets structure"
 =======
 >>>>>>> .merge_file_3Mpfjh
+=======
+qmd: "widgets structure"
+>>>>>>> .merge_file_ST0Rkb
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/widgets-structure.md

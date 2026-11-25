@@ -4,10 +4,14 @@ type: architecture
 tags: [module, architecture, design]
 created: 2026-07-28
 updated: 2026-07-28
+<<<<<<< .merge_file_f5nzYm
 <<<<<<< .merge_file_CeZAZ6
 qmd: "architecture user"
 =======
 >>>>>>> .merge_file_k23PEU
+=======
+qmd: "architecture user"
+>>>>>>> .merge_file_3z6Tlt
 ---
 
 # User Module — Architecture

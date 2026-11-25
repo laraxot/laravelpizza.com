@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_VNjSVm
 qmd: "phpmds"
-=======
->>>>>>> .merge_file_epSwRi
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpmd-errors.md

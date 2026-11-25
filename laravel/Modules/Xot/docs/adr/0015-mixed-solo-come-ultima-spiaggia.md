@@ -74,7 +74,7 @@ Regole che valgono sempre:
 - Buono, perché Xot non infetta i moduli: la base espone tipi ristretti.
 - Buono, perché la review ha un criterio («rientra nei due casi?») invece di un gusto.
 - Cattivo, perché tipizzare una shape o creare una classe Data costa più che scrivere `mixed`, a volte per un solo punto d'uso.
-- Debito che resta: i circa 300 `mixed` esistenti non sono classificati e non c'è un guard automatico. Passo successivo: classificarli per modulo (firma ereditata, confine, scorciatoia), correggere le scorciatoie partendo da Xot (moltiplicatore), poi un test `arch()` con ambito esplicito secondo [architecture-tests-pest-arch](architecture-tests-pest-arch.md).
+- Debito che resta: i circa 300 `mixed` esistenti non sono classificati e non c'è un guard automatico. Passo successivo: classificarli per modulo (firma ereditata, confine, scorciatoia), correggere le scorciatoie partendo da Xot (moltiplicatore), poi un test `arch()` con ambito esplicito secondo [architecture-tests-pest-arch](0020-architecture-tests-pest-arch.md).
 - Cosa misurare: il conteggio per modulo deve scendere e nessun diff nuovo aggiunge `mixed` fuori dai due casi ammessi.
 
 ## Conferma
@@ -91,7 +91,7 @@ Regole che valgono sempre:
 
 ## Riferimenti
 
-- [mixed-is-last-resort](mixed-is-last-resort.md): la stessa decisione scritta in parallelo senza numero, ora *superseded* da questo ADR. Da quel testo si è recuperato che il `mixed` esistente va tolto quando la sorgente diventa conoscibile e che un payload dinamico confinato in un adapter non richiede una classe Data. Non si è recuperato il narrowing con `assert()` nativo, vietato dalle regole del progetto (ammesso solo `Webmozart\Assert\Assert`).
+- [mixed-is-last-resort](0028-mixed-is-last-resort.md): la stessa decisione scritta in parallelo senza numero, ora *superseded* da questo ADR. Da quel testo si è recuperato che il `mixed` esistente va tolto quando la sorgente diventa conoscibile e che un payload dinamico confinato in un adapter non richiede una classe Data. Non si è recuperato il narrowing con `assert()` nativo, vietato dalle regole del progetto (ammesso solo `Webmozart\Assert\Assert`).
 - [code-quality](../code-quality.md) e [phpstan-zero](../phpstan-zero.md): le regole sintetiche che rimandano qui.
-- [architecture-tests-pest-arch](architecture-tests-pest-arch.md): come si verificano le regole di architettura, con ambito esplicito e debito dichiarato.
+- [architecture-tests-pest-arch](0020-architecture-tests-pest-arch.md): come si verificano le regole di architettura, con ambito esplicito e debito dichiarato.
 - [0012-behavioral-contract-governance](0012-behavioral-contract-governance.md): i contratti comportamentali che fissano i tipi pubblici.

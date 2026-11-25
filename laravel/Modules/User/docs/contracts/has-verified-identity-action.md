@@ -3,31 +3,31 @@ title: "Contratto — HasVerifiedIdentityAction"
 type: contract
 action: "Modules\\User\\Actions\\Auth\\HasVerifiedIdentityAction"
 created: 2026-11-23
-updated: 2026-11-24
-owner: User
-status: accepted
-qmd: "HasVerifiedIdentityAction identità verificata email confermata SPID CIE auth_method middleware verified PRD-02"
+updated: 2026-11-23
 ---
 
 # HasVerifiedIdentityAction
 
-Dice se l'identità dell'utente è verificata: email confermata oppure accesso con SPID o CIE (PRD-02). Codice: `app/Actions/Auth/HasVerifiedIdentityAction.php:24-47`.
-
 ## Input
-
-- `?Authenticatable $user`: l'utente, anche assente (`execute`, riga 32).
-
+- Utente autenticabile opzionale.
 ## Output
-
-- `bool`: `false` se l'utente è null (righe 34-36); `true` se non implementa `MustVerifyEmail` o ha già l'email verificata (riga 38); altrimenti `true` solo se l'attributo grezzo `auth_method` è `spid` o `cie` (righe 42-45).
+- `true` per email verificata o metodo `spid`/`cie`; `false` per utente assente o non verificato.
+## Invarianti
+- SPID/CIE attestano l'identità applicativa, ma non impostano `email_verified_at`.
+## Effetti collaterali
+- Nessuno: legge sessione e attributi grezzi.
+## Errori
+- Nessun errore applicativo per utente nullo: restituisce `false`.
+## Non fa
+- Non invia email, non modifica l'utente e non concede ruoli o permessi.
 
 ## Invarianti
 
 | ID | Regola | Prova nel codice | Test |
 |---|---|---|---|
-| `HAS-VERIFIED-INV-1` | Un utente null dà `false`. | righe 34-36 | `tests/Unit/Actions/Auth/HasVerifiedIdentityActionTest.php` (a guest has no verified identity) |
-| `HAS-VERIFIED-INV-2` | SPID e CIE attestano l'identità senza impostare `email_verified_at`: l'email resta non verificata. | docblock righe 15-18, righe 44-45 | `tests/Unit/Actions/Auth/HasVerifiedIdentityActionTest.php` (SPID and CIE logins), `tests/Feature/Auth/DigitalIdentityUserUpsertTest.php` |
-| `HAS-VERIFIED-INV-3` | Legge gli attributi grezzi, quindi non lancia su un database non ancora migrato. | righe 42-45 | Test: nessuno. |
+| `HAS-VERIFIED-INV-1` | Un utente null dà `false`. | righe 33-35 | `tests/Unit/Actions/Auth/HasVerifiedIdentityActionTest.php` (riferimento alla classe) |
+| `HAS-VERIFIED-INV-2` | SPID e CIE attestano l'identità senza impostare `email_verified_at`: l'email resta non verificata. | docblock righe 15-18, riga 44 | `tests/Feature/Auth/DigitalIdentityUserUpsertTest.php` (riferimento alla classe) |
+| `HAS-VERIFIED-INV-3` | Legge gli attributi grezzi, quindi non lancia su un database non ancora migrato. | righe 41-44 | Test: nessuno. |
 
 ## Effetti collaterali
 

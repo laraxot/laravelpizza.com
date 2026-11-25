@@ -3,10 +3,7 @@ title: "User Module Quality Status"
 type: "quality-report"
 date: 2026-07-08
 version: 1.2
-<<<<<<< .merge_file_qggq6O
 qmd: "quality status user"
-=======
->>>>>>> .merge_file_d4yg9n
 ---
 
 # Modulo User — Stato Qualità

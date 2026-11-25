@@ -11,10 +11,14 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_h5jjpB
 <<<<<<< .merge_file_W5tg70
 qmd: "tips"
 =======
 >>>>>>> .merge_file_akrou8
+=======
+qmd: "tips"
+>>>>>>> .merge_file_KrdjlN
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/tips.md

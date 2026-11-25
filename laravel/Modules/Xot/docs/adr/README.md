@@ -4,6 +4,7 @@ type: index
 tags: [adr, decisioni]
 created: 2026-11-18
 updated: 2026-11-24
+qmd: "xot adr architecture decision records indice metodo harness decisioni"
 ---
 
 # Architecture Decision Records
@@ -15,48 +16,41 @@ Scrivere un ADR solo per una scelta difficile da invertire, sorprendente o fonda
 Le decisioni vanno verificate contro codice e test correnti. Una modifica sostanziale crea un nuovo ADR e collega il precedente come superseded/deprecated.
 
 Il **perche'** delle scelte di questo pacchetto: una decisione per file, con le
-alternative scartate. I numeri sequenziali sono ammessi per gli ADR canonici;
+alternative scartate. **Ogni ADR ha basename `NNNN-slug.md`** (harness MADR);
 non si usano date o timestamp nel nome (la data sta nella frontmatter).
 
-## Formato
+Ispirazione obbligatoria:
+[harness 0000-template](https://raw.githubusercontent.com/robertogallea/laravelday-harness-workshop/refs/heads/main/docs/adr/0000-template.md)
+· copia locale [0000-template.md](./0000-template.md).
+
+Eccezioni al prefisso numerico: `README.md`, `INDEX.md`/`index.md`, `0000-template.md`.
+
+## Formato (MADR breve / harness)
 
 ```markdown
 ---
-title: "ADR — <decisione in una riga>"
-type: decision
-status: proposed | accepted | deprecated | superseded by <file-canonico>.md
-superseded_by: <file-canonico>.md   # solo se superseded
-created: AAAA-MM-GG
-updated: AAAA-MM-GG
-issues: []
+status: proposed | accepted | rejected | deprecated | superseded by NNNN
+date: YYYY-MM-DD
+decision-makers:
 ---
 
-# ADR: <decisione>
+# <!-- problema + soluzione -->
 
-## Contesto
-Fatti e vincoli che hanno reso necessaria la scelta (misure, norme, policy, incidenti).
-
-## Driver della decisione
-Vincoli e forze che pesano sulla scelta.
-
-## Decisione
-Cosa si fa, in concreto, e dove sta nel codice.
-
-## Alternative scartate
-Ogni alternativa seria, con il motivo per cui non e' stata scelta.
-
-## Conseguenze
-Pro, contro, debito che resta, cosa misurare. Chi cambia la decisione scrive un nuovo ADR e segna questo `superseded`.
-
-## Conferma
-Test, audit o controllo ripetibile che dimostra il rispetto della decisione.
+## Context and Problem Statement
+## Decision Drivers
+## Considered Options
+## Decision Outcome
+### Consequences
+### Confirmation
 ```
+
+File: `docs/adr/NNNN-titolo-con-trattini.md` (NNNN a 4 cifre, prossimo libero).
 
 ## Sezioni obbligatorie e deroghe
 
 Ogni ADR non superseded ha, in questo ordine o equivalente: `## Contesto`, `## Driver della decisione`, `## Alternative scartate`, `## Decisione`, `## Conseguenze`, `## Conferma`. Una sezione può mancare solo con una deroga dichiarata nel file (esempio: [0010](0010-no-ticket-logic-in-page-slug-middleware.md), dove la Conferma non è eseguibile in Xot). Il modello breve in stile MADR è [0000-template](0000-template.md) (intestazioni inglesi: lo si adatta alle sezioni italiane qui sopra).
 
-La governance dei contratti comportamentali, collegati agli ADR tramite invarianti con ID stabile e gruppo Pest, è la decisione [0012](0012-behavioral-contract-governance.md); gli indici sono in [../contracts/index.md](../contracts/index.md).
+La governance dei contratti comportamentali, collegati agli ADR tramite invarianti con ID stabile e gruppo Pest, è la decisione [0012](0012-behavioral-contract-governance.md); gli indici sono in [../contracts/index.md](../contracts/INDEX.md).
 
 ## Duplicati e superseded
 
@@ -65,6 +59,8 @@ Un file duplicato non si cancella: riceve `status: superseded by <canonico>.md` 
 ## Decisioni
 
 L'elenco completo, con numero, stato e canonico/superseded, è in [index.md](index.md): è l'unico inventario e va aggiornato nello stesso commit che aggiunge o modifica un ADR.
+
+Regola tipizzazione trasversale (tutti i moduli): [0014 — `mixed` solo come ultima spiaggia](0014-mixed-last-resort.md).
 
 ## Decisioni precedenti (formato libero, non ancora ADR)
 

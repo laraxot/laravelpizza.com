@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_mlZgmy
 qmd: "routing error solution 2"
-=======
->>>>>>> .merge_file_uPJqYg
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/routing-error-solution.md

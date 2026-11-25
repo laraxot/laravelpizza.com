@@ -34,6 +34,10 @@ Il file `logout.blade.php` deve essere implementato come una pagina Folio static
 ```blade
 @php
     use Illuminate\Support\Facades\Auth;
+
+    // Esegui il logout
+    Auth::logout();
+
     
     // Esegui il logout
     Auth::logout();

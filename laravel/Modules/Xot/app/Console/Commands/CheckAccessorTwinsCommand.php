@@ -152,7 +152,7 @@ class CheckAccessorTwinsCommand extends Command
      * regola accessor => gemello (generare accessor dai gemelli e' dannoso: maschera le relazioni e ignora il
      * valore gia' in DB), ma il segnale che un calcolo e' rimasto scollegato.
      *
-     * @see Modules/Ptv/docs/orphan-twin-methods.md
+     * @see Modules/Ptv/docs/bmad/orphan-twin-methods.md
      */
     private function reportOrphanTwins(string $pattern): int
     {

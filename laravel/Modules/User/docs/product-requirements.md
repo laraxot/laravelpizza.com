@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_BgBKkd
 qmd: "product requirements productrequirements puntatore"
-=======
->>>>>>> .merge_file_1Fssg1
 ---
 
 # Policy globale (puntatore)

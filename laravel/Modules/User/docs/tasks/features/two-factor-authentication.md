@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_5y5ivh
 <<<<<<< .merge_file_J5plgw
 ---
 title: "Two-Factor Authentication (2FA) - User"
@@ -6,6 +7,8 @@ qmd: "two factor authentication twofactor 2fa user"
 ---
 =======
 >>>>>>> .merge_file_vZotOa
+=======
+>>>>>>> .merge_file_oIr0sb
 # Two-Factor Authentication (2FA) - User
 
 **Task ID**: USER-FEATURE-001

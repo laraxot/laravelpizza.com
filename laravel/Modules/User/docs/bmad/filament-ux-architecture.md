@@ -1,4 +1,6 @@
 ---
+title: "Architecture — Audit UI/Filament modulo User (epic 12)"
+
 title: "Architecture: Audit UI/Filament modulo User (epic 12)"
 type: architecture
 module: User

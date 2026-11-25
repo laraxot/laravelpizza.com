@@ -21,7 +21,7 @@ use Mockery\MockInterface;
 use Modules\User\Database\Factories\TenantFactory;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\Tenant;
-use Modules\Xot\Actions\Testing\ResolveSharedSqlitePathAction;
+use Modules\Xot\Actions\Testing\GetSharedSqlitePathAction;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Database\Factories\ModuleFactory;
 use Modules\Xot\Datas\XotData;
@@ -292,7 +292,7 @@ abstract class XotBaseTestCase extends BaseTestCase
      */
     public static function sharedSqlitePath(): string
     {
-        return app(ResolveSharedSqlitePathAction::class)->execute();
+        return app(GetSharedSqlitePathAction::class)->execute();
     }
 
     /**

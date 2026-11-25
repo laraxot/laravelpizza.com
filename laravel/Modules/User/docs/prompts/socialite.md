@@ -8,10 +8,7 @@ tags: [migrato-da-txt, user]
 converted_from: socialite.txt
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_upiCcg
 qmd: "socialite risorse esterne"
-=======
->>>>>>> .merge_file_PXluU3
 ---
 
 # Socialite — risorse esterne

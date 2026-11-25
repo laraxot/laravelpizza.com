@@ -11,10 +11,14 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_p9JcTJ
 <<<<<<< .merge_file_n4fSCl
 qmd: "testing user command integration fix"
 =======
 >>>>>>> .merge_file_thqNoB
+=======
+qmd: "testing user command integration fix"
+>>>>>>> .merge_file_ebyF2F
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/testing-user-command-integration-fix.md

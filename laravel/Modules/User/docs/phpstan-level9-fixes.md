@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_l9gkZm
 qmd: "phpstan level9 fixes"
-=======
->>>>>>> .merge_file_UTzkQh
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-level9-fixes-Modules.md

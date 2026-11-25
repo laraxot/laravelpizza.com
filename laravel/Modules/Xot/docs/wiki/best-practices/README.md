@@ -1,5 +1,5 @@
 ---
-qmd: "README"
+qmd: "readme"
 issues: []
 discussions: []
 title: "Readme"
@@ -39,6 +39,29 @@ updated: 2026-08-24
 
 ## Code Quality
 - PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
+- PHPStan level 9+ for all new code
 - Complete PHPDoc annotations
 - Use Safe library for unsafe functions
 - Follow PSR-12 coding standards
@@ -48,3 +71,17 @@ updated: 2026-08-24
 - Create bidirectional links between related documents
 - Update both module and root documentation
 - Include practical examples in all guides
+
+---
+
+<!-- Merged from readme.md, which collided with this file on case-insensitive filesystems. -->
+
+<!-- Merged from README.md, which collided with this file on case-insensitive filesystems. -->
+
+---
+module: theme
+topic: readme
+canonical: ../../../../Themes/docs/shared-components/README-Modules.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/README-Modules.md

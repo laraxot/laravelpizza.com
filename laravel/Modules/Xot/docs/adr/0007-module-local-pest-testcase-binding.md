@@ -47,7 +47,7 @@ cartella.
 
 ## Conferma
 
-- [`pest-testcase-binding-per-file.md`](pest-testcase-binding-per-file.md) (superseded da questo ADR) conserva le misure del 2026-11-19 come evidenza storica;
+- [`0034-pest-testcase-binding-per-file.md`](0034-pest-testcase-binding-per-file.md) (superseded da questo ADR) conserva le misure del 2026-11-19 come evidenza storica;
 - `ModulePestBootstrapDoesNotBindTestCaseTest` impedisce il ritorno al binding
   globale;
 - un test applicativo senza `uses(...)` viene corretto prima del merge.

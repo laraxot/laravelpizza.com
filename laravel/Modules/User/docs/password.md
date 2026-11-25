@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_jAnAIW
 qmd: "password"
-=======
->>>>>>> .merge_file_LDLMwH
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/password.md

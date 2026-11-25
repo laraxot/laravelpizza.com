@@ -5,10 +5,14 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_jJ9hDj
 <<<<<<< .merge_file_gFh1t0
 qmd: "spatie permissions methods user permission reference"
 =======
 >>>>>>> .merge_file_7Ha3I5
+=======
+qmd: "spatie permissions methods user permission reference"
+>>>>>>> .merge_file_WeoHEf
 ---
 
 # User Module - Spatie Permission Methods Reference

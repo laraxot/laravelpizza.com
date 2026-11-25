@@ -1,8 +1,3 @@
----
-title: "User Module - Roadmap, Issues & Optimization"
-type: note
-qmd: "legacy roadmap and issues user optimization"
----
 # User Module - Roadmap, Issues & Optimization
 
 **Modulo**: User (Authentication, Authorization, Profiles)  

@@ -1,11 +1,17 @@
+<<<<<<< .merge_file_tf2K9f
 <<<<<<< .merge_file_jTrAlG
+=======
+>>>>>>> .merge_file_9OmX6Y
 ---
 title: "TeamContract Usage Reasoning"
 type: contract
 qmd: "team contract usage reasoning teamcontract"
 ---
+<<<<<<< .merge_file_tf2K9f
 =======
 >>>>>>> .merge_file_PiKZRE
+=======
+>>>>>>> .merge_file_9OmX6Y
 # TeamContract Usage Reasoning
 
 ## Overview

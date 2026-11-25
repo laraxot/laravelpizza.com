@@ -5,10 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_hLmfWC
 qmd: "fullcalendar consolidated"
-=======
->>>>>>> .merge_file_TviBYO
 ---
 
 # fullcalendar — Consolidated Documentation

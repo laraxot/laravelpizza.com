@@ -1,11 +1,17 @@
+<<<<<<< .merge_file_YDJ9Yc
 <<<<<<< .merge_file_NUAQ6j
+=======
+>>>>>>> .merge_file_snaG7y
 ---
 title: "Widget Translation Rules - SaluteOra Project"
 type: rule
 qmd: "widget translation rules saluteora project"
 ---
+<<<<<<< .merge_file_YDJ9Yc
 =======
 >>>>>>> .merge_file_Mg6ZWJ
+=======
+>>>>>>> .merge_file_snaG7y
 # Widget Translation Rules - SaluteOra Project
 # Widget Translation Rules - FixCity Project
 
@@ -145,15 +151,12 @@ protected static string $view = 'user::widgets.edit-user';
 - [User Module Widget Structure](../modules/user/project_docs/widgets-structure-2.md)
 - [EditUserWidget Documentation](../modules/user/project_docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../modules/user/project_docs/widgets/translation-guidelines.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 - [Filament Widget Conventions](../modules/xot/project_docs/filament-widgets.md)
 - [User Module Widget Structure](../modules/user/docs/widgets-structure-2.md)
 - [EditUserWidget Documentation](../modules/user/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../modules/user/docs/widgets/translation-guidelines.md)
 - [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
+<<<<<<< .merge_file_YDJ9Yc
 <<<<<<< .merge_file_NUAQ6j
 - [Filament Widget Conventions](best-practices/filament-widgets.md)
 =======
@@ -168,6 +171,8 @@ protected static string $view = 'user::widgets.edit-user';
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_Mg6ZWJ
+=======
+>>>>>>> .merge_file_snaG7y
 ## Memory Integration
 This document serves as a reference for:
 - Widget development standards
@@ -363,6 +368,7 @@ protected static string $view = 'user::widgets.edit-user';
 - [User Module Widget Structure](../Modules/User/docs/widgets-structure-2.md)
 - [EditUserWidget Documentation](../Modules/User/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../Modules/User/docs/widgets/translation-guidelines.md)
+<<<<<<< .merge_file_YDJ9Yc
 <<<<<<< HEAD
 - [Filament Widget Conventions](../Modules/Xot/docs/filament-widgets.md)
 <<<<<<< .merge_file_NUAQ6j
@@ -376,6 +382,9 @@ protected static string $view = 'user::widgets.edit-user';
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_Mg6ZWJ
+=======
+- [Filament Widget Conventions](../Modules/Xot/docs/filament-widgets.md)
+>>>>>>> .merge_file_snaG7y
 
 ## Memory Integration
 

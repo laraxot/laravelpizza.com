@@ -5,10 +5,14 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_VlmsGk
 <<<<<<< .merge_file_Gwykmu
 qmd: "user research"
 =======
 >>>>>>> .merge_file_8EsM35
+=======
+qmd: "user research"
+>>>>>>> .merge_file_CrV5o9
 ---
 
 # User Module - User Research

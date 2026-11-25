@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+
 use Filament\Support\RawJs;
 use Modules\Xot\Actions\Arr\ArrayToRawJsAction;
 use Modules\Xot\Tests\TestCase;
@@ -23,7 +24,8 @@ it('converts mixed PHP arrays to RawJs correctly', function (): void {
     ]);
 
     Assert::assertInstanceOf(RawJs::class, $raw);
-    $js = $raw->toHtml();
+    // Stringable: __toString → Js::toHtml() → espressione JS grezza
+    $js = (string) $raw;
     Assert::assertStringContainsString('validKey: true', $js);
     Assert::assertStringContainsString("'string key': 'O\\'Reilly'", $js);
     Assert::assertStringContainsString('number: 12.5', $js);

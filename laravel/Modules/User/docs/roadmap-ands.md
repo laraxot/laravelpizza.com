@@ -389,19 +389,7 @@ php artisan queue:prune-failed --hours=48
 
 ## 🔗 Collegamenti
 
-<<<<<<< .merge_file_INzXpI
-- [← User Module README](./readme.md)
-=======
-<<<<<<< HEAD
 - [← User Module README](./README.md)
-=======
-<<<<<<< HEAD
-- [← User Module README](./readme.md)
-=======
-- [← User Module README](./README.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> .merge_file_I7RcKA
 - [← PHPStan Fixes [DATE]](./phpstan-fixes-[DATE].md)
 - [← Project Roadmap](../../../../docs/project-analysis-and-roadmap.md)
 - [← Root Documentation](../../../../docs/index.md)

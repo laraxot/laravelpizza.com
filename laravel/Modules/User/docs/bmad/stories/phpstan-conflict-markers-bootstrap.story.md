@@ -97,15 +97,5 @@ deprecato); OAuth `connection = 'user'`; rotte Filament `create` prima di
 `new class extends` (no `()`); lang = array completi (IT label reali, merge
 icone/nav dove presenti). Nessun `@phpstan-ignore`, nessun `phpstan.neon`.
 
-### Swarm follow-up (stesso giorno)
-
-- `app/**`: 87 file marker (HEAD vuoto → lato `laraxot/dev` con `@see`/`@contract`).
-  `php -l` OK. PHPStan `Modules/User --memory-limit=2G` → **[OK] No errors**.
-- `tests/**` PHP: 12 file risolti (gruppi Pest HEAD, docblock SPID/CIE completi,
-  Folio Cms-shared HEAD, FQCN Kernel + dedupe `use` in `TestCase`). Marker PHP
-  residui nel modulo: **0**.
-- Sync `merge_remote_repo_2` su Media/UI, non User.
-- Nessun commit (docs/asset front ancora con marker; push solo a richiesta).
-
-Fuori scope ancora conflittuali: `docs/` (~centinaia),
+Fuori scope ancora conflittuali: `tests/` (~35), `docs/` (~301),
 `package.json` / `vite.config.js` / `tailwind.config.js`.

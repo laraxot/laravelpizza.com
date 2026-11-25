@@ -64,7 +64,7 @@ I duplicati di un canonico restano come alias `superseded`.
   `git-conflicts-resolution-5.md` → `git-conflicts-resolution-.md`. Residui fuori perimetro `.md`:
   `password_translation_completion_2025.md.bak`, `roadmap/2025-q4-roadmap.md.bak`, `parcheggio/2024_03_27_*.wip`.
 
-<!-- GateGuard facts: (1) no supersede — append only to existing User companion docs-md-filename-date-debt.story.md; (2) linked-from: Xot docs-md-filename-date-debt + sprint-status; (3) edit existing not new file; (4) user: "avanza un chunk REALISTICO" priorità User + update story. -->
+<!-- GateGuard facts: (1) no supersede — append only to existing User companion docs-md-filename-date-debt.story.md; (2) linked-from: Xot docs-md-filename-date-debt + sprint-status; (3) edit existing not new file; (4) user: chunk REALISTICO max 15 Notify/User/Rating. -->
 
 - 2026-11-24 (docs-guardian, companion Xot): root dated → stub/historical verso canon
   (`phpstan-fixes-2025`, `phpstan-fixes-gennaio-2025*`, `roadmap-2025`,
@@ -79,3 +79,9 @@ I duplicati di un canonico restano come alias `superseded`.
   (`baseuser-refactoring-completed`, `phpstan-fixes`, `quality-status`, …).
   Link min: `docs/index.md` `quality-status-2025-11` → `wiki/archive/…` stub.
   Residui User ACTIVE dated: **7** (`historical/*` + `old_tasks/*` leftover).
+- 2026-11-24d (docs-guardian): leftover archive **3** `mv`+stub —
+  `old_tasks/phpstan-fixes-2025` → `phpstan-fixes-year-historical` + stub→`phpstan-fixes.md`;
+  `old_tasks/phpstan-fixes-gennaio-2025` → `*-year-historical` + stub→`phpstan-fixes-gennaio.md`;
+  `historical/phpstan-fixes-2025` → `phpstan-fixes-year-historical` + stub.
+  Residui User ACTIVE dated post-wave: **~13** (root×3 + archive symlink×6 + historical
+  theme-pointer×2 + wiki legacy×2). Parent: `Xot/.../docs-md-filename-date-debt.story.md`.

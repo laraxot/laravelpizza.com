@@ -22,18 +22,7 @@ related:
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
-<<<<<<< .merge_file_HX1PbY
-=======
-<<<<<<< HEAD
 - [Convenzioni Path](./path-conventions-user.md)
-=======
-<<<<<<< .merge_file_RhK6fV
-- [Convenzioni Path](./path-conventions-2.md)
-=======
->>>>>>> .merge_file_ajFxVL
-- [Convenzioni Path](./path-conventions-user.md)
->>>>>>> .merge_file_egEwoJ
->>>>>>> laraxot/dev
 - [Best Practices Volt e Folio](../../xot/docs/volt_folio_best_practices.md)
 - [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error-3.md)
 
@@ -315,37 +304,17 @@ L'utilizzo di widget Filament per l'implementazione dei form  offre un approccio
 - [Documentazione Filament Widgets](https://filamentphp.com/docs/3.x/panels/widgets)
 - [Best Practices di Sicurezza](./security_best_practices.md)
 - [Gestione Sessione](./session-management.md)
-<<<<<<< .merge_file_HX1PbY
-=======
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_ajFxVL
 - [Tema One Documentation](../../themes/one/docs/readme.md)
 # Implementazione dei Form con Widget Filament
 
 ## Collegamenti correlati
 - [README modulo User](./readme.md)
-<<<<<<< .merge_file_HX1PbY
-=======
->>>>>>> laraxot/dev
->>>>>>> .merge_file_ajFxVL
 - [Tema One Documentation](../../themes/one/docs/README.md)
 # Implementazione dei Form con Widget Filament
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
-<<<<<<< .merge_file_HX1PbY
-=======
-<<<<<<< HEAD
->>>>>>> .merge_file_ajFxVL
 - [Convenzioni Path](./path-conventions-user.md)
-=======
-<<<<<<< .merge_file_RhK6fV
-- [Convenzioni Path](./path-conventions-2.md)
-=======
-- [Convenzioni Path](./path-conventions-user.md)
->>>>>>> .merge_file_egEwoJ
->>>>>>> laraxot/dev
 - [Best Practices Volt e Folio](../../xot/docs/volt_folio_best_practices.md)
 - [Analisi dell'Errore di Implementazione](./volt-blade-implementation-error-3.md)
 

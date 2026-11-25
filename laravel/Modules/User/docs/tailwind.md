@@ -11,10 +11,14 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
+<<<<<<< .merge_file_MTHiOu
 <<<<<<< .merge_file_Yum2Bp
 qmd: "tailwind"
 =======
 >>>>>>> .merge_file_HtIzUU
+=======
+qmd: "tailwind"
+>>>>>>> .merge_file_0uGrbf
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/tailwind.md

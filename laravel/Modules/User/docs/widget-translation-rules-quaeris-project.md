@@ -1,38 +1,10 @@
 ---
-<<<<<<< HEAD
-<<<<<<< .merge_file_LmNN3r
-title: "Widget Translation Rules - <nome progetto> Project"
-=======
 title: "Widget Translation Rules - Quaeris Project"
-=======
-title: "Widget Translation Rules - Quaeris Project"
-=======
-<<<<<<< .merge_file_THJcMj
-title: "Widget Translation Rules - <nome progetto> Project"
-=======
-title: "Widget Translation Rules - Quaeris Project"
->>>>>>> .merge_file_ynVDOV
->>>>>>> .merge_file_DxRfdY
->>>>>>> laraxot/dev
 type: rule
 tags: [widget, translation, rules]
 created: 2026-07-14
 updated: 2026-07-14
-<<<<<<< HEAD
-<<<<<<< .merge_file_LmNN3r
-qmd: "widget-translation-rules-2 widget translation rules - <nome progetto> project"
-=======
 qmd: "widget-translation-rules-2 widget translation rules - quaeris project"
-=======
-qmd: "widget-translation-rules-2 widget translation rules - quaeris project"
-=======
-<<<<<<< .merge_file_THJcMj
-qmd: "widget-translation-rules-2 widget translation rules - <nome progetto> project"
-=======
-qmd: "widget-translation-rules-2 widget translation rules - quaeris project"
->>>>>>> .merge_file_ynVDOV
->>>>>>> .merge_file_DxRfdY
->>>>>>> laraxot/dev
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
@@ -44,28 +16,10 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< HEAD
-<<<<<<< .merge_file_LmNN3r
-=======
----
-
-# Widget Translation Rules - Quaeris Project
-=======
-<<<<<<< .merge_file_THJcMj
->>>>>>> .merge_file_DxRfdY
 status: draft
 ---
 
-# Widget Translation Rules - <nome progetto> Project
-=======
----
-
 # Widget Translation Rules - Quaeris Project
-<<<<<<< .merge_file_LmNN3r
-=======
->>>>>>> .merge_file_ynVDOV
->>>>>>> .merge_file_DxRfdY
->>>>>>> laraxot/dev
 
 ## Core Principles
 
@@ -180,21 +134,6 @@ class EditUserWidget extends XotBaseWidget
     <h2 class="text-xl font-semibold mb-4">
         {{ __('user::widgets.edit_user.title') }}
     </h2>
-<<<<<<< HEAD
-<<<<<<< .merge_file_LmNN3r
-=======
-=======
-<<<<<<< .merge_file_THJcMj
->>>>>>> .merge_file_DxRfdY
-
-    <p class="text-gray-600 mb-6">
-        {{ __('user::widgets.edit_user.description') }}
-    </p>
-
-    {{ $this->form }}
-
-=======
->>>>>>> laraxot/dev
     
     <p class="text-gray-600 mb-6">
         {{ __('user::widgets.edit_user.description') }}
@@ -202,10 +141,6 @@ class EditUserWidget extends XotBaseWidget
     
     {{ $this->form }}
     
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_ynVDOV
->>>>>>> laraxot/dev
     <div class="mt-6 flex justify-end space-x-3">
         <button type="button" class="btn-secondary">
             {{ __('user::widgets.edit_user.actions.cancel.label') }}
@@ -272,21 +207,7 @@ protected static string $view = 'user::widgets.edit-user';
 - [User Module Widget Structure](widgets-structure-user.md)
 - [EditUserWidget Documentation](widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](widgets/translation-guidelines.md)
-<<<<<<< HEAD
-<<<<<<< .merge_file_LmNN3r
-- [Filament Widget Conventions](best-practices/filament-widgets.md)
-=======
 - [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
-=======
-- [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
-=======
-<<<<<<< .merge_file_THJcMj
-- [Filament Widget Conventions](best-practices/filament-widgets.md)
-=======
-- [Filament Widget Conventions](../modules/xot/docs/filament-widgets.md)
->>>>>>> .merge_file_ynVDOV
->>>>>>> .merge_file_DxRfdY
->>>>>>> laraxot/dev
 
 ## Memory Integration
 
@@ -296,18 +217,4 @@ This document serves as a reference for:
 - Code quality requirements
 - Documentation standards
 
-<<<<<<< HEAD
-<<<<<<< .merge_file_LmNN3r
-All widget development should follow these rules to maintain consistency and quality across the <nome progetto> project.
-=======
 All widget development should follow these rules to maintain consistency and quality across the Quaeris project.
-=======
-All widget development should follow these rules to maintain consistency and quality across the Quaeris project.
-=======
-<<<<<<< .merge_file_THJcMj
-All widget development should follow these rules to maintain consistency and quality across the <nome progetto> project.
-=======
-All widget development should follow these rules to maintain consistency and quality across the Quaeris project.
->>>>>>> .merge_file_ynVDOV
->>>>>>> .merge_file_DxRfdY
->>>>>>> laraxot/dev

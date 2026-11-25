@@ -16,10 +16,14 @@ related:
   - "./folio-pages-owner-pattern.md"
   - "../../../../../../docs/wiki/concepts/filament-v5-form-in-blade.md"
   - "../../../../../../docs/wiki/memories/view-cache-gate-mandatory.md"
+<<<<<<< .merge_file_dqtqHG
 <<<<<<< .merge_file_plarFe
 qmd: "filament widget resource form delegation delega"
 =======
 >>>>>>> .merge_file_j4VZfM
+=======
+qmd: "filament widget resource form delegation delega"
+>>>>>>> .merge_file_ozjPLk
 ---
 
 # Widget Filament → schema in `*Form` (SSoT)

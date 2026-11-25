@@ -16,10 +16,14 @@ related:
   - "./filament-langserviceprovider-governance.md"
   - "./filament-widget-linear-crud-model-create.md"
   - "./filament-widget-resource-form-delegation.md"
+<<<<<<< .merge_file_eoTayW
 <<<<<<< .merge_file_77cdXC
 qmd: "legacy duplication pattern duplicazione user"
 =======
 >>>>>>> .merge_file_nD5rzf
+=======
+qmd: "legacy duplication pattern duplicazione user"
+>>>>>>> .merge_file_8EmJ0B
 ---
 
 # Pattern ridondanza in `Modules/User/docs/legacy`

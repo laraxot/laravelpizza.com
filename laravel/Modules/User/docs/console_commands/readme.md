@@ -12,6 +12,8 @@ related:
   - "./change-password-command.md"
   - "./console-commands-philosophy-1-1.md"
   - "./console-commands-philosophy.md"
+  - "./console-commands-philosophy.md"
+  - "./console-commands-philosophy.md"
   - "./console-commands.md"
 ---
 

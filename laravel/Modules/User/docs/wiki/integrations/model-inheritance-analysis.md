@@ -5,10 +5,14 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_2mnBYN
 <<<<<<< .merge_file_1Z2MN7
 qmd: "model inheritance analysis analisi ereditarietà modelli"
 =======
 >>>>>>> .merge_file_s4nAVW
+=======
+qmd: "model inheritance analysis analisi ereditarietà modelli"
+>>>>>>> .merge_file_9Djyya
 ---
 
 # Analisi Ereditarietà Modelli - Modulo User
@@ -154,6 +158,7 @@ Dopo le modifiche, eseguire:
 
 ## Collegamenti
 
+<<<<<<< .merge_file_2mnBYN
 <<<<<<< .merge_file_1Z2MN7
 - [Regole Qualità Codice](../../code-quality.md)
 =======
@@ -167,6 +172,10 @@ Dopo le modifiche, eseguire:
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_s4nAVW
+=======
+- [Regole Qualità Codice](../../code-quality.md)
+- [Regole Qualità Codice](../../code-quality.md)
+>>>>>>> .merge_file_9Djyya
 - [BaseModel](../../../app/Models/BaseModel.php)
 - [BasePivot](../../../app/Models/BasePivot.php)
 - [BaseMorphPivot](../../../app/Models/BaseMorphPivot.php)

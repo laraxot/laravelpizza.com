@@ -1,11 +1,17 @@
+<<<<<<< .merge_file_tyOdP9
 <<<<<<< .merge_file_MSoBS0
+=======
+>>>>>>> .merge_file_eKjTq0
 ---
 title: "Story: Quality-gate closure — Modules/User (2026-09-04)"
 type: story
 qmd: "user quality gate 04 story qualitygate"
 ---
+<<<<<<< .merge_file_tyOdP9
 =======
 >>>>>>> .merge_file_CNjqXL
+=======
+>>>>>>> .merge_file_eKjTq0
 # Story: Quality-gate closure — Modules/User (2026-09-04)
 
 ## BMAD phase

@@ -1,11 +1,8 @@
-<<<<<<< .merge_file_liSpTr
 ---
 title: "Gestione coerente di roles, permissions e guard_name"
 type: note
 qmd: "roles permissions gestione coerente guardname"
 ---
-=======
->>>>>>> .merge_file_Doqfql
 # Gestione coerente di roles, permissions e guard_name
 
 ## Regola fondamentale

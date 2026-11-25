@@ -1,11 +1,17 @@
+<<<<<<< .merge_file_H5CeIl
 <<<<<<< .merge_file_Te1bIS
+=======
+>>>>>>> .merge_file_pnsPk1
 ---
 title: "Teams Migration - Laraxot Compliance Fix"
 type: note
 qmd: "teams migration laraxot compliance"
 ---
+<<<<<<< .merge_file_H5CeIl
 =======
 >>>>>>> .merge_file_elcqQI
+=======
+>>>>>>> .merge_file_pnsPk1
 # Teams Migration - Laraxot Compliance Fix
 
 ## Data

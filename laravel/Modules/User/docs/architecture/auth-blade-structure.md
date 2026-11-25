@@ -11,7 +11,7 @@ related:
   - "./architecture-rules.md"
   - "./architecture.md"
   - "./component-registration.md"
-  - "./readme.md"
+  - "./README.md"
   - "./structure.md"
   - "./testing-structure.md"
   - "./user-gdpr-decoupling.md"

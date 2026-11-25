@@ -5,10 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_wTdWbj
 qmd: "login consolidated"
-=======
->>>>>>> .merge_file_dhfCO3
 ---
 
 # login — Consolidated Documentation

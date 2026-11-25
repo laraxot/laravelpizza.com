@@ -223,19 +223,7 @@ public function canAccessTenant(\Illuminate\Database\Eloquent\Model $tenant): bo
 
 ## 🔗 Collegamenti
 
-<<<<<<< .merge_file_2kGp3J
-- [← User Module README](./readme.md)
-=======
-<<<<<<< HEAD
 - [← User Module README](./README.md)
-=======
-<<<<<<< HEAD
-- [← User Module README](./readme.md)
-=======
-- [← User Module README](./README.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> .merge_file_xv5EnI
 - [← PHPStan Session Report](../../../../docs/phpstan/filament-v4-fixes-session.md)
 - [← Final Report](../../../../docs/phpstan/final-report-session-[date].md)
 - [← Root Documentation](../../../../docs/index.md)

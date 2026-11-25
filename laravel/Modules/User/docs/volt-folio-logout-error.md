@@ -1,11 +1,17 @@
+<<<<<<< .merge_file_qB820a
 <<<<<<< .merge_file_bkEebP
+=======
+>>>>>>> .merge_file_bJ78vV
 ---
 title: "Errore nel Logout con Volt e Folio"
 type: note
 qmd: "volt folio logout error errore"
 ---
+<<<<<<< .merge_file_qB820a
 =======
 >>>>>>> .merge_file_Ub8JIK
+=======
+>>>>>>> .merge_file_bJ78vV
 # Errore nel Logout con Volt e Folio
 
 ## Il Problema

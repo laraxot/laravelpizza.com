@@ -10,7 +10,7 @@ use Modules\Xot\Tests\TestCase;
 
 uses(TestCase::class);
 
-/** @see Modules/Xot/docs/adr/auth-register-livewire-tenant-url-defaults.md */
+/** @see Modules/Xot/docs/adr/0021-auth-register-livewire-tenant-url-defaults.md */
 it('does not carry a Filament tenant into the public registration Livewire cycle', function (): void {
     URL::defaults(['tenant' => 'stale-panel-tenant']);
 
@@ -22,7 +22,7 @@ it('does not carry a Filament tenant into the public registration Livewire cycle
         ->and(URL::getDefaultParameters())->toHaveKey('tenant', null);
 });
 
-/** @see Modules/Xot/docs/adr/auth-register-livewire-tenant-url-defaults.md */
+/** @see Modules/Xot/docs/adr/0021-auth-register-livewire-tenant-url-defaults.md */
 it('recognises the registration page as the origin of its Livewire update', function (): void {
     URL::defaults(['tenant' => 'stale-panel-tenant']);
 

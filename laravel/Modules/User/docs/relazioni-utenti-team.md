@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_qFyWI0
 qmd: "relazioni utenti team relazione utentiteam tabella"
-=======
->>>>>>> .merge_file_W6q1TG
 ---
 # Relazione utenti-team: tabella pivot `doctor_team`
 
@@ -30,19 +27,7 @@ Questa documentazione descrive la relazione many-to-many tra utenti e team nel m
 
 ## Collegamenti
 - [Documentazione generale sulle migrazioni](mdc:../../../../docs/database-migrations.md)
-<<<<<<< .merge_file_qFyWI0
 - [Best practice XotBaseMigration](migrations.md)
-=======
-<<<<<<< HEAD
-- [Best practice XotBaseMigration](mdc:../../xot/docs/migrations.md)
-=======
-<<<<<<< HEAD
-- [Best practice XotBaseMigration](mdc:../../xot/docs/migrations.md)
-=======
-- [Best practice XotBaseMigration](migrations.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> .merge_file_W6q1TG
 
 ---
 

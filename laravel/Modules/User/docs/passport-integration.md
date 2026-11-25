@@ -520,19 +520,7 @@ $ ./vendor/bin/phpstan analyse Modules --memory-limit=-1
 
 ### Documentazione Correlata
 - [FILOSOFIA_MODULO_USER.md](./filosofia-modulo-user.md) - Filosofia generale
-<<<<<<< .merge_file_19P5U9
-- [README.md](./readme.md) - Overview modulo
-=======
-<<<<<<< HEAD
 - [README.md](./README.md) - Overview modulo
-=======
-<<<<<<< HEAD
-- [README.md](./readme.md) - Overview modulo
-=======
-- [README.md](./README.md) - Overview modulo
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> .merge_file_MTYSGR
 - [business-logic-deep-dive-4.md](./business-logic-deep-dive.md) - Business logic completa
 
 ### Documentazione Esterna

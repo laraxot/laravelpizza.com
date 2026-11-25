@@ -49,5 +49,5 @@ come supporto, ma non si introducono suite PHPUnit autonome.
 
 - ogni nuovo file di test deve legare esplicitamente il `TestCase` se usa l'applicazione;
 - la suite viene lanciata con `vendor/bin/pest` nel contesto `laravel/`;
-- riferimenti: [Pest TestCase binding](pest-testcase-binding-per-file.md) e
-  [architecture tests](architecture-tests-pest-arch.md).
+- riferimenti: [Pest TestCase binding](0034-pest-testcase-binding-per-file.md) e
+  [architecture tests](0020-architecture-tests-pest-arch.md).

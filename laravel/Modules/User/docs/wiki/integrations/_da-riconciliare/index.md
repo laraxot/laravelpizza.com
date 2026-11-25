@@ -5,13 +5,7 @@ type: integration
 tags: [integrations, modules, user]
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_AFhqFw
-<<<<<<< HEAD
-=======
 qmd: "user integrations"
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_bHYpeJ
 ---
 
 # user — integrations
@@ -21,14 +15,6 @@ Documentation for `user` module categorized as **integrations**.
 ## Files
 
 - [`00-index.md`](./00-index.md)
-<<<<<<< .merge_file_AFhqFw
-<<<<<<< HEAD
-- [`00-index.md`](./00-index.md)
-=======
->>>>>>> laraxot/dev
-=======
-- [`00-index.md`](./00-index.md)
->>>>>>> .merge_file_bHYpeJ
 - [`2fa-guide.md`](./2fa-guide.md)
 - [`2fa.md`](./2fa.md)
 - [`api-2.md`](./api-2.md)
@@ -49,6 +35,7 @@ Documentation for `user` module categorized as **integrations**.
 - [`model-inheritance-fixes.md`](./model-inheritance-fixes.md)
 - [`model-inheritance-analysis-3.md`](./model-inheritance-analysis-3.md)
 - [`model_inheritance_fixes.md`](./model_inheritance_fixes.md)
+<<<<<<< .merge_file_Pa2xww
 - [`on-demand-pattern-3.md`](../../../../../Lang/docs/on-demand-pattern-3.md)
 - [`patterns-2.md`](./patterns-2.md)
 - [`performance-optimization-3.md`](../../../../../Lang/docs/performance-optimization-3.md)
@@ -65,6 +52,18 @@ Documentation for `user` module categorized as **integrations**.
 =======
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_bHYpeJ
+=======
+- [`on-demand-pattern.md`](./on-demand-pattern.md)
+- [`PATTERNS.md`](./PATTERNS.md)
+- [`performance-optimization.md`](./performance-optimization.md)
+- [`PHPSTAN_FIX_PLAN.md`](./PHPSTAN_FIX_PLAN.md)
+- [`PHPSTAN_L10.md`](./PHPSTAN_L10.md)
+- [`PHPSTAN_STATUS.md`](./PHPSTAN_STATUS.md)
+- [`PRODUCT_LAUNCH_PLAN.md`](./PRODUCT_LAUNCH_PLAN.md)
+- [`PRODUCT_STRATEGY.md`](./PRODUCT_STRATEGY.md)
+- [`PROJECT-STRUCTURE.md`](./project-structure.md)
+- [`QMD-SETUP.md`](./QMD-SETUP.md)
+>>>>>>> .merge_file_b8Cvc0
 - [`product_launch_plan.md`](./product_launch_plan.md)
 - [`product_strategy.md`](./product_strategy.md)
 - [`project-structure.md`](./project-structure.md)
@@ -75,6 +74,7 @@ Documentation for `user` module categorized as **integrations**.
 - [`quick-start.md`](./quick-start.md)
 - [`redundancy_analysis.md`](./redundancy_analysis.md)
 - [`spatie-permissions-methods.md`](./spatie-permissions-methods.md)
+<<<<<<< .merge_file_Pa2xww
 - [`spatie-permissions-methods-3.md`](./spatie-permissions-methods-3.md)
 - [`sprint-planning-3.md`](../../../../../Activity/docs/sprint-planning-3.md)
 - [`sso-providers-implementation-2.md`](./sso-providers-implementation-2.md)
@@ -97,6 +97,15 @@ Documentation for `user` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 - [`timestamps-rule-2.md`](../../../timestamps-rule-2.md)
 - [`translation-key-prototype-2.md`](../../../translation-key-prototype-2.md)
+=======
+- [`SPATIE_PERMISSIONS_METHODS.md`](./SPATIE_PERMISSIONS_METHODS.md)
+- [`sprint_planning.md`](./sprint_planning.md)
+- [`SSO-PROVIDERS-IMPLEMENTATION.md`](./SSO-PROVIDERS-IMPLEMENTATION.md)
+- [`SSO_PROVIDERS_IMPLEMENTATION.md`](./SSO_PROVIDERS_IMPLEMENTATION.md)
+- [`testing.md`](./testing.md)
+- [`TIMESTAMPS_RULE.md`](./TIMESTAMPS_RULE.md)
+- [`TRANSLATION_KEY_PROTOTYPE.md`](./TRANSLATION_KEY_PROTOTYPE.md)
+>>>>>>> .merge_file_b8Cvc0
 - [`user_research.md`](./user_research.md)
 - [`widget-rendering-analysis.md`](./widget-rendering-analysis.md)
 - [`widget-rendering-analysis-3.md`](./widget-rendering-analysis-3.md)
@@ -143,15 +152,6 @@ Documentation for `user` module categorized as **integrations**.
 - [`business-logic-analysis-5.md`](./business-logic-analysis-5.md)
 - [`business-logic-analysis-3.md`](../../../../../Activity/docs/business-logic-analysis-3.md)
 - [`business-logic-deep-dive.md`](./business-logic-deep-dive.md)
-<<<<<<< HEAD
-- [`business-logic-deep-dive.md`](./business-logic-deep-dive.md)
-- [`business-logic-deep-dive.md`](./business-logic-deep-dive.md)
-- [`business-logic-deep-dive.md`](./business-logic-deep-dive.md)
-<<<<<<< .merge_file_AFhqFw
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_bHYpeJ
 - [`business-logic.md`](./business-logic.md)
 - [`business-logiceepive.md`](./business-logiceepive.md)
 - [`business-logic-analysis-3.md`](../../../../../Activity/docs/business-logic-analysis-3.md)
@@ -165,6 +165,7 @@ Documentation for `user` module categorized as **integrations**.
 - [`charts-implementation.md`](./charts-implementation.md)
 - [`cms-link.md`](./cms-link.md)
 - [`cms_link.md`](./cms_link.md)
+<<<<<<< .merge_file_Pa2xww
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -195,6 +196,12 @@ Documentation for `user` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_bHYpeJ
 >>>>>>> laraxot/dev
+=======
+- [`code-conventions.md`](./code-conventions.md)
+- [`code-optimization-analysis.md`](./code-optimization-analysis.md)
+- [`code-optimization.md`](./code-optimization.md)
+- [`code-quality-analysis.md`](./code-quality-analysis.md)
+>>>>>>> .merge_file_b8Cvc0
 - [`code-quality-tools.md`](./code-quality-tools.md)
 - [`code-quality.md`](./code-quality.md)
 - [`code-conventions-3.md`](../../../code-conventions-3.md)
@@ -202,6 +209,7 @@ Documentation for `user` module categorized as **integrations**.
 - [`code-quality-analysis-3.md`](../../../../../Activity/docs/code-quality-analysis-3.md)
 - [`codebase-overview.md`](./codebase-overview.md)
 - [`codex-error-fix.md`](./codex-error-fix.md)
+<<<<<<< .merge_file_Pa2xww
 - [`component-verification-rules-2.md`](../../../component-verification-rules-2.md)
 <<<<<<< .merge_file_AFhqFw
 <<<<<<< HEAD
@@ -210,6 +218,9 @@ Documentation for `user` module categorized as **integrations**.
 - [`component-verification-rules-2.md`](../../../component-verification-rules-2.md)
 =======
 >>>>>>> laraxot/dev
+=======
+- [`component-verification-rules.md`](./component-verification-rules.md)
+>>>>>>> .merge_file_b8Cvc0
 - [`component-verification.md`](./component-verification.md)
 - [`component-verification-rules-2.md`](../../../component-verification-rules-2.md)
 - [`composer-dependencies.md`](./composer-dependencies.md)
@@ -288,6 +299,7 @@ Documentation for `user` module categorized as **integrations**.
 - [`folio-volt-best-practices.md`](./folio-volt-best-practices.md)
 - [`fullcalendar-scheduler-documentation-summary-3.md`](./fullcalendar-scheduler-documentation-summary-3.md)
 - [`fullcalendar-scheduler-documentation-summary.md`](./fullcalendar-scheduler-documentation-summary.md)
+<<<<<<< .merge_file_Pa2xww
 <<<<<<< .merge_file_AFhqFw
 - [`fullcalendar-scheduler-license-key-invalid-2.md`](../../../fullcalendar-scheduler-license-key-invalid-2.md)
 <<<<<<< HEAD
@@ -306,6 +318,11 @@ Documentation for `user` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 - [`fullcalendar-scheduler-license-troubleshooting-3.md`](../../../fullcalendar-scheduler-license-troubleshooting-3.md)
 - [`fullcalendar-scheduler-license-3.md`](../../../fullcalendar-scheduler-license-3.md)
+=======
+- [`fullcalendar-scheduler-license-key-invalid.md`](./fullcalendar-scheduler-license-key-invalid.md)
+- [`fullcalendar-scheduler-license-troubleshooting.md`](./fullcalendar-scheduler-license-troubleshooting.md)
+- [`fullcalendar-scheduler-license.md`](./fullcalendar-scheduler-license.md)
+>>>>>>> .merge_file_b8Cvc0
 - [`fullcalendar-scheduler-quick-reference-3.md`](./fullcalendar-scheduler-quick-reference-3.md)
 - [`fullcalendar-scheduler-quick-reference-4.md`](../../../fullcalendar-scheduler-quick-reference-4.md)
 - [`fullcalendar-schedulerocumentation.md`](./fullcalendar-schedulerocumentation.md)
@@ -327,10 +344,6 @@ Documentation for `user` module categorized as **integrations**.
 - [`git-conflicts-resolution.md`](./git-conflicts-resolution.md)
 - [`git-conflicts-resolution-4.md`](./git-conflicts-resolution-4.md)
 - [`git-conflicts-resolution.md`](./git-conflicts-resolution.md)
-<<<<<<< HEAD
-- [`git-conflicts-resolution.md`](./git-conflicts-resolution.md)
-=======
->>>>>>> laraxot/dev
 - [`git-conflicts-resolution-conflict-06cb77.md`](./git-conflicts-resolution-conflict-06cb77.md)
 - [`git-conflicts-resolution-conflict.md`](./git-conflicts-resolution-conflict.md)
 - [`git-conflicts-resolution-local-swarm-backup.md`](./git-conflicts-resolution-local-swarm-backup.md)
@@ -377,6 +390,7 @@ Documentation for `user` module categorized as **integrations**.
 - [`js-conflicts.md`](./js-conflicts.md)
 - [`json.md`](./json.md)
 - [`jss.md`](./jss.md)
+<<<<<<< .merge_file_Pa2xww
 - [`label-hardcoded-prevention-2.md`](../../../label-hardcoded-prevention-2.md)
 - [`label-hardcoded-prevention-2.md`](../../../label-hardcoded-prevention-2.md)
 <<<<<<< HEAD
@@ -388,12 +402,11 @@ Documentation for `user` module categorized as **integrations**.
 =======
 =======
 <<<<<<< HEAD
-- [`lang-link-3.md`](./lang-link-3.md)
 =======
-- [`lang-link-3.md`](../../../lang-link-3.md)
->>>>>>> laraxot/dev
->>>>>>> .merge_file_bHYpeJ
->>>>>>> laraxot/dev
+- [`label-hardcoded-prevention.md`](./label-hardcoded-prevention.md)
+- [`label_hardcoded_prevention.md`](./label_hardcoded_prevention.md)
+>>>>>>> .merge_file_b8Cvc0
+- [`lang-link-3.md`](./lang-link-3.md)
 - [`lang-link.md`](./lang-link.md)
 - [`lang_link.md`](./lang-link.md)
 - [`laravel-13-upgrade.md`](./laravel-13-upgrade.md)
@@ -402,6 +415,7 @@ Documentation for `user` module categorized as **integrations**.
 - [`limesurveyatabase-commands.md`](./limesurveyatabase-commands.md)
 - [`links-2.md`](../../../../../Gdpr/docs/links-2.md)
 - [`livewire-form-statepath.md`](./livewire-form-statepath.md)
+<<<<<<< .merge_file_Pa2xww
 - [`livewire-namespace-3.md`](../../../livewire-namespace-3.md)
 - [`livewire-namespace-3.md`](../../../livewire-namespace-3.md)
 - [`logging-performance-2.md`](../../../logging-performance-2.md)
@@ -411,6 +425,12 @@ Documentation for `user` module categorized as **integrations**.
 =======
 >>>>>>> laraxot/dev
 - [`logging-performance-2.md`](./logging-performance-2.md)
+=======
+- [`livewire-namespace.md`](./livewire-namespace.md)
+- [`livewire_namespace.md`](./livewire_namespace.md)
+- [`logging-performance.md`](./logging-performance.md)
+- [`logging_performance.md`](./logging_performance.md)
+>>>>>>> .merge_file_b8Cvc0
 - [`login-resolution.md`](./login-resolution.md)
 - [`login-widget-analysis-2.md`](../../../login-widget-analysis-2.md)
 - [`login-widget-conversion-3.md`](../../../login-widget-conversion-3.md)
@@ -481,12 +501,6 @@ Documentation for `user` module categorized as **integrations**.
 - [`merge-conflict-files-list.md`](./merge-conflict-files-list.md)
 - [`merge-conflicts-list.md`](./merge-conflicts-list.md)
 - [`metodi-duplicati-analisi.md`](./metodi-duplicati-analisi.md)
-<<<<<<< HEAD
-- [`metodi-duplicati-analisi.md`](./metodi-duplicati-analisi.md)
-- [`metodi-duplicati-analisi.md`](./metodi-duplicati-analisi.md)
-- [`metodi-duplicati-analisi.md`](./metodi-duplicati-analisi.md)
-=======
->>>>>>> laraxot/dev
 - [`metodi_duplicati_analisi.md`](./metodi_duplicati_analisi.md)
 - [`metodiuplicati-analisi.md`](./metodiuplicati-analisi.md)
 - [`metrics-dashboard-2.md`](../../../metrics-dashboard-2.md)
@@ -497,12 +511,6 @@ Documentation for `user` module categorized as **integrations**.
 - [`missing-features.md`](./missing-features.md)
 - [`model-classification.md`](./model-classification.md)
 - [`model-inheritance-analysis.md`](./model-inheritance-analysis.md)
-<<<<<<< HEAD
-- [`model-inheritance-analysis.md`](./model-inheritance-analysis.md)
-- [`model-inheritance-analysis.md`](./model-inheritance-analysis.md)
-- [`model-inheritance-analysis.md`](./model-inheritance-analysis.md)
-=======
->>>>>>> laraxot/dev
 - [`model-inheritance-fixes.md`](./model-inheritance-fixes.md)
 - [`model-inheritance-fixes-4.md`](./model-inheritance-fixes-4.md)
 - [`model-inheritance-fixes-5.md`](./model-inheritance-fixes-5.md)
@@ -637,6 +645,7 @@ Documentation for `user` module categorized as **integrations**.
 - [`quality-tools-final.md`](./quality-tools-final.md)
 - [`quality-tools.md`](./quality-tools.md)
 - [`quality.md`](./quality.md)
+<<<<<<< .merge_file_Pa2xww
 - [`query-optimization-analysis-3.md`](../../../../../Activity/docs/query-optimization-analysis-3.md)
 <<<<<<< HEAD
 - [`query-optimization-analysis-3.md`](../../../../../Activity/docs/query-optimization-analysis-3.md)
@@ -647,6 +656,9 @@ Documentation for `user` module categorized as **integrations**.
 >>>>>>> laraxot/dev
 =======
 >>>>>>> .merge_file_bHYpeJ
+=======
+- [`query-optimization-analysis.md`](./query-optimization-analysis.md)
+>>>>>>> .merge_file_b8Cvc0
 - [`query-optimization.md`](./query-optimization.md)
 - [`query-optimization-analysis-3.md`](../../../../../Activity/docs/query-optimization-analysis-3.md)
 - [`r1-form-fields-self-validate.md`](./r1-form-fields-self-validate.md)
@@ -680,12 +692,17 @@ Documentation for `user` module categorized as **integrations**.
 - [`resources-corrections-summary-2.md`](./resources-corrections-summary-2.md)
 - [`resources-corrections-summary.md`](./resources-corrections-summary.md)
 - [`resources-corrections.md`](./resources-corrections.md)
+<<<<<<< .merge_file_Pa2xww
 - [`roles-permissions-2.md`](../../../roles-permissions-2.md)
 <<<<<<< HEAD
 - [`roles-permissions-2.md`](../../../roles-permissions-2.md)
 =======
 >>>>>>> laraxot/dev
 - [`roles-permissions-2.md`](../../../roles-permissions-2.md)
+=======
+- [`roles-permissions.md`](./roles-permissions.md)
+- [`roles_permissions.md`](./roles_permissions.md)
+>>>>>>> .merge_file_b8Cvc0
 - [`root-file-policy.md`](./root-file-policy.md)
 - [`root-files-hygiene.md`](./root-files-hygiene.md)
 - [`routing-best-practices-2.md`](../../../routing-best-practices-2.md)
@@ -713,20 +730,8 @@ Documentation for `user` module categorized as **integrations**.
 - [`spatie-models-verification.md`](./spatie-models-verification.md)
 - [`spatie-permission-philosophy.md`](./spatie-permission-philosophy.md)
 - [`spatie-permission-teams-laravel.md`](./spatie-permission-teams-laravel.md)
-<<<<<<< .merge_file_AFhqFw
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_bHYpeJ
-- [`spatie-permission-teams-laravel.md`](./spatie-permission-teams-laravel.md)
 - [`spatie-permission.md`](./spatie-permission.md)
 - [`spatie-permissions-methods.md`](./spatie-permissions-methods.md)
-- [`spatie-permissions-methods.md`](./spatie-permissions-methods.md)
-- [`spatie-permissions-methods.md`](./spatie-permissions-methods.md)
-- [`spatie-permissions-methods.md`](./spatie-permissions-methods.md)
-=======
-- [`spatie-permission.md`](./spatie-permission.md)
-- [`spatie-permissions-methods.md`](./spatie-permissions-methods.md)
->>>>>>> laraxot/dev
 - [`spatie-permissions.md`](./spatie-permissions.md)
 - [`spatie_permissions.md`](./spatie_permissions.md)
 - [`spatie_permissions_methods.md`](./spatie_permissions_methods.md)
@@ -860,15 +865,6 @@ Documentation for `user` module categorized as **integrations**.
 - [`volt-missing-directive-2.md`](../../../volt-missing-directive-2.md)
 - [`volts.md`](./volts.md)
 - [`widget-rendering-analysis.md`](./widget-rendering-analysis.md)
-<<<<<<< HEAD
-- [`widget-rendering-analysis.md`](./widget-rendering-analysis.md)
-- [`widget-rendering-analysis.md`](./widget-rendering-analysis.md)
-- [`widget-rendering-analysis.md`](./widget-rendering-analysis.md)
-<<<<<<< .merge_file_AFhqFw
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> .merge_file_bHYpeJ
 - [`widget-rendering.md`](./widget-rendering.md)
 - [`widget-translation-rules-3.md`](./widget-translation-rules-3.md)
 - [`widget-translation-rules-2.md`](../../../widget-translation-rules-2.md)

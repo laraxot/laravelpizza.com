@@ -29,7 +29,7 @@ uses(TestCase::class);
  * Notify, Blog, Fixcity, UI, Xot mock bonificati a XotBase*).
  * Tetto decrescente: la guardia non pretende zero, impedisce che il numero salga.
  *
- * @see docs/wiki/rules/fundamental-xotbase-rule.md
+ * @see bashscripts/ai/wiki/rules/11-forms/fundamental-xotbase-rule.md
  */
 
 /**

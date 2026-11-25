@@ -17,6 +17,7 @@ related:
   - "./actions-path-convention.md"
 ---
 
+<<<<<<< .merge_file_aKt9IO
 <<<<<<< .merge_file_rXbUVw
 > Questo file è stato rinominato in [phpstan-fixes-2.deprecated.md](phpstan-fixes-2.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
 =======
@@ -30,3 +31,6 @@ related:
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 >>>>>>> .merge_file_Ok7aw7
+=======
+> Questo file è stato rinominato in [phpstan-fixes-.deprecated.md](phpstan-fixes-.deprecated.md). Non aggiungere date nel filename; usare `created/updated` nel front matter.
+>>>>>>> .merge_file_MJHz1P

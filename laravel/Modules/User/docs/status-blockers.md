@@ -3,10 +3,7 @@ title: "User Module Status & Blockers"
 date: 2026-07-28
 author: claude-ai
 status: BLOCKED_AWAITING_INFRASTRUCTURE
-<<<<<<< .merge_file_i70mWS
 qmd: "status blockers user"
-=======
->>>>>>> .merge_file_QRjqpo
 ---
 
 # User Module — Status & Critical Blockers (2026-07-28)

@@ -4,15 +4,15 @@ type: index
 status: active
 owner: Xot
 created: 2026-11-23
-updated: 2026-11-24
-qmd: "xot adr indice decisioni canonico superseded numerazione doppia"
+updated: 2026-11-25
+qmd: "xot adr indice decisioni canonico superseded numerazione doppia BMAD MADR 0039 0040 0041 no docs archive story filenames NNNN"
 ---
 
 # Indice ADR — Xot
 
 Inventario di tutti gli ADR del pacchetto **Xot** (esclusi `README.md`, `index.md` e `0000-template.md`). Lo stato è quello della frontmatter di ciascun file. Formato e sezioni obbligatorie: [README](README.md); modello: [0000-template](0000-template.md); governance dei contratti: [0012](0012-behavioral-contract-governance.md).
 
-Totale: **29** ADR, di cui **20** canonici e **9** superseded (nessun file cancellato).
+Totale: **31** ADR, di cui **22** canonici e **9** superseded (nessun file cancellato).
 
 | N. | Titolo | Stato | Canonico / superseded | File |
 |---|---|---|---|---|
@@ -34,17 +34,20 @@ Totale: **29** ADR, di cui **20** canonici e **9** superseded (nessun file cance
 | 0013 | I dati sono sacri: mai migrate:fresh/reset/rollback/force, mai RefreshDatabase, test solo con .env.testing | accepted | canonico | [0013-dati-sacri-migrazioni-e-test.md](0013-dati-sacri-migrazioni-e-test.md) |
 | 0014 | La risoluzione "mista" dei conflitti Git e' l'ultima spiaggia, non la strategia | accepted | canonico | [0014-merge-misto-ultima-spiaggia.md](0014-merge-misto-ultima-spiaggia.md) |
 | 0015 | mixed solo come ultima spiaggia: tipi veri, narrowing al confine, motivazione scritta | accepted | canonico | [0015-mixed-solo-come-ultima-spiaggia.md](0015-mixed-solo-come-ultima-spiaggia.md) |
-| — | mixed nei contratti PHP e' ammesso solo come ultima spiaggia | superseded | superseded → [0015-mixed-solo-come-ultima-spiaggia.md](0015-mixed-solo-come-ultima-spiaggia.md) | [mixed-is-last-resort.md](mixed-is-last-resort.md) |
-| — | Harness minimo per gli agenti: ambiente leggibile, memoria verificabile, guard sulle azioni vietate | accepted | canonico, senza numero | [agent-harness.md](agent-harness.md) |
-| — | Le regole architetturali sulle classi si verificano con PHPArkitect, con baseline | superseded | superseded → [architecture-tests-pest-arch.md](architecture-tests-pest-arch.md) | [architecture-rules-phparkitect.md](architecture-rules-phparkitect.md) |
-| — | Le regole di architettura si verificano con Pest arch(), con ambito esplicito e debito dichiarato | accepted | canonico, senza numero | [architecture-tests-pest-arch.md](architecture-tests-pest-arch.md) |
-| — | Auth register Livewire tenant URL defaults | accepted | canonico, senza numero | [auth-register-livewire-tenant-url-defaults.md](auth-register-livewire-tenant-url-defaults.md) |
-| — | Un modello persistente, una migrazione di creazione | superseded | superseded → [0004-one-model-one-migration.md](0004-one-model-one-migration.md) | [one-model-one-migration.md](one-model-one-migration.md) |
-| — | Pest come framework di test | superseded | superseded → [0003-pest-as-test-runner.md](0003-pest-as-test-runner.md) | [pest-over-phpunit.md](pest-over-phpunit.md) |
-| — | Il TestCase di modulo si lega in ogni file di test, mai con uses()->in() nel Pest.php del modulo | superseded | superseded → [0007-module-local-pest-testcase-binding.md](0007-module-local-pest-testcase-binding.md) | [pest-testcase-binding-per-file.md](pest-testcase-binding-per-file.md) |
-| — | Queueable Actions al posto di Job duplicati | superseded | superseded → [0002-queueable-actions-over-framework-jobs.md](0002-queueable-actions-over-framework-jobs.md) | [queueable-actions-over-jobs.md](queueable-actions-over-jobs.md) |
-| — | Xot — entrypoint route no-op canonico | accepted | canonico, senza numero | [route-entrypoints-canonical-empty.md](route-entrypoints-canonical-empty.md) |
-| — | Protocollo delle chiavi di traduzione | accepted | canonico, senza numero | [translation-key-protocol.md](translation-key-protocol.md) |
+| — | mixed nei contratti PHP e' ammesso solo come ultima spiaggia | superseded | superseded → [0015-mixed-solo-come-ultima-spiaggia.md](0015-mixed-solo-come-ultima-spiaggia.md) | [0028-mixed-is-last-resort.md](0028-mixed-is-last-resort.md) |
+| — | Harness minimo per gli agenti: ambiente leggibile, memoria verificabile, guard sulle azioni vietate | accepted | canonico, senza numero | [0018-agent-harness.md](0018-agent-harness.md) |
+| — | Le regole architetturali sulle classi si verificano con PHPArkitect, con baseline | superseded | superseded → [0020-architecture-tests-pest-arch.md](0020-architecture-tests-pest-arch.md) | [0019-architecture-rules-phparkitect.md](0019-architecture-rules-phparkitect.md) |
+| — | Le regole di architettura si verificano con Pest arch(), con ambito esplicito e debito dichiarato | accepted | canonico, senza numero | [0020-architecture-tests-pest-arch.md](0020-architecture-tests-pest-arch.md) |
+| — | Auth register Livewire tenant URL defaults | accepted | canonico, senza numero | [0021-auth-register-livewire-tenant-url-defaults.md](0021-auth-register-livewire-tenant-url-defaults.md) |
+| — | Un modello persistente, una migrazione di creazione | superseded | superseded → [0004-one-model-one-migration.md](0004-one-model-one-migration.md) | [0031-one-model-one-migration.md](0031-one-model-one-migration.md) |
+| — | Pest come framework di test | superseded | superseded → [0003-pest-as-test-runner.md](0003-pest-as-test-runner.md) | [0033-pest-over-phpunit.md](0033-pest-over-phpunit.md) |
+| — | Il TestCase di modulo si lega in ogni file di test, mai con uses()->in() nel Pest.php del modulo | superseded | superseded → [0007-module-local-pest-testcase-binding.md](0007-module-local-pest-testcase-binding.md) | [0034-pest-testcase-binding-per-file.md](0034-pest-testcase-binding-per-file.md) |
+| — | Queueable Actions al posto di Job duplicati | superseded | superseded → [0002-queueable-actions-over-framework-jobs.md](0002-queueable-actions-over-framework-jobs.md) | [0035-queueable-actions-over-jobs.md](0035-queueable-actions-over-jobs.md) |
+| — | Xot — entrypoint route no-op canonico | accepted | canonico, senza numero | [0036-route-entrypoints-canonical-empty.md](0036-route-entrypoints-canonical-empty.md) |
+| — | Protocollo delle chiavi di traduzione | accepted | canonico, senza numero | [0037-translation-key-protocol.md](0037-translation-key-protocol.md) |
+| 0039 | BMAD stories use MADR (same spirit as harness ADR template) | accepted | canonico; filename clause → [0040](0040-bmad-stories-numbered-filenames.md) | [0039-bmad-stories-use-madr.md](0039-bmad-stories-use-madr.md) |
+| 0040 | BMAD stories use numbered filenames (NNNN-slug.story.md) | accepted | canonico | [0040-bmad-stories-numbered-filenames.md](0040-bmad-stories-numbered-filenames.md) |
+| 0041 | No docs archive folders — restore via Git only | accepted | canonico; root pointer → [docs/adr/0006](../../../../../docs/adr/0006-no-docs-archive-folders.md) | [0041-no-docs-archive-folders.md](0041-no-docs-archive-folders.md) |
 
 ## Note sui duplicati
 

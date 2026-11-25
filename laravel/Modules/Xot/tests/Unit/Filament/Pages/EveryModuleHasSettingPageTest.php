@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-use Modules\Xot\Actions\Config\ResolveModuleConfigDataAction;
+use Modules\Xot\Actions\Config\GetModuleConfigDataAction;
 use Modules\Xot\Tests\TestCase;
 use Symfony\Component\Process\Process;
 use Webmozart\Assert\Assert;
@@ -41,7 +41,7 @@ test('every module has a setting page class', function (string $module): void {
 })->with('laraxot modules');
 
 test('every module setting page has a config data class the base can read', function (string $module): void {
-    expect(ResolveModuleConfigDataAction::dataClassFor("Modules\\{$module}\\Filament\\Pages\\SettingPage"))
+    expect(GetModuleConfigDataAction::dataClassFor("Modules\\{$module}\\Filament\\Pages\\SettingPage"))
         ->toBe("Modules\\{$module}\\Datas\\{$module}ConfigData");
 })->with('laraxot modules');
 
@@ -64,7 +64,7 @@ test('every module ignores lock files in its own repository', function (string $
  */
 function settingDataProperties(string $module): array
 {
-    $dataClass = ResolveModuleConfigDataAction::dataClassFor("Modules\\{$module}\\Filament\\Pages\\SettingPage");
+    $dataClass = GetModuleConfigDataAction::dataClassFor("Modules\\{$module}\\Filament\\Pages\\SettingPage");
     Assert::notNull($dataClass);
     $names = [];
     foreach ((new ReflectionClass($dataClass))->getProperties(ReflectionProperty::IS_PUBLIC) as $property) {

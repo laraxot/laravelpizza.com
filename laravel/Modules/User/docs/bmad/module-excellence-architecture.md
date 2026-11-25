@@ -1,4 +1,6 @@
 ---
+title: "Architecture — User module: stato attuale vs perfezione assoluta"
+
 title: "Architecture: User module: stato attuale vs perfezione assoluta"
 type: architecture
 module: User

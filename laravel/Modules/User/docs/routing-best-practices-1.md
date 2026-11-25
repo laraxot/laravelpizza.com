@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_Rs2pMF
 qmd: "routing best practices 1"
-=======
->>>>>>> .merge_file_aVjEXq
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/routing-best-practices.md

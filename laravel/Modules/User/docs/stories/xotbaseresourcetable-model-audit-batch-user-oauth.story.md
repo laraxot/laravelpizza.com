@@ -36,10 +36,7 @@ related:
   - "app/Models/Permission.php"
   - "app/Models/Device.php"
   - "database/migrations/2026_09_01_150112_create_permissions_table.php"
-<<<<<<< HEAD
-=======
 qmd: "xotbaseresourcetable model audit batch user oauth"
->>>>>>> laraxot/dev
 ---
 
 # Audit $model + schema colonne su 13 XotBaseResourceTable (OAuth/Passport/Permission)
@@ -171,21 +168,8 @@ Illuminate\Support\Facades\Schema::connection($model->getConnectionName())->getC
 ## Testing
 
 ```bash
-<<<<<<< HEAD
-<<<<<<< .merge_file_YhBOax
 cd /var/www/_bases/base_<nome progetto>_fila5/laravel
-=======
-cd /var/www/_bases/base_quaeris_fila5/laravel
-=======
-cd /var/www/_bases/base_quaeris_fila5/laravel
-=======
-<<<<<<< HEAD
-cd /var/www/_bases/base_quaeris_fila5/laravel
-=======
 cd /var/www/_bases/base_<nome progetto>_fila5/laravel
->>>>>>> laraxot/dev
->>>>>>> .merge_file_PykaMA
->>>>>>> laraxot/dev
 php -l Modules/User/app/Filament/Resources/ClientResource/Tables/OauthClientsTable.php
 php -l Modules/User/app/Filament/Resources/PermissionResource/Tables/PermissionsTable.php
 vendor/bin/phpstan analyse \
@@ -228,26 +212,8 @@ certezza al 100%).
 ## Learnings from Previous Stories
 
 - `Schema::getColumnListing()` senza specificare la connessione del model usa la
-<<<<<<< HEAD
-<<<<<<< .merge_file_YhBOax
   connessione di default (`mysql`/`<nome progetto>_data`), che in questo modulo puo'
   essere un DB diverso da quello reale del model (`user`/`<nome progetto>_user`). Va
-=======
-  connessione di default (`mysql`/`quaeris_data`), che in questo modulo puo'
-  essere un DB diverso da quello reale del model (`user`/`quaeris_user`). Va
-=======
-  connessione di default (`mysql`/`quaeris_data`), che in questo modulo puo'
-  essere un DB diverso da quello reale del model (`user`/`quaeris_user`). Va
-=======
-<<<<<<< HEAD
-  connessione di default (`mysql`/`quaeris_data`), che in questo modulo puo'
-  essere un DB diverso da quello reale del model (`user`/`quaeris_user`). Va
-=======
-  connessione di default (`mysql`/`<nome progetto>_data`), che in questo modulo puo'
-  essere un DB diverso da quello reale del model (`user`/`<nome progetto>_user`). Va
->>>>>>> laraxot/dev
->>>>>>> .merge_file_PykaMA
->>>>>>> laraxot/dev
   sempre passato `Schema::connection($model->getConnectionName())`, altrimenti il
   risultato e' silenziosamente sbagliato (nel caso di `features` e' risultato un
   array vuoto invece di un errore, facile da scambiare per "tabella vuota di

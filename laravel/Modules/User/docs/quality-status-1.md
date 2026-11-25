@@ -11,10 +11,7 @@ related:
   - "./actions-path-convention.md"
   - "./actions-path-convention-convenzione-percorsi.md"
   - "./actions-path-convention.md"
-<<<<<<< .merge_file_F6zu83
 qmd: "quality status 1"
-=======
->>>>>>> .merge_file_JRIKqC
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/quality-status-11-Modules.md
