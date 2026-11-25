@@ -1,5 +1,0 @@
-error-curl-60.md
-
-# No numbered .md duplicates (rule: docs/wiki/rules/no-numbered-filenames.md)
-*-[0-9].md
-*-[0-9][0-9].md
