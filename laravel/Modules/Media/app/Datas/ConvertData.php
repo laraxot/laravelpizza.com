@@ -50,11 +50,23 @@ class ConvertData extends Data implements Wireable
         return Storage::disk($this->disk)->exists($this->file);
     }
 
+    /**
+     * Il formato di uscita descritto da questo DTO: codec, bitrate e preset.
+     *
+     * Le Action lo passano a `MediaExporter::inFormat()`: e' l'unico punto in cui i campi del DTO
+     * diventano parametri FFmpeg. Il `-preset` arriva da `$this->preset` (scelto nel form di
+     * MediaConvert); prima le Action lo ignoravano e ne forzavano uno fisso.
+     *
+     * @see Modules/Media/docs/contracts/convert-video-by-convert-data-action.md
+     */
     public function getFFMpegFormat(): DefaultVideo
     {
         $format = new WebM($this->codec_audio, $this->codec_video);
         $format = $format->setKiloBitrate((int) $this->bitrate);
         Assert::isInstanceOf($format, DefaultVideo::class);
+
+        // php-ffmpeg non dichiara il tipo di ritorno di setAdditionalParameters(): si usa `$format`, non il suo ritorno.
+        $format->setAdditionalParameters(['-preset', $this->preset]);
 
         return $format;
     }

@@ -26,7 +26,10 @@ class ConvertVideoByMediaConvertAction
     use QueueableAction;
 
     /**
-     * Execute the action.
+     * Converte il video nel formato di `ConvertData`, aggiorna il progresso sul record e ne
+     * registra la fine (`percentage` = 100).
+     *
+     * @see Modules/Media/docs/contracts/convert-video-by-media-convert-action.md
      */
     public function execute(ConvertData $data, MediaConvert $record): string
     {
@@ -41,9 +44,8 @@ class ConvertVideoByMediaConvertAction
             throw new Exception('Il nome del file convertito non è stato specificato');
         }
 
-        // Instanziamo il formato prima di usarlo
-        $formatInstance = new $format;
-
+        // Il formato (codec, bitrate, preset) e' gia' quello del DTO: va applicato con inFormat().
+        // `save()` accetta solo il percorso; `new $format` ricreava il formato senza i parametri scelti.
         FFMpeg::fromDisk($data->disk)
             ->open($data->file)
             ->export()
@@ -54,14 +56,12 @@ class ConvertVideoByMediaConvertAction
                     'rate' => $rate,
                 ]);
             })
-            ->addFilter('-preset', 'ultrafast')
-            // Utilizziamo il formato istanziato come parametro
-            // @phpstan-ignore-next-line method.notFound
-            ->save($file_new, $formatInstance);
+            ->inFormat($format)
+            ->save($file_new);
 
-        $record->update([
-            'status' => 'completed',
-        ]);
+        // `onProgress` non scatta mai a 100 e `media_converts` non ha una colonna `status`
+        // (il vecchio `update(['status' => 'completed'])` non scriveva nulla): la fine si registra in `percentage`.
+        $record->update(['percentage' => 100]);
 
         return $file_new;
     }

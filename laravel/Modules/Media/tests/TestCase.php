@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests;
 
+use Illuminate\Database\DatabaseManager;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\Schema;
@@ -65,6 +66,47 @@ abstract class TestCase extends XotBaseTestCase
         'user',
         'quaeris_data',
     ];
+
+    /**
+     * Le connessioni dell'elenco che questo progetto configura davvero, una sola volta per istanza.
+     *
+     * L'elenco e' condiviso fra i progetti: `quaeris_data` esiste solo in base_quaeris_fila5. Altrove
+     * `DatabaseManager::connection()` lanciava «not configured» dentro `setUp()` e ogni test del modulo
+     * moriva prima della prima asserzione. Le connessioni di modulo senza database proprio (`media`)
+     * sono alias della default (`TenantServiceProvider::aliasModuleConnectionsToDefault()`): una sola
+     * transazione per istanza, come nel TestCase del modulo User.
+     *
+     * @see Modules/Media/docs/stories/0009-media-sync-marker-repair.story.md
+     *
+     * @return list<string>
+     */
+    protected function connectionsToTransact()
+    {
+        $database = $this->app?->make('db');
+        if (! $database instanceof DatabaseManager) {
+            return $this->connectionsToTransact;
+        }
+
+        /** @var array<string, mixed> $configured */
+        $configured = config('database.connections', []);
+
+        $names = [];
+        $seen = [];
+        foreach ($this->connectionsToTransact as $name) {
+            if (! \array_key_exists($name, $configured)) {
+                continue;
+            }
+
+            $id = spl_object_id($database->connection($name));
+            if (isset($seen[$id])) {
+                continue;
+            }
+            $seen[$id] = true;
+            $names[] = $name;
+        }
+
+        return $names;
+    }
 
     public static function mockExpectation(MockInterface $mock, string $method): Expectation
     {
