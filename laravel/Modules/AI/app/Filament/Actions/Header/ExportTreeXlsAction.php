@@ -1,0 +1,71 @@
+<?php
+
+declare(strict_types=1);
+/**
+ * @see https://coderflex.com/blog/create-advanced-filters-with-filament
+ */
+
+namespace Modules\Xot\Filament\Actions\Header;
+
+// Header actions must be an instance of Filament\Actions\Action, or Filament\Actions\ActionGroup.
+// use Filament\Actions\Action;
+use Filament\Resources\Pages\Page;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Model;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+use Modules\Xot\Actions\Export\ExportXlsByCollection;
+use Modules\Xot\Actions\GetTransKeyAction;
+use Modules\Xot\Contracts\HasRecursiveRelationshipsContract;
+use Modules\Xot\Filament\Actions\XotBaseAction;
+use Webmozart\Assert\Assert;
+
+/**
+ * Undocumented class.
+ *
+ * @property Model $record
+ */
+class ExportTreeXlsAction extends XotBaseAction
+{
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->translateLabel()
+            // ->tooltip(__('xot::actions.export_xls'))
+            // ->icon('heroicon-o-cloud-arrow-down')
+            // ->icon('fas-file-excel')
+            ->icon('xot-files.xls')
+            ->action(static function (Page $livewire, Model $record, array $_data) {
+                $tableFilters = [
+                    'id' => $record->getKey(),
+                ];
+                $filename = class_basename($livewire).'-'.collect($tableFilters)->flatten()->implode('-').'.xlsx';
+                $transKey = app(GetTransKeyAction::class)->execute($livewire::class);
+                $transKey .= '.fields';
+                // $query = $livewire->getFilteredTableQuery(); // ->getQuery(); // Staudenmeir\LaravelCte\Query\Builder
+                // $rows = $query->get();
+                Assert::implementsInterface($record, HasRecursiveRelationshipsContract::class);
+                /** @var Model&HasRecursiveRelationshipsContract<Model> $treeRecord */
+                $treeRecord = $record;
+                $rows = $treeRecord->descendantsAndSelf;
+                Assert::isInstanceOf($rows, Collection::class);
+                $resource = $livewire->getResource();
+                $fields = [];
+                if (method_exists($resource, 'getXlsFields')) {
+                    $fields = $resource::getXlsFields($tableFilters);
+                    // Convertiamo tutti i valori a stringhe
+                    $fields = array_values(array_map(
+                        static fn (mixed $field): string => SafeStringCastAction::cast($field),
+                        (array) $fields,
+                    ));
+                }
+
+                /* @var array<int, string> $fields */
+                return app(ExportXlsByCollection::class)->execute($rows, $filename, $transKey, $fields);
+            });
+    }
+
+    public static function getDefaultName(): ?string
+    {
+        return 'export_tree_xls';
+    }
+}

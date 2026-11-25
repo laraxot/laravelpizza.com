@@ -61,7 +61,7 @@ Catena: `app.url` -> `GetTenantNameAction` -> `config/<tenant>/` -> `GetTenantCo
 - **L'host e' input del client.** `Host:` forgiato su un vhost catch-all seleziona la config (e la connessione) di un altro
   ente. Mitigazioni reali: ogni parte passa da `Str::slug` e la cartella deve esistere, altrimenti si va sul default. Nel
   codice dell'applicazione non risulta alcun `trustHosts()` (grep su `bootstrap/app.php` e `app/`, 2026-11-25): l'isolamento
-  e' affidato al `server_name` esplicito del web server. Task aperto: [audit-and-roadmap](audit-and-roadmap.md) (TEN-P1-01).
+  e' affidato al `server_name` esplicito del web server. Finding aperto TEN-P1-01: [audit-and-roadmap](audit-and-roadmap.md).
 - **Nessuna query, nessuna facade**: il codice gira prima che il database e le facade siano pronti. Qualsiasi accesso al DB
   in questo punto e' un errore di ordine.
 - **Un errore qui e' muto**: un metodo mancante in `GetTenantNameAction` ha gia' fatto fallire il bootstrap del tenant, con le

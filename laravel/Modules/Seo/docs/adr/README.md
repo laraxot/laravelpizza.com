@@ -16,7 +16,7 @@ Leggili prima di: aggiungere pagine di un modulo alla sitemap, toccare `robots.t
 servizio verso i motori di ricerca, o importare un altro modulo da `Modules/Seo/app`.
 
 Formato (cinque sezioni, `type: decision`, nome file senza date né numeri) e regole:
-[action-behavioral-contract](../../../Xot/docs/rules/action-behavioral-contract.md).
+[0012-behavioral-contract-governance](../../../Xot/docs/adr/0012-behavioral-contract-governance.md).
 
 ## Indice
 

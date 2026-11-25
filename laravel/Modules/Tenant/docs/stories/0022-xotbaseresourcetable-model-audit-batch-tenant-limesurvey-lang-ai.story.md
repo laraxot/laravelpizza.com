@@ -9,11 +9,6 @@ status: done
 type: story
 created: 2026-09-11
 ---
-<<<<<<< HEAD
-
-# XotBaseResourceTable model audit - Tenant/DomainsTable
-
-=======
 # XotBaseResourceTable model audit - Tenant/DomainsTable
 
 ## Context and Problem Statement
@@ -34,7 +29,6 @@ Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica 
 
 Scelta: **implementare**, perché i driver sopra.
 
->>>>>>> laraxot/dev
 **Scope**: `app/Filament/Resources/DomainResource/Tables/DomainsTable.php` (batch cross-modulo Tenant/Limesurvey/Lang/AI, audit `protected static string $model` + colonne).
 
 **Trovato**: il file aveva gia' `protected static string $model = Domain::class;` (con `use Modules\Tenant\Models\Domain;` corretto), coerente con `protected static ?string $model = Domain::class;` dichiarato nella Resource sorella `app/Filament/Resources/DomainResource.php` — nessuna correzione necessaria (probabile esito di un batch parallelo precedente sullo stesso audit).
@@ -46,8 +40,6 @@ Scelta: **implementare**, perché i driver sopra.
 **Verifica**: `php -l` non necessario (file non toccato). `vendor/bin/phpstan analyse Modules/Tenant/app/Filament/Resources/DomainResource/Tables/DomainsTable.php --no-progress` → 0 errori (eseguito insieme agli altri 3 file del batch).
 
 **Resta da fare**: niente per questo file.
-<<<<<<< HEAD
-=======
 
 
 ### Consequences
@@ -58,4 +50,3 @@ Scelta: **implementare**, perché i driver sopra.
 ### Confirmation
 
 Aggiungere prova ripetibile (Pest exit code + conteggio, PHPStan, o skip host documentato).
->>>>>>> laraxot/dev

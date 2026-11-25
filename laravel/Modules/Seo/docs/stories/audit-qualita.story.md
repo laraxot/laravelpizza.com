@@ -43,7 +43,7 @@ senza cambiare il comportamento pubblico (`/sitemap.xml`, `/robots.txt`, `seo:ro
 
 ### Documentazione
 
-- Indice unico: [index.md](../index.md). Rimossi `00-INDEX.md`, `00-index.md`, `INDEX.md` (gia' `superseded`).
+- Indice unico: [index.md](../00-index.md). Rimossi `00-INDEX.md`, `00-index.md`, `INDEX.md` (gia' `superseded`).
 - `README.md` (concatenazione `stale` di due README) riscritto come presentazione breve e corretta del modulo.
 - 12 file con data nel nome: rinominati (data in `created:`) o uniti/rimossi se doppioni; 15 file vuoti (solo frontmatter o segnaposto) rimossi; 2 duplicati esatti rimossi; link aggiornati.
 - `services-to-adapters-conversion.md` e `philosophy-3.md` allineati allo stato reale (facade -> `MetatagFacadeAdapter`).

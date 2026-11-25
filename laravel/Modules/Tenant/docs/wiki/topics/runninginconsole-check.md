@@ -9,17 +9,6 @@ qmd: "digest ceiling 100 runninginconsole-check"
 
 Sintesi automatica di 4 documenti (chiave `runninginconsole-check`).
 
-<<<<<<< HEAD
-## Decisione: Rimozione runningInConsole Check in ResolveTenantConfigValueAction
-
-_Fonte: `runninginconsole-check-decision.md`_
-
-# Decisione: Rimozione runningInConsole Check in ResolveTenantConfigValueAction
-
-**Data**: 2025-01-22
-**Metodologia**: Super Mucca - La Litigata Interna
-**File**: `app/Actions/Config/ResolveTenantConfigValueAction.php`
-=======
 ## Decisione: Rimozione runningInConsole Check in GetTenantConfigValueAction
 
 _Fonte: `runninginconsole-check-decision.md`_
@@ -29,7 +18,6 @@ _Fonte: `runninginconsole-check-decision.md`_
 **Data**: 2025-01-22
 **Metodologia**: Super Mucca - La Litigata Interna
 **File**: `app/Actions/Config/GetTenantConfigValueAction.php`
->>>>>>> laraxot/dev
 
 ---
 
@@ -56,16 +44,6 @@ L'utente ha dovuto commentare il blocco `runningInConsole()` perché rompeva tut
 
 ---
 
-<<<<<<< HEAD
-## Decisione: Rimozione runningInConsole Check in ResolveTenantConfigValueAction
-
-_Fonte: `runninginconsole-check-ision.md`_
-
-# Decisione: Rimozione runningInConsole Check in ResolveTenantConfigValueAction
-
-**Metodologia**: Super Mucca - La Litigata Interna
-**File**: `app/Actions/Config/ResolveTenantConfigValueAction.php`
-=======
 ## Decisione: Rimozione runningInConsole Check in GetTenantConfigValueAction
 
 _Fonte: `runninginconsole-check-ision.md`_
@@ -74,7 +52,6 @@ _Fonte: `runninginconsole-check-ision.md`_
 
 **Metodologia**: Super Mucca - La Litigata Interna
 **File**: `app/Actions/Config/GetTenantConfigValueAction.php`
->>>>>>> laraxot/dev
 
 ---
 
@@ -108,11 +85,7 @@ _Fonte: `runninginconsole-check-removal-summary.md`_
 # Rimozione runningInConsole Check - Riepilogo
 
 **Data**: 2025-01-22
-<<<<<<< HEAD
-**File**: `app/Actions/Config/ResolveTenantConfigValueAction.php`
-=======
 **File**: `app/Actions/Config/GetTenantConfigValueAction.php`
->>>>>>> laraxot/dev
 **Status**: ✅ Completato
 
 ---
@@ -145,11 +118,7 @@ _Fonte: `runninginconsole-check-removal-sumy.md`_
 
 # Rimozione runningInConsole Check - Riepilogo
 
-<<<<<<< HEAD
-**File**: `app/Actions/Config/ResolveTenantConfigValueAction.php`
-=======
 **File**: `app/Actions/Config/GetTenantConfigValueAction.php`
->>>>>>> laraxot/dev
 **Status**: ✅ Completato
 
 ---

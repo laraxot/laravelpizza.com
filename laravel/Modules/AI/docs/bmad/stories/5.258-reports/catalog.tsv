@@ -1,0 +1,78 @@
+00-start.md	REPO		sessione	G01
+start.md	REPO	00-start.md	sessione	G01
+99-closing-ritual.md	REPO		sessione	G01
+97-YAML-FRONTMATTER-CONVENTION.md	REF		sessione	G01
+55-md-conventions.md	REF		sessione	G01
+01-architecture-patterns.md	REF		architettura	G02
+01-confidence-bootstrap.md	MODULE		architettura	G02
+27-confidence-bootstrap.md	MODULE	01-confidence-bootstrap.md	architettura	G02
+13-path-and-naming-rules.md	MODULE		architettura	G02
+14-module-dependency-direction.md	MODULE		architettura	G02
+43-php-files-structure.md	MODULE		architettura	G02
+02-controller-to-folio-actions.md	MODULE		controller-actions	G03
+04b-controller-to-folio-actions.md	MODULE	02-controller-to-folio-actions.md	controller-actions	G03
+25-services-to-actions.md	MODULE		controller-actions	G03
+26-actions-architecture-audit.md	MODULE		controller-actions	G03
+04-datas-not-dtos.md	MODULE		data-contracts	G04
+04-filament.md	MODULE	04-datas-not-dtos.md	data-contracts	G04
+07-contracts.md	MODULE		data-contracts	G04
+05-livewire-to-filament-widgets.md	MODULE	28-livewire-to-filament-widgets.md	filament-ui	G05
+05-widget.md	MODULE	05-livewire-to-filament-widgets.md	filament-ui	G05
+28-livewire-to-filament-widgets.md	MODULE		filament-ui	G05
+06-filament-audit.md	MODULE		filament-ui	G05
+06-filament.md	MODULE	06-filament-audit.md	filament-ui	G05
+08-playwright-ui.md	MODULE		filament-ui	G05
+08-ui.md	MODULE	08-playwright-ui.md	filament-ui	G05
+06-testing-standards.md	REF	29-testing-standards.md	testing	G06
+29-testing-standards.md	REF		testing	G06
+10-pest-xot-base-test.md	MODULE		testing	G06
+10-test.md	MODULE	10-pest-xot-base-test.md	testing	G06
+20-filesystem-before-assertions.md	MODULE		testing	G06
+20-filesystem.md	MODULE	20-filesystem-before-assertions.md	testing	G06
+53-tdd-fonti-esterne.md	MODULE		testing	G06
+03-quality-gates.md	MODULE		qualita	G07
+11-phpinsights.md	MODULE		qualita	G07
+11-phpstan.md	MODULE		qualita	G07
+10-ponytail-audit.md	MODULE		qualita	G07
+17-ponytail.md	MODULE	10-ponytail-audit.md	qualita	G07
+24-boy-scout.md	MODULE		qualita	G07
+22-ide-helper.md	MODULE		qualita	G07
+23-optimize.md	MODULE		qualita	G07
+09-migrations.md	MODULE		db-modelli	G08
+09-migrations-forward-only.md	MODULE	09-migrations.md	db-modelli	G08
+21-translations.md	MODULE		db-modelli	G08
+32-model-migration-factory-seeder.md	MODULE		db-modelli	G08
+33-migrations-audit.md	MODULE		db-modelli	G08
+34-factories-seeders-audit.md	MODULE		db-modelli	G08
+35-policies-permissions-audit.md	MODULE		db-modelli	G08
+36-events-jobs-notifications.md	MODULE		db-modelli	G08
+37-providers-container-bindings.md	MODULE		db-modelli	G08
+38-config-routes-views.md	MODULE		db-modelli	G08
+39-composer-dependencies.md	MODULE		db-modelli	G08
+16-git-forward-only.md	REPO		git-github	G09
+16-git.md	REPO	16-git-forward-only.md	git-github	G09
+17-git.md	REPO	16-git-forward-only.md	git-github	G09
+17-gitmodules-path-iteration.md	REPO		git-github	G09
+17-gitmodules-sync.md	REPO	48-gitmodules-sync.md	git-github	G09
+48-gitmodules-sync.md	REPO		git-github	G09
+18-github-issues.md	REPO		git-github	G09
+18-github.md	REPO	18-github-issues.md	git-github	G09
+51-conflitti-git-current-change.md	REPO		git-github	G09
+07-documentation-standards.md	REF		docs-processo	G10
+30-documentation-standards.md	REF	07-documentation-standards.md	docs-processo	G10
+12-documentation.md	MODULE		docs-processo	G10
+15-bmad-audit.md	REPO		docs-processo	G10
+15-bmad.md	REPO	15-bmad-audit.md	docs-processo	G10
+19-docs.md	MODULE	19-docs-second-brain.md	docs-processo	G10
+19-docs-second-brain.md	MODULE		docs-processo	G10
+42-delete-obsolete-files-safely.md	MODULE		docs-processo	G10
+44-module-docs-continuous.md	MODULE		docs-processo	G10
+47-rules-ondemand.md	REPO		docs-processo	G10
+52-mappa-proprieta-docs.md	MODULE		docs-processo	G10
+45-full-module-audit.md	MODULE		swarm-report	G11
+46-multi-agent-module-swarm.md	REPO		swarm-report	G11
+50-trigger-operativi.md	REF		swarm-report	G11
+54-notify-handoff-storico.md	MODULE		swarm-report	G11
+56-multiple-ai.md	REPO		swarm-report	G11
+98-daily-report.md	REPO		swarm-report	G11
+daily-report.md	REPO	98-daily-report.md	swarm-report	G11

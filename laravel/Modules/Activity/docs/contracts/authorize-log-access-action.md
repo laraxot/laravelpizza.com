@@ -28,10 +28,11 @@ Chi puo' consultare e scaricare i file di log. Regola unica usata da `LogViewer:
 
 ## Invarianti
 
-| ID | Regola | Test |
+| ID | Regola | Group Pest |
 |---|---|---|
-| ACT-LOGAUTH-INV-1 | Ospiti (`null`) e utenti che non implementano `UserContract` sono negati. | `AuthorizeLogAccessActionTest.php` |
-| ACT-LOGAUTH-INV-2 | Se il permesso `log.viewAny` non esiste nel database l'accesso e' negato senza errore (`PermissionDoesNotExist` catturata). | `AuthorizeLogAccessActionTest.php` |
+| ACTIVITY-LOGACCESS-INV-1 | Accesso solo al ruolo `super-admin` o a chi ha il permesso `log.viewAny`. | `ACTIVITY-LOGACCESS-INV-1` |
+| ACTIVITY-LOGACCESS-INV-2 | Ospiti (`null`), utenti senza ruolo ne' permesso e utenti che non implementano `UserContract` sono respinti. | `ACTIVITY-LOGACCESS-INV-2` |
+| ACTIVITY-LOGACCESS-INV-3 | Se il permesso `log.viewAny` non esiste nel database l'accesso e' negato senza errore (`PermissionDoesNotExist` catturata). | `ACTIVITY-LOGACCESS-INV-3` |
 
 ## Effetti collaterali
 

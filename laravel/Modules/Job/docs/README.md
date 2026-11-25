@@ -1,70 +1,78 @@
 ---
-title: "Job: scopo del modulo"
+title: "Job - documentazione del modulo (docs)"
 type: documentation
 module: Job
-tags: [module, documentation, queue, scheduler]
-qmd: "Job scopo modulo code queue import export failed jobs batch schedule fallimenti visibili"
+tags: [module, documentation]
+created: 2026-06-05
+updated: 2026-10-07
+qmd: "README"
+issues: []
+discussions: []
 related:
+  - "../README.md"
   - "./00-index.md"
-  - "./architecture.md"
-  - "./audit.md"
+  - "./stories/02.Job-merge-conflict-resolution.story.md"
+  - "./stories/02.job-merge-conflict-resolution.story.md"
 ---
 
-# Job
+# Job docs
 
-**Job rende visibile e governabile tutto cio' che accade fuori dalla richiesta HTTP: code, importazioni,
-esportazioni, lavori pianificati, e soprattutto i loro fallimenti.**
+Cartella `docs/` del modulo Job: documentazione a livello modulo. Per la panoramica
+del modulo vedi il [README del modulo](../README.md); per la navigazione vedi
+l'[indice](00-index.md).
 
-Un lavoro asincrono che fallisce in silenzio e' peggio di uno mai partito: chi lo ha chiesto crede che sia
-andato a buon fine. Laravel ha gia' code, batch e `failed_jobs`; quello che non ha e' una superficie in cui un
-funzionario, non un sistemista, vede che l'importazione di ieri si e' fermata alla riga 4.312 e perche'
-(`FailedImportRow`). Le Resource lo confermano: delle nove, due riguardano il fallimento (`FailedJob`,
-`FailedImportRow`).
+## Panoramica
 
-Mappa dei documenti: [00-index.md](00-index.md). Cosa c'e' nel codice: [architecture.md](architecture.md).
-Cosa non funziona ancora e perche': [audit.md](audit.md).
+Il modulo **Job** gestisce i job asincroni, le code di elaborazione e lo scheduler
+di task persistiti su database (connessione dedicata `job`).
 
-## Confini
+## Funzionalita'
 
-- Il **contenuto** del lavoro e' del dominio: Job esegue e osserva, non sa cosa sta importando.
-- L'**invio** delle notifiche e' di Notify.
-- Le **regole di validazione** delle righe importate sono del modulo che possiede il dato.
+- Gestione code e job (tabella `jobs`), job in attesa
+- Retry e gestione dei job falliti (`failed_jobs`)
+- Batch (`job_batches`) e monitoraggio esecuzioni (`JobManager`)
+- Scheduler su DB (`Schedule`, `ScheduleHistory`, `Task`)
+- Import/Export Filament (`Import`, `Export`, `FailedImportRow`)
 
-## Il modulo in numeri (misurati sul codice il 2026-11-25)
+## Modelli principali
 
-| Voce | N | Dove |
-|---|---:|---|
-| Resource Filament | 9 | `app/Filament/Resources`: `Job`, `JobsWaiting`, `JobBatch`, `JobManager`, `Schedule`, `Import`, `Export`, `FailedJob`, `FailedImportRow` |
-| Pagine standalone | 4 | `Dashboard`, `JobMonitor`, `JobStatus`, `SettingPage` |
-| Widget | 5 | `ClockWidget`, `JobStatusWidget`, `QueueListenWidget`, `ScheduleCrudWidget`, `ScheduleStatusWidget` |
-| Model | 17 | `app/Models` (BaseModel, BaseMorphPivot, 15 di dominio) |
-| Policy | 16 | `app/Models/Policies`: una per modello piu' `JobBasePolicy` |
-| Action | 16 | `app/Actions` (7 in radice, 3 `Command/`, 4 `Console/`, 2 `Schedule/`) |
-| Comandi Artisan | 4 | `worker:check`, `schedule:clear-cache`, `schedule:test-job`, `phpunit:test` |
-| Migration | 14 | una per tabella |
-| Lingue | 6 | `lang/`: it, en, de, es, fr, nb_NO |
+Namespace `Modules\Job\Models`:
 
-## Come arrivare a uno scopo migliore (idee in ordine di valore)
+```php
+Job::class          // tabella jobs
+JobsWaiting::class  // vista sulla stessa tabella jobs (job in attesa)
+FailedJob::class
+JobBatch::class
+JobManager::class   // tracciamento esecuzioni
+Schedule::class     // + ScheduleHistory, Task, Result, Frequency
+Import::class       // + Export, FailedImportRow
+```
 
-1. **Il fallimento deve raggiungere chi ha chiesto il lavoro**: ogni lavoro porta il richiedente; al
-   fallimento definitivo parte una notifica via Notify. La dashboard e' per chi amministra, la notifica per
-   chi aspetta.
-2. **Un import va ripreso, non rifatto**: con `FailedImportRow` popolata si puo' offrire "ritenta solo le
-   righe fallite" (il dato c'e' gia').
-3. **Errore di dato diverso da errore di sistema**: classificare il fallimento (dato, sistema, configurazione)
-   e mostrarlo accanto all'errore; le azioni sono opposte.
-4. **Un lavoro pianificato che smette di partire deve farsi notare**: registrare l'ultima esecuzione riuscita
-   di ogni voce e segnalare quando supera l'intervallo atteso. Dipende dalla decisione D-2 sullo scheduler
-   ([audit.md](audit.md#epiche-e-piano)).
-5. **La ritentabilita' e' una proprieta' del lavoro**: dichiarare se un lavoro e' idempotente; per gli altri
-   serve una chiave di idempotenza, prima di aggiungere `$tries`.
+## Servizi e Actions
 
-## Cartelle
+La logica di business nuova vive in Spatie Queueable Actions (`app/Actions/**`,
+metodo `execute()`). L'unico service rimasto e' `Modules\Job\Services\ScheduleService`
+(vedi story [job-services-to-actions](stories/0020-job-services-to-actions.story.md)).
+Le classi `JobDispatcher` e `QueueManager`, citate in una versione precedente di
+questo file, non esistono nel modulo.
 
-| Cartella | Contenuto |
-|---|---|
-| `adr/` | decisioni architetturali (formato MADR), [indice](adr/index.md) |
-| `contracts/` | contratto di comportamento di ogni Action con invarianti, [indice](contracts/index.md); il docblock della classe lo cita con `@contract` |
-| `stories/` | story BMAD del modulo, [template](stories/0000-template.story.md) |
-| `bmad/` | dossier BMAD del modulo, [README](bmad/README.md); le story BMAD stanno in `bmad/stories/` |
-| `ecc/` | checklist ECC e stato dei controlli, [job-ecc-audit.md](ecc/job-ecc-audit.md) |
+## Collegamenti
+
+- [Architettura](./architecture.md)
+- [Inventario Livewire e widget Filament](./bmad/livewire-inventory.md)
+- [Xot base](../../Xot/docs/README.md)
+- [Notify](../../Notify/docs/readme.md) per le notifiche di fallimento job
+- [Activity](../../Activity/docs/README.md) per il log di esecuzione
+
+## Stories
+
+- [02 Job - risoluzione marker di merge (2026-10)](stories/0002-job-merge-conflict-resolution.story.md)
+- [2026-10-06 PHPStan cleanup - Job](./stories/2026-10-06-phpstan-cleanup-job.story.md) | [dev](./stories/2026-10-06-phpstan-cleanup-job.dev.md)
+
+## Stato dell'organizzazione della cartella
+
+Upstream (`laraxot/dev`) dichiara che `docs/wiki/` e `build_local/` sono stati
+rimossi e che il contenuto di `_archive` e' in `docs-archive-2026/` alla radice del
+modulo. Verificato il 2026-10-07: `docs/wiki/` e `docs/build_local/` esistono ancora,
+`docs-archive-2026/` non esiste nel modulo. La pulizia non e' stata applicata in
+questo repo e non e' oggetto della story di merge.

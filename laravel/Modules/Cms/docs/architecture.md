@@ -80,7 +80,8 @@ deriva dall'`APP_URL`). Schema JSON e regole: [content-json-pages.md](content-js
 | `RedirectUnlocalizedPathAction` | redirect `/events` -> `/it/events` se la pagina esiste |
 | `BuildPageSchemaAction` | JSON-LD della pagina (senza email nel profilo pubblico) |
 | `Head\*` | `BuildHeadSchemaAction`, `ComposeDocumentTitleAction`, `ResolveCmsPageAction`, `ResolveHreflangAlternatesAction`, `ResolvePageDescriptionAction`, `ResolveRobotsPolicyAction`, `ResolveWrittenLocalesAction`, `CollapsePathSegmentsAction` |
-| `ResolveLocalizedBlockDataAction`, `ResolveBlockQueryAction` | dati localizzati e query dei blocchi |
+| `ResolveBlockQueryAction` | esegue `data.query` di un blocco e ne unisce i risultati ai dati |
+| `ResolveLocalizedBlockDataAction` | localizza i campi URL dei dati di un blocco; **non e' invocata da nessun codice** al momento |
 | `SanitizeHtmlAction` | HTML dei blocchi di testo ripulito prima di `{!! !!}` (via script, stili inline, iframe, `on*`) |
 | `SaveFooterConfigAction`, `SaveHeadernavConfigAction` | salvataggio di footer e header nav ([contracts/](contracts/README.md)) |
 | `GetStyleClassAction`, `GetViewThemeByViewAction`, `View\GetCmsViewAction` | classi di stile, risoluzione di view del tema, view esistente tipizzata `view-string` |

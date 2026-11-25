@@ -23,20 +23,12 @@ _Fonte: `bmad/architecture/tenant-config-resolution.md`_
 
 1. `TenantServiceProvider::registerDB()` (riga 61) risolve la connessione di default.
 2. `loadTenantDatabaseConfig()` (riga 117) legge la chiave `database` con
-<<<<<<< HEAD
-   `ResolveTenantConfigValueAction` e la filtra con `FilterConfigStringKeysAction`.
-=======
    `GetTenantConfigValueAction` e la filtra con `FilterConfigStringKeysAction`.
->>>>>>> laraxot/dev
 3. `mergeModuleConnections()` (riga 138) produce la configurazione di connessione finale.
 4. `registerMorphMap()` (riga 51) legge la chiave `morph_map`, la filtra e chiama
    `Relation::morphMap(self::buildMorphMap(...))`.
 5. `mergeConfigs()` (riga 83) itera `GetTenantConfigNamesAction` e carica ogni config con
-<<<<<<< HEAD
-   `ResolveTenantConfigValueAction`.
-=======
    `GetTenantConfigValueAction`.
->>>>>>> laraxot/dev
 
 ## Registry dei resolver
 
@@ -150,8 +142,4 @@ bash bashscripts/tools/guard-tenant-config-delete.sh
 bash bashscripts/tools/audit-tenant-config-inventory.sh
 ```
 
-<<<<<<< HEAD
-Hub progetto: [tenant-config-directory-sacred.md](../../../../../../docs/wiki/concepts/tenant-config-directory-sacred.md)
-=======
 Hub progetto: [modules-structure-rules.md#tenant-config-directory-sacred](../../../../../../bashscripts/ai/wiki/concepts/modules-structure-rules.md#tenant-config-directory-sacred)
->>>>>>> laraxot/dev

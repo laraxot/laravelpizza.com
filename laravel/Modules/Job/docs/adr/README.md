@@ -37,11 +37,7 @@ Chi cambia una decisione scrive un nuovo ADR e segna il precedente `superseded b
 - [0001-controlli-operativi-solo-super-admin-e-whitelist](0001-controlli-operativi-solo-super-admin-e-whitelist.md)
 - [job-operations-are-whitelisted](job-operations-are-whitelisted.md): stessa decisione del precedente in forma breve; overlap da consolidare (non marcato superseded da questa sessione).
 
-<<<<<<< HEAD
-Elenco con stato: [index.md](index.md).
-=======
 Elenco con stato: [INDEX.md](INDEX.md).
->>>>>>> laraxot/dev
 title: "ADR — Job"
 type: index
 tags: [adr, decisioni, job]
@@ -62,12 +58,6 @@ Formato e regole: [action-behavioral-contract](../../../Xot/docs/rules/action-be
 
 ## Decisioni
 
-<<<<<<< HEAD
-- [Comandi Artisan dalla UI: allowlist a match esatto](artisan-commands-from-ui-exact-match-allowlist.md) — solo super-admin, autorizzazione ripetuta nel metodo Livewire, nessun argomento libero.
-- [Flag del worker dalle impostazioni del tenant](queue-worker-flags-from-tenant-settings.md) — `timeout/sleep/tries` per tenant, nella shell entrano solo interi.
-- [Tabella jobs in sola lettura](jobs-table-read-only-in-admin.md) — `JobResource` senza create/edit: la coda la scrive il codice.
-=======
 - [Comandi Artisan dalla UI: allowlist a match esatto](0001-artisan-commands-from-ui-exact-match-allowlist.md) — solo super-admin, autorizzazione ripetuta nel metodo Livewire, nessun argomento libero.
 - [Flag del worker dalle impostazioni del tenant](0003-queue-worker-flags-from-tenant-settings.md) — `timeout/sleep/tries` per tenant, nella shell entrano solo interi.
 - [Tabella jobs in sola lettura](0002-jobs-table-read-only-in-admin.md) — `JobResource` senza create/edit: la coda la scrive il codice.
->>>>>>> laraxot/dev

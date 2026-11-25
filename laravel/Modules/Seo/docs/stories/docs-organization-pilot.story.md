@@ -10,7 +10,7 @@ tags: [docs, organization, pilot, bmad, non-destructive, frontmatter, links, sup
 qmd: "seo docs organization pilot indice canonico index.md frontmatter status superseded stale link rotti stub shared-components"
 related:
   - ../../../../../bmad-output/docs-organization-audit-2026-10-08.md
-  - ../index.md
+  - ../00-index.md
   - ../../../../Themes/Meetup/docs/stories/docs-organization-pilot.story.md
 ---
 

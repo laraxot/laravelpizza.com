@@ -57,17 +57,3 @@ return app(StreamAgentRunAction::class)->execute($request, app(OperatorAssistant
 ## Test
 
 `tests/Unit/Agent`: scelta del fornitore, thread di altri utenti, turni vuoti, validazione.
-
-## Interfacce generate (A2UI)
-
-Fase C dell'integrazione laravelday-2026 (Passaparola, epic 2): l'agente mostra KPI, grafici e tabelle invece di elenchi di numeri. Parte agnostica nel modulo AI, usata dall'assistente operatore di Passaparola (story 2.4).
-
-- `ValidateA2uiComponentsAction`: componenti ammessi, proprieta' dei componenti del pannello, un valore per etichetta, una cella per colonna, figli esistenti, un solo genitore, niente cicli sulla radice.
-- `BuildA2uiSurfaceAction`: `createSurface` A2UI 1.0 sul catalogo `urn:laraxot:a2ui:panel`.
-- `RenderSurfaceTool` con `GUIDE` per le istruzioni; JSON non valido ed errori restituiti al modello.
-- Catalogo JS (Stat, Chart, DataTable, `weight` applicato) e renderer caricabile a richiesta. Test Pest in `tests/Unit/A2ui`.
-- Verifica: validatore e tool eseguiti fuori da Pest con laravel/framework 13.x e neuron-ai (13 controlli); rendering verificato (KPI, grafico, tabella).
-
-## Binding e strict mode MySQL
-
-`StrictModeEloquentPersistence` estende `EloquentPersistence` di neuron-ai. neuron rifiuta di scrivere un run in pausa se la sessione MySQL non e' in strict mode (un valore base64 troncato in silenzio renderebbe il run irrecuperabile). Le connessioni del tenant hanno `strict => false` per il resto dell'applicazione, quindi lo strict mode si accende solo per la durata della scrittura e poi si rimette la modalita' di prima: la garanzia di neuron vale, e le altre query della richiesta non cambiano.

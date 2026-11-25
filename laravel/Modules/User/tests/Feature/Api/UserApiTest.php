@@ -22,6 +22,6 @@ uses(TestCase::class);
  * Quando l'API sara' implementata, ripristinare il corpo da git e riscriverlo in Pest su
  * `Modules\User\Tests\TestCase`: `git -C Modules/User show 0e2e66d86:tests/Feature/Api/UserApiTest.php`.
  *
- * @see Modules/User/docs/stories/phpstan-test-wave-user-b.story.md
+ * @see Modules/User/docs/stories/0173-phpstan-test-wave-user-b.story.md
  */
 it('user api crud')->skip('api/users CRUD routes and controller not implemented (DCP-252)');

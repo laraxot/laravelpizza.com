@@ -8,11 +8,6 @@ created: 2026-10-06
 updated: 2026-10-06
 qmd: "7 5 create json max oneliner"
 ---
-<<<<<<< HEAD
-
-# Story 7.5 — CreateJsonFileByRecordAction: one-liner `$max`
-
-=======
 # Story 7.5 — CreateJsonFileByRecordAction: one-liner `$max`
 
 ## Context and Problem Statement
@@ -33,7 +28,6 @@ Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica 
 
 Scelta: **implementare**, perché i driver sopra.
 
->>>>>>> laraxot/dev
 > Status: done — 2026-10-05. Solo verifica: la one-liner era già nel working tree.
 
 ## Epic
@@ -78,8 +72,6 @@ Rispetto alla forma storica `max(Arr::pluck(...))` il `?: [0]` evita
 
 - `laravel/Modules/Tenant/app/Actions/Json/CreateJsonFileByRecordAction.php:35`
 - TRIGGER_MAP: Action → `02-Laravel-Core`; QMD non interrogabile (timeout 120s, documentato)
-<<<<<<< HEAD
-=======
 
 
 ### Consequences
@@ -90,4 +82,3 @@ Rispetto alla forma storica `max(Arr::pluck(...))` il `?: [0]` evita
 ### Confirmation
 
 Aggiungere prova ripetibile (Pest exit code + conteggio, PHPStan, o skip host documentato).
->>>>>>> laraxot/dev

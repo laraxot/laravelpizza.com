@@ -28,11 +28,11 @@ Riporta un record ai valori che aveva prima di una modifica, presi dalle `proper
 
 ## Invarianti
 
-| ID | Regola | Test |
+| ID | Regola | Group Pest |
 |---|---|---|
-| ACT-RESTORE-INV-1 | `$oldProperties` vuoto e' rifiutato (`Assert::notEmpty`) prima di toccare il record. | `RestoreActivityActionExecuteTest.php` |
-| ACT-RESTORE-INV-2 | Il record riceve un solo `update($oldProperties)`: valgono `$fillable` e `$guarded` del modello. | `RestoreActivityActionExecuteTest.php` |
-| ACT-RESTORE-INV-3 | Ogni eccezione dell'`update()` esce come `Exception('Restore failed: <messaggio>')`, con codice `(int) getCode()` e l'originale come `previous`. | `RestoreActivityActionTest.php` |
+| ACTIVITY-RESTORE-INV-1 | Il record riceve un solo `update()` con esattamente i valori passati: valgono `$fillable` e `$guarded` del modello. | `ACTIVITY-RESTORE-INV-1` |
+| ACTIVITY-RESTORE-INV-2 | Valori vuoti: eccezione prima di toccare il record (`Assert::notEmpty`). | `ACTIVITY-RESTORE-INV-2` |
+| ACTIVITY-RESTORE-INV-3 | Un errore dell'update esce come `Exception('Restore failed: <messaggio>')`, con codice `(int) getCode()` e l'eccezione originale come `previous`. | `ACTIVITY-RESTORE-INV-3` |
 
 ## Effetti collaterali
 

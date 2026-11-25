@@ -1,0 +1,24 @@
+/*
+ * Tabelle Filament su telefono: bersaglio di tocco >= 44 px per le azioni di riga.
+ *
+ * Soglia e selettore sono quelli di `Table::stackedOnMobile()` (HasXotTable::table()): sotto
+ * 640 px la riga e' una card e le azioni stanno su una riga propria, quindi l'aria in piu' non
+ * costa spazio. Da 640 px in su questo file non cambia nulla.
+ *
+ * Il pulsante icona di Filament e' 36 px con margine negativo (ingombro 20 px) e le azioni
+ * distano 12 px: i centri sono a 32 px, le aree si sovrappongono di 4 px, e il cestino sta
+ * accanto alla matita. ::after allarga l'area cliccabile di 4 px per lato (36 + 8 = 44 px)
+ * senza spostare il layout; il gap a 24 px porta i centri a 44 px, aree adiacenti senza
+ * sovrapposizione.
+ */
+@media (max-width: 39.99rem) {
+    .fi-ta-table-stacked-on-mobile .fi-ta-actions {
+        column-gap: 1.5rem;
+    }
+
+    .fi-ta-table-stacked-on-mobile .fi-ta-actions .fi-icon-btn::after {
+        content: '';
+        position: absolute;
+        inset: -0.25rem;
+    }
+}

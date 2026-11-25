@@ -8,11 +8,6 @@ created: 2026-10-06
 updated: 2026-10-06
 qmd: "8 2 phpstan l10 tenant sushi"
 ---
-<<<<<<< HEAD
-
-# BMAD Story 8.2: PHPStan L10 Tenant Module (81 errors → 0)
-
-=======
 # BMAD Story 8.2: PHPStan L10 Tenant Module (81 errors → 0)
 
 ## Context and Problem Statement
@@ -33,7 +28,6 @@ Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica 
 
 Scelta: **implementare**, perché i driver sopra.
 
->>>>>>> laraxot/dev
 **Fase**: Risoluzione sistematica errori PHPStan L10 nel modulo Tenant.
 
 ## Summary
@@ -112,8 +106,6 @@ Lezione: una story che dichiara "0 errori" senza output della run allegato va ri
 - AC: `getRows()` delega al flusso reale `getSushiRows()`; completato.
 - Causa corretta: riferimento a `$schema` inesistente rimosso; nessuna API nuova.
 - Verifiche: lint, PHPStan mirato e Pest Tenant pertinente.
-<<<<<<< HEAD
-=======
 
 
 ### Consequences
@@ -131,4 +123,3 @@ cd laravel && ./vendor/bin/phpstan analyse -c phpstan.neon Modules/Tenant
 **Status**: COMPLETE (81 → 0 errors)
 **Date**: 2026-10-06
 **Owner**: BMAD Tenant L10 Cleanup
->>>>>>> laraxot/dev

@@ -7,11 +7,7 @@ qmd: "digest ceiling 100 get-tenant"
 
 # Topic get-tenant
 
-<<<<<<< HEAD
-Sintesi automatica di 6 documenti (chiave `get-tenant`).
-=======
 Sintesi automatica di 9 documenti (chiave `get-tenant`).
->>>>>>> laraxot/dev
 
 ## GetTenantConfigArrayAction
 
@@ -112,8 +108,6 @@ Nessuno: legge solo il nome tenant da `GetTenantNameAction`, che a sua volta leg
 
 ## Non fa
 
-<<<<<<< HEAD
-=======
 ## GetTenantConfigValueAction
 
 _Fonte: `contracts/get-tenant-config-value-action.md`_
@@ -148,7 +142,6 @@ Risolve un valore di configurazione sovrapponendo la config del tenant a quella 
 
 - `Exception` generica con messaggio `[riga][classe]` in entrambi i casi di errore.
 
->>>>>>> laraxot/dev
 ## GetTenantFilePathAction
 
 _Fonte: `contracts/get-tenant-file-path-action.md`_
@@ -177,8 +170,6 @@ Calcola il percorso di un file di configurazione o contenuto del tenant corrente
 
 Normalmente nessuno (calcolo di stringa). Solo con `runningUnitTests()` e prefisso `database/content/`: la prima volta per processo `prepareTestingContent` cancella e ricrea la copia di test (righe 55-68) e copia il file o 
 
-<<<<<<< HEAD
-=======
 ## GetTenantModelClassAction
 
 _Fonte: `contracts/get-tenant-model-class-action.md`_
@@ -243,7 +234,6 @@ Quelli di `GetTenantModelClassAction` (possibile scrittura di `morph_map`). Ness
 
 ## Non fa
 
->>>>>>> laraxot/dev
 ## GetTenantModulesAction
 
 _Fonte: `contracts/get-tenant-modules-action.md`_

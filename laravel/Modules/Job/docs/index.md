@@ -222,14 +222,7 @@ $avgTime = $jobMonitor->getAverageProcessingTime();
 - [Activity Module](../../Activity/docs/index.md) - Activity logging
 - [Notify Module](../../Notify/docs/index.md) - Notification system
 - [User Module](../../User/docs/readme.md) - User authentication and management
-<<<<<<< HEAD
-- [Xot Module](../../Xot/docs/index.md) - Core base classes
-- [Activity Module](../../Activity/docs/index-2.md) - Activity logging
-- [Notify Module](../../Notify/docs/index-2.md) - Notification system
-- [User Module](../user/docs/README.md) - User authentication and management
 =======
-=======
->>>>>>> laraxot/dev
 
 ## Troubleshooting
 Common issues and solutions:

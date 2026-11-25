@@ -42,7 +42,7 @@ ne ricava il prefisso con `Modules\Xot\Actions\GetTransKeyAction`:
 
 `<modulo minuscolo>::<classe in snake_case>`, dopo aver tolto: il suffisso del tipo della cartella (`Resource`, `Page`, `Widget`...), il prefisso
 `dashboard|list|get|manage|edit|view|create`, il suffisso `_action` e `_form_schema`. Se nessun frame corrisponde il prefisso e' `lang::txt`.
-Esempio: `ListUsers` in `Modules\User\Filament\Resources\UserResource\Pages` => `user::user`... (la parte finale dipende dal nome della classe).
+Esempi: `Modules\User\Filament\Resources\UserResource` => `user::user`; `Modules\Lang\Filament\Resources\TranslationFileResource\Schemas\TranslationFileForm` => `lang::translation_file_form` (file `Modules/Lang/lang/it/translation_file_form.php`).
 
 Poi, per tipo di componente:
 

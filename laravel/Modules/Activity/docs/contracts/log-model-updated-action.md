@@ -27,11 +27,11 @@ Registra l'evento `updated` di un modello Eloquent con valori precedenti, nuovi 
 
 ## Invarianti
 
-| ID | Regola | Test |
+| ID | Regola | Group Pest |
 |---|---|---|
-| ACT-MUPDATE-INV-1 | Senza modello lancia `InvalidArgumentException('A model is required')`. | nessuno che asserisca il messaggio |
-| ACT-MUPDATE-INV-2 | `old`, `new` e `changes` passano da `RedactModelAttributesAction`: mai `password`, `remember_token`, `two_factor_secret`, `two_factor_recovery_codes`. Vale anche per created e deleted. | `LogModelActionsRedactSecretsTest.php` |
-| ACT-MUPDATE-INV-3 | `changes` e' quello che il modello espone al momento della chiamata: l'Action e' valida se chiamata dopo il `save()`. | nessuno |
+| ACTIVITY-MODEL-LOG-INV-1 | `old`, `new` e `changes` passano da `RedactModelAttributesAction`: mai `password`, `remember_token`, `two_factor_secret`, `two_factor_recovery_codes`. Vale anche per created e deleted. | `ACTIVITY-MODEL-LOG-INV-1` |
+| ACTIVITY-MODEL-LOG-INV-2 | Senza modello lancia `InvalidArgumentException('A model is required')`. | `LogModelUpdatedActionTest.php`, senza group |
+| ACTIVITY-MODEL-LOG-INV-3 | `changes` e' quello che il modello espone al momento della chiamata: l'Action e' valida se chiamata dopo il `save()`. | nessuno |
 
 ## Effetti collaterali
 

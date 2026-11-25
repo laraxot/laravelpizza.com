@@ -11,11 +11,6 @@ related:
 tags: [tenant, config, symlink, regression, database, log, livewire]
 qmd: "symlinked tenant config ignored on web"
 ---
-<<<<<<< HEAD
-
-# Config del tenant ignorata via web e pulizia del log
-
-=======
 # Config del tenant ignorata via web e pulizia del log
 
 ## Context and Problem Statement
@@ -36,7 +31,6 @@ Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica 
 
 Scelta: **implementare**, perché i driver sopra.
 
->>>>>>> laraxot/dev
 ## Sintomo
 
 `GET /it/tickets/1` da utente loggato: 500 `Table 'fixcity_data.ticket_subscribers' doesn't exist (Connection: user, Database: fixcity_data)`.
@@ -82,8 +76,6 @@ Rimozione dal log: solo errori verificati come risolti, entry intera (intestazio
 - `Aborted`, `db:table-metadata`: comandi CLI lanciati male, non bug.
 - 3 migrazioni **pending** (`add_metadata_to_consents`, `create_socialite_users`, `create_inbound_emails`): non lanciate
   (dati sacri: decide l'utente).
-<<<<<<< HEAD
-=======
 
 
 ### Consequences
@@ -94,4 +86,3 @@ Rimozione dal log: solo errori verificati come risolti, entry intera (intestazio
 ### Confirmation
 
 Aggiungere prova ripetibile (Pest exit code + conteggio, PHPStan, o skip host documentato).
->>>>>>> laraxot/dev

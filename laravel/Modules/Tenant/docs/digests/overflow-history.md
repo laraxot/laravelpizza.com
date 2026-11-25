@@ -7,13 +7,6 @@ qmd: "digest ceiling 100 overflow-history"
 
 # Overflow history (ceiling 100)
 
-<<<<<<< HEAD
-Overflow force-cap: 2 file oltre target 100.
-
-### `stories/0022-xotbaseresourcetable-model-audit-batch-tenant-limesurvey-lang-ai.story.md` — XotBaseResourceTable model audit - Tenant/DomainsTable
-
-# XotBaseResourceTable model audit - Tenant/DomainsTable
-=======
 Overflow force-cap: 251 file oltre target 100.
 
 ### `_integration/tenant.md` — tenant
@@ -636,7 +629,6 @@ automaticamente, va verificato chi lo registra.
 ### `bmad/stories/0002-continuazione-domani.story.md` — Continuazione domani
 
 # Continuazione domani
->>>>>>> laraxot/dev
 
 ## Context and Problem Statement
 
@@ -657,30 +649,6 @@ Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica 
 Scelta: **implementare**, perché i driver sopra.
 
 
-<<<<<<< HEAD
-### `wiki/troubleshooting/tenant-pages-sushi-empty-pageslugmiddleware.md` — Tenant name — Page Sushi vuoto → auth JSON ignorato
-
-
-# Tenant name — Page Sushi vuoto → auth JSON ignorato
-
-## Sintomo
-
-- `GET /it/tickets/create` → 200 per guest (dovrebbe 302 login)
-- `Page::count()` → 0
-- `PageSlugMiddleware` non applica `auth` dal JSON
-
-## Causa (2026-07-13)
-
-`GetTenantNameAction` chiamava metodo inesistente `containsUnsafeTenantPathCharacters()` → fatal in bootstrap tenant → pagine CMS non caricate da `config/local/fixcity/database/content/pages/`.
-
-## Fix
-
-Usare `containsUnsafePathCharacters()` (metodo esistente nella stessa classe).
-
-## Verifica
-
-```bash
-=======
 ### `bmad/stories/0003-docs-reorg-core.story.md` — Story — riorganizzazione docs core: Tenant
 
 # Story — riorganizzazione docs core: Tenant
@@ -4495,4 +4463,3 @@ Data from different tenants appearing in queries, or users accessing data from o
     - `GetTen
 
 ### `user-interface.md` — user-interface
->>>>>>> laraxot/dev

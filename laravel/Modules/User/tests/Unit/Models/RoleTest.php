@@ -19,6 +19,6 @@ uses(TestCase::class);
  * La copertura valida del model Role sta in `Unit/RoleTest.php`. Per ripristinare il corpo:
  * `git -C Modules/User show 0e2e66d86:tests/Unit/Models/RoleTest.php`.
  *
- * @see Modules/User/docs/stories/phpstan-test-wave-user-b.story.md
+ * @see Modules/User/docs/stories/0173-phpstan-test-wave-user-b.story.md
  */
 it('role model')->skip('Role::ROLE_* constants and RefreshDatabase spec not implemented, covered by Unit/RoleTest.php');

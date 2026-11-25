@@ -42,10 +42,8 @@ Tutti i modelli estendono `Models/BaseModel` (`XotBaseModel`) e usano la conness
 | Pianificazione | `Schedule`, `Task`, `Frequency`, `Parameter`, `TaskComment` |
 
 Lo stato di `Schedule` e' l'enum `Enums/Status` (decisione D-0, vedi [audit.md](audit.md#decisioni)); `Schedule`
-ha `Observers/ScheduleObserver`, che a ogni creazione/modifica/cancellazione svuota la cache delle schedulazioni
-attive (`Actions/Schedule/ClearScheduleCacheAction`) e alla cancellazione marca `Status::Trashed`. Non ho trovato
-dove venga registrato (nessun `ObservedBy`/`observe()` nel modulo, nessuno in `Xot/app/Providers`): lo esercita
-solo `tests/Unit/JobExecuteCoverage50Test.php`.
+e' osservato da `Observers/ScheduleObserver`, che a ogni creazione/modifica/cancellazione svuota la cache delle
+schedulazioni attive (`Actions/Schedule/ClearScheduleCacheAction`) e alla cancellazione marca `Status::Trashed`.
 
 ### Policy
 
@@ -110,7 +108,7 @@ Pattern unico (D-1): `SuperAdminOnlyTrait` + allowlist a match esatto + autorizz
 Livewire (`canAccess()` protegge l'apertura della pagina, non le chiamate gia' montate). Oggi lo applicano
 `JobStatus` e `JobStatusWidget`; gli altri widget operativi no (audit P1-2).
 
-### Niente `Support`
+### Ci sono solo un `Services` e `Support` assenti
 
 `app/Support/` non esiste piu': `AllowedArtisanCommands` e' stato sostituito dalle quattro Action di `Console/`
 perche' l'allowlist e' una policy di sicurezza, non un helper statico, e le Action si testano e si auditano in modo

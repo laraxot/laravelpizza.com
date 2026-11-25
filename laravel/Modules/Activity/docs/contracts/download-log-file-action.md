@@ -28,11 +28,10 @@ Risposta HTTP di download per un file di log scelto dall'utente. Il percorso pas
 
 ## Invarianti
 
-| ID | Regola | Test |
+| ID | Regola | Group Pest |
 |---|---|---|
-| ACT-LOGDL-INV-1 | Un file fuori dalla cartella dei log, non `.log`, vuoto, assoluto o inesistente non produce risposta: viene rilanciata `InvalidLogFileException`. | `DownloadLogFileActionTest.php` |
-| ACT-LOGDL-INV-2 | La risposta e' `BinaryFileResponse`: il file e' letto a blocchi dal disco, non caricato in memoria ne' codificato in base64. | `DownloadLogFileActionTest.php` |
-| ACT-LOGDL-INV-3 | Il nome del download non contiene `/`. | nessuno |
+| ACTIVITY-LOGDOWNLOAD-INV-1 | Il file completo arriva come `BinaryFileResponse` (letto a blocchi dal disco, non in memoria ne' in base64), `text/plain`, con nome senza barre. | `ACTIVITY-LOGDOWNLOAD-INV-1` |
+| ACTIVITY-LOGDOWNLOAD-INV-2 | Il percorso passa da `GetLogFilePathAction`: file fuori dalla cartella dei log, inesistenti, non `.log`, vuoti o assoluti sono rifiutati con `InvalidLogFileException`. | `ACTIVITY-LOGDOWNLOAD-INV-2` |
 
 ## Effetti collaterali
 

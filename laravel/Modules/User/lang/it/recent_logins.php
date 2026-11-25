@@ -24,7 +24,6 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-            'label' => 'Ora accesso',
         ],
         'ip_address' => [
             'label' => 'Indirizzo IP',

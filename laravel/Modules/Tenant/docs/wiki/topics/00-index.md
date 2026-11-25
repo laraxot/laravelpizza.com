@@ -22,11 +22,7 @@ _Fonte: `bmad/00-index.md`_
 - [Brainstorming](./brainstorming.md)
 - [Audit](./audit.md) → [Audit dettagliato](./audits/tenant-audit.md)
 - [Piano di miglioramento](./piano-miglioramento.md) (parzialmente superato dall'audit 2026-11-16)
-<<<<<<< HEAD
-- [Story audit modulo](./stories/module-bmad-audit.story.md)
-=======
 - [Story audit modulo](stories/0005-module-bmad-audit.story.md)
->>>>>>> laraxot/dev
 - [ECC](../ecc/00-index.md)
 - [Purpose root](../purpose.md)
 

@@ -16,7 +16,7 @@ Leggili prima di chiamare o modificare l'invio a IndexNow o la rotta `/{chiave}.
 verificano con `cd laravel && vendor/bin/pest Modules/Seo/tests --group=<ID>`; `—` è debito dichiarato.
 
 Formato (sei sezioni, tabella invarianti con ID, `@contract` nel docblock):
-[action-behavioral-contract](../../../Xot/docs/rules/action-behavioral-contract.md).
+[0012-behavioral-contract-governance](../../../Xot/docs/adr/0012-behavioral-contract-governance.md).
 
 ## Indice
 

@@ -7,9 +7,6 @@ qmd: "digest ceiling 100 overflow-history"
 
 # Overflow history (ceiling 100)
 
-<<<<<<< HEAD
-Overflow force-cap: 16 file oltre target 100.
-=======
 Overflow force-cap: 180 file oltre target 100.
 
 ### `.github/links.md` — links
@@ -464,7 +461,6 @@ Non pre-caricare questo file: leggi la fonte canonica solo quando il task lo ric
 uno con `use Modules\Job\Tests\TestCase` e `uses(TestCase::class)`, l'altro con `uses(\Modules\Job\Tests\TestCase::class)`.
 Tenuta la forma con l'import (stesso comportamento, nessun test perso). Il test verifica che `Modules\Job\Services\ScheduleService`
 esista ancora (vedi `scopo.md`). Storia: `stories/12.5.job-sync-marker-repair.story.md`.
->>>>>>> laraxot/dev
 
 ### `contracts/assert-allowed-artisan-command-action.md` — AssertAllowedArtisanCommandAction
 
@@ -823,9 +819,6 @@ Duplicato flat, `@deprecated` (`app/Actions/GetActiveSchedulesAction.php:13-17`)
 | ID | Regola | Test |
 |---|---|---|
 | `JOB-SCHED-ROOT-INV-1` | Il modello e' risolto nel costruttore; senza `job::model` usa `Schedule::class` e non lancia. | Test: `tests/Unit/Actions/GetActiveSchedulesActionTest.php:42` (solo "has model property", struttura). |
-<<<<<<< HEAD
-| `JOB-SCHED-ROOT-INV-2` | Con cache disabilitata restituisce `active()->get()`;
-=======
 | `JOB-SCHED-ROOT-INV-2` | Con cache disabilitata restituisce `active()->get()`; 
 
 ### `contracts-naming.md` — Contracts Naming & Placement in Job
@@ -3720,4 +3713,3 @@ This guide covers common errors, root causes, solutions, and prevention strategi
 Il codice però leggeva `$this->attributes['total_jobs']`, cioè l'array grezzo degli
 attributi: valore **non castato** e tipizzato `mixed`. Da lì il `(int)` diventava
 obbligatorio, e a livello max `(int) mixed` è un errore.
->>>>>>> laraxot/dev

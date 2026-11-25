@@ -29,12 +29,12 @@ Scrive una riga in `activity_log` (modello `Modules\Activity\Models\Activity`, c
 
 ## Invarianti
 
-| ID | Regola | Test |
+| ID | Regola | Group Pest |
 |---|---|---|
-| ACT-LOGACT-INV-1 | `$type` vuoto lancia `InvalidArgumentException('Type cannot be empty')` nel costruttore. | `LogActivityActionConstructorTest.php` |
-| ACT-LOGACT-INV-2 | Un `$user` non nullo che non e' `UserContract` lancia `InvalidArgumentException('User must implement UserContract')` in `execute()`. | `LogActivityActionExecuteValidationTest.php` |
-| ACT-LOGACT-INV-3 | `causer_id` e' l'id dell'utente passato; senza utente e' `Auth::id()` solo se int o stringa. `causer_type` e' la classe dell'utente passato, altrimenti `null`. | nessuno sul caso senza utente |
-| ACT-LOGACT-INV-4 | `description` di default `Activity: <type>`; `log_name` e `event` valgono il tipo. | nessuno |
+| ACTIVITY-LOG-INV-1 | `$type` vuoto lancia `InvalidArgumentException('Type cannot be empty')` nel costruttore. | `ACTIVITY-LOG-INV-1` |
+| ACTIVITY-LOG-INV-2 | Un `$user` non nullo che non e' `UserContract` lancia `InvalidArgumentException('User must implement UserContract')` in `execute()`. | `ACTIVITY-LOG-INV-2` |
+| ACTIVITY-LOG-INV-3 | `causer_id` e' l'id dell'utente passato; senza utente e' `Auth::id()` solo se int o stringa. `causer_type` e' la classe dell'utente passato, altrimenti `null`. | nessuno (sul caso senza utente) |
+| ACTIVITY-LOG-INV-4 | `description` di default `Activity: <type>`; `log_name` e `event` valgono il tipo. | nessuno |
 
 ## Effetti collaterali
 

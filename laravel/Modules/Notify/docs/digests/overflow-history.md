@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Overflow history digest"
 type: digest
 status: active
@@ -26,6 +27,8 @@ File assorbiti per rientrare a ≤100 (git resta la storia completa).
 - digests/aliases-removed.md
 - `stories/phpstan-test-wave-notify-b.story.md`
 =======
+=======
+>>>>>>> laraxot/dev
 title: "Overflow history (ceiling 100)"
 type: digest
 status: active
@@ -29261,4 +29264,7 @@ discussions: []
 - ✅ `git rebase` invece di `git reset`
 - ✅ `git revert` invece di `git checkout <old-commit>`
 - ✅ Studiare commit history per capire decisioni
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev

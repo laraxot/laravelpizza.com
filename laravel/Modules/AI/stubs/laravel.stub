@@ -1,0 +1,98 @@
+<?php
+
+namespace Illuminate\Database\Schema {
+    class Blueprint {
+        public function id() {}
+        public function uuid() {}
+        public function string() {}
+        public function text() {}
+        public function json() {}
+        public function timestamp() {}
+        public function timestamps() {}
+        public function softDeletes() {}
+        public function foreignIdFor() {}
+        public function increments() {}
+        public function integer() {}
+        public function bigInteger() {}
+        public function mediumText() {}
+        public function char() {}
+        public function decimal() {}
+        public function unsignedInteger() {}
+        public function unsignedMediumInteger() {}
+        public function unique() {}
+        public function index() {}
+        public function renameColumn() {}
+    }
+}
+
+namespace Illuminate\Support\Facades {
+    class Route {
+        public static function get() {}
+        public static function middleware() {}
+    }
+
+    class Schema {
+        public static function connection() {}
+        public static function hasTable() {}
+        public static function create() {}
+        public static function table() {}
+        public static function dropIfExists() {}
+    }
+
+    class File {
+        public static function exists() {}
+        public static function get() {}
+        public static function put() {}
+        public static function delete() {}
+        public static function deleteDirectory() {}
+        public static function makeDirectory() {}
+    }
+
+    class Config {
+        public static function get() {}
+    }
+
+    class Log {
+        public static function info() {}
+    }
+
+    class App {
+        public static function environment() {}
+    }
+
+    class DB {
+        public static function connection() {}
+    }
+}
+
+namespace Illuminate\Support {
+    class Str {
+        public static function after() {}
+        public static function before() {}
+        public static function contains() {}
+        public static function of() {}
+        public static function singular() {}
+        public static function studly() {}
+    }
+
+    class HtmlString {}
+}
+
+namespace Illuminate\Database\Migrations {
+    class Migration {}
+}
+
+namespace Illuminate\Database\Eloquent {
+    class Model {
+        public function getTable() {}
+        public function getConnectionName() {}
+        public function getKeyType() {}
+        public static function unguard() {}
+    }
+}
+
+function app() {}
+function route() {}
+function storage_path() {}
+function url() {}
+function class_basename() {}

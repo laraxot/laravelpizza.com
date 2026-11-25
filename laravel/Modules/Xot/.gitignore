@@ -1,9 +1,3 @@
-# Deduplicated .gitignore - generated from original
-
-._*
-
-._*
-# ==============================================
 
 ._*
 # ==============================================
@@ -14,12 +8,6 @@
 *~LOCAL
 *~REMOTE
 agentdb.rvf
-.agents
-.agents/
-/.agents/
-app/Application
-app/storage/
-audit-coverage/
 # AI/TOOL SCAFFOLD — must never exist in the module tree.
 app/storage/
 audit-coverage/
@@ -30,22 +18,6 @@ audit-coverage/
 *.backup.*
 *.bak
 *.bakcup
-/bashscripts/
-bashscripts
-_bmad-output
-bootstrap/compiled.php
-/build/
-build
-build/
-*.cache
-cache/
-.circleci
-.claude
-/.claude/
-.claude-audit
-/.claude-audit/
-.codex/
-/.codex/
 bashscripts
 _bmad-output
 bootstrap/compiled.php
@@ -65,7 +37,6 @@ config/local.php
 * copy/
 *.copy
 # --- Copy / backup / old files ---
-# --- Copy / backup / old files ---
 .cursor/
 /.cursor
 /.cursor/
@@ -76,48 +47,10 @@ database/Migrations_old/
 database_old/
 database/Seeders_old/
 # --- Dependencies & packages ---
-# --- Dependencies & packages ---
 .devcontainer
 .devcontainer/
 dist/
 _docs
-.docs-archive/
-/.docs-archive/
-docs/_archive/
-docs/**/_archive/
-docs/**/archive/
-docs/archive
-docs/archive/
-docs/**/archived/
-docs/archived
-docs/archived/
-docs/**/archivio/
-docs/archivio/
-docs/assets/
-docs/**/*backup*/
-docs/**/backup/
-docs/backup/
-docs/**/backups/
-docs/backups/
-docs/**/bashscripts/
-docs/bashscripts/
-docs/cache/
-docs/chat
-docs/coverage-*.md
-docs/coverage.md
-docs/graphify
-docs/**/historical/
-docs/historical/
-docs/**/legacy/
-docs/legacy
-docs/phpstan/
-docs/project/visual-comparison/
-docs/screenshots/
-docs/**/scripts/
-docs/scripts/
-docs/vendor/
-docs/visual-comparison/
-docs/**/wiki-archive/
 docs/**/archive/
 docs/archive
 docs/**/archived/
@@ -143,14 +76,6 @@ ehthumbs.db
 .env
 .env.*
 !.env.example
-error_log
-*.exe
-*.fila2
-.git-blame-ignore-revs
-.github/skills
-/.github/skills/
-.git-rewrite/
-graphify-out/
 # --- Environment & IDE ---
 error_log
 *.exe
@@ -168,13 +93,6 @@ Homestead.yaml
 .kilocode
 .kiro
 lang/lang/
-/laravel/
-lerna-debug.log*
-*.lock
-*.log
-.merge_*
-*.new
-/node_modules/
 # --- Laravel runtime ---
 # Laraxot — forbidden at module/theme root (rector.php, phpinsights.php, .cursor, .windsurf, .vscode)
 # Laraxot — IDE folders forbidden at module/theme root (see module-theme-root-hygiene)
@@ -191,20 +109,15 @@ npm-debug.log*
 *.old
 *.old1
 *.old2
-.opencode/
-/.opencode/
 *.orig
 package-lock.json
 packages/cache/
 packages/temp/
 # Patterns cover both module root and nested occurrences (docs/**).
-# Patterns cover both module root and nested occurrences (docs/**).
 *.pest.php
 *.phar
 .php-cs*.*
 .php-cs-fixer.cache
-.php-cs-fixer.dist.php
-.php-cs-fixer.php
 /phpinsights.php
 phpinsights.php
 .phpintel
@@ -215,20 +128,10 @@ phpstan_constants.php
 phpunit.xml
 phpunit.xml.dist
 # --- Project-specific (Xot) ---
-# --- Project-specific (Xot) ---
 public/hot
 public_html/hot
 public_html/storage
 public/storage
-.qwen/
-.ralph
-/rector.php
-rector.php
-*.rej
-resources/lang
-resources/views/Components_old/
-/scripts/
-scripts
 .ralph
 # Reason: root cleanup policy (see docs/wiki/rules/root-cleanup-policy.md)
 /rector.php
@@ -242,22 +145,6 @@ scripts
 storage/*.key
 *.swo
 *.swp
-testbench.yaml
-test-results
-test-results/
-tests/AuditCoverage/
-tests/.claude-audit
-/tests/coverage/
-tests/coverage-*.*
-/tests/*coverage*.xml
-/tests/coverage.xml/
-tests/coverage-xot.xml
-/tests/graphify-out/
-test.txt
-Thumbs.db
-*.tmp
-/tools/
-tools
 # --- System files ---
 testbench.yaml
 test-results
@@ -271,7 +158,6 @@ Thumbs.db
 v8-compile-cache-*
 /.vagrant
 vendor/
-.vscode
 .vscode/
 /.vscode
 /.vscode/
@@ -279,10 +165,6 @@ vendor/
 /.windsurf
 /.windsurf/
 .windsurf~*
-xot.code-workspace
-yarn-error.log*
-yarn.lock
-*:Zone.Identifier
 tests/coverage-xot.xml
 
 # Laraxot -- forbidden module root folders (root hygiene directive 2026-09-29)

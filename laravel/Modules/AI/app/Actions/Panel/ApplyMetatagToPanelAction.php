@@ -1,0 +1,40 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Xot\Actions\Panel;
+
+use Filament\Panel;
+use Illuminate\Support\Facades\Log;
+use Modules\Xot\Datas\MetatagData;
+use Spatie\QueueableAction\QueueableAction;
+
+/**
+ * @see docs/contracts/apply-metatag-to-panel-action.md
+ *
+ * @contract docs/contracts/apply-metatag-to-panel-action.md
+ */
+class ApplyMetatagToPanelAction
+{
+    use QueueableAction;
+
+    public function execute(Panel &$panel): Panel
+    {
+        try {
+            $metatag = MetatagData::make();
+
+            return $panel
+                ->colors($metatag->getFilamentColors())
+                ->brandLogo($metatag->getBrandLogo())
+                ->brandName($metatag->getBrandName())
+                ->darkModeBrandLogo($metatag->getDarkModeBrandLogo())
+                ->brandLogoHeight($metatag->getBrandLogoHeight())
+                ->favicon($metatag->getFavicon());
+        } catch (\Exception $e) {
+            // Log l'errore ma non bloccare l'applicazione
+            Log::error('Error applying metatag to panel: '.$e->getMessage());
+
+            return $panel;
+        }
+    }
+}

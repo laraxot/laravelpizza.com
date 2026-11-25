@@ -18,11 +18,6 @@ related:
   - ../../../../bashscripts/ai/wiki/rules/type-coverage-non-conta-mixed.md
   - ../../../../bashscripts/ai/wiki/rules/multi-agent-same-repo-race.md
 ---
-<<<<<<< HEAD
-
-# Tenant: riduzione uso mixed dove il tipo reale e' noto
-
-=======
 # Tenant: riduzione uso mixed dove il tipo reale e' noto
 
 ## Context and Problem Statement
@@ -43,7 +38,6 @@ Problema e obiettivo sono descritti nel Decision Outcome (migrazione automatica 
 
 Scelta: **implementare**, perché i driver sopra.
 
->>>>>>> laraxot/dev
 ## Contesto
 
 Convenzione di progetto: "cerchiamo di non usare mixed, quando lo troviamo cerchiamo di
@@ -70,11 +64,7 @@ all'apertura del task.
   `is_string($key)`).
 - Tentativo di allineare `app/Services/TenantService.php::config()` a
   `array<string, mixed>` **revertito**: PHPStan segnalava `return.type` reale perche' la
-<<<<<<< HEAD
-  action delegata (`ResolveTenantConfigValueAction`, file sporco/non toccabile) resta
-=======
   action delegata (`GetTenantConfigValueAction`, file sporco/non toccabile) resta
->>>>>>> laraxot/dev
   tipizzata `array<mixed>`. Restringere solo il chiamante sarebbe stato un typing non
   onesto — vedi nota `var-override-before-git-log-check` sul non forzare narrowing che il
   runtime non garantisce.
@@ -101,11 +91,7 @@ reduction (best-effort)".
 - I 4 usi di `mixed` nativo (parametro/return type-hintati, priorita' massima per la
   convenzione del progetto) restano in file attualmente in WIP concorrente:
   `app/Models/Traits/SushiToCsv.php:153,217`, `app/Models/Traits/SushiToJson.php:451`,
-<<<<<<< HEAD
-  `app/Actions/Config/ResolveTenantConfigValueAction.php:68`. Da riprendere in una sessione
-=======
   `app/Actions/Config/GetTenantConfigValueAction.php:68`. Da riprendere in una sessione
->>>>>>> laraxot/dev
   successiva quando quel WIP sara' committato/pushato.
 
 ### Aggiornamento 2026-09-06 (sessione claude sonnet 5, `phpstan-tenant-fix.md`)
@@ -127,8 +113,6 @@ In tutti e 4 i casi il corpo della funzione fa immediatamente narrowing a runtim
 e' esattamente il pattern raccomandato per confinare un `mixed` di provenienza framework, non
 un caso di "mixed non ancora sostituito". Nessun cambio applicato — follow-up chiuso come
 "confermato corretto", non come "da fare".
-<<<<<<< HEAD
-=======
 
 
 ### Consequences
@@ -148,4 +132,3 @@ un caso di "mixed non ancora sostituito". Nessun cambio applicato — follow-up 
   errore `Accessing static property ... as non static`). Il test dedicato al file
   modificato in questa story, `tests/Unit/Actions/Config/FilterConfigStringKeysActionTest.php`,
   passa isolato (2/2).
->>>>>>> laraxot/dev

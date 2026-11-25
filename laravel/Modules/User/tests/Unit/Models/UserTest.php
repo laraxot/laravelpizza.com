@@ -20,6 +20,6 @@ uses(TestCase::class);
  * `Unit/Models/BaseUserTest.php` e `Unit/Models/UserBusinessLogicTest.php`. Per ripristinare il
  * corpo: `git -C Modules/User show 0e2e66d86:tests/Unit/Models/UserTest.php`.
  *
- * @see Modules/User/docs/stories/phpstan-test-wave-user-b.story.md
+ * @see Modules/User/docs/stories/0173-phpstan-test-wave-user-b.story.md
  */
 it('user model')->skip('User soft delete restore() and RefreshDatabase spec not implemented, covered by Unit/UserTest.php');

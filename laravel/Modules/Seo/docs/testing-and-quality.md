@@ -64,3 +64,6 @@ codice di Seo.
 - Il comportamento verificabile delle Action esterne (IndexNow) e' fissato in [contracts/](./contracts/README.md); le
   invarianti con `group` si lanciano con `vendor/bin/pest Modules/Seo/tests --group=<ID>`.
 - Gate di una modifica solo `.md`: PHPStan e Pest non si applicano; si verificano link e marcatori di conflitto.
+- Con piu' agenti al lavoro sullo stesso file PHP: `bash bashscripts/lock/{check,lock,unlock}.sh laravel/Modules/Seo/app/...`.
+- Gate completo da `laravel/` (`composer go`): PHPStan sul modulo, Pest, PHPMD, `view:cache`, PHPInsights (gli stili
+  residui non bloccano).

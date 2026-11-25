@@ -102,4 +102,4 @@ Catena e garanzie di sicurezza in [log-viewer.md](./log-viewer.md). Contratti di
 | `BuildLogViewerStateAction` | file, livello, ricerca, finestra KB -> `LogViewerStateData` | finestre ammesse 128, 256, 512, 1024, 2048, 4096 KB (default 256); errore generico che non riporta il percorso |
 | `DownloadLogFileAction` | percorso relativo -> `BinaryFileResponse` | risolve con `GetLogFilePathAction`; nome file con `/` sostituito da `_`; `text/plain; charset=UTF-8` |
 
-Le Action del viewer si chiamavano `ResolveLogDirectoryAction` e `ResolveLogFilePathAction`: rinominate `Get*` (regola "get, non resolve", ADR Xot 0016). Il contratto [resolve-log-file-path-action.md](./contracts/resolve-log-file-path-action.md) ha tenuto il vecchio nome file perche' i docblock lo citano.
+Le Action del viewer si chiamavano `ResolveLogDirectoryAction` e `ResolveLogFilePathAction`: rinominate `Get*` (regola "get, non resolve", ADR Xot 0016). Il contratto di `GetLogFilePathAction` e' [get-log-file-path-action.md](./contracts/get-log-file-path-action.md).

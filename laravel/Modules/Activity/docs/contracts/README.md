@@ -25,7 +25,7 @@ Un file per Action, nome in kebab-case della classe (`log-activity-action.md`), 
 ## Non fa
 ```
 
-Gli invarianti hanno ID `ACT-<AREA>-INV-<N>` e rimandano al test Pest che li verifica. Il docblock dell'Action rimanda al file con `@contract docs/contracts/<file>.md`; chi cambia il comportamento aggiorna contratto, codice e test nello stesso commit. Il test `Modules/Xot/tests/Unit/Docs/ActionContractsAreCompleteTest.php` controlla che ogni file `type: contract` abbia le sei sezioni, un'`action:` esistente e il `@contract` nel docblock di quella classe.
+Gli invarianti hanno ID `ACTIVITY-<AREA>-INV-<N>` e il test Pest che li verifica usa lo stesso ID come `->group('<ID>')`. Il docblock dell'Action rimanda al file con `@contract docs/contracts/<file>.md`; chi cambia il comportamento aggiorna contratto, codice e test nello stesso commit. Il test `Modules/Xot/tests/Unit/Docs/ActionContractsAreCompleteTest.php` controlla che ogni file `type: contract` abbia le sei sezioni, un'`action:` esistente e il `@contract` nel docblock di quella classe.
 
 ## Quali Action hanno un file
 

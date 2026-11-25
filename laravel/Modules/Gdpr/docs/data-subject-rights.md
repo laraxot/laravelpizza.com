@@ -13,7 +13,7 @@ related:
 
 Stato verificato sul codice il 2026-11-25. Il modulo da' gli **strumenti** (tabelle, Action, campi di configurazione); le
 decisioni (periodi di conservazione, destino dei contenuti pubblicati, nomina del DPO) sono del titolare e le story
-`DCP-140/141/142` le tengono aperte come `needs-decision` / `needs-data`.
+le tengono aperte: DCP-140 `ready-for-dev`, DCP-141 `needs-decision`, DCP-142 `needs-data`.
 
 ## Matrice per diritto
 

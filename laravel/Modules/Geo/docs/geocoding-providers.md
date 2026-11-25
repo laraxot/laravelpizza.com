@@ -47,6 +47,15 @@ nuove integrazioni (dettaglio in [geo-sync-marker-repair.md](./geo-sync-marker-r
 | `Weather/` | `GetOpenWeatherDataAction` | `services.openweather.api_key` |
 
 Le chiavi non stanno nel codice: variabili d'ambiente lette da `config/config.php` (`api_keys`) o da `config/services.php`.
+
+**Attenzione ai nomi delle chiavi di config.** `XotBaseServiceProvider::registerConfig()` registra ogni file di `config/` come
+`<modulo>.<nome-file>`: `config/config.php` diventa `geo.config.*` (e `config/sushi.php` diventa `geo.sushi.*`). Il codice usa
+correttamente `geo.config.osm_proxy.*` e `geo.config.map.default_view`, ma legge anche `geo.driver`, `geo.api_keys.*`,
+`geo.cache.*`, `geo.http_client.*`, `geo.rate_limits.*`, `geo.comuni_json_path` (44 punti in `app/` e `tests/`): quei nomi non
+esistono se nessun file `config/geo.php` (progetto o tenant) li definisce, e in quel caso valgono i default del codice o `null`
+(per esempio una chiave API mancante). Prima di affidarsi a `GEO_DRIVER` o a `GOOGLE_MAPS_API_KEY` verificare con
+`config('geo.driver')` e `config('geo.config.driver')` quale dei due e' valorizzato; l'allineamento dei nomi nel codice e'
+un lavoro aperto (non fatto in questa sintesi: solo documentazione).
 Il file di config dichiara anche `rate_limits` (50 richieste/s, burst 100 per Google, Bing e Mapbox), `cache`
 (abilitata, TTL 86.400 s, prefisso `geo_`) e `http_client` (timeout 5 s, 3 tentativi, 100 ms di pausa).
 
@@ -54,7 +63,7 @@ Il file di config dichiara anche `rate_limits` (50 richieste/s, burst 100 per Go
 
 `GetAddressDataFromFullAddressAction::execute(string $fullAddress): ?AddressData` prova i provider nell'ordine
 `google_maps`, `photon`, `nominatim`, `bing_maps`, `here`, `mapbox`, `opencage`; il primo che restituisce un `AddressData`
-vince, gli errori di ciascuno finiscono in `getErrors()`. `config('geo.driver')` (env `GEO_DRIVER`, default `google_maps`)
+vince, gli errori di ciascuno finiscono in `getErrors()`. `config('geo.driver')` (env `GEO_DRIVER` in `config/config.php`, default `google_maps`; vedi l'avvertenza sui nomi delle chiavi)
 porta il provider scelto in testa alla catena senza toccare il codice; `nominatim` e' l'unico che non richiede chiave.
 La mappa chiave → classe resta letterale dentro l'Action (Larastan perde il tipo se passa da `config()`): se si aggiunge un
 provider, aggiornare sia l'Action sia il commento in `config/config.php`. Se nessun provider risponde l'Action ritorna `null`

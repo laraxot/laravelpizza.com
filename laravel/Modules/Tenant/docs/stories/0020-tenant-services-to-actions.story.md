@@ -17,24 +17,11 @@ owned_scope:
   - "laravel/Modules/Tenant/tests/Unit/TenantGapsCoverageTest.php"
   - "laravel/Modules/Tenant/docs/coverage.md"
 related:
-<<<<<<< HEAD
-  - ../../../../bashscripts/ai/wiki/rules/no-services-rule.md
-=======
   - ../../../../bashscripts/ai/wiki/rules/actions-business-logic.md
->>>>>>> laraxot/dev
   - ../concepts/tenant-service-to-actions-migration.md
   - ../../../../bashscripts/ai/wiki/rules/multi-agent-same-repo-race.md
   - ../../../../bashscripts/ai/wiki/rules/module-repos-huge-uncommitted-drift.md
 ---
-<<<<<<< HEAD
-
-# Tenant: eliminazione app/Services, conversione a QueueableAction
-
-## Contesto
-
-Regola di progetto: "RELIGION, NO EXCEPTIONS" —
-`bashscripts/ai/wiki/rules/no-services-rule.md`. Nessuna classe `app/Services/*Service`
-=======
 # Tenant: eliminazione app/Services, conversione a QueueableAction
 
 ## Context and Problem Statement
@@ -59,7 +46,6 @@ Scelta: **implementare**, perché i driver sopra.
 
 Regola di progetto: "RELIGION, NO EXCEPTIONS" —
 `bashscripts/ai/wiki/rules/actions-business-logic.md`. Nessuna classe `app/Services/*Service`
->>>>>>> laraxot/dev
 per business logic; tutto va in `app/Actions/**` come
 `Spatie\QueueableAction\QueueableAction` con un singolo `execute(...)`. Una classe senza
 un vero `execute()` non vive comunque in `Actions/`: va spostata altrove (Adapters,
@@ -84,13 +70,8 @@ contenuto gia' presente (mai `git checkout`/`reset` per "ripulire" prima di edit
 
 | File | Kind | Callers reali (repo-wide grep) | Decisione | Perche' |
 |---|---|---|---|---|
-<<<<<<< HEAD
-| `app/Services/TenantService.php` | A — facade gia' sottile | Solo test (`TenantCoverageBoostTest.php`, `TenantStatementCoverageTest.php`); 2 menzioni in `Modules/Notify`/`Modules/User` sono commenti morti, non call site | **Eliminata**. Ogni metodo delegava gia' 1:1 a un'Action esistente (`GetTenantNameAction`, `GetTenantFilePathAction`, `ResolveTenantConfigValueAction`, `GetTenantConfigPathAction`, `GetTenantConfigArrayAction`, `SaveTenantConfigAction`, `GetTenantConfigNamesAction`, `ResolveTenantModelClassAction`, `ResolveTenantModelInstanceAction`, `TranslateTenantKeyAction`, `GetTenantModulesAction`) — tutte gia' in `app/Actions/**`, tutte gia' `QueueableAction`. Caller aggiornati a `app(XxxAction::class)->execute(...)`. | Il lavoro vero era gia' fatto (vedi `docs/concepts/tenant-service-to-actions-migration.md`, 2026-07-21); restava solo ritirare il wrapper statico e i suoi ultimi due call site di test. |
-| `app/Services/Config/ConfigResolverRegistry.php` | B — Registry/Strategy dispatcher | **Zero** in produzione: non istanziata, non bindata in `TenantServiceProvider`, non referenziata da `ResolveTenantConfigValueAction` (il vero path usa `FilterConfigStringKeysAction`+`MergeRecursiveStringKeyConfigAction`, implementazione indipendente). Solo test la usavano. | **Eliminata**, non rilocata sotto `Actions/Config/Strategies/`. | Codice morto verificato via grep repo-wide + lettura di `TenantServiceProvider`. Rilocare codice morto sotto `Actions/` avrebbe solo spostato l'anti-pattern di un livello, non l'avrebbe rimosso — la guida della regola ("una classe senza execute() non vive in Actions/") si applica a maggior ragione a una classe senza *nessun* chiamante reale. |
-=======
 | `app/Services/TenantService.php` | A — facade gia' sottile | Solo test (`TenantCoverageBoostTest.php`, `TenantStatementCoverageTest.php`); 2 menzioni in `Modules/Notify`/`Modules/User` sono commenti morti, non call site | **Eliminata**. Ogni metodo delegava gia' 1:1 a un'Action esistente (`GetTenantNameAction`, `GetTenantFilePathAction`, `GetTenantConfigValueAction`, `GetTenantConfigPathAction`, `GetTenantConfigArrayAction`, `SaveTenantConfigAction`, `GetTenantConfigNamesAction`, `GetTenantModelClassAction`, `GetTenantModelInstanceAction`, `TranslateTenantKeyAction`, `GetTenantModulesAction`) — tutte gia' in `app/Actions/**`, tutte gia' `QueueableAction`. Caller aggiornati a `app(XxxAction::class)->execute(...)`. | Il lavoro vero era gia' fatto (vedi `docs/concepts/tenant-service-to-actions-migration.md`, 2026-07-21); restava solo ritirare il wrapper statico e i suoi ultimi due call site di test. |
 | `app/Services/Config/ConfigResolverRegistry.php` | B — Registry/Strategy dispatcher | **Zero** in produzione: non istanziata, non bindata in `TenantServiceProvider`, non referenziata da `GetTenantConfigValueAction` (il vero path usa `FilterConfigStringKeysAction`+`MergeRecursiveStringKeyConfigAction`, implementazione indipendente). Solo test la usavano. | **Eliminata**, non rilocata sotto `Actions/Config/Strategies/`. | Codice morto verificato via grep repo-wide + lettura di `TenantServiceProvider`. Rilocare codice morto sotto `Actions/` avrebbe solo spostato l'anti-pattern di un livello, non l'avrebbe rimosso — la guida della regola ("una classe senza execute() non vive in Actions/") si applica a maggior ragione a una classe senza *nessun* chiamante reale. |
->>>>>>> laraxot/dev
 | `app/Services/Config/Contracts/ConfigResolverInterface.php` | B — Contract per il registry sopra | Solo il registry morto + i 3 resolver sotto + test | **Eliminata** (parte dello stesso sottoalbero morto). | Stesso motivo. |
 | `app/Services/Config/Resolvers/DatabaseConfigResolver.php` | B — Strategy | Solo dal registry morto + test | **Eliminata**. | Stesso motivo. |
 | `app/Services/Config/Resolvers/MorphMapConfigResolver.php` | B — Strategy | Solo dal registry morto + test (usava anche `TenantService::filePath()`, gia' morto) | **Eliminata**. | Stesso motivo. |
@@ -125,11 +106,7 @@ fresca.
   - rimosso l'intero describe `'Tenant statement coverage — resolvers'` (4 test sui
     resolver morti + registry)
   - `TenantService::model('tenant')` rimosso (duplicato della riga precedente nello
-<<<<<<< HEAD
-    stesso test, che gia' verifica `ResolveTenantModelInstanceAction` direttamente)
-=======
     stesso test, che gia' verifica `GetTenantModelInstanceAction` direttamente)
->>>>>>> laraxot/dev
 - `Modules/Tenant/tests/Unit/TenantGapsCoverageTest.php`:
   - rimossi gli `use` verso `Modules\Tenant\Services\Config\Resolvers\*`,
     `Illuminate\Http\Request as HttpRequest`, `Illuminate\Support\Facades\Request`,
@@ -153,21 +130,12 @@ questa sessione, con lo stesso obiettivo (stessa migrazione Services→Actions) 
 template rotto (parentesi graffa raddoppiata, nome classe non rinominato):
 
 ```
-<<<<<<< HEAD
-Modules/Tenant/app/Actions/Config/ConfigResolverInterfaceAction.php
-Modules/Tenant/app/Actions/Config/ConfigResolverRegistryAction.php
-Modules/Tenant/app/Actions/Config/ConfigStringKeyFilterAction.php
-Modules/Tenant/app/Actions/Config/DatabaseConfigResolverAction.php
-Modules/Tenant/app/Actions/Config/MorphMapConfigResolverAction.php
-Modules/Tenant/app/Actions/Config/StandardConfigResolverAction.php
-=======
 Modules/Tenant/app/Actions/Config/ConfigGetrInterfaceAction.php
 Modules/Tenant/app/Actions/Config/ConfigGetrRegistryAction.php
 Modules/Tenant/app/Actions/Config/ConfigStringKeyFilterAction.php
 Modules/Tenant/app/Actions/Config/DatabaseConfigGetrAction.php
 Modules/Tenant/app/Actions/Config/MorphMapConfigGetrAction.php
 Modules/Tenant/app/Actions/Config/StandardConfigGetrAction.php
->>>>>>> laraxot/dev
 Modules/Tenant/app/Actions/TenantAction.php
 ```
 
@@ -216,8 +184,6 @@ M  tests/Unit/TenantGapsCoverageTest.php
 M  docs/coverage.md
 A  docs/stories/tenant-services-to-actions.story.md
 ```
-<<<<<<< HEAD
-=======
 
 
 ### Consequences
@@ -243,4 +209,3 @@ A  docs/stories/tenant-services-to-actions.story.md
   dell'inizio di questo task; nessuno dei fallimenti cade su una riga toccata da questo
   diff (verificato riga per riga) e il nuovo blocco di test aggiunto da questa sessione
   passa.
->>>>>>> laraxot/dev

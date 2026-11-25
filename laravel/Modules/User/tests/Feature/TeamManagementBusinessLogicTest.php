@@ -24,6 +24,6 @@ uses(TestCase::class);
  * Se Team guadagna un'API di ruoli/membership dedicata, ripristinare il corpo da git:
  * `git -C Modules/User show 0e2e66d86:tests/Feature/TeamManagementBusinessLogicTest.php`.
  *
- * @see Modules/User/docs/stories/phpstan-test-wave-user-b.story.md
+ * @see Modules/User/docs/stories/0173-phpstan-test-wave-user-b.story.md
  */
 it('team management business logic')->skip('Team memberships(), roles(), invitations(), userHasRole() and restore() not implemented');

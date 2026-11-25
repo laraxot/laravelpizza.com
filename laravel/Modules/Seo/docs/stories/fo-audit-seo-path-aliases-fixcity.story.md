@@ -6,7 +6,7 @@ updated: 2026-11-13
 tags: [seo, alias, redirect, 301, front-office, audit, bmad, fixcity]
 qmd: "seo path_aliases RedirectToCanonicalPath alias 301 contatti contacts cookie cookies chi-siamo domande-frequenti cookie-policy tenant config seo.php"
 related:
-  - ../wiki/concepts/sitemap-coverage-contract.md
+  - ../adr/sitemap-built-in-seo-fed-by-tagged-sources.md
   - ../../Fixcity/docs/front-office-production-audit.md
 ---
 

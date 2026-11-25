@@ -29,12 +29,13 @@ Unico punto in cui l'input dell'utente del visualizzatore di log (`LogViewer`) d
 
 ## Invarianti
 
-| ID | Regola | Test |
+| ID | Regola | Group Pest |
 |---|---|---|
-| ACT-LOGPATH-INV-1 | Percorso vuoto o con byte nullo rifiutato (`InvalidLogFileException::invalidPath`). | `GetLogFilePathActionTest.php` |
-| ACT-LOGPATH-INV-2 | Solo estensione `.log`, controllata sull'input e sul file risolto (un link `x.log` verso un file non `.log` e' rifiutato). | `GetLogFilePathActionTest.php` |
-| ACT-LOGPATH-INV-3 | Il file risolto con `realpath()` sta dentro la cartella base, confronto con il separatore finale: `..`, percorsi assoluti e link simbolici verso l'esterno sono rifiutati (`outsideLogDirectory` o `notFound`). | `GetLogFilePathActionTest.php` |
-| ACT-LOGPATH-INV-4 | Cartella base mancante: errore esplicito (`baseDirectoryMissing`). | `GetLogFilePathActionTest.php` |
+| ACTIVITY-LOGFILE-INV-1 | Il file risolto sta dentro la cartella base (confronto con il separatore finale): `..` e percorsi assoluti che ne escono sono rifiutati, anche se puntano a un `.log` reale. | `ACTIVITY-LOGFILE-INV-1` |
+| ACTIVITY-LOGFILE-INV-2 | Solo estensione `.log`, controllata sull'input e sul file risolto (un link `x.log` verso un file non `.log` e' rifiutato); percorsi vuoti, con byte nullo o inesistenti sono rifiutati. | `ACTIVITY-LOGFILE-INV-2` |
+| ACTIVITY-LOGFILE-INV-3 | `realpath()` risolve i link simbolici: un link dentro la cartella che punta fuori e' rifiutato. | `ACTIVITY-LOGFILE-INV-3` |
+| ACTIVITY-LOGFILE-INV-4 | Un file valido, anche in sottocartelle, e' risolto con il suo percorso relativo normalizzato con `/`. | `ACTIVITY-LOGFILE-INV-4` |
+| ACTIVITY-LOGFILE-INV-5 | Cartella base mancante: errore esplicito (`baseDirectoryMissing`), non un percorso vuoto. | `ACTIVITY-LOGFILE-INV-5` |
 
 ## Effetti collaterali
 

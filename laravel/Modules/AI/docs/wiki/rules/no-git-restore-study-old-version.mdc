@@ -1,0 +1,33 @@
+---
+title: "NO git restore — studia vecchia versione"
+type: rule
+tags: [git, recovery, study, refactoring, forward-only]
+created: 2026-01-21
+updated: 2026-07-27
+qmd: never use git restore always study old version create better forward-only
+issues:
+  - "https://github.com/laraxot/base_techplanner_fila5/issues/38"
+discussions:
+  - "https://github.com/laraxot/base_techplanner_fila5/discussions/12"
+related:
+  - ../../../../../../bashscripts/ai/wiki/concepts/git-discipline.md#git-forward-only-discipline
+  - ../../../../../../bashscripts/ai/wiki/concepts/git-discipline.md#git-forward-only-study-old-version
+  - ../../../../../../bashscripts/ai/wiki/memories/git-hygiene-incidents.md#no-git-restore-study-improve
+---
+
+# NO git restore — studia vecchia versione (Xot)
+
+## Regola assoluta
+
+**MAI** `git restore` / `git checkout --` / `git reset` / `git revert` / redirect `git show > file`.  
+Git solo avanti. File perso o rotto:
+
+1. `git show <rev>:path` — studia  
+2. Capisci il perché (nwidart / XotBase / naming)  
+3. Riscrivi **migliorato**  
+4. Verifica PHPStan / Pest  
+
+## Canon
+
+- Hub: [git-forward-only-discipline](../../../../../../bashscripts/ai/wiki/concepts/git-discipline.md#git-forward-only-discipline)
+- Cursor: `.cursor/rules/git-forward-only.mdc` + `no-git-restore-forward-only.mdc` (**alwaysApply**)

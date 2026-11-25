@@ -51,15 +51,12 @@ _Fonte: `bmad/architecture.md`_
 
 ## Scopo
 
-<<<<<<< HEAD
-=======
 ## Milestones Domani
 1. Verificare conformità con XotBase
 2. Aggiornare `docs/bmad/stories/continuazione-domani.md` se chiuso
 3. Indicare stato concluso in `docs/sprint-status.yaml`
 Scopo e perché: [purpose.md](./purpose.md). Dettaglio risoluzione: [architecture/tenant-config-resolution.md](./architecture/tenant-config-resolution.md), confini: [architecture/module-boundary.md](./architecture/module-boundary.md). Finding: [audits/tenant-audit.md](./audits/tenant-audit.md).
 =======
->>>>>>> laraxot/dev
 Multi-tenant: più enti da una sola installazione. Scopo e perché: [purpose.md](./purpose.md). Dettaglio risoluzione: [architecture/tenant-config-resolution.md](./architecture/tenant-config-resolution.md), confini: [architecture/module-boundary.md](./architecture/module-boundary.md). Finding: [audits/tenant-audit.md](./audits/tenant-audit.md).
 
 ## Flusso (verificato sul codice, 2026-11-16)
@@ -71,21 +68,7 @@ Multi-tenant: più enti da una sola installazione. Scopo e perché: [purpose.md]
 
 ## Componenti
 
-<<<<<<< HEAD
-| Area | N | Note |
-|---|---:|---|
-| Actions | 19 | `Config`, `Json`, `Domains`, `Ente`, `Models`, `Modules`, `Translations`, `Markdown` |
-| Models | 10 | `Tenant`, `Domain`, `TenantDomain`, `TenantSetting`, `TenantSubscription`, `DatabaseConfig`, `BaseModel*` |
-| Policy | 2 | `TenantBasePolicy` (astratta), `DomainPolicy` |
-| Filament | 1 Resource (`DomainResource`) + 2 Pages | estende Xot |
-| Services | 0 | logica in Action |
-
-## Rischi architetturali
-
-Host come input (TEN-P1-01), bypas
-=======
 | Area 
->>>>>>> laraxot/dev
 
 ## Tenant Module Architecture
 

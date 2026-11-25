@@ -29,8 +29,9 @@ componente Lit propri (`resources/views/filament/forms/components/*.blade.php`, 
 
 | Campo | Vista | Uso |
 |---|---|---|
-| `CoordinatePicker` | `coordinate-picker` | picker principale: mappa interattiva, ricerca, geolocalizzazione, 4 layer (OSM, Esri satellite, OpenTopoMap, Esri topo), fullscreen, `isMapReadonly()`; stato deidratato (`dehydrated()`) |
-| `MapPicker` (alias compatibile `LocationPicker`) | `map-picker`, `location-picker` | picker a mappa con controlli e layer separati (`map-picker-*.js`) |
+| `CoordinatePicker` | `coordinate-picker` | picker principale: mappa interattiva, ricerca, geolocalizzazione, 4 layer definiti in `resources/js/components/map/layers.js` (strada OSM, umanitario HOT, satellite Esri, topografico Esri), fullscreen, `isMapReadonly()`; stato deidratato (`dehydrated()`) |
+| `MapPicker` | `map-picker` | picker a mappa con controlli e layer separati (`map-picker-*.js`); `dehydrated(false)` |
+| `LocationPicker` | `location-picker` | classe separata (nelle vecchie pagine era chiamata alias di `MapPicker`) |
 | `PlacePicker` | `place-picker` | scelta di un luogo con ricerca |
 | `GeopointPicker` | `geopoint-picker` | punto geografico puro |
 | `LeafletMarkerMapInput` | `leaflet-marker-map-input` | marker trascinabile con memoria della posizione |

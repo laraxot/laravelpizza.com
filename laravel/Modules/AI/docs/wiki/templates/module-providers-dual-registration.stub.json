@@ -1,0 +1,7 @@
+{
+  "providers_comment": "Sostituire {Module} con il nome StudlyCase del modulo. Copiare lo stesso array in module.json e in composer.json extra.laravel.providers",
+  "providers": [
+    "Modules\\{Module}\\Providers\\{Module}ServiceProvider",
+    "Modules\\{Module}\\Providers\\Filament\\AdminPanelProvider"
+  ]
+}
